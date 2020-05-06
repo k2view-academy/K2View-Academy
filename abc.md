@@ -7,6 +7,13 @@ ms.date: 02/02/2019
 
 ---
 
-#this a title
 
-and stuff
+# this a title
+
+- bullets
+- bullets
+- bullets
+- bullets
+
+<div align="center">yo</div>
+
