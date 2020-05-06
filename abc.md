@@ -8,6 +8,12 @@ ms.date: 02/02/2019
 ---
 
 
+```java
+if (isAwesome){
+  return true
+}
+```
+
 # this a title
 
 - bullets
