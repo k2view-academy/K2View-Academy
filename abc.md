@@ -15,8 +15,15 @@ ms.date: 02/02/2019
 - bullets
 - bullets
 
-<div align="center">yo</div>
+<div align="center">yo</div> 
 
-![a screen shot](screen-shot.png "Logo Title Text 1")
+---
+
+<img src="screen-shot.png" width="50"/>
+
+---
+
+![a screen shot](screen-shot.png "Logo Title Text 1") 
+
 
 
