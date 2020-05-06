@@ -17,6 +17,6 @@ ms.date: 02/02/2019
 
 <div align="center">yo</div>
 
-![a screen shot](screen-shot.png "Logo Title Text 1")
+![a screen shot](screen-shot.png=100x20 "Logo Title Text 1")
 
 
