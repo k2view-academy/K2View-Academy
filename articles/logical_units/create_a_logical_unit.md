@@ -4,7 +4,7 @@ The LU Schema creation process can be initiated using K2View’s [Auto-Discovery
 
 Creating a Logical Unit involves several steps. The following is an overview of the main steps :
 
-![image](https://user-images.githubusercontent.com/61159307/80307634-f2866f80-87d2-11ea-8dfc-f14d0e2ece08.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/1.3_Create_an_LU_Flow.png)
 
 You can also duplicate an LU in your project and save it as a new LU:
 1. Right click the **Logical Unit** and select **Duplicate Logical Unit**.
