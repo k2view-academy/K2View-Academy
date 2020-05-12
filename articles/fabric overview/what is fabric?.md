@@ -4,7 +4,7 @@ Fabric solves real-time operational needs for data that is stored and handled in
 Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity centric approach offering multiple and diverse built-in integrated data-management capabilities for end-to-end management of the data life cycle.
 
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/8_Fabric_Overview/8.1_Fabric_Overview.png)
+![image](articles/fabric overview/images/Fabric_Overview.png)
 
 
 ### What is a Digital Entity?
