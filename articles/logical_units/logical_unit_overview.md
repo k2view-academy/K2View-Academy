@@ -60,21 +60,21 @@ Below is a table of **pros and cons** of each alternative:
 <td width="300">
 <p>Replacing a data source</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/X_sign.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
 </tr>
 <tr>
 <td width="300">
 <p>Small amount of data in LU</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/X_sign.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
 </tr>
 <tr>
 <td width="250">
 <p>Maintenance, handling a less complex schema and internal relationships</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/X_sign.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
 </tr>
 <tr>
@@ -82,20 +82,20 @@ Below is a table of **pros and cons** of each alternative:
 <p>Implementing a real-time action based on an event like a Golden Gate update, when the action depends on multiple data systems</p>
 </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/X_sign.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 </tr>
 <tr>
 <td width="250">
 <p>Performance of real-time updates</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/X_sign.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
 </tr>
 <tr>
 <td width="250">
 <p>Tuning the migration process</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/X_sign.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
 </tr>
 </tbody>
