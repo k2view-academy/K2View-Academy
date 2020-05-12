@@ -54,7 +54,7 @@ Below is a table of **pros and cons** of each alternative:
 <p>Ease of writing APIs</p>
 </td>
 <td align="center" width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.1_LU_Overview/V_sign.png" alt="" </td>
-<td align="center" width="30">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
+<td align="center" width="10">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/logical_units/images/X.png" alt="" </td>
 </tr>
 <tr>
 <td width="300">
