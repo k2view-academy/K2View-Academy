@@ -1,3 +1,5 @@
+# LU Properties
+
 The Properties tab in the LU window contains the following properties:
 
 <table>
