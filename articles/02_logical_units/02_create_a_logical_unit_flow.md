@@ -1,4 +1,4 @@
-# Create a Logical Unit - Overview
+# Create a Logical Unit Flow 
 
 The LU Schema creation process can be initiated using K2View’s [Auto-Discovery](https://github.com/k2view-academy/K2View-Academy/wiki/Auto-Discovery-Wizard)  module or performed manually using K2View’s drag-and-drop graphical user interface, K2View Fabric Studio. 
 
