@@ -1,3 +1,5 @@
+# LU Schema Window
+
 ### Logical Unit (LU) - Related Objects
 A Fabric project has a tree-like structure known as the Project Tree which displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window where its Logical Units (LU) are located under the Logical Units branch.
 
