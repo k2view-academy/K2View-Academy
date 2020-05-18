@@ -53,7 +53,7 @@ The Logical Unit Schema window shows the Root Table and hierarchy of the tables 
 
 To make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
 
-[Click for more information about Grouping and Ungrouping LU Tables](https://github.com/k2view-academy/K2View-Academy/wiki/LU-Schema---Group-and-Ungroup-Tables).
+[Click for more information about Grouping and Ungrouping LU Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md).
 
 ### Logical Unit (LU) Tabs
 
