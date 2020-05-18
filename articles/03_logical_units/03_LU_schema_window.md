@@ -154,8 +154,8 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 </table>
 
 
-[Click for more information about Group and Ungroup SubGraph Objects.](https://github.com/k2view-academy/K2View-Academy/wiki/LU-Schema---Group-and-Ungroup-Tables)
+[Click for more information about Group and Ungroup SubGraph Objects.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md)
 
 Click for more information about Fabric Studio Diagrams Toolbars.
 
-[Click for more information about LU Refresh Options.](https://github.com/k2view-academy/K2View-Academy/wiki/LU-Schema-Refresh-Options)
+[Click for more information about LU Refresh Options.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/18_LU_schema_refresh_LU_options.md)
