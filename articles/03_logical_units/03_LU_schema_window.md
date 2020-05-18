@@ -3,7 +3,7 @@
 ### Logical Unit (LU) - Related Objects
 A Fabric project has a tree-like structure known as the Project Tree which displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window where its Logical Units (LU) are located under the Logical Units branch.
 
-The following objects are located under each [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Units-Overview) in the Project Tree:
+The following objects are located under each [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
 * [Schema](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-schema)
 * Java - Globals and Functions
 * Resources, files that can be saved as part of a project. For example, an Excel file
@@ -19,13 +19,13 @@ The following objects are located under each [Logical Unit (LU)](https://github.
 Go to the **Project Tree**, click the **LU Name** and then click the **Schema** to open the **Logical Unit** window.
 
 ### Logical Unit (LU) Window
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_LU_Schema_WIndow.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_LU_Schema_WIndow.PNG)
 
 
 The Logical Unit window has three main sections:
-* [Logical Unit schema.](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-schema)
-* [Logical Unit tabs.](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-tabs)
-* [Logical Unit toolbar.](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-schema-window-toolbar) 
+* [Logical Unit schema.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema)
+* [Logical Unit tabs.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs)
+* [Logical Unit toolbar.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar) 
 
 ### Logical Unit (LU) Schema
 The Logical Unit Schema is a work area where you can define the logical unit’s structure. 
@@ -33,9 +33,9 @@ The Logical Unit Schema is a work area where you can define the logical unit’s
 * Each table can have one or several populations where each population is linked to its parent table.
 
 
-[Click for more information about Logical Unit Tables.](https://github.com/k2view-academy/K2View-Academy/wiki/Adding-a-Table-to-the-LU-Schema)
+[Click for more information about Logical Unit Tables.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/02_LU_tables/01_LU_tables_overview.md)
 
-[Click for more information about LU Table Population.](https://github.com/k2view-academy/K2View-Academy/wiki/Building-an-LU-Hierarchy---Linking-Table-Populations)
+[Click for more information about LU Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
 ### Customer LU Schema Example 
 
