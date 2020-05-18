@@ -33,7 +33,7 @@ Linking the INVOICE Table Population object to two different LU Tables - BALANCE
 
 
 ## What are the Table Population's Input Arguments?
-Input Arguments are a property of the [Source Object](https://github.com/k2view-academy/K2View-Academy/wiki/Fabric-Glossary#source-object)  of a Table Population object.
+Input Arguments are a property of the [Source Object](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#source-object)  of a Table Population object.
 
 There are two types of Source Objects for a Table Population object:
 * DB Query
@@ -41,7 +41,7 @@ There are two types of Source Objects for a Table Population object:
 
 **DB Query**
 * A DB Query Table Population object can be linked to a parent table via its input argument fields. Only input arguments that are defined as True can be linked to parent tables.
-* In the DB query of a Root Table, only one field can be defined as True and is populated by the [Instance ID](https://github.com/k2view-academy/K2View-Academy/wiki/Fabric-Glossary#instance-id).
+* In the DB query of a Root Table, only one field can be defined as True and is populated by the [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
 * Other LU Tables can have several fields defined as input arguments. 
 
 **Root Function**
