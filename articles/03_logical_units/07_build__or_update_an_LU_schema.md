@@ -25,8 +25,8 @@ To use the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-
 1. Open the **LU Schema** and right click a **column** in an LU  **table**.
 2. Select **Auto Discovery Wizard**.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.7_Auto_Discovery_Build_or_Update_Schema/1.7_pic_1.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_07_01_option2.png)
 
 3. Run the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md). A new [**Grouped SubGraph**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md) of tables is added to the selected column.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.7_Auto_Discovery_Build_or_Update_Schema/1.7_pic_2.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_07_02_new_grouped_subgraph.png)
