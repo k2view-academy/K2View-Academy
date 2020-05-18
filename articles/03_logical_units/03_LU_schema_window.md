@@ -39,7 +39,7 @@ The Logical Unit Schema is a work area where you can define the logical unit’s
 
 ### Customer LU Schema Example 
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_LU_Schema_Only.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.4_LU_schema_example.png)
 
 The Logical Unit Schema window shows the Root Table and hierarchy of the tables included in the Logical Unit and the relationships between them:
 * The Root Table of the LU Schema is Customer. 
@@ -53,7 +53,7 @@ The Logical Unit Schema window shows the Root Table and hierarchy of the tables 
 
 To make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
 
-[Click for more information about Grouping and Ungrouping LU Tables](https://github.com/k2view-academy/K2View-Academy/wiki/LU-Schema---Group-and-Ungroup-Tables).
+[Click for more information about Grouping and Ungrouping LU Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md).
 
 ### Logical Unit (LU) Tabs
 
@@ -61,7 +61,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <tbody>
 <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-(LU)-Properties"><b>Properties Tab<b></a>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/04_LU_properties.md"><b>Properties Tab<b></a>
 </td>
 <td style="width: 414px;">
 <p>Contains the properties on an LU level.</p>
@@ -69,7 +69,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </tr>
 <tr style="mso-yfti-irow: 1; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/wiki/LU-Schema---Editing-References-Tab">References Tab<;</a></p>
+<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/15_LU_schema_edit_reference_tab.md">References Tab</a></p>
 </td>
 <td style="width: 414px;">
 <p>Used to configure the Reference Tables that are accessible from this LU.</p>
@@ -77,7 +77,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </tr>
 <tr style="mso-yfti-irow: 2; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/wiki/Edit-Enrichment-Order"><b>Enrichment Order Tab<b></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md"><b>Enrichment Order Tab<b></p>
 </td>
 <td style="width: 414px;">
 <p>Defines the execution order of enrichment functions  using the up and down arrows. Only enrichment functions that are directly related to specific LU tables are included in the display. </p>
@@ -89,7 +89,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><strong>DB Objects Tab</strong></p>
 </td>
 <td style="width: 414px;">
-<p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the <a href="https://github.com/k2view-academy/K2View-Academy/wiki/Auto-Discovery-Wizard#step-1-define-the-db-interface">DB Connection &nbsp;</a> field.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md#step-1-define-the-db-interface">DB Connection &nbsp;</a> field.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; DB objects can be refreshed by clicking the Refresh icon adjacent to the DB Connection dropdown list.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
 </td>
