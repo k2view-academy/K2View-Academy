@@ -8,7 +8,7 @@ When creating a Logical Unit using the [Auto Discovery Wizard](https://github.co
 If you are not using the Auto Discovery Wizard, do the following:
 
 1. Go to the **Project Tree**, select the **Logical Unit** and double click the **Schema** to open the **Logical Unit** screen.
-2. Create the **LU table** and add it to the [**LU schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
+2. Create the [**LU table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/02_LU_tables/01_LU_tables_overview.md) and add it to the [**LU schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
 3. Go to the **LU Table**, right click the **table header** and then click **Set as: Root:**
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_08_01_tables.png)
