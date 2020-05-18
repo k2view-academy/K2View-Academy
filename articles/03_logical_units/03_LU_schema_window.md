@@ -23,9 +23,9 @@ Go to the **Project Tree**, click the **LU Name** and then click the **Schema** 
 
 
 The Logical Unit window has three main sections:
-* [Logical Unit schema.](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-schema)
-* [Logical Unit tabs.](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-tabs)
-* [Logical Unit toolbar.](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-schema-window-toolbar) 
+* [Logical Unit schema.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema)
+* [Logical Unit tabs.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs)
+* [Logical Unit toolbar.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar) 
 
 ### Logical Unit (LU) Schema
 The Logical Unit Schema is a work area where you can define the logical unit’s structure. 
