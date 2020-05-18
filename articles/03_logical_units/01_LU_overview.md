@@ -74,7 +74,7 @@ Below is a table of **pros and cons** of each alternative:
 <td width="250">
 <p>Maintenance, handling a less complex schema and internal relationships</p>
 </td>
-<td align="center" width="60">&nbsp; <img src=https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
 <td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
 </tr>
 <tr>
