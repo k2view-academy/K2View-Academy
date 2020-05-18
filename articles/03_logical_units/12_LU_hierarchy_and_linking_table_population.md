@@ -8,24 +8,24 @@ An LU Schema structure displays a hierarchical representation of the data relate
   **For example:** an ADDRESS LU table is populated by two populations: 
   * Population 1, populates the customer’s billing address. It is linked to the CUSTOMER table and selects source address records that belong to the CUSTOMER_ID.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.12_%20Link%20table%20populations_knowledge_Item/1_12_Population_Link_Address_to_Customer.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_12_link_tables1.png)
 
 **__**
   * Population 2, populates the the installation address of each subscription. It is linked to the SUBSCRIBER table and selects the source address records that belong to the SUSBCRIBER_ID.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.12_%20Link%20table%20populations_knowledge_Item/1_12_Population_Link_Address_to_Subscriber.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_12_link_tables2.png)
 
 * A link from a Table Population object to a parent LU Table can be based on several columns where all columns must be linked to the **same parent LU Table**.
 
   **Example 1:**\
 The INVOICE Table Population object can be linked to the BALANCE LU Table by two columns: SUBSCRIBER_ID and BALANCE. This is a valid link.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.12_%20Link%20table%20populations_knowledge_Item/1_12_valid_link_by_2_fields.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_12_link_tables3.png)
 
   **Example 2:**\
 Linking the INVOICE Table Population object to two different LU Tables - BALANCE and SUBSCRIBER is invalid.
 
-![image](https://k2vacademy.s3.eu-west-2.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.12_%20Link%20table%20populations_knowledge_Item/1_12_Invalid_link_by_2_fields.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_12_link_tables4.png)
 
 * The DB Query  population filters the selected data based on the link to the parent LU Table. For example, the parent table of ADDRESS is CUSTOMER. The ADDRESS DB Query selects the ADDRESS records that belong to the CUSTOMER_ID of each LU Instance.
 
@@ -59,7 +59,7 @@ To edit an input argument, do the following:
 
 Click the source object of the population window (the DB query) and verify that the fields that should be linked to the **parent table** are set to **True**. Other fields which do not need to be linked to a parent table, can be set to **False**. 
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.12_%20Link%20table%20populations_knowledge_Item/1_12_input_arguments.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_12_link_tables5.png)
 
 ## How Do I Link a Table Population to the LU Schema? 
 A link can be added in both directions:
