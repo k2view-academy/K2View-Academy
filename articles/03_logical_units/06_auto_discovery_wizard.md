@@ -57,7 +57,7 @@ Auto Discovery supports the following modes:
 </tr>
 <tr>
 <td width="160">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/wiki/Auto-Discovery-Wizard#step-4-check-the-erd-diagram"><b>Enable Backwards Discovery Checkbox<b></a></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md#step-4-check-the-erd-diagram"><b>Enable Backwards Discovery Checkbox<b></a></p>
 <p>&nbsp;</p>
 </td>
 <td colspan="2" width="444">
