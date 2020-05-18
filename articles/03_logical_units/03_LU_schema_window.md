@@ -19,7 +19,7 @@ The following objects are located under each [Logical Unit (LU)](https://github.
 Go to the **Project Tree**, click the **LU Name** and then click the **Schema** to open the **Logical Unit** window.
 
 ### Logical Unit (LU) Window
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_LU_Schema_WIndow.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_LU_Schema_WIndow.PNG)
 
 
 The Logical Unit window has three main sections:
