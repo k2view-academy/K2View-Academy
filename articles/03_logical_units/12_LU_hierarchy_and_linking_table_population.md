@@ -2,7 +2,7 @@
 
 ## Table Population Links Overview
 An LU Schema structure displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU Tables are created via their Table Population objects :
-* Each LU Table can have one or several Table Population objects and each Table Population object, except the Table Population object of the Root LU Table, must be linked to a parent table via its [input arguments](https://github.com/k2view-academy/K2View-Academy/wiki/Building-an-LU-Hierarchy---Linking-Table-Populations#what-are-the-table-populations-input-arguments) (input columns). 
+* Each LU Table can have one or several Table Population objects and each Table Population object, except the Table Population object of the Root LU Table, must be linked to a parent table via its [input arguments](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#what-are-the-table-populations-input-arguments) (input columns). 
 * Each Table Population object can be linked to a different parent LU Table.
 
   **For example:** an ADDRESS LU table is populated by two populations: 
