@@ -11,4 +11,4 @@ Click for more information about Enrichment Functions.
 The execution order of all Enrichment Functions is determined at the LU Schema level in the Enrichment Order tab. Only Enrichment Functions that are directly related to specific   tables are included in the display.
 
 ## How Can I Change the Enrichment Order? 
-Use the **Up** and **Down** arrows in the **Enrichment Order** tab of the [**LU schema**](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window) to change the execution order of its Enrichment functions. 
+Use the **Up** and **Down** arrows in the **Enrichment Order** tab of the [**LU schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md) to change the execution order of its Enrichment functions. 
