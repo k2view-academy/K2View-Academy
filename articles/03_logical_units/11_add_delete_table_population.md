@@ -10,7 +10,7 @@ A Table Population object holds the transformation and mapping rules of the data
 
 Click for more information about Table Population.
 
-[Click for more information about Linking Table Populations to a Parent Population.](https://github.com/k2view-academy/K2View-Academy/wiki/Building-an-LU-Hierarchy---Linking-Table-Populations)
+[Click for more information about Linking Table Populations to a Parent Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
 Click for more information about Editing the Execution Order of a Table Population.
 
