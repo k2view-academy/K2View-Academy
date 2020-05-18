@@ -12,16 +12,16 @@ The Auto Discovery Wizard can run in two modes:
 ### STEP 1: Define the DB Interface
 The first screen displays a list of all DB interfaces defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_step_1.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_01.png)
 
 1. Click the **DB interface** to display its connection string.
 1. To validate the connection settings, click **Test Connection**. 
 1. Click **Next**.
 
 ### STEP 2: Define the Root Table and Field
-In this step you will select a DB Table and field as the Root Table and [Instance ID](https://github.com/k2view-academy/K2View-Academy/wiki/LU-Schema---Defining-the-Root-Table-and-Instances-ID-Column)  of the Logical Unit.
+In this step you will select a DB Table and field as the Root Table and [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)  of the Logical Unit.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_step_2.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_02.png)
 
 
 1. Go to the **Tables** list and click the **root table** and then click the **Instance ID.**
@@ -32,7 +32,7 @@ In this step you will select a DB Table and field as the Root Table and [Instanc
 ### STEP 3: Define the Auto Discovery Mode and Settings
 This screen allows you to select the Auto Discovery mode (auto discovery type) and add additional settings to it.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_step_3.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_03.png)
 
 ## Auto Discovery Mode (Type):  
 Auto Discovery supports the following modes:
@@ -57,7 +57,7 @@ Auto Discovery supports the following modes:
 </tr>
 <tr>
 <td width="160">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/wiki/Auto-Discovery-Wizard#step-4-check-the-erd-diagram"><b>Enable Backwards Discovery Checkbox<b></a></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md#step-4-check-the-erd-diagram"><b>Enable Backwards Discovery Checkbox<b></a></p>
 <p>&nbsp;</p>
 </td>
 <td colspan="2" width="444">
@@ -113,7 +113,7 @@ Connections are colored:
 If the selected Root Table is not defined as the root of the identified ERD, consider changing the selected Root Table or check the Enable Backwards Discovery checkbox. If not, the created LU includes only the selected Root Table and its subordinate table. 
 
 **For Example** 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_step_4.1.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_04.png)
 
 The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard identifies the CRM_DB.CUSTOMER table as the Root Table of the CRM_DB. 
 
@@ -121,15 +121,15 @@ The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard i
 When saving the CRM_DB.ACTIVITY table as a Root Table:
 1. **If Enable Backwards Discovery** is unchecked (default), then Auto Discovery creates the following LU and filters out the remaining tables of the ERD diagram.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_step_4.2.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_05.png)
 
 2. When **Enable Backwards Discovery** is checked, Auto Discovery creates the following LU and links the CUSTOMER table and its subordinate table to the ACTIVITY table.
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_step_4.3.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_06.png)
 
 ### Create the Logical Unit Diagram 
 Display the suggested logical unit diagram and click **Finish** to create the LU. 
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.6_Auto_Discovery_Wizard/1.6_auto_discovery_create_lu_diagram.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_07.png)
 
 Optional: you can check tables out of the LU schema to create them as LU tables and add them manually to your LU if needed. 
