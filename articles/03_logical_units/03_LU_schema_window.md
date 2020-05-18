@@ -39,7 +39,7 @@ The Logical Unit Schema is a work area where you can define the logical unit’s
 
 ### Customer LU Schema Example 
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_LU_Schema_Only.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.4_LU_schema_example.png)
 
 The Logical Unit Schema window shows the Root Table and hierarchy of the tables included in the Logical Unit and the relationships between them:
 * The Root Table of the LU Schema is Customer. 
