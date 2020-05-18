@@ -61,7 +61,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <tbody>
 <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-(LU)-Properties"><b>Properties Tab<b></a>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/04_LU_properties.md"><b>Properties Tab<b></a>
 </td>
 <td style="width: 414px;">
 <p>Contains the properties on an LU level.</p>
