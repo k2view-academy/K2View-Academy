@@ -118,26 +118,26 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 ### Logical Unit (LU) Schema Window Toolbar
 By default, the LU Diagram window displays the following toolbar:
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_LU_Schema_Icons.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_LU_window_icons.png)
 
 You can customize your window by adding or deleting toolbars to/from diagram windows:
 
 <table>
 <tbody>
 <tr>
-<td width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
 <td width="557">
 <p>Group SubGraph.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_logical_unit_schema_window_table_icon_2.png"/></td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_2.png"/></td>
 <td width="557">
 <p>Ungroup SubGraph.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp;<img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
+<td width="60">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
 <p>Update Tables from Database.</p>
 <p>When clicked, the LU Tables Schema is refreshed from the source database. This action is needed if the LU Tables Schema has been updated in the source database.</p>
@@ -145,7 +145,7 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="https://k2vacademy.s3.amazonaws.com/Fabric/1_LU_Schema_and_Overview/1.3_Logical_Unit_Schema_Window/1.3_logical_unit_schema_window_table_icon_4.png" alt="" </td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_4.png" alt="" </td>
 <td width="557">
 <p>Refresh Items, refreshes items from an implementation into the LU schema.</p>
 </td>
