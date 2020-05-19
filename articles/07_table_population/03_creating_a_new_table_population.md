@@ -34,10 +34,9 @@ Click for more information about Creating Table Population Objects .
 
 ### How Do I Create a New Table Population from a Root Function? 
 <p></p>
-
 1.	Go to Project Tree > Logical Units and then click the **LU Name**.
 
-2.	Click Tables, right click <Table Name> and then click New Table Population to open the working area for creating the mapping.
+2.	Click Tables, right click **Table Name** and then click New Table Population to open the working area for creating the mapping.
    
 3.	Click the Objects tab in the right panel of the Table Population working area.
 
