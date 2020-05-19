@@ -4,7 +4,7 @@ Each LU Schema must have a [Root Table](https://github.com/k2view-academy/K2View
 
 ## How Can I Change the Root Table? 
 1. Right click the new **Root Table** and then click **Set as: Root**.
-1. Define the **Instance PK** column of the new root table.
+1. Define the **Instance PK Column** of the new root table.
 
 Note that you must link the previous root table to a parent table. This can be the new root table.
 
