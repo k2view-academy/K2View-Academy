@@ -2,15 +2,17 @@
 
 ### How Do I Create a New LU Table?
 LU tables are the basic building blocks for creating Logical Units. There are several ways to create a new LU Table.
-From the LU Schema :
-•	Right click the work area and select either the New Table From SQL Based DB Query  or New Table From SQL Based Root Function  option.
-•	Drag the table into the LU Schema window from the DB Objects tab. 
+
+From the LU Schema:
+
+*	Right click the work area and select either the **New Table From SQL Based DB Query** or New Table From SQL Based Root Function  option.
+*	Drag the table into the LU Schema window from the DB Objects tab. 
 From the Project Tree: 
-•	Via the Auto Discovery Wizard  to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
-•	Creating a new table manually . In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
-•	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
-•	Creating a set of tables based on an XSD file .
-•	Using the Save As option. Note that this option does not copy the Table Population.
+*	Via the Auto Discovery Wizard  to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
+*	Creating a new table manually . In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
+*	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
+*	Creating a set of tables based on an XSD file .
+*	Using the Save As option. Note that this option does not copy the Table Population.
 Click for more information about Adding a Table to a Schema .
  
 ### How Do I Create a New LU Table Manually?  
