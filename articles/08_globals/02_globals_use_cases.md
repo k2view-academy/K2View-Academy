@@ -2,22 +2,22 @@
 
 Globals are predefined global variables that can be accessed by different objects within a Project and are used when the same information is required repeatedly by various Fabric objects. 
 
-A Global can be used either in a map (Table Population of an LU Table or a Reference Table or Parser) or in a Java code (a Project function or a Web Service).
+A Global can be used either in a map (Table Population of an [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference Table or Parser) or in a Java code (a Project function or a Web Service).
  
 The following scenarios describe how Globals can be used in Fabric objects.
 
 ### How do I Add a Global to a Table Population?
-1.	Go to the **Project Tree**, click **Logical Units** and then click **<LU name>**. 
-2.	Click Tables, <Table name> and then click <Table Population>.
+1.	Go to the **Project Tree**, click **Logical Units** and then click **LU name**. 
+2.	Click Tables, <Table name> and then click **Table Population**.
 3.	Click the Objects tab in the right panel of the Table Population working area.
 4.	Click Globals and then click the Global in the Globals list.
 5.	Drag the Global into the working area.
 6.	Connect the Global to the table column.
 
-**Click for more information about Globals – Code Examples.**
+**Click for more information about [Globals – Code Examples](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/04_globals_code_examples.md).**
 
 ### How do I Add a Global to a Parser Map?
-1.	Go to the Project Tree, click Logical Units and then click <LU name>.
+1.	Go to the Project Tree, click Logical Units and then click **LU name**.
 2.	Click Parsers and then click Parser Maps.
 3.	Click the Objects tab in the right panel of the Parser Map working area.
 4.	Click Globals and select the Global in the Globals list.
@@ -40,7 +40,9 @@ When opening an LU function or a Web Service in Fabric, a list of all Globals is
 
 Click the grey arrow on the left of the window to display the panel and the list of Globals.
 
-**Click for more information about Globals – Code Examples.**\
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_02_01%20list%20of%20Globals.png)
+
+[**Click for more information about Globals – Code Examples.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/04_globals_code_examples.md)\
 **Click for more information about How to Create Project Functions.**
 
 ### How do I Override a Global Value?
@@ -48,7 +50,7 @@ Globals can be overridden via the Fabric Server using Fabric commands **without 
 * Only Globals that are not defined as Final can be overridden. 
 * Globals defined as Final on a Shared Objects level but are not defined as Final under the same name on an LU level, can be overridden in the context of this LU only.
 
-**Click for more information about [Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/wiki/Globals-Overview).** 
+**Click for more information about [Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).** 
 
 
 
