@@ -17,10 +17,10 @@ Click for more information about Creating Table Population Objects .
 <table width="606">
 <tbody>
 <tr>
-<td width="95">
+<td width="153">
 <p><strong>DB Query</strong></p>
 </td>
-<td width="511">
+<td width="413">
 <p>A <strong>DB query</strong> is used when the data is selected from one data source only in one or several tables. All required data can be retrieved by one SQL query.</p>
 </td>
 </tr>
