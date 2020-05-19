@@ -1,6 +1,6 @@
-DB Interfaces Overview
+# DB Interfaces Overview
 
-### What us a Database Interface?
+### What Is a Database Interface?
 
 Database interfaces are used to define connection details to a database that has a JDBC driver like Oracle, PostgreSQL or SQL Server.\
 A database interface includes the following details:
