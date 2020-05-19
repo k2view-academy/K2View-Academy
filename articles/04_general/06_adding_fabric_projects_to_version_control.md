@@ -87,7 +87,7 @@ When a project is registered in the Version Control system, the following indica
 </td>
 </tr>
 <tr>
-<td width="22">
+<td width="30">&nbsp;</td>
 <p>+</p>
 </td>
 <td width="554">
@@ -95,43 +95,43 @@ When a project is registered in the Version Control system, the following indica
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%202.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>Locked</p>
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%203.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>Updated</p>
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%204.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>Branch with modifications</p>
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%205.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>File is versioned,&nbsp;but&nbsp;was&nbsp;inserted&nbsp;from&nbsp;a different&nbsp;location</p>
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%206.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>File&nbsp;is&nbsp;versioned&nbsp;and&nbsp;locally&nbsp;locked,&nbsp;but&nbsp;not&nbsp;modified</p>
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%207.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>File&nbsp;is&nbsp;versioned,&nbsp;locally&nbsp;locked&nbsp;and&nbsp;modified</p>
 </td>
 </tr>
 <tr>
-<td width="22">&nbsp;</td>
+<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%208.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>File&nbsp;is&nbsp;in&nbsp;conflict;&nbsp;must&nbsp;be&nbsp;resolved&nbsp;before&nbsp;continuing</p>
 </td>
