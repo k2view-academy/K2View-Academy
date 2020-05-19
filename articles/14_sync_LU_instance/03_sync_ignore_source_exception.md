@@ -17,22 +17,24 @@ ORA-12514, TNS: listener does not currently know of service requested in connect
 
 **Click for more information about the Get Instance Fabric Command.**
 
-In specific cases, you may prefer to roll back the sync to avoid getting an error (exception) when the source system cannot be accessed.
+In specific cases, you may prefer to roll back the sync without getting an error (exception) when the source system cannot be accessed.
  
 For example:
 
 If the source DB is down for maintenance, you may prefer getting the latest version of the instance from Fabric instead of getting an error. 
-To do so, use the following Fabric command: set ignore_source_exception:Syntax:
+To do so, use the following Fabric command: set ignore_source_exception.
+
+Syntax:
 set ignore_source_exception <true/false>;
 
-Examples:
+Syntax-Examples:
 
   set ignore_source_exception true;\
   set ignore_source_exception false;
 
 When setting the ignore_source_exception to True, if Fabric fails to connect to the source system, Fabric does not throw an exception, but rolls back the changes of the LUI whereby the LUI version is not updated.\
 Note that if the required LUI is not yet in Fabric, the ignore_source_exception is set to True and the following message is generated:\
-“Not attached <LU Name>”.
+“Not attached [LU Name]”.
 
 **Click for more information about LU Instance Storage and Versions.**
  
