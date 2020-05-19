@@ -14,7 +14,7 @@ Click for more information about Creating Table Population Objects .
 
 ### DB Query Vs. Root Function Use Cases
 
-<table width="606">
+<table width="580">
 <tbody>
 <tr>
 <td width="153">
