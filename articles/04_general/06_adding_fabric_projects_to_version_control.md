@@ -78,10 +78,10 @@ Note that when opening a project that has been updated and committed to the repo
 
 When a project is registered in the Version Control system, the following indicators may be displayed next to the Project Tree components based on their status:
 
-<table width="576">
+<<table width="576">
 <tbody>
 <tr>
-<td width="22">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt="" width="20" height="20" /></td>
+<td width="22">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt="" width="20" height="20" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%201.jpg" alt="" width="30" height="30" /></td>
 <td width="554">
 <p>Modified</p>
 </td>
@@ -138,7 +138,6 @@ When a project is registered in the Version Control system, the following indica
 </tr>
 </tbody>
 </table>
-
 
 ### What are the Version Control Operations?
   
