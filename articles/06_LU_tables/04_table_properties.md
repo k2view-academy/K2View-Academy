@@ -1,7 +1,10 @@
 # LU Table Properties
 
 The Table Properties tab is displayed in the right pane of Table window.
+
+
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/images/06_04_table_properties.png)
+
 
 The Properties tab displays a list of properties that must be defined for each LU Table, as follows:
 
@@ -22,7 +25,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Instance PK Column</strong></p>
 </td>
 <td width="474">
-<p>A unique field that is used as the [LU table&rsquo;s Primary Key](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md).</p>
+<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">[LU table&rsquo;s Primary Key.</a></p>
 </td>
 </tr>
 <tr>
