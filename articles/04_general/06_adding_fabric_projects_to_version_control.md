@@ -68,6 +68,8 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 4.	In the  **Revision panel** select the preferred **SVN Revision** and click **OK**.
 5.	Optional: If a previous revision is selected, click **Show Log** to display the log and select the **Revision**.
 
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_01%20revision.jpg)
+
 Note that when opening a project that has been updated and committed to the repository by another user, a warning is displayed requesting confirmation that the revision on the local machine is up-to-date.
 
 **Click for more information about Best Practices for Working with SVN and GIT.**
@@ -75,6 +77,68 @@ Note that when opening a project that has been updated and committed to the repo
 ### Project Tree Version Control Indicators
 
 When a project is registered in the Version Control system, the following indicators may be displayed next to the Project Tree components based on their status:
+
+<table width="576">
+<tbody>
+<tr>
+<td width="22">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%201.jpg" alt="" /></td>
+<td width="554">
+<p>Modified</p>
+</td>
+</tr>
+<tr>
+<td width="22">
+<p>+</p>
+</td>
+<td width="554">
+<p>New objects</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>Locked</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>Updated</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>Branch with modifications</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>File is versioned,&nbsp;but&nbsp;was&nbsp;inserted&nbsp;from&nbsp;a different&nbsp;location</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>File&nbsp;is&nbsp;versioned&nbsp;and&nbsp;locally&nbsp;locked,&nbsp;but&nbsp;not&nbsp;modified</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>File&nbsp;is&nbsp;versioned,&nbsp;locally&nbsp;locked&nbsp;and&nbsp;modified</p>
+</td>
+</tr>
+<tr>
+<td width="22">&nbsp;</td>
+<td width="554">
+<p>File&nbsp;is&nbsp;in&nbsp;conflict;&nbsp;must&nbsp;be&nbsp;resolved&nbsp;before&nbsp;continuing</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### What are the Version Control Operations?
   
