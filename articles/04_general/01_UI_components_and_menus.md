@@ -16,6 +16,8 @@ Fabric Studio also enables you to integrate your Projects into Source Version Co
 
 ### How Can I Use the Fabric Studio Start Page?
 
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_01_start_a_page.png)
+
 The Start Page has links to different K2View Fabric Projects, including: 
 * Start a new Project, with or without configuration control. 
 * Open an existing Project.
@@ -28,6 +30,57 @@ The Start Page has links to different K2View Fabric Projects, including:
 Click the K2View icon on the top left corner of the Studio to restore, move, size, minimize, maximize or close the Fabric Studio.
 
 ### Fabric Studio Toolbar Tabs
+
+<table>
+<tbody>
+<tr>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
+<td width="161">
+<p>file</p>
+</td>
+</tr>
+<tr>
+<td width="57">&nbsp;</td>
+<td width="161">
+<p>New Item (CTRL+N)</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="57">&nbsp;</td>
+<td width="161">
+<p>Project Tree (CTRL+T)</p>
+</td>
+</tr>
+<tr>
+<td width="57">&nbsp;</td>
+<td width="161">
+<p>Query Builder</p>
+</td>
+</tr>
+<tr>
+<td width="57">&nbsp;</td>
+<td width="161">
+<p>Tools</p>
+</td>
+</tr>
+<tr>
+<td width="57">&nbsp;</td>
+<td width="161">
+<p>Server Activity</p>
+</td>
+</tr>
+<tr>
+<td width="57">
+<p>&nbsp;</p>
+</td>
+<td width="161">
+<p>Help (F1 for User Guide)</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 **Click for more information about the Query Builder.**\
 **Click for more information about the Studio Debug and Log Capabilities.**
