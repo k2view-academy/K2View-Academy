@@ -21,12 +21,12 @@ Click for more information about Creating Table Population Objects .
 3.	Click the Objects tab in the right panel of the Table Population working area.
 4.	Click Databases to display the Databases List holding a list of interfaces defined in the project. 
 5.	Do either: 
-    a.	Double click the Interface Name and drag a table into the working area.
-    b.	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the **LU Name** and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file  or Reference file.\
+    *	Double click the Interface Name and drag a table into the working area.
+    *	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the **LU Name** and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file  or Reference file.\
 6.	Click Create as DB Query to create the DB Query source object in the working area. 
 7.	Optional: use the Edit Query option to edit the input query via the Query Builder , for example, to choose specific columns or conditions in SQL statements. Do either:
-    a.	Click the Source Object, then go to the Properties tab > Edit Query in the right panel of the working area.
-    b.	Double click the Query Object.
+    *	Click the Source Object, then go to the Properties tab > Edit Query in the right panel of the working area.
+    *	Double click the Query Object.
 8.	To connect the Source Object to the target LU Table, right click the DB Query object and either:
     a.	Click Auto Connect to Table.
     b.	Connect the fields manually.
