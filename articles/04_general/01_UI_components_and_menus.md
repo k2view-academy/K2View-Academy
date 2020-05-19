@@ -35,7 +35,7 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 <tbody>
 <tr>
 <td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
-<td width="161">
+<td width="300">
 <p>file</p>
 </td>
 </tr>
