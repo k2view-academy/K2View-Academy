@@ -40,40 +40,38 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;</td>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
 <td width="161">
 <p>New Item (CTRL+N)</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;</td>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
 <td width="161">
 <p>Project Tree (CTRL+T)</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;</td>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
 <td width="161">
 <p>Query Builder</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;</td>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
 <td width="161">
 <p>Tools</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;</td>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
 <td width="161">
 <p>Server Activity</p>
 </td>
 </tr>
 <tr>
-<td width="57">
-<p>&nbsp;</p>
-</td>
+<td width="57">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_01_02_icon1.png" alt="" /></td>
 <td width="161">
 <p>Help (F1 for User Guide)</p>
 </td>
