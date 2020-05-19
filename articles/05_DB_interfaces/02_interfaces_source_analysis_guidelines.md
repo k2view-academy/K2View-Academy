@@ -1,4 +1,4 @@
-#Source Analysis Guidelines
+# Source Analysis Guidelines
 
 All Fabric Projects include data sources which transfer data through interfaces. Therefore, when creating a Fabric project, the first step is to analyze the data sources needed for your Project.
 Do the following:
