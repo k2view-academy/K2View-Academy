@@ -54,7 +54,7 @@ Fabric server has the several directories under its home directory (/usr/local/k
 </tr>
 <tr style="height: 32.8px;">
 <td style="height: 32.8px; width: 101.6px;">export</td>
-<td style="height: 32.8px; width: 463.2px;">It contains the output files of **set output** command.</td>
+<td style="height: 32.8px; width: 463.2px;">It contains the output files of  <strong>set output</strong> command.</td>
 </tr>
 <tr style="height: 17px;">
 <td style="height: 17px; width: 101.6px;">trace</td>
