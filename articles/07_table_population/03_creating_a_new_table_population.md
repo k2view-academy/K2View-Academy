@@ -17,38 +17,30 @@ Click for more information about Creating Table Population Objects .
 
 ### How Do I Create a New Table Population from a DB Query? 
 
-1.	Go to Project Tree > Logical Units and then click the <LU Name>.
-2.	Click Tables, right click <Table Name> and then select New Table Population to open the working area for creating the mapping.
-3.	Click the Objects tab in the right panel of the Table Population working area.
-4.	Click Databases to display the Databases List holding a list of interfaces defined in the project. 
+1.	Go to **Project Tree > Logical Units** and then click the **LU Name**.
+2.	Click **Tables**, right click **Table Name** and then select **New Table Population** to open the working area for creating the mapping.
+3.	Click the **Objects tab** in the right panel of the **Table Population working area.**
+4.	Click **Databases** to display the Databases List holding a list of interfaces defined in the project. 
 5.	Do either: 
     *	Double click the Interface Name and drag a table into the working area.
-    *	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the **LU Name** and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file  or Reference file.\
-6.	Click Create as DB Query to create the DB Query source object in the working area. 
-7.	Optional: use the Edit Query option to edit the input query via the Query Builder , for example, to choose specific columns or conditions in SQL statements. Do either:
-    *	Click the Source Object, then go to the Properties tab > Edit Query in the right panel of the working area.
-    *	Double click the Query Object.
+    *	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the **LU Name** and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file  or Reference file. 
+6.	Click **Create as DB Query** to create the DB Query source object in the working area. 
+7.	Optional: use the **Edit Query** option to edit the input query via the **Query Builder**, for example, to choose specific columns or conditions in SQL statements. Do either:
+    *	Click the **Source Object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
+    *	Double click the **Query Object**.
 8.	To connect the Source Object to the target LU Table, right click the DB Query object and either:
-    *	Click Auto Connect to Table.
+    *	Click **Auto Connect to Table**.
     *	Connect the fields manually.
 
 ### How Do I Create a New Table Population from a Root Function? 
 <p></p>
-1.	Go to Project Tree / Logical Units and then click the **LU Name**.
-
-2.	Click Tables, right click **Table Name** and then click New Table Population to open the working area for creating the mapping.
-   
-3.	Click the Objects tab in the right panel of the Table Population working area.
-
-4.	Click Root Functions  and do either:
-
+1.	Go to **Project Tree/Logical Units** and then click the **LU Name.**
+2.	Click Tables, right click **Table Name** and then click **New Table Population** to open the working area for creating the mapping.
+3.	Click the **Objects** tab in the right panel of the **Table Population working area.**
+4.	Click **Root Functions** and do either:
     * Select an existing Root Function and drag it into the working area. 
-    
     * Click Create New Root Function.
-    
-5.	Right click the Source Object and do either:
-
-    * Check Auto Connect to Table.
-    
+5.	Right click the **Source Object** and do either:
+    * Check **Auto Connect to Table.**
     * Connect the fields manually.
    
