@@ -111,7 +111,7 @@ public static String getSyncMode();
 This method can be invoked by a [decision function](https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions). For example:
 If the sync mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
 
-Click to open the list of Fabric API: **http://<Fabric IP address>:3213/static/doc/user-api/index.html**
+Click to open the list of Fabric API: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
 
 [![Previous](https://k2vacademy.s3.amazonaws.com/General/Previous.png)](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-of-a-Logical-Unit-Instance---Overview)[<img align="right" width="60" height="54" src="https://k2vacademy.s3.amazonaws.com/General/Next.png">](https://github.com/k2view-academy/K2View-Academy/wiki/Sync---Ignore-Source-Exception)
