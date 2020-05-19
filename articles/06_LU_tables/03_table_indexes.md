@@ -11,9 +11,9 @@ It is recommended to create an index on the fields of a [parent LU Table](https:
 
 **Example 1**
 The USAGE table contains 100K records per customer. The SELECT SQL statement is:
-...
+...java
 SELECT sum (CALLS) from USAGE where TYPE = ‘I’ and PRIORITY = ‘High’
-/...
+...
 To improve the performance of this statement, a combined index should be created for the TYPE and PRIORITY columns, where TYPE is the first column in the index and PRIORITY is the second.
 
 **Example 2**
