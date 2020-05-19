@@ -9,11 +9,12 @@ From the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/maste
 *	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 From the Project Tree: 
 *	Via the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
-*	Creating a new table **manually**. In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
+*	Creating a new table [**manually**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/02_LU_tables/02_create_an_LU_table.md#how-do-i-create-a-new-lu-table-manually). In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
 *	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
 *	Creating a set of tables based on an **XSD file**.
 *	Using the Save As option. Note that this option does not copy the Table Population.
-Click for more information about Adding a Table to a Schema .
+
+[Click for more information about Adding a Table to a Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
  
 ### How Do I Create a New LU Table Manually?  
 1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, right click **Tables** and then select **New Table** to display the Columns tab in the **Table Schema**.
