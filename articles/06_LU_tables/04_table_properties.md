@@ -25,7 +25,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Instance PK Column</strong></p>
 </td>
 <td width="474">
-<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">[LU table&rsquo;s Primary Key.</a></p>
+<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">LU table&rsquo;s Primary Key.</a></p>
 </td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><strong>Sync Method</strong></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method</strong></a></p>
 </td>
 <td width="474">
 <p>There are four Sync methods:</p>
@@ -65,7 +65,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><strong>Truncate Before Sync</strong></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Truncate Before Sync</strong></a></p>
 </td>
 <td width="474">
 <p>When Truncate Before Sync = True, the entire LU table is truncated before the populations are executed.</p>
