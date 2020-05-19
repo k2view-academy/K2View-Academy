@@ -29,12 +29,12 @@ The following scenarios describe how Globals can be used in Fabric objects.
 ### How do I Use a Global in a Java File in Fabric?
 To enable using the Globals in Java code, the following import statements are generated automatically by the Fabric infrastructure for every new Java file created in Fabric like a function or Web Service: 
 
-...java
+<pre><code>
 // import of shared Globals
 import com.k2view.cdbms.shared.Globals; 
 // Import of Globals under the LU
 import static com.k2view.cdbms.usercode.lu.<LU name>.Globals.*; 
-...
+</code></pre>
 
 When opening an LU function or a Web Service in Fabric, a list of all Globals is displayed in the **Objects** tab in the left panel of the window. 
 * Globals defined in LU Globals or in Shared Globals are available for use in LU Functions.
