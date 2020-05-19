@@ -13,6 +13,7 @@ For example, group all Billing Tables in the Customer LU, see below:
 
 ## How Can I Ungroup LU Tables? 
 Click the **Grouped SubGraph** and click the **Ungroup SubGraph** icon:
+
 \
 [Click for more information about the Diagram Toolbars.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/03_diagram_and_toolbars.md)
 \
