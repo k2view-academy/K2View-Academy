@@ -1,11 +1,11 @@
-Interfaces - Source Analysis Guidelines
+#Source Analysis Guidelines
 
 All Fabric Projects include data sources which transfer data through interfaces. Therefore, when creating a Fabric project, the first step is to analyze the data sources needed for your Project.
 Do the following:
 * Identify existing data sources and analyze the data they store.
 * Define the interfaces for the data sources required for the specific implementation. 
 
-### What do I Need to Know Before Creating a New Interface?
+### What Do I Need to Know Before Creating a New Interface?
 1. Identify which source systems store [Digital Entities] information in your Project. 
 2. Check the following for each identified legacy system:
     * System name: For example, CRM.
