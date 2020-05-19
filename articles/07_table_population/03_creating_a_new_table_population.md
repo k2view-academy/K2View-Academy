@@ -16,7 +16,7 @@ LU Tables can be populated by either a DB Query or a Root Function source object
 Click for more information about Creating Table Population Objects .
 
 ### How Do I Create a New Table Population from a DB Query? 
-<body>
+
 1.	Go to Project Tree > Logical Units and then click the <LU Name>.
 2.	Click Tables, right click <Table Name> and then select New Table Population to open the working area for creating the mapping.
 3.	Click the Objects tab in the right panel of the Table Population working area.
@@ -31,9 +31,9 @@ Click for more information about Creating Table Population Objects .
 8.	To connect the Source Object to the target LU Table, right click the DB Query object and either:
     *	Click Auto Connect to Table.
     *	Connect the fields manually.
-   </body>
+
 ### How Do I Create a New Table Population from a Root Function? 
-<body>
+<p></p>
 1.	Go to Project Tree > Logical Units and then click the **LU Name**.
 2.	Click Tables, right click <Table Name> and then click New Table Population to open the working area for creating the mapping.
 3.	Click the Objects tab in the right panel of the Table Population working area.
@@ -43,4 +43,4 @@ Click for more information about Creating Table Population Objects .
 5.	Right click the Source Object and do either:
     * Check Auto Connect to Table.
     * Connect the fields manually.
-</body>
+
