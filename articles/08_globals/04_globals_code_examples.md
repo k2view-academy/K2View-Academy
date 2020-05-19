@@ -2,9 +2,9 @@
 
 ### Example of Creating a New Global and Using it in a Function
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_01%20A%20NEW%20GLOBAL.png)
 
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](https://github.com/k2view-academy/K2View-Academy/wiki/Globals-Overview).
+Open the **Globals** window under a **Logical Unit** and [define a new **Global**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md).
 
 After the Global is saved, its definition is kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all the functions under this LU.
 
@@ -16,11 +16,11 @@ if (CUSTOMER_CHECKS_ENABLED.equals("Y")) {
 This example shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks).
 
 ### Example of Using a Global in a Table Population
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
 
-Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/wiki/Globals-Overview) and then create a new **Table Population** and add the **Globals** to it.
+Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) and then create a new **Table Population** and add the **Globals** to it.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
 
 This example shows how a Global can be used in a Table Population. Since the SOURCE_PRODUCT_VERSION and ACTIVITY_NOTE Globals are defined in the LU’s Globals list in the **Globals.java** file, they are part of the LU’s scope and therefore can be used by the Table Population in the same LU.
 
@@ -28,7 +28,7 @@ This example shows how a Global can be used in a Table Population. Since the SOU
 
 ### Example of Using a Global in a Fabric Web Service
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_04%20GLOBAL%20IN%20A%20FABRIC%20WEB.png)
 
 Open the **Globals** window under **Shared Objects** and [define new **Globals**](https://github.com/k2view-academy/K2View-Academy/wiki/Globals-Overview) and then [create a **Web Service**] and use the Globals.
 
@@ -51,7 +51,7 @@ if (contrID == "" && adrID == "") {
 
 ### Example of Overriding a Global in a Function or a Web Service
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_05%20FUNCTION%20OR%20A%20WEB%20SERVICE.png)
 
 Open the **Globals** window under **Shared Objects** and [define a new **Global**] and then [create a **Fabric Web Service**] or a [**Project function**] that will override the initial value of this Global.\
 The following examples show how a Global can be overridden in a cluster and per session.
