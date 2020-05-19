@@ -93,4 +93,6 @@ DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table wit
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
 </code></pre>
 
+
+
 Click for more information about The DESCRIBE Command.
