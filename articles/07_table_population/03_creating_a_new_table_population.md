@@ -20,8 +20,8 @@ Click for more information about Creating Table Population Objects .
 2.	Click Tables, right click <Table Name> and then select New Table Population to open the working area for creating the mapping.
 3.	Click the Objects tab in the right panel of the Table Population working area.
 4.	Click Databases to display the Databases List holding a list of interfaces defined in the project. 
-5.	Do either:\ 
-    a.	Double click the Interface Name and drag a table into the working area.\
+5.	Do either: 
+    a.	Double click the Interface Name and drag a table into the working area.
     b.	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the **LU Name** and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file  or Reference file.\
 6.	Click Create as DB Query to create the DB Query source object in the working area. 
 7.	Optional: use the Edit Query option to edit the input query via the Query Builder , for example, to choose specific columns or conditions in SQL statements. Do either:
