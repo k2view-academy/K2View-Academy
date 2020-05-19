@@ -141,7 +141,262 @@ When a project is registered in the Version Control system, the following indica
 
 ### What are the Version Control Operations?
   
-**TortioseGit Operations **
+**TortioseGit Operations**
+
+<table>
+<tbody>
+<tr>
+<td width="198">
+<p><strong>Commit</strong></p>
+</td>
+<td width="406">
+<p>Record changes to the repository.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Pull</strong></p>
+</td>
+<td width="406">
+<p>Incorporate changes from a remote repository into the current branch.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Fetch</strong></p>
+</td>
+<td width="406">
+<p>Download objects and refs from another repository.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Diff</strong></p>
+</td>
+<td width="406">
+<p>Displays the following options:</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Changes between the working tree and the index or a tree.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Changes between the index and a tree.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Changes between two trees.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Changes between two blob objects.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Changes between two files on disk.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Show Log</strong></p>
+</td>
+<td width="406">
+<p>Displays a log of all commits influenced by the selected file.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Show Reflog</strong></p>
+</td>
+<td width="406">
+<p>Manages the information recorded in reflogs.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Browse References</strong></p>
+</td>
+<td width="406">
+<p>Browse to view and work with all references.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Repository Browser</strong></p>
+</td>
+<td width="406">
+<p>Displays all contents / files / revisions of a repository, without having a working tree.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Check for Modifications</strong></p>
+</td>
+<td width="406">
+<p>Displays all modified files and un-versioned files in the working tree.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Resolve</strong></p>
+</td>
+<td width="406">
+<p>Displays a list of conflicted files in a folder. Select a file to mark it as Resolved.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Revert</strong></p>
+</td>
+<td width="406">
+<p>Displays a pop up listing the files that have been changed and that can&nbsp;be reverted. (Undo).</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Cleanup</strong></p>
+</td>
+<td width="406">
+<p>Enables removing untracked or ignored files from the working tree.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Switch</strong></p>
+</td>
+<td width="406">
+<p>Enables checking out a specific version to the working tree.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Merge</strong></p>
+</td>
+<td width="406">
+<p>Incorporates changes from another repository and can be used to manually merge changes from one branch into another.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Create Branch</strong></p>
+</td>
+<td width="406">
+<p>Create a new Git branch.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Create Tag</strong></p>
+</td>
+<td width="406">
+<p>Create a tag object.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Export</strong></p>
+</td>
+<td width="406">
+<p>Export a Git Working Tree.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Add</strong></p>
+</td>
+<td width="406">
+<p>Updates the index using the current content in the working tree to prepare the content staged for the next commit.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>Help</strong></p>
+</td>
+<td width="406">
+<p>Display Help information about Git.</p>
+</td>
+</tr>
+<tr>
+<td width="198">
+<p><strong>About</strong></p>
+</td>
+<td width="406">
+<p>Details on the Git version and additional components.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+**Key SVN Operations**
+The context menu displays two top-level SVN operations or TortoiseSVN operations directly from the project tree:
+
+<table>
+<tbody>
+<tr>
+<td width="151">
+<p><strong>SVN Update</strong></p>
+</td>
+<td width="459">
+<p>Performs manual synchronization at any time. Select to either update to the HEAD revision (latest) or to an earlier revision.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>SVN Commit</strong></p>
+</td>
+<td width="459">
+<p>Commit all changes to the central repository. The committed components are available to other users. You can commit individual components or all components.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Log</strong></p>
+</td>
+<td width="459">
+<p>Enables you to review the changes of a specific component, level in the tree, or over a given period. Displays a Log window that lists the log entries associated with the object.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Repository Browser</strong></p>
+</td>
+<td width="459">
+<p>Enables you to browse different versions of the project or a specific object. By default, the Head (latest) revision is displayed. Drill down to the level of a component and review the log.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Cleanup</strong></p>
+</td>
+<td width="459">
+<p>Enables you to perform a sanity check on the SVN issues of the client. Upon completion, a message is displayed to report success or identify problems.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Revert</strong></p>
+</td>
+<td width="459">
+<p>Enables you to roll back any changes that have not yet been committed and revert to the version in the SVN repository. By default, all changes under the tree component are rolled-back. There is also an option to choose only selected changes.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>Resolve Conflict</strong></p>
+</td>
+<td width="459">
+<p>Enables you to resolve a conflict between the local version and the version in the SVN. These conflicts may arise if a new project version, committed by another user, contains changes conflicting with the locally made changes. You can select to resolve the conflict based on the local version or the committed version.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>SVN Export</strong></p>
+</td>
+<td width="459">
+<p>Exports the SVN version of the entire project.</p>
+</td>
+</tr>
+<tr>
+<td width="151">
+<p><strong>SVN Branch feature</strong></p>
+</td>
+<td width="459">
+<p>Enables isolating changes into a branch. Branches are often used to test new features without disturbing the main line of development with compiler errors and bugs. When the new feature is stable, the development branch is merged back into the main branch (trunk), accessed from the root project tree SVN context menu.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+Click for more information about Best Practices for Working with SVN and GIT.
+
+
 
 
 **Key SVN Operations**
