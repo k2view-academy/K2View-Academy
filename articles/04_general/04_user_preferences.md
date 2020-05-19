@@ -131,7 +131,34 @@ Note that TortoiseGit enables adding un-versioned files when performing the Comm
 ### How do I Configure SVN Preferences?
 The following SVN preferences can be configured:
 
-
+<table>
+<tbody>
+<tr>
+<td width="236">
+<p><strong>Auto-update SVN status</strong></p>
+</td>
+<td width="368">
+<p>Check to display the SVN Status icon for each component in the Project Tree.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p><strong>Auto add files to SVN</strong></p>
+</td>
+<td width="368">
+<p>Check to disable adding files automatically to the SVN in the User Preferences window.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p><strong>Auto Check SVN out-of-date files</strong></p>
+</td>
+<td width="368">
+<p>Fabric Studio checks this option each time an open window is saved or closed. A message is also displayed to indicate that there is a newer revision of the Project in the SVN repository whereby an update is required.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 
 
