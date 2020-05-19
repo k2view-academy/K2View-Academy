@@ -5,32 +5,33 @@ LU tables are the basic building blocks for creating Logical Units. There are se
 
 From the LU Schema:
 
-*	Right click the work area and select either the **New Table From SQL Based DB Query** or New Table From SQL Based Root Function  option.
-*	Drag the table into the LU Schema window from the DB Objects tab. 
+*	Right click the work area and select either the **New Table From SQL Based DB Query** or **New Table From SQL Based Root Function** option.
+*	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 From the Project Tree: 
-*	Via the Auto Discovery Wizard  to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
-*	Creating a new table manually . In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
+*	Via the **Auto Discovery Wizard**  to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
+*	Creating a new table **manually**. In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
 *	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
-*	Creating a set of tables based on an XSD file .
+*	Creating a set of tables based on an **XSD file**.
 *	Using the Save As option. Note that this option does not copy the Table Population.
 Click for more information about Adding a Table to a Schema .
  
 ### How Do I Create a New LU Table Manually?  
-1.	Go to the Project Tree, click Logical Units, <LU Name>, right click Tables and then select New Table to display the Columns tab in the Table Schema.
-2.	Define the Table Schema :
-a.	Complete the settings of each table column like the Name or Data Type.
-b.	Optional: Define the table Indexes .
-c.	Optional: Define the CDC and the table’s Search Indexes .
-3.	Define the Table Properties . 
-4.	Save the table.
-HOW DO I EDIT AN LU TABLE? 
-1.	Go to the Project Tree, click Logical Units, <LU Name>, Tables and select <Table Name> to display the Columns tab in the Table Schema.
-2.	Optional: Edit the table’s Columns, Indexes, Search Indexes or Table Properties.
-3.	Save the table.
-Note that in specific cases the Data Type of a column that has been automatically created based on a DB Table may need to be edited manually. For example, a Number column in Oracle is created in Fabric with Data Type = Real. This column might need to be modified to an Integer or Text in the LU Table.
+1.	Go to the **Project Tree**, click **Logical Units**, **<LU Name>**, right click **Tables** and then select **New Table** to display the Columns tab in the **Table Schema**.
+2.	Define the **Table Schema**:
+a.	Complete the settings of each table column like the **Name** or **Data Type**.
+b.	Optional: Define the table **Indexes**.
+c.	Optional: Define the **CDC** and the table’s **Search** Indexes .
+3.	Define the **Table Properties**. 
+4.	**Save** the table.
+
+### How Do I Edit an LU Table? 
+1.	Go to the **Project Tree**, click **Logical Units**, **<LU Name>**, **Tables** and select **<Table Name>** to display the Columns tab in the Table Schema.
+2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
+3.	**Save** the table.
+Note that in specific cases the Data Type of a column that has been automatically created based on a DB Table may need to be edited manually. For example, a **Number** column in Oracle is created in Fabric with **Data Type = Real**. This column might need to be modified to an **Integer** or **Text** in the LU Table.
 
 ### Table Schema Definition  
-The LU Table Schema is defined in the Columns Tab in the Table window where you can set the columns and their types, mark mandatory fields and set the default values. 
+The **LU Table Schema** is defined in the **Columns Tab** in the **Table** window where you can set the columns and their types, mark mandatory fields and set the default values. 
 
 <table width="623">
 <tbody>
