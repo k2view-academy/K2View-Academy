@@ -28,16 +28,17 @@ Click for more information about Creating Table Population Objects .
     *	Click the Source Object, then go to the Properties tab > Edit Query in the right panel of the working area.
     *	Double click the Query Object.
 8.	To connect the Source Object to the target LU Table, right click the DB Query object and either:
-    a.	Click Auto Connect to Table.
-    b.	Connect the fields manually.
+    *	Click Auto Connect to Table.
+    *	Connect the fields manually.
 
 ### How Do I Create a New Table Population from a Root Function? 
+
 1.	Go to Project Tree > Logical Units and then click the **LU Name**.
 2.	Click Tables, right click <Table Name> and then click New Table Population to open the working area for creating the mapping.
 3.	Click the Objects tab in the right panel of the Table Population working area.
 4.	Click Root Functions  and do either:
-    a.	Select an existing Root Function and drag it into the working area. 
-    b.	Click Create New Root Function.
+    * Select an existing Root Function and drag it into the working area. 
+    * Click Create New Root Function.
 5.	Right click the Source Object and do either:
-    a.	Check Auto Connect to Table.
-    b.	 Connect the fields manually.
+    * Check Auto Connect to Table.
+    * Connect the fields manually.
