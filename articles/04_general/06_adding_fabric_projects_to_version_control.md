@@ -313,6 +313,8 @@ When a project is registered in the Version Control system, the following indica
 </tbody>
 </table>
 
+
+
 **Key SVN Operations**
 The context menu displays two top-level SVN operations or TortoiseSVN operations directly from the project tree:
 
@@ -394,15 +396,11 @@ The context menu displays two top-level SVN operations or TortoiseSVN operations
 </table>
 
 
-Click for more information about Best Practices for Working with SVN and GIT.
-
-
-
-
-**Key SVN Operations**
-
-The context menu displays two top-level SVN operations or TortoiseSVN operations directly from the project tree:
-
 **Click for more information about Best Practices for Working with SVN and GIT.**
+
+
+
+
+
 
 
