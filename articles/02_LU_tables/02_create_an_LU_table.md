@@ -3,12 +3,12 @@
 ### How Do I Create a New LU Table?
 LU tables are the basic building blocks for creating Logical Units. There are several ways to create a new LU Table.
 
-From the LU Schema:
+From the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md):
 
-*	Right click the work area and select either the **New Table From SQL Based DB Query** or **New Table From SQL Based Root Function** option.
+*	Right click the work area and select either the [**New Table From SQL Based DB Query**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) or [**New Table From SQL Based Root Function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) option.
 *	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 From the Project Tree: 
-*	Via the **Auto Discovery Wizard**  to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
+*	Via the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
 *	Creating a new table **manually**. In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
 *	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
 *	Creating a set of tables based on an **XSD file**.
