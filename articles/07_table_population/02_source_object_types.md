@@ -48,4 +48,88 @@ Click for more information about Creating Table Population Objects .
 
 The comparison below analyzes the differences and the similarities between two different source object types and provides insight on when each type should be used.
 
+<table style="width: 580px;">
+<thead>
+<tr>
+<td style="width: 153px;">
+<p><strong>Category</strong></p>
+</td>
+<td style="width: 413px;">
+<p><strong>DB Query</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 153px;">
+<p><strong>Structure</strong></p>
+</td>
+<td style="width: 413px;">
+<p>SQL query. All fields in a Select statement become query output.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 153px;">
+<p><strong>Execution time</strong></p>
+</td>
+<td style="width: 413px;">
+<p>Upon table population.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 153px;">
+<p><strong>Content</strong></p>
+</td>
+<td style="width: 413px;">
+<p>Execute the SQL query on one or several tables of a predefined DB interface.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 153px;">
+<p><strong>Access to LU tables</strong></p>
+</td>
+<td style="width: 413px;">
+<p>Can access LU Tables.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 153px;">
+<p><strong>Automatic relation to the parent ID</strong></p>
+</td>
+<td style="width: 413px;">
+<p>The DB query automatically filters the selected records based on the link to the parent LU TableThe Join process to the parent table is invisible in the DB query.</p>
+<p>For example:</p>
+<ul>
+<li>The parent table of ADDRESS LU is CUSTOMER and the relationship is via CUSTOMER_ID.</li>
+<li>The ADDRESS DB query selects the ADDRESS records that belong to the CUSTOMER_ID of each LUI.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="width: 153px;">
+<p><strong>Automatic binding of parameters</strong></p>
+</td>
+<td style="width: 413px;">
+<p>The DB query has an automatic background functionality for preparing and binding the SQL statement that is sent to external interfaces.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 153px;">
+<p><strong>LUDB population performance</strong></p>
+</td>
+<td style="width: 413px;">
+<p>The DB query has a Grouping mechanism that runs a SELECT statement for each group of 1,000 parent IDs. The formula for the number of times the parent data is accessed is: <strong>Round(number of parents ID/1,000) + 1</strong></p>
+<p>For example:</p>
+<p>There are 1,500 subscribers for Instance ID = 1. Each subscriber has services.</p>
+<p>To select the subscriber&rsquo;s services, the DB Query runs two SELECT statements from the source DB:</p>
+<ul>
+<li>Query 1 on a group of 1,000 subscribers.</li>
+<li>Query 2 on the remaining 500 subscribers.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
+
 
