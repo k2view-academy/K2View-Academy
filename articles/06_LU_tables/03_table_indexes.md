@@ -1,0 +1,98 @@
+# Table Indexes
+
+### What is an LU Table Index?  
+An index can be created for an LU Table in order to improve performance when querying / updating LU tables in memory during the Sync process. Indexes are created on a table level and can be built for one or many fields. Each LU Table can have several indexes where each index can contain several columns.
+
+### When Should I Create an Index?
+When querying LU Tables, indexes should be considered for fields used in WHERE clauses.
+Indexes should always be built in the same order as that of the conditions in the WHERE clause of the query. This also applies when using actions like Group By or Distinct which must be applied on   indexed fields as displayed in Example 1.
+When an LU Table is invoked as a Lookup table , create an index for the lookup input links which are used in the WHERE statement.
+It is recommended to create an index on the fields of a [parent LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) which are used as a key to a child table within the LU Schema as displayed in Example 2.
+
+**Example 1**
+The USAGE table contains 100K records per customer. The SELECT SQL statement is:
+
+<pre><code>SELECT sum (CALLS) from USAGE where TYPE = ‘I’ and PRIORITY = ‘High’
+</code></pre>
+
+
+To improve the performance of this statement, a combined index should be created for the TYPE and PRIORITY columns, where TYPE is the first column in the index and PRIORITY is the second.
+
+**Example 2**
+The ORDERS table is a parent table of the CONTRACT and ORDERS_SUMMARY tables: 
+*	The CONTRACT table is linked to the ORDERS table via the CONTRACT_ID field.
+*	The ORDERS_SUMMARY table is linked to the ORDERS table via the ORDER_TYPE field. 
+It is therefore recommended to create two indexes for the ORDERS table:
+*	One for the CONTRACT_ID field.
+*	One for the ORDER_TYPE field.
+
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/images/06_03_table_indexes1.png)
+
+### Index Definition 
+LU Table indexes are defined in the **Indexes Tab** in the Table window where they can also be added, modified or removed from a table. The following Index settings can be defined:  
+
+<table>
+<tbody>
+<tr>
+<td width="122">
+<p><strong>Index id</strong></p>
+</td>
+<td width="464">
+<p>(Read only). Index identifier in the current table. &nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width="122">
+<p><strong>PK</strong></p>
+</td>
+<td width="464">
+<p>Defines whether the current index is a primary key. Check to set or unset this definition.</p>
+</td>
+</tr>
+<tr>
+<td width="122">
+<p><strong>Unique</strong></p>
+</td>
+<td width="464">
+<p>Defines whether the current index is unique. Check to set or unset this definition.</p>
+</td>
+</tr>
+<tr>
+<td width="122">
+<p><strong>Columns</strong></p>
+</td>
+<td width="464">
+<p>(Read only). List of LU Table columns that define the current index. &nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+### How Do I Add an Index? 
+1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, **Tables** and double click **Table Name** to open the table’s settings. 
+2.	In the **Columns** tab, right click one or more fields and select **Create Index from Selected Columns**. 
+3.	Click the **Indexes** tab to display a list of indexes. 
+4.	Check / uncheck **PK** and **Unique** to complete the index definition.
+5.	Save the table. 
+
+### How Do I Delete an Index?  
+1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, **Tables** and double click **Table Name** to open the table’s settings. 
+2.	In the **Indexes** Tab, click **Delete** to delete the index.
+
+### How Do I Get a List of Indexes? 
+The **DESCRIBE** command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
+To get the list of indexes for a specified table, use one of the following commands.
+
+**Syntax:**
+<pre><code>
+DESCRIBE INDEX; Get all system indexes.
+DESCRIBE INDEX <LU Name>; Get all indexes of the schema of an LU.
+DESCRIBE INDEX <LU Name>.<Table Name>; Get the indexes of a specific table within the LU name.
+DESCRIBE INDEX customer; Get all indexes of the schema of LU Customer.
+DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the schema Customer.
+DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
+</code></pre>
+
+
+
+Click for more information about The DESCRIBE Command.
