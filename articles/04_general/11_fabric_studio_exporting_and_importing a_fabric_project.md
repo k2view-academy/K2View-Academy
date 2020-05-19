@@ -61,9 +61,9 @@ You can import an entire exported project or specific branches of a Project Tree
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_04%20Custom%20Import.png)
 
-2. Click the **branches** and **items** to import from the file and then click and drag the   icon to the current project’s structure (right pane).  
+2. Click the **branches** and **items** to import from the file and then click and drag the + icon to the current project’s structure (right pane).  
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_05%20%2BICON.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_06%20project%E2%80%99s%20structure.png)
 
 The Custom Import window displays the number of imported and overridden items.\
 3.  Right click the **Target Project Tree** to display a context menu with the following options:  
@@ -79,7 +79,7 @@ The Custom Import window displays the number of imported and overridden items.\
     b. Override all the conflicting files in the import package.\
     c. Decline the override of the specific file.\
     d. Decline the override of all conflicting files. 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_06%20project%E2%80%99s%20structure.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_07%20confirmation%20window.jpg)
 **Notes** 
 
 When importing objects with the same name and location in the Project Tree, a yellow triangular notification icon is displayed next to the imported objects. The imported objects override the existing objects. 
