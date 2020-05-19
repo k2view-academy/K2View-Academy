@@ -29,7 +29,7 @@ It is therefore recommended to create two indexes for the ORDERS table:
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/images/06_03_table_indexes1.png)
 
 ### Index Definition 
-LU Table indexes are defined in the Indexes Tab in the Table window where they can also be added, modified or removed from a table. The following Index settings can be defined:  
+LU Table indexes are defined in the **Indexes Tab** in the Table window where they can also be added, modified or removed from a table. The following Index settings can be defined:  
 
 <table>
 <tbody>
@@ -69,24 +69,28 @@ LU Table indexes are defined in the Indexes Tab in the Table window where they c
 </table>
 
 ### How Do I Add an Index? 
-1.	Go to the Project Tree, click Logical Units, <LU Name>, Tables and double click <Table Name> to open the table’s settings. 
-2.	In the Columns tab, right click one or more fields and select Create Index from Selected Columns. 
-3.	Click the Indexes tab to display a list of indexes. 
-4.	Check / uncheck PK and Unique to complete the index definition.
+1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, **Tables** and double click **Table Name** to open the table’s settings. 
+2.	In the **Columns** tab, right click one or more fields and select **Create Index from Selected Columns**. 
+3.	Click the **Indexes** tab to display a list of indexes. 
+4.	Check / uncheck **PK** and **Unique** to complete the index definition.
 5.	Save the table. 
 
 ### How Do I Delete an Index?  
-1.	Go to the Project Tree, click Logical Units, <LU Name>, Tables and double click <Table Name> to open the table’s settings. 
-2.	In the Indexes Tab, click Delete to delete the index.
+1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, **Tables** and double click **Table Name** to open the table’s settings. 
+2.	In the **Indexes** Tab, click **Delete** to delete the index.
 
 ### How Do I Get a List of Indexes? 
-The DESCRIBE command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
+The **DESCRIBE** command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
 To get the list of indexes for a specified table, use one of the following commands.
-Syntax:
+
+**Syntax:**
+<pre><code>
 DESCRIBE INDEX; Get all system indexes.
 DESCRIBE INDEX <LU Name>; Get all indexes of the schema of an LU.
 DESCRIBE INDEX <LU Name>.<Table Name>; Get the indexes of a specific table within the LU name.
 DESCRIBE INDEX customer; Get all indexes of the schema of LU Customer.
 DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the schema Customer.
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
-Click for more information about The DESCRIBE  Command.
+</code></pre>
+
+Click for more information about The DESCRIBE Command.
