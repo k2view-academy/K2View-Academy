@@ -19,9 +19,9 @@ From the Project Tree:
 ### How Do I Create a New LU Table Manually?  
 1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, right click **Tables** and then select **New Table** to display the Columns tab in the **Table Schema**.
 2.	Define the [**Table Schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):
-  a.	Complete the settings of each table column like the **Name** or **Data Type**.
-  b.	Optional: Define the table **Indexes**.
-  c.	Optional: Define the **CDC** and the table’s **Search** Indexes .
+  *	Complete the settings of each table column like the **Name** or **Data Type**.
+  *	Optional: Define the table **Indexes**.
+  *	Optional: Define the **CDC** and the table’s **Search** Indexes .
 3.	Define the **Table Properties**. 
 4.	**Save** the table.
 
