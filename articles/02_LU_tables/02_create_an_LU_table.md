@@ -25,9 +25,10 @@ c.	Optional: Define the **CDC** and the table’s **Search** Indexes .
 4.	**Save** the table.
 
 ### How Do I Edit an LU Table? 
-1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, **Tables** and select **<Table Name>** to display the Columns tab in the Table Schema.
+1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, **Tables** and select **Table Name** to display the Columns tab in the Table Schema.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.
+
 Note that in specific cases the Data Type of a column that has been automatically created based on a DB Table may need to be edited manually. For example, a **Number** column in Oracle is created in Fabric with **Data Type = Real**. This column might need to be modified to an **Integer** or **Text** in the LU Table.
 
 ### Table Schema Definition  
