@@ -28,6 +28,6 @@ This keyspace holds K2view Fabric batch processes, including migration, informat
 
 ### 1.1.1K2audit
 
-| Table Name  | Description                                                  |
-| ----------- | ------------------------------------------------------------ |
+| Table Name  | Description                                                            |
+| ----------- | ---------------------------------------------------------------------- |
 | K2_auditing | Every activity performed within K2View Fabric is logged into this table. |
