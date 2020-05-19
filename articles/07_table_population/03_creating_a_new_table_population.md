@@ -39,7 +39,7 @@ Click for more information about Creating Table Population Objects .
 3.	Click the **Objects** tab in the right panel of the **Table Population working area.**
 4.	Click **Root Functions** and do either:
     * Select an existing Root Function and drag it into the working area. 
-    * Click Create New Root Function.
+    * Click **Create New Root Function.**
 5.	Right click the **Source Object** and do either:
     * Check **Auto Connect to Table.**
     * Connect the fields manually.
