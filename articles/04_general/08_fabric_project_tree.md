@@ -1,8 +1,10 @@
-# Fabric project Tree
+# Fabric Project Tree
 
 A Fabric project has a tree-like structure known as the Project Tree which displays components in a hierarchical order. Each entity in the tree initiates different actions.\
 To initiate an action, right click a component and select the action. For example, to create a new function right click Functions in the Project Tree.\
 The Project Tree is displayed on the left side of the Fabric Studio window.
+
+![image}(https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_08_01%20fabric%20studio%20window.jpg)
 
 **Click for more information about UI Components and Menus.**\
 **Click for more information about Creating a New Project.** 
@@ -15,11 +17,11 @@ Each project has the following main components:
   * Globals 
   * Environments 
   * Database types 
-  * Interfaces 
+  * [Interfaces](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) 
   * Functions 
   * Java 
   * Resources, files that can be saved as part of a project. For example, an Excel file.
-  * Translations 
+  * [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md) 
   * Broadway
 
 * **References**, reference information that can be used throughout the LU instances and may include the following sub-branches:
@@ -33,7 +35,7 @@ Each project has the following main components:
   * Java
   * Resources, files and Graphit objects.
 
-* **Logical Units**, a collection of all Logical Units defined in the project.
+* [**Logical Units**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
 
 ### Project Components Prefix Coventions 
