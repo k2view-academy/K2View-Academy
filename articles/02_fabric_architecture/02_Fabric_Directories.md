@@ -37,8 +37,8 @@ Fabric server has the several directories under its home directory (/usr/local/k
 </td>
 </tr>
 <tr style="height: 32px;">
-<td style="height: 32px; width: 101.6px;">scripts</td>
-<td style="height: 32px; width: 463.2px;">Fabric scripts</td>
+<td style="height: 32px; width: 101.6px;">monitor</td>
+<td style="height: 32px; width: 463.2px;">Fabric and Cassandra execution monitoring</td>
 </tr>
 <tr style="height: 17px;">
 <td style="height: 17px; width: 101.6px;">apps</td>
@@ -48,6 +48,10 @@ Fabric server has the several directories under its home directory (/usr/local/k
 <td style="height: 72px; width: 101.6px;">storage</td>
 <td style="height: 72px; width: 463.2px;">storage of the data on each Fabric server: contains the ludb.jar artifact files for each deployed LU, Staging XMLs for iidFinder, and Reference (common) files.</td>
 </tr>
+<tr style="height: 72px;">
+<td style="height: 72px; width: 101.6px;">/dev/shm/fdb_cache</td>
+<td style="height: 72px; width: 463.2px;">This directory holds the cached database files for the LU instances</td>
+</tr> 
 <tr style="height: 84px;">
 <td style="height: 84px; width: 101.6px;">ExternalJars</td>
 <td style="height: 84px; width: 463.2px;">It contains the .jar files of all database jars that we not provided as a product out of the box, and external jars used for the Fabric implementation.</td>
