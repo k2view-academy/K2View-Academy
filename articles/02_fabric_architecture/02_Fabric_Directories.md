@@ -1,6 +1,6 @@
 ﻿
 # Fabric Server- Main Directories
-Fabric server has the several directories under its home directory (/usr/local/k2view). Below is the list of the main fabric directories: 
+Fabric server has the several directories under its home directory: $K2_HOME. Below is the list of the main fabric directories under the home directory: 
 
 <table>
 <tbody>
@@ -38,11 +38,11 @@ Fabric server has the several directories under its home directory (/usr/local/k
 </tr>
 <tr style="height: 32px;">
 <td style="height: 32px; width: 101.6px;">monitor</td>
-<td style="height: 32px; width: 463.2px;">Fabric and Cassandra execution monitoring</td>
+<td style="height: 32px; width: 463.2px;"> Contains Prometheus JMX exporter for Fabric and Cassandra execution monitoring</td>
 </tr>
 <tr style="height: 17px;">
 <td style="height: 17px; width: 101.6px;">apps</td>
-<td style="height: 17px; width: 463.2px;">Applications, used by Fabric, like Cassandra, Graphana, Redis...</td>
+<td style="height: 17px; width: 463.2px;">Third party Applications and tools, used by Fabric, like Java, Cassandra, Grafana, Redis...</td>
 </tr>
 <tr style="height: 72px;">
 <td style="height: 72px; width: 101.6px;">storage</td>
