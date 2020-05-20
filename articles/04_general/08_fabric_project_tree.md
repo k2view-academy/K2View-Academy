@@ -122,3 +122,6 @@ The following lists the recommended project component prefixes conventions:
 
 
 Note that when using the above prefix conventions, it is also recommended to use meaningful names for the project’s components.
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/07_best_practices_for_working_with_GIT_and_SVN.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/09_logic_files_and_categories.md)
