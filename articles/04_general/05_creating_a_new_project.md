@@ -49,5 +49,6 @@ Note that to avoid errors, the SVN / GIT repositories must be created in advance
 **Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.**
 
  
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/04_user_preferences.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/06_adding_fabric_projects_to_version_control.md)
 
 
