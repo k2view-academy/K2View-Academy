@@ -94,6 +94,8 @@ db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 *	The code generated in the above example acts as the basis for a function and should be further updated according to the function’s requirements.
 *	When writing Java code, you can use any Java methods and are not limited to Fabric methods. 
 *	It is recommended to use binding parameters in SQL statements for prepared statements.
+
+
 Click to display the Fabric API list: **http://<Fabric IP address>:3213/static/doc/user-api/index.html**
 
 
