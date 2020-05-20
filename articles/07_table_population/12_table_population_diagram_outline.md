@@ -60,3 +60,4 @@ For example, the following diagram outline displays a  list of objects  included
 
 When an object or a field of an object is selected in the Diagram Outline, it is also highlighted in the map. For example, in the above diagram the Translation object trnCountryCd is selected in the Diagram and it is highlighted in the map. 
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md)
