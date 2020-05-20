@@ -398,7 +398,7 @@ The context menu displays two top-level SVN operations or TortoiseSVN operations
 
 **Click for more information about Best Practices for Working with SVN and GIT.**
 
-
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 
 
