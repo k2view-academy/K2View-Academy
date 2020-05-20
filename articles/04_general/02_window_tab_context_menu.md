@@ -133,3 +133,4 @@ Right click the **Window Tab Header** to display a context menu with the followi
 </tbody>
 </table>
  
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/01_UI_components_and_menus.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/03_diagram_and_toolbars.md)
