@@ -10,7 +10,7 @@ The following are the main log options:
 * Activity logs.
 * Compilation errors.
 
-**Click for more information about UI Components and Menus.**
+[**Click for more information about UI Components and Menus.**]
 
 ### How do I Review Server / Activity Logs and Compilation Errors?
 **Server Logs**
@@ -49,9 +49,9 @@ The following are the main log options:
  
 Logs and messages can also be used for debugging purposes. The following methods are available:
 
-**reportUserMessage ():***
+**reportUserMessage ():**
 
-Enables Fabric Studio’s Debug options and a quick sanity review of the implementation. This method can be added to any Java code and viewed by clicking Messages under the Server Logs area. Messages are generated either by invoking the Fabric Studio [Data Viewer] or by executing the [Table Population Debug] option.
+Enables Fabric Studio’s Debug options and a quick sanity review of the implementation. This method can be added to any Java code and viewed by clicking Messages under the Server Logs area. Messages are generated either by invoking the Fabric Studio [Data Viewer](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) or by executing the [Table Population Debug](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) option.
 
 The recommended usage for this option is to debug a project during its implementation stages in order to prevent overloading Fabric Server runtime logs (k2Fabric.log). After the Debug process is complete, it is recommended to either delete the Debug message or to comment it out. 
 
