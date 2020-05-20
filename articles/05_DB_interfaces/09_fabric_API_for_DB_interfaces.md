@@ -63,7 +63,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <tbody>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric using the sync transaction. Invoke the currently-synced LU instance.&nbsp;</strong></p>
+<p><strong>Connect to the local Fabric within the sync transaction. Invoke the currently-synced LU instance.&nbsp;</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
