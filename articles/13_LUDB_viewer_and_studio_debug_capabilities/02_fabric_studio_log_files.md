@@ -3,7 +3,7 @@
 Fabric Studio enables you to develop, test and monitor projects within the Studio using Fabric’s test and log capabilities. 
 
 To display a list of recent messages from the server, click
-![image])https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_01%20Server%20icon.png( Server / Activity Logs (left menu). By default, this window only displays warnings and error messages, however additional messages and notices can also be reviewed.
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_01%20Server%20icon.png( Server / Activity Logs (left menu). By default, this window only displays warnings and error messages, however additional messages and notices can also be reviewed.
 
 The following are the main log options:
 * Server logs.
