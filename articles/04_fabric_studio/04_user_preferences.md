@@ -2,11 +2,11 @@
 
 ### What Are User Preferences Used For?
 User Preferences are used to define key operational functionalities for development, debugging, deployment and runtime execution activities.\
-To open the User Preferences options, click the [Tools](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
+To open the User Preferences options, click the [Tools](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/01_UI_components_and_menus.md) icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
  
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_04_01%20default%20General%20Preferences.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_04_01%20default%20General%20Preferences.png)
 
-User Preferences are saved in: <Fabric Studio Installation Dir >\Preferences. 
+User Preferences are saved in: **[Fabric Studio Installation Dir]**\Preferences. 
 
 ### What Is The purpose of the General Preferences Tab?
 The General Preferences tab is used to define the system’s Projects Directory folder which is by default saved in:
@@ -19,7 +19,7 @@ To update the location of the folder or to edit it, click **Browse**.
 
 The Server Configuration tab is used to define the Deployment URLs of Fabric Servers. Each Fabric Server can be accessed to deploy an implementation, [debug](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md) and to validate [Web Services]. 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_04_02%20Web%20Services.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_04_02%20Web%20Services.png)
 
 
 The following is a list of server configuration items: 
@@ -107,7 +107,7 @@ Note that once defined, both General Preferences and Server Configurations will 
 ### How Do I Add Application Shortcuts?
 Application shortcuts enable you to define shortcuts to other applications directly from the Fabric Studio without exiting the application. Once defined, the new shortcut is displayed in the upper left corner of the window.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_04_03%20new%20shortcut.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_04_03%20new%20shortcut.png)
 
 1. Go to **Application Shortcuts** and click Add **New Shortcut**.  
 2. Enter the **Application Name** in the **Title** field.
