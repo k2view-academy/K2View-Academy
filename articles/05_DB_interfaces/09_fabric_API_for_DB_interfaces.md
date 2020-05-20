@@ -1,10 +1,10 @@
 # Fabric API for DB Interfaces
 
-### Connect DB Interface - DB Class
+### Connect DB Interface - Db Class
 Fabric provides a Java Db class to use the methods and functions that will invoke database (SQL) queries and statements, and  Fabric commands.
 
-### How Can I Create a DB Object?
-The following Fabric UserCode methods can be used to create a Db object:
+### How Can I Create a Db Object?
+The following Fabric **UserCode** methods can be used to create a Db object:
 <table width="630">
 <thead>
 <tr>
