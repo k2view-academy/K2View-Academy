@@ -185,4 +185,4 @@ A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2Vi
 
 Note that when the Sync mode = OFF Fabric does not perform a sync. 
 
-[![Previous](https://k2vacademy.s3.amazonaws.com/General/Previous.png)](https://github.com/k2view-academy/K2View-Academy/wiki/Skip-Sync)
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
