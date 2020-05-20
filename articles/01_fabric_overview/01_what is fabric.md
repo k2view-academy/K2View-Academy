@@ -36,6 +36,6 @@ Note that Fabric is a less appropriate solution for storing and managing data th
 **Learn About Main Fabric Platform Modules:**
 * Fabric Architecture.  
 * [Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
-* Interfaces.
+* [Interfaces.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md)
 * Web Services.
 * Reference Tables.
