@@ -13,7 +13,7 @@ A Decision Function is a Java project function that assesses whether a sync is p
   * When defined for a Table Population, the decision function runs on the defined population.
 
 [**Click for more information about Creating a Decision Function.**](https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions#how-can-i-create-a-decision-function)\
-[**Click for more information about Sync Levels.**\](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
+[**Click for more information about Sync Levels.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)\
 [**Click for more information about the Skip Sync Method.**](https://github.com/k2view-academy/K2View-Academy/wiki/Skip-Sync)
 
 ### Decision Functions for LUI Sync- Example Use Cases
