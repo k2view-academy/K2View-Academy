@@ -13,3 +13,5 @@ Throughout a Project’s lifecycle there are a number of reasons for modifying, 
 Note that for the changes to become effective for the Fabric object (for example for Web Services or an LU), deploy each object to the server separately.
 
 [**Click for more information about Deployment from the Fabric Studio.**] 
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
