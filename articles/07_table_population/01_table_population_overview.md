@@ -1,7 +1,7 @@
 # Table Population Overview
 
 ### What is a Table Population in Fabric? 
-A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target Logical Unit (LU) Table . The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU Table. Source data can be mapped directly to LU Table columns and Fabric transformation objects like Translations , Functions  or Globals , and can be added to define the mapping logic into the LU Table. 
+A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU Table. Source data can be mapped directly to LU Table columns and Fabric transformation objects like Translations, Functions  or Globals, and can be added to define the mapping logic into the LU Table. 
 
 Click for more information about Population Transformation Rules. 
 
