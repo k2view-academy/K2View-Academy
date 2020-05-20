@@ -2,7 +2,7 @@
 
 Throughout a Project’s lifecycle there are a number of reasons for modifying, disabling or deleting interface settings. For example, to update an IP address or the credentials of a DB you wish to access as a data source.
 
-### How do I Change an Interface's Connection Settings?
+### How Do I Change an Interface's Connection Settings?
 
 1.	Go to the **Project Tree**, click **Shared Objects** and then click **Interfaces** to open the Interfaces list.
 2.	Double click the **interface** to open it.
