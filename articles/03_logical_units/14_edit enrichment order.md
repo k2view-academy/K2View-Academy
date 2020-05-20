@@ -12,3 +12,6 @@ The execution order of all Enrichment Functions is determined at the LU Schema l
 
 ## How Can I Change the Enrichment Order? 
 Use the **Up** and **Down** arrows in the **Enrichment Order** tab of the [**LU schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md) to change the execution order of its Enrichment functions. 
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/13_disable_enable_populations_in_schema.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/15_LU_schema_edit_reference_tab.md)
