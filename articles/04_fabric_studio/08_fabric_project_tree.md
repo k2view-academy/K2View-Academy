@@ -4,7 +4,7 @@ A Fabric project has a tree-like structure known as the Project Tree which displ
 To initiate an action, right click a component and select the action. For example, to create a new function right click Functions in the Project Tree.\
 The Project Tree is displayed on the left side of the Fabric Studio window.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_08_01%20fabric%20studio%20window.jpg)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_08_01%20fabric%20studio%20window.jpg)
 
 **Click for more information about UI Components and Menus.**\
 **Click for more information about Creating a New Project.** 
@@ -13,29 +13,29 @@ The Project Tree is displayed on the left side of the Fabric Studio window.
  
 The name of the current active project in the studio is displayed at the top of the project’s tree and the related Git/Svn branch, in the example above master is used.
 Each project has the following main components: 
-* **Shared Objects** used by all Logical Units and project references and may include the following sub-branches:
-  * Globals 
-  * Environments 
-  * Database types 
+* **[Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md)** used by all Logical Units and project references and may include the following sub-branches:
+  * [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) 
+  * [Environments] 
+  * [Database types] 
   * [Interfaces](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) 
-  * Functions 
-  * Java 
+  * [Functions] 
+  * [Java](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md) 
   * Resources, files that can be saved as part of a project. For example, an Excel file.
   * [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md) 
-  * Broadway
+  * [Broadway]
 
 * **References**, reference information that can be used throughout the LU instances and may include the following sub-branches:
   * Java, Globals and Functions
-  * Resources
-  * Translation
-  * Tables
+  * [Resources]
+  * [Translation]
+  * [Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md)
   * IID Finder
 
 * **Web Services**, a collection of functions that can be exposed through Fabric’s Web Service layer which may include the following sub-components:
   * Java
   * Resources, files and Graphit objects.
 
-* [**Logical Units**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
+* [**Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)**, a collection of all Logical Units defined in the project.
 
 
 ### Project Components Prefix Coventions 
