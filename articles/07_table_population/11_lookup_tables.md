@@ -1,6 +1,6 @@
 # Lookup Tables
 
-A Lookup is an object that is added to a Table Population  to get information from a source DB table, LU Table  or Reference Table. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
+A Lookup is an object that is added to a Table Population  to get information from a source DB table, LU Table or Reference Table. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
 *	Input fields are used for the WHERE clause of an SQL statement. 
 *	Output fields are used for the SELECT statement of an SQL statement.
 
@@ -8,8 +8,8 @@ The input in a Lookup table is optional if the Lookup has only one record. For e
 
 ### How Can I Add a New Lookup To a Table Population?
 
-1.	Go to the Project Tree > Logical Units and then click the <LU Name>. 
-2.	Click Tables and the <Table Name> and then click <Table Population>.
+1.	Go to the Project Tree > Logical Units and then click the **LU Name**. 
+2.	Click Tables and the <Table Name> and then click **Table Population**.
 3.	Click the Objects tab in the right panel of the Table Population working area.
 4.	Do either:
     *	To create an LUI Table Lookup or Reference Table Lookup: 
@@ -24,13 +24,13 @@ Click Database to display the list of tables, select the table and drag it to th
     ![image]
     
 6.	Right click the Lookup and select Minimize to display only the Lookup’s connected fields.
-7.	In the Properties Tab ( right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
+7.	In the Properties Tab (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
 
 
 **Notes**  
 *	It is recommended to create a Lookup based on an LU Table and not a DB Table in order to improve performance. The reason is that an LU Table is usually much smaller than the source DB table, since it includes only the data which is relevant / applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
 *	It is recommended to create an index  on the LU Table for the Input fields in order to improve performance of the Lookup table’s Search.
-*	When creating a Lookup based on an LU Table, check that the Lookup object is populated before the current table so that the table has a higher execution order  number than the Lookup object.
+*	When creating a Lookup based on an LU Table, check that the Lookup object is populated before the current table so that the table has a higher execution order Fnumber than the Lookup object.
 
 ### Lookup Properties Tab
 
@@ -104,4 +104,5 @@ The following information is displayed in the Lookup Properties:
 </tr>
 </tbody>
 </table>
+
 
