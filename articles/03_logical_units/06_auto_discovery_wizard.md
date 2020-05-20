@@ -19,7 +19,7 @@ The first screen displays a list of all [DB interfaces](https://github.com/k2vie
 1. Click **Next**.
 
 ### STEP 2: Define the Root Table and Field
-In this step you will select a DB Table and field as the Root Table and [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)  of the Logical Unit.
+In this step you will select a DB Table and column as the Root Table and [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)  of the Logical Unit.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_02.png)
 
