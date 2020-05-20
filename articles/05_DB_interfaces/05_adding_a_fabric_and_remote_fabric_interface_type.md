@@ -13,7 +13,7 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
 * When getting data from a remote Fabric cluster.
 * When using a Fabric Remote interface to run the [Query Builder] on Fabric. 
 
-### How do I Create an Internal Fabric Interface?
+### How Do I Create an Internal Fabric Interface?
 
 1. Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces**, and then select **New Interface**.
 2.	Click **Interface Type** to open the dropdown list and then select **Fabric**.
@@ -21,7 +21,7 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
 4.	Click [**Test Connection**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) to verify that the connection settings are correct.
 5.	Click **Save**.
 
-### How do I Create a Remote Fabric Interface?
+### How Do I Create a Remote Fabric Interface?
 
 1.	Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces**, and then select **New Interface**.
 2.	Click **Interface Type** to open the dropdown list and then select **Fabric Remote**.
