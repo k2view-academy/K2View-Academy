@@ -22,3 +22,5 @@ Note that if a Global that is defined in both a Shared Object and a specific Log
 
 **Click for more information about Project Structure and Creating a New Project in Fabric.**
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+
