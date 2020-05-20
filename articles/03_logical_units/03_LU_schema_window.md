@@ -159,3 +159,5 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 Click for more information about Fabric Studio Diagrams Toolbars.
 
 [Click for more information about LU Refresh Options.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/18_LU_schema_refresh_LU_options.md)
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/02_create_a_logical_unit_flow.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/04_LU_properties.md)
