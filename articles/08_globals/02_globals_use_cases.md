@@ -54,7 +54,7 @@ Globals can be overridden via the Fabric Server using Fabric commands **without 
 
 **Click for more information about [Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).** 
 
-
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md)
 
 
 
