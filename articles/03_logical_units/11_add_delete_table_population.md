@@ -8,7 +8,7 @@ A Table Population object holds the transformation and mapping rules of the data
 1. Link the new **population** to its **parent**.
 1. Optional: edit the execution order of the new population if needed.
 
-[Click for more information about Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
+[Click for more information about Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md)
 
 [Click for more information about Linking Table Populations to a Parent Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
