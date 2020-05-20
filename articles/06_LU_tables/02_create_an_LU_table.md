@@ -13,7 +13,7 @@ From the Project Tree:
 *	Creating a new table [**manually**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md#how-do-i-create-a-new-lu-table-manually). In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
 *	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
 *	Creating a set of tables based on an **XSD file**.
-*	Using the Save As option. Note that this option does not copy the Table Population.
+*	Using the **Save As** option. Note that this option does not copy the Table Population.
 
 [Click for more information about Adding a Table to a Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
  
