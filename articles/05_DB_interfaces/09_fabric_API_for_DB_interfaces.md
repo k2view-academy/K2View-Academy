@@ -63,7 +63,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <tbody>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric within the sync transaction. Invoke the currently-synced LU instance.&nbsp;</strong></p>
+<p><strong>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU instance.&nbsp;</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
@@ -117,12 +117,12 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </table>
 
 
-### Execute Statements and Queries ti the DB Interface
+### Execute Statements and Queries on the DB Interface
 
 **DB Class Methods - Common Use Cases**
 
 The following table describes common use cases when working with DB Interfaces.\
-**Click to display the Fabric API list:** http://<Fabric IP address>:3213/static/doc/user-api/index.html
+**Click to display the Fabric API list:** http://[Fabric IP address]:3213/static/doc/user-api/index.html
 <table>
 <tbody>
 <tr>
@@ -180,7 +180,7 @@ The following table describes common use cases when working with DB Interfaces.\
 In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
 When using prepared statement queries use a binding parameter: 
 * Add a question mark in the SQL statement when using binding parameters in the SQL query.
-* Each input parameter must be sent as a parameter to/by the execute() or fetch() methods.
+* Each input parameter must be sent as a parameter to the execute() or fetch() methods.
 * The order of the input parameters must be aligned with the order of these parameters in the SQL statement.
 
 See the example in the table above.
@@ -199,7 +199,7 @@ You can iterate the result set and get a Db.Row object for each record, or alter
 * To iterate column names and data simultaneously, use the values() method.
 * This Map cannot be changed and edited. Trying to change this object will result in a runtime exception.
 
-**Click for more information about Db.Rows and DB.Row classes:** http://<Fabric IP address>:3213/static/doc/user-api/index.html
+**Click for more information about Db.Rows and DB.Row classes:** http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
 ### Loop on the Result Set Methods
 
