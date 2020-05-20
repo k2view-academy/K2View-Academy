@@ -10,8 +10,8 @@ The Fabric Studio has a built-in Version Control functionality based on GIT stan
 
 Note that although there is an option for working with Apache Sub-version (SVN), it is recommended to work in a GIT framework
 
-**Click for more information about Best Practices for Working with SVN and GIT.**\
-**Click for more information about the K2Admin Studio.** 
+**[Click for more information about Best Practices for Working with SVN and GIT.]**\
+**[Click for more information about the K2Admin Studio.]** 
 
 ### How do I Start Working with Version Control?
  
@@ -23,8 +23,8 @@ To start using Configuration Control, do either:
 Each user can work on a local copy of the project that is synchronized with the central repository of the project. Synchronization is performed manually.\
 Note that if you choose to work with SVN as your preferred version control, the K2Admin Studio should be installed in order to define the repository, users, groups and permissions.
 
-**Click for more information about Creating a New Project.**\  
-**Click for more information about the Fabric Project Structure.**
+**[Click for more information about Creating a New Project].**  
+**[Click for more information about the Fabric Project Structure.]**
 
 ### Setting Up GIT
 
@@ -40,7 +40,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 
 **GIT on Fabric Studio** 
 
-1.	Go to the **Fabric Studio** and create a [**new project**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/05_creating_a_new_project.md) and add it to **GIT**.
+1.	Go to the **Fabric Studio** and create a [**new project**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/05_creating_a_new_project.md) and add it to **GIT**.
 2.	Add and commit the new project items to GIT: right click the **project**, click **TortoiseGit**, click **Add** and then click **Commit**. 
 
 ### Logging in to SVN
@@ -56,7 +56,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 3.	Enter your **Username** and **Password** and then click **OK**.
 
 
-**Click for more information about Best Practices for Working with SVN and GIT.**
+**[Click for more information about Best Practices for Working with SVN and GIT.]**
 
 ### Checking a Project Out of SVN
  
@@ -68,11 +68,11 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 4.	In the  **Revision panel** select the preferred **SVN Revision** and click **OK**.
 5.	Optional: If a previous revision is selected, click **Show Log** to display the log and select the **Revision**.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_01%20revision.jpg)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_06_01%20revision.jpg)
 
 Note that when opening a project that has been updated and committed to the repository by another user, a warning is displayed requesting confirmation that the revision on the local machine is up-to-date.
 
-**Click for more information about Best Practices for Working with SVN and GIT.**
+**[Click for more information about Best Practices for Working with SVN and GIT.]**
 
 ### Project Tree Version Control Indicators
 
