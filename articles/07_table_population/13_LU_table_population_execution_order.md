@@ -1,9 +1,13 @@
 # LU Table Population - Execution Order
 
 Fabric enables setting the execution order of LU Table  population objects within an LU Schema .  The execution order is set by a sequence number (1, 2, 3…).
+
 The default order of an LU Table’s population is set when the LU Schema is created. The default population execution order is based on the LU Schema’s hierarchy. However, a different population execution order can be set above the automatically generated execution order. Meaning that a table higher in the LU Schema’s hierarchy can be populated or modified after a table lower in the LU Schema hierarchy has been modified or populated. Therefore, it is imperative to strategize and define the correct execution order of the LU Table populations.
+
 **Parallel Sync Ability**
-By default, the populations with the same execution order run sequentially within the same execution order. 
+
+By default, the populations with the same execution order run sequentially within the same **execution order**.
+
 To improve the Sync time of an LUI, Fabric can support parallel syncs on several populations within the same execution order. This can be set in config.ini using the parameter MAX_PARALLEL_SYNC_SAME_ORDER (default value = 1). When this parameter is greater than 1, it allows Fabric to run the LU Table Populations with the same execution order in parallel groups (according to the parameter’s value) in order to bring data from the source DB faster. The part of the sync that writes the data into Fabric remains sequential.
 
 ### How Do I Set the Population Order?
@@ -36,9 +40,11 @@ Note that if MAX_PARALLEL_SYNC_SAME_ORDER is set to 1 in config.ini, the above t
 The population in an LU Schema can be disabled / enabled according to requirements. For example, if a Table Population is not required temporarily it can be disabled and be later enabled instead of being deleted. 
 
 **Disable a Population**
+
 Go to the LU Schema window,  click the right corner of Table Population and select Disable Population. A red No Entry icon is displayed next to the execution order.
 
 **Enable a Population**
+
 Go to the LU Schema window,  click the right corner of Table Population and unselect Disable Population. The red No Entry icon next to the execution order is not displayed.
 
 ![image]
