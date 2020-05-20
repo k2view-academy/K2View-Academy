@@ -182,15 +182,15 @@ The Truncate Before Sync property can be set on an LU Table or a Table Populatio
 <table style="width: 705px;">
 <tbody>
 <tr>
-<td style="width: 550px;" colspan="2">
+<td style="width: 850pxl;" colspan="2">
 <p><strong>When is a sync method selected?</strong></p>
 </td>
 </tr>
 <tr>
-<td style="width: 155px;">
+<td style="width: 150pxl;">
 <p><strong>None</strong></p>
 </td>
-<td style="width: 395px;">
+<td style="width: 700pxl;">
 <p>The source does not change or becomes unavailable and therefore requires a one-time only load.</p>
 <p>After it is loaded, Fabric becomes the system of record for the data whereby Fabric may get update transactions on the data. For example, add a new payment.</p>
 </td>
