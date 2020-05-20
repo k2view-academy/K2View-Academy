@@ -9,3 +9,6 @@ Go to the [**Schema window**](https://github.com/k2view-academy/K2View-Academy/b
 
 ## How Can I Enable a Population?
 Go to the **Schema window**, right click the **Table Population header** and then check **Enable Population**. The **No Entry** icon is removed. 
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md)
