@@ -5,8 +5,117 @@ Fabric provides a Java Db class to use the methods and functions that will invok
 
 ### How Can I Create a DB Object?
 The following Fabric UserCode methods can be used to create a Db object:
+<table width="630">
+<thead>
+<tr>
+<td width="213">
+<p><strong>User Code Method</strong></p>
+</td>
+<td width="417">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="213">
+<p><strong>db(String interfaceName)</strong></p>
+</td>
+<td width="417">
+<p>Obtain the Db object to connect the given logical interface name which input must be populated by a DB interface defined in Fabric Studio.</p>
+</td>
+</tr>
+<tr>
+<td width="213">
+<p><strong>ludb(), fabric()</strong></p>
+</td>
+<td width="417">
+<p>Obtain a Db object to connect the current Fabric context.</p>
+</td>
+</tr>
+<tr>
+<td width="213">
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-"><strong>ludb</strong></a><strong>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</strong></p>
+</td>
+<td width="417">
+<p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### DB Creation - Use Cases and Examples
+<table width="630">
+<thead>
+<tr>
+<td width="204">
+<p><strong>Use Cases</strong></p>
+</td>
+<td width="198">
+<p><strong>User Code Method</strong></p>
+</td>
+<td width="228">
+<p><strong>Examples</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="204">
+<p><strong>Connect to the local Fabric using the sync transaction. Invoke the currently-synced LU instance.&nbsp;</strong></p>
+</td>
+<td width="198">
+<p>db(String interfaceName)</p>
+<p>ludb()</p>
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#fabric--">fabric</a>()</p>
+</td>
+<td width="228">
+<p>Db conn = db(&ldquo;fabric&rdquo;);</p>
+<p>Note: you do not have to define &ldquo;fabric&rdquo; interface in Fabric Studio.</p>
+<p>Db conn = ludb();</p>
+<p>Db conn = fabric();</p>
+</td>
+</tr>
+<tr>
+<td width="204">
+<p><strong>Connect to the local Fabric using a Web Service.</strong></p>
+</td>
+<td width="198">
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+</td>
+<td width="228">
+<p>Db Conn = ludb("Customer", 2);</p>
+</td>
+</tr>
+<tr>
+<td width="204">
+<p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU instance from another LU.</strong></p>
+</td>
+<td width="198">
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+</td>
+<td width="228">
+<p>Db Conn = ludb("Customer", 2);</p>
+</td>
+</tr>
+<tr>
+<td width="204">
+<p><strong>Connect to another DB Interface.</strong></p>
+</td>
+<td width="198">
+<p>db(String interfaceName)</p>
+</td>
+<td width="228">
+<p>Db conn = db(&ldquo;CRM_DB&rdquo;);</p>
+<p>Db Conn = db("dbFabricRemote");</p>
+<p>Note:</p>
+<p>Execute the GET instance command on the Db object to get the LU instance before running SQL statements on the Fabric Remote interface.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### Execute Statements and Queries ti the DB Interface
 
@@ -14,7 +123,59 @@ The following Fabric UserCode methods can be used to create a Db object:
 
 The following table describes common use cases when working with DB Interfaces.\
 **Click to display the Fabric API list:** http://<Fabric IP address>:3213/static/doc/user-api/index.html
-
+<table>
+<tbody>
+<tr>
+<td width="129">
+<p><strong>Use Case</strong></p>
+</td>
+<td width="225">
+<p><strong>Db Method</strong></p>
+</td>
+<td width="274">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+<tr>
+<td width="129">
+<p><strong>Execute Fabric Command</strong></p>
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="225">
+<p>public&nbsp;void&nbsp;execute(String sql, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+</td>
+<td width="274">
+<p>fabric().execute("get CRM.3");</p>
+<p>ludb().execute(&ldquo;"set environment='"+src_env_name+ "'");</p>
+</td>
+</tr>
+<tr>
+<td width="129">
+<p><strong>Execute DB Statement. For example, run update statement on a table</strong></p>
+</td>
+<td width="225">
+<p>public&nbsp;void&nbsp;execute(String sql, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+</td>
+<td width="274">
+<p>String sql = "UPDATE CONTRACT SET NO_OF_OPEN_ORDERS =&hellip; WHERE CONTRACT_ID = ? &rdquo;; <br /> ludb().execute(sql, cotractId);</p>
+</td>
+</tr>
+<tr>
+<td width="129">
+<p><strong>Run select statement on DB interface</strong></p>
+</td>
+<td width="225">
+<p>public&nbsp;<a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/Db.Rows.html">Db.Rows</a>&nbsp;fetch(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;sql,</p>
+<p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+<p>&nbsp;</p>
+</td>
+<td width="274">
+<p>String sql = "SELECT COUNT(*) AS TOT_NUM_OF_ORDERS FROM ORDERS WHERE CONTRACT_ID = ? and ORDER_STATUS != ?";<br /> Db.Rows rows = ludb().fetch(sql, contractId, orderStatus);</p>
+</td>
+</tr>
+</tbody>
+</table>
+	
 ### Using Binding Variables on SQL Statements
 In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
 When using prepared statement queries use a binding parameter: 
@@ -101,7 +262,7 @@ String sql = "SELECT * from CONTRACT WHERE CONTRACT_ID = ? “;
 Db.Row row = ludb().fetch(sql, contractId).firstRow();
 
 
-3. [Root function], select records from the CASES table and yield each record: 
+3. [Root function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md), select records from the CASES table and yield each record: 
 
 String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CRM_DB.CASES where activity_id = ?";
 Db.Rows rows = db("CRM_DB").fetch(sql, input);
