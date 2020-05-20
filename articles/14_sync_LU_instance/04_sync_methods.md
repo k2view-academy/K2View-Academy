@@ -10,7 +10,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <td width="150pxl">
 <p><strong>Timeout (sec)<strong></p>
 </td>
-<td width="600pxl">
+<td width="700pxl">
 <p>The timeout in seconds for syncing the LUI.</p>
 </td>
 </tr>
@@ -172,6 +172,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 </tr>
 </tbody>
 </table>
+
 [Click for more information about LU Sync Levels](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)
  
 ## Truncate Before Sync 
