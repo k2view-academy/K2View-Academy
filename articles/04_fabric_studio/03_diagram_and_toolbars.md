@@ -14,8 +14,8 @@ To customize the **Diagram** window, right click the **upper toolbar** and then 
 * Customize
 
 ### Edit Toolbar Icon
-The  Edit icon is displayed in the bottom right corner of the Diagram window.   
-Click  to display the following options: 
+The ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_edit_icon1.png) Edit icon is displayed in the bottom right corner of the Diagram window.   
+Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_edit_icon1.png) to display the following options: 
 * Undo icon
 * Redo icon
 * Delete icon
@@ -36,7 +36,7 @@ Click  to display the following options:
 **Click for more information about Logical Units.**
 
 ### Table Population Toolbar
-**Click for more information about Creating Tables.**
+**[Click for more information about Creating Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).**
 
 ### How Can I Customize the Toolbar?
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
