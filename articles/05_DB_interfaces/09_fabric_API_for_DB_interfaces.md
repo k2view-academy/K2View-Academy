@@ -136,7 +136,7 @@ Fabric has the following set of deprecated methods for handling DB interfaces:
 
 Although they work, a warning message is displayed when deprecated methods are used in Fabric code. It is recommended to use the new Fabric methods to invoke DB interfaces instead of working with deprecated methods. 
 
-
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
 
 
 
