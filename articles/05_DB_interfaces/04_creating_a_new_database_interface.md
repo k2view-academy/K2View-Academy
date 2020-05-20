@@ -61,7 +61,7 @@ An additional reason for an interface to be created in a legacy format in the cu
 
 The **k2FabricStudio.exe.config** setting is created as follows and can be manually edited by the user at any time:
 
- ```java<add key="UseFabricLegacyAdoDatabaseTypesForNewInterfaces" value="Cassandra"/>``` 
+ ```<add key="UseFabricLegacyAdoDatabaseTypesForNewInterfaces" value="Cassandra"/>``` 
 
 
 In this setting, value = a list of DB types to be created in an old format, separated by a comma.
