@@ -13,7 +13,7 @@ A Decision Function is a Java project function that assesses whether a sync is p
   * When defined for a Table Population, the decision function runs on the defined population.
 
 [**Click for more information about Creating a Decision Function.**](https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions#how-can-i-create-a-decision-function)\
-**Click for more information about Sync Levels.**\
+[**Click for more information about Sync Levels.**\](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 [**Click for more information about the Skip Sync Method.**](https://github.com/k2view-academy/K2View-Academy/wiki/Skip-Sync)
 
 ### Decision Functions for LUI Sync- Example Use Cases
@@ -48,7 +48,7 @@ The source version can be checked using a global variable: SOURCE_PRODUCT_VERSIO
 * PROD (Production). 
 * DEV (Development).
 
-**Click for more information about Globals**
+[**Click for more information about Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md)
 
 To enable Fabric to align the implementation logic to the source version, do the following:
 1. Define two decision functions:\
@@ -75,7 +75,7 @@ In this example, it is recommended to use the [skipSync() method](https://github
 5.	Write the **Function Code** and return **True** or **False**. The **Decision Function** overrides the **Sync Mode** also when it is defined as **FORCE**. 
 6.	Click **Save**.
 
-**Click for more information about Creating Functions**.\
+[**Click for more information about Creating Functions**.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md)\
 [**Click for more information about Decision Function Checks and Considerations.**](https://github.com/k2view-academy/K2View-Academy/wiki/Decision-Function-Checks-and-Considerations-Table)\
 [**Click for more information about Decision Function Code Examples.**](https://github.com/k2view-academy/K2View-Academy/wiki/Decision-Function-Checks-and-Considerations-Table#decision-functions---code-examples)
 
