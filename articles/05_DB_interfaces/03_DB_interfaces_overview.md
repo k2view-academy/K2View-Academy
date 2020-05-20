@@ -20,10 +20,10 @@ Accurate definition of connection settings is especially important when building
 <table width="643">
 <tbody>
 <tr>
-<td width="210">
+<td width="300pxl">
 <p><strong>Name</strong></p>
 </td>
-<td width="433">
+<td width="600pxl">
 <p><strong>Filename of the database.</strong></p>
 </td>
 </tr>
