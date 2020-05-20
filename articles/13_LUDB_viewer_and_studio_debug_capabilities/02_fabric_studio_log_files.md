@@ -3,7 +3,9 @@
 Fabric Studio enables you to develop, test and monitor projects within the Studio using Fabric’s test and log capabilities. 
 
 To display a list of recent messages from the server, click
-![image] Server / Activity Logs (left menu). By default, this window only displays warnings and error messages, however additional messages and notices can also be reviewed.\ The following are the main log options:
+![image] Server / Activity Logs (left menu). By default, this window only displays warnings and error messages, however additional messages and notices can also be reviewed.
+
+The following are the main log options:
 * Server logs.
 * Activity logs.
 * Compilation errors.
@@ -66,11 +68,12 @@ log.info ():
 
 Enables Fabric’s runtime Debug options. This method can be added to any Java code and its output can be viewed after deployment and during runtime. The runtime log (k2fabric.log) can be reviewed in the Fabric Server’s Logs directory or in the Studio’s Output logs.\
 For example: **fnCreateInstID** under Customer LU
- 
+ <pre><code>
 if (i_id!=null && !i_id.isEmpty()){
 ```java// Increase the input by 10 and return
         log.info("o_id: "(Integer.sum(Integer.valueOf(i_id),10)+""));
 	  return Integer.sum(Integer.valueOf(i_id),10)+"";
+</code></pre>
 
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.mdAcademy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
