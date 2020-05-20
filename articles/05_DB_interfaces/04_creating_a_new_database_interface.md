@@ -1,6 +1,6 @@
 # Creating a New Database Interface
 
-### How do I Create a Database Interface?
+### How Do I Create a Database Interface?
 
 1. Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 The following screenshot displays a list of supported built-in interface types.
@@ -14,16 +14,16 @@ The following screenshot displays a list of supported built-in interface types.
 ![image]
 
 3. Populate the **DB Connection Name** and set the **Connection** to **Active**.
-4. Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/wiki/DB-Interfaces-Overview).\
-   a. For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at 
-      <your PC folder>\K2View Fabric Studio\Projects\<project name>\lib and add a **JDBC driver jar** of this DB type there.   
-   b. To check if the connection settings are correct, click the **Test Connection String**.
-   * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
-   * If the connection fails, a description of the problem is displayed on the bottom of the window. 
-5. Optional: Edit the Pool **Properties**.
-6. Click **Save**.
+4. Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/wiki/DB-Interfaces-Overview).
+5. To check if the connection settings are correct, click the **Test Connection String**.\
+   a. If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.\
+   b. If the connection fails, a description of the problem is displayed on the bottom of the window. 
+6. Optional: Edit the **Pool Properties**.
+7. Click **Save**.
 
-
+For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:\
+**[your PC folder]\K2View Fabric Studio\Projects\[project name]\lib** and add a **JDBC driver jar** of this DB type there. 
+    
 Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a Product package.
 
 [**Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.**]
