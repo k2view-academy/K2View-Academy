@@ -40,4 +40,4 @@ If the same Global is defined at both Shared Objects and Logical Unit levels, th
 **Click for more information about using [Globals - Code Examples](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/04_globals_code_examples.md).**
 
 
-
+[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/02_globals_use_cases.md)
