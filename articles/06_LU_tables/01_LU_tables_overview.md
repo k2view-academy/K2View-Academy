@@ -17,3 +17,5 @@ An LU Table window has the following tabs:
 *	[Search](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md), holding  a list of fields available for a cross-instance search.
 *	<CDC topic> tab, holding a list of fields to be published to an external system (CDC topic) using the CDC mechanism.
 *	[Table Properties](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/04_table_properties.md),  where the table’s properties like the Primary Key, [Sync Method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md) or related Enrichment Functions  are defined. 
+  
+[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md)
