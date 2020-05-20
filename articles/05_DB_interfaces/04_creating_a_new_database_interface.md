@@ -4,8 +4,8 @@
 
 1. Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 The following screenshot displays a list of supported built-in interface types.
-     * ![image] = DB interfaces.
-     * ![image] = Non-DB interfaces.
+     * ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_icon1.png) = DB interfaces.
+     * ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_icon2.png) = Non-DB interfaces.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_01%20interface%20types.png)
 
@@ -17,16 +17,16 @@ The following screenshot displays a list of supported built-in interface types.
 
 4. Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
 
-5. To check if the connection settings are correct, click the **Test Connection String**.
-
-   a. If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
+   a. For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at [your PC folder]\K2View Fabric Studio\Projects\[project name]\lib and add a **JDBC driver jar** of this DB type there.   
    
-   b. If the connection fails, a description of the problem is displayed on the bottom of the window. 
-6. Optional: Edit the **Pool Properties**.
-7. Click **Save**.
+   b. To check if the connection settings are correct, click the **Test Connection String**
+       * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
+       * If the connection fails, a description of the problem is displayed on the bottom of the window. 
+       
+5. Optional: Edit the **Pool Properties**.
 
-For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:\
-**[your PC folder]\K2View Fabric Studio\Projects\[project name]\lib** and add a **JDBC driver jar** of this DB type there. 
+6. Click **Save**.
+
     
 Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a Product package.
 
@@ -36,18 +36,21 @@ Click for more information about Generic DB Solution, DB Drivers Jars in Fabric 
 
 The DB Interface window enables you to define DB Interfaces for your project. By default, new DB interfaces are created in the Generic DB Interface format. 
 
+
 _Generic Interface Definition_
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
 
 Interfaces created using previous Fabric versions remain as is and can be converted to the Generic interface.
  
+
 _Previous Fabric Version Interface Definition_
 
 The following screenshot displays an Interface configuration in an older format which uses\
  ADO.NET/ODBC drivers.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
+
 
 _When are Interfaces Created in an Older Format in the Current Fabric Version?_
 
