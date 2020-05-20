@@ -43,3 +43,5 @@ Lookup Tables can be added to a Table Population Map to get additional informati
 For improved performance, it is recommended to create lookups based on an LU Table and not a DB Table. The reason is that an LU Table is usually much smaller than a Source DB Table since it includes only data relevant and/or applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
 
 A lookup returns only one record for each input record. For example, if the population needs to get a customer’s bills and to add a billing address to each record, define the Address table as a lookup table connected to the Bill table.
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md)
