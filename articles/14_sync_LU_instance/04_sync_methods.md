@@ -218,13 +218,13 @@ The Truncate Before Sync property can be set on an LU Table or a Table Populatio
 <table width="705">
 <thead>
 <tr>
-<td width="72">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="315">
+<td width="350pxl">
 <p><strong>Example 1</strong></p>
 </td>
-<td width="315">
+<td width="350pxl">
 <p><strong>Example 2</strong></p>
 </td>
 </tr>
