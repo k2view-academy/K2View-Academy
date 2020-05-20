@@ -86,10 +86,10 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </tr>
 <tr style="mso-yfti-irow: 3; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><strong>DB Objects Tab</strong></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><b>DB Objects Tab<b></p>
 </td>
 <td style="width: 414px;">
-<p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md#step-1-define-the-db-interface">DB Connection &nbsp;</a> field.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; DB objects can be refreshed by clicking the Refresh icon adjacent to the DB Connection dropdown list.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
 </td>
@@ -99,7 +99,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><strong>Objects Tab</strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays the list of all  LU tables  defined for the LU. Drag the table into the Logical Unit diagram area to add it to the LU Schema.</p>
+<p>Displays the list of all <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md"><b> LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area to add it to the LU Schema.</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
