@@ -66,3 +66,6 @@ Click to display the Fabric API list: **http://<Fabric IP address>:3213/static/d
 </tr>
 </tbody>
 </table>
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)
