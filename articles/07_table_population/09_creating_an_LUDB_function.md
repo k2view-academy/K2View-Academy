@@ -28,4 +28,5 @@ for (Db.Row row:rows){
 	yield(row.cells());
 }
 </code></pre>
-Click fnCreateInstId.java  to open an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
+
+Click **fnCreateInstId.java**  to open an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
