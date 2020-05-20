@@ -54,8 +54,7 @@ The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options
 <table style="width: 606px;">
 <tbody>
 <tr>
-<td style="width: 247px;">&nbsp;</td>
-<p><a href:"https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_02_refresh.png"</a></p>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_02_refresh.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_03_refresh2.PNG" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_04_refresh3.png" alt="" /></td>
 <td style="width: 343px;">
 <p>There are a number of <strong>Refresh</strong> options for updating changes in a population. For example, if a function used in the current population is modified, click <strong>Refresh Functions</strong> or <strong>Refresh All</strong> to make the changes available for the population.</p>
 <p>&nbsp;</p>
