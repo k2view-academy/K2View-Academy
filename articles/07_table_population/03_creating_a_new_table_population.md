@@ -44,3 +44,4 @@ Click for more information about Creating Table Population Objects .
     * Check **Auto Connect to Table.**
     * Connect the fields manually.
    
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)
