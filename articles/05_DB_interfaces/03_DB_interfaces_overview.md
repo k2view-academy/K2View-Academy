@@ -15,3 +15,5 @@ A database interface includes the following details:
 
 Accurate definition of connection settings is especially important when building a DB interface. The connection settings defined depend on whether the interface is a DB interface or a Non-DB interface. The following fields are displayed for all types of DB interfaces: 
 
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
