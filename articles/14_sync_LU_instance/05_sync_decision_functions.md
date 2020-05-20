@@ -79,7 +79,7 @@ In this example, it is recommended to use the [skipSync() method](https://github
 [**Click for more information about Decision Function Checks and Considerations.**](https://github.com/k2view-academy/K2View-Academy/wiki/Decision-Function-Checks-and-Considerations-Table)\
 [**Click for more information about Decision Function Code Examples.**](https://github.com/k2view-academy/K2View-Academy/wiki/Decision-Function-Checks-and-Considerations-Table#decision-functions---code-examples)
 
-[![Previous](https://k2vacademy.s3.amazonaws.com/General/Previous.png)](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods)[<img align="right" width="60" height="54" src="https://k2vacademy.s3.amazonaws.com/General/Next.png">](https://github.com/k2view-academy/K2View-Academy/wiki/Decision-Function-Checks-and-Considerations-Table)
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 
 
 
