@@ -1,4 +1,4 @@
-![wiki welcome](https://user-images.githubusercontent.com/61159307/80379019-31392a00-88a6-11ea-914b-917247887b20.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/welcome_to_wiki.png)
 
 
 <details>
