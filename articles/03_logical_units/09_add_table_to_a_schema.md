@@ -33,9 +33,9 @@ Both options open the Query Builder. The LU table and its population are automat
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_09_03_tables3.png)
 
 
-Click for more information about LU Table Creation.
+[Click for more information about LU Table Creation.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md)
 
-Click for more information about LU Tables and Table Population. 
+[Click for more information about LU Tables and Table Population. ](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md)
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/10_delete_table_from_a_schema.md)
 
