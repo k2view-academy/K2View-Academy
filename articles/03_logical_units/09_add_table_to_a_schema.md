@@ -37,5 +37,5 @@ Click for more information about LU Table Creation.
 
 Click for more information about LU Tables and Table Population. 
 
-
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/10_delete_table_from_a_schema.md)
 
