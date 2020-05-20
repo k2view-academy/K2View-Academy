@@ -9,7 +9,7 @@ A Fabric Project is a consolidation of rules that transform data from one or mor
 
 ### How do I Create a New Project?
 
-1. Go to the **Start Page** or click the **File** icon ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg=20x) and then click **New Project** to display the **New Project** dialog box.
+1. Go to the **Start Page** or click the **File** icon ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg =20X) and then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
 3. Verify that the default directory displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the Project’s files and definitions.
 4. Optional: check the **Add Project to Version Control** checkbox to add the new Project to SVN or Git. It is recommended to save and commit the new Project as a baseline.
