@@ -19,4 +19,5 @@ The **Debug Toolbar** is used to test the Table Population map by executing its 
 
 The **Debug Toolbar** has the following icons:
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
 
