@@ -19,3 +19,6 @@ A new [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/
 1. Go to the **Project Tree**, right click the **Logical Unit** to open the **Logical Unit** dialog box. 
 2. Enter the **Name** of the new (duplicated) **Logical Unit**. 
 3. Click **OK**.  
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/04_LU_properties.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md)
