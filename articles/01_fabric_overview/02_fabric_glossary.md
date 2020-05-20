@@ -23,7 +23,7 @@
 <h3><strong>LU / LUT<strong>
 </td>
 <td width="482">
-<p>A Logical Unit (LU) or Logical Unit Type (LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a digital entity&nbsp;.</p>
+<p>A <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a digital entity&nbsp;.</p>
 
 </td>
 </tr>
