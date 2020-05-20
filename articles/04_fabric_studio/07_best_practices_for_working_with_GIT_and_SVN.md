@@ -13,7 +13,7 @@ Make sure you have all the requirements, for example:
 
 Note that to check out a project, you must know the path of the checkout directory.
 
-**Click for more information about Creating a New Fabric Project.**
+**Click for more information about Creating a New Fabric Project.**\
 **[Click for more information about Adding Fabric Projects to Version Control.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)**
 
 ### General Best Practices
