@@ -172,7 +172,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 </tr>
 </tbody>
 </table>
-[Click for more information about LU Sync Levels](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
+[**Click for more information about LU Sync Levels**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
  
 ## Truncate Before Sync 
 The Truncate Before Sync property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
