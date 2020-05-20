@@ -31,7 +31,7 @@ The following is an example of the Table Population window.
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_01_table_pop_window.png)
 
 The Table Population window has the following sections:
-*	Population Header . 
+*	Population Header. 
 *	Working Area.
 *	Properties Tab.
 *	Objects Tab.
