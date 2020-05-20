@@ -43,7 +43,7 @@ The Logical Unit DB Viewer contains the following areas:
 The Instance ID area has the following components:
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)### Import DB File 
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg) ###Import DB File 
 	
 When clicked, loads and displays an external Data Viewer file. 
 
