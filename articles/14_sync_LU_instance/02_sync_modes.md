@@ -3,7 +3,7 @@
 ## Set Sync Command 
 The Fabric **Set Sync** command is used to define the synchronization mode of an instance from source systems. The default value is ON.
 
-SYNTAX: SET SYNC <SYNC MODE>;
+SYNTAX: SET SYNC [SYNC MODE];
 
 ## Sync Modes
 <table style="width: 560px;">
@@ -24,7 +24,7 @@ SYNTAX: SET SYNC <SYNC MODE>;
 <p>ON</p>
 </td>
 <td style="width: 146px;">
-<p>Run Sync according the <a href="https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods">Sync method&nbsp;</a> (None, Time Interval, Inherited and Decision Function)</p>
+<p>Run Sync according the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md">Sync method&nbsp;</a> (None, Time Interval, Inherited and Decision Function)</p>
 </td>
 <td style="width: 316px;">
 <ul>
@@ -58,7 +58,7 @@ SYNTAX: SET SYNC <SYNC MODE>;
 </td>
 <td style="width: 316px;">
 <p>Synchronization is performed on every operation on the Fabric LU instance, regardless of the sync method definitions for the LU.</p>
-<p>The only exception to this rule is when using a <a href="https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions">decision function</a>. If the decision function returns False, then the data will not be synced.</p>
+<p>The only exception to this rule is when using a <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md">decision function</a>. If the decision function returns False, then the data will not be synced.</p>
 </td>
 </tr>
 </tbody>
@@ -82,7 +82,7 @@ This checkbox defines the sync mode of the first get of each LU instance after t
 * The Sync mode is set to FORCE for the first get of each LU instance even if the **Force Upgrade Post Deploy** checkbox is later unchecked, the LU is redeployed, and the instance was not synchronized when the **Force Upgrade Post Deploy** checkbox is still checked.
 
 **Example 1:**
-* Set the [Sync Method](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods) of Customer LU to **None**.
+* Set the [Sync Method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md) of Customer LU to **None**.
 * Get Customer no. 1.
 * Update the source DB for Customer no. 1. 
 * Check the **Force Upgrade Post Deploy** checkbox for Fabric development server and redeploy Customer LU to this server. 
@@ -91,7 +91,7 @@ This checkbox defines the sync mode of the first get of each LU instance after t
 * Get again Customer 1.  This time Customer no. 1 is **not** synchronized, **since the Sync mode is set back to ON for Customer no. 1 after his first sync**, initiated after checking the **Force Upgrade Post Deploy** checkbox.
 
 **Example 2:**
-* Set the [Sync Method](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods) of Customer LU to **None**.
+* Set the [Sync Method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md) of Customer LU to **None**.
 * Get Customers no. 1 and 2.
 * Update the source DB for Customers no. 1 and 2.
 * Check the **Force Upgrade Post Deploy** checkbox for Fabric development server and redeploy Customer LU to this server. 
@@ -108,7 +108,7 @@ The Fabric UserCode class holds the method that returns the Sync mode set for th
 
 public static String getSyncMode();
 
-This method can be invoked by a [decision function](https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions). For example:
+This method can be invoked by a [decision function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
 If the sync mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
 
 Click to open the list of Fabric API: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
