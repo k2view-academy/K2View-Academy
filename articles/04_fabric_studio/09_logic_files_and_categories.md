@@ -1,9 +1,9 @@
 # Logic Files and Categories
 
-There are two types of Java files in Fabric Studio, one dedicated to the development of Java functions and the other for the creation of Globals variables. In Fabric Studio the term **Logic Category Files** refers to a Java package that stored the Logic.java file. Logic.java file contains all the Java functions defined under the Logic Category, although the functions are presented on the project tree as separate files, it is basically stored under one file called Logic.java under the selected category.  
+There are two types of Java files in Fabric Studio, one dedicated to the development of Java functions and the other for the creation of [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) variables. In Fabric Studio the term **Logic Category Files** refers to a Java package that stored the Logic.java file. Logic.java file contains all the Java functions defined under the Logic Category, although the functions are presented on the project tree as separate files, it is basically stored under one file called Logic.java under the selected category.  
 
 ### Shared Java Files
-Java files residing on a shared level can be inherited by any project components, for example,  Web Services, References or Logical Units and can be shared throughout a project.\
+Java files residing on a shared level can be inherited by any [project](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/08_fabric_project_tree.md) components, for example,  [Web Services](), References or [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/02_create_a_logical_unit_flow.md) and can be shared throughout a project.\
 It is highly recommended to avoid duplicating names of Shared Objects at lower levels of a project, for example; within a Logical Unit component. However, if there are duplicated object file names, the file that resides under the specific lower level component has priority when executed.
  
 A Java file residing at a Shared Objects level has two out-of-the-box Java template files:
