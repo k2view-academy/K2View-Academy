@@ -28,7 +28,7 @@ Click for more information about How to Create a New Population .
 
 The following is an example of the Table Population window. 
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_01_table_pop_window.png)
 
 The Table Population window has the following sections:
 *	Population Header . 
@@ -54,14 +54,14 @@ The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options
 <table style="width: 606px;">
 <tbody>
 <tr>
-<td style="width: 247px;">&nbsp;</td>
+<td width="200">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_02_refresh.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_03_refresh2.PNG" alt="" /></td>
 <td style="width: 343px;">
 <p>There are a number of <strong>Refresh</strong> options for updating changes in a population. For example, if a function used in the current population is modified, click <strong>Refresh Functions</strong> or <strong>Refresh All</strong> to make the changes available for the population.</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 247px;">&nbsp;</td>
+<td width="200"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_04_refresh3.png" alt="" /></td>
 <td style="width: 343px;">
 <p>Click <strong>Group</strong> / <strong>Ungroup SubGraph</strong> to group / ungroup several objects in the population.</p>
 </td>
@@ -120,19 +120,19 @@ The Expand / Collapse and Refresh links are displayed above the Objects tab.
 <table style="width: 566px;">
 <tbody>
 <tr>
-<td style="width: 85px;">&nbsp;</td>
+<td width="200"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_05_object_icon1.PNG" alt="" /></td>
 <td style="width: 465px;">
 <p>Expand all.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 85px;">&nbsp;</td>
+<td width="200"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_06_object_icon2.PNG" alt="" /></td>
 <td style="width: 465px;">
 <p>Collapse all.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 85px;">&nbsp;</td>
+<td width="200"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_07_object_icon_3.PNG" alt="" /></td>
 <td style="width: 465px;">
 <p>Refresh Tree, refreshes the Objects tree. If a new object is created after the Population window is opened, click Refresh Tree to display the object in the tree.</p>
 </td>
