@@ -2,18 +2,18 @@
 
 An [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
 
-To add a table to an LU Schema, do either: 
+To add a table to an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), do either: 
 
 1. Use the [Auto Discovery Wizard](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit an LU whereby the tables and their populations are automatically created and added to the LU schema.
 2. Drag a **DB Table** into the **LU Schema** window:\
    a. Go to the [DB Objects tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md). \
-   b. Click **DB Connection** and then click the [**DB interface**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md).\
+   b. Click **DB Connection** and then click the [**DB interface**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md).\
    c. Click the **Tables** and then drag them into the **LU Schema**. You can drag several tables.\
    d. Check either: 
     * **Create Table Based DB Query.**
     * **Create Table Based Root Function.**
 
-The selected tables are automatically created with the selected type of population and added to the LU schema.
+The selected tables are automatically created with the selected type of [population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) and added to the LU schema.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_09_01_tables1.png)
 
