@@ -5,7 +5,7 @@ When working in the Fabric Studio, use a Window tab to navigate between multiple
 ### How do I Use the Window Tab Menu?
 Right click the **Window Tab Header** to display a context menu with the following options:
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_02_window_tab_header.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_02_window_tab_header.png)
 
 <table width="110%">
 <tbody>
