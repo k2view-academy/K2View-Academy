@@ -28,7 +28,7 @@ Click for more information about How to Create a New Population .
 
 The following is an example of the Table Population window. 
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_01_table_pop_window.png)
 
 The Table Population window has the following sections:
 *	Population Header . 
@@ -55,6 +55,7 @@ The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options
 <tbody>
 <tr>
 <td style="width: 247px;">&nbsp;</td>
+<a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_02_refresh.png"</a>
 <td style="width: 343px;">
 <p>There are a number of <strong>Refresh</strong> options for updating changes in a population. For example, if a function used in the current population is modified, click <strong>Refresh Functions</strong> or <strong>Refresh All</strong> to make the changes available for the population.</p>
 <p>&nbsp;</p>
