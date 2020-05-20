@@ -63,5 +63,7 @@ Act with caution when using with the Replace option, be careful not to damage yo
 * To search for a specific string in the Project Tree, type the item name or part of it in the Project Tree **Search** bar (bottom left corner of the Studio) and press **enter**. The results are displayed in the Project Tree under the respective objects.
 
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md)
+
 
 
