@@ -5,7 +5,7 @@ LU tables are the basic building blocks for creating Logical Units. There are se
 
 From the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md):
 
-*	Right click the work area and select either the [**New Table From SQL Based DB Query**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) or [**New Table From SQL Based Root Function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) option.
+*	Right click the work area and select either the **New Table From SQL Based DB Query** or **New Table From SQL Based Root Function** option.
 *	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 
 From the Project Tree: 
