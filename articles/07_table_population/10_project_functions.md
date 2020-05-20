@@ -99,4 +99,4 @@ db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 Click to display the Fabric API list: **http://<Fabric IP address>:3213/static/doc/user-api/index.html**
 
 
-
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/09_creating_an_LUDB_function.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md)
