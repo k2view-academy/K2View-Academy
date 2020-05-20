@@ -20,3 +20,5 @@ Click for more information about Editing the Execution Order of a Table Populati
   a. Re-open the **LU schema** screen. \
   b. If the LU schema screen is open, click the **Refresh** icon on the toolbar.
 1. Save the changes to remove the deleted population object from the LU schema.
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/10_delete_table_from_a_schema.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
