@@ -20,3 +20,4 @@ Click for more information about Reference Tables.
 * A Reference Table can be accessed using code (for example, function) also when the table is not checked in the References tab. 
 * It is recommended to limit the number of checked reference tables in the Reference Tab to avoid a massive sync of the reference tables when synchronizing the LU instance and as a result, slow the sync of the LU instance.
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md)
