@@ -288,3 +288,6 @@
 </tr>
 </tbody>
 </table>
+  
+  [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/01_what%20is%20fabric.md)
+
