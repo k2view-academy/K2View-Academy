@@ -1,6 +1,6 @@
 # Shared Objects
 
-Shared Objects can be used in all components of a Fabric project. For example, [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), References, Web Services or processes. 
+Shared Objects can be used in all components of a Fabric project. For example, [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), [References], [Web Services] or processes. 
 
 ### Which Objects Can be Shared in a Fabric Project?
 
