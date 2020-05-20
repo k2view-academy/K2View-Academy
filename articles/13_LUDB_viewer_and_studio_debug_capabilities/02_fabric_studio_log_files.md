@@ -27,7 +27,7 @@ The following are the main log options:
 
 3. Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_04%20Activity%20Logs%20ICON.png) **Activity Logs** to open the Activity Logs window.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_05%20Activity%20Logs%20window.jpg) master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_05%20Activity%20Logs%20window.jpg
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_05%20Activity%20Logs%20window.jpg) 
 
 4. Follow **Step 2** to select and review the log. 
 
@@ -47,8 +47,9 @@ The following are the main log options:
 
 ### Debugging Logs and Messages
  
-Logs and messages can also be used for debugging purposes. The following methods are available:\
-reportUserMessage ():
+Logs and messages can also be used for debugging purposes. The following methods are available:
+
+**reportUserMessage ():***
 
 Enables Fabric Studio’s Debug options and a quick sanity review of the implementation. This method can be added to any Java code and viewed by clicking Messages under the Server Logs area. Messages are generated either by invoking the Fabric Studio [Data Viewer] or by executing the [Table Population Debug] option.
 
