@@ -7,16 +7,20 @@ The following screenshot displays a list of supported built-in interface types.
      * ![image] = DB interfaces.
      * ![image] = Non-DB interfaces.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_01%20interface%20types.png)
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_02%20DB%20Interface.png)
 
 3. Populate the **DB Connection Name** and set the **Connection** to **Active**.
-4. Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/wiki/DB-Interfaces-Overview).
-5. To check if the connection settings are correct, click the **Test Connection String**.\
-   a. If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.\
+
+4. Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
+
+5. To check if the connection settings are correct, click the **Test Connection String**.
+
+   a. If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
+   
    b. If the connection fails, a description of the problem is displayed on the bottom of the window. 
 6. Optional: Edit the **Pool Properties**.
 7. Click **Save**.
@@ -26,7 +30,7 @@ For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the pr
     
 Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a Product package.
 
-[**Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.**]
+Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.
 
 ### DB Interface Window
 
@@ -34,7 +38,7 @@ The DB Interface window enables you to define DB Interfaces for your project. By
 
 _Generic Interface Definition_
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
 
 Interfaces created using previous Fabric versions remain as is and can be converted to the Generic interface.
  
@@ -57,7 +61,8 @@ The **k2FabricStudio.exe.config** setting is created as follows and can be manua
  ```java<add key="UseFabricLegacyAdoDatabaseTypesForNewInterfaces" value="Cassandra"/>``` 
 
 
-In this setting, value = a list of DB types to be created in an old format, separated by a comma.\
+In this setting, value = a list of DB types to be created in an old format, separated by a comma.
+
 Note that it is **recommended** that you convert the existing interface into a generic format to avoid the need for ADO.NET/ODBC drivers. To do so, click the **Convert to Generic DB Interface** link.
 
 New generic interfaces cannot be converted to older interface format based on ADO.NET/ODBC drivers. 
