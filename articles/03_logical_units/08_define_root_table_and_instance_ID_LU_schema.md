@@ -20,3 +20,4 @@ If you are not using the Auto Discovery Wizard, do the following:
 
 Note that only one column can be defined as **True** in the [**Input Arguments**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md#how-do-i-link-a-table-population-to-the-lu-schema)  of the Root Table. This field is populated by the **Instance ID**. 
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/07_build__or_update_an_LU_schema.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md)
