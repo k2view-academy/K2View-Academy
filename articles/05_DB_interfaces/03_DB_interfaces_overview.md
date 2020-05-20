@@ -17,5 +17,123 @@ A database interface includes the following details:
 
 Accurate definition of connection settings is especially important when building a DB interface. The connection settings defined depend on whether the interface is a DB interface or a Non-DB interface. The following fields are displayed for all types of DB interfaces: 
 
+<table width="643">
+<tbody>
+<tr>
+<td width="210">
+<p><strong>Name</strong></p>
+</td>
+<td width="433">
+<p><strong>Filename of the database.</strong></p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Active</strong></p>
+</td>
+<td width="433">
+<p>When checked indicates if the database connection is active during runtime. This parameter allows you to disable a connection so that it is ignored by the server side.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Type Name</strong></p>
+</td>
+<td width="433">
+<p>Database interface type, for example, Oracle or DB2.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Server</strong></p>
+</td>
+<td width="433">
+<p>Hostname or IP address of the database server.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Port</strong></p>
+</td>
+<td width="433">
+<p>Connection port used to communicate with the database. A default port is entered based on the type of interface selected.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Database</strong></p>
+</td>
+<td width="433">
+<p>Database, schema or service name.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>User</strong></p>
+</td>
+<td width="433">
+<p>Username used for database access authentication.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Password</strong></p>
+</td>
+<td width="433">
+<p>Password used for database access authentication.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Proactive Indicator</strong></p>
+</td>
+<td width="433">
+<p>Default = False. Defines whether Proactive Sync&nbsp; should be enabled.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Custom Connection String</strong></p>
+</td>
+<td width="433">
+<p>Default = False. When set to True, the Custom Connection string is editable.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Connection String</strong></p>
+</td>
+<td width="433">
+<p>Connection string used by the client side. This is generated according to the database type. For example, for Oracle, the string consists of jdbc:oracle:thin:@:1521/</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Min Connection Number</strong></p>
+</td>
+<td width="433">
+<p>Minimum number of connections per interface allocated by Fabric per node that remain open throughout the entire time that the Fabric project runs.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Max Connection Number</strong></p>
+</td>
+<td width="433">
+<p>Maximum number of connections per interface per node. Note that this parameter should not exceed the maximum number of connections allocated by the DB.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong>Schema Filter</strong></p>
+</td>
+<td width="433">
+<p>Name of the Database Schema to access. Required if more than one Schema exists. The Schema Filter setting of the DB Interface filters the list of Schemas to be used by the Query Builder and DB Queries.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
