@@ -1,7 +1,7 @@
 # Data Viewer
 
 The Data Viewer enables you to view a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) database, add debugging capabilities and improve testing abilities and defect resolution times. Since a Logical Unit database is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis.\
-Data Viewer files are saved under the LU VirtualDB_Data directory in:  \Fabric\ <project name> \Implementation\LogicalUnits\<LU name>\VirtualDB_Data.
+Data Viewer files are saved under the LU VirtualDB_Data directory in:  \Fabric\ [project name] \Implementation\LogicalUnits\[LU name]\VirtualDB_Data.
 
 [**Click for more information about Logical Units.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
@@ -88,12 +88,45 @@ To display the values of a table in the tree, right click the table and select e
 * **Show Schema**, to display the table structure in the Results pane.
 * **Show Indexes**, to display the table indexes in the Results pane.
 
-**Click for more information about References.**
+Click for more information about References.
 
 ### Results Pane and Toolbar
 (Bottom right) Displays the data or schema requested with the row count.
- 
-![image]
+ <table>
+<tbody>
+<tr>
+<td width="47">&nbsp;</td>
+<td width="274">
+<p>Print results.</p>
+</td>
+</tr>
+<tr>
+<td width="47">&nbsp;</td>
+<td width="274">
+<p>Export results as an Excel file.</p>
+</td>
+</tr>
+<tr>
+<td width="47">&nbsp;</td>
+<td width="274">
+<p>Filter results by one or more columns.</p>
+</td>
+</tr>
+<tr>
+<td width="47">&nbsp;</td>
+<td width="274">
+<p>Toggle groupings.</p>
+</td>
+</tr>
+<tr>
+<td width="47">&nbsp;</td>
+<td width="274">
+<p>Toggle summaries.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### Scripting Area
 An SQL scripting area where you can write and run SQL statements on the selected Logical Unit DB (Upper right pane).
@@ -102,6 +135,60 @@ An SQL scripting area where you can write and run SQL statements on the selected
 
 
 The following options are supported:
+<table>
+<tbody>
+<tr>
+<td width="236">
+<p><strong>Run or Run on New Tab</strong></p>
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="368">
+<ul>
+<li>Click Run to execute the given SQL statement.</li>
+<li>Click Run on New Tab to open a new Results tab.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p><strong>Explain query</strong></p>
+</td>
+<td width="368">
+<p>Description of the strategy or plan that SQLite uses to implement a specific SQL query (e.g. SCAN TABLE)</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p><strong>Dropdown menu of special Run options</strong></p>
+</td>
+<td width="368">
+<ul>
+<li>On current DB file: The SQL is executed on the currently selected instance file.</li>
+<li>On newest DB file for each instance: The SQL is executed on the newest instance file of each instance in the Instances tree.</li>
+<li>On selected DB files: The SQL is executed on the selected instance's files. Click and press <strong>CTRL </strong>to select the required files.</li>
+<li>On all existing DB files: The SQL is executed on all files in the Instances tree.</li>
+</ul>
+<p>Note that when <strong>On Newest DB file</strong> or <strong>On All Existing DB files </strong>are selected, the Rows Limit dropdown list opens where you can define the number of results displayed.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p><strong>Save SQL to File</strong></p>
+</td>
+<td width="368">
+<p>Saves the current SQL statements to a file.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p><strong>Load SQL from File</strong></p>
+</td>
+<td width="368">
+<p>Retrieves an SQL statement from a file previously created in the Scripting area.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### How do I Run an SQL Statement in the Data Viewer? 
 
@@ -127,10 +214,10 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 **Notes**\
 The latest Data Viewer file can be used in the following components:
 * New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
-[**Click for more information on How to Create a New Function.**]
-* LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [**Click for more information about Adding a Table to a Schema.**]
+[Click for more information on How to Create a New Function.](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/10_project_functions.md)
+* LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/03_logical_units/09_add_table_to_a_schema.md)
 * Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [**Click for more information about Creating a New Table Population.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
-* Debugging population objects. **Click for more information about Debugging a Table Population.** 
+* Debugging population objects. [Click for more information about Debugging a Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
 
 
 [<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
