@@ -133,3 +133,5 @@ Display the suggested logical unit diagram and click **Finish** to create the LU
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_07.png)
 
 Optional: you can check tables out of the LU schema to create them as LU tables and add them manually to your LU if needed. 
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
