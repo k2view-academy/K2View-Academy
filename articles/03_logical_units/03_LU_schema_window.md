@@ -35,7 +35,7 @@ The Logical Unit Schema is a work area where you can define the logical unit’s
 
 [Click for more information about Logical Unit Tables.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md)
 
-[Click for more information about LU Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
+[Click for more information about LU Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md)
 
 ### Customer LU Schema Example 
 
