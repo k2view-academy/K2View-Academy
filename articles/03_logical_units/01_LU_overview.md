@@ -31,7 +31,7 @@ Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one ph
 Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
 
 
-## General Recommendations for Designing an LU 
+### General Recommendations for Designing an LU 
 Digital Entity data is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data sources.
 
 Below is a table of **pros and cons** of each alternative:
