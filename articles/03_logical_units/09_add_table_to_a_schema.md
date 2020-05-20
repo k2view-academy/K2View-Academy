@@ -1,6 +1,6 @@
 # Editing and Adding a Table to an LU Schema
 
-An [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/02_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
+An [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
 
 To add a table to an LU Schema, do either: 
 
