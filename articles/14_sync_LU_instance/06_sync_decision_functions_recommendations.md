@@ -93,13 +93,14 @@ When a decision function returns False it always skips a sync. Therefore, when w
 </tbody>
 </table>
 <p>&nbsp;</p>
+
 <table>
 <tbody>
 <tr>
-<td width="132">
+<td width="150pxl">
 <p><strong>Check</strong></p>
 </td>
-<td width="472">
+<td width="700pxl">
 <p>Has the LU Schema Changed Since the Last Sync?</p>
 </td>
 </tr>
@@ -141,6 +142,7 @@ Add a decision function on the LU Schema level to check the source environment a
 * LU Schema has been changed.
 * The source environment is Production.
 
+<pre><code>
 // Init the Boolean by true\
 Boolean syncInd = true;\
 // Check the source environment\
@@ -157,11 +159,13 @@ if(!env.toLowerCase().equals("prod") && !isFirstSync() && !isStructureChanged())
 log.info("fnCheckSourceEnv- table name: " + getTableName() + ", active env: " + env.toLowerCase() + ", isFirstSync: " + isFirstSync() +
 ", isStructureChanged: " +  isStructureChanged() + ", Sync indicator: " + syncInd.toString());\
 return syncInd;
+</code></pre>
 
 **Example 2**
 
 Add a decision function on the population level in an LU Table which is populated only when run on a Development source environment. When run on a Production environment, do not populate this table, since this table does not exist in the Production DB.
 
+<pre><code>
 // Init the Boolean by true\
 Boolean syncInd = true;
 
@@ -175,16 +179,19 @@ if(!prodVer.toLowerCase().equals("dev") )\
 log.info("fnCheckSourceVersion- product version: " + prodVer + ", isFirstSync: " + isFirstSync() + ", isStructureChanged: " +  isStructureChanged() + ", Syc indicator: " + syncInd.toString());
 
 return syncInd;
+</code></pre>
 
 **Example 3**
 
 Add a decision function on the CASE LU Table to check if the CONTRACT LU Table has been updated. The check is based on a [session level Global](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md) (key) which is set to True by the population of the CONTRACT LU Table. 
 
+<pre><code>
 // Init the Boolean by true\
 Boolean syncInd = true;\
 // Check the UPDATE_CONTRACT session level key.\
 syncInd = UPDATE_CONTRACT ;\
 return syncInd;
+</code></pre>
 
 **Example 4**
 
