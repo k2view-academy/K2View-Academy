@@ -273,7 +273,7 @@ Db.Row row = ludb().fetch(sql, contractId).firstRow();
 </code></pre>
 
 
-3. [Root function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md), select records from the CASES table and yield each record: 
+3. [Root function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
 
 <pre><code>
 String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CRM_DB.CASES where activity_id = ?";
