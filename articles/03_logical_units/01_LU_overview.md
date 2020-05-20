@@ -102,3 +102,4 @@ Below is a table of **pros and cons** of each alternative:
 </table>
 
 
+[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/02_create_a_logical_unit_flow.md)
