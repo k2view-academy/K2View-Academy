@@ -7,18 +7,18 @@ Data Viewer files are saved under the LU VirtualDB_Data directory in:  \Fabric\ 
 
 ### How do I View Data in a Logical Unit?
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_01%20LOGICAL%20UNIT.jpg)
 
-1. Go to the **Project Tree**, click **Logical Units**, hover over the **Logical Unit** and click ![image] to open the **Data Viewer** window.
-2. In the **Instance ID** field (top central pane) complete the **Instance ID** or **Instance ID by Function** fields and then click ![image] **Play** to generate a new **Data Viewer file**. 
+1. Go to the **Project Tree**, click **Logical Units**, hover over the **Logical Unit** and click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%201.jpg) to open the **Data Viewer** window.
+2. In the **Instance ID** field (top central pane) complete the **Instance ID** or **Instance ID by Function** fields and then click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
 Fabric retrieves data via the interfaces defined for the LU from the source DB and runs the LU mapping and transformation rules to create a new file for the LU instance. The LU instance is displayed in the tree. 
 3. Click the **Instance ID** to open the **Instances Tree** dropdown list.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_03%20instances%20tree.jpg)
 
 4. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_03%20instances%20tree.jpg)
 
 5. Click a **table** to display its data and then right click the **table** to open a context menu with the following options:\
    a. **Show Data**, displays the table’s data.\
@@ -36,14 +36,14 @@ The Logical Unit DB Viewer contains the following areas:
 * Scripting Area.
 * Results Pane and Toolbar.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_05%20DB%20Viewer.png)
 
 ### Instance ID
 
 The Instance ID area has the following components:
 
-![image] 
-### Import DB File 
+
+![image]((https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)### Import DB File 
 	
 When clicked, loads and displays an external Data Viewer file. 
 
@@ -64,7 +64,8 @@ if (i_id!=null && !i_id.isEmpty()){
    }
 return "0";
 
-![image]
+
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_07%20play%20icon.jpg) **Play**
 
 When clicked, retrieves and saves the data file of the Instance ID for debugging.
 	
@@ -97,7 +98,7 @@ To display the values of a table in the tree, right click the table and select e
 ### Scripting Area
 An SQL scripting area where you can write and run SQL statements on the selected Logical Unit DB (Upper right pane).
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_09%20SCRIPTING%20AREA.jpg)
 
 
 The following options are supported:
