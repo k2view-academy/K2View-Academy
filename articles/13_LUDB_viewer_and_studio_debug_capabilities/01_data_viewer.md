@@ -132,6 +132,7 @@ The latest Data Viewer file can be used in the following components:
 * Debugging population objects. **Click for more information about Debugging a Table Population.** 
 
 
+[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
 
 
 
