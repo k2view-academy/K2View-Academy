@@ -179,18 +179,18 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 The Truncate Before Sync property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
 
 ## Sync Methods - Use Cases
-<table style="width: 705px;">
+<table style="width: 850pxl">
 <tbody>
 <tr>
-<td style="width: 850pxl;" colspan="2">
+<td style="width: 850pxl" colspan="2">
 <p><strong>When is a sync method selected?</strong></p>
 </td>
 </tr>
 <tr>
-<td style="width: 150pxl;">
+<td style="width: 150pxl">
 <p><strong>None</strong></p>
 </td>
-<td style="width: 700pxl;">
+<td style="width: 700pxl">
 <p>The source does not change or becomes unavailable and therefore requires a one-time only load.</p>
 <p>After it is loaded, Fabric becomes the system of record for the data whereby Fabric may get update transactions on the data. For example, add a new payment.</p>
 </td>
