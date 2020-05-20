@@ -12,4 +12,4 @@ The Sync mechanism synchronizes data between data sources and the Fabric databas
 
 
 
-[<img align="right" width="60" height="54" src="https://k2vacademy.s3.amazonaws.com/General/Next.png">](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Modes)
+[<img align="right" width="60" height="54" src="https://k2vacademy.s3.amazonaws.com/General/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)
