@@ -96,3 +96,6 @@ DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with ad
 
 
 Click for more information about The DESCRIBE Command.
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/04_table_properties.md)
