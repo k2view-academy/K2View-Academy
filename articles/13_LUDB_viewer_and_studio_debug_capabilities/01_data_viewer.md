@@ -18,7 +18,7 @@ Fabric retrieves data via the interfaces defined for the LU from the source DB a
 
 4. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_03%20instances%20tree.jpg)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_04%20Instance%20DB%20tree.jpg)
 
 5. Click a **table** to display its data and then right click the **table** to open a context menu with the following options:\
    a. **Show Data**, displays the table’s data.\
