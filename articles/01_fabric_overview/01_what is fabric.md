@@ -39,3 +39,5 @@ Note that Fabric is a less appropriate solution for storing and managing data th
 * [Interfaces.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md)
 * Web Services.
 * Reference Tables.
+
+[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md)
