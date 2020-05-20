@@ -30,7 +30,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 <ul>
 <li>The LU Schema has changed and is redeployed.</li>
 <li>First sync, the instance does not yet exist in Fabric.</li>
-<li>Sync the instance according to the pre-defined Sync method, set for each LU table and table population object</li>
+<li>Sync the instance according to the pre-defined Sync method, set for each <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md">LU table</a> and <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md">table population object</a></li>
 </ul>
 </td>
 </tr>
@@ -68,7 +68,7 @@ Note that the Sync returns an error message when a source is not available. To c
 
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
-The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the Server Configuration window:
+The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md) window:
 
 ![image](https://k2vacademy.s3.eu-west-2.amazonaws.com/Fabric/6_Sync/6_2_server_configuration_window.png)
 
