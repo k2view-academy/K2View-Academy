@@ -14,7 +14,8 @@ Fabric distinguishes between DB Interfaces and Non-DB Interfaces:
 
 DB Interfaces enable Fabric Server connections to databases like the SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
 
-[**Click for more information about Creating a New Database Interface.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
+[Click for more information about Creating a New Database Interface.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
+
 
 
 **Non-DB Interfaces**
