@@ -39,13 +39,13 @@ You can import an entire exported project or specific branches of a Project Tree
  
 1. Right click the root of the **Project Tree**, click **Import** and then click **Import All** to open the File **Browser** and select the **k2export** **file** to be imported.  
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_01%20k2export%20file.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_01%20k2export%20file.png)
 
 2. Select the **file** and click **Open**:  
     a. If the file name exists, click either **OK** to confirm or **Ignore** to override or skip the files.\
     b. When importing files to a non-existent LU, select the targeted **LU** or create a new LU saved with the exported LU file’s name.
     
-    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_02%20LU%20file%E2%80%99s%20name.png)
+    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_02%20LU%20file%E2%80%99s%20name.png)
 
 3. A confirmation window opens asking you whether you want to:\
     a. Override the specific file.\
@@ -53,17 +53,17 @@ You can import an entire exported project or specific branches of a Project Tree
     c. Decline the override of the specific file.\
     d. Decline the override of all the conflicting files. 
     
-    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_03%20confirmation%20window.jpg)
+    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_03%20confirmation%20window.jpg)
 
 ### Custom Import Process
  
 1. Right click the root of **Project Tree**, click **Import** and then click **Custom Import**.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_04%20Custom%20Import.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_04%20Custom%20Import.png)
 
-2. Click the **branches** and **items** to import from the file and then click and drag the + icon to the current project’s structure (right pane).  
+2. Click the **branches** and **items** to import from the file and then click and drag the ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_05%20%2BICON.png) icon to the current project’s structure (right pane).  
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_06%20project%E2%80%99s%20structure.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_06%20project%E2%80%99s%20structure.png)
 
 The Custom Import window displays the number of imported and overridden items.\
 3.  Right click the **Target Project Tree** to display a context menu with the following options:  
@@ -79,7 +79,8 @@ The Custom Import window displays the number of imported and overridden items.\
     b. Override all the conflicting files in the import package.\
     c. Decline the override of the specific file.\
     d. Decline the override of all conflicting files. 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_11_07%20confirmation%20window.jpg)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_07%20confirmation%20window.jpg)
+
 **Notes** 
 
 When importing objects with the same name and location in the Project Tree, a yellow triangular notification icon is displayed next to the imported objects. The imported objects override the existing objects. 
