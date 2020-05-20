@@ -1,6 +1,6 @@
 # LU Schema - Group and Ungroup Tables
 
-An LU schema may include a large number of tables. To make the structure of the table schema clearer, group or ungroup list of tables. 
+An LU schema may include a large number of [tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md). To make the structure of the table schema clearer, group or ungroup list of tables. 
 
 For example, group all Billing Tables in the Customer LU, see below:
 
