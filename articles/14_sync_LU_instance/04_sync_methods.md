@@ -49,10 +49,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method<strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>None</p>
 </td>
 </tr>
@@ -79,10 +79,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>Time interval.</p>
 </td>
 </tr>
@@ -113,10 +113,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <thead>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>Decision</p>
 </td>
 </tr>
@@ -145,10 +145,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>Inherited.</p>
 </td>
 </tr>
