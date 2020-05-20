@@ -8,3 +8,6 @@ The **Logical Unit toolbar** has two Refresh icons:
 * Update Tables from Database (green), that rebuilds LU Tables based on the source DB and is used to implement source DB updates into an LU Schema. When needed, Update Tables from Database adds new columns to the LU Table. 
 
 Note that Update Tables from Database does not delete or add tables to the LU Schema and does not delete columns from LU Tables. These updates must be implemented  manually. 
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/17_LU_schema_change_root_table.md)
