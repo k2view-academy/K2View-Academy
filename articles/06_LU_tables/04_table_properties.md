@@ -65,7 +65,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Truncate Before Sync</strong></a></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync"><strong>Truncate Before Sync</strong></a></p>
 </td>
 <td width="474">
 <p>When Truncate Before Sync = True, the entire LU table is truncated before the populations are executed.</p>
