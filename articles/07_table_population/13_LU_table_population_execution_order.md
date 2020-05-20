@@ -53,3 +53,4 @@ Go to the LU Schema window,  click the right corner of Table Population and unse
 
 Click for more information about Disable / Enable Populations .
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
