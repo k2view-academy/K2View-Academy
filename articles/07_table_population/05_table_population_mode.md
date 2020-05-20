@@ -27,3 +27,4 @@ Update the NEW_NOTE column of the target table ACTIVITY for each ACTIVITY_ID of 
 *	The **k2_concat5** function maps the updated value to the NEW_NOTE column on ACTIVITY table. 
 *	The value of the NEW_NOTE column in the target table ACTIVITY is updated based on the ACTIVITY_ID key of each entry in the source object.
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
