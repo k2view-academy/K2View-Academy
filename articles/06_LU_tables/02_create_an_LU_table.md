@@ -116,3 +116,5 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 </tbody>
 </table>
 <p>&nbsp;</p>
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md)
