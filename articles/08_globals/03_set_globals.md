@@ -106,5 +106,6 @@ The **set** command can be used to set a variable **per session** so that the va
 
 [**Click for more information about Globals – Code Examples.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/04_globals_code_examples.md)
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)]https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/02_globals_use_cases.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/04_globals_code_examples.md)
 
 
