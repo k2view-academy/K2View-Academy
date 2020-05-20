@@ -15,7 +15,7 @@ Click for more information about Reference Tables.
 1. Open the **LU Schema Window** and click the **References tab** to display the **Reference Tables** list. 
 1. Check the **Reference Table** to create a **Lookup Object** in the **Reference Table** in the **LU Population**.
 
-**Notes** 
+**Notes:** 
 * A Reference Table must be checked to enable creating a  Lookup  for the table. . 
 * A Reference Table can be accessed using code (for example, function) also when the table is not checked in the References tab. 
 * It is recommended to limit the number of checked reference tables in the Reference Tab to avoid a massive sync of the reference tables when synchronizing the LU instance and as a result, slow the sync of the LU instance.
