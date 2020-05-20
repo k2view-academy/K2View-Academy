@@ -32,7 +32,7 @@
 </ul>
 </details>
 
-details>
+<details>
 <summary markdown="span"><strong>General Topics<strong></summary>
 <ul>
   <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/01_UI_components_and_menus.md">Components and Menus</a></li>
