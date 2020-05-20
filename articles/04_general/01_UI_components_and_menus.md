@@ -115,7 +115,7 @@ The Project Tree displays the components of the current Project as a hierarchy o
 
 **Note:** All operations performed in the Project Tree’s options are accessible from the context menus of the different components in the Project Tree. For example, creating a new function is accessed from the context menu when you right click the Functions object in the Project Tree.
 
-
+[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/02_window_tab_context_menu.md)
 
 
 
