@@ -64,7 +64,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </tbody>
 </table>
 
-Note that the Sync returns an error message when a source is not available. To change this behavior, use set ignore_source_exception true
+Note that the Sync returns an error message when a source is not available. To change this behavior, use set [ignore_source_exception true](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
