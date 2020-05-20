@@ -10,7 +10,7 @@ The Auto Discovery Wizard can run in two modes:
 ## How Do I Use the Auto Discovery Wizard?
 
 ### STEP 1: Define the DB Interface
-The first screen displays a list of all DB interfaces defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
+The first screen displays a list of all [DB interfaces](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_01.png)
 
