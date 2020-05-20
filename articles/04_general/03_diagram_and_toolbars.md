@@ -40,3 +40,5 @@ Click  to display the following options:
 
 ### How Can I Customize the Toolbar?
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/04_user_preferences.md)
