@@ -1,9 +1,9 @@
 # Data Viewer
 
-The Data Viewer enables you to view a Logical Unit database, add debugging capabilities and improve testing abilities and defect resolution times. Since a Logical Unit database is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis.\
+The Data Viewer enables you to view a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) database, add debugging capabilities and improve testing abilities and defect resolution times. Since a Logical Unit database is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis.\
 Data Viewer files are saved under the LU VirtualDB_Data directory in:  \Fabric\ <project name> \Implementation\LogicalUnits\<LU name>\VirtualDB_Data.
 
-**Click for more information about Logical Units.**
+[**Click for more information about Logical Units.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
 ### How do I View Data in a Logical Unit?
 
@@ -25,7 +25,7 @@ Fabric retrieves data via the interfaces defined for the LU from the source DB a
    b. **Show Schema**, displays the table’s structure.\
    c. **Show Indexes**, displays the table’s indexes, if defined.
 
-**Click for more information about Logical Units.**
+[**Click for more information about Logical Units.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
 ### What are the Data Viewer Components?
 
@@ -80,7 +80,7 @@ The Instance Tree area (top left) displays a tree of available data files in the
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
 * **k2_lu_object_info**, contains statistics per table, population and enrichment function.
 * **k2_main_info**, contains the LU’s basic information like LU Name or Instance ID.
-* **k2_object_stats**, contains [object] timing statistics. 
+* **k2_object_stats**, contains [object](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) timing statistics. 
 * **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the reference object is enabled in the LU Schema properties.
 
 To display the values of a table in the tree, right click the table and select either:
@@ -127,9 +127,9 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 **Notes**\
 The latest Data Viewer file can be used in the following components:
 * New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
-**Click for more information on How to Create a New Function.**
-* LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. **Click for more information about Adding a Table to a Schema.**
-* Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. **Click for more information about Creating a New Table Population.**
+[**Click for more information on How to Create a New Function.**]
+* LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [**Click for more information about Adding a Table to a Schema.**]
+* Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [**Click for more information about Creating a New Table Population.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. **Click for more information about Debugging a Table Population.** 
 
 
