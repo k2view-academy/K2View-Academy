@@ -85,3 +85,5 @@ A link can be added in both directions:
 ## How Can I Delete Table Population Links?
 Click the **link** and press the **Delete key**, or right click and select **Delete**.
 
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/11_add_delete_table_population.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/13_disable_enable_populations_in_schema.md)
+
