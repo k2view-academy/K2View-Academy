@@ -1,18 +1,18 @@
 # Lookup Tables
 
-A Lookup is an object that is added to a Table Population  to get information from a source DB table, LU Table or Reference Table. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
-*	Input fields are used for the WHERE clause of an SQL statement. 
-*	Output fields are used for the SELECT statement of an SQL statement.
+A **Lookup** is an object that is added to a [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference Table]. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
+*	**Input** fields are used for the WHERE clause of an SQL statement. 
+*	**Output** fields are used for the SELECT statement of an SQL statement.
 
 The input in a Lookup table is optional if the Lookup has only one record. For example, when a Lookup is created based on the Customer LU Table and the Customer is the root table of the LU. In this case the Customer LU Table will only have one record. 
 
 ### How Can I Add a New Lookup To a Table Population?
 
-1.	Go to the Project Tree > Logical Units and then click the **LU Name**. 
-2.	Click Tables and the <Table Name> and then click **Table Population**.
-3.	Click the Objects tab in the right panel of the Table Population working area.
+1.	Go to the **Project Tree** > **Logical Units** and then click the [**LU Name**]. 
+2.	Click **Tables** and the [**<Table Name>**] and then click [**<Table Population>**].
+3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Do either:
-    *	To create an LUI Table Lookup or Reference Table Lookup: 
+    *	To create an **LUI Table** Lookup or Reference Table Lookup: 
 Click LUI Tables Lookup / Reference Tables Lookup to display the list of tables, select the table and drag it to the working area.
     *	To create a Database Table Lookup:  
 Click Database to display the list of tables, select the table and drag it to the working area and then click Create as DB Table Lookup.
