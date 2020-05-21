@@ -20,7 +20,7 @@ Note that if a Global that is defined in both a Shared Object and a specific Log
 * If a function or a translation is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) function code has priority.
 * Since Shared Objects **are not** self-deployed, changes to an item under a Shared Object used by several components require redeployment to become available.
 
-**[Click for more information about Project Structure and Creating a New Project in Fabric.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/05_creating_a_new_project.md)**
+[Click for more information about Project Structure and Creating a New Project in Fabric.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/05_creating_a_new_project.md)
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 
