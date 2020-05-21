@@ -9,7 +9,7 @@ Globals are predefined variables that can be accessed by different objects withi
 [Click for more information about Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).
 
 The scope of a Global depends on how it is defined, which can be either:
-* [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/12_shared_objects.md), whereby the Global is available to all objects in a Project under all Logical Units, Reference Tables and Web Services.
+* [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md), whereby the Global is available to all objects in a Project under all Logical Units, Reference Tables and Web Services.
 * [Logical Unit](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Units-Overview), whereby the Global is available within the specific Logical Unit where it is defined.
 
 If the same Global is defined at both Shared Objects and Logical Unit levels, the Logical Unit definition is used within the scope of that Logical Unit. Other Logical Units use the Shared Objects definition.
