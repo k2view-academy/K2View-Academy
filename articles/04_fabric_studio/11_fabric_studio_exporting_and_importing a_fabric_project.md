@@ -7,8 +7,8 @@ Fabric Studio has a proprietary encapsulation functionality that packages an ent
 There are two Export options:
 * Export an entire project.
 * Export a specific object, for example:
-  * Group items, Shared Objects, References, Web Services, LU.
-  * Sub-groups, interfaces, Java, Resources, Translations, Tables.
+  * Group items, Shared Objects, References, Web Services, [LU](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/03_logical_units/01_LU_overview.md).
+  * Sub-groups, [interfaces](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/06_LU_tables/01_LU_tables_overview.md).
   * Java files (categories).
   * Objects, whereby you can export a specific object from the Project Tree. Java functions cannot be exported using this method.
 
@@ -67,11 +67,11 @@ You can import an entire exported project or specific branches of a Project Tree
 
 The Custom Import window displays the number of imported and overridden items.\
 3.  Right click the **Target Project Tree** to display a context menu with the following options:  
-      a. **Remove All Conflicted Items**, removes all conflicting items from the target whereby only new items remain.\
-      b. **Remove Import Items**, removes selected items only. Right click an item to select it.\
-      c. **Show Conflicted Items Only**, displays only items that conflict with existing items.\
-      d. **Show Import Item Only**, displays imported items only.\
-      e. **Show All Items**, displays all items in the project tree.
+    a. **Remove All Conflicted Items**, removes all conflicting items from the target whereby only new items remain.\
+    b. **Remove Import Items**, removes selected items only. Right click an item to select it.\
+    c. **Show Conflicted Items Only**, displays only items that conflict with existing items.\
+    d. **Show Import Item Only**, displays imported items only.\
+    e. **Show All Items**, displays all items in the project tree.
 
 4. Click **Import & Close** to confirm the Import process or close the window to cancel it. 
 5. A confirmation window opens asking you whether you want to:\
