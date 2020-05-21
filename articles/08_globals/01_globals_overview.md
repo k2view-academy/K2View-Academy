@@ -1,6 +1,6 @@
 # Globals Overview
 
-### What are Globals?
+### What Are Globals?
 Globals are predefined variables that can be accessed by different objects within a project and are used when the same information is required repeatedly by various Fabric objects. For example, to define the source application version or a date format in order use the same value in several Fabric objects. 
 * Globals are saved in a Java file as static variables and can be used by all Fabric object types like [Project functions](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/08_project_functions.md) or [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md) objects.
 * Globals can be defined as Final and then they cannot be overridden in Java code or by a command that runs on the Fabric Server.
@@ -16,7 +16,7 @@ If the same Global is defined at both Shared Objects and Logical Unit levels, th
 
 [Click for more information about Using Globals in Fabric](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/02_globals_use_cases.md).
 
-### How do I Create or Edit a Global?
+### How Do I Create or Edit a Global?
 1. Do either:\
     a. Go to the **Project Tree**, click **Logical Units > [LU name] -> Java** and then click **Globals.java** to open 
     **Globals** window. \
