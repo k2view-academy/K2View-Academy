@@ -130,7 +130,7 @@
 <summary markdown="span"><strong>LUDB Viewew and Studio Debug Capabilities<strong></summary>
 <ul>
   
-<li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewew</a></li>
+<li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></li>
 <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Studio Log Files</a></li>
 <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md">Debug Table Population</a></li>
 </ul>
