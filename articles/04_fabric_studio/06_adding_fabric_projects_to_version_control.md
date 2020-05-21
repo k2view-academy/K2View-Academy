@@ -80,7 +80,7 @@ Note that when opening a project that has been updated and committed to the repo
 
 When a project is registered in the Version Control system, the following indicators may be displayed next to the Project Tree components based on their status:
 
-<<table width="576">
+<table>
 <tbody>
 <tr>
 <td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%201.jpg" alt="" width="20"/></td>
@@ -89,7 +89,7 @@ When a project is registered in the Version Control system, the following indica
 </td>
 </tr>
 <tr>
-<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%201.jpg" alt="" width="20"/></td>
+<td width="150pxl">
 <p>+</p>
 </td>
 <td width="554">
