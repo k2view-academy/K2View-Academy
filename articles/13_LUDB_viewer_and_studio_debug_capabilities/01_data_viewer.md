@@ -25,7 +25,7 @@ Fabric retrieves data via the interfaces defined for the LU from the source DB a
    b. **Show Schema**, displays the table’s structure.\
    c. **Show Indexes**, displays the table’s indexes, if defined.
 
-[**Click for more information about Logical Units.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
+[Click for more information about Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
 ### What are the Data Viewer Components?
 
@@ -43,7 +43,7 @@ The Logical Unit DB Viewer contains the following areas:
 The Instance ID area has the following components:
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)###Import DB File 
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)### Import DB File 
 	
 When clicked, loads and displays an external Data Viewer file. 
 
