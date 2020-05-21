@@ -3,7 +3,8 @@
 A [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) is a Fabric Studio component that defines and executes the mapping and data[ transformation rules](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md) from a data source, like a DB table or Input file, into a target [Logical Unit (LU) Table.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) 
 
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database.\
-The following is an example of the [Table Population window.]
+
+The following is an example of the Table Population window:
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_03_01%20Table%20Population%20window..png)
 
