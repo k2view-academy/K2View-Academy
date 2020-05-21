@@ -318,6 +318,7 @@ When a project is registered in the Version Control system, the following indica
 
 
 **Key SVN Operations**
+
 The context menu displays two top-level SVN operations or TortoiseSVN operations directly from the project tree:
 
 <table>
