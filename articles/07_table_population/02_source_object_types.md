@@ -17,10 +17,10 @@ When an LU Table has two populations, a second table population can extract data
 <table width="580">
 <tbody>
 <tr>
-<td width="153">
+<td width="150pxl">
 <p><strong>DB Query</strong></p>
 </td>
-<td width="413">
+<td width="700pxl">
 <p>A <strong>DB query</strong> is used when the data is selected from one data source only in one or several tables. All required data can be retrieved by one SQL query.</p>
 </td>
 </tr>
