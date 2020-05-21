@@ -15,7 +15,7 @@ C:\users\<username>\documents\K2View Fabric Studio\Projects.
 
 To update the location of the folder or to edit it, click **Browse**.
 
-### What is the Purpose pf the Server Configuration Tab?
+### What is the Purpose of the Server Configuration Tab?
 
 The Server Configuration tab is used to define the Deployment URLs of Fabric Servers. Each Fabric Server can be accessed to deploy an implementation, [debug](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md) and to validate [Web Services]. 
 
