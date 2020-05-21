@@ -3,7 +3,7 @@
 The **Properties tab** in the **Table Population window** displays additional information about different objects in the **Population window**, as follows:
 *	DB Query or **Root Function Source Objects**.
 *	Target LU Table.
-* Other Population objects like a Translation or Global.
+* Other [Population objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md) like a Translation or Global.
 *	Properties of any selected field in a Population object.
 
 Since each object has different properties, the tab’s layout is updated to display them when an object is selected in the map. 
@@ -33,7 +33,7 @@ The Properties include:
 </table>
 
 ### Function Properties
-The Function Properties tab can display either a source root function or any function  in the population.
+The Function Properties tab can display either a **source root function** or any [**function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md) in the population.
 <table width="660">
 <tbody>
 <tr>
@@ -123,6 +123,6 @@ The Function Properties tab can display either a source root function or any fun
 </table>
 
 ### Lookup Properties
-Click for more information about Lookups properties.
+[**Click for more information about Lookups properties.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/09_creating_an_LUDB_function.md)
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md)

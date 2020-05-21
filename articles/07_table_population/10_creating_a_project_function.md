@@ -1,4 +1,4 @@
-# Project Functions
+# Creating a Project Function
 
 ### How Can I Create a Project Function?
 
@@ -14,7 +14,7 @@ Or,
 
 In the **Table Population workspace**, click the **Objects** tab, click **Functions** and double click **Create New Function** to open the **New Functions window**. 
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_01_screen1.png)
 
 2.	Do the following:
     *	Populate the Category or select the existing value from the dropdown list. The Category  defines the function’s Java Logic file.
@@ -44,16 +44,16 @@ Bulk-loading Parameters to a Function Manually
 When multiple parameters need to be uploaded, they can be loaded using the Bulk Load Parameters option. 
 1.	Right click the Input / Output Parameters pane to display the Input / Output Parameters dialog box. 
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_02_bulk_load.png)
 
 2.	Click Bulk Load Parameters to display the Bulk Load Parameters dialog box. 
 3.	Enter the parameters and click OK to load them to the Parameters pane. 
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_03_bulk_load2.png)
 
 4.	(Optional) Modify the Data Type.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_04_data_type.png)
 
 ### How Do I Automatically Define Function's Parameters?
 
@@ -63,7 +63,7 @@ Input / Output settings can be automatically defined based on DB objects either 
 3.	Click a Table in the database hierarchy.
 4.	Right click the selected Column Names or the Table and select either Add Selected to Input Parameters or Add Selected to Output Parameters. New parameters are added to parameters list in the Parameters pane. The new parameter’s name is the name of the column and data type is the column data type.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_05_datatype2.png)
 
 ### How Do I Update Function's Parameters?
 

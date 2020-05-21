@@ -18,7 +18,7 @@ From the Project Tree:
 [Click for more information about Adding a Table to a Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
  
 ### How Do I Create a New LU Table Manually?  
-1.	Go to the **Project Tree**, click **Logical Units**, **LU Name**, right click **Tables** and then select **New Table** to display the Columns tab in the **Table Schema**.
+1.	Go to **Project Tree** > **Logical Units** > **LU Name**, right click **Tables** and then select **New Table** to display the Columns tab in the **Table Schema**.
 2.	Define the [**Table Schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):\
    a.	Complete the settings of each table column like the **Name** or **Data Type**.\
    b.	Optional: Define the table [**Indexes**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md).\
@@ -39,10 +39,10 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 <table width="623">
 <tbody>
 <tr>
-<td width="122">
+<td width="200pxl">
 <p><strong>Index</strong></p>
 </td>
-<td width="502">
+<td width="700pxl">
 <p>Defines the position of the column in the table which can be moved up or down.</p>
 </td>
 </tr>

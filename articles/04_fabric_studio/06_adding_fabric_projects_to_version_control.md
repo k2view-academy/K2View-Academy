@@ -10,8 +10,9 @@ The Fabric Studio has a built-in Version Control functionality based on GIT stan
 
 Note that although there is an option for working with Apache Sub-version (SVN), it is recommended to work in a GIT framework
 
-**[Click for more information about Best Practices for Working with SVN and GIT.]**\
-**[Click for more information about the K2Admin Studio.]** 
+[Click for more information about Best Practices for Working with SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
+
+Click for more information about the K2Admin Studio. 
 
 ### How do I Start Working with Version Control?
  
@@ -23,8 +24,9 @@ To start using Configuration Control, do either:
 Each user can work on a local copy of the project that is synchronized with the central repository of the project. Synchronization is performed manually.\
 Note that if you choose to work with SVN as your preferred version control, the K2Admin Studio should be installed in order to define the repository, users, groups and permissions.
 
-**[Click for more information about Creating a New Project].**  
-**[Click for more information about the Fabric Project Structure.]**
+[Click for more information about Creating a New Project](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/05_creating_a_new_project.md).
+
+[Click for more information about the Fabric Project Structure.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/08_fabric_project_tree.md)
 
 ### Setting Up GIT
 
@@ -56,7 +58,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 3.	Enter your **Username** and **Password** and then click **OK**.
 
 
-**[Click for more information about Best Practices for Working with SVN and GIT.]**
+[Click for more information about Best Practices for Working with SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### Checking a Project Out of SVN
  
@@ -72,7 +74,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 
 Note that when opening a project that has been updated and committed to the repository by another user, a warning is displayed requesting confirmation that the revision on the local machine is up-to-date.
 
-**[Click for more information about Best Practices for Working with SVN and GIT.]**
+[Click for more information about Best Practices for Working with SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### Project Tree Version Control Indicators
 
@@ -81,13 +83,13 @@ When a project is registered in the Version Control system, the following indica
 <<table width="576">
 <tbody>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%201.jpg" alt="" width="30" height="30" /></td>
-<td width="554">
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%201.jpg" alt="" width="30"/></td>
+<td width="700pxl">
 <p>Modified</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;</td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%201.jpg" alt="" width="30"/></td>
 <p>+</p>
 </td>
 <td width="554">
@@ -95,43 +97,43 @@ When a project is registered in the Version Control system, the following indica
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%202.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%202.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>Locked</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%203.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%203.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>Updated</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%204.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%204.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>Branch with modifications</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%205.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%205.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>File is versioned,&nbsp;but&nbsp;was&nbsp;inserted&nbsp;from&nbsp;a different&nbsp;location</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%206.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%206.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>File&nbsp;is&nbsp;versioned&nbsp;and&nbsp;locally&nbsp;locked,&nbsp;but&nbsp;not&nbsp;modified</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%207.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%207.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>File&nbsp;is&nbsp;versioned,&nbsp;locally&nbsp;locked&nbsp;and&nbsp;modified</p>
 </td>
 </tr>
 <tr>
-<td width="30">&nbsp;<img src="&lt;td width=&quot;22&quot;&gt;" alt=""/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/images/04_06_02%20icon%208.jpg" alt="" width="30" height="30" /></td>
+<td width="150pxl">&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/images/04_06_02%20icon%208.jpg" alt="" width="30"/></td>
 <td width="554">
 <p>File&nbsp;is&nbsp;in&nbsp;conflict;&nbsp;must&nbsp;be&nbsp;resolved&nbsp;before&nbsp;continuing</p>
 </td>
@@ -146,10 +148,10 @@ When a project is registered in the Version Control system, the following indica
 <table>
 <tbody>
 <tr>
-<td width="198">
+<td width="200pxl">
 <p><strong>Commit</strong></p>
 </td>
-<td width="406">
+<td width="650pxl">
 <p>Record changes to the repository.</p>
 </td>
 </tr>
@@ -321,10 +323,10 @@ The context menu displays two top-level SVN operations or TortoiseSVN operations
 <table>
 <tbody>
 <tr>
-<td width="151">
+<td width="150pxl">
 <p><strong>SVN Update</strong></p>
 </td>
-<td width="459">
+<td width="700pxl">
 <p>Performs manual synchronization at any time. Select to either update to the HEAD revision (latest) or to an earlier revision.</p>
 </td>
 </tr>
@@ -396,7 +398,7 @@ The context menu displays two top-level SVN operations or TortoiseSVN operations
 </table>
 
 
-**Click for more information about Best Practices for Working with SVN and GIT.**
+[Click for more information about Best Practices for Working with SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/05_creating_a_new_project.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/07_best_practices_for_working_with_GIT_and_SVN.md)
 

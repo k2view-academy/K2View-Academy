@@ -1,11 +1,14 @@
 # Creating a New Project
 
 ### What is a Fabric Project?
-A Fabric Project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Units-Overview) modeling. To do so, the Project must be defined in the Fabric Studio which can then be added to either GIT or SVN Version Control. 
+A Fabric Project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the Project must be defined in the Fabric Studio which can then be added to either GIT or SVN Version Control. 
 
-**Click for more information about Fabric Studio UI Components and Menus.**                      
-**Click for more information about the Fabric Project Structure.**\
-**Click for more information about Adding Fabric Projects to Version Controls.**
+[Click for more information about Fabric Studio UI Components and Menus.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/01_UI_components_and_menus.md)
+
+[Click for more information about the Fabric Project Structure.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/08_fabric_project_tree.md)
+
+[Click for more information about Adding Fabric Projects to Version Controls.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+
 
 ### How do I Create a New Project?
 
@@ -22,8 +25,9 @@ Note that to avoid errors, the SVN / GIT repositories must be created in advance
 * Only one Project can be deployed to a specific Fabric server / cluster. Therefore, when defining the Project’s physical saved name(*.K2proj), make sure that it is meaningful, for example, the Project’s business purpose.  The Project’s logical name can be edited in the Fabric Studio. 
 * To find the deployed Project’s name, execute the [Fabric set; command] from the Fabric console.
  
-**Click for more information about User Preferences.**\
-**Click for more information about Adding Fabric Projects to Version Control and Best Practices for Using SVN and GIT.**
+[Click for more information about User Preferences.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/04_user_preferences.md)
+
+[Click for more information about Adding Fabric Projects to Version Control and Best Practices for Using SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 ### How do I Access a Fabric Project?
 
@@ -46,7 +50,7 @@ Note that to avoid errors, the SVN / GIT repositories must be created in advance
 
 4. Once checked out, the Project is created locally.
 
-**Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.**
+[Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
  
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/04_user_preferences.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/06_adding_fabric_projects_to_version_control.md)

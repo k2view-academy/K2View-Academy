@@ -43,7 +43,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </td>
 <td style="width: 316px;">
 <ul>
-<li>Synchronization is not performed, however if the LU instance already exists in Fabric it will bring the existing data based on the mostly updated LU schema definition</li>
+<li>Synchronization is not performed, however if the LU instance already exists in Fabric it will bring the existing LU instance data based on the mostly updated LU schema definition</li>
 <li>If the LU instance does not yet exist in Fabric, &nbsp;the following warning message is displayed:</li>
 <li>Instance '&lt;LU Name&gt;:&lt;Instance ID&gt;' was not found and sync is disabled</li>
 </ul>
@@ -64,17 +64,17 @@ SYNTAX: SET SYNC [SYNC MODE];
 </tbody>
 </table>
 
-Note that the Sync returns an error message when a source is not available. To change this behavior, use set [ignore_source_exception true](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
+Note that the Sync returns an error message when a source is not available. To change this behavior, use [set ignore_source_exception true](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
-The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md) window:
+The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
 
 ![image](https://k2vacademy.s3.eu-west-2.amazonaws.com/Fabric/6_Sync/6_2_server_configuration_window.png)
 
 This checkbox defines the sync mode of the first get of each LU instance after the LU is deployed to the server:
 * If checked, the Sync mode is set to FORCE.
-* When unchecked, the Sync method is set to ON.
+* When unchecked, the Sync mode is set to ON.
 
 **Notes:**
 * The check/uncheck of the **Force Upgrade Post Deploy** checkbox impacts the LU only after the redeploy of the LU to the checked/unchecked Fabric server. It does not impact retroactively.
@@ -111,7 +111,7 @@ public static String getSyncMode();
 This method can be invoked by a [decision function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
 If the sync mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
 
-Click to open the list of Fabric API: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
+Click to open the list of Fabric API list: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)

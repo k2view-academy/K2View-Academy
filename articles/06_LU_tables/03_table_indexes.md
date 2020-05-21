@@ -84,16 +84,14 @@ The **DESCRIBE** command is used to query the Fabric metadata structure on a dep
 To get the list of indexes for a specified table, use one of the following commands.
 
 **Syntax:**
+
 <pre><code>
 DESCRIBE INDEX; Get all system indexes.
-DESCRIBE INDEX <LU Name>; Get all indexes of the schema of an LU.
-DESCRIBE INDEX <LU Name>.<Table Name>; Get the indexes of a specific table within the LU name.
+DESCRIBE INDEX LU Name.Table Name Get the indexes of a specific table within the LU name.;
 DESCRIBE INDEX customer; Get all indexes of the schema of LU Customer.
 DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the schema Customer.
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
 </code></pre>
-
-
 
 Click for more information about The DESCRIBE Command.
 

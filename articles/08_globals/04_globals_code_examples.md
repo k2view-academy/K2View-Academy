@@ -19,11 +19,11 @@ This example shows how to check the value of a Global variable and to determine 
 ### Example of Using a Global in a Table Population
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
 
-Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) and then create a new **Table Population** and add the **Globals** to it.
+Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) and then create a new [**Table Population**](https://github.com/k2view-academy/K2View-Academy/commit/11e774bf366c76431b401311b39a8a4c9a52e87a) and add the **Globals** to it.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
 
-This example shows how a Global can be used in a Table Population. Since the SOURCE_PRODUCT_VERSION and ACTIVITY_NOTE Globals are defined in the LU’s Globals list in the **Globals.java** file, they are part of the LU’s scope and therefore can be used by the Table Population in the same LU.
+This example shows how a Global can be used in a [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md). Since the SOURCE_PRODUCT_VERSION and ACTIVITY_NOTE Globals are defined in the LU’s Globals list in the **Globals.java** file, they are part of the LU’s scope and therefore can be used by the Table Population in the same LU.
 
 **Click to open the Globals Definition in the [Globals.java] File.**
 
@@ -54,7 +54,7 @@ if (contrID == "" && adrID == "") {
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_05%20FUNCTION%20OR%20A%20WEB%20SERVICE.png)
 
-Open the **Globals** window under **Shared Objects** and [define a new **Global**] and then [create a **Fabric Web Service**] or a [**Project function**] that will override the initial value of this Global.\
+Open the **Globals** window under **Shared Objects** and define a new **Global** and then create a **Fabric Web Service** or a [**Project function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
 The following examples show how a Global can be overridden in a cluster and per session.
 
 ### Override the Global Per Cluster
