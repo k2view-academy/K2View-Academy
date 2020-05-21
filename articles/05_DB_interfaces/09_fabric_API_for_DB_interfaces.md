@@ -35,7 +35,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="213">
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-"><strong>ludb</strong></a><strong>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</strong></p>
+<p><strong>ludb(string lutype, string luid<strong></p>
 </td>
 <td width="417">
 <p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
