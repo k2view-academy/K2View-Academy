@@ -115,7 +115,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <tbody>
 <tr>
 <td width="111">&nbsp;</td>
-<td width="390"><img="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU1.png"></td>
+<td width="390"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU1.png" alt="" /></td>
 </tr>
 <tr>
 <td width="111">&nbsp;</td>
