@@ -114,69 +114,78 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar1.png" alt=""/>
+</td>
 <td width="390">
 <p>Undo last change.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar2.png" alt=""/>
+</td>
 <td width="390">
 <p>Redo last change.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar3.png" alt=""/>
+</td>
 <td width="390">
 <p>Copy selected item to clipboard.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar4.png" alt=""/>
+</td>
 <td width="390">
 <p>Paste item from clipboard.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar5.png" alt=""/>
+</td>
 <td width="390">
 <p>Cut selected item and copy to clipboard.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar6.png" alt=""/>
+</td>
 <td width="390">
 <p>Delete selected item.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar7.png" alt=""/>
+</td>
 <td width="390">
 <p>Select all.</p>
 </td>
 </tr>
 <tr>
-<td width="111">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar8.png" alt=""/>
 </td>
 <td width="390">
 <p>Add note to an object.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar9.png" alt=""/>
+</td>
 <td width="390">
 <p>Add balloon note.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar10.png" alt=""/>
+</td>
 <td width="390">
 <p>Layout menu, Layered Layout or Tree Layout options.</p>
 </td>
 </tr>
 <tr>
-<td width="111">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar11.png" alt=""/>
+</td>
 <td width="390">
 <p>Filtering (Translation&nbsp;, Globals, Data Viewer, User Preferences)</p>
 </td>
@@ -216,37 +225,43 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom1.png.png" alt=""/>
+</td>
 <td width="393">
 <p>Current zoom factor.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom2.png" alt=""/>
+</td>
 <td width="393">
 <p>Zoom out.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom3.png" alt=""/>
+</td>
 <td width="393">
 <p>Zoom in.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom4.png" alt=""/>
+</td>
 <td width="393">
 <p>Cancel zoom.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom5.png" alt=""/>
+</td>
 <td width="393">
 <p>Fit to page.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom6.png" alt=""/>
+</td>
 <td width="393">
 <p>Focus on selection.</p>
 </td>
@@ -321,49 +336,49 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table width="552">
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop1.png" alt=""/>
 </td>
 <td width="316">
 <p>Enable / Disable debug.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop2.png" alt=""/>
 </td>
 <td width="316">
 <p>Select instance to debug or a enter new instance.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop3.png" alt=""/>
 </td>
 <td width="316">
 <p>Select saved file or generate new.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop4.png" alt=""/>
 </td>
 <td width="316">
 <p>Display the current record in process.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop5.png" alt=""/>
 </td>
 <td width="316">
 <p>Debug / Execute.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop6.png" alt=""/>
 </td>
 <td width="316">
 <p>Debug next record.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop7.png" alt=""/>
 </td>
 <td width="316">
 <p>Debug next instance.</p>
