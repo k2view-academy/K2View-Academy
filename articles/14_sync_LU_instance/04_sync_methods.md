@@ -176,7 +176,7 @@ Sync properties can be defined on an [LU Schema](https://github.com/k2view-acade
 [Click for more information about LU Sync Levels](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)
  
 ## Truncate Before Sync 
-The Truncate Before Sync property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
+The **Truncate Before Sync** property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
 
 ## Sync Methods - Use Cases
 <table style="width: 850pxl">
@@ -255,7 +255,7 @@ The Truncate Before Sync property can be set on an LU Table or a Table Populatio
 </tr>
 <tr>
 <td width="72">
-<p><strong>Decision Function</strong></p>
+<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases">Decision Function</strong></a></p>
 </td>
 <td width="252">
 <p>Check the source environment: Do not run a sync on the Production environment. However, if the source environment is a Testing environment, run a sync.</p>
