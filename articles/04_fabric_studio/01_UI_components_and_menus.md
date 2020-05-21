@@ -80,9 +80,9 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 </table>
 
 
-**Click for more information about the Query Builder.**
+Click for more information about the Query Builder.
 
-**Click for more information about the Studio Debug and Log Capabilities.**
+Click for more information about the Studio [Debug](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) and [Log](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) Capabilities.
 
 ### What are the File Tab Options?
 The File tab has the following options:
