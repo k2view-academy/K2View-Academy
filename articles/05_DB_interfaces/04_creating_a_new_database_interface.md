@@ -46,8 +46,7 @@ Interfaces created using previous Fabric versions remain as is and can be conver
 
 _Previous Fabric Version Interface Definition_
 
-The following screenshot displays an Interface configuration in an older format which uses\
- ADO.NET/ODBC drivers.
+The following screenshot displays an Interface configuration in an older format which uses ADO.NET/ODBC drivers.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
 
