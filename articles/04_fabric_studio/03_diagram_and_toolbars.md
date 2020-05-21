@@ -189,19 +189,22 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="122">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_align_1.png" alt=""/>
+</td>
 <td width="379">
 <p>Left/middle/right alignment.</p>
 </td>
 </tr>
 <tr>
-<td width="122">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_align_2.png" alt=""/>
+</td>
 <td width="379">
 <p>Top/center/bottom alignment.</p>
 </td>
 </tr>
 <tr>
-<td width="122">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_align_3.png" alt=""/>
+</td>
 <td width="379">
 <p>Size alignment.</p>
 </td>
@@ -255,19 +258,22 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export1.png" alt=""/>
+</td>
 <td width="393">
 <p>Print Preview / Print.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export2.png" alt=""/>
+</td>
 <td width="393">
 <p>Export to Bitmap / Export to SVG.</p>
 </td>
 </tr>
 <tr>
-<td width="108">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+</td>
 <td width="393">
 <p>Exports Translation&nbsp;, Globals, Data Viewer, User Preferences items to Excel.</p>
 </td>
@@ -287,19 +293,22 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </td>
 </tr>
 <tr>
-<td width="113">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU2.png" alt=""/>
+</td>
 <td width="398">
 <p>Ungroup sub graph.</p>
 </td>
 </tr>
 <tr>
-<td width="113">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU3.png" alt=""/>
+</td>
 <td width="398">
 <p>Update tables from database.</p>
 </td>
 </tr>
 <tr>
-<td width="113">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU4.png" alt=""/>
+</td>
 <td width="398">
 <p>Refresh items from implementation.</p>
 </td>
