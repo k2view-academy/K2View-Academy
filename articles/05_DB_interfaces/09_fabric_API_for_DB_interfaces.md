@@ -1,25 +1,186 @@
 # Fabric API for DB Interfaces
 
-### Connect DB Interface - DB Class
+### Connect DB Interface - Db Class
 Fabric provides a Java Db class to use the methods and functions that will invoke database (SQL) queries and statements, and  Fabric commands.
 
-### How Can I Create a DB Object?
-The following Fabric UserCode methods can be used to create a Db object:
+### How Can I Create a Db Object?
+The following Fabric **UserCode** methods can be used to create a Db object:
+<table width="630">
+<thead>
+<tr>
+<td width="213">
+<p><strong>User Code Method</strong></p>
+</td>
+<td width="417">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="213">
+<p><strong>db(String interfaceName)</strong></p>
+</td>
+<td width="417">
+<p>Obtain the Db object to connect the given logical interface name which input must be populated by a DB interface defined in Fabric Studio.</p>
+</td>
+</tr>
+<tr>
+<td width="213">
+<p><strong>ludb(), fabric()</strong></p>
+</td>
+<td width="417">
+<p>Obtain a Db object to connect the current Fabric context.</p>
+</td>
+</tr>
+<tr>
+<td width="213">
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-"><strong>ludb</strong></a><strong>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</strong></p>
+</td>
+<td width="417">
+<p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 ### DB Creation - Use Cases and Examples
+<table width="630">
+<thead>
+<tr>
+<td width="204">
+<p><strong>Use Cases</strong></p>
+</td>
+<td width="198">
+<p><strong>User Code Method</strong></p>
+</td>
+<td width="228">
+<p><strong>Examples</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="204">
+<p><strong>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU instance.&nbsp;</strong></p>
+</td>
+<td width="198">
+<p>db(String interfaceName)</p>
+<p>ludb()</p>
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#fabric--">fabric</a>()</p>
+</td>
+<td width="228">
+<p>Db conn = db(&ldquo;fabric&rdquo;);</p>
+<p>Note: you do not have to define &ldquo;fabric&rdquo; interface in Fabric Studio.</p>
+<p>Db conn = ludb();</p>
+<p>Db conn = fabric();</p>
+</td>
+</tr>
+<tr>
+<td width="204">
+<p><strong>Connect to the local Fabric using a Web Service.</strong></p>
+</td>
+<td width="198">
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+</td>
+<td width="228">
+<p>Db Conn = ludb("Customer", 2);</p>
+</td>
+</tr>
+<tr>
+<td width="204">
+<p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU instance from another LU.</strong></p>
+</td>
+<td width="198">
+<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+</td>
+<td width="228">
+<p>Db Conn = ludb("Customer", 2);</p>
+</td>
+</tr>
+<tr>
+<td width="204">
+<p><strong>Connect to another DB Interface.</strong></p>
+</td>
+<td width="198">
+<p>db(String interfaceName)</p>
+</td>
+<td width="228">
+<p>Db conn = db(&ldquo;CRM_DB&rdquo;);</p>
+<p>Db Conn = db("dbFabricRemote");</p>
+<p>Note:</p>
+<p>Execute the GET instance command on the Db object to get the LU instance before running SQL statements on the Fabric Remote interface.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
-### Execute Statements and Queries ti the DB Interface
+
+### Execute Statements and Queries on the DB Interface
 
 **DB Class Methods - Common Use Cases**
 
 The following table describes common use cases when working with DB Interfaces.\
-**Click to display the Fabric API list:** http://<Fabric IP address>:3213/static/doc/user-api/index.html
-
+**Click to display the Fabric API list:** http://[Fabric IP address]:3213/static/doc/user-api/index.html
+<table>
+<tbody>
+<tr>
+<td width="129">
+<p><strong>Use Case</strong></p>
+</td>
+<td width="225">
+<p><strong>Db Method</strong></p>
+</td>
+<td width="274">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+<tr>
+<td width="129">
+<p><strong>Execute Fabric Command</strong></p>
+<p><strong>&nbsp;</strong></p>
+</td>
+<td width="225">
+<p>public&nbsp;void&nbsp;execute(String sql, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+</td>
+<td width="274">
+<p>fabric().execute("get CRM.3");</p>
+<p>ludb().execute(&ldquo;"set environment='"+src_env_name+ "'");</p>
+</td>
+</tr>
+<tr>
+<td width="129">
+<p><strong>Execute DB Statement. For example, run update statement on a table</strong></p>
+</td>
+<td width="225">
+<p>public&nbsp;void&nbsp;execute(String sql, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+</td>
+<td width="274">
+<p>String sql = "UPDATE CONTRACT SET NO_OF_OPEN_ORDERS =&hellip; WHERE CONTRACT_ID = ? &rdquo;; <br /> ludb().execute(sql, cotractId);</p>
+</td>
+</tr>
+<tr>
+<td width="129">
+<p><strong>Run select statement on DB interface</strong></p>
+</td>
+<td width="225">
+<p>public&nbsp;<a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/Db.Rows.html">Db.Rows</a>&nbsp;fetch(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;sql,</p>
+<p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+<p>&nbsp;</p>
+</td>
+<td width="274">
+<p>String sql = "SELECT COUNT(*) AS TOT_NUM_OF_ORDERS FROM ORDERS WHERE CONTRACT_ID = ? and ORDER_STATUS != ?";<br /> Db.Rows rows = ludb().fetch(sql, contractId, orderStatus);</p>
+</td>
+</tr>
+</tbody>
+</table>
+	
 ### Using Binding Variables on SQL Statements
 In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
 When using prepared statement queries use a binding parameter: 
 * Add a question mark in the SQL statement when using binding parameters in the SQL query.
-* Each input parameter must be sent as a parameter to/by the execute() or fetch() methods.
+* Each input parameter must be sent as a parameter to the execute() or fetch() methods.
 * The order of the input parameters must be aligned with the order of these parameters in the SQL statement.
 
 See the example in the table above.
@@ -38,7 +199,7 @@ You can iterate the result set and get a Db.Row object for each record, or alter
 * To iterate column names and data simultaneously, use the values() method.
 * This Map cannot be changed and edited. Trying to change this object will result in a runtime exception.
 
-**Click for more information about Db.Rows and DB.Row classes:** http://<Fabric IP address>:3213/static/doc/user-api/index.html
+**Click for more information about Db.Rows and DB.Row classes:** http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
 ### Loop on the Result Set Methods
 
@@ -49,7 +210,7 @@ Note that the **each** method is similar to the **forEach** method and uses a La
 **Example 1**
 
 Iterating the result set and checking the column name and value for each record:
-
+<pre><code>
 Db.Rows rows = db(..).fetch(...);
 row.forEach(r->{
       // each r is a map that represents a row.
@@ -58,26 +219,32 @@ row.forEach(r->{
                         ...
                 });
  });
+</code></pre>
 
 
 **Example 2** 
 
 Iterating the result set and yielding the values of each record:
 
+<pre><code>
 Db.Rows rows = db(..).fetch(...);
 rows.each(row-> yield(row.cells()));
+</code></pre>
 
 2. Using for loop:
 
+<pre><code>
 Db.Rows rows = db(..).fetch(...);
 for (Db.Row row:rows) {
 	….
  }
+</code></pre>
 
 Note that since you are not using the each/forEach method the ResultSet will not close immediately and is deferred to the end of the current execution (sync/webservice/job).
 
 To use a loop and control closure of the result set, use the try-resource structure:
 
+<pre><code>
  try (Db.Rows rows = db(..).fetch(...)) {
       for (Db.Row row:rows) {
       		…
@@ -85,24 +252,30 @@ To use a loop and control closure of the result set, use the try-resource struct
  } finally {
 	rows.close();
 } 
+</code></pre>
 
 
 ### Code Examples
 
 1. Select the number of orders by contract_id and order_status. The Select statement returns only one record and one field. Therefore, use the **firstValue()** method.
 
+<pre><code>
 String sql = "SELECT COUNT(*) AS TOT_NUM_OF_ORDERS FROM ORDERS WHERE CONTRACT_ID = ? and ORDER_STATUS != ?";
 Db.Rows rows = ludb().fetch(sql, contractId, orderStatus);
 Integer noOfOrders = Integer.parseInt(rows.firstValue().toString());
+</code></pre>
 
 2. Select a single record from the DB. Use the **firstRow()** method to get the single record returned by the DB query.
 
+<pre><code>
 String sql = "SELECT * from CONTRACT WHERE CONTRACT_ID = ? “;
 Db.Row row = ludb().fetch(sql, contractId).firstRow();
+</code></pre>
 
 
-3. [Root function], select records from the CASES table and yield each record: 
+3. [Root function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
 
+<pre><code>
 String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CRM_DB.CASES where activity_id = ?";
 Db.Rows rows = db("CRM_DB").fetch(sql, input);
 // Option 1 - using each method 
@@ -113,16 +286,20 @@ rows.each(row-> yield(row.cells()));
 //{
 //	yield(row.cells());
 //}
+</code></pre>
 
 
 4. Run a Select and check the first value of each record.
 
+<pre><code>
 Db.Rows rows = ludb().fetch(sql);
    
 for (Db.Row row : rows) {
  if (row.cell(0) != null) // check the value of first column of the select statement
   values.append("\"" + row.cell(0) + "\",");
 }
+</code></pre>
+
 
 ### Fabric - DB Interface - Deprecated Methods
 

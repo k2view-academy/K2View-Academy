@@ -1,6 +1,6 @@
 # Sync Behavior - Summary Table
 
-A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods), Properties  and [Sync Mode](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Modes)  (ON / OFF / FORCE), as described in the following table: 
+A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md), Properties  and [Sync Mode](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)  (ON / OFF / FORCE), as described in the following table: 
 
 <table width="106%">
 <tbody>

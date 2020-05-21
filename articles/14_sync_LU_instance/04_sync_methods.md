@@ -7,10 +7,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Timeout (sec)<strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>The timeout in seconds for syncing the LUI.</p>
 </td>
 </tr>
@@ -27,7 +27,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <p><strong>Parameters<strong></p>
 </td>
 <td width="500">
-<p>Settings of the selected Sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods#sync-methods">Sync Methods section below &nbsp;</a>.</p>
+<p>Settings of the selected Sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below &nbsp;</a>.</p>
 </td>
 </tr>
 <tr>
@@ -42,17 +42,17 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 </tbody>
 </table>
 
-[Click for more information about Set Timeout for Sync](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Timeout). 
+[Click for more information about Set Timeout for Sync](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/08_sync_timeout.md). 
 
 ## Sync Methods 
 ### None 
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method<strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>None</p>
 </td>
 </tr>
@@ -79,10 +79,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>Time interval.</p>
 </td>
 </tr>
@@ -109,14 +109,14 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 </tbody>
 </table>
 
-### [Decision Function](https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions)
+### [Decision Function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)
 <table>
 <thead>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>Decision</p>
 </td>
 </tr>
@@ -145,10 +145,10 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <table>
 <tbody>
 <tr>
-<td width="104">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="500">
+<td width="700pxl">
 <p>Inherited.</p>
 </td>
 </tr>
@@ -172,24 +172,25 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 </tr>
 </tbody>
 </table>
-Click for more information about LU Sync Levels.
 
+[Click for more information about LU Sync Levels](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)
+ 
 ## Truncate Before Sync 
 The Truncate Before Sync property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
 
 ## Sync Methods - Use Cases
-<table style="width: 705px;">
+<table style="width: 850pxl">
 <tbody>
 <tr>
-<td style="width: 550px;" colspan="2">
+<td style="width: 850pxl" colspan="2">
 <p><strong>When is a sync method selected?</strong></p>
 </td>
 </tr>
 <tr>
-<td style="width: 155px;">
+<td style="width: 150pxl">
 <p><strong>None</strong></p>
 </td>
-<td style="width: 395px;">
+<td style="width: 700pxl">
 <p>The source does not change or becomes unavailable and therefore requires a one-time only load.</p>
 <p>After it is loaded, Fabric becomes the system of record for the data whereby Fabric may get update transactions on the data. For example, add a new payment.</p>
 </td>
@@ -204,7 +205,7 @@ The Truncate Before Sync property can be set on an LU Table or a Table Populatio
 </tr>
 <tr>
 <td style="width: 155px;">
-<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions">Decision Function &nbsp;</a></strong></p>
+<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md">Decision Function &nbsp;</a></strong></p>
 </td>
 <td style="width: 395px;">
 <p>Requires specific logic to check if the data needs to be synced from the source.</p>
@@ -217,13 +218,13 @@ The Truncate Before Sync property can be set on an LU Table or a Table Populatio
 <table width="705">
 <thead>
 <tr>
-<td width="72">
+<td width="150pxl">
 <p><strong>Sync Method</strong></p>
 </td>
-<td width="315">
+<td width="350pxl">
 <p><strong>Example 1</strong></p>
 </td>
-<td width="315">
+<td width="350pxl">
 <p><strong>Example 2</strong></p>
 </td>
 </tr>

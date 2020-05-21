@@ -35,7 +35,7 @@ Linking the INVOICE Table Population object to two different LU Tables - BALANCE
 ## What are the Table Population's Input Arguments?
 Input Arguments are a property of the [Source Object](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#source-object)  of a Table Population object.
 
-There are two types of Source Objects for a Table Population object:
+There are [two types of Source Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md) for a Table Population object:
 * DB Query
 * Root Function
 

@@ -5,10 +5,10 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <table>
 <tbody>
 <tr>
-<td width="132">
+<td width="150pxl">
 <p><strong>Check</strong></p>
 </td>
-<td width="472">
+<td width="700pxl">
 <p>Should the Sync on the LUI be skipped?</p>
 </td>
 </tr>
@@ -34,10 +34,10 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <table>
 <tbody>
 <tr>
-<td width="132">
+<td width="150pxl">
 <p><strong>Check</strong></p>
 </td>
-<td width="472">
+<td width="700pxl">
 <p>Is it a first sync?</p>
 </td>
 </tr>
@@ -66,10 +66,10 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <table>
 <tbody>
 <tr>
-<td width="132">
+<td width="150pxl">
 <p><strong>Check</strong></p>
 </td>
-<td width="472">
+<td width="700pxl">
 <p>What is the sync mode?</p>
 </td>
 </tr>
@@ -93,13 +93,14 @@ When a decision function returns False it always skips a sync. Therefore, when w
 </tbody>
 </table>
 <p>&nbsp;</p>
+
 <table>
 <tbody>
 <tr>
-<td width="132">
+<td width="150pxl">
 <p><strong>Check</strong></p>
 </td>
-<td width="472">
+<td width="700pxl">
 <p>Has the LU Schema Changed Since the Last Sync?</p>
 </td>
 </tr>
@@ -125,10 +126,10 @@ When a decision function returns False it always skips a sync. Therefore, when w
 
 
 
-[**Click to go to the Decision Functions Overview.**](https://github.com/k2view-academy/K2View-Academy/wiki/Sync--Decision-Functions)\
-[**Click for more information about Sync Modes.**](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Modes)\
-[**Click for more information about Sync Scenarios.**](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Behavior---Summary-Table)\
-[**Click for more information about the Skip Sync Method.**](https://github.com/k2view-academy/K2View-Academy/wiki/Skip-Sync)
+[Click to go to the Decision Functions Overview.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)\
+[Click for more information about Sync Modes.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)\
+[Click for more information about Sync Scenarios.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/10_sync_behavior_summary.md)\
+[Click for more information about the Skip Sync Method.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)
 
 Click to display a list of Fabric API: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
@@ -141,6 +142,7 @@ Add a decision function on the LU Schema level to check the source environment a
 * LU Schema has been changed.
 * The source environment is Production.
 
+<pre><code>
 // Init the Boolean by true\
 Boolean syncInd = true;\
 // Check the source environment\
@@ -157,11 +159,13 @@ if(!env.toLowerCase().equals("prod") && !isFirstSync() && !isStructureChanged())
 log.info("fnCheckSourceEnv- table name: " + getTableName() + ", active env: " + env.toLowerCase() + ", isFirstSync: " + isFirstSync() +
 ", isStructureChanged: " +  isStructureChanged() + ", Sync indicator: " + syncInd.toString());\
 return syncInd;
+</code></pre>
 
 **Example 2**
 
 Add a decision function on the population level in an LU Table which is populated only when run on a Development source environment. When run on a Production environment, do not populate this table, since this table does not exist in the Production DB.
 
+<pre><code>
 // Init the Boolean by true\
 Boolean syncInd = true;
 
@@ -175,16 +179,19 @@ if(!prodVer.toLowerCase().equals("dev") )\
 log.info("fnCheckSourceVersion- product version: " + prodVer + ", isFirstSync: " + isFirstSync() + ", isStructureChanged: " +  isStructureChanged() + ", Syc indicator: " + syncInd.toString());
 
 return syncInd;
+</code></pre>
 
 **Example 3**
 
-Add a decision function on the CASE LU Table to check if the CONTRACT LU Table has been updated. The check is based on a session level Global (key) which is set to True by the population of the CONTRACT LU Table. 
+Add a decision function on the CASE LU Table to check if the CONTRACT LU Table has been updated. The check is based on a [session level Global](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md) (key) which is set to True by the population of the CONTRACT LU Table. 
 
+<pre><code>
 // Init the Boolean by true\
 Boolean syncInd = true;\
 // Check the UPDATE_CONTRACT session level key.\
 syncInd = UPDATE_CONTRACT ;\
 return syncInd;
+</code></pre>
 
 **Example 4**
 

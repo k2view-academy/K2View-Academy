@@ -1,6 +1,6 @@
 # Edit an LU Schema - Disable and Enable Population
 
-Enable/Disable Table Population can be used to enable/disable execution of specific Table Populations. This option is useful for test purposes. 
+Enable/Disable Table Population can be used to enable/disable execution of specific [Table Populations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md). This option is useful for test purposes. 
 Note that at least one Table Population must be enabled for the Root Table.
 
 

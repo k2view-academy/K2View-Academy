@@ -13,7 +13,7 @@ The Sync property in the LU Schema Properties tab has the following setting:
 * Timeout (sec) – Set a timeout in seconds for syncing LUI.\
 By default, this field = 0 whereby no timeout is defined for the LU schema, however it can be edited so that the Sync Timeout is defined in seconds.
 
-[**Click for more information about Sync Properties.**](https://github.com/k2view-academy/K2View-Academy/wiki/Sync-Methods)
+[Click for more information about Sync Properties.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)
 
 ### How do I Set The Sync Timeout on a Session Level?
 Use the following command to override the Timeout set for the LU Schema:

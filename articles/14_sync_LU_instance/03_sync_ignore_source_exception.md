@@ -8,14 +8,14 @@ For example:
 
 * 	Get Customer 46:
     * 	Customer LU source system = Oracle DB.
-    * 	[DB interface name] ( = CRM_DB.
+    * 	[DB interface name](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) = CRM_DB.
 Run the following command on Fabric:  get Customer.46;
 The following error is displayed:
 “Failed to connect to interface CRM_DB: java.sql.SQLException: 
 Listener refused the connection with the following error: 
 ORA-12514, TNS: listener does not currently know of service requested in connect descriptor”
 
-**Click for more information about the Get Instance Fabric Command.**
+Click for more information about the Get Instance Fabric Command.
 
 In specific cases, you may prefer to roll back the sync without getting an error (exception) when the source system cannot be accessed.
  
@@ -36,7 +36,7 @@ When setting the ignore_source_exception to True, if Fabric fails to connect to 
 Note that if the required LUI is not yet in Fabric, the ignore_source_exception is set to True and the following message is generated:\
 “Not attached [LU Name]”.
 
-**Click for more information about LU Instance Storage and Versions.**
+Click for more information about LU Instance Storage and Versions.
  
 
 
