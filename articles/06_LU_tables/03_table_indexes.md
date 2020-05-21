@@ -91,6 +91,7 @@ DESCRIBE INDEX <LU Name>.<Table Name>; Get the indexes of a specific table withi
 DESCRIBE INDEX customer; Get all indexes of the schema of LU Customer.
 DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the schema Customer.
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
+
 </code></pre>
 
 
