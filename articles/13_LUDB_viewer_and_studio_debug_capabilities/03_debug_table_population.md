@@ -36,20 +36,20 @@ The **Debug Toolbar** has the following icons:
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table1.png" alt="" /></td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table3_1.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table3_2.PNG" alt="" /></td>
 <td width="364">
 <p>Displays a list of existing LUDB files.</p>
 <p>Click to select the file from the existing LUDB files or generate a new one. By default, the newest LUDB file is selected for the Debug&rsquo;s execution. &nbsp;&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table1.png" alt="" /></td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table4.png" alt="" /></td>
 <td width="364">
 <p>Displays the current record&rsquo;s number.</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table1.png" alt="" /></td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table5.png" alt="" /></td>
 <td width="364">
 <p>Execute Debug Mode: Options include Debug, Debug Next Record or Debug Next Instance which enable moving between the returned records.</p>
 </td>
