@@ -39,10 +39,10 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 <table width="623">
 <tbody>
 <tr>
-<td width="122">
+<td width="200pxl">
 <p><strong>Index</strong></p>
 </td>
-<td width="502">
+<td width="700pxl">
 <p>Defines the position of the column in the table which can be moved up or down.</p>
 </td>
 </tr>
