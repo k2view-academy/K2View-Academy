@@ -22,6 +22,7 @@ Use the following command to override the Timeout set for the LU Schema:
 Syntax: 
 * set sync_timeout=<sync_timeout_sec>;
 * set sync_timeout='' - to set timeout back to LU default value\
+
 For example:
 * set sync_timeout=60;
 * set sync_timeout='';
