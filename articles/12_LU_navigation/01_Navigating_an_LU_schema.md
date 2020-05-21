@@ -105,10 +105,6 @@ In the LU working area, right click an LU Table object to display a context menu
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1>&nbsp;</h1>
-<p>&nbsp;</p>
 
 
 **For Example**
