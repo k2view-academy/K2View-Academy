@@ -43,7 +43,8 @@ The Logical Unit DB Viewer contains the following areas:
 The Instance ID area has the following components:
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg) ### Import DB File 
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg) 
+### Import DB File 
 	
 When clicked, loads and displays an external Data Viewer file. 
 
@@ -56,8 +57,10 @@ To complete this field, do either:
 * Write a function to generate the Instance ID. Note that this function must return a string as an output
 
 
-For example:\
-<pre?<code>
+For example:
+
+<pre><code>
+	
 Instance ID by function: **fnCreateInstID** (205):
 
 if (i_id!=null && !i_id.isEmpty()){
