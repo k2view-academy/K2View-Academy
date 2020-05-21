@@ -225,7 +225,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom1.png.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom1.png" alt=""/>
 </td>
 <td width="393">
 <p>Current zoom factor.</p>
@@ -386,7 +386,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
-**[Click for more information about Creating Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).**
+[Click for more information about Creating Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
 
 ### How Can I Customize the Toolbar?
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
