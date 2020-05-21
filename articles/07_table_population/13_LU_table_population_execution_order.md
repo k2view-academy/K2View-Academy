@@ -19,6 +19,7 @@ An LU Table may have more than one Table Population. By default, all populations
 [Click for more information about Link Table Populations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
 
 **Example**
+
 The following diagram displays an LU Schema with four tables: Customer, Subscriber, Activity and Address.
 
 
