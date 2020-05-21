@@ -5,7 +5,7 @@ Fabric implementations are written in Java and are stored in standard libraries 
 
 ### Validating Java Code When a Project is Opened
  
-Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the Server/Activity Logs [tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the [Server/Activity Logs tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 
 ### How do I Publish Project Code?
  
