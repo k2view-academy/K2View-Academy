@@ -21,7 +21,7 @@ Click Database to display the list of tables, select the table and drag it to th
     *	Optional: connect the Lookup Input fields to the Source Table.
     *	Connect the Lookup Output fields to the Target.
     
-    ![image]
+    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_11_01_screen.png
     
 6.	Right click the Lookup and select Minimize to display only the Lookup’s connected fields.
 7.	In the Properties Tab (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
@@ -34,7 +34,7 @@ Click Database to display the list of tables, select the table and drag it to th
 
 ### Lookup Properties Tab
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_11_02_lookup_prop.png)
 
 The following information is displayed in the Lookup Properties:
 
