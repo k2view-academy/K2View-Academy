@@ -59,7 +59,7 @@ In the LU working area, right click an LU Table object to display a context menu
 <td width="283">
 <p><strong>show only connected nodes</strong></p>
 </td>
-<td width="312">&nbsp;</td>
+<td width="312">Shows all objects and links connected to this object / field.</td>
 </tr>
 <tr>
 <td width="283">
@@ -82,7 +82,7 @@ In the LU working area, right click an LU Table object to display a context menu
 <p><strong>clear output links</strong></p>
 </td>
 <td width="312">
-<p>Clears all output links from this LU Table to its children Table Populations.</p>
+<p>Clears all <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">output links</a> from this LU Table to its children Table Populations.</p>
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ In the LU working area, right click an LU Table object to display a context menu
 <p><strong>clear all links</strong></p>
 </td>
 <td width="312">
-<p>Clears all input and output links in the LU Tables.</p>
+<p>Clears all <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">input and output</a> links in the LU Tables.</p>
 </td>
 </tr>
 <tr>
@@ -99,11 +99,16 @@ In the LU working area, right click an LU Table object to display a context menu
 </td>
 <td width="312">
 <p>When clicked, a Query Builder window opens automatically in the newest LU file.</p>
-<p>Click for more information about the Data Viewer.</p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Click for more information about the Data Viewer</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h1>&nbsp;</h1>
+<p>&nbsp;</p>
 
 
 **For Example**
