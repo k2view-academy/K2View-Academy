@@ -4,7 +4,7 @@ Fabric Studio caches all changes to database objects. A cache must be cleared wh
 
 ### How Do I Clear the DB Objects Cache?
 
-1.	Go to the **Project Tree**, click **Shared Objects** and then click **Interfaces** to open the Interfaces list.
+1.	Go to the **Project Tree** > **Shared Objects** > **Interfaces** to open the Interfaces list.
 2.	Right click the **Interface** and click **Clear DB Objects Cache**.
 
 Click for more information about Deployment from the Fabric Studio.
