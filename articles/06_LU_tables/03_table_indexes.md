@@ -34,10 +34,10 @@ LU Table indexes are defined in the **Indexes Tab** in the Table window where th
 <table>
 <tbody>
 <tr>
-<td width="150pxl">
+<td width="122">
 <p><strong>Index id</strong></p>
 </td>
-<td width="700pxl">
+<td width="464">
 <p>(Read only). Index identifier in the current table. &nbsp;</p>
 </td>
 </tr>
@@ -87,7 +87,7 @@ To get the list of indexes for a specified table, use one of the following comma
 
 <pre><code>
 DESCRIBE INDEX; Get all system indexes.
-DESCRIBE INDEX <LU Name>; Get all indexes of the schema of an LU.
+DESCRIBE INDEX LU Name.Table Name Get the indexes of a specific table within the LU name.;
 DESCRIBE INDEX customer; Get all indexes of the schema of LU Customer.
 DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the schema Customer.
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
