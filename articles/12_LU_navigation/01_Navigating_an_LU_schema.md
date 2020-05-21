@@ -2,7 +2,7 @@
 
 When creating or editing a [Logical Unit Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md) the following options are used to navigate, configure and display information:
 * [Diagram Outline](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline) tab, a representation of the LU Schema table’s list.
-* Navigation pane, an overview of the LU Schema located in the right corner of the working area.
+* [Navigation pane](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the LU Schema located in the right corner of the working area.
 * LU working area, where view options can be set.
 
 **Click for more information about the Diagram Outline and Toolbars.**
