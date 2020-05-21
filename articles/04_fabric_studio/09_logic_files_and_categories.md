@@ -10,7 +10,7 @@ A Java file residing at a [Shared Objects](https://github.com/k2view-academy/K2V
 * SharedLogic.java, a placeholder for all shared functions. 
 * SharedGlobals.java, a placeholder for all shared Globals. 
 
-**[Click for more information about Shared Objects in a Project Tree.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md)**
+[Click for more information about Shared Objects in a Project Tree.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md)
 
 ### Designated Java Files
  
@@ -27,7 +27,7 @@ When creating a new Java function, it must be associated to a category like a bu
  
 Each category creates a separate Logic.java file that has a specific path to differentiate it from other files in other categories.
 
-**[Click for more information about Project Functions.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)**
+[Click for more information about Project Functions.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)
 
 **Notes** 
 * [Export / Import](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md) can be implemented on a Java file level. To copy only one function from one category to another category or project, copy and paste the function’s code. 
