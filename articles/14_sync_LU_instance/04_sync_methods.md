@@ -261,7 +261,7 @@ The **Truncate Before Sync** property can be set on an LU Table or a Table Popul
 <p>Check the source environment: Do not run a sync on the Production environment. However, if the source environment is a Testing environment, run a sync.</p>
 </td>
 <td width="294">
-<p>An LU that can be populated by a different source system.</p>
+<p>An LU that can be populated by different source systems.</p>
 <p>Set a different population with different logic for each table and then check the environment on the decision function of each population to decide if the population needs to be executed based on the environment.</p>
 <p>Check the time and run a sync only during off-peak hours.</p>
 </td>
