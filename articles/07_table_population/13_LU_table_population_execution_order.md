@@ -16,7 +16,7 @@ The LU Schema root table is always populated first. By default, its execution or
 By default, all LU Table populations on the same hierarchy level in an LU Schema have the same execution order. The order can be modified and have different values if needed. For example, when tables T2 and T3 table are added to a Schema under table T1, the population execution order of tables T2 and T3 will be the same and will be higher than the execution order of table T1.
 An LU Table may have more than one Table Population. By default, all populations in the same LU Table are set to the same population execution order, which can also be updated manually if needed. 
 
-[Click for more information about Link Table Populations](https://github.com/k2view-academy/K2View-Academy/tree/master/articles/07_table_population).
+[Click for more information about Link Table Populations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
 
 **Example**
 The following diagram displays an LU Schema with four tables: Customer, Subscriber, Activity and Address.
