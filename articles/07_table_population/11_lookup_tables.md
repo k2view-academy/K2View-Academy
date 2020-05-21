@@ -9,28 +9,28 @@ The input in a Lookup table is optional if the Lookup has only one record. For e
 ### How Can I Add a New Lookup To a Table Population?
 
 1.	Go to the **Project Tree** > **Logical Units** and then click the [**LU Name**]. 
-2.	Click **Tables** and the [**<Table Name>**] and then click [**<Table Population>**].
+2.	Click **Tables** and the [**<Table Name>**] and then click **<Table Population>**.
 3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Do either:
-    *	To create an **LUI Table** Lookup or Reference Table Lookup: 
-Click LUI Tables Lookup / Reference Tables Lookup to display the list of tables, select the table and drag it to the working area.
-    *	To create a Database Table Lookup:  
-Click Database to display the list of tables, select the table and drag it to the working area and then click Create as DB Table Lookup.
+    *	To create an **LUI Table Lookup** or **Reference Table Lookup**: 
+Click **LUI Tables Lookup / Reference Tables Lookup** to display the list of tables, select the table and drag it to the working area.
+    *	To create a **Database Table Lookup**:  
+Click **Database** to display the list of tables, select the table and drag it to the working area and then click **Create as DB Table Lookup**.
 
-5.	Connect the Lookup’s Input and Output fields to the table columns. 
-    *	Optional: connect the Lookup Input fields to the Source Table.
-    *	Connect the Lookup Output fields to the Target.
+5.	Connect the Lookup’s **Input** and **Output** fields to the table columns. 
+    *	Optional: connect the Lookup **Input** fields to the **Source Table**.
+    *	Connect the Lookup **Output** fields to the **Target**.
     
     ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_11_01_screen.png
     
-6.	Right click the Lookup and select Minimize to display only the Lookup’s connected fields.
-7.	In the Properties Tab (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
+6.	Right click the **Lookup** and select **Minimize** to display only the Lookup’s connected fields.
+7.	In the [**Properties Tab**] (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
 
 
 **Notes**  
 *	It is recommended to create a Lookup based on an LU Table and not a DB Table in order to improve performance. The reason is that an LU Table is usually much smaller than the source DB table, since it includes only the data which is relevant / applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
-*	It is recommended to create an index  on the LU Table for the Input fields in order to improve performance of the Lookup table’s Search.
-*	When creating a Lookup based on an LU Table, check that the Lookup object is populated before the current table so that the table has a higher execution order Fnumber than the Lookup object.
+*	It is recommended to create an [index  on the LU Table] for the Input fields in order to improve performance of the Lookup table’s Search.
+*	When creating a Lookup based on an LU Table, check that the Lookup object is populated **before** the current table so that the table has a higher [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md) Fnumber than the Lookup object.
 
 ### Lookup Properties Tab
 
