@@ -34,10 +34,10 @@ LU Table indexes are defined in the **Indexes Tab** in the Table window where th
 <table>
 <tbody>
 <tr>
-<td width="122">
+<td width="150pxl">
 <p><strong>Index id</strong></p>
 </td>
-<td width="464">
+<td width="600pxl">
 <p>(Read only). Index identifier in the current table. &nbsp;</p>
 </td>
 </tr>
