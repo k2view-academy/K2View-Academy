@@ -386,7 +386,9 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
+
 [Click for more information about Creating Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
+
 
 ### How Can I Customize the Toolbar?
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
