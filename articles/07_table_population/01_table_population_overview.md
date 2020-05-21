@@ -9,7 +9,7 @@ Each table can have one or several Table Populations that can be executed simult
 Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU Table.
 There are two types of source objects for a **Table Population** object:
 *	[DB query](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), (default) that executes an SQL Select query on a predefined DB interface. 
-*	[Root function])https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
+*	[Root function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
 Note that tables can also be populated or updated by [enrichment functions] which, unlike root functions, are executed after all LU Tables are populated.
 
 ### Table Population in an LU Schema 
@@ -19,7 +19,7 @@ An [LU Schema structure](https://github.com/k2view-academy/K2View-Academy/blob/m
 *	Each Table Population object can be linked to a different parent LU Table.
 Note that an LU Table can be added to an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction .
 
-[**Click for more information about Building an LU Hierarchy and Linking Table**] Populations.
+[**Click for more information about Building an LU Hierarchy and Linking Table Populations.**]
 
 ### Table Population Window
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database. 
@@ -102,7 +102,7 @@ The Working Area includes:
 </tbody>
 </table>
 
-[**Click for more information about Adding Transformation Rules.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md)
+[**Click for more information about Adding Transformation Rules.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Properties Tab
 The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU Table or a translation. Note that some properties are editable. 
