@@ -74,7 +74,7 @@ The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric
 
 This checkbox defines the sync mode of the first get of each LU instance after the LU is deployed to the server:
 * If checked, the Sync mode is set to FORCE.
-* When unchecked, the Sync method is set to ON.
+* When unchecked, the Sync mode is set to ON.
 
 **Notes:**
 * The check/uncheck of the **Force Upgrade Post Deploy** checkbox impacts the LU only after the redeploy of the LU to the checked/unchecked Fabric server. It does not impact retroactively.
