@@ -1,19 +1,19 @@
 # Creating a New Table Population
 
 A **Table Population** can be created by either:
-*	Dragging the table from the LU Schema  DB Objects tab into the LU Schema working area to create the LU Table including its Table Population object.
-*	Creating an LU Table  using the New Table from SQL Based DB Query or New Table from SQL Based Root Function options  in the LU Schema window to create the LU Table including its Table Population object.
-*	Using the Auto Discovery Wizard to  automatically create the LU Table and a DB Query population for each LU Table.
-*	Manually, by right clicking the table under the Project Tree and then clicking New Table Population. 
+*	Dragging the table from the [**LU Schema]https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md DB Objects tab** into the LU Schema working area to create the LU Table including its Table Population object.
+*	Creating an [**LU Table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) using the **New Table from SQL Based DB Query** or [**New Table from SQL Based Root Function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) options  in the LU Schema window to create the LU Table including its Table Population object.
+*	Using the [**Auto Discovery Wizard**]()https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to  automatically create the LU Table and a DB Query population for each LU Table.
+*	**Manually**, by right clicking the **table** under the **Project Tree** and then clicking **New Table Population**. 
 
-LU Tables can be populated by either a DB Query or a Root Function source object. To decide which source object to use, refer to Population Comparison Analysis . 
+LU Tables can be populated by either a DB Query or a Root Function source object. To decide which source object to use, refer to [Population Comparison Analysis](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md). 
 *	A source object can return one or many records whereby each Output record is mapped and populated into a target LU Table. 
-*	Note that a Table Population can extract data from other LU Tables  in the same Logical Unit. It is recommended to always check the execution order  of a source table’s population objects to verify that the source LU Tables are populated before the target LU Table. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
+*	Note that a Table Population can extract data from other [LU Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) in the same Logical Unit. It is recommended to always check the [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md) of a source table’s population objects to verify that the source LU Tables are populated **before** the target LU Table. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
 *	When an LU Table has two populations, a second Table Population can extract data from the same LU Table. For example, the ADDRESS LU Table has two Table Populations:
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
 
-Click for more information about Creating Table Population Objects .
+[**Click for more information about Creating Table Population Objects.**](
 
 ### How Do I Create a New Table Population from a DB Query? 
 
