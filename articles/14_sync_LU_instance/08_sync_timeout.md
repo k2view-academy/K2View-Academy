@@ -18,14 +18,15 @@ By default, this field = 0 whereby no timeout is defined for the LU schema, howe
 ### How do I Set The Sync Timeout on a Session Level?
 Use the following command to override the Timeout set for the LU Schema:
 * set sync_timeout\
+
 Syntax: 
-* set sync_timeout=<sync_timeout_sec>
+* set sync_timeout=<sync_timeout_sec>;
 * set sync_timeout='' - to set timeout back to LU default value\
 For example:
 * set sync_timeout=60;
 * set sync_timeout='';
 
-When Sync Timeout is defined on a session level, it applies to each sync on the LUI, regardless of the Timeout value in the LU Schema.
+When Sync Timeout is defined on a session level, it applies to each sync on the LUIs, regardless of the Timeout value in the LU Schema.
 
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
