@@ -5,7 +5,7 @@
 The **Table Population Mode** determines how the target [**LU table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) is populated. 
 There are four table population modes: 
 *	**Insert** (default), the extracted record is inserted as a new record into the table.
-*	**Upsert**, the system checks via the **Primary Key (PK)** if the record already exists in the **LU Table**. If the record does not exist, the new record is inserted into the table (similar to **Insert** mode). If the record already exists, the existing record is updated.
+*	**Upsert**, the system checks via the [**Primary Key (PK)**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md) if the record already exists in the **LU Table**. If the record does not exist, the new record is inserted into the table (similar to **Insert** mode). If the record already exists, the existing record is updated.
 *	**Update**, updates a record in a database table using the **key column(s)** marked in the **target LU Table**. If a key column is not set in the target **LU Table**, an **Update** is performed on all target records of each source record instead of updating a specific row.
 *	**Delete**, deletes a record in a database table using the **key column(s)** marked in the **target LU Table**. If a key column is not set in the target LU Table, a **Delete** is performed on all target records of each source record instead of deleting a specific row.
 
