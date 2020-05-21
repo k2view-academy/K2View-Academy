@@ -101,7 +101,7 @@ Click for more information about References.
  <table>
 <tbody>
 <tr>
-<td width="47">&nbsp;</td>
+<td width="47"><a href="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg"</a></td>
 <td width="274">
 <p>Print results.</p>
 </td>
@@ -222,7 +222,7 @@ The latest Data Viewer file can be used in the following components:
 * New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
 [Click for more information on How to Create a New Function.](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/10_project_functions.md)
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/03_logical_units/09_add_table_to_a_schema.md)
-* Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [**Click for more information about Creating a New Table Population.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
+* Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
 
 
