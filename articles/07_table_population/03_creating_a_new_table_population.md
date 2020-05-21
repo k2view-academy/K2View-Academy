@@ -1,7 +1,7 @@
 # Creating a New Table Population
 
 A **Table Population** can be created by either:
-*	Dragging the table from the [**LU Schema]https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md DB Objects tab** into the LU Schema working area to create the LU Table including its Table Population object.
+*	Dragging the table from the [**LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) DB Objects tab** into the LU Schema working area to create the LU Table including its Table Population object.
 *	Creating an [**LU Table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) using the **New Table from SQL Based DB Query** or [**New Table from SQL Based Root Function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md) options  in the LU Schema window to create the LU Table including its Table Population object.
 *	Using the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to  automatically create the LU Table and a DB Query population for each LU Table.
 *	**Manually**, by right clicking the **table** under the **Project Tree** and then clicking **New Table Population**. 
