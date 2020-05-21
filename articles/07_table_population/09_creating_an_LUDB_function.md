@@ -7,9 +7,9 @@ An LUDB function is a Project function invoked from an SQL query to perform more
 *	LUDB functions must have at least one Output value.
 
 ### How Do I Create or Edit an LUDB Function? 
-To create an LUDB function, refer to the steps in How to Create Project Function s.
+To create an LUDB function, refer to the steps in [How to Create Project Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md).
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_09_01_screen1.png)
 
 When creating an LUBD fuction, make sure that:
 *	**Function Type = LUDB Function.** 
@@ -17,9 +17,9 @@ When creating an LUBD fuction, make sure that:
 
 ### Example of an LUDB Function
 
-1.	Create a new function with Function Type = LUDB Function.
-2.	Define the Input (optional) and Output parameters of the function.
-3.	Create another function, for example a Root function, that invokes the LUDB function from the SELECT statement:
+1.	Create a new function with **Function Type = LUDB Function**.
+2.	Define the Input (optional) and **Output** parameters of the function.
+3.	Create another function, for example a **Root function**, that invokes the **LUDB function** from the **SELECT** statement:
 
 <pre><code>
 String sql = "SELECT CUSTOMER_ID, ACTIVITY_ID, ACTIVITY_DATE, ACTIVITY_NOTE, fnCreateInstId(?) IID FROM Customer.ACTIVITY";
@@ -29,6 +29,6 @@ for (Db.Row row:rows){
 }
 </code></pre>
 
-Click **fnCreateInstId.java**  to open an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
+Click [**fnCreateInstId.java**]  to open an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_project_functions.md)
