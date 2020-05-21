@@ -101,7 +101,7 @@ Click for more information about References.
  <table>
 <tbody>
 <tr>
-<td width="47"><a href="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg"</a></td>
+<td width="47"><p><a href="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg"</a></p></td>
 <td width="274">
 <p>Print results.</p>
 </td>
