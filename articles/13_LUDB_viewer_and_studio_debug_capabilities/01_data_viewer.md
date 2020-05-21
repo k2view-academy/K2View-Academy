@@ -3,13 +3,13 @@
 The Data Viewer enables you to view a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) database, add debugging capabilities and improve testing abilities and defect resolution times. Since a Logical Unit database is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis.\
 Data Viewer files are saved under the LU VirtualDB_Data directory in:  \Fabric\ [project name] \Implementation\LogicalUnits\[LU name]\VirtualDB_Data.
 
-[**Click for more information about Logical Units.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
+[Click for more information about Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
 ### How do I View Data in a Logical Unit?
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_01%20LOGICAL%20UNIT.jpg)
 
-1. Go to the **Project Tree**, click **Logical Units**, hover over the **Logical Unit** and click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%201.jpg) to open the **Data Viewer** window.
+1. Go to the **Project Tree**, click **Logical Units**, hover over the **Logical Unit** and click <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> to open the **Data Viewer** window.
 2. In the **Instance ID** field (top central pane) complete the **Instance ID** or **Instance ID by Function** fields and then click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
 Fabric retrieves data via the interfaces defined for the LU from the source DB and runs the LU mapping and transformation rules to create a new file for the LU instance. The LU instance is displayed in the tree. 
 3. Click the **Instance ID** to open the **Instances Tree** dropdown list.
