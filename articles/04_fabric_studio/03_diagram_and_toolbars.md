@@ -192,7 +192,6 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Alignment Toolbar Items
 <table>
