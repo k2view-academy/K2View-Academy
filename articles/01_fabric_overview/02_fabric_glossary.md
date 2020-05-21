@@ -183,7 +183,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong>
+<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
 </td>
 <td width="482">
 <p>Defines the order of the Enrichment Functions &nbsp;execution. The order is set in the Logical Unit Schema&rsquo;s properties.</p>
