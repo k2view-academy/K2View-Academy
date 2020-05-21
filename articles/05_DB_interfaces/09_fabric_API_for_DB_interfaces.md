@@ -8,10 +8,10 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <table width="630">
 <thead>
 <tr>
-<td width="213">
+<td width="220pxl">
 <p><strong>User Code Method</strong></p>
 </td>
-<td width="417">
+<td width="600pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -49,7 +49,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <table width="630">
 <thead>
 <tr>
-<td width="204">
+<td width="220pxl">
 <p><strong>Use Cases</strong></p>
 </td>
 <td width="198">
