@@ -82,7 +82,7 @@
 <summary markdown="span"><strong>Table Population<strong></summary>
 <ul>
   
-<li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md">STable Population Overview</a></li>
+<li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
 <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md">Source Object Types</li>
 <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</li>
 <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md">Table Population Properties Tab</a></li>
