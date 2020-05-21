@@ -7,7 +7,7 @@ Their purpose is to hold data retrieved from various sources after it has been t
 
 LU Tables can be created either automatically, for example, using the [Auto Discovery Wizard](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) or manually. 
 When building a table, first, define the table properties, columns, and indexes. Then, create the Table Population  map which holds the transformation and mapping rules.
-Creating a population for an LU Table is optional. When a table acts as the Master of Data, it does not get feeds from source systems. In such case, the Table Population is redundant.  
+Creating a population for an LU Table is optional. When a table acts as the Master of Data, it does not get feeds from source systems. In such case, the [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) is redundant.  
 
 
 ### LU Table Structure
