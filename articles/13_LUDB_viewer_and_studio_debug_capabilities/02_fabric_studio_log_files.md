@@ -10,7 +10,7 @@ The following are the main log options:
 * Activity logs.
 * Compilation errors.
 
-[**Click for more information about UI Components and Menus.**]
+[Click for more information about UI Components and Menus.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
 ### How do I Review Server / Activity Logs and Compilation Errors?
 **Server Logs**
@@ -59,12 +59,14 @@ The recommended usage for this option is to debug a project during its implement
 
 For example: **fnCreateInstID** under Customer LU
 
+<pre><code>
  if (i_id!=null && !i_id.isEmpty()){
 // Increase the input by 10 and return      
       reportUserMessage("o_id:"+(Integer.sum(Integer.valueOf(i_id),10)+""));
 	return Integer.sum(Integer.valueOf(i_id),10)+"";
    }
 log.info ():
+</code></pre>
 
 
 Enables Fabric’s runtime Debug options. This method can be added to any Java code and its output can be viewed after deployment and during runtime. The runtime log (k2fabric.log) can be reviewed in the Fabric Server’s Logs directory or in the Studio’s Output logs.\
