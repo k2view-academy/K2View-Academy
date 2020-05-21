@@ -265,7 +265,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export2.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export2.jpg" alt=""/>
 </td>
 <td width="393">
 <p>Export to Bitmap / Export to SVG.</p>
@@ -321,55 +321,50 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table width="552">
 <tbody>
 <tr>
-<td width="236">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="316">
 <p>Enable / Disable debug.</p>
 </td>
 </tr>
 <tr>
-<td width="236">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="316">
 <p>Select instance to debug or a enter new instance.</p>
 </td>
 </tr>
 <tr>
-<td width="236">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="316">
 <p>Select saved file or generate new.</p>
 </td>
 </tr>
 <tr>
-<td width="236">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="316">
 <p>Display the current record in process.</p>
 </td>
 </tr>
 <tr>
-<td width="236">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="316">
 <p>Debug / Execute.</p>
 </td>
 </tr>
 <tr>
-<td width="236">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="316">
 <p>Debug next record.</p>
 </td>
 </tr>
 <tr>
-<td width="236">&nbsp;</td>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+</td>
 <td width="316">
 <p>Debug next instance.</p>
 </td>
