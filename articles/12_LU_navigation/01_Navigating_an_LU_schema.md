@@ -31,10 +31,10 @@ In the LU working area, right click an LU Table object to display a context menu
 <table width="595">
 <tbody>
 <tr>
-<td width="283">
+<td width="300pxl">
 <p><strong>set as: root&nbsp;</strong></p>
 </td>
-<td width="312">
+<td width="600pxl">
 <p>Sets the table object as the root of this LU.</p>
 </td>
 </tr>
@@ -105,9 +105,10 @@ In the LU working area, right click an LU Table object to display a context menu
 </table>
 
 
-**For Example**\
+**For Example**
 
-Taking the CONTRACT table from the CUSTOMER LU as an example, the following illustrates key table relationship view options:\
+
+Taking the CONTRACT table from the CUSTOMER LU as an example, the following illustrates key table relationship view options:
 
 Show only predecessor nodes
 
@@ -129,10 +130,10 @@ In the LU working area right click anywhere to display a context menu with the f
 <table width="595">
 <tbody>
 <tr>
-<td width="198">
+<td width="198pxl">
 <p><strong>Collapse All Views</strong></p>
 </td>
-<td width="397">
+<td width="700pxl">
 <p>Collapses the LU Tables columns.</p>
 </td>
 </tr>
