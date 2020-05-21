@@ -36,7 +36,7 @@ Each project has the following main components:
   * Java
   * Resources, files and Graphit objects.
 
-* [**Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)**, a collection of all Logical Units defined in the project.
+* [**Logical Units**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
 
 ### Project Components Prefix Coventions 
