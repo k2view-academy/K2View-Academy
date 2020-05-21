@@ -294,7 +294,6 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Logical Unit Toolbar Items
 <table>
