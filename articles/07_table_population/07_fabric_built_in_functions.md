@@ -1,11 +1,11 @@
 # Fabric Built-in Functions
 
-Fabric offers several Built-in functions which can be used for different types of data transformation. Built-in functions can be either connected to other Fabric objects in a map (Table Population or Parser) or invoked from another function by Java coding.
+Fabric offers several **Built-in functions** which can be used for different types of data transformation. Built-in functions can be either connected to other Fabric objects in a map (Table Population or Parser) or invoked from another function by Java coding.
 Built-in functions are grouped into different categories.  The following table displays a list of categories and examples for each category.
 
 For the full list: 
 
-Click to display the Fabric API list: **http://<Fabric IP address>:3213/static/doc/user-api/index.html**
+[**Click to display the Fabric API list:**](http://<Fabric IP address>:3213/static/doc/user-api/index.html)
 
 <table style="width: 528px;">
 <tbody>
