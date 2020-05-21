@@ -19,7 +19,7 @@ Searches can be made for the following Fabric components.
 * [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md)
 * Broadway
 
-**Click here for more information about Project Structure.**
+[Click here for more information about Project Structure.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/08_fabric_project_tree.md)
 
 ## How do I Search for an Item?
 
