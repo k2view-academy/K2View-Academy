@@ -22,14 +22,14 @@ The **Debug Toolbar** has the following icons:
 <table>
 <tbody>
 <tr>
-<td width="240pxl"><src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_03_01%20Table%20Population%20window..png"<p>&nbsp;</p></td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_03_01%20Table%20Population%20window..png" alt="" /></td>
 <td width="500pxl">
 <p>Enable / Disable Debug.</p>
 <p>By default, the Debug icon is disabled. To enable Debug Mode and display its icons on the toolbar, click the Debug icon.</p>
 </td>
 </tr>
 <tr>
-<td width="240">&nbsp;</td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_03_02%20Debug%20Toolbar%20%20icon%203.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_03_02%20Debug%20Toolbar%20%20icon%204.1.png" alt="" /></td>
 <td width="364">
 <p>Displays a list of Instance IDs for which the LUDB file exists.</p>
 <p>Either search for the Instance ID or select it from the dropdown list of debugged Instance IDs.</p>
