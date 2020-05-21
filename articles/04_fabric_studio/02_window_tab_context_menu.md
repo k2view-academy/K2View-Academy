@@ -7,13 +7,13 @@ Right click the **Window Tab Header** to display a context menu with the followi
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_02_window_tab_header.png)
 
-<table width="110%">
+<table width="900">
 <tbody>
 <tr>
-<td style="width: 48.691%;">
+<td width="400pxl">
 <p><strong>Command</strong></p>
 </td>
-<td style="width: 49.309%;">
+<td width="500pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
