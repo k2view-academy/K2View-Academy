@@ -24,11 +24,11 @@ Functions can be added to a Table Population Map to apply various Data Transform
 Both Built-in and Project functions can be either connected in a map (Table Population or Parser), to other Fabric objects or invoked from another function via Java coding.
 Note that [root functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md) which are also displayed in the Objects tab can only be used as a source object and not for Data Transformation. 
 
-###Translations and Globals
+### Translations and Globals
  
 [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md) and [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) can be added to a Table Population Map to transform the data from one set of values to another. Translations and Globals are defined either under an [LU](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) or under [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md). Those defined under Shared Objects  are available for all LUs in a project.
 
-###Constants
+### Constants
  
 Constants are hard-coded values that can be used in a Table Population Map to set a constant value. The scope of a constant is in the current Fabric object where the constant is defined. Constants are not managed as variables in Fabric and cannot be used by various Fabric objects.
 
