@@ -2,11 +2,11 @@
 
 ### What are Globals?
 Globals are predefined variables that can be accessed by different objects within a project and are used when the same information is required repeatedly by various Fabric objects. For example, to define the source application version or a date format in order use the same value in several Fabric objects. 
-* Globals are saved in a Java file as static variables and can be used by all Fabric object types like Project functions or Table Population objects.
+* Globals are saved in a Java file as static variables and can be used by all Fabric object types like [Project functions](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/08_project_functions.md) or [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md) objects.
 * Globals can be defined as Final and then they cannot be overridden in Java code or by a command that runs on the Fabric Server.
 * Globals that are not defined as Final can be overridden.
 
-**Click for more information about [Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).**
+[Click for more information about Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).
 
 The scope of a Global depends on how it is defined, which can be either:
 * [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/12_shared_objects.md), whereby the Global is available to all objects in a Project under all Logical Units, Reference Tables and Web Services.
