@@ -6,10 +6,10 @@ Below are some examples of Fabric components which have a Diagram window working
 <table width="642">
 <tbody>
 <tr>
-<td width="453">
+<td width="300pxl">
 <p><strong>Action</strong></p>
 </td>
-<td width="189">
+<td width="600pxl">
 <p><strong>What is Displayed</strong></p>
 </td>
 </tr>
@@ -115,9 +115,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <tbody>
 <tr>
 <td width="111">&nbsp;</td>
-<td width="390">
-<p>Undo last change.</p>
-</td>
+<td width="390"><img="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU1.png"></td>
 </tr>
 <tr>
 <td width="111">&nbsp;</td>
