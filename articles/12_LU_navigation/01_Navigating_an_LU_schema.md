@@ -7,7 +7,7 @@ When creating or editing a [Logical Unit Schema](https://github.com/k2view-acade
 
 [Click for more information about the Diagram Outline and Toolbars](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
-### How do I Use the Diagram Outline?
+### How Do I Use the Diagram Outline?
  
 The Diagram Outline displays an overview of the LU structure and can be used to search for a subset of tables included in the Schema. 
 
