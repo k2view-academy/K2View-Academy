@@ -1,7 +1,7 @@
 # Logical Unit (LU) Overview
 
 ## What is a Logical Unit (LU) or Logical Unit Type (LUT)?
-A Logical Unit (LU or LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a [**Digital Entity**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity)  (business entity). It is the prototype from which LU Instances [(LUI)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
+A Logical Unit (LU or LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a [**Digital Entity**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity)  (business entity). It is the prototype from which LU Instances [**(LUI)**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
 An LU is defined and configured in Fabric Studio . These definitions are comprised of three main objects:
 1. [**LU Table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) : The definition of tables that hold the data of a Digital Entity including its columns, PKs, indexes and triggers.
 
