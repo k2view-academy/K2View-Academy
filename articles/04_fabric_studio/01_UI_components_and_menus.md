@@ -110,7 +110,7 @@ The Project Tree displays the components of the current Project as a hierarchy o
     * Functions. 
     * Java, Java files and resource files. 
     * Translations. 
-* _References_, reference information that may be used throughout the instance. 
+* References, reference information that may be used throughout the instance. 
 * Web Services, a collection of all functions that are defined as Web Services for this Project.
 * [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the Project.
 
