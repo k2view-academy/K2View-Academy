@@ -5,7 +5,7 @@ Fabric Studio is a designer tool that manages the construction of [Digital Entit
 
 Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each Project is initiated and maintained through this platform and working space.\
 As an integrated tool, Fabric Studio allows you to:
-* Design Digital Entities and their associated [Logical Units (LUs)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md).
+* Design [Digital Entities](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md).
 * Use robust ETL options to define the mapping logic on each LU Table using various transformation objects like [Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md), [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) or [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md).
 * Deploy a Fabric Project or selected components of a Project to the Fabric runtime environment. 
 * Debug and view mapped data, data flow and data exposure. 
