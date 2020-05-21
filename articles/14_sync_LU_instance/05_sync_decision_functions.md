@@ -2,7 +2,7 @@
 
 ## Sync- Decision Functions Overview
 
-A Decision Function is a Java project function that assesses whether a sync is performed on an LUI.
+A Decision Function is a Java [project function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that assesses whether a sync is performed on an LUI.
 * Decision functions cannot have input parameters and must have one output Boolean parameter.
 * A sync is performed when a decision function returns **True**.
 * A sync is not performed when a decision function returns **False**.
@@ -75,7 +75,7 @@ In this example, it is recommended to use the [skipSync() method](https://github
 5.	Write the **Function Code** and return **True** or **False**. The **Decision Function** overrides the **Sync Mode** also when it is defined as **FORCE**. 
 6.	Click **Save**.
 
-[**Click for more information about Creating Functions**.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md)\
+[**Click for more information about Creating Project Functions**.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)\
 [**Click for more information about Decision Function Checks and Considerations.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)\
 [**Click for more information about Decision Function Code Examples.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md#decision-functions---code-examples)
 
