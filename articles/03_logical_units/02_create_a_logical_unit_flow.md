@@ -6,9 +6,8 @@ Creating a Logical Unit involves several steps. The following is an overview of 
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_Create_an_LU_Flow.png)
 
-<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/>
 
-<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2017ma.png" alt="drawing" width="150pxl"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2016ma.png" alt="drawing" width="150"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2015ma.png" alt="drawing" width="60"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2014ma.png" alt="drawing" width="60"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2013ma.png" alt="drawing" width="60pxl"/>
+<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2017ma.png" alt="drawing" width="200pxl"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2016ma.png" alt="drawing" width="200pxl"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2015ma.png" alt="drawing" width="200pxl"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2014ma.png" alt="drawing" width="200pxl"/><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2013ma.png" alt="drawing" width="200pxl"/>
 
 You can also duplicate an LU in your project and save it as a new LU:
 1. Right click the **Logical Unit** > **Duplicate Logical Unit**.
