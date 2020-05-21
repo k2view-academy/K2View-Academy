@@ -144,11 +144,11 @@ The following options are supported:
 <table>
 <tbody>
 <tr>
-<td width="236">
+<td width="200pxl">
 <p><strong>Run or Run on New Tab</strong></p>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="368">
+<td width="650pxl">
 <ul>
 <li>Click Run to execute the given SQL statement.</li>
 <li>Click Run on New Tab to open a new Results tab.</li>
