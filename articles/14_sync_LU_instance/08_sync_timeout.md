@@ -17,7 +17,7 @@ By default, this field = 0 whereby no timeout is defined for the LU schema, howe
 
 ### How do I Set The Sync Timeout on a Session Level?
 Use the following command to override the Timeout set for the LU Schema:
-* set sync_timeout\
+* set sync_timeout
 
 Syntax: 
 * set sync_timeout=<sync_timeout_sec>;
