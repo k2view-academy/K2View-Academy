@@ -90,7 +90,7 @@ When a project is registered in the Version Control system, the following indica
 </tr>
 <tr>
 <td width="150pxl">
-<p>+</p>
+<p> +</p>
 </td>
 <td width="554">
 <p>New objects</p>
