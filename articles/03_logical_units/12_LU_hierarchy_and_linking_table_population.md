@@ -72,7 +72,7 @@ A link can be added in both directions:
 1. Click the **child population** header.
 1. Connect each **input field** to a **parent table** using one of the following methods:\
   a. Drag the **connection line** to the **parent table** and **field**.\
-  b. Right click, select **Add link from** and then click the **parent table** and **field**.
+  b. Right click, select **Add link from** > **parent table** > **field**.
 
 **Note:** Link all the input fields of the selected Table Population object to one parent table. A Table Population object cannot be linked to several parent tables.  
 
@@ -80,7 +80,7 @@ A link can be added in both directions:
 1. Click the **parent table**.
 1. Connect each **parent field** to the **child population** using one of the following methods:\
   a. Click the **child population** header and drag the **connection line** to the **parent table** and **field**.\
-  b. Right click, select **Add link to** and then select the **child population** and **field**.
+  b. Right click, select **Add link to** > **child population** > **field**.
 
 **Note:** Link all input fields of the selected Table Population object to one parent table. A Table Population object cannot be linked to several parent tables.  
 
