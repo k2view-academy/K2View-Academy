@@ -10,7 +10,7 @@ Functions can be created in [Logical Units](https://github.com/k2view-academy/K2
 *	A Regular function has a specific category known as an [Enrichment function] which is executed once all LU Tables have been populated to extract data from any LU Table and use it as needed. An Enrichment function must not have Input parameters and must not return any value.
 
 **Root Function**  
-*	A function that is used as a source object to trigger the [Table Population]https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md  mechanism.
+*	A function that is used as a source object to trigger the [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md) mechanism.
 *	The output of a Root function serves as input for the Table Population. This function cannot be used for data-mapping logic.
 *	A Root function must have at least one Input parameter and at least one Output parameter. The Root function of a root table must have only one parameter.
 
