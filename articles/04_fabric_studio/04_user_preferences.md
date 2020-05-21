@@ -98,9 +98,11 @@ The following is a list of server configuration items:
 </table>
 
 
-**Click for more information about Deployment from the Fabric Studio.**\
-[**Click for more information about the Sync Method.**\](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)
-**Click for more information about Invoking a Web Service from the Studio.**
+Click for more information about Deployment from the Fabric Studio.
+
+[Click for more information about the Sync Method.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)
+
+Click for more information about Invoking a Web Service from the Studio.
 
 Note that once defined, both General Preferences and Server Configurations will continue to apply after the Fabric Studio is upgraded.
 
