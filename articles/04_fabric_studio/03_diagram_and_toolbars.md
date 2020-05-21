@@ -111,17 +111,263 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 * Print & Export toolbar
 
 ### Edit Toolbar Items
+<table>
+<tbody>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Undo last change.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Redo last change.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Copy selected item to clipboard.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Paste item from clipboard.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Cut selected item and copy to clipboard.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Delete selected item.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Select all.</p>
+</td>
+</tr>
+<tr>
+<td width="111">
+<p>&nbsp;</p>
+</td>
+<td width="390">
+<p>Add note to an object.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Add balloon note.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Layout menu, Layered Layout or Tree Layout options.</p>
+</td>
+</tr>
+<tr>
+<td width="111">&nbsp;</td>
+<td width="390">
+<p>Filtering (Translation&nbsp;, Globals, Data Viewer, User Preferences)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 
 ### Alignment Toolbar Items
+<table>
+<tbody>
+<tr>
+<td width="122">&nbsp;</td>
+<td width="379">
+<p>Left/middle/right alignment.</p>
+</td>
+</tr>
+<tr>
+<td width="122">&nbsp;</td>
+<td width="379">
+<p>Top/center/bottom alignment.</p>
+</td>
+</tr>
+<tr>
+<td width="122">&nbsp;</td>
+<td width="379">
+<p>Size alignment.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Zoom Toolbar Items
+<table>
+<tbody>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Current zoom factor.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Zoom out.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Zoom in.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Cancel zoom.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Fit to page.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Focus on selection.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
 ### Export Toolbar Item
+<table>
+<tbody>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Print Preview / Print.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Export to Bitmap / Export to SVG.</p>
+</td>
+</tr>
+<tr>
+<td width="108">&nbsp;</td>
+<td width="393">
+<p>Exports Translation&nbsp;, Globals, Data Viewer, User Preferences items to Excel.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 
 ### Logical Unit Toolbar Items
+<table>
+<tbody>
+<tr>
+<td width="113">
+<p>&nbsp;</p>
+</td>
+<td width="398">
+<p>Group sub graph.</p>
+</td>
+</tr>
+<tr>
+<td width="113">&nbsp;</td>
+<td width="398">
+<p>Ungroup sub graph.</p>
+</td>
+</tr>
+<tr>
+<td width="113">&nbsp;</td>
+<td width="398">
+<p>Update tables from database.</p>
+</td>
+</tr>
+<tr>
+<td width="113">&nbsp;</td>
+<td width="398">
+<p>Refresh items from implementation.</p>
+</td>
+</tr>
+</tbody>
+</table>
 **Click for more information about Logical Units.**
 
 ### Table Population Toolbar
+<table width="552">
+<tbody>
+<tr>
+<td width="236">
+<p>&nbsp;</p>
+</td>
+<td width="316">
+<p>Enable / Disable debug.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p>&nbsp;</p>
+</td>
+<td width="316">
+<p>Select instance to debug or a enter new instance.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p>&nbsp;</p>
+</td>
+<td width="316">
+<p>Select saved file or generate new.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p>&nbsp;</p>
+</td>
+<td width="316">
+<p>Display the current record in process.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p>&nbsp;</p>
+</td>
+<td width="316">
+<p>Debug / Execute.</p>
+</td>
+</tr>
+<tr>
+<td width="236">
+<p>&nbsp;</p>
+</td>
+<td width="316">
+<p>Debug next record.</p>
+</td>
+</tr>
+<tr>
+<td width="236">&nbsp;</td>
+<td width="316">
+<p>Debug next instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
 **[Click for more information about Creating Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).**
 
 ### How Can I Customize the Toolbar?
