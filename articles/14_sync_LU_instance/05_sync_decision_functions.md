@@ -2,11 +2,11 @@
 
 ## Sync- Decision Functions Overview
 
-A Decision Function is a Java [project function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that assesses whether a sync is performed on an LUI.
+A Decision Function is a Java [project function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that assesses whether a sync is performed on an [LUI](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui).
 * Decision functions cannot have input parameters and must have one output Boolean parameter.
 * A sync is performed when a decision function returns **True**.
 * A sync is not performed when a decision function returns **False**.
-* Decision functions can be defined at LU Schema, LU Table or Table Population levels.
+* Decision functions can be defined at [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) levels.
   * When defined at an LU Schema level, the decision function runs on each Table Population of each table in the LU Schema.  
   * When defined on an LU Table, the decision function runs over each Table Population in the LU Table.
   * If the decision function returns the same result for each population, it is recommended to set it on the Root Table’s population. Then invoke the [skipSync() method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md) in the decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the decision function on each LUI instead of executing the decision function on each population. 
