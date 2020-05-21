@@ -1,16 +1,16 @@
 # Table Population - Source Object Types
 
 There are two types of **Source Objects** in a Table Population object:
-*	**DB Query**, (default) an SQL Select query with one or several tables that is executed on a predefined DB interface . 
-*	**Root Function**, a Fabric Java function that can execute an SQL Select query and perform data manipulations and calculations.
+*	**DB Query**, (default) an SQL Select query with one or several tables that is executed on a predefined [DB interface](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
+*	[**Root Function**], a Fabric Java function that can execute an SQL Select query and perform data manipulations and calculations.
 
-Note that a Table Population can extract data from other LU Tables  in the same Logical Unit. It is recommended to always check the execution order  of a source table’s population objects to verify that the source LU Tables are populated before the target LU Tables. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
+Note that a Table Population can extract data from other [LU Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md)  in the same Logical Unit. It is recommended to always check the [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU Tables are poplated before the target LU Tables. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
 
 When an LU Table has two populations, a second table population can extract data from the same LU Table. For example, the ADDRESS LU Table has two table populations:
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
 
-Click for more information about Creating Table Population Objects .
+[**Click for more information about Creating Table Population Objects.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 
 ### DB Query Vs. Root Function Use Cases
 
