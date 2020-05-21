@@ -2,7 +2,7 @@
 
 ### How Do I Create a Database Interface?
 
-1. Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces** and select **New Interface**.\
+1. Go to the **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 The following screenshot displays a list of supported built-in interface types.
      * ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_icon1.png) = DB interfaces.
      * ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_icon2.png) = Non-DB interfaces.
