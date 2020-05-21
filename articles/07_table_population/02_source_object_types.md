@@ -51,10 +51,10 @@ The comparison below analyzes the differences and the similarities between two d
 <table style="width: 580px;">
 <thead>
 <tr>
-<td style="width: 153px;">
+<td style="width: 150px;">
 <p><strong>Category</strong></p>
 </td>
-<td style="width: 413px;">
+<td style="width: 700pxl;">
 <p><strong>DB Query</strong></p>
 </td>
 </tr>
