@@ -101,31 +101,31 @@ Click for more information about References.
  <table>
 <tbody>
 <tr>
-<td width="47"><p><a href="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg"</a></p></td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg" alt="" /></td>
 <td width="274">
 <p>Print results.</p>
 </td>
 </tr>
 <tr>
-<td width="47">&nbsp;</td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%202.jpg" alt="" /></td>
 <td width="274">
 <p>Export results as an Excel file.</p>
 </td>
 </tr>
 <tr>
-<td width="47">&nbsp;</td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%203.jpg" alt="" /></td>
 <td width="274">
 <p>Filter results by one or more columns.</p>
 </td>
 </tr>
 <tr>
-<td width="47">&nbsp;</td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%204.jpg" alt="" /></td>
 <td width="274">
 <p>Toggle groupings.</p>
 </td>
 </tr>
 <tr>
-<td width="47">&nbsp;</td>
+<td width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%205.jpg" alt="" /></td>
 <td width="274">
 <p>Toggle summaries.</p>
 </td>
