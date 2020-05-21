@@ -43,7 +43,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </td>
 <td style="width: 316px;">
 <ul>
-<li>Synchronization is not performed, however if the LU instance already exists in Fabric it will bring the existing data based on the mostly updated LU schema definition</li>
+<li>Synchronization is not performed, however if the LU instance already exists in Fabric it will bring the existing LU instance data based on the mostly updated LU schema definition</li>
 <li>If the LU instance does not yet exist in Fabric, &nbsp;the following warning message is displayed:</li>
 <li>Instance '&lt;LU Name&gt;:&lt;Instance ID&gt;' was not found and sync is disabled</li>
 </ul>
@@ -64,7 +64,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </tbody>
 </table>
 
-Note that the Sync returns an error message when a source is not available. To change this behavior, use set [ignore_source_exception true](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
+Note that the Sync returns an error message when a source is not available. To change this behavior, use [set ignore_source_exception true](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
