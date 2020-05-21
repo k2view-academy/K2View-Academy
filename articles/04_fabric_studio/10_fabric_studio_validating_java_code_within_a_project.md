@@ -10,9 +10,9 @@ Fabric Studio compiles all Java code in the project when the project is opened. 
 ### How do I Publish Project Code?
  
 After the Java code of the project object (like a Function or a Web Service) is complete it must be validated.
-1. Do either:\
-    a. Press **CTRL <S>** to save the code.\
-    b. Click **Save** on the left top screen to save the code.  
+1. Do either:
+    * Press **CTRL S** to save the code.
+    * Click **Save** on the left top screen to save the code.  
 2. Go to the **Project Tree**, right click the **Project Name** and then click **Rebuild All java Code**. 
 
 ### When is Java Code Validated?
@@ -32,7 +32,11 @@ There are three validation success indicators:
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_10_02%20Summary%20level.png)
 
-**[Click for more information about Fabric Studio Log Files.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)**
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/09_logic_files_and_categories.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+
+[Click for more information about Fabric Studio Log Files.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
+
+
+
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/09_logic_files_and_categories.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 

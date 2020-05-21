@@ -1,9 +1,9 @@
 # Table Population Diagram Outline
 
-The Diagram Outline of the population map is located in the Objects tab of the Table Population  window and displays all objects that are currently found in the population map. When clicking the object’s name, or object’s column name in the Diagram Outline, the matching object or column is marked in the Table Population working area.
+The **Diagram Outline** of the population map is located in the **Objects tab** of the [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) window and displays all objects that are currently found in the population map. When clicking the object’s name, or object’s column name in the Diagram Outline, the matching object or column is marked in the Table Population working area.
 For example, the following diagram outline displays a  list of objects  included in the table population:
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_12_01_screen.png)
 
 <table>
 <tbody>

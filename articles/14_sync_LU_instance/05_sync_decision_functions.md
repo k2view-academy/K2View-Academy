@@ -2,19 +2,19 @@
 
 ## Sync- Decision Functions Overview
 
-A Decision Function is a Java project function that assesses whether a sync is performed on an LUI.
+A Decision Function is a Java [project function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that assesses whether a sync is performed on an [LUI](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui).
 * Decision functions cannot have input parameters and must have one output Boolean parameter.
 * A sync is performed when a decision function returns **True**.
 * A sync is not performed when a decision function returns **False**.
-* Decision functions can be defined at LU Schema, LU Table or Table Population levels.
+* Decision functions can be defined at [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) levels.
   * When defined at an LU Schema level, the decision function runs on each Table Population of each table in the LU Schema.  
   * When defined on an LU Table, the decision function runs over each Table Population in the LU Table.
   * If the decision function returns the same result for each population, it is recommended to set it on the Root Table’s population. Then invoke the [skipSync() method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md) in the decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the decision function on each LUI instead of executing the decision function on each population. 
   * When defined for a Table Population, the decision function runs on the defined population.
 
-[**Click for more information about Creating a Decision Function.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function)\
-[**Click for more information about Sync Levels.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)\
-[**Click for more information about the Skip Sync Method.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
+[Click for more information about Creating a Decision Function.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function)\
+[Click for more information about Sync Levels.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)\
+[Click for more information about the Skip Sync Method.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
 
 ### Decision Functions for LUI Sync- Example Use Cases
 Decision functions are required when the sync on an LUI needs specific logic to examine whether the data is synced from the source.
@@ -26,12 +26,12 @@ Decision functions are required when the sync on an LUI needs specific logic to 
   * LU Schema has changed since the last sync.
   * Source environment is Production.
 * Checking if the LU Schema has changed may return a different result on each LU Table and returns True only for changed LU Tables. Therefore, you must define the decision function on the LU Schema to be executed by Fabric on each population:
-  * First sync. The decision function returns True for all LU populations, i.e., Fabric executes all populations when synchronizing the LUI.
-  * Running a sync on the Production environment. The decision function returns True for all LU populations, i.e., Fabric executes all populations when synchronizing the LUI.
+  * First sync. The decision function returns True for all LU populations, i.e. Fabric executes all populations when synchronizing the LUI.
+  * Running a sync on the Production environment. The decision function returns True for all LU populations, i.e. Fabric executes all populations when synchronizing the LUI.
   * Schema modifications. The decision function returns True only for LU Tables that have changed since the last LUI sync, i.e. only populations of the modified LU Tables are executed by the Sync process.
 
-**Click for more information about Environments Management in Fabric.**\
-[**Click for Code Examples of Decision Functions.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md#decision-functions---code-examples)
+Click for more information about Environments Management in Fabric.\
+[Click for Code Examples of Decision Functions.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md#decision-functions---code-examples)
 
 **Example 2**
 
@@ -48,7 +48,7 @@ The source version can be checked using a global variable: SOURCE_PRODUCT_VERSIO
 * PROD (Production). 
 * DEV (Development).
 
-[**Click for more information about Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md)
+[Click for more information about Globals.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md)
 
 To enable Fabric to align the implementation logic to the source version, do the following:
 1. Define two decision functions:\
@@ -75,9 +75,9 @@ In this example, it is recommended to use the [skipSync() method](https://github
 5.	Write the **Function Code** and return **True** or **False**. The **Decision Function** overrides the **Sync Mode** also when it is defined as **FORCE**. 
 6.	Click **Save**.
 
-[**Click for more information about Creating Functions**.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md)\
-[**Click for more information about Decision Function Checks and Considerations.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)\
-[**Click for more information about Decision Function Code Examples.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md#decision-functions---code-examples)
+[Click for more information about Creating Project Functions.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)\
+[Click for more information about Decision Function Checks and Considerations.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)\
+[Click for more information about Decision Function Code Examples.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md#decision-functions---code-examples)
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 

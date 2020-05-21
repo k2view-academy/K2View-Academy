@@ -1,7 +1,7 @@
 # Sync Methods
 
 ## Sync Properties
-Sync properties can be defined on an LU Schema, LU Table, or Table Population level.
+Sync properties can be defined on an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md), or T[able Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) level.
 
 **A Sync property contains the following settings:**
 <table>
@@ -11,7 +11,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <p><strong>Timeout (sec)<strong></p>
 </td>
 <td width="700pxl">
-<p>The timeout in seconds for syncing the LUI.</p>
+<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a>.</p>
 </td>
 </tr>
 <tr>
@@ -35,7 +35,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <p><strong>Delete Instance if Not Exists<strong></p>
 </td>
 <td width="500">
-<p>When marked as True, Fabric deletes the LUI if the LUI is not found in the source system.</p>
+<p>When marked as True, Fabric deletes the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a> if the LUI is not found in the source system.</p>
 <p>When marked as False (default), the instance is retained in Fabric even if the instance is not found in the source system.</p>
 </td>
 </tr>
@@ -176,7 +176,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 [Click for more information about LU Sync Levels](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)
  
 ## Truncate Before Sync 
-The Truncate Before Sync property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
+The **Truncate Before Sync** property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
 
 ## Sync Methods - Use Cases
 <table style="width: 850pxl">
@@ -255,15 +255,14 @@ The Truncate Before Sync property can be set on an LU Table or a Table Populatio
 </tr>
 <tr>
 <td width="72">
-<p><strong>Decision Function</strong></p>
+<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases">Decision Function</strong></a></p>
 </td>
 <td width="252">
 <p>Check the source environment: Do not run a sync on the Production environment. However, if the source environment is a Testing environment, run a sync.</p>
 </td>
 <td width="294">
-<p>An LU that can be populated by a different source system.</p>
+<p>An LU that can be populated by different source systems.</p>
 <p>Set a different population with different logic for each table and then check the environment on the decision function of each population to decide if the population needs to be executed based on the environment.</p>
-<p>Check the time and run a sync only during off-peak hours.</p>
 </td>
 </tr>
 </tbody>

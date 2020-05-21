@@ -5,14 +5,14 @@ Fabric Studio is a designer tool that manages the construction of [Digital Entit
 
 Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each Project is initiated and maintained through this platform and working space.\
 As an integrated tool, Fabric Studio allows you to:
-* Design Digital Entities and their associated [Logical Units (LUs)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md).
+* Design [Digital Entities](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md).
 * Use robust ETL options to define the mapping logic on each LU Table using various transformation objects like [Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md), [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) or [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md).
-* Deploy a Fabric Project or selected components of a Project to the Fabric runtime environment. 
-* Debug and view mapped data, data flow and data exposure. 
+* Deploy a [Fabric Project](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a Project to the Fabric runtime environment. 
+* [Debug and view](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
 Fabric Studio also enables you to integrate your Projects into Source Version Control systems based on Git or the Apache Sub-version (SVN) Standard.
 
-**Click for more information about Best Practices for Working with SVN and Git.** 
+[Click for more information about Best Practices for Working with SVN and Git.](https://github.com/k2view-academy/K2View-Academy/blob/ccc78f6415282a75ace6d6eb1035e9d3701b1bb1/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### How Can I Use the Fabric Studio Start Page?
 
@@ -80,9 +80,9 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 </table>
 
 
-**Click for more information about the Query Builder.**
+Click for more information about the Query Builder.
 
-**Click for more information about the Studio Debug and Log Capabilities.**
+Click for more information about the Studio [Debug](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) and [Log](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) Capabilities.
 
 ### What are the File Tab Options?
 The File tab has the following options:
@@ -110,7 +110,7 @@ The Project Tree displays the components of the current Project as a hierarchy o
     * Functions. 
     * Java, Java files and resource files. 
     * Translations. 
-* _References_, reference information that may be used throughout the instance. 
+* References, reference information that may be used throughout the instance. 
 * Web Services, a collection of all functions that are defined as Web Services for this Project.
 * [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the Project.
 

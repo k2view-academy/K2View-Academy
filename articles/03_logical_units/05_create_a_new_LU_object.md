@@ -5,7 +5,7 @@ A new [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/
 * Duplicating a Logical Unit and saving it. 
 
 ### How Do I Create a new Logical Unit (LU)?
-1. Go to **Projects Tree**, right click **Logical Units** and then click **New Logical Unit** to open the **Logical Unit** dialog box. 
+1. Go to **Projects Tree** > right click **Logical Units** > **New Logical Unit** > **Logical Unit** dialog box. 
 2. Enter the **Name** of the new **Logical Unit**. 
 3. Do either: 
     * Check **Open LU Auto Discovery** to create the LU using the [**Auto Discovery Wizard.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) 
@@ -16,7 +16,7 @@ A new [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/
 
 
 ### How Do I Duplicate a Logical Unit (LU)?
-1. Go to the **Project Tree**, right click the **Logical Unit** to open the **Logical Unit** dialog box. 
+1. Go to **Project Tree** > right click **Logical Unit** > **Logical Unit** dialog box. 
 2. Enter the **Name** of the new (duplicated) **Logical Unit**. 
 3. Click **OK**.  
 

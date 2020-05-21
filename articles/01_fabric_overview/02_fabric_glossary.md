@@ -183,7 +183,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong>
+<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
 </td>
 <td width="482">
 <p>Defines the order of the Enrichment Functions &nbsp;execution. The order is set in the Logical Unit Schema&rsquo;s properties.</p>
@@ -199,7 +199,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href:"https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md"><strong>Translation<strong></a>
+<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md"><strong>Translation<strong></a>
 </td>
 <td width="482">
 <p>A Fabric object that transforms data from one set of valid values to another and enables the execution of various transformation rules&nbsp;.</p>

@@ -3,8 +3,8 @@
 A Table Population object holds the transformation and mapping rules of the data and populates the data into the LU table. Each table can have one or several populations. 
 
 ## How Do I Add a Table Population to the LU Schema?
-1. Go to the **Project Tree**, right click the **LU table** and select **New Table Population** to create a new population object.  A notification opens informing you that the change requires a manual update of the LU schema file.
-1. Click **Yes** to open the **LU schema** and to go to the **LU Schema screen**. The new population is automatically added to the LU schema. 
+1. Go to the **Project Tree** > right click the **LU table** > select **New Table Population** to create a new population object.  A notification opens informing you that the change requires a manual update of the LU schema file.
+1. Click **Yes** to open the **LU schema** > **LU Schema screen**. The new population is automatically added to the LU schema. 
 1. Link the new **population** to its **parent**.
 1. Optional: edit the execution order of the new population if needed.
 
@@ -15,10 +15,10 @@ A Table Population object holds the transformation and mapping rules of the data
 [Click for more information about Editing the Execution Order of a Table Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md)
 
 ## How Do I Delete a Table Population From an LU Schema? 
-1. Go to the **Project Tree**, click the **Population Object** and then press the **Delete** key. 
+1. Go to the **Project Tree** > **Population Object** > press the **Delete** key. 
 1. Do either:\
   a. Re-open the **LU schema** screen. \
   b. If the LU schema screen is open, click the **Refresh** icon on the toolbar.
-1. Save the changes to remove the deleted population object from the LU schema.
+1. **Save** the changes to remove the deleted population object from the LU schema.
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/10_delete_table_from_a_schema.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)

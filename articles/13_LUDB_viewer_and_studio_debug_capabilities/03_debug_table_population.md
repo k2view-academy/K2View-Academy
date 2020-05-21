@@ -22,34 +22,34 @@ The **Debug Toolbar** has the following icons:
 <table>
 <tbody>
 <tr>
-<td width="200pxl">&nbsp; <img src="" alt="" /></td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table1.png" alt="" /></td>
 <td width="500pxl">
 <p>Enable / Disable Debug.</p>
 <p>By default, the Debug icon is disabled. To enable Debug Mode and display its icons on the toolbar, click the Debug icon.</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_03_02%20Debug%20Toolbar%20%20icon%203.png" alt="" /></td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table2_1.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table2_2.PNG" alt="" /></td>
 <td width="364">
 <p>Displays a list of Instance IDs for which the LUDB file exists.</p>
 <p>Either search for the Instance ID or select it from the dropdown list of debugged Instance IDs.</p>
 </td>
 </tr>
 <tr>
-<td width="240">&nbsp;</td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table3_1.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table3_2.PNG" alt="" /></td>
 <td width="364">
 <p>Displays a list of existing LUDB files.</p>
 <p>Click to select the file from the existing LUDB files or generate a new one. By default, the newest LUDB file is selected for the Debug&rsquo;s execution. &nbsp;&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="240">&nbsp;</td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table4.png" alt="" /></td>
 <td width="364">
 <p>Displays the current record&rsquo;s number.</p>
 </td>
 </tr>
 <tr>
-<td width="240">&nbsp;</td>
+<td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table5.png" alt="" /></td>
 <td width="364">
 <p>Execute Debug Mode: Options include Debug, Debug Next Record or Debug Next Instance which enable moving between the returned records.</p>
 </td>

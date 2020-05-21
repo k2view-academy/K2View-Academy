@@ -8,10 +8,10 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <table width="630">
 <thead>
 <tr>
-<td width="213">
+<td width="220pxl">
 <p><strong>User Code Method</strong></p>
 </td>
-<td width="417">
+<td width="600pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -35,7 +35,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="213">
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-"><strong>ludb</strong></a><strong>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</strong></p>
+<p><strong>ludb(String lutype, String luid)<strong></p>
 </td>
 <td width="417">
 <p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
@@ -49,13 +49,13 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <table width="630">
 <thead>
 <tr>
-<td width="204">
+<td width="300pxl">
 <p><strong>Use Cases</strong></p>
 </td>
-<td width="198">
+<td width="300pxl">
 <p><strong>User Code Method</strong></p>
 </td>
-<td width="228">
+<td width="300pxl">
 <p><strong>Examples</strong></p>
 </td>
 </tr>
@@ -68,7 +68,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <td width="198">
 <p>db(String interfaceName)</p>
 <p>ludb()</p>
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#fabric--">fabric</a>()</p>
+<p>fabric()</p>
 </td>
 <td width="228">
 <p>Db conn = db(&ldquo;fabric&rdquo;);</p>
@@ -82,7 +82,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>Connect to the local Fabric using a Web Service.</strong></p>
 </td>
 <td width="198">
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+<p>ludb(String lutype, String luid)</p>
 </td>
 <td width="228">
 <p>Db Conn = ludb("Customer", 2);</p>
@@ -93,7 +93,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU instance from another LU.</strong></p>
 </td>
 <td width="198">
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+<p>ludb(String lutype, String luid)</p>
 </td>
 <td width="228">
 <p>Db Conn = ludb("Customer", 2);</p>
@@ -126,10 +126,10 @@ The following table describes common use cases when working with DB Interfaces.\
 <table>
 <tbody>
 <tr>
-<td width="129">
+<td width="300pxl">
 <p><strong>Use Case</strong></p>
 </td>
-<td width="225">
+<td width="300pxl">
 <p><strong>Db Method</strong></p>
 </td>
 <td width="274">
@@ -137,12 +137,12 @@ The following table describes common use cases when working with DB Interfaces.\
 </td>
 </tr>
 <tr>
-<td width="129">
+<td width="300pxl">
 <p><strong>Execute Fabric Command</strong></p>
 <p><strong>&nbsp;</strong></p>
 </td>
 <td width="225">
-<p>public&nbsp;void&nbsp;execute(String sql, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+<p>Object</p>
 </td>
 <td width="274">
 <p>fabric().execute("get CRM.3");</p>

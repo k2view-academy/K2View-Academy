@@ -28,7 +28,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </td>
 <td style="width: 316px;">
 <ul>
-<li>The LU Schema has changed and is redeployed.</li>
+<li>The <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md"> LU Schema </a> has changed and is redeployed.</li>
 <li>First sync, the instance does not yet exist in Fabric.</li>
 <li>Sync the instance according to the pre-defined Sync method, set for each <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md">LU table</a> and <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md">table population object</a></li>
 </ul>
@@ -111,7 +111,7 @@ public static String getSyncMode();
 This method can be invoked by a [decision function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
 If the sync mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
 
-Click to open the list of Fabric API list: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
+Click to open the list of Fabric APIs: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)

@@ -90,7 +90,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </td>
 <td style="width: 414px;">
 <p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; DB objects can be refreshed by clicking the Refresh icon adjacent to the DB Connection dropdown list.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; DB objects can be refreshed by clicking the Refresh icon adjacent to the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
 </td>
 </tr>

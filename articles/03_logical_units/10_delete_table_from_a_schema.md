@@ -1,7 +1,7 @@
 # LU Schema - Deleting a Table from an LU Schema
 
 ## How Do I Delete a Table from an LU Schema?
-To remove a table from the LU schema, open the [**LU Schema window**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), click the [**LU table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md), press the **Delete** key and save the changes.
+To remove a table from the LU schema, open the [**LU Schema window**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), click  [**LU table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) > press the **Delete** key > **save** the changes.
 
 **Notes:**
 * Removing a table from an LU Schema does not delete it from the **Tables** branch under the LU in the Project Tree.
