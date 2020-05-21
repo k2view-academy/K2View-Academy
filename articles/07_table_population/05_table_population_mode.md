@@ -21,7 +21,7 @@ To define a key column(s):
 **Example:**
 Update the NEW_NOTE column of the target table ACTIVITY for each ACTIVITY_ID of the source object.
 
-![image]
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_05_01_screen.png)
 
 *	The ACTIVITY_ID column on the target LU table is defined as a **key column** for the **Update** statement.
 *	The **k2_concat5** function maps the updated value to the NEW_NOTE column on ACTIVITY table. 
