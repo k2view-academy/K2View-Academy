@@ -106,15 +106,21 @@ In the LU working area, right click an LU Table object to display a context menu
 
 
 **For Example**\
+
 Taking the CONTRACT table from the CUSTOMER LU as an example, the following illustrates key table relationship view options:\
+
 Show only predecessor nodes
+
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_03%20predecessor%20nodes.jpg)
+
 
 Show only successor nodes
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_04%20successor%20nodes.jpg)
 
+
 Show only connected nodes
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_05%20connected%20nodes.jpg)
+
 
 **Display Options** 
  
