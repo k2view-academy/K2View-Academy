@@ -6,7 +6,7 @@ Globals are predefined variables that can be accessed by different objects withi
 * Globals can be defined as Final and then they cannot be overridden in Java code or by a command that runs on the Fabric Server.
 * Globals that are not defined as Final can be overridden.
 
-[Click for more information about Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).
+[Click for more information about Global's override using SET and SET_GLOBAL commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md).
 
 The scope of a Global depends on how it is defined, which can be either:
 * [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md), whereby the Global is available to all objects in a Project under all Logical Units, Reference Tables and Web Services.
