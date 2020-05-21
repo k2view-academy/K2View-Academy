@@ -8,7 +8,7 @@ For example:
 
 * 	Get Customer 46:
     * 	Customer LU source system = Oracle DB.
-    * 	[DB interface name](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) = CRM_DB.
+    * 	[DB interface name](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md) = CRM_DB.
 Run the following command on Fabric:  get Customer.46;
 The following error is displayed:
 “Failed to connect to interface CRM_DB: java.sql.SQLException: 
@@ -21,16 +21,18 @@ In specific cases, you may prefer to roll back the sync without getting an error
  
 For example:
 
-If the source DB is down for maintenance, you may prefer getting the latest version of the instance from Fabric instead of getting an error. 
+If the source DB is down for maintenance, you may prefer getting the latest version of the instance from Fabric instead of getting an error.
+
 To do so, use the following Fabric command: set ignore_source_exception.
 
 Syntax:
-set ignore_source_exception <true/false>;
+
+- set ignore_source_exception <true/false>;
 
 Syntax-Examples:
 
-  set ignore_source_exception true;\
-  set ignore_source_exception false;
+-   set ignore_source_exception true;
+-   set ignore_source_exception false;
 
 When setting the ignore_source_exception to True, if Fabric fails to connect to the source system, Fabric does not throw an exception, but rolls back the changes of the LUI whereby the LUI version is not updated.\
 Note that if the required LUI is not yet in Fabric, the ignore_source_exception is set to True and the following message is generated:\
