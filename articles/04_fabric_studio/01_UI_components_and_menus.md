@@ -12,7 +12,7 @@ As an integrated tool, Fabric Studio allows you to:
 
 Fabric Studio also enables you to integrate your Projects into Source Version Control systems based on Git or the Apache Sub-version (SVN) Standard.
 
-**Click for more information about Best Practices for Working with SVN and Git.** 
+[Click for more information about Best Practices for Working with SVN and Git.](https://github.com/k2view-academy/K2View-Academy/blob/ccc78f6415282a75ace6d6eb1035e9d3701b1bb1/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### How Can I Use the Fabric Studio Start Page?
 
