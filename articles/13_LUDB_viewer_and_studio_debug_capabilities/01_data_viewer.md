@@ -68,7 +68,7 @@ if (i_id!=null && !i_id.isEmpty()){
    }
 return "0";
 
-</code><pre>
+</code></pre>
 
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_07%20play%20icon.jpg) **Play**
