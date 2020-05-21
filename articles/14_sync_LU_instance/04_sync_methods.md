@@ -1,7 +1,7 @@
 # Sync Methods
 
 ## Sync Properties
-Sync properties can be defined on an LU Schema, LU Table, or Table Population level.
+Sync properties can be defined on an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md), or T[able Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) level.
 
 **A Sync property contains the following settings:**
 <table>
@@ -11,7 +11,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <p><strong>Timeout (sec)<strong></p>
 </td>
 <td width="700pxl">
-<p>The timeout in seconds for syncing the LUI.</p>
+<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a>.</p>
 </td>
 </tr>
 <tr>
@@ -35,7 +35,7 @@ Sync properties can be defined on an LU Schema, LU Table, or Table Population le
 <p><strong>Delete Instance if Not Exists<strong></p>
 </td>
 <td width="500">
-<p>When marked as True, Fabric deletes the LUI if the LUI is not found in the source system.</p>
+<p>When marked as True, Fabric deletes the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a> if the LUI is not found in the source system.</p>
 <p>When marked as False (default), the instance is retained in Fabric even if the instance is not found in the source system.</p>
 </td>
 </tr>
