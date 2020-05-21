@@ -7,14 +7,14 @@ When creating a Logical Unit using the [Auto Discovery Wizard](https://github.co
 
 If you are not using the Auto Discovery Wizard, do the following:
 
-1. Go to the **Project Tree**, select the **Logical Unit** and double click the **Schema** to open the **Logical Unit** screen.
+1. Go to **Project Tree** > **Logical Unit** > double click the **Schema** > **Logical Unit** screen.
 2. Create the [**LU table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) and add it to the [**LU schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
-3. Go to the **LU table**, right click the **table header** and then click **Set as: Root:**
+3. Go to **LU table** > right click **table header** > **Set as: Root:**
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_08_01_tables.png)
 
-4. Double click the **LU table** to open it.
-5. In the **Table Properties**, click the **Instance PK Column** and then select the **table column** defining the **Main Identifier** of the table.
+4. Double click  **LU table** to open it.
+5. In the **Table Properties**, click **Instance PK Column** > select the **table column** defining the **Main Identifier** of the table.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_08_02_tables.png)
 
