@@ -68,7 +68,7 @@ Note that the Sync returns an error message when a source is not available. To c
 
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
-The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md) window:
+The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
 
 ![image](https://k2vacademy.s3.eu-west-2.amazonaws.com/Fabric/6_Sync/6_2_server_configuration_window.png)
 
