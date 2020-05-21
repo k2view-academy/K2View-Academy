@@ -129,7 +129,7 @@ When a decision function returns False it always skips a sync. Therefore, when w
 [Click to go to the Decision Functions Overview.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)\
 [Click for more information about Sync Modes.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)\
 [Click for more information about Sync Behavior.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/10_sync_behavior_summary.md)\
-[Click for more information about the Skip Sync Method.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)
+[Click for more information about the Skip Sync Method.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
 
 Click to display a list of Fabric API: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
