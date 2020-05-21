@@ -5,6 +5,7 @@ When creating or editing a [Logical Unit Schema](https://github.com/k2view-acade
 * [Navigation pane](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the LU Schema located in the right corner of the working area.
 * LU working area, where view options can be set.
 
+[Click for more information about the Diagram Outline and Toolbars](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
 ### How do I Use the Diagram Outline?
  
