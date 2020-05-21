@@ -10,9 +10,9 @@ Fabric Studio compiles all Java code in the project when the project is opened. 
 ### How do I Publish Project Code?
  
 After the Java code of the project object (like a Function or a Web Service) is complete it must be validated.
-1. Do either:\
-    a. Press **CTRL <S>** to save the code.\
-    b. Click **Save** on the left top screen to save the code.  
+1. Do either:
+    * Press **CTRL <S>** to save the code.
+    * Click **Save** on the left top screen to save the code.  
 2. Go to the **Project Tree**, right click the **Project Name** and then click **Rebuild All java Code**. 
 
 ### When is Java Code Validated?
