@@ -1,40 +1,40 @@
 # Table Population Overview
 
 ### What is a Table Population in Fabric? 
-A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU Table. Source data can be mapped directly to LU Table columns and Fabric transformation objects like Translations, Functions  or Globals, and can be added to define the mapping logic into the LU Table. 
+A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU Table. Source data can be mapped directly to LU Table columns and Fabric transformation objects like [Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md) or [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU Table. 
 
-Click for more information about Population Transformation Rules. 
+[**Click for more information about Population Transformation Rules**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md). 
 
-Each table can have one or several Table Populations that can be executed simultaneously or according to a predefined execution order .
+Each table can have one or several Table Populations that can be executed simultaneously or according to a predefined [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md) .
 Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU Table.
 There are two types of source objects for a **Table Population** object:
-*	DB query , (default) that executes an SQL Select query on a predefined DB interface. 
-*	Root function , that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
-Note that tables can also be populated or updated by enrichment function s which, unlike root functions, are executed after all LU Tables are populated.
+*	[DB query](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), (default) that executes an SQL Select query on a predefined DB interface. 
+*	[Root function])https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
+Note that tables can also be populated or updated by [enrichment functions] which, unlike root functions, are executed after all LU Tables are populated.
 
 ### Table Population in an LU Schema 
-An LU Schema structure  displays a hierarchical representation of the data related to the root table. Parent-child links in LU Tables are created via their Table Population objects:
-*	Each LU Table  can have one or several Table Population objects. 
+An [LU Schema structure](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the root table. Parent-child links in LU Tables are created via their Table Population objects:
+*	Each [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
 *	Each Table Population object, apart from the Table Population of the root LU Table, must be linked to a parent table via its Input columns.
 *	Each Table Population object can be linked to a different parent LU Table.
-Note that an LU Table can be added to an LU Schema  without a Table Population object. This table is not populated by the sync  of the LU Instance  but can be populated by a separate transaction .
+Note that an LU Table can be added to an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction .
 
-Click for more information about Building an LU Hierarchy and Linking Table Populations.
+[**Click for more information about Building an LU Hierarchy and Linking Table**] Populations.
 
 ### Table Population Window
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database. 
 
-Click for more information about How to Create a New Population .
+[**Click for more information about How to Create a New Population.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 
 The following is an example of the Table Population window. 
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_01_table_pop_window.png)
 
 The Table Population window has the following sections:
-*	Population Header. 
-*	Working Area.
-*	Properties Tab.
-*	Objects Tab.
+*	[Population Header]. 
+*	[Working Area].
+*	[Properties Tab].
+*	[Objects Tab].
 
 ### Population Window Header
 The Population window header holds the **Debug** and **Options** toolbars where additional toolbars like **Edit**, **Zoom**, **Alignment** or **Export** can be added when needed. 
@@ -42,12 +42,12 @@ The Population window header holds the **Debug** and **Options** toolbars where 
 Click for more information about Additional Toolbars.
 
 ### Debug Toolbar
-The **Debug Toolbar** holds options for testing the Population process by executing its population logic on a selected Instance ID.
+The [**Debug Toolbar**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) holds options for testing the Population process by executing its population logic on a selected [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
 *	When the execution is successful, the values of the Input and Output fields are displayed in the working area above the connection lines between the source and the target. 
 *	If there is an error, it is displayed in the Fabric Studio Log section.
 *	If the outcome has more than one row, you can navigate between the different rows.
 
-Click for more information about the Fabric Studio Log.
+[**Click for more information about the Fabric Studio Log.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
 
 ### Options Toolbar
 The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options.
@@ -102,18 +102,18 @@ The Working Area includes:
 </tbody>
 </table>
 
-Click for more information about Adding Transformation Rules.
+[**Click for more information about Adding Transformation Rules.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md)
 
 ### Properties Tab
 The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU Table or a translation. Note that some properties are editable. 
 
-Click for more information about the Population Properties Tab.
+[**Click for more information about the Population Properties Tab.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)
 
 ### Objects Tab
-The **Objects Tab** in a **Table Population** window (right pane) displays all available Fabric objects. For example, Databases, Globals, Built-In Functions, Project or Functions. 
+The **Objects Tab** in a **Table Population** window (right pane) displays all available Fabric objects. For example, [Databases](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md), [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md), [Built-In Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md), [Project](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) or [Functions]. 
 Objects can be included in a population map by dragging and dropping them into the working area.
 
-Click for more information about Adding Transformation Rules.
+[**Click for more information about Adding Transformation Rules.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Diagram Outline Link
 The Expand / Collapse and Refresh links are displayed above the Objects tab.
@@ -140,7 +140,7 @@ The Expand / Collapse and Refresh links are displayed above the Objects tab.
 </tbody>
 </table>
 
-Click for more information about the Objects Tab - Diagram Outline.
+[**Click for more information about the Objects Tab - Diagram Outline.**[(https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
 
 [<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md)
 
