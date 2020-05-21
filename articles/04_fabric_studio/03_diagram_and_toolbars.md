@@ -328,6 +328,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
+
 [Click for more information about Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
 ### Table Population Toolbar
