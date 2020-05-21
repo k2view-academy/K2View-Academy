@@ -1,4 +1,4 @@
-# Project Functions
+# Creating a Project Function
 
 ### How Can I Create a Project Function?
 
