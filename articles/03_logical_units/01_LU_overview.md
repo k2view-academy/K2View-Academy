@@ -53,50 +53,50 @@ Below is a table of **pros and cons** of each alternative:
 <td width="300">
 <p>Ease of writing APIs</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
-<td align="center" width="10">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="10">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="300">
 <p>Replacing a data source</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="300">
 <p>Small amount of data in LU</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Maintenance, handling a less complex schema and internal relationships</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Implementing a real-time action based on an event like a Golden Gate update, when the action depends on multiple data systems</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Performance of real-time updates</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Tuning the migration process</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" </td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 </tbody>
 </table>
