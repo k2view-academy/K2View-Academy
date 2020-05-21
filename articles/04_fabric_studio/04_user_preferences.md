@@ -2,7 +2,7 @@
 
 ### What Are User Preferences Used For?
 User Preferences are used to define key operational functionalities for development, debugging, deployment and runtime execution activities.\
-To open the User Preferences options, click the [Tools](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/01_UI_components_and_menus.md) icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
+To open the User Preferences options, click the [Tools](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
  
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_04_01%20default%20General%20Preferences.png)
 
