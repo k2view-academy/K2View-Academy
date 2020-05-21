@@ -31,12 +31,14 @@ When an LU Table has two populations, a second table population can extract data
 <td width="511">
 <p>A <strong>Root Function</strong> is needed when a Table Population requires complex logic.</p>
 <p>Most common use cases are:</p>
-<p>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A population requires data from multiple DB interfaces, however, the DB query cannot run the Join between different DB interfaces. For example, to retrieve a customer&rsquo;s Address ID from the CRM DB and to then retrieve full address details from the Address Repository DB.</p>
-<p>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the population has complex logic that requires execution of several DB queries.</p>
-<p>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A population requires data from another LU. For example, to retrieve Customer details from the CRM LU to populate part of its data into the Billing LU.</p>
-<p>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When source data is extracted from a file or any other non-DB interface.</p>
-<p>5.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When using the Fabric Remote DB, a Table Population must use a root function to get the instance before running the SQL query on the LUI.</p>
-<p>6.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; When the population needs to run a Fabric command. For example, setting the source environment&nbsp; to UAT so that data for a selected table is not extracted from Production to avoid overloading the source system. The root function can set the environment on a session level and select the data from the required source environment.</p>
+<ol>
+<li>A population requires data from multiple DB interfaces, however, the DB query cannot run the Join between different DB interfaces. For example, to retrieve a customer&rsquo;s Address ID from the CRM DB and to then retrieve full address details from the Address Repository DB.</li>
+<li>When the population has complex logic that requires execution of several DB queries.</li>
+<li>A population requires data from another LU. For example, to retrieve Customer details from the CRM LU to populate part of its data into the Billing LU.</li>
+<li>When source data is extracted from a file or any other non-DB interface.</li>
+<li>When using the Fabric Remote DB, a Table Population must use a root function to get the instance before running the SQL query on the LUI.</li>
+</ol>
+<p>When the population needs to run a Fabric command. For example, setting the source environment&nbsp; to UAT so that data for a selected table is not extracted from Production to avoid overloading the source system. The root function can set the environment on a session level and select the data from the required source environment.</p>
 </td>
 </tr>
 </tbody>
