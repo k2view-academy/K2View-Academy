@@ -35,7 +35,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="213">
-<p><strong>ludb(string lutype, string luid<strong></p>
+<p><strong>ludb(String lutype, String luid)<strong></p>
 </td>
 <td width="417">
 <p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
@@ -68,7 +68,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <td width="198">
 <p>db(String interfaceName)</p>
 <p>ludb()</p>
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#fabric--">fabric</a>()</p>
+<p>fabric()</p>
 </td>
 <td width="228">
 <p>Db conn = db(&ldquo;fabric&rdquo;);</p>
@@ -82,7 +82,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>Connect to the local Fabric using a Web Service.</strong></p>
 </td>
 <td width="198">
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+<p>ludb(String lutype, String luid)</p>
 </td>
 <td width="228">
 <p>Db Conn = ludb("Customer", 2);</p>
@@ -93,7 +93,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU instance from another LU.</strong></p>
 </td>
 <td width="198">
-<p><a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/user/UserCode.html#ludb-java.lang.String-java.lang.String-">ludb</a>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;lutype,&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;luid)</p>
+<p>ludb(String lutype, String luid)</p>
 </td>
 <td width="228">
 <p>Db Conn = ludb("Customer", 2);</p>
