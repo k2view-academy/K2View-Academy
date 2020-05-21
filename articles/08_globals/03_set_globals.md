@@ -10,7 +10,7 @@ Both commands can override a Global value only if the Global is not defined as F
 ### How do I Use Set_Global Global Command?
 
 This command overrides a Global value on the **entire cluster**, impacting all Fabric sessions, including open ones.\
- set_global global '<LUT NAME>.<PARAM_NAME>[=<PARAM_VALUE>]';
+**set_global global '<LUT NAME>.<PARAM_NAME>[=<PARAM_VALUE>]';**
 
 The **set_global global** command sets the value of the Global indicated by <PARAM_NAME> to the value provided by the <PARAM_VALUE>. The PARAM_NAME must be defined as a Global Variable in Fabric.
 
