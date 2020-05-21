@@ -115,7 +115,9 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <tbody>
 <tr>
 <td width="111">&nbsp;</td>
-<td width="390"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU1.png" alt="" /></td>
+<td width="390">
+<p>Undo last change.</p>
+</td>
 </tr>
 <tr>
 <td width="111">&nbsp;</td>
@@ -278,8 +280,7 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113">
-<p>&nbsp;</p>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU1.png" alt=""/>
 </td>
 <td width="398">
 <p>Group sub graph.</p>
