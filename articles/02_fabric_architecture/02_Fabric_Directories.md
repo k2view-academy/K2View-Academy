@@ -1,12 +1,7 @@
 ﻿
 # Fabric Server- Main Directories
 Fabric server has the several directories under its home directory: $K2_HOME. Below is the list of the main fabric directories under the home directory: 
-
-<table>
-<tbody>
-<tr style="height: 62px;">
-<td style="height: 62px; width: 101.6px;">
-<p><strong>Directory Name</strong></p>
+[fabric overview](01_what%20is%20fabric.md)</strong></p>
 </td>
 <td style="height: 62px; width: 463.2px;">
 <p><strong>Directory Content</strong></p>
