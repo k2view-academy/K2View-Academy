@@ -33,6 +33,7 @@ The Input and Output parameters can be added to the function automatically using
 
 **Example of the Input and Output Parameters Settings**
 
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/4_1_1_1_first_image.png)
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/4_1_2%20%20Parameters%20settings.png)
 
 [Click for more information about How to Define a Function’s Parameters Automatically.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-define-functions-parameters) 
@@ -67,7 +68,7 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
 }
 </code></pre>
  
-[**Click to go to the Root Function’s Code Example.**]
+[Click to go to the Root Function’s Code Example.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_02_root_functions_code_examples.md)
 
 
 ### How do I Delete a Root Function?
