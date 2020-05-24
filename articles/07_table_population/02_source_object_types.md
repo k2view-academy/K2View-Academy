@@ -148,8 +148,10 @@ The comparison below analyzes the differences and the similarities between two d
 <p>For example:</p>
 <p>There are 1,500 subscribers for Instance ID = 1. Each subscriber has services.</p>
 <p>To select the subscriber&rsquo;s services, the DB Query runs two SELECT statements from the source DB:</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Query 1 on a group of 1,000 subscribers.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Query 2 on the remaining 500 subscribers.</p>
+  <ul>
+<li>Query 1 on a group of 1,000 subscribers.</li>
+<li>Query 2 on the remaining 500 subscribers.</li>
+  </ul>
 </td>
 <td width="251">
 <p>The root function does not have a Grouping mechanism and therefore executes a SELECT statement for each parent ID.</p>
