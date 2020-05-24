@@ -9,7 +9,7 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <p><strong>Check</strong></p>
 </td>
 <td width="700pxl">
-<p>Should the Sync on the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> be skipped?</p>
+<p>Should the Sync on the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> be skipped?</p>
 </td>
 </tr>
 <tr>
@@ -17,8 +17,8 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <p><strong>Consideration</strong></p>
 </td>
 <td width="472">
-<p>When defining a decision function on the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md">LU Schema</a>, the decision function runs on every <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md"> population </a> in the LU Schema.</p>
-<p>If the decision function returns the same result for each population, it is recommended to set it on the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a>&rsquo;s population. Then invoke the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md"><strong>skipSync()</strong> </a> method in the decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the decision function on each LUI instead of executing the decision function on each population.</p>
+<p>When defining a decision function on the <a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema</a>, the decision function runs on every <a href="/articles/07_table_population/01_table_population_overview.md"> population </a> in the LU Schema.</p>
+<p>If the decision function returns the same result for each population, it is recommended to set it on the <a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a>&rsquo;s population. Then invoke the <a href="/articles/14_sync_LU_instance/09_skip_sync.md"><strong>skipSync()</strong> </a> method in the decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the decision function on each LUI instead of executing the decision function on each population.</p>
 <p>For example, setting the decision functions to check whether the current time is during peak or off-peak hours.</p>
 </td>
 </tr>
@@ -126,10 +126,10 @@ When a decision function returns False it always skips a sync. Therefore, when w
 
 
 
-[Click to go to the Decision Functions Overview.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)\
-[Click for more information about Sync Modes.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)\
-[Click for more information about Sync Behavior.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/10_sync_behavior_summary.md)\
-[Click for more information about the Skip Sync Method.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
+[Click to go to the Decision Functions Overview.](/articles/14_sync_LU_instance/05_sync_decision_functions.md)\
+[Click for more information about Sync Modes.](/articles/14_sync_LU_instance/02_sync_modes.md)\
+[Click for more information about Sync Behavior.](/articles/14_sync_LU_instance/10_sync_behavior_summary.md)\
+[Click for more information about the Skip Sync Method.](/articles/14_sync_LU_instance/09_skip_sync.md)
 
 Click to display a list of Fabric APIs: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
@@ -183,7 +183,7 @@ return syncInd;
 
 **Example 3**
 
-Add a decision function on the CASE LU Table to check if the CONTRACT LU Table has been updated. The check is based on a [session level Global](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md) (key) which is set to True by the population of the CONTRACT LU Table. 
+Add a decision function on the CASE LU Table to check if the CONTRACT LU Table has been updated. The check is based on a [session level Global](/articles/08_globals/03_set_globals.md) (key) which is set to True by the population of the CONTRACT LU Table. 
 
 <pre><code>
 // Init the Boolean by true\
@@ -220,7 +220,7 @@ return syncInd;
 ```
 Note that the fnCheckSourceEnv , fnCheckSourceVersion, and fnCheckOffPeak functions are displayed in the Demo Fabric Project under the Code tab.
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)
+[![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/05_sync_decision_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](articles/14_sync_LU_instance/07_sync_levels.md)
 
 
 
