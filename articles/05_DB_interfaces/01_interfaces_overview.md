@@ -22,4 +22,4 @@ DB Interfaces enable Fabric Server connections to databases like the SQL Server,
 
 Non-DB Interfaces are used to define a connection with data sources that are not databases. For example, search engines, FTP servers or message queues like JMS or Kafka. 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md) 
