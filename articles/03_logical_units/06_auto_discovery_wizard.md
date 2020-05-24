@@ -62,7 +62,7 @@ Auto Discovery supports the following modes:
 </td>
 <td colspan="2" width="444">
 <p>By default, this checkbox is unchecked. When checked, tables identified by Auto Discovery as the parent tables of the selected Root Table are added to the LU schema as child tables and are not filtered out of the schema.</p>
-<p>See the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md#step-4-check-the-erd-diagram">example in Step 4 below</a>.</p>
+<p>See the example in Step 4 below.</p>
 </td>
 </tr>
 <tr>
