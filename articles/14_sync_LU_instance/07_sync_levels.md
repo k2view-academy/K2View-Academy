@@ -7,7 +7,7 @@ The Sync properties of an LU Schema can be overridden, as follows:
 * Setting Sync properties on the LU Table. By default, the related Table Population objects and the enrichment functions attached to the LU Table inherit the Sync properties of the LU Table.
 * Setting Sync properties on each Table Population object. 
 
-![image](https://k2vacademy.s3.amazonaws.com/Fabric/6_Sync/6_6_sync_levels.png)
+![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/images/6_6_1_sync_levels.png)
 
 ## Overriding Sync Properties in an LU Schema - Use Cases
 
