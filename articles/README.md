@@ -127,7 +127,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>LUDB Viewew and Studio Debug Capabilities<strong></summary>
+<summary markdown="span"><strong>LUDB Viewer and Studio Debug Capabilities<strong></summary>
 <ul>
   
 <li><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></li>
