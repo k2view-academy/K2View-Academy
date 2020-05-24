@@ -3,7 +3,7 @@
 The Table Properties tab is displayed in the right pane of Table window.
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/images/06_04_table_properties.png)
+![image](/articles/06_LU_tables/images/06_04_table_properties.png)
 
 
 The Properties tab displays a list of properties that must be defined for each LU Table, as follows:
@@ -25,7 +25,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Instance PK Column</strong></p>
 </td>
 <td width="474">
-<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md#index-definition">LU table&rsquo;s Primary Key.</a></p>
+<p>A unique field that is used as the <a href="/articles/06_LU_tables/03_table_indexes.md#index-definition">LU table&rsquo;s Primary Key.</a></p>
 </td>
 </tr>
 <tr>
@@ -51,7 +51,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method</strong></a></p>
+<p><a href="/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method</strong></a></p>
 </td>
 <td width="474">
 <p>There are four Sync methods:</p>
@@ -65,7 +65,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync"><strong>Truncate Before Sync</strong></a></p>
+<p><a href="/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync"><strong>Truncate Before Sync</strong></a></p>
 </td>
 <td width="474">
 <p>When Truncate Before Sync = True, the entire LU table is truncated before the populations are executed.</p>
@@ -94,4 +94,4 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>&nbsp;</p>
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md)
+[![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/03_table_indexes.md)
