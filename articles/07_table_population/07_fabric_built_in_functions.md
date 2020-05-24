@@ -5,7 +5,7 @@ Built-in functions are grouped into different categories.  The following table d
 
 For the full list:  
 
-[**Click to display the Fabric API list:**](http://<Fabric IP address>:3213/static/doc/user-api/index.html)
+Click to display the Fabric API list: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
 <table style="width: 528px;">
 <tbody>
