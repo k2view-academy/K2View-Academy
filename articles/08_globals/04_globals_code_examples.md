@@ -4,7 +4,7 @@
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_01%20A%20NEW%20GLOBAL.png)
 
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md).
+Open the **Globals** window under a **Logical Unit** and [define a new **Global**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
 
 After the Global is saved, its definition is kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all the functions under this LU.
 
@@ -19,7 +19,7 @@ This example shows how to check the value of a Global variable and to determine 
 ### Example of Using a Global in a Table Population
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
 
-Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) and then create a new [**Table Population**](https://github.com/k2view-academy/K2View-Academy/commit/11e774bf366c76431b401311b39a8a4c9a52e87a) and add the **Globals** to it.
+Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a new [**Table Population**](https://github.com/k2view-academy/K2View-Academy/commit/11e774bf366c76431b401311b39a8a4c9a52e87a) and add the **Globals** to it.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
 
@@ -31,7 +31,7 @@ This example shows how a Global can be used in a [Table Population](https://gith
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_04%20GLOBAL%20IN%20A%20FABRIC%20WEB.png)
 
-Open the **Globals** window under **Shared Objects** and [define new **Globals**](https://github.com/k2view-academy/K2View-Academy/wiki/Globals-Overview) and then [create a **Web Service**] and use the Globals.
+Open the **Globals** window under **Shared Objects** and [define new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**] and use the Globals.
 
 This example shows how Globals can be used within a Fabric Web Service.
 
