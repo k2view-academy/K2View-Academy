@@ -22,7 +22,8 @@ When creating an LUBD fuction, make sure that:
 3.	Create another function, for example a **Root function**, that invokes the **LUDB function** from the **SELECT** statement:
 
 <pre><code>
-String sql = "SELECT CUSTOMER_ID, ACTIVITY_ID, ACTIVITY_DATE, ACTIVITY_NOTE, fnCreateInstId(?) IID FROM Customer.ACTIVITY";
+String sql = 
+"SELECT CUSTOMER_ID, ACTIVITY_ID, ACTIVITY_DATE, ACTIVITY_NOTE, fnCreateInstId(?) IID FROM Customer.ACTIVITY";
 Db.Rows rows = ludb().fetch(sql,input);
 for (Db.Row row:rows){
 	yield(row.cells());
