@@ -13,7 +13,7 @@ There are four table population modes:
 
 If the population mode of the target LU Table is set to **Update** or **Delete**, the key column(s) must be defined to enable the target LU Table’s records to be updated or deleted correctly. The selected key column(s) is then added to the **WHERE** clause of the **UPDATE** or **DELETE** SQL statement. 
 
-To define a key column(s):
+To define a key:
 *	Check the checkbox on the left side of the **Column Name**. The color of the checkbox turns green.  
 *	Mark one or several columns, if needed.
 
