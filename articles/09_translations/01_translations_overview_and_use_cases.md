@@ -16,7 +16,7 @@ There are several options for populating data in a Translation in the Fabric Stu
 A Translation can be used when a [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md)  or [Project function](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/08_project_functions.md) needs to apply transformation rules.
 For example:
 *	When there are several source systems, each having a list of valid values for the Customer Type attribute. The Translation defines one unified set of valid values for the target (Fabric) and transformation rules from the Input value (source) to the Output value (target).
-*	When there are several DB interfaces, the Translation can map between the system name and its [DB interface](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) name to be used in the code.
+*	When there are several DB interfaces, the Translation can map between the system name and its [DB interface](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) name to be used in the code. 
 *	When there is a list of attributes or business rules in the LU, the Translation can define an SQL query for each attribute or business rule.
 
 ### Translation Window
