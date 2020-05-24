@@ -63,7 +63,7 @@ The **set_global global** command sets the value of the Global indicated by <PAR
 </tbody>
 </table>
 
-### How Do I Use the Set Variable Command?
+### How Do I Use the Set Command?
 
 The **set** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable, or to override an existing Global for the Fabric session if the Global is not final.
 
