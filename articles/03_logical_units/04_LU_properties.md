@@ -6,7 +6,7 @@ The Properties tab in the LU window contains the following properties:
 <tbody>
 <tr>
 <td width="236">
-<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync properties</a></strong></p>
+<p><strong><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync properties</a></strong></p>
 </td>
 <td width="368">
 <p>Sets the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> and properties on an LU level.</p>
