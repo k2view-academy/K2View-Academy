@@ -23,7 +23,7 @@
 <h3><strong>LU / LUT<strong>
 </td>
 <td width="482">
-<p>A <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a digital entity&nbsp;.</p>
+<p>A <a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a digital entity&nbsp;.</p>
 
 </td>
 </tr>
@@ -53,7 +53,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md"><strong>LU Table<strong></a>
+<h3><a href="/articles/06_LU_tables/01_LU_tables_overview.md"><strong>LU Table<strong></a>
 </td>
 <td width="482">
 <p>The basic building block of a logical unit which defines a digital entity&rsquo;s data, including columns, PKs, indexes and triggers. A logical unit may have one or many LU tables.</p>
@@ -61,7 +61,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
+<h3><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
 <p>The main table in the logical unit. Based on the table&rsquo;s primary key field/s the instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
@@ -69,7 +69,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md"><strong>Table Population<strong></a>
+<h3><a href="/articles/07_table_population/01_table_population_overview.md"><strong>Table Population<strong></a>
 </td>
 <td width="482">
 <p>Defines the data transformation and mapping rules from a source into a targeted LU table. An LU table can contain several table populations.</p>
@@ -93,7 +93,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md"><strong>Sync<strong></a>
+<h3><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md"><strong>Sync<strong></a>
 </td>
 <td width="482">
 <p>A process that updates / modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and also populates its data into Fabric.</p>
@@ -101,7 +101,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md"><strong>Sync Mode<strong></a>
+<h3><a href="/articles/14_sync_LU_instance/02_sync_modes.md"><strong>Sync Mode<strong></a>
 </td>
 <td width="482">
 <p>The synchronization mode of an instance from source systems.</p>
@@ -113,7 +113,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method<strong></a>
+<h3><a href="/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method<strong></a>
 </td>
 <td width="482">
 <p>Defines how the Sync will be performed (sync policy):</p>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md"><strong>Data Viewer<strong></a>
+<h3><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md"><strong>Data Viewer<strong></a>
 </td>
 <td width="482">
 <p>A Fabric Studio capability, which allows you to view the Logical Unit Instance stored in memory as a database file.</p>
@@ -183,7 +183,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
+<h3><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
 </td>
 <td width="482">
 <p>Defines the order of the Enrichment Functions &nbsp;execution. The order is set in the Logical Unit Schema&rsquo;s properties.</p>
@@ -191,7 +191,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md"><strong>Lookup<strong></a>
+<h3><a href="/articles/07_table_population/11_lookup_tables.md"><strong>Lookup<strong></a>
 </td>
 <td width="482">
 <p>A Lookup is an object that is added to a table population to get information from a source DB, LU table or reference table.</p>
@@ -199,7 +199,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md"><strong>Translation<strong></a>
+<h3><a href="/articles/09_translations/01_translations_overview_and_use_cases.md"><strong>Translation<strong></a>
 </td>
 <td width="482">
 <p>A Fabric object that transforms data from one set of valid values to another and enables the execution of various transformation rules&nbsp;.</p>
@@ -207,7 +207,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md"><strong>Interfaces<strong></a>
+<h3><a href="/articles/05_DB_interfaces/01_interfaces_overview.md"><strong>Interfaces<strong></a>
 </td>
 <td width="482">
 <p>An Interface is a data communication channel between Fabric and any external systems.</p>
@@ -227,7 +227,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md"><strong>Globals<strong></a>
+<h3><a href="/articles/08_globals/01_globals_overview.md"><strong>Globals<strong></a>
 </td>
 <td width="482">
 <p>Globals are used when a variable with the same value is required repeatedly by various Fabric objects. A Global can be defined within a shared scope or locally in the LUT.</p>
@@ -251,7 +251,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md"><strong>Execution Order<strong></a>
+<h3><a href="/articles/07_table_population/13_LU_table_population_execution_order.md"><strong>Execution Order<strong></a>
 </td>
 <td width="482">
 <p>The order that LU tables are populated in an LU Schema is defined by Fabric when the LU Schema is created. The LU Schema root table is always populated first and by default, its population order is set to 1 since it is the first one to be executed.</p>
@@ -289,5 +289,5 @@
 </tbody>
 </table>
   
-  [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/01_what%20is%20fabric.md)
+  [![Previous](/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/01_what%20is%20fabric.md)
 
