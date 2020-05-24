@@ -1,6 +1,6 @@
 # Lookup Tables
 
-A **Lookup** is an object that is added to a [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference Table]. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
+A **Lookup** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference Table]. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
 *	**Input** fields are used for the WHERE clause of an SQL statement. 
 *	**Output** fields are used for the SELECT statement of an SQL statement.
 
@@ -21,7 +21,7 @@ Click **Database** to display the list of tables, select the table and drag it t
     *	Optional: connect the Lookup **Input** fields to the **Source Table**.
     *	Connect the Lookup **Output** fields to the **Target**.
     
-    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_11_01_screen.png)
+    ![image](/articles/07_table_population/images/07_11_01_screen.png)
     
 6.	Right click the **Lookup** and select **Minimize** to display only the Lookup’s connected fields.
 7.	In the [**Properties Tab**] (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
@@ -30,11 +30,11 @@ Click **Database** to display the list of tables, select the table and drag it t
 **Notes**  
 *	It is recommended to create a Lookup based on an LU Table and not a DB Table in order to improve performance. The reason is that an LU Table is usually much smaller than the source DB table, since it includes only the data which is relevant / applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
 *	It is recommended to create an [index  on the LU Table] for the Input fields in order to improve performance of the Lookup table’s Search.
-*	When creating a Lookup based on an LU Table, check that the Lookup object is populated **before** the current table so that the table has a higher [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md) Fnumber than the Lookup object.
+*	When creating a Lookup based on an LU Table, check that the Lookup object is populated **before** the current table so that the table has a higher [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) Fnumber than the Lookup object.
 
 ### Lookup Properties Tab
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_11_02_lookup_prop.png)
+![image](/articles/07_table_population/images/07_11_02_lookup_prop.png)
 
 The following information is displayed in the Lookup Properties:
 
@@ -105,5 +105,5 @@ The following information is displayed in the Lookup Properties:
 </tbody>
 </table>
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_project_functions.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/10_project_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/12_table_population_diagram_outline.md)
 
