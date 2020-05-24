@@ -1,6 +1,6 @@
 # Translations Overview
 
-### What is a Translation?
+### What Is a Translation?
 A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/04_general/12_shared_objects.md) level or on a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/03_logical_units/01_LU_overview.md) level or both. 
 *	Translations defined on a Shared Objects level can be used in all objects in a Project. 
 *	When a Translation is used for a [Web Service] it must be defined on a Shared Objects level.
