@@ -165,7 +165,7 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 <p><strong>Run select statement on DB interface</strong></p>
 </td>
 <td width="225">
-<p>public Db.Rows fetch(String) sql,</p>
+<p>public Db.Rows fetch(String sql,</p>
 <p>Object params)</p>
 <p>&nbsp;</p>
 </td>
