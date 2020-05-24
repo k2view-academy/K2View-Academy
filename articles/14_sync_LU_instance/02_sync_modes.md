@@ -70,7 +70,7 @@ Note that the Sync returns an error message when a source is not available. To c
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
 The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
 
-![image](https://k2vacademy.s3.eu-west-2.amazonaws.com/Fabric/6_Sync/6_2_server_configuration_window.png)
+![image](/articles/14_sync_LU_instance/images/6_2_server_configuration_window.png)
 
 This checkbox defines the sync mode of the first get of each LU instance after the LU is deployed to the server:
 * If checked, the Sync mode is set to FORCE.
