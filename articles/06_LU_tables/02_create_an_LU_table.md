@@ -27,7 +27,7 @@ From the Project Tree:
 4.	**Save** the table.
 
 ### How Do I Edit an LU Table? 
-1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], **Tables** and select [**Table Name**] to display the Columns tab in the Table Schema.
+1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** and select [**Table Name**] to display the Columns tab in the Table Schema.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.
 
