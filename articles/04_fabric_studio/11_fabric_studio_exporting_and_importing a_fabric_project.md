@@ -7,7 +7,7 @@ Fabric Studio has a proprietary encapsulation functionality that packages an ent
 There are two Export options:
 * Export an entire project.
 * Export a specific object, for example:
-  * Group items, Shared Objects, References, Web Services, [LU](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/03_logical_units/01_LU_overview.md).
+  * Group items, [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/1d269e8379b459ce29343f705dd17aaafcbf74b1/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/03_logical_units/01_LU_overview.md).
   * Sub-groups, [interfaces](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/06_LU_tables/01_LU_tables_overview.md).
   * Java files (categories).
   * Objects, whereby you can export a specific object from the Project Tree. Java functions cannot be exported using this method.
