@@ -14,7 +14,7 @@ The Project Tree is displayed on the left side of the Fabric Studio window.
  
 The name of the current active project in the studio is displayed at the top of the project’s tree and the related Git/Svn branch, in the example above master is used.
 Each project has the following main components: 
-* **[Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md)** used by all Logical Units and project references and may include the following sub-branches:
+* [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md)** used by all Logical Units and project references and may include the following sub-branches:
   * [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) 
   * Environments 
   * [Database types](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/05_DB_interfaces/03_DB_interfaces_overview.md) 
