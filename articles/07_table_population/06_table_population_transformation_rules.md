@@ -1,6 +1,6 @@
 # Table Population Transformation Rules
 
-**Data** Transformation rules can be applied during the [LU Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) process in a number of ways using the following tools: 
+Data Transformation rules can be applied during the [LU Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) process in a number of ways using the following tools: 
 *	[Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md).
 *	[Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md).
 *	[Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md).
