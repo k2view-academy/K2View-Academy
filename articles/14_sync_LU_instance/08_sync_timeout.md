@@ -6,8 +6,6 @@ A sync timeout can be defined either per session or at an LU Schema level.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/images/6_7_sync_timeout_levels.png)
 
-
-
 ### How do I Set the Sync Timeout on an LU Schema?
 The Sync property in the LU Schema Properties tab has the following setting:
 * Timeout (sec) – Set a timeout in seconds for syncing LUI.\
