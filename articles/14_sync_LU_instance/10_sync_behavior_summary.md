@@ -1,6 +1,6 @@
 # Sync Behavior - Summary Table
 
-A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md), Properties  and [Sync Mode](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)  (ON / OFF / FORCE), as described in the following table: 
+A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md), Properties  and [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md)  (ON / OFF / FORCE), as described in the following table: 
 
 <table width="106%">
 <tbody>
@@ -185,4 +185,4 @@ A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2Vi
 
 Note that when the Sync mode = OFF Fabric does not perform a sync. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
+[![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/09_skip_sync.md)
