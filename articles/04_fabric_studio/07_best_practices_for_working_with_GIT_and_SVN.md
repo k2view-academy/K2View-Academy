@@ -50,7 +50,7 @@ When working with SVN in Fabric projects we recommend:
 * To resolve conflicts, downgrade the SVN revision to a previous one. Use the Update option and then use the Reverse Merge option to commit it.
 * For projects that are required to deploy into multiple environments and / or work under CI / CD mode, check the *. json, *.jar, *.zip files, commit them into the SVN repository and then deploy them from the command line.
 
-Click for more information about Deployment from a Command Line. 
+Click for more information about Deployment from a Command Line.  
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/08_fabric_project_tree.md)
 
