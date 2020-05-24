@@ -7,7 +7,7 @@ An LUDB function is a Project function invoked from an SQL query to perform more
 *	LUDB functions must have at least one Output value.
 
 ### How Do I Create or Edit an LUDB Function? 
-To create an LUDB function, refer to the steps in [How to Create Project Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md).
+To create an LUDB function, refer to the steps in [How to Create Project Functions](https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/07_table_population/10_creating_a_project_function.md).
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_09_01_screen1.png)
 
@@ -30,6 +30,6 @@ for (Db.Row row:rows){
 }
 </code></pre>
 
-Click [**fnCreateInstId.java**]  to open an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
+Open **fnCreateInstId.java** to view an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_project_functions.md)
