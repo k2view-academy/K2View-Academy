@@ -11,7 +11,7 @@ A Root Function is used when a table population requires complex logic. For exam
 
 [Click for more information about using Root Functions in a Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md#how-do-i-create-a-new-table-population-from-a-root-function)
 
-### How can I Create or Edit a Root Function?
+### How Can I Create or Edit a Root Function?
 There are several ways to create a Root Function: 
 * In the LU Schema window, by using the **New Table from SQL Based Root Function** option. Using this option, a new [LU table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md), new population and new Root Function are created by the Fabric Studio. The Root Function’s code is generated based on the selected SQL. It is recommended to edit the generated function and add a **WHERE** clause to the generated SQL to retrieve only the relevant data of the [LU Instance](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui).
 * Dragging the LU Table from the DB Objects tab in the LU Schema window and selecting **Create Table Based Root** Function. A new LU Table, new population and new Root Function and its generated code are created by the Fabric Studio. 
@@ -71,7 +71,7 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
 [Click to go to the Root Function’s Code Example.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_02_root_functions_code_examples.md)
 
 
-### How do I Delete a Root Function?
+### How Do I Delete a Root Function?
  
 1.	Go to **Project Tree > Logical Units > [LU Name]**.
 2.	Click **Tables > [Table Name] > [Population Name] > Delete Selected Items**.
