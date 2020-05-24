@@ -42,7 +42,7 @@ To delete a constant, select it in **Table Population Map** and press **Delete**
 
 ### Lookup Tables
 
-[Lookup Tables (https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md) can be added to a Table Population Map to get additional information about each record retrieved from the source object. A lookup can retrieve data from a Source DB Table, an [LU Table] or from a [Reference] Table. 
+[Lookup Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md) can be added to a Table Population Map to get additional information about each record retrieved from the source object. A lookup can retrieve data from a Source DB Table, an [LU Table] or from a [Reference] Table. 
 
 For improved performance, it is recommended to create lookups based on an LU Table and not a DB Table. The reason is that an LU Table is usually much smaller than a Source DB Table since it includes only data relevant and/or applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
 
