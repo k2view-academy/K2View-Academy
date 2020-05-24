@@ -12,7 +12,7 @@ Right click in the workspace and select **Insert New Function**.
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or,</p>
 
-   *	In the **Table Population workspace**, click the **Objects** tab, click **Functions**   and double click **Create New Function** to open the **New Functions window** 
+   &nbsp;&nbsp;*	In the **Table Population workspace**, click the **Objects** tab, click **Functions**   and double click **Create New Function** to open the **New Functions window** 
 
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_01_screen1.png)
