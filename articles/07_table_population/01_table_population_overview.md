@@ -138,7 +138,7 @@ The Expand / Collapse and Refresh links are displayed above the Objects tab.
 </tbody>
 </table>
 
-[**Click for more information about the Objects Tab - Diagram Outline.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
+[**Click for more information about Table Population Diagram Outline.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
 
 [<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md)
 
