@@ -19,7 +19,7 @@ This example shows how to check the value of a Global variable and to determine 
 ### Example of Using a Global in a Table Population
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
 
-Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a new [**Table Population**](https://github.com/k2view-academy/K2View-Academy/commit/11e774bf366c76431b401311b39a8a4c9a52e87a) and add the **Globals** to it.
+Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a new [**Table Population**](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md) and add the **Globals** to it.
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
 
