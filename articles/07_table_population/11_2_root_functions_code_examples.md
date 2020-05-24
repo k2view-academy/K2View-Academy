@@ -50,5 +50,5 @@ for (Db.Row row:rows) {
 
 [Click to display an example of the entire **fnPop_ACT_CASE_NOTE** Root Function in the Demo project.]  
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md)
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_lookup_tables.md)
 
