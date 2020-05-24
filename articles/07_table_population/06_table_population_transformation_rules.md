@@ -17,7 +17,7 @@ Data Transformation rules are set in the Table Population or [Parser Map] in the
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_06_02_objects_menu.png)
 
 ### Functions
-Functions can be added to a Table Population Map to apply various Data Transformations. There are two types of functions: 
+Functions can be added to a Table Population map to apply various data transformations. There are two types of functions: 
 *	[**Built-in functions**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md) that are part of the Fabric infrastructure. They can perform standard transformation of dates, strings, or basic mathematical operations.
 *	[**Project  functions**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that are created specifically for the current project and can perform more complex logic. 
 Both Built-in and Project functions can be either connected in a map (Table Population or Parser), to other Fabric objects or invoked from another function via Java coding.
