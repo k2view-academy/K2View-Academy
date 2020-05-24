@@ -1,5 +1,5 @@
 # Auto Discovery Wizard
-
+ 
 ## Auto Discovery Wizard Overview 
 The Fabric Studio Auto Discovery Wizard enables you to automatically generate or edit an LU DB Schema based on predefined database constraints like a Primary Key or a Foreign Key. 
 
