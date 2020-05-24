@@ -1,7 +1,7 @@
 # Translations Overview
 
 ### What Is a Translation?
-A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_general/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level or both. 
+A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level or both. 
 *	Translations defined on a Shared Objects level can be used in all objects in a Project. 
 *	When a Translation is used for a [Web Service] it must be defined on a Shared Objects level.
 There are several options for populating data in a Translation in the Fabric Studio. 
