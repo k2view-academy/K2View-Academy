@@ -8,7 +8,7 @@ The input in a Lookup table is optional if the Lookup has only one record. For e
 
 ### How Can I Add a New Lookup To a Table Population?
 
-1.	Go to the **Project Tree** > **Logical Units** and then click the [**LU Name**]. 
+1.	Go to the **Project Tree** > **Logical Units** > [**LU Name**]. 
 2.	Click **Tables** > [**Table Name**] > [**Table Population**].
 3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Do either:
