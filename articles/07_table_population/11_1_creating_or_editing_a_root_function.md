@@ -68,7 +68,7 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
 }
 </code></pre>
  
-[**Click to go to the Root Function’s Code Example.**]
+[Click to go to the Root Function’s Code Example.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_02_root_functions_code_examples.md)
 
 
 ### How do I Delete a Root Function?
