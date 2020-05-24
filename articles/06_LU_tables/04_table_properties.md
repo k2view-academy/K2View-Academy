@@ -25,7 +25,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Instance PK Column</strong></p>
 </td>
 <td width="474">
-<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">LU table&rsquo;s Primary Key.</a></p>
+<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md#index-definition">LU table&rsquo;s Primary Key.</a></p>
 </td>
 </tr>
 <tr>

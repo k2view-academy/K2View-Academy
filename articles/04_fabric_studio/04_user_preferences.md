@@ -11,7 +11,7 @@ User Preferences are saved in: [Fabric Studio Installation Dir]\Preferences.
 ### What is the purpose of the General Preferences Tab?
 The General Preferences tab is used to define the system’s Projects Directory folder which is by default saved in:
 
-C:\users\<username>\documents\K2View Fabric Studio\Projects.
+C:\users\[username]\documents\K2View Fabric Studio\Projects.
 
 To update the location of the folder or to edit it, click **Browse**.
 
@@ -64,7 +64,7 @@ The following is a list of server configuration items:
 <p><strong>Force Upgrade Post Deploy</strong></p>
 </td>
 <td width="467">
-<p>&middot;&nbsp;&nbsp;&nbsp; <strong>Checked</strong>: performs a forced <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href=https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; <strong>Checked</strong>: performs a forced <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Unchecked</strong>: performs a Sync on Schema changes only.</p>
 <p>Note that each LU undergoes one forced Sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
 </td>
