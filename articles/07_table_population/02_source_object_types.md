@@ -117,8 +117,10 @@ The comparison below analyzes the differences and the similarities between two d
 <td width="259">
 <p>The DB query automatically filters the selected records based on the link to the parent LU TableThe Join process to the parent table is invisible in the DB query.</p>
 <p>For example:</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; The parent table of ADDRESS LU is CUSTOMER and the relationship is via CUSTOMER_ID.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; The ADDRESS DB query selects the ADDRESS records that belong to the CUSTOMER_ID of each LUI.</p>
+  <ul>
+<li>The parent table of ADDRESS LU is CUSTOMER and the relationship is via CUSTOMER_ID.</li>
+<li>The ADDRESS DB query selects the ADDRESS records that belong to the CUSTOMER_ID of each LUI.</li>
+  </ul>
 </td>
 <td width="251">
 <p>The root function does not have an automatic mechanism that filters the extracted records from the Input parameters. When adding SELECT statements to the root function, always add the WHERE clause condition to extract the data from the input parameters.</p>
