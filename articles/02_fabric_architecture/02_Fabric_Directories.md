@@ -38,7 +38,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr style="height: 32px;">
 <td style="height: 32px; width: 101.6px;">monitor</td>
-<td style="height: 32px; width: 463.2px;"> Contains Prometheus JMX exporter for Fabric and Cassandra execution monitoring</td>
+<td style="height: 32px; width: 463.2px;"> Contains Prometheus JMX exporter for Fabric and Cassandra execution monitoring.</td>
 </tr>
 <tr style="height: 17px;">
 <td style="height: 17px; width: 101.6px;">apps</td>
@@ -50,7 +50,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr style="height: 72px;">
 <td style="height: 72px; width: 101.6px;">/dev/shm/fdb_cache</td>
-<td style="height: 72px; width: 463.2px;">This directory holds the cached database files for the LU instances</td>
+<td style="height: 72px; width: 463.2px;">This directory holds the cached database files for the LU instances.</td>
 </tr> 
 <tr style="height: 84px;">
 <td style="height: 84px; width: 101.6px;">ExternalJars</td>
@@ -62,11 +62,11 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr style="height: 17px;">
 <td style="height: 17px; width: 101.6px;">trace</td>
-<td style="height: 17px; width: 463.2px;">Trace files</td>
+<td style="height: 17px; width: 463.2px;">Trace files.</td>
 </tr>
 <tr style="height: 17px;">
 <td style="height: 17px; width: 101.6px;">webserver</td>
-<td style="height: 17px; width: 463.2px;">The home directory of Fabric web admin. This directory can also contain manipulations (rewrite) on the URL when invoking Fabric web-services</td>
+<td style="height: 17px; width: 463.2px;">The home directory of Fabric web admin. This directory can also contain manipulations (rewrite) on the URL when invoking Fabric web-services.</td>
 </tr>
 </tbody>
 </table>
