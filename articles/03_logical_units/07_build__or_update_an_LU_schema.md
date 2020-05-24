@@ -12,7 +12,7 @@ The Fabric Studio [**Auto Discovery Wizard**](https://github.com/k2view-academy/
 ### How Do I Add the Auto Discovery Functionality to an Existing Schema?
 Auto Discovery allows you to append or override existing LU and can be useful when there is a need to add additional tables to an existing Schema from a different interface. 
 
-To use the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to add tables to an LU schema, do either:
+To use the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to add tables to an LU schema, do either:
 
 **Option 1**
 1. Go to **Project Tree** > right click **LU Name** > **Auto Discovery Wizard**.
@@ -25,10 +25,10 @@ To use the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-
 1. Open  **LU Schema** > right click a **column** in an LU  **table**.
 2. Select **Auto Discovery Wizard**.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_07_01_option2.png)
+![image](/articles/03_logical_units/images/03_07_01_option2.png)
 
-3. Run the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md). A new [**Grouped SubGraph**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md) of tables is added to the selected column.
+3. Run the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md). A new [**Grouped SubGraph**](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md) of tables is added to the selected column.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.7_pic_2.png)
+![image](/articles/03_logical_units/images/1.7_pic_2.png)
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)
+[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/06_auto_discovery_wizard.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)
