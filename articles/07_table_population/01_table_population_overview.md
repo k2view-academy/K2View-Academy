@@ -22,7 +22,7 @@ Note that an LU Table can be added to an [LU Schema](https://github.com/k2view-a
 ### Table Population Window
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database. 
 
-[**Click for more information about How to Create a New Population.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
+[Click for more information about How to Create a New Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 
 The following is an example of the Table Population window. 
 
@@ -30,7 +30,7 @@ The following is an example of the Table Population window.
 
 The Table Population window has the following sections:
 *	[Population Header](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#population-window-header). 
-*	[Working Area].
+*	[Working Area](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#population-window-working-area).
 *	[Properties Tab].
 *	[Objects Tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#objects-tab).
 
