@@ -18,7 +18,9 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
 1. Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces**, and then select **New Interface**.
 2.	Click **Interface Type** to open the dropdown list and then select **Fabric**.
 3.	Define the **User** and **Password** of the internal Fabric interface.
-4.	Click [**Test Connection**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) to verify that the connection settings are correct.
+4.	Click **Test Connection** to verify that the connection settings are correct:
+       * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
+       * If the connection fails, a description of the problem is displayed on the bottom of the window. 
 5.	Click **Save**.
 
 ### How Do I Create a Remote Fabric Interface?
@@ -26,7 +28,7 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
 1.	Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces**, and then select **New Interface**.
 2.	Click **Interface Type** to open the dropdown list and then select **Fabric Remote**.
 3.	Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md) fields.
-4.	Click **Test Connection**:
+4.	Click **Test Connection** to verify that the connection settings are correct:
        * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
 5.	Click **Save**.
