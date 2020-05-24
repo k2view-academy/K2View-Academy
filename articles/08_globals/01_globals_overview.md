@@ -18,9 +18,9 @@ If the same Global is defined at both Shared Objects and Logical Unit levels, th
 
 ### How Do I Create or Edit a Global?
 1. Do either:\
-    a. Go to the **Project Tree**, click **Logical Units > [LU name] -> Java** and then click **Globals.java** to open 
+    a. Go to **Project Tree** > **Logical Units > [LU name] > Java** and then click **Globals.java** to open 
     **Globals** window. \
-    b. Go to the **Project Tree**, click **Shared Objects > Java** and then click **SharedGlobals.java** to open 
+    b. Go to **Project Tree** > **Shared Objects > Java** and then click **SharedGlobals.java** to open 
     **Globals** window. 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_01_01%20Globals%20window.png)
 
