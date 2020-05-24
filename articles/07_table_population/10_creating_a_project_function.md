@@ -41,7 +41,8 @@ To define Input and Output settings manually, do the following:
 2.	In the **Data Type** field either, select the **Data Type** from the dropdown list or type it in manually if the type is not displayed in the list. 
 3.	Optional: type comments in the **Comment** field.
 
-**Bulk-loading Parameters to a Function Manually** 
+**Bulk-loading Parameters to a Function Manually**
+
 When multiple parameters need to be uploaded, they can be loaded using the Bulk Load Parameters option. 
 1.	Right click the **Input / Output Parameters** pane to display the **Input / Output Parameters** dialog box. 
 
