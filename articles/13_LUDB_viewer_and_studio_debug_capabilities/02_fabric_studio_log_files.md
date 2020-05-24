@@ -19,9 +19,9 @@ The following are the main log options:
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_02_03%20server%20logs%20list.jpg)
 
 2. Right click in the **Log’s list** area to display the following context menu options:
-   a. **Select Open Selected Items Data in Notepad**, to review the entire error or notification message.
-   b. **Select Copy Selected Items Data**, to copy the entire text onto the clipboard.
-   c. **Clear List** to remove the listed logs. Clear list can also be accessed by clicking the **Clear List** icon (top pane).
+    * **Select Open Selected Items Data in Notepad**, to review the entire error or notification message.
+    * **Select Copy Selected Items Data**, to copy the entire text onto the clipboard.
+    * **Clear List** to remove the listed logs. Clear list can also be accessed by clicking the **Clear List** icon (top pane).
 
 **Activity Logs**  
 

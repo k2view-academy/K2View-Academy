@@ -10,7 +10,7 @@ When an LU Table has two populations, a second table population can extract data
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
 
-[**Click for more information about Creating Table Population Objects.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
+[Click for more information about Creating Table Population Objects.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 
 ### DB Query Vs. Root Function Use Cases
 
@@ -37,8 +37,8 @@ When an LU Table has two populations, a second table population can extract data
 <li>A population requires data from another LU. For example, to retrieve Customer details from the CRM LU to populate part of its data into the Billing LU.</li>
 <li>When source data is extracted from a file or any other non-DB interface.</li>
 <li>When using the Fabric Remote DB, a Table Population must use a root function to get the instance before running the SQL query on the LUI.</li>
+<li>When the population needs to run a Fabric command. For example, setting the source environment&nbsp; to UAT so that data for a selected table is not extracted from Production to avoid overloading the source system. The root function can set the environment on a session level and select the data from the required source environment.</li>
 </ol>
-<p>When the population needs to run a Fabric command. For example, setting the source environment&nbsp; to UAT so that data for a selected table is not extracted from Production to avoid overloading the source system. The root function can set the environment on a session level and select the data from the required source environment.</p>
 </td>
 </tr>
 </tbody>
@@ -117,8 +117,10 @@ The comparison below analyzes the differences and the similarities between two d
 <td width="259">
 <p>The DB query automatically filters the selected records based on the link to the parent LU TableThe Join process to the parent table is invisible in the DB query.</p>
 <p>For example:</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; The parent table of ADDRESS LU is CUSTOMER and the relationship is via CUSTOMER_ID.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; The ADDRESS DB query selects the ADDRESS records that belong to the CUSTOMER_ID of each LUI.</p>
+  <ul>
+<li>The parent table of ADDRESS LU is CUSTOMER and the relationship is via CUSTOMER_ID.</li>
+<li>The ADDRESS DB query selects the ADDRESS records that belong to the CUSTOMER_ID of each LUI.</li>
+  </ul>
 </td>
 <td width="251">
 <p>The root function does not have an automatic mechanism that filters the extracted records from the Input parameters. When adding SELECT statements to the root function, always add the WHERE clause condition to extract the data from the input parameters.</p>
@@ -146,8 +148,10 @@ The comparison below analyzes the differences and the similarities between two d
 <p>For example:</p>
 <p>There are 1,500 subscribers for Instance ID = 1. Each subscriber has services.</p>
 <p>To select the subscriber&rsquo;s services, the DB Query runs two SELECT statements from the source DB:</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Query 1 on a group of 1,000 subscribers.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Query 2 on the remaining 500 subscribers.</p>
+  <ul>
+<li>Query 1 on a group of 1,000 subscribers.</li>
+<li>Query 2 on the remaining 500 subscribers.</li>
+  </ul>
 </td>
 <td width="251">
 <p>The root function does not have a Grouping mechanism and therefore executes a SELECT statement for each parent ID.</p>

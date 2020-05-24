@@ -4,7 +4,7 @@ Throughout a Project’s lifecycle there are a number of reasons for modifying, 
 
 ### How Do I Change an Interface's Connection Settings?
 
-1.	Go to the **Project Tree** > **Shared Objects** > **Interfaces** to open the **Interfaces list**. 
+1.	Go to **Project Tree** > **Shared Objects** > **Interfaces** to open the **Interfaces list**. 
 2.	Double click the **interface** to open it.
 3.	Edit the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 4.	To verify that the new settings are valid, click the [**Test Connection**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) link.  

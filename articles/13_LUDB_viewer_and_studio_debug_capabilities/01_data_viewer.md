@@ -86,8 +86,8 @@ The Instance Tree area (top left) displays a tree of available data files in the
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
 * **k2_lu_object_info**, contains statistics per table, population and enrichment function.
 * **k2_main_info**, contains the LU’s basic information like LU Name or Instance ID.
-* **k2_object_stats**, contains [object](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) timing statistics. 
-* **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the reference object is enabled in the LU Schema properties.
+* **k2_object_stats**, contains object timing statistics. 
+* **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the [reference object](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU Schema properties.
 
 To display the values of a table in the tree, right click the table and select either:
 * **Show Data**, to display the table or view it in the Results pane.

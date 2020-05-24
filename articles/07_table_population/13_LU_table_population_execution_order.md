@@ -2,7 +2,7 @@
 
 Fabric enables setting the execution order of [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) population objects within an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md). The execution order is set by a sequence number (1, 2, 3…).
 
-The default order of an LU Table’s population is set when the LU Schema is created. The default population execution order is based on the LU Schema’s hierarchy. However, a different population execution order can be set above the automatically generated execution order. Meaning that a table higher in the LU Schema’s hierarchy can be populated or modified after a table lower in the LU Schema hierarchy has been modified or populated. Therefore, it is imperative to strategize and define the correct execution order of the LU Table populations.
+The default order of an LU Table’s population is set when the LU Schema is created. The default population execution order is based on the LU Schema’s hierarchy. However, a different population execution order can be set above the automatically generated execution order. Meaning that a table higher in the LU Schema’s hierarchy can be populated or modified after a table lower in the LU Schema hierarchy has been modified or populated. Therefore, it is imperative to strategize and define the correct execution order of the [LU Table populations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
 
 **Parallel Sync Ability**
 
@@ -15,8 +15,6 @@ To improve the Sync time of an LUI, Fabric can support parallel syncs on several
 The LU Schema root table is always populated first. By default, its execution order is set to 1. Other tables in the LU Schema are populated according to their hierarchy level in the LU Schema in a parent plus one order.
 By default, all LU Table populations on the same hierarchy level in an LU Schema have the same execution order. The order can be modified and have different values if needed. For example, when tables T2 and T3 table are added to a Schema under table T1, the population execution order of tables T2 and T3 will be the same and will be higher than the execution order of table T1.
 An LU Table may have more than one Table Population. By default, all populations in the same LU Table are set to the same population execution order, which can also be updated manually if needed. 
-
-[Click for more information about Link Table Populations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
 
 **Example**
 

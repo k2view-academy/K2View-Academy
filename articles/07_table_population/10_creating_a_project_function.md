@@ -10,9 +10,10 @@ Functions can be created in [Logical Units](https://github.com/k2view-academy/K2
     *	Click **Logical Units**, [**LU Name**], **Tables**, [**Table Name** ]and double click [**Population Name**] to open the existing population. Do either:
 Right click in the workspace and select **Insert New Function**. 
 
-    Or,
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or,</p>
 
-    In the **Table Population workspace**, click the **Objects** tab, click **Functions**   and double click **Create New Function** to open the **New Functions window**. 
+   * In the **Table Population workspace**, click the **Objects** tab, click **Functions** and double click **Create New Function** to open the **New Functions window**. 
+
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_10_01_screen1.png)
 
@@ -40,7 +41,9 @@ To define Input and Output settings manually, do the following:
 2.	In the **Data Type** field either, select the **Data Type** from the dropdown list or type it in manually if the type is not displayed in the list. 
 3.	Optional: type comments in the **Comment** field.
 
-**Bulk-loading Parameters to a Function Manually** 
+
+### Bulk-loading Parameters to a Function Manually
+
 When multiple parameters need to be uploaded, they can be loaded using the Bulk Load Parameters option. 
 1.	Right click the **Input / Output Parameters** pane to display the **Input / Output Parameters** dialog box. 
 

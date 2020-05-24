@@ -104,7 +104,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </tr>
 <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><strong>Diagram Outline Tab</strong></p>
+<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline">Diagram Outline Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
 <p>Displays an overview of the LU structure and enables searching for a subset of tables included in the schema.</p>
