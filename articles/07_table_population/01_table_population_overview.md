@@ -31,7 +31,7 @@ The following is an example of the Table Population window.
 The Table Population window has the following sections:
 *	[Population Header](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#population-window-header). 
 *	[Working Area](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#population-window-working-area).
-*	[Properties Tab].
+*	[Properties Tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#properties-tab).
 *	[Objects Tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#objects-tab).
 
 ### Population Window Header
