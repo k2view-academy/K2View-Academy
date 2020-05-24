@@ -73,7 +73,7 @@ The following icons are displayed at the top of the Translation Schema tab:
 </table>
 
 
-*Translation Options*
+### Translation Options
 The following options define system behavior when a matching Translation is not found. Select an option from the dropdown list on the bottom of the Translation Schema tab. The Use Default option is always defined when a new Translation is created and can be modified when needed.
 <table>
 <tbody>
