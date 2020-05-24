@@ -25,23 +25,24 @@ Note that [root functions](https://github.com/k2view-academy/K2View-Academy/blob
 
 ### Translations and Globals
  
-[Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md) and [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) can be added to a Table Population Map to transform the data from one set of values to another. Translations and Globals are defined either under an [LU](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) or under [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md). Those defined under Shared Objects  are available for all LUs in a project.
+[Translations](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/01_translations_overview_and_use_cases.md) and [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) can be added to a Table Population map to transform the data from one set of values to another. Translations and Globals are defined either under an [LU](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) or under [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md). Those defined under Shared Objects  are available for all LUs in a project.
 
 ### Constants
  
-Constants are hard-coded values that can be used in a Table Population Map to set a constant value. The scope of a constant is in the current Fabric object where the constant is defined. Constants are not managed as variables in Fabric and cannot be used by various Fabric objects.
+Constants are hard-coded values that can be used in a Table Population map to set a constant value. The scope of a constant is in the current Fabric object where the constant is defined. Constants are not managed as variables in Fabric and cannot be used by various Fabric objects.
 
 To add a constant to the Table Population:
 1.	Right click in the **Table Population** working area and select **Insert Constant Value** to add the constant to the map.
-2.	Set the **Constant’s Name** and **Value** by editing the **Object** in the P**opulation Map**.
-3.	Connect the **Constant** to the **Object** in the **Population Map** to a column in the target **LU Table** or to another Fabric object.
+2.	Set the **Constant’s Name** and **Value** by editing the **Object** in the **Table Population**.
+3.	Connect the **Constant** to the **Object** in the **Table Population** to a column in the target **LU Table** or to another Fabric object.
 
 To modify a constant, double click it and edit the **Value**. 
-To delete a constant, select it in **Table Population Map** and press **Delete**. 
+
+To delete a constant, select it in the **Table Population** and press **Delete**. 
 
 ### Lookup Tables
 
-[Lookup Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md) can be added to a Table Population Map to get additional information about each record retrieved from the source object. A lookup can retrieve data from a Source DB Table, an [LU Table] or from a [Reference] Table. 
+[Lookup Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_lookup_tables.md) can be added to a Table Population map to get additional information about each record retrieved from the source object. A lookup can retrieve data from a Source DB Table, an [LU Table] or from a [Reference] Table. 
 
 For improved performance, it is recommended to create lookups based on an LU Table and not a DB Table. The reason is that an LU Table is usually much smaller than a Source DB Table since it includes only data relevant and/or applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
 
