@@ -32,7 +32,7 @@ The following icons are displayed at the top of the Translation Schema tab:
 <table>
 <tbody>
 <tr>
-<td width="150pxl"><img src=
+<td width="150pxl">
 <p><strong>Icon</strong></p>
 </td>
 <td width="500pxl">
@@ -40,31 +40,31 @@ The following icons are displayed at the top of the Translation Schema tab:
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;</td>
+<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_1.png"></td>
 <td width="446">
 <p>Print translation definition.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;</td>
+<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_2.png"></td>
 <td width="446">
 <p>Export translation definition as an Excel file.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;</td>
+<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_3.png"></td>
 <td width="446">
 <p>Filter definition by one or more columns.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;</td>
+<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_4.png"></td>
 <td width="446">
 <p>Toggle summaries.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;</td>
+<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_5.png"></td>
 <td width="446">
 <p>Toggle groupings.</p>
 </td>
