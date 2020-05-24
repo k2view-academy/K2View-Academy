@@ -3,7 +3,7 @@
 The **Properties tab** in the **Table Population window** displays additional information about different objects in the **Population window**, as follows:
 *	DB Query or **Root Function Source Objects**.
 *	Target LU Table.
-* Other [Population objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md) like a Translation or Global.
+* Other [Population objects](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md) like a Translation or Global.
 *	Properties of any selected field in a Population object.
 
 Since each object has different properties, the tab’s layout is updated to display them when an object is selected in the map. 
