@@ -32,7 +32,7 @@ The Table Population window has the following sections:
 *	[Population Header]. 
 *	[Working Area].
 *	[Properties Tab].
-*	[Objects Tab].
+*	[Objects Tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md#objects-tab).
 
 ### Population Window Header
 The Population window header holds the **Debug** and **Options** toolbars where additional toolbars like **Edit**, **Zoom**, **Alignment** or **Export** can be added when needed. 
