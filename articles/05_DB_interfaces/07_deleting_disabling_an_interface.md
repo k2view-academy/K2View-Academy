@@ -28,4 +28,4 @@ Click for more information about Deployment from the Fabric Studio.
 
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/06_editing_interface_settings.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/06_editing_interface_settings.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
