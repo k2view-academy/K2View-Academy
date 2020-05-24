@@ -10,7 +10,7 @@ When an LU Table has two populations, a second table population can extract data
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
 
-[**Click for more information about Creating Table Population Objects.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
+[Click for more information about Creating Table Population Objects.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md)
 
 ### DB Query Vs. Root Function Use Cases
 
