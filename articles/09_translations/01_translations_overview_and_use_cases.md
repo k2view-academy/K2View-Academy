@@ -222,10 +222,10 @@ The following icons are displayed next to each Translation setting:
 <table>
 <tbody>
 <tr>
-<td width="85">
+<td width="150pxl">
 <p><strong>Icon</strong></p>
 </td>
-<td width="417">
+<td width="500pxl">
 <p><strong>Action</strong></p>
 </td>
 </tr>
