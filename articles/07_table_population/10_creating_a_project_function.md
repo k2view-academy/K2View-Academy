@@ -10,7 +10,7 @@ Functions can be created in [Logical Units](https://github.com/k2view-academy/K2
     *	Click **Logical Units**, [**LU Name**], **Tables**, [**Table Name** ]and double click [**Population Name**] to open the existing population. Do either:
 Right click in the workspace and select **Insert New Function**. 
 
-<p>     Or,</p>
+<p>    Or,</p>
 
 <p>     In the **Table Population workspace**, click the **Objects** tab, click **Functions**   and double click **Create New Function** to open the **New Functions window**.</p> 
 
