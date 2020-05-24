@@ -2,9 +2,9 @@
 
 ### Example of Creating a New Global and Using it in a Function
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_01%20A%20NEW%20GLOBAL.png)
+![image](/articles/08_globals/images/08_04_01%20A%20NEW%20GLOBAL.png)
 
-Open the **Globals** window under a **Logical Unit** and [define a new **Global**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
+Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
 
 After the Global is saved, its definition is kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all the functions under this LU.
 
@@ -17,21 +17,21 @@ if (CUSTOMER_CHECKS_ENABLED.equals("Y")) {
 This example shows how to check the value of a Global variable and to determine whether to perform or to skip specific business logic (validation checks).
 
 ### Example of Using a Global in a Table Population
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
+![image](/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
 
-Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a new [**Table Population**](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md) and add the **Globals** to it.
+Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a new [**Table Population**](/articles/07_table_population/01_table_population_overview.md) and add the **Globals** to it.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
+![image](/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
 
-This example shows how a Global can be used in a [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md). Since the SOURCE_PRODUCT_VERSION and ACTIVITY_NOTE Globals are defined in the LU’s Globals list in the **Globals.java** file, they are part of the LU’s scope and therefore can be used by the Table Population in the same LU.
+This example shows how a Global can be used in a [Table Population](/articles/07_table_population/01_table_population_overview.md). Since the SOURCE_PRODUCT_VERSION and ACTIVITY_NOTE Globals are defined in the LU’s Globals list in the **Globals.java** file, they are part of the LU’s scope and therefore can be used by the Table Population in the same LU.
 
 **Click to open the Globals Definition in the [Globals.java] File.**
 
 ### Example of Using a Global in a Fabric Web Service
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_04%20GLOBAL%20IN%20A%20FABRIC%20WEB.png)
+![image](/articles/08_globals/images/08_04_04%20GLOBAL%20IN%20A%20FABRIC%20WEB.png)
 
-Open the **Globals** window under **Shared Objects** and [define new **Globals**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**] and use the Globals.
+Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**] and use the Globals.
 
 This example shows how Globals can be used within a Fabric Web Service.
 
@@ -52,9 +52,9 @@ if (contrID == "" && adrID == "") {
 
 ### Example of Overriding a Global in a Function or a Web Service
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_05%20FUNCTION%20OR%20A%20WEB%20SERVICE.png)
+![image](/articles/08_globals/images/08_04_05%20FUNCTION%20OR%20A%20WEB%20SERVICE.png)
 
-Open the **Globals** window under **Shared Objects** and define a [new **Global**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a **Fabric Web Service** or a [**Project function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
+Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a **Fabric Web Service** or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
 The following examples show how a Global can be overridden in a cluster and per session.
 
 ### Override the Global Per Cluster
@@ -96,7 +96,7 @@ result.put("p_error", receivedErr);
 </code></pre>
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md)
+[![Previous](/articles/images/Previous.png)](/articles/08_globals/03_set_globals.md)
 
 
 
