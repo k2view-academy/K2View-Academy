@@ -22,7 +22,7 @@ The steps for creating a Root Function in Fabric Studio are the same as those fo
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/4_1_1%20file%20named%20root.png)
 
-[Click for more information about How to Create a Project Function.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)
+[Click for more information about How to Create a Project Function.](https://github.com/k2view-academy/K2View-Academy/blob/5544404981bdad9b406bfb98e9171853e4e54a3a/articles/07_table_population/10_creating_a_project_function.md)
 
 ### Input and Output Parameters of a Root Function
 
