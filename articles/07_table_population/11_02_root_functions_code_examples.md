@@ -14,7 +14,9 @@ ludb().fetch(sql, i_customer_id).each(row->{
 
 2.	Add a Fabric command, for example ‘set environment’ using a predefined Global variable:
 
+<pre><code>
 fabric().execute("set environment='" + SOURCE_ENV_NAME + "'");
+</code></pre>
 
 [Click to display an example of the entire fnPop_NEW_ACTIVITY Root Function in the Demo project.]  
 
