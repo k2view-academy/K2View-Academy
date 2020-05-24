@@ -54,7 +54,7 @@ if (contrID == "" && adrID == "") {
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/images/08_04_05%20FUNCTION%20OR%20A%20WEB%20SERVICE.png)
 
-Open the **Globals** window under **Shared Objects** and define a new **Global** and then create a **Fabric Web Service** or a [**Project function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
+Open the **Globals** window under **Shared Objects** and define a [new **Global**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a **Fabric Web Service** or a [**Project function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
 The following examples show how a Global can be overridden in a cluster and per session.
 
 ### Override the Global Per Cluster
