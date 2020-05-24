@@ -1,6 +1,6 @@
 # Table Population Mode
 
-### What is a Table Population Mode?
+### What Is a Table Population Mode?
 
 The **Table Population Mode** determines how the target [**LU table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) is populated. 
 There are four table population modes: 
@@ -9,7 +9,7 @@ There are four table population modes:
 *	**Update**, updates a record in a database table using the **key column(s)** marked in the **target LU Table**. If a key column is not set in the target **LU Table**, an **Update** is performed on all target records of each source record instead of updating a specific row.
 *	**Delete**, deletes a record in a database table using the **key column(s)** marked in the **target LU Table**. If a key column is not set in the target LU Table, a **Delete** is performed on all target records of each source record instead of deleting a specific row.
 
-### Update and Delet Modes - How do I Set the Key on a Target LU Table? 
+### Update and Delet Modes - How Do I Set the Key on a Target LU Table? 
 
 If the population mode of the target LU Table is set to **Update** or **Delete**, the key column(s) must be defined to enable the target LU Table’s records to be updated or deleted correctly. The selected key column(s) is then added to the **WHERE** clause of the **UPDATE** or **DELETE** SQL statement. 
 
