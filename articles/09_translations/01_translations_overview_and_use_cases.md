@@ -32,10 +32,10 @@ The following icons are displayed at the top of the Translation Schema tab:
 <table>
 <tbody>
 <tr>
-<td width="56"><img src=
+<td width="150pxl"><img src=
 <p><strong>Icon</strong></p>
 </td>
-<td width="446">
+<td width="500pxl">
 <p><strong>Action</strong></p>
 </td>
 </tr>
@@ -78,10 +78,10 @@ The following options define system behavior when a matching Translation is not 
 <table>
 <tbody>
 <tr>
-<td width="156">
+<td width="150pxl">
 <p><strong>Option</strong></p>
 </td>
-<td width="420">
+<td width="500pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -130,10 +130,10 @@ A Translation Schema has the following structure:
 <table width="614">
 <tbody>
 <tr>
-<td width="141">
+<td width="150pxl">
 <p><strong>Parameter Property</strong></p>
 </td>
-<td width="472">
+<td width="500pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
