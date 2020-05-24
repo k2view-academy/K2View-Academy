@@ -28,7 +28,7 @@ Functions can be created in [Logical Units](https://github.com/k2view-academy/K2
 *	A Decision function can be defined on [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) levels. 
 *	A Decision function must have no Input parameter and return a Boolean (True or False) parameter. An LUI Sync is performed or not performed based on the returned result. 
 
-[Click for Code Examples of a Decision Function.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
+[Click for Code Examples of a Decision Function.](https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases)
 
 **Switch Function**
 *	A specific Fabric Project function used by [Parsers] to split records to populate more than one record type in the Parser map.
