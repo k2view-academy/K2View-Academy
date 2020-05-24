@@ -12,7 +12,7 @@ The input in a Lookup table is optional if the Lookup has only one record. For e
 2.	Click **Tables** > [**Table Name**] > [**Table Population**].
 3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Do either:
-    *	To create an **LUI Table Lookup** or **Reference Table Lookup**:\    
+    *	To create an **LUI Table Lookup** or **Reference Table Lookup**:    
 Click **LUI Tables Lookup / Reference Tables Lookup** to display the list of tables, select the table and drag it to the working area.
     *	To create a **Database Table Lookup**:  
 Click **Database** to display the list of tables, select the table and drag it to the working area and then click **Create as DB Table Lookup**.
