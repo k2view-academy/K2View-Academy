@@ -122,7 +122,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 **DB Class Methods - Common Use Cases**
 
 The following table describes common use cases when working with DB Interfaces.\
-**Click to display the Fabric API list:** http://[Fabric IP address]:3213/static/doc/user-api/index.html
+To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 <table>
 <tbody>
 <tr>
@@ -199,7 +199,7 @@ You can iterate the result set and get a Db.Row object for each record, or alter
 * To iterate column names and data simultaneously, use the values() method.
 * This Map cannot be changed and edited. Trying to change this object will result in a runtime exception.
 
-**Click for more information about Db.Rows and DB.Row classes:** http://[Fabric IP address]:3213/static/doc/user-api/index.html
+To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
 ### Loop on the Result Set Methods
 
