@@ -21,7 +21,7 @@ Functions can be created in [Logical Units](https://github.com/k2view-academy/K2
 *	An LUDB function is invoked from an SQL statement.
 *	An LUDB function must have at least one Output value.
 
-[Click for Code Examples of an LUDB Function.]
+[Click for Code Examples of an LUDB Function.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/09_creating_an_LUDB_function.md#example-of-an-ludb-function)
 
 **Decision Function**  
 *	A Function that assess whether a [sync](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#sync) is performed on an LUI. 
