@@ -7,8 +7,8 @@ Fabric Studio has a proprietary encapsulation functionality that packages an ent
 There are two Export options:
 * Export an entire project.
 * Export a specific object, for example:
-  * Group items, [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/1d269e8379b459ce29343f705dd17aaafcbf74b1/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/03_logical_units/01_LU_overview.md).
-  * Sub-groups, [interfaces](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/06_LU_tables/01_LU_tables_overview.md).
+  * Group items, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), References, Web Services, [LU](/articles/03_logical_units/01_LU_overview.md).
+  * Sub-groups, [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md), Java, Resources, [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
   * Java files (categories).
   * Objects, whereby you can export a specific object from the Project Tree. Java functions cannot be exported using this method.
 
@@ -25,8 +25,8 @@ You can import an entire exported project or specific branches of a Project Tree
 * Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group. For example, to copy Java files from Shared Objects to Reference Java files. 
 * The Import process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overrides the entire file including its Java functions.  
 * When updating a specific function in a Java file, it is recommended that you add the function to the Java file manually. 
-* Java files are imported to the Category level of the [Logic File](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/09_logic_files_and_categories.md). 
-* Importing [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) to an existing Globals file does not override the existing Java file. Both files are merged into one file unless they have the same name, in which case, the new file overrides the existing file with the value of the imported variable. 
+* Java files are imported to the Category level of the [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
+* Importing [Globals](/articles/08_globals/01_globals_overview.md) to an existing Globals file does not override the existing Java file. Both files are merged into one file unless they have the same name, in which case, the new file overrides the existing file with the value of the imported variable. 
 
 ### How Can I Import a K2EXPORT File Into My Project?
 
@@ -39,13 +39,13 @@ You can import an entire exported project or specific branches of a Project Tree
  
 1. Right click the root of the **Project Tree**, click **Import** and then click **Import All** to open the File **Browser** and select the **k2export** **file** to be imported.  
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_01%20k2export%20file.png)
+![image](/articles/04_fabric_studio/images/04_11_01%20k2export%20file.png)
 
 2. Select the **file** and click **Open**:  
     a. If the file name exists, click either **OK** to confirm or **Ignore** to override or skip the files.\
     b. When importing files to a non-existent LU, select the targeted **LU** or create a new LU saved with the exported LU file’s name.
     
-    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_02%20LU%20file%E2%80%99s%20name.png)
+    ![image](/articles/04_fabric_studio/images/04_11_02%20LU%20file%E2%80%99s%20name.png)
 
 3. A confirmation window opens asking you whether you want to:\
     a. Override the specific file.\
@@ -53,17 +53,17 @@ You can import an entire exported project or specific branches of a Project Tree
     c. Decline the override of the specific file.\
     d. Decline the override of all the conflicting files. 
     
-    ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_03%20confirmation%20window.jpg)
+    ![image](/articles/04_fabric_studio/images/04_11_03%20confirmation%20window.jpg)
 
 ### Custom Import Process
  
 1. Right click the root of **Project Tree**, click **Import** and then click **Custom Import**.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_04%20Custom%20Import.png)
+![image](/articles/04_fabric_studio/images/04_11_04%20Custom%20Import.png)
 
-2. Click the **branches** and **items** to import from the file and then click and drag the ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_05%20%2BICON.png) icon to the current project’s structure (right pane).  
+2. Click the **branches** and **items** to import from the file and then click and drag the ![image](/articles/04_fabric_studio/images/04_11_05%20%2BICON.png) icon to the current project’s structure (right pane).  
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_06%20project%E2%80%99s%20structure.png)
+![image](/articles/04_fabric_studio/images/04_11_06%20project%E2%80%99s%20structure.png)
 
 The Custom Import window displays the number of imported and overridden items.\
 3.  Right click the **Target Project Tree** to display a context menu with the following options:  
@@ -79,14 +79,14 @@ The Custom Import window displays the number of imported and overridden items.\
     b. Override all the conflicting files in the import package.\
     c. Decline the override of the specific file.\
     d. Decline the override of all conflicting files. 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_11_07%20confirmation%20window.jpg)
+![image](/articles/04_fabric_studio/images/04_11_07%20confirmation%20window.jpg)
 
 **Notes** 
 
 When importing objects with the same name and location in the Project Tree, a yellow triangular notification icon is displayed next to the imported objects. The imported objects override the existing objects. 
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/12_shared_objects.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/10_fabric_studio_validating_java_code_within_a_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/12_shared_objects.md)
 
 
 
