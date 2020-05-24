@@ -13,9 +13,9 @@ Make sure you have all the requirements, for example:
 
 Note that to check out a project, you must know the path of the checkout directory.
 
-[Click for more information about Creating a New Fabric Project.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/05_creating_a_new_project.md)
+[Click for more information about Creating a New Fabric Project.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
-[Click for more information about Adding Fabric Projects to Version Control.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+[Click for more information about Adding Fabric Projects to Version Control.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 ### General Best Practices
 When working with version control in Fabric projects, we recommend:
@@ -24,7 +24,7 @@ When working with version control in Fabric projects, we recommend:
 * The version control is controlled by username and password.
 * When using a previous revision, click **Show Log** and then select the revision.
 
-[Click for more information about User Preferences.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/04_user_preferences.md)
+[Click for more information about User Preferences.](/articles/04_fabric_studio/04_user_preferences.md)
 
 ### Best Practices for Working with GIT
  
@@ -52,7 +52,7 @@ When working with SVN in Fabric projects we recommend:
 
 Click for more information about Deployment from a Command Line. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/08_fabric_project_tree.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/08_fabric_project_tree.md)
 
 
 
