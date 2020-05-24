@@ -10,7 +10,7 @@ A database interface includes the following details:
 * Database name.
 * Connection’s authorization credentials.
 
-[Click for more information about Creating DB Interfaces.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
+[Click for more information about Creating DB Interfaces.](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
 
 
 ### Database Connection Settings
@@ -136,4 +136,4 @@ Accurate definition of connection settings is especially important when building
 
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
