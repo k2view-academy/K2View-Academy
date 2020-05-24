@@ -32,7 +32,7 @@ The **Debug Toolbar** has the following icons:
 <tr>
 <td width="200pxl">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table2_1.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/table2_2.PNG" alt="" /></td>
 <td width="364">
-<p>Displays a list of Instance IDs for which the LUDB file exists.</p>
+<p>Displays a list of <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#instance-id">Instance IDs</a> for which the LUDB file exists.</p>
 <p>Either search for the Instance ID or select it from the dropdown list of debugged Instance IDs.</p>
 </td>
 </tr>
