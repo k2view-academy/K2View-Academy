@@ -5,13 +5,13 @@ Fabric implementations are written in Java and are stored in standard libraries 
 
 ### Validating Java Code When a Project is Opened
  
-Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the Server/Activity Logs [tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the [Server/Activity Logs tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 
 ### How do I Publish Project Code?
  
 After the Java code of the project object (like a Function or a Web Service) is complete it must be validated.
 1. Do either:
-    * Press **CTRL S** to save the code.
+    * Press **CTRL+S** to save the code.
     * Click **Save** on the left top screen to save the code.  
 2. Go to the **Project Tree**, right click the **Project Name** and then click **Rebuild All java Code**. 
 
@@ -35,7 +35,6 @@ There are three validation success indicators:
 
 
 [Click for more information about Fabric Studio Log Files.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
-
 
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/09_logic_files_and_categories.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)

@@ -3,12 +3,13 @@
 ### What is a Translation?
 A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/04_general/12_shared_objects.md) level or on a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/03_logical_units/01_LU_overview.md) level or both. 
 *	Translations defined on a Shared Objects level can be used in all objects in a Project. 
-*	When a Translation is used for a Web Service  it must be defined on a Shared Objects level.
+*	When a Translation is used for a [Web Service] it must be defined on a Shared Objects level.
 There are several options for populating data in a Translation in the Fabric Studio. 
 *	Manual population via the Translation window. 
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
 *	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
-Click for more information about Data Population in Translations.  
+
+[Click for more information about Data Population in Translations.]  
 
 
 ### How Can I Use a Translation in Fabric?
@@ -20,9 +21,10 @@ For example:
 
 ### Translation Window
 Translations are defined via the Translation window which has two tabs:
-*	Translation Schema  tab, defines the Translation Schema properties. Each column in a Translation Schema must be either Input or Output and can have different data types.
-*	Translation Data  tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways. 
-*	Click for more information about Data Population in Translation s.
+*	[Translation Schema] tab, defines the Translation Schema properties. Each column in a Translation Schema must be either Input or Output and can have different data types.
+*	[Translation Data] tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways.
+
+*	[Click for more information about Data Population in Translations.]
 
 *Translation Schema Tab Icons*
 The following icons are displayed at the top of the Translation Schema tab:

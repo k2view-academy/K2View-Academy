@@ -18,20 +18,20 @@ Below are some examples of Fabric components which have a Diagram window working
 <p><strong>Displaying the Logical Unit Schema</strong></p>
 </td>
 <td width="189">
-<p>Logical&nbsp; Unit Schema window.</p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md">Logical Unit Schema window</a>.</p>
 </td>
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating a new function</strong></p>
+<p><strong>Creating a new <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/14_sync_LU_instance/05_sync_decision_functions.md">function</a></strong></p>
 </td>
 <td width="189">
-<p>Function&nbsp; Manager window.</p>
+<p>Function Manager window.</p>
 </td>
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating &nbsp;a new translation</strong></p>
+<p><strong>Creating &nbsp;a new <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/09_translations/01_translations_overview_and_use_cases.md">translation</a></strong></p>
 </td>
 <td width="189">
 <p>Translation&nbsp; Manager window.</p>
@@ -39,7 +39,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating a new global</strong></p>
+<p><strong>Creating a new <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/08_globals/01_globals_overview.md">global</a></strong></p>
 </td>
 <td width="189">
 <p>Globals&nbsp; Manager window</p>
@@ -50,7 +50,7 @@ Below are some examples of Fabric components which have a Diagram window working
 <p><strong>Editing the data mapping and transformations of different database entities</strong></p>
 </td>
 <td width="189">
-<p>Table&nbsp; Mapping window.</p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/06_LU_tables/01_LU_tables_overview.md">Table</a> Mapping window.</p>
 </td>
 </tr>
 <tr>
@@ -58,7 +58,7 @@ Below are some examples of Fabric components which have a Diagram window working
 <p><strong>Viewing Data</strong></p>
 </td>
 <td width="189">
-<p>Data Viewer&nbsp; window.</p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a> window.</p>
 </td>
 </tr>
 <tr>
@@ -192,7 +192,6 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Alignment Toolbar Items
 <table>
@@ -295,7 +294,6 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Logical Unit Toolbar Items
 <table>
@@ -330,7 +328,8 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tr>
 </tbody>
 </table>
-**Click for more information about Logical Units.**
+
+[Click for more information about Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
 ### Table Population Toolbar
 <table width="552">
@@ -364,21 +363,21 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop5.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop5.png" alt="drawing" width="20"/>
 </td>
 <td width="316">
 <p>Debug / Execute.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop6.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop6.png" alt="drawing" width="20"/>
 </td>
 <td width="316">
 <p>Debug next record.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop7.png" alt=""/>
+<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop7.png" alt="drawing" width="20"/>
 </td>
 <td width="316">
 <p>Debug next instance.</p>
@@ -393,4 +392,4 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 ### How Can I Customize the Toolbar?
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/04_user_preferences.md)
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md)

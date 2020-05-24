@@ -1,11 +1,11 @@
 # Shared Objects
 
-Shared Objects can be used in all components of a Fabric project. For example, [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), [References], [Web Services] or processes. 
+Shared Objects can be used in all components of a Fabric project. For example, [Logical Units](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md), References, Web Services or processes. 
 
 ### Which Objects Can be Shared in a Fabric Project?
 
 The following components can be shared in a Fabric project:
-* [Environments, where you can define the number of environments according to your needs and also switch between environments in the same Fabric project.
+* Environments, where you can define the number of environments according to your needs and also switch between environments in the same Fabric project.
 * Database Types, where you can define a new database type that has a JDBC driver that is not part of the Product package. In addition, you can also edit product-supported database types which are used when defining interfaces.
 * [Interfaces](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md), a list of source connection details defined for the project.  
 * [Java files](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/09_logic_files_and_categories.md) and resource files:
@@ -22,5 +22,5 @@ Note that if a Global that is defined in both a Shared Object and a specific Log
 
 [Click for more information about Project Structure and Creating a New Project in Fabric.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/05_creating_a_new_project.md)
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 

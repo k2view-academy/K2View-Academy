@@ -4,7 +4,8 @@ The LU Schema creation process can be initiated using K2View’s [Auto-Discovery
 
 Creating a Logical Unit involves several steps. The following is an overview of the main steps :
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.3_Create_an_LU_Flow.png)
+
+[<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2017ma.png" alt="drawing" width="170pxl"/>](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/05_create_a_new_LU_object.md)[<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2016ma.png" alt="drawing" width="170pxl"/>](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md)[<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2015ma.png" alt="drawing" width="170pxl"/>](https://github.com/k2view-academy/K2View-Academy/blob/9dbb97befb1473dac3a473fcb4ba9ba1fa8d93f4/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)[<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2014ma.png" alt="drawing" width="170pxl"/>](https://github.com/k2view-academy/K2View-Academy/blob/9dbb97befb1473dac3a473fcb4ba9ba1fa8d93f4/articles/07_table_population/03_creating_a_new_table_population.md)[<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/Asset%2013ma.png" alt="drawing" width="135pxl"/>](https://github.com/k2view-academy/K2View-Academy/blob/9dbb97befb1473dac3a473fcb4ba9ba1fa8d93f4/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
 You can also duplicate an LU in your project and save it as a new LU:
 1. Right click the **Logical Unit** > **Duplicate Logical Unit**.

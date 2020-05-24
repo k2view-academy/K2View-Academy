@@ -6,9 +6,9 @@ To open the User Preferences options, click the [Tools](https://github.com/k2vie
  
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_04_01%20default%20General%20Preferences.png)
 
-User Preferences are saved in: **[Fabric Studio Installation Dir]**\Preferences. 
+User Preferences are saved in: [Fabric Studio Installation Dir]\Preferences. 
 
-### What Is The purpose of the General Preferences Tab?
+### What is the purpose of the General Preferences Tab?
 The General Preferences tab is used to define the system’s Projects Directory folder which is by default saved in:
 
 C:\users\<username>\documents\K2View Fabric Studio\Projects.
@@ -162,7 +162,7 @@ The following SVN preferences can be configured:
 </tbody>
 </table>
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/03_diagram_and_toolbars.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_general/05_creating_a_new_project.md)
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/03_diagram_and_toolbars.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/05_creating_a_new_project.md)
 
 
 
