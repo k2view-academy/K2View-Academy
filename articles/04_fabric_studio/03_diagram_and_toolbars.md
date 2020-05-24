@@ -47,18 +47,18 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Editing the data mapping and transformations of different database entities</strong></p>
+<p><strong>Editing the data mapping and transformations of different <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/06_LU_tables/01_LU_tables_overview.md">database entities</strong></a></p>
 </td>
 <td width="189">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/06_LU_tables/01_LU_tables_overview.md">Table</a> Mapping window.</p>
+<p>Table Mapping window.</p>
 </td>
 </tr>
 <tr>
 <td width="453">
-<p><strong>Viewing Data</strong></p>
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md"><strong>Viewing Data</strong></a></p>
 </td>
 <td width="189">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a> window.</p>
+<p>Data Viewer window.</p>
 </td>
 </tr>
 <tr>
