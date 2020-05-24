@@ -15,10 +15,10 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Displaying the Logical Unit Schema</strong></p>
+<p><strong>Displaying the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md">Logical Unit Schema</strong></a></p>
 </td>
 <td width="189">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md">Logical Unit Schema window</a>.</p>
+<p>Logical Unit Schema window.</p>
 </td>
 </tr>
 <tr>
