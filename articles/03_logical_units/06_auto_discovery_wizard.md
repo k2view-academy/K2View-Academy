@@ -134,4 +134,4 @@ Display the suggested logical unit diagram and click **Finish** to create the LU
 
 Optional: you can check tables out of the LU schema to create them as LU tables and add them manually to your LU if needed. 
 
-[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
+[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/07_build__or_update_an_LU_schema.md) 
