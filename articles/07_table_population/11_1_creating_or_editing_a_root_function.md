@@ -9,7 +9,7 @@ There are two types of **Source Objects** for a Table Population object:
 
 A Root Function is used when a table population requires complex logic. For example, when a population requires data from multiple DB interfaces or non-DB interfaces. 
 
-[Click for more information about using Root Functions in a Population.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/03_creating_a_new_table_population.md#how-do-i-create-a-new-table-population-from-a-root-function)
+[Click for more information about using Root Functions in a Population.](https://github.com/k2view-academy/K2View-Academy/blob/5544404981bdad9b406bfb98e9171853e4e54a3a/articles/07_table_population/02_source_object_types.md#db-query-vs-root-function-comparison-analysis)
 
 ### How Can I Create or Edit a Root Function?
 There are several ways to create a Root Function: 
