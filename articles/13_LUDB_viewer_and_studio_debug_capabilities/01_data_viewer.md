@@ -1,7 +1,7 @@
 # Data Viewer
 
 The Data Viewer enables you to view a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) database, add debugging capabilities and improve testing abilities and defect resolution times. Since a Logical Unit database is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis.\
-Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\ [project name] \Implementation\LogicalUnits\[LU name]\VirtualDB_Data
+Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\\[project name]\\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data
 
 [Click for more information about Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
 
