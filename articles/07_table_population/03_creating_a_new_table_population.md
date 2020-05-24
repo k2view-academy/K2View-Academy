@@ -6,10 +6,12 @@ A **Table Population** can be created by either:
 *	Using the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to  automatically create the LU Table and a DB Query population for each LU Table.
 *	**Manually**, by right clicking the **table** under the **Project Tree** and then clicking **New Table Population**. 
 
-LU Tables can be populated by either a DB Query or a Root Function source object. To decide which source object to use, refer to the comparison analysis of [Table Population Source Object Types](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md). 
-*	A source object can return one or many records whereby each Output record is mapped and populated into a target LU Table. 
-*	Note that a Table Population can extract data from other [LU Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) in the same Logical Unit. It is recommended to always check the [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU Tables are populated **before** the target LU Table. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
-*	When an LU Table has two populations, a second Table Population can extract data from the same LU Table. For example, the ADDRESS LU Table has two Table Populations:
+LU Tables can be populated by either a DB Query or a Root Function source object. To decide which source object to use, refer to the comparison analysis of [Table Population Source Object Types](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md).
+
+A source object can return one or many records whereby each Output record is mapped and populated into a target LU Table. 
+Note that a Table Population can extract data from other [LU Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) in the same Logical Unit. It is recommended to always check the [execution order](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU Tables are populated **before** the target LU Table. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
+
+When an LU Table has two populations, a second Table Population can extract data from the same LU Table. For example, the ADDRESS LU Table has two Table Populations:
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
 
