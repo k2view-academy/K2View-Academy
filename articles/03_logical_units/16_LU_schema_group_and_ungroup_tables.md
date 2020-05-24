@@ -1,10 +1,10 @@
 # LU Schema - Group and Ungroup Tables
 
-An LU schema may include a large number of [tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md). To make the structure of the table schema clearer, group or ungroup list of tables. 
+An LU schema may include a large number of [tables](/articles/06_LU_tables/01_LU_tables_overview.md). To make the structure of the table schema clearer, group or ungroup list of tables. 
 
 For example, group all Billing Tables in the Customer LU, see below:
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1_16_lu_schema_group_tables_including_icons.PNG)
+![image](/articles/03_logical_units/images/1_16_lu_schema_group_tables_including_icons.PNG)
 
 ## How Can I Group LU Tables?
 1. Select the **objects** in the **table** to be grouped.
@@ -15,8 +15,8 @@ For example, group all Billing Tables in the Customer LU, see below:
 Click the **Grouped SubGraph** and click the **Ungroup SubGraph** icon:
 
 \
-[Click for more information about the Diagram Toolbars.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/03_diagram_and_toolbars.md)
+[Click for more information about the Diagram Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 \
-[Click for more information about Logical Unit Schema Window Toolbar.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar)
+[Click for more information about Logical Unit Schema Window Toolbar.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar)
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/15_LU_schema_edit_reference_tab.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/17_LU_schema_change_root_table.md)
+[![Previous](/articles/images/Previous.png)]/articles/03_logical_units/15_LU_schema_edit_reference_tab.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/17_LU_schema_change_root_table.md)
