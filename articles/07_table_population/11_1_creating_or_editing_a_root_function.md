@@ -29,14 +29,12 @@ The steps for creating a Root Function in Fabric Studio are the same as those fo
 A Root Function must have at least one Input parameter and at least one Output parameter. The Input parameter connects the Root Function of an LU with its parent object in the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md). 
 The Root Table in an LU Schema is always populated by the [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui). The Output of a Root Function serves as Input for the Table Population. 
 A Root Function must have a **yield()** command to return the array of Objects (with the type Object []). All records yielded from the function are inserted into the target table.
-The Input and Output parameters can be added to the function automatically using the Objects / Database pane in the Function Manager window.
+The Input and Output parameters can be [added to the function automatically](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-define-functions-parameters) using the Objects / Database pane in the Function Manager window.
 
 **Example of the Input and Output Parameters Settings**
 
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/4_1_1_1_first_image.png)
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/4_1_2%20%20Parameters%20settings.png)
-
-[Click for more information about How to Define a Function’s Parameters Automatically.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-define-functions-parameters) 
 
 ### Function Body
 
