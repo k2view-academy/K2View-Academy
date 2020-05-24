@@ -17,7 +17,7 @@ An [LU Schema structure](https://github.com/k2view-academy/K2View-Academy/blob/m
 *	Each Table Population object can be linked to a different parent LU Table.
 Note that an LU Table can be added to an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction .
 
-[**Click for more information about Building an LU Hierarchy and Linking Table Populations.**]
+[Click for more information about Building an LU Hierarchy and Linking Table Populations.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
 ### Table Population Window
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database. 
