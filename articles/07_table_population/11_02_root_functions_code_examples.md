@@ -12,7 +12,7 @@ ludb().fetch(sql, i_customer_id).each(row->{
 });
 </code></pre>
 
-2.	Add a Fabric command, for example ‘set environment’ using a predefined Global variable:
+2.	Add a Fabric command, for example **set environment** using a predefined Global variable:
 
 <pre><code>
 fabric().execute("set environment='" + SOURCE_ENV_NAME + "'");
@@ -20,7 +20,7 @@ fabric().execute("set environment='" + SOURCE_ENV_NAME + "'");
 
 [Click to display an example of the entire fnPop_NEW_ACTIVITY Root Function in the Demo project.]  
 
-### Example pf a Root Function that Retireves Data from Several Data Sources
+### Example of a Root Function that Retireves Data from Several Data Sources
 Use a Root Function to retrieve source data from several data sources, for example the current LU and an additional DB Interface. Add an SQL query per each data source.  
 1.	Create a **Root Function** using the generated code for the first query that retrieves the data from the LU:
 
