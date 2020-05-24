@@ -31,7 +31,7 @@ Do the following:
     * Map duplicated information across several legacy systems and check which system is the data master.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/01_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/01_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) 
 
 
 
