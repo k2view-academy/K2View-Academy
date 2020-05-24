@@ -77,5 +77,5 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
 
 Note that if a deleted Root Function is used by a population, update the population to include a different source object.
 
-
+[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_creating_a_project_function.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/11_2_root_functions_code_examples.md)
 
