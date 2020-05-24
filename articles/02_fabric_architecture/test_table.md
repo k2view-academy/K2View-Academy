@@ -1,5 +1,6 @@
 ## 1.1  Main Directories
-<!---tali - test comment->
+
+<!--This is a comment. Comments are not displayed in the browser-->
 
 ### 1.1.1Temp Files Directory
 
