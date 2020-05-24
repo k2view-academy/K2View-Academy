@@ -1,9 +1,9 @@
 # LU Schema Window
 
 ### Logical Unit (LU) - Related Objects
-A [Fabric project](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/08_fabric_project_tree.md) has a tree-like structure known as the Project Tree which displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window where its Logical Units (LU) are located under the Logical Units branch.
+A [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md) has a tree-like structure known as the Project Tree which displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window where its Logical Units (LU) are located under the Logical Units branch.
 
-The following objects are located under each [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
+The following objects are located under each [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
 * [Schema](https://github.com/k2view-academy/K2View-Academy/wiki/Logical-Unit-Schema-Window#logical-unit-lu-schema)
 * Java - [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md) and [Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md)
 * Resources, files that can be saved as part of a project. For example, an Excel file
