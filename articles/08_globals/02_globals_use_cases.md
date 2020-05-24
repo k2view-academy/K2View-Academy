@@ -53,7 +53,7 @@ Globals can be overridden via the Fabric Server using Fabric commands **without 
 * Only Globals that are not defined as Final can be overridden. 
 * Globals defined as Final on a Shared Objects level but are not defined as Final under the same name on an LU level, can be overridden in the context of this LU only.
 
-[Click for more information about Globals Override Commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md). 
+[Click for more information about Global's override using SET and SET_GLOBAL commands](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md). 
 
 [![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/03_set_globals.md)
 
