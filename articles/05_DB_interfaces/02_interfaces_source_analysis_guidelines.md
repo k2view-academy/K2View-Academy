@@ -6,7 +6,7 @@ Do the following:
 * Define the interfaces for the data sources required for the specific implementation. 
 
 ### What Do I Need to Know Before Creating a New Interface?
-1. Identify which source systems store [Digital Entities](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) information in your Project. 
+1. Identify which source systems store [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) information in your Project. 
 2. Check the following for each identified legacy system:
     * System name: For example, CRM.
     * Description: For example, Customer Relationship Management.
@@ -31,7 +31,7 @@ Do the following:
     * Map duplicated information across several legacy systems and check which system is the data master.
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/01_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
 
 
 
