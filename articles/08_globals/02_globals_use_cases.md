@@ -36,7 +36,7 @@ import com.k2view.cdbms.shared.Globals;
 import static com.k2view.cdbms.usercode.lu.<LU name>.Globals.*; 
 </code></pre>
 
-When opening an [LU function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) or a Web Service in Fabric, a list of all Globals is displayed in the **Objects** tab in the left panel of the window. 
+When opening a function or a Web Service in Fabric, a list of all Globals is displayed in the **Objects** tab in the left panel of the window. 
 * Globals defined in LU Globals or in Shared Globals are available for use in LU Functions.
 * Globals that are only defined in Shared Globals are available for use in Web Services.
 
