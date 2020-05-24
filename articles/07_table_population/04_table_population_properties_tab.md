@@ -33,7 +33,7 @@ The Properties include:
 </table>
 
 ### Function Properties
-The Function Properties tab can display either a **source root function** or any [**function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/05_table_population_mode.md) in the population.
+The Function Properties tab can display either a **source root function** or any [**function**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) in the population.
 <table width="660">
 <tbody>
 <tr>
