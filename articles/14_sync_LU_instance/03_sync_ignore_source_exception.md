@@ -8,7 +8,7 @@ For example:
 
 * 	Get Customer 46:
     * 	Customer LU source system = Oracle DB.
-    * 	[DB interface name](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md) = CRM_DB.
+    * 	[DB interface name](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) = CRM_DB.
 Run the following command on Fabric:  get Customer.46;
 The following error is displayed:
 “Failed to connect to interface CRM_DB: java.sql.SQLException: 
@@ -42,4 +42,4 @@ Click for more information about LU Instance Storage and Versions.
  
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md)
+[![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/02_sync_modes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/04_sync_methods.md)
