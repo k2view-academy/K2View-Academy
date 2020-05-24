@@ -4,18 +4,18 @@
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 The following screenshot displays a list of supported built-in interface types.
-     * ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_icon1.png) = DB interfaces.
-     * ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_icon2.png) = Non-DB interfaces.
+     * ![image](/articles/05_DB_interfaces/images/05_04_icon1.png) = DB interfaces.
+     * ![image](/articles/05_DB_interfaces/images/05_04_icon2.png) = Non-DB interfaces.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_01%20interface%20types.png)
+![image](/articles/05_DB_interfaces/images/05_04_01%20interface%20types.png)
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_02%20DB%20Interface.png)
+![image](/articles/05_DB_interfaces/images/05_04_02%20DB%20Interface.png)
 
 3. Populate the **DB Connection Name** and set the **Connection** to **Active**.
 
-4. Populate the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings)
+4. Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings)
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
     **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
@@ -40,7 +40,7 @@ The DB Interface window enables you to define DB Interfaces for your project. By
 
 _Generic Interface Definition_
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
+![image](/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
 
 Interfaces created using previous Fabric versions remain as is and can be converted to the Generic interface.
  
@@ -49,7 +49,7 @@ _Previous Fabric Version Interface Definition_
 
 The following screenshot displays an Interface configuration in an older format which uses ADO.NET/ODBC drivers.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
+![image](/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
 
 
 _When are Interfaces Created in an Older Format in the Current Fabric Version?_
@@ -69,4 +69,4 @@ Note that it is **recommended** that you convert the existing interface into a g
 
 New generic interfaces cannot be converted to older interface format based on ADO.NET/ODBC drivers. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
