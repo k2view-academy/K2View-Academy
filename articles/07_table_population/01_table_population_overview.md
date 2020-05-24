@@ -107,7 +107,7 @@ The Working Area includes:
 ### Properties Tab
 The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU Table or a translation. Note that some properties are editable. 
 
-[**Click for more information about the Population Properties Tab.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)
+[**Click for more information about Table Population Properties Tab.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)
 
 ### Objects Tab
 The **Objects Tab** in a **Table Population** window (right pane) displays all available Fabric objects. For example, [Databases](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md), [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md), [Built-In Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md), [Project](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md) or [Functions]. 
