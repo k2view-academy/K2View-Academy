@@ -1,14 +1,14 @@
 # Logical Unit (LU) Overview
 
 ## What is a Logical Unit (LU) or Logical Unit Type (LUT)?
-A Logical Unit (LU or LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a [**Digital Entity**](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity)  (business entity). It is the prototype from which LU Instances [**(LUI)**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
+A Logical Unit (LU or LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a [**Digital Entity**](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity)  (business entity). It is the prototype from which LU Instances [**(LUI)**](/articles/01_fabric_overview/02_fabric_glossary.md#lui)  are created. 
 An LU is defined and configured in Fabric Studio . These definitions are comprised of three main objects:
-1. [**LU Table**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md) : The definition of tables that hold the data of a Digital Entity including its columns, PKs, indexes and triggers.
+1. [**LU Table**](/articles/06_LU_tables/01_LU_tables_overview.md) : The definition of tables that hold the data of a Digital Entity including its columns, PKs, indexes and triggers.
 
-2. [**LU Table Population (ETL)**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md): 
+2. [**LU Table Population (ETL)**](/articles/07_table_population/01_table_population_overview.md): 
     * Getting data into the LU tables from a variety of data sources and keeping it up to date.
     * Different types of data manipulation like enrichment, cleansing, masking, transforming, etc. 
-3. [**LU Schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU Tables (similar to foreign keys). An LU Schema  has one LU Table defined as its Root Table that holds the Digital Entity’s unique key.
+3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU Tables (similar to foreign keys). An LU Schema  has one LU Table defined as its Root Table that holds the Digital Entity’s unique key.
 
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
 * **Digital Entity: Customer**.
@@ -17,7 +17,7 @@ An LU is defined and configured in Fabric Studio . These definitions are compris
 * LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate   etc. data from the four data sources into the LU Tables.
 * LU Schema: The definition of the Root Table and the relationship between all LU Tables.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/1.1_LU_Overview.png)
+![image](/articles/03_logical_units/images/1.1_LU_Overview.png)
 
 ## What is a Logical Unit Instance (LUI)?
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database  holding the data of one single Digital Entity in the LUT structure definition.
@@ -53,53 +53,53 @@ Below is a table of **pros and cons** of each alternative:
 <td width="300">
 <p>Ease of writing APIs</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="10">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="10">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="300">
 <p>Replacing a data source</p>
 </td>
 <td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="300">
 <p>Small amount of data in LU</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Maintenance, handling a less complex schema and internal relationships</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Implementing a real-time action based on an event like a Golden Gate update, when the action depends on multiple data systems</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Performance of real-time updates</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Tuning the migration process</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 </tbody>
 </table>
 
 
-[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/02_create_a_logical_unit_flow.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
