@@ -11,7 +11,7 @@ User Preferences are saved in: [Fabric Studio Installation Dir]\Preferences.
 ### What is the purpose of the General Preferences Tab?
 The General Preferences tab is used to define the system’s Projects Directory folder which is by default saved in:
 
-C:\users\<username>\documents\K2View Fabric Studio\Projects.
+C:\users\[username]\documents\K2View Fabric Studio\Projects.
 
 To update the location of the folder or to edit it, click **Browse**.
 
