@@ -7,7 +7,7 @@ An index can be created for an LU Table in order to improve performance when que
 When querying LU Tables, indexes should be considered for fields used in WHERE clauses.
 Indexes should always be built in the same order as that of the conditions in the WHERE clause of the query. This also applies when using actions like Group By or Distinct which must be applied on   indexed fields as displayed in Example 1.
 When an LU Table is invoked as a Lookup table , create an index for the lookup input links which are used in the WHERE statement.
-It is recommended to create an index on the fields of a [parent LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) which are used as a key to a child table within the LU Schema as displayed in Example 2.
+It is recommended to create an index on the fields of a [parent LU Table](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) which are used as a key to a child table within the LU Schema as displayed in Example 2.
 
 **Example 1**
 The USAGE table contains 100K records per customer. The SELECT SQL statement is:
@@ -26,7 +26,7 @@ It is therefore recommended to create two indexes for the ORDERS table:
 *	One for the CONTRACT_ID field.
 *	One for the ORDER_TYPE field.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/images/06_03_table_indexes1.png)
+![image](/articles/06_LU_tables/images/06_03_table_indexes1.png)
 
 ### Index Definition 
 LU Table indexes are defined in the **Indexes Tab** in the Table window where they can also be added, modified or removed from a table. The following Index settings can be defined:  
@@ -96,4 +96,4 @@ DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with ad
 Click for more information about The DESCRIBE Command.
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/04_table_properties.md)
+[![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/02_create_an_LU_table.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/06_LU_tables/04_table_properties.md)
