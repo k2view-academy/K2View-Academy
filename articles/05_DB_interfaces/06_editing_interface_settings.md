@@ -6,7 +6,7 @@ Throughout a Project’s lifecycle there are a number of reasons for modifying, 
 
 1.	Go to **Project Tree** > **Shared Objects** > **Interfaces** to open the **Interfaces list**. 
 2.	Double click the **interface** to open it.
-3.	Edit the [**Connection Settings**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
+3.	Edit the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 4.	Click **Test Connection** to verify that the connection settings are correct:
        * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window.  
@@ -16,4 +16,4 @@ Note that for the changes to become effective for the Fabric object (for example
 
 Click for more information about Deployment from the Fabric Studio. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
