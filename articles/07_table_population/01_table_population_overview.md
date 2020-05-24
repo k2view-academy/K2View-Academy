@@ -53,7 +53,7 @@ The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options
 <tbody>
 <tr>
 <td width="200">&nbsp; <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_02_refresh.png" alt="" /><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_03_refresh2.PNG" alt="" /></td>
-<td style="width: 343px;">
+<td width="700pxl">
 <p>There are a number of <strong>Refresh</strong> options for updating changes in a population. For example, if a function used in the current population is modified, click <strong>Refresh Functions</strong> or <strong>Refresh All</strong> to make the changes available for the population.</p>
 <p>&nbsp;</p>
 </td>
@@ -74,10 +74,10 @@ The Working Area includes:
 <table width="614">
 <tbody>
 <tr>
-<td width="179">
+<td width="200pxl">
 <p>Source Object (Left)</p>
 </td>
-<td width="435">
+<td width="700pxl">
 <p>DB query or root function.</p>
 </td>
 </tr>
@@ -118,8 +118,8 @@ The Expand / Collapse and Refresh links are displayed above the Objects tab.
 <table style="width: 566px;">
 <tbody>
 <tr>
-<td width="200"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_05_object_icon1.PNG" alt="" /></td>
-<td style="width: 465px;">
+<td width="200pxl"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/images/07_01_05_object_icon1.PNG" alt="" /></td>
+<td width="700pxl">
 <p>Expand all.</p>
 </td>
 </tr>
