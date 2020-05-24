@@ -158,7 +158,7 @@ A Translation Schema has the following structure:
 <p><strong>Type</strong></p>
 </td>
 <td width="472">
-<p>Value type. The following types are supported:</p>
+<p>Parameter type. The following types are supported:</p>
 <ul>
 <li>Integer.</li>
 <li>Real.</li>
