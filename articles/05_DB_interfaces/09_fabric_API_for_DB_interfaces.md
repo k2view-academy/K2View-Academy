@@ -166,7 +166,7 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 </td>
 <td width="225">
 <p>public&nbsp;<a href="http://10.21.1.76:3213/static/doc/user-api/com/k2view/cdbms/shared/Db.Rows.html">Db.Rows</a>&nbsp;fetch(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true">String</a>&nbsp;sql,</p>
-<p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true">Object</a>...&nbsp;params)</p>
+<p>Object params)</p>
 <p>&nbsp;</p>
 </td>
 <td width="274">
