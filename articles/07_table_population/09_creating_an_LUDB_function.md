@@ -1,6 +1,6 @@
 # Creating an LUDB Function
 
-### What is an LUDB Function?
+### What Is an LUDB Function?
 
 An LUDB function is a Project function invoked from an SQL query to perform more complex operations on LU data than those performed using standard SQL statements.
 *	LUDB functions are invoked from an SQL statement.
