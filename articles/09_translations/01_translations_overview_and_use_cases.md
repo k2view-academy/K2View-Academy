@@ -26,7 +26,7 @@ Translations are defined via the Translation window which has two tabs:
 
 *	[Click for more information about Data Population in Translations.]
 
-*Translation Schema Tab Icons*
+### Translation Schema Tab Icons
 The following icons are displayed at the top of the Translation Schema tab:
 <p>&nbsp;</p>
 <table>
