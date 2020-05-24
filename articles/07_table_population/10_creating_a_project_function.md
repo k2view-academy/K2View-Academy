@@ -17,7 +17,7 @@ Right click in the workspace and select **Insert New Function**.
 
 ![image](/articles/07_table_population/images/07_10_01_screen1.png)
 
-2.	Do the following:
+2.	Do the following: 
     *	Populate the **Category** or select the existing value from the dropdown list. The [**Category**](/articles/04_fabric_studio/09_logic_files_and_categories.md) defines the function’s Java Logic file.
     *	Populate the **Function Type** by selecting the value from the dropdown list.
     *	(Optional) Populate the **Description**.
