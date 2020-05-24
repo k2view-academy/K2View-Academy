@@ -10,18 +10,18 @@ The Auto Discovery Wizard can run in two modes:
 ## How Do I Use the Auto Discovery Wizard?
 
 ### STEP 1: Define the DB Interface
-The first screen displays a list of all [DB interfaces](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
+The first screen displays a list of all [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) defined in a Fabric project. You need to select the DB interface for the Auto Discovery process.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_01.png)
+![image](/articles/03_logical_units/images/03_06_wizard_01.png)
 
 1. Click the **DB interface** to display its connection string.
 1. To validate the connection settings, click **Test Connection**. 
 1. Click **Next**.
 
 ### STEP 2: Define the Root Table and Field
-In this step you will select a DB Table and column as the Root Table and [Instance ID](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)  of the Logical Unit.
+In this step you will select a DB Table and column as the Root Table and [Instance ID](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)  of the Logical Unit.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_02.png)
+![image](/articles/03_logical_units/images/03_06_wizard_02.png)
 
 
 1. Go to the **Tables** list and click the **root table** and then click the **Instance ID.**
@@ -32,7 +32,7 @@ In this step you will select a DB Table and column as the Root Table and [Instan
 ### STEP 3: Define the Auto Discovery Mode and Settings
 This screen allows you to select the Auto Discovery mode (auto discovery type) and add additional settings to it.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_03.png)
+![image](/articles/03_logical_units/images/03_06_wizard_03.png)
 
 ## Auto Discovery Mode (Type):  
 Auto Discovery supports the following modes:
@@ -113,7 +113,7 @@ Connections are colored:
 If the selected Root Table is not defined as the root of the identified ERD, consider changing the selected Root Table or check the Enable Backwards Discovery checkbox. If not, the created LU includes only the selected Root Table and its subordinate table. 
 
 **For Example** 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_04.png)
+![image](/articles/03_logical_units/images/03_06_wizard_04.png)
 
 The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard identifies the CRM_DB.CUSTOMER table as the Root Table of the CRM_DB. 
 
@@ -121,17 +121,17 @@ The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard i
 When saving the CRM_DB.ACTIVITY table as a Root Table:
 1. **If Enable Backwards Discovery** is unchecked (default), then Auto Discovery creates the following LU and filters out the remaining tables of the ERD diagram.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_05.png)
+![image](/articles/03_logical_units/images/03_06_wizard_05.png)
 
 2. When **Enable Backwards Discovery** is checked, Auto Discovery creates the following LU and links the CUSTOMER table and its subordinate table to the ACTIVITY table.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_06.png)
+![image](/articles/03_logical_units/images/03_06_wizard_06.png)
 
 ### Create the Logical Unit Diagram 
 Display the suggested logical unit diagram and click **Finish** to create the LU. 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/images/03_06_wizard_07.png)
+![image](/articles/03_logical_units/images/03_06_wizard_07.png)
 
 Optional: you can check tables out of the LU schema to create them as LU tables and add them manually to your LU if needed. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
+[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/05_create_a_new_LU_object.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
