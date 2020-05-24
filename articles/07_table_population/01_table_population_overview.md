@@ -45,7 +45,7 @@ The [**Debug Toolbar**](https://github.com/k2view-academy/K2View-Academy/blob/ma
 *	If there is an error, it is displayed in the Fabric Studio Log section.
 *	If the outcome has more than one row, you can navigate between the different rows.
 
-[**Click for more information about the Fabric Studio Log.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
+[Click for more information about the Fabric Studio Log.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
 
 ### Options Toolbar
 The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options.
@@ -100,18 +100,18 @@ The Working Area includes:
 </tbody>
 </table>
 
-[**Click for more information about Table Population Transformation Rules.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
+[Click for more information about Table Population Transformation Rules.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Properties Tab
 The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU Table or a translation. Note that some properties are editable. 
 
-[**Click for more information about Table Population Properties Tab.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)
+[Click for more information about Table Population Properties Tab.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/04_table_population_properties_tab.md)
 
 ### Objects Tab
 The **Objects Tab** in a **Table Population** window (right pane) displays all available Fabric objects. For example, [Databases](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md), [Globals](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/08_globals/01_globals_overview.md), [Built-In Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/07_fabric_built_in_functions.md) or [Project Functions](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/08_project_functions.md). 
 Objects can be included in a population map by dragging and dropping them into the working area.
 
-[**Click for more information about Table Population Transformation Rules.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
+[Click for more information about Table Population Transformation Rules.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Diagram Outline Link
 The Expand / Collapse and Refresh links are displayed above the Objects tab.
@@ -138,7 +138,7 @@ The Expand / Collapse and Refresh links are displayed above the Objects tab.
 </tbody>
 </table>
 
-[**Click for more information about Table Population Diagram Outline.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
+[Click for more information about Table Population Diagram Outline.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/12_table_population_diagram_outline.md)
 
 [<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md)
 
