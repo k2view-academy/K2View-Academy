@@ -39,7 +39,7 @@ The Input and Output parameters can be added to the function automatically using
 
 ### Function Body
 
-The Root Function’s main SELECT statement and loop over the SELECT results can be [automatically generated!](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-define-functions-parameters)  to act as the basis for a function
+The Root Function’s main SELECT statement and loop over the SELECT results can be [automatically generated](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-define-functions-parameters)  to act as the basis for a function
 
 **Example of the Generated Code of a Root Function** 
 
@@ -76,7 +76,7 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
 2.	Click **Tables > [Table Name] > [Population Name] > Delete Selected Items**.
 3.	Click **Yes** in the confirmation pop-up message.
 
-Note that if a deleted Root Function is used by a population, update the population to include a different source object
+Note that if a deleted Root Function is used by a population, update the population to include a different source object.
 
 
 
