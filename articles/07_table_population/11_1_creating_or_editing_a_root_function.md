@@ -72,7 +72,7 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
 ### How Do I Delete a Root Function?
  
 1.	Go to **Project Tree > Logical Units > [LU Name]**.
-2.	Click **Tables > [Table Name] > [Population Name] > Delete Selected Items**.
+2.	Click **Java > Root Category**, right click **[Root Function Name] > Delete Selected Items**.
 3.	Click **Yes** in the confirmation pop-up message.
 
 Note that if a deleted Root Function is used by a population, update the population to include a different source object.
