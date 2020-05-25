@@ -19,7 +19,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
     *	Populate the **Function Type** by selecting the value from the dropdown list.
     *	(Optional) Populate the **Description**.
     *	Define the function’s **Input** and **Output** settings either [manually](/articles/07_table_population/10_creating_a_project_function.md#how-do-i-manually-define-functions-parameters)  or [automatically](/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-define-functions-parameters).
-    *	Type the function’s **Java code** to generate the [code].
+    *	Type the function’s **Java code** to generate the [code](/articles/07_table_population/10_creating_a_project_function.md#how-do-i-automatically-generate-code-for-a-function).
     *	Click Save to display the **New Item** dialog box. 
     *	Complete the **Name** field and then click **OK**.
     
