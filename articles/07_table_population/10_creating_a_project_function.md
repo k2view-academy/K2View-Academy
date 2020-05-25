@@ -96,7 +96,7 @@ db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 *	It is recommended to use binding parameters in SQL statements for prepared statements.
 
 
-Click to display the Fabric API list: **http://<Fabric IP address>:3213/static/doc/user-api/index.html**
+Click to display the Fabric API list: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/09_creating_an_LUDB_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
