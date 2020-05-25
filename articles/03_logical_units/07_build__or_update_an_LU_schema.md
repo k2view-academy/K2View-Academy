@@ -1,12 +1,12 @@
 # Using Auto Discovery to Build or Update an LU Schema
 
-The Fabric Studio [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) enables you to automatically generate or edit an LU DB Schema based on predefined database constraints. 
+The Fabric Studio [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) enables you to automatically generate or edit an LU DB Schema based on predefined database constraints. 
 
 ### How Do I Define a New Logical Unit (LU) Using the Auto Discovery Wizard? 
 
 1. Go to  **Project Tree** > right click **Logical Units** > **New Logical Unit** > **Logical Unit** dialog box. 
 2. Complete the **Name** field.
-3. By default the **Open LU Auto Discovery** option is checked whereby the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) automatically opens. To manually create an **LU**, uncheck **Open LU Auto Discovery**.  
+3. By default the **Open LU Auto Discovery** option is checked whereby the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) automatically opens. To manually create an **LU**, uncheck **Open LU Auto Discovery**.  
 4. Click **OK**. 
 
 ### How Do I Add the Auto Discovery Functionality to an Existing Schema?
