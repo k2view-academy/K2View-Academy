@@ -39,7 +39,7 @@ To define Input and Output settings manually, do the following:
 3.	Optional: type comments in the **Comment** field.
 
 
-### Bulk-loading Parameters to a Function Manually
+### Bulk Load Parameters to a Function Manually
 
 When multiple parameters need to be uploaded, they can be loaded using the Bulk Load Parameters option. 
 1.	Right click the **Input / Output Parameters** pane to display the **Input / Output Parameters** dialog box. 
