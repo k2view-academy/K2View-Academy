@@ -4,7 +4,7 @@ An LU schema may include a large number of [tables](/articles/06_LU_tables/01_LU
 
 For example, group all Billing Tables in the Customer LU, see below:
 
-![image](/articles/03_logical_units/images/1.7_pic_2.png)
+![image](/articles/03_logical_units/images/1.7_pic_2_grouped_paragpraph.png)
 
 ## How Can I Group LU Tables?
 1. Select the **objects** in the **table** to be grouped.
