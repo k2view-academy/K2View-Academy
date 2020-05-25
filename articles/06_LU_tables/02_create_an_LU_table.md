@@ -18,7 +18,7 @@ From the Project Tree:
 [Click for more information about Adding a Table to a Schema](/articles/03_logical_units/09_add_table_to_a_schema.md).
  
 ### How Do I Create a New LU Table Manually?  
-1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right click **Tables** > **New Table** to display the Columns tab in the **Table Schema**.
+1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right click **Tables** > **New Table** to display the **Columns tab** in the **Table Schema** window.
 2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):\
    a.	Complete the settings of each table column like the **Name** or **Data Type**.\
    b.	Optional: Define the table [**Indexes**](/articles/06_LU_tables/03_table_indexes.md).\
@@ -27,7 +27,7 @@ From the Project Tree:
 4.	**Save** the table.
 
 ### How Do I Edit an LU Table? 
-1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the Columns tab in the Table Schema.
+1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Columns tab** in the **Table Schema** window.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.
 
