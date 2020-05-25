@@ -1,10 +1,10 @@
 # Adding a Fabric / Remote Fabric Interface Type
 
-A new DB interface can be created in Fabric based on **Internal Fabric** or **Remote Fabric** interface types. 
-* An **Internal Fabric** interface type refers to a local Fabric Server and holds settings like User, Password, and Debug Server. It does not include a Host and a Port since this interface refers to the local Fabric server.
+A new DB interface can be created in Fabric based on **Local Fabric** or **Remote Fabric** interface types. 
+* An **Local Fabric** interface type refers to a local Fabric Server and holds settings like User, Password, and Debug Server. It does not include a Host and a Port since this interface refers to the local Fabric server.
 * A **Fabric Remote** interface type refers to a remote Fabric server that belongs to a different Fabric cluster. Unlike an internal (local) Fabric DB interface, its settings include the Host and Port of the remote Fabric server.
 
-An **Internal Fabric** (local Fabric) DB interface type is defined in a project in the following cases:
+An **Local Fabric** (local Fabric) DB interface type is defined in a project in the following cases:
 * When defining a different local Fabric user for a specific Fabric activity or command. 
 * When using the data as input for a Parser or any Fabric [Project function](/articles/07_table_population/08_project_functions.md).
 * When building an [LU](/articles/03_logical_units/01_LU_overview.md) based on another LU. For example, when creating LU Tables in an Order LU based on a Customer LU.
