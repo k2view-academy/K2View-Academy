@@ -9,7 +9,7 @@ There are several options for populating data in a Translation in the Fabric Stu
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
 *	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
 
-[Click for more information about Data Population in Translations.]  
+Click for more information about Data Population in Translations.  
 
 
 ### How Can I Use a Translation in Fabric?
@@ -22,7 +22,7 @@ For example:
 ### Translation Window
 Translations are defined via the Translation window which has two tabs:
 *	[Translation Schema](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema-tab-icons) tab, defines the Translation Schema properties. Each column in a Translation Schema must be either Input or Output and can have different data types.
-*	[Translation Data] tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways.
+*	Translation Data tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways.
 
 *	[Click for more information about Data Population in Translations.]
 
