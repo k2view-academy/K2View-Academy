@@ -14,7 +14,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 *	The output of a Root function serves as input for the Table Population. This function cannot be used for data-mapping logic.
 *	A Root function must have at least one Input parameter and at least one Output parameter. The Root function of a root table must have only one parameter.
 
-[Click for Code Examples of a Root Function.]
+[Click for Code Examples of a Root Function.](/articles/07_table_population/11_2_root_functions_code_examples.md)
 
 **LUDB Function** 
 *	A function that is invoked from an SQL query to perform more complex logic operations on LU data than those performed using standard SQL statements.
