@@ -128,7 +128,7 @@ GIT preferences can be used to enable the following:
 
 Note that TortoiseGit enables adding un-versioned files when performing the Commit process. These files do not need to be added beforehand. 
 
-**Click for more information about SVN and GIT Best Practices.**
+[Click for more information about SVN and GIT Best Practices.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### How do I Configure SVN Preferences?
 The following SVN preferences can be configured:
