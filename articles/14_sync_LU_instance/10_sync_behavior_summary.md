@@ -79,10 +79,10 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <td width="20%">
 <p>First Sync</p>
 </td>
-<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
