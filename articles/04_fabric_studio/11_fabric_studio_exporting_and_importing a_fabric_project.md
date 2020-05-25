@@ -65,8 +65,10 @@ You can import an entire exported project or specific branches of a Project Tree
 
 ![image](/articles/04_fabric_studio/images/04_11_06%20project%E2%80%99s%20structure.png)
 
-The Custom Import window displays the number of imported and overridden items.\
-3.  Right click the **Target Project Tree** to display a context menu with the following options:\  
+The Custom Import window displays the number of imported and overridden items.
+
+3.  Right click the **Target Project Tree** to display a context menu with the following options:
+
     a. **Remove All Conflicted Items**, removes all conflicting items from the target whereby only new items remain.\
     b. **Remove Import Items**, removes selected items only. Right click an item to select it.\
     c. **Show Conflicted Items Only**, displays only items that conflict with existing items.\
