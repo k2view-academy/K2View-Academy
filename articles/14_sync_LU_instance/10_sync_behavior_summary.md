@@ -61,9 +61,7 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <p><strong>&nbsp;</strong></p>
 </td>
 <td width="6%">
-<p>```diff
-+ true
-```<strong>true</strong></p>
+<p><strong>true</strong></p>
 </td>
 <td width="7%">
 <p><strong>false</strong></p>
