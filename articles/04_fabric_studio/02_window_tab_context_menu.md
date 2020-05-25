@@ -10,7 +10,7 @@ Right click the **Window Tab Header** to display a context menu with the followi
 <table>
 <tbody>
 <tr>
-<td width="500pxl">
+<td width="200pxl">
 <p><strong>Command</strong></p>
 </td>
 <td width="500pxl">
