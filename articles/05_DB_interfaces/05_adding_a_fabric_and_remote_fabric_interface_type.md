@@ -6,8 +6,8 @@ A new DB interface can be created in Fabric based on **Internal Fabric** or **Re
 
 An **Internal Fabric** (local Fabric) DB interface type is defined in a project in the following cases:
 * When defining a different local Fabric user for a specific Fabric activity or command. 
-* When using the data as input for a Parser or any Fabric Project function.
-* When building an LU based on another [LU](/articles/03_logical_units/01_LU_overview.md). For example, when creating LU Tables in an Order LU based on a Customer LU.
+* When using the data as input for a Parser or any Fabric [Project function](/articles/07_table_population/08_project_functions.md).
+* When building an [LU](/articles/03_logical_units/01_LU_overview.md) based on another LU. For example, when creating LU Tables in an Order LU based on a Customer LU.
 
 A **Fabric Remote** DB interface type is defined in a project in the following cases: 
 * When getting data from a remote Fabric cluster.
