@@ -33,7 +33,7 @@ The Properties include:
 </table>
 
 ### Function Properties
-The Function Properties tab displays the properties of either a source **Root function** or any [**Project function**](/articles/07_table_population/08_project_functions.md) in the population.
+The Function Properties tab displays the properties of either a source [**Root function**](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md) or any [**Project function**](/articles/07_table_population/08_project_functions.md) in the population.
 <table width="660">
 <tbody>
 <tr>
