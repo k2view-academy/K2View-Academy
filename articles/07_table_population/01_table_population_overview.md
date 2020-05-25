@@ -40,7 +40,7 @@ The Population window header holds the **Debug** and **Options** toolbars where 
 Click for more information about Additional Toolbars.
 
 ### Debug Toolbar
-The **Debug Toolbar** holds options for testing the Population process by executing its population logic on a selected [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
+The **Debug toolbar** holds options for testing the Population process by executing its logic on a selected [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
 *	When the execution is successful, the values of the Input and Output fields are displayed in the working area above the connection lines between the source and the target. 
 *	If there is an error, it is displayed in the [Fabric Studio Log](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) section.
 *	If the outcome has more than one row, you can navigate between the different rows.
@@ -108,13 +108,13 @@ The **Properties Tab** in a Table Population window (right pane) displays the pr
 [Click for more information about Table Population Properties Tab.](/articles/07_table_population/04_table_population_properties_tab.md)
 
 ### Objects Tab
-The **Objects Tab** in a **Table Population** window (right pane) displays all available Fabric objects. For example, [Databases](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Built-In Functions](/articles/07_table_population/07_fabric_built_in_functions.md) or [Project Functions](/articles/07_table_population/08_project_functions.md). 
+The **Objects Tab** in a Table Population window (right pane) displays all available Fabric objects. For example, [Databases](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Built-In Functions](/articles/07_table_population/07_fabric_built_in_functions.md) or [Project Functions](/articles/07_table_population/08_project_functions.md). 
 Objects can be included in a population map by dragging and dropping them into the working area.
 
 [Click for more information about Table Population Transformation Rules.](/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Diagram Outline Link
-The Expand / Collapse and Refresh links are displayed above the Objects tab.
+The **Expand / Collapse** and **Refresh** links are displayed above the **Objects tab**.
 <table style="width: 566px;">
 <tbody>
 <tr>
