@@ -79,88 +79,46 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <td width="20%">
 <p>First Sync</p>
 </td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="9%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="8%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="13%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="20%">
 <p>Schema Change</p>
 </td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="5%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="9%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="8%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="13%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="20%">
 <p>Normal Operation</p>
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="5%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
-<td style="text-align: center;" width="8%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="13%">
-<p>YES</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 </tbody>
 </table>
