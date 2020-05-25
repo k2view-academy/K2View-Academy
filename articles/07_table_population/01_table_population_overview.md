@@ -5,9 +5,9 @@ A **Table Population** is a component that defines and executes the mapping and 
 
 Each table can have one or several Table Populations that can be executed simultaneously or according to a predefined [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md).
 Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU Table.
-There are two types of source objects for a **Table Population** object:
-*	[DB query](/articles/07_table_population/02_source_object_types.md), (default) that executes an SQL Select query on a predefined DB interface. 
-*	[Root function](/articles/07_table_population/02_source_object_types.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
+There are [two types of source objects](/articles/07_table_population/02_source_object_types.md) for a **Table Population** object:
+*	DB query, (default) that executes an SQL Select query on a predefined DB interface. 
+*	Root function, that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
 Note that tables can also be populated or updated by [enrichment functions] which, unlike root functions, are executed after all LU Tables are populated.
 
 ### Table Population in an LU Schema 
