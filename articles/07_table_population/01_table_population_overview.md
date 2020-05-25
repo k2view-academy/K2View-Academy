@@ -11,11 +11,11 @@ There are two types of source objects for a **Table Population** object:
 Note that tables can also be populated or updated by [enrichment functions] which, unlike root functions, are executed after all LU Tables are populated.
 
 ### Table Population in an LU Schema 
-An [LU Schema structure](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the root table. Parent-child links in LU Tables are created via their Table Population objects:
+An [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the root table. Parent-child links in LU Tables are created via their Table Population objects:
 *	Each [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
 *	Each Table Population object, apart from the Table Population of the root LU Table, must be linked to a parent table via its Input columns.
 *	Each Table Population object can be linked to a different parent LU Table.
-Note that an LU Table can be added to an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction .
+Note that an LU Table can be added to an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync process](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction .
 
 [Click for more information about Building an LU Hierarchy and Linking Table Populations.](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
