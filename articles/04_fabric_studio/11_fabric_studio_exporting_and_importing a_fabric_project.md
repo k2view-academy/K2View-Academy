@@ -76,11 +76,13 @@ The Custom Import window displays the number of imported and overridden items.
     e. **Show All Items**, displays all items in the project tree.
 
 4. Click **Import & Close** to confirm the Import process or close the window to cancel it. 
-5. A confirmation window opens asking you whether you want to:\
+5. A confirmation window opens asking you whether you want to:
+
     a. Override the specific file.\
     b. Override all the conflicting files in the import package.\
     c. Decline the override of the specific file.\
     d. Decline the override of all conflicting files. 
+    
 ![image](/articles/04_fabric_studio/images/04_11_07%20confirmation%20window.jpg)
 
 **Notes** 
