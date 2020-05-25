@@ -15,35 +15,35 @@ When an LU Table has two populations, a second Table Population can extract data
 *	Population 1 extracts data from the CRM DB.
 *	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
 
-[**Click for more information about Creating Table Population Objects.**](/articles/07_table_population/03_creating_a_new_table_population.md)
+[Click for more information about Creating Table Population Objects.](/articles/07_table_population/03_creating_a_new_table_population.md)
 
 ### How Do I Create a New Table Population from a DB Query? 
 
-1.	Go to **Project Tree > Logical Units** and then click the **LU Name**.
-2.	Click **Tables**, right click **Table Name** and then select **New Table Population** to open the working area for creating the mapping.
-3.	Click the **Objects tab** in the right panel of the **Table Population working area.**
+1.	Go to **Project Tree > Logical Units** > [**LU Name**].
+2.	Click **Tables**, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
+3.	Click the **Objects tab** in the right panel of the **Table Population** working area.
 4.	Click **Databases** to display the Databases List holding a list of interfaces defined in the project. 
 5.	Do either: 
-    *	Double click the Interface Name and drag a table into the working area.
-    *	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the **LU Name** and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file [using the Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) or [Reference file]. 
+    *	Double click the [**Interface Name**] and drag a table into the working area.
+    *	Use the Newest LUDB File or Newest Reference File options to populate the data from the table of the current LU. Double click the [**LU Name**[ and drag the LU Table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file [using the Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) or [Reference file]. 
 6.	Click **Create as DB Query** to create the DB Query source object in the working area. 
 7.	Optional: use the **Edit Query** option to edit the input query via the **Query Builder**, for example, to choose specific columns or conditions in SQL statements. Do either:
-    *	Click the **Source Object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
-    *	Double click the **Query Object**.
-8.	To connect the Source Object to the target LU Table, right click the DB Query object and either:
+    *	Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
+    *	Double click the **source object**.
+8.	To connect the source object to the target LU Table, right click the **DB Query object** and either:
     *	Click **Auto Connect to Table**.
-    *	Connect the fields manually.
+    *	Connect the fields **manually**.
 
 ### How Do I Create a New Table Population from a Root Function? 
 
-1.	Go to **Project Tree > Logical Units** and then click the **LU Name.**
-2.	Click Tables, right click **Table Name** and then click **New Table Population** to open the working area for creating the mapping.
-3.	Click the **Objects** tab in the right panel of the **Table Population working area.**
+1.	Go to **Project Tree > Logical Units** > [**LU Name**].
+2.	Click Tables, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
+3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Click [**Root Functions**] and do either:
     * Select an existing Root Function and drag it into the working area. 
-    * Click **Create New Root Function.**
-5.	Right click the **Source Object** and do either:
-    * Check **Auto Connect to Table.**
-    * Connect the fields manually.
+    * Click **Create New Root Function**.
+5.	Right click the **source object** and do either:
+    * Check **Auto Connect to Table**.
+    * Connect the fields **manually**.
    
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/02_source_object_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/04_table_population_properties_tab.md)
