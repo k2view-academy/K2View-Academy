@@ -5,19 +5,16 @@
 Fabric Project functions are user-defined Java functions that are added to the project implementation to perform complex data manipulations or to execute queries on a specific [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id). 
 In Fabric Studio functions can be edited either by opening the function’s code from the Project Tree, opening the specific category’s **Logic.java** source file or opening the function in [**IntelliJ** - an Integrated Development Environment (IDE)] for developing computer software. 
 Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, Web Services, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md).
-1.	Go to the **Project Tree** and do either:
-    *	Click either **Logical Units** or **Shared Objects**,[ **LU Name**], right click **Java** and then select **New Function**. 
-    *	Click **Logical Units**, [**LU Name**], **Tables**, [**Table Name** ]and double click [**Population Name**] to open the existing population. Do either:
-Right click in the workspace and select **Insert New Function**. 
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Or,</p>
-
-   * In the **Table Population workspace**, click the **Objects** tab, click **Functions** and double click **Create New Function** to open the **New Functions window**. 
-
-
+1.	To create a function from the existing **Table Population**, go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**], double click on [**Population Name**] to open the existing population and do either:
+    * Right click on the working area and select **Insert New Function** from the context menu. 
+    * Click the **Objects tab** in the right panel of the working area, select **Functions** and double click on **Create New Function**.
+ 2. To create a function from the **Project Tree** do either:
+    *	Click **Logical Units** > [**LU Name**], right click **Java** > **New Function**. 
+    *	Click **Shared Objects** > [**LU Name**], right click **Java** > **New Function**.
+    
 ![image](/articles/07_table_population/images/07_10_01_screen1.png)
 
-2.	Do the following: 
+3.	Then do the following to complete the function creation: 
     *	Populate the **Category** or select the existing value from the dropdown list. The [**Category**](/articles/04_fabric_studio/09_logic_files_and_categories.md) defines the function’s Java Logic file.
     *	Populate the **Function Type** by selecting the value from the dropdown list.
     *	(Optional) Populate the **Description**.
