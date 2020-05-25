@@ -44,7 +44,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Full Text Search</strong></p>
 </td>
 <td width="474">
-<p>When set to True, enables the use of the MATCH sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
@@ -78,8 +78,8 @@ The Properties tab displays a list of properties that must be defined for each L
 <td width="474">
 <p>Functions which are executed after all LU tables are populated.</p>
 <ul>
-<li>The execution order is determined on an LU level and based on the Sync policy of the attached table.When no enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
-<li>When one or more enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of enrichment functions).</li>
+<li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
+<li>When one or more Enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
 </ul>
 <p>To select an enrichment function, click the three dots next to the Enrichment Functions option and select the function name. Only functions without input and output parameters are displayed.</p>
 </td>
