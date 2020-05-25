@@ -87,7 +87,7 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 </tr>
 <tr>
 <td width="122">
-<p><strong>Column Type</strong></p>
+<p><h4><strong>Column Type</strong></p>
 </td>
 <td width="502">
 <p>Two Column Types are supported:</p>
