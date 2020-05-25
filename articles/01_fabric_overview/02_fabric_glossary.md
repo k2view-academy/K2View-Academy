@@ -289,5 +289,5 @@
 </tbody>
 </table>
   
-  [![Previous](/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/01_what%20is%20fabric.md)
+  [![Previous](/articles/images/Previous.png)](h/articles/01_fabric_overview/01_what%20is%20fabric.md)
 
