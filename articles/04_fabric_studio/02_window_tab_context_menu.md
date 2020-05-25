@@ -55,7 +55,8 @@ Right click the **Window Tab Header** to display a context menu with the followi
 </td>
 <td width="300pxl">
 <p>Copy the object name including its file path onto your clipboard. For example:</p>
-<p>C\k2view\k2Projects\Fabric\NOWLEDGE_BASE_FABRIC_PROJECT\Implementation\LogicalUnits\Customer\vdb.k2vdb.xml.</p>
+<p>C\k2view\k2Projects\Fabric\KNOWLEDGE_BASE\Implementation\
+ LogicalUnits\Customer\vdb.k2vdb.xml.</p>
 </td>
 </tr>
 <tr>
