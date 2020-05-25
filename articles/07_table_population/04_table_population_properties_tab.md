@@ -1,6 +1,6 @@
 # Table Population Properties Tab
 
-The **Properties tab** in the **Table Population window** displays additional information about different objects in the **Population window**, as follows:
+The **Properties Tab** in the [Table Population](/articles/07_table_population/01_table_population_overview.md) window displays additional information about different objects in the Population window, as follows:
 *	DB Query or Root Function Source Objects.
 *	Target LU Table.
 * Other objects of a [Table Population transformation](/articles/07_table_population/06_table_population_transformation_rules.md) like a Translation or Global.
@@ -33,7 +33,7 @@ The Properties include:
 </table>
 
 ### Function Properties
-The Function Properties tab can display either a **source root function** or any [**function**](/articles/07_table_population/08_project_functions.md) in the population.
+The Function Properties tab displays the properties of either a source **Root function** or any [**Project function**](/articles/07_table_population/08_project_functions.md) in the population.
 <table width="660">
 <tbody>
 <tr>
