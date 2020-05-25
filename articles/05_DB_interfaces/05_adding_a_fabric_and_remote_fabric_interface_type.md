@@ -27,7 +27,7 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
 
 1.	Go to the **Project Tree**, click **Shared Objects**, right click **Interfaces**, and then select **New Interface**.
 2.	Click **Interface Type** to open the dropdown list and then select **Fabric Remote**.
-3.	Populate the [**Connection Settings**](/articles/05_DB_interfaces/01_interfaces_overview.md) fields.
+3.	Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings) fields.
 4.	Click **Test Connection** to verify that the connection settings are correct:
        * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
