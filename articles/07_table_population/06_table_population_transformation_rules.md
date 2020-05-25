@@ -18,10 +18,10 @@ Data Transformation rules are set in the Table Population or [Parser Map] in the
 
 ### Functions
 Functions can be added to a Table Population map to apply various data transformations. There are two types of functions: 
-*	[**Built-in functions**](/articles/07_table_population/07_fabric_built_in_functions.md) that are part of the Fabric infrastructure. They can perform standard transformation of dates, strings, or basic mathematical operations.
-*	[**Project  functions**](/articles/07_table_population/08_project_functions.md) that are created specifically for the current project and can perform more complex logic. 
+*	[Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) that are part of the Fabric infrastructure. They can perform standard transformation of dates, strings, or basic mathematical operations.
+*	[Project  functions](/articles/07_table_population/08_project_functions.md) that are created specifically for the current project and can perform more complex logic. 
 Both Built-in and Project functions can be either connected in a map (Table Population or Parser), to other Fabric objects or invoked from another function via Java coding.
-Note that [root functions](/articles/07_table_population/03_creating_a_new_table_population.md) which are also displayed in the Objects tab can only be used as a source object and not for Data Transformation. 
+Note that [Root functions]which are also displayed in the Objects tab can only be used as a source object and not for data transformation. 
 
 ### Translations and Globals
  
@@ -31,14 +31,14 @@ Note that [root functions](/articles/07_table_population/03_creating_a_new_table
  
 Constants are hard-coded values that can be used in a Table Population map to set a constant value. The scope of a constant is in the current Fabric object where the constant is defined. Constants are not managed as variables in Fabric and cannot be used by various Fabric objects.
 
-To add a constant to the Table Population:
+To add a **Constant** to the Table Population:
 1.	Right click in the **Table Population** working area and select **Insert Constant Value** to add the constant to the map.
-2.	Set the **Constant’s Name** and **Value** by editing the **Object** in the **Table Population**.
-3.	Connect the **Constant** to the **Object** in the **Table Population** to a column in the target **LU Table** or to another Fabric object.
+2.	Set the constant’s **Name** and **Value** by editing the **Constant** in the **Table Population**.
+3.	Connect the **Constant** to the object in the **Table Population**, for example to a column in the target **LU Table** or to another Fabric object.
 
-To modify a constant, double click it and edit the **Value**. 
+To modify a **Constant**, double click it and edit the **Value**. 
 
-To delete a constant, select it in the **Table Population** and press **Delete**. 
+To delete a **Constant**, select it in the Table Population and press **Delete**. 
 
 ### Lookup Tables
 
