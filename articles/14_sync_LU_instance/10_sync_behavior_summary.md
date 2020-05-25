@@ -120,9 +120,7 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <td style="text-align: center;" width="5%">
 <p>YES</p>
 </td>
-<td style="text-align: center;" width="6%">
-<p>NO</p>
-</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 <td style="text-align: center;" width="6%">
 <p>YES</p>
 </td>
