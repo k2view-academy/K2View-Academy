@@ -71,7 +71,7 @@ The comparison below analyzes the differences and the similarities between two d
 <p><strong>Structure</strong></p>
 </td>
 <td width="259">
-<p>SQL query. All fields in a Select statement become query output.</p>
+<p>SQL query. All fields in a SELECT statement become query output.</p>
 </td>
 <td width="251">
 <p>Fabric Java function where Category = Root and Type = Root Function. The root function must have at least one input parameter and yield an array of Objects (Object[]).</p>
