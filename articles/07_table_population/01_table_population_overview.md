@@ -40,12 +40,12 @@ The Population window header holds the **Debug** and **Options** toolbars where 
 Click for more information about Additional Toolbars.
 
 ### Debug Toolbar
-The [**Debug Toolbar**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) holds options for testing the Population process by executing its population logic on a selected [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
+The **Debug Toolbar** holds options for testing the Population process by executing its population logic on a selected [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
 *	When the execution is successful, the values of the Input and Output fields are displayed in the working area above the connection lines between the source and the target. 
-*	If there is an error, it is displayed in the Fabric Studio Log section.
+*	If there is an error, it is displayed in the [Fabric Studio Log](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) section.
 *	If the outcome has more than one row, you can navigate between the different rows.
 
-[Click for more information about the Fabric Studio Log.](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
+[Click for more information about the Debug of the Table Population.](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md)
 
 ### Options Toolbar
 The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options.
