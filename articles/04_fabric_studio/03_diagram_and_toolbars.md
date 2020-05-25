@@ -156,7 +156,7 @@ Click ![image](/articles/04_fabric_studio/images/04_03_edit_icon1.png) to displa
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar7.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar7.png" alt=""/>
 </td>
 <td width="390">
 <p>Select all.</p>
