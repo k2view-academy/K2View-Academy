@@ -24,10 +24,10 @@ Translations are defined via the Translation window which has two tabs:
 *	[Translation Schema tab](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema), defines the Translation Schema properties. Each column in a Translation Schema must be either Input or Output and can have different data types.
 *	Translation Data tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways.
 
-*	[Click for more information about Data Population in Translations.]
+[Click for more information about Data Population in Translations.]
 
 ### Translation Schema Tab Icons
-The following icons are displayed at the top of the Translation Schema tab:
+The following icons are displayed at the top of the **Translation Schema tab**:
 <p>&nbsp;</p>
 <table>
 <tbody>
@@ -74,7 +74,7 @@ The following icons are displayed at the top of the Translation Schema tab:
 
 
 ### Translation Options
-The following options define system behavior when a matching Translation is not found. Select an option from the dropdown list on the bottom of the Translation Schema tab. The Use Default option is always defined when a new Translation is created and can be modified when needed.
+The following options define system behavior when a matching Translation is not found. Select an option from the dropdown list on the bottom of the **Translation Schema tab**. The Use Default option is always defined when a new Translation is created and can be modified when needed.
 <table>
 <tbody>
 <tr>
@@ -217,7 +217,7 @@ A Translation Schema has the following structure:
 </tbody>
 </table>
 
-*Note* that all Translation Schema constraints are only applied in the Fabric Studio. The Fabric Server uses the data only and not the Schema’s information.
+Note that all Translation Schema constraints are only applied in the Fabric Studio. The Fabric Server uses the data only and not the Schema’s information.
 The following icons are displayed next to each Translation setting:
 <table>
 <tbody>
