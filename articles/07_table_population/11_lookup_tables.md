@@ -30,7 +30,7 @@ Click **Database** to display the list of tables, select the table and drag it t
 **Notes**  
 *	It is recommended to create a Lookup based on an LU Table and not a DB Table in order to improve performance. The reason is that an LU Table is usually much smaller than the source DB table, since it includes only the data which is relevant / applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
 *	It is recommended to create an [index  on the LU Table] for the Input fields in order to improve performance of the Lookup table’s Search.
-*	When creating a Lookup based on an LU Table, check that the Lookup object is populated **before** the current table so that the table has a higher [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) Fnumber than the Lookup object.
+*	When creating a Lookup based on an LU Table, check that the Lookup object is populated **before** the current table. Which means that the table has a higher [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) than the Lookup object.
 
 ### Lookup Properties Tab
 
@@ -91,7 +91,7 @@ The following information is displayed in the Lookup Properties:
 <p><strong>Open Lookup Object</strong></p>
 </td>
 <td style="width: 477.667px;">
-<p>Link to the Table Schema window.</p>
+<p>Link to open the Table Schema window.</p>
 </td>
 </tr>
 <tr>
