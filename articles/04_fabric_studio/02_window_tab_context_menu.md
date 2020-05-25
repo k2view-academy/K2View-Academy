@@ -7,7 +7,7 @@ Right click the **Window Tab Header** to display a context menu with the followi
 
 ![image](/articles/04_fabric_studio/images/04_02_window_tab_header.png)
 
-<table>
+<table width="700pxl">
 <tbody>
 <tr>
 <td width="200pxl">
