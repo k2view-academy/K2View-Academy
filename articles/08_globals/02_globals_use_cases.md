@@ -14,7 +14,7 @@ The following scenarios describe how globals can be used in Fabric objects.
 5.	Drag the global into the working area.
 6.	Connect the global to the table column.
 
-Click for more information about [Globals – Code Examples](/articles/08_globals/04_globals_code_examples.md).
+[Click for more information about Globals – Code Examples](/articles/08_globals/04_globals_code_examples.md).
 
 ### How Do I Add a Global to a Parser Map?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**].
