@@ -1,6 +1,6 @@
 # Sync Behavior - Summary Table
 
-A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md), Properties  and [Sync Mode](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/02_sync_modes.md)  (ON / OFF / FORCE), as described in the following table: 
+A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md), Properties  and [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md)  (ON / OFF / FORCE), as described in the following table: 
 
 <table width="106%">
 <tbody>
@@ -61,9 +61,7 @@ A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2Vi
 <p><strong>&nbsp;</strong></p>
 </td>
 <td width="6%">
-<p>```diff
-+ true
-```<strong>true</strong></p>
+<p><strong>true</strong></p>
 </td>
 <td width="7%">
 <p><strong>false</strong></p>
@@ -79,110 +77,50 @@ A Sync is influenced by the [Sync Method](https://github.com/k2view-academy/K2Vi
 <td width="20%">
 <p>First Sync</p>
 </td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="5%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="9%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="8%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="13%">
-<p>YES</p>
-</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="20%">
 <p>Schema Change</p>
 </td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="5%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="9%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="8%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="13%">
-<p>YES</p>
-</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="20%">
 <p>Normal Operation</p>
 </td>
-<td style="text-align: center;" width="7%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="5%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="9%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="6%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="7%">
-<p>NO</p>
-</td>
-<td style="text-align: center;" width="8%">
-<p>YES</p>
-</td>
-<td style="text-align: center;" width="13%">
-<p>YES</p>
-</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60"><img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 </tbody>
 </table>
 
 Note that when the Sync mode = OFF Fabric does not perform a sync. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/09_skip_sync.md)
+[![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/09_skip_sync.md)

@@ -273,7 +273,7 @@ Db.Row row = ludb().fetch(sql, contractId).firstRow();
 </code></pre>
 
 
-3. [Root function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
+3. [Root function](/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
 
 <pre><code>
 String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CRM_DB.CASES where activity_id = ?";
@@ -313,7 +313,7 @@ Fabric has the following set of deprecated methods for handling DB interfaces:
 
 Although they work, a warning message is displayed when deprecated methods are used in Fabric code. It is recommended to use the new Fabric methods to invoke DB interfaces instead of working with deprecated methods. 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
 
 
 

@@ -1,28 +1,28 @@
 # Navigating an LU Schema
 
-When creating or editing a [Logical Unit Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md) the following options are used to navigate, configure and display information:
-* [Diagram Outline](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline) tab, a representation of the LU Schema table’s list.
-* [Navigation pane](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md) located in the right corner of the working area.
+When creating or editing a [Logical Unit Schema](/articles/03_logical_units/03_LU_schema_window.md) the following options are used to navigate, configure and display information:
+* [Diagram Outline](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline) tab, a representation of the LU Schema table’s list.
+* [Navigation pane](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) located in the right corner of the working area.
 * LU working area, where view options can be set.
 
-[Click for more information about the Diagram Outline and Toolbars](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/03_diagram_and_toolbars.md)
+[Click for more information about the Diagram Outline and Toolbars](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
 ### How Do I Use the Diagram Outline?
  
 The Diagram Outline displays an overview of the LU structure and can be used to search for a subset of tables included in the Schema. 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_01.jpg)
+![image](/articles/12_LU_navigation/images/10_01_01.jpg)
 
-To search for an LU table in an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md):
+To search for an LU table in an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md):
 1.	Open the **LU Schema** window. 
 2.	Click the **Diagram Outline** tab in the right panel.
 3.	In the **Search** field, type the **name** of the **table** or **column** and then click it  in the displayed list. The table or column is highlighted with a green border.
 
 ### What is the Navigation Pane? 
  
-The Navigation pane in the right corner of an [LU schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
+The Navigation pane in the right corner of an [LU schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_02.jpg)
+![image](/articles/12_LU_navigation/images/10_01_02.jpg)
 
 ### What are the LU Wrorking Area View Options?
  
@@ -82,7 +82,7 @@ In the LU working area, right click an LU Table object to display a context menu
 <p><strong>clear output links</strong></p>
 </td>
 <td width="312">
-<p>Clears all <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">output links</a> from this LU Table to its children Table Populations.</p>
+<p>Clears all <a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">output links</a> from this LU Table to its children Table Populations.</p>
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ In the LU working area, right click an LU Table object to display a context menu
 <p><strong>clear all links</strong></p>
 </td>
 <td width="312">
-<p>Clears all <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">input and output</a> links in the LU Tables.</p>
+<p>Clears all <a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">input and output</a> links in the LU Tables.</p>
 </td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@ In the LU working area, right click an LU Table object to display a context menu
 </td>
 <td width="312">
 <p>When clicked, a Query Builder window opens automatically in the newest LU file.</p>
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Click for more information about the Data Viewer</a>.</p>
+<p><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Click for more information about the Data Viewer</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -114,15 +114,15 @@ Taking the CONTRACT table from the CUSTOMER LU as an example, the following illu
 
 Show only predecessor nodes
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_03%20predecessor%20nodes.jpg)
+![image](/articles/12_LU_navigation/images/10_01_03%20predecessor%20nodes.jpg)
 
 
 Show only successor nodes
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_04%20successor%20nodes.jpg)
+![image](/articles/12_LU_navigation/images/10_01_04%20successor%20nodes.jpg)
 
 
 Show only connected nodes
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/images/10_01_05%20connected%20nodes.jpg)
+![image](/articles/12_LU_navigation/images/10_01_05%20connected%20nodes.jpg)
 
 
 **Display Options** 
@@ -175,4 +175,4 @@ In the LU working area right click anywhere to display a context menu with the f
 </tbody>
 </table>
 
-[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/12_LU_navigation/02_searching_a_fabric_project.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/12_LU_navigation/02_searching_a_fabric_project.md)

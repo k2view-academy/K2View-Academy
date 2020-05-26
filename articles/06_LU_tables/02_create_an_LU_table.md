@@ -3,31 +3,31 @@
 ### How Do I Create a New LU Table?
 LU tables are the basic building blocks for creating Logical Units. There are several ways to create a new LU Table.
 
-From the [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md):
+From the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 *	Right click the work area and select either the **New Table From SQL Based DB Query** or **New Table From SQL Based Root Function** option.
 *	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 
 From the Project Tree: 
-*	Via the [**Auto Discovery Wizard**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
-*	Creating a new table [**manually**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md#how-do-i-create-a-new-lu-table-manually). In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
+*	Via the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
+*	Creating a new table [**manually**](/articles/06_LU_tables/02_create_an_LU_table.md#how-do-i-create-a-new-lu-table-manually). In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a table population.
 *	Copying an existing LU Table from one LU to another. In this option if there is a table population it is also copied. 
 *	Creating a set of tables based on an **XSD file**.
 *	Using the **Save As** option. Note that this option does not copy the Table Population.
 
-[Click for more information about Adding a Table to a Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/09_add_table_to_a_schema.md).
+[Click for more information about Adding a Table to a Schema](/articles/03_logical_units/09_add_table_to_a_schema.md).
  
 ### How Do I Create a New LU Table Manually?  
-1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right click **Tables** and then select **New Table** to display the Columns tab in the **Table Schema**.
-2.	Define the [**Table Schema**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):\
+1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right click **Tables** > **New Table** to display the **Columns tab** in the **Table Schema** window.
+2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):\
    a.	Complete the settings of each table column like the **Name** or **Data Type**.\
-   b.	Optional: Define the table [**Indexes**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md).\
+   b.	Optional: Define the table [**Indexes**](/articles/06_LU_tables/03_table_indexes.md).\
    c.	Optional: Define the **CDC** and the table’s **Search** Indexes .
-3.	Define the [**Table Properties**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/04_table_properties.md). 
+3.	Define the [**Table Properties**](/articles/06_LU_tables/04_table_properties.md). 
 4.	**Save** the table.
 
 ### How Do I Edit an LU Table? 
-1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** and select [**Table Name**] to display the Columns tab in the Table Schema.
+1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Columns tab** in the **Table Schema** window.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.
 
@@ -87,7 +87,7 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 </tr>
 <tr>
 <td width="122">
-<p><strong>Column Type</strong></p>
+<p><h4><strong>Column Type</strong></p>
 </td>
 <td width="502">
 <p>Two Column Types are supported:</p>
@@ -118,4 +118,4 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 </table>
 <p>&nbsp;</p>
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md)
+[![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/01_LU_tables_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/06_LU_tables/03_table_indexes.md)

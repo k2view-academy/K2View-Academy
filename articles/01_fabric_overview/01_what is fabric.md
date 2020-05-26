@@ -6,7 +6,7 @@ Fabric solves real-time operational needs for data that is stored and handled in
 Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity centric approach offering multiple and diverse built-in integrated data-management capabilities for end-to-end management of the data life cycle.
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/images/Fabric_Overview.png)
+![image](/articles/01_fabric_overview/images/Fabric_Overview.png)
 
 
 ### What is a Digital Entity?
@@ -35,9 +35,9 @@ Note that Fabric is a less appropriate solution for storing and managing data th
 ### Getting Started
 **Learn About Main Fabric Platform Modules:**
 * Fabric Architecture.  
-* [Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
-* [Interfaces.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/01_interfaces_overview.md)
+* [Logical Units.](/articles/03_logical_units/01_LU_overview.md)
+* [Interfaces.](/articles/05_DB_interfaces/01_interfaces_overview.md)
 * Web Services.
 * Reference Tables.
 
-[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/01_fabric_overview/02_fabric_glossary.md)

@@ -1,7 +1,7 @@
 # Translations Overview
 
 ### What Is a Translation?
-A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/04_general/12_shared_objects.md) level or on a [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/03_logical_units/01_LU_overview.md) level or both. 
+A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level or both. 
 *	Translations defined on a Shared Objects level can be used in all objects in a Project. 
 *	When a Translation is used for a [Web Service] it must be defined on a Shared Objects level.
 There are several options for populating data in a Translation in the Fabric Studio. 
@@ -9,25 +9,25 @@ There are several options for populating data in a Translation in the Fabric Stu
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
 *	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
 
-[Click for more information about Data Population in Translations.]  
+Click for more information about Data Population in Translations.  
 
 
 ### How Can I Use a Translation in Fabric?
-A Translation can be used when a [Table Population](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/01_table_population_overview.md)  or [Project function](https://github.com/k2view-academy/K2View-Academy/blob/3ecdb4c58cf1eac320138b514c8399aa895d02ee/articles/07_table_population/08_project_functions.md) needs to apply transformation rules.
+A Translation can be used when a [Table Population](/articles/07_table_population/01_table_population_overview.md)  or [Project function](/articles/07_table_population/08_project_functions.md) needs to apply transformation rules.
 For example:
 *	When there are several source systems, each having a list of valid values for the Customer Type attribute. The Translation defines one unified set of valid values for the target (Fabric) and transformation rules from the Input value (source) to the Output value (target).
-*	When there are several DB interfaces, the Translation can map between the system name and its [DB interface](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/05_DB_interfaces/03_DB_interfaces_overview.md) name to be used in the code. 
+*	When there are several DB interfaces, the Translation can map between the system name and its [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) name to be used in the code. 
 *	When there is a list of attributes or business rules in the LU, the Translation can define an SQL query for each attribute or business rule.
 
 ### Translation Window
 Translations are defined via the Translation window which has two tabs:
-*	[Translation Schema] tab, defines the Translation Schema properties. Each column in a Translation Schema must be either Input or Output and can have different data types.
-*	[Translation Data] tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways.
+*	[Translation Schema tab](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema), defines the Translation Schema properties. Each column in a Translation Schema must be either Input or Output and can have different data types.
+*	Translation Data tab, which is populated by the Translation’s values in the Input and Output fields. The data can be populated in a Translation in several ways.
 
-*	[Click for more information about Data Population in Translations.]
+[Click for more information about Data Population in Translations.]
 
 ### Translation Schema Tab Icons
-The following icons are displayed at the top of the Translation Schema tab:
+The following icons are displayed at the top of the **Translation Schema tab**:
 <p>&nbsp;</p>
 <table>
 <tbody>
@@ -40,31 +40,31 @@ The following icons are displayed at the top of the Translation Schema tab:
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_1.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_1.png"></td>
 <td width="446">
 <p>Print translation definition.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_2.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_2.png"></td>
 <td width="446">
 <p>Export translation definition as an Excel file.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_3.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_3.png"></td>
 <td width="446">
 <p>Filter definition by one or more columns.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_4.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_4.png"></td>
 <td width="446">
 <p>Toggle summaries.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table_5.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table_5.png"></td>
 <td width="446">
 <p>Toggle groupings.</p>
 </td>
@@ -74,7 +74,7 @@ The following icons are displayed at the top of the Translation Schema tab:
 
 
 ### Translation Options
-The following options define system behavior when a matching Translation is not found. Select an option from the dropdown list on the bottom of the Translation Schema tab. The Use Default option is always defined when a new Translation is created and can be modified when needed.
+The following options define system behavior when a matching Translation is not found. Select an option from the dropdown list on the bottom of the **Translation Schema tab**. The Use Default option is always defined when a new Translation is created and can be modified when needed.
 <table>
 <tbody>
 <tr>
@@ -217,7 +217,7 @@ A Translation Schema has the following structure:
 </tbody>
 </table>
 
-*Note* that all Translation Schema constraints are only applied in the Fabric Studio. The Fabric Server uses the data only and not the Schema’s information.
+Note that all Translation Schema constraints are only applied in the Fabric Studio. The Fabric Server uses the data only and not the Schema’s information.
 The following icons are displayed next to each Translation setting:
 <table>
 <tbody>
@@ -230,19 +230,19 @@ The following icons are displayed next to each Translation setting:
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table2_01.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table2_01.png"></td>
 <td width="417">
 <p>Deletes the Translation row.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table2_02.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table2_02.png"></td>
 <td width="417">
 <p>Moves the Translation row up.</p>
 </td>
 </tr>
 <tr>
-<td width="56">&nbsp;&nbsp;<img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/09_translations/images/table2_03.png"></td>
+<td width="56">&nbsp;&nbsp;<img src="/articles/09_translations/images/table2_03.png"></td>
 <td width="417">
 <p>Moves the Translation row down.</p>
 </td>

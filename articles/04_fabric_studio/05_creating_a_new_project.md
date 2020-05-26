@@ -1,19 +1,19 @@
 # Creating a New Project
 
 ### What is a Fabric Project?
-A Fabric Project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the Project must be defined in the Fabric Studio which can then be added to either GIT or SVN Version Control. 
+A Fabric Project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the Project must be defined in the Fabric Studio which can then be added to either GIT or SVN Version Control. 
 
-[Click for more information about Fabric Studio UI Components and Menus.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/01_UI_components_and_menus.md)
+[Click for more information about Fabric Studio UI Components and Menus.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
-[Click for more information about the Fabric Project Structure.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/08_fabric_project_tree.md)
+[Click for more information about the Fabric Project Structure.](/articles/04_fabric_studio/08_fabric_project_tree.md)
 
-[Click for more information about Adding Fabric Projects to Version Controls.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+[Click for more information about Adding Fabric Projects to Version Controls.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 
 
 ### How do I Create a New Project?
 
-1. Go to the **Start Page** or click the **File** icon <img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
+1. Go to the **Start Page** or click the **File** icon <img src="/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
 3. Verify that the default directory displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the Project’s files and definitions.
 4. Optional: check the **Add Project to Version Control** checkbox to add the new Project to SVN or Git. It is recommended to save and commit the new Project as a baseline.
@@ -26,11 +26,11 @@ Note that to avoid errors, the SVN / GIT repositories must be created in advance
 * Only one Project can be deployed to a specific Fabric server / cluster. Therefore, when defining the Project’s physical saved name(*.K2proj), make sure that it is meaningful, for example, the Project’s business purpose.  The Project’s logical name can be edited in the Fabric Studio. 
 * To find the deployed Project’s name, execute the **Fabric set;** command from the Fabric console.
  
-[Click for more information about User Preferences.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/04_user_preferences.md)
+[Click for more information about User Preferences.](/articles/04_fabric_studio/04_user_preferences.md)
 
-[Click for more information about Adding Fabric Projects to Version Controls.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+[Click for more information about Adding Fabric Projects to Version Controls.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
-[Click for more information about Best Practices for Using SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/d1791be7d343f647c8f6b35858ec08482360accb/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
+[Click for more information about Best Practices for Using SVN and GIT.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
 ### How do I Access a Fabric Project?
 
@@ -44,18 +44,18 @@ Note that to avoid errors, the SVN / GIT repositories must be created in advance
 
 **GIT**
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_05_02%20GIT.jpg)
+![image](/articles/04_fabric_studio/images/04_05_02%20GIT.jpg)
 
 
 **SVN** 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_05_03%20SVN.jpg)
+![image](/articles/04_fabric_studio/images/04_05_03%20SVN.jpg)
 
 4. Once checked out, the Project is created locally.
 
-[Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.](https://github.com/k2view-academy/K2View-Academy/blob/fa76f26211c76653e78f8848f33146529ff2ce41/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+[Click for more information about Adding Fabric Projects to Version Controls and Best Practices for Using SVN and GIT.](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
  
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04_user_preferences.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)
 
 

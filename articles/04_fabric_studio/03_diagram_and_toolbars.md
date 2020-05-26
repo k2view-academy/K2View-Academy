@@ -15,7 +15,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Displaying the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md">Logical Unit Schema</strong></a></p>
+<p><strong>Displaying the <a href="/articles/03_logical_units/03_LU_schema_window.md">Logical Unit Schema</strong></a></p>
 </td>
 <td width="189">
 <p>Logical Unit Schema window.</p>
@@ -23,7 +23,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating a new <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/14_sync_LU_instance/05_sync_decision_functions.md">function</a></strong></p>
+<p><strong>Creating a new <a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md">function</a></strong></p>
 </td>
 <td width="189">
 <p>Function Manager window.</p>
@@ -31,7 +31,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating &nbsp;a new <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/09_translations/01_translations_overview_and_use_cases.md">translation</a></strong></p>
+<p><strong>Creating &nbsp;a new <a href="/articles/09_translations/01_translations_overview_and_use_cases.md">translation</a></strong></p>
 </td>
 <td width="189">
 <p>Translation&nbsp; Manager window.</p>
@@ -39,7 +39,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating a new <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/08_globals/01_globals_overview.md">global</a></strong></p>
+<p><strong>Creating a new <a href="/articles/08_globals/01_globals_overview.md">global</a></strong></p>
 </td>
 <td width="189">
 <p>Globals&nbsp; Manager window</p>
@@ -47,7 +47,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Editing the data mapping and transformations of different <a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/06_LU_tables/01_LU_tables_overview.md">database entities</strong></a></p>
+<p><strong>Editing the data mapping and transformations of different <a href="/articles/06_LU_tables/01_LU_tables_overview.md">database entities</strong></a></p>
 </td>
 <td width="189">
 <p>Table Mapping window.</p>
@@ -55,7 +55,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/5ea59ce22d68c99de20153a97edeaf51816d8e33/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md"><strong>Viewing Data</strong></a></p>
+<p><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md"><strong>Viewing Data</strong></a></p>
 </td>
 <td width="189">
 <p>Data Viewer window.</p>
@@ -100,8 +100,8 @@ To customize the **Diagram** window, right click the **upper toolbar** and then 
 * Customize
 
 ### Edit Toolbar Icon
-The ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_edit_icon1.png) Edit icon is displayed in the bottom right corner of the Diagram window.   
-Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_edit_icon1.png) to display the following options: 
+The ![image](/articles/04_fabric_studio/images/04_03_edit_icon1.png) Edit icon is displayed in the bottom right corner of the Diagram window.   
+Click ![image](/articles/04_fabric_studio/images/04_03_edit_icon1.png) to display the following options: 
 * Undo icon
 * Redo icon
 * Delete icon
@@ -114,77 +114,77 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar1.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar1.png" alt=""/>
 </td>
 <td width="390">
 <p>Undo last change.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar2.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar2.png" alt=""/>
 </td>
 <td width="390">
 <p>Redo last change.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar3.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar3.png" alt=""/>
 </td>
 <td width="390">
 <p>Copy selected item to clipboard.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar4.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar4.png" alt=""/>
 </td>
 <td width="390">
 <p>Paste item from clipboard.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar5.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar5.png" alt=""/>
 </td>
 <td width="390">
 <p>Cut selected item and copy to clipboard.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar6.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar6.png" alt=""/>
 </td>
 <td width="390">
 <p>Delete selected item.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar7.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar7.png" alt=""/>
 </td>
 <td width="390">
 <p>Select all.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar8.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar8.png" alt=""/>
 </td>
 <td width="390">
 <p>Add note to an object.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar9.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar9.png" alt=""/>
 </td>
 <td width="390">
 <p>Add balloon note.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar10.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar10.png" alt=""/>
 </td>
 <td width="390">
 <p>Layout menu, Layered Layout or Tree Layout options.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_toolbar11.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_toolbar11.png" alt=""/>
 </td>
 <td width="390">
 <p>Filtering (Translation&nbsp;, Globals, Data Viewer, User Preferences)</p>
@@ -197,21 +197,21 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_align_1.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_align_1.png" alt=""/>
 </td>
 <td width="379">
 <p>Left/middle/right alignment.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_align_2.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_align_2.png" alt=""/>
 </td>
 <td width="379">
 <p>Top/center/bottom alignment.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_align_3.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_align_3.png" alt=""/>
 </td>
 <td width="379">
 <p>Size alignment.</p>
@@ -224,42 +224,42 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom1.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_zoom1.png" alt=""/>
 </td>
 <td width="393">
 <p>Current zoom factor.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom2.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_zoom2.png" alt=""/>
 </td>
 <td width="393">
 <p>Zoom out.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom3.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_zoom3.png" alt=""/>
 </td>
 <td width="393">
 <p>Zoom in.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom4.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_zoom4.png" alt=""/>
 </td>
 <td width="393">
 <p>Cancel zoom.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom5.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_zoom5.png" alt=""/>
 </td>
 <td width="393">
 <p>Fit to page.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_zoom6.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_zoom6.png" alt=""/>
 </td>
 <td width="393">
 <p>Focus on selection.</p>
@@ -272,21 +272,21 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export1.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_export1.png" alt=""/>
 </td>
 <td width="393">
 <p>Print Preview / Print.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export2.jpg" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_export2.jpg" alt=""/>
 </td>
 <td width="393">
 <p>Export to Bitmap / Export to SVG.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_export3.png" alt=""/>
 </td>
 <td width="393">
 <p>Exports Translation&nbsp;, Globals, Data Viewer, User Preferences items to Excel.</p>
@@ -299,28 +299,28 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 <table>
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU1.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_LU1.png" alt=""/>
 </td>
 <td width="398">
 <p>Group sub graph.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU2.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_LU2.png" alt=""/>
 </td>
 <td width="398">
 <p>Ungroup sub graph.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU3.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_LU3.png" alt=""/>
 </td>
 <td width="398">
 <p>Update tables from database.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_LU4.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_LU4.png" alt=""/>
 </td>
 <td width="398">
 <p>Refresh items from implementation.</p>
@@ -329,55 +329,55 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tbody>
 </table>
 
-[Click for more information about Logical Units.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)
+[Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
 ### Table Population Toolbar
 <table width="552">
 <tbody>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop1.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop1.png" alt=""/>
 </td>
 <td width="316">
 <p>Enable / Disable debug.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop2.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop2.png" alt=""/>
 </td>
 <td width="316">
 <p>Select instance to debug or a enter new instance.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop3.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop3.png" alt=""/>
 </td>
 <td width="316">
 <p>Select saved file or generate new.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop4.png" alt=""/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop4.png" alt=""/>
 </td>
 <td width="316">
 <p>Display the current record in process.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop5.png" alt="drawing" width="20"/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop5.png" alt="drawing" width="20"/>
 </td>
 <td width="316">
 <p>Debug / Execute.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop6.png" alt="drawing" width="20"/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop6.png" alt="drawing" width="20"/>
 </td>
 <td width="316">
 <p>Debug next record.</p>
 </td>
 </tr>
 <tr>
-<td width="113"><img src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_03_pop7.png" alt="drawing" width="20"/>
+<td width="113"><img src="/articles/04_fabric_studio/images/04_03_pop7.png" alt="drawing" width="20"/>
 </td>
 <td width="316">
 <p>Debug next instance.</p>
@@ -386,10 +386,10 @@ Click ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/arti
 </tbody>
 </table>
 
-[Click for more information about Creating Tables](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md).
+[Click for more information about Creating Tables](/articles/07_table_population/01_table_population_overview.md).
 
 
 ### How Can I Customize the Toolbar?
 Toolbars can be added, removed or customized in a Diagram window. The new toolbar will be available in the current session after you close the Diagram window and then reopen it.
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/04_user_preferences.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/02_window_tab_context_menu.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04_user_preferences.md)

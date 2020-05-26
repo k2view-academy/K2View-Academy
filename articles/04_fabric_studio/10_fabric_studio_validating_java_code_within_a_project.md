@@ -5,7 +5,7 @@ Fabric implementations are written in Java and are stored in standard libraries 
 
 ### Validating Java Code When a Project is Opened
  
-Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the [Server/Activity Logs tab](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the [Server/Activity Logs tab](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 
 ### How do I Publish Project Code?
  
@@ -26,16 +26,16 @@ There are three validation success indicators:
 1. Success without a message, whereby no action is required.
 2. Success with a warning which is displayed on the bottom of the screen. It is recommended to fix and review the warning.  
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_10_01%20fix%20and%20review.png)
+![image](/articles/04_fabric_studio/images/04_10_01%20fix%20and%20review.png)
 
 3. Failure with an error, whereby the violation must be fixed. The error is displayed on the bottom of the screen at a Summary level. For more details, right click the error to open it in Notepad.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/images/04_10_02%20Summary%20level.png)
+![image](/articles/04_fabric_studio/images/04_10_02%20Summary%20level.png)
 
 
 
-[Click for more information about Fabric Studio Log Files.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
+[Click for more information about Fabric Studio Log Files.](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/09_logic_files_and_categories.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/09_logic_files_and_categories.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
 

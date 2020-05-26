@@ -3,7 +3,7 @@
 The Table Properties tab is displayed in the right pane of Table window.
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/images/06_04_table_properties.png)
+![image](/articles/06_LU_tables/images/06_04_table_properties.png)
 
 
 The Properties tab displays a list of properties that must be defined for each LU Table, as follows:
@@ -25,7 +25,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Instance PK Column</strong></p>
 </td>
 <td width="474">
-<p>A unique field that is used as the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md#index-definition">LU table&rsquo;s Primary Key.</a></p>
+<p>A unique field that is used as the <a href="/articles/06_LU_tables/03_table_indexes.md#index-definition">LU table&rsquo;s Primary Key.</a></p>
 </td>
 </tr>
 <tr>
@@ -44,14 +44,14 @@ The Properties tab displays a list of properties that must be defined for each L
 <p><strong>Full Text Search</strong></p>
 </td>
 <td width="474">
-<p>When set to True, enables the use of the MATCH sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
+<p>When set to True, enables the use of the MATCH Sqlite command as part of the WHERE clause of a Select statement that reads data from a Fabric table. Default = False.</p>
 <p>Click for more information about the Match command:</p>
 <p><a href="http://www.sqlite.org/fts3.html#section_3">http://www.sqlite.org/fts3.html#section_3</a></p>
 </td>
 </tr>
 <tr>
 <td width="150">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method</strong></a></p>
+<p><a href="/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method</strong></a></p>
 </td>
 <td width="474">
 <p>There are four Sync methods:</p>
@@ -65,7 +65,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync"><strong>Truncate Before Sync</strong></a></p>
+<p><a href="/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync"><strong>Truncate Before Sync</strong></a></p>
 </td>
 <td width="474">
 <p>When Truncate Before Sync = True, the entire LU table is truncated before the populations are executed.</p>
@@ -73,13 +73,13 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><strong>Enrichment Functions</strong></p>
+<p><h4><strong>Enrichment Functions</strong></p>
 </td>
 <td width="474">
 <p>Functions which are executed after all LU tables are populated.</p>
 <ul>
-<li>The execution order is determined on an LU level and based on the Sync policy of the attached table.When no enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
-<li>When one or more enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of enrichment functions).</li>
+<li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
+<li>When one or more Enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
 </ul>
 <p>To select an enrichment function, click the three dots next to the Enrichment Functions option and select the function name. Only functions without input and output parameters are displayed.</p>
 </td>
@@ -94,4 +94,4 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>&nbsp;</p>
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/03_table_indexes.md)
+[![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/03_table_indexes.md)

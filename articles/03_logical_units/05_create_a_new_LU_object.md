@@ -1,6 +1,6 @@
 # Create a New Logical Unit (LU) Object
 
-A new [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) can be added by either:
+A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be added by either:
 * Creating a new Logical Unit.
 * Duplicating a Logical Unit and saving it. 
 
@@ -8,11 +8,11 @@ A new [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/
 1. Go to **Projects Tree** > right click **Logical Units** > **New Logical Unit** > **Logical Unit** dialog box. 
 2. Enter the **Name** of the new **Logical Unit**. 
 3. Do either: 
-    * Check **Open LU Auto Discovery** to create the LU using the [**Auto Discovery Wizard.**](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md) 
+    * Check **Open LU Auto Discovery** to create the LU using the [**Auto Discovery Wizard.**](/articles/03_logical_units/06_auto_discovery_wizard.md) 
     * Do not check **Open LU Auto Discovery** and manually build the **Logical Unit**. 
 4. Click **OK**.
 
-[Click for more information about the LU Creation Steps.](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/02_create_a_logical_unit_flow.md)
+[Click for more information about the LU Creation Steps.](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
 
 
 ### How Do I Duplicate a Logical Unit (LU)?
@@ -21,4 +21,4 @@ A new [Logical Unit (LU)](https://github.com/k2view-academy/K2View-Academy/blob/
 3. Click **OK**.  
 
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/04_LU_properties.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/06_auto_discovery_wizard.md)
+[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/04_LU_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/06_auto_discovery_wizard.md)

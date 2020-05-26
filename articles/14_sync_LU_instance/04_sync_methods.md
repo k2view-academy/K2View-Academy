@@ -1,7 +1,7 @@
 # Sync Methods
 
 ## Sync Properties
-Sync properties can be defined on an [LU Schema](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/03_LU_schema_window.md), [LU Table](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/06_LU_tables/01_LU_tables_overview.md), or T[able Population](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/07_table_population/01_table_population_overview.md) level.
+Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md), or T[able Population](/articles/07_table_population/01_table_population_overview.md) level.
 
 **A Sync property contains the following settings:**
 <table>
@@ -35,14 +35,14 @@ Sync properties can be defined on an [LU Schema](https://github.com/k2view-acade
 <p><strong>Delete Instance if Not Exists<strong></p>
 </td>
 <td width="500">
-<p>When marked as True, Fabric deletes the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a> if the LUI is not found in the source system.</p>
+<p>When marked as True, Fabric deletes the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a> if the LUI is not found in the source system.</p>
 <p>When marked as False (default), the instance is retained in Fabric even if the instance is not found in the source system.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-[Click for more information about Set Timeout for Sync](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/08_sync_timeout.md). 
+[Click for more information about Set Timeout for Sync](/articles/14_sync_LU_instance/08_sync_timeout.md). 
 
 ## Sync Methods 
 ### None 
@@ -109,7 +109,7 @@ Sync properties can be defined on an [LU Schema](https://github.com/k2view-acade
 </tbody>
 </table>
 
-### [Decision Function](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)
+### [Decision Function](/articles/14_sync_LU_instance/05_sync_decision_functions.md)
 <table>
 <thead>
 <tr>
@@ -173,7 +173,7 @@ Sync properties can be defined on an [LU Schema](https://github.com/k2view-acade
 </tbody>
 </table>
 
-[Click for more information about LU Sync Levels](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/07_sync_levels.md)
+[Click for more information about LU Sync Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
  
 ## Truncate Before Sync 
 The **Truncate Before Sync** property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
@@ -205,7 +205,7 @@ The **Truncate Before Sync** property can be set on an LU Table or a Table Popul
 </tr>
 <tr>
 <td style="width: 155px;">
-<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md">Decision Function &nbsp;</a></strong></p>
+<p><strong><a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md">Decision Function &nbsp;</a></strong></p>
 </td>
 <td style="width: 395px;">
 <p>Requires specific logic to check if the data needs to be synced from the source.</p>
@@ -255,7 +255,7 @@ The **Truncate Before Sync** property can be set on an LU Table or a Table Popul
 </tr>
 <tr>
 <td width="72">
-<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases">Decision Function</strong></a></p>
+<p><strong><a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases">Decision Function</strong></a></p>
 </td>
 <td width="252">
 <p>Check the source environment: Do not run a sync on the Production environment. However, if the source environment is a Testing environment, run a sync.</p>
@@ -268,4 +268,4 @@ The **Truncate Before Sync** property can be set on an LU Table or a Table Popul
 </tbody>
 </table>
 
-[![Previous](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)[<img align="right" width="60" height="54" src="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/05_sync_decision_functions.md)
+[![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/05_sync_decision_functions.md)
