@@ -26,7 +26,7 @@ Our Training environment has three main DBs of various types, which in essence,r
 
 - **CRM_DB** (type: Oracle) – Stores theinformation that manages a company's interaction with current and potentialcustomers, specifically focusing on customer retention and ultimately drivingsales growth. For example, Customer info, Contracts, Cases or Offers.
 
-- **ORDERS_DB** (type: PostgreSQL) – Usually stores informationfor filling the Order functions required to complete a customer’s order createdin a CRM such as, Orders, Order items, Items or Pricing. **In the Fabric Trainingenvironment, Orders table. ******
+- **ORDERS_DB** (type: PostgreSQL) – Usually stores informationfor filling the Order functions required to complete a customer’s order createdin a CRM such as, Orders, Order items, Items or Pricing. **In the Fabric Trainingenvironment, Orders table. **
 
   ​
 
