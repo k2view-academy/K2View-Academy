@@ -1,6 +1,6 @@
 #   Define the Interfaces
 
-​                                                     ![](/academy/3_Fabric_main_flow/images/fabric_main_flow_03.png)
+​                                                     ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_03.png)
 
 Now your Project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the Project’s interfaces. 
 
@@ -14,11 +14,11 @@ Now your Project has been defined and a preliminary analysis of the data require
 
 Let’s understand which Interfaces are availablein the Fabric Studio:
 
-[Interface Overview](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/01_interfaces_overview.md)
+[Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md)
 
 To define the Interfaces and their respective parameters, you need to look into their sources using the following guidelines:
 
-[Interfaces Source Analysis Guidelines](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)
+[Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)
 
 Our Training environment has three main DBs of various types, which in essence,represent a typical Telco IT ecosystem:
 
@@ -30,27 +30,27 @@ Our Training environment has three main DBs of various types, which in essence,r
 
   ​
 
-### How to define anInterface
+### How to define an Interface
 
 The properties that define an Interface havethe following settings:
 
-[DB Interfaces Overview](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
+[DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
 
 Let’s look at the steps for creating the Interface:
 
- [Creating a new database interface](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
+ [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
 
  
 
-![](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
+![](/academy/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
 
-​	[Adding a fabric and remote fabric_ nterface type](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
+​	[Adding a fabric and remote fabric_ nterface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
 
-​	[Editing interface settings](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/06_editing_interface_settings.md)
+​	[Editing interface settings](/articles/05_DB_interfaces/06_editing_interface_settings.md)
 
-​	[Deleting disabling an interface](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
+​	[Deleting disabling an interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
 
-​	[Clearing the database objects cache](/Users/meravamircohen/K2View-Academy/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
+​	[Clearing the database objects cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
 
 
 
@@ -74,7 +74,7 @@ Similar to other DB studios, Fabric Studio’s Query Builder allowsyou to view s
 
 ​       
 
-### ![](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
+### ![](/academy/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
 
 The main business requirementis to display a 360 Customer view which shows a customer’s activities and data.Todo so, define an interface that will access the customer’s data.
 
@@ -91,7 +91,7 @@ Considering the information above, whichinterface should be used ? **CRM DB**
 
 **Great!  your first interface is ready to be explored:**
 
-Go to the **Project Tree**, right clickthe **CRM_DB interface** and select **Query Builder** or click ![](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
+Go to the **Project Tree**, right clickthe **CRM_DB interface** and select **Query Builder** or click ![](/academy/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
 The Query Builder is displayed where youcan see the list of tables and execute the following sample query.
 
@@ -105,7 +105,7 @@ results:10,000
 
  
 
-###  ![](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
+###  ![](/academy/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
 
  Your Customer’s 360view requires additional data such as Billing and Order.Using the training materials covered so far and the aboveexample, configure the following DB Interfaces:
 
@@ -153,7 +153,7 @@ Password:
 
  
 
-### ![](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/Solution.png)Solution- Interface Exercise Solution
+### ![](/academy/03_fabric_basic_LU/images/Solution.png)Solution- Interface Exercise Solution
 
 1. `Answer: BALANCE, CONTRACT_OFFER_MAPPING,INVOICE, OFFER, PAYMENT, SUBSCRIBER`
 2. `Answer: Subscriber ID 82`
