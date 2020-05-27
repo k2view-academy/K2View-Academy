@@ -63,7 +63,7 @@ Fabric provides the following script in order to clean Fabric and delete (drop) 
 
 The **reset.sh** script is used mainly:
 
-- In a **TEST environment** to delete the current data and to restart the Testing process from scratch.
+- In a **TEST environment** to delete the current data and to restart the testing process from scratch.
 - In **Production environment**. Note that the [Drop LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md) command and the **reset.sh** script are very rarely used in the Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run. 
 
 Unlike the drop LU ([drop LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md)) command which drops a specific LU, the reset.sh script performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from Cassandra.
