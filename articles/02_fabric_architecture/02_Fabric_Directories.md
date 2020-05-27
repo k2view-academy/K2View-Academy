@@ -6,28 +6,23 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <tbody>
 <tr>
 <td width="300pxl">
-<p><h4><strong>Directory Name</strong></p>
+<h4><strong>Directory Name</strong></h3>
 </td>
 <td width="600pxl">
-<p><h4><strong>Directory Content</strong></p>
+<h4><strong>Directory Content</strong></h3>
 </td>
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/fabric</p>
+<h5>$K2_HOME/fabric</h4>
 </td>
 <td width="600">
 <p>This directory and its sub-directories contain Fabric code, scripts, templates, and resources.</p>
 </td>
 </tr>
 <tr>
-<<<<<<< HEAD
 <td width="300">
-<p><h5>$K2_HOME/fabric/scripts</p>
-=======
-<td style="width: 189.4px;">
-<p><h4>$K2_HOME/fabric/scripts</p>
->>>>>>> febfa102e5ee446bdd7161fbfc2187489b08cca4
+<h5>$K2_HOME/fabric/scripts</h4>
 </td>
 <td width="600">
 <p>Fabric Scripts:&nbsp;</p>
@@ -43,7 +38,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/fabric/upgrade</p>
+<h5>$K2_HOME/fabric/upgrade</h4>
 </td>
 <td width="600">
 <p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: If you upgrade Fabric 5.5.x to Fabric 6.x, you need to update the scripts under <strong>toV6.0 </strong>sub-directory<strong>.</strong></p>
@@ -51,7 +46,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/logs</p>
+<h5>$K2_HOME/logs</h4>
 </td>
 <td width="471">
 <p>Fabric log files.</p>
@@ -59,7 +54,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/config</p>
+<h5>$K2_HOME/config</h4>
 </td>
 <td width="600">
 <p>Fabric configuration files.</p>
@@ -68,7 +63,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/monitor</p>
+<h5>$K2_HOME/monitor</h4>
 </td>
 <td width="600">
 <p>Holds the Prometheus JMX exporter for execution monitoring.</p>
@@ -76,7 +71,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/apps</p>
+<h5>$K2_HOME/apps</h4>
 </td>
 <td width="600">
 <p>Third-party applications and tools used by Fabric. For example, Java, Cassandra, Grafana, or Redis.</p>
@@ -84,7 +79,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/storage</p>
+<h5>$K2_HOME/storage</h4>
 </td>
 <td width="600">
 <p>Stores the data on each Fabric Server and holds the <strong>ludb.jar</strong> artifact files for each deployed LU or Web Service, Staging XMLs for iidFinder, and Reference (common) files.</p>
@@ -92,7 +87,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>/dev/shm/fdb_cache</p>
+<h5>/dev/shm/fdb_cache</h4>
 </td>
 <td width="600">
 <p>Holds the cached database files for the LU Instances.</p>
@@ -100,7 +95,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/ExternalJars</p>
+<h5>$K2_HOME/ExternalJars</h4>
 </td>
 <td width="600">
 <p>Holds the .jar files of all database jars that have not been provided as an out-of-the box product and external jars used for the Fabric implementation.</p>
@@ -108,7 +103,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/export</p>
+<h5>$K2_HOME/export</h4>
 </td>
 <td width="471">
 <p>Holds the output files of the <strong>set</strong> <strong>output</strong> Fabric command.</p>
@@ -116,7 +111,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/trace</p>
+<h5>$K2_HOME/trace</h4>
 </td>
 <td width="600">
 <p>Trace files.</p>
@@ -124,7 +119,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td width="300">
-<p><h5>$K2_HOME/webserver</p>
+<h5>$K2_HOME/webserver</h4>
 </td>
 <td width="600">
 <p>The Home directory of the Fabric web admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.</p>
@@ -133,12 +128,8 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tbody>
 </table>
 
+
+
 <!--Add links:-->
 
 <!--Drop 1- deployment, fabric architecture, fabric logs, fabric commands, fabric basic commands and scripts-->
-
-<<<<<<< HEAD
-<!--Drop 2- iidFinder, Fabric execution monitoring, reference (common) tables, LU storage-->
-=======
-Drop 2- iidFinder, Fabric execution monitoring, reference (common) tables, LU storage
->>>>>>> febfa102e5ee446bdd7161fbfc2187489b08cca4
