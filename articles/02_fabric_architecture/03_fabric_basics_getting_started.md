@@ -73,8 +73,8 @@ The Drop process must be followed by re-creation of Fabric credentials and redep
 ### Reset.sh Usage
 
 Run the script from $K2_HOME/fabric/scripts directory:
-
-- ./reset.sh <mode><black_list><path of config.ini file>
+   
+<ul><li>./reset.sh &lt;mode&gt;&lt;black_list&gt;&lt;path of config.ini file&gt;</li></ul>
 
 ### Reset.sh Parameters
 
