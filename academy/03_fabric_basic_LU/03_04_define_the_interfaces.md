@@ -1,6 +1,6 @@
 #   Define the Interfaces
 
-​                                                     ![](/Users/meravamircohen/K2View/Tali Einhorn - Knowledge Base/Knowledge Items Repository/Drop 1/4-LI-Sign Off/3_Fabric_main_flow/images/fabric_main_flow_03.png)
+​                                                     ![](/academy/3_Fabric_main_flow/images/fabric_main_flow_03.png)
 
 Now your Project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the Project’s interfaces. 
 
