@@ -22,7 +22,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tr>
 <tr>
 <td style="width: 189.4px;">
-<p>$K2_HOME/fabric/scripts</p>
+<p><h4>$K2_HOME/fabric/scripts</p>
 </td>
 <td style="width: 531.6px;">
 <p>Fabric Scripts:&nbsp;</p>
