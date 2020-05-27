@@ -19,7 +19,7 @@ Run the following commands through the command line of Fabric server:
 <p><h5><strong>k2fabric start</strong></p>
 </td>
 <td width="600">
-<p>Start the Fabric node. When starting Fabric node, you will receive notifications if you have some local files that are in conflict with the installed release (private files) Note that you need to run start the seeds nodes before starting other Fabric nodes of the Fabric cluster.</p>
+<p>Start the Fabric node. When starting Fabric node, you will receive notifications if you have some local files that are in conflict with the installed release (private files). Note that you need to start the seed nodes before starting other Fabric nodes of the Fabric cluster.</p>
 </td>
 </tr>
 <tr>
@@ -43,28 +43,28 @@ Run the following commands through the command line of Fabric server:
 
 ## Get Fabric Version
 
-Run k2fabric -version to get the installed fabric on your server. Note that you can check the Fabric version of your server inside Fabric using the [Fabric command](/articles/02_fabric_architecture/04_Fabric_Commands.md): **version info** 
+Run **k2fabric -version** command through the command line of Fabric server to get the installed fabric on your server. Note that you can check the Fabric version of your server inside Fabric using **version info** [Fabric command](/articles/02_fabric_architecture/04_Fabric_Commands.md).  
 
 ## Enter Fabric 
 
-#### Enter Fabric from Linux Server
+#### Enter Fabric from Fabric Server
 
 To enter Fabric server, type **fabric** through the command line of Fabric server
 
 #### Enter Fabric Local Server
 
-Open Fabric Console on your windows search and select **Fabric Console**.
+Open **Fabric Console** on your windows search.
 
 ## Reset Fabric
 
 Fabric provides the following script in order to clean Fabric and delete (drop) all data from Fabric and Cassandra. This script is located under $K2_HOME/fabric/scripts:
 
-- reset.sh
+- **reset.sh**
 
-The reset.sh script is  used mainly:
+The **reset.sh** script is used mainly:
 
 - In a **TEST environment** to delete the current data and to restart the Testing process from scratch.
-- In **Production environment**. Note that the [Drop LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md) command and the **reset.sh script** are very rarely used in the Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run. 
+- In **Production environment**. Note that the [Drop LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md) command and the **reset.sh** script are very rarely used in the Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run. 
 
 Unlike the drop LU ([drop LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md)) command which drops a specific LU, the reset.sh script performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from Cassandra.
 
@@ -146,7 +146,7 @@ When a clean-up of a Fabric cluster is required, it is recommended to execute th
 
 ### Reset Fabric- Remove Fabric Directories
 
-The reset.sh gets the list of Fabric directories that need to be removed from the config.ini configuration file. The following parameters are taken to get the list of removed Fabric directories: 
+The **reset.sh** script gets the list of Fabric directories that need to be removed from the **config.ini** configuration file. The following parameters are checked to get the list of removed Fabric directories: 
 
 <table width="900pxl">
 <tbody>
