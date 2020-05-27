@@ -160,5 +160,6 @@ Password:
 3. `Answer: 37351 orders`
 
 
+[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/03_04_define_the_interfaces.md)
 
-[![Previous](/articles/images/Previous.png](/academy/03_fabric_basic_LU/02_create_a_fabric_project.md)[<imgalign="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/03_LU_schema_window.md)
+
