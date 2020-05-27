@@ -21,8 +21,13 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </td>
 </tr>
 <tr>
+<<<<<<< HEAD
 <td width="300">
 <p><h5>$K2_HOME/fabric/scripts</p>
+=======
+<td style="width: 189.4px;">
+<p><h4>$K2_HOME/fabric/scripts</p>
+>>>>>>> febfa102e5ee446bdd7161fbfc2187489b08cca4
 </td>
 <td width="600">
 <p>Fabric Scripts:&nbsp;</p>
@@ -132,4 +137,8 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 
 <!--Drop 1- deployment, fabric architecture, fabric logs, fabric commands, fabric basic commands and scripts-->
 
+<<<<<<< HEAD
 <!--Drop 2- iidFinder, Fabric execution monitoring, reference (common) tables, LU storage-->
+=======
+Drop 2- iidFinder, Fabric execution monitoring, reference (common) tables, LU storage
+>>>>>>> febfa102e5ee446bdd7161fbfc2187489b08cca4
