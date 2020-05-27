@@ -1,6 +1,6 @@
 #  Create a Fabric Project
 
-Now that you are familiar with Fabric’s use cases and benefits and know how to analyze an implementation’s business requirements, let’s look at your first business scenario and follow its steps: ![fabric_main_flow_02](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/fabric_main_flow_02.png)                                               
+Now that you are familiar with Fabric’s use cases and benefits and know how to analyze an implementation’s business requirements, let’s look at your first business scenario and follow its steps: ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_02.png)                                               
 
 ### Create a New Fabric Project
 
@@ -16,7 +16,7 @@ To do so, follow these steps:
 
   ​
 
-![Info](/Users/meravamircohen/K2View-Academy/academy/03_fabric_basic_LU/images/information.png) To learn more about our best practices for working with version control, refer to: 
+![](/academy/03_fabric_basic_LU/images/information.png) To learn more about our best practices for working with version control, refer to: 
 
 ​       	    [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
