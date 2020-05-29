@@ -1,6 +1,6 @@
 # Fabric Deployment
 
-![](/images/fabric_main_flow_07.png)
+![](/academy/03_fabric_basic_LU/images/fabric_main_flow_07.png)
 
 So far, you have implemented and validated your Project in a Test mode using the Fabric Studio, mainly to make sure that all the data retrieval business requirements are met. However, to actually envision how the Project will react and interact in a live system, you need to deploy the Logical Unit and other components to the Fabric Server where the data is actually stored, searched and available for inquiries.
 
