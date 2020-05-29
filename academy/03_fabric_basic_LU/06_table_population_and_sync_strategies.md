@@ -1,17 +1,17 @@
 # Table Population and Sync Strategies
 
-​      ![](/images/fabric_main_flow_06.png)              
+​      ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_06.png)              
 
 Your Logical Unit is now constructed using tables from different source DBs and has a hierarchical Parent-Child representation. You have reviewed the implementation and were able to see the data quickly after moving it from the source into Fabric. 
 
 Some questions have arisen:
 
-- Do you have allthe data you need? Does it need to be manipulated? 
+- Do you have all the data you need? Does it need to be manipulated? 
 - How can you make sure that the Customer LU’s data is always updated? 
 
 ### Table Population 
 
-Your Logical Unit has been built using the Auto Discovery Wizard or usinga Drag and Drop table object option based on the additional info that needs tobe displayed. The LU tables invoke a **Table Population** component, which isby default, the DB query that selects the data from its source. Let’s learnabout Table Populations and how they can be best used for data retrieval:
+Your Logical Unit has been built using the Auto Discovery Wizard or usinga Drag and Drop table object option based on the additional info that needs tobe displayed. The LU tables invoke a **Table Population** component, which is by default, the DB query that selects the data from its source. Let’s learn about Table Populations and how they can be best used for data retrieval:
 
 [Table Population Overview](/articles/07_table_population/01_table_population_overview.md)
 
@@ -45,7 +45,7 @@ Let’s understand the Fabric Sync concept and modes:
 
 [Sync Modes](/articles/14_sync_LU_instance/02_sync_modes.md)
 
-We will continue discussing the synchronization modes and methods lateron in our Training. 
+We will continue discussing the synchronization modes and methods later on in our Training. 
 
 [![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/05_LU_flow_.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/07_fabric_deployment.md)
 
