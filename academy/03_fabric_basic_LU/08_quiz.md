@@ -1,6 +1,9 @@
-# Fabric Main Flow Quiz
 
-![](/images/Quiz.png)Excellent! you have completed the Fabric Basic LU and Main Flow learning items.
+#  Fabric Main Flow Quiz
+
+## ![](/academy/03_fabric_basic_LU/images/Quiz.png) Quiz
+
+Excellent! you have completed the Fabric Basic LU and Main Flow learning items.
 
  
 
@@ -18,7 +21,7 @@ c.     Schema representing the relevantdata for a business case.
 
 d.     Both b. and c. 
 
-#### **You have been requested to add the INVOICE table to the LU with the following considerations: If the customer is active, extract all the invoices. if the customer is closed, only access the open invoices. How will you create the population? The assumption is that there are no indexes defined on SUBSCRIBER_ID:**
+#### You have been requested to add the INVOICE table to the LU with the following considerations: If the customer is active, extract all the invoices. if the customer is closed, only access the open invoices. How will you create the population? The assumption is that there are no indexes defined on SUBSCRIBER_ID:
 
 a.     DB query with the exact join, sincethe proper indexing exists.
 
@@ -40,7 +43,7 @@ c.     Only by generating a new file.
 
 d.     Never.
 
-#### **How many population maps can each table have In Fabric? **
+#### How many population maps can each table have In Fabric? 
 
 a.    1.
 
@@ -50,7 +53,7 @@ c.    10.
 
 d.    No limit. 
 
-#### **Using the query builder and data viewer, does CONTRACT.FROM_DATE have the same format? **
+#### Using the query builder and data viewer, does CONTRACT.FROM_DATE have the same format?
 
 a.     Exactly the same.
 
