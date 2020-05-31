@@ -44,7 +44,7 @@ Let’s look at the steps for creating the Interface:
 
 ![](/academy/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
 
-​	[Adding a fabric and remote fabric_ nterface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
+​	[Adding a fabric and remote fabric interface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
 
 ​	[Editing interface settings](/articles/05_DB_interfaces/06_editing_interface_settings.md)
 
