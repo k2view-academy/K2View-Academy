@@ -42,7 +42,6 @@ Only **one Project** can be deployed to **each Fabric cluster**[[NL14\]](#_msoco
 To check the Project’s deployment in the Fabric Server, use the **SET** command from the Fabric console. 
 
 Syntax:
-
 <pre><code>
     set;
 </code></pre>
@@ -62,7 +61,6 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
 - **list INSTANCE_GROUPS/IGS** - lists all instance groups of all LU Types deployed to the Server.
 
 ###### Syntax:
-
 <pre><code> 
     list lut; 
     list lu_types;
@@ -103,13 +101,9 @@ The outcome of this command is that **ludbXMLs.zip** is downloaded to your local
 
 
  [[NL1\]](#_msoanchor_1)  [[NL1\]](#_msoanchor_1)Add link to 1.3 Logical Unit Schema Window
-
  [[NL2\]](#_msoanchor_2)Add link to 2.1 LU Table overview
-
  [[NL3\]](#_msoanchor_3)Add link to 16.1 Interface Overview
-
 Add link to  [[NL4\]](#_msoanchor_4)17_1 Globals overview
-
  [[NL5\]](#_msoanchor_5)Add link to 3.7 Project functions
  [[NL6\]](#_msoanchor_6)Add link to 13.1 WS overview
  [[NL7\]](#_msoanchor_7)Add link to Broadway – DROP 3!!!
