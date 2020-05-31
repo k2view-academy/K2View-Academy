@@ -8,13 +8,13 @@ Congratulations on successfully completing yourfirst quiz!  You are now familiar
 
 By the end of the Fabric Main Flow learning item you will know:
 
--  How to create your first Fabric Project
--  How to use the Fabric Studio’s general toolbarsand menus
+- How to create your first Fabric Project
+- How to use the Fabric Studio’s general tool bars and menus
 - About the main components in a Fabric Project 
--  How to connect your Fabric Project to versioncontrol
-- About the data modelling and data sources inyour initial Fabric Project 
+- How to connect your Fabric Project to version control
+- About the data modelling and data sources in your initial Fabric Project 
 - How to initiate your first LU implementation 
-- How to populate and validate your LUimplementation
+- How to populate and validate your LU implementation
 
  
 
