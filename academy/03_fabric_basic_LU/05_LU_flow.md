@@ -33,7 +33,7 @@ You may  remember that the main business requirement is to create a 360 Customer
 
 Let’s start from the **CRM_DB.CUSTOMER** database which holds theCustomer entity and create the Logical Unit using Auto Discovery.
 
-### creating a New Logical Unit
+### Creating a New Logical Unit
 
 The following walks you through creating a new Logical Unit.
 
