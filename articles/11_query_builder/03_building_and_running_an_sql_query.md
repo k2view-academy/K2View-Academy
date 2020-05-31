@@ -13,7 +13,7 @@ Note that the Insert, Update and Delete statements performed by the DB Query, mi
 * Click **Options** and check / uncheck the **Include Synonyms** options to include or exclude the DB Synonyms from the DB objects list.
 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/01_querytab.PNG)
+![image](/articles/11_query_builder/images/01_querytab.PNG)
 
 ## Main Window - Editing an SQL Query  
 
@@ -33,11 +33,11 @@ To select columns from a DB object, do either:
 * Check specific **columns** in the **DB object** to include them in the SELECT statement.
 * Click the **asterisk** in the **DB object** to generate the following SQL syntax: <pre><code> Select * from [Table Name]; </code></pre>
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/12_3_2%20Table%20Name.png)
+![image](/articles/11_query_builder/images/12_3_2%20Table%20Name.png)
 
 * Right click the **DB object** > **Check All** to check all the columns in the table and add them to the SQL Query.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/12_3_3%20SQL%20Query..png)
+![image](/articles/11_query_builder/images/12_3_3%20SQL%20Query..png)
 
 ### 4. Removing the Selected Columns in a DB object
 To remove columns from a DB object, do either:
@@ -51,29 +51,29 @@ To remove columns from a DB object, do either:
 To add a JOIN to the SQL query, do the following:
 * Click the **DB object column** and drag it to the linked **DB object** and column to add an INNER JOIN to the SQL query.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/12_3_4%20DB%20object%20column.png)
+![image](/articles/11_query_builder/images/12_3_4%20DB%20object%20column.png)
 
 * Right click the **link’s line** and select one or both **Select all rows from** … options to edit the link and update the JOIN to LEFT OUTER JOIN, RIGHT OUTER JOIN, or FULL OUTER JOIN.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/12_3_5%20Select%20all%20rows%20from.png)
+![image](/articles/11_query_builder/images/12_3_5%20Select%20all%20rows%20from.png)
 
 * Right click the **link’s line** > **Properties** to edit the Join properties.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/12_3_6%20link%E2%80%99s%20line%20%20Properties.png)
+![image](/articles/11_query_builder/images/12_3_6%20link%E2%80%99s%20line%20%20Properties.png)
 
 ### 6. Union SQL Queries  
 1. Do either:
 * Right click in the **Main window > Union > New Union Sub-query / Copy Union Sub-Query**.
 * Click the **+** next to the **Q** of the query to add a UNION operator which combines the result-set of two or more SELECT statements. 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/06_01.PNG)
+![image](/articles/11_query_builder/images/06_01.PNG)
 
 Each SQL statement that is combined by the UNION operator has a **Q** icon in the **Main Window**. Clicking the **Q** icon of each SQL statement opens its Main Window where you can add DB objects and link them to each other to edit the SQL statement in the Union query. 
 
 2.	To modify the **Union query** do either:
-* Right click **Link** - ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/12_3_8%20icon%20link.png) -  between the queries to edit the Union type.
+* Right click **Link** - ![image](/articles/11_query_builder/images/12_3_8%20icon%20link.png) -  between the queries to edit the Union type.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/Union_type.png)
+![image](/articles/11_query_builder/images/Union_type.png)
 
 * Right click the **Q** icon to change the order of the SQL statements in the Union SQL query.
 * Right click the **Q** icon to change the order of the SQL statements in the Union SQL query. 
@@ -87,11 +87,11 @@ This table is displayed on the bottom right of the main window and enables editi
 ### Adding an SQL Function to a DB object Column 
 1.	Click the **3 dots** in the **Expression** column to open the **Expression Editor** window. 
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/select_case.png)
+![image](/articles/11_query_builder/images/select_case.png)
 
 2.	Select the **Function** and the **DB object** column to add to the **SQL Query**.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/06_03.png)
+![image](/articles/11_query_builder/images/06_03.png)
 
 3.	Populate the **Column Name** column to add an **alias** to the selected DB object column.
 4.	Populate the **Sort Type** and **Sort Order** columns to add an **Order by** to the SQL query.
@@ -102,7 +102,10 @@ This table is displayed on the bottom right of the main window and enables editi
 The **Enable Pre-Execution Commands** checkbox enables running commands on the selected DB before running the SQL query. When this checkbox is checked, the Pre-Execution Commands window is opened.
 Note that when running the Query Builder on a Fabric interface, you must run the [Get Instance] command in the Pre-Execution Commands window since the SQL query must run on an [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
 
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/11_query_builder/images/06_04.png)
+![image](/articles/11_query_builder/images/06_04.png)
 
 The **Max rows** setting is used to set the maximum number of rows returned by the SQL query. The default value is 10,000 rows. You can set a different number of rows to be returned by the SQL query
 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/11_query_builder/02_query_builder_window.md)
