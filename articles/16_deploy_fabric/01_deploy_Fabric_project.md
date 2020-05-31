@@ -89,9 +89,9 @@ After the Project is deployed to the server, there might be a need to clarify wh
 ###### Syntax:
 
 <pre><code>
-    http://<host>:3213/lut?lutName=<luname>&token=<token>
-	http://<host>:3213/lut?lutName=k2_ws&token=<token>
-	http://<host>:3213/lut?lutName=k2_ref&token=<token>
+	http://[host]:3213/lut?lutName=[luname]&token=[token]
+	http://[host]:3213/lut?lutName=k2_ws&token=[token]
+	http://[host]:3213/lut?lutName=k2_ref&token=[token]
 </code></pre>
 
 The outcome of this command is that **ludbXMLs.zip** is downloaded to your local machine and can be opened in the Studio.
