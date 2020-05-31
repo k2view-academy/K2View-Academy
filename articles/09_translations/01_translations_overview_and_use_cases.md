@@ -252,5 +252,5 @@ The following icons are displayed next to each Translation setting:
 <p>&nbsp;</p>
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">]/articles/09_translations/02_creating_a_new_translation_in_fabric.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/09_translations/02_creating_a_new_translation_in_fabric.md)
 
