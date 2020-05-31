@@ -45,7 +45,7 @@ Syntax:
 
 <pre><code>
     set;
-</pre>
+</code></pre>
 
 This command displays the currently **deployed Project name**, as well as the values of various Project parameters. 
 
@@ -73,9 +73,7 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
     list BROADWAY_FLOWS;
     list IGS;
     list INSTANCE_GROUPS;
-
-
-</pre>
+</code></pre>
 
 ### How Are Deployed Objects Reflected in Cassandra?
 
@@ -84,7 +82,6 @@ Project deployment is reflected in **Cassandra**[[NL20\]](#_msocom_20) as follow
 - The deployment of a Logical Unit[[NL21\]](#_msocom_21) , Reference[[NL22\]](#_msocom_22) s and Web Services [[NL23\]](#_msocom_23) creates new records in the **k2_lut_info** table[[TE24\]](#_msocom_24) under the **k2system** keyspace. A separate record is created for each LU and Reference Table and for each deployed Web Service.
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_<LU Name>**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
-
  
 
 ### How Do I Get the Deployed Implementation?
@@ -97,7 +94,7 @@ After the Project is deployed to the server, there might be a need to clarify wh
     http://<host>:3213/lut?lutName=<luname>&token=<token>
 	http://<host>:3213/lut?lutName=k2_ws&token=<token>
 	http://<host>:3213/lut?lutName=k2_ref&token=<token>
-</pre>
+</code></pre>
 
 The outcome of this command is that **ludbXMLs.zip** is downloaded to your local machine and can be opened in the Studio.
 
@@ -107,88 +104,29 @@ The outcome of this command is that **ludbXMLs.zip** is downloaded to your local
 
  [[NL1\]](#_msoanchor_1)  [[NL1\]](#_msoanchor_1)Add link to 1.3 Logical Unit Schema Window
 
-
-
  [[NL2\]](#_msoanchor_2)Add link to 2.1 LU Table overview
-
-
 
  [[NL3\]](#_msoanchor_3)Add link to 16.1 Interface Overview
 
-
-
 Add link to  [[NL4\]](#_msoanchor_4)17_1 Globals overview
 
-
-
  [[NL5\]](#_msoanchor_5)Add link to 3.7 Project functions
-
-
-
  [[NL6\]](#_msoanchor_6)Add link to 13.1 WS overview
-
-
-
  [[NL7\]](#_msoanchor_7)Add link to Broadway – DROP 3!!!
-
-
-
  [[NL8\]](#_msoanchor_8)Add link to GraphIt – DROP 2!!!
-
-
-
  [[NL9\]](#_msoanchor_9)Add link to 18.1 Translation overview
-
-
-
  [[NL12\]](#_msoanchor_12)Add link to 15.2 Deploy from Fabric Studio
-
-
-
  [[NL13\]](#_msoanchor_13) [[NL13\]](#_msoanchor_13)Add link to Offline Deploy 
-
-
-
  [[NL14\]](#_msoanchor_14)Add link to 19.1 Fabric Architecture
-
-
-
  [[NL15\]](#_msoanchor_15)Add link to 19.5 Fabric basic commands
-
-
-
  [[NL16\]](#_msoanchor_16)Add link to 1.1 LU Overview
-
-
-
  [[NL17\]](#_msoanchor_17)Add link to 13.1 WS overview
-
-
-
  [[NL18\]](#_msoanchor_18) [[NL18\]](#_msoanchor_18)Add link to “Environments Overview and capabilities” DROP 2!!!
-
-
-
  [[NL19\]](#_msoanchor_19)Add link to Broadway – DROP 3!!!
-
-
-
  [[NL20\]](#_msoanchor_20)Add link to 19.1 Fabric Architecture
-
-
-
  [[NL21\]](#_msoanchor_21)Add link to 1.1 LU Overview
-
-
-
  [[NL22\]](#_msoanchor_22)Add link to Reference/Common – DROP 2!!
-
-
-
  [[NL23\]](#_msoanchor_23)Add link to 13.1 WS overview
-
-
-
  [[TE24\]](#_msoanchor_24)Add a link to 19.7 Cassandra keyspaces KI (under Fabric architecture)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
