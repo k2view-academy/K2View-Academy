@@ -259,7 +259,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><strong>Query Builder<strong>
+  <h3><strong><a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a><strong>
 </td>
 <td width="482">
 <p>The Query Builder is an embedded visual query building component in Fabric Studio that allows you to build complex SQL queries using a predefined Fabric interface. Basic knowledge of SQL concepts is required to use the Query Builder.</p>
