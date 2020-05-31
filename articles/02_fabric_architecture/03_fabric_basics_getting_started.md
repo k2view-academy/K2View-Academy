@@ -45,7 +45,7 @@ Run the following commands through the command line of Fabric server:
 
 Run **k2fabric -version** command through the command line of Fabric server to get the installed fabric on your server. Note that you can check the Fabric version of your server inside Fabric using **version info** [Fabric command](/articles/02_fabric_architecture/04_Fabric_Commands.md).  
 
-## Enter Fabric 
+## Login Fabric 
 
 #### Enter Fabric from Fabric Server
 
