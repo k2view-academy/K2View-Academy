@@ -91,7 +91,7 @@ Considering the information above, whichinterface should be used ? **CRM DB**
 
 **Great!  your first interface is ready to be explored:**
 
-Go to the **Project Tree**, right clickthe **CRM_DB interface** and select **Query Builder** or click ![](/academy/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
+Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
 The Query Builder is displayed where youcan see the list of tables and execute the following sample query.
 
