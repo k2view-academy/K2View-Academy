@@ -32,7 +32,7 @@ Our Training environment has three main DBs of various types, which in essence,r
 
 ### How to define an Interface
 
-The properties that define an Interface havethe following settings:
+The properties that define an Interface have the following settings:
 
 [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
 
@@ -58,7 +58,7 @@ Let’s look at the steps for creating the Interface:
 
 ### Query Builder
 
-Similar to other DB studios, Fabric Studio’s Query Builder allowsyou to view source DB structures, data and to invoke complex queries:
+Similar to other DB studios, Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries:
 
 [Query Builder Overview]()
 
@@ -76,7 +76,7 @@ Similar to other DB studios, Fabric Studio’s Query Builder allowsyou to view s
 
 ### ![](/academy/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
 
-The main business requirementis to display a 360 Customer view which shows a customer’s activities and data.Todo so, define an interface that will access the customer’s data.
+The main business requirement is to display a 360 Customer view which shows a customer’s activities and data.Todo so, define an interface that will access the customer’s data.
 
 Considering the information above, whichinterface should be used ? **CRM DB**
 
