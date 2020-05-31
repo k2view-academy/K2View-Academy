@@ -60,7 +60,7 @@ Let’s look at the steps for creating the Interface:
 
 Similar to other DB studios, Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries:
 
-[Query Builder Overview]()
+[Query Builder Overview](/articles/11_query_builder/01_query_builder_overview.md))
 
 <!--Once loaded to Git: 11_1 Query Builder Overview-->
 
