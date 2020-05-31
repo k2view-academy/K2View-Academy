@@ -4,7 +4,7 @@ Now that you are familiar with Fabric’s use cases and benefits and know how to
 
 ### Create a New Fabric Project
 
-Similar to other implementations, youwill need to setup the Project, which means using the Fabric Studio tostructure and save the relevant information.
+Similar to other implementations, you will need to setup the Project, which means using the Fabric Studio to structure and save the relevant information.
 
 To do so, follow these steps:
 
