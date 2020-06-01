@@ -29,5 +29,6 @@ Along the course we will assume the following roles within the Telco environment
 - A customer support operator needing to retrieve all these details as fast and as accurately as possible
 - A business analyst that needs to operate the necessary data transformations to help him design new offers or get new insights on the company’s products, services or customers (or any combination of these for the matter)
 
-##### Enjoy and let's roll !!!
+##### Enjoy and Share your experience !!!
 
+ [![Previous](/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/academy/00_Training_Level_1/01_training_level_1_syllabus.md)
