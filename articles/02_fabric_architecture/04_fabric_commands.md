@@ -336,8 +336,3 @@ Example:
 
 ![Query Helpers](/articles/02_fabric_architecture/images/04_fabric_command_query_helpers.png)
 
-
-
-## Execute Fabric Commands in the Implementation Code
-
-You can execute the Fabric commands either 
