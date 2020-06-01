@@ -138,15 +138,16 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>Execute Fabric Command</strong></p>
+<p><strong><h4>Execute Fabric Command</strong></p>
 <p><strong>&nbsp;</strong></p>
 </td>
 <td width="225">
-<p>Object</p>
+<p>execute or fetch methods. Depends if you get an output from the executed Fabric command.</p>
 </td>
 <td width="274">
 <p>fabric().execute("get CRM.3");</p>
 <p>ludb().execute(&ldquo;"set environment='"+src_env_name+ "'");</p>
+<p>ludb().fetch(&ldquo;"DESCRIBE TABLE " + tblNameFabric);</p>	
 </td>
 </tr>
 <tr>
