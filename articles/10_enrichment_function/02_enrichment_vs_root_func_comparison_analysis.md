@@ -111,7 +111,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p class="CellBodyLeft">The number of executions of a Root function equals the number of records in the parent table.</p>
 <p>For example:</p>
 <p>There are 1,500 subscribers for Customer 1. Each subscriber has multiple services.</p>
-<p>The Root function on the Services LU Table runs 1500 times and selects the services of each subscriber separately.</p>
+<p>The Root function on the Services LU Table runs 1,500 times and selects the services of each subscriber separately.</p>
 </td>
 </tr>
 </tbody>
