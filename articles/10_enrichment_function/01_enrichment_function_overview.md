@@ -6,11 +6,11 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 
 Enrichment function features include:
 
-- Enrichment functions are executed once all [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) in an LU Schema have been populated. The [enrichment order](/articles/03_logical_units/14_edit%20enrichment%20order.md#edit-enrichment-order) is determined at the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) level. An execution is performed only when an [instance is synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
+- Enrichment functions are executed once all [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) in an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) have been populated. The [enrichment order](/articles/03_logical_units/14_edit%20enrichment%20order.md#edit-enrichment-order) is determined at the LU Schema level. An execution is performed only when an [instance is synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
 
 - An Enrichment function does not have Input and Output parameters. It can extract data from any LU Table and use it as needed.
 
-- One or more Enrichment function can be attached to an LU Table from the Enrichment dropdown list in [LU Table’s Properties tab](/articles/06_LU_tables/04_table_properties.md#enrichment-functions). 
+- One or more Enrichment function can be attached to an LU Table using the **Enrichment Functions** field in [LU Table’s Properties tab](/articles/06_LU_tables/04_table_properties.md#enrichment-functions). 
 
 - An LU Table’s columns can be updated by an Enrichment function if the LU Table column type is set to [Computed Field](/articles/06_LU_tables/02_create_an_LU_table.md#column-type).
 
