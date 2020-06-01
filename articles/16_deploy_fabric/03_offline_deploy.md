@@ -24,7 +24,7 @@ There are two ways to perform an Offline Deployment:
 
    a. Right click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification is displayed after the artifacts are successfully built.
 
-   ![16_03_offline_deploy1](C:\K2View-Academy\articles\16_deploy_fabric\images\16_03_offline_deploy1.png)
+   [16_03_offline_deploy1](articles/16_deploy_fabric/images/16_03_offline_deploy1.png)
 
    b. Right click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
 
@@ -35,10 +35,6 @@ There are two ways to perform an Offline Deployment:
 3. To do the deployment, run the **Deploy** command using the following syntax <!--add link to sub-section here-->:
 
    DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>] NOSYNC <Boolean>.
-
-   ###### Example:
-
-   <!--TO ADD AN EXAMPLE-->
 
    Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
 
@@ -51,8 +47,6 @@ There are two ways to perform an Offline Deployment:
    ##### Build and Deploy in One Step
 
    To build the artifacts and the deployment together in one step from the server, run the buildAndDeployArtifacts.sh script  <!--add link to sub-section here-->.
-
-   
 
    ##### Deployment Scripts Syntax and Options
 
