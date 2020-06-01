@@ -1,6 +1,7 @@
 # Enrichment Function vs. Root Function - Comparison Analysis
 
-Enrichment functions and [Root functions](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md) are both Fabric [Project functions](/articles/07_table_population/08_project_functions.md) that can run complex logic on [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) like invoking Fabric commands <!--Add a link to Fabric commands KI-->, complex data manipulations and SQL statements on different [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). Both Enrichment functions and Root functions run during an [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
+Enrichment functions and [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)s are both Fabric Java [Project functions](/articles/07_table_population/08_project_functions.md) that can run complex logic on [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) like invoking Fabric commands <!--Add a link to Fabric commands KI-->, complex data manipulations and SQL statements on different [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). Both Enrichment functions and Root functions run during an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
+
 There are major differences between Root functions and Enrichment functions and it is important to understand them in order to select the correct solution for each scenario. 
 
 The following table displays the comparison analysis between Enrichment and Root functions and provides insight on how and when each function type should be used.
@@ -25,10 +26,10 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Function Type</strong></p>
 </td>
 <td width="241">
-<p>Regular Function</p>
+<p>Regular function.</p> 
 </td>
 <td width="269">
-<p>Root Function</p>
+<p>Root function.</p> 
 </td>
 </tr>
 <tr>
@@ -36,7 +37,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Structure</strong></p>
 </td>
 <td width="241">
-<p>The Enrichment function does not have any Input/Output parameters.</p>
+<p>The Enrichment function does not have any Input / Output parameters.</p>
 </td>
 <td width="269">
 <p>The Root function must have at least one Input parameter and yield an array of Objects (Object[]).</p>
