@@ -2,7 +2,7 @@
 
 Fabric includes a large set of commands to view Fabric configuration , update Fabric settings, and run Fabric processes. 
 
-You can either run Fabric commands from Fabric console, or run Fabric commands in the implementation code.
+You can either run Fabric commands from Fabric console, or [run Fabric commands in the implementation code](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
 
 Note the Fabric commands are case insensitive, e.g. you can run either **Get**, **get**, or **GET** command.
 
@@ -143,25 +143,38 @@ The remote GET/GETF command runs on a random Fabric node on the remote DC. You m
 Note that  it is the user's responsibility to identify if the [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) of the LU instance is required, and only then run the remote GET/GETF commands. This will prevent unnecessary calls to the remote Fabric node, and getting the local LU instance version instead.
 
 
+### Release LU
+
+Fabric **release** command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session for a list of LUs or for all LUs.
+
+Click for more information about LUI storage and management.
+
+<!--Drop 2- Add a link to LU storage and management--> 
+
 ### Fabric View
 
 Fabric has commands that gives a view on the Fabric configuration and settings. For example:
 
 - Fabric cluster information:
 
-  - CLUSTERID
+  - **clusterid**
+  - **clusterstatus**
+  - **time**
+  - **version info**
+
+- - CLUSTERID
   - CLUSTERSTATUS
   - TIME
-  - VERSION INFO- the version of the installed Fabric
+  - VERSION INFO- the version of the installed Fabric. Note that you can get Fabric version outside outside Fabric server using [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information of the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
 
-  - DESCRIBE- query Fabric's metadata structure.
-  - LIST- list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server).
+  - **describe**- query Fabric's metadata structure.
+  - **list**- list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server).
 
 - General Information:
 
-  - SET-  displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LU instances in the scope (the latest LU instance, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Globals' values](/articles/08_globals/01_globals_overview.md#globals-overview), and the active Environment. 
+  - **set** -  displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LU instances in the scope (the latest LU instance, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Globals' values](/articles/08_globals/01_globals_overview.md#globals-overview), and the active Environment. 
 
     <!--Drop 2- Add a link to Environments--> 
 
@@ -169,7 +182,7 @@ Fabric has commands that gives a view on the Fabric configuration and settings. 
 
 #### Fabric Setting- Session Level
 
-Fabric **SET** commands enables update Fabric setting on the session level:
+Fabric **set** command enables update Fabric setting on the session level:
 
 - Set [global variables](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command)
 
@@ -193,9 +206,7 @@ Fabric **SET** commands enables update Fabric setting on the session level:
 
 ##### Reset Session Level Setting
 
-You can reset all the set related parameters on the session level to their default value using the following command:
-
-**set default;**
+You can reset all the set related parameters on the session level to their default value using the following command: **set default;**
 
 #### Fabric Setting- Cluster Level
 
@@ -207,7 +218,7 @@ You can reset all the set related parameters on the session level to their defau
 
 Master key generation commands. The master key is used to encrypt the LU instance data as well as encryption of the [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md)  details.
 
-[Click for more information about Fabric security hardening.]
+Click for more information about Fabric security hardening.
 
 <!--Drop 3- Add a link to Fabric Security Hardening-->
 
@@ -233,7 +244,7 @@ In addition, you can test the [DB interfaces](/articles/05_DB_interfaces/03_DB_i
 
 You can run CQL queries on Cassandra inside Fabric server using the **cql** command.
 
-See example below:
+Example:
 
 `fabric>cql select * from k2view_customer.entity;`
 
@@ -247,19 +258,86 @@ Click for more information about Fabric jobs.
 
 <!--Drop 2- add a link to Fabric jobs-->
 
-Batch Process Commands
+### Batch Process Commands
 
-Process Control
+The batch process mechanism allows executing different types of fabric commands in a batch mode on the remote Fabric nodes.
 
-Execution Monitoring
+Fabric provides commands to start execution, retry, and cancel execution of a batch process as well as commands to monitor the execution on batch processes on Fabric.
 
-Common (Reference) Tables
+Note that the migrate commands are used as aliases to the batch commands.
 
-Fabric Transactions
+Click for more information about Fabric batch process mechanism.
 
-CDC and Search
+<!--Drop 2- add a link to Batch Process-->
 
-Fabric Broadway
+### Process Control
 
- 
+#### Ps and Kill Commands
 
+**ps** command displays the current running tasks on Fabric like Fabric command, Fabric Job, Web service and Graphit, [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md),   Broadway actor, parser ...
+
+<!--Drop 2- add a links to jobs, parsers, graphit, broadway-->
+
+<!--Drop 1- add a link to WS-->
+
+**kill** command enables you to kill  any running task as displayed by the **ps** command.
+
+### Execution Monitoring
+
+The trace mechanism (**trace** command) enables the tracing of Fabric internal operations by request and writing them into tracing files.
+
+<!--Drop 3- add a links to trace-->
+
+### Common (Reference) Tables
+
+Fabric enables creating Common (Reference) Tables which can be used by all LUs or Web services. A Common Table typically contains metadata. For example, a postal-code table that identifies the postal code of customer addresses.
+
+Common Tables' commands enable synchronizing and get the sync status of the Common tables. 
+
+Click for more information about Common (Reference) Tables.
+
+<!--Drop 2- add a link to Common (reference) tables -->
+
+### Fabric Transactions
+
+Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id), or on the (common) Reference table. This functionality enables Fabric to become the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transactions feeds and update the related instance IDs/Common Tables accordingly. You must start (**begin**) a transaction before running the **insert**, **update**, or **delete** commands and end (**commit** or **rollback**) to commit or rollback the updates.
+
+Fabric provides a set to commands to **begin** transaction, run **select**, **insert**, **update**, **delete** on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common Table data, and **commit** or **rollback** the updates. 
+
+Click for more information about Fabric as System of Record.
+
+<!--Drop 2- add links to SOR + Common (reference) tables -->
+
+### CDC and Search
+
+Fabric has a full CDC (Change Data Capture) solution to notify external systems on data changes. Fabric CDC solution has a built-in integration with **Elasticsearch** to enable a cross [LU instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
+
+For example:  search all customers called “John Doe” and live in “New-York”. 
+
+Fabric provides a **search** command to initiate a search on the **Elasticsearch**. In addition, Fabric provides the **cdc_republish_instance** command to republish CDC data on LU instances.
+
+Click for more information about Fabric CDC and Search.
+
+<!--Drop 2- add a link to CDC and Search -->
+
+### Fabric Broadway
+
+Fabric **broadway** command runs a [Broadway flow]().
+
+<!--Drop 2- add a link to Broadway -->
+
+### Queries Helpers
+
+An SQL statement can be preceded by the keyword **EXPLAIN** or by the phrase **EXPLAIN QUERY PLAN**. This modification causes the SQL statement to behave like a query and to return information about how the SQL statement will operate if the **EXPLAIN** keyword or phrase is omitted.
+
+The output from **EXPLAIN** and **EXPLAIN QUERY PLAN** is intended for interactive analysis and troubleshooting only.
+
+Example:
+
+![Query Helpers](/articles/02_fabric_architecture/images/04_fabric_command_query_helpers.png)
+
+
+
+## Execute Fabric Commands in the Implementation Code
+
+You can execute the Fabric commands either 
