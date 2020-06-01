@@ -157,15 +157,10 @@ Fabric has commands that gives a view on the Fabric configuration and settings. 
 
 - Fabric cluster information:
 
-  - **clusterid**
-  - **clusterstatus**
-  - **time**
-  - **version info**
-
-- - CLUSTERID
-  - CLUSTERSTATUS
+- - CLUSTERID - Returns the cluster identifier defined on node.id
+  - CLUSTERSTATUS - Will return the status for all fabric nodes. Also include: guid, dc, logical_ids.
   - TIME
-  - VERSION INFO- the version of the installed Fabric. Note that you can get Fabric version outside outside Fabric server using [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
+  - VERSION INFO- the version of the installed Fabric. Note that you can get Fabric version outside Fabric server using [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information of the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
 
@@ -224,7 +219,7 @@ Click for more information about Fabric security hardening.
 
 #### Fabric Credentials Commands
 
-List of commands to set Fabric credentials (users, roles, permissions...).
+List of commands to set Fabric credentials (users, roles, tokens, permissions...).
 
 <!--Drop 1- Add a link to Fabric Credentials-->
 
@@ -292,7 +287,7 @@ The trace mechanism (**trace** command) enables the tracing of Fabric internal o
 
 Fabric enables creating Common (Reference) Tables which can be used by all LUs or Web services. A Common Table typically contains metadata. For example, a postal-code table that identifies the postal code of customer addresses.
 
-Common Tables' commands enable synchronizing and get the sync status of the Common tables. 
+Common Tables' commands enable synchronizing, get the sync status and waiting for sync prcoess of the Common tables to be completed before proceeding in the flow. 
 
 Click for more information about Common (Reference) Tables.
 
@@ -302,9 +297,12 @@ Click for more information about Common (Reference) Tables.
 
 Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id), or on the (common) Reference table. This functionality enables Fabric to become the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transactions feeds and update the related instance IDs/Common Tables accordingly. You must start (**begin**) a transaction before running the **insert**, **update**, or **delete** commands and end (**commit** or **rollback**) to commit or rollback the updates.
 
-Fabric provides a set to commands to **begin** transaction, run **select**, **insert**, **update**, **delete** on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common Table data, and **commit** or **rollback** the updates. 
+Fabric provides a set of commands to **begin** transaction, run **select**, **insert**, **update**, **delete** on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common Table data, and **commit** or **rollback** the updates. 
+
+Fabric provides also the ability to write the transaction into delta table by using set async_trx=true.
 
 Click for more information about Fabric as System of Record.
+
 
 <!--Drop 2- add links to SOR + Common (reference) tables -->
 
