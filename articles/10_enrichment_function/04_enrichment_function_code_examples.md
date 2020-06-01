@@ -9,7 +9,7 @@ Use an Enrichment function to validate the retrieved data and update the Compute
    <pre><code>
    String caseStatus = "Closed";
    String sqlCountMonths = 
-   	"SELECT round((julianday('now') - julianday(CASE_DATE))/365*12) as CASE_OPEN_MONTHS, CASE_ID, STATUS from CASES ";
+   "SELECT round((julianday('now') - julianday(CASE_DATE))/365*12) as CASE_OPEN_MONTHS, CASE_ID, STATUS from CASES ";
    String sqlUpdate = "UPDATE CASES SET CASE_OPEN_MONTHS = ? WHERE CASE_ID = ?";
    ludb().fetch(sqlCountMonths).each(row->{
    	Integer caseID = Integer.parseInt(row.cell(1).toString());	
@@ -48,11 +48,11 @@ When you need to perform several validations on the retrieved data after the syn
 
 2. Create a **new table** that will keep the validation results and a **Root function** that will execute these validations and populate the results in the table. For example, a table **EXEC_VALIDATIONS** is populated by the Root function **fnExecuteValidations** in the population **popExecValidations**.
 
-   [![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)]
+   ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
 3. In order to do it in a generic way, you can define a **new translation** and define the list of functions in it. You can also check each translation entry as Active or not, by that you can include or exclude the validations as needed. For example, a translation **trnValidationFuncList**.
 
-   [![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)]
+   ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
 
 4. Create an **Enrichment function**. For example, an enrichment function **fnCheckValidationsResults** will go over the results in the table and update a special indicator on table **CUSTOMER**.
 
