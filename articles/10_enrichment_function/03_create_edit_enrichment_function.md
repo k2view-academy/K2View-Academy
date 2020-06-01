@@ -6,6 +6,7 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 
 The steps for creating an Enrichment function in Fabric Studio are the same as those for a Regular function. In the **Function Properties** tab, set the **Function Type** to **Regular Function**. Do not define Input / Output parameters.
 Note that it is recommended to set the **Category** to **Enrichment**.
+
 ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_03_create_enrichment_1.PNG)
 
 [Click for more information about How to Create a Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
@@ -36,4 +37,4 @@ Do the following:
 
 
 
-[![Previous](/articles/images/Previous.png)](//articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
+[![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
