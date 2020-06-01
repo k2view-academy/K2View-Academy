@@ -9,7 +9,7 @@ Use an Enrichment function to validate the retrieved data and update the Compute
    <pre><code>
    String caseStatus = "Closed";
    String sqlCountMonths = 
-   "SELECT round((julianday('now') - julianday(CASE_DATE))/365*12) as CASE_OPEN_MONTHS, CASE_ID, STATUS from CASES ";
+   "SELECT round((julianday('now') - julianday(CASE_DATE))/365*12) as CASE_OPEN_MONTHS, CASE_ID, STATUS from CASES";
    String sqlUpdate = "UPDATE CASES SET CASE_OPEN_MONTHS = ? WHERE CASE_ID = ?";
    ludb().fetch(sqlCountMonths).each(row->{
    	Integer caseID = Integer.parseInt(row.cell(1).toString());	
