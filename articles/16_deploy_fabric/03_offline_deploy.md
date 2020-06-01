@@ -24,7 +24,7 @@ There are two ways to perform an Offline Deployment:
 
    a. Right click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification is displayed after the artifacts are successfully built.
 
-   [16_03_offline_deploy1](articles/16_deploy_fabric/images/16_03_offline_deploy1.png)
+   ![16_03_offline_deploy1](articles/16_deploy_fabric/images/16_03_offline_deploy1.png)
 
    b. Right click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
 
@@ -40,16 +40,12 @@ There are two ways to perform an Offline Deployment:
 
    ###### Example:
 
-   <!--TO ADD AN EXAMPLE-->
-
    DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA_AutoTests4/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA_AutoTests4/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
 
    ##### Build and Deploy in One Step
-
    To build the artifacts and the deployment together in one step from the server, run the buildAndDeployArtifacts.sh script  <!--add link to sub-section here-->.
 
    ##### Deployment Scripts Syntax and Options
-
    The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under /**usr/local/k2view/fabric/scripts** in the Fabric Server.
 
    <table style="width: 900px;">
@@ -96,7 +92,6 @@ There are two ways to perform an Offline Deployment:
    
    
    ##### Deploy Command Syntax and Options
-   
    The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
    
    <table width="900px">
