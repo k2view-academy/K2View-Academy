@@ -21,8 +21,9 @@ The deployment of a Fabric project is performed on the following levels:
   - Deployment of all Web Services. 
   - Deployment of selected Web Services category files.  
   - Deployment of selected Web Services.
-- **Deployment of Graphit**, each object can be deployed separately or all Graphit objects can be deployed as part of the Web Services. 
-- **Deployment of Environments**.  
+- **Deployment of Graphit**, when they exist in the Project. The following deployment options are available: 
+  - Each Graphit object can be deployed separately or all Graphit objects can be deployed as part of the Web Services. 
+- [**Deployment of Environments**].  <!--Future link to DROP 2 item-->
 
 Deployment can be performed either:
 
