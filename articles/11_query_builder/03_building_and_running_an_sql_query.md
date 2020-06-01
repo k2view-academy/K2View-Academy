@@ -1,7 +1,7 @@
 # Using the Query Builder Window - Building and Running an SQL Query
 
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
-2.	Create and edit the **SQL Query**. You can either create the **SQL Query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/01_query_builder_overview.md#opening-the-query-builder-window). 
+2.	Create and edit the **SQL Query**. You can either create the **SQL Query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
 3.	To execute the SQL statement, click **Execute Query**.
 4.	Open the [**Results tab**](/articles/11_query_builder/02_query_builder_window.md#result-tab) to view the **SQL results**.
 
