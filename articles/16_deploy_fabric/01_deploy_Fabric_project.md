@@ -7,7 +7,7 @@ The implementation of a Fabric project can be divided into two steps:
 - **Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio in order to implement the business requirements.
 - **Deployment** of the project into the Fabric Server so that the first deployment of the new project or all recent changes since its last deployment are compiled and become effective on the server side. 
 
-A deployment includes the definition of Fabric objects like the LU Schema[[NL1\]](#_msocom_1) , LU Tables[[NL2\]](#_msocom_2) , Interfaces[[NL3\]](#_msocom_3) , Globals[[NL4\]](#_msocom_4) , Project functions[[NL5\]](#_msocom_5) , Web Services[[NL6\]](#_msocom_6) , Broadway flows[[NL7\]](#_msocom_7) , Graphit [[NL8\]](#_msocom_8) and Translations[[NL9\]](#_msocom_9) and is required whenever these objects are created or modified. 
+A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services], [Broadway flows], [Graphit] and [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) and is required whenever these objects are created or modified. 
 
 The deployment is needed for any change operated in any of these objects, excluding the migration of source data into the Fabric Server. 
 
@@ -25,9 +25,9 @@ The deployment of a Fabric project is performed on the following levels:
 
 Deployment can be performed either:
 
-- From the Fabric Studio[[NL12\]](#_msocom_12) .
+- [From the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio).
 
-- By creating the artifacts in the Fabric Studio via **Build Deploy Artifacts** and running the deployment on the server side (Offline Deploy[[NL13\]](#_msocom_13) ). 
+- By creating the artifacts in the Fabric Studio via **Build Deploy Artifacts** and running the deployment on the server side ([Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md). 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric Server – one **ludb.jar** for each deployment. 
 
@@ -37,7 +37,7 @@ Note that Shared Objects are not independent objects in a Project and therefore 
 
 ### How Do I check Which Project Is Deployed to Fabric? 
 
-Only **one Project** can be deployed to **each Fabric cluster**[[NL14\]](#_msocom_14) . If a Project has been deployed and an attempt to deploy a different Project to the same cluster is made, an error message is displayed. 
+Only **one Project** can be deployed to [**each Fabric cluster**]<!--add link to Fabric Architecture-->. If a Project has been deployed and an attempt to deploy a different Project to the same cluster is made, an error message is displayed. 
 
 To check the Project’s deployment in the Fabric Server, use the **SET** command from the Fabric console. 
 
@@ -48,16 +48,16 @@ Syntax:
 
 This command displays the currently **deployed Project name**, as well as the values of various Project parameters. 
 
-Click for more information about Fabric Basic Commands[[NL15\]](#_msocom_15) . 
+[Click for more information about Fabric Basic Commands]<!--Add link to 19.5 Fabric basic commands-->. 
 
 ### How Are Deployed Objects Reflected in the Fabric Server?
 
 You can check which objects are deployed in the Fabric Server using the Fabric **list** command.
 
-- **list LU_TYPES/LUT** provides a list of Logical Unit [[NL16\]](#_msocom_16) types deployed to the Fabric Server.
-- **list WS** provides a list of all Web Service [[NL17\]](#_msocom_17) methods deployed to the Fabric Server. 
-- **list ENVIRONMENTS/ENVS** provides a list of environments[[NL18\]](#_msocom_18) deployed to the Fabric Server.
-- **list BF/BROADWAY_FLOWS** - list all Broadway flows [[NL19\]](#_msocom_19) of all LU Types deployed to the Server.
+- **list LU_TYPES/LUT** provides a list of Logical Unit types deployed to the Fabric Server.
+- **list WS** provides a list of all Web Service methods deployed to the Fabric Server. 
+- **list ENVIRONMENTS/ENVS** provides a list of environments deployed to the Fabric Server.
+- **list BF/BROADWAY_FLOWS** - list all Broadway flows of all LU Types deployed to the Server.
 - **list INSTANCE_GROUPS/IGS** - lists all instance groups of all LU Types deployed to the Server.
 
 ###### Syntax:
@@ -75,9 +75,9 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
 
 ### How Are Deployed Objects Reflected in Cassandra?
 
-Project deployment is reflected in **Cassandra**[[NL20\]](#_msocom_20) as follows:
+Project deployment is reflected in [**Cassandra**]<!--add link to Fabric Architecture--> as follows:
 
-- The deployment of a Logical Unit[[NL21\]](#_msocom_21) , Reference[[NL22\]](#_msocom_22) s and Web Services [[NL23\]](#_msocom_23) creates new records in the **k2_lut_info** table[[TE24\]](#_msocom_24) under the **k2system** keyspace. A separate record is created for each LU and Reference Table and for each deployed Web Service.
+- The deployment of a Logical Unit[[NL21\], Reference[[NL22\]](#_msocom_22) s and Web Services [[NL23\]](#_msocom_23) creates new records in the **k2_lut_info** table[[TE24\]](#_msocom_24) under the **k2system** keyspace. A separate record is created for each LU and Reference Table and for each deployed Web Service.
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_<LU Name>**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
  
@@ -97,26 +97,7 @@ After the Project is deployed to the server, there might be a need to clarify wh
 The outcome of this command is that **ludbXMLs.zip** is downloaded to your local machine and can be opened in the Studio.
 
 ------
-
-
-
- [[NL1\]](#_msoanchor_1)  [[NL1\]](#_msoanchor_1)Add link to 1.3 Logical Unit Schema Window
- [[NL2\]](#_msoanchor_2)Add link to 2.1 LU Table overview
- [[NL3\]](#_msoanchor_3)Add link to 16.1 Interface Overview
-Add link to  [[NL4\]](#_msoanchor_4)17_1 Globals overview
- [[NL5\]](#_msoanchor_5)Add link to 3.7 Project functions
- [[NL6\]](#_msoanchor_6)Add link to 13.1 WS overview
- [[NL7\]](#_msoanchor_7)Add link to Broadway – DROP 3!!!
- [[NL8\]](#_msoanchor_8)Add link to GraphIt – DROP 2!!!
- [[NL9\]](#_msoanchor_9)Add link to 18.1 Translation overview
- [[NL12\]](#_msoanchor_12)Add link to 15.2 Deploy from Fabric Studio
- [[NL13\]](#_msoanchor_13) [[NL13\]](#_msoanchor_13)Add link to Offline Deploy 
- [[NL14\]](#_msoanchor_14)Add link to 19.1 Fabric Architecture
- [[NL15\]](#_msoanchor_15)Add link to 19.5 Fabric basic commands
- [[NL16\]](#_msoanchor_16)Add link to 1.1 LU Overview
- [[NL17\]](#_msoanchor_17)Add link to 13.1 WS overview
- [[NL18\]](#_msoanchor_18) [[NL18\]](#_msoanchor_18)Add link to “Environments Overview and capabilities” DROP 2!!!
- [[NL19\]](#_msoanchor_19)Add link to Broadway – DROP 3!!!
+ 
  [[NL20\]](#_msoanchor_20)Add link to 19.1 Fabric Architecture
  [[NL21\]](#_msoanchor_21)Add link to 1.1 LU Overview
  [[NL22\]](#_msoanchor_22)Add link to Reference/Common – DROP 2!!
