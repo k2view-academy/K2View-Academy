@@ -1,8 +1,8 @@
 # Enrichment Functions - Code Examples
 
-### Simple Example of an Enrichment Function which Populates a Computed Field
+### Simple Example of an Enrichment Function that Populates a Computed Field
 
-Use an Enrichment function to validate the retrieved data and update the Computed Field on one of LU Schema tables. For example, you need to calculate the number of months the case is not Closed and populate this information in the table CASES per each such case.
+Use an Enrichment function to validate the retrieved data and update the Computed Field on an LU Schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case.
 
 1. Create an **Enrichment function**.
 
@@ -24,15 +24,15 @@ Use an Enrichment function to validate the retrieved data and update the Compute
    });
    </code></pre>
 
-2. Add a new column to table CASES with **Column Type** = **Computed Field** and attach the **Enrichment function** to table CASES via the **Table Properties tab**. 
+2. Add a new column to the CASES table with **Column Type** = **Computed Field** and attach the **Enrichment function** to the CASES table via the **Table Properties** tab. 
 
 [Click to display an example of the **fnMonthsOpenCase** Enrichment Function in the Demo project.]
 
-### Complex Example of Several Validation, Including the Use of an Enrichment Function 
+### Complex Example of Several Validations, Including the Use of an Enrichment Function 
 
-When you need to perform several validations on the retrieved data after the sync and keep the validations results in a dedicated table, you can use an Enrichment function, a Root function and several regular functions to support it. For example, you need to check if the customer has Roaming services and if he has Open cases, to keep the validations results in a table and also populate a special indicator in the table CUSTOMER. To support this scenario, do the following steps:
+To perform a number of validations on retrieved data after a sync and to save the results in a dedicated table, develop business logic that includes using an Enrichment function, Root function and several Regular functions. For example, to check if a customer has roaming services and Open cases, to save validation results in a table, and to populate a specific indicator in the CUSTOMER table, do the following:
 
-1. Create the validations as a set of **regular Project functions** - one per each validation. For example, a function **fnHasRoaming**:
+1. Create the validations as a set of **Regular Project functions** - one per each validation. For example, the **fnHasRoaming** function:
 
    <pre><code>
    String roamingService = "Roaming special";
@@ -46,15 +46,15 @@ When you need to perform several validations on the retrieved data after the syn
    	return  "OK";
    </code></pre>
 
-2. Create a **new table** that will keep the validation results and a **Root function** that will execute these validations and populate the results in the table. For example, a table **EXEC_VALIDATIONS** is populated by the Root function **fnExecuteValidations** in the population **popExecValidations**.
+2. Create a **new table** populated by a **Root function** that executes the validations and populates the results in the table. For example, the **EXEC_VALIDATIONS** table is populated by the **fnExecuteValidations** Root function in the **popExecValidations** population.
 
    ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
-3. In order to do it in a generic way, you can define a **new translation** and define the list of functions in it. You can also check each translation entry as Active or not, by that you can include or exclude the validations as needed. For example, a translation **trnValidationFuncList**.
+3. To do this generically, define a **new translation** and then populate the **translation data** using the validation functions described in step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
 
    ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
 
-4. Create an **Enrichment function**. For example, an enrichment function **fnCheckValidationsResults** will go over the results in the table and update a special indicator on table **CUSTOMER**.
+4. Create an **Enrichment function**. For example, an **fnCheckValidationsResults** Enrichment function that will go over the results in the table and update a specific indicator in the **CUSTOMER** table.
 
    <pre><code>
    String sqlSelect = "SELECT count(*) FROM EXEC_VALIDATIONS WHERE RESULT !='OK'";
@@ -66,7 +66,7 @@ When you need to perform several validations on the retrieved data after the syn
    }
    </code></pre>
 
-5. Attach the **Enrichment function** to table **EXEC_VALIDATIONS** via the **Table Properties tab**. 
+5. Attach the **Enrichment function** to the **EXEC_VALIDATIONS** table via the **Table Properties** tab. 
 
 [Click to display an example of the **fnCheckValidationsResultsEnrichment** Function in the Demo project.]
 
