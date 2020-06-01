@@ -22,9 +22,11 @@ Do the following:
 
 2. To attach the [Enrichment function in the Table Properties tab](articles/06_LU_tables/04_table_properties.md#enrichment-functions), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**. <!--Add the link from /articles/06_LU_tables/04_table_properties.md#enrichment-functions to here -->
 
-   ![10_03_create_enrichment_2](/articles/10_enrichment_function/images/10_03_create_enrichment_2.PNG)
+   ![10_03_create_enrichment_2_1](/articles/10_enrichment_function/images/10_03_create_enrichment_2_1.PNG)
 
 3. Click **Add** and then click the area next to **Name** to display the list of Enrichment functions. Note that only the functions without Input and Output parameters are displayed.
+
+   ![10_03_create_enrichment_2_2](/articles/10_enrichment_function/images/10_03_create_enrichment_2_2.PNG)
 
 4. Select the function from the list. 
 
