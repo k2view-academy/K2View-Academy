@@ -13,7 +13,8 @@ The deployment is needed for any change operated in any of these objects, exclud
 
 The deployment of a Fabric project is performed on the following levels:
 
-- **Deployment of Logical Units**, each LU should be deployed separately. When needed, a deployment can be performed on a specific LU if only that LU has been modified.
+- **Deployment of Logical Units**, each LU should be deployed separately. 
+  - When needed, a deployment can be performed on a specific LU if only that LU has been modified.
 - **Deployment of Broadway flows** as part of the LU to which they belong.
 - **Deployment of References objects**, when they exist in a Project. All Reference (common) tables are deployed together.
 - **Deployment of Web Services**, when they exist in the Project. The following deployment options are available: 
@@ -26,8 +27,7 @@ The deployment of a Fabric project is performed on the following levels:
 Deployment can be performed either:
 
 - [From the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio).
-
-- By creating the artifacts in the Fabric Studio via **Build Deploy Artifacts** and running the deployment on the server side ([Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md). 
+- By creating the artifacts in the Fabric Studio via **Build Deploy Artifacts** and running the deployment on the server side ([Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md)). 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric Server – one **ludb.jar** for each deployment. 
 
