@@ -1,11 +1,14 @@
 # Creating or Editing an Enrichment Function
 
-An Enrichment function is a [Project function](/articles/07_table_population/08_project_functions.md) without Input/Output parameters that is used to insert, update, or delete an LU Table's data after it has already been populated from a source object. It is defined as a specific category of Fabric [Regular functions](/articles/07_table_population/08_project_functions.md).
+An Enrichment function is a [Project function](/articles/07_table_population/08_project_functions.md) without Input / Output parameters that is used to insert, update, or delete an LU Table's data after it has already been populated from a source object. It is defined as a specific category of Fabric [Regular functions](/articles/07_table_population/08_project_functions.md).
 
 ### How Can I Create or Edit an Enrichment Function?
 
-The steps for creating an Enrichment function in Fabric Studio are the same as those for a Regular function. In the **Function Properties** tab, set the **Function Type** to **Regular Function**. Do not define Input / Output parameters.
-Note that it is recommended to set the **Category** to **Enrichment**.
+The steps for creating an Enrichment function in Fabric Studio are the same as those for a Regular function. 
+The steps which are unique for Enrichment functions are as follows:
+1. In the **Function Properties** tab, set the **Function Type** to **Regular Function**. 
+2. Do not define Input / Output parameters.
+3. It is recommended to set the **Category** to **Enrichment**.
 
 ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_03_create_enrichment_1.PNG)
 
