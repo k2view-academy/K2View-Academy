@@ -119,5 +119,7 @@ The following table describes the syntax and the mandatory/optional parameters w
    </table>
    <p>&nbsp;</p>
    <p>&nbsp;</p>
+   
+Note that NOSYNC TRUE is the same as checking [Force Upgrade Post Deploy](/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) in the Server Configuration window in the Fabric Studio.
 
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
