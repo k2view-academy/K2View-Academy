@@ -1,7 +1,6 @@
 # Offline Deploy
 
 New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server, and is also known as an Offline Deploy. 
-
 An **Offline Deploy** is implemented by running the **Deploy** command on the Fabric Server using artifacts that can be created either by the Fabric Studio or by the script on the server side.
 
 ### When Should I Use Offline Deploy?
@@ -12,9 +11,9 @@ When a Fabric Project is developed by a group of programmers it is important tha
 ### How Do I Perform an Offline Deployment?
 
 There are two ways to perform an Offline Deployment:
-- Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the [**buildArtifacts.sh** script](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options). Then do the deployment by running the **Deploy** command on the server.
+- Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the deployment script [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options). Then do the deployment by running the **Deploy** command on the server.
 
-- Build and deploy in one step. Build and deploy from the server using the [**buildAndDeployArtifacts.sh** script](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options). It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
+- Build and deploy in one step. Build and deploy from the server using the deployment script [**buildAndDeployArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options). It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
 
 #### Build and Deploy in Two Steps
 
@@ -28,7 +27,7 @@ There are two ways to perform an Offline Deployment:
 
    c. Copy the **ludb.JAR** and **ludbXMLs.ZIP** files to the server.
 
-2. To build the artifacts **from the Fabric Server**, run the **buildArtifacts.sh** <!--add link to sub-section here--> script .
+2. To build the artifacts **from the Fabric Server**, run the deployment script [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options).
 
 3. To do the deployment, run the **Deploy** command using the following syntax <!--add link to sub-section here-->:
 
@@ -38,13 +37,13 @@ There are two ways to perform an Offline Deployment:
 
    ###### Example:
 
-   DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA_AutoTests4/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA_AutoTests4/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
+   DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
 
 #### Build and Deploy in One Step
-   To build the artifacts and the deployment together in one step from the server, run the buildAndDeployArtifacts.sh script  <!--add link to sub-section here-->.
+To build the artifacts and the deployment together in one step from the server, run the deployment script [buildAndDeployArtifacts.sh] (/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options).
 
-   ##### Deployment Scripts Syntax and Options
-   The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under /**usr/local/k2view/fabric/scripts** in the Fabric Server.
+#### Deployment Scripts Syntax and Options
+The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under /**usr/local/k2view/fabric/scripts** in the Fabric Server.
 
    <table style="width: 900px;">
 <tbody>
@@ -89,8 +88,8 @@ There are two ways to perform an Offline Deployment:
    </table>
    
    
-   ##### Deploy Command Syntax and Options
-   The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
+#### Deploy Command Syntax and Options
+The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
    
    <table width="900px">
    <tbody>
