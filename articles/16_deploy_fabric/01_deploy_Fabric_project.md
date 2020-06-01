@@ -66,7 +66,7 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
 ### How Are Deployed Objects Reflected in Cassandra?
 Project deployment is reflected in [**Cassandra**]<!--add link to Fabric Architecture--> as follows:
 - The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References] <!--Future link to DROP 2 item-->and [Web Services] creates new records in the [**k2_lut_info** table]<!--Add a link to 19.7 Cassandra keyspaces--> under the **k2system** keyspace. A separate record is created for each LU and Reference Table and for each deployed Web Service.
-- Each deployed LU creates a new Cassandra **keyspace** named **k2view_<LU Name>**.
+- Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
  
 ### How Do I Get the Deployed Implementation?
