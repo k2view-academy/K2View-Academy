@@ -1,6 +1,6 @@
 # Training Business Requirements
 
-### ![](/Users/meravamircohen/K2View-Academy/academy/00_Training_Level_1/images/businessReq.png)Level 1 Business Requirements
+### ![](/academy/00_Training_Level_1/images/businessReq.png)Level 1 Business Requirements
 
 During this training course, we will evolve within a telco environment that provides the following Databases:
 
