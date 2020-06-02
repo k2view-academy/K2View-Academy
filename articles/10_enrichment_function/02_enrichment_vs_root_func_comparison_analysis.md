@@ -1,6 +1,6 @@
 # Enrichment Function vs. Root Function - Comparison Analysis
 
-Enrichment functions and [Root functions](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md) are both Fabric [Project functions](/articles/07_table_population/08_project_functions.md) that can run complex logic on [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) like invoking Fabric commands <!--Add a link to Fabric commands KI-->, complex data manipulations and SQL statements on different [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). Both Enrichment functions and Root functions run during an [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
+Enrichment functions and [Root functions](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md) are both Fabric [Project functions](/articles/07_table_population/08_project_functions.md) that can run complex logic on [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) like invoking [Fabric commands](/articles/02_fabric_architecture/04_fabric_commands.md) <!--Add a link to Fabric commands KI-->, complex data manipulations and SQL statements on different [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). Both Enrichment functions and Root functions run during an [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
 There are major differences between Root functions and Enrichment functions and it is important to understand them in order to select the correct solution for each scenario. 
 
 The following table displays the comparison analysis between Enrichment and Root functions and provides insight on how and when each function type should be used.
@@ -50,7 +50,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p>Executed after populating all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Tables</a> in the <a hef="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a>.</p>
 </td>
 <td width="370px">
-<p>Upon LU Table population.</p>
+<p>Upon <a href="/articles/07_table_population/01_table_population_overview.md">LU Table population.</a></p>
 </td>
 </tr>
 <tr>
