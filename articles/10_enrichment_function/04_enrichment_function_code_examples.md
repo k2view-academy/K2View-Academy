@@ -1,4 +1,5 @@
 # Enrichment Functions - Code Examples
+<!--Tali- please also add fnEnrichmentOrderParam to the code examples. THis is an adaptation of the TDM solution -->
 
 ### Simple Example of an Enrichment Function that Populates a Computed Field
 
