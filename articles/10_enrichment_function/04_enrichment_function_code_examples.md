@@ -5,7 +5,12 @@
 Use an Enrichment function to validate the retrieved data and update the Computed Field on an LU Schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case.
 
 1. Create an **Enrichment function**.
-
+ <!--Tali- I think that we are missing the point of enrichment function if we scan and update each record. In this case- why not having the calculation in the population? 
+We can build the enrichment function to update all records by one statement: 
+"update CASES set CASE_OPEN_MONTHS=  round((julianday('now') - julianday(CASE_DATE))/365*12)  
+where case_status = 'Open'";
+You can find a similar example in our project- fnEnrichContract fubnction
+-->
    <pre><code>
    String caseStatus = "Closed";
    String sqlCountMonths = 
