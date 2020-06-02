@@ -56,7 +56,7 @@ To perform a number of validations on retrieved data after a sync and to save th
 
    ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
-3. To do this generically, define a **new translation** and then populate the **translation data** using the validation functions described in step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
+3. To do this generically, define a [new translation](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) and then populate the [translation data](/articles/09_translations/03_data_population_in_a_translation.md) using the validation functions described in step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
 
    ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
 
@@ -75,5 +75,7 @@ To perform a number of validations on retrieved data after a sync and to save th
 5. Attach the **Enrichment function** to the **EXEC_VALIDATIONS** table via the **Table Properties** tab. 
 
 [Click to display an example of the **fnCheckValidationsResultsEnrichment** Function in the Demo project.]
+
+<!-- Tali- I would add just once "Click to the full code examples in the Demo project" -->
 
 [![Previous](/articles/images/Previous.png)](h/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
