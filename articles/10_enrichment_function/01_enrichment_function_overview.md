@@ -2,13 +2,13 @@
 
 ### What Is an Enrichment Function? 
 
-An Enrichment function is a [Project function](/articles/07_table_population/08_project_functions.md) without Input/Output parameters that is used to insert, update, or delete an LU Table's data after it has already been populated from a source object. It is defined as a specific category of Fabric [Regular functions](/articles/07_table_population/08_project_functions.md).
+An Enrichment function is a [Project function](/articles/07_table_population/08_project_functions.md) without Input/Output parameters that is used to insert, update, or delete an [LU Table's](/articles/06_LU_tables/01_LU_tables_overview.md) data after it has already been populated from a source object. It is defined as a specific category of Fabric [Regular functions](/articles/07_table_population/08_project_functions.md).
 
 Enrichment function features include:
 
 - Enrichment functions are executed once all [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) in an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) have been populated. The [enrichment order](/articles/03_logical_units/14_edit%20enrichment%20order.md#edit-enrichment-order) is determined at the LU Schema level. An execution is performed only when an [instance is synced](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
 
-- An Enrichment function does not have Input and Output parameters. It can extract data from any LU Table and use it as needed.
+- An Enrichment function does not have Input and Output parameters. It can extract data from any LU Table or other data sources and use it as needed.
 
 - One or more Enrichment function can be attached to an LU Table using the **Enrichment Functions** field in [LU Table’s Properties tab](/articles/06_LU_tables/04_table_properties.md#enrichment-functions). 
 
@@ -18,7 +18,7 @@ Enrichment function features include:
 
   **Example:**
 
-  Customer 123 has five INVOICE record. The Root function that populates the INVOICE LU Table runs five times for Customer 123. The Enrichment function on INVOICE LU Table runs once for Customer 123.
+  Customer 123 has five INVOICE records. The Root function that populates the INVOICE LU Table runs five times for Customer 123. The Enrichment function on INVOICE LU Table runs once for Customer 123.
 
 ### When Should I Use Enrichment Functions?
 
@@ -30,6 +30,7 @@ Enrichment functions are needed when complex logic must be applied on all LU Tab
 
 - Populating an LU Table based on the calculated data from other LU Tables. For example, calculating the total amount of a customer's payments and updating the value in CUSTOMER LU table.
 - Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, the Fabric should notify the customer’s status to another system. 
+- Masking a sensitive dara on the LU tables
 
 
 
