@@ -64,7 +64,7 @@
 <h3><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
-<p>The main table in the Logical Unit. Based on the table&rsquo;s primary key field/s, the instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
+<p>The main table in the Logical Unit. Based on the table&rsquo;s primary key field/s, the Instance ID is derived in addition to the LU and the Schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
 </td>
 </tr>
 <tr>
@@ -96,7 +96,7 @@
 <h3><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md"><strong>Sync<strong></a>
 </td>
 <td width="482">
-<p>A process that updates / modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and also populates its data into Fabric.</p>
+<p>A process that updates / modifies the source data connected within Fabric. The sync process executes and extracts the transformation logic of a given instance on the LU tables and also populates its data into Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -116,12 +116,12 @@
 <h3><a href="/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method<strong></a>
 </td>
 <td width="482">
-<p>Defines how the Sync will be performed (sync policy):</p>
+<p>Defines how the sync will be performed (sync policy):</p>
 <p><b>NONE</b> - Do not sync.</p>
 <p><b>Time Interval</b> - Sync is performed automatically at the predefined time. Format = D.HH:DD:MM. Default = 1 Day.</p>
-<p><b>Inherited</b> - Each LU level inherits the sync rule of its direct parent branch. For example, the LU table population inherits from the LU table and the LU table inherits from the LUT schema.</p>
+<p><b>Inherited</b> - Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT Schema.</p>
 <p><b>Decision function</b> - Sync is performed according to a decision function which returns a True / False Boolean parameter.</p>
-<p>The Sync Method can be set on LU Schema, LU Table, or Table Population levels.</p>
+<p>The sync method can be set on LU Schema, LU Table, or Table Population levels.</p>
 </td>
 </tr>
 <tr>
@@ -282,7 +282,7 @@
 <h3><strong>Deployment<strong>
 </td>
 <td width="482">
-<p>The action of applying the Fabric Studio component into the Fabric server (DB). A newly created Fabric component or an updated one will not be reflected in the Fabric DB until they are deployed to the Fabric Server.</p>
+<p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one will not be reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
 <p>Deployment is needed for each implementation change. For example, LU Schema definition changes, transformation rules changes to Functions, Globals and Translations.</p>
 </td>
 </tr>
