@@ -18,7 +18,7 @@ Enrichment function features include:
 
   **Example:**
 
-  Customer 123 has five Subscriber and each Subscriber has 10 INVOICE records. The Root function that populates the INVOICE LU Table runs five times for Customer 123. The Enrichment function on INVOICE LU Table runs only once per instance, after all populations runs for all tables in the LU schema.
+  Customer 123 has five Subscribers and each Subscriber has 10 INVOICE records. The Root function that populates the INVOICE LU Table runs five times for Customer 123. The Enrichment function on INVOICE LU Table runs only once per instance, after all populations runs for all tables in the LU schema.
 
 ### When Should I Use Enrichment Functions?
 
@@ -30,7 +30,7 @@ Enrichment functions are needed when complex logic must be applied on all LU Tab
 
 - Populating an LU Table based on the calculated data from other LU Tables. For example, calculating the total amount of a customer's payments and updating the value in CUSTOMER LU table.
 - Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, the Fabric should notify the customer’s status to another system. 
-- Masking a sensitive data on the LU tables
+- Masking sensitive data on the LU tables
 
 
 
