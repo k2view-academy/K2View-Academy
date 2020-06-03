@@ -93,5 +93,6 @@ The Properties tab displays a list of properties that must be defined for each L
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-
+<!--Add into the table, once the Enrichment functions are in the master-->
+<!--<a href="/articles/10_enrichment_function/03_create_edit_enrichment_function.md#how-do-i-attach-an-enrichment-function-to-an-lu-table--"><strong>Enrichment Functions</strong></a>--> 
 [![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/03_table_indexes.md)
