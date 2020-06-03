@@ -8,14 +8,14 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 2. [**LU Table Population (ETL)**](/articles/07_table_population/01_table_population_overview.md): 
     * Getting data into the LU tables from a variety of data sources and keeping it up to date.
     * Different types of data manipulation like enrichment, cleansing, masking, transforming, etc. 
-3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU Tables (similar to foreign keys). An LU Schema has one LU Table defined as its Root Table that holds the Digital Entity’s unique key.
+3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU Schema has one LU table defined as its Root Table that holds the Digital Entity’s unique key.
 
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
 * **Digital Entity: Customer**.
 * Data Sources (applications): CRM, Ordering, Billing and Collection.
 * LU Tables: The tables that will hold the data you want to keep about a customer from the four data sources.
-* LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate   etc. data from the four data sources into the LU Tables.
-* LU Schema: The definition of the Root Table and the relationship between all LU Tables.
+* LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate  etc. data from the four data sources into the LU Tables.
+* LU Schema: The definition of the Root Table and the relationship between all LU tables.
 
 ![image](/articles/03_logical_units/images/1.1_LU_Overview.png)
 
@@ -28,7 +28,7 @@ Using our example from above (Customer 360):
 Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one physical database for each customer.
 
 ## Things to Consider Before Designing an LU 
-Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
+Every Fabric Project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
 
 
 ### General Recommendations for Designing an LU 
