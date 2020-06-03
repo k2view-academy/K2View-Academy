@@ -7,7 +7,7 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 
 2. [**LU Table Population (ETL)**](/articles/07_table_population/01_table_population_overview.md): 
     * Get data into LU tables from a variety of data sources and keep it up to date.
-    * Different types of data manipulation like enrichment, cleansing, masking, transforming, etc. 
+    * Different types of data manipulations like enrichment, cleansing, masking, transforming, etc. 
 3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU Schema has one LU table defined as its Root Table that holds the Digital Entity’s unique key.
 
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
