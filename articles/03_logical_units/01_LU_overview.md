@@ -20,7 +20,7 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 ![image](/articles/03_logical_units/images/1.1_LU_Overview.png)
 
 ## What is a Logical Unit Instance (LUI)?
-A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database  holding the data of one single Digital Entity in the LUT structure definition.
+A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database holding the data of one single Digital Entity in the LUT structure definition.
 Using our example from above (Customer 360):
 * Assume that Company ABC has 35 million customers:
    * LU/LUT = Customer.
