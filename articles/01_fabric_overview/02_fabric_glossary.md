@@ -15,7 +15,7 @@
 <h3><strong>Digital Entity<strong>
 </td>
 <td width="482">
-<p>A digital version of a person, place, or a thing which is usually correlated to a business entity.</p>
+<p>A digital version of a person, place or a thing which is usually correlated to a business entity.</p>
 </td>
 </tr>
 <tr>
