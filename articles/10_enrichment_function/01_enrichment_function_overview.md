@@ -18,7 +18,7 @@ Enrichment function features include:
 
   **Example:**
 
-  Customer 123 has five INVOICE records. The Root function that populates the INVOICE LU Table runs five times for Customer 123. The Enrichment function on INVOICE LU Table runs once for Customer 123.
+  Customer 123 has five INVOICE records. The Root function that populates the INVOICE LU Table runs five times for Customer 123. The Enrichment function on INVOICE LU Table runs once for Customer 123, after all populations runs for all tables in the LU schema.
 
 ### When Should I Use Enrichment Functions?
 
