@@ -13,7 +13,7 @@ Acting as a new data layer above existing data sources, Fabric controls data usi
 A Digital Entity is a digital version of a person, place or thing and is usually correlated to a business entity like a customer, order, patient, product or household. Once implemented, Fabric creates a micro data lake  physical database for each Digital Entity instance.
 
 ### Key Fabric Features
-* Modern and distributed architecture that **provides linear scalability and proven fault-tolerance** on commodity hardware and cloud infrastructure.
+* Modern and distributed architecture that **provides linear scalability and proven fault-tolerance** on commodity hardware and cloud infrastructures.
 * Data replication capabilities across nodes and datacenters that **provide customers with the peace of mind of knowing they can survive node failures or regional outages**.
 * Patented Digital Entity based micro-database, a data lake for each Digital Entity instance that **provides unparalleled performance with standard (ANSI) SQL queries**.
 * Patented data security approach, every micro-database is encrypted individually, **providing the peace of mind that massive data breaches are prevented**.
