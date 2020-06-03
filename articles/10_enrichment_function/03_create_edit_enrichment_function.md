@@ -19,7 +19,7 @@ The steps which are unique for Enrichment functions are as follows:
 An Enrichment function must be attached to one or more [LU Tables](articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](articles/03_logical_units/03_LU_schema_window.md) to be executed during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md). 
 
 Do the following:
-1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Columns tab** in the **Table Schema** window.
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
 2. To attach the [Enrichment function in the Table Properties tab](articles/06_LU_tables/04_table_properties.md#enrichment-functions), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**. <!--Add the link from /articles/06_LU_tables/04_table_properties.md#enrichment-functions to here -->
 
@@ -47,7 +47,7 @@ Do the following:
 
 To remove an Enrichment function from the LU Table, do the following:
 
-1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Columns tab** in the **Table Schema** window.
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
 2. In the [Table Properties tab](articles/06_LU_tables/04_table_properties.md#enrichment-functions), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**.
 
