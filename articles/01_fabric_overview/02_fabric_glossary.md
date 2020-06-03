@@ -32,7 +32,7 @@
 <h3><strong>LUI<strong>
 </td>
 <td width="482">
-<p>Logical Unit Instance (LUI), a specific instance of a logical unit. For example, the data for a specific Customer ID.</p>
+<p>The Logical Unit Instance (LUI) is a specific instance of a logical unit. For example, the data for a specific Customer ID.</p>
 </td>
 </tr>
 <tr>
