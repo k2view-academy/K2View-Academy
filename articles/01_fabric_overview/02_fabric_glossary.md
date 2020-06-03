@@ -32,7 +32,7 @@
 <h3><strong>LUI<strong>
 </td>
 <td width="482">
-<p>A Logical Unit Instance (LUI) is a specific instance of a logical unit. For example, the data for a specific Customer ID.</p>
+<p>A Logical Unit Instance (LUI) is a specific instance of a Logical Unit. For example, the data for a specific Customer ID.</p>
 </td>
 </tr>
 <tr>
@@ -40,7 +40,7 @@
 <h3><strong>Instance ID<strong>
 </td>
 <td width="482">
-<p>The Instance ID is the unique digital entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER logical unit type. This ID is set as the logical unit&rsquo;s Root Table PK column.</p>
+<p>The Instance ID is the unique digital entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit&rsquo;s Root Table PK column.</p>
 </td>
 </tr>
 <tr>
@@ -48,7 +48,7 @@
 <h3><strong>Instance Group<strong>
 </td>
 <td width="482">
-<p>A list of Instance IDs (LUIs), used as part of a batch data extraction and transformation into Fabric. Usually constructed by a SQL query.</p>
+<p>A list of Instance IDs (LUIs), used as part of a batch data extraction and transformation into Fabric. Usually constructed by an SQL query.</p>
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@
 <h3><a href="/articles/06_LU_tables/01_LU_tables_overview.md"><strong>LU Table<strong></a>
 </td>
 <td width="482">
-<p>The basic building block of a logical unit which defines a digital entity&rsquo;s data, including columns, PKs, indexes and triggers. A logical unit may have one or many LU tables.</p>
+<p>The basic building block of a Logical Unit which defines a digital entity&rsquo;s data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@
 <h3><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
-<p>The main table in the logical unit. Based on the table&rsquo;s primary key field/s the instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
+<p>The main table in the Logical Unit. Based on the table&rsquo;s primary key field/s the instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
 </td>
 </tr>
 <tr>
