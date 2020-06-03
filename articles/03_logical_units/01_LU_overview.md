@@ -11,7 +11,7 @@ An LU is defined and configured in the Fabric Studio. These definitions are comp
 3. [**LU Schema**](/articles/03_logical_units/03_LU_schema_window.md): The relationship between the LU tables (similar to foreign keys). An LU Schema has one LU table defined as its Root Table that holds the Digital Entity’s unique key.
 
 **Let’s use an example of a Customer 360 implementation for Company ABC:**
-* **Digital Entity: Customer**.
+* Digital Entity: Customer.
 * Data Sources (applications): CRM, Ordering, Billing and Collection.
 * LU Tables: The tables that will hold the data you want to keep about a customer from the four data sources.
 * LU Table Populations: The set of definitions to extract, transform, cleans, aggregate, validate  etc. data from the four data sources into the LU Tables.
