@@ -44,7 +44,7 @@ There are two ways to perform an Offline Deployment:
 To build the artifacts and the deployment together in one step from the server, run the deployment script [buildAndDeployArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options).
 
 #### Deployment Scripts Syntax and Options
-The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under /**$K2_HOME/fabric/scripts** in the Fabric Server.
+The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under **$K2_HOME/fabric/scripts** in the Fabric Server.
 
    <table style="width: 900px;">
 <tbody>
