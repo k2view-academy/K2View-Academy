@@ -48,7 +48,7 @@
 <h3><strong>Instance Group<strong>
 </td>
 <td width="482">
-<p>A list of Instance IDs (LUIs), used as part of a batch data extraction and transformation into Fabric. Usually constructed by an SQL query.</p>
+<p>A list of Instance IDs (LUIs) used as part of a batch data extraction and transformation into Fabric. Usually constructed by an SQL query.</p>
 </td>
 </tr>
 <tr>
