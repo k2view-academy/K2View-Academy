@@ -64,7 +64,7 @@
 <h3><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
-<p>The main table in the Logical Unit. Based on the table&rsquo;s primary key field/s the instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
+<p>The main table in the Logical Unit. Based on the table&rsquo;s primary key field/s, the instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
 </td>
 </tr>
 <tr>
