@@ -49,6 +49,7 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
 - **list ENVIRONMENTS/ENVS** provides a list of environments deployed to the Fabric Server.
 - **list BF/BROADWAY_FLOWS** - list all Broadway flows of all LU Types deployed to the Server.
 - **list INSTANCE_GROUPS/IGS** - lists all instance groups of all LU Types deployed to the Server.
+- **list DB_SOURCES** - list all the DB interfaces.
 
 ###### Syntax:
 <pre><code> 
@@ -61,6 +62,7 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
     list BROADWAY_FLOWS;
     list IGS;
     list INSTANCE_GROUPS;
+    list DB_SOURCES;
 </code></pre>
 
 ### How Are Deployed Objects Reflected in Cassandra?
