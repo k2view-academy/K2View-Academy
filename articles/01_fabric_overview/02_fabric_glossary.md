@@ -274,7 +274,7 @@
 <p>To connect to Swagger:</p>
 <p>Go to the following URL and specify the IP address of your Fabric Server: http://&lt;Fabric Server&gt;:3213/api</p>
 <p>     or</p>
-<p>Set the Web Service invoke path template in your User preferences - Server configuration to static/swaggerUI/dist/index.html#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
+<p>Set the Web Service invoke path template in your User preferences - Server configuration to: static/swaggerUI/dist/index.html#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
 </td>
 </tr>
 <tr>
