@@ -20,6 +20,166 @@ For example:
 
  Fabric commands can be divided into the following groups:
 
+<table>
+<tbody>
+<tr>
+<td width="350pxl">
+<p><strong>Command Group</strong></p>
+</td>
+<td width="550pxl">
+<p><strong>Group Description</strong></p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-and-delete-lu-instance-commands">Get/Delete LU Instance</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Get or Delete an LU instance to or from Fabric.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
+</td>
+<td width="550pxl">
+<p>Fabric <strong>release</strong> command is used to detach the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
+</td>
+<td width="550pxl">
+<p>View on the Fabric configuration and settings</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting">Fabric Setting</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Session and cluster levels settings.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-security-and-credentials">Fabric Security and Credentials</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Set master key for LUI or interface details encryption.</p>
+<p>Set users, roles, and permissions.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-deployment--deploy-and-drop-commands">Fabric Deployment and Drop</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Deploy and drop Fabric implementation commands.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Deploy environments and test connections on the active environment.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Run CQL queries on Cassandra.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#jobs-commands">Jobs</a></p>
+</td>
+<td width="550pxl">
+<p>Fabric jobs execution and monitoring commands.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#batch-process-commands">Batch Process</a></p>
+</td>
+<td width="550pxl">
+<p>Batch processing execution and monitoring commands.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#process-control">Process Control</a></p>
+</td>
+<td width="550pxl">
+<p>Check for running tasks and kill a task if needed.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#execution-monitoring">Execution Monitoring</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Tracing Fabric operations and write the results to trace files.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#common-reference-tables">Common (Reference) Tables</a></p>
+</td>
+<td width="550pxl">
+<p>Commands for Common (reference) tables handling.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-transactions">Fabric Transactions</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Support transactions to update LUI or Common (reference) table data.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#cdc-and-search">CDC and Search</a></p>
+</td>
+<td width="550pxl">
+<p>Support Change Data Capture (CDC) and cross LU instance search functionalities.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="https://github.com/k2view-academy/K2View-Acade/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Run Broadway flow.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl">
+<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
+<p>&nbsp;</p>
+</td>
+<td width="550pxl">
+<p>Use EXPLAIN and EXPLAIN QUERY PLAN to analyze SQL queries on Fabric data.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 ### Get and Delete LU Instance Commands
 
 The GET command is used to bring information for a given [LU instance]() and synchronize information from the data sources if needed.
@@ -223,11 +383,27 @@ List of commands to set Fabric credentials (users, roles, tokens, permissions...
 
 <!--Drop 1- Add a link to Fabric Credentials-->
 
-### Fabric Deployment- Deploy and Drop Commands
+###  Deploy and Drop Commands
 
 Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_offline_deploy.md) and Fabric Environments on the Fabric console.
 
 <!--Drop 2- Add a link to Environments-->
+
+#### Drop LU Command
+
+Drop an LU from Fabric.  This command deletes the LU metadata (LU Schema) and the data of all LU instances. The command also deletes the keyspace of the LU from Cassandra and the LU related entry from k2_lut_info in Cassandra. Once the LU was dropped, LU should be deployed again to Fabric Server.
+
+Click for more information about Cassandra Keyspaces.
+
+Note that this command is used mainly in a **Testing environment** if you want to have a fresh start. In **PRODUCTION,** both **DROP LUTYPE** and [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely in use. A possible scenario is when you need to clean the environment after a soft launch prior to starting an actual production run. The Drop activity will always be followed by an initial load / migrate of the data for the dropped LU. 
+
+##### Drop LU- Syntax
+
+DROP LUTYPE [LU Name];
+
+Example: 
+
+DROP LUTYPE Customer;
 
 ### Fabric Environments and Interfaces
 
@@ -299,7 +475,7 @@ Fabric System of Record (SOR) functionality enables running a single transaction
 
 Fabric provides a set of commands to **begin** transaction, run **select**, **insert**, **update**, **delete** on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common Table data, and **commit** or **rollback** the updates. 
 
-Fabric provides also the ability to write the transaction into delta table by using set async_trx=true.
+Fabric provides also the ability to write the transaction into delta table by using **set async_trx=true**.
 
 Click for more information about Fabric as System of Record.
 
