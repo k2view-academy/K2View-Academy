@@ -16,7 +16,7 @@ ludb().execute(sqlClosed,caseStatus);
    
 2. Add a new column to the CASES table with **Column Type** = **Computed Field** and attach the **Enrichment function** to the CASES table via the **Table Properties** tab. 
 
-[Click to display an example of the **fnMonthsOpenCase** Enrichment Function in the Demo project.]
+[Click to display an example of the **fnMonthsOpenCase** Enrichment function in the Demo project.]
 
 ### Complex Example of Several Validations, Including the Use of an Enrichment Function 
 
@@ -91,6 +91,6 @@ A common scenario  widely used in TDM is to populate the Param table using an En
     ludb().execute(insertSQL, params);
    }
 ~~~
-[Click to display an example of the **fnEnrichmentOrderParam** Enrichment Function in the Demo project.]
+[Click to display an example of the **fnEnrichmentOrderParam** Enrichment function in the Demo project.]
 
 [![Previous](/articles/images/Previous.png)](h/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
