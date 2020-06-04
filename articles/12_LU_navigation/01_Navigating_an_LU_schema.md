@@ -24,7 +24,7 @@ The Navigation pane in the right corner of an [LU schema](/articles/03_logical_u
 
 ![image](/articles/12_LU_navigation/images/10_01_02.jpg)
 
-### What are the LU Wrorking Area View Options?
+### What are the LU Working Area View Options?
  
 LU Tables relationship options:\
 In the LU working area, right click an LU Table object to display a context menu with the following actions:
