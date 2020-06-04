@@ -45,8 +45,7 @@ Run validation functions to validate the LUI data during the [sync process](/art
    ![10_04_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
 ~~~
-	Map <String, Map <String,String>> ChecksTrn = 
-		getTranslationsData("trnValidationFuncList");
+	Map <String, Map <String,String>> ChecksTrn = getTranslationsData("trnValidationFuncList");
 	String Func = null;
 
 	for(java.util.Map.Entry<String, Map <String,String>> trnVals : ChecksTrn.entrySet()){
@@ -58,8 +57,8 @@ Run validation functions to validate the LUI data during the [sync process](/art
 		String FuncName = trnVal.get("FUNCTION_NAME");
 
 		if(FuncName != null && !FuncName.isEmpty() ){
-	    String Result =  Factory.valueOf(FuncName).invoke();			
-	    yield(new Object[]{CheckDesc,Result});
+	    		String Result =  Factory.valueOf(FuncName).invoke();			
+	    		yield(new Object[]{CheckDesc,Result});
 		}
 	}
 ~~~
