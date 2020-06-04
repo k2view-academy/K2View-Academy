@@ -44,25 +44,25 @@ Run validation functions to validate the LUI data during the [sync process](/art
 
    ![10_04_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
-		~~~
-		Map <String, Map <String,String>> ChecksTrn = 
-	    		getTranslationsData("trnValidationFuncList");
-		String Func = null;
-		
-		for(java.util.Map.Entry<String, Map <String,String>> trnVals : ChecksTrn.entrySet()){
-			Map <String,String> trnVal = (Map <String,String>) trnVals.getValue();
-			// Checks that the record is active
-			if(trnVal.get("ACTIVE") != null && rnVal.get("ACTIVE").equalsIgnoreCase("false"))
-				continue;
-			String CheckDesc = trnVal.get("CHECK_DESC");
-			String FuncName = trnVal.get("FUNCTION_NAME");
-		
-			if(FuncName != null && !FuncName.isEmpty() ){
-	            String Result =  Factory.valueOf(FuncName).invoke();			
-	            yield(new Object[]{CheckDesc,Result});
-			}
+~~~
+	Map <String, Map <String,String>> ChecksTrn = 
+		getTranslationsData("trnValidationFuncList");
+	String Func = null;
+
+	for(java.util.Map.Entry<String, Map <String,String>> trnVals : ChecksTrn.entrySet()){
+		Map <String,String> trnVal = (Map <String,String>) trnVals.getValue();
+		// Checks that the record is active
+		if(trnVal.get("ACTIVE") != null && rnVal.get("ACTIVE").equalsIgnoreCase("false"))
+			continue;
+		String CheckDesc = trnVal.get("CHECK_DESC");
+		String FuncName = trnVal.get("FUNCTION_NAME");
+
+		if(FuncName != null && !FuncName.isEmpty() ){
+	    String Result =  Factory.valueOf(FuncName).invoke();			
+	    yield(new Object[]{CheckDesc,Result});
 		}
-		~~~
+	}
+~~~
 
 4. Create an **Enrichment function**. For example, an **fnCheckValidationsResults** Enrichment function that will go over the results in the table and update a specific indicator in the CUSTOMER table.
 
