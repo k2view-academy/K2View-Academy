@@ -72,7 +72,7 @@ A common scenario  widely used in TDM is to populate the Param table using an En
 
 2. Create an Enrichment function that will retrieve and loop over the translation's data, and for each entry - calculate the parameter and populate it into the target table ORDERS_PARAMS.
 
-   <pre><code>
+~~~
    Map<String,Map<String,String>> data = getTranslationsData("trnOrdersParams");
    StringBuilder stringInsertFabricLuParam = 
    new StringBuilder().append("INSERT OR REPLACE INFO ORDERS_PARAMS (IID, ");
@@ -91,9 +91,6 @@ A common scenario  widely used in TDM is to populate the Param table using an En
     ludb().execute(insertSQL, params);
    }
 
-   
-
-
-   </code></pre>
+~~~
 
 [![Previous](/articles/images/Previous.png)](h/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
