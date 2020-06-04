@@ -2,7 +2,7 @@
 
 ### What Is an Enrichment Function? 
 
-An Enrichment function is a [Project function](/articles/07_table_population/08_project_functions.md) without Input/Output parameters that is used to insert, update, or delete an [LU Table's](/articles/06_LU_tables/01_LU_tables_overview.md) data after it has already been populated from a source object. It is defined as a specific category of Fabric [Regular functions](/articles/07_table_population/08_project_functions.md).
+An Enrichment function is a [Project function](/articles/07_table_population/08_project_functions.md) without Input/Output parameters that is used to insert, update, or delete an [LU Table's](/articles/06_LU_tables/01_LU_tables_overview.md) data after it has already been populated from a source object. It is defined as a specific category of Fabric [Regular functions](/articles/07_table_population/08_project_functions.md#regular-function).
 
 Enrichment function features include:
 
