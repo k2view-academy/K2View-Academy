@@ -80,9 +80,15 @@ A common scenario  widely used in TDM is to populate the Param table using an En
    ...
    if(data.size() > 0){
    	...
-   	stringInsertFabricLuParam.append(prefix + luParamColName);
+    // Get the SQL query for each parameter
+	   String sql = valMap.get("SQL");
+    ...
+   	//Run the SQL statement on the LU
+	   Db.Rows rows = ludb().fetch(sql);
    	...
-   	ludb().execute(insertSQL, params);
+   	// Insert a new record to ORDERS_PARAM
+    String insertSQL = stringInsertFabricLuParam.append(sqlInsertBind).toString();
+    ludb().execute(insertSQL, params);
    }
 
    
