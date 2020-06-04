@@ -40,7 +40,7 @@
 <h3><strong>Instance ID<strong>
 </td>
 <td width="482">
-<p>The Instance ID is the unique digital entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit&rsquo;s Root table's PK column.</p>
+<p>The Instance ID is the unique Digital Entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit&rsquo;s Root table's PK column.</p>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@
 <h3><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
-<p>The main table in the Logical Unit. Based on the table&rsquo;s primary key field/s, the Instance ID is derived in addition to the LU and the Schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
+<p>The main table in the Logical Unit. Based on the table&rsquo;s Primary Key field/s, the Instance ID is derived in addition to the LU and the Schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
 </td>
 </tr>
 <tr>
@@ -88,7 +88,7 @@
 <h3><strong>MDB<strong>
 </td>
 <td width="482">
-<p>Micro-database, a data lake used for the storage of each digital entity instance. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU Schema.</p>
+<p>Micro-database, a data lake used for the storage of each Digital Entity instance. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU Schema.</p>
 </td>
 </tr>
 <tr>
@@ -96,7 +96,7 @@
 <h3><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md"><strong>Sync<strong></a>
 </td>
 <td width="482">
-<p>A process that updates / modifies the source data connected within Fabric. The sync process executes and extracts the transformation logic of a given instance on the LU tables and also populates its data into Fabric.</p>
+<p>A process that updates / modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and also populates its data into Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@
 <h3><strong>WS<strong>
 </td>
 <td width="482">
-<p>Web Service, a Java function that can be exposed through Fabric&rsquo;s Web Service Layer.</p>
+<p>Web Service, a Java function that can be exposed through Fabric&rsquo;s Web Service layer.</p>
 </td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@
 <h3><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
 </td>
 <td width="482">
-<p>Defines the order of the Enrichment Functions &nbsp;execution. The order is set in the Logical Unit Schema&rsquo;s properties.</p>
+<p>Defines the order of the Enrichment functions &nbsp;execution. The order is set in the Logical Unit Schema&rsquo;s properties.</p>
 </td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@
 <h3><a href="/articles/07_table_population/11_lookup_tables.md"><strong>Lookup<strong></a>
 </td>
 <td width="482">
-<p>A Lookup is an object that is added to a table population to get information from a source DB, LU table or reference table.</p>
+<p>A Lookup is an object that is added to a Table Population to get information from a source DB, LU table or reference table.</p>
 </td>
 </tr>
 <tr>
@@ -270,7 +270,7 @@
 <h3><strong>Swagger<strong>
 </td>
 <td width="482">
-<p>Fabric Studio supports invocation and testing of Web Services using Swagger. Swagger (Open Source under Apache License 2.0) is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful Web Services.</p>
+<p>Fabric Studio supports invocation and testing of Web Services using Swagger (Open Source under Apache License 2.0), a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful Web Services.</p>
 <p>To connect to Swagger:</p>
 <p>Go to the following URL and specify the IP address of your Fabric Server: http://&lt;Fabric Server&gt;:3213/api</p>
 <p>     Or,</p>
