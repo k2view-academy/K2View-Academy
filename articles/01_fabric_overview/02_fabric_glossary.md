@@ -279,7 +279,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><strong>Deployment<strong>
+<h3><strong><a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">Deployment</a><strong>
 </td>
 <td width="482">
 <p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one will not be reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
