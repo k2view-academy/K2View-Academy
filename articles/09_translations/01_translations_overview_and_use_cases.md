@@ -124,7 +124,7 @@ The following options define system behavior when a matching Translation is not 
 ### Translation Schema
 The structure of a Translation is defined in the Translation Schema tab and is comprised of Input and Output fields: 
 *	There can be one or more than one Input field. 
-*	A Translation’s Primary Key is a combination of all Translation Input fields. The Primary Key defines which Translation entries are used to apply the data transformation rules and therefore it must be unique.   
+*	A Translation’s Primary Key is a combination of all Translation Input fields. The Primary Key defines which Translation entries are used to apply the data transformation rules and therefore must be unique.   
 *	An Output value does not need to be unique and can be repeated. 
 A Translation Schema has the following structure: 
 <table width="614">
