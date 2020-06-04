@@ -26,7 +26,7 @@ Deployment can be performed either:
 - [**Offline Deploy**](/articles/16_deploy_fabric/03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric Server – one **ludb.jar** for each deployment. 
-A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the folder CRM is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
+A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
 
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric Server. For example, when an Interface is updated, all Logical Units using this Interface should be re-deployed to make this change effective.
 
