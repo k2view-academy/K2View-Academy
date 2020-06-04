@@ -13,7 +13,7 @@ ludb().execute(sqlNotClosed,caseStatus);
 String sqlClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = 0 WHERE STATUS = ?";
 ludb().execute(sqlClosed,caseStatus);
 </code></pre>
-   
+
 2. Add a new column to the CASES table with **Column Type** = **Computed Field** and attach the **Enrichment function** to the CASES table via the **Table Properties** tab. 
 
 [Click to display an example of the **fnMonthsOpenCase** Enrichment function in the Demo project.]
@@ -38,13 +38,32 @@ Run validation functions to validate the LUI data during the [sync process](/art
 
 2. Define a new [translation](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) object populate it by the list of validation functions, created by step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
 
-   ![10_03_create_enrichment_2](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
+   ![10_04_create_enrichment_2](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
 
 3. Create a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) populated by a [Root function](/articles/07_table_population/08_project_functions.md#root-function) that executes the validations and populates the results in the table. For example, the **EXEC_VALIDATIONS** table is populated by the **fnExecuteValidations** Root function in the **popExecValidations** population.
 
-   ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
+   ![10_04_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
-<!-- Tali- please add the example code of the root function to show how it gets and executes the list of validation functions-->
+		~~~
+		Map <String, Map <String,String>> ChecksTrn = 
+	    		getTranslationsData("trnValidationFuncList");
+		String Func = null;
+		
+		for(java.util.Map.Entry<String, Map <String,String>> trnVals : ChecksTrn.entrySet()){
+			Map <String,String> trnVal = (Map <String,String>) trnVals.getValue();
+			// Checks that the record is active
+			if(trnVal.get("ACTIVE") != null && rnVal.get("ACTIVE").equalsIgnoreCase("false"))
+				continue;
+			String CheckDesc = trnVal.get("CHECK_DESC");
+			String FuncName = trnVal.get("FUNCTION_NAME");
+		
+			if(FuncName != null && !FuncName.isEmpty() ){
+	            String Result =  Factory.valueOf(FuncName).invoke();			
+	            yield(new Object[]{CheckDesc,Result});
+			}
+		}
+		~~~
+
 4. Create an **Enrichment function**. For example, an **fnCheckValidationsResults** Enrichment function that will go over the results in the table and update a specific indicator in the CUSTOMER table.
 
    <pre><code>
@@ -69,11 +88,17 @@ A common scenario  widely used in Test Data Management (TDM) projects is adding 
 
 1. Create a new translation **trnOrdersParams** that will define a list of parameters and an SQL query for calculating each parameters.
 
-   ![10_03_create_enrichment_3](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_3.PNG)
+   ![10_04_create_enrichment_3](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_3.PNG)
    
-   <!-- Tali- please add the step of the definition of the paramerers table and using a dummy root function for this table-->
+2. Create a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) **ORDERS_PARAMS** populated by a dummy [Root function](/articles/07_table_population/08_project_functions.md#root-function) **fnRootORdersParams** - the actual population of the table will be done by the enrichment function.
 
-2. Create an Enrichment function **fnEnrichmentOrderParam** that will retrieve and loop over the translation's data, and for each entry - calculate the parameter and populate it into the target [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) ORDERS_PARAMS.
+   ![10_04_create_enrichment_4](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_4.PNG)
+
+   <pre><code>
+   if (1 == 2) yield(new Object[]{null});
+   </code></pre>
+
+3. Create an Enrichment function **fnEnrichmentOrderParam** that will retrieve and loop over the translation's data, and for each entry - calculate the parameter and populate it into the target [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) ORDERS_PARAMS.
 
 ~~~
    Map<String,Map<String,String>> data = getTranslationsData("trnOrdersParams");
