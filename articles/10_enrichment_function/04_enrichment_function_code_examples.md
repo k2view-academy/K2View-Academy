@@ -1,35 +1,19 @@
 # Enrichment Functions - Code Examples
-<!--Tali- please also add fnEnrichmentOrderParam to the code examples. THis is an adaptation of the TDM solution -->
-
 ### Simple Example of an Enrichment Function that Populates a Computed Field
 
-Use an Enrichment function to validate the retrieved data and update the Computed Field on an LU Schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case.
+Use an Enrichment function to validate the retrieved data and update the Computed Field on an LU Schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
 
 1. Create an **Enrichment function**.
- <!--Tali- I think that we are missing the point of enrichment function if we scan and update each record. In this case- why not having the calculation in the population? 
-We can build the enrichment function to update all records by one statement: 
-"update CASES set CASE_OPEN_MONTHS=  round((julianday('now') - julianday(CASE_DATE))/365*12)  
-where case_status = 'Open'";
-You can find a similar example in our project- fnEnrichContract fubnction
--->
-   <pre><code>
-   String caseStatus = "Closed";
-   String sqlCountMonths = 
-   "SELECT round((julianday('now') - julianday(CASE_DATE))/365*12) as CASE_OPEN_MONTHS, CASE_ID, STATUS from CASES";
-   String sqlUpdate = "UPDATE CASES SET CASE_OPEN_MONTHS = ? WHERE CASE_ID = ?";
-   ludb().fetch(sqlCountMonths).each(row->{
-   	Integer caseID = Integer.parseInt(row.cell(1).toString());	
-   	if (row.cell(2).toString().equals(caseStatus)){
-   		ludb().execute(sqlUpdate, "0", caseID);
-   	}
-   	else {
-   		double d = Double.parseDouble(row.cell(0).toString());
-   		int noOfMonths = (int) d;
-   		ludb().execute(sqlUpdate, noOfMonths, caseID);	
-   	}
-   });
+ <pre><code>
+String caseStatus = "Closed";
+String sqlNotClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = "+
+"(SELECT round((julianday('now') - julianday(C2.CASE_DATE))/365*12) from CASES C2 "+
+" WHERE C2.CASE_ID = CASES.CASE_ID AND C2.STATUS != ?)";
+ludb().execute(sqlNotClosed,caseStatus);
+   String sqlClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = 0 WHERE STATUS = ?";
+   ludb().execute(sqlClosed,caseStatus);
    </code></pre>
-
+   
 2. Add a new column to the CASES table with **Column Type** = **Computed Field** and attach the **Enrichment function** to the CASES table via the **Table Properties** tab. 
 
 [Click to display an example of the **fnMonthsOpenCase** Enrichment Function in the Demo project.]
@@ -58,9 +42,9 @@ To perform a number of validations on retrieved data after a sync and to save th
 
 3. To do this generically, define a [new translation](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) and then populate the [translation data](/articles/09_translations/03_data_population_in_a_translation.md) using the validation functions described in step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
 
-   ![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
+   ![10_03_create_enrichment_2](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
 
-4. Create an **Enrichment function**. For example, an **fnCheckValidationsResults** Enrichment function that will go over the results in the table and update a specific indicator in the **CUSTOMER** table.
+4. Create an **Enrichment function**. For example, an **fnCheckValidationsResults** Enrichment function that will go over the results in the table and update a specific indicator in the CUSTOMER table.
 
    <pre><code>
    String sqlSelect = "SELECT count(*) FROM EXEC_VALIDATIONS WHERE RESULT !='OK'";
@@ -74,8 +58,36 @@ To perform a number of validations on retrieved data after a sync and to save th
 
 5. Attach the **Enrichment function** to the **EXEC_VALIDATIONS** table via the **Table Properties** tab. 
 
-[Click to display an example of the **fnCheckValidationsResultsEnrichment** Function in the Demo project.]
+[Click to display full code example of all the above functions in the Demo project.]
 
-<!-- Tali- I would add just once "Click to the full code examples in the Demo project" -->
+
+
+### Example of an Enrichment Function that Populates the Param Table
+
+A common scenario  widely used in TDM is to populate the Param table using an Enrichment function. A Param table is the table which aggregates a number of parameters which are used in the LU for the business logic and validations. For example, in Orders LU you need to gather various Orders parameters, such as number of MSISDNS, number of open orders, etc. The definition which parameters should be gathered can be defined in the Translation. The gathering will be done by the Enrichment function.
+
+1. Create a new translation **trnOrdersParams** that will define a list of parameters and an SQL query for calculating each parameters.
+
+   ![10_03_create_enrichment_3](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_3.PNG)
+
+2. Create an Enrichment function that will retrieve and loop over the translation's data, and for each entry - calculate the parameter and populate it into the target table ORDERS_PARAMS.
+
+   <pre><code>
+   Map<String,Map<String,String>> data = getTranslationsData("trnOrdersParams");
+   StringBuilder stringInsertFabricLuParam = 
+   new StringBuilder().append("INSERT OR REPLACE INFO ORDERS_PARAMS (IID, ");
+   String prefix = "";
+   ...
+   if(data.size() > 0){
+   	...
+   	stringInsertFabricLuParam.append(prefix + luParamColName);
+   	...
+   	ludb().execute(insertSQL, params);
+   }
+
+   
+
+
+   </code></pre>
 
 [![Previous](/articles/images/Previous.png)](h/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
