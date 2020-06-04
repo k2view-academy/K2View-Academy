@@ -239,7 +239,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 </tr>
 </tbody>
 </table>
-<p>_</p>
+
 
 Click for more information about Fabric Architecture overview.
 
