@@ -29,8 +29,8 @@ Translations can be used in the [Table Population](/articles/07_table_population
 4.	Click **Translations** and then click the **Translation** in the list.
 5.	Drag the **Translation** into the working area.
 6.	Connect the Translation’s **Input** and the **Output** fields.
-       * Translation **Input** fields can be either connected to the **Source Object**, other Fabric objects or attached to the **map** like functions or Lookups.
-       * Translation **Output** fields can be connected either to the **Target Object,** other Fabric objects or attached to the **map** like functions or Lookups. 
+       * Translation **Input** fields can be either connected to the **Source Object**, other Fabric objects or attached to the **map** like functions or lookups.
+       * Translation **Output** fields can be connected either to the **Target Object,** other Fabric objects or attached to the **map** like functions or lookups. 
 
 
 ## How do I use a Translation in a Java File in Fabric?
