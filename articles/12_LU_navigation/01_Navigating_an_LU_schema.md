@@ -5,7 +5,7 @@ When creating or editing a [Logical Unit Schema](/articles/03_logical_units/03_L
 * [Navigation pane](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) located in the right corner of the working area.
 * LU working area, where view options can be set.
 
-[Click for more information about the Diagram Outline and Toolbars](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
+[Click for more information about the Diagram Outline and Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
 ### How do I use the Diagram Outline?
  
