@@ -20,7 +20,7 @@ To search for an LU table in an [LU Schema](/articles/03_logical_units/03_LU_sch
 
 ### What is the Navigation Pane? 
  
-The Navigation pane in the right corner of an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
+The Navigation pane in the right corner of an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a Schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
 
 ![image](/articles/12_LU_navigation/images/10_01_02.jpg)
 
