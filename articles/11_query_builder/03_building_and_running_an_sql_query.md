@@ -1,11 +1,11 @@
 # Using the Query Builder Window - Building and Running an SQL Query
 
 1.	Go to [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md) > **DB Connection** > [**DB Interface**](/articles/05_DB_interfaces/01_interfaces_overview.md). The [List of DB objects](/articles/11_query_builder/03_building_and_running_an_sql_query.md#query-tab---viewing-the-list-of-db-objects) (Tables, Views and Synonyms) of the DB connection is displayed in the DB Tree. 
-2.	Create and edit the **SQL Query**. You can either create the **SQL Query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
+2.	Create and edit the **SQL query**. You can either create the **SQL query** manually or edit an SQL query using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md). 
 3.	To execute the SQL statement, click **Execute Query**.
 4.	Open the [**Results tab**](/articles/11_query_builder/02_query_builder_window.md#result-tab) to view the **SQL results**.
 
-Note that the Insert, Update and Delete statements performed by the DB Query, might cause an auto-commit to the DB (based on the DB driver’s definition). 
+Note that the Insert, Update and Delete statements performed by the DB query, might cause an auto-commit to the DB (based on the DB driver’s definition). 
 
 ## Query Tab - Viewing the List of DB Objects
 * Click the **+** or **–** icons to expand or collapse the list in the DB objects.
@@ -26,7 +26,7 @@ The selected DB objects are added to the Main window and their SQL statement is 
 
 ### 2. Removing a DB object from the Main Window
 Either click the **DB object** and press **Delete** on your keyboard or right click the **DB object** > **Remove**. 
-Note that the removal of a DB object automatically updates the SQL Query in the **Query Builder** window.
+Note that the removal of a DB object automatically updates the SQL query in the **Query Builder** window.
 
 ### 3. Selecting the Columns in a DB Object 
 To select columns from a DB object, do either:
@@ -35,7 +35,7 @@ To select columns from a DB object, do either:
 
 ![image](/articles/11_query_builder/images/12_3_2%20Table%20Name.png)
 
-* Right click the **DB object** > **Check All** to check all the columns in the table and add them to the SQL Query.
+* Right click the **DB object** > **Check All** to check all the columns in the table and add them to the SQL query.
 
 ![image](/articles/11_query_builder/images/12_3_3%20SQL%20Query..png)
 
@@ -68,10 +68,10 @@ To add a JOIN to the SQL query, do the following:
 
 ![image](/articles/11_query_builder/images/06_01.PNG)
 
-Each SQL statement that is combined by the UNION operator has a **Q** icon in the **Main Window**. Clicking the **Q** icon of each SQL statement opens its Main Window where you can add DB objects and link them to each other to edit the SQL statement in the Union query. 
+Each SQL statement that is combined by the UNION operator has a **Q** icon in the **Main Window**. Clicking the **Q** icon of each SQL statement opens its Main window where you can add DB objects and link them to each other to edit the SQL statement in the Union query. 
 
 2.	To modify the **Union query** do either:
-* Right click **Link** - ![image](/articles/11_query_builder/images/12_3_8%20icon%20link.png) -  between the queries to edit the Union type.
+* Right click **Link** - ![image](/articles/11_query_builder/images/12_3_8%20icon%20link.png) - between the queries to edit the Union type.
 
 ![image](/articles/11_query_builder/images/Union_type.png)
 
@@ -89,7 +89,7 @@ This table is displayed on the bottom right of the main window and enables editi
 
 ![image](/articles/11_query_builder/images/select_case.png)
 
-2.	Select the **Function** and the **DB object** column to add to the **SQL Query**.
+2.	Select the **Function** and the **DB object** column to add to the **SQL query**.
 
 ![image](/articles/11_query_builder/images/06_03.png)
 
