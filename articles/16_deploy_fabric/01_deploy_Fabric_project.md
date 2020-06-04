@@ -44,7 +44,7 @@ This command displays the currently **deployed project name**, as well as the va
 
 ### How are Deployed Objects Reflected in the Fabric Server?
 You can check which objects are deployed in the Fabric Server using the Fabric **list** command.
-- **list LU_TYPES/LUT** provides a list of Logical Unit types deployed to the Fabric Server.
+- **list LU_TYPES/LUT** provides a list of Logical Unit Types deployed to the Fabric Server.
 - **list WS** provides a list of all Web Service methods deployed to the Fabric Server. 
 - **list ENVIRONMENTS/ENVS** provides a list of environments deployed to the Fabric Server.
 - **list BF/BROADWAY_FLOWS** - list all Broadway flows of all LU Types deployed to the Server.
