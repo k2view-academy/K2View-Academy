@@ -102,7 +102,7 @@ The following table describes the syntax and the mandatory/optional parameters w
    <p><strong>Usage</strong>: DEPLOY &lt;LUT&gt; WITH JAR &lt;'jar_path'&gt; ZIP_FILE &lt;'zip path'&gt; [WS_METHODS &lt;'string'&gt;] NOSYNC &lt;Boolean&gt;.</p>
    <p><strong>Options</strong>:</p>
    <ul>
-   <li>LUT - Logical Unit type name.</li>
+   <li>LUT - Logical Unit Type name.</li>
    <li>JAR - mandatory parameter. Path to JAR file, relative to USER_DIR.</li>
    <li>ZIP_FILE - optional parameter. Path to ZIP file, relative to USER_DIR.</li>
    <li>NOSYNC - gets Boolean value:
