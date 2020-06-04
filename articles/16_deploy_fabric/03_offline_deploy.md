@@ -28,7 +28,7 @@ There are two ways to perform an Offline Deployment:
 
    c. Copy the **ludb.JAR** and **ludbXMLs.ZIP** files to the server.
 
-2. To build the artifacts **from the Fabric Server**, run the deployment script [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options).
+2. To build the artifacts **from the Fabric Server**, run the  [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
 
 3. To do the deployment, run the **Deploy** command using the following syntax <!--add link to sub-section here-->:
 
