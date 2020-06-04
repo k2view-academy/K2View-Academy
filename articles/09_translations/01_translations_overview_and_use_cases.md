@@ -168,7 +168,7 @@ A Translation Schema has the following structure:
 <li>Project function. Fabric provides a list of all functions available in the project. The value must be selected from the dropdown list.</li>
 <li>LUDB function, applicable for Translations on LU levels only. Fabric provides a list of LUDB functions available in the LU. The value must be selected from the dropdown list.</li>
 <li>LUDB table, applicable for Translations on LU levels only. Fabric provides a list of LU tables available in the LU. The value must be selected from the dropdown list.</li>
-<li>DB interface. Fabric provides a list of Interfaces existing in the project. The value must be selected from the dropdown list.</li>
+<li>DB interface. Fabric provides a list of theInterfaces in the project. The value must be selected from the dropdown list.</li>
 <li>SQL. Fabric enables testing the SQL query by opening a Query Builder from the Translation Schema window.</li>
 <li>LU Name, applicable for Translations on a Shared Objects level only. Fabric provides a list of all LU available in the project. The value must be selected from the dropdown list.</li>
 </ul>
