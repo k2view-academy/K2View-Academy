@@ -1,12 +1,12 @@
 # LU Table Properties
 
-The Table Properties tab is displayed in the right pane of Table window.
+The Table Properties tab is displayed in the right pane of the Table window.
 
 
 ![image](/articles/06_LU_tables/images/06_04_table_properties.png)
 
 
-The Properties tab displays a list of properties that must be defined for each LU Table, as follows:
+The Properties tab displays a list of properties that must be defined for each LU table, as follows:
 
 <table width="623">
 <tbody>
