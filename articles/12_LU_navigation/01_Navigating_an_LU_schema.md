@@ -20,7 +20,7 @@ To search for an LU table in an [LU Schema](/articles/03_logical_units/03_LU_sch
 
 ### What is the Navigation Pane? 
  
-The Navigation pane in the right corner of an [LU schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
+The Navigation pane in the right corner of an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
 
 ![image](/articles/12_LU_navigation/images/10_01_02.jpg)
 
@@ -82,7 +82,7 @@ In the LU working area, right click an LU table object to display a context menu
 <p><strong>clear output links</strong></p>
 </td>
 <td width="312">
-<p>Clears all <a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">output links</a> from this LU Table to its children Table Populations.</p>
+<p>Clears all <a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">output links</a> from this LU table to its children Table Populations.</p>
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ In the LU working area, right click an LU table object to display a context menu
 <p><strong>clear all links</strong></p>
 </td>
 <td width="312">
-<p>Clears all <a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">input and output</a> links in the LU Tables.</p>
+<p>Clears all <a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">input and output</a> links in the LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@ In the LU working area right click anywhere to display a context menu with the f
 <p><strong>Collapse All Views</strong></p>
 </td>
 <td width="700pxl">
-<p>Collapses the LU Tables columns.</p>
+<p>Collapses the LU table columns.</p>
 </td>
 </tr>
 <tr>
@@ -144,7 +144,7 @@ In the LU working area right click anywhere to display a context menu with the f
 <p><strong>Expand All Views</strong></p>
 </td>
 <td width="397">
-<p>Expands the LU Tables display.</p>
+<p>Expands the LU tables display.</p>
 </td>
 </tr>
 <tr>
