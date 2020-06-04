@@ -77,7 +77,7 @@
 </tr>
 <tr>
 <td width="123">
-<h3><strong>Source Object<strong>
+<h3><a href="/articles/07_table_population/02_source_object_types.md"><strong>Source Object<strong></a>
 </td>
 <td width="482">
 <p>A population rule, either a query or function, used as a source input to the LU table.</p>
