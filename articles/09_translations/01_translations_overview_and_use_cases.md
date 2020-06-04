@@ -165,12 +165,12 @@ A Translation Schema has the following structure:
 <li>Text.</li>
 <li>Blob (applicable only for a DB that supports Blob).</li>
 <li>Auto increment. Creates an automatic sequence starting from 1 and incremented by 1. The value cannot be updated by the user.</li>
-<li>Project Function. Fabric provides a list of all functions available in the project. The value must be selected from the dropdown list.</li>
-<li>LUDB Function, applicable for Translations on LU levels only. Fabric provides a list of LUDB functions available in the LU. The value must be selected from the dropdown list.</li>
-<li>LUDB Table, applicable for Translations on LU levels only. Fabric provides a list of LU Tables available in the LU. The value must be selected from the dropdown list.</li>
+<li>Project function. Fabric provides a list of all functions available in the project. The value must be selected from the dropdown list.</li>
+<li>LUDB function, applicable for Translations on LU levels only. Fabric provides a list of LUDB functions available in the LU. The value must be selected from the dropdown list.</li>
+<li>LUDB table, applicable for Translations on LU levels only. Fabric provides a list of LU tables available in the LU. The value must be selected from the dropdown list.</li>
 <li>DB Interface. Fabric provides a list of Interfaces existing in the project. The value must be selected from the dropdown list.</li>
 <li>SQL. Fabric enables testing the SQL query by opening a Query Builder from the Translation Schema window.</li>
-<li>LU Name, applicable for Translations on a Shared Objects level only. Fabric provides a list of all LU available in the Project. The value must be selected from the dropdown list.</li>
+<li>LU Name, applicable for Translations on a Shared Objects level only. Fabric provides a list of all LU available in the project. The value must be selected from the dropdown list.</li>
 </ul>
 </td>
 </tr>
@@ -187,7 +187,7 @@ A Translation Schema has the following structure:
 <p><strong>Match</strong></p>
 </td>
 <td width="472">
-<p>Optional: A regular expression that indicates a restricted format for each value and is applied for manual Translation population only. Ignored for Blob and Auto increment types.</p>
+<p>Optional: A Regular expression that indicates a restricted format for each value and is applied for manual Translation population only. Ignored for Blob and Auto increment types.</p>
 </td>
 </tr>
 <tr>
