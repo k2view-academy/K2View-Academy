@@ -40,7 +40,7 @@
 <h3><strong>Instance ID<strong>
 </td>
 <td width="482">
-<p>The Instance ID is the unique digital entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit&rsquo;s Root Table PK column.</p>
+<p>The Instance ID is the unique digital entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit&rsquo;s Root table's PK column.</p>
 </td>
 </tr>
 <tr>
