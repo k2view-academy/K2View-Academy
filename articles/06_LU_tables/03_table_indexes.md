@@ -5,8 +5,8 @@ An index can be created for an LU table in order to improve performance when que
 
 ### When should I Create an Index?
 When querying LU tables, indexes should be considered for fields used in WHERE clauses.
-Indexes should always be built in the same order as that of the conditions in the WHERE clause of the query. This also applies when using actions like Group By or Distinct which must be applied on   indexed fields as displayed in Example 1.
-When an LU Table is invoked as a Lookup table , create an index for the lookup input links which are used in the WHERE statement.
+Indexes should always be built in the same order as that of the conditions in the WHERE clause of the query. This also applies when using actions like Group By or Distinct which must be applied on indexed fields as displayed in Example 1.
+When an LU table is invoked as a Lookup table, create an index for the lookup input links which are used in the WHERE statement.
 It is recommended to create an index on the fields of a [parent LU Table](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) which are used as a key to a child table within the LU Schema as displayed in Example 2.
 
 **Example 1**
@@ -29,7 +29,7 @@ It is therefore recommended to create two indexes for the ORDERS table:
 ![image](/articles/06_LU_tables/images/06_03_table_indexes1.png)
 
 ### Index Definition 
-LU Table indexes are defined in the **Indexes Tab** in the Table window where they can also be added, modified or removed from a table. The following Index settings can be defined:  
+LU table indexes are defined in the **Indexes Tab** in the **Table window** where they can also be added, modified or removed from a table. The following Index settings can be defined:  
 
 <table>
 <tbody>
@@ -62,7 +62,7 @@ LU Table indexes are defined in the **Indexes Tab** in the Table window where th
 <p><strong>Columns</strong></p>
 </td>
 <td width="464">
-<p>(Read only). List of LU Table columns that define the current index. &nbsp;</p>
+<p>(Read only). List of LU table columns that define the current index. &nbsp;</p>
 </td>
 </tr>
 </tbody>
@@ -75,11 +75,11 @@ LU Table indexes are defined in the **Indexes Tab** in the Table window where th
 4.	Check / uncheck **PK** and **Unique** to complete the index definition.
 5.	**Save** the table. 
 
-### How Do I Delete an Index?  
+### How do I Delete an Index?  
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double click [**Table Name**] to open the table’s settings. 
-2.	In the **Indexes** Tab, click **Delete** to delete the index.
+2.	In the **Indexes** tab, click **Delete** to delete the index.
 
-### How Do I Get a List of Indexes? 
+### How do I get a List of Indexes? 
 The **DESCRIBE** command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
 To get the list of indexes for a specified table, use one of the following commands.
 
@@ -89,8 +89,8 @@ To get the list of indexes for a specified table, use one of the following comma
 DESCRIBE INDEX; Get all system indexes.
 DESCRIBE INDEX LU Name.Table Name Get the indexes of a specific table within the LU name.;
 DESCRIBE INDEX customer; Get all indexes of the schema of LU Customer.
-DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the schema Customer.
-DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address
+DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table within the Customer Schema.
+DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address.
 </code></pre>
 
 Click for more information about The DESCRIBE Command.
