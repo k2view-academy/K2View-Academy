@@ -216,7 +216,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>entity</p>
 </td>
 <td width="350pxl">
-<p>Stores the list of all <a href= "/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instances and their micro database.</a></p>
+    <p>Stores the list of all <a href= "/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instances</a> and their micro databases.</p>
 </td>
 </tr>
 <tr>
