@@ -14,7 +14,7 @@ When a Fabric project is developed by a group of programmers it is important tha
 There are two ways to perform an Offline Deployment:
 - Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the deployment script [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options). Then do the deployment by running the **Deploy** command on the server.
 
-- Build and deploy in one step. Build and deploy from the server using the deployment script [**buildAndDeployArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options). It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
+- Build and deploy in one step. Build and deploy from the server using the  [**buildAndDeployArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
 
 #### Build and Deploy in Two Steps
 
