@@ -5,7 +5,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 ### Project Function Types
 
-**Regular Function**
+##### **Regular Function**
 *	A function that executes the business logic required within a project and can be invoked from any Fabric object like a [Table Population](/articles/07_table_population/01_table_population_overview.md), [Parser], [Web Service] or from another function. 
 *	A Regular function has a specific category known as an [Enrichment function] which is executed once all LU Tables have been populated to extract data from any LU Table and use it as needed. An Enrichment function must not have Input parameters and must not return any value.
 
