@@ -7,12 +7,12 @@ Use an Enrichment function to validate the retrieved data and update the Compute
  <pre><code>
 String caseStatus = "Closed";
 String sqlNotClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = "+
-"(SELECT round((julianday('now') - julianday(C2.CASE_DATE))/365*12) from CASES C2 "+
-" WHERE C2.CASE_ID = CASES.CASE_ID AND C2.STATUS != ?)";
+  "(SELECT round((julianday('now') - julianday(C2.CASE_DATE))/365*12) from CASES C2 "+
+  " WHERE C2.CASE_ID = CASES.CASE_ID AND C2.STATUS != ?)";
 ludb().execute(sqlNotClosed,caseStatus);
-   String sqlClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = 0 WHERE STATUS = ?";
-   ludb().execute(sqlClosed,caseStatus);
-   </code></pre>
+String sqlClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = 0 WHERE STATUS = ?";
+ludb().execute(sqlClosed,caseStatus);
+</code></pre>
    
 2. Add a new column to the CASES table with **Column Type** = **Computed Field** and attach the **Enrichment function** to the CASES table via the **Table Properties** tab. 
 
