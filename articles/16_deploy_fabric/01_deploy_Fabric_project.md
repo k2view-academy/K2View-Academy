@@ -7,7 +7,7 @@ The implementation of a Fabric project can be divided into two steps:
 
 A deployment includes the definition of Fabric objects like the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md), [Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Project functions](/articles/07_table_population/08_project_functions.md), [Web Services], [Broadway flows], [Graphit] and [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) and is required whenever these objects are created or modified. 
 
-The deployment is needed for any change operated in any of these objects, excluding the migration of source data into the Fabric Server. 
+Deployment is needed for any change operated in any of these objects, excluding the migration of source data into the Fabric Server. 
 The deployment of a Fabric project is performed on the following levels:
 - **Deployment of Logical Units**, each LU should be deployed separately. 
   - When needed, a deployment can be performed on a specific LU if only that LU has been modified.
