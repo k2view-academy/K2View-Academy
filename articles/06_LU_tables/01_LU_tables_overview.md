@@ -1,7 +1,7 @@
 # LU Tables Overview
 
 LU tables are the basic building blocks for creating [Logical Units](/articles/03_logical_units/01_LU_overview.md) and their [Schemas](/articles/03_logical_units/03_LU_schema_window.md). 
-Their purpose is to hold data retrieved from various sources after it has been transformed according to a project’s requirements. An LU table can also act as the Master of Data so that they hold the data generated in Fabric and not synced from source systems.
+Their purpose is to hold data retrieved from various sources after it has been transformed according to a project’s requirements. An LU table can also act as the Master of Data so that they hold the data generated in Fabric and are not synced from source systems.
 
 [Click for more information about How to Add an LU Table to an LU Schema](/articles/03_logical_units/09_add_table_to_a_schema.md). 
 
