@@ -7,7 +7,7 @@ A Translation is a Fabric Studio object that transforms data from one set of val
 There are several options for populating data in a Translation in the Fabric Studio: 
 *	Manual population via the Translation window. 
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
-*	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each synch process.
+*	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
 
 Click for more information about Data Population in Translations.  
 
