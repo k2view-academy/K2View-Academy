@@ -1,6 +1,6 @@
 # Offline Deploy
 
-New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server, and is also known as an Offline Deploy. 
+New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server and is also known as an Offline Deploy. 
 
 An **Offline Deploy** is implemented by running the **Deploy** command on the Fabric Server using artifacts that can be created either by the Fabric Studio or by the script on the server side.
 
