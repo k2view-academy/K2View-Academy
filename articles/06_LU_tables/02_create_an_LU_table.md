@@ -66,7 +66,7 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 <li>Text</li>
 <li>Blob</li>
 </ul>
-<p>Note that if the Oracle field type is <strong>Number</strong>, Fabric sets the <strong>Data Type</strong> of this field to <strong>Real</strong> in the <strong>LU table</strong> and the number in Fabric has a decimal point. Therefore, if a column in the <strong>LU table</strong> does not need a decimal point (for example, for the CUSTOMER ID), change the <strong>Data Type</strong> of the <strong>LU table</strong> column to <strong>Integer</strong> or <strong>Text</strong>.</p>
+<p>Note that if the Oracle field type is <strong>Number</strong>, Fabric sets the <strong>Data Type</strong> of this field to <strong>Real</strong> in the <strong>LU table</strong> and the number in Fabric has a decimal point. Therefore, if a column in the <strong>LU table</strong> does not need a decimal point (for example, for the CUSTOMER ID), change the <strong>Data Type</strong> of the <strong>LU Table</strong> column to <strong>Integer</strong> or <strong>Text</strong>.</p>
 </td>
 </tr>
 <tr>
