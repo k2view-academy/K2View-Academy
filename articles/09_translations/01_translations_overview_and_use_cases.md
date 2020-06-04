@@ -2,18 +2,18 @@
 
 ### What Is a Translation?
 A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level or both. 
-*	Translations defined on a Shared Objects level can be used in all objects in a Project. 
+*	Translations defined on a Shared Objects level can be used in all objects in a project. 
 *	When a Translation is used for a [Web Service] it must be defined on a Shared Objects level.
 There are several options for populating data in a Translation in the Fabric Studio. 
 *	Manual population via the Translation window. 
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
-*	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
+*	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each synch process.
 
 Click for more information about Data Population in Translations.  
 
 
-### How Can I Use a Translation in Fabric?
-A Translation can be used when a [Table Population](/articles/07_table_population/01_table_population_overview.md)  or [Project function](/articles/07_table_population/08_project_functions.md) needs to apply transformation rules.
+### How can I Use a Translation in Fabric?
+A Translation can be used when a [Table Population](/articles/07_table_population/01_table_population_overview.md) or [Project function](/articles/07_table_population/08_project_functions.md) needs to apply transformation rules.
 For example:
 *	When there are several source systems, each having a list of valid values for the Customer Type attribute. The Translation defines one unified set of valid values for the target (Fabric) and transformation rules from the Input value (source) to the Output value (target).
 *	When there are several DB interfaces, the Translation can map between the system name and its [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) name to be used in the code. 
