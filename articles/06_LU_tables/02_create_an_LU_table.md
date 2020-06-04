@@ -11,7 +11,7 @@ From the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md):
 From the Project Tree: 
 *	Via the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
 *	Creating a new table [**manually**](/articles/06_LU_tables/02_create_an_LU_table.md#how-do-i-create-a-new-lu-table-manually). In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a Table Population.
-*	Copying an existing LU Table from one LU to another. In this option if there is a Table Population it is also copied. 
+*	Copying an existing LU table from one LU to another. In this option if there is a Table Population it is also copied. 
 *	Creating a set of tables based on an **XSD file**.
 *	Using the **Save As** option. Note that this option does not copy the Table Population.
 
