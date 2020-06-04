@@ -78,7 +78,7 @@ The Properties tab displays a list of properties that must be defined for each L
 <td width="474">
 <p>Functions which are executed after all LU tables are populated.</p>
 <ul>
-<li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
+<li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no Enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
 <li>When one or more Enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
 </ul>
 <p>To select an Enrichment function, click the three dots next to the Enrichment functions option and select the function name. Only functions without input and output parameters are displayed.</p>
