@@ -12,7 +12,6 @@
   - Fabric benefits and use cases
 - Fabric Architecture
   - Components overview
-  - (Break)
   - Cassandra main keyspaces
   - Other 3rd Party tools & External dependencies
   - Install work environment (Fabric)
