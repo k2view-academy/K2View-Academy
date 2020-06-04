@@ -41,7 +41,7 @@ There are two ways to perform an Offline Deployment:
    DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
 
 #### Build and Deploy in One Step
-To build the artifacts and the deployment together in one step from the server, run the deployment script [buildAndDeployArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options).
+To build the artifacts and the deployment together in one step from the server, run the  [buildAndDeployArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
 
 #### Deployment Scripts Syntax and Options
 The following table describes the syntax and the mandatory/optional parameters for calling the deployment scripts. The scripts are located under **$K2_HOME/fabric/scripts** in the Fabric Server.
