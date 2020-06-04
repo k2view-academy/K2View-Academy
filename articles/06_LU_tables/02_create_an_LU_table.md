@@ -22,7 +22,7 @@ From the Project Tree:
 2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):\
    a.	Complete the settings of each table column like the **Name** or **Data Type**.\
    b.	Optional: Define the table [**Indexes**](/articles/06_LU_tables/03_table_indexes.md).\
-   c.	Optional: Define the **CDC** and the table’s **Search** indexes .
+   c.	Optional: Define the **CDC** and the table’s **Search** indexes.
 3.	Define the [**Table Properties**](/articles/06_LU_tables/04_table_properties.md). 
 4.	**Save** the table.
 
