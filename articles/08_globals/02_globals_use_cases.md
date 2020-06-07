@@ -50,7 +50,7 @@ Click the grey arrow on the left of the window to display the panel and the list
 
 ### How Do I Override a Global Value?
 Globals can be overridden via the Fabric Server using Fabric commands **without re-deploying an LU**.
-* Only globals that are not defined as Final can be overridden. 
+* Only Globals that are not defined as Final can be overridden. 
 * Globals defined as Final on a Shared Objects level but are not defined as Final under the same name on an LU level, can be overridden in the context of this LU only.
 
 [Click for more information about Global's override using SET and SET_GLOBAL commands](/articles/08_globals/03_set_globals.md). 
