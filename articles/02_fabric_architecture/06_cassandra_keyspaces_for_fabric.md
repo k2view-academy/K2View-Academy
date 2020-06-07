@@ -198,6 +198,16 @@ Below the the list of Cassandra keyspaces, created Fabric:
 </td>
 </tr>
 <tr>
+<td width="150pxl">
+<p>k2staging</p>
+</td>
+<td width="350pxl">
+<p>Staging tables for IIDFinder mechanism:&nbsp;</p>
+<p><span data-contrast="auto">A different set of caching, delta and orphans&rsquo; tables is created for each LU that is synchronized by the IIDFinder (proactive sync) mechanism. </span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
 <td rowspan="3" width="150pxl">
 <p>K2view_&lt;LU Name&gt;</p>
 </td>
@@ -229,10 +239,10 @@ Below the the list of Cassandra keyspaces, created Fabric:
 </tr>
 </tbody>
 </table>
-<p>_</p>
+
 
 Click for more information about Fabric Architecture overview.
 
 <!-- Add links- drop 1- WS, Fabric architecture, Fabric credentials-->
 
-<!-- Add links- next drops- Jobs, Batch processes, audit, LU storage, security hardening-->
+<!-- Add links- next drops- Jobs, Batch processes, audit, LU storage, security hardening, IIDFinder-->
