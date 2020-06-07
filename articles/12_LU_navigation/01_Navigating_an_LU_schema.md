@@ -7,7 +7,7 @@ When creating or editing a [Logical Unit Schema](/articles/03_logical_units/03_L
 
 [Click for more information about the Diagram Outline and Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
-### How do I use the Diagram Outline?
+### How Do I Use the Diagram Outline?
  
 The Diagram Outline displays an overview of the LU structure and can be used to search for a subset of tables included in the Schema. 
 
