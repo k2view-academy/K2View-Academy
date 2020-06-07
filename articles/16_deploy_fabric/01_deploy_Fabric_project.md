@@ -1,4 +1,4 @@
-# Deploying A Fabric Project
+# Deploying a Fabric Project
 
 ### What is Fabric Deployment?
 The implementation of a Fabric project can be divided into two steps:
