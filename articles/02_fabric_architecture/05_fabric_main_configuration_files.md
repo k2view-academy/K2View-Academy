@@ -18,7 +18,7 @@ Fabric configuration files are located under the following directory:  $K2_HOME/
 </tr>
 <tr>
 <td width="300">
-<p>config.ini</p>
+<p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini">config.ini</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="600">
@@ -35,7 +35,7 @@ Fabric configuration files are located under the following directory:  $K2_HOME/
 </tr>
 <tr>
 <td width="300">
-<p>node.id</p>
+<p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini">node.id</a></p>
 </td>
 <td width="600">
 <p>This file lists the Fabric node identifiers for the Affinity mechanism and the support of several Fabric clusters on one Cassandra cluster.</p>
