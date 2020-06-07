@@ -27,7 +27,7 @@ The following scenarios describe how globals can be used in Fabric objects.
 
 
 ### How Do I Use a Global in a Java File in Fabric?
-To enable using the globals in Java code, the following import statements are generated automatically by the Fabric infrastructure for every new Java file created in Fabric like a function or Web Service: 
+To enable using the Globals in Java code, the following import statements are generated automatically by the Fabric infrastructure for every new Java file created in Fabric like a function or Web Service: 
 
 <pre><code>
 // import of shared Globals
