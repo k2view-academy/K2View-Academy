@@ -1,4 +1,4 @@
-# Deploy From Fabric Studio
+# Deploy from Fabric Studio
 
 New or already existing Fabric project implementations must be deployed to the server side so that all recent code changes are compiled and are ready to be used.
 A deployment can be performed either from the Fabric Studio or from the Fabric Server, and is also known as an [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
@@ -7,7 +7,7 @@ Before starting the Deployment process on a project, check that the target Fabri
 
 Note that to **force the sync** of the LU Instances after deployment, check [Force Upgrade Post Deploy]((/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) ) in the **Server Configuration** window.
 
-### How do I Deploy a Fabric Object from the Fabric Studio?  
+### How Do I Deploy a Fabric Object from the Fabric Studio?  
 
 The following steps should be performed in the Fabric Studio for each deployed object, Logical Unit, Web Services, [Broadway flow] <!--future link to Broadway DROP 3-->, Graphit <!--future link to Graphit DROP 2 -->and Reference tables.
 
