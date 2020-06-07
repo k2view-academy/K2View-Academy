@@ -12,7 +12,7 @@ The following scenarios describe how globals can be used in Fabric objects.
 3.	Click the **Objects tab** in the right panel of the Table Population working area.
 4.	Click **Globals** and then click the **global** in the **Globals list**.
 5.	Drag the **global** into the working area.
-6.	Connect the **global** to the **table column*.
+6.	Connect the **global** to the **table column**.
 
 [Click for more information about Globals – Code Examples](/articles/08_globals/04_globals_code_examples.md).
 
@@ -22,7 +22,7 @@ The following scenarios describe how globals can be used in Fabric objects.
 3.	Click the **Objects tab**in the right panel of the Parser Map working area.
 4.	Click **Globals** and select the **global** in the **Globals list**.
 5.	Drag the global into the working area.
-6.	Connect the **global** to the **table column*.
+6.	Connect the **global** to the **table column**.
 
 
 
