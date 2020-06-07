@@ -79,7 +79,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window** wher
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double click [**Table Name**] to open the table’s settings. 
 2.	In the **Indexes** tab, click **Delete** to delete the index.
 
-### How Do I get a List of Indexes? 
+### How Do I Get a List of Indexes? 
 The **DESCRIBE** command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
 To get the list of indexes for a specified table, use one of the following commands.
 
