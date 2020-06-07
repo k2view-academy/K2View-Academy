@@ -6,7 +6,7 @@ A Translation is a Fabric Studio object that transforms data from one set of val
 * Translations defined on a Shared Objects level can be used in all objects included in a project. 
 * When a Translation is used for a Web Service it must be defined on a Shared Objects level.
 
-## How can I Create a New Translation in Fabric?
+## How Can I Create a New Translation in Fabric?
 1.	Go to **Project Tree** > **Logical Units** > **[LU Name]**, right click **Translations** > **New Translation** to display the [Translation Schema tab](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema).
   
 2.	Define the **Translation Schema**: 
