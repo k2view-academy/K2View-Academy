@@ -116,6 +116,19 @@
 <ul>
   
 <li><a href="/articles/09_translations/01_translations_overview_and_use_cases.md">Translations Overview</a></li>
+<li><a href="/articles/09_translations/02_creating_a_new_translation_in_fabric.md">Creating a New Translation in Fabric</a></li>
+<li><a href="/articles/09_translations/03_data_population_in_a_translation.md">Data Population in Translation</a></li>
+<li><a href="/articles/09_translations/04_using_translations_in_fabric.md">Using Translations in Fabric</a></li>
+<li><a href="/articles/09_translations/05_translations_code_examples.md">Translations Code Examples</a></li>
+</details>
+
+<details>
+<summary markdown="span"><strong>Enrichment Functions<strong></summary>
+<ul>
+<li><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Function Overview</a></li>
+<li><a href="/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md">Enrichment vs. Root Function - Comparison Analysis</a></li>
+<li><a href="/articles/10_enrichment_function/03_create_edit_enrichment_function.md">Create / Edit an Enrichment Function</a></li>
+<li><a href="/articles/10_enrichment_function/04_code_examples_enrichment_function.md">Code Examples of Enrichment Function</a></li>
 </ul>
 </details>
 
