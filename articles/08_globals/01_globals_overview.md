@@ -18,10 +18,8 @@ If the same Global is defined at both Shared Objects and Logical Unit levels, th
 
 ### How Do I Create or Edit a Global?
 1. Do either:\
-    a. Go to **Project Tree** > **Logical Units > [LU name] > Java** and then click **Globals.java** to open 
-    **Globals** window. \
-    b. Go to **Project Tree** > **Shared Objects > Java** and then click **SharedGlobals.java** to open 
-    **Globals** window. 
+    a. Go to **Project Tree** > **Logical Units > [LU name] > Java** and then click **Globals.java** to open the **Globals** window. \
+    b. Go to **Project Tree** > **Shared Objects > Java** and then click **SharedGlobals.java** to open the **Globals** window. 
 ![image](/articles/08_globals/images/08_01_01%20Globals%20window.png)
 
 2. Populate the settings as follows:\
