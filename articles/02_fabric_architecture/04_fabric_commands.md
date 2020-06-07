@@ -290,6 +290,24 @@ Below is the list of GET and DELETE commands:
 <p>delete CRM.5, Customer.30;</p>
 </td>
 </tr>
+<tr>
+<td width="100pxl">
+<p><h5>DELETE INSTANCES IF NOT EXIST</p>
+</td>
+<td width="250pxl">
+<p>Delete all LUIs that do not exist in source system. To run this command, you must set the config.ini file as follows:</p>
+<ul>
+<li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
+<li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
+</ul>
+</td>
+<td width="300pxl">
+<p>delete instances if not exist &lt;LUT_Name&gt;;</p>
+</td>
+<td width="250pxl">
+<p>delete instances if not exist CRM;</p> 
+</td>
+</tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
