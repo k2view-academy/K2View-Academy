@@ -6,7 +6,7 @@
 
 Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
 
-After the Global is saved, its definition is kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
+After the Global is saved, its definitions are kept in the Globals.java file under the same LU and its initial value = Y. This variable can be used by all functions under this LU.
 
 <pre><code>
 if (CUSTOMER_CHECKS_ENABLED.equals("Y")) {
