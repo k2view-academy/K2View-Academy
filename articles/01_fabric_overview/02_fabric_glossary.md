@@ -64,7 +64,7 @@
 <h3><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
-<p>The main table in the Logical Unit. Based on the table&rsquo;s Primary Key field/s, the Instance ID is derived in addition to the LU and the Schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
+<p>The main table in the Logical Unit. Based on the table&rsquo;s Primary Key field/s, the Instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
 </td>
 </tr>
 <tr>
@@ -119,8 +119,8 @@
 <p>Defines how the sync will be performed (sync policy):</p>
 <p><b>NONE</b> - Do not sync.</p>
 <p><b>Time Interval</b> - Sync is performed automatically at the predefined time. Format = D.HH:DD:MM. Default = 1 Day.</p>
-<p><b>Inherited</b> - Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT Schema.</p>
-<p><b>Decision function</b> - Sync is performed according to a decision function which returns a True / False Boolean parameter.</p>
+<p><b>Inherited</b> - Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT schema.</p>
+<p><b>Decision function</b> - Sync is performed according to a Decision function which returns a True / False Boolean parameter.</p>
 <p>The sync method can be set on LU Schema, LU Table, or Table Population levels.</p>
 </td>
 </tr>
@@ -137,7 +137,7 @@
 <h3><strong>Common (Reference)<strong>
 </td>
 <td width="482">
-<p>A Fabric allocated area for tables defined as Reference (metadata). These tables can be used by all LUI or within a specific LU instances. For example; the postal code of a customer&rsquo;s address.</p>
+<p>A Fabric allocated area for tables defined as Reference (metadata). These tables can be used by all LUI or within a specific LU's instances. For example; the postal code of a customer&rsquo;s address.</p>
 </td>
 </tr>
 <tr>
@@ -162,7 +162,7 @@
 <h3><strong>CQL<strong>
 </td>
 <td width="482">
-<p>Cassandra Query Language. CQL is used by Fabric&rsquo;s Cassandra DB to query internal key spaces and tables.</p>
+<p>Cassandra Query Language. CSQL is used by Fabric&rsquo;s Cassandra DB to query internal key spaces and tables.</p>
 </td>
 </tr>
 <tr>
@@ -178,7 +178,7 @@
 <h3><strong>Distributed DB<strong>
 </td>
 <td width="482">
-<p>A&nbsp;distributed database is&nbsp;a&nbsp;database&nbsp;that consists of two or more files located in different sites either on the same network or on entirely&nbsp; different networks. Sections of the&nbsp;database are&nbsp;stored in multiple physical locations whereby processing&nbsp;is distributed&nbsp;among multiple&nbsp;database&nbsp;nodes. This make them easy to expand and resilient. Fabric reduces greatly their processing complexity associated to their architecture &nbsp;</p>
+<p>A&nbsp;distributed database is&nbsp;a&nbsp;database&nbsp;that consists of two or more files located in different sites either on the same network or on entirely&nbsp; different networks. Sections of the&nbsp;database are&nbsp;stored in multiple physical locations whereby processing&nbsp;is distributed&nbsp;among multiple&nbsp;database&nbsp;nodes. This make them easy to expand and resilient. Fabric greatly reduces the processing complexity associated with their architecture &nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@
 <h3><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
 </td>
 <td width="482">
-<p>Defines the order of the Enrichment functions &nbsp;execution. The order is set in the Logical Unit Schema&rsquo;s properties.</p>
+<p>Defines the order of the Enrichment functions &nbsp;execution. The order is set in the Logical Unit schema&rsquo;s properties.</p>
 </td>
 </tr>
 <tr>
@@ -213,7 +213,7 @@
 <p>An Interface is a data communication channel between Fabric and any external systems.</p>
 <p>When multiple data sources are used by a Logical Unit, additional interfaces can be defined.</p> 
 <p>The interface types are:</p>
-<p><b>DB Interface</b> - enables the connections of the Fabric server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
+<p><b>DB Interface</b> - enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
 <p><b>Non-DB Interface</b> - used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
 </td>
 </tr>
@@ -254,7 +254,7 @@
 <h3><a href="/articles/07_table_population/13_LU_table_population_execution_order.md"><strong>Execution Order<strong></a>
 </td>
 <td width="482">
-<p>The order that LU tables are populated in an LU Schema is defined by Fabric when the LU Schema is created. The LU Schema root table is always populated first and by default, its population order is set to 1 since it is the first one to be executed.</p>
+<p>The order that LU tables are populated in an LU schema is defined by Fabric when the LU schema is created. The LU schema's Root Table is always populated first and by default, its population order is set to 1 since it is the first one to be executed.</p>
 </td>
 </tr>
 <tr>
@@ -262,7 +262,7 @@
   <h3><strong><a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a><strong>
 </td>
 <td width="482">
-<p>The Query Builder is an embedded visual query building component in Fabric Studio that allows you to build complex SQL queries using a predefined Fabric interface. Basic knowledge of SQL concepts is required to use the Query Builder.</p>
+<p>The Query Builder is an embedded visual query building component in Fabric Studio that allows you to build complex SQL queries using a predefined Fabric interface. A basic knowledge of SQL and its concepts is required to use the Query Builder.</p>
 </td>
 </tr>
 <tr>
@@ -283,7 +283,7 @@
 </td>
 <td width="482">
 <p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one will not be reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
-<p>Deployment is needed for each implementation change. For example, LU Schema definition changes, transformation rules changes to Functions, Globals and Translations.</p>
+<p>Deployment is needed for each implementation change. For example, LU schema definition changes, transformation rules changes to Functions, Globals and Translations.</p>
 </td>
 </tr>
 </tbody>
