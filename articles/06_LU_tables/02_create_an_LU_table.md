@@ -26,7 +26,7 @@ From the Project Tree:
 3.	Define the [**Table Properties**](/articles/06_LU_tables/04_table_properties.md). 
 4.	**Save** the table.
 
-### How do I Edit an LU Table? 
+### How Do I Edit an LU Table? 
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Columns tab** in the **Table Schema** window.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.
