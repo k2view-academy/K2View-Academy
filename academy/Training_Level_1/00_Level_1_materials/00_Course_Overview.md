@@ -20,7 +20,7 @@ Once this is done, you will be shown how to expose this data through a set of cu
 
 ### Course Syllabus
 
-The level 1 training syllabus can be consulted [here](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/https://github.com/k2view-academy/K2View-Academy/blob/master/articles/00_Level_1_materials/01_training_level_1_syllabus.md).
+The level 1 training syllabus can be consulted [here](/articles/00_Level_1_materials/01_training_level_1_syllabus.md).
 
 
 
