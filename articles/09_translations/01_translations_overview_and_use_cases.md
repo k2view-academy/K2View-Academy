@@ -12,7 +12,7 @@ There are several options for populating data in a Translation in the Fabric Stu
 Click for more information about Data Population in Translations.  
 
 
-### How can I Use a Translation in Fabric?
+### How Can I Use a Translation in Fabric?
 A Translation can be used when a [Table Population](/articles/07_table_population/01_table_population_overview.md) or [Project function](/articles/07_table_population/08_project_functions.md) needs to apply transformation rules.
 For example:
 *	When there are several source systems, each having a list of valid values for the Customer Type attribute. The Translation defines one unified set of valid values for the target (Fabric) and transformation rules from the Input value (source) to the Output value (target).
