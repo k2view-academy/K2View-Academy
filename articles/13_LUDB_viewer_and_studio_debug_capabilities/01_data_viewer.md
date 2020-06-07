@@ -54,7 +54,7 @@ When clicked, loads and displays an external Data Viewer file.
 To complete this field, do either:
 * Enter a specific Instance ID value.
 * Select a previously stored Instance ID from the dropdown list.
-* Write a function to generate the Instance ID. Note that this function must return a string as an output
+* Write a function to generate the Instance ID. Note that this function must return a string as an output.
 
 
 For example:
@@ -84,10 +84,10 @@ The Instance Tree area (top left) displays a tree of available data files in the
 ### Instance DB Tree
 
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
-* **k2_lu_object_info**, contains statistics per table, population and enrichment function.
+* **k2_lu_object_info**, contains statistics per table, population and Enrichment function.
 * **k2_main_info**, contains the LU’s basic information like LU Name or Instance ID.
 * **k2_object_stats**, contains object timing statistics. 
-* **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU Schema properties.
+* **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
 
 To display the values of a table in the tree, right click the table and select either:
 * **Show Data**, to display the table or view it in the Results pane.
@@ -135,7 +135,7 @@ Click for more information about References.
 
 
 ### Scripting Area
-An SQL scripting area where you can write and run SQL statements on the selected Logical Unit DB (Upper right pane).
+An SQL scripting area where you can write and run SQL statements on the selected LUDB (Upper right pane).
 
 ![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_09%20SCRIPTING%20AREA.jpg)
 
