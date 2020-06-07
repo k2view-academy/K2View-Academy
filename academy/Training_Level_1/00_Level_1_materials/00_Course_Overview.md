@@ -28,13 +28,13 @@ The level 1 training syllabus can be consulted [here](https://github.com/k2view-
 
 To fully understand this course, you should be familiar with the following principles, development languages and tools:
 
-·    Relational databases, such as MySQL and SQLite.
+* Relational databases, such as MySQL and SQLite.
 
-·    Non-relational databases, such as Cassandra. 
+* Non-relational databases, such as Cassandra. 
 
-·    Java, SQL and CQL.
+* Java, SQL and CQL.
 
-·    Git or other version control tools.
+* Git or other version control tools.
 
  
 
