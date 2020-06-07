@@ -5,7 +5,7 @@ Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
-### How do I View Data in a Logical Unit?
+### How Do I View Data in a Logical Unit?
 
 ![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_01%20LOGICAL%20UNIT.jpg)
 
@@ -27,7 +27,7 @@ Fabric retrieves data via the interfaces defined for the LU from the source DB a
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
-### What are the Data Viewer Components?
+### What Are the Data Viewer Components?
 
 The Logical Unit DB Viewer contains the following areas:
 * Instance ID.
@@ -196,7 +196,7 @@ The following options are supported:
 </tbody>
 </table>
 
-### How do I Run an SQL Statement in the Data Viewer? 
+### How Do I Run an SQL Statement in the Data Viewer? 
 
 Run and execute the SQL statement from the scripting area on the selected DB file:
 1. Enter the **SQL statement** using **SQLite syntax** into the Scripting area. 
@@ -206,7 +206,7 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
     b. Press **F5** or **Ctrl + Enter**. Separate multiple queries with ‘;’.
 4. View results in the **Results pane**.
 
-### How do I Export a Logical Unit Data File?
+### How Do I Export a Logical Unit Data File?
 1. Go to the **Instance DB** Tree and right click the **DB File**. 
 2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file. 
 3. **Save** your changes. 
