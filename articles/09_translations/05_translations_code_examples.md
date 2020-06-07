@@ -1,6 +1,6 @@
 # Translations - Code Examples
 
-## Example of Using a Translation in a Fabric Function 
+## Example of using a Translation in a Fabric Function 
 
 1.	Create a **Translation**.
 
@@ -20,7 +20,7 @@ if (fabricErrorID != null) {
 Click **fnErrorCheck.java** to open an example of a Fabric Java function that retrieves the Translation’s Output values based on the Input value using the **getTranslationValues** built-in function.  
        
        
-## Example of Using a Translation in a Population
+## Example of using a Translation in a Population
 
 1.	Create a **Translation**.
 
@@ -32,7 +32,7 @@ Click **fnErrorCheck.java** to open an example of a Fabric Java function that re
 
 This example displays how to apply the Data Transformation Rule in a Table Population. The Translation **trnOrderType** defines a list of Input/Output combinations. When the target table is populated, Fabric populates the **ORDER_TYPE**  in the target table’s ORDERS column using the trnOrderType Translation and a value in the **query_public_orders.order_type** source field.
 
-## Example of Using a Translation with Type = SQL
+## Example of using a Translation with Type = SQL
 
 1.	Create a **Translation** where an **Output** column’s **Type = SQL**.
 
