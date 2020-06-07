@@ -1,6 +1,6 @@
 # Data Population in a Translation
 
-## How can I Populate Translation Data?
+## How Can I Populate Translation Data?
  
 There are several options for populating data in a Translation in the Fabric Studio: 
 * Manual population via the Translation window. 
@@ -10,7 +10,7 @@ There are several options for populating data in a Translation in the Fabric Stu
 Import options are enabled via the Import screen.
 
 
-## How can I Import Translation Data from a File?
+## How Can I Import Translation Data from a File?
  
 **After defining the Translation Schema do the following:** 
 
@@ -51,7 +51,7 @@ Import the data from the CSV file as follows:
 * Manual corrections may be required in the Grid columns mapping.
 
 
-## How can I Import Translation Data from a Database Table?
+## How Can I Import Translation Data from a Database Table?
  
 **After defining the Translation Schema, do the following:** 
 
