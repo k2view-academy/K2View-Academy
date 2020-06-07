@@ -21,7 +21,7 @@ The following scenarios describe how globals can be used in Fabric objects.
 2.	Click **Parsers** > [**Parser Map**] to open the existing parser map.
 3.	Click the **Objects tab**in the right panel of the Parser Map working area.
 4.	Click **Globals** and select the **global** in the **Globals list**.
-5.	Drag the global into the working area.
+5.	Drag the **global** into the working area.
 6.	Connect the **global** to the **table column**.
 
 
