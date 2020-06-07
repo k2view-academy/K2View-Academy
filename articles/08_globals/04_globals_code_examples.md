@@ -80,7 +80,7 @@ fabric().execute("set RECEIVED_ERROR="+ anotherValue);
 }
 </code></pre>
 
-The WS **wsGetCustomerDetails** calls the **fnErrorCheck** function and then checks the value of this variable set by the **fnErrorCheck** function:
+The **wsGetCustomerDetails** Web Service calls the **fnErrorCheck** function and then checks the value of this variable set by the **fnErrorCheck** function:
 
 <pre><code>
 Object val;
