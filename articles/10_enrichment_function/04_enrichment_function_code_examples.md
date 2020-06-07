@@ -36,11 +36,11 @@ Run validation functions to validate LUI data during the [Sync process](/article
    	return  "OK";
    </code></pre>
 
-2. Define a new **[translation](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) object** and populate it using the list of validation functions, created in Step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
+2. Define a new [translation object](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) and populate it using the list of validation functions, created in Step 1. Check the relevant translation entries as **Active** so that you can include their validations as needed. For example, a **trnValidationFuncList** translation.
 
    ![10_04_create_enrichment_2](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_2.PNG)
 
-3. Create a new **[LU table](/articles/06_LU_tables/02_create_an_LU_table.md)** populated by a **[Root function](/articles/07_table_population/08_project_functions.md#root-function)** that executes the validations and populates the results in the table. For example, the **EXEC_VALIDATIONS** table is populated by the **fnExecuteValidations** Root function in the **popExecValidations** population.
+3. Create a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) populated by a [Root function](/articles/07_table_population/08_project_functions.md#root-function) that executes the validations and populates the results in the table. For example, the **EXEC_VALIDATIONS** table is populated by the **fnExecuteValidations** Root function in the **popExecValidations** population.
 
    ![10_04_create_enrichment_1](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_1.PNG)
 
@@ -89,7 +89,7 @@ A common scenario in Test Data Management (TDM) projects is to add a Parameters 
 
    ![10_04_create_enrichment_3](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_3.PNG)
    
-2. Create a new **[LU table](/articles/06_LU_tables/02_create_an_LU_table.md)** named **ORDERS_PARAMS** which is populated by a dummy **fnRootORdersParams** [Root function](/articles/07_table_population/08_project_functions.md#root-function), the actual population of the table is done by the enrichment function.
+2. Create a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) named **ORDERS_PARAMS** which is populated by a dummy **fnRootORdersParams** [Root function](/articles/07_table_population/08_project_functions.md#root-function), the actual population of the table is done by the enrichment function.
 
    ![10_04_create_enrichment_4](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_4.PNG)
 
