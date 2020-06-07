@@ -56,7 +56,7 @@
 <h3><a href="/articles/06_LU_tables/01_LU_tables_overview.md"><strong>LU Table<strong></a>
 </td>
 <td width="482">
-<p>The basic building block of a Logical Unit which defines a digital entity&rsquo;s data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
+<p>The basic building block of a Logical Unit which defines a Digital Entity&rsquo;s data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
 </td>
 </tr>
 <tr>
