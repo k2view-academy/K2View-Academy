@@ -30,7 +30,7 @@ A folder is created under **/storage/lu** for each object’s first deployment. 
 
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric Server. For example, when an Interface is updated, all Logical Units using this Interface should be re-deployed to make this change effective.
 
-### How Do I check which Project Is Deployed to Fabric? 
+### How Do I Check which Project Is Deployed to Fabric? 
 Only **one Project** can be deployed to [**each Fabric cluster**]<!--add link to Fabric Architecture-->. If a project has been deployed and an attempt to deploy a different project to the same cluster is made, an error message is displayed. 
 
 To check the project’s deployment in the Fabric Server, use the **SET** command from the Fabric console. 
@@ -71,7 +71,7 @@ Project deployment is reflected in [**Cassandra**]<!--add link to Fabric Archite
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
  
-### How do I get the Deployed Implementation?
+### How do I Get the Deployed Implementation?
 After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
 
 ###### Syntax:
