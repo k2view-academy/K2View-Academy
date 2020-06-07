@@ -9,43 +9,43 @@ Fabric configuration files are located under the following directory:  $K2_HOME/
 <table>
 <tbody>
 <tr>
-<td width="156">
+<td width="300pxl">
 <p><strong>Configuration File</strong></p>
 </td>
-<td width="468">
+<td width="600pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="156">
+<td width="300">
 <p>config.ini</p>
 <p>&nbsp;</p>
 </td>
-<td width="468">
+<td width="600">
 <p>This is the main configuration file of Fabric. It contains different sections of parameters and each section has its own parameter. Fabric default values are set for the commented parameters.</p>
 </td>
 </tr>
 <tr>
-<td width="156">
+<td width="300">
 <p>iifConfig.ini</p>
 </td>
-<td width="468">
+<td width="600">
 <p>The main configuration file of the IIDFinder mechanism.</p>
 </td>
 </tr>
 <tr>
-<td width="156">
+<td width="300">
 <p>node.id</p>
 </td>
-<td width="468">
+<td width="600">
 <p>This file lists the Fabric node identifiers for the Affinity mechanism and the support of several Fabric clusters on one Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
-<td width="156">
+<td width="300">
 <p>logback.xml</p>
 </td>
-<td width="468">
+<td width="600">
 <p>Fabric log configuration file.</p>
 </td>
 </tr>
