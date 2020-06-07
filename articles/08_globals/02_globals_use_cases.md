@@ -9,20 +9,20 @@ The following scenarios describe how globals can be used in Fabric objects.
 ### How Do I Add a Global to a Table Population?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**]. 
 2.	Click **Tables** > [**Table Name**] > [**Population Name**] to open the existing population.
-3.	Click the Objects tab in the right panel of the Table Population working area.
-4.	Click **Globals** and then click the global in the Globals list.
-5.	Drag the global into the working area.
-6.	Connect the global to the table column.
+3.	Click the **Objects tab** in the right panel of the Table Population working area.
+4.	Click **Globals** and then click the **global** in the **Globals list**.
+5.	Drag the **global** into the working area.
+6.	Connect the **global** to the **table column*.
 
 [Click for more information about Globals – Code Examples](/articles/08_globals/04_globals_code_examples.md).
 
 ### How Do I Add a Global to a Parser Map?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**].
 2.	Click **Parsers** > [**Parser Map**] to open the existing parser map.
-3.	Click the Objects tab in the right panel of the Parser Map working area.
-4.	Click **Globals** and select the global in the Globals list.
+3.	Click the **Objects tab**in the right panel of the Parser Map working area.
+4.	Click **Globals** and select the **global** in the **Globals list**.
 5.	Drag the global into the working area.
-6.	Connect the global to the table column.
+6.	Connect the **global** to the **table column*.
 
 
 
@@ -37,8 +37,8 @@ import static com.k2view.cdbms.usercode.lu.<LU name>.Globals.*;
 </code></pre>
 
 When opening a function or a Web Service in Fabric, a list of all globals is displayed in the **Objects tab** in the left panel of the window. 
-* Globals that are defined in an LU or in Shared Objects are available for use in LU Functions of the same LU.
-* Globals that are defined in Shared Objects are available for use in Web Services and in LU Functions of all LUs.
+* Globals that are defined in an LU or in Shared Objects are available for use in the LU functions of the same LU.
+* Globals that are defined in Shared Objects are available for use in Web Services and in the LU functions of all LUs.
 
 Click the grey arrow on the left of the window to display the panel and the list of Globals.
 
