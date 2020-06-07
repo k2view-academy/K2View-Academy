@@ -2,6 +2,10 @@
 
 Fabric uses Cassandra DB as a storage layer. Fabric creates several keyspaces for its operation. Each Fabric keyspace starts by **k2**. In addition- each deployed LU creates an additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
 
+**Notes:**
+- The cluster_id, if set in the node.id file, is concatenated to each keyspace name.
+- When you open a Fabric project in Fabric studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
+
 Below the the list of Cassandra keyspaces, created Fabric:
 
 <table>
