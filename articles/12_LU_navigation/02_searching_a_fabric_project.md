@@ -21,7 +21,7 @@ Searches can be made for the following Fabric components.
 
 [Click here for more information about Project Structure.](/articles/04_fabric_studio/08_fabric_project_tree.md)
 
-## How do I Search for an Item?
+## How Do I Search for an Item?
 
 Fabric Studio offers different types of Search options, these include:
 * Find a string.
