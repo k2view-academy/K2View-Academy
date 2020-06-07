@@ -72,7 +72,7 @@ Import the data from the CSV file as follows:
 6.	Click **Save**.
 
 
-## How can I Import Translation Data using DB SQL?
+## How Can I Import Translation Data Using DB SQL?
  
 **After defining the Translation Schema do the following:** 
 1.	Go to **Translation Data tab** > **Import Data** > **Import from DB SQL** tab.
