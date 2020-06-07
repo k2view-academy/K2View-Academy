@@ -3,13 +3,13 @@
 ### What Are Globals?
 Globals are predefined variables that can be accessed by different objects within a project and are used when the same information is required repeatedly by various Fabric objects. For example, to define the source application version or a date format in order use the same value in several Fabric objects. 
 * Globals are saved in a Java file as static variables and can be used by all Fabric object types like [Project functions](/articles/07_table_population/08_project_functions.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) objects.
-* Globals can be defined as Final and then they cannot be overridden in Java code or by a command that runs on the Fabric Server.
+* Globals can be defined as Final whereby they cannot be overridden in Java code or by a command that runs on the Fabric server.
 * Globals that are not defined as Final can be overridden.
 
 [Click for more information about Global's override using SET and SET_GLOBAL commands](/articles/08_globals/03_set_globals.md).
 
 The scope of a Global depends on how it is defined, which can be either:
-* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby the Global is available to all objects in a Project under all Logical Units, Reference Tables and Web Services.
+* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby the Global is available to all objects in a project under all Logical Units, Reference Tables and Web Services.
 * [Logical Unit](/articles/03_logical_units/01_LU_overview.md), whereby the Global is available within the specific Logical Unit where it is defined.
 
 If the same Global is defined at both Shared Objects and Logical Unit levels, the Logical Unit definition is used within the scope of that Logical Unit. Other Logical Units use the Shared Objects definition.
