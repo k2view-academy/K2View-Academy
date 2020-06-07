@@ -88,7 +88,7 @@
 <h3><strong>MDB<strong>
 </td>
 <td width="482">
-<p>Micro-database, a data lake used for the storage of each Digital Entity instance. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU Schema.</p>
+<p>Micro-database, a data lake used for the storage of each Digital Entity instance. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
 </td>
 </tr>
 <tr>
