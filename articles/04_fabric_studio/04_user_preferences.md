@@ -15,7 +15,7 @@ C:\users\\[username]\documents\K2View Fabric Studio\Projects.
 
 To update the location of the folder or to edit it, click **Browse**.
 
-### What is the Purpose of the Server Configuration Tab?
+### What Is the Purpose of the Server Configuration Tab?
 
 The Server Configuration tab is used to define the Deployment URLs of Fabric Servers. Each Fabric Server can be accessed to deploy an implementation, debug and to validate Web Services. 
 
@@ -118,7 +118,7 @@ Application shortcuts enable you to define shortcuts to other applications direc
 5. Click **OK** and then click **Save** or press **CTRL+S** to save the updated shortcuts. 
 
 
-### How do I Configure GIT Preferences?
+### How Do I Configure GIT Preferences?
 
 GIT preferences can be used to enable the following:
 * Creating new Projects in GIT.
@@ -130,7 +130,7 @@ Note that TortoiseGit enables adding un-versioned files when performing the Comm
 
 [Click for more information about SVN and GIT Best Practices.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
-### How do I Configure SVN Preferences?
+### How Do I Configure SVN Preferences?
 The following SVN preferences can be configured:
 
 <table>
