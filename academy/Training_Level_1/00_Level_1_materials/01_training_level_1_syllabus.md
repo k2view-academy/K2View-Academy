@@ -4,7 +4,7 @@
 
 #### **DAY 1 – Morning**
 
-- Introduction
+- Fabric Introduction
   - Course Overview & Main objectives
   - Business Requirements
   - Fabric Installation
