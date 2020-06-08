@@ -8,7 +8,7 @@ To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.
 2. Drag a **DB Table** into the **LU schema** window:\
    a. Go to the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md). \
    b. Click **DB Connection** > [**DB interface**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).\
-   c. Click **Tables** and then drag them into the **LU Schema**. You can drag several tables.\
+   c. Click **Tables** and then drag them into the **LU schema**. You can drag several tables.\
    d. Check either: 
     * **Create Table Based DB Query.**
     * **Create Table Based Root Function.**
