@@ -4,6 +4,7 @@
 Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a project and to deploy your implementation to the Fabric Server.
 
 Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each project is initiated and maintained through this platform and working space.\
+
 As an integrated tool, Fabric Studio allows you to:
 * Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
 * Use robust ETL options to define the mapping logic on each LU table using various transformation objects like [Functions](/articles/07_table_population/08_project_functions.md), [Globals](/articles/08_globals/01_globals_overview.md) or [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
