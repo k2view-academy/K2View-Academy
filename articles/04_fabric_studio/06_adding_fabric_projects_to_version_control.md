@@ -14,7 +14,7 @@ Note that although there is an option for working with Apache Sub-version (SVN),
 
 Click for more information about the K2Admin Studio. 
 
-### How do I Start Working with Version Control?
+### How Do I Start Working with Version Control?
  
 To start using Configuration Control, do either:
 
@@ -52,7 +52,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 
 ### Checking a Project Out of GIT
  
-**How do I check a project out of GIT?**
+**How Do I Check a Project Out of GIT?**
 1.	Go to the **File Browser** and click **Checkout Directory** and then **Project**.
 2.	Add the **GitHub Repository URL** and click **OK** to open the **Authentication** dialog box.
 3.	Enter your **Username** and **Password** and then click **OK**.
@@ -62,7 +62,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 
 ### Checking a Project Out of SVN
  
-**How do I check a project out of SVN?**
+**How Do I Check a Project Out of SVN?**
 
 1.	Go to the **File Explorer** and click **Checkout Directory and Project**. 
 2.	In the **Repository URL** field type in the **name** of the **project** to check out.
@@ -141,7 +141,7 @@ When a project is registered in the Version Control system, the following indica
 </tbody>
 </table>
 
-### What are the Version Control Operations?
+### What Are the Version Control Operations?
   
 **TortioseGit Operations**
 
