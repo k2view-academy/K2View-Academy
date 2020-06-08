@@ -38,7 +38,7 @@ Note that if you choose to work with SVN as your preferred version control, the 
 
 **GIT Client**
 
-Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio Windows machine.
+Download and install **TortoiseGit** or GitHub for Windows on the Fabric Studio Windows machine.
 
 **GIT on Fabric Studio** 
 
