@@ -23,7 +23,7 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 
 
 **Notes**
-* Only one project can be deployed to a specific Fabric server / cluster. Therefore, when defining the project’s physical saved name(*.K2proj*), make sure that it is meaningful, for example, the project’s business purpose.  The project’s logical name can be edited in the Fabric Studio. 
+* Only one project can be deployed to a specific Fabric server / cluster. Therefore, when defining the project’s physical saved name(.K2proj), make sure that it is meaningful, for example, the project’s business purpose.  The project’s logical name can be edited in the Fabric Studio. 
 * To find the deployed project’s name, execute the **Fabric set;** command from the Fabric console.
  
 [Click for more information about User Preferences.](/articles/04_fabric_studio/04_user_preferences.md)
