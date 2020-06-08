@@ -42,7 +42,7 @@ The Logical Unit Schema is a work area where you can define the logical unit’s
 ![image](/articles/03_logical_units/images/1.4_LU_schema_example.png)
 
 The Logical Unit Schema window shows the Root Table and hierarchy of the tables included in the Logical Unit and the relationships between them:
-* The Root Table of the LU Schema is Customer. 
+* The Root Table of the LU schema is Customer. 
 * Each table is displayed with all of its fields in a scrollable table.
 * Each field is displayed in a separate line, by name with a small colored icon. The icon’s color indicates the data type of the field:
 
