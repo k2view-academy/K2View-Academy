@@ -1,6 +1,6 @@
 # LU Schema - Editing References Tab
 
-## What are Reference Tables?
+## What Are Reference Tables?
 Fabric enables creating Reference Tables which can be used by all Logical Units.
 A Reference Table typically contains metadata that is referenced by different LU instances of a specific LU, by instances from a different LU or by Web Services. For example, a postal-code table that identifies the postal code of customer addresses. 
  
