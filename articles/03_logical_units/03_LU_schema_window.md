@@ -5,15 +5,15 @@ A [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md) has a t
 
 The following objects are located under each [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
 * [Schema](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema).
-* Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md)
+* Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md).
 * Resources, files that can be saved as part of a project. For example, an Excel file.
-* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)
-* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md)
-* Parsers
-* Instance Groups: lists of instances to be migrated into Fabric for the LU 
-* Broadway
-* Jobs
-* IIDFinder 
+* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
+* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
+* Parsers.
+* Instance Groups: lists of instances to be migrated into Fabric for the LU. 
+* Broadway.
+* Jobs.
+* IIDFinder. 
 
 ### Opening the Logical Unit (LU) Window
 Go to the **Project Tree**, click the **LU Name** and then click the **schema** to open the **Logical Unit** window.
@@ -28,8 +28,8 @@ The Logical Unit window has three main sections:
 * [Logical Unit toolbar.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar) 
 
 ### Logical Unit (LU) Schema
-The Logical Unit Schema is a work area where you can define the logical unit’s structure. 
-* A Logical Unit Schema displays a hierarchical representation of all business entities related to a Root Table. 
+The Logical Unit schema is a work area where you can define the Logical Unit’s structure. 
+* A Logical Unit schema displays a hierarchical representation of all business entities related to a Root Table. 
 * Each table can have one or several populations where each population is linked to its parent table.
 
 
@@ -46,10 +46,10 @@ The Logical Unit Schema window shows the Root Table and hierarchy of the tables 
 * Each table is displayed with all of its fields in a scrollable table.
 * Each field is displayed in a separate line, by name with a small colored icon. The icon’s color indicates the data type of the field:
 
-    * Grey: Blob
-    * Red: Text
-    * Green: Real
-    * Blue: Integer
+    * Grey: Blob.
+    * Red: Text.
+    * Green: Real.
+    * Blue: Integer.
 
 To make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
 
@@ -80,7 +80,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><b>Enrichment Order Tab<b></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of enrichment functions  using the up and down arrows. Only enrichment functions that are directly related to specific LU tables are included in the display. </p>
+<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Eenrichment functions that are directly related to specific LU tables are included in the display. </p>
 
 </td>
 </tr>
