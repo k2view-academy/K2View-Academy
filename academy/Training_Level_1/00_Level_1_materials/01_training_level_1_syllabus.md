@@ -31,11 +31,10 @@
 
 #### **DAY 2 – Morning**
 
-- Q&As
-- Logic Units properties
+- Fabric main flow (LU properties)
   - Populations
   - Sync strategies
-- Summary exercises
+-  Summary exercises
 - Quiz (2)
 - Fabric Deployment & server side
   - Fabric server
