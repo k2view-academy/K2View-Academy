@@ -1,7 +1,7 @@
 # Creating a New Project
 
 ### What Is a Fabric Project?
-A Fabric Project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the Project must be defined in the Fabric Studio which can then be added to either GIT or SVN Version Control. 
+A Fabric project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the pProject must be defined in the Fabric Studio which can then be added to either GIT or SVN version control. 
 
 [Click for more information about Fabric Studio UI Components and Menus.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
@@ -15,16 +15,16 @@ A Fabric Project is a consolidation of rules that transform data from one or mor
 
 1. Go to the **Start Page** or click the **File** icon <img src="/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
-3. Verify that the default directory displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the Project’s files and definitions.
-4. Optional: check the **Add Project to Version Control** checkbox to add the new Project to SVN or Git. It is recommended to save and commit the new Project as a baseline.
+3. Verify that the default directory displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the project’s files and definitions.
+4. Optional: check the **Add Project to Version Control** checkbox to add the new Project to SVN or Git. It is recommended to save and commit the new project as a baseline.
 Note that to avoid errors, the SVN / GIT repositories must be created in advance.
 5. Verify the default URL in the **Repository URL** field is correct, if not **Browse** and select the correct one. The **PROJECT_NAME** is automatically added to the Repository URL once added to the configuration control.
-6. Click **OK**. The Project’s **Main Window** opens and the **Project Tree** is displayed in the left pane. 
+6. Click **OK**. The project’s **Main Window** opens and the **Project Tree** is displayed in the left pane. 
 
 
 **Notes**
-* Only one Project can be deployed to a specific Fabric server / cluster. Therefore, when defining the Project’s physical saved name(*.K2proj), make sure that it is meaningful, for example, the Project’s business purpose.  The Project’s logical name can be edited in the Fabric Studio. 
-* To find the deployed Project’s name, execute the **Fabric set;** command from the Fabric console.
+* Only one project can be deployed to a specific Fabric server / cluster. Therefore, when defining the project’s physical saved name(*.K2proj), make sure that it is meaningful, for example, the project’s business purpose.  The project’s logical name can be edited in the Fabric Studio. 
+* To find the deployed project’s name, execute the **Fabric set;** command from the Fabric console.
  
 [Click for more information about User Preferences.](/articles/04_fabric_studio/04_user_preferences.md)
 
