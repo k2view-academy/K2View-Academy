@@ -8,7 +8,7 @@ Built over a Windows-based platform, Fabric Studio offers a user friendly look-a
 As an integrated tool, Fabric Studio allows you to:
 * Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
 * Use robust ETL options to define the mapping logic on each LU table using various transformation objects like [Functions](/articles/07_table_population/08_project_functions.md), [Globals](/articles/08_globals/01_globals_overview.md) or [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
-* Deploy a [Fabric Project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a Project to the Fabric runtime environment. 
+* Deploy a [Fabric project](/articles/04_fabric_studio/05_creating_a_new_project.md) or selected components of a project to the Fabric runtime environment. 
 * [Debug and view](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) mapped data, data flow and data exposure. 
 
 Fabric Studio also enables you to integrate your projects into Source Version Control systems based on Git or the Apache Sub-version (SVN) Standard.
