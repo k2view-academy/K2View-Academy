@@ -73,7 +73,7 @@ A link can be added in both directions:
 * **Parent to child**, linking a parent table to a child population.
 
 ## How Can I Link the Child Population to a Parent Table? 
-1. Click the **child population** header.
+1. Click the **Child Population** header.
 1. Connect each **input field** to a **parent table** using one of the following methods:\
   a. Drag the **connection line** to the **parent table** and **column**.\
   b. Right click, select **Add link from** > **parent table** > **column**.
