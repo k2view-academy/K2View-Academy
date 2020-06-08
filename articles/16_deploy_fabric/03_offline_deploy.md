@@ -9,7 +9,7 @@ When a Fabric project is developed by a group of programmers it is important tha
 
 [Click for more information about Best Practices for working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
-### How do I Perform an Offline Deployment?
+### How Do I Perform an Offline Deployment?
 
 There are two ways to perform an Offline Deployment:
 - Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the  [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. Then do the deployment by running the **Deploy** command on the server.
