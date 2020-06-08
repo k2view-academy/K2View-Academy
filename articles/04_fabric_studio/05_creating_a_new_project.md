@@ -18,7 +18,7 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 3. Verify that the **default directory** displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the project’s files and definitions.
 4. Optional: check the **Add Project to Version Control** checkbox to add the new project to SVN or Git. It is recommended to save and commit the new project as a baseline.
 Note that to avoid errors, the SVN/Git repositories must be created in advance.  
-5. Verify the default URL in the Repository URL field is correct, if not, **Browse** and select the correct one. The PROJECT_NAME is automatically added to the Repository URL once added to the configuration control. 
+5. Verify the default URL in the Repository URL field is correct, if not, **Browse** and select the correct one. The **PROJECT_NAME** is automatically added to the Repository URL once added to the configuration control. 
 6. Click **OK**. The project’s **Main Window** opens and the **Project Tree** is displayed in the left pane. 
 
 
