@@ -7,7 +7,7 @@ Fabric implementations are written in Java and are stored in standard libraries 
  
 Fabric Studio compiles all Java code in the project when the project is opened. Compilation errors and warnings, if any, are displayed in the [Server/Activity Logs tab](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 
-### How do I Publish Project Code?
+### How Do I Publish Project Code?
  
 After the Java code of the project object (like a Function or a Web Service) is complete it must be validated.
 1. Do either:
@@ -15,12 +15,12 @@ After the Java code of the project object (like a Function or a Web Service) is 
     * Click **Save** on the left top screen to save the code.  
 2. Go to the **Project Tree**, right click the **Project Name** and then click **Rebuild All java Code**. 
 
-### When is Java Code Validated?
+### When Is Java Code Validated?
  
 * Java code must be revalidated each time a function is modified or added. 
 * All Java code in a project must be validated before deployment to the server side.
 
-### How do I Know if a Validation is Successful?
+### How Do I Know If a Validation Is Successful?
   
 There are three validation success indicators:
 1. Success without a message, whereby no action is required.
