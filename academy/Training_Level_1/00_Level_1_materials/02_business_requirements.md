@@ -25,10 +25,13 @@ We can easily imagine customers receiving this link by email while the web-servi
 
 Along the course we will assume the following roles within the Telco environment:
 
-- A customer eager to receive a list of the services to which he subscribes, or a summary of his details and of the last invoices or active balances\
+- A customer eager to receive a list of the services to which he subscribes, or a summary of his details and of the last invoices or active balances
 - A customer support operator needing to retrieve all these details as fast and as accurately as possible
 - A business analyst that needs to operate the necessary data transformations to help him design new offers or get new insights on the company’s products, services or customers (or any combination of these for the matter)
 
 ##### Enjoy and Let's Roll !!!
 
- [![Previous](/articles/images/Previous.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/academy/00_Training_Level_1/01_training_level_1_syllabus.md)
+ [![Next](/articles/images/Next.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/academy/00_Training_Level_1/01_training_level_1_syllabus.md)
+ 
+ 
+ [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_1_Fabric_Overview.md)
