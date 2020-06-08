@@ -5,16 +5,14 @@
 #### **DAY 1 – Morning**
 
 - Introduction
-  - Overview
-  - Main objectives
+  - Overview & Main objectives
 -  Fabric Concept
-  -  Digital entities and Logical Units
+  - Digital entities and Logical Units
   - Fabric benefits and use cases
 - Fabric Architecture
   - Components overview
-  - Cassandra main keyspaces
-  - Other 3rd Party tools & External dependencies
   - Install work environment (Fabric)
+  - Fabric Directories
 - Quiz (1)
 
 #### **DAY 1 – Afternoon**
