@@ -11,7 +11,7 @@
 <details>
 <summary markdown="span"><strong>Logical Unit (LU)<strong></summary>
 <ul>
-        <li><href="/articles/03_logical_units">Logical Unit (LU)</a>
+        <li><a href="/articles/03_logical_units">Logical Unit (LU)</a>
                 <ul>
       <li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
       <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit - Flow</li>
