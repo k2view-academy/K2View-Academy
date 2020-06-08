@@ -20,7 +20,6 @@ So, let’s start understanding what Fabric is all about by thoroughly reading t
 
 You are now ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">(/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)
 
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Next.png)](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)
-
-                          
+                        
