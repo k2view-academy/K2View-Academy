@@ -115,7 +115,7 @@ If the selected Root Table is not defined as the root of the identified ERD, con
 **For Example** 
 ![image](/articles/03_logical_units/images/03_06_wizard_04.png)
 
-The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard identifies the CRM_DB.CUSTOMER table as the Root Table of the CRM_DB. 
+The selected Root Table is CRM_DB.ACTIVITY. However, the Auto Discovery Wizard identifies the CRM_DB.CUSTOMER table as the Root Table of the CRM_DB.  
 
  
 When saving the CRM_DB.ACTIVITY table as a Root Table:
