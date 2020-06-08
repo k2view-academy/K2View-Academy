@@ -17,7 +17,7 @@ To update the location of the folder or to edit it, click **Browse**.
 
 ### What Is the Purpose of the Server Configuration Tab?
 
-The Server Configuration tab is used to define the Deployment URLs of Fabric Servers. Each Fabric Server can be accessed to deploy an implementation, debug and to validate Web Services. 
+The Server Configuration tab is used to define the Deployment URLs of Fabric servers. Each Fabric server can be accessed to deploy an implementation, debug and to validate Web Services. 
 
 ![image](/articles/04_fabric_studio/images/04_04_02%20Web%20Services.png)
 
