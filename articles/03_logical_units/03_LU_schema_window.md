@@ -140,7 +140,7 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 <td width="60">&nbsp;<img src="/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
 <p>Update Tables from Database.</p>
-<p>When clicked, the LU Tables Schema is refreshed from the source database. This action is needed if the LU tables schema has been updated in the source database.</p>
+<p>When clicked, the LU tables schema is refreshed from the source database. This action is needed if the LU tables schema has been updated in the source database.</p>
 <p>Note: only current tables are updated. Tables are added or deleted from an LU manually.</p>
 </td>
 </tr>
