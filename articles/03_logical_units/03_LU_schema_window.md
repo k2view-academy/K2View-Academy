@@ -16,7 +16,7 @@ The following objects are located under each [Logical Unit (LU)](/articles/03_lo
 * IIDFinder 
 
 ### Opening the Logical Unit (LU) Window
-Go to the **Project Tree**, click the **LU Name** and then click the **Schema** to open the **Logical Unit** window.
+Go to the **Project Tree**, click the **LU Name** and then click the **schema** to open the **Logical Unit** window.
 
 ### Logical Unit (LU) Window
 ![image](/articles/03_logical_units/images/1.3_LU_Schema_WIndow.PNG)
