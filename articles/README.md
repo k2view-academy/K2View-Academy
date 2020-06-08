@@ -11,6 +11,7 @@
 <details>
 <summary markdown="span"><strong>Logical Unit (LU)<strong></summary>
 <ul>
+        <li><href="/articles/03_logical_units">Logical Unit (LU)</a>
       <li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
       <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit - Flow</li>
 <li><a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema Window</li>
@@ -29,6 +30,7 @@
 <li><a href="/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md">LU Schema: Group and Ungroup Tables</a></li>
 <li><a href="/articles/03_logical_units/17_LU_schema_change_root_table.md">LU Schema: Change Root Table</a></li>
 <li><a href="/articles/03_logical_units/18_LU_schema_refresh_LU_options.md">LU Schema: Refresh LU Options</a></li>
+        </li>
 </ul>
 </details>
 
