@@ -6,7 +6,8 @@
 
 - Introduction
   - Overview & Main objectives
-  - Business Requirements & Fabric Installation
+  - Business Requirements
+  - Fabric Installation
 
 - Fabric Concept
   - Digital entities & Logical Units
