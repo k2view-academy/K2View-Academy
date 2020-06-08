@@ -12,7 +12,7 @@ The Project Tree is displayed on the left side of the Fabric Studio window.
 
 ### Project Tree Components
  
-The name of the current active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch, in the example above the master is used.
+The name of the currently active project in the Studio is displayed at the top of the project’s tree and the related Git/SVN branch, in the example above the master is used.
 Each project has the following main components: 
 * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include the following sub-branches:
   * [Globals](/articles/08_globals/01_globals_overview.md) 
