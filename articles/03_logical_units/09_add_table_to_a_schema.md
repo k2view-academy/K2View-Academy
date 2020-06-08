@@ -19,13 +19,13 @@ The selected tables are automatically created with the selected type of [populat
 
 
 3. Drag a **Table** into the LU **Schema window**:\
-    a. Go to the [Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md).\
-    b. Select a **Table** and drag it into the **LU schema** window.
+    a. Go to the [Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md).\
+    b. Select a **Table** and drag it into the **LU schema window**.
 
 
 ![image](/articles/03_logical_units/images/03_09_02_tables2.png)
 
-4. Right click the **schema** window and select one of the following options:\
+4. Right click the **Schema window** and select one of the following options:\
     a. **New Table from SQL Based DB Query.**\
     b. **New Table from SQL Based Root Function**.\
 Both options open the Query Builder. The LU table and its population are automatically generated based on the SQL query defined in the Query Builder.
