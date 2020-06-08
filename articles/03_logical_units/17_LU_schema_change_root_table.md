@@ -1,6 +1,6 @@
 # LU Schema - Change Root Tables
 
-Each LU Schema must have a [Root Table](/articles/01_fabric_overview/02_fabric_glossary.md#root-table) and [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) (Instance PK) column.  
+Each LU schema must have a [Root Table](/articles/01_fabric_overview/02_fabric_glossary.md#root-table) and [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) (Instance PK) column.  
 
 ## How Can I Change the Root Table? 
 1. Right click the new **Root Table** and then click **Set as: Root**.
