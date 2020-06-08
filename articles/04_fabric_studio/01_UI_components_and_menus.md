@@ -1,6 +1,6 @@
 # UI Components and Menus
 
-### What is the Fabric Studio User Interface?
+### What Is the Fabric Studio User Interface?
 Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a project and to deploy your implementation to the Fabric Server.
 
 Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each project is initiated and maintained through this platform and working space.\
@@ -85,7 +85,7 @@ Click for more information about the Query Builder.
 
 Click for more information about the Studio [Debug](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) and [Log](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) Capabilities.
 
-### What are the File Tab Options?
+### What Are the File Tab Options?
 The File tab has the following options:
 * New Project. 
 * Open Project. 
@@ -100,7 +100,7 @@ Click **New Item** to open a **New Item** under a selected **LU** or Shared **Ob
 
 Note that this area allows you to open a new item only for LU or Shared Objects. 
 
-### What are the Main Elements of the Project Tree? 
+### What Are the Main Elements of the Project Tree? 
 The Project Tree displays the components of the current project as a hierarchy of entities. The main elements of the hierarchy include:
 * Project, the top-level of the hierarchy. Each project has the following branches (sub-objects): 
   * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include a sub-hierarchy, as follows:
