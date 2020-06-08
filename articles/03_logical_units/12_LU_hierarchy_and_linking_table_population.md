@@ -38,7 +38,7 @@ Linking the INVOICE Table Population object to two different LU Tables - BALANCE
 **Note:** An LU Table can be added to an LU Schema without a Table Population object. This table is not populated by the sync of the instance, but can be populated by a separate transaction.
 
 
-## What are the Table Population's Input Arguments?
+## What Are the Table Population's Input Arguments?
 Input Arguments are a property of the [Source Object](/articles/01_fabric_overview/02_fabric_glossary.md#source-object)  of a Table Population object.
 
 There are [two types of Source Objects](/articles/07_table_population/02_source_object_types.md) for a Table Population object:
@@ -80,7 +80,7 @@ A link can be added in both directions:
 
 **Note:** Link all the input fields of the selected Table Population object to one parent table. A Table Population object cannot be linked to several parent tables.  
 
-## How can I Link a Parent Table to a Child Population?
+## How Can I Link a Parent Table to a Child Population?
 1. Click the **parent table**.
 1. Connect each **parent column** to the **child population** using one of the following methods:\
   a. Click the **child population** header and drag the **connection line** to the **parent table** and **column**.\
