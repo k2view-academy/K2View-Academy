@@ -27,11 +27,11 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <td width="600">
 <p>Fabric Scripts:&nbsp;</p>
 <ul>
-<li>Deployment scripts</li>
+<li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment scripts</a></li>
 <li>iidFinder scripts</li>
 <li>Fabric execution monitoring scripts</li>
-<li>Reset scripts</li>
-<li>Stop and start scripts</li>
+<li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset scripts</a></li>
+<li>Stop and start scripts, initiated by <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#start-and-stop-fabric-commands">k2fabric stop and k2fabric start commands.</a></li>
 <li>Fabric status scripts</li>
 </ul>
 </td>
@@ -57,7 +57,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/config</h4>
 </td>
 <td width="600">
-<p>Fabric configuration files.</p>
+<p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric configuration files.</a></p>
 <p>&nbsp;</p>
 </td>
 </tr>
