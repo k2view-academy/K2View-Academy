@@ -1,9 +1,9 @@
 # UI Components and Menus
 
 ### What is the Fabric Studio User Interface?
-Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a Project and to deploy your implementation to the Fabric Server.
+Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a project and to deploy your implementation to the Fabric Server.
 
-Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each Project is initiated and maintained through this platform and working space.\
+Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each project is initiated and maintained through this platform and working space.\
 As an integrated tool, Fabric Studio allows you to:
 * Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
 * Use robust ETL options to define the mapping logic on each LU Table using various transformation objects like [Functions](/articles/07_table_population/08_project_functions.md), [Globals](/articles/08_globals/01_globals_overview.md) or [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
@@ -18,10 +18,10 @@ Fabric Studio also enables you to integrate your Projects into Source Version Co
 
 ![image](/articles/04_fabric_studio/images/04_01_01_start_a_page.png)
 
-The Start Page has links to different K2View Fabric Projects, including: 
-* Start a new Project, with or without configuration control. 
-* Open an existing Project.
-* Checkout a Project from the configuration control.
+The Start Page has links to different K2View Fabric projects, including: 
+* Start a new project, with or without configuration control. 
+* Open an existing project.
+* Checkout a project from the configuration control.
 * Quick links to recently opened projects. 
 * Help and User Guide. 
 
@@ -100,9 +100,9 @@ Click **New Item** to open a **New Item** under a selected **LU** or Shared **Ob
 Note that this area allows you to open a new item only for LU or Shared Objects. 
 
 ### What are the Main Elements of the Project Tree? 
-The Project Tree displays the components of the current Project as a hierarchy of entities. The main elements of the hierarchy include:
-* Project, the top-level of the hierarchy. Each Project has the following branches (sub-objects): 
-  * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and Project references and may include a sub-hierarchy, as follows:
+The Project Tree displays the components of the current project as a hierarchy of entities. The main elements of the hierarchy include:
+* Project, the top-level of the hierarchy. Each project has the following branches (sub-objects): 
+  * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include a sub-hierarchy, as follows:
     * Globals. 
     * Environments. 
     * Database types. 
@@ -111,8 +111,8 @@ The Project Tree displays the components of the current Project as a hierarchy o
     * Java, Java files and resource files. 
     * Translations. 
 * References, reference information that may be used throughout the instance. 
-* Web Services, a collection of all functions that are defined as Web Services for this Project.
-* [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the Project.
+* Web Services, a collection of all functions that are defined as Web Services for this project.
+* [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
 **Note:** All operations performed in the Project Tree’s options are accessible from the context menus of the different components in the Project Tree. For example, creating a new function is accessed from the context menu when you right click the Functions object in the Project Tree.
 
