@@ -30,7 +30,7 @@ Along the course we will assume the following roles within the Telco environment
 - A business analyst that needs to operate the necessary data transformations to help him design new offers or get new insights on the company’s products, services or customers (or any combination of these for the matter)
 
 
-# Fabric Suite Installation
+### Fabric Suite Installation
 Click on the following link to start the [Installation Process](/academy/Training_Level_1/00_Level_1_materials/04_fabric_installation.md):
 
 ##### Enjoy and Let's Roll !!!
