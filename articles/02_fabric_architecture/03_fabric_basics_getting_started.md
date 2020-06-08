@@ -61,6 +61,8 @@ Fabric provides the following script in order to clean Fabric and delete (drop) 
 
 - **reset.sh**
 
+Note that $K2_HOME/fabric/scripts also has a Windows version of the reset script: **reset.bat**
+
 The **reset.sh** script is used mainly:
 
 - In a **TEST environment** to delete the current data and to restart the testing process from scratch.
