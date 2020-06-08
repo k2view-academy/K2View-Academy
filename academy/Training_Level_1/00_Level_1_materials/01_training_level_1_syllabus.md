@@ -7,9 +7,11 @@
 - Introduction
   - Overview & Main objectives
   - Business Requirements & Fabric Installation
--  Fabric Concept
-  - Digital entities and Logical Units
-  - Fabric benefits and use cases
+
+- Fabric Concept
+  - Digital entities & Logical Units
+  - Fabric Use Cases
+
 - Fabric Architecture
   - Components overview
   - Data flows
