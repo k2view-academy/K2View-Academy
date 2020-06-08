@@ -76,4 +76,4 @@
 ##### Certification exam (1hr.)
 
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/00_Training_Level_1/00_Level_1_materials/00_Level_1_materials/00_Course_Overview.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/00_Level_1_materials/00_Course_Overview.md)
