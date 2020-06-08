@@ -34,7 +34,7 @@ This screen allows you to select the Auto Discovery mode (auto discovery type) a
 
 ![image](/articles/03_logical_units/images/03_06_wizard_03.png)
 
-## Auto Discovery Mode (Type):  
+## Auto Discovery Mode (Type)   
 Auto Discovery supports the following modes:
 * **Fast mode** - the default mode. Follow the connections of the physical foreign keys as defined in the selected database to identify the relationships between the database tables. 
 * **Medium mode** – allows you to be more involved in certain aspects of the process and checks the primary key fields in the tables to search for a link between the tables. See the list of parameters for Medium Mode in the table below. 
