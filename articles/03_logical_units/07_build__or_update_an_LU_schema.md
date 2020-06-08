@@ -22,7 +22,7 @@ To use the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discov
   b. Click **NO** to add the tables to the existing schema.
 
 **Option 2**
-1. Open  **LU Schema** > right click a **column** in an LU  **table**.
+1. Open  **LU Schema** > right click a **column** in an **LU table**.
 2. Select **Auto Discovery Wizard**.
 
 ![image](/articles/03_logical_units/images/03_07_01_option2.png)
