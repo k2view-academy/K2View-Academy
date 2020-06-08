@@ -40,7 +40,7 @@ The following is a list of server configuration items:
 </td>
 <td width="467">
 <p>Displays a generic URL for the deployment in the following format: http://&lt;host&gt;:3213/deploy.</p>
-<p>Edit the Hostname or Host IP Address in the &lt;host&gt; field to deploy your Project or its components such as a <a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> or Web Services to the configured server.</p>
+<p>Edit the Hostname or Host IP Address in the &lt;host&gt; field to deploy your project or its components such as a <a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> or Web Services to the configured server.</p>
 </td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@ The following is a list of server configuration items:
 <td width="467">
 <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Unchecked</strong>: performs a Sync on Schema changes only.</p>
-<p>Note that each LU undergoes one forced Sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
+<p>Note that each LU undergoes one forced sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
 </td>
 </tr>
 <tr>
@@ -121,10 +121,10 @@ Application shortcuts enable you to define shortcuts to other applications direc
 ### How Do I Configure GIT Preferences?
 
 GIT preferences can be used to enable the following:
-* Creating new Projects in GIT.
-* Checking Projects out of GIT: 
+* Creating new projects in GIT.
+* Checking projects out of GIT: 
   * **Auto Update Gif Status**, automatically refreshes the Git’s status in the Project Tree, for example, to show if a file is modified. By default, this option is checked. If this is not checked, the Project Tree will not fetch the status of each file.
-  * **Auto Add Files to Git**, when checked adds the Project’s new files to Git which can then be committed. If this is not checked, you can add the files manually using the Git **add** command and then commit them. By default, this option is not set.
+  * **Auto Add Files to Git**, when checked adds the project’s new files to Git which can then be committed. If this is not checked, you can add the files manually using the Git **add** command and then commit them. By default, this option is not set.
 
 Note that TortoiseGit enables adding un-versioned files when performing the Commit process. These files do not need to be added beforehand. 
 
