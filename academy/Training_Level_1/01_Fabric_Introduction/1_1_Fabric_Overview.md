@@ -22,7 +22,5 @@ Now we are acquainted with Digital Entities and Fabric's main features, let's ha
 
 We are now all set and ready to move to the next stage and learn about Fabric's architecture !
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](\academy\Training_Level_1\02_Fabric_Architecture\FabricArchitectureOverview.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](\academy\Training_Level_1\02_Fabric_Architecture\2_1_FabricArchitectureOverview.md)
 
-
- 
