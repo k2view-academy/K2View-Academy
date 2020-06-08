@@ -1,6 +1,6 @@
 # Editing an LU Schema - Defining the Root Table and Instance ID Column
 
-### How do I Define the Root Table and Instance ID Column in an LU Schema?
+### How Do I Define the Root Table and Instance ID Column in an LU Schema?
 
 Each LU Schema must have a Root Table and Instance ID  (Instance PK Column). The instance ID is the unique identifier of each LU instance.
 When creating a Logical Unit using the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), the Root Table and the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) column are defined according to the selected Root Table and column in the Wizard. 
