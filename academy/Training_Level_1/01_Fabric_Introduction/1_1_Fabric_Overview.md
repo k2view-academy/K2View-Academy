@@ -18,7 +18,7 @@ By the end of the Fabric Introduction learning item you will know:
 
 So, let’s start understanding what Fabric is all about by reading the following article: [Fabric Overview](https://github.com/k2view-academy/K2View-Academy/wiki/What-is-Fabric%3F)
 
-Now we are acquainted with Digital Entities and Fabric's main features, let's have a look at a couple of use cases from K2View's customers: [Fabric Use Cases](/academy/Training_Level_1/01_Fabric_introduction/1_2_Fabric_UseCases.md)
+Now we are acquainted with Digital Entities and Fabric's main features, let's have a look at a couple of use cases from K2View's customers: [Fabric Use Cases](/academy/Training_Level_1/01_Fabric_Introduction/1_2_Fabric_UseCases.md)
 
 We are now all set and ready to move to the next stage and learn about Fabric's architecture !
 
