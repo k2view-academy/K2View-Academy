@@ -11,7 +11,6 @@ By the end of the Fabric Architecture learning item you will know:
 - How Fabric transforms data by providing a wide range of built-in functions to do so.
 - How Fabric handles security and provides resiliency
 - 3rd Party tools & External dependencies
-- Fabric's directories to navigate between features and objects and use basic commands from the command line.
 
 
 
