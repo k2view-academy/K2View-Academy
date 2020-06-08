@@ -17,7 +17,7 @@ A Java file residing at a [Shared Objects](/articles/04_fabric_studio/12_shared_
 Designated Logic.java files are specific to their level of definition, which can be References, Web Services or Logical Units.\
 The Globals.java file is automatically created under either the References or each Logical Unit, which are both empty.
 
-### How do I Associate a Function to a Category?
+### How Do I Associate a Function to a Category?
  	
 When creating a new Java function, it must be associated to a category like a built-in or Product. Each category has multiple sub-categories like Date or Math that hold the most common types of functions for that sub-category.
  
@@ -34,7 +34,7 @@ Each category creates a separate Logic.java file that has a specific path to dif
 * Version control is managed on a Logic.java file level and not on a function level. 
 * Functions can be edited from IntelliJ by pressing Ctrl+I in a function in the Fabric Studio to activate IntelliJ. Fabric Studio enables you to open the source file.
 
-### How do I Create a Category?
+### How Do I Create a Category?
  
 Go to the **Project Tree**, right click **Java** and click **New SharedLogic Category File / New Logic Category File**.\
 Note that when creating a new function, enter a new category name to automatically create a new category folder.
