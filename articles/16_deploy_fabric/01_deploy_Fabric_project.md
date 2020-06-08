@@ -1,6 +1,6 @@
 # Deploying a Fabric Project
 
-### What is Fabric Deployment?
+### What Is Fabric Deployment?
 The implementation of a Fabric project can be divided into two steps:
 - **Design, configuration and coding**, which includes the creation of a Fabric project and the definition of the relevant objects in the Fabric Studio in order to implement the business requirements.
 - **Deployment** of the project into the Fabric Server so that the first deployment of the new project or all recent changes since its last deployment are compiled and become effective on the server side. 
@@ -30,7 +30,7 @@ A folder is created under **/storage/lu** for each object’s first deployment. 
 
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric Server. For example, when an Interface is updated, all Logical Units using this Interface should be re-deployed to make this change effective.
 
-### How Do I Check which Project Is Deployed to Fabric? 
+### How Do I Check Which Project Is Deployed to Fabric? 
 Only **one Project** can be deployed to [**each Fabric cluster**]<!--add link to Fabric Architecture-->. If a project has been deployed and an attempt to deploy a different project to the same cluster is made, an error message is displayed. 
 
 To check the project’s deployment in the Fabric Server, use the **SET** command from the Fabric console. 
@@ -42,7 +42,7 @@ To check the project’s deployment in the Fabric Server, use the **SET** comman
 This command displays the currently **deployed project name**, as well as the values of various project parameters. 
 [Click for more information about Fabric Basic Commands]<!--Add link to 19.5 Fabric basic commands-->. 
 
-### How are Deployed Objects Reflected in the Fabric Server?
+### How Are Deployed Objects Reflected in the Fabric Server?
 You can check which objects are deployed in the Fabric Server using the Fabric **list** command.
 - **list LU_TYPES/LUT** provides a list of Logical Unit Types deployed to the Fabric Server.
 - **list WS** provides a list of all Web Service methods deployed to the Fabric Server. 
@@ -65,13 +65,13 @@ You can check which objects are deployed in the Fabric Server using the Fabric *
     list DB_SOURCES;
 </code></pre>
 
-### How are Deployed Objects Reflected in Cassandra?
+### How Are Deployed Objects Reflected in Cassandra?
 Project deployment is reflected in [**Cassandra**]<!--add link to Fabric Architecture--> as follows:
 - The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References] <!--Future link to DROP 2 item-->and [Web Services] creates new records in the [**k2_lut_info** table]<!--Add a link to 19.7 Cassandra keyspaces--> under the **k2system** keyspace. A separate record is created for each LU and Reference table and for each deployed Web Service.
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
  
-### How do I Get the Deployed Implementation?
+### How Do I Get the Deployed Implementation?
 After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
 
 ###### Syntax:
