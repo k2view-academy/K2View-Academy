@@ -2,7 +2,7 @@
 
 A Table Population object holds the transformation and mapping rules of the data and populates the data into the LU table. Each table can have one or several populations. 
 
-## How Do I Add a Table Population to the LU Schema?
+## How Do I Add a Table Population To the LU Schema?
 1. Go to the **Project Tree** > right click the **LU table** > select **New Table Population** to create a new population object.  A notification opens informing you that the change requires a manual update of the LU schema file.
 1. Click **Yes** to open the **LU schema** > **LU Schema screen**. The new population is automatically added to the LU schema. 
 1. Link the new **population** to its **parent**.
