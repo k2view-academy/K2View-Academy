@@ -15,7 +15,7 @@ By the end of the Fabric Architecture learning item you will know:
 
 
 
-So, let’s start understanding what Fabric is all about by thoroughly reading the Fabric [Architecture document](https://github.com/k2view-academy/K2View-Academy/ArchitectureDocument)
+So, let’s start understanding what Fabric is all about by thoroughly reading the [Fabric Architecture](https://github.com/k2view-academy/K2View-Academy/ArchitectureDocument) document.
 
 
 You are now ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
