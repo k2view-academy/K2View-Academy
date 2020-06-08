@@ -4,13 +4,13 @@
 
 #### **DAY 1 – Morning**
 
-- Fabric Introduction
+- Course Introduction
   - Course Overview & Main objectives
   - Business Requirements
   - Fabric Installation
 
-- Fabric Concept
-  - Digital entities & Logical Units
+- Fabric Introduction
+  - Fabric Overview
   - Fabric Use Cases
 
 - Fabric Architecture
