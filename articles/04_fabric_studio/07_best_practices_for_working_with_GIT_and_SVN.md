@@ -1,6 +1,6 @@
 # Best Practices for Working with GIT and SVN
 
-### How do I Start Using Version Control?
+### How Do I Start Using Version Control?
  
 To start working with Version Control, do either:
 
