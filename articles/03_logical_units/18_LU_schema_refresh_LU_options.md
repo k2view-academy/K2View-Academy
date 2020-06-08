@@ -4,7 +4,7 @@ The **Logical Unit toolbar** has two Refresh icons:
 
 ![image](/articles/03_logical_units/images/03_18_01_toolbar.png)
 
-* Refresh Items (blue), that refreshes project objects into the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md). 
+* Refresh Items (blue), that refreshes project objects into the [LU schema](/articles/03_logical_units/03_LU_schema_window.md). 
 * Update Tables from Database (green), that rebuilds [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md) based on the source DB and is used to implement source DB updates into an LU Schema. When needed, Update Tables from Database adds new columns to the LU Table. 
 
 Note that Update Tables from Database does not delete or add tables to the LU Schema and does not delete columns from LU Tables. These updates must be implemented  manually. 
