@@ -25,7 +25,7 @@ You can import an entire exported project or specific branches of a Project Tree
 * Only the same type of object can be imported. For example, Logical Unit to Logical Unit, LU Table to LU Table, Java Files to Java Files. You can also copy the same type of object into another group. For example, to copy Java files from Shared Objects to Reference Java files. 
 * The Import process is implemented on a Java files level and not on Java functions. Therefore, when a Java file is imported, it overrides the entire file including its Java functions.  
 * When updating a specific function in a Java file, it is recommended that you add the function to the Java file manually. 
-* Java files are imported to the Category level of the [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
+* Java files are imported into the Category level of the [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md). 
 * Importing [Globals](/articles/08_globals/01_globals_overview.md) to an existing Globals file does not override the existing Java file. Both files are merged into one file unless they have the same name, in which case, the new file overrides the existing file with the value of the imported variable. 
 
 ### How Can I Import a K2EXPORT File Into My Project?
