@@ -1,6 +1,6 @@
 # Creating a New Project
 
-### What is a Fabric Project?
+### What Is a Fabric Project?
 A Fabric Project is a consolidation of rules that transform data from one or more data sources into the K2View Fabric micro-database structure using [Logical Unit](/articles/03_logical_units/01_LU_overview.md) modeling. To do so, the Project must be defined in the Fabric Studio which can then be added to either GIT or SVN Version Control. 
 
 [Click for more information about Fabric Studio UI Components and Menus.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
@@ -11,7 +11,7 @@ A Fabric Project is a consolidation of rules that transform data from one or mor
 
 
 
-### How do I Create a New Project?
+### How Do I Create a New Project?
 
 1. Go to the **Start Page** or click the **File** icon <img src="/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
@@ -32,7 +32,7 @@ Note that to avoid errors, the SVN / GIT repositories must be created in advance
 
 [Click for more information about Best Practices for Using SVN and GIT.](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md)
 
-### How do I Access a Fabric Project?
+### How Do I Access a Fabric Project?
 
 1. Either:\
    a. Go to the K2view Fabric Studio Start Page and click Open Project.\
