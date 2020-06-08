@@ -48,6 +48,6 @@ At any time, to learn more about Fabric terminology, you can refer to [Fabric's 
 
 
 
-But first, let’s understand the course's business requirements:
+But first, let’s understand the course's Business Requirements!
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/00_Level_1_materials/02_business_requirements.md)
