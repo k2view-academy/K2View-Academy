@@ -31,7 +31,5 @@ Along the course we will assume the following roles within the Telco environment
 
 ##### Enjoy and Let's Roll !!!
 
- [![Next](/articles/images/Next.png)](https://github.com/k2view-academy/K2View-Academy/blob/master/academy/00_Training_Level_1/01_training_level_1_syllabus.md)
- 
  
  [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_1_Fabric_Overview.md)
