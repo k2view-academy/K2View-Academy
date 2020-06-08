@@ -6,21 +6,21 @@
 
 - Introduction
   - Overview & Main objectives
+  - Business Requirements
+  - Fabric Installation
 -  Fabric Concept
   - Digital entities and Logical Units
   - Fabric benefits and use cases
 - Fabric Architecture
   - Components overview
-  - Install work environment (Fabric)
-  - Fabric Directories
+  - Data flows
+  - Security/Resiliency
 - Quiz (1)
 
 #### **DAY 1 – Afternoon**
 
-- Data modelling within business requirements
-  - Training work environment & data modelling
-  - Business requirements & analysis
 - Fabric main flow (Simple LU)
+  - Data modelling within business requirements
   - Project setup
   - Interfaces definition and query builder access
   - Hands-on exercise
