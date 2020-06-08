@@ -15,10 +15,9 @@ A Fabric project is a consolidation of rules that transform data from one or mor
 
 1. Go to the **Start Page** or click the **File** icon <img src="/articles/04_fabric_studio/images/04_05_01%20New%20Project%20icon.jpg" alt="drawing" width="25"/> and then click **New Project** to display the **New Project** dialog box.
 2. Enter the **name** of the **project** in the **Project Name** field. 
-3. Verify that the default directory displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the project’s files and definitions.
+3. Verify that the **default directory** displayed in the **Location** field is correct, if not, **Browse** and select the correct one. This directory will be used to store the project’s files and definitions.
 4. Optional: check the **Add Project to Version Control** checkbox to add the new project to SVN or Git. It is recommended to save and commit the new project as a baseline.
-Note that to avoid errors, the SVN / GIT repositories must be created in advance.
-5. Verify the default URL in the **Repository URL** field is correct, if not **Browse** and select the correct one. The **PROJECT_NAME** is automatically added to the Repository URL once added to the configuration control.
+Note that to ** default URL in the **Repository URL** field is correct, if not **Browse** and select the correct one. The **PROJECT_NAME** is automatically added to the Repository URL once added to the configuration control.
 6. Click **OK**. The project’s **Main Window** opens and the **Project Tree** is displayed in the left pane. 
 
 
