@@ -28,7 +28,7 @@ Using our example from above (Customer 360):
 Fabric will hold 35 million instances (LUI) of the Customer LUT. That is, one physical database for each customer.
 
 ## Things to Consider Before Designing an LU 
-Every Fabric Project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
+Every Fabric project starts by defining its LUs. Analyze the business requirements and understand how the consuming application will use the data. Use this information to define the different Digital Entities to implement and build an LU for each Digital Entity.
 
 
 ### General Recommendations for Designing an LU 
