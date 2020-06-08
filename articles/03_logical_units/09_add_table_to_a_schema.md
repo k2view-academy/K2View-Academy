@@ -5,7 +5,7 @@ An [LU table](/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic build
 To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), do either: 
 
 1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit an LU whereby the tables and their populations are automatically created and added to the LU schema.
-2. Drag a **DB Table** into the **LU schema** window:\
+2. Drag a **DB Table** into the **LU Schema** window:\
    a. Go to the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md). \
    b. Click **DB Connection** > [**DB interface**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).\
    c. Click **Tables** and then drag them into the **LU schema**. You can drag several tables.\
