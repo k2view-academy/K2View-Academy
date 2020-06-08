@@ -11,8 +11,7 @@ By the end of the Fabric Introduction learning item you will know:
 - What is Fabric 
 - What are Digital Entities
 - Fabric main components & key features
-- When to use Fabric
-- Fabric's real implementations through customers examples
+- Fabric use cases through customers examples
 
 
 
