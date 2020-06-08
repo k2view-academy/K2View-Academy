@@ -45,7 +45,7 @@ Download and install **TortoiseGit** or GitHub for Windows on the Fabric Studio 
 1.	Go to the **Fabric Studio** and create a [**new project**](/articles/04_fabric_studio/05_creating_a_new_project.md) and add it to **GIT**.
 2.	Add and commit the new project items to GIT: right click the **project**, click **TortoiseGit**, click **Add** and then click **Commit**. 
 
-### Logging in to SVN
+### Logging In to SVN
 
 1.	Go to the **SVN Version Control** and click the **project** to display the **Connect to Login** dialog box of the last opened project.
 2.	Enter the **Username** and **Password** and then click **OK** to open the Fabric Studio Main Window.
