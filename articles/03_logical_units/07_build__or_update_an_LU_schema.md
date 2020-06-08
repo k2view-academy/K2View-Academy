@@ -1,6 +1,6 @@
 # Using Auto Discovery to Build or Update an LU Schema
 
-The Fabric Studio [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) enables you to automatically generate or edit an LU DB Schema based on predefined database constraints. 
+The Fabric Studio [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) enables you to automatically generate or edit an LUDB schema based on predefined database constraints. 
 
 ### How Do I Define a New Logical Unit (LU) Using the Auto Discovery Wizard? 
 
