@@ -35,9 +35,9 @@ Note that to avoid errors, the SVN/Git repositories must be created in advance.
 ### How Do I Access a Fabric Project?
 
 1. Either:\
-   a. Go to the K2view Fabric Studio Start Page and click Open Project.\
-   b. Click File in the top left corner and then click Open Project to open the default Fabric Project Directory.     
-2. Go to the Project Folder (it has the name of the Project) and double click the *. k2proj file.
+   a. Go to the **K2view Fabric Studio Start Page** and click **Open Project**.\
+   b. Click **File** in the top left corner and then click **Open Project** to open the default Fabric Project Directory.     
+2. Go to the **Project Folder** (it has the name of the project) and double click the *. k2proj file.
 3. Do the following to check out a Project:\
    a. Go to the Start Page or click File and then click Checkout Project to display the Checkout Project dialog box.\
    b. The Repository Type is based on the Central Version control defined for the Project and is one of the following:
