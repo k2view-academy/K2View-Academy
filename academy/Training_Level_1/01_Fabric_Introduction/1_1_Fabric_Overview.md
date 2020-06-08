@@ -1,6 +1,6 @@
 # Fabric Introduction - Overview
 
-Congratulations on starting the first section of this course !
+Welcome to the first section of this course !
 
  
 
