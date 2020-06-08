@@ -99,7 +99,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><strong>Objects Tab</strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays the list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area to add it to the LU Schema.</p>
+<p>Displays the list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area to add it to the LU schema.</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
