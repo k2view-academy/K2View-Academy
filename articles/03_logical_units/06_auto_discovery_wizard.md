@@ -24,7 +24,7 @@ In this step you will select a DB Table and column as the Root Table and [Instan
 ![image](/articles/03_logical_units/images/03_06_wizard_02.png)
 
 
-1. Go to the **Tables** list and click the **root table** and then click the **Instance ID.**
+1. Go to the **Tables** list and click the **Root Table** and then click the **Instance ID.**
 1. Optional: In the **File Name Prefix** field, enter a **string prefix** for the LU **table names**. By default, the LU table name receives the name of the original source DB table.
 1. Optional: Uncheck **Add schema name to the generated files**. When checked, the **Schema Name** is concatenated to the **LU Table Name**.  
 1. Click **Next**.
