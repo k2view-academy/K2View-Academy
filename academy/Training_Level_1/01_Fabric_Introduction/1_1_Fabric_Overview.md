@@ -20,7 +20,7 @@ So, let’s start understanding what Fabric is all about by reading the followin
 
 Now we are acquainted with Digital Entities and Fabric's main features, let's have a look at a couple of use cases from K2View's customers: [Fabric Use Cases](academy\Training_Level_1\01_Fabric_Introduction) .
 
-We are now all set to move to the next stage and learn about Fabric's architecture 
+We are now all set and ready to move to the next stage and learn about Fabric's architecture !
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](\academy\Training_Level_1\02_Fabric_Architecture\FabricArchitectureOverview.md)
 
