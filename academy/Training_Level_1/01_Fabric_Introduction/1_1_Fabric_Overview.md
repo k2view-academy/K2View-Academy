@@ -18,8 +18,7 @@ By the end of the Fabric Introduction learning item you will know:
 
 So, let’s start understanding what Fabric is all about by clicking on Fabric Overview !
 
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Next.png)](https://github.com/k2view-academy/K2View-Academy/wiki/What-is-Fabric%3F)
 
-​                        
+ [<img align="right" width="60" height="54" src="/articles/images/Next.png">](https://github.com/k2view-academy/K2View-Academy/wiki/What-is-Fabric%3F)
 
  
