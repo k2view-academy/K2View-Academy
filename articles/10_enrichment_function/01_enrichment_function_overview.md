@@ -30,7 +30,7 @@ Enrichment functions are needed when complex logic must be applied on all LU tab
 
 - Populating an LU table based on the calculated data from other LU tables. For example, calculating the total amount of a customer's payments and updating the value in CUSTOMER LU table.
 - Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, the Fabric should notify the customer’s status to another system. 
-- Masking sensitive data on the LU tables
+- Masking sensitive data on the LU tables.
 
 
 
