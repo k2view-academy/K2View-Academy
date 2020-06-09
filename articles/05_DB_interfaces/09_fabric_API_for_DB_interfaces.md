@@ -198,7 +198,7 @@ You can iterate the result set and get a Db.Row object for each record, or alter
   * cell(int i) - returns the cell at position I (starts by zero), null if row is empty.
 * Use the isEmpty() method to know if the row has data.
 * To iterate column names and data simultaneously, use the values() method.
-* This Map cannot be changed and edited. Trying to change this object will result in a runtime exception.
+* This map cannot be changed or edited. Trying to change this object will result in a runtime exception.
 
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
