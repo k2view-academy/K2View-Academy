@@ -42,16 +42,10 @@ A global media and entertainment brand needed to improve its poor customer exper
 
 Now we have seen how Fabric helps our customers across different industries, and how significant savings are generated within days, it is time we started learning about Fabric architecture and more specifically how data flows between 3rd party systems (providing and consuming data) and Fabric:
 
-​                                
 
 
 
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Next.png)](https://github.com/k2view-academy/K2View-Academy/wiki/FabricArchitectureOverview)
+[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Next.png)](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)
 
- 
-
-
-
-​                                
 
  
