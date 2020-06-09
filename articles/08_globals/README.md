@@ -1,7 +1,6 @@
 ![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/welcome_to_wiki.png)
 
-<details>
-<summary markdown="span"><strong>Globals<strong></summary>
+<strong>Globals<strong>
 <ul>
   
 <li><a href="/articles/08_globals/01_globals_overview.md">Globals Overview</a></li>
@@ -9,4 +8,4 @@
 <li><a href="/articles/08_globals/03_set_globals.md">Set Globals</li>
 <li><a href="/articles/08_globals/04_globals_code_examples.md">Globals Code Examples</a></li>
 </ul>
-</details>
+
