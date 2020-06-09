@@ -1,6 +1,6 @@
 # Level 1 Training  Syllabus
 
-### ![](/academy/00_Training_Level_1/images/syllabus.png)Syllabus
+### ![](/academy/Training_Level_1/01_Fabric_Introduction/images/syllabus.png) Syllabus
 
 #### **DAY 1 – Morning**
 
