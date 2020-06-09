@@ -27,7 +27,7 @@ T
 <p><strong>Parameters<strong></p>
 </td>
 <td width="500">
-<p>Settings of the selected sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below &nbsp;</a>.</p>
+<p>Settings of the selected sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below. &nbsp;</a></p>
 </td>
 </tr>
 <tr>
