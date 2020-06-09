@@ -2,18 +2,18 @@
 
 ### What Is a Root Function?
 
-A Root Function is a specific type of Fabric function that is used as a Source Object to trigger the [Table Population](/articles/07_table_population/01_table_population_overview.md) mechanism.
+A Root function is a specific type of Fabric function that is used as a Source Object to trigger the [Table Population](/articles/07_table_population/01_table_population_overview.md) mechanism.
 There are two types of **Source Objects** for a Table Population object:
 * DB Query, (default) an SQL SELECT query with one or several tables that is executed on a predefined [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
-* Root Function, which can run various SQL SELECT queries and execute complex logic including data manipulations and calculations using Java code. Data returned by a Root Function is populated into the target LU Table of the Table Population object. 
+* Root function, which can run various SQL SELECT queries and execute complex logic including data manipulations and calculations using Java code. Data returned by a Root function is populated into the target LU table of the Table Population object. 
 
-A Root Function is used when a table population requires complex logic. For example, when a population requires data from multiple DB interfaces or non-DB interfaces. 
+A Root function is used when a Table Population requires complex logic. For example, when a population requires data from multiple DB interfaces or non-DB interfaces. 
 
 [Click for more information about using Root Functions in a Population.](/articles/07_table_population/02_source_object_types.md#db-query-vs-root-function-comparison-analysis)
 
 ### How Can I Create or Edit a Root Function?
-There are several ways to create a Root Function: 
-* In the LU Schema window, by using the **New Table from SQL Based Root Function** option. Using this option, a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md), new population and new Root Function are created by the Fabric Studio. The Root Function’s code is generated based on the selected SQL. It is recommended to edit the generated function and add a **WHERE** clause to the generated SQL to retrieve only the relevant data of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui).
+There are several ways to create a Root function: 
+* In the LU Schema window, by using the **New Table from SQL Based Root Function** option. Using this option, a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md), new population and new Root Function are created by the Fabric Studio. The Root function’s code is generated based on the selected SQL. It is recommended to edit the generated function and add a **WHERE** clause to the generated SQL to retrieve only the relevant data of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui).
 * Dragging the LU Table from the DB Objects tab in the LU Schema window and selecting **Create Table Based Root** Function. A new LU Table, new population and new Root Function and its generated code are created by the Fabric Studio. 
 * Creating a new Table Population map, and then selecting **Create a New Root Function** from the **Objects tab** in the Table Population window. Using this option, the **New Function** window opens where you can write the required business logic.
 * Creating a new function from the Project Tree.
