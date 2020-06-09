@@ -1,8 +1,8 @@
 # Navigating an LU Schema
 
 When creating or editing a [Logical Unit schema](/articles/03_logical_units/03_LU_schema_window.md) the following options are used to navigate, configure and display information:
-* [Diagram Outline](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline) tab, a representation of the LU Schema table’s list.
-* [Navigation pane](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) located in the right corner of the working area.
+* [Diagram Outline](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline) tab, a representation of the LU schema table’s list.
+* [Navigation pane](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) located in the right corner of the working area.
 * LU working area, where view options can be set.
 
 [Click for more information about the Diagram Outline and Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
@@ -13,14 +13,14 @@ The Diagram Outline displays an overview of the LU structure and can be used to 
 
 ![image](/articles/12_LU_navigation/images/10_01_01.jpg)
 
-To search for an LU table in an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md):
+To search for an LU table in an [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 1.	Open the **LU Schema** window. 
 2.	Click the **Diagram Outline** tab in the right panel.
 3.	In the **Search** field, type the **name** of the **table** or **column** and then click it  in the displayed list. The table or column is highlighted with a green border.
 
 ### What is the Navigation Pane? 
  
-The Navigation pane in the right corner of an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a Schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
+The Navigation pane in the right corner of an [LU schema](/articles/03_logical_units/03_LU_schema_window.md) is used to move between the different areas of a Schema. This is useful when looking at large Logical Units with many tables or hierarchy levels.
 
 ![image](/articles/12_LU_navigation/images/10_01_02.jpg)
 
