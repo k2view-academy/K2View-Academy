@@ -1,7 +1,6 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
-<details>
-<summary markdown="span"><strong>Sync LU Instance<strong></summary>
+<strong>Sync LU Instance<strong>
 <ul>
   
 <li><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync LUI Overview</a></li>
@@ -16,4 +15,4 @@
 <li><a href="/articles/14_sync_LU_instance/10_sync_behavior_summary.md">Sync Behavior Summary</a></li>
 
 </ul>
-</details>
+
