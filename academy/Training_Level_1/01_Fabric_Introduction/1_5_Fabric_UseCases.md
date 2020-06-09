@@ -40,7 +40,7 @@ A global media and entertainment brand needed to improve its poor customer exper
 
  
 
-Now we have seen how Fabric helps our customers across different industries, and how significant savings are generated within days, it is time we started learning about Fabric architecture and more specifically how data flows between 3rd party systems (providing and consuming data) and Fabric:
+Now we have seen how Fabric helps our customers across different industries, and how significant savings are generated within days, it is time we started learning about Fabric architecture and more specifically how data flows between 3rd party systems (providing and consuming data) and Fabric
 
 
 
