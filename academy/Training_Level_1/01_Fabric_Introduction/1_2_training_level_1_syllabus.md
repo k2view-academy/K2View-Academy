@@ -47,7 +47,7 @@
   - Population tables mapping
   - Hands-on exercises
   - Functions development
-    - Built-in, root, DB, enrichment
+    - Built-in, root, DB & enrichment functions 
   - Hands-on exercises
 - LU enhancement (2)
   - Lookup, translation tables & Global variables
