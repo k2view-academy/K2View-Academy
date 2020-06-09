@@ -2,7 +2,7 @@
 
 ### What Is a Root Function?
 
-A Root function is a specific type of Fabric function that is used as a Source Object to trigger the [Table Population](/articles/07_table_population/01_table_population_overview.md) mechanism.
+A Root function is a specific type of Fabric function that is used as a source object to trigger the [Table Population](/articles/07_table_population/01_table_population_overview.md) mechanism.
 There are two types of **Source Objects** for a Table Population object:
 * DB Query, (default) an SQL SELECT query with one or several tables that is executed on a predefined [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 * Root function, which can run various SQL SELECT queries and execute complex logic including data manipulations and calculations using Java code. Data returned by a Root function is populated into the target LU table of the Table Population object. 
