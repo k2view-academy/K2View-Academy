@@ -1,6 +1,6 @@
 # Sync - Ignore Source Exception
 
-### How do I Set Fabric to Ignore a Source Exception when Running a Sync on an LU Instance?
+### How Do I Set Fabric to Ignore a Source Exception when Running a Sync on an LU Instance?
 
 The Sync process retrieves source data from source systems. By default, an error message is displayed when Fabric fails to connect to a data source or if a data source is unavailable.
 
