@@ -25,10 +25,10 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Function Type</strong></p>
 </td>
 <td width="370px">
-<p>Regular function</p>
+<p>Regular function.</p>
 </td>
 <td width="370px">
-<p>Root function</p>
+<p>Root function.</p>
 </td>
 </tr>
 <tr>
