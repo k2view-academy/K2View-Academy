@@ -4,14 +4,14 @@ By default, a Sync transaction is not limited by time. However, you can limit th
 If a timeout is set and the sync exceeds the predefined timeout, Fabric rollbacks the changes and throws the following exception: Timeout occurred.\
 A sync timeout can be defined either per session or at an LU Schema level.
 ![image](/articles/14_sync_LU_instance/images/6_7_sync_timeout_levels.png)
-### How do I Set the Sync Timeout on an LU Schema?
+### How Do I Set the Sync Timeout On an LU Schema?
 The Sync property in the LU Schema Properties tab has the following setting:
 * Timeout (sec) – Set a timeout in seconds for syncing LUI.\
 By default, this field = 0 whereby no timeout is defined for the LU schema, however it can be edited so that the Sync Timeout is defined in seconds.
 
 [Click for more information about Sync Properties.](/articles/14_sync_LU_instance/04_sync_methods.md)
 
-### How do I Set The Sync Timeout on a Session Level?
+### How Do I Set The Sync Timeout On a Session Level?
 Use the following command to override the Timeout set for the LU Schema:
 * set sync_timeout
 
