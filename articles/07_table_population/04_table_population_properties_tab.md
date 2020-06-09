@@ -8,7 +8,7 @@ The **Properties Tab** in the [Table Population](/articles/07_table_population/0
 
 Since each object has different properties, the tab’s layout is updated to display them when an object is selected in the map. 
 
-The Properties include:
+The properties include:
 *	**Basic information** about the Population object. For example, Name or ID.
 *	**Specific properties** of each object. For example, sync method of target LU table.
 *	**Link to open the object**. For example, to edit the query or the function.
