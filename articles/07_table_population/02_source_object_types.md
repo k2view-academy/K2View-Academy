@@ -104,7 +104,7 @@ The comparison below analyzes the differences and the similarities between two d
 <p><strong>Access to LU tables</strong></p>
 </td>
 <td width="259">
-<p>Can access LU tables.</p>
+<p>Can access LU tables.</p> 
 </td>
 <td width="251">
 <p>Can access LU tables.</p>
