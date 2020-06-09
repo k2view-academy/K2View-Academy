@@ -1,8 +1,7 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
 
-<details>
-<summary markdown="span"><strong>DB Interfaces<strong></summary>
+<strong>DB Interfaces<strong>
 <ul>
   
 <li><a href="/articles/05_DB_interfaces/01_interfaces_overview.md"> Interfaces Overview</a></li>
@@ -16,7 +15,7 @@
 <li><a href="/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md">Fabric API for DB Interface</a></li>
 
 </ul>
-</details>
+
 
 
 
