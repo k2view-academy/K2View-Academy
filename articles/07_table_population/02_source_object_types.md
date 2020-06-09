@@ -112,7 +112,7 @@ The comparison below analyzes the differences and the similarities between two d
 </tr>
 <tr>
 <td width="95">
-<p><strong>Automatic relation to the parent ID</strong></p>
+<p><strong>Automatic relation to the Parent ID</strong></p>
 </td>
 <td width="259">
 <p>The DB query automatically filters the selected records based on the link to the parent LU table. The Join process to the parent table is invisible in the DB query.</p>
