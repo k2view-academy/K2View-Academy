@@ -6,7 +6,7 @@ The Query Builder window has two tabs:
 * Results, which displays the results of the executed SQL Query. 
 
 Note: 
-The [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has a [Schema Filter](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#schema-filter) setting which enables filtering the DB Schema’s list that is used by the Query Builder and the [DB Queries](/articles/07_table_population/01_table_population_overview.md) in the DB Interface.
+The [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has a [Schema Filter](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#schema-filter) setting which enables filtering the DB schema’s list that is used by the Query Builder and the [DB queries](/articles/07_table_population/01_table_population_overview.md) in the DB interface.
 
 ### Opening the Query Builder Window
  The Query Builder window can be opened in several ways. Select one of the following options: 
