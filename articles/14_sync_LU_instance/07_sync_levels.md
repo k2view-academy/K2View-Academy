@@ -1,6 +1,6 @@
 # Sync Method Levels
 
-### What are Sync Method Levels?
+### What Are Sync Method Levels?
 
 [Sync properties](/articles/14_sync_LU_instance/04_sync_methods.md) can be defined on [LU Schema,](/articles/03_logical_units/03_LU_schema_window.md) [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. By default, LU Tables, Table Population objects and Enrichment Functions inherit the Sync properties defined for the LU Schema.\
 The Sync properties of an LU Schema can be overridden, as follows:
