@@ -16,7 +16,7 @@ The steps which are unique for Enrichment functions are as follows:
 
 ### How Do I Attach an Enrichment Function to an LU Table?
 
-An Enrichment function must be attached to one or more [LU Tables](articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](articles/03_logical_units/03_LU_schema_window.md) to be executed during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md). 
+An Enrichment function must be attached to one or more [LU tables](articles/06_LU_tables/01_LU_tables_overview.md) in the [LU schema](articles/03_logical_units/03_LU_schema_window.md) to be executed during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md). 
 
 Do the following:
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
@@ -31,7 +31,7 @@ Do the following:
 
 4. Select the function from the list. 
 
-5. (Optional) To add more **Enrichment functions** to the same LU Table, click **Add** again and select the additional functions. Define the Enrichment functions execution order using the **arrows** next to the **function names** in the **Editor**.
+5. (Optional) To add more **Enrichment functions** to the same LU table, click **Add** again and select the additional functions. Define the Enrichment functions execution order using the **arrows** next to the **function names** in the **Editor**.
 
    ![10_03_create_enrichment_3](/articles/10_enrichment_function/images/10_03_create_enrichment_3.PNG)
 
@@ -39,13 +39,13 @@ Do the following:
 
 7. **Save** the table.
 
-8. Open the **LU Schema > Enrichment Order** tab to verify that the enrichment order of all the Enrichment functions in the LU is correct. Note that you can [edit the enrichment order](/articles/03_logical_units/14_edit%20enrichment%20order.md#edit-enrichment-order) on the LU Schema level.
+8. Open the **LU Schema > Enrichment Order** tab to verify that the enrichment order of all the Enrichment functions in the LU is correct. Note that you can [edit the enrichment order](/articles/03_logical_units/14_edit%20enrichment%20order.md#edit-enrichment-order) on the LU schema level.
 
 
 
 ### How Do I Remove an Enrichment Function from an LU Table? 
 
-To remove an Enrichment function from the LU Table, do the following:
+To remove an Enrichment function from the LU table, do the following:
 
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
