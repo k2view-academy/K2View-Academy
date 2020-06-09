@@ -22,7 +22,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>db(String interfaceName)</strong></p>
 </td>
 <td width="417">
-<p>Obtain the Db object to connect the given logical interface name which input must be populated by a DB interface defined in Fabric Studio.</p>
+<p>Obtain the Db object to connect the given logical interface name whose input must be populated by a DB interface defined in Fabric Studio.</p>
 </td>
 </tr>
 <tr>
