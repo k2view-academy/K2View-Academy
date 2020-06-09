@@ -42,7 +42,7 @@ To delete a **Constant**, select it in the Table Population and press **Delete**
 
 ### Lookup Tables
 
-[Lookup Tables](/articles/07_table_population/11_lookup_tables.md) can be added to a Table Population map to get additional information about each record retrieved from the source object. A lookup can retrieve data from a Source DB table, an [LU Table] or from a [Reference] table. 
+[Lookup tables](/articles/07_table_population/11_lookup_tables.md) can be added to a Table Population map to get additional information about each record retrieved from the source object. A lookup can retrieve data from a Source DB table, an [LU Table] or from a [Reference] table. 
 
 For improved performance, it is recommended to create lookups based on an LU table and not a DB table. The reason is that an LU table is usually much smaller than a Source DB table since it includes only data relevant and/or applicable for an LU. In addition, the LU table is kept in the Fabric memory and is faster to retrieve. 
 
