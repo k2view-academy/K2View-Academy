@@ -45,7 +45,7 @@ Now we have seen how Fabric helps our customers across different industries, and
 
 
 
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Next.png)](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)
+[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Previous.png)](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)
 
 
  
