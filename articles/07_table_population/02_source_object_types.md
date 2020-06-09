@@ -1,8 +1,8 @@
 # Table Population - Source Object Types
 
 There are two types of **Source Objects** in a Table Population object:
-*	**DB Query**, (default) an SQL Select query with one or several tables that is executed on a predefined [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
-*	[Root Function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), a Fabric Java function that can execute an SQL Select query and perform data manipulations and calculations.
+*	**DB query**, (default) an SQL Select query with one or several tables that is executed on a predefined [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
+*	[Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), a Fabric Java function that can execute an SQL Select query and perform data manipulations and calculations.
 
 Note that a Table Population can extract data from other [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md)  in the same Logical Unit. It is recommended to always check the [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU tables are poplated before the target LU tables. For example, the SUBSCRIBER LU table must be populated before the OFFER LU table to enable populating the OFFER LU table based on data from the SUBSCRIBER LU table.
 
@@ -115,7 +115,7 @@ The comparison below analyzes the differences and the similarities between two d
 <p><strong>Automatic relation to the parent ID</strong></p>
 </td>
 <td width="259">
-<p>The DB query automatically filters the selected records based on the link to the parent LU TableThe Join process to the parent table is invisible in the DB query.</p>
+<p>The DB query automatically filters the selected records based on the link to the parent LU table. The Join process to the parent table is invisible in the DB query.</p>
 <p>For example:</p>
   <ul>
 <li>The parent table of ADDRESS LU is CUSTOMER and the relationship is via CUSTOMER_ID.</li>
@@ -144,7 +144,7 @@ The comparison below analyzes the differences and the similarities between two d
 <p><strong>LUDB population performance</strong></p>
 </td>
 <td width="259">
-<p>The DB query has a Grouping mechanism that runs a SELECT statement for each group of 1,000 parent IDs. The formula for the number of times the parent data is accessed is: <strong>Round(number of parents ID/1,000) + 1</strong></p>
+<p>The DB query has a Grouping mechanism that runs a SELECT statement for each group of 1,000 Parent IDs. The formula for the number of times the parent data is accessed is: <strong>Round(number of parents ID/1,000) + 1</strong></p>
 <p>For example:</p>
 <p>There are 1,500 subscribers for Instance ID = 1. Each subscriber has services.</p>
 <p>To select the subscriber&rsquo;s services, the DB Query runs two SELECT statements from the source DB:</p>
