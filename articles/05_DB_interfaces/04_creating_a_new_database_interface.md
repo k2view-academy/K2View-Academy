@@ -38,7 +38,7 @@ Click for more information about Generic DB Solution, DB Drivers Jars in Fabric 
 The DB Interface window enables you to define DB Interfaces for your project. By default, new DB interfaces are created in the Generic DB Interface format. 
 
 
-_Generic Interface Definition_
+**Generic Interface Definition**
 
 ![image](/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
 
