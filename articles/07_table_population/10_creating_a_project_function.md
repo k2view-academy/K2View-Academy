@@ -1,6 +1,6 @@
 # Creating a Project Function
 
-### How Can I Create a Project Function?
+### How Do I Create a Project Function?
 
 Fabric Project functions are user-defined Java functions that are added to the project implementation to perform complex data manipulations or to execute queries on a specific [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id). 
 In Fabric Studio functions can be edited either by opening the function’s code from the Project Tree, opening the specific category’s **Logic.java** source file or opening the function in [**IntelliJ** - an Integrated Development Environment (IDE)] for developing computer software. 
@@ -55,7 +55,7 @@ When multiple parameters need to be uploaded, they can be loaded using the Bulk 
 
 ![image](/articles/07_table_population/images/07_10_04_data_type.png)
 
-### How Do I Automatically Define aFunction's Parameters?
+### How Do I Automatically Define a Function's Parameters?
 
 Input / Output settings can be automatically defined based on DB objects either from a source DB or LU objects using the Objects / Database pane of the Function Manager window.
 1.	Go to the **Objects / Database** pane (left side) and click the **Database** tab.
