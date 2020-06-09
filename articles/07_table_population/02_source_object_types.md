@@ -155,7 +155,7 @@ The comparison below analyzes the differences and the similarities between two d
 </td>
 <td width="251">
 <p>The Root function does not have a Grouping mechanism and therefore executes a SELECT statement for each Parent ID.</p>
-<p>For example:</p>
+<p>For example: </p>
 <p>There are 1,500 subscribers for Instance ID = 1. Each subscriber has services.</p>
 <p>To select the subscriber&rsquo;s services, the Root function runs a SELECT query for each of the 1,500 subscribers to retrieve its services.</p>
 </td>
