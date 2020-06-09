@@ -1,12 +1,12 @@
 # Source Analysis Guidelines
 
-All Fabric Projects include data sources which transfer data through interfaces. Therefore, when creating a Fabric project, the first step is to analyze the data sources needed for your Project.
+All Fabric projects include data sources which transfer data through interfaces. Therefore, when creating a Fabric project, the first step is to analyze the data sources needed for your project.
 Do the following:
 * Identify existing data sources and analyze the data they store.
 * Define the interfaces for the data sources required for the specific implementation. 
 
 ### What Do I Need to Know Before Creating a New Interface?
-1. Identify which source systems store [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) information in your Project. 
+1. Identify which source systems store [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) information in your project. 
 2. Check the following for each identified legacy system:
     * System name: For example, CRM.
     * Description: For example, Customer Relationship Management.
@@ -23,9 +23,9 @@ Do the following:
     * Protocol. For example, SFTP or HTTP.
     * Format. For example, JSON.
     * For file-based integration, check the location, size and frequency of the files.
-5. Evaluate the requirements for Project’s hardware sizing based on the expected data volumes.
+5. Evaluate the requirements for the project’s hardware sizing based on the expected data volumes.
 6. Identify the relationships in each system:
-    * Which source tables are related to the Digital Entities in your Project?
+    * Which source tables are related to the Digital Entities in your project?
     * Check for ERD / data model documents for a better understanding of the relationships between the source tables.
     * Relationship of the source system to other systems. For example, check if the Billing system holds CRM Customer ID. 
     * Map duplicated information across several legacy systems and check which system is the data master.
