@@ -1,7 +1,7 @@
 # Enrichment Functions - Code Examples
 ### Simple Example of an Enrichment Function that Populates a Computed Field
 
-Use an Enrichment function to validate the retrieved data and update the computed field in an LU Schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
+Use an Enrichment function to validate the retrieved data and update the computed field in an LU schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
 
 1. Create an **Enrichment function**.
  <pre><code>
