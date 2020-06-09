@@ -132,16 +132,5 @@ Implementers can use Fabric to define and run:
 
  
 
-#### Question 9: Fabric functions
-
- In Fabric you can create functions that can be used as: 
-
-\-     The root of population maps.
-
-\-     New SQL query functions.
-
-\-     Web-Services.
-
-\-     All the above.
 
 [![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Previous.png)](/academy/Training_Level_1/02_Fabric_Architecture/2_1_FabricArchitectureOverview.md)
