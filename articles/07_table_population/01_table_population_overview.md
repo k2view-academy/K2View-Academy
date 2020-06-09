@@ -98,7 +98,7 @@ The Working Area includes:
 </td>
 </tr>
 </tbody>
-</table>
+</table> 
 
 [Click for more information about Table Population Transformation Rules.](/articles/07_table_population/06_table_population_transformation_rules.md)
 
