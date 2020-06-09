@@ -45,14 +45,14 @@ The DB Interface window enables you to define DB Interfaces for your project. By
 Interfaces created using previous Fabric versions remain as is and can be converted to the Generic interface.
  
 
-_Previous Fabric Version Interface Definition_
+**Previous Fabric Version Interface Definition**
 
 The following screenshot displays an Interface configuration in an older format which uses ADO.NET/ODBC drivers.
 
 ![image](/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
 
 
-_When are Interfaces Created in an Older Format in the Current Fabric Version?_
+**When are Interfaces Created in an Older Format in the Current Fabric Version?**
 
 In the current Fabric version, if the Project already has at least one interface created in the older format, Fabric preserves this interface format. All new interfaces of the same type are also created in the same format (ADO.NET/ODBC drivers) by default.
 
