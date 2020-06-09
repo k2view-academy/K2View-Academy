@@ -103,7 +103,7 @@ The Working Area includes:
 [Click for more information about Table Population Transformation Rules.](/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Properties Tab
-The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU table or a translation. Note that some properties are editable. 
+The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU table or a translation. Note that some properties are editable.  
 
 [Click for more information about Table Population Properties Tab.](/articles/07_table_population/04_table_population_properties_tab.md)
 
