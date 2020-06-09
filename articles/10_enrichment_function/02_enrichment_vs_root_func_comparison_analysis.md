@@ -47,7 +47,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Execution Time</strong></p>
 </td>
 <td width="370px">
-<p>Executed after populating all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Tables</a> in the <a hef="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a>.</p>
+<p>Executed after populating all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables</a> in the <a hef="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a>.</p>
 </td>
 <td width="370px">
 <p>Upon <a href="/articles/07_table_population/01_table_population_overview.md">LU Table population.</a></p>
@@ -61,7 +61,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p>Performs insert, update, or delete of an LU Table's data after it has already been populated from a source object.</p>
 </td>
 <td width="370px">
-<p>Populates the LU Table.</p>
+<p>Populates the LU table.</p>
 </td>
 </tr>
 <tr>
@@ -91,10 +91,10 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Access to LU Tables</strong></p>
 </td>
 <td width="370px">
-<p>Can extract data from any LU Table within the Logical Unit since it is executed after the population of all LU Tables.</p>
+<p>Can extract data from any LU table within the Logical Unit since it is executed after the population of all LU tables.</p>
 </td>
 <td width="370px">
-<p>Can access other LU Tables if their population execution order is smaller than the execution order of the current population.</p>
+<p>Can access other LU tables if their population execution order is smaller than the execution order of the current population.</p>
 </td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p class="CellBodyLeft">The number of executions of a Root function equals the number of records in the parent table.</p>
 <p>For example:</p>
 <p>There are 1,500 subscribers for Customer 1. Each subscriber has multiple services.</p>
-<p>The Root function on the Services LU Table runs 1,500 times and selects the services of each subscriber separately.</p>
+<p>The Root function on the Services LU table runs 1,500 times and selects the services of each subscriber separately.</p>
 </td>
 </tr>
 </tbody>
