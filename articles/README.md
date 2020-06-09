@@ -78,23 +78,27 @@
 <details>
 <summary markdown="span"><strong>LU Tables<strong></summary>
 <ul>
-  
+        <li><a href="/articles/06_LU_tables/README.md">LU Tables</a></li>
+        <ul>
 <li><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Tables Overview</a></li>
 <li><a href="/articles/06_LU_tables/02_create_an_LU_table.md">Create an LU Table</li>
 <li><a href="/articles/06_LU_tables/03_table_indexes.md">Table Indexes</li>
 <li><a href="/articles/06_LU_tables/04_table_properties.md">Table Properties</a></li>
 </ul>
+        </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>Table Population<strong></summary>
+
 <ul>
-  
+        <li><a href=/articles/07_table_population/README.md">Table Population</a></li>
+                <ul>
 <li><a href="/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
 <li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</li>
 <li><a href="/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</li>
 <li><a href="/articles/07_table_population/04_table_population_properties_tab.md">Table Population Properties Tab</a></li>
-<li><a href="/articles/07_table_population/05_table_population_mode.md">Table Population Mode</a></li>
+<li><a href="/articles/07_table_population/05_table_population_mode.md">Table Population Mode</a></li
 <li><a href="/articles/07_table_population/06_table_population_transformation_rules.md">Table Population Transformation Rules</a></li>
 <li><a href="/articles/07_table_population/07_fabric_built_in_functions.md">Fabric Built-in Functions</a></li>
 <li><a href="/articles/07_table_population/08_project_functions.md">Project Functions</a></li>
@@ -106,63 +110,78 @@
 <li><a href="/articles/07_table_population/12_table_population_diagram_outline.md">Table Population Diagram Outline</a></li>
 <li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
 </ul>
+                </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>Globals<strong></summary>
 <ul>
-  
+        <li><a href="/articles/08_globals/README.md">Globals</a></li>
+        <ul>
 <li><a href="/articles/08_globals/01_globals_overview.md">Globals Overview</a></li>
 <li><a href="/articles/08_globals/02_globals_use_cases.md">Globals Use Cases</li>
 <li><a href="/articles/08_globals/03_set_globals.md">Set Globals</li>
 <li><a href="/articles/08_globals/04_globals_code_examples.md">Globals Code Examples</a></li>
-</ul>
+        </ul>
+        </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>Translations<strong></summary>
 <ul>
+        <li><a href="/articles/09_translations/README.md">Translations</a></li>
+        <ul>
   
 <li><a href="/articles/09_translations/01_translations_overview_and_use_cases.md">Translations Overview</a></li>
 <li><a href="/articles/09_translations/02_creating_a_new_translation_in_fabric.md">Creating a New Translation in Fabric</a></li>
 <li><a href="/articles/09_translations/03_data_population_in_a_translation.md">Data Population in Translation</a></li>
 <li><a href="/articles/09_translations/04_using_translations_in_fabric.md">Using Translations in Fabric</a></li>
 <li><a href="/articles/09_translations/05_translations_code_examples.md">Translations Code Examples</a></li>
+</ul>
+</ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>Enrichment Functions<strong></summary>
 <ul>
+        <li><a href="/articles/10_enrichment_function/README.md">Enrichment Functions</a></li>
+        <ul>
 <li><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Function Overview</a></li>
 <li><a href="/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md">Enrichment vs. Root Function - Comparison Analysis</a></li>
 <li><a href="/articles/10_enrichment_function/03_create_edit_enrichment_function.md">Create / Edit an Enrichment Function</a></li>
 <li><a href="/articles/10_enrichment_function/04_code_examples_enrichment_function.md">Code Examples of Enrichment Function</a></li>
 </ul>
+        </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>LU Navigation<strong></summary>
 <ul>
-  
+        <li><a href="/articles/12_LU_navigation/README.md">LU Navigation</a></li>
+        <ul>
 <li><a href="/articles/12_LU_navigation/01_Navigating_an_LU_schema.md">Navigating an LU Schema</a></li>
 <li><a href="/articles/12_LU_navigation/02_searching_a_fabric_project.md">Searching a Fabric Project</a></li>
 </ul>
+        </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>LUDB Viewer and Studio Debug Capabilities<strong></summary>
 <ul>
-  
+  <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/README.md">LUDB Viewer and Studio Debug Capabilities</a></li>
+        <ul>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></li>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Studio Log Files</a></li>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md">Debug Table Population</a></li>
 </ul>
+        </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>Sync LU Instance<strong></summary>
 <ul>
-  
+        <li><a href="/articles/14_sync_LU_instance/README.md">Sync LU Instance</a></li>
+        <ul>
 <li><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync LUI Overview</a></li>
 <li><a href="/articles/14_sync_LU_instance/02_sync_modes.md">Sync Modes</li>
 <li><a href="/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md">Sync- Ignore Source Exception</li>
@@ -173,17 +192,20 @@
 <li><a href="/articles/14_sync_LU_instance/08_sync_timeout.md">Sync Timeout</a></li>
 <li><a href="/articles/14_sync_LU_instance/09_skip_sync.md">Skip Sync</a></li>
 <li><a href="/articles/14_sync_LU_instance/10_sync_behavior_summary.md">Sync Behavior Summary</a></li>
-
+        </ul>
 </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>Fabric Deployment<strong></summary>
 <ul>
+        <li><a href="/articles/16_deploy_fabric/README.md">Deploy Fabric</a></li>
+        <ul>
 <li><a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">Deploy Fabric Project</a></li>
 <li><a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">Deploy from Fabric Studio</a></li>
 <li><a href="/articles/16_deploy_fabric/03_offline_deploy.md">Offline Deploy</a></li>
 </ul>
+        </ul>
 </details>
 
 
