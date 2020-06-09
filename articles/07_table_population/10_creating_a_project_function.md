@@ -23,7 +23,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
     *	Click Save to display the **New Item** dialog box. 
     *	Complete the **Name** field and then click **OK**.
     
-### How Do I Manually Define Function's Parameters? 
+### How Do I Manually Define a Function's Parameters? 
 
 The Function Manager window displays the following panes on the right of the window:
 *	Input Parameters.
@@ -39,7 +39,7 @@ To define Input and Output settings manually, do the following:
 3.	Optional: type comments in the **Comment** field.
 
 
-### Bulk Load Parameters to a Function Manually
+### Bulk Load Parameters To a Function Manually
 
 When multiple parameters need to be uploaded, they can be loaded using the Bulk Load Parameters option. 
 1.	Right click the **Input / Output Parameters** pane to display the **Input / Output Parameters** dialog box. 
@@ -55,7 +55,7 @@ When multiple parameters need to be uploaded, they can be loaded using the Bulk 
 
 ![image](/articles/07_table_population/images/07_10_04_data_type.png)
 
-### How Do I Automatically Define Function's Parameters?
+### How Do I Automatically Define aFunction's Parameters?
 
 Input / Output settings can be automatically defined based on DB objects either from a source DB or LU objects using the Objects / Database pane of the Function Manager window.
 1.	Go to the **Objects / Database** pane (left side) and click the **Database** tab.
@@ -65,7 +65,7 @@ Input / Output settings can be automatically defined based on DB objects either 
 
 ![image](/articles/07_table_population/images/07_10_05_datatype2.png)
 
-### How Do I Update Function's Parameters?
+### How Do I Update a Function's Parameters?
 
 1.	Go to the **Function Manager** window.
 2.	Click the **Parameter** in the **Parameters List** to edit the parameter’s **Name**, **Type** and **Comments** fields. The updated Input / Output parameter names are automatically applied to all occurrences of the parameter in the function’s Java code.
