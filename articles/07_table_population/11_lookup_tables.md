@@ -1,10 +1,10 @@
 # Lookup Tables
 
-A **Lookup Table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference Table]. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
+A **Lookup table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference table]. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
 *	**Input** fields are used for the WHERE clause of an SQL statement. 
 *	**Output** fields are used for the SELECT statement of an SQL statement.
 
-The input in a Lookup table is optional if the Lookup has only one record. For example, when a Lookup is created based on the Customer LU Table and the Customer is the root table of the LU. In this case the Customer LU Table will only have one record. 
+The input in a Lookup table is optional if the Lookup has only one record. For example, when a Lookup is created based on the Customer LU table and the Customer is the Root Table of the LU. In this case the Customer LU table will only have one record. 
 
 ### How Can I Add a New Lookup To a Table Population?
 
@@ -28,9 +28,9 @@ Click **Database** to display the list of tables, select the table and drag it t
 
 
 **Notes**  
-*	It is recommended to create a Lookup based on an LU Table and not a DB Table in order to improve performance. The reason is that an LU Table is usually much smaller than the source DB table, since it includes only the data which is relevant / applicable for an LU. In addition, the LU Table is kept in the Fabric memory and is faster to retrieve. 
-*	It is recommended to create an [index  on the LU Table] for the Input fields in order to improve performance of the Lookup table’s Search.
-*	When creating a Lookup based on an LU Table, check that the Lookup object is populated **before** the current table. Which means that the table has a higher [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) than the Lookup object.
+*	It is recommended to create a Lookup based on an LU table and not a DB table in order to improve performance. The reason is that an LU table is usually much smaller than the source DB table, since it includes only the data which is relevant / applicable for an LU. In addition, the LU table is kept in the Fabric memory and is faster to retrieve. 
+*	It is recommended to create an [index  on the LU table] for the Input fields in order to improve performance of the Lookup table’s Search.
+*	When creating a Lookup based on an LU table, check that the Lookup object is populated **before** the current table. Which means that the table has a higher [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) than the Lookup object.
 
 ### Lookup Properties Tab
 
@@ -69,7 +69,7 @@ The following information is displayed in the Lookup Properties:
 <p>Dropdown list of Fabric actions when the Lookup value is not found:</p>
 <ul>
 <li><strong>Reject Record</strong> (default), the record is rejected and is not inserted into the target table.</li>
-<li><strong>Reject Instance</strong>, (for critical errors), the entire LUI is rejected and is not loaded into the Fabric database. For example, you can define that if no Billing Address is found for a Customer when the Customer is a root table of the LU to reject an entire Customer instance.</li>
+<li><strong>Reject Instance</strong>, (for critical errors), the entire LUI is rejected and is not loaded into the Fabric database. For example, you can define that if no Billing Address is found for a Customer when the Customer is a Root Table of the LU to reject an entire Customer instance.</li>
 <li><strong>Continue</strong>, ignore an error and load the record. Used when the lookup value is defined as optional in the target table.</li>
 <li><strong>Report and Continue</strong>, reports a message to Fabric log file and continues with the load. You can check the issue later using the reported message.</li>
 </ul>
