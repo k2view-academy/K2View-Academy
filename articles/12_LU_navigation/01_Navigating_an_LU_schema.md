@@ -175,4 +175,4 @@ In the LU working area right click anywhere to display a context menu with the f
 </tbody>
 </table>
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/12_LU_navigation/02_searching_a_fabric_project.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/12_LU_navigation/02_searching_a_fabric_project.md) 
