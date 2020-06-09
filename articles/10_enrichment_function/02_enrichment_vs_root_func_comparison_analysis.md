@@ -58,7 +58,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Operation</strong></p>
 </td>
 <td width="370px">
-<p>Performs insert, update, or delete of an LU Table's data after it has already been populated from a source object.</p>
+<p>Performs insert, update, or delete of an LU table's data after it has already been populated from a source object.</p>
 </td>
 <td width="370px">
 <p>Populates the LU table.</p>
@@ -69,7 +69,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Number of Objects</strong></p>
 </td>
 <td width="370px">
-<p>Multiple Enrichment functions can be attached to an LU Table. One Enrichment function can be attached to multiple LU Tables.</p>
+<p>Multiple Enrichment functions can be attached to an LU table. One Enrichment function can be attached to multiple LU tables.</p>
 </td>
 <td width="370px">
 <p>Only one Root function per one Table Population object.</p>
@@ -102,7 +102,7 @@ The following table displays the comparison analysis between Enrichment and Root
 <p><strong>Number of Executions</strong></p>
 </td>
 <td width="370px">
-<p>The Enrichment function runs once per LU Table and LUI.&nbsp;</p>
+<p>The Enrichment function runs once per LU table and LUI.&nbsp;</p>
 <p>For example:</p>
 <p>There are 1,500 subscribers for Customer 1. Each subscriber has multiple services.</p>
 <p>The Enrichment function runs once and updates all the services of Customer 1.</p>
