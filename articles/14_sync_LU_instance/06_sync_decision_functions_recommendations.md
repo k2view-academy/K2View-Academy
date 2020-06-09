@@ -9,7 +9,7 @@ When a Decision function returns False it always skips a sync. Therefore, when w
 <p><strong>Check</strong></p>
 </td>
 <td width="700pxl">
-<p>Should the Sync on the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> be skipped?</p>
+<p>Should the sync on the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> be skipped?</p>
 </td>
 </tr>
 <tr>
