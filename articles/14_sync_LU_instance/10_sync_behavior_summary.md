@@ -55,7 +55,7 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <p><strong>Pass</strong></p>
 </td>
 <td width="9%">
-<p><strong>Not pass</strong></p>
+<p><strong>Not Pass</strong></p>
 </td>
 <td width="7%">
 <p><strong>&nbsp;</strong></p>
@@ -70,7 +70,7 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <p><strong>Pass</strong></p>
 </td>
 <td width="13%">
-<p><strong>Not pass</strong></p>
+<p><strong>Not Pass</strong></p>
 </td>
 </tr>
 <tr>
