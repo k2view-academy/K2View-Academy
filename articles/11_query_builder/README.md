@@ -1,7 +1,6 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
-<details>
-<summary markdown="span"><strong>Query Builder<strong></summary>
+<strong>Query Builder<strong>
 <ul>
   
 <li><a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder Overview</a></li>
@@ -16,7 +15,7 @@
 </ul>
 <ul>
   
-</details>
+
 
 
 
