@@ -3,9 +3,12 @@
 <details>
 <summary markdown="span"><strong>Fabric Overview<strong></summary>
 <ul>
+        <li><a href="/articles/01_fabric_overview/README.md">Fabric Overview</a></li>
+        <ul>
         <li><a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">What is Fabric?</a></li>
         <li><a href="/articles/01_fabric_overview/02_fabric_glossary.md">Fabric Glossary</a></li>
 </ul>
+        </ul>
 </details>
 
 <details>
@@ -92,7 +95,7 @@
 <summary markdown="span"><strong>Table Population<strong></summary>
 
 <ul>
-        <li><a href=/articles/07_table_population/README.md">Table Population</a></li>
+        <li><a href="/articles/07_table_population/README.md">Table Population</a></li>
                 <ul>
 <li><a href="/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
 <li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</li>
