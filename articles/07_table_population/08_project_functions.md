@@ -10,7 +10,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 *	A Regular function has a specific category known as an [Enrichment function] which is executed once all LU tables have been populated to extract data from any LU table and use it as needed. An Enrichment function must not have Input parameters and must not return any value.
 
 #### **Root Function**  
-*	A function that is used as a [Table Population source object](/articles/07_table_population/02_source_object_types.md).
+*	A function that is used as a [Table Population Source Object](/articles/07_table_population/02_source_object_types.md).
 *	The output of a Root function serves as input for the Table Population. This function cannot be used for data-mapping logic.
 *	A Root function must have at least one Input parameter and at least one Output parameter. The Root function of a Root Table must have only one parameter.
 
