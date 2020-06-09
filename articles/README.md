@@ -9,9 +9,9 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Logical Unit (LU)<strong></summary>
+<summary markdown="span"><strong>Logical Unit<strong></summary>
 <ul>
-        <li><a href="/articles/03_logical_units">Logical Unit (LU)</a>
+        <li><a href="/articles/03_logical_units/README.md">Logical Unit</a>
                 <ul>
       <li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
       <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit - Flow</li>
@@ -39,6 +39,8 @@
 <details>
 <summary markdown="span"><strong>Fabric Studio<strong></summary>
 <ul>
+        <li><a href="/articles/04_fabric_studio/README.md">Fabric Studio</a></li>
+        <ul>
   <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Components and Menus</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
 <li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</li>
@@ -52,12 +54,14 @@
 <li><a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md">Fabric Project</a></li>
 <li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li>
 </ul>
+        </ul>
 </details>
 
 <details>
 <summary markdown="span"><strong>DB Interfaces<strong></summary>
 <ul>
-  
+        <li><a href="/articles/05_DB_interfaces/README.md">DB Interfaces</a></li>
+        <ul>
 <li><a href="/articles/05_DB_interfaces/01_interfaces_overview.md"> Interfaces Overview</a></li>
 <li><a href="/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md">Interfaces Source Analysis Guidelines</li>
 <li><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md">DB Interfaces Overview</li>
@@ -67,7 +71,7 @@
 <li><a href="/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md">Deleting Disabling an Interface</a></li>
 <li><a href="/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md">Clearing DB Object Cache</a></li>
 <li><a href="/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md">Fabric API for DB Interface</a></li>
-
+        </ul>
 </ul>
 </details>
 
