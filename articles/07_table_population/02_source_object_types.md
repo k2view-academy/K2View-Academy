@@ -29,7 +29,7 @@ When an LU table has two populations, a second table population can extract data
 <p><strong>Root function</strong></p>
 </td>
 <td width="511">
-<p>A <strong>Root Function</strong> is needed when a Table Population requires complex logic.</p>
+<p>A <strong>Root function</strong> is needed when a Table Population requires complex logic.</p>
 <p>Most common use cases are:</p>
 <ol>
 <li>A population requires data from multiple DB interfaces, however, the DB query cannot run the Join between different DB interfaces. For example, to retrieve a customer&rsquo;s Address ID from the CRM DB and to then retrieve full address details from the Address Repository DB.</li>
