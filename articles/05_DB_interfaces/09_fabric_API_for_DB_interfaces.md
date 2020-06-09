@@ -1,7 +1,7 @@
 # Fabric API for DB Interfaces
 
 ### Connect DB Interface - Db Class
-Fabric provides a Java Db class to use the methods and functions that will invoke database (SQL) queries and statements, and  Fabric commands.
+Fabric provides a Java Db class to use the methods and functions that invoke database (SQL) queries and statements and  Fabric commands.
 
 ### How Can I Create a Db Object?
 The following Fabric **UserCode** methods can be used to create a Db object:
@@ -38,7 +38,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>ludb(String lutype, String luid)<strong></p>
 </td>
 <td width="417">
-<p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
+<p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific Logical Unit Instance. If the Logical Unit is the same as the last one referenced by this method, GET is not invoked.</p>
 </td>
 </tr>
 </tbody>
@@ -63,7 +63,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <tbody>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU instance.&nbsp;</strong></p>
+<p><strong>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU Instance.&nbsp;</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
@@ -90,7 +90,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU instance from another LU.</strong></p>
+<p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU Instance from another LU.</strong></p>
 </td>
 <td width="198">
 <p>ludb(String lutype, String luid)</p>
@@ -101,7 +101,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to another DB Interface.</strong></p>
+<p><strong>Connect to another DB interface.</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
@@ -121,7 +121,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 
 **DB Class Methods - Common Use Cases**
 
-The following table describes common use cases when working with DB Interfaces.\
+The following table describes common use cases when working with DB interfaces.\
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 <table>
 <tbody>
