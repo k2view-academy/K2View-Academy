@@ -1,6 +1,6 @@
 # Sync - Decision Functions Checks and Considerations Table
 
-When a decision function returns False it always skips a sync. Therefore, when writing decision function code, always refer to the Decision Function Checks and Considerations Table below.
+When a Decision function returns False it always skips a sync. Therefore, when writing Decision function code, always refer to the Decision Function Checks and Considerations Table below.
 
 <table>
 <tbody>
