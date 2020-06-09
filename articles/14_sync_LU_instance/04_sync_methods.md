@@ -11,7 +11,7 @@ T
 <p><strong>Timeout (sec)<strong></p>
 </td>
 <td width="700pxl">
-<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI. </a>.</p>
+<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI. </a></p>
 </td>
 </tr>
 <tr>
