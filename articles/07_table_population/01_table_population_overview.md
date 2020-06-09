@@ -4,7 +4,7 @@
 A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU table. Source data can be mapped directly to LU table columns and Fabric transformation objects like [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU table. 
 
 Each table can have one or several Table Populations that can be executed simultaneously or according to a predefined [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md).
-Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU Table.
+Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU table.
 There are [two types of source objects](/articles/07_table_population/02_source_object_types.md) for a **Table Population** object:
 *	DB query, (default) that executes an SQL Select query on a predefined DB interface. 
 *	[Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
