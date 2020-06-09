@@ -46,31 +46,31 @@ A Sync is influenced by the [Sync Method](/articles/14_sync_LU_instance/04_sync_
 <p><strong>&nbsp;</strong></p>
 </td>
 <td width="5%">
-<p><strong>true</strong></p>
+<p><strong>True</strong></p>
 </td>
 <td width="6%">
-<p><strong>false</strong></p>
+<p><strong>False</strong></p>
 </td>
 <td width="6%">
-<p><strong>pass</strong></p>
+<p><strong>Pass</strong></p>
 </td>
 <td width="9%">
-<p><strong>not pass</strong></p>
+<p><strong>Not pass</strong></p>
 </td>
 <td width="7%">
 <p><strong>&nbsp;</strong></p>
 </td>
 <td width="6%">
-<p><strong>true</strong></p>
+<p><strong>True</strong></p>
 </td>
 <td width="7%">
-<p><strong>false</strong></p>
+<p><strong>False</strong></p>
 </td>
 <td width="8%">
-<p><strong>pass</strong></p>
+<p><strong>Pass</strong></p>
 </td>
 <td width="13%">
-<p><strong>not pass</strong></p>
+<p><strong>Not pass</strong></p>
 </td>
 </tr>
 <tr>
