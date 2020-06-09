@@ -12,7 +12,7 @@ Enrichment function features include:
 
 - One or more Enrichment function can be attached to an LU table using the **Enrichment Functions** field in the [LU table’s Properties tab](/articles/06_LU_tables/04_table_properties.md#enrichment-functions). 
 
-- An LU table’s columns can be updated by an Enrichment function if the LU Table column type is set to [Computed Field](/articles/06_LU_tables/02_create_an_LU_table.md#column-type).
+- An LU table’s columns can be updated by an Enrichment function if the LU table column type is set to [Computed Field](/articles/06_LU_tables/02_create_an_LU_table.md#column-type).
 
 - Unlike a [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), which is executed on each record of an LU table, an Enrichment function is executed only once per LU table and [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui). 
 
