@@ -83,7 +83,7 @@ Run validation functions to validate LUI data during the [Sync process](/article
 
 ### Example of an Enrichment Function that Populates the Param Table
 
-A common scenario in Test Data Management (TDM) projects is to add a Parameters LU table to the LU Schema, populate it and then aggregate the LU's parameters for business logic and validations. For example, in the Orders LU you need to get various parameters for each Order type, like the number of MSISDNS or the number of open orders. The list of parameters and the SQL query to be executed on the LU tables for each parameter must be defined in a [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). The execution of the SQL queries for each parameter, and the population of the Parameters LU table will be implemented by the Enrichment function.
+A common scenario in Test Data Management (TDM) projects is to add a Parameters LU table to the LU schema, populate it and then aggregate the LU's parameters for business logic and validations. For example, in the Orders LU you need to get various parameters for each Order type, like the number of MSISDNS or the number of open orders. The list of parameters and the SQL query to be executed on the LU tables for each parameter must be defined in a [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). The execution of the SQL queries for each parameter, and the population of the Parameters LU table will be implemented by the Enrichment function.
 
 1. Create a new **translation** named **trnOrdersParams** that defines a list of parameters and an SQL query for calculating each parameter.
 
