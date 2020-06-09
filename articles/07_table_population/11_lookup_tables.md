@@ -80,7 +80,7 @@ The following information is displayed in the Lookup Properties:
 <p><strong>Misc.</strong></p>
 </td>
 <td style="width: 477.667px;">
-<p>Non-editable fields, applicable only for source DB table lookups</p>
+<p>Non-editable fields, applicable only for source DB table lookups:</p>
 <ul>
 <li><strong>Connection Name and Owner</strong></li>
 </ul>
