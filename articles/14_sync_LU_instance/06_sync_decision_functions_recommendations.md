@@ -17,8 +17,8 @@ When a Decision function returns False it always skips a sync. Therefore, when w
 <p><strong>Consideration</strong></p>
 </td>
 <td width="472">
-<p>When defining a decision function on the <a href="/articles/03_logical_units/03_LU_schema_window.md">LU schema</a>, the Decision function runs on every <a href="/articles/07_table_population/01_table_population_overview.md"> population </a> in the LU schema.</p>
-<p>If the Decision function returns the same result for each population, it is recommended to set it on the <a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a>&rsquo;s population. Then invoke the <a href="/articles/14_sync_LU_instance/09_skip_sync.md"><strong>skipSync()</strong> </a> method in the decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the Decision function on each LUI instead of executing the Decision function on each population.</p>
+<p>When defining a Decision function on the <a href="/articles/03_logical_units/03_LU_schema_window.md">LU schema</a>, the Decision function runs on every <a href="/articles/07_table_population/01_table_population_overview.md"> population </a> in the LU schema.</p>
+<p>If the Decision function returns the same result for each population, it is recommended to set it on the <a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a>&rsquo;s population. Then invoke the <a href="/articles/14_sync_LU_instance/09_skip_sync.md"><strong>skipSync()</strong> </a> method in the Decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the Decision function on each LUI instead of executing the Decision function on each population.</p>
 <p>For example, setting the Decision functions to check whether the current time is during peak or off-peak hours.</p>
 </td>
 </tr>
