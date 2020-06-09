@@ -72,7 +72,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </td>
 <td width="228">
 <p>Db conn = db(&ldquo;fabric&rdquo;);</p>
-<p>Note: you do not have to define &ldquo;fabric&rdquo; interface in Fabric Studio.</p>
+<p>Note: you do not need to define the &ldquo;fabric&rdquo; interface in the Fabric Studio.</p>
 <p>Db conn = ludb();</p>
 <p>Db conn = fabric();</p>
 </td>
