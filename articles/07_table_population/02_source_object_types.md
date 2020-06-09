@@ -4,11 +4,11 @@ There are two types of **Source Objects** in a Table Population object:
 *	**DB Query**, (default) an SQL Select query with one or several tables that is executed on a predefined [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 *	[Root Function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), a Fabric Java function that can execute an SQL Select query and perform data manipulations and calculations.
 
-Note that a Table Population can extract data from other [LU Tables](/articles/06_LU_tables/01_LU_tables_overview.md)  in the same Logical Unit. It is recommended to always check the [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU Tables are poplated before the target LU Tables. For example, the SUBSCRIBER LU Table must be populated before the OFFER LU Table to enable populating the OFFER LU Table based on data from the SUBSCRIBER LU Table.
+Note that a Table Population can extract data from other [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md)  in the same Logical Unit. It is recommended to always check the [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU tables are poplated before the target LU tables. For example, the SUBSCRIBER LU table must be populated before the OFFER LU table to enable populating the OFFER LU table based on data from the SUBSCRIBER LU table.
 
-When an LU Table has two populations, a second table population can extract data from the same LU Table. For example, the ADDRESS LU Table has two table populations:
+When an LU table has two populations, a second table population can extract data from the same LU table. For example, the ADDRESS LU table has two table populations:
 *	Population 1 extracts data from the CRM DB.
-*	Population 2 extracts data from the ADDRESS LU Table that has been inserted by Population 1.
+*	Population 2 extracts data from the ADDRESS LU table that has been inserted by Population 1.
 
 [Click for more information about Creating Table Population Objects.](/articles/07_table_population/03_creating_a_new_table_population.md)
 
@@ -26,7 +26,7 @@ When an LU Table has two populations, a second table population can extract data
 </tr>
 <tr>
 <td width="95">
-<p><strong>Root Function</strong></p>
+<p><strong>Root function</strong></p>
 </td>
 <td width="511">
 <p>A <strong>Root Function</strong> is needed when a Table Population requires complex logic.</p>
@@ -37,7 +37,7 @@ When an LU Table has two populations, a second table population can extract data
 <li>A population requires data from another LU. For example, to retrieve Customer details from the CRM LU to populate part of its data into the Billing LU.</li>
 <li>When source data is extracted from a file or any other non-DB interface.</li>
 <li>When using the Fabric Remote DB, a Table Population must use a root function to get the instance before running the SQL query on the LUI.</li>
-<li>When the population needs to run a Fabric command. For example, setting the source environment&nbsp; to UAT so that data for a selected table is not extracted from Production to avoid overloading the source system. The root function can set the environment on a session level and select the data from the required source environment.</li>
+<li>When the population needs to run a Fabric command. For example, setting the source environment&nbsp; to UAT so that data for a selected table is not extracted from Production to avoid overloading the source system. The Root function can set the environment on a session level and select the data from the required source environment.</li>
 </ol>
 </td>
 </tr>
@@ -74,7 +74,7 @@ The comparison below analyzes the differences and the similarities between two d
 <p>SQL query. All fields in a SELECT statement become query output.</p>
 </td>
 <td width="251">
-<p>Fabric Java function where Category = Root and Type = Root Function. The root function must have at least one input parameter and yield an array of Objects (Object[]).</p>
+<p>Fabric Java function where Category = Root and Type = Root function. The Root function must have at least one input parameter and yield an array of Objects (Object[]).</p>
 </td>
 </tr>
 <tr>
@@ -104,10 +104,10 @@ The comparison below analyzes the differences and the similarities between two d
 <p><strong>Access to LU tables</strong></p>
 </td>
 <td width="259">
-<p>Can access LU Tables.</p>
+<p>Can access LU tables.</p>
 </td>
 <td width="251">
-<p>Can access LU Tables.</p>
+<p>Can access LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -123,7 +123,7 @@ The comparison below analyzes the differences and the similarities between two d
   </ul>
 </td>
 <td width="251">
-<p>The root function does not have an automatic mechanism that filters the extracted records from the Input parameters. When adding SELECT statements to the root function, always add the WHERE clause condition to extract the data from the input parameters.</p>
+<p>The Root function does not have an automatic mechanism that filters the extracted records from the input parameters. When adding SELECT statements to the Root function, always add the WHERE clause condition to extract the data from the input parameters.</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
@@ -136,7 +136,7 @@ The comparison below analyzes the differences and the similarities between two d
 <p>The DB query has an automatic background functionality for preparing and binding the SQL statement that is sent to external interfaces.</p>
 </td>
 <td width="251">
-<p>The root function does not have automatic binding of parameters for SQL queries. You must explicitly add the binding for the SQL parameters.</p>
+<p>The Root function does not have automatic binding of parameters for SQL queries. You must explicitly add the binding for the SQL parameters.</p>
 </td>
 </tr>
 <tr>
@@ -154,10 +154,10 @@ The comparison below analyzes the differences and the similarities between two d
   </ul>
 </td>
 <td width="251">
-<p>The root function does not have a Grouping mechanism and therefore executes a SELECT statement for each parent ID.</p>
+<p>The Root function does not have a Grouping mechanism and therefore executes a SELECT statement for each Parent ID.</p>
 <p>For example:</p>
 <p>There are 1,500 subscribers for Instance ID = 1. Each subscriber has services.</p>
-<p>To select the subscriber&rsquo;s services, the root function runs a SELECT query for each of the 1,500 subscribers to retrieve its services.</p>
+<p>To select the subscriber&rsquo;s services, the Root function runs a SELECT query for each of the 1,500 subscribers to retrieve its services.</p>
 </td>
 </tr>
 </tbody>
