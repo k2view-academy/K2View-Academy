@@ -23,6 +23,7 @@ A database interface can be disabled temporarily whereby it is ignored by Fabric
 3.	**Save** the interface.
 
 Note that for the changes to become effective for the Fabric object (for example for Web Services or an LU), deploy each object to the server separately.
+
 Click for more information about Deployment from the Fabric Studio. 
  
 
