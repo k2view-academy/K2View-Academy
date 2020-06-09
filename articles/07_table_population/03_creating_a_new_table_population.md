@@ -40,7 +40,7 @@ When an LU table has two populations, a second Table Population can extract data
 2.	Click **Tables**, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
 3.	Click the **Objects** tab in the right panel of the **Table Population** working area.
 4.	Click **Root Functions** and do either:
-    * Select an existing Root function and drag it into the working area. 
+    * Select an existing **Root function** and drag it into the working area. 
     * Click **Create New Root Function**.
 5.	Right click the **source object** and do either:
     * Check **Auto Connect to Table**.
