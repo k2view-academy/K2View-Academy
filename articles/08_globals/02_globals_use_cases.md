@@ -2,9 +2,9 @@
 
 Globals are predefined global variables that can be accessed by different objects within a project and are used when the same information is required repeatedly by various Fabric objects. 
 
-A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference Table or Parser) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a Web Service).
+A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference table or Parser) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a Web Service).
  
-The following scenarios describe how globals can be used in Fabric objects.
+The following scenarios describe how Globals can be used in Fabric objects.
 
 ### How Do I Add a Global to a Table Population?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**]. 
