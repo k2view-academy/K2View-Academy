@@ -1,6 +1,6 @@
 # Sync - Decision Functions
 
-## Sync- Decision Functions Overview
+## Sync - Decision Functions Overview
 
 A Decision Function is a Java [project function](/articles/07_table_population/08_project_functions.md) that assesses whether a sync is performed on an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui).
 * Decision functions cannot have input parameters and must have one output Boolean parameter.
