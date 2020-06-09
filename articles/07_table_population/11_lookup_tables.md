@@ -105,5 +105,5 @@ The following information is displayed in the Lookup Properties:
 </tbody>
 </table>
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/10_project_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/12_table_population_diagram_outline.md)
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/10_project_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/12_table_population_diagram_outline.md) 
 
