@@ -1,6 +1,6 @@
 # Training Business Requirements
 
-### ![](/academy/Training_Level_1/01_Fabric_Introduction/images/businessReq.png)Level 1 Business Requirements
+![](/academy/Training_Level_1/01_Fabric_Introduction/images/businessReq.png)
 
 During this training course, we will evolve within a telco environment that provides the following Databases:
 
