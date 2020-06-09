@@ -68,7 +68,7 @@ The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options
 </table>
 
 ### Population Window Working Area
-The Table Population **Working Area** acts as a workspace for mapping the Source Object to the target LU table. Transformation objects can also be added to the working area map. 
+The **Table Population Working Area** acts as a workspace for mapping the Source Object to the target LU table. Transformation objects can also be added to the working area map. 
 
 The Working Area includes:
 <table width="614">
