@@ -1,6 +1,6 @@
 # Table Population - Source Object Types
 
-There are two types of **source objects** in a Table Population object:
+There are two types of **Source Objects** in a Table Population object:
 *	**DB query**, (default) an SQL Select query with one or several tables that is executed on a predefined [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 *	[Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), a Fabric Java function that can execute an SQL Select query and perform data manipulations and calculations.
 
@@ -48,7 +48,7 @@ When an LU table has two populations, a second table population can extract data
 
 ### DB Query Vs. Root Function Comparison Analysis
 
-The comparison below analyzes the differences and the similarities between two different source object types and provides insight on when each type should be used.
+The comparison below analyzes the differences and the similarities between two different Source Object types and provides insight on when each type should be used.
 
 
 <table>
