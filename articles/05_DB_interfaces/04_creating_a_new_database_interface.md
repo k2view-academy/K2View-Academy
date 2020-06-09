@@ -21,7 +21,7 @@ The following screenshot displays a list of supported built-in interface types.
     **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
    
     * To check if the connection settings are correct, click the **Test Connection String**
-       * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
+       * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
        
 5. Optional: Edit the **Pool Properties**.
