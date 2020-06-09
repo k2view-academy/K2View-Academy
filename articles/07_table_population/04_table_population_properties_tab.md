@@ -69,7 +69,7 @@ The Function Properties tab displays the properties of either a source [**Root f
 <p>If Mode = <strong>Insert</strong>, set Truncate Before Sync = True.</p>
 <p>If Mode = <strong>Upsert</strong>, set Truncate Before Sync = False.</p>
 <p><strong>IID Finder</strong>, set the IID Finder properties on a population level used when creating the staging.xml file.</p>
-<p><strong>Open Table Schema</strong> - Link to the Table Schema window.</p>
+<p><strong>Open Table Schema</strong> - Link to the Table schema window.</p>
 </td>
 </tr>
 </tbody>
