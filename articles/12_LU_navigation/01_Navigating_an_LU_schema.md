@@ -1,6 +1,6 @@
 # Navigating an LU Schema
 
-When creating or editing a [Logical Unit Schema](/articles/03_logical_units/03_LU_schema_window.md) the following options are used to navigate, configure and display information:
+When creating or editing a [Logical Unit schema](/articles/03_logical_units/03_LU_schema_window.md) the following options are used to navigate, configure and display information:
 * [Diagram Outline](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline) tab, a representation of the LU Schema table’s list.
 * [Navigation pane](/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#what-is-the-navigation-pane), an overview of the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) located in the right corner of the working area.
 * LU working area, where view options can be set.
