@@ -240,7 +240,7 @@ for (Db.Row row:rows) {
 	….
  }
 </code></pre>
-
+ 
 Note that since you are not using the each/forEach method the ResultSet will not close immediately and is deferred to the end of the current execution (sync/webservice/job).
 
 To use a loop and control closure of the result set, use the try-resource structure:
