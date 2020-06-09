@@ -17,7 +17,7 @@ When an LU Table has two populations, a second Table Population can extract data
 
 [Click for more information about Creating Table Population Objects.](/articles/07_table_population/03_creating_a_new_table_population.md)
 
-### How Do I Create a New Table Population from a DB Query? 
+### How Do I Create a New Table Population From a DB Query? 
 
 1.	Go to **Project Tree > Logical Units** > [**LU Name**].
 2.	Click **Tables**, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
@@ -34,7 +34,7 @@ When an LU Table has two populations, a second Table Population can extract data
     *	Click **Auto Connect to Table**.
     *	Connect the fields **manually**.
 
-### How Do I Create a New Table Population from a Root Function? 
+### How Do I Create a New Table Population From a Root Function? 
 
 1.	Go to **Project Tree > Logical Units** > [**LU Name**].
 2.	Click Tables, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
