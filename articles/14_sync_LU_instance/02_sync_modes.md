@@ -88,14 +88,14 @@ This checkbox defines the sync mode of the first get of each LU instance after t
 * Check the **Force Upgrade Post Deploy** checkbox for Fabric development server and redeploy Customer LU to this server. 
 * Get again Customer no. 1:  the customer is synchronized, and his data is updated, since the  **Force Upgrade Post Deploy** checkbox set the sync mode to FORCE.
 * Update again the source DB for customer no. 1 
-* Get again Customer 1.  This time Customer no. 1 is **not** synchronized, **since the Sync mode is set back to ON for Customer no. 1 after his first sync**, initiated after checking the **Force Upgrade Post Deploy** checkbox.
+* Get again Customer 1.  This time Customer 1 is **not** synchronized, since the sync mode is set back to ON for the Customer after their first sync**, initiated after checking the **Force Upgrade Post Deploy** checkbox.
 
 **Example 2:**
-* Set the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md) of Customer LU to **None**.
+* Set the [sync method](/articles/14_sync_LU_instance/04_sync_methods.md) of Customer LU to **None**.
 * Get Customers no. 1 and 2.
 * Update the source DB for Customers no. 1 and 2.
 * Check the **Force Upgrade Post Deploy** checkbox for Fabric development server and redeploy Customer LU to this server. 
-* Get again Customer no .2:  this Customer is synchronized, and his data is updated. 
+* Get again Customer no .2:  this Customer is synchronized, and their data is updated. 
 * Uncheck the **Force Upgrade Post Deploy** checkbox for Fabric development server and redeploy Customer LU to this server. 
 * Get again Customers no. 1 and 2- 
   * Customer no. 1 is synchronized, since this is the first get of this customer after checking the **Force Upgrade Post Deploy** checkbox, even though this checkbox was later unchecked.
@@ -104,11 +104,11 @@ This checkbox defines the sync mode of the first get of each LU instance after t
 * Click for more information about the Get Instance Fabric Command.
 
 ## Get Sync Mode
-The Fabric UserCode class holds the method that returns the Sync mode set for the current session: 
+The Fabric UserCode class holds the method that returns the sync mode set for the current session: 
 
 public static String getSyncMode();
 
-This method can be invoked by a [decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
+This method can be invoked by a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
 If the sync mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
 
 Click to open the list of Fabric APIs: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
