@@ -24,7 +24,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>ON</p>
 </td>
 <td style="width: 146px;">
-<p>Run Sync according the <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync method&nbsp;</a> (None, Time Interval, Inherited and Decision Function)</p>
+<p>Run sync according the <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync method&nbsp;</a> (None, Time Interval, Inherited and Decision Function)</p>
 </td>
 <td style="width: 316px;">
 <ul>
