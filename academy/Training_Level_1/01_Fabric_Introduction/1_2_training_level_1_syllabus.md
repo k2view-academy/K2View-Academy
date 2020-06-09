@@ -1,6 +1,6 @@
-# Training  Syllabus
+# Level 1 Training  Syllabus
 
-### ![](/academy/00_Training_Level_1/images/syllabus.png)Level 1 Syllabus
+### ![](/academy/00_Training_Level_1/images/syllabus.png)Syllabus
 
 #### **DAY 1 – Morning**
 
