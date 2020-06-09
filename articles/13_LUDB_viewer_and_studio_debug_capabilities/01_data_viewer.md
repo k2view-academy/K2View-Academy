@@ -207,7 +207,7 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 4. View results in the **Results pane**.
 
 ### How Do I Export a Logical Unit Data File?
-1. Go to the **Instance DB** Tree and right click the **DB File**. 
+1. Go to the **Instance DB Tree** and right click the **DB File**. 
 2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file. 
 3. **Save** your changes. 
 
