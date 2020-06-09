@@ -1,6 +1,6 @@
 # ­­Fabric Main Flow Overview
 
-Congratulations on successfully completing yourfirst quiz!  You are now familiar with Fabric’s architecture and the concept of Logical Units. Let’s understand how it all comes together into a basic Fabric Main Flow implementation using your business requirements checklist.
+Congratulations on successfully completing your first quiz!  You are now familiar with Fabric’s architecture and the concept of Logical Units. Let’s understand how it all comes together into a basic Fabric Main Flow implementation using your business requirements checklist.
 
  
 
