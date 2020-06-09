@@ -1,8 +1,7 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
 
-<details>
-<summary markdown="span"><strong>Fabric Studio<strong></summary>
+<strong>Fabric Studio<strong>
 <ul>
   <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Components and Menus</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
@@ -17,5 +16,5 @@
 <li><a href="/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md">Fabric Project</a></li>
 <li><a href="/articles/04_fabric_studio/12_shared_objects.md">Shared Objects</a></li>
 </ul>
-</details>
+
 
