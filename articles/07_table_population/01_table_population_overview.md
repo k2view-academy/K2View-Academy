@@ -10,7 +10,7 @@ There are [two types of source objects](/articles/07_table_population/02_source_
 *	[Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
 Note that tables can also be populated or updated by [enrichment functions] which, unlike root functions, are executed after all LU Tables are populated.
 
-### Table Population in an LU Schema 
+### Table Population In an LU Schema 
 An [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the root table. Parent-child links in LU Tables are created via their Table Population objects:
 *	Each [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
 *	Each Table Population object, apart from the Table Population of the root LU Table, must be linked to a parent table via its Input columns.
