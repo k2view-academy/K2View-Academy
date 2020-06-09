@@ -218,7 +218,7 @@ if(!syncInd)\
 
 return syncInd;
 ```
-Note that the fnCheckSourceEnv , fnCheckSourceVersion, and fnCheckOffPeak functions are displayed in the Demo Fabric Project under the Code tab.
+Note that the fnCheckSourceEnv, fnCheckSourceVersion, and fnCheckOffPeak functions are displayed in the Demo Fabric Project under the Code tab.
 
 [![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/05_sync_decision_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/07_sync_levels.md)
 
