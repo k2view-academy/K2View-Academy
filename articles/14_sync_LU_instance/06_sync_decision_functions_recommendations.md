@@ -195,7 +195,7 @@ return syncInd;
 
 **Example 4**
 
-Add a Decision function on the LU Schema level to check if the current time is during peak hours or if this sync is the first sync of the LUI. If the current time is during peak hours and the instance already exists in Fabric, skip the sync of the LUI.
+Add a Decision function on the LU schema level to check if the current time is during peak hours or if this sync is the first sync of the LUI. If the current time is during peak hours and the instance already exists in Fabric, skip the sync of the LUI.
 
 ```java
 Boolean syncInd = false;\
