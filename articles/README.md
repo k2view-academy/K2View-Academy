@@ -1,7 +1,8 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
 <details>
-<summary markdown="span"><strong>Fabric Overview<strong></summary>
+<summary markdown="span"><strong>Fabric Overview <strong><a href="/articles/01_fabric_overview/README.md" style="text-decoration: none;">&#9757;</a></summary>
+<!----<summary markdown="span"><strong>Fabric Overview<strong></summary>-->
 <ul>
         <li><a href="/articles/01_fabric_overview/README.md">Fabric Overview - Homepage</a></li>
         <ul>
