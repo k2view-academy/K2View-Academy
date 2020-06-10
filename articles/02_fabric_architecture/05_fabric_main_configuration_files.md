@@ -291,7 +291,7 @@ This file lists the Fabric node identifiers for the Affinity mechanism. The foll
 
 ### Update Config.ini and Node.id Files
 
-Fabric adds a notification to k2fabric.log if the updates are loaded automatically to Fabric. If the changes requires a restart of Fabric node, Fabric adds a warning to the log file. 
+Fabric adds a notification to k2fabric.log if the updates are loaded automatically to Fabric. If the changes require a restart of the Fabric node, Fabric adds a warning to the log file. 
 
 Examples:
 
@@ -302,6 +302,13 @@ WARN  [FileChangeMonitor] 2020-06-07 18:38:33,270 c.k.f.c.i.Configurator - [LID1
 
 
 
-### Update iifConfig.ini
+### Update iifConfig.ini 
+When you update the iifConfig.ini, you must do the following:
+- If you update the parameters under **orphanage_job** or **sweep_job** sections, or **ENABLE_KAFKA_DELTA** parameters, you must restart the Fabric node.
+- Resart the IIDFinder process.
+
+Click for more information about IIDFinder process. 
+
+
 
 <!--Ask Taha-->
