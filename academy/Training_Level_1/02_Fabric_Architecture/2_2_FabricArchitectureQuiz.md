@@ -22,19 +22,21 @@ Working with Fabric will allow you to:
 
 \-     C: Securely store data.
 
+\-     D: Questions B & C.
+
  
 
 #### Question 2: Fabric concepts
 
 Logical Units are:
 
-\-     A: Hierarchical presentations of data related to a defined business entity, that need to be carefully designed according to a specific set of business requirements.
+\-     A: Hierarchical presentations of data related to a defined business entity, that need to be carefully designed according to a  specific set of business requirements.
 
-\-     B: Blocks of code queries designed to extract information from a DB.  
+\-     B: Query functions designed to extract information from a DB.  
 
-\-     C: A data mapping tool that extracts information from data warehouses.
+\-     C: A data mapping tool that extracts information from many types of DBs .
 
-\-     D: A data publishing service for external. 
+\-     D: A data-publishing service for external systems. 
 
 \-     E: All the above.
 
@@ -66,7 +68,7 @@ Fabric is:
 
 \-     B: A powerful ETL engine that allows you to connect to remote DBs and execute complex data queries. 
 
-\-     C: A development engine that allows you to write enrichment functions and execute them on your schema.
+\-     C: A development engine that allows you to write functions and execute them on your schema tables.
 
 \-     D: A resilient, multi-tenant web-service publishing engine. 
 
@@ -90,13 +92,13 @@ Fabric enables all data retrieved from external sources to be stored as:
 
 To store its data, Fabric uses the following storage mechanism:
 
-\-     Storage on files using RAID.
+\-     A: Storage on files using RAID.
 
-\-     Oracle database storage.
+\-     B: Oracle database storage.
 
-\-     Distributed storage as a key value-store.
+\-     c: Distributed storage as a key value-store.
 
-\-     No physical storage. Everything resides in memory.
+\-     D: No physical storage. Everything resides in memory.
 
  
 
