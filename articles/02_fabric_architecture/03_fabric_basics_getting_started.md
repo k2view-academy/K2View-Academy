@@ -53,7 +53,7 @@ To enter Fabric server, type **fabric** through the command line of Fabric serve
 
 #### Enter Fabric Local Server
 
-Open **Fabric Console** on your windows search.
+Open **Fabric Console** on your windows search. Opening a project in Fabric Studio logins the local Fabric server. Note that if you do not have any open project in Fabric Studio, you will not be able to open the local Fabric server. 
 
 ## Reset Fabric
 
