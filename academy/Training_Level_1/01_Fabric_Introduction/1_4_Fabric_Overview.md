@@ -21,5 +21,5 @@ Now we are acquainted with Digital Entities and Fabric's main features, let's ha
 
 
 
-Now that we have seen how Fabric helps our customers across different types of industries, and how significant savings can be generated within days, it is time we learned about Fabric architecture and more specifically on how data flows between 3rd party systems (providing and consuming data) and Fabric: [Fabric's architecture](/academy/Training_Level_1/02_Fabric_Architecture/2_1_FabricArchitectureOverview.md).
+Now that we have seen how Fabric helps our customers across different types of industries, and how significant savings can be generated within days, it is time we learn about Fabric architecture and more specifically on how data flows between 3rd party systems (providing and consuming data) and Fabric: [Fabric's architecture](/academy/Training_Level_1/02_Fabric_Architecture/2_1_FabricArchitectureOverview.md).
 
