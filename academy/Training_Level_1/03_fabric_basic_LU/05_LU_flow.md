@@ -49,7 +49,7 @@ We have already acknowledged that the Digital Entity should be the Customer ID t
 
 Following the Auto Discovery Tutorial, you can generate the **CustomerLU** using the Fabric Studio Wizard. 
 
-Please open your Fabric Project and dothe following:
+Please open your Fabric Project and do the following:
 
 1. Select the **New Logical Unit** and name it **CustomerLU**.
 2. Set the DB Connection as **CRM_DB** and click **Next**.
@@ -176,7 +176,7 @@ Add the BILLING_DB.BALANCEtable to the CustomerLU.
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)
 
  
 

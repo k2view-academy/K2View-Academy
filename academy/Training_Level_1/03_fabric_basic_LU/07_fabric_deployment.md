@@ -16,6 +16,6 @@ See how your design and implementation can be executed in scale andon demand:
 
 <!--Awaits the Git load of deployment documents-->
 
- [![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/08_quiz.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/08_quiz.md)
 
  
