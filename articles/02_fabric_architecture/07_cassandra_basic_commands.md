@@ -14,7 +14,7 @@ Note that if you do not populate the ip_address, then the login command connects
 
 The table below contains some useful **cqlsh** commands. 
 
-For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlshCommandsTOC.html
+For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlCommandsTOC.html.
 
 <table>
 <tbody>
@@ -94,10 +94,10 @@ Note that when you work on your local Fabric server, installed on your windows m
 
 Alternatively, you can do the following steps:
 
-- Define a Cassandra [DB interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) on Fabric Studio and set the host to localhost. Set the user and password to **cassandra**.
-- Open the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md) to view the list of Cassandra keyspaces and run SQL queries on Cassandra tables. 
+- Run queries on Cassandra inside Fabric server using [cql command](/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra).
+- Define a Cassandra [DB interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) on Fabric Studio and set the host to localhost. Set the user and password to **cassandra**. Then open the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md) to view the list of Cassandra keyspaces and run SQL queries on Cassandra tables. 
 
-
+[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
 
 
