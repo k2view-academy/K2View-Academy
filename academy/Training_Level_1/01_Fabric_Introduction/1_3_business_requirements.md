@@ -31,7 +31,7 @@ Along the course we will assume the following roles within the Telco environment
 
 
 ### Fabric Suite Installation
-Click on the following link to start the [Installation Process](/academy/Training_Level_1/01_Fabric_Introduction/1_6_fabric_installation.md)
+Click on the following link to start the [Installation Process](/academy/Training_Level_1/01_Fabric_Introduction/1_3a_Installation_Process.md)
 
 
 
