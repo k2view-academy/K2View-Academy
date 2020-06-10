@@ -59,27 +59,27 @@ This is the main configuration file of Fabric. It contains different sections of
 <table width="900pxl">
 <tbody>
 <tr>
-<td width="170pxl">
+<td width="250pxl">
 <p><strong>Parameters Category</strong></p>
 </td>
-<td width="180pxl">
+<td width="200pxl">
 <p><strong>Section Names</strong></p>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p><strong>Main Parameters</strong></p>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Cassandra connection</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>cassandra</li>
 <li>default_session</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>The configuration required to create a connection to the Cassandra cluster:</p>
 <ul>
 <li>Replication options</li>
@@ -90,17 +90,17 @@ This is the main configuration file of Fabric. It contains different sections of
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Fabric Settings</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>fabric</li>
 <li>fabric_cluster</li>
 <li>jdbc-server</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <ul>
 <li>Date and time formats.</li>
 <li>Storage and Export directories</li>
@@ -120,15 +120,15 @@ This is the main configuration file of Fabric. It contains different sections of
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Fabric Jobs</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>jobs</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <ul>
 <li>Thread pool size- the maximum number of jobs to be executed in parallel in a single Fabric node.</li>
 <li>Archiving time- the number of hours to delete the Job record from k2_jobs table.</li>
@@ -136,15 +136,15 @@ This is the main configuration file of Fabric. It contains different sections of
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Batch Process</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>batch_process</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <ul>
 <li>MAX_WORKERS_PER_NODE parameter to set the maximum number of threads&nbsp;that are used in all batch process units (executions) together on this node.&nbsp;</li>
 <li>Support setting MAX_WORKERS_PER_NODE=0 per node to avoid running a batch&nbsp;process on a specific node.&nbsp; &nbsp;&nbsp;</li>
@@ -152,30 +152,30 @@ This is the main configuration file of Fabric. It contains different sections of
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Parsers</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>parsers</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <ul>
 <li>PARSER_WRITING_TYPE - JDBC\LOADER - this parameter defines the method which will be&nbsp;used to load the data into Cassandra (when using yield in the parser). Loader</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>IIDFinder</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>finder</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <ul>
 <li>Enable ORPHANAGE job which handles Orphans record in the background.</li>
 <li>Enable SWEEP job which sweeps the invalid cache entries.</li>
@@ -183,10 +183,10 @@ This is the main configuration file of Fabric. It contains different sections of
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Cassandra Loader- loader configuration</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>default_loader</li>
 <li>parser_loader</li>
@@ -194,29 +194,29 @@ This is the main configuration file of Fabric. It contains different sections of
 <li>iid_finder_loader</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>Cassandra Loader configuration.</p>
 <p>You can override the default setting of default_loader for parsers, batch processes, or IIDFinder activities.</p>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Cassandra loader- session configuration</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>loader_session&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>Overrides the default_session for the sessions, created for Cassandra Loader operations (parsers, batch process, IIDFinder)</p>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Common (reference) tables</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>common_area_config</li>
 <li>common_area_kafka_producer</li>
@@ -225,42 +225,42 @@ This is the main configuration file of Fabric. It contains different sections of
 <li>common_area_memory_queues_config&nbsp; &nbsp; &nbsp;</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>LUI Storage</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>fabricdb</li>
 <li>cassandra_entity_storage</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Fabric Security Hardening</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>encryption</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="150pxl">
+<td width="250pxl">
 <p>Change Data Capture (CDC) and Search</p>
 </td>
-<td width="150pxl">
+<td width="200pxl">
 <ul>
 <li>cdc</li>
 <li>cdc_data_publish</li>
@@ -269,7 +269,7 @@ This is the main configuration file of Fabric. It contains different sections of
 <li>search_engine</li>
 </ul>
 </td>
-<td width="550pxl">
+<td width="450pxl">
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -307,8 +307,7 @@ When you update the iifConfig.ini, you must do the following:
 - If you update the parameters under **orphanage_job** or **sweep_job** sections, or **ENABLE_KAFKA_DELTA** parameters, you must restart the Fabric node.
 - Resart the IIDFinder process.
 
-Click for more information about IIDFinder process. 
+Click for more information about the IIDFinder process. 
 
+[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/04_fabric_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
-
-<!--Ask Taha-->
