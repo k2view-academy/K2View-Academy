@@ -10,12 +10,9 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Logical Unit<strong></summary>
-<ul>
-        <li><a href="/articles/03_logical_units/README.md">Logical Unit - Homepage</a>
-                <ul>
-      <li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
-      <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit - Flow</li>
+<summary markdown="span"><strong>Logical Unit<strong><a href="/articles/03_logical_units/README.md" style="text-decoration: none;">&#127968;</a></summary>
+<li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
+<li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit - Flow</li>
 <li><a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema Window</li>
 <li><a href="/articles/03_logical_units/04_LU_properties.md">LU Properties</a></li>
 <li><a href="/articles/03_logical_units/05_create_a_new_LU_object.md">Create New LU Object</a></li>
