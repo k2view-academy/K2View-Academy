@@ -1,4 +1,4 @@
-# Training Business Requirements
+# Course User Story
 
 ![](/academy/Training_Level_1/01_Fabric_Introduction/images/businessReq.png)
 
