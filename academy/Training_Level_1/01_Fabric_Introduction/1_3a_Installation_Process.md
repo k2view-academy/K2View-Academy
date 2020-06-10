@@ -21,5 +21,5 @@ You will receive an email back from our technical support team with the followin
 - Download link & set of instructions for Fabric suite installation
 - Machine IP & credentials to access the hosted environment (in case you chose this option)
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_3_Business_Requirements.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_3_business_requirements.md)
 
