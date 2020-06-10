@@ -63,4 +63,4 @@ c.     Different format and data types.
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/07_fabric_deployment.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/07_fabric_deployment.md)
