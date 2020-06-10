@@ -247,6 +247,8 @@ Below the the list of Cassandra keyspaces, created Fabric:
 
 Click for more information about Fabric Architecture overview.
 
+[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
+
 <!-- Add links- drop 1- WS, Fabric architecture, Fabric credentials-->
 
 <!-- Add links- next drops- Jobs, Batch processes, audit, LU storage, security hardening, IIDFinder-->
