@@ -6,7 +6,7 @@
 
 - Course Introduction
   - Course Overview & Main objectives
-  - Business Requirements
+  - Course User Story
   - Fabric Installation
 
 - Fabric Introduction
