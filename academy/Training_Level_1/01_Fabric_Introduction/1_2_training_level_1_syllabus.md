@@ -13,8 +13,8 @@
   - Fabric Overview
   - Fabric Use Cases
 
-- Fabric Architecture
-  - Components overview
+- Fabric Architecture Overview
+  - Components
   - Data flows
   - Security/Resiliency
 - Quiz (1)
