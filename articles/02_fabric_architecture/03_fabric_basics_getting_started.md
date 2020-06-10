@@ -16,7 +16,7 @@ Run the following commands through the command line of Fabric server:
 </tr>
 <tr>
 <td width="300">
-<p><h5><strong>k2fabric start</strong></p>
+<p><h4><strong>k2fabric start</strong></p>
 </td>
 <td width="600">
 <p>Start the Fabric node. When starting Fabric node, you will receive notifications if you have some local files that are in conflict with the installed release (private files). Note that you need to start the seed nodes before starting other Fabric nodes of the Fabric cluster.</p>
@@ -24,7 +24,7 @@ Run the following commands through the command line of Fabric server:
 </tr>
 <tr>
 <td width="300">
-<p><h5><strong>k2fabric stop</strong></p>
+<p><h4><strong>k2fabric stop</strong></p>
 </td>
 <td width="600">
 <p>Stop the Fabric node</p>
@@ -32,7 +32,7 @@ Run the following commands through the command line of Fabric server:
 </tr>
 <tr>
 <td width="300">
-<p><h5><strong>k2fabric restart</strong></p>
+<p><h4><strong>k2fabric restart</strong></p>
 </td>
 <td width="600">
 <p>Restart (stop and start) the fabric node</p>
