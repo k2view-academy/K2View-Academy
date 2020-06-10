@@ -148,7 +148,7 @@ For example:
 <p>&nbsp;</p>
 </td>
 <td width="550pxl">
-<p>Support transactions to update LUI or Common (reference) table data.</p>
+<p>Support transactions to update LUI or Common (reference) table data (Fabric as System of Record).</p>
 </td>
 </tr>
 <tr>
