@@ -31,7 +31,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <li>iidFinder scripts</li>
 <li>Fabric execution monitoring scripts</li>
 <li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset scripts</a></li>
-<li>Stop and start scripts, initiated by <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#start-and-stop-fabric-commands">k2fabric stop and k2fabric start commands.</a></li>
+<li>Stop and start scripts, executed by <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#start-and-stop-fabric-commands">k2fabric stop and k2fabric start commands.</a></li>
 <li>Fabric status scripts</li>
 </ul>
 </td>
@@ -82,7 +82,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/storage</h4>
 </td>
 <td width="600">
-<p>Stores the data on each Fabric Server and holds the <strong>ludb.jar</strong> artifact files for each deployed LU or Web Service, Staging XMLs for iidFinder, and Reference (common) files.</p>
+<p>Stores the data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, Staging XMLs for iidFinder, and Reference (common) files.</p>
 </td>
 </tr>
 <tr>
@@ -106,7 +106,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/export</h4>
 </td>
 <td width="471">
-<p>Holds the output files of the <strong>set</strong> <strong>output</strong> Fabric command.</p>
+<p>Holds the output files of the <a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting">set output Fabric command.</a></p>
 </td>
 </tr>
 <tr>
@@ -133,3 +133,4 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <!--Add links:-->
 
 <!--Drop 1- deployment, fabric architecture, fabric logs, fabric commands, fabric basic commands and scripts-->
+[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/01_fabric_architecture.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
