@@ -528,4 +528,4 @@ Example:
 
 ![Query Helpers](/articles/02_fabric_architecture/images/04_fabric_command_query_helpers.png)
 
-[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/02_fabric_directories.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/04_fabric_commands.md)
+[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)
