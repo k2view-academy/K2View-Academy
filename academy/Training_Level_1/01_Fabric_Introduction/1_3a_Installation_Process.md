@@ -1,7 +1,7 @@
 # Software Installation Process & Course Databases Access 
 
 
-In order to proceed with this course, we provide the possibility to either run Fabric on your PC (windows only) or access a pre-configured environment on Amazon cloud.
+In order to proceed with this course, we provide the possibility to either run Fabric on your PC (windows only) or access a pre-configured environment on the cloud.
 
 Keep in mind that the minimal requirement necessary to install Fabric for development/training purposes are as follow:
 * Memory requirements
