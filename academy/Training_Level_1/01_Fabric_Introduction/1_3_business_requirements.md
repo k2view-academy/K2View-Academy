@@ -37,5 +37,8 @@ Click on the following link to start the [Installation Process](/academy/Trainin
 
 ##### Enjoy and Let's Roll !!!
 
+
+
+
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_1_Course_Overview.md)
  [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)
