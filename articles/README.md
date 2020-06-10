@@ -10,7 +10,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Logical Unit<strong><a href="/articles/03_logical_units/README.md" style="text-decoration: none;">&#127968;</a></summary>
+<summary markdown="span"><strong>Logical Unit <strong><a href="/articles/03_logical_units/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
 <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit - Flow</li>
 <li><a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema Window</li>
@@ -35,11 +35,8 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Fabric Studio<strong></summary>
-<ul>
-        <li><a href="/articles/04_fabric_studio/README.md">Fabric Studio - Homepage</a></li>
-        <ul>
-  <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Components and Menus</a></li>
+<summary markdown="span"><strong>Fabric Studio <strong><a href="/articles/04_fabric_studio/README.md" style="text-decoration: none;">&#127968;</a></summary>
+<li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Components and Menus</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
 <li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</li>
 <li><a href="/articles/04_fabric_studio/04_user_preferences.md">User Preferences</a></li>
@@ -56,10 +53,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>DB Interfaces<strong></summary>
-<ul>
-        <li><a href="/articles/05_DB_interfaces/README.md">DB Interfaces - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>DB Interfaces <strong><a href="/articles/05_DB_interfaces/README.md" style="text-decoration: none;">&#127968;</a></summary>        
 <li><a href="/articles/05_DB_interfaces/01_interfaces_overview.md"> Interfaces Overview</a></li>
 <li><a href="/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md">Interfaces Source Analysis Guidelines</li>
 <li><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md">DB Interfaces Overview</li>
@@ -74,10 +68,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>LU Tables<strong></summary>
-<ul>
-        <li><a href="/articles/06_LU_tables/README.md">LU Tables - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>LU Tables <strong><a href="/articles/06_LU_tables/README.md" style="text-decoration: none;">&#127968;</a></summary> 
 <li><a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU Tables Overview</a></li>
 <li><a href="/articles/06_LU_tables/02_create_an_LU_table.md">Create an LU Table</li>
 <li><a href="/articles/06_LU_tables/03_table_indexes.md">Table Indexes</li>
@@ -87,11 +78,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Table Population<strong></summary>
-
-<ul>
-        <li><a href="/articles/07_table_population/README.md">Table Population - Homepage</a></li>
-                <ul>
+<summary markdown="span"><strong>Table Population <strong><a href="/articles/07_table_population/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
 <li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</li>
 <li><a href="/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</li>
@@ -112,10 +99,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Globals<strong></summary>
-<ul>
-        <li><a href="/articles/08_globals/README.md">Globals - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>Globals <strong><a href="/articles/08_globals/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/08_globals/01_globals_overview.md">Globals Overview</a></li>
 <li><a href="/articles/08_globals/02_globals_use_cases.md">Globals Use Cases</li>
 <li><a href="/articles/08_globals/03_set_globals.md">Set Globals</li>
@@ -125,11 +109,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Translations<strong></summary>
-<ul>
-        <li><a href="/articles/09_translations/README.md">Translations - Homepage</a></li>
-        <ul>
-  
+<summary markdown="span"><strong>Translations <strong><a href="/articles/09_translations/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/09_translations/01_translations_overview_and_use_cases.md">Translations Overview</a></li>
 <li><a href="/articles/09_translations/02_creating_a_new_translation_in_fabric.md">Creating a New Translation in Fabric</a></li>
 <li><a href="/articles/09_translations/03_data_population_in_a_translation.md">Data Population in Translation</a></li>
@@ -140,10 +120,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Enrichment Functions<strong></summary>
-<ul>
-        <li><a href="/articles/10_enrichment_function/README.md">Enrichment Functions - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>Enrichment Functions <strong><a href="/articles/10_enrichment_function/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Function Overview</a></li>
 <li><a href="/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md">Enrichment vs. Root Function - Comparison Analysis</a></li>
 <li><a href="/articles/10_enrichment_function/03_create_edit_enrichment_function.md">Create / Edit an Enrichment Function</a></li>
@@ -153,10 +130,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>LU Navigation<strong></summary>
-<ul>
-        <li><a href="/articles/12_LU_navigation/README.md">LU Navigation - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>LU Navigation <strong><a href="/articles/12_LU_navigation/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/12_LU_navigation/01_Navigating_an_LU_schema.md">Navigating an LU Schema</a></li>
 <li><a href="/articles/12_LU_navigation/02_searching_a_fabric_project.md">Searching a Fabric Project</a></li>
 </ul>
@@ -164,10 +138,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>LUDB Viewer and Studio Debug Capabilities<strong></summary>
-<ul>
-  <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/README.md">LUDB Viewer and Studio Debug Capabilities - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>LUDB Viewer and Studio Debug Capabilities <strong><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></li>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Studio Log Files</a></li>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md">Debug Table Population</a></li>
@@ -176,10 +147,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Sync LU Instance<strong></summary>
-<ul>
-        <li><a href="/articles/14_sync_LU_instance/README.md">Sync LU Instance - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>Sync LU Instance <strong><a href="/articles/14_sync_LU_instance/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync LUI Overview</a></li>
 <li><a href="/articles/14_sync_LU_instance/02_sync_modes.md">Sync Modes</li>
 <li><a href="/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md">Sync- Ignore Source Exception</li>
@@ -195,10 +163,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Fabric Deployment<strong></summary>
-<ul>
-        <li><a href="/articles/16_deploy_fabric/README.md">Deploy Fabric - Homepage</a></li>
-        <ul>
+<summary markdown="span"><strong>Fabric Deployment <strong><a href="/articles/16_deploy_fabric/README.md" style="text-decoration: none;">&#127968;</a></summary>
 <li><a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">Deploy Fabric Project</a></li>
 <li><a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">Deploy from Fabric Studio</a></li>
 <li><a href="/articles/16_deploy_fabric/03_offline_deploy.md">Offline Deploy</a></li>
