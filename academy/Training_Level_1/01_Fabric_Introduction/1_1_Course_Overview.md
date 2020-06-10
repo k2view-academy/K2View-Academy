@@ -50,6 +50,6 @@ At any time, in order to get acquainted with Fabric terminology, you should cons
 
 
 
-But first, let’s understand the course's Business Requirements!
+But first, let’s understand the course's User Story !
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_3_business_requirements.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_3_user_story.md)
