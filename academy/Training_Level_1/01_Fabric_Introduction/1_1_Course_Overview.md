@@ -36,6 +36,8 @@ To fully understand this course, you should be familiar with the following princ
 
 * Git or other version control tools.
 
+* Basic knowledge on Linux and Windows environments.
+
  
 
 ### Course Environment
