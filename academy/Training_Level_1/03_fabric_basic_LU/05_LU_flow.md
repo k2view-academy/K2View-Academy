@@ -1,6 +1,6 @@
 #   Logical Unit Flow
 
- ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
+ ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
 
 You have just set up your Fabric Project, configured its components and defined the interfaces for the Customer 360 View. Based onthe business requirements,let’s look at your next steps:
 
