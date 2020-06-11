@@ -39,7 +39,8 @@
 - Quiz (2)
 - Fabric Runtime
   - Overview
-  - Getting started with Fabric Server   
+  - Getting started with Fabric Server
+  - Fabric Deployment
   - Fabric basic commands
   - Cassandra main keyspaces & commands
 
