@@ -10,11 +10,10 @@ So far, you have implemented and validated your Project in a Test mode using the
 
 See how your design and implementation can be executed in scale andon demand:
 
-[Deploy Fabric Project]()
+[Deploy Fabric Project](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)
 
-[Deploy from Fabric Studio]()
+[Deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
 
-<!--Awaits the Git load of deployment documents-->
 
  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/08_quiz.md)
 
