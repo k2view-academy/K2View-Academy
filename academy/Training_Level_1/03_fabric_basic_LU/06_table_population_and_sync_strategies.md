@@ -47,7 +47,7 @@ Let’s understand the Fabric Sync concept and modes:
 
 We will continue discussing the synchronization modes and methods later on in our Training. 
 
-[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/05_LU_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/07_.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/05_LU_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/07_quiz.md)
 
  
 
