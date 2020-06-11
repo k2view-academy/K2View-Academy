@@ -37,9 +37,11 @@
   - Sync strategies
 -  Summary exercises
 - Quiz (2)
-- Fabric Deployment & server side
-  - Fabric server
-  - Cassandra console
+- Fabric Runtime
+  - Overview
+  - Getting started with Fabric Server   
+  - Fabric basic commands
+  - Cassandra main keyspaces & commands
 
 #### **DAY 2 – Afternoon**
 
