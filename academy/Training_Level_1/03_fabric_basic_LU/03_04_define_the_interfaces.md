@@ -74,7 +74,7 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 
 ​       
 
-### ![](/academy/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
 
 The main business requirement is to display a 360 Customer view which shows a customer’s activities and data.Todo so, define an interface that will access the customer’s data.
 
@@ -91,7 +91,7 @@ Considering the information above, whichinterface should be used ? **CRM DB**
 
 **Great!  your first interface is ready to be explored:**
 
-Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
+Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
 The Query Builder is displayed where youcan see the list of tables and execute the following sample query.
 
@@ -105,7 +105,7 @@ results:10,000
 
  
 
-###  ![](/academy/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
+###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
 
  Your Customer’s 360view requires additional data such as Billing and Order.Using the training materials covered so far and the aboveexample, configure the following DB Interfaces:
 
@@ -153,13 +153,13 @@ Password:
 
  
 
-### ![](/academy/03_fabric_basic_LU/images/Solution.png)Solution- Interface Exercise Solution
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution- Interface Exercise Solution
 
 1. `Answer: BALANCE, CONTRACT_OFFER_MAPPING,INVOICE, OFFER, PAYMENT, SUBSCRIBER`
 2. `Answer: Subscriber ID 82`
 3. `Answer: 37351 orders`
 
 
-[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/05_LU_flow.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training/Level_1/03_fabric_basic_LU/05_LU_flow.md)
 
 
