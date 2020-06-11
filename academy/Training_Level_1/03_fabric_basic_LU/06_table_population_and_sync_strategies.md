@@ -1,6 +1,6 @@
 # Table Population and Sync Strategies
 
-​      ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_06.png)              
+​      ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_06.png)              
 
 Your Logical Unit is now constructed using tables from different source DBs and has a hierarchical Parent-Child representation. You have reviewed the implementation and were able to see the data quickly after moving it from the source into Fabric. 
 
