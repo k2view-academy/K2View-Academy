@@ -1,6 +1,6 @@
 #   Define the Interfaces
 
-​                                                     ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_03.png)
+​                                                     ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_03.png)
 
 Now your Project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the Project’s interfaces. 
 
@@ -42,7 +42,7 @@ Let’s look at the steps for creating the Interface:
 
  
 
-![](/academy/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
 
 ​	[Adding a fabric and remote fabric interface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
 
