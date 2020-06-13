@@ -22,20 +22,16 @@
 #### **DAY 1 – Afternoon**
 
 - Fabric main flow (Simple LU)
-  - Data modelling within business requirements
-  - Project setup
-  - Interfaces definition and query builder access
-  - Hands-on exercise
-  - Simple LU by auto-discovery
-  - Schema viewer and instances
-  - LU hands-on exercise
+  - Fabric Main Flow Overview
+  - Create a Fabric Project
+  - Interfaces definition and Query builder
+  - Logical Unit Flow 
 
 #### **DAY 2 – Morning**
 
 - Fabric main flow (LU properties)
   - Populations
   - Sync strategies
--  Summary exercises
 - Quiz (2)
 - Fabric Runtime
   - Overview
