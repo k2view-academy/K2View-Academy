@@ -27,7 +27,7 @@ By the end of the Fabric Runtime learning item you will know:
 
 Please open your fabric runtime environment, you have 2 login options:
 
-1. Login to Fabric Console using the command line on your VM 
+1. Login to Fabric  Linux server  
 
 2. Open **Fabric Console** on your windows search
 
