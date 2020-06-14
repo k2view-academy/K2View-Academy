@@ -22,7 +22,18 @@ Now that our Fabric console is opened, let's get started by reviewing some of th
 
 ###### Local Fabric- Window
 
+1. To verify the Fabric version - run **fabric>version;** on the Fabric Console.
 
+2. Go to the Fabric directory on the windows explorer - **C:\k2view\Fabric_6.1\Server\fabric**
+
+3. Let's list the folders , how many folders are there? *8* folders
+
+4. To review the k2fabric logs: 
+
+   1. Check the **output** option under the Fabric Studio server\Activity Logs component
+   2. Go to the Fabric log directory **C:\k2view\k2Projects\Fabric\\[Learning Project]\FabricHome\logs** check the **k2fabric** file. Note that addtional directories are under FabricHome such as : **config**
+
+   
 
  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/01_fabric_runtime_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/03_fabric_deployment.md)
 
