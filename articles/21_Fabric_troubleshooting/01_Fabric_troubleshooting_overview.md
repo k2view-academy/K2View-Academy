@@ -1,0 +1,104 @@
+# Fabric Troubleshooting Overview
+
+Fabric provides the following methods for troubleshooting executed processes.
+
+- **Using log files**. All activities performed in Fabric are written into the [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+- **Monitoring stuck processes**, using the following tools:
+
+  - **[ps** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – Fabric command which displays the tasks running on the Fabric server, such as: Fabric commands, [User Jobs], [Web Services], [Graphit], [Sync process](/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/14_sync_LU_instance/01_sync_LUI_overview.md), etc.
+
+  - [**jjstack.sh** script](<!--/articles/21_Fabric_troubleshooting/sub-section below-->) – Fabric script that can collect Java stack traces for a given process, store the stacks and analyze the results. The script can be applied to the Fabric server or the IID Finder. 
+
+  - **[Heap Dump]**(<!--/articles/21_Fabric_troubleshooting/sub-section below-->) – a file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand . The file can be investigated to analyze the source of the memory leak.
+
+    
+
+### How Do I Run jjstack?
+
+Use cases for running **jjstack.sh** are:
+
+- An explicit request from R&D to enable them to investigate a problem in Fabric.
+- When you suspect that a job or a **Migrate** command is stuck.
+- To investigate a performance issue in the implementation layer.
+
+The procedure is to run the script and to analyze the output either on your own or with the help of R&D.
+
+The following table describes the syntax and the parameters for calling the **jjstack.sh** script. The script is located under **$K2_HOME/fabric/scripts** in the Fabric server.
+
+<table>
+<tbody>
+<tr>
+<td width="150px">
+<p><strong>jjstack.sh</strong></p>
+</td>
+<td width="750px">
+<p><strong>Description</strong>: The script collects Java stack traces of a given process, stores stacks into the store directory and analyzes the results.</p>
+<p><strong>Usage</strong>: ./jjstack.sh [pid] [sample count] [store directory] [cutoff limit]</p>
+<p><strong>Options</strong>:</p>
+<ul>
+<li>[pid] &ndash; optional parameter. Java process ID to sample. By default, the script scans the Fabric server - see Example 1. When this parameter is a default while other parameters must be provided, use &ldquo;&rdquo; - see Example 2.</li>
+<li>[sample count] - optional parameter. Number of samples and number of output files created.</li>
+<li>[store directory] - optional parameter. Location to store the output files that can be analyzed later. By default, the output directory is <strong>/tmp</strong>.</li>
+<li>[cutoff limit] - optional parameter. Minimum number of appearances of the Java methods to show in the output file.</li>
+</ul>
+<p>Note that it is recommended to set both the sample count and the cutoff limit to proportional values. The recommended values are:</p>
+<ul>
+<li>Sample count = 100.</li>
+<li>Cutoff limit = 30.</li>
+</ul>
+<p><strong>Example 1</strong></p>
+<p>./jjstack.sh &nbsp;</p>
+<p>Sample the Fabric server 100 times, create the files in /tmp. No cutoff limit.</p>
+<p>&nbsp;<strong>Example 2</strong></p>
+<p>./jjstack.sh &ldquo;&rdquo; 50 js_iid1</p>
+<p>Sample the Fabric server 50 times, create the files in the <strong>js_iid1</strong> output directory. No cutoff limit.</p>
+<p>&nbsp;&nbsp;<strong>Example 3 </strong></p>
+<p>./jjstack.sh 14323 100 js_iid1 30</p>
+<p>Sample the process 14323 100 times, create the files in the <strong>js_iid1</strong> output directory and output only entries with at least 30 appearances.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+[Click to view the Example of the **jjstack** Output File.](/articles/21_Fabric_troubleshooting/images/jjstack.out)
+
+
+
+### How Is a Heap Dump File Created?
+
+A Heap Dump file is automatically created if Fabric crashes due to memory usage exceeding the definition. When required, a Heap Dump file can also be created manually using the **jmap** command. 
+
+Default memory usage is defined in the **$K2_HOME/config/ jvm.options** configuration file and is equal to 2G.  The location of a Heap Dump file is defined in the **jvm.options** configuration file. If it is not defined there, it is created in folder where Fabric is started, which is usually **$K2_HOME** or **$K2_HOME/fabric/scripts**. 
+
+Note that Heap Dump files can take up a lot of disk space, therefore it is recommended to delete them after an investigation has been completed.
+
+The following table describes the syntax and parameters for creating the Heap Dump file using the **jmap** command. 
+
+<table>
+<tbody>
+<tr>
+<td width="150px">
+<p><strong>jmap -dump:&lt;dump-options&gt;</strong></p>
+</td>
+<td width="750px">
+<p><strong>Description</strong>: To connect to the running process and to dump Java heap in hprof binary format</p>
+<p><strong>Usage</strong>: jmap -dump:[dump-options] [pid]</p>
+<p><strong>Options</strong>:</p>
+<ul>
+<li>Dump-options are:
+<ul>
+<li>live - dump only live objects. If not specified, all objects in the heap are dumped.</li>
+<li>format=b - binary format.</li>
+<li>file=&lt;file&gt; &nbsp;- dump heap to file in the local directory (scan be absolute path).</li>
+</ul>
+</li>
+<li>[pid] - Fabric process ID.</li>
+</ul>
+<p><strong>Example</strong>:</p>
+<p>jmap -dump:live,format=b,file=heap.bin &lt;pid&gt; &nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
