@@ -1,7 +1,7 @@
 # Broadway Overview
 
 ## What are Broadway incentives?
-Broadway was introduced to Fabric for the first time on release 6.0. It aims to enrich Fabric with the following capabilities:
+Broadway was introduced to Fabric for the first time on release 6.0. It enrich Fabric with the following capabilities:
 
 * ETL (Extract Transform Load) - replacing K2view ADI (Advanced Data Integration) tool for TDM (Test Data Management) and pure ETL projects (Data migration, data masking, data cleansing, data purging, data sequences management, etc..). Broadway resolves ADI technology obstacles, as it is written in Java and supports integration with any database provides a JDBC driver.
 * BPM (Business Process Management) - manage the business processes, covering both design and execution, adding the ability to define the business flow, the order of the activities and the reaction to each flow stage results.
