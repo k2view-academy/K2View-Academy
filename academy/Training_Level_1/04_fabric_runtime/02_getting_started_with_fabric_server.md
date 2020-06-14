@@ -8,7 +8,7 @@ Now that our Fabric console is opened, let's get started by reviewing some of th
 
 [Fabric Log Files]()<!--Add link to 21.1 Fabric troubleshoot log files-->
 
-### ![/academy/Training_Level_1/03_fabric_basic_LU/images/example.png]()Example - Fabric Directories and Basic Utilities
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Fabric Directories and Basic Utilities
 
 ###### Fabric server-Linux
 
