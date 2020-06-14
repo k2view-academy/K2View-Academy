@@ -26,17 +26,21 @@ After a multi-billion North American wireless company acquired two of its compet
 
 **Use Case 2 - 360 Network Monitoring**
 
-A global network services provider needed to improve its customer experience by anticipating customer's issues across multiple states. The company's servers would receive automatically generated tickets from the alerts raised by the network equipment installed at the customer's homes (such as outage, performance, usage data).  Implementing K2View Fabric enabled the company to integrate their customer data with their equipment network topology into a single platform and create a Network 360 view for millions customers, and thousands of concurrent alarms, resulting in:
+A global network services provider needed to improve its customer experience by anticipating customer's issues across multiple states. The company's systems automatically receive  tickets generated from the alerts raised by the network equipment installed at their customer's premises (such as outage, performance, usage data).  
 
-\-     Real-time aggregation of alarms to identify issues before the customer notices, and to reduce significantly customer calls,
+Implementing K2View Fabric enabled the company to integrate their customer data with their equipment network topology records into a single platform and create a Network 360 view for millions of customers and thousands of concurrent alarms (100 thousand per day across the park). 
 
-\-     Real-time correlation between network events and impacted customers to ensure proactive communication with callers 
+This resulted in:
 
-\-      Efficient deflection of customer calls towards the matching handling team, message, or house-call field operative,
+\-     providing real-time aggregation of alarms and identification of issues before the customer even notices any issue, thus reducing significantly support calls
+
+\-     ensuring real-time correlation between network events, impacted customers and spatial occurrences to enable proactive communication and swift resolution of issues
+
+\-     Efficient deflection of customer calls towards the matching handling team, message, or field operatives
 
 \-     Cutting significantly AHT by ensuring consolidated customer360
 
-\-     Proactive identification of area power or network outages
+\-     Proactive discovery and identification of new types of outages
 
 
 
