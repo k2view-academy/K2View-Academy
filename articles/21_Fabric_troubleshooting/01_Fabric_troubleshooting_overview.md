@@ -57,7 +57,7 @@ The following table describes the syntax and the parameters for calling the **jj
 </tbody>
 </table>
 
-[Click to view the Example of the **jjstack** Output File.](/articles/21_Fabric_troubleshooting/images/jjstack.out)
+[Click to view the Example of the **jjstack** Output File.](/articles/21_Fabric_troubleshooting/images/jjstack.md)
 
 
 
