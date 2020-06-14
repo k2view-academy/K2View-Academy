@@ -5,11 +5,11 @@ Fabric provides the following methods for troubleshooting executed processes.
 - **Using log files**. All activities performed in Fabric are written into the [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 - **Monitoring stuck processes**, using the following tools:
 
-  - **[ps** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – Fabric command which displays the tasks running on the Fabric server, such as: Fabric commands, [User Jobs], [Web Services], [Graphit], [Sync process](/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/14_sync_LU_instance/01_sync_LUI_overview.md), etc.
+  - [**ps** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – Fabric command which displays the tasks running on the Fabric server, such as: Fabric commands, [User Jobs], [Web Services], [Graphit], [Sync process](/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/14_sync_LU_instance/01_sync_LUI_overview.md), etc.
 
   - [**jjstack.sh** script](<!--/articles/21_Fabric_troubleshooting/sub-section below-->) – Fabric script that can collect Java stack traces for a given process, store the stacks and analyze the results. The script can be applied to the Fabric server or the IID Finder. 
 
-  - **[Heap Dump]**(<!--/articles/21_Fabric_troubleshooting/sub-section below-->) – a file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand . The file can be investigated to analyze the source of the memory leak.
+  - [**Heap Dump**](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-is-a-heap-dump-file-created) – a file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand . The file can be investigated to analyze the source of the memory leak.
 
     
 
@@ -28,10 +28,10 @@ The following table describes the syntax and the parameters for calling the **jj
 <table>
 <tbody>
 <tr>
-<td width="150px">
+<td width="170px">
 <p><strong>jjstack.sh</strong></p>
 </td>
-<td width="750px">
+<td width="730px">
 <p><strong>Description</strong>: The script collects Java stack traces of a given process, stores stacks into the store directory and analyzes the results.</p>
 <p><strong>Usage</strong>: ./jjstack.sh [pid] [sample count] [store directory] [cutoff limit]</p>
 <p><strong>Options</strong>:</p>
@@ -46,14 +46,11 @@ The following table describes the syntax and the parameters for calling the **jj
 <li>Sample count = 100.</li>
 <li>Cutoff limit = 30.</li>
 </ul>
-<p><strong>Example 1</strong></p>
-<p>./jjstack.sh &nbsp;</p>
+<p><strong>Example 1: </strong>./jjstack.sh &nbsp;</p>
 <p>Sample the Fabric server 100 times, create the files in /tmp. No cutoff limit.</p>
-<p>&nbsp;<strong>Example 2</strong></p>
-<p>./jjstack.sh &ldquo;&rdquo; 50 js_iid1</p>
+<p>&nbsp;<strong>Example 2: </strong>./jjstack.sh &ldquo;&rdquo; 50 js_iid1</p>
 <p>Sample the Fabric server 50 times, create the files in the <strong>js_iid1</strong> output directory. No cutoff limit.</p>
-<p>&nbsp;&nbsp;<strong>Example 3 </strong></p>
-<p>./jjstack.sh 14323 100 js_iid1 30</p>
+<p>&nbsp;&nbsp;<strong>Example 3: </strong>./jjstack.sh 14323 100 js_iid1 30</p>
 <p>Sample the process 14323 100 times, create the files in the <strong>js_iid1</strong> output directory and output only entries with at least 30 appearances.</p>
 </td>
 </tr>
@@ -77,10 +74,10 @@ The following table describes the syntax and parameters for creating the Heap Du
 <table>
 <tbody>
 <tr>
-<td width="150px">
+<td width="170px">
 <p><strong>jmap -dump:&lt;dump-options&gt;</strong></p>
 </td>
-<td width="750px">
+<td width="730px">
 <p><strong>Description</strong>: To connect to the running process and to dump Java heap in hprof binary format</p>
 <p><strong>Usage</strong>: jmap -dump:[dump-options] [pid]</p>
 <p><strong>Options</strong>:</p>
