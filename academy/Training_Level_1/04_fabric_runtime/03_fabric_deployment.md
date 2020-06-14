@@ -16,7 +16,7 @@ See how your design and implementation can be executed in scale andon demand:
 
 
 
-### ![/academy/Training_Level_1/03_fabric_basic_LU/images/example.png]()Example - Fabric Deployment
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Fabric Deployment
 
 Let's deploy  from the Fabric studio the Logical Unit  we have just created:
 
