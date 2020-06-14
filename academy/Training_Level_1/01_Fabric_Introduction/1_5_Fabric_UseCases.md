@@ -26,9 +26,9 @@ After a multi-billion North American wireless company acquired two of its compet
 
 **Use Case 2 - 360 Network Monitoring**
 
-A global network services provider needed to improve its customer experience by anticipating customer's issues across multiple states. The company's systems automatically receive  tickets generated from the alerts raised by the network equipment installed at their customer's premises (such as outage, performance, usage data).  
+A global network  internet services provider needed to improve its customer experience and support by anticipating any failure of its equipment across multiple countries. The company's monitoring systems already automatically receive tickets generated from alerts raised by the equipment installed at their customer's premises (alerts could be outage, performance issues or usage data).  
 
-Implementing K2View Fabric enabled the company to integrate their customer data with their equipment network topology records into a single platform and create a Network 360 view for millions of customers and thousands of concurrent alarms (100 thousand per day across the park). 
+Implementing K2View Fabric enabled the company to integrate their customer data with their equipment network topology records into a single platform thus creating a 360 view of its network for millions of customers' premises sending thousands of concurrent alarms (100 thousand per day across the entire park). 
 
 This resulted in:
 
