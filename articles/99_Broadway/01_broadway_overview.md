@@ -32,7 +32,7 @@ Third, use the data inspection capability in order to view the complex data stru
 ![image](/articles/99_Broadway/images/Broadway_full.png)
 
 ## What are Broadway principles?
-A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database holding the data of one single Digital Entity in the LUT structure definition.
+
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
