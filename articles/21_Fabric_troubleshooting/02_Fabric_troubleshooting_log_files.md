@@ -55,7 +55,7 @@ Note that to define the <maxHistory> in hours rather than in days, edit the <fil
  
 When required, a new log file can be created by configuring a new **appender** in the **logback.xml** file. To do so, go to the **logback.xml** file, add the new appender and define its filename, rolling policy and other settings.
 
-###### **Example:**
+**Example:**
 ~~~
 <appender name="InfoHandler" class="ch.qos.logback.core.rolling.RollingFileAppender">
   <file>${FABRIC_HOME}/logs/monitoring.log</file>
@@ -76,7 +76,7 @@ To print all Fabric messages into the log, set this parameter to DEBUG - the low
 
 Writing errors/messages/warnings into the log has an impact on both performance and disk space. Therefore, they should be written only when requested by the customer or for debugging. For better performance, reduce the log level. Consider moving from INFO to ERROR after the application is stabilized. 
 
-###### **Example:**
+**Example:**
 
 ~~~
 <root level="INFO">
@@ -105,10 +105,10 @@ Due to disk space limitations, logs are automatically deleted after several days
 
 K2View recommends the following for managing logs and cleanup:
 
-- Check the default settings in the **logback.xml** file related to saving history and validate they fit your business needs: 
-  - ~~~<rollingPolicy>, <maxFileSize>, <maxHistory> and <totalSizeCap>~~~ 
+- Check the default settings in the **logback.xml** file related to saving history and validate they fit your business needs:
+rollingPolicy, maxFileSize, maxHistory and totalSizeCap. 
 	
-- Define the Crontab expression to delete ***.err** and ***.out** log files since they are not configured via the **logback.xml** file. 
+- Define the Crontab expression to delete **.err** and **.out** log files since they are not configured via the **logback.xml** file. 
 
 - To keep the log files history for a longer period, for example due to regulations, integrate Fabric with a central syslog system like ELK Stack (Elasticsearch, Logstash and Kibana), Splunk, or other. 
 
