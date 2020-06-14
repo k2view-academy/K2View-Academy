@@ -27,7 +27,8 @@ Working with Fabric will allow you to:
 
 \-  C: Create graphical visualizations of data spread across multiple data centres.
 
- ***Solution 1: B; Indeed Fabric is about specific entities down to the last bit of information they contain.***
+
+(***Solution 1: B; Indeed Fabric is about specific entities down to the last bit of information they contain.***)
 
 
 
@@ -50,11 +51,10 @@ Logical Units are:
 
 \-  E: All the above.
 
-***Solution 2: A ; note if you answered E, you probably had Fabric in mind, but this particular question was about Logical Units***
+
+(***Solution 2: A ; note if you answered E, you probably had Fabric in mind, but this particular question was about Logical Units***)
 
  
-
-
 
 #### Question 3: Fabric usage
 
@@ -79,7 +79,7 @@ You will use Fabric when you need to:
 \- G: All the above.
 
 
- ***Solution 3: G***
+(***Solution 3: G***)
 
 
 
@@ -101,10 +101,7 @@ Fabric is:
 \- D: A resilient, multi-tenant web-service publishing engine. 
 \- E: All the above.
 
-***Solution 4: E***
-
-
-
+(***Solution 4: E***)
 
 
 
@@ -122,9 +119,7 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- C: As a single binary file pointing to different DBs distributed across external networks.
 
 
- ***Solution 5: B***
-
-
+ (***Solution 5: B***)
 
 
 
@@ -144,10 +139,8 @@ To store its data, Fabric uses the following storage mechanism:
 
 \-  D: No physical storage. Everything resides in memory.
 
-***Solution 6: C - Note that Fabric can also store and manipulate data in RAM and refrain from keeping data in storage.***
 
-
-
+(***Solution 6: C - Note that Fabric can also store and manipulate data in RAM and refrain from keeping data in storage.***)
 
 
 
@@ -155,17 +148,20 @@ To store its data, Fabric uses the following storage mechanism:
 
 Users can query Fabric from external systems by:
 
+
 \- A: Using Fabric JDBC driver.
+
 
 \- B: Pushing data directly into Fabric through a web-service enabling direct CRUD operations into LUIs
 
+
 \- C: Listening to Fabric CDC (Change Data Capture) module and act upon changes if needed
+
 
 \- D: All the above
 
-***Solution 7: D***
 
-
+(***Solution 7: D***)
 
 
 
@@ -173,19 +169,23 @@ Users can query Fabric from external systems by:
 
 Fabric publishes data changes to external servers by using:
 
+
 \- A: Kafka & CDC to notify changes occurring to specific LUIs
+
 
 \- B: CDC (Change Data Capture) & iiDFinder modules to notify changes occurring to common DB tables
 
+
 \- B: MSMQ 
+
 
 \- C: Its own proprietary Queue Messaging API
 
+
 \- D: All the above
 
-***Solution 8: A***
 
-
+(***Solution 8: A***)
 
 
 
@@ -199,6 +199,7 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 
 \- B: Data masking to hide real data during development or QA phases.
 
+
 \- C: Encryption of all micro-databases (LUI) created at any time.
 
 
@@ -207,10 +208,10 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 
 \- E: All the above.
 
-***Solution 9: E***
+
+(***Solution 9: E***)
 
  
-
 
 #### Question 10: Fabric Data Flow
 
@@ -231,10 +232,8 @@ Implementers can use Fabric to define and run:
 
 \- E: All the above and more. 
 
-***Solution 10: E***
 
-
-
+(***Solution 10: E***)
 
 
 
@@ -242,15 +241,17 @@ Implementers can use Fabric to define and run:
 
 Fabric can be deployed and used across:
 
+
 \- A: Multiple clusters spread across different data centres independently of Cassandra's storage
+
 
 \- B: Only on the same the data centres where Cassandra servers have been deployed
 
+
 \- C: Only on the servers where External sources reside
 
- ***Solution 11: A***
 
-
+ (***Solution 11: A***)
 
 
 
