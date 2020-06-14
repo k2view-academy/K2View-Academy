@@ -26,7 +26,7 @@ Working with Fabric will allow you to:
 
 
 \-  C: Create graphical visualizations of data spread across multiple data centres.
- 
+
  ***Solution 1: B; Indeed Fabric is about specific entities down to the last bit of information they contain.***
 
 
@@ -98,9 +98,7 @@ Fabric is:
 
 \- C: A development environment that allows you to write functions and execute them on your schema's tables.
 
-
 \- D: A resilient, multi-tenant web-service publishing engine. 
-\-     E: All the above.
 \- E: All the above.
 
 ***Solution 4: E***
@@ -201,7 +199,6 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 
 \- B: Data masking to hide real data during development or QA phases.
 
--     C: Encryption of all micro-databases (LUI) created at any time.
 \- C: Encryption of all micro-databases (LUI) created at any time.
 
 
@@ -241,8 +238,6 @@ Implementers can use Fabric to define and run:
 
 
 
-
-
 #### Question 11: Fabric Cluster
 
 Fabric can be deployed and used across:
@@ -253,7 +248,7 @@ Fabric can be deployed and used across:
 
 \- C: Only on the servers where External sources reside
 
- ***Solution 10: A***
+ ***Solution 11: A***
 
 
 
