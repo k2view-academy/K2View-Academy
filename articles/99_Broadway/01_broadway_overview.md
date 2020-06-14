@@ -3,8 +3,8 @@
 ## What are Broadway incentives?
 Broadway was introduced to Fabric for the first time on release 6.0. It enrich Fabric with the following capabilities:
 
-* ETL (Extract Transform Load) - replacing K2view ADI (Advanced Data Integration) tool for TDM (Test Data Management) and pure ETL projects (Data migration, data masking, data cleansing, data purging, data sequences management, etc..). Broadway resolves ADI technology obstacles, as it is written in Java and supports integration with any database provides a JDBC driver.
-* BPM (Business Process Management) - manage the business processes, covering both design and execution, adding the ability to define the business flow, the order of the activities and the reaction to each flow stage results.
+* ETL (Extract Transform Load) - replacing K2view ADI (Advanced Data Integration) tool for TDM (Test Data Management) and pure ETL projects (Data migration, data masking, data cleansing, data purging, data sequences management, etc..). Broadway resolves ADI technology obstacles, as it is written in Java and supports integration with any database provides a JDBC driver. Broadway can also integrate with all interfaces supported by Fabric, such as: http/s, publish and subscriber messages from JMS or Kafka, etc...
+* BPM (Business Process Management) - manage the business processes, covering both design and execution, adding the ability to define the business flow, the order of the activities and the reaction to each flow stage results, plus advanced error handling on a stage level that leads to the desired reaction.
 * Data Inspection - live data inspection capabilities with holistic and dynamic view on meta data (data structure) and actual data flow.
 
 Broadway is the only tool in the world that capture business processes and data flows under one holistic view.
