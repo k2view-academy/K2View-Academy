@@ -22,7 +22,7 @@ The latest log is always named **k2fabric.log**, and it is [rolled to a new file
 
 The ***.err** and ***.** **out** log files are created during [Fabric restart]( /articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart) and are not rolled to a new file. Check these files when an error occurs. 
 
-##### **IID Finder Log Files**
+#### **IID Finder Log Files**
 
 The IID Finder has a separate log file and a separate configuration file:
 
