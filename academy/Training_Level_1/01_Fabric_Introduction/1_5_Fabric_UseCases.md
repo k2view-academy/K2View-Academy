@@ -24,21 +24,25 @@ After a multi-billion North American wireless company acquired two of its compet
 
  
 
-**Use Case 2 - Entertainment Customer experience**
+**Use Case 2 - 360 Network Monitoring**
 
-A global media and entertainment brand needed to improve its poor customer experience due to it relied upon multiple systems across multiple countries, caused significant latency issues in accessing the company’s customer data. Implementing K2View Fabric enabled the company to integrate their customer data into a single platform and create a Customer 360 view for over one million customers, resulting in:
+A global network services provider needed to improve its customer experience by anticipating customer's issues across multiple states. The company's servers would receive automatically generated tickets from the alerts raised by the network equipment installed at the customer's homes (such as outage, performance, usage data).  Implementing K2View Fabric enabled the company to integrate their customer data with their equipment network topology into a single platform and create a Network 360 view for millions customers, and thousands of concurrent alarms, resulting in:
 
-\-      Integrated data from multiple countries and systems in just three days
+\-     Real-time aggregation of alarms to identify issues before the customer notices, and to reduce significantly customer calls,
 
-\-      A faster customer self-service experience and increased customer satisfaction
+\-     Real-time correlation between network events and impacted customers to ensure proactive communication with callers 
 
-\-      An on-going cost reduction of multi-million annually Multiple Data Sources due to disappointing user experience and lack of adoption of the portal by the company’s one million customers. 
+\-      Efficient deflection of customer calls towards the matching handling team, message, or house-call field operative,
 
-*After deciding to implement K2View Fabric, it took just three days to the company’s implementors to integrate data from residing across multiple countries and systems, thus giving a Customer 360 view and real-time synchronization of data upon changes. This was achieved with no impact on legacy systems. Furthermore, data latency from core systems was cut from minutes to milliseconds, improving the customer self-service experience and cutting costs.* 
+\-     Cutting significantly AHT by ensuring consolidated customer360
+
+\-     Proactive identification of area power or network outages
+
+
 
  
 
 [![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Previous.png)](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)
 
 
- 
+
