@@ -35,7 +35,7 @@ Let's deploy  from the Fabric studio the Logical Unit  we have just created:
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/02_getting_started_with_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/02_getting_started_with_fabric_server.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md)
 
  
 
