@@ -11,6 +11,7 @@ Status WAITING (parking) count 6392
 Status TIMED_WAITING (on object monitor) count 439
 Status RUNNABLE count 4783
 Status TIMED_WAITING (parking) count 1114
+ ~~~
  <1> 2200  -  JobExecutor.java:98 ::: com.k2view.cdbms.JobExecutor:run()
   <2> 2200  -  Job.java:30 ::: com.k2view.cdbms.Job:execute()
    <3> 2200  -  ParserJob.java:64 ::: com.k2view.cdbms.jobs.ParserJob:process()
