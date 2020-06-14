@@ -33,5 +33,5 @@ Please open your fabric runtime environment, you have 2 login options:
 
    
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/02_getting_strated_with_fabric_server.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/02_getting_started_with_fabric_server.md)
 
