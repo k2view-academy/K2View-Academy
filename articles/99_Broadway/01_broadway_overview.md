@@ -25,11 +25,11 @@ First, define the stages in order to cover the BPM needs (order is from left to 
 
 Secondly, define the actors and the relations between the actors, in order to cover data flows needs:
 
-![image](/articles/99_Broadway/images/Broadway_full.png)
+![image](/articles/99_Broadway/images/Broadway_without_inspection.png)
 
 Third, use the data inspection capability in order to view the complex data structure by building a dynamic schema representing the meta data
 
-![image](/articles/99_Broadway/images/Broadway_without_inspection.png)
+![image](/articles/99_Broadway/images/Broadway_full.png)
 
 ## What are Broadway principles?
 A Logical Unit Instance is one instance of a Logical Unit Type – it is a single physical database holding the data of one single Digital Entity in the LUT structure definition.
