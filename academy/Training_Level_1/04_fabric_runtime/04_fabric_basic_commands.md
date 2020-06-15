@@ -8,7 +8,7 @@ You have just deployed your project and  the objects along with, you were able t
 
 
 
-### ![/academy/Training_Level_1/03_fabric_basic_LU/images/example.png]()Example
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example- Fabric Commands
 
 Let’s test an LU Instance and see the result:
 
@@ -62,7 +62,7 @@ Using the training materials and examples covered so far:
    `|CustomerLU|CUSTOMER              |`
    `|CustomerLU|SUBSCRIBER            |`
    `|CustomerLU|_k2_main_info         |
-   |CustomerLU|_k2_objects_info      |`
+   `|CustomerLU|_k2_objects_info      |`
    `|CustomerLU|_k2_transactions_info |`
 
    `(12 rows)`
