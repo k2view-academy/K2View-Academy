@@ -1,6 +1,6 @@
 ﻿
 # Fabric Server- Main Directories
-Fabric server has the several directories under its home directory: $K2_HOME. Below is the list of the main fabric directories:
+There are several directories under the Fabric server $K2_HOME directory. The following table lists the main ones:
 
 <table width="900pxl">
 <tbody>
@@ -17,7 +17,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/fabric</h4>
 </td>
 <td width="600">
-<p>This directory and its sub-directories contain Fabric code, scripts, templates, and resources.</p>
+<p>This directory and its sub-directories contain hold Fabric code, scripts, templates and resources.</p>
 </td>
 </tr>
 <tr>
@@ -25,7 +25,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/fabric/scripts</h4>
 </td>
 <td width="600">
-<p>Fabric Scripts:&nbsp;</p>
+<p>Fabric scripts:&nbsp;</p>
 <ul>
 <li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment scripts</a></li>
 <li>iidFinder scripts</li>
@@ -41,7 +41,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/fabric/upgrade</h4>
 </td>
 <td width="600">
-<p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: If you upgrade Fabric 5.5.x to Fabric 6.x, run  the scripts under <strong>toV6.0 </strong>sub-directory<strong>.</strong></p>
+<p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
 </td>
 </tr>
 <tr>
@@ -49,7 +49,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/logs</h4>
 </td>
 <td width="471">
-<p>Fabric log files.</p>
+<p>Fabric <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">log files.</a></p>
 </td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/monitor</h4>
 </td>
 <td width="600">
-<p>Holds the Prometheus JMX exporter for execution monitoring.</p>
+<p>Holds the Prometheus JMX exporter for for execution monitoring.</p>
 </td>
 </tr>
 <tr>
@@ -82,7 +82,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/storage</h4>
 </td>
 <td width="600">
-<p>Stores the data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, Staging XMLs for iidFinder, and Reference (common) files.</p>
+<p>Stores data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, Staging XMLs for iidFinder, and Reference (common) files.</p>
 </td>
 </tr>
 <tr>
@@ -128,9 +128,37 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 </tbody>
 </table>
 
+## **Fabric Local Server Main Directories**
+
+As of version 6.1, the Fabric server is automatically installed on Windows when a new Fabric Studio version is installed. 
+
+The Cassandra installation has also been added to the Fabric Studio.
+
+Fabric and Cassandra are installed under the following directories:
+
+- Fabric Studio is installed under C:\K2View\<Fabric version>\Studio.
+- The Fabric server is installed under C:\K2View\<Fabric version>\Server.
+- Apache-cassandra-3.11.4 is installed under C:\K2View\Fabric_6.1\Server  C:\K2View\<Fabric version>\ apache-cassandra-3.11.4
+
+### Fabric Server Directories
+
+The Fabric server directory has the following sub-directories:
+
+- **Fabric**, this directory and its sub-directories hold Fabric code, scripts, templates and resources. Note that the Fabric Studio setup adds a shortcut to the fabric.bat file under the fabric\bin folder. This file opens the Fabric console CMD in the local Fabric server and can be used only after running the Fabric server from the Studio. The fabric.bat file connects to the Fabric server via the default JDBC port.
+- **BroadwayUI**, Broadway directory <!--add a link to Broadway items – drop 2 - ->.
+- **Webserver**, the Home directory of the Fabric Web Admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.
+
+### FabricHome Directory
+
+The Fabric Studio creates the **FabricHome** directory under each Fabric project directory and holds the following sub-directories:
+
+- [config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig)
+- [export](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeexport)
+- [logs](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homelogs)
+- [storage](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homestorage)
 
 
 <!--Add links:-->
 
-<!--Drop 1- deployment, fabric architecture, fabric logs, fabric commands, fabric basic commands and scripts-->
+<!--Drop 1-  fabric architecture-->
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/01_fabric_architecture.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
