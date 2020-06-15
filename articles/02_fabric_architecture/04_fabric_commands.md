@@ -236,7 +236,7 @@ The following table lists the GET and DELETE commands:
 <p><h5>GETF</p>
 </td>
 <td width="250pxl">
-<p>Brings information of for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LU instances of different LUs. The instance is returned by a <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<p>Brings information of for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
 <td width="300pxl">
