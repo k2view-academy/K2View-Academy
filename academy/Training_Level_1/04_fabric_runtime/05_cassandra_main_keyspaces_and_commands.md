@@ -1,6 +1,6 @@
 # Cassandra Main Keyspaces & Commands
 
-### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
+![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
 Now that you are able to retrieve and view the data in Fabric, let's understand how the data is being stored in Cassandra, what is the operational information that you can view and what are the commands to access it:
 
@@ -25,17 +25,17 @@ Now that you are able to retrieve and view the data in Fabric, let's understand 
 
 1. `Answer:215, 82;` 
 
-   cassandra@cqlsh> select id from k2view_customerlu.entity ;
-    id
-   -----
-     82
-    215
+   `cassandra@cqlsh> select id from k2view_customerlu.entity ;`
+    `id`
+   `-----`
+     `82`
+    `215`
 
-   (2 rows)
+   `(2 rows)`
 
 2. `Answer: select lut_name, lut_version, lut_index_status from k2system.k2_lut_info;``or by k2view_* keyspaces being created`
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_commands.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/06_quiz.md)
 
