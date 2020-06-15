@@ -180,7 +180,7 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 \- B: Data masking to hide real data during development or QA phases.
 
 
-\- C: Encryption of all micro-databases (LUI) created at any time.
+\- C: Encryption of all micro-databases (LUI) created at any time. A different master key is used for each LUI, meaning if you managed to access one LUI it doesn't give you the ability to access all other LUIs.
 
 
 \- D: Encryption of part of an LUI according to specifications provided by the LU designer. 
