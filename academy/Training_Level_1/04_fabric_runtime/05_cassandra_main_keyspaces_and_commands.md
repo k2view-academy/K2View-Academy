@@ -33,4 +33,4 @@ Now that you are able to retrieve and view the data in Fabric, let's understand 
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_commands.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md)
