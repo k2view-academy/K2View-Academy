@@ -99,6 +99,7 @@ Fabric is:
 \- C: A development environment that allows you to write functions and execute them on your schema's tables.
 
 \- D: A resilient, multi-tenant web-service publishing engine. 
+
 \- E: All the above.
 
 (***Solution 4: E***)
