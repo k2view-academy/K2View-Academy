@@ -1,16 +1,12 @@
 # Fabric Commands
 
-Fabric includes a large set of commands to view Fabric configuration , update Fabric settings, and run Fabric processes. 
+Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via [user code](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command) (project implementation).
 
-You can either run Fabric commands from Fabric console, or [run Fabric commands in the implementation code](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
-
-Note the Fabric commands are case insensitive, e.g. you can run either **Get**, **get**, or **GET** command.
+Note that Fabric commands are **not** case sensitive. For example, a Get, get, or GET command can be run.
 
 ## Fabric Help
 
-After you [log in to Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type **help** to view the list of available Fabric commands.
-
-To view the description and syntax of a specific command, type **help [command]**. 
+After [logging in to Fabric](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type help/Help/HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
 
 For example: 
 
@@ -36,7 +32,7 @@ For example:
 <p>&nbsp;</p>
 </td>
 <td width="550pxl">
-<p>Get or Delete an LU instance to or from Fabric.</p>
+<p>Get or Delete an LUI to or from Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -52,7 +48,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
 </td>
 <td width="550pxl">
-<p>View on the Fabric configuration and settings</p>
+<p>View on the Fabric configurations and settings</p>
 </td>
 </tr>
 <tr>
@@ -70,7 +66,7 @@ For example:
 <p>&nbsp;</p>
 </td>
 <td width="550pxl">
-<p>Set master key for LUI or interface details encryption.</p>
+<p>Set the Master Key for an LUI or the encryption details of an interface.</p>
 <p>Set users, roles, and permissions.</p>
 </td>
 </tr>
@@ -89,7 +85,7 @@ For example:
 <p>&nbsp;</p>
 </td>
 <td width="550pxl">
-<p>Deploy environments and test connections on the active environment.</p>
+<p>Deploy environments and test connections on an active environment.</p>
 </td>
 </tr>
 <tr>
@@ -156,7 +152,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#cdc-and-search">CDC and Search</a></p>
 </td>
 <td width="550pxl">
-<p>Support Change Data Capture (CDC) and cross LU instance search functionalities.</p>
+<p>Support Change Data Capture (CDC) and cross LUI search functionalities.</p>
 </td>
 </tr>
 <tr>
@@ -180,11 +176,14 @@ For example:
 </tbody>
 </table>
 
-### Get and Delete LU Instance Commands
 
-The GET command is used to bring information for a given [LU instance]() and synchronize information from the data sources if needed.
+### Get and Delete LUI Commands
 
-Note that you can get LU instances of multiple LUs by one GET command, but you cannot get multiple LU instances of the same LU by one GET command. If you try to get multiple LU instances of the same LU by one GET command, you get the following error message:
+The GET command is used to bring information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and synchronize information from the data sources if needed.
+
+Note that you can get LUIs of multiple LUs by one GET command, but you cannot get multiple LUIs of the same LU by one GET command. 
+
+The following message is displayed when trying to get multiple LUI from the same LU using one GET command:
 
 `Only single instance per LUT can be used on the same GET command.`
 
@@ -192,7 +191,7 @@ The DELETE INSTANCE command deletes LU instance, or multiple LU instances from F
 
 Unlike the GET command, you can delete several LU instance of the same LU by one DELETE command.
 
-Below is the list of GET and DELETE commands:
+The following table lists the GET and DELETE commands:
 
 <table width="900pxl">
 <tbody>
@@ -215,7 +214,8 @@ Below is the list of GET and DELETE commands:
 <p><h5>GET</p>
 </td>
 <td width="250pxl">
-<p>This command is used to bring information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LU instances of different LUs. Fabric checks if the LU instance needs to be synced from the source systems, and syncs the LU instance if needed, or brings the latest version of the LU instance from Fabric.</p>
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, and syncs the LUI if needed, or brings the latest version of the LUI from Fabric.
+</p>
 <p>&nbsp;</p>
 </td>
 <td width="300pxl">
@@ -236,7 +236,7 @@ Below is the list of GET and DELETE commands:
 <p><h5>GETF</p>
 </td>
 <td width="250pxl">
-<p>This command is used to bring information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LU instances of different LUs. The instance is returned by a <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<p>Brings information of for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LU instances of different LUs. The instance is returned by a <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
 <td width="300pxl">
