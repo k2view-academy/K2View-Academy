@@ -25,15 +25,7 @@ Now that you are able to retrieve and view the data in Fabric, let's understand 
 
 1. `Answer:215, 82;` 
 
-   ```
-   cassandra@cqlsh> select id from k2view_customerlu.entity ;
-    id
-   -----
-     82
-    215
-   
-   (2 rows)
-   ```
+   `cassandra@cqlsh> select id from k2view_customerlu.entity ;`
 
    
 

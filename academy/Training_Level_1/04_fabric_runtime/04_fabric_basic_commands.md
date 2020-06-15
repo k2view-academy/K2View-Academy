@@ -20,19 +20,11 @@ Let’s test an LU Instance and see the result:
 
 4. You should get the following results:
 
-   ```
-   fabric>get CustomerLU.215;
-   
-   |luName    |iid|version      |
-   +----------+---+-------------+
-|CustomerLU|215|1592207994983|
-   
-   (1 rows)
-   ```
+   `fabric>get CustomerLU.215;`
    
    
-
-
+   
+   
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about Fabric Configuration Files, refer to: 
 
@@ -58,47 +50,17 @@ Using the training materials and examples covered so far:
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Fabric Commands
 
-1. ```
-   Answer: 12 tables including the _K2 tables
-   
-   fabric>describe schema CustomerLU;
-   |schema    |table                 |
-   +----------+----------------------+
-   |CustomerLU|ACTIVITY              |
-   |CustomerLU|ADDRESS               |
-   |CustomerLU|BALANCE               |
-   |CustomerLU|CASES                 |
-   |CustomerLU|CASE_NOTE             |
-   |CustomerLU|CONTRACT              |
-   |CustomerLU|CONTRACT_OFFER_MAPPING|
-   |CustomerLU|CUSTOMER              |
-   |CustomerLU|SUBSCRIBER            |
-   |CustomerLU|_k2_main_info         |
-   |CustomerLU|k2_objects_info       |
-   |CustomerLU|_k2_transactions_info |
-   
-   (12 rows)
-   ```
+1. `Answer: 12 tables including the _K2 tables`
 
-   
+   `fabric>describe schema CustomerLU;`
 
 2. `Answer: ACTIVITY_ID`
 
 3. `Answer: 2 Subscriber, 209 & 210`
 
-4. ```
-   Answer: Active (true)
-   
-   fabric>test_connection DbInterface='CRM_DB';
-   
-   |interface|environment|passed|error_message|
-   +---------+-----------+------+-------------+
-   |CRM_DB   |_dev       |true  |             |
-   
-   (1 rows)
-   ```
+4. `Answer: Active (true)`
 
-   
+   `fabric>test_connection DbInterface='CRM_DB';`
 
 5. `Answer: My First Name, set syc force will be bring the data from source`
 
@@ -112,7 +74,7 @@ Using the training materials and examples covered so far:
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/03_fabric_deployment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/03_fabric_deployment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/05_cassandra_main_keyspaces_and_command.md)
 
  
 
