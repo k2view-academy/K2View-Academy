@@ -23,10 +23,13 @@ After a multi-billion North American wireless company acquired two of its compet
 *Customer-facing applications were integrated directly into K2View Fabric, reducing the data latency from minutes to milliseconds. The implementation and its deployment had zero impact on legacy systems operations, and the company reports 100 percent availability of customer data since deployment.*
 
  
+ 
+ 
+ 
 
 **Use Case 2 - 360 Network Monitoring**
 
-A global network  internet services provider needed to improve its customer experience and support by anticipating any failure of its equipment across multiple countries. The company's monitoring systems already automatically receive tickets generated from alerts raised by the equipment installed at their customer's premises (alerts could be outage, performance issues or usage data).  
+A global network internet services provider needed to improve its customer support experience by anticipating any failure of its equipment across multiple countries. The company's monitoring systems already automatically receive tickets generated from alerts raised by the equipment installed at their customer's premises (alerts could be outage, performance issues or usage data).  
 
 Implementing K2View Fabric enabled the company to integrate their customer data with their equipment network topology records into a single platform thus creating a 360 view of its network for millions of customers' premises sending thousands of concurrent alarms (100 thousand per day across the entire park). 
 
