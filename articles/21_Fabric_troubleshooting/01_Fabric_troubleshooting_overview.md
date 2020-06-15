@@ -2,12 +2,14 @@
 
 Fabric provides the following methods for troubleshooting executed processes.
 
-- **Using log files**. All activities performed in Fabric are written into the [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
+- **Using log files**. All activities performed in Fabric are written into the [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) in case of local Fabric started by the Studio.
 - **Monitoring stuck processes**, using the following tools:
 
-  - [**ps** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – Fabric command which displays the tasks running on the Fabric server, such as: Fabric commands, [User Jobs], [Web Services], [Graphit], [Sync process](/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/14_sync_LU_instance/01_sync_LUI_overview.md), etc.
+  - [**ps** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – Fabric command which displays the tasks running on the Fabric server, such as: Fabric commands, [User Jobs], [Web Services], [Graphit], [Sync process](/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/14_sync_LU_instance/01_sync_LUI_overview.md), etc. It gives the ability to identify the stuck processes and the running duration and kill the stuck processes if needed by using the [**kill** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
 
   - [**jjstack.sh** script](<!--/articles/21_Fabric_troubleshooting/sub-section below-->) – Fabric script that can collect Java stack traces for a given process, store the stacks and analyze the results. The script can be applied to the Fabric server or the IID Finder. 
+
+- **Monitoring memory leaks or intensive memory consumption**, using the following tools:
 
   - [**Heap Dump**](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-is-a-heap-dump-file-created) – a file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand . The file can be investigated to analyze the source of the memory leak.
 
@@ -17,7 +19,7 @@ Fabric provides the following methods for troubleshooting executed processes.
 
 Use cases for running **jjstack.sh** are:
 
-- An explicit request from R&D to enable them to investigate a problem in Fabric.
+- An explicit request from R&D to enable the investigation of a problem in Fabric.
 - When you suspect that a job or a **Migrate** command is stuck.
 - To investigate a performance issue in the implementation layer.
 
