@@ -217,7 +217,23 @@ Implementers can use Fabric to define and run:
 
 
 
-#### Question 10: Fabric Cluster
+#### Question 10: CommonDB
+
+Fabric stores tables that are common to LUIs:
+
+
+\- A: As Cassandra's keyspaces in a single dedicated Cassandra server than can be queried using CSQL  
+
+
+\- B: As a a set of multiple cloned SQL databases each residing on a Fabric server node and systematically kept in sync one with the other using Kafka.
+
+\- C: As a single centralized SQL DB residing on a dedicated server 
+
+ (***Solution 10: A***)
+
+
+
+#### Question 11: Fabric Cluster
 
 Fabric can be deployed and used across:
 
@@ -231,7 +247,7 @@ Fabric can be deployed and used across:
 \- C: Only on the servers where External sources reside
 
 
- (***Solution 10: A***)
+ (***Solution 11: A***)
 
 
 
