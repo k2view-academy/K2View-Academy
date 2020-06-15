@@ -41,7 +41,7 @@ Fabric server has the several directories under its home directory: $K2_HOME. Be
 <h5>$K2_HOME/fabric/upgrade</h4>
 </td>
 <td width="600">
-<p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: If you upgrade Fabric 5.5.x to Fabric 6.x, you need to update the scripts under <strong>toV6.0 </strong>sub-directory<strong>.</strong></p>
+<p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: If you upgrade Fabric 5.5.x to Fabric 6.x, run  the scripts under <strong>toV6.0 </strong>sub-directory<strong>.</strong></p>
 </td>
 </tr>
 <tr>
