@@ -51,7 +51,8 @@ While log files convey useful information, they grow bigger over time, and event
 ~~~
 
 The above configuration defines the **k2fabric.log** log file located in the Fabric server under the **$K2_HOME/logs** directory. The rolling policy of the above appender is based on a combination of size and date/time. A new file is created every day. The maximum size of a log file is 20 MB and the total size of the files is 3 GB. History is saved for 10 days. 
-Note that to define the <maxHistory> in hours rather than in days, edit the <fileNamePattern> tag to include the following pattern: {yyyy-MM-dd-hh}.
+
+Note that to define the maxHistory in hours rather than in days, edit the fileNamePattern tag to include the following pattern: {yyyy-MM-dd-hh}.
  
 When required, a new log file can be created by configuring a new **appender** in the **logback.xml** file. To do so, go to the **logback.xml** file, add the new appender and define its filename, rolling policy and other settings.
 
