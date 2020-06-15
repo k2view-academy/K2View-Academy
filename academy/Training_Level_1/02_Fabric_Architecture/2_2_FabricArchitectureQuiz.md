@@ -114,7 +114,7 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- A: A single database residing on a dedicated PostgreSQL server, residing on a single node server to increase access speed and reduce network latency.
 
 
-\- B: As multiple digital entities (or Logical Units Instances), each one stored as an SQLite micro-database on one of multiple Cassandra distributed nodes.
+\- B: As multiple digital entities (or Logical Units Instances), each one captured as an SQLite micro-database that is compressed and stored on Cassandra distributed DB.
 
 
 \- C: As a single binary file pointing to different DBs distributed across external networks.
