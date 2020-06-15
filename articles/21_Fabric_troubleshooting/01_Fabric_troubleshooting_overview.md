@@ -69,7 +69,8 @@ A Heap Dump file is automatically created if Fabric crashes due to memory usage 
 
 Default memory usage is defined in the **$K2_HOME/config/ jvm.options** configuration file and is equal to 2G.  The location of a Heap Dump file is defined in the **jvm.options** configuration file. If it is not defined there, it is created in folder where Fabric is started, which is usually **$K2_HOME** or **$K2_HOME/fabric/scripts**. 
 
-Note that Heap Dump files can take up a lot of disk space, therefore it is recommended to delete them after an investigation has been completed.
+Note that Heap Dump files can take up a lot of disk space, therefore it is recommended to delete them after an investigation has been completed. Head Dump files should be loaded to [K2view dedicated servers](https://k2view.sharepoint.com/sites/Wiki/IT%20%20Technology/Heap%20dump%20upload%20point.aspx) in order to allow the analysis of R&D team.
+ 
 
 The following table describes the syntax and parameters for creating the Heap Dump file using the **jmap** command. 
 
