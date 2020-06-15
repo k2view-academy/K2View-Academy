@@ -72,7 +72,7 @@ The above configuration defines the **monitoring.log** file located in the Fabri
 ### **Log Level**
 The log level parameter defines which messages are written into the log file. There are four log levels (from the least severe to the most severe): DEBUG, INFO, WARN and ERROR. 
 
-To print all Fabric messages into the log, set this parameter to DEBUG - the lowest level. Another reason for setting the log level to DEBUG is to make code investigations easier. However, make sure to change this parameter back to the default level (INFO) as soon as the investigation is completed. 
+To print all Fabric messages into the log, set this parameter to DEBUG - the lowest level. Another reason for setting the log level to DEBUG is to make code investigations easier. However, make sure to change this parameter back to the default level (INFO) as soon as the investigation is completed. Any change on logback.xml file will require a Fabric restart on all the relevant Fabric nodes.
 
 Writing errors/messages/warnings into the log has an impact on both performance and disk space. Therefore, they should be written only when requested by the customer or for debugging. For better performance, reduce the log level. Consider moving from INFO to ERROR after the application is stabilized. 
 
