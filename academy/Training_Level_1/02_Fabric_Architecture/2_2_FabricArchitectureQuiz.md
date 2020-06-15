@@ -120,32 +120,11 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- C: As a single binary file pointing to different DBs distributed across external networks.
 
 
- (***Solution 5: B***)
+ (***Solution 5: B - Note that Fabric can be configured to avoid storage of Sqlite file in Cassandra.***)
 
 
 
-#### Question 6: Fabric Storage
-
-To store its data, Fabric uses the following storage mechanism:
-
-
-\-  A: Storage on files using RAID.
-
-
-\-  B: Oracle database storage.
-
-
-\-  C: Cassandra distributed storage as a key value-store.
-
-
-\-  D: No physical storage. Everything resides in memory.
-
-
-(***Solution 6: C - Note that Fabric can also store and manipulate data in RAM and refrain from keeping data in storage.***)
-
-
-
-#### Question 7: Fabric Connections
+#### Question 6: Fabric Connections
 
 Users can query Fabric from external systems by:
 
@@ -162,11 +141,11 @@ Users can query Fabric from external systems by:
 \- D: All the above
 
 
-(***Solution 7: D***)
+(***Solution 6: D***)
 
 
 
-####  Question 8: Fabric & Message queues
+####  Question 7: Fabric & Message queues
 
 Fabric publishes data changes to external servers by using:
 
@@ -186,11 +165,11 @@ Fabric publishes data changes to external servers by using:
 \- D: All the above
 
 
-(***Solution 8: A***)
+(***Solution 7: A***)
 
 
 
-#### Question 9: Data security
+#### Question 8: Data security
 
 Fabric uses data from multiple external sources. To ensure the integrity of the data you fetch, store and generate, Fabric provides:
 
@@ -210,11 +189,11 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 \- E: All the above.
 
 
-(***Solution 9: E***)
+(***Solution 8: E***)
 
  
 
-#### Question 10: Fabric Data Flow
+#### Question 9: Fabric Data Flow
 
 Implementers can use Fabric to define and run:
 
@@ -234,11 +213,11 @@ Implementers can use Fabric to define and run:
 \- E: All the above and more. 
 
 
-(***Solution 10: E***)
+(***Solution 9: E***)
 
 
 
-#### Question 11: Fabric Cluster
+#### Question 10: Fabric Cluster
 
 Fabric can be deployed and used across:
 
@@ -252,7 +231,7 @@ Fabric can be deployed and used across:
 \- C: Only on the servers where External sources reside
 
 
- (***Solution 11: A***)
+ (***Solution 10: A***)
 
 
 
