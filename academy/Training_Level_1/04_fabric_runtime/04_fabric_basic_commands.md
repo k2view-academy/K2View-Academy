@@ -14,13 +14,14 @@ Let’s test an LU Instance and see the result:
 
 1. Open your Fabric console on  windows or login into Fabric on the Linux server
 
-2. Run **get CustomerLU.215;
+2. Run **get CustomerLU.215**;
 
 3. Execute **select * from customer**;
 
 4. You should get the following results:
 
    `fabric>get CustomerLU.215;`
+   
    `|luName    |iid|version      |`
    `+----------+---+-------------+`
    `|CustomerLU|215|1592207994983|`
@@ -74,6 +75,7 @@ Using the training materials and examples covered so far:
 4. `Answer: Active (true)`
 
    `fabric>test_connection DbInterface='CRM_DB';`
+   
    `|interface|environment|passed|error_message|`
    `+---------+-----------+------+-------------+`
    `|CRM_DB   |_dev       |true  |             |`
