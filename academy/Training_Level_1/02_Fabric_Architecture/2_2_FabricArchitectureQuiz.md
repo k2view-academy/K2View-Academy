@@ -132,7 +132,7 @@ Users can query Fabric from external systems by:
 \- A: Using Fabric JDBC driver.
 
 
-\- B: Pushing data directly into Fabric through a web-service enabling direct insert, update, delete operations into LUIs
+\- B: Pushing data directly into Fabric through a web-service enabling direct insert, update and delete operations into LUIs
 
 
 \- C: Listening to Fabric CDC (Change Data Capture) module and act upon changes if needed
