@@ -204,10 +204,10 @@ Implementers can use Fabric to define and run:
 \- B: Schedule jobs that will be executed according to pre-defined rules or schedules.
 
 
-\- C: Parse data from any type of data source and store it in CommonDB as SQL tables.
+\- C: Parse data from any type of data source and store it in Cassandra DB.
 
 
-\- D: Write java functions to transform data  or trigger synchronizations with external sources.
+\- D: Write java functions to transform data or trigger synchronizations processes with external sources.
 
 
 \- E: All the above and more. 
