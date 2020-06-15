@@ -37,7 +37,7 @@ Working with Fabric will allow you to:
 Logical Units are:
 
 
-\- A: Hierarchical presentations of data related to a defined business entity, that need to be carefully designed according to a specific set of business requirements.
+\- A: Hierarchical presentations of data related to a defined digital entity, that need to be carefully designed according to a specific set of business requirements.
 
 
 \-  B: Java functions designed to extract information from a Database.  
@@ -61,7 +61,7 @@ Logical Units are:
 You will use Fabric when you need to:
 
 
-\- A: Be able to ask any question on a business entity (e.g. a customer), even if its data resides on tens or hundreds of applications.
+\- A: Be able to ask any question on a digital entity (e.g. a customer), even if its data resides on tens or hundreds of applications.
 
 
 \- B: Get up-to-date data.
