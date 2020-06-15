@@ -1,6 +1,6 @@
 # Fabric Log Files
 
-All activities performed in Fabric are written into log files in the server and to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md). When executing a Fabric command, open the log file to view errors, warnings or messages.
+All activities performed in Fabric are written into log files in the server and presented on the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) in case of Fabric local started by the Studio. When executing a Fabric command, open the log file to view errors, warnings or messages.
 
 ### Log Configuration
 
