@@ -17,13 +17,13 @@ Before moving to the next item, let's take the following quiz to see what you ha
 Working with Fabric will allow you to:
 
 
-\  A:  Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insights.
+\- A:  Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insights.
 
 
-\  B:  Answer complex questions about a customer or multiple customers in real-time, even when data might be spread across multiple datacenters.
+\- B:  Answer complex questions about a customer or multiple customers in real-time, even when data might be spread across multiple datacenters.
 
 
-\  C:  Create graphical visualizations of data spread across multiple datacenters.
+\- C:  Create graphical visualizations of data spread across multiple datacenters.
 
 
 (***Solution 1: B; Yes, Fabric is about specific entities and every particle of information they hold***).
@@ -35,19 +35,19 @@ Working with Fabric will allow you to:
 Logical Units are:
 
 
-A:  Hierarchical presentations of data related to a defined Digital Entity that need to be carefully designed according to a specific set of business requirements.
+\- A:  Hierarchical presentations of data related to a defined Digital Entity that need to be carefully designed according to a specific set of business requirements.
 
 
-B:  Java functions designed to extract information from a database.  
+\- B:  Java functions designed to extract information from a database.  
 
 
-C:  A data mapping tool that extracts information from any type of database.
+\- C:  A data mapping tool that extracts information from any type of database.
 
 
-D:  Web Services that enable external systems to access Fabric data. 
+\- D:  Web Services that enable external systems to access Fabric data. 
 
 
-E: All the above.
+\- E: All the above.
 
 
 (***Solution 2: A; Note that if you answered E, you probably had Fabric in mind, but this particular question is about Logical Units***)
