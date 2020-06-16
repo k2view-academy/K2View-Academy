@@ -1,11 +1,11 @@
 # Fabric Runtime Overview
 
-Well Done! You have just completed an overall  fabric main flow quiz as well as a basic project implementation. You have completed the previous learning item, with the deployment of your project to fabric server. 
+Well Done! You have just completed an overall Fabric main flow quiz as well as a basic project implementation. You have completed the previous learning item, with the deployment of your project to fabric server. 
 
-As previously covered, Fabric consists of two distinct layers:
+As previously covered, Fabric consists of two separate layers:
 
-- Implementation Layer (Studio): the design, development, definition of tables and transformation rules and deployment are performed.
-- Execution Layer (Server): the actual migration and synchronization of data from the source systems to  Fabric is performed in this environment.
+- Implementation Layer (Studio): where the design, development, definition of tables and transformation rules and deployment are performed.
+- Execution Layer (Server): where the actual migration and synchronization of data from the source systems to  Fabric is performed.
 
 
 
@@ -27,7 +27,7 @@ By the end of the Fabric Runtime learning item you will know:
 
 Please open your fabric runtime environment, you have 2 login options:
 
-1. Login to Fabric  Linux server  
+1. Login to Fabric Linux server  
 
 2. Open **Fabric Console** on your windows search
 
