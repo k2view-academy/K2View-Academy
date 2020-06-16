@@ -209,7 +209,6 @@ The **reset.sh** script gets the list of the Fabric directories to be removed fr
 </tbody>
 </table>
 
-
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/02_fabric_directories.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/04_fabric_commands.md)
 
 

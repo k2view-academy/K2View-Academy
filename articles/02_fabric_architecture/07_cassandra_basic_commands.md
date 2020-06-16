@@ -1,18 +1,18 @@
 # Cassandra Basic Commands
 
-Fabric uses Cassandra DB as a storage layer. You can run CQL commands to check Cassandra tables on [Fabric keyspaces](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
+Fabric uses the Cassandra DB as a storage layer. CQL commands can be run to check Cassandra tables on [Fabric keyspaces](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
 ### Login Cassandra DB
 
-Use the following command to connect Cassandra DB from Cassandra server:
+Use the following command to connect the Cassandra DB from the Cassandra server:
 
 <p><strong>cqlsh -u &lt;username&gt; -p &lt;password&gt; &lt;ip_address&gt;</strong>;</p>
 
-Note that if you do not populate the ip_address, then the login command connects the local host of the Fabric server.
+Note that if the **ip_address** is not populated, the login command connects to the local host of the Fabric server.
 
 ### Cassandra Useful Commands
 
-The table below contains some useful **cqlsh** commands. 
+The following table holds useful **cqlsh** commands.
 
 For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlCommandsTOC.html.
 
@@ -61,16 +61,16 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 </td>
 <td width="350pxl">
 <p>Describe Cassandra objects.</p>
-<p>Note that when you run the Describe command inside a keyspace, it returns the information about the objects inside the keyspace.</p>
+<p>Note that Describe command is run in a keyspace and returns information about the objects in the keyspace.</p>
 <p>&nbsp;For more information, see</p>
 <p><a href="https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlshDescribe.html">https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlshDescribe.html</a></p>
 </td>
 <td width="350pxl">
 <ul>
-<li>Desc keyspaces- returns the list of the keyspaces in the Cassandra cluster.</li>
-<li>Desc tables- returns the list of Cassandra keyspaces and the related table of each keyspace</li>
-<li>Desc schema- returns the details for all non-system objects in the Cassandra cluster.</li>
-<li>Desc keyspace &lt;keyspace name&gt; - returns the details for the specified keyspace and objects it contains.</li>
+<li><strong>desc keyspaces</strong>- returns the list of the keyspaces in the Cassandra cluster.</li>
+<li><strong>desc tables</strong>- returns the list of Cassandra keyspaces and the related tables of each keyspace</li>
+<li><strong>desc schema</strong>- returns the details for all non-system objects in the Cassandra cluster.</li>
+<li><strong>desc keyspace &lt;keyspace name&gt;</strong> - returns the details for the specified keyspace and objects it contains.</li>
 </ul>
 </td>
 </tr>
@@ -88,9 +88,19 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 </tbody>
 </table>
 
+
 #### Run CQLSH on Local Cassandra 
 
-Note that when you work on your local Fabric server, installed on your windows machine,  you must install Python 2.7.x on your windows machine (not part of Fabric Studio installation) to run **cqlsh** on your local Cassandra server.
+When working on the local Fabric server installed on a Windows machine,  you must install Python 2.7.x to run the **cqlsh** on your local Cassandra server. Add the Python to the PATH environment variables on your Window machine, and open the command line window from the following Windows directory: **C:\k2view\[Fabric version]\apache-cassandra-3.11.4\bin**.
+
+Login to Cassandra from the command line (cmd) window:
+
+<p><strong>cqlsh -u &lt;username&gt; -p &lt;password&gt;</strong>;</p>
+
+Notes:
+
+- Python 2.7.x is not part of the Fabric Studio installation. 
+- Use **cassandra** as user and password when connecting the local Cassandra server.
 
 Alternatively, you can do the following steps:
 
