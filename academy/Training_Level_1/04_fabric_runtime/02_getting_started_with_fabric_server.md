@@ -1,6 +1,6 @@
 # Getting Started with Fabric Server
 
-Now that our Fabric console is opened, let's get started by reviewing some of the Fabric Server key componenets:
+Now that the Fabric console is open, let's get started by reviewing some of the key Fabric server componenets:
 
 [Fabric Directories](/articles/02_fabric_architecture/02_fabric_directories.md)
 
