@@ -4,7 +4,7 @@ Well Done!
 
 You have just completed the Fabric Main Flow Quiz as well as a basic project implementation. You have also completed the previous learning item by deploying your project to the Fabric server. 
 
-As previously covered, Fabric consists of two separate layers:
+As already covered, Fabric consists of two separate layers:
 
 - Implementation Layer (Studio): where the design, development, definition of tables and transformation rules and deployment are performed.
 - Execution Layer (Server): where the actual migration and synchronization of data from source systems into  Fabric is performed.
