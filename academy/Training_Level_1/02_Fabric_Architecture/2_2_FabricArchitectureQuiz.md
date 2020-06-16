@@ -50,7 +50,7 @@ Logical Units are:
 \- E: All the above.
 
 
-(***Solution 2: A; Note that if you answered E, you probably had Fabric in mind, but this particular question is about Logical Units***)
+(***Solution 2: A; Note that if you answered E, you probably had Fabric in mind, but this particular question is about Logical Units***).
 
  
 
