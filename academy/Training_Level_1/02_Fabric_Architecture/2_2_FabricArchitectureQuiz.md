@@ -35,19 +35,19 @@ C: Create graphical visualizations of data spread across multiple datacenters.
 Logical Units are:
 
 
-\- A: Hierarchical presentations of data related to a defined Digital Entity that need to be carefully designed according to a specific set of business requirements.
+A: Hierarchical presentations of data related to a defined Digital Entity that need to be carefully designed according to a specific set of business requirements.
 
 
-\-  B: Java functions designed to extract information from a database.  
+B: Java functions designed to extract information from a database.  
 
 
-\-  C: A data mapping tool that extracts information from any type of database.
+C: A data mapping tool that extracts information from any type of database.
 
 
-\-  D: Web Services that enable external systems to access Fabric data. 
+D: Web Services that enable external systems to access Fabric data. 
 
 
-\-  E: All the above.
+E: All the above.
 
 
 (***Solution 2: A; Note that if you answered E, you probably had Fabric in mind, but this particular question is about Logical Units***)
