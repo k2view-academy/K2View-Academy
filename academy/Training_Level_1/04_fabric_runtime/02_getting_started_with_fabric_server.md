@@ -12,7 +12,7 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 
 ###### Fabric server-Linux
 
-1. Go to the **cd $K2_HOME/fabric**Fabric  directory.  
+1. Go to the **cd $K2_HOME/fabric** Fabric  directory.  
 2. Run **k2fabric -version**. Which version is displayed?
 3. Let's list the folders. How many folders are there? *9* folders
 4. Let's run **k2fabric stop**. Which message is prompted? **------------Fabric is STOPPED**
