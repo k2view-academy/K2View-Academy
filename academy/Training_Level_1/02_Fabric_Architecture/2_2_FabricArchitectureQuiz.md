@@ -236,7 +236,7 @@ Fabric stores reference tables that contain elements common to all LUIs:
 Fabric can be deployed and used across:
 
 
-\- A: Multiple clusters spread over different datacenters independently of Cassandra's storage locations.
+\- A: Multiple clusters spread over different datacenters independent of Cassandra's storage locations.
 
 
 \- B: Only on the same the datacenters where Cassandra servers have been deployed.
