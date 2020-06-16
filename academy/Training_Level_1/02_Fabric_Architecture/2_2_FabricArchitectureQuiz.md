@@ -8,11 +8,11 @@ Excellent!
 You have completed the Fabric Overview and Architecture learning items.
 
  
-Before moving to the next item, let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Select the answer you think is correct by clicking over it:
+Before moving to the next item, let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Select the answer you think is correct by clicking it:
 
 
 
-#### Question 1: Fabric overview
+#### Question 1: Fabric Overview
 
 Working with Fabric will allow you to:
 
@@ -26,16 +26,16 @@ Working with Fabric will allow you to:
 \-  C: Create graphical visualizations of data spread across multiple data centers.
 
 
-(***Solution 1: B; Yes, Fabric is all about specific entities, down to the last bit of information they contain.***)
+(***Solution 1: B; Yes, Fabric is about specific entities and every particle of information they hold.***)
 
 
 
-#### Question 2: Fabric concepts
+#### Question 2: Fabric Concepts
 
 Logical Units are:
 
 
-\- A: Hierarchical presentations of data related to a defined digital entity that need to be carefully designed according to a specific set of business requirements.
+\- A: Hierarchical presentations of data related to a defined Digital Entity that need to be carefully designed according to a specific set of business requirements.
 
 
 \-  B: Java functions designed to extract information from a database.  
@@ -44,22 +44,22 @@ Logical Units are:
 \-  C: A data mapping tool that extracts information from any type of database.
 
 
-\-  D: Web-Services enabling external systems to access Fabric data. 
+\-  D: Web Services that enable external systems to access Fabric data. 
 
 
 \-  E: All the above.
 
 
-(***Solution 2: A ; note if you answered E, you probably had Fabric in mind, but this particular question was about Logical Units***)
+(***Solution 2: A; Note that if you answered E, you probably had Fabric in mind, but this particular question is about Logical Units***)
 
  
 
-#### Question 3: Fabric usage
+#### Question 3: Fabric Usage
 
 You use Fabric when you need to:
 
 
-\- A: Ask any question about a digital entity (like a customer), even if where their data resides on tens or hundreds of applications.
+\- A: Ask questions about a Digital Entity (like a customer), even if their data resides on tens or hundreds of applications.
 
 
 \- B: Get up-to-date data.
@@ -81,7 +81,7 @@ You use Fabric when you need to:
 
 
 
-#### Question 4: Fabric product
+#### Question 4: Fabric Product
 
 Fabric is:
 
@@ -92,7 +92,7 @@ Fabric is:
 \- B: A powerful ETL engine that allows you to connect to remote databases and execute complex data queries. 
 
 
-\- C: A development environment that allows you to write functions and execute them on a schema's tables.
+\- C: A development environment that allows you to write functions and execute them on a Schema's tables.
 
 
 \- D: A resilient, multi-tenant web-service publishing engine. 
@@ -104,7 +104,7 @@ Fabric is:
 
 
 
-#### Question 5: Fabric storage
+#### Question 5: Fabric Storage
 
 Fabric enables all data retrieved from external sources to be stored as:
 
@@ -112,17 +112,17 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- A: A single database residing on a dedicated PostgreSQL server, residing on a single node server to increase access speed and reduce network latency.
 
 
-\- B: As multiple digital entities (or Logical Unit Instances), each stored as an SQLite micro-database that is compressed and stored on Cassandra distributed DB.
+\- B: Multiple Digital Entities (or Logical Unit Instances), each stored as an SQLite micro-database that is compressed and stored on a Cassandra distributed database.
 
 
-\- C: As a single binary file pointing to different databases distributed across external networks.
+\- C: A single binary file pointing to different databases distributed across external networks.
 
 
  (***Solution 5: B - Note that Fabric can be configured to avoid storage of Sqlite file in Cassandra.***)
 
 
 
-#### Question 6: Fabric connections
+#### Question 6: Fabric Connections
 
 Users can query Fabric from external systems by:
 
@@ -143,7 +143,7 @@ Users can query Fabric from external systems by:
 
 
 
-####  Question 7: Fabric and message queues
+####  Question 7: Fabric and Message Queues
 
 Fabric publishes data changes to external servers using:
 
@@ -172,13 +172,13 @@ Fabric publishes data changes to external servers using:
 Fabric uses data from multiple external sources. To ensure the integrity of the data you fetch, store and generate, Fabric provides:
 
 
-\- A: Strong authorization and authentication to protect systems from incoming requests when exposing the data as Web-Services. 
+\- A: Strong authorization and authentication to protect systems from incoming requests when exposing the data as Web Services. 
 
 
 \- B: Data masking to hide real data during development or QA phases.
 
 
-\- C: Encryption of all (LUI) micro-databases created at any time. A different key (based on the master key) is generated for each LUI, meaning that even if you did manage to access one LUI, you will still not have access to all the other LUIs.
+\- C: Encryption of all (LUI) micro-databases created at any time. A different key (based on the master key) is generated for each LUI, meaning that even if you access an LUI, you will not have access to all the other LUIs.
 
 
 \- D: Encryption of part of an LUI according to specifications provided by the LU designer. 
@@ -191,21 +191,21 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 
  
 
-#### Question 9: Fabric data flow
+#### Question 9: Fabric Data Flow
 
 Implementers can use Fabric to define and run:
 
 
-\- A: Entire data manipulations flows like inserting data directly into targets (LUIs).
+\- A: Entire data manipulation flows like inserting data directly into targets (LUIs).
 
 
-\- B: Schedule jobs to be executed according to pre-defined rules or schedules.
+\- B: Schedule jobs to be executed according to predefined rules or schedules.
 
 
-\- C: Parse data from any type of data source and store it in Cassandra DB.
+\- C: Parse data from any type of data source and store it in the Cassandra database.
 
 
-\- D: Write java functions to transform data or trigger synchronizations processes with external sources.
+\- D: Write Java functions to transform data or trigger synchronization processes with external sources.
 
 
 \- E: All the above and more. 
@@ -217,10 +217,10 @@ Implementers can use Fabric to define and run:
 
 #### Question 10: Fabric CommonDB
 
-Fabric stores reference tables (tables that contain elements common to all LUIs):
+Fabric stores reference tables that contain elements common to all LUIs:
 
 
-\- A: As Cassandra's keyspaces kept in a single dedicated Cassandra server than can be queried using CSQL queries.
+\- A: As Cassandra's keyspaces kept in a single dedicated Cassandra server that can be queried using CSQL queries.
 
 
 \- B: As a a set of multiple SQL databases copies, each residing on a Fabric server node and systematically kept in sync with the others using Kafka Queue Management service.
@@ -231,7 +231,7 @@ Fabric stores reference tables (tables that contain elements common to all LUIs)
 
 
 
-#### Question 11: Fabric cluster
+#### Question 11: Fabric Cluster
 
 Fabric can be deployed and used across:
 
