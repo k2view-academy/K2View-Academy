@@ -95,7 +95,7 @@ Fabric is:
 \- C: A development environment that allows you to write functions and execute them on a Schema's tables.
 
 
-\- D: A resilient, multi-tenant web-service publishing engine. 
+\- D: A resilient, multi-tenant web service publishing engine. 
 
 
 \- E: All the above.
