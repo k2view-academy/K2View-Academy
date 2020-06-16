@@ -11,7 +11,7 @@ As previously covered, Fabric consists of two separate layers:
 
 
 
-Let's understand how the rules and logic created as part of your project implementation , are being deployed to the execution layer , while the data is being stored, accessed and queried on demand.
+Let's see how the rules and logic created as part of your project implementation are deployed to the Execution layer, while the data is  stored, accessed and queried on demand.
 
 
 
