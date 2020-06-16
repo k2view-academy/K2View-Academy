@@ -12,7 +12,7 @@ You have just deployed your project and  its objects and have listed them, inclu
 
 Let’s test an LU Instance and see the results:
 
-1. Open your Fabric console on Windows or log into Fabric on the Linux server.
+1. Open the Fabric console on Windows or log into Fabric on the Linux server.
 
 2. Run **get CustomerLU.215**;
 
@@ -38,13 +38,13 @@ Using the training materials and examples covered so far:
 
 1. `Question: How many tables are in the CustomerLU?`
 
-2. `Question: What are the columns that are not nullables in ACTIVITY table?`
+2. `Question: Which columns are not nullables in the ACTIVITY table?`
 
 3. `Question: How many subscribers has Customer 82? What are their IDs?`
 
 4. `Question: What is the status of CRM_DB interface?`
 
-5. `Advanced Question: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name . Perform a get CustomerLU.215 again , what will be the CUSTOMER.FIRST_NAME? How will you change it to source value?`
+5. `Advanced Question: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Perform a get CustomerLU.215 again. What is the CUSTOMER.FIRST_NAME? How will you change it to the source value?`
 
    
 
@@ -62,7 +62,7 @@ Using the training materials and examples covered so far:
 
    `fabric>test_connection DbInterface='CRM_DB';`
 
-5. `Answer: My First Name, set syc force will be bring the data from source`
+5. `Answer: My First Name, set syc force brings the data from the source`
 
 
 
