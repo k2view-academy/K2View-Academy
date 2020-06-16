@@ -28,7 +28,7 @@ Working with Fabric will allow you to:
 \-  C: Create graphical visualizations of data spread across multiple data centres.
 
 
-(***Solution 1: B; Indeed Fabric is about specific entities down to the last bit of information they contain.***)
+(***Solution 1: B; Indeed Fabric is all about specific entities, down to the last bit of information they contain.***)
 
 
 
@@ -217,19 +217,19 @@ Implementers can use Fabric to define and run:
 
 
 
-#### Question 10: CommonDB
+#### Question 10: Fabric CommonDB
 
-Fabric stores tables that are common to LUIs:
-
-
-\- A: As Cassandra's keyspaces in a single dedicated Cassandra server than can be queried using CSQL  
+Fabric stores reference tables (tables that contain elements common to all LUIs):
 
 
-\- B: As a a set of multiple cloned SQL databases each residing on a Fabric server node and systematically kept in sync one with the other using Kafka.
+\- A: As Cassandra's keyspaces kept in a single dedicated Cassandra server than can be queried using CSQL queries  
 
-\- C: As a single centralized SQL DB residing on a dedicated server 
 
- (***Solution 10: A***)
+\- B: As a a set of multiple SQL databases copies, each residing on a Fabric server node and systematically kept in sync with the others using Kafka Queue Management service.
+
+\- C: As a single centralized SQL DB residing on one dedicated common server 
+
+ (***Solution 10: B)
 
 
 
@@ -238,7 +238,7 @@ Fabric stores tables that are common to LUIs:
 Fabric can be deployed and used across:
 
 
-\- A: Multiple clusters spread across different data centres independently of Cassandra's storage
+\- A: Multiple clusters spread across different data centres independently of Cassandra's storage locations
 
 
 \- B: Only on the same the data centres where Cassandra servers have been deployed
