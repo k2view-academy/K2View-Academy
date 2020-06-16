@@ -1,12 +1,27 @@
 # Cassandra Keyspaces for Fabric
 
-Fabric uses Cassandra DB as a storage layer. Fabric creates several keyspaces for its operation. Each Fabric keyspace starts by **k2**. In addition- each deployed LU creates an additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
+Fabric uses the Cassandra DB as a storage layer and creates several keyspaces for its operation. 
+
+Each Fabric keyspace starts with a **k2**. In addition, each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
 
 **Notes:**
-- The cluster_id, if set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, is concatenated to each keyspace name.
-- When you open a Fabric project in Fabric studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
 
-Below the the list of Cassandra keyspaces, created Fabric:
+- The cluster_id, if set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, is concatenated to each keyspace name.
+- When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
+
+## Login Cassandra DB
+
+Use the following command to connect the Cassandra DB from the Cassandra server:
+
+**cqlsh -u <username> -p <password> <ip_address>**;
+
+Note that if the **ip_address** is not populated, the login command connects to the local host of the Fabric server.
+
+### List of Cassandra Fabric-Related Keyspaces 
+
+The following table lists the Cassandra keyspaces, created by Fabric:
+
+
 
 <table>
 <tbody>
@@ -41,7 +56,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>&nbsp;</p>
 </td>
 <td width="350pxl">
-<p>This table holds definitions of LUs, Common (reference) tables and Web Services <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">deployed to Fabric.</a></p>
+<p>Holds the metadata of the LUs, Common (reference) tables and Web Services <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">deployed to Fabric.</a></p>
 </td>
 </tr>
 <tr>
@@ -50,7 +65,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>&nbsp;</p>
 </td>
 <td width="350pxl">
-<p>Fabric Jobs table. This table contains information on the history of all the jobs run on Fabric</p>
+<p>Holds information on the execution history of all Fabric jobs Fabric Jobs table.</p>
 </td>
 </tr>
 <tr>
@@ -67,7 +82,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>global_settings</p>
 </td>
 <td width="350pxl">
-<p>List of all Globals/Environments that were overridden from the default value using <a href="/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command">set_global command</a>. This table is used to identify the overridden value of Globals or Environments when restarting Fabric.</p>
+<p>List of all Globals and Environments whose default value has been overidden using the <a href="/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command">SET_GLOBAL command</a>. This table is used to identify the overridden value of Globals or Environments when restarting Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -89,7 +104,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>user_credentials</p>
 </td>
 <td width="350pxl">
-<p>List of Fabric users with the assigned roles.</p>
+<p>List of Fabric users and their assigned roles.</p>
 </td>
 </tr>
 <tr>
@@ -121,7 +136,8 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>stripe_key_storage</p>
 </td>
 <td width="350pxl">
-<p>It contains the stripped master key encrypted info.</p>
+<p>Holds encrypted information about the  master key. This table contains the key description, index, and value fields. The Master Key is broken into bytes, where each byte is stored in a separate record. 
+Click for more information about Fabric Security Hardening.</p>
 </td>
 </tr>
 <tr>
@@ -129,7 +145,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>keys_descriptions</p>
 </td>
 <td width="350pxl">
-<p>It contains master key descriptions.</p>
+<p>Holds a description of the master key.</p>
 </td>
 </tr>
 <tr>
@@ -168,7 +184,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>batchprocess_entities_info</p>
 </td>
 <td width="350pxl">
-<p>Detailed execution information for a given entity per batch process command.</p>
+<p>Detailed information about an execution of a given entity per batch process command.</p>
 </td>
 </tr>
 <tr>
@@ -176,7 +192,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>batchprocess_entities_errors&nbsp;</p>
 </td>
 <td width="350pxl">
-<p>Detailed entities information for failed entities per batch process command. This table is intended to simplify the analysis of failed entities.</p>
+<p>Detailed information about failed entities per batch process command. This table simplifies the analysis of failed entities.</p>
 </td>
 </tr>
 <tr>
@@ -198,7 +214,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>k2_auditing</p>
 </td>
 <td width="350pxl">
-<p>The auditing saves all activities, performed on Fabric, in k2_auditing table</p>
+<p>Saves all activities performed on Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -230,7 +246,7 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>entity</p>
 </td>
 <td width="350pxl">
-    <p>Stores the list of all <a href= "/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instances</a> and their micro databases.</p>
+    <p>Stores the list of all <a href= "/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUIs</a> and their micro databases.</p>
 </td>
 </tr>
 <tr>
@@ -238,11 +254,13 @@ Below the the list of Cassandra keyspaces, created Fabric:
 <p>entity_chunks</p>
 </td>
 <td width="350pxl">
-<p>Used to store large LU instances.</p>
+<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb">Micro-database </a> of a Large LUI is divided into chunks and stored in entity_chunks.
+Click for more information about LU storage.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 Click for more information about Fabric Architecture overview.
