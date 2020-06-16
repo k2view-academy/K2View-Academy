@@ -2,7 +2,7 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-Now that you are able to retrieve and view the data in Fabric, let's understand how the data is being stored in Cassandra, what is the operational information that you can view and what are the commands to access it:
+Now that you are able to retrieve and view the data in Fabric, let's understand how the data is stored in Cassandra, about the operational information that you can view and which commands access it:
 
 [Cassandra Keyspaces for Fabric](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
@@ -10,7 +10,7 @@ Now that you are able to retrieve and view the data in Fabric, let's understand 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example- Keyspaces & Commands
 
- Let's view the our Project keyspaces and Product keyspaces:
+ Let's view the our project's keyspaces and product keyspaces:
 
 1. Run **describe keyspaces;** and let's view the Product and Project keyspaces
 2. Let's change our current keyspace to the CustomerLU  keyspace, by executing  **use k2view_customerlu;**
