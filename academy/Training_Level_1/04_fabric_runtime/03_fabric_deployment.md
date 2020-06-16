@@ -17,7 +17,7 @@ See how your design and implementation can be executed in scale and on demand:
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Fabric Deployment
 
-Let's deploy the Logical Unit we have just created from the Fabric Studio:
+Let's deploy the Logical Unit we have just created in the Fabric Studio:
 
 1. Right click  **CustomerLU** and select **Deploy To Server**:
 
