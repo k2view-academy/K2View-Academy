@@ -12,26 +12,26 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 
 ###### Fabric server-Linux
 
-1. Go to Fabric  directory -  **cd $K2_HOME/fabric**
+1. Go to the **cd $K2_HOME/fabric**Fabric  directory.  
 2. Run **k2fabric -version**. Which version is displayed?
 3. Let's list the folders. How many folders are there? *9* folders
 4. Let's run **k2fabric stop**. Which message is prompted? **------------Fabric is STOPPED**
 5. In another server session, go to **$K2_HOME/logs** and **tail k2fabric.log**. What is the last prompted message? **Stopped** marked in yellow.
-6. Let's resart Fabric using **k2fabric start**. Which message is prompted?**++++++++++Fabric is READY**
-7. In another server session, go to **$K2_HOME/logs** and **tail k2fabric.log**. What is prompted? **Starting** marked in blue.
+6. Let's restart Fabric using **k2fabric start**. Which message is prompted?**++++++++++Fabric is READY**
+7. In another server session, go to **$K2_HOME/logs** and **tail k2fabric.log**. Which message is prompted? **Starting** marked in blue.
 
 ###### Local Fabric - Window
 
 1. To verify the Fabric version, run **fabric>version;** in the Fabric Console.
 
-2. Go to the Fabric directory in the Windows Explorer: **C:\k2view\Fabric_6.1\Server\fabric**.
+2. Go to the **C:\k2view\Fabric_6.1\Server\fabric** Fabric directory in the Windows Explorer.
 
 3. Let's list the folders. How many folders are there? *8* folders.
 
 4. To review the k2fabric logs: 
 
-   1. Check the **output** option under the Fabric Studio server\Activity Logs component.
-   2. Go to the **C:\k2view\k2Projects\Fabric\\[Learning Project]\FabricHome\logs**  Fabric log directory and check the **k2fabric** file. Note that addtional directories are under FabricHome. For example: **config**
+   1. Check the **Output** option under the Fabric Studio server\Activity Logs component.
+   2. Go to the **C:\k2view\k2Projects\Fabric\\[Learning Project]\FabricHome\logs**  Fabric log directory and check the **k2fabric** file. Note that additional directories are under FabricHome. For example: **config**
 
    
 
