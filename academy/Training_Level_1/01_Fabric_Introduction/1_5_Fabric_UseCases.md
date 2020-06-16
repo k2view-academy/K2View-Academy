@@ -32,7 +32,7 @@ Implementing K2View Fabric enabled the company to integrate their customer data 
 
 \- Real-time aggregation of alarms.
 
-\- Identifying issues before they are noticed by the customer, whereby significantly reducing calls to Support.  
+\- Identifying issues before they are noticed by a customer, whereby significantly reducing calls to Support.  
 
 \- Ensuring real-time correlation between network events, impacted customers and spatial occurrences to enable proactive communication and swift resolution of issues.
 
