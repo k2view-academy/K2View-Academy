@@ -59,7 +59,7 @@ Logical Units are:
 You use Fabric when you need to:
 
 
-\- A: Ask questions about a Digital Entity (like a customer), even if their data resides on tens or hundreds of applications.
+\- A: Ask questions about a Digital Entity (like a customer), even when their data resides on tens or hundreds of applications.
 
 
 \- B: Get up-to-date data.
