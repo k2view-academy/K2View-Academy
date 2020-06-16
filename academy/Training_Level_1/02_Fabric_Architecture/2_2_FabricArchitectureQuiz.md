@@ -167,7 +167,7 @@ Fabric publishes data changes to external servers using:
 
 
 
-#### Question 8: Data security
+#### Question 8: Data Security
 
 Fabric uses data from multiple external sources. To ensure the integrity of the data you fetch, store and generate, Fabric provides:
 
