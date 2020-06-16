@@ -118,7 +118,7 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- C: A single binary file pointing to different databases distributed across external networks.
 
 
- (***Solution 5: B - Note that Fabric can be configured to avoid storage of Sqlite file in Cassandra.***)
+ (***Solution 5: B - Note that Fabric can be configured to avoid storage of Sqlite file in Cassandra***).
 
 
 
@@ -148,10 +148,10 @@ Users can query Fabric from external systems by:
 Fabric publishes data changes to external servers using:
 
 
-\- A: Kafka and CDC (Change Data Capture) module to notify changes occurring to specific LUIs.
+\- A: Kafka and CDC (Change Data Capture) module to notify about changes occurring in specific LUIs.
 
 
-\- B: CDC and iiDFinder modules to notify about changes occurring in the 'commonDB' tables.
+\- B: CDC and iiDFinder modules that notify about changes occurring in commonDB tables.
 
 
 \- B: MSMQ.
