@@ -17,7 +17,7 @@ Before moving to the next item, let's take the following quiz to see what you ha
 Working with Fabric will allow you to:
 
 
-A:  Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insights.
+\ A:  Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insights.
 
 
 B:  Answer complex questions about a customer or multiple customers in real-time, even when data might be spread across multiple datacenters.
