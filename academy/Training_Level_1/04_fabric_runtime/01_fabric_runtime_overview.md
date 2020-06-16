@@ -26,11 +26,11 @@ By the end of the Fabric Runtime learning item you will know about:
 - How to query data
 
 
-Please open your fabric runtime environment, you have 2 login options:
+Please open the Fabric runtime environment. You can either:
+.
+1. Log in to the **Fabric Linux server**.  
 
-1. Login to Fabric Linux server  
-
-2. Open **Fabric Console** on your windows search
+2. Open the **Fabric Console** using the **Windows Search** option.
 
    
 
