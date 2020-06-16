@@ -2,7 +2,7 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-You have just deployed your project and  its objects and have listed them, especially the CustomerLU that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will assist to retrieve and query data.
+You have just deployed your project and  its objects and have listed them, including the CustomerLU that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will assist to retrieve and query data.
 
 [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
 
