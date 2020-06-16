@@ -26,7 +26,7 @@ Let's deploy the Logical Unit we have just created from the Fabric Studio:
 
 2. Once the deployment has been completed, return to the Fabric console and log into Fabric using the **fabric** command. Note that on a local Fabric, you are already logged in.
 
-3. Run **fabric>set;** to reveiw the deployed project's properties. What is the project name? What is the active environment?
+3. To reveiw the deployed project's properties, run **fabric>set;**. What is the project name? What is the active environment?
 
 4. Let's validate which Logical Unit has been deployed, How is it verified?  Run **fabric>list LUT;**  
 
