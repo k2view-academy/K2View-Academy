@@ -20,10 +20,10 @@ Working with Fabric will allow you to:
 A: Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insights.
 
 
-B: Answer complex questions about a customer or multiple customers in real-time, even when data might be spread across multiple data centers.
+B: Answer complex questions about a customer or multiple customers in real-time, even when data might be spread across multiple datacenters.
 
 
-C: Create graphical visualizations of data spread across multiple data centers.
+C: Create graphical visualizations of data spread across multiple datacenters.
 
 
 (***Solution 1: B; Yes, Fabric is about specific entities and every particle of information they hold.***)
