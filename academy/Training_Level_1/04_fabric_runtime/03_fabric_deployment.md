@@ -21,8 +21,8 @@ Let's deploy the Logical Unit we have just created from the Fabric Studio:
 
 1. Right click  **CustomerLU** and select **Deploy To Server**:
 
-   1. If you are using a Fabric Linux server, select the server defined under **User Pefernces**.
-   2. On the **local Fabric**, select **debug server**. 
+   1. If you are using a **Fabric Linux server**, select the server defined under **User Pefernces**.
+   2. On the **local Fabric**, select **Debug Server**. 
 
 2. Once the deployment has been completed, return to the Fabric console and log into Fabric using the **fabric** command. Note that on a local Fabric, you are already logged in.
 
