@@ -21,14 +21,14 @@ Let's deploy the Logical Unit we have just created from the Fabric Studio:
 
 1. Right click  **CustomerLU** and select **Deploy To Server**:
 
-   /- If you are using a Fabric Linux server, select the server defined under User Pefernces.
-   2. On local Fabric, select the **debug** **server** 
+   1. If you are using a Fabric Linux server, select the server defined under **User Pefernces**.
+   2. On the **local Fabric**, select **debug server**. 
 
-2. Once deploy has completed, go back to the Fabric console and log into Fabric, using **fabric** command. Note that on local fabric, you are laready logged in.
+2. Once the deployment has been completed, return to the Fabric console and log into Fabric using the **fabric** command. Note that on a local Fabric, you are already logged in.
 
-3. Run **fabric>set;** to reveiw the deployed project properties , what is the project name? what is the active environment?
+3. Run **fabric>set;** to reveiw the deployed project's properties. What is the project name? What is the active environment?
 
-4. Let's validate that are Logical Unit has been deployed, How should we verify it?  Run **fabric>list LUT;**  
+4. Let's validate which Logical Unit has been deployed, How is it verified?  Run **fabric>list LUT;**  
 
     We will learn more options for this fabric command up next ...
 
