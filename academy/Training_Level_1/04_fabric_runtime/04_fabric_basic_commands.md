@@ -2,7 +2,7 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-You have just deployed your project and  the objects along with, you were able to list them,in particular the CustomerLU you have built. Now that you know how to use the Fabric utilities and are able to login into Fabric, let's review some basic commands that will assist in retrieving and querying  the data
+You have just deployed your project and  its objects and have listed them, especially the CustomerLU tha you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will assist to retrieve and query data.
 
 [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
 
@@ -10,9 +10,9 @@ You have just deployed your project and  the objects along with, you were able t
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Fabric Commands
 
-Let’s test an LU Instance and see the result:
+Let’s test an LU Instance and see the results:
 
-1. Open your Fabric console on  windows or login into Fabric on the Linux server
+1. Open your Fabric console on Windows or log into Fabric on the Linux server.
 
 2. Run **get CustomerLU.215**;
 
