@@ -2,7 +2,7 @@
 
 Well Done! 
 
-You have just completed the Fabric Main Flow Quiz as well as a basic project implementation. You have completed the previous learning item, with the deployment of your project to fabric server. 
+You have just completed the Fabric Main Flow Quiz as well as a basic project implementation. You have also completed the previous learning item by deploying your project to the Fabric server. 
 
 As previously covered, Fabric consists of two separate layers:
 
