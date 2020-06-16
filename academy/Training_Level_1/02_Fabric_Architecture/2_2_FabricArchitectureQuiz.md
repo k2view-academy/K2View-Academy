@@ -8,7 +8,7 @@ Excellent!
 You have completed the Fabric Overview and Architecture learning items.
 
  
-Before moving to the next item, let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Select the answer you think is correct by clicking it: 
+Before moving to the next item, let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
 
 
 
