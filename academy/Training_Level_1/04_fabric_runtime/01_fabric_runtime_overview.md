@@ -17,13 +17,13 @@ Let's see how the rules and logic created as part of your project implementation
 
 ### What Will You Experience in this Learning Item?
 
-By the end of the Fabric Runtime learning item you will know:
+By the end of the Fabric Runtime learning item you will know about:
 
-- The Fabric server main directories and basic utilities
+- Fabric server's main directories and basic utilities
 - Fabric main configuration files
-- Fabric  basic commands 
+- Fabric basic commands 
 - Cassandra main keyspaces and commands
-- How to query your data
+- How to query data
 
 
 
