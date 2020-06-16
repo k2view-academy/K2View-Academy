@@ -41,11 +41,11 @@ Notes:
 
 **Note**: if a deployed web service is deleted from the implementation, redeploy all web services to delete the previous deployment of the deleted webservice.
 
-New parameters are added to the ‘list ws’ command which returns the list of the deployed web services 
+'list ws' command return the list of deployed web services and the deployed version + datetime.
 
-Version Deployed is populated by the latest deployment datetime.
+## Example 
 
-Deploy all web services: 
+### Deploy all web services: 
 
 select lut_name, lut_version, properties from k2system_kb_fabric_project.k2_lut_info where lut_name = 'k2_ws’; 
 
@@ -55,7 +55,7 @@ lut_name | lut_version  | properties
 
 k2_ws | 1591772670495 | {'methods': ''}
 
-Deploy 'wsCustomerInfo’ and ‘wsCustomerInfo2’ web services:
+### Deploy 'wsCustomerInfo’ and ‘wsCustomerInfo2’ web services:
 
 |lut_name|lut_version  |properties               |
 +--------+-------------+-------------------------+
@@ -63,7 +63,7 @@ Deploy 'wsCustomerInfo’ and ‘wsCustomerInfo2’ web services:
 |k2_ws   |1591772937531|{methods=wsCustomerInfo}  |
 |k2_ws   |1591772670495|{methods=}                                |
 
-Deploy again all web services:
+### Deploy again all web services:
 
 |lut_name|lut_version  |properties|
 +--------+-------------+----------+
