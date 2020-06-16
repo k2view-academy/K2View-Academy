@@ -1,6 +1,7 @@
 # Fabric Runtime Overview
 
-Well Done! You have just completed an overall Fabric main flow quiz as well as a basic project implementation. You have completed the previous learning item, with the deployment of your project to fabric server. 
+Well Done! 
+You have just completed the Fabric Main Flow Quiz as well as a basic project implementation. You have completed the previous learning item, with the deployment of your project to fabric server. 
 
 As previously covered, Fabric consists of two separate layers:
 
