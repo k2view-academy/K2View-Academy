@@ -126,11 +126,11 @@ Fabric enables all data retrieved from external sources to be stored as:
 
 Users can query Fabric from external systems by:
 
-
+ 
 \- A: Using the Fabric JDBC driver.
 
 
-\- B: Pushing data directly into Fabric through a web-service enabling direct insert, update and delete operations into LUIs.
+\- B: Pushing data directly into Fabric through a Web Service enabling direct insert, update and delete operations into LUIs.
 
 
 \- C: Listening to the Fabric CDC (Change Data Capture) module and acting upon changes if needed.
