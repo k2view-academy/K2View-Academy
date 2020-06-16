@@ -19,11 +19,11 @@ Let's see how the rules and logic created as part of your project implementation
 
 By the end of the Fabric Runtime learning item you will know about:
 
-- Fabric server directories and basic utilities
-- Fabric configuration files
-- Basic Fabric commands 
-- Cassandra keyspaces and commands
-- How to query data
+- Fabric server directories and basic utilities.
+- Fabric configuration files.
+- Basic Fabric commands. 
+- Cassandra keyspaces and commands.
+- How to query data.
 
 
 Please open the Fabric runtime environment. You can either:
