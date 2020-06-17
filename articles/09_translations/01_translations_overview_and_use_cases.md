@@ -9,7 +9,7 @@ There are several options for populating data in a Translation in the Fabric Stu
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
 *	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
 
-Click for more information about Data Population in Translations.  
+[Click for more information about Data Population in Translations.](/articles/09_translations/03_data_population_in_a_translation.md#data-population-in-a-translation)
 
 
 ### How Can I Use a Translation in Fabric?
