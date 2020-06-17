@@ -205,7 +205,7 @@ Implementers can use Fabric to define and run:
 \- C: Parse data from any type of data source and store it in the Cassandra database.
 
 
-\- D: Write Java functions to transform data or trigger synchronization processes with external sources.
+\- D: Java functions to transform data or trigger synchronization processes with external sources.
 
 
 \- E: All the above and more. 
@@ -236,7 +236,7 @@ Fabric stores reference tables that contain elements common to all LUIs:
 Fabric can be deployed and used across:
 
 
-\- A: Multiple clusters spread over different datacenters independent of Cassandra's storage locations.
+\- A: Multiple clusters spread over different datacenters, decoupled from Cassandra's storage locations.
 
 
 \- B: Only on the same the datacenters where Cassandra servers have been deployed.
