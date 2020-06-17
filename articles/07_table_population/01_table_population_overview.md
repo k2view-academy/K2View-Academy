@@ -13,7 +13,7 @@ Note that tables can also be populated or updated by [Enrichment functions] whic
 ### Table Population In an LU Schema 
 An [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects:
 *	Each [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
-*	Each Table Population object, apart from the Table Population of the root LU table, must be linked to a parent table via its Input columns.
+*	Each Table Population object, apart from the Table Population of the LU's Root Table, must be linked to a parent table via its Input columns.
 *	Each Table Population object can be linked to a different parent LU table.
 Note that an LU table can be added to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync process](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction.
 
