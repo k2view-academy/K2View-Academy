@@ -10,11 +10,11 @@ Now that you are able to retrieve and view the data in Fabric, let's learn how t
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example- Keyspaces & Commands
 
- Let's view the our project's keyspaces and product keyspaces:
+ Let's look at the our project's keyspaces and product keyspaces:
 
-1. Run **describe keyspaces;** and let's view the **Product** and **Project** keyspaces.
-2. Let's change our current keyspace to the CustomerLU  keyspace, by executing  **use k2view_customerlu;**
-3. Let's review the entities in **k2view_customerlu.entity** using the following statement : **select * from k2view_customerlu.entity**;
+1. Run **describe keyspaces;**.
+2. Let's change our current keyspace to the **CustomerLU**  keyspace by executing **use k2view_customerlu;**
+3. Let's review the entities in **k2view_customerlu.entity** using the following statement: **select * from k2view_customerlu.entity**;
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Keyspaces & Commands
 
