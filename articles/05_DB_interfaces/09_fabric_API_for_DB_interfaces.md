@@ -179,8 +179,8 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 	
 ### Using Binding Variables on SQL Statements
 In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
-When using prepared statement queries use a binding parameter: 
-* Add a question mark in the SQL statement when using binding parameters in the SQL query.
+When using prepared statement queries always use binding parameters: 
+* Add a question mark in the SQL statement for each parameter in the SQL query.
 * Each input parameter must be sent as a parameter to the execute() or fetch() methods.
 * The order of the input parameters must be aligned with the order of these parameters in the SQL statement.
 
