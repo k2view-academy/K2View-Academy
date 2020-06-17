@@ -1,6 +1,6 @@
 #   Define the Interfaces
 
-​                                                     ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_03.png)
+​                                                     ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_03.png)
 
 Now your Project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the Project’s interfaces. 
 
@@ -28,7 +28,7 @@ Our Training environment has three main DBs of various types, which in essence,r
 
 - **ORDERS_DB** (type: PostgreSQL) – Usually stores informationfor filling the Order functions required to complete a customer’s order createdin a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
-  ​
+  
 
 ### How to define an Interface
 
@@ -42,7 +42,7 @@ Let’s look at the steps for creating the Interface:
 
  
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
+![](/academy/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
 
 ​	[Adding a fabric and remote fabric interface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
 
@@ -74,7 +74,7 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 
 ​       
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
+### ![](/academy/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
 
 The main business requirement is to display a 360 Customer view which shows a customer’s activities and data.Todo so, define an interface that will access the customer’s data.
 
@@ -91,7 +91,7 @@ Considering the information above, whichinterface should be used ? **CRM DB**
 
 **Great!  your first interface is ready to be explored:**
 
-Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
+Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
 The Query Builder is displayed where youcan see the list of tables and execute the following sample query.
 
@@ -105,7 +105,7 @@ results:10,000
 
  
 
-###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
+###  ![](/academy/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
 
  Your Customer’s 360view requires additional data such as Billing and Order.Using the training materials covered so far and the aboveexample, configure the following DB Interfaces:
 
@@ -129,7 +129,7 @@ Password:
 
 2. `Question: Which Subscriber has the largest BALANCE?`
 
-   ​
+   
 
  **ORDERS_DB details**
 
@@ -153,12 +153,11 @@ Password:
 
  
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution- Interface Exercise Solution
+### ![](/academy/03_fabric_basic_LU/images/Solution.png)Solution- Interface Exercise Solution
 
 1. `Answer: BALANCE, CONTRACT_OFFER_MAPPING,INVOICE, OFFER, PAYMENT, SUBSCRIBER`
 2. `Answer: Subscriber ID 82`
 3. `Answer: 37351 orders`
-
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/05_LU_flow.md)
 
