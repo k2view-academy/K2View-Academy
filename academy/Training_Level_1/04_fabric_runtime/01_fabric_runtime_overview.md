@@ -34,5 +34,5 @@ Please open the Fabric runtime environment. You can either:
 
    
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/02_getting_started_with_fabric_server.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/02_getting_started_with_fabric_server.md) 
 
