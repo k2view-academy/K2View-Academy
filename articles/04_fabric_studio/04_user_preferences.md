@@ -27,10 +27,10 @@ The following is a list of server configuration items:
 <table>
 <tbody>
 <tr>
-<td width="133">
+<td width="200">
 <p><strong>Title</strong></p>
 </td>
-<td width="467">
+<td width="500">
 <p>K2View Fabric logical name of the server.</p>
 </td>
 </tr>
@@ -64,8 +64,8 @@ The following is a list of server configuration items:
 <p><strong>Force Upgrade Post Deploy</strong></p>
 </td>
 <td width="467">
-<p>&middot;&nbsp;&nbsp;&nbsp; <strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; <strong>Unchecked</strong>: performs a sync on schema changes only.</p>
+<p><strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
+<p><strong>Unchecked</strong>: performs a sync on schema changes only.</p>
 <p>Note that each LU undergoes one forced sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
 </td>
 </tr>
@@ -136,10 +136,10 @@ The following SVN preferences can be configured:
 <table>
 <tbody>
 <tr>
-<td width="236">
+<td width="200">
 <p><strong>Auto-update SVN status</strong></p>
 </td>
-<td width="368">
+<td width="500">
 <p>Check to display the SVN Status icon for each component in the Project Tree.</p>
 </td>
 </tr>

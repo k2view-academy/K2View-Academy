@@ -5,7 +5,7 @@ An Enrichment function is a Java function without input/output parameters that i
 * Enrichment functions are executed after the execution of all [population objects](/articles/07_table_population/01_table_population_overview.md) of  all LU tables. 
 * One or several Enrichment functions can be attached to each LU table.
 
-Click for more information about Enrichment Functions. 
+[Click for more information about Enrichment Functions. ](/articles/10_enrichment_function/01_enrichment_function_overview.md)
 
 ## What Is an Enrichment Order?
 The execution order of all Enrichment functions is determined at the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) level in the Enrichment Order tab. Only Enrichment functions that are directly related to specific tables are included in the display.

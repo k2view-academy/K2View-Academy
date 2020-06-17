@@ -92,7 +92,6 @@ When a Decision function returns False it always skips a sync. Therefore, when w
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 <table>
 <tbody>

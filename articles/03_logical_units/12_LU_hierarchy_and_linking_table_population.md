@@ -7,8 +7,8 @@ An LU schema structure displays a hierarchical representation of the data relate
 
   **For example:** an ADDRESS LU table is populated by two populations: 
   
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Population 1, populates the customer’s billing address.</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is linked to the CUSTOMER table and selects source address records that belong to the CUSTOMER_ID.</p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Population 1, populates the customer’s billing address.</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It is linked to the CUSTOMER table and selects source address records that belong to the CUSTOMER_ID.</p> 
  
   
 ![image](/articles/03_logical_units/images/03_12_link_tables1.png)
@@ -55,7 +55,7 @@ There are [two types of Source Objects](/articles/07_table_population/02_source_
 * A population can be linked to a parent table via its Input parameters based on a Root function. 
 * The Root function of a Root Table can have only one Input parameter and is populated by the Instance ID.
 
-Click for more information about Table Population Types.
+[Click for more information about Table Population Types.](/articles/07_table_population/02_source_object_types.md#table-population---source-object-types)
 
 
 ## How Do I Edit the Input Arguments In a DB Query?
