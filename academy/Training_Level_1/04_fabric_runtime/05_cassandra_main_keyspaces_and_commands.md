@@ -1,4 +1,4 @@
-# Cassandra Main Keyspaces & Commands
+# Cassandra Main Keyspaces & Commands 
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
