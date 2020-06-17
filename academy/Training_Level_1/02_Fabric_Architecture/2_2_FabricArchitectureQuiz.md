@@ -7,7 +7,7 @@
 Excellent! 
 You have completed the Fabric Overview and Architecture learning items.
 
- 
+
 Before moving to the next item, let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
 
 
@@ -126,7 +126,7 @@ Fabric enables all data retrieved from external sources to be stored as:
 
 Users can query Fabric from external systems by:
 
- 
+
 \- A: Using the Fabric JDBC driver.
 
 
@@ -193,10 +193,10 @@ Fabric uses data from multiple external sources. To ensure the integrity of the 
 
 #### Question 9: Fabric Data Flow
 
-Implementers can use Fabric to define and run:
+Implementers can use Fabric to:
 
 
-\- A: Entire data manipulation flows like inserting data directly into targets (LUIs).
+\- A: Define entire data manipulation flows like inserting data directly into targets (LUIs).
 
 
 \- B: Schedule jobs to be executed according to predefined rules or schedules.
@@ -205,7 +205,7 @@ Implementers can use Fabric to define and run:
 \- C: Parse data from any type of data source and store it in the Cassandra database.
 
 
-\- D: Java functions to transform data or trigger synchronization processes with external sources.
+\- D: Run java functions to transform data or trigger synchronization processes with external sources.
 
 
 \- E: All the above and more. 

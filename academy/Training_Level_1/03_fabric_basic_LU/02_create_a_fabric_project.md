@@ -14,7 +14,7 @@ To do so, follow these steps:
 
 - [Add the FabricProject to Version Control](/articles/04_fabric_studio/06_adding_fabric_projects_to_version_control.md)  
 
-  ​
+  
 
 ![](/academy/03_fabric_basic_LU/images/information.png) To learn more about our best practices for working with version control, refer to: 
 
@@ -33,6 +33,6 @@ Now that you have created a new Project, let’s define basic configurations usi
 
 You have now set the basic configurations needed to start your first Fabric Project implementation. 
 
-[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/03_04_define_the_interfaces.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)
 
 
