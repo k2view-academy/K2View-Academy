@@ -34,9 +34,6 @@ The following tables discuss how user access control is managed using Fabric com
 <li>create a <strong>sup_user</strong> user without a password and as a superuser.</li>
 </ul>
 </li>
-</ul>
-<ul>
-<li style="list-style-type: none;"></li>
 <li>Create a regular user named <strong>psw_user</strong> with password '12345':
 <ul>
 <li>create user psw_user with password &lsquo;12345&rsquo;;</li>
@@ -214,7 +211,7 @@ Below is parameters' list of  **GRANT OPERARION** command:
 
 
 
-##### GRANT OPERATION Command- Examples
+#### GRANT OPERATION Command- Examples
 
 <table>
 <tbody>
@@ -357,7 +354,7 @@ Below is parameters' list of  **GRANT WS_NAME** command:
 
 
 
-##### GRANT WS_NAME Command- Examples
+#### GRANT WS_NAME Command- Examples
 
 <table>
 <tbody>
@@ -460,3 +457,6 @@ Below is parameters' list of  **GRANT WS_NAME** command:
 </tr>
 </tbody>
 </table>
+
+
+[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/01_fabric_credentials_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/03_fabric_credentials_backup.md)
