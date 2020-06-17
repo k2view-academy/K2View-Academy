@@ -18,7 +18,7 @@ Following steps should be followed
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1.png" alt="drawing"/>
 
-   Once the link to the Swagger will be invoked, it is possible to focus on a given version of the invoked URL path, by adding /v1 to the URL as shown below
+   Once the link to the Swagger will be invoked, it is possible to focus on a given version of the invoked URL path, by adding for exmaple /v1 to the URL as shown below
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
@@ -44,6 +44,18 @@ Following steps should be followed
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
-   [![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+### Swagger - supported Web-Services categories
 
+Fabric Web-Services are shown in swagger in alphabetic order divided by categories.
+
+   * Common - All the product built-in Web-Services to bring reference tables meta data and data.
+   
+   * Graphit - All the graphit files defined as a part of the project implementations.
+   
+   * Lu - All the LU built-in Web-Services to bring LU meta data and data and data modification, such as Delete instance.
+   
+   * Project defined categories for Web-Services.
+   
+   [![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+ 
 
