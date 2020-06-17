@@ -89,9 +89,9 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><b>DB Objects Tab<b></p>
 </td>
 <td style="width: 414px;">
-<p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; DB objects can be refreshed by clicking the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
+<p>Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
+<p>DB objects can be refreshed by clicking the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
+<p>Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 4; mso-prop-change: 'Einav Velan' 20200412T1629;">
