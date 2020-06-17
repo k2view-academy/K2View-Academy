@@ -8,7 +8,7 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 [Cassandra Basic Commands](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example- Keyspaces & Commands
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Keyspaces & Commands
 
  Let's look at our project and product keyspaces:
 
