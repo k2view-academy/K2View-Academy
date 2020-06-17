@@ -30,7 +30,7 @@ Let's deploy the Logical Unit we have just created in the Fabric Studio:
 
 4. Let's check which Logical Unit has been deployed, How is it verified?  Run **fabric>list LUT;**  
 
-    We will learn more options for this Fabric command in our next learning item.
+    You will learn more about the options for this Fabric command in our next learning item.
 
 
 
