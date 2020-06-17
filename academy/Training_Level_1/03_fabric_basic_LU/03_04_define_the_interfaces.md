@@ -28,7 +28,7 @@ Our Training environment has three main DBs of various types, which in essence,r
 
 - **ORDERS_DB** (type: PostgreSQL) – Usually stores informationfor filling the Order functions required to complete a customer’s order createdin a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
-  ​
+  
 
 ### How to define an Interface
 
@@ -129,7 +129,7 @@ Password:
 
 2. `Question: Which Subscriber has the largest BALANCE?`
 
-   ​
+   
 
  **ORDERS_DB details**
 
@@ -159,7 +159,6 @@ Password:
 2. `Answer: Subscriber ID 82`
 3. `Answer: 37351 orders`
 
-
-[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/05_LU_flow.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/05_LU_flow.md)
 
 

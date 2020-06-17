@@ -129,11 +129,11 @@ Open the CustomerLUData Viewer and execute Instance ID 215:
 
 4. Execute the following **query** in the **Data Viewer**:
 
-   ​
+   
 
    `select cases.status,cases.activity_id, activity.ACTIVITY_DATE,activity.ACTIVITY_NOTE from cases, activity where cases.ACTIVITY_ID=activity.ACTIVITY_ID` 
 
-   ​
+   
 
 5. Do the same using the **CRM_DB Query Builder** and add the **CUSTOMER_ID** number. Is the displayed data the same?
 
@@ -176,7 +176,7 @@ Add the BILLING_DB.BALANCEtable to the CustomerLU.
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)
 
  
 
