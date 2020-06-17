@@ -8,7 +8,7 @@ So far, you have implemented and validated your project in a Test mode using the
 
 ### Deployment to the Fabric Server
 
-See how your design and implementation can be executed in scale and on demand:
+See how your design and implementation can be executed in large-scale and on demand:
 
 [Deploy Fabric Project](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)
 
