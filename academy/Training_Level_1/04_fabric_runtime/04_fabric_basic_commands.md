@@ -12,7 +12,7 @@ You have just deployed your project and  its objects and have listed them - incl
 
 Let’s test an LU Instance and see the results:
 
-1. Open the **Fabric console** on **Windows** or log in to **Fabric** on the **Linux server**.
+1. Open the **Fabric console** in **Windows** or log in to **Fabric** on the **Linux server**.
 
 2. Run **get CustomerLU.215**;
 
