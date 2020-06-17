@@ -24,14 +24,14 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 
 1. To verify the Fabric version, run **fabric>version;** in the Fabric Console.
 
-2. Go to the **C:\k2view\Fabric_6.1\Server\fabric** Fabric directory in the Windows Explorer.
+2. Go to the Fabric **C:\k2view\Fabric_6.1\Server\fabric** directory in the Windows Explorer.
 
 3. Let's list the folders. How many folders are there? *8* folders.
 
 4. To review the k2fabric logs: 
 
-   1. Check the **Output** option under the Fabric Studio server\Activity Logs component.
-   2. Go to the **C:\k2view\k2Projects\Fabric\\[Learning Project]\FabricHome\logs** Fabric log directory and check the **k2fabric** file. Note that additional directories are under FabricHome. For example: **config**.
+   1. Check the **Output** option under the **Fabric Studio Server** \ **Activity Logs** component.
+   2. Go to the Fabric **C:\k2view\k2Projects\Fabric\\[Learning Project]\FabricHome\logs** log directory and check the **k2fabric** file. Note that there are additional directories under **FabricHome**. For example: **config**.
 
    
 
