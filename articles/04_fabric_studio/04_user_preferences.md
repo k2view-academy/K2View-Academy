@@ -27,10 +27,10 @@ The following is a list of server configuration items:
 <table>
 <tbody>
 <tr>
-<td width="133">
+<td width="200">
 <p><strong>Title</strong></p>
 </td>
-<td width="467">
+<td width="500">
 <p>K2View Fabric logical name of the server.</p>
 </td>
 </tr>
@@ -136,10 +136,10 @@ The following SVN preferences can be configured:
 <table>
 <tbody>
 <tr>
-<td width="236">
+<td width="200">
 <p><strong>Auto-update SVN status</strong></p>
 </td>
-<td width="368">
+<td width="500">
 <p>Check to display the SVN Status icon for each component in the Project Tree.</p>
 </td>
 </tr>
