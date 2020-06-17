@@ -2,7 +2,7 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-You have just deployed your project and  its objects and have listed them, including the CustomerLU that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will help you to retrieve and query data.
+You have just deployed your project and  its objects and have listed them - including the CustomerLU that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will help you to retrieve and query data.
 
 [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
 
@@ -12,7 +12,7 @@ You have just deployed your project and  its objects and have listed them, inclu
 
 Let’s test an LU Instance and see the results:
 
-1. Open the Fabric console on Windows or log into Fabric on the Linux server.
+1. Open the **Fabric console** on **Windows** or log in to **Fabric** on the **Linux server**.
 
 2. Run **get CustomerLU.215**;
 
@@ -40,9 +40,9 @@ Using the training materials and examples covered so far:
 
 3. `Question: How many subscribers has Customer 82? What are their IDs?`
 
-4. `Question: What is the status of CRM_DB interface?`
+4. `Question: What is the status of the CRM_DB interface?`
 
-5. `Advanced Question: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Perform a get CustomerLU.215 again. What is the CUSTOMER.FIRST_NAME? How will you change it to the source value?`
+5. `Advanced Question: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Perform a get CustomerLU.215 again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
 
    
 
