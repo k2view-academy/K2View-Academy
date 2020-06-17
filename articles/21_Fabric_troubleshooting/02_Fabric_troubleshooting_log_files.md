@@ -8,7 +8,7 @@ Logs are configured in the **logback.xml** file which is located on the Fabric s
 
 <pre><code>	$K2_HOME/config/logback.xml</code></pre>
  
-The [log files location and rolling policy](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy), [the log level](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level), etc. settings can be updated in the **logback.xml** file.  
+Settings like the [log files location and rolling policy](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) and [the log level](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level) can be updated in the **logback.xml** file.  
 
 For additional information, refer to http://logback.qos.ch/manual/configuration.html.
 
