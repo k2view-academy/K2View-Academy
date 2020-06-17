@@ -1,13 +1,13 @@
 # Fabric Log Files
 
-All activities performed in Fabric are written into log files in the server and displayed in the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) when Fabric local started by the Studio. When executing a Fabric command, open the log file to view errors, warnings or messages.
+All activities performed in Fabric are written into log files in the server and displayed in the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) when Fabric local is started by the Studio. When executing a Fabric command, open the log file to view errors, warnings or messages.
 
 ### Log Configuration
 
 Logs are configured in the **logback.xml** file which is located on the Fabric server in:
 
 <pre><code>	$K2_HOME/config/logback.xml</code></pre>
-Log file settings like the [log files location and rolling policy](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) or [log level](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level) can be updated in the **logback.xml** file.  
+ 
 The [log files location and rolling policy](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy), [the log level](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level), etc. settings can be updated in the **logback.xml** file.  
 
 For additional information, refer to http://logback.qos.ch/manual/configuration.html.
