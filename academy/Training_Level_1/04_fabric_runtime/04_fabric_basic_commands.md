@@ -16,9 +16,7 @@ Let’s test an LU Instance and see the results:
 
 2. Run **get CustomerLU.215**;
 
-3. Execute **select * from customer**;
-
-4. You should get the following results:
+3. Execute **select * from customer**. You should get the following results:
 
    `fabric>get CustomerLU.215;`
    
