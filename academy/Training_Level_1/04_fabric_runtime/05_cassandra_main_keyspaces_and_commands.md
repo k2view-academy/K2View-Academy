@@ -18,8 +18,8 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Keyspaces & Commands
 
-1. `Question: What are the instance Ids that stored in k2view_customerlu?` `How will you list them?`
-2. `Question: How will you list the LUTs which were deployed?`
+1. `Question: Which Instance IDs are stored in k2view_customerlu?` `How will you list them?`
+2. `Question: How will you list the LUTs that have been deployed?`
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution - Keyspaces & Commands
 
