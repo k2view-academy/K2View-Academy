@@ -33,4 +33,4 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md) 
