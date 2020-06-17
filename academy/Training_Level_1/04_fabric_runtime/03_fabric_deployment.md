@@ -24,7 +24,7 @@ Let's deploy the Logical Unit we have just created in the Fabric Studio:
    1. If you are using a **Fabric Linux server**, select the server defined under **User Peferences**.
    2. In **local Fabric**, select **Debug Server**. 
 
-2. Once the deployment has been completed, return to the Fabric console and log into Fabric using the **fabric** command. Note that you are already logged in to the local Fabric.
+2. Once the deployment has been completed, return to the Fabric console and log into Fabric using the **fabric** command. Note that you are already logged into local Fabric.
 
 3. To review the deployed project's properties, run **fabric>set;**. What is the project name? Which environment is active?
 
