@@ -14,7 +14,7 @@ User access control management can be performed using either:
 
 - Web Admin UI
 
-  <!-- Add a link- drop 4- Fabric Web Admin -->).
+  <!-- Add a link- drop 4- Fabric Web Admin -->
 
 ## K2Auth Tables
 
@@ -89,3 +89,5 @@ It is possible to start Fabric for the first time with a different initial super
 - Copy **adminInitialCredentials.template** file from [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory and change the file name to **adminInitialCredentials**.
 - Edit the file and update the user/password to the required user and password value. Note that user name must only  contain lowercase letters.
 - When Fabric starts for the first time the new user is created and After fabric starts the **adminInitialCredentials** file is deleted.
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
