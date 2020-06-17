@@ -37,7 +37,7 @@ The Table Population window has the following sections:
 ### Population Window Header
 The Population window header holds the **Debug** and **Options** toolbars where additional toolbars like **Edit**, **Zoom**, **Alignment** or **Export** can be added when needed. 
 
-Click for more information about Additional Toolbars.
+[Click for more information about Additional Toolbars.](/articles/07_table_population/01_table_population_overview.md#options-toolbar)
 
 ### Debug Toolbar
 The **Debug toolbar** holds options for testing the Population process by executing its logic on a selected [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
