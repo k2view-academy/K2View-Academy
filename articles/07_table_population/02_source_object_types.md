@@ -43,8 +43,7 @@ When an LU table has two populations, a second table population can extract data
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
 
 ### DB Query Vs. Root Function Comparison Analysis
 
