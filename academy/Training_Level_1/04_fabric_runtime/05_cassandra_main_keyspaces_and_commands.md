@@ -10,7 +10,7 @@ Now that you are able to retrieve and view the data in Fabric, let's learn how t
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example- Keyspaces & Commands
 
- Let's look at the our project's keyspaces and product keyspaces:
+ Let's look at the our project and product keyspaces:
 
 1. Run **describe keyspaces;**.
 2. Let's change our current keyspace to the **CustomerLU**  keyspace by executing **use k2view_customerlu;**
