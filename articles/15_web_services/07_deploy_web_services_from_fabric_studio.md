@@ -69,4 +69,4 @@ k2_ws | 1591772670495 | {'methods': ''}
 +--------+-------------+----------+
 |k2_ws   |1591773207364|{methods=}|
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/06_web_services_code_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/09_swagger.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/06_web_services_code_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/08_web_services_input_parameters.md)
