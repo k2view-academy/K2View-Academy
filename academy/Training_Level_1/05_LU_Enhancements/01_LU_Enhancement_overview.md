@@ -10,9 +10,10 @@ By the end of the Fabric Enhancement learning item you will know:
 
 - How to create tables population mapping
 - How to create populations
-- How to write root, DB and decision functions
-- How to link to reference and translations tables
-- Establish efficient synchronization with external sources
+- How to write and execute root & DB functions 
+- How to write and execute Enrichment & Decision functions
+- How to use lookup and translations tables
+- Establish efficient synchronization strategies with external sources
 
  
 
