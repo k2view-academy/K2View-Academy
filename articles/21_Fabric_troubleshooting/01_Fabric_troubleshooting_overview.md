@@ -2,14 +2,14 @@
 
 Fabric provides the following methods for troubleshooting executed processes.
 
-- **Log files**. All activities performed in Fabric are written into [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md). In addition the activities run on the local Fabric server started by the Studio are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)  
+- **Log files**. All activities performed in Fabric are written into [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md). In addition the activities run on the local Fabric server started by the Studio are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).  
 - **Monitoring stuck processes**, using the following tools:
 
   - [**PS** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – a Fabric command like [User Jobs], [Web Services](/articles/15_web_services/01_web_services_overview.md), [Graphit] or a [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) which displays tasks running on the Fabric server. The PS command can be used to identify stuck processes and their running duration and when needed, to kill stuck processes using the [**kill** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
 
   - [**jjstack.sh** script](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-do-i-run-jjstack) – a Fabric script that collects Java stack traces for a given process, stores the stacks and analyzes the results. The script can be applied to the Fabric server or the IID Finder. 
 
-- **Monitoring memory leaks or intensive memory consumption**, using a [**Heap Dump**](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-is-a-heap-dump-file-created) file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand. Heap Dump files can be investigated to analyze the source of a memory leak.
+- **Monitoring memory leaks or intensive memory consumption** using a [**Heap Dump**](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-is-a-heap-dump-file-created) file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand. Heap Dump files can be investigated to analyze the source of a memory leak.
 
     
 
