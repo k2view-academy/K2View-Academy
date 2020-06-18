@@ -44,7 +44,7 @@ Replace the **<instanceID> place holder** with the input parameter **CUSTOMER_ID
 
 ​    Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);
 
-9. Add the [**Web Service Properties**](/articles/15_web_services/02_web_services_proprties.md) . in the upper right corner pane:
+9. Add the [**Web Service Properties**](/articles/15_web_services/02_web_services_properties.md) . in the upper right corner pane:
 
 a.    **Name**: The Web Service preferred name. Make sure to use the prefix ws% and assign the Web Service a meaningful functional name. For example, **wsGetCustomerInfo.**
 
