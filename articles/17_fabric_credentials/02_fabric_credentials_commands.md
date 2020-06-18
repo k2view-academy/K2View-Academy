@@ -137,14 +137,13 @@ The following tables discuss how user access control is managed using Fabric com
 
 ## GRANT Command
 
-**GRANT** commands are used to enable specific roles to access Fabric. These commands insert records into the **Permissions table** in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra. Several **GRANT** commands can be run for the same LUT. The permissions, granted by the **GRANT** command will be appended. 
+**GRANT** commands are used to enable specific roles to access Fabric. These commands insert records into the **Permissions table** in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra. Several **GRANT** commands can be run for the same LUT. The permissions granted by the **GRANT** command will be appended. 
 
 The following **GRANT** commands are supported:
 
 <p><h4>
 <span class="md-plain md-expand">GRANT </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;OPERATION&gt;</span><span class="md-plain"> ON </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;RESOURCE&gt;</span><span class="md-plain"> TO </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;ROLE&gt;</span></h4></p>
 Below is a list of **GRANT OPERATION** command parameters:
-
 
 <table>
 <tbody>
