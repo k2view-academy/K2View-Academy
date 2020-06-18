@@ -4,7 +4,7 @@ The code in an automatically generated Web Service function provides basic Selec
 
 ### How do I edit the code of a function in a Web Service?
 
-It is recommended to edit the code in a Web Service function using the IntelliJ Java[[MAC1\]](#_msocom_1) Editor which offers a number of advantages like:
+It is recommended to edit the code in a Web Service function using the IntelliJ Java Editor which offers a number of advantages like:
 
    * Smart code completion.
 
