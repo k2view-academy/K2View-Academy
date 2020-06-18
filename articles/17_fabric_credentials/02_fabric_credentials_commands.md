@@ -152,10 +152,10 @@ Below is parameters' list of  **GRANT OPERARION** command:
 <td width="150pxl">
 <p><strong>Parameter Name</strong></p>
 </td>
-<td width="100pxl">
+<td width="150pxl">
 <p><strong>Mandatory</strong></p>
 </td>
-<td width="550pxl">
+<td width="600pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -163,10 +163,10 @@ Below is parameters' list of  **GRANT OPERARION** command:
 <td width="150pxl">
 <p>Operation</p>
 </td>
-<td width="100pxl">
+<td width="150pxl">
 <p>Yes</p>
 </td>
-<td width="550pxl">
+<td width="600pxl">
 <p>Fabric operations included in the permission.</p>
 <p><strong>Examples:</strong></p>
 <ul>
@@ -183,10 +183,10 @@ Below is parameters' list of  **GRANT OPERARION** command:
 <td width="150pxl">
 <p>Resource</p>
 </td>
-<td width="100pxl">
+<td width="150pxl">
 <p>Yes</p>
 </td>
-<td width="550pxl">
+<td width="600pxl">
 <p>Fabric resources included in the permission:</p>
 <ul>
 <li>* - grant permissions on all Fabric resources.</li>
@@ -199,10 +199,10 @@ Below is parameters' list of  **GRANT OPERARION** command:
 <td width="150pxl">
 <p>Role</p>
 </td>
-<td width="100pxl">
+<td width="150pxl">
 <p>Yes</p>
 </td>
-<td width="550pxl">
+<td width="600pxl">
 <p>The permissions are granted to a given role.</p>
 </td>
 </tr>
