@@ -46,16 +46,29 @@ The following table describes the syntax and the parameters for calling the **jj
 <li>Sample count = 100.</li>
 <li>Cutoff limit = 30.</li>
 </ul>
-<p><strong>Example 1: </strong>./jjstack.sh &nbsp;</p>
-<p>Sample the Fabric server 100 times, create the files in /tmp. No cutoff limit.</p>
-<p>&nbsp;<strong>Example 2: </strong>./jjstack.sh &ldquo;&rdquo; 50 js_iid1</p>
-<p>Sample the Fabric server 50 times, create the files in the <strong>js_iid1</strong> output directory. No cutoff limit.</p>
-<p>&nbsp;&nbsp;<strong>Example 3: </strong>./jjstack.sh 14323 100 js_iid1 30</p>
-<p>Sample the process 14323 100 times, create the files in the <strong>js_iid1</strong> output directory and output only entries with at least 30 appearances.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Sample the Fabric server 100 times, create the files in /tmp. No cutoff limit:
+<ul>
+<li><strong>&nbsp;</strong>./jjstack.sh &nbsp;</li>
+</ul>
+</li>
+<li>Sample&nbsp;the Fabric server 50 times, create the files in the <strong>js_iid1</strong> output directory. No cutoff limit:
+<ul>
+<li><strong>&nbsp;</strong>./jjstack.sh &ldquo;&rdquo; 50 js_iid1</li>
+</ul>
+</li>
+<li>Sample the process 14323 100 times, create the files in the&nbsp;<strong>js_iid1</strong>&nbsp;output directory and output only entries with at least 30 appearances:
+<ul>
+<li>./jjstack.sh 14323 100 js_iid1 30</li>
+</ul>
+</li>
+</ul>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 [Click to view the Example of the **jjstack** Output File.](/articles/21_Fabric_troubleshooting/images/jjstack.md)
 
