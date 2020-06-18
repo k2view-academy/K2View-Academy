@@ -171,5 +171,10 @@
         </ul>
 </details>
 
-
-
+<details>
+<summary markdown="span"><strong>Fabric Troubleshooting <strong><a href="/articles/21_Fabric_troubleshooting/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md">Fabric Troubleshooting Overview</a></li>
+<li><a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">Fabric Troubleshooting Log Files</a></li>
+</ul>
+        </ul>
+</details>
