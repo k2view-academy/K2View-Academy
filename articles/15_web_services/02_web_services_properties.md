@@ -1,4 +1,4 @@
-## **Knowledge Item Title:** **WEB SERVICES** **Properties** 
+# **Web Services Properties** 
 
 Fabric Web Services properties include the definitions, methods, categories, and essential metadata that contribute to the main functionalities and characteristics of the Web Service.  
 
@@ -6,9 +6,9 @@ Fabric Web Services properties include the definitions, methods, categories, and
 
 Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** from the context menu to display the **Function Manager** window: 
 
-<img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/>    
+<img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/> 
 
-## **What are Web Services **properties? 
+## What are Web Services properties? 
 
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
@@ -28,8 +28,5 @@ The following are the Web Services properties:
 | Description     | The Web Service’s description on Swagger.                    |
 | Result Metadata | Response example to be presented on Swagger before the Web Service call. Set example-JSON, example-XML and example-CSV. |
 
-------
-
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
-
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/03_create_a_web_service.md)
 
