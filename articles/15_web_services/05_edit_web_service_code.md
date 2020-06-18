@@ -1,10 +1,10 @@
-## Knowledge Item Title: Editing web service code
+# Editing web service code
 
 The code in an automatically generated Web Service function provides basic Select and Fetch templates for data retrieval. However, there is frequently a need to enhance a function’s code in order to perform a specific functionality. 
 
 Click for more information on How to Create a Web Service.
 
-## How do I edit the code of a function in a Web Service?
+### How do I edit the code of a function in a Web Service?
 
 It is recommended to edit the code in a Web Service function using the IntelliJ Java[[MAC1\]](#_msocom_1) Editor which offers a number of advantages like:
 
@@ -20,7 +20,7 @@ Note that IntelliJ is not part of the Fabric Studio Installation Package and **m
 
 A Web Service can also be edited directly in its main working area.
 
-## What should be edited?
+### What should be edited?
 
 The following items should be edited after they are automatically generated:
 
@@ -31,29 +31,6 @@ The following items should be edited after they are automatically generated:
 | Java Code Enhancement             | Web Service code can also apply  transformation rules via the functions[[MAC2\]](#_msocom_2) , translations[[MAC3\]](#_msocom_3) or Globals[[MAC4\]](#_msocom_4) defined in the project.    Note that any Fabric Server runtime command[[MAC5\]](#_msocom_5) can be used within the Web  Service using the Execute function.   For example, the Get command on the  Customer LUT for a specific instance:  Fabric().execute(“ get Customer.?”,ID); |
 
  
-
-------
-
-
-
- [[MAC1\]](#_msoanchor_1)add link to InteliJ KI -drop 2
-
-
-
- [[MAC2\]](#_msoanchor_2)Add link to function KI 3.8
-
-
-
- [[MAC3\]](#_msoanchor_3)Add link to translation KI 18.1
-
-
-
- [[MAC4\]](#_msoanchor_4)Ad link to Globals KI 17.1
-
-
-
- [[MAC5\]](#_msoanchor_5)Add link to Fabric command KI 2.3
-
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/04_web_services_function_basic_structure.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/06_web_services_code_examples.md)
 
 
