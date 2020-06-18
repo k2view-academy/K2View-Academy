@@ -1,6 +1,6 @@
 # Put Verb
 
-Use PUT APIs primarily **to update existing resource** (if the resource does not exist, API may decide whether to create a new resource or not). If a new resource has been created by the PUT API, the origin server MUST inform the user agent via the HTTP response code `201 (Created)` response, and if an existing resource is modified, either the `200 (OK)` or `204 (No Content`) response codes SHOULD be sent to indicate successful completion of the request.
+Use PUT APIs primarily **to update existing resource** (if the resource does not exist, API may decide whether to create a new resource or not). If a new resource has been created by the PUT API, the origin server MUST inform the user agent via the HTTP response code `201 (Created)` response, and if an existing resource is modified, either the `200 (OK)` or `204 (No Content`) response codes should be sent to indicate successful completion of the request.
 
 If the request passes through a cache and the Request-URI identifies one or more currently cached entities, those entries SHOULD be treated as stale. Responses to this method are **not cacheable**.
 
