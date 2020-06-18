@@ -143,7 +143,7 @@ The following **GRANT** commands are supported:
 
 <p><h4>
 <span class="md-plain md-expand">GRANT </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;OPERATION&gt;</span><span class="md-plain"> ON </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;RESOURCE&gt;</span><span class="md-plain"> TO </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;ROLE&gt;</span></h4></p>
-Below is a list of **GRANT OPERATION** command parameters:
+Below is a list of GRANT OPERATION command parameters:
 
 <table>
 <tbody>
@@ -303,15 +303,15 @@ Enables users to give a generic access to a given Web-Services to access the Fab
 
 Notes:
 
-- Use **GRANT OPERATION** command to limit the access of the Web-Service to a given LUT or LUI.
-- Use **GRANT OPERATION** command to grant an access to all web services: populate the **Operation** parameter by **ALL_WS**.
+- Use **GRANT OPERATION** command to limit the access of the Web Service to a given LUT or LUI.
+- Use **GRANT OPERATION** command to grant an access to all Web Services: populate the **Operation** parameter by **ALL_WS**.
 - The Web-Service authorization is done using the **token**:
   - Project Web-Services: give permission to the **role** on the Web-Service or all Web-Services,  and assign the token to the role.
   - Product Built-in Web-Services: assign the token to the user. 
 
 <!-- Add links to web services KIs -->
 
-Below is a list of **GRANT WS_NAME** command parameters:
+Below is a list of GRANT WS_NAME command parameters:
 
 <table>
 <tbody>
