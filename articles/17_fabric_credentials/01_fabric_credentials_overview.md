@@ -82,12 +82,10 @@ Before using Fabric, create the users and define their credentials, as follows:
 
 ## Admin User
 
-By default, Fabric creates the **admin** user as an initial superuser when starting for the first time: the user and password are set to "admin". 
+By default, Fabric creates the **admin** user as the initial superuser when starting for the first time and defines their user and password as **"admin"**. Fabric can also be started for the first time with an initial superuser who is not defined as admin/admin.  
 
-It is possible to start Fabric for the first time with a different initial superuser than admin/admin:
-
-- Copy **adminInitialCredentials.template** file from [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory and change the file name to **adminInitialCredentials**.
-- Edit the file and update the user/password to the required user and password value. Note that user name must only  contain lowercase letters.
-- When Fabric starts for the first time the new user is created and After fabric starts the **adminInitialCredentials** file is deleted.
+- Copy the **adminInitialCredentials.template** file from [$K2_HOME/fabric/config.template](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md) directory to [$K2_HOME/config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig) directory and change the file name to **adminInitialCredentials**.
+- Edit the file and update the user/password to the required values. Note that username must only  contain lowercase letters.
+- When Fabric starts for the first time the new user is created and the **adminInitialCredentials** file is deleted.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
