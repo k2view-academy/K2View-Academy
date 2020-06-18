@@ -2,7 +2,7 @@
 
 Fabric provides the following methods for troubleshooting executed processes.
 
-- **Log files**. All activities performed in Fabric are written into [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) and to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) when Fabric is started by the Studio.
+- **Log files**. All activities performed in Fabric are written into [log files in the server](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md). In addition the activities run on the local Fabric server started by the Studio are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)  
 - **Monitoring stuck processes**, using the following tools:
 
   - [**PS** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – a Fabric command like [User Jobs], [Web Services](/articles/15_web_services/01_web_services_overview.md), [Graphit] or a [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) which displays tasks running on the Fabric server. The PS command can be used to identify stuck processes and their running duration and when needed, to kill stuck processes using the [**kill** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
@@ -36,7 +36,7 @@ The following table describes the syntax and the parameters for calling the **jj
 <p><strong>Usage</strong>: ./jjstack.sh [pid] [sample count] [store directory] [cutoff limit]</p>
 <p><strong>Options</strong>:</p>
 <ul>
-<li>[pid] &ndash; optional parameter. Java process ID to sample. By default, the script scans the Fabric server - see Example 1. When this parameter is a default while other parameters must be provided, use &ldquo;&rdquo; - see Example 2.</li>
+<li>[pid] &ndash; optional parameter. Java process ID to sample. By default, the script scans the Fabric server - see Example 1. When this parameter is a default and other parameters must be provided, use &ldquo;&rdquo; - see Example 2.</li>
 <li>[sample count] - optional parameter. Number of samples and number of output files created.</li>
 <li>[store directory] - optional parameter. Location for storing output files that can be later analyzed. By default, the output directory is <strong>/tmp</strong>.</li>
 <li>[cutoff limit] - optional parameter. Minimum number of appearances of the Java methods to show in the output file.</li>
