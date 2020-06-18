@@ -1,4 +1,4 @@
-# The basic structure of a Web service function
+# The basic structure of a web service function
 
 Fabric Studio enables you to automatically generate Java code that holds the basic components of a Web Service function. 
 
