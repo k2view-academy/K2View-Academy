@@ -14,13 +14,13 @@ For additional information, refer to http://logback.qos.ch/manual/configuration.
 
 ### Log Files 
 
-The location of a log file can be configured in the **logback.xml**. log configuration file. The default location of the log files is:
+The location of a log file can be configured in the **logback.xml**. log configuration file. The default location of log files is:
 
 <pre><code>	$K2_HOME/logs/k2fabric.log</code></pre> 
 
-The latest log is always named **k2fabric.log**, and it is [rolled to a new file](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) as soon as it reaches a specific size. 
+The latest log is always named **k2fabric.log**, and is [rolled to a new file](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) as soon as it reaches a specific size. 
 
-The ***.err** and ***.** **out** log files are created during [Fabric restart]( /articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart) and are not rolled to a new file. Check these files when an error occurs. 
+The ***.err** and ***.** **out** log files are created during [Fabric restart]( /articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart) and are not rolled to a new file. Always Check these files when an error occurs. 
 
 #### **IID Finder Log Files**
 
@@ -34,7 +34,7 @@ The IID Finder has a separate log file and a separate configuration file:
 
 ### **Log Files Location & Rolling Policy**
 
-While log files convey useful information, they grow bigger over time, and eventually their size can become an issue. This problem is addressed in the **logback.xml** configuration file. To prevent unwanted downtime, **rolling file appenders** automatically archive the current log file and resume logging in a new file when specific predefined conditions occur. Log files can be rolled based on size, date/time, and a combination of size and date/time. In addition, you can configure to automatically compress and later delete old log files.
+While log files convey useful information, they grow bigger over time, and eventually their size can become an issue. This problem is addressed in the **logback.xml** configuration file. To prevent unwanted downtime, **rolling file appenders** automatically archive the current log file and resume logging in a new file when specific predefined conditions occur. Log files can be rolled based on size, date/time and a combination of size and date/time. In addition, you can configure to automatically compress and later delete old log files.
 
 **Example:**
 ~~~
@@ -73,7 +73,7 @@ The above configuration defines the **monitoring.log** file located in the Fabri
 ### **Log Level**
 The log level parameter defines which messages are written into the log file. There are four log levels (from the least severe to the most severe): DEBUG, INFO, WARN and ERROR. 
 
-To print all Fabric messages into the log, set this parameter to DEBUG - the lowest level. Another reason for setting the log level to DEBUG is to make code investigations easier. However, make sure to change this parameter back to the default level (INFO) as soon as the investigation is completed. Any change on logback.xml file will require a Fabric restart on all the relevant Fabric nodes.
+To print all Fabric messages into the log, set this parameter to DEBUG - the lowest level. Another reason for setting the log level to DEBUG is to make code investigations easier. However, make sure to change this parameter back to the default level (INFO) as soon as the investigation is completed. Any changes to the logback.xml file will require a Fabric restart on all relevant Fabric nodes.
 
 Writing errors/messages/warnings into the log has an impact on both performance and disk space. Therefore, they should be written only when requested by the customer or for debugging. For better performance, reduce the log level. Consider moving from INFO to ERROR after the application is stabilized. 
 
@@ -93,12 +93,12 @@ The Root level sets the default log level. Higher or lower levels can be set for
 ### Writing into Log Files
 Use the Fabric built-in **reportUserMessage(Level level, String message)** function to add messages into the log file. The function receives two parameters - log level (DEBUG, INFO, WARN, or ERROR) and message.
 
-The log level is optional, although it is recommended to set it. When the log level is set to DEBUG, messages can remain in the code, since they do not appear once the log level in **logback.xml** is set to INFO or higher level.
+The log level is optional, although it is recommended to set it. When the log level is set to DEBUG, messages can remain in the code  since they do not appear once the log level in **logback.xml** is set to INFO or higher level.
 
 In addition, you can use the log.info, log.debug, log.warn and log.error Java methods to write into log files. 
 
 #####  Add Connection Leaks to the Log File
-The SUSPECTED_CONNECTION_LEAK_SEC setting in the **config.ini** file enables getting information about connections which are suspected as leaked, into the error file. By default, this setting = 0. When set to a value greater than 0, a connection that is idle for this many seconds is suspected as leaked. The system logs this into the **k2fabric.log** and shows a stack trace of the getConnection() method to indicate the code causing the leaky connection.
+The SUSPECTED_CONNECTION_LEAK_SEC setting in the **config.ini** file enables getting information about connections which are suspected as leaked into the error file. By default, this setting = 0. When set to a value greater than 0, a connection that is idle for this many seconds is suspected as leaked. The system logs this into the **k2fabric.log** and shows a stack trace of the getConnection() method to indicate the code causing the leaky connection.
 
 
 ### Logs Management and Cleanup
