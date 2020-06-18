@@ -23,6 +23,6 @@ Web Services that conform to the REST architectural style, called RESTful We
 
 ------
 
-<img align="right" width="60" height="54" src="/articles/images/Next.png">(/articles/15_web_services/02_web_services_properties.md)
+[img align="right" width="60" height="54" src="/articles/images/Next.png"](/articles/15_web_services/02_web_services_properties.md)
 
 
