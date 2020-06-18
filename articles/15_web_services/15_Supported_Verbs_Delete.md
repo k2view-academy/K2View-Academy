@@ -8,9 +8,9 @@ DELETE operations are **idempotent**. If you DELETE a resource, it is removed fr
 
 If the request passes through a cache and the Request-URI identifies one or more currently cached entities, those entries SHOULD be treated as stale. Responses to this method are **not cacheable**.
 
-# 1.         DELETE LUI
+## 1.         DELETE LUI
 
-URL: http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=json/xml]
+http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=json/xml]
 
 | **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
@@ -25,7 +25,7 @@ URL: http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[forma
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC
+http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC
 
 Delete LUI 1 from PATIENT LU
 
@@ -35,9 +35,9 @@ Response Body: null
 
 Response code: 200 if delete ended successfully
 
-# 2.         DELETE Data from LU Table
+## 2.         DELETE Data from LU Table
 
-URL: http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
+http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
 
 | **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
@@ -54,7 +54,7 @@ URL: http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=tok
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’&token=ABC
+http://localhost:3213/api/v1.0/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’&token=ABC
 
 Delete data from PATIENT LU instance id 1, INVOICE table by where clause
 
@@ -64,7 +64,7 @@ Response Body: null
 
 Response code: 200 if delete ended successfully
 
-# 3.         Delete data from common table
+## 3.         Delete data from common table
 
 http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1&token=token name&[format=json/xml]
 
@@ -81,7 +81,7 @@ http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/COMMON?CITIES&WHERE CITY_ID=1&token=ABC
+http://localhost:3213/api/v1.0/COMMON?CITIES&WHERE CITY_ID=1&token=ABC
 
 delete data from CITIES common table where city_id = 1
 
@@ -93,10 +93,10 @@ Response code: 200 if delete ended successfully
 
  
 
-# 4.         Delete custom Web-Service 
+## 4.         Delete custom Web-Service 
 
 Delete works like GET. All parameters should be populated on the URL or header.
 
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/14_Supported_Verbs_Put.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/16_rest_api_additions.md)
 
 
