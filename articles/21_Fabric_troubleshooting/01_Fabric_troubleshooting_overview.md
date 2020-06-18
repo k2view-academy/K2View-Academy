@@ -21,7 +21,7 @@ Use cases for running **jjstack.sh** are:
 - When you suspect that a job or a **Migrate** command is stuck.
 - To investigate a performance issue in the implementation layer.
 
-The procedure is to run the script and to analyze the output either on your own or with the help of R&D.
+The procedure is to run the script. You can analyze the output either on your own or with the help of R&D.
 
 The following table describes the syntax and the parameters for calling the **jjstack.sh** script. The script is located under **$K2_HOME/fabric/scripts** in the Fabric server.
 
