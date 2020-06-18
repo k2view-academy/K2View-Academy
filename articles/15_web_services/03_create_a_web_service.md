@@ -16,7 +16,7 @@ The following steps discuss how a new Web Service is created and include options
 
 Note that for the **Newest file** of a Logical Unit to be part of the DB Connections list, you must execute at least one instance of the Logical Unit using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) .
 
-<img src="/articles/15_web_services/images/Web-Service-KI-3-2.png" width="2000" height="500"/>  
+<img src="/articles/15_web_services/images/Web-Service-KI-3-2.png"/>  
 
 4. Click the **DB File** icon to display the **Logical Unit Tables** list.
 
