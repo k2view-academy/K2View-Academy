@@ -14,21 +14,21 @@ Web services can be deployed to the K2view Fabric server either using the Fabric
 
 Following steps should be followed 
 
-1.  Navigate to the following URL and specify the IP address of your Fabric server: http://<Fabric server>:3213/api or set Web service invoke path template in your **User preferences** - Server configuration to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH> and then invoke web service (right click the **Web Service** name in the Project Tree pane and click the **Invoke Web Service** option), the follow screen will show up
+1.  Navigate to the following URL and specify the IP address of your Fabric server: http://<Fabric server>:3213/api or set Web service invoke path template in your **User preferences** - Server configuration to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH> and then invoke web service (right click the **Web Service** name in the Project Tree pane and click the **Invoke Web Service** option), the following screen will show up.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1.png" alt="drawing"/>
 
-   Once the link to the Swagger will be invoked, it is possible to focus on a given version of the invoked URL path, by adding for exmaple /v1 to the URL as shown below
+   Once the link to the Swagger will be invoked, it is possible to focus on a given version of the invoked URL path, by adding for example /v1 to the URL as shown below.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
    The relevant invoked Web-Service will be expended pointing to the correct verb, if only GET verb was defined as illegible for the invoked Web-Service, it will show only verb GET as an option, if all the four verbs were defined as illegible, it will show GET, POST, PUT and DELETE, but it will zoom into GET as a default.
 
-2. Click a web service in the Swagger user interface to view more details about it, including its parameters, as shown below. If a description of the method or comments were added to the input parameters in K2View Studio, it is displayed in the Swagger user interface, as shown in the examples below
+2. Click a web service in the Swagger user interface to view more details about it, including its parameters, as shown below. If a description of the method or comments were added to the input parameters in K2View Studio, it is displayed in the Swagger user interface, as shown in the examples below.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
-   If JSON/XML or CSV examples were defined in the Web-Service properties in Studio, it will be shown accordingly in the swagger
+   If JSON/XML or CSV examples were defined in the Web-Service properties in Studio, it will be shown accordingly in the swagger.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
@@ -38,7 +38,7 @@ Following steps should be followed
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-3.png" alt="drawing"/>
 
-5. The default Media Type is set to application/json, however it can be changed to other illegible supported format (xml or csv) and response accordingly
+5. The default Media Type is set to application/json, however it can be changed to other illegible supported format (xml or csv) and response accordingly.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
