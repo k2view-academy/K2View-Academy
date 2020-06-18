@@ -12,7 +12,7 @@ Please note that POST is **neither safe nor idempotent** and invoking two identi
 
 ## 1.         Post data into LU table
 
-URL: http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=json/xml
+http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=json/xml
 
 | Component   | Description                                    | Mandatory | Example          | Default        |
 | ----------- | ---------------------------------------------- | --------- | ---------------- | -------------- |
