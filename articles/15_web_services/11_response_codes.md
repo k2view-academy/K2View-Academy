@@ -33,7 +33,7 @@ K2view APIs use many of the available HTTP response status codes to convey succe
 
 ## Override response code
 
-It is possible to override the response code built-in Fabric mechanism by using the following code inside the web service:
+It is possible to override the response code using the following code inside the web service:
 
   ```
   - HttpServletResponse response = response();
