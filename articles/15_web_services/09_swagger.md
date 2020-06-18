@@ -24,7 +24,7 @@ Following steps should be followed
 
    The relevant invoked Web-Service will be expended pointing to the correct verb, if only GET verb was defined as illegible for the invoked Web-Service, it will show only verb GET as an option, if all the four verbs were defined as illegible, it will show GET, POST, PUT and DELETE, but it will zoom into GET as a default.
 
-2. Click a web service in the Swagger user interface to view more details about it, including its parameters, as shown below. If a description of the method or comments were added in K2View Studio, they display in the Swagger user interface, as shown in the examples below
+2. Click a web service in the Swagger user interface to view more details about it, including its parameters, as shown below. If a description of the method or comments were added to the input parameters in K2View Studio, it is displayed in the Swagger user interface, as shown in the examples below
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
