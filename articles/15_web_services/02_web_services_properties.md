@@ -16,8 +16,9 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 
 The following are the Web Services properties: 
 
-| Name            | The name of the assigned Web Service function. The assigned name should be meaningful and should have a ws% prefix. |
+| Property        | |
 | --------------- | ------------------------------------------------------------ |
+| Name            | The name of the assigned Web Service function. The assigned name should be meaningful and should have a ws% prefix. |
 | Category        | The characteristics or class of the Web Service. Note that each category has a separate Java file. |
 | Return Type     | The type of Output Return from the Web Service. For example, String, Long or Object. A drop down list is provided, however it is possible to override it with any desirable value that is not part of the drop down list. |
 | Version         | The representation of the Web Service’s versioning control status. A version is incorporated into the Web Service’s URL and is used to enable several Web Service versions that are all related to the same service. By default, the version is populated by 1. Versioning Logic: If the version is not part of the URL, the API will respond with the latest version. If the version is part of the URL and the API version exists, the API will respond with the specified version. If the version is part of the URL and the latest API version is lower, the API will respond with the latest version. If the version is part of the URL and is lower than the lowest API version, the API will return the correct error response code. If the version is part of the URL and is in-between two API versions, the API will respond with the lower version. Note that older product Web Services versions are supported for approximately one year after a new version is released. |
