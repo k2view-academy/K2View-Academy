@@ -14,9 +14,8 @@ For additional information, refer to http://logback.qos.ch/manual/configuration.
 
 ### Log Files 
 
-The location of a log file can be configured in the **logback.xml**. log configuration file. The default location of log files is:
-
-<pre><code>	$K2_HOME/logs/k2fabric.log</code></pre> 
+Fabric log files are located in [$K2_HOME/logs](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homelogs) directory.
+The location of a log file can be configured in the [logback.xml](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) log configuration file. 
 
 The latest log is always named **k2fabric.log**, and is [rolled to a new file](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files-location--rolling-policy) as soon as it reaches a specific size. 
 
