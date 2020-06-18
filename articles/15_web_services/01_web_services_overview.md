@@ -1,4 +1,4 @@
-## **Knowledge Item Title:** **WEB SERVICES Overview** 
+# **Web Services Overview** 
 
 Fabric data is stored internally using Logical Unit modelling. To enable the data to be accessed externally, exposed Web Services are built to query all Fabric data and to present the relevant response to the outside world. 
 
@@ -9,7 +9,7 @@ Other common uses for Fabric Web Services include:
 
 - Interacting with other systems based on Fabric data. 
 
-## **What is a Fabric web service?** 
+## **What is a Fabric Web Service?** 
 
 A **Fabric** **Web** **Service** is a Java function that can be exposed through the Fabric Web Service layer. Web Services should be deployed to Fabric separately and can then be invoked either by a client or directly from any web browser. In the Fabric Studio, Web Service functions can be defined and saved to the project file and be deployed to the Fabric Server. 
 
