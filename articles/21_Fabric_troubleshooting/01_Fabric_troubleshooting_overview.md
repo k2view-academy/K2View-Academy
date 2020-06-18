@@ -7,7 +7,7 @@ Fabric provides the following methods for troubleshooting executed processes.
 
   - [**PS** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – a Fabric command like [User Jobs], [Web Services], [Graphit] or a [Sync process](/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/14_sync_LU_instance/01_sync_LUI_overview.md) which displays tasks running on the Fabric server. The PS command can be used to identify stuck processes and their running duration and when needed, to kill stuck processes using the [**kill** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
 
-  - [**jjstack.sh** script](<!--/articles/21_Fabric_troubleshooting/sub-section below-->) – a Fabric script that collects Java stack traces for a given process, stores the stacks and analyzes the results. The script can be applied to the Fabric server or the IID Finder. 
+  - [**jjstack.sh** script](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-do-i-run-jjstack) – a Fabric script that collects Java stack traces for a given process, stores the stacks and analyzes the results. The script can be applied to the Fabric server or the IID Finder. 
 
 - **Monitoring memory leaks or intensive memory consumption**, using a [**Heap Dump**](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-is-a-heap-dump-file-created) file which is created either automatically during a Fabric crash when memory usage exceeds the definition, or manually on demand. Heap Dump files can be investigated to analyze the source of a memory leak.
 
