@@ -75,6 +75,6 @@ Not supported.
 
 Order of data can’t be consistence as it is performance consumed, unless is it specified on the URL QUERY parameter. The parameter ORDER_BY needs to be added.
 
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/15_Supported_Verbs_Delete.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 
 
