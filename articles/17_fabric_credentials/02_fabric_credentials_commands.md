@@ -216,80 +216,80 @@ Below is parameters' list of  **GRANT OPERARION** command:
 <table>
 <tbody>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p><strong>Description</strong></p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to access all instances of all LUT.</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>grant all on * to role1;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to access all instances of a specific LUT.</p>
 <p>&nbsp;</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Grant all CRM Logical Unit permissions to the role1 role:</p>
 <p>grant all on CRM to role1;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to access specific instances of a specific LUT.</p>
 <p>&nbsp;</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Grant all permissions for Instance IDs 41 and 42 of CRM LU to the role1 role:</p>
 <p>&nbsp;grant all on CRM.41, CRM.42 to role1;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to deploy CRM LU on Fabric.</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>grant deploy on CRM to role1;</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role of migrating Instance IDs on Customer LUT.</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>grant migrate on Customer to role1;</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to access Instance IDs 1, 2, 4, and 6 of CRM LUT.</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>grant all on CRM.1, CRM.2, CRM.4,CRM.6 to role1;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to access Instance IDs 1 and 2 of CRM LUT, and Instance ID 57 of Customer LUT.</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>grant all on CRM.1, CRM.2, Customer.57 to role1;</p>
 </td>
 </tr>
 <tr>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>Allow the role to invoke wsGetCustomerDetails Fabric Web-Service to access CRM LUT</p>
 </td>
-<td width="450pxl">
+<td width="450pxl" valign="top">
 <p>grant wsGetCustomerDetails on CRM to role1;</p>
 </td>
 </tr>
