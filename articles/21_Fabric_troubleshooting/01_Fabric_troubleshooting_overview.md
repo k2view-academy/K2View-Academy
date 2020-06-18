@@ -99,4 +99,4 @@ The following table describes the syntax and parameters for creating the Heap Du
 </tbody>
 </table>
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
