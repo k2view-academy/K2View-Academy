@@ -1,7 +1,5 @@
 # Get Verb
 
-
-
 Use GET requests **to retrieve resource representation/information only**, and not to modify it in any way. As GET requests do not change the state of the resource, these are said to be **safe methods**. Additionally, GET APIs should be **idempotent**, which means that making multiple identical requests must produce the same result every time until another API (POST or PUT) has changed the state of the resource on the server.
 
 If the Request-URI refers to a data-producing process, it is the produced data which shall be returned as the entity in the response and not the source text of the process, unless that text happens to be the output of the process.
@@ -43,25 +41,25 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/[[TABLE_NAME]?fields=VALU
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
+http://localhost:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
 
 Bring all data for CUSTOMER LU instance id 1
 
 Response Body: response body supports streaming solution
 
-·      http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC
+http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC
 
 Bring data for CUSTOMER LU instance id 1, table ALLERGIES
 
-·      http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC
+http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC
 
 Bring data for CUSTOMER LU instance id 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
 
-·      http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC
+http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC
 
 Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
 
-·      http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10
+http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10
 
 Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode if force and it run on ENV1and set GLOBAL_LION to 10
 
@@ -82,11 +80,9 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name?token=token name&[format=json
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
+http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
 
 Bring meta data for CUSTOMER LU
-
-   
 
 # 3.         Get common schema (meta data)
 
@@ -104,7 +100,7 @@ http://IP address:PORT/api/[VERSION_NO]/COMMON/[table name]?token=token name&[fo
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/COMMON?token=ABC
+http://localhost:3213/api/v1.0/COMMON?token=ABC
 
 Bring meta data for all COMMON tables
 
@@ -126,11 +122,11 @@ http://localhost:PORT/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of 
 
  **Examples:**
 
-·      http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC
+http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC
 
 Bring all data from CITIES common table
 
-·      [http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC
+[http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC
 
 Bring city_name from ADDRESSES common table where city is ’TEL AVIV’
 
@@ -173,7 +169,7 @@ http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VA
 
 **Examples:**
 
-·      http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
 
 Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
 
@@ -191,6 +187,6 @@ Call Web-Service Orders and bring output structure in json format according to i
 
 If case of failure, the error description structure is returned according to RFC 7807 guidelines with the required details.
 
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/11_response_codes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/13_Supported_Verbs_Post.md)
 
 

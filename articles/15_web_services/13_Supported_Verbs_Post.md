@@ -10,11 +10,9 @@ Responses to this method are **not cacheable,** unless the response includes app
 
 Please note that POST is **neither safe nor idempotent** and invoking two identical POST requests will result in two different resources containing the same information (except resource ids).
 
- 
+## 1.         Post data into LU table
 
-# 1.         Post data into LU table
-
-URL: http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=json/xml
+http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=json/xml
 
 | Component   | Description                                    | Mandatory | Example          | Default        |
 | ----------- | ---------------------------------------------- | --------- | ---------------- | -------------- |
@@ -31,19 +29,18 @@ URL: http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&fo
 
 **Examples:**
 
-·      http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
+http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
 
-·      Insert data into CUSTOMER LU instance id 1, LION table
+Insert data into CUSTOMER LU instance id 1, LION table
 
 Request Body
 
-​                               
-
+```                     
 {"rows" : {"LION" : [{"ID":11, "NAME":"lion11"},{"ID":12, "NAME":"lion12"},{"ID":13, "NAME":"lion13"}]}}
-
+```
  
 
-# 2.      Post data into common table
+## 2.      Post data into common table
 
 http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token name&[format=json/xml]
 
@@ -59,12 +56,12 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token 
 
 **Examples:**
 
-·      http://10.21.1.69:3213/api/v1.0/COMMON?REF_NAMES&token=ABC&format=json
+http://10.21.1.69:3213/api/v1.0/COMMON?REF_NAMES&token=ABC&format=json
 
 Insert data into common table REF_NAMES
 
 Request Body
-
+```
 {
   "rows": [
     {
@@ -73,21 +70,18 @@ Request Body
     }
   ]
 }
-
-# 3.   Post custom Web-Service 
+```
+## 3.   Post custom Web-Service 
 
 http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
 
 parameters should be populated on the body in the following structure:
-
+```
 {
-
 “parameter name 1”:”value”,
-
 “parameter name 2”:”value”
-
 }
-
+```
 | **Component**               | **Description**                        | **Mandatory** | **Example**   | **Default**    |
 | --------------------------- | -------------------------------------- | ------------- | ------------- | -------------- |
 | Domain name                 | Domain name                            | Y             | 10.21.1.69    |                |
@@ -97,7 +91,7 @@ parameters should be populated on the body in the following structure:
 | Customized Web-Service name | Name of the Web-Service to be executed | Y             | Orders        |                |
 | Format                      | Response format                        | Y             | JSON/XML/YAML | JSON           |
 
-# 4.    Request Header
+## 4.    Request Header
 
 | **Parameter**              | **Mandatory** | **Value**                                                    |
 | -------------------------- | ------------- | ------------------------------------------------------------ |
@@ -107,20 +101,17 @@ parameters should be populated on the body in the following structure:
 
 **Examples:**
 
-·      http://10.21.1.69:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+http://10.21.1.69:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
 
 in the body request put:
-
+```
 {
-
  "i_order_id": "1",
-
  "i_order_status": "Open"
-
 }
-
+```
 Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
 
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/12_Supported_Verbs_Get.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/14_Supported_Verbs_Put.md)
 
 

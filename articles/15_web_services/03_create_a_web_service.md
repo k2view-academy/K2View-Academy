@@ -12,7 +12,7 @@ The following steps discuss how a new Web Service is created and include options
 
 2. Click either **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
 
-3. Select the preferred **DB Connection**. To access Fabric, select the Newest  [**LU Name**](/articles/03_logical_units/01_LU_overview.md)
+3. Select the preferred **DB Connection**. To access Fabric, select the Newest  [**LU Name**](/articles/03_logical_units/01_LU_overview.md).
 
 Note that for the **Newest file** of a Logical Unit to be part of the DB Connections list, you must execute at least one instance of the Logical Unit using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) .
 
@@ -44,25 +44,7 @@ Replace the **<instanceID> place holder** with the input parameter **CUSTOMER_ID
 
 ​    Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);
 
-9. Add the [**Web Service Properties**](/articles/15_web_services/02_web_services_proprties.md) . in the upper right corner pane:
-
-a.    **Name**: The Web Service preferred name. Make sure to use the prefix ws% and assign the Web Service a meaningful functional name. For example, **wsGetCustomerInfo.**
-
-b.   **Category**: select the Web Service **Category**.
-
-c.    **Return Type**: select the Web Service **Return Type**.
-
-d.   **Version**: Fabric’s Web Service **Support Versioning**. Default = 1.
-
-e.    **Path:** set the Web Service’s **URL path**.
-
-f.    **Verb**: set the **Verb** to be supported (supporting: GET, POST, PUT and DELETE).
-
-g.    **Is Raw:** set the **Is Raw field** to **True** or **False**. Default = False. 
-
-h.   **Produce:** set the Support Output **Format**, Json (default), XML and CSV.
-
-i.     **Description:** set the Web Service **Description** to be displayed in Swagger.
+9. Set the [**Web Service Properties**](/articles/15_web_services/02_web_services_properties.md) in the upper right corner pane:
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/04_web_services_function_basic_structure.md)
 
