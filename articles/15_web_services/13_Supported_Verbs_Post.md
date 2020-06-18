@@ -40,7 +40,7 @@ Request Body
 ```
  
 
-# 2.      Post data into common table
+## 2.      Post data into common table
 
 http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token name&[format=json/xml]
 
@@ -71,7 +71,7 @@ Request Body
   ]
 }
 ```
-# 3.   Post custom Web-Service 
+## 3.   Post custom Web-Service 
 
 http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
 
@@ -91,7 +91,7 @@ parameters should be populated on the body in the following structure:
 | Customized Web-Service name | Name of the Web-Service to be executed | Y             | Orders        |                |
 | Format                      | Response format                        | Y             | JSON/XML/YAML | JSON           |
 
-# 4.    Request Header
+## 4.    Request Header
 
 | **Parameter**              | **Mandatory** | **Value**                                                    |
 | -------------------------- | ------------- | ------------------------------------------------------------ |
