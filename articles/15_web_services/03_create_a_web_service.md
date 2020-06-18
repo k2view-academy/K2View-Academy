@@ -1,24 +1,22 @@
-## Knowledge Item Title:  Creating a WEB SERVICE
+# Creating a Web Service
 
 An exposed Fabric Web Service enables you to access specific data attributes stored in Fabric using Input parameter/s and the relevant structured response like JSON, XML or CSV. The Fabric Studio supports defining a Web Service function, saving it to the Project file and deploying it to the Fabric Server. A Web Service is a Java function.
 
-## How do I CREATE a NEW Web SERVICE?
+### How do I Create a New Web Service?
 
 The following steps discuss how a new Web Service is created and include options for generating code parts automatically:
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
 
-​        <img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/>     
+<img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/>     
 
 2. Click either **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
 
 3. Select the preferred **DB Connection**. To access Fabric, select the Newest  [**LU Name**](/articles/03_logical_units/01_LU_overview.md)
 
-   
-
 Note that for the **Newest file** of a Logical Unit to be part of the DB Connections list, you must execute at least one instance of the Logical Unit using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) .
 
- <img src="/articles/15_web_services/images/Web-Service-KI-3-2.png" alt="drawing"/>  
+<img src="/articles/15_web_services/images/Web-Service-KI-3-2.png" width="2000" height="500"/>  
 
 4. Click the **DB File** icon to display the **Logical Unit Tables** list.
 
@@ -66,10 +64,6 @@ h.   **Produce:** set the Support Output **Format**, Json (default), XML and CSV
 
 i.     **Description:** set the Web Service **Description** to be displayed in Swagger.
 
-Click for more information about Web Service Properties.
-
-------
-
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/04_web_services_function_basic_structure.md)
 
 
