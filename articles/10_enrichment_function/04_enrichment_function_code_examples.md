@@ -127,4 +127,4 @@ A common scenario in Test Data Management (TDM) projects is to add a Parameters 
 ~~~
 [Click to display an example of the **fnEnrichmentOrderParam** Enrichment function in the Demo project.]
 
-[![Previous](/articles/images/Previous.png)](h/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
+[![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
