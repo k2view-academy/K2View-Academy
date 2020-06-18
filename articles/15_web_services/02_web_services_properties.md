@@ -12,7 +12,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
-<img src="/articles/15_web_services/images/Web-Service-KI-2-1.png" alt="drawing" width="2000" height="500"/> 
+<img src="/articles/15_web_services/images/Web-Service-KI-2-1.png" alt="drawing"/> 
 
 The following are the Web Services properties: 
 
