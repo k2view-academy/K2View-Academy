@@ -54,6 +54,6 @@ Fabric Web-Services are shown in swagger in alphabetic order divided by categori
    
    * Project defined categories for Web-Services.
    
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/10_legacy_annotation.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/10_legacy_annotation.md)
  
 
