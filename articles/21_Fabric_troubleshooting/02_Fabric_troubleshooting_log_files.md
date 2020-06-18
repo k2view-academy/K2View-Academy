@@ -30,7 +30,9 @@ The IID Finder has a separate log file and a separate configuration file:
 	$K2_HOME/logs/iidfinder.log
 </code></pre>
 
-[Click for more information about the IID Finder.]
+Click for more information about the IID Finder.
+
+<!--Drop 3- add a link to IID Finder -->
 
 ### **Log Files Location & Rolling Policy**
 
