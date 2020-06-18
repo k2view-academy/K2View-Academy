@@ -160,19 +160,16 @@ if (!parentRec.isEmpty()) {
 }
 //If the the input entity has parents get the hierarchy above it
 if (parentLuName != null && !"".equals(parentLuName)) {
-	//log.info("wsGetTaskExeStatsForEntity - parent Rec: Lu Name: " + parentLuName + ", Parent target ID: " + parentTargetId);
 	//Starting for the parent as the details of the input entity is already included in the children part
 	//Sending the chilren hierarchy in order to add it to the ancestors as child hierarchy
 	parentHierarchyDetails = fnGetParentHierarchy(parentLuName, parentTargetId, childHierarchyDetails);
 } else {// Given inputs are of a root entity
-	//log.info("The given LU is a root");
 	parentHierarchyDetails =  childHierarchyDetails;
 }
 
 String rootLUName = "" + parentHierarchyDetails.get("luName");
 String rootTargetID = "" + parentHierarchyDetails.get("targetId");
 String rootSourceID = "" + parentHierarchyDetails.get("sourceId");
-//log.info ("wsGetTaskExeStatsForEntity - rootLUName: " + rootLUName + ", rootTargetID: " + rootTargetID + ", rootSourceID: " + rootSourceID);
 
 mainOutput.put(rootLUName, parentHierarchyDetails);
 //If there are other root entities with the same root entity ID get them, 
@@ -192,7 +189,6 @@ rootDetails.put("sourceId", "" + instanceId);
 rootDetails.put("entityStatus", "" + rootRec.cell(3));
 
 mainOutput.put(currRootLuName, rootDetails);
-​```
 
 }
 if (otherRootRecs != null) {
@@ -202,6 +198,4 @@ if (otherRootRecs != null) {
 return mainOutput;
 ```
 
-
-
-[![Previous](/articles/images/Previous.png)](h/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)
