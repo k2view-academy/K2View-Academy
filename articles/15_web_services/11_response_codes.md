@@ -2,21 +2,15 @@
 
 K2view APIs use many of the available HTTP response status codes to convey success or failure of the request back to the user. All response status codes fall into the following categories:
 
-·     **1xx (Informational)**: The request was received, continuing process. The 1xx (Informational) class of status code indicates an interim response for communicating connection status or request progress, prior to completing the requested action and sending a final response. 1xx responses are terminated by the first empty line after the status-line (the empty line signaling the end of the header section). Since HTTP/1.0 did not define any 1xx status codes, a server MUST NOT send a 1xx response to an HTTP/1.0 client. A client MUST be able to parse one or more 1xx responses received prior to a final response, even if the client does not expect one. A user agent MAY ignore unexpected 1xx responses. A proxy MUST forward 1xx responses, unless the proxy itself requested the generation of the 1xx response. For example, if a proxy adds an "Expect: 100-continue" field when it forwards a request, it need not forward the corresponding 100 (Continue) response(s). – **NOT IN USE IN FABRIC.**
+**1xx (Informational)**: The request was received, continuing process. The 1xx (Informational) class of status code indicates an interim response for communicating connection status or request progress, prior to completing the requested action and sending a final response. 1xx responses are terminated by the first empty line after the status-line (the empty line signaling the end of the header section). Since HTTP/1.0 did not define any 1xx status codes, a server MUST NOT send a 1xx response to an HTTP/1.0 client. A client MUST be able to parse one or more 1xx responses received prior to a final response, even if the client does not expect one. A user agent MAY ignore unexpected 1xx responses. A proxy MUST forward 1xx responses, unless the proxy itself requested the generation of the 1xx response. For example, if a proxy adds an "Expect: 100-continue" field when it forwards a request, it need not forward the corresponding 100 (Continue) response(s). – **NOT IN USE IN FABRIC.**
 
-·     **2xx (Successful)**: The 2xx (Successful) class of status code indicates that the client's request was successfully received, understood, and accepted.
+**2xx (Successful)**: The 2xx (Successful) class of status code indicates that the client's request was successfully received, understood, and accepted.
 
-·     **3xx (Redirection)**: Further action needs to be taken in order to complete the request. The 3xx (Redirection) class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request. If a Location header field is provided, the user agent MAY automatically redirect its request to the URI referenced by the Location field value, even if the specific status code is not understood. Automatic redirection needs to be done with care for methods not known to be safe, because the user might not wish to redirect an unsafe request 
+**3xx (Redirection)**: Further action needs to be taken in order to complete the request. The 3xx (Redirection) class of status code indicates that further action needs to be taken by the user agent in order to fulfill the request. If a Location header field is provided, the user agent MAY automatically redirect its request to the URI referenced by the Location field value, even if the specific status code is not understood. Automatic redirection needs to be done with care for methods not known to be safe, because the user might not wish to redirect an unsafe request 
 
-·     **4xx (Client Error)**: The request contains bad syntax or cannot be fulfilled. The 4xx (Client Error) class of status code indicates that the client seems to have erred. Except when responding to a HEAD request, the server SHOULD send a presentation containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method. User agents SHOULD display any included representation to the user.
+**4xx (Client Error)**: The request contains bad syntax or cannot be fulfilled. The 4xx (Client Error) class of status code indicates that the client seems to have erred. Except when responding to a HEAD request, the server SHOULD send a presentation containing an explanation of the error situation, and whether it is a temporary or permanent condition. These status codes are applicable to any request method. User agents SHOULD display any included representation to the user.
 
-·     **5xx (Server Error)**: The server failed to fulfill an apparently valid request. The 5xx (Server Error) class of status code indicates that the server is aware that it has erred or is incapable of performing the requested method. Except when responding to a HEAD request, the server SHOULD send a representation containing an explanation of the error situation, and whether it is a temporary or permanent condition. A user agent SHOULD display any included representation to the user. These response codes are applicable to any request method.
-
-·     Keep the functionality of enabling the user to override the returned response code.
-
-·     **setStatus** – need to support override on our mechanism in the implementation – as today.
-
- 
+**5xx (Server Error)**: The server failed to fulfill an apparently valid request. The 5xx (Server Error) class of status code indicates that the server is aware that it has erred or is incapable of performing the requested method. Except when responding to a HEAD request, the server SHOULD send a representation containing an explanation of the error situation, and whether it is a temporary or permanent condition. A user agent SHOULD display any included representation to the user. These response codes are applicable to any request method.
 
 | Response code | Message                  | HTTP verb           | Description                                                  |
 | ------------- | ------------------------ | ------------------- | ------------------------------------------------------------ |
@@ -50,6 +44,6 @@ It is possible to override the response code built-in Fabric mechanism by using 
 
   
 
-[![Previous](/articles/images/Previous.png)](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/10_legacy_annotation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/12_Supported_Verbs_Get.md)
 
 
