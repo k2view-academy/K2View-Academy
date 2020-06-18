@@ -306,8 +306,8 @@ Notes:
 - Use **GRANT OPERATION** command to limit the access of the [Web-Service (WS)](/articles/01_fabric_overview/02_fabric_glossary.md#ws) to a given LUT or LUI.
 - Use **GRANT OPERATION** command to grant an access to all Web-Services: populate the **Operation** parameter by **ALL_WS**.
 - The Web-Service authorization is done using the **token**:
-  - Project Web-Service: give permission to the **role** on the Web-Service or all Web-Services,  and assign the token to the role.
-  - Product Web-Service: assign the token to the user. 
+  - Project Web-Services: give permission to the **role** on the Web-Service or all Web-Services,  and assign the token to the role.
+  - Product Web-Services: assign the token to the user. 
 
 <!-- Add links to web services KIs -->
 
