@@ -97,7 +97,7 @@ The log level is optional, although it is recommended to set it. When the log le
 
 In addition, you can use the log.info, log.debug, log.warn and log.error Java methods to write into log files. 
 
-#####  Add Connection Leaks to the Log File
+####  Add Connection Leaks to the Log File
 The SUSPECTED_CONNECTION_LEAK_SEC setting in the **config.ini** file enables getting information about connections which are suspected as leaked into the error file. By default, this setting = 0. When set to a value greater than 0, a connection that is idle for this many seconds is suspected as leaked. The system logs this into the **k2fabric.log** and shows a stack trace of the getConnection() method to indicate the code causing the leaky connection.
 
 
