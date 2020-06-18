@@ -2,19 +2,17 @@
 
 The code in an automatically generated Web Service function provides basic Select and Fetch templates for data retrieval. However, there is frequently a need to enhance a function’s code in order to perform a specific functionality. 
 
-Click for more information on How to Create a Web Service.
-
 ### How do I edit the code of a function in a Web Service?
 
 It is recommended to edit the code in a Web Service function using the IntelliJ Java[[MAC1\]](#_msocom_1) Editor which offers a number of advantages like:
 
-·     Smart code completion.
+   * Smart code completion.
 
-·     Inspection and quick fixes.
+   * Inspection and quick fixes.
 
-·     Functions.
+   * Functions.
 
-·     Navigation and Search options.
+   * Navigation and Search options.
 
 Note that IntelliJ is not part of the Fabric Studio Installation Package and **must be** installed. Once installed, it is integrated into the Fabric Studio and can be invoked by right clicking the Web Service working area and selecting it or by pressing **CTTL+I** on your keyboard.
 
