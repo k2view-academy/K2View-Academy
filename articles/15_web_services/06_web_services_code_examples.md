@@ -115,7 +115,7 @@ Output:
 
 ### Versioning example
 
-Both wsCustomerInfo and wsCustomerInfo2 Web-Services from the examples above are sharing the same URL path, called test/getCustomerInfo, wsCustomerInfo is defined with Version 1 property and wsCustomerInfo is defined with Version 2 property.
+Both wsCustomerInfo and wsCustomerInfo2 Web-Services from the examples above are sharing the same URL path, called test/getCustomerInfo, wsCustomerInfo is defined with Version propery set to 1 and wsCustomerInfo is defined with Version property set to 2.
 
 In order to invoke a call to wsCustomerInfo the following URL should be called: http://localhost:3213/api/v1/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
