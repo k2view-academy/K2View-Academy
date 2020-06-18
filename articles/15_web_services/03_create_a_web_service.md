@@ -12,7 +12,7 @@ The following steps discuss how a new Web Service is created and include options
 
 2. Click either **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
 
-3. Select the preferred **DB Connection**. To access Fabric, select the Newest  [**LU Name**](/articles/03_logical_units/01_LU_overview.md)
+3. Select the preferred **DB Connection**. To access Fabric, select the Newest  [**LU Name**](/articles/03_logical_units/01_LU_overview.md).
 
 Note that for the **Newest file** of a Logical Unit to be part of the DB Connections list, you must execute at least one instance of the Logical Unit using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) .
 
