@@ -2,7 +2,7 @@
 
 The following tables discuss how user access control is managed using Fabric commands.
 
-## Create Command
+## CREATE Command
 
 **CREATE** commands are used to create a user, role or token in [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra:
 
@@ -13,14 +13,14 @@ The following tables discuss how user access control is managed using Fabric com
 <p>CREATE USER</p>
 </td>
 <td width="700pxl">
-<p><strong>Description</strong>: Create a Fabric user. The user is saved in system_auth.roles Cassandra table.</p>
+<p><strong>Description</strong>: Create a Fabric user. The user is saved in the system_auth.roles Cassandra table.</p>
 <p><strong>Usage</strong>:&nbsp;</p>
 <p>CREATE USER &lt;'username'&gt; [ WITH PASSWORD &lt;'password'&gt; ] [SUPERUSER | NOSUPERUSER | (empty) ]</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li>&lt;'username'&gt; &ndash; mandatory, user name.</li>
 <li>[WITH PASSWORD &lt;'password'&gt;] &ndash; optional, password.</li>
-<li>[SUPERUSER | NOSUPERUSER | (empty) ] &ndash; optional, indicates whether the user is a superuser (admin) or not. If empty &ndash; the user is not a superuser.</li>
+<li>[SUPERUSER | NOSUPERUSER | (empty) ] &ndash; optional, indicates whether the user is a superuser (admin) or not. If empty, the user is not a superuser.</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
@@ -103,7 +103,7 @@ The following tables discuss how user access control is managed using Fabric com
 
 
 
-## **Assign Command**
+## **ASSIGN Command**
 
 **ASSIGN** commands are used to assign a role either for a user or for a token:
 
@@ -135,7 +135,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tbody>
 </table>
 
-## Grant Command
+## GRANT Command
 
 **GRANT** commands are used to enable specific roles to access Fabric. These commands insert records into the **Permissions table** in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra. Several **GRANT** commands can be run for the same LUT. The permissions, granted by the **GRANT** command will be appended. 
 
@@ -143,8 +143,8 @@ The following **GRANT** commands are supported:
 
 <p><h4>
 <span class="md-plain md-expand">GRANT </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;OPERATION&gt;</span><span class="md-plain"> ON </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;RESOURCE&gt;</span><span class="md-plain"> TO </span><span class="md-tag md-raw-inline" spellcheck="false">&lt;ROLE&gt;</span></h4></p>
+Below is a list of **GRANT OPERATION** command parameters:
 
-Below is parameters' list of  **GRANT OPERARION** command:
 
 <table>
 <tbody>
@@ -211,7 +211,7 @@ Below is parameters' list of  **GRANT OPERARION** command:
 
 
 
-#### GRANT OPERATION Command- Examples
+#### GRANT OPERATION Command - Examples
 
 <table>
 <tbody>
@@ -312,7 +312,7 @@ Notes:
 
 <!-- Add links to web services KIs -->
 
-Below is parameters' list of  **GRANT WS_NAME** command:
+Below is a list of **GRANT WS_NAME** command parameters:
 
 <table>
 <tbody>
@@ -354,7 +354,7 @@ Below is parameters' list of  **GRANT WS_NAME** command:
 
 
 
-#### GRANT WS_NAME Command- Examples
+#### GRANT WS_NAME Command - Examples
 
 <table>
 <tbody>
