@@ -68,3 +68,5 @@ k2_ws | 1591772670495 | {'methods': ''}
 |lut_name|lut_version  |properties|
 +--------+-------------+----------+
 |k2_ws   |1591773207364|{methods=}|
+
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/06_web_services_code_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/09_swagger.md)
