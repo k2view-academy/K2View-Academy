@@ -13,48 +13,69 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <table>
 <tbody>
 <tr>
-<td width="300pxl">
+<td width="300pxl" valign="top">
 <p><strong>Configuration File</strong></p>
 </td>
-<td width="600pxl">
+<td width="600pxl"  valign="top">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini">config.ini</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>This is the main configuration file of Fabric. It contains different sections of parameters and each section has its own parameters. Fabric default values are set for the commented parameters.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <p>iifConfig.ini</p>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>The main configuration file of the IIDFinder mechanism.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid">node.id</a></p>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>This file lists the Fabric node identifiers for the Affinity mechanism and the support of several Fabric clusters on one Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
-<p><a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">logback.xml</a></p>
+<td width="300pxl" valign="top">
+<p>logback.xml, logback-iid_finder.xml, and logback-init_finder.xml</p>
 </td>
-<td width="600">
-<p>Fabric log configuration file.</p>
+<td width="600pxl" valign="top">
+<p><a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">Fabric logs</a> configuration files.</p>
 </td>
+</tr>
+<tr>
+<td width="300pxl" valign="top">
+<p>jvm.options</p>
+</td>
+<td width="600pxl" valign="top">&nbsp;Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone">DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
+</tr>
+<tr>
+<td width="300pxl" valign="top">
+<p>jmxremote.access and jmxremote.password</p>
+</td>
+<td width="600pxl" valign="top">
+<p>Remote JMX API access to monitoring.</p>
+</td>
+</tr>
+<tr>
+<td width="300pxl" valign="top">
+<p>modules</p>
+</td>
+<td width="600pxl" valign="top">&nbsp;</td>
 </tr>
 </tbody>
 </table>
+
 
 
 ### config.ini
