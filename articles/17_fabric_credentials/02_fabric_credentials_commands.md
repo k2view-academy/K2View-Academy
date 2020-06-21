@@ -307,7 +307,20 @@ Notes:
 - Use **GRANT OPERATION** command to grant an access to all Web-Services: populate the **Operation** parameter by **ALL_WS**.
 - The Web-Service authorization is done using the **token**:
   - Project Web-Services: give permission to the **role** on the Web-Service or all Web-Services,  and assign the token to the role.
-  - Product Web-Services: assign the token to the user. 
+  - Product Web-Services: assign the token to the user. The permission to the Product Web_Services are defined by the combination of the token assigned to the user and the permissions of the roles, assigned to the user. 
+    - Example:
+      <pre><code> 
+      create user 'test_read';
+      create role 'readonly';
+      grant READ on * to 'readonly';
+      assign 'readonly' to 'test_read';
+      assign role 'readonly' to user 'test_read';
+      create token 'test_read_token' user 'test_read';
+     </code></pre> 
+      When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fabric throws the following error:
+      "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]"
+
+  
 
 <!-- Add links to web services KIs -->
 
