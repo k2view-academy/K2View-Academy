@@ -1,5 +1,5 @@
 # Web Services - Code Examples
-### Simple Example of a Web Service Bringing a Line of Data for a Given Instance - wsCustomerInfo
+### Simple Example of a wsCustomerInfo Web Service that Brings a Line of Data for a Given Instance  
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. The output data is returned in DB.Rows structure. It can also be returned as an Object and be converted by Fabric into DB.Rows structure.
 ```
@@ -26,7 +26,7 @@ Output:
 ]
 ```
 
-###  Example of a Web Service Bringing a Db.Rows Structure as an Output for a Given Instance - wsCustomerInfo2
+###  Example of a wsCustomerInfo2 Web Service that Brings a Db.Rows Structure as an Output for a Given Instance   
 
 The following Web Service gets as an input LUI for CUSTOMER LU and returns several rows of data by running a join query on several tables on the CUSTOMER LU. The data is returned in a DB.Rows output structure. It can also be as an Object and be converted by Fabric into DB.Rows structure.
 
@@ -117,7 +117,7 @@ To invoke a call to wsCustomerInfo the following URL should be called: http://lo
 To invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
 ### Example of a Complex Input Structure
-A complx json format can also be sent as input to a Fabric Web Service using the POST verb. Data will be serialized automatically according to the input structure defined as a part of the Web Service's markup.
+A complx json format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
 
 For example:
 
