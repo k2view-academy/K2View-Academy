@@ -37,7 +37,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="&lt;a%20href=&quot;/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-commands&quot;&gt;">Delete LUI</a></p>
+<p><a href=/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-command>Delete LUI</a></p>
 </td>
 <td width="550pxl" valign="top">
 <p>Delete an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from Fabric.</p>
@@ -89,7 +89,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
@@ -165,7 +165,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="https://github.com/k2view-academy/K2View-Acade/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
@@ -174,7 +174,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
@@ -223,7 +223,7 @@ The following table lists the GET commands:
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Get an LU instance:</p>
+<p>Get an LUI:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
@@ -240,11 +240,11 @@ The following table lists the GET commands:
 <h5>GETF</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Get an LU instance:</p>
+<p>Get an LUI:</p>
 <p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...);</p>
@@ -262,7 +262,7 @@ The following table lists the GET commands:
 <p>USE command is an alias of GET command.</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Get an LU instance:</p>
+<p>Get an LUI:</p>
 <p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
@@ -315,7 +315,7 @@ The following table lists the  DELETE commands:
 <h5>DELETE INSTANCE</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a> or a list of LU instances from Fabric.</p>
+<p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
@@ -405,7 +405,7 @@ Use the following command to reset all the related parameters set on a session l
 
 #### Fabric Setting- Cluster Level
 
-Use the **SET_GLOBAL** command to set an active environment or a [global value](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
+Use the **SET_GLOBAL** command to set an active environment or a [global value](/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
 
 The values are kept in **global_settings** Cassandra table under [k2system keyspace.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
