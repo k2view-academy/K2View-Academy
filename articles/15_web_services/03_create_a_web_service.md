@@ -1,6 +1,8 @@
 # Creating a Web Service
 
-An exposed Fabric Web Service enables you to access specific data attributes stored in Fabric using Input parameter/s and the relevant structured response like JSON, XML or CSV. The Fabric Studio supports defining a Web Service function, saving it to the Project file and deploying it to the Fabric Server. A Web Service is a Java function.
+An exposed Fabric Web Service enables you to access specific data attributes stored in Fabric using Input parameter/s and the relevant structured response like JSON, XML or CSV. 
+
+Fabric Studio supports defining a Web Service function, saving it to the Project file and deploying it to the Fabric Server. A Web Service is a Java function.
 
 ### How Do I Create a New Web Service?
 
@@ -24,9 +26,9 @@ The following steps discuss how a new Web Service is created and includes option
 
 6. Click **Add Selected to Input Parameters**.
 
- <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/>  Note that the Column Name, Data Type, Mandatory and Comment are displayed in the **Input Parameters** list in the lower right pane.
+ <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/>  Note that the Column Name, Data Type, Mandatory and     Comments are displayed in the **Input Parameters** list in the lower right pane.
 
-7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. You can also choose to write your own code. The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method.
+7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also choose to write your own code. 
 
  <img src="/articles/15_web_services/images/Web-Service-KI-3-5.png" alt="drawing"/>  
 
