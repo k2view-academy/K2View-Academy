@@ -179,6 +179,7 @@
         </ul>
 </details>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>
@@ -193,4 +194,9 @@
         </ul>
 </details>
 
+>>>>>>> remotes/origin/KB_DROP1_20_Fabric_Credentials_Nataly
+=======
+        
+<details>
+<summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>
 >>>>>>> remotes/origin/KB_DROP1_20_Fabric_Credentials_Nataly
