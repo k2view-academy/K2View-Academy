@@ -77,11 +77,11 @@ The following tables discuss how user access control is managed using Fabric com
 <td width="700pxl">
 <p><strong>Description</strong>: Create a new token.</p>
 <p><strong>Usage</strong>:</p>
-<p>CREATE TOKEN &lt;'token_name'&gt; [user 'user_comment']</p>
+<p>CREATE TOKEN &lt;'token_name'&gt; [user 'user_name']</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li>&lt;'token_name'&gt; &ndash; mandatory, token name.</li>
-<li>[user 'user_comment'] &ndash; optional, assign the token to a user.<strong>&nbsp;</strong>Note that you must assign a token to the user to enable the user to invoke the Built-in Product Web-Services.</li>
+<li>[user 'user_name'] &ndash; optional, assign the token to a user.<strong>&nbsp;</strong>Note that you must assign a token to the user to enable the user to invoke the Built-in Product Web-Services.</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
