@@ -1,6 +1,6 @@
 # Fabric Commands
 
-Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via [user code](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command) (project implementation).
+Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via user code (project implementation): invoking Fabric commands inside the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
 
 Note that Fabric commands are **not** case sensitive. For example, a Get, get, or GET command can be run.
 
