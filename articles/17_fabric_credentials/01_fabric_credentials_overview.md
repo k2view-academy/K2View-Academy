@@ -67,16 +67,16 @@ Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/
 
 Fabric database credentials are validated each time a user attempts to access Fabric via the console, Web Service or other interfaces. Permissions can be set on an [LUT](/articles/01_fabric_overview/02_fabric_glossary.md#lu--lut) level or an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
 
-Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the config.ini file to **True.** By default, this parameter is **False.**
+Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true.** By default, this parameter is **false.**
 
 ## Setting Credentials
 
 Before using Fabric, create the users and define their credentials, as follows: 
 
-- [Create a new user](<!— add link to #2 – sub-section Create-->) and a [new role](<!— add link to #2 – sub-section Create-->).
-- [Assign the role to the user](<!— add link to #2 – sub-section Assign-->).
-- [Create a token](<!— add link to #2 – sub-section Create-->)  and [assign it to the role](<!— add link to #2 – sub-section Assign-->).
-- [Grant the permissions to the role](<!— add link to #2 – sub-section Grant-->).
+- [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
+- [Assign the role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
+- [Create a token](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign it to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
+- [Grant the permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
 
 - Exit Fabric and log in with this user or use the token to invoke a [Web Service]().
 
