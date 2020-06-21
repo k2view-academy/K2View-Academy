@@ -24,11 +24,17 @@ The following steps discuss how a new Web Service is created and includes option
 
 5. Click the **table** that retrieves the data, check the **Columns list** and right click the **column** that is the **Input** parameter for data retrieval. 
 
-6. Click **Add Selected to Input Parameters**. Note that the Column Name, Data Type, Mandatory and Comments are displayed in the **Input Parameters** list in the lower right pane.
+6. Click **Add Selected to Input Parameters**. 
 
  <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/>  
  
-7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also choose to write your own code. 
+
+  Note that the Column Name, Data Type, Mandatory and Comments are displayed in the **Input Parameters** list in the lower right pane.
+
+
+7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method.
+
+Note that you can also choose to write your own code. 
 
  <img src="/articles/15_web_services/images/Web-Service-KI-3-5.png" alt="drawing"/>  
 
