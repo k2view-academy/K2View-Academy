@@ -45,7 +45,7 @@ Always start the seed nodes before other nodes in the Fabric cluster.</p>
 
 ## Get Fabric Version
 
-Run the **k2fabric -version** command through the Fabric server command line to get the version of Fabric installed on your server. Note that you can check the Fabric version of your server in Fabric using the [**VERSION INFO** Fabric command](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view).  
+Run the **k2fabric -version** script through the Fabric server command line to get the version of Fabric installed on your server. Note that you can check the Fabric version of your server in Fabric using the [**VERSION INFO** Fabric command](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view).  
 
 ## Login Fabric 
 
