@@ -14,7 +14,7 @@ For example:
 
 ## Fabric Commands- Main Groups
 
- Fabric commands can be divided into the following groups:
+ Fabric commands can be divided into the following groups: 
 
 <table>
 <tbody>
