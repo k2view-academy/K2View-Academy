@@ -75,7 +75,7 @@ Before using Fabric, create the users and define their credentials, as follows:
 
 - [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
 - [Assign the role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
-- [Create a token](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign it to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
+- [Create a token](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)  and [assign a role to the token](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-token-token).
 - [Grant the permissions to the role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
 
 - Exit Fabric and log in with this user or use the token to invoke a [Web Service]().
