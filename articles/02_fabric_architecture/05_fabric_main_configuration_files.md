@@ -285,6 +285,39 @@ This is the main configuration file of Fabric. It contains different sections of
 </table>
 <p>&nbsp;</p>
 
+#### Set Fabric Time-Zone
+
+Fabric is a multi-node, multi Datacenter (DC) system which interacts and exchanges data with target and source systems and exposes APIs.
+
+This may present a challenge when dealing with time-zones.
+
+By default, Fabric is configured to use **UTC** (Coordinated Universal Time) time-zone, regardless of the time-zone of the host server. UTC time-zone is roughly equivalent to **GMT time** and does not observe Day Light Saving.
+
+When getting data from source systems and storing it in Fabric, the best practice is to normalize all timestamps, populated in Fabric, to UTC and store any additional time zone information in separate fields.
+
+ When exposing or exporting data to upstream systems that require a different time presentation, the conversion should be done during the data movement (not stored in Fabric) and planned per consumer.
+
+This behavior makes it easier to process logs and analyze data interchange of cross time zones datacenters, nodes and external system.
+
+Fabric does allow changing this default behavior and changing the process time-zone from UTC to the server's local time:
+
+- Go to the jvm.options file in the config directory and uncomment the following line (remove the # character) from the following parameter: **#-DFABRIC_LOCAL_TIMEZONE=true**.
+
+   This affects internal activities such as [log file reporting](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) or trace files and can also change the behavior of some JDBC drivers against date fields that contain time-zone information.
+
+<!-- drop 4- add a link to trace -->
+
+- To change the way data is saved into fabric, open the config.ini file in the config folder and change the **DATETIME_FORMAT_LOCAL_TIMEZONE** parameter as follows:
+
+   **DATETIME_FORMAT_LOCAL_TIMEZONE=true**
+
+   This affects the conversion of Date objects to a table field entry in the Fabric database and formats them according to the  	Wall Time of the local time-zone. 
+
+
+Note that you must restart Fabric after making these updates.
+
+Since these entries affect different stages of data intake and exposure, it is important to test the date format after changing them to make sure the required format is achieved against all sources and data types. Changes will not affect data already in the database.
+
 ### node.id
 
 This file lists Fabric node identifiers for the Affinity mechanism. The following identifies can be set in the node.id file:
