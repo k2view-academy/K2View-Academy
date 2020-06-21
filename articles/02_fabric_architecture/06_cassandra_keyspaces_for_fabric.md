@@ -6,7 +6,7 @@ Each Fabric keyspace starts with a **k2**. In addition, each deployed LU creates
 
 **Notes:**
 
-- The cluster_id, if set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, is concatenated to each keyspace name.
+- The cluster_id, if set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, is concatenated to each keyspace name. For example: if cluster_id is set to crm1 the keyspace k2view_customer_crm1 is created.
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
 
 ## Login Cassandra DB
