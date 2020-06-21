@@ -28,7 +28,7 @@ Output:
 
 ###  Example of a wsCustomerInfo2 Web Service that Brings a Db.Rows Structure as an Output for a Given Instance   
 
-The following Web Service gets as an input LUI for CUSTOMER LU and returns several rows of data by running a join query on several tables on the CUSTOMER LU. The data is returned in a DB.Rows output structure. It can also be as an Object and be converted by Fabric into DB.Rows structure.
+The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a join query on several tables on the CUSTOMER LU. The data is returned in DB.Rows output structure. It can also be as an Object and be converted by Fabric into DB.Rows structure.
 
 ```
 String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION,sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE " +
