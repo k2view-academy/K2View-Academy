@@ -71,7 +71,7 @@ Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_A
 
 ## Setting Credentials
 
-Before using Fabric, create the users and define their credentials, as follows: 
+Create the users and define their credentials, as follows: 
 
 - [Create a new user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-user) and a [new role](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role).
 - [Assign the role to the user](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#assign-role-role-to-user-user).
