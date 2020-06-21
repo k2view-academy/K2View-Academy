@@ -138,7 +138,7 @@ Fabric and Cassandra are installed under the following directories:
 
 - Fabric Studio is installed under C:\K2View\<Fabric version>\Studio.
 - The Fabric server is installed under C:\K2View\<Fabric version>\Server.
-- Apache-cassandra-3.11.4 is installed under C:\K2View\Fabric_6.1\Server  C:\K2View\<Fabric version>\ apache-cassandra-3.11.4
+- Apache-cassandra-3.11.x is installed under C:\K2View\Fabric_6.1\Server  C:\K2View\<Fabric version>\ apache-cassandra-3.11.x
 
 ### Fabric Server Directories
 
