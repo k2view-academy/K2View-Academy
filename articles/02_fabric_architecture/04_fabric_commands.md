@@ -427,7 +427,7 @@ The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of 
 
 ### Run Queries on Cassandra
 
-CQL queries can be run on Cassandra in the Fabric server using the **CQL** command.
+CQL queries can be run on Cassandra in the Fabric server using the **CQL** command only for select statement.
 
 Example:
 
