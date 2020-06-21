@@ -67,9 +67,9 @@
 
 - Web-services
   - Overview 
-  - WS functions & deployment
-  - Cassandra, swagger, Graphit
-  - Examples 
+  - Create and Deploy a Web Service
+  - Swagger
+  - Response Codes & Verbs 
 - Quiz (4)
 - Q&A session
 
