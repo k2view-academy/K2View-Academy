@@ -10,7 +10,7 @@ The following tables discuss how user access control is managed using Fabric com
 <tbody>
 <tr>
 <td width="200pxl">
-<p>CREATE USER</p>
+<p><h4>CREATE USER</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Create a Fabric user. The user is saved in the system_auth.roles Cassandra table.</p>
@@ -44,7 +44,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 <tr>
 <td width="200pxl">
-<p>CREATE ROLE</p>
+<p><h4>CREATE ROLE</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Create a new role with a description.</p>
@@ -72,7 +72,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 <tr>
 <td width="200pxl">
-<p>CREATE TOKEN</p>
+<p><h4>CREATE TOKEN</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Create a new token.</p>
@@ -111,7 +111,7 @@ The following tables discuss how user access control is managed using Fabric com
 <tbody>
 <tr>
 <td width="400pxl">
-<p>ASSIGN ROLE &lt;ROLE&gt; to user &lt;USER&gt;</p>
+<p><h4>ASSIGN ROLE &lt;ROLE&gt; to user &lt;USER&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a user.</p>
@@ -123,7 +123,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 <tr>
 <td width="400pxl">
-<p>ASSIGN ROLE &lt;ROLE&gt; to token &lt;TOKEN&gt;</p>
+<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;TOKEN&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a token.</p>
@@ -384,7 +384,7 @@ Below is a list of GRANT WS_NAME command parameters:
 <tbody>
 <tr>
 <td width="200pxl">
-<p>DROP USER</p>
+<p><h4>DROP USER</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Drop the user from Fabric.</p>
@@ -394,7 +394,7 @@ Below is a list of GRANT WS_NAME command parameters:
 </tr>
 <tr>
 <td width="200pxl">
-<p>DROP ROLE</p>
+<p><h4>DROP ROLE</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Drop a role from Fabric.</p>
@@ -404,7 +404,7 @@ Below is a list of GRANT WS_NAME command parameters:
 </tr>
 <tr>
 <td width="200pxl">
-<p>DROP TOKEN</p>
+<p><h4>DROP TOKEN</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Drop a token from Fabric.</p>
@@ -414,7 +414,7 @@ Below is a list of GRANT WS_NAME command parameters:
 </tr>
 <tr>
 <td width="200pxl">
-<p>REVOKE&nbsp;</p>
+<p><h4>REVOKE&nbsp;</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Remove the granted permissions from a role.</p>
@@ -429,7 +429,7 @@ Below is a list of GRANT WS_NAME command parameters:
 </tr>
 <tr>
 <td width="200pxl">
-<p>REVOKE ROLE</p>
+<p><h4>REVOKE ROLE</p>
 </td>
 <td width="700pxl">
 <p><strong>Description:</strong> Unassign a role from a user or a token.</p>
@@ -446,7 +446,7 @@ Below is a list of GRANT WS_NAME command parameters:
 </tr>
 <tr>
 <td width="200pxl">
-<p>CHECK PERMISSION</p>
+<p><h4>CHECK PERMISSION</p>
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Check the permission for the user on the given method (operation).</p>
