@@ -65,7 +65,7 @@ The following table lists the Cassandra keyspaces, created by Fabric:
 <p>&nbsp;</p>
 </td>
 <td width="350pxl">
-<p>Holds information on the execution history of all Fabric jobs Fabric Jobs table.</p>
+<p>Holds information on the execution of all Fabric jobs.</p>
 </td>
 </tr>
 <tr>
