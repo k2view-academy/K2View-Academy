@@ -172,6 +172,14 @@
 </details>
 
 <details>
+<summary markdown="span"><strong>Fabric Troubleshooting <strong><a href="/articles/21_Fabric_troubleshooting/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md">Fabric Troubleshooting Overview</a></li>
+<li><a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">Fabric Troubleshooting Log Files</a></li>
+</ul>
+        </ul>
+</details>
+
+<details>
 <summary markdown="span"><strong>Fabric Credentials <strong><a href="/articles/17_fabric_credentials/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Credentials Overview</a></li>
 <li><a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md">Fabric Credentials Commands</a></li>
