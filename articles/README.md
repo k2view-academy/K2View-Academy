@@ -187,4 +187,7 @@
 </ul>
         </ul>
 </details>
+        
+ <details>
+<summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
 
