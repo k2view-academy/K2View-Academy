@@ -91,7 +91,7 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 
 #### Run CQLSH on Local Cassandra 
 
-When working on the local Fabric server installed on a Windows machine,  you must install Python 2.7.x to run the **cqlsh** on your local Cassandra server. Add the Python to the PATH environment variables on your Window machine, and open the command line window from the following Windows directory: **C:\k2view\[Fabric version]\apache-cassandra-3.11.4\bin**.
+When working on the local Fabric server installed on a Windows machine,  you must install Python 2.7.x to run the **cqlsh** on your local Cassandra server. Add the Python to the PATH environment variable on your Window machine, and open the command line window from the following Windows directory: **C:\k2view\[Fabric version]\apache-cassandra-3.11.4\bin**.
 
 Login to Cassandra from the command line (cmd) window:
 
