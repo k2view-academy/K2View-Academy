@@ -10,7 +10,7 @@
 
 User access control management can be performed using either:
 
-- [Fabric commands for user access management]( <!— add link to #2-->).
+- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md).
 
 - Web Admin UI
 
