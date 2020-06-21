@@ -178,6 +178,19 @@
 </ul>
         </ul>
 </details>
+<<<<<<< HEAD
         
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>
+=======
+
+<details>
+<summary markdown="span"><strong>Fabric Credentials <strong><a href="/articles/17_fabric_credentials/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">Fabric Credentials Overview</a></li>
+<li><a href="/articles/17_fabric_credentials/02_fabric_credentials_commands.md">Fabric Credentials Commands</a></li>
+<li><a href="/articles/17_fabric_credentials/03_fabric_credentials_backup.md">Fabric Credentials Backup</a></li>
+</ul>
+        </ul>
+</details>
+
+>>>>>>> remotes/origin/KB_DROP1_20_Fabric_Credentials_Nataly
