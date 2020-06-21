@@ -316,11 +316,11 @@ Notes:
       assign 'readonly' to 'test_read';
       assign role 'readonly' to user 'test_read';
       create token 'test_read_token' user 'test_read';
-     </code></pre> 
+     
       When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fabric throws the following error:
       "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]"
-
-  
+       </code></pre>
+    
 
 <!-- Add links to web services KIs -->
 
