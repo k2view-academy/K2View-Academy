@@ -19,63 +19,71 @@ For example:
 <table>
 <tbody>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><strong>Command Group</strong></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p><strong>Group Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-and-delete-lu-instance-commands">Get/Delete LU Instance</a></p>
+<td width="350pxl" valign="top">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">Get LUI</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
-<p>Get or Delete an LUI to or from Fabric.</p>
+<td width="550pxl" valign="top">
+<p>Get an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> into Fabric.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
+<p><a href="&lt;a%20href=&quot;/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-commands&quot;&gt;">Delete LUI</a></p>
+</td>
+<td width="550pxl" valign="top">
+<p>Delete an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from Fabric.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Fabric <strong>release</strong> command is used to detach the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>View on the Fabric configurations and settings</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting">Fabric Setting</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Session and cluster levels settings.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-security-and-credentials">Fabric Security and Credentials</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Set the Master Key for an LUI or the encryption details of an interface.</p>
 <p>Set users, roles, and permissions.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-deployment--deploy-and-drop-commands">Fabric Deployment and Drop</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Deploy and drop Fabric implementation commands.</p>
 </td>
 </tr>
@@ -84,37 +92,37 @@ For example:
 <p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Deploy environments and test connections on an active environment.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Run CQL queries on Cassandra.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#jobs-commands">Jobs</a></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Fabric jobs execution and monitoring commands.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#batch-process-commands">Batch Process</a></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Batch processing execution and monitoring commands.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#process-control">Process Control</a></p>
 </td>
 <td width="550pxl">
@@ -122,62 +130,61 @@ For example:
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#execution-monitoring">Execution Monitoring</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Tracing Fabric operations and write the results to trace files.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#common-reference-tables">Common (Reference) Tables</a></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Commands for Common (reference) tables handling.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-transactions">Fabric Transactions</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Support transactions to update LUI or Common (reference) table data (Fabric as System of Record).</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#cdc-and-search">CDC and Search</a></p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Support Change Data Capture (CDC) and cross LUI search functionalities.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="https://github.com/k2view-academy/K2View-Acade/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Run Broadway flow.</p>
 </td>
 </tr>
 <tr>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl">
+<td width="550pxl" valign="top">
 <p>Use EXPLAIN and EXPLAIN QUERY PLAN to analyze SQL queries on Fabric data.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-
-### Get and Delete LUI Commands
+### Get LUI Commands
 
 #### Get Instance
 
@@ -189,46 +196,39 @@ The following message is displayed when trying to get multiple LUIs from the sam
 
 `Only single instance per LUT can be used on the same GET command.`
 
-#### Delete Instance
-
-The **DELETE INSTANCE** command deletes an LUI, or multiple LUIs from Fabric. 
-
-Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
-
-The following table lists the GET and DELETE commands:
+The following table lists the GET commands:
 
 <table width="900pxl">
 <tbody>
 <tr>
-<td width="100pxl">
+<td valign="top" width="100pxl">
 <p><strong>Command Name</strong></p>
 </td>
-<td width="250pxl">
+<td valign="top" width="250pxl">
 <p><strong>Description</strong></p>
 </td>
-<td width="300pxl">
+<td valign="top" width="300pxl">
 <p><strong>Syntax</strong></p>
 </td>
-<td width="250pxl">
+<td valign="top" width="250pxl">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td width="100pxl">
-<p><h5>GET</p>
+<td valign="top" width="100pxl">
+<h5>GET</h5>
 </td>
-<td width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, and syncs the LUI if needed, or brings the latest version of the LUI from Fabric.
-</p>
+<td valign="top" width="250pxl">
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, and syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
 <p>&nbsp;</p>
 </td>
-<td width="300pxl">
+<td valign="top" width="300pxl">
 <p>Get an LU instance:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
-<td width="250pxl">
+<td valign="top" width="250pxl">
 <p>get Customer.1;</p>
 <p>Get instance ID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34;</p>
@@ -236,80 +236,42 @@ The following table lists the GET and DELETE commands:
 </td>
 </tr>
 <tr>
-<td width="100pxl">
-<p><h5>GETF</p>
+<td valign="top" width="100pxl">
+<h5>GETF</h5>
 </td>
-<td width="250pxl">
-<p>Brings information of for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<td valign="top" width="250pxl">
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
-<td width="300pxl">
+<td valign="top" width="300pxl">
 <p>Get an LU instance:</p>
 <p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...);</p>
 </td>
-<td width="250pxl">
+<td valign="top" width="250pxl">
 <p>getf Customer.fnCreateInstId(235);</p>
 <p>This function adds 1000 to the input value and returns 1235 value. Fabric gets Customer no. 1235.</p>
 </td>
 </tr>
 <tr>
-<td width="100pxl">
-<p><h5>USE</p>
+<td valign="top" width="100pxl">
+<h5>USE</h5>
 </td>
-<td width="250pxl">
+<td valign="top" width="250pxl">
 <p>USE command is an alias of GET command.</p>
 </td>
-<td width="300pxl">
+<td valign="top" width="300pxl">
 <p>Get an LU instance:</p>
 <p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
-<td width="250pxl">
+<td valign="top" width="250pxl">
 <p>use Customer.1;</p>
 <p>Get instance ID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34;</p>
 <p>Get instance ID 1 of Customer LU and instance ID 34 of CRM LU.</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl">
-<p><h5>DELETE INSTANCE</p>
-</td>
-<td width="250pxl">
-<p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a> or a list of LU instances from Fabric.</p>
-<p>&nbsp;</p>
-</td>
-<td width="300pxl">
-<p>Delete one instance:</p>
-<p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;'';&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>Delete multiple instances:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-<p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
-</td>
-<td width="250pxl">
-<p>delete CRM.10;</p>
-<p>delete CRM.10, CRM.3;</p>
-<p>delete CRM.5, Customer.30;</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl">
-<p><h5>DELETE INSTANCES IF NOT EXIST</p>
-</td>
-<td width="250pxl">
-<p>Delete all LUIs that do not exist in source system. To run this command, you must set the config.ini file as follows:</p>
-<ul>
-<li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
-<li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
-</ul>
-</td>
-<td width="300pxl">
-<p>delete instances if not exist &lt;LUT_Name&gt;;</p>
-</td>
-<td width="250pxl">
-<p>delete instances if not exist CRM;</p> 
 </td>
 </tr>
 </tbody>
@@ -324,11 +286,75 @@ The remote GET and GETF commands run on a random Fabric node on the remote DC. T
 
 Note that it is the user's responsibility to identify if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI  is required, and to only then run the remote GET or GETF commands. This will prevent unnecessary calls to the remote Fabric node and getting the local LUI version instead.
 
+### Delete LUI Command
+
+The **DELETE INSTANCE** command deletes an LUI, or multiple LUIs from Fabric. 
+
+Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
+
+The following table lists the  DELETE commands:
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="100pxl">
+<p><strong>Command Name</strong></p>
+</td>
+<td valign="top" width="250pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Syntax</strong></p>
+</td>
+<td valign="top" width="250pxl">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100pxl">
+<h5>DELETE INSTANCE</h5>
+</td>
+<td valign="top" width="250pxl">
+<p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LU instance</a> or a list of LU instances from Fabric.</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="300pxl">
+<p>Delete one instance:</p>
+<p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>Delete multiple instances:</p>
+<p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
+</td>
+<td valign="top" width="250pxl">
+<p>delete CRM.10;</p>
+<p>delete CRM.10, CRM.3;</p>
+<p>delete CRM.5, Customer.30;</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="100pxl">
+<h5>DELETE INSTANCES IF NOT EXIST</h5>
+</td>
+<td valign="top" width="250pxl">
+<p>Delete all LUIs that do not exist in the source system. To run this command, you must set the config.ini file as follows:</p>
+<ul>
+<li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
+<li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
+</ul>
+</td>
+<td valign="top" width="300pxl">
+<p>delete instances if not exist &lt;LUT_Name&gt;;</p>
+</td>
+<td valign="top" width="250pxl">
+<p>delete instances if not exist CRM;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
 ### Release LU
 
 The Fabric Release command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
-
-Click for more information about LUI Storage and Management.
 
 <!--Drop 2- Add a link to LU storage and management--> 
 
@@ -339,7 +365,7 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
 - Fabric cluster information:
   - CLUSTERID - returns the cluster identifier defined on the node.id.
   - CLUSTERSTATUS – returns the status of all Fabric nodes. Also includes: node_id, [logical IDs](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid), DC name, IP addresses.
-  - TIME
+  - TIME- get the node system time.
   - VERSION INFO - the version of the installed Fabric. Note that to get the Fabric version when logged out of Fabric use the [k2fabric -version](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#get-fabric-version) command.
 
 - Information about the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
@@ -421,9 +447,11 @@ DROP LUTYPE Customer;
 
 ### Fabric Environments and Interfaces
 
-Fabric enables the [deployment of Fabric environments](/articles/02_fabric_architecture) and setting active environments on [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting--session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting--cluster-level).
+Fabric enables the deployment of Fabric environments and setting active environments on [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting--session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting--cluster-level).
 
-The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, send a DB interface parameter to test a specific interface or run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the active environment.
+The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the active environment.
+
+<!-- drop 3- add a link on environments -->
 
 ### Run Queries on Cassandra
 
