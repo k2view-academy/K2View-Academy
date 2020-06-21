@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_CUSTOMER</ID>
+  <PopulationObjectName>query_CUSTOMER</PopulationObjectName>
+  <TableName>CUSTOMER</TableName>
+  <RootItemID>query_query_CUSTOMER</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="CUSTOMER_ID" id="queryCol_0" dataType="Real" index="0" />
+    <Arg name="SSN" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="FIRST_NAME" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="LAST_NAME" id="queryCol_3" dataType="Text" index="3" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_CUSTOMER" name="query_CUSTOMER" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="CUSTOMER_ID" dataType="Real" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="SSN" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="FIRST_NAME" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="LAST_NAME" dataType="Text" index="3" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM CUSTOMER]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="12" fromNodeOrder="0" fromItemID="query_query_CUSTOMER" fromColID="queryCol_0" toItemID="tbl_CUSTOMER" toColID="tblCol_8789cce3b7704b5faf308fe5d7dd239f" />
+    <Link partId="13" fromNodeOrder="0" fromItemID="query_query_CUSTOMER" fromColID="queryCol_1" toItemID="tbl_CUSTOMER" toColID="tblCol_a5d7dea8bba34ca8bdc1d0f03a47ec98" />
+    <Link partId="14" fromNodeOrder="0" fromItemID="query_query_CUSTOMER" fromColID="queryCol_2" toItemID="tbl_CUSTOMER" toColID="tblCol_47c2f32284ab461495f15b9f6107a8b8" />
+    <Link partId="15" fromNodeOrder="0" fromItemID="query_query_CUSTOMER" fromColID="queryCol_3" toItemID="tbl_CUSTOMER" toColID="tblCol_8024c2788c264bf5a678f193d5ee3be8" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="CUSTOMER.query_CUSTOMER.k2tablePop.xml" lastPartID="15">
+      <TableNode partID="0" name="CUSTOMER" pos="383 5.81771469" width="252.999985" />
+      <DBQueryNode partID="7" name="CRM_DB" pos="10 0.854171753" size="253 108.291656" isRoot="true">
+        <DBQuery>{"Name":"query_CUSTOMER","ID":"query_query_CUSTOMER","ConnName":"CRM_DB","SQL":"SELECT * FROM CUSTOMER","ColumnsList":[{"ID":"queryCol_0","Name":"CUSTOMER_ID","DataType":"Real","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"SSN","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"FIRST_NAME","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"LAST_NAME","DataType":"Text","Index":3,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="12" from="0" to="1" pointsArr="263 36.89063 273 36.89063 313 37 333 37 373 36.85417 383 36.85417" fromNodePartID="7" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="13" from="2" to="3" pointsArr="263 48.9635429 273 48.9635429 313 49 333 49 373 48.9270859 383 48.9270859" fromNodePartID="7" fromNodeColumnName="SSN" toNodePartID="0" toNodeColumnName="SSN" />
+      <Link partID="14" from="4" to="5" pointsArr="263 61.0364571 273 61.0364571 313 61 333 61 373 61 383 61" fromNodePartID="7" fromNodeColumnName="FIRST_NAME" toNodePartID="0" toNodeColumnName="FIRST_NAME" />
+      <Link partID="15" from="6" to="7" pointsArr="263 73.109375 273 73.109375 313 73 333 73 373 73.07292 383 73.07292" fromNodePartID="7" fromNodeColumnName="LAST_NAME" toNodePartID="0" toNodeColumnName="LAST_NAME" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

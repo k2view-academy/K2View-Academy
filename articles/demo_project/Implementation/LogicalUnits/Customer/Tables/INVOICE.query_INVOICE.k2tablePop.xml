@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_INVOICE</ID>
+  <PopulationObjectName>query_INVOICE</PopulationObjectName>
+  <TableName>INVOICE</TableName>
+  <RootItemID>query_query_BILLING_DB_INVOICE</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="SUBSCRIBER_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="INVOICE_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="ISSUED_DATE" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="DUE_DATE" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="STATUS" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="BALANCE" id="queryCol_5" dataType="Integer" index="5" />
+    <Arg name="INVOICE_IMAGE" id="queryCol_6" dataType="BLOB" index="6" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BILLING_DB_INVOICE" name="query_BILLING_DB_INVOICE" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="BILLING_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="SUBSCRIBER_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="INVOICE_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="ISSUED_DATE" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="DUE_DATE" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="STATUS" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="BALANCE" dataType="Integer" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="INVOICE_IMAGE" dataType="BLOB" index="6" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BILLING_DB.INVOICE]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="65" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_0" toItemID="tbl_INVOICE" toColID="tblCol_8c324c2845d14972bf2f984e01a4e709" />
+    <Link partId="66" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_1" toItemID="tbl_INVOICE" toColID="tblCol_daa7ac8f1bc84e569f6771a5b0c28ab4" />
+    <Link partId="67" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_2" toItemID="tbl_INVOICE" toColID="tblCol_0bef2254995d468aa485e7a0da045f71" />
+    <Link partId="68" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_3" toItemID="tbl_INVOICE" toColID="tblCol_485eed7b55e8437d84110cb5dbbfa660" />
+    <Link partId="69" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_4" toItemID="tbl_INVOICE" toColID="tblCol_7f9fa711292f4de6b3a5f04a6a234f3a" />
+    <Link partId="70" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_5" toItemID="tbl_INVOICE" toColID="tblCol_d7847adb56bb41f08e7bc29d56597c32" />
+    <Link partId="71" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_INVOICE" fromColID="queryCol_6" toItemID="tbl_INVOICE" toColID="tblCol_4182d0f425714b358521a60b037f45d2" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="INVOICE.query_INVOICE.k2tablePop.xml" lastPartID="71">
+      <TableNode partID="0" name="INVOICE" pos="383 5.70834351" width="253" />
+      <DBQueryNode partID="57" name="BILLING_DB" pos="14 2.653657" size="253 144.5104" isRoot="true">
+        <DBQuery>{"Name":"query_BILLING_DB_INVOICE","ID":"query_query_BILLING_DB_INVOICE","ConnName":"BILLING_DB","SQL":"SELECT * FROM BILLING_DB.INVOICE","ColumnsList":[{"ID":"queryCol_0","Name":"SUBSCRIBER_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"INVOICE_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"ISSUED_DATE","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"DUE_DATE","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"STATUS","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"BALANCE","DataType":"Integer","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"INVOICE_IMAGE","DataType":"BLOB","Index":6,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="65" from="0" to="1" pointsArr="267 38.69011 277 38.69011 373 36.7448 383 36.7448" fromNodePartID="57" fromNodeColumnName="SUBSCRIBER_ID" toNodePartID="0" toNodeColumnName="SUBSCRIBER_ID" />
+      <Link partID="66" from="2" to="3" pointsArr="267 50.76303 277 50.76303 373 48.81772 383 48.81772" fromNodePartID="57" fromNodeColumnName="INVOICE_ID" toNodePartID="0" toNodeColumnName="INVOICE_ID" />
+      <Link partID="67" from="4" to="5" pointsArr="267 62.8359375 277 62.8359375 373 60.8906326 383 60.8906326" fromNodePartID="57" fromNodeColumnName="ISSUED_DATE" toNodePartID="0" toNodeColumnName="ISSUED_DATE" />
+      <Link partID="68" from="6" to="7" pointsArr="267 74.9088745 277 74.9088745 373 72.96355 383 72.96355" fromNodePartID="57" fromNodeColumnName="DUE_DATE" toNodePartID="0" toNodeColumnName="DUE_DATE" />
+      <Link partID="69" from="8" to="9" pointsArr="267 86.98178 277 86.98178 373 85.03646 383 85.03646" fromNodePartID="57" fromNodeColumnName="STATUS" toNodePartID="0" toNodeColumnName="STATUS" />
+      <Link partID="70" from="10" to="11" pointsArr="267 99.05469 277 99.05469 373 97.109375 383 97.109375" fromNodePartID="57" fromNodeColumnName="BALANCE" toNodePartID="0" toNodeColumnName="BALANCE" />
+      <Link partID="71" from="12" to="13" pointsArr="267 111.127625 277 111.127625 373 109.1823 383 109.1823" fromNodePartID="57" fromNodeColumnName="INVOICE_IMAGE" toNodePartID="0" toNodeColumnName="INVOICE_IMAGE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

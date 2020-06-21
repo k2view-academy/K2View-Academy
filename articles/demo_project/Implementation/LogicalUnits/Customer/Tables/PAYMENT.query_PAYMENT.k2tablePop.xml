@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_PAYMENT</ID>
+  <PopulationObjectName>query_PAYMENT</PopulationObjectName>
+  <TableName>PAYMENT</TableName>
+  <RootItemID>query_query_BILLING_DB_PAYMENT</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="INVOICE_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="PAYMENT_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="ISSUED_DATE" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="STATUS" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="AMOUNT" id="queryCol_4" dataType="Text" index="4" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BILLING_DB_PAYMENT" name="query_BILLING_DB_PAYMENT" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="BILLING_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="INVOICE_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="PAYMENT_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="ISSUED_DATE" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="STATUS" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="AMOUNT" dataType="Text" index="4" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BILLING_DB.PAYMENT]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="49" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_PAYMENT" fromColID="queryCol_0" toItemID="tbl_PAYMENT" toColID="tblCol_5de641bbfc7f44f9a4fce7812add200c" />
+    <Link partId="50" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_PAYMENT" fromColID="queryCol_1" toItemID="tbl_PAYMENT" toColID="tblCol_f2ac553d26444ab59d6e11427f007b78" />
+    <Link partId="51" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_PAYMENT" fromColID="queryCol_2" toItemID="tbl_PAYMENT" toColID="tblCol_9307632cc62f420eb2b4285ea7ccce01" />
+    <Link partId="52" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_PAYMENT" fromColID="queryCol_3" toItemID="tbl_PAYMENT" toColID="tblCol_2ffecf33577b4752b2837201cdd18b5c" />
+    <Link partId="53" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_PAYMENT" fromColID="queryCol_4" toItemID="tbl_PAYMENT" toColID="tblCol_915bb89b26b9461c92cd0da1ceb8e47c" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="PAYMENT.query_PAYMENT.k2tablePop.xml" lastPartID="53">
+      <TableNode partID="0" name="PAYMENT" pos="383 5.781254" width="253" />
+      <DBQueryNode partID="43" name="BILLING_DB" pos="30 2.72656345" size="253 120.364563" isRoot="true">
+        <DBQuery>{"Name":"query_BILLING_DB_PAYMENT","ID":"query_query_BILLING_DB_PAYMENT","ConnName":"BILLING_DB","SQL":"SELECT * FROM BILLING_DB.PAYMENT","ColumnsList":[{"ID":"queryCol_0","Name":"INVOICE_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"PAYMENT_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"ISSUED_DATE","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"STATUS","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"AMOUNT","DataType":"Text","Index":4,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="49" from="0" to="1" pointsArr="283 38.7630157 293 38.7630157 373 36.8177147 383 36.8177147" fromNodePartID="43" fromNodeColumnName="INVOICE_ID" toNodePartID="0" toNodeColumnName="INVOICE_ID" />
+      <Link partID="50" from="2" to="3" pointsArr="283 50.8359375 293 50.8359375 373 48.89063 383 48.89063" fromNodePartID="43" fromNodeColumnName="PAYMENT_ID" toNodePartID="0" toNodeColumnName="PAYMENT_ID" />
+      <Link partID="51" from="4" to="5" pointsArr="283 62.908844 293 62.908844 373 60.9635429 383 60.9635429" fromNodePartID="43" fromNodeColumnName="ISSUED_DATE" toNodePartID="0" toNodeColumnName="ISSUED_DATE" />
+      <Link partID="52" from="6" to="7" pointsArr="283 74.9817657 293 74.9817657 373 73.03646 383 73.03646" fromNodePartID="43" fromNodeColumnName="STATUS" toNodePartID="0" toNodeColumnName="STATUS" />
+      <Link partID="53" from="8" to="9" pointsArr="283 87.05469 293 87.05469 373 85.109375 383 85.109375" fromNodePartID="43" fromNodeColumnName="AMOUNT" toNodePartID="0" toNodeColumnName="AMOUNT" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

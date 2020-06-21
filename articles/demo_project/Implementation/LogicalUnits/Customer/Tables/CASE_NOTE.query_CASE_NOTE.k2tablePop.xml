@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_CASE_NOTE</ID>
+  <PopulationObjectName>query_CASE_NOTE</PopulationObjectName>
+  <TableName>CASE_NOTE</TableName>
+  <RootItemID>query_query_CASE_NOTE</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="CASE_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="NOTE_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="NOTE_DATE" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="NOTE_TEXT" id="queryCol_3" dataType="Text" index="3" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_CASE_NOTE" name="query_CASE_NOTE" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="CASE_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="NOTE_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="NOTE_DATE" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="NOTE_TEXT" dataType="Text" index="3" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM CASE_NOTE]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="12" fromNodeOrder="0" fromItemID="query_query_CASE_NOTE" fromColID="queryCol_0" toItemID="tbl_CASE_NOTE" toColID="tblCol_a387c723013e47a89b7fb748f9dd5b41" />
+    <Link partId="13" fromNodeOrder="0" fromItemID="query_query_CASE_NOTE" fromColID="queryCol_1" toItemID="tbl_CASE_NOTE" toColID="tblCol_e4ea7f3f80e74112b09da19e46b5bfa5" />
+    <Link partId="14" fromNodeOrder="0" fromItemID="query_query_CASE_NOTE" fromColID="queryCol_2" toItemID="tbl_CASE_NOTE" toColID="tblCol_937f0d7bb223455a9e1141ed72a55bcd" />
+    <Link partId="15" fromNodeOrder="0" fromItemID="query_query_CASE_NOTE" fromColID="queryCol_3" toItemID="tbl_CASE_NOTE" toColID="tblCol_778181f0eaa04b8093eeeff290cfe145" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="CASE_NOTE.query_CASE_NOTE.k2tablePop.xml" lastPartID="25">
+      <TableNode partID="0" name="CASE_NOTE" pos="383.6679 5.81771469" width="308.65625" />
+      <DBQueryNode partID="7" name="CRM_DB" pos="10 0.854171753" size="253 108.291656" isRoot="true">
+        <DBQuery>{"Name":"query_CASE_NOTE","ID":"query_query_CASE_NOTE","ConnName":"CRM_DB","SQL":"SELECT * FROM CASE_NOTE","ColumnsList":[{"ID":"queryCol_0","Name":"CASE_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"NOTE_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"NOTE_DATE","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"NOTE_TEXT","DataType":"Text","Index":3,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="12" from="0" to="1" pointsArr="263 36.89063 273 36.89063 313 37 333 37 373.6679 36.85417 383.6679 36.85417" fromNodePartID="7" fromNodeColumnName="CASE_ID" toNodePartID="0" toNodeColumnName="CASE_ID" />
+      <Link partID="13" from="2" to="3" pointsArr="263 48.9635429 273 48.9635429 313 49 333 49 373.6679 48.9270859 383.6679 48.9270859" fromNodePartID="7" fromNodeColumnName="NOTE_ID" toNodePartID="0" toNodeColumnName="NOTE_ID" />
+      <Link partID="14" from="4" to="5" pointsArr="263 61.0364571 273 61.0364571 313 61 333 61 373.6679 61 383.6679 61" fromNodePartID="7" fromNodeColumnName="NOTE_DATE" toNodePartID="0" toNodeColumnName="NOTE_DATE" />
+      <Link partID="15" from="6" to="7" pointsArr="263 73.109375 273 73.109375 313 73 333 73 373.6679 73.0729141 383.6679 73.0729141" fromNodePartID="7" fromNodeColumnName="NOTE_TEXT" toNodePartID="0" toNodeColumnName="NOTE_TEXT" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

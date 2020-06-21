@@ -1,0 +1,93 @@
+{
+  "name": "Customer_Information",
+  "serializerSettings": [
+    {
+      "set": "nice",
+      "value": "true"
+    }
+  ],
+  "children": [
+    {
+      "type": "sqlNonPrepared",
+      "code": "get Customer.${Customer_Id}",
+      "serializerSettings": [
+        {
+          "set": "nice",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "name": "Personal Info SQL",
+      "type": "sql",
+      "code": "Select FIRST_NAME, LAST_NAME,CUSTOMER_ID from Customer",
+      "children": [
+        {
+          "name": "Customer  Name",
+          "type": "function",
+          "code": "FIRST_NAME + \" \" +LAST_NAME"
+        },
+        {
+          "name": "CUSTOMER_ID",
+          "type": "variable",
+          "code": "CUSTOMER_ID"
+        }
+      ]
+    },
+    {
+      "name": "SQL Count",
+      "type": "sql",
+      "code": "Select count (*) as XXX  From INVOICE  where STATUS =\"Open\" or STATUS =\"New\"\n   ",
+      "children": [
+        {
+          "name": "XXX",
+          "type": "variable",
+          "code": "XXX",
+          "children": [
+            {
+              "name": "Eligable ",
+              "type": "function",
+              "code": "if(XXX>11 && XXX<100) 'Yes';else 'Nope';"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Check1",
+      "type": "sql",
+      "code": "select case when totalCount > 0 then \"Not Elidable\"\n       \n            else 'Elidable' end as newColumn\nfrom (\n  SELECT COUNT(*) TotalCount\n  FROM INVOICE\n   where STATUS =\"Open\" or STATUS =\"New\"\n) ",
+      "children": [
+        {
+          "name": "Eligable",
+          "type": "variable",
+          "code": "newColumn"
+        }
+      ]
+    },
+    {
+      "name": "Check2",
+      "type": "sql",
+      "code": "SELECT  INVOICE_ID ,BALANCE, \n  CASE \n     WHEN BALANCE <  500 THEN \"Good Balance\"\n     WHEN BALANCE >=  500 THEN \"Bad Balance\"\n     ELSE \"ccc\"\nEND as DDDD\n\nFROM INVOICE",
+      "children": [
+        {
+          "name": "Eligable2",
+          "type": "function",
+          "code": "\"Invoice_id: \"+INVOICE_ID+ \",has a balance of \"+BALANCE +\" Which is a \"+DDDD"
+        },
+        {
+          "name": "Dummy select",
+          "type": "sql",
+          "code": "select 5555 dbl,\"ccc\"as var",
+          "children": [
+            {
+              "name": "dbl",
+              "type": "variable",
+              "code": "dbl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

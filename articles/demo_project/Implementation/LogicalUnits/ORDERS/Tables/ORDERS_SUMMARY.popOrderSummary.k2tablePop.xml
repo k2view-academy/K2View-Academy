@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>popOrderSummary</ID>
+  <PopulationObjectName>popOrderSummary</PopulationObjectName>
+  <TableName>ORDERS_SUMMARY</TableName>
+  <RootItemID>query_query_ORDERS</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="ORDER_TYPE" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="ORDER_STATUS" id="queryCol_1" dataType="Text" index="1" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_ORDERS" name="query_ORDERS" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="ludb">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="ORDER_TYPE" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="ORDER_STATUS" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="NO_OF_ORDERS_PER_STATUS" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="NO_OF_CONTRACTS_PER_STATUS" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="MAX_ORDER_DATE" index="4" />
+      </OutputsList>
+      <SQL><![CDATA[Select ORDERS.ORDER_TYPE,
+  ORDERS.ORDER_STATUS,
+  count(*) NO_OF_ORDERS_PER_STATUS,
+  Count(Distinct ORDERS.CONTRACT_ID) NO_OF_CONTRACTS_PER_STATUS,
+  Max(ORDERS.ORDER_DATE) MAX_ORDER_DATE
+From ORDERS.ORDERS
+Group By ORDERS.ORDER_TYPE,
+  ORDERS.ORDER_STATUS]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_ORDERS" fromColID="queryCol_0" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_74e3771845f344cd86c3785b1a5c7300" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_ORDERS" fromColID="queryCol_1" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_801ac36a9e5f45f7aee6330357ccace6" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_ORDERS" fromColID="queryCol_2" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_1ef91bdf2d5a414595ced8bfcfeef40b" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_ORDERS" fromColID="queryCol_4" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_6896310edafe4496abb57480a77ebf14" />
+    <Link partId="27" fromNodeOrder="0" fromItemID="query_query_ORDERS" fromColID="queryCol_3" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_e484c7fd064b48099e9cec2eeece06f9" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="ORDERS_SUMMARY.popOrderSummary.k2tablePop.xml" lastPartID="27">
+      <TableNode partID="0" name="ORDERS_SUMMARY" pos="489.005371 14.67189" width="253" />
+      <DBQueryNode partID="10" name="ludb" pos="10.0000305 0.817703247" size="355.0053 120.364594" isRoot="true">
+        <DBQuery>{"Name":"query_ORDERS","ID":"query_query_ORDERS","ConnName":"ludb","SQL":"Select ORDERS.ORDER_TYPE,\r\n  ORDERS.ORDER_STATUS,\r\n  count(*) NO_OF_ORDERS_PER_STATUS,\r\n  Count(Distinct ORDERS.CONTRACT_ID) NO_OF_CONTRACTS_PER_STATUS,\r\n  Max(ORDERS.ORDER_DATE) MAX_ORDER_DATE\r\nFrom ORDERS.ORDERS\r\nGroup By ORDERS.ORDER_TYPE,\r\n  ORDERS.ORDER_STATUS","ColumnsList":[{"ID":"queryCol_0","Name":"ORDER_TYPE","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"ORDER_STATUS","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"NO_OF_ORDERS_PER_STATUS","Index":2,"IsInputArgument":false},{"ID":"queryCol_3","Name":"NO_OF_CONTRACTS_PER_STATUS","Index":3,"IsInputArgument":false},{"ID":"queryCol_4","Name":"MAX_ORDER_DATE","Index":4,"IsInputArgument":false}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="21" from="0" to="1" pointsArr="365.005341 36.85417 375.005341 36.85417 479.005371 45.7083435 489.005371 45.7083435" fromNodePartID="10" fromNodeColumnName="ORDER_TYPE" toNodePartID="0" toNodeColumnName="ORDER_TYPE" />
+      <Link partID="22" from="2" to="3" pointsArr="365.005341 48.92708 375.005341 48.92708 479.005371 57.78125 489.005371 57.78125" fromNodePartID="10" fromNodeColumnName="ORDER_STATUS" toNodePartID="0" toNodeColumnName="STATUS" />
+      <Link partID="23" from="4" to="5" pointsArr="365.005341 60.9999847 375.005341 60.9999847 479.005371 69.85416 489.005371 69.85416" fromNodePartID="10" fromNodeColumnName="NO_OF_ORDERS_PER_STATUS" toNodePartID="0" toNodeColumnName="NO_OF_ORDERS_PER_STATUS" />
+      <Link partID="24" from="6" to="7" pointsArr="365.005341 85.14583 375.005341 85.14583 479.005371 94 489.005371 94" fromNodePartID="10" fromNodeColumnName="MAX_ORDER_DATE" toNodePartID="0" toNodeColumnName="LATEST_ORDER_DATE_PER_STATUS" />
+      <Link partID="27" from="8" to="9" pointsArr="365.005341 73.07292 375.005341 73.07292 479.005371 118.145844 489.005371 118.145844" fromNodePartID="10" fromNodeColumnName="NO_OF_CONTRACTS_PER_STATUS" toNodePartID="0" toNodeColumnName="NO_OF_CONTRACTS_PER_STATUS" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

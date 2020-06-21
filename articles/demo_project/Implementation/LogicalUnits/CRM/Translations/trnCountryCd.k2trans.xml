@@ -1,0 +1,1308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Translation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>trnCountryCd</Name>
+  <InputNotFoundAction>Reject_Entity</InputNotFoundAction>
+  <SchemaColumns>
+    <Column>
+      <Title>CNTRY_CD</Title>
+      <ColumnName>CNTRY_CD</ColumnName>
+      <Direction>Input</Direction>
+      <Type>Text</Type>
+      <Length>10</Length>
+      <Format />
+      <Index>0</Index>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="100" />
+    </Column>
+    <Column>
+      <Title>NAME</Title>
+      <ColumnName>NAME</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Text</Type>
+      <Length>100</Length>
+      <Format />
+      <Index>0</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="100" />
+    </Column>
+    <Column>
+      <Title>AREA_CD</Title>
+      <ColumnName>AREA_CD</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Integer</Type>
+      <Length>10</Length>
+      <Format />
+      <Index>1</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="81" />
+    </Column>
+  </SchemaColumns>
+  <IsImportFromSQL>false</IsImportFromSQL>
+  <IsDynamicData>false</IsDynamicData>
+  <DynamicDbConnName />
+  <DynamicSqlQuery />
+  <ColumnMapping />
+  <TranslationData>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="trnCountryCd" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="trnCountryCd">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="CNTRY_CD" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="NAME" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AREA_CD" type="xs:long" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+      <DocumentElement>
+        <trnCountryCd diffgr:id="trnCountryCd1" msdata:rowOrder="0">
+          <CNTRY_CD>DOM</CNTRY_CD>
+          <NAME>Dominicaanse Republiek</NAME>
+          <AREA_CD>1809</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd2" msdata:rowOrder="1">
+          <CNTRY_CD>DZA</CNTRY_CD>
+          <NAME>Algerije</NAME>
+          <AREA_CD>213</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd3" msdata:rowOrder="2">
+          <CNTRY_CD>ECU</CNTRY_CD>
+          <NAME>Ecuador</NAME>
+          <AREA_CD>593</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd4" msdata:rowOrder="3">
+          <CNTRY_CD>EGY</CNTRY_CD>
+          <NAME>Egypte</NAME>
+          <AREA_CD>20</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd5" msdata:rowOrder="4">
+          <CNTRY_CD>EST</CNTRY_CD>
+          <NAME>Estland</NAME>
+          <AREA_CD>372</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd6" msdata:rowOrder="5">
+          <CNTRY_CD>ETH</CNTRY_CD>
+          <NAME>Ethiopie</NAME>
+          <AREA_CD>251</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd7" msdata:rowOrder="6">
+          <CNTRY_CD>FIN</CNTRY_CD>
+          <NAME>Finland</NAME>
+          <AREA_CD>358</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd8" msdata:rowOrder="7">
+          <CNTRY_CD>FJI</CNTRY_CD>
+          <NAME>Fiji Eilanden</NAME>
+          <AREA_CD>679</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd9" msdata:rowOrder="8">
+          <CNTRY_CD>FLK</CNTRY_CD>
+          <NAME>Falkland Eilanden</NAME>
+          <AREA_CD>500</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd10" msdata:rowOrder="9">
+          <CNTRY_CD>FRA</CNTRY_CD>
+          <NAME>Frankrijk</NAME>
+          <AREA_CD>33</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd11" msdata:rowOrder="10">
+          <CNTRY_CD>FRO</CNTRY_CD>
+          <NAME>Faeroer</NAME>
+          <AREA_CD>298</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd12" msdata:rowOrder="11">
+          <CNTRY_CD>GAB</CNTRY_CD>
+          <NAME>Gabon</NAME>
+          <AREA_CD>241</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd13" msdata:rowOrder="12">
+          <CNTRY_CD>GBR</CNTRY_CD>
+          <NAME>Groot-Brittannie</NAME>
+          <AREA_CD>44</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd14" msdata:rowOrder="13">
+          <CNTRY_CD>GEO</CNTRY_CD>
+          <NAME>Georgie</NAME>
+          <AREA_CD>995</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd15" msdata:rowOrder="14">
+          <CNTRY_CD>GHA</CNTRY_CD>
+          <NAME>Ghana</NAME>
+          <AREA_CD>233</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd16" msdata:rowOrder="15">
+          <CNTRY_CD>GIB</CNTRY_CD>
+          <NAME>Gibraltar</NAME>
+          <AREA_CD>350</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd17" msdata:rowOrder="16">
+          <CNTRY_CD>GIN</CNTRY_CD>
+          <NAME>Guinee</NAME>
+          <AREA_CD>224</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd18" msdata:rowOrder="17">
+          <CNTRY_CD>GLP</CNTRY_CD>
+          <NAME>Guadeloupe</NAME>
+          <AREA_CD>590</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd19" msdata:rowOrder="18">
+          <CNTRY_CD>GMB</CNTRY_CD>
+          <NAME>Gambia</NAME>
+          <AREA_CD>220</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd20" msdata:rowOrder="19">
+          <CNTRY_CD>GNB</CNTRY_CD>
+          <NAME>Guinee-Bissau</NAME>
+          <AREA_CD>245</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd21" msdata:rowOrder="20">
+          <CNTRY_CD>GNQ</CNTRY_CD>
+          <NAME>Equatorial Guinee</NAME>
+          <AREA_CD>240</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd22" msdata:rowOrder="21">
+          <CNTRY_CD>GRC</CNTRY_CD>
+          <NAME>Griekenland</NAME>
+          <AREA_CD>30</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd23" msdata:rowOrder="22">
+          <CNTRY_CD>GRL</CNTRY_CD>
+          <NAME>Groenland</NAME>
+          <AREA_CD>299</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd24" msdata:rowOrder="23">
+          <CNTRY_CD>GTM</CNTRY_CD>
+          <NAME>Guatemala</NAME>
+          <AREA_CD>502</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd25" msdata:rowOrder="24">
+          <CNTRY_CD>GUM</CNTRY_CD>
+          <NAME>Guam</NAME>
+          <AREA_CD>1671</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd26" msdata:rowOrder="25">
+          <CNTRY_CD>GUY</CNTRY_CD>
+          <NAME>Guyana</NAME>
+          <AREA_CD>592</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd27" msdata:rowOrder="26">
+          <CNTRY_CD>HKG</CNTRY_CD>
+          <NAME>Hong Kong</NAME>
+          <AREA_CD>852</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd28" msdata:rowOrder="27">
+          <CNTRY_CD>HND</CNTRY_CD>
+          <NAME>Honduras</NAME>
+          <AREA_CD>504</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd29" msdata:rowOrder="28">
+          <CNTRY_CD>HRV</CNTRY_CD>
+          <NAME>Kroatie</NAME>
+          <AREA_CD>385</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd30" msdata:rowOrder="29">
+          <CNTRY_CD>HUN</CNTRY_CD>
+          <NAME>Hongarije</NAME>
+          <AREA_CD>36</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd31" msdata:rowOrder="30">
+          <CNTRY_CD>IDN</CNTRY_CD>
+          <NAME>Indonesie</NAME>
+          <AREA_CD>62</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd32" msdata:rowOrder="31">
+          <CNTRY_CD>IND</CNTRY_CD>
+          <NAME>India</NAME>
+          <AREA_CD>91</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd33" msdata:rowOrder="32">
+          <CNTRY_CD>IRL</CNTRY_CD>
+          <NAME>Ierland</NAME>
+          <AREA_CD>353</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd34" msdata:rowOrder="33">
+          <CNTRY_CD>IRN</CNTRY_CD>
+          <NAME>Iran</NAME>
+          <AREA_CD>98</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd35" msdata:rowOrder="34">
+          <CNTRY_CD>IRQ</CNTRY_CD>
+          <NAME>Irak</NAME>
+          <AREA_CD>964</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd36" msdata:rowOrder="35">
+          <CNTRY_CD>ISL</CNTRY_CD>
+          <NAME>Ijsland</NAME>
+          <AREA_CD>354</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd37" msdata:rowOrder="36">
+          <CNTRY_CD>ISR</CNTRY_CD>
+          <NAME>Israel</NAME>
+          <AREA_CD>972</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd38" msdata:rowOrder="37">
+          <CNTRY_CD>ITA</CNTRY_CD>
+          <NAME>Italie</NAME>
+          <AREA_CD>39</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd39" msdata:rowOrder="38">
+          <CNTRY_CD>JAM</CNTRY_CD>
+          <NAME>Jamaica + Caribbean</NAME>
+          <AREA_CD>1876</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd40" msdata:rowOrder="39">
+          <CNTRY_CD>JOR</CNTRY_CD>
+          <NAME>Jordanie</NAME>
+          <AREA_CD>962</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd41" msdata:rowOrder="40">
+          <CNTRY_CD>JPN</CNTRY_CD>
+          <NAME>Japan</NAME>
+          <AREA_CD>81</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd42" msdata:rowOrder="41">
+          <CNTRY_CD>KAZ</CNTRY_CD>
+          <NAME>Kazachstan</NAME>
+          <AREA_CD>731</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd43" msdata:rowOrder="42">
+          <CNTRY_CD>KEN</CNTRY_CD>
+          <NAME>Kenia</NAME>
+          <AREA_CD>254</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd44" msdata:rowOrder="43">
+          <CNTRY_CD>KGZ</CNTRY_CD>
+          <NAME>Kirgistan</NAME>
+          <AREA_CD>996</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd45" msdata:rowOrder="44">
+          <CNTRY_CD>KHM</CNTRY_CD>
+          <NAME>Cambodia</NAME>
+          <AREA_CD>855</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd46" msdata:rowOrder="45">
+          <CNTRY_CD>KOR</CNTRY_CD>
+          <NAME>Zuid-Korea</NAME>
+          <AREA_CD>82</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd47" msdata:rowOrder="46">
+          <CNTRY_CD>KWT</CNTRY_CD>
+          <NAME>Koeweit</NAME>
+          <AREA_CD>965</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd48" msdata:rowOrder="47">
+          <CNTRY_CD>LAO</CNTRY_CD>
+          <NAME>Laos</NAME>
+          <AREA_CD>856</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd49" msdata:rowOrder="48">
+          <CNTRY_CD>LBN</CNTRY_CD>
+          <NAME>Libanon</NAME>
+          <AREA_CD>961</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd50" msdata:rowOrder="49">
+          <CNTRY_CD>LBR</CNTRY_CD>
+          <NAME>Liberia</NAME>
+          <AREA_CD>231</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd51" msdata:rowOrder="50">
+          <CNTRY_CD>LBY</CNTRY_CD>
+          <NAME>Libie</NAME>
+          <AREA_CD>218</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd52" msdata:rowOrder="51">
+          <CNTRY_CD>LIE</CNTRY_CD>
+          <NAME>Liechtenstein</NAME>
+          <AREA_CD>423</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd53" msdata:rowOrder="52">
+          <CNTRY_CD>LKA</CNTRY_CD>
+          <NAME>Sri Lanka</NAME>
+          <AREA_CD>94</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd54" msdata:rowOrder="53">
+          <CNTRY_CD>LSO</CNTRY_CD>
+          <NAME>Lesotho</NAME>
+          <AREA_CD>266</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd55" msdata:rowOrder="54">
+          <CNTRY_CD>LTU</CNTRY_CD>
+          <NAME>Litouwen</NAME>
+          <AREA_CD>370</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd56" msdata:rowOrder="55">
+          <CNTRY_CD>LUX</CNTRY_CD>
+          <NAME>Luxemburg</NAME>
+          <AREA_CD>352</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd57" msdata:rowOrder="56">
+          <CNTRY_CD>LVA</CNTRY_CD>
+          <NAME>Letland</NAME>
+          <AREA_CD>271</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd58" msdata:rowOrder="57">
+          <CNTRY_CD>MAC</CNTRY_CD>
+          <NAME>Macao</NAME>
+          <AREA_CD>853</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd59" msdata:rowOrder="58">
+          <CNTRY_CD>MAR</CNTRY_CD>
+          <NAME>Marokko</NAME>
+          <AREA_CD>212</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd60" msdata:rowOrder="59">
+          <CNTRY_CD>MCO</CNTRY_CD>
+          <NAME>Monaco</NAME>
+          <AREA_CD>377</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd61" msdata:rowOrder="60">
+          <CNTRY_CD>MDA</CNTRY_CD>
+          <NAME>Moldavie</NAME>
+          <AREA_CD>373</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd62" msdata:rowOrder="61">
+          <CNTRY_CD>MDG</CNTRY_CD>
+          <NAME>Madagascar</NAME>
+          <AREA_CD>261</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd63" msdata:rowOrder="62">
+          <CNTRY_CD>MDV</CNTRY_CD>
+          <NAME>Malediven</NAME>
+          <AREA_CD>960</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd64" msdata:rowOrder="63">
+          <CNTRY_CD>MEX</CNTRY_CD>
+          <NAME>Mexico</NAME>
+          <AREA_CD>52</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd65" msdata:rowOrder="64">
+          <CNTRY_CD>MKD</CNTRY_CD>
+          <NAME>Macedonie</NAME>
+          <AREA_CD>389</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd66" msdata:rowOrder="65">
+          <CNTRY_CD>MLI</CNTRY_CD>
+          <NAME>Mali</NAME>
+          <AREA_CD>223</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd67" msdata:rowOrder="66">
+          <CNTRY_CD>MLT</CNTRY_CD>
+          <NAME>Malta</NAME>
+          <AREA_CD>356</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd68" msdata:rowOrder="67">
+          <CNTRY_CD>MNG</CNTRY_CD>
+          <NAME>Mongolie</NAME>
+          <AREA_CD>976</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd69" msdata:rowOrder="68">
+          <CNTRY_CD>MOZ</CNTRY_CD>
+          <NAME>Mozambique</NAME>
+          <AREA_CD>258</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd70" msdata:rowOrder="69">
+          <CNTRY_CD>MRT</CNTRY_CD>
+          <NAME>Mauretanie</NAME>
+          <AREA_CD>222</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd71" msdata:rowOrder="70">
+          <CNTRY_CD>MSR</CNTRY_CD>
+          <NAME>Montserrat</NAME>
+          <AREA_CD>1644</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd72" msdata:rowOrder="71">
+          <CNTRY_CD>MUS</CNTRY_CD>
+          <NAME>Mauritius</NAME>
+          <AREA_CD>230</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd73" msdata:rowOrder="72">
+          <CNTRY_CD>MWI</CNTRY_CD>
+          <NAME>Malawi</NAME>
+          <AREA_CD>265</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd74" msdata:rowOrder="73">
+          <CNTRY_CD>MYS</CNTRY_CD>
+          <NAME>Maleisie</NAME>
+          <AREA_CD>60</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd75" msdata:rowOrder="74">
+          <CNTRY_CD>NAM</CNTRY_CD>
+          <NAME>Namibie</NAME>
+          <AREA_CD>264</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd76" msdata:rowOrder="75">
+          <CNTRY_CD>NCL</CNTRY_CD>
+          <NAME>Nieuw Caledonie</NAME>
+          <AREA_CD>687</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd77" msdata:rowOrder="76">
+          <CNTRY_CD>NER</CNTRY_CD>
+          <NAME>Niger</NAME>
+          <AREA_CD>227</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd78" msdata:rowOrder="77">
+          <CNTRY_CD>NFK</CNTRY_CD>
+          <NAME>Norfolk</NAME>
+          <AREA_CD>6723</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd79" msdata:rowOrder="78">
+          <CNTRY_CD>NGA</CNTRY_CD>
+          <NAME>Nigeria</NAME>
+          <AREA_CD>234</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd80" msdata:rowOrder="79">
+          <CNTRY_CD>NIC</CNTRY_CD>
+          <NAME>Nicaragua</NAME>
+          <AREA_CD>505</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd81" msdata:rowOrder="80">
+          <CNTRY_CD>NOR</CNTRY_CD>
+          <NAME>Noorwegen</NAME>
+          <AREA_CD>47</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd82" msdata:rowOrder="81">
+          <CNTRY_CD>NPL</CNTRY_CD>
+          <NAME>Nepal</NAME>
+          <AREA_CD>977</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd83" msdata:rowOrder="82">
+          <CNTRY_CD>NZL</CNTRY_CD>
+          <NAME>Nieuw Zeeland</NAME>
+          <AREA_CD>64</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd84" msdata:rowOrder="83">
+          <CNTRY_CD>OMN</CNTRY_CD>
+          <NAME>Oman</NAME>
+          <AREA_CD>968</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd85" msdata:rowOrder="84">
+          <CNTRY_CD>PAK</CNTRY_CD>
+          <NAME>Pakistan</NAME>
+          <AREA_CD>92</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd86" msdata:rowOrder="85">
+          <CNTRY_CD>PAN</CNTRY_CD>
+          <NAME>Panama</NAME>
+          <AREA_CD>507</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd87" msdata:rowOrder="86">
+          <CNTRY_CD>PER</CNTRY_CD>
+          <NAME>Peru</NAME>
+          <AREA_CD>51</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd88" msdata:rowOrder="87">
+          <CNTRY_CD>PHL</CNTRY_CD>
+          <NAME>Filipijnen</NAME>
+          <AREA_CD>63</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd89" msdata:rowOrder="88">
+          <CNTRY_CD>PLW</CNTRY_CD>
+          <NAME>Palau</NAME>
+          <AREA_CD>680</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd90" msdata:rowOrder="89">
+          <CNTRY_CD>PNG</CNTRY_CD>
+          <NAME>Papoea Nieuw Guinea</NAME>
+          <AREA_CD>675</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd91" msdata:rowOrder="90">
+          <CNTRY_CD>POL</CNTRY_CD>
+          <NAME>Polen</NAME>
+          <AREA_CD>48</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd92" msdata:rowOrder="91">
+          <CNTRY_CD>PRT</CNTRY_CD>
+          <NAME>Portugal</NAME>
+          <AREA_CD>351</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd93" msdata:rowOrder="92">
+          <CNTRY_CD>PRY</CNTRY_CD>
+          <NAME>Paraguay</NAME>
+          <AREA_CD>595</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd94" msdata:rowOrder="93">
+          <CNTRY_CD>PSE</CNTRY_CD>
+          <NAME>Palestina</NAME>
+          <AREA_CD>970</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd95" msdata:rowOrder="94">
+          <CNTRY_CD>QAT</CNTRY_CD>
+          <NAME>Qatar</NAME>
+          <AREA_CD>974</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd96" msdata:rowOrder="95">
+          <CNTRY_CD>ROU</CNTRY_CD>
+          <NAME>Roemenie</NAME>
+          <AREA_CD>40</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd97" msdata:rowOrder="96">
+          <CNTRY_CD>RUS</CNTRY_CD>
+          <NAME>Rusland</NAME>
+          <AREA_CD>7</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd98" msdata:rowOrder="97">
+          <CNTRY_CD>RWA</CNTRY_CD>
+          <NAME>Rwanda</NAME>
+          <AREA_CD>250</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd99" msdata:rowOrder="98">
+          <CNTRY_CD>SAU</CNTRY_CD>
+          <NAME>Saoedi-Arabie</NAME>
+          <AREA_CD>966</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd100" msdata:rowOrder="99">
+          <CNTRY_CD>SEN</CNTRY_CD>
+          <NAME>Senegal</NAME>
+          <AREA_CD>221</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd101" msdata:rowOrder="100">
+          <CNTRY_CD>SGP</CNTRY_CD>
+          <NAME>Singapore</NAME>
+          <AREA_CD>65</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd102" msdata:rowOrder="101">
+          <CNTRY_CD>SLB</CNTRY_CD>
+          <NAME>Salomons Eilanden</NAME>
+          <AREA_CD>677</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd103" msdata:rowOrder="102">
+          <CNTRY_CD>SLE</CNTRY_CD>
+          <NAME>Sierra Leone</NAME>
+          <AREA_CD>232</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd104" msdata:rowOrder="103">
+          <CNTRY_CD>SLV</CNTRY_CD>
+          <NAME>El Salvador</NAME>
+          <AREA_CD>503</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd105" msdata:rowOrder="104">
+          <CNTRY_CD>SMO</CNTRY_CD>
+          <NAME>San Marino</NAME>
+          <AREA_CD>378</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd106" msdata:rowOrder="105">
+          <CNTRY_CD>SRB</CNTRY_CD>
+          <NAME>Servië (Republiek)</NAME>
+          <AREA_CD>381</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd107" msdata:rowOrder="106">
+          <CNTRY_CD>STP</CNTRY_CD>
+          <NAME>Sao Tome En Principe</NAME>
+          <AREA_CD>239</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd108" msdata:rowOrder="107">
+          <CNTRY_CD>SDN</CNTRY_CD>
+          <NAME>Soedan</NAME>
+          <AREA_CD>249</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd109" msdata:rowOrder="108">
+          <CNTRY_CD>SUR</CNTRY_CD>
+          <NAME>Suriname</NAME>
+          <AREA_CD>597</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd110" msdata:rowOrder="109">
+          <CNTRY_CD>SVK</CNTRY_CD>
+          <NAME>Slowakije</NAME>
+          <AREA_CD>421</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd111" msdata:rowOrder="110">
+          <CNTRY_CD>SVN</CNTRY_CD>
+          <NAME>Slovenie</NAME>
+          <AREA_CD>386</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd112" msdata:rowOrder="111">
+          <CNTRY_CD>SWE</CNTRY_CD>
+          <NAME>Zweden</NAME>
+          <AREA_CD>46</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd113" msdata:rowOrder="112">
+          <CNTRY_CD>SWZ</CNTRY_CD>
+          <NAME>Swaziland</NAME>
+          <AREA_CD>268</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd114" msdata:rowOrder="113">
+          <CNTRY_CD>SYC</CNTRY_CD>
+          <NAME>Seychellen</NAME>
+          <AREA_CD>248</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd115" msdata:rowOrder="114">
+          <CNTRY_CD>SYR</CNTRY_CD>
+          <NAME>Syrie</NAME>
+          <AREA_CD>963</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd116" msdata:rowOrder="115">
+          <CNTRY_CD>TCD</CNTRY_CD>
+          <NAME>Tsjaad</NAME>
+          <AREA_CD>235</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd117" msdata:rowOrder="116">
+          <CNTRY_CD>TGO</CNTRY_CD>
+          <NAME>Togo</NAME>
+          <AREA_CD>228</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd118" msdata:rowOrder="117">
+          <CNTRY_CD>THA</CNTRY_CD>
+          <NAME>Thailand</NAME>
+          <AREA_CD>66</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd119" msdata:rowOrder="118">
+          <CNTRY_CD>TJK</CNTRY_CD>
+          <NAME>Tadzjikistan</NAME>
+          <AREA_CD>992</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd120" msdata:rowOrder="119">
+          <CNTRY_CD>TKM</CNTRY_CD>
+          <NAME>Turkmenistan</NAME>
+          <AREA_CD>993</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd121" msdata:rowOrder="120">
+          <CNTRY_CD>TLS</CNTRY_CD>
+          <NAME>Oost Timor</NAME>
+          <AREA_CD>670</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd122" msdata:rowOrder="121">
+          <CNTRY_CD>TON</CNTRY_CD>
+          <NAME>Tonga</NAME>
+          <AREA_CD>676</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd123" msdata:rowOrder="122">
+          <CNTRY_CD>TTO</CNTRY_CD>
+          <NAME>Trinidad En Tobago</NAME>
+          <AREA_CD>1868</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd124" msdata:rowOrder="123">
+          <CNTRY_CD>TUN</CNTRY_CD>
+          <NAME>Tunesie</NAME>
+          <AREA_CD>216</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd125" msdata:rowOrder="124">
+          <CNTRY_CD>TUR</CNTRY_CD>
+          <NAME>Turkije</NAME>
+          <AREA_CD>90</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd126" msdata:rowOrder="125">
+          <CNTRY_CD>TWN</CNTRY_CD>
+          <NAME>Taiwan</NAME>
+          <AREA_CD>866</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd127" msdata:rowOrder="126">
+          <CNTRY_CD>TZA</CNTRY_CD>
+          <NAME>Tanzania</NAME>
+          <AREA_CD>255</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd128" msdata:rowOrder="127">
+          <CNTRY_CD>UGA</CNTRY_CD>
+          <NAME>Oeganda</NAME>
+          <AREA_CD>256</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd129" msdata:rowOrder="128">
+          <CNTRY_CD>UKR</CNTRY_CD>
+          <NAME>Oekraine</NAME>
+          <AREA_CD>380</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd130" msdata:rowOrder="129">
+          <CNTRY_CD>URY</CNTRY_CD>
+          <NAME>Uruguay</NAME>
+          <AREA_CD>598</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd131" msdata:rowOrder="130">
+          <CNTRY_CD>UZB</CNTRY_CD>
+          <NAME>Oezbekistan</NAME>
+          <AREA_CD>998</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd132" msdata:rowOrder="131">
+          <CNTRY_CD>VEN</CNTRY_CD>
+          <NAME>Venezuela</NAME>
+          <AREA_CD>58</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd133" msdata:rowOrder="132">
+          <CNTRY_CD>VGB</CNTRY_CD>
+          <NAME>Britse Maagden eilanden</NAME>
+          <AREA_CD>1284</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd134" msdata:rowOrder="133">
+          <CNTRY_CD>VNM</CNTRY_CD>
+          <NAME>Vietnam</NAME>
+          <AREA_CD>84</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd135" msdata:rowOrder="134">
+          <CNTRY_CD>BVT</CNTRY_CD>
+          <NAME>Bouvet Eiland</NAME>
+          <AREA_CD>55</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd136" msdata:rowOrder="135">
+          <CNTRY_CD>YEM</CNTRY_CD>
+          <NAME>Jemen</NAME>
+          <AREA_CD>967</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd137" msdata:rowOrder="136">
+          <CNTRY_CD>BES</CNTRY_CD>
+          <NAME>Bonaire, Sint Eustatius en Saba</NAME>
+          <AREA_CD>599</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd138" msdata:rowOrder="137">
+          <CNTRY_CD>ZAF</CNTRY_CD>
+          <NAME>Zuid-Afrika</NAME>
+          <AREA_CD>27</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd139" msdata:rowOrder="138">
+          <CNTRY_CD>ZMB</CNTRY_CD>
+          <NAME>Zambia</NAME>
+          <AREA_CD>260</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd140" msdata:rowOrder="139">
+          <CNTRY_CD>ZWE</CNTRY_CD>
+          <NAME>Zimbabwe</NAME>
+          <AREA_CD>263</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd141" msdata:rowOrder="140">
+          <CNTRY_CD>ATG</CNTRY_CD>
+          <NAME>Antigua en Barbuda</NAME>
+          <AREA_CD>1268</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd142" msdata:rowOrder="141">
+          <CNTRY_CD>BRB</CNTRY_CD>
+          <NAME>Barbados</NAME>
+          <AREA_CD>1246</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd143" msdata:rowOrder="142">
+          <CNTRY_CD>CYM</CNTRY_CD>
+          <NAME>Kaaiman Eilanden</NAME>
+          <AREA_CD>1345</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd144" msdata:rowOrder="143">
+          <CNTRY_CD>ERI</CNTRY_CD>
+          <NAME>Eritrea</NAME>
+          <AREA_CD>291</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd145" msdata:rowOrder="144">
+          <CNTRY_CD>GRD</CNTRY_CD>
+          <NAME>Grenada</NAME>
+          <AREA_CD>1473</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd146" msdata:rowOrder="145">
+          <CNTRY_CD>GUF</CNTRY_CD>
+          <NAME>Frans Guiana</NAME>
+          <AREA_CD>594</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd147" msdata:rowOrder="146">
+          <CNTRY_CD>HTI</CNTRY_CD>
+          <NAME>Haiti</NAME>
+          <AREA_CD>509</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd148" msdata:rowOrder="147">
+          <CNTRY_CD>KIR</CNTRY_CD>
+          <NAME>Kiribati</NAME>
+          <AREA_CD>686</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd149" msdata:rowOrder="148">
+          <CNTRY_CD>AIA</CNTRY_CD>
+          <NAME>Anguilla</NAME>
+          <AREA_CD>1264</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd150" msdata:rowOrder="149">
+          <CNTRY_CD>COD</CNTRY_CD>
+          <NAME>Congo (Democratische Republiek)</NAME>
+          <AREA_CD>243</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd151" msdata:rowOrder="150">
+          <CNTRY_CD>KNA</CNTRY_CD>
+          <NAME>St. Kitts en Nevis</NAME>
+          <AREA_CD>1869</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd152" msdata:rowOrder="151">
+          <CNTRY_CD>LCA</CNTRY_CD>
+          <NAME>St. Lucia</NAME>
+          <AREA_CD>1758</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd153" msdata:rowOrder="152">
+          <CNTRY_CD>MYT</CNTRY_CD>
+          <NAME>Mayotte</NAME>
+          <AREA_CD>2696</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd154" msdata:rowOrder="153">
+          <CNTRY_CD>NIU</CNTRY_CD>
+          <NAME>Niue</NAME>
+          <AREA_CD>683</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd155" msdata:rowOrder="154">
+          <CNTRY_CD>NRU</CNTRY_CD>
+          <NAME>Nauru</NAME>
+          <AREA_CD>674</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd156" msdata:rowOrder="155">
+          <CNTRY_CD>PRI</CNTRY_CD>
+          <NAME>Puerto Rico</NAME>
+          <AREA_CD>1787</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd157" msdata:rowOrder="156">
+          <CNTRY_CD>SHN</CNTRY_CD>
+          <NAME>St. Helena en Tristan da Cunha</NAME>
+          <AREA_CD>290</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd158" msdata:rowOrder="157">
+          <CNTRY_CD>SOM</CNTRY_CD>
+          <NAME>Somalie</NAME>
+          <AREA_CD>252</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd159" msdata:rowOrder="158">
+          <CNTRY_CD>SPM</CNTRY_CD>
+          <NAME>St. Pierre en Miquelon</NAME>
+          <AREA_CD>508</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd160" msdata:rowOrder="159">
+          <CNTRY_CD>TKL</CNTRY_CD>
+          <NAME>Tokelau Eilanden</NAME>
+          <AREA_CD>690</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd161" msdata:rowOrder="160">
+          <CNTRY_CD>TUV</CNTRY_CD>
+          <NAME>Tuvalu</NAME>
+          <AREA_CD>688</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd162" msdata:rowOrder="161">
+          <CNTRY_CD>VCT</CNTRY_CD>
+          <NAME>St. Vincent en de Grenadines</NAME>
+          <AREA_CD>1784</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd163" msdata:rowOrder="162">
+          <CNTRY_CD>VIR</CNTRY_CD>
+          <NAME>V.S Maagden Eilanden</NAME>
+          <AREA_CD>1340</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd164" msdata:rowOrder="163">
+          <CNTRY_CD>WLF</CNTRY_CD>
+          <NAME>Wallis &amp; Futuna</NAME>
+          <AREA_CD>681</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd165" msdata:rowOrder="164">
+          <CNTRY_CD>WSM</CNTRY_CD>
+          <NAME>Samoa</NAME>
+          <AREA_CD>685</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd166" msdata:rowOrder="165">
+          <CNTRY_CD>FSM</CNTRY_CD>
+          <NAME>Micronesia</NAME>
+          <AREA_CD>691</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd167" msdata:rowOrder="166">
+          <CNTRY_CD>MHL</CNTRY_CD>
+          <NAME>Marshall eilanden</NAME>
+          <AREA_CD>692</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd168" msdata:rowOrder="167">
+          <CNTRY_CD>ATA</CNTRY_CD>
+          <NAME>Antarctica</NAME>
+          <AREA_CD>6721</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd169" msdata:rowOrder="168">
+          <CNTRY_CD>MTQ</CNTRY_CD>
+          <NAME>Martinique</NAME>
+          <AREA_CD>596</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd170" msdata:rowOrder="169">
+          <CNTRY_CD>REU</CNTRY_CD>
+          <NAME>La Reunion</NAME>
+          <AREA_CD>262</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd171" msdata:rowOrder="170">
+          <CNTRY_CD>CCK</CNTRY_CD>
+          <NAME>Cocos</NAME>
+          <AREA_CD>61</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd172" msdata:rowOrder="171">
+          <CNTRY_CD>DMA</CNTRY_CD>
+          <NAME>Dominica (Republiek)</NAME>
+          <AREA_CD>1767</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd173" msdata:rowOrder="172">
+          <CNTRY_CD>IMN</CNTRY_CD>
+          <NAME>Eiland Man</NAME>
+          <AREA_CD>44</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd174" msdata:rowOrder="173">
+          <CNTRY_CD>PYF</CNTRY_CD>
+          <NAME>Frans-Polynesië</NAME>
+          <AREA_CD>689</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd175" msdata:rowOrder="174">
+          <CNTRY_CD>XKX</CNTRY_CD>
+          <NAME>Kosovo</NAME>
+          <AREA_CD>381</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd176" msdata:rowOrder="175">
+          <CNTRY_CD>MNE</CNTRY_CD>
+          <NAME>Montenegro (Republiek)</NAME>
+          <AREA_CD>382</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd177" msdata:rowOrder="176">
+          <CNTRY_CD>MMR</CNTRY_CD>
+          <NAME>Myanmar (Unie)</NAME>
+          <AREA_CD>95</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd178" msdata:rowOrder="177">
+          <CNTRY_CD>MNP</CNTRY_CD>
+          <NAME>Noordelijke Marianen</NAME>
+          <AREA_CD>0</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd179" msdata:rowOrder="178">
+          <CNTRY_CD>PCN</CNTRY_CD>
+          <NAME>Pitcairn</NAME>
+          <AREA_CD>870</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd180" msdata:rowOrder="179">
+          <CNTRY_CD>ATF</CNTRY_CD>
+          <NAME>Franse Zuidelijke Gebieden</NAME>
+          <AREA_CD>689</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd181" msdata:rowOrder="180">
+          <CNTRY_CD>BLM</CNTRY_CD>
+          <NAME>Saint-Barthélemy</NAME>
+          <AREA_CD>590</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd182" msdata:rowOrder="181">
+          <CNTRY_CD>MAF</CNTRY_CD>
+          <NAME>Sint-Maarten (Frans deel)</NAME>
+          <AREA_CD>1599</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd183" msdata:rowOrder="182">
+          <CNTRY_CD>VUT</CNTRY_CD>
+          <NAME>Vanuatu (Republiek)</NAME>
+          <AREA_CD>678</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd184" msdata:rowOrder="183">
+          <CNTRY_CD>VAT</CNTRY_CD>
+          <NAME>Vaticaan</NAME>
+          <AREA_CD>39</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd185" msdata:rowOrder="184">
+          <CNTRY_CD>PRK</CNTRY_CD>
+          <NAME>Noord-Korea</NAME>
+          <AREA_CD>850</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd186" msdata:rowOrder="185">
+          <CNTRY_CD>IOT</CNTRY_CD>
+          <NAME>Diego Garcia</NAME>
+          <AREA_CD>246</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd187" msdata:rowOrder="186">
+          <CNTRY_CD>JEY</CNTRY_CD>
+          <NAME>Jersey</NAME>
+          <AREA_CD>44</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd188" msdata:rowOrder="187">
+          <CNTRY_CD>SJM</CNTRY_CD>
+          <NAME>Spitsbergen en Jan Mayen</NAME>
+          <AREA_CD>47</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd189" msdata:rowOrder="188">
+          <CNTRY_CD>SMR</CNTRY_CD>
+          <NAME>San Marino (Republiek)</NAME>
+          <AREA_CD>378</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd190" msdata:rowOrder="189">
+          <CNTRY_CD>TCA</CNTRY_CD>
+          <NAME>Turks- en Caicoseilanden</NAME>
+          <AREA_CD>1649</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd191" msdata:rowOrder="190">
+          <CNTRY_CD>SSD</CNTRY_CD>
+          <NAME>Zuid-Soedan</NAME>
+          <AREA_CD>211</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd192" msdata:rowOrder="191">
+          <CNTRY_CD>SXM</CNTRY_CD>
+          <NAME>Sint Maarten (Nederlands deel)</NAME>
+          <AREA_CD>0</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd193" msdata:rowOrder="192">
+          <CNTRY_CD>NLD</CNTRY_CD>
+          <NAME>Netherlands</NAME>
+          <AREA_CD>31</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd194" msdata:rowOrder="193">
+          <CNTRY_CD>US</CNTRY_CD>
+          <NAME>USA</NAME>
+          <AREA_CD>1</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd195" msdata:rowOrder="194">
+          <CNTRY_CD>ESP</CNTRY_CD>
+          <NAME>Spanje</NAME>
+          <AREA_CD>34</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd196" msdata:rowOrder="195">
+          <CNTRY_CD>ABW</CNTRY_CD>
+          <NAME>Aruba</NAME>
+          <AREA_CD>297</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd197" msdata:rowOrder="196">
+          <CNTRY_CD>AFG</CNTRY_CD>
+          <NAME>Afghanistan</NAME>
+          <AREA_CD>93</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd198" msdata:rowOrder="197">
+          <CNTRY_CD>AGO</CNTRY_CD>
+          <NAME>Angola</NAME>
+          <AREA_CD>244</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd199" msdata:rowOrder="198">
+          <CNTRY_CD>ALB</CNTRY_CD>
+          <NAME>Albanië</NAME>
+          <AREA_CD>355</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd200" msdata:rowOrder="199">
+          <CNTRY_CD>AND</CNTRY_CD>
+          <NAME>Andorra</NAME>
+          <AREA_CD>376</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd201" msdata:rowOrder="200">
+          <CNTRY_CD>CUW</CNTRY_CD>
+          <NAME>Curaçao</NAME>
+          <AREA_CD>599</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd202" msdata:rowOrder="201">
+          <CNTRY_CD>ARE</CNTRY_CD>
+          <NAME>Verenigde Arabische Emiraten</NAME>
+          <AREA_CD>971</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd203" msdata:rowOrder="202">
+          <CNTRY_CD>ARG</CNTRY_CD>
+          <NAME>Argentinie</NAME>
+          <AREA_CD>54</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd204" msdata:rowOrder="203">
+          <CNTRY_CD>ARM</CNTRY_CD>
+          <NAME>Armenie</NAME>
+          <AREA_CD>374</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd205" msdata:rowOrder="204">
+          <CNTRY_CD>ASM</CNTRY_CD>
+          <NAME>Amerikaans Samoa</NAME>
+          <AREA_CD>1684</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd206" msdata:rowOrder="205">
+          <CNTRY_CD>AUS</CNTRY_CD>
+          <NAME>Australie</NAME>
+          <AREA_CD>61</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd207" msdata:rowOrder="206">
+          <CNTRY_CD>AUT</CNTRY_CD>
+          <NAME>Oostenrijk</NAME>
+          <AREA_CD>43</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd208" msdata:rowOrder="207">
+          <CNTRY_CD>AZE</CNTRY_CD>
+          <NAME>Azerbeidzjan</NAME>
+          <AREA_CD>994</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd209" msdata:rowOrder="208">
+          <CNTRY_CD>BDI</CNTRY_CD>
+          <NAME>Burundi</NAME>
+          <AREA_CD>257</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd210" msdata:rowOrder="209">
+          <CNTRY_CD>BEL</CNTRY_CD>
+          <NAME>Belgie</NAME>
+          <AREA_CD>32</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd211" msdata:rowOrder="210">
+          <CNTRY_CD>BEN</CNTRY_CD>
+          <NAME>Benin</NAME>
+          <AREA_CD>229</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd212" msdata:rowOrder="211">
+          <CNTRY_CD>BFA</CNTRY_CD>
+          <NAME>Burkina Faso</NAME>
+          <AREA_CD>226</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd213" msdata:rowOrder="212">
+          <CNTRY_CD>BGD</CNTRY_CD>
+          <NAME>Bangladesh</NAME>
+          <AREA_CD>880</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd214" msdata:rowOrder="213">
+          <CNTRY_CD>BGR</CNTRY_CD>
+          <NAME>Bulgarije</NAME>
+          <AREA_CD>359</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd215" msdata:rowOrder="214">
+          <CNTRY_CD>BHR</CNTRY_CD>
+          <NAME>Bahrein</NAME>
+          <AREA_CD>973</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd216" msdata:rowOrder="215">
+          <CNTRY_CD>BHS</CNTRY_CD>
+          <NAME>Bahama's</NAME>
+          <AREA_CD>1242</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd217" msdata:rowOrder="216">
+          <CNTRY_CD>BIH</CNTRY_CD>
+          <NAME>Bosnie / Herzegovina</NAME>
+          <AREA_CD>387</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd218" msdata:rowOrder="217">
+          <CNTRY_CD>BLR</CNTRY_CD>
+          <NAME>Wit-Rusland</NAME>
+          <AREA_CD>375</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd219" msdata:rowOrder="218">
+          <CNTRY_CD>BLZ</CNTRY_CD>
+          <NAME>Belize</NAME>
+          <AREA_CD>501</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd220" msdata:rowOrder="219">
+          <CNTRY_CD>BMU</CNTRY_CD>
+          <NAME>Bermuda</NAME>
+          <AREA_CD>1441</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd221" msdata:rowOrder="220">
+          <CNTRY_CD>BOL</CNTRY_CD>
+          <NAME>Bolivia</NAME>
+          <AREA_CD>591</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd222" msdata:rowOrder="221">
+          <CNTRY_CD>BRA</CNTRY_CD>
+          <NAME>Brazilie</NAME>
+          <AREA_CD>55</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd223" msdata:rowOrder="222">
+          <CNTRY_CD>BRN</CNTRY_CD>
+          <NAME>Brunei</NAME>
+          <AREA_CD>673</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd224" msdata:rowOrder="223">
+          <CNTRY_CD>BTN</CNTRY_CD>
+          <NAME>Bhutan</NAME>
+          <AREA_CD>975</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd225" msdata:rowOrder="224">
+          <CNTRY_CD>BWA</CNTRY_CD>
+          <NAME>Botswana</NAME>
+          <AREA_CD>267</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd226" msdata:rowOrder="225">
+          <CNTRY_CD>CAF</CNTRY_CD>
+          <NAME>Centraal Afrika</NAME>
+          <AREA_CD>236</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd227" msdata:rowOrder="226">
+          <CNTRY_CD>CAN</CNTRY_CD>
+          <NAME>Canada</NAME>
+          <AREA_CD>1</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd228" msdata:rowOrder="227">
+          <CNTRY_CD>CHE</CNTRY_CD>
+          <NAME>Zwitserland</NAME>
+          <AREA_CD>41</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd229" msdata:rowOrder="228">
+          <CNTRY_CD>CHL</CNTRY_CD>
+          <NAME>Chili</NAME>
+          <AREA_CD>56</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd230" msdata:rowOrder="229">
+          <CNTRY_CD>CHN</CNTRY_CD>
+          <NAME>China</NAME>
+          <AREA_CD>86</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd231" msdata:rowOrder="230">
+          <CNTRY_CD>CIV</CNTRY_CD>
+          <NAME>Ivoorkust</NAME>
+          <AREA_CD>255</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd232" msdata:rowOrder="231">
+          <CNTRY_CD>CMR</CNTRY_CD>
+          <NAME>Kameroen</NAME>
+          <AREA_CD>237</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd233" msdata:rowOrder="232">
+          <CNTRY_CD>ALA</CNTRY_CD>
+          <NAME>Åland</NAME>
+          <AREA_CD>358</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd234" msdata:rowOrder="233">
+          <CNTRY_CD>COG</CNTRY_CD>
+          <NAME>Congo-Brazzavilla</NAME>
+          <AREA_CD>242</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd235" msdata:rowOrder="234">
+          <CNTRY_CD>COK</CNTRY_CD>
+          <NAME>Cook Eilanden</NAME>
+          <AREA_CD>682</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd236" msdata:rowOrder="235">
+          <CNTRY_CD>COL</CNTRY_CD>
+          <NAME>Colombia</NAME>
+          <AREA_CD>57</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd237" msdata:rowOrder="236">
+          <CNTRY_CD>COM</CNTRY_CD>
+          <NAME>Comoren</NAME>
+          <AREA_CD>269</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd238" msdata:rowOrder="237">
+          <CNTRY_CD>CPV</CNTRY_CD>
+          <NAME>Kaap Verde</NAME>
+          <AREA_CD>238</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd239" msdata:rowOrder="238">
+          <CNTRY_CD>CRI</CNTRY_CD>
+          <NAME>Costa Rica</NAME>
+          <AREA_CD>506</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd240" msdata:rowOrder="239">
+          <CNTRY_CD>CUB</CNTRY_CD>
+          <NAME>Cuba</NAME>
+          <AREA_CD>53</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd241" msdata:rowOrder="240">
+          <CNTRY_CD>CYP</CNTRY_CD>
+          <NAME>Cyprus</NAME>
+          <AREA_CD>357</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd242" msdata:rowOrder="241">
+          <CNTRY_CD>CZE</CNTRY_CD>
+          <NAME>Tsjechie</NAME>
+          <AREA_CD>420</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd243" msdata:rowOrder="242">
+          <CNTRY_CD>DEU</CNTRY_CD>
+          <NAME>Duitsland</NAME>
+          <AREA_CD>49</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd244" msdata:rowOrder="243">
+          <CNTRY_CD>DJI</CNTRY_CD>
+          <NAME>Djibouti</NAME>
+          <AREA_CD>253</AREA_CD>
+        </trnCountryCd>
+        <trnCountryCd diffgr:id="trnCountryCd245" msdata:rowOrder="244">
+          <CNTRY_CD>DNK</CNTRY_CD>
+          <NAME>Denemarken</NAME>
+          <AREA_CD>45</AREA_CD>
+        </trnCountryCd>
+      </DocumentElement>
+    </diffgr:diffgram>
+  </TranslationData>
+  <DataRowsHeight>20</DataRowsHeight>
+</Translation>

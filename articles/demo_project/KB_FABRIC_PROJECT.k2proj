@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>KB_FABRIC_PROJECT</Name>
+  <CreateDate>2020-03-19T17:18:29.6060846+02:00</CreateDate>
+  <ProductVersion>6.2.0.7</ProductVersion>
+  <Mdm>false</Mdm>
+  <ProjectHasDiagramBinFiles>false</ProjectHasDiagramBinFiles>
+  <DataChangeIndicators>
+    <DataChange name="Search" enabled="true">
+      <Options>
+        <option>keyword</option>
+        <option>data</option>
+        <option>date</option>
+      </Options>
+    </DataChange>
+  </DataChangeIndicators>
+</Project>

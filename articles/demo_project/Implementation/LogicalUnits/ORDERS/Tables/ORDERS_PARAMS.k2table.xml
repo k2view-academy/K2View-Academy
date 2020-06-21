@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ORDERS_PARAMS</Name>
+  <ID>tbl_ORDERS_PARAMS</ID>
+  <Columns>
+    <Column name="IID" id="tblCol_93c66459c5bd406090bb15b458cc7f35" index="0" datatype="text" />
+    <Column name="NO_OF_MSISNDNS" id="tblCol_d30c15c092a24e0ab8d5a858831c71ec" index="1" datatype="text" />
+    <Column name="NO_OF_CONTRACTS" id="tblCol_e964f72c81004bb3a702a5be67c995a9" index="2" datatype="text" />
+    <Column name="NO_OF_OPEN_ORDERS" id="tblCol_460060ab06e9417bba66710726b477e7" index="3" datatype="text" />
+    <Column name="NO_OF_CLOSED_ORDERS" id="tblCol_09c1ebbbcb9549d894f47bd835b63373" index="4" datatype="text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList>
+    <Enrichment>
+      <Name>fnEnrichmentOrderParam</Name>
+      <Type>Function</Type>
+      <TableName>ORDERS_PARAMS</TableName>
+    </Enrichment>
+  </EnrichmentList>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

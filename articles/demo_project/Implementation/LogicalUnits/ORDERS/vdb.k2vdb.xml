@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VirtualDB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.1.0.17">
+  <Name>vdb</Name>
+  <RootView>ORDERS_DUMMY_ROOT</RootView>
+  <LuLazyDataUpdate syncMethod="None" performEvery="1.00:00:00" />
+  <IidFinderProp>
+    <OrderValidationTime>00:05:00</OrderValidationTime>
+    <HistoryStoreTime>7.00:00:00</HistoryStoreTime>
+    <DeltaSyncMethod>TimeInterval</DeltaSyncMethod>
+    <DeltaSyncTimeInterval>00:00:00</DeltaSyncTimeInterval>
+  </IidFinderProp>
+  <Tables>
+    <Table>CONTRACT</Table>
+    <Table>orders</Table>
+    <Table>ORDERS_DUMMY_ROOT</Table>
+    <Table>ORDERS_PARAMS</Table>
+    <Table>ORDERS_SUMMARY</Table>
+  </Tables>
+  <TablesProperties>
+    <TableProperties name="CONTRACT">
+      <Populations>
+        <Population id="query_CONTRACT" name="query_CONTRACT" order="3" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="orders">
+      <Populations>
+        <Population id="query_public_orders" name="query_public_orders" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="ORDERS_DUMMY_ROOT">
+      <Populations>
+        <Population id="fnPopOrdersRoot" name="fnPopOrdersRoot" order="1" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="ORDERS_PARAMS">
+      <Populations>
+        <Population id="popOrdersParams" name="popOrdersParams" order="2" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+    <TableProperties name="ORDERS_SUMMARY">
+      <Populations>
+        <Population id="popOrderSummary" name="popOrderSummary" order="3" disabled="false" enrichment="false" />
+        <Population id="popUpdOrdersSummary" name="popUpdOrdersSummary" order="4" disabled="false" enrichment="false" />
+      </Populations>
+    </TableProperties>
+  </TablesProperties>
+  <EnrichmentsOrderList>
+    <Item order="1" active="true" name="CONTRACT" columnName="fnEnrichContract" type="Table" />
+    <Item order="2" active="true" name="ORDERS_PARAMS" columnName="fnEnrichmentOrderParam" type="Table" />
+  </EnrichmentsOrderList>
+  <ReferencesList />
+  <Relations />
+  <DatabaseRelations>
+    <Relation>
+      <From tableType="TableObject" table="ORDERS_DUMMY_ROOT" column="ORDER_TYPE" columnId="tblCol_b9c4f4d2fac84897bf52fcd577e54fdb" />
+      <To tableType="TableObject" table="orders" populationObjectName="query_public_orders" column="order_type" columnId="queryCol_2" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="orders" column="contract_id" columnId="tblCol_8e20d8688e884f42a10edf84cbd4f293" />
+      <To tableType="TableObject" table="CONTRACT" populationObjectName="query_CONTRACT" column="CONTRACT_ID" columnId="queryCol_1" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="orders" column="order_type" columnId="tblCol_91795f37ad1241a2a77b47b642dd1c67" />
+      <To tableType="TableObject" table="ORDERS_SUMMARY" populationObjectName="popOrderSummary" column="ORDER_TYPE" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="orders" column="order_type" columnId="tblCol_91795f37ad1241a2a77b47b642dd1c67" />
+      <To tableType="TableObject" table="ORDERS_SUMMARY" populationObjectName="popUpdOrdersSummary" column="ORDER_TYPE" columnId="queryCol_0" />
+    </Relation>
+    <Relation>
+      <From tableType="TableObject" table="ORDERS_DUMMY_ROOT" column="IID" columnId="tblCol_45b34d701b314a82abf87801e3a4e662" />
+      <To tableType="TableObject" table="ORDERS_PARAMS" populationObjectName="popOrdersParams" column="IID" columnId="fi_8.0" />
+    </Relation>
+  </DatabaseRelations>
+  <PreVCsSqlScript />
+  <PostVCsSqlScript />
+  <Indexes />
+  <LudbProperties />
+  <DiagramGraph>
+    <Graph version="6.1.0.17" name="vdb.k2vdb.xml">
+      <Node name="ORDERS_DUMMY_ROOT" pos="11 89" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="orders" pos="313 214" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="CONTRACT" pos="615 114" size="257 136" listGroupSize="250 100" viewType="Table" />
+      <Node name="ORDERS_SUMMARY" pos="617 358" size="257 152" listGroupSize="250 100" viewType="Table" />
+      <Node name="ORDERS_PARAMS" pos="48 361" size="257 136" listGroupSize="250 100" viewType="Table" />
+    </Graph>
+  </DiagramGraph>
+</VirtualDB>

@@ -1,0 +1,17 @@
+VirtualDB_Data
+.git
+.classpath
+.project
+_srcDynamic
+_bin
+_config
+ludb.jar
+ludb.json
+ludb.zip
+ludbXMLs.zip
+*.xml.tmp
+out
+.idea
+*.iml
+.studio
+FabricHome

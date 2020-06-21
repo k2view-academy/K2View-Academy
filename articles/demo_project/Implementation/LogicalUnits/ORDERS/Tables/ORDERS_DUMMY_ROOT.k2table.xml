@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ORDERS_DUMMY_ROOT</Name>
+  <ID>tbl_ORDERS_DUMMY_ROOT</ID>
+  <EntityId>tblCol_45b34d701b314a82abf87801e3a4e662</EntityId>
+  <Columns>
+    <Column name="IID" id="tblCol_45b34d701b314a82abf87801e3a4e662" index="0" datatype="text" />
+    <Column name="ORDER_TYPE" id="tblCol_b9c4f4d2fac84897bf52fcd577e54fdb" index="1" datatype="text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

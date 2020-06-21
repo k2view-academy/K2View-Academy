@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>popAddressCust</ID>
+  <PopulationObjectName>popAddressCust</PopulationObjectName>
+  <TableName>ADDRESS</TableName>
+  <RootItemID>query_query_CRM_DB_ADDRESS</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="CUSTOMER_ID" id="queryCol_0" dataType="Real" index="0" />
+    <Arg name="ADDRESS_ID" id="queryCol_1" dataType="Real" index="1" />
+    <Arg name="STREET_ADDRESS_1" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="STREET_ADDRESS_2" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="CITY" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="ZIP" id="queryCol_5" dataType="Text" index="5" />
+    <Arg name="STATE" id="queryCol_6" dataType="Text" index="6" />
+    <Arg name="COUNTRY" id="queryCol_7" dataType="Text" index="7" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_CRM_DB_ADDRESS" name="query_ADDRESS" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="CUSTOMER_ID" dataType="Real" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="ADDRESS_ID" dataType="Real" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="STREET_ADDRESS_1" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="STREET_ADDRESS_2" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="CITY" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="ZIP" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="STATE" dataType="Text" index="6" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_7" name="COUNTRY" dataType="Text" index="7" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM CRM_DB.ADDRESS]]></SQL>
+    </Item>
+    <Item xsi:type="ConstantDataSave" id="c.56" nodeOrder="0" module="Constant" mapObjectModule="Constant">
+      <Value><![CDATA[CUST]]></Value>
+    </Item>
+    <Item xsi:type="TranslationDiagramItemDataSave" id="f_31" name="trnCountryCd" nodeOrder="1" module="Translation" mapObjectModule="Translation" fileName="trnCountryCd.k2trans.xml">
+      <InputsList>
+        <Input id="fi_31.0" name="CNTRY_CD" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_31.0" name="NAME" />
+        <Output id="fo_31.1" name="AREA_CD" />
+      </OutputsList>
+    </Item>
+    <Item xsi:type="LookupDataSave" id="tblLookup.38" name="CUSTOMER" nodeOrder="1" module="Lookup" mapObjectModule="Lookup" alias="" itemType="Table" lookupNotFound="Reject_Record" isReference="false" cacheLookupValues="false">
+      <InputsList>
+        <Input xsi:type="LookupDataSaveColumnInput" id="tblLookup.38.in.CUSTOMER_ID" name="CUSTOMER_ID" columnID="tblCol_bbaacbe5c07346ebb750f3362ead1204" />
+      </InputsList>
+      <OutputsList>
+        <Output xsi:type="LookupDataSaveColumn" id="tblLookup.38.out.SSN" name="SSN" columnID="tblCol_b88d042bd4aa48159e6202cd02a92c25" />
+      </OutputsList>
+    </Item>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_99" name="k2_ifNull" nodeOrder="2" module="Function" mapObjectModule="Function" fileName="k2_ifNull.k2function.xml">
+      <InputsList>
+        <Input id="fi_99.0" name="input" />
+        <Input id="fi_99.1" name="value" defaultValue="9999999" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_99.0" name="output" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="53" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_0" toItemID="tbl_ADDRESS" toColID="tblCol_9d8de8de3129428895674b122fa6c24b" />
+    <Link partId="58" fromNodeOrder="0" fromItemID="c.56" fromColID="c.56" toItemID="tbl_ADDRESS" toColID="tblCol_b8f6bd15e82046e59ab1b9985a0d6811" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_1" toItemID="tbl_ADDRESS" toColID="tblCol_3bff0575e83541edac7b12113755a1ff" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_2" toItemID="tbl_ADDRESS" toColID="tblCol_1d2d83d0dce24b6383c2df6d0868dd26" />
+    <Link partId="26" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_3" toItemID="tbl_ADDRESS" toColID="tblCol_caa02ba617824263bb89ec62fe8445cc" />
+    <Link partId="27" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_4" toItemID="tbl_ADDRESS" toColID="tblCol_5f840f9a385b4678a26f14a8e8c0bfd1" />
+    <Link partId="28" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_5" toItemID="tbl_ADDRESS" toColID="tblCol_95ea589a6a764d77a1030b6afb9f5d46" />
+    <Link partId="29" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_6" toItemID="tbl_ADDRESS" toColID="tblCol_847a85ca480e48de9d83ccb908e2a264" />
+    <Link partId="30" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_7" toItemID="tbl_ADDRESS" toColID="tblCol_f3eed14b84514f5ea155d8238bd90d8c" />
+    <Link partId="36" fromNodeOrder="1" fromItemID="f_31" fromColID="fo_31.0" toItemID="tbl_ADDRESS" toColID="tblCol_e051cc96044f4cfe8f57dd4f820f8ca0" />
+    <Link partId="35" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_7" toItemID="f_31" toColID="fi_31.0" />
+    <Link partId="37" fromNodeOrder="1" fromItemID="f_31" fromColID="fo_31.1" toItemID="tbl_ADDRESS" toColID="tblCol_8f9027c04a4c476aa57f1079786e0287" />
+    <Link partId="103" fromNodeOrder="2" fromItemID="f_99" fromColID="fo_99.0" toItemID="tbl_ADDRESS" toColID="tblCol_202a3a3ec9ea41ebbbd26d8b4dcfde5e" />
+    <Link partId="55" fromNodeOrder="1" fromItemID="tblLookup.38" fromColID="tblLookup.38.out.SSN" toItemID="f_99" toColID="fi_99.0" />
+    <Link partId="54" fromNodeOrder="0" fromItemID="query_query_CRM_DB_ADDRESS" fromColID="queryCol_0" toItemID="tblLookup.38" toColID="tblLookup.38.in.CUSTOMER_ID" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="ADDRESS.popAddressCust.k2tablePop.xml" lastPartID="146">
+      <TableNode partID="0" name="ADDRESS" pos="854 76.5260544" width="253" />
+      <DBQueryNode partID="15" name="CRM_DB" pos="10 96.70834" size="253 156.583313" isRoot="true">
+        <DBQuery>{"Name":"query_ADDRESS","ID":"query_query_CRM_DB_ADDRESS","ConnName":"CRM_DB","SQL":"SELECT * FROM CRM_DB.ADDRESS","ColumnsList":[{"ID":"queryCol_0","Name":"CUSTOMER_ID","DataType":"Real","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"ADDRESS_ID","DataType":"Real","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"STREET_ADDRESS_1","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"STREET_ADDRESS_2","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"CITY","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"ZIP","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"STATE","DataType":"Text","Index":6,"IsInputArgument":true},{"ID":"queryCol_7","Name":"COUNTRY","DataType":"Text","Index":7,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <TranslationMapNode id="0" L0="3" R0="4" R1="5" partID="31" topLabel="trnCountryCd (31)" pos="330 275.3815" size="206 49.237">
+        <TranslationItem>{"ID":"f_31","Name":"trnCountryCd","InputNotFoundAction":2,"ListSchemaItems":[{"Title":"CNTRY_CD","ColumnName":"CNTRY_CD","Direction":0,"Type":"Text","Length":10,"Format":"","ID":"fi_31.0","Index":0,"AllowNULL":true,"GridColumnProperties":{"Width":100}},{"Title":"NAME","ColumnName":"NAME","Direction":1,"Type":"Text","Length":100,"Format":"","ID":"fo_31.0","Index":0,"DefaultValueIsExpression":false,"AllowNULL":true,"GridColumnProperties":{"Width":100}},{"Title":"AREA_CD","ColumnName":"AREA_CD","Direction":1,"Type":"Integer","Length":10,"Format":"","ID":"fo_31.1","Index":1,"DefaultValueIsExpression":false,"AllowNULL":true,"GridColumnProperties":{"Width":81}}],"IsImportFromSQL":false,"IsDynamicData":false,"DynamicDbConnName":"","DynamicSqlQuery":"","ImportFileMapList":[],"DataRowsHeight":20}</TranslationItem>
+      </TranslationMapNode>
+      <LUDBLookupMapNode id="1" L0="6" L1="7" L2="8" L3="9" L4="10" L5="11" L6="12" R0="13" R1="14" R2="15" R3="16" R4="17" R5="18" R6="19" partID="38" topLabel="CUSTOMER (38)" pos="308 363.963531" size="250 72.0729141" isMinimized="true" itemType="Table">
+        <LUDBLookupItem>{"ID":"tblLookup.38","Name":"CUSTOMER","Alias":"","ItemType":3,"IsReference":false,"LookupNotFound":0,"CacheLookupValues":false,"InputColumnsMapList":[{"ID":"tblLookup.38.in.CUSTOMER_ID","Name":"CUSTOMER_ID","ColumnID":"tblCol_bbaacbe5c07346ebb750f3362ead1204","DataType":"Real","Index":0,"Mandatory":true,"MapIndex":0},{"ID":"tblLookup.38.in.SSN","Name":"SSN","ColumnID":"tblCol_b88d042bd4aa48159e6202cd02a92c25","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1},{"ID":"tblLookup.38.in.FIRST_NAME","Name":"FIRST_NAME","ColumnID":"tblCol_ad7397ad391b43dd9e7f0a4f6907b833","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":2},{"ID":"tblLookup.38.in.LAST_NAME","Name":"LAST_NAME","ColumnID":"tblCol_a593527821944e6f94f481867dd94287","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":3},{"ID":"tblLookup.38.in.CONTR_CNT","Name":"CONTR_CNT","ColumnID":"tblCol_3b512f74d0e24044a3352b2d5461fc89","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":4},{"ID":"tblLookup.38.in.ROAM_CONTR_CNT","Name":"ROAM_CONTR_CNT","ColumnID":"tblCol_9a1f4cb76c7d4c5d94de7bc07e6ee47e","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":5},{"ID":"tblLookup.38.in.UNLIM_CONTR_CNT","Name":"UNLIM_CONTR_CNT","ColumnID":"tblCol_cb15366888e74f1badd40a55aac31d01","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":6}],"OutputColumnsMapList":[{"ID":"tblLookup.38.out.CUSTOMER_ID","Name":"CUSTOMER_ID","ColumnID":"tblCol_bbaacbe5c07346ebb750f3362ead1204","DataType":"Real","Index":0,"Mandatory":true,"MapIndex":0},{"ID":"tblLookup.38.out.SSN","Name":"SSN","ColumnID":"tblCol_b88d042bd4aa48159e6202cd02a92c25","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1},{"ID":"tblLookup.38.out.FIRST_NAME","Name":"FIRST_NAME","ColumnID":"tblCol_ad7397ad391b43dd9e7f0a4f6907b833","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":2},{"ID":"tblLookup.38.out.LAST_NAME","Name":"LAST_NAME","ColumnID":"tblCol_a593527821944e6f94f481867dd94287","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":3},{"ID":"tblLookup.38.out.CONTR_CNT","Name":"CONTR_CNT","ColumnID":"tblCol_3b512f74d0e24044a3352b2d5461fc89","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":4},{"ID":"tblLookup.38.out.ROAM_CONTR_CNT","Name":"ROAM_CONTR_CNT","ColumnID":"tblCol_9a1f4cb76c7d4c5d94de7bc07e6ee47e","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":5},{"ID":"tblLookup.38.out.UNLIM_CONTR_CNT","Name":"UNLIM_CONTR_CNT","ColumnID":"tblCol_cb15366888e74f1badd40a55aac31d01","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":6}]}</LUDBLookupItem>
+      </LUDBLookupMapNode>
+      <ConstantMapNode partID="56" topLabel="entity type" pos="664.8434 27.4544258" size="84.09204 45.0911446">
+        <KDataValue>{"ID":"c.56","DataValue":"CUST"}</KDataValue>
+      </ConstantMapNode>
+      <FunctionMapNode id="2" L0="20" L1="21" R0="22" partID="99" topLabel="k2_ifNull (99)" pos="603 325.3815" size="206 49.237" isRoot="false">
+        <KFunction>{"Name":"k2_ifNull","ID":"f_99","Category":"String","FunctionLevel":1,"FunctionType2":0,"ReturnType":"String","RegisterAsLuDbFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"when the input is null return the value entered, else return the input itself","Language":1,"FunctionBody":"","IsRootFunction":false,"inputParams":[{"Name":"input","ID":"fi_99.0","Index":0,"DataType":"String","Comment":""},{"Name":"value","ID":"fi_99.1","Index":1,"DataType":"String","Comment":"","MapDefaultValue":"9999999"}],"outputParams":[{"Name":"output","ID":"fo_99.0","Index":0,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="24" from="23" to="24" pointsArr="263 144.817719 273 144.817719 298 100 568 100 593 100 819 100 844 131.708344 854 131.708344" fromNodePartID="15" fromNodeColumnName="ADDRESS_ID" toNodePartID="0" toNodeColumnName="ADDRESS_ID" />
+      <Link partID="25" from="25" to="26" pointsArr="263 156.890625 273 156.890625 298 125 568 125 593 125 819 125 844 143.78125 854 143.78125" fromNodePartID="15" fromNodeColumnName="STREET_ADDRESS_1" toNodePartID="0" toNodeColumnName="STREET_ADDRESS_1" />
+      <Link partID="26" from="27" to="28" pointsArr="263 168.963547 273 168.963547 298 150 568 150 593 150 819 150 844 155.854172 854 155.854172" fromNodePartID="15" fromNodeColumnName="STREET_ADDRESS_2" toNodePartID="0" toNodeColumnName="STREET_ADDRESS_2" />
+      <Link partID="27" from="29" to="30" pointsArr="263 181.036453 273 181.036453 298 175 568 175 593 175 819 175 844 167.9271 854 167.9271" fromNodePartID="15" fromNodeColumnName="CITY" toNodePartID="0" toNodeColumnName="CITY" />
+      <Link partID="28" from="31" to="32" pointsArr="263 193.109375 273 193.109375 298 200 568 200 593 200 819 200 844 180 854 180" fromNodePartID="15" fromNodeColumnName="ZIP" toNodePartID="0" toNodeColumnName="ZIP" />
+      <Link partID="29" from="33" to="34" pointsArr="263 205.1823 273 205.1823 298 225 568 225 593 225 819 225 844 192.072937 854 192.072937" fromNodePartID="15" fromNodeColumnName="STATE" toNodePartID="0" toNodeColumnName="STATE" />
+      <Link partID="30" from="35" to="36" pointsArr="263 217.255219 273 217.255219 298 250 568 250 593 250 819 250 844 204.145844 854 204.145844" fromNodePartID="15" fromNodeColumnName="COUNTRY" toNodePartID="0" toNodeColumnName="COUNTRY" />
+      <Link partID="35" from="35" to="3" pointsArr="263 217.255219 273 217.255219 320 302.5456 330 302.5456" fromNodePartID="15" fromNodeColumnName="COUNTRY" toNodePartID="31" toNodeColumnName="CNTRY_CD" />
+      <Link partID="36" from="4" to="37" pointsArr="536 296.509125 546 296.509125 593 275 819 275 844 216.218781 854 216.218781" fromNodePartID="31" fromNodeColumnName="NAME" toNodePartID="0" toNodeColumnName="NAME" />
+      <Link partID="37" from="5" to="38" pointsArr="536 308.582031 546 308.582031 593 300 819 300 844 228.291687 854 228.291687" fromNodePartID="31" fromNodeColumnName="AREA_CD" toNodePartID="0" toNodeColumnName="AREA_CODE" />
+      <Link partID="53" from="39" to="40" pointsArr="263 132.7448 273 132.7448 298 0 568 0 593 0 819 0 844 107.562515 854 107.562515" fromNodePartID="15" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="ENTITY_ID" />
+      <Link partID="54" from="39" to="6" pointsArr="263 132.7448 273 132.7448 295 400 305 400" fromNodePartID="15" fromNodeColumnName="CUSTOMER_ID" toNodePartID="38" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="55" from="14" to="20" pointsArr="561 400 571 400 593 346.509125 603 346.509125" fromNodePartID="38" fromNodeColumnName="SSN" toNodePartID="99" toNodeColumnName="input" />
+      <Link partID="58" from="41" to="42" pointsArr="748.9354 52.54557 758.9354 52.54557 844 119.635429 854 119.635429" fromNodePartID="56" fromNodeColumnName="CUST" toNodePartID="0" toNodeColumnName="ENTITY_TYPE" />
+      <Link partID="103" from="22" to="43" pointsArr="809 352.5456 819 352.5456 844 240.3646 854 240.3646" fromNodePartID="99" fromNodeColumnName="output" toNodePartID="0" toNodeColumnName="CUSTOMER_SSN" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

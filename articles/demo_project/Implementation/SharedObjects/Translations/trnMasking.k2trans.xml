@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Translation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>trnMasking</Name>
+  <InputNotFoundAction>Reject_Record</InputNotFoundAction>
+  <SchemaColumns>
+    <Column>
+      <Title>INDEX</Title>
+      <ColumnName>INDEX</ColumnName>
+      <Direction>Input</Direction>
+      <Type>auto increment</Type>
+      <Length>10</Length>
+      <Format />
+      <Index>0</Index>
+      <DefaultValue />
+      <AllowNULL>true</AllowNULL>
+      <Comment>Auto Increment Index</Comment>
+      <GridColumnProperties width="59" />
+    </Column>
+    <Column>
+      <Title>TABLE_NAME</Title>
+      <ColumnName>TABLE_NAME</ColumnName>
+      <Direction>Output</Direction>
+      <Type>LUDB Table</Type>
+      <Length>50</Length>
+      <Format />
+      <Index>0</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <Comment>A Logical Unit's table name (IVV or VC).</Comment>
+      <GridColumnProperties width="120" />
+    </Column>
+    <Column>
+      <Title>FIELD_NAME</Title>
+      <ColumnName>FIELD_NAME</ColumnName>
+      <Direction>Output</Direction>
+      <Type>LUDB Column (based on TABLE_NAME)</Type>
+      <Length>50</Length>
+      <Format />
+      <Index>1</Index>
+      <DefaultValue />
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <Comment>A field from the TABLE_NAME table.</Comment>
+      <GridColumnProperties width="120" />
+    </Column>
+    <Column>
+      <Title>ENCRYPTION</Title>
+      <ColumnName>ENCRYPTION</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Project Function</Type>
+      <Length>50</Length>
+      <Format />
+      <Index>2</Index>
+      <DefaultValue />
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <Comment>The encryption number or function name to apply on the field.</Comment>
+      <GridColumnProperties width="120" />
+    </Column>
+    <Column>
+      <Title>PARAMETERS</Title>
+      <ColumnName>PARAMETERS</ColumnName>
+      <Direction>Output</Direction>
+      <Type>text</Type>
+      <Length>100</Length>
+      <Format />
+      <Index>3</Index>
+      <DefaultValue />
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <Comment>The list of parameters to pass to the function listed in ENCRYPTION</Comment>
+      <GridColumnProperties width="100" />
+    </Column>
+    <Column>
+      <Title>ACTIVE</Title>
+      <ColumnName>ACTIVE</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Boolean</Type>
+      <Length>1</Length>
+      <Format />
+      <Index>4</Index>
+      <DefaultValue />
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <Comment>Indicator if this rule is active (1) or not (0).</Comment>
+      <GridColumnProperties width="48" />
+    </Column>
+  </SchemaColumns>
+  <IsImportFromSQL>false</IsImportFromSQL>
+  <IsDynamicData>false</IsDynamicData>
+  <DynamicDbConnName />
+  <DynamicSqlQuery />
+  <ColumnMapping />
+  <TranslationData>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="trnMasking" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="trnMasking">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="INDEX" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" minOccurs="0" />
+                  <xs:element name="TABLE_NAME" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FIELD_NAME" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ENCRYPTION" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PARAMETERS" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ACTIVE" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1">
+          <xs:selector xpath=".//trnMasking" />
+          <xs:field xpath="INDEX" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1" />
+  </TranslationData>
+  <DataRowsHeight>22</DataRowsHeight>
+</Translation>

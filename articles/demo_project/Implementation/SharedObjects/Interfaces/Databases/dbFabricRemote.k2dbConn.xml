@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DBConn xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="DBConnGenericAdoJdbc" name="dbFabricRemote" type="genericdb" version="6.1.0.17">
+  <Active>true</Active>
+  <DataSource>10.21.1.76</DataSource>
+  <PortNum>5124</PortNum>
+  <DataBase />
+  <UserId>admin</UserId>
+  <Password>ZMTwde9KECCQAJs8v/7VoxfQwaecY92yqIH7l0Ua+Pk=:APmM5lUDpnCujjrJKjlflaY1kG6jZTJZR4V64BjV9yo=</Password>
+  <ConnectionStringServerSide>jdbc:fabric://10.21.1.76:5124/</ConnectionStringServerSide>
+  <MinConnectionsNumber>0</MinConnectionsNumber>
+  <MaxConnectionsNumber>60</MaxConnectionsNumber>
+  <UseSelectAsteriskInAutoCreatedQueries>true</UseSelectAsteriskInAutoCreatedQueries>
+  <AutomaticMetadataLoading>false</AutomaticMetadataLoading>
+  <OfflineMode>true</OfflineMode>
+  <CommandList />
+  <JdbcDriverName>fabric</JdbcDriverName>
+  <ConnectionProperties />
+</DBConn>

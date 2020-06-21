@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>refCustomerStatus</Name>
+  <ID>tbl_refCustomerStatus</ID>
+  <Columns>
+    <Column name="TZ" id="tblCol_d5ef98e3c3664c78a43860f64262a0b7" index="0" datatype="text" />
+    <Column name="STATUS" id="tblCol_09ecf7e685294e1a9d81f54d4bdc7188" index="1" datatype="text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="None" performEvery="1.00:00:00" syncWaitTimeout="60">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

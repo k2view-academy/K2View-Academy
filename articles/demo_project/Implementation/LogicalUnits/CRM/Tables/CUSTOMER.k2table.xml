@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>CUSTOMER</Name>
+  <ID>tbl_CUSTOMER</ID>
+  <EntityId>tblCol_bbaacbe5c07346ebb750f3362ead1204</EntityId>
+  <Columns>
+    <Column name="CUSTOMER_ID" id="tblCol_bbaacbe5c07346ebb750f3362ead1204" index="0" datatype="Real" mandatory="true" />
+    <Column name="SSN" id="tblCol_b88d042bd4aa48159e6202cd02a92c25" index="1" datatype="Text" />
+    <Column name="FIRST_NAME" id="tblCol_ad7397ad391b43dd9e7f0a4f6907b833" index="2" datatype="Text" />
+    <Column name="LAST_NAME" id="tblCol_a593527821944e6f94f481867dd94287" index="3" datatype="Text" />
+    <Column name="HAS_OPEN_CASES" id="tblCol_9ed4a2c3c65249dbb205a6a9eb4b5c1f" index="4" datatype="integer" columnType="ComputedField" />
+    <Column name="VALIDATIONS_NOT_PASSED" id="tblCol_d8a0f536a0c54114b889d5bebdc72c7b" index="5" datatype="integer" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_bbaacbe5c07346ebb750f3362ead1204" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

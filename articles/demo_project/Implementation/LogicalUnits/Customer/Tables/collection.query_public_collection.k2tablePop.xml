@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_public_collection</ID>
+  <PopulationObjectName>query_public_collection</PopulationObjectName>
+  <TableName>collection</TableName>
+  <RootItemID>query_query_public_collection</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="customer_id" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="collection_id" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="last_update" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="collection_status" id="queryCol_3" dataType="Text" index="3" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_public_collection" name="query_public_collection" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="COLLECTION_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="customer_id" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="collection_id" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="last_update" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="collection_status" dataType="Text" index="3" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM public.collection]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="12" fromNodeOrder="0" fromItemID="query_query_public_collection" fromColID="queryCol_0" toItemID="tbl_collection" toColID="tblCol_e13bea10cc6c46958b138a3bfb892f2d" />
+    <Link partId="13" fromNodeOrder="0" fromItemID="query_query_public_collection" fromColID="queryCol_1" toItemID="tbl_collection" toColID="tblCol_444bc6402e664893954b25416638810d" />
+    <Link partId="14" fromNodeOrder="0" fromItemID="query_query_public_collection" fromColID="queryCol_2" toItemID="tbl_collection" toColID="tblCol_de05bd05fabc404ab84afeea522eb2a9" />
+    <Link partId="15" fromNodeOrder="0" fromItemID="query_query_public_collection" fromColID="queryCol_3" toItemID="tbl_collection" toColID="tblCol_7a2f11df2154445d8a339dbbca3a6008" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="collection.query_public_collection.k2tablePop.xml" lastPartID="15">
+      <TableNode partID="0" name="collection" pos="383.000031 5.81771469" width="309.324158" />
+      <DBQueryNode partID="7" name="COLLECTION_DB" pos="10 0.854171753" size="253 108.291656" isRoot="true">
+        <DBQuery>{"Name":"query_public_collection","ID":"query_query_public_collection","ConnName":"COLLECTION_DB","SQL":"SELECT * FROM public.collection","ColumnsList":[{"ID":"queryCol_0","Name":"customer_id","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"collection_id","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"last_update","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"collection_status","DataType":"Text","Index":3,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="12" from="0" to="1" pointsArr="263 36.89063 273 36.89063 313 37 333 37 373.000031 36.85417 383.000031 36.85417" fromNodePartID="7" fromNodeColumnName="customer_id" toNodePartID="0" toNodeColumnName="customer_id" />
+      <Link partID="13" from="2" to="3" pointsArr="263 48.9635429 273 48.9635429 313 49 333 49 373.000031 48.9270859 383.000031 48.9270859" fromNodePartID="7" fromNodeColumnName="collection_id" toNodePartID="0" toNodeColumnName="collection_id" />
+      <Link partID="14" from="4" to="5" pointsArr="263 61.0364571 273 61.0364571 313 61 333 61 373.000031 61 383.000031 61" fromNodePartID="7" fromNodeColumnName="last_update" toNodePartID="0" toNodeColumnName="last_update" />
+      <Link partID="15" from="6" to="7" pointsArr="263 73.109375 273 73.109375 313 73 333 73 373.000031 73.07292 383.000031 73.07292" fromNodePartID="7" fromNodeColumnName="collection_status" toNodePartID="0" toNodeColumnName="collection_status" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

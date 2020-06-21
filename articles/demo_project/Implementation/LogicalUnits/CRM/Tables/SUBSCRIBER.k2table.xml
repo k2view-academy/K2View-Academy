@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>SUBSCRIBER</Name>
+  <ID>tbl_SUBSCRIBER</ID>
+  <Columns>
+    <Column name="CUSTOMER_ID" id="tblCol_67545db0126147b396221e9b73ae72c1" index="0" datatype="Real" />
+    <Column name="CONTRACT_ID" id="tblCol_2e241391ea7f44c6abd7df281fa7abe8" index="1" datatype="Real" mandatory="true" />
+    <Column name="CONTRACT_REF_ID" id="tblCol_4dfe6ccbdec6480ab7b86363811455cb" index="2" datatype="Real" />
+    <Column name="ASSOCIATED_LINE" id="tblCol_8f9f3d12da5a48cb8ab64e863aa86d4f" index="3" datatype="Text" />
+    <Column name="CONTRACT_DESCRIPTION" id="tblCol_706787b4c726446cba413b0794ba88c3" index="4" datatype="Text" />
+    <Column name="FROM_DATE" id="tblCol_fa42b101c58b4868bb49b08fc90dd99d" index="5" datatype="Text" />
+    <Column name="TO_DATE" id="tblCol_84b439ec87ad49deadb4fa43c5ed4df7" index="6" datatype="Text" />
+  </Columns>
+  <IndexesList>
+    <Index id="1" pk="true" unique="true" instanceOnly="true" columnsIdsList="tblCol_2e241391ea7f44c6abd7df281fa7abe8" />
+  </IndexesList>
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

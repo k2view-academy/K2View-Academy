@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_ADDRESS</ID>
+  <PopulationObjectName>query_ADDRESS</PopulationObjectName>
+  <TableName>ADDRESS</TableName>
+  <RootItemID>query_query_ADDRESS</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="CUSTOMER_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="ADDRESS_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="STREET_ADDRESS_1" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="STREET_ADDRESS_2" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="CITY" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="ZIP" id="queryCol_5" dataType="Text" index="5" />
+    <Arg name="STATE" id="queryCol_6" dataType="Text" index="6" />
+    <Arg name="COUNTRY" id="queryCol_7" dataType="Text" index="7" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_ADDRESS" name="query_ADDRESS" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="CUSTOMER_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="ADDRESS_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="STREET_ADDRESS_1" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="STREET_ADDRESS_2" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="CITY" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="ZIP" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="STATE" dataType="Text" index="6" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_7" name="COUNTRY" dataType="Text" index="7" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM ADDRESS]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_0" toItemID="tbl_ADDRESS" toColID="tblCol_2726e5fa37bc4f6eb49d2a2bedafff81" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_1" toItemID="tbl_ADDRESS" toColID="tblCol_a64a5e1143a74d0abdae33e7b20206f1" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_2" toItemID="tbl_ADDRESS" toColID="tblCol_b5d3ca72847e4b91bd135b1e0354f79e" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_3" toItemID="tbl_ADDRESS" toColID="tblCol_281301025ed74027b15443d29869190b" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_4" toItemID="tbl_ADDRESS" toColID="tblCol_272dd380a9a6492eb339b594725989ef" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_5" toItemID="tbl_ADDRESS" toColID="tblCol_24a9b5b50adc4c1aabaf0d033ac41c19" />
+    <Link partId="26" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_6" toItemID="tbl_ADDRESS" toColID="tblCol_78664e77502f48c2a17d63c13cca5559" />
+    <Link partId="27" fromNodeOrder="0" fromItemID="query_query_ADDRESS" fromColID="queryCol_7" toItemID="tbl_ADDRESS" toColID="tblCol_018f7737b3d24a13bf72c8d3812d46b9" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="ADDRESS.query_ADDRESS.k2tablePop.xml" lastPartID="45">
+      <TableNode partID="0" name="ADDRESS" pos="383.6679 5.67189026" width="308.65625" />
+      <DBQueryNode partID="11" name="CRM_DB" pos="10 0.7083435" size="253 156.583313" isRoot="true">
+        <DBQuery>{"Name":"query_ADDRESS","ID":"query_query_ADDRESS","ConnName":"CRM_DB","SQL":"SELECT * FROM ADDRESS","ColumnsList":[{"ID":"queryCol_0","Name":"CUSTOMER_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"ADDRESS_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"STREET_ADDRESS_1","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"STREET_ADDRESS_2","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"CITY","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"ZIP","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"STATE","DataType":"Text","Index":6,"IsInputArgument":true},{"ID":"queryCol_7","Name":"COUNTRY","DataType":"Text","Index":7,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="20" from="0" to="1" pointsArr="263 36.7447968 273 36.7447968 313 37 333 37 373.6679 36.7083435 383.6679 36.7083435" fromNodePartID="11" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="21" from="2" to="3" pointsArr="263 48.81771 273 48.81771 313 49 333 49 373.6679 48.7812576 383.6679 48.7812576" fromNodePartID="11" fromNodeColumnName="ADDRESS_ID" toNodePartID="0" toNodeColumnName="ADDRESS_ID" />
+      <Link partID="22" from="4" to="5" pointsArr="263 60.890625 273 60.890625 313 61 333 61 373.6679 60.85417 383.6679 60.85417" fromNodePartID="11" fromNodeColumnName="STREET_ADDRESS_1" toNodePartID="0" toNodeColumnName="STREET_ADDRESS_1" />
+      <Link partID="23" from="6" to="7" pointsArr="263 72.96355 273 72.96355 313 73 333 73 373.6679 72.92709 383.6679 72.92709" fromNodePartID="11" fromNodeColumnName="STREET_ADDRESS_2" toNodePartID="0" toNodeColumnName="STREET_ADDRESS_2" />
+      <Link partID="24" from="8" to="9" pointsArr="263 85.03645 273 85.03645 313 85 333 85 373.6679 85 383.6679 85" fromNodePartID="11" fromNodeColumnName="CITY" toNodePartID="0" toNodeColumnName="CITY" />
+      <Link partID="25" from="10" to="11" pointsArr="263 97.109375 273 97.109375 313 97 333 97 373.6679 97.07292 383.6679 97.07292" fromNodePartID="11" fromNodeColumnName="ZIP" toNodePartID="0" toNodeColumnName="ZIP" />
+      <Link partID="26" from="12" to="13" pointsArr="263 109.1823 273 109.1823 313 109 333 109 373.6679 109.145844 383.6679 109.145844" fromNodePartID="11" fromNodeColumnName="STATE" toNodePartID="0" toNodeColumnName="STATE" />
+      <Link partID="27" from="14" to="15" pointsArr="263 121.255219 273 121.255219 313 121 333 121 373.6679 121.218765 383.6679 121.218765" fromNodePartID="11" fromNodeColumnName="COUNTRY" toNodePartID="0" toNodeColumnName="COUNTRY" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

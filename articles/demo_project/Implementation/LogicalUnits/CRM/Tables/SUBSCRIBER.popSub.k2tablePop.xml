@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>popSub</ID>
+  <PopulationObjectName>popSub</PopulationObjectName>
+  <TableName>SUBSCRIBER</TableName>
+  <RootItemID>query_query_CONTRACT</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="CUSTOMER_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="CONTRACT_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="CONTRACT_REF_ID" id="queryCol_2" dataType="Integer" index="2" />
+    <Arg name="ASSOCIATED_LINE" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="CONTRACT_DESCRIPTION" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="FROM_DATE" id="queryCol_5" dataType="Text" index="5" />
+    <Arg name="TO_DATE" id="queryCol_6" dataType="Text" index="6" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_CONTRACT" name="query_CONTRACT" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="CUSTOMER_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="CONTRACT_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="CONTRACT_REF_ID" dataType="Integer" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="ASSOCIATED_LINE" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="CONTRACT_DESCRIPTION" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="FROM_DATE" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="TO_DATE" dataType="Text" index="6" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM CONTRACT]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_0" toItemID="tbl_SUBSCRIBER" toColID="tblCol_67545db0126147b396221e9b73ae72c1" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_1" toItemID="tbl_SUBSCRIBER" toColID="tblCol_2e241391ea7f44c6abd7df281fa7abe8" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_2" toItemID="tbl_SUBSCRIBER" toColID="tblCol_4dfe6ccbdec6480ab7b86363811455cb" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_3" toItemID="tbl_SUBSCRIBER" toColID="tblCol_8f9f3d12da5a48cb8ab64e863aa86d4f" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_4" toItemID="tbl_SUBSCRIBER" toColID="tblCol_706787b4c726446cba413b0794ba88c3" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_5" toItemID="tbl_SUBSCRIBER" toColID="tblCol_fa42b101c58b4868bb49b08fc90dd99d" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_CONTRACT" fromColID="queryCol_6" toItemID="tbl_SUBSCRIBER" toColID="tblCol_84b439ec87ad49deadb4fa43c5ed4df7" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="SUBSCRIBER.popSub.k2tablePop.xml" lastPartID="40">
+      <TableNode partID="0" name="SUBSCRIBER" pos="404 30" width="253" />
+      <DBQueryNode partID="10" name="CRM_DB" pos="92 36.50911" size="253 144.5104" isRoot="true">
+        <DBQuery>{"Name":"query_CONTRACT","ID":"query_query_CONTRACT","ConnName":"CRM_DB","SQL":"SELECT * FROM CONTRACT","ColumnsList":[{"ID":"queryCol_0","Name":"CUSTOMER_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"CONTRACT_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"CONTRACT_REF_ID","DataType":"Integer","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"ASSOCIATED_LINE","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"CONTRACT_DESCRIPTION","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"FROM_DATE","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"TO_DATE","DataType":"Text","Index":6,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="18" from="0" to="1" pointsArr="345 72.54556 355 72.54556 394 61.0364571 404 61.0364571" fromNodePartID="10" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="19" from="2" to="3" pointsArr="345 84.6184845 355 84.6184845 394 73.109375 404 73.109375" fromNodePartID="10" fromNodeColumnName="CONTRACT_ID" toNodePartID="0" toNodeColumnName="CONTRACT_ID" />
+      <Link partID="20" from="4" to="5" pointsArr="345 96.6914 355 96.6914 394 85.18229 404 85.18229" fromNodePartID="10" fromNodeColumnName="CONTRACT_REF_ID" toNodePartID="0" toNodeColumnName="CONTRACT_REF_ID" />
+      <Link partID="21" from="6" to="7" pointsArr="345 108.764313 355 108.764313 394 97.2552 404 97.2552" fromNodePartID="10" fromNodeColumnName="ASSOCIATED_LINE" toNodePartID="0" toNodeColumnName="ASSOCIATED_LINE" />
+      <Link partID="22" from="8" to="9" pointsArr="345 120.837227 355 120.837227 394 109.328117 404 109.328117" fromNodePartID="10" fromNodeColumnName="CONTRACT_DESCRIPTION" toNodePartID="0" toNodeColumnName="CONTRACT_DESCRIPTION" />
+      <Link partID="23" from="10" to="11" pointsArr="345 132.910141 355 132.910141 394 121.401031 404 121.401031" fromNodePartID="10" fromNodeColumnName="FROM_DATE" toNodePartID="0" toNodeColumnName="FROM_DATE" />
+      <Link partID="24" from="12" to="13" pointsArr="345 144.983063 355 144.983063 394 133.473953 404 133.473953" fromNodePartID="10" fromNodeColumnName="TO_DATE" toNodePartID="0" toNodeColumnName="TO_DATE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

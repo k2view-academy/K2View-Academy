@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_OFFER</ID>
+  <PopulationObjectName>query_OFFER</PopulationObjectName>
+  <TableName>OFFER</TableName>
+  <RootItemID>query_query_BILLING_DB_OFFER</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="SUBSCRIBER_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="OFFER_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="OFFER_REF_ID" id="queryCol_2" dataType="Integer" index="2" />
+    <Arg name="OFFER_DESCRIPTION" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="FROM_DATE" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="TO_DATE" id="queryCol_5" dataType="Text" index="5" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BILLING_DB_OFFER" name="query_BILLING_DB_OFFER" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="BILLING_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="SUBSCRIBER_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="OFFER_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="OFFER_REF_ID" dataType="Integer" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="OFFER_DESCRIPTION" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="FROM_DATE" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="TO_DATE" dataType="Text" index="5" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BILLING_DB.OFFER]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="57" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_OFFER" fromColID="queryCol_0" toItemID="tbl_OFFER" toColID="tblCol_c3de69c210e6406885b4f85151742908" />
+    <Link partId="58" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_OFFER" fromColID="queryCol_1" toItemID="tbl_OFFER" toColID="tblCol_b478806123954505a384abb2d22fd93e" />
+    <Link partId="59" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_OFFER" fromColID="queryCol_2" toItemID="tbl_OFFER" toColID="tblCol_bb21497085c242b3951fe4410608404d" />
+    <Link partId="60" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_OFFER" fromColID="queryCol_3" toItemID="tbl_OFFER" toColID="tblCol_cbd81aaabfff452fa5dd6ab20fd570bf" />
+    <Link partId="61" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_OFFER" fromColID="queryCol_4" toItemID="tbl_OFFER" toColID="tblCol_2851a8b80973445498f9f2eb2d1f937d" />
+    <Link partId="62" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_OFFER" fromColID="queryCol_5" toItemID="tbl_OFFER" toColID="tblCol_210309b98cca49d990662071d0c10ada" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="OFFER.query_OFFER.k2tablePop.xml" lastPartID="62">
+      <TableNode partID="0" name="OFFER" pos="383 5.74479675" width="253" />
+      <DBQueryNode partID="50" name="BILLING_DB" pos="20 6.69010925" size="253 132.437515" isRoot="true">
+        <DBQuery>{"Name":"query_BILLING_DB_OFFER","ID":"query_query_BILLING_DB_OFFER","ConnName":"BILLING_DB","SQL":"SELECT * FROM BILLING_DB.OFFER","ColumnsList":[{"ID":"queryCol_0","Name":"SUBSCRIBER_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"OFFER_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"OFFER_REF_ID","DataType":"Integer","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"OFFER_DESCRIPTION","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"FROM_DATE","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"TO_DATE","DataType":"Text","Index":5,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="57" from="0" to="1" pointsArr="273 42.7265625 283 42.7265625 373 36.7812538 383 36.7812538" fromNodePartID="50" fromNodeColumnName="SUBSCRIBER_ID" toNodePartID="0" toNodeColumnName="SUBSCRIBER_ID" />
+      <Link partID="58" from="2" to="3" pointsArr="273 54.7994843 283 54.7994843 373 48.85417 383 48.85417" fromNodePartID="50" fromNodeColumnName="OFFER_ID" toNodePartID="0" toNodeColumnName="OFFER_ID" />
+      <Link partID="59" from="4" to="5" pointsArr="273 66.87239 283 66.87239 373 60.9270859 383 60.9270859" fromNodePartID="50" fromNodeColumnName="OFFER_REF_ID" toNodePartID="0" toNodeColumnName="OFFER_REF_ID" />
+      <Link partID="60" from="6" to="7" pointsArr="273 78.94531 283 78.94531 373 73 383 73" fromNodePartID="50" fromNodeColumnName="OFFER_DESCRIPTION" toNodePartID="0" toNodeColumnName="OFFER_DESCRIPTION" />
+      <Link partID="61" from="8" to="9" pointsArr="273 91.01822 283 91.01822 373 85.0729141 383 85.0729141" fromNodePartID="50" fromNodeColumnName="FROM_DATE" toNodePartID="0" toNodeColumnName="FROM_DATE" />
+      <Link partID="62" from="10" to="11" pointsArr="273 103.091125 283 103.091125 373 97.14583 383 97.14583" fromNodePartID="50" fromNodeColumnName="TO_DATE" toNodePartID="0" toNodeColumnName="TO_DATE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

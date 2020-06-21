@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>EXEC_VALIDATIONS</Name>
+  <ID>tbl_EXEC_VALIDATIONS</ID>
+  <Columns>
+    <Column name="CUSTOMER_ID" id="tblCol_4ee474a7115d4420a22fd69ee2dd23bb" index="0" datatype="integer" />
+    <Column name="CHECK_DESC" id="tblCol_075eec5435b240d0ba6147e9250146b0" index="1" datatype="text" />
+    <Column name="RESULT" id="tblCol_380705a11bf248e9a6a5537b17779cb8" index="2" datatype="text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList>
+    <Enrichment>
+      <Name>fnCheckValidationsResults</Name>
+      <Type>Function</Type>
+      <TableName>EXEC_VALIDATIONS</TableName>
+    </Enrichment>
+  </EnrichmentList>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

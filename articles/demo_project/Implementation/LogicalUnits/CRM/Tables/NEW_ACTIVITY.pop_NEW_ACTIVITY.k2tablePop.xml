@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>pop_NEW_ACTIVITY</ID>
+  <PopulationObjectName>pop_NEW_ACTIVITY</PopulationObjectName>
+  <TableName>NEW_ACTIVITY</TableName>
+  <RootItemID>f_7</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="input1" id="fi_7.0" dataType="String" index="0" />
+    <Arg name="input2" id="fi_7.1" dataType="String" index="1" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_7" name="fnPop_NEW_ACTIVITY" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnPop_NEW_ACTIVITY.k2function.xml">
+      <InputsList>
+        <Input id="fi_7.0" name="input1" />
+        <Input id="fi_7.1" name="input2" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_7.0" name="CUSTOMER_ID" />
+        <Output id="fo_7.1" name="ACTIVITY_ID" />
+        <Output id="fo_7.2" name="ACTIVITY_DATE" />
+        <Output id="fo_7.3" name="ACTIVITY_NOTE" />
+      </OutputsList>
+    </Item>
+    <Item xsi:type="LookupDataSave" id="tblLookup.55" name="CUSTOMER" nodeOrder="0" module="Lookup" mapObjectModule="Lookup" alias="" itemType="Table" lookupNotFound="Reject_Record" isReference="false" cacheLookupValues="false">
+      <InputsList />
+      <OutputsList>
+        <Output xsi:type="LookupDataSaveColumn" id="tblLookup.55.out.SSN" name="SSN" columnID="tblCol_b88d042bd4aa48159e6202cd02a92c25" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="13" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.0" toItemID="NEW_ACTIVITY" toColID="tblCol_7dd04353f013482b93a6a9392e8dd165" />
+    <Link partId="14" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.1" toItemID="NEW_ACTIVITY" toColID="tblCol_880205c25f0e410880c56f988ac20ed1" />
+    <Link partId="15" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.2" toItemID="NEW_ACTIVITY" toColID="tblCol_1d51267916244099856d6fda2170c350" />
+    <Link partId="16" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.3" toItemID="NEW_ACTIVITY" toColID="tblCol_37326f9533fd4b07a4475f376341b8e3" />
+    <Link partId="70" fromNodeOrder="0" fromItemID="tblLookup.55" fromColID="tblLookup.55.out.SSN" toItemID="NEW_ACTIVITY" toColID="tblCol_86392c387aa34183b465e0e94b3571f4" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="NEW_ACTIVITY.pop_NEW_ACTIVITY.k2tablePop.xml" lastPartID="70">
+      <TableNode partID="0" name="NEW_ACTIVITY" pos="437 2.81771469" width="253" />
+      <FunctionMapNode id="0" L0="2" L1="3" R0="4" R1="5" R2="6" R3="7" partID="7" topLabel="fnPop_NEW_ACTIVITY (7)" pos="9.36366 11.4337091" size="212.709732 73.3828049" isRoot="true">
+        <KFunction>{"Name":"fnPop_NEW_ACTIVITY","ID":"f_7","Category":"Root","Version":"6.1.0.17","FunctionLevel":0,"FunctionType2":1,"ReturnType":"void","RegisterAsLuDbFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"FunctionBody":"","IsRootFunction":true,"inputParams":[{"Name":"input1","ID":"fi_7.0","Index":0,"DataType":"String","Comment":""},{"Name":"input2","ID":"fi_7.1","Index":1,"DataType":"String"}],"outputParams":[{"Name":"CUSTOMER_ID","ID":"fo_7.0","Index":0,"DataType":"Long","Comment":""},{"Name":"ACTIVITY_ID","ID":"fo_7.1","Index":1,"DataType":"Long","Comment":""},{"Name":"ACTIVITY_DATE","ID":"fo_7.2","Index":2,"DataType":"String","Comment":""},{"Name":"ACTIVITY_NOTE","ID":"fo_7.3","Index":3,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <LUDBLookupMapNode id="1" L0="8" L1="9" L2="10" L3="11" L4="12" L5="13" L6="14" R0="15" R1="16" R2="17" R3="18" R4="19" R5="20" R6="21" partID="55" topLabel="CUSTOMER (55)" pos="89 133.726578" size="250 72.0729141" isMinimized="true" itemType="Table">
+        <LUDBLookupItem>{"ID":"tblLookup.55","Name":"CUSTOMER","Alias":"","ItemType":3,"IsReference":false,"LookupNotFound":0,"CacheLookupValues":false,"InputColumnsMapList":[{"ID":"tblLookup.55.in.CUSTOMER_ID","Name":"CUSTOMER_ID","ColumnID":"tblCol_bbaacbe5c07346ebb750f3362ead1204","DataType":"Real","Index":0,"Mandatory":true,"MapIndex":0},{"ID":"tblLookup.55.in.SSN","Name":"SSN","ColumnID":"tblCol_b88d042bd4aa48159e6202cd02a92c25","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1},{"ID":"tblLookup.55.in.FIRST_NAME","Name":"FIRST_NAME","ColumnID":"tblCol_ad7397ad391b43dd9e7f0a4f6907b833","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":2},{"ID":"tblLookup.55.in.LAST_NAME","Name":"LAST_NAME","ColumnID":"tblCol_a593527821944e6f94f481867dd94287","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":3},{"ID":"tblLookup.55.in.CONTR_CNT","Name":"CONTR_CNT","ColumnID":"tblCol_3b512f74d0e24044a3352b2d5461fc89","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":4},{"ID":"tblLookup.55.in.ROAM_CONTR_CNT","Name":"ROAM_CONTR_CNT","ColumnID":"tblCol_9a1f4cb76c7d4c5d94de7bc07e6ee47e","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":5},{"ID":"tblLookup.55.in.UNLIM_CONTR_CNT","Name":"UNLIM_CONTR_CNT","ColumnID":"tblCol_cb15366888e74f1badd40a55aac31d01","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":6}],"OutputColumnsMapList":[{"ID":"tblLookup.55.out.CUSTOMER_ID","Name":"CUSTOMER_ID","ColumnID":"tblCol_bbaacbe5c07346ebb750f3362ead1204","DataType":"Real","Index":0,"Mandatory":true,"MapIndex":0},{"ID":"tblLookup.55.out.SSN","Name":"SSN","ColumnID":"tblCol_b88d042bd4aa48159e6202cd02a92c25","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1},{"ID":"tblLookup.55.out.FIRST_NAME","Name":"FIRST_NAME","ColumnID":"tblCol_ad7397ad391b43dd9e7f0a4f6907b833","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":2},{"ID":"tblLookup.55.out.LAST_NAME","Name":"LAST_NAME","ColumnID":"tblCol_a593527821944e6f94f481867dd94287","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":3},{"ID":"tblLookup.55.out.CONTR_CNT","Name":"CONTR_CNT","ColumnID":"tblCol_3b512f74d0e24044a3352b2d5461fc89","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":4},{"ID":"tblLookup.55.out.ROAM_CONTR_CNT","Name":"ROAM_CONTR_CNT","ColumnID":"tblCol_9a1f4cb76c7d4c5d94de7bc07e6ee47e","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":5},{"ID":"tblLookup.55.out.UNLIM_CONTR_CNT","Name":"UNLIM_CONTR_CNT","ColumnID":"tblCol_cb15366888e74f1badd40a55aac31d01","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":6}]}</LUDBLookupItem>
+      </LUDBLookupMapNode>
+      <Link partID="13" from="4" to="22" pointsArr="222.0734 32.56131 232.0734 32.56131 427 33.85417 437 33.85417" fromNodePartID="7" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="14" from="5" to="23" pointsArr="222.0734 44.6342239 232.0734 44.6342239 427 45.92709 437 45.92709" fromNodePartID="7" fromNodeColumnName="ACTIVITY_ID" toNodePartID="0" toNodeColumnName="ACTIVITY_ID" />
+      <Link partID="15" from="6" to="24" pointsArr="222.0734 56.7071381 232.0734 56.7071381 427 58.0000038 437 58.0000038" fromNodePartID="7" fromNodeColumnName="ACTIVITY_DATE" toNodePartID="0" toNodeColumnName="ACTIVITY_DATE" />
+      <Link partID="16" from="7" to="25" pointsArr="222.0734 68.78006 232.0734 68.78006 427 70.07292 437 70.07292" fromNodePartID="7" fromNodeColumnName="ACTIVITY_NOTE" toNodePartID="0" toNodeColumnName="ACTIVITY_NOTE" />
+      <Link partID="70" from="16" to="26" pointsArr="342 169.763031 352 169.763031 427 82.1458359 437 82.1458359" fromNodePartID="55" fromNodeColumnName="SSN" toNodePartID="0" toNodeColumnName="CUSTOMER_SSN" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

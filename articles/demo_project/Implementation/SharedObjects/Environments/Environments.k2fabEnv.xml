@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FabEnvironmentsManager xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Environments</Name>
+  <EnvironmentsList>
+    <Environment enabled="true" name="UAT">
+      <FabricUrl>http://10.21.1.76:3213</FabricUrl>
+      <DbInterfacesList>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="BILLING_DB" dbType="genericdb" active="false">
+          <dbPort>3306</dbPort>
+          <dbScheme>BILLING_DB</dbScheme>
+          <connString>jdbc:mysql://:3306/BILLING_DB?retainStatementAfterResultSetClose=true&amp;autoReconnect=true</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>MySQL</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="BILLING_DB_bck2" dbType="genericdb" active="false">
+          <dbPort>3306</dbPort>
+          <dbScheme>BILLING_DB</dbScheme>
+          <connString>jdbc:mysql://:3306/BILLING_DB?retainStatementAfterResultSetClose=true&amp;autoReconnect=true</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>MySQL</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="COLLECTION_DB" dbType="genericdb" active="false">
+          <dbPort>5436</dbPort>
+          <dbScheme>COLLECTION_DB</dbScheme>
+          <connString>jdbc:postgresql://:5436/COLLECTION_DB?stringtype=unspecified</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>PostgreSQL</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="CRM_DB" dbType="genericdb" active="true">
+          <dbHost>10.21.2.64</dbHost>
+          <dbPort>1526</dbPort>
+          <dbScheme>XE</dbScheme>
+          <dbUser>CRM_DB</dbUser>
+          <dbPasswordEncrypted>jvU1xrIlmY4Zo45Z4UZSPIg8WJeQctnTlmrM1BLhG/8=:wWDP68Urv8bbSJbVgMqy5MOpl2Cke3sOYfUFjJLtrXA=</dbPasswordEncrypted>
+          <connString>jdbc:oracle:thin:@10.21.2.64:1526/XE</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>Oracle</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="CRM_DB_bck" dbType="genericdb" active="false">
+          <dbPort>1521</dbPort>
+          <dbScheme>K20RA1</dbScheme>
+          <connString>jdbc:oracle:thin:@:1521/K20RA1</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>Oracle</JdbcDriverName>
+        </DbInterface>
+        <DbInterface k2StudioObjectName="DB2_SOURCE" dbType="db2" active="false">
+          <dbPort>50000</dbPort>
+          <dbScheme>K2VTEST</dbScheme>
+          <connString>jdbc:db2://:50000/K2VTEST</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>5</maxConnectionsNumber>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="dbFabricRemote" dbType="genericdb" active="false">
+          <dbPort>5124</dbPort>
+          <dbScheme />
+          <connString>jdbc:fabric://:5124/</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>fabric</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="dbMySQL" dbType="genericdb" active="false">
+          <dbPort>3306</dbPort>
+          <connString>jdbc:mysql://:3306/?retainStatementAfterResultSetClose=true&amp;autoReconnect=true</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>MySql</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceFabricLocal" k2StudioObjectName="fabric" dbType="fabriclocal" active="true">
+          <dbPort />
+          <connString />
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>0</maxConnectionsNumber>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="localCassandra" dbType="genericdb" active="false">
+          <dbPort>9042</dbPort>
+          <connString>jdbc:cassandra://:9042/?consistency=QUORUM</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>Cassandra</JdbcDriverName>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="MYSQL_SOURCE" dbType="genericdb" active="false">
+          <dbPort>3306</dbPort>
+          <dbScheme>yp_cust</dbScheme>
+          <connString>jdbc:mysql://:3306/yp_cust?retainStatementAfterResultSetClose=true&amp;autoReconnect=true</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>MySQL</JdbcDriverName>
+        </DbInterface>
+        <DbInterface k2StudioObjectName="ORDERS_DB" dbType="postgresql" active="false">
+          <dbPort>5436</dbPort>
+          <dbScheme>ORDERS_DB</dbScheme>
+          <connString>jdbc:postgresql://:5436/ORDERS_DB?stringtype=unspecified</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+        </DbInterface>
+        <DbInterface k2StudioObjectName="PG_SOURCE" dbType="postgresql" active="false">
+          <dbPort>5432</dbPort>
+          <dbScheme>k2view</dbScheme>
+          <connString>jdbc:postgresql://:5432/k2view?stringtype=unspecified</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+        </DbInterface>
+        <DbInterface xsi:type="DBSourceGenericDb" k2StudioObjectName="testMySql" dbType="genericdb" active="false">
+          <dbPort>3306</dbPort>
+          <dbScheme />
+          <connString>jdbc:mysql://:3306/?retainStatementAfterResultSetClose=true&amp;autoReconnect=true</connString>
+          <minConnectionsNumber>0</minConnectionsNumber>
+          <maxConnectionsNumber>60</maxConnectionsNumber>
+          <JdbcDriverName>MySQL2</JdbcDriverName>
+        </DbInterface>
+      </DbInterfacesList>
+      <GenericInterfacesList />
+    </Environment>
+  </EnvironmentsList>
+</FabEnvironmentsManager>

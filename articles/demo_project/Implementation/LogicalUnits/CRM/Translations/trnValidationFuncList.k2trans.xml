@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Translation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>trnValidationFuncList</Name>
+  <InputNotFoundAction>Use_Default</InputNotFoundAction>
+  <SchemaColumns>
+    <Column>
+      <Title>SEQ</Title>
+      <ColumnName>SEQ</ColumnName>
+      <Direction>Input</Direction>
+      <Type>Auto Increment</Type>
+      <Length>10</Length>
+      <Format />
+      <Index>0</Index>
+      <DefaultValue />
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="59" />
+    </Column>
+    <Column>
+      <Title>CHECK_ID</Title>
+      <ColumnName>CHECK_ID</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Text</Type>
+      <Length>10</Length>
+      <Format />
+      <Index>0</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="108" />
+    </Column>
+    <Column>
+      <Title>FUNCTION_NAME</Title>
+      <ColumnName>FUNCTION_NAME</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Text</Type>
+      <Length>50</Length>
+      <Format />
+      <Index>1</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="146" />
+    </Column>
+    <Column>
+      <Title>CHECK_DESC</Title>
+      <ColumnName>CHECK_DESC</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Text</Type>
+      <Length>200</Length>
+      <Format />
+      <Index>2</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="279" />
+    </Column>
+    <Column>
+      <Title>ACTIVE</Title>
+      <ColumnName>ACTIVE</ColumnName>
+      <Direction>Output</Direction>
+      <Type>Boolean</Type>
+      <Length>1</Length>
+      <Format />
+      <Index>3</Index>
+      <DefaultValueIsExpression>false</DefaultValueIsExpression>
+      <AllowNULL>true</AllowNULL>
+      <GridColumnProperties width="106" />
+    </Column>
+  </SchemaColumns>
+  <IsImportFromSQL>false</IsImportFromSQL>
+  <IsDynamicData>false</IsDynamicData>
+  <ColumnMapping />
+  <TranslationData>
+    <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+      <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="trnValidationFuncList" msdata:UseCurrentLocale="true">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="trnValidationFuncList">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="SEQ" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" type="xs:int" minOccurs="0" />
+                  <xs:element name="CHECK_ID" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FUNCTION_NAME" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CHECK_DESC" default="" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="200" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ACTIVE" type="xs:boolean" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1">
+          <xs:selector xpath=".//trnValidationFuncList" />
+          <xs:field xpath="SEQ" />
+        </xs:unique>
+      </xs:element>
+    </xs:schema>
+    <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+      <DocumentElement>
+        <trnValidationFuncList diffgr:id="trnValidationFuncList1" msdata:rowOrder="0">
+          <SEQ>1</SEQ>
+          <CHECK_ID>check1</CHECK_ID>
+          <FUNCTION_NAME>fnHasRoaming</FUNCTION_NAME>
+          <CHECK_DESC>Validate if the customer has Roaming services</CHECK_DESC>
+        </trnValidationFuncList>
+        <trnValidationFuncList diffgr:id="trnValidationFuncList2" msdata:rowOrder="1">
+          <SEQ>2</SEQ>
+          <CHECK_ID>check2</CHECK_ID>
+          <FUNCTION_NAME>fnHasOpenCases</FUNCTION_NAME>
+          <CHECK_DESC>Validate if the customer has Open cases</CHECK_DESC>
+        </trnValidationFuncList>
+      </DocumentElement>
+    </diffgr:diffgram>
+  </TranslationData>
+  <DataRowsHeight>20</DataRowsHeight>
+</Translation>

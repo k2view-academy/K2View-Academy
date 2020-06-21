@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>popUpdOrdersSummary</ID>
+  <PopulationObjectName>popUpdOrdersSummary</PopulationObjectName>
+  <TableName>ORDERS_SUMMARY</TableName>
+  <RootItemID>query_query_ORDERS_SUMMARY</RootItemID>
+  <Mode>Update</Mode>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="ORDER_TYPE" id="queryCol_0" dataType="Text" index="0" />
+    <Arg name="TOT_NO_OF_ORDERS" id="queryCol_1" index="1" />
+    <Arg name="LATEST_ORDER_DATE" id="queryCol_2" index="2" />
+    <Arg name="TOT_NO_OF_CONTRACTS" id="queryCol_3" index="3" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_ORDERS_SUMMARY" name="query_ORDERS_SUMMARY" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="ludb">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="ORDER_TYPE" dataType="Text" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="TOT_NO_OF_ORDERS" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="LATEST_ORDER_DATE" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="TOT_NO_OF_CONTRACTS" index="3" />
+      </OutputsList>
+      <SQL><![CDATA[Select ORDERS_SUMMARY.ORDER_TYPE,
+  Sum(ORDERS_SUMMARY.NO_OF_ORDERS_PER_STATUS) As TOT_NO_OF_ORDERS,
+  Max(ORDERS_SUMMARY.LATEST_ORDER_DATE_PER_STATUS) As LATEST_ORDER_DATE,
+  Sum(ORDERS_SUMMARY.NO_OF_CONTRACTS_PER_STATUS) As TOT_NO_OF_CONTRACTS
+From ORDERS.ORDERS_SUMMARY
+Group By ORDERS_SUMMARY.ORDER_TYPE]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_ORDERS_SUMMARY" fromColID="queryCol_0" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_74e3771845f344cd86c3785b1a5c7300" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_ORDERS_SUMMARY" fromColID="queryCol_1" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_8651a826ec6d44b5995544885f28e2f6" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_ORDERS_SUMMARY" fromColID="queryCol_2" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_8401e6174f824f829c6b20ce6f1f219a" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_ORDERS_SUMMARY" fromColID="queryCol_3" toItemID="tbl_ORDERS_SUMMARY" toColID="tblCol_ac6b970b2d6441368f14236add7af6fc" />
+  </LinksList>
+  <ModeKeyColumnIDs>tblCol_74e3771845f344cd86c3785b1a5c7300</ModeKeyColumnIDs>
+  <DiagramGraph>
+    <Graph name="ORDERS_SUMMARY.popUpdOrdersSummary.k2tablePop.xml" lastPartID="25">
+      <TableNode partID="0" name="ORDERS_SUMMARY" pos="404 30" width="253" />
+      <DBQueryNode partID="11" name="ludb" pos="20 32.5091133" size="345.265625 108.291656" isRoot="true">
+        <DBQuery>{"Name":"query_ORDERS_SUMMARY","ID":"query_query_ORDERS_SUMMARY","ConnName":"ludb","SQL":"Select ORDERS_SUMMARY.ORDER_TYPE,\r\n  Sum(ORDERS_SUMMARY.NO_OF_ORDERS_PER_STATUS) As TOT_NO_OF_ORDERS,\r\n  Max(ORDERS_SUMMARY.LATEST_ORDER_DATE_PER_STATUS) As LATEST_ORDER_DATE,\r\n  Sum(ORDERS_SUMMARY.NO_OF_CONTRACTS_PER_STATUS) As TOT_NO_OF_CONTRACTS\r\nFrom ORDERS.ORDERS_SUMMARY\r\nGroup By ORDERS_SUMMARY.ORDER_TYPE","ColumnsList":[{"ID":"queryCol_0","Name":"ORDER_TYPE","DataType":"Text","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"TOT_NO_OF_ORDERS","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"LATEST_ORDER_DATE","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"TOT_NO_OF_CONTRACTS","Index":3,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="22" from="0" to="1" pointsArr="365.265625 68.54557 375.265625 68.54557 394 61.0364532 404 61.0364532" fromNodePartID="11" fromNodeColumnName="ORDER_TYPE" toNodePartID="0" toNodeColumnName="ORDER_TYPE" />
+      <Link partID="23" from="2" to="3" pointsArr="365.265625 80.6184845 375.265625 80.6184845 394 97.2552 404 97.2552" fromNodePartID="11" fromNodeColumnName="TOT_NO_OF_ORDERS" toNodePartID="0" toNodeColumnName="TOT_NO_OF_ORDERS" />
+      <Link partID="24" from="4" to="5" pointsArr="365.265625 92.6914 375.265625 92.6914 394 121.401031 404 121.401031" fromNodePartID="11" fromNodeColumnName="LATEST_ORDER_DATE" toNodePartID="0" toNodeColumnName="LATEST_ORDER_DATE" />
+      <Link partID="25" from="6" to="7" pointsArr="365.265625 104.764313 375.265625 104.764313 394 145.546875 404 145.546875" fromNodePartID="11" fromNodeColumnName="TOT_NO_OF_CONTRACTS" toNodePartID="0" toNodeColumnName="TOT_NO_OF_CONTRACTS" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

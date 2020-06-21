@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_CASES</ID>
+  <PopulationObjectName>query_CASES</PopulationObjectName>
+  <TableName>CASES</TableName>
+  <RootItemID>query_query_CASES</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="ACTIVITY_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="CASE_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="CASE_DATE" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="CASE_TYPE" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="STATUS" id="queryCol_4" dataType="Text" index="4" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_CASES" name="query_CASES" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="ACTIVITY_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="CASE_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="CASE_DATE" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="CASE_TYPE" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="STATUS" dataType="Text" index="4" />
+      </OutputsList>
+      <SQL><![CDATA[Select *
+From CASES
+Where status = '@OPEN@']]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="14" fromNodeOrder="0" fromItemID="query_query_CASES" fromColID="queryCol_0" toItemID="tbl_CASES" toColID="tblCol_4dde138ac3f54ee7a94d2c739c74aa97" />
+    <Link partId="15" fromNodeOrder="0" fromItemID="query_query_CASES" fromColID="queryCol_1" toItemID="tbl_CASES" toColID="tblCol_7221390791854505801946351a3b8df0" />
+    <Link partId="16" fromNodeOrder="0" fromItemID="query_query_CASES" fromColID="queryCol_2" toItemID="tbl_CASES" toColID="tblCol_78bc0008524f44e5b4cbbab90bdb79d7" />
+    <Link partId="17" fromNodeOrder="0" fromItemID="query_query_CASES" fromColID="queryCol_3" toItemID="tbl_CASES" toColID="tblCol_59ede5e8f52a4102a3e6e09ebc774d46" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_CASES" fromColID="queryCol_4" toItemID="tbl_CASES" toColID="tblCol_8ab5eb93d8124d828c1e23501d78b9ec" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="CASES.query_CASES.k2tablePop.xml" lastPartID="42">
+      <TableNode partID="0" name="CASES" pos="384.32785 5.781254" width="307.996246" />
+      <DBQueryNode partID="8" name="CRM_DB" pos="10 0.8177109" size="253 120.364578" isRoot="true">
+        <DBQuery>{"Name":"query_CASES","ID":"query_query_CASES","ConnName":"CRM_DB","SQL":"Select *\r\nFrom CASES\r\nWhere status = '@OPEN@'","ColumnsList":[{"ID":"queryCol_0","Name":"ACTIVITY_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"CASE_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"CASE_DATE","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"CASE_TYPE","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"STATUS","DataType":"Text","Index":4,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="14" from="0" to="1" pointsArr="263 36.85417 273 36.85417 313 37 333 37 374.32785 36.8177147 384.32785 36.8177147" fromNodePartID="8" fromNodeColumnName="ACTIVITY_ID" toNodePartID="0" toNodeColumnName="ACTIVITY_ID" />
+      <Link partID="15" from="2" to="3" pointsArr="263 48.9270859 273 48.9270859 313 49 333 49 374.32785 48.89063 384.32785 48.89063" fromNodePartID="8" fromNodeColumnName="CASE_ID" toNodePartID="0" toNodeColumnName="CASE_ID" />
+      <Link partID="16" from="4" to="5" pointsArr="263 61 273 61 313 61 333 61 374.32785 60.9635429 384.32785 60.9635429" fromNodePartID="8" fromNodeColumnName="CASE_DATE" toNodePartID="0" toNodeColumnName="CASE_DATE" />
+      <Link partID="17" from="6" to="7" pointsArr="263 73.0729141 273 73.0729141 313 73 333 73 374.32785 73.03646 384.32785 73.03646" fromNodePartID="8" fromNodeColumnName="CASE_TYPE" toNodePartID="0" toNodeColumnName="CASE_TYPE" />
+      <Link partID="18" from="8" to="9" pointsArr="263 85.14583 273 85.14583 313 85 333 85 374.32785 85.109375 384.32785 85.109375" fromNodePartID="8" fromNodeColumnName="STATUS" toNodePartID="0" toNodeColumnName="STATUS" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

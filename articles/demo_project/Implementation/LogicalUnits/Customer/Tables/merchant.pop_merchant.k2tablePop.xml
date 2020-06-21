@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>pop_merchant</ID>
+  <PopulationObjectName>pop_merchant</PopulationObjectName>
+  <TableName>merchant</TableName>
+  <RootItemID>f_9</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="input" id="fi_9.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_9" name="fnPop_merchant" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnPop_merchant.k2function.xml">
+      <InputsList>
+        <Input id="fi_9.0" name="input" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_9.0" name="merchant_id" />
+        <Output id="fo_9.1" name="merchant_type" />
+        <Output id="fo_9.2" name="merchant_name" />
+        <Output id="fo_9.3" name="tin" />
+        <Output id="fo_9.4" name="effective_start_date" />
+        <Output id="fo_9.5" name="effective_end_date" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="17" fromNodeOrder="0" fromItemID="f_9" fromColID="fo_9.0" toItemID="tbl_merchant" toColID="tblCol_73dbf33d2a3348599407089573065596" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="f_9" fromColID="fo_9.1" toItemID="tbl_merchant" toColID="tblCol_b41c35cdceb24dcba796e6b8fac34e66" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="f_9" fromColID="fo_9.2" toItemID="tbl_merchant" toColID="tblCol_ced9b552a29042e988a8c958c4821c0c" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="f_9" fromColID="fo_9.3" toItemID="tbl_merchant" toColID="tblCol_ae769cebdff14b519488c1a4e47e49fa" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="f_9" fromColID="fo_9.4" toItemID="tbl_merchant" toColID="tblCol_6144d18606994c61a53da66a936f90aa" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="f_9" fromColID="fo_9.5" toItemID="tbl_merchant" toColID="tblCol_e81bfa27b81848fb90c9505b1c289163" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="merchant.pop_merchant.k2tablePop.xml" lastPartID="22">
+      <TableNode partID="0" name="merchant" pos="336 0.744796753" width="252.999985" />
+      <FunctionMapNode id="0" L0="1" R0="2" R1="3" R2="4" R3="5" R4="6" R5="7" partID="9" topLabel="fnPop_merchant (9)" pos="10 10.23568" size="206 97.52864" isRoot="true">
+        <KFunction>{"Name":"fnPop_merchant","ID":"f_9","Category":"Root","Version":"6.0.0.17","FunctionLevel":0,"FunctionType2":1,"ReturnType":"void","RegisterAsLuDbFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"FunctionBody":"","IsRootFunction":true,"inputParams":[{"Name":"input","ID":"fi_9.0","Index":0,"DataType":"String"}],"outputParams":[{"Name":"merchant_id","ID":"fo_9.0","Index":0,"DataType":"Long"},{"Name":"merchant_type","ID":"fo_9.1","Index":1,"DataType":"String"},{"Name":"merchant_name","ID":"fo_9.2","Index":2,"DataType":"String"},{"Name":"tin","ID":"fo_9.3","Index":3,"DataType":"String"},{"Name":"effective_start_date","ID":"fo_9.4","Index":4,"DataType":"String"},{"Name":"effective_end_date","ID":"fo_9.5","Index":5,"DataType":"String"}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="17" from="2" to="8" pointsArr="216 31.3632813 226 31.3632813 266 31 286 31 326 31.7812538 336 31.7812538" fromNodePartID="9" fromNodeColumnName="merchant_id" toNodePartID="0" toNodeColumnName="merchant_id" />
+      <Link partID="18" from="3" to="9" pointsArr="216 43.4361954 226 43.4361954 266 43 286 43 326 43.85417 336 43.85417" fromNodePartID="9" fromNodeColumnName="merchant_type" toNodePartID="0" toNodeColumnName="merchant_type" />
+      <Link partID="19" from="4" to="10" pointsArr="216 55.50911 226 55.50911 266 56 286 56 326 55.9270859 336 55.9270859" fromNodePartID="9" fromNodeColumnName="merchant_name" toNodePartID="0" toNodeColumnName="merchant_name" />
+      <Link partID="20" from="5" to="11" pointsArr="216 67.58203 226 67.58203 266 68 286 68 326 68 336 68" fromNodePartID="9" fromNodeColumnName="tin" toNodePartID="0" toNodeColumnName="tin" />
+      <Link partID="21" from="6" to="12" pointsArr="216 79.65494 226 79.65494 266 80 286 80 326 80.0729141 336 80.0729141" fromNodePartID="9" fromNodeColumnName="effective_start_date" toNodePartID="0" toNodeColumnName="effective_start_date" />
+      <Link partID="22" from="7" to="13" pointsArr="216 91.72786 226 91.72786 266 92 286 92 326 92.14583 336 92.14583" fromNodePartID="9" fromNodeColumnName="effective_end_date" toNodePartID="0" toNodeColumnName="effective_end_date" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

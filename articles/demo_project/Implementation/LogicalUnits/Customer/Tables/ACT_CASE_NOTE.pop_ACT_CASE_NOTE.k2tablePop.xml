@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>pop_ACT_CASE_NOTE</ID>
+  <PopulationObjectName>pop_ACT_CASE_NOTE</PopulationObjectName>
+  <TableName>ACT_CASE_NOTE</TableName>
+  <RootItemID>f_7</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="input" id="fi_7.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_7" name="fnPop_ACT_CASE_NOTE" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnPop_ACT_CASE_NOTE.k2function.xml">
+      <InputsList>
+        <Input id="fi_7.0" name="input" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_7.0" name="CUSTOMER_ID" />
+        <Output id="fo_7.1" name="ACTIVITY_ID" />
+        <Output id="fo_7.2" name="CASE_ID" />
+        <Output id="fo_7.3" name="NOTE_ID" />
+        <Output id="fo_7.4" name="NOTE_TEXT" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="13" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.0" toItemID="ACT_CASE_NOTE" toColID="tblCol_87250d417d2945c8801616f64be3b5ae" />
+    <Link partId="14" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.1" toItemID="ACT_CASE_NOTE" toColID="tblCol_1e157dbec2424d399cdeee5c02dc6114" />
+    <Link partId="42" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.2" toItemID="ACT_CASE_NOTE" toColID="tblCol_2b85cca8422d4e10a2651c4e6622b80c" />
+    <Link partId="46" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.3" toItemID="ACT_CASE_NOTE" toColID="tblCol_f36c5a8978284937a457975ff315e01d" />
+    <Link partId="48" fromNodeOrder="0" fromItemID="f_7" fromColID="fo_7.4" toItemID="ACT_CASE_NOTE" toColID="tblCol_94cf911c4eb84ae7886e51004a093864" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="ACT_CASE_NOTE.pop_ACT_CASE_NOTE.k2tablePop.xml" lastPartID="63">
+      <TableNode partID="0" name="ACT_CASE_NOTE" pos="560 24.8177128" width="253" />
+      <FunctionMapNode id="0" L0="1" R0="2" R1="3" R2="4" R3="5" R4="6" partID="7" topLabel="fnPop_ACT_CASE_NOTE (7)" pos="37.19068 33.65789" size="214.1167 153.987213" isRoot="true">
+        <KFunction>{"Name":"fnPop_ACT_CASE_NOTE","ID":"f_7","Category":"Root","Version":"6.1.0.17","FunctionLevel":0,"FunctionType2":1,"ReturnType":"void","RegisterAsLuDbFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"FunctionBody":"","IsRootFunction":true,"inputParams":[{"Name":"input","ID":"fi_7.0","Index":0,"DataType":"String","Comment":""}],"outputParams":[{"Name":"CUSTOMER_ID","ID":"fo_7.0","Index":0,"DataType":"String","Comment":""},{"Name":"ACTIVITY_ID","ID":"fo_7.1","Index":1,"DataType":"String","Comment":""},{"Name":"CASE_ID","ID":"fo_7.2","Index":2,"DataType":"String","Comment":""},{"Name":"NOTE_ID","ID":"fo_7.3","Index":3,"DataType":"String","Comment":""},{"Name":"NOTE_TEXT","ID":"fo_7.4","Index":4,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <Link partID="13" from="2" to="7" pointsArr="251.307373 89.05123 261.307373 89.05123 550 55.85417 560 55.85417" fromNodePartID="7" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="14" from="3" to="8" pointsArr="251.307373 101.124146 261.307373 101.124146 550 67.9270859 560 67.9270859" fromNodePartID="7" fromNodeColumnName="ACTIVITY_ID" toNodePartID="0" toNodeColumnName="ACTIVITY_ID" />
+      <Link partID="42" from="4" to="9" pointsArr="251.307373 113.19706 261.307373 113.19706 550 80 560 80" fromNodePartID="7" fromNodeColumnName="CASE_ID" toNodePartID="0" toNodeColumnName="CASE_ID" />
+      <Link partID="46" from="5" to="10" pointsArr="251.307373 125.269974 261.307373 125.269974 550 92.07292 560 92.07292" fromNodePartID="7" fromNodeColumnName="NOTE_ID" toNodePartID="0" toNodeColumnName="CASE_NOTE_ID" />
+      <Link partID="48" from="6" to="11" pointsArr="251.307373 137.3429 261.307373 137.3429 550 104.145828 560 104.145828" fromNodePartID="7" fromNodeColumnName="NOTE_TEXT" toNodePartID="0" toNodeColumnName="CASE_NOTE_TEXT" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

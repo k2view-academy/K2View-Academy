@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>popExecValidations</ID>
+  <PopulationObjectName>popExecValidations</PopulationObjectName>
+  <TableName>EXEC_VALIDATIONS</TableName>
+  <RootItemID>f_6</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>false</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="i_customer_id" id="fi_6.0" dataType="String" index="0" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="LookupDataSave" id="tblLookup.12" name="CUSTOMER" nodeOrder="0" module="Lookup" mapObjectModule="Lookup" alias="" itemType="Table" lookupNotFound="Reject_Record" isReference="false" cacheLookupValues="false">
+      <InputsList />
+      <OutputsList>
+        <Output xsi:type="LookupDataSaveColumn" id="tblLookup.12.out.CUSTOMER_ID" name="CUSTOMER_ID" columnID="tblCol_bbaacbe5c07346ebb750f3362ead1204" />
+      </OutputsList>
+    </Item>
+    <Item xsi:type="FunctionDiagramItemDataSave" id="f_6" name="fnExecuteValidations" nodeOrder="0" module="Function" mapObjectModule="Function" fileName="fnExecuteValidations.k2function.xml">
+      <InputsList>
+        <Input id="fi_6.0" name="i_customer_id" />
+      </InputsList>
+      <OutputsList>
+        <Output id="fo_6.0" name="o_CheckDesc" />
+        <Output id="fo_6.1" name="o_Result" />
+      </OutputsList>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="27" fromNodeOrder="0" fromItemID="tblLookup.12" fromColID="tblLookup.12.out.CUSTOMER_ID" toItemID="tbl_EXEC_VALIDATIONS" toColID="tblCol_4ee474a7115d4420a22fd69ee2dd23bb" />
+    <Link partId="53" fromNodeOrder="0" fromItemID="f_6" fromColID="fo_6.0" toItemID="tbl_EXEC_VALIDATIONS" toColID="tblCol_075eec5435b240d0ba6147e9250146b0" />
+    <Link partId="56" fromNodeOrder="0" fromItemID="f_6" fromColID="fo_6.1" toItemID="tbl_EXEC_VALIDATIONS" toColID="tblCol_380705a11bf248e9a6a5537b17779cb8" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="EXEC_VALIDATIONS.popExecValidations.k2tablePop.xml" lastPartID="102">
+      <TableNode partID="0" name="EXEC_VALIDATIONS" pos="523 125" width="253" />
+      <FunctionMapNode id="0" L0="2" R0="3" R1="4" partID="6" topLabel="fnExecuteValidations (6)" pos="138.912842 148.509109" size="223.332367 49.23697" isRoot="true">
+        <KFunction>{"Name":"fnExecuteValidations","ID":"f_6","Category":"Validation","Version":"6.1.0.17","FunctionLevel":0,"FunctionType2":1,"ReturnType":"void","RegisterAsLuDbFunction":false,"DecisionFunction":false,"RequiresLuReference":false,"Desc":"","Language":1,"FunctionBody":"","IsRootFunction":true,"inputParams":[{"Name":"i_customer_id","ID":"fi_6.0","Index":0,"DataType":"String","Comment":""}],"outputParams":[{"Name":"o_CheckDesc","ID":"fo_6.0","Index":0,"DataType":"String","Comment":""},{"Name":"o_Result","ID":"fo_6.1","Index":1,"DataType":"String","Comment":""}],"HideMethodInUi":false}</KFunction>
+      </FunctionMapNode>
+      <LUDBLookupMapNode id="1" L0="5" L1="6" L2="7" L3="8" R0="9" R1="10" R2="11" R3="12" L4="13" R4="14" partID="12" topLabel="CUSTOMER (12)" pos="201 32.50911" size="250 84.14583" isMinimized="true" itemType="Table">
+        <LUDBLookupItem>{"ID":"tblLookup.12","Name":"CUSTOMER","Alias":"","ItemType":3,"IsReference":false,"LookupNotFound":0,"CacheLookupValues":false,"InputColumnsMapList":[{"ID":"tblLookup.12.in.CUSTOMER_ID","Name":"CUSTOMER_ID","ColumnID":"tblCol_bbaacbe5c07346ebb750f3362ead1204","DataType":"Real","Index":0,"Mandatory":true,"MapIndex":0},{"ID":"tblLookup.12.in.SSN","Name":"SSN","ColumnID":"tblCol_b88d042bd4aa48159e6202cd02a92c25","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1},{"ID":"tblLookup.12.in.FIRST_NAME","Name":"FIRST_NAME","ColumnID":"tblCol_ad7397ad391b43dd9e7f0a4f6907b833","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":2},{"ID":"tblLookup.12.in.LAST_NAME","Name":"LAST_NAME","ColumnID":"tblCol_a593527821944e6f94f481867dd94287","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":3},{"ID":"tblLookup.12.in.VALIDATIONS_NOT_PASSED","Name":"VALIDATIONS_NOT_PASSED","ColumnID":"tblCol_d8a0f536a0c54114b889d5bebdc72c7b","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":4}],"OutputColumnsMapList":[{"ID":"tblLookup.12.out.CUSTOMER_ID","Name":"CUSTOMER_ID","ColumnID":"tblCol_bbaacbe5c07346ebb750f3362ead1204","DataType":"Real","Index":0,"Mandatory":true,"MapIndex":0},{"ID":"tblLookup.12.out.SSN","Name":"SSN","ColumnID":"tblCol_b88d042bd4aa48159e6202cd02a92c25","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":1},{"ID":"tblLookup.12.out.FIRST_NAME","Name":"FIRST_NAME","ColumnID":"tblCol_ad7397ad391b43dd9e7f0a4f6907b833","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":2},{"ID":"tblLookup.12.out.LAST_NAME","Name":"LAST_NAME","ColumnID":"tblCol_a593527821944e6f94f481867dd94287","DataType":"Text","Index":0,"Mandatory":false,"MapIndex":3},{"ID":"tblLookup.12.out.VALIDATIONS_NOT_PASSED","Name":"VALIDATIONS_NOT_PASSED","ColumnID":"tblCol_d8a0f536a0c54114b889d5bebdc72c7b","DataType":"integer","Index":0,"Mandatory":false,"MapIndex":4}]}</LUDBLookupItem>
+      </LUDBLookupMapNode>
+      <Link partID="27" from="9" to="15" pointsArr="454 68.54557 464 68.54557 513 156.036453 523 156.036453" fromNodePartID="12" fromNodeColumnName="CUSTOMER_ID" toNodePartID="0" toNodeColumnName="CUSTOMER_ID" />
+      <Link partID="53" from="3" to="16" pointsArr="362.2452 169.6367 372.2452 169.6367 513 168.109375 523 168.109375" fromNodePartID="6" fromNodeColumnName="o_CheckDesc" toNodePartID="0" toNodeColumnName="CHECK_DESC" />
+      <Link partID="56" from="4" to="17" pointsArr="362.2452 181.709625 372.2452 181.709625 513 180.182281 523 180.182281" fromNodePartID="6" fromNodeColumnName="o_Result" toNodePartID="0" toNodeColumnName="RESULT" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>
