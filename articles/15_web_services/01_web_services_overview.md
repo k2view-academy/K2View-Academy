@@ -9,13 +9,13 @@ Other common uses for Fabric Web Services include:
 
 - Interacting with other systems based on Fabric data. 
 
-## **What is a Fabric Web Service?** 
+## **What Is a Fabric Web Service?** 
 
 A **Fabric** **Web** **Service** is a Java function that can be exposed through the Fabric Web Service layer. Web Services should be deployed to Fabric separately and can then be invoked either by a client or directly from any web browser. In the Fabric Studio, Web Service functions can be defined and saved to the project file and be deployed to the Fabric Server. 
 
 Fabric Web Services apply REST API guidelines which can be fully integrated into the latest Open API (Swagger) platform. 
 
-## **What is a RESTful API?** 
+## **What Is a RESTful API?** 
 
 **Representational State Transfer** (**REST**) is a software architectural style that defines a set of constraints and standards used for creating Web Services. 
 
