@@ -90,7 +90,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>/dev/shm/fdb_cache</h4>
 </td>
 <td width="600">
-<p>Holds the cached database files for the LU Instances. Directory can be changed accoridng to config.ini setup</p>
+<p>Holds the cached database files for the LU Instances. Directory can be changed according to config.ini setup</p>
 </td>
 </tr>
 <tr>
