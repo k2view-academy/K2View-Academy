@@ -19,6 +19,8 @@ Let’s test an LU Instance and see the results:
 3. Execute **select * from customer**. You should get the following results:
 
    `fabric>select * from customer;`
+   
+   
    `|CUSTOMER_ID|SSN       |FIRST_NAME|LAST_NAME|`
    `+-----------+----------+----------+---------+`
    `|215        |5455651083|Talieee   |Sears    |`
