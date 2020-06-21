@@ -223,7 +223,7 @@ Click for more information about Fabric Security Hardening.</p>
 </td>
 <td width="350pxl">
 <p>Staging tables for IIDFinder mechanism:&nbsp;</p>
-<p><span data-contrast="auto">A different set of caching, delta and orphans&rsquo; tables is created for each LU that is synchronized by the IIDFinder (proactive sync) mechanism. </span></p>
+<p><span data-contrast="auto">A different set of caching, delta, solo and orphans&rsquo; tables is created for each LU that is synchronized by the IIDFinder (proactive sync) mechanism. </span></p>
 <p>&nbsp;</p>
 </td>
 </tr>
