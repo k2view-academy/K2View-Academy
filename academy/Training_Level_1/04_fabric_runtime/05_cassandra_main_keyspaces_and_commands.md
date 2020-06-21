@@ -13,8 +13,12 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
  Let's look at our project and product keyspaces:
 
 1. Run **describe keyspaces;**.
+
 2. Change the keyspace to **CustomerLU**  by executing **use k2view_customerlu;**
-3. Let's review the entities in **k2view_customerlu.entity** using the following statement: **select * from k2view_customerlu.entity**;
+
+3. Let's review the entities in **k2view_customerlu.entity** using the following statement: **select * from k2view_customerlu.entity**;  Note, you can also review the results from fabric executing the following:
+
+   **cql select * from k2view_customerlu.entity;** The results varies a bit ,  instead of a  huge blob  you'll be able to review the microDB file sizing.
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Keyspaces & Commands
 
