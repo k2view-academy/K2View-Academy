@@ -178,12 +178,6 @@
 </ul>
         </ul>
 </details>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-<details>
-<summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>
-=======
 
 <details>
 <summary markdown="span"><strong>Fabric Credentials <strong><a href="/articles/17_fabric_credentials/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
@@ -193,10 +187,6 @@
 </ul>
         </ul>
 </details>
-
->>>>>>> remotes/origin/KB_DROP1_20_Fabric_Credentials_Nataly
-=======
         
 <details>
-<summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>
->>>>>>> remotes/origin/KB_DROP1_20_Fabric_Credentials_Nataly
+<summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
