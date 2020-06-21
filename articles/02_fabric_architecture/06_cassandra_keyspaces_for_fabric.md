@@ -214,7 +214,7 @@ Click for more information about Fabric Security Hardening.</p>
 <p>k2_auditing</p>
 </td>
 <td width="350pxl">
-<p>Saves all activities performed on Fabric.</p>
+<p>Saves all activities performed on Fabric, when AUDIT is set to ON in config.ini file.</p>
 </td>
 </tr>
 <tr>
