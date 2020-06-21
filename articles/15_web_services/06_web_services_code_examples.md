@@ -1,5 +1,5 @@
 # Web-Services - Code Examples
-### Simple Example of Web-Service bringing one line of data for a given instance - wsCustomerInfo
+### 1. Simple Example of Web-Service bringing one line of data for a given instance - wsCustomerInfo
 
 The following Web-Service get as an input LUI for CUSTOMER LU and return data from CUSTOMER table on CUSTOMER LU.
 
@@ -29,7 +29,7 @@ Output:
 ]
 ```
 
-### Example of Web-Service bringing Db.Rows structure as an output for a given instance - wsCustomerInfo2
+### 2. Example of Web-Service bringing Db.Rows structure as an output for a given instance - wsCustomerInfo2
 
 The following Web-Service get as an input LUI for CUSTOMER LU and return several rows of data by running a join query on several tables on CUSTOMER LU
 
@@ -113,7 +113,7 @@ Output:
 ]
 ```
 
-### Versioning example
+### 3. Versioning example
 
 Both wsCustomerInfo and wsCustomerInfo2 Web-Services from the examples above are sharing the same URL path, called test/getCustomerInfo, wsCustomerInfo is defined with Version propery set to 1 and wsCustomerInfo is defined with Version property set to 2.
 
@@ -121,7 +121,34 @@ In order to invoke a call to wsCustomerInfo the following URL should be called: 
 
 In order to invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
-### Complex Example of TDM Web-Service 
+### 4. Example of complex input structure
+
+It is possible to sent a json complex format as an input to Fabric web service (using POST verb) and data will be serialized automatically according to the input structure defined as a part of the web service markup.
+
+For example:
+
+Requested Body:
+```
+{
+  "ID":[{"id":"78999", "company":"Telco1"},{"id":"z34","company":"Telco2"}],
+  "parent_customer_id":"456",
+  "company":"Telco International"
+}
+```
+Web service markup
+```
+public static String wsExample(List<Map<String,String>> ID, String parent_customer_id, String company){
+}
+```
+Web service inside logic 
+```
+     Map<String,String> m = ID.get(0);
+     String id = m.get("id"); // will return 78999
+     String company = m.get("company"); // will return Telco1
+```
+
+
+### 5. Complex Example of TDM Web-Service 
 
 A Web-Service used by TDMGUI, called wsGetTaskExeStatsForEntity, that brings a map of all entities list related to a given LUI with a relation to the same Business Entity.
 
