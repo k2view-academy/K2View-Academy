@@ -89,7 +89,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
@@ -165,7 +165,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="https://github.com/k2view-academy/K2View-Acade/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
@@ -174,7 +174,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="https://github.com/k2view-academy/K2View-Academy/blob/K/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
@@ -405,7 +405,7 @@ Use the following command to reset all the related parameters set on a session l
 
 #### Fabric Setting- Cluster Level
 
-Use the **SET_GLOBAL** command to set an active environment or a [global value](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_19_Fabric_Architecture_Tali/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
+Use the **SET_GLOBAL** command to set an active environment or a [global value](/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
 
 The values are kept in **global_settings** Cassandra table under [k2system keyspace.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
