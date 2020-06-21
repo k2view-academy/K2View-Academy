@@ -1,8 +1,8 @@
-# Editing web service code
+# Editing Web Service Code
 
 The code in an automatically generated Web Service function provides basic Select and Fetch templates for data retrieval. However, there is frequently a need to enhance a function’s code in order to perform a specific functionality. 
 
-### How do I edit the code of a function in a Web Service?
+### How Do I Edit a Function's Code In a Web Service?
 
 It is recommended to edit the code in a Web Service function using the IntelliJ Java Editor which offers a number of advantages like:
 
@@ -18,15 +18,60 @@ Note that IntelliJ is not part of the Fabric Studio Installation Package and **m
 
 A Web Service can also be edited directly in its main working area.
 
-### What should be edited?
+### What Should be Edited?
 
-The following items should be edited after they are automatically generated:
+<p class="vicinity rich-diff-level-zero">The following items should be edited after they are automatically generated:</p>
+<div class="expandable unchanged js-expandable rich-diff-level-zero">
+<table class="unchanged rich-diff-level-one" style="float: left;">
+<thead>
+<tr>
+<th style="text-align: left;">Item&nbsp;</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th style="text-align: left; vertical-align: top;">Fetch Data Statement</th>
+<td>
+<p>LUDB Fetch Statement.&nbsp;Replace this with the Web Service Input parameter defined as the Fabric LUI identifier. For example, in the wsCustomerInfo Web Service:</p>
+<ul>
+<li>Input parameter = &ldquo;ID&rdquo;&nbsp;</li>
+<li>Db.Rows rows = ludb("Customer", ).fetch(sql, , , ...);</li>
+<li>Db.Rows rows = ludb("Customer", ID).fetch(sql, , , ...); LUDB or DB Interface Fetch Statements</li>
+</ul>
+<p>Either populate the SQL query parameters in their placeholders (, ,&hellip;) or delete them if they are not required.</p>
+<p>These steps are mandatory for a clean Web Service code compilation. For example:</p>
+<ul>
+<li>Db.Rows rows = ludb("CUSTOMER", ID).fetch(sql, &ldquo;XX&rdquo;, 123);</li>
+<li>Db.Rows rows = ludb("CUSTOMER", ID).fetch(sql);</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th style="vertical-align: top; text-align: left;">SQL Statement Enhancement Options</th>
+<td>
+<ul>
+<li>Add a WHERE clause.&nbsp;&nbsp;</li>
+<li>JOIN additional tables to the query.</li>
+<li>Add advanced features to the SELECT statement.</li>
+</ul>
+<p>For example, assigning identifiers to tables and specifying which table columns to retrieve.</p>
+</td>
+</tr>
+<tr>
+<th style="vertical-align: top; text-align: left;">Java Code Enhancement</th>
+<td>
+<p>Web Service code can also apply transformation rules via the functions, translations or Globals defined in the project.</p>
+<p>Note that any Fabric Server runtime command can be used within the Web Service using the Execute function.</p>
+<p>For example, the Get command on the Customer LUT for a specific instance:</p>
+<p style="padding-left: 30px;">Fabric().execute(&ldquo; get Customer.?&rdquo;,ID);</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 
-| Item                              | Description                                                  |
-| --------------------------------- | ------------------------------------------------------------ |
-| Fetch Data Statement              | LUDB Fetch Statement  Replace the <instanceID> with the  Web Service Input parameter declared as the Fabric Logical Unit instance identifier.   For example, in the wsCustomerInfo Web Service the input  parameter = “ID”:   Db.Rows rows =  ludb("Customer", <instanceID>).fetch(sql, <val1>,  <val2>, ...);  Db.Rows rows =  ludb("Customer", ID).fetch(sql, <val1>, <val2>, ...);   LUDB or DB Interface Fetch  Statements  Either populate SQL query parameters  in their place holders (<val1>, <val2>,…) or delete them if they  are not required. These steps are mandatory for a clean Web Service code  compilation.   For example:  Db.Rows rows = ludb("CUSTOMER", ID).fetch(sql, “XX”, 123);  Db.Rows rows = ludb("CUSTOMER", ID).fetch(sql); |
-| SQL Statement Enhancement Options | ·  Add a WHERE clause.  ·  JOIN additional tables to the query.   ·  Add advanced features to the SELECT statement.  For example, assigning identifiers to tables and specifying which table  columns to retrieve. |
-| Java Code Enhancement             | Web Service code can also apply  transformation rules via the functions, translations or Globals defined in the project.    Note that any Fabric Server runtime command can be used within the Web  Service using the Execute function.   For example, the Get command on the  Customer LUT for a specific instance:  Fabric().execute(“ get Customer.?”,ID); |
+
 
  
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/04_web_services_function_basic_structure.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/06_web_services_code_examples.md)
