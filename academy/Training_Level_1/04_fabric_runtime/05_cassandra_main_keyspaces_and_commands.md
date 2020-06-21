@@ -24,9 +24,9 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 +---+--------+------------+-----------+-----------+-----------+-------------+
 
-|82 |        |1           |BYTES[4568]|0          |1024909903 |1592227429701|
+|82 |        |1           |**BYTES[4568]**|0          |1024909903 |1592227429701|
 
-|215|        |1           |BYTES[2634]|0          |1024909903 |1592227437514|
+|215|        |1           |**BYTES[2634]**|0          |1024909903 |1592227437514|
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Keyspaces & Commands
