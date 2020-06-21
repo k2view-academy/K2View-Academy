@@ -13,7 +13,7 @@ Each Fabric keyspace starts with a **k2**. In addition, each deployed LU creates
 
 Use the following command to connect the Cassandra DB from the Cassandra server:
 
-**cqlsh -u <username> -p <password> <ip_address>**;
+**cqlsh -u `<username>` -p `<password>` <ip_address>**;
 
 Note that if the **ip_address** is not populated, the login command connects to the local host of the Fabric server.
 
