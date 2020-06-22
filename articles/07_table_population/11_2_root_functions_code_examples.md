@@ -20,7 +20,7 @@ fabric().execute("set environment='" + SOURCE_ENV_NAME + "'");
 
 [Click to display an example of the entire fnPop_NEW_ACTIVITY Root Function in the Demo project.](/articles/demo_project)  
 
-### Example of a Root Function that Retireves Data from Several Data Sources
+### Example of a Root Function that Retrieves Data from Several Data Sources
 Use a Root function to retrieve source data from several data sources, for example the current LU and an additional DB interface. Add an SQL query per each data source.  
 1.	Create a **Root function** using the generated code for the first query that retrieves the data from the LU:
 
