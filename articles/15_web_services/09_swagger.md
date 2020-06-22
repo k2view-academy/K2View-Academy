@@ -12,23 +12,26 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
 ### Invoking and Testing Web Services Using Fabric Studio
 
-1. Go to the following URL: http://<Fabric server>:3213/api and then define the **IP Address** of the Fabric server. 
+1. Go to: **http://<Fabric server>:3213/api** and then define the **IP Address** of the Fabric server. 
    
    Or, 
    
-2. Go to **User Preferences** > Server Configuration and do the following:
+2. Go to **User Preferences** > **Server Configuration** and do the following:
     
-    a. Set the Web Service invoke path template to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>.  
+    a. Set the **Web Service Invoke Path Template** to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>.  
 
-    b. Go the the Project Tree and right click the **Web Service** and then click **Invoke Web Service**.
+    b. Go the the **Project Tree**, right click the **Web Service** and then click **Invoke Web Service**.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1.png" alt="drawing"/>
 
-   Once the link to the Swagger is invoked, you can focus on a given version of the invoked URL path, by adding for example /v1 to the URL as shown below.
+  Once the link to Swagger is invoked, you can focus on a given version of the invoked URL path. For example, by adding /v1 to the URL as shown below.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
-   The relevant invoked Web Service is expended and points to the correct verb. If only GET verb is defined as illegible for the invoked Web Service, it will only display GET verb  as an option, if all the four verbs were defined as illegible, it will show GET, POST, PUT and DELETE, but it will zoom into GET as a default.
+	The relevant invoked Web Service is expended and points to the correct verb. 
+*	If only the GET verb is defined as illegible for the invoked Web Service, it will only display the GET verb  as an option.
+
+*	If all the four verbs are defined as illegible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
 
 2. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
 
