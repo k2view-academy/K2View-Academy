@@ -45,6 +45,8 @@ In order to invoke a web service call, it is required to follow these steps:
 3. Assign the role to a token (ASSIGN ROLE <'ROLE'> to token <'TOKEN'>).
 4. Grant privilege's to the role (GRANT <'Operation'> ON <'RESOURCE'> TO <'ROLE'>).
 
+[Click for more information about Web-Services authorization.](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization)
+
 ## 4.        Response Formats 
 
 Support of JSON (default), XML and CSV formats for data returned in the body of the response. This applies to all HTTP methods that return a response body. The requester is able to specify the response format in several ways: 
