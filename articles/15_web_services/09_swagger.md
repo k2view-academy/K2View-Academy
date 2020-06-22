@@ -12,14 +12,15 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
 ### Invoking and Testing Web Services Using Fabric Studio
 
-1.  Do either:
-Go to the following URL: http://<Fabric server>:3213/api and then define the IP Address the Fabric server.
+1. Go to the following URL: http://<Fabric server>:3213/api and then define the **IP Address** of the Fabric server. 
+   
+   Or, 
+   
+2. Go to **User Preferences** > Server Configuration and do the following:
+    
+    a. Set the Web Service invoke path template to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>.  
 
-and specify the IP address of your Fabric server: http://<Fabric server>:3213/api
-   or set Web service invoke path template in your **User preferences** - Server configuration to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH> and then invoke web service (right click the **Web Service** name in the Project Tree pane and click the **Invoke Web Service** option), the following screen will show up.
-
-
-1.  Navigate to the following URL and specify the IP address of your Fabric server: http://<Fabric server>:3213/api or set Web service invoke path template in your **User preferences** - Server configuration to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH> and then invoke web service (right click the **Web Service** name in the Project Tree pane and click the **Invoke Web Service** option), the following screen will show up.
+    b. Go the the Project Tree and right click the **Web Service** and then click **Invoke Web Service**.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1.png" alt="drawing"/>
 
@@ -48,14 +49,14 @@ and specify the IP address of your Fabric server: http://<Fabric server>:3213/ap
    <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
 ### Swagger - Supported Web Services Categories
-Fabric Web Services are displayed in Swagger in categories in alphabetical order.
+Fabric Web Services are displayed in Swagger in categories and in alphabetical order.
 
 
-   * Common - All built-in product Web Services that bring reference table metadata and data.
+   * Common - all built-in product Web Services that bring reference table metadata and data.
    
-   * Graphit - All Graphit files defined as a part of the project implementations.
+   * Graphit - all Graphit files defined as a part of the project implementations.
    
-   * Lu - All  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
+   * Lu - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
    
    * Project defined categories for Web Services.
    
