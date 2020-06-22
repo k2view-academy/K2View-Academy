@@ -4,7 +4,7 @@ Data transformation rules can be applied during the [LU Table Population](/artic
 *	[Functions](/articles/07_table_population/08_project_functions.md).
 *	[Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
 *	[Globals](/articles/08_globals/01_globals_overview.md).
-*	Constants.
+*	[Constants](/articles/07_table_population/06_table_population_transformation_rules.md#constants).
 *	[Lookup Tables](/articles/07_table_population/11_lookup_tables.md).
 
 Data transformation is performed from the source object’s data to the target LU table’s data. Since the source object includes one or more records, the transformation is applied on each source record. 
