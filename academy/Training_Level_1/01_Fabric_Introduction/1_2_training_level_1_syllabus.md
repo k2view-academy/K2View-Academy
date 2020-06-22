@@ -68,7 +68,7 @@
 - Web-services
   - Overview 
   - Create and Deploy a Web Service
-  - Swagger
+  - Invoking a Web Service
   - Response Codes & Verbs 
 - Quiz (4)
 - Q&A session
