@@ -1,4 +1,4 @@
-# Deploy Web Services from Fabric Studio
+# Deploy Web Services
 
 Web services can be deployed to the K2view Fabric server either using the Fabric Studio or the Fabric Console (offline deployment).
 
