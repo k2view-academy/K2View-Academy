@@ -1,12 +1,12 @@
 # Put Verb
 
-Use PUT APIs primarily **to update existing resource** (if the resource does not exist, API may decide whether to create a new resource or not). If a new resource has been created by the PUT API, the origin server MUST inform the user agent via the HTTP response code `201 (Created)` response, and if an existing resource is modified, either the `200 (OK)` or `204 (No Content`) response codes should be sent to indicate successful completion of the request.
+Use PUT APIs primarily **to update existing resource** (if the resource does not exist, API may decide whether to create a new resource or not). If a new resource has been created by the PUT API, the origin server MUST inform the user agent via the HTTP response code `201 (Created)`response, and if an existing resource is modified, either the `200 (OK)` or `204 (No Content`) response codes should be sent to indicate successful completion of the request.
 
 If the request passes through a cache and the Request-URI identifies one or more currently cached entities, those entries SHOULD be treated as stale. Responses to this method are **not cacheable**.
 
 The difference between the POST and PUT APIs can be observed in request URIs. POST requests are made on resource collections, whereas PUT requests are made on an individual resource.
 
-## 1.      Put data into LU table
+##  Put Data Into LU Table
 
 http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
 
@@ -19,7 +19,7 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 | LU Name       | Logical unit name or COMMON for common tables | Y             | CUSTOMER  COMMON |                |
 | Iid           | Instance Id                                   | Y             | 1                |                |
 | TABLE_NAME    | Table name for data creation                  | Y             | PAYMENT          |                |
-| token         | Token Name                                    | Y             |                  |                |
+| token         | Token name                                    | Y             |                  |                |
 | format        | Response format                               | Y             | JSON/XML/CSV     | JSON           |
 
 **Examples:**
@@ -37,7 +37,7 @@ Request Body
 ```
  
 
-## 2.      Put data into common table
+##  Put Data Into Common Table
 
 http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token name&[format=json/xml]
 
@@ -48,7 +48,7 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
 | api               | API                          | Y             | api           |             |
 | COMMON            | Specify that scope is common | Y             | COMMON        |             |
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
-| token             | Token Name                   | Y             |               |             |
+| token             | Token name                   | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
 **Examples:**
@@ -66,7 +66,7 @@ Request Body
 ```
  
 
-## 3.      Put custom Web-Service 
+## Put Custom Web Service 
 
 http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
 
@@ -85,10 +85,10 @@ parameters should be populated on the body in the following structure:
 | PORT                        | PORT                                   | Y             | 3213          |                |
 | Api                         | API                                    | Y             | api           |                |
 | VERSION_NO                  | Version number                         | N             | V1.4          | Latest version |
-| Customized Web-Service name | Name of the Web-Service to be executed | Y             | Orders        |                |
+| Customized Web-Service name | Name of the Web Service to be executed | Y             | Orders        |                |
 | Format                      | Response format                        | Y             | JSON/XML/YAML | JSON           |
 
-## 4.         Request Header
+## Request Header
 
 | **Parameter**             | **Mandatory** | **Value**                                                   |
 | ------------------------- | ------------- | ----------------------------------------------------------- |
@@ -107,7 +107,7 @@ In the body request put:
  "i_order_status": "Open"
 }
 ```
-Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
+Call Web Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/13_Supported_Verbs_Post.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 
