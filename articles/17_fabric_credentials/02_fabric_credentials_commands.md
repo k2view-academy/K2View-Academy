@@ -373,7 +373,7 @@ Below is a list of GRANT WS_NAME command parameters:
 
 #### Web-Services Authorization
 
-- The Web-Service authorization is done using the **token**:
+- The [Web-Service](/articles/15_web_services/01_web_services_overview.md) authorization is done using the **token**:
   - Project Web-Services: give permission to the **role** on the Web-Service or all Web-Services,  and assign the token to the role.
   - Product Web-Services: assign the token to the user. The permission to the Product Web_Services are defined by the combination of the token assigned to the user and the permissions of the roles, assigned to the user. 
     - Example:
@@ -389,8 +389,6 @@ Below is a list of GRANT WS_NAME command parameters:
       "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]"
        </code></pre>
     
-
-<!-- Add links to web services KIs -->
 
 ## Additional Commands
 
