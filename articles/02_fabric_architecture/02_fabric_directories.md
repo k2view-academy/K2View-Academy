@@ -5,26 +5,26 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <table width="900pxl">
 <tbody>
 <tr>
-<td width="300pxl">
+<td width="300pxl" valign="top">
 <h4><strong>Directory Name</strong></h3>
 </td>
-<td width="600pxl">
+<td width="600pxl" valign="top">
 <h4><strong>Directory Content</strong></h3>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/fabric</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>This directory and its sub-directories contain hold Fabric code, scripts, templates and resources.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/fabric/scripts</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Fabric scripts:&nbsp;</p>
 <ul>
 <li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment scripts</a></li>
@@ -37,91 +37,91 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/fabric/upgrade</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/logs</h4>
 </td>
-<td width="471">
+<td width="600pxl" valign="top">
 <p>Fabric <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">log files.</a></p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/config</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric configuration files.</a></p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/monitor</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Holds the Prometheus JMX exporter for for execution monitoring.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/apps</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Third-party applications and tools used by Fabric. For example, Java, Cassandra, Grafana, or Redis.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/storage</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Stores data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, Staging XMLs for iidFinder, and Reference (common) files.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>/dev/shm/fdb_cache</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Holds the cached database files for the LU Instances. Directory can be changed according to config.ini setup.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/ExternalJars</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Holds the .jar files of all database jars that have not been provided as an out-of-the box product and external jars used for the Fabric implementation.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/export</h4>
 </td>
-<td width="471">
+<td width="600pxl" valign="top">
 <p>Holds the output files of the <a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting">set output Fabric command.</a></p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/trace</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Trace files.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <h5>$K2_HOME/webserver</h4>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>The Home directory of the Fabric web admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.</p>
 </td>
 </tr>
