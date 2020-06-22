@@ -1,6 +1,6 @@
 #   Logical Unit Flow
 
- ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
+ ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
 
 You have just set up your Fabric Project, configured its components and defined the interfaces for the Customer 360 View. Based onthe business requirements,let’s look at your next steps:
 
@@ -45,7 +45,7 @@ We have already acknowledged that the Digital Entity should be the Customer ID t
 
 
 
-### ![](/academy/03_fabric_basic_LU/images/example.png)Example – Auto Discovering a Logical Unit
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example – Auto Discovering a Logical Unit
 
 Following the Auto Discovery Tutorial, you can generate the **CustomerLU** using the Fabric Studio Wizard. 
 
@@ -61,7 +61,7 @@ Note that the **Root Table** and **InstanceID** are created automatically.
 
 Yay! your **CustomerLU** is now defined:
 
-![](/academy/03_fabric_basic_LU/images/CustomerLU.png) 
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/CustomerLU.png) 
 
 `Question: Are all the tables in the CRM_DB Schema part of the CustomerLU? Why?`
 
@@ -75,7 +75,7 @@ Let’s review some Logical Unit Schema properties:
 
    
 
-![](/academy/03_fabric_basic_LU/images/information.png)There are other options for using theAuto Discovery Wizard, like overriding or enhancing a Logical Unit, refer to:   [Auto Discovery Build or Update LU](/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png)There are other options for using theAuto Discovery Wizard, like overriding or enhancing a Logical Unit, refer to:   [Auto Discovery Build or Update LU](/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
 
  
 
@@ -115,7 +115,7 @@ Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s l
 
  
 
-###   ![](/academy/03_fabric_basic_LU/images/example.png)  Example – Run the Data Viewer 
+###   ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)  Example – Run the Data Viewer 
 
 Let’s test an LU Instance and see the result. 
 
@@ -129,17 +129,17 @@ Open the CustomerLUData Viewer and execute Instance ID 215:
 
 4. Execute the following **query** in the **Data Viewer**:
 
-   
+   ​
 
    `select cases.status,cases.activity_id, activity.ACTIVITY_DATE,activity.ACTIVITY_NOTE from cases, activity where cases.ACTIVITY_ID=activity.ACTIVITY_ID` 
 
-   
+   ​
 
 5. Do the same using the **CRM_DB Query Builder** and add the **CUSTOMER_ID** number. Is the displayed data the same?
 
  
 
-### ![](/academy/03_fabric_basic_LU/images/Exercise.png)Exercise – Add New Tables to The LU and Validate Them
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Add New Tables to The LU and Validate Them
 
 The Logical Unit you have just created using the Auto Discovery Wizard contains basic Customer information only. However, you also need to see their Subscription and Billing info.
 
@@ -159,7 +159,7 @@ Add the BILLING_DB.BALANCEtable to the CustomerLU.
 
 ​       
 
-### ![](/academy/03_fabric_basic_LU/images/Solution.png)Solution - Add New Tables to The  LU and Validate Them
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution - Add New Tables to The  LU and Validate Them
 
 1. `Answer: SUBSCRIBER.MSISDN to CONTRACT.ASSOCIATED_LINE_FMT`
 2. `Answer: 2 Subscribers, 209 &210`
