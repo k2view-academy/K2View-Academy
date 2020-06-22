@@ -303,10 +303,10 @@ The following table lists the  DELETE commands:
 <td valign="top" width="250pxl">
 <p><strong>Description</strong></p>
 </td>
-<td valign="top" width="300pxl">
+<td valign="top" width="200pxl">
 <p><strong>Syntax</strong></p>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="200pxl">
 <p><strong>Example</strong></p>
 </td>
 </tr>
@@ -318,13 +318,13 @@ The following table lists the  DELETE commands:
 <p>Delete a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> or a list of LUIs from Fabric.</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="300pxl">
+<td valign="top" width="200pxl">
 <p>Delete one instance:</p>
 <p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <p>Delete multiple instances:</p>
 <p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="200pxl">
 <p>delete CRM.10;</p>
 <p>delete CRM.10, CRM.3;</p>
 <p>delete CRM.5, Customer.30;</p>
@@ -337,14 +337,14 @@ The following table lists the  DELETE commands:
 <td valign="top" width="250pxl">
 <p>Delete all LUIs that do not exist in the source system. To run this command, you must set the config.ini file as follows:</p>
 <ul>
-<li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
-<li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
+<li><h6>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
+<li><h6>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
 </ul>
 </td>
-<td valign="top" width="300pxl">
+<td valign="top" width="200pxl">
 <p>delete instances if not exist &lt;LUT_Name&gt;;</p>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="200pxl">
 <p>delete instances if not exist CRM;</p>
 </td>
 </tr>
