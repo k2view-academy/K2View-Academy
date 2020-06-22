@@ -57,7 +57,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <td width="300pxl" valign="top">
 <p>jvm.options</p>
 </td>
-<td width="600pxl" valign="top">Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone">DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
+<td width="600pxl" valign="top">Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone">-DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
 </tr>
 <tr>
 <td width="300pxl" valign="top">
@@ -71,7 +71,16 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <td width="300pxl" valign="top">
 <p>modules</p>
 </td>
-<td width="600pxl" valign="top">&nbsp;</td>
+<td width="600pxl" valign="top">
+<p>A list of internal Fabric modules. Each module depends on the previous modules in the file. You can comment some of the internal Fabric modules and <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart">restart the Fabric node</a> to avoid starting the commented modules and have a lightweight start on Fabric. For example: comment the <strong>jobs</strong> module to avoid running jobs on the Fabric node. The following modules can be commented:</p>
+<ul>
+<li><strong>jobs</strong>,running Fabric jobs.</li>
+<li><strong>webserver</strong>,connecting Fabric via http or https. For example: <a href="/articles/15_web_services/01_web_services_overview.md">invoke Fabric WS</a>, <a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">deploy Fabric implementation from Fabric Studio.</a></li>
+<li><strong>commonarea</strong>, accessing common (reference) tables. </li>
+<li><strong>dbserve</strong>, connecting Fabric via remote JDBC connection. For example: logic Fabric console using <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric">fabric command,</a> defining Fabric node as a <a href="/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md">remote Fabric interface.</a></li>
+<li><strong>clustertimecheck</strong>, comparing the time between the Fabric nodes, included in the Fabric cluster and throwing an error if a difference is identified.</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
