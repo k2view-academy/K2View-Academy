@@ -41,7 +41,7 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
-3. Click the **Lock**, set a valid **Token** and then click **Authorize**.
+3. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
 4. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 
