@@ -57,7 +57,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <td width="300pxl" valign="top">
 <p>jvm.options</p>
 </td>
-<td width="600pxl" valign="top">&nbsp;Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone">DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
+<td width="600pxl" valign="top">Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone">DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
 </tr>
 <tr>
 <td width="300pxl" valign="top">
