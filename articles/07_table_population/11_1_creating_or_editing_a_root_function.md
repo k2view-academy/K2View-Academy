@@ -44,7 +44,7 @@ The Root function’s main SELECT statement and loop over the SELECT results can
 
 <pre><code>
 String sql = "SELECT SSN, FIRST_NAME, LAST_NAME FROM CRM_DB.CUSTOMER";
-db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
+db("CRM_DB").fetch(sql, [val1], [val2], ...).each(row->{
 	yield(row.cells());
 });
 </code></pre>
@@ -52,10 +52,10 @@ db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 
 The Root function should be edited as follows:
 * Add the **WHERE** clause to the above SELECT statement using binding parameters, otherwise the query will select all records from the table rather than selecting the relevant data for the LU Instance. 
-* [* <val1>, <val2>,…] are place holders for the query’s Input parameters. Either remove them from the **fetch()** command if they are not needed, or replace them with the SQL query’s Input parameters. 
+* [val1], [val2], … are place holders for the query’s Input parameters. Either remove them from the **fetch()** command if they are not needed, or replace them with the SQL query’s Input parameters. 
 * Add the required business logic to the Root function, including additional SELECT statements and the execution of Fabric commands. 
 
-**Example of the Edited Code where Input is a Value of a Root Function’s Input Parameter** 
+**Example of the Edited Code of a Root Function** 
 
 <pre><code>
 String sql = 
