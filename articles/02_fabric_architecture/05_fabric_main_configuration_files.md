@@ -57,7 +57,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <td width="300pxl" valign="top">
 <p>jvm.options</p>
 </td>
-<td width="600pxl" valign="top">Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone">-DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
+<td width="600pxl" valign="top">Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone"> -DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
 </tr>
 <tr>
 <td width="300pxl" valign="top">
@@ -358,7 +358,7 @@ This file lists Fabric node identifiers for the Affinity mechanism. The followin
 
 ## Update Configuration Files
 
-### Update Config.ini and Node.id Files
+### Update Config.ini, Node.id, and Logback Files
 
 Fabric adds a notification to the k2fabric.log if the updates are loaded automatically to Fabric. If the changes require a restart of the Fabric node, Fabric adds a warning to the [log file](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md).
 
@@ -366,6 +366,9 @@ Examples:
 
 - INFO [FileChangeMonitor] 2020-06-07 18:30:40,207 c.k.f.c.i.Configurator - [LID1000000000496] Configurator changed fabric.DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED from false to true INFO [FileChangeMonitor] 2020-06-07 18:30:40,207 c.k.f.c.i.FileChangeMonitor - [LID1000000000496] config.ini was reloaded
 - WARN [FileChangeMonitor] 2020-06-07 18:38:33,270 c.k.f.c.i.Configurator - [LID1000000000496] Configurator will not update fabricdb.MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE from com.k2view.cdbms.dao.CassandraEntityStorage to NONE at runtime.
+
+### Update Jvm.option, Jmxremote, and Modules Files
+Fabric must be restarted to apply the updates. 
 
 ### Update iifConfig.ini 
 When updating the iifConfig.ini, do the following:
