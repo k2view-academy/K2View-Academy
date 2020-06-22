@@ -7,35 +7,35 @@ Run the following commands through the Fabric server command line:
 <table>
 <tbody>
 <tr>
-<td width="300pxl">
+<td width="300pxl" valign="top">
 <p><h4><strong>Command Name</strong></p>
 </td>
-<td width="600pxl">
+<td width="600pxl" valign="top">
 <p><h4><strong>Command Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <p><h4><strong>k2fabric start</strong></p>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Start the Fabric node. Fabric displays notifications when local files are in conflict with the installed release (private files). 
 Always start the seed nodes before other nodes in the Fabric cluster.</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <p><h4><strong>k2fabric stop</strong></p>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Stop the Fabric node</p>
 </td>
 </tr>
 <tr>
-<td width="300">
+<td width="300pxl" valign="top">
 <p><h4><strong>k2fabric restart</strong></p>
 </td>
-<td width="600">
+<td width="600pxl" valign="top">
 <p>Restart (stop and start) the Fabric node</p>
 </td>
 </tr>
@@ -49,11 +49,11 @@ Run the **k2fabric -version** script through the Fabric server command line to g
 
 ## Login Fabric 
 
-#### Enter Fabric from the Fabric Server
+### Enter Fabric from the Fabric Server
 
 Type **fabric** in the Fabric server command line. 
 
-#### Enter the Fabric Local Server
+### Enter the Fabric Local Server
 
 Open the **Fabric Console** via the Windows Search option. When opening a project, the Fabric Studio logs into  the local Fabric server. 
 
