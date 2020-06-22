@@ -23,15 +23,14 @@ The ***.err** and ***.** **out** log files are created during [Fabric restart]( 
 
 #### **IID Finder Log Files**
 
-The IID Finder has a separate log file and a separate configuration file:
+The IID Finder has a separate log and configuration files:
 
 <pre><code>	$K2_HOME/config/logback-iid_finder.xml
+	$K2_HOME/config/logback-init_finder.xml
 	$K2_HOME/logs/iidfinder.log
 </code></pre>
 
-Click for more information about the IID Finder.
-
-<!--Drop 3- add a link to IID Finder -->
+Click for more information about the IID Finder. <!--Drop 3- add a link to IID Finder -->
 
 ### **Log Files Location & Rolling Policy**
 
