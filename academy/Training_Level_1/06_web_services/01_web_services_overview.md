@@ -14,3 +14,7 @@ By the end of the Web Services learning item you will know:
 - <!--How to manage access rights for your web service- once Admin item is ready-->
 - <!--How to use Graphit- Once item is ready-->
 
+
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/Training_Level_1/06_web_services/02_create_and_deploy_a_web_service.md)
+

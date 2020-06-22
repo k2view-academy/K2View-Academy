@@ -1,6 +1,6 @@
 # Create and Deploy a Web Service
 
-The Fabric stored data can be viewed, updated or even deleted with the Web Service Layer using  sets of requests and responses:
+The Fabric stored data can be viewed, updated or even deleted using the Web Service Layer with sets of requests and responses:
 
 [Web Services Overview](/articles/15_web_services/01_web_services_overview.md)
 
@@ -30,11 +30,13 @@ Let's create our first simple Web Service which will retrieve basic infomration 
 6. Set the Web Service properties:
    1.  the prefered Category, for example **Training**
    2. Select **Object** from the **Return Type**  drop down list.
-   3. Set the path to : train/getCustomer
+   3. Set the path to : **train/getCustomer**
    4. Add a description to your Web Service
 7. Add comments or log message in your Web Service
 8. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
 9. Save the Web Service with no errors
+
+### Deploy a Web Service
 
 Before testing our Web Service, we must deply it into Fabric, let's understand how:
 
@@ -46,7 +48,7 @@ Now we can validate if the Web Service has been deployed :
 
 1. Please log into Fabric 
 2. Execute : `cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
-3. You can now verify the your Web Service has been deployed :
+3. You can now verify that your Web Service has been deployed :
 
 `fabric>cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
 
@@ -60,4 +62,6 @@ Now we can validate if the Web Service has been deployed :
 
 
 
+
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/03_invoking_a_web_service.md)
 
