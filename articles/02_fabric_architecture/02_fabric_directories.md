@@ -145,7 +145,7 @@ Fabric and Cassandra are installed under the following directories:
 The Fabric server directory has the following sub-directories:
 
 - **Fabric**, this directory and its sub-directories hold Fabric code, scripts, templates and resources. Note that the Fabric Studio setup adds a shortcut to the fabric.bat file under the fabric\bin folder. This file opens the Fabric console CMD in the local Fabric server and can be used only after running the Fabric server from the Studio. The fabric.bat file connects to the Fabric server via the default JDBC port.
-- **BroadwayUI**, Broadway directory <!--add a link to Broadway items – drop 2 - ->.
+- **BroadwayUI**, Broadway directory.
 - **Webserver**, the Home directory of the Fabric Web Admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.
 
 ### FabricHome Directory
