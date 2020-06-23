@@ -1,4 +1,4 @@
-# **Web Services Properties** 
+# **Web Service Properties** 
 
 Fabric Web Services properties include the definitions, methods, categories and essential metadata that contribute to the main functionalities and characteristics of the Web Service.  
 
