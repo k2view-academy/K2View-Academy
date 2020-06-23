@@ -3,7 +3,7 @@
 ## Supported K2view Web Services URL Structure
 http://IP address:PORT/api/[VERSION_NO]/[web-service name]?token=ABC&format=json
 
-URL parameters, including the Token and Format, are supported on both the URL and header request.
+URL parameters, including the token and format, are supported on both the URL and header request.
 
 ## URL Redirect
 
@@ -17,7 +17,7 @@ A user may ask for http://www.somesite.com/widgets/blue/, but will receive http:
 
 Copy rewrite.config file (sample file attached) to $FABRIC_HOME\webserver\WEB-INF
 
-To use this functionality users must have at least basic knowledge of rewrite rules / conditions and their different parameters. 
+To use this functionality, users must have at least basic knowledge of rewrite rules / conditions and their different parameters. 
 
 Useful tutorials: 
 
@@ -31,27 +31,24 @@ Useful tutorials:
 
 A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
-By always using SSL, authentication credentials can be simplified to a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth which is fully browser-explorable. If the browsers receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
+By always using SSL, authentication credentials can be simplified to a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. This is fully browser-explorable, if the browsers receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
 Token can be provided as a part of the URL, as a parameter, or on the header request.
 
 To invoke a Web Service call, do the following:
 
-1. Create a token, this token should be assigned to user if product built-in web-services are required (create token 'ABC' user 'admin').
-2. Create a role (CREATE ROLE <'role_name'> description <"role description">).
-3. Assign the role to a token (ASSIGN ROLE <'ROLE'> to token <'TOKEN'>).
-4. Grant privilege's to the role (GRANT <'Operation'> ON <'RESOURCE'> TO <'ROLE'>).
+1. Create a **token** and assign it to the user. If a built-in product Web Service is required, define the **Token** as **ABC** and the **User** as **Admin**.
+2. Create a role, click **CREATE ROLE** > [**role_name**] > **Description** [**Role Description**].
+3. Assign the role to a token, click **ASSIGN ROLE** > [**ROLE]> to token <'TOKEN'>**.
+4. Grant privilege's to the role, click **GRANT** > **Operation> ON <RESOURCE> TO > ROLE**.
 
-[Click for more information about Web-Services authorization.](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization)
+[Click for more information about Web Services authorization.](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization)
 
 ## Response Formats 
 
-Support of JSON (default), XML and CSV formats for data returned in the body of the response. This applies to all HTTP methods that return a response body. The requester is able to specify the response format in several ways: 
-
-   *     Making a request without specifying the response format will result in a default JSON format. 
-
-   *     Using the reserved “format” query string parameter in the URI when making a request. You can set the format to XML by adding “format=xml” to the query string portion of the request (the key-value pair data after the “?”). This is in addition to any other query string parameters also in the URI.
-
-   *    Using format parameter on the HTTP request header.
+Supports JSON (default), XML and CSV formats for data returned in the body of the response. This applies to all HTTP methods that return a response body. The response format can be defined in several ways: 
+- Making a request without specifying the response format will result in a default JSON format. 
+- Using the reserved Format query string parameter in the URI when making a request. You can set the format to XML by adding “format=xml” to the query string portion of the request (the key-value pair data after the “?”, in addition to any other query string parameters also in the URI.
+- Using format parameter on the HTTP request header.
 
 ## URL Encoding
 
