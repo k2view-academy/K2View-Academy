@@ -2,7 +2,7 @@
 
 The following URL structure is used to call Fabric Web Services:
 
-<pre><code> http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?token=[TOKEN]&format=json </pre></code>
+<pre><code> http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?token=[TOKEN NAME]&format=json </pre></code>
 
 Input parameters can be transfered to Fabric Web Services either as:
 * Part of the URL path.
@@ -27,12 +27,16 @@ Where:
 
 ### Transfering Input Parameters That Are Not Part of the URL Path
 
-When input parameters are not set as part of the URL path, transfer them to the Web Service as follows:
+When input parameters are not set as part of the URL path, transfer them as follows:
+
+<pre><code> http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&[param2 name]=[param2 value]...&token=[TOKEN NAME]&format=json </code></pre>
+
+For example:
 
 http://localhost:3213/api/v1/wsMigrateStatsParams?i_migrateId=dca63eda-1553-40b7-b2e8-ae098b3c2c04&i_runMode=S&token=ABC&format=json
 
 If an input parameters is correctly set but is not transferred as a part of the URL, the Web Service displays the relevant error code.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/09_swagger.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/07_deploy_web_services.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/09_swagger.md)
 
 
