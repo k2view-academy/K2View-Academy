@@ -12,30 +12,306 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Data
 
-http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=token name&[format=json/xml]&SET={mode,value}
+<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/LU Name/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=token name&[format=json/xml]&SET={mode,value} </code></pre>
 
- 
-
-| **Component** | **Description**                                 | **Mandatory** | **Example**                                                  | **Default**                                    |
-| ------------- | ----------------------------------------------- | ------------- | ------------------------------------------------------------ | ---------------------------------------------- |
-| Domain name   | Domain name                                     | Y             | localhost                                                    |                                                |
-| PORT          | PORT                                            | Y             | 3213                                                         |                                                |
-| api           | API                                             | Y             | api                                                          |                                                |
-| VERSION_NO    | Version number                                  | N             | V1.4                                                         | Latest version                                 |
-| lu            | Lu                                              | Y             | lu                                                           |                                                |
-| LU Name       | Logical unit name                               | Y             | CUSTOMER                                                     |                                                |
-| Iid           | Instance ID                                     | Y             | 1                                                            |                                                |
-| TABLE_NAME    | Table name                                      | N             | PAYMENT                                                      | All tables                                     |
-| Fields        | Field name                                      | N             | fields=CUSTOMER_ID, INVOICE_ID                               | Multiple fields supported                      |
-| where         | Where statement for the selected table          | N             | where=NAME=’MOSHE’ OR ADDRESS=’TEL AVIV’                     | Can be populated if FIELDS are populated |
-| QUERY         | Where statement for cross tables on the same LU | N             | QUERY=SELECT NAME from ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID  =B.ADDRESS_ID |                                                |
-| token         | Token name                                      | Y             |                                                              |                                                |
-| format        | Response format                                 | Y             | JSON/XML/YAML                                                | JSON                                           |
-| Set           | Sync mode                                       | N             | SET=sync,off  SET=sync,on  SET=sync,force                    | Sync policy on the session                     |
-|               | Environment                                     | N             | SET=ENVIRONMENT,’ENV1’                                       | _dev                                           |
-|               | Sync_timeout                                    | N             | SET=SYNC_TIMEOUT,10                                          | Set on config.ini                              |
-|               | instance_ttl                                    | N             | SET=instance_ttl,10                                          |                                                |
-|               | Environment variable                            | N             | SET=A,4                                                      |                                                |
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="100pxl" valign="top">
+<p><strong>Component</strong></p>
+</td>
+<td width="200pxl" valign="top" >
+<p><strong>Description</strong></p>
+</td>
+<td width="100pxl" valign="top" >
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="300pxl" valign="top" >
+<p><strong>Example</strong></p>
+</td>
+<td width="200pxl" valign="top" >
+<p><strong>Default</strong></p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>Domain name</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Domain name</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>localhost</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>PORT</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>PORT</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>3213</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>api</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>API</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>api</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>VERSION_NO</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Version number</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>V1.4</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Latest version</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>lu</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Lu</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>lu</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>LU Name</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Logical unit name</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>CUSTOMER</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>Iid</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Instance ID</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>1</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>TABLE_NAME</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Table name</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>PAYMENT</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>All tables</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>Fields</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Field name</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>fields=CUSTOMER_ID, INVOICE_ID</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Multiple fields supported</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>where</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Where statement for the selected table</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>where=NAME=&rsquo;MOSHE&rsquo; OR ADDRESS=&rsquo;TEL AVIV&rsquo;</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Can be populated if FIELDS are populated</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>QUERY</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Where statement for cross LU tables on the same LU</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>QUERY=SELECT NAME from ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>token</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Token name</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>format</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Response format</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Y</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>JSON/XML/YAML</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>JSON</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>Set</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Sync mode</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>SET=sync,off SET=sync,on SET=sync,force</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Sync policy on the session</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >&nbsp;Set</td>
+<td width="200pxl" valign="top" >
+<p>Environment</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>SET=ENVIRONMENT,&rsquo;ENV1&rsquo;</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>_dev</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >&nbsp;Set</td>
+<td width="200pxl" valign="top" >
+<p>Sync_timeout</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>SET=SYNC_TIMEOUT,10</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>Set on config.ini</p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >&nbsp;Set</td>
+<td width="200pxl" valign="top" >
+<p>instance_ttl</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>SET=instance_ttl,10</p>
+</td>
+<td width="100pxl" valign="top" >&nbsp;</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >&nbsp;Set</td>
+<td width="200pxl" valign="top" >
+<p>Environment variable</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>N</p>
+</td>
+<td width="300pxl" valign="top" >
+<p>SET=A,4</p>
+</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 
 **Examples:**
 
