@@ -59,7 +59,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 <td>OK</td>
 <td>GET/POST/PUT/DELETE</td>
 <td>
-<p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload sent in a 200 response depending on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
+<p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload is sent in a 200 response depending on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
 <p style="padding-left: 30px;">GET a representation of the target resource;</p>
 <p style="padding-left: 30px;">POST a representation of the status of, or results obtained from, the action;</p>
 <p style="padding-left: 30px;">PUT, DELETE a representation of the status of the action;</p>
@@ -100,7 +100,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 <td>401</td>
 <td>Unauthorized</td>
 <td>GET/POST/PUT/DELETE</td>
-<td>The 401 (Unauthorized) status code is returned from the application server when application security is enabled, and authorization information was missing from the request. For example, TOKEN is invalid.</td>
+<td>The 401 (Unauthorized) status code is returned from the application server when application security is enabled, and authorization information is missing from the request. For example, TOKEN is invalid.</td>
 </tr>
 <tr>
 <td>403</td>
