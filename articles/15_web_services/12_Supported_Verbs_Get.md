@@ -495,7 +495,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </table>
 <p>&nbsp;</p>
 
-**Examples**
+**Examples:**
 
 http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
 
@@ -503,17 +503,139 @@ Bring metadata for CUSTOMER LU
 
 # Get Common Schema (Metadata)
 
-http://IP address:PORT/api/[VERSION_NO]/COMMON/[table name]?token=token name&[format=json/xml/yaml]
+<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=token name&[format=json/xml/yaml]</code></pre>
 
-| Component   | Description     | Mandatory | Example       | Default        |
-| ----------- | --------------- | --------- | ------------- | -------------- |
-| Domain name | Domain name     | Y         | localhost     |                |
-| PORT        | PORT            | Y         | 3213          |                |
-| Api         | API             | Y         | api           |                |
-| VERSION_NO  | Version number  | N         | V1.4          | Latest version |
-| COMMON      | Common tables   | Y         | COMMON        |                |
-| Token       | Token name      | Y         |               |                |
-| Format      | Response format | Y         | JSON/XML/YAML | JSON           |
+<table width="900pxl">
+<tbody>
+<tr>
+<td width="150pxl" valign="top">
+<p><strong>Component</strong></p>
+</td>
+<td width="150pxl" valign="top">
+<p><strong>Description</strong></p>
+</td>
+<td width="150pxl" valign="top">
+<p><strong>Mandatory</strong></p>
+</td>
+<td width="150pxl" valign="top">
+<p><strong>Example</strong></p>
+</td>
+<td width="150pxl" valign="top">
+<p><strong>Default</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="150pxl" valign="top">
+<p>Domain name</p>
+</td>
+<td width="150pxl" valign="top">
+<p>Domain name</p>
+</td>
+<td width="150pxl" valign="top">
+<p>Y</p>
+</td>
+<td width="150pxl" valign="top">
+<p>localhost</p>
+</td>
+<td width="150pxl" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td width="150pxl" valign="top">
+<p>PORT</p>
+</td>
+<td width="250pxl" valign="top">
+<p>PORT</p>
+</td>
+<td width="100pxl" valign="top">
+<p>Y</p>
+</td>
+<td width="200pxl" valign="top">
+<p>3213</p>
+</td>
+<td width="200pxl" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td width="150pxl" valign="top">
+<p>Api</p>
+</td>
+<td width="250pxl" valign="top">
+<p>API</p>
+</td>
+<td width="100pxl" valign="top">
+<p>Y</p>
+</td>
+<td width="200pxl" valign="top">
+<p>api</p>
+</td>
+<td width="200pxl" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td width="150pxl" valign="top">
+<p>VERSION_NO</p>
+</td>
+<td width="250pxl" valign="top">
+<p>Version number</p>
+</td>
+<td width="100pxl" valign="top">
+<p>N</p>
+</td>
+<td width="200pxl" valign="top">
+<p>V1.4</p>
+</td>
+<td width="200pxl" valign="top">
+<p>Latest version</p>
+</td>
+</tr>
+<tr>
+<td width="150pxl" valign="top">
+<p>COMMON</p>
+</td>
+<td width="250pxl" valign="top">
+<p>Common tables</p>
+</td>
+<td width="100pxl" valign="top">
+<p>Y</p>
+</td>
+<td width="200pxl" valign="top">
+<p>COMMON</p>
+</td>
+<td width="200pxl" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td width="150pxl" valign="top">
+<p>Token</p>
+</td>
+<td width="250pxl" valign="top">
+<p>Token name</p>
+</td>
+<td width="100pxl" valign="top">
+<p>Y</p>
+</td>
+<td width="200pxl" valign="top">&nbsp;</td>
+<td width="200pxl" valign="top">&nbsp;</td>
+</tr>
+<tr>
+<td width="150pxl" valign="top">
+<p>Format</p>
+</td>
+<td width="150pxl" valign="top">
+<p>Response format</p>
+</td>
+<td width="150pxl" valign="top">
+<p>Y</p>
+</td>
+<td width="150pxl" valign="top">
+<p>JSON/XML/YAML</p>
+</td>
+<td width="150pxl" valign="top">
+<p>JSON</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 
 **Example:**
 
