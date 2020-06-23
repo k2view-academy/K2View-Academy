@@ -1,6 +1,8 @@
 # Get Verb
 
-Use GET requests without modifying it to retrieve **resource representation** or **information**. Since GET requests do not change the status of the resource, they are considered to be a **safe method**. In addition, GET APIs should be **idempotent**, meaning that multiple identical requests must produce the same result every time until another POST or PUT API changes the status of the resource on the server.
+Use a GET request without modifying it to retrieve **resource representation** or **information**. 
+
+Since GET requests do not change the status of the resource, they are considered to be a **safe method**. Additionally, GET APIs should be **idempotent**, meaning that multiple identical requests must produce the same result every time until another POST or PUT API changes the status of the resource on the server.
 
 - If the Request-URI refers to a data-producing process, the produced data is returned as the entity in the response and not the source text of the process, unless that text is the output of the process.
 - If the resource of a given HTTP GET API is not found on the server, it returns the HTTP 200 OK response code together with the response body, which is either XML or JSON content (due to their platform independent nature). 
@@ -12,306 +14,31 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Data
 
-<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/LU Name/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=token name&[format=json/xml]&SET={mode,value} </code></pre>
+http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=token name&[format=json/xml]&SET={mode,value}
 
-<table width="900pxl">
-<tbody>
-<tr>
-<td width="100pxl" valign="top">
-<p><strong>Component</strong></p>
-</td>
-<td width="200pxl" valign="top" >
-<p><strong>Description</strong></p>
-</td>
-<td width="100pxl" valign="top" >
-<p><strong>Mandatory</strong></p>
-</td>
-<td width="300pxl" valign="top" >
-<p><strong>Example</strong></p>
-</td>
-<td width="200pxl" valign="top" >
-<p><strong>Default</strong></p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>Domain name</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Domain name</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>localhost</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>PORT</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>PORT</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>3213</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>api</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>API</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>api</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>VERSION_NO</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Version number</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>V1.4</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Latest version</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>lu</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Lu</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>lu</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>LU Name</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Logical unit name</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>CUSTOMER</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>Iid</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Instance ID</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>1</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>TABLE_NAME</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Table name</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>PAYMENT</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>All tables</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>Fields</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Field name</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>fields=CUSTOMER_ID, INVOICE_ID</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Multiple fields supported</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>where</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Where statement for the selected table</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>where=NAME=&rsquo;MOSHE&rsquo; OR ADDRESS=&rsquo;TEL AVIV&rsquo;</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Can be populated if FIELDS are populated</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>QUERY</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Where statement for cross LU tables on the same LU</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>QUERY=SELECT NAME from ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>token</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Token name</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >&nbsp;</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>format</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Response format</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>Y</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>JSON/XML/YAML</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>JSON</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >
-<p>Set</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Sync mode</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>SET=sync,off SET=sync,on SET=sync,force</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Sync policy on the session</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
-<p>Environment</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>SET=ENVIRONMENT,&rsquo;ENV1&rsquo;</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>_dev</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
-<p>Sync_timeout</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>SET=SYNC_TIMEOUT,10</p>
-</td>
-<td width="200pxl" valign="top" >
-<p>Set on config.ini</p>
-</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
-<p>instance_ttl</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>SET=instance_ttl,10</p>
-</td>
-<td width="100pxl" valign="top" >&nbsp;</td>
-</tr>
-<tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
-<p>Environment variable</p>
-</td>
-<td width="100pxl" valign="top" >
-<p>N</p>
-</td>
-<td width="300pxl" valign="top" >
-<p>SET=A,4</p>
-</td>
-<td width="200pxl" valign="top" >&nbsp;</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
+
+ 
+
+| **Component** | **Description**                                 | **Mandatory** | **Example**                                                  | **Default**                                    |
+| ------------- | ----------------------------------------------- | ------------- | ------------------------------------------------------------ | ---------------------------------------------- |
+| Domain name   | Domain name                                     | Y             | localhost                                                    |                                                |
+| PORT          | PORT                                            | Y             | 3213                                                         |                                                |
+| api           | API                                             | Y             | api                                                          |                                                |
+| VERSION_NO    | Version number                                  | N             | V1.4                                                         | Latest version                                 |
+| lu            | Lu                                              | Y             | lu                                                           |                                                |
+| LU Name       | Logical unit name                               | Y             | CUSTOMER                                                     |                                                |
+| Iid           | Instance ID                                     | Y             | 1                                                            |                                                |
+| TABLE_NAME    | Table name                                      | N             | PAYMENT                                                      | All tables                                     |
+| Fields        | Field name                                      | N             | fields=CUSTOMER_ID, INVOICE_ID                               | Multiple fields supported                      |
+| where         | Where statement for the selected table          | N             | where=NAME=’MOSHE’ OR ADDRESS=’TEL AVIV’                     | Can be populated if FIELDS are populated |
+| QUERY         | Where statement for cross tables on the same LU | N             | QUERY=SELECT NAME from ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID  =B.ADDRESS_ID |                                                |
+| token         | Token name                                      | Y             |                                                              |                                                |
+| format        | Response format                                 | Y             | JSON/XML/YAML                                                | JSON                                           |
+| Set           | Sync mode                                       | N             | SET=sync,off  SET=sync,on  SET=sync,force                    | Sync policy on the session                     |
+|               | Environment                                     | N             | SET=ENVIRONMENT,’ENV1’                                       | _dev                                           |
+|               | Sync_timeout                                    | N             | SET=SYNC_TIMEOUT,10                                          | Set on config.ini                              |
+|               | instance_ttl                                    | N             | SET=instance_ttl,10                                          |                                                |
+|               | Environment variable                            | N             | SET=A,4                                                      |                                                |
 
 **Examples:**
 
@@ -324,19 +51,21 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 - http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC
 
-  Bring data for CUSTOMER LU instance id 1, table ALLERGIES
+  Bring data for CUSTOMER LU Instance ID 1, table ALLERGIES  
 
 
 - http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC
 
-  Bring data for CUSTOMER LU instance id 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
+  Bring data for CUSTOMER LU Instance ID 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
 
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND    B.ADDRESS_TYPE=’P’&token=ABC
-  Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
+- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A, ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND    B.ADDRESS_TYPE=’P’&token=ABC
+  
+  Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
 
 - http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10
-  Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode if force and it run on ENV1and set GLOBAL_LION to 10
+  
+  Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and  run it on ENV1 and set GLOBAL_LION to 10
 
 
 # Get LU Schema (Metadata)
@@ -354,11 +83,11 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name?token=token name&[format=json
 | Token       | Token name        | Y         |               |                |
 | Format      | Response format   | Y         | JSON/XML/YAML | JSON           |
 
-**Examples:**
+**Examples**
 
 http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
 
-Bring meta data for CUSTOMER LU
+Bring metadata for CUSTOMER LU
 
 # Get Common Schema (Metadata)
 
@@ -374,11 +103,11 @@ http://IP address:PORT/api/[VERSION_NO]/COMMON/[table name]?token=token name&[fo
 | Token       | Token name      | Y         |               |                |
 | Format      | Response format | Y         | JSON/XML/YAML | JSON           |
 
-**Examples:**
+**Example:**
 
 http://localhost:3213/api/v1.0/COMMON?token=ABC
 
-Bring meta data for all COMMON tables
+Bring metadata for all COMMON tables
 
 # Get Common Table
 
@@ -421,11 +150,11 @@ http://Domain name:PORT/api/[VERSION_NO]/graphit file name/ PARAM1VALUE1/PARAM2 
 | Graphit file name | Name of graphit file                                     | Y         | file name should include the version  number customer_query.1.4.graphit |                                                              |
 | PARAM1…N          | Input parameter 1..N name and value to  the graphit file | N         | iid=1&name=moshe                                             | Supported only on post verb, should be  part of request body {parameter name:parameter value} |
 
-**Examples**
+**Example**
 
 [http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC
 
-Run the Web Service according to the customer_query.1.3 graphit file, send as input 2 parameters (id =1 and name = moshe) and response body should input json structure be defined on the graphit file.
+Run the Web Service according to the customer_query.1.3 graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input json structure be defined on the Graphit file.
 
 Should call graphit: customer_query.1.3.graphit
 
@@ -439,11 +168,11 @@ http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VA
 | PORT                        | PORT                                   | Y         | 3213                                                         |                |
 | Api                         | API                                    | Y         | api                                                          |                |
 | VERSION_NO                  | Version number                         | N         | V1.4                                                         | Latest version |
-| Customized Web-Service name | Name of the Web-Service to be executed | Y         | Orders                                                       |                |
-| PARAM1…N                    | Web-Service input parameters           | N         | /1/3  Assuming two parameters as input  i_order_id and order_status it will pass 1 to i_order_id and 3 to  i_order_status |                |
+| Customized Web-Service name | Name of the Web Service to be executed | Y         | Orders                                                       |                |
+| PARAM1…N                    | Web Service input parameters           | N         | /1/3  Assuming two parameters as input  i_order_id and order_status it will pass 1 to i_order_id and 3 to  i_order_status |                |
 | Format                      | Response format                        | Y         | JSON/XML/YAML                                                | JSON           |
 
-**Examples:**
+**Example:**
 
 http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
 
