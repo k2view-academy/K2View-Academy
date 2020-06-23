@@ -1,10 +1,10 @@
 # Get Verb
 
-Use the GET requests supported verb to retrieve **resource representation** or **information** without modifying it. Since GET requests do not change the status of the resource, they are considered to be a **safe method**. In addition, GET APIs should be **idempotent**. This means that multiple identical requests must produce the same result every time until another POST or PUT API changes the status of the resource on the server.
+Use GET requests without modifying it to retrieve **resource representation** or **information**. Since GET requests do not change the status of the resource, they are considered to be a **safe method**. In addition, GET APIs should be **idempotent**, meaning that multiple identical requests must produce the same result every time until another POST or PUT API changes the status of the resource on the server.
 
 - If the Request-URI refers to a data-producing process, the produced data is returned as the entity in the response and not the source text of the process, unless that text is the output of the process.
-- When the resource of a given HTTP GET API is not found on the server, it returns the HTTP 200 OK response code together with response body, which is either XML or JSON content due to their platform independent nature. 
-- If the resource is NOT found on server, it returns the HTTP 404 (NOT FOUND) response code. 
+- If the resource of a given HTTP GET API is not found on the server, it returns the HTTP 200 OK response code together with the response body, which is either XML or JSON content (due to their platform independent nature). 
+- If the resource is NOT found on server, it returns the HTTP 404 NOT FOUND response code. 
 - If the GET request is incorrectly written, the server returns the HTTP 400 BAD REQUEST response code.
 
 The new REST API is fully integrated with the open API (Swagger) whereby the structure of the body of the response is known before the API is called.
@@ -39,27 +39,29 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/[[TABLE_NAME]?fields=VALU
 
 **Examples:**
 
-http://localhost:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
+- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
 
-Bring all data for CUSTOMER LU instance id 1
+  Bring all data for CUSTOMER LU Instance ID 1
 
-Response Body: response body supports streaming solution
+  Response Body: response body supports streaming solution
 
-http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC
 
-Bring data for CUSTOMER LU instance id 1, table ALLERGIES
+- http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC
 
-http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC
+  Bring data for CUSTOMER LU instance id 1, table ALLERGIES
 
-Bring data for CUSTOMER LU instance id 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
 
-http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC
+- http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC
 
-Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
+  Bring data for CUSTOMER LU instance id 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
 
-http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10
 
-Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode if force and it run on ENV1and set GLOBAL_LION to 10
+- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND    B.ADDRESS_TYPE=’P’&token=ABC
+  Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
+
+- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10
+  Bring data for CUSTOMER LU instance id 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode if force and it run on ENV1and set GLOBAL_LION to 10
+
 
 # Get LU Schema (Metadata)
 
