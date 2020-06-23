@@ -2,7 +2,7 @@
 
 The following URL structure is used to call Fabric Web Services:
 
-http://IP address:PORT/api/[VERSION_NO]/[web-service name]?token=ABC&format=json
+<pre><code> http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?token=[TOKEN]&format=json </pre></code>
 
 Input parameters can be transfered to Fabric Web Services either as:
 * Part of the URL path.
