@@ -39,7 +39,7 @@ The 4xx Client Error status code indicates that the client seems to have erred. 
 The server failed to fulfill an apparently valid request. 
 
 The 5xx Server Error status code indicates that the server is aware that it has erred or is incapable of performing the requested method. 
-*	Except for when responding to a HEAD request, the server SHOULD send a notification with an explanation about the error and whether it is a temporary or permanent condition. 
+*	Apart for when responding to a HEAD request, the server SHOULD send a representation with an explanation about the error and whether it is a temporary or permanent condition. 
 *	A user agent SHOULD display any included notifications to the user. 
 *	These response codes apply to any request method.
 
@@ -59,8 +59,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 <td>OK</td>
 <td>GET/POST/PUT/DELETE</td>
 <td>
-<p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload sent in a 200 response depending on the request method.</p>
-<p>For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
+<p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload sent in a 200 response depending on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
 <p style="padding-left: 30px;">GET a representation of the target resource;</p>
 <p style="padding-left: 30px;">POST a representation of the status of, or results obtained from, the action;</p>
 <p style="padding-left: 30px;">PUT, DELETE a representation of the status of the action;</p>
