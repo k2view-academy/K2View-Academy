@@ -34,7 +34,7 @@ The following table describes the basic structural components of a Web Service f
 </tr>
 <tr>
 <td>Return Statement</td>
-<td>Terminates the execution of the Web Service function. Close the statement or Connections if needed and return rs;</td>
+<td>Terminates the execution of the Web Service function. Close the statement or connections if needed and return rs;</td>
 </tr>
 </tbody>
 </table>
