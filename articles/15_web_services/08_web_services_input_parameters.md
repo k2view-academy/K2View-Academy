@@ -25,7 +25,7 @@ Where:
 
  
 
-### 2. Transfering Input Parameters as Not Part of the URL Path
+### Transfering Input Parameters as Not Part of the URL Path
 
 When Input parameters are not set as a part of the URL path, transfer them to the Web Service as follows:
 
