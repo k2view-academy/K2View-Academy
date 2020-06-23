@@ -1,16 +1,14 @@
 # Get Verb
 
-Use GET requests **to retrieve resource representation / information only** without modifying it in any way. Since GET requests do not change the status of the resource, they are said to be **safe methods**. Additionally, GET APIs should be **idempotent**, which means that making multiple identical requests must produce the same result every time until another API (POST or PUT) changes the status of the resource on the server.
+Use the GET requests supported verb to retrieve **resource representation** or **information** without modifying it. Since GET requests do not change the status of the resource, they are considered to be a **safe method**. In addition, GET APIs should be **idempotent**. This means that multiple identical requests must produce the same result every time until another POST or PUT API changes the status of the resource on the server.
 
-If the Request-URI refers to a data-producing process, it is the produced data which is returned as the entity in the response and not the source text of the process, unless that text happens to be the output of the process.
+- If the Request-URI refers to a data-producing process, the produced data is returned as the entity in the response and not the source text of the process, unless that text is the output of the process.
+- When the resource of a given HTTP GET API is not found on the server, it returns the HTTP 200 OK response code together with response body, which is either XML or JSON content due to their platform independent nature. 
+- If the resource is NOT found on server, it returns the HTTP 404 (NOT FOUND) response code. 
+- If the GET request is incorrectly written, the server returns the HTTP 400 BAD REQUEST response code.
 
-For any given HTTP GET API, if the resource is found on the server, it must return the HTTP response code 200 (OK), together with response body, which is either XML or JSON content (due to their platform independent nature).
+The new REST API is fully integrated with the open API (Swagger) whereby the structure of the body of the response is known before the API is called.
 
-If the resource is NOT found on server, it must return the HTTP response code 404 (NOT FOUND). Similarly, if it is determined that the GET request itself is not correctly formed, the server returns the HTTP response code 400 (BAD REQUEST).
-
-The new REST API is fully integrated with the open API (Swagger) whereby the body response structure is known before the API is called.
-
- 
 
 # Get LU Data
 
