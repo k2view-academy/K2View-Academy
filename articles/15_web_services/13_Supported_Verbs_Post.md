@@ -4,9 +4,12 @@ Use POST APIs to create **new subordinate resources**. For example, a file that 
 
 Strictly in terms of REST, POST methods can be used to create a new resource in a collection of resources.
 
-Ideally, if a resource has been created on the origin server, the response code SHOULD be HTTP 201 Created and contain an entity describing the request's status, refer to the new resource and a [Location](https://en.wikipedia.org/wiki/HTTP_location) header.
+Ideally, if a resource has been created on the origin server, the response code SHOULD be **HTTP 201 Created** and contain:
+- An entity describing the request's status.
+- A reference to the new resource.
+- A [Location](https://en.wikipedia.org/wiki/HTTP_location) header.
 
-The action performed by the POST method frequently might not result in a resource that can be identified by a URI. In this case, either HTTP 200 OK or 204 No Content are an appropriate response status. Responses to this method are **not cacheable,** unless the response includes the appropriate [Cache-Control](https://en.wikipedia.org/wiki/Web_cache#Cache_control) or [Expires](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) header fields.
+Frequently the action performed by the POST method might not result in a resource that can be identified by a URI. In this case, either **HTTP 200 OK** or **204 No Content** are an appropriate response status. Responses to this method are **not cacheable,** unless the response includes the appropriate [Cache-Control](https://en.wikipedia.org/wiki/Web_cache#Cache_control) or [Expires](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) header fields.
 
 Note that POST is **neither safe nor idempotent** and invoking two identical POST requests results in two different resources containing the same information (except resource IDs).
 
@@ -110,7 +113,7 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token 
  "i_order_status": "Open"
 }
 ```
- Call Web Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
+ Call Web Service Orders and bring output structure in json format according to input parameters **i_order_id=1** and **i_order_status=Open**.
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/12_Supported_Verbs_Get.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/14_Supported_Verbs_Put.md)
 
