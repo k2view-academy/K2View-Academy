@@ -43,46 +43,69 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 *	A user agent SHOULD display any included notifications to the user. 
 *	These response codes apply to any request method.
 
-<p>&nbsp;</p>
-<table class="unchanged rich-diff-level-one">
-<thead>
-<tr>
-<th>Response code</th>
-<th>Message</th>
-<th>HTTP verb</th>
-<th>Description</th>
-</tr>
-</thead>
+<table width="900pxl">
 <tbody>
 <tr>
-<td>200</td>
-<td>OK</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p><Strong>Response Code</Strong></p> 
+</td>
+<td width="100pxl" valign="top" >
+<p><Strong>Message</Strong></p>
+</td>
+<td width="200pxl" valign="top" >
+<p><Strong>HTTP verb</Strong></p>
+</td>
+<td width="500pxl" valign="top" >
+  <p><Strong>Description</Strong></p>
+</td>
+</tr>
+<tr>
+<td width="100pxl" valign="top" >
+<p>200</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>OK</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="100pxl" valign="top" >
 <p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload is sent in a 200 response depending on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
-<p style="padding-left: 30px;">GET a representation of the target resource;</p>
-<p style="padding-left: 30px;">POST a representation of the status of, or results obtained from, the action;</p>
-<p style="padding-left: 30px;">PUT, DELETE a representation of the status of the action;</p>
+<p>GET a representation of the target resource;</p>
+<p>POST a representation of the status of, or results obtained from, the action;</p>
+<p>PUT, DELETE a representation of the status of the action;</p>
 <p>Aside from responses to CONNECT, a 200 response always has a payload, although an origin server MAY generate a payload body of zero length.</p>
 <p>If no payload is required, an origin server should send 204 (No Content) instead. For CONNECT, no payload is allowed because the successful result is a tunnel, which begins immediately after the 200 response header section.</p>
 <p>A 200 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls.</p>
 </td>
 </tr>
 <tr>
-<td>201</td>
-<td>Created</td>
-<td>POST/PUT</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>201</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Created</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>POST/PUT</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 201 (Created) status code indicates that the request has been fulfilled and has resulted in one or more new resources being created.</p>
 <p>The primary resource created by the request is identified by either a Location header field in the response or, if no Location field is received, by the effective request URI.</p>
-<p>The 201 response payload typically describes and links to the resource(s) created. See&nbsp;<a href="https://tools.ietf.org/html/rfc7231#section-7.2" rel="nofollow">Section 7.2</a>&nbsp;for a discussion of the meaning and purpose of validator header fields, such as ETag and Last-Modified, in a 201 response.</p>
+<p>The 201 response payload typically describes and links to the resource(s) created. See&nbsp;<a href="https://tools.ietf.org/html/rfc7231#section-7.2">Section 7.2</a>&nbsp;for a discussion of the meaning and purpose of validator header fields, such as ETag and Last-Modified, in a 201 response.</p>
 </td>
 </tr>
 <tr>
-<td>301</td>
-<td>Moved Permanently</td>
-<td>&nbsp;</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>301</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Moved Permanently</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>&nbsp;</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 301 (Moved Permanently) status code indicates that the target resource has been assigned a new permanent URI and any future references to this resource should use one of the enclosed URIs.</p>
 <p>Clients with link-editing capabilities should automatically re-link references to the effective request URI to one or more of the new references sent by the server, where possible.</p>
 <p>The server SHOULD generate a Location header field in the response containing a preferred URI reference for the new permanent URI.&nbsp;The user agent MAY use the Location field value for automatic redirection.&nbsp;The server's response payload usually contains a short hypertext note with a hyperlink to the new URI(s).</p>
@@ -91,22 +114,44 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </td>
 </tr>
 <tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>The 400 (Bad Request) status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</td>
+<td width="100pxl" valign="top" >
+<p>400</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Bad Request</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
+<p>The 400 (Bad Request) status code indicates that the server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</p>
+</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>The 401 (Unauthorized) status code is returned from the application server when application security is enabled, and authorization information is missing from the request. For example, TOKEN is invalid.</td>
+<td width="100pxl" valign="top" >
+<p>401</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Unauthorized</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
+<p>The 401 (Unauthorized) status code is returned from the application server when application security is enabled, and authorization information is missing from the request. For example, TOKEN is invalid.</p>
+</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>403</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Forbidden</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 403 (Forbidden) status code indicates that the server understood the request but refuses to authorize it.</p>
 <p>A server that wishes to make public why the request has been forbidden can describe that reason in the response payload (if any).</p>
 <p>If authentication credentials were provided in the request, the server considers them insufficient to grant access.&nbsp;The client SHOULD NOT automatically repeat the request with the same credentials.</p>
@@ -115,29 +160,47 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>404</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Not Found</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 404 (Not Found) status code indicates that the origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p>
 <p>A 404 status code does not indicate whether this lack of representation is temporary or permanent; the 410 (Gone) status code is preferred over 404 if the origin server knows, presumably through some configurable means, that the condition is likely to be permanent.</p>
 <p>A 404 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls.</p>
 </td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>405</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Method Not Allowed</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 405 (Method Not Allowed) status code indicates that the method received in the request-line is known by the origin server but not supported by the target resource.</p>
 <p>The origin server MUST generate an Allow header field in a 405 response containing a list of the target resource's currently supported methods. Returned when the targeted resource does not support the requested HTTP method; for example, the functions resource only allows GET operations.</p>
 </td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>406</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Not Acceptable</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 406 (Not Acceptable) status code indicates that the target resource does not have a current representation that would be acceptable to the user agent, according to the proactive negotiation header fields received in the request and the server is unwilling to supply a default representation.</p>
 <p>The server SHOULD generate a payload containing a list of available representation characteristics and corresponding resource identifiers from which the user or user agent can choose the most appropriate.</p>
 <p>A user agent MAY automatically select the most appropriate choice from that list.</p>
@@ -145,67 +208,111 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </td>
 </tr>
 <tr>
-<td>408</td>
-<td>Request timeout</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>408</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Request timeout</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 408 (Request Timeout) status code indicates that the server did not receive a complete request message within the time that it was prepared to wait.</p>
 <p>A server SHOULD send the "close" connection option, since 408 implies that the server has decided to close the connection rather than continue waiting.</p>
 <p>If the client has an outstanding request in transit, the client MAY repeat that request on a new connection.</p>
 </td>
 </tr>
 <tr>
-<td>413</td>
-<td>Payload too large</td>
-<td>&nbsp;</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>413</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Payload too large</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>&nbsp;</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 413 (Payload Too Large) status code indicates that the server is refusing to process a request because the requested payload is larger than the server is willing or able to process.</p>
 <p>The server MAY close the connection to prevent the client from continuing the request.</p>
 <p>If the condition is temporary, the server SHOULD generate a Retry-After header field to indicate that it is temporary and after what time the client MAY try again.</p>
 </td>
 </tr>
 <tr>
-<td>414</td>
-<td>URI too long</td>
-<td>GET</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>414</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>URI too long</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 414 (URI Too Long) status code indicates that the server refuses to service the request because the request-target is longer than the server is willing to interpret.</p>
 <p>This rare condition is only likely to occur when a client has incorrectly converted a POST request to a GET request When the client has descended into a "black hole" of redirection (e.g., a redirected URI prefix that points to a suffix of itself) or when the server is under attack by a client attempting to exploit potential security holes.</p>
 </td>
 </tr>
 <tr>
-<td>426</td>
-<td>Upgrade required</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>426</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Upgrade required</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 426 (Upgrade Required) status code indicates that the server refuses to perform the request using the current protocol but might be willing to do so after the client upgrades to a different protocol.</p>
 <p>The server MUST send an Upgrade header field in a 426 response to indicate the required protocol(s).</p>
 <p>Example:</p>
-<p style="padding-left: 30px;">HTTP/1.1 426 Upgrade Required Upgrade:&nbsp;HTTP/3.0 Connection:&nbsp;Upgrade Content-Length: 53 Content-Type: text/plain</p>
+<p>HTTP/1.1 426 Upgrade Required Upgrade:&nbsp;HTTP/3.0 Connection:&nbsp;Upgrade Content-Length: 53 Content-Type: text/plain</p>
 <p>This service requires use of the HTTP/3.0 protocol.</p>
 </td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal server error</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>The 500 (Internal Server Error) status code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.</td>
+<td width="100pxl" valign="top" >
+<p>500</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Internal server error</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
+<p>The 500 (Internal Server Error) status code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.</p>
+</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>503</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>Service Unavailable</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 503 (Service Unavailable) status code indicates that the server is currently unable to handle the request due to a temporary overload or scheduled maintenance, which will likely be alleviated after some delay.</p>
 <p>The server MAY send a Retry-After header field to suggest an appropriate amount of time for the client to wait before retrying the request.</p>
 <p>Note that the existence of the 503 status code does not imply that a server has to use it when becoming overloaded. Some servers might simply refuse the connection.</p>
 </td>
 </tr>
 <tr>
-<td>505</td>
-<td>HTTP Version Not Support</td>
-<td>GET/POST/PUT/DELETE</td>
-<td>
+<td width="100pxl" valign="top" >
+<p>505</p>
+</td>
+<td width="100pxl" valign="top" >
+<p>HTTP Version Not Support</p>
+</td>
+<td width="200pxl" valign="top" >
+<p>GET/POST/PUT/DELETE</p>
+</td>
+<td width="500pxl" valign="top" >
 <p>The 505 (HTTP Version Not Supported) status code indicates that the server does not support, or refuses to support, the major version of HTTP that was used in the request message.</p>
 <p>The server indicates that it is unable or unwilling to complete the request using the same major version as the client other than with this error message.</p>
 <p>The server SHOULD generate a representation for the 505 response that describes why that version is not supported and what other protocols are supported by that server.</p>
@@ -213,7 +320,6 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 </tbody>
 </table>
-
 
 
 
