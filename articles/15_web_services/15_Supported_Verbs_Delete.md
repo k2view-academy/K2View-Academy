@@ -1,14 +1,18 @@
 # Delete Verb
 
-As the name applies, DELETE APIs are used **to delete resources** (identified by the Request-URI).
+Use a DELETE API to delete resources that are identified by the Request-URI.
 
-A successful response of DELETE requests SHOULD be HTTP response `code 200 (OK),` if the response includes an entity describing the status, `202 (Accepted),` if the action has been queued, or `204 (No Content)` if the action has been performed but the response does not include an entity.
+A successful response to DELETE requests SHOULD be:
 
-DELETE operations are **idempotent**. If you DELETE a resource, it is removed from the collection of resources. Repeatedly calling DELETE API on that resource will not change the outcome, however, calling DELETE on a resource a second time will return a 404 (NOT FOUND) because it was already removed. Some may argue that it makes DELETE method non-idempotent. It is a matter of discussion and personal opinion.
+- **HTTP 200 OK**, if the response includes an entity describing the status.  
+- **HTTP 202 Accepted**, if the action has been queued.  
+- **HTTP 204 No Contnet**, if the action has been performed but the response does not include an entity. 
 
-If the request passes through a cache and the Request-URI identifies one or more currently cached entities, those entries SHOULD be treated as stale. Responses to this method are **not cacheable**.
+DELETE operations are **idempotent**. When a resouce is deleted, it is removed from the collection of resources and remains so, even when the DELETE API is called on the same resource repeatedly. The **404 NOT FOUND** response code is returned when the DELETE API is called on a deleted resource for the second time. Some may argue that it makes DELETE method non-idempotent. It is a matter of discussion and personal opinion.
 
-## 1.         DELETE LUI
+If the request passes through a cache and the Request-URI identifies one or more currently cached entities, these entries SHOULD be handled as stale. Responses to this method are **not cacheable**.
+
+## DELETE LUI
 
 http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=json/xml]
 
@@ -25,17 +29,17 @@ http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=jso
 
 **Examples:**
 
-http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC
+- http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC
 
-Delete LUI 1 from PATIENT LU
+  Delete LUI 1 from PATIENT LU
 
-Request Body: null
+  Request Body: null
 
-Response Body: null
+  Response Body: null
 
-Response code: 200 if delete ended successfully
+  Response code: 200 if delete ended successfully
 
-## 2.         DELETE Data from LU Table
+##DELETE Data from LU Table
 
 http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
 
@@ -45,26 +49,26 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 | PORT          | PORT                                          | Y             | 3213            |                |
 | Api           | API                                           | Y             | api             |                |
 | VERSION_NO    | Version number                                | N             | V1.4            | Latest version |
-| LU Name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
+| LU name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
 | Iid           | Instance Id                                   | Y             | 1               |                |
 | TABLE_NAME    | Table name for data deletion                  | Y             | PAYMENT         |                |
 | WHERE CLAUSE  | Where clause statement                        | Y             | INVOICE_ID=1    |                |
 | token         | Token Name                                    | Y             |                 |                |
 | format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
 
-**Examples:**
+**Example:**
 
-http://localhost:3213/api/v1.0/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’&token=ABC
+- http://localhost:3213/api/v1.0/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’&token=ABC
 
-Delete data from PATIENT LU instance id 1, INVOICE table by where clause
+  Delete data from PATIENT LU instance id 1, INVOICE table by where clause
 
-Request Body: null
+  Request Body: null
 
-Response Body: null
+  Response Body: null
 
-Response code: 200 if delete ended successfully
+  Response code: 200 if delete ended successfully
 
-## 3.         Delete data from common table
+##  Delete Data from Common Table
 
 http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1&token=token name&[format=json/xml]
 
@@ -79,21 +83,20 @@ http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1
 | token             | Token Name                   | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
-**Examples:**
+**Example:**
 
-http://localhost:3213/api/v1.0/COMMON?CITIES&WHERE CITY_ID=1&token=ABC
+- http://localhost:3213/api/v1.0/COMMON?CITIES&WHERE CITY_ID=1&token=ABC
 
-delete data from CITIES common table where city_id = 1
+  delete data from CITIES common table where city_id = 1
 
-Request Body: null
+  Request Body: null
 
-Response Body: null
+  Response Body: null
 
-Response code: 200 if delete ended successfully
-
+  Response code: 200 if delete ended successfully
  
 
-## 4.         Delete custom Web-Service 
+## Delete Custom Web Service 
 
 Delete works like GET. All parameters should be populated on the URL or header.
 
