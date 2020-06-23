@@ -5,7 +5,7 @@
 K2view web-services supported URL structure: 
  http://IP address:PORT/api/[VERSION_NO]/[web-service name]?token=ABC&format=json
 
-URL parameters (including token and format) are supported on both URL and header request.
+URL parameters, including the Token and Format, are supported on both the URL and header request.
 
 ## URL Redirect
 
@@ -22,11 +22,11 @@ The user must have at least basic knowledge of rewrite rules/conditions and thei
 
 Useful tutorials: 
 
-https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html
+- https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html
 
-https://www.sitepoint.com/apache-mod_rewrite-examples-2/
+- https://www.sitepoint.com/apache-mod_rewrite-examples-2/
 
-http://helpful.knobs-dials.com/index.php/Apache_config_and_.htaccess_-_URL_rewriting
+- http://helpful.knobs-dials.com/index.php/Apache_config_and_.htaccess_-_URL_rewriting
 
 ## Authentication
 
