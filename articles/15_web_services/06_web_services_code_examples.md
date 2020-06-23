@@ -217,4 +217,4 @@ if (otherRootRecs != null) {
 return mainOutput;
 ```
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/07_deploy_web_services.md)
