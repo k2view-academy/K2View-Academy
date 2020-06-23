@@ -1,7 +1,7 @@
 # Web Services - Code Examples
 ### Simple Example of a wsCustomerInfo Web Service that Brings a Line of Data for a Given Instance  
 
-The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. The output data is returned in DB.Rows structure. It can also be returned as an Object and be converted by Fabric into DB.Rows structure.
+The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
 ```
 String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 
@@ -28,7 +28,7 @@ Output:
 
 ###  Example of a wsCustomerInfo2 Web Service that Brings a Db.Rows Structure as an Output for a Given Instance   
 
-The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a join query on several tables on the CUSTOMER LU. The data is returned in DB.Rows output structure. It can also be as an Object and be converted by Fabric into DB.Rows structure.
+The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a Join query on several tables in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
 
 ```
 String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION,sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE " +
@@ -112,16 +112,16 @@ Output:
 
 Both the wsCustomerInfo and wsCustomerInfo2 Web Services in the examples share the same URL path named test/getCustomerInfo. The version property of wsCustomerInfo is set to 1 and the version property of wsCustomerInfo1 is set to 2.
 
-To invoke a call to wsCustomerInfo the following URL should be called: http://localhost:3213/api/v1/test/getCustomerInfo?i_id=1&token=ABC&format=json
+- To invoke a call to wsCustomerInfo the following URL should be called: http://localhost:3213/api/v1/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
-To invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
+- To invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
 ### Example of a Complex Input Structure
-A complx json format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
+A complex json format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
 
 For example:
 
-Requested Body:
+Requested body 
 ```
 {
   "ID":[{"id":"78999", "company":"Telco1"},{"id":"z34","company":"Telco2"}],
@@ -129,12 +129,12 @@ Requested Body:
   "company":"Telco International"
 }
 ```
-Web service markup
+Web Service markup
 ```
 public static String wsExample(List<Map<String,String>> ID, String parent_customer_id, String company){
 }
 ```
-Web service inside logic 
+Web Service inside logic 
 ```
      Map<String,String> m = ID.get(0);
      String id = m.get("id"); // will return 78999
@@ -144,7 +144,7 @@ Web service inside logic
 
 ### Example of a Complex TDM Web Service 
 
-The wsGetTaskExeStatsForEntity Web Service used by TDMGUI brings a map of all entity lists related to a given LUI that are related to the same Business Entity. Meaning all instances related to all LUT under the same task execution that are defined as parent or child of the given input LUI (call recursive functions in order to get a full hierarchy path).
+The wsGetTaskExeStatsForEntity Web Service used by TDMGUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or child of the given input LUI, call recursive functions to get a full hierarchy path. 
 
 ```
 String sqlGetEntityData = "select lu_name luName, target_entity_id targetId, entity_id sourceId, " +
