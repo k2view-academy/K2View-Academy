@@ -1,9 +1,7 @@
 # Rest API Additions
 
-## URL Structure
-
-K2view web-services supported URL structure: 
- http://IP address:PORT/api/[VERSION_NO]/[web-service name]?token=ABC&format=json
+## Supported K2view Web Services URL Structure
+http://IP address:PORT/api/[VERSION_NO]/[web-service name]?token=ABC&format=json
 
 URL parameters, including the Token and Format, are supported on both the URL and header request.
 
@@ -13,12 +11,13 @@ Browser-submitted URLs can be manipulated and translated to deliver content to t
 
 For example:
 
-A user may ask for http://www.somesite.com/widgets/blue/, but will receive http://www.somesite.com/widgets.php?colour=blue from the server. The user will not be aware of this.
+A user may ask for http://www.somesite.com/widgets/blue/, but will receive http://www.somesite.com/widgets.php?colour=blue from the server and will not be aware of the difference.
+
 ### Configuration
 
 Copy rewrite.config file (sample file attached) to $FABRIC_HOME\webserver\WEB-INF
 
-The user must have at least basic knowledge of rewrite rules/conditions and their different parameters in order to use this functionality. 
+To use this functionality users must have at least basic knowledge of rewrite rules / conditions and their different parameters. 
 
 Useful tutorials: 
 
@@ -30,9 +29,9 @@ Useful tutorials:
 
 ## Authentication
 
-A RESTful API should be stateless. This means that request authentication should not depend on cookies or sessions. Instead, each request should come with some sort of authentication credentials.
+A RESTful API should be stateless whereby the request authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
-By always using SSL, the authentication credentials can be simplified to a randomly generated access token that is delivered in the user name field of HTTP Basic Auth. The great thing about this is that it's completely browser explorable - the browser will just pop up a prompt asking for credentials, if it receives a 401 Unauthorized status code from the server.
+By always using SSL, authentication credentials can be simplified to a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. The great thing about this is that it's completely browser explorable - the browser will just pop up a prompt asking for credentials, if it receives a 401 Unauthorized status code from the server.
 
 Token can be provided as a part of the URL, as a parameter, or on the header request.
 
