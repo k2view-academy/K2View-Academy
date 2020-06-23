@@ -20,19 +20,23 @@ A Web Service can also be edited directly in its main working area.
 
 ### What Should be Edited?
 
-<p class="vicinity rich-diff-level-zero">The following items should be edited after they are automatically generated:</p>
-<div class="expandable unchanged js-expandable rich-diff-level-zero">
-<table class="unchanged rich-diff-level-one" style="float: left;">
-<thead>
-<tr>
-<th style="text-align: left;">Item&nbsp;</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
+The following items should be edited after they are automatically generated:
+
+<table width="900pxl">
 <tbody>
 <tr>
-<th style="text-align: left; vertical-align: top;">Fetch Data Statement</th>
-<td>
+<td  width="300pxl" valign="top">
+<p><strong>Item</strong></p>
+</td>
+<td  width="600pxl" valign="top">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td  width="300pxl" valign="top">
+<p><h4><strong>Fetch Data Statement</strong></h4></p>
+</td>
+<td  width="600pxl" valign="top">
 <p>LUDB Fetch Statement.&nbsp;Replace this with the Web Service Input parameter defined as the Fabric LUI identifier. For example, in the wsCustomerInfo Web Service:</p>
 <ul>
 <li>Input parameter = &ldquo;ID&rdquo;&nbsp;</li>
@@ -48,8 +52,10 @@ A Web Service can also be edited directly in its main working area.
 </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left;">SQL Statement Enhancement Options</th>
-<td>
+<td  width="300pxl" valign="top">
+<p><h4><strong>SQL Statement Enhancement Options</strong></h4></p>
+</td>
+<td  width="600pxl" valign="top">
 <ul>
 <li>Add a WHERE clause.&nbsp;&nbsp;</li>
 <li>JOIN additional tables to the query.</li>
@@ -59,17 +65,19 @@ A Web Service can also be edited directly in its main working area.
 </td>
 </tr>
 <tr>
-<th style="vertical-align: top; text-align: left;">Java Code Enhancement</th>
-<td>
+<td  width="300pxl" valign="top">
+ <p><h4><strong>Java Code Enhancement</strong></h4></p>
+</td>
+<td  width="600pxl" valign="top">
 <p>Web Service code can also apply transformation rules via the functions, translations or Globals defined in the project.</p>
 <p>Note that any Fabric server runtime command can be used within the Web Service using the Execute function.</p>
 <p>For example, the Get command on the Customer LUT for a specific instance:</p>
-<p style="padding-left: 30px;">Fabric().execute(&ldquo; get Customer.?&rdquo;,ID);</p>
+<p>Fabric().execute(&ldquo; get Customer.?&rdquo;,ID);</p>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
+<p>&nbsp;</p>
 
 
 
