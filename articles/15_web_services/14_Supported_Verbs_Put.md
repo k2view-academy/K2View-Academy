@@ -1,10 +1,14 @@
 # Put Verb
 
-Use PUT APIs primarily **to update existing resource** (if the resource does not exist, API may decide whether to create a new resource or not). If a new resource has been created by the PUT API, the origin server MUST inform the user agent via the HTTP response code `201 (Created)`response, and if an existing resource is modified, either the `200 (OK)` or `204 (No Content`) response codes should be sent to indicate successful completion of the request.
+Use PUT APIs to update an existing resource:  
+- If the resource does not exist, the API may decide whether to create a new resource or not. 
+- If a new resource has been created by the PUT API, the origin server MUST inform the user agent via the **HTTP 201 Created** response code.
+- If an existing resource is modified, either the **200 OK** or **204 No Content** response codes should be sent to indicate the request has been successfully completed.
+- If the request passes through a cache and the Request-URI identifies one or more currently cached entities, the entries SHOULD be handled as stale. Responses to this method are **not cacheable**.
 
-If the request passes through a cache and the Request-URI identifies one or more currently cached entities, those entries SHOULD be treated as stale. Responses to this method are **not cacheable**.
-
-The difference between the POST and PUT APIs can be observed in request URIs. POST requests are made on resource collections, whereas PUT requests are made on an individual resource.
+The difference between the POST and PUT APIs can be observed in request URIs:
+- POST requests are made on resource collections.
+- PUT requests are made on an individual resource.
 
 ##  Put Data Into LU Table
 
@@ -22,13 +26,13 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 | token         | Token name                                    | Y             |                  |                |
 | format        | Response format                               | Y             | JSON/XML/CSV     | JSON           |
 
-**Examples:**
+**Example:**
 
-http://localhost:3213/api/v1.0/lu/CUSTOMER/1/INVOICE?token=ABC
+- http://localhost:3213/api/v1.0/lu/CUSTOMER/1/INVOICE?token=ABC
 
-Update data on CUSTOMER LU instance id 1, CUSTOMER table
+  Update data on CUSTOMER LU instance id 1, CUSTOMER table
 
-Request Body
+  Request Body
 ```
  {
 	"row" : {"LAST_NAME":"TEST1"},
@@ -51,22 +55,22 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
 | token             | Token name                   | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
-**Examples:**
+**Example:**
 
-http://localhost:3213/api/v1.0/COMMON?CITIES&token=ABC
+- http://localhost:3213/api/v1.0/COMMON?CITIES&token=ABC
 
-update data in common ADDRESSES table
-```
-Request Body
+  update data in common ADDRESSES table
+  ```
+  Request Body
 
  {
 	"row" : {"ADDRESS_NAME":"YOQNEAM"} ,
 	"where":"ADDRESS_ID=3"
 }
-```
+  ```
  
 
-## Put Custom Web Service 
+##  Put Custom Web Service 
 
 http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
 
