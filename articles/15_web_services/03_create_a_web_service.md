@@ -26,11 +26,9 @@ The following steps discuss how a new Web Service is created and include options
 
 6. Click **Add Selected to Input Parameters**. 
 
- <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/>  
+ <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/> 
+ Note that the Column Name, Data Type, Mandatory and Comments are displayed in the **Input Parameters** list in the lower right pane.
  
-
-  Note that the Column Name, Data Type, Mandatory and Comments are displayed in the **Input Parameters** list in the lower right pane.
-
 
 7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. T
     
