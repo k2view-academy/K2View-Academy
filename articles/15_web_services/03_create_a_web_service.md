@@ -20,7 +20,7 @@ The following steps discuss how a new Web Service is created and include options
 
 4. Click the **DB File** icon to display the **Logical Unit Tables** list.
 
- <img src="/articles/15_web_services/images/Web-Service-KI-3-3.png" alt="drawing"/>  
+   <img src="/articles/15_web_services/images/Web-Service-KI-3-3.png" alt="drawing"/>  
 
 5. Click the **table** that retrieves the data, check the **Columns list** and right click the **column** that is the **Input** parameter for data retrieval. 
 
