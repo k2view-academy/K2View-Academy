@@ -7,38 +7,38 @@ K2view APIs use many of the available HTTP response status codes to convey succe
 *	4xx Client Error, the request contains bad syntax or cannot be fulfilled.
 *	5xx Server Error, the server failed to fulfill an apparently valid request.
 
-**1xx (Informational)**
+**1xx: Informational**
 
 The request has been received and is being processed**. 
 
 The 1xx Informational status code indicates an interim response for communicating a connection status or requesting progress prior to completing the requested action and sending a final response: 
 *	1xx responses are terminated by the first empty line after the status line (the empty line signaling the end of the header section).
-*	Since HTTP/1.0 did not define any 1xx status codes, a server MUST NOT send a 1xx response to an HTTP/1.0 client.
+*	Since HTTP/1.0 has not define any 1xx status codes, a server MUST NOT send a 1xx response to an HTTP/1.0 client.
 *	A client MUST be able to parse one or more 1xx responses received prior to a final response, even if the client does not expect one. 
 *	A user agent MAY ignore unexpected 1xx responses. 
 *	A proxy MUST forward 1xx responses unless the proxy itself requested the generation of the 1xx response. For example, if a proxy adds an **Expect: 100-continue** field when it forwards a request, it need not forward the corresponding 100 (Continue) response(s). – **NOT IN USE IN FABRIC.**
 
-**3xx (Redirection)**
+**3xx: Redirection**
 
 Further action needs to be taken to complete the request. 
 
-The 3xx (Redirection) status code indicates that further action needs to be taken by the user agent to fulfill the request. 
+The 3xx Redirection status code indicates that further action needs to be taken by the user agent to fulfill the request. 
 *	If a Location header field is provided, the user agent MAY automatically redirect its request to the URI referenced by the Location field value, even if the specific status code is not understood. 
 *	Automatic redirection must be implemented carefully for methods known to be unsafe, since the user might not wish to redirect an unsafe request. 
 
-**4xx (Client Error)**
+**4xx: Client Error**
 
 The request contains bad syntax or cannot be fulfilled. 
 
-The 4xx (Client Error) status code indicates that the client seems to have erred. Except for when responding to a HEAD request, the server SHOULD send a notification containing an explanation of the error and whether it is a temporary or permanent condition. 
+The 4xx Client Error status code indicates that the client seems to have erred. Apart for when responding to a HEAD request, the server SHOULD send a presentation containing an explanation of the error and whether it is a temporary or permanent condition. 
 *	These status codes apply to any request method. 
-*	User agents SHOULD display any included notifications to the user.
+*	User agents SHOULD display any included representation to the user.
 
-**5xx (Server Error)**
+**5xx: Server Error**
 
 The server failed to fulfill an apparently valid request. 
 
-The 5xx (Server Error) status code indicates that the server is aware that it has erred or is incapable of performing the requested method. 
+The 5xx Server Error status code indicates that the server is aware that it has erred or is incapable of performing the requested method. 
 *	Except for when responding to a HEAD request, the server SHOULD send a notification with an explanation about the error and whether it is a temporary or permanent condition. 
 *	A user agent SHOULD display any included notifications to the user. 
 *	These response codes apply to any request method.
