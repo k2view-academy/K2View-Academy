@@ -10,7 +10,7 @@ The following steps discuss how a new Web Service is created and include options
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
 
-<img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/>     
+   <img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/>     
 
 2. Click either the **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
 
