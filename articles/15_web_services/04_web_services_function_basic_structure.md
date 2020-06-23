@@ -5,36 +5,57 @@ Fabric Studio enables you to automatically generate Java code that holds the bas
 ### Web Service Function: Basic Structural Components 
 
 The following table describes the basic structural components of a Web Service function:
-<table class="unchanged rich-diff-level-one">
-<thead>
-<tr>
-<th>Component</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
+
+<table width="900pxl">
 <tbody>
 <tr>
-<td>String Declaration</td>
-<td>
-<p>String declaration of the SQL statement&rsquo;s structure which includes the Column Name, Table Name, Join with Other Tables and other SQL syntax elements.</p> <p>For example, to generate an SQL statement to retrieve the CUSTOMER ID, SSN and FIRST_NAME from the CUSTOMER table:</p>
-<p style="padding-left: 30px;">String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME FROM CUSTOMER";</p>
+<td valign="top" width="300pxl">
+<p><strong>Component</strong></p>
+</td>
+<td valign="top" width="600pxl">
+<p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td>Fetch Statement</td>
-<td>
-<p>Fabric Get a specific instance and fetches data from Fabric using the declared SQL statement.</p>
-<p>For example, to get the data for a customer instance from the Fabric (LUDB):</p>
-<p style="padding-left: 30px;">Db.Rows rows = ludb("Customer", ID).fetch(sql); &ldquo;Customer&rdquo; &ndash; Fabric LUT name ID - Instance id value, received as a Web Service input parameter DB Interfaces Get the required data from another DB interface.</p>
-<p>The SQL statement should be structured with binding parameter/s that are represented by a question mark. The parameter/s should be added to the Fetch method in the same order they are defined in the SQL statement.</p>
-<p>For example, to fetch the CUSTOMER data from the CRM_DB based on the CUSTOMER_ID as an Input parameter.</p>
-<p style="padding-left: 30px;">String sql = "SELECT CUSTOMER_ID, CUSTOMER_TYPE, CREATION_DATE FROM CUSTOMER WHERE CUSTOMER_ID = ? &ldquo;; Db.Rows rows = db("CRM_DB").fetch(sql, custId);</p>
-<p>Note that during runtime, the question mark is replaced by the Web Service&rsquo;s input parameter value as the&nbsp;<strong>custID</strong>.</p>
+<td valign="top" width="300pxl">String Declaration</td>
+<td valign="top" width="600pxl">
+<p>String declaration of the SQL statement&rsquo;s structure which includes the Column Name, Table Name, Join with Other Tables, and other SQL syntax elements.</p>
+<p>For example, to generate an SQL statement to retrieve the CUSTOMER ID, SSN and FIRST_NAME from the CUSTOMER table:</p>
+<ul>
+<li>String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME FROM CUSTOMER";</li>
+</ul>
 </td>
 </tr>
 <tr>
-<td>Return Statement</td>
-<td>Terminates the execution of the Web Service function. Close the statement or connections if needed and return rs;</td>
+<td width="300pxl" valign="top">
+<p>Fetch Statement</p>
+</td>
+<td width="600pxl" valign="top">
+<p>Fabric <a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">gets a specific instance</a> and fetches data from Fabric using the declared SQL statement.</p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>Get the data for a Customer LUI from the Fabric using the <a href="/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#connect-to-the-local-fabric-using-a-web-service&quot;">ludb() method</a>. The ID parameter, sent to ludb() function is received as a WS input parameter:
+<ul>
+<li>Db.Rows rows = ludb("Customer", ID).fetch(sql);&nbsp;</li>
+<li>The SQL statement should be structured with binding parameter/s that are represented by a question mark. The parameter/s should be added to the Fetch method in the same order they are defined in the SQL statement.</li>
+</ul>
+</li>
+<li>Fetch the CUSTOMER data from the CRM_DB based on the CUSTOMER_ID as an Input parameter:
+<ul>
+<li>String sql = "SELECT CUSTOMER_ID, CUSTOMER_TYPE, CREATION_DATE FROM CUSTOMER WHERE CUSTOMER_ID = ? &ldquo;; Db.Rows rows = db("CRM_DB").fetch(sql, custId);</li>
+<li>Note that during runtime, the question mark is replaced by the Web Service&rsquo;s input parameter value as the&nbsp;<strong>custID</strong>.</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+ <td width="300pxl" valign="top">
+ <p>Return Statement</p>
+ </td>
+<td width="600pxl" valign="top">
+  <p>Terminates the execution of the Web Service function. Close the statement or connections if needed and return rs;</p>
+ </td>
 </tr>
 </tbody>
 </table>
