@@ -1,6 +1,6 @@
 # Swagger
 
-Swagger is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services.
+Swagger is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful Web Services.
 
 K2View Fabric Studio supports invocation and testing of Web Services using Swagger that is aligned with the OpenAPI Specification (OAS) version 3. 
 
@@ -28,12 +28,12 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
-	The relevant invoked Web Service is expended and points to the correct verb. 
+The relevant invoked Web Service is expended and points to the correct verb. 
 *	If only the GET verb is defined as illegible for the invoked Web Service, it will only display the GET verb  as an option.
 
 *	If all the four verbs are defined as illegible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
 
-2. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
+3. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
@@ -41,13 +41,13 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
-3. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
+4. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
-4. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
+5. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-3.png" alt="drawing"/>
 
-5. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (xml or csv) and respond accordingly.
+6. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (xml or csv) and respond accordingly.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
