@@ -82,7 +82,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/storage</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Stores data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, Staging XMLs for iidFinder, and Reference (common) files.</p>
+<p>Stores data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, IIDFinder XMLs, and Reference (common) files.</p>
 </td>
 </tr>
 <tr>
