@@ -14,34 +14,43 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 
 <img src="/articles/15_web_services/images/Web-Service-KI-2-1.png" alt="drawing"/> 
  
-<div class="expandable unchanged js-expandable rich-diff-level-zero">
-<p class="unchanged rich-diff-level-one">The following are the Web Services properties:</p>
-</div>
-<table class="changed rich-diff-level-zero">
-<thead class="rich-diff-level-one">
+ The following are the Web Services properties:
+ 
+ <table width="900pxl">
+<tbody>
 <tr>
-<th>Property &nbsp;</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody class="changed rich-diff-level-one">
-<tr>
-<td style="vertical-align: top;">Name</td>
-<td>Name of the assigned Web Service function. The assigned name should be meaningful and should have a ws% prefix.</td>
+<td width="200pxl" valign="top" >
+ <p><strong>Property</strong></p>
+</td>
+<td width="700pxl" valign="top" >
+<p><strong>Description</strong></p>
+</td>
 </tr>
 <tr>
-<td>Category</td>
-<td>Characteristics or class of the Web Service. Note that each category has a separate Java file.</td>
+<td  width="200pxl" valign="top">
+<p>Name</p>
+</td>
+<td width="700pxl" valign="top"> 
+ <p>Name of the assigned Web Service function. The assigned name should be meaningful and should have a ws% prefix.</p>
+</td>
 </tr>
-<tr class="changed">
-<td>Return Type</td>
-<td class="changed">
+<tr>
+<td width="200pxl" valign="top">
+<p>Category</p>
+</td>
+<td width="700pxl" valign="top">
+ <p>Characteristics or class of the Web Service. Note that each category has a separate Java file.</p>
+ </td>
+</tr>
+<tr>
+<td width="200pxl" valign="top"><p>Return Type</p></td>
+<td width="700pxl" valign="top">
 <p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long or Object. Output values in the list can be overridden with new values.&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td>Version</td>
-<td>
+<td width="200pxl" valign="top"><p>Version</p></td>
+<td width="700pxl" valign="top">
 <p>Representation of the Web Service&rsquo;s versioning control status. A version is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions that are all related to the same service. By default, the version is populated by 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
 <ul>
@@ -54,8 +63,8 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </td>
 </tr>
 <tr>
-<td>Path</td>
-<td>
+<td width="200pxl" valign="top"><p>Path</p></td>
+<td width="700pxl" valign="top">
 <p>The URL path of the Web Service. The actual name to be called by external applications when using the Web Service.</p>
 <p>The URL path requires permissions and should be unique per Path / Version / Response Format / Request Format.</p>
 <p>Web Service Permissions:&nbsp;<strong>set on the URL path.</strong>&nbsp;</p>
@@ -65,12 +74,12 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <li>wsGetCustomerInfoDev&nbsp;version is set to 2.</li>
 </ul>
 <p>The path is defined as follows:</p>
-<p style="padding-left: 30px;">http://:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When the above URL is run it invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
+<p>http://:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When the above URL is run it invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
 </td>
 </tr>
 <tr>
-<td>Verb</td>
-<td>
+<td width="200pxl" valign="top"><p>Verb</p></td>
+<td width="700pxl" valign="top">
 <p>Methods supported by the Web Service, as follows:&nbsp;</p>
 <ul>
 <li><strong>GET</strong>, get data.&nbsp;</li>
@@ -82,37 +91,37 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </td>
 </tr>
 <tr>
-<td>Is Raw</td>
-<td>
+<td width="200pxl" valign="top"><p>Is Raw</p></td>
+<td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are True or False.</p>
 <p>Default = False. When True, Fabric brings the data response without parsing or formatting for the representation.</p>
 </td>
 </tr>
 <tr>
-<td>Produce</td>
-<td>
+<td width="200pxl" valign="top"><p>Produce</p></td>
+<td width="700pxl" valign="top">
 <p>Web Service&rsquo;s output format.</p>
-<p>Default format: JSON 
-  
-  Additional formats: XML and CSV.</p>
+<p>Default format: JSON</p>
+<p>Additional formats: XML and CSV.</p>
+<p>&nbsp;</p>
 <p>To select the format/s, click the dropdown menu and enable them.</p>
 </td>
 </tr>
 <tr>
-<td>Description</td>
-<td>Web Service&rsquo;s description on Swagger.</td>
+<td width="200pxl" valign="top"><p>Description</p></td>
+<td width="700pxl" valign="top"><p>Web Service&rsquo;s description on Swagger.</td>
 </tr>
 <tr>
-<td>Result Metadata</td>
-<td>
+<td width="200pxl" valign="top"><p>Result Metadata</p></td>
+<td width="700pxl" valign="top">
 <p>Response example to be displayed in Swagger before the Web Service call.</p>
-<p style="padding-left: 30px;">Set example-JSON, example-XML and example-CSV.</p>
+<p>Set example-JSON, example-XML and example-CSV.</p>
 </td>
 </tr>
 </tbody>
 </table>
-|
+ 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/03_create_a_web_service.md)
 
