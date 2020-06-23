@@ -6,7 +6,7 @@ Web services can be deployed to the K2view Fabric server either using the Fabric
 
 1. In the **Project Tree** pane, right click either **Web Services**, **Selected Web Services** or **Categories of the Web Services** to open the **Context** menu.
 2. Click **Deploy to Server** to display the K2View Fabric Servers list.
-3. Define that the deployed Fabric server opens the following deployment options: 
+3. Define that the deployed **Fabric server** opens the following **deployment** options: 
     
     a. Deploy all Web Services.
     
@@ -17,7 +17,7 @@ Web services can be deployed to the K2view Fabric server either using the Fabric
     d. Deploy standalone Web Service.
      
 
-[Click for more information about Deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
+[Click for more information about Deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
 ### How Do I Deploy a Web Service Using the Fabric Console?
 
@@ -30,7 +30,7 @@ Notes:
 - The LUT parameter must be k2_ws, which is the name of the key space created for the Web Services. 
 - The WS_METHODS field can be populated using the list of deployed Web Services. If this field is empty, the DEPLOY command deploys all Web Services into Fabric. 
 
-[Click for more information about Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md)
+[Click for more information about Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
 
 ### Deployed Web Service and the Fabric K2SYSTEM Keyspace  
 
