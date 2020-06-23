@@ -23,7 +23,7 @@ Web services can be deployed to the K2view Fabric server either using the Fabric
 
 Run the DEPLOY command using the following syntax:
 
-DEPLOY ‘k2_ws’ WITH JAR <'jar_path'> ZIP_FILE <'zip path'> WS_METHODS ‘ws1’, ‘ws2’;  
+<p style="padding-left: 30px;">DEPLOY ‘k2_ws’ WITH JAR <'jar_path'> ZIP_FILE <'zip path'> WS_METHODS ‘ws1’, ‘ws2’;  </p>
 
 Notes: 
 
