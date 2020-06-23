@@ -7,7 +7,7 @@ URL parameters, including the token and format, are supported in both the URL an
 
 ## URL Redirect
 
-Browser-submitted URLs can be manipulated and translated to deliver content to the browser. This process takes place entirely on the server-side, without the browser's knowledge and the resulting content appears to be originated from the submitted URL.
+Browser-submitted URLs can be manipulated and translated to deliver content to the browser. This process takes place entirely on the server-side, without the browser's knowledge, and the resulting content appears to be originated from the submitted URL.
 
 For example:
 
@@ -39,15 +39,15 @@ To invoke a Web Service call, do the following:
 1. Create a **Token** and assign it to the user. If a built-in product Web Service is required, define the **Token** as **ABC** and the **User** as **Admin**.
 2. Create a **Role**, click **CREATE ROLE** > [**role_name**] > **Description** [**Role Description**].
 3. Assign the **Role** to a **Token**, click **ASSIGN ROLE** > [**ROLE]> to Token <'TOKEN'>**.
-4. Grant privilege's to the role, click **GRANT** > **Operation> ON <RESOURCE> TO > **ROLE**.
+4. Grant **Privilege's** to the role, click **GRANT** > **Operation> ON <RESOURCE> TO > ROLE**.
 
 [Click for more information about Web Services Authorization.](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization)
 
 ## Response Formats 
 
-Supports JSON (default), XML and CSV formats for data returned in the body of the response. This applies to all HTTP methods that return a response body. The response format can be defined in several ways: 
-- Making a request without specifying the response format will result in a default JSON format. 
-- Using the reserved Format query string parameter in the URI when making a request. Set the format to XML by adding “format=xml” to the query string portion of the request (the key-value pair data after the “?”, in addition to any other query string parameters also in the URI.
+JSON (default), XML and CSV formats are supported for data returned in the body of the response. This applies to all HTTP methods that return a response body. The response format can be defined in several ways: 
+- Making a request without specifying the response format, resulting in the default JSON format. 
+- Using the reserved format query string parameter in the URI when making a request. Set the format to XML by adding “format=xml” to the query string portion of the request (the key-value pair data after the “?”, in addition to any other query string parameters also in the URI.
 - Using the Format parameter in the HTTP request header.
 
 ## URL Encoding
