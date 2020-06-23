@@ -1,12 +1,12 @@
 # Post Verb
 
-POST APIs are used to create **new subordinate resources**. For example a file that is subordinate to the directory containing it, or a row  that is subordinate to a database table. Strictly in terms of REST, POST methods are used to create a new resource in the collection of resources.
+Use POST APIs to create **new subordinate resources**. For example, a file that is subordinate to the directory containing it, or a row  that is subordinate to a database table. 
 
-Ideally, if a resource has been created on the origin server, the response SHOULD be the HTTP 201 Created`response code and contain an entity which describes the status of the request and refers to the new resource, and a [Location](https://en.wikipedia.org/wiki/HTTP_location) header.
+Strictly in terms of REST, POST methods can be used to create a new resource in a collection of resources.
 
-Many times, the action performed by the POST method might not result in a resource that can be identified by a URI. In this case, either the HTTP 200 OK or 204 No Content are the appropriate response status.
+Ideally, if a resource has been created on the origin server, the response code SHOULD be HTTP 201 Created and contain an entity describing the request's status, refer to the new resource and a [Location](https://en.wikipedia.org/wiki/HTTP_location) header.
 
-Responses to this method are **not cacheable,** unless the response includes the appropriate [Cache-Control](https://en.wikipedia.org/wiki/Web_cache#Cache_control) or [Expires](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) header fields.
+The action performed by the POST method frequently might not result in a resource that can be identified by a URI. In this case, either HTTP 200 OK or 204 No Content are an appropriate response status. Responses to this method are **not cacheable,** unless the response includes the appropriate [Cache-Control](https://en.wikipedia.org/wiki/Web_cache#Cache_control) or [Expires](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) header fields.
 
 Note that POST is **neither safe nor idempotent** and invoking two identical POST requests results in two different resources containing the same information (except resource IDs).
 
@@ -27,17 +27,17 @@ http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=
 
  
 
-**Examples:**
+**Example:**
 
-http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
+- http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
 
-Insert data into CUSTOMER LU instance id 1, LION table
+  Insert data into CUSTOMER LU instance id 1, LION table
 
-Request Body
+  Request Body
 
-```                     
-{"rows" : {"LION" : [{"ID":11, "NAME":"lion11"},{"ID":12, "NAME":"lion12"},{"ID":13, "NAME":"lion13"}]}}
-```
+  ```                     
+  {"rows" : {"LION" : [{"ID":11, "NAME":"lion11"},{"ID":12, "NAME":"lion12"},{"ID":13, "NAME":"lion13"}]}}
+  ```
  
 
 ##  Post Data Into Common Table
@@ -54,13 +54,13 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token 
 | token             | Token name                   | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
-**Examples:**
+**Example:**
 
-http://10.21.1.69:3213/api/v1.0/COMMON?REF_NAMES&token=ABC&format=json
+- http://10.21.1.69:3213/api/v1.0/COMMON?REF_NAMES&token=ABC&format=json
 
-Insert data into common table REF_NAMES
+  Insert data into common table REF_NAMES
 
-Request Body
+  Request Body
 ```
 {
   "rows": [
@@ -73,9 +73,9 @@ Request Body
 ```
 ##  Post Custom Web Service 
 
-http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
+- http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
 
-parameters should be populated on the body in the following structure:
+  Parameters should be populated in the body in the following structure:
 ```
 {
 “parameter name 1”:”value”,
@@ -88,7 +88,7 @@ parameters should be populated on the body in the following structure:
 | PORT                        | PORT                                   | Y             | 3213          |                |
 | Api                         | API                                    | Y             | api           |                |
 | VERSION_NO                  | Version number                         | N             | V1.4          | Latest version |
-| Customized Web-Service name | Name of the Web Service to be executed | Y             | Orders        |                |
+| Customized Web Service name | Name of the Web Service to be executed | Y             | Orders        |                |
 | Format                      | Response format                        | Y             | JSON/XML/YAML | JSON           |
 
 ##  Request Header
@@ -99,18 +99,18 @@ parameters should be populated on the body in the following structure:
 | Accept                     | Y             | Json/XML/RAW/YAML/CSV                                        |
 | Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header |
 
-**Examples:**
+**Example:**
 
-http://10.21.1.69:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+- http://10.21.1.69:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
 
-in the body request put:
+  In the body request put:
 ```
 {
  "i_order_id": "1",
  "i_order_status": "Open"
 }
 ```
-Call Web Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
+ Call Web Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/12_Supported_Verbs_Get.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/14_Supported_Verbs_Put.md)
 
