@@ -32,7 +32,12 @@ The following steps discuss how a new Web Service is created and include options
   Note that the Column Name, Data Type, Mandatory and Comments are displayed in the **Input Parameters** list in the lower right pane.
 
 
-7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also write your own code. 
+7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. T
+    
+
+    The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also write your own code. 
+
+
 
  <img src="/articles/15_web_services/images/Web-Service-KI-3-5.png" alt="drawing"/>  
 
@@ -40,7 +45,7 @@ The following steps discuss how a new Web Service is created and include options
 
     Db.Rows rows = ludb("Customer", <instanceID>).fetch(sql, <val1>, <val2>, ...);
 
-    Replace the **<instanceID> place holder** with the input parameter **CUSTOMER_ID**
+    Replace the **<instanceID> place holder** with the input parameter **CUSTOMER_ID**  
 
     Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);
 
