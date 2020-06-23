@@ -1,8 +1,11 @@
 # Legacy Annotation
 
-The functionality of full alignment with RESTFUL web services standards was introduced from Fabric release 5.5. In order to provide a backwards compatibility for the existing projects that are looking for upgrade but insist to preserve the existing web services response, it is possible to add @legacy annotation on category level (can be edited by notepad or intelliJ). Meaning that all web services under the category marked with @legacy annotation will response with older structure. 
+The Full Alignment with RESTFUL Web Services functionality was introduced in Fabric 5.5.  When updating projects to enable backwards compatibility while preserving the existing Web Services response structure, add the @legacy annotation on a category level. 
+Use either Notepad or IntelliJ to edit the annotation. 
 
-Any new web service defined under the same category will align the web-service response structure accordingly.
+ * Web Services under a category with an @legacy annotation respond in the older structure. 
+
+*  New Web Services under the same category align the Web Service response structure accordingly.
 
   
 

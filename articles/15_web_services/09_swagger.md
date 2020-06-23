@@ -2,57 +2,66 @@
 
 Swagger is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services.
 
-K2View Fabric Studio supports invocation and testing of web services using Swagger that is aligned with OpenAPI Specification version 3. 
+K2View Fabric Studio supports invocation and testing of Web Services using Swagger that is aligned with the OpenAPI Specification (OAS) version 3. 
 
-The OpenAPI Specification (OAS) defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
+OAS defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
 
 An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
 
-Web services can be deployed to the K2view Fabric server either using the Fabric Studio or using the Fabric Console (offline deployment).
+Web Services can be deployed to the K2view Fabric server either using the Fabric Studio or the Fabric Console (offline deployment).
 
-### Invoking and Testing Web Services using Fabric Studio
+### Invoking and Testing Web Services Using Fabric Studio
 
-Following steps should be followed 
+1. Go to: **http://<Fabric server>:3213/api** and then define the **IP Address** of the Fabric server. 
+   
+   Or, 
+   
+2. Go to **User Preferences** > **Server Configuration** and do the following:
+    
+    a. Set the **Web Service Invoke Path Template** to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>.  
 
-1.  Navigate to the following URL and specify the IP address of your Fabric server: http://<Fabric server>:3213/api or set Web service invoke path template in your **User preferences** - Server configuration to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH> and then invoke web service (right click the **Web Service** name in the Project Tree pane and click the **Invoke Web Service** option), the following screen will show up.
+    b. Go the the **Project Tree**, right click the **Web Service** and then click **Invoke Web Service**.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1.png" alt="drawing"/>
 
-   Once the link to the Swagger will be invoked, it is possible to focus on a given version of the invoked URL path, by adding for example /v1 to the URL as shown below.
+  Once the link to Swagger is invoked, you can focus on a given version of the invoked URL path. For example, by adding /v1 to the URL as shown below.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
-   The relevant invoked Web-Service will be expended pointing to the correct verb, if only GET verb was defined as illegible for the invoked Web-Service, it will show only verb GET as an option, if all the four verbs were defined as illegible, it will show GET, POST, PUT and DELETE, but it will zoom into GET as a default.
+	The relevant invoked Web Service is expended and points to the correct verb. 
+*	If only the GET verb is defined as illegible for the invoked Web Service, it will only display the GET verb  as an option.
 
-2. Click a web service in the Swagger user interface to view more details about it, including its parameters, as shown below. If a description of the method or comments were added to the input parameters in K2View Studio, it is displayed in the Swagger user interface, as shown in the examples below (customer_id description).
+*	If all the four verbs are defined as illegible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
+
+2. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
-   If JSON/XML or CSV examples were defined in the Web-Service properties in Studio, it will be shown accordingly in the swagger.
+   If JSON/XML or CSV examples were defined in the Web Service properties in the Studio, they are displayed in Swagger.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
-3. Click on the lock and set a valid Token and click on Authorize button afterwards.
+3. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
-4. Click the **Try it out**! button. Fill in the parameters and then click the Execute button to display a response.
+4. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-3.png" alt="drawing"/>
 
-5. The default Media Type is set to application/json, however it can be changed to other illegible supported format (xml or csv) and response accordingly.
+5. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (xml or csv) and respond accordingly.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
-### Swagger - supported Web-Services categories
+### Swagger - Supported Web Services Categories
+Fabric Web Services are displayed in Swagger in categories and in alphabetical order.
 
-Fabric Web-Services are shown in swagger in alphabetic order divided by categories.
 
-   * Common - All the product built-in Web-Services to bring reference tables meta data and data.
+   * Common - all built-in product Web Services that bring reference table metadata and data.
    
-   * Graphit - All the graphit files defined as a part of the project implementations.
+   * Graphit - all Graphit files defined as a part of the project implementations.
    
-   * Lu - All the LU built-in Web-Services to bring LU meta data and data and data modification, such as Delete instance.
+   * Lu - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
    
-   * Project defined categories for Web-Services.
+   * Project defined categories for Web Services.
    
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/10_legacy_annotation.md)
  
