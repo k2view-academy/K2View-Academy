@@ -63,7 +63,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <tbody>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU Instance.&nbsp;</strong></p>
+<p><strong><h4>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU Instance.&nbsp;</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
@@ -79,7 +79,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric using a Web Service.</strong></p>
+<p><strong><h4>Connect to the local Fabric using a Web Service.</strong></p>
 </td>
 <td width="198">
 <p>ludb(String lutype, String luid)</p>
@@ -90,7 +90,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU Instance from another LU.</strong></p>
+<p><strong><h4>Connect to the local Fabric via an LU sync.&nbsp; Get the LU Instance from another LU.</strong></p>
 </td>
 <td width="198">
 <p>ludb(String lutype, String luid)</p>
@@ -101,7 +101,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to another DB interface.</strong></p>
+<p><strong><h4>Connect to another DB interface.</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
