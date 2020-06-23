@@ -1,12 +1,12 @@
 # Post Verb
 
-Use POST APIs **to create new subordinate resources**, e.g. a file is subordinate to a directory containing it, or a row is subordinate to a database table. Talking strictly in terms of REST, POST methods are used to create a new resource into the collection of resources.
+POST APIs are used to create **new subordinate resources**. For example a file that is subordinate to the directory containing it, or a row  that is subordinate to a database table. Strictly in terms of REST, POST methods are used to create a new resource in the collection of resources.
 
-Ideally, if a resource has been created on the origin server, the response SHOULD be the HTTP response code `201 (Created)` and contain an entity which describes the status of the request and refers to the new resource, and a [Location](https://en.wikipedia.org/wiki/HTTP_location) header.
+Ideally, if a resource has been created on the origin server, the response SHOULD be the HTTP 201 Created`response code and contain an entity which describes the status of the request and refers to the new resource, and a [Location](https://en.wikipedia.org/wiki/HTTP_location) header.
 
-Many times, the action performed by the POST method might not result in a resource that can be identified by a URI. In this case, either HTTP response code **200 (OK)** or **204 (No Content)** is the appropriate response status.
+Many times, the action performed by the POST method might not result in a resource that can be identified by a URI. In this case, either the HTTP 200 OK or 204 No Content are the appropriate response status.
 
-Responses to this method are **not cacheable,** unless the response includes appropriate [Cache-Control](https://en.wikipedia.org/wiki/Web_cache#Cache_control) or [Expires](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) header fields.
+Responses to this method are **not cacheable,** unless the response includes the appropriate [Cache-Control](https://en.wikipedia.org/wiki/Web_cache#Cache_control) or [Expires](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) header fields.
 
 Note that POST is **neither safe nor idempotent** and invoking two identical POST requests results in two different resources containing the same information (except resource IDs).
 
