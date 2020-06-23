@@ -7,7 +7,7 @@ URL parameters, including the Token and Format, are supported on both the URL an
 
 ## URL Redirect
 
-Browser-submitted URLs can be manipulated and translated to deliver content to the browser. This process takes place entirely on the server-side and without the browser's knowledge. The resulting content appears to be originated from the submitted URL.
+Browser-submitted URLs can be manipulated and translated to deliver content to the browser. This process takes place entirely on the server-side, without the browser's knowledge and the resulting content appears to be originated from the submitted URL.
 
 For example:
 
@@ -29,10 +29,9 @@ Useful tutorials:
 
 ## Authentication
 
-A RESTful API should be stateless whereby the request authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
+A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
-By always using SSL, authentication credentials can be simplified to a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. The great thing about this is that it's completely browser explorable - the browser will just pop up a prompt asking for credentials, if it receives a 401 Unauthorized status code from the server.
-
+By always using SSL, authentication credentials can be simplified to a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth which is fully browser-explorable. If the browsers receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
 Token can be provided as a part of the URL, as a parameter, or on the header request.
 
 To invoke a Web Service call, do the following:
