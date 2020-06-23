@@ -29,7 +29,7 @@ The IID Finder has a separate log and configuration files:
 	$K2_HOME/config/logback-init_finder.xml
 	$K2_HOME/logs/iidfinder.log
 </code></pre>
-
+**logback-iid_finder.xml** is a configuration file for IID Finder log files, while **logback-init_finder.xml** is responsible for the creation of IID Finder tables in Cassandra.\
 Click for more information about the IID Finder. <!--Drop 3- add a link to IID Finder -->
 
 ### **Log Files Location & Rolling Policy**
