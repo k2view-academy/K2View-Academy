@@ -2,13 +2,13 @@
 
 Fabric Web Services properties include the definitions, methods, categories and essential metadata that contribute to the main functionalities and characteristics of the Web Service.  
 
-## **How Do I Access Web Services Properties?** 
+## **How Do I Access Web Service Properties?** 
 
 Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** to display the **Function Manager** window: 
 
 <img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/> 
 
-## What Are Web Services Properties? 
+## What Are Web Service Properties? 
 
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
