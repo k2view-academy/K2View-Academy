@@ -37,7 +37,7 @@ The following steps discuss how a new Web Service is created and include options
 
     The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also write your own code. 
 
- <img src="/articles/15_web_services/images/Web-Service-KI-3-5.png" alt="drawing"/>  
+    <img src="/articles/15_web_services/images/Web-Service-KI-3-5.png" alt="drawing"/>  
 
 8. Once the code is generated, edit the function based on the logic to be applied. For example:
 
