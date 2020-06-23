@@ -62,7 +62,7 @@ A Web Service can also be edited directly in its main working area.
 <th style="vertical-align: top; text-align: left;">Java Code Enhancement</th>
 <td>
 <p>Web Service code can also apply transformation rules via the functions, translations or Globals defined in the project.</p>
-<p>Note that any Fabric Server runtime command can be used within the Web Service using the Execute function.</p>
+<p>Note that any Fabric server runtime command can be used within the Web Service using the Execute function.</p>
 <p>For example, the Get command on the Customer LUT for a specific instance:</p>
 <p style="padding-left: 30px;">Fabric().execute(&ldquo; get Customer.?&rdquo;,ID);</p>
 </td>
