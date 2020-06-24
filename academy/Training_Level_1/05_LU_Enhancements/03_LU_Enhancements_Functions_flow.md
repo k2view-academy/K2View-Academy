@@ -288,7 +288,7 @@ return syncInd;
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/02_LU_Enhancement_PopulationMap_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/01_LU_Enhancement_next.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/02_LU_Enhancements_PopulationMap_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/01_LU_Enhancement_next.md)
 
  
 
