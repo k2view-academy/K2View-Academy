@@ -241,13 +241,14 @@ Let's focus for now on the CustomerLU in the course's project.
 
 #### Exercise - Decision functions
 
-In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change happens on the external source.
 
-Building on top of previous exercise, build a decision function based on the following criteria:
+    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change happens on the external source.
 
--  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean variable - *syncind* set to TRUE
+    Building on top of previous exercise, build a decision function based on the following criteria:
 
-- At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value using a "select count *" statement in the query builder
+    -  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean variable - *syncind* set to TRUE
+
+    - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value using a "select count *" statement in the query builder
 
   
 
