@@ -10,25 +10,25 @@ We will now look at the different types of functions that can be used to apply d
 
 First let's look into a specific set of utility functions that can be used for any type of data transformation:
 
-[Built-in functions](\articles\07_table_population\07_fabric_built_in_functions.md)
+[Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md)
 
 
 
 ### Fabric functions
 
-First of all let's understand the different types of project functions that can be developed and used by reading through this article: [Project Functions](articles/07_table_population/08_project_functions.md).
+First of all let's understand the different types of project functions that can be developed and used by reading through this article: [Project Functions](/articles/07_table_population/08_project_functions.md).
 
 
 
-- [LUDB functions](articles/07_table_population/09_creating_an_LUDB_function.md) that can be invoked from within an SQL query.
-- [Project functions](articles/07_table_population/10_creating_a_project_function.md) added to the project implementation to perform complex data manipulations or to execute queries on a specific instance.
+- [LUDB functions](/articles/07_table_population/09_creating_an_LUDB_function.md) that can be invoked from within an SQL query.
+- [Project functions](/articles/07_table_population/10_creating_a_project_function.md) added to the project implementation to perform complex data manipulations or to execute queries on a specific instance.
 
 
 
 ### Root functions
 
-- [Creating a root function](articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
-- [Examples of root functions and code example](articles/07_table_population/11_2_root_functions_code_examples)
+- [Creating a root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
+- [Examples of root functions and code example](/articles/07_table_population/11_2_root_functions_code_examples)
 
 
 
@@ -45,7 +45,7 @@ In order to work directly on LU tables data, once and only once they have been p
 
 ### Exercises - Enrichment functions
 
-As we have seen in the [Course User Story](\academy\Training_Level_1\01_Fabric_Introduction\1_3_course_user_story.md), at the start of this training, and as part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
+As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md), at the start of this training, and as part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
 
 Let's focus for now on the CustomerLU in the course's project. 
 
@@ -237,11 +237,11 @@ ANSWERS
 
 ### Decision functions
 
-- [Sync Methods](\articles\14_sync_LU_instance\04_sync_methods.md)
+- [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md)
 
-- [Sync Decision Functions](\articles\14_sync_LU_instance\05_sync_decision_functions.md)
+- [Sync Decision Functions](/articles/14_sync_LU_instance/05_sync_decision_functions.md)
 
-- [Decision Functions Recommendation](\articles\14_sync_LU_instance\06_sync_decision_functions_recommendations.md)
+- [Decision Functions Recommendation](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 
   
 
@@ -268,7 +268,6 @@ int LASTNumberRows=25144; //latest known number of cases in CRM_DB.CASES
 Boolean syncInd = false;
 
 String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
-
 reportUserMessage(count);
 int cnt=Integer.parseInt(count);
 
@@ -284,13 +283,7 @@ return syncInd;
 
 
 
-[![Previous](/articles/images/Previous.png)](\academy\Training_Level_1\05_LU_Enhancements\01_LU_Enhancement_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](\academy\Training_Level_1\05_LU_Enhancements\01_LU_Enhancement_PopMappingExercises.md)
-
- 
-
- 
-
- 
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/01_LU_Enhancement_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/01_LU_Enhancement_PopMappingExercises.md)
 
  
 
