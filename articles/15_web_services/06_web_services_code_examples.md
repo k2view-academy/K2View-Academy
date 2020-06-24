@@ -1,5 +1,5 @@
 # Web Services - Code Examples
-### Simple Example of a wsCustomerInfo Web Service that Brings a Line of Data for a Given Instance  
+### Simple example of a wsCustomerInfo Web Service that brings a line of data for a given instance  
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
 ```
@@ -26,7 +26,7 @@ Output:
 ]
 ```
 
-###  Example of a wsCustomerInfo2 Web Service that Brings a Db.Rows Structure as an Output for a Given Instance   
+###  Example of a wsCustomerInfo2 Web Service that brings a Db.Rows structure as an output for a given instance   
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a Join query on several tables in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
 
@@ -108,7 +108,7 @@ Output:
 ]
 ```
 
-### Example of Versioning
+### Example of versioning
 
 Both the wsCustomerInfo and wsCustomerInfo2 Web Services in the examples share the same URL path named test/getCustomerInfo. The version property of wsCustomerInfo is set to 1 and the version property of wsCustomerInfo1 is set to 2.
 
@@ -116,8 +116,8 @@ Both the wsCustomerInfo and wsCustomerInfo2 Web Services in the examples share t
 
 - To invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
-### Example of a Complex Input Structure
-A complex json format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
+### Example of a complex input structure
+A complex JSON format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
 
 For example:
 
@@ -142,7 +142,7 @@ Web Service inside logic
 ```
 
 
-### Example of a Complex TDM Web Service 
+### Example of a complex TDM Web Service 
 
 The wsGetTaskExeStatsForEntity Web Service used by TDMGUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or child of the given input LUI, call recursive functions to get a full hierarchy path. 
 
