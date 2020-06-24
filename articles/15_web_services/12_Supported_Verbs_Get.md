@@ -14,7 +14,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Data
 
-<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=token name&[format=json/xml]&SET={mode,value}</code></pre>
+<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=[TOKEN NAME]&[format=json/xml]&SET={mode,value}</code></pre>
 
 
  <table width="900pxl">
@@ -346,7 +346,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Schema (Metadata)
 
-<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=token name&[format=json/xml/yaml]</code></pre>
+<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=[TONEM NAME]&[format=json/xml/yaml]</code></pre>
 
 <table width="900pxl">
 <tbody>
@@ -503,7 +503,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Schema (Metadata)
 
-<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=token name&[format=json/xml/yaml]</code></pre>
+<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[TOKEN NAME]&[format=json/xml/yaml]</code></pre>
 
 <table width="900pxl">
 <tbody>
@@ -645,7 +645,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Table
 
-<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=[list of fields separated by comma]&where=[WHERE STATEMENT]&token=[token name]&[format=json/xml] </code></pre>
+<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=[list of fields separated by comma]&where=[WHERE STATEMENT]&token=[TOKEN NAME]&[format=json/xml] </code></pre>
 
 <table width="900pxl">
 <thead>
@@ -822,7 +822,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Based On Graphit File
 
-http://Domain name:PORT/api/[VERSION_NO]/graphit file name/ PARAM1VALUE1/PARAM2 VALUE2?token=ABC[&format=json/xml/yaml]
+<pre><code>http://[Domain Name]:[PORT]/api/[VERSION_NO]/[graphit file name]/ PARAM1VALUE1/PARAM2 VALUE2?token=[TOKEN NAME][&format=json/xml/yaml]</code></pre>
 
 | Component         | Description                                              | Mandatory | Example                                                      | Default                                                      |
 | ----------------- | -------------------------------------------------------- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -837,9 +837,9 @@ http://Domain name:PORT/api/[VERSION_NO]/graphit file name/ PARAM1VALUE1/PARAM2 
 
 **Example**
 
-[http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC
+- [http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC
 
-Run the Web Service according to the customer_query.1.3 graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input json structure be defined on the Graphit file.
+  Run the Web Service according to the customer_query.1.3 graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input json structure be defined on the Graphit file.
 
 Should call graphit: customer_query.1.3.graphit
 
