@@ -7,7 +7,7 @@ URL parameters, including the token and format, are supported in both the URL an
 
 ## URL Redirect
 
-Browser-submitted URLs can be manipulated and translated to deliver content to the browser. This process takes place entirely on the server-side, without the browser's knowledge, and the resulting content appears to be originated from the submitted URL.
+Browser-submitted URLs can be manipulated and translated to deliver content to the browser. This process takes place entirely on the server-side, without the browser's knowledge whereby the resulting content appears to be originated from the submitted URL.
 
 For example:
 
@@ -17,7 +17,7 @@ A user may ask for http://www.somesite.com/widgets/blue/, but will receive http:
 
 Copy rewrite.config file (sample file attached) to $FABRIC_HOME\webserver\WEB-INF
 
-To use this functionality, users must have at least basic knowledge of rewrite rules / conditions and their different parameters. 
+To use this functionality, users must at least have a basic knowledge of Rewrite rules / conditions and their different parameters. 
 
 Useful tutorials: 
 
@@ -31,8 +31,8 @@ Useful tutorials:
 
 A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
-By always using SSL, authentication credentials can be simplified to a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. This is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
-token can be provided as a part of the URL, as a parameter, or in the header request.
+By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. This is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
+token can be provided as a part of the URL as a parameter, or in the header request.
 
 To invoke a Web Service call, do the following:
 
@@ -47,8 +47,8 @@ To invoke a Web Service call, do the following:
 
 JSON (default), XML and CSV formats are supported for data returned in the body of the response. This applies to all HTTP methods that return a response body. The response format can be defined in several ways: 
 - Making a request without specifying the response format, resulting in the default JSON format. 
-- Using the reserved format query string parameter in the URI when making a request. Set the format to XML by adding “format=xml” to the query string portion of the request (the key-value pair data after the “?”, in addition to any other query string parameters also in the URI.
-- Using the Format parameter in the HTTP request header.
+- Using the reserved **Format** query string parameter in the URI when making a request. Set the **Format** to **XML** by adding **“format=xml”** to the query string portion of the request (the key-value pair data after the “?”), in addition to any other query string parameters also in the URI.
+- Using the **Format** parameter in the HTTP request header.
 
 ## URL Encoding
 
@@ -87,7 +87,7 @@ Not supported.
 
 ## Order of Data
 
-The order of data cannot be consistant since it is performance consumed, unless it is specified in the URL QUERY parameter. The parameter ORDER_BY must be added.
+The order of data cannot be consistent since it is performance consumed, unless it is specified in the URL QUERY parameter. The parameter ORDER_BY must be added.
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 
