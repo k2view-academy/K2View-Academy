@@ -4,8 +4,6 @@ Fabric Studio enables you to automatically generate Java code that holds the bas
 
 ### Web Service Function: Basic Structural Components 
 
-The following table describes the basic structural components of a Web Service function:
-
 <table width="900pxl">
 <tbody>
 <tr>
