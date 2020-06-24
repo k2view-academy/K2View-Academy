@@ -4,9 +4,7 @@ Swagger is a specification and complete framework implementation for describing,
 
 K2View Fabric Studio supports invocation and testing of Web Services using Swagger that is aligned with the OpenAPI Specification (OAS) version 3. 
 
-OAS defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic.
-
-An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
+OAS defines a standard, language-agnostic interface to RESTful APIs which allows both humans and computers to discover and understand the capabilities of the service without access to source code, documentation, or through network traffic inspection. When properly defined, a consumer can understand and interact with the remote service with a minimal amount of implementation logic. An OpenAPI definition can then be used by documentation generation tools to display the API, code generation tools to generate servers and clients in various programming languages, testing tools, and many other use cases.
 
 Web Services can be deployed to the K2view Fabric server either using the Fabric Studio or the Fabric Console (offline deployment).
 
@@ -18,7 +16,7 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
    
 2. Go to **User Preferences** > **Server Configuration** and do the following:
     
-    a. Set the **Web Service Invoke Path Template** to static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>.  
+    a. Set the **Web Service Invoke Path Template** to **static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>**.  
 
     b. Go the the **Project Tree**, right click the **Web Service** and then click **Invoke Web Service**.
 
@@ -37,7 +35,7 @@ The relevant invoked Web Service is expended and points to the correct verb.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
-   If JSON/XML or CSV examples were defined in the Web Service properties in the Studio, they are displayed in Swagger.
+   If JSON / XML or CSV examples were defined in the Web Service properties in the Studio, they are displayed in Swagger.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
@@ -47,7 +45,7 @@ The relevant invoked Web Service is expended and points to the correct verb.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-3.png" alt="drawing"/>
 
-6. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (xml or csv) and respond accordingly.
+6. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (XML or CSV) and respond accordingly.
 
    <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
@@ -59,7 +57,7 @@ Fabric Web Services are displayed in Swagger in categories and in alphabetical o
    
    * Graphit - all Graphit files defined as a part of the project implementations.
    
-   * Lu - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
+   * LU - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
    
    * Project defined categories for Web Services.
    
