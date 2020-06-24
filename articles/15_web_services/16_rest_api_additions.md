@@ -11,11 +11,11 @@ Browser-submitted URLs can be manipulated and translated to deliver content to t
 
 For example:
 
-A user may ask for http://www.somesite.com/widgets/blue/, but will receive http://www.somesite.com/widgets.php?colour=blue from the server and will not be aware of the difference.
+A user may ask for http://www.somesite.com/widgets/blue/, but receives http://www.somesite.com/widgets.php?colour=blue from the server and will not be aware of the difference.
 
 ### Configuration
 
-Copy rewrite.config file (sample file attached) to $FABRIC_HOME\webserver\WEB-INF
+Copy the **rewrite.config** file (sample file attached) to **$FABRIC_HOME\webserver\WEB-INF**
 
 To use this functionality, users must at least have a basic knowledge of Rewrite rules / conditions and their different parameters. 
 
@@ -31,7 +31,7 @@ Useful tutorials:
 
 A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
-By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. This is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
+By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. It is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
 token can be provided as a part of the URL as a parameter, or in the header request.
 
 To invoke a Web Service call, do the following:
@@ -55,19 +55,11 @@ JSON (default), XML and CSV formats are supported for data returned in the body 
 In general, URIs allow only ASCII values. However, there are specific cases like internationalized domain names (IDN), where non-ASCII characters may be used in the domain name. For the purposes of communicating data using query string parameters, you cannot directly send non-ASCII (unsafe) characters. Also, some characters like spaces, “=”, and “&” have a specific meaning when sent in the query string section of the URI and are reserved. 
 
 In order to handle unsafe characters and to distinguish between data and reserved characters that have special meaning in a URI, the URI must be “URL Encoded”. This encoding replaces non-ACII and reserved characters parameter data with ASCII equivalents. This is also known as “Percent Encoding” since each unsafe character is replaced with a value starting with percent sign (“%”).
-
-All parameter values should be URL encoded to ensure correct transmission. 
-
-For example, the query string: “name=Mañana” is URL encoded as “name= %20Ma%C3%B1ana”. 
-
+All parameter values should be URL encoded to ensure correct transmission. For example, the query string: “name=Mañana” is URL encoded as “name= %20Ma%C3%B1ana”. 
 A URI cannot have a space and is encoded to the value “%20”. 
 The Spanish letter “ñ” is not a valid ASCII value and is encoded as “%C3%B1”. 
-
 Once the data reaches the server, it is decoded back to the original characters. The key portion of each parameter is determined by the application, and therefore, will never contain unsafe characters. 
-
-The same parameter can be repeated within the query string. However, only the final occurrence of the parameter is used to obtain a value. 
-
-For example, given the query string “?code=A&code=B”, the interpreted value of the “code” parameter will be “B”. The “A” value is discarded. 
+The same parameter can be repeated within the query string. However, only the final occurrence of the parameter is used to obtain a value. For example, given the query string “?code=A&code=B”, the interpreted value of the “code” parameter will be “B”. The “A” value is discarded. 
 
 There is no use case for transmitting repeated parameters since the required result is achieved through other module-specific query string mechanisms.
 
