@@ -149,13 +149,14 @@ Let's focus for now on the CustomerLU in the course's project.
    ```
 
      d. Update line numbers only for 5G/LTE contracts
-
-   `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`*
+   `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
+   
    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global    parameters pertaining to the entire project and its multiple LUs* 
 
 
 
-
+                                                                                                              
+                                                                                                              
    
     Question 3. Case Notes Clean-up
 
@@ -217,7 +218,7 @@ Let's focus for now on the CustomerLU in the course's project.
    }
    ```
 
-
+                                                                           
    
     Question 4. 
         Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
