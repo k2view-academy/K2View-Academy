@@ -86,7 +86,6 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <li><strong>PUT</strong>, create new data based on the data provided.&nbsp;</li>
 <li><strong>POST</strong>, update data.&nbsp;</li>
 <li><strong>DELETE</strong>, delete data.</li>
-</ul>
 <p>To select a method, click the dropdown list and enable it. Note that at least one method should be selected.</p>
 </td>
 </tr>
@@ -103,9 +102,9 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <td width="700pxl" valign="top">
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
-<p>Additional formats: XML and CSV.</p>
-<p>&nbsp;</p>
-<p>To select the format/s, click the dropdown menu and enable them.</p>
+<p>Additional formats: XML and CSV.
+ 
+ To select the format/s, click the dropdown menu and enable them.</p>
 </td>
 </tr>
 <tr>
