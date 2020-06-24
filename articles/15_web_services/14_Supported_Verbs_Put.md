@@ -60,7 +60,7 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
 - http://localhost:3213/api/v1.0/COMMON?CITIES&token=ABC
 
   Update data in common ADDRESSES table
-  ```
+  
   Request Body
 
  {
