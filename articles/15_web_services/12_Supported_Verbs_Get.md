@@ -14,7 +14,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Data
 
-<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=[TOKEN NAME]&[format=json/xml]&SET={mode,value}</code></pre>
+<pre><code> http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=[TOKEN NAME]&[format=json/xml]&SET={mode,value}</code></pre>
 
 
  <table width="900pxl">
@@ -346,7 +346,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Schema (Metadata)
 
-<pre><code> http://[IP Address]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=[TONEM NAME]&[format=json/xml/yaml]</code></pre>
+<pre><code> http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=[TONEM NAME]&[format=json/xml/yaml]</code></pre>
 
 <table width="900pxl">
 <tbody>
@@ -503,7 +503,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Schema (Metadata)
 
-<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[TOKEN NAME]&[format=json/xml/yaml]</code></pre>
+<pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[TOKEN NAME]&[format=json/xml/yaml]</code></pre>
 
 <table width="900pxl">
 <tbody>
@@ -645,7 +645,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Table
 
-<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=[list of fields separated by comma]&where=[WHERE STATEMENT]&token=[TOKEN NAME]&[format=json/xml] </code></pre>
+<pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=[list of fields separated by comma]&where=[WHERE STATEMENT]&token=[TOKEN NAME]&[format=json/xml] </code></pre>
 
 <table width="900pxl">
 <thead>
@@ -845,7 +845,7 @@ Should call graphit: customer_query.1.3.graphit
 
 # Get Custom Web Service
 
-http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=token name&[format=json/xml]
+http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=token name&[format=json/xml]
 
 | Component                   | Description                            | Mandatory | Example                                                      | Default        |
 | --------------------------- | -------------------------------------- | --------- | ------------------------------------------------------------ | -------------- |
@@ -859,9 +859,9 @@ http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VA
 
 **Example:**
 
-http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+- http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
 
-Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
+  Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
 
 # Request Header
 
