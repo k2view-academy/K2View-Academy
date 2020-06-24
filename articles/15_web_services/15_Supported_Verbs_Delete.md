@@ -6,7 +6,7 @@ A successful response to DELETE requests SHOULD be:
 
 - **HTTP 200 OK**, if the response includes an entity describing the status.  
 - **HTTP 202 Accepted**, if the action has been queued.  
-- **HTTP 204 No Contnet**, if the action has been performed but the response does not include an entity. 
+- **HTTP 204 No Content**, if the action has been performed but the response does not include an entity. 
 
 DELETE operations are **idempotent**. When a resouce is deleted, it is removed from the collection of resources and remains so, even when the DELETE API is called on the same resource repeatedly. The **404 NOT FOUND** response code is returned when the DELETE API is called on a deleted resource for the second time. Some may argue that this makes the DELETE method non-idempotent. It is a matter of discussion and personal opinion.
 
@@ -27,7 +27,7 @@ http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=jso
 | Token         | Token Name                                    | Y             |                 |                |
 | Format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
 
-**Examples:**
+**Example:**
 
 - http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC
 
@@ -39,7 +39,9 @@ http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=jso
 
   Response code: 200 if delete ended successfully
 
-##DELETE Data from LU Table
+
+
+## DELETE Data From LU Table
 
 http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
 
@@ -68,7 +70,7 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 
   Response code: 200 if delete ended successfully
 
-##  Delete Data from Common Table
+##  Delete Data From Common Table
 
 http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1&token=token name&[format=json/xml]
 
