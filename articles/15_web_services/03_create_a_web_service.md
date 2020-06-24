@@ -43,7 +43,7 @@ The following steps discuss how a new Web Service is created and include options
 
     Db.Rows rows = ludb("Customer", <instanceID>).fetch(sql, <val1>, <val2>, ...);
 
-    Replace the **<instanceID> place holder** with the input parameter **CUSTOMER_ID**  
+    Replace the **<instanceID> placeholder** with the input parameter **CUSTOMER_ID**.  
 
     Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);
 
