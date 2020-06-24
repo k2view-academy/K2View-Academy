@@ -43,7 +43,7 @@ In order to work directly on LU tables data, once and only once they have been p
 
 
 
-### Exercises - Enrichment functions
+#### Exercises - Enrichment functions
 
 As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md), at the start of this training, and as part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
 
@@ -111,7 +111,7 @@ Tamar keeps on receiving to her mailing address old bills as well as apology let
 
 
 
-ANSWERS
+#### Solution - Enrichment functions
 
 **a. Explore the sources**
 
@@ -125,7 +125,7 @@ ANSWERS
 
 2. 1 & 2
 
-3. Code sample
+3. Code
 
    1. First part : update all the phone numbers fields missing international code 	
 
