@@ -25,7 +25,7 @@ Where:
 
  
 
-### Transfering Input Parameters That Are Not Part of the URL Path
+### Transfering Input Parameters Not Part of the URL Path
 
 When input parameters are not set as part of the URL path, transfer them as follows:
 
