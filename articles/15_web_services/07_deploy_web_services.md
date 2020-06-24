@@ -49,9 +49,13 @@ Notes:
 
 ## Examples 
 
-### Deploy all Web Services  
+Run the following query on k2system.k2_lut_info table:
 
-select lut_name, lut_version, properties from k2system.k2_lut_info where lut_name = 'k2_ws’; 
+`select lut_name, lut_version, properties from k2system.k2_lut_info where lut_name = 'k2_ws’;` 
+
+See below the results for different scenarios:
+
+### Deploy all Web Services  
 
 | lut_name | lut_version   | properties      |
 | -------- | ------------- | --------------- |
