@@ -17,16 +17,16 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 `http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/[iid]/token=[TOKEN NAME]&format=[json/xml]`
 
-| Component   | Description                                    | Mandatory | Example          | Default        |
-| ----------- | ---------------------------------------------- | --------- | ---------------- | -------------- |
-| Domain name | Domain name                                    | Y         | 10.21.1.69       |                |
-| PORT        | PORT                                           | Y         | 3213             |                |
-| api         | API                                            | Y         | api              |                |
-| VERSION_NO  | Version number                                 | N         | V1.4             | Latest version |
-| LU Name     | Logical unit name or COMMON for common  tables | Y         | CUSTOMER  COMMON |                |
-| Iid         | Instance ID                                    | Y         | 1                |                |
-| token       | Token name                                     | Y         |                  |                |
-| format      | Response format                                | Y         | JSON/XML/YAML    | JSON           |
+| **Component**   | **Description**                                    | **Mandatory** | **Example**          | **Default**        |
+| --------------- | -------------------------------------------------- | ------------- | -------------------- | ------------------ |
+| Domain name     | Domain name                                        | Y             | 10.21.1.69           |                    |
+| PORT            | PORT                                               | Y             | 3213                 |                    |
+| api             | API                                                | Y             | api                  |                    |
+| VERSION_NO      | Version number                                     | N             | V1.4                 | Latest version     |
+| LU Name         | Logical unit name or COMMON for common  tables     | Y             | CUSTOMER  COMMON     |                    |
+| Iid             | Instance ID                                        | Y             | 1                    |                    |
+| token           | Token name                                         | Y             |                      |                    |
+| format          | Response format                                    | Y             | JSON/XML/YAML        | JSON               |
 
  **Example:**
 
@@ -45,15 +45,15 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 `http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[common table name]?token=[TOKEN NAME]&format=[json/xml]`
 
-| **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
-| ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
-| Domain name       | Domain name                  | Y             | 10.21.1.69    |             |
-| PORT              | PORT                         | Y             | 3213          |             |
-| api               | API                          | Y             | api           |             |
-| COMMON            | Specify that scope is common | Y             | COMMON        |             |
-| COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
-| token             | Token name                   | Y             |               |             |
-| format            | Response format              | Y             | JSON/XML/YAML | JSON        |
+| **Component**     | **Description**                                    | **Mandatory** | **Example**          | **Default**        |
+| ----------------- | -------------------------------------------------- | ------------- | ------------- | ----------- |
+| Domain name       | Domain name                                        | Y             | 10.21.1.69    |             |
+| PORT              | PORT                                               | Y             | 3213          |             |
+| api               | API                                                | Y             | api           |             |
+| COMMON            | Specify that scope is common                       | Y             | COMMON        |             |
+| COMMON TABLE NAME | Common table name                                  | N             | ADDRESSES     |             |
+| token             | Token name                                         | Y             |               |             |
+| format            | Response format                                    | Y             | JSON/XML/YAML | JSON        |
 
 **Example:**
 
