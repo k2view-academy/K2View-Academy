@@ -11,10 +11,9 @@ Since GET requests do not change the status of the resource, they are considered
 
 The new REST API is fully integrated with the open API (Swagger) whereby the structure of the body of the response is known before the API is called.
 
-
 # Get LU Data
 
-<pre><code> http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=[TOKEN NAME]&[format=json/xml]&SET={mode,value}</code></pre>
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=[TOKEN NAME]&[format=json/xml]&SET={mode,value}`
 
 
  <table width="900pxl">
@@ -343,10 +342,9 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
   
   Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and  run it on ENV1 and set GLOBAL_LION to 10
 
-
 # Get LU Schema (Metadata)
 
-<pre><code> http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=[TONEM NAME]&[format=json/xml/yaml]</code></pre>
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=[TONEM NAME]&[format=json/xml/yaml]`
 
 <table width="900pxl">
 <tbody>
@@ -503,7 +501,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Schema (Metadata)
 
-<pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[TOKEN NAME]&[format=json/xml/yaml]</code></pre>
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[TOKEN NAME]&[format=json/xml/yaml]`
 
 <table width="900pxl">
 <tbody>
@@ -821,7 +819,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Based On Graphit File
 
-<pre><code>http://[Domain Name]:[PORT]/api/[VERSION_NO]/[graphit file name]/ PARAM1VALUE1/PARAM2 VALUE2?token=[TOKEN NAME][&format=json/xml/yaml]</code></pre>
+`http://[Domain Name]:[PORT]/api/[VERSION_NO]/[graphit file name]/ PARAM1VALUE1/PARAM2 VALUE2?token=[TOKEN NAME]&[format=json/xml/yaml]`
 
 <table width="900pxl">
 <thead>
@@ -982,7 +980,7 @@ Should call graphit: customer_query.1.3.graphit
 
 # Get Custom Web Service
 
-<pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=[TOKEN NAME]&[format=json/xml]</code></pre>
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=[TOKEN NAME]&[format=json/xml]`
 
 <table width="900pxl">
 <thead>
@@ -1024,13 +1022,13 @@ Should call graphit: customer_query.1.3.graphit
 <td valign="top" width="150pxl">
 <p>PORT</p>
 </td>
-<td>
+<td valign="top" width="200pxl">
 <p>PORT</p>
 </td>
-<td>
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
-<td>
+<td valign="top" width="300pxl">
 <p>3213</p>
 </td>
 <td>&nbsp;</td>
