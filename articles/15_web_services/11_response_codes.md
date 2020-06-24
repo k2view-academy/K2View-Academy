@@ -61,15 +61,15 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h4>200</p>
+<p><h5>200</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>OK</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>GET/POST/PUT/DELETE</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="500pxl" valign="top" >
 <p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload is sent in a 200 response depending on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
 <p>GET a representation of the target resource;</p>
 <p>POST a representation of the status of, or results obtained from, the action;</p>
@@ -81,7 +81,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h4>201</p>
+<p><h5>201</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Created</p>
@@ -97,7 +97,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h4>301</p>
+<p><h5>301</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Moved Permanently</p>
@@ -115,7 +115,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>400</p>
+<p><h5>400</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Bad Request</p>
@@ -129,7 +129,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>401</p>
+<p><h5>401</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Unauthorized</p>
@@ -143,7 +143,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>403</p>
+<p><h5>403</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Forbidden</p>
@@ -161,7 +161,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h4>404</p>
+<p><h5>404</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Not Found</p>
@@ -177,7 +177,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h4>405</p>
+<p><h5>405</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Method Not Allowed</p>
@@ -192,7 +192,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h4>406</p>
+<p><h5>406</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Not Acceptable</p>
@@ -209,7 +209,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>408</p>
+<p><h5>408</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Request timeout</p>
@@ -225,7 +225,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>413</p>
+<p><h5>413</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Payload too large</p>
@@ -241,7 +241,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>414</p>
+<p><h5>414</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>URI too long</p>
@@ -256,7 +256,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>426</p>
+<p><h5>426</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Upgrade required</p>
@@ -274,7 +274,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>500</p>
+<p><h5>500</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Internal server error</p>
@@ -288,7 +288,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>503</p>
+<p><h5>503</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Service Unavailable</p>
@@ -304,7 +304,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>505</p>
+<p><h5>505</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>HTTP Version Not Support</p>
@@ -320,7 +320,6 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 </tbody>
 </table>
-
 
 
 ## Override Response Code
