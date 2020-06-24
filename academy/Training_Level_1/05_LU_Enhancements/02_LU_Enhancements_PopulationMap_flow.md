@@ -31,7 +31,7 @@ We will apply data transformations by using the following available objects :
 - Globals
 - Lookup tables
 
-Lets read through the following [article](articles/07_table_population/06_table_population_transformation_rules.md).
+Lets read through the following [article](/articles/07_table_population/06_table_population_transformation_rules.md).
 
 
 
@@ -41,7 +41,7 @@ Now you are acquainted with the different data transformation means, let's look 
 
 
 
-Let's now conclude this part by reading on how we can set different execution orders for the population objects we defined above: [Execution Orders](\articles\07_table_population\13_LU_table_population_execution_order.md) 
+Let's now conclude this part by reading on how we can set different execution orders for the population objects we defined above: [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) 
 
 
 
