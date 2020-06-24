@@ -15,7 +15,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 ## Post Data Into LU Table
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/[iid]/token=[TOKEN NAME]&format=[json/xml]`
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;common table name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 | **Component**   | **Description**                                    | **Mandatory** | **Example**          | **Default**        |
 | --------------- | -------------------------------------------------- | ------------- | -------------------- | ------------------ |
@@ -30,7 +30,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
  **Example:**
 
-- http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
+- `http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC`
 
   Insert data into CUSTOMER LU instance id 1, LION table
 
@@ -43,7 +43,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 ##  Post Data Into Common Table
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[common table name]?token=[TOKEN NAME]&format=[json/xml]`
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 | **Component**     | **Description**                                  | **Mandatory** | **Example**          | **Default**        |
 | ----------------- | ------------------------------------------------ | ------------- | -------------------- | ------------------ |
@@ -58,7 +58,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 **Example:**
 
-- http://10.21.1.69:3213/api/v1.0/COMMON?REF_NAMES&token=ABC&format=json
+- `http://10.21.1.69:3213/api/v1.0/COMMON?REF_NAMES&token=ABC&format=json`
 
   Insert data into common table REF_NAMES
 
@@ -75,7 +75,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 ```
 ##  Post Custom Web Service 
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/[customized Web-Service name]?token=[TOKEN NAME]&format=[json/xml]`
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 Parameters should be populated in the body in the following structure:
 
@@ -104,7 +104,7 @@ Parameters should be populated in the body in the following structure:
 
 **Example:**
 
-- http://10.21.1.69:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+- `http://10.21.1.69:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
   In the body request put:
 ```

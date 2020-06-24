@@ -12,7 +12,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 
 ##  Put Data Into LU Table
 
-http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 | **Component** | **Description**                               | **Mandatory** | **Example**      | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | ---------------- | -------------- |
@@ -28,7 +28,7 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER/1/INVOICE?token=ABC
+- `http://localhost:3213/api/v1.0/lu/CUSTOMER/1/INVOICE?token=ABC`
 
   Update data on CUSTOMER LU instance id 1, CUSTOMER table
 
@@ -39,11 +39,11 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 	"where":"CUSTOMER=1 or ADDRESS='Betsey'"
 }                    
 ```
- 
+
 
 ##  Put Data Into Common Table
 
-http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token name&[format=json/xml]
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 | **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
 | ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
@@ -57,7 +57,7 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/COMMON?CITIES&token=ABC
+- `http://localhost:3213/api/v1.0/COMMON?CITIES&token=ABC`
 
   Update data in common ADDRESSES table
   
@@ -68,12 +68,12 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
 	"row" : {"ADDRESS_NAME":"YOQNEAM"} ,
 	"where":"ADDRESS_ID=3"
 }
-```    
+```
 
 
 ##  Put Custom Web Service 
 
-http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{&lt;Customized Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 Parameters should be populated on the body in the following structure:
 ```
@@ -82,7 +82,7 @@ Parameters should be populated on the body in the following structure:
 “parameter name 2”:”value”
 }
 ```
- 
+
 
 | **Component**               | **Description**                        | **Mandatory** | **Example**   | **Default**    |
 | --------------------------- | -------------------------------------- | ------------- | ------------- | -------------- |
@@ -103,16 +103,18 @@ Parameters should be populated on the body in the following structure:
 
 **Example:**
 
-http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+- `http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
-In the body request put:
-```
-{
- "i_order_id": "1",
- "i_order_status": "Open"
-}
-```
-Call Web Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
+  In the body request put:
+
+  ```
+  {
+   "i_order_id": "1",
+   "i_order_status": "Open"
+  }
+  ```
+
+  Call Web Service Orders and bring output structure in Json format according to input parameters i_order_id = 1 and i_order_status=Open
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/13_Supported_Verbs_Post.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 

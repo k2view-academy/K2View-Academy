@@ -13,7 +13,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Data
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/iid/[[TABLE_NAME]?fields=VALUE1,VALUE2&where=WHERE STATEMENT]] query=QUERY STATMENT]&token=[TOKEN NAME]&[format=json/xml]&SET={mode,value}`
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/[[TABLE_NAME]?fields=VALUE1,VALUE2&amp;where=WHERE STATEMENT]] query=QUERY STATMENT]&amp;token=[TOKEN NAME]&amp;[format=json/xml]&amp;SET={mode,value}</code></p>
 
 
  <table width="900pxl">
@@ -317,34 +317,34 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 **Examples:**
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
+- `http://localhost:3213/api/v1.0/lu/CUSTOMER/1?token=ABC`
 
   Bring all data for CUSTOMER LU Instance ID 1
 
   Response Body: response body supports streaming solution
 
 
-- http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC
+- `http://localhost:3213/api/v1.0/lu/CUSOMTER/1/ALLERGIES?token=ABC`
 
   Bring data for CUSTOMER LU Instance ID 1, table ALLERGIES  
 
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC
+- `http://localhost:3213/api/v1.0/lu/CUSTOMER/1/PAYMENT?fields=PAYMENT_ID,PAYMENT_DATE&where=PAYMENT_STATUS!=’CLOSED’&token=ABC`
 
   Bring data for CUSTOMER LU Instance ID 1, table PAYMENT, fields PAYMENT_ID, PAYMENT_DATE where payments are not closed.
 
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A, ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND    B.ADDRESS_TYPE=’P’&token=ABC
+- `http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A, ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND  B.ADDRESS_TYPE=’P’&token=ABC`
   
   Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private.
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10
+- `http://localhost:3213/api/v1.0/lu/CUSTOMER/1?query=SELECT FIRST_NAME FROM ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID AND B.ADDRESS_TYPE=’P’&token=ABC&set=sync,force&SET=ENVIRONMENT,ENV1&set=GLOBAL_LION,10`
   
   Bring data for CUSTOMER LU Instance ID 1, table ADDRESS_DATA field FIRST_NAME where name type is private. Make sure sync mode is force and  run it on ENV1 and set GLOBAL_LION to 10
 
 # Get LU Schema (Metadata)
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]?token=[TONEM NAME]&[format=json/xml/yaml]`
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;?token=&lt;TONEN NAME&gt;&amp;[format=json/xml/yaml]</code></p>
 
 <table width="900pxl">
 <tbody>
@@ -495,7 +495,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 **Examples:**
 
-- http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
+- `http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC`
 
   Bring metadata for CUSTOMER LU
 
@@ -637,13 +637,13 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/COMMON?token=ABC
+- `http://localhost:3213/api/v1.0/COMMON?token=ABC`
 
   Bring metadata for all COMMON tables
 
 # Get Common Table
 
-<pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=[list of fields separated by comma]&where=[WHERE STATEMENT]&token=[TOKEN NAME]&[format=json/xml] </code></pre>
+<p><code>[http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of fields separated by comma&amp;where=WHERE STATEMENT]&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -809,17 +809,17 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
  **Examples:**
 
-- http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC
+- `http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC`
 
   Bring all data from CITIES common table
 
-- [http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC
+- `[http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC`
 
   Bring city_name from ADDRESSES common table where city is ’TEL AVIV’
 
 # Get Based On Graphit File
 
-`http://[Domain Name]:[PORT]/api/[VERSION_NO]/[graphit file name]/ PARAM1VALUE1/PARAM2 VALUE2?token=[TOKEN NAME]&[format=json/xml/yaml]`
+<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;graphit file name&gt;/ PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml/yaml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -972,7 +972,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 **Example**
 
-- [http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC
+- `http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC`
 
   Run the Web Service according to the customer_query.1.3 graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input json structure be defined on the Graphit file.
 
@@ -980,7 +980,7 @@ Should call graphit: customer_query.1.3.graphit
 
 # Get Custom Web Service
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=[TOKEN NAME]&[format=json/xml]`
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -1118,7 +1118,7 @@ Should call graphit: customer_query.1.3.graphit
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
+- `http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
   Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
 

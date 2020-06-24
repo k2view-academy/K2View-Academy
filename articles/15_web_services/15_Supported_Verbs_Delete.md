@@ -14,7 +14,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 ## DELETE LUI
 
-http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=json/xml]
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;LU Name&gt;/&lt;iid&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</p></code>
 
 | **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
@@ -29,7 +29,7 @@ http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=jso
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC
+- `http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC`
 
   Delete LUI 1 from PATIENT LU
 
@@ -43,7 +43,7 @@ http://IP address:PORT/api/[VERSION_NO]/LU Name/iid&token=token name&[format=jso
 
 ## DELETE Data From LU Table
 
-http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token name&[format=json/xml]
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 | **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
@@ -60,7 +60,7 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’&token=ABC
+- `http://localhost:3213/api/v1.0/lu/PATIENT/1/INVOICE?WHERE=CUSTOMER=1 or NAME=’LION’&token=ABC`
 
   Delete data from PATIENT LU instance id 1, INVOICE table by where clause
 
@@ -72,7 +72,7 @@ http://IP address:PORT/api/[VERSION_NO]/lu/LU Name/iid/TABLE_NAME&token=token na
 
 ##  Delete Data From Common Table
 
-http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1&token=token name&[format=json/xml]
+<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;?&lt;WHERE CLAUSE&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</p></code>
 
 | **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
 | ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
@@ -87,16 +87,16 @@ http://IP address:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME?where city_id=1
 
 **Example:**
 
-- http://localhost:3213/api/v1.0/COMMON?CITIES&WHERE CITY_ID=1&token=ABC
+- `http://localhost:3213/api/v1.0/COMMON?CITIES&WHERE CITY_ID=1&token=ABC`
 
-  delete data from CITIES common table where city_id = 1
+  Delete data from CITIES common table where city_id = 1
 
   Request Body: null
 
   Response Body: null
 
   Response code: 200 if delete ended successfully
- 
+
 
 ## Delete Custom Web Service 
 
