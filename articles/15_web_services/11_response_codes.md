@@ -16,7 +16,7 @@ The 1xx Informational status code indicates an interim response for communicatin
 *	Since HTTP/1.0 has not define any 1xx status codes, a server MUST NOT send a 1xx response to an HTTP/1.0 client.
 *	A client MUST be able to parse one or more 1xx responses received prior to a final response, even if the client does not expect one. 
 *	A user agent MAY ignore unexpected 1xx responses. 
-*	A proxy MUST forward 1xx responses unless the proxy itself requested the generation of the 1xx response. For example, if a proxy adds an **Expect: 100-continue** field when it forwards a request, it need not forward the corresponding 100 (Continue) response(s). – **NOT IN USE IN FABRIC.**
+*	A proxy MUST forward 1xx responses unless the proxy itself requested the generation of the 1xx response. For example, if a proxy adds an **Expect: 100-continue** field when it forwards a request, it need not forward the corresponding **100 Continue** response(s). – **NOT IN USE IN FABRIC.**
 
 **3xx: Redirection**
 
@@ -39,7 +39,7 @@ The 4xx Client Error status code indicates that the client seems to have erred. 
 The server failed to fulfill an apparently valid request. 
 
 The 5xx Server Error status code indicates that the server is aware that it has erred or is incapable of performing the requested method. 
-*	Apart for when responding to a HEAD request, the server SHOULD send a representation with an explanation about the error and whether it is a temporary or permanent condition. 
+*	Except for when responding to a HEAD request, the server SHOULD send a representation with an explanation about the error and whether it is a temporary or permanent condition. 
 *	A user agent SHOULD display any included notifications to the user. 
 *	These response codes apply to any request method.
 
