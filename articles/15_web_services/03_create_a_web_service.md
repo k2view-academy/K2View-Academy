@@ -45,7 +45,7 @@ The following steps discuss how a new Web Service is created and include options
     <p>Replace the <strong>&lt;instanceID&gt; placeholder</strong> with the input parameter <strong>CUSTOMER_ID</strong>.</p>
     <p>Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);</p>
 
-9. Set the [**Web Service Properties**](/articles/15_web_services/02_web_services_properties.md) in the upper right corner pane:
+9. Set the [**Web Service Properties**](/articles/15_web_services/02_web_services_properties.md) in the upper right corner pane.
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/04_web_services_function_basic_structure.md)
 
