@@ -819,7 +819,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Based On Graphit File
 
-<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;graphit file name&gt;/ PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml/yaml]</code></p>
+<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;Graphit file name&gt;/ PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml/yaml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -974,9 +974,9 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 - `http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC`
 
-  Run the Web Service according to the customer_query.1.3 graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input json structure be defined on the Graphit file.
+  Run the Web Service according to the customer_query.1.3 Graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input JSON structure be defined on the Graphit file.
 
-Should call graphit: customer_query.1.3.graphit
+Should call Graphit: customer_query.1.3.graphit file.
 
 # Get Custom Web Service
 
@@ -1120,7 +1120,7 @@ Should call graphit: customer_query.1.3.graphit
 
 - `http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
-  Call Web-Service Orders and bring output structure in json format according to input parameters i_order_id = 1 and i_order_status=Open
+  Call Web-Service Orders and bring output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
 
 # Request Header
 
