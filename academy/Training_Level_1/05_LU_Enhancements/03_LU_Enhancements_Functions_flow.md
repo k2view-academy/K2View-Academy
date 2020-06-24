@@ -256,7 +256,8 @@ Let's focus for now on the CustomerLU in the course's project.
     -  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean 
     variable - *syncind* set to TRUE
 
-    - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value using
+    - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value 
+    using
     a "select count *" statement in the query builder
 
   
