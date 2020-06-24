@@ -20,16 +20,16 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
  <table width="900pxl">
 <tbody>
 <tr>
-<td width="100pxl" valign="top">
+<td width="150pxl" valign="top">
 <p><strong>Component</strong></p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p><strong>Description</strong></p>
 </td>
 <td width="100pxl" valign="top" >
 <p><strong>Mandatory</strong></p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p><strong>Example</strong></p>
 </td>
 <td width="200pxl" valign="top" >
@@ -37,31 +37,31 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Domain name</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Domain name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>localhost</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>PORT</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>PORT</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>3213</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
@@ -415,79 +415,79 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>VERSION_NO</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Version number</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>V1.4</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>Latest version</p>
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Lu</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>lu</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>lu</p>
 </td>
-<td width="100pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>LU Name</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Logical unit name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>CUSTOMER</p>
 </td>
-<td width="100pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Token</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Token name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="100pxl" valign="top" >&nbsp;</td>
-<td width="100pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Format</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Response format</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>JSON/XML/YAML</p>
 </td>
-<td width="100pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>JSON</p>
 </td>
 </tr>
@@ -808,7 +808,6 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
  **Examples:**
 
@@ -908,26 +907,26 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td valign="top" width="200pxl">
+<td valign="top" width="150pxl">
 <p>Token</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="250pxl">
 <p>Token name</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
 <td valign="top" width="200pxl">&nbsp;</td>
 <td valign="top" width="200pxl">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" width="200pxl">
+<td valign="top" width="150pxl">
 <p>Format</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="250pxl">
 <p>Response format</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
 <td valign="top" width="200pxl">
@@ -938,13 +937,13 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td valign="top" width="200pxl">
+<td valign="top" width="150pxl">
 <p>Graphit file name</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="250pxl">
 <p>Name of graphit file</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
 <td valign="top" width="200pxl">
@@ -953,13 +952,13 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <td valign="top" width="200pxl">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" width="200pxl">
+<td valign="top" width="150pxl">
 <p>PARAM1&hellip;N</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="250pxl">
 <p>Input parameter 1..N name and value to the graphit file</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="100pxl">
 <p>N</p>
 </td>
 <td valign="top" width="200pxl">
@@ -973,18 +972,6 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </table>
 <p>&nbsp;</p>
 
-
-| Component         | Description                                              | Mandatory | Example                                                      | Default                                                      |
-| ----------------- | -------------------------------------------------------- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| Domain name       | Domain name                                              | Y         | localhost                                                    |                                                              |
-| PORT              | PORT                                                     | Y         | 3213                                                         |                                                              |
-| Api               | API                                                      | Y         | api                                                          |                                                              |
-| VERSION_NO        | Version number                                           | N         | V1.4                                                         | 1.0                                                          |
-| Token             | Token name                                               | Y         |                                                              |                                                              |
-| Format            | Response format                                          | Y         | JSON/XML/YAML                                                | JSON                                                         |
-| Graphit file name | Name of graphit file                                     | Y         | file name should include the version  number customer_query.1.4.graphit |                                                              |
-| PARAM1…N          | Input parameter 1..N name and value to  the graphit file | N         | iid=1&name=moshe                                             | Supported only on post verb, should be  part of request body {parameter name:parameter value} |
-
 **Example**
 
 - [http://localhost:3213/api/v1.3/graphit/customer_query/1?token=ABC
@@ -995,7 +982,7 @@ Should call graphit: customer_query.1.3.graphit
 
 # Get Custom Web Service
 
-http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=token name&[format=json/xml]
+<pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=[TOKEN NAME]&[format=json/xml]</code></pre>
 
 | Component                   | Description                            | Mandatory | Example                                                      | Default        |
 | --------------------------- | -------------------------------------- | --------- | ------------------------------------------------------------ | -------------- |
