@@ -43,11 +43,11 @@ Notes:
 - The deployment of all Web Services creates one k2_ws instance of all methods and deletes previous k2_ws instances in the k2_lut_info table.
 
 
-**Note**: if a deployed Web Service is deleted from the implementation, redeploy all Web Services to delete the previous deployment of the deleted Web Service.
+**Notes**: 
+- If a deployed Web Service is deleted from the implementation, redeploy all Web Services to delete the previous deployment of the deleted Web Service.
+- The 'list ws' command returns the list of deployed Web Services and the deployed version and date and time.
 
-The 'list ws' command returns the list of deployed Web Services and the deployed version and date and time.
-
-## Example 
+## Examples 
 
 ### Deploy all Web Services  
 
