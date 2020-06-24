@@ -497,9 +497,9 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 **Examples:**
 
-http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
+- http://localhost:3213/api/v1.0/lu/CUSTOMER?token=ABC
 
-Bring metadata for CUSTOMER LU
+  Bring metadata for CUSTOMER LU
 
 # Get Common Schema (Metadata)
 
@@ -511,16 +511,16 @@ Bring metadata for CUSTOMER LU
 <td width="150pxl" valign="top">
 <p><strong>Component</strong></p>
 </td>
-<td width="150pxl" valign="top">
+<td width="250pxl" valign="top">
 <p><strong>Description</strong></p>
 </td>
-<td width="150pxl" valign="top">
+<td width="100pxl" valign="top">
 <p><strong>Mandatory</strong></p>
 </td>
-<td width="150pxl" valign="top">
+<td width="200pxl" valign="top">
 <p><strong>Example</strong></p>
 </td>
-<td width="150pxl" valign="top">
+<td width="200pxl" valign="top">
 <p><strong>Default</strong></p>
 </td>
 </tr>
@@ -530,16 +530,16 @@ Bring metadata for CUSTOMER LU
 <td width="150pxl" valign="top">
 <p>Domain name</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="250pxl" valign="top">
 <p>Domain name</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="100pxl" valign="top">
 <p>Y</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="200pxl" valign="top">
 <p>localhost</p>
 </td>
-<td width="150pxl" valign="top">&nbsp;</td>
+<td width="200pxl" valign="top">&nbsp;</td>
 </tr>
 <tr>
 <td width="150pxl" valign="top">
@@ -639,35 +639,186 @@ Bring metadata for CUSTOMER LU
 
 **Example:**
 
-http://localhost:3213/api/v1.0/COMMON?token=ABC
+- http://localhost:3213/api/v1.0/COMMON?token=ABC
 
-Bring metadata for all COMMON tables
+  Bring metadata for all COMMON tables
 
 # Get Common Table
 
-http://localhost:PORT/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of fields separated by comma&where=WHERE STATEMENT&token=token name&[format=json/xml]
+<pre><code>http://[IP Address]:[PORT]/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=[list of fields separated by comma]&where=[WHERE STATEMENT]&token=[token name]&[format=json/xml] </code></pre>
 
-| Component         | Description                             | Mandatory | Example                 | Default                                                      |
-| ----------------- | --------------------------------------- | --------- | ----------------------- | ------------------------------------------------------------ |
-| Domain name       | Domain name                             | Y         | localhost               |                                                              |
-| PORT              | PORT                                    | Y         | 3213                    |                                                              |
-| Api               | API                                     | Y         | api                     |                                                              |
-| COMMON            | Specify that scope is common            | Y         | COMMON                  |                                                              |
-| COMMON TABLE NAME | Common table name                       | N         | ADDRESSES               |                                                              |
-| where             | Where statement for the common table    | N         | WHERE={CITY=’TEL AVIV’} | Can be populated in case of COMMON TABLE  NAME was populated |
-| fields            | List of fields to be returned as output | N         | fields=CITY,ADDRESS     |                                                              |
-| Token             | Token name                              | Y         |                         |                                                              |
-| Format            | Response format                         | Y         | JSON/XML/YAML           | JSON                                                         |
+<table width="900pxl">
+<thead>
+<tr>
+<td valign="top" width="150pxl">
+<p><strong>Component</strong></p>
+</td>
+<td valign="top" width="250pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="100pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td valign="top" width="200pxl">
+<p><strong>Example</strong></p>
+</td>
+<td valign="top" width="200pxl">
+<p><strong>Default</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" width="150pxl">
+<p>Domain name</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Domain name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>localhost</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>PORT</p>
+</td>
+<td valign="top" width="250pxl">
+<p>PORT</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>3213</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>Api</p>
+</td>
+<td valign="top" width="250pxl">
+<p>API</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>api</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>COMMON</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Specify that scope is common</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>COMMON</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>COMMON TABLE NAME</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Common table name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>ADDRESSES</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>where</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Where statement for the common table</p>
+</td>
+<td valign="top" width="100pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>WHERE={CITY=&rsquo;TEL AVIV&rsquo;}</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Can be populated in case of COMMON TABLE NAME was populated</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>fields</p>
+</td>
+<td valign="top" width="250pxl">
+<p>List of fields to be returned as output</p>
+</td>
+<td valign="top" width="100pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>fields=CITY,ADDRESS</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>Token</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Token name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl">
+<p>Format</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Response format</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>JSON/XML/YAML</p>
+</td>
+<td valign="top" width="200pxl">
+<p>JSON</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
  **Examples:**
 
-http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC
+- http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC
 
-Bring all data from CITIES common table
+  Bring all data from CITIES common table
 
-[http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC
+- [http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC
 
-Bring city_name from ADDRESSES common table where city is ’TEL AVIV’
+  Bring city_name from ADDRESSES common table where city is ’TEL AVIV’
 
 # Get Based On Graphit File
 
