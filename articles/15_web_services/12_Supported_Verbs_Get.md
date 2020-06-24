@@ -984,15 +984,139 @@ Should call graphit: customer_query.1.3.graphit
 
 <pre><code>http://[Domain name]:[PORT]/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE/PARAM2 VALUE?token=[TOKEN NAME]&[format=json/xml]</code></pre>
 
-| Component                   | Description                            | Mandatory | Example                                                      | Default        |
-| --------------------------- | -------------------------------------- | --------- | ------------------------------------------------------------ | -------------- |
-| Domain name                 | Domain name                            | Y         | localhost                                                    |                |
-| PORT                        | PORT                                   | Y         | 3213                                                         |                |
-| Api                         | API                                    | Y         | api                                                          |                |
-| VERSION_NO                  | Version number                         | N         | V1.4                                                         | Latest version |
-| Customized Web-Service name | Name of the Web Service to be executed | Y         | Orders                                                       |                |
-| PARAM1…N                    | Web Service input parameters           | N         | /1/3  Assuming two parameters as input  i_order_id and order_status it will pass 1 to i_order_id and 3 to  i_order_status |                |
-| Format                      | Response format                        | Y         | JSON/XML/YAML                                                | JSON           |
+<table width="900pxl">
+<thead>
+<tr>
+<td valign="top" width="150pxl">
+<p><strong>Component</strong></p>
+</td>
+<td valign="top" width="200pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="100pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+<td valign="top" width="150pxl">
+<p><strong>Default</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>Domain name</p>
+</td>
+<td>
+<p>Domain name</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>localhost</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>PORT</p>
+</td>
+<td>
+<p>PORT</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>3213</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>Api</p>
+</td>
+<td>
+<p>API</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>api</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>VERSION_NO</p>
+</td>
+<td>
+<p>Version number</p>
+</td>
+<td>
+<p>N</p>
+</td>
+<td>
+<p>V1.4</p>
+</td>
+<td>
+<p>Latest version</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Customized Web-Service name</p>
+</td>
+<td>
+<p>Name of the Web Service to be executed</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>Orders</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>PARAM1&hellip;N</p>
+</td>
+<td>
+<p>Web Service input parameters</p>
+</td>
+<td>
+<p>N</p>
+</td>
+<td>
+<p>/1/3 Assuming two parameters as input i_order_id and order_status it will pass 1 to i_order_id and 3 to i_order_status</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>Format</p>
+</td>
+<td>
+<p>Response format</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>JSON/XML/YAML</p>
+</td>
+<td>
+<p>JSON</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 
 **Example:**
 
@@ -1002,13 +1126,58 @@ Should call graphit: customer_query.1.3.graphit
 
 # Request Header
 
-| Parameter                 | Mandatory | Value                                                       |
-| ------------------------- | --------- | ----------------------------------------------------------- |
-| Token                     | Y         | Token name                                                  |
-| Accept                    | Y         | Json/XML/RAW/YAML/CSV                                       |
-| Any additional parameters | N         | Parameter=value&     Can be provided on both URL and header |
+<table width="900pxl">
+<thead>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Parameter</strong></p>
+</td>
+<td valign="top" width="100pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td valign="top" width="500pxl">
+<p><strong>Value</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>Token</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>Token name</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Accept</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>Json/XML/RAW/YAML/CSV</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Any additional parameters</p>
+</td>
+<td>
+<p>N</p>
+</td>
+<td>
+<p>Parameter=value&amp; Can be provided on both URL and header</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
 
- 
 
 # Response Body In Failure
 
