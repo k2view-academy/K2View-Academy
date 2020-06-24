@@ -51,7 +51,8 @@ Let's focus for now on the CustomerLU in the course's project.
 
     Question 1. Explore the sources
 
-    Using the Query builder for CRM_DB  (and the appropriate SQL (SELECT ... WHERE) statement) let's retrieve 3 entities IDs for 3 specific customers.
+    Using the Query builder for CRM_DB  (and the appropriate SQL (SELECT ... WHERE) statement) let's retrieve 3 entities IDs for 3 
+    specific customers.
     Retrieve the Customer IDs of the following entities:
     - Luci Mcmahon
     - Larry Collier
@@ -68,32 +69,37 @@ Let's focus for now on the CustomerLU in the course's project.
          b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
                +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
 
-         c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the following IDs contract_ID (2787 & 2788) to validate the code. 
+         c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the 
+         following IDs contract_ID (2787 & 2788) to validate the code. 
               - tips:
                    - use dbRows to loop in the table
                    - use regular expressions to match the correct fields
                    - operate LUDB execute function
 
-         d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify the code accordingly.
+         d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
+         the code accordingly.
 
 
 
     Question 3. Case Notes Clean-up
 
     The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
-    Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the network. The case notes reflect issues of cases that are still opened.
+    Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the 
+    network. The case notes reflect issues of cases that are still opened.
 
         a. Let's first list the contracts owned by Tamar in the data viewer.
                - How many contracts does she own ?
 
            Lets look at the different notes in the Case_Note table of Tamar's LUI
-               - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description (in the cases table)
+               - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description 
+               (in the cases table)
                - How many cases are still opened ?
 
         b. Write a java function that operates the following data transformations:
 
            - All case notes belonging to cases of the type "Billing issues" should be changed to "insolvent customer due to alien assimilation"
-           - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and is no longer network compatible"
+           - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and 
+           is no longer network compatible"
            - All open cases should be set to Status="closed"
 
   
@@ -242,13 +248,16 @@ Let's focus for now on the CustomerLU in the course's project.
 #### Exercise - Decision functions
 
 
-    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change happens on the external source.
+    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change happens 
+    on the external source.
 
     Building on top of previous exercise, build a decision function based on the following criteria:
 
-    -  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean variable - *syncind* set to TRUE
+    -  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean 
+    variable - *syncind* set to TRUE
 
-    - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value using a "select count *" statement in the query builder
+    - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value using
+    a "select count *" statement in the query builder
 
   
 
