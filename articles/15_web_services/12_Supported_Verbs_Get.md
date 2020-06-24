@@ -1018,7 +1018,7 @@ Should call graphit: customer_query.1.3.graphit
 <td valign="top" width="300pxl">
 <p>localhost</p>
 </td>
-<td>&nbsp;</td>
+<td valign="top" width="150pxl">&nbsp;</td>
 </tr>
 <tr>
 <td valign="top" width="150pxl">
@@ -1092,7 +1092,7 @@ Should call graphit: customer_query.1.3.graphit
 <td>
 <p>N</p>
 </td>
-<td>
+<td valign="top" width="300pxl">
 <p>/1/3 Assuming two parameters as input i_order_id and order_status it will pass 1 to i_order_id and 3 to i_order_status</p>
 </td>
 <td>&nbsp;</td>
@@ -1135,7 +1135,7 @@ Should call graphit: customer_query.1.3.graphit
 <td valign="top" width="100pxl">
 <p><strong>Mandatory</strong></p>
 </td>
-<td valign="top" width="600pxl">
+<td valign="top" width="500pxl">
 <p><strong>Value</strong></p>
 </td>
 </tr>
