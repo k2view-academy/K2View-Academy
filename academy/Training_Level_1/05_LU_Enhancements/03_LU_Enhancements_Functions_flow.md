@@ -248,7 +248,8 @@ Let's focus for now on the CustomerLU in the course's project.
 #### Exercise - Decision functions
 
 
-    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change happens 
+    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change 
+    happens 
     on the external source.
 
     Building on top of previous exercise, build a decision function based on the following criteria:
