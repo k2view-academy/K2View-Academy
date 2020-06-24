@@ -67,14 +67,14 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
 	"row" : {"ADDRESS_NAME":"YOQNEAM"} ,
 	"where":"ADDRESS_ID=3"
 }
-  ```
- 
+    
+
 
 ##  Put Custom Web Service 
 
 http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
 
-parameters should be populated on the body in the following structure:
+Parameters should be populated on the body in the following structure:
 ```
 {
 “parameter name 1”:”value”,
@@ -100,7 +100,7 @@ parameters should be populated on the body in the following structure:
 | Accept                    | Y             | Json/XML/RAW/YAML/CSV                                       |
 | Any additional parameters | N             | Parameter=value&     Can be provided on both URL and header |
 
-**Examples:**
+**Example:**
 
 http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json
 
