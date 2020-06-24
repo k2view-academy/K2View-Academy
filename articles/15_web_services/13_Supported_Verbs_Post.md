@@ -15,7 +15,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 ## Post Data Into LU Table
 
-http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=json/xml
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/lu/[LU Name]/[iid]/token=[TOKEN NAME]&format=[json/xml]`
 
 | Component   | Description                                    | Mandatory | Example          | Default        |
 | ----------- | ---------------------------------------------- | --------- | ---------------- | -------------- |
@@ -28,9 +28,7 @@ http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=
 | token       | Token name                                     | Y         |                  |                |
 | format      | Response format                                | Y         | JSON/XML/YAML    | JSON           |
 
- 
-
-**Example:**
+ **Example:**
 
 - http://10.21.1.69:3213/api/v1.0/lu/CUSTOMER/1?token=ABC
 
@@ -41,11 +39,11 @@ http://Domain name:PORT/api/[VERSION_NO]/lu/LU Name/iid/token=token name&format=
   ```                     
   {"rows" : {"LION" : [{"ID":11, "NAME":"lion11"},{"ID":12, "NAME":"lion12"},{"ID":13, "NAME":"lion13"}]}}
   ```
- 
+
 
 ##  Post Data Into Common Table
 
-http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token name&[format=json/xml]
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[common table name]?token=[TOKEN NAME]&format=[json/xml]`
 
 | **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
 | ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
@@ -76,9 +74,10 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token 
 ```
 ##  Post Custom Web Service 
 
-- http://Domain name:PORT/api/[VERSION_NO]/{customized Web-Service name?token=token name&[format=json/xml]
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/[customized Web-Service name]?token=[TOKEN NAME]&format=[json/xml]`
 
-  Parameters should be populated in the body in the following structure:
+Parameters should be populated in the body in the following structure:
+
 ```
 {
 “parameter name 1”:”value”,
@@ -113,7 +112,8 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/[common table name]?token=token 
  "i_order_status": "Open"
 }
 ```
- Call Web Service Orders and bring output structure in json format according to input parameters **i_order_id=1** and **i_order_status=Open**.
+- Call Web Service Orders and bring output structure in json format according to input parameters **i_order_id=1** and **i_order_status=Open**.
+
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/12_Supported_Verbs_Get.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/14_Supported_Verbs_Put.md)
 
