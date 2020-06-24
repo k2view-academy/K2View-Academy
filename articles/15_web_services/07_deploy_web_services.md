@@ -7,7 +7,7 @@ Web services can be deployed to the K2view Fabric server either using the Fabric
 1. In the **Project Tree** pane, right click either **Web Services**, **Selected Web Services** or **Categories of the Web Services** to open the **Context** menu.
 2. Click **Deploy to Server** to display the K2View Fabric Servers list.
 3. Define that the deployed **Fabric server** opens the following **deployment** options: 
-    
+   
     a. Deploy all Web Services.
     
     b. Deploy select list of categories.
@@ -15,7 +15,7 @@ Web services can be deployed to the K2view Fabric server either using the Fabric
     c. Deploy selected list of Web Services, whereby all Web Services related to the selected categories are deployed.
     
     d. Deploy standalone Web Service.
-     
+    
 
 [Click for more information about Deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
@@ -34,7 +34,7 @@ Notes:
 
 ### Deployed Web Service and the Fabric K2SYSTEM Keyspace  
 
-- Each deployment of a Web Service creates a new record in k2_lut_info (k2system keyspace). 
+- Each deployment of a Web Service creates a new record in [k2_lut_info](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) (k2system keyspace). 
 
 - Each record maps the deployed Web Service and has its own version.
 
@@ -51,26 +51,28 @@ Notes:
 
 ### Deploy all Web Services  
 
-select lut_name, lut_version, properties from k2system_kb_fabric_project.k2_lut_info where lut_name = 'k2_ws’; 
+select lut_name, lut_version, properties from k2system.k2_lut_info where lut_name = 'k2_ws’; 
 
-lut_name | lut_version  | properties
-
-----------+---------------+-------------------------------------
-
-k2_ws | 1591772670495 | {'methods': ''}
+| lut_name | lut_version   | properties      |
+| -------- | ------------- | --------------- |
+| k2_ws    | 1591772670495 | {'methods': ''} |
 
 ### Deploy 'wsCustomerInfo’ and ‘wsCustomerInfo2’ Web Services 
 
-|lut_name|lut_version  |properties               |
-+--------+-------------+-------------------------+
-|k2_ws   |1591772947986|{methods=wsCustomerInfo2}|
-|k2_ws   |1591772937531|{methods=wsCustomerInfo}  |
-|k2_ws   |1591772670495|{methods=}                                |
+| lut_name | lut_version   | properties                |
+| -------- | ------------- | ------------------------- |
+| k2_ws    | 1591772947986 | {methods=wsCustomerInfo2} |
+| k2_ws    | 1591772937531 | {methods=wsCustomerInfo}  |
+| k2_ws    | 1591772670495 | {'methods': ''}           |
+
+
 
 ### Deploy All Web Services Again 
 
-|lut_name|lut_version  |properties|
-+--------+-------------+----------+
-|k2_ws   |1591773207364|{methods=}|
+| lut_name | lut_version   | properties      |
+| -------- | ------------- | --------------- |
+| k2_ws    | 1591773207364 | {'methods': ''} |
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/06_web_services_code_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/08_web_services_input_parameters.md)
