@@ -112,7 +112,8 @@ Let's focus for now on the CustomerLU in the course's project.
           Larry -> 1125
           Tamar -> 1472
 
-
+                                        
+                                        
 
     Question 2. Standardization
            a. 4
