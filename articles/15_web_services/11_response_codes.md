@@ -61,7 +61,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>200</p>
+<p><h4>200</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>OK</p>
@@ -81,7 +81,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>201</p>
+<p><h4>201</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Created</p>
@@ -97,7 +97,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>301</p>
+<p><h4>301</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Moved Permanently</p>
@@ -161,7 +161,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>404</p>
+<p><h4>404</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Not Found</p>
@@ -177,7 +177,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>405</p>
+<p><h4>405</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Method Not Allowed</p>
@@ -192,7 +192,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p>406</p>
+<p><h4>406</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Not Acceptable</p>
