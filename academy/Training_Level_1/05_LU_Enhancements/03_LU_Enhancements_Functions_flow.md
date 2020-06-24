@@ -72,9 +72,9 @@ Let's focus for now on the CustomerLU in the course's project.
          c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the 
          following IDs contract_ID (2787 & 2788) to validate the code. 
               - tips:
-                   - use dbRows to loop in the table
-                   - use regular expressions to match the correct fields
-                   - operate LUDB execute function
+                   - use the ludb class to fetch data from the LU database  
+                   - use regular expressions to identify the fields that need to be modified
+                   - use LUDB execute function to update data 
 
          d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
          the code accordingly.
