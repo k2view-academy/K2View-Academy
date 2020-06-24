@@ -112,10 +112,12 @@ Let's focus for now on the CustomerLU in the course's project.
           Larry -> 1125
           Tamar -> 1472
 
+    
+    
     Question 2. Standardization
-          a. 4
-          b. 1 & 2
-          c. Code: update all the phone numbers fields missing international code 	
+           a. 4
+           b. 1 & 2
+           c. Code: update all the phone numbers fields missing international code 	
 
    ```java
    
@@ -154,6 +156,7 @@ Let's focus for now on the CustomerLU in the course's project.
 
 
 
+   
     Question 3. Case Notes Clean-up
 
         a. none
@@ -215,6 +218,7 @@ Let's focus for now on the CustomerLU in the course's project.
    ```
 
 
+   
     Question 4. 
         Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
 
