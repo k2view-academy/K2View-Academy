@@ -1,7 +1,7 @@
 # Rest API Additions
 
 ## Supported K2view Web Services URL Structure
-http://IP address:PORT/api/[VERSION_NO]/[web-service name]?token=ABC&format=json
+<p><code>http://&lt;IP address&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;web-service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</p></code>
 
 URL parameters, including the token and format, are supported in both the URL and header request.
 
