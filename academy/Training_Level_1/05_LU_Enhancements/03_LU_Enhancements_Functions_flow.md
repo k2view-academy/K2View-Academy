@@ -28,7 +28,7 @@ First of all let's understand the different types of project functions that can 
 ### Root functions
 
 - [Creating a root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
-- [Examples of root functions and code example](/articles/07_table_population/11_2_root_functions_code_examples)
+- [Examples of root functions and code example](/articles/07_table_population/11_2_root_functions_code_examples.md)
 
 
 
