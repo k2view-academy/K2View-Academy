@@ -1006,22 +1006,22 @@ Should call graphit: customer_query.1.3.graphit
 </thead>
 <tbody>
 <tr>
-<td>
+<td valign="top" width="150pxl">
 <p>Domain name</p>
 </td>
-<td>
+<td valign="top" width="200pxl">
 <p>Domain name</p>
 </td>
-<td>
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
-<td>
+<td valign="top" width="300pxl">
 <p>localhost</p>
 </td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td>
+<td valign="top" width="150pxl">
 <p>PORT</p>
 </td>
 <td>
@@ -1135,42 +1135,42 @@ Should call graphit: customer_query.1.3.graphit
 <td valign="top" width="100pxl">
 <p><strong>Mandatory</strong></p>
 </td>
-<td valign="top" width="500pxl">
+<td valign="top" width="600pxl">
 <p><strong>Value</strong></p>
 </td>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>
+<td valign="top" width="300pxl">
 <p>Token</p>
 </td>
-<td>
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
-<td>
+<td valign="top" width="500pxl">
 <p>Token name</p>
 </td>
 </tr>
 <tr>
-<td>
+<td valign="top" width="300pxl">
 <p>Accept</p>
 </td>
-<td>
+<td valign="top" width="100pxl">
 <p>Y</p>
 </td>
-<td>
+<td valign="top" width="500pxl">
 <p>Json/XML/RAW/YAML/CSV</p>
 </td>
 </tr>
 <tr>
-<td>
+<td valign="top" width="300pxl">
 <p>Any additional parameters</p>
 </td>
-<td>
+<td valign="top" width="100pxl">
 <p>N</p>
 </td>
-<td>
+<td valign="top" width="500pxl">
 <p>Parameter=value&amp; Can be provided on both URL and header</p>
 </td>
 </tr>
