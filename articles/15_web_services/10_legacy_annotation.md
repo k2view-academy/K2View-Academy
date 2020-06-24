@@ -1,6 +1,6 @@
 # Legacy Annotation
 
-The Full Alignment with RESTFUL Web Services functionality was introduced in Fabric 5.5.  When updating projects to enable backwards compatibility while preserving the existing Web Services response structure, add the @legacy annotation on a category level. 
+The Full Alignment with RESTful Web Services functionality was introduced in Fabric 5.5.  When updating projects to enable backwards compatibility while preserving the existing Web Services response structure, add the @legacy annotation on a category level. 
 Use either Notepad or IntelliJ to edit the annotation. 
 
  * Web Services under a category with an @legacy annotation respond in the older structure. 
