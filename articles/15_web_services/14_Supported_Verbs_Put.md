@@ -63,11 +63,12 @@ http://Domain name:PORT/api/[VERSION_NO]/COMMON/COMMON TABLE NAME&token=token na
   
   Request Body
 
+```
  {
 	"row" : {"ADDRESS_NAME":"YOQNEAM"} ,
 	"where":"ADDRESS_ID=3"
 }
-    
+```    
 
 
 ##  Put Custom Web Service 
