@@ -29,7 +29,7 @@ The following steps discuss how a new Web Service is created and include options
     <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/> 
 
    Note that the Column Name, Data Type, Mandatory and Comments are displayed in the Input Parameters list in the lower right pane.
-    
+   
 
 
 7. Select the **Column/s** to be retrieved or press the **CTRL key** to select multiple columns. Right click and select **Generate Code** to automatically create the **Select Statement** and **Basic Code Structure**. 
@@ -41,11 +41,9 @@ The following steps discuss how a new Web Service is created and include options
 
 8. Once the code is generated, edit the function based on the logic to be applied. For example:
 
-    Db.Rows rows = ludb("Customer", <instanceID>).fetch(sql, <val1>, <val2>, ...);
-
-    Replace the **<instanceID> placeholder** with the input parameter **CUSTOMER_ID**.  
-
-    Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);
+    <p>Db.Rows rows = ludb("Customer", &lt;instanceID&gt;).fetch(sql, &lt;val1&gt;, &lt;val2&gt;, ...);</p>
+    <p>Replace the <strong>&lt;instanceID&gt; placeholder</strong> with the input parameter <strong>CUSTOMER_ID</strong>.</p>
+    <p>Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);</p>
 
 9. Set the [**Web Service Properties**](/articles/15_web_services/02_web_services_properties.md) in the upper right corner pane:
 
