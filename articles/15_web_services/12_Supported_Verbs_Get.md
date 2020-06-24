@@ -67,31 +67,31 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>api</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>API</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>api</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>VERSION_NO</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Version number</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>V1.4</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -99,61 +99,61 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>lu</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Lu</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>lu</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>LU Name</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Logical unit name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>CUSTOMER</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Iid</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Instance ID</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>1</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>TABLE_NAME</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Table name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>PAYMENT</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -161,16 +161,16 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Fields</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Field name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>fields=CUSTOMER_ID, INVOICE_ID</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -178,16 +178,16 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>where</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Where statement for the selected table</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>where=NAME=&rsquo;MOSHE&rsquo; OR ADDRESS=&rsquo;TEL AVIV&rsquo;</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -195,44 +195,44 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>QUERY</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Where statement for cross LU tables on the same LU</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>QUERY=SELECT NAME from ADDRESS_DATA A,ADDRESS_NAME_LINK B WHERE A.ADDRESS_ID =B.ADDRESS_ID</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>token</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Token name</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
 <td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>format</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Response format</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>JSON/XML/YAML</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -240,16 +240,16 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >
+<td width="150pxl" valign="top" >
 <p>Set</p>
 </td>
-<td width="200pxl" valign="top" >
+<td width="250pxl" valign="top" >
 <p>Sync mode</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>SET=sync,off SET=sync,on SET=sync,force</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -257,14 +257,14 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
+<td width="150pxl" valign="top" >&nbsp;Set</td>
+<td width="250pxl" valign="top" >
 <p>Environment</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>SET=ENVIRONMENT,&rsquo;ENV1&rsquo;</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -272,14 +272,14 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
+<td width="150pxl" valign="top" >&nbsp;Set</td>
+<td width="250pxl" valign="top" >
 <p>Sync_timeout</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>SET=SYNC_TIMEOUT,10</p>
 </td>
 <td width="200pxl" valign="top" >
@@ -287,27 +287,27 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
+<td width="150pxl" valign="top" >&nbsp;Set</td>
+<td width="250pxl" valign="top" >
 <p>instance_ttl</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>SET=instance_ttl,10</p>
 </td>
-<td width="100pxl" valign="top" >&nbsp;</td>
+<td width="200pxl" valign="top" >&nbsp;</td>
 </tr>
 <tr>
-<td width="100pxl" valign="top" >&nbsp;Set</td>
-<td width="200pxl" valign="top" >
+<td width="150pxl" valign="top" >&nbsp;Set</td>
+<td width="250pxl" valign="top" >
 <p>Environment variable</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>N</p>
 </td>
-<td width="300pxl" valign="top" >
+<td width="200pxl" valign="top" >
 <p>SET=A,4</p>
 </td>
 <td width="200pxl" valign="top" >&nbsp;</td>
@@ -620,16 +620,16 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <td width="150pxl" valign="top">
 <p>Format</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="250pxl" valign="top">
 <p>Response format</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="100pxl" valign="top">
 <p>Y</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="200pxl" valign="top">
 <p>JSON/XML/YAML</p>
 </td>
-<td width="150pxl" valign="top">
+<td width="200pxl" valign="top">
 <p>JSON</p>
 </td>
 </tr>
@@ -789,10 +789,10 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <td valign="top" width="200pxl">&nbsp;</td>
 </tr>
 <tr>
-<td valign="top" width="200pxl">
+<td valign="top" width="150pxl">
 <p>Format</p>
 </td>
-<td valign="top" width="200pxl">
+<td valign="top" width="250pxl">
 <p>Response format</p>
 </td>
 <td valign="top" width="100pxl">
