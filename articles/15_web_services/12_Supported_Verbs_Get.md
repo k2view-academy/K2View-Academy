@@ -824,6 +824,156 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 <pre><code>http://[Domain Name]:[PORT]/api/[VERSION_NO]/[graphit file name]/ PARAM1VALUE1/PARAM2 VALUE2?token=[TOKEN NAME][&format=json/xml/yaml]</code></pre>
 
+<table width="900pxl">
+<thead>
+<tr>
+<td valign="top" width="150pxl">
+<p><strong>Component</strong></p>
+</td>
+<td valign="top" width="250pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="100pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td valign="top" width="200pxl">
+<p><strong>Example</strong></p>
+</td>
+<td valign="top" width="200pxl">
+<p><strong>Default</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" width="150pxl">
+<p>Domain name</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Domain name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>localhost</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>PORT</p>
+</td>
+<td valign="top" width="250pxl">
+<p>PORT</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>3213</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>Api</p>
+</td>
+<td valign="top" width="250pxl">
+<p>API</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>api</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>VERSION_NO</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Version number</p>
+</td>
+<td valign="top" width="100pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>V1.4</p>
+</td>
+<td valign="top" width="200pxl">
+<p>1.0</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl">
+<p>Token</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Token name</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl">
+<p>Format</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Response format</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>JSON/XML/YAML</p>
+</td>
+<td valign="top" width="200pxl">
+<p>JSON</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl">
+<p>Graphit file name</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Name of graphit file</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="200pxl">
+<p>file name should include the version number customer_query.1.4.graphit</p>
+</td>
+<td valign="top" width="200pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="200pxl">
+<p>PARAM1&hellip;N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Input parameter 1..N name and value to the graphit file</p>
+</td>
+<td valign="top" width="200pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>iid=1&amp;name=moshe</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Supported only on post verb, should be part of request body {parameter name:parameter value}</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+
 | Component         | Description                                              | Mandatory | Example                                                      | Default                                                      |
 | ----------------- | -------------------------------------------------------- | --------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | Domain name       | Domain name                                              | Y         | localhost                                                    |                                                              |
