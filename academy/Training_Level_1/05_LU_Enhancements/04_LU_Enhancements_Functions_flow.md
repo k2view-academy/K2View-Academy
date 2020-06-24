@@ -43,23 +43,15 @@ In order to work directly on LU tables data, once and only once they have been p
 
 
 
-### Decision functions
-
-- [Sync Methods](\articles\14_sync_LU_instance\04_sync_methods.md)
-- [Sync Decision Functions](\articles\14_sync_LU_instance\05_sync_decision_functions.md)
-- [Decision Functions Recommendation](\articles\14_sync_LU_instance\06_sync_decision_functions_recommendations.md)
-
-
-
 ### Exercises - Enrichment functions
 
-As part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
+As we have seen in the [Course User Story](\academy\Training_Level_1\01_Fabric_Introduction\1_3_course_user_story.md), at the start of this training, and as part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
 
-Let's focus for now on the Customer LU in the project. 
-
-Using the data viewer for the CRM table and the appropriate SQL (SELECT ... WHERE) statement, let's start by building a population for 3 specifics entities:
+Let's focus for now on the CustomerLU in the course's project. 
 
 **a. Explore the sources** 
+
+Using the Query builder for CRM_DB  (and the appropriate SQL (SELECT ... WHERE) statement) let's retrieve 3 entities IDs for 3 specific customers.
 
 Retrieve the Customer IDs of the following entities:
 
@@ -69,41 +61,53 @@ Retrieve the Customer IDs of the following entities:
 
 - Tamar Forbes
 
-**b. Standardization** 
+**b. Standardization of the phone number** 
 
-Using the Customer LU data viewer, retrieve the instances belonging to Luci, Larry & Tamar
+Using the CustomerLU data viewer, retrieve the LU instances belonging to Luci, Larry & Tamar
 
 - How many distinct lines are associated with Luci (in the contract table)?
 - How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
   - +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
-- Lets write a java function that will modify the line associated with contract_ID 2787 & 2788, into the proper format:
+- Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the following IDs contract_ID (2787 & 2788) to validate the code. 
   - tips:
     - use dbRows to loop in the table
     - use regular expressions to match the correct fields
     - operate LUDB execute function
-- We only wish to apply the previous data transformation telephone lines belonging to a 5G/LTE contract. Modify the code accordingly.
+- We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify the code accordingly.
 
 **c. Case Notes Clean-up**
 
-Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the network.
+The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
 
-1. let's first list the contracts pertaining to Tamar. How many contracts does she own ?
+Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the network. The case notes reflect issues of cases that are still opened.
 
-    		2. lets look at the different notes in the Case_Note table of Tamar's LUI
-               		1. What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description (in the cases table)?
-                     		2. How many cases are still opened ?
+ 
 
-3. Write a java function that operates the following data transformations:
+1. **Let's first list the contracts owned by Tamar in the data viewer. How many contracts does she own ?**
 
-- All case notes belonging to cases of the type "Billing issues" should be changed to "billing"
+      - lets look at the different notes in the Case_Note table of Tamar's LUI
+
+        1. What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description (in the cases table)
+
+        2. How many cases are still opened ?
+
+           
+
+3. **Write a java function that operates the following data transformations:**
+
+- All case notes belonging to cases of the type "Billing issues" should be changed to "insolvent customer due to alien assimilation"
 
 - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and is no longer network compatible"
 
-- All cases should be set to Status="closed"
+- All open cases should be set to Status="closed"
 
-4. **Attach the function**
+  
 
-   What happens if you attach the enrichment function to the table: CASES ? To which table should the function be attached ? 
+3. **Attaching the enrichment function to the appropriate table**
+
+- What happens if you attach the enrichment function to the table: CASES ? 
+
+- To which table should the function be attached ? 
 
 
 
@@ -121,7 +125,7 @@ ANSWERS
 
 2. 1 & 2
 
-3. 
+3. Code sample
 
    1. First part : update all the phone numbers fields missing international code 	
 
@@ -154,9 +158,11 @@ ANSWERS
    }// end loop through rows
    ```
 
-2. update line numbers only for 5G or LTE contracts
+2. Update line numbers only for 5G/LTE contracts
 
-   `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }`
+   `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`*
+   
+   *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global parameters pertaining to the entire project and its multiple LUs* 
 
 **c. Case Notes Clean-up**
 
@@ -164,7 +170,7 @@ ANSWERS
 
 2. Q1 -> 3708; Q2 -> 4
 
-3. ​	
+3. Code sample	
 
    ```java
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
@@ -221,7 +227,60 @@ ANSWERS
 
 
 
-4. Nothing as the CASE_NOTE table has not been populated yet. 
+4. Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
+
+
+
+
+
+
+
+### Decision functions
+
+- [Sync Methods](\articles\14_sync_LU_instance\04_sync_methods.md)
+
+- [Sync Decision Functions](\articles\14_sync_LU_instance\05_sync_decision_functions.md)
+
+- [Decision Functions Recommendation](\articles\14_sync_LU_instance\06_sync_decision_functions_recommendations.md)
+
+  
+
+#### Exercise - Decision functions
+
+In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change happens on the external source.
+
+Building on top of previous exercise, build a decision function based on the following criteria:
+
+-  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean variable - *syncind* set to TRUE
+
+- At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value using a "select count *" statement in the query builder
+
+  
+
+#### Solution - Decision functions
+
+```java
+// this function will monitor whether a change has 
+// happened in the CRM_CASES table will print a user report 
+// with the Notes associated
+String SQLCASES="SELECT count(*) FROM CRM_DB.CASES";
+int LASTNumberRows=25144; //latest known number of cases in CRM_DB.CASES
+Boolean syncInd = false;
+
+String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
+
+reportUserMessage(count);
+int cnt=Integer.parseInt(count);
+
+if ( cnt >= LASTNumberRows){
+reportUserMessage("new case in !!");
+syncInd = true;	
+}
+
+return syncInd;
+```
+
+
 
 
 
