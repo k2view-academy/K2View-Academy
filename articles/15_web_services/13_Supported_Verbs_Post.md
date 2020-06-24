@@ -45,15 +45,16 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 `http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[common table name]?token=[TOKEN NAME]&format=[json/xml]`
 
-| **Component**     | **Description**                                    | **Mandatory** | **Example**          | **Default**        |
-| ----------------- | -------------------------------------------------- | ------------- | -------------------- | ------------------ |
-| Domain name       | Domain name                                        | Y             | 10.21.1.69           |                    |
-| PORT              | PORT                                               | Y             | 3213                 |                    |
-| api               | API                                                | Y             | api                  |                    |
-| COMMON            | Specify that scope is common                       | Y             | COMMON               |                    |
-| COMMON TABLE NAME | Common table name                                  | N             | ADDRESSES            |                    |
-| token             | Token name                                         | Y             |                      |                    |
-| format            | Response format                                    | Y             | JSON/XML/YAML        | JSON               |
+| **Component**     | **Description**                                  | **Mandatory** | **Example**          | **Default**        |
+| ----------------- | ------------------------------------------------ | ------------- | -------------------- | ------------------ |
+| Domain name       | Domain name                                      | Y             | 10.21.1.69           |                    |
+| PORT              | PORT                                             | Y             | 3213                 |                    |
+| api               | API                                              | Y             | api                  |                    |
+| COMMON            | Specify that scope is common                     | Y             | COMMON               |                    |
+| COMMON TABLE NAME | Common table name                                | N             | ADDRESSES            |                    |
+| token             | Token name                                       | Y             |                      |                    |
+| format            | Response format                                  | Y             | JSON/XML/YAML        | JSON               |
+
 
 **Example:**
 
@@ -95,11 +96,11 @@ Parameters should be populated in the body in the following structure:
 
 ##  Request Header
 
-| **Parameter**              | **Mandatory** | **Value**                                                    |
-| -------------------------- | ------------- | ------------------------------------------------------------ |
-| Token                      | Y             | Token name                                                   |
-| Accept                     | Y             | Json/XML/RAW/YAML/CSV                                        |
-| Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header |
+| **Parameter**              | **Mandatory** | **Value**                                                                |
+| -------------------------- | ------------- | ------------------------------------------------------------------------ |
+| Token                      | Y             | Token name                                                               |
+| Accept                     | Y             | Json/XML/RAW/YAML/CSV                                                    |
+| Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header             |
 
 **Example:**
 
