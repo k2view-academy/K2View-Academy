@@ -49,63 +49,73 @@ As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_I
 
 Let's focus for now on the CustomerLU in the course's project. 
 
-1. Explore the sources
+Question 1. Explore the sources
+
 Using the Query builder for CRM_DB  (and the appropriate SQL (SELECT ... WHERE) statement) let's retrieve 3 entities IDs for 3 specific customers.
 Retrieve the Customer IDs of the following entities:
 - Luci Mcmahon
 - Larry Collier
 - Tamar Forbes
 
-2. Standardization of the phone number 
-Using the CustomerLU data viewer, retrieve the LU instances belonging to Luci, Larry & Tamar
-a. How many distinct lines are associated with Luci (in the contract table)?
-b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
-  - +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
-c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the following IDs contract_ID (2787 & 2788) to validate the code. 
-  - tips:
-    - use dbRows to loop in the table
-    - use regular expressions to match the correct fields
-    - operate LUDB execute function
-d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify the code accordingly.
 
-3. Case Notes Clean-up
+
+Question 2. Standardization of the phone number 
+
+Using the CustomerLU data viewer, retrieve the LU instances belonging to Luci, Larry & Tamar
+     
+     a. How many distinct lines are associated with Luci (in the contract table)?
+     
+     b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
+           +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
+     
+     c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the following IDs contract_ID (2787 & 2788) to validate the code. 
+          - tips:
+               - use dbRows to loop in the table
+               - use regular expressions to match the correct fields
+               - operate LUDB execute function
+               
+     d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify the code accordingly.
+
+
+
+Question 3. Case Notes Clean-up
+
 The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
 Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the network. The case notes reflect issues of cases that are still opened.
  
-a. Let's first list the contracts owned by Tamar in the data viewer. How many contracts does she own ?
-      - lets look at the different notes in the Case_Note table of Tamar's LUI
-        1. What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description (in the cases table)
-        2. How many cases are still opened ?
+    a. Let's first list the contracts owned by Tamar in the data viewer.
+           - How many contracts does she own ?
+       
+       Lets look at the different notes in the Case_Note table of Tamar's LUI
+           - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description (in the cases table)
+           - How many cases are still opened ?
           
+    b. Write a java function that operates the following data transformations:
 
-b. Write a java function that operates the following data transformations:
-
-- All case notes belonging to cases of the type "Billing issues" should be changed to "insolvent customer due to alien assimilation"
-- All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and is no longer network compatible"
-- All open cases should be set to Status="closed"
+       - All case notes belonging to cases of the type "Billing issues" should be changed to "insolvent customer due to alien assimilation"
+       - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and is no longer network compatible"
+       - All open cases should be set to Status="closed"
 
   
 
 4. Attaching the enrichment function to the appropriate table
 
-- What happens if you attach the enrichment function to the table: CASES ? 
-- To which table should the function be attached ? 
+      - What happens if you attach the enrichment function to the table: CASES ? 
+      - To which table should the function be attached ? 
 
 
 
 #### Solution - Enrichment functions
 
-1. Explore the sources
-Luci -> 1123
-Larry -> 1125
-Tamar -> 2472
+Question 1. Explore the sources
+      Luci -> 1123
+      Larry -> 1125
+      Tamar -> 1472
 
-2. Standardization
-a. 4
-
-b. 1 & 2
-
-c. Code: update all the phone numbers fields missing international code 	
+Question 2. Standardization
+      a. 4
+      b. 1 & 2
+      c. Code: update all the phone numbers fields missing international code 	
 
    ```java
    
@@ -136,19 +146,22 @@ c. Code: update all the phone numbers fields missing international code
    }// end loop through rows
    ```
 
-d. Update line numbers only for 5G/LTE contracts
+     d. Update line numbers only for 5G/LTE contracts
 
    `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`*
    
    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global parameters pertaining to the entire project and its multiple LUs* 
 
-3. Case Notes Clean-up
 
-a. none
 
-b. Q1 -> 3708; Q2 -> 4
 
-c. Code sample	
+Question 3. Case Notes Clean-up
+
+    a. none
+    
+    b. Q1 -> 3708; Q2 -> 4
+    
+    c. Code sample	
 
    ```java
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
@@ -203,14 +216,15 @@ c. Code sample
    ```
 
 
-4. Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
+Question 4. 
+    Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
 
 
 
 
 
 
-
+ 
 ### Decision functions
 
 - [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md)
