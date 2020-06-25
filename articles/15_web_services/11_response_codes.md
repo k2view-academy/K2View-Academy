@@ -61,7 +61,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 </tr>
 <tr>
 <td width="100pxl" valign="top" >
-<p><h5>200</p>
+  <p><h5>200</h5></p>
 </td>
 <td width="100pxl" valign="top" >
 <p>OK</p>
@@ -92,7 +92,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 <td width="500pxl" valign="top" >
 <p>The 201 (Created) status code indicates that the request has been fulfilled and has resulted in one or more new resources being created.</p>
 <p>The primary resource created by the request is identified by either a Location header field in the response or, if no Location field is received, by the effective request URI.</p>
-<p>The 201 response payload typically describes and links to the resource(s) created. See&nbsp;<a href="https://tools.ietf.org/html/rfc7231#section-7.2">Section 7.2</a>&nbsp;for a discussion of the meaning and purpose of validator header fields, such as ETag and Last-Modified, in a 201 response.</p>
+<p>The 201 response payload typically describes and links to the resource(s) created. See&nbsp;<a href="https://tools.ietf.org/html/rfc7231#section-7.2">Section 7.2</a>&nbsp; of <strong>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</strong> document for a discussion of the meaning and purpose of validator header fields, such as ETag and Last-Modified, in a 201 response.</p>
 </td>
 </tr>
 <tr>
