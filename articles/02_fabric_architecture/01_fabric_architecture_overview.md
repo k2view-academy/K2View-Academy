@@ -163,6 +163,7 @@ External data can also be injected to FabricDB via standard commands available f
 
 
 
+
 ### 3.3 Fabric ETL Layer
 
 When data needs to be processed before being stored or exposed, it will go through Fabric ETL and business logic engine. Data can be processed and transformed in accordance with the business requirements that users will define by using one of many Fabric flow management systems.
@@ -183,13 +184,14 @@ APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 By default, Fabric will support any connection to any Database supporting a JDBC driver. If not supported in Fabric&#39;s standard interface types module, users can define new DB types in accordance with the database and its JDBC driver specifications. Fabric can also be extended programmatically to invoke proprietary drivers or interfaces.
 
 
+
 #### 3.3.2 Data-processing & Business Logic
 
 In this section we will go through the types of transformations used by the business rules and flows created by users depending upon the project requirements.
 
 **Data pre-processing:**
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
-- Data anonymization: Fabric provides a [masking process](#_Masking_algorithm) (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
+- Data anonymization: Fabric provides a masking process (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
 - Data cleansing: Fabric can be setup to retrieve (from external sources) only the data necessary to populate the LU instances while disregarding any data that is not relevant to your project implementation.
 - Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or Javascript.
 - PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful to enforce GDPR or CCPA compliancy
