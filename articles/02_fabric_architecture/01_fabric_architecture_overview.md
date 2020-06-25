@@ -64,13 +64,9 @@ A micro-database is an SQLite file. It supports everything SQLite provides out o
 This method provides several advantages:
 
 - Encapsulation of ALL data of a single business entity (e.g. a customer) in one place so our consumers can ask any question about data usually residing in many different data-sources.
-
 - Micro-databases are very small (hold the data of only one business entity) and therefore can be stored completely in RAM and provide unparalleled query performance.
-
 - Can be encrypted individually at the micro-database or even field levels.
-
 - Using SQLite, provides standard SQL operations.
-
 - Continued availability of data (No business impact) on major structural modification
 
     
