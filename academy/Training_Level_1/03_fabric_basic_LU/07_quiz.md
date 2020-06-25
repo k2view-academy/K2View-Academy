@@ -63,9 +63,7 @@ c.     Different format and data types.
 
 
 
-<<<<<<< HEAD:academy/Training_Level_1/03_fabric_basic_LU/08_quiz.md
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/07_fabric_deployment.md)
-=======
+
  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/06_table_population_and_sync_strategies.md)
 
->>>>>>> 17595bd496c53695531f486bd5059fa5fdddfb22:academy/Training_Level_1/03_fabric_basic_LU/07_quiz.md
+
