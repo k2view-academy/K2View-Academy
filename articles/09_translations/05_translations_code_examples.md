@@ -1,6 +1,6 @@
 # Translations - Code Examples
 
-## Example of using a Translation in a Fabric Function 
+### Example of using a Translation in a Fabric Function 
 
 1.	Create a **Translation**.
 
@@ -17,10 +17,10 @@ if (fabricErrorID != null) {
 }
 </code></pre>
 
-Click **fnErrorCheck.java** to open an example of a Fabric Java function that retrieves the Translation’s Output values based on the Input value using the **getTranslationValues** built-in function.  
+[Click to display an example of **fnErrorCheck** function that retrieves the Translation’s output values using the **getTranslationValues** built-in function in the Demo project.](/articles/demo_project)
        
        
-## Example of using a Translation in a Population
+### Example of using a Translation in a Population
 
 1.	Create a **Translation**.
 
@@ -30,9 +30,11 @@ Click **fnErrorCheck.java** to open an example of a Fabric Java function that re
 
 ![image](/articles/09_translations/images/09_04_03%20Table%20Population.png)
 
-This example displays how to apply the Data Transformation Rule in a Table Population. The Translation **trnOrderType** defines a list of Input/Output combinations. When the target table is populated, Fabric populates the **ORDER_TYPE**  in the target table’s ORDERS column using the trnOrderType Translation and a value in the **query_public_orders.order_type** source field.
+This example displays how to apply the Data Transformation Rule in a Table Population. The Translation **trnOrderType** defines a list of Input/Output combinations. When the target table is populated, Fabric populates the **ORDER_TYPE**  in the target table’s ORDERS column using the **trnOrderType** Translation and a value in the **query_public_orders.order_type** source field.
 
-## Example of using a Translation with Type = SQL
+[Click to display an example of how the **trnOrderType** Translation is used in a Table Population in the Demo project.](/articles/demo_project)
+
+### Example of using a Translation with Type = SQL
 
 1.	Create a **Translation** where an **Output** column’s **Type = SQL**.
 
@@ -56,7 +58,7 @@ if(tranData.size() > 0) {
 }
 ~~~
 
-Click **fnEnrichment_CUSTOMER.java** to open an example of a Fabric Java function that retrieves Translation Output values based on the Input value using the getTranslationsData built-in function.
+[Click to display an example of **fnEnrichment_CUSTOMER** function that retrieves the Translation’s output values using the **getTranslationValues** built-in function in the Demo project.](/articles/demo_project)
 
 
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/04_using_translations_in_fabric.md)
