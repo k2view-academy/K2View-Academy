@@ -976,7 +976,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
   Run the Web Service according to the customer_query.1.3 Graphit file, send 2 parameters as input (id =1 and name = moshe) and response body should input JSON structure be defined on the Graphit file.
 
-Should call Graphit: customer_query.1.3.graphit file.
+   Should call Graphit: customer_query.1.3.graphit file.
 
 # Get Custom Web Service
 
