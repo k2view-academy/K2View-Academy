@@ -1,7 +1,7 @@
-# FABRIC ARCHITECTURE OVERVIEW
+# Fabric Architecture Overview
 
 
-# 1. Fabric Systems Overview
+## 1. Fabric Systems Overview
 
 Fabric includes everything that is required to deliver the data you need, where and when you need it.
 
@@ -38,19 +38,19 @@ Fabric solves these high-level requirements:
 - I want the data to be as close as possible to the data consumers
 - I want the data to be secured at all times
 
-In order to achieve that, Fabric is using a patented approach to store, sync and secure data that will be explained in this article. Make sure to read the &quot;[What is Fabric](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/01_what%20is%20fabric.md)&quot; and &quot;[the logical unit overview](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)&quot; to get the background for the architecture.
+In order to achieve that, Fabric is using a patented approach to store, sync and secure data that will be explained in this article. Make sure to read the [What is Fabric](/articles/01_fabric_overview/01_what%20is%20fabric.md) and [the logical unit overview](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) to get the background for the architecture.
 
 
 
-# 2. Fabric server main components
+## 2. Fabric server main components
 
 In order to deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each-one designed to address a different part of the overall data flow.
 
-![](fabOverviewPic.gif)
+![/articles/02_fabric_architecture/images/fabOverviewPic.png](Fabric Overview)
 
 
 
-## 2.1 Fabric Storage
+### 2.1 Fabric Storage
 
 In order to deliver the above requirements, Fabric uses 3 types of storage engines:
 
@@ -116,7 +116,7 @@ The studio is a Windows application designed to enable users to execute the foll
 
 # 3. Data Flow
 
- 
+
 ## 3.1 Overview
 
 Data flows in and out of Fabric via multiple types of interfaces and data formats.
@@ -139,7 +139,7 @@ Fabric provides standard JDBC and ADO.NET drivers to execute queries and data ma
 
 A user/application can connect to Fabric via JDBC or ADO.NET, open a transaction and use standard INSERT, UPDATE and DELETE commands to modify data stored in Fabric. This same interface can be used to run SQL SELECT queries to retrieve data.
 
-  
+
 ### 3.2.2 REST API and Web Services
 
 External sources can also read and write data by using standard REST web-services, enabling direct CRUD operations into LUIs and commonDb residing in Fabric Storage.
@@ -160,7 +160,7 @@ To publish change events out via this interface, Fabric provides a full CDC solu
 
 External data can also be injected to FabricDB via standard commands available from the fabric console application.
 
- 
+
 ## 3.3 Fabric ETL Layer
 
 When data needs to be processed before being stored or exposed, it will go through Fabric ETL and business logic engine. Data can be processed and transformed in accordance with the business requirements that users will define by using one of many Fabric flow management systems.
@@ -211,11 +211,12 @@ Different projects have different data processing needs, for which Fabric offers
 - A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful to enforce GDPR or CCPA compliancy
   
 - Data reconciliation, comparing &amp; matching
+  
   - Fabric will analyze the collected data in order to decide which data to keep or to discard, depending upon whether the data is trustable.
   
 - This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs
   
-      
+  ​    
 #### 3.3.2.2 Data Processing modules
 
 Data can be processed from 6 different modules:
@@ -332,3 +333,7 @@ This will provide boosted levels of accessibility to our systems from any of you
 Such configuration allows for unparalleled flexibility as your DevOps manager in charge of your Fabric configuration, can decide to adapt the number of fabric nodes according to the demand at any given time, but also increase (or reduce) the number of Cassandra nodes depending on the quantity of storage needed for your LUIs.
 
 ![](fabCluster.png)
+
+
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/02_fabric_directories.md)
