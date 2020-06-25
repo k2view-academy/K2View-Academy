@@ -36,6 +36,58 @@ and translations:
 
 
 
+#### Exercise 1 - Lookup tables
+
+Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the customer to the address LU table so the full details of the customers are readily available.
+
+Question 1 : Which table should you consider and why ?
+
+Question 2:  Which function would you use to make sure that the first name and last name are concatenated into one field in the Address table ?
+
+Question 3: In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options available ? In our example what will be the most likely value of this configuration variable
+
+Question 4: Save the lookup table, deploy and run instance 2472. Which name features in the address table ? (Rana Bradshaw)
+
+Exercise 1 - Lookup tables
+
+#### Solution Exercise 1 - Translation table
+
+Question 1: 
+
+Question 2: 
+
+Question 3: 
+
+Question 4: 
+
+
+
+#### Exercise 1 - Translations
+
+We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
+
+Question 1:
+
+Using the worldcities.csv file provided with the course, create a new translation called trnCityGeoLoc that will return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the CustomerLU Address table
+
+
+
+Question 2:
+
+Do the same with the international city code.
+
+Question 3:
+
+What is the Lat/Long value for Instance LUI: 1000
+
+What is the city international code for LUI: 2217
+
+
+
+   
+
+
+
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancement_Functions_flow.md)
