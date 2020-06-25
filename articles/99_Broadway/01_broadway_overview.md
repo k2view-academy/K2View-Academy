@@ -1,6 +1,6 @@
 # Broadway Overview
 
-## What are Broadway incentives?
+## What are Broadway Incentives?
 Broadway was introduced to Fabric for the first time on release 6.0. It enrich Fabric with the following capabilities:
 
 * ETL (Extract Transform Load) - replacing K2view ADI (Advanced Data Integration) tool for TDM (Test Data Management) and pure ETL projects (Data migration, data masking, data cleansing, data purging, data sequences management, etc..). Broadway resolves ADI technology obstacles, as it is written in Java and supports integration with any database provides a JDBC driver. Broadway can also integrate with all interfaces supported by Fabric, such as: http/s, publish and subscriber messages from JMS or Kafka, etc...
@@ -12,9 +12,9 @@ Broadway is the only tool in the world that capture business processes and data 
 ## Example
 
 * Create or truncate a table in Oracle DB.
-* Call graphit Web-Service that bring Customer data including invoices and payments, store the results into a field in the new table.
+* Call Graphit Web-Service that bring Customer data including invoices and payments, store the results into a field in the new table.
 * Fetch one record from the new table.
-* Parse the Json output structure.
+* Parse the JSON output structure.
 * Return output string with the list of invoices for the given customer separated by comma.
 
 In order to accomplish the example above the following steps should be implemented:
@@ -31,7 +31,7 @@ Third, use the data inspection capability in order to view the complex data stru
 
 ![image](/articles/99_Broadway/images/Broadway_full.png)
 
-## What are Broadway principles?
+## 
 
 
 
