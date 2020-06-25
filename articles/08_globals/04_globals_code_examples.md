@@ -75,7 +75,7 @@ In **fnErrorCheck:** override the global or a variable **per session**:
 <pre><code>
 if (...) {
 	...
-fabric().execute("set RECEIVED_ERROR="+ anotherValue);
+        fabric().execute("set RECEIVED_ERROR="+ anotherValue);
 }
 </code></pre>
 
