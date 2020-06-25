@@ -42,9 +42,12 @@ In order to achieve that, Fabric is using a patented approach to store, sync and
 
 
 
+
+
 ## 2. Fabric server main components
 
 In order to deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each-one designed to address a different part of the overall data flow.
+
 
 ![](/articles/02_fabric_architecture/images/fabOverviewPic.png)
 
@@ -87,10 +90,14 @@ Fabric uses Cassandra for 3 main purposes:
 - As Fabric application management database.
 - General data-store for any project need.
 
-  
+
+
+
 ### 2.2 Fabric Business Logic
 
 This is where all transformations and data manipulations happen and where Fabric will tackle the business functions you wish to apply on the data that you will import from external sources and store locally c.f. section 3.3.2
+
+
 
 
 ### 2.3 Fabric Studio
@@ -105,6 +112,9 @@ The studio is a Windows application designed to enable users to execute the foll
 - Execute data manipulations using the SQL builder or the integrated Java IntelliJ development environments.
 - Create REST APIs to access your data model.
 - Design data flows.
+
+
+
 
 
 
@@ -136,12 +146,12 @@ A user/application can connect to Fabric via JDBC or ADO.NET, open a transaction
 
 External sources can also read and write data by using standard REST web-services, enabling direct CRUD operations into LUIs and commonDb residing in Fabric Storage.
 
-Conversely, Fabric can expose LUI micro-databases or commonDB objects to external queries using a REST API configured, generated and published by the user. Such API functions can be invoked either by 3rd party systems or directly from any web browser. A web-service is defined as a function that needs to be [deployed](#_Fabric_meta-data_management) to the K2View Fabric Server.
+Conversely, Fabric can expose LUI micro-databases or commonDB objects to external queries using a REST API configured, generated and published by the user. Such API functions can be invoked either by 3rd party systems or directly from any web browser. A web-service is defined as a function that needs to be deployed to the K2View Fabric Server.
 
 
 #### 3.2.3 CDC (Change Data Capture) via Kafka
 
-Fabric supports real-time, inbound data updates via Kafka interface using the [IiDFinder](#_Data_Processing_modules) module. IidFinder is in charge of identifying incoming events and associating them with the correct Micro database. This interface can be easily integrated with CDC providers such as Oracle Golden Gate.
+Fabric supports real-time, inbound data updates via Kafka interface using the iDDFinder module. iIdFinder is in charge of identifying incoming events and associating them with the correct Micro database. This interface can be easily integrated with CDC providers such as Oracle Golden Gate.
 
 To publish change events out via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of micro database changes.
 
@@ -151,23 +161,25 @@ To publish change events out via this interface, Fabric provides a full CDC solu
 External data can also be injected to FabricDB via standard commands available from the fabric console application.
 
 
+
+
 ### 3.3 Fabric ETL Layer
 
 When data needs to be processed before being stored or exposed, it will go through Fabric ETL and business logic engine. Data can be processed and transformed in accordance with the business requirements that users will define by using one of many Fabric flow management systems.
 
 #### 3.3.1 Protocols
 
-**Files**
+**Files:**
 Data can be captured via SFTP or any other transfer protocol and/or streaming service. Standard file types such as Json/XML/CSV can be easily parsed and injected. Users can also easily introduce new formats.
 
-**Queue messaging services (QMS)**
+**Queue messaging services (QMS):**
 Fabric allows subscription to queue messaging systems to stream-in data using services such as Apache Kafka, JMS and rabbit. Fabric can then step-in and apply transformations and logic to incoming events.
 
-**APIs**
+**APIs:**
 Fabric can consume eternal APIs (such as web services, soap, java libraries etc) through which data can obtained and populated into the fabric storage engine.
 APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 
-**DB Query**
+**DB Query:**
 By default, Fabric will support any connection to any Database supporting a JDBC driver. If not supported in Fabric&#39;s standard interface types module, users can define new DB types in accordance with the database and its JDBC driver specifications. Fabric can also be extended programmatically to invoke proprietary drivers or interfaces.
 
 
@@ -175,36 +187,38 @@ By default, Fabric will support any connection to any Database supporting a JDBC
 
 In this section we will go through the types of transformations used by the business rules and flows created by users depending upon the project requirements.
 
-**Data pre-processing**
+**Data pre-processing:**
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
 - Data anonymization: Fabric provides a [masking process](#_Masking_algorithm) (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
 - Data cleansing: Fabric can be setup to retrieve (from external sources) only the data necessary to populate the LU instances while disregarding any data that is not relevant to your project implementation.
 - Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or Javascript.
 - PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful to enforce GDPR or CCPA compliancy
-- Data reconciliation, comparing &amp; matching: Fabric will analyze the collected data in order to decide which data to keep or to discard, depending upon whether the data is trustable.
-- This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs
+- Data reconciliation, comparing &amp; matching: Fabric will analyze the collected data in order to decide which data to keep or to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs
     
-**Data Processing modules**
-
+**Data Processing modules:**
 Data can be processed from 6 different modules:
 - Synchronization process:
 As part of data synchronization (on-demand or initial load) using Fabric&#39;s populationobject, the Sync process uses LU schemas defined within Fabric Studio to create (or update) the micro-databases (LUIs). When synchronizing multiple digital entities, Fabric invokes a migration process (distributed parallel sync) for a list of LU instances.
 
-- iiDFinder
+- iiDFinder:
 Since Fabric creates Digital Entities by extracting data from multiple sources, and then by populating and transforming the data into the LUI tables, any change occurring at the sources level must be reflected all the way down to the fields of the LU instance tables
 iiDFinder process manages the deployment of such incremental updates as soon as a change in the data source is detected through usual notification systems (such as Oracle Golden Gate) and/or queue messaging services.
 For environments where source data constantly changes, Fabric enables a lazy mode, whereby iiDFinder retrieves the delta updates upon explicit demand from the user.
 
-- Data Enrichment
+- Data Enrichment:
 Users can enrich data by using built-in functions or adding to them using java/javascript code designed to transform data according to the business requirements.
-- Jobs
+
+- Jobs:
 This is where all async recurring or scheduled actions happen, enabling users to run fabric functions according to a pre-defined schedule. Once set-up by the user, Fabric will create asynchronous tasks (running threads) that will execute specific commands, broadway flows or Java code at specific dates and times. Jobs can be used to collect data from structured DB or any files (HTTP), streams, message queues.
 
-- Broadway
+- Broadway:
 Fabric&#39;s data and business flow management system (Broadway) enables implementors to define, orchestrate and run complete flows of data manipulation and tasks. It provides a work environment that unifies data and execution flows under the same framework. In a nutshell, Broadway enables you to graphically render your business and data flows and modify them with a set of visual and draggable elements (actors) each one acting as a function, source or target.
 
-- Graphit&#39;s APIs Generator
+- Graphit&#39;s APIs Generator:
 Graphit is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of Fabric web-services&#39; customized responses. The response content will be formatted at execution time, according to specific parameters pertaining to the web service calls and the LUI in use.
+
+
+
 
 
 
@@ -220,6 +234,8 @@ Since data is spread across multiple micro databases, Fabric provides an indexin
 Via its CDC module, Fabric can use E-S to store its indices and provide a distributed, [multi-tenant](https://en.wikipedia.org/wiki/Multitenancy) capable [full-text search](https://en.wikipedia.org/wiki/Full-text_search) engine for near real-time results across its huge number of LU micro-database instances.
 
 
+
+
 ## 5 Security
 
 Since digital entity data encapsulation architecture provides a very strong case for data protection (each LUI lives as a separate entity), Fabric is basically secured by-design. Yet Fabric adds to its arsenal a wide range of security tools, layers and practices to ensure the protection of your data.
@@ -230,13 +246,12 @@ Since digital entity data encapsulation architecture provides a very strong case
 This module manages access rights, authentication and authorization for users, web services or any other entities interfacing with fabric by monitoring all in-bound interfaces connections and securing external requests with web tokens issuance and decryption capabilities.
 
 
-#### 5.1.1 Fabric Tokens encryption
-
+#### Fabric Tokens encryption
 Fabric uses tokens to allow the execution of web-services requests. User can also define different roles and assign each role to a specific token. All tokens are encrypted before they are saved into the Cassandra.
 
-#### 5.1.2 JWT Tokens
-
+#### JWT Tokens
 For added security, Fabric can accept JWT (JSON Web Token) signed externally by a shared secret.
+
 
 ### 5.2 MicroDBs (LUI) encryption
 
@@ -256,6 +271,10 @@ Users can define a number of environments for source connectivity according to t
 ### 5.4 Masking algorithm
 
 In addition, in order to protect your company&#39;s data, Fabric masking service creates structurally similar but inauthentic version of your data that can be used for development, integration or testing purposes.
+
+
+
+
 
 
 ## 6 Resiliency
