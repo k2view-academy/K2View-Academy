@@ -113,7 +113,7 @@ Parameters should be populated in the body in the following structure:
  "i_order_status": "Open"
 }
 ```
-- Call Web Service Orders and bring output structure in json format according to input parameters **i_order_id=1** and **i_order_status=Open**.
+- Call Web Service Orders and bring output structure in JSON format according to input parameters **i_order_id=1** and **i_order_status=Open**.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/12_Supported_Verbs_Get.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/14_Supported_Verbs_Put.md)
