@@ -17,7 +17,7 @@ if (fabricErrorID != null) {
 }
 </code></pre>
 
-[Click to display an example of **fnErrorCheck** function that retrieves the Translation’s output values using the **getTranslationValues** built-in function in the Demo project.](/articles/demo_project)
+[Click to display an example of **fnErrorCheck** function that retrieves the Translation’s output values in the Demo project.](/articles/demo_project)
        
        
 ### Example of using a Translation in a Population
@@ -58,7 +58,7 @@ if(tranData.size() > 0) {
 }
 ~~~
 
-[Click to display an example of **fnEnrichment_CUSTOMER** function that retrieves the Translation’s output values using the **getTranslationValues** built-in function in the Demo project.](/articles/demo_project)
+[Click to display an example of **fnEnrichment_CUSTOMER** function that retrieves the Translation’s output values in the Demo project.](/articles/demo_project)
 
 
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/04_using_translations_in_fabric.md)
