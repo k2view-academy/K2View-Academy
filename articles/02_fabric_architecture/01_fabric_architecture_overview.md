@@ -191,7 +191,7 @@ Data can be processed from 6 different modules:
 - Synchronization process:
 As part of data synchronization (on-demand or initial load) using Fabric&#39;s populationobject, the Sync process uses LU schemas defined within Fabric Studio to create (or update) the micro-databases (LUIs). When synchronizing multiple digital entities, Fabric invokes a migration process (distributed parallel sync) for a list of LU instances.
 
--iiDFinder:
+- iiDFinder:
 Since Fabric creates Digital Entities by extracting data from multiple sources, and then by populating and transforming the data into the LUI tables, any change occurring at the sources level must be reflected all the way down to the fields of the LU instance tables
 iiDFinder process manages the deployment of such incremental updates as soon as a change in the data source is detected through usual notification systems (such as Oracle Golden Gate) and/or queue messaging services.
 For environments where source data constantly changes, Fabric enables a lazy mode, whereby iiDFinder retrieves the delta updates upon explicit demand from the user.
