@@ -111,5 +111,5 @@ On top of the supported verbs and the response codes, the following addtional in
 
    
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/03_invoking_a_web_service.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/05_quiz.md)
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/03_Invoking_a_web_service.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/05_quiz.md)
 
