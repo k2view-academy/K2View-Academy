@@ -1,6 +1,6 @@
 # Fabric Commands
 
-Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via user code (project implementation): invoking Fabric commands inside the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
+Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via user code (project implementation) that invokes Fabric commands in the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
 
 Note that Fabric commands are **not** case sensitive. For example, a Get, get, or GET command can be run.
 
@@ -12,7 +12,7 @@ For example:
 
 ![help example](/articles/02_fabric_architecture/images/04_fabric_commands_help_example.png)
 
-## Fabric Commands- Main Groups
+## Fabric Commands - Main Groups
 
  Fabric commands can be divided into the following groups: 
 
@@ -48,7 +48,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p>Fabric <strong>release</strong> command is used to detach the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
+<p> Detaches the <a href="/articles/01_fabric_ov Dw/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p>View on the Fabric configurations and settings</p>
+<p>View of the Fabric configurations and settings</p>
 </td>
 </tr>
 <tr>
@@ -437,7 +437,7 @@ The **DROP LUTYPE** command, deletes [LU metadata (LU schema)](/articles/03_logi
 
 Note that this command is used mainly in a Testing environment to restart deployment configurations. In Production, the DROP LUTYPE command and [reset.sh script](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric) are rarely used. A possible scenario is to clean the environment after a soft launch prior to starting an actual Production run. A Drop is followed by an initial load / migration of the data for the dropped LU.
 
-##### Drop LU- Syntax
+##### Drop LU Syntax
 
 DROP LUTYPE [LU Name];
 
@@ -513,7 +513,7 @@ Click for more information about Common (Reference) Tables.
 
 ### Fabric Transactions
 
-The Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on the (common) Reference table. This functionality enables Fabric to become the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance IDs or Common table accordingly. Always start a transaction using **BEGIN** command before running the Insert, Update or Delete commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
+The Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a (common) Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Common table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
 
 Fabric has a set of commands to support the SOR functionality:
 
@@ -523,7 +523,7 @@ Fabric has a set of commands to support the SOR functionality:
 
 Fabric also enables writing the transaction into a delta table using the **SET ASYNC_TRX=true** command.
 
-Click for more information about Fabric as System of Record.
+Click for more information about Fabric as a System of Record.
 
 
 <!--Drop 2- add links to SOR + Common (reference) tables -->
@@ -548,9 +548,9 @@ Fabric **BROADWAY** command runs a [Broadway flow]().
 
 ### Queries Helpers
 
-An SQL statement can be preceded by the **EXPLAIN** keyword or by the **EXPLAIN QUERY PLAN** phrase. The SQL statement then behaves like a query and returns information about the SQL statement’s operations if the EXPLAIN keyword or phrase is omitted.
+An SQL statement can be preceded by the **EXPLAIN** keyword or by the **EXPLAIN QUERY PLAN** phrase. The SQL statement then behaves like a query and returns information about the SQL statement’s operations if the EXPLAIN keyword or phrase is omitted. 
 
-Using **EXPLAIN** and **EXPLAIN QUERY PLAN** is intended for interactive analysis and troubleshooting only.
+**EXPLAIN** and **EXPLAIN QUERY PLAN** are intended for interactive analysis and troubleshooting only.
 
 Example:
 
