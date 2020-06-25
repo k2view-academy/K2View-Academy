@@ -4,7 +4,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 
 ## **How Do I Access Web Service Properties?** 
 
-Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** to display the **Function Manager** window: 
+Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** to display the **Function Manager** window. 
 
 <img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/> 
 
