@@ -177,8 +177,7 @@ In this section we will go through the types of transformations used by the busi
 
 **Data pre-processing**
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
-- Data anonymization
-- Fabric provides a [masking process](#_Masking_algorithm) (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
+- Data anonymization: Fabric provides a [masking process](#_Masking_algorithm) (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
 - Data cleansing: Fabric can be setup to retrieve (from external sources) only the data necessary to populate the LU instances while disregarding any data that is not relevant to your project implementation.
 - Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or Javascript.
 - PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful to enforce GDPR or CCPA compliancy
