@@ -116,7 +116,6 @@ The following options define system behavior when a matching Translation is not 
 </tr>
 </tbody>
 </table>
-<p><strong>&nbsp;</strong></p>
 
 ### Translation Schema
 The structure of a Translation is defined in the Translation Schema tab and is comprised of Input and Output fields: 
