@@ -1,4 +1,4 @@
-# Fabric Basics-Getting Started
+# Fabric Basics - Getting Started
 
 ## Start and Stop Fabric Commands
 
@@ -49,13 +49,13 @@ Run the **k2fabric -version** script through the Fabric server command line to g
 
 ## Login Fabric 
 
-### Enter Fabric from the Fabric Server
+### Enter Fabric From the Fabric Server
 
 Type **fabric** in the Fabric server command line. 
 
-### Enter the Fabric Local Server
+### Enter the Local Fabric Server
 
-Open the **Fabric Console** via the Windows Search option. When opening a project, the Fabric Studio logs into  the local Fabric server. 
+Open the **Fabric Console** via the Windows Search option. When opening a project, the Fabric Studio logs into the local Fabric server. 
 
 Note that if there are no open projects in the Fabric Studio, you will not be able to open the local Fabric server.
 
@@ -63,19 +63,19 @@ Note that if there are no open projects in the Fabric Studio, you will not be ab
 
 The Fabric **reset.sh** script cleans Fabric and deletes (drops) all data from Fabric and Cassandra. The **reset.sh** script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts) and is used mainly:
 
-- In a **TEST environment** to delete the current data and to restart the testing process from scratch.
+- In a **Test environment** to delete the current data and to restart the testing process from scratch.
 
-- In a **Production environment**. Note that the [DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md) command and the **reset.sh** script are very rarely used in the Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run.
+- In a **Production environment**. Note that the [DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md) command and the **reset.sh** script are very rarely used in a Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run.
 
 Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md)) command which drops a specific LU, the **reset.sh script** performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from Cassandra.
 
-The Drop process must be followed by  the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
+The Drop process must be followed by the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
 
 Note that **$K2_HOME/fabric/scripts** also have a Windows version of the Reset script: **reset.bat**
 
 ### Reset.sh Usage
 
-Run the script from $K2_HOME/fabric/scripts directory:
+Run the script from $K2_HOME/fabric/scripts directory: 
 
 <ul><li>./reset.sh &lt;mode&gt;&lt;black_list&gt;&lt;path of config.ini file&gt;</li></ul>
 
@@ -104,9 +104,9 @@ Run the script from $K2_HOME/fabric/scripts directory:
 <td width="580pxl">
     <p>Reset mode. The following modes are supported:</p>
 <ul>
-    <li><strong>drop</strong>, removes Fabric storage on from the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the for keyspaces, set in the black-list parameter if set.</li>
-    <li><strong>drop_all</strong>- removes Fabric storage on the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the keyspaces, set in the black-list parameter, and system keyspaces.</li>
-    <li><strong>drop_local</strong>, removes only Fabric storage on the local Fabric node. For example: remove /dev/shm/ directory on the local node.</li>
+    <li><strong>drop</strong>, removes Fabric storage from the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the for keyspaces set in the black-list parameter if set.</li>
+    <li><strong>drop_all</strong>- removes Fabric storage on the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the keyspaces set in the black-list parameter and system keyspaces.</li>
+    <li><strong>drop_local</strong>, removes Fabric storage on the local Fabric node only. For example: remove /dev/shm/ directory on the local node.</li>
 </ul>
 </td>
 </tr>
@@ -137,7 +137,7 @@ Run the script from $K2_HOME/fabric/scripts directory:
 </table>
 <p>&nbsp;</p>
 
-### Run Reset.sh on Fabric Cluster
+### Run Reset.sh On a Fabric Cluster
 
 When a Fabric cluster clean-up is required, it is recommended to execute the **reset.sh** script in the following order:
 
@@ -145,7 +145,7 @@ When a Fabric cluster clean-up is required, it is recommended to execute the **r
 
 - Run on all other nodes - ./reset.sh drop_local; - cleans Fabric storage on the local Fabric node. To reset the Fabric cluster correctly, execute the **reset.sh** script on all fabric nodes, and only then [start](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-start) each Fabric node individually.
 
-### Reset Fabric- Remove Fabric Directories
+### Reset Fabric - Remove Fabric Directories
 
 The **reset.sh** script gets the list of the Fabric directories to be removed from the **config.ini** configuration file. The following parameters are checked to get the list of removed Fabric directories:
 
