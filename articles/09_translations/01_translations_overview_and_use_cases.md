@@ -26,7 +26,6 @@ Translations are defined via the Translation window which has two tabs:
 
 ### Translation Schema Tab Icons
 The following icons are displayed at the top of the **Translation Schema tab**:
-<p>&nbsp;</p>
 <table>
 <tbody>
 <tr>
