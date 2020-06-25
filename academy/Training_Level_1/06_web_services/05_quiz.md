@@ -46,3 +46,7 @@ d. PUT
 
 e. All of the above 
 
+
+
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/04_response_codes_and_verbs.md)
+
