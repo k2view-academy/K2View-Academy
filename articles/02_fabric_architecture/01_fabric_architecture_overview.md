@@ -38,7 +38,7 @@ Fabric solves these high-level requirements:
 - I want the data to be as close as possible to the data consumers
 - I want the data to be secured at all times
 
-In order to achieve that, Fabric is using a patented approach to store, sync and secure data that will be explained in this article. Make sure to read the [What is Fabric](/articles/01_fabric_overview/01_what%20is%20fabric.md) and [the logical unit overview](/articles/03_logical_units/01_LU_overview.md) to get the background for the architecture.
+In order to achieve that, Fabric is using a patented approach to store, sync and secure data that will be explained in this article. Make sure to read the [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the logical unit overview](/articles/03_logical_units/01_LU_overview.md) to get the background for the architecture.
 
 
 
@@ -46,7 +46,7 @@ In order to achieve that, Fabric is using a patented approach to store, sync and
 
 In order to deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each-one designed to address a different part of the overall data flow.
 
-![/articles/02_fabric_architecture/images/fabOverviewPic.png](Fabric Overview)
+![](/articles/02_fabric_architecture/images/fabOverviewPic.png)
 
 
 
@@ -54,7 +54,7 @@ In order to deliver the above-mentioned functionality, Fabric relies on a resili
 
 In order to deliver the above requirements, Fabric uses 3 types of storage engines:
 
-#### ![2.1.1 Micro-databases](/articles/02_fabric_architecture/images/microDBPic.gif)
+#### 2.1.1 Micro-databases![](/articles/02_fabric_architecture/images/microDBPic.gif)
 
 At the core of Fabric storage, Fabric creates (and maintains) a micro-database ([Logical](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) Unit) for every instance of a business entity.
 
@@ -73,14 +73,14 @@ This method provides several advantages:
 - Continued availability of data (No business impact) on major structural modification
 
     
-#### ![2.1.2 CommonDB](/articles/02_fabric_architecture/images/commonDBPic.gif)
+#### 2.1.2 CommonDB![](/articles/02_fabric_architecture/images/commonDBPic.gif)
 
 This is an additional SQLite Database schema with the purpose of storing the reference tables common to all Micro-databases (e.g. a table storing a list of objects to which all microdatabase schemas will point to). In a distributed system, one copy of each reference table will be stored on each node. Fabric will handle their synchronization across [nodes](#_Fabric_Cluster) c.f. ‎6.1
 
 The common database is always available for query on every Fabric session enabling joining of data between Common tables and micro-database in a single SQL query.
 
 
-#### ![2.1.3 Cassandra](/articles/02_fabric_architecture/images/cassPic.gif)
+#### 2.1.3 Cassandra![](/articles/02_fabric_architecture/images/cassPic.gif)
 
 Fabric uses Cassandra for 3 main purposes:
 
