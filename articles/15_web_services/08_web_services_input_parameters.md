@@ -5,8 +5,8 @@ The following URL structure is used to call Fabric Web Services:
 <p><code>http://&lt;IP address&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json]</p></code>
 
 Input parameters can be transferred to Fabric Web Services either as:
-* [Part of the URL path](/articles/15_web_services/08_web_services_input_parameters.md#transfering-input-parameters-as-part-of-the-url-path).
-* [Not part of the URL path](/articles/15_web_services/08_web_services_input_parameters.md#transfering-input-parameters-that-are-not-part-of-the-url-path).  
+- [Part of the URL path.](/articles/15_web_services/08_web_services_input_parameters.md#transfering-input-parameters-as-part-of-the-url-path)
+- [Not part of the URL path.](/articles/15_web_services/08_web_services_input_parameters.md#transferring-input-parameters-not-part-of-the-url-path)  
 
 ### Transferring Input Parameters As Part of the URL Path
 
