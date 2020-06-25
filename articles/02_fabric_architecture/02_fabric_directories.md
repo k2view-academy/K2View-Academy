@@ -164,4 +164,5 @@ The Fabric Studio creates the **FabricHome** directory under each Fabric project
 <!-- Drop 2- Broadway -->
 <!-- Drop 3- iidFinder, LU storage -->
 <!-- Drop 4- Trace files -->
-[![Previous](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
+
+[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
