@@ -55,8 +55,11 @@ Now we can validate if the Web Service has been deployed :
 
 
 `|lut_name|lut_version  |properties             |`
+
 `+--------+-------------+-----------------------+`
+
 `|k2_ws   |1592814011085|{methods=wsGetCustomer}|`
+
 `|k2_ws   |1591773207364|{methods=}             |`
 
 
