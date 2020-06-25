@@ -1,6 +1,6 @@
 # Table Population and Sync Strategies
 
-​      ![](/academy/03_fabric_basic_LU/images/fabric_main_flow_06.png)              
+​      ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_06.png)              
 
 Your Logical Unit is now constructed using tables from different source DBs and has a hierarchical Parent-Child representation. You have reviewed the implementation and were able to see the data quickly after moving it from the source into Fabric. 
 
@@ -25,7 +25,7 @@ Now that you understand the benefits of a Table Population and its use cases, wh
 
  
 
-### ![](/academy/03_fabric_basic_LU/images/example.png)Example - Debug Table Population
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Debug Table Population
 
 1. Open the **BALANCE **table population map.
 2. Click **Debug** and select **Instance 82** from the Instances List. 
@@ -47,15 +47,9 @@ Let’s understand the Fabric Sync concept and modes:
 
 We will continue discussing the synchronization modes and methods later on in our Training. 
 
-<<<<<<< HEAD
+
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/05_LU_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/07_fabric_deployment.md)
-=======
-<<<<<<< HEAD
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/05_LU_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/07_fabric_deployment.md)
-=======
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/05_LU_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/07_quiz.md)
->>>>>>> 17595bd496c53695531f486bd5059fa5fdddfb22
->>>>>>> TR_DROP1_4_FABRIC_RUNTIME_merav
+
 
  
 
