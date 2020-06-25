@@ -87,7 +87,7 @@ On top of the supported verbs and the response codes, the following addtional in
 2. `Answer : POST`
 
 3. ```
-   Answer: i_id : String ; i_info: Liat<Map<String,String>>
+   Answer: i_id : String ; i_info: List<Map<String,String>>
    
    Example request body :{
      "i_id": "1",
