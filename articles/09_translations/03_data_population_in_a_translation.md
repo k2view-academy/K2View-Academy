@@ -34,7 +34,7 @@ Import options are enabled via the Import screen.
 
 6.	Click **Save**.
 
-**Example:**
+### Example
 
 To create a new Translation named **trnCountry**:
 
