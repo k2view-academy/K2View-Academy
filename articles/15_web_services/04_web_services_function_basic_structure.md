@@ -35,13 +35,13 @@ Fabric Studio enables you to automatically generate Java code that holds the bas
 <li>Get the data for a Customer LUI from the Fabric using the <a href="/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#connect-to-the-local-fabric-using-a-web-service&quot;">ludb() method</a>. The ID parameter, sent to ludb() function is received as a WS input parameter:
 <ul>
 <li>Db.Rows rows = ludb("Customer", ID).fetch(sql);&nbsp;</li>
-<li>The SQL statement should be structured with binding parameter/s that are represented by a question mark. The parameter/s should be added to the Fetch method in the same order they are defined in the SQL statement.</li>
+<p><p>The SQL statement should be structured with binding parameter/s that are represented by a question mark. The parameter/s should be added to the Fetch method in the same order they are defined in the SQL statement.</p>
 </ul>
 </li>
 <li>Fetch the CUSTOMER data from the CRM_DB based on the CUSTOMER_ID as an Input parameter:
 <ul>
 <li>String sql = "SELECT CUSTOMER_ID, CUSTOMER_TYPE, CREATION_DATE FROM CUSTOMER WHERE CUSTOMER_ID = ? &ldquo;; Db.Rows rows = db("CRM_DB").fetch(sql, custId);</li>
-<li>Note that during runtime, the question mark is replaced by the Web Service&rsquo;s input parameter value as the&nbsp;<strong>custID</strong>.</li>
+<p><p>Note that during runtime, the question mark is replaced by the Web Service&rsquo;s input parameter value as the&nbsp;<strong>custID</strong>.</p>
 </ul>
 </li>
 </ul>
