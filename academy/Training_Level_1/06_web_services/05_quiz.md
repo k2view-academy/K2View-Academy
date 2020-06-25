@@ -16,7 +16,7 @@ a. True
 
 #### When you use Swagger and call  GET /lu/CustomerLU API, which information will you get?:
 
-a. Each LU tables with column;Value pair
+a. Each LU metdata and links;
 
 b. Only column;value pair
 
@@ -34,7 +34,7 @@ c. Web-Services
 
  d. All of the above
 
-#### The following URL http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC and  Request Body: null and Response Body: null, will be supported by the following verb:
+####  Which of the following Verbs will support: A URL http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC  with  Request Body: null, Response Body: null and json structure as an input:
 
 a. GET
 
