@@ -57,7 +57,6 @@ In order to deliver the above-mentioned functionality, Fabric relies on a resili
 In order to deliver the above requirements, Fabric uses 3 types of storage engines:
 
 #### 2.1.1 Micro-databases ![](/articles/02_fabric_architecture/images/microDBPic.gif)
-
 At the core of Fabric storage, Fabric creates (and maintains) a micro-database ([Logical](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md) Unit) for every instance of a business entity.
 
 A micro-database is an SQLite file. It supports everything SQLite provides out of the box.
@@ -76,14 +75,12 @@ This method provides several advantages:
 
     
 #### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-
 This is an additional SQLite Database schema with the purpose of storing the reference tables common to all Micro-databases (e.g. a table storing a list of objects to which all microdatabase schemas will point to). In a distributed system, one copy of each reference table will be stored on each node. Fabric will handle their synchronization across [nodes](#_Fabric_Cluster) c.f. 6.1
 
 The common database is always available for query on every Fabric session enabling joining of data between Common tables and micro-database in a single SQL query.
 
 
 #### 2.1.3 Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
-
 Fabric uses Cassandra for 3 main purposes:
 
 - Storage for all micro-databases (Logical Unit Instances) as compressed blob chunks.
@@ -136,31 +133,22 @@ In this section we will go over all the protocols and standard interfaces throug
 
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
-
 Fabric provides standard JDBC and ADO.NET drivers to execute queries and data manipulation statements (SQL/DML) from any external JVM or .NET process.
-
 A user/application can connect to Fabric via JDBC or ADO.NET, open a transaction and use standard INSERT, UPDATE and DELETE commands to modify data stored in Fabric. This same interface can be used to run SQL SELECT queries to retrieve data.
 
 
 #### 3.2.2 REST API and Web Services
-
 External sources can also read and write data by using standard REST web-services, enabling direct CRUD operations into LUIs and commonDb residing in Fabric Storage.
-
 Conversely, Fabric can expose LUI micro-databases or commonDB objects to external queries using a REST API configured, generated and published by the user. Such API functions can be invoked either by 3rd party systems or directly from any web browser. A web-service is defined as a function that needs to be deployed to the K2View Fabric Server.
 
 
 #### 3.2.3 CDC (Change Data Capture) via Kafka
-
 Fabric supports real-time, inbound data updates via Kafka interface using the iDDFinder module. iIdFinder is in charge of identifying incoming events and associating them with the correct Micro database. This interface can be easily integrated with CDC providers such as Oracle Golden Gate.
-
 To publish change events out via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of micro database changes.
 
 
 #### 3.2.4 Manual/Scripted input
-
 External data can also be injected to FabricDB via standard commands available from the fabric console application.
-
-
 
 
 
@@ -169,7 +157,6 @@ External data can also be injected to FabricDB via standard commands available f
 When data needs to be processed before being stored or exposed, it will go through Fabric ETL and business logic engine. Data can be processed and transformed in accordance with the business requirements that users will define by using one of many Fabric flow management systems.
 
 #### 3.3.1 Protocols
-
 **Files:**
 Data can be captured via SFTP or any other transfer protocol and/or streaming service. Standard file types such as Json/XML/CSV can be easily parsed and injected. Users can also easily introduce new formats.
 
@@ -186,23 +173,29 @@ By default, Fabric will support any connection to any Database supporting a JDBC
 
 
 #### 3.3.2 Data-processing & Business Logic
-
 In this section we will go through the types of transformations used by the business rules and flows created by users depending upon the project requirements.
 
 **Data pre-processing:**
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
+
 - Data anonymization: Fabric provides a masking process (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
+
 - Data cleansing: Fabric can be setup to retrieve (from external sources) only the data necessary to populate the LU instances while disregarding any data that is not relevant to your project implementation.
+
 - Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or Javascript.
+
 - PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful to enforce GDPR or CCPA compliancy
+
 - Data reconciliation, comparing &amp; matching: Fabric will analyze the collected data in order to decide which data to keep or to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs
-    
+
+
 **Data Processing modules:**
 Data can be processed from 6 different modules:
+
 - Synchronization process:
 As part of data synchronization (on-demand or initial load) using Fabric&#39;s populationobject, the Sync process uses LU schemas defined within Fabric Studio to create (or update) the micro-databases (LUIs). When synchronizing multiple digital entities, Fabric invokes a migration process (distributed parallel sync) for a list of LU instances.
 
-- iiDFinder:
+-iiDFinder:
 Since Fabric creates Digital Entities by extracting data from multiple sources, and then by populating and transforming the data into the LUI tables, any change occurring at the sources level must be reflected all the way down to the fields of the LU instance tables
 iiDFinder process manages the deployment of such incremental updates as soon as a change in the data source is detected through usual notification systems (such as Oracle Golden Gate) and/or queue messaging services.
 For environments where source data constantly changes, Fabric enables a lazy mode, whereby iiDFinder retrieves the delta updates upon explicit demand from the user.
