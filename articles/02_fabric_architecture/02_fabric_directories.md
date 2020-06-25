@@ -1,4 +1,4 @@
-﻿
+
 # Fabric Server- Main Directories
 There are several directories under the Fabric server $K2_HOME directory. The following table lists the main ones:
 
@@ -82,7 +82,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/storage</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Stores data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar  artifact files for each deployed LU or Web Service</a>, IIDFinder XMLs, and Reference (common) files.</p>
+<p>Stores data on each Fabric Server and holds the <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">ludb.jar artifact files for each deployed LU or Web Service</a>, IIDFinder XMLs, and Reference (common) files.</p>
 </td>
 </tr>
 <tr>
@@ -90,7 +90,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>/dev/shm/fdb_cache</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Holds the cached database files for the LU Instances. Directory can be changed according to config.ini setup.</p>
+<p>Holds the cached database files for the LUI. This directory can be modified in config.ini setup.</p>
 </td>
 </tr>
 <tr>
@@ -122,7 +122,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/webserver</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>The Home directory of the Fabric web admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.</p>
+<p>The Home directory of the Fabric Web Admin. This directory can also hold manipulations (rewrites) on the URL when invoking Fabric Web Services.</p>
 </td>
 </tr>
 </tbody>
@@ -150,7 +150,7 @@ The Fabric server directory has the following sub-directories:
 
 ### FabricHome Directory
 
-The Fabric Studio creates the **FabricHome** directory under each Fabric project directory and holds the following sub-directories:
+The Fabric Studio creates the **FabricHome** directory under each Fabric project's directory and holds the following sub-directories:
 
 - [config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig)
 - [export](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeexport)
