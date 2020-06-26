@@ -114,7 +114,7 @@ Question 5:	Deploy and try to set your global to different value and test.
 
  #### Solution Exercise 3 - Globals
 Question 1 & 2:
- ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.PNG)  
+ ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)  
 
 Question 3:
  
