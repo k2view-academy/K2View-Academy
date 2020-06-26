@@ -1,7 +1,7 @@
 #   LU Enhancement Tables & Globals
-                                               
 
- 
+
+
 
 ### Using tables for data manipulations
 
@@ -9,8 +9,6 @@ Now we have seen how functions can be attached to LU tables to modify data, let'
 In this section we will address the following types of tables:
 
 [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
-
-and translations:
 
 [Translation tables](/articles/09_translations/01_translations_overview_and_use_cases.md)
 
@@ -36,6 +34,8 @@ and translations:
 
 
 
+
+
 #### Exercise 1 - Lookup tables
 
 Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the customer to the address LU table so the full details of the customers are readily available.
@@ -49,6 +49,8 @@ Question 3: In the properties panel, what does the configuration variable "Looku
 Question 4: Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
 
 
+
+
 #### Solution Exercise 1 - Lookup table
 
 Question 1: 
@@ -58,11 +60,15 @@ Question 2:
 k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email address to your customers)
 
 Question 3:
-This sets up the systems' behavior if a specific value does not exist in the lookup table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
+This sets up the systems' behaviour if a specific value does not exist in the lookup table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
 In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory fields) therefore it could be set to "Continue".
 
 Question 4: 
 Rana Bradshaw
+
+
+
+
 
 
 #### Exercise 2 - Translations
@@ -99,7 +105,7 @@ InstanceID 2217: 1840034016
 
 
 
- 
+
 
  #### Exercise 3 - Globals
 Question 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be deleted from the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
@@ -114,15 +120,14 @@ Deploy and run the enrichment function on InstanceID=1000. How may invoices reco
 Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function exercise ? 
 
 Question 5:
-Using a new Global called InternationalCode, modify all the phone entries of Instance ID=1001 to a new international code: +44
+Using a new Global called "*InternationalCode*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1001 (that do not have an international code already) to a new international code set to "+44"
 
 
  #### Solution Exercise 3 - Globals
 Question 1 & 2:
- ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
+ ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.PNG)
 
-Question 3:
-      
+Question 3:      
       reportUserMessage("Invoice Cleaning fonction is running");
       String SQLINVOICES="SELECT * FROM INVOICE";
       String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
@@ -130,20 +135,22 @@ Question 3:
       for (Db.Row row:rows){
             String cellCaseDate=""+row.get("ISSUED_DATE");
             String[] date = cellCaseDate.split("\\s+");
-
+    
             if(date[0].compareTo(OLDINVOICES) < 0) {
               reportUserMessage("invoice date is earlier than 2015/12/31");
               fabric().execute(SQLInvoicesDelete,cellCaseDate);
             }
       }
+
+Question 4:
+
+Answer: 19
+
+Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31.
+
  
- Question 4 & 5:
- Answer: 19
- Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31.
+
  
- 
- 
- 
- 
+
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
 
