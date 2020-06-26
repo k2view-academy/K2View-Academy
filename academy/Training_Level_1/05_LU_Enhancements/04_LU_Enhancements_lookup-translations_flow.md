@@ -79,12 +79,16 @@ Question 3: What is the Lat/Long value for Instance LUI: 1000, What is the city 
 
 #### Solution Exercise 2 - Translations
 
-Question 1:
+Question 1 & 2:
 
-   
+![](/academy/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).png)  
+
+![](/academy/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).png) 
+
+![](/academy/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).png) 
 
 
-
+Question 3:
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
