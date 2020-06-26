@@ -80,13 +80,16 @@ Question 3: What is the Lat/Long value for Instance LUI: 1000, What is the city 
 
 Question 1 & 2:
 
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
-
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
-
+Translation table schema:
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
 
 
+Translation table data:
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
+
+
+Address population diagram featuring translation table and LAT/LONG concatenation function:
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
 
 Question 3:
 
