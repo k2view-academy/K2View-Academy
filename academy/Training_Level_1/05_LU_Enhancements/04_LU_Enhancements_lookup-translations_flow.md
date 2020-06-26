@@ -80,11 +80,11 @@ Question 3: What is the Lat/Long value for Instance LUI: 1000, What is the city 
 
 Question 1 & 2:
 
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG=100x40)  
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
 
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG=100x40) 
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
 
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG=100x40) 
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
 
 
 
@@ -94,17 +94,27 @@ InstanceID 1000: 39.7771::-86.1458
 
 InstanceID 2217: 1840034016
 
+
+
+ 
+
+ #### Exercise 3 - Globals
+Question 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be deleted from the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
+
+Question 2: Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created “CasesUpdateMonitor”. In your function use the Global value to decide whether to run the population or not, depending on the number of records in the CASES tables of the CRM_DB database.
+
+Question 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
+
+Question 4: Add both functions to Customer table.
+Question 5:	Deploy and try to set your global to different value and test.
+
+
+ #### Solution Exercise 3 - Globals
+Question 1 & 2:
+ ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.PNG)  
+
+Question 3:
+ 
+ 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
-
- 
-
- 
-
- 
-
- 
-
- 
-
-------
 
