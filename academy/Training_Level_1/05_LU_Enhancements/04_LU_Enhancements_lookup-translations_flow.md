@@ -166,5 +166,6 @@ In this section we will address the following types of tables:
 
  
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)[![Next](/articles/images/Next.png)](/academy/Training_Level_1/05_LU_Enhancements/05_LU_Enhancements_Quiz.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/05_LU_Enhancements_Quiz.md.md)
 
