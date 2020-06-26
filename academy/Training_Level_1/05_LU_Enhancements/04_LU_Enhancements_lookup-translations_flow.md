@@ -1,4 +1,4 @@
-#   LU Enhancement Flow
+#   LU Enhancement Tables & Globals
 
  ![](/academy/05_LU_Enhancements/images/fabric_main_flow_05.png)                                                    
 
@@ -6,7 +6,8 @@
 
 ### Using tables for data manipulations
 
-Now we have seen how functions can be attached to LU tables to modify data, let's learn about the following types of tables:
+Now we have seen how functions can be attached to LU tables to modify data, let's see how we can use tables (and functions) to enrich data.
+In this section we will address the following types of tables:
 
 [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
 
@@ -46,43 +47,39 @@ Question 2:  Which function would you use to make sure that the first name and l
 
 Question 3: In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options available ? In our example what will be the most likely value of this configuration variable
 
-Question 4: Save the lookup table, deploy and run instance 2472. Which name features in the address table ? (Rana Bradshaw)
+Question 4: Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
 
-Exercise 1 - Lookup tables
 
-#### Solution Exercise 1 - Translation table
+#### Solution Exercise 1 - Lookup table
 
 Question 1: 
+Customer table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use the CRM table
 
 Question 2: 
+k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email address to your customers)
 
-Question 3: 
+Question 3:
+This sets up the systems' behavior if a specific value does not exist in the lookup table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
+In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory fields) therefore it could be set to "Continue".
 
 Question 4: 
+Rana Bradshaw
 
 
-
-#### Exercise 1 - Translations
+#### Exercise 2 - Translations
 
 We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
 
+Question 1: Using the worldcities.csv file provided with the course, create a new translation called trnCityGeoLoc that will return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the CustomerLU Address table
+
+Question 2: Do the same with the international city code.
+
+Question 3: What is the Lat/Long value for Instance LUI: 1000, What is the city international code for LUI: 2217
+
+
+#### Solution Exercise 2 - Translations
+
 Question 1:
-
-Using the worldcities.csv file provided with the course, create a new translation called trnCityGeoLoc that will return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the CustomerLU Address table
-
-
-
-Question 2:
-
-Do the same with the international city code.
-
-Question 3:
-
-What is the Lat/Long value for Instance LUI: 1000
-
-What is the city international code for LUI: 2217
-
-
 
    
 
@@ -90,7 +87,7 @@ What is the city international code for LUI: 2217
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancement_Functions_flow.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
 
  
 
