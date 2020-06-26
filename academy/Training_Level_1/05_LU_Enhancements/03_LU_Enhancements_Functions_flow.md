@@ -50,7 +50,7 @@ As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_I
 Let's focus for now on the CustomerLU in the course's project. 
 
     Question 1. Explore the sources
-
+    
     Using the Query builder for CRM_DB  (and the appropriate SQL (SELECT ... WHERE) statement) let's retrieve 3 entities IDs for 3 
     specific customers.
     Retrieve the Customer IDs of the following entities:
@@ -61,42 +61,42 @@ Let's focus for now on the CustomerLU in the course's project.
 
 
     Question 2. Standardization of the phone number 
-
+    
     Using the CustomerLU data viewer, retrieve the LU instances belonging to Luci, Larry & Tamar
-
+    
          a. How many distinct lines are associated with Luci (in the contract table)?
-
+    
          b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
                +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
-
+    
          c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the 
          following IDs contract_ID (2787 & 2788) to validate the code. 
               - tips:
                    - use the ludb class to fetch data from the LU database  
                    - use regular expressions to identify the fields that need to be modified
                    - use LUDB execute function to update data 
-
+    
          d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
          the code accordingly.
 
 
 
     Question 3. Case Notes Clean-up
-
+    
     The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
     Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the 
     network. The case notes reflect issues of cases that are still opened.
-
+    
         a. Let's first list the contracts owned by Tamar in the data viewer.
                - How many contracts does she own ?
-
+    
            Lets look at the different notes in the Case_Note table of Tamar's LUI
                - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description 
                (in the cases table)
                - How many cases are still opened ?
-
+    
         b. Write a java function that operates the following data transformations:
-
+    
            - All case notes belonging to cases of the type "Billing issues" should be changed to "insolvent customer due to alien assimilation"
            - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and 
            is no longer network compatible"
@@ -104,8 +104,9 @@ Let's focus for now on the CustomerLU in the course's project.
 
   
 
-    Question 4. Attaching the enrichment function to the appropriate table
 
+    Question 4. Attaching the enrichment function to the appropriate table
+    
           - What happens if you attach the enrichment function to the table: CASES ? 
           - To which table should the function be attached ? 
 
@@ -116,17 +117,13 @@ Let's focus for now on the CustomerLU in the course's project.
     Question 1. Explore the sources
           Luci -> 1123
           Larry -> 1125
-          Tamar -> 1472
-
-                                        
-                                        
+          Tamar -> 1472                          
 
     Question 2. Standardization
            a. 4
            b. 1 & 2
            c. Code: update all the phone numbers fields missing international code 	
    ```java
-   
    String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
    String interCode="+1 ";
    
@@ -156,20 +153,20 @@ Let's focus for now on the CustomerLU in the course's project.
 
      d. Update line numbers only for 5G/LTE contracts
    `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
-   
+
    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global    parameters pertaining to the entire project and its multiple LUs* 
 
 
 
-                                                                                                              
-                                                                                                              
-   
+
+​                                                                                                              
+
     Question 3. Case Notes Clean-up
-
+    
         a. none
-
+    
         b. Q1 -> 3708; Q2 -> 4
-
+    
         c. Code sample	
 
    ```java
@@ -224,17 +221,13 @@ Let's focus for now on the CustomerLU in the course's project.
    }
    ```
 
-                                                                           
-   
+​                                                                           
+
     Question 4. 
         Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
 
 
 
-
-
-
- 
 ### Decision functions
 
 - [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md)
@@ -250,17 +243,17 @@ Let's focus for now on the CustomerLU in the course's project.
 
     In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change 
     happens on the external source.
-
+    
     Building on top of previous exercise, build a decision function based on the following criteria:
-
+    
     -  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean 
     variable - *syncind* set to TRUE
-
+    
     - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value 
-    using
-    a "select count *" statement in the query builder
+    using a "select count *" statement in the query builder
 
   
+
 
 #### Solution - Decision functions
 
@@ -288,7 +281,7 @@ return syncInd;
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/02_LU_Enhancements_PopulationMap_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/01_LU_Enhancement_next.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/02_LU_Enhancements_PopulationMap_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow**.md)
 
  
 
