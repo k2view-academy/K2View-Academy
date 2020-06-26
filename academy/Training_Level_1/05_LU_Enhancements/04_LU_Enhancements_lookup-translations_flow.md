@@ -1,6 +1,5 @@
 #   LU Enhancement Tables & Globals
-
- ![](/academy/05_LU_Enhancements/images/fabric_main_flow_05.png)                                                    
+                                               
 
  
 
@@ -79,13 +78,21 @@ Question 3: What is the Lat/Long value for Instance LUI: 1000, What is the city 
 
 #### Solution Exercise 2 - Translations
 
-Question 1:
+Question 1 & 2:
 
-   
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG=100x40)  
+
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG=100x40) 
+
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG=100x40) 
 
 
 
+Question 3:
 
+InstanceID 1000: 39.7771::-86.1458
+
+InstanceID 2217: 1840034016
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
 
