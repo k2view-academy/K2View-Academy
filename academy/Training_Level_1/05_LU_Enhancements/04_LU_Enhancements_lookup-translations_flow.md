@@ -106,17 +106,43 @@ Question 1: Create a new Global (Final) named OLDInvoices of the type "date" whi
 
 Question 2: Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created “CasesUpdateMonitor”. In your function use the Global value to decide whether to run the population or not, depending on the number of records in the CASES tables of the CRM_DB database.
 
-Question 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
+Question 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date. Set the globals OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the java "compareTO" function to compare dates.
 
-Question 4: Add both functions to Customer table.
-Question 5:	Deploy and try to set your global to different value and test.
+Question 4: 
+Attach both functions to their relevant table. 
+Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000?
+Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function exercise ? 
+
+Question 5:
+Using a new Global called InternationalCode, modify all the phone entries of Instance ID=1001 to a new international code: +44
 
 
  #### Solution Exercise 3 - Globals
 Question 1 & 2:
- ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)  
+ ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
 
 Question 3:
+      
+      reportUserMessage("Invoice Cleaning fonction is running");
+      String SQLINVOICES="SELECT * FROM INVOICE";
+      String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
+      Db.Rows rows = ludb().fetch(SQLINVOICES);
+      for (Db.Row row:rows){
+            String cellCaseDate=""+row.get("ISSUED_DATE");
+            String[] date = cellCaseDate.split("\\s+");
+
+            if(date[0].compareTo(OLDINVOICES) < 0) {
+              reportUserMessage("invoice date is earlier than 2015/12/31");
+              fabric().execute(SQLInvoicesDelete,cellCaseDate);
+            }
+      }
+ 
+ Question 4 & 5:
+ Answer: 19
+ Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31.
+ 
+ 
+ 
  
  
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
