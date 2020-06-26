@@ -39,14 +39,16 @@ In this section we will address the following types of tables:
 
 #### Exercise 1 - Lookup tables
 
-    Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the customer to the 
+    Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
+    customer to the 
     address LU table so the full details of the customers are readily available.
 
     Question 1 : Which table should you consider and why ?
 
     Question 2:  Which function would you use to make sure that the first name and last name are concatenated into one field in the Address table ?
 
-    Question 3: In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options available ? 
+    Question 3: In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
+    available ? 
     In our example what will be the most likely value of this configuration variable
 
     Question 4: Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
@@ -57,12 +59,13 @@ In this section we will address the following types of tables:
 #### Solution Exercise 1 - Lookup table
 
     Question 1: 
-    Customer table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use the CRM table
+    Customer table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
+    the CRM table
 
     Question 2: 
-    k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we need only 2 
-    strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid duplicate names), and an internet 
-    address string such as "@yourcompany.com" and therefore provide an email address to your customers)
+    k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we 
+    need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid duplicate names), 
+    and an internet address string such as "@yourcompany.com" and therefore provide an email address to your customers)
 
     Question 3:
     This sets up the systems' behaviour if a specific value does not exist in the lookup table. The different options are: "Reject record", 
@@ -116,25 +119,25 @@ In this section we will address the following types of tables:
 
 
 #### Exercise 3 - Globals
-    Question 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be deleted from 
-    the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
+    Question 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
+    deleted from     the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
 
     Question 2: Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created “CasesUpdateMonitor”. 
-    In your function use the Global value to decide whether to run the population or not, depending on the number of records in the CASES tables of 
-    the CRM_DB database. 
+    In your function use the Global value to decide whether to run the population or not, depending on the number of records in the CASES
+    tables of the CRM_DB database. 
 
-    Question 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date. Set the globals 
-    OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the java "compareTO" function to compare dates. 
+    Question 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
+    Set the globals OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the java "compareTO" function to compare dates. 
 
     Question 4: 
     Attach both functions to their relevant table.
-    Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? (Using the Data viewer on the 
-    invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31)
+    Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? (Using the Data 
+    viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31)
     Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function exercise ? 
 
     Question 5:
-    Using a new Global called "*InternationalCode*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1001 (that 
-    do not have an international code already) to a new international code set to "+44"
+    Using a new Global called "*InternationalCode*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1001 
+    (that do not have an international code already) to a new international code set to "+44"
 
 
  #### Solution Exercise 3 - Globals
@@ -163,5 +166,5 @@ In this section we will address the following types of tables:
 
  
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)[![Next](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/05_LU_Enhancements_Quizz.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)[![Next](/articles/images/Next.png)](/academy/Training_Level_1/05_LU_Enhancements/05_LU_Enhancements_Quiz.md)
 
