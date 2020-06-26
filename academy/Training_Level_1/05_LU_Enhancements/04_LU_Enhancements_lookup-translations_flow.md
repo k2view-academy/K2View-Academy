@@ -1,6 +1,6 @@
 #   LU Enhancement Tables & Globals
 
- ![](/academy/05_LU_Enhancements/images/fabric_main_flow_05.png)                                                    
+ ![](/academy/Training_Level_1/05_LU_Enhancements/images/fabric_main_flow_05.png)                                                    
 
  
 
@@ -81,11 +81,11 @@ Question 3: What is the Lat/Long value for Instance LUI: 1000, What is the city 
 
 Question 1 & 2:
 
-![image](/academy/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
 
-![image](/academy/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
 
-![image](/academy/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
 
 
 
