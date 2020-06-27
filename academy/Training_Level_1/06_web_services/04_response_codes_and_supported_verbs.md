@@ -20,8 +20,8 @@ On top of the supported verbs and the response codes, the following addtional in
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Additional Web Service
 
-1. `Create a new Web Service that delete entries in SUBSCRIBER table based on SUBSCRIBER_ID and MSISDN with the following considerations:`
-   1. `The Web Service can delete multiple subscribers for a give Logical Unit Instance.`
+1. `Create a new Web Service that insert entries into CASES table following considerations:`
+   1. `The Web Service can insert multiple subscribers for a give Logical Unit Instance.`
    2. `The Web Service reposnse should include success or failure in the process`
    3. `Perform some basic input validations`
 2. `Question: Which supported verbs will you use?`
@@ -45,17 +45,20 @@ On top of the supported verbs and the response codes, the following addtional in
    		//Map<String,String> m = i_info.get.(i);
    		 if (i_info.get(i) != null){
    			 
-   			String subId =i_info.get(i).get("subscriber_id");
-   			String msisdn =i_info.get(i).get("msisdn");
+   			String activity_id =i_info.get(i).get("activity_id");
+   			String case_id =i_info.get(i).get("case_id");
+   			String case_date =i_info.get(i).get("case_date");
+   			String case_type =i_info.get(i).get("case_type");
+   			String status =i_info.get(i).get("status");
    			
    		// Validate that input is not empty or wasn't exceed to number of object array
    			
-   			    if (msisdn!=null && !msisdn.isEmpty()){
+   			    if (activity_id!=null && !activity_id.isEmpty()){
    						
-   		// Delete from SUBSCRIBER table based on SUBSCRIBER_ID and MSISDN	
+   		// Insert into CASES table 	
    					fabric().execute("Begin");
-   					String sql = "DELETE FROM SUBSCRIBER WHERE SUBSCRIBER_ID=? AND MSISDN=? ";
-   					ludb("CustomerLU", i_id).execute(sql,subId,msisdn);
+   					String sql = "insert into cases (activity_id,case_id,case_date,case_type,status) values (?,?,?,?,?)";
+   					ludb("CustomerLU", i_id).execute(sql,activity_id,case_id,case_date,case_type,status);
    					fabric().execute("Commit");
    				}
    			else{
@@ -63,27 +66,29 @@ On top of the supported verbs and the response codes, the following addtional in
    					i=i_info.size()+1;
    				    name="Error";
    				    message="MISSING VALUES"; 	
+   				    //result.put(name, message);
+   				   //return result;
    				}
    			
    			}
    	}
    	name="Complete";
-   	message="DELETED ALL";
+   	message="INSERTED ALL";
    } else {
    
    // Input can not be processed, not data to parse
    	
     name="Not Started";
-    message="No input received";
+    message="NO INPUT RECIEVED";
    //message=Integer.toString(i_info.size());
-   }
+}
    
-   result.put(name, message);
+result.put(name, message);
    return result;
    ```
-
    
-
+   
+   
 2. `Answer : POST`
 
 3. ```
@@ -93,20 +98,23 @@ On top of the supported verbs and the response codes, the following addtional in
      "i_id": "1",
      "i_info": [
        {
-         "subsriber_id": "1",
-         "msisdn": "9614867860"
+         "activity_id":"437", 
+         "case_id":"225",
+         "case_date":"2015-08-02 08:33:06",
+         case_type":"Network Issue",
+         "status":"Open"
        
        }
-     ]
+  ]
    }
-   ```
-
+```
    
-
+   
+   
 4. ```http
    Answer: Only by using a URL, DELETE does not support request or response body
    
-   http://localhost:3213/api/v1.0/lu/CUSTOMERLU/1/SUBSCRIBER?WHERE=SUBSCRIBER_ID=1 AND MSISDN=9614867860&token=test 
+   http://localhost:3213/api/v1.0/lu/CUSTOMERLU/1/CASES?WHERE=ACTIVITY_ID=437 AND CASE_ID=225&token=test 
    ```
 
    
