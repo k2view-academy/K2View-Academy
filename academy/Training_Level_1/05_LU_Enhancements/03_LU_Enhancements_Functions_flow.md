@@ -39,30 +39,21 @@ In order to work directly on LU tables data, once and only once they have been p
 - [Enrichment function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md)
 - [Root functions & Enrichment functions differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)
 - [Create & Edit an Enrichment function](/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
+- [Enrichment order](\articles\03_logical_units\14_edit_enrichment_order.md)
 - [Code Example](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
 
 
 
-#### Exercises - Enrichment functions
+#### Exercise 1 - Enrichment functions
 
 As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md), at the start of this training, and as part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
 
 Let's focus for now on the CustomerLU in the course's project. 
 
-    Question 1. Explore the sources
+    Question 1. Standardization of the phone number
     
-    Using the Query builder for CRM_DB  (and the appropriate SQL (SELECT ... WHERE) statement) let's retrieve 3 entities IDs for 3 
-    specific customers.
-    Retrieve the Customer IDs of the following entities:
-    - Luci Mcmahon
-    - Larry Collier
-    - Tamar Forbes
-
-
-
-    Question 2. Standardization of the phone number 
-    
-    Using the CustomerLU data viewer, retrieve the LU instances belonging to Luci, Larry & Tamar
+    In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
+    Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
     
          a. How many distinct lines are associated with Luci (in the contract table)?
     
@@ -74,17 +65,17 @@ Let's focus for now on the CustomerLU in the course's project.
               - tips:
                    - use the ludb class to fetch data from the LU database  
                    - use regular expressions to identify the fields that need to be modified
-                   - use LUDB execute function to update data 
+                   - use LUDB (or fabric()) execute function to update data 
     
          d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
          the code accordingly.
 
 
 
-    Question 3. Case Notes Clean-up
+    Question 2. Case Notes Clean-up
     
     The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
-    Tamar keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the 
+    Tamar (Instance ID = 1472) keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the 
     network. The case notes reflect issues of cases that are still opened.
     
         a. Let's first list the contracts owned by Tamar in the data viewer.
@@ -102,8 +93,7 @@ Let's focus for now on the CustomerLU in the course's project.
            is no longer network compatible"
            - All open cases should be set to Status="closed"
 
-  
-
+ 
 
     Question 4. Attaching the enrichment function to the appropriate table
     
@@ -114,24 +104,19 @@ Let's focus for now on the CustomerLU in the course's project.
 
 #### Solution - Enrichment functions
 
-    Question 1. Explore the sources
-          Luci -> 1123
-          Larry -> 1125
-          Tamar -> 1472                          
-
-    Question 2. Standardization
+    Question 1. Standardization
            a. 4
            b. 1 & 2
            c. Code: update all the phone numbers fields missing international code 	
    ```java
    String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
    String interCode="+1 ";
-   
-   Db.Rows rows = ludb().fetch(SQLNumber);
+   //SQL statement for the fields updates
+   String SQLFormattedNumber="UPDATE CONTRACT SET ASSOCIATED_LINE  = ? where  ASSOCIATED_LINE = ?";
+   Db.Rows rows = fabric().fetch(SQLNumber);
    
    //start loop over all rows of LUDB
    for (Db.Row row:rows){   
-   	String SQLFormattedNumber="";
    	String formattedNumber="";
    	String cellValue=""+row.get("ASSOCIATED_LINE");
    	String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
@@ -140,11 +125,8 @@ Let's focus for now on the CustomerLU in the course's project.
    if ((cellValue.matches("(.*)+1(.*)") == false)
    {
    	reportUserMessage(cellValue);
-   	
    	formattedNumber = interCode + cellValue;
-   //SQL statement for the fields updates (where applicable)
-       SQLFormattedNumber="UPDATE CONTRACT SET ASSOCIATED_LINE  = ? where  ASSOCIATED_LINE = ?";
-   	ludb().execute(SQLFormattedNumber,formattedNumber,cellValue);
+    fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
    
    } // end for statement
        
@@ -152,21 +134,13 @@ Let's focus for now on the CustomerLU in the course's project.
    ```
 
      d. Update line numbers only for 5G/LTE contracts
-   `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
-
-   *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global    parameters pertaining to the entire project and its multiple LUs* 
-
-
-
-
-​                                                                                                              
-
-    Question 3. Case Notes Clean-up
+     The statement should reflect the contract description cell value:
+     `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
+      *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global    parameters pertaining to the entire project and its multiple LUs*
+    Question 2. Case Notes Clean-up
     
         a. none
-    
         b. Q1 -> 3708; Q2 -> 4
-    
         c. Code sample	
 
    ```java
@@ -180,6 +154,9 @@ Let's focus for now on the CustomerLU in the course's project.
    String newBillingNote ="insolvent customer due to alien assimilation";
    String newNetworkNote ="customer has been assimilated into a phone and is no longer network compatible";
    String statusClose="CLOSED";
+   String SQLBillingNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
+   String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
+   String SQLNetworkNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
    
    Db.Rows rowsC = ludb().fetch(SQLCASES);
    for (Db.Row row:rowsC){
@@ -189,8 +166,7 @@ Let's focus for now on the CustomerLU in the course's project.
    	if (cellStatus.matches("Open"))
    	{
    	open_cases.add(cellStatus);
-   	String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
-   	ludb().execute(SQLCaseStatus,statusClose,cellStatus);
+    ludb().execute(SQLCaseStatus,statusClose,cellStatus);
    	}
    	if (cellCaseType.matches("Billing Issue"))
    	{
@@ -211,12 +187,10 @@ Let's focus for now on the CustomerLU in the course's project.
    boolean ans1 = billing_cases.contains(cellCaseID);
    boolean ans2 = network_cases.contains(cellCaseID);
    if (ans1){
-   	String SQLBillingNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
-   	ludb().execute(SQLBillingNote,newBillingNote,cellCaseID);	
+   ludb().execute(SQLBillingNote,newBillingNote,cellCaseID);	
    }
    if (ans2){
-   	String SQLNetworkNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
-   	ludb().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
+   ludb().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
    }
    }
    ```
@@ -238,7 +212,7 @@ Let's focus for now on the CustomerLU in the course's project.
 
   
 
-#### Exercise - Decision functions
+#### Exercise 2 - Decision functions
 
 
     In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change 
@@ -253,6 +227,7 @@ Let's focus for now on the CustomerLU in the course's project.
     using a "select count *" statement in the query builder
 
   
+
 
 
 #### Solution - Decision functions

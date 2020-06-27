@@ -123,11 +123,15 @@ Question 5:
 Using a new Global called "*InternationalCode*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1001 (that do not have an international code already) to a new international code set to "+44"
 
 
+
+
  #### Solution Exercise 3 - Globals
 Question 1 & 2:
  ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.PNG)
 
 Question 3:      
+         
+```java
       reportUserMessage("Invoice Cleaning fonction is running");
       String SQLINVOICES="SELECT * FROM INVOICE";
       String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
@@ -135,12 +139,12 @@ Question 3:
       for (Db.Row row:rows){
             String cellCaseDate=""+row.get("ISSUED_DATE");
             String[] date = cellCaseDate.split("\\s+");
-    
-            if(date[0].compareTo(OLDINVOICES) < 0) {
-              reportUserMessage("invoice date is earlier than 2015/12/31");
-              fabric().execute(SQLInvoicesDelete,cellCaseDate);
-            }
-      }
+       if(date[0].compareTo(OLDINVOICES) < 0) {
+          reportUserMessage("invoice date is earlier than 2015/12/31");
+          fabric().execute(SQLInvoicesDelete,cellCaseDate);
+        }
+  }
+```
 
 Question 4:
 
