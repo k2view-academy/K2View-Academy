@@ -143,7 +143,8 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
 
  #### Solution Exercise 3 - Globals
     Question 1 & 2:
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.PNG)
+Globals definition:    
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
 
 
 Question 3:      
