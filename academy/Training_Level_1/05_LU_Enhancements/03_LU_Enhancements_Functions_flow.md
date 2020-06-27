@@ -1,3 +1,5 @@
+
+
 #   LU Enhancement Functions
 
  ![](/academy/05_LU_Enhancements/images/fabric_main_flow_05.png)                                                    
@@ -95,6 +97,7 @@ Let's focus for now on the CustomerLU in the course's project.
 
  
 
+
     Question 4. Attaching the enrichment function to the appropriate table
     
           - What happens if you attach the enrichment function to the table: CASES ? 
@@ -124,26 +127,34 @@ Let's focus for now on the CustomerLU in the course's project.
    //start matching test
    if ((cellValue.matches("(.*)+1(.*)") == false)
    {
-   	reportUserMessage(cellValue);
-   	formattedNumber = interCode + cellValue;
+    formattedNumber = interCode + cellValue;
     fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
-   
-   } // end for statement
-       
+   } // end for statement       
    }// end loop through rows
    ```
 
-     d. Update line numbers only for 5G/LTE contracts
-     The statement should reflect the contract description cell value:
-     `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
-      *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global    parameters pertaining to the entire project and its multiple LUs*
-    Question 2. Case Notes Clean-up
-    
-        a. none
-        b. Q1 -> 3708; Q2 -> 4
-        c. Code sample	
+
+
+d. Update line numbers only for 5G/LTE contracts
+ The statement should reflect the contract description cell value:
+
+```java
+ `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
+ 
+```
+
+Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global  parameters pertaining to the entire project and its multiple LUs. 
+
+
+
+Question 2. Case Notes Clean-up
+
+a. none
+b. Q1 -> 3708; Q2 -> 4
+c. Code sample	
 
    ```java
+  
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
    String SQLCASENote="SELECT CASE_ID, NOTE_TEXT, NOTE_DATE FROM CASE_NOTE";
    String SQLCASES="SELECT CASE_ID, CASE_TYPE, STATUS FROM CASES";
@@ -227,6 +238,7 @@ Let's focus for now on the CustomerLU in the course's project.
     using a "select count *" statement in the query builder
 
   
+
 
 
 
