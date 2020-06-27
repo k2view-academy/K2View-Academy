@@ -34,7 +34,13 @@ c. Web-Services
 
  d. All of the above
 
-####  Which of the following Verbs will support: A URL http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC  with  Request Body: null, Response Body: null and json structure as an input:
+#### Which of the following Verbs will support the following URL:
+
+```rst
+http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC 
+```
+
+####  with  Request Body: null, Response Body: null and json structure as an input:
 
 a. GET
 
@@ -46,7 +52,15 @@ d. PUT
 
 e. All of the above 
 
+#### The URL structure, for a  Web Service  which has 1 input parameter not set as part of the URL path,  should be:
 
+```rst
+http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&token=[TOKEN NAME]&[format=json]](http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&token=[TOKEN NAME]&[format=json])
+```
+
+a. False
+
+b. True
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/04_response_codes_and_supported_verbs.md)
 
