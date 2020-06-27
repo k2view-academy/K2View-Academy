@@ -162,7 +162,7 @@ Question 3:
           reportUserMessage("invoice date is earlier than 2015/12/31");
           fabric().execute(SQLInvoicesDelete,cellCaseDate);
         }
-  }
+      }
 ```
 Question 4: Answer: 19 entries
 
