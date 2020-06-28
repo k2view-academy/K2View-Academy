@@ -31,13 +31,13 @@ C: Built-in functions or any other java standard utilities
 
 #### Question 2: LUDB functions
 
-LUDB functions are
+A LUDB function is a
 
-A: An LUDB function is a function invoked from an SQL query to perform more complex operations on LU data than those performed using standard SQL statements.
+A: Function invoked from an SQL query to perform more complex operations on LU data than those performed using standard SQL statements.
 
-B: a function used to create LU schemas automatically
+B: Function used to create LU schemas automatically
 
-C: a function used to query external sources
+C: Function used to query external sources
 
 (***Solution 2: A ***).
 
