@@ -1,4 +1,4 @@
-![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementOverviewState.PNG)
+![](/academy/Training_Level_1/05_LU_Enhancements/images/EnhancementOverviewState.PNG)
 
 
 # Logical Units Enhancements
