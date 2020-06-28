@@ -19,7 +19,7 @@ This example shows how to check the value of a Global variable and to determine 
 ### Example of Using a Global in a Table Population
 ![image](/articles/08_globals/images/08_04_02%20TABLE%20POPULATION.png)
 
-Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a new [**Table Population**](/articles/07_table_population/01_table_population_overview.md) and add the **Globals** to it.
+Open the **Globals** window under a **Logical Unit** and [define two new **Globals**](/articles/08_globals/01_globals_overview.md) and then create a new [**Table Population**](/articles/07_table_population/01_table_population_overview.md) and add the **Globals** to it.
 
 ![image](/articles/08_globals/images/08_04_03%20new%20Table%20Population.png)
 
@@ -31,7 +31,7 @@ This example shows how a Global can be used in a [Table Population](/articles/07
 
 ![image](/articles/08_globals/images/08_04_04%20GLOBAL%20IN%20A%20FABRIC%20WEB.png)
 
-Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**] and use the Globals.
+Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services/03_create_a_web_service.md#creating-a-web-service) and use the Globals.
 
 This example shows how Globals can be used within a Fabric Web Service.
 
@@ -53,10 +53,11 @@ if (contrID == "" && adrID == "") {
 
 ![image](/articles/08_globals/images/08_04_05%20FUNCTION%20OR%20A%20WEB%20SERVICE.png)
 
-Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then create a **Fabric Web Service** or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
+Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.\
+
 The following examples show how a Global can be overridden in a cluster and per session.
 
-### Override the Global Per Cluster
+#### Override the Global Per Cluster
 The RECEIVED_ERROR Global is created with an initial value of 0 and in a function its value is overridden per cluster.
 
 <pre><code>
@@ -66,7 +67,7 @@ if (...) {
 }
 </code></pre>
 
-### Set the Global Value on a Session Level
+#### Set the Global Value on a Session Level
 
 The RECEIVED_ERROR Global is created with an initial value of 0 and in a function its value is overridden on a session level. Check the value of the overridden variable in another function or a WS, for example to perform business logic. 
 
