@@ -1,5 +1,5 @@
 
-![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementPopMapState.PNG)                                                    
+![](/academy/Training_Level_1/05_LU_Enhancements/images/EnhancementPopMapState.PNG)                                                    
 
 #   LU Populations Flow
 
