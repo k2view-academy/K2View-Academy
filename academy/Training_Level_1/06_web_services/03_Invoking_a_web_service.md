@@ -23,7 +23,7 @@ In order to make that the data being exposed by the Web Services is secured, aut
    2. `create role 'admin';`
    3. `grant ALL_WS on * to 'admin';`
    4. `assign role 'admin' to user 'test_user';`
-   5. `Create token test user 'test_user';`
+   5. `Create token test;`
    6. `assign role 'admin' to token test;`
 6. Let's go back and try to execute the Web Service again, Click the **Lock**, set a valid **Token** and close.
 7. set the **i_id** to 82 and execute. What is the Customer's first name? `Anthony`
