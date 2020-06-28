@@ -70,13 +70,11 @@ A: Enrichment functions are functions without Input/Output parameters that are u
 
 B: Multiple enrichment functions can be attached to any of the LU's tables
 
-C:  Enrichment functions operate only after all LU tables have already been populated from a source object.
+C: Enrichment functions operate only after all LU tables populations are executed
 
-D: The Enrichment function runs only once per LU table and LUI. 
+D: All the above
 
-E: All the above
-
-(***Solution 4: E ***).
+(***Solution 4: D ***).
 
 
 
@@ -84,13 +82,13 @@ E: All the above
 
 A Decision function is:
 
-A: a complex SQL query with multiple where statements to decide which records to create, update or delete
+A: a complex SQL query with multiple where statements to decide which records to create, update or delete.
 
 B: a Java function with multiple input parameters and one Boolean output parameter.
 
-C: a Java project function that assesses whether a sync is performed on an LUI
+C: a Java project function that assesses whether a sync should be performed on an LUI.
 
-D: a function that runs an LU table population based upon special sets of conditions defined on other tables of the same LU
+D: a function that runs an LU table population based upon special sets of conditions defined on other tables of the same LU.
 
 (***Solution 5: C ***).
 
@@ -102,7 +100,8 @@ It is recommended to create look-up tables based on:
 
 A: an external DB table to ensure the data is fresher than the data sitting in the LU.
 
-B: an LU table to improve performance since it is kept in Fabric memory and since it is much smaller than the DB source.
+B: an LU table, or any Fabric internal object, such as: reference, translation, etc.. to improve performance since it is 
+   kept in Fabric memory and since it is much smaller than the DB source.
 
 C: It does not matter, each solution has its pro's and con's.
 
@@ -114,13 +113,13 @@ C: It does not matter, each solution has its pro's and con's.
 
 Translations tables are used to:
 
-A: operate complex language translations between different DBs storing data of different languages 
+A: Operate complex language translations between different DBs storing data of different languages 
 
-B: map records using one optional input and one mandatory output value.
+B: Map records using not more than one optional input and one mandatory output value.
 
-C: transform data from one set of valid values to another in order to enable the execution of various transformation rules.
+C: Transform data from one set of valid values to another in order to enable the execution of various transformation rules.
 
-(***Solution 7: B ***).
+(***Solution 7: C ***).
 
 
 
@@ -128,15 +127,15 @@ C: transform data from one set of valid values to another in order to enable the
 
 Which of the following statements is true?
 
-A: Globals are predefined variables that can be accessed by different objects within a project
+A: Globals are predefined variables that can be accessed by different objects within a project.
 
 B: Globals are used when the same information is required repeatedly by various Fabric objects.
 
-C: Globals are saved in a Java file as static variables and can be used by all Fabric object types
+C: Globals are saved in a Java file and can be defined in different project tree levels (shared, LU, etc...).
 
-D: Globals can be defined as Final or not final, depending on whether they need to be overridden
+D: Globals can be defined as Final or not Final, depending on whether they need to be overridden.
 
-E: All of the above
+E: All of the above.
 
 (***Solution 8: E ***).
 
@@ -148,13 +147,13 @@ E: All of the above
 
 Which of the following statements is true?
 
-A: Execution order define how population objects are executed within an LU schema.
+A: Execution order defines the order of the population objects execution within an LU schema.
 
 B: Execution orders have a default value based on the LU's schema's hierarchy.
 
-C:  Execution orders can be defined by the LU implementer after a very careful thinking and strategizing process.
+C: Execution orders can be defined by the LU implementer after a very careful thinking and strategizing process.
 
-D: The higher the number of the execution order, the lower will be the priority of the population mapping executions
+D: The higher the number of the execution order, the lower will be the priority of the population mapping executions.
 
 E: All of the above
 
