@@ -2,9 +2,11 @@
 The following topics are discussed in this section:
 - [Fabric Systems Overview](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#1-fabric-systems-overview)
 - [Fabric Server Main Components](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components)
--....
-
-
+- [Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#3-data-flow)
+- [Search](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#4-search)
+- [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security)
+- [Resililiency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#6-resiliency) 
+ 
 ## 1. Fabric Systems Overview
 
 Fabric includes everything that is required to deliver the data you need, where and when you need it.
