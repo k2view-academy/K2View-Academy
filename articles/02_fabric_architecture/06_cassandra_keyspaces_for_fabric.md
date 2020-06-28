@@ -8,6 +8,7 @@ Each Fabric keyspace starts with a **k2**. In addition, each deployed LU creates
 
 - The cluster_id, if set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, is concatenated to each keyspace name. For example: if cluster_id is set to crm1 the keyspace k2view_customer_crm1 is created.
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
+- The following keyspace is created for deployed WS: <strong>k2view_k2_ws</strong>.
 
 ## Login Cassandra DB
 
@@ -226,6 +227,8 @@ Click for more information about Fabric Security Hardening.</p>
 <p><span data-contrast="auto">A different set of caching, delta, solo and orphans&rsquo; tables is created for each LU that is synchronized by the IIDFinder (proactive sync) mechanism. </span></p>
 <p>&nbsp;</p>
 </td>
+    <td></td>  
+    <td></td>
 </tr>
 <tr>
 <td rowspan="3" width="150pxl">
@@ -254,7 +257,7 @@ Click for more information about Fabric Security Hardening.</p>
 <p>entity_chunks</p>
 </td>
 <td width="350pxl">
-<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb">Micro-database </a> of a Large LUI is divided into chunks and stored in entity_chunks.
+<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb">MicroDB </a> of a Large LUI is divided into chunks and stored in entity_chunks.
 <a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#211-micro-databases-">Click for more information about LU storage.</a></p>
 </td>
 </tr>
