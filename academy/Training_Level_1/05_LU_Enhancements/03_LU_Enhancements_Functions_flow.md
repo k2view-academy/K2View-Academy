@@ -96,9 +96,7 @@ Let's focus for now on the CustomerLU in the course's project.
            - All open cases should be set to Status="closed"
 
  
-
-
-    Question 4. Attaching the enrichment function to the appropriate table
+    Question 3. Attaching the enrichment function to the appropriate table
     
           - What happens if you attach the enrichment function to the table: CASES ? 
           - To which table should the function be attached ? 
@@ -208,7 +206,7 @@ Question 2. Case Notes Clean-up
 
 ​                                                                           
 
-    Question 4. 
+    Question 3. 
         Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
 
 
