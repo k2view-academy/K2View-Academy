@@ -137,7 +137,7 @@ The following tables discuss how user access control is managed using Fabric com
 
 ## GRANT Command
 
-**GRANT** commands are used to enable specific roles to access Fabric. These commands insert records into the **Permissions table** in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra. Several **GRANT** commands can be run for the same LUT. The permissions granted by the **GRANT** command will be appended. 
+**GRANT** commands are used to enable specific roles to access Fabric. These commands insert records into the **Permissions table** in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra. Several **GRANT** commands can be run for the same LU. The permissions granted by the **GRANT** command will be appended. 
 
 The following **GRANT** commands are supported:
 
@@ -189,8 +189,8 @@ Below is a list of GRANT OPERATION command parameters:
 <p>Fabric resources included in the permission:</p>
 <ul>
 <li>* - grant permissions on all Fabric resources.</li>
-<li>&lt;LUT&gt;- LU name. Grant permissions on a given LUT.</li>
-<li>&lt;LUT&gt;.&lt;List of LUIs&gt;- grant permissions for a list of instance IDs in a given LUT.</li>
+<li>&lt;LUT&gt;- LU name. Grant permissions on a given LU.</li>
+<li>&lt;LUT&gt;.&lt;List of LUIs&gt;- grant permissions for a list of instance IDs in a given LU.</li>
 </ul>
 </td>
 </tr>
@@ -224,7 +224,7 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to access all instances of all LUT.</p>
+<p>Allow the role to access all instances of all LUs.</p>
 </td>
 <td width="450pxl" valign="top">
 <p>grant all on * to role1;</p>
@@ -232,17 +232,17 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to access all instances of a specific LUT.</p>
+<p>Allow the role to access all instances of a specific LU.</p>
 <p>&nbsp;</p>
 </td>
 <td width="450pxl" valign="top">
-<p>Grant all CRM Logical Unit permissions to the role1 role:</p>
+<p>Grant all CRM LU permissions to the role1 role:</p>
 <p>grant all on CRM to role1;</p>
 </td>
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to access specific instances of a specific LUT.</p>
+<p>Allow the role to access specific instances of a specific LU.</p>
 <p>&nbsp;</p>
 </td>
 <td width="450pxl" valign="top">
@@ -261,7 +261,7 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role of migrating Instance IDs on Customer LUT.</p>
+<p>Allow the role of migrating Instance IDs on Customer LU.</p>
 </td>
 <td width="450pxl" valign="top">
 <p>grant migrate on Customer to role1;</p>
@@ -270,7 +270,7 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to access Instance IDs 1, 2, 4, and 6 of CRM LUT.</p>
+<p>Allow the role to access Instance IDs 1, 2, 4, and 6 of CRM LU.</p>
 </td>
 <td width="450pxl" valign="top">
 <p>grant all on CRM.1, CRM.2, CRM.4,CRM.6 to role1;</p>
@@ -278,7 +278,7 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to access Instance IDs 1 and 2 of CRM LUT, and Instance ID 57 of Customer LUT.</p>
+<p>Allow the role to access Instance IDs 1 and 2 of CRM LU, and Instance ID 57 of Customer LU.</p>
 </td>
 <td width="450pxl" valign="top">
 <p>grant all on CRM.1, CRM.2, Customer.57 to role1;</p>
@@ -286,7 +286,7 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to invoke wsGetCustomerDetails Fabric Web-Service to access CRM LUT</p>
+<p>Allow the role to invoke wsGetCustomerDetails Fabric Web-Service to access CRM LU</p>
 </td>
 <td width="450pxl" valign="top">
 <p>grant wsGetCustomerDetails on CRM to role1;</p>
@@ -303,7 +303,7 @@ Enables users to give a generic access to a given Web-Services to access the Fab
 
 Notes:
 
-- Use **GRANT OPERATION** command to limit the access of the [Web-Service (WS)](/articles/01_fabric_overview/02_fabric_glossary.md#ws) to a given LUT or LUI.
+- Use **GRANT OPERATION** command to limit the access of the [Web-Service (WS)](/articles/01_fabric_overview/02_fabric_glossary.md#ws) to a given LU or LUI.
 - Use **GRANT OPERATION** command to grant an access to all Web-Services: populate the **Operation** parameter by **ALL_WS**.
 
 Below is a list of GRANT WS_NAME command parameters:
