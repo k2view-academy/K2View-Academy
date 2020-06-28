@@ -137,8 +137,7 @@ d. Update line numbers only for 5G/LTE contracts
  The statement should reflect the contract description cell value:
 
 ```java
- `if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }*`
- 
+  if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
 Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global  parameters pertaining to the entire project and its multiple LUs. 
