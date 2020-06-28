@@ -11,7 +11,7 @@ A **Local Fabric** (local Fabric) DB interface type is defined in a project in t
 
 A **Fabric Remote** DB interface type is defined in a project in the following cases: 
 * When getting data from a remote Fabric cluster.
-* When using a Fabric Remote interface to run the [Query Builder] on Fabric. 
+* When using a Fabric Remote interface to run the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview) on Fabric. 
 
 ### How Do I Create an Internal Fabric Interface?
 
