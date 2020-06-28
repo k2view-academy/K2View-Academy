@@ -66,7 +66,7 @@ Let's focus for now on the CustomerLU in the course's project.
               - tips:
                    - use the ludb class to fetch data from the LU database  
                    - use regular expressions to identify the fields that need to be modified
-                   - use LUDB (or fabric()) execute function to update data 
+                   - use the fabric() execute function to update data 
     
          d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
          the code accordingly.
