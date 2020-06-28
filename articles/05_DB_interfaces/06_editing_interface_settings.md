@@ -14,6 +14,6 @@ Throughout a project’s lifecycle there are a number of reasons for modifying, 
 
 Note that for the changes to become effective for the Fabric object (for example for Web Services or an LU), deploy each object to the server separately.
 
-Click for more information about Deployment from the Fabric Studio. 
+[Click for more information about Deployment from the Fabric Studio.](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio)
 
 [![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
