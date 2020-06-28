@@ -174,8 +174,7 @@ Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in t
                     fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
             // ending the if statement		
                 }
-
-}
+        }
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
