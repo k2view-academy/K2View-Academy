@@ -14,13 +14,13 @@ a. True
 
  b. False
 
-#### When you use Swagger and call  GET /lu/CustomerLU API, which information will you get?:
+#### When you use Swagger and call  GET /lu/CustomerLU API, which information will you get on CustomerLU?:
 
-a. Each LU metdata and links;
+a. Tables metdata and links;
 
-b. Only column;value pair
+b. Specific table, column;value pair
 
-c. Each LU table, Column:columntype pair
+c. All tables, Column:columntype pair
 
 d. Both b. and c.
 
@@ -36,9 +36,7 @@ c. Web-Services
 
 #### Which of the following Verbs will support the following URL:
 
-```rst
 http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC 
-```
 
 ####  with  Request Body: null, Response Body: null and json structure as an input:
 
@@ -55,7 +53,7 @@ e. All of the above
 #### The URL structure, for a  Web Service  which has 1 input parameter not set as part of the URL path,  should be:
 
 ```rst
-http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&token=[TOKEN NAME]&[format=json]](http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&token=[TOKEN NAME]&[format=json])
+http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&token=[TOKEN NAME]&[format=json]
 ```
 
 a. False
