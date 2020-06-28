@@ -11,8 +11,8 @@ By the end of the Web Services learning item you will know:
 - How to view and test a Web Service using Swagger
 - How to authenitcate a WebService
 - What are the various supported response codes and verbs
-- <!--How to manage access rights for your web service- once Admin item is ready-->
-- <!--How to use Graphit- Once item is ready-->
+<!--How to manage access rights for your web service- once Admin item is ready-->
+<!--How to use Graphit- Once item is ready-->
 
 
 
