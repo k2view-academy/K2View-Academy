@@ -49,7 +49,8 @@ Root functions are:
 
 A: a function that is only applicable to data manipulations on root tables. 
 
-B: a specific type of Fabric function, used as a Source Object to trigger the table population mechanism, run various SQL SELECT queries and execute complex logic.
+B: a specific type of Fabric function, used as a Source Object to trigger the table population mechanism, run various SQL SELECT 
+   queries and execute complex logic in Java.
 
 C: a function that can be applied to any table of the LU schema, making it a root table
 
