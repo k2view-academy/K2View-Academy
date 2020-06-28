@@ -16,12 +16,12 @@ The steps which are unique for Enrichment functions are as follows:
 
 ### How Do I Attach an Enrichment Function to an LU Table?
 
-An Enrichment function must be attached to one or more [LU tables](articles/06_LU_tables/01_LU_tables_overview.md) in the [LU schema](articles/03_logical_units/03_LU_schema_window.md) to be executed during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md). 
+An Enrichment function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU schema](articles/03_logical_units/03_LU_schema_window.md) to be executed during the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md). 
 
 Do the following:
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
-2. To attach the [Enrichment function in the Table Properties tab](articles/06_LU_tables/04_table_properties.md#enrichment-functions), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**. <!--Add the link from /articles/06_LU_tables/04_table_properties.md#enrichment-functions to here -->
+2. To attach the [Enrichment function](/articles/06_LU_tables/04_table_properties.md#enrichment-functions) using the Table Properties tab, click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**. 
 
    ![10_03_create_enrichment_2_1](/articles/10_enrichment_function/images/10_03_create_enrichment_2_1.PNG)
 
