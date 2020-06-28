@@ -24,7 +24,7 @@ Click **Database** to display the list of tables, select the table and drag it t
     ![image](/articles/07_table_population/images/07_11_01_screen.png)
     
 6.	Right click the **Lookup** and select **Minimize** to display only the Lookup’s connected fields.
-7.	In the [**Properties Tab**] (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
+7.	In the [**Properties Tab**](/articles/07_table_population/04_table_population_properties_tab.md) (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
 
 
 **Notes**  
