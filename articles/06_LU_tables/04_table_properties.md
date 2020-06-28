@@ -77,7 +77,7 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md"><strong>Enrichment Functions</strong></a></p>
+<p><h4><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md"><strong>Enrichment Functions</strong></a></p>
 </td>
 <td width="474">
 <p>Functions which are executed after all LU tables are populated.</p>
