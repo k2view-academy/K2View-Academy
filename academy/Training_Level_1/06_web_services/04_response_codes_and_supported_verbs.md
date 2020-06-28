@@ -26,11 +26,11 @@ On top of the supported verbs and the response codes, the following addtional in
    3. `Perform some basic input validations`
 2. `Question: Which supported verbs will you use?`
 3. `Question: What should be the input parameters and their data types?`
-4. `Question: How will the Web Service be invoked if only the DELETE verb is allowed?`
+
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Additional Web Service
 
-1. ```java
+1. ```
    Map<String,String> result = new HashMap<>();
    String name ="";
    String message="";
@@ -84,12 +84,10 @@ On top of the supported verbs and the response codes, the following addtional in
 }
    
 result.put(name, message);
-   return result;
-   ```
+   return result;  ``` ```
    
-   
-   
-2. `Answer : POST`
+     
+2. Answer : POST
 
 3. ```
    Answer: i_id : String ; i_info: List<Map<String,String>>
@@ -104,20 +102,10 @@ result.put(name, message);
          case_type":"Network Issue",
          "status":"Open"
        
-       }
-  ]
-   }
-```
+       } 
+  ]}  ```
    
-   
-   
-4. ```http
-   Answer: Only by using a URL, DELETE does not support request or response body
-   
-   http://localhost:3213/api/v1.0/lu/CUSTOMERLU/1/CASES?WHERE=ACTIVITY_ID=437 AND CASE_ID=225&token=test 
-   ```
 
-   
 
  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/03_Invoking_a_web_service.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/05_quiz.md)
 
