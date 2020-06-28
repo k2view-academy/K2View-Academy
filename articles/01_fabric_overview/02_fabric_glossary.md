@@ -4,10 +4,10 @@
 <tbody>
 <tr>
 <td width="200">
-<p><h2><strong>Item<strong></p>
+<p><h3><strong>Item<strong></p>
 </td>
 <td width="482">
-<p><h2><strong>Descriptions<strong></p>
+<p><h3><strong>Descriptions<strong></p>
 </td>
 </tr>
 <tr>
