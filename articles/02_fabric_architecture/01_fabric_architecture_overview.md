@@ -8,7 +8,7 @@ The following topics are discussed in this section:
 - [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#resiliency) 
 
 ## Fabric Systems Overview
-Fabric can be viewed as a distributed, business-entity-centric data management, designed to get, store, transform and expose data for real-time operational needs.
+Fabric can be viewed as a distributed, business-entity-centric data management system, designed to get, store, transform and expose data for real-time operational needs.
 
 Fabric takes ownership of the E2E data lifecycle, including:
 - Data discovery, modelling and curation.
@@ -17,21 +17,20 @@ Fabric takes ownership of the E2E data lifecycle, including:
 - Data storage, distribution, replication and encryption.
 - Data exposure.
 
-By storing the data in Fabric, data is more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to business data structure, freeing the data from the application silos and moving to a data-driven architecture.
+By storing the data in Fabric, the data is more available to its consumers. This also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to business data structure, freeing the data from the application silos and moving to a data-driven architecture.
 
-Data-warehouses and data-lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer that generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
+Data-warehouses and data-lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
 Fabric solves the following high-level requirements:
 
-- I want to be able to ask any question on a business entity (e.g. a customer), even if its data resides at tens or hundreds of applications.
-- I want to get up-to-date data
-- I want to get the answer is milliseconds
-- I want to use SQL for my queries
-- I want the data to be available at all times
-- I want the data to be as close as possible to the data consumers
-- I want the data to be secured at all times
+- Asking any question on a business entity (e.g. a customer), even if its data resides in tens or hundreds of applications.
+- Getting updated data in milliseconds.
+- Creating SQL queries.
+- Always available data.
+- Data that is as close as possible to the data consumers
+- Always secured data.
 
-In order to achieve that, Fabric is using a patented approach to store, sync and secure data that will be explained in this article. Make sure to read the [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the logical unit overview](/articles/03_logical_units/01_LU_overview.md) to get the background for the architecture.
+Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the logical unit overview](/articles/03_logical_units/01_LU_overview.md).  
 
 
 
