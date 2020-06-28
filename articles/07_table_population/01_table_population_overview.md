@@ -8,7 +8,7 @@ Each Table Population extracts data from a data source, transforms it when neede
 There are [two types of Source Objects](/articles/07_table_population/02_source_object_types.md) for a **Table Population** object:
 *	DB query, (default) that executes an SQL Select query on a predefined DB interface. 
 *	[Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
-Note that tables can also be populated or updated by [Enrichment functions] which, unlike Root functions, are executed after all LU tables are populated.
+Note that tables can also be populated or updated by [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md#enrichment-function-overview) which, unlike Root functions, are executed after all LU tables are populated.
 
 ### Table Population In an LU Schema 
 An [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects:
