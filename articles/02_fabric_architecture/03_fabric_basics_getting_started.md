@@ -28,7 +28,7 @@ Always start the seed nodes before other nodes in the Fabric cluster.</p>
 <p><h4><strong>k2fabric stop</strong></p>
 </td>
 <td width="600pxl" valign="top">
-<p>Stop the Fabric node</p>
+<p>Stop the Fabric node</p>.
 </td>
 </tr>
 <tr>
@@ -36,7 +36,7 @@ Always start the seed nodes before other nodes in the Fabric cluster.</p>
 <p><h4><strong>k2fabric restart</strong></p>
 </td>
 <td width="600pxl" valign="top">
-<p>Restart (stop and start) the Fabric node</p>
+<p>Restart (stop and start) the Fabric node</p>.
 </td>
 </tr>
 </tbody>
@@ -71,7 +71,7 @@ Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric
 
 The Drop process must be followed by the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
 
-Note that **$K2_HOME/fabric/scripts** also have a Windows version of the Reset script: **reset.bat**
+Note that **$K2_HOME/fabric/scripts** also have a Windows version of the Reset script: **reset.bat**.
 
 ### Reset.sh Usage
 
@@ -104,7 +104,7 @@ Run the script from $K2_HOME/fabric/scripts directory:
 <td width="580pxl">
     <p>Reset mode. The following modes are supported:</p>
 <ul>
-    <li><strong>drop</strong>, removes Fabric storage from the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the for keyspaces set in the black-list parameter if set.</li>
+    <li><strong>drop</strong>, removes Fabric storage from the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except for keyspaces set in the black-list parameter if set.</li>
     <li><strong>drop_all</strong>- removes Fabric storage on the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the keyspaces set in the black-list parameter and system keyspaces.</li>
     <li><strong>drop_local</strong>, removes Fabric storage on the local Fabric node only. For example: remove /dev/shm/ directory on the local node.</li>
 </ul>
@@ -178,7 +178,7 @@ The **reset.sh** script gets the list of the Fabric directories to be removed fr
 <p>STORAGE_DIR</p>
 </td>
 <td width="350pxl">
-<p>Fabric storage directory</p>
+<p>Fabric storage directory</p>.
 </td>
 <td width="300pxl">
 <p>${FABRIC_HOME}/storage</p>
