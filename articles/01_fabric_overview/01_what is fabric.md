@@ -10,13 +10,13 @@ Acting as a new data layer above existing data sources, Fabric controls data usi
 
 
 ### What is a Digital Entity?
-A Digital Entity is a digital version of a person, place or thing and is usually correlated to a business entity like a customer, order, patient, product or household. Once implemented, Fabric creates a micro data lake  physical database for each Digital Entity instance.
+A Digital Entity is a digital version of a person, place or thing and is usually correlated to a business entity like a customer, order, patient, product or household. Once implemented, Fabric creates a micro data lake physical database for each Digital Entity instance.
 
 ### Key Fabric Features
 * Modern and distributed architecture that **provides linear scalability and proven fault-tolerance** on commodity hardware and cloud infrastructures.
 * Data replication capabilities across nodes and datacenters that **provide customers with the peace of mind of knowing they can survive node failures or regional outages**.
-* Patented Digital Entity based micro-database, a data lake for each Digital Entity instance that **provides unparalleled performance with standard (ANSI) SQL queries**.
-* Patented data security approach, every micro-database is encrypted individually, **providing the peace of mind that massive data breaches are prevented**.
+* Patented Digital Entity based [microDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb), a data lake for each Digital Entity instance that **provides unparalleled performance with standard (ANSI) SQL queries**.
+* Patented data security approach, every microDB is encrypted individually, **providing the peace of mind that massive data breaches are prevented**.
 * Unique near-data-logic architecture that **enables millisecond performance and throughput for APIs**. 
 * Built-in integrated drag-and-drop data management capabilities to enable a **time-to-market that is measured in days to weeks and not weeks to months**.  
 
@@ -34,10 +34,10 @@ Note that Fabric is a less appropriate solution for storing and managing data th
 
 ### Getting Started
 **Learn about Main Fabric Platform Modules:**
-* Fabric Architecture.  
+* [Fabric Architecture.](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)  
 * [Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 * [Interfaces.](/articles/05_DB_interfaces/01_interfaces_overview.md)
-* Web Services.
+* [Web Services.](/articles/15_web_services/01_web_services_overview.md)
 * Reference Tables.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/01_fabric_overview/02_fabric_glossary.md)
