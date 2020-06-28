@@ -1,6 +1,7 @@
-#   LU Enhancement Flow
 
 ![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementPopMapState.PNG)                                                    
+
+#   LU Populations Flow
 
  
 
