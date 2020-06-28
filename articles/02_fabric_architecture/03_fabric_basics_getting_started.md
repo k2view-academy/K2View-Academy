@@ -178,7 +178,7 @@ The **reset.sh** script gets the list of the Fabric directories to be removed fr
 <p>STORAGE_DIR</p>
 </td>
 <td width="350pxl">
-<p>Fabric storage directory</p>.
+<p>Fabric storage directory.</p> 
 </td>
 <td width="300pxl">
 <p>${FABRIC_HOME}/storage</p>
