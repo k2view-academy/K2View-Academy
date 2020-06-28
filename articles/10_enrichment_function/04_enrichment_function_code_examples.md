@@ -1,7 +1,7 @@
 # Enrichment Functions - Code Examples
 ### Simple Example of an Enrichment Function that Populates a Computed Field
 
-Use an Enrichment function to validate the retrieved data and update the computed field in an LU schema's table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
+Use an Enrichment function to validate the retrieved data and update the column with the type = [Computed Field in an LU table](/articles/06_LU_tables/02_create_an_LU_table.md#column-type). For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
 
 1. Create an **Enrichment function**.
  <pre><code>
@@ -14,7 +14,7 @@ String sqlClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = 0 WHERE STATUS = ?";
 ludb().execute(sqlClosed,caseStatus);
 </code></pre>
 
-2. Add a new column to the **CASES table** with **Column Type** = **Computed Field** and attach the **Enrichment function** to the **CASES table** via the **Table Properties** tab. 
+2. Add a new column to the **CASES table** with **Column Type** = **Computed Field** and attach the **Enrichment function** to the **CASES table** via the Table Properties tab. 
 
 [Click to display an example of the **fnMonthsOpenCase** Enrichment Function in the Demo project.](/articles/demo_project)
 
@@ -82,7 +82,7 @@ Run validation functions to validate LUI data during the [Sync process](/article
 
 ### Example of an Enrichment Function that Populates the Param Table
 
-A common scenario in Test Data Management (TDM) projects is to add a Parameters LU table to the LU schema, populate it and then aggregate the LU's parameters for business logic and validations. For example, in the Orders LU you need to get various parameters for each Order type, like the number of MSISDNS or the number of open orders. The list of parameters and the SQL query to be executed on the LU tables for each parameter must be defined in a [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). The execution of the SQL queries for each parameter, and the population of the Parameters LU table will be implemented by the Enrichment function.
+A common scenario in Test Data Management (TDM) projects is to add a Parameters [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) to the LU schema, populate it and then aggregate the LU's parameters for business logic and validations. For example, in the Orders LU you need to get various parameters for each Order type, like the number of MSISDNS or the number of open orders. The list of parameters and the SQL query to be executed on the LU tables for each parameter must be defined in a [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). The execution of the SQL queries for each parameter, and the population of the Parameters LU table will be implemented by the Enrichment function.
 
 1. Create a new **translation** named **trnOrdersParams** that defines a list of parameters and an SQL query for calculating each parameter.
 
