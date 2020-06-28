@@ -8,8 +8,7 @@
 
 2.	Create the **Function** that uses the **Translation**:
 
-<pre><code>
-       
+<pre><code>  
 if (fabricErrorID != null) {
 	Map <String,String> rs = getTranslationValues("trnApplicationErrorList",new Object[]{fabricErrorID});
 	result.put("p_errno", rs.get("ErrorID"));
