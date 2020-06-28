@@ -118,7 +118,7 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
 
 #### Exercise 3 - Globals
     Question 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
-    deleted from     the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
+    deleted from the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
     
     Question 2: Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created 
     “CasesUpdateMonitor”. In your function use the Global value to decide whether to run the population or not, depending on the number 
