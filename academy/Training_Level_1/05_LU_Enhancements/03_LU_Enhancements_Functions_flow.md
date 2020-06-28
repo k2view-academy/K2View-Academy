@@ -146,11 +146,13 @@ Note: you will note that +1 & 5G are parameters that we currently define in the 
 
 
 Question 2. Case Notes Clean-up
-
-a. none
-b. Q1 -> 3708; Q2 -> 4
-c. Code sample	
-
+   
+   a. none
+    
+   b. Q1 -> 3708; Q2 -> 4
+    
+   c. Code sample	
+    
    ```java
   
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
