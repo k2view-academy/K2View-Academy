@@ -220,6 +220,14 @@ c. Code sample
 
 - [Decision Functions Recommendation](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 
+### Sync strategy for LU schemas and Decision functions
+
+- [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
+- [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md)
+- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md.md)
+- [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md)
+
+
   
 
 #### Exercise 2 - Decision functions
