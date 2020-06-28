@@ -81,7 +81,7 @@ The following tables discuss how user access control is managed using Fabric com
 <p><strong>Parameters:</strong></p>
 <ul>
 <li>&lt;'token_name'&gt; &ndash; mandatory, token name.</li>
-<li>[user 'user_name'] &ndash; optional, assign the token to a user.<strong>&nbsp;</strong>Note that you must assign a token to the user to enable the user to invoke the Built-in Product Web-Services.</li>
+<li>[user 'user_name'] &ndash; optional, assign the token to a user.<strong>&nbsp;</strong>Note that you must assign a token to the user to enable the user to invoke the Built-in Product Web Services.</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
@@ -148,13 +148,13 @@ Below is a list of GRANT OPERATION command parameters:
 <table>
 <tbody>
 <tr>
-<td width="150pxl">
+<td width="130pxl">
 <p><strong>Parameter Name</strong></p>
 </td>
-<td width="150pxl">
+<td width="130pxl">
 <p><strong>Mandatory</strong></p>
 </td>
-<td width="600pxl">
+<td width="640pxl">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -169,9 +169,9 @@ Below is a list of GRANT OPERATION command parameters:
 <p>Fabric operations included in the permission.</p>
 <p><strong>Examples:</strong></p>
 <ul>
-<li>ALL- give permission on all Fabric activities.</li>
-<li>ALL_WS- give permission on all Fabric Web-Services.</li>
-<li>Web-Service name</li>
+<li>ALL - give permission on all Fabric activities.</li>
+<li>ALL_WS - give permission on all Fabric Web Services.</li>
+<li>Web Service name</li>
 <li>Role activities: REVOKE_ROLE, ASSIGN_ROLE, EDIT_ROLE</li>
 <li>Other Fabric activities: READ, DROP_LUTYPE, DEPLOY, MIGRATE&hellip;</li>
 </ul>
@@ -189,8 +189,8 @@ Below is a list of GRANT OPERATION command parameters:
 <p>Fabric resources included in the permission:</p>
 <ul>
 <li>* - grant permissions on all Fabric resources.</li>
-<li>&lt;LUT&gt;- LU name. Grant permissions on a given LU.</li>
-<li>&lt;LUT&gt;.&lt;List of LUIs&gt;- grant permissions for a list of instance IDs in a given LU.</li>
+<li>&lt;LUT&gt; - LU name. Grant permissions on a given LU.</li>
+<li>&lt;LUT&gt;.&lt;List of LUIs&gt; - grant permissions for a list of instance IDs in a given LU.</li>
 </ul>
 </td>
 </tr>
@@ -215,10 +215,10 @@ Below is a list of GRANT OPERATION command parameters:
 <table>
 <tbody>
 <tr>
-<td width="450pxl" valign="top">
+<td width="400pxl" valign="top">
 <p><strong>Description</strong></p>
 </td>
-<td width="450pxl" valign="top">
+<td width="500pxl" valign="top">
 <p><strong>Example</strong></p>
 </td>
 </tr>
@@ -286,7 +286,7 @@ Below is a list of GRANT OPERATION command parameters:
 </tr>
 <tr>
 <td width="450pxl" valign="top">
-<p>Allow the role to invoke wsGetCustomerDetails Fabric Web-Service to access CRM LU</p>
+<p>Allow the role to invoke wsGetCustomerDetails Fabric Web Service to access CRM LU</p>
 </td>
 <td width="450pxl" valign="top">
 <p>grant wsGetCustomerDetails on CRM to role1;</p>
@@ -303,8 +303,8 @@ Enables users to give a generic access to a given Web-Services to access the Fab
 
 Notes:
 
-- Use **GRANT OPERATION** command to limit the access of the [Web-Service (WS)](/articles/01_fabric_overview/02_fabric_glossary.md#ws) to a given LU or LUI.
-- Use **GRANT OPERATION** command to grant an access to all Web-Services: populate the **Operation** parameter by **ALL_WS**.
+- Use **GRANT OPERATION** command to limit the access of the [Web Services](/articles/15_web_services/01_web_services_overview.md) to a given [Logical Unit](/articles/03_logical_units/01_LU_overview.md) or LUI.
+- Use **GRANT OPERATION** command to grant an access to all Web Services: populate the **Operation** parameter by **ALL_WS**.
 
 Below is a list of GRANT WS_NAME command parameters:
 
@@ -329,7 +329,7 @@ Below is a list of GRANT WS_NAME command parameters:
 <p>Yes</p>
 </td>
 <td width="318">
-<p>Fabric Web-Service name.</p>
+<p>Fabric Web Service name.</p>
 </td>
 </tr>
 <tr>
@@ -345,7 +345,6 @@ Below is a list of GRANT WS_NAME command parameters:
 </tr>
 </tbody>
 </table>
-
 
 
 #### GRANT WS_NAME Command - Examples
@@ -371,11 +370,11 @@ Below is a list of GRANT WS_NAME command parameters:
 </tbody>
 </table>
 
-#### Web-Services Authorization
+#### Web Services Authorization
 
-The [Web-Service](/articles/15_web_services/01_web_services_overview.md) authorization is done using the **token**:
-  - Project Web-Services: give permission to the **role** on the Web-Service or all Web-Services,  and assign the token to the role.
-  - Product Web-Services: assign the token to the user. The permission to the Product Web_Services are defined by the combination of the token assigned to the user and the permissions of the roles, assigned to the user. 
+The [Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is done using the **token**:
+  - Project Web Services: give permission to the **role** on the Web Service or all Web Services,  and assign the token to the role.
+  - Product Web Services: assign the token to the user. The permission to the Product Web Services are defined by the combination of the token assigned to the user and the permissions of the roles, assigned to the user. 
 
 **Example**
 <pre><code>
