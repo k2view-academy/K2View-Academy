@@ -124,11 +124,10 @@ Let's focus for now on the CustomerLU in the course's project.
    	String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
    
    //start matching test
-   if ((cellValue.matches("(.*)+1(.*)") == false)
-   {
-    formattedNumber = interCode + cellValue;
-    fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
-   } // end for statement       
+     if ((cellValue.matches("(.*)+1(.*)") == false){
+       formattedNumber = interCode + cellValue;
+       fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
+     } // end for statement       
    }// end loop through rows
    ```
 
@@ -224,7 +223,7 @@ c. Code sample
 
 - [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
 - [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md)
-- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md)
+- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md.md)
 - [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md)
 
 
