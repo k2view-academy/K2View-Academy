@@ -1,4 +1,4 @@
-![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementFuncState.PNG)    
+![](/academy/Training_Level_1/05_LU_Enhancements/images/EnhancementFuncState.PNG)    
 
 #   LU Enhancement Functions
                            
