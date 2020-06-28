@@ -118,7 +118,7 @@ Run the script from $K2_HOME/fabric/scripts directory:
 <p>No</p>
 </td>
 <td width="580pxl">
-<p>List of Cassandra keyspaces or Kafka topic names that must be excluded from the drop.</p>
+<p>List of <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> or Kafka topic names that must be excluded from the drop.</p>
 <p>The names have double quotes and are separated by a space.</p>
 </td>
 </tr>
@@ -130,7 +130,7 @@ Run the script from $K2_HOME/fabric/scripts directory:
 <p>No</p>
 </td>
 <td width="580pxl">
-<p>Config.ini file path.</p>
+<p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini">Config.ini file</a> path.</p>
 </td>
 </tr>
 </tbody>
