@@ -80,7 +80,7 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window** wher
 2.	In the **Indexes** tab, click **Delete** to delete the index.
 
 ### How Do I Get a List of Indexes? 
-The **DESCRIBE** command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
+The **DESCRIBE** command is one of Fabric View commands and it is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
 To get the list of indexes for a specified table, use one of the following commands.
 
 **Syntax:**
@@ -93,7 +93,7 @@ DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table wit
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address.
 </code></pre>
 
-Click for more information about The DESCRIBE Command.
+[Click for more information about The Fabric View commands](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view).
 
 
 [![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/02_create_an_LU_table.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/06_LU_tables/04_table_properties.md)
