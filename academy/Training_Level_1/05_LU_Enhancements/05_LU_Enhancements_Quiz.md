@@ -25,7 +25,7 @@ B: A root function
 C: Built-in functions or any other java standard utilities
 
 
-(***Solution 1: A ***).
+(***Solution 1: C ***).
 
 
 
