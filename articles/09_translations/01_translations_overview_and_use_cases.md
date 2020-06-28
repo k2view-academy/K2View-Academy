@@ -3,11 +3,12 @@
 ### What Is a Translation?
 A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level or both. 
 *	Translations defined on a Shared Objects level can be used in all objects in a project. 
-*	When a Translation is used for a Web Service it must be defined on a Shared Objects level.  
+*	When a Translation is used for a [Web Services](/articles/15_web_services/01_web_services_overview.md) it must be defined on a Shared Objects level.  
+
 There are several options for populating data in a Translation in the Fabric Studio: 
 *	Manual population via the Translation window. 
 *	Retrieving the Translation’s data from a file. The data is loaded from the file only once.
-*	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each Synch process.
+*	Retrieving the Translation’s data from a database to create a Dynamic Translation. The data is loaded from the database during each [Sync](/articles/01_fabric_overview/02_fabric_glossary.md#sync) process.
 
 [Click for more information about Data Population in Translations.](/articles/09_translations/03_data_population_in_a_translation.md#data-population-in-a-translation)
 
@@ -162,12 +163,12 @@ A Translation Schema has the following structure:
 <li>Text.</li>
 <li>Blob (applicable only for a DB that supports Blob).</li>
 <li>Auto increment. Creates an automatic sequence starting from 1 and incremented by 1. The value cannot be updated by the user.</li>
-<li>Project function. Fabric provides a list of all functions available in the project. The value must be selected from the dropdown list.</li>
-<li>LUDB function, applicable for Translations on LU levels only. Fabric provides a list of LUDB functions available in the LU. The value must be selected from the dropdown list.</li>
-<li>LUDB table, applicable for Translations on LU levels only. Fabric provides a list of LU tables available in the LU. The value must be selected from the dropdown list.</li>
-<li>DB interface. Fabric provides a list of theInterfaces in the project. The value must be selected from the dropdown list.</li>
-<li>SQL. Fabric enables testing the SQL query by opening a Query Builder from the Translation Schema window.</li>
-<li>LU Name, applicable for Translations on a Shared Objects level only. Fabric provides a list of all LU available in the project. The value must be selected from the dropdown list.</li>
+<li><a href="/articles/07_table_population/08_project_functions.md"> Project function</a>. Fabric provides a list of all functions available in the project. The value must be selected from the dropdown list.</li>
+<li><a href="/articles/07_table_population/08_project_functions.md#ludb-function"> LUDB function</a>, applicable for Translations on LU levels only. Fabric provides a list of LUDB functions available in the LU. The value must be selected from the dropdown list.</li>
+<li><a href="/articles/06_LU_tables/01_LU_tables_overview.md"> LUDB table</a>, applicable for Translations on LU levels only. Fabric provides a list of LU tables available in the LU. The value must be selected from the dropdown list.</li>
+<li><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"> DB Interface</a>. Fabric provides a list of the Interfaces in the project. The value must be selected from the dropdown list.</li>
+<li>SQL. Fabric enables testing the SQL query by opening a Query Builder from the Table Schema window.</li>
+<li><a href="/articles/03_logical_units/01_LU_overview.md "> LU Name</a>, applicable for Translations on a Shared Objects level only. Fabric provides a list of all LU available in the project. The value must be selected from the dropdown list.</li>
 </ul>
 </td>
 </tr>
