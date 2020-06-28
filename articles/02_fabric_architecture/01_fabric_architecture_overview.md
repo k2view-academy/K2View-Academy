@@ -17,7 +17,7 @@ Fabric takes ownership of the E2E data lifecycle, including:
 - Data storage, distribution, replication and encryption.
 - Data exposure.
 
-By storing the data in Fabric, it is more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from the application silos and moving to a data-driven architecture.
+By storing the data in Fabric, it becomes more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from the application silos and moving to a data-driven architecture.
 
 Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
@@ -35,7 +35,7 @@ Fabric does all this using a patented approach for storing, syncing and securing
 
 ## Fabric Server Main Components
 
-To deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
+Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
 
 
 ![](/articles/02_fabric_architecture/images/fabOverviewPic.png)
@@ -43,7 +43,7 @@ To deliver the above-mentioned functionality, Fabric relies on a resilient archi
 
 ### Fabric Storage
 
-To deliver the above requirements, Fabric uses three types of storage engines:
+Fabric uses three types of storage engines:
 
 #### MicroDB ![](/articles/02_fabric_architecture/images/microDBPic.gif)
 The core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit])(https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/_LU_overview.md) for every business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
@@ -54,13 +54,13 @@ A MicroDB provides several advantages:
 - Holding the data of only one business entity, they are very small and can be stored in RAM and provide unparalleled query performance.
 - Individual encryption at MicroDB or field levels.
 - Using SQLite they offer standard SQL operations.
-- No business impact, continued availability of data during major structural modifications.  
+- No business impact whereby providing continued availability of data during major structural modifications.  
 
     
 #### CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
 An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MircoDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across [nodes](#_Fabric_Cluster) c.f. 6.1
 
-A common database is always available for query on every Fabric session enabling joining data between Common tables and a MicroDB in one SQL query.
+A common database is always available to be queried during every Fabric session enabling joining data between Common tables and a MicroDB in one SQL query.
 
 
 #### Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
@@ -80,11 +80,11 @@ Responsible for all transformations and data manipulations and where Fabric solv
 
 ### Fabric Studio
 
-Fabric Studio is the development tool for building Fabric projects. The studio is a Windows application designed to enable users to execute the following steps:
+Fabric Studio is a Windows application development tool for building Fabric projects, designed to enable users to execute the following steps:
 
 - Create interfaces to external sources.
 - Design LU and Schemas and create their associated instances.
-- Create resources of all types to be used across a Project (such as functions, tables, variables).
+- Create resources of all types to be used across a project (such as functions, tables, variables).
 - Execute data manipulations using the SQL builder or the integrated Java IntelliJ development environments.
 - Create REST APIs to access your data model.
 - Design data flows.
@@ -96,9 +96,6 @@ Fabric Studio is the development tool for building Fabric projects. The studio i
 
 ## Data Flow
 
-
-### Overview
-
 Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate with data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
 
 ![](/articles/02_fabric_architecture/images/fabDataFlow.png)
@@ -106,7 +103,7 @@ Data flows in and out of Fabric via multiple types of interfaces and data format
 
 ### Fabric Data Access Layer
 
-This section discusses the protocols and standard interfaces through which data can be injected from external sources the into the Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
+This section discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
 
 
 #### Standard DML via JDBC or ADO.NET
@@ -115,8 +112,8 @@ A user / application can connect to Fabric via JDBC or ADO.NET, open a transacti
 
 
 #### REST API and Web Services
-External sources can also read and write data using standard [REST web-services](/articles/15_web_services/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric Storage.
-Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric Server.
+External sources can also read and write data using standard [REST Web Services](/articles/15_web_services/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric Storage.
+Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
 #### CDC (Change Data Capture) via Kafka
@@ -125,7 +122,7 @@ To publish change events externally via this interface, Fabric provides a full C
 
 
 #### Manual / Scripted Input
-External data can also be injected to inFabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
+External data can also be injected into theFabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
 
 
 
