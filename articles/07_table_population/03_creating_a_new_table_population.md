@@ -27,7 +27,7 @@ When an LU table has two populations, a second Table Population can extract data
     *	Double click the [**Interface Name**] and drag a table into the working area.
     *	Use the **Newest LUDB File** or **Newest Reference File** options to populate the data from the table of the current LU. Double click the [**LU Name**] and drag the LU table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file [using the Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) or [Reference file]. 
 6.	Click **Create as DB Query** to create the DB query source object in the working area. 
-7.	Optional: use the **Edit Query** option to edit the input query via the **Query Builder**, for example, to choose specific columns or conditions in SQL statements. Do either:
+7.	Optional: use the **Edit Query** option to edit the input query via the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview), for example, to choose specific columns or conditions in SQL statements. Do either:
     *	Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
     *	Double click the **source object**.
 8.	To connect the source object to the target LU table, right click the **DB Query object** and either:
