@@ -166,7 +166,7 @@ Question 2. Case Notes Clean-up
    String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
    String SQLNetworkNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
    
-   Db.Rows rowsC = ludb().fetch(SQLCASES);
+   Db.Rows rowsC = fabric().fetch(SQLCASES);
    for (Db.Row row:rowsC){
    	String cellStatus=""+row.get("STATUS");
    	String cellCaseID=""+row.get("CASE_ID");
@@ -187,7 +187,7 @@ Question 2. Case Notes Clean-up
    	
    }
    	
-   Db.Rows rowsN = ludb().fetch(SQLCASENote);
+   Db.Rows rowsN = fabric().fetch(SQLCASENote);
    for (Db.Row row:rowsN){
    String cellNoteText=""+row.get("NOTE_TEXT");
    String cellCaseID=""+row.get("CASE_ID");
