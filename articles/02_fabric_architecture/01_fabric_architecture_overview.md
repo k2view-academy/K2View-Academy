@@ -17,7 +17,7 @@ Fabric takes ownership of the E2E data lifecycle, including:
 - Data storage, distribution, replication and encryption.
 - Data exposure.
 
-By storing the data in Fabric, the data is more available to its consumers. This also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to business data structure, freeing the data from the application silos and moving to a data-driven architecture.
+By storing the data in Fabric, the data is more available to its consumers. This also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from the application silos and moving to a data-driven architecture.
 
 Data-warehouses and data-lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
@@ -30,15 +30,12 @@ Fabric solves the following high-level requirements:
 - Data that is as close as possible to the data consumers
 - Always secured data.
 
-Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the logical unit overview](/articles/03_logical_units/01_LU_overview.md).  
-
-
-
+Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
 
 
 ## Fabric Server Main Components
 
-In order to deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each-one designed to address a different part of the overall data flow.
+To deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
 
 
 ![](/articles/02_fabric_architecture/images/fabOverviewPic.png)
@@ -46,24 +43,22 @@ In order to deliver the above-mentioned functionality, Fabric relies on a resili
 
 ### Fabric Storage
 
-In order to deliver the above requirements, Fabric uses 3 types of storage engines:
+To deliver the above requirements, Fabric uses three types of storage engines:
 
-#### Micro-databases ![](/articles/02_fabric_architecture/images/microDBPic.gif)
-At the core of Fabric storage, Fabric creates (and maintains) a micro-database ([Logical Unit](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/01_LU_overview.md)) for every instance of a business entity.
+#### MicroDB ![](/articles/02_fabric_architecture/images/microDBPic.gif)
+The core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit])(https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/_LU_overview.md) for every business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
 
-A micro-database is an SQLite file. It supports everything SQLite provides out of the box.
+A MicroDB provides several advantages:
 
-This method provides several advantages:
-
-- Encapsulation of ALL data of a single business entity (e.g. a customer) in one place so our consumers can ask any question about data usually residing in many different data-sources.
-- Micro-databases are very small (hold the data of only one business entity) and therefore can be stored completely in RAM and provide unparalleled query performance.
-- Can be encrypted individually at the micro-database or even field levels.
-- Using SQLite, provides standard SQL operations.
-- Continued availability of data (No business impact) on major structural modification
+- Encapsulation of ALL data of a single business entity (like a customer) in one place so that consumers can ask any question about data usually residing in many different data sources.
+- Holding the data of only one business entity, they are very small and can be stored in RAM and provide unparalleled query performance.
+- Individual encryption at the MicroDB or field levels.
+- Using SQLite, offers standard SQL operations.
+- No business impact, continued availability of data during major structural modifications.  
 
     
 #### CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-This is an additional SQLite Database schema with the purpose of storing the reference tables common to all Micro-databases (e.g. a table storing a list of objects to which all microdatabase schemas will point to). In a distributed system, one copy of each reference table will be stored on each node. Fabric will handle their synchronization across [nodes](#_Fabric_Cluster) c.f. 6.1
+This is an additional SQLite Database schema for storing reference tables common to all MicroDB (e.g. a table storing a list of objects to which all microdatabase schemas will point to). In a distributed system, one copy of each reference table will be stored on each node. Fabric will handle their synchronization across [nodes](#_Fabric_Cluster) c.f. 6.1
 
 The common database is always available for query on every Fabric session enabling joining of data between Common tables and micro-database in a single SQL query.
 
