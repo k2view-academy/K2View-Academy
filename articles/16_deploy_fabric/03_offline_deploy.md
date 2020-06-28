@@ -1,6 +1,6 @@
 # Offline Deploy
 
-New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server and is also known as an Offline Deploy. 
+New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server (also known as an Offline Deploy).
 
 An **Offline Deploy** is implemented by running the **Deploy** command on the Fabric Server using artifacts that can be created either by the Fabric Studio or by the script on the server side.
 
@@ -36,7 +36,7 @@ There are two ways to perform an Offline Deployment:
 
    Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
 
-   ###### Example:
+   **Example**:
 
    DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
 
@@ -95,10 +95,10 @@ The following table describes the syntax and the mandatory/optional parameters w
    <table width="900px">
    <tbody>
    <tr>
-   <td width="270px">
+   <td width="200px">
    <p><strong>DEPLOY</strong></p>
    </td>
-   <td width="630px">
+   <td width="700px">
    <p><strong>Usage</strong>: DEPLOY &lt;LUT&gt; WITH JAR &lt;'jar_path'&gt; ZIP_FILE &lt;'zip path'&gt; [WS_METHODS &lt;'string'&gt;] NOSYNC &lt;Boolean&gt;.</p>
    <p><strong>Options</strong>:</p>
    <ul>
@@ -119,7 +119,6 @@ Note that NOSYNC TRUE is the same as checking <a href="/articles/14_sync_LU_inst
    </tr>
    </tbody>
    </table>
-   <p>&nbsp;</p>
-   <p>&nbsp;</p>
+
    
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
