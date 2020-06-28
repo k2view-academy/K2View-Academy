@@ -12,7 +12,7 @@ ludb().fetch(sql, i_customer_id).each(row->{
 });
 </code></pre>
 
-2.	Add a Fabric command, for example **set environment** using a predefined Global variable:
+2.	Add a Fabric command, for example **set environment** using a predefined [Global](/articles/08_globals/01_globals_overview.md) variable:
 
 <pre><code>
 fabric().execute("set environment='" + SOURCE_ENV_NAME + "'");
