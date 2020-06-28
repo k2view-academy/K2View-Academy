@@ -1,4 +1,4 @@
-![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementTablesState.PNG) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/EnhancementTablesState.PNG) 
 
 #   LU Enhancement Tables & Globals
 
