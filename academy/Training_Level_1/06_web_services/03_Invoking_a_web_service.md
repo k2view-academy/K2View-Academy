@@ -48,6 +48,8 @@ Using the training materials and examples covered so far:
 
 4. `Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?`
 
+5. `Question: Which version of you Web Service will be executed if the version is not set?`
+
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Invoking a Web Service
 
 1. ```java
@@ -69,6 +71,8 @@ Using the training materials and examples covered so far:
 3. `Answer: 3`
 
 4. `Answer: 5G tether`
+
+5. `Answer: The Web Version that was the last to be deployed` 
 
 
 
