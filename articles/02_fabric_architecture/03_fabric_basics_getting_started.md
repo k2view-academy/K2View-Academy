@@ -28,7 +28,7 @@ Always start the seed nodes before other nodes in the Fabric cluster.</p>
 <p><h4><strong>k2fabric stop</strong></p>
 </td>
 <td width="600pxl" valign="top">
-<p>Stop the Fabric node</p>.
+<p>Stop the Fabric node.</p>.
 </td>
 </tr>
 <tr>
@@ -36,7 +36,7 @@ Always start the seed nodes before other nodes in the Fabric cluster.</p>
 <p><h4><strong>k2fabric restart</strong></p>
 </td>
 <td width="600pxl" valign="top">
-<p>Restart (stop and start) the Fabric node</p>.
+<p>Restart (stop and start) the Fabric node.</p>.
 </td>
 </tr>
 </tbody>
