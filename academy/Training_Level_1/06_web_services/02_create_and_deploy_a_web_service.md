@@ -21,7 +21,7 @@ Following are the basic steps to create a Web Service and understand its structu
 Let's create our first simple Web Service which will retrieve basic infomration on a specific instance of a customer:
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
-2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from .Note that you'll need to select the required columns. Please select CUSTOMER_ID, SSN, FIRST_NAME and LAST_NAME.
+2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from. Note that you'll need to select the required columns. Please select CUSTOMER_ID, SSN, FIRST_NAME and LAST_NAME.
 3. Set the input parameter as **i_id** and data type as **String**
 4. Edit the Web Service function  :
    1. Replace the [Instance Id] with the input parameter-**i_id**
