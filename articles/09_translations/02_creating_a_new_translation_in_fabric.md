@@ -4,7 +4,7 @@
 
 A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level. 
 * Translations defined on a Shared Objects level can be used in all objects included in a project. 
-* When a Translation is used for a Web Service it must be defined on a Shared Objects level.
+* When a Translation is used for a [Web Services](/articles/15_web_services/01_web_services_overview.md) it must be defined on a Shared Objects level.
 
 ## How Can I Create a New Translation in Fabric?
 1.	Go to **Project Tree** > **Logical Units** > **[LU Name]**, right click **Translations** > **New Translation** to display the [Translation Schema tab](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema).
@@ -20,7 +20,7 @@ A Translation is a Fabric Studio object that transforms data from one set of val
 5.	To populate the data manually: 
        * Enter the **Input value** combinations to generate the **Primary Key**. A Primary Key defines data transformation rules and is a combination of all Input fields. Therefore, each combination must be unique. 
        * Enter the **Output value** combinations of each data Translation rule. The Output value does not need to be unique and can be repeated. 
-       * Optional: if a **Field Type = SQL**, validate the **query** using the **Query Builder**. To do so, click the **SQL** icon in the corner of the field and then click **Execute Query** in the **Query Builder** screen.
+       * Optional: if a **Field Type = SQL**, validate the **query** using the [**Query Builder**](/articles/11_query_builder/01_query_builder_overview.md). To do so, click the **SQL** icon in the corner of the field and then click **Execute Query** in the **Query Builder** screen.
        
 6.	Click **Save** to display the **New Item** dialog box.  
 
@@ -38,7 +38,7 @@ The following Translation includes a list of Input and Output combinations where
 
 ### Example of a Translation where Data Type = SQL
 
-In the following Translation the **Field Type = SQL** whereby the query must be validated via the Query Builder.
+In the following Translation the **Field Type = SQL** whereby the query must be validated via the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md).
 
 ![image](/articles/09_translations/images/09_02_02%20Data%20Type%20%3D%20SQL.png)
 
