@@ -4,7 +4,7 @@ A **Table Population** can be created by either:
 *	Dragging the table from the **LU Schema DB Objects tab** into the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) working area to create the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) including its Table Population object.
 *	Creating an **LU table** using the **New Table from SQL Based DB Query** or **New Table from SQL Based Root Function** options  in the LU Schema window to create the LU table including its Table Population object.
 *	Using the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to  automatically create the LU table and a DB query population for each LU table.
-*	**Manually**, by right clicking the **table** under the **Project Tree** and then clicking **New Table Population**. 
+*	**Manually**, by right clicking the [**Table Name**] under the **Project Tree** and then clicking **New Table Population**. 
 
 LU tables can be populated by either a DB query or a Root function source object. To decide which source object to use, refer to the comparison analysis of [Table Population Source Object Types](/articles/07_table_population/02_source_object_types.md).
 
