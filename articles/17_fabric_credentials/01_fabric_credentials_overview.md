@@ -65,9 +65,9 @@ Fabric database credentials are saved in Cassandra under the [k2auth keyspace](/
 </tbody>
 </table>
 
-Fabric database credentials are validated each time a user attempts to access Fabric via the console, Web Service or other interfaces. Permissions can be set on an [LUT](/articles/01_fabric_overview/02_fabric_glossary.md#lu--lut) level or an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
+Fabric database credentials are validated each time a user attempts to access Fabric via the console, [Web Services](/articles/15_web_services/01_web_services_overview.md) or other interfaces. Permissions can be set on an [LU](/articles/01_fabric_overview/02_fabric_glossary.md#lu--lut) level or an [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) level.
 
-Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true.** By default, this parameter is **false.**
+Note that to avoid authentication of a user on an LUI level, set **DISABLE_LUI_AUTH** in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file to **true**. By default, this parameter is **false**.
 
 ## Setting Credentials
 
