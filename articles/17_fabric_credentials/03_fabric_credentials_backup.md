@@ -2,7 +2,7 @@
 
 When testing the system, user credentials setup may need to be repeated for a number of reasons. For example, due to an environmental cleanup or when creating additional environments. 
 
-To prevent data loss and to speed up the setup process, it is recommended to create a Crontab expression that periodically backs up the credentials. The backup script can export the data from Cassandra into a text file. If needed, this data can be imported from the text file into Cassandra.  
+To prevent data loss and to speed up the setup process, it is recommended to create a Crontab expression that periodically backs up the credentials. The backup script can export the data from [Cassandra](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#cassandra-) into a text file. If needed, this data can be imported from the text file into Cassandra.  
 
 ### Example of Exporting Data
 
