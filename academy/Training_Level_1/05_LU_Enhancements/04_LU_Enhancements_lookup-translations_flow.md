@@ -117,36 +117,36 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
 
 
 #### Exercise 3 - Globals
-    Question 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
+    Step 1: Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
     deleted from the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
     
-    Question 2: Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created 
+    Step 2: Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created 
     “CasesUpdateMonitor”. In your function use the Global value to decide whether to run the population or not, depending on the number 
     of records in the CASES tables of the CRM_DB database. 
     
-    Question 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
+    Step 3: Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
     Set the globals OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the java "compareTO" function to compare dates. 
     
-    Question 4: 
+    Step 4: 
     Attach both functions to their relevant table.
     Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? (Using the Data 
     viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31)
     Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function exercise ? 
     
-    Question 5:
-    Using a new Global called "*InternationalCode*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1001 
+    Step 5:
+    Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1000
     (that do not have an international code already) to a new international code set to "+44"
 
 
 
 
  #### Solution Exercise 3 - Globals
-    Question 1 & 2:
+    Step 1 & 2:
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
 
 
-Question 3:      
+Step 3:      
          
 
 ```java
@@ -163,8 +163,19 @@ Question 3:
         }
       }
 ```
-Question 4: Answer: 19 entries
+Step 4: Answer: 19 entries/Yes
 
+Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
+            
+                if ((cellValue.matches("(.*)+(.*)") == false))
+                {
+                    //reportUserMessage(cellValue);
+                    ** formattedNumber = INTERCODE_UK + cellValue; //Makes use of the GLOBAL here w/o having to declare it **
+                    fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
+            // ending the if statement		
+                }
+
+}
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
