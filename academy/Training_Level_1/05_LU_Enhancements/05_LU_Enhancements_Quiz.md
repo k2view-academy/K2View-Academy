@@ -1,3 +1,5 @@
+![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementQuizState.PNG) 
+
 # LU Enhancements Quiz
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Quiz.png) 

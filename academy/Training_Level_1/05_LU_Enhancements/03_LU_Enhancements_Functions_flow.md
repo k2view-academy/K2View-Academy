@@ -1,8 +1,7 @@
-
+![](/academy/Trainin_Level_1/05_LU_Enhancements/images/EnhancementFuncState.PNG)    
 
 #   LU Enhancement Functions
-
- ![](/academy/05_LU_Enhancements/images/fabric_main_flow_05.png)                                                    
+                           
 
  
 
