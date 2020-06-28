@@ -5,36 +5,23 @@ The following topics are discussed in this section:
 - [Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#data-flow)
 - [Search](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#search)
 - [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#security)
-- [Resililiency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#resiliency) 
- 
+- [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#resiliency) 
+
 ## Fabric Systems Overview
+Fabric can be viewed as a distributed, business-entity-centric data management, designed to get, store, transform and expose data for real-time operational needs.
 
-Fabric includes everything that is required to deliver the data you need, where and when you need it.
+Fabric takes ownership of the E2E data lifecycle, including:
+- Data discovery, modelling and curation.
+- Data acquisition and syncronization.
+- Data validation, aggregation, enrichment, matching, masking, cleansing and transformation.
+- Data storage, distribution, replication and encryption.
+- Data exposure.
 
-Fabric can be viewed as a Distributed, Business-Entity-centric, Data management System, designed to get, store, transform and expose data for operational real-time needs.
+By storing the data in Fabric, data is more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to business data structure, freeing the data from the application silos and moving to a data-driven architecture.
 
-Fabric takes ownership of the E2E data lifecycle:
+Data-warehouses and data-lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer that generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
-- Data discovery, modelling and curation
-- Data acquisition and synchronization
-- Data validation, aggregation, enrichment, matching, masking, cleansing and transformation
-- Data storage, distribution, replication and encryption
-- Data exposure
-
-Unlike data virtualization solutions, Fabric stores the data.
-
-By storing the data in Fabric we reduce the load on the systems of record, removing the dependency on legacy performance and availability. Fabric provides the ability to get the data close to its consumers, remove the dependency on legacy applications vendors cost &amp; time-to-implement. The result is a move from vendor data structure to business data structure, freeing the data from the application silos and moving to a data-driven architecture.
-
-Data-warehouses and data-lakes are really good at providing an answer to big questions (e.g. avg invoice amount for all customers in specific state for the last 3 months). They are the right choice for BI, Analytics, ML/AI Training, etc.
-
-Data-warehousing and data-lakes are the wrong choice for answering many complex questions about one customer in real-time and definitely the wrong technology/architecture if you need to do this for many customers at the same time.
-
-The main reasons for that are:
-
-- The amount of data required to be scanned in order to get the data for one customer.
-- In most cases, the data for that single customer resides in different servers.
-
-Fabric solves these high-level requirements:
+Fabric solves the following high-level requirements:
 
 - I want to be able to ask any question on a business entity (e.g. a customer), even if its data resides at tens or hundreds of applications.
 - I want to get up-to-date data
