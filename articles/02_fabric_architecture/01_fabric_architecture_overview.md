@@ -1,6 +1,5 @@
 # Fabric Architecture Overview
-
-The following document has the followsing sections:
+The following topics are discussed in this section:
 - [Fabric Systems Overview](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#1-fabric-systems-overview)
 - [Fabric Server Main Components](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components)
 -....
@@ -49,7 +48,7 @@ In order to achieve that, Fabric is using a patented approach to store, sync and
 
 
 
-## 2. Fabric server main components
+## 2. Fabric Server Main Components
 
 In order to deliver the above-mentioned functionality, Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each-one designed to address a different part of the overall data flow.
 
@@ -128,7 +127,7 @@ Fabric users can utilize a large number of possible configurations between their
 ![](/articles/02_fabric_architecture/images/fabDataFlow.png)
 
 
-### 3.2 Fabric Data Access layer
+### 3.2 Fabric Data Access Layer
 
 In this section we will go over all the protocols and standard interfaces through which data can be injected from External Sources into Fabric DB (microDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
 
@@ -148,7 +147,7 @@ Fabric supports real-time, inbound data updates via Kafka interface using the iD
 To publish change events out via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of micro database changes.
 
 
-#### 3.2.4 Manual/Scripted input
+#### 3.2.4 Manual / Scripted Input
 External data can also be injected to FabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the fabric console application.
 
 
@@ -268,10 +267,6 @@ Users can define a number of environments for source connectivity according to t
 ### 5.4 Masking Algorithm
 
 In addition, in order to protect your company&#39;s data, Fabric masking service creates structurally similar but inauthentic version of your data that can be used for development, integration or testing purposes.
-
-
-
-
 
 
 ## 6 Resiliency
