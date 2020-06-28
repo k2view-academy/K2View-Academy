@@ -139,17 +139,15 @@ d. Update line numbers only for 5G/LTE contracts
   if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
-Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants 
-into global parameters pertaining to the entire project and its multiple LUs. 
+*Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants 
+into global parameters pertaining to the entire project and its multiple LUs.*
 
 
 
 Question 2. Case Notes Clean-up
    
    a. none
-    
    b. Q1 -> 3708; Q2 -> 4
-    
    c. Code sample	
     
    ```java
@@ -204,8 +202,7 @@ Question 2. Case Notes Clean-up
    }
    }
    ```
-
-​                                                                           
+                                                                       
 
     Question 3. 
         Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
