@@ -232,16 +232,15 @@ Question 2. Case Notes Clean-up
 #### Exercise 2 - Decision functions
 
 
-    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen if a change 
-    happens on the external source.
+    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen the number of
+    entries in a given external source's table is above a specific threshold.
     
-    Building on top of previous exercise, build a decision function based on the following criteria:
+    Build a decision function based on the following criteria:
     
-    -  If the number of entries in the CASES table of the CRM_DB database has increased then the sync function will return a boolean 
+    -  If the number of entries in the CASES table of the CRM_DB database is higher than the threshold=25000 then the sync function will return a boolean 
     variable - *syncind* set to TRUE
     
-    - At this stage you should hardcode the value of the current number of entries of the CASES table. You should extract that value 
-    using a "select count *" statement in the query builder
+    - At this stage you should hardcode the value of the threshold. Again we will see later in this section how to set this threshold as a global parameter.
 
   
 
@@ -255,14 +254,14 @@ Question 2. Case Notes Clean-up
 // happened in the CRM_CASES table will print a user report 
 // with the Notes associated
 String SQLCASES="SELECT count(*) FROM CRM_DB.CASES";
-int LASTNumberRows=25144; //latest known number of cases in CRM_DB.CASES
+int CRMCases_threshold=25000; //latest known number of cases in CRM_DB.CASES
 Boolean syncInd = false;
 
 String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
 reportUserMessage(count);
 int cnt=Integer.parseInt(count);
 
-if ( cnt >= LASTNumberRows){
+if ( cnt >= CRMCases_threshold=25000){
 reportUserMessage("new case in !!");
 syncInd = true;	
 }
