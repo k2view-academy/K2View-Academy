@@ -61,7 +61,7 @@ Let's focus for now on the CustomerLU in the course's project.
          b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
                +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
     
-         c. Lets write a java function that will modify any LUI *<u>Associated Line</u>* fields to the international format using the 
+         c. Lets write a java function that will modify any of the LUI "Associated Line" fields to the international format using the 
          following IDs contract_ID (2787 & 2788) to validate the code. 
               - tips:
                    - use the ludb class to fetch data from the LU database  
@@ -139,7 +139,8 @@ d. Update line numbers only for 5G/LTE contracts
   if ((cellValue.matches("(.*)+1(.*)") == false)&&(cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
-Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants into global  parameters pertaining to the entire project and its multiple LUs. 
+Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants 
+into global parameters pertaining to the entire project and its multiple LUs. 
 
 
 
