@@ -15,7 +15,7 @@ Before moving to the next item, you can test what you've learned by taking the f
 
 a.     A Java virtual object representingbusiness data sitting on top of large tables. 
 
-b.     An actual micro-database containingall the data related to a business entity. 
+b.     An actual micro-database (MicroDB) containingall the data related to a business entity. 
 
 c.     Schema representing the relevantdata for a business case.
 
