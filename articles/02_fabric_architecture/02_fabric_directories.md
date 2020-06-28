@@ -28,7 +28,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <p>Fabric scripts:&nbsp;</p>
 <ul>
 <li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment scripts</a></li>
-<li>iidFinder scripts</li>
+<li>IIDFinder scripts</li>
 <li>Fabric execution monitoring scripts</li>
 <li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset scripts</a></li>
 <li>Stop and start scripts, executed by <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#start-and-stop-fabric-commands">k2fabric stop and k2fabric start commands.</a></li>
@@ -159,8 +159,6 @@ The Fabric Studio creates the **FabricHome** directory under each Fabric project
 
 
 <!--Add links:-->
-
-<!--Drop 1-  fabric architecture-->
 <!-- Drop 2- Broadway -->
 <!-- Drop 3- iidFinder, LU storage -->
 <!-- Drop 4- Trace files -->
