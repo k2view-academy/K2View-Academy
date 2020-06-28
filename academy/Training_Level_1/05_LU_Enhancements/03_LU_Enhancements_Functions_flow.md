@@ -76,22 +76,23 @@ Let's focus for now on the CustomerLU in the course's project.
     Question 2. Case Notes Clean-up
     
     The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
-    Tamar (Instance ID = 1472) keeps on receiving to her mailing address old bills as well as apology letters about issues she is experimenting with the 
-    network. The case notes reflect issues of cases that are still opened.
+    Tamar (Instance ID = 1472) keeps on receiving to her mailing address old bills as well as apology letters about issues she 
+    is experimenting with the network. The case notes reflect issues of cases that are still opened.
     
         a. Let's first list the contracts owned by Tamar in the data viewer.
                - How many contracts does she own ?
     
            Lets look at the different notes in the Case_Note table of Tamar's LUI
-               - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type description 
-               (in the cases table)
+               - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type 
+               description (in the cases table)
                - How many cases are still opened ?
     
         b. Write a java function that operates the following data transformations:
     
-           - All case notes belonging to cases of the type "Billing issues" should be changed to "insolvent customer due to alien assimilation"
-           - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated to a phone and 
-           is no longer network compatible"
+           - All case notes belonging to cases of the type "Billing issues" should be changed to 
+             "insolvent customer due to alien assimilation"
+           - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated 
+             to a phone and is no longer network compatible"
            - All open cases should be set to Status="closed"
 
  
