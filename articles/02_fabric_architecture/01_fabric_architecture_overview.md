@@ -17,7 +17,7 @@ Fabric takes ownership of the E2E data lifecycle, including:
 - Data storage, distribution, replication and encryption.
 - Data exposure.
 
-By storing the data in Fabric, the data is more available to its consumers. This also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from the application silos and moving to a data-driven architecture.
+By storing the data in Fabric, it is more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from the application silos and moving to a data-driven architecture.
 
 Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
@@ -52,7 +52,7 @@ A MicroDB provides several advantages:
 
 - Encapsulation of ALL data of a single business entity (like a customer) in one place so that consumers can ask any question about data usually residing in many different data sources.
 - Holding the data of only one business entity, they are very small and can be stored in RAM and provide unparalleled query performance.
-- Individual encryption at a MicroDB or field levels.
+- Individual encryption at MicroDB or field levels.
 - Using SQLite they offer standard SQL operations.
 - No business impact, continued availability of data during major structural modifications.  
 
@@ -66,7 +66,7 @@ A common database is always available for query on every Fabric session enabling
 #### Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
 Fabric uses Cassandra for three main purposes:
 
-- Storage for all MicroDB (LUI) as compressed blob chunks.
+- Storage of all MicroDB (LUI) as compressed blob chunks.
 - Fabric application management database.
 - General data-store for any project need.
 
@@ -75,18 +75,16 @@ Fabric uses Cassandra for three main purposes:
 
 ### Fabric Business Logic
 
-This is where all transformations and data manipulations happen and where Fabric will tackle the business functions you wish to apply on the data that you will import from external sources and store locally c.f. section 3.3.2
+Responsible for all transformations and data manipulations and where Fabric solves business functions to be applied on the data imported from external sources and stored locally.
 
 
 ### Fabric Studio
 
-Fabric Studio is the development tool for building Fabric Solutions.
-
-The studio is a Windows application designed to enable users to execute the following steps:
+Fabric Studio is the development tool for building Fabric projects. The studio is a Windows application designed to enable users to execute the following steps:
 
 - Create interfaces to external sources.
-- Design Logical units, schemas and create their associated instances.
-- Create resources of all types to be used across a project (such as functions, tables, variables).
+- Design LU and Schemas and create their associated instances.
+- Create resources of all types to be used across a Project (such as functions, tables, variables).
 - Execute data manipulations using the SQL builder or the integrated Java IntelliJ development environments.
 - Create REST APIs to access your data model.
 - Design data flows.
@@ -101,16 +99,14 @@ The studio is a Windows application designed to enable users to execute the foll
 
 ### Overview
 
-Data flows in and out of Fabric via multiple types of interfaces and data formats.
-
-Fabric users can utilize a large number of possible configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate with data spread across multiple databases and data centers and to generate its uniquely patented Digital Entities.
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate with data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
 
 ![](/articles/02_fabric_architecture/images/fabDataFlow.png)
 
 
 ### Fabric Data Access Layer
 
-In this section we will go over all the protocols and standard interfaces through which data can be injected from External Sources into Fabric DB (microDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
+This section discusses the protocols and standard interfaces through which data can be injected from External Sources the into Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
 
 
 #### Standard DML via JDBC or ADO.NET
