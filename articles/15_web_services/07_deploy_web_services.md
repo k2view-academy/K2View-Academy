@@ -27,7 +27,7 @@ Run the DEPLOY command using the following syntax:
 
 Notes: 
 
-- The LUT parameter must be k2_ws, which is the name of the key space created for the Web Services. 
+- The LUT parameter must be k2_ws, which is the name of the keyspace created for the Web Services. 
 - The WS_METHODS field can be populated using the list of deployed Web Services. If this field is empty, the DEPLOY command deploys all Web Services into Fabric. 
 
 [Click for more information about Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md).
