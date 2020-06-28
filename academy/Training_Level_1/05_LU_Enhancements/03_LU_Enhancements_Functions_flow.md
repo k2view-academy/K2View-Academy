@@ -174,7 +174,7 @@ Question 2. Case Notes Clean-up
    	if (cellStatus.matches("Open"))
    	{
    	open_cases.add(cellStatus);
-    ludb().execute(SQLCaseStatus,statusClose,cellStatus);
+    fabric().execute(SQLCaseStatus,statusClose,cellStatus);
    	}
    	if (cellCaseType.matches("Billing Issue"))
    	{
@@ -195,10 +195,10 @@ Question 2. Case Notes Clean-up
    boolean ans1 = billing_cases.contains(cellCaseID);
    boolean ans2 = network_cases.contains(cellCaseID);
    if (ans1){
-   ludb().execute(SQLBillingNote,newBillingNote,cellCaseID);	
+   fabric().execute(SQLBillingNote,newBillingNote,cellCaseID);	
    }
    if (ans2){
-   ludb().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
+   fabric().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
    }
    }
    ```
