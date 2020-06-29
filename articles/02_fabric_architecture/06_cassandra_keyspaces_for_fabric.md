@@ -1,6 +1,10 @@
 # Cassandra Keyspaces for Fabric
 
-Fabric uses the Cassandra DB as a storage layer and also as a Fabric application management database. Fabric creates several keyspaces for its operation. Each Fabric keyspace starts with a **k2** and each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
+Fabric uses the Cassandra DB as a storage layer and also as a Fabric application management database. 
+
+Fabric creates several keyspaces for its operation:
+-  Each Fabric keyspace starts with a **k2**.
+-  Each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name**. For example: **k2view_customer**.
 
 **Notes:**
 
@@ -10,7 +14,7 @@ Fabric uses the Cassandra DB as a storage layer and also as a Fabric application
 
 ## Login Cassandra DB
 
-Use the following command to connect the Cassandra DB from the Cassandra server:
+Use the following command to connect to the Cassandra DB from the Cassandra server:
 
 **cqlsh -u `<username>` -p `<password>` <ip_address>**;
 
@@ -40,7 +44,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 <p>k2system</p>
 </td>
 <td rowspan="5" width="250pxl">
-<p>Fabric main system keyspace</p>
+<p>Fabric main system keyspace.</p>
 </td>
 <td width="150pxl">
 <p><strong>Table Name</strong></p>
@@ -213,7 +217,7 @@ Click for more information about Fabric Security Hardening.</p>
 <p>k2_auditing</p>
 </td>
 <td width="350pxl">
-<p>Saves all activities performed on Fabric, when AUDIT is set to ON in config.ini file.</p>
+<p>Saves all activities performed on Fabric, when AUDIT is set to ON in the config.ini file.</p>
 </td>
 </tr>
 <tr>
@@ -233,7 +237,7 @@ Click for more information about Fabric Security Hardening.</p>
 <p>K2view_&lt;LU Name&gt;</p>
 </td>
 <td rowspan="3" width="250pxl">
-<p>A new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU</a></p>
+<p>A new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU.</a></p>
 </td>
 <td width="150pxl">
 <p><strong>Table Name</strong></p>
@@ -247,7 +251,7 @@ Click for more information about Fabric Security Hardening.</p>
 <p>entity</p>
 </td>
 <td width="350pxl">
-    <p>Stores the list of all <a href= "/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUIs</a> and their micro databases.</p>
+    <p>Stores the list of all <a href= "/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUIs</a> and their MicroDB.</p>
 </td>
 </tr>
 <tr>
