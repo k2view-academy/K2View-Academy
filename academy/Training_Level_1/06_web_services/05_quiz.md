@@ -8,57 +8,57 @@ Excellent! you have completed the Fabric Web Services learning items.
 
 
 
-#### True or False: The Fabric Web-Service layer will return the same results for each role and user as long as these users have permission to execute this web- service:
+#### True or False: The Fabric Web Service layer will return the same results for each role and user as long as these users have permission to execute this Web Service:
 
-a. True
+a. True.
 
- b. False
+ b. False.
 
 #### When you use Swagger and call  GET /lu/CustomerLU API, which information will you get on CustomerLU?:
 
-a. Tables metdata and links;
+a. Tables metdata and links.
 
-b. Specific table, column;value pair
+b. Specific table, column;value pair.
 
-c. All tables, Column:columntype pair
+c. All tables, Column:columntype pair.
 
 d. Both b. and c.
 
 #### In Fabric you can create functions to be used as:
 
-a. Root of population maps 
+a. Roots of population maps. 
 
-b. New SQL query functions
+b. New SQL query functions.
 
-c. Web-Services
+c. Web Services.
 
- d. All of the above
+ d. All of the above.
 
-#### Which of the following Verbs will support the following URL:
+#### Which of the following Verbs support the following URL:
 
 http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC 
 
 ####  with  Request Body: null, Response Body: null and json structure as an input:
 
-a. GET
+a. GET.
 
-b. DELETE
+b. DELETE.
 
-c. POST
+c. POST.
 
-d. PUT
+d. PUT.
 
-e. All of the above 
+e. All of the above.
 
-#### The URL structure, for a  Web Service  which has 1 input parameter not set as part of the URL path,  should be:
+#### The URL structure for a  Web Service  that has an input parameter that is not set as part of the URL path, should be:
 
 ```rst
 http://[IP address]:[PORT]/api/[VERSION_NO]/[Web-Service name]?[param1 name]=[param1 value]&token=[TOKEN NAME]&[format=json]
 ```
 
-a. False
+a. False.
 
-b. True
+b. True.
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/04_response_codes_and_supported_verbs.md)
 
