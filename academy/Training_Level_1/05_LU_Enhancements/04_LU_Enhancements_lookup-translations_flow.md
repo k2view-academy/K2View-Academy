@@ -104,7 +104,10 @@ customer to the address LU table so the full details of the customers are readil
 #### Exercise 3 - Globals
             ##### Step 1: 
             Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
-            deleted from the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
+            deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the INVOICES table.
+            Using the Query Builder, execute an SQL query with a WHERE statement that selects all records older than OLDINVOICES 
+            globals set to "2015-12-31"
+            
             ##### Step 2: 
             Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created 
             “CasesUpdateMonitor”. In your function use the Global value to decide whether to run the population or not, depending on 
@@ -130,6 +133,10 @@ customer to the address LU table so the full details of the customers are readil
             ##### Step 1 & 2:
             Globals definition:    
             ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
+            
+            SQL Query with embedded reference to Globals:
+            Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
+            
 
             ##### Step 3:      
 
