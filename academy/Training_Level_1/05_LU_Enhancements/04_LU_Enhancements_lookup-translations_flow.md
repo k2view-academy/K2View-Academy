@@ -35,10 +35,10 @@ In this section we will address the following types of tables:
 
 
 
-            #### Exercise 1 - Lookup tables
+#### Exercise 1 - Lookup tables
+Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
+customer to the address LU table so the full details of the customers are readily available.
 
-            Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
-            customer to the address LU table so the full details of the customers are readily available.
             ##### Step 1: 
             Which table should you consider and why ?
             ##### Step 2: 
@@ -51,9 +51,7 @@ In this section we will address the following types of tables:
             Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
 
 
-
-
-            #### Solution Exercise 1 - Lookup table
+#### Solution Exercise 1 - Lookup table
 
             ##### Step 1: 
             The table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
@@ -72,8 +70,7 @@ In this section we will address the following types of tables:
 
 
 
-
-            #### Exercise 2 - Translations
+#### Exercise 2 - Translations
             We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
             ##### Step 1: 
             Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
@@ -85,8 +82,7 @@ In this section we will address the following types of tables:
             What is the Lat/Long value for Instance LUI: 1000, What is the city international code for LUI: 2217
 
 
-
-            #### Solution Exercise 2 - Translations
+#### Solution Exercise 2 - Translations
 
             ##### Step 1 & 2:
             Translation table schema:
@@ -101,9 +97,9 @@ In this section we will address the following types of tables:
             ##### Step 3:
             InstanceID 1000: 39.7771::-86.1458
             InstanceID 2217: 1840034016
+            
 
-
-            #### Exercise 3 - Globals
+#### Exercise 3 - Globals
             ##### Step 1: 
             Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
             deleted from the CustomerLU INVOICE table depending on the value of ISSUED_DATE field.
@@ -125,8 +121,7 @@ In this section we will address the following types of tables:
 
 
 
-
-            #### Solution Exercise 3 - Globals
+#### Solution Exercise 3 - Globals
             ##### Step 1 & 2:
             Globals definition:    
             ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
@@ -159,7 +154,8 @@ In this section we will address the following types of tables:
                         // ending the if statement		
                             }
                     }
-
+                    
+                    
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/05_LU_Enhancements_Quiz.md)
 
