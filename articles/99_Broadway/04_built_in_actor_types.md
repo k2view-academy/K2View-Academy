@@ -26,16 +26,26 @@ The Broadway built-in Actors are split into the following categories, while each
 <td width="433">
 <p>Most commonly used Actors</p>
 </td>
-<td width="600">??</td>
+<td width="600">
+<p><strong>Concat</strong> Actor concatenates an array of strings and join them with the given delimiter.&nbsp;</p>
+<p><strong>Const</strong> Actor - the input value argument is copied to the output value argument.</p>
+<p><strong>JavaScript</strong> Actor&nbsp;executes the Javascript provided in the 'script' parameter.&nbsp;The script returns the value of the last line.</p>
+</td>
 </tr>
 <tr>
 <td width="210">
 <p><h4><strong>basic</strong></p>
 </td>
 <td width="433">
-<p>??</p>
+<p>The Actors which serve as the basic building blocks for Broadway flow creation.</p>
 </td>
-<td width="600">??&nbsp;</td>
+<td width="600">
+<p><strong>ForLoop</strong> Actor iterates over a range of numbers.</p>
+<p><strong>Logger</strong> Actor&nbsp;writes a message to the log file, referencing entries from the params and Actor inputs.</p>
+<p><strong>InnerFlow</strong> Actor executes a Broadway flow.</p>
+<p><strong>LuFunction</strong> Actor&nbsp;executes Studio function logic. Parameters to the function execution are picked up from input arguments or, if not there, from the params input argument.</p>
+<p><strong>Email</strong> Actor&nbsp;sends an email using a given SMTP interface.</p>
+</td>
 </tr>
 <tr>
 <td width="210">
