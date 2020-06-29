@@ -95,7 +95,7 @@ b. Write a java function that operates the following data transformations:
    - All open cases should be set to Status="closed"
 
  
-##### Question 3. Attaching the enrichment function to the appropriate table
+##### Question 3: Attaching the enrichment function to the appropriate table
   - What happens if you attach the enrichment function to the table: CASES ? 
   - To which table should the function be attached ? 
 
