@@ -57,7 +57,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/config</h4>
 </td>
 <td width="600pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric configuration files.</a></p>
+<p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Holds Fabric configuration files.</a></p>
 <p>&nbsp;</p>
 </td>
 </tr>
