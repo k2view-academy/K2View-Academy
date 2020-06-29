@@ -11,9 +11,8 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 [Fabric Credentials Commands](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example - Invoking a Web Service
-
-1. Right click the **Web Service** that you created and select **Invoke Web Service**.
-2. Choose the prefered environent from context menu: The Fabric server name or Local Fabric (debug).
+ 
+1. Right click the **Web Service** and select **Invoke Web Service** and then the **prefered environment**: The Fabric server name or Local Fabric (debug).
    Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all options: GET, POST, PUT and DELETE, All of these options are available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
    What is the response? `"Failed to authorize"` 
@@ -25,7 +24,7 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
    4. `assign role 'admin' to user 'test_user';`
    5. `Create token test;`
    6. `assign role 'admin' to token test;`
-5. Let's go back and try to execute the Web Service again, Click the **Lock**, set a valid **Token** and close.
+5. Let's go back and try to execute the Web Service again. Click the **Lock**, set a valid **Token** and close.
 7. Set the **i_id** to **82** and execute. 
    What is the Customer's first name? `Anthony`
 
@@ -33,19 +32,19 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 
 Using the training materials and examples covered so far:
 
-1. `Create a new version for **wsGetCustomer** which will enhance the current functionality:`
+1. Create a new version for **wsGetCustomer** which will enhance the current functionality:
 
-   1. `Return the Customer's details icluding their contracts and associated subscribers. The reponse should returned based on SUBSCRIBER.VIP_STATUS. Only the Customer full name should appear as part of the response` 
+   1. Return the Customer's details icluding their contracts and associated subscribers. The reponse should returned based on SUBSCRIBER.VIP_STATUS. Only the Customer full name should appear as part of the response.  
 
       **Note**, make sure the WS path is the same for both Web Services.
 
-2. `Question: What is the SSN of Customer 1?`
+2. Question: What is the SSN of Customer 1?
 
-3. `Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?`
+3. Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?
 
-4. `Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?`
+4. Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?
 
-5. `Question: Which version of you Web Service will be executed if the version is not set?`
+5. Question: Which version of you Web Service will be executed if the version is not set? 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Invoking a Web Service
 
@@ -63,13 +62,13 @@ Using the training materials and examples covered so far:
 
    
 
-2. `Answer: 5153527856`
+2. Answer: 5153527856 
 
-3. `Answer: 3`
+3. Answer: 3 
 
-4. `Answer: 5G tether`
+4. Answer: 5G tether 
 
-5. `Answer: The Web Version that was the last to be deployed` 
+5. Answer: The Web Version that was the last to be deployed  
 
 
 
