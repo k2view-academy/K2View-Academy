@@ -135,8 +135,8 @@ is experimenting with the network. The case notes reflect issues of cases that a
   if ((cellValue.matches("(.*)+1(.*)") == false) && (cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
-    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants 
-    into global parameters pertaining to the entire project and its multiple LUs.*
+    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn 
+    these constants into global parameters pertaining to the entire project and its multiple LUs.*
 
 
 
