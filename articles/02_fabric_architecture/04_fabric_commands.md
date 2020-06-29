@@ -517,8 +517,8 @@ The Fabric System of Record (SOR) functionality enables running a single transac
 Fabric has a set of commands to support the SOR functionality:
 
 - **BEGIN**, start a transaction.
-- **SELECT**, **UPDATE**, **INSERT**, and **DELETE** - run Select, Insert, Update and Delete transactions on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common table data.
-- **COMMIT** and **ROLLBACK**- commit or rollback the updates.
+- **SELECT**, **UPDATE**, **INSERT**, and **DELETE**, run Select, Insert, Update and Delete transactions on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common table data.
+- **COMMIT** and **ROLLBACK**, commit or rollback the updates.
 
 Fabric also enables writing the transaction into a delta table using the **SET ASYNC_TRX=true** command.
 
