@@ -1,7 +1,6 @@
 # Creating and Deploying a Web Service
 
-The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses:
-
+The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses: 
 [Web Services Overview](/articles/15_web_services/01_web_services_overview.md)
 
 ### Creating a Web Service
@@ -18,9 +17,9 @@ The following are the basic steps for creating a Web Service and understanding i
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example
 
-**Creatinng a Web Service**
+**Creating a Web Service**
 
-Let's create our first simple Web Service which will retrieve basic infomration on a specific instance of a customer:
+Let's create our first simple Web Service which will retrieve basic information on a specific instance of a customer:
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
 2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from. Note that you'll need to select the required columns. Please select CUSTOMER_ID, SSN, FIRST_NAME and LAST_NAME.
