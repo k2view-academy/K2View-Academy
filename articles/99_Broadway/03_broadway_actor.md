@@ -109,5 +109,5 @@ Each parameter has the following attributes:
 - Parameter Definition
 - Parameter Value
 
-
+<!-- Add explanation about parameters + actor remark (click ... on the Actor in the flow) -->
 
