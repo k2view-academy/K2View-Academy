@@ -103,8 +103,8 @@ Run the script from $K2_HOME/fabric/scripts directory:
     <p>Reset mode. The following modes are supported:</p>
 <ul>
     <li><strong>drop</strong>, removes Fabric storage from the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except for keyspaces set in the black-list parameter if set.</li>
-    <li><strong>drop_all</strong>- removes Fabric storage on the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the keyspaces set in the black-list parameter and system keyspaces.</li>
-    <li><strong>drop_local</strong>, removes Fabric storage on the local Fabric node only. For example: remove /dev/shm/ directory on the local node.</li>
+    <li><strong>drop_all</strong>, removes Fabric storage on the local Fabric node, Kafka topics, and all <a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Fabric-related keyspaces</a> except the keyspaces set in the black-list parameter and system keyspaces.</li>
+    <li><strong>drop_local</strong>, removes Fabric storage on the local Fabric node only. For example, remove /dev/shm/ directory on the local node.</li>
 </ul>
 </td>
 </tr>
@@ -139,9 +139,9 @@ Run the script from $K2_HOME/fabric/scripts directory:
 
 When a Fabric cluster clean-up is required, it is recommended to execute the **reset.sh** script in the following order:
 
-- Run on one node - ./reset.sh drop_all; - cleans Fabric storage on the local Fabric node and removes Cassandra keyspaces and Kafka topics. Removing Cassandra keyspaces and Kafka topics impacts  the entire Fabric cluster.
+- Run on one node, ./reset.sh drop_all; - cleans Fabric storage on the local Fabric node and removes Cassandra keyspaces and Kafka topics. Removing Cassandra keyspaces and Kafka topics impacts  the entire Fabric cluster.
 
-- Run on all other nodes - ./reset.sh drop_local; - cleans Fabric storage on the local Fabric node. To reset the Fabric cluster correctly, execute the **reset.sh** script on all fabric nodes, and only then [start](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-start) each Fabric node individually.
+- Run on all other nodes, ./reset.sh drop_local; - cleans Fabric storage on the local Fabric node. To reset the Fabric cluster correctly, execute the **reset.sh** script on all fabric nodes, and only then [start](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-start) each Fabric node individually.
 
 ### Reset Fabric - Remove Fabric Directories
 
