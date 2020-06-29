@@ -1,4 +1,4 @@
-# Fabric- Main Configuration Files
+# Fabric - Main Configuration Files
 
 ## Configuration Directory
 
@@ -26,7 +26,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p>&nbsp;</p>
 </td>
 <td width="600pxl" valign="top">
-<p>This is the main configuration file of Fabric. It contains different sections of parameters and each section has its own parameters. Fabric default values are set for the commented parameters.</p>
+<p>Fabric's main configuration file holding different sections of parameters where each section has its own parameters. Default Fabric values are set for the commented parameters.</p>
 </td>
 </tr>
 <tr>
@@ -34,7 +34,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p>iifConfig.ini</p>
 </td>
 <td width="600pxl" valign="top">
-<p>The main configuration file of the IIDFinder mechanism.</p>
+<p>The IIDFinder mechanism's main configuration file.</p>
 </td>
 </tr>
 <tr>
@@ -42,7 +42,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid">node.id</a></p>
 </td>
 <td width="600pxl" valign="top">
-<p>This file lists the Fabric node identifiers for the Affinity mechanism and the support of several Fabric clusters on one Cassandra cluster.</p>
+<p>List of Fabric node identifiers for the Affinity mechanism and supports several Fabric clusters on one Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
@@ -72,7 +72,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p>modules</p>
 </td>
 <td width="600pxl" valign="top">
-<p>A list of internal Fabric modules. Each module depends on the previous modules in the file. You can comment some of the internal Fabric modules and <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart">restart the Fabric node</a> to avoid starting the commented modules and have a lightweight start on Fabric. For example: comment the <strong>jobs</strong> module to avoid running jobs on the Fabric node. The following modules can be commented:</p>
+<p>List of internal Fabric modules. Each module depends on the previous modules in the file. You can comment some of the internal Fabric modules and <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart">restart the Fabric node</a> to avoid starting the commented modules and have a lightweight start on Fabric. For example: comment the <strong>jobs</strong> module to avoid running jobs on the Fabric node. The following modules can be commented:</p>
 <ul>
 <li><strong>jobs</strong>,running Fabric jobs.</li>
 <li><strong>webserver</strong>,connecting Fabric via http or https. For example: <a href="/articles/15_web_services/01_web_services_overview.md">invoke Fabric WS</a>, <a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">deploy Fabric implementation from Fabric Studio.</a></li>
@@ -89,7 +89,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 
 ### config.ini
 
-This is the main configuration file of Fabric. It contains different sections of parameters and each section has it own parameter. Fabric default value for commented parameters.
+Fabric's main configuration file which holds different sections of parameters where each section has it own parameter. Fabric default value for commented parameters.
 
 <table width="900pxl">
 <tbody>
