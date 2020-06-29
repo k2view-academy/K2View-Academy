@@ -51,10 +51,10 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 <table>
 <tbody>
 <tr>
-<td width="300pxl">
+<td width="300pxl" valign="top">
 <p><strong>Object Name</strong></p>
 </td>
-<td width="600pxl">
+<td width="600pxl" valign="top">
 <p>Populated by the object name for each Actor, added to the flow. By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
 <p>The Actor Name is displayed in the following format:</p>
 <ul>
@@ -63,10 +63,10 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 </td>
 </tr>
 <tr>
-<td width="300pxl">
+<td width="300pxl" valign="top">
 <p><strong>Parameters Filter</strong></p>
 </td>
-<td width="600pxl">
+<td width="600pxl" valign="top">
 <p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
 <ul>
 <li>All Fields- default option- display the list of all fields of the Actor type and its ancestor Actors.</li>
