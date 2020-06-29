@@ -10,18 +10,18 @@ The Broadway built-in Actors are split into the following categories, while each
 <tbody>
 <tr>
 <td width="80pxl">
-<p><strong>Category Name</strong></p>
+<p><h3><strong>Category</strong></p>
 </td>
 <td width="100pxl">
-<p><strong>Category Description</strong></p>
+<p><h3><strong>Category Description</strong></p>
 </td>
 <td width="720pxl">
-<p><strong>Actor Example per Category</strong></p>
+<p><h3><strong>Actor Example per Category</strong></p>
 </td>
 </tr>
 <tr>
 <td width="210">
-<p><strong>Favorites</strong></p>
+<p><h4><strong>Favorites</strong></p>
 </td>
 <td width="433">
 <p>Most commonly used Actors</p>
@@ -30,7 +30,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </tr>
 <tr>
 <td width="210">
-<p><strong>basic</strong></p>
+<p><h4><strong>basic</strong></p>
 </td>
 <td width="433">
 <p>??</p>
@@ -39,7 +39,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </tr>
 <tr>
 <td width="210">
-<p><strong>date/time</strong></p>
+<p><h4><strong>date/time</strong></p>
 </td>
 <td width="433">
 <p>Various date and time manipulation functions, such as DateAdd, DateFormat, Now.</p>
@@ -51,7 +51,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210"><strong>db</strong></td>
+<td width="210"><h4><strong>db</strong></td>
 <td width="433">Actions to be performed on a DB Interface, such as creation of a new table, load of data or execution of a DB command.&nbsp;</td>
 <td width="600">
 <p><strong>DbCommand</strong> Actor&nbsp;performs database commands against a DB command interface.</p>
@@ -59,7 +59,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210"><strong>&nbsp;file system</strong></td>
+<td width="210"><h4><strong>file system</strong></td>
 <td width="433">Commands to be performed in the file system, sych as copy, list or remove.&nbsp;</td>
 <td width="600">
 <p><strong>cp</strong> Actor copies a file.</p>
@@ -67,7 +67,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210"><strong>logic</strong></td>
+<td width="210"><h4><strong>logic</strong></td>
 <td width="433">Logical operation on two Actors&nbsp;<strong>a</strong> and <strong>b</strong> which returns a boolean result&nbsp;- <strong>true or false</strong>.&nbsp;
 <p>Broadway will convert the following types of Input parameters to booleans:</p>
 <ul>
@@ -85,7 +85,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210"><strong>math</strong></td>
+<td width="210"><h4><strong>math</strong></td>
 <td width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
 <td width="600">&nbsp;
 <p><strong>Aggregate</strong> Actor aggregates values.&nbsp;It receives a number or collection of numbers and calculates the sum, count, average, min and max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;</p>
@@ -93,12 +93,12 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210"><strong>parsers</strong></td>
+<td width="210"><h4><strong>parsers</strong></td>
 <td width="433">Various parsers which can receive as Input stream in different kinds of formats, for example, CSV, Jason or XML.</td>
 <td width="600"><strong>XmlParser</strong> Actor receives an input stream represented by an iterable collection of blobs or strings.&nbsp;The parser is running until the end of the stream is detected. It returns a collection of parsed objects or a single object in case single is set to true.&nbsp;</td>
 </tr>
 <tr>
-<td width="210"><strong>queue</strong></td>
+<td width="210"><h4><strong>queue</strong></td>
 <td width="433">Publish / Subscribe messages to the queue</td>
 <td width="600">
 <p><strong>Publish&nbsp;</strong>Actor publishes messages using a message broker.&nbsp;</p>
@@ -107,7 +107,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210"><strong>streams</strong></td>
+<td width="210"><h4><strong>streams</strong></td>
 <td width="433">Various streams manipulation functions, such as Compress, FileRead, Http.</td>
 <td width="600">
 <p><strong>FileRead</strong> Actor reads data from a file given an interface and the path. The file is opened lazily when an Actor reads the output stream. Once the file is read completely, it is closed. If the file is not read completely, it is closed at the end of the flow.</p>
@@ -115,7 +115,7 @@ The Broadway built-in Actors are split into the following categories, while each
 </td>
 </tr>
 <tr>
-<td width="210">&nbsp;<strong>strings</strong></td>
+<td width="210"><h4><strong>strings</strong></td>
 <td width="433">
 <p>Various strings manipulation functions, such as Concat, Split, Trim.</p>
 <p>Graphit and JsonStringify Actors are also included in this category.</p>
