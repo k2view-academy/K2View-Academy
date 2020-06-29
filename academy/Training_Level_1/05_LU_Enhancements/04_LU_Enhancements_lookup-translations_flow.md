@@ -85,7 +85,7 @@ In this section we will address the following types of tables:
 
     We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
     
-    Question 1: Using the worldcities.csv file provided with the course, create a new translation called trnCityGeoLoc that will 
+    Question 1: Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
     return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the 
     CustomerLU Address table
     
