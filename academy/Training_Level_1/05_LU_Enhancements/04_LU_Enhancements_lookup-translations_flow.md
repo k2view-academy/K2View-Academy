@@ -86,7 +86,7 @@ We wish to associate a unique geo-location code to the address table, to build a
 
 #### Solution Exercise 2 - Translations
 
-            Step 1 & 2:
+            Steps 1 & 2:
 Translation table schema:
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
 
@@ -136,7 +136,7 @@ functions from the previous exercises, please execute the following steps:
 
 
 #### Solution Exercise 3 - Globals
-            Step 1 & 2:
+            Steps 1 & 2:
             SQL Query with embedded reference to Globals:
             Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
             
