@@ -55,7 +55,7 @@ Type **fabric** in the Fabric server command line.
 
 ### Enter the Local Fabric Server
 
-Open the **Fabric Console** via the Windows Search option. When opening a project, the Fabric Studio logs into the local Fabric server. 
+Open the **Fabric Console** via the **Windows Search** option. When opening a project, the Fabric Studio logs into the local Fabric server. 
 
 Note that if there are no open projects in the Fabric Studio, you will not be able to open the local Fabric server.
 
@@ -71,9 +71,7 @@ Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric
 
 The Drop process must be followed by the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
 
-Note that **$K2_HOME/fabric/scripts** also have a Windows version of the Reset script: **reset.bat**.
-
-### Reset.sh Usage
+Note that the Windows version of the **$K2_HOME/fabric/scripts** Reset script is **reset.bat**.
 
 Run the script from $K2_HOME/fabric/scripts directory: 
 
