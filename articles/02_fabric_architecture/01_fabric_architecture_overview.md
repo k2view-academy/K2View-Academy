@@ -17,7 +17,7 @@ Fabric takes ownership of the E2E data lifecycle, including:
 - Data storage, distribution, replication and encryption.
 - Data exposure.
 
-By storing the data in Fabric, it becomes more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from the application silos and moving to a data-driven architecture.
+By storing the data in Fabric, it becomes more available to its consumers. It also reduces the load on systems of records and removes dependency, costs and time on legacy applications, their vendors and installation. The result is a move from a vendor data structure to a business data structure, freeing the data from application silos and moving to a data-driven architecture.
 
 Data warehouses and data lakes are a good solution for big questions like the average invoice amount of all customers in a specific state over the last 3 months. They also are the right choice for BI, Analytics, ML/AI Training and so on. However, due to amount of data required to be scanned to get the data about one customer which generally resides in different servers, both solutions are  the wrong choice for answering multiple complex questions about one customer in real-time. They are also definitely the wrong technology / architecture to do this for multiple customers simultaneously. 
 
@@ -103,7 +103,7 @@ Data flows in and out of Fabric via multiple types of interfaces and data format
 
 ### Fabric Data Access Layer
 
-This section discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
+The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
 
 
 #### Standard DML via JDBC or ADO.NET
@@ -132,13 +132,13 @@ When data needs to be processed before being stored or exposed, it goes through 
 
 #### Protocols
 **Files:**
-Data can be captured via SFTP or any other transfer protocol and/or streaming service. Standard file types such as Json/XML/CSV can be parsed and injected. Users can also easily introduce new formats.
+Data can be captured via SFTP or any other transfer protocol and/or streaming service. Standard file types such as JSON/XML/CSV can be parsed and injected. Users can also easily introduce new formats.
 
 **Queue Messaging Services (QMS):**
 Fabric allows subscription to queue messaging systems to stream-in data using services such as Apache Kafka, JMS and rabbit. Fabric can then step-in and apply transformations and logic to incoming events.
 
 **APIs:**
-Fabric can consume eternal APIs such as Web Services, Soap, Java Libraries through which data can be obtained and populated into the Fabric storage engine.
+Fabric can consume eternal APIs such as Web Services, Soap and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
 APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 
 **DB Query:**
@@ -162,6 +162,7 @@ Different projects have different data processing needs, for which Fabric offers
 
 
 **Data Processing Modules:**
+
 Data can be processed in six different modules:
 
 - Synchronization process: 
