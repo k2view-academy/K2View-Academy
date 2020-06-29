@@ -51,7 +51,7 @@ As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_I
 
 Let's focus for now on the CustomerLU in the course's project. 
 
-##### Question 1. Standardization of the phone number
+##### Question 1: Standardization of the phone number
 
 In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
 Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
@@ -73,7 +73,7 @@ the code accordingly.
 
 
 
-##### Question 2. Case Notes Clean-up
+##### Question 2: Case Notes Clean-up
 
 The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
 Tamar (Instance ID = 1472) keeps on receiving to her mailing address old bills as well as apology letters about issues she 
@@ -103,7 +103,7 @@ b. Write a java function that operates the following data transformations:
 
 #### Solution - Enrichment functions
 
-##### Question 1. Standardization
+##### Question 1: Standardization
 a. 4
 b. 1 & 2
 c. Code: update all the phone numbers fields missing international code 	
@@ -128,8 +128,6 @@ c. Code: update all the phone numbers fields missing international code
    }// end loop through rows
    ```
 
-
-
 d. Update line numbers only for 5G/LTE contracts
  The if statement below should reflect the contract description cell value:
 
@@ -142,7 +140,7 @@ into global parameters pertaining to the entire project and its multiple LUs.*
 
 
 
-##### Question 2. Case Notes Clean-up
+##### Question 2: Case Notes Clean-up
    
 a. none.
 b. Q1 -> 3708; Q2 -> 4.
@@ -200,7 +198,7 @@ c. Code sample:
    }
    ```
                                                                        
-##### Question 3. 
+##### Question 3: 
 Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table.
 
 
@@ -242,9 +240,6 @@ Change the value of CRMCases_threshold to: 30000.
 Check whether the sync process happened by looking at the Cases table of the instance 1472 - how many cases entries can you see?
 
   
-
-
-
 
 #### Solution - Decision functions
 
