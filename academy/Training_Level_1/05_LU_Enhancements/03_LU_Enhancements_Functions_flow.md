@@ -227,7 +227,7 @@ is experimenting with the network. The case notes reflect issues of cases that a
 In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen the number of
 entries in a given external source's table is above a specific threshold: CRMCases_threshold
 
-    ##### Question 1: Build a decision function based on the following criteria:
+##### Question 1: Build a decision function based on the following criteria:
 
     - If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 then the sync function 
     will return a boolean variable - *syncind* set to TRUE.
