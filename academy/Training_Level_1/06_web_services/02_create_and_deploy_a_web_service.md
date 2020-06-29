@@ -1,22 +1,24 @@
-# Create and Deploy a Web Service
+# Creating and Deploying a Web Service
 
-The Fabric stored data can be viewed, updated or even deleted using the Web Service Layer with sets of requests and responses:
+The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses:
 
 [Web Services Overview](/articles/15_web_services/01_web_services_overview.md)
 
-### Create a Web Service
+### Creating a Web Service
 
-Following are the basic steps to create a Web Service and understand its structure and properties:
+The following are the basic steps for creating a Web Service and understanding its structure and properties:
 
-[Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
+-  [Creating a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
 
-[Web Service Properties ](/articles/15_web_services/02_web_services_properties.md)
+-  [Defining Web Service Properties ](/articles/15_web_services/02_web_services_properties.md)
 
-[Web Service Function Basic Structure ](/articles/15_web_services/04_web_services_function_basic_structure.md)
+-  [Understanding the Basic Structure of a Web Service Function](/articles/15_web_services/04_web_services_function_basic_structure.md)
 
-[Edit Web Service Code](/articles/15_web_services/05_edit_web_service_code.md)
+-  [Editing Web Service Code](/articles/15_web_services/05_edit_web_service_code.md)
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Create a Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example
+
+**Creatinng a Web Service**
 
 Let's create our first simple Web Service which will retrieve basic infomration on a specific instance of a customer:
 
@@ -26,29 +28,29 @@ Let's create our first simple Web Service which will retrieve basic infomration 
 4. Edit the Web Service function  :
    1. Replace the [Instance Id] with the input parameter-**i_id**
    2. Remove any access values from the fetch statement, only the **sql** paramter should be left
-5. Name the Web Service  , for example **wsGetCustomer**. Make sure that you prefix is 'ws%'.
+5. Name the Web Service, for example **wsGetCustomer**. Make sure that you prefix is 'ws%'.
 6. Set the Web Service properties:
-   1.  the prefered Category, for example **Training**
-   2. Select **Object** from the **Return Type**  drop down list.
-   3. Set the path to : **train/getCustomer**
-   4. Add a description to your Web Service
-7. Add comments or log message in your Web Service
+   1. Set the prefered **Category**, for example **Training**
+   2. Select **Object** from the **Return Type**  dropdown list.
+   3. Set the path to: **train/getCustomer**
+   4. Add a description of your Web Service.
+7. Add comments or a log message in your Web Service.
 8. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
-9. Save the Web Service with no errors
+9. Save the Web Service with no errors.
 
-### Deploy a Web Service
+### Deploying a Web Service
 
-Before testing our Web Service, we must deply it into Fabric, let's understand how:
+Before testing you Web Service, it must be deployed into Fabric, let's understand how:
 
 [Deploy Web Service from Fabric Studio](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)
 
-Please deploy the Web Service we have just created into the Fabric server you have set in your project 
+Please deploy the Web Service you have just created into the Fabric server you set for your project. 
 
-Now we can validate if the Web Service has been deployed :
+Now we can validate that the Web Service has been deployed:
 
-1. Please log into Fabric 
-2. Execute : `cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
-3. You can now verify that your Web Service has been deployed :
+1. Log into Fabric. 
+2. Execute: `cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
+3. You can now verify that your Web Service has been deployed:
 
 `fabric>cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
 
