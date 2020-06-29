@@ -34,7 +34,7 @@ c. Web Services.
 
  d. All of the above.
 
-#### Which of the following Verbs support the following URL:
+#### Which of the following verbs support the following URL:
 
 http://localhost:3213/api/v1.0/lu/PATIENT/1?token=ABC 
 
