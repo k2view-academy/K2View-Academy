@@ -24,14 +24,13 @@ B: A root function
 
 C: Built-in functions or any other java standard utilities
 
-
 (***Solution 1: C ***).
 
 
 
 #### Question 2: LUDB functions
 
-A LUDB function is a
+A LUDB function is a:
 
 A: Function invoked from an SQL query to perform more complex operations on LU data than those performed using standard SQL statements.
 
@@ -45,16 +44,16 @@ C: Function used to query external sources
 
 #### Question 3: Root functions
 
-Root functions are:
+A Root functions is a:
 
-A: a function that is only applicable to data manipulations on root tables. 
+A: Function that is only applicable to data manipulations on root tables. 
 
-B: a specific type of Fabric function, used as a Source Object to trigger the table population mechanism, run various SQL SELECT 
+B: Specific type of Fabric function, used as a Source Object to trigger the table population mechanism, run various SQL SELECT 
    queries and execute complex logic in Java.
 
-C: a function that can be applied to any table of the LU schema, making it a root table
+C: Function that can be applied to any table of the LU schema, making it a root table.
 
-D: a function that operates data manipulations only if the systems root user is logged on
+D: Function that operates data manipulations only if the systems root user is logged on.
 
 (***Solution 3: B ***).
 
@@ -64,15 +63,13 @@ D: a function that operates data manipulations only if the systems root user is 
 
 Which of the following statements is certainly true ?
 
+A: Enrichment functions are functions without Input/Output parameters that are used to insert, update, or delete LU tables' data.
 
+B: Multiple enrichment functions can be attached to any of the LU's tables.
 
-A: Enrichment functions are functions without Input/Output parameters that are used to insert, update, or delete LU tables' data .
+C: Enrichment functions operate only after all LU tables populations are executed.
 
-B: Multiple enrichment functions can be attached to any of the LU's tables
-
-C: Enrichment functions operate only after all LU tables populations are executed
-
-D: All the above
+D: All the above.
 
 (***Solution 4: D ***).
 
@@ -80,15 +77,15 @@ D: All the above
 
 #### Question 5: Decision functions
 
-A Decision function is:
+A Decision function is a:
 
-A: a complex SQL query with multiple where statements to decide which records to create, update or delete.
+A: Complex SQL query with multiple where statements to decide which records to create, update or delete.
 
-B: a Java function with multiple input parameters and one Boolean output parameter.
+B: Java function with multiple input parameters and one Boolean output parameter.
 
-C: a Java project function that assesses whether a sync should be performed on an LUI.
+C: Java project function that assesses whether a sync should be performed on an LUI.
 
-D: a function that runs an LU table population based upon special sets of conditions defined on other tables of the same LU.
+D: Function that runs an LU table population based upon special sets of conditions defined on other tables of the same LU.
 
 (***Solution 5: C ***).
 
@@ -113,7 +110,7 @@ C: It does not matter, each solution has its pro's and con's.
 
 Translations tables are used to:
 
-A: Operate complex language translations between different DBs storing data of different languages 
+A: Operate complex language translations between different DBs storing data of different languages.
 
 B: Map records using not more than one optional input and one mandatory output value.
 
@@ -141,8 +138,6 @@ E: All of the above.
 
 
 
-
-
 #### Question 9: Execution order
 
 Which of the following statements is true?
@@ -155,7 +150,7 @@ C: Execution orders can be defined by the LU implementer after a very careful th
 
 D: The higher the number of the execution order, the lower will be the priority of the population mapping executions.
 
-E: All of the above
+E: All of the above.
 
 (***Solution 9: E ***).
 
@@ -163,17 +158,18 @@ E: All of the above
 
 #### Question 10: Enrichment order
 
-Enrichment order only applies:
+Enrichment order only applies to:
 
-A: to decision functions.
+A: Decision functions.
 
-B: to all types of Fabric functions.
+B: All types of Fabric functions.
 
-C: to population executions.
+C: Population executions.
 
-D: to all enrichment functions and is determined at the LU schema level in the Enrichment Order tab. 
+D: All enrichment functions and is determined at the LU schema level in the Enrichment Order tab. 
 
 (***Solution 10: D ***).
+
 
 ####    
 
