@@ -73,7 +73,7 @@ customer to the address LU table so the full details of the customers are readil
 
 
 #### Exercise 2 - Translations
-            We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
+We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
             Step 1: 
             Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
             return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the 
@@ -102,6 +102,9 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             
 
 #### Exercise 3 - Globals
+We wish to use Globals rather than values hardcoded into the java functions or SQL statements. Using the enrichment and decision
+functions from the previous exercises, please execute the following steps: 
+
             Step 1: 
             Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
             deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the INVOICES table.
