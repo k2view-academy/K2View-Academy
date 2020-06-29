@@ -42,20 +42,15 @@ In this section we will address the following types of tables:
 Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
 customer to the address LU table so the full details of the customers are readily available.
 
-##### Question 1 : 
-Which table should you consider and why ?
+##### Question 1: Which table should you consider and why ?
 
-##### Question 2:  
-hich function would you use to make sure that the first name and last name are concatenated into one field in 
+##### Question 2: Which function would you use to make sure that the first name and last name are concatenated into one field in 
 the Address table ?
 
-##### Question 3: 
-In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
-available ? 
-In our example what will be the most likely value of this configuration variable
+##### Question 3: In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
+available ? Using our example what will be the most likely value of this configuration variable
 
-##### Question 4: 
-Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
+##### Question 4: Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
 
 
 
@@ -84,7 +79,6 @@ Rana Bradshaw
 
 
 #### Exercise 2 - Translations
-
 We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
 
 ##### Question 1: 
