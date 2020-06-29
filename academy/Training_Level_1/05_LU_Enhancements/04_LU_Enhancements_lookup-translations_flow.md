@@ -143,8 +143,7 @@ functions from the previous exercises, please execute the following steps:
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
             
-            
-            
+                      
 
             Step 3:      
 
@@ -164,6 +163,7 @@ Globals definition:
             ```
 
             Step 4: Answer: 19 entries/Yes
+            
             Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
 
                             if ((cellValue.matches("(.*)+(.*)") == false))
@@ -176,7 +176,7 @@ Globals definition:
                             }
                     }
                     
-                    
+          
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/05_LU_Enhancements_Quiz.md)
 
