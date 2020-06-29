@@ -146,9 +146,9 @@ into global parameters pertaining to the entire project and its multiple LUs.*
 
 Question 2. Case Notes Clean-up
    
-   a. none
-   b. Q1 -> 3708; Q2 -> 4
-   c. Code sample	
+a. none
+b. Q1 -> 3708; Q2 -> 4
+c. Code sample	
     
    ```java
   
@@ -203,9 +203,8 @@ Question 2. Case Notes Clean-up
    }
    ```
                                                                        
-
-    Question 3. 
-        Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
+Question 3. 
+Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table
 
 
 
@@ -230,16 +229,20 @@ Question 2. Case Notes Clean-up
 #### Exercise 2 - Decision functions
 
 
-    In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen the number of
-    entries in a given external source's table is above a specific threshold.
-    
-    Build a decision function based on the following criteria:
-    
-    -  If the number of entries in the CASES table of the CRM_DB database is higher than THRESHOLD=25000 then the sync function 
-    will return a boolean variable - *syncind* set to TRUE
-    
-    - At this stage you should hardcode the value of the threshold. Again we will see later in this section how to set this threshold 
-    as a global parameter. Change the value of THRESHOLD to 30000. Check the 
+In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen the number of
+entries in a given external source's table is above a specific threshold: CRMCases_threshold
+
+Question 1: Build a decision function based on the following criteria:
+
+- If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 then the sync function 
+will return a boolean variable - *syncind* set to TRUE.
+- At this stage you should hardcode the value of the threshold. (we will see later in this section how to set this threshold 
+as a global parameter)
+
+Question 2: Validate the function
+Run Instance Id: 1472 - How many cases entries do you see in the cases table of the LUI ? 
+Change the value of CRMCases_threshold to: 30000. 
+Check whether the sync process happened by looking at the Cases table of the instance 1472 - how many cases entries can you see?
 
   
 
@@ -247,6 +250,8 @@ Question 2. Case Notes Clean-up
 
 
 #### Solution - Decision functions
+
+Question 1:
 
 ```java
 // this function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
@@ -259,7 +264,7 @@ String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValu
 reportUserMessage(count);
 int cnt=Integer.parseInt(count);
 
-if ( cnt >= CRMCases_threshold=25000){
+if ( cnt >= CRMCases_threshold){
 reportUserMessage("new case in !!");
 syncInd = true;	
 }
@@ -267,6 +272,9 @@ syncInd = true;
 return syncInd;
 ```
 
+Question 2:
+CRMCases_threshold=25000 -> 10 entries.
+CRMCases_threshold=30000 -> 0 entries.
 
 
 
