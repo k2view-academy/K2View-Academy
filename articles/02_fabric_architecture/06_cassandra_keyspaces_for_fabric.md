@@ -1,10 +1,10 @@
 # Cassandra Keyspaces for Fabric
 
-Fabric uses the Cassandra DB as a storage layer and as a management database for Fabric applications. Fabric creates several keyspaces for its operation. Each Fabric keyspace starts with a **k2** and each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
+Fabric uses the Cassandra DB as a storage layer and also as a Fabric application management database. Fabric creates several keyspaces for its operation. Each Fabric keyspace starts with a **k2** and each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
 
 **Notes:**
 
-- The cluster_id, if set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, is concatenated to each keyspace name. For example: if cluster_id is set to crm1, the keyspace k2view_customer_crm1 is created.
+-  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace name. For example: if the cluster_id is set to crm1, the keyspace k2view_customer_crm1 is created.
 - When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
 - The following keyspace is created for deployed WS: <strong>k2view_k2_ws</strong>.
 
@@ -18,7 +18,7 @@ Note that if the **ip_address** is not populated, the login command connects to 
 
 ### List of Cassandra Fabric-Related Keyspaces 
 
-The following table lists the Cassandra keyspaces, created by Fabric:
+The following table lists the Cassandra keyspaces created by Fabric:
 
 
 
@@ -73,7 +73,7 @@ The following table lists the Cassandra keyspaces, created by Fabric:
 <p>&nbsp;</p>
 </td>
 <td width="350pxl">
-<p>List of all Fabric nodes in the cluster</p>
+<p>List of all Fabric nodes in the cluster.</p>
 </td>
 </tr>
 <tr>
