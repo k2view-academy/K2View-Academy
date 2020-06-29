@@ -27,12 +27,12 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <td width="600pxl" valign="top">
 <p>Holds the following Fabric scripts:&nbsp;</p>
 <ul>
-<li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment scripts</a></li>
-<li>IIDFinder scripts</li>
-<li>Fabric execution monitoring scripts</li>
-<li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset scripts</a></li>
-<li>Stop and start scripts, executed by <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#start-and-stop-fabric-commands">k2fabric stop and k2fabric start commands.</a></li>
-<li>Fabric status scripts</li>
+<li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment</a></li>
+<li>IIDFinder</li>
+<li>Fabric execution monitoring</li>
+<li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset</a></li>
+<li>Stop and start (executed by <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#start-and-stop-fabric-commands">k2fabric stop and k2fabric start commands).</a></li>
+<li>Fabric status</li>
 </ul>
 </td>
 </tr>
@@ -41,7 +41,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/fabric/upgrade</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Holds Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
+<p>Holds Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example, when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
 </td>
 </tr>
 <tr>
@@ -98,7 +98,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/ExternalJars</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Holds the .jar files of all database jars that have not been provided as an out-of-the box product and external jars used for the Fabric implementation.</p>
+<p>Holds the .jar files of all database jars that have not been provided as an out-of-the box product and also external jars used for the Fabric implementation.</p>
 </td>
 </tr>
 <tr>
@@ -136,7 +136,7 @@ Fabric and Cassandra are installed under the following directories:
 
 - Fabric Studio, C:\K2View\<Fabric version>\Studio.
 - Fabric server, C:\K2View\<Fabric version>\Server.
-- Apache-cassandra-3.11.x, C:\K2View\Fabric_6.1\Server C:\K2View\<Fabric version>\ apache-cassandra-3.11.x
+- Apache-cassandra-3.11.x, C:\K2View\Fabric_6.1\Server and C:\K2View\<Fabric version>\ apache-cassandra-3.11.x
 
 ### Fabric Server Directories
 
@@ -148,7 +148,7 @@ The Fabric server directory has the following sub-directories:
 
 ### FabricHome Directory
 
-The Fabric Studio creates the **FabricHome** directory under each Fabric project's directory and holds the following sub-directories:
+The Fabric Studio creates a **FabricHome** directory under each Fabric project's directory and holds the following sub-directories:
 
 - [config](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeconfig)
 - [export](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homeexport)
