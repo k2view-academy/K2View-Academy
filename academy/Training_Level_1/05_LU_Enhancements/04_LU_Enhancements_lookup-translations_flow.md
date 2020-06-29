@@ -41,7 +41,7 @@ In this section we will address the following types of tables:
 >
 > Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
 > customer to the address LU table so the full details of the customers are readily available.
-
+>
 > ##### Step 1: 
 > Which table should you consider and why ?
 > ##### Step 2: 
@@ -56,59 +56,58 @@ In this section we will address the following types of tables:
 
 
 
-#### Solution Exercise 1 - Lookup table
-
-##### Step 1: 
-Customer table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
-the CRM table
-##### Step 2: 
-k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we 
-need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid duplicate
-names), and an internet address string such as "@yourcompany.com" and therefore provide an email address to your customers)
-##### Step 3:
-This sets up the systems' behaviour if a specific value does not exist in the lookup table. The different options are: "Reject record", 
-"Reject Instance", "Continue" and "Report and Continue"
-In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory fields) 
-therefore it should be set to "Continue".
-##### Step 4: 
-Rana Bradshaw
-
-
-
-
-#### Exercise 2 - Translations
-We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
-##### Step 1: 
-Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
-return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the 
-CustomerLU Address table
-##### Step 2: 
-Do the same with the international city code.
-##### Step 3: 
-What is the Lat/Long value for Instance LUI: 1000, What is the city international code for LUI: 2217
+>#### Solution Exercise 1 - Lookup table
+>
+>##### Step 1: 
+>The table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
+>the CRM table
+>##### Step 2: 
+>k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we 
+>need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid duplicate
+>names), and an internet address string such as "@yourcompany.com" and therefore provide an email address to your customers)
+>##### Step 3:
+>This sets up the systems' behaviour if a specific value does not exist in the lookup table. The different options are: "Reject record", 
+>"Reject Instance", "Continue" and "Report and Continue"
+>In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory fields) 
+>therefore it should be set to "Continue".
+>##### Step 4: 
+>Rana Bradshaw
 
 
 
-#### Solution Exercise 2 - Translations
 
-##### Step 1 & 2:
-
-Translation table schema:
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
-
-
-Translation table data:
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
-
-
-Address population diagram featuring translation table and LAT/LONG concatenation function:
-![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
+>#### Exercise 2 - Translations
+>We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
+>##### Step 1: 
+>Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
+>return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the 
+>CustomerLU Address table
+>##### Step 2: 
+>Do the same with the international city code.
+>##### Step 3: 
+>What is the Lat/Long value for Instance LUI: 1000, What is the city international code for LUI: 2217
 
 
-##### Step 3:
-InstanceID 1000: 39.7771::-86.1458
-InstanceID 2217: 1840034016
 
+>#### Solution Exercise 2 - Translations
+>
+>##### Step 1 & 2:
+>
+>Translation table schema:
+>![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
+>
+>
+>Translation table data:
+>![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
+>
+>
+>Address population diagram featuring translation table and LAT/LONG concatenation function:
+>![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)  
+>
+>
+>##### Step 3:
+>InstanceID 1000: 39.7771::-86.1458
+>InstanceID 2217: 1840034016
 
 
 #### Exercise 3 - Globals
