@@ -51,10 +51,10 @@ As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_I
 
 Let's focus for now on the CustomerLU in the course's project. 
 
-    ##### Question 1: Standardization of the phone number
+##### Question 1: Standardization of the phone number
 
-    In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
-    Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
+In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
+Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
 
     a. How many distinct lines are associated with Luci (in the contract table)?
 
