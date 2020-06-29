@@ -1,18 +1,18 @@
 # Response Codes and Supported Verbs
 
-After you have created your first  Web Service, let's understand in details, what  are the various reponse codes and their usage, as well as the Web Service various commands, options and examples:
+After you have created your first  Web Service, let's learn about the various reponse codes and their usage and the different Web Service commands, options and examples:
 
-[Response Codes](/articles/15_web_services/11_response_codes.md)
+-  [Response Codes](/articles/15_web_services/11_response_codes.md)
 
-[Supported Verbs-GET](/articles/15_web_services/12_Supported_Verbs_Get.md)
+-  [Supported Verbs, GET](/articles/15_web_services/12_Supported_Verbs_Get.md)
 
-[Supported Verbs-POST](/articles/15_web_services/13_Supported_Verbs_Post.md)
+-  [Supported Verbs, POST](/articles/15_web_services/13_Supported_Verbs_Post.md)
 
-[Supported Verbs-PUT](/articles/15_web_services/14_Supported_Verbs_Put.md)
+-  [Supported Verbs, PUT](/articles/15_web_services/14_Supported_Verbs_Put.md)
 
-[Supported Verbs-DELETE](/articles/15_web_services/15_Supported_Verbs_Delete.md)
+-  [Supported Verbs, DELETE](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 
-On top of the supported verbs and the response codes, the following addtional information could give you more insights on the URL structure, Authentication, Encoding, etc.:
+In addition to the above supported verbs and response codes, the following information may provide more insight about the URL structure, authentication, encoding, etc.:
 
 [REST API Additions](/articles/15_web_services/16_rest_api_additions.md)
 
