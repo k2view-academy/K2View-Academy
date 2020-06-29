@@ -10,13 +10,13 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 
 [Fabric Credentials Commands](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example - Invoking a Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Invoking a Web Service
  
 1. Right click the **Web Service** and select **Invoke Web Service** and then the **prefered environment**: The Fabric server name or Local Fabric (debug).
    Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all options: GET, POST, PUT and DELETE, All of these options are available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
    What is the response? `"Failed to authorize"` 
-   Why? `The Web Service is requiring a token for authentication` 
+   Why? `The Web Service is requiring a token for authentication.` 
 4. For the request to succeed, create the permissions and a token:
    1. `create user 'test_user';`
    2. `create role 'admin';`
@@ -32,19 +32,19 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 
 Using the training materials and examples covered so far:
 
-1. Create a new version for **wsGetCustomer** which will enhance the current functionality:
 
-   1. Return the Customer's details icluding their contracts and associated subscribers. The reponse should returned based on SUBSCRIBER.VIP_STATUS. Only the Customer full name should appear as part of the response.  
 
-      **Note**, make sure the WS path is the same for both Web Services.
+Create a new version for **wsGetCustomer** to enhance the current functionality. Return the Customer's details including their contracts and associated subscribers. The returned reponse should be based on SUBSCRIBER.VIP_STATUS. Only the Customer's full name should appear as part of the response. 
 
-2. Question: What is the SSN of Customer 1?
+**Note** Make sure the WS path is the same for both Web Services.
 
-3. Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?
+1. Question: What is the SSN of Customer 1?
 
-4. Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?
+2. Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?
 
-5. Question: Which version of you Web Service will be executed if the version is not set? 
+3. Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?
+
+4. Question: Which version of your Web Service will be executed if the version is not set? 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Invoking a Web Service
 
@@ -62,13 +62,13 @@ Using the training materials and examples covered so far:
 
    
 
-2. Answer: 5153527856 
+1. Answer: 5153527856.
 
-3. Answer: 3 
+2. Answer: 3. 
 
-4. Answer: 5G tether 
+3. Answer: 5G tether. 
 
-5. Answer: The Web Version that was the last to be deployed  
+4. Answer: The Web Version that was the last to be deployed.  
 
 
 
