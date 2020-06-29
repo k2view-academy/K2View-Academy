@@ -20,9 +20,9 @@ The Flow execution starts with the execution of the first Stage (on the left sid
 
 ​	Define a business flow to extract, transform and load a customer's financial activities:
 
-![image-20200629101940357](C:\Users\TaliEinhorn\AppData\Roaming\Typora\typora-user-images\image-20200629101940357.png)
+![image-20200629101940357](/articles/99_Broadway/images/customer_map_financial_activities_flow_example.png)
 
-​	This flow fours Stages and each Stage has different Actors:  
+​	This flow has four Stages and each Stage has different Actors:  
 
 - Stage 1 - extracting the the financial activities of the customer.
 - Stage 2 - complete missing data of the financial activities.
