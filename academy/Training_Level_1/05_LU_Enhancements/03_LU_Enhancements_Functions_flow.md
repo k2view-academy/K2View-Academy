@@ -51,25 +51,25 @@ As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_I
 
 Let's focus for now on the CustomerLU in the course's project. 
 
-##### Question 1: Standardization of the phone number
+    ##### Question 1: Standardization of the phone number
 
-In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
-Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
+    In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
+    Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
 
-a. How many distinct lines are associated with Luci (in the contract table)?
+    a. How many distinct lines are associated with Luci (in the contract table)?
 
-b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
-     +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
+    b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
+         +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
 
-c. Lets write a java function that will modify any of the LUI "Associated Line" fields to the international format using the 
-following IDs contract_ID (2787 & 2788) to validate the code. 
-    - tips:
-         - use the ludb class to fetch data from the LU database  
-         - use regular expressions to identify the fields that need to be modified
-         - use the fabric() execute function to update data 
+    c. Lets write a java function that will modify any of the LUI "Associated Line" fields to the international format using the 
+    following IDs contract_ID (2787 & 2788) to validate the code. 
+        - tips:
+             - use the ludb class to fetch data from the LU database  
+             - use regular expressions to identify the fields that need to be modified
+             - use the fabric() execute function to update data 
 
-d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
-the code accordingly.
+    d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
+    the code accordingly.
 
 
 
@@ -79,34 +79,34 @@ The Case_Notes table stores all notes belonging to a particular case that was op
 Tamar (Instance ID = 1472) keeps on receiving to her mailing address old bills as well as apology letters about issues she 
 is experimenting with the network. The case notes reflect issues of cases that are still opened.
 
-a. Let's first list the contracts owned by Tamar in the data viewer.
-       - How many contracts does she own ?
+    a. Let's first list the contracts owned by Tamar in the data viewer.
+           - How many contracts does she own ?
 
-   Lets look at the different notes in the Case_Note table of Tamar's LUI
-       - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type 
-       description (in the cases table)
-       - How many cases are still opened ?
+       Lets look at the different notes in the Case_Note table of Tamar's LUI
+           - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type 
+           description (in the cases table)
+           - How many cases are still opened ?
 
-b. Write a java function that operates the following data transformations:
-   - All case notes belonging to cases of the type "Billing issues" should be changed to 
-     "insolvent customer due to alien assimilation"
-   - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated 
-     to a phone and is no longer network compatible"
-   - All open cases should be set to Status="closed"
+    b. Write a java function that operates the following data transformations:
+       - All case notes belonging to cases of the type "Billing issues" should be changed to 
+         "insolvent customer due to alien assimilation"
+       - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated 
+         to a phone and is no longer network compatible"
+       - All open cases should be set to Status="closed"
 
  
 ##### Question 3: Attaching the enrichment function to the appropriate table
-  - What happens if you attach the enrichment function to the table: CASES ? 
-  - To which table should the function be attached ? 
+      - What happens if you attach the enrichment function to the table: CASES ? 
+      - To which table should the function be attached ? 
 
 
 
 #### Solution - Enrichment functions
 
 ##### Question 1: Standardization
-a. 4
-b. 1 & 2
-c. Code: update all the phone numbers fields missing international code 	
+    a. 4
+    b. 1 & 2
+    c. Code: update all the phone numbers fields missing international code 	
    ```java
    String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
    String interCode="+1 ";
@@ -128,23 +128,23 @@ c. Code: update all the phone numbers fields missing international code
    }// end loop through rows
    ```
 
-d. Update line numbers only for 5G/LTE contracts
- The if statement below should reflect the contract description cell value:
+    d. Update line numbers only for 5G/LTE contracts
+     The if statement below should reflect the contract description cell value:
 
 ```java
   if ((cellValue.matches("(.*)+1(.*)") == false) && (cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
-*Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants 
-into global parameters pertaining to the entire project and its multiple LUs.*
+    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, how we can turn these constants 
+    into global parameters pertaining to the entire project and its multiple LUs.*
 
 
 
 ##### Question 2: Case Notes Clean-up
    
-a. none.
-b. Q1 -> 3708; Q2 -> 4.
-c. Code sample:	
+    a. none.
+    b. Q1 -> 3708; Q2 -> 4.
+    c. Code sample:	
   ```java
   
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
@@ -199,7 +199,7 @@ c. Code sample:
    ```
                                                                        
 ##### Question 3: 
-Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table.
+    Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table.
 
 
 
@@ -227,17 +227,17 @@ Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to b
 In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen the number of
 entries in a given external source's table is above a specific threshold: CRMCases_threshold
 
-##### Question 1: Build a decision function based on the following criteria:
+    ##### Question 1: Build a decision function based on the following criteria:
 
-- If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 then the sync function 
-will return a boolean variable - *syncind* set to TRUE.
-- At this stage you should hardcode the value of the threshold. (we will see later in this section how to set this threshold 
-as a global parameter)
+    - If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 then the sync function 
+    will return a boolean variable - *syncind* set to TRUE.
+    - At this stage you should hardcode the value of the threshold. (we will see later in this section how to set this threshold 
+    as a global parameter)
 
 ##### Question 2: Validate the function
-Run Instance Id: 1472 - How many cases entries do you see in the cases table of the LUI ? 
-Change the value of CRMCases_threshold to: 30000. 
-Check whether the sync process happened by looking at the Cases table of the instance 1472 - how many cases entries can you see?
+    Run Instance Id: 1472 - How many cases entries do you see in the cases table of the LUI ? 
+    Change the value of CRMCases_threshold to: 30000. 
+    Check whether the sync process happened by looking at the Cases table of the instance 1472 - how many cases entries can you see?
 
   
 
@@ -265,8 +265,8 @@ return syncInd;
 ```
 
 ##### Question 2:
-CRMCases_threshold=25000 -> 10 entries.
-CRMCases_threshold=30000 -> 0 entries.
+    CRMCases_threshold=25000 -> 10 entries.
+    CRMCases_threshold=30000 -> 0 entries.
 
 
 
