@@ -3,8 +3,9 @@
 In **Broadway**, the **Actor** represents an activity (action) that should be executed as part of the **Flow** on each **Stage**. For example, reading a file, creating a table, parsing and object, load a table.  
 
 Broadway has a vast list of built-in Actors that can create various types of activities and can be added to each Flow.
+The Broadway built-in Actors are split into the following categories (tags), while each category includes several Actor types.
 
-The Broadway built-in Actors are split into the following categories, while each category includes several Actor types.
+Note that when doing **Export Actor** from the Actor's context menu, a new category (tag) will be created - if the value which you populate in the Tag field doesn't exist among the Actor's categories.
 
 <table width="900pxl">
 <tbody>
