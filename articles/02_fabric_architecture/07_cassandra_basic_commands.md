@@ -19,53 +19,53 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 <table>
 <tbody>
 <tr>
-<td width="200pxl">
+<td width="200pxl valign="top"">
 <p><strong>Command Name</strong></p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><strong>Command Description</strong></p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p><strong>Examples</strong></p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">
+<td width="200pxl" valign="top">
 <p>HELP</p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p>Get information about the list of Cassandra commands or a specific Cassandra command. </p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <ul>
 <li>Help describe;</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="200pxl">
+<td width="200pxl" valign="top">
 <p>USE</p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p>Move to a specific&nbsp;keyspace</p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <ul>
 <li>Use k2view_customer;</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="200pxl">
+<td width="200pxl" valign="top">
 <p>DESCRIBE (shorthand: DESC)</p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p>Describe Cassandra objects.</p>
 <p>Note that the Describe command is run in a keyspace and returns information about the objects in the keyspace.</p>
 <p>&nbsp;For more information, see:</p>
 <p><a href="https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlshDescribe.html">https://docs.datastax.com/en/cql-oss/3.x/cql/cql_reference/cqlshDescribe.html</a></p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <ul>
 <li><strong>desc keyspaces</strong>, returns the list of keyspaces in the Cassandra cluster.</li>
 <li><strong>desc tables</strong>, returns the list of Cassandra keyspaces and the related tables of each keyspace.</li>
@@ -75,13 +75,13 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 </td>
 </tr>
 <tr>
-<td width="200pxl">
+<td width="200pxl" valign="top">
 <p>EXIT/QUIT</p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p>Exit Cassandra</p>
 </td>
-<td width="350pxl">
+<td width="350pxl" valign="top">
 <p>&nbsp;</p>
 </td>
 </tr>
