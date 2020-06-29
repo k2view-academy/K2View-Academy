@@ -25,7 +25,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/fabric/scripts</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Fabric scripts:&nbsp;</p>
+<p>Holds the following Fabric scripts:&nbsp;</p>
 <ul>
 <li><a href="/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options">Deployment scripts</a></li>
 <li>IIDFinder scripts</li>
@@ -41,7 +41,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/fabric/upgrade</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
+<p>Holds Fabric upgrade scripts. Each Fabric version has its own sub-directory. For example: when upgrading Fabric 5.5.x to Fabric 6.x, run the scripts under the  <strong>toV6.0</strong> sub-directory.</p>
 </td>
 </tr>
 <tr>
@@ -49,7 +49,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/logs</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Fabric <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">log files.</a></p>
+<p>Holds Fabric <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md">log files.</a></p>
 </td>
 </tr>
 <tr>
@@ -74,7 +74,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/apps</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Third-party applications and tools used by Fabric. For example, Java, Cassandra, Grafana, or Redis.</p>
+<p>Holds third-party applications and tools used by Fabric. For example, Java, Cassandra, Grafana, or Redis.</p>
 </td>
 </tr>
 <tr>
@@ -114,7 +114,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/trace</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>Trace files.</p>
+<p>Holds Trace files.</p>
 </td>
 </tr>
 <tr>
