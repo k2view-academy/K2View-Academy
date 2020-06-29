@@ -1,8 +1,8 @@
 # Cassandra Keyspaces for Fabric
 
-Fabric uses the Cassandra DB as a storage layer and Fabric application management database. Fabric creates several keyspaces for its operation. 
+Fabric uses the Cassandra DB as a storage layer and also as a management database for Fabric applications. Fabric creates several keyspaces for its operation. 
 
-Each Fabric keyspace starts with a **k2**. In addition, each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
+Each Fabric keyspace starts with a **k2** and each deployed LU creates the following additional Cassandra keyspace: **k2view_[LU Name]**. For example: k2view_customer.
 
 **Notes:**
 
