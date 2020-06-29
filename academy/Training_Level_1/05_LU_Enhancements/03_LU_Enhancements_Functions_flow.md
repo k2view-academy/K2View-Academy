@@ -235,10 +235,11 @@ Question 2. Case Notes Clean-up
     
     Build a decision function based on the following criteria:
     
-    -  If the number of entries in the CASES table of the CRM_DB database is higher than the threshold=25000 then the sync function will return a boolean 
-    variable - *syncind* set to TRUE
+    -  If the number of entries in the CASES table of the CRM_DB database is higher than THRESHOLD=25000 then the sync function 
+    will return a boolean variable - *syncind* set to TRUE
     
-    - At this stage you should hardcode the value of the threshold. Again we will see later in this section how to set this threshold as a global parameter.
+    - At this stage you should hardcode the value of the threshold. Again we will see later in this section how to set this threshold 
+    as a global parameter. Change the value of THRESHOLD to 30000. Check the 
 
   
 
@@ -248,14 +249,13 @@ Question 2. Case Notes Clean-up
 #### Solution - Decision functions
 
 ```java
-// this function will monitor whether a change has 
-// happened in the CRM_CASES table will print a user report 
-// with the Notes associated
-String SQLCASES="SELECT count(*) FROM CRM_DB.CASES";
+// this function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
 int CRMCases_threshold=25000; //latest known number of cases in CRM_DB.CASES
 Boolean syncInd = false;
 
 String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
+//puts the number of rows in CASES DB into variable count
+
 reportUserMessage(count);
 int cnt=Integer.parseInt(count);
 
