@@ -99,11 +99,11 @@ Login to Cassandra from the command line (cmd) window:
 
 Notes:
  
-- Use **cassandra** as user and password when connecting the local Cassandra server.
+- Use **cassandra** as the user and password when connecting to the local Cassandra server.
 
-Alternatively, you can do the following:
+Alternatively, do the following:
 
-- Run queries on Cassandra in the Fabric server using [cql command](/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra).
+- Run queries on Cassandra in the Fabric server using the [cql command](/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra).
 - Define a Cassandra [DB interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) in the Fabric Studio and set the host to localhost. Set the user and password to **cassandra**. Then open the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md) to view the list of Cassandra keyspaces and run SQL queries on Cassandra tables. 
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
