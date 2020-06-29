@@ -2,19 +2,21 @@
 
 Excellent work on your third Quiz! Well Done! 
 
-You have enhanced your Logical Unit and project and added the capablities needed for retrieving and storing data in Fabric so that when it meets the predefined business requirements when it is compiled. 
+You have enhanced your Logical Unit and project and added the capablities needed for retrieving and storing data in Fabric so that it meets all predefined business requirements when it is compiled. 
 
 
-Currently, the enriched data can be viewed only in the Fabric console and only by users who have access. However, the question is how is this data exposed and how does it interact with the outside world? Let's take a look at the Fabric Web Service layer.  
+Currently, the enriched data can be viewed only in the Fabric console and only by users who have access. 
+
+The question is... how is this data exposed and how does it interact with the outside world? Let's take a look at the Fabric Web Services layer.  
  
 
 ### What Will You Experience in this Learning Item?
 
 By the end of the Web Services learning item you will know:
 
-- How to create a Web Service and about it's basic structure
-- How to deploy a Web Service
-- How to view and test a Web Service using Swagger
+- How to create a Web Service and about it's basic structure.
+- How to deploy a Web Service.
+- How to view and test a Web Service using Swagger.
  
 @exper12 
 k2view-academy
@@ -42,8 +44,8 @@ Training_Level_1
 /
 01_web_services_overview.md
  
-- How to authenitcate a Web Service
-- About the various supported response codes and verbs
+- How to authenitcate a Web Service.
+- About the various supported response codes and verbs.
 <!--How to manage access rights for your web service- once Admin item is ready-->
 <!--How to use Graphit- Once item is ready-->
 
