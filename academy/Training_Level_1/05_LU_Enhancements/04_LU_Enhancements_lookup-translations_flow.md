@@ -62,9 +62,8 @@ customer to the address LU table so the full details of the customers are readil
             UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email
             address to your customers)
             Step 3:
-            This sets up the systems' behaviour if a specific value does not exist in the lookup table. The different options are: 
-            "Reject record", 
-            "Reject Instance", "Continue" and "Report and Continue"
+            The configuration variable "Lookup Not Found" sets up the systems' behaviour if a specific value does not exist in the lookup 
+            table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
             In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory 
             fields) and therefore it should be set to "Continue".
             Step 4: 
@@ -74,6 +73,7 @@ customer to the address LU table so the full details of the customers are readil
 
 #### Exercise 2 - Translations
 We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
+            
             Step 1: 
             Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
             return the Latitude and Longitude of the Customer's address into a new field that you will have previously created in the 
