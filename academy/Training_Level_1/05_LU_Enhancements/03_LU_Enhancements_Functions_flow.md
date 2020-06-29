@@ -148,9 +148,9 @@ Question 2. Case Notes Clean-up
    
 a. none
 b. Q1 -> 3708; Q2 -> 4
+
 c. Code sample	
-    
-   ```java
+  ```java
   
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
    String SQLCASENote="SELECT CASE_ID, NOTE_TEXT, NOTE_DATE FROM CASE_NOTE";
