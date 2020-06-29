@@ -17,7 +17,7 @@ There are several directories under the Fabric server $K2_HOME directory. The fo
 <h5>$K2_HOME/fabric</h4>
 </td>
 <td width="600pxl" valign="top">
-<p>This directory and its sub-directories hold Fabric code, scripts, templates and resources.</p>
+<p>Holds Fabric code, scripts, templates and resources.</p>
 </td>
 </tr>
 <tr>
