@@ -57,16 +57,16 @@ customer to the address LU table so the full details of the customers are readil
             The table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
             the CRM table
             ##### Step 2: 
-            k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example we 
-            need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid 
+            k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular example 
+            we need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a UID (to avoid 
             duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email address to your
             customers)
             ##### Step 3:
             This sets up the systems' behaviour if a specific value does not exist in the lookup table. The different options are: 
             "Reject record", 
             "Reject Instance", "Continue" and "Report and Continue"
-            In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory fields) 
-            therefore it should be set to "Continue".
+            In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory 
+            fields) and therefore it should be set to "Continue".
             ##### Step 4: 
             Rana Bradshaw
 
@@ -115,12 +115,14 @@ customer to the address LU table so the full details of the customers are readil
             compare dates. 
             ##### Step 4: 
             Attach both functions to their relevant table.
-            Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? (Using the Data 
-            viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that is later than 2015-12-31)
-            Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function exercise? 
+            Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? 
+            (Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that 
+            is later than 2015-12-31)
+            Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function 
+            exercise? 
             ##### Step 5:
-            Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so all the phone entries of Instance ID=1000
-            (that do not have an international code already) to a new international code set to "+44"
+            Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so all the phone entries of 
+            Instance ID=1000 (that do not have an international code already) to a new international code set to "+44"
 
 
 
