@@ -10,7 +10,7 @@ Currently, the enriched data can be viewed only in the Fabric console and only b
 The question is... how is this data exposed and how does it interact with the outside world? Let's take a look at the Fabric Web Services layer.  
  
 
-### What Will You Experience in this Learning Item?
+### What Will You Experience In This Learning Item?
 
 By the end of the Web Services learning item you will know:
 
