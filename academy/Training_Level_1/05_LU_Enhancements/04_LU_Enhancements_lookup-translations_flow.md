@@ -37,21 +37,21 @@ In this section we will address the following types of tables:
 
 
 
-#### Exercise 1 - Lookup tables
+> #### Exercise 1 - Lookup tables
+>
+> Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
+> customer to the address LU table so the full details of the customers are readily available.
 
-Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
-customer to the address LU table so the full details of the customers are readily available.
-
-##### Step 1: 
-Which table should you consider and why ?
-##### Step 2: 
-Which function would you use to make sure that the first name and last name are concatenated into one field in 
-the Address table ?
-##### Step 3: 
-In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
-available ? Using our example what will be the most likely value of this configuration variable
-##### Step 4: 
-Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
+> ##### Step 1: 
+> Which table should you consider and why ?
+> ##### Step 2: 
+> Which function would you use to make sure that the first name and last name are concatenated into one field in 
+> the Address table ?
+> ##### Step 3: 
+> In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
+> available ? Using our example what will be the most likely value of this configuration variable
+> ##### Step 4: 
+> Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
 
 
 
