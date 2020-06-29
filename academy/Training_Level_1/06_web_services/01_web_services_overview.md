@@ -1,6 +1,11 @@
 # Web Services Overview
 
-Execellent work on your third Quiz! Well Done, You have just completed enahncing your Logical Unit and project with addtional capablities in order to retrieve and store the data in Fabric so that it is complied with all the predefined buisness requirements. Currently, the enriched data can be viewed only in the Fabric console and only by users who have access. However, the question is how is this data exposed and how does it interact with the outside world? Let's take a look at the Fabric Web Service layer.  
+Excellent work on your third Quiz! 
+
+Well Done! you have just completed enhancing your Logical Unit and project by adding capablities for retrieving and storing data in Fabric so that it is complied with all the predefined buisness requirements. 
+
+
+Currently, the enriched data can be viewed only in the Fabric console and only by users who have access. However, the question is how is this data exposed and how does it interact with the outside world? Let's take a look at the Fabric Web Service layer.  
  
 
 ### What Will You Experience in this Learning Item?
