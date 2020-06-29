@@ -103,7 +103,6 @@ The Broadway built-in Actors are split into the following categories, while each
 <td width="600">
 <p><strong>Publish&nbsp;</strong>Actor publishes messages using a message broker.&nbsp;</p>
 <p>The inputs are: the broker interface to use, the topic to publish to and the message.&nbsp;</p>
-<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
