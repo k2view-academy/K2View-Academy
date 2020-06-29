@@ -1,12 +1,10 @@
 # Invoking a Web Service
 
-Now that you have created and deployed you first Web Service into Fabric,  you can see the data by invoking it from the Fabric Studio or by using any API client. Since Fabric's Web Services comply with REST API  guidelines, it is fully integrated with the latest Open API platform - **Swagger**.
+Now that you have created and deployed you first Web Service into Fabric,  you can see the data by invoking it from the Fabric Studio or by using any API client. Since Fabric's Web Services comply with REST API  guidelines, they are fully integrated with the latest Open API platform - **Swagger**.
 
 ### Invoking and Testing Web Services
 
-Let's learn how to invoke and test a Web Service from the Fabric Studio using Swagger:
-
-[Swagger](/articles/15_web_services/09_swagger.md)
+Let's learn how to invoke and test a Web Service from the Fabric Studio using [Swagger](/articles/15_web_services/09_swagger.md):
 
 To ensure that the data being exposed by the Web Service is secured, authenticated and executed with permissions, set the Web Service credentials as follows:	
 
