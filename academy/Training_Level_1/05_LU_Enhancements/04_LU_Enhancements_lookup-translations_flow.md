@@ -137,11 +137,13 @@ functions from the previous exercises, please execute the following steps:
 
 #### Solution Exercise 3 - Globals
             Step 1 & 2:
+            SQL Query with embedded reference to Globals:
+            Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
+            
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
             
-            SQL Query with embedded reference to Globals:
-            Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
+            
             
 
             Step 3:      
