@@ -87,14 +87,14 @@ customer to the address LU table so the full details of the customers are readil
 #### Solution Exercise 2 - Translations
 
             ##### Step 1 & 2:
-            Translation table schema:
-            ![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
+Translation table schema:
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
 
-            Translation table data:
-            ![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
+Translation table data:
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(2).PNG) 
 
-            Address population diagram featuring translation table and LAT/LONG concatenation function:
-            ![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)
+Address population diagram featuring translation table and LAT/LONG concatenation function:
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(1).PNG)
 
             ##### Step 3:
             InstanceID 1000: 39.7771::-86.1458
@@ -131,8 +131,8 @@ customer to the address LU table so the full details of the customers are readil
 
 #### Solution Exercise 3 - Globals
             ##### Step 1 & 2:
-            Globals definition:    
-            ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
+Globals definition:    
+![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
             
             SQL Query with embedded reference to Globals:
             Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
