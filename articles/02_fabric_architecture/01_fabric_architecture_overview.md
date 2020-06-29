@@ -46,7 +46,7 @@ Fabric relies on a resilient architecture and a strong set of 3rd party technolo
 Fabric uses three types of storage engines:
 
 #### MicroDB ![](/articles/02_fabric_architecture/images/microDBPic.gif)
-The core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit])(https://github.com/k2view-academy/K2View-Academy/blob/master/articles/03_logical_units/_LU_overview.md) for every business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
+The core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/_LU_overview.md)) for every business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
 
 A MicroDB provides several advantages:
 
