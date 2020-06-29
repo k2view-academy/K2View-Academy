@@ -1,10 +1,10 @@
 # Fabric - Main Configuration Files
 
 ## Configuration Directory
-
-Fabric configuration files are located under the $K2_HOME/config directory. The Fabric configuration **template files** are located under $K2_HOME/fabric/config.template. 
-
 **Important:**
+- Fabric configuration files are located under the $K2_HOME/config directory. 
+- Fabric configuration **template files** are located under the $K2_HOME/fabric/config.template. 
+
 
 Make sure to edit the configuration files under the **$K2_HOME/config** directory and not under the template directory.
 
@@ -26,7 +26,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p>&nbsp;</p>
 </td>
 <td width="600pxl" valign="top">
-<p>Fabric's main configuration file holding different sections of parameters where each section has its own parameters. Default Fabric values are set for the commented parameters.</p>
+<p>Fabric's main configuration file holding different sections of parameters where each section has its own parameters. Default Fabric values are set for commented parameters.</p>
 </td>
 </tr>
 <tr>
@@ -42,7 +42,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid">node.id</a></p>
 </td>
 <td width="600pxl" valign="top">
-<p>List of Fabric node identifiers for the Affinity mechanism and supports several Fabric clusters on one Cassandra cluster.</p>
+<p>List of Fabric node identifiers for the Affinity mechanism. Supports several Fabric clusters on one Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
@@ -57,7 +57,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <td width="300pxl" valign="top">
 <p>jvm.options</p>
 </td>
-<td width="600pxl" valign="top">Set the flags to be used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone"> -DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
+<td width="600pxl" valign="top">Sets the flags used by Fabric to startup the JVM (Java Virtual Machine). For example:&nbsp; To use the machine's local timezone, uncomment the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#set-fabric-time-zone"> -DFABRIC_LOCAL_TIMEZONE parameter</a> and set it to true to use the local time-zone of the Fabric server.</td>
 </tr>
 <tr>
 <td width="300pxl" valign="top">
@@ -72,7 +72,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <p>modules</p>
 </td>
 <td width="600pxl" valign="top">
-<p>List of internal Fabric modules. Each module depends on the previous modules in the file. You can comment some of the internal Fabric modules and <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart">restart the Fabric node</a> to avoid starting the commented modules and have a lightweight start on Fabric. For example: comment the <strong>jobs</strong> module to avoid running jobs on the Fabric node. The following modules can be commented:</p>
+<p>List of internal Fabric modules. Each module depends on the previous modules in the file. You can comment some internal Fabric modules and <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#k2fabric-restart">restart the Fabric node</a> to avoid starting the commented modules and have a lightweight start on Fabric. For example: comment the <strong>jobs</strong> module to avoid running jobs on the Fabric node. The following modules can be commented:</p>
 <ul>
 <li><strong>jobs</strong>,running Fabric jobs.</li>
 <li><strong>webserver</strong>,connecting Fabric via http or https. For example: <a href="/articles/15_web_services/01_web_services_overview.md">invoke Fabric WS</a>, <a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">deploy Fabric implementation from Fabric Studio.</a></li>
@@ -89,7 +89,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 
 ### config.ini
 
-Fabric's main configuration file which holds different sections of parameters where each section has it own parameter. Fabric default value for commented parameters.
+Fabric's main configuration file which holds different sections of parameters where each section has it own parameter. Default Fabric values for commented parameters.
 
 <table width="900pxl">
 <tbody>
@@ -315,42 +315,36 @@ Fabric's main configuration file which holds different sections of parameters wh
 </table>
 <p>&nbsp;</p>
 
-#### Set Fabric Time-Zone
+#### Set Fabric Time Zone
 
-Fabric is a multi-node, multi Datacenter (DC) system which interacts and exchanges data with target and source systems and exposes APIs.
+Fabric is a multi-node, multi Datacenter (DC) system which interacts and exchanges data with target and source systems and exposes APIs. This may present a challenge when dealing with time zones.
 
-This may present a challenge when dealing with time-zones.
+By default, Fabric is configured to use the **Coordinated Universal Time (UTC)** zone, regardless of the time zone of the host server. UTC is roughly equivalent to **GMT time** but does not observe Day Light Saving.
 
-By default, Fabric is configured to use **UTC** (Coordinated Universal Time) time-zone, regardless of the time-zone of the host server. UTC time-zone is roughly equivalent to **GMT time** and does not observe Day Light Saving.
+When getting data from source systems and storing it in Fabric, the best practice is to normalize all timestamps (populated in Fabric) to UTC and store any additional time zone information in separate fields.
 
-When getting data from source systems and storing it in Fabric, the best practice is to normalize all timestamps, populated in Fabric, to UTC and store any additional time zone information in separate fields.
+When exposing or exporting data to upstream systems that require a different time presentation, the conversion should be done during the data movement (not stored in Fabric) and planned per consumer. This behavior makes it easier to process logs and analyze data interchange of cross time zones datacenters, nodes and external systems.
 
- When exposing or exporting data to upstream systems that require a different time presentation, the conversion should be done during the data movement (not stored in Fabric) and planned per consumer.
+Fabric does allow changing this default behavior and changing the process time zone from UTC to the server's local time:
 
-This behavior makes it easier to process logs and analyze data interchange of cross time zones datacenters, nodes and external system.
-
-Fabric does allow changing this default behavior and changing the process time-zone from UTC to the server's local time:
-
-- Go to the jvm.options file in the config directory and uncomment the following line (remove the # character) from the following parameter: **#-DFABRIC_LOCAL_TIMEZONE=true**.
-
-   This affects internal activities such as [log file reporting](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) or trace files and can also change the behavior of some JDBC drivers against date fields that contain time-zone information.
+- Go to the **jvm.options** file in the **config directory** and uncomment the following line (remove the # character) from the following parameter: **#-DFABRIC_LOCAL_TIMEZONE=true**.
+This affects internal activities such as [log file reporting](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) or trace files and can also change the behavior of some JDBC drivers against date fields that contain time zone information.
 
 <!-- drop 4- add a link to trace -->
 
-- To change the way data is saved into fabric, open the config.ini file in the config folder and change the **DATETIME_FORMAT_LOCAL_TIMEZONE** parameter as follows:
+- To change how data is saved to Fabric, open the **config.ini** file in the **config folder** and change the **DATETIME_FORMAT_LOCAL_TIMEZONE** parameter as follows:
 
    **DATETIME_FORMAT_LOCAL_TIMEZONE=true**
 
-   This affects the conversion of Date objects to a table field entry in the Fabric database and formats them according to the  	Wall Time of the local time-zone. 
-
+   This affects the conversion of Date objects to a table field entry in the Fabric database and formats them according to the Wall Time of the local time zone. 
 
 Note that you must restart Fabric after making these updates.
 
-Since these entries affect different stages of data intake and exposure, it is important to test the date format after changing them to make sure the required format is achieved against all sources and data types. Changes will not affect data already in the database.
+Since these entries affect different stages of data intake and exposure, it is important to test the Date format after changing them to make sure the required format is achieved against all sources and data types. Changes will not affect data already in the database.
 
 ### node.id
 
-This file lists Fabric node identifiers for the Affinity mechanism. The following identifies can be set in the node.id file:
+This file lists Fabric node identifiers for the Affinity mechanism. The following identifiers can be set in the node.id file:
 
 -  **uuid**, if this parameter is not defined, Fabric automatically generates a value for the **uuid** during startup.
 - **logical_id,** used to define an Affinity for the Fabric jobs mechanism. The logical_id contains only letters and numbers. Several nodes can share the same logical_id. In addition, several logical IDs can be set for one node. The priority of each logical_id can be defined by adding several threads that will be allocated for each logical node. The number is concatenated to the logical_id name by a colon. For example, the logical_id for a given node has the following values: A:2, B:3, and C:6. If there are 10 threads in the pool for this node, then the job using logical_id **C** as an Affinity will get higher priority on this node, as 6 out of the 10 threads will be allocated to this job.
