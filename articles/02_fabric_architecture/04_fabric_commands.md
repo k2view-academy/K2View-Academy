@@ -446,7 +446,7 @@ DROP LUTYPE Customer;
 
 ### Fabric Environments and Interfaces
 
-Fabric enables the deployment of Fabric environments and setting active environments on [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting--session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting--cluster-level).
+Fabric enables the deployment of Fabric environments and setting active environments on [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
 The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the active environment.
 
