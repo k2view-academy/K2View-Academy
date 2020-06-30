@@ -7,13 +7,13 @@
 
 ### Different types of data manipulations
 
-Let's look at what needs to be considered to ensure that the LU data you are sourcing from external systems is processed efficiently. 
+Let's look at what needs to be considered to ensure that the LU data you are sourcing from external systems is processed efficiently: 
 
-- What kind of changes would I want to apply to the data?
+- Which changes would I want to apply to the data?
 
-  - cosmetic change to ensure format compliancy across your flow
-  - mathematical formulas to compute new data. 
-  - conversion rules 
+  - Cosmetic change to ensure format compliancy across the flow.
+  - Mathematical formulas to compute new data. 
+  - Conversion rules. 
 
 - How to create new fields or tables by receiving transformed input from multiple fields within your schema and by applying transformation functions above-mentioned
 
