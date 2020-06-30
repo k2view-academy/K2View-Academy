@@ -1,6 +1,6 @@
 # Built-In Actor Types
 
-In **Broadway**, the **Actor** represents an activity (action) that should be executed as part of the **Flow** on each **Stage**. For example, reading a file, creating a table, parsing and object, load a table.  
+The **Actor** represents an activity (action) that should be executed on each **Stage** of the **Boradway Flow**. For example, reading a file, creating a table, parsing an object, concatenating a string.  
 
 Broadway has a vast list of built-in Actors that can create various types of activities and can be added to each Flow.
 The Broadway built-in Actors are split into the following categories (tags), while each category includes several Actor types.
@@ -17,7 +17,7 @@ Note that when doing **Export Actor** from the Actor's context menu, a new categ
 <p><h3><strong>Category Description</strong></p>
 </td>
 <td width="720pxl">
-<p><h3><strong>Actor Example per Category</strong></p>
+<p><h3><strong>Example of Actors per Category</strong></p>
 </td>
 </tr>
 <tr>
@@ -92,13 +92,12 @@ Note that when doing **Export Actor** from the Actor's context menu, a new categ
 <p><strong>And </strong>Actor returns <strong>true</strong> if and only <strong>if both a and b </strong>are <strong>true</strong>. Both a and b&nbsp;should be boolean values or a value that can be converted to boolean.&nbsp;</p>
 <p><strong>Elvis </strong>Actor returns&nbsp;<strong>a</strong> if a converted to boolean is <strong>true</strong>. Otherwise it returns <strong>b</strong>.</p>
 <p><strong>IfElse</strong> Actor includes the <strong>test</strong> input to be validates as either true or false. <strong>If test is true</strong>, return <strong>a</strong>, else return <strong>b</strong>.</p>
-<p>&nbsp;</p>
 </td>
 </tr>
 <tr>
 <td width="210"><h4><strong>math</strong></td>
 <td width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
-<td width="600">&nbsp;
+<td width="600">
 <p><strong>Aggregate</strong> Actor aggregates values.&nbsp;It receives a number or collection of numbers and calculates the sum, count, average, min and max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;</p>
 <p><strong>MathDivMod</strong> Actor returns the divisor and modulo factor of <strong>a</strong> and <strong>b</strong>. For example, if a=10 and b=3 then div=3 and mod=1.</p>
 </td>
