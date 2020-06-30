@@ -45,8 +45,8 @@ customer to the address LU table so that full information about the customer is 
             Which function would you use to make sure that the first name and last name are concatenated into one field in 
             the Address table ?
             Step 3: 
-            In the properties panel, what does the configuration variable "Lookup Not Found" mean ? What are the available options ? 
-            Using our example what will be the most likely value of this configuration variable ?
+            In the Properties panel, what does the "Lookup Not Found" configuration variable mean ? What are the available options ? 
+            Using our example, what will most likely be the value of this configuration variable ?
             Step 4: 
             Save the lookup table and deploy and run instance 2472. Which name appears in the Address table ?
 
