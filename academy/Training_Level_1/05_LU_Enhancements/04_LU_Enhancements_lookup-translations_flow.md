@@ -141,12 +141,11 @@ functions from the previous exercises, please execute the following steps:
 
 #### Solution Exercise 3 - Globals
             Step 1:
-
-SQL Query with embedded reference to Globals:
-            Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
+            SQL Query with embedded reference to Globals:
+                        Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
                         
             Step 2:
-a. Decision function based on Globals:
+            a. Decision function based on Globals:
 
             // this function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
             Boolean syncInd = false;
@@ -161,20 +160,20 @@ a. Decision function based on Globals:
             syncInd = false;
             }
             return syncInd;
+            
 
-b. Answer: 5
+            b. Answer: 5
+            c. The sync did not happen.
 
-c. The sync did not happen.
-
-d. Yes the sync happened, as there are more than 20000 entries in the CASES table of CRM_ DB. You were able to do so since we defined RUN_POP as a 
-non-final globals.
+            d. Yes the sync happened, as there are more than 20000 entries in the CASES table of CRM_ DB. 
+            You were able to do so since we defined RUN_POP as a non-final globals.
             
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
             
                       
-
-Step 3:
+            
+            Step 3:
            
                   reportUserMessage("Invoice Cleaning fonction is running");
                   String SQLINVOICES="SELECT * FROM INVOICE";
@@ -189,9 +188,9 @@ Step 3:
                   }
                   }
 
-Step 4: Answer: 19 entries.
+            Step 4: Answer: 19 entries.
             
-Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
+            Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
 
                 if ((cellValue.matches("(.*)+(.*)") == false))
                 {
