@@ -1,7 +1,7 @@
 # Creating and Deploying a Web Service
 
 The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses.
-Click [Web Services Overview](/articles/15_web_services/01_web_services_overview.md)to read a little more.
+Click [Web Services Overview](/articles/15_web_services/01_web_services_overview.md) to read a little more.
 
 ### Creating a Web Service
 
