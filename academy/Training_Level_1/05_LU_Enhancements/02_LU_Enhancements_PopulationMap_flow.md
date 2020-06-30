@@ -9,15 +9,15 @@
 
 Let's look at what needs to be considered to ensure that the LU data you are sourcing from external systems is processed efficiently: 
 
-- Which changes would I want to apply to the data?
+- What changes would I want to apply to the data?
 
   - Cosmetic change to ensure format compliancy across the flow.
   - Mathematical formulas to compute new data. 
   - Conversion rules. 
 
-- How to create new fields or tables by receiving transformed input from multiple fields within your schema and by applying transformation functions above-mentioned
+- How to create new fields or tables by receiving transformed input from multiple fields within the schema and by applying transformation functions.
 
-- How do I ensure data is up-to-date by enforcing synchronization schemes for specific LUIs
+- How I ensure data is up-to-date by enforcing synchronization schemes for specific LUIs.
 
   
 
