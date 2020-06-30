@@ -18,11 +18,24 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
    What is the response? Failed to authorize. 
    Why? The Web Service is requiring a token for authentication. 
 4. For the request to succeed, create the permissions and a token:
+   ```
+    create user 'test_user'; 
+    create role 'admin'; 
+    grant ALL_WS on * to 'admin'; 
+    assign role 'admin' to user 'test_user';`
+    create token test; 
+    assign role 'admin' to token test; 
+   ```
+
+
+
+
+
 - create user 'test_user'; 
 - create role 'admin'; 
 - grant ALL_WS on * to 'admin'; 
 - assign role 'admin' to user 'test_user';`
-- Create token test; 
+- create token test; 
 - assign role 'admin' to token test; 
 5. Go back and try to execute the Web Service again. Click the **Lock**, set a valid **Token** and **close**.
 7. Set the **i_id** to **82** and execute. 
