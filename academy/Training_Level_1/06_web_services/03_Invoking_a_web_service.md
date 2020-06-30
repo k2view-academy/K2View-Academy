@@ -6,13 +6,15 @@ Now that you have created and deployed you first Web Service into Fabric,  you c
 
 Let's learn how to invoke and test a Web Service from the Fabric Studio using [Swagger](/articles/15_web_services/09_swagger.md):
 
-To ensure that the data being exposed by the Web Service is secured, authenticated and executed with click [Fabric Credentials Commands](/articles/17_fabric_credentials/02_fabric_credentials_commands.md), and then set the Web Service credentials.	
+To ensure that the data being exposed by the Web Service is secured, authenticated and executed, click [Fabric Credentials Commands](/articles/17_fabric_credentials/02_fabric_credentials_commands.md) and then set the Web Service credentials.	
 
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Invoking a Web Service
  
-1. Right click the **Web Service** and select **Invoke Web Service** and then the **prefered environment**: The Fabric server name or Local Fabric (debug).
+1. Right click the **Web Service**, select **Invoke Web Service** and then the **preferred environment** which can be either the Fabric server name or Local Fabric (debug).
+   
+  
    Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all options: GET, POST, PUT and DELETE, All of these options are available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
    What is the response? Failed to authorize. 
