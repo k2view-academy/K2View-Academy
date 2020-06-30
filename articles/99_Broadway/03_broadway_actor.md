@@ -44,6 +44,18 @@ The export activity creates a new Actor Type.
 
 An Actor Type is a template of an Actor object. Adding an Actor to a Flow create a new instance of the selected Actor Type.
 
+### Actor  Description and Remark
+
+Click the **...** icon on the Actor > Description to view the description of the Actor Type.  See the example below:
+
+![Description](/articles/99_Broadway/images/actor_description.png)
+
+The Description window is displayed in a read-only mode.
+
+Click the **...** icon on the Actor > Remark to open the Remark window and add your own remark on the Actor object.
+
+Notes that if you export the Actor and creates an Actor Type based on the exported Actor, the Remark of the Actor is copied to the Description of the newly created Actor Type. 
+
 ### Actor Window
 
 The Actor Window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
@@ -152,6 +164,7 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>Parameter description. The parameter description is displayed in a read-only mode.</p>
+<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Description to open the Description window.</p>
 </td>
 </tr>
 <tr>
@@ -160,10 +173,14 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
+<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Remark to open the Description window.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+
+
 
 ##### Parameter's Value
 
@@ -191,7 +208,65 @@ Notes:
 
 - Broadway enables populating a value that matches the parameters type. For example: Broadway only enables to insert  numbers for Integer parameters. 
 
+- When populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
+
+  ![Sql_input](/articles/99_Broadway/images/sql_input_value.png)
+  
+  
+  
+  #### Data Output Parameters
+  
+  <table>
+  <tbody>
+  <tr>
+  <td valign="top" width="300pxl">
+  <p><strong>Parameter Name</strong></p>
+  </td>
+  <td valign="top" width="600pxl">
+  <p>The name of the parameter</p>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" width="300pxl">
+  <p><strong>Parameter Type</strong></p>
+  </td>
+  <td valign="top" width="600pxl">
+  <p>String, Integer, Real&hellip;</p>
+  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" width="300pxl">
+  <p><strong>Output Type</strong></p>
+  </td>
+  <td valign="top" width="600pxl">
+  <p>Click the &hellip; icon next to the parameter name &gt; Set External to expose the output to the external process that executes the Broadway flow.</p>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" width="300pxl">
+  <p><strong>Description</strong></p>
+  </td>
+  <td valign="top" width="600pxl">
+  <p>Parameter description. The parameter description is displayed in a read-only mode.</p>
+  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Description to open the Description window.</p>
+  </td>
+  </tr>
+  <tr>
+  <td valign="top" width="300pxl">
+  <p><strong>Remark</strong></p>
+  </td>
+  <td valign="top" width="600pxl">
+  <p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
+  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Remark to open the Description window.</p>
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  
+  
+  
   <!-- to check with Yuval- empty values -->
 
-<!-- Add explanation about parameters + actor remark (click ... on the Actor in the flow) -->
+
 
