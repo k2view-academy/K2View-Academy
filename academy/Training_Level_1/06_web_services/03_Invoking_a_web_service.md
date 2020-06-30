@@ -34,6 +34,7 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 
 5. Go back and try to execute the Web Service again. Click the **Lock**, set a valid **Token** and **close**.
 7. Set the **i_id** to **82** and execute. 
+   
    What is the Customer's first name? Anthony
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Invoking a Web Service
