@@ -81,7 +81,7 @@ Associate a unique geo-location code to the address table to build a heat map of
             Step 2: 
             Do the same for the International City Code.
             Step 3: 
-            What is the Lat / Long value for Instance LUI: 1000, What is the International City Code for LUI: 2217
+            What is the Lat / Long value for LUI 1000 ? What is the International City Code for LUI 2217 ?
 
 
 #### Solution Exercise 2 - Translations
@@ -102,39 +102,37 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             
 
 #### Exercise 3 - Globals
-We wish to use Globals rather than values hardcoded into the java functions or SQL statements. Using the enrichment and decision
-functions from the previous exercises, please execute the following steps: 
+Let's use Globals rather than values hardcoded into Java functions or SQL statements. Using the enrichment and decision functions from the previous exercises, please execute the following steps: 
 
             Step 1: 
-            Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
+            Create a new Global (Final) named OLDInvoices of the "date" type which will indicate which invoice records can be 
             deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the INVOICES table.
             Using the Query Builder, execute an SQL query with a WHERE statement that selects all records older than OLDINVOICES 
             globals set to "2015-12-31"
-            
+             
             Step 2: 
-            a. Create new Global value (Not Final) “RUN_POP” to be used by the Decision function we created 
-            “CasesUpdateMonitor”. 
+            a. Create new Global value (Not Final) “RUN_POP” to be used by the “CasesUpdateMonitor” Decision function you created.            . 
             In your function, use the Global value to decide whether to run the population or not, depending on 
             the number of records in the CASES tables of the CRM_DB database.
             b. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 25000 ?
             c. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 30000 ?
-            d. Open Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
-            Run again Instance ID 1472 - Will the sync happen ? Why were you able to override the value of RUN_POP ?
+            d. Open the Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
+            Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value  ?
             
             Step 3: 
-            Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
-            Set the globals OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the java "compareTO" 
+            Create an enrichment function to loop throw all invoices and delete all invoices that are older than the barrier date.
+            Set the globals OLDINVOICES value to "2015-12-31". Use this exact format so you can use the Java "compareTO" 
             function to compare dates. 
             
             Step 4: 
             Attach both functions to their relevant table.
-            Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? 
-            (Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date 
-            that is later than 2015-12-31)
+            Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000 ? 
+            Using the Data Viewer on the InstanceID 1000 Invoice table, check that all invoice records have an issued date 
+            that is later than 2015-12-31).
                
             Step 5:
-            Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so all the phone entries of 
-            Instance ID=1000 (that do not have an international code already) to a new international code set to "+44"
+            Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so that all phone entries of 
+            Instance ID=1000 that do not already have an international code are set to "+44".
 
 
 
@@ -146,7 +144,7 @@ functions from the previous exercises, please execute the following steps:
             Step 2:
             a. Decision function based on Globals:
 
-            // this function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
+            // This function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
             Boolean syncInd = false;
             String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
             //puts the number of rows in CASES DB into variable count
@@ -164,9 +162,9 @@ functions from the previous exercises, please execute the following steps:
             b. Answer: 5
             c. The sync did not happen.
 
-            d. Yes the sync happened (as there are more than 20000 entries in the CASES table of CRM_ DB). 
-            This time, the sync process did happen since we defined RUN_POP as a non-final GLOBAL and since we have overridden its 
-            value for all the instances *.RUN_POP within the scope of this Fabric session.
+            d. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
+            This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden its 
+            value for all the s *.RUN_POP within instance in the scope of this Fabric session.
             
             
 Globals definition:    
