@@ -5,39 +5,39 @@
 
 ### Using tables for data manipulations
 
-Now you have seen how functions can be attached to LU tables to modify data, let's see how these tables (and functions) 
-are used to enrich data.
-In this section the following types of tables are addressed:
+Now we have seen how functions can be attached to LU tables to modify data, let's see how we can use tables (and functions) 
+to enrich data.
+In this section we will address the following types of tables:
 
--  [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
+[Lookup tables](/articles/07_table_population/11_lookup_tables.md)
 
--  [Translation tables](/articles/09_translations/01_translations_overview_and_use_cases.md)
+[Translation tables](/articles/09_translations/01_translations_overview_and_use_cases.md)
 
--  [Creating a new translation table](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) 
+[Creating a new translation table](/articles/09_translations/02_creating_a_new_translation_in_fabric.md) 
 
--  [Data population in a translation](/articles/09_translations/03_data_population_in_a_translation.md)
+[Data population in a translation](/articles/09_translations/03_data_population_in_a_translation.md)
 
--  [Using Translations in Fabric](/articles/09_translations/04_using_translations_in_fabric.md)
+[Using Translations in Fabric](/articles/09_translations/04_using_translations_in_fabric.md)
 
--  [Translations code example](/articles/09_translations/05_translations_code_examples.md)
+[Translations code example](/articles/09_translations/05_translations_code_examples.md)
 
 
 
 ### Globals
 
--  [Globals Overview](/articles/08_globals/01_globals_overview.md)
+[Globals Overview](/articles/08_globals/01_globals_overview.md)
 
--  [Globals Use Cases](/articles/08_globals/02_globals_use_cases.md)
+[Globals Use Cases](/articles/08_globals/02_globals_use_cases.md)
 
--  [Globals in Fabric Commands](/articles/08_globals/03_set_globals.md)
+[Globals in Fabric Commands](/articles/08_globals/03_set_globals.md)
 
--  [Globals code example](/articles/08_globals/04_globals_code_examples.md)
+[Globals code example](/articles/08_globals/04_globals_code_examples.md)
 
 
 
 #### Exercise 1 - Lookup tables
-Using the CustomerLU schema, let's look at the Address population map. You need to add the first name and last name of the 
-customer to the address LU table so that full information about the customers is readily available.
+Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
+customer to the address LU table so the full details of the customers are readily available.
 
             Step 1: 
             Which table should you consider and why ?
@@ -46,23 +46,23 @@ customer to the address LU table so that full information about the customers is
             the Address table ?
             Step 3: 
             In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
-            available ? Using our example what will be the most likely value of this configuration variable ?
+            available ? Using our example what will be the most likely value of this configuration variable
             Step 4: 
-            Save the lookup table and deploy and run instance 2472. Which name appears in the address table ?
+            Save the lookup table, deploy and run instance 2472. Which name features in the address table ?
 
 
 #### Solution Exercise 1 - Lookup table
 
             Step 1: 
-            In the table from the customerLU, is it much more efficient to use the data already populated into the LU table rather than using
-            the CRM table ?
+            The table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
+            the CRM table
             Step 2: 
-            The k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular 
-            example you need only 2 strings and have set the delimiter to ".". (A next stage of the exercise could be to add a 
+            k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular 
+            example we need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a 
             UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email
             address to your customers)
             Step 3:
-            The  "Lookup Not Found" configuration variable sets up the systems' behaviour if a specific value does not exist in the lookup 
+            The configuration variable "Lookup Not Found" sets up the systems' behaviour if a specific value does not exist in the lookup 
             table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
             In our example, we are using a table that is very likely to have all the records (first name & last name are mandatory 
             fields) and therefore it should be set to "Continue".
@@ -72,7 +72,7 @@ customer to the address LU table so that full information about the customers is
 
 
 #### Exercise 2 - Translations
-Associate a unique geo-location code to the address table to build a heat map of the customer's location.
+We wish to associate a unique geo-location code to the address table, to build a heat map of customers location.
             
             Step 1: 
             Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
@@ -81,7 +81,7 @@ Associate a unique geo-location code to the address table to build a heat map of
             Step 2: 
             Do the same with the international city code.
             Step 3: 
-            What is the Lat/Long value for the LUI: 1000, What is the city international code for the LUI: 2217
+            What is the Lat/Long value for Instance LUI: 1000, What is the city international code for LUI: 2217
 
 
 #### Solution Exercise 2 - Translations
@@ -102,36 +102,38 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             
 
 #### Exercise 3 - Globals
-Use Globals rather than values hardcoded into Java functions or SQL statements. Using the enrichment and decision
+We wish to use Globals rather than values hardcoded into the java functions or SQL statements. Using the enrichment and decision
 functions from the previous exercises, please execute the following steps: 
 
             Step 1: 
-            Create a new Global (Final) named OLDInvoices of the "date" type which indicates which invoice records can be 
+            Create a new Global (Final) named OLDInvoices of the type "date" which will indicate which invoice records can be 
             deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the INVOICES table.
             Using the Query Builder, execute an SQL query with a WHERE statement that selects all records older than OLDINVOICES 
             globals set to "2015-12-31"
             
             Step 2: 
-            a. Create new Global value (Not Final) “RUN_POP” to be used by the  “CasesUpdateMonitor” Decision function. In your function, use the Global value to decide whether to run the population or not, depending on the number of records in the CASES tables of the CRM_DB database.
+            a. Create new Global value (Not Final) “RUN_POP” to be used by the Decision function we created 
+            “CasesUpdateMonitor”. 
+            In your function, use the Global value to decide whether to run the population or not, depending on 
+            the number of records in the CASES tables of the CRM_DB database.
             b. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 25000 ?
             c. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 30000 ?
-            d. Going back to the function you have written, what happens if you add the following statement at the beginning of the code?
-            "String RUN_POP="20000";"
-            Will the sync happen ? Why were you able to override the value of RUN_POP ?
+            d. Open Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
+            Run again Instance ID 1472 - Will the sync happen ? Why were you able to override the value of RUN_POP ?
             
             Step 3: 
-            Create an enrichment function to loop throw all invoices and delete all invoices that are older than the barrier date.
-            Set the global's OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the Java "compareTO" function to 
-            compare dates. 
+            Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
+            Set the globals OLDINVOICES value to "2015-12-31". (Use this exact format so you can use the java "compareTO" 
+            function to compare dates. 
             
             Step 4: 
-            Attach both functions to their relevant tables.
+            Attach both functions to their relevant table.
             Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? 
-            (Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that 
-            is later than 2015-12-31)
+            (Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date 
+            that is later than 2015-12-31)
                
             Step 5:
-            Using a new Global named "*InterCode_UK*", modify the PhoneFormat enrichment function so that all the phone entries of 
+            Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so all the phone entries of 
             Instance ID=1000 (that do not have an international code already) to a new international code set to "+44"
 
 
@@ -162,8 +164,10 @@ functions from the previous exercises, please execute the following steps:
             b. Answer: 5
             c. The sync did not happen.
 
-            d. Yes the sync happened, since there are more than 20000 entries in the CASES table of CRM_ DB. 
-            You were able to do so since you defined RUN_POP as a non-final globals.
+            d. Yes the sync happened (as there are more than 20000 entries in the CASES table of CRM_ DB). 
+            This time, the sync process did happen since we defined RUN_POP as a non-final GLOBAL and since we have overridden its 
+            value for all the instances *.RUN_POP within the scope of this Fabric session.
+            
             
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
