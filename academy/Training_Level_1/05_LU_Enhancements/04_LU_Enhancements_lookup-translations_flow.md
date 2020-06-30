@@ -163,7 +163,9 @@ a. Decision function based on Globals:
             return syncInd;
 
 b. Answer: 5
+
 c. The sync did not happen.
+
 d. Yes the sync happened, as there are more than 20000 entries in the CASES table of CRM_ DB. You were able to do so since we defined RUN_POP as a 
 non-final globals.
             
