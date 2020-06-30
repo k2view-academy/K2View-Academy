@@ -7,7 +7,7 @@
 
 ### Different types of data manipulations
 
-Let's look at what you need to consider to ensure that the LU data you are sourcing from external systems is processed efficiently. 
+Let's look at what needs to be considered to ensure that the LU data you are sourcing from external systems is processed efficiently. 
 
 - What kind of changes would I want to apply to the data?
 
