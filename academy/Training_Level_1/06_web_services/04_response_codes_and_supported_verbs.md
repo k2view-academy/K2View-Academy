@@ -22,7 +22,7 @@ In addition to the above supported verbs and response codes, the following infor
 
 1.Create a new Web Service that insert entries into CASES table following considerations: 
  -    The Web Service can insert multiple subscribers for a give Logical Unit Instance. 
- -    The Web Service reposnse should include success or failure in the process.
+ -    The Web Service response should include success or failure in the process.
  -    Perform basic input validations.
 
 2.  Question: Which supported verbs will you use?
