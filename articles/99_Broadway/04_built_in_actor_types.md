@@ -1,6 +1,6 @@
 # Built-In Actor Types
 
-The **Actor** represents an activity (action) that should be executed on each **Stage** of the **Boradway Flow**. For example, reading a file, creating a table, parsing an object, concatenating a string.  
+The **Actor** represents an activity (action) that should be executed on each **Stage** of the **Broadway Flow**, that gets input parameters and returns output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
 
 Broadway has a vast list of built-in Actors that can create various types of activities and can be added to each Flow.
 The Broadway built-in Actors are split into the following categories (tags), while each category includes several Actor types.
