@@ -173,11 +173,25 @@ Setting the parameter's value is needed in the following scenarios:
 
   Example: 
 
-   **Const** Actor. The input parameter name is **value**. Its type is **String** and its value is "Hello Broadway".
+   **Const** Actor. The input parameter name is **value**. Its type is **String** and its value is "Hello Broadway":
 
   ![Const1](/articles/99_Broadway/images/const_actor_example.png)
 
-- The input type is **Link** or **External** and you define a default value.  See the example
+- The input type is **Link** or **External** and you define a default value.
+
+  Example:
+
+  **Const** Actor. The  input parameter name is **value**. Its type is **Integer** and the default value is 7:
+
+  ![Const2](/articles/99_Broadway/images/const_actor_def_value_example.png)
+
+Notes:
+
+- Click the … icon next to the parameter name > Default value to set a default value for an input parameter.
+
+- The parameter's value needs to match the parameters type. For example: Broadway only enables to insert  numbers for Integer parameters. 
+
+  <!-- to check with Yuval- empty values -->
 
 <!-- Add explanation about parameters + actor remark (click ... on the Actor in the flow) -->
 
