@@ -17,8 +17,11 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
   
    Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all GET, POST, PUT and DELETE options, they are all available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
-   What is the response? Failed to authorize. 
-   Why? The Web Service is requiring a token for authentication. 
+  
+    What is the response? Failed to authorize. 
+ 
+    Why? The Web Service is requiring a token for authentication. 
+  
 4. For the request to succeed, create the permissions and a token:
    ```
     create user 'test_user'; 
