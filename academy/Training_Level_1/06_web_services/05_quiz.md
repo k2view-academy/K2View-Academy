@@ -2,7 +2,7 @@
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Quiz.png) Quiz
 
-Excellent! you have completed the Fabric Web Services learning items.
+Excellent! you have finished the Fabric Web Services learning items.
 
  Before completing your training, you can test what you've learned by taking the following quiz. It consists of a number of multiple-choice questions, each providing a number of possible answers. Select the answer you think is correct by clicking it:
 
