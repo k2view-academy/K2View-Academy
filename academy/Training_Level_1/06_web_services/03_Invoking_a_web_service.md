@@ -15,7 +15,7 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 1. Right click the **Web Service**, select **Invoke Web Service** and then the **preferred environment** which can be either the Fabric server name or Local Fabric (debug).
    
   
-   Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all options: GET, POST, PUT and DELETE, All of these options are available. The GET (default) option is expanded.
+   Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all GET, POST, PUT and DELETE options, they are all available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
    What is the response? Failed to authorize. 
    Why? The Web Service is requiring a token for authentication. 
