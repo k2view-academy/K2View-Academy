@@ -30,7 +30,7 @@ To understand the different types of project functions that can be developed and
 
 ### Enrichment functions
 
-To work directly on the data in the LU tables, AFTER they have been populated, you will need to use enrichment functions. These functions have specific properties and features as you will discover by reading the following articles:
+Use enrichment functions to work directly on the data in the LU tables, AFTER they have been populated. Enrichment functions have specific properties and features as you will discover by reading the following articles:
 
 - [Enrichment function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md)
 - [Root functions & Enrichment functions differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)
@@ -48,23 +48,23 @@ Let's focus for now on the CustomerLU in the course's project.
 
 ##### Question 1: Standardization of the phone number
 
-To develop the functions pertaining to this course's section, you will use the following LUIs. 
+To develop the functions pertaining to this course's section, you will use the following LUIs: 
 
-Using the CustomerLU data viewer, retrieve the LUI with the following IDs: 1123, 1125 and 1472.  
+Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs:   
 
-    1. How many distinct lines are associated with Luci (in the contract table)?
+    1. How many distinct lines are associated with the Luci in the Contract table?
 
     2. How many lines are associated to a 5G/LTE offer and how many match the international standard format for US numbers?
-         +1-xxx-xxx-xxxx (we will disregard parenthesis and minus signs)
+         +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs)
 
-    3. Let's write a java function that will modify any of LUI "Associated Line" fields to the international format using the 
+    3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
     following IDs contract_ID (2787 & 2788) to validate the code. 
         Tips:
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
             - Use the fabric() execute function to update data. 
 
-    4. You need to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
+    4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
     the code accordingly.
 
 
