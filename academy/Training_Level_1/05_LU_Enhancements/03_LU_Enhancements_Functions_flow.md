@@ -7,7 +7,7 @@
 
 ### Types of data manipulation
 
-Let's take a look at the different functions that can be used to apply data manipulations on your LU tables. But first, read [Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) about a specific set of utility functions that can be used in any type of data transformation.
+Let's take a look at the different functions that can be used to apply data manipulations on your LU tables. But first, read about [Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) and a specific set of utility functions that can be used in any type of data transformation.
 
 
 
@@ -30,7 +30,7 @@ To understand the different types of project functions that can be developed and
 
 ### Enrichment functions
 
-To work directly on the data in LU tables, only after they have been populated, you will need to use enrichment functions. These functions have specific properties and features as you will discover by reading the following articles:
+To work directly on the data in the LU tables, AFTER they have been populated, you will need to use enrichment functions. These functions have specific properties and features as you will discover by reading the following articles:
 
 - [Enrichment function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md)
 - [Root functions & Enrichment functions differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)
@@ -42,7 +42,7 @@ To work directly on the data in LU tables, only after they have been populated, 
 
 #### Exercise 1 - Enrichment functions
 
-As we have seen in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md), at the start of this training, and as part of the company's marketing initiative, we need to ensure that all 5G/LTE contract lines will be in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
+As you saw in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md), at the beginning of this training, and as part of the company's marketing initiative, you must ensure that all 5G/LTE contract lines are in international format, so an new data roaming offer can be sent by text to the owners while they are abroad. 
 
 Let's focus for now on the CustomerLU in the course's project. 
 
