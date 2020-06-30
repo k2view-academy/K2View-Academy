@@ -37,7 +37,7 @@ In this section the following types of tables are addressed:
 
 #### Exercise 1 - Lookup tables
 Using the CustomerLU schema, let's look at the Address population map. You need to add the first name and last name of the 
-customer to the address LU table so that full information about the customers are readily available.
+customer to the address LU table so that full information about the customers is readily available.
 
             Step 1: 
             Which table should you consider and why ?
@@ -48,13 +48,13 @@ customer to the address LU table so that full information about the customers ar
             In the properties panel, what does the configuration variable "Lookup Not Found" stands for ? What are the options 
             available ? Using our example what will be the most likely value of this configuration variable ?
             Step 4: 
-            Save the lookup table, deploy and run instance 2472. Which name appears in the address table ?
+            Save the lookup table and deploy and run instance 2472. Which name appears in the address table ?
 
 
 #### Solution Exercise 1 - Lookup table
 
             Step 1: 
-            In the table from customerLU, is it much more efficient to use the data already populated into the LU table rather than using
+            In the table from the customerLU, is it much more efficient to use the data already populated into the LU table rather than using
             the CRM table ?
             Step 2: 
             The k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular 
