@@ -93,7 +93,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 <p>k2auth</p>
 </td>
 <td rowspan="7" width="250pxl" valign="top">
-<p>Fabric security and credentials keyspace</p>
+<p>Fabric security and <a href="/articles/17_fabric_credentials/01_fabric_credentials_overview.md">credentials</a> keyspace</p>
 </td>
 <td width="150pxl" valign="top">
 <p><strong>Table Name</strong></p>
