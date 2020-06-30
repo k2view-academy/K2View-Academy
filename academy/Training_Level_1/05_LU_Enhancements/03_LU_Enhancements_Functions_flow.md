@@ -48,22 +48,23 @@ Let's focus for now on the CustomerLU in the course's project.
 
 ##### Question 1: Standardization of the phone number
 
-In order to develop the functions pertaining to this course's section, we will use the following LUIs (instances)
-Using the CustomerLU data viewer, retrieve the LU instances with the following IDs 1123, 1125 & 1472  
+To develop the functions pertaining to this course's section, you will use the following LUIs. 
 
-    a. How many distinct lines are associated with Luci (in the contract table)?
+Using the CustomerLU data viewer, retrieve the LUI with the following IDs: 1123, 1125 and 1472.  
 
-    b. How many lines are associated to a 5G/LTE offer and how many do match the international standard format for US numbers?
-         +1-xxx-xxx-xxxx (we will disregard parenthesis & minus signs)
+    1. How many distinct lines are associated with Luci (in the contract table)?
 
-    c. Lets write a java function that will modify any of the LUI "Associated Line" fields to the international format using the 
+    2. How many lines are associated to a 5G/LTE offer and how many match the international standard format for US numbers?
+         +1-xxx-xxx-xxxx (we will disregard parenthesis and minus signs)
+
+    3. Let's write a java function that will modify any of LUI "Associated Line" fields to the international format using the 
     following IDs contract_ID (2787 & 2788) to validate the code. 
-        - tips:
-             - use the ludb class to fetch data from the LU database  
-             - use regular expressions to identify the fields that need to be modified
-             - use the fabric() execute function to update data 
+        Tips:
+            - Use the LUDB class to fetch data from the LUDB.  
+            - Use regular expressions to identify the fields that need to be modified.
+            - Use the fabric() execute function to update data. 
 
-    d. We only wish to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
+    4. You need to apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
     the code accordingly.
 
 
