@@ -4,13 +4,13 @@ After you have created your first  Web Service, let's learn about the various re
 
 -  [Response Codes](/articles/15_web_services/11_response_codes.md)
 
--  [Supported Verbs, GET](/articles/15_web_services/12_Supported_Verbs_Get.md)
+-  [Supported Verbs GET](/articles/15_web_services/12_Supported_Verbs_Get.md)
 
--  [Supported Verbs, POST](/articles/15_web_services/13_Supported_Verbs_Post.md)
+-  [Supported Verbs POST](/articles/15_web_services/13_Supported_Verbs_Post.md)
 
--  [Supported Verbs, PUT](/articles/15_web_services/14_Supported_Verbs_Put.md)
+-  [Supported Verbs PUT](/articles/15_web_services/14_Supported_Verbs_Put.md)
 
--  [Supported Verbs, DELETE](/articles/15_web_services/15_Supported_Verbs_Delete.md)
+-  [Supported Verbs DELETE](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 
 In addition to the above supported verbs and response codes, the following information may provide more insight about the URL structure, authentication, encoding, etc.:
 
