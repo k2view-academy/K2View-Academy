@@ -37,7 +37,7 @@ In this section we will address the following types of tables:
 
 #### Exercise 1 - Lookup tables
 Using the CustomerLU schema, let's look at the Address population map. Add the first name and last name of the 
-customer to the address LU table so that full information about the customers are readily available.
+customer to the address LU table so that full information about the customer is readily available.
 
             Step 1: 
             Which table should you consider and why ?
