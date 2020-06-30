@@ -43,7 +43,7 @@ Let's create your first simple Web Service which will retrieve basic information
 Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md) to understand how.
 You can now deloy the Web Service into the Fabric server that you defined for your project. 
 
-Let's validate that the Web Service has been deployed:
+Now, let's validate that the Web Service has been deployed:
 
 1. Log into Fabric. 
 2. Execute: cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';
