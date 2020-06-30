@@ -37,7 +37,7 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
    
    What is the Customer's first name? Anthony
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Invoking a Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Invoking a Web Service
 
 Using the training materials and examples covered so far:
 
