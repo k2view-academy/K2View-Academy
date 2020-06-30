@@ -27,7 +27,7 @@ Let's create your first simple Web Service which will retrieve basic information
 4. Set the input parameter as **i_id** and data type as **String**
 5. Edit the Web Service function:
    -   Replace the **[Instance Id]** with the input parameter-**i_id**.
-   -   In the **Fetch** statement, remove all access values apart from **sql**. access values from the **Fetch** statement, only the **sql** paramter should be left
+   -   In the **Fetch** statement, remove all access values apart from **sql**.  
 6. Name the Web Service, for example **wsGetCustomer**. Make sure that the prefix is 'ws%'.
 7. Set the Web Service properties:
    -   Set the prefered **Category**, for example **Training**
