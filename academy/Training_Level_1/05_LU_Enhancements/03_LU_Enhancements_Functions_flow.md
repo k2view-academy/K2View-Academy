@@ -7,15 +7,12 @@
 
 ### Types of data manipulation
 
-Let's take a look at the different functions that can be used to apply data manipulations on your LU tables. But first, read  [Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) to learn about a specific set of utility functions that can be used in any type of data transformation.
-
-[Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md)
+Let's take a look at the different functions that can be used to apply data manipulations on your LU tables. But first, read [Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) about a specific set of utility functions that can be used in any type of data transformation.
 
 
 
 ### Fabric functions
-
-First of all let's understand the different types of project functions that can be developed and used by reading through this article: [Project Functions](/articles/07_table_population/08_project_functions.md).
+To understand the different types of project functions that can be developed and used, read  this article article about [Project Functions](/articles/07_table_population/08_project_functions.md).
 
 
 
