@@ -385,7 +385,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 - Set [global variables](/articles/08_globals/03_set_globals.md#how-do-i-use-the-set-command).
 
-- [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) setting:
+- [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) settings:
 
   - Set [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md.)
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
