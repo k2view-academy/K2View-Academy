@@ -1,0 +1,63 @@
+{
+  "name": "RootNode",
+  "children": [
+    {
+      "name": "ChildNode1",
+      "type": "function",
+      "code": "var x = Math.floor(Math.random() * Math.PI); \nvar y = Math.floor(Math.random() * Math.floor(3)); \n\n"
+    },
+    {
+      "type": "condition",
+      "code": "x > y",
+      "children": [
+        {
+          "type": "delegate",
+          "children": [
+            {
+              "name": "TRUE1",
+              "type": "string",
+              "code": "\"x is bigger than y\""
+            },
+            {
+              "name": "x",
+              "type": "string",
+              "code": "${x}"
+            }
+          ]
+        },
+        {
+          "type": "delegate",
+          "children": [
+            {
+              "name": "FALSE1",
+              "type": "string",
+              "code": "\"y is bigger than x\""
+            },
+            {
+              "name": "x",
+              "type": "string",
+              "code": "${x}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "y",
+      "type": "string",
+      "code": "${y}"
+    }
+  ],
+  "params": [
+    {
+      "name": "input1",
+      "dataType": "String",
+      "debugValue": "10"
+    },
+    {
+      "name": "input2",
+      "dataType": "String",
+      "debugValue": "5"
+    }
+  ]
+}
