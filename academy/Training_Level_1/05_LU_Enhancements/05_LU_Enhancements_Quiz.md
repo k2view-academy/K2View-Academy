@@ -166,7 +166,7 @@ B: All types of Fabric functions.
 
 C: Population executions.
 
-D: All enrichment functions and is determined at the LU schema level in the Enrichment Order tab. 
+D: All enrichment functions and is determined on the LU schema level in the Enrichment Order tab. 
 
 (***Solution 10: D ***).
 
