@@ -52,7 +52,7 @@ To develop the functions pertaining to this course's section, you will use the f
 
 Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs:   
 
-    1. How many distinct lines are associated with the Luci in the Contract table?
+    1. How many distinct lines are associated with the LUI in the Contract table?
 
     2. How many lines are associated to a 5G/LTE offer and how many match the international standard format for US numbers?
          +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs)
@@ -69,26 +69,26 @@ Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125
 
 
 
-##### Question 2: Case Notes Clean-up
+##### Question 2: Case notes clean-up
 
-The Case_Notes table stores all notes belonging to a particular case that was opened for a specific owner.  
-Tamar (Instance ID = 1472) keeps on receiving to her mailing address old bills as well as apology letters about issues she 
-is experimenting with the network. The case notes reflect issues of cases that are still opened.
+The Case_Notes table stores all notes belonging to a particular case that has been opened for a specific owner.  
+Tamar (Instance ID = 1472) keeps receiving old bills and apology letters about issues she 
+is experimenting with the network to her mailing address. The case notes reflect issues that are still open.
 
-    a. Let's first list the contracts owned by Tamar in the data viewer.
+    1. Let's first list the contracts owned by Tamar in the data viewer.
            - How many contracts does she own ?
 
-       Lets look at the different notes in the Case_Note table of Tamar's LUI
-           - What is the ID number of the note suggesting that Tamar has been alienated  and the associated Case Type 
-           description (in the cases table)
-           - How many cases are still opened ?
+       Let's look at the different notes in the Case_Note table of Tamar's LUI.
+           - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type 
+           description (in the Cases table)
+           - How many cases are still open ?
 
-    b. Write a java function that operates the following data transformations:
-       - All case notes belonging to cases of the type "Billing issues" should be changed to 
-         "insolvent customer due to alien assimilation"
-       - All case notes belonging to cases of the type "Network issues" should be changed to "Customer has been assimilated 
-         to a phone and is no longer network compatible"
-       - All open cases should be set to Status="closed"
+    2. Write a Java function that operates the following data transformations:
+       - All case notes belonging to cases of the "Billing issues" type should be changed to 
+         "insolvent customer due to alien assimilation".
+       - All case notes belonging to cases of the "Network issues" type should be changed to "Customer has been assimilated 
+         to a phone and is no longer network compatible".
+       - All open cases should be set to Status="closed".
 
  
 ##### Question 3: Attaching the enrichment function to the appropriate table
@@ -100,9 +100,9 @@ is experimenting with the network. The case notes reflect issues of cases that a
 #### Solution - Enrichment functions
 
 ##### Question 1: Standardization
-    a. 4
-    b. 1 & 2
-    c. Code: update all the phone numbers fields missing international code 	
+    1. 4.
+    2. 1 and 2.
+    3. Code: update all the phone number fields missing international code: 	
    ```java
    String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
    String interCode="+1 ";
@@ -136,11 +136,11 @@ is experimenting with the network. The case notes reflect issues of cases that a
 
 
 
-##### Question 2: Case Notes Clean-up
+##### Question 2: Case notes clean-up
    
-    a. none.
-    b. Q1 -> 3708; Q2 -> 4.
-    c. Code sample:	
+    1. none.
+    2. Q1 -> 3708; Q2 -> 4.
+    3. Code sample:	
   ```java
   
    String Contracts="SELECT COUNT (*) FROM CONTRACT";
@@ -195,7 +195,7 @@ is experimenting with the network. The case notes reflect issues of cases that a
    ```
                                                                        
 ##### Question 3: 
-    Nothing as the CASE_NOTE table has not been sync-ed yet. The function needs to be attached to the case_notes table.
+    Nothing since the CASE_NOTE table has not been synced yet. The function needs to be attached to the case_notes table.
 
 
 
@@ -207,7 +207,7 @@ is experimenting with the network. The case notes reflect issues of cases that a
 
 - [Decision Functions Recommendation](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
 
-### Sync strategy for LU schemas and Decision functions
+### Sync strategy for LU schemas and decision functions
 
 - [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
 - [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md)
@@ -216,24 +216,22 @@ is experimenting with the network. The case notes reflect issues of cases that a
 
 
   
-
 #### Exercise 2 - Decision functions
 
-
-In order to save network resources, we have decided to ensure that data synchronization of LUIs will only happen the number of
+To save network resources, ensure that data synchronization of LUIs only occurs if the number of
 entries in a given external source's table is above a specific threshold: CRMCases_threshold
 
 ##### Question 1: Build a decision function based on the following criteria:
 
     - If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 then the sync function 
     will return a boolean variable - *syncind* set to TRUE.
-    - At this stage you should hardcode the value of the threshold. (we will see later in this section how to set this threshold 
+    - Hardcode the value of the threshold. (you will return to this section later to see how to set this threshold 
     as a global parameter)
 
 ##### Question 2: Validate the function
-    Run Instance Id: 1472 - How many cases entries do you see in the cases table of the LUI ? 
+    Run Instance Id: 1472 - How many entries do you see in the Cases table of the LUI ? 
     Change the value of CRMCases_threshold to: 30000. 
-    Check whether the sync process happened by looking at the Cases table of the instance 1472 - how many cases entries can you see?
+    Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. How many cases entries can you see?
 
   
 
