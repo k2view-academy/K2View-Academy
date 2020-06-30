@@ -2,7 +2,7 @@
 
 
 
-<strong>Fabric Overview<strong>
+<strong>Fabric Architecture<strong>
         
 <ul>
         <li><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Fabric Architecture Overview</a></li>
