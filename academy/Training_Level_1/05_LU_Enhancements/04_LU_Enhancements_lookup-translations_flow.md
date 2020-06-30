@@ -112,9 +112,15 @@ functions from the previous exercises, please execute the following steps:
             globals set to "2015-12-31"
             
             Step 2: 
-            Create new Global value (Not Final) “RUN_POPULATION” to be used by the Decision function we created 
-            “CasesUpdateMonitor”. In your function use the Global value to decide whether to run the population or not, depending on 
-            the number of records in the CASES tables of the CRM_DB database. 
+            a. Create new Global value (Not Final) “RUN_POP” to be used by the Decision function we created 
+            “CasesUpdateMonitor”. 
+            In your function, use the Global value to decide whether to run the population or not, depending on 
+            the number of records in the CASES tables of the CRM_DB database.
+            b. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 25000 ?
+            c. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 30000 ?
+            d. Going back to the function you have written, what happens if you add the following statement at the beginning of the code?
+            "String RUN_POP="20000";"
+            Will the sync happen ? Why were you able to override the value of RUN_POP ?
             
             Step 3: 
             Create Enrichment function to loop throw all Invoices and delete all invoices that are older than the barrier date.
@@ -126,9 +132,7 @@ functions from the previous exercises, please execute the following steps:
             Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000? 
             (Using the Data viewer on the invoice table of InstanceID 1000, check that all invoices records have an issued date that 
             is later than 2015-12-31)
-            Deploy and run the decision function on InstanceID=1472. Are you witnessing the same behavior as in the decision function 
-            exercise? 
-            
+               
             Step 5:
             Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so all the phone entries of 
             Instance ID=1000 (that do not have an international code already) to a new international code set to "+44"
@@ -136,17 +140,39 @@ functions from the previous exercises, please execute the following steps:
 
 
 #### Solution Exercise 3 - Globals
-            Steps 1 & 2:
-            SQL Query with embedded reference to Globals:
+            Step 1:
+
+SQL Query with embedded reference to Globals:
             Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
+                        
+            Step 2:
+a. Decision function based on Globals:
+
+            // this function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
+            Boolean syncInd = false;
+            String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
+            //puts the number of rows in CASES DB into variable count
+            int cnt=Integer.parseInt(count);
+            // using the RUN_POP object defined as Globals
+            if (cnt > Integer.parseInt(RUN_POP)){
+            syncInd = true;	
+            }
+            else {
+            syncInd = false;
+            }
+            return syncInd;
+
+b. Answer: 5
+c. The sync did not happen.
+d. Yes the sync happened, as there are more than 20000 entries in the CASES table of CRM_ DB. You were able to do so since we defined RUN_POP as a 
+non-final globals.
             
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
             
                       
 
-            Step 3:      
-
+Step 3:
             ```java
                   reportUserMessage("Invoice Cleaning fonction is running");
                   String SQLINVOICES="SELECT * FROM INVOICE";
@@ -162,19 +188,17 @@ Globals definition:
                   }
             ```
 
-            Step 4: Answer: 19 entries/Yes
+Step 4: Answer: 19 entries
             
-            Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
+Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
 
-                            if ((cellValue.matches("(.*)+(.*)") == false))
-                            {
-                                //reportUserMessage(cellValue);
-                                ** formattedNumber = INTERCODE_UK + cellValue; //Makes use of the GLOBAL here w/o having to
-                                declare it **
-                                fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
-                        // ending the if statement		
-                            }
-                    }
+                if ((cellValue.matches("(.*)+(.*)") == false))
+                {
+                    formattedNumber = INTERCODE_UK + cellValue; 
+                    //Makes use of the GLOBAL here w/o having to declare it
+                    fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
+                    //ending the if statement		
+                }
                     
           
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
