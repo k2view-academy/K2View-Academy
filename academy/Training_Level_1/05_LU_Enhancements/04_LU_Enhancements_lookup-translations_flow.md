@@ -5,8 +5,8 @@
 
 ### Using tables for data manipulations
 
-Now we have seen how functions can be attached to LU tables to modify data, let's see how we can use tables (and functions) 
-to enrich data.
+Now you have seen how functions can be attached to LU tables to modify data, let's see how tables and functions can be used to enrich data.
+
 In this section we will address the following types of tables:
 
 -  [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
