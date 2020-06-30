@@ -34,9 +34,7 @@ Using the training materials and examples covered so far:
 
 
 
-Create a new version for **wsGetCustomer** to enhance the current functionality. Return the Customer's details including their contracts and associated subscribers. The returned reponse should be based on SUBSCRIBER.VIP_STATUS. Only the Customer's full name should appear as part of the response. 
-
-**Note** Make sure the WS path is the same for both Web Services.
+Create a new version for **wsGetCustomer** to enhance the current functionality. Return the Customer's details including their contracts and associated subscribers. The returned reponse should be based on SUBSCRIBER.VIP_STATUS. Only the Customer's full name should appear as part of the response. Make sure the WS path is the same for both Web Services.
 
 1. Question: What is the SSN of Customer 1?
 
