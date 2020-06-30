@@ -22,7 +22,7 @@ The tutorial shows several most common [built-in Actor Types](/articles/99_Broad
 
 - **Const** is a basic Actor which copies an input argument to the output value argument. 
 - **StringBuild**, **Replace** and **Concat** are only some of the Actors which deal with the strings in a Broadway flow. Checkout **strings.flow** about working with strings in a Broadway flow.
-- Broadway supports several types of parser Actors, for example [**JsonParser**](/articles/99_Broadway/17_tutorial_and_flow_examples.md#example---jsonflow) or **XmlParser**. Parsers take a string or blob and parse them into a structure. Checkout **json.flow**, **csv.flow** and **lines.flow** for more parsing examples.
+- Broadway supports several types of parser Actors, for example **JsonParser** or **XmlParser**. Parsers take a string or blob and parse them into a structure. Checkout [**json.flow**](/articles/99_Broadway/17_tutorial_and_flow_examples.md#example---jsonflow), **csv.flow** and **lines.flow** for more parsing examples.
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) are Actors which have dynamic logic as one of their inputs. For these actors you can add inputs ports and refer to them in the Actor logic. For example, **JavaScript** Actor executes the Javascript provided in the 'script' parameter and returns the value of the last line. **javascript.flow** provides additional explanation of how this Actor works. 
 
