@@ -61,7 +61,7 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting">Fabric Setting</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-settings">Fabric Settings</a></p>
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
