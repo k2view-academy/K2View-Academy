@@ -14,9 +14,9 @@ Before moving to the next item, take the following quiz to see what you have lea
 
 
 
-#### Question 1: Fabric Functions
+#### Question 1: Fabric functions
 
-To perform standard transformation of dates, strings, or basic mathematical operations you will use:
+To perform standard transformation of dates, strings or basic mathematical operations you will use:
 
 A: A project function.
 
@@ -30,7 +30,7 @@ C: Built-in functions or any other standard Java utilities.
 
 #### Question 2: LUDB functions
 
-A LUDB function is a:
+An LUDB function is a:
 
 A: Function invoked from an SQL query to perform more complex operations on LU data than those performed using standard SQL statements.
 
@@ -61,13 +61,13 @@ D: Function that operates data manipulations only if the system's root user is l
 
 #### Question 4: Enrichment functions
 
-Which of the following statements is certainly true ?
+Which of the following statements is definitely true?
 
-A: Enrichment functions are functions without Input/Output parameters that are used to insert, update, or delete a LU table's data.
+A: Enrichment functions are functions without Input / Output parameters that are used to insert, update or delete an LU table's data.
 
 B: Multiple enrichment functions can be attached to any of the LU's tables.
 
-C: Enrichment functions operate only after all LU tables populations are executed.
+C: Enrichment functions operate only after all LU table populations are executed.
 
 D: All the above.
 
@@ -97,8 +97,8 @@ It is recommended to create look-up tables based on:
 
 A: An external DB table to ensure the data is fresher than the data in the LU.
 
-B: An LU table, or any Fabric internal object like a reference or translation that improves performance since it is 
-   saved in  the Fabric memmory and is much smaller than the DB source.
+B: An LU table or any internal Fabric object like a reference or translation that improves performance since it is 
+   saved in the Fabric memmory and is much smaller than the DB source.
 
 C: It does not matter, each solution has its pros and cons.
 
@@ -110,11 +110,11 @@ C: It does not matter, each solution has its pros and cons.
 
 Translations tables are used to:
 
-A: Operate complex language translations between different DBs storing data of different languages.
+A: Operate complex language translations between different DBs storing data in different languages.
 
-B: Map records using not more than one optional input and one mandatory output value.
+B: Map records using no more than one optional input and one mandatory output value.
 
-C: Transform data from one set of valid values to another in order to enable the execution of various transformation rules.
+C: Transform data from one set of valid values to another to enable the execution of various transformation rules.
 
 (***Solution 7: C ***).
 
@@ -128,7 +128,7 @@ A: Globals are predefined variables that can be accessed by different objects wi
 
 B: Globals are used when the same information is required repeatedly by various Fabric objects.
 
-C: Globals are saved in a Java file and can be defined in different project tree levels (shared, LU, etc...).
+C: Globals are saved in a Java file and can be defined on different project tree levels (shared, LU, etc...).
 
 D: Globals can be defined as Final or not Final, depending on whether they need to be overridden.
 
@@ -148,7 +148,7 @@ B: Execution orders have a default value based on the LU schema's hierarchy.
 
 C: Execution orders can be defined by the LU implementer after a very careful decision-making and strategizing process.
 
-D: The higher number in the execution order, the lower priority of the population mapping execution.
+D: The higher the number in the execution order, the lower the priority in the population mapping execution.
 
 E: All of the above.
 
@@ -158,7 +158,7 @@ E: All of the above.
 
 #### Question 10: Enrichment order
 
-An enrichment order only applies to:
+An Enrichment order only applies to:
 
 A: Decision functions.
 
