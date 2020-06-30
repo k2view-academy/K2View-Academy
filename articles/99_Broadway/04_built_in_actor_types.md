@@ -28,8 +28,13 @@ Note that when doing [Export Actor](<!--add link-->) from the Actor's context me
 <p>Most commonly used Actors</p>
 </td>
 <td width="600">
-<p><strong>Concat</strong> Actor concatenates an array of strings and join them with the given delimiter.&nbsp;</p>
 <p><strong>Const</strong> Actor - the input value argument is copied to the output value argument.</p>
+<ul>
+<li>A constant value.</li>
+<li>Receives its input from the output of a previous Actor and passes it to the next Actor.</li>
+<li>Receives an external flow argument and passes it to the next Actor.</li>
+</ul>
+<p><strong>Concat</strong> Actor concatenates an array of strings and join them with the given delimiter.</p>
 <p><strong>JavaScript</strong> Actor&nbsp;executes the Javascript provided in the 'script' parameter.&nbsp;The script returns the value of the last line.</p>
 </td>
 </tr>
