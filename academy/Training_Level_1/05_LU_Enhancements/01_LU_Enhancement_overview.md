@@ -3,7 +3,7 @@
 
 # Logical Units Enhancements
 
-You are now ready to move on and to learn about a crucial Fabric feature, that is - data manipulations and execution of functions over the data that will be modified and exposed. So far you have seen how to design and create a simple LU by connecting to the data external sources from which it is inferred, and test its consistency by querying its tables using Fabric commands and the Cassandra storage environment and checking whether it is fit for purpose. 
+You are now ready to move on and to learn about a crucial Fabric feature, data manipulation and executing functions over the data that will be modified and exposed. So far you have seen how to design and create a simple LU by connecting to the data's external sources from which it is inferred, and testing its consistency by querying its tables using Fabric commands and the Cassandra storage environment and checking whether it is fit for purpose. 
 
  
 
