@@ -11,15 +11,15 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Invoking a Web Service
- 
+
 1. Right click the **Web Service**, select **Invoke Web Service** and then the **preferred environment** which can be either the Fabric server name or Local Fabric (debug).
-   
+  
   
    Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all GET, POST, PUT and DELETE options, they are all available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
   
     What is the response? Failed to authorize. 
- 
+
     Why? The Web Service is requiring a token for authentication. 
   
 4. For the request to succeed, create the permissions and a token:
@@ -34,48 +34,53 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 
 5. Go back and try to execute the Web Service again. Click the **Lock**, set a valid **Token** and **close**.
 7. Set the **i_id** to **82** and execute. 
-   
+  
    What is the Customer's first name? Anthony
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Invoking a Web Service
 
 Using the training materials and examples covered so far:
 
+Create a new version for **wsGetCustomer** to enhance the current functionality:
 
+- [ ]  Return the Customer's details including their contracts and associated subscribers. 
 
-Create a new version for **wsGetCustomer** to enhance the current functionality. Return the Customer's details including their contracts and associated subscribers. The returned reponse should be based on SUBSCRIBER.VIP_STATUS. Only the Customer's full name should appear as part of the response. Make sure the WS path is the same for both Web Services.
+- [ ] The returned reponse should be based on SUBSCRIBER.VIP_STATUS. 
 
-1. Question: What is the SSN of Customer 1?
+- [ ] Only the Customer's full name should appear as part of the response. 
 
-2. Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?
+- [ ] Make sure the WS path is the same for both Web Services.
 
-3. Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?
+  
 
-4. Question: Which version of your Web Service will be executed if the version is not set? 
+1. `Question: What is the SSN of Customer 1?`
+
+2. `Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?`
+
+3. `Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?`
+
+4. `Question: Which version of your Web Service will be executed if the version is not set?` 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Invoking a Web Service
 
-1. ```java
-   wsGetCustomer2 ; path :test/getCustomerDetails 
-   
-   String sql = "select cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION," +
-           "sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE,sub.VIP_STATUS " +
-   		"from CUSTOMER cust, CONTRACT cont, SUBSCRIBER sub where cont.CONTRACT_ID=sub.SUBSCRIBER_ID and sub.VIP_STATUS=?";
-   
-   Db.Rows rows = ludb("CustomerLU", i_id).fetch(sql, i_vipStatus);
-   
-   return rows;
-   ```
+```java
+wsGetCustomer2 ; path :test/getCustomerDetails 
 
-   
+String sql = "select cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION," +
+        "sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE,sub.VIP_STATUS " +
+		"from CUSTOMER cust, CONTRACT cont, SUBSCRIBER sub where cont.CONTRACT_ID=sub.SUBSCRIBER_ID and sub.VIP_STATUS=?";
 
-1. Answer: 5153527856.
+Db.Rows rows = ludb("CustomerLU", i_id).fetch(sql, i_vipStatus);
 
-2. Answer: 3. 
+return rows;
+```
 
-3. Answer: 5G tether. 
 
-4. Answer: The Web Version that was the last to be deployed.  
+
+1. `Answer: 5153527856.`
+2. `Answer: 3.` 
+3. `Answer: 5G tether.` 
+4. `Answer: The Web Version that was the last to be deployed.`  
 
 
 

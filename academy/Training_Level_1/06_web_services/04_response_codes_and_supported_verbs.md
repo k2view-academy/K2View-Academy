@@ -16,14 +16,14 @@ In addition to the above supported verbs and response codes, the following infor
 
 [REST API Additions](/articles/15_web_services/16_rest_api_additions.md)
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png)Click [Web Services code examples](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_15_Web_Services_Merav/articles/15_web_services/06_web_services_code_examples.md) to find code examples worth reviewing. 
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png)Click the  [Web Services code examples](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_15_Web_Services_Merav/articles/15_web_services/06_web_services_code_examples.md) to find code examples worth reviewing. 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise  – Additional Web Service
 
-1.  Create a new Web Service that inserts entries into the CASES table with the following considerations: 
-   -    The Web Service can insert multiple subscribers for a given LUI. 
-   -    The Web Service response should include success or failure in the process.
-   -    The Web Service can perform basic input validations.
+Create a new Web Service that inserts entries into the CASES table with the following considerations: 
+-    The Web Service can insert multiple subscribers for a given LUI. 
+-    The Web Service response should include success or failure in the process.
+-    The Web Service can perform basic input validations.
 
 2.  Question: Which supported verbs will you use?
 
@@ -32,67 +32,69 @@ In addition to the above supported verbs and response codes, the following infor
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Additional Web Service
 
-1. ```
-   Map<String,String> result = new HashMap<>();
-   String name ="";
-   String message="";
-   
-   // Parse the input map to extract the values for the delete condition 
-   
-   //log.info(i_info.toString());
-   if ( i_info != null && i_info.size() >0 ){
-   	
-   	for (int i = 0; i < i_info.size(); i++) {
-   		
-   		//Map<String,String> m = i_info.get.(i);
-   		 if (i_info.get(i) != null){
-   			 
-   			String activity_id =i_info.get(i).get("activity_id");
-   			String case_id =i_info.get(i).get("case_id");
-   			String case_date =i_info.get(i).get("case_date");
-   			String case_type =i_info.get(i).get("case_type");
-   			String status =i_info.get(i).get("status");
-   			
-   		// Validate that input is not empty or wasn't exceed to number of object array
-   			
-   			    if (activity_id!=null && !activity_id.isEmpty()){
-   						
-   		// Insert into CASES table 	
-   					fabric().execute("Begin");
-   					String sql = "insert into cases (activity_id,case_id,case_date,case_type,status) values (?,?,?,?,?)";
-   					ludb("CustomerLU", i_id).execute(sql,activity_id,case_id,case_date,case_type,status);
-   					fabric().execute("Commit");
-   				}
-   			else{
-   //Missing values to process 
-   					i=i_info.size()+1;
-   				    name="Error";
-   				    message="MISSING VALUES"; 	
-   				    //result.put(name, message);
-   				   //return result;
-   				}
-   			
-   			}
-   	}
-   	name="Complete";
-   	message="INSERTED ALL";
-   } else {
-   
-   // Input can not be processed, not data to parse
-   	
-    name="Not Started";
-    message="NO INPUT RECIEVED";
-   //message=Integer.toString(i_info.size());
-}
-   
-result.put(name, message);
-   return result;  ``` ```
-   
-     
-2. Answer : POST
+```java
+Map<String,String> result = new HashMap<>();
+String name ="";
+String message="";
 
-3. ```
-   Answer: i_id : String ; i_info: List<Map<String,String>>
+// Parse the input map to extract the values for the delete condition 
+
+//log.info(i_info.toString());
+if ( i_info != null && i_info.size() >0 ){
+	
+	for (int i = 0; i < i_info.size(); i++) {
+		
+		//Map<String,String> m = i_info.get.(i);
+		 if (i_info.get(i) != null){
+			 
+			String activity_id =i_info.get(i).get("activity_id");
+			String case_id =i_info.get(i).get("case_id");
+			String case_date =i_info.get(i).get("case_date");
+			String case_type =i_info.get(i).get("case_type");
+			String status =i_info.get(i).get("status");
+			
+		// Validate that input is not empty or wasn't exceed to number of object array
+			
+			    if (activity_id!=null && !activity_id.isEmpty()){
+						
+		// Insert into CASES table 	
+					fabric().execute("Begin");
+					String sql = "insert into cases (activity_id,case_id,case_date,case_type,status) values (?,?,?,?,?)";
+					ludb("CustomerLU", i_id).execute(sql,activity_id,case_id,case_date,case_type,status);
+					fabric().execute("Commit");
+				}
+			else{
+//Missing values to process 
+					i=i_info.size()+1;
+				    name="Error";
+				    message="MISSING VALUES"; 	
+				    //result.put(name, message);
+				   //return result;
+				}
+			
+			}
+	}
+	name="Complete";
+	message="INSERTED ALL";
+} else {
+
+// Input can not be processed, not data to parse
+	
+ name="Not Started";
+ message="NO INPUT RECIEVED";
+//message=Integer.toString(i_info.size());
+}
+
+   result.put(name, message);
+   return result;
+```
+
+  
+
+1. `Answer : POST`
+
+2. ```json
+    Answer: i_id : String ; i_info: List<Map<String,String>>
    
    Example request body :{
      "i_id": "1",
@@ -105,6 +107,8 @@ result.put(name, message);
          "status":"Open"
        
        }]}  
+   ```
+
    
 
 
