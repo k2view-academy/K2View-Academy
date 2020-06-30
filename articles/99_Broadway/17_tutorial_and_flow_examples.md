@@ -32,7 +32,7 @@ The [flow loops](<!--Link to 22-Flow Loops-->) are implemented in Broadway via *
 
 Any Actor's input or output argument can be set as [External](<!--Link to 5-Actors-Input params-->). When marking an output parameter as External, it becomes an output for the entire flow. In addition, a flow can be invoked using the **InnerFlow** Actor. You can also [package an entire flow as an Actor](<!-- Add link to 23-Inner flow-->). To do so, go to **Actions > Save As Actor** in the main menu. Checkout **javascript-advanced.flow**, **inner-flow-power.flow** and **inner-flow.flow** for more explanation about input/output arguments and examples of the inner flow.  
 
-### json.flow Example
+### Example - json.flow 
 
 **json.flow** example shows how to parse a collection of byte arrays (stream). In the example the source is a constant. Based on the requirements, the source can be set to a **FileReader**, **Http** or any Actor that will produce a stream/string.
 
