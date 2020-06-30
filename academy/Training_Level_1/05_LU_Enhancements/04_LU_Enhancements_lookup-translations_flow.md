@@ -7,7 +7,7 @@
 
 Now you have seen how functions can be attached to LU tables to modify data, let's see how tables and functions can be used to enrich data.
 
-In this section we will address the following types of tables:
+In this section the following types of tables are addressed:
 
 -  [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
 
@@ -37,7 +37,7 @@ In this section we will address the following types of tables:
 
 #### Exercise 1 - Lookup tables
 Using the CustomerLU schema, let's look at the Address population map. Add the first name and last name of the 
-customer to the address LU table so that full information about the customer is readily available.
+customer to the Address LU table so that full information about the customer is readily available.
 
             Step 1: 
             Which table should you consider using and why ?
@@ -164,7 +164,7 @@ Let's use Globals rather than values hardcoded into Java functions or SQL statem
 
             d. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
             This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden its 
-            value for all the s *.RUN_POP within instance in the scope of this Fabric session.
+            value for all the *.RUN_POP instances in the scope of this Fabric session.
             
             
 Globals definition:    
