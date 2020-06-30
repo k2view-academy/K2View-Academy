@@ -1,7 +1,7 @@
 # Creating and Deploying a Web Service
 
-The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses: 
-[Web Services Overview](/articles/15_web_services/01_web_services_overview.md)
+The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses.
+Click [Web Services Overview](/articles/15_web_services/01_web_services_overview.md)to read a little more.
 
 ### Creating a Web Service
 
@@ -40,11 +40,8 @@ Let's create your first simple Web Service which will retrieve basic information
 
 ### Deploying a Web Service
 
-Before testing your Web Service, it must be deployed into Fabric, let's understand how:
-
-[Deploy Web Service from Fabric Studio](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)
-
-Deploy the Web Service into the Fabric server that you defined for your project. 
+Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md) to understand how.
+You can now deloy the Web Service into the Fabric server that you defined for your project. 
 
 Let's validate that the Web Service has been deployed:
 
