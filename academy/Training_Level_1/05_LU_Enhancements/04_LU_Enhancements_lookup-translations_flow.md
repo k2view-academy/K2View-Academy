@@ -25,19 +25,19 @@ In this section we will address the following types of tables:
 
 ### Globals
 
-[Globals Overview](/articles/08_globals/01_globals_overview.md)
+[Globals overview](/articles/08_globals/01_globals_overview.md)
 
-[Globals Use Cases](/articles/08_globals/02_globals_use_cases.md)
+[Globals use cases](/articles/08_globals/02_globals_use_cases.md)
 
-[Globals in Fabric Commands](/articles/08_globals/03_set_globals.md)
+[Globals in Fabric commands](/articles/08_globals/03_set_globals.md)
 
 [Globals code example](/articles/08_globals/04_globals_code_examples.md)
 
 
 
 #### Exercise 1 - Lookup tables
-Using the CustomerLU schema, let's look at the Address population map. We wish to add the first name and last name of the 
-customer to the address LU table so the full details of the customers are readily available.
+Using the CustomerLU schema, let's look at the Address population map. Add the first name and last name of the 
+customer to the address LU table so that the full details about the customers are readily available.
 
             Step 1: 
             Which table should you consider and why ?
