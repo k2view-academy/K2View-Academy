@@ -10,7 +10,7 @@ The **Actor** is a JAVA class which implements the **Actor Interface** and overr
 
 #### Built-In Actors
 
-Broadway contains [built-in Actors](Add a link) which address a vast range of activities and can be added to Broadway Flows: file handling, JSON handling, DB activities, String manipulations, etc..
+Broadway contains [built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) which address a vast range of activities and can be added to Broadway Flows: file handling, JSON handling, DB activities, String manipulations, etc..
 
 #### Customized Actors
 
@@ -100,14 +100,84 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 </tbody>
 </table>
 
-#### Data Input and Output Parameters
+#### Data Input Parameters
 
-Each Actor has input and output parameters.
+Each Actor has data input and out parameters.
 
-Each parameter has the following attributes:
+Each input parameter has the following attributes:
 
-- Parameter Definition
-- Parameter Value
+- Parameter's Attributes
+- Parameter's Value
+
+##### Input Parameter: Attributes
+
+The parameter's definition includes the following attributes:
+
+<table>
+<tbody>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Parameter Name</strong></p>
+</td>
+<td valign="top" width="600pxl">
+<p>The name of the parameter</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Parameter Type</strong></p>
+</td>
+<td valign="top" width="600pxl">
+<p>String, Integer, Real&hellip;</p>
+<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Input Type</strong></p>
+</td>
+<td valign="top" width="600pxl">
+<p>The following input types are supported:</p>
+<ul>
+<li><strong>Link</strong>- get the input type as an input parameter from another actor.</li>
+<li><strong>Const</strong>- constant. You need to set the value of the parameter.</li>
+<li><strong>External</strong>- get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting- <strong>External Name</strong>.</li>
+</ul>
+<p>Click the <strong>&hellip;</strong> icon next to the parameter name to view or edit the input type.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="600pxl">
+<p>Parameter description. The parameter description is displayed in a read-only mode.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Remark</strong></p>
+</td>
+<td valign="top" width="600pxl">
+<p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+##### Parameter's Value
+
+Setting the parameter's value is needed in the following scenarios:
+
+-  The input type is set to **Const**. 
+
+  Example: 
+
+   **Const** Actor. The input parameter name is **value**. Its type is **String** and its value is "Hello Broadway".
+
+  ![Const1](/articles/99_Broadway/images/const_actor_example.png)
+
+- The input type is **Link** or **External** and you define a default value.  See the example
 
 <!-- Add explanation about parameters + actor remark (click ... on the Actor in the flow) -->
 
