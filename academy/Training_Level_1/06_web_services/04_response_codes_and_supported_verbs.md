@@ -1,6 +1,6 @@
 # Response Codes and Supported Verbs
 
-After you have created your first  Web Service, let's learn about the various reponse codes and their usage and the different Web Service commands, options and examples:
+Now that you have created your first  Web Service, let's learn about the various reponse codes and their usage and the different Web Service commands, options and examples:
 
 -  [Response Codes](/articles/15_web_services/11_response_codes.md)
 
@@ -18,16 +18,16 @@ In addition to the above supported verbs and response codes, the following infor
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png)Click [Web Services code examples](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_15_Web_Services_Merav/articles/15_web_services/06_web_services_code_examples.md) to find code examples worth reviewing. 
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Additional Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise  – Additional Web Service
 
-1.  Create a new Web Service that insert entries into CASES table following considerations: 
-   -    The Web Service can insert multiple subscribers for a give Logical Unit Instance. 
+1.  Create a new Web Service that inserts entries into the CASES table with the following considerations: 
+   -    The Web Service can insert multiple subscribers for a give LUI. 
    -    The Web Service response should include success or failure in the process.
    -    Perform basic input validations.
 
 2.  Question: Which supported verbs will you use?
 
-3.  Question: What should be the input parameters and their data types?
+3.  Question: What are the input parameters and their data types?
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Additional Web Service
