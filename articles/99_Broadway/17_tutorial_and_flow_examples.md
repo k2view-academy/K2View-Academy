@@ -2,9 +2,11 @@
 
 In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](<!--link to 21-Broadway flow -->) which guides a user step-by-step through a sample Business Process. 
 
-![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
+In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. 
 
-In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. To open the tutorial or any additional example flow, go to **Actions > Examples** in the main menu and select the example from the pop-up window.
+To open the tutorial or any additional example flow, go to **Actions > Examples** in the main menu and select the example from the pop-up window.
+
+![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
 
 The tutorial is using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage](<!--Link to 18-Flow Stages-->) or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md) in order to provide the explanations. A user can either:
 
@@ -29,3 +31,12 @@ The **conditions** are implemented in Broadway via [**Split** option](<!--Link t
 The [flow loops](<!--Link to 22-Flow Loops-->) are implemented in Broadway via **Iterate** connection type. You can change the line type by selecting the line and changing its Link Type value to Iterate in the Properties Pane. To close the scope of the iteration, select **Iterate Close** from the Stage context menu. Checkout **iterate-for-each.flow** for more loop's examples.
 
 Any Actor's input or output argument can be set as [External](<!--Link to 5-Actors-Input params-->). When marking an output parameter as External, it becomes an output for the entire flow. In addition, a flow can be invoked using the **InnerFlow** Actor. You can also [package an entire flow as an Actor](<!-- Add link to 23-Inner flow-->). To do so, go to **Actions > Save As Actor** in the main menu. Checkout **javascript-advanced.flow**, **inner-flow-power.flow** and **inner-flow.flow** for more explanation about input/output arguments and examples of the inner flow.  
+
+### json.flow Example
+
+**json.flow** example shows how to parse a collection of byte arrays (stream). In the example the source is a constant. Based on the requirements, the source can be set to a **FileReader**, **Http** or any Actor that will produce a stream/string.
+
+A **JsonParser** Actor can either parse a single Json object or multiple json objects arriving on the same stream. Note that an array is a single json object. In this example you can see both: the first handles a stream and initiates an Iteration loop and the other handles a single entry.
+
+![image](/articles/99_Broadway/images/99_17_02_tutorial.PNG)
+
