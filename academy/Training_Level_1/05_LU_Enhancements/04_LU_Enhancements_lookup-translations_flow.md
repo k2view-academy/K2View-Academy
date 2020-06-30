@@ -54,10 +54,9 @@ customer to the address LU table so that full information about the customer is 
 #### Solution Exercise 1 - Lookup table
 
             Step 1: 
-            The table from customerLU. It is much more efficient to use the data already populated into the LU table rather that use
-            the CRM table
+            The table from customerLU. It is much more efficient to use the data already populated into the LU table than the CRM table.
             Step 2: 
-            k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular 
+            The k2_concat5 function will allow you to concatenate up to 5 strings and also define a delimiter !. In this particular 
             example we need only 2 strings and we have set the delimiter to ".". (A next stage of the exercise could be to add a 
             UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email
             address to your customers)
