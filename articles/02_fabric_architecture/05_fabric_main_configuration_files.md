@@ -232,7 +232,6 @@ Fabric's main configuration file which holds different sections of parameters wh
 </ul>
 </td>
 <td width="450pxl" valign="top">
-<p>&nbsp;</p>
 <p>Cassandra Loader configuration.</p>
 <p>The default setting of default_loader for parsers, batch processes, or IIDFinder activities can be overridden.</p>
 </td>
