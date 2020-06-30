@@ -35,4 +35,5 @@ Third, use the data inspection capability in order to view the complex data stru
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/02_broadway_high_level_components.md)
+
