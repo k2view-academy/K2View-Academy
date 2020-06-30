@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>BALANCE</Name>
+  <ID>tbl_BALANCE</ID>
+  <Columns>
+    <Column name="SUBSCRIBER_ID" id="tblCol_80cf6dccf0ab45e9adaaa0fe6c4f06e4" index="0" datatype="Integer" />
+    <Column name="BALANCE_ID" id="tblCol_eed369f771f14163bac8f91959a6f42f" index="1" datatype="Integer" mandatory="true" />
+    <Column name="BALANCE_REF_ID" id="tblCol_9a017c0d01074f298e58d2aceaf0a680" index="2" datatype="Integer" />
+    <Column name="AVAILABLE_AMOUNT" id="tblCol_d9ef9c30f89e4e689b5eab3012d8c977" index="3" datatype="Integer" />
+    <Column name="RESET_AMOUNT" id="tblCol_22dd6ca0448147c38f9f4bfe6d5214b3" index="4" datatype="Integer" />
+    <Column name="RESET_DATE" id="tblCol_de79bee2041f460ea06b27ca6d2d4b4a" index="5" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

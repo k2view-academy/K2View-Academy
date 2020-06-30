@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>CONTRACT_OFFER_MAPPING</Name>
+  <ID>tbl_CONTRACT_OFFER_MAPPING</ID>
+  <Columns>
+    <Column name="CONTRACT_REF_ID" id="tblCol_2369bb8bf03e44028c991722956b309d" index="0" datatype="Integer" />
+    <Column name="OFFER_REF_ID" id="tblCol_806443ac43114231b4a9771795937c51" index="1" datatype="Integer" />
+    <Column name="OFFER_CONTRACT_DESCRIPTION" id="tblCol_ac20b6d0a1db4f109e14306df9a3ec94" index="2" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

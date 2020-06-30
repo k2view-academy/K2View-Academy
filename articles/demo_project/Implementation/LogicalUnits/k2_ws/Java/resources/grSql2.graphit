@@ -9,6 +9,12 @@
           "type": "sql",
           "code": "Select  customer_id,ssn,first_name,last_name From CUSTOMER where rownum< 20",
           "sessionProvider": "CRM_DB",
+          "serializerSettings": [
+            {
+              "set": "nice",
+              "value": "true"
+            }
+          ],
           "children": [
             {
               "name": "CUSTOMER_ID",

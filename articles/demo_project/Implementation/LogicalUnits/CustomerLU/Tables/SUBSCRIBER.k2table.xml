@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TableObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>SUBSCRIBER</Name>
+  <ID>tbl_SUBSCRIBER</ID>
+  <Columns>
+    <Column name="SUBSCRIBER_ID" id="tblCol_1cfbad39c0a444bc976c586fd4585bd7" index="0" datatype="Integer" mandatory="true" />
+    <Column name="MSISDN" id="tblCol_a79c76c6de2c4f46b5ed27035d3c2efe" index="1" datatype="Text" />
+    <Column name="IMSI" id="tblCol_2a6c0d25bf3d4f9a9c92f4785cbdfe96" index="2" datatype="Text" />
+    <Column name="SIM" id="tblCol_e53909161d42402ea8dedb7f985bb37c" index="3" datatype="Text" />
+    <Column name="FIRST_NAME" id="tblCol_5d984aee03244650a6c04e58bb9771cf" index="4" datatype="Text" />
+    <Column name="LAST_NAME" id="tblCol_bbb53bb25beb433bbe2d90866c84118c" index="5" datatype="Text" />
+    <Column name="SUBSCRIBER_TYPE" id="tblCol_683a94095d8540c3923a1d82392d0636" index="6" datatype="Text" />
+    <Column name="VIP_STATUS" id="tblCol_8056fa8de9a6433e9a6f9c42b7aa5b11" index="7" datatype="Text" />
+  </Columns>
+  <IndexesList />
+  <EnrichmentList />
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>true</TruncateBeforeSync>
+  </LazyDataUpdate>
+</TableObject>

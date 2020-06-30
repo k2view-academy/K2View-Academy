@@ -3,6 +3,12 @@
   "children": [
     {
       "name": "Root",
+      "serializerSettings": [
+        {
+          "set": "nice",
+          "value": "true"
+        }
+      ],
       "children": [
         {
           "name": "SUBSCRIBERS",
@@ -11,7 +17,7 @@
             {
               "name": "CRM_DB",
               "type": "sql",
-              "code": "Select SUBSCRIBER_ID\nFrom CRM_DB.SUBSCRIBER where rownum < 11",
+              "code": "Select SUBSCRIBER_ID\nFrom CRM_DB.SUBSCRIBER where rownum < 5",
               "sessionProvider": "CRM_DB",
               "children": [
                 {
@@ -24,7 +30,7 @@
             {
               "name": "BILLING_DB",
               "type": "sql",
-              "code": "Select SUBSCRIBER.SUBSCRIBER_ID\nFrom BILLING_DB.SUBSCRIBER limit 10",
+              "code": "Select SUBSCRIBER.SUBSCRIBER_ID\nFrom BILLING_DB.SUBSCRIBER limit 4",
               "sessionProvider": "BILLING_DB",
               "children": [
                 {
@@ -42,9 +48,9 @@
             {
               "name": "BILLING_DB2",
               "type": "sql",
-              "code": "Select OFFER.SUBSCRIBER_ID\nFrom BILLING_DB.OFFER limit 10",
+              "code": "Select OFFER.SUBSCRIBER_ID\nFrom BILLING_DB.OFFER limit 4",
               "sessionProvider": "BILLING_DB",
-              "one": true,
+              "entryTag": "subscribers",
               "children": [
                 {
                   "name": "SUBSCRIBER_ID",

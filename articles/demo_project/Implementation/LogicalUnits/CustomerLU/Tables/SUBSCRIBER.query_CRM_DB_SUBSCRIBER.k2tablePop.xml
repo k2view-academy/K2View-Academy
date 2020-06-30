@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_CRM_DB_SUBSCRIBER</ID>
+  <PopulationObjectName>query_CRM_DB_SUBSCRIBER</PopulationObjectName>
+  <TableName>SUBSCRIBER</TableName>
+  <RootItemID>query_query_CRM_DB_SUBSCRIBER</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="SUBSCRIBER_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="MSISDN" id="queryCol_1" dataType="Text" index="1" />
+    <Arg name="IMSI" id="queryCol_2" dataType="Text" index="2" />
+    <Arg name="SIM" id="queryCol_3" dataType="Text" index="3" />
+    <Arg name="FIRST_NAME" id="queryCol_4" dataType="Text" index="4" />
+    <Arg name="LAST_NAME" id="queryCol_5" dataType="Text" index="5" />
+    <Arg name="SUBSCRIBER_TYPE" id="queryCol_6" dataType="Text" index="6" />
+    <Arg name="VIP_STATUS" id="queryCol_7" dataType="Text" index="7" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_CRM_DB_SUBSCRIBER" name="query_CRM_DB_SUBSCRIBER" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="CRM_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="SUBSCRIBER_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="MSISDN" dataType="Text" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="IMSI" dataType="Text" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="SIM" dataType="Text" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="FIRST_NAME" dataType="Text" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="LAST_NAME" dataType="Text" index="5" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_6" name="SUBSCRIBER_TYPE" dataType="Text" index="6" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_7" name="VIP_STATUS" dataType="Text" index="7" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM CRM_DB.SUBSCRIBER]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_0" toItemID="tbl_SUBSCRIBER" toColID="tblCol_1cfbad39c0a444bc976c586fd4585bd7" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_1" toItemID="tbl_SUBSCRIBER" toColID="tblCol_a79c76c6de2c4f46b5ed27035d3c2efe" />
+    <Link partId="22" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_2" toItemID="tbl_SUBSCRIBER" toColID="tblCol_2a6c0d25bf3d4f9a9c92f4785cbdfe96" />
+    <Link partId="23" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_3" toItemID="tbl_SUBSCRIBER" toColID="tblCol_e53909161d42402ea8dedb7f985bb37c" />
+    <Link partId="24" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_4" toItemID="tbl_SUBSCRIBER" toColID="tblCol_5d984aee03244650a6c04e58bb9771cf" />
+    <Link partId="25" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_5" toItemID="tbl_SUBSCRIBER" toColID="tblCol_bbb53bb25beb433bbe2d90866c84118c" />
+    <Link partId="26" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_6" toItemID="tbl_SUBSCRIBER" toColID="tblCol_683a94095d8540c3923a1d82392d0636" />
+    <Link partId="27" fromNodeOrder="0" fromItemID="query_query_CRM_DB_SUBSCRIBER" fromColID="queryCol_7" toItemID="tbl_SUBSCRIBER" toColID="tblCol_8056fa8de9a6433e9a6f9c42b7aa5b11" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="SUBSCRIBER.query_CRM_DB_SUBSCRIBER.k2tablePop.xml" lastPartID="45">
+      <TableNode partID="0" name="SUBSCRIBER" pos="383 5.67189026" width="253" />
+      <DBQueryNode partID="11" name="CRM_DB" pos="10 0.7083435" size="253 156.583313" isRoot="true">
+        <DBQuery>{"Name":"query_CRM_DB_SUBSCRIBER","ID":"query_query_CRM_DB_SUBSCRIBER","ConnName":"CRM_DB","SQL":"SELECT * FROM CRM_DB.SUBSCRIBER","ColumnsList":[{"ID":"queryCol_0","Name":"SUBSCRIBER_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"MSISDN","DataType":"Text","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"IMSI","DataType":"Text","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"SIM","DataType":"Text","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"FIRST_NAME","DataType":"Text","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"LAST_NAME","DataType":"Text","Index":5,"IsInputArgument":true},{"ID":"queryCol_6","Name":"SUBSCRIBER_TYPE","DataType":"Text","Index":6,"IsInputArgument":true},{"ID":"queryCol_7","Name":"VIP_STATUS","DataType":"Text","Index":7,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="20" from="0" to="1" pointsArr="263 36.7447968 273 36.7447968 313 37 333 37 373 36.7083435 383 36.7083435" fromNodePartID="11" fromNodeColumnName="SUBSCRIBER_ID" toNodePartID="0" toNodeColumnName="SUBSCRIBER_ID" />
+      <Link partID="21" from="2" to="3" pointsArr="263 48.81771 273 48.81771 313 49 333 49 373 48.7812576 383 48.7812576" fromNodePartID="11" fromNodeColumnName="MSISDN" toNodePartID="0" toNodeColumnName="MSISDN" />
+      <Link partID="22" from="4" to="5" pointsArr="263 60.890625 273 60.890625 313 61 333 61 373 60.85417 383 60.85417" fromNodePartID="11" fromNodeColumnName="IMSI" toNodePartID="0" toNodeColumnName="IMSI" />
+      <Link partID="23" from="6" to="7" pointsArr="263 72.96355 273 72.96355 313 73 333 73 373 72.92709 383 72.92709" fromNodePartID="11" fromNodeColumnName="SIM" toNodePartID="0" toNodeColumnName="SIM" />
+      <Link partID="24" from="8" to="9" pointsArr="263 85.03645 273 85.03645 313 85 333 85 373 85 383 85" fromNodePartID="11" fromNodeColumnName="FIRST_NAME" toNodePartID="0" toNodeColumnName="FIRST_NAME" />
+      <Link partID="25" from="10" to="11" pointsArr="263 97.109375 273 97.109375 313 97 333 97 373 97.07292 383 97.07292" fromNodePartID="11" fromNodeColumnName="LAST_NAME" toNodePartID="0" toNodeColumnName="LAST_NAME" />
+      <Link partID="26" from="12" to="13" pointsArr="263 109.1823 273 109.1823 313 109 333 109 373 109.145844 383 109.145844" fromNodePartID="11" fromNodeColumnName="SUBSCRIBER_TYPE" toNodePartID="0" toNodeColumnName="SUBSCRIBER_TYPE" />
+      <Link partID="27" from="14" to="15" pointsArr="263 121.255219 273 121.255219 313 121 333 121 373 121.218765 383 121.218765" fromNodePartID="11" fromNodeColumnName="VIP_STATUS" toNodePartID="0" toNodeColumnName="VIP_STATUS" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

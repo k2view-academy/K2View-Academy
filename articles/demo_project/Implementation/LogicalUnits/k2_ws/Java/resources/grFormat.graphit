@@ -1,0 +1,90 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "name": "Root",
+      "type": "raw",
+      "code": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\" ?>",
+      "serializerSettings": [
+        {
+          "set": "nice",
+          "value": "true"
+        }
+      ],
+      "format": "XML",
+      "children": [
+        {
+          "name": "SUBSCRIBERS",
+          "children": [
+            {
+              "name": "CRM_DB",
+              "type": "sql",
+              "code": "Select SUBSCRIBER.SUBSCRIBER_ID,\n  SUBSCRIBER.MSISDN,\n  SUBSCRIBER.FIRST_NAME,\n  SUBSCRIBER.LAST_NAME\nFrom CRM_DB.SUBSCRIBER where rownum <5",
+              "sessionProvider": "CRM_DB",
+              "entryTag": "crmSubscriber",
+              "format": "JSON",
+              "children": [
+                {
+                  "name": "SUBSCRIBER_ID",
+                  "type": "variable",
+                  "code": "SUBSCRIBER_ID",
+                  "attribute": true
+                },
+                {
+                  "name": "MSISDN",
+                  "type": "variable",
+                  "code": "MSISDN",
+                  "attribute": true
+                },
+                {
+                  "name": "FIRST_NAME",
+                  "type": "variable",
+                  "code": "FIRST_NAME",
+                  "attribute": true
+                },
+                {
+                  "name": "LAST_NAME",
+                  "type": "variable",
+                  "code": "LAST_NAME",
+                  "attribute": true
+                }
+              ]
+            },
+            {
+              "name": "BILLING_DB",
+              "type": "sql",
+              "code": "Select SUBSCRIBER.SUBSCRIBER_ID, MSISDN, FIRST_NAME,LAST_NAME\nFrom BILLING_DB.SUBSCRIBER limit 4",
+              "sessionProvider": "BILLING_DB",
+              "entryTag": "billingSubscriber",
+              "format": "XML",
+              "children": [
+                {
+                  "name": "SUBSCRIBER_ID",
+                  "type": "variable",
+                  "code": "SUBSCRIBER_ID"
+                },
+                {
+                  "name": "MSISDN",
+                  "type": "variable",
+                  "code": "MSISDN"
+                },
+                {
+                  "name": "FIRST_NAME",
+                  "type": "variable",
+                  "code": "FIRST_NAME"
+                },
+                {
+                  "name": "LAST_NAME",
+                  "type": "variable",
+                  "code": "LAST_NAME"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {}
+  ],
+  "params": []
+}

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_BILLING_DB_CONTRACT_OFFER_MAPPING</ID>
+  <PopulationObjectName>query_BILLING_DB_CONTRACT_OFFER_MAPPING</PopulationObjectName>
+  <TableName>CONTRACT_OFFER_MAPPING</TableName>
+  <RootItemID>query_query_BILLING_DB_CONTRACT_OFFER_MAPPING</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="CONTRACT_REF_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="OFFER_REF_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="OFFER_CONTRACT_DESCRIPTION" id="queryCol_2" dataType="Text" index="2" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BILLING_DB_CONTRACT_OFFER_MAPPING" name="query_BILLING_DB_CONTRACT_OFFER_MAPPING" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="BILLING_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="CONTRACT_REF_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="OFFER_REF_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="OFFER_CONTRACT_DESCRIPTION" dataType="Text" index="2" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BILLING_DB.CONTRACT_OFFER_MAPPING]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="10" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_CONTRACT_OFFER_MAPPING" fromColID="queryCol_0" toItemID="tbl_CONTRACT_OFFER_MAPPING" toColID="tblCol_2369bb8bf03e44028c991722956b309d" />
+    <Link partId="11" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_CONTRACT_OFFER_MAPPING" fromColID="queryCol_1" toItemID="tbl_CONTRACT_OFFER_MAPPING" toColID="tblCol_806443ac43114231b4a9771795937c51" />
+    <Link partId="12" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_CONTRACT_OFFER_MAPPING" fromColID="queryCol_2" toItemID="tbl_CONTRACT_OFFER_MAPPING" toColID="tblCol_ac20b6d0a1db4f109e14306df9a3ec94" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="CONTRACT_OFFER_MAPPING.query_BILLING_DB_CONTRACT_OFFER_MAPPING.k2tablePop.xml" lastPartID="20">
+      <TableNode partID="0" name="CONTRACT_OFFER_MAPPING" pos="484.582031 5.854168" width="253" />
+      <DBQueryNode partID="6" name="BILLING_DB" pos="10.0000305 0.890625" size="357.58197 96.21875" isRoot="true">
+        <DBQuery>{"Name":"query_BILLING_DB_CONTRACT_OFFER_MAPPING","ID":"query_query_BILLING_DB_CONTRACT_OFFER_MAPPING","ConnName":"BILLING_DB","SQL":"SELECT * FROM BILLING_DB.CONTRACT_OFFER_MAPPING","ColumnsList":[{"ID":"queryCol_0","Name":"CONTRACT_REF_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"OFFER_REF_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"OFFER_CONTRACT_DESCRIPTION","DataType":"Text","Index":2,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="10" from="0" to="1" pointsArr="367.582 36.9270859 377.582 36.9270859 474.582031 36.89063 484.582031 36.89063" fromNodePartID="6" fromNodeColumnName="CONTRACT_REF_ID" toNodePartID="0" toNodeColumnName="CONTRACT_REF_ID" />
+      <Link partID="11" from="2" to="3" pointsArr="367.582 49 377.582 49 474.582031 48.9635429 484.582031 48.9635429" fromNodePartID="6" fromNodeColumnName="OFFER_REF_ID" toNodePartID="0" toNodeColumnName="OFFER_REF_ID" />
+      <Link partID="12" from="4" to="5" pointsArr="367.582 61.0729141 377.582 61.0729141 474.582031 61.0364571 484.582031 61.0364571" fromNodePartID="6" fromNodeColumnName="OFFER_CONTRACT_DESCRIPTION" toNodePartID="0" toNodeColumnName="OFFER_CONTRACT_DESCRIPTION" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>

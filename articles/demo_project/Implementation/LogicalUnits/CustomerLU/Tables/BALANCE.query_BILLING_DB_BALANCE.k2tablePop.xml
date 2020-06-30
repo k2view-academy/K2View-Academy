@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TablePopulationObject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ID>query_BILLING_DB_BALANCE</ID>
+  <PopulationObjectName>query_BILLING_DB_BALANCE</PopulationObjectName>
+  <TableName>BALANCE</TableName>
+  <RootItemID>query_query_BILLING_DB_BALANCE</RootItemID>
+  <LazyDataUpdate syncMethod="Inherited" performEvery="1.00:00:00">
+    <TruncateBeforeSync>false</TruncateBeforeSync>
+  </LazyDataUpdate>
+  <SimpleObject>true</SimpleObject>
+  <IidFinderProp />
+  <InputArguments>
+    <Arg name="SUBSCRIBER_ID" id="queryCol_0" dataType="Integer" index="0" />
+    <Arg name="BALANCE_ID" id="queryCol_1" dataType="Integer" index="1" />
+    <Arg name="BALANCE_REF_ID" id="queryCol_2" dataType="Integer" index="2" />
+    <Arg name="AVAILABLE_AMOUNT" id="queryCol_3" dataType="Integer" index="3" />
+    <Arg name="RESET_AMOUNT" id="queryCol_4" dataType="Integer" index="4" />
+    <Arg name="RESET_DATE" id="queryCol_5" dataType="Text" index="5" />
+  </InputArguments>
+  <ItemsList>
+    <Item xsi:type="DBQueryDataSave" id="query_query_BILLING_DB_BALANCE" name="query_BILLING_DB_BALANCE" nodeOrder="0" module="DBQuery" mapObjectModule="DBQuery" connName="BILLING_DB">
+      <OutputsList>
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_0" name="SUBSCRIBER_ID" dataType="Integer" index="0" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_1" name="BALANCE_ID" dataType="Integer" index="1" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_2" name="BALANCE_REF_ID" dataType="Integer" index="2" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_3" name="AVAILABLE_AMOUNT" dataType="Integer" index="3" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_4" name="RESET_AMOUNT" dataType="Integer" index="4" />
+        <Output xsi:type="DBQueryDataSaveColumn" id="queryCol_5" name="RESET_DATE" dataType="Text" index="5" />
+      </OutputsList>
+      <SQL><![CDATA[SELECT * FROM BILLING_DB.BALANCE]]></SQL>
+    </Item>
+  </ItemsList>
+  <LinksList>
+    <Link partId="16" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_BALANCE" fromColID="queryCol_0" toItemID="tbl_BALANCE" toColID="tblCol_80cf6dccf0ab45e9adaaa0fe6c4f06e4" />
+    <Link partId="17" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_BALANCE" fromColID="queryCol_1" toItemID="tbl_BALANCE" toColID="tblCol_eed369f771f14163bac8f91959a6f42f" />
+    <Link partId="18" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_BALANCE" fromColID="queryCol_2" toItemID="tbl_BALANCE" toColID="tblCol_9a017c0d01074f298e58d2aceaf0a680" />
+    <Link partId="19" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_BALANCE" fromColID="queryCol_3" toItemID="tbl_BALANCE" toColID="tblCol_d9ef9c30f89e4e689b5eab3012d8c977" />
+    <Link partId="20" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_BALANCE" fromColID="queryCol_4" toItemID="tbl_BALANCE" toColID="tblCol_22dd6ca0448147c38f9f4bfe6d5214b3" />
+    <Link partId="21" fromNodeOrder="0" fromItemID="query_query_BILLING_DB_BALANCE" fromColID="queryCol_5" toItemID="tbl_BALANCE" toColID="tblCol_de79bee2041f460ea06b27ca6d2d4b4a" />
+  </LinksList>
+  <ModeKeyColumnIDs />
+  <DiagramGraph>
+    <Graph name="BALANCE.query_BILLING_DB_BALANCE.k2tablePop.xml" lastPartID="35">
+      <TableNode partID="0" name="BALANCE" pos="383 5.74479675" width="253" />
+      <DBQueryNode partID="9" name="BILLING_DB" pos="10 0.78125" size="253 132.4375" isRoot="true">
+        <DBQuery>{"Name":"query_BILLING_DB_BALANCE","ID":"query_query_BILLING_DB_BALANCE","ConnName":"BILLING_DB","SQL":"SELECT * FROM BILLING_DB.BALANCE","ColumnsList":[{"ID":"queryCol_0","Name":"SUBSCRIBER_ID","DataType":"Integer","Index":0,"IsInputArgument":true},{"ID":"queryCol_1","Name":"BALANCE_ID","DataType":"Integer","Index":1,"IsInputArgument":true},{"ID":"queryCol_2","Name":"BALANCE_REF_ID","DataType":"Integer","Index":2,"IsInputArgument":true},{"ID":"queryCol_3","Name":"AVAILABLE_AMOUNT","DataType":"Integer","Index":3,"IsInputArgument":true},{"ID":"queryCol_4","Name":"RESET_AMOUNT","DataType":"Integer","Index":4,"IsInputArgument":true},{"ID":"queryCol_5","Name":"RESET_DATE","DataType":"Text","Index":5,"IsInputArgument":true}]}</DBQuery>
+      </DBQueryNode>
+      <Link partID="16" from="0" to="1" pointsArr="263 36.81771 273 36.81771 313 37 333 37 373 36.7812538 383 36.7812538" fromNodePartID="9" fromNodeColumnName="SUBSCRIBER_ID" toNodePartID="0" toNodeColumnName="SUBSCRIBER_ID" />
+      <Link partID="17" from="2" to="3" pointsArr="263 48.890625 273 48.890625 313 49 333 49 373 48.85417 383 48.85417" fromNodePartID="9" fromNodeColumnName="BALANCE_ID" toNodePartID="0" toNodeColumnName="BALANCE_ID" />
+      <Link partID="18" from="4" to="5" pointsArr="263 60.96354 273 60.96354 313 61 333 61 373 60.9270859 383 60.9270859" fromNodePartID="9" fromNodeColumnName="BALANCE_REF_ID" toNodePartID="0" toNodeColumnName="BALANCE_REF_ID" />
+      <Link partID="19" from="6" to="7" pointsArr="263 73.03645 273 73.03645 313 73 333 73 373 73 383 73" fromNodePartID="9" fromNodeColumnName="AVAILABLE_AMOUNT" toNodePartID="0" toNodeColumnName="AVAILABLE_AMOUNT" />
+      <Link partID="20" from="8" to="9" pointsArr="263 85.109375 273 85.109375 313 85 333 85 373 85.0729141 383 85.0729141" fromNodePartID="9" fromNodeColumnName="RESET_AMOUNT" toNodePartID="0" toNodeColumnName="RESET_AMOUNT" />
+      <Link partID="21" from="10" to="11" pointsArr="263 97.18228 273 97.18228 313 97 333 97 373 97.14583 383 97.14583" fromNodePartID="9" fromNodeColumnName="RESET_DATE" toNodePartID="0" toNodeColumnName="RESET_DATE" />
+    </Graph>
+  </DiagramGraph>
+</TablePopulationObject>
