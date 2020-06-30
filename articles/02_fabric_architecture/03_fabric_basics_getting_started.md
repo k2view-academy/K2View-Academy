@@ -65,9 +65,9 @@ The Fabric **reset.sh** script cleans Fabric and deletes (drops) all data from F
 
 - In a **Test environment** to delete the current data and to restart the testing process from scratch.
 
-- In a **Production environment**. Note that the [DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md) command and the **reset.sh** script are very rarely used in a Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run.
+- In a **Production environment**. Note that the [DROP LUTYPE](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command) command and the **reset.sh** script are rarely used in a Production environment. A possible scenario for using these processes is to clean an environment after a soft launch prior to starting an actual Production run.
 
-Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_Fabric_Commands.md)) command which drops a specific LU, the **reset.sh script** performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from Cassandra.
+Unlike the **drop LU** ([DROP LUTYPE](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command)) command which drops a specific LU, the **reset.sh script** performs a full Fabric initialization, including deleting users, tokens, metadata, data and also deletes the data from Cassandra.
 
 The Drop process must be followed by the re-creation of Fabric credentials and redeployment of the project implementation into the Fabric server and an initial load of LUI into the re-deployed LUs.
 
