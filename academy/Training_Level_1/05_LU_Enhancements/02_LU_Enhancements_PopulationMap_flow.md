@@ -17,32 +17,30 @@ Let's look at what needs to be considered to ensure that the LU data you are sou
 
 - How to create new fields or tables by receiving transformed input from multiple fields within the schema and by applying transformation functions.
 
-- How I ensure data is up-to-date by enforcing synchronization schemes for specific LUIs.
+- How I ensure data is up-to-date by enforcing synchronization for specific LUIs.
 
   
 
-Based on the above, we will apply such transformations on the Digital Entity we defined as **Customer** and its associated Logical Unit: **CustomerLU** that we defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
+Based on the above, you will apply these transformations on the Digital Entity you defined as **Customer** and its associated **CustomerLU** LU that you defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
 
 
 
-We will apply data transformations by using the following available objects :
+You will apply data transformations using the following available objects:
 
 - Functions
 - Translations
 - Globals
 - Lookup tables
 
-Lets read through the following [article](/articles/07_table_population/06_table_population_transformation_rules.md).
+Read the following [article](/articles/07_table_population/06_table_population_transformation_rules.md) to learn more.
 
 
 
-Now you are acquainted with the different data transformation means, let's look at Populations diagrams outline to visualize all objects belonging to a particular population map. In the next article you will see an example of how functions, lookup or translation tables are inserted between the external sources table and any of the target LU table, to enable data transformation during it migration from the sources.  
+Now you are acquainted with the different data transformation means, let's look at the Populations diagrams outline to visualize all objects belonging to a specific population map. 
 
-[Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md)
+In the [Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article you will see an example of how functions, lookup or translation tables are inserted between the external sources table and the target LU table to enable data transformation during it migration from its sources.  
 
-
-
-Let's now conclude this part by reading on how we can set different execution orders for the population objects we defined above: [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) 
+To conclude this section, read about [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) to understand how to set different execution orders for the population objects you defined above. 
 
 
 
