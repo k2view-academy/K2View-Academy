@@ -1,11 +1,11 @@
 # Built-In Actor Types
 
-The **Actor** represents an activity (action) that should be executed on each **Stage** of the **Broadway Flow**, that gets input parameters and returns output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
+The [Actor](/articles/99_Broadway/04_built_in_actor_types.md) represents an activity (action) that should be executed on each [Stage](<!--Link to 18-Flow Stages-->) of the **Broadway Flow**, that gets input parameters and returns output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
 
 Broadway has a vast list of built-in Actors that can create various types of activities and can be added to each Flow.
 The Broadway built-in Actors are split into the following categories (tags), while each category includes several Actor types.
 
-Note that when doing **Export Actor** from the Actor's context menu, a new category (tag) will be created - if the value which you populate in the Tag field doesn't exist among the Actor's categories.
+Note that when doing [Export Actor](<!--add link-->) from the Actor's context menu, a new category (tag) will be created - if the value which you populate in the Tag field doesn't exist among the Actor's categories.
 
 <table width="900pxl">
 <tbody>
