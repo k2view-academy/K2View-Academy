@@ -268,5 +268,5 @@ Notes:
   
   <!-- to check with Yuval- empty values -->
 
-
+[![Previous](/articles/images/Previous.png)](articles/99_Broadway/02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
 
