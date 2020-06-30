@@ -541,7 +541,7 @@ Click for more information about Fabric CDC and Search.
 
 ### Fabric Broadway
 
-Fabric **BROADWAY** command runs a [Broadway flow]().
+Fabric **BROADWAY** command runs a Broadway flow.
 
 <!--Drop 2- add a link to Broadway -->
 
