@@ -12,12 +12,12 @@ Let's take a look at the different functions that can be used to apply data mani
 
 
 ### Fabric functions
-To understand the different types of project functions that can be developed and used, read  this article article about [Project Functions](/articles/07_table_population/08_project_functions.md).
+To understand the different types of project functions that can be developed and used, read  this article about [Project Functions](/articles/07_table_population/08_project_functions.md).
 
 
 
 - [LUDB functions](/articles/07_table_population/09_creating_an_LUDB_function.md) that can be invoked from within an SQL query.
-- [Project functions](/articles/07_table_population/10_creating_a_project_function.md) added to the project implementation to perform complex data manipulations or to execute queries on a specific instance.
+- [Project functions](/articles/07_table_population/10_creating_a_project_function.md) that can be added to the project implementation to perform complex data manipulations or to execute queries on a specific instance.
 
 
 
@@ -30,7 +30,7 @@ To understand the different types of project functions that can be developed and
 
 ### Enrichment functions
 
-In order to work directly on LU tables data, once and only once they have been populated, you will need to use enrichment functions. Such functions have specific properties and features as you will discover by reading the following articles:
+To work directly on the data in LU tables, only after they have been populated, you will need to use enrichment functions. These functions have specific properties and features as you will discover by reading the following articles:
 
 - [Enrichment function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md)
 - [Root functions & Enrichment functions differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)
