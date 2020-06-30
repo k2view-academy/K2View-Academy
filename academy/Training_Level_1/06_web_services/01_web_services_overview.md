@@ -15,34 +15,7 @@ By the end of the Web Services learning item you will know:
 
 - How to create a Web Service and about it's basic structure.
 - How to deploy a Web Service.
-- How to view and test a Web Service using Swagger.
- 
-@exper12 
-k2view-academy
-/
-K2View-Academy
-generated from k2view-academy/Templates
-6
-7
-1
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-K2View-Academy
-/
-academy
-/
-Training_Level_1
-/
-06_web_services
-/
-01_web_services_overview.md
- 
+- How to view and test a Web Service using Swagger. 
 - How to authenticate a Web Service.
 - About the various supported response codes and verbs.
 <!--How to manage access rights for your web service- once Admin item is ready-->
