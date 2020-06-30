@@ -22,20 +22,21 @@ The following are the basic steps for creating a Web Service and understanding i
 Let's create our first simple Web Service which will retrieve basic information on a specific instance of a customer:
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
-2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from. Note that you'll need to select the required columns. Please select CUSTOMER_ID, SSN, FIRST_NAME and LAST_NAME.
-3. Set the input parameter as **i_id** and data type as **String**
-4. Edit the Web Service function  :
+2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from. 
+3. Select the **CUSTOMER_ID**, **SSN**, **FIRST_NAME** and **LAST_NAME** columns.
+4. Set the input parameter as **i_id** and data type as **String**
+5. Edit the Web Service function  :
    1. Replace the [Instance Id] with the input parameter-**i_id**
    2. Remove any access values from the fetch statement, only the **sql** paramter should be left
-5. Name the Web Service, for example **wsGetCustomer**. Make sure that you prefix is 'ws%'.
-6. Set the Web Service properties:
+6. Name the Web Service, for example **wsGetCustomer**. Make sure that you prefix is 'ws%'.
+7. Set the Web Service properties:
    1. Set the prefered **Category**, for example **Training**
    2. Select **Object** from the **Return Type**  dropdown list.
    3. Set the path to: **train/getCustomer**
    4. Add a description of your Web Service.
-7. Add comments or a log message in your Web Service.
-8. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
-9. Save the Web Service with no errors.
+8. Add comments or a log message in your Web Service.
+9. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
+10. Save the Web Service with no errors.
 
 ### Deploying a Web Service
 
