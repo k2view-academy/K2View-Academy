@@ -15,18 +15,18 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
 1. Right click the **Web Service** and select **Invoke Web Service** and then the **prefered environment**: The Fabric server name or Local Fabric (debug).
    Swagger is prompted and the invoked Web Service is expanded. Note that since the defined **Verb** for the Web Service included all options: GET, POST, PUT and DELETE, All of these options are available. The GET (default) option is expanded.
 3. Click **Try it out**, set the **i_id** to **82** and execute. 
-   What is the response? `"Failed to authorize"` 
-   Why? `The Web Service is requiring a token for authentication.` 
+   What is the response? Failed to authorize. 
+   Why? The Web Service is requiring a token for authentication. 
 4. For the request to succeed, create the permissions and a token:
-   1. `create user 'test_user';`
-   2. `create role 'admin';`
-   3. `grant ALL_WS on * to 'admin';`
-   4. `assign role 'admin' to user 'test_user';`
-   5. `Create token test;`
-   6. `assign role 'admin' to token test;`
-5. Let's go back and try to execute the Web Service again. Click the **Lock**, set a valid **Token** and close.
+- create user 'test_user'; 
+- create role 'admin'; 
+- grant ALL_WS on * to 'admin'; 
+- assign role 'admin' to user 'test_user';`
+- Create token test; 
+- assign role 'admin' to token test; 
+5. Go back and try to execute the Web Service again. Click the **Lock**, set a valid **Token** and **close**.
 7. Set the **i_id** to **82** and execute. 
-   What is the Customer's first name? `Anthony`
+   What is the Customer's first name? Anthony
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Invoking a Web Service
 
