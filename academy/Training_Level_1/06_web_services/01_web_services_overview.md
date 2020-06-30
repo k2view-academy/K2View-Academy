@@ -2,10 +2,9 @@
 
 Excellent work on your third Quiz! Well Done! 
 
-You have enhanced your Logical Unit and project and added the capablities needed for retrieving and storing data in Fabric so that it meets all predefined business requirements when it is compiled. 
+You have enhanced your LU and project by adding the capabilities needed for retrieving and storing data in Fabric. It now meets all predefined business requirements when it is compiled.
 
-
-Currently, the enriched data can be viewed only in the Fabric console and only by users who have access. 
+Currently, the enriched data can only be viewed only in the Fabric console and only by users who have access. 
 
 The question is... how is this data exposed and how does it interact with the outside world? Let's take a look at the Fabric Web Services layer.  
  
@@ -44,7 +43,7 @@ Training_Level_1
 /
 01_web_services_overview.md
  
-- How to authenitcate a Web Service.
+- How to authenticate a Web Service.
 - About the various supported response codes and verbs.
 <!--How to manage access rights for your web service- once Admin item is ready-->
 <!--How to use Graphit- Once item is ready-->
