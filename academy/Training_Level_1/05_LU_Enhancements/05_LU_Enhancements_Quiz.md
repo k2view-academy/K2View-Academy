@@ -10,7 +10,7 @@ Excellent!
 You have completed the Fabric Enhancements learning items.
 
 
-Before moving to the next item, let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
+Before moving to the next item, take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
 
 
 
@@ -18,11 +18,11 @@ Before moving to the next item, let's take the following quiz to see what you ha
 
 To perform standard transformation of dates, strings, or basic mathematical operations you will use:
 
-A: A project function
+A: A project function.
 
-B: A root function 
+B: A root function. 
 
-C: Built-in functions or any other java standard utilities
+C: Built-in functions or any other standard Java utilities.
 
 (***Solution 1: C ***).
 
@@ -34,9 +34,9 @@ A LUDB function is a:
 
 A: Function invoked from an SQL query to perform more complex operations on LU data than those performed using standard SQL statements.
 
-B: Function used to create LU schemas automatically
+B: Function used to create LU schemas automatically.
 
-C: Function used to query external sources
+C: Function used to query external sources.
 
 (***Solution 2: A ***).
 
@@ -48,12 +48,12 @@ A Root functions is a:
 
 A: Function that is only applicable to data manipulations on root tables. 
 
-B: Specific type of Fabric function, used as a Source Object to trigger the table population mechanism, run various SQL SELECT 
+B: Specific type of Fabric function used as a Source Object to trigger the table population mechanism, run various SQL SELECT 
    queries and execute complex logic in Java.
 
-C: Function that can be applied to any table of the LU schema, making it a root table.
+C: Function that can be applied to any table in the LU schema, making it a root table.
 
-D: Function that operates data manipulations only if the systems root user is logged on.
+D: Function that operates data manipulations only if the system's root user is logged in.
 
 (***Solution 3: B ***).
 
@@ -63,7 +63,7 @@ D: Function that operates data manipulations only if the systems root user is lo
 
 Which of the following statements is certainly true ?
 
-A: Enrichment functions are functions without Input/Output parameters that are used to insert, update, or delete LU tables' data.
+A: Enrichment functions are functions without Input/Output parameters that are used to insert, update, or delete a LU table's data.
 
 B: Multiple enrichment functions can be attached to any of the LU's tables.
 
@@ -79,13 +79,13 @@ D: All the above.
 
 A Decision function is a:
 
-A: Complex SQL query with multiple where statements to decide which records to create, update or delete.
+A: Complex SQL query with multiple WHERE statements that decide which records to create, update or delete.
 
 B: Java function with multiple input parameters and one Boolean output parameter.
 
 C: Java project function that assesses whether a sync should be performed on an LUI.
 
-D: Function that runs an LU table population based upon special sets of conditions defined on other tables of the same LU.
+D: Function that runs an LU table population based on specific sets of conditions defined on other tables in the same LU.
 
 (***Solution 5: C ***).
 
@@ -95,12 +95,12 @@ D: Function that runs an LU table population based upon special sets of conditio
 
 It is recommended to create look-up tables based on: 
 
-A: an external DB table to ensure the data is fresher than the data sitting in the LU.
+A: An external DB table to ensure the data is fresher than the data in the LU.
 
-B: an LU table, or any Fabric internal object, such as: reference, translation, etc.. to improve performance since it is 
-   kept in Fabric memory and since it is much smaller than the DB source.
+B: An LU table, or any Fabric internal object like a reference or translation that improves performance since it is 
+   saved in  the Fabric memmory and is much smaller than the DB source.
 
-C: It does not matter, each solution has its pro's and con's.
+C: It does not matter, each solution has its pros and cons.
 
 (***Solution 6: B ***).
 
@@ -142,13 +142,13 @@ E: All of the above.
 
 Which of the following statements is true?
 
-A: Execution order defines the order of the population objects execution within an LU schema.
+A: Execution order defines the order of the execution of population objects in an LU schema.
 
-B: Execution orders have a default value based on the LU's schema's hierarchy.
+B: Execution orders have a default value based on the LU schema's hierarchy.
 
-C: Execution orders can be defined by the LU implementer after a very careful thinking and strategizing process.
+C: Execution orders can be defined by the LU implementer after a very careful decision-making and strategizing process.
 
-D: The higher the number of the execution order, the lower will be the priority of the population mapping executions.
+D: The higher number in the execution order, the lower priority of the population mapping execution.
 
 E: All of the above.
 
@@ -158,7 +158,7 @@ E: All of the above.
 
 #### Question 10: Enrichment order
 
-Enrichment order only applies to:
+An enrichment order only applies to:
 
 A: Decision functions.
 
