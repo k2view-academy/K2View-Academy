@@ -57,9 +57,11 @@ customer to the address LU table so that full information about the customer is 
             In the table from customerLU, it is much more efficient to use the data already populated into the LU table than the CRM table.
             Step 2: 
             The k2_concat5 function will allow you to concatenate up to 5 strings and to also define a delimiter !. In this specific 
-            example, only 2 strings are needed and the delimiter is set to ".". (A next stage of the exercise could be to add a 
-            UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" and therefore provide an email
+            example, only 2 strings are needed and the delimiter is set to ".". 
+            
+            A next stage of the exercise could be to add a UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" to provide an email
             address for your customers).
+            
             Step 3:
             The  "Lookup Not Found" configuration variable sets up the system's behaviour if a specific value does not exist in the lookup 
             table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
