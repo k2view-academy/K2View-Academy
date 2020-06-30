@@ -19,37 +19,37 @@ The following are the basic steps for creating a Web Service and understanding i
 
 **Creating a Web Service**
 
-Let's create our first simple Web Service which will retrieve basic information on a specific instance of a customer:
+Let's create your first simple Web Service which will retrieve basic information on a specific instance of a customer:
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
 2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from. 
 3. Select the **CUSTOMER_ID**, **SSN**, **FIRST_NAME** and **LAST_NAME** columns.
 4. Set the input parameter as **i_id** and data type as **String**
-5. Edit the Web Service function  :
-   1. Replace the [Instance Id] with the input parameter-**i_id**
-   2. Remove any access values from the fetch statement, only the **sql** paramter should be left
-6. Name the Web Service, for example **wsGetCustomer**. Make sure that you prefix is 'ws%'.
+5. Edit the Web Service function:
+   -   Replace the **[Instance Id]** with the input parameter-**i_id**.
+   -   In the **Fetch** statement, remove all access values apart from **sql**. access values from the **Fetch** statement, only the **sql** paramter should be left
+6. Name the Web Service, for example **wsGetCustomer**. Make sure that the prefix is 'ws%'.
 7. Set the Web Service properties:
-   1. Set the prefered **Category**, for example **Training**
-   2. Select **Object** from the **Return Type**  dropdown list.
-   3. Set the path to: **train/getCustomer**
-   4. Add a description of your Web Service.
-8. Add comments or a log message in your Web Service.
-9. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
-10. Save the Web Service with no errors.
+   -   Set the prefered **Category**, for example **Training**
+   -   Select **Object** from the **Return Type** dropdown list.
+   -   Set the path to: **train/getCustomer**
+   -   Add a **description** of your Web Service.
+8. Add comments or a log message to your Web Service.
+9. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md).
+10. Make sure that there are no errors and then save the Web Service.
 
 ### Deploying a Web Service
 
-Before testing you Web Service, it must be deployed into Fabric, let's understand how:
+Before testing your Web Service, it must be deployed into Fabric, let's understand how:
 
 [Deploy Web Service from Fabric Studio](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md)
 
-Please deploy the Web Service you have just created into the Fabric server you set for your project. 
+Deploy the Web Service into the Fabric server that you defined for your project. 
 
-Now we can validate that the Web Service has been deployed:
+Let's validate that the Web Service has been deployed:
 
 1. Log into Fabric. 
-2. Execute: `cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
+2. Execute: cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';
 3. You can now verify that your Web Service has been deployed:
 
 `fabric>cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
