@@ -175,7 +175,7 @@ Globals definition:
                       
 
 Step 3:
-            ```java
+           
                   reportUserMessage("Invoice Cleaning fonction is running");
                   String SQLINVOICES="SELECT * FROM INVOICE";
                   String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
@@ -186,11 +186,10 @@ Step 3:
                    if(date[0].compareTo(OLDINVOICES) < 0) {
                      reportUserMessage("invoice date is earlier than 2015/12/31");
                       fabric().execute(SQLInvoicesDelete,cellCaseDate);
-                    }
                   }
-            ```
+                  }
 
-Step 4: Answer: 19 entries
+Step 4: Answer: 19 entries.
             
 Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
 
