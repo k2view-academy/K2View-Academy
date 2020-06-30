@@ -17,11 +17,11 @@ Let's look at what needs to be considered to ensure that the LU data you are sou
 
 - How to create new fields or tables by receiving transformed input from multiple fields within the schema and by applying transformation functions.
 
-- How I ensure data is up-to-date by enforcing synchronization for specific LUIs.
+- How I ensure data is up-to-date by enforcing synchronization of specific LUIs.
 
   
 
-Based on the above, you will apply these transformations on the Digital Entity you defined as **Customer** and its associated **CustomerLU** LU that you defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
+Based on the above, these transformations will be defined on the Digital Entity you defined as **Customer** and its associated **CustomerLU** LU that you defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
 
 
 
@@ -32,11 +32,11 @@ You will apply data transformations using the following available objects:
 - Globals
 - Lookup tables
 
-Read the following [article](/articles/07_table_population/06_table_population_transformation_rules.md) to learn more.
+To learn more, read the following [article](/articles/07_table_population/06_table_population_transformation_rules.md).
 
 
 
-Now you are acquainted with the different data transformation means, let's look at the Populations diagrams outline to visualize all objects belonging to a specific population map. 
+Now you are acquainted with the different data transformation means, let's look at the Populations diagrams's outline to visualize all objects belonging to a specific population map. 
 
 In the [Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article you will see an example of how functions, lookup or translation tables are inserted between the external sources table and the target LU table to enable data transformation during it migration from its sources.  
 
