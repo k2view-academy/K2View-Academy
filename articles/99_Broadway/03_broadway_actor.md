@@ -2,7 +2,7 @@
 
 ## Actor Overview
 
-Broadway **Actor** object executes a predefined activity in the **Flow**. The Actors are added to each Flow's **Stage**.
+Broadway **Actor** object executes a predefined activity in the **Flow**. The Actors are added to each flow's **Stage**.
 
 The **Actor** is a JAVA class which implements the **Actor Interface** and overrides the **action** method.
 
@@ -10,7 +10,7 @@ The **Actor** is a JAVA class which implements the **Actor Interface** and overr
 
 #### Built-In Actors
 
-Broadway contains [built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) which address a vast range of activities and can be added to Broadway Flows: file handling, JSON handling, DB activities, String manipulations, etc..
+Broadway contains [built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) which address a vast range of activities and can be added to Broadway flows: file handling, JSON handling, DB activities, String manipulations, etc..
 
 #### Customized Actors
 
