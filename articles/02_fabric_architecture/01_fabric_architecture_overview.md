@@ -117,7 +117,7 @@ Conversely, Fabric can expose LUI MicroDB or commonDB objects to external querie
 
 
 #### 3.2.3  CDC (Change Data Capture) via Kafka
-Fabric supports real-time, inbound data updates via a Kafka interface using the IIDFinder module. The iIdFinder identifies incoming events and associates them with the correct MicroDB. This interface can be easily integrated with CDC providers such as Oracle Golden Gate.
+Fabric supports real-time, inbound data updates via a Kafka interface using the IIDFinder module. The IIDFinder identifies incoming events and associates them with the correct MicroDB. This interface can be easily integrated with CDC providers such as Oracle Golden Gate.
 To publish change events externally via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of MicroDB changes.
 
 #### 3.2.4 Manual / Scripted Input
