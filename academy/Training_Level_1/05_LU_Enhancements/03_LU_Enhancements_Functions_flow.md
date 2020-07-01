@@ -84,7 +84,8 @@ is experiencing with the network to her mailing address. The case notes reflect 
            
 
     2.    Let's look at the different notes in the Case_Note table of Tamar's LUI.
-           - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type description (in the Cases table)
+           - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type description 
+             (in the Cases table)
            - How many cases are still open ?
            
 
