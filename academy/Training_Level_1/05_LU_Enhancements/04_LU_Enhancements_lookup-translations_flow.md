@@ -35,10 +35,13 @@ In this section the following topics are addressed:
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 1 - Lookup tables
-Using the CustomerLU schema, let's look at the Address population map. 
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
+**Exercise 1 - Lookup tables**
+  
+  *Using the CustomerLU schema, let's look at the Address population map.* 
+
+  Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
 
             Step 1: 
             Which table should you consider using and why ?
