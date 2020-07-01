@@ -188,7 +188,7 @@ Graphit is a Fabric utility used to dynamically generate CSV, XML and JSON docum
 
 Since data is spread across multiple MicroDB, Fabric provides an indexing process that is run during data synchronization phases. This enable users to execute queries on indexed fields across any number of LUIs.
 
-### 4.2 Elastic Eearch
+### 4.2 Elastic Search
 
 Via its CDC module, Fabric can use E-S to store its indices and provide a distributed, [multi-tenant](https://en.wikipedia.org/wiki/Multitenancy) capable [full-text search](https://en.wikipedia.org/wiki/Full-text_search) engine for near real-time results across its huge number of LU MicroDB instances.
 
