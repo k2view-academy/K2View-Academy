@@ -15,9 +15,9 @@ By the end of the Fabric Architecture learning item you will know:
 
 
 
-Let’s get started! Please read the [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md) document.
+Let’s get started by reading the [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md) document.
 
-You are now ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
+You are ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
 
 Now you are a Fabric rookie, let's move on to the next section and build your first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md) !
 
