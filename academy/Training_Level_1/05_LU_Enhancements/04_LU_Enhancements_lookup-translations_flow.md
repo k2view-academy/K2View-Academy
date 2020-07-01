@@ -39,7 +39,7 @@ In this section the following topics are addressed:
 
 **Exercise 1 - Lookup tables**
   
-  *Using the CustomerLU schema, let's look at the Address population map.** 
+  Using the CustomerLU schema, let's look at the Address population map. 
 
   Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
 
@@ -51,7 +51,8 @@ In this section the following topics are addressed:
             the Address table ?
             
             Step 3: 
-            In the Properties panel, what does the "Lookup Not Found" configuration variable mean ? What are the available options ? 
+            In the Properties panel, what does the "Lookup Not Found" configuration variable mean ? What are the
+            available options ? 
             Using our example, what will most likely be the value of this configuration variable ?
             
             Step 4: 
@@ -61,13 +62,14 @@ In this section the following topics are addressed:
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 1 - Lookup table
 
             Step 1: 
-            In the table from customerLU, it is much more efficient to use the data already populated into the LU table than the CRM table.
+            In the table from customerLU, it is much more efficient to use the data already populated into the LU table 
+            than the CRM table.
             
             Step 2: 
             The k2_concat5 function will allow you to concatenate up to 5 strings and to also define a delimiter !. In this specific 
             example, only 2 strings are needed and the delimiter is set to ".". 
-            A next stage of the exercise could be to add a UID (to avoid duplicate names), and an internet address string such as "@yourcompany.com" to provide an email
-            address for your customers.
+            The next stage of the exercise could be to add a UID (to avoid duplicate names), and an internet address string such as
+            "@yourcompany.com" to provide an email address for your customers.
             
             Step 3:
             The  "Lookup Not Found" configuration variable sets up the system's behaviour if a specific value does not exist in the lookup 
