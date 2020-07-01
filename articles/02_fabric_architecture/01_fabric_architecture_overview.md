@@ -7,7 +7,7 @@ The following topics are discussed in this section:
 - [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#security)
 - [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#resiliency) 
 
-## Fabric Systems Overview
+## 1. Fabric Systems Overview
 Fabric can be viewed as a distributed, business-entity-centric data management system, designed to get, store, transform and expose data for real-time operational needs.
 
 Fabric takes ownership of the E2E data lifecycle, including:
@@ -33,7 +33,7 @@ Fabric solves the following high-level requirements:
 Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
 
 
-## Fabric Server Main Components
+## 2. Fabric Server Main Components
 
 Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
 
@@ -94,7 +94,7 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 
 
 
-## Data Flow
+## 3. Data Flow
 
 Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate with data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
 
@@ -185,7 +185,7 @@ Broadway enables you to graphically render your business and data flows and modi
 - Graphit&#39;s APIs Generator:
 Graphit is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of Fabric Web Service customized responses whose content is formatted during its execution according to specific parameters pertaining to the Web Service calls and the LUI in use.
 
-## Search
+## 4. Search
 
 ### Search Engine
 
@@ -196,7 +196,7 @@ Since data is spread across multiple MicroDB, Fabric provides an indexing proces
 Via its CDC module, Fabric can use E-S to store its indices and provide a distributed, [multi-tenant](https://en.wikipedia.org/wiki/Multitenancy) capable [full-text search](https://en.wikipedia.org/wiki/Full-text_search) engine for near real-time results across its huge number of LU MicroDB instances.
 
 
-## Security
+## 5. Security
 
 Since digital entity data encapsulation architecture provides a very strong case for data protection (each LUI lives as a separate entity), Fabric is basically secured by-design. Yet Fabric adds to its arsenal a wide range of security tools, layers and practices to ensure the protection of your data.
 
@@ -233,7 +233,7 @@ Users can define a number of environments for source connectivity according to t
 To protect your company&#39;s data, Fabric's masking service creates a structurally similar but an unauthentic version of your data that can be used for development, integration or testing purposes.
 
 
-## Resiliency
+## 6. Resiliency
 
 ### Fabric Cluster
 
