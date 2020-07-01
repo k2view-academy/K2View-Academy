@@ -56,11 +56,11 @@ To develop the functions pertaining to this course's section, you will use the f
     
 
     2. How many lines are associated to a 5G/LTE offer and how many match the international standard format for US numbers?
-         +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs).
+       +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs).
          
 
     3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
-     contract_ID 2787 & 2788 to validate the code. 
+       contract_ID 2787 & 2788 to validate the code. 
         Tips:
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
@@ -90,10 +90,10 @@ is experiencing with the network to her mailing address. The case notes reflect 
            
 
     3. Write a Java function that operates the following data transformations:
-       - All case notes belonging to cases of the "Billing issues" type should be changed to 
-         "insolvent customer due to alien assimilation".
-       - All case notes belonging to cases of the "Network issues" type should be changed to "Customer has been assimilated 
-         to a phone and is no longer network compatible".
+       - All case notes belonging to cases of the "Billing issues" type should be changed to "insolvent customer due to 
+         alien assimilation".
+       - All case notes belonging to cases of the "Network issues" type should be changed to "Customer has been 
+         assimilated to a phone and is no longer network compatible".
        - All open cases should be set to Status="closed".
 
  
