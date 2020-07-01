@@ -21,7 +21,7 @@ Let's look at what needs to be considered to ensure that the LU data you are sou
 
   
 
-Based on the above, these transformations will be defined on the Digital Entity you defined as **Customer** and its associated **CustomerLU** LU that you defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
+Based on the above, the transformations will be defined on the Digital Entity you defined as **Customer** and its associated **CustomerLU** that you defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
 
 
 
@@ -36,7 +36,7 @@ To learn more, read the following [article](/articles/07_table_population/06_tab
 
 
 
-Now you are acquainted with the different data transformation means, let's look at the Populations diagrams's outline in the [Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article. You will see an example of how functions, lookup or translation tables are inserted between the external sources table and the target LU table to enable data transformation during it migration from its sources.  
+Now you are acquainted with the different data transformation means, let's look at the Populations diagrams's outline in the [Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article. You will see an example of how functions, lookup or translation tables are inserted between the external sources table and the target LU table to enable data transformation during its migration from its sources.  
 
 To conclude this section, read about [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) to understand how to set different execution orders for the population objects you defined above. 
 
