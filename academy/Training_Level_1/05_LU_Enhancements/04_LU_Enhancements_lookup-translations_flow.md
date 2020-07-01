@@ -180,7 +180,7 @@ Using the enrichment and decision functions from the previous exercises, please 
                         Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
                         
             Step 2:
-            !. Decision function based on Globals:
+            1. Decision function based on Globals:
 
             // This function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
             Boolean syncInd = false;
@@ -197,7 +197,7 @@ Using the enrichment and decision functions from the previous exercises, please 
             return syncInd;
             
 
-            2. Answer: 5
+            2. Answer: 5.
             3. The sync did not happen.
 
             4. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
