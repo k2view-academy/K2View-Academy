@@ -85,7 +85,8 @@ In this section the following topics are addressed:
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
 **Exercise 2 - Translations**
-Associate a unique geo-location code to the address table to build a heat map of the customer's location.
+
+Associate a unique geo-location code to the Address table to build a heat map of the customer's location.
             
             Step 1: 
             Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called 
@@ -99,7 +100,9 @@ Associate a unique geo-location code to the address table to build a heat map of
             What is the Lat / Long value for LUI 1000 ? What is the International City Code for LUI 2217 ?
 
 
-#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 2 - Translations
+#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+
+**Solution Exercise 2 - Translations
 
             Steps 1 & 2:
 Translation table schema:
