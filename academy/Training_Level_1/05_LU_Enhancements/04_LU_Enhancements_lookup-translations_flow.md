@@ -104,9 +104,10 @@ Associate a unique geo-location code to the Address table to build a heat map of
             What is the International City Code for LUI 2217 ?
 
 
-#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png)
 
-**Solution Exercise 2 - Translations
+
+**Solution Exercise 2 - Translations**
 
             Steps 1 and 2:
 Translation table schema:
@@ -123,7 +124,10 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             InstanceID 2217: 1840034016
             
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 3 - Globals
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
+
+**Exercise 3 - Globals**
+
 Let's use Globals rather than values hardcoded into Java functions or SQL statements. 
 
 Using the enrichment and decision functions from the previous exercises, please execute the following steps: 
@@ -163,6 +167,7 @@ Using the enrichment and decision functions from the previous exercises, please 
 #### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
 **Solution Exercise 3 - Globals**
+
             Step 1:
             SQL Query with embedded reference to Globals:
                         Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
