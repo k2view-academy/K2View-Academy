@@ -133,33 +133,40 @@ Let's use Globals rather than values hardcoded into Java functions or SQL statem
 Using the enrichment and decision functions from the previous exercises, please execute the following steps: 
 
             Step 1: 
-            Create a new Global (Final) named OLDInvoices of the "date" type which will indicate which invoice records can be 
-            deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the INVOICES table.
-            Using the Query Builder, execute an SQL query with a WHERE statement that selects all records older than OLDINVOICES 
-            globals set to "2015-12-31"
+            1. Create a new Global (Final) named OLDInvoices of the "date" type which will indicate which invoice records 
+               can be deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the
+               INVOICES table.
+            
+            2. Using the Query Builder, execute an SQL query with a WHERE statement that selects all records older than 
+               OLDINVOICES globals set to "2015-12-31"
              
             Step 2: 
-            a. Create new Global value (Not Final) “RUN_POP” to be used by the “CasesUpdateMonitor” Decision function you created.            . 
-            In your function, use the Global value to decide whether to run the population or not, depending on 
-            the number of records in the CASES tables of the CRM_DB database.
-            b. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 25000 ?
-            c. How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 30000 ?
-            d. Open the Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
-            Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value  ?
+            1. Create new Global value (Not Final) “RUN_POP” to be used by the “CasesUpdateMonitor” Decision function 
+               you created. 
+            2. In your function, use the Global value to decide whether to run the population or not, depending on 
+               the number of records in the CASES tables of the CRM_DB database.
+               How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 25000 ?
+               How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 30000 ?
+               
+            2. Open the Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
+            
+            3. Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value  ?
             
             Step 3: 
-            Create an enrichment function to loop throw all invoices and delete all invoices that are older than the barrier date.
-            Set the globals OLDINVOICES value to "2015-12-31". Use this exact format so you can use the Java "compareTO" 
-            function to compare dates. 
+            1. Create an enrichment function to loop throw all invoices and delete all invoices that are older than the barrier date.
+            
+            2. Set the globals OLDINVOICES value to "2015-12-31". Use this exact format so you can use the Java "compareTO" 
+               function to compare dates. 
             
             Step 4: 
-            Attach both functions to their relevant table.
-            Deploy and run the enrichment function on InstanceID=1000. How may invoices records are left for InstanceID=1000 ? 
-            Using the Data Viewer on the InstanceID 1000 Invoice table, check that all invoice records have an issued date 
-            that is later than 2015-12-31).
+            1. Attach both functions to their relevant table and deploy and run the enrichment function on InstanceID=1000.
+               How may invoices records are left for InstanceID=1000 ? 
+            
+            2. Using the Data Viewer on the InstanceID 1000 Invoice table, check that all invoice records have an issued date 
+               that is later than 2015-12-31).
                
             Step 5:
-            Using a new Global called "*InterCode_UK*", modify the PhoneFormat enrichment function so that all phone entries of 
+            Using a new Global named "*InterCode_UK*", modify the PhoneFormat enrichment function so that all phone entries of 
             Instance ID=1000 that do not already have an international code are set to "+44".
 
 
@@ -173,7 +180,7 @@ Using the enrichment and decision functions from the previous exercises, please 
                         Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
                         
             Step 2:
-            a. Decision function based on Globals:
+            !. Decision function based on Globals:
 
             // This function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
             Boolean syncInd = false;
@@ -190,12 +197,12 @@ Using the enrichment and decision functions from the previous exercises, please 
             return syncInd;
             
 
-            b. Answer: 5
-            c. The sync did not happen.
+            2. Answer: 5
+            3. The sync did not happen.
 
-            d. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
-            This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden its 
-            value for all the *.RUN_POP instances in the scope of this Fabric session.
+            4. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
+               This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden its 
+               value for all the *.RUN_POP instances in the scope of this Fabric session.
             
             
 Globals definition:    
@@ -220,7 +227,7 @@ Globals definition:
 
             Step 4: Answer: 19 entries.
             
-            Step 5: c.f. Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
+            Step 5: Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
 
                 if ((cellValue.matches("(.*)+(.*)") == false))
                 {
