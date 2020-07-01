@@ -226,7 +226,9 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
 
   
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 2 - Decision functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)
+
+**Exercise 2 - Decision functions**
 
 To save network resources, ensure that data synchronization of LUIs only occurs if the number of entries in a given external source's table is above a specific threshold: CRMCases_threshold
 
@@ -248,7 +250,9 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
 
   
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution - Decision functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+
+**Solution - Decision functions**
 
 ##### Question 1:
 
