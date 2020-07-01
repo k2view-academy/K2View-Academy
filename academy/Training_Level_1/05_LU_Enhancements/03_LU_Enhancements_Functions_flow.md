@@ -67,8 +67,8 @@ To develop the functions pertaining to this course's section, you will use the f
             - Use the fabric() execute function to update data. 
             
 
-    4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
-    the code accordingly.
+    4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. 
+       Please, modify the code accordingly.
 
 
 
@@ -98,9 +98,9 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
  
 ##### Question 3: Attaching the enrichment function to the appropriate table
-      - What happens if you attach the enrichment function to the table: CASES ? 
+      1. What happens if you attach the enrichment function to the table: CASES ? 
       
-      - To which table should the function be attached ? 
+      2. To which table should the function be attached ? 
 
 
 
@@ -111,10 +111,9 @@ is experiencing with the network to her mailing address. The case notes reflect 
 ##### Question 1: Standardization
     1. 4.
     
-    2. 1 and 2
+    2. 1 and 2.
     .
-    3. Code, update all the phone number fields missing international code: 
-    
+    3. Code, update all the phone number fields missing international code:     
    ```java
    String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
    String interCode="+1 ";
@@ -136,7 +135,7 @@ is experiencing with the network to her mailing address. The case notes reflect 
    }// end loop through rows
    ```
 
-    d. Update line numbers only for 5G/LTE contracts
+    4. Update line numbers only for 5G/LTE contracts
      The if statement below should reflect the contract description cell value:
 
 ```java
