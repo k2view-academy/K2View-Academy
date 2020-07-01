@@ -15,16 +15,12 @@ Let's take a look at the different functions that can be used to apply data mani
 Please read the following articles about specific Fabric functions:
 - [LUDB functions](/articles/07_table_population/09_creating_an_LUDB_function.md) that can be invoked from within an SQL query.
 - [Project functions](/articles/07_table_population/10_creating_a_project_function.md) that can be added to the project implementation to perform complex data manipulations or to execute queries on a specific instance.
-To understand the different types of project functions that can be developed and used, read  this article about [Project Functions](/articles/07_table_population/08_project_functions.md).
-
-
-
 
 
 
 
 ### Root functions
-
+Please read the following articles about root functions:
 - [Creating a root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
 - [Examples of root functions and code example](/articles/07_table_population/11_2_root_functions_code_examples.md)
 
