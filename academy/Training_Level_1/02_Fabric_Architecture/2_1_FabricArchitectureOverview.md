@@ -19,6 +19,6 @@ Let’s get started by reading the [Fabric Architecture](/articles/02_fabric_arc
 
 You are ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
 
-Now you are a Fabric rookie, let's move on to the next section and build your first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md) !
+You are now a Fabric rookie. Let's move on to the next section and build your first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md) !
 
 
