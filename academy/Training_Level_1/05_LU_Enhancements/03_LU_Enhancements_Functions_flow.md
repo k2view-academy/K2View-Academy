@@ -50,7 +50,7 @@ Let's focus for now on the CustomerLU in the course's project.
 
 To develop the functions pertaining to this course's section, you will use the following LUIs:  
 
-**Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs.**   
+*Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs.*   
 
     1. How many distinct lines are associated with the LUI in the Contract table?
     
