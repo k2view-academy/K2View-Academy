@@ -48,9 +48,7 @@ Let's focus for now on the CustomerLU in the course's project.
 
 ##### Question 1: Standardization of the phone number
 
-To develop the functions pertaining to this course's section, you will use the following LUIs:  
-
-*Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs.*   
+To develop the functions pertaining to this course's section, use the CustomerLU data viewer to retrieve the LUI with the following IDs: 1123, 1125 and 1472.   
 
     1. How many distinct lines are associated with the LUI in the Contract table?
     
