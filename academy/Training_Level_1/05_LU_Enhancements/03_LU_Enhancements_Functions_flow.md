@@ -109,8 +109,11 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
 ##### Question 1: Standardization
     1. 4.
-    2. 1 and 2.
-    3. Code: update all the phone number fields missing international code: 	
+    
+    2. 1 and 2
+    .
+    3. Code, update all the phone number fields missing international code: 
+    
    ```java
    String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
    String interCode="+1 ";
@@ -139,14 +142,13 @@ is experiencing with the network to her mailing address. The case notes reflect 
   if ((cellValue.matches("(.*)+1(.*)") == false) && (cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
-    *Note: you will note that +1 & 5G are parameters that we currently define in the function. We will see later in this section, 
-    how we can turn these constants into global parameters pertaining to the entire project and its multiple LUs.*
+    *Note that +1 & 5G are parameters currently defined in the function. Later in this section you will see  *
 
 
 
 ##### Question 2: Case notes clean-up
    
-    1. none.
+    1. None.
     2. Q1 -> 3708; Q2 -> 4.
     3. Code sample:	
   ```java
@@ -226,20 +228,23 @@ is experiencing with the network to her mailing address. The case notes reflect 
   
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 2 - Decision functions
 
-To save network resources, ensure that data synchronization of LUIs only occurs if the number of
-entries in a given external source's table is above a specific threshold: CRMCases_threshold
+To save network resources, ensure that data synchronization of LUIs only occurs if the number of entries in a given external source's table is above a specific threshold: CRMCases_threshold
 
 ##### Question 1: Build a decision function based on the following criteria:
 
-    - If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 then the sync function 
-    will return a boolean variable - *syncind* set to TRUE.
+    - If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 
+      then the sync function will return a boolean variable - *syncind* set to TRUE.
+    
     - Hardcode the value of the threshold. (you will return to this section later to see how to set this threshold 
-    as a global parameter)
+      as a global parameter)
 
 ##### Question 2: Validate the function
-    Run Instance Id: 1472 - How many entries do you see in the Cases table of the LUI ? 
+    Run Instance Id: 1472.
+    
+    - How many entries do you see in the Cases table of the LUI ? 
     Change the value of CRMCases_threshold to: 30000. 
-    Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. How many cases entries can you see?
+    Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. 
+    -  How many cases entries can you see?
 
   
 
