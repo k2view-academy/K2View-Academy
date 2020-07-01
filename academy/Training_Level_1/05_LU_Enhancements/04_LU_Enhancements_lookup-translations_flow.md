@@ -72,25 +72,29 @@ In this section the following topics are addressed:
             "@yourcompany.com" to provide an email address for your customers.
             
             Step 3:
-            The  "Lookup Not Found" configuration variable sets up the system's behaviour if a specific value does not exist in the lookup 
-            table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
-            In our example, we use a table that is very likely to have all the records (first name & last name are mandatory 
-            fields) and therefore should be set to "Continue".
+            The  "Lookup Not Found" configuration variable sets up the system's behaviour if a specific value does not exist  
+            in the lookup table. The different options are: "Reject record", "Reject Instance", "Continue" and 
+            "Report and Continue". In our example, we use a table that is very likely to have all the records (first name 
+            and last name are mandatory fields) and therefore should be set to "Continue".
             
             Step 4: 
             Rana Bradshaw
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 2 - Translations
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
+
+**Exercise 2 - Translations**
 Associate a unique geo-location code to the address table to build a heat map of the customer's location.
             
             Step 1: 
-            Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called trnCityGeoLoc that will 
-            return the Latitude and Longitude of the Customer's address into a new field that you previously created in the 
-            CustomerLU Address table.
+            Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called 
+            trnCityGeoLoc that will return the Latitude and Longitude of the Customer's address into a new field 
+            that you created in the CustomerLU Address table.
+            
             Step 2: 
             Do the same for the International City Code.
+            
             Step 3: 
             What is the Lat / Long value for LUI 1000 ? What is the International City Code for LUI 2217 ?
 
