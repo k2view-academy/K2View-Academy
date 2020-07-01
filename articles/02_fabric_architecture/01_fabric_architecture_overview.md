@@ -1,9 +1,16 @@
 # Fabric Architecture Overview
 The following topics are discussed in this section:
 
+1.[Fabric System Overview](/articles/02_fabric_architecture/01_fabric_system_overview)
+
+2.[Fabric Server Main Components ](/articles/01_fabric_architecture/02_fabric_server_main_components)
+
 3.[Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#data-flow)
+
 4. [Search](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#search)
+
 5. [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#security)
+
 6. [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#resiliency) 
 
 ## 1. Fabric Systems Overview
