@@ -38,9 +38,11 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 1 - Enrichment functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)
 
-As you saw in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md) at the beginning of this training, and as part of the company's marketing initiative, you must ensure that all 5G/LTE contract lines are in international format. This enables new data roaming offers to be sent as text to the owners while they are abroad. 
+**Exercise 1 - Enrichment functions**
+
+As you saw in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md) at the beginning of this training, and as part of the company's marketing initiative, you need to ensure that all 5G/LTE contract lines are in international format. This enables new data roaming offers to be sent as text to the owners while they are abroad. 
 
 Let's focus for now on the CustomerLU in the course's project. 
 
