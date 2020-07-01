@@ -1,6 +1,5 @@
-<meta name="google-site-verification" content="IJmQ9-boTYLbHPdfk46dZofapWD_WJAn1TlNP9E8W7s" />
 ![image](/articles/images/welcome_to_wiki.png)
-
+<meta name="google-site-verification" content="IJmQ9-boTYLbHPdfk46dZofapWD_WJAn1TlNP9E8W7s" />
 <details>
 <summary markdown="span"><strong>Fabric Overview <strong><a href="/articles/01_fabric_overview/README.md" style="text-decoration: none;">&#9734;</a></summary>
 <!----<summary markdown="span"><strong>Fabric Overview<strong></summary>-->
