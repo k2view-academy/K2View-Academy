@@ -81,6 +81,22 @@ Not supported.
 
 The order of data cannot be consistent since it is performance consumed, unless it is specified in the URL QUERY parameter. The parameter ORDER_BY must be added.
 
+## Override RESTful API Response
+
+In order to override the RESTful API reponse that is generated automatically, it is possible to use HttpServletResponse Class.
+
+For Example:
+
+```
+HttpServletResponse response = response();
+response.setStatus(201);
+```
+Or
+```
+HttpServletResponse response = response();
+response.setHeader(String,String);
+
+```
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services/15_Supported_Verbs_Delete.md)
 
 
