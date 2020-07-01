@@ -7,7 +7,7 @@
 
 Now you have seen how functions can be attached to LU tables to modify data, let's see how tables and functions can be used to enrich data.
 
-In this section the following types of tables are addressed:
+In this section the following topics are addressed:
 
 -  [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
 
@@ -36,8 +36,9 @@ In this section the following types of tables are addressed:
 
 
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 1 - Lookup tables
-Using the CustomerLU schema, let's look at the Address population map. Add the first name and last name of the 
-customer to the Address LU table so that full information about the customer is readily available.
+Using the CustomerLU schema, let's look at the Address population map. 
+
+Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
 
             Step 1: 
             Which table should you consider using and why ?
