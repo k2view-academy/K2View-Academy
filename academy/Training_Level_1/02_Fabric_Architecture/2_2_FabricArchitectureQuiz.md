@@ -17,7 +17,7 @@ Before moving to the next item, let's take the following quiz to see what you ha
 Working with Fabric will allow you to:
 
 
-\- A:  Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insights.
+\- A:  Get fast answers to complex questions across data-lakes, such as across-the-board statistics or BI insight.
 
 
 \- B:  Answer complex questions about a customer or multiple customers in real-time, even when data might be spread across multiple datacenters.
@@ -95,7 +95,7 @@ Fabric is:
 \- C: A development environment that allows you to write functions and execute them on a Schema's tables.
 
 
-\- D: A resilient, multi-tenant web service publishing engine. 
+\- D: A resilient, multi-tenant Web Service publishing engine. 
 
 
 \- E: All the above.
@@ -112,7 +112,7 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- A: A single database residing on a dedicated PostgreSQL server, residing on a single node server to increase access speed and reduce network latency.
 
 
-\- B: Multiple Digital Entities (or Logical Unit Instances), each stored as an SQLite micro-database (MicroDB) that is compressed and stored on a Cassandra distributed database.
+\- B: Multiple Digital Entities (or LUI), each stored as an SQLite MicroDB that is compressed and stored on a Cassandra distributed database.
 
 
 \- C: A single binary file pointing to different databases distributed across external networks.
@@ -205,7 +205,7 @@ Implementers can use Fabric to:
 \- C: Parse data from any type of data source and store it in the Cassandra database.
 
 
-\- D: Run java functions to transform data or trigger synchronization processes with external sources.
+\- D: Run Java functions to transform data or trigger synchronization processes with external sources.
 
 
 \- E: All the above and more. 
