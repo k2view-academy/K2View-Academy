@@ -12,9 +12,9 @@ The **Stage** represents an execution order level in the flow. Each Stage must h
 
 The **Actor** represents an activity (action) like reading a file, creating a table, parsing and object, load a table. An Actor can send parameters to other Actors in the next Stages.
 
-Broadway has a vast list of [built in Actors](/articles/99_Broadway/04_built_in_actor_types.md) that can create various types of activities and can be added to each Flow. 
+Broadway has a vast list of [built in Actors](/articles/99_Broadway/04_built_in_actor_types.md) that can create various types of activities and can be added to each flow. 
 
-The Flow execution starts with the execution of the first Stage (on the left side) and then executes the Stages by their order- from left to right.  
+The flow execution starts with the execution of the first Stage (on the left side) and then executes the Stages by their order- from left to right.  
 
 **For example:**
 
