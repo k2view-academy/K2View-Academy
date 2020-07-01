@@ -39,7 +39,7 @@ In this section the following topics are addressed:
 
 **Exercise 1 - Lookup tables**
   
-  *Using the CustomerLU schema, let's look at the Address population map.* 
+  *Using the CustomerLU schema, let's look at the Address population map.** 
 
   Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
 
