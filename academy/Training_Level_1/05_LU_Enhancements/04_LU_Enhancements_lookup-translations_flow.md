@@ -44,13 +44,16 @@ In this section the following topics are addressed:
   Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
 
             Step 1: 
-            Which table should you consider using and why ?
+            Which table should you consider using and why ? 
+            
             Step 2: 
             Which function would you use to make sure that the first name and last name are concatenated into one field in 
             the Address table ?
+            
             Step 3: 
             In the Properties panel, what does the "Lookup Not Found" configuration variable mean ? What are the available options ? 
             Using our example, what will most likely be the value of this configuration variable ?
+            
             Step 4: 
             Save the lookup table and deploy and run instance 2472. Which name appears in the Address table ?
 
@@ -59,6 +62,7 @@ In this section the following topics are addressed:
 
             Step 1: 
             In the table from customerLU, it is much more efficient to use the data already populated into the LU table than the CRM table.
+            
             Step 2: 
             The k2_concat5 function will allow you to concatenate up to 5 strings and to also define a delimiter !. In this specific 
             example, only 2 strings are needed and the delimiter is set to ".". 
@@ -70,6 +74,7 @@ In this section the following topics are addressed:
             table. The different options are: "Reject record", "Reject Instance", "Continue" and "Report and Continue"
             In our example, we use a table that is very likely to have all the records (first name & last name are mandatory 
             fields) and therefore should be set to "Continue".
+            
             Step 4: 
             Rana Bradshaw
 
