@@ -48,7 +48,7 @@ Let's focus for now on the CustomerLU in the course's project.
 
 ##### Question 1: Standardization of the phone number
 
-*To develop the functions pertaining to this course's section, you will use the following LUIs:* 
+To develop the functions pertaining to this course's section, you will use the following LUIs:  
 
 Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs.   
 
@@ -75,17 +75,19 @@ Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125
 
 ##### Question 2: Case notes clean-up
 
-The Case_Notes table stores all notes belonging to a particular case that has been opened for a specific owner.  
+The Case_Notes table stores notes about a specific case that has been opened for a specific owner.  
 Tamar (Instance ID = 1472) keeps receiving old bills and apology letters about issues she 
-is experimenting with the network to her mailing address. The case notes reflect issues that are still open.
+is experiencing with the network to her mailing address. The case notes reflect issues that are still open.
 
     1. Let's first list the contracts owned by Tamar in the data viewer.
            - How many contracts does she own ?
+           
 
        Let's look at the different notes in the Case_Note table of Tamar's LUI.
            - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type 
            description (in the Cases table)
            - How many cases are still open ?
+           
 
     2. Write a Java function that operates the following data transformations:
        - All case notes belonging to cases of the "Billing issues" type should be changed to 
@@ -101,7 +103,9 @@ is experimenting with the network to her mailing address. The case notes reflect
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution - Enrichment functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+
+**Solution - Enrichment functions**
 
 ##### Question 1: Standardization
     1. 4.
