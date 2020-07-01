@@ -148,9 +148,9 @@ Using the enrichment and decision functions from the previous exercises, please 
                How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 25000 ?
                How many records do you see in the LU Cases table of Instance ID 1472 if RUN_POP = 30000 ?
                
-            2. Open the Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
+            3. Open the Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
             
-            3. Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value  ?
+            4. Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value  ?
             
             Step 3: 
             1. Create an enrichment function to loop throw all invoices and delete all invoices that are older than the barrier date.
