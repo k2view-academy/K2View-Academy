@@ -35,7 +35,7 @@ In this section the following types of tables are addressed:
 
 
 
-#### Exercise 1 - Lookup tables
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 1 - Lookup tables
 Using the CustomerLU schema, let's look at the Address population map. Add the first name and last name of the 
 customer to the Address LU table so that full information about the customer is readily available.
 
@@ -51,7 +51,7 @@ customer to the Address LU table so that full information about the customer is 
             Save the lookup table and deploy and run instance 2472. Which name appears in the Address table ?
 
 
-#### Solution Exercise 1 - Lookup table
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 1 - Lookup table
 
             Step 1: 
             In the table from customerLU, it is much more efficient to use the data already populated into the LU table than the CRM table.
@@ -71,7 +71,7 @@ customer to the Address LU table so that full information about the customer is 
 
 
 
-#### Exercise 2 - Translations
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 2 - Translations
 Associate a unique geo-location code to the address table to build a heat map of the customer's location.
             
             Step 1: 
@@ -84,7 +84,7 @@ Associate a unique geo-location code to the address table to build a heat map of
             What is the Lat / Long value for LUI 1000 ? What is the International City Code for LUI 2217 ?
 
 
-#### Solution Exercise 2 - Translations
+#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 2 - Translations
 
             Steps 1 & 2:
 Translation table schema:
@@ -101,7 +101,7 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             InstanceID 2217: 1840034016
             
 
-#### Exercise 3 - Globals
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 3 - Globals
 Let's use Globals rather than values hardcoded into Java functions or SQL statements. Using the enrichment and decision functions from the previous exercises, please execute the following steps: 
 
             Step 1: 
@@ -136,7 +136,7 @@ Let's use Globals rather than values hardcoded into Java functions or SQL statem
 
 
 
-#### Solution Exercise 3 - Globals
+#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 3 - Globals
             Step 1:
             SQL Query with embedded reference to Globals:
                         Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
