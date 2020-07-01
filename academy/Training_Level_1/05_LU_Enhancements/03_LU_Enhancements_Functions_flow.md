@@ -241,11 +241,12 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
       as a global parameter)
 
 ##### Question 2: Validate the function
-    1. Run Instance Id: 1472.
-    -  How many entries do you see in the Cases table of the LUI ? 
-    2.  Change the value of CRMCases_threshold to: 30000. 
+    1. Run Instance Id: 1472. How many entries do you see in the Cases table of the LUI ? 
+    
+    2. Change the value of CRMCases_threshold to: 30000. 
+    
     3. Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. 
-    -  How many cases entries can you see?
+       How many cases entries can you see?
 
   
 
