@@ -73,13 +73,12 @@ Fabric uses Cassandra for three main purposes:
 
 [Click for more information about Cassandra Keyspaces for Fabric.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
-
-###2.2 Fabric Business Logic
+### 2.2 Fabric Business Logic
 
 This module is responsible for all transformations and data manipulations. This is where Fabric solves business functions that are applied on the data imported from external sources and stored locally.
 
 
-### Fabric Studio
+### 2.3 Fabric Studio
 
 Fabric Studio is a Windows application development tool for building Fabric projects, designed to enable users to execute the following steps:
 
