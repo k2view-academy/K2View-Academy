@@ -7,7 +7,7 @@
 
 ### Types of data manipulation
 
-Let's take a look at the different functions that can be used to apply data manipulations on your LU tables. But first, read about [Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) and a specific set of utility functions that can be used in any type of data transformation.
+Let's take a look at the different functions that can be used to apply data manipulations on LU tables. But first, read about [Built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) and a specific set of utility functions that can be used in any type of data transformation.
 
 
 
@@ -28,7 +28,7 @@ Please read the following articles about root functions:
 
 ### Enrichment functions
 
-Use enrichment functions to work directly on the data in the LU tables, AFTER they have been populated. Enrichment functions have specific properties and features as you will discover by reading the following articles:
+Use enrichment functions to work directly on the data in the LU tables AFTER they have been populated. Enrichment functions have specific properties and features as you will discover by reading the following articles:
 
 - [Enrichment function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md)
 - [Root functions & Enrichment functions differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)
