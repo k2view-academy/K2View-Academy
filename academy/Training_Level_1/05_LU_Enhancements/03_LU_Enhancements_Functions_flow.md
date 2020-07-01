@@ -48,9 +48,9 @@ Let's focus for now on the CustomerLU in the course's project.
 
 ##### Question 1: Standardization of the phone number
 
-To develop the functions pertaining to this course's section, you will use the following LUIs: 
+*To develop the functions pertaining to this course's section, you will use the following LUIs:* 
 
-Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs:   
+Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs.   
 
     1. How many distinct lines are associated with the LUI in the Contract table?
     
@@ -60,7 +60,7 @@ Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125
          
 
     3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
-    following IDs contract_ID (2787 & 2788) to validate the code. 
+     contract_ID 2787 & 2788 to validate the code. 
         Tips:
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
@@ -69,6 +69,7 @@ Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125
 
     4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
     the code accordingly.
+
 
 
 
