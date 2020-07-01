@@ -83,7 +83,7 @@ is experiencing with the network to her mailing address. The case notes reflect 
            - How many contracts does she own ?
            
 
-    2.    Let's look at the different notes in the Case_Note table of Tamar's LUI.
+    2.  Let's look at the different notes in the Case_Note table of Tamar's LUI.
            - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type description 
              (in the Cases table)
            - How many cases are still open ?
@@ -241,11 +241,10 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
       as a global parameter)
 
 ##### Question 2: Validate the function
-    Run Instance Id: 1472.
-    
-    - How many entries do you see in the Cases table of the LUI ? 
-    Change the value of CRMCases_threshold to: 30000. 
-    Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. 
+    1. Run Instance Id: 1472.
+    -  How many entries do you see in the Cases table of the LUI ? 
+    2.  Change the value of CRMCases_threshold to: 30000. 
+    3. Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. 
     -  How many cases entries can you see?
 
   
