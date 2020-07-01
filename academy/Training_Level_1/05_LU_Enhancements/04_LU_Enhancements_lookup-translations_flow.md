@@ -105,7 +105,7 @@ Associate a unique geo-location code to the Address table to build a heat map of
 
 
 #### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png)
-
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
 **Solution Exercise 2 - Translations**
 
