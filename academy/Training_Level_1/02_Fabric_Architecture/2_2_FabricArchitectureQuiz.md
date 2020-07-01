@@ -74,10 +74,10 @@ You use Fabric when you need to:
 \- E: Have available and secured data at all times.
 
 
-\- G: All the above.
+\- F: All the above.
 
 
-(***Solution 3: G***)
+(***Solution 3: F***)
 
 
 
