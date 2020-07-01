@@ -53,9 +53,11 @@ To develop the functions pertaining to this course's section, you will use the f
 Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125 and 1472 IDs:   
 
     1. How many distinct lines are associated with the LUI in the Contract table?
+    
 
     2. How many lines are associated to a 5G/LTE offer and how many match the international standard format for US numbers?
-         +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs)
+         +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs).
+         
 
     3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
     following IDs contract_ID (2787 & 2788) to validate the code. 
@@ -63,6 +65,7 @@ Using the CustomerLU data viewer, retrieve the LUI with the following 1123, 1125
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
             - Use the fabric() execute function to update data. 
+            
 
     4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. Please, modify
     the code accordingly.
