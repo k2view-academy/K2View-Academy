@@ -6,7 +6,7 @@ The following topics are discussed in this section:
 3. [Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#3-data-flow)
 4. [Search](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#4-search)
 5. [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security)
-6. [Resiliancy](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#6-resiliency)
+6. [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#6-resiliency)
 
 ## 1. Fabric Systems Overview
 Fabric can be viewed as a distributed, business-entity-centric data management system, designed to get, store, transform and expose data for real-time operational needs.
