@@ -3,7 +3,7 @@ The following topics are discussed in this section:
 
 1. [Fabric Systems Overview](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#1-fabric-systems-overview)
 2. [Fabric Server Main Components](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components)
-3. [Data Flow](/articles/02_fabric_architecture/001_fabric_architecture_overview.md#3-data-flow)   
+3. [Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#3-data-flow)
 4. [Search](/articles/02_fabric_architecture/001_fabric_architecture_overview.md#4-search)   
 5. [Security](/articles/02_fabric_architecture/001_fabric_architecture_overview.md#5-security)
 6. [Resiliancy](/articles/02_fabric_architecture/001_fabric_architecture_overview.md#6-resiliancy)
