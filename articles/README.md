@@ -1,3 +1,4 @@
+<meta name="google-site-verification" content="IJmQ9-boTYLbHPdfk46dZofapWD_WJAn1TlNP9E8W7s" />
 ![image](/articles/images/welcome_to_wiki.png)
 
 <details>
