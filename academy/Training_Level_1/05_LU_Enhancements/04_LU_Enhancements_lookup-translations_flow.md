@@ -59,7 +59,9 @@ In this section the following topics are addressed:
             Save the lookup table and deploy and run instance 2472. Which name appears in the Address table ?
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 1 - Lookup table
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+
+**Solution Exercise 1 - Lookup table**
 
             Step 1: 
             In the table from customerLU, it is much more efficient to use the data already populated into the LU table 
@@ -97,14 +99,16 @@ Associate a unique geo-location code to the Address table to build a heat map of
             Do the same for the International City Code.
             
             Step 3: 
-            What is the Lat / Long value for LUI 1000 ? What is the International City Code for LUI 2217 ?
+            What is the Lat / Long value for LUI 1000 ? 
+            
+            What is the International City Code for LUI 2217 ?
 
 
 #### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
 **Solution Exercise 2 - Translations
 
-            Steps 1 & 2:
+            Steps 1 and 2:
 Translation table schema:
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/TransExe2-OverviewCapture%20(3).PNG) 
 
@@ -120,7 +124,9 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             
 
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 3 - Globals
-Let's use Globals rather than values hardcoded into Java functions or SQL statements. Using the enrichment and decision functions from the previous exercises, please execute the following steps: 
+Let's use Globals rather than values hardcoded into Java functions or SQL statements. 
+
+Using the enrichment and decision functions from the previous exercises, please execute the following steps: 
 
             Step 1: 
             Create a new Global (Final) named OLDInvoices of the "date" type which will indicate which invoice records can be 
@@ -154,7 +160,9 @@ Let's use Globals rather than values hardcoded into Java functions or SQL statem
 
 
 
-#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution Exercise 3 - Globals
+#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+
+**Solution Exercise 3 - Globals**
             Step 1:
             SQL Query with embedded reference to Globals:
                         Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
