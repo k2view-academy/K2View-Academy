@@ -83,13 +83,13 @@ is experiencing with the network to her mailing address. The case notes reflect 
            - How many contracts does she own ?
            
 
-       Let's look at the different notes in the Case_Note table of Tamar's LUI.
+    2.    Let's look at the different notes in the Case_Note table of Tamar's LUI.
            - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type 
            description (in the Cases table)
            - How many cases are still open ?
            
 
-    2. Write a Java function that operates the following data transformations:
+    3. Write a Java function that operates the following data transformations:
        - All case notes belonging to cases of the "Billing issues" type should be changed to 
          "insolvent customer due to alien assimilation".
        - All case notes belonging to cases of the "Network issues" type should be changed to "Customer has been assimilated 
