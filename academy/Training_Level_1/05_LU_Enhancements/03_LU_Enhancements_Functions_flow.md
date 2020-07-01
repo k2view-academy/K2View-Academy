@@ -40,7 +40,7 @@ Use enrichment functions to work directly on the data in the LU tables, AFTER th
 
 
 
-#### Exercise 1 - Enrichment functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 1 - Enrichment functions
 
 As you saw in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md) at the beginning of this training, and as part of the company's marketing initiative, you must ensure that all 5G/LTE contract lines are in international format. This enables new data roaming offers to be sent as text to the owners while they are abroad. 
 
@@ -97,7 +97,7 @@ is experimenting with the network to her mailing address. The case notes reflect
 
 
 
-#### Solution - Enrichment functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution - Enrichment functions
 
 ##### Question 1: Standardization
     1. 4.
@@ -216,7 +216,7 @@ is experimenting with the network to her mailing address. The case notes reflect
 
 
   
-#### Exercise 2 - Decision functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) Exercise 2 - Decision functions
 
 To save network resources, ensure that data synchronization of LUIs only occurs if the number of
 entries in a given external source's table is above a specific threshold: CRMCases_threshold
@@ -235,7 +235,7 @@ entries in a given external source's table is above a specific threshold: CRMCas
 
   
 
-#### Solution - Decision functions
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) Solution - Decision functions
 
 ##### Question 1:
 
