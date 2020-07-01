@@ -99,6 +99,7 @@ is experiencing with the network to her mailing address. The case notes reflect 
  
 ##### Question 3: Attaching the enrichment function to the appropriate table
       - What happens if you attach the enrichment function to the table: CASES ? 
+      
       - To which table should the function be attached ? 
 
 
@@ -149,7 +150,9 @@ is experiencing with the network to her mailing address. The case notes reflect 
 ##### Question 2: Case notes clean-up
    
     1. None.
+    
     2. Q1 -> 3708; Q2 -> 4.
+    
     3. Code sample:	
   ```java
   
