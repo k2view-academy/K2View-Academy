@@ -5,7 +5,7 @@
 
 You are now ready to move on and to learn about a crucial Fabric feature - data manipulation and executing functions over the data that will be modified and exposed. 
 
-So far you have seen how to design and create a simple LU by connecting to the data's external sources, testing its consistency by querying its tables using Fabric commands and the Cassandra storage environment and then checking whether it is fit for use. 
+So far you have seen how to design and create a simple LU by connecting to the data's external sources, testing its consistency by querying its tables using Fabric commands, and the Cassandra storage environment and then checking whether it is fit for use. 
 
  
 
