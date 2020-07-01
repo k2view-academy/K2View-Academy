@@ -6,7 +6,7 @@ Fabric Studio enables a definition of selected LU tables and columns whose updat
 
 For example, if you need to notify an external consumer system about any address change of a customer, you must create CDC indexes for STATE, CITY, STREET, HOUSE_NO, and ZIP_CODE columns of ADDRESS table of CUSTOMER LU as CDC indexes.
 
-Each type of change generates a different type of a CDC message. 
+Each type of change on the CDC columns generates a different type of a CDC message. 
 
 The following sections describe the CDC message types.
 
@@ -14,18 +14,18 @@ The following sections describe the CDC message types.
 
 Arrived in CDC when an LU is deployed to Fabric for the first time. This message contains the LU schema name and information for all the defined CDC Tables for this schema.
 
-See an example in **Appendix A** of this document. 
+See an example in [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example) of this document. 
 
 ### CDC Schema Update
 
 Arrived in CDC upon: 
 
 - Whenever an existing LU is redeployed to Fabric.
-- Drop of an LU.
+- [Drop of an LU](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command).
 
-This message contains the LU schema name and the information on all the affected CDC LU tables. This message contains only the relevant changes, i.e. update of the CDC columns.
+This message contains the LU schema name and the information on all the affected CDC LU tables, and contains only the relevant changes, i.e. update of the CDC columns.
 
-See an example in **Appendix B** of this document.
+See an example in [Appendix B](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example) of this document.
 
 ###  CDC Delete Tables
 
@@ -34,7 +34,7 @@ Arrived in CDC upon:
 - Delete LUI command
 - Run **CDC_REPUBLISH_INSTANCE** Fabric command to republish of the CDC data for a given LUI. The CDC data of the LU tables must be re-created by the CDC consumer.
 
-See an example in **Appendix C** of this document. 
+See an example in [Appendix C](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example) of this document. 
 
 ### CDC Table Change Info
 
@@ -45,7 +45,7 @@ Arrived in CDC upon:
 
 The message contains a list of PK columns of the LU tables and the relevant changes on the CDC columns.
 
-See an example in **Appendix D** of this document.  
+See an example in [Appendix D](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example) of this document.  
 
   
 
