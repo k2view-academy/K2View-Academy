@@ -6,15 +6,13 @@ In order to proceed with this course, you can either run Fabric on your PC (Wind
 Keep in mind that the minimal requirements for installing Fabric for development / training purposes are as follows:
 * Memory usage: 8GB minimum, 16GB recommended.
    
-* Disk space storage: 30GB
+* Disk space storage: 30GB.
 
-* Operating System: Windows 10
+* Operating System: Windows 10.
 
-* (optional) Additional software for running cqlsh on Cassandra: Python 2.7
+* (optional) Additional software for running cqlsh on Cassandra: Python 2.7.
 
-Please click [Training Request Ticket](https:\\www.k2view.com) and our Technical team will send you an email with the instructions corresponding to the option you chose.
-
-You will receive an email from our Technical Support team with the following details:
+Please click [Training Request Ticket](https:\\www.k2view.com) to receive an email from our Technical Support team with instructions corresponding to your selected option with the following details:
 - IP addresses and credentials for the databases that you will be requested to enter during the Interfaces Configuration phase of the course.
 - Download link and instructions for the Fabric Suite installation.
 - Machine IP and credentials to access the hosted environment (if you selected this option). 
