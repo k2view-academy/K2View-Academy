@@ -14,7 +14,7 @@ When it's needed to introduce a condition, such as IF-ELSE, the flow can be spli
 
 ![image](/articles/99_Broadway/images/99_16_01_flow3.PNG)
 
-
+If there are additional Stages on the same dependency level as IF-ELSE condition, they will be executed as well, in the following execution order: **A1 -> if B1 is true, then B1, otherwise B2 -> Now1 -> C1**.
 
 
 
