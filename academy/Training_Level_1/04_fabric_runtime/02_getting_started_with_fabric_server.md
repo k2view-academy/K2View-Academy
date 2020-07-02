@@ -7,6 +7,7 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 [Fabric Basic Utilities](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
 
 [Fabric Troubleshooting](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)
+
 [Fabric Log Files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
 
 
