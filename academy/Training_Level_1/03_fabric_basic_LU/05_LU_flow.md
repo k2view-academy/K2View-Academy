@@ -41,10 +41,10 @@ We have already acknowledged that the Digital Entity should be the Customer ID t
 
 Following the Auto Discovery Tutorial, you can generate the **CustomerLU** using the Fabric Studio Wizard. 
 
-Please open your Fabric Project and do the following:
+Please open your Fabric project and do the following:
 
 1. Select the **New Logical Unit** and name it **CustomerLU**.
-2. Set the DB Connection as **CRM_DB** and click **Next**.
+2. Set the **DB Connection** as **CRM_DB** and click **Next**.
 3. Select the **CUSTOMER_ID.CUSTOMER** as a **Column Name** so that the **Table Name** is also populated. Note that you can uncheck the **Add Schema Name** option.
 4. Select the **Fast** **Auto Discovery**.
 5. Click **Next** to review the suggested **ERD** and if you are satisfied, click **Finish**.
@@ -61,9 +61,9 @@ Yay! your **CustomerLU** is now defined:
 
 Let’s review some Logical Unit Schema properties:
 
-[Logical Unit Schema Window](/articles/03_logical_units/03_LU_schema_window.md)
+-  [Logical Unit Schema Window](/articles/03_logical_units/03_LU_schema_window.md)
 
-[LU Properties](/articles/03_logical_units/04_LU_properties.md)
+-  [LU Properties](/articles/03_logical_units/04_LU_properties.md)
 
    
 
@@ -71,7 +71,7 @@ Let’s review some Logical Unit Schema properties:
 
  
 
- If you are not using the Auto Discovery Wizard, make sure that your Root Tableand Instance ID are defined:
+ If you are not using the Auto Discovery Wizard, make sure that your Root Table and Instance ID are defined:
 
 [Set Root Table and Instance ID](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)
 
