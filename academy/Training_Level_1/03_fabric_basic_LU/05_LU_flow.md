@@ -2,24 +2,22 @@
 
  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
 
-You have just set up your Fabric project, configured its components and defined the interfaces for the Customer 360 View. Based on the business requirements, let’s look at your next steps:
+You have just set up your Fabric project, configured its components and defined the interfaces for the Customer 360 view. Based on the business requirements, let’s look at your next steps:
 
 You need to understand how to model data retrieval, storage and its view options.
 
 What should be considered?
 
-- Defining the Digital Entity based on data consumption requirements
-- Modeling the LU based on the defined Digital Entity 
+- Defining the Digital Entity based on data consumption requirements.
+- Modeling the LU based on the defined Digital Entity. 
 
  
 
 ### LU and Digital Entity Considerations
 
-[LU Overview](/articles/03_logical_units/01_LU_overview.md)
+Please read the [LU Overview](/articles/03_logical_units/01_LU_overview.md) and [Create LU Overview](/articles/03_logical_units/02_create_a_logical_unit_flow.md) articles. 
 
-[Create LU Overview](/articles/03_logical_units/02_create_a_logical_unit_flow.md)
-
-Let’s look at the considerations needed to accommodate requests to view thedata using a specific Digital Entity together with a Logical Unit modelling.  
+Let’s look at the considerations needed to accommodate requests to view the data using a specific Digital Entity together with LU modelling.  
 
 You may  remember that the main business requirement is to create a 360 Customer view with the following key data information:
 
@@ -27,19 +25,17 @@ You may  remember that the main business requirement is to create a 360 Customer
 - What is the current balance on a specific line? Or on all the lines? 
 - When is my next invoice due? 
 - How much do I owe? 
-- Are my private details up to date? 
+- Are my private details up-to-date? 
 
- Based on the above, the Digital Entity should be a **Customer** and theLogical Unit should be defined using various DBs. 
+Based on the above, the Digital Entity should be a **Customer** and the LU should be defined using various DBs. 
 
-Let’s start from the **CRM_DB.CUSTOMER** database which holds theCustomer entity and create the Logical Unit using Auto Discovery.
+Let’s start from the **CRM_DB.CUSTOMER** database which holds the Customer entity and create the LU using Auto Discovery.
 
-### Creating a New Logical Unit
+### Creating a New LU
 
-The following walks you through creating a new Logical Unit.
+The following walks you through creating a new LU. [Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md)
 
-[Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md)
-
-We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the Logical Unit’s modelling. You can use the Auto Discovery Wizard to create the Logical Unit:
+We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the LU’s modelling. You can use the Auto Discovery Wizard to create the LU:
 
 [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md)
 
