@@ -28,9 +28,9 @@ Our Training environment has three main DBs of various types, which in essence, 
 
 ### How to define an Interface
 
-The properties that define an interface have the following settings: [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
+Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) article to learn about the properties that define an interface. 
 
-Let’s look at the steps for creating the interface: [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
+Let’s look at the steps for creating the interface. Please read [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
 
  
 
@@ -46,7 +46,7 @@ Let’s look at the steps for creating the interface: [Creating a new database i
 
 
 
- Now let’s understand how to view the data using the Interface.
+ Now let’s understand how to view the data using the interface.
 
 ### Query Builder
 
