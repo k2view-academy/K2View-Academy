@@ -20,11 +20,11 @@ To define the Interfaces and their respective parameters, you need to look into 
 
 [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)
 
-Our Training environment has three main DBs of various types, which in essence,represent a typical Telco IT ecosystem:
+Our Training environment has three main DBs of various types, which in essence, represent a typical Telco IT ecosystem:
 
 -  **BILLING_DB** (type: MySQL) – Stores information requiredfor preparing or sending a bill or invoice, such as: Payments orBalance. 
 
-- **CRM_DB** (type: Oracle) – Stores theinformation that manages a company's interaction with current and potentialcustomers, specifically focusing on customer retention and ultimately drivingsales growth. For example, Customer info, Contracts, Cases or Offers.
+- **CRM_DB** (type: Oracle) – Stores theinformation that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately drivingsales growth. For example, Customer info, Contracts, Cases or Offers.
 
 - **ORDERS_DB** (type: PostgreSQL) – Usually stores informationfor filling the Order functions required to complete a customer’s order createdin a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
