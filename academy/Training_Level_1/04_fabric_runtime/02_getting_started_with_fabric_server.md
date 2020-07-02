@@ -2,13 +2,13 @@
 
 Now that the Fabric console is open, let's get started by reviewing the key components of the Fabric server:
 
-[Fabric Directories](/articles/02_fabric_architecture/02_fabric_directories.md)
+-  [Fabric Directories](/articles/02_fabric_architecture/02_fabric_directories.md)
 
-[Fabric Basic Utilities](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
+-  [Fabric Basic Utilities](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)
 
-[Fabric Troubleshooting](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)
+-  [Fabric Troubleshooting](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md)
 
-[Fabric Log Files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
+-  [Fabric Log Files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md)
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Fabric Directories and Basic Utilities
