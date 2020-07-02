@@ -4,13 +4,13 @@ Welcome to the first section of this course !
 
  
 
-### What Will You Experience in this Learning Item?
+### What Will You Experience In This Learning Item?
 
 By the end of the Fabric Introduction learning item you will know:
 
-- What is Fabric 
-- What are Digital Entities
-- Fabric main components & key features
+- What Fabric is
+- About Digital Entities
+- Fabric's main components and key features
 - Fabric use cases through customers examples
 
 
