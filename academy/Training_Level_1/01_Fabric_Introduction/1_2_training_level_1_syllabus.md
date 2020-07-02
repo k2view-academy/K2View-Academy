@@ -5,7 +5,7 @@
 #### **DAY 1 – Morning**
 
 - Course Introduction
-  - Course Overview & Main objectives
+  - Course Overview & Main Objectives
   - Course User Story
   - Fabric Installation
 
@@ -15,63 +15,63 @@
 
 - Fabric Architecture Overview
   - Components
-  - Data flows
-  - Security/Resiliency
+  - Data Flows
+  - Security / Resiliency
 - Quiz (1)
 
 #### **DAY 1 – Afternoon**
 
-- Fabric main flow (Simple LU)
+- Fabric Main Flow (Simple LU)
   - Fabric Main Flow Overview
   - Create a Fabric Project
-  - Interfaces definition and Query builder
+  - Interfaces Definition and Query Builder
   - Logical Unit Flow 
 
 #### **DAY 2 – Morning**
 
-- Fabric main flow (LU properties)
+- Fabric Min Flow (LU Properties)
   - Populations
-  - Sync strategies
+  - Sync Strategies
 - Quiz (2)
 - Fabric Runtime
   - Overview
-  - Getting started with Fabric Server
+  - Getting Started with Fabric Server
   - Fabric Deployment
-  - Fabric basic commands
-  - Cassandra main keyspaces & commands
+  - Fabric Basic Commands
+  - Cassandra Main Keyspaces & Commands
 
 #### **DAY 2 – Afternoon**
 
-- LU enhancement (1) (Data manipulations)
-  - Population tables mapping
-  - Hands-on exercises
-  - Functions development
-    - Built-in, root, DB & enrichment functions 
-  - Hands-on exercises
-- LU enhancement (2)
-  - Lookup, translation tables & Global variables
-  - Sync modes
+- LU Enhancement (1) (Data manipulations)
+  - Population Tables Mapping
+  - Hands-on Exercises
+  - Functions Development
+    - Built-in, Root, DB & Enrichment Functions 
+  - Hands-on Exercises
+- LU Enhancement (2)
+  - Lookup, Translation Tables & Global Variables
+  - Sync Modes
 
 #### **DAY 3 – Morning**
 
 - Q&As
 - Hands-on Exercises
-  -  Functions, lookup, translation & Globals
-- Deploy & project validation
-  - Decision functions
-  - Implementation changes & re-deployment
+  -  Functions, Lookup, Translation & Globals
+- Deploy & Project Validation
+  - Decision Functions
+  - Implementation Changes & Re-deployment
   - Server-side
 - Quiz (3)
 
 **DAY 3 – Afternoon**
 
-- Web-services
+- Web Services
   - Overview 
   - Create and Deploy a Web Service
   - Invoking a Web Service
   - Response Codes & Verbs 
 - Quiz (4)
-- Q&A session
+- Q&A Session
 
 ##### Certification exam (1hr.)
 
