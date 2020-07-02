@@ -74,7 +74,7 @@ In this section the following topics are addressed:
             "@yourcompany.com" to provide an email address for your customers.
             
             Step 3:
-            The  "Lookup Not Found" configuration variable sets up the system's behaviour if a specific value does not exist  
+            The "Lookup Not Found" configuration variable sets up the system's behaviour if a specific value does not exist  
             in the lookup table. The different options are: "Reject record", "Reject Instance", "Continue" and 
             "Report and Continue". In our example, we use a table that is very likely to have all the records (first name 
             and last name are mandatory fields) and therefore should be set to "Continue".
@@ -150,24 +150,25 @@ Using the enrichment and decision functions from the previous exercises, please 
                
             3. Open the Fabric console and type in the following command: set_global global '*.RUN_POP=20000'.
             
-            4. Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value  ?
+            4. Run Instance ID 1472 again. Will the sync happen ? Why were you able to override the RUN_POP value ?
             
             Step 3: 
-            1. Create an enrichment function to loop throw all invoices and delete all invoices that are older than the barrier date.
+            1. Create an enrichment function to loop throw all invoices and delete all invoices that are older than 
+               the barrier date.
             
-            2. Set the globals OLDINVOICES value to "2015-12-31". Use this exact format so you can use the Java "compareTO" 
-               function to compare dates. 
+            2. Set the globals OLDINVOICES value to "2015-12-31". Use this exact format so you can use the Java 
+               "compareTO" function to compare dates. 
             
             Step 4: 
             1. Attach both functions to their relevant table and deploy and run the enrichment function on InstanceID=1000.
                How may invoices records are left for InstanceID=1000 ? 
             
-            2. Using the Data Viewer on the InstanceID 1000 Invoice table, check that all invoice records have an issued date 
-               that is later than 2015-12-31).
+            2. Using the Data Viewer on the InstanceID 1000 Invoice table, check that all invoice records have an issued 
+               date that is later than 2015-12-31).
                
             Step 5:
-            Using a new Global named "*InterCode_UK*", modify the PhoneFormat enrichment function so that all phone entries of 
-            Instance ID=1000 that do not already have an international code are set to "+44".
+            Using a new Global named "*InterCode_UK*", modify the PhoneFormat enrichment function so that all phone entries
+            of Instance ID=1000 that do not already have an international code are set to "+44".
 
 
 
@@ -198,11 +199,12 @@ Using the enrichment and decision functions from the previous exercises, please 
             
 
             2. Answer: 5.
+            
             3. The sync did not happen.
 
             4. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
-               This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden its 
-               value for all the *.RUN_POP instances in the scope of this Fabric session.
+               This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden 
+               its value for all the *.RUN_POP instances in the scope of this Fabric session.
             
             
 Globals definition:    
