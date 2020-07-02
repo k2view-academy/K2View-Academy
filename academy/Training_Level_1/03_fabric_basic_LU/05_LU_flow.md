@@ -67,7 +67,7 @@ Let’s review some Logical Unit Schema properties:
 
    
 
-![](/academy/03_fabric_basic_LU/images/information.png)There are other options for using theAuto Discovery Wizard, like overriding or enhancing a Logical Unit, refer to:   [Auto Discovery Build or Update LU](/articles/03_logical_units/07_build__or_update_an_LU_schema.md).
+![](/academy/03_fabric_basic_LU/images/information.png)There are other options for using theAuto Discovery Wizard, like overriding or enhancing a Logical Unit. Please read   [Auto Discovery Build or Update LU](/articles/03_logical_units/07_build__or_update_an_LU_schema.md).
 
  
 
@@ -75,9 +75,9 @@ Let’s review some Logical Unit Schema properties:
 
 ### Editing an LU
 
-You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct LU that have all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation. Please read [LU Table Overview](/articles/06_LU_tables/01_LU_tables_overview.md).
+You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct LU that have all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation. Please read the [LU Table Overview](/articles/06_LU_tables/01_LU_tables_overview.md) article.
 
-The following describes how to create an LU table with its properties and indexes, specifically, a manual table:
+The following describe how to create an LU table with its properties and indexes, specifically, a manual table:
 
 -  [Create New LU Table](/articles/06_LU_tables/02_create_an_LU_table.md)
 
@@ -85,11 +85,11 @@ The following describes how to create an LU table with its properties and indexe
 
 -  [Table Properties](/articles/06_LU_tables/04_table_properties.md)
 
-To add another table to the LU Schema, follow these steps: [Add a Table to a schema](/articles/03_logical_units/09_add_table_to_a_schema.md)
+To add another table to the LU Schema, follow the steps in [Add a Table to a Schema](/articles/03_logical_units/09_add_table_to_a_schema.md).
 
-To remove a specific table from an LU, follow these steps: [Delete Table from LU schema](/articles/03_logical_units/10_delete_table_from_a_schema.md)
+To remove a specific table from an LU, follow the steps in [Delete Table from LU schema](/articles/03_logical_units/10_delete_table_from_a_schema.md).
 
-### How Do I view and Review a L U?
+### How Do I View and Review an LU?
 
 You have created your first LU in a few clicks and understood its components and how to edit it. However, does it really fit the basic requirements? How do you know that the Schema you have just modeled retrieves the data the way you would like to view it? Can you validate the implementation and view at least one LUI’s data?
 
@@ -104,11 +104,11 @@ Let’s test an LU Instance and see the result.
 
 Open the CustomerLU Data Viewer and execute Instance ID 215:
 
-1. Check that in the **Instance Tree **there is a **DB file** that has the **Current Date** and **Timestamp**.
+1. Check that in the **Instance Tree** there is a **DB file** that has the **Current Date** and **Timestamp**.
 
-2. Look at the **tables** that have been populatedunder the **Instance DB Tree **and their **data**.
+2. Look at the **tables** that have been populated under the **Instance DB Tree **and their **data**.
 
-3. Validate the **_K2** generated tables. 
+3. Validate the _ K2 generated tables. 
 
 4. Execute the following **query** in the **Data Viewer**:
 
