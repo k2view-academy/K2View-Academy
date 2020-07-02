@@ -32,9 +32,9 @@ Based on the above, the Digital Entity should be a **Customer** and the LU shoul
 Let’s start from the **CRM_DB.CUSTOMER** database which holds the Customer entity and create the LU using Auto Discovery.
 
 ### Creating a New LU 
-Please read the [Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md) and [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) articles. 
+Please read the [Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md) article. 
 
-We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the LU’s modelling. You can use the Auto Discovery Wizard to create the LU.
+We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the LU’s modelling. You can use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) to create the LU.
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example – Auto Discovering a Logical Unit
@@ -67,19 +67,15 @@ Let’s review some Logical Unit Schema properties:
 
    
 
-![](/academy/03_fabric_basic_LU/images/information.png)There are other options for using theAuto Discovery Wizard, like overriding or enhancing a Logical Unit, refer to:   [Auto Discovery Build or Update LU](/articles/03_logical_units/07_build__or_update_an_LU_schema.md)
+![](/academy/03_fabric_basic_LU/images/information.png)There are other options for using theAuto Discovery Wizard, like overriding or enhancing a Logical Unit, refer to:   [Auto Discovery Build or Update LU](/articles/03_logical_units/07_build__or_update_an_LU_schema.md).
 
  
 
- If you are not using the Auto Discovery Wizard, make sure that your Root Table and Instance ID are defined:
+ If you are not using the Auto Discovery Wizard, make sure that your Root Table and Instance ID are defined. Please read [Set Root Table and Instance ID](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md).
 
-[Set Root Table and Instance ID](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md)
+### Editing an LU
 
-### Editing a Logical Unit
-
-You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct Logical Units that have all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation.
-
-[LU Table overview](/articles/06_LU_tables/01_LU_tables_overview.md)
+You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct LU that have all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation. Please read [LU Table Overview](/articles/06_LU_tables/01_LU_tables_overview.md).
 
 The following describes how to create a LU table with its properties and indexes, specifically, a manual table:
 
