@@ -1,6 +1,6 @@
 # Course Overview
 
-Welcome to your first Fabric course!  
+Welcome to your first Fabric course!   
 
 
 
@@ -20,7 +20,7 @@ Once this is done, you will be shown how to expose this data through a set of cu
 
 ### Course Syllabus
 
-The level 1 training syllabus can be consulted [here](/academy/Training_Level_1/01_Fabric_Introduction/1_2_training_level_1_syllabus.md).
+Please go to the [Level 1 Training Syllabus](/academy/Training_Level_1/01_Fabric_Introduction/1_2_training_level_1_syllabus.md).
 
 
 
@@ -44,7 +44,7 @@ To fully understand this course, you should be familiar with the following princ
 
 Throughout the course, we will evolve within a Telco customer management environment that provides a set of DBs and tables that you will use to operate your first Fabric-based queries and data manipulations. 
 
-This work environment will feature sets of tables that you are already familiar with, such as customers, subscribers, invoices and contracts. Of course, we will need you to get acquainted with these tables and Databases, as we will be operating multiple data manipulations across the various examples and exercises that illustrate this course.
+This work environment features sets of tables that you are already familiar with, such as customers, subscribers, invoices and contracts. Of course, you will need you to get acquainted with these tables and databases, since you will be operating multiple data manipulations across the various examples and exercises as part of this course.
 
 At any time, in order to get acquainted with Fabric terminology, you should consult [Fabric's Glossary](/articles/01_fabric_overview/02_fabric_glossary.md).
 
