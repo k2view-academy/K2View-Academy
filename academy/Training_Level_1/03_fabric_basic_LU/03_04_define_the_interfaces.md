@@ -50,7 +50,7 @@ Let’s look at the steps for creating the interface. Please read [Creating a ne
 
 Similar to other DB studios, Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries:
 
-- [Query Builder Overview](/articles/11_query_builder/01_query_builder_overview.md))
+- [Query Builder Overview](/articles/11_query_builder/01_query_builder_overview.md)
 
 <!--Once loaded to Git: 11_1 Query Builder Overview-->
 
@@ -64,17 +64,17 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 
 ​       
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example-Define an Interface and Validate It
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Define an Interface and Validate It
 
-The main business requirement is to display a 360 Customer view which shows a customer’s activities and data.Todo so, define an interface that will access the customer’s data.
+The main business requirement is to display a 360 Customer view which shows a customer’s activities and data. To do so, define an interface that will access the customer’s data.
 
-Considering the information above, whichinterface should be used ? **CRM DB**
+Considering the information above, which interface should be used ? **CRM DB**
 
  Let’s do this together!
 
 1. Open your **Fabric Studio**, go to the **Project Tree**, right click **Interface** and select **New Interface.**
 2. Select **Oracle** as the **Interface type**.
-3. Name the **Interface: CRM_DB**
+3. Name the **Interface: CRM_DB**.
 4. Add additional parameters based on the bolded items below. Pay attention that the **Password** equals the **user’s** **credentials**.
 5. Test the **connection string**.
 6. Click **Save**.
@@ -83,7 +83,7 @@ Considering the information above, whichinterface should be used ? **CRM DB**
 
 Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
-The Query Builder is displayed where youcan see the list of tables and execute the following sample query.
+The Query Builder is displayed where you can see the list of tables and execute the following sample query.
 
 How many customers do you have?
 
@@ -95,9 +95,9 @@ results:10,000
 
  
 
-###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Define Your Project’s Interfaces and Validate Them
+###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) **Exercise – Define Your Project’s Interfaces and Validate Them**
 
- Your Customer’s 360view requires additional data such as Billing and Order.Using the training materials covered so far and the aboveexample, configure the following DB Interfaces:
+ Your Customer’s 360 view requires additional data such as Billing and Order. Using the training materials covered so far and the above example, configure the following DB interfaces:
 
  **BILLING_DB Details**
 
