@@ -2,7 +2,7 @@
 
 ​                                                     ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_03.png)
 
-Now your Project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the Project’s interfaces. 
+Now your project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the project’s interfaces. 
 
  An interface can be based on Database or Non-database files and is defined in the Fabric Studio. 
 
@@ -12,7 +12,7 @@ Now your Project has been defined and a preliminary analysis of the data require
 
 ### Interfaces Overview
 
-Let’s understand which Interfaces are availablein the Fabric Studio:
+Let’s understand which Interfaces are available in the Fabric Studio:
 
 [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md)
 
