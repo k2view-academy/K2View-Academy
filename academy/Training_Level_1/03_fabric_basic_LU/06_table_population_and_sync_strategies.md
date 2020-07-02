@@ -2,7 +2,7 @@
 
 ​      ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_06.png)              
 
-Your Logical Unit is now constructed using tables from different source DBs and has a hierarchical Parent-Child representation. You have reviewed the implementation and were able to see the data quickly after moving it from the source into Fabric. 
+Your LU is now constructed using tables from different source DBs and has a hierarchical parent-child representation. You have reviewed the implementation and were able to see the data quickly after moving it from the source into Fabric. 
 
 Some questions have arisen:
 
@@ -11,23 +11,27 @@ Some questions have arisen:
 
 ### Table Population 
 
-Your Logical Unit has been built using the Auto Discovery Wizard or usinga Drag and Drop table object option based on the additional info that needs tobe displayed. The LU tables invoke a **Table Population** component, which is by default, the DB query that selects the data from its source. Let’s learn about Table Populations and how they can be best used for data retrieval:
+Your LU has been built using the Auto Discovery Wizard or using a Drag and Drop table object option based on the additional info that needs tobe displayed. The LU tables invoke a **Table Population** component, which is by default, the DB query that selects the data from its source. Let’s learn about Table Populations and how they can be best used for data retrieval. 
 
-[Table Population Overview](/articles/07_table_population/01_table_population_overview.md)
+Please read:
 
-[Population Types and Comparison Analysis](/articles/07_table_population/02_source_object_types.md)
+-  [Table Population Overview](/articles/07_table_population/01_table_population_overview.md)
 
-Now that you understand the benefits of a Table Population and its use cases, whether it is a DB query or a Java function known as a **Root function**, let’s see how to create one:
+-  [Population Types and Comparison Analysis](/articles/07_table_population/02_source_object_types.md)
 
-[Create New Table Population](/articles/07_table_population/03_creating_a_new_table_population.md)
+Now that you understand the benefits of a Table Population and its use cases, whether it is a DB query or a Java function known as a **Root function**, let’s see how to create one. 
 
-[Debug Table Population](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) 
+Please read:
+
+-  [Create New Table Population](/articles/07_table_population/03_creating_a_new_table_population.md)
+
+-  [Debug Table Population](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) 
 
  
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Debug Table Population
 
-1. Open the **BALANCE **table population map.
+1. Open the **BALANCE**table population map.
 2. Click **Debug** and select **Instance 82** from the Instances List. 
 3. Click **Execute Debug** or **Debug Record**.
 
@@ -39,11 +43,11 @@ You now understand how to adjust or manipulate the extracted data for your busin
 
 ### Fabric Sync Concept
 
-Let’s understand the Fabric Sync concept and modes:
+Let’s understand the Fabric Sync concept and modes. Please read:
 
-[Sync LUI Overview](/articles/14_sync_LU_instance/01_sync_LUI_overview.md)
+-  [Sync LUI Overview](/articles/14_sync_LU_instance/01_sync_LUI_overview.md).
 
-[Sync Modes](/articles/14_sync_LU_instance/02_sync_modes.md)
+-  [Sync Modes](/articles/14_sync_LU_instance/02_sync_modes.md).
 
 We will continue discussing the synchronization modes and methods later on in our Training. 
 
