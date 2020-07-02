@@ -4,39 +4,35 @@
 
 Now your project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the project’s interfaces. 
 
- An interface can be based on Database or Non-database files and is defined in the Fabric Studio. 
-
- Some Database / Non-Database items might be new in the system and we will also show you how to define them and use them as Interfaces.
+ An interface can be based on database or non-database files and is defined in the Fabric Studio. Some database / non-database items might be new in the system and we will also show you how to define them and use them as Interfaces.
 
  
 
 ### Interfaces Overview
 
-Let’s understand which Interfaces are available in the Fabric Studio:
+Let’s understand which interfaces are available in the Fabric Studio:
 
 [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md)
 
-To define the Interfaces and their respective parameters, you need to look into their sources using the following guidelines:
-
-[Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md)
+To define the interfaces and their respective parameters, you need to look into their sources using the following [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
 
 Our Training environment has three main DBs of various types, which in essence, represent a typical Telco IT ecosystem:
 
--  **BILLING_DB** (type: MySQL) – Stores information requiredfor preparing or sending a bill or invoice, such as: Payments orBalance. 
+-  **BILLING_DB** (type: MySQL) – Stores information required for preparing or sending a bill or invoice, such as: Payments or Balance. 
 
-- **CRM_DB** (type: Oracle) – Stores theinformation that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately drivingsales growth. For example, Customer info, Contracts, Cases or Offers.
+- **CRM_DB** (type: Oracle) – Stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
 
-- **ORDERS_DB** (type: PostgreSQL) – Usually stores informationfor filling the Order functions required to complete a customer’s order createdin a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
+- **ORDERS_DB** (type: PostgreSQL) – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
   
 
 ### How to define an Interface
 
-The properties that define an Interface have the following settings:
+The properties that define an interface have the following settings:
 
 [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)
 
-Let’s look at the steps for creating the Interface:
+Let’s look at the steps for creating the interface:
 
  [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)
 
