@@ -1,6 +1,6 @@
 # Broadway Tutorial and Flow Examples
 
-In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](<!--link to 16-Broadway flow overview-->) which guides a user step-by-step through a sample Business Process. 
+In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](<!--link to 16-Broadway flow overview-->) which guides a user step-by-step through a sample Business Process and explains how to implement it using the Broadway. 
 
 In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. 
 
