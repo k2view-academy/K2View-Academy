@@ -8,12 +8,17 @@ To open the tutorial or any additional example flow, go to **Actions > Examples*
 
 ![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
 
-The tutorial is using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage](<!--Link to 18-Flow Stages-->) or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md) in order to provide the explanations. A user can either:
+The tutorial's explanations are provided using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage](<!--Link to 18-Flow Stages-->) or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md). A user can either:
 
 - Press * in the main menu of the flow in order to see all the remarks at once.
 - Or, press * in each Stage or Actor to see its remark.
 
-The tutorial shows several most common [built-in Actor Types](/articles/99_Broadway/04_built_in_actor_types.md), for example:
+The tutorial shows that the flow can run by either:
+
+- Using **Run Flow** icon in the main menu. Then the flow will run till the end and show the results.
+- Using **Debug Play** icon in the main menu. The the flow will stop at the first break point and can be continued using the **Debug Step** icon. [Click for more information about the Debug flow](<!--Link to 26-Flow window- run + debug flow-->).
+
+The tutorial explains the usage of several most common [built-in Actor Types](/articles/99_Broadway/04_built_in_actor_types.md), for example:
 
 - **Const** is a basic Actor which copies an input argument to the output value argument. 
 - **StringBuild**, **Replace** and **Concat** are only some of the Actors which deal with the strings in a Broadway flow. Checkout **strings.flow** about working with strings in a Broadway flow.
