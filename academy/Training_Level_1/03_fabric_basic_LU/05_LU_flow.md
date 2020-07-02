@@ -77,21 +77,17 @@ Let’s review some Logical Unit Schema properties:
 
 You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct LU that have all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation. Please read [LU Table Overview](/articles/06_LU_tables/01_LU_tables_overview.md).
 
-The following describes how to create a LU table with its properties and indexes, specifically, a manual table:
+The following describes how to create an LU table with its properties and indexes, specifically, a manual table:
 
-[Create New LU Table](/articles/06_LU_tables/02_create_an_LU_table.md)
+-  [Create New LU Table](/articles/06_LU_tables/02_create_an_LU_table.md)
 
-[Table Indexes](/articles/06_LU_tables/03_table_indexes.md)
+-  [Table Indexes](/articles/06_LU_tables/03_table_indexes.md)
 
-[Table Properties](/articles/06_LU_tables/04_table_properties.md)
+-  [Table Properties](/articles/06_LU_tables/04_table_properties.md)
 
-To add another table to the LU Schema,follow these steps:
+To add another table to the LU Schema, follow these steps: [Add a Table to a schema](/articles/03_logical_units/09_add_table_to_a_schema.md)
 
-[Add a Table to a schema](/articles/03_logical_units/09_add_table_to_a_schema.md)
-
-To remove a specific table from a LogicalUnit:
-
-[Delete Table from LU schema](/articles/03_logical_units/10_delete_table_from_a_schema.md)
+To remove a specific table from an LU, follow these steps: [Delete Table from LU schema](/articles/03_logical_units/10_delete_table_from_a_schema.md)
 
 ### How Do I view and Review a Logical unit?
 
