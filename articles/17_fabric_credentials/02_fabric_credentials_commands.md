@@ -77,22 +77,16 @@ The following tables discuss how user access control is managed using Fabric com
 <td width="700pxl">
 <p><strong>Description</strong>: Create a new token.</p>
 <p><strong>Usage</strong>:</p>
-<p>CREATE TOKEN &lt;'token_name'&gt; [user 'user_name']</p>
+<p>CREATE TOKEN &lt;'token_name'&gt;</p>
 <p><strong>Parameters:</strong></p>
 <ul>
 <li>&lt;'token_name'&gt; &ndash; mandatory, token name.</li>
-<li>[user 'user_name'] &ndash; optional, assign the token to a user.<strong>&nbsp;</strong>Note that you must assign a token to the user to enable the user to invoke the Built-in Product Web Services.</li>
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
 <li>Create a <strong>test_token</strong> token. Do not assign it to any user:
 <ul>
 <li>create token 'test_token';</li>
-</ul>
-</li>
-<li>Create&nbsp;a <strong>test_token</strong>&nbsp;token and assign it 'admin' user:
-<ul>
-<li>create token 'test_token' user 'admin';</li>
 </ul>
 </li>
 </ul>
