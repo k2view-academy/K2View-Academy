@@ -31,14 +31,10 @@ Based on the above, the Digital Entity should be a **Customer** and the LU shoul
 
 Let’s start from the **CRM_DB.CUSTOMER** database which holds the Customer entity and create the LU using Auto Discovery.
 
-### Creating a New LU
+### Creating a New LU 
+Please read the [Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md) and [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) articles. 
 
-The following walks you through creating a new LU. [Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md)
-
-We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the LU’s modelling. You can use the Auto Discovery Wizard to create the LU:
-
-[Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md)
-
+We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the LU’s modelling. You can use the Auto Discovery Wizard to create the LU.
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example – Auto Discovering a Logical Unit
