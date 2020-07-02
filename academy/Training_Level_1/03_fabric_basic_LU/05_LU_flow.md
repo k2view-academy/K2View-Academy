@@ -2,18 +2,18 @@
 
  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
 
-You have just set up your Fabric Project, configured its components and defined the interfaces for the Customer 360 View. Based onthe business requirements,let’s look at your next steps:
+You have just set up your Fabric project, configured its components and defined the interfaces for the Customer 360 View. Based on the business requirements, let’s look at your next steps:
 
-You need to understand how to model data retrieval,storage and its view options.
+You need to understand how to model data retrieval, storage and its view options.
 
 What should be considered?
 
 - Defining the Digital Entity based on data consumption requirements
-- Modeling the Logical Unit based on the defined Digital Entity 
+- Modeling the LU based on the defined Digital Entity 
 
  
 
-### Logical unit and the digital entityconsiderations
+### LU and Digital Entity Considerations
 
 [LU Overview](/articles/03_logical_units/01_LU_overview.md)
 
