@@ -44,12 +44,9 @@ To fully understand this course, you should be familiar with the following princ
 
 Throughout the course, we will evolve within a Telco customer management environment that provides a set of DBs and tables that you will use to operate your first Fabric-based queries and data manipulations. 
 
-This work environment features sets of tables that you are already familiar with, such as customers, subscribers, invoices and contracts. Of course, you will need you to get acquainted with these tables and databases, since you will be operating multiple data manipulations across the various examples and exercises as part of this course.
+This work environment features sets of tables that you are already familiar with such as customers, subscribers, invoices and contracts. Of course, you will need you to get acquainted with these tables and databases, since you will be operating multiple data manipulations across the various examples and exercises as part of this course.
 
 To get acquainted with Fabric terminology at any time during the course, consult [Fabric's Glossary](/articles/01_fabric_overview/02_fabric_glossary.md).
-
-At any time, in order to get acquainted with Fabric terminology, you should consult [Fabric's Glossary](/articles/01_fabric_overview/02_fabric_glossary.md).
-
 
 
 But first, let’s understand the course's User Story !
