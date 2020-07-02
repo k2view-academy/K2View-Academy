@@ -1,6 +1,6 @@
 # Broadway Tutorial and Flow Examples
 
-In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](<!--link to 21-Broadway flow -->) which guides a user step-by-step through a sample Business Process. 
+In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](<!--link to 16-Broadway flow overview-->) which guides a user step-by-step through a sample Business Process. 
 
 In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. 
 
@@ -12,11 +12,6 @@ The tutorial is using a **Remark** - a green asterisk (*) which appears in the r
 
 - Press * in the main menu of the flow in order to see all the remarks at once.
 - Or, press * in each Stage or Actor to see its remark.
-
-The flow can run by either:
-
-- Using **Run Flow** icon in the main menu. Then the flow will run till the end and show the results.
-- Using **Debug Play** icon in the main menu. The the flow will stop at the first break point and can be continued using the **Debug Step** icon. [Click for more information about the Debug flow](<!--Link to 26-Flow window- run + debug flow-->).
 
 The tutorial shows several most common [built-in Actor Types](/articles/99_Broadway/04_built_in_actor_types.md), for example:
 
