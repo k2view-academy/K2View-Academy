@@ -21,8 +21,8 @@ Please read the following articles about specific Fabric functions:
 
 ### Root functions
 Please read the following articles about root functions:
-- [Creating a root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
-- [Examples of root functions and code example](/articles/07_table_population/11_2_root_functions_code_examples.md)
+- [Creating a root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md).
+- [Examples of root functions and code example](/articles/07_table_population/11_2_root_functions_code_examples.md).
 
 
 
@@ -30,11 +30,11 @@ Please read the following articles about root functions:
 
 Use enrichment functions to work directly on the data in the LU tables AFTER they have been populated. Enrichment functions have specific properties and features as you will discover by reading the following articles:
 
-- [Enrichment function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md)
-- [Root functions & Enrichment functions differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md)
-- [Create & Edit an Enrichment function](/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
-- [Enrichment order](\articles\03_logical_units\14_edit_enrichment_order.md)
-- [Code Example](/articles/10_enrichment_function/04_enrichment_function_code_examples.md)
+- [Enrichment Function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md).
+- [Root Functions and Enrichment Functions Differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md).
+- [Create & Edit an Enrichment function](/articles/10_enrichment_function/03_create_edit_enrichment_function.md).
+- [Enrichment Order](\articles\03_logical_units\14_edit_enrichment_order.md).
+- [Code Example](/articles/10_enrichment_function/04_enrichment_function_code_examples.md).
 
 
 
@@ -58,7 +58,7 @@ To develop the functions pertaining to this course's section, use the CustomerLU
          
 
     3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
-       contract_ID 2787 & 2788 to validate the code. 
+       contract_ID 2787 and 2788 to validate the code. 
         Tips:
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
@@ -66,7 +66,7 @@ To develop the functions pertaining to this course's section, use the CustomerLU
             
 
     4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. 
-       Please, modify the code accordingly.
+       Please modify the code accordingly.
 
 
 
@@ -74,8 +74,8 @@ To develop the functions pertaining to this course's section, use the CustomerLU
 ##### Question 2: Case notes clean-up
 
 The Case_Notes table stores notes about a specific case that has been opened for a specific owner.  
-Tamar (Instance ID = 1472) keeps receiving old bills and apology letters about issues she 
-is experiencing with the network to her mailing address. The case notes reflect issues that are still open.
+Tamar (Instance ID = 1472) recieves old bills and apology letters to her mailing address about issues she 
+is experiencing with the network. The case notes reflect issues that are still open.
 
     1. Let's first list the contracts owned by Tamar in the data viewer.
            - How many contracts does she own ?
@@ -83,7 +83,7 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
     2.  Let's look at the different notes in the Case_Note table of Tamar's LUI.
            - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type description 
-             (in the Cases table)
+             (in the Cases table).
            - How many cases are still open ?
            
 
@@ -96,7 +96,7 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
  
 ##### Question 3: Attaching the enrichment function to the appropriate table
-      1. What happens if you attach the enrichment function to the table: CASES ? 
+      1. What happens if you attach the enrichment function to the CASES table ? 
       
       2. To which table should the function be attached ? 
 
@@ -140,7 +140,7 @@ is experiencing with the network to her mailing address. The case notes reflect 
   if ((cellValue.matches("(.*)+1(.*)") == false) && (cellValueContDesc.matches("(.*)5G(.*)"))){ ... }
 ```
 
-    *Note that +1 & 5G are parameters currently defined in the function. Later in this section you will see  *
+    *Note that +1 & 5G parameters are currently defined in the function. You will see an * later in this section.
 
 
 
@@ -211,18 +211,18 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
 ### Decision functions
 
-- [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md)
+- [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md).
 
-- [Sync Decision Functions](/articles/14_sync_LU_instance/05_sync_decision_functions.md)
+- [Sync Decision Functions](/articles/14_sync_LU_instance/05_sync_decision_functions.md).
 
-- [Decision Functions Recommendation](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md)
+- [Decision Functions Recommendation](/articles/14_sync_LU_instance/06_sync_decision_functions_recommendations.md).
 
 ### Sync strategy for LU schemas and decision functions
 
-- [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
-- [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md)
-- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md.md)
-- [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md)
+- [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md).
+- [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
+- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md.md).
+- [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md).
 
 
   
@@ -230,22 +230,22 @@ is experiencing with the network to her mailing address. The case notes reflect 
 
 **Exercise 2 - Decision functions**
 
-To save network resources, ensure that data synchronization of LUIs only occurs if the number of entries in a given external source's table is above a specific threshold: CRMCases_threshold
+To save network resources, ensure that data synchronization of LUIs only occurs if the number of entries in a given external source's table is above the CRMCases_threshold threshold.
 
 ##### Question 1: Build a decision function based on the following criteria:
 
-    - If the number of entries in the CASES table of the CRM_DB database is higher than CRMCases_threshold=25000 
-      then the sync function will return a boolean variable - *syncind* set to TRUE.
+    - If the number of entries in the CASES table in the CRM_DB database is higher than CRMCases_threshold=25000 
+      then the sync function will return the *syncind* boolean variable set to TRUE.
     
-    - Hardcode the value of the threshold. (you will return to this section later to see how to set this threshold 
-      as a global parameter)
+    - Hardcode the value of the threshold. You will return to this section later to see how to set this threshold 
+      as a global parameter.
 
 ##### Question 2: Validate the function
-    1. Run Instance Id: 1472. How many entries do you see in the Cases table of the LUI ? 
+    1. Run Instance ID: 1472. How many entries do you see in the Cases table of the LUI ? 
     
-    2. Change the value of CRMCases_threshold to: 30000. 
+    2. Change the value of the CRMCases_threshold to 30000. 
     
-    3. Check whether the sync process was implemented by looking at the Cases table of the 1472 instance. 
+    3. Check whether the sync process has been implemented by looking at the Cases table of the 1472 instance. 
        How many cases entries can you see?
 
   
@@ -258,11 +258,11 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
 
 ```java
 // this function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
-int CRMCases_threshold=25000; //latest known number of cases in CRM_DB.CASES
+in the CRMCases_threshold=25000; //latest known number of cases in CRM_DB.CASES.
 Boolean syncInd = false;
 
 String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
-//puts the number of rows in CASES DB into variable count
+//puts the number of rows in the CASES DB into a variable count.
 
 reportUserMessage(count);
 int cnt=Integer.parseInt(count);
