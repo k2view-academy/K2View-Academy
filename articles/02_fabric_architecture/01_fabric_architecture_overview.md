@@ -31,7 +31,7 @@ Fabric solves the following high-level requirements:
 - Data that is as close as possible to the data consumers.
 - Always secured data.
 
-Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and [the Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
+Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what_is_fabric.md) and the [Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
 
 
 ## 2. Fabric Server Main Components
@@ -54,12 +54,12 @@ A MicroDB provides several advantages:
 - Encapsulation of ALL data of a single business entity (like a customer) in one place so that consumers can ask any question about data usually residing in many different data sources.
 - Holding the data of only one business entity, they are very small and can be stored in RAM and provide unparalleled query performance.
 - Individual encryption at MicroDB or field levels.
-- Using SQLite they offer standard SQL operations.
+- Using SQLite, they offer standard SQL operations.
 - No business impact whereby providing continued availability of data during major structural modifications.  
 
     
 #### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across [nodes](#_Fabric_Cluster) 
+An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across [nodes](#_Fabric_Cluster). 
 
 A common database is always available to be queried during every Fabric session enabling joining data between Common tables and a MicroDB in one SQL query.
 
@@ -75,7 +75,7 @@ Fabric uses Cassandra for three main purposes:
 
 ### 2.2 Fabric Business Logic
 
-This module is responsible for all transformations and data manipulations. This is where Fabric solves business functions that are applied on the data imported from external sources and stored locally.
+This module is responsible for all transformations and data manipulations and is where Fabric solves business functions that are applied on the data imported from external sources and stored locally.
 
 
 ### 2.3 Fabric Studio
@@ -135,7 +135,7 @@ Data can be captured via SFTP or any other transfer protocol and/or streaming se
 Fabric allows subscription to queue messaging systems to stream-in data using services such as Apache Kafka, JMS and rabbit. Fabric can then step-in and apply transformations and logic to incoming events.
 
 **3.3.1.3 APIs:**
-Fabric can consume eternal APIs such as Web Services, Soap and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
+Fabric can consume external APIs such as Web Services, Soap and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
 APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 
 **3.3.1.4 DB Query:**
@@ -147,7 +147,7 @@ This section discusses the types of transformations used by the business rules a
 **3.3.2.1 Data Pre-processing:**
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
 
-- Data anonymization: Fabric provides a masking process (c.f. 5.4) that can be used to anonymize data for R&amp;D or QA purposes.
+- Data anonymization: Fabric provides a [masking process](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security) that can be used to anonymize data for R&amp;D or QA purposes.
 
 - Data cleansing: Fabric can be setup to retrieve (from external sources) only the data necessary to populate LUI while disregarding any data that is not relevant to a project's implementation.
 
