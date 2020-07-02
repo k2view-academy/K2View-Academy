@@ -141,21 +141,26 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>String, Integer, Real&hellip;</p>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
+<p>When you set the population type of the input parameter as <strong>Const,&nbsp;</strong>you must set the parameter type of the input parameter.</p>
+<p><img src="/articles/99_Broadway/images/const_input_parameter_type.png" alt="Const_input_type" /></p>
+<p>You can edit the parameter type for each parameter regardless of its population type:</p>
+<ul>
+<li>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</li>
+</ul>
 </td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">
-<p><strong>Input Type</strong></p>
+<p><strong>Population Type</strong></p>
 </td>
 <td valign="top" width="600pxl">
-<p>The following input types are supported:</p>
+<p>The following types are supported:</p>
 <ul>
-<li><strong>Link</strong>- get the input type as an input parameter from another actor.</li>
+<li><strong>Link</strong>- get the input value as an input parameter from another actor.</li>
 <li><strong>Const</strong>- constant. You need to set the value of the parameter.</li>
 <li><strong>External</strong>- get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting- <strong>External Name</strong>.</li>
 </ul>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name to view or edit the input type.</p>
+<p>Click the <strong>&hellip;</strong> icon next to the parameter name to view or edit the population type.</p>
 </td>
 </tr>
 <tr>
@@ -179,14 +184,11 @@ The parameter's definition includes the following attributes:
 </tbody>
 </table>
 
-
-
-
 ##### Parameter's Value
 
 Setting the parameter's value is needed in the following scenarios:
 
--  The input type is set to **Const**. 
+-  The population type is set to **Const**. 
 
   Example: 
 
@@ -194,7 +196,7 @@ Setting the parameter's value is needed in the following scenarios:
 
   ![Const1](/articles/99_Broadway/images/const_actor_example.png)
 
-- The input type is **Link** or **External** and you define a default value.
+- The connection type is **Link** or **External** and you define a default value.
 
   Example:
 
@@ -264,9 +266,7 @@ Notes:
   </tbody>
   </table>
   
-  
-  
-  <!-- to check with Yuval- empty values -->
+    
 
 [![Previous](/articles/images/Previous.png)](articles/99_Broadway/02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
 
