@@ -73,7 +73,7 @@
 - Quiz (4)
 - Q&A Session
 
-##### Certification exam (1hr.)
+##### Certification Exam (1 hour)
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_1_Course_Overview.md)
