@@ -89,13 +89,12 @@ To add another table to the LU Schema, follow these steps: [Add a Table to a sch
 
 To remove a specific table from an LU, follow these steps: [Delete Table from LU schema](/articles/03_logical_units/10_delete_table_from_a_schema.md)
 
-### How Do I view and Review a Logical unit?
+### How Do I view and Review a L U?
 
-You have created your first Logical Unit in a few clicks and understood its components and how to edit it. However, does it really fit the basic requirements? How do you know that the Schema you have just modeled retrieves the data the way you would liketo view it? Can you validate the implementation and view at least one LU Instance’s data?
+You have created your first LU in a few clicks and understood its components and how to edit it. However, does it really fit the basic requirements? How do you know that the Schema you have just modeled retrieves the data the way you would like to view it? Can you validate the implementation and view at least one LUI’s data?
 
-Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s look at the Data Viewer, see how it is used and learn about its options. 
-
-[Data Viewer Capabilities](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md)
+Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s look at the Data Viewer, see how it is used and learn about its options. Please read the 
+[Data Viewer Capabilities](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) article.
 
  
 
@@ -103,7 +102,7 @@ Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s l
 
 Let’s test an LU Instance and see the result. 
 
-Open the CustomerLUData Viewer and execute Instance ID 215:
+Open the CustomerLU Data Viewer and execute Instance ID 215:
 
 1. Check that in the **Instance Tree **there is a **DB file** that has the **Current Date** and **Timestamp**.
 
@@ -125,25 +124,26 @@ Open the CustomerLUData Viewer and execute Instance ID 215:
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Add New Tables to The LU and Validate Them
 
-The Logical Unit you have just created using the Auto Discovery Wizard contains basic Customer information only. However, you also need to see their Subscription and Billing info.
+The LU you have just created using the Auto Discovery Wizard contains basic Customer information only. However, you also need to see their Subscription and Billing info.
 
 Using the training materials and examples covered so far, add the **CRM_DB.SUBSCRIBER** to the **CustomerLU**. 
 
-1. `Question: How are you connecting the additionaltable?`
-2. `Question: How many subscribers has Customer 82 got?What are their IDs?`
+1. `Question: How are you connecting the additional table?`
+
+2. `Question: How many subscribers has Customer 82 got? What are their IDs?`
 
 Add the BILLING_DB.BALANCEtable to the CustomerLU.
 
 3. `Question: How long did it take to populate the CUSTOMER table?`
 
-4.    `Question: What is the first AVAILABLE_AMOUNT for Subscriber 209?`
+4.  `Question: What is the first AVAILABLE_AMOUNT for Subscriber 209?`
 
 
-5.    `Question: What is total AVAILABLE_AMOUNT for Subscriber 209?`
+5.   `Question: What is total AVAILABLE_AMOUNT for Subscriber 209?`
 
 ​       
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution - Add New Tables to The  LU and Validate Them
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution - Add New Tables to the LU and Validate Them
 
 1. `Answer: SUBSCRIBER.MSISDN to CONTRACT.ASSOCIATED_LINE_FMT`
 2. `Answer: 2 Subscribers, 209 &210`
