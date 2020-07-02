@@ -56,7 +56,7 @@ Click the **...** icon on the Actor > Remark to open the Remark window and add y
 
 Notes that if you export the Actor and creates an Actor Type based on the exported Actor, the Remark of the Actor is copied to the Description of the newly created Actor Type. 
 
-### Actor Window
+## Actor Window
 
 The Actor Window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
 
@@ -112,7 +112,7 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 </tbody>
 </table>
 
-#### Data Input Parameters
+### Data Input Parameters
 
 Each Actor has data input and out parameters.
 
@@ -121,7 +121,7 @@ Each input parameter has the following attributes:
 - Parameter's Attributes
 - Parameter's Value
 
-##### Input Parameter: Attributes
+#### Input Parameter: Attributes
 
 The parameter's definition includes the following attributes:
 
@@ -141,7 +141,7 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>String, Integer, Real&hellip;</p>
-<p>When you set the population type of the input parameter as <strong>Const,&nbsp;</strong>you must set the parameter type of the input parameter.</p>
+<p>When you set the population type of the input parameter as <strong>Const,&nbsp;</strong>you must set the parameter type of the input parameter:</p>
 <p><img src="/articles/99_Broadway/images/const_input_parameter_type.png" alt="Const_input_type" /></p>
 <p>You can edit the parameter type for each parameter regardless of its population type:</p>
 <ul>
@@ -184,7 +184,7 @@ The parameter's definition includes the following attributes:
 </tbody>
 </table>
 
-##### Parameter's Value
+#### Parameter's Value
 
 Setting the parameter's value is needed in the following scenarios:
 
@@ -216,7 +216,7 @@ Notes:
   
   
   
-  #### Data Output Parameters
+  ### Data Output Parameters
   
   <table>
   <tbody>
