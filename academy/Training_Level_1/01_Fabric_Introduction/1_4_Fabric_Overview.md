@@ -11,11 +11,11 @@ By the end of the Fabric Introduction learning item you will know:
 - What Fabric is
 - About Digital Entities
 - Fabric's main components and key features
-- Fabric use cases through customers examples
+- Fabric use cases through customer examples
 
 
 
-So, let’s start understanding what Fabric is all about by reading the following article: [Fabric Overview](/articles/01_fabric_overview/01_what%20is%20fabric.md)
+So, let’s start learning what Fabric is all about by reading the [Fabric Overview](/articles/01_fabric_overview/01_what%20is%20fabric.md).
 
 Now we are acquainted with Digital Entities and Fabric's main features, let's have a look at a couple of use cases from K2View's customers: [Fabric Use Cases](/academy/Training_Level_1/01_Fabric_Introduction/1_5_Fabric_UseCases.md)
 
