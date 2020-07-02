@@ -24,7 +24,7 @@ Please go to the [Level 1 Training Syllabus](/academy/Training_Level_1/01_Fabric
 
 
 
-### Course Pre-requisites 
+### Course Prerequisites 
 
 To fully understand this course, you should be familiar with the following principles, development languages and tools:
 
