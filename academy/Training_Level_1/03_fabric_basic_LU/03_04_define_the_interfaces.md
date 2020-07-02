@@ -10,9 +10,7 @@ Now your project has been defined and a preliminary analysis of the data require
 
 ### Interfaces Overview
 
-Let’s understand which interfaces are available in the Fabric Studio:
-
-[Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md)
+Let’s understand which interfaces are available in the Fabric Studio. Please read [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md).
 
 To define the interfaces and their respective parameters, you need to look into their sources using the following [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
 
