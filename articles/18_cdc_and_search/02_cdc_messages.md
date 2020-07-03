@@ -1,6 +1,6 @@
-# CDC Messages
+# (Change Data Capture) CDC Messages
 
-Fabric has a full CDC (Change Data Capture) solution to notify external systems on data changes, published through Kafka topic. Fabric CDC solution has a built-in integration with Elasticsearch to enable a cross-instance search. 
+Fabric’s CDC solution notifies external systems about data changes published via Kafka, and since it has built-in integration with Elasticsearch, also provides cross-instance Search capabilities.
 
 Fabric Studio enables a definition of selected LU tables and columns whose update must publish a CDC message.
 
