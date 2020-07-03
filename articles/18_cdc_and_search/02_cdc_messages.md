@@ -34,27 +34,28 @@ To see an example, refer to [Appendix B](/articles/18_cdc_and_search/02_cdc_mess
 
 CDC Delete Tables messages are generated following a Delete LUI command. 
 
-To republish the CDC data of a deleted LUI, run the **CDC_REPUBLISH_INSTANCE** command. The CDC data in the LU tables must be re-created by the CDC consumer.
+To republish the CDC data of a deleted LUI, run the **CDC_REPUBLISH_INSTANCE** command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.
 
 To see an example, refer to [Appendix C](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example). 
 
 ### CDC Table Change Info
-CDC Table Change Info messages are generated each time a MicroDB is updated and are triggered by insert, update or delete statements. These messages contain a list of PK columns in the LU tables and relevant changes in CDC columns.
+CDC Table Change Info messages are generated each time a MicroDB is updated and are triggered by INSERT, UPDATE or DELETE statements. These messages contain a list of PK columns in the LU tables and relevant changes in CDC columns.
 
-To republish the CDC data of an LUI, run the **CDC_REPUBLISH_INSTANCE** command.
+To republish the CDC data of an LUI, run the **CDC_REPUBLISH_INSTANCE** command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.
 
 To see an example, refer to [Appendix D](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example).  
 
   
+## Serialization
 
+CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class  
+**com.k2view.fabric.cdc.Serialization** utility.
 
-CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class utility: 
-com.k2view.fabric.cdc.Serialization
-Fabric offers two  **Serialization** class has two methods: 
+Fabric offers two  **Serialization** class methods: 
 -  public static CdcMessage fromJson(String msg), which creates a **CdcMessage** object from the input message.
--  public static String toJson(CdcMessage msg), which serializes the CDC message to a JSON format.
+-  public static String toJson(CdcMessage msg), which serializes the CDC message to JSON format.
 
-To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
+Click to to view the list [**Fabric APIs**](http://[Fabric IP address]:3213/static/doc/user-api/index.html0.
 
  
 
