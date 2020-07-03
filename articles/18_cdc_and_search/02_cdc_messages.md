@@ -20,19 +20,16 @@ Fabric has the following CDC messages:
 -  [CDC Change Info](/articles/18_cdc_and_search/02_cdc_messages.md#cdc-table-change-info).
 
 ### CDC Schema
-CDC Schema notifications are generated when an LU is deployed to Fabric for the first time and contain the LU Schema's name and information about its CDC tables.
-For more information refer to [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example). 
+CDC Schema messages are generated when an LU is deployed to Fabric for the first time. These messages contain the LU Schema's name and information about its CDC tables.
+
+To see an example, refer to [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example). 
 
 ### CDC Schema Update
+CDC Schema Update messages are generated when an LU is redeployed to Fabric or following an [LU drop command](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command) has been implemented and are generated only for relevant changes like CDC column updates. 
+These messages contain the LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.
 
+To see an example, refer to [Appendix B](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example).
 Arrived in CDC upon: 
-
-- Whenever an existing LU is redeployed to Fabric.
-- [Drop of an LU](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command).
-
-This message contains the LU schema name and the information on all the affected CDC LU tables, and contains only the relevant changes, i.e. update of the CDC columns.
-
-See an example in [Appendix B](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example) of this document.
 
 ###  CDC Delete Tables
 
