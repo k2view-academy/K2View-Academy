@@ -39,7 +39,7 @@ To republish the CDC data of a deleted LUI, run the **CDC_REPUBLISH_INSTANCE** c
 To see an example, refer to [Appendix C](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example). 
 
 ### CDC Table Change Info
-CDC Table Change Info messages are generated each time a MicroDB is updated and are triggered by insert, update or delete statements. These messages contain a list of PK columns of the LU tables and the relevant changes in CDC columns.
+CDC Table Change Info messages are generated each time a MicroDB is updated and are triggered by insert, update or delete statements. These messages contain a list of PK columns in the LU tables and relevant changes in CDC columns.
 
 To republish the CDC data of an LUI, run the **CDC_REPUBLISH_INSTANCE** command.
 
