@@ -50,11 +50,11 @@ To see an example, refer to [Appendix D](/articles/18_cdc_and_search/02_cdc_mess
 
 CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization utility.
 
-Fabric offers two  **Serialization** class methods: 
--  public static CdcMessage fromJson(String msg), which creates a **CdcMessage** object from the input message.
+Fabric offers two Serialization class methods: 
+-  public static CdcMessage fromJson(String msg), which creates a CdcMessage object from an input message.
 -  public static String toJson(CdcMessage msg), which serializes the CDC message to JSON format.
 
-Click to to view the list [**Fabric APIs**](http://[Fabric IP address]:3213/static/doc/user-api/index.html0.
+Click to to view the [Fabric APIs](http://[Fabric IP address]:3213/static/doc/user-api/index.html0 list).
 
  
 
@@ -62,7 +62,7 @@ Click to to view the list [**Fabric APIs**](http://[Fabric IP address]:3213/stat
 
  
 
-### Appendix A: CDC Schema Message- Example
+### Appendix A: CDC Schema Message - Example
 
 ```
 {
@@ -198,7 +198,7 @@ Click to to view the list [**Fabric APIs**](http://[Fabric IP address]:3213/stat
 
  
 
-### Appendix B: CDC Schema Update Message- Example
+### Appendix B: CDC Schema Update Message - Example
 
 #### A.   Schema Update
 
@@ -316,7 +316,7 @@ Click to to view the list [**Fabric APIs**](http://[Fabric IP address]:3213/stat
 
  
 
-### Appendix C: CDC Delete Tables Message- Example
+### Appendix C: CDC Delete Tables Message - Example
 
 ```
 {
@@ -339,7 +339,7 @@ Click to to view the list [**Fabric APIs**](http://[Fabric IP address]:3213/stat
 
  
 
-### Appendix D: CDC Table Change Info Message- Example
+### Appendix D: CDC Table Change Info Messagen- Example
 
 #### A.   Data Change
 
