@@ -21,8 +21,7 @@ Fabric has the following CDC messages:
 
 ### CDC Schema
 CDC Schema notifications are generated when an LU is deployed to Fabric for the first time and contain the LU Schema's name and information about its CDC tables.
-
-See an example in [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example) of this document. 
+For more information refer to [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example). 
 
 ### CDC Schema Update
 
