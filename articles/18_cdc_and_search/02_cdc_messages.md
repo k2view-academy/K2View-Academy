@@ -2,16 +2,16 @@
 
 Fabric's Change Data Capture (CDC) solution notifies external systems about data changes published via Kafka and also offers cross-instance Search capabilities through its built-in integration with Elasticsearch.
 
-When defining LU in the Fabric Studio, selected tables and columns can be set to publish CDC messages each time they are updated. For example, to notify an external consumer system about a customer's change of address, in the CUSTOMER LU, the following columns are defined as CDC indexes in the ADDRESS table: 
+When defining LU in the Fabric Studio, selected tables and columns can be set to publish CDC messages each time they are updated. 
+For example, to notify an external consumer system about a customer's change of address, in the CUSTOMER LU, the following columns are defined as CDC indexes in the ADDRESS table: 
 -  STATE
 -  CITY
 -  STREET
 -  HOUSE_NO
 -  ZIP_CODE 
 
-create CDC indexes for STATE, CITY, STREET, HOUSE_NO, and ZIP_CODE columns of ADDRESS table of CUSTOMER LU as CDC indexes.
-
-Each type of change on the CDC columns generates a different type of a CDC message. 
+A specific CDC message is generated each time a specific CDC indexed column is updated. 
+ 
 
 The following sections describe the CDC message types.
 
