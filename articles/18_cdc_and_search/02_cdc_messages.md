@@ -25,7 +25,7 @@ CDC Schema messages are generated when an LU is deployed to Fabric for the first
 To see an example, refer to [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example). 
 
 ### CDC Schema Update
-CDC Schema Update messages are generated when an LU is redeployed to Fabric or following an [LU drop command](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command) has been implemented and are generated only for relevant changes like CDC column updates. 
+CDC Schema Update messages are generated when an LU is redeployed to Fabric or following an [LU drop command](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command) and are generated only for relevant changes like CDC column updates. 
 These messages contain the LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.
 
 To see an example, refer to [Appendix B](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example).
