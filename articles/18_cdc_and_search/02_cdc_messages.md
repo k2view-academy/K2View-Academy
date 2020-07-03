@@ -48,8 +48,7 @@ To see an example, refer to [Appendix D](/articles/18_cdc_and_search/02_cdc_mess
   
 ## Serialization
 
-CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class  
-**com.k2view.fabric.cdc.Serialization** utility.
+CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization utility.
 
 Fabric offers two  **Serialization** class methods: 
 -  public static CdcMessage fromJson(String msg), which creates a **CdcMessage** object from the input message.
