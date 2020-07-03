@@ -29,16 +29,12 @@ CDC Schema Update messages are generated when an LU is redeployed to Fabric or f
 These messages contain the LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.
 
 To see an example, refer to [Appendix B](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example).
-Arrived in CDC upon: 
 
 ###  CDC Delete Tables
 
-Arrived in CDC upon: 
+CDC Delete Tables messages are generated following a Delete LUI command. To republish the CDC data of a deleted LUI, run the **CDC_REPUBLISH_INSTANCE** command. The CDC data in the LU tables must be re-created by the CDC consumer.
 
-- Delete LUI command
-- Run **CDC_REPUBLISH_INSTANCE** Fabric command to republish of the CDC data for a given LUI. The CDC data of the LU tables must be re-created by the CDC consumer.
-
-See an example in [Appendix C](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example) of this document. 
+To see an example, refer to [Appendix C](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example). 
 
 ### CDC Table Change Info
 
