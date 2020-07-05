@@ -196,7 +196,7 @@ Setting the parameter's value is needed in the following scenarios:
 
   ![Const1](/articles/99_Broadway/images/const_actor_example.png)
 
-- The connection type is **Link** or **External** and you define a default value.
+- The population type is **Link** or **External** and you define a default value.
 
   Example:
 
