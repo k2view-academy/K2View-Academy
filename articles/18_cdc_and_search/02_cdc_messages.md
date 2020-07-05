@@ -83,9 +83,6 @@ Fabric offers two Serialization class methods:
 </tr>
 </tbody>
 </table>
--  public static CdcMessage fromJson(String msg), which creates a CdcMessage object from an input message.
--  public static String toJson(CdcMessage msg), which serializes the CDC message to JSON format.
-
 To view the list of Fabric APIs, click http://[Fabric IP address]:3213/static/doc/user-api/index.html
  
 
