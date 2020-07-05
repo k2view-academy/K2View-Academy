@@ -38,7 +38,7 @@ Fabric has the following CDC messages:
 <p>CDC Schema Update</p>
 </td>
 <td valign="top" width="550pxl">
-<p>Generated when an LU is redeployed to Fabric or following an <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command&nbsp;</a>and only for relevant changes like CDC column updates. These messages hold the&nbsp;LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.</p>
+<p>Generated when an LU is redeployed to Fabric or following an <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command&nbsp;</a>and is only applicable for relevant changes like CDC column updates. These messages hold the&nbsp;LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.</p>
 <p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example">Appendix B</a>.</p>
 </td>
 </tr>
@@ -53,7 +53,7 @@ Fabric has the following CDC messages:
 </tr>
 <tr>
 <td valign="top" width="350pxl">CDC Table Change Info</td>
-<td valign="top" width="550pxl">Generated each time a MicroDB is updated and triggered by INSERT, UPDATE or DELETE statements. These messages hold a list of PK columns in the LU tables and relevant changes in CDC columns.
+<td valign="top" width="550pxl">Generated each time a MicroDB is updated and is triggered by INSERT, UPDATE or DELETE statements. These messages hold a list of PK columns in LU tables and relevant changes in CDC columns.
 <p>To republish the CDC data of an LUI, run the CDC_REPUBLISH_INSTANCE command. Note that the CDC data in the LU tables must be re-created.</p>
 <p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example">Appendix D</a>.</p>
 </td>
@@ -67,7 +67,7 @@ Fabric has the following CDC messages:
 
 
 ## Serialization
-CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization tool.
+CDC messages are stored in Kafka topics by their CDC Consumer Name as defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization tool.
 
 Fabric offers two Serialization class methods: 
 <p>
