@@ -10,11 +10,11 @@ Each Stage can be split into two stages (and so on), so there can be several sta
 
 ![image](/articles/99_Broadway/images/99_16_01_flow2.PNG)
 
-When it's needed to introduce a condition, such as IF-ELSE, the flow can be split and a stage condition can be added to one of the split parts, while the other part can be set as ELSE. The execution order of the Actors in such flow will be: **A1 -> if B1 is true, then B1, otherwise B2 -> C1**. Note that Stage condition is a grey object, while a regular Actor is yellow.
+When it's needed to introduce a condition, such as IF-ELSE, the flow can be split and a stage condition can be added to one of the split parts, while the other part can be set as ELSE. The execution order of the Actors in such flow will be: **A1 -> B1 if true, otherwise B2 -> C1**. Note that Stage condition is a grey object, while a regular Actor is yellow.
 
 ![image](/articles/99_Broadway/images/99_16_01_flow3.PNG)
 
-If there are additional Stages on the same dependency level as IF-ELSE condition, its Actors will be executed as well, in the following execution order: **A1 -> if B1 is true, then B1, otherwise B2 -> Now1 -> C1**.
+If there are additional Stages on the same dependency level as IF-ELSE condition, thier Actors will be executed as well, in the following execution order: **A1 -> B1 if true, otherwise B2 -> Now1 -> C1**.
 
 ![image](/articles/99_Broadway/images/99_16_01_flow4.PNG)
 
