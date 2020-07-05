@@ -1,6 +1,6 @@
 # Broadway Flow Window
 
-**Broadway flow** window is the main Broadway UI component that enables the definition and execution of business processes  including all their [Stages](<!--Link to 18-Flow Stages-->), [Actors](/articles/99_Broadway/04_built_in_actor_types.md) and the [links between them](<!--Link to 21-Links--). 
+**Broadway flow** window is the main Broadway UI component that enables the definition and execution of business processes  including all their [Stages](<!--Link to 18-Flow Stages-->), [Actors](/articles/99_Broadway/04_built_in_actor_types.md) and the [links between them](<!--Link to 21-Links-->). 
 
 The Broadway flow window includes the following elements:
 
@@ -171,8 +171,7 @@ To open the Actor's context menu, click the three dots in the right corner of th
 
 #### Properties Tab
 
-The Broadway flow Properties tab  dynamically adjusts itself to display the data based on the Actor's structure, such as the number of [input and output parameters](<!--Link to 5-Input-Output types--), their types and default values if exist. It can also display the properties of the connection between two Actors. When the link is selected, it will show the names of From and To Actors and parameters, as well as the [Link type](<!--Link to 21-Links--). 
-
+The Broadway flow Properties tab  dynamically adjusts itself to display the data based on the Actor's structure, such as the number of [input and output parameters](<!--Link to 5-Input-Output types-->), their types and default values if exist. It can also display the properties of the connection between two Actors. When the link is selected, it will show the names of From and To Actors and parameters, as well as the [Link type](<!--Link to 21-Links-->)
 If the Properties tab is displayed and the user clicks anywhere on the empty Stage area, the Properties tab will disappear. 
 
 **Example of Actor's Properties tab**
