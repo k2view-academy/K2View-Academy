@@ -67,7 +67,7 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 
 To open the Stage context menu, click the three dots in the right corner of the Stage. This menu is dynamic, whereby some of the items are displayed only when they are applicable to the selected Stage. 
 
-![image](/articles/99_Broadway/images/99_18_02_stage_menu.PNG)
+![image](/articles/99_Broadway/images/99_18_02_stage_menu.png)
 
 <table style="width: 900px;">
 <tbody>
@@ -126,7 +126,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 
 To open the Actor's context menu, click the three dots in the right corner of the Actor. 
 
-![image](/articles/99_Broadway/images/99_18_03_actor_menu.PNG)
+![image](/articles/99_Broadway/images/99_18_03_actor_menu.png)
 
 <table style="width: 900px;">
 <tbody>
