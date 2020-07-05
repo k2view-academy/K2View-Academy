@@ -13,37 +13,57 @@ For example, to notify an external consumer system about a customer's change of 
 A specific CDC message is generated each time a specific CDC indexed column is updated. 
 
 Fabric has the following CDC messages:
-
--  [CDC Schema](/articles/18_cdc_and_search/02_cdc_messages.md#cdc-schema).
--  [CDC Schema Update](/articles/18_cdc_and_search/02_cdc_messages.md#cdc-schema-update).
--  [CDC Delete Tables](/articles/18_cdc_and_search/02_cdc_messages.md#cdc-delete-tables).
--  [CDC Change Info](/articles/18_cdc_and_search/02_cdc_messages.md#cdc-table-change-info).
-
-### CDC Schema
-CDC Schema messages are generated when an LU is deployed to Fabric for the first time. These messages contain the LU Schema's name and information about its CDC tables.
-
-To see an example, refer to [Appendix A](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example). 
-
-### CDC Schema Update
-CDC Schema Update messages are generated when an LU is redeployed to Fabric or following an [LU drop command](/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command) and are generated only for relevant changes like CDC column updates. 
-These messages contain the LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.
-
-To see an example, refer to [Appendix B](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example).
-
-###  CDC Delete Tables
-
-CDC Delete Tables messages are generated following a Delete LUI command. 
-
-To republish the CDC data of a deleted LUI, run the **CDC_REPUBLISH_INSTANCE** command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.
-
-To see an example, refer to [Appendix C](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example). 
-
-### CDC Table Change Info
-CDC Table Change Info messages are generated each time a MicroDB is updated and are triggered by INSERT, UPDATE or DELETE statements. These messages contain a list of PK columns in the LU tables and relevant changes in CDC columns.
-
-To republish the CDC data of an LUI, run the **CDC_REPUBLISH_INSTANCE** command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.
-
-To see an example, refer to [Appendix D](/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example).  
+<table>
+<tbody>
+<tr>
+<td valign="top" width="350pxl">
+<p>CDC Message</p>
+</td>
+<td valign="top" width="550pxl">
+<p>Description</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="3000pxl">
+<p>CDC Schema</p>
+<p>&nbsp;</p>
+</td>
+<td valign="top" width="6000pxl">
+<p>Generated when an LU is deployed to Fabric for the first time. These messages hold the LU Schema's name and information about its CDC tables.&nbsp;</p>
+<p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message--example">Appendix A</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="350pxl">
+<p>CDC Schema Update</p>
+</td>
+<td valign="top" width="550pxl">
+<p>Generated when an LU is redeployed to Fabric or following an <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command.&nbsp;</a>These messages are only generated for relevant changes like CDC column updates and hold the&nbsp;LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.</p>
+<p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example">Appendix B</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="350pxl">
+<p>CDC Delete Tables</p>
+</td>
+<td valign="top" width="550pxl">
+<p>Generated following a Delete LUI command.&nbsp;<br />To republish the CDC data of a deleted LUI, run the&nbsp;CDC_REPUBLISH_INSTANCE&nbsp;command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.</p>
+<p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example">Appendix C</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="350pxl">CDC Table Change Info</td>
+<td valign="top" width="550pxl">Generated each time a MicroDB is updated. Triggered by INSERT, UPDATE or DELETE statements. These messages hold a list of PK columns in the LU tables and relevant changes in CDC columns.
+<p>To republish the CDC data of an LUI, run the **CDC_REPUBLISH_INSTANCE** command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.</p>
+<p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example">Appendix D</a>.</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="350pxl">&nbsp;</td>
+<td valign="top" width="550pxl">&nbsp;</td>
+</tr>
+</tbody>
+</table>
 
   
 ## Serialization
@@ -51,6 +71,19 @@ To see an example, refer to [Appendix D](/articles/18_cdc_and_search/02_cdc_mess
 CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization utility.
 
 Fabric offers two Serialization class methods: 
+<p>&nbsp;</p>
+<table>
+<tbody>
+<tr>
+<td valign="top" width="300pxl">public static CdcMessage fromJson</td>
+<td valign="top" width="600pxl">String msg, creates a CdcMessage object from an input message.</td>
+</tr>
+<tr>
+<td valign="top" width="350pxl">&nbsp;public static String toJson</td>
+<td valign="top" width="550pxl">&nbsp;CdcMessage msg, serializes the CDC message to JSON format.</td>
+</tr>
+</tbody>
+</table>
 -  public static CdcMessage fromJson(String msg), which creates a CdcMessage object from an input message.
 -  public static String toJson(CdcMessage msg), which serializes the CDC message to JSON format.
 
