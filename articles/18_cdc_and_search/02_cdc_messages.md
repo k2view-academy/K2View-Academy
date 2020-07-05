@@ -27,7 +27,7 @@ Fabric has the following CDC messages:
 </td>
 <td valign="top" width="600pxl">
 <p>Generated when an LU is deployed to Fabric for the first time. These messages hold the LU Schema's name and information about its CDC tables.&nbsp;</p>
-<p>See the example in&nbsp;<a href="&quot;/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message---example">Appendix A</a>.</p>
+<p>See the example in&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message---example">Appendix A</a>.</p>
 </td>
 </tr>
 <tr>
