@@ -74,7 +74,7 @@ Fabric offers two Serialization class methods:
 <table>
 <tbody>
 <tr>
-     <td valign="top" width="300pxl">public static CdcMessage fromJson</td>
+<td valign="top" width="300pxl">public static CdcMessage fromJson</td>
 <td valign="top" width="600pxl">String msg, creates a CdcMessage object from an input message.</td>
 </tr>
 <tr>
