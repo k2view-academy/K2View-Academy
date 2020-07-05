@@ -47,14 +47,14 @@ Fabric has the following CDC messages:
 <p>CDC Delete Tables</p>
 </td>
 <td valign="top" width="550pxl">
-<p>Generated following a Delete LUI command.&nbsp;<br />To republish the CDC data of a deleted LUI, run the&nbsp;CDC_REPUBLISH_INSTANCE&nbsp;command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.</p>
+<p>Generated following a Delete LUI command.&nbsp;<br />To republish the CDC data of a deleted LUI, run the&nbsp;CDC_REPUBLISH_INSTANCE&nbsp;command. Note that the CDC data in the LU tables must be re-created.</p>
 <p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example">Appendix C</a>.</p>
 </td>
 </tr>
 <tr>
 <td valign="top" width="350pxl">CDC Table Change Info</td>
-<td valign="top" width="550pxl">Generated each time a MicroDB is updated. Triggered by INSERT, UPDATE or DELETE statements. These messages hold a list of PK columns in the LU tables and relevant changes in CDC columns.
-<p>To republish the CDC data of an LUI, run the **CDC_REPUBLISH_INSTANCE** command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.</p>
+<td valign="top" width="550pxl">Generated each time a MicroDB is updated and triggered by INSERT, UPDATE or DELETE statements. These messages hold a list of PK columns in the LU tables and relevant changes in CDC columns.
+<p>To republish the CDC data of an LUI, run the CDC_REPUBLISH_INSTANCE command. Note that the CDC data in the LU tables must be re-created by the CDC consumer.</p>
 <p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example">Appendix D</a>.</p>
 </td>
 </tr>
