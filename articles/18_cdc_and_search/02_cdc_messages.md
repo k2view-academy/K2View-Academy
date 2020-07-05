@@ -39,7 +39,7 @@ Fabric has the following CDC messages:
 </td>
 <td valign="top" width="550pxl">
 <p>Generated when an LU is redeployed to Fabric or following an <a href="/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command&nbsp;</a>and is only applicable for relevant changes like CDC column updates. These messages hold the&nbsp;LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.</p>
-<p>To see an example, refer to&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example">Appendix B</a>.</p>
+<p>To see an example, refer to&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message---example">Appendix B</a>.</p>
 </td>
 </tr>
 <tr>
@@ -48,14 +48,14 @@ Fabric has the following CDC messages:
 </td>
 <td valign="top" width="550pxl">
 <p>Generated following a Delete LUI command.&nbsp;<br />To republish the CDC data of a deleted LUI, run the&nbsp;CDC_REPUBLISH_INSTANCE&nbsp;command. Note that the CDC data in the LU tables must be re-created.</p>
-<p>To see an example, refer to&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message--example">Appendix C</a>.</p>
+<p>To see an example, refer to&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-c-cdc-delete-tables-message---example">Appendix C</a>.</p>
 </td>
 </tr>
 <tr>
 <td valign="top" width="350pxl">CDC Table Change Info</td>
 <td valign="top" width="550pxl">Generated each time a MicroDB is updated and is triggered by INSERT, UPDATE or DELETE statements. These messages hold a list of PK columns in LU tables and relevant changes in CDC columns.
 <p>To republish the CDC data of an LUI, run the CDC_REPUBLISH_INSTANCE command. Note that the CDC data in the LU tables must be re-created.</p>
-<p>To see an example, refer to&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example">Appendix D</a>.</p>
+<p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example">Appendix D</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -228,7 +228,7 @@ To view the list of Fabric APIs, click http://[Fabric IP address]:3213/static/do
 
 ### Appendix B: CDC Schema Update Message - Example
 
-#### A.   Schema Update
+#### Schema Update
 
 ```
 {
@@ -294,7 +294,7 @@ To view the list of Fabric APIs, click http://[Fabric IP address]:3213/static/do
 
 
 
-#### B.   Schema Drop
+#### Schema Drop
 
 ```
 {
@@ -367,9 +367,9 @@ To view the list of Fabric APIs, click http://[Fabric IP address]:3213/static/do
 
  
 
-### Appendix D: CDC Table Change Info Messagen- Example
+### Appendix D: CDC Table Change Info Message- Example
 
-#### A.   Data Change
+#### Data Change
 
 ```
 {
@@ -413,7 +413,7 @@ To view the list of Fabric APIs, click http://[Fabric IP address]:3213/static/do
 
  
 
-#### B.   Data Republish
+#### Data Republish
 
 ```
 {
