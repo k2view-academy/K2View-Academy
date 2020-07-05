@@ -38,7 +38,7 @@ Fabric has the following CDC messages:
 <p>CDC Schema Update</p>
 </td>
 <td valign="top" width="550pxl">
-<p>Generated when an LU is redeployed to Fabric or following an <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command.&nbsp;</a> and are only generated for relevant changes like CDC column updates. These messages hold the&nbsp;LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.</p>
+<p>Generated when an LU is redeployed to Fabric or following an <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command&nbsp;</a>and only for relevant changes like CDC column updates. These messages hold the&nbsp;LU Schema name, information about the affected CDC LU tables and specific CDC indexed columns.</p>
 <p>To see an example, refer to&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_CDC_Tali/articles/18_cdc_and_search/02_cdc_messages.md#appendix-b-cdc-schema-update-message--example">Appendix B</a>.</p>
 </td>
 </tr>
@@ -69,12 +69,13 @@ Fabric has the following CDC messages:
 ## Serialization
 
 CDC messages are stored in Kafka topics by their CDC Consumer Name defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization tool.
+
 Fabric offers two Serialization class methods: 
 <p>&nbsp;</p>
 <table>
 <tbody>
 <tr>
-<td valign="top" width="300pxl">public static CdcMessage fromJson</td>
+    <td valign="top" width="300pxl">public static CdcMessage fromJson</td>
 <td valign="top" width="600pxl">String msg, creates a CdcMessage object from an input message.</td>
 </tr>
 <tr>
