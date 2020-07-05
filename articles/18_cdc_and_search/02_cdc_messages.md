@@ -70,6 +70,11 @@ Fabric has the following CDC messages:
 CDC messages are stored in Kafka topics by their CDC Consumer Name as defined in the Fabric Studio and can be serialized or de-serialized using the Fabric Java Class com.k2view.fabric.cdc. Serialization tool.
 
 Fabric offers two Serialization class methods: 
+
+
+
+
+
 <p>
 <table>
 <tbody>
