@@ -26,7 +26,7 @@ The tutorial explains the usage of several most common [built-in Actor Types](/a
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) are Actors which have dynamic logic as one of their inputs. For these actors you can add inputs ports and refer to them in the Actor logic. For example, **JavaScript** Actor executes the Javascript provided in the 'script' parameter and returns the value of the last line. **javascript.flow** provides additional explanation of how this Actor works. 
 
-The **conditions** are implemented in Broadway via [**Split** option](articles/99_Broadway/19_broadway_flow_stages.md) in the context menu. You can split the flow and assign a condition to each sub stage. An **else** Stage will run if all other stage conditions returned false. The Stages in the same row are dependent on the Stages before them. Checkout **conditions.flow** for more conditions examples.
+The **conditions** are implemented in Broadway using [**Split** option](articles/99_Broadway/19_broadway_flow_stages.md) in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). You can split the flow and assign a condition to each sub stage. An **else** Stage will run if all other stage conditions returned false. The Stages in the same row are dependent on the Stages before them. Checkout **conditions.flow** for more conditions examples.
 
 The [flow loops](<!--Link to 22-Flow Loops-->) are implemented in Broadway via **Iterate** connection type. You can change the line type by selecting the line and changing its Link Type value to Iterate in the Properties Pane. To close the scope of the iteration, select **Iterate Close** from the Stage context menu. Checkout **iterate-for-each.flow** for more loop's examples.
 
