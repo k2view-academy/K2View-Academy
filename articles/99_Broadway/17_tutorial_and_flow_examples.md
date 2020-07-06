@@ -1,6 +1,6 @@
 # Broadway Tutorial and Flow Examples
 
-In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](<!--link to 16-Broadway flow overview-->) which guides a user step-by-step through a sample Business Process and explains how to implement it using the Broadway. 
+In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](articles/99_Broadway/16_broadway_flow_overview.md) which guides a user step-by-step through a sample Business Process and explains how to implement it using the Broadway. 
 
 In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. 
 
@@ -8,7 +8,7 @@ To open the tutorial or any additional example flow, go to **Actions > Examples*
 
 ![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
 
-The tutorial's explanations are provided using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage](<!--Link to 18-Flow Stages-->) or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md). A user can either:
+The tutorial's explanations are provided using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage]() or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md). A user can either:
 
 - Press * in the main menu of the flow in order to see all the remarks at once.
 - Or, press * in each Stage or Actor to see its remark.
@@ -26,7 +26,7 @@ The tutorial explains the usage of several most common [built-in Actor Types](/a
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) are Actors which have dynamic logic as one of their inputs. For these actors you can add inputs ports and refer to them in the Actor logic. For example, **JavaScript** Actor executes the Javascript provided in the 'script' parameter and returns the value of the last line. **javascript.flow** provides additional explanation of how this Actor works. 
 
-The **conditions** are implemented in Broadway via [**Split** option](<!--Link to 18-Flow Stages - Split-->) in the context menu. You can split the flow and assign a condition to each sub stage. An **else** Stage will run if all other stage conditions returned false. The Stages in the same row are dependent on the Stages before them. Checkout **conditions.flow** for more conditions examples.
+The **conditions** are implemented in Broadway via [**Split** option](articles/99_Broadway/19_broadway_flow_stages.md) in the context menu. You can split the flow and assign a condition to each sub stage. An **else** Stage will run if all other stage conditions returned false. The Stages in the same row are dependent on the Stages before them. Checkout **conditions.flow** for more conditions examples.
 
 The [flow loops](<!--Link to 22-Flow Loops-->) are implemented in Broadway via **Iterate** connection type. You can change the line type by selecting the line and changing its Link Type value to Iterate in the Properties Pane. To close the scope of the iteration, select **Iterate Close** from the Stage context menu. Checkout **iterate-for-each.flow** for more loop's examples.
 
