@@ -1,6 +1,6 @@
 # Broadway Flow Window
 
-**Broadway flow** window is the main Broadway UI component that enables the definition and execution of business processes  including all their [Stages](<!--Link to 18-Flow Stages-->), [Actors](/articles/99_Broadway/04_built_in_actor_types.md) and the [links between them](<!--Link to 21-Links-->). 
+**Broadway Flow** window is the main Broadway UI component that enables the definition and execution of business processes  including all the [Stages](<!--Link to 18-Flow Stages-->), [Actors](/articles/99_Broadway/04_built_in_actor_types.md) and the [links between the Actors](<!--Link to 21-Links-->). 
 
 The Broadway flow window includes the following elements:
 
