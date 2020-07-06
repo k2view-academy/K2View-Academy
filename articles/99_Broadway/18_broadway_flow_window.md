@@ -67,13 +67,13 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 
 To open the Stage context menu, click the three dots in the right corner of the Stage. This menu is dynamic, whereby some of the items are displayed only when they are applicable to the selected Stage. 
 
-![image](/articles/99_Broadway/images/99_18_02_stage_menu.png)
-
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td width="200pxl">Paste Selection</td>
-<td width="600pxl">Paste the copied selection, for example an Actor from another Stage.</td>
+<td rowspan="12" width="400pxl">
+<p><img src="/articles/99_Broadway/images/99_18_02_stage_menu.png" alt="Stage context menu" /></td>
+<td width="80pxl">Paste Selection</td>
+<td width="420pxl">Paste the copied selection, for example an Actor from another Stage.</td>
 </tr>
 <tr>
 <td width="200">Collapse</td>
