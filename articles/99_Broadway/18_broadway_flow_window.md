@@ -171,7 +171,7 @@ To open the Actor's context menu, click the three dots in the right corner of th
 
 ### Properties Tab
 
-The Broadway flow Properties tab  dynamically adjusts itself to display the data based on the Actor's structure, such as the number of [input and output parameters](<!--Link to 5-Input-Output types-->), their types and default values if exist. It can also display the properties of the connection between two Actors. When the link is selected, it will show the names of From and To Actors and parameters, as well as the [Link type](<!--Link to 21-Links-->)
+The Broadway flow Properties tab  dynamically adjusts itself to display the data based on the Actor's structure, such as the number of [input and output parameters](/articles/99_Broadway/03_broadway_actor.md#data-input-parameters), their types and default values if exist. It can also display the properties of the connection between two Actors. When the link is selected, it will show the names of From and To Actors and parameters, as well as the [Link type](<!--Link to 21-Links-->)
 If the Properties tab is displayed and the user clicks anywhere on the empty Stage area, the Properties tab will disappear. 
 
 **Example of Actor's Properties tab**
