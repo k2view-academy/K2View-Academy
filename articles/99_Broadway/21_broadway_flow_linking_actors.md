@@ -26,7 +26,7 @@ A **Const** actor named FileName sends the file name as a parameter to the **Fil
 
 ![link-example2](/articles/99_Broadway/images/invalid_link_example.png)
 
-### Link Object Properties
+## Link Object Properties
 
 A link holds the following settings:
 
@@ -53,10 +53,12 @@ A link holds the following settings:
   - Const1.value is linked to DbCommand1.params. The Varargs setting is OFF:
 
     ![varagrs-off](/articles/99_Broadway/images/link_varargs_off.png)
+    
 
   - Updating the Varargs setting to ON updates the params input variable and changes it to an array, holding two elements- the first element is linked to Const1.value and the second element is available for an additional link:
 
   ![varargs-on1](/articles/99_Broadway/images/link_varargs_on_1.png)
+  
 
   - Linking Const1.value to the second element of params array adds again an element to the params array to enable linking additional inputs to the params array:
 
@@ -71,7 +73,7 @@ A link holds the following settings:
 
   
 
-### How Do I Add Links to the Flow?
+## How Do I Add Links to the Flow?
 
 A **Link** can be created by either:
 
@@ -88,8 +90,9 @@ A **Link** can be created by either:
   - Click the **V** icon to save the changes.
 
     ![Adding link](/articles/99_Broadway/images/add_link_1.png)
+    
 
-#### Linking a Schema Object 
+### Linking a Schema Object 
 
 A Schema object contains different elements. 
 
@@ -135,17 +138,17 @@ Click the plus inside the parameter to open the **Data Inspection** object and v
 
 
 
-### How Do I Remove Links from the Flow?
+## How Do I Remove Links from the Flow?
 
 Click the connection line of the link and press the Delete key.
 
-### How Do I Edit Links in the Flow?
+## How Do I Edit Links in the Flow?
 
 Click the connection line of the link to open the Link object window on the right side of the Flow window.
 
 Edit the **Link Type** or **Varargs** settings. 
 
-### Show Only Connected Objects
+## Show Only Connected Objects
 
 Click the three dots icon (...) in the actor > Show only connected to show only actors connected (linked) to this actor.
 
