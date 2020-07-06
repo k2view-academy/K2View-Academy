@@ -1,6 +1,6 @@
 # Broadway Flow - Stages
 
-**A Broadway flow** act as a map which is built out of several [Stages](/articles/99_Broadway/!--Link to 18-Flow Stages--).  There can be [one or more Stages on the same level](/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-2-stages-on-the-same-level) and in each Stage - one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). The Stages are executed one by one from left to right. In case of several Stages on the same level, they are executed top down. The Actors within each Stage are also executed top down. 
+**A Broadway flow** acts as a graph (or tree) which is built out of several [Stages]().  There can be [one or more Stages on the same level](/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-2-stages-on-the-same-level) and in each Stage - one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). The Stages are executed one by one from left to right. In case of several Stages on the same level, they are executed top down. The Actors within each Stage are also executed top down. 
 
 ### How Do I Add or Delete a Stage?
 
