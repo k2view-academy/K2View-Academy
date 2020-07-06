@@ -9,7 +9,7 @@ The Broadway flow window includes the following elements:
 - [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
 - [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which allows to set and edit the properties of the selected object. 
 
-#### Main Menu
+### Main Menu
 
 The Main menu of the Broadway flow is located on top of the window and allows to perform the following activities:
 
@@ -63,7 +63,7 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 </tbody>
 </table>
 
-#### Stage Context Menu
+### Stage Context Menu
 
 To open the Stage context menu, click the three dots in the right corner of the Stage. This menu is dynamic, whereby some of the items are displayed only when they are applicable to the selected Stage. 
 
@@ -122,7 +122,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tbody>
 </table>
 
-#### Actor Context Menu
+### Actor Context Menu
 
 To open the Actor's context menu, click the three dots in the right corner of the Actor. 
 
@@ -169,7 +169,7 @@ To open the Actor's context menu, click the three dots in the right corner of th
 </tbody>
 </table>
 
-#### Properties Tab
+### Properties Tab
 
 The Broadway flow Properties tab  dynamically adjusts itself to display the data based on the Actor's structure, such as the number of [input and output parameters](<!--Link to 5-Input-Output types-->), their types and default values if exist. It can also display the properties of the connection between two Actors. When the link is selected, it will show the names of From and To Actors and parameters, as well as the [Link type](<!--Link to 21-Links-->)
 If the Properties tab is displayed and the user clicks anywhere on the empty Stage area, the Properties tab will disappear. 
