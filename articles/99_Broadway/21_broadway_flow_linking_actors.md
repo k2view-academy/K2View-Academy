@@ -53,24 +53,27 @@ A link holds the following settings:
   - Const1.value is linked to DbCommand1.params. The Varargs setting is OFF:
 
     ![varagrs-off](/articles/99_Broadway/images/link_varargs_off.png)
-    
-
-  - Updating the Varargs setting to ON updates the params input variable and changes it to an array, holding two elements- the first element is linked to Const1.value and the second element is available for an additional link:
-
+  
+  
+  
+- Updating the Varargs setting to ON updates the params input variable and changes it to an array, holding two elements- the first element is linked to Const1.value and the second element is available for an additional link:
+  
   ![varargs-on1](/articles/99_Broadway/images/link_varargs_on_1.png)
+
   
 
-  - Linking Const1.value to the second element of params array adds again an element to the params array to enable linking additional inputs to the params array:
-
-    ![varagrs-on2](/articles/99_Broadway/images/link_varargs_on_2.png)
-
-    
-
+  
+- Linking Const1.value to the second element of params array adds again an element to the params array to enable linking additional inputs to the params array:
+  
+  ![varagrs-on2](/articles/99_Broadway/images/link_varargs_on_2.png)
+  
+  
+  
   **Notes:**
 
   - All additional links to the output array are created automatically with Varagrs, set to ON.
   - If you set  the Varargs of one of these links to OFF, it changes back the target array, created by the Varargs, to its original type, and removes the other links to this target parameter.
-
+  
   
 
 ## How Do I Add Links to the Flow?
@@ -100,7 +103,8 @@ A Schema object contains different elements.
 
 The source parameter holds the following schema:
 
-`{
+```
+{
     "type": "object",
     "properties": {
         "name": {
@@ -116,7 +120,8 @@ The source parameter holds the following schema:
             "type": "string"
         }
     }
-}` 
+} 
+```
 
 Click the plus inside the parameter to open the **Data Inspection** object and view the parameters list inside the object:
 
