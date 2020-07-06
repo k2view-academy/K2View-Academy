@@ -126,13 +126,13 @@ To open the Stage context menu, click the three dots in the right corner of the 
 
 To open the Actor's context menu, click the three dots in the right corner of the Actor. 
 
-![image](/articles/99_Broadway/images/99_18_03_actor_menu.png)
-
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td width="200pxl">Collapse / Expand</td>
-<td width="600pxl">Collapse or Expand the Actor, keeping visible only the Actor's title.</td>
+<td rowspan="9" width="400pxl">
+<p><img src="/articles/99_Broadway/images/99_18_03_actor_menu.png" alt="Actor's context menu" /></p></td>
+<td width="80pxl">Collapse / Expand</td>
+<td width="420pxl">Collapse or Expand the Actor, keeping visible only the Actor's title.</td>
 </tr>
 <tr>
 <td width="200">Show Only Connected</td>
