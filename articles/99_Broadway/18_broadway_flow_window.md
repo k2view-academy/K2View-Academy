@@ -122,7 +122,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tbody>
 </table>
 
-### Actor Context Menu
+### Actor's Context Menu
 
 To open the Actor's context menu, click the three dots in the right corner of the Actor. 
 
