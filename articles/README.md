@@ -221,6 +221,12 @@
 </ul> 
          </ul>
 </details>
-        
+ 
+<details>
+<summary markdown="span"><strong>CDC and Search Capabilities <strong><a href="/articles/18_cdc_and_search/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
+</ul> 
+</details>        
+ 
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
