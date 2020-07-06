@@ -1,6 +1,6 @@
 # Broadway Flow- Linking Actors
 
-**A Broadway Flow** is a main Broadway object which represents a business process. A flow is built out of several [Stages](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/!--Link to 18-Flow Stages--) and each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). The Stages are executed one by one from left to right, while the Actors within each Stage of the flow are executed top down.
+**A Broadway Flow** is a main Broadway object which represents a business process. A flow is built out of several [Stages](/articles/99_Broadway/16_broadway_flow_overview.md) and each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). The Stages are executed one by one from left to right, while the Actors within each Stage of the flow are executed top down.
 
 Each actor has [Data input and output parameters](/articles/99_Broadway/03_broadway_actor.md#actor-window). An input parameter can be populated either by:
 
