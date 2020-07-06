@@ -4,7 +4,7 @@ In order to understand the Broadway main principles and capabilities, K2View pro
 
 In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. 
 
-To open the tutorial or any additional example flow, go to **Actions > Examples** in the main menu and select the example from the pop-up window.
+To open the tutorial or any additional example flow, go to **Actions > Examples** in the [main menu of the Broadway flow window](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) and select an example flow from the pop-up window.
 
 ![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
 
