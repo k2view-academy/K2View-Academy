@@ -2,7 +2,7 @@
 
 An [Actor](/articles/99_Broadway/03_broadway_actor.md) represents the activity (action) that must be executed on each [Stage]() of the **Broadway flow** to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.  
 
-Broadway has a large list of built-in Actors that can create various types of activities and can be added to each flow. 
+Broadway has a large built-in list of Actors that can create various types of activities and can be added to each flow. 
 
 To add a built-in Actor to the flow, click anywhere in the **Stage** area to open the **Add Actors to Hello Broadway** window.
 
@@ -34,9 +34,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
 </td>
 <td width="600">
-<p><li><strong>Const</strong> Actor, the input value argument is copied to the output value argument:</p>
-<ul>
-A constant value that:
+<p><li><strong>Const</strong> Actor, the input value argument is copied to the output value argument. A constant value that:
 <li>Receives its input from the output of a previous Actor and transfers it to the next Actor.</li>
 <li>Receives an external flow argument and transfers it to the next Actor.</li>
 </ul>
@@ -49,7 +47,7 @@ A constant value that:
 <h4><strong>basic</strong></h4>
 </td>
 <td width="433">
-<p>Actors serving as the basic building blocks for Broadway flow creation.</p>
+<p>Actors serving as the basic building blocks for creating the Broadway flow.</p>
 </td>
 <td width="600">
 <p><li><strong>ForLoop</strong>, the Actor iterates over a range of numbers.</p>
@@ -71,10 +69,12 @@ A constant value that:
 <p><li>Input values: Date, Format the output string following a predefined pattern and Time zone. 
 <li>Initial format: <strong>yyyy-MM-dd HH:mm:ss.SSS</strong>.
 <li>Initial value of the time zone: <strong>UTC</strong>. 
-The output is a string.</p>
+
+Output is a string.</p>
+
 For example:
  <li> To receive a day of the year in the output, add <strong>D</strong> to the format. 
- <li>To receive;a day of the week, add <strong>E</strong> to the format.</p>
+ <li>To receive a day of the week, add <strong>E</strong> to the format.</p>
 </td>
 </tr>
 <tr>
@@ -84,12 +84,12 @@ For example:
 <td width="433">Actions to be performed on a DB Interface, such as creating a new table, loading data or executing a DB command.&nbsp;</td>
 <td width="600">
 <p><strong>DbCommand</strong> Actor&nbsp;performs database commands on a DB command interface.</p>
-<p>The interface used as an input&nbsp;can be:
+<p>The interface used as input can be:
  <li>A JDBC URL.
  <li>Reference to a predefined interface.
- <li>Other inputs like the schema, table name, fields definition, SQL dialect to use and append, text appended to the CREATE command.
+ <li>Other input like the Schema, table name, fields definition, SQL dialect to use and append, text appended to the CREATE command.
 
-Can be used to create the WITH section where required.</p>
+DbCommand can be used to create the WITH section where required.</p>
 </td>
 </tr>
 <tr>
@@ -99,18 +99,16 @@ Can be used to create the WITH section where required.</p>
 <td width="433">Logical operation on Actors&nbsp;<strong>A</strong> and <strong>B</strong> which returns a <strong>True or False</strong> boolean result.
 <p>Broadway converts the following types of input parameters to booleans:</p>
 <ul>
-<li>Null/no input, False.</li>
-<li>Integer/double, True if not 0.</li>
-<li>String, True if not empty/0/False.</li>
-<li>Array/Map, True if not empty.</li>
+<li>Null / no input, False.</li>
+<li>Integer / double, True if not 0.</li>
+<li>String, True if not empty  /0 / False.</li>
+<li>Array  /Map, True if not empty.</li>
 </ul>
 </td>
 <td width="600">
-<p><strong>And </strong>Actor returns <strong>True</strong> if and only <strong>if both A and B </strong>are <strong>True</strong>. Both A and B&nbsp;should be boolean values or a value that can be converted to boolean.&nbsp;</p>
+<p><strong>And </strong>Actor returns <strong>True</strong> if and only <strong>if both A and B </strong>are <strong>True</strong>. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;</p>
 <p><li><strong>Elvis </strong>Actor returns&nbsp;<strong>A</strong> if converted to boolean is <strong>True</strong>. Otherwise it returns <strong>B</strong>.</p>
-<p><li><strong>IfElse</strong> Actor includes the <strong>test</strong> input to be validated as either True or False. 
- 
- <strong>If test is True</strong>, return <strong>A</strong>, else return <strong>B</strong>.</p>
+<p><li><strong>IfElse</strong> Actor includes the <strong>test</strong> input to be validated as either True or False. <strong>If test is True</strong>, return <strong>A</strong>, else return <strong>B</strong>.</p>
 </td>
 </tr>
 <tr>
@@ -162,7 +160,7 @@ Can be used to create the WITH section where required.</p>
 <p>Graphit and JsonStringify Actors are also included in this category.</p>
 </td>
 <td width="600">
-<p><li><strong>Regex</strong> Actor finds sub strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them.&nbsp;When using matching groups, the result is the content of the matching group instead of the whole match.</p>
+<p><li><strong>Regex</strong> Actor finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them.&nbsp;When using matching groups, the result is the content of the matching group instead of the whole match.</p>
 <p>For example, in the 'ABCDEF'string, the 'C.E' pattern returns ['CDE'], whereas 'C(.)E' returns ['D'].</p>
 <p><li><strong>Graphit</strong> Actor executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or, if not there, from the params input argument.</p>
 <p>The inputs are:
@@ -180,7 +178,7 @@ The Actor looks first at the input parameters (first level) and, if not found th
 <td width="433">System processes and commands to be performed in the file system, sych as copy, list or remove.&nbsp;</td>
 <td width="600">
 <p><strong>cp</strong> Actor copies a file.</p>
-<p>The interface to use as input&nbsp;can be a JDBC URL or a reference to a predefined interface. Other inputs include the path of the <strong>source</strong> file (from) and the <strong>destination</strong> (to). The output is a number of affected files.&nbsp;</p>
+<p>The interface used as input&nbsp;can be a JDBC URL or a reference to a predefined interface. Other inputs include the path of the <strong>source</strong> file (from) and the <strong>destination</strong> (to). The output is a number of affected files.&nbsp;</p>
 </td>
 </tr>
 </tr>
