@@ -80,11 +80,11 @@ To open the Stage context menu, click the three dots in the right corner of the 
 <td style="width: 465px;">Collapse the Stage.</td>
 </tr>
 <tr>
-<td width="200">Insert After / Insert Before</td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Insert After / Insert Before</a></td>
 <td style="width: 465px;">Add a new Stage after or before the selected one.</td>
 </tr>
 <tr>
-<td width="200">Delete</td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
 <td style="width: 465px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
 <tr>
