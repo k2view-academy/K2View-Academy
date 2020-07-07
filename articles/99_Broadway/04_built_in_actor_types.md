@@ -1,6 +1,6 @@
 # Built-In Actor Types
 
-An [Actor](/articles/99_Broadway/03_broadway_actor.md) represents the activity (action) that must be executed on each [Stage]() of the **Broadway flow** to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
+An [Actor](/articles/99_Broadway/03_broadway_actor.md) represents the activity (action) that must be executed on each [Stage]() of the **Broadway flow** to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.  
 
 Broadway has a large list of built-in Actors that can create various types of activities and can be added to each flow. 
 
@@ -9,7 +9,9 @@ To add a built-in Actor to the flow, click anywhere in the Stage area to open th
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
 Broadway's built-in  Actors are split into the following categories (tags), where each category includes several Actor types.
-Note that when clicking [Export Actor](<!--add link-->) from the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the Tag field doesn't exist in the Actor's categories.
+
+
+Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the Tag field doesn't exist in the Actor's categories.
 
 <table width="900pxl">
 <tbody>
@@ -47,7 +49,7 @@ Note that when clicking [Export Actor](<!--add link-->) from the [Actor's contex
 <h4><strong>basic</strong></h4>
 </td>
 <td width="433">
-<p>The Actors serving as the basic building blocks for Broadway flow creation.</p>
+<p>Actors serving as the basic building blocks for Broadway flow creation.</p>
 </td>
 <td width="600">
 <p><strong>ForLoop</strong> Actor iterates over a range of numbers.</p>
@@ -74,7 +76,7 @@ Note that when clicking [Export Actor](<!--add link-->) from the [Actor's contex
 <td width="210">
 <h4><strong>db</strong></h4>
 </td>
-<td width="433">Actions to be performed on a DB Interface, such as creation of a new table, load of data or execution of a DB command.&nbsp;</td>
+<td width="433">Actions to be performed on a DB Interface, such as creating a new table, loading data or executing a DB command.&nbsp;</td>
 <td width="600">
 <p><strong>DbCommand</strong> Actor&nbsp;performs database commands against a DB command interface.</p>
 <p>The interface to use as an Input&nbsp;can be a JDBC URL or a reference to a pre-defined interface. Other inputs include the schema, table name, fields definition,&nbsp;sql dialect to use and append -&nbsp;text to be appended to the create command. Can be used to create the WITH section where required.</p>
