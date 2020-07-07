@@ -2,23 +2,18 @@
 
 **Broadway Flow** window is the main Broadway UI component that enables the definition and execution of business processes  including all the [Stages](/articles/99_Broadway/18_broadway_flow_window.md), [Actors](/articles/99_Broadway/03_broadway_actor.md) and the [links between the Actors](<!--Link to 21-Links-->). 
 
-The Broadway flow window includes the following elements:
-
-- Main Flow Area
-- [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions
-- [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities, such as Split, Merge or Delete.
-- [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
-- [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which allows to set and edit the properties of the selected object. 
-
-### Main Flow Area
-
-Main flow area is where the Broadway flow is created. 
-
 To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name pop-up window.
 2. Populate the flow name and press **Ok**. The empty flow will open.
 
 ![image](/articles/99_Broadway/images/99_18_01_main_flow_area.PNG)
+
+The Broadway flow window includes the following elements:
+
+- [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions
+- [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities, such as Split, Merge or Delete.
+- [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
+- [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which allows to set and edit the properties of the selected object. 
 
 ### Main Menu
 
