@@ -1,13 +1,15 @@
 # Built-In Actor Types
 
-The [Actor](/articles/99_Broadway/03_broadway_actor.md) represents an activity (action) that should be executed on each [Stage]() of the **Broadway Flow**, that gets input parameters and returns output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
+An [Actor](/articles/99_Broadway/03_broadway_actor.md) represents the activity (action) that must be executed on each [Stage]() of the **Broadway flow** to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
 
-Broadway has a vast list of built-in Actors that can create various types of activities and can be added to each Flow. To add a built-in Actor to the flow, click anywhere on the Stage area and a pop-up window will open.
+Broadway has a large list of built-in Actors that can create various types of activities and can be added to each flow. 
+
+To add a built-in Actor to the flow, click anywhere in the Stage area to open the **Add Actors to Hello Broadway** window.
 
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
-The Broadway built-in Actors are split into the following categories (tags), while each category includes several Actor types.
-Note that when doing [Export Actor](<!--add link-->) from the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) will be created - if the value which you populate in the Tag field doesn't exist among the Actor's categories.
+Broadway's built-in  Actors are split into the following categories (tags), where each category includes several Actor types.
+Note that when clicking [Export Actor](<!--add link-->) from the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the Tag field doesn't exist in the Actor's categories.
 
 <table width="900pxl">
 <tbody>
@@ -27,16 +29,16 @@ Note that when doing [Export Actor](<!--add link-->) from the [Actor's context m
 <h4><strong>Favorites</strong></h4>
 </td>
 <td width="433">
-<p>Most commonly used Actors. Each Actor in the category Favorites also belongs to one of other categories.</p>
+<p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
 </td>
 <td width="600">
 <p><strong>Const</strong> Actor - the input value argument is copied to the output value argument.</p>
 <ul>
 <li>A constant value.</li>
-<li>Receives its input from the output of a previous Actor and passes it to the next Actor.</li>
-<li>Receives an external flow argument and passes it to the next Actor.</li>
+<li>Receives its input from the output of a previous Actor and transfers it to the next Actor.</li>
+<li>Receives an external flow argument and transfers it to the next Actor.</li>
 </ul>
-<p><strong>Concat</strong> Actor concatenates an array of strings and join them with the given delimiter.</p>
+<p><strong>Concat</strong> The Actor concatenates an array of strings and joins them with the given delimiter.</p>
 <p><strong>JavaScript</strong> Actor&nbsp;executes the Javascript provided in the 'script' parameter.&nbsp;The script returns the value of the last line.</p>
 </td>
 </tr>
@@ -45,7 +47,7 @@ Note that when doing [Export Actor](<!--add link-->) from the [Actor's context m
 <h4><strong>basic</strong></h4>
 </td>
 <td width="433">
-<p>The Actors which serve as the basic building blocks for Broadway flow creation.</p>
+<p>The Actors serving as the basic building blocks for Broadway flow creation.</p>
 </td>
 <td width="600">
 <p><strong>ForLoop</strong> Actor iterates over a range of numbers.</p>

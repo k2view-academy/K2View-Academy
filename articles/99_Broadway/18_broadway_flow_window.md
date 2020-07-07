@@ -4,10 +4,21 @@
 
 The Broadway flow window includes the following elements:
 
+- Main Flow Area
 - [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions
 - [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities, such as Split, Merge or Delete.
 - [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
 - [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which allows to set and edit the properties of the selected object. 
+
+### Main Flow Area
+
+Main flow area is where the Broadway flow is created. 
+
+To create a new Broadway flow:
+1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name pop-up window.
+2. Populate the flow name and press **Ok**. The empty flow will open.
+
+![image](/articles/99_Broadway/images/99_18_01_main_flow_area.PNG)
 
 ### Main Menu
 
@@ -24,7 +35,7 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 <ul>
 <li><a href="/articles/99_Broadway/17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
 <li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a> - save the current flow as an Actor, to enable logic re-use.</li>
-<li><a href="/articles/99_Broadway/26_xxxx.md">[Debug/Run Arguments]</a> - define input arguments for the flow execution, in case its population type is External.</li>
+<li>Debug/Run Arguments - click to open the pop-up window to define input arguments for the flow execution, in case its population type is External.</li>
 <li>Reset Parameters Schemas - reset Actor parameter schemas to the Actor original state. Removing the output schema for complex types will arease all the lines originating from the schema.</li>
 <li>Flip Scroll-wheel - command to the mouse scroll wheel to move the window scroll bar horizontally instead of vertically.</li>
 </ul>
@@ -80,15 +91,15 @@ To open the Stage context menu, click the three dots in the right corner of the 
 <td style="width: 465px;">Collapse the Stage.</td>
 </tr>
 <tr>
-<td width="200">Insert After / Insert Before</td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Insert After / Insert Before</a></td>
 <td style="width: 465px;">Add a new Stage after or before the selected one.</td>
 </tr>
 <tr>
-<td width="200">Delete</td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
 <td style="width: 465px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
 <tr>
-<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages">Split / Merge</a></td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split / Merge</a></td>
 <td style="width: 465px;">Split or Merge the selected Stage.</td>
 </tr>
 <tr>
