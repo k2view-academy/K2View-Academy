@@ -53,6 +53,8 @@ Note that even though any Actor can be used as a condition, a **JavaScript** Act
 
 **Stage Conditions Example**
 
+The below example have 4 Stages on the second flow level: two Stages with conditions, one Stage marked as **else** and a Stage without any condition. Depending on the flow input, different branches will be executed.
+
 ![image](/articles/99_Broadway/images/99_19_cond_example_1.PNG)
 
 The execution order of the Actors in the above flow will be as follows, depending on the flow input:
