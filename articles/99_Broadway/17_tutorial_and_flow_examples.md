@@ -1,6 +1,6 @@
 # Broadway Tutorial and Flow Examples
 
-In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example [Broadway flow](articles/99_Broadway/16_broadway_flow_overview.md) which guides a user step-by-step through a sample Business Process and explains how to implement it using the Broadway. 
+In order to understand the Broadway main principles and capabilities, K2View provides the **a-broadway-tutorial.flow** built-in tutorial. This is an example of a [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) which guides a user step-by-step through a sample Business Process and explains how to implement it using the Broadway. 
 
 In addition to the main tutorial, there are many other built-in example flows, each explaining a specific subject within Broadway in more details, for example DB commands, conditions, parsers, dates and strings handling. 
 
@@ -8,7 +8,7 @@ To open the tutorial or any additional example flow, go to **Actions > Examples*
 
 ![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
 
-The tutorial's explanations are provided using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage]() or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md). A user can either:
+The tutorial's explanations are provided using a **Remark** - a green asterisk (*) which appears in the right corner of a [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md). A user can either:
 
 - Press * in the main menu of the flow in order to see all the remarks at once.
 - Or, press * in each Stage or Actor to see its remark.
