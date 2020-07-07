@@ -20,18 +20,18 @@ To split a Stage, open the [Stage context menu](/articles/99_Broadway/18_broadwa
 - If the Stage before the current Stage is split (for example, there are 4 Stages on the same level), the current Stage will be split to the same number of Stages.
 
 The Stages can be merged under the following conditions:
-- The Stage belong to the group of Stages with the same parent Stage.
-- The parent Stage is not root.
+- The Stage belongs to the group of Stages with the same parent Stage.
+- The parent Stage is not a root.
 
 **Valid Merge Example**
 
-Merge can be done on any of the Stages 1, 4 or 5. 
+The Stages 1, 4 and 5 can be merged.
 
 ![image](/articles/99_Broadway/images/99_19_merge_example_1.PNG)
 
 **Invalid Merge Example**
 
-Merge cannot be done on the Stages 1 or 6 since they don't have a common parent.
+The Stages 1 and 6 cannot be merged since they don't have a common parent.
 
 ![image](/articles/99_Broadway/images/99_19_merge_example_2.PNG)
 
