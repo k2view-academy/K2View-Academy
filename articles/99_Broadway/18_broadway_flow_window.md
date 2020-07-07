@@ -11,7 +11,7 @@ To create a new Broadway flow:
 The Broadway flow window includes the following elements:
 
 - The main flow area where the Stages are added using the big plus sign or from the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). The Actors can be added to the Stage by clicking on the empty Stage area.
-- [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions
+- [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions, such as Save as Actor.
 - [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities, such as Split, Merge or Delete.
 - [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
 - [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which allows to set and edit the properties of the selected object. 
@@ -30,7 +30,7 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 <p>Drop-down menu, to perfom the actions:</p>
 <ul>
 <li><a href="/articles/99_Broadway/17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
-<li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a> - save the current flow as an Actor, to enable logic re-use.</li>
+<li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a> - save the current flow as an Actor, to re-use its logic as an Inner Flow in any other Broadway flow.</li>
 <li>Debug/Run Arguments - click to open the pop-up window to define input arguments for the flow execution, in case its population type is External.</li>
 <li>Reset Parameters Schemas - reset Actor parameter schemas to the Actor original state. Removing the output schema for complex types will arease all the lines originating from the schema.</li>
 <li>Flip Scroll-wheel - command to the mouse scroll wheel to move the window scroll bar horizontally instead of vertically.</li>
@@ -154,7 +154,7 @@ To open the Actor's context menu, click the three dots in the right corner of th
 <td style="width: 465px;">Click to delete the selected Actor.&nbsp;</td>
 </tr>
 <tr>
-<td width="200">[Link]</td>
+<td width="200"><a href="/articles/99_Broadway/21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow"> Link</a></td>
 <td style="width: 465px;">Click to connect the selected Actor with the required target Actor.&nbsp;&nbsp;</td>
 </tr>
 <tr>
