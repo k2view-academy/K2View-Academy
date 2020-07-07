@@ -24,7 +24,7 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 <ul>
 <li><a href="/articles/99_Broadway/17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
 <li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a> - save the current flow as an Actor, to enable logic re-use.</li>
-<li><a href="/articles/99_Broadway/26_xxxx.md">[Debug/Run Arguments]</a> - define input arguments for the flow execution, in case its population type is External.</li>
+<li>Debug/Run Arguments - click to open the pop-up window to define input arguments for the flow execution, in case its population type is External.</li>
 <li>Reset Parameters Schemas - reset Actor parameter schemas to the Actor original state. Removing the output schema for complex types will arease all the lines originating from the schema.</li>
 <li>Flip Scroll-wheel - command to the mouse scroll wheel to move the window scroll bar horizontally instead of vertically.</li>
 </ul>
@@ -88,7 +88,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 <td style="width: 465px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
 <tr>
-<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages">Split / Merge</a></td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split / Merge</a></td>
 <td style="width: 465px;">Split or Merge the selected Stage.</td>
 </tr>
 <tr>
