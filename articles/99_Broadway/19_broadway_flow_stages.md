@@ -55,11 +55,11 @@ Note that even though any Actor can be used as a condition, a **JavaScript** Act
 
 The below example shows a flow with 4 Stages on the second flow level: two Stages with conditions, one Stage marked as **else** and a Stage without any condition. Both conditions are checked, and then each related branche is executed only if the condition is true. The **else** branch is executed when both conditions are false. The Stage without any condition and its branch are always executed.
 
-The execution order of the Actors in the above flow will be as follows, depending on the flow input:
+Depending on the flow input, the execution order of the Actors in this flow will be as follows:
 
 - If both **Cond1 and Cond2 are true**: A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (true) -> B4-Split -> C1 -> Logger2 -> Count1
-- If **only Cond1 is true**: A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (false) -> C1 -> Logger2
-- If **only Cond2 is true**: A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-Split -> Logger2 -> Count1
+- If only **Cond1 is true**: A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (false) -> C1 -> Logger2
+- If only **Cond2 is true**: A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-Split -> Logger2 -> Count1
 - If both **Cond1 and Cond2 are false**: A1 -> Cond1 (false) -> Cond2 (false) -> B2 -> B3 -> Logger1 -> Logger2
 
 ![image](/articles/99_Broadway/images/99_19_cond_example_1.PNG)
