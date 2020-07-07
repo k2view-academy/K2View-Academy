@@ -53,24 +53,17 @@ Note that even though any Actor can be used as a condition, a **JavaScript** Act
 
 **Stage Conditions Example**
 
-The below example have 4 Stages on the second flow level: two Stages with conditions, one Stage marked as **else** and a Stage without any condition. Depending on the flow input, different branches will be executed.
-
-![image](/articles/99_Broadway/images/99_19_cond_example_1.PNG)
+The below example shows a flow with 4 Stages on the second flow level: two Stages with conditions, one Stage marked as **else** and a Stage without any condition. Both conditions are checked, and then each related branche is executed only if the condition is true. The **else** branch is executed when both conditions are false. The Stage without any condition and its branch are always executed.
 
 The execution order of the Actors in the above flow will be as follows, depending on the flow input:
 
-- If both **Cond1 and Cond2 are true**, the Actors execution order will be:
+- If both **Cond1 and Cond2 are true**: **A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (true) -> B4-Split -> C1 -> Logger2 -> Count1**
 
-  **A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (true) -> B4-Split -> C1 -> Logger2 -> Count1**
+- If **only Cond1 is true**: **A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (false) -> C1 -> Logger2**
 
-- If **only Cond1 is true**, the Actors execution order will be:
+- If **only Cond2 is true**: **A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-Split -> Logger2 -> Count1**
 
-  **A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (false) -> C1 -> Logger 2**
+- If both **Cond1 and Cond2 are false**: **A1 -> Cond1 (false) -> Cond2 (false) -> B2 -> B3 -> Logger1 -> Logger2**
 
-- If **only Cond2 is true**, the Actors execution order will be:
+![image](/articles/99_Broadway/images/99_19_cond_example_1.PNG)
 
-  **A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-Split -> Logger2 -> Count1**
-
-- If both **Cond1 and Cond2 are false**, the Actors execution order will be:
-
-  **A1 -> Cond1 (false) -> Cond2 (false) -> B2 -> B3 -> Logger1 -> Logger2**
