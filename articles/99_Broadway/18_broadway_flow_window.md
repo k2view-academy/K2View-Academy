@@ -10,6 +10,7 @@ To create a new Broadway flow:
 
 The Broadway flow window includes the following elements:
 
+- The main flow area where the Stages are added using the big plus sign or from the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). The Actors can be added to the Stage by clicking on the empty Stage area.
 - [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions
 - [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities, such as Split, Merge or Delete.
 - [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
