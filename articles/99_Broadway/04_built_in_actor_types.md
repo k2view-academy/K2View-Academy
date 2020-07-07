@@ -34,14 +34,14 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
 </td>
 <td width="600">
-<p><strong>Const</strong> Actor - the input value argument is copied to the output value argument.</p>
+<p><strong>Const</strong> Actor, the input value argument is copied to the output value argument:</p>
 <ul>
 <li>A constant value.</li>
 <li>Receives its input from the output of a previous Actor and transfers it to the next Actor.</li>
 <li>Receives an external flow argument and transfers it to the next Actor.</li>
 </ul>
-<p><strong>Concat</strong> The Actor concatenates an array of strings and joins them with the given delimiter.</p>
-<p><strong>JavaScript</strong> Actor&nbsp;executes the Javascript provided in the 'script' parameter.&nbsp;The script returns the value of the last line.</p>
+<p><strong>Concat</strong>, the Actor concatenates an array of strings and joins them with the given delimiter.</p>
+<p><strong>JavaScript</strong>, the Actor executes the Javascript provided in the 'script' parameter. The script returns the value of the last line.</p>
 </td>
 </tr>
 <tr>
@@ -52,10 +52,10 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Actors serving as the basic building blocks for Broadway flow creation.</p>
 </td>
 <td width="600">
-<p><strong>ForLoop</strong> Actor iterates over a range of numbers.</p>
-<p><strong>Logger</strong> Actor&nbsp;writes a message to the log file, referencing entries from the params and Actor inputs.</p>
-<p><strong>InnerFlow</strong> Actor executes a Broadway flow.</p>
-<p><strong>LuFunction</strong> Actor&nbsp;executes Studio function logic. Parameters to the function execution are picked up from input arguments or, if not there, from the params input argument.</p>
+<p><strong>ForLoop</strong>, the Actor iterates over a range of numbers.</p>
+<p><strong>Logger</strong>, the Actor writes a message to the log file, referencing entries from the params and Actor inputs.</p>
+<p><strong>InnerFlow</strong>, the Actor executes a Broadway flow.</p>
+<p><strong>LuFunction</strong>, the Actor executes Studio function logic. Parameters for the function's execution are taken from input arguments or, if not there, from the params input argument.</p>
 <p><strong>Email</strong> Actor&nbsp;sends an email using a given SMTP interface.</p>
 </td>
 </tr>
@@ -64,11 +64,16 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <h4><strong>date/time</strong></h4>
 </td>
 <td width="433">
-<p>Various date and time manipulation functions, such as DateAdd, DateFormat, Now.</p>
+<p>Various date and time manipulation functions, such as DateAdd, DateFormat or Now.</p>
 </td>
 <td width="600">
-<p><strong>DateFormat</strong> Actor&nbsp;formats a date into a string.&nbsp;</p>
-<p>The Inputs are: the date, the format of the output string following pre-defined pattern and a time zone. The initial format is&nbsp;<strong>yyyy-MM-dd HH:mm:ss.SSS</strong> and the initial value of the time zone is <strong>UTC</strong>. The output is a string.</p>
+<p><strong>DateFormat</strong>, the Actor&nbsp;formats a date into a string.&nbsp;</p>
+<p>The Input values are: 
+ <li>Date
+ <li>Format of the output string following a predefined pattern
+ <li>Time zone. 
+  
+  The initial format is&nbsp;<strong>yyyy-MM-dd HH:mm:ss.SSS</strong> and the initial value of the time zone is <strong>UTC</strong>. The output is a string.</p>
 <p>For example, to receive a day of the year in the output, add <strong>D</strong> to the format. To receive&nbsp;&nbsp;a day of the week, add <strong>E</strong>.</p>
 </td>
 </tr>
@@ -78,16 +83,16 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td width="433">Actions to be performed on a DB Interface, such as creating a new table, loading data or executing a DB command.&nbsp;</td>
 <td width="600">
-<p><strong>DbCommand</strong> Actor&nbsp;performs database commands against a DB command interface.</p>
-<p>The interface to use as an Input&nbsp;can be a JDBC URL or a reference to a pre-defined interface. Other inputs include the schema, table name, fields definition,&nbsp;sql dialect to use and append -&nbsp;text to be appended to the create command. Can be used to create the WITH section where required.</p>
+<p>A<strong>DbCommand</strong> Actor&nbsp;performs database commands against a DB command interface.</p>
+<p>The interface used as an Input&nbsp;can be a JDBC URL or a reference to a predefined interface. Other inputs include the schema, table name, fields definition,&nbsp;SQL dialect to use and append -&nbsp;text to be appended to the create command. Can be used to create the WITH section where required.</p>
 </td>
 </tr>
 <tr>
 <td width="210">
 <h4><strong>logic</strong></h4>
 </td>
-<td width="433">Logical operation on two Actors&nbsp;<strong>a</strong> and <strong>b</strong> which returns a boolean result&nbsp;- <strong>true or false</strong>.&nbsp;
-<p>Broadway will convert the following types of Input parameters to booleans:</p>
+<td width="433">Logical operation on Actors&nbsp;<strong>A</strong> and <strong>B</strong> which returns a strong>True or False</strong>.boolean result&nbsp.
+<p>Broadway converts the following types of Input parameters to booleans:</p>
 <ul>
 <li>Null/no input - false</li>
 <li>Integer/double - true if not 0</li>
@@ -96,9 +101,9 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </ul>
 </td>
 <td width="600">
-<p><strong>And </strong>Actor returns <strong>true</strong> if and only <strong>if both a and b </strong>are <strong>true</strong>. Both a and b&nbsp;should be boolean values or a value that can be converted to boolean.&nbsp;</p>
-<p><strong>Elvis </strong>Actor returns&nbsp;<strong>a</strong> if a converted to boolean is <strong>true</strong>. Otherwise it returns <strong>b</strong>.</p>
-<p><strong>IfElse</strong> Actor includes the <strong>test</strong> input to be validates as either true or false. <strong>If test is true</strong>, return <strong>a</strong>, else return <strong>b</strong>.</p>
+<p><strong>And </strong>Actor returns <strong>true</strong> if and only <strong>if both A and B </strong>are <strong>true</strong>. Both A and B&nbsp;should be boolean values or a value that can be converted to boolean.&nbsp;</p>
+<p><li>The <strong>Elvis </strong>Actor returns&nbsp;<strong>A</strong> if converted to boolean is <strong>true</strong>. Otherwise it returns <strong>B</strong>.</p>
+<p><li><strong>The IfElse</strong> Actor includes the <strong>test</strong> input to be validates as either true or false. <strong>If test is true</strong>, return <strong>A</strong>, else return <strong>B</strong>.</p>
 </td>
 </tr>
 <tr>
