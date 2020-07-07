@@ -1,9 +1,9 @@
 # Broadway Flow Overview
 
-**Broadway Flow** is a main Broadway object which represents a business process. A flow acts as a graph (or tree) which is built out of several [Stages]() and each Stage includes one or more [Actor](/articles/99_Broadway/03_broadway_actor.md). The Stages are executed one by one from left to right, while the Actors within each Stage of the flow are executed top down. 
+**Broadway Flow** is a main Broadway object which represents a business process. A flow acts as a graph (or tree) which is built out of several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) and each Stage includes one or more [Actor](/articles/99_Broadway/03_broadway_actor.md). The Stages are executed one by one from left to right, while the Actors within each Stage of the flow are executed top down. 
 
 ### Simple Flow
-Below is a simple flow with 3 stages and 4 actors. The execution order of the Actors within the flow is: **A1 -> B1 -> B2 -> C1**.
+Below is a simple flow with 3 Stages and 4 Actors. The execution order of the Actors within the flow is: **A1 -> B1 -> B2 -> C1**.
 
 ![image](/articles/99_Broadway/images/99_16_01_flow1.PNG)
 
