@@ -1,8 +1,8 @@
 # Built-In Actor Types
 
-The [Actor](/articles/99_Broadway/03_broadway_actor.md) represents an activity (action) that should be executed on each [Stage]() of the **Broadway Flow**, that gets input parameters and returns output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
+An [Actor](/articles/99_Broadway/03_broadway_actor.md) represents the activity (action) that must be executed on each [Stage]() of the **Broadway flow** to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object, concatenating a string.  
 
-Broadway has a vast list of built-in Actors that can create various types of activities and can be added to each Flow. To add a built-in Actor to the flow, click anywhere on the Stage area and a pop-up window will open.
+Broadway has a large list of built-in Actors that can create various types of activities and can be added to each flow. To add a built-in Actor to the flow, click anywhere on the Stage area and a pop-up window will open.
 
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
