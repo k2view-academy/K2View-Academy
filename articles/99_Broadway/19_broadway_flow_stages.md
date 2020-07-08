@@ -70,4 +70,4 @@ Depending on the flow input, the execution order of the Actors in this flow will
 
 ![image](/articles/99_Broadway/images/99_19_cond_example_1.PNG)
 
-[![Previous](/articles/images/Previous.png)](/articles/99_Broadway/18_broadway_flow_window.md.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/20_broadway_flow_linking_actors.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_Broadway/18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/20_broadway_flow_linking_actors.md)
