@@ -54,7 +54,7 @@ If needed, the schema can be edited at the run time. Click on the yellow segment
 
 ### How Do I Edit the Schema Using the Data Viewer?
 
-Additional way to edit the schema is using the Data Viewer. Click **Edit Schema** in the output argument's properties to open **Edit Schema** pop-up window.
+Additional way to edit the schema is using the [Data Viewer](). Click **Edit Schema** in the output argument's properties to open **Edit Schema** pop-up window.
 Then you can edit the schema manually and submit your change. The yellow segment will be refreshed and will display the updated schema.
 
 ![image](/articles/99_Broadway/images/99_27_04_data_viewer.PNG)
