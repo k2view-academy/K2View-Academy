@@ -10,7 +10,10 @@ To add a built-in Actor to the flow, click anywhere in the **Stage** area to ope
 
 Broadway's built-in  Actors are split into the following categories, where each category includes several Actor types.
 
-Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the **Tags** field does not exist in the Actor's categories.
+Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the **Tags** field does not exist in the Actor's existing categories.
+
+### Actor's Categories and Examples
+
 <table width="900pxl">
 <tbody>
 <tr>
@@ -18,15 +21,15 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <h3><strong>Category</strong></h3>
 </td>
 <td width="100pxl">
-<h3><a id="user-content-category-description" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#category-description" aria-hidden="true"></a><strong>Category Description</strong></h3>
+<h3><a id="user-content-category-description" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#category-description" aria-hidden="true"></a><strong>Category Description</strong></h3>
 </td>
 <td width="720pxl">
-<h3><a id="user-content-example-of-actors-per-category" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#example-of-actors-per-category" aria-hidden="true"></a><strong>Example of Actors per Category</strong></h3>
+<h3><a id="user-content-example-of-actors-per-category" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#example-of-actors-per-category" aria-hidden="true"></a><strong>Example of Actors per Category</strong></h3>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-favorites" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#favorites" aria-hidden="true"></a><strong>Favorites</strong></h4>
+<h4><a id="user-content-favorites" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#favorites" aria-hidden="true"></a><strong>Favorites</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
 <p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
@@ -34,7 +37,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <td style="vertical-align: top;" width="600">
 <p><strong>Const&nbsp;</strong>Actor, copies the input value argument to the output value argument.&nbsp;A Const Actor can:</p>
 <ul>
-<li>Pass a constant value to the next actor.</li>
+<li>Pass a constant value to the next Actor.</li>
 <li>Receive its input from the output of a previous Actor and transfer it to the next Actor.</li>
 <li>Receive an external flow argument and transfer it to the next Actor.&nbsp;&nbsp;</li>
 </ul>
@@ -42,7 +45,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-basic" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#basic" aria-hidden="true"></a><strong>basic</strong></h4>
+<h4><a id="user-content-basic" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#basic" aria-hidden="true"></a><strong>basic</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
 <p>Actors serving as the basic building blocks for creating the Broadway flow.</p>
@@ -57,7 +60,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-datetime" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#datetime" aria-hidden="true"></a><strong>date/time</strong></h4>
+<h4><a id="user-content-datetime" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#datetime" aria-hidden="true"></a><strong>date/time</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
 <p>Various Date and Time manipulation functions, such as DateAdd, DateFormat or Now.</p>
@@ -79,7 +82,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-db" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#db" aria-hidden="true"></a><strong>db</strong></h4>
+<h4><a id="user-content-db" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#db" aria-hidden="true"></a><strong>db</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">Actions to be performed on a DB interface, such as creating a new table, loading data or executing a DB command.&nbsp;&nbsp;</td>
 <td style="width: 600px; vertical-align: top;" width="600">
@@ -94,7 +97,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-logic" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#logic" aria-hidden="true"></a><strong>logic</strong></h4>
+<h4><a id="user-content-logic" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#logic" aria-hidden="true"></a><strong>logic</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">Logical operation on Actors&nbsp;<strong>A</strong>&nbsp;and&nbsp;<strong>B</strong>&nbsp;which returns a&nbsp;<strong>True or False</strong>&nbsp;boolean result.
 <p>Broadway converts the following types of input parameters to booleans:</p>
@@ -113,7 +116,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="width: 210px; vertical-align: top;" width="210">
-<h4><a id="user-content-math" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#math" aria-hidden="true"></a><strong>math</strong></h4>
+<h4><a id="user-content-math" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#math" aria-hidden="true"></a><strong>math</strong></h4>
 </td>
 <td style="width: 433px; vertical-align: top;" width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
 <td width="600">
@@ -123,7 +126,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td width="210">
-<h4><a id="user-content-parsers" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#parsers" aria-hidden="true"></a><strong>parsers</strong></h4>
+<h4><a id="user-content-parsers" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#parsers" aria-hidden="true"></a><strong>parsers</strong></h4>
 </td>
 <td width="433">Various parsers which can be received as input stream in different kinds of formats, for example, CSV, JSON or XML.</td>
 <td width="600">
@@ -132,7 +135,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td width="210">
-<h4><a id="user-content-queue" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#queue" aria-hidden="true"></a><strong>queue</strong></h4>
+<h4><a id="user-content-queue" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#queue" aria-hidden="true"></a><strong>queue</strong></h4>
 </td>
 <td width="433">Publish / subscribe messages to the queue.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
@@ -146,7 +149,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td width="210">
-<h4><a id="user-content-streams" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#streams" aria-hidden="true"></a><strong>streams</strong></h4>
+<h4><a id="user-content-streams" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#streams" aria-hidden="true"></a><strong>streams</strong></h4>
 </td>
 <td width="433">Various stream manipulation functions, such as Compress, FileRead or Http.</td>
 <td width="600">
@@ -156,7 +159,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-strings" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#strings" aria-hidden="true"></a><strong>strings</strong></h4>
+<h4><a id="user-content-strings" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#strings" aria-hidden="true"></a><strong>strings</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
 <p>Various string manipulation functions, such as Concat, Split or Trim.</p>
@@ -176,7 +179,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
-<h4><a id="user-content-system" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#system" aria-hidden="true"></a><strong>system</strong></h4>
+<h4><a id="user-content-system" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#system" aria-hidden="true"></a><strong>system</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
 <td width="600">
@@ -192,28 +195,3 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
