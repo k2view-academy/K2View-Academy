@@ -184,3 +184,5 @@ If the Properties tab is displayed and the user clicks anywhere on the empty Sta
 **Example of Actor's Properties tab**
 
 ![image](/articles/99_Broadway/images/99_18_04_properties.PNG)
+
+[![Previous](/articles/images/Previous.png)](/articles/99_Broadway/17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/19_broadway_flow_stages.md)
