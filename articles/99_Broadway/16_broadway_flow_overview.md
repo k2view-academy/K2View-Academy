@@ -1,7 +1,9 @@
 # Broadway Flow Overview
 
-A **Broadway Flow** is a major Broadway object and represents a business process. A flow acts as a graph or a tree and is built in several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](/articles/99_Broadway/03_broadway_actor.md). 
--  Stages are executed individually from left to right.
+A **Broadway Flow** is a core Broadway object that represents a business process. 
+
+Binding other objects into the same flow, a Broadway flow acts as a graph or a tree and is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](/articles/99_Broadway/03_broadway_actor.md). 
+-  Stages are executed consecutively from left to right.
 -  Actors in each Stage of the flow are executed top-down. 
 
 ### Simple Flow
@@ -15,7 +17,10 @@ Each Stage can be split into two stages (and so on) whereby there are several st
 ![image](/articles/99_Broadway/images/99_16_01_flow2.PNG)
 
 ### Flow with Condition
-A flow can be split when a condition like IF-ELSE is introduced, whereby a Stage condition is added to one section and the other section is set to ELSE. The execution order of the Actors in this flow is: **A1 -> B1 if true, otherwise B2 -> C1**. Note that a Stage condition is a grey object and a regular Actor is a yellow object.
+If a condition like IF-ELSE needs to be added, the flow can be split, whereby a Stage condition is defined on one section and the other section is set to ELSE. 
+The execution order of the Actors in this flow is: **A1 -> B1 if true, otherwise B2 -> C1**. 
+
+Note that a Stage condition is a grey object and a regular Actor is a yellow object.
 
 
 ![image](/articles/99_Broadway/images/99_16_01_flow3.PNG)
