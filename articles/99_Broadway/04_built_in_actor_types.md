@@ -11,7 +11,6 @@ To add a built-in Actor to the flow, click anywhere in the **Stage** area to ope
 Broadway's built-in  Actors are split into the following categories, where each category includes several Actor types.
 
 Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the **Tags** field does not exist in the Actor's categories.
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -33,10 +32,11 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
 </td>
 <td style="vertical-align: top;" width="600">
-<p><strong>Const&nbsp;</strong>Actor, the input value argument is copied to the output value argument. A constant value:</p>
+<p><strong>Const&nbsp;</strong>Actor, copies the input value argument to the output value argument.&nbsp;A Const Actor can:</p>
 <ul>
-<li>Receives its input from the output of a previous Actor and transfers it to the next Actor.</li>
-<li>Receives an external flow argument and transfers it to the next Actor.&nbsp;&nbsp;</li>
+<li>Pass a constant value to the next actor.</li>
+<li>Receive its input from the output of a previous Actor and transfer it to the next Actor.</li>
+<li>Receive an external flow argument and transfer it to the next Actor.&nbsp;&nbsp;</li>
 </ul>
 <strong>Concat&nbsp;</strong>Actor, concatenates an array of strings and joins them with the given delimiter.&nbsp;&nbsp;<strong><br /></strong><strong>JavaScript&nbsp;</strong>Actor, executes the Javascript provided in the 'script' parameter. The script returns the value of the last line.</td>
 </tr>
@@ -60,20 +60,20 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <h4><a id="user-content-datetime" class="anchor" href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/04_built_in_actor_types.md#datetime" aria-hidden="true"></a><strong>date/time</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
-<p>Various date and time manipulation functions, such as DateAdd, DateFormat or Now.</p>
+<p>Various Date and Time manipulation functions, such as DateAdd, DateFormat or Now.</p>
 </td>
 <td width="600">
 <p><strong>DateFormat&nbsp;</strong>Actor, formats a date into a string.&nbsp;&nbsp;</p>
 <ul>
-<li>Input values:&nbsp;Date,&nbsp;Format of the output string following a predefined pattern and&nbsp;Time Zone.</li>
-<li>Initial format:&nbsp;<strong>yyyy-MM-dd HH:mm:ss.SSS</strong>.</li>
-<li>Initial value of the time zone:&nbsp;<strong>UTC</strong>.</li>
+<li>Input values:&nbsp;Date, Output Format (following a predefined pattern) and&nbsp;Time Zone.</li>
+<li>Initial format:&nbsp;yyyy-MM-dd HH:mm:ss.SSS.</li>
+<li>Initial value of the time zone:&nbsp;UTC.</li>
 <li>Output: a string.</li>
 </ul>
 <p>For example:</p>
 <ul>
-<li>To receive a day of a year in the output, add&nbsp;<strong>D</strong>&nbsp;to the format.</li>
-<li>To receive a day of the week, add&nbsp;<strong>E</strong>&nbsp;to the format.&nbsp;</li>
+<li>To display a day of a year in the output, add&nbsp;<strong>D</strong>&nbsp;to the format.</li>
+<li>To display a day of the week in the output, add&nbsp;<strong>E</strong>&nbsp;to the format.&nbsp;</li>
 </ul>
 </td>
 </tr>
@@ -106,9 +106,9 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </ul>
 </td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>And&nbsp;</strong>Actor, returns&nbsp;<strong>True</strong>&nbsp;if and only&nbsp;<strong>if both A and B&nbsp;</strong>are&nbsp;<strong>True</strong>. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
-<p><strong>Elvis&nbsp;</strong>Actor, returns&nbsp;<strong>A</strong>&nbsp;if converted to boolean is&nbsp;<strong>True</strong>. Otherwise it returns&nbsp;<strong>B</strong>.</p>
-<p><strong>IfElse</strong>&nbsp;Actor, includes the&nbsp;<strong>test</strong>&nbsp;input to be validated as either True or False.&nbsp;<strong>If test is True</strong>, return&nbsp;<strong>A</strong>, else return&nbsp;<strong>B</strong>.&nbsp;</p>
+<p><strong>And&nbsp;</strong>Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
+<p><strong>Elvis</strong>&nbsp;Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise it returns&nbsp;B.</p>
+<p><strong>IfElse&nbsp;</strong>Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -118,7 +118,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <td style="width: 433px; vertical-align: top;" width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
 <td width="600">
 <p><strong>Aggregate</strong>&nbsp;Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
-<p><strong>MathDivMod</strong>&nbsp;Actor, returns the divisor and modulo factor of&nbsp;<strong>A</strong>&nbsp;and&nbsp;<strong>B</strong>.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
+<p><strong>MathDivMod</strong>&nbsp;Actor, returns the divisor and modulo factor of&nbsp;A&nbsp;and&nbsp;B.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -166,7 +166,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p><strong>Regex</strong>&nbsp;Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them.&nbsp;When using matching groups, the result is the content of the matching group instead of the full match. For example, in the 'ABCDEF'string, the 'C.E' pattern returns ['CDE'], whereas 'C(.)E' returns ['D'].&nbsp;</p>
 <p><strong>Graphit</strong>&nbsp;Actor, executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or, if not there, from the params input argument.&nbsp;The inputs are:</p>
 <ul>
-<li>LU containing the Graphit file (the initial value is k2_ws).</li>
+<li>LU containing the Graphit file (initial value = k2_ws).</li>
 <li>Graphit filename.</li>
 <li>Required output format (inital value = JSON).</li>
 <li>Parameters for Graphit execution.</li>
@@ -184,14 +184,17 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <ul>
 <li>JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
-<li>Path of the&nbsp;<strong>source</strong>&nbsp;file (from).</li>
-<li><strong>Destination</strong>&nbsp;(to).</li>
+<li>Path of the&nbsp;source&nbsp;file (from).</li>
+<li>Destination&nbsp;(to).</li>
 </ul>
 <p>The output is a number of affected files.&nbsp;</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+
+
 
 
 
