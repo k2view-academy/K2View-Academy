@@ -10,17 +10,15 @@ The data inspector can be open using a small **plus sign** next to the Actor's o
 
 If needed, the schema can be edited at the run time. Click on the yellow segment next to the schema element which you want to edit to open the context menu. 
 
-![image](/articles/99_Broadway/images/99_27_02.PNG)
-
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="7" width="400pxl">
+<td rowspan="7" width="420pxl">
 <p><img src="/articles/99_Broadway/images/99_27_02.PNG" alt="Context menu" /></p>
 </td>
-<td width="80pxl">Add Child</td>
+<td width="60pxl">Add Child</td>
 <td width="420pxl">
-<p>Add a child to the node. The Link bar will become available in the main menu area, to define the name and the type of the new element.</p>
+<p>Add a child to the selected element. The Link bar will become available in the main menu area, to define the name and the type of the new element.</p>
 <p><img src="/articles/99_Broadway/images/99_27_03.PNG" alt="Add Child" /></p>
 <p>This menu item is available only when clicking next to the parent node</p>
 </td>
@@ -28,7 +26,7 @@ If needed, the schema can be edited at the run time. Click on the yellow segment
 <tr>
 <td width="200">Add Sibling</td>
 <td style="width: 465px;">
-<p>Add a sibling to the node.The Link bar will become available in the main menu area, to define the name and the type of the new element.</p>
+<p>Add a sibling to the selected element. The Link bar will become available in the main menu area, to define the name and the type of the new element.</p>
 <p><img src="/articles/99_Broadway/images/99_27_04.PNG" alt="Add Sibling" /></p>
 </td>
 </tr>
