@@ -1,5 +1,5 @@
 # Broadway Tutorial and Flow Examples
-Introducing you to Broadway, its main principles and capabilities, the **Broadway Tutorial** provides you with the understanding needed to start using this module. In addition, you will also find examples of Broadway flows explaining specific subjects like DB commands, conditions, parsers, dates and strings and how they are handled.
+Introducing you to Broadway, its main principles and capabilities, the **Broadway Tutorial** provides you with the information needed to understand this module. In addition, you will also find examples of Broadway flows explaining specific subjects like DB commands, conditions, parsers, dates and strings and how they are handled.
 
 The following [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) guides you through each consecutive step of an example business process and explains how it is implemented.
 
@@ -11,7 +11,7 @@ Explanations in the Tutorial  appear in **Remarks** and can be displayed by clic
 - Click * in the **Main menu** of the flow to display all remarks.
 - Click * adjacent to each **Stage** or **Actor** to see its remarks.
 
-In the Tutorial a flow can run by either:
+In the Tutorial, a flow can be run by either:
 
 - Clicking **Run Flow** in the **Main menu** to run the entire flow and display the results.
 - Clicking **Debug Play** in the **Main menu** whereby the flow stops at the first break point. Click **Debug Step** to continue. 
@@ -26,11 +26,11 @@ The Tutorial explains the usage of a number of common [built-in Actor Types](/ar
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) include dynamic logic as one of their inputs. The input can be added to Actors and be referred to the Actor's logic. For example, **JavaScript** Actor executes the Javascript provided in the 'script' parameter and returns the value of the last expression. **javascript.flow** provides an additional explanation of how this Actor works. 
 
-In Broadway **conditions** are implemented using the [**Split** option](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). You can split the flow and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return False. Checkout **conditions.flow** for more conditions examples.
+In Broadway, **conditions** are implemented using the [**Split** option](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). You can split the flow and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return False. Checkout **conditions.flow** for more conditions examples.
 
-In Broadway [**flow loops**](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the line and change its **Link Type** value to **Iterate** in the **Properties Pane**. To close the scope of the iteration, select **Iterate Close** from the **Stage** context menu. Checkout **iterate-for-each.flow** for more loop's examples.
+In Broadway, [**flow loops**](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the **line** and change its **Link Type** value to **Iterate** in the **Properties Pane**. To close the scope of the iteration, select **Iterate Close** from the **Stage** context menu. Checkout **iterate-for-each.flow** for more loop's examples.
 
-Any Actor's input or output argument can be set as [External](<!--Link to 5-Actors-Input params-->). When marking an output parameter as External, it becomes an output for the entire flow. In addition, a flow can be invoked using the **InnerFlow** Actor. You can also [package an entire flow as an Actor](<!-- Add link to 23-Inner flow-->). To do so, go to **Actions > Save As Actor** in the **Main menu**. Checkout **javascript-advanced.flow**, **inner-flow-power.flow** and **inner-flow.flow** for more about input/output arguments and examples of the inner flow.  
+An Actor's input or output argument can be set as [External](<!--Link to 5-Actors-Input params-->). When marking an output parameter as External, it becomes an output for the entire flow. In addition, a flow can be invoked using the **InnerFlow** Actor. You can also [package an entire flow as an Actor](<!-- Add link to 23-Inner flow-->). To do so, go to **Actions > Save As Actor** in the **Main menu**. Checkout **javascript-advanced.flow**, **inner-flow-power.flow** and **inner-flow.flow** for more about input/output arguments and examples of the inner flow.  
 
 ### Example - json.flow 
 
