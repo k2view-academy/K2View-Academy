@@ -18,7 +18,7 @@ The Tutorial explains that a flow can be run by either:
 - Clicking **Run Flow** in the **Main menu** to run the entire flow and display the results.
 - Clicking **Debug Play** in the **Main menu** whereby the flow stops at the first break point. Click **Debug Step** to continue. 
 
-[Click for more information about the Debug flow](<!--Link to 26-Flow window- run + debug flow-->).
+[Click for more information about the Run and Debug flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md).
 
 The Tutorial explains the usage of a number of common [built-in Actor Types](/articles/99_Broadway/04_built_in_actor_types.md), for example:
 
