@@ -12,7 +12,7 @@ The Stages in the flow are executed consecutively from left to right. In case of
 
 A Stage can be added anywhere in the flow.
 
-- To add a Stage to the end of the flow, click on ![image](/articles/99_Broadway/images/99_19_plus.PNG) in the empty Stage area.
+- To add a Stage to the end of the flow, click on the big plus sign in the empty Stage area.
 - To add a Stage in the middle of the flow, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select either **Insert After** or **Insert Before**. 
 - To delete a Stage, select **Delete** from the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). If the Stage has a dependent branch, it will be deleted as well.
 
@@ -52,8 +52,8 @@ A merged Stage will run after all its parent Stages have been executed. If none 
 
 ### How Do I Define a Stage Condition?
 
-- To add a Stage condition to the flow, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the three dots in the right corner of the Stage and select **Stage Condition**. 
-- To mark a Stage as **else**, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the three dots in the right corner of the Stage and select **Else**.
+- To add a Stage condition to the flow, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select **Stage Condition**. 
+- To mark a Stage as **else**, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select **Else**.
 
 Note that even though any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor to express complex conditions. The script returns the value of the last line and it does not expect the 'return' keyword.
 
