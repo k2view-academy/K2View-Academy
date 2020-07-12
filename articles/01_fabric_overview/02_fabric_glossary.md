@@ -23,7 +23,7 @@
 <h4><strong>LU / LUT<strong>
 </td>
 <td width="482">
-<p>A <a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Digital Entity.&nbsp;</p>
+<p>A <a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit (LU)</a> or Logical Unit Type (LUT) is a blueprint holding a set of definitions / instructions used to create and maintain the data of a Digital Entity.</p>
 
 </td>
 </tr>
@@ -40,7 +40,7 @@
 <h4><strong>Instance ID<strong>
 </td>
 <td width="482">
-<p>The Instance ID is the unique Digital Entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit&rsquo;s Root table's PK column.</p>
+<p>The Instance ID is the unique Digital Entity identifier of an LUI. For example, Customer ID 12345 represents a specific customer of a CUSTOMER Logical Unit Type. This ID is set as the Logical Unit's Root table's PK column.</p>
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@
 <h4><a href="/articles/06_LU_tables/01_LU_tables_overview.md"><strong>LU Table<strong></a>
 </td>
 <td width="482">
-<p>The basic building block of a Logical Unit which defines a Digital Entity&rsquo;s data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
+<p>The basic building block of a Logical Unit which defines a Digital Entity's data, including columns, PKs, indexes and triggers. A Logical Unit may have one or many LU tables.</p>
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@
 <h4><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md"><strong>Root Table<strong></a>
 </td>
 <td width="482">
-<p>The main table in the Logical Unit. Based on the table&rsquo;s Primary Key field/s, the Instance ID is derived in addition to the LU and the schema&rsquo;s relationship. Only one LU table in an LUT can be set as a Root Table.</p>
+<p>The main table in the Logical Unit. Based on the table's Primary Key field/s, the Instance ID is derived in addition to the LU and the schema's relationship. Only one LU table in an LUT can be set as a Root Table.</p>
 </td>
 </tr>
 <tr>
@@ -85,10 +85,10 @@
 </tr>
 <tr>
 <td width="123">
-<h4><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#micro-databases-"><strong>MDB/MicroDB<strong>
+<h4><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#micro-databases-"><strong>MDB / MicroDB<strong>
 </td>
 <td width="482">
-<p>Micro-database, a small SQL database used for the storage of a Digital Entity Instance ( LUI ) data. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
+<p>Micro-database, a small SQL database used for the storage of a Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
 </td>
 </tr>
 <tr>
@@ -105,9 +105,9 @@
 </td>
 <td width="482">
 <p>The synchronization mode of an instance from source systems.</p>
-<p><b>ON</b> - Run the sync based on the sync method. This is the default mode.</p>
-<p><b>OFF</b> - Don&rsquo;t sync.</p>
-<p><b>FORCE</b> - Always sync.</p>
+<p><b>ON</b>: Run the sync based on the sync method. This is the default mode.</p>
+<p><b>OFF</b>: Don't sync.</p>
+<p><b>FORCE</b>: Always sync.</p>
 <p>The Fabric Set Sync command is used to set the Sync Mode.</p>
 </td>
 </tr>
@@ -117,10 +117,10 @@
 </td>
 <td width="482">
 <p>Defines how the sync will be performed (sync policy):</p>
-<p><b>NONE</b> - Do not sync.</p>
-<p><b>Time Interval</b> - Sync is performed automatically at the predefined time. Format = D.HH:DD:MM. Default = 1 Day.</p>
-<p><b>Inherited</b> - Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT schema.</p>
-<p><b>Decision function</b> - Sync is performed according to a Decision function which returns a True / False Boolean parameter.</p>
+<p><b>NONE</b>: Do not sync.</p>
+<p><b>Time Interval</b>: Sync is performed automatically at the predefined time. Format = D.HH:DD:MM. Default = 1 Day.</p>
+<p><b>Inherited</b>: Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT schema.</p>
+<p><b>Decision function</b>: Sync is performed according to a Decision function which returns a True / False Boolean parameter.</p>
 <p>The sync method can be set on LU Schema, LU Table, or Table Population levels.</p>
 </td>
 </tr>
@@ -137,7 +137,7 @@
 <h4><a href="/articles/15_web_services/17_Graphit/01_graphit_overview.md"><strong>Graphit<strong></a>
 </td>
 <td width="482">
-<p> A Fabric tool that can be used to create dynamic CSV, XML and JSON documents. It is useful for generating Fabric Web Service responses. The content of a response is defined during its execution, either according to specific parameters relevant to the specific Web Service call and the employed LUI, or by retrieving dynamic information from other databases or interfaces. The Graphit can be either invoked by a Web Service or directly. </p>
+<p> A Fabric tool that can be used to create dynamic CSV, XML and JSON documents. Graphit is useful for generating Fabric Web Service responses. The content of a response is defined during its execution, either according to specific parameters relevant to the specific Web Service call and the employed LUI, or by retrieving dynamic information from other databases or interfaces. Graphit can be either invoked by a Web Service or directly. </p>
 </td>
 </tr>
 <tr>
@@ -170,7 +170,7 @@
 <h4><strong>CQL<strong>
 </td>
 <td width="482">
-<p>Cassandra Query Language. CSQL is used by Fabric&rsquo;s Cassandra DB to query internal key spaces and tables.</p>
+<p>Cassandra Query Language. CSQL is used by Fabric's Cassandra DB to query internal key spaces and tables.</p>
 </td>
 </tr>
 <tr>
@@ -178,7 +178,7 @@
 <h4><strong>SOR<strong>
 </td>
 <td width="482">
-<p>System of Record, refers to the source system / application. This functionality enables running a single transaction on a specific LU table of the Instance ID, or on the (common) Reference table.&nbsp;This functionality enables Fabric to become the master of the data rather than syncing data from external systems.</p>
+<p>System of Record, refers to the source system / application. This functionality enables running a single transaction on a specific LU table of the Instance ID, or on the (common) Reference table. This functionality enables Fabric to become the master of the data rather than syncing data from external systems.</p>
 </td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@
 <h4><strong>Distributed DB<strong>
 </td>
 <td width="482">
-<p>A&nbsp;distributed database is&nbsp;a&nbsp;database&nbsp;that consists of two or more files located in different sites either on the same network or on entirely&nbsp; different networks. Sections of the&nbsp;database are&nbsp;stored in multiple physical locations whereby processing&nbsp;is distributed&nbsp;among multiple&nbsp;database&nbsp;nodes. This make them easy to expand and resilient. Fabric greatly reduces the processing complexity associated with their architecture &nbsp;</p>
+<p>A distributed database is a database that consists of two or more files located in different sites either on the same network or on entirely different networks. Sections of the database are stored in multiple physical locations whereby processing is distributed among multiple database nodes. This make them easy to expand and resilient. Fabric greatly reduces the processing complexity associated with their architecture.</p>
 </td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@
 <h4><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><strong>Enrichment Order<strong></a>
 </td>
 <td width="482">
-<p>Defines the order of the Enrichment functions &nbsp;execution. The order is set in the Logical Unit schema&rsquo;s properties.</p>
+<p>Defines the order of the Enrichment functions execution. The order is set in the Logical Unit schema&rsquo;s properties.</p>
 </td>
 </tr>
 <tr>
@@ -221,8 +221,8 @@
 <p>An Interface is a data communication channel between Fabric and any external systems.</p>
 <p>When multiple data sources are used by a Logical Unit, additional interfaces can be defined.</p> 
 <p>The interface types are:</p>
-<p><b>DB Interface</b> - enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
-<p><b>Non-DB Interface</b> - used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
+<p><b>DB Interface</b>, enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
+<p><b>Non-DB Interface</b>, used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
 </td>
 </tr>
 <tr>
@@ -290,8 +290,8 @@
 <h4><strong><a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md">Deployment</a><strong>
 </td>
 <td width="482">
-<p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one will not be reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
-<p>Deployment is needed for each implementation change. For example, LU schema definition changes, transformation rules changes to Functions, Globals and Translations.</p>
+<p>The action of applying the Fabric Studio component into the Fabric Server (DB). A newly created Fabric component or an updated one is not reflected in the Fabric DB until it is deployed to the Fabric Server.</p>
+<p>Deployment is needed for each implementation change. For example, LU schema definition changes, transformation rule changes in Functions, Globals and Translations.</p>
 </td>
 </tr>
 </tbody>
