@@ -7,11 +7,14 @@ To open the Tutorial and example flows, in the [Broadway Flow](/articles/99_Broa
 
 ![image](/articles/99_Broadway/images/99_17_01_tutorial.PNG)
 
-Explanations in the Tutorial are written in **Remarks** and can be displayed by clicking the * Green asterisk* in the right corner of a [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) or an [Actor](/articles/99_Broadway/04_built_in_actor_types.md).
-- Click * in the **Main menu** of the flow to display all remarks.
-- Click * in the right corner of a **Stage** or **Actor** to see its remarks.
+Explanations in the Tutorial are written in **Remarks** and can be displayed by either: 
+- Click ![image](/articles/99_Broadway/images/99_17_main_ast.PNG) in the [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
+- Click ![image](/articles/99_Broadway/images/99_17_green_ast.PNG) in the right corner of a [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) or [Actor](/articles/99_Broadway/04_built_in_actor_types.md) to see its remarks.
 
-The Turtorial explains that a flow can be run by either:
+More remarks can be added by selecting **Remark** from either [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) or [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu). 
+
+The Tutorial explains that a flow can be run by either:
+
 - Clicking **Run Flow** in the **Main menu** to run the entire flow and display the results.
 - Clicking **Debug Play** in the **Main menu** whereby the flow stops at the first break point. Click **Debug Step** to continue. 
 
@@ -28,7 +31,7 @@ The Tutorial explains the usage of a number of common [built-in Actor Types](/ar
 
 In Broadway, **conditions** are implemented using the [**Split**](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) option in the [Stage](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) context menu. You can split the flow and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return false. Checkout **conditions.flow** for more conditions examples.
 
-In Broadway, [**flow loops**](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the line and change its **Link Type** value to **Iterate** in the **Properties Pane**. To close the scope of the iteration, select **Iterate Close** from the Stage context menu. Checkout **iterate-for-each.flow** for more loop's examples.
+In Broadway, [**flow loops**](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the line and change its **Link Type** value to **Iterate** in the [Properties Tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab). To close the scope of the iteration, select **Iterate Close** from the Stage context menu. Checkout **iterate-for-each.flow** for more loop's examples.
 
 An Actor's input or output argument can be set as [External](<!--Link to 5-Actors-Input params-->). When marking an output parameter as External, it becomes an output for the entire flow. In addition, a flow can be invoked using the **InnerFlow** Actor. You can also [package an entire flow as an Actor](<!-- Add link to 23-Inner flow-->). To do so, go to **Actions > Save As Actor** in the **Main menu**. Checkout **javascript-advanced.flow**, **inner-flow-power.flow** and **inner-flow.flow** for more about input/output arguments and examples of the inner flow.  
 
