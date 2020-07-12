@@ -11,7 +11,7 @@ Explanations in the Tutorial are written in **Remarks** and can be displayed by 
 - Click ![image](/articles/99_Broadway/images/99_17_main_ast.PNG) in the [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
 - Click ![image](/articles/99_Broadway/images/99_17_green_ast.PNG) in the right corner of a [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) or [Actor](/articles/99_Broadway/04_built_in_actor_types.md) to see its remarks.
 
-More remarks can be added by selecting **Remark** from either [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) or [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu). 
+More remarks can be added by selecting **Remark** from either the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) or the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu). 
 
 The Tutorial explains that a flow can be run by either:
 
@@ -29,7 +29,7 @@ The Tutorial explains the usage of a number of common [built-in Actor Types](/ar
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) include dynamic logic as one of their inputs. The input can be added to Actors and be referred to the Actor's logic. For example, **JavaScript** Actor executes the Javascript provided in the 'script' parameter and returns the value of the last expression.  **javascript.flow** provides an additional explanation of how this Actor works. 
 
-In Broadway, **conditions** are implemented using the [**Split**](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) option in the [Stage](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) context menu. You can split the flow and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return false. Checkout **conditions.flow** for more conditions examples.
+In Broadway, **conditions** are implemented using the [**Split**](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) option in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). You can split the flow and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return false. Checkout **conditions.flow** for more conditions examples.
 
 In Broadway, [**flow loops**](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the line and change its **Link Type** value to **Iterate** in the [Properties Tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab). To close the scope of the iteration, select **Iterate Close** from the Stage context menu. Checkout **iterate-for-each.flow** for more loop's examples.
 
