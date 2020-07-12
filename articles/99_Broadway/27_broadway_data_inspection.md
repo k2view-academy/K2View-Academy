@@ -2,7 +2,7 @@
 
 **Data Inspector** is a Broadway capability to identify and display the complex data structures including their schema and the values which are passed between two Stages. It is applicable for **Object** data types only.
 
-The data inspector can be open using a small **plus sign** next to the Actor's output argument. When pressing on it, the **yellow segment** is expanded and it displays the schema on its left side and the data values on its right side. Note that the data values are displayed only when the flow runs in [Debug mode](<!--Link to 26-Flow window- run + debug flow-->). 
+The data inspector can be open using a small **plus sign** next to the Actor's output argument. When pressing on it, the **yellow segment** is expanded and it displays the schema on its left side and the data values on its right side. Note that the data values are displayed only when you [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
 
 ![image](/articles/99_Broadway/images/99_27_01.PNG)
 
