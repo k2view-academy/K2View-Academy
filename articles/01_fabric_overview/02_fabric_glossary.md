@@ -134,6 +134,14 @@
 </tr>
 <tr>
 <td width="123">
+<h4><a href="/articles/15_web_services/17_Graphit/01_graphit_overview.md"><strong>Graphit<strong></a>
+</td>
+<td width="482">
+<p> A Fabric tool that can be used to create dynamic CSV, XML and JSON documents. It is useful for generating Fabric Web Service responses. The content of a response is defined during its execution, either according to specific parameters relevant to the specific Web Service call and the employed LUI, or by retrieving dynamic information from other databases or interfaces. The Graphit can be either invoked by a Web Service or directly. </p>
+</td>
+</tr>
+<tr>
+<td width="123">
 <h4><strong>Common (Reference)<strong>
 </td>
 <td width="482">
