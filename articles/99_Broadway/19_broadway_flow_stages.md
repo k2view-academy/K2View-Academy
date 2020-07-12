@@ -1,19 +1,19 @@
 # Broadway Flow - Stages
 
-**A Broadway flow** acts as a graph (or tree) which is built out of several **Stages** - steps in the flow. 
+**A Broadway flow** acts as a graph (or tree) which is built out of several **Stages** - steps of the flow. 
 - Each Stage can have one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). 
 - The Stages can be [added or deleted](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage) from the flow.
 - The Stage can be split which creates [more than one Stage on the same level](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages). 
-- [Stage conditions](/articles/99_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow, to create various schenarios. It creates different branches of the same flow. 
+- [Stage conditions](/articles/99_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow, to create various schenarios (branches) of the same flow. 
 
-The Stages in the flow are executed one by one from left to right. In case of several Stages on the same level, the execution order is top down. The Actors within each Stage are also executed top down. 
+The Stages in the flow are executed consecutively from left to right. In case of several Stages on the same level, the execution order is top down. The Actors within each Stage are also executed top down. 
 
 ### How Do I Add or Delete a Stage?
 
-A Stage can be added anyway in the flow.
+A Stage can be added anywhere in the flow.
 
-- To add a Stage to the end of the flow, click on big plus sign in the empty Stage area.
-- To add a Stage in the middle of the flow, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the three dots in the right corner of the Stage and select either **Insert After** or **Insert Before**. 
+- To add a Stage to the end of the flow, click on ![image](/articles/99_Broadway/images/99_19_plus.PNG) in the empty Stage area.
+- To add a Stage in the middle of the flow, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select either **Insert After** or **Insert Before**. 
 - To delete a Stage, select **Delete** from the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). If the Stage has a dependent branch, it will be deleted as well.
 
 ### How Do I Split or Merge the Stages?
@@ -21,7 +21,7 @@ A Stage can be added anyway in the flow.
 Each Stage can be split into two (and so on), so there can be several stages on the same dependency level. 
 
 To split a Stage, open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) by clicking the three dots in the right corner of the Stage and select  **Split**. The Split logic depends on the position of the Stage in the flow and it includes the following rules:
-- The first Stage in the flow (root) can't be split. 
+- The split of the first Stage in the flow (root) is not allowed. 
 - If the Stage before the current Stage is not split, the current Stage will be split into two.
 - If the Stage before the current Stage is split (for example, there are 4 Stages on the same level), the current Stage will be split to the same number of Stages.
 
