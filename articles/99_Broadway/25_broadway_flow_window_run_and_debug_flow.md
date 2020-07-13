@@ -78,5 +78,6 @@ Broadway debug "learns" the schema of complex output parameter and can suggest t
 
   ![](/articles/99_Broadway/images/data_insepction_debug.png)
 
-
+Note:
+- Click Actions > Reset Parameters Schemas option reset the Actor parameter schemas to the Actor original state. Removing the output schema for complex types will erase all the lines originating from the schema.
 
