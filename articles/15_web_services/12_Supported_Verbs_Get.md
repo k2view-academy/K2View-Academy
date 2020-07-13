@@ -643,7 +643,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Table
 
-<p><code>[http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of fields separated by comma&amp;where=WHERE STATEMENT]&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of fields separated by comma&amp;where=WHERE STATEMENT]&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
 
 <table width="900pxl">
 <thead>
