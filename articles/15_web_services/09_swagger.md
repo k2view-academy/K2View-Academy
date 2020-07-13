@@ -10,7 +10,7 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
 ### Invoking and Testing Web Services Using Fabric Studio
 
-1. Go to: **http://<Fabric server>:3213/api** and then define the **IP Address** of the Fabric server. 
+1. Go to: **http://[Fabric server]:3213/api** and then define the **IP Address** of the Fabric server. 
    
    Or, 
    
