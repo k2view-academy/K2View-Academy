@@ -19,7 +19,7 @@ By the end of the Web Services learning item you will know:
 - How to authenticate a Web Service.
 - About the various supported response codes and verbs.
 <!--How to manage access rights for your web service- once Admin item is ready-->
-<!--How to use Graphit- Once item is ready-->
+- How to use Graphit
 
 
 
