@@ -24,7 +24,9 @@ Running Graphit:
 
 Invoking Graphit:
 - [Invoking Graphit Files](/articles/15_web_services/17_Graphit/07_invoking_graphit_files.md)
-- [Invoke Java](/articles/15_web_services/17_Graphit/08_invoke_javacode_from_graphit.md)
+- [Invoke Java Code from Graphit](/articles/15_web_services/17_Graphit/08_invoke_javacode_from_graphit.md)
+- [Invoke Graphit from a Web Form](/articles/15_web_services/17_Graphit/09_invoke_graphit_from_outside_studio.md)
 
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Creating a Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) [Graphit Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
+
