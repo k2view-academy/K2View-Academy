@@ -117,5 +117,8 @@ B: Accessing http://www.k2view.com/fabric/graphit/graphit.html
 
 C: Graphit files must be created and edited from withing Fabric Studio
 
-(***Solution 6: A ***)
+(***Solution 7: A ***)
 
+
+
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/06_how_to_use_graphit.md)
