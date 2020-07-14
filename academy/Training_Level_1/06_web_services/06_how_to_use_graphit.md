@@ -66,21 +66,21 @@ On which avenue does customer ID 1000 live ? Which are the 2 closest businesses 
 
 Step 1:
 
-![](/images/graphit_exercise1Step1.PNG)
-
+![](/academy/Training_Level_1/06_web_services/images/graphit_exercise1Step1.PNG)
+graphit_exercise1Step1.PNG
 Step 2:
 ```javascript
 "https://www.google.com/maps/search/?api=1&query="+LATLONG.split('::')[0]+","+LATLONG.split('::')[1]'''
 ```
 Step 3:
-![](/images/graphit_exercise1Step1.PNG)
+![](/academy/Training_Level_1/06_web_services/images/graphit_exercise1Step3.PNG)
 
 Step 4:
 Massachusetts Ave.
 
 Businesses: Yogulatte, Mass Avenue Pub
 
-![](/images/graphit_exercise1Step4.PNG)
+![](/academy/Training_Level_1/06_web_services/images/graphit_exercise1Step4.PNG)
             
             
 
