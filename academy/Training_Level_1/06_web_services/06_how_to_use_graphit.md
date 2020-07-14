@@ -29,14 +29,13 @@ Invoking Graphit:
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)
-Graphit 
-[Code Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
+Graphit [Code Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
 
 
 
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-**Exercise 1 - Create a Graphit web-service**
+**Exercise 1 - Create a Graphit Web-Service**
   
 For this exercise we will be referring to the exercise from previous section: [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md).
 There, we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
@@ -49,7 +48,7 @@ There, we associated a unique geo-location code to the Address table to build a 
             - LAT/LONG (previously populated using the translation table and concatenation function)
             
             Step 2:
-            Using Java Script, open a function node that will split the LAT/LONG field (e.g. 38.3484::-81.6323) and parse it to a map link"
+            Using Java Script, open a function node that will split the LAT/LONG field (e.g. 38.3484::-81.6323) and parse it to a map link
             in the following format: https://www.google.com/maps/search/?api=1&query=38.3484::-81.6323
             
             Step 3:
@@ -63,11 +62,26 @@ There, we associated a unique geo-location code to the Address table to build a 
 
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution Exercise 1 - Create a Graphit web-service**
+**Solution Exercise 1 - Create a Graphit Web-Service**
 
-            Step 1: 
+            Step 1:
            
+            ![](/images/graphit_exercise1Step1.PNG)
 
+            Step 2:
+            ```javascript
+            "https://www.google.com/maps/search/?api=1&query="+LATLONG.split('::')[0]+","+LATLONG.split('::')[1]'''
+            ```
+            Step 3:
+            ![](/images/graphit_exercise1Step1.PNG)
+            
+            Step 4:
+            Massachusetts Ave.
+            Businesses: Yogulatte, Mass Avenue Pub
+            
+            ![](/images/graphit_exercise1Step4.PNG)
+            
+            
 
 
 
