@@ -29,5 +29,6 @@ Invoking Graphit:
 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)
-[Graphit Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
+Graphit Examples
+[Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
 
