@@ -32,3 +32,28 @@ Invoking Graphit:
 Graphit Examples
 [Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
 
+
+
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
+
+**Exercise 1 - Create a Graphit web-service**
+  
+For this exercise we will be referring to the exercise from previous section: [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md#Exercise 2 - Translations).
+There, we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
+ 
+            Step 1: 
+            Open the CustomerLU address table
+            
+           
+
+
+#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+
+**Solution Exercise 1 - Create a Graphit web-service**
+
+            Step 1: 
+           
+
+
+
+
