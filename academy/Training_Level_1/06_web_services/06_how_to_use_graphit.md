@@ -82,7 +82,6 @@ Businesses: Yogulatte, Mass Avenue Pub
 
 ![](/academy/Training_Level_1/06_web_services/images/graphit_exercise1Step4.PNG)
             
-            
 
-
-
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/05_quiz.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/07_graphit_quiz.md)
