@@ -77,6 +77,7 @@ Step 3:
 
 Step 4:
 Massachusetts Ave.
+
 Businesses: Yogulatte, Mass Avenue Pub
 
 ![](/images/graphit_exercise1Step4.PNG)
