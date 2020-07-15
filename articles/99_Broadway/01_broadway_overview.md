@@ -1,39 +1,50 @@
 # Broadway Overview
 
-## What are Broadway Incentives?
-Broadway was introduced to Fabric for the first time on release 6.0. It enrich Fabric with the following capabilities:
 
-* ETL (Extract Transform Load) - replacing K2view ADI (Advanced Data Integration) tool for TDM (Test Data Management) and pure ETL projects (Data migration, data masking, data cleansing, data purging, data sequences management, etc..). Broadway resolves ADI technology obstacles, as it is written in Java and supports integration with any database provides a JDBC driver. Broadway can also integrate with all interfaces supported by Fabric, such as: http/s, publish and subscriber messages from JMS or Kafka, etc...
-* BPM (Business Process Management) - manage the business processes, covering both design and execution, adding the ability to define the business flow, the order of the activities and the reaction to each flow stage results, plus advanced error handling on a stage level that leads to the desired reaction.
-* Data Inspection - live data inspection capabilities with holistic and dynamic view on meta data (data structure) and actual data flow.
+Broadway is Fabric's module for designing data movement, transformation and orchestration business flows. Broadway provides a powerful user interface to create and debug business and data flows, coupled with a high performance execution engine that can be activated by Fabric.
 
-Broadway is the only tool in the world that capture business processes and data flows under one holistic view.
+Broadway is used throughout Fabric, wherever data movement and orchestration is needed. Some examples:
+* Logical Unit data population from external databases or REST APIs.
+* Move data from Fabric to external systems based on CDC or batch processes.
+* Subscribe to a message bus and consume messages.
+* Orchestration of scheduled activities through Fabric's job system.
+* Data transformation for web services.
 
-## Example
-
-* Create or truncate a table in Oracle DB.
-* Call Graphit Web-Service that bring Customer data including invoices and payments, store the results into a field in the new table.
-* Fetch one record from the new table.
-* Parse the JSON output structure.
-* Return output string with the list of invoices for the given customer separated by comma.
-
-In order to accomplish the example above the following steps should be implemented:
-
-First, define the stages in order to cover the BPM needs (order is from left to right):
-
-![image](/articles/99_Broadway/images/Broadway_stages.png)
-
-Secondly, define the actors and the relations between the actors, in order to cover data flows needs:
-
-![image](/articles/99_Broadway/images/Broadway_without_inspection.png)
-
-Third, use the data inspection capability in order to view the complex data structure by building a dynamic schema representing the meta data
-
-![image](/articles/99_Broadway/images/Broadway_full.png)
-
-## 
+Broadway is a flexible engine, seamlessly integrated into the fabric command system. You can leverage its power anywhere in Fabric's architecture layers for limitless use cases.
 
 
+## Orchestration and Business Process
+
+A Broadway flow is built out of Stages. The Stages are executed from left to right. The flow can be 'split' into different execution paths based on conditions. More than one stage can be executed in each fork in the path.
+
+![image](/articles/99_Broadway/images/Broadway_flow.png)
+
+In this example above, the "Fetch" stage is executed first. The system will then execute either the "Transform Consumer" or (else) the "Transform Business" stage. Finally it will execute the "Load" stage.
+
+
+## Logic and Data Transformation
+
+Each of the Stages can contain one or more Actors. Actors are reusable pieces of logic with input and output arguments that can be assembled together to create complex logic. The Actors are executed by the Stages.
+
+![image](/articles/99_Broadway/images/Broadway_actors.png)
+
+In this example, "Fetch" queries some data and passes it as inputs to the Actors on the next Stages. Based on the data, either the "Transform Consumer" stage is executed or the "Transform Business".
+In turn, these stages execute the Actors that build data for the DbLoad actor in the last stage.
+
+An important aspect of Actors is that an entire Broadway flow can be exported and encapsulated into an Actor and be reused between flows. This is powerful tool for reusing logic and dealing with high complexity flows.
+
+
+## Data Inspection
+
+As Broadway passes data between Actors, the data is visible in the Broadway studio. Complex data types (objects, arrays) are automatically detected and analyzed, and both metadata and data are visually rendered for easy debugging and extraction.
+
+![image](/articles/99_Broadway/images/Broadway_data_inspection.png)
+
+Above we can see the system automatically identifying the data structure of the "Fetch Customer" Actor. This enables picking specific fields from the data and passing them to the appropriate actors.
+
+## Stages, Actors, Data Inspection
+
+The powerful combination of execution by Stages and logic encapsulated in Actors are where Broadway gets its name. Coupled with the data and metadata inspection engine, they provide the main pillars of Broadway.   
+However, Broadway has additional capabilities that together provide a great way to model data movement and orchestration. We will explore them in the next article.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/02_broadway_high_level_components.md)
-
