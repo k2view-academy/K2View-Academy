@@ -1,8 +1,8 @@
 # Working with Graphit
 
-Graphit is a utility that allows you to design the documents response format of your web-services.
+Graphit is a utility that allows you to design a document's response format of a Web Service.
 
-### Creating and Editing a graphit file
+### Creating and Editing a Graphit File
 
 The following are the basic steps for creating a Graphit file and understanding its structure and properties:
 
@@ -37,32 +37,31 @@ Graphit [Code Examples](/articles/15_web_services/17_Graphit/10_graphit_examples
 
 **Exercise 1 - Create a Graphit Web-Service**
   
-For this exercise we will be referring to the exercise from previous section: [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md).
-There, we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
+In this exercise we refer to the exercise in: [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md) where we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
  
 Step 1: 
-Open the graphit editor and create a JSON form that will feature the following fields:
+Open the Graphit Editor and create a JSON form with the following fields:
 - Customer Full Name
 - Customer City
 - City International ID
 - LAT/LONG (previously populated using the translation table and concatenation function)
 
 Step 2:
-Using Java Script, open a function node that will split the LAT/LONG field (e.g. 38.3484::-81.6323) and parse it to a map link
-in the following format: https://www.google.com/maps/search/?api=1&query=38.3484::-81.6323
+Using JavaScript, open a function node that splits the LAT/LONG field (e.g. 38.3484::-81.6323) and parse it to a map link
+in the following format: https://www.google.com/maps/search/?api=1&query=38.3484::-81.6323.
 
 Step 3:
-Add a node of type field called Map Link to the graphit file
-Run the graphit file in debug mode for customer ID = 1000.
+Add a node of a field type called Map Link to the Graphit file.
+Run the Graphit file in Debug mode for customer ID = 1000.
 
 Step 4:
-Copy/Paste the link in your browser.
-On which avenue does customer ID 1000 live ? Which are the 2 closest businesses ? 
+Copy/paste the link in your browser.
+In which avenue does customer ID 1000 live? What are the two closest businesses? 
 
 
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution Exercise 1 - Create a Graphit Web-Service**
+**Solution Exercise 1 - Create a Graphit Web Service**
 
 Step 1:
 
