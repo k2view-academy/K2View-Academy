@@ -1,4 +1,4 @@
-# Working with Graphit
+# Working With Graphit
 
 Graphit is a utility that allows you to design a document's response format of a Web Service.
 
@@ -32,10 +32,9 @@ Invoking Graphit:
 Graphit [Code Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
 
 
-
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-**Exercise 1 - Create a Graphit Web-Service**
+**Exercise 1 - Create a Graphit Web Service**
   
 In this exercise we refer to the exercise in: [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md) where we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
  
