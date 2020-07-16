@@ -11,7 +11,7 @@ The following are the basic steps for creating a Graphit file and understanding 
 -  [Create and Edit a Graphit File](/articles/15_web_services/17_Graphit/02_create_and_edit_a_graphit_file.md)
 
 
-The following articles desscribe the different types of Graphit Nodes and their properties:
+The following articles describe the different types of Graphit Nodes and their properties:
 
 -  [Graphit Nodes Type](/articles/15_web_services/17_Graphit/03_graphit_node_types.md)
 
@@ -34,7 +34,7 @@ Graphit [Code Examples](/articles/15_web_services/17_Graphit/10_graphit_examples
 
 #### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-**Exercise 1 - Create a Graphit Web Service**
+### Exercise 1 - Create a Graphit Web Service 
   
 In this exercise we refer to the exercise in: [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md) where we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
  
