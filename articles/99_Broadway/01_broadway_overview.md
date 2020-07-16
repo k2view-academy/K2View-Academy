@@ -42,9 +42,13 @@ As Broadway passes data between Actors, the data is visible in the Broadway stud
 
 Above we can see the system automatically identifying the data structure of the "Fetch Customer" Actor. This enables picking specific fields from the data and passing them to the appropriate actors.
 
-## Stages, Actors, Data Inspection
 
-The powerful combination of execution by Stages and logic encapsulated in Actors are where Broadway gets its name. Coupled with the data and metadata inspection engine, they provide the main pillars of Broadway.   
-However, Broadway has additional capabilities that together provide a great way to model data movement and orchestration. We will explore them in the next article.
+## Learning Broadway
+
+The powerful combination of execution by Stages and logic encapsulated in Actors are where Broadway gets its name. Coupled with the data and metadata inspection engine, they provide the main pillars of Broadway.
+Broadway has additional capabilities that together provide a great way to model data movement and orchestration which we will explore in the next article. The rest of the articles in the knowledge base will go in depth into each feature.
+
+Another great way to learn how to use Broadway is from the built-in tutorial. From any Broadway flow you create, you can go to *Actions > Examples* and see documented sample flows. "a-broadway-tutorial.flow" takes you step by step through the major Broadway features and capabilities and can act as a good starting point. The other example flows focus on a single feature or capability, demonstrating and explaining them in depth.
+
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/02_broadway_high_level_components.md)
