@@ -2,7 +2,7 @@
 ### Simple example of a wsCustomerInfo Web Service that brings a line of data for a given instance  
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
-```
+```java
 String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 
 
@@ -30,7 +30,7 @@ Output:
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a Join query on several tables in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
 
-```
+```java
 String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION,sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE " +
 		"from CUSTOMER cust, CONTRACT cont, SUBSCRIBER sub where cont.CONTRACT_ID=sub.SUBSCRIBER_ID";
 
@@ -146,7 +146,7 @@ Web Service inside logic
 
 The wsGetTaskExeStatsForEntity Web Service used by TDMGUI brings a map of all entity lists related to a given LUI that are related to the same business entity. That is, all instances related to all LUT under the same task execution that are defined as a parent or child of the given input LUI, call recursive functions to get a full hierarchy path. 
 
-```
+```java
 String sqlGetEntityData = "select lu_name luName, target_entity_id targetId, entity_id sourceId, " +
 	"execution_status luStatus from TDM.task_Execution_link_entities  " +
 	"where lu_name <> ? and target_entity_id = ? and entity_id = ?";
@@ -217,4 +217,4 @@ if (otherRootRecs != null) {
 return mainOutput;
 ```
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/07_deploy_web_services.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_deploy_web_services.md)
