@@ -6,7 +6,7 @@ A Debug process can be run on an LUBD file that has been generated in the Fabric
 
 To define input parameter values, click **Parameters** on the top left side of the Graphit window.
 
-Click for more information about [Graphit Input parameters](/articles/15_web_services/17_Graphit/06_using_graphit_files_with_parameters.md).
+Click for more information about [Graphit Input parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md).
 
 ### What Are the Graphit Debug Options?   
 <table>
@@ -21,7 +21,7 @@ Click for more information about [Graphit Input parameters](/articles/15_web_ser
 </tr>
 <tr>
 <td valign="top" width="300pxl">Parameters</td>
-<td valign="top" width="600pxl">Click to open the Parameters window to populate the Debug parameters. These parameters (and not their debug value) are also used when Graphit is invoked by <a href="/articles/15_web_services/09_swagger.md">Swagger</a>.
+<td valign="top" width="600pxl">Click to open the Parameters window to populate the Debug parameters. These parameters (and not their debug value) are also used when Graphit is invoked by <a href="/articles/15_web_services_and_graphit/09_swagger.md">Swagger</a>.
   
 </tr>
 <tr>
@@ -50,5 +50,5 @@ Click for more information about [Graphit Input parameters](/articles/15_web_ser
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/17_Graphit/04_graphit_node_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/17_Graphit/06_using_graphit_files_with_parameters.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/15_web_services_and_graphit/06_using_graphit_files_with_parameters.md)
 
