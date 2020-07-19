@@ -40,18 +40,20 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 5. Select **a-broadway-tutorial** to open the Broadway Tutorial flow.
 6. Click the **Run Flow** icon to run the flow.
 
-  <ul><ul>
-  <li><code>What is the result of the flow?</code></li>
-  </ul></ul>
+  <ul>
+ <p><code>6.1 What is the result of the flow?</code></p>
+  </ul>
 
 7. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow.
 
 <ul><ul>
-<li><code>How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?</code></li>
-<li><code>Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?</code></li>
-<li><code>What&nbsp;is the output of the <strong>StringBuilder</strong> Actor?&nbsp;</code></li>
-<li><code>How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.</code></li>
-<li><code>What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?</code></li>
+<pre><code>
+7.1 How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?<br>
+7.2 Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
+7.3 What is the output of the <strong>StringBuilder</strong> Actor?
+7.4 How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
+7.5 What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?
+</code></pre>
 </ul></ul>
  
   ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **"splitting the flow"** to read its remark, and check the value of the Actor in the **"paradox"** Stage to help you answer this question.
@@ -61,19 +63,19 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
   - Was the new **Now** Actor, added to to **Stage 3** exectued? Why
   
   <ul>
-<li><code>Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></li>
+<p><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></p>
 </ul>
   
 10. Click the **Stop Debug** icon tp stop the debugging.
 11. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
 12. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
 13. Run the flow.
-<ul><li><code>What is the flow result?</code></li></ul> 
+<ul><p><code>What is the flow result?</code></p></ul> 
 
 14. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
-<ul><li><code>How may flows do you have now?</code></li></ul>
+<ul><p><code>How may flows do you have now?</code></p></ul>
 
 15. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
-<ul><li><code>Which value is set for the input parameter?</code></li></ul> 
+<ul><p><code>Which value is set for the input parameter?</code></p></ul> 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
