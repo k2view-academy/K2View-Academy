@@ -5,8 +5,8 @@ The following URL structure is used to call Fabric Web Services:
 <p><code>http://&lt;IP address&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json]</p></code>
 
 Input parameters can be transferred to Fabric Web Services either as:
-- [Part of the URL path.](/articles/15_web_services/08_web_services_input_parameters.md#transfering-input-parameters-as-part-of-the-url-path)
-- [Not part of the URL path.](/articles/15_web_services/08_web_services_input_parameters.md#transferring-input-parameters-not-part-of-the-url-path)  
+- [Part of the URL path.](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md#transfering-input-parameters-as-part-of-the-url-path)
+- [Not part of the URL path.](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md#transferring-input-parameters-not-part-of-the-url-path)  
 
 ### Transferring Input Parameters As Part of the URL Path
 
@@ -14,7 +14,7 @@ To set Web Service input parameters to be part of the Web Service URL, add them 
 
 For example: 
 
-<img src="/articles/15_web_services/images/Web-Service-KI-8-1.png" alt="drawing"/> 
+<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-8-1.png" alt="drawing"/> 
 
 In the above screenshot the **i_migrateId** and **i_runMode** input parameters have been set as part of the URL related to the **wsMigrateStatsParams** Web Service which is called as follows:  
 
@@ -38,6 +38,6 @@ For example:
 
 If an input parameters is correctly set but is not transferred as a part of the URL, the Web Service displays the relevant error code.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/07_deploy_web_services.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/09_swagger.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/07_deploy_web_services.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/09_swagger.md)
 
 
