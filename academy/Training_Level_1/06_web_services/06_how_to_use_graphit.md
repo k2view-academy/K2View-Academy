@@ -31,7 +31,6 @@ to invoke Graphit files:
 
 
 
-<img src="/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png" width="30" height="30"></img>
 ### Exercise 1 - Create a Graphit Web Service 
 
 In this exercise we refer to the exercise in [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md) where we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
@@ -56,7 +55,6 @@ In this exercise we refer to the exercise in [LU Enhancements - Translations](/m
     In which avenue does customer ID 1000 live? What are the two closest businesses? 
 
 
-<img src="/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png" width="30" height="30"></img>
 ### Solution Exercise 1 - Create a Graphit Web Service
 
 Step 1: 
