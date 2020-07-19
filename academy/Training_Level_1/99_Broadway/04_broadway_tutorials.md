@@ -35,14 +35,16 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 1. Download the [demo project] (/articles/demo_project) and open this project in your **Fabric Studio**.
 2. Go to the **Project Tree**, right click the **Broadway** and select **New Flow**.
-2. Populate the **Name** in the **Flow name** popup window by **test**.
-3. In the Flow Window, Click **Actions** and then select **Examples**.
-4. Select **a-broadway-tutorial** to open the Broadway Tutoria flow.
-5. Click the **Run Flow** icon to run the flow.
+3. Populate the **Name** in the **Flow name** popup window by **test**.
+4. In the Flow Window, Click **Actions** and then select **Examples**.
+5. Select **a-broadway-tutorial** to open the Broadway Tutorial flow.
+6. Click the **Run Flow** icon to run the flow.
 
-- What is the result of the flow? 
+ <ul>
+ <li><code>What is the result of the flow?</code></li>
+ </ul>
 
-6. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow. 
+7. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow.
 
 <ul>
 <li><code>How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?</code></li>
@@ -52,20 +54,24 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 <li><code>What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?&nbsp;<br /><p> Click the green asterisk icon in the <strong>"splitting the flow"</strong> to read its remark, and check the value of the Actor in the <strong>"paradox"</strong> Stage to help you answer this question.</code></li>
 </ul>
   
- 7. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
- 8. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
+ 8. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
+ 9. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
   - Was the new **Now** Actor, added to to **Stage 3** exectued? Why
   
-9. Click the **Stop Debug** icon tp stop the debugging.
-10. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
-11. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
-12. Run the flow.
-- What is the flow result? 
+  <ul>
+<li><code>Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></li>
+</ul>
+  
+10. Click the **Stop Debug** icon tp stop the debugging.
+11. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
+12. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
+13. Run the flow.
+<ul><li><code>What is the flow result?</code></li></ul> 
 
-13. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
-- How may flows do you have now?
+14. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
+<ul><li><code>How may flows do you have now?</code></li></ul>
 
-14. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
-- Which value is set for the input parameter? 
+15. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
+<ul><li><code>Which value is set for the input parameter?</code></li></ul> 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
