@@ -4,7 +4,7 @@ Graphit is a utility that allows you to design the document response format of a
 
 ### Creating and Editing a Graphit File
 
-The following are the basic steps for creating a Graphit file and understanding its structure and properties:
+The following are the basic documents for creating a Graphit file and understanding its structure and properties:
 
 -  [Graphit Overview](/articles/15_web_services/17_Graphit/01_graphit_overview.md).
 
