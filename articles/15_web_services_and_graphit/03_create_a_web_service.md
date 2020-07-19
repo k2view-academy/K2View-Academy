@@ -16,17 +16,17 @@ The following steps discuss how a new Web Service is created and include options
 
 3. Select the preferred **DB Connection**. To access Fabric, select **Newest**  [**LU Name**](/articles/03_logical_units/01_LU_overview.md). Note that for the newest file of an LU to be part of the DB Connections list, at least one LUI must be executed using the [**Data Viewer**](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) .
 
-   <img src="/articles/15_web_services/images/Web-Service-KI-3-2.png"/>  
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-2.png"/>  
 
 4. Click the **DB File** icon to display the **Logical Unit Tables** list.
 
-   <img src="/articles/15_web_services/images/Web-Service-KI-3-3.png" alt="drawing"/>  
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-3.png" alt="drawing"/>  
 
 5. Click the **table** that retrieves the data, check the **Columns list** and right click the **column** that is the **Input** parameter for data retrieval. 
 
 6. Click **Add Selected to Input Parameters**.
 
-    <img src="/articles/15_web_services/images/Web-Service-KI-3-4.png" alt="drawing"/> 
+    <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-4.png" alt="drawing"/> 
 
    Note that the Column Name, Data Type, Mandatory and Comments are displayed in the Input Parameters list in the lower right pane.
    
@@ -45,8 +45,8 @@ The following steps discuss how a new Web Service is created and include options
     <p>Replace the <strong>&lt;instanceID&gt; placeholder</strong> with the input parameter <strong>CUSTOMER_ID</strong>.</p>
     <p>Db.Rows rows = ludb("Customer", CUSTOMER_ID).fetch(sql);</p>
 
-9. Set the [**Web Service Properties**](/articles/15_web_services/02_web_services_properties.md) in the upper right corner pane.
+9. Set the [**Web Service Properties**](/articles/15_web_services_and_graphit/02_web_services_properties.md) in the upper right corner pane.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/04_web_services_function_basic_structure.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/04_web_services_function_basic_structure.md)
 
 
