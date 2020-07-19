@@ -25,14 +25,15 @@ to invoke Graphit files:
 - [Invoking Graphit Files](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)
 - [Invoke Java Code from Graphit](/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md)
 - [Invoke Graphit from a Web Form](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)
+
+
+
 ### Graphit Code Examples  
 - [Code Examples](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
 
 
+### Exercise 1 - Create a Graphit Web Service <img src="/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png" width="50" height="50"></img>
 
-![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)  
-### Exercise 1 - Create a Graphit Web Service 
 In this exercise we refer to the exercise in [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md) where we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
  
     Step 1: 
@@ -54,10 +55,8 @@ In this exercise we refer to the exercise in [LU Enhancements - Translations](/m
     Copy / paste the link in your Browser.
     In which avenue does customer ID 1000 live? What are the two closest businesses? 
 
-
-
-![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
-### Solution Exercise 1 - Create a Graphit Web Service
+ 
+### Solution Exercise 1 - Create a Graphit Web Service <img src="/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png" width="50" height="50"></img>
 
 Step 1: 
 
