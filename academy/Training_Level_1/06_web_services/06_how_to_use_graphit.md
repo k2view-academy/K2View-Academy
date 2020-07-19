@@ -1,6 +1,6 @@
 # Working With Graphit
 
-Graphit is a utility that allows you to design a document's response format of a Web Service.
+Graphit is a utility that allows you to design the document response format of a Web Service.
 
 ### Creating and Editing a Graphit File
 
@@ -8,8 +8,7 @@ The following are the basic steps for creating a Graphit file and understanding 
 
 -  [Graphit Overview](/articles/15_web_services/17_Graphit/01_graphit_overview.md)
 
--  [Create and Edit a Graphit File](/articles/15_web_services/17_Graphit/02_create_and_edit_a_graphit_file.md)
-
+-  [Creating and Editing a Graphit File](/articles/15_web_services/17_Graphit/02_create_and_edit_a_graphit_file.md)
 
 ### Graphit Nodes 
 The following articles describe the different types of Graphit Nodes and their properties:
@@ -18,22 +17,18 @@ The following articles describe the different types of Graphit Nodes and their p
 
 -  [Graphit Nodes Properties](/articles/15_web_services/17_Graphit/04_graphit_node_properties.md)
 
-
 ### Running or Invoking Graphit
 You can run Graphit either:
-- In debug mode from the Graphit Editor: [Graphit Debugging](/articles/15_web_services/17_Graphit/05_graphit_debugging.md)
+- In Debug mode from the Graphit Editor: [Graphit Debugging](/articles/15_web_services/17_Graphit/05_graphit_debugging.md)
 - [Using Graphit with Parameters](/articles/15_web_services/17_Graphit/06_using_graphit_files_with_parameters.md)
-
 To invoke Graphit files:
 - [Invoking Graphit Files](/articles/15_web_services/17_Graphit/07_invoking_graphit_files.md)
 - [Invoke Java Code from Graphit](/articles/15_web_services/17_Graphit/08_invoke_javacode_from_graphit.md)
 - [Invoke Graphit from a Web Form](/articles/15_web_services/17_Graphit/09_invoke_graphit_from_outside_studio.md)
 
-
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)
 ### Graphit Code Examples Graphit 
 - [Code Examples](/articles/15_web_services/17_Graphit/10_graphit_examples.md)
-
 
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
@@ -59,7 +54,6 @@ Run the Graphit file in Debug mode for customer ID = 1000.
 Step 4:
 Copy/paste the link in your browser.
 In which avenue does customer ID 1000 live? What are the two closest businesses? 
-
 
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
