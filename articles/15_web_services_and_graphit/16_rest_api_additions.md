@@ -97,6 +97,6 @@ HttpServletResponse response = response();
 response.setHeader(String,String);
 
 ```
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/15_Supported_Verbs_Delete.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md)
 
 
