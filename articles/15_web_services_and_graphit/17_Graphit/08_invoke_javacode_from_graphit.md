@@ -15,12 +15,12 @@ A decision can be made whethere to convert this amount into GBP or EUR currency 
 
 The following screenshot displays how dataset nodes and JavaScript nodes are defined as children of the main Balance node:
 
-![](/articles/15_web_services/17_Graphit/images/50_invoke_javacode_from_graphit.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/50_invoke_javacode_from_graphit.PNG)
 
 
 The following screenshot displays how Debug mode is run with the customer_id set to 1000 and the conversion currency set to False (i.e. GBP currency):
 
-![](/articles/15_web_services/17_Graphit/images/51_invoke_javacode_from_graphit.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/51_invoke_javacode_from_graphit.PNG)
 
 
 The following scereenshot displays how the Web Service is deployed and launched in Swagger:
@@ -50,11 +50,11 @@ return graphit("LambdaGraphit1.graphit", scope);
 
 Graphit file LambdaGraphit1.graphit: 
 Note that the function times defined above are called from the node **field 1** (defined as a function) on a variable called **dbl** declared in the parent node 
-![](/articles/15_web_services/17_Graphit/images/52a_invoke_javacode_from_graphit.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/52a_invoke_javacode_from_graphit.PNG)
 
 
 Output using Swagger GUI:
-![](/articles/15_web_services/17_Graphit/images/52b_invoke_javacode_from_graphit.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/52b_invoke_javacode_from_graphit.PNG)
 
 
 Limitations:
@@ -62,5 +62,5 @@ This type of functions cannot be debugged in the Graphit Editor since the functi
   
  
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/17_Graphit/07_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/17_Graphit/09_invoke_graphit_from_outside_studio.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
 
