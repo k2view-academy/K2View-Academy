@@ -20,11 +20,11 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
     b. Go the the **Project Tree**, right click the **Web Service** and then click **Invoke Web Service**.
 
-   <img src="/articles/15_web_services/images/Web-Service-Swagger-1.png" alt="drawing"/>
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-1.png" alt="drawing"/>
 
   Once the link to Swagger is invoked, you can focus on a given version of the invoked URL path. For example, by adding /v1 to the URL as shown below.
 
-   <img src="/articles/15_web_services/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
 The relevant invoked Web Service is expended and points to the correct verb. 
 *	If only the GET verb is defined as illegible for the invoked Web Service, it will only display the GET verb  as an option.
@@ -33,21 +33,21 @@ The relevant invoked Web Service is expended and points to the correct verb.
 
 3. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
 
-   <img src="/articles/15_web_services/images/Web-Service-Swagger-2.png" alt="drawing"/>
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
    If JSON / XML or CSV examples were defined in the Web Service properties in the Studio, they are displayed in Swagger.
 
-   <img src="/articles/15_web_services/images/Web-Service-Swagger-4.png" alt="drawing"/>
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
 4. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
 5. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 
-   <img src="/articles/15_web_services/images/Web-Service-Swagger-3.png" alt="drawing"/>
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-3.png" alt="drawing"/>
 
 6. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (XML or CSV) and respond accordingly.
 
-   <img src="/articles/15_web_services/images/Web-Service-Swagger-5.png" alt="drawing"/>
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
 ### Swagger - Supported Web Services Categories
 Fabric Web Services are displayed in Swagger in categories and in alphabetical order.
@@ -61,6 +61,6 @@ Fabric Web Services are displayed in Swagger in categories and in alphabetical o
    
    * Project defined categories for Web Services.
    
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/10_legacy_annotation.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/10_legacy_annotation.md)
  
 
