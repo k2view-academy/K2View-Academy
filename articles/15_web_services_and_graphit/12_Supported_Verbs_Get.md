@@ -1181,6 +1181,6 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 During a failure, the error description structure is returned according to RFC 7807 guidelines with the required details.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/11_response_codes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/13_Supported_Verbs_Post.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/11_response_codes.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/13_Supported_Verbs_Post.md)
 
 
