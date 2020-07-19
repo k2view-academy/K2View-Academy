@@ -83,8 +83,8 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <p>Methods supported by the Web Service, as follows:&nbsp;</p>
 <ul>
 <li><strong>GET</strong>, get data.&nbsp;</li>
-<li><strong>PUT</strong>, create new data based on the data provided.&nbsp;</li>
-<li><strong>POST</strong>, update data.&nbsp;</li>
+<li><strong>POST</strong>, create new data based on the data provided.&nbsp;</li>
+<li><strong>PuT</strong>, update data.&nbsp;</li>
 <li><strong>DELETE</strong>, delete data.</li>
 <p>To select a method, click the dropdown list and enable it. Note that at least one method should be selected.</p>
 </td>
