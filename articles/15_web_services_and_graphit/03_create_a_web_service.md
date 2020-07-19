@@ -10,7 +10,7 @@ The following steps discuss how a new Web Service is created and include options
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
 
-   <img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/>     
+   <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-1.png" alt="drawing"/>     
 
 2. Click either the **Objects** or **Database** tab (left pane) and then either > **DB Interface**, **Newest Reference File**, or **Newest** **LU File**.
 
@@ -37,7 +37,7 @@ The following steps discuss how a new Web Service is created and include options
 
     The generated code is displayed in the Java Editor window and includes the basic structure of the call to the interface or LUDB and the Fetch method. Note that you can also write your own code. 
 
-    <img src="/articles/15_web_services/images/Web-Service-KI-3-5.png" alt="drawing"/>  
+    <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-5.png" alt="drawing"/>  
 
 8. Once the code is generated, edit the function based on the logic to be applied. For example:
 
