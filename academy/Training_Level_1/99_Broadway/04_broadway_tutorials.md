@@ -44,12 +44,13 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 6. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow. 
 
-- How many iterations run on the **StringBuilder** Actor of the **for stage** Stage? 
-- Which input value is sent to the  **StringBuilder** Actor on each iteration? 
-- What is the output of the **StringBuilder** Actor? 
-- How many outoputs does the **StringBuilder** return? Please explain.
-- What is the next Stage, executed after the **splitting the flow** Stage? Why? \
-  Click the green asterisk icon in the **splitting the flow** to read its remark, and check the value of the Actor in the **paradox** Stage to help you answer this question.
+<ul>
+<li><code>How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?</code></li>
+<li><code>Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?</code></li>
+<li><code>What&nbsp;is the output of the <strong>StringBuilder</strong> Actor?&nbsp;</code></li>
+<li><code>How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.</code></li>
+<li><code>What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?&nbsp;<br /><p> Click the green asterisk icon in the <strong>"splitting the flow"</strong> to read its remark, and check the value of the Actor in the <strong>"paradox"</strong> Stage to help you answer this question.</code></li>
+</ul>
   
  7. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
  8. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
@@ -62,7 +63,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 - What is the flow result? 
 
 13. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
-- How may flows do you habbe now?
+- How may flows do you have now?
 
 14. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
 - Which value is set for the input parameter? 
