@@ -60,10 +60,9 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
  
  8. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
  9. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
-  - Was the new **Now** Actor, added to to **Stage 3** exectued? Why
   
   <ul>
-<p><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></p>
+<pre><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></pre>
 </ul>
   
 10. Click the **Stop Debug** icon tp stop the debugging.
@@ -86,13 +85,25 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
   6.1 The flow result is "Hellow Broadway"</code></pre>
  </ul>
   
-<ul>
+<ul><ul>
 <pre><code>
 7.1  + 7.2- The flow executes two iterations run on the <strong>StringBuilder</strong> Actor- the first iteration runs on "Hello" and the second iteration runs on "Broadway".
 7.3 The <strong>StringBuilder</strong> returns the following output: "Hello Broadway".
 7.4 The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop, and builds the String. The "for each" State is marked by "Iterate Close". As a result- the StringBuilder in this Stage closes the loop and only then returns its output.
 7.5 The next Stage, executed after the <strong>"splitting the flow"</strong> Stage, is the "Dynamic Logic Actors", since this Stage is on the same level as the "else" of the condition, and the condition returns "false". See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>
 </code></pre>
+</ul><ul>
+ 
+ <ul>
+<pre><code>9.1 The new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> was not exectued, since this Stage runs only if the "paradox" condition is fulfilled.</code></pre>
 </ul>
+
+<ul>
+<pre><code>13.1 The flow result is "Broadway Training".</code></pre>
+</ul> 
+
+<ul><pre><code>14.1 There are two flow. A local copy of the tutorial flow was saved in the Fabric project by its execution.</code></pre></ul>
+
+<ul><pre><code>15.1 The value of the input parameter is "Broadway Training". You can edit the flow and save the changes, or execute the flow. A local copy pf the flow is saved in the Fabric project. </code></pre></ul> 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
