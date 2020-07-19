@@ -102,6 +102,6 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 Delete works like GET. All parameters should be populated on the URL or header.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/14_Supported_Verbs_Put.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/16_rest_api_additions.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/14_Supported_Verbs_Put.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/16_rest_api_additions.md)
 
 
