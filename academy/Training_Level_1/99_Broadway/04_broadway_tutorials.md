@@ -38,19 +38,33 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 2. Populate the **Name** in the **Flow name** popup window by **test**.
 3. In the Flow Window, Click **Actions** and then select **Examples**.
 4. Select **a-broadway-tutorial** to open the Broadway Tutoria flow.
+5. Click the **Run Flow** icon to run the flow.
 
 - What is the result of the flow? 
 
-5. Add a Brakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. 
+6. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow. 
 
 - How many iterations run on the **StringBuilder** Actor of the **for stage** Stage? 
 - Which input value is sent to the  **StringBuilder** Actor on each iteration? 
 - What is the output of the **StringBuilder** Actor? 
+- How many outoputs does the **StringBuilder** return? Please explain.
+- What is the next Stage, executed after the **splitting the flow** Stage? Why? \
+  Click the green asterisk icon in the **splitting the flow** to read its remark, and check the value of the Actor in the **paradox** Stage to help you answer this question.
+  
+ 7. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
+ 8. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
+  - Was the new **Now** Actor, added to to **Stage 3** exectued? Why
+  
+9. Click the **Stop Debug** icon tp stop the debugging.
+10. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
+11. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
+12. Run the flow.
+- What is the flow result? 
 
-Click the **Run Flow** icon to run the flow. 
-4. Add additional parameters based on the bolded items below. Pay attention that the **Password** equals the **user’s** **credentials**.
-5. Test the **connection string**.
-6. Click **Save**.
+13. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
+- How may flows do you habbe now?
 
+14. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
+- Which value is set for the input parameter? 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
