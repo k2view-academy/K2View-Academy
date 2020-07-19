@@ -7,11 +7,11 @@ Output data is returned in JSON structure and adds information on whether the cu
 -  VIP member, with a total balance of over USD 10,000.
 -  Gold member, with a total balance of over USD 1,000. 
 
-<img src="/articles/15_web_services/17_Graphit/images/58_graphit_examples.PNG" width="700" height="400" ></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/58_graphit_examples.PNG" width="700" height="400" ></img>
 
 After deploying and invoking the Graphit file directly as a Web Service:
 
-<img src="/articles/15_web_services/17_Graphit/images/59_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG" width="700" height="400"></img>
 
 
 ###  Example of a wsGraphitExample2 Web Service that Invokes the Relevant Graphit File Depending on a Specific Condition    
@@ -40,32 +40,32 @@ The first Graphit file displays the customer's basic information and their subsc
 
 Graphit file 1: grSQLGldPlus.graphit:
 
-<img src="/articles/15_web_services/17_Graphit/images/60_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/60_graphit_examples.PNG" width="700" height="400"></img>
 
 
 Graphit file 2: grSQLBrz.graphit:
 
-<img src="/articles/15_web_services/17_Graphit/images/62_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/62_graphit_examples.PNG" width="700" height="400"></img>
 
 
 Output from Swagger GUI for grSQLGldPlus.graphit with Customer Instance ID = 1234:
 
-<img src="/articles/15_web_services/17_Graphit/images/59_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG" width="700" height="400"></img>
 
 
 Output from Swagger GUI for grSQLBrz.graphit with Customer Instance ID = 1000:
-<img src="/articles/15_web_services/17_Graphit/images/59a_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59a_graphit_examples.PNG" width="700" height="400"></img>
 
 ### Simple Example with CSV Generated from JOIN Queries Between Subscriber and Invoice Tables from the Billing_DB External Database
 This example displays how to retrieve data from multiple tables in the Billing_DB database and use Graphit to prepare a CSV-formatted response:
 
 Graphit file: grCSV.graphit:
 
-<img src="/articles/15_web_services/17_Graphit/images/63_graphit_examples.PNG" width="700" height="400"></img>
-<img src="/articles/15_web_services/17_Graphit/images/64_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/63_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/64_graphit_examples.PNG" width="700" height="400"></img>
 Running the Graphit file in Debug mode with 2 and 3 as consecutive values for the SubscriberID:
 
-<img src="/articles/15_web_services/17_Graphit/images/65_graphit_examples.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/65_graphit_examples.PNG"></img>
 
 Note the different tags used and their respective effect on the output CSV document:
 e.g. csvHeader: false -> removes fields headers from the response.
@@ -76,4 +76,4 @@ e.g. csvHeader: false -> removes fields headers from the response.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/17_Graphit/09_invoke_graphit_from_outside_studio.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
