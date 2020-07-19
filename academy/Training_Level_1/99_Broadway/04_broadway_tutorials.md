@@ -31,7 +31,26 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
  Please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow step by step.
 
+###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
+1. Download the [demo project] (/articles/demo_project) and open this project in your **Fabric Studio**.
+2. Go to the **Project Tree**, right click the **Broadway** and select **New Flow**.
+2. Populate the **Name** in the **Flow name** popup window by **test**.
+3. In the Flow Window, Click **Actions** and then select **Examples**.
+4. Select **a-broadway-tutorial** to open the Broadway Tutoria flow.
+
+- What is the result of the flow? 
+
+5. Add a Brakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. 
+
+- How many iterations run on the **StringBuilder** Actor of the **for stage** Stage? 
+- Which input value is sent to the  **StringBuilder** Actor on each iteration? 
+- What is the output of the **StringBuilder** Actor? 
+
+Click the **Run Flow** icon to run the flow. 
+4. Add additional parameters based on the bolded items below. Pay attention that the **Password** equals the **user’s** **credentials**.
+5. Test the **connection string**.
+6. Click **Save**.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
