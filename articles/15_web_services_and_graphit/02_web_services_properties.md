@@ -6,13 +6,13 @@ Fabric Web Services properties include the definitions, methods, categories and 
 
 Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** to display the **Function Manager** window. 
 
-<img src="/articles/15_web_services/images/Web-Service-KI-3-1.png" alt="drawing"/> 
+<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-1.png" alt="drawing"/> 
 
 ## What Are Web Service Properties? 
 
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
-<img src="/articles/15_web_services/images/Web-Service-KI-2-1.png" alt="drawing"/> 
+<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1.png" alt="drawing"/> 
  
  The following are the Web Services properties:
  
@@ -122,5 +122,5 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </table>
  
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/03_create_a_web_service.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
 
