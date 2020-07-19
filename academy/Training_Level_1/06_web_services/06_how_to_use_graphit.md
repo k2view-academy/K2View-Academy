@@ -26,15 +26,12 @@ to invoke Graphit files:
 - [Invoke Java Code from Graphit](/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md)
 - [Invoke Graphit from a Web Form](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
 
-
-<img src="/academy/Training_Level_1/05_LU_Enhancements/images/Example.png" width="30" height="30"></img>
 ### Graphit Code Examples 
 - [Code Examples](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
 
 
 
 <img src="/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png" width="30" height="30"></img>
-
 ### Exercise 1 - Create a Graphit Web Service 
 
 In this exercise we refer to the exercise in [LU Enhancements - Translations](/master/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md) where we associated a unique geo-location code to the Address table to build a heat map of the customer's location.
