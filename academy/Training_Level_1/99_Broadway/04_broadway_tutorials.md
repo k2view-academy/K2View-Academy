@@ -41,7 +41,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 6. Click the **Run Flow** icon to run the flow.
 
   <ul>
- <p><code>6.1 What is the result of the flow?</code></p>
+ <pre><code>6.1 What is the result of the flow?</code></pre>
   </ul>
 
 7. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow.
@@ -70,12 +70,12 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 11. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
 12. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
 13. Run the flow.
-<ul><p><code>What is the flow result?</code></p></ul> 
+<ul><pre><code>13.1 What is the flow result?</code></pre></ul> 
 
 14. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
-<ul><p><code>How may flows do you have now?</code></p></ul>
+<ul><pre><code>14.1 How may flows do you have now?</code></pre></ul>
 
 15. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
-<ul><p><code>Which value is set for the input parameter?</code></p></ul> 
+<ul><pre><code>15.1 Which value is set for the input parameter?</code></pre></ul> 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
