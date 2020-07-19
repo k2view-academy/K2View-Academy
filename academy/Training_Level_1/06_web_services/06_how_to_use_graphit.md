@@ -56,7 +56,7 @@ In which avenue does customer ID 1000 live? What are the two closest businesses?
 
 **Solution Exercise 1 - Create a Graphit Web Service**
 
-Step 1:
+Step 1: 
 
 ![](/academy/Training_Level_1/06_web_services/images/graphit_exercise1Step1.PNG)
 
