@@ -123,7 +123,7 @@ The source parameter holds the following schema:
 } 
 ```
 
-Click the plus inside the parameter to open the **Data Inspection** object and view the parameters list inside the object:
+To connect a specific element of the schema, click the plus inside the parameter to open the **Data Inspection** object and view the parameters list inside the object:
 
 ![data inspection](/articles/99_Broadway/images/data_inspection_example.png)
 
@@ -141,7 +141,7 @@ Click the plus inside the parameter to open the **Data Inspection** object and v
 
     ![Adding link](/articles/99_Broadway/images/add_link_2.png)
 
-
+You can also connect the entire schema to another Actor. For example: connecting the output schema to the "params" input parameter of the **DbLoad** Actor. Note that if you connect a specific element of the Data Inspection object to an another input parameter of the **DbLoad** Actor, the specific link overrides the link of the schema to the "params" input parameter.  
 
 ## How Do I Remove Links from the Flow?
 
