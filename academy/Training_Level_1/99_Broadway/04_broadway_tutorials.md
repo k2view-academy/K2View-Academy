@@ -46,7 +46,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 7. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow.
 
-<ul><ul>
+<ul>
 <pre><code>
 7.1 How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?<br>
 7.2 Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
@@ -54,7 +54,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 7.4 How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
 7.5 What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?
 </code></pre>
-</ul></ul>
+</ul>
  
   ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **"splitting the flow"** to read its remark, and check the value of the Actor in the **"paradox"** Stage to help you answer this question.
  
@@ -77,5 +77,22 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 15. Re-open the Broadway Tutorials flow and click the **Const** Actor of the **Hello Broadway** Stage.
 <ul><pre><code>15.1 Which value is set for the input parameter?</code></pre></ul> 
+
+
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution- Run and Debug Broadway Tutorial Flow Exercise 
+
+ <ul>
+ <pre><code> 
+  6.1 The flow result is "Hellow Broadway"</code></pre>
+ </ul>
+  
+<ul>
+<pre><code>
+7.1  + 7.2- The flow executes two iterations run on the <strong>StringBuilder</strong> Actor- the first iteration runs on "Hello" and the second iteration runs on "Broadway".
+7.3 The <strong>StringBuilder</strong> returns the following output: "Hello Broadway".
+7.4 The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop, and builds the String. The "for each" State is marked by "Iterate Close". As a result- the StringBuilder in this Stage closes the loop and only then returns its output.
+7.5 The next Stage, executed after the <strong>"splitting the flow"</strong> Stage, is the "Dynamic Logic Actors", since this Stage is on the same level as the "else" of the condition, and the condition returns "false". See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>
+</code></pre>
+</ul>
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
