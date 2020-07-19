@@ -82,7 +82,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
  <ul>
  <pre><code> 
-  6.1 The flow result is "Hellow Broadway"</code></pre>
+ 6.1 The flow result is "Hellow Broadway"</code></pre>
  </ul>
   
 <ul>
