@@ -1,11 +1,11 @@
 # Response Codes
 
 K2view APIs use many of the available HTTP response status codes to convey success or failure of the request back to the user. All response status codes fall into the following categories:
-*	[**1xx Informational**](/articles/15_web_services/11_response_codes.md#1xx-informational), the request has been received and is being processed.
-*	[**2xx Successful**](/articles/15_web_services/11_response_codes.md#200), the request has been successfully received, understood and accepted.
-*	[**3xx Redirection**](/articles/15_web_services/11_response_codes.md#3xx-redirection), further action needs to be taken to complete the request.
-*	[**4xx Client Error**](/articles/15_web_services/11_response_codes.md#4xx-client-error), the request contains bad syntax or cannot be fulfilled.
-*	[**5xx Server Error**](/articles/15_web_services/11_response_codes.md#5xx-server-error), the server failed to fulfill an apparently valid request.
+*	[**1xx Informational**](/articles/15_web_services_and_graphit/11_response_codes.md#1xx-informational), the request has been received and is being processed.
+*	[**2xx Successful**](/articles/15_web_services_and_graphit/11_response_codes.md#200), the request has been successfully received, understood and accepted.
+*	[**3xx Redirection**](/articles/15_web_services_and_graphit/11_response_codes.md#3xx-redirection), further action needs to be taken to complete the request.
+*	[**4xx Client Error**](/articles/15_web_services_and_graphit/11_response_codes.md#4xx-client-error), the request contains bad syntax or cannot be fulfilled.
+*	[**5xx Server Error**](/articles/15_web_services_and_graphit/11_response_codes.md#5xx-server-error), the server failed to fulfill an apparently valid request.
 
 #### 1xx: Informational
 
@@ -333,6 +333,6 @@ To override the response code, use the following code in the Web Service:
 
   
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/10_legacy_annotation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/12_Supported_Verbs_Get.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/10_legacy_annotation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md)
 
 
