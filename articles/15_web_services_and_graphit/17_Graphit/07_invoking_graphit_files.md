@@ -6,15 +6,15 @@ Graphit files can be invoked either directly as a Web Service or embedded into a
 
 2. Right click the **Graphit file** > **Invoke Graphit Web Service** > **Fabric server**.
 
-Note that the Fabric server must be predefined in the [Server Configuration Tab](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
+Note that the Fabric server must be predefined in the [Server Confuration Tab](/articlesig/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
 
-For more information refer to the example in [Using Parameters](/articles/15_web_services/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-calling-graphit-directly-from-swagger) to see how to deploy and invoke a Graphit file as a Web Service.
+For more information refer to the example in [Using Parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-calling-graphit-directly-from-swagger) to see how to deploy and invoke a Graphit file as a Web Service.
 
 ![](/articles/15_web_services/17_Graphit/images/47_invoking_graphit_files.png)
 
 Note that the Graphit file can be invoked in both GET or POST modes. To use the GET method, set the parameters in the **Graphit parameter window**. Do not set the parameter's values in the Parameters' window. When the Graphit file is invoked as a Web Service, Swagger will prompt you to enter the values.
 
-For more information about Get and Post verbose, click [GET](/articles/15_web_services/12_Supported_Verbs_Get.md) or [POST](/articles/15_web_services/13_Supported_Verbs_Post.md).
+For more information about Get and Post verbose, click [GET](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md) or [POST](/articles/15_web_services/13_Supported_Verbs_Post.md).
 
 ## How Do I Invoke a Call From WS Code?
 Graphit files are mainly used in a Web Service to structure the Web Service's response. To use the Graphit file, include the following code in the Web Service implementation:
@@ -31,9 +31,9 @@ Example:
 Using the grSQL Graphit file and Customer_Id as input parameters:
  <p><code>Object response = graphit("grSql.graphit",Customer_Id);</code></p> 
  
-[Click for additional examples.](/articles/15_web_services/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-invoking-graphit-from-a-web-service)
+[Click for additional examples.](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-invoking-graphit-from-a-web-service)
 
-![](/articles/15_web_services/17_Graphit/images/48_invoking_graphit_files.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/48_invoking_graphit_files.PNG)
 
 After deploying and invoking the Web Service,![](/articles/15_web_services/17_Graphit/images/45_graphit_with_parameters.PNG) open Swagger and check that the Customer_id has been successfully parsed: ![](/articles/15_web_services/17_Graphit/images/46_graphit_with_parameters.PNG)
 
@@ -46,7 +46,7 @@ Enter the following parameters in the link of the browser's Address field:
 
 The response is displayed in the Browser tab:
 
-![](/articles/15_web_services/17_Graphit/images/49_invoking_graphit_files.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/49_invoking_graphit_files.PNG)
 
 #### Profiler Flag
 A profiling flag can be parsed in the URL using the graphitProfiler=true setting as in the following URL:
@@ -83,7 +83,7 @@ INFO  [http-nio-3213-exec-1] 2020-07-15 06:46:21,401 c.k.c.w.WebServiceMB - [LID
 ```
 The Profiler option can also be selected from the Graphit Editor by choosing the **Output** > **Profiler** option on the right side of the **Run** button, as shown in the following screenshot.
 
-![](/articles/15_web_services/17_Graphit/images/49a_invoking_graphit_files.PNG)
+![](/articles/15_web_services_and_graphit/17_Graphit/images/49a_invoking_graphit_files.PNG)
 
 
 
@@ -94,4 +94,4 @@ Note that multiple parameters can be parsed to Graphit by:
 In addition, when designing a Web Service you can use all [REST APIs and requests formats](/articles/15_web_services/12_Supported_Verbs_Get.md) generally supported by Web Services. Schemas with complex requests can be designed whereby different Graphit files are invoked depending on the data retrieved from its sources or LUI. 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/17_Graphit/06_using_graphit_files_with_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/17_Graphit/08_invoke_javacode_from_graphit.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md)
