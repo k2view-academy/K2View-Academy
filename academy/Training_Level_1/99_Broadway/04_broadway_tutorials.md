@@ -40,22 +40,22 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 5. Select **a-broadway-tutorial** to open the Broadway Tutorial flow.
 6. Click the **Run Flow** icon to run the flow.
 
- <ul>
- <li><code>What is the result of the flow?</code></li>
- </ul>
+  <ul><ul>
+  <li><code>What is the result of the flow?</code></li>
+  </ul></ul>
 
 7. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow.
 
-<ul>
+<ul><ul>
 <li><code>How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?</code></li>
 <li><code>Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?</code></li>
 <li><code>What&nbsp;is the output of the <strong>StringBuilder</strong> Actor?&nbsp;</code></li>
 <li><code>How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.</code></li>
 <li><code>What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?</code></li>
-</ul>
+</ul></ul>
  
- ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **"splitting the flow"** to read its remark, and check the value of the Actor in the **"paradox"** Stage to help you answer this question.
-  
+  ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **"splitting the flow"** to read its remark, and check the value of the Actor in the **"paradox"** Stage to help you answer this question.
+ 
  8. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
  9. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
   - Was the new **Now** Actor, added to to **Stage 3** exectued? Why
