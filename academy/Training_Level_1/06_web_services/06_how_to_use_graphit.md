@@ -54,7 +54,7 @@ In this exercise we refer to the exercise in [LU Enhancements - Translations](/m
 
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution Exercise 1 - Create a Graphit Web Service**
+### Solution Exercise 1 - Create a Graphit Web Service
 
 Step 1: 
 
