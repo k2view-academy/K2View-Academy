@@ -82,6 +82,6 @@ The following items should be edited after they are automatically generated:
 
 
  
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services/04_web_services_function_basic_structure.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services/06_web_services_code_examples.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/04_web_services_function_basic_structure.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/06_web_services_code_examples.md)
 
 
