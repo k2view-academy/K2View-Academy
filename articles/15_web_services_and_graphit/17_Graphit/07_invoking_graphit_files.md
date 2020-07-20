@@ -31,8 +31,6 @@ Example:
 Using the grSQL Graphit file and Customer_Id as input parameters:
  <p><code>Object response = graphit("grSql.graphit",Customer_Id);</code></p> 
  
-[Click for additional examples.](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-invoking-graphit-from-a-web-service)
-
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/48_invoking_graphit_files.PNG)
 
 After deploying and invoking the Web Service,![](/articles/15_web_services/17_Graphit/images/45_graphit_with_parameters.PNG) open Swagger and check that the Customer_id has been successfully parsed: ![](/articles/15_web_services/17_Graphit/images/46_graphit_with_parameters.PNG)
