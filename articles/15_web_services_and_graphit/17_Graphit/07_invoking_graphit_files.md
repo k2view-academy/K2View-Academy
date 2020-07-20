@@ -40,7 +40,7 @@ After deploying and invoking the Web Service,![](/articles/15_web_services/17_Gr
 Graphit can also be invoked as a parameter from the IP address link of the corresponding Web Service.
 Enter the following parameters in the link of the browser's Address field:
 
-     http://10.21.1.76:3213/api/GraphitWS1?Customer_Id=1472&Case_Id=3707&token=test&graphitProfiler=true&format=json
+     http://localhost:3213/api/GraphitWS1?Customer_Id=1472&Case_Id=3707&token=test&graphitProfiler=true&format=json
 
 The response is displayed in the Browser tab:
 
@@ -49,7 +49,7 @@ The response is displayed in the Browser tab:
 #### Profiler Flag
 A profiling flag can be parsed in the URL using the graphitProfiler=true setting as in the following URL:
 
-``` http://10.21.1.76:3213/api/GraphitWS1?Customer_Id=1472&Case_Id=3707&token=test&*graphitProfiler=true*&format=json``` 
+``` http://localhost:3213/api/GraphitWS1?Customer_Id=1472&Case_Id=3707&token=test&*graphitProfiler=true*&format=json``` 
 
 To see the profiling information open the [Fabric Logs](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files) of the Fabric session that processed the Web Service in the $K2_HOME/logs/k2fabric.log. Search for the lines containing "Starting webservice":
 
