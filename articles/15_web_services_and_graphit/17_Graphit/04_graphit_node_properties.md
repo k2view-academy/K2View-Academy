@@ -27,6 +27,10 @@ Note that there is a short description of each property in the dropdown menu.
 <td valign="top" width="600pxl">Defines which interface should be used for a query. This property should be defined each time a node is defined as SQL or Non-prepared SQL and the queried database is not Fabric.<br />Note that this property affects the node and its child nodes.</td>
 </tr>
 <tr>
+<td valign="top" width="300pxl">Enabled</td>
+<td valign="top" width="600pxl">If enabled is set to false, the node and its children will not be evaluated.</td>
+</tr>
+<tr>
 <td valign="top" width="300pxl">Nice</td>
 <td valign="top" width="600pxl">Defines the layout of the output format. True defines that each tag is printed in a new line and is indented.&nbsp;<br />Note that this property affects the node and its child nodes.</td> 
 </tr>
