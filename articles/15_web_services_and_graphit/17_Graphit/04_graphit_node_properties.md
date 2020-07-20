@@ -76,13 +76,13 @@ Note that this property affects the node and its child nodes.&nbsp;</td>
 <td valign="top" width="600pxl">Advanced mechanism that replaces nested queries by joining the data on the root query and grouping it with a key when query keys are used to select a subset of rows to group each invocation of the node. When keys are specified in child nodes, each node groups its parent's node according to the key.</td>
 </tr>
 <tr>
-<td valign="top" width="300pxl">CSVHeader, CSVRow, CSVEnclose</td>
+<td valign="top" width="300pxl">csvHeader, csvRow, csvCol, csvEnclose</td>
 <td valign="top" width="600pxl">The following node properties control CSV format:
 <ul>
-<li>CSVHeader, disables a header row</li>
-<li>CSVRow, defines the delimiter between rows in&nbsp; CSV format. Default = CR (\n ) sign.</li>
-<li>CSVCol, defines the delimiter between columns in CSV format. Default = comma sign.</li>
-<li>CSVEnclose, defines the character used to enclose a value in CSV format. This is only used if the value holds a special character (csvEnclose, csvRow, csvCol).</li>
+<li>csvHeader, disables a header row</li>
+<li>csvRow, defines the delimiter between rows in&nbsp; CSV format. Default = CR (\n ) sign.</li>
+<li>csvCol, defines the delimiter between columns in CSV format. Default = comma sign.</li>
+<li>csvEnclose, defines the character used to enclose a value in CSV format. This is only used if the value holds a special character (csvEnclose, csvRow, csvCol).</li>
 </ul>
 </td>
 </tr>
