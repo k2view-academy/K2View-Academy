@@ -8,7 +8,7 @@ To add a built-in Actor to the flow, click anywhere in the **Stage** area to ope
 
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
-Broadway's built-in  Actors are split into the following categories, where each category includes several Actor types.
+Broadway's built-in  Actors are split into categories, where each category includes several Actor types.
 
 Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the **Tags** field does not exist in the Actor's existing categories.
 
@@ -35,13 +35,13 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
 </td>
 <td style="vertical-align: top;" width="600">
-<p><strong>Const&nbsp;</strong>Actor, copies the input value argument to the output value argument.&nbsp;A Const Actor can:</p>
+<p><strong>Const</strong> Actor, copies the input value argument to the output value argument. A Const Actor can:</p>
 <ul>
 <li>Pass a constant value to the next Actor.</li>
 <li>Receive its input from the output of a previous Actor and transfer it to the next Actor.</li>
-<li>Receive an external flow argument and transfer it to the next Actor.&nbsp;&nbsp;</li>
+<li>Receive an external flow argument and transfer it to the next Actor.</li>
 </ul>
-<strong>Concat&nbsp;</strong>Actor, concatenates an array of strings and joins them with the given delimiter.&nbsp;&nbsp;<strong><br /></strong><strong>JavaScript&nbsp;</strong>Actor, executes the Javascript provided in the 'script' parameter. The script returns the value of the last line.</td>
+<strong>Concat</strong>Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong>Actor, executes the Javascript provided in the script parameter. The script returns the value of the last line.</td>
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
@@ -51,11 +51,11 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Actors serving as the basic building blocks for creating the Broadway flow.</p>
 </td>
 <td style="vertical-align: top;" width="600">
-<p><strong>ForLoop</strong>&nbsp;Actor, iterates over a range of numbers.</p>
-<p><strong>Logger</strong>&nbsp;Actor, writes a message to the log file, referencing entries from params and Actor inputs.&nbsp;</p>
-<p><strong>InnerFlow</strong>&nbsp;Actor, executes a Broadway flow.</p>
-<p><strong>LuFunction&nbsp;</strong>Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or, if not there, from the params input argument.&nbsp;&nbsp;</p>
-<p><strong>Email</strong>&nbsp;Actor, sends an email using a given SMTP interface.&nbsp;</p>
+<p><strong>ForLoop</strong>Actor, iterates over a range of numbers.</p>
+<p><strong>Logger</strong>Actor, writes a message to the log file, referencing entries from params and Actor inputs.</p>
+<p><strong>InnerFlow</strong>Actor, executes a Broadway flow.</p>
+<p><strong>LuFunction</strong>Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or fom the params input argument.</p>
+<p><strong>Email</strong>Actor, sends an email using a given SMTP interface.</p>
 </td>
 </tr>
 <tr>
@@ -66,17 +66,17 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Various Date and Time manipulation functions, such as DateAdd, DateFormat or Now.</p>
 </td>
 <td width="600">
-<p><strong>DateFormat&nbsp;</strong>Actor, formats a date into a string.&nbsp;&nbsp;</p>
+<p><strong>DateFormat</strong>Actor, formats a date into a string.</p>
 <ul>
-<li>Input values:&nbsp;Date, Output Format (following a predefined pattern) and&nbsp;Time Zone.</li>
-<li>Initial format:&nbsp;yyyy-MM-dd HH:mm:ss.SSS.</li>
-<li>Initial value of the time zone:&nbsp;UTC.</li>
+<li>Input values: Date, Output Format (following a predefined pattern) and Time Zone.</li>
+<li>Initial format: yyyy-MM-dd HH:mm:ss.SSS.</li>
+<li>Initial value of the time zone: UTC.</li>
 <li>Output: a string.</li>
 </ul>
 <p>For example:</p>
 <ul>
-<li>To display a day of a year in the output, add&nbsp;<strong>D</strong>&nbsp;to the format.</li>
-<li>To display a day of the week in the output, add&nbsp;<strong>E</strong>&nbsp;to the format.&nbsp;</li>
+<li>To display a day of a year in the output, add <strong>D</strong> to the format.</li>
+<li>To display a day of the week in the output, add<strong>E</strong> to the format</li>
 </ul>
 </td>
 </tr>
@@ -84,22 +84,22 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-db" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#db" aria-hidden="true"></a><strong>db</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">Actions to be performed on a DB interface, such as creating a new table, loading data or executing a DB command.&nbsp;&nbsp;</td>
+<td style="vertical-align: top;" width="433">Actions to be performed on a DB interface, such as creating a new table, loading data or executing a DB command.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>DbCommand</strong>&nbsp;Actor, performs database commands on a DB command interface.&nbsp;The interface used as input can be:</p>
+<p><strong>DbCommand</strong>Actor, performs database commands on a DB command interface. The interface used as input can be:</p>
 <ul>
 <li>A JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
 <li>Others, like the Schema, table name, fields definition, SQL dialect to use and append text appended to the CREATE command.</li>
 </ul>
-<p>The DbCommand can be used to create the WITH section where required.&nbsp;</p>
+<p>The DbCommand can be used to create the WITH section where required.</p>
 </td>
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-logic" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#logic" aria-hidden="true"></a><strong>logic</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">Logical operation on Actors&nbsp;<strong>A</strong>&nbsp;and&nbsp;<strong>B</strong>&nbsp;which returns a&nbsp;<strong>True or False</strong>&nbsp;boolean result.
+<td style="vertical-align: top;" width="433">Logical operation on Actors<strong>A</strong> ;and <strong>B</strong> which returns a <strong>True</strong> or <strong>False</strong> boolean result.
 <p>Broadway converts the following types of input parameters to booleans:</p>
 <ul>
 <li>Null/no input, False.</li>
@@ -188,9 +188,9 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <li>JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
 <li>Path of the&nbsp;source&nbsp;file (from).</li>
-<li>Destination&nbsp;(to).</li>
+<li>Destination to).</li>
 </ul>
-<p>The output is a number of affected files.&nbsp;</p>
+<p>The output is a number of affected files.</p>
 </td>
 </tr>
 </tbody>
