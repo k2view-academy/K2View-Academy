@@ -52,7 +52,7 @@ A: Doing nothing. Let's not exagerate, parameters cannot be parsed in Graphit.
 
 B: Referring to them using ${*parameter*} syntax and adding them with or without a value to the Parameter window.
 
-C: Refering to them using &[*parameter*] syntax.
+C: Referring to them using &[*parameter*] syntax.
 
 D: Not declaring them, Graphit understands which parameters to refer to from the context.  
 
