@@ -129,12 +129,15 @@ public class Logic extends WebServiceUserCode {...
 ```
 
 Then add the "UNKNOWN" value to the Produce fonction call at the line where the Web Service is defined: 
+
 ```java @webService(path = "test/getCustomerInfo", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, produce = {Produce.UNKNOWN})
 ```
+
 Modify the properties panel of the Web Service as shown below:
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce1.png" alt="drawing"/>
 
-After deploying the Web Service, it can be called from the browser:
+After deploying the Web Service, call it from the browser, using the appropriate token, parameter and format:
+
 http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce2.png" alt="drawing"/>
 
