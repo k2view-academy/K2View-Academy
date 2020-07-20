@@ -165,11 +165,11 @@ C: Highlight in bold and italic each node-related data where it has been applied
 
 What will a node defined as Type=Condition will do?
 
-A: Build IF-ELSE statements which should include a condition. The nested nodes then are then executed or not according to the result of the condition. 
+A: Build IF statement. The nested nodes are then executed or not according to the result of the condition. 
 
-B: Add the tag <Condition> to the begining of the node in the document
+B: Add the tag <Condition> to the begining of the node in the document.
 
-C: Skip the node entirely if set to True
+C: Skip the node as no condition has been entered.
 
 (***Solution 10: A ***)
 
@@ -178,15 +178,13 @@ C: Skip the node entirely if set to True
 
 Graphit can be invoked
 
-A: Only through web-services
+A: Through web-services
 
-B: Only directly as a web-service
+B: Directly as a web-service
 
-C: Only from the Graphit Editor
+C: Responses A & B
 
-D: Responses A, B & C
-
-(***Solution 10: D ***)
+(***Solution 11: C ***)
 
 
 
