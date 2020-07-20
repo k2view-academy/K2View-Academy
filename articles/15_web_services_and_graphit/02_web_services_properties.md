@@ -139,6 +139,7 @@ Modify the properties panel of the Web Service as shown below:
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce1.png">
 
 After deploying the Web Service, call it from the browser, using the appropriate token, parameter and format:
+Example with HTML format:
 ```html 
 http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
 ```
