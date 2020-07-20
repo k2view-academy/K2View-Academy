@@ -122,7 +122,7 @@ C: Graphit files must be created and edited from withing Fabric Studio
 
 #### Question 8: Documents formatting
 
-What will the CSVRow tag do the CSV document ?
+What will the CSVRow tag do to the CSV document ?
 
 A: Count the number of rows that are to be expected in the response and display it in the header. 
 
