@@ -8,7 +8,7 @@ Note: You can refer to parameters directly using their name defined in the Param
 
 ### Example
 In the following example, a Graphit Web Service retrieves the sum of all payments made by a customer from the Received Invoices table.
-A decision can be made whethere to convert this amount into GBP or EUR currency depending on the value of the convGBP parameter.
+A decision can be made whether to convert this amount into GBP or EUR currency depending on the value of the convGBP parameter.
 
 -  True, displays the amount in GBP.
 -  False displays the amount in EUR.
@@ -26,8 +26,6 @@ The following screenshot displays how Debug mode is run with the customer_id set
 The following scereenshot displays how the Web Service is deployed and launched in Swagger:
 
 ![](/articles/15_web_services/17_Graphit/images/52_invoke_javacode_from_graphit.PNG)
-
-
 Note that an http link has been generated to invoke the Web Service for customer_id = 1000, and the convGBP flag is set to False, meaning that the conversion is set to EUR currency:
 
 "http://10.21.1.76:3213/api/grSql?customer_id=1000&convGBP=false"
@@ -58,7 +56,7 @@ Output using Swagger GUI:
 
 
 Limitations:
-This type of functions cannot be debugged in the Graphit Editor since the functional parameters cannot be created in the Studio. However, the code can be tested by deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
+This type of function cannot be debugged in the Graphit Editor since the functional parameters cannot be created in the Studio. However, the code can be tested by deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
   
  
 
