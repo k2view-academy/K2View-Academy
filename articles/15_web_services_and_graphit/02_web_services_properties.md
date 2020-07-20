@@ -144,7 +144,7 @@ Example with HTML format:
 ```html 
 http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
 ```
-The response will appear in the body of the browser's web page
+The response will appear in the body of the browser's web page:
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce2.PNG">
 
 
