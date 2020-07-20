@@ -61,11 +61,11 @@ D: Not declaring them, as Graphit will understand to what parameters refer to fr
 
 Which of the following statements is definitely true?
 
-A: Javascripts functions can be added to graphit nodes as long as the noe is defined as a function.
+A: Javascripts functions can be added to graphit nodes as long as the node is defined as a function.
 
 B: Complex Java functions can be developed from java web-services that can invoke in-turn invoke a graphit file.
 
-C: SQL statements can be used from a graphit node as long as it is defined as an SQl or a SQL non-prepared node.
+C: SQL statements can be used from a graphit node as long as it is defined as an SQL or a SQL non-prepared node.
 
 D: A graphit node can retrieve a specific LUI data by using the following command: get LUI.${ID}.
 
