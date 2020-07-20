@@ -6,12 +6,11 @@ Graphit files can be invoked either directly as a Web Service or embedded into a
 
 2. Right click the **Graphit file** > **Invoke Graphit Web Service** > **Fabric server**.
 
-Note that the Fabric server must be predefined in the [Server Confuration Tab](/articlesig/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
+Note that the Fabric server must be predefined in the [Server Configuration tab](/articlesig/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
 
 For more information refer to the example in [Using Parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-calling-graphit-directly-from-swagger) to see how to deploy and invoke a Graphit file as a Web Service.
 
 ![](/articles/15_web_services/17_Graphit/images/47_invoking_graphit_files.png)
-
 Note that the Graphit file can be invoked in both GET or POST modes. To use the GET method, set the parameters in the **Graphit parameter window**. Do not set the parameter's values in the Parameters' window. When the Graphit file is invoked as a Web Service, Swagger will prompt you to enter the values.
 
 For more information about Get and Post verbose, click [GET](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md) or [POST](/articles/15_web_services/13_Supported_Verbs_Post.md).
@@ -53,7 +52,7 @@ A profiling flag can be parsed in the URL using the graphitProfiler=true setting
 
 ``` http://10.21.1.76:3213/api/GraphitWS1?Customer_Id=1472&Case_Id=3707&token=test&*graphitProfiler=true*&format=json``` 
 
-To see the profiling information open the [Fabric Logs](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files) of the Fabric session that processed the Web Service in the $K2_HOME/logs/k2fabric.log. Search for the lines containing "Starting webservice":
+To see the profiling information, open the [Fabric Logs](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-files) of the Fabric session that processed the Web Service in the $K2_HOME/logs/k2fabric.log. Search for the lines containing "Starting webservice":
 
 ``` 
 INFO  [http-nio-3213-exec-1] 2020-07-15 06:46:21,286 c.k.c.w.WebServiceMB - [LID10000000023a3] Starting webservice GraphitWS1
