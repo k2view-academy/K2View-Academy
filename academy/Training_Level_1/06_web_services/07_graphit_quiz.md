@@ -17,7 +17,9 @@ B: Test web-services.
 
 C: Format web-services' responses documents such as XML, JSON and CSV.
 
-(***Solution 1: C ***).
+D: All of the above.
+
+(**Solution 1: D**).
 
 
 
@@ -37,7 +39,7 @@ E: Save it, deploy it and invoke it from an existing or dedicated web-service.
 
 F: All the above.
 
-(***Solution 2: F ***).
+(**Solution 2: F**).
 
 
 
@@ -53,7 +55,7 @@ C: Refering to them, using the &[*parameter*] syntax.
 
 D: Not declaring them, as Graphit will understand to what parameters refer to from the context.  
 
-(***Solution 3: B ***).
+(**Solution 3: B**).
 
 
 
@@ -61,9 +63,9 @@ D: Not declaring them, as Graphit will understand to what parameters refer to fr
 
 Which of the following statements is definitely true?
 
-A: Javascripts functions can be added to graphit nodes as long as the node is defined as a function.
+A: Javascripts functions can be added to graphit nodes as long as the node type is defined as a function.
 
-B: Complex Java functions can be developed from java web-services that can invoke in-turn invoke a graphit file.
+B: Complex Java functions can be developed from java web-services that can in-turn invoke a graphit file.
 
 C: SQL statements can be used from a graphit node as long as it is defined as an SQL or a SQL non-prepared node.
 
@@ -71,7 +73,7 @@ D: A graphit node can retrieve a specific LUI data by using the following comman
 
 E: All the above.
 
-(***Solution 4: E ***).
+(**Solution 4: E**).
 
 
 
@@ -83,13 +85,13 @@ A: Java function that can be parsed to a Graphit webservice's call as a map obje
 
 B: JS function that can be directly invoked from a specific node.
 
-C: Function that can be referred to via a JS call in a graphit node.
+C: Java function that can be referred to via a JS call in a graphit node.
 
 D: Answer A & C
 
 E: All the above
 
-(***Solution 5: D ***).
+(**Solution 5: D**).
 
 
 #### Question 6: Invoking Graphit from a web-service
@@ -104,7 +106,7 @@ C: Calling the following command: graphit("*name_of_graphit_file*",${parameter1}
 
 D: All the above.
 
-(***Solution 6: A ***)
+(**Solution 6: A**)
 
 
 #### Question 7: Creating and Invoking Graphit from a webform
@@ -117,7 +119,7 @@ B: Accessing http://www.k2view.com/fabric/graphit/graphit.html
 
 C: Graphit files must be created and edited from withing Fabric Studio
 
-(***Solution 7: A ***)
+(**Solution 7: A**)
 
 
 #### Question 8: Documents formatting
@@ -132,7 +134,7 @@ C: Row, row your doc, gently down the web ...
 
 D: Define the delimiter between rows (Default set to CR (\n ) sign).
 
-(***Solution 8: D ***)
+(**Solution 8: D**)
 
 
 #### Question 9: Documents formatting
@@ -145,7 +147,7 @@ B: Define the tag surrounding all XML array entries. If not used or set as None,
 
 C: Highlight in bold and italic each node data it is applied to.
 
-(***Solution 9: B ***)
+(**Solution 9: B**)
 
 
 #### Question 9: Documents formatting
@@ -158,12 +160,12 @@ B: Define the tag surrounding all XML array entries. If not used or set as None,
 
 C: Highlight in bold and italic each node-related data where it has been applied.
 
-(***Solution 9: B ***)
+(**Solution 9: B**)
 
 
 #### Question 10: Nodes creation 
 
-What will a node defined as Type=Condition will do?
+What will a node type defined as a condition will do?
 
 A: Build IF statement. The nested nodes are then executed or not according to the result of the condition. 
 
@@ -171,7 +173,7 @@ B: Add the tag <Condition> to the begining of the node in the document.
 
 C: Skip the node as no condition has been entered.
 
-(***Solution 10: A ***)
+(**Solution 10: A**)
 
 
 #### Question 11: Invoking Graphit
@@ -184,7 +186,7 @@ B: Directly as a web-service
 
 C: Responses A & B
 
-(***Solution 11: C ***)
+(**Solution 11: C**)
 
 
 
