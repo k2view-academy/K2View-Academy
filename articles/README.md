@@ -201,23 +201,34 @@
 </details>
         
 <details>
-<summary markdown="span"><strong>Web Services <strong><a href="/articles/15_web_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
-<li><a href="/articles/15_web_services/01_web_services_overview.md">Overview</a></li>
-<li><a href="/articles/15_web_services/02_web_services_properties.md">Properties</a></li>
-<li><a href="/articles/15_web_services/03_create_a_web_service.md">Create a Web Service</a></li>
-<li><a href="/articles/15_web_services/04_web_services_function_basic_structure.md">Function Basic Structure</a></li>
-<li><a href="/articles/15_web_services/05_edit_web_service_code.md">Edit Web Service Code</a></li>
-<li><a href="/articles/15_web_services/06_web_services_code_examples.md">Code Examples</a></li>
-<li><a href="/articles/15_web_services/07_deploy_web_services.md">Deploy Web Services</a></li>
-<li><a href="/articles/15_web_services/08_web_services_input_parameters.md">Web Service Input Parameters</a></li>
-<li><a href="/articles/15_web_services/09_swagger.md">Swagger</a></li>
-<li><a href="/articles/15_web_services/10_legacy_annotation.md">Legacy Annotation</a></li>
-<li><a href="/articles/15_web_services/11_response_codes.md">Response Codes</a></li>
-<li><a href="/articles/15_web_services/12_Supported_Verbs_Get.md">Supported Verbs - GET</a></li>
-<li><a href="/articles/15_web_services/13_Supported_Verbs_Post.md">Supported Verbs - POST</a></li>
-<li><a href="/articles/15_web_services/14_Supported_Verbs_Put.md">Supported Verbs - PUT</a></li>
-<li><a href="/articles/15_web_services/15_Supported_Verbs_Delete.md">Supported Verbs - DELETE</a></li>
-<li><a href="/articles/15_web_services/16_rest_api_additions.md">REST API Additions</a></li>
+<summary markdown="span"><strong>Web Services and Graphit<strong><a href="/articles/15_web_services_and_graphit/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/15_web_services_and_graphit/01_web_services_overview.md">Overview</a></li>
+<li><a href="/articles/15_web_services_and_graphit/02_web_services_properties.md">Properties</a></li>
+<li><a href="/articles/15_web_services_and_graphit/03_create_a_web_service.md">Create a Web Service</a></li>
+<li><a href="/articles/15_web_services_and_graphit/04_web_services_function_basic_structure.md">Function Basic Structure</a></li>
+<li><a href="/articles/15_web_services_and_graphit/05_edit_web_service_code.md">Edit Web Service Code</a></li>
+<li><a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md">Code Examples</a></li>
+<li><a href="/articles/15_web_services_and_graphit/07_deploy_web_services.md">Deploy Web Services</a></li>
+<li><a href="/articles/15_web_services_and_graphit/08_web_services_input_parameters.md">Web Service Input Parameters</a></li>
+<li><a href="/articles/15_web_services_and_graphit/09_swagger.md">Swagger</a></li>
+<li><a href="/articles/15_web_services_and_graphit/10_legacy_annotation.md">Legacy Annotation</a></li>
+<li><a href="/articles/15_web_services_and_graphit/11_response_codes.md">Response Codes</a></li>
+<li><a href="/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md">Supported Verbs - GET</a></li>
+<li><a href="/articles/15_web_services_and_graphit/13_Supported_Verbs_Post.md">Supported Verbs - POST</a></li>
+<li><a href="/articles/15_web_services_and_graphit/14_Supported_Verbs_Put.md">Supported Verbs - PUT</a></li>
+<li><a href="/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md">Supported Verbs - DELETE</a></li>
+<li><a href="/articles/15_web_services_and_graphit/16_rest_api_additions.md">REST API Additions</a></li>
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md">Graphit Overview</a></li>
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md">Create and Edit a Graphit File</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/03_graphit_node_types.md">Graphit Nodes Types</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Graphit Nodes Properties</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md">Graphit Debugging</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md">Graphit Parameters</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md">Invoking Graphit Files</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md">Invoke Java from Graphit</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md">Invoke Graphit from Outside Fabric Studio</a></li> 
+<li><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md">Graphit Examples</a></li>
+        
 </ul> 
          </ul>
 </details>
