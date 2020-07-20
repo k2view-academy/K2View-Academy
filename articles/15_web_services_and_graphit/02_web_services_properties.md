@@ -121,6 +121,26 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </tbody>
 </table>
  
+## How Do I Generate HTML format or legacy JSON/XML ? 
+
+In order to generate these types of formats, open the java logic file and add the following tag before the public class in which are encapsulated all the Web-Services defined in the specific Logic Category:
+```java @legacy
+public class Logic extends WebServiceUserCode {...
+```
+
+Then add the "UNKNOWN" value to the Produce fonction call at the line where the Web Service is defined: 
+```java @webService(path = "test/getCustomerInfo", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, produce = {Produce.UNKNOWN})
+```
+Modify the properties panel of the Web Service as shown below:
+<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce1.png" alt="drawing"/>
+
+After deploying the Web Service, it can be called from the browser:
+http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
+<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce2.png" alt="drawing"/>
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
 
