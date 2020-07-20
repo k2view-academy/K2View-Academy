@@ -125,11 +125,11 @@ C: Graphit files must be created and edited in the Fabric Studio.
 
 #### Question 8: Document Formatting
 
-What will the CSVRow tag do in the CSV document ?
+What will the CSVRow tag do in the CSV document?
 
 A: Count the number of rows expected in the response and display this number in the header. 
 
-B: Jump to next line of each row.
+B: Jump to the next line of each row.
 
 C: Row, row your doc gently down the web ...
 
@@ -140,31 +140,31 @@ D: Define the delimiter between rows. (Default is set to CR (\n ) sign).
 
 #### Question 9: Document Formatting
 
-How will the Entry tag affect the XML document ? 
+How will the Entry tag affect the XML document? 
 
 A: Allow it to be generated; without it the document will return empty. 
 
-B: Define the tag surrounding all XML array entries. If not used or set as None, the value *entry* is displayed.
+B: Define the tags surrounding all XML array entries. If not used or set as None, the value *entry* is displayed.
 
 C: Highlight each node's data that it  is applied to in bold and italics.
 
 (***Solution 9: B ***)
 
 
-#### Question 9: Document Formatting
+#### Question 10: Document Formatting
 
-How will the Entry tag affect the XML document ? 
+How will the Entry tag affect the XML document? 
 
 A: Allow it to be generated; without it the document will return empty. 
 
-B: Define the tag surrounding all XML array entries. If not used or is set as None, the value *entry* is displayed.
+B: Define the tags surrounding all XML array entries. If not used or is set as None, the value *entry* is displayed.
 
-C: Highlight in bold and italics all node-related data where it has been applied.
+C: Highlight all node-related data where it has been applied in bold and italics.
 
 (***Solution 9: B ***)
 
 
-#### Question 10: Nodes Creation 
+#### Question 11: Nodes Creation 
 
 What will a node defined as Type=Condition do?
 
@@ -177,7 +177,7 @@ C: Skip the node entirely if set to True.
 (***Solution 10: A ***)
 
 
-#### Question 11: Invoking Graphit
+#### Question 12: Invoking Graphit
 
 Graphit can be invoked:
 
