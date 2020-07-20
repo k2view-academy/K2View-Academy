@@ -89,7 +89,7 @@ Note that multiple parameters can be parsed to Graphit by:
 - Passing a map as a parameter in which the parameters and their values have been stored as key / value pairs.
 - Passing a list of arguments and then looping over the list.
 
-In addition, when designing a Web Service you can use all [REST APIs and requests formats](/articles/15_web_services/12_Supported_Verbs_Get.md) generally supported by Web Services. Schemas with complex requests can be designed whereby different Graphit files are invoked depending on the data retrieved from its sources or LUI. 
+In addition, when designing a Web Service you can use all [REST APIs and requests formats](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md) generally supported by Web Services. Schemas with complex requests can be designed whereby different Graphit files are invoked depending on the data retrieved from its sources or LUI. 
 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md)
