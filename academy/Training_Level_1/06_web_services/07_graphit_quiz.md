@@ -50,7 +50,7 @@ Parameters can be parsed within the Graphit file by:
 
 A: Doing nothing. Let's not exagerate, parameters cannot be parsed in Graphit.
 
-B: Refering to them using ${*parameter*} syntax and adding them with or without a value to the Parameter window.
+B: Referring to them using ${*parameter*} syntax and adding them with or without a value to the Parameter window.
 
 C: Refering to them using &[*parameter*] syntax.
 
