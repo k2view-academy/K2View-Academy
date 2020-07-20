@@ -59,7 +59,7 @@ A MicroDB provides several advantages:
 
     
 #### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across [nodes](#_Fabric_Cluster). 
+An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across [nodes](#Fabric Cluster). 
 
 A common database is always available to be queried during every Fabric session enabling joining data between Common tables and a MicroDB in one SQL query.
 
