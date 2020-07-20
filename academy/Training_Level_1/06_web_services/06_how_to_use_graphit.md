@@ -11,7 +11,7 @@ The following are the basic documents for creating a Graphit file and understand
 -  [Creating and Editing a Graphit File](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md).
 
 ### Graphit Nodes 
-The following articles describe the different types of Graphit Nodes and their properties:
+The following articles describe the different types of Graphit nodes and their properties:
 
 -  [Graphit Nodes Type](/articles/15_web_services_and_graphit/17_Graphit/03_graphit_node_types.md).
 
@@ -19,7 +19,7 @@ The following articles describe the different types of Graphit Nodes and their p
 
 ### Running or Invoking Graphit
 You can run Graphit either:
-- In Debug mode from the Graphit Editor: [Graphit Debugging](/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md)
+- In Debug mode from the Graphit Editor. Refer to [Graphit Debugging](/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md).
 - [Using Graphit with Parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md)
 to invoke Graphit files:
 - [Invoking Graphit Files](/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md)
@@ -40,7 +40,7 @@ In this exercise we refer to the exercise in [LU Enhancements - Translations](/m
     - Customer Full Name.
     - Customer City.
     - City International ID.
-    - LAT/LONG (previously populated using the translation table and concatenation function).
+    - LAT/LONG (previously populated using the Translation table and Concatenation function).
 
     Step 2:
     Using JavaScript, open a function node that splits the LAT/LONG field (e.g. 38.3484::-81.6323) and parse it to a map link
