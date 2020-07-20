@@ -23,7 +23,7 @@ Node Type options define how content is structured and how a tag is presented in
 <tr>
 <td valign="top" width="300pxl">SQL and Non-prepared SQL</td>
 <td valign="top" width="600pxl">Defines how an SQL statement retrieves information from Fabric or other database interfaces.
-    <br />Enter the SQL statement manually or hover over and then click either the SQL or Non-prepared SQL field <No Type>. 
+    <br />Enter the SQL statement manually or hover over and then click either the SQL or Non-prepared SQL field. <No Type>  
 
 Note that if the database is not a Fabric database, the Interface Name must be defined as a Node Property as described in the [Node Properties](/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md) section. 
   
