@@ -21,7 +21,7 @@ You can run each file in debug mode to observe the response for each of the type
 <tr>
 <td valign="top" width="100pxl">Field</td>
 <td valign="top" width="500pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
-<td valign="top" width="500pxl">In the grFormat.graphit file look at the children nodes of CRM_DB node</a></td>
+    <td valign="top" width="500pxl">grFormat.graphit: <br>Look at the children nodes of CRM_DB node</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Function</td>
