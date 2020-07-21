@@ -2,8 +2,8 @@
 
 Node Type options define how content is structured and how a tag is presented in an output document. By default, nodes are not assigned a Type or Property when they are created.
 ### What Are the Node Type Options?
-Please refer to the files referred to in the Example column and located in the Project environment.
-You can run each file in debug mode to observe the response for each of the types that are described in the table below:
+Please refer to the files referred to in the Example column and located in the Project environment under Project Tree > Web Services > Resources.
+You can run each file in debug mode and observe the response for each of the types that are described below:
 
 <table>
 <tbody>
@@ -69,7 +69,7 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Raw</td>
 <td valign="top" width="700pxl">Presents data as output without manipulation. For example, a header for XML format.&nbsp;</td>
-<td valign="top" width="300pxl">grRAW.graphit:<br>Illustrates an example of XML output in raw format. py attention to the header in the response: (?xml version="1.0" encoding="UTF-8"...)</br>></a></td>
+<td valign="top" width="300pxl">grRAW.graphit:<br>Illustrates an example of XML output in raw format. py attention to the header in the response: (?xml version="1.0" encoding="UTF-8"...)</br></a></td>
 
 </tr>
 </tbody>
