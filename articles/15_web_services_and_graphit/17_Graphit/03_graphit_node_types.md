@@ -8,13 +8,13 @@ Run the file in debug mode to observe the response for each of the types that ar
 <table>
 <tbody>
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="50pxl">
 <p><strong>Node Type</strong></p>
 </td>
-<td valign="top" width="500pxl">
+<td valign="top" width="400pxl">
 <p><strong>Description</strong></p>
 </td>
-<td valign="top" width="500pxl">
+<td valign="top" width="600pxl">
 <p><strong>Example</strong></p>
 </td>
 </tr>
