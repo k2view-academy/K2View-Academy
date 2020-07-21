@@ -21,9 +21,9 @@ Graphit files can be generated either:
 
 4.  Select the type of output format by clicking one of the following icons:
 [](/articles/15_web_services_and_graphit/17_Graphit/images/55_invoke_javacode_from_outside.PNG)
-   - JSON - click {:}
-   - XML - click </>
-   - CSV - click ![](/articles/15_web_services_and_graphit/17_Graphit/images/56_invoke_javacode_from_outside.PNG)
+       - JSON, click {:}
+       - XML, click </>
+       - CSV, click ![](/articles/15_web_services_and_graphit/17_Graphit/images/56_invoke_javacode_from_outside.PNG)
   
      The response is displayed in the white panel on the right side of the screen:
      
