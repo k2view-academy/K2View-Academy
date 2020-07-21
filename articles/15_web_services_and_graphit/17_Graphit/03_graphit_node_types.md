@@ -69,7 +69,7 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Raw</td>
 <td valign="top" width="700pxl">Presents data as output without manipulation. For example, a header for XML format.&nbsp;</td>
-<td valign="top" width="300pxl">grRAW.graphit:<br>Illustrates an example of XML output in raw format. py attention to the header in the response: (?xml version="1.0" encoding="UTF-8"...)</br></a></td>
+<td valign="top" width="300pxl">grRaw.graphit:<br>Illustrates an example of XML output in raw format. py attention to the header in the response: (?xml version="1.0" encoding="UTF-8"...)</br></a></td>
 
 </tr>
 </tbody>
