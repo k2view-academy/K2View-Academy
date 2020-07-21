@@ -11,7 +11,9 @@ Note that there is a short description of each property in the dropdown menu.
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/19_node_properties_menu.png" width="500" height="350"></img>
 
 
-### What Are the Node Properties Options? 
+### What Are the Node Properties Options?
+Please refer to the files referred to in the Example column and located in the Project environment under Project Tree > Web Services > Resources.
+You can run each file in debug mode and observe the response for each of the types that are described below:
 <table>
 <tbody>
 <tr>
@@ -46,12 +48,14 @@ Note that there is a short description of each property in the dropdown menu.
 <td valign="top" width="300pxl">grOne.graphit:<br>The "ONE" flag is set to TRUE and has been applied to the Billing_DB2 node. The response only brings the first value for {"BILLING_DB2":{"SUBSCRIBER_ID":2}}, instead of the 10 values expected for this tag (if the "ONE" flag had not been activated)</td>
 </tr>
 <tr>
-<td valign="top" width="300pxl">Entry Tag</td>
-<td valign="top" width="600pxl">Defines the tag surrounding XML array entries. When not used or set as None, the [entry] value is used.</td>
+<td valign="top" width="50pxl">Entry Tag</td>
+<td valign="top" width="700pxl">Defines the tag surrounding XML array entries. When not used or set as None, the [entry] value is used.</td>
+<td valign="top" width="300pxl">grEntry.graphit:<br>The Entry flag has been set to *subscribers*. The XML response therefore shows the *<subscribers>* *</subscribers>* surround the values of *subscriber_id*</td>
 </tr>
 <tr>
-<td valign="top" width="300pxl">Attribute</td>
-<td valign="top" width="600pxl">Defines in XML whether a value is set as an attribute or child node (default).&nbsp;</td>
+<td valign="top" width="50pxl">Attribute</td>
+<td valign="top" width="700pxl">Defines in XML whether a value is set as an attribute or child node (default).&nbsp;</td>
+<td valign="top" width="300pxl">grAttribute.graphit:<br>The Attribute flag has been activated to all children nodes of the CRM_DB node.</br></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Format</td>
