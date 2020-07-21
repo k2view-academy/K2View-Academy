@@ -6,7 +6,6 @@ You are now familiar with Broadway concept the the main components. Broadway has
 
 By the end of the Broadway Tutorials Flows learning item you will know:
 
-- How to create a Broadway flow.
 - Open and use Broadway Flow examples.
 - View, run, and debug Broadway Tutorials flow to have a better understanding of Broadway.
 
@@ -55,16 +54,16 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 7.5 What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?
 </code></pre>
 </ul>
- 
+
   ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **"splitting the flow"** to read its remark, and check the value of the Actor in the **"paradox"** Stage to help you answer this question.
- 
+
  8. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
  9. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
-  
+
   <ul>
 <pre><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></pre>
 </ul>
-  
+
 10. Click the **Stop Debug** icon tp stop the debugging.
 11. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
 12. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
@@ -84,7 +83,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
  <pre><code> 
  6.1 The flow result is "Hellow Broadway"</code></pre>
  </ul>
-  
+
 <ul>
 <pre><code>
 7.1  + 7.2- The flow executes two iterations run on the <strong>StringBuilder</strong> Actor- the first iteration runs on "Hello" and the second iteration runs on "Broadway".
@@ -93,7 +92,7 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 7.5 The next Stage, executed after the <strong>"splitting the flow"</strong> Stage, is the "Dynamic Logic Actors", since this Stage is on the same level as the "else" of the condition, and the condition returns "false". See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>
 </code></pre>
 </ul>
- 
+
  <ul>
 <pre><code>9.1 The new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> was not exectued, since this Stage runs only if the "paradox" condition is fulfilled.</code></pre>
 </ul>
