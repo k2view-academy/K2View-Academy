@@ -8,7 +8,7 @@ Note: You can refer to parameters directly using their name defined in the Param
 
 ### Example
 In the following example, a Graphit Web Service retrieves the sum of all payments made by a customer from the Received Invoices table.
-A decision can be made whethere to convert this amount into GBP or EUR currency depending on the value of the convGBP parameter.
+A decision can be made whether to convert this amount into GBP or EUR currency depending on the value of the convGBP parameter.
 
 -  True, displays the amount in GBP.
 -  False displays the amount in EUR.
