@@ -15,7 +15,7 @@ You can run each file in debug mode and observe the response for each of the typ
 <p><strong>Description</strong></p>
 </td>
 <td valign="top" width="300pxl">
-<p><strong>Example</strong></p>
+<p><strong>Examples</strong></p>
 </td>
 </tr>
 <tr>
