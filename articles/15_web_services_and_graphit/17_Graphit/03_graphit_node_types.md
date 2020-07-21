@@ -2,7 +2,8 @@
 
 Node Type options define how content is structured and how a tag is presented in an output document. By default, nodes are not assigned a Type or Property when they are created.
 ### What Are the Node Type Options?
-Please refer to the file *GraphitTagsExamples.graphit* located in the Project environment. 
+Please refer to the file *GraphitTagsExamples.graphit* located in the Project environment.
+Run the file in debug mode to observe the response for each of the types that are described in the table below:
 
 <table>
 <tbody>
