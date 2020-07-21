@@ -8,20 +8,20 @@ Run the file in debug mode to observe the response for each of the types that ar
 <table>
 <tbody>
 <tr>
-<td valign="top" width="300pxl">
+<td valign="top" width="100pxl">
 <p><strong>Node Type</strong></p>
 </td>
-<td valign="top" width="600pxl">
+<td valign="top" width="500pxl">
 <p><strong>Description</strong></p>
 </td>
-<td valign="top" width="400pxl">
+<td valign="top" width="500pxl">
 <p><strong>Example</strong></p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="300pxl">Field</td>
-<td valign="top" width="600pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
-<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/01_graphit_examples_tags.PNG"></a></td>
+<td valign="top" width="100pxl">Field</td>
+<td valign="top" width="500pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
+<td valign="top" width="500pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/01_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Function</td>
