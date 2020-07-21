@@ -28,7 +28,7 @@ Note that there is a short description of each property in the dropdown menu.
 </tr>
 <tr>
 <td valign="top" width="300pxl">Enabled</td>
-<td valign="top" width="600pxl">If enabled is set to false, the node and its children will not be evaluated.</td>
+<td valign="top" width="600pxl">If enabled is set to false, the node and its children are not evaluated.</td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Nice</td>
