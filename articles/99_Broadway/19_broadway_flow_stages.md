@@ -12,7 +12,8 @@ The flow's Stages are executed consecutively from left to right. When there are 
 
 A Stage can be added anywhere in the flow.
 
-- To add a Stage to the end of the flow, click the big plus sign in the empty Stage area.
+- To add a Stage to the end of the flow, click the large plus sign in the empty Stage area:
+![Flow-Plus Icon](/articles/99_Broadway/images/99_18_01_main_flow_area.PNG)
 - To add a Stage in the middle of the flow, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select either **Insert After** or **Insert Before**. 
 - To delete a Stage, click **Delete** in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). If the Stage has a dependent branch, it is also deleted.
 
