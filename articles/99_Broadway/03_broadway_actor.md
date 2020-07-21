@@ -42,7 +42,18 @@ The export activity creates a new Actor Type.
 
 ### Actor Objects
 
-An Actor Type is a template of an Actor object. Adding an Actor to a Flow create a new instance of the selected Actor Type.
+An Actor type is a template of an Actor object. Adding an Actor to a Broadway flow creates a new instance (object) of the selected Actor type.
+
+### How Can I Add or Delete an Actor to A Stage?
+- Click the Stage working area. A new popup window is displayed. The Add Actor popup window contains two columns: 
+  - Left column: Actor categories.
+  - Right column: List of Actors for each category.
+  
+ ![image](/articles/99_Broadway/images/add_actor.png)
+ 
+- You can run a search by the Actor category or the Actor type name.
+- Select the required Actor Type and click the **SUBMIT** to add the Actor to the Stage.
+- Click the Actor on the Stage, and press the **Delete** key to delete the Actor from the Stage.
 
 ### Actor  Description and Remark
 
