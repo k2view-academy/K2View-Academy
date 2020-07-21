@@ -24,7 +24,7 @@ Note that there is a short description of each property in the dropdown menu.
 </tr>
 <tr>
 <td valign="top" width="300pxl">Session Provider</td>
-<td valign="top" width="600pxl">Defines which interface should be used for a query. This property should be defined each time a node is defined as SQL or Non-prepared SQL and the queried database is not Fabric.<br />Note that this property affects the node and its child nodes.</td>
+<td valign="top" width="600pxl">Defines which interface should be used for a query. This property should be defined each time a node is defined as SQL or Non-prepared SQL and the queried database is not Fabric.<br />Note that this property affects the node and its children nodes.</td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Enabled</td>
@@ -84,8 +84,8 @@ Note that this property affects the node and its child nodes.&nbsp;</td>
 <td valign="top" width="600pxl">The following node properties control CSV format:
 <ul>
 <li>csvHeader, disables a header row</li>
-<li>csvRow, defines the delimiter between rows in&nbsp; CSV format. Default = CR (\n ) sign.</li>
-<li>csvCol, defines the delimiter between columns in CSV format. Default = comma sign.</li>
+<li>csvRow, defines the delimiter between rows in&nbsp; CSV format. The default value is set to the CR sign (\n).</li>
+<li>csvCol, defines the delimiter between columns in CSV format. The default value is set to the comma sign.</li>
 <li>csvEnclose, defines the character used to enclose a value in CSV format. This is only used if the value holds a special character (csvEnclose, csvRow, csvCol).</li>
 </ul>
 </td>
