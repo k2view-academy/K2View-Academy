@@ -98,9 +98,9 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
 13.  Close the loop after executing the 3rd Stage:
 
-    Click the three dots in the right corner of the Stage to open the Stage context menu. Select the **Iterate Close** option to close the loop after the execution of the Stage.
+    - Click the three dots in the right corner of the Stage to open the Stage context menu. Select the **Iterate Close** option to close the loop after the execution of the Stage.
 
-    Read about [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu)  to learn more about editing the Stage's settings.
+      Read about [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu)  to learn more about editing the Stage's settings.
 
 14. The 2nd and 3rd Stages are marked by grey, and are framed by black lines that mark the open and close of the loop:
 
@@ -108,7 +108,9 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
 15. Run the flow
 
-16. Check your local directory and open the newly created Json file. 
+16. Check your local directory and open the newly created Json file.
+
+     
 
     
 
