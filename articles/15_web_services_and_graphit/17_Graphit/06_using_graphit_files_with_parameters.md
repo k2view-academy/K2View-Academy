@@ -54,10 +54,13 @@ Example:
 
 Using the same **grSql.graphit** Graphit file as in the previous example, in the following screenshot the **customer_id Debug** value has been left empty intentionally.
 
+
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/40_graphit_with_parameters.PNG)
+
 Following its deployment, the Graphit file is deployed as a Web Service.
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/41_graphit_with_parameters.PNG)
+
 As indicated below, the two Parameters fields are marked as required.
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/42_graphit_with_parameters.PNG)
@@ -70,7 +73,7 @@ Note that when deleting all parameters in the Parameters dialog box together, th
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/44_graphit_with_parameters.PNG)
 
-## How Do I Configure Parameters When Invoking Graphit From a Web Service 
+## How Do I Configure Parameters When Invoking Graphit From a Web Service?
 A Graphit file can be invoked directly or be wrapped by a WS. When wrapped by a WS, the WS sends the parameters to Graphit which then parses them accordingly when generating the XML, JSON or CSV documents. The input parameters for the Graphit file can be populated by a parameter name or by a map object.
 
 Example:
