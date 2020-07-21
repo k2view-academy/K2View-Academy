@@ -47,20 +47,22 @@ Stages 1 and 6 cannot be merged since they do not have a common parent.
 
 If a condition is required in the flow, the flow can be split and a **Stage condition** Actor can be added to one or more Stages that have been created as a result of the split. 
 
-The condition Actor can have any number of output parameters, however a true/false check is always performed on the first output parameter. Note that this parameter does not need to be Boolean, since Broadway can do the casting. For example, an empty string is considered as false while a string that is not empty is considered as true.
+The condition Actor can have any number of output parameters, however a True / False check is always performed on the first output parameter. Note that this parameter does not need to be Boolean, since Broadway can do the casting. For example, an empty string is considered to be false while a string that is not empty is considered to be true.
 
 The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages which neither have a condition or **else** are always executed and have no impact on the **else** Stage. 
 
-The Stage's conditions impact all subsequent Stages in the same branch. Thus, if a Stage condition is false, the execution of its branch stops. 
-A merged Stage will run after all its parent Stages have been executed. If no parent Stages have been executed (all conditions are false), the merged Stage is not executed.
+The Stage's conditions impact all subsequent Stages in the same branch. Thus: 
+-  If a Stage condition is false, the execution of its branch stops. 
+-  A merged Stage will run after all its parent Stages have been executed. 
+-  If no parent Stages have been executed (all conditions are false), the merged Stage is not executed.
 
 ### How Do I Define a Stage Condition?
 
 - To add a Stage condition to the flow, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition**. 
 
-- To mark a Stage as **else**, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select **Else**.
+- To mark a Stage as **else**, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select **Else**.
 
-Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and it does not expect the 'return' keyword.
+Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the 'return' keyword.
 
 **Stage Conditions Example**
 
