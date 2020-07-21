@@ -23,7 +23,7 @@ The following screenshot displays how Debug mode is run with the customer_id set
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/51_invoke_javacode_from_graphit.PNG)
 
 
-The following scereenshot displays how the Web Service is deployed and launched in Swagger:
+The following screenshot displays how the Web Service is deployed and launched in Swagger:
 
 ![](/articles/15_web_services/17_Graphit/images/52_invoke_javacode_from_graphit.PNG)
 
