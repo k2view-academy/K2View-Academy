@@ -48,7 +48,7 @@ Stages 1 and 6 cannot be merged since they do not have a common parent.
 
 If a condition is required in the flow, the flow can be split and a **Stage condition** Actor can be added to one or more Stages that have been created as a result of the split. 
 
-The condition Actor can have any number of output parameters, however a True / False check is always performed on the first output parameter. Note that this parameter does not need to be Boolean, since Broadway can do the casting. For example, an empty string is considered to be false while a string that is not empty is considered to be true.
+The condition Actor can have any number of output parameters, however a True / False check is always performed on the first output parameter. Note that this parameter does not need to be Boolean, since Broadway can cast its type to be a Boolean. For example, an empty string is considered to be false while a string that is not empty is considered to be true.
 
 The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages which neither have a condition or **else** are always executed and have no impact on the **else** Stage. 
 
