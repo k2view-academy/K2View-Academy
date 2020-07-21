@@ -53,7 +53,7 @@ Note that the function times defined above are called from the node **field 1** 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/52a_invoke_javacode_from_graphit.PNG)
 
 
-Output using Swagger GUI:
+Output using the Swagger GUI:
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/52b_invoke_javacode_from_graphit.PNG)
 
 
