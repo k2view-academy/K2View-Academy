@@ -6,7 +6,7 @@ Graphit files can be invoked either directly as a Web Service or embedded into a
 
 2. Right click the **Graphit file** > **Invoke Graphit Web Service** > **Fabric server**.
 
-Note that the Fabric server must be predefined in the [Server Configuration Tab](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
+Note that the Fabric server must be predefined in the [Server Configuration tab](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) in the User Configuration tab in the Admin panel.
 
 For more information refer to the example in [Using Parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#parameters-setup-when-calling-graphit-directly-from-swagger) to see how to deploy and invoke a Graphit file as a Web Service.
 
