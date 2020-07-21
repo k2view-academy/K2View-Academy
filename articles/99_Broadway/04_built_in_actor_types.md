@@ -41,7 +41,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <li>Receive its input from the output of a previous Actor and transfer it to the next Actor.</li>
 <li>Receive an external flow argument and transfer it to the next Actor.</li>
 </ul>
-<strong>Concat</strong>Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong>Actor, executes the Javascript provided in the script parameter. The script returns the value of the last line.</td>
+<strong>Concat</strong> Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong> Actor, executes the Javascript provided in the script parameter. The script returns the value of the last line.</td>
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
@@ -51,11 +51,11 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Actors serving as the basic building blocks for creating the Broadway flow.</p>
 </td>
 <td style="vertical-align: top;" width="600">
-<p><strong>ForLoop</strong>Actor, iterates over a range of numbers.</p>
-<p><strong>Logger</strong>Actor, writes a message to the log file, referencing entries from params and Actor inputs.</p>
-<p><strong>InnerFlow</strong>Actor, executes a Broadway flow.</p>
-<p><strong>LuFunction</strong>Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or fom the params input argument.</p>
-<p><strong>Email</strong>Actor, sends an email using a given SMTP interface.</p>
+<p><strong>ForLoop</strong> Actor, iterates over a range of numbers.</p>
+<p><strong>Logger</strong> Actor, writes a message to the log file, referencing entries from params and Actor inputs.</p>
+<p><strong>InnerFlow</strong> Actor, executes a Broadway flow.</p>
+<p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or fom the params input argument.</p>
+<p><strong>Email</strong> Actor, sends an email using a given SMTP interface.</p>
 </td>
 </tr>
 <tr>
@@ -66,7 +66,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Various Date and Time manipulation functions, such as DateAdd, DateFormat or Now.</p>
 </td>
 <td width="600">
-<p><strong>DateFormat</strong>Actor, formats a date into a string.</p>
+<p><strong>DateFormat</strong> Actor, formats a date into a string.</p>
 <ul>
 <li>Input values: Date, Output Format (following a predefined pattern) and Time Zone.</li>
 <li>Initial format: yyyy-MM-dd HH:mm:ss.SSS.</li>
@@ -86,7 +86,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td style="vertical-align: top;" width="433">Actions to be performed on a DB interface, such as creating a new table, loading data or executing a DB command.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>DbCommand</strong>Actor, performs database commands on a DB command interface. The interface used as input can be:</p>
+<p><strong>DbCommand</strong> Actor, performs database commands on a DB command interface. The interface used as input can be:</p>
 <ul>
 <li>A JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
@@ -99,7 +99,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-logic" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#logic" aria-hidden="true"></a><strong>logic</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">Logical operation on Actors<strong>A</strong> ;and <strong>B</strong> which returns a <strong>True</strong> or <strong>False</strong> boolean result.
+<td style="vertical-align: top;" width="433">Logical operation on Actors<strong> A</strong> and <strong>B</strong> which returns a <strong>True</strong> or <strong>False</strong> boolean result.
 <p>Broadway converts the following types of input parameters to booleans:</p>
 <ul>
 <li>Null/no input, False.</li>
@@ -109,9 +109,9 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </ul>
 </td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>And&nbsp;</strong>Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
-<p><strong>Elvis</strong>&nbsp;Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise it returns&nbsp;B.</p>
-<p><strong>IfElse&nbsp;</strong>Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
+<p><strong>And</strong> Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
+<p><strong>Elvis</strong>&nbsp; Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise it returns&nbsp;B.</p>
+<p><strong>IfElse</strong> Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -120,17 +120,17 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td style="width: 433px; vertical-align: top;" width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
 <td width="600">
-<p><strong>Aggregate</strong>&nbsp;Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
-<p><strong>MathDivMod</strong>&nbsp;Actor, returns the divisor and modulo factor of&nbsp;A&nbsp;and&nbsp;B.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
+<p><strong>Aggregate</strong> Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
+<p><strong>MathDivMod</strong> Actor, returns the divisor and modulo factor of&nbsp;A&nbsp;and&nbsp;B.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
 </td>
 </tr>
 <tr>
 <td width="210">
 <h4><a id="user-content-parsers" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#parsers" aria-hidden="true"></a><strong>parsers</strong></h4>
 </td>
-<td width="433">Various parsers which can be received as input stream in different kinds of formats, for example, CSV, JSON or XML.</td>
+<td width="433">Various parsers which can be received as input stream in different types of formats, for example, CSV, JSON or XML.</td>
 <td width="600">
-<p><strong>XmlParser</strong>&nbsp;Actor, receives an input stream represented via an iterable collection of blobs or strings.&nbsp;The parser runs until the end of the stream is detected. It returns a collection of parsed objects or a single object if Single is set to True.&nbsp;</p>
+<p><strong>XmlParser</strong> Actor, receives an input stream represented via an iterable collection of blobs or strings. The parser runs until the end of the stream is detected. It returns a collection of parsed objects or a single object if Single is set to True.</p>
 </td>
 </tr>
 <tr>
@@ -139,7 +139,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td width="433">Publish / subscribe messages to the queue.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>Publish&nbsp;</strong>Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
+<p><strong>Publish</strong>Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
 <ul>
 <li>Broker interface to use.</li>
 <li>Topic to publish to.</li>
@@ -153,8 +153,8 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td width="433">Various stream manipulation functions, such as Compress, FileRead or Http.</td>
 <td width="600">
-<p><strong>FileRead</strong>&nbsp;Actor, reads data from a file given an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
-<p><strong>Http</strong>&nbsp;Actor, sends a request to a web server.&nbsp;Supports streaming payload and results and sending and receiving header parameters.&nbsp;</p>
+<p><strong>FileRead</strong> Actor, reads data from a file given an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
+<p><strong>Http</strong> Actor, sends a request to a web server. Supports streaming payload and results and sending and receiving header parameters.</p>
 </td>
 </tr>
 <tr>
@@ -166,15 +166,15 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Graphit and JsonStringify Actors are also included in this category.</p>
 </td>
 <td width="600">
-<p><strong>Regex</strong>&nbsp;Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them.&nbsp;When using matching groups, the result is the content of the matching group instead of the full match. For example, in the 'ABCDEF'string, the 'C.E' pattern returns ['CDE'], whereas 'C(.)E' returns ['D'].&nbsp;</p>
-<p><strong>Graphit</strong>&nbsp;Actor, executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or, if not there, from the params input argument.&nbsp;The inputs are:</p>
+<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the 'ABCDEF'string, the 'C.E' pattern returns ['CDE'], whereas 'C(.)E' returns ['D'].</p>
+<p><strong>Graphit</strong> Actor, executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or from the params input argument. The inputs are:</p>
 <ul>
 <li>LU containing the Graphit file (initial value = k2_ws).</li>
 <li>Graphit filename.</li>
 <li>Required output format (inital value = JSON).</li>
 <li>Parameters for Graphit execution.</li>
 </ul>
-<p>The Actor&nbsp;first looks at the input parameters (first level) and, if not found there, looks at the params input argument.&nbsp;</p>
+<p>The Actor first looks at the input parameters (first level) and, if it is not found there, looks at the params input argument.</p>
 </td>
 </tr>
 <tr>
@@ -183,7 +183,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td style="vertical-align: top;" width="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
 <td width="600">
-<p><strong>cp</strong>&nbsp;Actor, copies a file.&nbsp;The interface used as input&nbsp;can be:</p>
+<p><strong>cp</strong> Actor, copies a file.&nbsp;The interface used as input&nbsp;can be:</p>
 <ul>
 <li>JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
