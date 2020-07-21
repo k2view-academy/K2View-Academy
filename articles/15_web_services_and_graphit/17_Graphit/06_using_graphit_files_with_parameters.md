@@ -54,12 +54,7 @@ Example:
 
 Using the same **grSql.graphit** Graphit file as in the previous example, in the following screenshot the **customer_id Debug** value has been left empty intentionally.
 
-
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/40_graphit_with_parameters.PNG)
-
-Following its deployment, the Graphit file is deployed as a Web Service.
-
-![](/articles/15_web_services_and_graphit/17_Graphit/images/41_graphit_with_parameters.PNG)
 
 As indicated below, the two Parameters fields are marked as required.
 
