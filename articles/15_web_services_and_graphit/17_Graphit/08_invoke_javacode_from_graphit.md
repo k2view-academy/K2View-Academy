@@ -42,7 +42,7 @@ Web Service file: LambdaGraphit1.ws
 
 ```java
 Map<String, Object> scope = new HashMap<>();
-// a map object named scope in which each entry will contain the function's name and it's logic
+// a map object named scope in which each entry will contain the function's name and its logic
 scope.put("times3", (Scripter.F) p->(double)p[0] *3);
 // call graphit with the scope
 return graphit("LambdaGraphit1.graphit", scope);
