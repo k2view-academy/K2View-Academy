@@ -20,11 +20,12 @@ Please refer to the file *GraphitTagsExamples.graphit* located in the Project en
 <tr>
 <td valign="top" width="300pxl">Field</td>
 <td valign="top" width="600pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
-<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/08_node_type_field.png"></a></td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/01_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Function</td>
 <td valign="top" width="600pxl">Runs the code to determine the value of the node. Note that the code must be written in JavaScript.&nbsp;</td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/02_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">SQL and Non-prepared SQL</td>
@@ -42,27 +43,32 @@ The SQL Type also enables looping results and executing nested codes on each ret
 Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.&nbsp;<br />
 
 To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.</td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/03_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">String</td>
 <td valign="top" width="600pxl">Concatenates two or more values.&nbsp;</td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/04_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Condition</td>
 <td valign="top" width="600pxl">Builds IF-ELSE statements which should include a condition. The nested nodes are / not executed according to the result of the condition.&nbsp;</td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/05_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Group&nbsp;</td>
 <td valign="top" width="600pxl">Groups several elements. Mainly used with Condition nodes.</td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/06_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Collect</td>
 <td valign="top" width="600pxl">Iterates multiple data sets into one unified array.&nbsp;</td>
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/07_graphit_examples_tags.PNG"></a></td>
 </tr>
 <tr>
 <td valign="top" width="300pxl">Raw</td>
 <td valign="top" width="600pxl">Presents data as output without manipulation. For example, a header for XML format.&nbsp;</td>
-
+<td valign="top" width="400pxl"><img src="/articles/15_web_services_and_graphit/17_Graphit/images/08_graphit_examples_tags.PNG"></a></td>
 
 </tr>
 </tbody>
