@@ -38,7 +38,7 @@ Let's create your first simple Web Service which will retrieve basic information
 
 ### Deploying a Web Service
 
-Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services_from_fabric_studio.md) to understand how.
+Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services.md) to understand how.
 
 
 You can now deloy the Web Service into the Fabric server that you defined for your project. 
