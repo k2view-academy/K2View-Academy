@@ -21,11 +21,9 @@ You can run each file in debug mode and observe the response for each of the typ
 <tr>
 <td valign="top" width="50pxl">Field</td>
 <td valign="top" width="700pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
-    <td valign="top" width="300pxl">
-        <br>
-        [grFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
-    </br>
-    </td>
+<td valign="top" width="300pxl"> 
+<No Type>*[grFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)*
+</td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Function</td>
@@ -35,7 +33,7 @@ You can run each file in debug mode and observe the response for each of the typ
 <tr>
 <td valign="top" width="50pxl">SQL and Non-prepared SQL</td>
 <td valign="top" width="700pxl">Defines how an SQL statement retrieves information from Fabric or other database interfaces.
-    <br />Enter the SQL statement manually or hover over and then click either the SQL or Non-prepared SQL field. <No Type>  
+    Enter the SQL statement manually or hover over and then click either the SQL or Non-prepared SQL field. <No Type>  
 
 Note that if the database is not a Fabric database, the Interface Name must be defined as a Node Property as described in the [Node Properties](/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md) section. 
   
