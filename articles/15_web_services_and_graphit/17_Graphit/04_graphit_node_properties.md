@@ -12,8 +12,7 @@ Note that there is a short description of each property in the dropdown menu.
 
 
 ### What Are the Node Properties Options?
-Please refer to the files referred to in the Example column and located in the Project environment under Project Tree > Web Services > Resources.
-You can run each file in debug mode and observe the response for each of the types that are described below:
+Please refer to the files referred to in the following table's Example column. The files are saved in the Project environment under Project Tree > Web Services > Resources. We suggest that you run each file in Debug mode and observe the response.
 <table>
 <tbody>
 <tr>
@@ -64,7 +63,7 @@ You can run each file in debug mode and observe the response for each of the typ
 </tr>
 <tr>
 <td valign="top" width="50pxl">Show Empty</td>
-<td valign="top" width="500pxl">Defines whether empty nodes are displayed in the output. Default = True.<br />Note that this property affects the node and its child nodes.
+<td valign="top" width="500pxl">Defines whether empty nodes are displayed in the output. Default = True.<br />Note that this property affects the node and its children nodes.
 <td valign="top" width="500pxl">[grShowEmpty.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)<br></br></td>
 
 </td>
@@ -90,12 +89,12 @@ E  Separates mantissa and exponent in scientific notation.
 %  Multiply by 100 and show as percentage
 ```
 
-Note that this property affects the node and its child nodes.&nbsp;</td>
+Note that this property affects the node and its children nodes.&nbsp;</td>
 <td valign="top" width="500pxl">[grNumberFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)<br></br></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Keys</td>
-<td valign="top" width="500pxl">Advanced mechanism that replaces nested queries by joining the data on the root query and grouping it with a key when query keys are used to select a subset of rows to group each invocation of the node. When keys are specified in child nodes, each node groups its parent's node according to the key.</td>
+<td valign="top" width="500pxl">Advanced mechanism that replaces nested queries by joining the data on the root query and grouping it with a key when query keys are used to select a subset of rows to group each invocation of the node. When keys are specified in children nodes, each node groups its parent's node according to the key.</td>
 <td valign="top" width="500pxl">[grKeys.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)<br></br></td>
 
 </tr>
@@ -106,7 +105,7 @@ Note that this property affects the node and its child nodes.&nbsp;</td>
 <ul>
 <li>csvHeader, disables a header row</li>
 <li>csvRow, defines the delimiter between rows in&nbsp; CSV format. The default value is set to the CR sign (\n).</li>
-<li>csvCol, defines the delimiter between columns in CSV format. The default value is set to the comma sign.</li>
+<li>csvCol, defines the delimiter between columns in CSV format. The default value is set to the comma character.</li>
 <li>csvEnclose, defines the character used to enclose a value in CSV format. This is only used if the value holds a special character (csvEnclose, csvRow, csvCol).</li>
 </ul>
 </td>
