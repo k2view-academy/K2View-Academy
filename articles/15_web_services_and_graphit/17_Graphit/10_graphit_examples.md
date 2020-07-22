@@ -129,7 +129,7 @@ The "ONE" flag is set to TRUE and has been applied to the Billing_DB2 node. The 
 The Entry flag has been set to the subscribers node. The XML response therefore shows and tags around each value of subscriber_id.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/21_graphit_examples_tags.PNG" width="700" height="400"></img>
 
-#### Attribute.graphit
+#### grAttribute.graphit
 The Attribute flag has been activated to all children nodes of the CRM_DB node.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/22_graphit_examples_tags.PNG" width="700" height="400"></img>
 
