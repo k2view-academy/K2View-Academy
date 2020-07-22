@@ -83,7 +83,7 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
     - Set the value of the **path** to **customer_list.json**. This parameter is populated by the new file name, created by the **FileWrite** Actor.
 
-    - Set the **append** Boolean parameter to **true** to append each Json object, sent by the **JsonStringify** Actor, to the file.
+    - Set the **append** Boolean parameter to **false** to rewrite into the file by each flow execution.
 
       ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3.png)
 
@@ -107,10 +107,12 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
 15. Run the flow
 
-16. Check your local directory and open the newly created Json file.
-
-     
+16. Check your local directory and open the newly created Json file. The file contains the list of customers, selected from CONTRACT table.
 
     
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
+    Congratulations. You've just created your first Broadway flow. Let's continue to the next item to have an exercise, based on this flow.
+
+
+
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)
