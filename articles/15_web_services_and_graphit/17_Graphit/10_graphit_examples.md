@@ -146,7 +146,7 @@ The **showNull** flag has been set to False and applied to the CRM_DB node. Null
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/25_graphit_examples_tags.PNG" width="700" height="400"></img>
 
 #### grNumberFormat.graphit
-The **numberFormat** flag has been set to 000.00 and applied to the NumberFormat node. All responses display **Number Format** with 3 digits before the floating point and another 2 after.<br></br>
+The **numberFormat** flag has been set to 000.00 and applied to the NumberFormat node. All responses display **numberFormat** with 3 digits before the floating point and another 2 after.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/26_graphit_examples_tags.PNG" width="700" height="400"></img>
 
 #### grKeys.graphit
