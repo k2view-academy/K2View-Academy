@@ -87,22 +87,22 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 <ul>
 <pre><code>
 7.1  + 7.2- The flow executes two iterations run on the <strong>StringBuilder</strong> Actor- the first iteration runs on "Hello" and the second iteration runs on "Broadway".
-7.3 The <strong>StringBuilder</strong> returns the following output: "Hello Broadway".
-7.4 The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop, and builds the String. The "for each" State is marked by "Iterate Close". As a result- the StringBuilder in this Stage closes the loop and only then returns its output.
-7.5 The next Stage, executed after the <strong>"splitting the flow"</strong> Stage, is the "Dynamic Logic Actors", since this Stage is on the same level as the "else" of the condition, and the condition returns "false". See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>
+7.3 The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
+7.4 The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop, and builds the String. The <strong>for each</strong> State is marked by <strong>Iterate Close</strong>. As a result- the StringBuilder in this Stage closes the loop and only then returns its output.
+7.5 The next Stage, executed after the <strong>splitting the flow</strong> Stage, is the <strong>Dynamic Logic Actors</strong> Stage, since this Stage is on the same level as the <strong>else</strong> of the condition, and the condition returns <strong>false</strong>. See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
 </code></pre>
 </ul>
 
  <ul>
-<pre><code>9.1 The new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> was not exectued, since this Stage runs only if the "paradox" condition is fulfilled.</code></pre>
+<pre><code>9.1 The new <strong>Now</strong> Actor, added to to <strong>Stage 3</strong> was not exectued, since this Stage runs only if the <strong>paradox</strong> condition is fulfilled.</code></pre>
 </ul>
 
 <ul>
-<pre><code>13.1 The flow result is "Broadway Training".</code></pre>
+ <pre><code>13.1 The flow result is <strong>Broadway Training</strong>.</code></pre>
 </ul> 
 
 <ul><pre><code>14.1 There are two flow. A local copy of the tutorial flow was saved in the Fabric project by its execution.</code></pre></ul>
 
-<ul><pre><code>15.1 The value of the input parameter is "Broadway Training". You can edit the flow and save the changes, or execute the flow. A local copy pf the flow is saved in the Fabric project. </code></pre></ul> 
+<ul><pre><code>15.1 The value of the input parameter is <strong>Broadway Training</strong>. You can edit the flow and save the changes, or execute the flow. A local copy of the flow is saved in the Fabric project. </code></pre></ul> 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/03_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md)
