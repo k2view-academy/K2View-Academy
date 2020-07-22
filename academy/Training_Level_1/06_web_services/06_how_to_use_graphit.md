@@ -25,8 +25,7 @@ to invoke Graphit files:
   - [Invoke Graphit from a Web Form](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
 
 ### Graphit Code Examples 
-- [Code Examples](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
-
+- Please refer to: [Code Examples](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
 
 
 ### Exercise 1 - Create a Graphit Web Service 
