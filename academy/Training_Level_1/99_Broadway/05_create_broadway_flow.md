@@ -61,7 +61,7 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
    - Write the Json object to an output file.
 
-2. Click the plus icon in the right side of the flow window to create the 2nd Stage. The 2nd Stage will build a Json object for each select customer's record.
+2. Click the ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) icon in the right side of the flow window to create the 2nd Stage. The 2nd Stage will build a Json object for each select customer's record.
 
 3. Add a **JsonStringify** Actor to the 2nd Stage and link the **[result]** output parameter of the **DbCommand** Actor  to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records, returned by the **DbCommand** by a loop:
 
