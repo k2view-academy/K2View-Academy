@@ -1,14 +1,14 @@
 # Broadway Data Inspector
 
-**Data Inspector** is a Broadway capability to identify and display the complex data structures including their schema and the values which are passed between two Stages. It is applicable for **Object** data types only.
+The Broadway **Data Inspector** is used to identify and display complex **Object** data type structures and their schemas and the values that are transfered between two Stages. 
 
-The data inspector can be open using a small **plus sign** next to the Actor's output argument. When pressing on it, the **yellow segment** is expanded and it displays the schema on its left side and the data values on its right side. The data values are displayed only when you [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
+To open the Data inspector, click **plus sign** adjacent to the Actor's output argument to expand a **yellow segment** and displays the Schema on the left and the data values on thr  right. To display the data values [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
 
 ![image](/articles/99_Broadway/images/99_27_01.PNG)
 
 ### How Do I Edit the Schema Using the Data Inspector?
 
-If needed, the schema can be edited at the run time. Click on the yellow segment next to the schema element which you want to edit to open the context menu. 
+If needed, the schema can be edited during run time. Click the yellow segment next to the schema where you want to edit to open the context menu. 
 
 <table style="width: 900px;">
 <tbody>
@@ -18,9 +18,9 @@ If needed, the schema can be edited at the run time. Click on the yellow segment
 </td>
 <td width="60pxl">Add Child</td>
 <td width="430pxl">
-<p>Add a child to the selected element using the <strong>Link bar</strong>. The Link bar will become available in the <a href="/articles/99_Broadway/18_broadway_flow_window.md#main-menu">Main menu</a> area and it will allow to define the name and the type of the new element.</p>
+<p>Add a child to the selected element using the <strong>Link bar</strong>. The Link bar is available in the <a href="/articles/99_Broadway/18_broadway_flow_window.md#main-menu">Main menu</a> area and can be used to define the new element's Name and the Type.</p>
 <p><img src="/articles/99_Broadway/images/99_27_03.PNG" alt="Add Child" /></p>
-<p>Note that Add Child menu item is available only when clicking on the parent node</p>
+<p>Note that to display the Child menu click the parent node</p>
 </td>
 </tr>
 <tr>
@@ -54,8 +54,7 @@ If needed, the schema can be edited at the run time. Click on the yellow segment
 
 ### How Do I Edit the Schema Using the Data Viewer?
 
-Additional way to edit the schema is using the [Data Viewer](). Click **Edit Schema** in the output argument's properties to open **Edit Schema** pop-up window.
-Then you can edit the schema manually and submit your change. The yellow segment will be refreshed and will display the updated schema.
+The [Data Viewer]() can also be used to edit a schema. To do so, click **Edit Schema** in the output argument's properties to open **Edit Schema** pop-up window. Edit the schema manually and submit your change. The yellow segment is refreshed and displays the updated schema.
 
 ![image](/articles/99_Broadway/images/99_27_04_data_viewer.PNG)
 
