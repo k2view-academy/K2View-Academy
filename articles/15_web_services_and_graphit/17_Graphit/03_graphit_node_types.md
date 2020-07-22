@@ -54,7 +54,7 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Condition</td>
 <td valign="top" width="700pxl">Builds IF-ELSE statements which should include a condition. The nested nodes are / not executed according to the result of the condition.&nbsp;</td>
-<td valign="top" width="300pxl">grCondition.graphit:<br>The condition defined in this file will trigger either the TRUE or FALSE node depending on the randomly generated values of x and y </a></td>
+<td valign="top" width="300pxl">[grCondition.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Group&nbsp;</td>
