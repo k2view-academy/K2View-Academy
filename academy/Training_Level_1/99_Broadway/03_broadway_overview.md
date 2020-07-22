@@ -15,4 +15,4 @@ So, let’s start learning what Broadway is all about by reading the [Broadway O
 
 Now let's learn about  [Broadway High Level Components](/articles/99_Broadway/02_broadway_high_level_components.md) to have a better understanding about the Broadway components.
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/04_broadway_tutorials.md)
