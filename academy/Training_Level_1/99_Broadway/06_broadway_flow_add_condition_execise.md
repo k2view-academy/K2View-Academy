@@ -39,7 +39,9 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
    
 
-4. Split **Stage4**, click the ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) icon of the newly created **Stage5**, and select the **Else** option.
+4. Split **Stage4**:
+
+   -  Click the ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) icon of the newly created **Stage5**, and select the **Else** option.
 
 #### Step 4- Add the Next Stages
 
