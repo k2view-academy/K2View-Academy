@@ -21,7 +21,11 @@ You can run each file in debug mode and observe the response for each of the typ
 <tr>
 <td valign="top" width="50pxl">Field</td>
 <td valign="top" width="700pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
-    <td valign="top" width="300pxl">[grFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)/br></a></td>
+    <td valign="top" width="300pxl">
+        <br>
+        [grFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
+    </br>
+    </td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Function</td>
