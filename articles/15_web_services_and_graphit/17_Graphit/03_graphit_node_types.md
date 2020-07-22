@@ -26,7 +26,7 @@ You can run each file in debug mode and observe the response for each of the typ
 <tr>
 <td valign="top" width="50pxl">Function</td>
 <td valign="top" width="700pxl">Runs the code to determine the value of the node. Note that the code must be written in JavaScript.&nbsp;</td>
-<td valign="top" width="300pxl">[grFunction file](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
+<td valign="top" width="300pxl">[grFunction.graphit file](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)[Node Properties](/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md)</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">SQL and Non-prepared SQL</td>
