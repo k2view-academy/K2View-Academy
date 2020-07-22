@@ -17,10 +17,9 @@ B: Test Web Services.
 
 C: Format Web Service responses documents such as XML, JSON and CSV.
 
-D: All of the above.
+D: All the above.
 
 (**Solution 1: D**).
-
 
 
 #### Question 2: Graphit Editor
@@ -42,21 +41,19 @@ F: All the above.
 (**Solution 2: F**).
 
 
-
 #### Question 3: Graphit Parameters
 
 Parameters can be parsed within the Graphit file by:
 
 A: Doing nothing. Let's not exaggerate, parameters cannot be parsed in Graphit.
 
-B: Referring to them, using the ${parameter} syntax and adding them with or without a value to the Parameters window.
+B: Referring to them, using ${parameter} syntax and adding them with or without a value to the Parameters window.
 
 C: Referring to them using the &[parameter] syntax.
 
 D: Not declaring them since Graphit understands which parameters to refer to from the context.
 
 (**Solution 3: B**).
-
 
 
 #### Question 4: Functions in Graphit
@@ -71,8 +68,9 @@ C: An SQL statement can be used from a Graphit node as long as it is defined as 
 
 D: A Graphit node can retrieve specific LUI data using the get LUI.${ID} command.
 
-E: All the above.(**Solution 4: E**).
+E: All the above.
 
+(**Solution 4: E**).
 
 
 #### Question 5: Lambda Expressions
@@ -92,7 +90,7 @@ E: All the above.
 (**Solution 5: D**).
 
 
-#### Question 6: Invoking Graphit from a web-service
+#### Question 6: Invoking Graphit from a Web Service
 
 A Graphit file can be invoked from a Web Service by:
 
@@ -107,7 +105,7 @@ D: All the above.
 (**Solution 6: A**)
 
 
-#### Question 7: Creating and Invoking Graphit from a webform
+#### Question 7: Creating and Invoking Graphit from a Web Form
 
 A Graphit file can be created externally by:
 
@@ -120,7 +118,7 @@ C: Graphit files must be created and edited in the Fabric Studio.
 (**Solution 7: A**)
 
 
-#### Question 8: Documents formatting
+#### Question 8: Documents Formatting
 
 What will the CSVRow tag do to the CSV document?
 
@@ -135,10 +133,9 @@ D: Define the delimiter between the rows. Default is set to CR (\n ).
 (**Solution 8: D**)
 
 
-#### Question 9: Documents formatting
+#### Question 9: Documents Formatting
 
 How will the Entry tag affect your XML document?
-
 
 A: Allow it to be generated; without it the document will return empty.
 
@@ -149,20 +146,7 @@ C: Highlight (in bold and italics) the node’s data where it has been applied.
 (**Solution 9: B**)
 
 
-#### Question 10: Documents formatting
-
-How will the Entry tag affect your XML document?
-
-A: Allow it to be generated; without it the document will return empty.
-
-B: Define the tag surrounding all XML array entries. If not used or set as None, the value entry is displayed.
-
-C: Highlight (in bold and italics) all node-related data where it has been applied. 
-
-(**Solution 10: B**)
-
-
-#### Question 11: Nodes creation 
+#### Question 10: Nodes Creation 
 
 What will a node type defined as a condition do?
 
@@ -172,10 +156,10 @@ B: Add the tag to the beginning of the node in the document.
 
 C: Skip the node since no condition has been entered.
 
-(**Solution 11: A**)
+(**Solution 10: A**)
 
 
-#### Question 12: Invoking Graphit
+#### Question 11: Invoking Graphit
 
 Graphit can be invoked
 
@@ -185,7 +169,7 @@ B: Directly as a Web Service.
 
 C: Responses A & B.
 
-(**Solution 12: C**)
+(**Solution 11: C**)
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/06_how_to_use_graphit.md)
