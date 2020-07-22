@@ -28,7 +28,7 @@ The Broadway Tutorial flow runs some manipulations on "Hello Broadway" String, a
 
 Run the flow on a debug mode to view the input and the output of each [State](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
- Please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow step by step.
+ Please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
 
 ###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
