@@ -63,6 +63,7 @@ Graphit file: grCSV.graphit:
 
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/63_graphit_examples.PNG" width="700" height="400"></img>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/64_graphit_examples.PNG" width="700" height="400"></img>
+<br>
 Running the Graphit file in Debug mode with 2 and 3 as consecutive values for the SubscriberID:
 
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/65_graphit_examples.PNG"></img>
