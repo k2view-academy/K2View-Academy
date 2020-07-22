@@ -117,7 +117,7 @@ The sessionProvider flag is set to CRM_DB thus enabling direct references to CRM
 The response comes back empty since the entire CRM_DB node and its children nodes are affected by the "enabled" flag.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/18_graphit_examples_tags.PNG" width="700" height="400"></img>
 
-#### grShowEnabled.graphit
+#### grShowNice.graphit
 The "nice" flag is set to TRUE and has been activated at the root node level. The response comes back with each tag appearing in a new line and with the indentation corresponding to the location of the tag in the document's hierarchy.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/19_graphit_examples_tags.PNG" width="700" height="400"></img>
 
