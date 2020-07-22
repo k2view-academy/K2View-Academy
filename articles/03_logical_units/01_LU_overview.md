@@ -34,6 +34,10 @@ Every Fabric project starts by defining its LUs. Analyze the business requiremen
 ### General Recommendations for Designing an LU 
 Digital Entity data is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data sources.
 
+In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Digital Entity.
+
+For example, if you have a Digital Entity called Customer, but different Customer Types (e.g. consumer and business) has different data sources, the recommanded approach will be to create LU for each Digital Entity sub type (in our example, different Customer Types).
+
 Below is a table of **pros and cons** of each alternative:
 
 <table role="table" width="800">
@@ -48,6 +52,9 @@ Below is a table of **pros and cons** of each alternative:
 <td width="250">
 <p><strong>LU per Digital Entity and data source</strong></p>
 </td>
+<td width="250">
+<p><strong>LU per Digital Entity sub type</strong></p>
+</td>
 </tr>
 <tr>
 <td width="300">
@@ -55,6 +62,7 @@ Below is a table of **pros and cons** of each alternative:
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="10">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="10">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="300">
@@ -62,6 +70,7 @@ Below is a table of **pros and cons** of each alternative:
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>   
 </tr>
 <tr>
 <td width="300">
@@ -69,12 +78,14 @@ Below is a table of **pros and cons** of each alternative:
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>   
 </tr>
 <tr>
 <td width="250">
 <p>Maintenance, handling a less complex schema and internal relationships</p>
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
@@ -83,6 +94,7 @@ Below is a table of **pros and cons** of each alternative:
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
@@ -90,12 +102,14 @@ Below is a table of **pros and cons** of each alternative:
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 <tr>
 <td width="250">
 <p>Tuning the migration process</p>
 </td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/X_icon.png" alt="" width="25" height="26"</td>
+<td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 <td align="center" width="60">&nbsp; <img src="/articles/images/V_icon.png" alt="" width="25" height="26"</td>
 </tr>
 </tbody>
