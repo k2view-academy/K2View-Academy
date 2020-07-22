@@ -101,16 +101,14 @@ Note that this property affects the node and its children nodes.&nbsp;</td>
 <tr>
 <td valign="top" width="50pxl">csvHeader, csvRow, csvCol, csvEnclose</td>
 <td valign="top" width="500pxl">The following node properties control CSV format:
-<td valign="top" width="500pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grcsvgraphit">grCSV</a></td>
 <ul>
- 
- 
 <li>csvHeader, disables a header row</li>
 <li>csvRow, defines the delimiter between rows in&nbsp; CSV format. The default value is set to the CR sign (\n).</li>
 <li>csvCol, defines the delimiter between columns in CSV format. The default value is set to the comma character.</li>
 <li>csvEnclose, defines the character used to enclose a value in CSV format. This is only used if the value holds a special character (csvEnclose, csvRow, csvCol).</li>
 </ul>
 </td>
+<td valign="top" width="500pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grcsvgraphit">grCSV</a></td>
 </tr>
 </tbody>
 </table>
