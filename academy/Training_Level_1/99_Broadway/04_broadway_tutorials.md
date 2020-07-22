@@ -32,18 +32,18 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 ###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
-1. Download the [demo project] (/articles/demo_project) and open this project in your **Fabric Studio**.
+1. Download the [demo project](/articles/demo_project) and open this project in your **Fabric Studio**.
 2. Go to the **Project Tree**, right click the **Broadway** and select **New Flow**.
 3. Populate the **Name** in the **Flow name** popup window by **test**.
 4. In the Flow Window, Click **Actions** and then select **Examples**.
 5. Select **a-broadway-tutorial** to open the Broadway Tutorial flow.
-6. Click the **Run Flow** icon to run the flow.
+6. Click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) icon to run the flow.
 
   <ul>
  <pre><code>6.1 What is the result of the flow?</code></pre>
   </ul>
 
-7. Add a Breakpoint to the **for each** Stage and click the **Debug Play** icon on the Flow window. Then click the **Debug Step** icon to execute the next steps of the flow.
+7. Add a Breakpoint to the **for each** Stage and click the ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) icon on the Flow window. Then click the ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) icon to execute the next steps of the flow.
 
 <ul>
 <pre><code>
@@ -55,13 +55,13 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 </code></pre>
 </ul>
 
-  ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **"splitting the flow"** to read its remark, and check the value of the Actor in the **"paradox"** Stage to help you answer this question.
+  ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **splitting the flow** to read its remark, and check the value of the Actor in the **paradox** Stage to help you answer this question.
 
  8. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
- 9. Click the the **Debug Step** icon to execute the flow on a debug mode, step-by-step.
+ 9. Click the the ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) icon to execute the flow steps on a debug mode.
 
   <ul>
-<pre><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>"Stage 3"</strong> exectued? Why?</code></pre>
+<pre><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>Stage 3</strong> exectued? Why?</code></pre>
 </ul>
 
 10. Click the **Stop Debug** icon tp stop the debugging.
