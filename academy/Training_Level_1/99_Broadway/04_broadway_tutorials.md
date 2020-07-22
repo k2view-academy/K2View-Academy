@@ -105,4 +105,4 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 <ul><pre><code>15.1 The value of the input parameter is "Broadway Training". You can edit the flow and save the changes, or execute the flow. A local copy pf the flow is saved in the Fabric project. </code></pre></ul> 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/04_broadway_flow_exercise.md)
