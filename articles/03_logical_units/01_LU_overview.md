@@ -34,6 +34,8 @@ Every Fabric project starts by defining its LUs. Analyze the business requiremen
 ### General Recommendations for Designing an LU 
 Digital Entity data is often split between different data sources. In some cases, it is preferable to create one LU that contains all data sources. In other cases, it is more advantageous to split the LUs and create a separate LU for each data sources.
 
+In general, an LU should be based on the smallest number of data sources, as long as it represents a full 360 view of a Digital Entity.
+
 Below is a table of **pros and cons** of each alternative:
 
 <table role="table" width="800">
