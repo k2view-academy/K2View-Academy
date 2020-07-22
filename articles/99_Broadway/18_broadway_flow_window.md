@@ -1,24 +1,24 @@
 # Broadway Flow Window
 
-**Broadway Flow** window is the main Broadway UI component that enables the definition and execution of business processes  including all the [Stages](/articles/99_Broadway/19_broadway_flow_stages.md), [Actors](/articles/99_Broadway/03_broadway_actor.md) and the [links between the Actors](<!--Link to 21-Links-->). 
+The **Broadway Flow** window is the main Broadway interface and is where business processes including [Stages](/articles/99_Broadway/19_broadway_flow_stages.md), [Actors](/articles/99_Broadway/03_broadway_actor.md) and [links between the Actors](<!--Link to 21-Links-->) are defined and executed. 
 
 To create a new Broadway flow:
-1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name pop-up window.
-2. Populate the flow name and press **Ok**. The empty flow will open.
+1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
+2. Populate the **flow name** and click **OK** to open an empty Flow area.
 
 ![image](/articles/99_Broadway/images/99_18_01_main_flow_area.PNG)
 
-The Broadway flow window includes the following elements:
+The **Broadway Flow** window includes the following elements:
 
-- The main flow area where the Stages are added using the big plus sign or from the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). The Actors can be added to the Stage by clicking on the empty Stage area.
-- [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables to run the flow and to execute additional actions, such as Save as Actor.
-- [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities, such as Split, Merge or Delete.
-- [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities, such as Add, Link or Export Actor. 
-- [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which allows to set and edit the properties of the selected object. 
+- Main flow area where Stages are added. To do so, either click the big plus in the flow area, or go to the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select     . To add Actors to a Stage, by click in the empty Stage area.
+- [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional action like **Save as Actor**.
+- [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
+- [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
+- [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which enables setting and editing the properties of a selected object. 
 
 ### Main Menu
 
-The Main menu of the Broadway flow is located on top of the window and allows to perform the following activities:
+The Main menu of the Broadway flow is located on top of the window and enables performing the following activities:
 
 ![image](/articles/99_Broadway/images/99_18_01_main_menu.PNG)
 
@@ -27,26 +27,26 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 <tr>
 <td width="170pxl">Actions</td>
 <td width="630pxl">
-<p>Drop-down menu, to perfom the actions:</p>
+<p>Dropdown menu holding the following options:</p>
 <ul>
-<li><a href="/articles/99_Broadway/17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
-<li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a> - save the current flow as an Actor, to re-use its logic as an Inner Flow in any other Broadway flow.</li>
-<li>Debug/Run Arguments - click to open the pop-up window to define input arguments for the flow execution, in case its population type is External.</li>
-<li>Reset Parameters Schemas - reset Actor parameter schemas to the Actor original state. Removing the output schema for complex types will erase all the lines originating from the schema.</li>
-<li>Flip Scroll-wheel - command to the mouse scroll wheel to move the window scroll bar horizontally instead of vertically.</li>
+<li><a href="/articles/99_Broadway/17_tutorial_and_flow_examples.md">Examples</a>,- open the tutorial or an example flow.</li>
+<li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a>, save the current flow as an Actor and use its logic as an Inner Flow in another Broadway flow.</li>
+<li>Debug/Run Arguments, click to open the popup window to define input arguments for the flow execution, if its population type is External.</li>
+<li>Reset Parameters Schemas, reset Actor parameter schemas to the Actor's original status. Removing the output schema for complex types erases all lines originating from the schema.</li>
+<li>Flip Scroll-wheel, command the mouse scroll wheel to move the window scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td width="200">Run/Stop Flow</td>
 <td style="width: 465px;">
-<p>Run the flow or to stop the run.</p>
+<p>Run the flow or stop the run.</p>
 </td>
 </tr>
 <tr>
 <td width="200">Debug Play/Step/Stop</td>
 <td style="width: 465px;">
-<p>Run the flow in a debug mode.</p>
+<p>Run the flow in Debug mode.</p>
 </td>
 </tr>
 <tr>
@@ -58,13 +58,13 @@ The Main menu of the Broadway flow is located on top of the window and allows to
 <tr>
 <td width="200">Undo/Redo</td>
 <td style="width: 465px;">
-<p>Click to undo or redo the latest activity.</p>
+<p>Click to undo or redo the last activity.</p>
 </td>
 </tr>
 <tr>
 <td width="200">Remarks</td>
 <td style="width: 465px;">
-<p>Click to display all the flow remarks.</p>
+<p>Click to display all remarks in the flow.</p>
 </td>
 </tr>
 </tbody>
@@ -104,7 +104,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tr>
 <tr>
 <td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages">Stage Condition</a></td>
-<td style="width: 465px;">Click to open a popup window to select an Actor to the Stage. The Actor will serve as a stage condition. Any Actor can serve as a condition. Note that Stage condition Actors are colored in grey.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor to the Stage. The Actor will serve as a stage condition. Any Actor can serve as a condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
 <td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages">Else</a></td>
@@ -112,7 +112,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tr>
 <tr>
 <td width="200">[Error Handler]</td>
-<td style="width: 465px;">Click to open a popup window to select an Actor to the Stage. The Actor will serve as Error Handler. Note that Error Handler Actors are colored in red.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor to the Stage. The Actor will serve as Error Handler. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
 <td width="200">Transaction</td>
@@ -124,7 +124,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tr>
 <tr>
 <td width="200">Remark</td>
-<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, the green asterisk will be displayed on the left of the three dots and the Remark pop-up will be open with its text.&nbsp;</td>
+<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, a green asterisk is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -139,11 +139,11 @@ To open the Actor's context menu, click the three dots in the right corner of th
 <td rowspan="9" width="400pxl">
 <p><img src="/articles/99_Broadway/images/99_18_03_actor_menu.png" alt="Actor's context menu" /></p></td>
 <td width="80pxl">Collapse / Expand</td>
-<td width="420pxl">Collapse or Expand the Actor, keeping visible only the Actor's title.</td>
+<td width="420pxl">Collapse or Expand the Actor and display the Actor's title.</td>
 </tr>
 <tr>
 <td width="200">Show Only Connected</td>
-<td style="width: 465px;">Mark to display only the selected Actor with its connections.</td>
+<td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
 </tr>
 <tr>
 <td width="200">Copy Selection</td>
@@ -155,15 +155,15 @@ To open the Actor's context menu, click the three dots in the right corner of th
 </tr>
 <tr>
 <td width="200"><a href="/articles/99_Broadway/21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow"> Link</a></td>
-<td style="width: 465px;">Click to connect the selected Actor with the required target Actor.&nbsp;&nbsp;</td>
+<td style="width: 465px;">Click to connect the selected Actor and the required target Actor.&nbsp;&nbsp;</td>
 </tr>
 <tr>
 <td width="200">Add Actor Below</td>
-<td style="width: 465px;">Click to open a popup window to select an Actor to the Stage. The Actor will be added below the selected Actor.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor to the Stage. The Actor is added under the selected Actor.</td>
 </tr>
 <tr>
 <td width="200">[Export Actor]</td>
-<td style="width: 465px;">Click to save an Actor (as inheritance of the selected Actor).&nbsp; Then the Actor will be added to the list of <a href="/articles/99_Broadway/04_built_in_actor_types.md">built-in Actors</a> and can be re-used in other flows.</td>
+<td style="width: 465px;">Click to save an Actor (as inheritance of the selected Actor).&nbsp; The Actor is then added to the list of <a href="/articles/99_Broadway/04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.</td>
 </tr>
 <tr>
 <td width="200">Description</td>
@@ -178,10 +178,10 @@ To open the Actor's context menu, click the three dots in the right corner of th
 
 ### Properties Tab
 
-The Properties tab of the flow window dynamically adjusts its layout to display the data based on the Actor's structure, such as the number of [input and output parameters](/articles/99_Broadway/03_broadway_actor.md#data-input-parameters), their data types and the default values if exist. It can also display the properties of the connection between two Actors. When the link is selected, it will show the names of From and To Actors and parameters, as well as the [Link type](<!--Link to 21-Links-->)
-If the Properties tab is displayed and the user clicks anywhere on the empty Stage area, the Properties tab will disappear. 
+The Properties tab in the Flow window dynamically adjusts its layout to display data based on the Actor's structure, such as the number of [input and output parameters](/articles/99_Broadway/03_broadway_actor.md#data-input-parameters), their data types and default values. The tab can also display the properties of a connection between two Actors. When the link is selected, it displays he names of From and To Actors and their parameters and the [Link type](<!--Link to 21-Links-->)
+To hide the Properties tab, click anywhere in the empty Stage area. 
 
-**Example of Actor's Properties tab**
+**Example of Actor's Properties Tab**
 
 ![image](/articles/99_Broadway/images/99_18_04_properties.PNG)
 
