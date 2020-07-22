@@ -30,7 +30,7 @@ You can run each file in debug mode and observe the response for each of the typ
 <tr>
 <td valign="top" width="50pxl">Session Provider</td>
 <td valign="top" width="5pxl">Defines which interface should be used for a query. This property should be defined each time a node is defined as SQL or Non-prepared SQL and the queried database is not Fabric.<br />Note that this property affects the node and its children nodes.</td>
-<td valign="top" width="500pxl">[grShowFormat](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)<br></br></td> 
+<td valign="top" width="500pxl">[grShowFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)<br></br></td> 
 </tr>
 <tr>
 <td valign="top" width="50pxl">Enabled</td>
