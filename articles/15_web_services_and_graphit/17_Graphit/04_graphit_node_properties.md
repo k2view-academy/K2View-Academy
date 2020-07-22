@@ -96,11 +96,10 @@ Note that this property affects the node and its children nodes.&nbsp;</td>
 <td valign="top" width="50pxl">Keys</td>
 <td valign="top" width="900pxl">Advanced mechanism that replaces nested queries by joining the data on the root query and grouping it with a key when query keys are used to select a subset of rows to group each invocation of the node. When keys are specified in children nodes, each node groups its parent's node according to the key.</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grkeysgraphit">grKeys</a></td>
-
 </tr>
 <tr>
 <td valign="top" width="50pxl">csvHeader, csvRow, csvCol, csvEnclose</td>
-<td valign="top" width="500pxl">The following node properties control CSV format:
+<td valign="top" width="900pxl">The following node properties control CSV format:
 <ul>
 <li>csvHeader, disables a header row</li>
 <li>csvRow, defines the delimiter between rows in&nbsp; CSV format. The default value is set to the CR sign (\n).</li>
@@ -108,7 +107,7 @@ Note that this property affects the node and its children nodes.&nbsp;</td>
 <li>csvEnclose, defines the character used to enclose a value in CSV format. This is only used if the value holds a special character (csvEnclose, csvRow, csvCol).</li>
 </ul>
 </td>
-<td valign="top" width="500pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grcsvgraphit">grCSV</a></td>
+<td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grcsvgraphit">grCSV</a></td>
 </tr>
 </tbody>
 </table>
