@@ -84,7 +84,7 @@ This example illustrates a simple javascript routine that returns the highest of
 
 #### grSQL.graphit
 In this file we describe a parent node defined as SQL non-prepared, while its children nodes are defined as SQL.<br></br>
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags.png" width="700" height="400"></img>
 
 #### grString.graphit
 This example shows how to concatenate 2 values retrieved from a previously-defined SQL query.<br></br>
