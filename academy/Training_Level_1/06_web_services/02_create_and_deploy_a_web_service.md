@@ -1,19 +1,19 @@
 # Creating and Deploying a Web Service
 
 The stored Fabric data can be viewed, updated and even deleted using the Web Service layer and its sets of requests and responses.
-Click [Web Services Overview](/articles/15_web_services/01_web_services_overview.md) to read a little more.
+Click [Web Services Overview](/articles/15_web_services_and_graphit/01_web_services_overview.md) to read a little more.
 
 ### Creating a Web Service
 
 The following are the basic steps for creating a Web Service and understanding its structure and properties:
 
--  [Creating a Web Service ](/articles/15_web_services/03_create_a_web_service.md)
+-  [Creating a Web Service ](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
 
--  [Defining Web Service Properties ](/articles/15_web_services/02_web_services_properties.md)
+-  [Defining Web Service Properties ](/articles/15_web_services_and_graphit/02_web_services_properties.md)
 
--  [Understanding the Basic Structure of a Web Service Function](/articles/15_web_services/04_web_services_function_basic_structure.md)
+-  [Understanding the Basic Structure of a Web Service Function](/articles/15_web_services_and_graphit/04_web_services_function_basic_structure.md)
 
--  [Editing Web Service Code](/articles/15_web_services/05_edit_web_service_code.md)
+-  [Editing Web Service Code](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Creating a Web Service
 
@@ -33,12 +33,12 @@ Let's create your first simple Web Service which will retrieve basic information
    -   Set the path to: **train/getCustomer**.
    -   Add a **description** of your Web Service.
 8. Add comments or a log message to your Web Service.
-9. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services/03_create_a_web_service.md).
+9. Follow any addtional steps as mentioned in [Create a Web Service ](/articles/15_web_services_and_graphit/03_create_a_web_service.md).
 10. Make sure that there are no errors and then save the Web Service.
 
 ### Deploying a Web Service
 
-Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services/07_deploy_web_services_from_fabric_studio.md) to understand how.
+Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services_from_fabric_studio.md) to understand how.
 
 
 You can now deloy the Web Service into the Fabric server that you defined for your project. 
