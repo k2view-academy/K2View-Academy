@@ -67,7 +67,7 @@ The 5xx Server Error status code indicates that the server is aware that it has 
 <p>OK</p>
 </td>
 <td width="200pxl" valign="top" >
-<p>GET/POST/PUT/DELETE</p>
+<p>GET/PUT/DELETE</p>
 </td>
 <td width="500pxl" valign="top" >
 <p>The 200 (OK) status code indicates that the request has succeeded.&nbsp;The payload is sent in a 200 response depending on the request method. For the methods defined by this specification, the intended meaning of the payload can be summarized as:</p>
