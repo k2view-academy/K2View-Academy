@@ -72,6 +72,40 @@ Note the different tags used and their respective effect on the output CSV docum
 e.g. csvHeader: false -> removes fields headers from the response.
 
 
+###  Graphit Node Type Examples
+#### grFormat.graphit
+In this example, you will find that all the children nodes of the CRM_DB node are defined as field. The response will populate the document with the names and values of these specific fields.
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/09_graphit_examples_tags" width="700" height="400"></img>
+
+#### grFunction.graphit
+This example illustrates a simple javascript routine that returns the highest of random number x and random number y.
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/10_graphit_examples_tags" width="700" height="400"></img>
+
+#### grSQL.graphit
+In this file we describe a parent node defined as SQL non-prepared, while its children nodes are defined as SQL.
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags" width="700" height="400"></img>
+
+#### grString.graphit
+This example shows how to concatenate 2 values retrieved from a previously-defined SQL query
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/12_graphit_examples_tags" width="700" height="400"></img>
+
+#### grCondition.graphit
+The condition defined in this file will trigger either the TRUE or FALSE node depending on the randomly generated values of x and y
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/13_graphit_examples_tags" width="700" height="400"></img>
+
+#### grGroup.graphit
+The ${x} string has been added to both TRUE and FALSE groups, while the ${y} value is declared outside the groups. The display ${x} of  will also show which group originated it. 
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/14_graphit_examples_tags" width="700" height="400"></img>
+
+#### grCollect.graphit
+This example shows how both subscriber and billing datasets are collected into one single array.
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/15_graphit_examples_tags" width="700" height="400"></img>
+
+#### grRaw.graphit
+This example illustrates an example of XML output in raw format. Observe the header value displayed in the response: (?xml version="1.0" encoding="UTF-8"...)
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/16_graphit_examples_tags" width="700" height="400"></img>
+
+
 
 
 
