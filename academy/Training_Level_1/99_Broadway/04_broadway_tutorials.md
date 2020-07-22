@@ -24,7 +24,7 @@ To open the Broadway Tutorials flow, you need first  to open the Broadway flow w
 
 ### Debugging the Broadway Tutorials Flow
 
-The Broadway Tutorial flow runs some manipulations on "Hello Broadway" String, and returns the "Hello Broadway" results.
+The Broadway Tutorial flow runs some manipulations on **Hello Broadway** String, and returns the **Hello Broadway** result.
 
 Run the flow on a debug mode to view the input and the output of each [State](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
@@ -47,11 +47,11 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 
 <ul>
 <pre><code>
-7.1 How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>"for each"</strong> Stage?<br>
+7.1 How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>for each</strong> Stage?<br>
 7.2 Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
 7.3 What is the output of the <strong>StringBuilder</strong> Actor?
 7.4 How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
-7.5 What is the next Stage, executed after the <strong>"splitting the flow"</strong> Stage? Why?
+7.5 What is the next Stage, executed after the <strong>splitting the flow</strong> Stage? Why?
 </code></pre>
 </ul>
 
@@ -64,9 +64,9 @@ Run the flow on a debug mode to view the input and the output of each [State](/a
 <pre><code>9.1 Was the new <strong>Now</strong> Actor, added to to <strong>Stage 3</strong> exectued? Why?</code></pre>
 </ul>
 
-10. Click the **Stop Debug** icon tp stop the debugging.
+10. Click the ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) icon to stop the debugging.
 11. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
-12. Edit the value of the first input variable from "Hello Broadway" to "Broadway Training".
+12. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 13. Run the flow.
 <ul><pre><code>13.1 What is the flow result?</code></pre></ul> 
 
