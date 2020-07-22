@@ -52,9 +52,9 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>ForLoop</strong> Actor, iterates over a range of numbers.</p>
-<p><strong>Logger</strong> Actor, writes a message to the log file, referencing entries from params and Actor inputs.</p>
+<p><strong>Logger</strong> Actor, writes a message to the log file referencing entries from params and Actor inputs.</p>
 <p><strong>InnerFlow</strong> Actor, executes a Broadway flow.</p>
-<p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or fom the params input argument.</p>
+<p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or from the params input argument.</p>
 <p><strong>Email</strong> Actor, sends an email using a given SMTP interface.</p>
 </td>
 </tr>
@@ -76,7 +76,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>For example:</p>
 <ul>
 <li>To display a day of a year in the output, add <strong>D</strong> to the format.</li>
-<li>To display a day of the week in the output, add<strong>E</strong> to the format</li>
+<li>To display a day of the week in the output, add<strong> E</strong> to the format.</li>
 </ul>
 </td>
 </tr>
@@ -110,7 +110,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong>And</strong> Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
-<p><strong>Elvis</strong>&nbsp; Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise it returns&nbsp;B.</p>
+<p><strong>Elvis</strong> Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise returns B.</p>
 <p><strong>IfElse</strong> Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
 </td>
 </tr>
@@ -139,7 +139,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td width="433">Publish / subscribe messages to the queue.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>Publish</strong>Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
+<p><strong>Publish</strong> Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
 <ul>
 <li>Broker interface to use.</li>
 <li>Topic to publish to.</li>
@@ -154,7 +154,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <td width="433">Various stream manipulation functions, such as Compress, FileRead or Http.</td>
 <td width="600">
 <p><strong>FileRead</strong> Actor, reads data from a file given an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
-<p><strong>Http</strong> Actor, sends a request to a web server. Supports streaming payload and results and sending and receiving header parameters.</p>
+<p><strong>Http</strong> Actor, sends a request to a Web Server. Supports streaming payload and results and sending and receiving header parameters.</p>
 </td>
 </tr>
 <tr>
@@ -166,7 +166,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Graphit and JsonStringify Actors are also included in this category.</p>
 </td>
 <td width="600">
-<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the 'ABCDEF'string, the 'C.E' pattern returns ['CDE'], whereas 'C(.)E' returns ['D'].</p>
+<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the ABCDEF string, the C.E pattern returns [CDE], whereas C(.)E returns [D].</p>
 <p><strong>Graphit</strong> Actor, executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or from the params input argument. The inputs are:</p>
 <ul>
 <li>LU containing the Graphit file (initial value = k2_ws).</li>
