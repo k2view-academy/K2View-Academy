@@ -21,12 +21,12 @@ You can run each file in debug mode and observe the response for each of the typ
 <tr>
 <td valign="top" width="50pxl">Field</td>
 <td valign="top" width="700pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
-    <td valign="top" width="300pxl">grFormat.graphit: <br>Look at the children nodes of CRM_DB node</br></a></td>
+    <td valign="top" width="300pxl">[grFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)/br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Function</td>
 <td valign="top" width="700pxl">Runs the code to determine the value of the node. Note that the code must be written in JavaScript.&nbsp;</td>
-<td valign="top" width="300pxl">grFunction file: <br>A simple javascript routine returns which random number is higher</br></a></td>
+<td valign="top" width="300pxl">[grFunction file](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">SQL and Non-prepared SQL</td>
@@ -44,12 +44,12 @@ The SQL Type also enables looping results and executing nested codes on each ret
 Note that it is recommended to set the SQL statement type to SQL to use a prepared statement and prepared binding.&nbsp;<br />
 
 To build an SQL statement for each call, set the query Type to Non-prepared SQL. For example, to build dynamic SQL, select X,Y from $table name.</td>
-<td valign="top" width="300pxl">grSQL.graphit: <br>Describes a parent node defined as SQL non-prepared, while its children nodes are defined as SQL</br></a></td>
+<td valign="top" width="300pxl">[grSQL.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">String</td>
 <td valign="top" width="700pxl">Concatenates two or more values.&nbsp;</td>
-<td valign="top" width="300pxl">grString.graphit:<br>Shows how to concatenate 2 values retrieved from a previously-defined SQL query</br></a></td>
+<td valign="top" width="300pxl">[grString.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Condition</td>
@@ -59,17 +59,17 @@ To build an SQL statement for each call, set the query Type to Non-prepared SQL.
 <tr>
 <td valign="top" width="50pxl">Group&nbsp;</td>
 <td valign="top" width="700pxl">Groups several elements. Mainly used with Condition nodes.</td>
-<td valign="top" width="300pxl">grGroup.graphit:<br>The ${x} string has been added to both TRUE and FALSE groups, while the ${y} value is declared outside the groups</br></a></td>
+<td valign="top" width="300pxl">[grGroup.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Collect</td>
 <td valign="top" width="700pxl">Iterates multiple data sets into one unified array.&nbsp;</td>
-<td valign="top" width="300pxl">grCollect.graphit:<br>Shows how both subscriber and billing datasets are collected into one single array</br></a></td>
+<td valign="top" width="300pxl">[grCollect.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">Raw</td>
 <td valign="top" width="700pxl">Presents data as output without manipulation. For example, a header for XML format.&nbsp;</td>
-<td valign="top" width="300pxl">grRaw.graphit:<br>Illustrates an example of XML output in raw format. py attention to the header in the response: (?xml version="1.0" encoding="UTF-8"...)</br></a></td>
+<td valign="top" width="300pxl">[grRaw.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)</br></a></td>
 
 </tr>
 </tbody>
