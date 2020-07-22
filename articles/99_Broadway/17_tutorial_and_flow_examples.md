@@ -27,7 +27,7 @@ The Tutorial explains the usage of a number of common [built-in Actor Types](/ar
 - Broadway supports several types of parser Actors, for example **JsonParser** or **XmlParser**. Parsers take a string or blob and parse them into a structure. Checkout [**json.flow**](/articles/99_Broadway/17_tutorial_and_flow_examples.md#example---jsonflow), **csv.flow** and **lines.flow** parsing examples. 
 
 
-[Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) include dynamic logic as one of their inputs. The input can be added to Actors and be referred to the Actor's logic. For example, **JavaScript** Actor executes the Javascript provided in the 'script' parameter and returns the value of the last expression.  **javascript.flow** provides an additional explanation of how this Actor works. 
+[Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) include dynamic logic as one of their inputs. The input can be added to Actors and be referred to the Actor's logic. For example, **JavaScript** Actor executes the JavaScript provided in the 'script' parameter and returns the value of the last expression.  **javascript.flow** provides an additional explanation of how this Actor works. 
 
 In Broadway, **conditions** are implemented using the [**Split**](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) option in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). You can split the flow and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return false. Checkout **conditions.flow** for more conditions examples.
 
