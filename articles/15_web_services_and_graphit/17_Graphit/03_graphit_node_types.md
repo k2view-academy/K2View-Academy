@@ -22,7 +22,7 @@ You can run each file in debug mode and observe the response for each of the typ
 <td valign="top" width="50pxl">Field</td>
 <td valign="top" width="700pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
 <td valign="top" width="300pxl"> 
-<No Type>*[grFormat.graphit](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)*
+    <a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md">grFormat.graphit</a>
 </td>
 </tr>
 <tr>
