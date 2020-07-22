@@ -20,17 +20,17 @@ To learn more about our Broadway flow, refer to [Broadway Flow Overview](/articl
 
 Now, let's start creating a new Broadway flow which selects a data from a DB table and creates a Json file, based on the selected DB records:
 
+#### Step 1- Creating a new Broadway Flow
+
 1. Download and open the [demo project](/articles/demo_project) in the Fabric Studio. 
 
 2. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name pop-up window.
 
 3. Populate the flow name and press **Ok**. The empty flow will open.
 
-4. Populate the 1st Stage:
+#### Step 2- Populating the 1st Stage of the Flow
 
-   -  Get the list of customers,  that purchased more that one new subscription (contract) during the last 42 months:
-
-   - The data needs to be selected from **CONTRACT** table of **CRM_DB** interface based on the following SQL query:
+1. Get the list of customers,  that purchased more that one new subscription (contract) during the last 42 months. The data needs to be selected from **CONTRACT** table of **CRM_DB** interface based on the following SQL query:
 
      ```
      Select count(*) As no_of_contracts,
@@ -42,7 +42,7 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
      Having count(*) > 2;
      ```
 
-     - Add a **DbCommand** Actor to run the select statement above to the 1st stage- 
+ 2. Add a **DbCommand** Actor to run the select statement above to the 1st stage- 
 
        -  Read about [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how you can add the **DbCommand **Actor to the 1st Stage.
 
@@ -54,6 +54,7 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
            ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
+#### Step 3- Reading the Customer's List and Creating a File
 5. The next Stages need to run a loop on the list of selected customers. For each selected record: 
 
    - Build a Json object.
