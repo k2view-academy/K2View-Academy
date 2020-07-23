@@ -112,4 +112,4 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
 Congratulations. You've just created your first Broadway flow. Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/04_broadway_flow_exercise.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/06_broadway_flow_adding_loops_and_conditions.md)
