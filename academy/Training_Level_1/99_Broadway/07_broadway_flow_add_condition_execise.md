@@ -115,7 +115,7 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
  3.2 <strong>Stage7</strong> was executed, since the condition returned <strong>false</strong>.
  3.3 The following messsage was given by the Logger Actor of Stage7: 
      <strong>ERROR: Error- there are not enough customers in the list</strong>. 
-     The Logger Actors of Stage6 and Stage7 set a different level of message, since each one of them has a   different value of the the level input parameter.
+     The Logger Actors of Stage6 and Stage7 set a different level of message, since each one of them has a different value of the the level input parameter.
  </code></pre>
  </ul>
 
