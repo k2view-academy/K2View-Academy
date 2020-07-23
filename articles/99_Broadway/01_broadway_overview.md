@@ -44,11 +44,11 @@ The example above displays how the system automatically identifies the data stru
 
 ## Learning Broadway
 
-Broadway is named after its powerful combination of execution by Stages and its ability to encapsulate logic in Actors. When coupled with its data and metadata inspection engine, these capabilities act as the main pillars of Broadway.
+Broadway gets its name from its powerful combination of execution by Stages and its ability to encapsulate logic in Actors which, when coupled with its data and metadata inspection engine, act as its main pillars.
 
 Broadway has additional capabilities that together provide a great way to model data movement and orchestration. These and other capabilities are explored in other articles in the Knowledge Base.
 
-Another great way to learn how to use Broadway is from the built-in Tutorial which can be accessed when creating a Broadway flow. Go to **Actions** > **Examples** and checkout the documented sample flows. 
+Another great way to learn how to use Broadway is from the built-in Tutorial which can be accessed when creating any Broadway flow. Go to **Actions** > **Examples** and checkout the documented sample flows. 
 
 The "a-broadway-tutorial.flow" takes you through the major Broadway features and capabilities and can act as a good starting point. Other example flows focus on a single feature or capability, demonstrating and explaining them in depth.
 
