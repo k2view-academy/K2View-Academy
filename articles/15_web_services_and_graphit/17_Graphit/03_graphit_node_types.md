@@ -34,7 +34,7 @@ Please refer to the files in the following table's Example column. We suggest th
 <td valign="top" width="900pxl">Defines how an SQL statement retrieves information from Fabric or other database interfaces.
     Enter the SQL statement manually or hover over and then click either the SQL or Non-prepared SQL field. <No Type>  
 
-Note that if the database is not a Fabric database, the Interface Name must be defined as a Node Property as described in the [Node Properties]<a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md"></a>) section. 
+Note that if the database is not a Fabric database, the Interface Name must be defined as a Node Property as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a>) section. 
   
 
 -  If the <a href="/articles/11_query_builder/01_query_builder_overview.md">Query Builder</a> option is selected, the executed query is copied into the Graphit implementation.
