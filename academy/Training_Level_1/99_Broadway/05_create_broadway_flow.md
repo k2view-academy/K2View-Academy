@@ -9,7 +9,7 @@ By the end of the Broadway Flows learning item you will know:
 - How to create your first Broadway flow.
 - View, run, and debug Broadway the newly created Broadway flow.
 
-A **Broadway Flow** represents a business process Binding other objects into the same flow, a Broadway flow acts as a graph or a tree and is built from several [Stages](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/03_broadway_actor.md):
+A **Broadway Flow** represents a business process Binding other objects into the same flow, a Broadway flow acts as a graph or a tree and is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md):
 
 - Stages are executed consecutively from left to right.
 - Actors in each Stage of the flow are executed top-down.
