@@ -1,4 +1,4 @@
-# ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Add a Condition to a Broadway Flow 
+# ![](/academy/images/Exercise.png) Exercise – Add a Condition to a Broadway Flow 
 
 You've just created and tested your first Broadway flow which selects a data from a DB table and creates a Json file, based on the selected DB records. You practiced adding Stages and Actors to a Broadway Flow and adding a loop into the flow. 
 
@@ -97,7 +97,7 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
 
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution- Add a Condition to a Broadway Flow Exercise 
+### ![](/academy/images/Solution.png)Solution- Add a Condition to a Broadway Flow Exercise 
 
  <ul>
  <pre><code> 
