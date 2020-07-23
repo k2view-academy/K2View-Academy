@@ -16,7 +16,7 @@ A **Broadway Flow** represents a business process Binding other objects into the
 
 To learn more about our Broadway flow, refer to [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md) .
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Building a Simple Broadway Flow
+### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
 Now, let's start creating a new Broadway flow which selects a data from a DB table and creates a Json file, based on the selected DB records:
 
