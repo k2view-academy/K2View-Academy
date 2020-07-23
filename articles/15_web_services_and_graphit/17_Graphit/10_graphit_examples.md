@@ -92,7 +92,7 @@ This example illustrates how two values retrieved from a previously-defined SQL 
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/12_graphit_examples_tags.PNG"></img>
 
 #### grCondition.graphit
-The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of x and y.<br></br>
+The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of **x** and **y**.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/13_graphit_examples_tags.PNG"></img>
 
 #### grGroup.graphit
