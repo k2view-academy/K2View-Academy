@@ -1,4 +1,4 @@
-# ­­Broadway Flow 
+# Broadway Flow 
 
 You are now familiar with Broadway concept the the main components. In addition, you viewed and executed the Broadway Tutorial flow. Now you are ready to create your first Broadway flow. Broadway has various of examples for Broadway flows. 
 
@@ -110,6 +110,6 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
 
 
-Congratulations. You've just created your first Broadway flow. Let's continue to the next item to have an exercise, based on this flow.
+Congratulations. You've just created your first Broadway flow. Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/04_broadway_flow_exercise.md)
