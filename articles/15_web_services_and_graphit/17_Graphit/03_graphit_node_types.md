@@ -2,8 +2,7 @@
 
 Node Type options define how content is structured and how a tag is presented in an output document. By default, nodes are not assigned a Type or Property when they are created.
 ### What Are the Node Type Options?
-Please refer to the files referred to in the Example column and located in the Project environment under Project Tree > Web Services > Resources.
-You can run each file in debug mode and observe the response for each of the types that are described below:
+Please refer to the files in the following table's Example column. We suggest that you run each file in Debug mode and observe the response. The files are saved in the Project environment under Project Tree > Web Services > Resources.
 
 <table>
 <tbody>
