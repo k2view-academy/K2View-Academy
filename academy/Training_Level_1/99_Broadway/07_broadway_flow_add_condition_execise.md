@@ -121,4 +121,4 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/04_broadway_flow_exercise.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/06_broadway_flow_adding_loops_and_conditions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
