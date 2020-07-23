@@ -32,4 +32,4 @@ You can add loops either by:
 
   Please continue to the next exercise to enhance your first Broadway flow and add a condition to this flow. 
 
-  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/06_broadway_flow_add_condition_execise.md)
+  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/07_broadway_flow_add_condition_execise.md)
