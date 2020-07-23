@@ -12,7 +12,7 @@ Note that there is a short description of each property in the dropdown menu.
 
 
 ### What Are the Node Properties Options?
-Please refer to the files referred to in the following table's Example column. The files are saved in the Project environment under Project Tree > Web Services > Resources. We suggest that you run each file in Debug mode and observe the response.
+Please refer to the files in the following table's Example column. We suggest that you run each file in Debug mode and observe the response. The files are saved in the Project environment under Project Tree > Web Services > Resources. 
 <table>
 <tbody>
 <tr>
