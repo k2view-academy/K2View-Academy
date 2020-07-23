@@ -11,7 +11,8 @@ Output data is returned in JSON structure and adds information on whether the cu
 
 After deploying and invoking the Graphit file directly as a Web Service:
 
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG"</img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG"></img>
+
 
 
 ###  Example of a Web Service that invokes the relevant Graphit file depending on a specific condition    
