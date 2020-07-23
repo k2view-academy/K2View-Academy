@@ -56,7 +56,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 </code></pre>
 </ul>
 
-  ![info](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) Click the green asterisk icon in the **splitting the flow** to read its remark, and check the value of the Actor in the **paradox** Stage to help you answer this question.
+  ![info](/academy/images/information.png) Click the green asterisk icon in the **splitting the flow** to read its remark, and check the value of the Actor in the **paradox** Stage to help you answer this question.
 
  8. Click **Stage 3** of the flow, and select **Now** Actor from the popup window to add an Actor to **Stage 3**.
  9. Click the the ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) icon to execute the flow steps on a debug mode.
@@ -78,7 +78,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 <ul><pre><code>15.1 Which value is set for the input parameter?</code></pre></ul> 
 
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution- Run and Debug Broadway Tutorial Flow Exercise 
+### ![](/academy/images/Solution.png)Solution- Run and Debug Broadway Tutorial Flow Exercise 
 
  <ul>
  <pre><code> 
