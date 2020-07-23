@@ -31,7 +31,7 @@ In th exercise below you will run and debug the flow to view the input and the o
 
 Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
 
-###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
+###  ![](/academy/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
 1. Download the [demo project](/articles/demo_project) and open this project in your **Fabric Studio**.
 2. Go to the **Project Tree**, right click the **Broadway** and select **New Flow**.
