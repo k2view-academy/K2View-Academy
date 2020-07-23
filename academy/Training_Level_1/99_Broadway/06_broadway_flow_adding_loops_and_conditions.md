@@ -22,11 +22,11 @@ You can add loops either by:
 
   Broadway flow can be split into different execution paths based on conditions. More than one stage can be executed in each fork in the path. If a condition is required in the flow, the flow can be split and a **Stage condition** Actor can be added to one or more Stages that have been created as a result of the split. 
 
-  For example-
+  For example:
 
-  If (A>3) => Do something.
+  - If (A>3) => Do something.
 
-  Else => Do something else.
+  - Else => Do something else.
 
   Read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about split or merge of Stages in a flow and about adding conditions to the Stage.  
 
