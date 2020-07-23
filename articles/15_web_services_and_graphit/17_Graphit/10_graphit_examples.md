@@ -7,11 +7,11 @@ Output data is returned in JSON structure and adds information on whether the cu
 -  VIP member, with a total balance of over USD 10,000.
 -  Gold member, with a total balance of over USD 1,000. 
 
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/58_graphit_examples.PNG" width="700" height="400" ></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/58_graphit_examples.PNG" width="1000" height="600" ></img>
 
 After deploying and invoking the Graphit file directly as a Web Service:
 
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG" width="700" height="400"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG" width="1000" height="600"></img>
 
 
 ###  Example of a Web Service that invokes the relevant Graphit file depending on a specific condition    
