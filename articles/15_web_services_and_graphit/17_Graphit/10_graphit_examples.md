@@ -76,7 +76,7 @@ e.g. csvHeader: false -> removes fields headers from the response.
 
 ###  Graphit Node Types Examples
 #### grFormat.graphit
-In this example, all the children nodes of the CRM_DB node are defined as field. The response populates the document with the names and values of these specific field.<br></br>
+In this example, all children nodes of the CRM_DB node are defined as field. The response populates the document with the names and values of these specific field.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/09_graphit_examples_tags.PNG"></img>
 
 #### grFunction.graphit
@@ -119,7 +119,7 @@ The response returns empty since the entire CRM_DB node and its children nodes a
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/18_graphit_examples_tags.PNG"></img>
 
 #### grShowNice.graphit
-The **nice** flag is set to TRUE and has been activated at the root node level. In the response each tag appears in a new line that is indented according to the position of the tag in the document's hierarchy.<br></br>
+The **nice** flag is set to TRUE and has been activated at the root node level. In the response, each tag appears in a new line that is indented according to the position of the tag in the document's hierarchy.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/19_graphit_examples_tags.PNG"></img>
 
 #### grOne.graphit
