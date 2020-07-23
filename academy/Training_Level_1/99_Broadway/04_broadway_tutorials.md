@@ -1,6 +1,6 @@
-# ­­Broadway Tutorials Flows
+# Broadway Tutorials Flows
 
-You are now familiar with Broadway concept the the main components. Broadway has various of examples for Broadway flows. 
+You are now familiar with Broadway concept the the main components. Broadway has various of examples for Broadway flows that you can explore and use as templates for your Broadway flows. 
 
 ### What Will You Experience In This Learning Item?
 
@@ -17,7 +17,8 @@ Now, let's have a better understanding about [Broadway Flow Examples](/articles/
 
 To open the Broadway Tutorials flow, you need first  to open the Broadway flow window:
 
-- Open a Fabric project in the Fabric Studio. You can get the K2view Academy [demo project](/articles/demo_project) or open your own Fabric Project.
+- Create a new Fabric project in the Fabric Studio: Broadway_Training. 
+- Download the [demo project](/articles/demo_project) from the K2view Academy repository and import it to your Fabric Project.
 - Go to the project tree, right click **Broadway > New Flow**. Set a name in the Flow Name and open the Broadway flow window.
 - Go to the Broadway flow window, select **Actions > Examples**.
 - Select the **a-broadway-tutorial** option to open the Broadway Tutorial flow.
@@ -26,9 +27,9 @@ To open the Broadway Tutorials flow, you need first  to open the Broadway flow w
 
 The Broadway Tutorial flow runs some manipulations on **Hello Broadway** String, and returns the **Hello Broadway** result.
 
-Run the flow on a debug mode to view the input and the output of each [State](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
+In th exercise below you will run and debug the flow to view the input and the output of each [State](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
- Please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
+Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
 
 ###  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
