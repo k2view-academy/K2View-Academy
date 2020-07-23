@@ -4,7 +4,7 @@ Welcome to your first Broadway course!
 
 ### Objectives
 
-Our goal is to provide you with the information you need to kick-start your first Broadway flow while giving you the confidence to explore Flow examples and the various types of built-in Actors provided by Fabric Broadway ETL. 
+Our goal is to provide you with the information you need to kick-start your first Broadway flow while giving you the confidence to explore Broadway flow examples and the various types of built-in Actors provided by Fabric Broadway ETL. 
 
 In addition you will learn about Broadway interface with Fabric and how to incorporate and execute Broadway flows into your Fabric project.
 
@@ -32,7 +32,7 @@ To fully understand this course, you should be familiar with the following princ
 
 Throughout the course, we will evolve within a Telco customer management environment that provides a set of DBs and tables that you will use to operate your first Fabric-based queries and data manipulations. 
 
-This work environment features sets of tables that you are already familiar with such as customers, subscribers, invoices and contracts. Of course, you will need to get acquainted with these tables and databases, since you will be operating multiple data manipulations across the various examples and exercises as part of this course.
+This work environment features sets of tables that you are already familiar with such as customers, subscribers, invoices and contracts. The Broadway exercises will be based on the [demo project](/articles/demo_project) in K2view Academy repository.
 
 To get acquainted with Fabric terminology at any time during the course, consult the [Fabric's Glossary](/articles/01_fabric_overview/02_fabric_glossary.md).
 
