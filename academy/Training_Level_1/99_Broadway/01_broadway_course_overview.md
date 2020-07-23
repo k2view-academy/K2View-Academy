@@ -39,4 +39,4 @@ To get acquainted with Fabric terminology at any time during the course, consult
 
 But first, let’s understand more about Broadway.
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/03_broadway_overview.md)
