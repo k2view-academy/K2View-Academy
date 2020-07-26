@@ -14,12 +14,13 @@
 
 #### **DAY 1 – Afternoon**
 
-- Build Simple Flow
-  - Add Actor to Stage 1
-  - Add additional Stages
-  - Link between the Stages
-  - Loop
+- How to Build a Simple Flow
+  - Adding an Actor to Stage 1
+  - Adding additional Stages
+  - Linking between the Stages
+  - Loops and Conditions
   - Run and Debug 
+- Exercise: build a simple flow and add a condition to the flow
 
 #### **DAY 2 – Morning**
 
@@ -39,6 +40,7 @@
 - Actor's data handling
   - Data State
   - Streaming data
+- Excecise: use Broadway for table population
 
 #### **DAY 3 – Morning**
 
