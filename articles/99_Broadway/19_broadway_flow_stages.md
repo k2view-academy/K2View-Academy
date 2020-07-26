@@ -4,7 +4,7 @@
 - A Stage can have one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). 
 - A Stage can be [added or deleted](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage) from the flow.
 - A Stage can be split to create [more than one Stage on the same level](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages). 
-- [Stage conditions](/articles/99_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow. 
+- [Stage conditions](/articles/99_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow.  
 
 The flow's Stages are executed consecutively from left to right. When there are several Stages on the same level, the execution order is top down. The Actors within each Stage are also executed top down. 
 
