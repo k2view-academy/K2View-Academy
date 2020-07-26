@@ -19,7 +19,7 @@ A Broadway flow is built from [Stages](/articles/99_Broadway/19_broadway_flow_st
 
 ![image](/articles/99_Broadway/images/Broadway_flow.png)
 
-In the example above, the **Fetch** Stage is executed first. The system then executes either the **Transform Consumer** or (else) the **Transform Business** Stage and finally the **Load Stage**.
+In the example above, the **Fetch** Stage is executed first. The system then executes either the **Transform Consumer** or (else) the **Transform Business** Stage and finally the **Load** Stage.
 
 
 ## Logic and Data Transformation
@@ -28,7 +28,7 @@ Each Stage can contain one or more [Actor](/articles/99_Broadway/03_broadway_act
 
 ![image](/articles/99_Broadway/images/Broadway_actors.png)
 
-In the example above, Fetch queries data and transfers it as input to the Actors in the next Stages. Based on the data, either the Transform Consumer Stage or the Transform Business Stage is executed. In turn, these Stages execute the Actors that build data for the DbLoad Actor in the last Stage.
+In the example above, **Fetch** Stage queries data and transfers it as input to the Actors in the next Stages. Based on the data, either the **Transform Consumer** Stage or the **Transform Business** Stage is executed. In turn, these Stages execute the Actors that build data for the **DbLoad** Actor in the last Stage.
 
 Note that an entire Broadway flow can be exported and encapsulated into an Actor and then be reused between flows. This is powerful tool for reusing logic and working with highly-complex flows.
 
@@ -41,7 +41,7 @@ When Broadway transfers data between Actors, the data is displayed in the Broadw
 
 ![image](/articles/99_Broadway/images/Broadway_data_inspection.png)
 
-The example above displays how the system automatically identifies the data structure of the Fetch Customer Actor. This enables selecting specific fields from the data and transferring them to the appropriate Actors.
+The example above displays how the system automatically identifies the data structure of the **FetchCustomer** Actor. This enables selecting specific fields from the data and transferring them to the appropriate Actors.
 
 [Click for more information about Data Inspection.](/articles/99_Broadway/27_broadway_data_inspection.md)
 
