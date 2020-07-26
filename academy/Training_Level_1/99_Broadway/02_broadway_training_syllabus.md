@@ -1,4 +1,4 @@
-# Level 1 Broadway Training  Syllabus
+# Level 1 Broadway Training Syllabus
 
 ![](/academy/images/syllabus.png) 
 
@@ -40,7 +40,7 @@
 - Actor's data handling
   - Data State
   - Streaming data
-- Excecise: use Broadway for table population
+- Exercise: use Broadway for table population
 
 #### **DAY 3 – Morning**
 
