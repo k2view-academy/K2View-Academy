@@ -30,8 +30,8 @@ The Main menu is at the top of the window and has the following options:
 <p>When clicked displays the following options:</p>Tutorial or an example flow.</li>
 <li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li>Debug/Run Arguments, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Reset Parameters Schemas, reset the Actor's parameters schemas to the Actor's original status. Removing the output schema for complex types erases all lines originating from the schema.</li>
-<li>Flip Scroll-wheel, command the mouse scroll wheel to move the window scrollbar horizontally instead of vertically.</li>
+<li>Reset Parameters Schemas, reset these settings to the Actor's original status. Removing the output Schema for complex types erases all lines originating from the Schema.</li>
+<li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
