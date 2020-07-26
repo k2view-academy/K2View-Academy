@@ -19,7 +19,7 @@
 	<li><a href="/articles/15_web_services_and_graphit/14_Supported_Verbs_Put.md">Supported Verbs - PUT</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md">Supported Verbs - DELETE</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/16_rest_api_additions.md">REST API Additions</a></li>
-	<li><a href="/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md">Graphit Utility</a></li>
+	<li><a href="/articles/15_web_services_and_graphit/17_Graphit/README.md">Graphit Utility</a></li>
 </ul>
 
 
