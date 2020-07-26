@@ -44,7 +44,7 @@ The example above displays how the system automatically identifies the data stru
 
 ## Learning Broadway
 
-Broadway gets its name from its powerful ability to execute flows in Stages combined with its encapsulation of logic in Actors which, when coupled with its data and metadata inspection engine, act as its main pillars.
+Broadway gets its name from its powerful ability to execute flows in Stages combined with its encapsulation of logic into Actors which, when coupled with its data and metadata inspection engine, act as its main pillars.
 
 Broadway has additional capabilities that together provide a great way to model data movement and orchestration. These and other capabilities are explored in other articles in the Knowledge Base.
 
