@@ -120,7 +120,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 </td>
 <td style="width: 433px; vertical-align: top;" width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
 <td width="600">
-<p><strong>Aggregate</strong> Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
+<p><strong>Aggregate</strong> Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This Actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
 <p><strong>MathDivMod</strong> Actor, returns the divisor and modulo factor of&nbsp;A&nbsp;and&nbsp;B.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
 </td>
 </tr>
