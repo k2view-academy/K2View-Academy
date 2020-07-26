@@ -25,8 +25,7 @@ The following screenshot displays how Debug mode is run with the customer_id set
 
 The following screenshot displays how the Web Service is deployed and launched in Swagger:
 
-![](/articles/15_web_services/17_Graphit/images/52_invoke_javacode_from_graphit.PNG)
-
+![](/articles/15_web_services_and_graphit/17_Graphit/images/52_invoke_javacode_from_graphit.PNG)
 
 Note that an http link has been generated to invoke the Web Service for customer_id = 1000, and the convGBP flag is set to False, meaning that the conversion is set to EUR currency:
 
