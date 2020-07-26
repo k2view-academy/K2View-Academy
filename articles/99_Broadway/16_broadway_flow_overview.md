@@ -17,7 +17,7 @@ Each Stage can be split into two stages (and so on) whereby there are several st
 ![image](/articles/99_Broadway/images/99_16_01_flow2.PNG)
 
 ### Flow with Condition
-If a condition like IF-ELSE needs to be added, the flow can be split, whereby a Stage condition is defined on one section and the other section is set to ELSE. 
+If a condition like IF-ELSE is required, the flow can be split, whereby a Stage condition is defined on one section and the other section is set to ELSE. 
 The execution order of the Actors in this flow is: **A1 -> B1 if true, otherwise B2 -> C1**. 
 
 Note that a Stage condition is a grey object and a regular Actor is a yellow object.
