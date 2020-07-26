@@ -50,7 +50,7 @@ Broadway has additional capabilities that together provide a great way to model 
 
 Another great way to learn how to use Broadway is from the built-in Tutorial which can be accessed when creating any Broadway flow. Go to **Actions** > **Examples** and checkout the documented sample flows. 
 
-The "a-broadway-tutorial.flow" takes you through the major Broadway features and capabilities and can act as a good starting point. Other example flows focus on a single feature or capability, demonstrating and explaining them in depth.
+The **a-broadway-tutorial.flow** takes you through the major Broadway features and capabilities and can act as a good starting point. Other example flows focus on a single feature or capability, demonstrating and explaining them in depth.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/02_broadway_high_level_components.md)
