@@ -10,7 +10,7 @@ In addition you will learn about Broadway interface with Fabric and how to incor
 
 ### Course Syllabus
 
-Please go to the [Level 1 Broadway Training Syllabus](/academy/Training_Level_1/99_Broadway/02_broadway_training_level_1_syllabus.md).
+Please go to the [Level 1 Broadway Training Syllabus](/academy/Training_Level_1/99_Broadway/02_broadway_training_syllabus.md).
 
 
 
