@@ -102,7 +102,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tr>
 <tr>
 <td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages">Stage Condition</a></td>
-<td style="width: 465px;">Click to open a popup window and select an Actor to the Stage. The Actor will serve as a stage condition. Any Actor can serve as a condition. Note that Stage condition Actors are grey.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Any Actor can serve as a condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
 <td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages">Else</a></td>
@@ -157,7 +157,7 @@ To open the Actor's context menu, click the three dots in the right corner of th
 </tr>
 <tr>
 <td width="200">Add Actor Below</td>
-<td style="width: 465px;">Click to open a popup window and select an Actor to the Stage. The Actor is added under the selected Actor.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor is added under the selected Actor.</td>
 </tr>
 <tr>
 <td width="200">[Export Actor]</td>
