@@ -1,4 +1,4 @@
-# Broadway Training  Syllabus
+# Level 1 Broadway Training  Syllabus
 
 ![](/academy/images/syllabus.png) 
 
