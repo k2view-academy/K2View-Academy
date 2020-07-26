@@ -9,9 +9,9 @@
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Graphit Nodes Properties</a></li>
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/05_graphit_debugging.md">Graphit Debugging</a></li>
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md">Using Graphit with Parameters</a></li>
-  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md">Invoking Graphit Files.md</a></li>
-  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md">Invoke Java Code from Graphit.md</a></li>
+  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/07_invoking_graphit_files.md">Invoking Graphit Files</a></li>
+  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md">Invoke Java Code from Graphit</a></li>
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md">Invoking Graphit Externally</a></li>
-  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md">Graphit Examples.md</a></li>
+  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md">Graphit Examples</a></li>
 </ul>
 
