@@ -57,8 +57,9 @@ Output using the Swagger GUI:
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/52b_invoke_javacode_from_graphit.PNG)
 
 
-Limitations:
-This type of functions cannot be debugged in the Graphit Editor since the functional parameters cannot be created in the Studio. However, the code can be tested by deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
+Limitation:
+This type of functions cannot be debugged in the Graphit Editor since the functional parameters cannot be created in the Studio. 
+However, the code can be tested by deploying it to Fabric or by debugging the Web Service code using the the IntelliJ editor. 
   
  
 
