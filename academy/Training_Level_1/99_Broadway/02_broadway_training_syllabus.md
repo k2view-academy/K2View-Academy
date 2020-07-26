@@ -23,13 +23,22 @@
 
 #### **DAY 2 – Morning**
 
-- TBD
-  - TBD
+- Common use cases - DB, Files, Parsers
+  - Use case 1: manipulate data and load it to a DB, parsing and manipulating files and tables
+  - Use case 2: subscribe Kafka topic and write it to a file
 
 #### **DAY 2 – Afternoon**
 
-- TBD
-  - TBD
+- Actors
+  - Edit Actor's input and output, edit schema, add remark
+  - Actors input and output types
+  - Write JavaScript code in Actor
+  - Dynamic Actors
+- Edit Actors using Fabric Interfaces and functions
+- Data inspection
+- Actor's data handling
+  - Data State
+  - Streaming data
 
 #### **DAY 3 – Morning**
 
