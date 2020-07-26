@@ -166,7 +166,7 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <p>Graphit and JsonStringify Actors are also included in this category.</p>
 </td>
 <td width="600">
-<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the ABCDEF string, the C.E pattern returns [CDE], whereas C(.)E returns [D].</p>
+<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The Actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the ABCDEF string, the C.E pattern returns [CDE], whereas C(.)E returns [D].</p>
 <p><strong>Graphit</strong> Actor, executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or from the params input argument. The inputs are:</p>
 <ul>
 <li>LU containing the Graphit file (initial value = k2_ws).</li>
