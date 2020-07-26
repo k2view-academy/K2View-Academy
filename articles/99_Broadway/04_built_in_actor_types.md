@@ -48,9 +48,9 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>ForLoop</strong> Actor, iterates over a range of numbers.</p>
-<p><strong>Logger</strong> Actor, writes a message to the log file, referencing entries from params and Actor inputs.</p>
+<p><strong>Logger</strong> Actor, writes a message to the log file referencing entries from params and Actor inputs.</p>
 <p><strong>InnerFlow</strong> Actor, executes a Broadway flow.</p>
-<p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or fom the params input argument.</p>
+<p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or from the params input argument.</p>
 <p><strong>Email</strong> Actor, sends an email using a given SMTP interface.</p>
 </td>
 </tr>
@@ -72,7 +72,7 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 <p>For example:</p>
 <ul>
 <li>To display a day of a year in the output, add <strong>D</strong> to the format.</li>
-<li>To display a day of the week in the output, add<strong>E</strong> to the format</li>
+<li>To display a day of the week in the output, add<strong> E</strong> to the format.</li>
 </ul>
 </td>
 </tr>
@@ -106,7 +106,7 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 </td>
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong>And</strong> Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
-<p><strong>Elvis</strong>&nbsp; Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise it returns&nbsp;B.</p>
+<p><strong>Elvis</strong> Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise returns B.</p>
 <p><strong>IfElse</strong> Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
 </td>
 </tr>
@@ -116,7 +116,7 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 </td>
 <td style="width: 433px; vertical-align: top;" width="433">Various mathematical functions, such as MathMax, MathMin, Aggregate.</td>
 <td width="600">
-<p><strong>Aggregate</strong> Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
+<p><strong>Aggregate</strong> Actor, aggregates values.&nbsp;It receives a number or collection of numbers and calculates the Sum, Count, Average, Min and Max values of this collection. This Actor maintains its state across multiple loop iterations.&nbsp;&nbsp;</p>
 <p><strong>MathDivMod</strong> Actor, returns the divisor and modulo factor of&nbsp;A&nbsp;and&nbsp;B.&nbsp;For example, if A=10 and B=3 then div=3 and mod=1.&nbsp;</p>
 </td>
 </tr>
@@ -135,7 +135,7 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 </td>
 <td width="433">Publish / subscribe messages to the queue.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>Publish</strong>Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
+<p><strong>Publish</strong> Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
 <ul>
 <li>Broker interface to use.</li>
 <li>Topic to publish to.</li>
@@ -150,7 +150,7 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 <td width="433">Various stream manipulation functions, such as Compress, FileRead or Http.</td>
 <td width="600">
 <p><strong>FileRead</strong> Actor, reads data from a file given an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
-<p><strong>Http</strong> Actor, sends a request to a web server. Supports streaming payload and results and sending and receiving header parameters.</p>
+<p><strong>Http</strong> Actor, sends a request to a Web Server. Supports streaming payload and results and sending and receiving header parameters.</p>
 </td>
 </tr>
 <tr>
@@ -162,7 +162,7 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 <p>Graphit and JsonStringify Actors are also included in this category.</p>
 </td>
 <td width="600">
-<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the 'ABCDEF'string, the 'C.E' pattern returns ['CDE'], whereas 'C(.)E' returns ['D'].</p>
+<p><strong>Regex</strong> Actor, finds sub-strings in an input string using a regular expression. The Actor tries to find all matches of the pattern within the input string and return them. When using matching groups, the result is the content of the matching group instead of the full match. For example, in the ABCDEF string, the C.E pattern returns [CDE], whereas C(.)E returns [D].</p>
 <p><strong>Graphit</strong> Actor, executes Graphit logic for data serialization. Parameters for the Graphit execution are taken from input arguments or from the params input argument. The inputs are:</p>
 <ul>
 <li>LU containing the Graphit file (initial value = k2_ws).</li>
@@ -177,14 +177,14 @@ Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-system" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#system" aria-hidden="true"></a><strong>system</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
+<td style="vertical-align: top;" w idth="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
 <td width="600">
-<p><strong>cp</strong> Actor, copies a file.&nbsp;The interface used as input&nbsp;can be:</p>
+<p><strong>cp</strong> Actor, copies a file. The interface used as input can be:</p>
 <ul>
 <li>JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
-<li>Path of the&nbsp;source&nbsp;file (from).</li>
-<li>Destination to).</li>
+<li>Path of the sourcefile (from).</li>
+<li>Destination (to).</li>
 </ul>
 <p>The output is a number of affected files.</p>
 </td>
