@@ -181,14 +181,14 @@ Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context 
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-system" class="anchor" href="/articles/99_Broadway/04_built_in_actor_types.md#system" aria-hidden="true"></a><strong>system</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
+<td style="vertical-align: top;" w idth="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
 <td width="600">
-<p><strong>cp</strong> Actor, copies a file.&nbsp;The interface used as input&nbsp;can be:</p>
+<p><strong>cp</strong> Actor, copies a file. The interface used as input can be:</p>
 <ul>
 <li>JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
-<li>Path of the&nbsp;source&nbsp;file (from).</li>
-<li>Destination to).</li>
+<li>Path of the sourcefile (from).</li>
+<li>Destination (to).</li>
 </ul>
 <p>The output is a number of affected files.</p>
 </td>
