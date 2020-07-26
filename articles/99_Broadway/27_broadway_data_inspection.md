@@ -1,8 +1,8 @@
 # Broadway Data Inspector
 
-The Broadway **Data Inspector** is used to identify and display complex **Object** data type structures and their Schemas and the values that are transfered between two Stages. 
+The Broadway **Data Inspector** is used to identify and display complex **Object** data type structures, their Schemas and the values that are transfered between two Stages. 
 
-To open the Data inspector, click **plus sign** adjacent to the Actor's output argument to expand the **yellow segment** and display the Schema on the left and the data values on the right. To display the data values, [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
+To open the Data inspector, click the **+** adjacent to the Actor's output argument to expand the **yellow segment** and display the Schema on the left and the data values on the right. To display the data values, [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
 
 ![image](/articles/99_Broadway/images/99_27_01.PNG)
 
