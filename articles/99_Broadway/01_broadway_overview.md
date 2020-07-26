@@ -30,21 +30,21 @@ Each Stage can contain one or more Actors which are reusable pieces of logic wit
 
 In the example above, Fetch queries data and passes it as input to the Actors in the next Stages. Based on the data, either the Transform Consumer Stage or the Transform Business Stage is executed.  In turn, these Stages execute the Actors that build data for the DbLoad Actor in the last Stage.
 
-An important aspect of Actors is that an entire Broadway flow can be exported and encapsulated into an Actor and be reused between flows. This is powerful tool for reusing logic and working with highly-complex flows.
+An important aspect about Actors is that an entire Broadway flow can be exported and encapsulated into an Actor and be reused between flows. This is powerful tool for reusing logic and working with highly-complex flows.
 
 
 ## Data Inspection
 
-As Broadway passes data between Actors, the data is visible in the Broadway Studio. Complex data types (objects, arrays) are automatically detected and analyzed, and both metadata and data are visually rendered for easy debugging and extraction.
+When Broadway transfers data between Actors, the data is displayed in the Broadway Studio. Complex data types (objects, arrays) are automatically detected and analyzed, and both metadata and data are visually rendered for easy debugging and extraction.
 
 ![image](/articles/99_Broadway/images/Broadway_data_inspection.png)
 
-The example above displays how the system automatically identifies the data structure of the Fetch Customer Actor. This enables selecting specific fields from the data and passing them to the appropriate Actors.
+The example above displays how the system automatically identifies the data structure of the Fetch Customer Actor. This enables selecting specific fields from the data and transfering them to the appropriate Actors.
 
 
 ## Learning Broadway
 
-Broadway gets its name from its powerful combination of execution by Stages and its ability to encapsulate logic in Actors which, when coupled with its data and metadata inspection engine, act as its main pillars.
+Broadway gets its name from its powerful ability to execute flows in Stages combined with its encapsulation of logic in Actors which, when coupled with its data and metadata inspection engine, act as its main pillars.
 
 Broadway has additional capabilities that together provide a great way to model data movement and orchestration. These and other capabilities are explored in other articles in the Knowledge Base.
 
