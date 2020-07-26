@@ -1,16 +1,12 @@
 # Built-In Actor Types
 
-An [Actor](/articles/99_Broadway/03_broadway_actor.md) represents the activity (action) that must be executed on each [Stage]() of the **Broadway flow** to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.  
+Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway_actor.md#actor-overview) that can be added to a flow in order to create various types of activities. Broadway's built-in Actors are split into categories, where each category includes several Actor types.
 
-Broadway has a large built-in list of Actors that can create various types of activities and can be added to each flow. 
-
-To add a built-in Actor to the flow, click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window.
+ To add a built-in Actor to the flow, click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window. The window displays the list of existing categories on the left side, and the existing built-in Actors per each categories on the right side.
 
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
-Broadway's built-in  Actors are split into categories, where each category includes several Actor types.
 
-Note that when clicking [Export Actor](<!--add link-->) in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu), a new category (tag) is created if the value that populates the **Tags** field does not exist in the Actor's existing categories.
 
 ### Actor's Categories and Examples
 
