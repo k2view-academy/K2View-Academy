@@ -161,7 +161,7 @@ To open the Actor's context menu, click the three dots in the right corner of th
 </tr>
 <tr>
 <td width="200">[Export Actor]</td>
-<td style="width: 465px;">Click to save an Actor (as inheritance of the selected Actor).&nbsp; The Actor is then added to the list of <a href="/articles/99_Broadway/04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.</td>
+<td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="/articles/99_Broadway/04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.</td>
 </tr>
 <tr>
 <td width="200">Description</td>
