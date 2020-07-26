@@ -2,7 +2,7 @@
 
 ## Actor Overview
 
-Broadway **Actor** object executes a predefined activity in the **Flow**. The Actors are added to each flow's **Stage**.
+The Broadway object **Actor** represents the activity (action) that must be executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
 The **Actor** is a JAVA class which implements the **Actor Interface** and overrides the **action** method.
 
