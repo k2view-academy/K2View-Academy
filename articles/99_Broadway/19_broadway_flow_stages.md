@@ -12,7 +12,7 @@ The flow's Stages are executed consecutively from left to right. When there are 
 
 A Stage can be added anywhere in the flow.
 
-- To add a Stage to the end of the flow, click the large plus sign in the empty Stage area.
+- To add a Stage to the end of the flow, click the big **+** in the empty Stage area.
 
 ![Flow-Plus Icon](/articles/99_Broadway/images/99_18_01_main_flow_area.PNG)
 - To add a Stage in the middle of the flow, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select either **Insert After** or **Insert Before**. 
@@ -64,7 +64,7 @@ The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 
 - To mark a Stage as **else**, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select **Else**.
 
-Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the 'return' keyword.
+Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
 
 **Stage Conditions Example**
 
