@@ -1,5 +1,5 @@
 # Broadway Tutorial and Flow Examples
-The **a-broadway-tutorial.flow** introduces you to Broadway, its features, main principles and capabilities and provides you with the information you need to understand this module. In addition to the Tutorial's flow you can find other Broadway flow examples explaining specific subjects like DB commands, conditions, parsers, dates and strings and how they are handled. 
+The **a-broadway-tutorial.flow** introduces you to Broadway, its features, main principles and capabilities to provide you with the information you need to understand this module. In addition to the Tutorial's flow you can find other Broadway flow examples explaining specific subjects like DB commands, conditions, parsers, dates and strings and how they are handled. 
 
 The following [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) guides you through each consecutive step of an example business process and explains how it is implemented.
 
@@ -24,7 +24,9 @@ The Tutorial explains the usage of a number of common [built-in Actor Types](/ar
 
 - **Const**, a basic Actor which copies an input argument to the output value argument. 
 - **StringBuild**, **Replace**, **Concat** and other Actors which handle the strings in a Broadway flow. Checkout **strings.flow** about working with strings in a Broadway flow.
-- Broadway supports several types of parser Actors, for example **JsonParser** or **XmlParser**. Parsers take a string or blob and parse them into a structure. Checkout [**json.flow**](/articles/99_Broadway/17_tutorial_and_flow_examples.md#example---jsonflow), **csv.flow** and **lines.flow** parsing examples. 
+- Broadway supports several types of parser Actors, for example **JsonParser** or **XmlParser**. Parsers take a string or blob and parse them into a structure. 
+
+Checkout [**json.flow**](/articles/99_Broadway/17_tutorial_and_flow_examples.md#example---jsonflow), **csv.flow** and **lines.flow** parsing examples. 
 
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) include dynamic logic as one of their inputs. The input can be added to Actors and be referred to the Actor's logic. For example, **JavaScript** Actor executes the JavaScript provided in the **script** parameter and returns the value of the last expression.  **javascript.flow** provides an additional explanation of how this Actor works. 
