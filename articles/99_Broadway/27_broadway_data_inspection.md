@@ -1,14 +1,14 @@
 # Broadway Data Inspector
 
-The Broadway **Data Inspector** is used to identify and display complex **Object** data type structures and their schemas and the values that are transfered between two Stages. 
+The Broadway **Data Inspector** is used to identify and display complex **Object** data type structures and their Schemas and the values that are transfered between two Stages. 
 
-To open the Data inspector, click **plus sign** adjacent to the Actor's output argument to expand a **yellow segment** and displays the Schema on the left and the data values on thr  right. To display the data values [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
+To open the Data inspector, click **plus sign** adjacent to the Actor's output argument to expand the **yellow segment** and displays the Schema on the left and the data values on the right. To display the data values, [debug the flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md#debug-broadway-flow). 
 
 ![image](/articles/99_Broadway/images/99_27_01.PNG)
 
 ### How Do I Edit the Schema Using the Data Inspector?
 
-If needed, the schema can be edited during run time. Click the yellow segment next to the schema where you want to edit to open the context menu. 
+A Schema can be edited during runtime. To do so, click the yellow segment next to the Schema to open the context menu. 
 
 <table style="width: 900px;">
 <tbody>
@@ -20,7 +20,7 @@ If needed, the schema can be edited during run time. Click the yellow segment ne
 <td width="430pxl">
 <p>Add a child to the selected element using the <strong>Link bar</strong>. The Link bar is available in the <a href="/articles/99_Broadway/18_broadway_flow_window.md#main-menu">Main menu</a> area and can be used to define the new element's Name and the Type.</p>
 <p><img src="/articles/99_Broadway/images/99_27_03.PNG" alt="Add Child" /></p>
-<p>Note that to display the Child menu click the parent node</p>
+<p>Note that to display the Child menu click the parent node.</p>
 </td>
 </tr>
 <tr>
@@ -35,15 +35,15 @@ If needed, the schema can be edited during run time. Click the yellow segment ne
 </tr>
 <tr>
 <td width="200">Delete</td>
-<td style="width: 465px;">Delete the element from the schema.</td>
+<td style="width: 465px;">Delete the element from the Schema.</td>
 </tr>
 <tr>
 <td width="200">Move Up</td>
-<td style="width: 465px;">Move the element up the schema.</td>
+<td style="width: 465px;">Move the element up the Schema.</td>
 </tr>
 <tr>
 <td width="200">Move Down</td>
-<td style="width: 465px;">Move the element down the schema.</td>
+<td style="width: 465px;">Move the element down the Schema.</td>
 </tr>
 <tr>
 <td width="200">Link</td>
@@ -54,7 +54,7 @@ If needed, the schema can be edited during run time. Click the yellow segment ne
 
 ### How Do I Edit the Schema Using the Data Viewer?
 
-The [Data Viewer]() can also be used to edit a schema. To do so, click **Edit Schema** in the output argument's properties to open **Edit Schema** pop-up window. Edit the schema manually and submit your change. The yellow segment is refreshed and displays the updated schema.
+The [Data Viewer]() can also be used to edit a Schema. To do so, click **Edit Schema** in the output argument's properties to open **Edit Schema** window. Edit the Schema manually and then click **Submit** to refresh the yellow segment and update the Schema. 
 
 ![image](/articles/99_Broadway/images/99_27_04_data_viewer.PNG)
 
