@@ -5,9 +5,9 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <table>
 <tbody>
 <tr>
-<td rowspan="4" valign="top" width="400pxl">
-<img src="/articles/99_Broadway/images/99_03_actor_properties.png" alt="Properties window" /></td>
-<td valign="top" width="100pxl">
+<td rowspan="4" valign="top" width="440pxl">
+<img src="/articles/99_Broadway/images/99_03_actor_properties.PNG" alt="Properties window" /></td>
+<td valign="top" width="60pxl">
 <p><strong>Object Name</strong></p>
 </td>
 <td valign="top" width="400pxl">
@@ -25,15 +25,15 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <td valign="top" width="600pxl">
 <p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
 <ul>
-<li>All Fields- default option- display the list of all fields of the Actor type and its ancestor Actors.</li>
+<li>All Fields (default) - display the list of all fields of the Actor type and its ancestor Actors.</li>
 <li>Actor Type name &ndash; display the list of input and output parameters, added for the Actor Type of the current Actor object.</li>
-<li>The list of ancestor Actor Types- display the list of input and output parameters, added for the selected ancestor Actor Type.</li>
+<li>The list of ancestor Actor Types - display the list of input and output parameters, added for the selected ancestor Actor Type.</li>
 </ul>
 <p><strong>For example:</strong></p>
 <p>FixedColumnParser Actor Type inherits from LinesParser Actor Type:</p>
 <ul>
-<li>Selecting All Fields option displays the full list of input and output parameters of both Actor Types- FixedColumnParser and LinesParser.</li>
-<li>You can also select one of the Actor Types- FixedColumnParser or LinesParser to get its input and output parameters.</li>
+<li>Selecting All Fields option displays the full list of input and output parameters of both Actor Types - FixedColumnParser and LinesParser.</li>
+<li>You can also select one of the Actor Types - FixedColumnParser or LinesParser to get its input and output parameters.</li>
 </ul>
 </td>
 </tr>
@@ -58,9 +58,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 
 ### Data Input Parameters
 
-Each Actor has data input and out parameters.
-
-Each input parameter has the following attributes:
+Each Actor has data input and output parameters. Each input parameter has the following attributes:
 
 - Parameter's Attributes
 - Parameter's Value
