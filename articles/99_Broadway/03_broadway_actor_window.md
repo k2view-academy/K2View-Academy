@@ -5,14 +5,11 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <table>
 <tbody>
 <tr>
-<td rowspan="4" valign="top" width="440pxl">
-<img src="/articles/99_Broadway/images/99_03_actor_properties.PNG" alt="Properties window" /></td>
-<td valign="top" width="60pxl">
+<td rowspan="4" valign="top" width="400pxl"><img src="/articles/99_Broadway/images/99_03_actor_properties.PNG" alt="Properties window" /></td>
+<td valign="top" width="600pxl">
 <p><strong>Object Name</strong></p>
-</td>
-<td valign="top" width="400pxl">
 <p>Populated by the object name for each Actor, added to the flow. By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
-<p>The Actor Name is displayed in the following format:</p>
+<p>The Actor name is displayed in the following format:</p>
 <ul>
 <li>&lt;Object Name&gt;:&lt;Actor Type&gt;</li>
 </ul>
@@ -21,8 +18,6 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <tr>
 <td valign="top" width="300pxl">
 <p><strong>Parameters Filter</strong></p>
-</td>
-<td valign="top" width="600pxl">
 <p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
 <ul>
 <li>All Fields (default) - display the list of all fields of the Actor type and its ancestor Actors.</li>
@@ -39,18 +34,12 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>Data Input</strong></p>
-</td>
-<td width="600pxl">
-<p>Input Parameters</p>
+<p><strong>Input Parameters</strong></p>
 </td>
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>Data Output</strong></p>
-</td>
-<td width="600pxl">
-<p>Output Parameters</p>
+<p><strong>Output Parameters</strong></p>
 </td>
 </tr>
 </tbody>
