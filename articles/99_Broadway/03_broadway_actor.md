@@ -90,7 +90,7 @@ Notes that if you export the Actor and creates an Actor Type based on the export
 
 ## Actor Window
 
-The Actor Window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
+The Actor Window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow's window. The Actor window contains the following sections:
 
 <table>
 <tbody>
@@ -99,9 +99,8 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 <p><strong>Object Name</strong></p>
 </td>
 <td width="600pxl" valign="top">
-<p>Populated by the object name for each Actor, added to the flow. By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
+<p>Populated by the object name of each Actor added to the flow. By default, when an Actor is added, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
 <p>The Actor Name is displayed in the following format:</p>
-<ul>
 <li>&lt;Object Name&gt;:&lt;Actor Type&gt;</li>
 </ul>
 </td>
@@ -111,17 +110,17 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 <p><strong>Parameters Filter</strong></p>
 </td>
 <td width="600pxl" valign="top">
-<p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
+<p>Filters the input and output fields displayed in the Actor window. The input and output parameters list can be filtered as follows:</p>
 <ul>
-<li>All Fields- default option- display the list of all fields of the Actor type and its ancestor Actors.</li>
-<li>Actor Type name &ndash; display the list of input and output parameters, added for the Actor Type of the current Actor object.</li>
-<li>The list of ancestor Actor Types- display the list of input and output parameters, added for the selected ancestor Actor Type.</li>
+<li>All Fields, (default) displays the list of all fields of the Actor type and its ancestor Actors.</li>
+<li>Actor Type name, displays the list of input and output parameters added for the Actor Type of the current Actor object.</li>
+<li>Ancestor Actor Types, displays the list of input and output parameters added for the selected ancestor Actor Type.</li>
 </ul>
 <p><strong>For example:</strong></p>
-<p>FixedColumnParser Actor Type inherits from LinesParser Actor Type:</p>
+<p>The FixedColumnParser Actor Type inherits from the LinesParser Actor Type:</p>
 <ul>
-<li>Selecting All Fields option displays the full list of input and output parameters of both Actor Types- FixedColumnParser and LinesParser.</li>
-<li>You can also select one of the Actor Types- FixedColumnParser or LinesParser to get its input and output parameters.</li>
+<li>Selecting All Fields displays the full list of input and output parameters of both the FixedColumnParser and LinesParser Actor Types.</li>
+<li>Selecting either the FixedColumnParser or LinesParser Actor Type displays its input and output parameters.</li>
 </ul>
 </td>
 </tr>
@@ -146,12 +145,10 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 
 ### Data Input Parameters
 
-Each Actor has data input and out parameters.
+Each Actor has data input and out parameters and each input parameter has the following attributes:
 
-Each input parameter has the following attributes:
-
-- Parameter's Attributes
-- Parameter's Value
+- Parameter Attributes.
+- Parameter Value.
 
 #### Input Parameter: Attributes
 
@@ -173,11 +170,10 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>String, Integer, Real&hellip;</p>
-<p>When you set the population type of the input parameter as <strong>Const,&nbsp;</strong>you must set the parameter type of the input parameter:</p>
+<p>When setting the Input of the <strong>Population Type</strong> to <strong>Const</strong>, always set the Input parameter type:</p>
 <p><img src="/articles/99_Broadway/images/const_input_parameter_type.png" alt="Const_input_type" /></p>
-<p>You can edit the parameter type for each parameter regardless of its population type:</p>
+<p>To edit a parameter's Parameter Type, regardless of its population type, click <strong>&hellip;</strong> next to the <strong>Parameter Name</strong> and select <strong>Edit Schema</strong>.</li></p>
 <ul>
-<li>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</li>
 </ul>
 </td>
 </tr>
@@ -188,11 +184,11 @@ The parameter's definition includes the following attributes:
 <td valign="top" width="600pxl">
 <p>The following types are supported:</p>
 <ul>
-<li><strong>Link</strong>- get the input value as an input parameter from another actor.</li>
-<li><strong>Const</strong>- constant. You need to set the value of the parameter.</li>
-<li><strong>External</strong>- get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting- <strong>External Name</strong>.</li>
+<li><strong>Link</strong>, get the input value as an input parameter from another actor.</li>
+<li><strong>Const</strong>, constant, set the value of the parameter.</li>
+<li><strong>External</strong>, get the input value as a parameter from the external process that executes the Broadway flow. Set the parameter as <strong>External</strong> to open an additional <strong>External Name</strong> setting.</li>
 </ul>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name to view or edit the population type.</p>
+<p>Click <strong>&hellip;</strong> adjacent to the <strong>parameter name</strong> to view or edit the population type.</p>
 </td>
 </tr>
 <tr>
@@ -200,8 +196,8 @@ The parameter's definition includes the following attributes:
 <p><strong>Description</strong></p>
 </td>
 <td valign="top" width="600pxl">
-<p>Parameter description. The parameter description is displayed in a read-only mode.</p>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Description to open the Description window.</p>
+<p>Parameter description (read only)</p>
+<p>Click <strong>&hellip;</strong> adjacent to the <strong>parameter name</strong> and select <strong>Description/<strong> to open the Description window.</p>
 </td>
 </tr>
 <tr>
@@ -209,8 +205,8 @@ The parameter's definition includes the following attributes:
 <p><strong>Remark</strong></p>
 </td>
 <td valign="top" width="600pxl">
-<p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Remark to open the Description window.</p>
+<p>Remarks can be added to each parameter. When added a   ICON??????   is displayed adjacent to the parameter name.</p>
+<p>Click <strong>&hellip;</strong> adjacent to the <strong>parameter name</strong> and select <strong>Remark</strong> to open the Description window.</p>
 </td>
 </tr>
 </tbody>
