@@ -5,7 +5,8 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <table>
 <tbody>
 <tr>
-<td rowspan="4" valign="top" width="400pxl">&nbsp;</td>
+<td rowspan="4" valign="top" width="400pxl">
+<img src="/articles/99_Broadway/images/99_03_actor_properties.png" alt="Properties window" /></td>
 <td valign="top" width="100pxl">
 <p><strong>Object Name</strong></p>
 </td>
