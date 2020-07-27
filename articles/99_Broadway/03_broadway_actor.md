@@ -2,11 +2,15 @@
 
 ## Actor Overview
 
-A Broadway  **Actor** represents the activity (action) that must be executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
+A Broadway  **Actor** represents the action that must be executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
 An **Actor** is a JAVA class which implements the **Actor Interface** and overrides the **action** method. 
 
-Broadway offers a number of built-in Actors which can be extended by customization. Other options for working with Actors include:
+Broadway offers a number of built-in Actors which can be extended by customization. 
+-  [Built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) address a wide range of activities and can be added to Broadway flows for example to handle files and JSON files, DB activities or string manipulations.
+-  A customized Actor is a customized JAVA class which implements the **Actor Interface** and overrides the **action** method.
+
+Other options for working with Actors include:
 -  Creating new Actors. **(Add link)**.
 -  Adding or deleting Actors from flows. **(Add link)**
 -  Saving Actors as inner flows of other Broadway flows. **(Add link)**
@@ -17,17 +21,7 @@ Broadway offers a number of built-in Actors which can be extended by customizati
 *************************************************************************************************************
 **New article**
 
-### Actor Types
-
-#### Built-In Actors
-
-Broadway contains [built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) which address a vast range of activities and can be added to Broadway flows: file handling, JSON handling, DB activities, String manipulations, etc..
-
-#### Customized Actors
-
-A customized JAVA class which implements the **Actor Interface** and overrides the **action** method.
-
-#### Save Flow as Actor
+#### How Do I Save a Flow as an Actor?
 
 In some cases you may prefer to package a Flow object and use it as an inner flow to avoid complex flows with a huge number of step or to enable a reuse of an inner flow in different flows.
 
@@ -43,7 +37,9 @@ The newly created Actor Type can be added to any flow.
 
 [Click for more information about inner flows.](add a link). 
 
-#### Export Actor
+*************************************************************************************************************
+**New article**
+#### How Do I Export an Actor?
 
 You can export an Actor object and create an Actor Type, based on this object, to reuse this Actor.
 
@@ -51,7 +47,9 @@ The export activity creates a new Actor Type.
 
 [Click for more information about Export Actor and Actor Inheritance.]() 
 
-### Actor Objects
+*************************************************************************************************************
+**New article**
+### What is an Actor Object?
 
 An Actor type is a template of an Actor object. Adding an Actor to a Broadway flow creates a new instance (object) of the selected Actor type.
 
