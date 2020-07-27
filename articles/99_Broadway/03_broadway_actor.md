@@ -11,9 +11,15 @@ The options for working with Actors include:
 - [Saving a flow as an Actor](/articles/99_Broadway/03_broadway_actor.md#how-do-i-save-flow-as-actor) to be used as inner flow of other Broadway flows.
 - [Exporting Actors](/articles/99_Broadway/03_broadway_actor.md#how-do-i-export-an-actor) to create inherited Actors.  
 
+#### How Do I Add Actor to Stage?
+
+To add an Actor to Stage of the Broadway flow, click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window. The window displays the list of existing categories on the left side, and the existing built-in Actors per each categories on the right side. Click **SUBMIT** to finish the action.
+
+![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
+
 #### How Do I Save Flow as Actor?
 
-In some cases you may prefer to package a flow and use it as an inner flow to avoid complex flows with a huge number of step. This will enable a reuse of the business logic in different flows.
+In some cases you may prefer to package a flow and use it as an inner flow to avoid complex flows with many steps. This will enable a reuse of the business logic across different flows.
 
 For example:
 - Define an inner flow for error handling.
@@ -21,13 +27,13 @@ For example:
 To save flow as Actor:
 - Click **Actions** > Save as Actor in the Main menu of [Broadway flow window](/articles/99_Broadway/18_broadway_flow_window.md#main-menu).
 
-The newly created Actor Type can be added to any flow.
+The newly created Actor type can be added to any flow.
 
 [Click for more information about inner flows.](add a link). 
 
 #### How Do I Export an Actor?
 
-You can export an Actor object and create an Actor Type, based on this object, to reuse this Actor. The export activity creates a new Actor Type which inherits the current Actor. The Actor is then added to the list of built-in Actors and can be used in other flows.
+You can export an Actor object and create an Actor Type, based on this object, to reuse this Actor. The export activity creates a new Actor type which inherits the current Actor. The Actor is then added to the list of built-in Actors and can be used in other flows.
 
 To export an Actor:
 - Click **Export Actor** in [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu).
@@ -36,7 +42,7 @@ To export an Actor:
 
 ## Actor Description and Remark
 
-Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu) and select **Description** to view the description of the Actor Type. The Description window is displayed in a read-only mode. See the example below:
+Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode. See the example below:
 
 ![image](/articles/99_Broadway/images/99_03_actor_desc.PNG)
 
