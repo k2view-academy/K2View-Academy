@@ -44,7 +44,7 @@ To export an Actor, do the following:
 **New article**
 ### What is an Actor Object?
 
-An Actor Type is a template of an Actor object. When an Actor is added to a Broadway flow a new instance (object) of the selected Actor type is created.
+An Actor Type is a template of an Actor object. When an Actor is added to a Broadway flow, a new instance (object) of the selected Actor type is created.
 
 
 
@@ -52,10 +52,11 @@ An Actor Type is a template of an Actor object. When an Actor is added to a Broa
 **New article**
 
 ### How Do I Add/Delete an Actor To/From A Stage?
-1.  Click the **Stage** working area to display the **Add Actor**
+1.  Click the **Stage** working area to display the **Add Actor** dialog box.
+
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
-  The **Add Actor** window has the following columns:
+The **Add Actor** window has the following columns:
   
    -  Left column, displaying the Actor categories.
     
@@ -66,6 +67,8 @@ An Actor Type is a template of an Actor object. When an Actor is added to a Broa
 2.  To add an Actor to a Stage, select the **Actor Type** and click **SUBMIT**.
 
 3.  To delete an Actor from a Stage, select the **Actor** and click **Delete** on your keyboard.
+
+Note that if you export an Actor and create an Actor Type based on it, the Actor's Remarks are copied to the Description of the new Actor Type. 
  
 ***********************************************************************************************************************
 **New article**
@@ -79,7 +82,7 @@ The Description window is displayed in a read-only mode.
 
 2.  Click **...** in the **Actor > Remark** to open the Remark window and add remarks on the Actor object.
 
-Note that if you export the Actor and create an Actor Type based on the exported Actor, the Actor's Remarks are copied to the Description of the newly created Actor Type. 
+Note that if you export an Actor and create an Actor Type based on it, the Actor's Remarks are copied to the Description of the new Actor Type. 
 
 **********************************************************************************************************************
 
@@ -207,13 +210,11 @@ The parameter's definition includes the following attributes:
 </tbody>
 </table>
 
-#### Parameter's Value
+#### How Do I Set a Parameter's Value?
 
-Setting the parameter's value is needed in the following scenarios:
+A parameter's value can be set if the **population type** is set to **Const**. 
 
--  The population type is set to **Const**. 
-
-  Example: 
+ For Example: 
 
    **Const** Actor. The input parameter name is **value**, the type is **String**, the value is "Hello Broadway":
 
@@ -221,7 +222,7 @@ Setting the parameter's value is needed in the following scenarios:
 
 - The population type is **Link** or **External** and you define a default value.
 
-  Example:
+  For Example:
 
   **Const** Actor. The  input parameter name is **value**, the type is **Integer**, and the default value is 7:
 
@@ -229,11 +230,11 @@ Setting the parameter's value is needed in the following scenarios:
 
 Notes:
 
-- Click the … icon next to the parameter name > Default value to set a default value for an input parameter.
+- To set a default value for an input parameter, click **…** adjacent to the **parameter name** and select **Default value**. 
 
-- Broadway enables populating a value that matches the parameters type. For example: Broadway only enables to insert  numbers for Integer parameters. 
+- Values that match the **parameter type** can be populated, for example: to only insert  numbers for Integer parameters. 
 
-- When populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
+- When populating an input value for an **SQL** parameter, click **QB** icon to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query. For example, **DbCommand** built-in Actor:
 
   ![Sql_input](/articles/99_Broadway/images/sql_input_value.png)
   
@@ -257,7 +258,7 @@ Notes:
   </td>
   <td valign="top" width="600pxl">
   <p>String, Integer, Real&hellip;</p>
-  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
+  <p>Click <strong>&hellip;</strong> adjacent to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
   </td>
   </tr>
   <tr>
@@ -274,7 +275,7 @@ Notes:
   </td>
   <td valign="top" width="600pxl">
   <p>Parameter description. The parameter description is displayed in a read-only mode.</p>
-  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Description to open the Description window.</p>
+  <p>Click <strong>&hellip;</strong> adjacent to the parameter name &gt; Description to open the Description window.</p>
   </td>
   </tr>
   <tr>
@@ -282,8 +283,8 @@ Notes:
   <p><strong>Remark</strong></p>
   </td>
   <td valign="top" width="600pxl">
-  <p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
-  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Remark to open the Description window.</p>
+  <p>Remarks can be added to each parameter. The remark adds a green asterisk next to the parameter name.</p>
+  <p>Click <strong>&hellip;</strong> adjacent to the parameter name and select Remark to open the Description window.</p>
   </td>
   </tr>
   </tbody>
