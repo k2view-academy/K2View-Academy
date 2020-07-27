@@ -21,8 +21,8 @@ Other options for working with Actors include:
 *************************************************************************************************************
 **New article**
 
-#### How Do I Save a Flow as an Actor?
-An Actor can be saved and be added as an inner flow to another flow, for example as an inner flow for handling errors. 
+#### How Do I Save an Actor?
+An Actor can be saved and be added as an inner flow of another flow, for example for handling errors. 
 Actors can also be reused in other flows, for example to avoid complex flows with multiple steps. 
 
 To save an Actor, click **Actions** in the toolbar and select **Save as Actor**. The new Actor can be added to any flow.
@@ -32,10 +32,11 @@ To save an Actor, click **Actions** in the toolbar and select **Save as Actor**.
 *************************************************************************************************************
 **New article**
 #### How Do I Export an Actor?
+An Actor can be exported to create a new Actor Type that inherits its parameters.
 
-You can export an Actor object and create an Actor Type, based on this object, to reuse this Actor.
-
-The export activity creates a new Actor Type.
+To export an Actor, do the following:
+1.  Go to the **Actor's context menu** and click in the right corner of the **Actor**.
+2.  Click **Export Action** and **save** the Actor. The Actor is added to the list of <a href="/articles/99_Broadway/04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.
 
 [Click for more information about Export Actor and Actor Inheritance.]() 
 
