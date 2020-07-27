@@ -135,7 +135,7 @@ To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99
 <tbody>
 <tr>
 <td rowspan="8" width="400pxl">
-<p><img src="/articles/99_Broadway/images/99_18_03_actor_menu.png" alt="Actor's context menu" /></p>
+<p><img src="/articles/99_Broadway/images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
 </td>
 <td width="80pxl"><a href="/articles/99_Broadway/21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
 <td width="420pxl">Click to connect the selected Actor and the required target Actor.</td>
