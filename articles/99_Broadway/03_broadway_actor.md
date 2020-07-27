@@ -8,8 +8,8 @@ Broadway offers a number of [built-in Actors](/articles/99_Broadway/04_built_in_
 
 The options for working with Actors include:
 - Adding Actors to Stages of Broadway flow.
-- [Saving a flow as an Actor] to be used as inner flow of other Broadway flows.
-- [Exporting Actors] to create inherited Actors.  
+- [Saving a flow as an Actor](/articles/99_Broadway/03_broadway_actor.md#how-do-i-save-flow-as-actor) to be used as inner flow of other Broadway flows.
+- [Exporting Actors](/articles/99_Broadway/03_broadway_actor.md#how-do-i-export-an-actor) to create inherited Actors.  
 
 #### How Do I Save Flow as Actor?
 
@@ -44,6 +44,6 @@ To add your own remark to the Actor, select **Remark** from the [Actor's context
 
 ![image](/articles/99_Broadway/images/99_03_actor_remark.PNG)
 
-Notes that if you export the Actor and create an Actor Type based on the exported Actor, the remark of the Actor is copied to the description of the newly created Actor Type. 
+Note that if you export an Actor and create an Actor Type based on it, the Actor's remarks are copied to the description of the new Actor Type.
 
 [![Previous](/articles/images/Previous.png)](articles/99_Broadway/02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
