@@ -129,7 +129,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 
 ### Actor's Context Menu
 
-To open the Actor's context menu, click the three dots in the right corner of the Actor. 
+To open the Actor's context menu, click the three dots in the right corner of the Actor. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage.
 
 <table style="width: 900px;">
 <tbody>
