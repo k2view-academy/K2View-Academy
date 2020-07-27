@@ -7,7 +7,7 @@ A Broadway  **Actor** represents the action that must be executed on each [Stage
 An **Actor** is a JAVA class which implements the **Actor Interface** and overrides the **action** method. 
 
 Broadway offers a number of built-in Actors which can be extended by customization. 
--  [Built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) address a wide range of activities and can be added to Broadway flows for example to handle files and JSON files, DB activities or string manipulations.
+-  [Built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) address a wide range of activities and can be added to Broadway flows for example to handle files, JSON files, DB activities or for string manipulations.
 -  A customized Actor is a customized JAVA class which implements the **Actor Interface** and overrides the **action** method.
 
 Other options for working with Actors include:
@@ -22,18 +22,10 @@ Other options for working with Actors include:
 **New article**
 
 #### How Do I Save a Flow as an Actor?
+An Actor can be saved and be added as an inner flow to another flow, for example as an inner flow for handling errors. 
+Actors can also be reused in other flows, for example to avoid complex flows with multiple steps. 
 
-In some cases you may prefer to package a Flow object and use it as an inner flow to avoid complex flows with a huge number of step or to enable a reuse of an inner flow in different flows.
-
-For example:
-
-- Define an inner flow for error handling.
-
-To enable a reuse of a Flow object you need to save it as Actor:
-
-- Click **Actions** in the tool bar > Save as Actor.
-
-The newly created Actor Type can be added to any flow.
+To save an Actor, click **Actions** in the toolbar and select **Save as Actor**. The new Actor can be added to any flow.
 
 [Click for more information about inner flows.](add a link). 
 
