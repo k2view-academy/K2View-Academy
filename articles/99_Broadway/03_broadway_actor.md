@@ -2,9 +2,20 @@
 
 ## Actor Overview
 
-The Broadway object **Actor** represents the activity (action) that must be executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
+A Broadway  **Actor** represents the activity (action) that must be executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
-The **Actor** is a JAVA class which implements the **Actor Interface** and overrides the **action** method.
+An **Actor** is a JAVA class which implements the **Actor Interface** and overrides the **action** method. 
+
+Broadway offers a number of built-in Actors which can be extended by customization. Other options for working with Actors include:
+-  Creating new Actors. **(Add link)**.
+-  Adding or deleting Actors from flows. **(Add link)**
+-  Saving Actors as inner flows of other Broadway flows. **(Add link)**
+-  Exporting Actors to create inherited Actors. **(Add link)**  
+
+
+
+*************************************************************************************************************
+**New article**
 
 ### Actor Types
 
@@ -44,18 +55,26 @@ The export activity creates a new Actor Type.
 
 An Actor type is a template of an Actor object. Adding an Actor to a Broadway flow creates a new instance (object) of the selected Actor type.
 
-### How Can I Add or Delete an Actor to A Stage?
-- Click the Stage working area. A new popup window is displayed. The Add Actor popup window contains two columns: 
-  - Left column: Actor categories.
-  - Right column: List of Actors for each category.
-  
- ![image](/articles/99_Broadway/images/add_actor.png)
- 
-- You can run a search by the Actor category or the Actor type name.
-- Select the required Actor Type and click the **SUBMIT** to add the Actor to the Stage.
-- Click the Actor on the Stage, and press the **Delete** key to delete the Actor from the Stage.
 
-### Actor  Description and Remark
+
+**************************************************************************************************************************
+**New article**
+
+### How Do I Add/Delete an Actor To/From A Stage?
+1.  Click the Stage working area to display the **Add Actor** window which has the following columns: 
+    -  Left column, displaying the Actor categories.
+    -  Right column, displaying a list of the Actor Types in each category.
+ 
+![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
+ 
+When searching for Actors, filter the search according to Actor categories or types.
+
+2.  To add an Actor to a Stage, select the **Actor Type** and click **SUBMIT**.
+
+3.  To delete an Actor from a Stage, select the **Actor** and click **Delete** on your keyboard.
+ 
+
+### Actor  Description and Remarks
 
 Click the **...** icon on the Actor > Description to view the description of the Actor Type.  See the example below:
 
@@ -66,6 +85,8 @@ The Description window is displayed in a read-only mode.
 Click the **...** icon on the Actor > Remark to open the Remark window and add your own remark on the Actor object.
 
 Notes that if you export the Actor and creates an Actor Type based on the exported Actor, the Remark of the Actor is copied to the Description of the newly created Actor Type. 
+
+**********************************************************************************************************************
 
 ## Actor Window
 
