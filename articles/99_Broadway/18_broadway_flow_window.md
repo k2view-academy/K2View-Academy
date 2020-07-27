@@ -122,7 +122,7 @@ To open the Stage context menu, click the three dots in the right corner of the 
 </tr>
 <tr>
 <td width="200">Remark</td>
-<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, a green asterisk is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
+<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, a <img src="/articles/99_Broadway/images/99_17_green_ast.PNG" alt="green asterisk"/> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
 </tbody>
 </table>
