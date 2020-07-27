@@ -134,34 +134,27 @@ To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="9" width="400pxl">
-<p><img src="/articles/99_Broadway/images/99_18_03_actor_menu.png" alt="Actor's context menu" /></p></td>
-<td width="80pxl">Collapse / Expand</td>
-<td width="420pxl">Collapse or expand the Actor and display its title.</td>
+<td rowspan="8" width="400pxl">
+<p><img src="/articles/99_Broadway/images/99_18_03_actor_menu.png" alt="Actor's context menu" /></p>
+</td>
+<td width="80pxl"><a href="/articles/99_Broadway/21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
+<td width="420pxl">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
 <tr>
-<td width="200">Show Only Connected</td>
-<td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
-</tr>
-<tr>
-<td width="200">Copy Selection</td>
-<td style="width: 465px;">Copy the selected Actor.</td>
-</tr>
-<tr>
-<td width="200">Delete Actor</td>
-<td style="width: 465px;">Click to delete the selected Actor.&nbsp;</td>
-</tr>
-<tr>
-<td width="200"><a href="/articles/99_Broadway/21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow"> Link</a></td>
-<td style="width: 465px;">Click to connect the selected Actor and the required target Actor.&nbsp;&nbsp;</td>
-</tr>
-<tr>
-<td width="200">Add Actor Below</td>
-<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor is added under the selected Actor.</td>
+<td width="200">Add Actor</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
 </tr>
 <tr>
 <td width="200">[Export Actor]</td>
 <td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="/articles/99_Broadway/04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.</td>
+</tr>
+<tr>
+<td width="200">Delete</td>
+<td style="width: 465px;">Click to delete the selected Actor.&nbsp;</td>
+</tr>
+<tr>
+<td width="200">Collapse / Expand</td>
+<td style="width: 465px;">Collapse or expand the Actor and display its title.</td>
 </tr>
 <tr>
 <td width="200">Description</td>
@@ -169,7 +162,11 @@ To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99
 </tr>
 <tr>
 <td width="200">Remark</td>
-<td style="width: 465px;">Additional info added to the Actor instance.&nbsp;</td>
+<td style="width: 465px;">Additional info added to the Actor instance.</td>
+</tr>
+<tr>
+<td width="200">Show Only Connected</td>
+<td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
 </tr>
 </tbody>
 </table>
