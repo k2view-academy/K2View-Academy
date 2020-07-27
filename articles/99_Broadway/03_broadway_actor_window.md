@@ -34,12 +34,12 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>Input Parameters</strong></p>
+<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>Input Parameters</strong></a></p>
 </td>
 </tr>
 <tr>
 <td width="300pxl">
-<p><strong>Output Parameters</strong></p>
+<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>Output Parameters</strong></a></p>
 </td>
 </tr>
 </tbody>
@@ -87,9 +87,9 @@ The parameter's definition includes the following attributes:
 <td valign="top" width="600pxl">
 <p>The following types are supported:</p>
 <ul>
-<li><strong>Link</strong>- get the input value as an input parameter from another actor.</li>
-<li><strong>Const</strong>- constant. You need to set the value of the parameter.</li>
-<li><strong>External</strong>- get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting- <strong>External Name</strong>.</li>
+<li><strong>Link</strong> - get the input value as an input parameter from another actor.</li>
+<li><strong>Const</strong> - constant. You need to set the value of the parameter.</li>
+<li><strong>External</strong> - get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting - <strong>External Name</strong>.</li>
 </ul>
 <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name to view or edit the population type.</p>
 </td>
