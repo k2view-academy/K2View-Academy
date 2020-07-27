@@ -1,6 +1,6 @@
 # Data Types in Broadway
 
-When Broadway actors pass data between them, the data is passed as Java Objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway. Using a supported Broadway type can be described by the Broadway Schema engine and can be displayed clearly by the Data Inspector.
+Broadway actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
 
 ### Primitives
 
@@ -8,25 +8,25 @@ Broadway supports the following primitives: *String*, *Long*, *Real*, *Boolean*,
 
 Other numeric types such as *Integer*, *Short*, *Float*, *Byte* and their primitive counterparts (long, int, short, byte, double, float), are automatically converted to Long/Real.
 
-Sql Blob is also supported and is automatically converted into a byte[].
+SQL JDBC Blobs are also supported and are automatically converted into byte arrays.
 
 
 ### Collections/Iterable
 
-Collections, or sequences of objects, are represented by any implementation of Iterable (Collection, List etc). The advantage of using Iterable as the lowest common denominator is that it does not need to declare its size in advance, easily supporting streaming uses cases such as databases queries and topic subscription where the number of items is not known in advance or is even unbound.
-Java Arrays are also supported and treated as sequences.
+Collections, or sequences of objects, can be represented by any implementation of Iterable (Collection, List etc). The advantage of using Iterable as the lowest common denominator is that it does not need to declare its size in advance, easily supporting streaming uses cases such as databases queries and topic subscription where the number of items is not known in advance or is even unbound.
+Java Arrays are also supported and accessed as Iterable.
 
 
 ### Maps/Objects
 
-The Map interface is used to represent Objects that contain a set of named attributes. The key is usually of String type. For instance, Maps are used extensively to represent result set rows.
+The Map interface is used to represent Objects that contain a set of named attributes. The key is usually of String type. For instance, Maps are used extensively to represent database result set rows.
 
 
 ### Implicit Type Conversion
 
 When Actors read their input arguments from Broadway, and expect a certain type of parameter, Broadway converts the value to the type expected by the Actor.
 
-The conversion is highly robust, where any reasonable conversion is done in the attempt to satisfy the Actor expected input. For instance a Long can be converted into a String and a String can be parsed into an Integer (if possible). An integer can be converted to a boolean and vice versa (0=false, true=1). Automatic conversion is also done between primitives and collections or between maps and collections. The following is an exhaustive table of all available conversions:
+The conversion is highly robust, where any reasonable conversion is done in the attempt to satisfy the Actor expected input. For instance a Long can be converted into a String and a String can be parsed into a Long (if possible). An integer can be converted to a boolean and vice versa (0=false, true=1). Automatic conversion is also done between primitives and collections or between maps and collections. The following is an exhaustive table of all available conversions:
 
 | Source/Target |           String          |            Long           |                  Double                 |           Boolean          |      Date      |        byte[]        |         Iterable         |  Map  |
 |:-------------:|:-------------------------:|:-------------------------:|:---------------------------------------:|:--------------------------:|:--------------:|:--------------------:|:------------------------:|:-----:|
@@ -41,15 +41,19 @@ The conversion is highly robust, where any reasonable conversion is done in the 
 |      Map      |          JSON {:}         |           Error           |                  Error                  |       false if empty       |      Error     | same as string utf-8 | iterable of   map values |   =   |
 
 
-### null values
+### *Null* Values Conversion
 
 Null is supported as a value in Broadway. However, to avoid null pointer exceptions as much as possible, null has a conversion to every requested type.
 
+### Iterable Conversion
 
-### Date formats
+When converting a value into an iterable, the result is an Iterable of a single entry containing that value. For instance, an integer with the value 7, is converted into an iterable where the only value is 7. The exceptions to this rule are *null*, which is converted to an empty iterable, and *Map* which is converted to an iterable of the map values (without the keys).
 
-Dates are converted to Strings using UTC with the following format:
+### Date Conversion
+
+Dates are converted to Strings using their UTC representation in the following format:
     *yyyy-MM-dd HH:mm:ss.SSS*
+
 When parsed, dates have one of the following formats:
   *yyyy-MM-ddTHH:mm[:ss[.SSS[Z]]]*
   *yyyy-MM-dd HH:mm[:ss[.SSS[Z]]]*
@@ -58,6 +62,11 @@ Either T or ' ' as a delimiter between date and time and seconds, milleconds and
 When numbers are converted to dates and vice versa, the value of the date is considered the number of milliseconds elapsed since 1970-1-1 00:00.
 
 
-### byte[]
+### byte[] Conversion
 
-When binary data is referred to as a string or vice versa, utf-8 binary representations is assumed. When formatting from other types, the conversion is done in the same way as string and then to the utf-8 representation. 
+When binary data is referred to as a string or vice versa, utf-8 binary representations is assumed. When formatting other types, the conversion goes via a string and and then converted to the utf-8 representation.
+
+
+### Errors
+
+Not all conversions are possible. When Broadway cannot convert a data type, an Exception will be thrown. In such cases, or when the implicit conversion is unsatisfactory, you can consider using an Actor to explicitly convert between data types and representation.
