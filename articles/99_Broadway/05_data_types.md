@@ -43,30 +43,34 @@ The conversion is highly robust, where any reasonable conversion is done in the 
 
 ### *Null* Values Conversion
 
-Null is supported as a value in Broadway. However, to avoid null pointer exceptions as much as possible, null has a conversion to every requested type.
+Null is supported as a value in Broadway. However, to avoid null pointer exceptions as much as possible, null has an implicit conversion to every supported type.
 
-### Iterable Conversion
+### *Iterable* Conversion
 
 When converting a value into an iterable, the result is an Iterable of a single entry containing that value. For instance, an integer with the value 7, is converted into an iterable where the only value is 7. The exceptions to this rule are *null*, which is converted to an empty iterable, and *Map* which is converted to an iterable of the map values (without the keys).
 
-### Date Conversion
+### *Date* Conversion
 
 Dates are converted to Strings using their UTC representation in the following format:
     *yyyy-MM-dd HH:mm:ss.SSS*
 
-When parsed, dates have one of the following formats:
+When parsed, dates support one of the following formats:
   *yyyy-MM-ddTHH:mm[:ss[.SSS[Z]]]*
   *yyyy-MM-dd HH:mm[:ss[.SSS[Z]]]*
-Either T or ' ' as a delimiter between date and time and seconds, milleconds and timezone as optional fields.
+Either T or ' ' as a delimiter between date and time. Seconds, milliseconds and timezone are optional.
 
 When numbers are converted to dates and vice versa, the value of the date is considered the number of milliseconds elapsed since 1970-1-1 00:00.
 
+Broadway supports date/time manipulation actors for more explicit date/time conversions and calculations.
 
-### byte[] Conversion
+
+### *byte[]* Conversion
 
 When binary data is referred to as a string or vice versa, utf-8 binary representations is assumed. When formatting other types, the conversion goes via a string and and then converted to the utf-8 representation.
 
 
 ### Errors
 
-Not all conversions are possible. When Broadway cannot convert a data type, an Exception will be thrown. In such cases, or when the implicit conversion is unsatisfactory, you can consider using an Actor to explicitly convert between data types and representation.
+Not all conversions are possible. When Broadway cannot convert a data type, an Exception will be thrown. This could be as a result of parsing errors (for instance String to Long) or of unsupported conversions (for instance Long to Map).
+
+In such cases, or when the implicit conversion is unsatisfactory, you can consider using an Actor to explicitly convert between data types and data representations.
