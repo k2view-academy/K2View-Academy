@@ -46,4 +46,4 @@ To add your own remark to the Actor, select **Remark** from the [Actor's context
 
 Note that if you export an Actor and create an Actor Type based on it, the Actor's remarks are copied to the description of the new Actor Type.
 
-[![Previous](/articles/images/Previous.png)](articles/99_Broadway/02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/03_broadway_actor_window.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_Broadway/02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/03_broadway_actor_window.md)
