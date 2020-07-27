@@ -44,7 +44,7 @@ To export an Actor, do the following:
 **New article**
 ### What is an Actor Object?
 
-An Actor type is a template of an Actor object. Adding an Actor to a Broadway flow creates a new instance (object) of the selected Actor type.
+An Actor Type is a template of an Actor object. When an Actor is added to a Broadway flow a new instance (object) of the selected Actor type is created.
 
 
 
@@ -52,30 +52,32 @@ An Actor type is a template of an Actor object. Adding an Actor to a Broadway fl
 **New article**
 
 ### How Do I Add/Delete an Actor To/From A Stage?
-1.  Click the Stage working area to display the **Add Actor** window which has the following columns: 
+1.  Click the **Stage** working area to display the **Add Actor**
+![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
+
+  The **Add Actor** window has the following columns: 
     -  Left column, displaying the Actor categories.
     -  Right column, displaying a list of the Actor Types in each category.
  
-![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
- 
-When searching for Actors, filter the search according to Actor categories or types.
+   When searching for Actors, filter the search according to Actor categories or types.
 
 2.  To add an Actor to a Stage, select the **Actor Type** and click **SUBMIT**.
 
 3.  To delete an Actor from a Stage, select the **Actor** and click **Delete** on your keyboard.
  
+***********************************************************************************************************************
+**New article**
+### How Do I View an Actor's Description or Remarks?
 
-### Actor  Description and Remarks
-
-Click the **...** icon on the Actor > Description to view the description of the Actor Type.  See the example below:
+1.  Click **...** in the **Actor > Description** to display a description of the Actor Type.  
 
 ![Description](/articles/99_Broadway/images/actor_description.png)
 
 The Description window is displayed in a read-only mode.
 
-Click the **...** icon on the Actor > Remark to open the Remark window and add your own remark on the Actor object.
+2.  Click **...** in the **Actor > Remark** to open the Remark window and add remarks on the Actor object.
 
-Notes that if you export the Actor and creates an Actor Type based on the exported Actor, the Remark of the Actor is copied to the Description of the newly created Actor Type. 
+Note that if you export the Actor and create an Actor Type based on the exported Actor, the Actor's Remarks are copied to the Description of the newly created Actor Type. 
 
 **********************************************************************************************************************
 
