@@ -1,7 +1,7 @@
 # Fabric API for DB Interfaces
 
 ### Connect DB Interface - Db Class
-Fabric provides a Java Db class to use the methods and functions that will invoke database (SQL) queries and statements, and  Fabric commands.
+Fabric provides a Java Db class to use the methods and functions that invoke database (SQL) queries and statements and  Fabric commands.
 
 ### How Can I Create a Db Object?
 The following Fabric **UserCode** methods can be used to create a Db object:
@@ -22,7 +22,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>db(String interfaceName)</strong></p>
 </td>
 <td width="417">
-<p>Obtain the Db object to connect the given logical interface name which input must be populated by a DB interface defined in Fabric Studio.</p>
+<p>Obtain the Db object to connect the given logical interface name whose input must be populated by a DB interface defined in Fabric Studio.</p>
 </td>
 </tr>
 <tr>
@@ -38,7 +38,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <p><strong>ludb(String lutype, String luid)<strong></p>
 </td>
 <td width="417">
-<p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific logical unit instance. If the logical unit is the same as the last one referenced by this method, GET is not invoked.</p>
+<p>Obtain a &nbsp;Db connection to the local Fabric and GET the specific Logical Unit Instance. If the Logical Unit is the same as the last one referenced by this method, GET is not invoked.</p>
 </td>
 </tr>
 </tbody>
@@ -63,7 +63,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 <tbody>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU instance.&nbsp;</strong></p>
+<p><strong><h4>Connect to the local Fabric via an LU sync. Invoke the currently-synced LU Instance.&nbsp;</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
@@ -72,14 +72,14 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </td>
 <td width="228">
 <p>Db conn = db(&ldquo;fabric&rdquo;);</p>
-<p>Note: you do not have to define &ldquo;fabric&rdquo; interface in Fabric Studio.</p>
+<p>Note: you do not need to define the &ldquo;fabric&rdquo; interface in the Fabric Studio.</p>
 <p>Db conn = ludb();</p>
 <p>Db conn = fabric();</p>
 </td>
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric using a Web Service.</strong></p>
+<p><strong><h4>Connect to the local Fabric using a Web Service.</strong></p>
 </td>
 <td width="198">
 <p>ludb(String lutype, String luid)</p>
@@ -90,7 +90,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to the local Fabric via an LU sync.&nbsp; Get the LU instance from another LU.</strong></p>
+<p><strong><h4>Connect to the local Fabric via an LU sync.&nbsp; Get the LU Instance from another LU.</strong></p>
 </td>
 <td width="198">
 <p>ludb(String lutype, String luid)</p>
@@ -101,7 +101,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 </tr>
 <tr>
 <td width="204">
-<p><strong>Connect to another DB Interface.</strong></p>
+<p><strong><h4>Connect to another DB interface.</strong></p>
 </td>
 <td width="198">
 <p>db(String interfaceName)</p>
@@ -121,7 +121,7 @@ The following Fabric **UserCode** methods can be used to create a Db object:
 
 **DB Class Methods - Common Use Cases**
 
-The following table describes common use cases when working with DB Interfaces.\
+The following table describes common use cases when working with DB interfaces.\
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 <table>
 <tbody>
@@ -179,8 +179,8 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 	
 ### Using Binding Variables on SQL Statements
 In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
-When using prepared statement queries use a binding parameter: 
-* Add a question mark in the SQL statement when using binding parameters in the SQL query.
+When using prepared statement queries always use binding parameters: 
+* Add a question mark in the SQL statement for each parameter in the SQL query.
 * Each input parameter must be sent as a parameter to the execute() or fetch() methods.
 * The order of the input parameters must be aligned with the order of these parameters in the SQL statement.
 
@@ -198,7 +198,7 @@ You can iterate the result set and get a Db.Row object for each record, or alter
   * cell(int i) - returns the cell at position I (starts by zero), null if row is empty.
 * Use the isEmpty() method to know if the row has data.
 * To iterate column names and data simultaneously, use the values() method.
-* This Map cannot be changed and edited. Trying to change this object will result in a runtime exception.
+* This map cannot be changed or edited. Trying to change this object will result in a runtime exception.
 
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
@@ -240,7 +240,7 @@ for (Db.Row row:rows) {
 	….
  }
 </code></pre>
-
+ 
 Note that since you are not using the each/forEach method the ResultSet will not close immediately and is deferred to the end of the current execution (sync/webservice/job).
 
 To use a loop and control closure of the result set, use the try-resource structure:

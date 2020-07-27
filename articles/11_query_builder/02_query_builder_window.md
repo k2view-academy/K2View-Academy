@@ -19,7 +19,7 @@ The [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has 
 ![image](/articles/11_query_builder/images/12_2_3_query_builder_window.PNG)
 
 ### Result Tab
-Displays the data that is received from the executed query. Click **Export to Excel** to export the data into an Excel file.  
+Displays the data that is received from the executed query. Click **Export to Excel** to export the data into an Excel file.   
 
 <img src="/articles/11_query_builder/images/12_2_2%20Excel%20file..png" width="700pxl">
 

@@ -14,7 +14,7 @@ Note that although there is an option for working with Apache Sub-version (SVN),
 
 Click for more information about the K2Admin Studio. 
 
-### How do I Start Working with Version Control?
+### How Do I Start Working with Version Control?
  
 To start using Configuration Control, do either:
 
@@ -38,21 +38,21 @@ Note that if you choose to work with SVN as your preferred version control, the 
 
 **GIT Client**
 
-Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio Windows machine.
+Download and install **TortoiseGit** or GitHub for Windows on the Fabric Studio Windows machine.
 
 **GIT on Fabric Studio** 
 
 1.	Go to the **Fabric Studio** and create a [**new project**](/articles/04_fabric_studio/05_creating_a_new_project.md) and add it to **GIT**.
 2.	Add and commit the new project items to GIT: right click the **project**, click **TortoiseGit**, click **Add** and then click **Commit**. 
 
-### Logging in to SVN
+### Logging In to SVN
 
 1.	Go to the **SVN Version Control** and click the **project** to display the **Connect to Login** dialog box of the last opened project.
 2.	Enter the **Username** and **Password** and then click **OK** to open the Fabric Studio Main Window.
 
 ### Checking a Project Out of GIT
  
-**How do I check a project out of GIT?**
+**How Do I Check a Project Out of GIT?**
 1.	Go to the **File Browser** and click **Checkout Directory** and then **Project**.
 2.	Add the **GitHub Repository URL** and click **OK** to open the **Authentication** dialog box.
 3.	Enter your **Username** and **Password** and then click **OK**.
@@ -62,7 +62,7 @@ Download and install **TortoiseGit** or GitHub for windows on the Fabric Studio 
 
 ### Checking a Project Out of SVN
  
-**How do I check a project out of SVN?**
+**How Do I Check a Project Out of SVN?**
 
 1.	Go to the **File Explorer** and click **Checkout Directory and Project**. 
 2.	In the **Repository URL** field type in the **name** of the **project** to check out.
@@ -141,7 +141,7 @@ When a project is registered in the Version Control system, the following indica
 </tbody>
 </table>
 
-### What are the Version Control Operations?
+### What Are the Version Control Operations?
   
 **TortioseGit Operations**
 
@@ -319,7 +319,7 @@ When a project is registered in the Version Control system, the following indica
 
 **Key SVN Operations**
 
-The context menu displays two top-level SVN operations or TortoiseSVN operations directly from the project tree:
+The context menu displays two top-level SVN operations or TortoiseSVN operations directly from the Project Tree:
 
 <table>
 <tbody>

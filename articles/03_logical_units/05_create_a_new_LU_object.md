@@ -4,7 +4,7 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 * Creating a new Logical Unit.
 * Duplicating a Logical Unit and saving it. 
 
-### How Do I Create a new Logical Unit (LU)?
+### How Do I Create a New Logical Unit (LU)?
 1. Go to **Projects Tree** > right click **Logical Units** > **New Logical Unit** > **Logical Unit** dialog box. 
 2. Enter the **Name** of the new **Logical Unit**. 
 3. Do either: 

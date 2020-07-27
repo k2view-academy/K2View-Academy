@@ -1,21 +1,21 @@
 # Table Population Overview
 
 ### What Is a Table Population? 
-A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) Table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU Table. Source data can be mapped directly to LU Table columns and Fabric transformation objects like [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU Table. 
+A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the Source Object to the target LU table. Source data can be mapped directly to LU table columns and Fabric transformation objects like [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU table. 
 
 Each table can have one or several Table Populations that can be executed simultaneously or according to a predefined [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md).
-Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU Table.
-There are [two types of source objects](/articles/07_table_population/02_source_object_types.md) for a **Table Population** object:
+Each Table Population extracts data from a data source, transforms it when needed and then populates the data into an LU table.
+There are [two types of Source Objects](/articles/07_table_population/02_source_object_types.md) for a **Table Population** object:
 *	DB query, (default) that executes an SQL Select query on a predefined DB interface. 
 *	[Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), that can run various SQL Select queries and execute complex logic using Java code, including data manipulations, Fabric APIs, Fabric commands and calculations. All records yielded from the function are inserted into the table. 
-Note that tables can also be populated or updated by [enrichment functions] which, unlike root functions, are executed after all LU Tables are populated.
+Note that tables can also be populated or updated by [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md#enrichment-function-overview) which, unlike Root functions, are executed after all LU tables are populated.
 
-### Table Population in an LU Schema 
-An [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the root table. Parent-child links in LU Tables are created via their Table Population objects:
-*	Each [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
-*	Each Table Population object, apart from the Table Population of the root LU Table, must be linked to a parent table via its Input columns.
-*	Each Table Population object can be linked to a different parent LU Table.
-Note that an LU Table can be added to an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync process](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction .
+### Table Population In an LU Schema 
+An [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects:
+*	Each [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
+*	Each Table Population object, apart from the Table Population of the LU's Root Table, must be linked to a parent table via its Input columns.
+*	Each Table Population object can be linked to a different parent LU table.
+Note that an LU table can be added to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync process](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction.
 
 [Click for more information about Building an LU Hierarchy and Linking Table Populations.](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
 
@@ -37,7 +37,7 @@ The Table Population window has the following sections:
 ### Population Window Header
 The Population window header holds the **Debug** and **Options** toolbars where additional toolbars like **Edit**, **Zoom**, **Alignment** or **Export** can be added when needed. 
 
-Click for more information about Additional Toolbars.
+[Click for more information about Additional Toolbars.](/articles/07_table_population/01_table_population_overview.md#options-toolbar)
 
 ### Debug Toolbar
 The **Debug toolbar** holds options for testing the Population process by executing its logic on a selected [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id).
@@ -65,10 +65,10 @@ The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options
 </td>
 </tr>
 </tbody>
-</table>
+</table> 
 
 ### Population Window Working Area
-The Table Population **Working Area** acts as a workspace for mapping the Source Object to the target LU Table. Transformation objects can also be added to the working area map. 
+The **Table Population Working Area** acts as a workspace for mapping the Source Object to the target LU table. Transformation objects can also be added to the working area map. 
 
 The Working Area includes:
 <table width="614">
@@ -86,7 +86,7 @@ The Working Area includes:
 <p>Fabric LU table (right)</p>
 </td>
 <td width="435">
-<p>A target LU Table in the LU Schema.</p>
+<p>A target LU table in the LU schema.</p>
 </td>
 </tr>
 <tr>
@@ -98,12 +98,12 @@ The Working Area includes:
 </td>
 </tr>
 </tbody>
-</table>
+</table> 
 
 [Click for more information about Table Population Transformation Rules.](/articles/07_table_population/06_table_population_transformation_rules.md)
 
 ### Properties Tab
-The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU Table or a translation. Note that some properties are editable. 
+The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU table or a translation. Note that some properties are editable.  
 
 [Click for more information about Table Population Properties Tab.](/articles/07_table_population/04_table_population_properties_tab.md)
 

@@ -3,7 +3,7 @@
 ### What Is an LU Table Index?  
 An index can be created for an LU table in order to improve performance when querying / updating LU tables in memory during the Sync process. Indexes are created on a table level and can be built for one or many fields. Each LU table can have several indexes where each index can contain several columns.
 
-### When do I Create an Index?
+### When Do I Create an Index?
 When querying LU tables, indexes should be considered for fields used in WHERE clauses.
 Indexes should always be built in the same order as that of the conditions in the WHERE clause of the query. This also applies when using actions like Group By or Distinct which must be applied on indexed fields as displayed in Example 1.
 When an LU table is invoked as a Lookup table, create an index for the lookup input links which are used in the WHERE statement.
@@ -68,19 +68,19 @@ LU table indexes are defined in the **Indexes Tab** in the **Table window** wher
 </tbody>
 </table>
 
-### How do I Add an Index? 
+### How Do I Add an Index? 
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double click [**Table Name**] to open the table’s settings. 
 2.	In the **Columns** tab, right click one or more fields and select **Create Index from Selected Columns**. 
 3.	Click the **Indexes** tab to display a list of indexes. 
 4.	Check / uncheck **PK** and **Unique** to complete the index definition.
 5.	**Save** the table. 
 
-### How do I Delete an Index?  
+### How Do I Delete an Index?  
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > double click [**Table Name**] to open the table’s settings. 
 2.	In the **Indexes** tab, click **Delete** to delete the index.
 
-### How do I get a List of Indexes? 
-The **DESCRIBE** command is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
+### How Do I Get a List of Indexes? 
+The **DESCRIBE** command is one of Fabric View commands and it is used to query the Fabric metadata structure on a deployed project in the Fabric console. For example, before performing a SELECT SQL query in the Web Service to get the list of indexes.
 To get the list of indexes for a specified table, use one of the following commands.
 
 **Syntax:**
@@ -93,7 +93,7 @@ DESCRIBE INDEX customer.address_billing; Get the indexes of a specific table wit
 DESCRIBE INDEX customer.address%; Get the indexes of all tables starting with address.
 </code></pre>
 
-Click for more information about The DESCRIBE Command.
+[Click for more information about The Fabric View commands](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view).
 
 
 [![Previous](/articles/images/Previous.png)](/articles/06_LU_tables/02_create_an_LU_table.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/06_LU_tables/04_table_properties.md)

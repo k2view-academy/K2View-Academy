@@ -1,6 +1,6 @@
 # Sync - Decision Functions Checks and Considerations Table
 
-When a decision function returns False it always skips a sync. Therefore, when writing decision function code, always refer to the Decision Function Checks and Considerations Table below.
+When a Decision function returns False it always skips a sync. Therefore, when writing Decision function code, always refer to the Decision Function Checks and Considerations Table below.
 
 <table>
 <tbody>
@@ -9,7 +9,7 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <p><strong>Check</strong></p>
 </td>
 <td width="700pxl">
-<p>Should the Sync on the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> be skipped?</p>
+<p>Should the sync on the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> be skipped?</p>
 </td>
 </tr>
 <tr>
@@ -17,9 +17,9 @@ When a decision function returns False it always skips a sync. Therefore, when w
 <p><strong>Consideration</strong></p>
 </td>
 <td width="472">
-<p>When defining a decision function on the <a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema</a>, the decision function runs on every <a href="/articles/07_table_population/01_table_population_overview.md"> population </a> in the LU Schema.</p>
-<p>If the decision function returns the same result for each population, it is recommended to set it on the <a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a>&rsquo;s population. Then invoke the <a href="/articles/14_sync_LU_instance/09_skip_sync.md"><strong>skipSync()</strong> </a> method in the decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the decision function on each LUI instead of executing the decision function on each population.</p>
-<p>For example, setting the decision functions to check whether the current time is during peak or off-peak hours.</p>
+<p>When defining a Decision function on the <a href="/articles/03_logical_units/03_LU_schema_window.md">LU schema</a>, the Decision function runs on every <a href="/articles/07_table_population/01_table_population_overview.md"> population </a> in the LU schema.</p>
+<p>If the Decision function returns the same result for each population, it is recommended to set it on the <a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Root Table</a>&rsquo;s population. Then invoke the <a href="/articles/14_sync_LU_instance/09_skip_sync.md"><strong>skipSync()</strong> </a> method in the Decision function code to skip the sync of the LUI if the conditions of the sync are not met. This way, Fabric performs a one-time execution of the Decision function on each LUI instead of executing the Decision function on each population.</p>
+<p>For example, setting the Decision functions to check whether the current time is during peak or off-peak hours.</p>
 </td>
 </tr>
 <tr>
@@ -92,7 +92,6 @@ When a decision function returns False it always skips a sync. Therefore, when w
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 <table>
 <tbody>
@@ -137,9 +136,9 @@ Click to display a list of Fabric APIs: **http://[Fabric IP address]:3213/static
 
 **Example 1**
 
-Add a decision function on the LU Schema level to check the source environment and enable the sync of the LUI in the following scenarios:
+Add a Decision function on the LU schema level to check the source environment and enable the sync of the LUI in the following scenarios:
 * First sync of the LUI.
-* LU Schema has been changed.
+* LU schema has been changed.
 * The source environment is Production.
 
 <pre><code>
@@ -163,7 +162,7 @@ return syncInd;
 
 **Example 2**
 
-Add a decision function on the population level in an LU Table which is populated only when run on a Development source environment. When run on a Production environment, do not populate this table, since this table does not exist in the Production DB.
+Add a Decision function on the population level in an LU table which is populated only when run on a Development source environment. When run on a Production environment, do not populate this table, since this table does not exist in the Production DB.
 
 <pre><code>
 // Init the Boolean by true\
@@ -183,7 +182,7 @@ return syncInd;
 
 **Example 3**
 
-Add a decision function on the CASE LU Table to check if the CONTRACT LU Table has been updated. The check is based on a [session level Global](/articles/08_globals/03_set_globals.md) (key) which is set to True by the population of the CONTRACT LU Table. 
+Add a Decision function on the CASE LU table to check if the CONTRACT LU table has been updated. The check is based on a [session level Global](/articles/08_globals/03_set_globals.md) (key) which is set to True by the population of the CONTRACT LU table. 
 
 <pre><code>
 // Init the Boolean by true\
@@ -195,7 +194,7 @@ return syncInd;
 
 **Example 4**
 
-Add a decision function on the LU Schema level to check if the current time is during peak hours or if this sync is the first sync of the LUI. If the current time is during peak hours and the instance already exists in Fabric, skip the sync of the LUI.
+Add a Decision function on the LU schema level to check if the current time is during peak hours or if this sync is the first sync of the LUI. If the current time is during peak hours and the instance already exists in Fabric, skip the sync of the LUI.
 
 ```java
 Boolean syncInd = false;\
@@ -218,7 +217,7 @@ if(!syncInd)\
 
 return syncInd;
 ```
-Note that the fnCheckSourceEnv , fnCheckSourceVersion, and fnCheckOffPeak functions are displayed in the Demo Fabric Project under the Code tab.
+Note that the fnCheckSourceEnv, fnCheckSourceVersion, and fnCheckOffPeak functions are displayed in the Demo Fabric Project under the Code tab.
 
 [![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/05_sync_decision_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/07_sync_levels.md)
 

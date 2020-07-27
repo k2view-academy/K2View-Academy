@@ -1,6 +1,6 @@
 # Skip Sync
 
-### How do I Skip a Sync on an LU Instance?
+### How Do I Skip a Sync On an LU Instance?
 You can skip the sync on an LUI using the skipSync() Fabric  function in your code.
 skipSync() skips the current sync, rolls back changes and marks the sync as **SKIP for this LUI**.  
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**

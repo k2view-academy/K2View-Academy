@@ -1,15 +1,15 @@
 # Offline Deploy
 
-New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server and is also known as an Offline Deploy. 
+New or updated Fabric project implementations must be deployed to the server side. A deployment can be performed either from the [Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) or from the Fabric Server (also known as an Offline Deploy).
 
 An **Offline Deploy** is implemented by running the **Deploy** command on the Fabric Server using artifacts that can be created either by the Fabric Studio or by the script on the server side.
 
-### When should I use Offline Deploy?
+### When Should I Use Offline Deploy?
 When a Fabric project is developed by a group of programmers it is important that the environment is always up-to-date. This can be challenging. Fabric provides a solution that enables combining the code changes that have been implemented and committed by several programmers and deploying them to a specific environment. To do so, the Development team should prepare an automated Jenkins process that takes the project's latest sources from the Git or SVN repository and copies them to the server. The process then runs the script that creates the artifacts based on this code and then deploys them on a server. This process can run on the Fabric Server without any dependency on the Fabric Studio. 
 
 [Click for more information about Best Practices for working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
-### How do I Perform an Offline Deployment?
+### How Do I Perform an Offline Deployment?
 
 There are two ways to perform an Offline Deployment:
 - Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the  [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. Then do the deployment by running the **Deploy** command on the server.
@@ -36,7 +36,7 @@ There are two ways to perform an Offline Deployment:
 
    Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
 
-   ###### Example:
+   **Example**:
 
    DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
 
@@ -95,10 +95,10 @@ The following table describes the syntax and the mandatory/optional parameters w
    <table width="900px">
    <tbody>
    <tr>
-   <td width="270px">
+   <td width="200px">
    <p><strong>DEPLOY</strong></p>
    </td>
-   <td width="630px">
+   <td width="700px">
    <p><strong>Usage</strong>: DEPLOY &lt;LUT&gt; WITH JAR &lt;'jar_path'&gt; ZIP_FILE &lt;'zip path'&gt; [WS_METHODS &lt;'string'&gt;] NOSYNC &lt;Boolean&gt;.</p>
    <p><strong>Options</strong>:</p>
    <ul>
@@ -119,7 +119,6 @@ Note that NOSYNC TRUE is the same as checking <a href="/articles/14_sync_LU_inst
    </tr>
    </tbody>
    </table>
-   <p>&nbsp;</p>
-   <p>&nbsp;</p>
+
    
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)

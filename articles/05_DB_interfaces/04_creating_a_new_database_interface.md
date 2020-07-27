@@ -21,7 +21,7 @@ The following screenshot displays a list of supported built-in interface types.
     **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
    
     * To check if the connection settings are correct, click the **Test Connection String**
-       * If the connection is OK, the Connection is OK notification is displayed on the bottom of the window.
+       * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
        
 5. Optional: Edit the **Pool Properties**.
@@ -29,32 +29,32 @@ The following screenshot displays a list of supported built-in interface types.
 6. Click **Save**.
 
     
-Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a Product package.
+Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a product package.
 
 Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.
 
 ### DB Interface Window
 
-The DB Interface window enables you to define DB Interfaces for your project. By default, new DB interfaces are created in the Generic DB Interface format. 
+The DB Interface window enables you to define DB interfaces for your project. By default, new DB interfaces are created in the generic DB interface format. 
 
 
-_Generic Interface Definition_
+**Generic Interface Definition**
 
 ![image](/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
 
-Interfaces created using previous Fabric versions remain as is and can be converted to the Generic interface.
+Interfaces created using previous Fabric versions remain as is and can be converted to the generic interface.
  
 
-_Previous Fabric Version Interface Definition_
+**Previous Fabric Version Interface Definition**
 
-The following screenshot displays an Interface configuration in an older format which uses ADO.NET/ODBC drivers.
+The following screenshot displays an interface configuration in an older format which uses ADO.NET/ODBC drivers.
 
 ![image](/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
 
 
-_When are Interfaces Created in an Older Format in the Current Fabric Version?_
+**When are Interfaces Created in an Older Format in the Current Fabric Version?**
 
-In the current Fabric version, if the Project already has at least one interface created in the older format, Fabric preserves this interface format. All new interfaces of the same type are also created in the same format (ADO.NET/ODBC drivers) by default.
+In the current Fabric version, if the project already has at least one interface created in the older format, Fabric preserves this interface format. All new interfaces of the same type are also created in the same format (ADO.NET/ODBC drivers) by default.
 
 An additional reason for an interface to be created in a legacy format in the current Fabric version is the definition of a DB type in the Fabric Studio Config file. The **k2FabricStudio.exe.config** marks a specific DB type as **Legacy** whereby all new interfaces of this type are created using ADO.NET/ODBC drivers.  
 

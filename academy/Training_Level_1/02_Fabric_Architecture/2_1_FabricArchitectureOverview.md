@@ -8,20 +8,17 @@ By the end of the Fabric Architecture learning item you will know:
 
 - Why Fabric architecture is especially fit for the task at hand 
 - How Fabric stores and manages inbound and outbound data flows
-- How Fabric transforms data and provides a wide range of built-in functions to do so.
-- 3rd Party tools & External dependencies
+- How Fabric transforms data by providing a wide range of built-in functions
 - How Fabric handles security and provides resiliency
+- 3rd Party tools and external dependencies
 
 
 
-So, let’s start understanding what Fabric is all about by reading the Fabric Architecture document
+
+Let’s get started by reading the [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md) document.
+
+You are ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
+
+You are now a Fabric rookie. Let's move on to the next section and build your first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md) !
 
 
-
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Next.png)](https://github.com/k2view-academy/K2View-Academy/wiki/FabricArchitectureOverview)
-
- 
-
-
-
-​                                

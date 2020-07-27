@@ -30,6 +30,6 @@ for (Db.Row row:rows){
 }
 </code></pre>
 
-Open **fnCreateInstId.java** to view an example of a Fabric Root function which receives an Input parameter, performs business logic and returns an Output parameter.
+[Click to display an example of **fnCreateInstId** LUDB Function in the Demo project.](/articles/demo_project)
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/08_project_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/10_creating_a_project_function.md)

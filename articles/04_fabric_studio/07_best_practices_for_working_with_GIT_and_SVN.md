@@ -1,15 +1,15 @@
 # Best Practices for Working with GIT and SVN
 
-### How do I Start Using Version Control?
+### How Do I Start Using Version Control?
  
 To start working with Version Control, do either:
 
 * Add a new project to **Version Control** and then check the **Add Project to Version Control** checkbox. 
-* Check out an existing project. 
+   * Check out an existing project. 
 Make sure you have all the requirements, for example:
-* Type of configuration control for the project: GIT or SVN. 
-* Installation of the configuration control client: TortoiseGit or TortoiseSVN.
-* Project repository URL. 
+   * Type of configuration control for the project: GIT or SVN. 
+   * Installation of the configuration control client: TortoiseGit or TortoiseSVN.
+   * Project repository URL. 
 
 Note that to check out a project, you must know the path of the checkout directory.
 

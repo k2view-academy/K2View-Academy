@@ -1,7 +1,6 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
-<details>
-<summary markdown="span"><strong>Table Population<strong></summary>
+<strong>Table Population<strong>
 <ul>
   
 <li><a href="/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
@@ -20,4 +19,4 @@
 <li><a href="/articles/07_table_population/12_table_population_diagram_outline.md">Table Population Diagram Outline</a></li>
 <li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
 </ul>
-</details>
+

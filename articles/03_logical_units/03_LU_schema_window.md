@@ -1,22 +1,22 @@
 # LU Schema Window
 
 ### Logical Unit (LU) - Related Objects
-A [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md) has a tree-like structure known as the Project Tree which displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window where its Logical Units (LU) are located under the Logical Units branch.
+A [Fabric project](/articles/04_fabric_studio/08_fabric_project_tree.md) has a tree-like structure known as the Project Tree which displays entities in a hierarchical order. The Project Tree is displayed on the left side of the K2View Fabric Studio window and its Logical Units (LU) are located under the Logical Units branch.
 
 The following objects are located under each [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) in the Project Tree:
-* [Schema](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema)
-* Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md)
-* Resources, files that can be saved as part of a project. For example, an Excel file
-* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md)
-* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md)
-* Parsers
-* Instance Groups: lists of instances to be migrated into Fabric for the LU 
-* Broadway
-* Jobs
-* IIDFinder 
+* [Schema](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema).
+* Java - [Globals](/articles/08_globals/01_globals_overview.md) and [Functions](/articles/07_table_population/08_project_functions.md).
+* Resources, files that can be saved as part of a project. For example, an Excel file.
+* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md).
+* [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
+* Parsers.
+* Instance Groups: lists of instances to be migrated into Fabric for the LU. 
+* Broadway.
+* Jobs.
+* IIDFinder. 
 
 ### Opening the Logical Unit (LU) Window
-Go to the **Project Tree**, click the **LU Name** and then click the **Schema** to open the **Logical Unit** window.
+Go to the **Project Tree**, click the **LU Name** and then click the **schema** to open the **Logical Unit** window.
 
 ### Logical Unit (LU) Window
 ![image](/articles/03_logical_units/images/1.3_LU_Schema_WIndow.PNG)
@@ -28,8 +28,8 @@ The Logical Unit window has three main sections:
 * [Logical Unit toolbar.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar) 
 
 ### Logical Unit (LU) Schema
-The Logical Unit Schema is a work area where you can define the logical unit’s structure. 
-* A Logical Unit Schema displays a hierarchical representation of all business entities related to a Root Table. 
+The Logical Unit schema is a work area where you can define the Logical Unit’s structure. 
+* A Logical Unit schema displays a hierarchical representation of all business entities related to a Root Table. 
 * Each table can have one or several populations where each population is linked to its parent table.
 
 
@@ -42,14 +42,14 @@ The Logical Unit Schema is a work area where you can define the logical unit’s
 ![image](/articles/03_logical_units/images/1.4_LU_schema_example.png)
 
 The Logical Unit Schema window shows the Root Table and hierarchy of the tables included in the Logical Unit and the relationships between them:
-* The Root Table of the LU Schema is Customer. 
+* The Root Table of the LU schema is Customer. 
 * Each table is displayed with all of its fields in a scrollable table.
 * Each field is displayed in a separate line, by name with a small colored icon. The icon’s color indicates the data type of the field:
 
-    * Grey: Blob
-    * Red: Text
-    * Green: Real
-    * Blue: Integer
+    * Grey: Blob.
+    * Red: Text.
+    * Green: Real.
+    * Blue: Integer.
 
 To make the structure of the table schema clearer, group or ungroup a list of tables. For example, group all Billing Tables in the Customer LU.
 
@@ -80,7 +80,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><b>Enrichment Order Tab<b></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of enrichment functions  using the up and down arrows. Only enrichment functions that are directly related to specific LU tables are included in the display. </p>
+<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Eenrichment functions that are directly related to specific LU tables are included in the display. </p>
 
 </td>
 </tr>
@@ -89,9 +89,9 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><b>DB Objects Tab<b></p>
 </td>
 <td style="width: 414px;">
-<p>&middot;&nbsp;&nbsp;&nbsp; Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; DB objects can be refreshed by clicking the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
+<p>Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
+<p>DB objects can be refreshed by clicking the Refresh icon adjacent to the <a href="/articles/05_DB_interfaces/04_creating_a_new_database_interface.md">DB Connection</a> dropdown list.</p>
+<p>Dragging an object to a diagram creates a new table in the schema. &nbsp;</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 4; mso-prop-change: 'Einav Velan' 20200412T1629;">
@@ -99,7 +99,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 <p><strong>Objects Tab</strong></p>
 </td>
 <td style="width: 414px;">
-<p>Displays the list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md"><b> LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area to add it to the LU Schema.</p>
+<p>Displays the list of all <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU tables </a> defined for the LU. Drag the table into the Logical Unit diagram area to add it to the LU schema.</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
@@ -140,7 +140,7 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 <td width="60">&nbsp;<img src="/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
 <p>Update Tables from Database.</p>
-<p>When clicked, the LU Tables Schema is refreshed from the source database. This action is needed if the LU Tables Schema has been updated in the source database.</p>
+<p>When clicked, the LU tables schema is refreshed from the source database. This action is needed if the LU tables schema has been updated in the source database.</p>
 <p>Note: only current tables are updated. Tables are added or deleted from an LU manually.</p>
 </td>
 </tr>

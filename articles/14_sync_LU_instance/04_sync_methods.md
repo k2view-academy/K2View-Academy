@@ -1,8 +1,8 @@
 # Sync Methods
 
 ## Sync Properties
-Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md), [LU Table](/articles/06_LU_tables/01_LU_tables_overview.md), or T[able Population](/articles/07_table_population/01_table_population_overview.md) level.
-
+ Sync properties can be defined on an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), or [Table Population](/articles/07_table_population/01_table_population_overview.md) level.
+T
 **A Sync property contains the following settings:**
 <table>
 <tbody>
@@ -11,7 +11,7 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 <p><strong>Timeout (sec)<strong></p>
 </td>
 <td width="700pxl">
-<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI </a>.</p>
+<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI. </a></p>
 </td>
 </tr>
 <tr>
@@ -19,7 +19,7 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 <p><strong>Sync Method<strong></p>
 </td>
 <td width="500">
-<p>None, Time Interval, Inherited and Decision Function.</p>
+<p>None, Time Interval, Inherited and Decision function.</p>
 </td>
 </tr>
 <tr>
@@ -27,7 +27,7 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 <p><strong>Parameters<strong></p>
 </td>
 <td width="500">
-<p>Settings of the selected Sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below &nbsp;</a>.</p>
+<p>Settings of the selected sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below. &nbsp;</a></p>
 </td>
 </tr>
 <tr>
@@ -127,7 +127,7 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 <p><strong>Description</strong></p>
 </td>
 <td width="500">
-<p>Synchronization is implemented according to the decision function which returns a Boolean (True / False) parameter. If the decision function returns False, do not sync the object.</p>
+<p>Synchronization is implemented according to the Decision function which returns a Boolean (True / False) parameter. If the Decision function returns False, do not sync the object.</p>
 </td>
 </tr>
 <tr>
@@ -135,7 +135,7 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 <p><strong>Parameters</strong></p>
 </td>
 <td width="500">
-<p>Decision function: select the decision function from the Predefined Decision Functions dropdown list.</p>
+<p>Decision function: select the Decision function from the Predefined Decision Functions dropdown list.</p>
 </td>
 </tr>
 </tbody>
@@ -158,8 +158,8 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 </td>
 <td width="500">
 <p>Synchronization of each level inherits the sync rule of its direct parent branch according to the following hierarchy:</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; LU Table inherits from the LU Schema.</p>
-<p>&middot;&nbsp;&nbsp;&nbsp; Table Population inherits from the LU Table.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; LU table inherits from the LU schema.</p>
+<p>&middot;&nbsp;&nbsp;&nbsp; Table Population inherits from the LU table.</p>
 </td>
 </tr>
 <tr>
@@ -176,7 +176,7 @@ Sync properties can be defined on an [LU Schema](/articles/03_logical_units/03_L
 [Click for more information about LU Sync Levels](/articles/14_sync_LU_instance/07_sync_levels.md)
  
 ## Truncate Before Sync 
-The **Truncate Before Sync** property can be set on an LU Table or a Table Population. When Truncate Before Sync = True, whether on the LU Table or on one of its populations, the entire LU Table is truncated before the related populations are executed for this LU Table. Therefore, there is a logical dependence between this setting and the Sync mode.
+The **Truncate Before Sync** property can be set on an LU table or a Table Population. When Truncate Before Sync = True, whether on the LU table or on one of its populations, the entire LU table is truncated before the related populations are executed for this LU table. Therefore, there is a logical dependence between this setting and the sync mode.
 
 ## Sync Methods - Use Cases
 <table style="width: 850pxl">
@@ -239,7 +239,7 @@ The **Truncate Before Sync** property can be set on an LU Table or a Table Popul
 </td>
 <td width="294">
 <p>Get initial Customer data loaded from the Billing system.</p>
-<p>Additional payment transactions may then be sent by the Payment Gateway system to update the Payment LUI Table for the customer. There is no need to re-load the entire Customer object from the Billing system.</p>
+<p>Additional payment transactions may then be sent by the Payment Gateway system to update the Payment LUI table for the customer. There is no need to re-load the entire Customer object from the Billing system.</p>
 </td>
 </tr>
 <tr>

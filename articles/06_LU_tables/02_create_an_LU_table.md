@@ -1,16 +1,16 @@
 # Create an LU Table
 
 ### How Do I Create a New LU Table?
-LU tables are the basic building blocks for creating Logical Units. There are several ways to create a new LU table.
+LU tables are the basic building blocks for creating [Logical Units](/articles/03_logical_units/01_LU_overview.md#logical-unit-lu-overview). There are several ways to create a new LU table.
 
-From the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md):
+From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
 *	Right click the work area and select either the **New Table From SQL Based DB Query** or **New Table From SQL Based Root Function** option.
 *	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 
 From the Project Tree: 
-*	Via the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU Schema. If a table exists, you can select to either override the existing implementation or not.
-*	Creating a new table [**manually**](/articles/06_LU_tables/02_create_an_LU_table.md#how-do-i-create-a-new-lu-table-manually). In this option the table population should be created separately. Once the population is created, add the table to the LU Schema. Note that if the table is used as the Master of Data, there is no need to create a Table Population.
+*	Via the [**Auto Discovery Wizard**](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit the LU. The tables and their populations are automatically created and added to the LU schema. If a table exists, you can select to either override the existing implementation or not.
+*	Creating a new table **manually**. In this option the table population should be created separately. Once the population is created, add the table to the LU schema. Note that if the table is used as the Master of Data, there is no need to create a Table Population.
 *	Copying an existing LU table from one LU to another. In this option if there is a Table Population it is also copied. 
 *	Creating a set of tables based on an **XSD file**.
 *	Using the **Save As** option. Note that this option does not copy the Table Population.
@@ -26,7 +26,7 @@ From the Project Tree:
 3.	Define the [**Table Properties**](/articles/06_LU_tables/04_table_properties.md). 
 4.	**Save** the table.
 
-### How do I Edit an LU Table? 
+### How Do I Edit an LU Table? 
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Columns tab** in the **Table Schema** window.
 2.	Optional: Edit the table’s **Columns**, **Indexes**, **Search Indexes** or **Table Properties**.
 3.	**Save** the table.

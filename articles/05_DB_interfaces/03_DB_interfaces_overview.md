@@ -128,7 +128,7 @@ Accurate definition of connection settings is especially important when building
 <p><strong><h4>Schema Filter</strong></p>
 </td>
 <td width="433">
-<p>Name of the Database Schema to access. Required if more than one Schema exists. The Schema Filter setting of the DB Interface filters the list of Schemas to be used by the Query Builder and DB Queries.</p>
+<p>Name of the Database Schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
 </td>
 </tr>
 </tbody>
