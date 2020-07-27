@@ -55,9 +55,11 @@ An Actor Type is a template of an Actor object. When an Actor is added to a Broa
 1.  Click the **Stage** working area to display the **Add Actor**
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
 
-  The **Add Actor** window has the following columns: 
-    -  Left column, displaying the Actor categories.
-    -  Right column, displaying a list of the Actor Types in each category.
+  The **Add Actor** window has the following columns:
+  
+   -  Left column, displaying the Actor categories.
+    
+   -  Right column, displaying a list of the Actor Types in each category.
  
    When searching for Actors, filter the search according to Actor categories or types.
 
