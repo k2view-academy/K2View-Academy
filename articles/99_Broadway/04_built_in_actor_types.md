@@ -191,3 +191,5 @@ The below tables presents a list of Actor's categories with examples per each ca
 </tr>
 </tbody>
 </table>
+
+[![Previous](/articles/images/Previous.png)](articles/99_Broadway/03_broadway_actor_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/05_actor_input_output.md)
