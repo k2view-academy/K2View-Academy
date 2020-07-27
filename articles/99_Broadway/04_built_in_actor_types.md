@@ -8,6 +8,8 @@ To add a built-in Actor to the flow, click anywhere in the **Stage** area to ope
 
 ### Actor's Categories and Examples
 
+The below tables presents a list of Actor's categories with examples per each category. This is not an exhaustive list of Actors.
+
 <table width="900pxl">
 <tbody>
 <tr>
