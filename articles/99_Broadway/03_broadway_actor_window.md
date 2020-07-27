@@ -1,14 +1,15 @@
-# Broaway Actor Window
+# Broaway Actor's Properties Window
 
-The Actor Window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
+The **Actor's Properties** window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
 
 <table>
 <tbody>
 <tr>
-<td width="300pxl" valign="top">
+<td rowspan="4" valign="top" width="400pxl">&nbsp;</td>
+<td valign="top" width="100pxl">
 <p><strong>Object Name</strong></p>
 </td>
-<td width="600pxl" valign="top">
+<td valign="top" width="400pxl">
 <p>Populated by the object name for each Actor, added to the flow. By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
 <p>The Actor Name is displayed in the following format:</p>
 <ul>
@@ -17,10 +18,10 @@ The Actor Window is displayed when adding a new Actor to the flow, or when click
 </td>
 </tr>
 <tr>
-<td width="300pxl" valign="top">
+<td valign="top" width="300pxl">
 <p><strong>Parameters Filter</strong></p>
 </td>
-<td width="600pxl" valign="top">
+<td valign="top" width="600pxl">
 <p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
 <ul>
 <li>All Fields- default option- display the list of all fields of the Actor type and its ancestor Actors.</li>
