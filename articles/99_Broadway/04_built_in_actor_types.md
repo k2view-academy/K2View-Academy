@@ -2,12 +2,6 @@
 
 Broadway has a large list of built-in [Actors](/articles/99_Broadway/03_broadway_actor.md#actor-overview) that can be added to a flow in order to create various types of activities. Broadway's built-in Actors are split into categories, where each category includes several Actor types.
 
-To add a built-in Actor to the flow, click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window. The window displays the list of existing categories on the left side, and the existing built-in Actors per each categories on the right side.
-
-![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
-
-### Actor's Categories and Examples
-
 The below tables presents a list of Actor's categories with examples per each category. This is not an exhaustive list of Actors.
 
 <table width="900pxl">
