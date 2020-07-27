@@ -12,7 +12,7 @@ The Main menu of the Broadway flow is at the top of the window and has the follo
 
 1. Click **Actions** > **Debug/Run Arguments** to set an external input argument value with an **External** [population type](/articles/99_Broadway/03_broadway_actor.md#input-parameter-attributes). A window opens displaying a list of external input arguments.
 
-2. Set the **Type** of th **external** input arguments.
+2. Set the **Type** of the **external** input arguments.
 
    ![](/articles/99_Broadway/images/flow_set_run_or_debug_param_set_type1.png)
 
@@ -31,7 +31,7 @@ The Main menu of the Broadway flow is at the top of the window and has the follo
 
 ### Resetting Run/Debug Arguments
 
-Click **Actions** > **Debug/Run Arguments** and then the X adjacent to the argument to redefine its **type** and **value**.
+Click **Actions** > **Debug/Run Arguments** and then click X adjacent to the argument to redefine its **type** and **value**.
 
 ## Running and Stopping a Broadway Flow
 
@@ -61,11 +61,11 @@ When debugging an Actor with a complex output parameter, the parameter port is r
 
   ![](/articles/99_Broadway/images/debug_update_schema.png)
 
-1. Click the **parameter's port** (marked by red) to open the Compare Schema window.
+1. Click the **parameter's port** (red) to open the Compare Schema window.
 
   ![](/articles/99_Broadway/images/compare_schema.png)
 
-2. Click **Update** to update the output parameter's schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the schema on the left side and the data values on the right.
+2. Click **Update** to update the output parameter's schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the schema on the left and the data values on the right.
 
 3. [Link](/articles/99_Broadway/20_broadway_flow_linking_actors.md) the output parameters of the schema to another actor.
 
