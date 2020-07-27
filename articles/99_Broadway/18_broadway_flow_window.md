@@ -70,7 +70,7 @@ The Main menu is at the top of the window and has the following options:
 
 ### Stage Context Menu
 
-To open the Stage context menu, click the ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage. 
+To open the Stage context menu, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage. 
 
 <table style="width: 900px;">
 <tbody>
@@ -129,7 +129,7 @@ To open the Stage context menu, click the ![image](/articles/99_Broadway/images/
 
 ### Actor's Context Menu
 
-To open the Actor's context menu, click the ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage.
+To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage.
 
 <table style="width: 900px;">
 <tbody>
