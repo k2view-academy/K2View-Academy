@@ -8,11 +8,11 @@ The Main menu of the Broadway flow is at the top of the window and has the follo
 ![](/articles/99_Broadway/images/flow_tool_bar_run_and_debug.png)
 
 
-## Set Run or Debug Arguments
+## Setting Run and Debug Arguments
 
-1. Click **Actions** > **Debug/Run Arguments** to set external input argument values whose [population type](/articles/99_Broadway/03_broadway_actor.md#input-parameter-attributes) is **External**. A window opens displaying a list of external input arguments.
+1. Click **Actions** > **Debug/Run Arguments** to set an external input argument value with an **External** [population type](/articles/99_Broadway/03_broadway_actor.md#input-parameter-attributes). A window opens displaying a list of external input arguments.
 
-2. Set the **Type** of **external** input arguments.
+2. Set the **Type** of th **external** input arguments.
 
    ![](/articles/99_Broadway/images/flow_set_run_or_debug_param_set_type1.png)
 
@@ -29,18 +29,18 @@ The Main menu of the Broadway flow is at the top of the window and has the follo
 
 5. Click **OK**.
 
-### Reset Run Debug Arguments
+### Resetting Run/Debug Arguments
 
-Click **Actions** > **Debug/Run Arguments** and click the X adjacent to the argument to redefine its **type** and **value**.
+Click **Actions** > **Debug/Run Arguments** and then the X adjacent to the argument to redefine its **type** and **value**.
 
 ## Running and Stopping a Broadway Flow
 
-Click **Play** or **Stop** to run or stop the Broadway Flow.
+Click **Play** or **Stop** to run or stop the Broadway flow.
 
 ## Debugging a Broadway Flow
 
-- Click ![](/articles/99_Broadway/images/debug_play_icon.png) to run the entire process in debug mode. The Debug process runs the Broadway flow and stops in the Stages with Breakpoints. 
-To add a Breakpoint to a Stage, click **...** on the Stage > Breakpoint.
+- Click ![](/articles/99_Broadway/images/debug_play_icon.png) to run the entire process in Debug mode. The Debug process runs the Broadway flow and stops during Stages with breakpoints. 
+To add a breakpoint to a Stage, click **...** on the Stage > Breakpoint.
 
 - Click ![](/articles/99_Broadway/images/debug_step_icon.png) to debug the current step and move to the next step.  
 
@@ -55,19 +55,19 @@ To view a step's data, click the input or output parameter to open the data and 
 
 ### Updating a Schema
 
-The Broadway Debug process learns the schema of complex output parameters and can suggest how to update the schema based on the parameter's value:
+The Broadway Debug process *learns* the schema of complex output parameters and can suggest how to update a schema based on a parameter's value.
 
-- When debugging an Actor with a complex output parameter, the parameter port is in red:
+When debugging an Actor with a complex output parameter, the parameter port is red:
 
   ![](/articles/99_Broadway/images/debug_update_schema.png)
 
-- Click the port of the parameter (marked by red) to open the Compare Schema window.
+1. Click the **parameter's port** (marked by red) to open the Compare Schema window.
 
   ![](/articles/99_Broadway/images/compare_schema.png)
 
-- Click **Update** to update the output parameter's schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the schema on the left side and the data values on the right.
+2. Click **Update** to update the output parameter's schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the schema on the left side and the data values on the right.
 
-- You can now [link](/articles/99_Broadway/20_broadway_flow_linking_actors.md) the output parameters of the schema to another actor:
+3. [Link](/articles/99_Broadway/20_broadway_flow_linking_actors.md) the output parameters of the schema to another actor.
 
   ![](/articles/99_Broadway/images/data_insepction_debug.png)
 
