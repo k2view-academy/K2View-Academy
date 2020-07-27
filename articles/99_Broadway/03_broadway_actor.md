@@ -22,7 +22,7 @@ Other options for working with Actors include:
 **New article**
 
 #### How Do I Save an Actor?
-An Actor can be saved and be added as an inner flow of another flow, for example for handling errors. 
+Actors can be saved and be added as an inner flow of another flow, for example for handling errors. 
 Actors can also be reused in other flows, for example to avoid complex flows with multiple steps. 
 
 To save an Actor, click **Actions** in the toolbar and select **Save as Actor**. The new Actor can be added to any flow.
@@ -195,7 +195,7 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>Parameter description (read only)</p>
-<p>Click <strong>&hellip;</strong> adjacent to the <strong>parameter name</strong> and select <strong>Description/<strong> to open the Description window.</p>
+<p>Click <strong>&hellip;</strong> adjacent to the <strong>parameter name</strong> and select <strong>Description</strong> to open the Description window.</p>
 </td>
 </tr>
 <tr>
@@ -216,7 +216,7 @@ A parameter's value can be set if the **population type** is set to **Const**.
 
  For Example: 
 
-   **Const** Actor. The input parameter name is **value**, the type is **String**, the value is "Hello Broadway":
+   **Const** Actor. The input parameter name is **value**, the type is **String**, the value is **Hello Broadway**:
 
   ![Const1](/articles/99_Broadway/images/const_actor_example.png)
 
@@ -232,9 +232,9 @@ Notes:
 
 - To set a default value for an input parameter, click **…** adjacent to the **parameter name** and select **Default value**. 
 
-- Values that match the **parameter type** can be populated, for example: to only insert  numbers for Integer parameters. 
+- Values that match the **parameter type** can be populated, for example to only insert  numbers for Integer parameters. 
 
-- When populating an input value for an **SQL** parameter, click **QB** icon to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query. For example, **DbCommand** built-in Actor:
+- When populating an input value for an **SQL** parameter, click **QB** icon to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query. For example the **DbCommand** built-in Actor:
 
   ![Sql_input](/articles/99_Broadway/images/sql_input_value.png)
   
