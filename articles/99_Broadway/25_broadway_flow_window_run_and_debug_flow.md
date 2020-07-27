@@ -1,6 +1,7 @@
 # Broadway Flow Window- Run and Debug Flow
 
 Broadway flow window enables running and debugging the flow.
+Note that running the flow of running a debug on the flow save the flow. When you open and run or debug a [flow example](/articles/99_Broadway/17_tutorial_and_flow_examples.md), the execution of the flow saves a local copy of the flow in the Fabric project.
 
 The Main menu of the Broadway flow is located on top of the window and allows to perform the following activities:
 
