@@ -1,4 +1,4 @@
-## Actor Window
+# Broaway Actor Window
 
 The Actor Window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
 
@@ -87,7 +87,7 @@ The parameter's definition includes the following attributes:
 <p><img src="/articles/99_Broadway/images/const_input_parameter_type.png" alt="Const_input_type" /></p>
 <p>You can edit the parameter type for each parameter regardless of its population type:</p>
 <ul>
-<li>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</li>
+<li>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</li>
 </ul>
 </td>
 </tr>
@@ -102,7 +102,7 @@ The parameter's definition includes the following attributes:
 <li><strong>Const</strong>- constant. You need to set the value of the parameter.</li>
 <li><strong>External</strong>- get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting- <strong>External Name</strong>.</li>
 </ul>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name to view or edit the population type.</p>
+<p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name to view or edit the population type.</p>
 </td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>Parameter description. The parameter description is displayed in a read-only mode.</p>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Description to open the Description window.</p>
+<p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Description to open the Description window.</p>
 </td>
 </tr>
 <tr>
@@ -120,7 +120,7 @@ The parameter's definition includes the following attributes:
 </td>
 <td valign="top" width="600pxl">
 <p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
-<p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Remark to open the Description window.</p>
+<p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Remark to open the Description window.</p>
 </td>
 </tr>
 </tbody>
@@ -148,7 +148,7 @@ Setting the parameter's value is needed in the following scenarios:
 
 Notes:
 
-- Click the … icon next to the parameter name > Default value to set a default value for an input parameter.
+- Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) next to the parameter name and select **Default value** to set a default value for an input parameter.
 
 - Broadway enables populating a value that matches the parameters type. For example: Broadway only enables to insert  numbers for Integer parameters. 
 
@@ -176,7 +176,7 @@ Notes:
   </td>
   <td valign="top" width="600pxl">
   <p>String, Integer, Real&hellip;</p>
-  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
+  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
   </td>
   </tr>
   <tr>
@@ -184,7 +184,7 @@ Notes:
   <p><strong>Output Type</strong></p>
   </td>
   <td valign="top" width="600pxl">
-  <p>Click the &hellip; icon next to the parameter name &gt; Set External to expose the output to the external process that executes the Broadway flow.</p>
+  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Set External to expose the output to the external process that executes the Broadway flow.</p>
   </td>
   </tr>
   <tr>
@@ -193,7 +193,7 @@ Notes:
   </td>
   <td valign="top" width="600pxl">
   <p>Parameter description. The parameter description is displayed in a read-only mode.</p>
-  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Description to open the Description window.</p>
+  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Description to open the Description window.</p>
   </td>
   </tr>
   <tr>
@@ -202,7 +202,7 @@ Notes:
   </td>
   <td valign="top" width="600pxl">
   <p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
-  <p>Click the <strong>&hellip;</strong> icon next to the parameter name &gt; Remark to open the Description window.</p>
+  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Remark to open the Description window.</p>
   </td>
   </tr>
   </tbody>
@@ -210,4 +210,4 @@ Notes:
   
   
 
-[![Previous](/articles/images/Previous.png)](articles/99_Broadway/02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
+[![Previous](/articles/images/Previous.png)](articles/99_Broadway/03_broadway_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
