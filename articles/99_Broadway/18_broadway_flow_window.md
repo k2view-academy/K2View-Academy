@@ -78,25 +78,26 @@ To open the Stage context menu, click ![image](/articles/99_Broadway/images/99_1
 <tbody>
 <tr>
 <td rowspan="12" width="400pxl">
-<p><img src="/articles/99_Broadway/images/99_18_02_stage_menu.png" alt="Stage context menu" /></td>
-<td width="80pxl">Paste Selection</td>
-<td width="420pxl">Paste the copied selection, for example an Actor from another Stage.</td>
+<p><img src="/articles/99_Broadway/images/99_18_02_stage_menu_up.png" alt="Stage context menu" /></p>
+</td>
+<td width="80pxl"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a></td>
+<td width="420pxl">Add a new Stage after the selected one.</td>
 </tr>
 <tr>
-<td width="200">Collapse</td>
-<td style="width: 465px;">Collapse the Stage.</td>
-</tr>
-<tr>
-<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Insert After / Insert Before</a></td>
-<td style="width: 465px;">Add a new Stage after or before the selected one.</td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
+<td style="width: 465px;">Add a new Stage before the selected one.</td>
 </tr>
 <tr>
 <td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
 <td style="width: 465px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
 <tr>
-<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split / Merge</a></td>
-<td style="width: 465px;">Split or Merge the selected Stage.</td>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split</a></td>
+<td style="width: 465px;">Split the selected Stage.</td>
+</tr>
+<tr>
+<td width="200"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Merge</a></td>
+<td style="width: 465px;">Merge the selected Stage.</td>
 </tr>
 <tr>
 <td width="200">[Iterate Close]</td>
@@ -124,10 +125,11 @@ To open the Stage context menu, click ![image](/articles/99_Broadway/images/99_1
 </tr>
 <tr>
 <td width="200">Remark</td>
-<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, a <img src="/articles/99_Broadway/images/99_17_green_ast.PNG" alt="green asterisk"/> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
+<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, a <img src="/articles/99_Broadway/images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
 </tbody>
 </table>
+
 
 ### Actor Context Menu
 
