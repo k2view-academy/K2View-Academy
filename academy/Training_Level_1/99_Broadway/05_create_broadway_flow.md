@@ -1,6 +1,7 @@
 # Broadway Flow 
 
-You are now familiar with Broadway concept the the main components. In addition, you viewed and executed the Broadway Tutorial flow. Now you are ready to create your first Broadway flow. Broadway has various of examples for Broadway flows. 
+Now you are now familiar with Broadway and its main components and have checked out and executed the Broadway Tutorial flow, you are ready to create your first Broadway flow. 
+
 
 ### What Will You Experience In This Learning Item?
 
@@ -9,28 +10,30 @@ By the end of the Broadway Flows learning item you will know:
 - How to create your first Broadway flow.
 - View, run, and debug Broadway the newly created Broadway flow.
 
-A **Broadway Flow** represents a business process Binding other objects into the same flow, a Broadway flow acts as a graph or a tree and is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md):
 
-- Stages are executed consecutively from left to right.
-- Actors in each Stage of the flow are executed top-down.
+A **Broadway Flow**:
+-  Represents a business process that binds other objects into the same flow. 
+-  Acts as a graph or a tree and is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). 
+  -    Stages are executed consecutively from left to right.
+  -    Actors in each Stage of the flow are executed top-down.
 
-To learn more about our Broadway flow, refer to [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md) .
+To learn more about a Broadway flow, refer to [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md) .
 
 ### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
-Now, let's start creating a new Broadway flow which selects a data from a DB table and creates a Json file, based on the selected DB records:
+Let's create a new Broadway flow which selects a data from a DB table and creates a JSON file based on the selected DB records:
 
-#### Step 1- Creating a New Broadway Flow
+#### Step 1 - Create a New Broadway Flow
 
 1. Download and open the [demo project](/articles/demo_project) in the Fabric Studio. 
 
 2. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name pop-up window.
 
-3. Populate the flow name and press **Ok**. The empty flow will open.
+3. Populate the flow name and click **OK** to open the empty flow.
 
-#### Step 2- Populating the 1st Stage of the Flow
+#### Step 2 - Populate the 1st Stage of the Flow
 
-1. Get the list of customers,  that purchased more that one new subscription (contract) during the last 42 months. The data needs to be selected from **CONTRACT** table of **CRM_DB** interface based on the following SQL query:
+1. Get the list of customers that purchased one or more new subscriptions (contract) over the last 42 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
 
      ```
      Select count(*) As no_of_contracts,
@@ -44,7 +47,7 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
  2. Add a **DbCommand** Actor to run the select statement above to the 1st stage: 
 
-       -  Read about [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how you can add the **DbCommand **Actor to the 1st Stage.
+       -  Read about [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to the 1st Stage.
 
        - Edit the **DbCommand** Actor in the 1st Stage-
 
@@ -54,14 +57,14 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
            ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
-#### Step 3- Reading the Customer's List and Creating a File
-1. The next Stages need to run a loop on the list of selected customers. For each selected record: 
+#### Step 3 - Read the Customer's List and Create a File
+1. The next Stages must run a loop on the list of selected customers. For each selected record: 
 
-   - Build a Json object.
+   - Build a JSON object.
 
-   - Write the Json object to an output file.
+   - Write the JSON object to an output file.
 
-2. Click the ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) icon in the right side of the flow window to create the 2nd Stage. The 2nd Stage will build a Json object for each select customer's record.
+2. Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create the 2nd Stage. The 2nd Stage builds a JSON object for each selected customer's record.
 
 3. Add a **JsonStringify** Actor to the 2nd Stage and link the **[result]** output parameter of the **DbCommand** Actor  to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records, returned by the **DbCommand** by a loop:
 
@@ -69,7 +72,7 @@ Now, let's start creating a new Broadway flow which selects a data from a DB tab
 
    Read about [linking Actors in a Broadway Flow](/articles/99_Broadway/20_broadway_flow_linking_actors.md) to learn how link Actors in a Broadway flow.
 
-4. Add the 3rd Stage to the flow. Both - the 2nd and the 3rd Stages- are now marked by grey, since they are included in the loop, that was opened by link of the 1st Stage to the 2nd Stage. 
+4. Add the 3rd Stage to the flow. Both - the 2nd and the 3rd Stages- are marked in grey since they are included in the loop that was opened by linking the 1st Stage to the 2nd Stage. 
 
    Read about [Broadway Loops] to learn more about handling loops by Broadway Flows. 
 
