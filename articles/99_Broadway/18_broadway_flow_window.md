@@ -145,7 +145,7 @@ To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99
 <td width="420pxl">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
 <tr>
-<td width="200">Add Actor</td>
+<td width="200"><a href="/articles/99_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage">Add Actor</a></td>
 <td style="width: 465px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
 </tr>
 <tr>
@@ -161,11 +161,11 @@ To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99
 <td style="width: 465px;">Collapse or expand the Actor and display its title.</td>
 </tr>
 <tr>
-<td width="200">Description</td>
+<td width="200"><a href="/articles/99_Broadway/03_broadway_actor.md#actor-description-and-remark"> Description</a></td>
 <td style="width: 465px;">Product Actor's description.</td>
 </tr>
 <tr>
-<td width="200">Remark</td>
+<td width="200"><a href="/articles/99_Broadway/03_broadway_actor.md#actor-description-and-remark"> Remark</a></td>
 <td style="width: 465px;">Additional info added to the Actor instance.</td>
 </tr>
 <tr>
