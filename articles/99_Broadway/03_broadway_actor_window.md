@@ -50,7 +50,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <p><strong>OUTPUTS</strong></p>
 <p>Displays the Output parameters in the following format:</p>
 <ul>
-<li>&lt;Parameter Name&gt;:&lt;Parameter Type&gt;</li>
+<li>[Parameter Name] : [Parameter Type]</li>
 </ul>
 <p>You can perform changes on the output parameters - by pressing <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " />.</p>
 </td>
@@ -70,10 +70,12 @@ The Actors input parameters are displayed in the Actor's Properties window in th
 For example: 
 - interface : string
 
+[Click for more information about Broadway data types](/articles/99_Broadway/05_data_types.md#data-types-in-broadway).
+
 The population of the input parameter depends on the **Population Type**. The following types are supported:
-- Link - get the input value as an input parameter from another Actor. When **Link** is selected, need to connect the parameter with another Actor's output parameter.
-- Const - set the value of the parameter. When **Const** is selected, a text area will appear below the parameter to allow populating the parameter value.
-- External - get the input value as a parameter from the external process which executes the Broadway flow. When External is selected, additional field **External Name** will appear below the parameter.
+- **Link** - get the input value as an input parameter from another Actor. When **Link** is selected, need to connect the parameter with another Actor's output parameter.
+- **Const** - set the value of the parameter. When **Const** is selected, a text area will appear below the parameter to allow populating the parameter value.
+- **External** - get the input value as a parameter from the external process which executes the Broadway flow. When External is selected, additional field **External Name** will appear below the parameter.
 
 <table>
 <tbody>
@@ -95,7 +97,7 @@ The actions on the input parameters are:
 
 Note that when populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
 
-    ![Sql_input](/articles/99_Broadway/images/99_03_sql.PNG)
+![image](/articles/99_Broadway/images/99_03_sql.PNG)
 
 ### Add Input Button
 
