@@ -1,39 +1,39 @@
-# ![](/academy/images/Exercise.png) Exercise – Add a Condition to a Broadway Flow 
+# ![](/academy/images/Exercise.png) Exercise – Adding a Condition to a Broadway Flow 
 
-You've just created and tested your first Broadway flow which selects a data from a DB table and creates a Json file, based on the selected DB records. You practiced adding Stages and Actors to a Broadway Flow and adding a loop into the flow. 
+You've just created and tested your first Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records. You've also practiced adding Stages and Actors to a Broadway flow and then adding a loop into the flow. 
 
-Now, let's practice an additional capability of the Broadway flow: adding conditions to the flow. A Broadway flow can be 'split' into different execution paths based on conditions. More than one stage can be executed in each fork in the path.
+Now, let's practice an additional Broadway flow feature - adding conditions to a flow. A Broadway flow can be split into different execution paths based on conditions so that more than one Stage can be executed in each fork in the path.
 
-You need to add the following condition to your flow:
+Add the following condition to your flow:
 
 - Check if the number of selected customers >= 3:  
 
   - If this condition is fulfilled, then add a message to the log file.
 
-  - Else- add an error message to the log file.
+  - Else, add an error message to the log file.
 
     
 
-Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about split or merge of Stages in a flow and about adding conditions to the Stage. 
+Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting and merge the Stages in a flow and about adding conditions to a Stage. 
 
-#### Step 1- Open the Broadway Flow
+#### Step 1 - Opening the Broadway Flow
 
-1. Go to **Project Tree** > **Shared Objects**> **Broadway** and click the flow, created by you in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
+1. Go to **Project Tree** > **Shared Objects**> **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
 
 
-#### Step 2- Adding the Counting of the Selected Customers
+#### Step 2 - Adding Counting of Selected Customers
 
-1. Add the **Count** Actor to **Stage2**. This Actor returns how many times it was called, so if you add it inside the loop on the selected customers, it counts the number of the selected customers.
+1. Add the **Count** Actor to **Stage2**. This Actor returns the number of times an Actor is called. If you add this Actor in the loop on selected customers, it counts the number of the selected customers.
 
-#### Step 3- Add a Condition to the Flow
+#### Step 3- Adding a Condition to the Flow
 
-1. Add a new Stage to the flow, click on the ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) icon and select **Stage Condition**. A new popup window is added to add an Actor to the Stage. Select **GreaterThanEquals** Actor and click the **SUBMIT** to add this Actor to the Stage.
+1. Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A new popup window is added to add an Actor to the Stage. Select the **GreaterThanEquals** Actor and click  **SUBMIT** to add this Actor to the Stage.
 
-2. The **GreaterThanEquals** Actor returns true if the value if **a** parameter is greater than or equals to the value of  **b** parameter. This Actor is marked by a grey color, since it is added in a condition.
+2. The **GreaterThanEquals** Actor returns true if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is marked in grey since it is added in a condition.
 
    Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn more about Broadway Actors.
 
-3. Link the output of the **Count** condition to **a** input parameter of **GreaterThanEquals** , set input **b** parameter to be a **Const** and set its value to 3:
+3. Link the output of the **Count** condition to the **GreaterThanEquals** **a** input parameter to set the **b** parameter to be a **Const** and set its value to 3:
 
    ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_GreaterThanEqual_Actor.png)
 
