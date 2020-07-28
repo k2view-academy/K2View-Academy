@@ -78,10 +78,10 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
    <ul>
    <pre><code>
-   1. What is the output value of the <strong>Count</strong> Actor? 
-   2. What is the output value of <strong>GreaterThanEquals</strong> Actor? 
-   3. Which Stage has been executed - <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
-   4. Check the Output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? 
+   A. What is the output value of the <strong>Count</strong> Actor? 
+   B. What is the output value of <strong>GreaterThanEquals</strong> Actor? 
+   C. Which Stage has been executed - <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
+   D. Check the Output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? 
    </code></pre>
    </ul>
 
@@ -91,9 +91,9 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
    <ul>
    <pre><code>
-   1. What is the output value of <strong>GreaterThanEquals</strong> Actor? Is it different now? Why? 
-   2. Which Stage has been executed - <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
-   3. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? Is it different now? Why? 
+   A. What is the output value of <strong>GreaterThanEquals</strong> Actor? Is it different now? Why? 
+   B. Which Stage has been executed - <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
+   C. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? Is it different now? Why? 
    </code></pre>
    </ul>
 
@@ -103,19 +103,21 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
  <ul>
  <pre><code> 
- 1. The output value of the <strong>Count</strong> Actor is 3. This is the number of the records returned by the <strong></strong>DbCommand</strong> Actor.
- 2. The output value of <strong>GreaterThanEquals</strong> Actor is <strong>true</strong>.
- 3. <strong>Stage6</strong> was executed since the condition returned <strong>true</strong>.
- 4. The following messsage was given by the Logger Actor of Stage6: 
+ 1.
+ A. The output value of the <strong>Count</strong> Actor is 3. This is the number of the records returned by the <strong></strong>DbCommand</strong> Actor.
+ B. The output value of <strong>GreaterThanEquals</strong> Actor is <strong>true</strong>.
+ C. <strong>Stage6</strong> was executed since the condition returned <strong>true</strong>.
+ D. The following messsage was given by the Logger Actor of Stage6: 
  <strong>INFO: The are 3 customers in the list</strong>
  </code></pre>
  </ul>
 
 <ul>
 <pre><code>
- 3.1 The output value of <strong>GreaterThanEquals</strong> Actor is <strong>false</strong>.
- 3.2 <strong>Stage7</strong> was executed, since the condition returned <strong>false</strong>.
- 3.3 The following messsage was given by the Logger Actor of Stage7: 
+ 3.
+ A.The output value of <strong>GreaterThanEquals</strong> Actor is <strong>false</strong>.
+ B.<strong>Stage7</strong> was executed, since the condition returned <strong>false</strong>.
+ C.The following messsage was given by the Logger Actor of Stage7: 
      <strong>ERROR: Error- there are not enough customers in the list</strong>. 
      The Logger Actors of Stage6 and Stage7 set a different level of message, since each one of them has a different value of the the level input parameter.
  </code></pre>
