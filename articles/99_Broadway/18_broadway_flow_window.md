@@ -10,11 +10,13 @@ To create a new Broadway flow:
 
 The **Broadway flow** window includes the following elements:
 
-- The flow area where Stages are added. To add a Stage, either click the big **+** in the flow area, or go to the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select **Insert After** or **Insert Before**. To add Actors to a Stage, click in the empty Stage area.
+- The flow area, which displays Stages and their Actors. 
+  - To add a Stage, either click the big **+**, or go to the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) > **Insert After** or **Insert Before**. 
+  - To [add Actors to a Stage](/articles/99_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage), click in the empty Stage area.
 - [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Properties tab](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which enables setting and editing the properties of a selected object. 
+- [Actor Properties window](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which enables setting and editing the properties of a selected object. 
 
 ### Main Menu
 
@@ -127,7 +129,7 @@ To open the Stage context menu, click ![image](/articles/99_Broadway/images/99_1
 </tbody>
 </table>
 
-### Actor's Context Menu
+### Actor Context Menu
 
 To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Actor.
 
@@ -171,13 +173,17 @@ To open the Actor's context menu, click ![image](/articles/99_Broadway/images/99
 </tbody>
 </table>
 
-### Properties Tab
+### Actor Properties Window
 
-The Properties tab in the Broadway flow window dynamically adjusts its layout to display data based on the structure of the selected Actor or the link between two Actors. For example, the number of [input and output parameters](/articles/99_Broadway/03_broadway_actor.md#data-input-parameters), their data types and default values. When the link is selected, it displays the names of the From and To Actors and their parameters and the [Link type](<!--Link to 21-Links-->).
-To hide the Properties tab, click anywhere in the empty Stage area. 
+The Actor's Properties in the Broadway flow window dynamically adjusts its layout to display data based on the structure of the selected Actor. For example, the number of input and output parameters, their data types and default values. To hide the Properties window, click anywhere in the empty Stage area. 
 
-**Example of Actor's Properties Tab**
+[Click for more information about Actor Properties window](/articles/99_Broadway/03_broadway_actor_window.md#broaway-actors-properties-window).
+
+**Example of Actor's Properties Window**
 
 ![image](/articles/99_Broadway/images/99_18_04_properties.PNG)
+
+Note that if the link between two Actors is selected, the window's layout is adjusted to display the names of the [From and To Actors, their parameters and the Link type](/articles/99_Broadway/20_broadway_flow_linking_actors.md#link-object-properties).
+
 
 [![Previous](/articles/images/Previous.png)](/articles/99_Broadway/17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/19_broadway_flow_stages.md)
