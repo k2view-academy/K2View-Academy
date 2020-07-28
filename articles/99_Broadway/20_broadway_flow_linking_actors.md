@@ -68,17 +68,17 @@ A link holds the following settings:
 
 **Example:**
 
-- Const1.value is linked to DbCommand1.params. The Varargs setting is OFF:
+- **Const1.value** is linked to **DbCommand1.params**. The Varargs setting is OFF:
 
     ![varagrs-off](/articles/99_Broadway/images/link_varargs_off.png)
   
    
-- Updating the Varargs setting to ON updates the params input variable and changes it to an array that holds two elements - the first is linked to the Const1.value and the second is available for an additional link:
+- Updating the Varargs setting to ON updates the params input variable and changes it to an array that holds two elements - the first is linked to the **Const1.value** and the second is available for an additional link:
   
   ![varargs-on1](/articles/99_Broadway/images/link_varargs_on_1.png)
 
  
-- Linking the Const1.value to the second element in the params array again adds an element to the params array and enables linking additional inputs to the params array:
+- Linking the **Const2.value** to the second element in the params array again adds an element to the params array and enables linking additional inputs to the params array:
   
   ![varagrs-on2](/articles/99_Broadway/images/link_varargs_on_2.png)
   
@@ -97,7 +97,7 @@ To create a **Link** do either:
 - Click the **input parameter** of the target Actor and drag the **connection line** to the **output parameter** of the source Actor.
 - Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the source Actor > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes.
 
-    ![Adding link](/articles/99_Broadway/images/add_link_1.png)
+    ![Adding link](/articles/99_Broadway/images/99_20_add_link_1.PNG)
     
 
 ### Linking a Schema Object 
