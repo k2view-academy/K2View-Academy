@@ -2,15 +2,15 @@
 
 **A Broadway Flow** is a main Broadway object that represents a business process. A flow has several [Stages](/articles/99_Broadway/16_broadway_flow_overview.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right whereas the Actors in each Stage of the flow are executed top-down.
 
-Each actor has [data input and output parameters](/articles/99_Broadway/03_broadway_actor.md#actor-window). Input parameters can be populated  by either a:
+Each actor has [data input and output parameters](/articles/99_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Input parameters can be populated  by either a:
 
 - **Link**, which gets an input value as an input parameter from another Actor.
 - **Const**, a constant value that is set for the parameter.
 - **External**, which gets an input value as a parameter from an external process that executes the Broadway flow.
 
-The output of a source Actor can be linked to to the input of a target Actor that runs after the source Actor.
+The output of a source Actor can be linked to the input of a target Actor that runs after the source Actor.
 
-Note that an Actor can only be linked to link input parameters.
+Note that an Actor can only be linked to input parameters with Population Type = **Link**.
 
 **Example 1: Valid Link**
 
