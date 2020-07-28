@@ -109,7 +109,10 @@ Note that the input parameters of the ancestor Actor cannot be deleted.
 
 #### Output Parameters Properties
 
+![Sql_input](/articles/99_Broadway/images/99_03_outputs.PNG)
+
 The Actors output parameters are displayed in the Actor's Properties window in the following format:
+
 - [Parameter Name] : [Parameter Type]
 
 The actions on the input parameters are:
