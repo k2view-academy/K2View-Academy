@@ -18,9 +18,9 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <tr>
 <td valign="top" width="300pxl">
 <p><strong>Parameters Filter</strong></p>
-<p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
+<p>Filters the input and output fields in the Actor window by the following options:</p>
 <ul>
-<li>All Fields (default) - display the list of all fields of the Actor type and its ancestor Actors.</li>
+<li>All Fields (default) - display the list of all fields of the Actor and its ancestor Actors.</li>
 <li>Actor name &ndash; display the list of input and output parameters of the current Actor object.</li>
 <li>Ancestor Actor name - display the list of input and output parameters of the Actor's ancestor.</li>
 </ul>
@@ -33,15 +33,17 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </td>
 </tr>
 <tr>
-<td width="300pxl">
-<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>Input Parameters</strong></a></p>
+<td width="300pxl"><p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>Inputs</strong></a></p>
 <p>Displays the list of Actor's input parameters, including their name, type, population type, etc.</p>
+<p>You can perform changes on the input parameters - by pressing <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " />.</p>
+<p><strong>Add Input</strong> button allows to add more input parameters.</p>
 </td>
 </tr>
 <tr>
 <td width="300pxl">
-<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>Output Parameters</strong></a></p>
+<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>Outputs</strong></a></p>
 <p>Displays the list of Actor's output parameters, including their name, type, population type, etc.</p>
+<p>You can perform changes on the output parameters - by pressing <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " />.</p>
 </td>
 </tr>
 </tbody>
