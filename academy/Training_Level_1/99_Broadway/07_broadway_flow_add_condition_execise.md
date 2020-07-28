@@ -6,7 +6,7 @@ Now, let's practice an additional Broadway flow feature - adding conditions to a
 
 A Broadway flow can be split into different execution paths based on conditions so that more than one Stage can be executed in each fork in the path.
 
-Add the following condition to your flow:
+In this exercise you will add the following condition to your flow that does the following:
 
 - Check if the number of selected customers >= 3:  
 
@@ -20,14 +20,14 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
 #### Step 1 - Open the Broadway Flow
 
-1. Go to **Project Tree** > **Shared Objects**> **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
+1. Go to **Project Tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
 
 
 #### Step 2 - Add Counting of Selected Customers
 
-1. Add the **Count** Actor to **Stage 2**. This Actor returns the number of times an Actor is called. If you add this Actor in the loop on selected customers, it counts the number of the selected customers.
+1. Add the **Count** Actor to **Stage2**. This Actor returns the number of times an Actor is called. If you add this Actor in the loop on selected customers, it counts the number of the selected customers.
 
-#### Step 3- Add a Condition to the Flow
+#### Step 3 - Add a Condition to the Flow
 
 1. Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A new popup window opens where you can add an Actor to the Stage. Select the **GreaterThanEquals** Actor and click  **SUBMIT**.
 
@@ -43,13 +43,13 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
 4. Split **Stage4**:
 
-Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) of the newly created **Stage5**, and select the **Else** option.
+  Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) on the newly created **Stage5** and select the **Else** option.
 
 #### Step 4 - Add the Next Stages
 
 1. Add a Stage to the flow and split it to **Stage6** and **Stage7**.
 
-2. Add the **Logger** Actors to the Stage6 and Stage7 Stages.
+2. Add the **Logger** Actors to the Stage6 and Stage7.
 
 3. Set the **Logger** Actor parameters of **Stage6**:
 
@@ -72,16 +72,16 @@ Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon
      - Error- there are not enough customers in the list
    - Set the **level** input parameter to **error**.
 
-#### Step 5- Debug the Updated Flow
+#### Step 5 - Debug the Updated Flow
 
 1. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode:
 
    <ul>
    <pre><code>
-   1.1 What is the output value of the <strong>Count</strong> Actor? 
-   1.2 What is the output value of <strong>GreaterThanEquals</strong> Actor? 
-   1.3 Which Stage was executed- <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
-   1.4 Check the Output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which messge is given by the Logger Actor? What is the level of the message? 
+   1. What is the output value of the <strong>Count</strong> Actor? 
+   2. What is the output value of <strong>GreaterThanEquals</strong> Actor? 
+   3. Which Stage has been executed - <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
+   4. Check the Output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? 
    </code></pre>
    </ul>
 
@@ -91,9 +91,9 @@ Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon
 
    <ul>
    <pre><code>
-   3.1 What is the output value of <strong>GreaterThanEquals</strong> Actor? Is it different now? Why? 
-   3.2 Which Stage was executed- <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
-   3.3 Check the Output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which messge is given by the Logger Actor? What is the level of the message? Is it different now? Why? 
+   1. What is the output value of <strong>GreaterThanEquals</strong> Actor? Is it different now? Why? 
+   2. Which Stage has been executed - <strong>Stage6</strong> or <strong>Stage7</strong>? Why?
+   3. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? Is it different now? Why? 
    </code></pre>
    </ul>
 
@@ -103,10 +103,10 @@ Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon
 
  <ul>
  <pre><code> 
- 1.1 The output value of the Count Actor is 3. This is the number of the records, returned by the <strong></strong>DbCommand</strong> Actor.
- 1.2 The output value of <strong>GreaterThanEquals</strong> Actor is <strong>true</strong>.
- 1.3 <strong>Stage6</strong> was executed, since the condition returned <strong>true</strong>.
- 1.4 The following messsage was given by the Logger Actor of Stage6: 
+ 1. The output value of the <strong>Count</strong> Actor is 3. This is the number of the records returned by the <strong></strong>DbCommand</strong> Actor.
+ 2. The output value of <strong>GreaterThanEquals</strong> Actor is <strong>true</strong>.
+ 3. <strong>Stage6</strong> was executed since the condition returned <strong>true</strong>.
+ 4. The following messsage was given by the Logger Actor of Stage6: 
  <strong>INFO: The are 3 customers in the list</strong>
  </code></pre>
  </ul>
