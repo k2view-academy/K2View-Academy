@@ -23,10 +23,7 @@ To add an Actor to Stage of Broadway flow:
 
 ### How Do I Save Flow as Actor?
 
-In some cases you may prefer to package a flow and use it as an inner flow to avoid complex flows with many steps. This will enable a reuse of the business logic across different flows.
-
-For example:
-- Define an inner flow for error handling.
+In some cases you may prefer to package a flow and use it as an inner flow to avoid complex flows with many steps. This will enable a reuse of the business logic across different flows. For example, define an inner flow for error handling.
 
 To save flow as Actor:
 - Click **Actions** > Save as Actor in the Main menu of [Broadway flow window](/articles/99_Broadway/18_broadway_flow_window.md#main-menu).
