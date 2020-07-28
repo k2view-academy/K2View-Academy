@@ -12,7 +12,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <p><strong>Object Name</strong></p>
 <p>Displays the Actor name in the following format:</p>
 <ul>
-<li>&lt;Object Name&gt;:&lt;Actor Type&gt;</li>
+<li>[Object Name] : [Actor Type]</li>
 </ul>
 <p>By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
 </td>
@@ -39,7 +39,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <p><strong>INPUTS</strong></p>
 <p>Displays the Input parameters in the following format:</p>
 <ul>
-<li>&lt;Parameter Name&gt;:&lt;Parameter Type&gt;</li>
+<li>[Parameter Name] : [Parameter Type]</li>
 </ul>
 <p>You can perform changes on the input parameters - by pressing <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " />.</p>
 <p><strong>Add Input</strong> button allows to add more input parameters.</p>
@@ -64,39 +64,38 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 
 #### Input Parameters Properties
 
-![image](/articles/99_Broadway/images/99_03_inputs_const.PNG)
-
-![image](/articles/99_Broadway/images/99_03_inputs_external.PNG)
-
-![image](/articles/99_Broadway/images/99_03_inputs_link.PNG)
+<table>
+<tbody>
+<tr>
+<td><img src="/articles/99_Broadway/images/99_03_inputs_link.PNG" alt="Input Link" /></td>
+<td><img src="/articles/99_Broadway/images/99_03_inputs_const.PNG" alt="Input Const" /></td>
+<td><img src="/articles/99_Broadway/images/99_03_inputs_external.PNG" alt="Input External" /></td>
+</tr>
+</tbody>
+</table>
 
 The Actors input parameters are displayed in the Actor's Properties window in the following format:
+- [Parameter Name] : [Parameter Type]
 
-- <Parameter Name>:<Parameter Type>
+For example: 
+- interface : string
 
 The population of the input parameter depends on the **Population Type**. The following types are supported:
-
 - Link - get the input value as an input parameter from another Actor. When **Link** is selected, need to connect the parameter with another Actor's output parameter.
 - Const - set the value of the parameter. When **Const** is selected, a text area will appear below the parameter to allow inserting the text.
 - External - get the input value as a parameter from the external process which executes the Broadway flow. When External is selected, additional field **External Name** will appear below the parameter.
 
 The actions on the input parameters are:
-
-* Default value - set a default value for an input parameter. 
-
-  * Default value is applicable for population types **Link** and **External**.
-
-  * Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables to insert numbers into this parameter.
-
-  * When populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
+- Default value - set a default value for an input parameter. 
+  - Default value is applicable for population types **Link** and **External**.
+  - Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables to insert numbers into this parameter.
+  - When populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
 
     ![Sql_input](/articles/99_Broadway/images/99_03_sql.PNG)
 
-* Edit Schema - click to open the popup window that enables updating the parameter's type.
-
-* Description - click to check the parameter's description. The description cannot be changed.
-
-* Remark - click to add a remark. The remark can be modified later.
+- Edit Schema - click to open the popup window that enables updating the parameter's type.
+- Description - click to check the parameter's description. The description cannot be changed.
+- Remark - click to add a remark. The remark can be modified later.
 
 #### Add Input Button
 
@@ -111,14 +110,12 @@ Note that the input parameters of the ancestor Actor cannot be deleted.
 #### Output Parameters Properties
 
 The Actors output parameters are displayed in the Actor's Properties window in the following format:
-
-- <Parameter Name>:<Parameter Type>
+- [Parameter Name] : [Parameter Type]
 
 The actions on the input parameters are:
-
-* Set External - click to expose the output parameter to the external process that executes the Broadway flow. When selected, additional field **External Name** will appear below the parameter.
-* Edit Schema - click to open the popup window that enables updating the parameter's type.
-* Description - click to check the parameter's description. The description cannot be changed.
-* Remark - click to add a remark. The remark can be modified later.
+- Set External - click to expose the output parameter to the external process that executes the Broadway flow. When selected, additional field **External Name** will appear below the parameter.
+- Edit Schema - click to open the popup window that enables updating the parameter's type.
+- Description - click to check the parameter's description. The description cannot be changed.
+- Remark - click to add a remark. The remark can be modified later.
 
 [![Previous](/articles/images/Previous.png)](/articles/99_Broadway/03_broadway_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
