@@ -16,7 +16,7 @@ The **Broadway flow** window includes the following elements:
 - [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](/articles/99_Broadway/18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Actor Properties window](/articles/99_Broadway/18_broadway_flow_window.md#properties-tab), which enables setting and editing the properties of a selected object. 
+- [Actor Properties window](/articles/99_Broadway/18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object. 
 
 ### Main Menu
 
@@ -29,8 +29,8 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <tr>
 <td width="170pxl">Actions</td>
 <td width="630pxl">
-<p>When clicked displays the following options:</p>Tutorial or an example flow.</li>
-<li><a href="/articles/99_Broadway/23_xxxx.md">[Save as Actor]</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
+<li><a href="/articles/99_Broadway/17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
+<li><a href="/articles/99_Broadway/22_xxxx.md">Save as Actor (add link!)</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li>Debug/Run Arguments, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
 <li>Reset Parameters Schemas, reset these settings to the Actor's original status. Removing the output Schema of complex types erases all lines originating from the Schema.</li>
 <li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
