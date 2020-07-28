@@ -11,7 +11,7 @@ To create a new Broadway flow:
 The **Broadway flow** window includes the following elements:
 
 - The flow area, which displays Stages and their Actors. 
-  - To add a Stage, either click the big **+**, or go to the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) > **Insert After** or **Insert Before**. 
+  - To [add a Stage](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage), either click the big **+**, or go to the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) > **Insert After** or **Insert Before**. 
   - To [add Actors to a Stage](/articles/99_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage), click in the empty Stage area.
 - [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
@@ -78,7 +78,7 @@ To open the Stage context menu, click ![image](/articles/99_Broadway/images/99_1
 <tbody>
 <tr>
 <td rowspan="12" width="400pxl">
-<p><img src="/articles/99_Broadway/images/99_18_02_stage_menu_up.png" alt="Stage context menu" /></p>
+<p><img src="/articles/99_Broadway/images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
 <td width="80pxl"><a href="/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a></td>
 <td width="420pxl">Add a new Stage after the selected one.</td>
