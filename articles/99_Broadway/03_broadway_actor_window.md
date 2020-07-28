@@ -1,5 +1,7 @@
 # Broadway Actor's Properties Window
 
+### Properties Overview
+
 The **Actor's Properties** window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
 
 <table>
@@ -34,7 +36,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </tr>
 <tr>
 <td width="300pxl">
-<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>INPUTS</strong></a></p>
+<p><strong>INPUTS</strong></p>
 <p>Displays the Input parameters in the following format:</p>
 <ul>
 <li>&lt;Parameter Name&gt;:&lt;Parameter Type&gt;</li>
@@ -45,7 +47,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </tr>
 <tr>
 <td width="300pxl">
-<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>OUTPUTS</strong></a></p>
+<p><strong>OUTPUTS</strong></p>
 <p>Displays the Output parameters in the following format:</p>
 <ul>
 <li>&lt;Parameter Name&gt;:&lt;Parameter Type&gt;</li>
@@ -57,158 +59,66 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </table>
 
 
-### Data Input Parameters
 
-Each Actor has data input and output parameters. Each input parameter has the following attributes:
+### Actor's Inputs and Outputs
 
-- Parameter's Attributes
-- Parameter's Value
+#### Input Parameters Properties
 
-#### Input Parameter: Attributes
+![image](/articles/99_Broadway/images/99_03_inputs_const.PNG)
 
-The parameter's definition includes the following attributes:
+![image](/articles/99_Broadway/images/99_03_inputs_external.PNG)
 
-<table>
-<tbody>
-<tr>
-<td valign="top" width="300pxl">
-<p><strong>Parameter Name</strong></p>
-</td>
-<td valign="top" width="600pxl">
-<p>The name of the parameter</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="300pxl">
-<p><strong>Parameter Type</strong></p>
-</td>
-<td valign="top" width="600pxl">
-<p>String, Integer, Real&hellip;</p>
-<p>When you set the population type of the input parameter as <strong>Const,&nbsp;</strong>you must set the parameter type of the input parameter:</p>
-<p><img src="/articles/99_Broadway/images/const_input_parameter_type.png" alt="Const_input_type" /></p>
-<p>You can edit the parameter type for each parameter regardless of its population type:</p>
-<ul>
-<li>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</li>
-</ul>
-</td>
-</tr>
-<tr>
-<td valign="top" width="300pxl">
-<p><strong>Population Type</strong></p>
-</td>
-<td valign="top" width="600pxl">
-<p>The following types are supported:</p>
-<ul>
-<li><strong>Link</strong> - get the input value as an input parameter from another actor.</li>
-<li><strong>Const</strong> - constant. You need to set the value of the parameter.</li>
-<li><strong>External</strong> - get the input value as a parameter from the external process which executes the Broadway flow. Setting the parameter as External opens an additional setting - <strong>External Name</strong>.</li>
-</ul>
-<p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name to view or edit the population type.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="300pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="600pxl">
-<p>Parameter description. The parameter description is displayed in a read-only mode.</p>
-<p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Description to open the Description window.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="300pxl">
-<p><strong>Remark</strong></p>
-</td>
-<td valign="top" width="600pxl">
-<p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
-<p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Remark to open the Description window.</p>
-</td>
-</tr>
-</tbody>
-</table>
+![image](/articles/99_Broadway/images/99_03_inputs_link.PNG)
 
-#### Parameter's Value
+The Actors input parameters are displayed in the Actor's Properties window in the following format:
 
-Setting the parameter's value is needed in the following scenarios:
+- <Parameter Name>:<Parameter Type>
 
--  The population type is set to **Const**. 
+The population of the input parameter depends on the **Population Type**. The following types are supported:
 
-  Example: 
+- Link - get the input value as an input parameter from another Actor. When **Link** is selected, need to connect the parameter with another Actor's output parameter.
+- Const - set the value of the parameter. When **Const** is selected, a text area will appear below the parameter to allow inserting the text.
+- External - get the input value as a parameter from the external process which executes the Broadway flow. When External is selected, additional field **External Name** will appear below the parameter.
 
-   **Const** Actor. The input parameter name is **value**, the type is **String**, the value is "Hello Broadway":
+The actions on the input parameters are:
 
-  ![Const1](/articles/99_Broadway/images/const_actor_example.png)
+* Default value - set a default value for an input parameter. 
 
-- The population type is **Link** or **External** and you define a default value.
+  * Default value is applicable for population types **Link** and **External**.
 
-  Example:
+  * Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables to insert numbers into this parameter.
 
-  **Const** Actor. The  input parameter name is **value**, the type is **Integer**, and the default value is 7:
+  * When populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
 
-  ![Const2](/articles/99_Broadway/images/const_actor_def_value_example.png)
+    ![Sql_input](/articles/99_Broadway/images/99_03_sql.PNG)
 
-Notes:
+* Edit Schema - click to open the popup window that enables updating the parameter's type.
 
-- Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) next to the parameter name and select **Default value** to set a default value for an input parameter.
+* Description - click to check the parameter's description. The description cannot be changed.
 
-- Broadway enables populating a value that matches the parameters type. For example: Broadway only enables to insert  numbers for Integer parameters. 
+* Remark - click to add a remark. The remark can be modified later.
 
-- When populating an input value for **SQL** parameter, you can click the **QB** icon and open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to build the SQL query. See an example of **DbCommand** built-in Actor:
+#### Add Input Button
 
-  ![Sql_input](/articles/99_Broadway/images/sql_input_value.png)
-  
-  
-  
-  ### Data Output Parameters
-  
-  <table>
-  <tbody>
-  <tr>
-  <td valign="top" width="300pxl">
-  <p><strong>Parameter Name</strong></p>
-  </td>
-  <td valign="top" width="600pxl">
-  <p>The name of the parameter</p>
-  </td>
-  </tr>
-  <tr>
-  <td valign="top" width="300pxl">
-  <p><strong>Parameter Type</strong></p>
-  </td>
-  <td valign="top" width="600pxl">
-  <p>String, Integer, Real&hellip;</p>
-  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Edit Schema to edit the parameter type.&nbsp;</p>
-  </td>
-  </tr>
-  <tr>
-  <td valign="top" width="300pxl">
-  <p><strong>Output Type</strong></p>
-  </td>
-  <td valign="top" width="600pxl">
-  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Set External to expose the output to the external process that executes the Broadway flow.</p>
-  </td>
-  </tr>
-  <tr>
-  <td valign="top" width="300pxl">
-  <p><strong>Description</strong></p>
-  </td>
-  <td valign="top" width="600pxl">
-  <p>Parameter description. The parameter description is displayed in a read-only mode.</p>
-  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Description to open the Description window.</p>
-  </td>
-  </tr>
-  <tr>
-  <td valign="top" width="300pxl">
-  <p><strong>Remark</strong></p>
-  </td>
-  <td valign="top" width="600pxl">
-  <p>You can add a remark for each parameter. The remark adds a green asterisk next to the parameter name.</p>
-  <p>Click <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " /> next to the parameter name &gt; Remark to open the Description window.</p>
-  </td>
-  </tr>
-  </tbody>
-  </table>
-  
-  
+Some Actor types allow to add more input parameters by clicking **Add Input** button. 
+
+When clicked, a new input parameter will be added with default Parameter Type = any and default Population Type = Link. If the population type is changed to Const, a drop-down list will appear to select the required parameter type. 
+
+You can delete or add more parameters via the context menu by clicking ![image](/articles/99_Broadway/images/99_19_dots.PNG) > Delete or Insert.
+
+Note that the input parameters of the ancestor Actor cannot be deleted. 
+
+#### Output Parameters Properties
+
+The Actors output parameters are displayed in the Actor's Properties window in the following format:
+
+- <Parameter Name>:<Parameter Type>
+
+The actions on the input parameters are:
+
+* Set External - click to expose the output parameter to the external process that executes the Broadway flow. When selected, additional field **External Name** will appear below the parameter.
+* Edit Schema - click to open the popup window that enables updating the parameter's type.
+* Description - click to check the parameter's description. The description cannot be changed.
+* Remark - click to add a remark. The remark can be modified later.
 
 [![Previous](/articles/images/Previous.png)](/articles/99_Broadway/03_broadway_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
