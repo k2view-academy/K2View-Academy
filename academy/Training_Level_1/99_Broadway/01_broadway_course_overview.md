@@ -4,9 +4,9 @@ Welcome to your first Broadway course!
 
 ### Objectives
 
-Our goal is to provide you with the information you need to kick-start your first Broadway flow while giving you the confidence to explore Broadway flow examples and the various types of built-in Actors provided by Fabric Broadway ETL. 
+Our goal is to provide you with the information you need to kick-start your first Broadway flow while giving you the confidence to explore Broadway flow examples and the various types of built-in Actors provided by the Fabric Broadway ETL. 
 
-In addition you will learn about Broadway interface with Fabric and how to incorporate and execute Broadway flows into your Fabric project.
+In addition, you will learn about how Broadway interfaces with Fabric and how to incorporate and execute Broadway flows into your Fabric project.
 
 ### Course Syllabus
 
@@ -18,11 +18,11 @@ Please go to the [Level 1 Broadway Training Syllabus](/academy/Training_Level_1/
 
 To fully understand this course, you should be familiar with the following principles, development languages and tools:
 
-* K2view Fabric
+* K2view Fabric.
 
-* Relational databases, such as MySQL and SQLite.
+* Relational databases like MySQL and SQLite.
 
-* Non-relational databases, such as Cassandra. 
+* Non-relational databases like Cassandra. 
 
 * Java, Javascript, SQL and CQL.
 
