@@ -30,27 +30,45 @@ A FileName **Const** Actor sends the filename as a parameter to the **FileRead**
 
 A link holds the following settings:
 
-![link properties](/articles/99_Broadway/images/link_attributes.png)
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="300pxl"><img src="/articles/99_Broadway/images/99_20_link_attributes.PNG" alt="Link properties" /></td>
+<td valign="top" width="600pxl">
+<ul class="unchanged rich-diff-level-one">
+<li class="unchanged">
+<p class="unchanged"><strong>From (source) parameters</strong>, From Actor, From Parameter and From Parameter Type. These parameters are read-only parameters and cannot be edited.</p>
+</li>
+<li class="unchanged">
+<p class="unchanged"><strong>To (target) parameters</strong>, To Actor, To Parameter and To Parameter Type. These parameters are read-only and cannot be edited. Note that Broadway attempts to handle the differences between the source and target types. For example: if the source type is Integer and the target type is String, then Broadway casts the source integer to a String.</p>
+</li>
+<li class="unchanged">
+<p class="unchanged"><strong>Link Type</strong>, can be edited to set one of the following link types:</p>
+<ul class="unchanged">
+<li class="unchanged">
+<p class="unchanged"><strong>Value</strong>, (default option). Sends the value of the parameter.</p>
+</li>
+<li class="unchanged">
+<p class="unchanged"><strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an Array or Type is linked to an output with a single element of this type - for example, linking an array of string to a string output - the link is created automatically with an&nbsp;<strong>Iterate</strong>&nbsp;link type.</p>
+<p class="unchanged">[Click for more information about handling loops.]</p>
+</li>
+<li class="unchanged">
+<p class="unchanged"><strong>First</strong>, sends the first value of the parameter. For example, sends the first record of the result set.</p>
+</li>
+</ul>
+</li>
+<li class="unchanged">
+<p class="unchanged"><strong>Varargs</strong>&nbsp;(variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an Array and linking each source parameter to a different element in the Array. This can be useful when the source parameter has an&nbsp;<strong>any</strong>&nbsp;(unknown) Type.</p>
+</li>
+</ul>
+&nbsp;</td>
+</tr>
+</tbody>
+</table>
 
-- **From (source) parameters**, From Actor, From Parameter and From Parameter Type. These parameters are read-only parameters and cannot be edited.
+**Example:**
 
-- **To (target) parameters**, To Actor, To Parameter and To Parameter Type. These parameters are read-only and cannot be edited. Note that Broadway attempts to handle the differences between the source and target types. For example: if the source type is Integer and the target type is String, then Broadway casts the source integer to a String.
-
-- **Link Type**, can be edited to set one of the following link types:
-
-  - **Value**, (default option). Sends the value of the parameter.
-
-  - **Iterate**, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an Array or Type is linked to an output with a single element of this type - for example, linking an array of string to a string output - the link is created automatically with an **Iterate** link type. 
-
-    Click for more information about handling loops.
-
-  - **First**, sends the first value of the parameter. For example, sends the first record of the result set. 
-
-- **Varargs** (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an Array and linking each source parameter to a different element in the Array. This can be useful when the source parameter has an **any** (unknown) Type. 
-
-  **Example:**
-
-  - Const1.value is linked to DbCommand1.params. The Varargs setting is OFF:
+- Const1.value is linked to DbCommand1.params. The Varargs setting is OFF:
 
     ![varagrs-off](/articles/99_Broadway/images/link_varargs_off.png)
   
@@ -60,13 +78,11 @@ A link holds the following settings:
   
   ![varargs-on1](/articles/99_Broadway/images/link_varargs_on_1.png)
 
-  
 
   
 - Linking the Const1.value to the second element in the params array again adds an element to the params array and enables linking additional inputs to the params array:
   
   ![varagrs-on2](/articles/99_Broadway/images/link_varargs_on_2.png)
-  
   
   
   **Notes:**
@@ -75,7 +91,6 @@ A link holds the following settings:
   - When a Varargs link is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
   
   
-
 ## How Do I Add Links to the Flow?
 
 To create a **Link** do either:
