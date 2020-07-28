@@ -14,7 +14,7 @@ Note that an Actor can only be linked to input parameters with Population Type =
 
 **Example 1: Valid Link**
 
-Two **Const** Actors are linked to a **DbCommand** Actor and send input for a DB query:
+Two **Const** Actors are linked to a **DbCommand** Actor and send input for a DB query. 
 
 ![link-example1](/articles/99_Broadway/images/valid_link_example.png)
 
@@ -22,7 +22,7 @@ This link is valid since the source Const Actors run before the target DbCommand
 
 **Example 2: Invalid Link**
 
-A FileName **Const** Actor sends the filename as a parameter to the **FileRead** Actor and the source **Const** Actor runs **after** the target FileRead Actor:
+A **Const** Actor named FileName sends the file name as a parameter to the **FileRead** Actor and the source **Const** Actor runs **after** the target FileRead Actor:
 
 ![link-example2](/articles/99_Broadway/images/invalid_link_example.png)
 
@@ -49,7 +49,7 @@ A link holds the following settings:
 <p class="unchanged"><strong>Value</strong>, (default option). Sends the value of the parameter.</p>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an Array or Type is linked to an output with a single element of this type - for example, linking an array of string to a string output - the link is created automatically with an&nbsp;<strong>Iterate</strong>&nbsp;link type.</p>
+<p class="unchanged"><strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an array is linked to an output with a single element of the same type - for example, linking an array of string to a string output - the link is created automatically with an <strong>Iterate</strong> link type.</p>
 <p class="unchanged">[Click for more information about handling loops.]</p>
 </li>
 <li class="unchanged">
@@ -58,10 +58,10 @@ A link holds the following settings:
 </ul>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong>&nbsp;(variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an Array and linking each source parameter to a different element in the Array. This can be useful when the source parameter has an&nbsp;<strong>any</strong>&nbsp;(unknown) Type.</p>
+<p class="unchanged"><strong>Varargs</strong>&nbsp;(variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful when the source parameter has an <strong>any</strong> (unknown) Type.</p>
 </li>
 </ul>
-&nbsp;</td>
+</td>
 </tr>
 </tbody>
 </table>
@@ -72,14 +72,12 @@ A link holds the following settings:
 
     ![varagrs-off](/articles/99_Broadway/images/link_varargs_off.png)
   
-  
-  
+   
 - Updating the Varargs setting to ON updates the params input variable and changes it to an array that holds two elements - the first is linked to the Const1.value and the second is available for an additional link:
   
   ![varargs-on1](/articles/99_Broadway/images/link_varargs_on_1.png)
 
-
-  
+ 
 - Linking the Const1.value to the second element in the params array again adds an element to the params array and enables linking additional inputs to the params array:
   
   ![varagrs-on2](/articles/99_Broadway/images/link_varargs_on_2.png)
@@ -88,7 +86,7 @@ A link holds the following settings:
   **Notes:**
 
   - All additional links to the output array are created automatically when **Varagrs** is set to ON.
-  - When a Varargs link is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
+  - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
   
   
 ## How Do I Add Links to the Flow?
@@ -96,10 +94,8 @@ A link holds the following settings:
 To create a **Link** do either:
 
 - Click the **output parameter** of the source Actor and drag the **connection line** to the **input parameter** of the target Actor.
-
 - Click the **input parameter** of the target Actor and drag the **connection line** to the **output parameter** of the source Actor.
-
-- Click **...** in the source **Actor** > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes.
+- Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the source Actor > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes.
 
     ![Adding link](/articles/99_Broadway/images/add_link_1.png)
     
@@ -134,13 +130,11 @@ The source parameter holds the following Schema:
 
 To connect a specific element in the Schema, click **+** in the parameter to open the **Data Inspection** and view the parameters list in the object:
 
-![data inspection](/articles/99_Broadway/images/data_inspection_example.png)
+![data inspection](/articles/99_Broadway/images/99_20_data_inspection_example.PNG)
 
- To link a Schema a target Actor do either:
-
+ To link a Schema to a target Actor do either:
 - Click the parameter name in the **Data Inspection** and drag the **connection line** to the **input parameter** of the target Actor.
-
-- Click the **...** in the **source actor** > **link**. Populate the **Target Actor**, **Target Parameter**, **Selection Parameter** (source Schema parameter) and **Selection Schema** (parameter name in the source Schema). Click **V** to save the changes.
+- Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu) and select **Link**. Populate the **Target Actor**, **Target Parameter**, **Selection Parameter** (source Schema parameter) and **Selection Schema** (parameter name in the source Schema). Click **V** to save the changes.
 
     ![Adding link](/articles/99_Broadway/images/add_link_2.png)
 
@@ -157,9 +151,8 @@ Edit the **Link Type** or **Varargs** settings.
 
 ## Show Only Connected Objects
 
-Click the **...** in the **Actor** > **Show only connected** to display only Actors linked to this Actor.
-
-Click **...** again in the **Actor** > **Show only connected** to remove this filter and display all Actors in the flow.
+Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) > **Show only connected** in [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu) to display only Actors linked to this Actor.
+Click **Show only connected** again to remove this filter and display all Actors in the flow.
 
 This option is useful when tracking complex flows.
 
@@ -169,7 +162,7 @@ A complex String handling flow:
 
 ![String flow](/articles/99_Broadway/images/string_flow_example.png)
 
-To view only the  Actors connected to Regex1 actor, click **...** in the **Actor** > **Show only connected**. The following actors are displayed:
+To view only the  Actors connected to **Regex1** Actor, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) > **Show only connected** in [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu). The following Actors are displayed:
 
 ![show connected-example](/articles/99_Broadway/images/show_connected_examples.png)
 
