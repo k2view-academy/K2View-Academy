@@ -43,7 +43,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 6. Click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) icon to run the flow.
 
   <ul>
- <pre><code>6.1 What is the result of the flow?</code></pre>
+ <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
 
 7. Add a Breakpoint to the **for each** Stage and click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the Flow window and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
@@ -64,7 +64,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
  9. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode.
 
   <ul>
-<pre><code>A. Has the new <strong>Now</strong> Actor been added to <strong>Stage 3</strong> been exectued? Why?</code></pre>
+<pre><code>A. Has the new <strong>Now</strong> Actor been added to <strong>Stage 3</strong> been executed? Why?</code></pre>
 </ul>
 
 10. Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the Debug process.
@@ -84,7 +84,8 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
  <ul>
  <pre><code> 
- 6.1 The flow result is "Hellow Broadway"</code></pre>
+Step 6.
+A. The flow's result is "Hellow Broadway"</code></pre>
  </ul>
 
 <ul>
