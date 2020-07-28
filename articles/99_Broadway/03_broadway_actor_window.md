@@ -1,4 +1,4 @@
-# Broaway Actor's Properties Window
+# Broadway Actor's Properties Window
 
 The **Actor's Properties** window is displayed when adding a new Actor to the flow, or when clicking an Actor object in the flow window. The Actor window contains the following sections:
 
@@ -8,11 +8,11 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <td rowspan="4" valign="top" width="400pxl"><img src="/articles/99_Broadway/images/99_03_actor_properties.PNG" alt="Properties window" /></td>
 <td valign="top" width="600pxl">
 <p><strong>Object Name</strong></p>
-<p>Populated by the object name for each Actor, added to the flow. By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
-<p>The Actor name is displayed in the following format:</p>
+<p>Displays the Actor name in the following format:</p>
 <ul>
 <li>&lt;Object Name&gt;:&lt;Actor Type&gt;</li>
 </ul>
+<p>By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
 </td>
 </tr>
 <tr>
@@ -21,26 +21,31 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 <p>Filters the input and output fields, displayed in the Actor window. The list of input and output parameters can be fileted by the following options:</p>
 <ul>
 <li>All Fields (default) - display the list of all fields of the Actor type and its ancestor Actors.</li>
-<li>Actor Type name &ndash; display the list of input and output parameters, added for the Actor Type of the current Actor object.</li>
-<li>The list of ancestor Actor Types - display the list of input and output parameters, added for the selected ancestor Actor Type.</li>
+<li>Actor name &ndash; display the list of input and output parameters of the current Actor object.</li>
+<li>Ancestor Actor name - display the list of input and output parameters of the Actor's ancestor.</li>
 </ul>
-<p><strong>For example:</strong></p>
-<p>FixedColumnParser Actor Type inherits from LinesParser Actor Type:</p>
+<p>For example:</p>
 <ul>
-<li>Selecting All Fields option displays the full list of input and output parameters of both Actor Types - FixedColumnParser and LinesParser.</li>
-<li>You can also select one of the Actor Types - FixedColumnParser or LinesParser to get its input and output parameters.</li>
+<li><strong>FixedColumnParser</strong> Actor inherits from <strong>LinesParser</strong> Actor.</li>
+<li>Selecting <strong>All Fields</strong> option displays the full list of input and output parameters of <strong>FixedColumnParser</strong> Actor.</li>
+<li>Selecting one of the Actor Types (FixedColumnParser or LinesParser) will filter the input and output parameters accordingly.</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td width="300pxl">
 <p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>Input Parameters</strong></a></p>
+<p>Displays the list of Actor's input parameters, including their name, type, population type, etc.</p>
 </td>
 </tr>
 <tr>
 <td width="300pxl">
 <p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>Output Parameters</strong></a></p>
+<p>Displays the list of Actor's output parameters, including their name, type, population type, etc.</p>
 </td>
+</tr>
+</tbody>
+</table>
 </tr>
 </tbody>
 </table>
