@@ -33,24 +33,29 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 </td>
 </tr>
 <tr>
-<td width="300pxl"><p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>Inputs</strong></a></p>
-<p>Displays the list of Actor's input parameters, including their name, type, population type, etc.</p>
+<td width="300pxl">
+<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters "><strong>INPUTS</strong></a></p>
+<p>Displays the Input parameters in the following format:</p>
+<ul>
+<li>&lt;Parameter Name&gt;:&lt;Parameter Type&gt;</li>
+</ul>
 <p>You can perform changes on the input parameters - by pressing <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " />.</p>
 <p><strong>Add Input</strong> button allows to add more input parameters.</p>
 </td>
 </tr>
 <tr>
 <td width="300pxl">
-<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>Outputs</strong></a></p>
-<p>Displays the list of Actor's output parameters, including their name, type, population type, etc.</p>
+<p><a href="/articles/99_Broadway/03_broadway_actor_window.md#data-output-parameters "><strong>OUTPUTS</strong></a></p>
+<p>Displays the Output parameters in the following format:</p>
+<ul>
+<li>&lt;Parameter Name&gt;:&lt;Parameter Type&gt;</li>
+</ul>
 <p>You can perform changes on the output parameters - by pressing <img src="/articles/99_Broadway/images/99_19_dots.PNG" alt=" " />.</p>
 </td>
 </tr>
 </tbody>
 </table>
-</tr>
-</tbody>
-</table>
+
 
 ### Data Input Parameters
 
