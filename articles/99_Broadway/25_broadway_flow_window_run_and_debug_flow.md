@@ -40,7 +40,7 @@ Click **Play** or **Stop** to run or stop the Broadway flow.
 ## Debugging a Broadway Flow
 
 - Click ![](/articles/99_Broadway/images/debug_play_icon.png) to run the entire process in Debug mode. The Debug process runs the Broadway flow and stops during Stages with breakpoints. 
-To add a breakpoint to a Stage, click **...** on the Stage > Breakpoint.
+To add a breakpoint to a Stage, click **...** in the Stage > Breakpoint.
 
 - Click ![](/articles/99_Broadway/images/debug_step_icon.png) to debug the current step and move to the next step.  
 
@@ -55,7 +55,7 @@ To view a step's data, click the input or output parameter to open the data and 
 
 ### Updating a Schema
 
-The Broadway Debug process *learns* the schema of complex output parameters and can suggest how to update a schema based on a parameter's value.
+The Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value.
 
 When debugging an Actor with a complex output parameter, the parameter port is red:
 
@@ -65,12 +65,12 @@ When debugging an Actor with a complex output parameter, the parameter port is r
 
   ![](/articles/99_Broadway/images/compare_schema.png)
 
-2. Click **Update** to update the output parameter's schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the schema on the left and the data values on the right.
+2. Click **Update** to update the output parameter's Schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the Schema on the left and the data values on the right.
 
-3. [Link](/articles/99_Broadway/20_broadway_flow_linking_actors.md) the output parameters of the schema to another actor.
+3. [Link](/articles/99_Broadway/20_broadway_flow_linking_actors.md) the output parameters of the Schema to another actor.
 
   ![](/articles/99_Broadway/images/data_insepction_debug.png)
 
 Note:
-- To reset an Actor's Schema settings, click **Actions** > **Reset Parameters Schemas**.  Removing the output schema of complex types erases the lines originating from the Schema. 
+- To reset an Actor's Schema settings, click **Actions** > **Reset Parameters Schemas**.  Removing the output Schema of complex types erases the lines originating from the Schema. 
 
