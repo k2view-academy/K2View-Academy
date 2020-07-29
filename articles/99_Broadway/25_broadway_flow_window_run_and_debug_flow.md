@@ -1,16 +1,19 @@
 # Broadway Flow Window - Run and Debug Flow
-The Broadway flow window can be used to run or debug a Broadway flow. 
+
+The Broadway flow can be run from the [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) of the flow window by either:
+- Clicking **Run Flow** to run the entire flow and display the results.
+- Clicking **Debug Play** whereby the flow stops at the first break point and continues when clicking **Debug Step**.
 
 Note: Always save the flow before executing the Run and Debug Flow processes. When a [flow example](/articles/99_Broadway/17_tutorial_and_flow_examples.md) is opened, run or debugged, a local copy of the flow is saved in the Fabric project.
 
-The Main menu of the Broadway flow is at the top of the window and has the following options:
+The [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) of the Broadway flow is at the top of the window and has the following options:
 
 ![](/articles/99_Broadway/images/flow_tool_bar_run_and_debug.png)
 
 
 ## Setting Run and Debug Arguments
 
-1. Click **Actions** > **Debug/Run Arguments** to set an external input argument value with an **External** [population type](/articles/99_Broadway/03_broadway_actor.md#input-parameter-attributes). A window opens displaying a list of external input arguments.
+1. Click **Actions** > **Debug/Run Arguments** to set an external input argument value with an **External** [population type](/articles/99_Broadway/03_broadway_actor_window.md#input-parameters-properties). A window opens displaying a list of external input arguments.
 
 2. Set the **Type** of the **external** input arguments.
 
