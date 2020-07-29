@@ -1,4 +1,4 @@
-# Broadway Tutorial Flows
+# Broadway Tutorial Flow
 
 You are now familiar with Broadway and its main components. 
 
@@ -15,9 +15,9 @@ To learn more about a Broadway flow, please refer to the [Broadway Flow Overview
 
 [Broadway Flow Examples](/articles/99_Broadway/17_tutorial_and_flow_examples.md).
 
-### How Do I Open the Broadway Tutorial Flows?
+### How Do I Open the Broadway Tutorial Flow  
 
-To open the Broadway Tutorials flow, open the **Broadway Flow window**:
+Broadway Tutorials flows can be opened in the Broadway Flow window.
 
 1. Go to the **Fabric Studio** and create a new **Fabric project** named **Broadway_Training**. 
 2. Go to the **K2view Academy repository** and download the [Demo Project](/articles/demo_project) and import it to your **Fabric project**.
@@ -29,6 +29,7 @@ To open the Broadway Tutorials flow, open the **Broadway Flow window**:
 The Broadway Tutorial flow runs manipulations on the **Hello Broadway** string and returns the **Hello Broadway** result.
 
 In the following exercise you will run and debug the flow to view the input and the output of each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
+
 
 Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
 
