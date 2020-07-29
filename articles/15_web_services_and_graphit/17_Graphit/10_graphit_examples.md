@@ -88,7 +88,7 @@ This example illustrates a simple JavaScript routine that returns the highest nu
 #### grSQL.graphit
 This example illustrates a parent node that is defined as SQL non-prepared whereas its children nodes are defined as SQL.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags.PNG"></img>
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grSQLResp.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grSQL2Resp.PNG"></img>
 
 #### grString.graphit
 This example illustrates how two values retrieved from a previously-defined SQL query are concatenated.<br></br>
