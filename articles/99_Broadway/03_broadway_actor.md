@@ -2,9 +2,11 @@
 
 ## Actor Overview
 
-A Broadway  **Actor** represents the action that must be executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
+A Broadway  **Actor** represents an action that is executed on each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/99_Broadway/16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
-Broadway offers a number of [built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) which address a wide range of predefined activities and can be added to Broadway flows. When an Actor should execute a business logic that is not supported by any of the existing built-in Actors, one of the options is to use a **JavaScript** Actor, that executes the Javascript provided in the **script** [Input parameter](/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters). 
+Broadway offers a number of [built-in Actors](/articles/99_Broadway/04_built_in_actor_types.md) which address a wide range of predefined activities and can be added to Broadway flows. 
+
+When an Actor should execute a business logic that is not supported by any of the existing built-in Actors, one of the options is to use a **JavaScript** Actor, that executes the Javascript provided in the **script** [Input parameter](/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters). 
 
 The options for working with Actors include:
 - [Adding Actors to Stages](/articles/99_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage) of Broadway flow.
