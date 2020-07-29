@@ -4,7 +4,7 @@ The Broadway flow can be run from the [Main menu](/articles/99_Broadway/18_broad
 - Clicking **Run Flow** to run the entire flow and display the results.
 - Clicking **Debug Play** whereby the flow stops at the first break point and continues when clicking **Debug Step**.
 
-Note: Always save the flow before executing the Run and Debug Flow processes. When a [flow example](/articles/99_Broadway/17_tutorial_and_flow_examples.md) is opened, run or debugged, a local copy of the flow is saved in the Fabric project.
+Note that running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes were done to the flow, they will be automatically saved even if they were not saved explicitly. For example, when a [Tutorial flow](/articles/99_Broadway/17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
 The [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) of the Broadway flow is at the top of the window and has the following options:
 
@@ -34,7 +34,7 @@ The [Main menu](/articles/99_Broadway/18_broadway_flow_window.md#main-menu) of t
 
 ### Resetting Run/Debug Arguments
 
-Click **Actions** > **Debug/Run Arguments** and then click X adjacent to the argument to redefine its **type** and **value**.
+Click **Actions** > **Debug/Run Arguments** and then click ![image](/articles/99_Broadway/images/99_25_X.PNG) adjacent to the argument to redefine its **type** and **value**.
 
 ## Running and Stopping a Broadway Flow
 
@@ -68,12 +68,12 @@ When debugging an Actor with a complex output parameter, the parameter port is r
 
   ![](/articles/99_Broadway/images/compare_schema.png)
 
-2. Click **Update** to update the output parameter's Schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click the **+** adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the Schema on the left and the data values on the right.
+2. Click **Update** to update the output parameter's Schema. To open the [Data Inspector](/articles/99_Broadway/27_broadway_data_inspection.md), click ![image](/articles/99_Broadway/images/99_27_red_cross.PNG) adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the Schema on the left and the data values on the right.
 
 3. [Link](/articles/99_Broadway/20_broadway_flow_linking_actors.md) the output parameters of the Schema to another actor.
 
   ![](/articles/99_Broadway/images/data_insepction_debug.png)
 
 Note:
-- To reset an Actor's Schema settings, click **Actions** > **Reset Parameters Schemas**.  Removing the output Schema of complex types erases the lines originating from the Schema. 
+- To reset an Actor's Schema settings to the Actor original state, click **Actions** > **Reset Parameters Schemas**.  Removing the output Schema of complex types erases the lines originating from the Schema. 
 
