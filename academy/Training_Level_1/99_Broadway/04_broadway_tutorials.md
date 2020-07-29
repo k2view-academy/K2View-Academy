@@ -1,33 +1,32 @@
-# Broadway Tutorials Flows
+# Broadway Tutorial Flows
 
 You are now familiar with Broadway and its main components. 
 
-Broadway has various of example Broadway flows that you can explore and use as templates. 
+Broadway has various example flows that you can explore and use as templates. 
 
 ### What Will You Experience in this Learning Item?
 
-By the end of the Broadway Tutorials Flows learning item you will:
+By the end of the Broadway Tutorial Flows learning item you will:
 
-- Know how to open and use Broadway Flow examples.
+- Know how to open and use Broadway flow examples.
 - View, run and debug Broadway Tutorial flows to have a better understanding of Broadway.
 
-To learn more about the Broadway flow, please refer to the [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md) and the
+To learn more about a Broadway flow, please refer to the [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md) and the
 
 [Broadway Flow Examples](/articles/99_Broadway/17_tutorial_and_flow_examples.md).
 
-### How Do I Open the Broadway Tutorials Flow?
+### How Do I Open the Broadway Tutorial Flows?
 
-To open the Broadway Tutorials flow, first open the Broadway flow window:
+To open the Broadway Tutorials flow, open the **Broadway Flow window**:
 
-1. Create a new Fabric project in the Fabric Studio: Broadway_Training. 
-2. Download the [demo project](/articles/demo_project) from the K2view Academy repository and import it to your Fabric Project.
-3. Go to the project tree, right click **Broadway > New Flow**. Set a name in the Flow Name and open the Broadway flow window.
-4. Go to the Broadway flow window, select **Actions > Examples**.
-5. Select the **a-broadway-tutorial** option to open the Broadway Tutorial flow.
+1. Create a new Fabric project named **Broadway_Training** in the Fabric Studio. 
+2. Download the [demo project](/articles/demo_project) from the K2view Academy repository and import it to your Fabric project.
+3. Go to the **project tree**, right click **Broadway > New Flow**. Define the **Flow Name** to open the Broadway flow window.
+4. Select **Actions > Examples** > **a-broadway-tutorial** to open the Broadway Tutorial flow.
 
 ### Debugging the Broadway Tutorials Flow
 
-The Broadway Tutorial flow runs manipulations on the **Hello Broadway** String and returns the **Hello Broadway** result.
+The Broadway Tutorial flow runs manipulations on the **Hello Broadway**string and returns the **Hello Broadway** result.
 
 In the following exercise you will run and debug the flow to view the input and the output of each [State](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
@@ -35,7 +34,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 ###  ![](/academy/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
-1. Download the [demo project](/articles/demo_project) and open this project in your **Fabric Studio**.
+1. Download the [Demo Project](/articles/demo_project) and open this project in your **Fabric Studio**.
 2. Go to the **Project Tree**, right click the **Broadway** and select **New Flow**.
 3. Populate the **Name** in the **Flow name** popup window by **test**.
 4. In the Flow Window, Click **Actions** and then select **Examples**.
