@@ -1,10 +1,10 @@
 # ![](/academy/images/Exercise.png) Exercise – Adding a Condition to a Broadway Flow 
 
-You've just created and tested your first Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records. You've also practiced adding Stages and Actors to a Broadway flow and then adding a loop into the flow. 
+You've just created and tested your first Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records. You've also practiced adding Stages and Actors to a Broadway flow and then adding a loop to the flow. 
 
 Now, let's practice an additional Broadway flow feature - adding conditions to a flow. 
 
-A Broadway flow can be split into different execution paths based on conditions so that more than one Stage can be executed in each fork in the path.
+A Broadway flow can be split into different execution paths based on conditions so that more than one Stage can be executed in each fork of the path.
 
 In this exercise you will add a condition to your flow that does the following:
 
@@ -16,22 +16,22 @@ In this exercise you will add a condition to your flow that does the following:
 
     
 
-Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting and merging the Stages in a flow and about adding conditions to a Stage. 
+Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting and merging the Stages of a flow and about adding conditions to a Stage. 
 
 #### Step 1 - Open the Broadway Flow
 
-Go to **Project Tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
+Go to the **project tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
 
 
 #### Step 2 - Add Counting of Selected Customers
 
-Add the **Count** Actor to **Stage2**. This Actor returns the number of times an Actor is called. If you add this Actor in the loop on selected customers, it counts the number of the selected customers.
+Add the **Count** Actor to **Stage2**. This Actor returns the number of times an Actor is called. When this Actor is added to the loop, it counts the number of the selected customers.
 
 #### Step 3 - Add a Condition to the Flow
 
-1. Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A new popup window opens where you can add an Actor to the Stage. Select the **GreaterThanEquals** Actor and click  **SUBMIT**.
+1. Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A new popup window opens where you can add an Actor to the Stage. Select the **GreaterThanEquals** Actor and click  **SUBMIT**. 
 
-2. The **GreaterThanEquals** Actor returns true if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is marked in grey since it is added in a condition.
+The **GreaterThanEquals** Actor returns true if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is marked in grey since it is added in a condition.
 
    Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn more about Broadway Actors.
 
