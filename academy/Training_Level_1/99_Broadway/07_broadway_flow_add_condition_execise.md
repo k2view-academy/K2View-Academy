@@ -8,11 +8,11 @@ A Broadway flow can be split into different execution paths based on conditions 
 
 In this exercise you will add a condition to your flow that does the following:
 
-- Check if the number of selected customers >= 3:  
+- Checks if the number of selected customers >= 3:  
 
-  - If this condition is fulfilled, then add a message to the log file.
+  - If this condition is fulfilled, adds a message to the log file.
 
-  - Else, add an error message to the log file.
+  - Else, adds an error message to the log file.
 
     
 
@@ -25,13 +25,13 @@ Go to the **project tree** > **Shared Objects** > **Broadway** and click the flo
 
 #### Step 2 - Add Counting of Selected Customers
 
-Add the **Count** Actor to **Stage2**. This Actor returns the number of times an Actor is called. When this Actor is added to the loop, it counts the number of the selected customers.
+Add the **Count** Actor to **Stage 2**. This Actor returns the number of times an Actor is called. When this Actor is added to the loop, it counts the number of selected customers.
 
 #### Step 3 - Add a Condition to the Flow
 
-1. Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A new popup window opens where you can add an Actor to the Stage. Select the **GreaterThanEquals** Actor and click  **SUBMIT**. 
+1. Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A window opens where you can add an Actor to the Stage. Select the **GreaterThanEquals** Actor and click  **SUBMIT**. 
 
-The **GreaterThanEquals** Actor returns true if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is marked in grey since it is added in a condition.
+   The **GreaterThanEquals** Actor returns true if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is marked in grey since it is added in a condition.
 
    Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn more about Broadway Actors.
 
