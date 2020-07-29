@@ -13,7 +13,7 @@ By the end of the Broadway Flow learning item you will:
 
 A Broadway Flow:
 -  Represents a business process that binds other objects into the same flow. 
--  Acts as a graph or a tree that is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right where the Actors in each Stage of the flow are executed top-down.
+-  Acts as a graph or a tree that has several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right, where the Actors in each Stage of the flow are executed top-down.
 
 
 To learn more about a Broadway flow, please refer to [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md).
@@ -24,29 +24,29 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 #### Step 1 - Create a New Broadway Flow
 
-1. Download and open the [demo project](/articles/demo_project) in the Fabric Studio. 
+1. Download and open the [Demo Project](/articles/demo_project) in the Fabric Studio. 
 
 2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
 
 3. Populate the **Flow Name** and click **OK** to open the empty flow.
 
-#### Step 2 - Populate Stage 1 in the Flow
+#### Step 2 - Populate Stage 1 of the Flow
 
-1. Get the list of customers purchasing one or more new subscriptions (contracts) over the last 42 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
+1. Get a list of customers purchasing one or more new subscriptions (contracts) over the last 24 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
 
      ```
      Select count(*) As no_of_contracts,
      max(CONTRACT.FROM_DATE) As from_date,
      CONTRACT.CUSTOMER_ID
      From CRM_DB.CONTRACT
-     Where CONTRACT.FROM_DATE >= add_months(sysdate, -42)
+     Where CONTRACT.FROM_DATE >= add_months(sysdate, -24)
      Group By CONTRACT.CUSTOMER_ID
      Having count(*) > 2;
      ```
 
  2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
-       -  Read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
+       Please read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
 
        - Edit the **DbCommand** Actor in Stage 1.
 
@@ -63,7 +63,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
    - Write the JSON object to an output file.
 
-2. Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer's record.
+2. Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer record.
 
 3. Add a **JsonStringify** Actor to Stage 2 and link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop:
 
@@ -75,13 +75,13 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
    Read [Broadway Loops] to learn more about handling loops on Broadway flows. 
 
-5. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**. Please create this directory in your local Windows server.
+5. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**. Create this directory in your local Windows server.
 
-6. Add a **FileWrite** Actor to Stage 3 and edit it as follows:
+6. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
-   - Set the **Interface** parameter to **LocalFileSystem**. 
+   - Set **Interface** to **LocalFileSystem**. 
 
-   - Set the **Population Type** of the **path** to **Const** instead of **Link**.
+   - Set the path's **Population Type** to **Const** instead of **Link**.
 
    - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
 
@@ -99,7 +99,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 8. Close the loop after executing Stage 3:
 
-   - Click ***...*** in the right corner of the Stage to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
+   - Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
     Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing the Stage's settings.
 
@@ -109,7 +109,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 #### Step 4 - Flow Execution
 
-1. Run the flow, check your local directory and open the new JSON file that contains the list of customers selected from CONTRACT table.
+Run the flow, check your local directory and open the new JSON file that contains the list of customers selected from CONTRACT table.
 
 
 
