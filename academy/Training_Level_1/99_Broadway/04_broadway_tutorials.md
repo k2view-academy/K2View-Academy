@@ -4,7 +4,7 @@ You are now familiar with Broadway and its main components.
 
 Broadway has various example flows that you can explore and use as templates. 
 
-### What Will You Experience in this Learning Item?
+### What Will You Experience In This Learning Item?
 
 By the end of the Broadway Tutorial Flows learning item you will:
 
@@ -15,7 +15,7 @@ To learn more about a Broadway flow, please refer to the [Broadway Flow Overview
 
 [Broadway Flow Examples](/articles/99_Broadway/17_tutorial_and_flow_examples.md).
 
-### How Do I Open the Broadway Tutorial Flow  
+### How Do I Open The Broadway Tutorial Flow  
 
 Broadway Tutorials flows can be opened in the Broadway Flow window.
 
@@ -24,7 +24,7 @@ Broadway Tutorials flows can be opened in the Broadway Flow window.
 3. Go to the **project tree**, right click **Broadway > New Flow** and define the **Flow Name**. The **Broadway flow** window opens.
 4. Select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
 
-### Debugging the Broadway Tutorials Flow
+### Debugging The Broadway Tutorials Flow
 
 The Broadway Tutorial flow runs manipulations on the **Hello Broadway** string and returns the **Hello Broadway** result.
 
