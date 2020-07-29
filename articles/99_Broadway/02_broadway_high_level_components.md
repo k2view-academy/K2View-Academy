@@ -15,12 +15,18 @@ Actors can get their input from three different sources:
 * A Constant value supplied by the user.
 * An input argument to the flow (external).
 
+<table>
+<tr>
+<td valign="top">
 When the actor executes, it is completely agnostic to the source of its data.
 Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.
-
-<div align="center"><img src="images/input-output-arguments.png" height="400" /></div>
-In the image above we can see the JavaScript actor obtaining the *script* input as a constant input, *a* is supplied by connecting to a previous actor, *b* is supplied as input to the entire flow (named externalNumber) and the result is exposed as *flowResult*.
-
+In the image we can see the JavaScript actor obtaining the *script* input as a constant input, *a* is supplied by connecting to a previous actor, *b* is supplied as input to the entire flow (named externalNumber) and the result is exposed as *flowResult*.
+</td>
+<td width="400">
+<img src="images/input-output-arguments.png" width="800" />
+</td>
+</tr>
+</table>
 ## Type System
 
 Broadway actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
