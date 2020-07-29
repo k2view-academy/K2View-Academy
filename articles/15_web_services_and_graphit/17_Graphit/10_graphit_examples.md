@@ -134,7 +134,9 @@ The **sessionProvider** flag is set to CRM_DB whereby enabling direct references
 The response returns empty since the entire CRM_DB node and its children nodes are affected by the **enabled** flag.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/18_graphit_examples_tags.PNG"></img>
 Output:
+
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/grShowEnabledResp.png"></img>
+
 
 #### grShowNice.graphit
 The **nice** flag is set to TRUE and has been activated at the root node level. In the response, each tag appears in a new line that is indented according to the position of the tag in the document's hierarchy.<br></br>
