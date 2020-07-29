@@ -125,45 +125,59 @@ The **sessionProvider** flag is set to CRM_DB whereby enabling direct references
 #### grShowEnabled.graphit
 The response returns empty since the entire CRM_DB node and its children nodes are affected by the **enabled** flag.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/18_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grShowEnabledResp.PNG"></img>
 
 #### grShowNice.graphit
 The **nice** flag is set to TRUE and has been activated at the root node level. In the response, each tag appears in a new line that is indented according to the position of the tag in the document's hierarchy.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/19_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grShowNiceResp.PNG"></img>
+
 
 #### grOne.graphit
 The **one** flag is set to TRUE and has been applied to the Billing_DB2 node. The response only brings the first value for {"BILLING_DB2":{"SUBSCRIBER_ID":2}}, instead of the 10 values expected for this tag had the **one** flag not been activated.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/20_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grShowOneResp.PNG"></img>
+
 
 #### grEntry.graphit
 The **entry** flag has been set to the Subscribers node and therefore the XML response displays tags around each subscriber_id value.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/21_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grEntryResp.PNG"></img>
+
 
 #### grAttribute.graphit
 The **attribute** flag has been activated on all children nodes of the CRM_DB node.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/22_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grAttributeResp.PNG"></img>
 
 #### grFormat.graphit
 The **format** flag has been set to XML in the root node. The response format is only displayed if the Output value (right of the Run icon) is set to XML. Running the file with other output selections like JSON or CSV returns an error.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/23_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grFormat2Resp.PNG"></img>
 
 #### grShowEmpty.graphit
 The **showempty** flag has been set to False and applied to the CRM_DB node. Empty nodes are not shown in the response.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/24_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grShowEmptyResp.PNG"></img>
 
 #### grShowNull.graphit
 The **showNull** flag has been set to False and applied to the CRM_DB node. Null values are ignored and not shown in the section of the response referring to the CRM_DB. Since the flag has not been applied to the Billing_DB node, null values are displayed.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/25_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grShowNullResp.PNG"></img>
 
 #### grNumberFormat.graphit
 The **numberFormat** flag has been set to 000.00 and applied to the NumberFormat node. All responses display **numberFormat** with 3 digits before the floating point and another 2 after.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/26_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grNumberFormatResp.PNG"></img>
 
 #### grKeys.graphit
 The response has been reorganized using the subscriber_id as a key.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/27_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grKeysResp.PNG"></img>
 
 #### grCSV.graphit
 The csvRow has been set to the SUBSCRIBER_ID node and csvHeader has been set to False in the Subscriber_info node. The header has been removed from the CSV output and a new line has been created for each new subscriber_id entry.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/28_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grCSV2Resp.PNG"></img>
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
