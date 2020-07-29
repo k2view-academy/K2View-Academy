@@ -5,17 +5,16 @@ Now you are now familiar with Broadway and its main components and have checked 
 
 ### What Will You Experience In This Learning Item?
 
-By the end of the Broadway Flows learning item you will:
+By the end of the Broadway Flow learning item you will:
 
 - Know how to create your first Broadway flow.
-- View, run and debug Broadway your Broadway flow.
+- View, run and debug your Broadway flow.
 
 
-A **Broadway Flow**:
+A Broadway Flow:
 -  Represents a business process that binds other objects into the same flow. 
--  Acts as a graph or a tree that is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). 
-  -    Stages are executed consecutively from left to right.
-  -    Actors in each Stage of the flow are executed top-down.
+-  Acts as a graph or a tree that is built from several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right where the Actors in each Stage of the flow are executed top-down.
+
 
 To learn more about a Broadway flow, please refer to [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md).
 
@@ -27,13 +26,13 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 1. Download and open the [demo project](/articles/demo_project) in the Fabric Studio. 
 
-2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name pop-up window.
+2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
 
 3. Populate the **Flow Name** and click **OK** to open the empty flow.
 
 #### Step 2 - Populate Stage 1 in the Flow
 
-1. Get the list of customers who purchased one or more new subscriptions (contract) over the last 42 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
+1. Get the list of customers purchasing one or more new subscriptions (contracts) over the last 42 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
 
      ```
      Select count(*) As no_of_contracts,
@@ -45,15 +44,15 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
      Having count(*) > 2;
      ```
 
- 2. Add a **DbCommand** Actor to run the above SELECT statement on Stage 1: 
+ 2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
        -  Read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
 
        - Edit the **DbCommand** Actor in Stage 1.
 
-         - Select CRM_DB for the interface parameter.
+         - Select **CRM_DB** as the **Interface Parameter**.
 
-         - Click **QB** in the **sql** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the SQL above in the Query Builder window and click OK to populate the sql parameter.
+         - Click **QB** in the **SQL Parameter** value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL Parameter**.
 
            ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
@@ -66,7 +65,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 2. Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer's record.
 
-3. Add a **JsonStringify** Actor to the Stage 2 and link the **[result]** output parameter of the **DbCommand** Actor  to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop:
+3. Add a **JsonStringify** Actor to Stage 2 and link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop:
 
    ![JsonStringify](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage2.png)
 
@@ -78,7 +77,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 5. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**. Please create this directory in your local Windows server.
 
-6. Add a **FileWrite** Actor to the Stage 3. Edit the **FileWrite** added to this Stage as follows:
+6. Add a **FileWrite** Actor to Stage 3 and edit it as follows:
 
    - Set the **Interface** parameter to **LocalFileSystem**. 
 
@@ -86,28 +85,29 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
    - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
 
-   - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file by.
+   - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
      ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3.png)
 
-   Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn about the Actor window and setting the Actor's parameters. 
+  
+  Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn about the Actor window and setting the Actor's parameters. 
 
 7. Link the **JsonStringify** Actor's **string** output parameter to the **[stream]** input parameter of the **FileWrite** Actor. The **FileWrite** Actor executes the following activities:
 
-   - Creates a new file, named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
+   - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
    - Appends each JSON object sent for each selected customer to the file.
 
-8. Close the loop after executing the Stage 3:
+8. Close the loop after executing Stage 3:
 
-   - Click ***...*** in the right corner of the Stage to open the Stage context menu. Select **Iterate Close** to close the loop after the execution of the Stage.
+   - Click ***...*** in the right corner of the Stage to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
     Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing the Stage's settings.
 
-9. Stages 2 and 3 are in grey with a black frame to indicate that loop has been opened and closed.
+9. Stages 2 and 3 are in grey with a black frame to indicate that the loop has been opened and closed.
 
    ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3_close_loop.png)
 
-#### Step 4- Flow Execution
+#### Step 4 - Flow Execution
 
 1. Run the flow, check your local directory and open the new JSON file that contains the list of customers selected from CONTRACT table.
 
