@@ -73,9 +73,9 @@ For example:
 [Click for more information about Broadway data types](/articles/99_Broadway/05_data_types.md#data-types-in-broadway).
 
 The population of the input parameter depends on the **Population Type**. The following types are supported:
-- **Link**, gets the input value as an input parameter from another Actor. When **Link** is selected,it connects the parameter to another Actor's output parameter.
+- **Link**, gets the input value as an input parameter from another Actor. When **Link** is selected, it connects the parameter to another Actor's output parameter.
 - **Const**, sets the value of the parameter. When **Const** is selected, a text area opens under the parameter to enable populating the parameter value.
-- **External**, gets the input value as a parameter from the external process which executes the Broadway flow. When External is selected, a additional **External Name** field opens under the parameter.
+- **External**, gets the input value as a parameter from the external process which executes the Broadway flow. When External is selected, the **External Name** field opens under the parameter.
 
 <table>
 <tbody>
@@ -90,10 +90,10 @@ The population of the input parameter depends on the **Population Type**. The fo
 The actions on the input parameters are:
 - Default value, set a default value for an input parameter (for **Link** and **External** population types). Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables inserting numbers into this parameter.
 - Edit Schema, click to open the popup window that enables updating the parameter's type.
-- Description, click to check the parameter's description. The description cannot be changed.
+- Description, click to check the parameter's description. The description cannot be updated.
 - Remark,  click to add a remark. A remark can be modified later on.
 
-Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query as shon in the following **DbCommand** built-in Actor example:
+Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
 ![image](/articles/99_Broadway/images/99_03_sql.PNG)
 
@@ -109,14 +109,14 @@ Note that the input parameters of the ancestor Actor cannot be deleted.
 
 ![Sql_input](/articles/99_Broadway/images/99_03_outputs.PNG)
 
-The Actors output parameters are displayed in the Actor's Properties window in the following format:
+The Actor's output parameters are displayed in the Actor's Properties window in the following format:
 
 - [Parameter Name] : [Parameter Type]
 
 The actions in the output parameters are:
 - Set External, click to expose the output parameter to the external process that executes the Broadway flow. When selected, the **External Name** field opens under the parameter.
 - Edit Schema, click to open the popup window that enables updating the parameter's type.
-- Description, click to check the parameter's description. The description cannot be changed.
-- Remark, click to add a remark. The remark can be modified later.
+- Description, click to check the parameter's description. The description cannot be updated.
+- Remark, click to add a remark. The remark can be modified later on.
 
 [![Previous](/articles/images/Previous.png)](/articles/99_Broadway/03_broadway_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
