@@ -21,7 +21,7 @@ Please refer to the files in the following table's Example column. We suggest th
 <td valign="top" width="50pxl">Field</td>
 <td valign="top" width="900pxl">Basic node type. Defines the node as a tag in XML / JSON format.</td>
 <td valign="top" width="50pxl"> 
-    <a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grformatgraphit">grFormat</a>
+    <a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grfieldgraphit">grField</a>
 </td>
 </tr>
 <tr>
