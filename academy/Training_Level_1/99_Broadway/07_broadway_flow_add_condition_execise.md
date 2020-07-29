@@ -1,8 +1,8 @@
 # ![](/academy/images/Exercise.png) Exercise – Adding a Condition to a Broadway Flow 
 
-You've just created and tested your first Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records. You've also practiced adding Stages and Actors to a Broadway flow and then adding a loop to the flow. 
+You have just created and tested your first Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records. You have also practiced adding Stages and Actors to a Broadway flow and then adding a loop to the flow. 
 
-Now, let's practice an additional Broadway flow feature - adding conditions to a flow. 
+Now, let's look at an another Broadway flow feature - adding conditions to a flow. 
 
 A Broadway flow can be split into different execution paths based on conditions so that more than one Stage can be executed in each fork of the path.
 
