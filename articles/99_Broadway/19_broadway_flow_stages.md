@@ -1,10 +1,10 @@
 # Broadway Flow - Stages
 
 **A Broadway flow** acts as a graph / tree and is built of several **Stages** where each Stage is a step of the flow. 
-- A Stage can have one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). 
-- A Stage can be [added or deleted](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage) from the flow.
-- A Stage can be split to create [more than one Stage on the same level](/articles/99_Broadway/19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages). 
-- [Stage conditions](/articles/99_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow.  
+- A Stage can have one or more [Actors](03_broadway_actor.md). 
+- A Stage can be [added or deleted](19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage) from the flow.
+- A Stage can be split to create [more than one Stage on the same level](19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages). 
+- [Stage conditions](19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow.  
 
 The flow's Stages are executed consecutively from left to right. When there are several Stages on the same level, the execution order is top down. The Actors within each Stage are also executed top down. 
 
@@ -14,15 +14,15 @@ A Stage can be added anywhere in the flow.
 
 - To add a Stage to the end of the flow, click the big **+** in the empty Stage area.
 
-![Flow-Plus Icon](/articles/99_Broadway/images/99_18_01_main_flow_area.PNG)
-- To add a Stage in the middle of the flow, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select either **Insert After** or **Insert Before**. 
-- To delete a Stage, click **Delete** in the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu). If the Stage has a dependent branch, it is also deleted.
+![Flow-Plus Icon](images/99_18_01_main_flow_area.PNG)
+- To add a Stage in the middle of the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select either **Insert After** or **Insert Before**. 
+- To delete a Stage, click **Delete** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). If the Stage has a dependent branch, it is also deleted.
 
 ### How Do I Split or Merge the Stages?
 
 Each Stage can be split into two (and so on) to create several stages on the same dependency level. 
 
-To split a Stage, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select  **Split**. 
+To split a Stage, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select  **Split**. 
 
 The Split's logic depends on the position of the Stage in the flow and includes the following rules:
 - The first Stage in the flow (root) cannot be split. 
@@ -37,13 +37,13 @@ Stages can be merged under the following conditions:
 
 Stages 1, 4 and 5 can be merged.
 
-![image](/articles/99_Broadway/images/99_19_merge_example_1.PNG)
+![image](images/99_19_merge_example_1.PNG)
 
 **Invalid Merge Example**
 
 Stages 1 and 6 cannot be merged since they do not have a common parent.
 
-![image](/articles/99_Broadway/images/99_19_merge_example_2.PNG)
+![image](images/99_19_merge_example_2.PNG)
 
 ### What is a Stage Condition?
 
@@ -60,9 +60,9 @@ The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 
 ### How Do I Define a Stage Condition?
 
-- To add a Stage condition to the flow, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition**. 
+- To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition**. 
 
-- To mark a Stage as **else**, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Stage and select **Else**.
+- To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) in the right corner of the Stage and select **Else**.
 
 Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
 
@@ -82,6 +82,6 @@ Depending on the flow input, the execution order of the Actors in this flow is:
 - If only **Cond2 is true**: A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-Split -> Logger2 -> Count1
 - If both **Cond1 and Cond2 are false**: A1 -> Cond1 (false) -> Cond2 (false) -> B2 -> B3 -> Logger1 -> Logger2
 
-![image](/articles/99_Broadway/images/99_19_cond_example_1.PNG)
+![image](images/99_19_cond_example_1.PNG)
 
-[![Previous](/articles/images/Previous.png)](/articles/99_Broadway/18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/20_broadway_flow_linking_actors.md)
+[![Previous](/articles/images/Previous.png)](18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](20_broadway_flow_linking_actors.md)

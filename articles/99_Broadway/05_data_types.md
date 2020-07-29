@@ -1,6 +1,6 @@
 # Data Types in Broadway
 
-Broadway actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
+Broadway Actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
 
 ### Primitives
 
@@ -74,3 +74,5 @@ When binary data is referred to as a string or vice versa, utf-8 binary represen
 Not all conversions are possible. When Broadway cannot convert a data type, an Exception will be thrown. This could be as a result of parsing errors (for instance String to Long) or of unsupported conversions (for instance Long to Map).
 
 In such cases, or when the implicit conversion is unsatisfactory, you can consider using an Actor to explicitly convert between data types and data representations.
+
+[![Previous](/articles/images/Previous.png)](04_built_in_actor_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()

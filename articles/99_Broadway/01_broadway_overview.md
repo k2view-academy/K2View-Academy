@@ -15,35 +15,35 @@ Broadway is a flexible engine and is seamlessly integrated into the Fabric comma
 
 ## Orchestration and Business Process
 
-A Broadway flow is built from [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) which are executed from left to right. A flow can be split into different execution paths based on conditions. More than one Stage can be executed in each fork in the path.
+A Broadway flow is built from [Stages](19_broadway_flow_stages.md) which are executed from left to right. A flow can be split into different execution paths based on conditions. More than one Stage can be executed in each fork in the path.
 
-![image](/articles/99_Broadway/images/Broadway_flow.png)
+![image](images/Broadway_flow.png)
 
 In the example above, the **Fetch** Stage is executed first. The system then executes either the **Transform Consumer** or (else) the **Transform Business** Stage and finally the **Load** Stage.
 
 
 ## Logic and Data Transformation
 
-Each Stage can contain one or more [Actor](/articles/99_Broadway/03_broadway_actor.md) which are reusable pieces of logic with input and output arguments that can be assembled together to create complex logic. Actors are executed by Stages.
+Each Stage can contain one or more [Actor](03_broadway_actor.md) which are reusable pieces of logic with input and output arguments that can be assembled together to create complex logic. Actors are executed by Stages.
 
-![image](/articles/99_Broadway/images/Broadway_actors.png)
+![image](images/Broadway_actors.png)
 
 In the example above, **Fetch** Stage queries data and transfers it as input to the Actors in the next Stages. Based on the data, either the **Transform Consumer** Stage or the **Transform Business** Stage is executed. In turn, these Stages execute the Actors that build data for the **DbLoad** Actor in the last Stage.
 
 Note that an entire Broadway flow can be exported and encapsulated into an Actor and then be reused between flows. This is powerful tool for reusing logic and working with highly-complex flows.
 
-[Click for more information Broadway flows.](/articles/99_Broadway/16_broadway_flow_overview.md)
+[Click for more information Broadway flows.](16_broadway_flow_overview.md)
 
 
 ## Data Inspection
 
 When Broadway transfers data between Actors, the data is displayed in the Broadway Studio. Complex data types (objects, arrays) are automatically detected and analyzed, and both metadata and data are visually rendered for easy debugging and extraction.
 
-![image](/articles/99_Broadway/images/Broadway_data_inspection.png)
+![image](images/Broadway_data_inspection.png)
 
 The example above displays how the system automatically identifies the data structure of the **FetchCustomer** Actor. This enables selecting specific fields from the data and transferring them to the appropriate Actors.
 
-[Click for more information about Data Inspection.](/articles/99_Broadway/27_broadway_data_inspection.md)
+[Click for more information about Data Inspection.](27_broadway_data_inspection.md)
 
 
 ## Learning Broadway
@@ -56,7 +56,7 @@ Another great way to learn how to use Broadway is from the built-in Tutorial whi
 
 The **a-broadway-tutorial.flow** takes you through the major Broadway features and capabilities and can act as a good starting point. Other example flows focus on a single feature or capability, demonstrating and explaining them in depth.
 
-[Click for more information about Broadway Tutorial and flow examples.](/articles/99_Broadway/17_tutorial_and_flow_examples.md)
+[Click for more information about Broadway Tutorial and flow examples.](17_tutorial_and_flow_examples.md)
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/02_broadway_high_level_components.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_broadway_high_level_components.md)
