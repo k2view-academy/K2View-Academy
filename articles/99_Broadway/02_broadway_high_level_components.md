@@ -19,6 +19,7 @@ There are a few other core capabilities that are important to the high level und
       <li>The output of a previous actor: the connecting lines between actors.</li>
       <li>A Constant value supplied by the user.</li>
       <li>An input argument to the flow (external).</li>
+    </ul>
 
 <p>When the actor executes, it is completely unaware to the source of its data.</p>
 <p>Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.</p>
