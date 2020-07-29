@@ -78,34 +78,42 @@ e.g. csvHeader: false -> removes fields headers from the response.
 #### grFormat.graphit
 In this example, all children nodes of the CRM_DB node are defined as **field**. The response populates the document with the names and values of each specific field.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/09_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grFormatResp.PNG"></img>
 
 #### grFunction.graphit
 This example illustrates a simple JavaScript routine that returns the highest number of the **x** random number and the **y** random number.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/10_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grFormatResponse.PNG"></img>
 
 #### grSQL.graphit
 This example illustrates a parent node that is defined as SQL non-prepared whereas its children nodes are defined as SQL.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags.png"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grSQLResp.PNG"></img>
 
 #### grString.graphit
 This example illustrates how two values retrieved from a previously-defined SQL query are concatenated.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/12_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grStringResp.PNG"></img>
 
 #### grCondition.graphit
 The condition defined in this file triggers either the TRUE or FALSE node depending on the randomly generated values of **x** and **y**.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/13_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grConditionResp.PNG"></img>
 
 #### grGroup.graphit
 The ${x} string has been added to both TRUE and FALSE groups, while the ${y} value is not declared in the groups. The display ${x} also lists the group of origin.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/14_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grGroupResp.PNG"></img>
 
 #### grCollect.graphit
 This example shows how both Subscriber and Billing datasets are collected into one single array.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/15_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grCollectResp.PNG"></img>
 
 #### grRaw.graphit
 This example illustrates XML output in raw format. Observe the header value displayed in the response: ```(?xml version="1.0" encoding="UTF-8"...)```<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/16_graphit_examples_tags.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grRawResp.PNG"></img>
 
 
 ###  Graphit Node Properties Examples
