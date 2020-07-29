@@ -19,37 +19,35 @@ To learn more about a Broadway flow, please refer to the [Broadway Flow Overview
 
 To open the Broadway Tutorials flow, open the **Broadway Flow window**:
 
-1. Create a new Fabric project named **Broadway_Training** in the Fabric Studio. 
-2. Download the [demo project](/articles/demo_project) from the K2view Academy repository and import it to your Fabric project.
-3. Go to the **project tree**, right click **Broadway > New Flow**. Define the **Flow Name** to open the Broadway flow window.
-4. Select **Actions > Examples** > **a-broadway-tutorial** to open the Broadway Tutorial flow.
+1. Go to the **Fabric Studio** and create a new **Fabric project** named **Broadway_Training**. 
+2. Go to the **K2view Academy repository** and download the [Demo Project](/articles/demo_project) and import it to your **Fabric project**.
+3. Go to the **project tree**, right click **Broadway > New Flow** and define the **Flow Name**. The **Broadway flow** window opens.
+4. Select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
 
 ### Debugging the Broadway Tutorials Flow
 
-The Broadway Tutorial flow runs manipulations on the **Hello Broadway**string and returns the **Hello Broadway** result.
+The Broadway Tutorial flow runs manipulations on the **Hello Broadway** string and returns the **Hello Broadway** result.
 
-In the following exercise you will run and debug the flow to view the input and the output of each [State](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
+In the following exercise you will run and debug the flow to view the input and the output of each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
 Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
 
 ###  ![](/academy/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
-1. Download the [Demo Project](/articles/demo_project) and open this project in your **Fabric Studio**.
-2. Go to the **Project Tree**, right click the **Broadway** and select **New Flow**.
-3. Populate the **Name** in the **Flow name** popup window by **test**.
-4. In the Flow Window, Click **Actions** and then select **Examples**.
-5. Select **a-broadway-tutorial** to open the Broadway Tutorial flow.
-6. Click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) icon to run the flow.
-
+1. Download the [Demo Project](/articles/demo_project) and open it in the **Fabric Studio**.
+2. Go to the **project tree**, right click **Broadway** and select **New Flow** to open the **Flow name** window. 
+3. In the **Name** field type **test**, click **Actions** and select **Examples**.
+4. Select **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
+5. Click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
   <ul>
  <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
 
-7. Add a Breakpoint to the **for each** Stage and click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the Flow window and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
+6. Add a **Breakpoint** to the **for each Stage** click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the **Flow window** and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
 
 <ul>
 <pre><code>
-  A. How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>for each</strong> Stage?<br>
+  A. How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>for each Stage</strong>?<br>
   B. Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
   C. What is the output of the <strong>StringBuilder</strong> Actor?
   D. How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
@@ -57,7 +55,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 </code></pre>
 </ul>
 
-  ![info](/academy/images/information.png) Click the green asterisk icon in the **splitting the flow** to read its remark, and check the value of the Actor in the **paradox** Stage to help you answer this question.
+  ![info](/academy/images/information.png) Click the green asterisk in **splitting the flow** to read its remarks and check the value of the Actor in the **paradox** Stage to help you answer this question.
 
  8. Click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
  9. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode.
@@ -67,19 +65,19 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 </ul>
 
 10. Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the Debug process.
-11. Click the **Const** Actor of the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
+11. Click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
 12. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 13. Run the flow.
 <ul><pre><code>A. What is the flow's result?</code></pre></ul> 
 
-14. Close the Broadway Turorial flow and check the list of Broadway Flows under your **Project Tree**.
+14. Close the Broadway Turorial flow and check the list of Broadway flows under the **project tree**.
 <ul><pre><code>A. How may flows do you have now?</code></pre></ul>
 
 15. Reopen the Broadway Tutorial flow and click the **Const** Actor in the **Hello Broadway** Stage.
 <ul><pre><code>A. Which value is set for the input parameter?</code></pre></ul> 
 
 
-### ![](/academy/images/Solution.png)Solution- Run and Debug Broadway Tutorial Flow Exercise 
+### ![](/academy/images/Solution.png)Solution - Run and Debug Broadway Tutorial Flow Exercise 
 
  <ul>
  <pre><code> 
