@@ -6,7 +6,7 @@ A Broadway flow is built in Stages which are executed from left to right. Each S
 
 Occasionally there may be a need to iterate the output of an Actor and to handle each iteration. 
 
-For example, the  [Simple Broadway Flow](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md#example---building-a-simple-broadway-flow) that you built in the previous lesson selects the list of customers from the database and then builds a JSON object for each customer and writes it into an output file.
+For example, the  [Simple Broadway Flow](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md#example---building-a-simple-broadway-flow) that you built in the previous lesson selects a list of customers from the database and then builds a JSON object for each customer and writes it into an output file.
 
 You can add loops either by:
 
@@ -14,7 +14,7 @@ You can add loops either by:
 
   Read [Broadway Flow Window](/articles/99_Broadway/18_broadway_flow_window.md) to learn more about the Stage context menu.
 
-- Adding a loop into the Actor which iterates the data and handles each iteration.
+- Adding a loop to the Actor to iterate the data and handle each iteration.
 
   Read [Broadway Flows Loops] to learn more about adding loops to Broadway flows.
 
@@ -28,7 +28,7 @@ A Broadway flow can be split into different execution paths based on conditions.
 
   - Else => Do something else.
 
-  Read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting or merging the Stages in a flow and about adding conditions to a Stage.  
+  Read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting or merging the Stages of a flow and about adding conditions to a Stage.  
 
   Please continue to the next exercise to enhance your first Broadway flow and add a condition to it. 
 
