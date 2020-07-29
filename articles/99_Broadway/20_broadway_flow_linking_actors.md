@@ -128,7 +128,7 @@ The source parameter holds the following Schema:
 } 
 ```
 
-To connect a specific element in the Schema, click **+** in the parameter to open the **Data Inspection** and view the parameters list in the object:
+To connect a specific element in the Schema, click ![image](/articles/99_Broadway/images/99_27_red_cross.PNG) adjacent to the Actor's output argument to expand the **yellow segment** of the **Data Inspection** and view the parameters list in the object:
 
 ![data inspection](/articles/99_Broadway/images/99_20_data_inspection_example.PNG)
 
@@ -136,7 +136,7 @@ To connect a specific element in the Schema, click **+** in the parameter to ope
 - Click the parameter name in the **Data Inspection** and drag the **connection line** to the **input parameter** of the target Actor.
 - Click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu) and select **Link**. Populate the **Target Actor**, **Target Parameter**, **Selection Parameter** (source Schema parameter) and **Selection Schema** (parameter name in the source Schema). Click **V** to save the changes.
 
-    ![Adding link](/articles/99_Broadway/images/add_link_2.png)
+    ![Adding link](/articles/99_Broadway/images/99_20_add_link_2.png)
 
 A Schema can be connected to another Actor. For example, connecting the output Schema to the **params** input parameter of the **DbLoad** Actor. Note that if a specific element of the Data Inspection object is connected to another input parameter of the **DbLoad** Actor, the specific link overrides the link of the Schema to the **params** input parameter.  
 
