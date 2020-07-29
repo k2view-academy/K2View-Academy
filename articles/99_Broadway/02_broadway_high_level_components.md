@@ -50,7 +50,7 @@ Broadway can learn the schema by example. Just run the flow, and the meta data i
 A common pattern of execution is to perform an iterative operation on a data set. For instance, performing some data transformation on a database result-set or traversing a JSON array obtained from a REST API.
 The way Broadway deals with such cases is with the *Iterate* line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
 
-<div align="center"><img src="images/overview_iterate.png"></div>
+<div align="center"><img src="images/overview_iterate.png" width="750"></div>
 
 ## Stage Conditions
 
