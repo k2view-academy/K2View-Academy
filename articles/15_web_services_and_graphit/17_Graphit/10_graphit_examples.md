@@ -75,7 +75,7 @@ e.g. csvHeader: false -> removes fields headers from the response.
 
 
 ###  Graphit Node Types Examples
-#### grFormat.graphit
+#### grField.graphit
 In this example, all children nodes of the CRM_DB node are defined as **field**. The response populates the document with the names and values of each specific field.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/09_graphit_examples_tags.PNG"></img>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/grFormatResp.PNG"></img>
