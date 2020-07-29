@@ -11,7 +11,7 @@ Explanations in the Tutorial are written in **Remarks** and can be displayed by 
 - Click ![image](images/99_17_main_ast.PNG) in the [Main menu](18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
 - Click ![image](images/99_17_green_ast.PNG) in the right corner of a [Stage](19_broadway_flow_stages.md) or [Actor](04_built_in_actor_types.md) to see its remarks.
 
-More remarks can be added by selecting **Remark** from either the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) or the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu). 
+More remarks can be added by selecting **Remark** from either the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) or the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). 
 
 The Tutorial explains that a flow can be run by either:
 
@@ -29,9 +29,9 @@ The Tutorial explains the usage of a number of common [built-in Actor Types](04_
 
 [Dynamic Logic Actors](<!--Link to 6-Edit Actors - Dynamic actors-->) include dynamic logic as one of their inputs. The input can be added to Actors and be referred to the Actor's logic. For example, **JavaScript** Actor executes the JavaScript provided in the **script** parameter and returns the value of the last expression.  **javascript.flow** provides an additional explanation of how this Actor works. 
 
-[**Conditions**](19_broadway_flow_stages.md#what-is-a-stage-condition) are implemented using the **Stage Condition** option in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). You can [split the Stage](19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return false. Checkout **conditions.flow** for more conditions examples.
+[Conditions](19_broadway_flow_stages.md#what-is-a-stage-condition) are implemented using the **Stage Condition** option in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). You can [split the Stage](19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages) and assign a condition to one or more Stages created as a result of the split. An **else** Stage runs if all other Stage conditions return false. Checkout **conditions.flow** for more conditions examples.
 
-[**Flow loops**](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the line and change its **Link Type** value to **Iterate** in the [Link Properties window](20_broadway_flow_linking_actors.md#link-object-properties). To close the scope of the iteration, select **Iterate Close** from the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). Checkout **iterate-for-each.flow** for more loop's examples.
+[Flow loops](<!--Link to 22-Flow Loops-->) are implemented via an **Iterate** connection type. To change the **line type**, select the line and change its **Link Type** value to **Iterate** in the [Link Properties window](20_broadway_flow_linking_actors.md#link-object-properties). To close the scope of the iteration, select **Iterate Close** from the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). Checkout **iterate-for-each.flow** for more loop's examples.
 
 An Actor's input or output argument can be set as [External](03_broadway_actor_window.md#actors-inputs-and-outputs). When marking an output parameter as External, it becomes an output for the entire flow. In addition, a flow can be invoked using the **InnerFlow** Actor. You can also [package an entire flow as an Actor](<!-- Add link to 23-Inner flow-->). To do so, go to **Actions > Save As Actor** in the [Main menu](18_broadway_flow_window.md#main-menu). Checkout **javascript-advanced.flow**, **inner-flow-power.flow** and **inner-flow.flow** for more about input/output arguments and examples of the inner flow.  
 
