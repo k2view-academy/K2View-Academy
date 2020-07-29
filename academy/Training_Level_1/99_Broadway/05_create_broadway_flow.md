@@ -28,7 +28,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
 
-3. Populate the **Flow Name** and click **OK** to open the empty flow.
+3. Populate the **Flow Name** and click **OK** to open an empty flow.
 
 #### Step 2 - Populate Stage 1 of the Flow
 
@@ -46,18 +46,18 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
  2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
-       Please read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
+      Read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
 
        - Edit the **DbCommand** Actor in Stage 1.
 
-         - Select **CRM_DB** as the **Interface Parameter**.
+         - Select **CRM_DB** as the **Interface**.
 
-         - Click **QB** in the **SQL Parameter** value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL Parameter**.
+         - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter.
 
            ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
 #### Step 3 - Read the Customer's List and Create a File
-1. The next Stages must run a loop on the list of selected customers. For each selected record: 
+1. The next Stages run a loop on the list of selected customers. For each selected record: 
 
    - Build a JSON object.
 
@@ -101,9 +101,9 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
    - Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
-    Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing the Stage's settings.
+    Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
-9. Stages 2 and 3 are in grey with a black frame to indicate that the loop has been opened and closed.
+9. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
 
    ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3_close_loop.png)
 
