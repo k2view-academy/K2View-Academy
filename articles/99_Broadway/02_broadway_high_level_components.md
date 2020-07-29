@@ -1,40 +1,69 @@
 # Broadway High Level Components
 
-Broadway combines the following capabilities:
 
-* ETL (Extract Transform Load) - Broadway can integrate with all Fabric and all interfaces supported by Fabric, such as: http/s, publish and subscriber messages from JMS or Kafka, etc... to extract the data, transform it and load it to the required target.
-* BPM (Business Process Management) - manage the business processes, covering both design and execution, adding the ability to define the business flow, the order of the activities and the reaction to each flow stage results, plus advanced error handling on a stage level that leads to the desired reaction.
-* Data Inspection - live data inspection capabilities with holistic and dynamic view on meta data (data structure) and actual data flow.
+In the Overview we saw the main Broadway concepts that make it a unique solution:
+Stages as way to model work flow, Actors to model data flow and data inspection to
+discover and manipulate complex data types.
 
-The BPM is defined by a **Flow** object. Each Flow must  have **1-N Stages**. 
-
-The **Stage** represents an execution order level in the flow. Each Stage must have **1-N Actors**. 
-
-The **Actor** represents an activity (action) like reading a file, creating a table, parsing and object, load a table. An Actor can send parameters to other Actors in the next Stages.
-
-Broadway has a vast list of [built in Actors](/articles/99_Broadway/04_built_in_actor_types.md) that can create various types of activities and can be added to each flow. 
-
-The flow execution starts with the execution of the first Stage (on the left side) and then executes the Stages by their order- from left to right.  
-
-**For example:**
-
-​	Define a business flow to extract, transform and load a customer's financial activities:
-
-![image-20200629101940357](/articles/99_Broadway/images/customer_map_financial_activities_flow_example.png)
-
-​	This flow has four Stages and each Stage has different Actors:  
-
-- Stage 1 - extracting the the financial activities of the customer.
-- Stage 2 - complete missing data of the financial activities.
-- Stage 3- link the payments to the open invoices.
-- Stage 4- load the data to the target DB. 
+There are a few other core capabilities that are important to the high level understanding of the Broadway system.
 
 
-Broadway also has a **Data Inspection** capability to view the complex data structure, returned by an **Actor** by building a dynamic schema representing the meta data of the returned object.
+## Actor Input/Output Arguments
 
-See below an example of a Broadway Flow which populates a table by financial activities and builds an invoice's list.
+Actors can get their input from three different sources:
+* The output of a previous actor: the connecting lines between actors.
+* A Constant value supplied by the user.
+* An input argument to the flow (external).
 
-![image](/articles/99_Broadway/images/Broadway_full.png)
+When the actor executes, it is completely agnostic to the source of its data.
+Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.
+
+<div align="center"><img src="images/input-output-arguments.png" height="400" /></div>
+In the image above we can see the JavaScript actor obtaining the *script* input as a constant input, *a* is supplied by connecting to a previous actor, *b* is supplied as input to the entire flow (named externalNumber) and the result is exposed as *flowResult*.
+
+## Type System
+
+Broadway actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
+Broadway supports Arrays, Maps and Primitives such as String, Long, Real, Date, Boolean and Byte Array (binary data).
+In addition Broadway has a robust type conversion system that automatically converts between types where possible, relieving the user of the burden of type conversion.
+
+## Data Schema
+
+The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that leverage the known data structure.
+Broadway can learn the schema by example. Just run the flow, and the meta data is automatically derived from the data. If you do have available JSON schemas to describe, it can be easily imported and edited.
+
+<div align="center"><img src="images/overview_schema.png" height=400px/></div>
+
+## Iterations
+
+A common pattern of execution is to perform an iterative operation on a data set. For instance, performing some data transformation on a database result-set or traversing a JSON array obtained from a REST API.
+The way Broadway deals with such cases is with the *Iterate* line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
+
+<div align="center"><img src="images/overview_iterate.png"></div>
+
+## Stage Conditions
+
+When stages, are split, an Actor can be designated to decide if a specific fork in the flow will be performed. The Actor can be a simple logical operator or an entire flow. Based on the result, Broadway will decide if the flow should be executed.
+The *else* fork will will be executed if none of the other splits were executed.
+<div align="center"><img src="images/overview_condition.png" height="350"></div>
+
+
+## Actor Inheritance
+
+Actors have an inheritance hierarchy. This enables activities such as pinning a constant value and reusing it across multiple flows, reusing some Actor logic such as JavaScript or SQL and even overriding the Actor Java implementation and tailoring it to a specific use case.  
+
+## Transactions
+
+Broadway has a builtin transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the actors in these stages use, automatically becomes part of a transaction. Once the transactional stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
+Transactions also take into account inner Broadway flows. If a transactional stage executes an inner Broadway flow, the flow automatically becomes part of the outer transaction.
+
+## Error Handling
+
+Every stage can be assigned an error handler. The error handler is an actor that can hold the logic to perform in case an error occurs as well as the decision whether the flow should continue or stop on that error. The error actor can be a simple logical check or an entire flow. The error handler has access to the
+
+<div align="center"><img src="images/overview_error.png" height="200"></div>
+
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/99_Broadway/01_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/03_broadway_actor.md)
