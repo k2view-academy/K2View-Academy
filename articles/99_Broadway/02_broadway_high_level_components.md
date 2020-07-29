@@ -10,23 +10,27 @@ There are a few other core capabilities that are important to the high level und
 
 ## Actor Input/Output Arguments
 
-Actors can get their input from three different sources:
-* The output of a previous actor: the connecting lines between actors.
-* A Constant value supplied by the user.
-* An input argument to the flow (external).
-
 <table>
 <tr>
 <td valign="top">
-When the actor executes, it is completely agnostic to the source of its data.
-Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.
-In the image we can see the JavaScript actor obtaining the *script* input as a constant input, *a* is supplied by connecting to a previous actor, *b* is supplied as input to the entire flow (named externalNumber) and the result is exposed as *flowResult*.
+  <div>
+    <p>Actors can get their input from three different sources:</p>
+    <ul>
+      <li>The output of a previous actor: the connecting lines between actors.</li>
+      <li>A Constant value supplied by the user.</li>
+      <li>An input argument to the flow (external).</li>
+
+<p>When the actor executes, it is completely unaware to the source of its data.</p>
+<p>Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.</p>
+<p>In the image we can see the JavaScript actor obtaining the *script* input as a constant input, *a* is supplied by connecting to a previous actor, *b* is supplied as input to the entire flow (named externalNumber) and the result is exposed as *flowResult*.</p>
+</div>
 </td>
 <td width="400">
-<img src="images/input-output-arguments.png" width="800" />
+<img src="images/input-output-arguments.png" width="400" />
 </td>
 </tr>
 </table>
+
 ## Type System
 
 Broadway actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
