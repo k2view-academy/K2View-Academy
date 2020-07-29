@@ -22,7 +22,7 @@ Broadway Tutorials flows can be opened in the Broadway Flow window.
 1. Go to the **Fabric Studio** and create a new **Fabric project** named **Broadway_Training**. 
 2. Go to the **K2view Academy repository** and download the [Demo Project](/articles/demo_project) and import it to your **Fabric project**.
 3. Go to the **project tree**, right click **Broadway > New Flow** and define the **Flow Name**. The **Broadway flow** window opens.
-4. Select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
+4. Select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
 
 ### Debugging the Broadway Tutorials Flow
 
@@ -44,7 +44,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
  <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
 
-6. Add a **Breakpoint** to **for each Stage** click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the **Flow window** and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
+6. Add a **Breakpoint** to **for each Stage**, click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the **Flow window** and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
 
 <ul>
 <pre><code>
@@ -52,11 +52,11 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
   B. Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
   C. What is the output of the <strong>StringBuilder</strong> Actor?
   D. How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
-  E. Which Stage is executed after the <strong>splitting the flow</strong> Stage? Why?
+  E. Which Stage is executed after the <strong>Splitting the flow</strong> Stage? Why?
 </code></pre>
 </ul>
 
-  ![info](/academy/images/information.png) Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer the above question.
+  ![info](/academy/images/information.png) Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
 
  8. Click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
  9. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow's steps in **Debug mode**.
@@ -71,7 +71,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 13. Run the flow.
 <ul><pre><code>A. What is the flow's result?</code></pre></ul> 
 
-14. Close the **Broadway Turorial flow** and check the list of Broadway flows under the <strong>project tree.</strong>
+14. Close the Broadway Turorial flow and check the list of Broadway flows under the <strong>project tree</strong>
 <ul><pre><code>A. How may flows do you have now?</code></pre></ul>
 
 15. Reopen the **Broadway Tutorial flow** and click the **Const** Actor in the <strong>Hello Broadway</strong> Stage.
@@ -92,14 +92,14 @@ Step 7
 
 A and B, The flow executes two iteration runs on the <strong>StringBuilder</strong> Actor. The first iteration runs on **Hello** and the second iteration runs on **Broadway**.
 C. The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
-D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. The <strong>for each</strong> Stage is marked <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
+D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. The <strong>for each</strong> State is marked <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
 E. The next Stage executed after the <strong>Splitting the flow</strong> Stage is the <strong>Dynamic Logic Actors</strong> Stage, since this Stage is on the same level as the <strong>else</strong> of the condition, and the condition returns <strong>false</strong>. See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
 </code></pre>
 </ul>
 
  <ul>
 <pre><code>
-Step 9.
+Step 9. 
 
 A. The new <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
