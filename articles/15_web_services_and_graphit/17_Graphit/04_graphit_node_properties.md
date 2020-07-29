@@ -95,7 +95,7 @@ Note that this property affects the node and its children nodes.&nbsp;</td>
 <tr>
 <td valign="top" width="50pxl">Keys</td>
 <td valign="top" width="900pxl">Advanced mechanism that replaces nested queries by joining the data on the root query and grouping it with a key when query keys are used to select a subset of rows to group each invocation of the node. When keys are specified in children nodes, each node groups its parent's node according to the key.</td>
-<td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grKeysgraphit">grKeys</a></td>
+<td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grKeys.graphit">grKeys</a></td>
 </tr>
 <tr>
 <td valign="top" width="50pxl">csvHeader, csvRow, csvCol, csvEnclose</td>
