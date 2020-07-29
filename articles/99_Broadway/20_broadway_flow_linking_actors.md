@@ -146,8 +146,7 @@ Click the link's connection line and press **Delete** on  your keyboard.
 
 ## How Do I Edit Links in the Flow?
 
-Click the link's connection line to open the **Link Object window** on the right of the Flow window. 
-Edit the **Link Type** or **Varargs** settings. 
+Click the link's connection line to open the [Link Object Properties window](/articles/99_Broadway/20_broadway_flow_linking_actors.md#link-object-properties) on the right of the Flow window. Edit the **Link Type** or **Varargs** settings. 
 
 ## Show Only Connected Objects
 
@@ -162,7 +161,7 @@ A complex String handling flow:
 
 ![String flow](/articles/99_Broadway/images/string_flow_example.png)
 
-To view only the  Actors connected to **Regex1** Actor, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) > **Show only connected** in [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu). The following Actors are displayed:
+To view only the  Actors connected to **Regex1** Actor, click ![image](/articles/99_Broadway/images/99_19_dots.PNG) in the Actor's right corner > **Show only connected** . The following Actors are displayed:
 
 ![show connected-example](/articles/99_Broadway/images/show_connected_examples.png)
 
