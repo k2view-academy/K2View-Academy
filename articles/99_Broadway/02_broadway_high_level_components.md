@@ -10,7 +10,7 @@ There are a few other core capabilities that are important to the high level und
 
 ## Actor Input/Output Arguments
 
-<table>
+<table border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td valign="top">
   <div>
