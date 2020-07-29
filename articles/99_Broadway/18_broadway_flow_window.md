@@ -1,6 +1,6 @@
 # Broadway Flow Window
 
-The **Broadway flow** window is the main Broadway interface that enables the definition and execution of business processes including [Stages](/articles/99_Broadway/19_broadway_flow_stages.md), [Actors](/articles/99_Broadway/03_broadway_actor.md) and [links between the Actors](<!--Link to 21-Links-->). 
+The **Broadway flow** window is the main Broadway interface that enables the definition and execution of business processes including [Stages](/articles/99_Broadway/19_broadway_flow_stages.md), [Actors](/articles/99_Broadway/03_broadway_actor.md) and [links between the Actors](/articles/99_Broadway/20_broadway_flow_linking_actors.md). 
 
 To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
