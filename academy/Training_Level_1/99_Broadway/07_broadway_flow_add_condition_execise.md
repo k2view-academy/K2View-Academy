@@ -110,9 +110,9 @@ Add the **Count** Actor to **Stage 2**. This Actor returns the number of times a
  Step 3.
  A.The output value of <strong>GreaterThanEquals</strong> Actor is <strong>false</strong>.
  B.<strong>Stage 7</strong> has been executed since the condition returned <strong>false</strong>.
- C.The following messsage has been given by Stage7's Logger Actor: 
+ C.The following messsage has been given by Stage 7's Logger Actor: 
      <strong>ERROR: Error- there are not enough customers in the list</strong>. 
-     Stage 6 and Stage 7  Logger Actors have set different message levels since each has a different value in the level input parameter.
+     Stage 6 and Stage 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
  </code></pre>
  </ul>
 
