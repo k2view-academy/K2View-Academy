@@ -8,7 +8,7 @@ To open the Data inspector, click ![image](images/99_27_red_cross.PNG) adjacent 
 
 ### How Do I Edit the Schema Using the Data Inspector?
 
-A Schema can be edited during runtime. To do so, click the yellow segment next to the Schema to open the context menu. 
+A Schema can be edited during runtime. To do so, click the yellow segment next to the Schema element which you want to edit to open the context menu. 
 
 <table style="width: 900px;">
 <tbody>
@@ -20,7 +20,7 @@ A Schema can be edited during runtime. To do so, click the yellow segment next t
 <td width="430pxl">
 <p>Add a child to the selected element using the <strong>Link bar</strong>. The Link bar is available in the <a href="18_broadway_flow_window.md#main-menu">Main menu</a> area and can be used to define the new element's Name and the Type.</p>
 <p><img src="images/99_27_03.PNG" alt="Add Child" /></p>
-<p>Note that to display the Child menu, click the parent node.</p>
+<p>Note that <strong>Add Child</strong> menu item is available in the context menu when clicking on the parent node.</p>
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ A Schema can be edited during runtime. To do so, click the yellow segment next t
 
 ### How Do I Edit the Schema Using the Data Viewer?
 
-The [Data Viewer]() can also be used to edit a Schema. To do so, click **Edit Schema** in the output argument's properties to open the **Edit Schema** window. Edit the Schema manually and then click **Submit** to refresh the yellow segment and update the Schema. 
+Additional way to edit the schema is using the Data Viewer. To do so, click **Edit Schema** in the output argument's properties to open the **Edit Schema** window. Edit the Schema manually and then click **Submit** to refresh the yellow segment and update the Schema. 
 
 ![image](images/99_27_04_data_viewer.PNG)
 
