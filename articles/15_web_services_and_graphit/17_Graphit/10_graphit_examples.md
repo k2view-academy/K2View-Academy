@@ -83,11 +83,11 @@ In this example, all children nodes of the CRM_DB node are defined as **field**.
 #### grFunction.graphit
 This example illustrates a simple JavaScript routine that returns the highest number of the **x** random number and the **y** random number.<br></br>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/10_graphit_examples_tags.PNG"></img>
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grFormatResponse.PNG"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/grFormatResp.PNG"></img>
 
 #### grSQL.graphit
 This example illustrates a parent node that is defined as SQL non-prepared whereas its children nodes are defined as SQL.<br></br>
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags.png"></img>
+<img src="/articles/15_web_services_and_graphit/17_Graphit/images/11_graphit_examples_tags.PNG"></img>
 <img src="/articles/15_web_services_and_graphit/17_Graphit/images/grSQLResp.PNG"></img>
 
 #### grString.graphit
