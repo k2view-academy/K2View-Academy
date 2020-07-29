@@ -31,7 +31,7 @@ The Broadway Tutorial flow runs manipulations on the **Hello Broadway** string a
 In the following exercise you will run and debug the flow to view the input and the output of each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
 
-Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and debug the Broadway Tutorial flow steps.
+Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) to debug the Broadway Tutorial flow steps.
 
 ###  ![](/academy/images/Exercise.png) **Exercise – Run and Debug Broadway Tutorial Flow**
 
@@ -44,7 +44,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
  <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
 
-6. Add a **Breakpoint** to the **for each Stage** click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the **Flow window** and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
+6. Add a **Breakpoint** to **for each Stage** click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the **Flow window** and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
 
 <ul>
 <pre><code>
@@ -56,16 +56,16 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 </code></pre>
 </ul>
 
-  ![info](/academy/images/information.png) Click the green asterisk in **splitting the flow** to read its remarks and check the value of the Actor in the **paradox** Stage to help you answer this question.
+  ![info](/academy/images/information.png) Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
 
  8. Click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
- 9. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode.
+ 9. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow's steps in **Debug mode**.
 
   <ul>
 <pre><code>A. Has the new <strong>Now</strong> Actor been added to <strong>Stage 3</strong> been executed? Why?</code></pre>
 </ul>
 
-10. Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the Debug process.
+10. Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the **Debug process**.
 11. Click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/99_Broadway/03_broadway_actor.md#actor-window) is displayed.
 12. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 13. Run the flow.
@@ -74,7 +74,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 14. Close the Broadway Turorial flow and check the list of Broadway flows under the **project tree**.
 <ul><pre><code>A. How may flows do you have now?</code></pre></ul>
 
-15. Reopen the Broadway Tutorial flow and click the **Const** Actor in the **Hello Broadway** Stage.
+15. Reopen the **Broadway Tutorial flow** and click the **Const** Actor in the **Hello Broadway** Stage.
 <ul><pre><code>A. Which value is set for the input parameter?</code></pre></ul> 
 
 
@@ -90,10 +90,10 @@ A. The flow's result is "Hellow Broadway"</code></pre>
 <pre><code>
 Step 7
 
-A and B,  The flow executes two iteration runs on the <strong>StringBuilder</strong> Actor. The first iteration runs on "Hello" and the second iteration runs on "Broadway".
+A and B, The flow executes two iteration runs on the <strong>StringBuilder</strong> Actor. The first iteration runs on **Hello** and the second iteration runs on **Broadway**.
 C. The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. The <strong>for each</strong> State is marked <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
-E. The next Stage executed after the <strong>splitting the flow</strong> Stage, is the <strong>Dynamic Logic Actors</strong> Stage, since this Stage is on the same level as the <strong>else</strong> of the condition, and the condition returns <strong>false</strong>. See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
+E. The next Stage executed after the <strong>Splitting the flow</strong> Stage, is the <strong>Dynamic Logic Actors</strong> Stage, since this Stage is on the same level as the <strong>else</strong> of the condition, and the condition returns <strong>false</strong>. See <a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY_Nataly/articles/99_Broadway/16_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
 </code></pre>
 </ul>
 
@@ -101,7 +101,7 @@ E. The next Stage executed after the <strong>splitting the flow</strong> Stage, 
 <pre><code>
 Step 9.
 
-A. The new <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>paradox</strong> condition is fulfilled.</code></pre>
+A. The new <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
 
 <ul>
