@@ -27,7 +27,7 @@ A flow can be packaged and then reused as an inner flow in another flow. For exa
 
 To save a flow as an Actor:
 
-Click **Actions** > **Save as Actor** in the Main menu of [Broadway flow window](/articles/99_Broadway/18_broadway_flow_window.md#main-menu). The new Actor type can be added to other flows.
+- Click **Actions** > **Save as Actor** in the [Main menu] of Broadway flow window. The new Actor type can be added to other flows.
 
 [Click for more information about inner flows.](add a link). 
 
@@ -39,7 +39,7 @@ During the Export process, the new Actor type inherits the current Actor and is 
 
 To export an Actor:
 
-Click **Export Actor** in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu).
+- Click **Export Actor** in the [Actor's context menu](/articles/99_Broadway/18_broadway_flow_window.md#actors-context-menu).
 
 [Click for more information about Export Actor and Actor Inheritance.](add a link) 
 
