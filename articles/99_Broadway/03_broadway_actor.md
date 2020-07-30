@@ -27,7 +27,7 @@ A flow can be packaged and then reused as an inner flow in another flow. For exa
 
 To save a flow as an Actor:
 
-- Click **Actions** > **Save as Actor** in the [Main menu] of Broadway flow window. The new Actor type can be added to other flows.
+- Click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of Broadway flow window. The new Actor type can be added to other flows.
 
 [Click for more information about inner flows.](add a link). 
 
@@ -40,6 +40,13 @@ To export an Actor:
 - Click **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu).
 
 [Click for more information about Export Actor and Actor Inheritance.](add a link) 
+
+## Dynamic Logic Actors
+
+Dynamic Logic Actors include dynamic logic as one of their input parameters. The most frequently used Actors include:
+
+- **JavaScript** Actor, which executes the JavaScript code provided in the **script** parameter and returns the value of the last expression.
+- **DbCommand** Actor, which executes the provided SQL command provided in the **sql** parameter.
 
 ## Actor Description and Remarks
 

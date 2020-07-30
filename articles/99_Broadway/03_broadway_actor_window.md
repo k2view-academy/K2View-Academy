@@ -22,7 +22,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 <p><strong>Parameters Filter</strong></p>
 <p>Filters the input and output fields in the Actor window using the following options:</p>
 <ul>
-<li>All Fields (default), displays a list of all the Actor's fields and their ancestor Actors.</li>
+<li>All Fields (default), displays a list of all the Actor's fields and the fields of their ancestor.</li>
 <li>Actor name, displays a list of input and output parameters of the current Actor object.</li>
 <li>Ancestor Actor name, displays the list of input and output parameters of the Actor's ancestor.</li>
 </ul>
@@ -57,6 +57,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -99,7 +100,12 @@ Note that when populating an input value for an **SQL** parameter, click **QB** 
 
 ### Add Input Button
 
-Additional input parameters can be added to some Actor types. To do so, click **Add Input** to add a new input parameter. The default Parameter Type = any and default Population Type = Link. If the population type is updated to Const, a dropdown list is displayed where you can select the  parameter type. 
+Specific Actors enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings: 
+
+- Parameter Type = Any.
+- Population Type = Link.
+
+If the population type is updated to a **Const**, select the parameter type from the dropdown list.
 
 To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
 
