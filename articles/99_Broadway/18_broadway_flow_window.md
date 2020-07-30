@@ -77,9 +77,13 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="12" width="400pxl">
+<td rowspan="13" width="400pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
+<td width="80pxl">Paste Selection</td>
+<td width="420pxl">Paste the copied selection, for example an Actor from another Stage.</td>
+</tr>
+<tr>
 <td width="80pxl"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a></td>
 <td width="420pxl">Add a new Stage after the selected one.</td>
 </tr>
@@ -105,7 +109,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td width="200"><a href="19_broadway_flow_stages">Stage Condition</a></td>
-<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Any Actor can serve as a condition. Note that Stage condition Actors are grey.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
 <td width="200"><a href="19_broadway_flow_stages">Else</a></td>
@@ -138,11 +142,27 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="8" width="400pxl">
+<td rowspan="9" width="400pxl">
 <p><img src="images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
 </td>
-<td width="80pxl"><a href="21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
-<td width="420pxl">Click to connect the selected Actor and the required target Actor.</td>
+<td width="80pxl">Collapse / Expand</td>
+<td width="420pxl">Collapse or expand the Actor and display its title.</td>
+</tr>
+<tr>
+<td width="200"><a href="20_broadway_flow_linking_actors.md#show-only-connected-objects">Show Only Connected</a></td>
+<td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
+</tr>
+<tr>
+<td width="200">Copy Selection</td>
+<td style="width: 465px;">Copy the selected Actor.</td>
+</tr>
+<tr>
+<td width="200">Delete Actor</td>
+<td style="width: 465px;">Click to delete the selected Actor.&nbsp;</td>
+</tr>
+<tr>
+<td width="200"><a href="21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
+<td style="width: 465px;">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
 <tr>
 <td width="200"><a href="03_broadway_actor.md#how-do-i-add-actor-to-stage">Add Actor</a></td>
@@ -150,15 +170,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 <tr>
 <td width="200">[Export Actor]</td>
-<td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.</td>
-</tr>
-<tr>
-<td width="200">Delete</td>
-<td style="width: 465px;">Click to delete the selected Actor.&nbsp;</td>
-</tr>
-<tr>
-<td width="200">Collapse / Expand</td>
-<td style="width: 465px;">Collapse or expand the Actor and display its title.</td>
+<td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
 </tr>
 <tr>
 <td width="200"><a href="03_broadway_actor.md#actor-description-and-remark"> Description</a></td>
@@ -167,10 +179,6 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <tr>
 <td width="200"><a href="03_broadway_actor.md#actor-description-and-remark"> Remark</a></td>
 <td style="width: 465px;">Additional info added to the Actor instance.</td>
-</tr>
-<tr>
-<td width="200">Show Only Connected</td>
-<td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
 </tr>
 </tbody>
 </table>
