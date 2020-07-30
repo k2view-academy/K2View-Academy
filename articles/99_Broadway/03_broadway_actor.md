@@ -6,7 +6,7 @@ A Broadway  **Actor** represents an action that is executed on a [Stage](19_broa
 
 Broadway offers a number of [built-in Actors](04_built_in_actor_types.md) which address a wide range of predefined activities that can be added to Broadway flows. 
 
-When business logic that is not supported by a built-in Actor is required, a **JavaScript** Actor that executes the JavaScript provided in the **Script** [Input parameter](03_broadway_actor_window.md#data-input-parameters) can be used. 
+When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used which executes the JavaScript code provided in the **script** [Input parameter](/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters).
 
 Options for working with Actors include:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
@@ -33,9 +33,7 @@ To save a flow as an Actor:
 
 ### How Do I Export an Actor?
 
-An Actor object can be exported to create an Actor Type based on it which can then be reused. 
-
-During the Export process, the new Actor type inherits the current Actor and is then added to the list of built-in Actors and can be used in other flows.
+An Actor can be exported to create another Actor that inherits the current Actor’s logic. By doing so, specific business logic can be reused in different places in the flow. Once exported, the new Actor is added to the list of built-in Actors.
 
 To export an Actor:
 
