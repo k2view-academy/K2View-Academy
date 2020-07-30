@@ -93,7 +93,7 @@ The actions on the input parameters are:
 - Description, click to check the parameter's description. The description cannot be updated.
 - Remark,  click to add a remark. A remark can be modified.
 
-Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query as displayed in the following **DbCommand** built-in Actor example:
+Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
 ![image](/articles/99_Broadway/images/99_03_sql.PNG)
 
