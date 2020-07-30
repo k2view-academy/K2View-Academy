@@ -17,7 +17,7 @@ Options for working with Actors include:
 
 To add an Actor to Stage in a Broadway flow:
 1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window which displays a list of categories on the left and the built-in Actors of each categories on the right. 
-2.  Click **SUBMIT** to finish the action and add the Actor to the Stage.
+2.  Click **SUBMIT** to finish the action and to add the Actor to the Stage.
 
 
 ![image](/articles/99_Broadway/images/99_04_01_add_actor.PNG)
