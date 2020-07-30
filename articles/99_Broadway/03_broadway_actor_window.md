@@ -2,7 +2,7 @@
 
 ## Properties Overview
 
-The **Actor's Properties** window is displayed when adding a new Actor to the flow or when clicking an Actor object in the flow window. The Actor window holds the following sections:
+The **Actor's Properties** window is displayed when adding a new Actor to a flow or when clicking an Actor object in the Flow window. The Actor window holds the following sections:
 
 <table>
 <tbody>
@@ -62,7 +62,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to the fl
 
 ## Actor's Inputs and Outputs
 
-### Input Parameters Properties
+### Input Parameter Properties
 
 The Actor's input parameters are displayed in the Actor's Properties window in the following format:
 - [Parameter Name] : [Parameter Type]
@@ -74,7 +74,7 @@ For example:
 
 The population of the input parameter depends on the **Population Type**. The following types are supported:
 - **Link**, gets the input value as an input parameter from another Actor. When **Link** is selected, it connects the parameter to another Actor's output parameter.
-- **Const**, sets the value of the parameter. When **Const** is selected, a text area opens under the parameter to enable populating the parameter value.
+- **Const**, sets the value of the parameter. When **Const** is selected, a text area opens under the parameter to enable populating the parameter's value.
 - **External**, gets the input value as a parameter from the external process which executes the Broadway flow. When External is selected, the **External Name** field opens under the parameter.
 
 <table>
@@ -89,9 +89,9 @@ The population of the input parameter depends on the **Population Type**. The fo
 
 The actions on the input parameters are:
 - Default value, set a default value for an input parameter (for **Link** and **External** population types). Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables inserting numbers into this parameter.
-- Edit Schema, click to open the popup window that enables updating the parameter's type.
+- Edit Schema, click to open the popup window where you can update the parameter's type.
 - Description, click to check the parameter's description. The description cannot be updated.
-- Remark,  click to add a remark. A remark can be modified later on.
+- Remark,  click to add a remark. A remark can be modified.
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and build the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
@@ -99,7 +99,7 @@ Note that when populating an input value for an **SQL** parameter, click **QB** 
 
 ### Add Input Button
 
-Additional input parameters can be added to some Actor types. To do so, click **Add Input**. A new input parameter is added with a default Parameter Type = any and default Population Type = Link. If the population type is changed to Const, a dropdown list is displayed where you can select the  parameter type. 
+Additional input parameters can be added to some Actor types. To do so, click **Add Input** to add a new input parameter. The default Parameter Type = any and default Population Type = Link. If the population type is updated to Const, a dropdown list is displayed where you can select the  parameter type. 
 
 To delete or add more parameters, in the context menu click ![image](/articles/99_Broadway/images/99_19_dots.PNG) > Delete or Insert.
 
@@ -115,8 +115,8 @@ The Actor's output parameters are displayed in the Actor's Properties window in 
 
 The actions in the output parameters are:
 - Set External, click to expose the output parameter to the external process that executes the Broadway flow. When selected, the **External Name** field opens under the parameter.
-- Edit Schema, click to open the popup window that enables updating the parameter's type.
+- Edit Schema, click to open the popup window where you can update the parameter's type.
 - Description, click to check the parameter's description. The description cannot be updated.
-- Remark, click to add a remark. The remark can be modified later on.
+- Remark, click to add a remark. The remark can be modified.
 
 [![Previous](/articles/images/Previous.png)](/articles/99_Broadway/03_broadway_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/04_built_in_actor_types.md)
