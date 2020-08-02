@@ -1,6 +1,6 @@
 ![image](/articles/images/welcome_to_wiki.png)
 
-<strong>LUDB Viewew and Studio Debug Capabilities<strong>
+<strong>LUDB Viewe and Studio Debug Capabilities<strong>
 <ul>
   
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></li>
