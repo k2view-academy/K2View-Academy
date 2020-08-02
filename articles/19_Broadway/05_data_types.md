@@ -1,0 +1,78 @@
+# Data Types in Broadway
+
+Broadway Actors pass data between them as Java objects. Virtually any data type can be passed between Actors but in practice most Actors pass a subset of types that are supported by Broadway.  Supported Broadway types can be described by the Broadway Schema engine, can be displayed clearly by the Data Inspector and can be converted automatically to other supported types.
+
+### Primitives
+
+Broadway supports the following primitives: *String*, *Long*, *Real*, *Boolean*, *Date*, *byte[]*.
+
+Other numeric types such as *Integer*, *Short*, *Float*, *Byte* and their primitive counterparts (long, int, short, byte, double, float), are automatically converted to Long/Real.
+
+SQL JDBC Blobs are also supported and are automatically converted into byte arrays.
+
+
+### Collections/Iterable
+
+Collections, or sequences of objects, can be represented by any implementation of Iterable (Collection, List etc). The advantage of using Iterable as the lowest common denominator is that it does not need to declare its size in advance, easily supporting streaming use cases such as database queries and topic subscription where the number of items is not known in advance or is even unbound.
+Java Arrays are also supported and accessed as Iterable.
+
+
+### Maps/Objects
+
+The Map interface is used to represent objects that contain a set of named attributes. The key is usually of a String type. For instance, Maps are used extensively to represent database result set rows.
+
+
+### Implicit Type Conversion
+
+When Actors read their input arguments from Broadway, and expect a certain type of parameter, Broadway converts the value to the type expected by the Actor.
+
+The conversion is highly robust, where any reasonable conversion is done in the attempt to satisfy the Actor's expected input. For instance, a Long can be converted into a string and a string can be parsed into a Long (if possible). An integer can be converted to a boolean and vice versa (0=false, true=1). Automatic conversion is also done between primitives and collections or between maps and collections. The following is an exhaustive table of all available conversions:
+
+| Source/Target |           String          |            Long           |                  Double                 |           Boolean          |      Date      |        byte[]        |         Iterable         |  Map  |
+|:-------------:|:-------------------------:|:-------------------------:|:---------------------------------------:|:--------------------------:|:--------------:|:--------------------:|:------------------------:|:-----:|
+|      null     |             ""            |             0             |                   0.0                   |            false           | 1970-1-1 00:00 |        byte[0]       |           Empty          | Empty |
+|     String    |             =             |           parse           |                  parse                  |  false if empty/"0"/"false |      parse     |      utf-8 bytes     |       single entry       | Error |
+|      Long     |        to string       |             =             | Convert to double at possible precision |         false if 0         | ms since epoch | same as string utf-8 |       single entry       | Error |
+|     Double    |      to string        |           Floor           |                    =                    |        false if 0.0        | ms since epoch | same as string utf-8 |       single entry       | Error |
+|    Boolean    |     "true"/"false" |           0 / 1           |                0.0 / 1.0                |              =             |      Error     | same as string utf-8 |       single entry       | Error |
+|      Date     |         UTC format        | milliseconds  since epoch |         milliseconds since epoch        | false if 1970-1-1 00:00:00 |        =       | same as string utf-8 |       single entry       | Error |
+|     byte[]    |        utf-8 string       |           Error           |                  Error                  |       false if empty       |      Error     |           =          |       single entry       | Error |
+|    Iterable   | join without   delimiters |           Error           |                  Error                  |       false if empty       |      Error     | same as string utf-8 |             =            | Error |
+|      Map      |          JSON {:}         |           Error           |                  Error                  |       false if empty       |      Error     | same as string utf-8 | iterable of   map values |   =   |
+
+
+### *Null* Values Conversion
+
+Null is supported as a value in Broadway. However, to avoid null pointer exceptions as much as possible, null has an implicit conversion to every supported type.
+
+### *Iterable* Conversion
+When converting a value into an iterable, the result is an Iterable of a single entry containing that value. For instance, an integer with the value 7, is converted into an iterable where the only value is 7. The exceptions to this rule are **null**, which is converted to an empty iterable, and **Map** which is converted to an iterable of the map values (without the keys).
+
+### *Date* Conversion
+
+Dates are converted to strings using their UTC representation in the following format:
+    *yyyy-MM-dd HH:mm:ss.SSS*
+
+When parsed, dates support one of the following formats:
+-  *yyyy-MM-ddTHH:mm[:ss[.SSS[Z]]]*
+-  *yyyy-MM-dd HH:mm[:ss[.SSS[Z]]]*
+
+Either T or ' ' as a delimiter between date and time. Seconds, milliseconds and timezone are optional.
+
+When numbers are converted to dates and vice versa, the value of the date is considered the number of milliseconds elapsed since 1970-1-1 00:00.
+
+Broadway supports date/time manipulation Actors for more explicit date/time conversions and calculations.
+
+
+### *byte[]* Conversion
+
+When binary data is referred to as a string or vice versa, utf-8 binary representations is assumed. When formatting other types, the conversion goes via a string and is then converted to the utf-8 representation.
+
+
+### Errors
+
+Not all conversions are possible. When Broadway cannot convert a data type, an Exception will be thrown. This could be as a result of parsing errors (for instance string to Long) or of unsupported conversions (for instance Long to Map).
+
+In such cases, or when the implicit conversion is unsatisfactory, you can consider using an Actor to explicitly convert between data types and data representations.
+
+[![Previous](/articles/images/Previous.png)](04_built_in_actor_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
