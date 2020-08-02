@@ -41,8 +41,8 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 <ul>
 <li>[Parameter Name] : [Parameter Type]</li>
 </ul>
-<p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an input parameter.</p>
-<p>Click <strong>Add Input</strong> to add more input parameters.</p>
+  <p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an input parameter. </p>
+  <p>Click <strong>Add Input</strong> to add more parameters. The button is applicable for selected Actor types only.</p>
 </td>
 </tr>
 <tr>
@@ -52,7 +52,8 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 <ul>
 <li>[Parameter Name] : [Parameter Type]</li>
 </ul>
-<p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an output parameter.</p>
+  <p>Click <img src="images/99_19_dots.PNG" alt=" " /> to update an output parameter. </p>
+  <p> Click <strong>Add Output</strong> to add more parameters. The button applicable for selected Actor types only.</p>
 </td>
 </tr>
 </tbody>
@@ -100,7 +101,7 @@ Note that when populating an input value for an **SQL** parameter, click **QB** 
 
 ### Add Input Button
 
-Specific Actors enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings: 
+Some Actors enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings: 
 
 - Parameter Type = Any.
 - Population Type = Link.
@@ -124,5 +125,13 @@ The actions in the output parameters are:
 - Edit Schema, click to open the popup window where you can update the parameter's type.
 - Description, click to check the parameter's description. The description cannot be updated.
 - Remark, click to add a remark. The remark can be modified.
+
+### Add Output Button
+
+Some Actors enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
+
+To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
+
+Note that the output parameters of the ancestor Actor cannot be deleted.
 
 [![Previous](/articles/images/Previous.png)](03_broadway_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_built_in_actor_types.md)
