@@ -19,6 +19,10 @@ Parsers allow you to get data from both tables and unstructured files. Using Fab
 - Broadway Flows
 Broadway flows can be scheduled for execution and therefore defined as jobs.
 
+ **What is a Fabric Job** 
+A Fabric Job is a function that can be exposed across Fabric nodes to be run according to a specific schedule, or once only.
+
+Jobs should be deployed to Fabric separately and can then be invoked either by the node onto which it as been deployed or by any other Fabric nodes that would have received the job allocation from Cassandra distribution .... In the Fabric Studio, Jobs functions can be defined and saved to the project file and be deployed to the Fabric server.
 
 In this section we will see :
 - the different types of jobs
