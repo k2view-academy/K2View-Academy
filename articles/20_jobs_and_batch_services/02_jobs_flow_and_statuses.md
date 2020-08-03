@@ -7,3 +7,8 @@ A job's flow consists of the following stages: DEFINE, CONFIGURE and DEPLOY
 
 
 # **Fabric Jobs Statuses** 
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/03_)
