@@ -1,77 +1,74 @@
 # Iterations
-
-Iterations are a way to perform a flow section repeatedly for a given data set.
-They are similar to a for...each loop in the sense that a given logic is run repeatedly until there is no more data to act upon.
-The most common use cases are iterating over a database result set or an array of data returned by an API.
+Iterations can be used to to repeatedly perform a flow section in a  data set. Iterations are similar to a **for...each loop** in the sense that a logic is run repeatedly until no data remains to act upon.
+The most common iteration use cases are iterating over a database result set or an array of data returned by an API.
 
 
 ## Iterable Line Type
 
-To start the iterable logic, select the line where you want the loop to start and change the [Link Type](20_broadway_flow_linking_actors.md#link-object-properties) to Iterable. This changes the line to a double dotted line and marks the loop scope with a grey background and a starting thick line.
-
+To start the iterable logic, select the line at the beginning of the loop and change the [Link Type](20_broadway_flow_linking_actors.md#link-object-properties) to Iterable. The line is now double-dotted, the background of the loop's scope is highlighted grey and a thick divider line is displayed at the starting point. In the following image Stage 2 runs for each data entry returned by the the first actor.
+ 
 <div align="center"><img src="images/iterate_simple.png" height="130px"/></div>
 
-In the image above, Stage 2 will run for each data entry returned by the the first actor.
 
 ## Scope of Iteration
 
-The scope of the logic starts right after the Actor where the Iterate line type is originating from. It continues till the end of the flow or till a stage that is marked as *Iterate Close*. To mark a Stage iteration as closed , click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**. 
+The scope of the logic starts immediately after the Actor and the origin of the Iterate line type and  continues until the end of the flow or until the **Iterate Close** Stage. To mark a Stage iteration as closed, click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**. 
+The following flows displays an iteration loop that starts in **Stage 2** that runs until **Stage 3** of each entry. After the data is traversed the loop is complete and **Stage 4** is executed.
 
 <div align="center"><img src="images/iterate_scope.png" height="160px"/></div>
 
-Above we can see the iteration loop starting in *Stage 2* and running until *Stage 3* for each entry. After the data is traversed the loop is complete and *Stage 4* is executed.
 
 ## Complex Objects and Paths
 
-Path connections work well in combination with an iteration loop.
+Path connections work well when combined with an iteration loop. The following displays an iterate connection selecting a field in a database result set and iterating over it.
 
 <div align="center"><img src="images/iterate_path.png" height="160px"/></div>
 
-Here we can see an iterate connection picking a field in a database result set and iterating over it.
+
 
 ## Nested Arrays
 
-Given a data set that has nested arrays, picking an item in inner array to loop on, will iterate over the entire data set.
+In a data set with nested arrays looping an item in an inner array generates an interation over the entire data set. For example, in a data set of map names holding an array of maps with a Broadway field name, Broadway will traverse all **name** values.
 
 <div align="center"><img src="images/iterate_nested_array.png" height="160px"/></div>
-
-For instance, given a data set of names maps, containing an array of maps with the field name, Broadway will traverse all the *name* values.
 
 
 ## Nested Iterations
 
-You can also nest iterations. For instance you can use one of the values in an iteration as an input to a further iteration. The depth of the iteration is marked with a darkening shade of grey. If you want to limit the loop scope using *Iterate Close* you need a closing stage for each level of the loop.
-There is no limit to iteration nesting level. However, consider using inner flows if you have more than 3-4 nesting level to make your flow more readable.
+Iterations can also be nested. For example, a value in an iteration can be used as an input in another iteration. The depth of the iteration is highlighted in shades of grey. o limit theT loop's scope using **Iterate Close**, add a closing Stage on each level of the loop.
+There are no limits on the iteration nesting level. However, to make a flow more readable, consider using inner flows for 3 or 4 nesting levels.
+In the following flow, the first name is an input to a query to get a list of relevant phone numbers. **Stage 2** is run for every entry in **Stage 1** and **Stage 3** for every entry in **Stage 2**.
 
 <div align="center"><img src="images/iterate_nested_iterations.png" height="160px"/></div>
 
-In the above flow, we use the first name as an input to a query to get the list of relevant phone numbers. *Stage 2* is run for every entry in  *Stage 1* and *Stage 3* for every entry in *Stage 2*.
+
 
 ## Split Iterations
 
-You could have more than one collection at a certain stage. A common case is a JSON data structure that contains more than one array.
-Using the stage split functionality you can split the flow and manage several loops over the same data structure.
+A Stage can have more than one collection. A common case is a JSON data structure that contains more than one array.
+Using the Stage split functionality you can split the flow and manage several loops over the same data structure.
 
 <div align="center"><img src="images/iterate_split.png" height="180px"/></div>
 
 ## ForLoop Actor
 
-The ForLoop actor can be used to create a virtual data set of integers in a given range. This enables the creation of a loop running N times over this synthetic data set. It is a useful way to iterate a number of times when there is no concrete data set to traverse.
+The ForLoop Actor can be used to create a virtual data set of integers in a given range. This enables creating a loop that runs N times over a synthetic data set which is a useful way to for repeat iterations when there is no data set to traverse.
 
 
 ## Programmatic Control
 
-The Broadway Context object enables an Actor to programmatically access and control the loop it resides in, through the Loop interface.
-You can access the Loop Context object via the *Context.loop()* method in Java or using the *contextLoop* instance in Javascript.
+The Broadway Context object enables an Actor to programmatically access and control the loop it resides in via the Loop interface. 
+A Loop Context object can be accessed via the **Context.loop()** method in Java or using the **contextLoop** instance in JavaScript. 
 
-It supports the following methods:
-* *Loop.stop()* Stops the current loop and continues execution after the loop. All actors on the same stage as the calling actor are still called.
+The following methods are supported:
+* **Loop.stop()**, stops the current loop and continues execution after the loop. All Actors in the same Stage as the calling actor are still called.
 
-* *Loop.skip()* Skips the current loop iteration and continues to the next data entry. All actors on the current stage are still called.
+* **Loop.skip()**, skips the current loop iteration and continues to the next data entry. All Actors on the current stage are still called.
 
-* *Loop.index()* Returns the current loop index. 0 is the index of the first iteration.
+* **Loop.index()**, returns the current loop index. The index of the first iteration = 0.
 
-In a nested loop, you only have access to the inner most (deepest) loop that is running the current stage.
-You can see how this works from the Javascript actor in the iterate-for-each.flow Broadway example.
+In a nested loop, you can only access the inner most (deepest) loop that is running in the current Stage. 
+
+For more information about programmatic control and the JavaScript Actor, refer to the iterate-for-each.flow Broadway example.
 
 [![Previous](/articles/images/Previous.png)](20_broadway_flow_linking_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
