@@ -6,7 +6,7 @@
 
 The purpose of the Actor is to execute small pieces of JavaScript code provided in the **script** input parameter though the Actor doesn't have a limitation and can include any number of the rows.
 
-The return value of **JavaScript** Actor is the last expression in the **script** input parameter. For example, when the following code is written in the **JavaScript** Actor, the return value is **rowSum**. There is no need to write **return** keyword within the script. Use the **result** output parameter to read the Actor's result.
+The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. There is no need to write **return** keyword within the script. Use the **result** output parameter to read the Actor's result.
 
 ```
 var rowSum = 0;
