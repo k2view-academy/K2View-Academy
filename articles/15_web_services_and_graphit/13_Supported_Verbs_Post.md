@@ -34,7 +34,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
   Insert data into CUSTOMER LU instance id 1, LION table
 
-  Request Body
+  Response Body
 
   ```                     
   {"rows" : {"LION" : [{"ID":11, "NAME":"lion11"},{"ID":12, "NAME":"lion12"},{"ID":13, "NAME":"lion13"}]}}
@@ -62,7 +62,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
   Insert data into common table REF_NAMES
 
-  Request Body
+  Response Body
 ```
 {
   "rows": [
