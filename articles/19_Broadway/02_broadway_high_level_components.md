@@ -87,4 +87,4 @@ Every Stage can be assigned an error handler. The error handler is an Actor that
 [Click for more information about error handling in Broadway](add a link!).
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_Broadway/01_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_Broadway/03_broadway_actor.md)
+[![Previous](/articles/images/Previous.png)](01_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor.md)
