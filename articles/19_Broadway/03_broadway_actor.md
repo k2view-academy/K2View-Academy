@@ -25,21 +25,17 @@ To add an Actor to Stage in a Broadway flow:
 ### How Do I Save a Flow as an Actor?
 A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps. 
 
-To save a flow as an Actor:
+To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of Broadway flow window.
 
-- Click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of Broadway flow window. The new Actor type can be added to other flows.
-
-[Click for more information about inner flows.](add a link). 
+[Click for more information about inner flows](22_broadway_flow_inner_flows.md). 
 
 ### How Do I Export an Actor?
 
 An Actor can be exported to create another Actor that inherits the current Actor’s logic. By doing so, specific business logic can be reused in different places in the flow. Once exported, the new Actor is added to the list of built-in Actors.
 
-To export an Actor:
+To export an Actor, click **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu).
 
-- Click **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu).
-
-[Click for more information about Export Actor and Actor Inheritance.](add a link) 
+[Click for more information about Actor Inheritance.](add a link) 
 
 ## Dynamic Logic Actors
 
