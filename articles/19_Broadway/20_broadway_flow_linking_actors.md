@@ -165,4 +165,4 @@ To view only the  Actors connected to **Regex1** Actor, click ![image](images/99
 
 ![show connected-example](images/show_connected_examples.png)
 
-[![Previous](/articles/images/Previous.png)](19_broadway_flow_stages)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
