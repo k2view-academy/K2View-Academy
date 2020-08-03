@@ -14,7 +14,7 @@ In the following image, Stage 2 runs for each data entry returned by the the fir
 
 ## Scope of Iteration
 
-The scope of the interation's logic starts immediately after the Actor and the origin of the Iterate line type and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as Closed, click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**. 
+The scope of the interation's logic starts immediately after the Actor and the Iterate line type's origin and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as Closed, click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**. 
 
 The following image displays an iteration loop that starts in **Stage 2** and runs until **Stage 3** of each entry. After the data is traversed the loop is complete and **Stage 4** is executed.
 
