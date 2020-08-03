@@ -51,7 +51,7 @@ If a condition is required in the flow, the flow can be split and a **Stage cond
 
 The condition Actor can have any number of output parameters, however a True / False check is always performed on the first output parameter. Note that this parameter does not need to be Boolean, since Broadway automatically casts its Type to Boolean. For example, an empty string is considered to be false while a string that is not empty is considered to be true.
 
-The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages which neither have a condition or **else** are always executed and have no impact on the **else** Stage. 
+The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages which don't have a Stage condition or marked as **else** are always executed and have no impact on the **else** Stage. 
 
 The Stage's conditions impact all subsequent Stages in the same branch. Thus: 
 -  If a Stage condition is false, the execution of its branch stops. 
@@ -60,9 +60,13 @@ The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 
 ### How Do I Define a Stage Condition?
 
-- To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition**. 
+To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor will be grey.
 
-- To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) in the right corner of the Stage and select **Else**.
+![image](images/99_19_condition.PNG)
+
+To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) > **Else**.
+
+![image](images/99_19_else.PNG)
 
 Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
 
