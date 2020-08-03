@@ -36,7 +36,7 @@ To add an error handler to a Stage, click ![image](images/99_19_dots.PNG) in the
 
    ![image](images/99_24_04.PNG)
 
-2. Save the flow and then [save the flow as Actor](add link!!). The flow name is **CheckZeroDiv** and the new Actor's name is **CheckZeroDiv_Actor**.
+2. Save the flow and then [save the flow as Actor](22_broadway_flow_inner_flows.md#save-as-actor). The flow name is **CheckZeroDiv** and the new Actor's name is **CheckZeroDiv_Actor**.
 
 3. Add a new Actor to another flow which requires this validation. The inner flow is added to Stage 3 on this flow and if the error occurs (min number = 0), the error will be thrown and the flow will stop.
 
