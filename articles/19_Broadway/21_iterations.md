@@ -7,7 +7,7 @@ The most common use cases are iterating over a database result set or an array o
 
 ## Iterable Line Type
 
-To start the iterable logic, select the line where you want the loop to start and change the Link Type to Iterable. This changes the line to a double dotted line and marks the loop scope with a grey background and a starting thick line.
+To start the iterable logic, select the line where you want the loop to start and change the [Link Type](20_broadway_flow_linking_actors.md#link-object-properties) to Iterable. This changes the line to a double dotted line and marks the loop scope with a grey background and a starting thick line.
 
 <div align="center"><img src="images/iterate_simple.png" height="130px"/></div>
 
@@ -15,7 +15,7 @@ In the image above, Stage 2 will run for each data entry returned by the the fir
 
 ## Scope of Iteration
 
-The scope of the logic starts right after the Actor where the Iterate line type is originating from. It continues till the end of the flow or till a stage that is marked as *Iterate Close*. To mark a stage as *Iterate Close* open its context menu (...) and click *Iterate Close*
+The scope of the logic starts right after the Actor where the Iterate line type is originating from. It continues till the end of the flow or till a stage that is marked as *Iterate Close*. To mark a Stage iteration as closed , click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**. 
 
 <div align="center"><img src="images/iterate_scope.png" height="160px"/></div>
 
@@ -73,3 +73,5 @@ It supports the following methods:
 
 In a nested loop, you only have access to the inner most (deepest) loop that is running the current stage.
 You can see how this works from the Javascript actor in the iterate-for-each.flow Broadway example.
+
+[![Previous](/articles/images/Previous.png)](20_broadway_flow_linking_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
