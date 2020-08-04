@@ -7,7 +7,7 @@ The most common iteration use cases are iterating over a database result set or 
 
 To start the iterable logic, select the line at the beginning of the loop and change the [Link Type](20_broadway_flow_linking_actors.md#link-object-properties) to Iterable. The line is now double-dotted, the background of the loop's scope is highlighted grey and a thick divider line is displayed at the starting point. 
 
-In the following image, Stage 2 runs for each data entry returned by the the first Actor.
+In the following image, Stage 2 runs on each data entry returned by the the first Actor.
  
 <div align="center"><img src="images/iterate_simple.png" height="130px"/></div>
 
@@ -38,7 +38,7 @@ Looping an item in an inner array of a data set with nested arrays generates an 
 
 ## Nested Iterations
 
-Iterations can also be nested. For example, a value in an iteration can be used as an input in another iteration. The depth of the iteration is highlighted in shades of grey. To limit the loop's scope using **Iterate Close**, add a closing Stage on each level of the loop.
+Iterations can also be nested. For example, a value in an iteration can be used as an input for another iteration. The depth of the iteration is highlighted in shades of grey. To limit the loop's scope using **Iterate Close**, add a closing Stage to each level of the loop.
 There are no limitations on the iteration nesting level. However, to make a flow more readable, consider using inner flows for 3 or 4 nesting levels.
 
 
@@ -57,7 +57,7 @@ Using the Stage Split functionality you can split the flow and manage several lo
 
 ## ForLoop Actor
 
-The ForLoop Actor can be used to create a virtual data set of integers in a given range. This enables creating a loop that runs N times over a synthetic data set which is a useful way to repeat iterations when there is no data set to traverse.
+The ForLoop Actor can be used to create a virtual data set of integers in a given range. This enables creating a loop that runs N times over a synthetic data set and is useful for repeat iterations when there is no data set to traverse.
 
 
 ## Programmatic Control
@@ -74,6 +74,6 @@ The following methods are supported:
 
 In a nested loop, you can only access the inner-most (deepest) loop that is running in the current Stage. 
 
-For more information about programmatic control and the JavaScript Actor, refer to the iterate-for-each.flow Broadway example.
+For more information, refer to the iterate-for-each.flow Broadway example.
 
 [![Previous](/articles/images/Previous.png)](20_broadway_flow_linking_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
