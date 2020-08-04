@@ -15,5 +15,5 @@
 <li><a href="19_broadway_flow_stages.md">Broadway Stages</a></li>
 <li><a href="21_iterations.md">Iteractions in Broadway</a></li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Run and Debug Broadway Flow</a></li>
-<li><a href="27_broadway_data_inspection.md">Data Inspection in Broadway</a></li>
+<li><a href="27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
 </ul>
