@@ -42,7 +42,7 @@ To export an Actor, click **Export Actor** in the [Actor's context menu](18_broa
 Dynamic Logic Actors include dynamic logic as one of their input parameters. The most frequently used Actors include:
 
 - **JavaScript** Actor, which executes the JavaScript code provided in the **script** parameter and returns the value of the last expression.
-- **DbCommand** Actor, which executes the provided SQL command provided in the **sql** parameter.
+- **DbCommand** Actor, which executes the SQL command provided in the **sql** parameter.
 
 ## Actor Description and Remarks
 
