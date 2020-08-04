@@ -1,6 +1,8 @@
 # Handling Errors
  
-In Broadway, the Error Handling mechanism can be used to assign an **Error handler** to any [Stage](19_broadway_flow_stages.md) of a flow. Any [Actor](03_broadway_actor.md) can act as an error handler whereby their logic is validated by the error handler. 
+In Broadway, the Error Handling mechanism can be used to assign an **Error handler** to any [Stage](19_broadway_flow_stages.md) of a flow. 
+
+Any [Actor](03_broadway_actor.md) can act as an error handler whereby their logic is validated by the error handler. 
 
 - If an error handler returns true, the flow continues.
 
@@ -12,11 +14,11 @@ Errors can also be handled using an [Inner flow](22_broadway_flow_inner_flows.md
 
 ### How Do I Add an Error Handler to a Stage?
 
-To add an error handler to a Stage, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Error Handler** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
+Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Error Handler** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
 
 ![image](images/99_24_01.PNG)
 
-**Example of Error Handler in a Flow** 
+**Example of an Error Handler in a Flow** 
 
 1. Create a flow with the required business logic. For example: give two input numbers, divide a bigger number by a smaller number. 
 
@@ -24,13 +26,13 @@ To add an error handler to a Stage, click ![image](images/99_19_dots.PNG) in the
 
    ![image](images/99_24_02.PNG)
 
-3. If the smaller number equals 0, throw an error using a **JavaScript** Actor named **ErrorMsg**. Stage 4 is not executed since the error handler stops the flow's execution. 
+3. If the smaller number equals zero, throw an error using a **JavaScript** Actor named **ErrorMsg**. Stage 4 is not executed since the error handler stops the flow's execution. 
 
    ![image](images/99_24_03.PNG)
 
 
 
-**Example of Error Handling Using an Inner Flow**
+**Example of an Error Handler Using an Inner Flow**
 
 1. Create a simple flow that performs a validation and throws an error. For example, check that input number is not zero and if it is - throw an exception. 
 
@@ -39,9 +41,9 @@ To add an error handler to a Stage, click ![image](images/99_19_dots.PNG) in the
 
    ![image](images/99_24_04.PNG)
 
-2. Save the flow and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor). The name of the flow is **CheckZeroDiv** and the new Actor's name is **CheckZeroDiv_Actor**.
+2. Save the flow and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor). The name of the flow is **CheckZeroDiv** and the name of the new Actor is **CheckZeroDiv_Actor**.
 
-3. Add a new Actor to another flow named **myFlow**that requires this validation. The inner flow is added to Stage 3 of **myFlow**. If the error occurs (min number = 0), at runtime  the exception is thrown and the flow stops.
+3. Add a new Actor named **myFlow** to another flow that requires this validation. The inner flow is added to Stage 3 of **myFlow**. If the error occurs (min number = 0), at runtime, the exception is thrown and the flow stops.
 
    ![image](images/99_24_05.PNG)
 
@@ -55,7 +57,7 @@ To add an error handler to a Stage, click ![image](images/99_19_dots.PNG) in the
 
    <img src="images/99_24_06.PNG"/>
 
-5.Several validations can be performed using different inner flows. For example, in addition to the above - add a validation that input numbers are not negative and if yes - throw an exception and stop the flow prior to the division step. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
+5. Several validations can be performed using different inner flows. For example, in addition to the above - add a validation that input numbers are not negative and if yes - throw an exception and stop the flow prior to the division step. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
 
    <img src="images/99_24_07.PNG"/>
 
