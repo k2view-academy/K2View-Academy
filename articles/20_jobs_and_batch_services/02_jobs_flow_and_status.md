@@ -3,7 +3,7 @@
 As it is the case for most Fabric entities, a job's flow consists of the following 3 stages: DEFINE, CONFIGURE and DEPLOY
 
 - DEFINE: a function needs to be defined as a job function under a specific LU - it needs to be defined and attached to a specific LU type under the LU Utilities folder.
-- CONFIGURE: a new job entry must be added to the jobs'table that features under the LU Type tree, with a number of configuration parameters and a method, which is basically one of the functions previosuly defined as a job function
+- CONFIGURE: a new job entry must be added to the jobs' table that sits under the LU Type tree, with a number of configuration parameters and a method, which is basically one of the functions previously defined as a job function, and an affinity flag specifying which node is allocated to this job (if any).
 - DEPLOY: the LU, its associated job functions and the jobs table are processed by the the Fabric Node onto which the deployment was performed. The job will be triggered either automatically or manually depending on the parameter specified during the configuration phase.
 
 
@@ -69,11 +69,16 @@ The other dotted or plain arrows show the transition between stages in manual ex
 
 # **Fabric Nodes and Jobs Processes** 
 
+***Node Affinity***
+A particular job can be assigned to a specific Fabric node. This is done by specifying the node's parameters in the jobs definition table in Fabric studio or from the startjob command in Fabric Runtime environment. Once deployed, the job will be only allocated to the specified node.
+
 ***Nodes competition***
 
 When running multiple Fabric Nodes, jobs can be allocated to different nodes. 
 Once a new job is deployed, each node will compete to execute the new job while Cassandra's optimistic locking process will ensure a consensus is reached between all the nodes and that each job gets to be executed by the best candidate node at any given time, and that it will be executed once only.
 Within each Fabric node, a running thread checks whether a new job has been deployed and in case the Cassandra's LiteWeight Transactions process will allocate the job to this specific node, the thread will handle the processing and lifecycle of the job.
+
+In the illustation below, we show 2 different examples whereby JOB1 is allocated to Node 2, as it has been configured 
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation.PNG">
 
@@ -90,8 +95,6 @@ Fabric runtime server comes with a few java classes dedicated to handle the jobs
 
 Fabric ensures that jobs executions gets multiple recovery opportunities in case the node responsible for its execution falls through. 
 A heartbit variable can be configured for each node, allowing for each fabric node status to be monitored and for jobs to be reallocated to a different node. Yet if the node restarts, and there is no sufficient time until the scheduled job's execution, the rebooting node will be given precedence for the execution.
-
-
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/03_)
