@@ -18,21 +18,21 @@ For the good usability of the Actor and the whole flow, it is recommended to wri
   rowSum;
   ```
 
-- Use the [**self** keyword]( link to below example ) to maintain state across script executions, such as loop aggregation. For example: 
+- Use the [**self** keyword](08_javascript_actor.md#example-of-how-to-sum-the-values-of-an-array) to maintain state across script executions, such as loop aggregation. For example: 
 
   ``` self.agg += value ```
 
-- To [read data from completed Actors](add link to example), you can access their id as a local variable, and read the output ports. For example, you can use **Const1.value** to access the value of Const1.
+- To [read data from completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), you can access their id as a local variable, and read the output ports. For example, you can use **Const1.value** to access the value of Const1.
 
 - To access iteration data, use the **contextLoop** object. You have access to **contextLoop.index()**, **contextLoop.stop()**, **contextLoop.skip()**.
 
-- To read and write data to the flow arguments, you can use the [**flowArgs** keyword](add link to example). You can also use **flowArgs** to write data to the flow context and refer to it in other actors.
+- To read and write data to the flow arguments, you can use the [**flowArgs** keyword](08_javascript_actor.md#example-of-how-to-read-and-write-data-to-the-flow-arguments). You can also use **flowArgs** to write data to the flow context and refer to it in other actors.
 
 - To iterate over a collection, use the standard syntax: 
 
   ``` rows.forEach(row => {...}) ```
 
-- A special [**for...each** syntax](link to below example) is also supported: 
+- A special [**for...each** syntax](08_javascript_actor.md#example-of-how-to-use-foreach-syntax) is also supported: 
 
   ``` for each (var row in rows) { ... } ```
 
