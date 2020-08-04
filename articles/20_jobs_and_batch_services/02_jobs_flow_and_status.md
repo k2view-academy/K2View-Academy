@@ -1,6 +1,6 @@
 # **Fabric Jobs Flow** 
 
-As for most Fabric entities, a job's flow consists of the following 3 stages: DEFINE, CONFIGURE and DEPLOY
+As it is the case for most Fabric entities, a job's flow consists of the following 3 stages: DEFINE, CONFIGURE and DEPLOY
 
 - DEFINE: a function needs to be defined as a job function under a specific LU - it needs to be defined and attached to a specific LU type under the LU Utilities folder.
 - CONFIGURE: a new job entry must be added to the jobs'table that features under the LU Type tree, with a number of configuration parameters and a method, which is basically one of the functions previosuly defined as a job function
@@ -48,7 +48,7 @@ Indicates that a job has been actively restarted.
 
 The image below illustrates the different stages of a job's lifecycle and the different types of actions that can get a specific job to transit from one particular state to another:
 The blue arrows show the natural path of a job during it's life cycle in Automatic Execution mode.
-The other dotted or plain lines show the transition between stages in manual execution mode, when applying one of the following commands:
+The other dotted or plain arrows show the transition between stages in manual execution mode, when applying one of the following commands:
 ***startjob***
 ***stopjob***
 ***restartjob***
@@ -56,6 +56,22 @@ The other dotted or plain lines show the transition between stages in manual exe
 
 
 [<img src="/articles/20_jobs_and_batch_services/images/01_jobs_and_batch_services_status_flow.PNG">]
+
+
+
+# **Fabric Nodes and Jobs Processes** 
+
+When running multiple Fabric Nodes, jobs can be allocated to different nodes. 
+Once a new job is deployed, each node will compete to execute the new job while Cassandra's optimistic locking process will ensure a consensus is reached between all the nodes and that each job gets to be executed by the best candidate node at any given time, and that it will be executed once only.
+Within each Fabric node, a running thread checks if a new job has been deployed and will handle the processing and lifecycle of the job.
+
+
+Fabric runtime server comes with a few java classes dedicated to handle the jobs' lifecycle. Among these classes the 3 following services are particularily important:
+- JobsExecutor to manage the job's execution along the different phases of its lifecycle, manage retrials when necessary and update job status 
+- JobsScheduler to manage the ownership of a specific job sitting on the queue
+- JobsReconcile to handle the re-allocation of jobs to the propper Fabric node if a node went offline.
+
+heartbit
 
 
 
