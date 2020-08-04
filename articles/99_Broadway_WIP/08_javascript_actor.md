@@ -22,7 +22,7 @@ For the good usability of the Actor and the whole flow, it is recommended to wri
 
   ``` self.agg += value ```
 
-- To [read data from completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), you can access their id as a local variable, and read the output ports. For example, you can use **Const1.value** to access the value of Const1.
+- To [read data from completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), you can access their id as a local variable, and read the output ports. For example, you can use **Const1.value** to access the value of an Actor named Const1.
 
 - To access iteration data, use the **contextLoop** object. You have access to **contextLoop.index()**, **contextLoop.stop()**, **contextLoop.skip()**.
 
@@ -48,7 +48,9 @@ For the good usability of the Actor and the whole flow, it is recommended to wri
 
 #### **Example of How to Sum the Values of an Array**
 
-To summarize the values of an array, use the **self** keyword which gives an access to the Actor's state. The state is kept between the executions of the same Actor in the flow.
+To summarize the values of an array, use the **self** keyword which gives an access to the Actor's state. The state is kept between the executions of the same Actor in the flow. For example, when **SumArray** Actor is invoked in an [Iteration](21_iterations.md) within the flow, its JavaScript code is executed across all Actor's executions.
+
+![image](/images/99_08_01.PNG)
 
 ```  
 self.sum = self.sum || 0;
