@@ -12,6 +12,7 @@ As it is the case for most Fabric entities, a job's flow consists of the followi
 All Fabric jobs will go through different stages, each of which indicates a specific step in the job's handling process:
 
 ***Scheduled***
+
 This stage is reserved for the following types of schedules:
 
     ****Time interval**** – when a recurring job is scheduled to run at every given time. If the job is scheduled to run every 60 minutes, it will do so but coubnt 60 minutes from the time the previous occurrence of the job finished.
@@ -21,6 +22,7 @@ This stage is reserved for the following types of schedules:
     ****Cron**** – when a series of the same job needs to be run according to the crontab scheduling format. Note that the actual execution of the job will be handled by Fabric's own scheduler.
 
 ***Waiting***
+
 When a job is in this particular stage, it is waiting to be executed by the appropriate fabric node to which it will be allocated. 
 
 
@@ -28,21 +30,27 @@ For the previous stages, it is important to note that if a (same) job is redeplo
 This means that if a recurring job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
 
 ***In process***
+
 This is the actual stage when the execution happens.
 
 ***Processed***
+
 Indicates that a job has been executed successfully.
 
 ***Stopping***
+
 Indicates that either a user or a system action has triggered a stopjob command and that the job is being terminated.
 
 ***Terminated***
+
 Describes the end of the stopping process. The job in process is no longer being executed or requested to stop.
 
 ***Failed***
+
 Describes that the job failed to run and that the process did not run.
 
 ***Restart***
+
 Indicates that a job has been actively restarted.
 
 
