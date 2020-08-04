@@ -32,4 +32,4 @@ The following articles will address:
 - how to invoke and manage them from Fabric Runtime console.
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_statuses.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
