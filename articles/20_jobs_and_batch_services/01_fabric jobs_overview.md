@@ -1,6 +1,7 @@
 # **Fabric Jobs Overview** 
 
-Fabric supplies a rich, resilient, and scalable built-in functionality that allows the system to run any script or other executable using the Fabric Jobs mechanism.
+Fabric supplies a rich, resilient, and scalable built-in functionality that allows the system to run any script or other executable using the Fabric Jobs mechanism. 
+This is where all asynchronous recurring, one-time only or scheduled actions happen, enabling users to run Fabric functions according to a predefined schedule. Once set up by the user, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can be also used to collect data from structured DB or any files (HTTP), streams, or message queues.
 
 Fabric Jobs fall into one of the following categories:
 
