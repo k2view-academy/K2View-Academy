@@ -1,4 +1,4 @@
-# Handling Errors
+#  Error Handling
  
 In Broadway, the Error Handling mechanism can be used to assign an **Error handler** to any [Stage](19_broadway_flow_stages.md) of a flow. 
 
@@ -20,7 +20,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 **Example of an Error Handler in a Flow** 
 
-1. Create a flow with the required business logic. For example: give two input numbers, divide a bigger number by a smaller number. 
+1. Create a flow with the required business logic. For example: given two input numbers, divide a bigger number by a smaller number. 
 
 2. Before the division in Stage 4, check that the smaller number does not equal zero using an Error Handler **JavaScript** Actor named **Validation** in Stage 3 of the flow. 
 
@@ -32,7 +32,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 
 
-**Example of an Error Handler Using an Inner Flow**
+**Example of Handling an Error Using an Inner Flow**
 
 1. Create a simple flow that performs a validation and throws an error. For example, check that input number is not zero and if it is - throw an exception. 
 
@@ -43,7 +43,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 2. Save the flow and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor). The name of the flow is **CheckZeroDiv** and the name of the new Actor is **CheckZeroDiv_Actor**.
 
-3. Add a new Actor named **myFlow** to another flow that requires this validation. The inner flow is added to Stage 3 of **myFlow**. If the error occurs (min number = 0), at runtime, the exception is thrown and the flow stops.
+3. Add a new Actor **CheckZeroDiv_Actor** to another flow named **myFlow** that requires this validation. The inner flow is added to Stage 3 of **myFlow**. If during the flow execution the error occurs (min number = 0), the exception is thrown and the flow stops.
 
    ![image](images/99_24_05.PNG)
 
