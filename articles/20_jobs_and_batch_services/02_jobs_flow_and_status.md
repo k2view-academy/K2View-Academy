@@ -70,19 +70,24 @@ The other dotted or plain arrows show the transition between stages in manual ex
 # **Fabric Nodes and Jobs Processes** 
 
 ***Nodes competition***
+
 When running multiple Fabric Nodes, jobs can be allocated to different nodes. 
 Once a new job is deployed, each node will compete to execute the new job while Cassandra's optimistic locking process will ensure a consensus is reached between all the nodes and that each job gets to be executed by the best candidate node at any given time, and that it will be executed once only.
 Within each Fabric node, a running thread checks whether a new job has been deployed and in case the Cassandra's LiteWeight Transactions process will allocate the job to this specific node, the thread will handle the processing and lifecycle of the job.
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation.PNG">
 
+
 ***Job process***
+
 Fabric runtime server comes with a few java classes dedicated to handle the jobs' lifecycle. Among these classes the 3 following services are particularily important:
 - JobsExecutor to manage the job's execution along the different phases of its lifecycle, manage retrials when necessary and update job status 
 - JobsScheduler to manage the ownership of a specific job sitting on the queue
 - JobsReconcile to handle the re-allocation of jobs to the propper Fabric node if a node went offline.
 
+
 ***Job Execution resiliency***
+
 Fabric ensures that jobs executions gets multiple recovery opportunities in case the node responsible for its execution falls through. 
 A heartbit variable can be configured for each node, allowing for each fabric node status to be monitored and for jobs to be reallocated to a different node. Yet if the node restarts, and there is no sufficient time until the scheduled job's execution, the rebooting node will be given precedence for the execution.
 
