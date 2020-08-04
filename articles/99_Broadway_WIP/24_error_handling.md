@@ -34,13 +34,32 @@ To add an error handler to a Stage, click ![image](images/99_19_dots.PNG) in the
 
 1. Create a simple flow which performs a validation and throws an error. For example, check that input number is not zero and if it is - throw an exception. 
 
+   - The validation is implemented using a **JavaScript** Actor set as **Error Handler** which includes the validation check: *a != 0*.
+   - The exception is implemented using a **JavaScript** Actor which throws an exception if Error Handler returns false: *throw "Can't divide by zero!"*.
+
    ![image](images/99_24_04.PNG)
 
 2. Save the flow and then [save the flow as Actor](22_broadway_flow_inner_flows.md#save-as-actor). The flow name is **CheckZeroDiv** and the new Actor's name is **CheckZeroDiv_Actor**.
 
-3. Add a new Actor to another flow which requires this validation. The inner flow is added to Stage 3 on this flow and if the error occurs (min number = 0), the error will be thrown and the flow will stop.
+3. Add a new Actor to another flow called **myFlow** which requires this validation. The inner flow is added to Stage 3 of **myFlow**. If at run time the error occurs (min number = 0), the exception will be thrown and the flow will stop.
 
    ![image](images/99_24_05.PNG)
+
+4. The exception displays the message that helps to identify in which flow and at which Stage the error occurred. If the error occurred in the inner flow, it shows the name and the Stage of the inner flow too.
+
+   In the example below, the following information is displayed in the error message:
+
+   **Flow**: myFlow **Level**: 3 Stage: **Stage 3 Actor**: CheckZeroDiv_Actor1  
+
+   **Cause**:  InnerFlowException: **Flow**: CheckZeroDiv **Level**: 1 Stage: **Stage 1 Actor**: ErrorMsg  class jdk.nashorn.internal.runtime.ECMAException **Cause**: Can't divide by zero!
+
+   <img src="images/99_24_06.PNG"/>
+
+5. It is possible to perform several validations using different inner flows. For example, in addition to the above - add a validation that input numbers are not negative and if yes - throw an exception and stop the flow prior to the division step. This check will also be implemented by creating another flow, saving it as an Actor and adding it to the current flow.
+
+   <img src="images/99_24_07.PNG"/>
+
+   
 
 [![Previous](/articles/images/Previous.png)](23_transactions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_broadway_flow_window_run_and_debug_flow.md)
 
