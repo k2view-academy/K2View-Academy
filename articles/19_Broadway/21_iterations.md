@@ -1,5 +1,5 @@
 # Iterations
-Iterations can be used to to repeatedly perform a flow section in a  data set. Iterations are similar to a **for...each loop** in the sense that a logic is run repeatedly until no data remains to act upon.
+Iterations can be used to to repeatedly perform a section of a flow in a  data set. Iterations are similar to a **for...each loop** in the sense that a logic is repeatedly run until no data remains to act upon.
 The most common iteration use cases are iterating over a database result set or an array of data returned by an API.
 
 
@@ -16,7 +16,7 @@ In the following image, Stage 2 runs for each data entry returned by the the fir
 
 The scope of the interation's logic starts immediately after the Actor and the Iterate line type's origin and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as Closed, click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**. 
 
-The following image displays an iteration loop that starts in **Stage 2** and runs until **Stage 3** of each entry. After the data is traversed the loop is complete and **Stage 4** is executed.
+The following image displays an iteration loop that starts in Stage 2 and runs until Stage 3 on each entry. After the data is traversed, the loop is complete and Stage 4 is executed.
 
 <div align="center"><img src="images/iterate_scope.png" height="160px"/></div>
 
@@ -31,7 +31,7 @@ Path connections work well when combined with an iteration loop. The following d
 
 ## Nested Arrays
 
-Looping an item in an inner array of a data set with nested arrays, generates an interation over the entire data set. For example, in a data set of map names holding an array of maps with a Broadway field name, Broadway traverses all **name** values.
+Looping an item in an inner array of a data set with nested arrays generates an interation over the entire data set. For example, in a data set of map names holding an array of maps with a Broadway field name, Broadway traverses all **name** values.
 
 <div align="center"><img src="images/iterate_nested_array.png" height="160px"/></div>
 
@@ -42,7 +42,7 @@ Iterations can also be nested. For example, a value in an iteration can be used 
 There are no limitations on the iteration nesting level. However, to make a flow more readable, consider using inner flows for 3 or 4 nesting levels.
 
 
-In the following image, the first name is an input to a query that gets a list of relevant phone numbers. **Stage 2** is run on every entry in **Stage 1** and **Stage 3** on every entry in **Stage 2**.
+In the following image, the first name is an input to a query that gets a list of relevant phone numbers. Stage 2 is run on every entry in Stage 1 and Stage 3 on every entry in Stage 2.
 
 <div align="center"><img src="images/iterate_nested_iterations.png" height="160px"/></div>
 
@@ -51,7 +51,7 @@ In the following image, the first name is an input to a query that gets a list o
 ## Split Iterations
 
 A Stage can have more than one collection. A common case is a JSON data structure that contains more than one array.
-Using the Stage split functionality you can split the flow and manage several loops over the same data structure.
+Using the Stage Split functionality you can split the flow and manage several loops over the same data structure.
 
 <div align="center"><img src="images/iterate_split.png" height="180px"/></div>
 
