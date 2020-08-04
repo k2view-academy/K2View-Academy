@@ -14,11 +14,11 @@ All Fabric jobs will go through different stages, each of which indicates a spec
 ***Scheduled***
 This stage is reserved for the following types of schedules:
 
-****Time interval**** – when a recurring job is scheduled to run at every given time. If the job is scheduled to run every 60 minutes, it will do so but coubnt 60 minutes from the time the previous occurrence of the job finished.
+    ****Time interval**** – when a recurring job is scheduled to run at every given time. If the job is scheduled to run every 60 minutes, it will do so but coubnt 60 minutes from the time the previous occurrence of the job finished.
 
-****Timestamp**** – when a specific job is scheduled to run only once at a given date and time
+    ****Timestamp**** – when a specific job is scheduled to run only once at a given date and time
 
-****Cron**** – when a series of the same job needs to be run according to the crontab scheduling format. Note that the actual execution of the job will be handled by Fabric's own scheduler.
+    ****Cron**** – when a series of the same job needs to be run according to the crontab scheduling format. Note that the actual execution of the job will be handled by Fabric's own scheduler.
 
 ***Waiting***
 When a job is in this particular stage, it is waiting to be executed by the appropriate fabric node to which it will be allocated. 
