@@ -1,20 +1,20 @@
 # Inner Flows
 
 ### Inner Flow Actor Types
+Broadway enables the execution of a Broadway flow in another flow. This function can be used when the same logic needs to be executed in several flows. 
 
-Broadway enables an execution of one Broadway flow within another one. This function can be used when the same logic needs to be executed in several flows. There are three [built-in Actor types](04_built_in_actor_types.md)  that can execute an inner flow:
+An inner flow can be executed by three [built-in Actor types](04_built_in_actor_types.md):
 
-* **InnerFlow** Actor, executes a Broadway flow. Input and output arguments reflect the inputs and outputs of external arguments to the inner flow.
-* **InnerFlowAsync** Actor, executes a Broadway flow asynchronously in a thread pool. When called, the Actor will return immediately once a working thread becomes available. When the flow completes, it will wait for all threads to complete. 
-* **InnerFlowJoin** Actor, is used to wait for all pending tasks of an **InnerFlowAsync** Actor to be completed. You need to connect the **remaining** output argument (the number of flow still remaining to be completed) of **InnerFlowAsync** Actor to the **remaining** input argument of **InnerFlowJoin** Actor. The actor will complete once the remaining tasks is 0.
+* **InnerFlow** Actor, executes a Broadway flow. Input and output arguments reflect the inputs and outputs of external arguments to and from the inner flow.
+* **InnerFlowAsync** Actor, executes a Broadway flow asynchronously in a thread pool. When called, the Actor returns immediately once a working thread becomes available. When the flow is complete, the Actor waits for all threads to be completed. 
+* **InnerFlowJoin** Actor, waits for all pending tasks of an **InnerFlowAsync** Actor to be completed. The **remaining** output argument (number of flows remaining to be completed) of the **InnerFlowAsync** Actor must be connected to the **remaining** input argument of the **InnerFlowJoin** Actor. The Actor is complete once the number of remaining tasks is 0.
 
 ### Save As Actor
-
-Additional way to create an inner flow in Broadway is by using the **Save as Actor** action in the [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow window. It saves the current flow as a new Actor, so that its logic can be reused in another Broadway flow. When a new Actor is created, it inherits from **InnerFlow** Actor. 
+An inner Broadway flow can also be created using the **Save as Actor** action in the [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow window. This method saves the current flow as a new Actor whereby its logic can be reused in another Broadway flow. When a new Actor is created, it inherits from the **InnerFlow** Actor. 
 
 ##### Example of Saving an Actor and Using it in Another Flow
 
-1. Create a flow which incapsulates a specific business logic, for example: given two input numbers, divide a bigger number by a smaller number. 
+1. Create a flow that incapsulates a specific business logic. For example, give two input numbers, divide a bigger number by a smaller number. 
 
    ![image](images/99_22_01.PNG)
 
