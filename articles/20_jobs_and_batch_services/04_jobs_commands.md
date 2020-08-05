@@ -1,7 +1,7 @@
 ## Jobs Commands
 
- The following Jobs commands are available:
-The following table lists the GET commands:
+The following Jobs commands are available to use from the Fabric Runtime Environment.
+
 
 <table width="900pxl">
 <tbody>
