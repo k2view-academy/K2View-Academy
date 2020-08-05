@@ -58,7 +58,7 @@ A link holds the following settings:
 </ul>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong>&nbsp;(variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on the fly. For instance, consider the *Concat* actor that can be used to concatenate several values into a single string.</p>
+<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on the fly. For instance, consider the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string.</p>
 </li>
 </ul>
 </td>
@@ -95,10 +95,9 @@ To create a **Link** do either:
 
 - Click the **output parameter** of the source Actor and drag the **connection line** to the **input parameter** of the target Actor.
 - Click the **input parameter** of the target Actor and drag the **connection line** to the **output parameter** of the source Actor.
-- Click ![image](images/99_19_dots.PNG) in the source Actor > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes.
+- Click ![image](images/99_19_dots.PNG) in the source Actor > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes. It is recommended to use the Link when the Actors are far from each other in the flow.
 
-    ![Adding link](images/99_20_add_link_1.PNG)
-
+   ![Adding link](images/99_20_add_link_1.PNG)
 
 ### Linking a Schema Object
 
