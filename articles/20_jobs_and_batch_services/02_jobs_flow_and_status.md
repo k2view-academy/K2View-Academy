@@ -100,7 +100,8 @@ Fabric runtime server comes with a few java classes dedicated to handle the jobs
 ***Job Execution resiliency***
 
 Fabric ensures that jobs executions gets multiple recovery opportunities in case the node responsible for its execution falls through. 
-A heartbit variable can be configured for each node, allowing for each fabric node status to be monitored and for jobs to be reallocated to a different node. Yet if the node restarts, and there is no sufficient time until the scheduled job's execution, the rebooting node will be given precedence for the execution.
+A heartbit variable can be configured for each node, allowing for each fabric node status to be monitored and for jobs to be reallocated to a different node. 
+Yet if the node restarts, and if there is no sufficient time until the scheduled job's execution, the rebooting node will be given precedence over all other nodes for the execution of the job's instance.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/03_create_a_job.md)
