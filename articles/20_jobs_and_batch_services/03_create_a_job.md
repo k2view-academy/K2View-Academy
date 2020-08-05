@@ -38,7 +38,7 @@ while (test<5 && !isAborted()){
    <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
 
-5. In the **Job table** start filling in the details pertaining to the Job.
+5. In the **Job table** start filling in the values pertaining to the Job.
 
 
 **Method:** 
@@ -63,7 +63,7 @@ Must be check-in to deploy and run the Job
 
 **Schedule Type:** 
 
-####3 schedules modes are avaialble:####
+##### 3 schedules modes are avaialble: #####
 ```
 	- CRON
 	Example: Execution set to: ```30 0/2 8-18 5 3 ? 2021``` the job will run the job with the following frequency described in the CRON description tab:
