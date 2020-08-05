@@ -71,17 +71,17 @@ Sometimes it is required to concatenate several strings into a single string, fo
 
 - Link the **A1** Actor to the **Concat1** Actor with Varargs set to OFF. 
 
-    ![image](images/99_20_example_01.png)
+    ![image](images/99_20_example_01.PNG)
 
 
 - Update the Varargs setting to ON. It modifies the **elements** input variable to an array that holds two elements - the first is linked to the **A1.value** and the second is available for an additional link:
 
-  ![varargs-on1](images/99_20_example_02.png)
+  ![varargs-on1](images/99_20_example_02.PNG)
 
 
 - Linking the **B1.value** to the second element in the **elements** array again adds an element to the **elements** array and enables linking additional inputs to it:
 
-  ![varagrs-on2](images/99_20_example_03.png)
+  ![varagrs-on2](images/99_20_example_03.PNG)
 
 
   **Notes:**
