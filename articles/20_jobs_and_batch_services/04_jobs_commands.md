@@ -37,7 +37,7 @@ The following table lists the GET commands:
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>JOBSTATUS \<JOBTYPE\></h5>
+<h5>JOBSTATUS &ltJOBTYPE&gt</h5>
 </td>
 <td valign="top" width="400pxl">
 <p>Returns the status of all running jobs according to jobType.</p>
