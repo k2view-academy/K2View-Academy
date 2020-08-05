@@ -14,7 +14,7 @@ Note that an Actor can only be linked to input parameters with Population Type =
 
 **Example 1: Valid Link**
 
-Two **Const** Actors are linked to a **DbCommand** Actor and send input for a DB query. 
+Two **Const** Actors are linked to a **DbCommand** Actor and send input for a DB query.
 
 ![link-example1](images/valid_link_example.png)
 
@@ -58,7 +58,7 @@ A link holds the following settings:
 </ul>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong>&nbsp;(variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful when the source parameter has an <strong>any</strong> (unknown) Type.</p>
+<p class="unchanged"><strong>Varargs</strong>&nbsp;(variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on the fly. For instance, consider the *Concat* actor that can be used to concatenate several values into a single string.</p>
 </li>
 </ul>
 </td>
@@ -71,24 +71,24 @@ A link holds the following settings:
 - **Const1.value** is linked to **DbCommand1.params**. The Varargs setting is OFF:
 
     ![varagrs-off](images/link_varargs_off.png)
-  
-   
+
+
 - Updating the Varargs setting to ON updates the params input variable and changes it to an array that holds two elements - the first is linked to the **Const1.value** and the second is available for an additional link:
-  
+
   ![varargs-on1](images/link_varargs_on_1.png)
 
- 
+
 - Linking the **Const2.value** to the second element in the params array again adds an element to the params array and enables linking additional inputs to the params array:
-  
+
   ![varagrs-on2](images/link_varargs_on_2.png)
-  
-  
+
+
   **Notes:**
 
   - All additional links to the output array are created automatically when **Varagrs** is set to ON.
   - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
-  
-  
+
+
 ## How Do I Add Links to the Flow?
 
 To create a **Link** do either:
@@ -98,13 +98,13 @@ To create a **Link** do either:
 - Click ![image](images/99_19_dots.PNG) in the source Actor > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes.
 
     ![Adding link](images/99_20_add_link_1.PNG)
-    
 
-### Linking a Schema Object 
 
-A Schema contains different elements. 
+### Linking a Schema Object
 
-**Example:** 
+A Schema contains different elements.
+
+**Example:**
 
 The source parameter holds the following Schema:
 
@@ -125,7 +125,7 @@ The source parameter holds the following Schema:
             "type": "string"
         }
     }
-} 
+}
 ```
 
 To connect a specific element in the Schema, click ![image](images/99_27_red_cross.PNG) adjacent to the Actor's output argument to expand the **yellow segment** of the **Data Inspection** and view the parameters list in the object:
@@ -146,7 +146,7 @@ Click the link's connection line and press **Delete** on  your keyboard.
 
 ## How Do I Edit Links in the Flow?
 
-Click the link's connection line to open the [Link Object Properties window](20_broadway_flow_linking_actors.md#link-object-properties) on the right of the Flow window. Edit the **Link Type** or **Varargs** settings. 
+Click the link's connection line to open the [Link Object Properties window](20_broadway_flow_linking_actors.md#link-object-properties) on the right of the Flow window. Edit the **Link Type** or **Varargs** settings.
 
 ## Show Only Connected Objects
 
