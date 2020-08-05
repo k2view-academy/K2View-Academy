@@ -8,17 +8,17 @@ The following steps discuss how a new User Job is created:
 
 1. In the **Project Tree**, go to your LUT > **Java** > **Utilities** and right-click on **New Function** to display the **Function Editor** window.
 
-   <img src="/articles/20_jobs_and_batch_services/images/*.png" alt="drawing"/>     
+   <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
 2. Write the User Job Function (or use IntelliJ to write it) and once done, set the Function Type to the **User Job** value in the right-hand panel.
 
 3. Name and save your function.
 
-   <img src="/articles/20_jobs_and_batch_services/images/*.png"/>  
+   <img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">  
 
 4. Then in the **Project Tree**, go to your LUT > **Jobs** > **User Jobs**
 
-   <img src="/articles/20_jobs_and_batch_services/images/Web-Service-KI-3-3.png" alt="drawing"/>  
+   <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">  
 
 5. In the **Job table** start filling in the details pertaining to the Job.
 
