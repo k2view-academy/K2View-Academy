@@ -1,5 +1,5 @@
 ## Jobs Commands
- 
+
  The following Jobs commands are available:
 The following table lists the GET commands:
 
@@ -51,37 +51,45 @@ The following table lists the GET commands:
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>JOBSTATUS \<JOBTYPE\> '<NAME>'</h5>
+
+<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt'</h5>
+
 </td>
 <td valign="top" width="400pxl">
+
 <p>Returns the status of all running jobs that match the given type and name.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
+
 <p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
 </td>
 </tr> 
 
-
 <tr>
 <td valign="top" width="300pxl">
-<h5>JOBSTATUS <JOBTYPE> '<NAME>' WITH UID='<UID>'</h5>
+
+<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt' WITH UID='&ltUID&gt'</h5>
+
 </td>
 <td valign="top" width="400pxl">
+
 <p>Returns the status of all jobs that match the give type, name and uid.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
+
 <p>JOBSTATUS PARSER MyParser WITH UID='CUST-MyParser';</p>
 </td>
 </tr> 
 
-
 <tr>
 <td valign="top" width="300pxl">
-<h5>STARTJOB <JOBTYPE> NAME='<name>' [UID='<uid>'] [AFFINITY='<AFFINITY=affinity>'] [ARGS='<args>'] [EXEC_INTERVAL='<execInterval>'];</h5>
+
+<h5>STARTJOB &ltJOBTYPE&gt NAME='&ltname&gt' [UID='&ltuid&gt'] [AFFINITY='&ltAFFINITY=affinity&gt'] [ARGS='&ltargs&gt'] [EXEC_INTERVAL='&ltexecInterval&gt'];</h5>
 </td>
 <td valign="top" width="400pxl">
+
 <p>
 Starts the job using arguments.
 Affinity, UID and other Arguments are optional inputs.
@@ -115,8 +123,8 @@ Stops all matching jobs with this name and type.
 <p>STOPJOB PARSER NAME=CUST-MyParser';</p>
 </td>
 </tr> 
- 
- 
+
+
  <tr>
 <td valign="top" width="300pxl">
 <h5>STOPJOB <JOBTYPE> NAME='<name>' UID='<uid>'</h5>
@@ -131,9 +139,9 @@ Stops a specific job matching a UID.
 <p>STOPJOB PARSER NAME='CUST-MyParser' UID='CUST-MyParser';</p>
 </td>
 </tr> 
+
  
- 
- 
+
 <tr>
 <td valign="top" width="300pxl">
 <h5>RESTARTJOB <JOBTYPE> NAME='<name>'</h5>
@@ -148,7 +156,7 @@ Restarts all matching jobs with this name and type.
 <p>RESTARTJOB PARSER NAME='CUST-MyParser';</p>
 </td>
 </tr> 
- 
+
 <tr>
 <td valign="top" width="300pxl">
 <h5>RESTARTJOB <JOBTYPE> NAME='<name>' UID='<uid>'</h5>
@@ -163,7 +171,7 @@ Restarts a specific job matching a UID.
 <p>RESTARTJOB PARSER NAME='CUST-MyParser' UID='CUST-MyParser';</p>
 </td>
 </tr> 
- 
+
 <tr>
 <td valign="top" width="300pxl">
 <h5>RESUMEJOB <JOBTYPE> NAME='<name>' UID='<uid>'</h5>
@@ -178,8 +186,8 @@ Resumes a specific matching job. This command applies only to an existing job.
 <p>RESUMEJOB PARSER NAME='CUST-MyParser' UID='CUST-MyParser';</p>
 </td>
 </tr> 
- 
- 
+
+
  <tr>
 <td valign="top" width="300pxl">
 <h5>updatejob <jobType> NAME='<name>' [UID='<uid>'] [AFFINITY='<affinity>'] [ARGS='<args>'] [EXEC_INTERVAL='<execInterval>'] [RESET_END_TIME=true/false]</h5>
@@ -202,6 +210,6 @@ NOTE: in order to update cron job to one time job, use EXEC_INTERVAL=''
 </p>
 </td>
 </tr> 
- 
+
 </tbody>
 </table>
