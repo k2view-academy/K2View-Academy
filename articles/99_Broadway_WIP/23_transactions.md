@@ -3,7 +3,7 @@
 Broadway has a built-in Transactions Management mechanism. 
 
 
-In a Broadway flow, a **Transaction** is marked by blue diagonal lines in the Stage background and can span across several [Stages](19_broadway_flow_stages.md).
+In a Broadway flow, a **Transaction** is marked by blue diagonal lines in the Stage's background and can span across several [Stages](19_broadway_flow_stages.md).
 
  ![image](images/99_23_01.PNG)
 
@@ -13,7 +13,7 @@ Each Stage of a flow can be marked as a transaction.
 - Several sequential Stages marked as transactions are part of the same transaction.
 - The transaction ends in the last Stage marked as a transaction and is followed by a commit. The transaction is rolled back if there are errors. 
 
-A transaction can be defined on DB-related activities as well as on different types of entities. For example writing into a file. When a Broadway flow writes into a file, the end transaction closes the file. 
+A transaction can be defined on DB-related activities as well as on different types of entities. For example, writing into a file. When a Broadway flow writes into a file, the end transaction closes the file. 
 
 Transactions can include [inner flows](22_broadway_flow_inner_flows.md). If a transactional Stage executes an inner Broadway flow, the flow automatically becomes a part of the outer transaction.
 
