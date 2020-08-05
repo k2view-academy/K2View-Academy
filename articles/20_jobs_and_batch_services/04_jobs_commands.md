@@ -235,7 +235,7 @@ Updates properties of existing job.
     Cron - crontab command
 - *ARGS: String which represents a json to pass additional arguments to the update job command. e.g. {"userJobName":"userTest"}
 
-NOTE: in order to update cron job to one time job, use EXEC_INTERVAL=''
+NOTE: in order to update a cron job to a one-time job, use EXEC_INTERVAL=''
 </p>
 <p>&nbsp;</p>
 
