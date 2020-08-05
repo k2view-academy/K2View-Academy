@@ -65,6 +65,7 @@ A link holds the following settings:
 </tr>
 </tbody>
 </table>
+
 **Example of Varargs Setting**
 
 Sometimes it is required to concatenate several strings into a single string, for example  when you need to format an address string from separate address elements. This can be easily done using **Varargs** setting.
