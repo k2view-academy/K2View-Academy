@@ -2,9 +2,31 @@
 
 As it is the case for most Fabric entities, a job's flow consists of the following 3 stages: DEFINE, CONFIGURE and DEPLOY
 
-- DEFINE: a function needs to be defined as a job function under a specific LU - it needs to be defined and attached to a specific LU type under the LU Utilities folder.
-- CONFIGURE: a new job entry must be added to the jobs' table that sits under the LU Type tree, with a number of configuration parameters and a method, which is basically one of the functions previously defined as a job function, and an affinity flag specifying which node is allocated to this job (if any).
-- DEPLOY: the LU, its associated job functions and the jobs table are processed by the the Fabric Node onto which the deployment was performed. The job will be triggered either automatically or manually depending on the parameter specified during the configuration phase.
+***DEFINE:*** 
+
+A function, flow or process need to be defined as a method to be invoked by the job when scheduled.
+
+For example: 
+User job: a java function needs to be defined and attached to a specific LU type under the LU Utilities folder. 
+Broadway job: a broadway flow will be defined in the broadway GUI
+Process job: a script will be stored on Fabric server. 
+
+
+***CONFIGURE:*** 
+
+A new job entry must be added to the jobs' table that sits under the LU Type tree
+A number of configuration parameters must be entered:
+- Schedule
+- Job type
+- Method
+- Affinity flag that specifies which Fabric node is to be allocated to this job (if any).
+
+
+***DEPLOY*** 
+
+The LU, its associated job functions and the jobs table are processed by the the Fabric Node onto which the deployment was performed. 
+The job will be triggered either automatically or manually depending on the parameter specified during the configuration phase.
+
 
 
 # **Fabric Jobs Status** 
