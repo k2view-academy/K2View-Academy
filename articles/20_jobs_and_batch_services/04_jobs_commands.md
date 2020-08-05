@@ -6,13 +6,13 @@ The following table lists the GET commands:
 <table width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <p><strong>Command Name</strong></p>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p><strong>Description</strong></p>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="300pxl">
 <p><strong>Example</strong></p>
 </td>
 </tr>
@@ -20,10 +20,10 @@ The following table lists the GET commands:
 
 
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>JOBSTATUS [x days ago]</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
 <p>&nbsp;</p>
 </td>
@@ -34,25 +34,10 @@ The following table lists the GET commands:
 </tr>  
 
 <tr>
-<td valign="top" width="100pxl">
-<h5>JOBSTATUS [x days ago]</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
-<p>&nbsp;</p>
-</td>
 <td valign="top" width="300pxl">
-<p>JOBSTATUS;</p>
-<p>JOBSTATUS 2 days ago;</p>
-</td>
-</tr> 
-
-
-<tr>
-<td valign="top" width="100pxl">
 <h5>JOBSTATUS [x days ago]</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
 <p>&nbsp;</p>
 </td>
@@ -63,24 +48,10 @@ The following table lists the GET commands:
 </tr> 
 
 <tr>
-<td valign="top" width="100pxl">
-<h5>JOBSTATUS [x days ago]</h5>
-</td>
-<td valign="top" width="250pxl">
-<p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
-<p>&nbsp;</p>
-</td>
 <td valign="top" width="300pxl">
-<p>JOBSTATUS;</p>
-<p>JOBSTATUS 2 days ago;</p>
-</td>
-</tr> 
-
-<tr>
-<td valign="top" width="100pxl">
 <h5>JOBSTATUS <JOBTYPE></h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>Returns the status of all running jobs according to jobType.</p>
 <p>&nbsp;</p>
 </td>
@@ -91,10 +62,10 @@ The following table lists the GET commands:
 </tr> 
 
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>JOBSTATUS <JOBTYPE> '<NAME>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>Returns the status of all running jobs that match the given type and name.</p>
 <p>&nbsp;</p>
 </td>
@@ -105,10 +76,10 @@ The following table lists the GET commands:
 
 
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>JOBSTATUS <JOBTYPE> '<NAME>' WITH UID='<UID>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>Returns the status of all jobs that match the give type, name and uid.</p>
 <p>&nbsp;</p>
 </td>
@@ -119,10 +90,10 @@ The following table lists the GET commands:
 
 
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>STARTJOB <JOBTYPE> NAME='<name>' [UID='<uid>'] [AFFINITY='<AFFINITY=affinity>'] [ARGS='<args>'] [EXEC_INTERVAL='<execInterval>'];</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>
 Starts the job using arguments.
 Affinity, UID and other Arguments are optional inputs.
@@ -143,10 +114,10 @@ EXEC_INTERVAL: definition of job scheduling execution interval, supports three f
 
 
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>STOPJOB <JOBTYPE> NAME='<name>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>;
 Stops all matching jobs with this name and type.
 </p>
@@ -159,10 +130,10 @@ Stops all matching jobs with this name and type.
  
  
  <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>STOPJOB <JOBTYPE> NAME='<name>' UID='<uid>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>
 Stops a specific job matching a UID.
 </p>
@@ -176,10 +147,10 @@ Stops a specific job matching a UID.
  
  
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>RESTARTJOB <JOBTYPE> NAME='<name>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>
 Restarts all matching jobs with this name and type.
 </p>
@@ -191,10 +162,10 @@ Restarts all matching jobs with this name and type.
 </tr> 
  
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>RESTARTJOB <JOBTYPE> NAME='<name>' UID='<uid>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>
 Restarts a specific job matching a UID.
 </p>
@@ -206,10 +177,10 @@ Restarts a specific job matching a UID.
 </tr> 
  
 <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>RESUMEJOB <JOBTYPE> NAME='<name>' UID='<uid>'</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>
 Resumes a specific matching job. This command applies only to an existing job.
 </p>
@@ -222,10 +193,10 @@ Resumes a specific matching job. This command applies only to an existing job.
  
  
  <tr>
-<td valign="top" width="100pxl">
+<td valign="top" width="300pxl">
 <h5>updatejob <jobType> NAME='<name>' [UID='<uid>'] [AFFINITY='<affinity>'] [ARGS='<args>'] [EXEC_INTERVAL='<execInterval>'] [RESET_END_TIME=true/false]</h5>
 </td>
-<td valign="top" width="250pxl">
+<td valign="top" width="400pxl">
 <p>
 Updates properties of existing job.
 AFFINITY: Comma-separated list of DCs and IPs combined. e.g. DC1,DC2...,IP1,IP2...
