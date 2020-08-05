@@ -65,27 +65,29 @@ A link holds the following settings:
 </tr>
 </tbody>
 </table>
+**Example of Varargs Setting**
 
-**Example:**
+Sometimes it is required to concatenate several strings into a single string, for example  when you need to format an address string from separate address elements. This can be easily done using **Varargs** setting.
 
-- **Const1.value** is linked to **DbCommand1.params**. The Varargs setting is OFF:
+- Link the **A1** Actor to the **Concat1** Actor with Varargs set to OFF. 
 
-    ![varagrs-off](images/link_varargs_off.png)
-
-
-- Updating the Varargs setting to ON updates the params input variable and changes it to an array that holds two elements - the first is linked to the **Const1.value** and the second is available for an additional link:
-
-  ![varargs-on1](images/link_varargs_on_1.png)
+    ![image](images/99_20_example_01.png)
 
 
-- Linking the **Const2.value** to the second element in the params array again adds an element to the params array and enables linking additional inputs to the params array:
+- Update the Varargs setting to ON. It modifies the **elements** input variable to an array that holds two elements - the first is linked to the **A1.value** and the second is available for an additional link:
 
-  ![varagrs-on2](images/link_varargs_on_2.png)
+  ![varargs-on1](images/99_20_example_02.png)
+
+
+- Linking the **B1.value** to the second element in the **elements** array again adds an element to the **elements** array and enables linking additional inputs to it:
+
+  ![varagrs-on2](images/99_20_example_03.png)
 
 
   **Notes:**
 
-  - All additional links to the output array are created automatically when **Varagrs** is set to ON.
+  - The number of string that can be concatenated is unlimited. 
+  - All additional links to the target array are created automatically when **Varagrs** is set to ON.
   - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
 
 
@@ -158,10 +160,11 @@ This option is useful when tracking complex flows.
 
 A complex String handling flow:
 
-![String flow](images/string_flow_example.png)
+<img src="images/string_flow_example.png" alt="String flow" style="zoom:80%;" />
 
 To view only the  Actors connected to **Regex1** Actor, click ![image](images/99_19_dots.PNG) in the Actor's right corner > **Show only connected** . The following Actors are displayed:
 
-![show connected-example](images/show_connected_examples.png)
+![image](images/show_connected_examples.png)
 
 [![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
+
