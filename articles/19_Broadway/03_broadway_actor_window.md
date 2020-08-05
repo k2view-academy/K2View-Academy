@@ -14,7 +14,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 <ul>
 <li>[Object Name] : [Actor Type]</li>
 </ul>
-<p>By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2...</p>
+<p>By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2 etc. It is encouraged to give the actors meaningful names according to their function in the flow.</p>
 </td>
 </tr>
 <tr>
@@ -69,7 +69,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 The Actor's input parameters are displayed in the Actor's Properties window in the following format:
 - [Parameter Name] : [Parameter Type]
 
-For example: 
+For example:
 - interface : string
 
 [Click for more information about Broadway data types](05_data_types.md#data-types-in-broadway).
@@ -101,7 +101,7 @@ Note that when populating an input value for an **SQL** parameter, click **QB** 
 
 ### Add Input Button
 
-Some Actors enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings: 
+Some Actors such as JavaScript and DbCommand, enable adding input parameters using an **Add Input** button. A new input parameter has the following default settings:
 
 - Parameter Type = Any.
 - Population Type = Link.
@@ -110,7 +110,7 @@ If the population type is updated to a **Const**, select the parameter type from
 
 To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
 
-Note that the input parameters of the ancestor Actor cannot be deleted. 
+Note that the input parameters of the ancestor Actor cannot be deleted.
 
 ### Output Parameters Properties
 
@@ -128,7 +128,7 @@ The actions in the output parameters are:
 
 ### Add Output Button
 
-Some Actors enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
+Some Actors, such as InnerFlow, enable adding output parameters using an **Add Output** button. A new output parameter is added with the default Parameter Type = Any.
 
 To delete or add more parameters, in the context menu click ![image](images/99_19_dots.PNG) > Delete or Insert.
 

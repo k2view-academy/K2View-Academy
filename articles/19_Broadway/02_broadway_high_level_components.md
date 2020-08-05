@@ -44,7 +44,7 @@ In addition Broadway has a robust type conversion system that automatically conv
 ## Data Schema
 
 The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that leverage the known data structure.
-Broadway can learn the Schema by example. Just run the flow, and the metadata is automatically derived from the data. If you do have available JSON Schemas to describe, it can be easily imported and edited.
+Broadway can learn the Schema by example. Just run the flow, and the metadata is automatically derived from the data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
 
 <div align="center"><img src="images/overview_schema.png" height=400px/></div>
 
@@ -73,14 +73,14 @@ Actors have an inheritance hierarchy. This enables activities such as pinning a 
 
 ## Transactions
 
-Broadway has a built-in transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the Actors in these Stages use, automatically becomes part of a transaction. Once the Transactional Stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
+Broadway has a built-in transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the Actors in these Stages use, such as database or queue, automatically becomes part of a transaction. Once the Transactional Stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
 Transactions also take into account inner Broadway flows. If a Transactional Stage executes an inner Broadway flow, the flow automatically becomes part of the outer transaction.
 
 [Click for more information about transactions in Broadway](23_transactions.md).
 
 ## Error Handling
 
-Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform in case an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow. 
+Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform in case an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
 
 <div align="center"><img src="images/overview_error.png" height="200"></div>
 
