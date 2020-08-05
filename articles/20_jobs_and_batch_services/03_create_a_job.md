@@ -10,7 +10,7 @@ The following steps discuss how a new User Job is created:
 
    <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
-2. Write the User Job Function (or use IntelliJ to write it) and once done, set the Function Type to the **User Job** value in the right-hand panel.
+2. Write the User Job Function in the Function Editor window (or use IntelliJ to write it) and once done, set the Function Type to the **User Job** value in the right-hand panel.
 Once the job is triggered, the following java user code will write every second a line into a new file job_test.txt until counter test reaches the value 5. The file is located in the Fabric Home directory. 
 
 ```java
