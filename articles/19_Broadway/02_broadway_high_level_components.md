@@ -74,8 +74,6 @@ Actors have an inheritance hierarchy. This enables activities such as pinning a 
 Broadway has a built-in transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the Actors in these Stages use, such as database or queue, automatically becomes part of a transaction. Once the Transactional Stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
 Transactions also take into account inner Broadway flows. If a Transactional Stage executes an inner Broadway flow, the flow automatically becomes part of the outer transaction.
 
-[Click for more information about transactions in Broadway](23_transactions.md).
-
 ## Error Handling
 
 Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform in case an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
