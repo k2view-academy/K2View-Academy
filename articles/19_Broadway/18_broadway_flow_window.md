@@ -33,7 +33,6 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <li><a href="17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
 <li>Save as Actor, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li>Debug/Run Arguments, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Reset Parameters Schemas, reset the Schema settings in cache to Actor's original state. Removing the output Schema of complex types erases all lines originating from the Schema.</li>
 <li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
