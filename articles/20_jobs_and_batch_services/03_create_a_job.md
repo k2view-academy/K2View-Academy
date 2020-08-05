@@ -76,6 +76,8 @@ Must be check-in to deploy and run the Job
 	- Time Interval
 	The job is scheduled to run at the frequency specified in the **Execute Every** field:
 	Example: Execution set to: ```10.11:22:33``` - the job will run every 10 days, 11 hours, 22 minutes, 33 seconds. 
+	If the time interval is set to 00:00:00, the job will run once automatically.
+	
 ```
 
 **Affinity:**
@@ -87,11 +89,44 @@ Affinity can be set using either one of the following options:
 - Node identifier- a logical identifier a Fabric node or a group of several Fabric nodes
 
 Example:
-AFFINITY=’DC1’, ’10.21.1.121
+``` AFFINITY=’DC1’, ’10.21.1.121 ```
+
 
 ### How Do I Create a New Process Job?
+Process jobs are batch files or scripts stored in Fabric server and triggered manually.
+1. Create your bash script and save it in /home/k2view/ directory.
+2. Invoke the startjob command to trigger the job with the necessary parameters:
+
+Example:
+Save the following code into /home/k2view/echoArg.sh
+
+```bash
+#!/bin/bash
+echo "Total arguments : $#"
+echo "1st Argument = $1"
+echo "2nd argument = $2"
+```
+
+Form Fabric Runtime Command Line, execute the following command:
+```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
+
+Where:
+process - defines the type of job; in this case a process job
+UID - defines the unique name for the process job
+ARGS - defines a list of parameters to be parsed to the script when executed
+EXEC_INTERVAL - refers to the frequency of the job's occurence; in this case every 3 seconds.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/04_web_services_function_basic_structure.md)
+### How Do I Create a New Broadway Job?
+Fabric Jobs mechanism also provides the ability to run a broadway flow.
+Set the job type to broadway_job, and the name of the flow with the list of its arguments.
+
+Example: 
+```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_jobs_commands.md)
 
 
