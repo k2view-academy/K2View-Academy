@@ -40,7 +40,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
    ![image](images/99_24_04.PNG)
 
 2. Save the flow and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor). The name of the flow is **CheckZeroDiv** and the name of the new Actor is **CheckZeroDiv_Actor**.
-it
+ 
 3. Create another flow that requires validation of a zero division and name it **myFlow** and then add a new **CheckZeroDiv_Actor** to it as an inner flow. If during the flow's execution the error occurs (min number = 0), the exception is thrown and the flow stops.
 
    ![image](images/99_24_05.PNG)
