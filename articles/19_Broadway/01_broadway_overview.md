@@ -32,7 +32,7 @@ In the example above, the **Fetch** Stage queries data and transfers it as input
 
 An entire Broadway flow can be exported and encapsulated into an Actor and then be reused across flows. This is powerful tool for reusing logic and working with highly-complex flows.
 
-[Click for more information Broadway flows.](16_broadway_flow_overview.md)
+[Click for more information about Broadway flows.](02a_broadway_flow_overview.md)
 
 
 ## Data Inspection

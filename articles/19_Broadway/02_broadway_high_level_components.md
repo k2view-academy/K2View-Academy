@@ -69,8 +69,6 @@ The *else* fork will be executed if none of the other splits were executed.
 
 Actors have an inheritance hierarchy. This enables activities such as pinning a constant value and reusing it across multiple flows, reusing some Actor logic such as JavaScript or SQL and even overriding the Actor Java implementation and tailoring it to a specific use case.  
 
-[Click for more information about Export Actor and Actor Inheritance](add a link!).
-
 ## Transactions
 
 Broadway has a built-in transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the Actors in these Stages use, such as database or queue, automatically becomes part of a transaction. Once the Transactional Stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
@@ -84,7 +82,5 @@ Every Stage can be assigned an error handler. The error handler is an Actor that
 
 <div align="center"><img src="images/overview_error.png" height="200"></div>
 
-[Click for more information about error handling in Broadway](24_error_handling.md).
 
-
-[![Previous](/articles/images/Previous.png)](01_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor.md)
+[![Previous](/articles/images/Previous.png)](01_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02a_broadway_flow_overview.md)

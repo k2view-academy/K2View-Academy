@@ -29,8 +29,9 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <tr>
 <td width="170pxl">Actions</td>
 <td width="630pxl">
+<ul>
 <li><a href="17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
-<li><a href="22_xxxx.md">Save as Actor (add link!)</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
+<li>Save as Actor, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li>Debug/Run Arguments, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
 <li>Reset Parameters Schemas, reset the Schema settings in cache to Actor's original state. Removing the output Schema of complex types erases all lines originating from the Schema.</li>
 <li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
@@ -38,15 +39,27 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td width="200">Run/Stop Flow</td>
+<td width="200">Run Flow / Stop Run</td>
 <td style="width: 465px;">
-<p>Run the flow or stop the run.</p>
+<p>Run the entire flow or stop the run.</p>
 </td>
 </tr>
 <tr>
-<td width="200">Debug Play/Step/Stop</td>
+<td width="200">Resume Debug</td>
 <td style="width: 465px;">
-<p>Run the flow in Debug mode.</p>
+<p>Resume the flow until the next breakpoint.</p>
+</td>
+</tr>
+<tr>
+<td width="200">Debug Step</td>
+<td style="width: 465px;">
+<p>Execute the next step of the flow.</p>
+</td>
+</tr>
+<tr>
+<td width="200">Debug ON / OFF</td>
+<td style="width: 465px;">
+<p>Enable the Debug mechanism. Only when Debug is ON, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
 </td>
 </tr>
 <tr>
@@ -104,7 +117,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 465px;">Merge the selected Stage.</td>
 </tr>
 <tr>
-<td width="200">[Iterate Close]</td>
+<td width="200"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages">Iterate Close</a></td>
 <td style="width: 465px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
 </tr>
 <tr>
@@ -116,7 +129,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 465px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
 <tr>
-<td width="200">[Error Handler]</td>
+<td width="200">Error Handler</td>
 <td style="width: 465px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
@@ -133,6 +146,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 </tbody>
 </table>
+
 
 
 ### Actor Context Menu
@@ -158,7 +172,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 <tr>
 <td width="200">Delete Actor</td>
-<td style="width: 465px;">Click to delete the selected Actor.&nbsp;</td>
+<td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
 </tr>
 <tr>
 <td width="200"><a href="21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
@@ -169,7 +183,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
 </tr>
 <tr>
-<td width="200">[Export Actor]</td>
+<td width="200">Export Actor</td>
 <td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
 </tr>
 <tr>
@@ -182,6 +196,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
 
 ### Actor Properties Window
 

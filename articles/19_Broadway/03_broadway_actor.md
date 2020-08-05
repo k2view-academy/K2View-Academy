@@ -2,11 +2,11 @@
 
 ## Actor Overview
 
-A Broadway  **Actor** represents an action that is executed on a [Stage](19_broadway_flow_stages.md) of the [Broadway flow](16_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
+A Broadway  **Actor** represents an action that is executed on a [Stage](19_broadway_flow_stages.md) of the [Broadway flow](02a_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
 Broadway offers a number of [built-in Actors](04_built_in_actor_types.md) which address a wide range of predefined activities that can be added to Broadway flows.
 
-When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used which executes the JavaScript code provided in the **script** [Input parameter](/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters). Alternatively, you can use the LuFunction Actor to invoke Java functions or build your own Java Actor.
+When a flow requires business logic that is not supported by a built-in Actor, a **JavaScript** Actor can be used which executes the JavaScript code provided in the **script** [Input parameter](/articles/99_Broadway/03_broadway_actor_window.md#data-input-parameters). Alternatively, you can use the **LuFunction** Actor to invoke Java functions or build your own Java Actor.
 
 Options for working with Actors include:
 - [Adding Actors to the Stages](03_broadway_actor.md#how-do-i-add-actor-to-stage) of a Broadway flow.
@@ -60,4 +60,4 @@ To add your own remark to an Actor, select **Remark** in the [Actor's context me
 
 To delete a remark, simple remove its text and close. 
 
-[![Previous](/articles/images/Previous.png)](02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor_window.md)
+[![Previous](/articles/images/Previous.png)](02a_broadway_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor_window.md)

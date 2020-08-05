@@ -29,6 +29,6 @@ If there are additional Stages on the same dependency level as an IF-ELSE condit
 
 ![image](images/99_16_01_flow4.PNG)
 
-[![Previous](/articles/images/Previous.png)]()[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
+[![Previous](/articles/images/Previous.png)](02_broadway_high_level_components.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor.md)
 
 

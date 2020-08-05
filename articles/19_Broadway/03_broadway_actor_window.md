@@ -14,7 +14,7 @@ The **Actor's Properties** window is displayed when adding a new Actor to a flow
 <ul>
 <li>[Object Name] : [Actor Type]</li>
 </ul>
-<p>By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2 etc. It is encouraged to give the actors meaningful names according to their function in the flow.</p>
+<p>By default, when adding an Actor, Broadway concatenates a sequential number to the Actor Type name. For example: when adding <strong>DateAdd</strong> Actors to the flow, the object names of these Actors are DateAdd1, DateAdd2 etc. It is recommended to give the Actors meaningful names according to their function in the flow.</p>
 </td>
 </tr>
 <tr>
