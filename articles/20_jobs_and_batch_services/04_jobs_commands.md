@@ -33,19 +33,7 @@ The following table lists the GET commands:
 </td>
 </tr>  
 
-<tr>
-<td valign="top" width="300pxl">
-<h5>JOBSTATUS [x days ago]</h5>
-</td>
-<td valign="top" width="400pxl">
-<p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
-<p>&nbsp;</p>
-</td>
-<td valign="top" width="300pxl">
-<p>JOBSTATUS;</p>
-<p>JOBSTATUS 2 days ago;</p>
-</td>
-</tr> 
+
 
 <tr>
 <td valign="top" width="300pxl">
