@@ -18,7 +18,7 @@ The following steps discuss how a new User Job is created:
 
 4. Then in the **Project Tree**, go to your LUT > **Jobs** > **User Jobs**
 
-   <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">  
+   <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
 
 5. In the **Job table** start filling in the details pertaining to the Job.
 
