@@ -22,7 +22,7 @@ The below tables presents a list of Actor's categories with examples per each ca
 <h4><a id="user-content-favorites" class="anchor" href="04_built_in_actor_types.md#favorites" aria-hidden="true"></a><strong>Favorites</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
-<p>Most commonly used Actors. Each Actor in the Favorites category also belongs to another category.</p>
+<p>Most commonly used Actors. Favorites is not a separate category. Each Actor in Favorites belongs to some category.</p>
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>Const</strong> Actor, copies the input value argument to the output value argument. A Const Actor can:</p>
@@ -83,6 +83,11 @@ The below tables presents a list of Actor's categories with examples per each ca
 <li>Others, like the Schema, table name, fields definition, SQL dialect to use and append text appended to the CREATE command.</li>
 </ul>
 <p>The DbCommand can be used to create the WITH section where required.</p>
+<p><strong>DbLoad</strong> Actor, loads data into a database using INSERT, UPDATE or UPSERT (if supported). The interface used as input can be the same as for <strong>DbCommand</strong> Actor.</p>
+<ul>
+<li>The Actor supports named parameters with the parameter name inside ${}. Values are taken from the Actor's input parameters.</li>
+<li>In the case of INSERT, the actor also supports ordered parameters using the <strong>?</strong> as a replacement for the parameter.</li>
+</ul>
 </td>
 </tr>
 <tr>
@@ -171,7 +176,7 @@ The below tables presents a list of Actor's categories with examples per each ca
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-system" class="anchor" href="04_built_in_actor_types.md#system" aria-hidden="true"></a><strong>system</strong></h4>
 </td>
-<td style="vertical-align: top;" w idth="433">System processes and commands to be performed in the file system. For example: Sych as copy, List or Remove.&nbsp;</td>
+<td style="vertical-align: top;">System processes and commands to be performed in the file system.</td>
 <td width="600">
 <p><strong>cp</strong> Actor, copies a file. The interface used as input can be:</p>
 <ul>
@@ -181,6 +186,7 @@ The below tables presents a list of Actor's categories with examples per each ca
 <li>Destination (to).</li>
 </ul>
 <p>The output is a number of affected files.</p>
+<p><strong>Exec</strong> Actor, executes a system process and waits for it to complete.</p>
 </td>
 </tr>
 </tbody>
