@@ -1,170 +1,207 @@
 ## Jobs Commands
  
  The following Jobs commands are available:
-<table>
+The following table lists the GET commands:
+
+<table width="900pxl">
 <tbody>
 <tr>
-<td width="350pxl" valign="top">
-<p><strong>Command Group</strong></p>
+<td valign="top" width="100pxl">
+<p><strong>Command Name</strong></p>
 </td>
-<td width="550pxl" valign="top">
-<p><strong>Group Description</strong></p>
+<td valign="top" width="250pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Syntax</strong></p>
+</td>
+<td valign="top" width="250pxl">
+<p><strong>Example</strong></p>
 </td>
 </tr>
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">Get LUI</a></p>
+<td valign="top" width="100pxl">
+<h5>JOBSTATUS [x days ago]</h5>
+</td>
+<td valign="top" width="250pxl">
+<p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl" valign="top">
-<p>Get an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> into Fabric.</p>
+<td valign="top" width="300pxl">
+<p>JOBSTATUS;</p>
+<p>JOBSTATUS 2 days ago;</p>
 </td>
-</tr>
+</tr>  
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href=/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-command>Delete LUI</a></p>
+<td valign="top" width="100pxl">
+<h5>STARTJOB</h5>
 </td>
-<td width="550pxl" valign="top">
-<p>Delete an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> from Fabric.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
-</td>
-<td width="550pxl" valign="top">
-<p> Detaches the <a href="/articles/01_fabric_ov Dw/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
-</td>
-<td width="550pxl" valign="top">
-<p>View of the Fabric configurations and settings</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-settings">Fabric Settings</a></p>
+<td valign="top" width="250pxl">
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl" valign="top">
-<p>Session and cluster levels settings.</p>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
+</td>
+<td valign="top" width="250pxl">
+<p>get Customer.1;</p>
+<p>Get instance ID 1 of Customer LU.</p>
+<p>get Customer.1, CRM.34;</p>
+<p>Get instance ID 1 of Customer LU and instance ID 34 of CRM LU.</p>
 </td>
 </tr>
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-security-and-credentials">Fabric Security and Credentials</a></p>
+<td valign="top" width="100pxl">
+<h5>STARTJOB</h5>
+</td>
+<td valign="top" width="250pxl">
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl" valign="top">
-<p>Set the Master Key for an LUI or the encryption details of an interface.</p>
-<p>Set users, roles, and permissions.</p>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
-</tr>
+<td valign="top" width="250pxl">
+<p>get Customer.1;</p>
+<p>Get instance ID 1 of Customer LU.</p>
+<p>get Customer.1, CRM.34;</p>
+<p>Get instance ID 1 of Customer LU and instance ID 34 of CRM LU.</p>
+</td>
+</tr>  
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-deployment--deploy-and-drop-commands">Fabric Deployment and Drop</a></p>
+<td valign="top" width="100pxl">
+<h5>STOPJOB</h5>
+</td>
+<td valign="top" width="250pxl">
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
-<td width="550pxl" valign="top">
-<p>Deploy and drop Fabric implementation commands.</p>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...);</p>
+</td>
+<td valign="top" width="250pxl">
+<p>getf Customer.fnCreateInstId(235);</p>
+<p>This function adds 1000 to the input value and returns the value 1235, Fabric gets Customer # 1235.</p>
 </td>
 </tr>
+
+
+
+
 <tr>
-<td width="350pxl">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
-<p>&nbsp;</p>
+<td valign="top" width="100pxl">
+<h5>RESUMEJOB</h5>
 </td>
-<td width="550pxl" valign="top">
-<p>Deploy environments and test connections on an active environment.</p>
+<td valign="top" width="250pxl">
+<p>USE command is an alias of GET command.</p>
+</td>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
+</td>
+<td valign="top" width="250pxl">
+<p>use Customer.1;</p>
+<p>Get Instance ID 1 of Customer LU.</p>
+<p>use Customer.1, CRM.34;</p>
+<p>Get instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
 </td>
 </tr>
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
-<p>&nbsp;</p>
+<td valign="top" width="100pxl">
+<h5>RESUMEJOB</h5>
 </td>
-<td width="550pxl" valign="top">
-<p>Run CQL queries on Cassandra.</p>
+<td valign="top" width="250pxl">
+<p>USE command is an alias of GET command.</p>
+</td>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
+</td>
+<td valign="top" width="250pxl">
+<p>use Customer.1;</p>
+<p>Get Instance ID 1 of Customer LU.</p>
+<p>use Customer.1, CRM.34;</p>
+<p>Get instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
 </td>
 </tr>
+
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#jobs-commands">Jobs</a></p>
+<td valign="top" width="100pxl">
+<h5>RESTARTJOB</h5>
 </td>
-<td width="550pxl" valign="top">
-<p>Fabric jobs execution and monitoring commands.</p>
+<td valign="top" width="250pxl">
+<p>USE command is an alias of GET command.</p>
+</td>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
+</td>
+<td valign="top" width="250pxl">
+<p>use Customer.1;</p>
+<p>Get Instance ID 1 of Customer LU.</p>
+<p>use Customer.1, CRM.34;</p>
+<p>Get instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
 </td>
 </tr>
+
+
+
+
 <tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#batch-process-commands">Batch Process</a></p>
+<td valign="top" width="100pxl">
+<h5>RESUMEJOB</h5>
 </td>
-<td width="550pxl" valign="top">
-<p>Batch processing execution and monitoring commands.</p>
+<td valign="top" width="250pxl">
+<p>USE command is an alias of GET command.</p>
 </td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#process-control">Process Control</a></p>
+<td valign="top" width="300pxl">
+<p>Get an LUI:</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>Get multiple instances of different LUs:</p>
+<p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
-<td width="550pxl">
-<p>Check for running tasks and kill a task if needed.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#execution-monitoring">Execution Monitoring</a></p>
-<p>&nbsp;</p>
-</td>
-<td width="550pxl" valign="top">
-<p>Trace Fabric operations and write the results to trace files.</p>
+<td valign="top" width="250pxl">
+<p>use Customer.1;</p>
+<p>Get Instance ID 1 of Customer LU.</p>
+<p>use Customer.1, CRM.34;</p>
+<p>Get instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
 </td>
 </tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#common-reference-tables">Common (Reference) Tables</a></p>
-</td>
-<td width="550pxl" valign="top">
-<p>Commands for handling Common (reference) tables.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-transactions">Fabric Transactions</a></p>
-<p>&nbsp;</p>
-</td>
-<td width="550pxl" valign="top">
-<p>Support transactions to update LUI or Common (reference) table data (Fabric as System of Record).</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#cdc-and-search">CDC and Search</a></p>
-</td>
-<td width="550pxl" valign="top">
-<p>Support Change Data Capture (CDC) across all LUI search functionalities.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
-<p>&nbsp;</p>
-</td>
-<td width="550pxl" valign="top">
-<p>Run Broadway flow.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
-<p>&nbsp;</p>
-</td>
-<td width="550pxl" valign="top">
-<p>Use EXPLAIN and EXPLAIN QUERY PLAN to analyze SQL queries on Fabric data.</p>
-</td>
-</tr>
+
+
+
 </tbody>
 </table>
