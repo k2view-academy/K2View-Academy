@@ -34,15 +34,21 @@ A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#
 
 Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they will be automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
-To run the flow, do either: 
+To run the flow, click **Run Flow** ![image](images/99_25_run.PNG)to run the entire flow and display the results. 
 
-- Click **Run Flow** ![image](images/99_25_run.PNG)to run the entire flow and display the results. 
-  - If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
-  - If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
-  - If the break points have been added to the flow, the flow stops at the first break point.
+- If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
+
+- If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
+  
+
+If the break points have been added to the flow, the flow stops at the first break point.
+
   - Click **Resume Debug** ![images](images/99_25_resume.PNG)to continue the flow from where it stopped.
+
 - Click **Debug Step** ![image](images/99_25_step.PNG)to debug the current step and move to the next step.
-- Click **Stop Run** ![image](images/99_25_stop.PNG)to stop the flow run.
+
+To stop the flow, click **Stop Run** ![image](images/99_25_stop.PNG)to stop the flow run.
+
 
 Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
