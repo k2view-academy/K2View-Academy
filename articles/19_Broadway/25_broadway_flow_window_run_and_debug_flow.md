@@ -3,7 +3,7 @@
 
 ### Setting Run and Debug Arguments
 
-Setting the input arguments types and values is necessary when a flow has arguments with **External** [population type](03_broadway_actor_window.md#input-parameters-properties). Do the following:
+Setting the input arguments types and values is necessary prior to running a flow that has arguments with **External** [population type](03_broadway_actor_window.md#input-parameters-properties). Do the following:
 
 1. Click **Actions** > **Debug / Run Arguments** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar to open a window displaying a list of external input arguments.
 
@@ -16,8 +16,8 @@ Setting the input arguments types and values is necessary when a flow has argume
    <table>
    <tbody>
    <tr>
-   <td><p><img src="images/flow_set_run_or_debug_param_set_value1.png " alt=""/></p></td>
-   <td><p><img src="images/flow_set_run_or_debug_param_set_value2.png " alt=""/></p></td>
+   <td><p><img src="images/flow_set_run_or_debug_param_set_value1.png" alt="value1"/></p></td>
+   <td><p><img src="images/flow_set_run_or_debug_param_set_value2.png" alt="value2"/></p></td>
    </tr>
    </tbody>
    </table>
