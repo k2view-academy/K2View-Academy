@@ -221,7 +221,7 @@ Resumes a specific matching job. This command applies only to an existing job.
  <tr>
 <td valign="top" width="300pxl">
 
-<h5>UPDATE &ltjobType&gt NAME='&ltname&gt' [UID='&ltuid&gt'] [AFFINITY='&ltaffinity&gt'] [ARGS='&ltargs&gt'] [EXEC_INTERVAL='&ltexecInterval&gt'] [RESET_END_TIME=true/false]</h5>
+<h5>UPDATEJOB &ltjobType&gt NAME='&ltname&gt' [UID='&ltuid&gt'] [AFFINITY='&ltaffinity&gt'] [ARGS='&ltargs&gt'] [EXEC_INTERVAL='&ltexecInterval&gt'] [RESET_END_TIME=true/false]</h5>
 
 </td>
 <td valign="top" width="400pxl">
