@@ -98,7 +98,7 @@ The following Jobs commands are available to use from the Fabric Runtime Environ
 Starts the job using arguments.
 - Affinity, UID and other Arguments are optional inputs.
 - Jobtype – BROADWAY, PROCESS, USER_JOB
-- Name- job’s name
+- Name - job’s name
 - * args: String which represents a json to pass additional arguments to the start job command. e.g. {"jobName":"jobTest"}
 - Affinity: Comma separated list of DCs, IPs and Node IDs
 - EXEC_INTERVAL: definition of job scheduling execution interval, supports three formats:
