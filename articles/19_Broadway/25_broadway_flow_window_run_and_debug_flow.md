@@ -75,4 +75,4 @@ When debugging an Actor with a complex output parameter, the parameter port is r
   ![](images/data_insepction_debug.png)
 
 
-[![Previous](/articles/images/Previous.png)]()[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](21_iterations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](27_broadway_data_inspection.md)
