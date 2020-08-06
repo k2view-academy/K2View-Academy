@@ -74,7 +74,5 @@ When debugging an Actor with a complex output parameter, the parameter port is r
 
   ![](images/data_insepction_debug.png)
 
-Note:
-- To reset an Actor's Schema settings to the Actor original state, click **Actions** > **Reset Parameters Schemas**.  Removing the output Schema of complex types erases the lines originating from the Schema. 
 
 [![Previous](/articles/images/Previous.png)]()[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
