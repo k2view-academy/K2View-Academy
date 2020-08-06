@@ -14,6 +14,7 @@ Similar to most Fabric entities, a Job's flow has Define, Configure and Deploy s
 All Fabric Jobs undergo different stages, where each stage indicates a specific step in the Job's handling process:
 
 **Scheduled** 
+
 This stage is for repetitive jobs and has the following schedules:
 - Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time the previous occurrence of this Job ended. 
 - Timestamp, the date and time a specific Job is scheduled to run. 
@@ -21,34 +22,40 @@ This stage is for repetitive jobs and has the following schedules:
 
 
 **Waiting**
+
 In this stage the job is waiting to be executed by the Fabric node to which it will be allocated. Note that in previous stages if the Job is redeployed has already been registered by Fabric whereby the row already exists in the Jobs table, it will now be overridden. This means that if a recurring Job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
 
 **In Process** 
+
 The actual stage when the execution happens.
 
 **Processed**
+
 Indicates that a Job has been executed successfully.
 
 **Stopping**
+
 Indicates that either a user or a system action has triggered a **stopjob** command and that the job is being terminated.
 
 **Terminated** 
+
 Describes the end of the Stopping process. The jJob in process is no longer being executed or has been requested to stop.
 
 **Failed**
+
 The Job failed to run and that the process did not run.
 
 **Restart**
+
 A Job has been actively restarted.
 
 
-The image below illustrates the different stages of a job's lifecycle and the different types of actions that can get a specific job to transit from one particular state to another:
-The blue arrows show the natural path of a job during it's life cycle in Automatic Execution mode.
-The other dotted or plain arrows show the transition between stages in manual execution mode, when applying one of the following commands:
-***startjob***
-***stopjob***
-***restartjob***
-***resumejob***
+The  following image illustrates the different stages of a Job's lifecycle and the different types of actions that can get a specific Job to transit from one specific state to another:
+The blue arrows show the natural path of a Job during its lifecycle in Automatic Execution mode. The other dotted or plain arrows show the transition between stages in Manual Execution mode, when applying one of the following commands:
+-  **startjob** 
+-  **stopjob***
+-  **restartjob**
+-  **resumejob**
 
 
 <img src="/articles/20_jobs_and_batch_services/images/01_jobs_and_batch_services_status_flow.PNG">
@@ -58,32 +65,31 @@ The other dotted or plain arrows show the transition between stages in manual ex
 # **Fabric Nodes and Jobs Processes** 
 
 **Node Affinity**
-A particular job can be assigned to a specific Fabric node. This is done by specifying the node's parameters in the jobs definition table in Fabric studio or from the startjob command in Fabric Runtime environment. Once deployed, the job will be only allocated to the specified node.
+
+A specific job can be assigned to a specific Fabric node by specifying the node's parameters in the Jobs definition table in the Fabric Studio or from the **startjob** command in the Fabric Runtime environment. Once deployed, the Job is only allocated to the specified node.
 
 **Node Competition**
 
-When running multiple Fabric Nodes, jobs can be allocated to different nodes. 
-Once a new job is deployed, each node will compete to execute the new job while Cassandra's optimistic locking process will ensure a consensus is reached between all the nodes and that each job gets to be executed by the best candidate node at any given time, and that it will be executed once only.
-Within each Fabric node, a running thread checks whether a new job has been deployed and in case the Cassandra's LiteWeight Transactions process will allocate the job to this specific node, the thread will handle the processing and lifecycle of the job.
+When running multiple Fabric nodes, Jobs can be allocated to different nodes. Once a new Job is deployed, each node competes to execute it. The Cassandra Optimistic Locking process ensures an agreement is reached between all nodes and that each Job is executed only once by the best candidate node at any given time. A running thread in each Fabric node, checks whether a new job has been deployed and if the Cassandra LiteWeight Transactions process has allocated the Job to it. The thread handles the processing and lifecycle of the Job.
 
-In the illustation below, we show 2 different examples whereby JOB1 is allocated to Node 2, as it has been configured 
+The following image displays 2 different examples whereby JOB1 is allocated to Node 2 according to its configurations: 
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation.PNG">
 
 
 **Job Process**
 
-Fabric runtime server comes with a few java classes dedicated to handle the jobs' lifecycle. Among these classes the 3 following services are particularily important:
-- JobsExecutor to manage the job's execution along the different phases of its lifecycle, manage retrials when necessary and update job status 
-- JobsScheduler to manage the ownership of a specific job sitting on the queue
-- JobsReconcile to handle the re-allocation of jobs to the propper Fabric node if a node went offline.
+The Fabric runtime server offers dedicated Java classes that handle the Jobs lifecycle. The following classes are particularily important:
+- JobsExecutor, manages the Job's execution during the different phases of its lifecycle, retrials when necessary and updates Job status. 
+- JobsScheduler, manages the ownership of a specific Job waiting in the queue.
+- JobsReconcile, handles the re-allocation of Jobs to the correct Fabric node if a node is offline.
 
 
 **Job Execution Resiliency**
 
-Fabric ensures that jobs executions gets multiple recovery opportunities in case the node responsible for its execution falls through. 
-A heartbit variable can be configured for each node, allowing for each fabric node status to be monitored and for jobs to be reallocated to a different node. 
-Yet if the node restarts, and if there is no sufficient time until the scheduled job's execution, the rebooting node will be given precedence over all other nodes for the execution of the job's instance.
+Fabric ensures that Jobs executions have multiple recovery opportunities if the node responsible for its execution fails. 
+A heartbit variable can be configured for each node, allowing for each Fabric node status to be monitored and for Jobs to be reallocated to a different node. 
+If the node restarts, and if there is insufficient time before the scheduled Job's execution, the rebooting node has precedence over all other nodes for the execution of the Job's instance.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/03_create_a_job.md)
