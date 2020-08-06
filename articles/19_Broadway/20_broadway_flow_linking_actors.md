@@ -50,7 +50,7 @@ A link holds the following settings:
 </li>
 <li class="unchanged">
 <p class="unchanged"><strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an array is linked to an output with a single element of the same type - for example, linking an array of string to a string output - the link is created automatically with an <strong>Iterate</strong> link type.</p>
-<p class="unchanged">[Click for more information about handling loops.]</p>
+<p class="unchanged"><a href="21_iterations.md">Click for more information about handling loops.</a></p>
 </li>
 <li class="unchanged">
 <p class="unchanged"><strong>First</strong>, sends the first value of the parameter. For example, sends the first record of the result set.</p>
@@ -58,7 +58,7 @@ A link holds the following settings:
 </ul>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string.</p>
+<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string using the Varargs setting.</p>
 </li>
 </ul>
 </td>
@@ -68,12 +68,11 @@ A link holds the following settings:
 
 **Example of Varargs Setting**
 
-Occasionally, there may be a need to concatenate several strings into a single string. For example, to format an address string from separate address elements. This can be easily done using **Varargs** setting.
+In a flow there may be a need to concatenate several strings into a single string. For example, to format an address string from separate address elements. This can be implemented using the **Varargs** setting.
 
 - Link the **A1** Actor to the **Concat1** Actor with Varargs set to OFF. 
 
     ![image](images/99_20_example_01.PNG)
-
 
 - Update the Varargs setting to ON. This modifies the **elements** input variable to an array that holds two elements - the first is linked to the **A1.value** and the second is available for an additional link:
 
@@ -98,7 +97,7 @@ To create a **Link** do either:
 
 - Click the **output parameter** of the source Actor and drag the **connection line** to the **input parameter** of the target Actor.
 - Click the **input parameter** of the target Actor and drag the **connection line** to the **output parameter** of the source Actor.
-- Click ![image](images/99_19_dots.PNG) in the source Actor > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes. It is recommended to use the Link when the Actors are far from each other in the flow.
+- Click ![image](images/99_19_dots.PNG) in the source [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes. It is recommended to use this option when the Actors are far from each other in the flow.
 
    ![Adding link](images/99_20_add_link_1.PNG)
 
