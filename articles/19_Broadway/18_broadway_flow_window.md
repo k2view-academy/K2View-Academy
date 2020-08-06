@@ -122,11 +122,11 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 465px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages">Stage Condition</a></td>
+<td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
 <td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages">Else</a></td>
+<td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
 <td style="width: 465px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
 <tr>
