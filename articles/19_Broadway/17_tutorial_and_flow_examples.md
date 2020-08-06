@@ -13,7 +13,7 @@ Explanations in the Tutorial are written in **Remarks** and can be displayed by 
 
 More remarks can be added by selecting **Remark** from either the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) or the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu).
 
-The Tutorial explains that a flow can be run by clicking **Run Flow** in the **Main menu** to run the entire flow and display the results and can be debugged by adding break points and using **Debug Step** to move between the stages.
+The Tutorial explains that a flow can be run by clicking **Run Flow** in the **Main menu** to run the entire flow and display the results and can be debugged by adding break points and using **Debug Step** to move between the Stages.
 
 [Click for more information about the Run and Debug flow](25_broadway_flow_window_run_and_debug_flow.md).
 
