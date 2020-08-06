@@ -1,58 +1,59 @@
-# Broadway Flow Window - Run and Debug Flow
-
-The Broadway flow can be run from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow window by either:
-- Clicking **Run Flow** to run the entire flow and display the results.
-- Clicking **Debug Play** whereby the flow stops at the first break point and continues when clicking **Debug Step**.
-
-Note that running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes were done to the flow, they will be automatically saved even if they were not saved explicitly. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
-
-The [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow is at the top of the window and has the following options:
-
-![](images/flow_tool_bar_run_and_debug.png)
+# Run and Debug Broadway Flow
 
 
-## Setting Run and Debug Arguments
+### Setting Run and Debug Arguments
 
-1. Click **Actions** > **Debug/Run Arguments** to set an external input argument value with an **External** [population type](03_broadway_actor_window.md#input-parameters-properties). A window opens displaying a list of external input arguments.
+Setting the input arguments types and values is necessary when a flow has arguments with **External** [population type](03_broadway_actor_window.md#input-parameters-properties). Do the following:
 
-2. Set the **Type** of the **external** input arguments.
+1. Click **Actions** > **Debug / Run Arguments** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar to open a window displaying a list of external input arguments.
 
-   ![](images/flow_set_run_or_debug_param_set_type1.png)
+2. Select the **Type** of each input argument.
 
-   
-3. Select the **Type** of each input argument.
+   ![image](images/flow_set_run_or_debug_param_set_type2.png)
 
-   ![](images/flow_set_run_or_debug_param_set_type2.png)
+3. Set the **value** of each input argument. The value's format is defined by the selected argument type.
 
-4. Select the **value** of each input argument. The value's format is defined by the selected type of argument.
+   <table>
+   <tbody>
+   <tr>
+   <td><p><img src="images/flow_set_run_or_debug_param_set_value1.png " alt=""/></p></td>
+   <td><p><img src="images/flow_set_run_or_debug_param_set_value2.png " alt=""/></p></td>
+   </tr>
+   </tbody>
+   </table>
 
-   ![](images/flow_set_run_or_debug_param_set_value1.png)
+4. Click **OK** to save the types and the values.
 
-   ![](images/flow_set_run_or_debug_param_set_value2.png)
+### Running and Debugging a Broadway Flow
 
-5. Click **OK**.
+![image](images/99_25_tool_bar.PNG)
 
-### Resetting Run/Debug Arguments
+The Broadway flow execution can be performed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow window by either:
 
-Click **Actions** > **Debug/Run Arguments** and then click ![image](images/99_25_X.PNG) adjacent to the argument to redefine its **type** and **value**.
+- Running the entire flow and displaying the results.
+- Debugging the flow by adding break points. Debug can only be performed when Debug is ON.
 
-## Running and Stopping a Broadway Flow
+Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes were done to the flow, they will be automatically saved even if they were not saved explicitly. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
-Click **Play** or **Stop** to run or stop the Broadway flow.
+To run the flow do either: 
 
-## Debugging a Broadway Flow
+- Click **Run Flow** to run the entire flow and display the results. 
+  - If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
+  - If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
+  - If the break points were added to the flow, the flow will stop at the first break point.
+  - Clicking **Resume Debug** will resume the flow from the place where it stopped.
+- Clicking **Debug Step** to debug the current step and move to the next step.
+- Clicking **Stop Run** to stop the flow run.
 
-- Click ![](images/debug_play_icon.png) to run the entire process in Debug mode. The Debug process runs the Broadway flow and stops during Stages with breakpoints. 
-To add a breakpoint to a Stage, click **...** in the Stage > Breakpoint.
+Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow, for example - when invoked by a Job.
 
-- Click ![](images/debug_step_icon.png) to debug the current step and move to the next step.  
+### Displaying Input and Output Data During the Debug
 
-- Click **Stop Debug** to stop the debug process.
+When Debug is ON, the values of input and output arguments of each executed step are displayed in blue balloons.
 
-### Debug: Displaying Input and Output Data
+![image](images/99_25_blue_balloons.PNG)
 
-The input and output data of each executed step is displayed and highlighted blue. 
-To view a step's data, click the input or output parameter to open the data and its displayed format. To set another data display format, click the format and make your selection.
+To view a step's data, click the blue balloon to open the data and its displayed format. To set another data display format, click the format and make your selection.
 
 ![](images/flow_debug_display_data.png)
 
