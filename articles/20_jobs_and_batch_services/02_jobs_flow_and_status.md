@@ -5,41 +5,41 @@ Similar to most Fabric entities, a Job's flow has Define, Configure and Deploy s
 <figure><table>
 <thead>
 
-<tbody><tr><td>Define</td><td>A function, flow or process defined as the method to be invoked by the Job when scheduled. For example: <br>User Job: a Java function defined and attached to a specific LU type under the LU Utilities folder. <br>Broadway Job: a Broadway flow as defined in the Broadway GUI.<br>Process Job: a script stored on the Fabric server.</td></tr><tr><td>Configure</td><td>A new job entry must be added to the Jobs table under the LU Type tree and have the following parameters:<br>- Schedule Job type<br>- MethodAffinity flag that specifies the Fabric node to be allocated to this Job (if any).</td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the the Fabric Node onto which the deployment was performed. <br>The Job is triggered either automatically or manually depending on the parameter specified during the configuration phase.</td></tr></tbody>
+<tbody><tr><td>Define</td><td>A function, flow or process defined as the method to be invoked by the Job when scheduled. For example: <br>- User Job, a Java function defined and attached to a specific LU type under the LU Utilities folder. <br>- Broadway Job, a Broadway flow defined in the Broadway GUI.<br>- Process Job, a script stored on the Fabric server.</td></tr><tr><td>Configure</td><td>A new job entry must be added to the Jobs table under the LU Type tree and must have the following parameters:<br>- Schedule Job type<br>- MethodAffinity flag that specifies the Fabric node to be allocated to this Job (if any).</td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the deployed Fabric node. The Job is triggered either automatically or manually depending on the parameters specified during configuration.</td></tr></tbody>
 </table></figure>
-
-
-
+ 
 
 # **Fabric Jobs Status** 
 
-All Fabric jobs will go through different stages, each of which indicates a specific step in the job's handling process:
+All Fabric Jobs undergo different stages, where each stage indicates a specific step in the Job's handling process:
 
-**Scheduled** - This stage is used for repetitive jobs with the following types of schedules:
-
-    ****Time interval**** – when a recurring job is scheduled to run at every given time. If the job is scheduled to run every 60 minutes, it will do so but coubnt 60 minutes from the time the previous occurrence of the job finished.
-
-    ****Timestamp**** – when a specific job is scheduled to run only once at a given date and time
-
-    ****Cron**** – when a series of the same job needs to be run according to the crontab scheduling format. Note that the actual execution of the job will be handled by Fabric's own scheduler.
-
-**Waiting** - When a job is in this particular stage, it is waiting to be executed by the appropriate fabric node to which it will be allocated. 
+**Scheduled** 
+This stage is for repetitive jobs and has the following schedules:
+- Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time the previous occurrence of this Job ended. 
+- Timestamp, the date and time a specific Job is scheduled to run. 
+- Cron, a series of the same Job must be run according to the **crontab** scheduling format. Note that the actual execution of the Job is handled by the Fabric Scheduler. 
 
 
-For the previous stages, it is important to note that if a (same) job is redeployed, and already registered by Fabric, i.e. the row already exists in the Jobs table, then it will not be overridden.
-This means that if a recurring job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
+**Waiting**
+In this stage the job is waiting to be executed by the Fabric node to which it will be allocated. Note that in previous stages if the Job is redeployed has already been registered by Fabric whereby the row already exists in the Jobs table, it will now be overridden. This means that if a recurring Job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
 
-**In Process** - This is the actual stage when the execution happens.
+**In Process** 
+The actual stage when the execution happens.
 
-**Processed** - Indicates that a job has been executed successfully.
+**Processed**
+Indicates that a Job has been executed successfully.
 
-**Stopping** - Indicates that either a user or a system action has triggered a stopjob command and that the job is being terminated.
+**Stopping**
+Indicates that either a user or a system action has triggered a **stopjob** command and that the job is being terminated.
 
-**Terminated** - Describes the end of the stopping process. The job in process is no longer being executed or requested to stop.
+**Terminated** 
+Describes the end of the Stopping process. The jJob in process is no longer being executed or has been requested to stop.
 
-**Failed** - Describes that the job failed to run and that the process did not run.
+**Failed**
+The Job failed to run and that the process did not run.
 
-**Restart** - Indicates that a job has been actively restarted.
+**Restart**
+A Job has been actively restarted.
 
 
 The image below illustrates the different stages of a job's lifecycle and the different types of actions that can get a specific job to transit from one particular state to another:
