@@ -18,7 +18,7 @@ A Schema can be edited during runtime. To do so, click the yellow segment next t
 </td>
 <td width="60pxl">Add Child</td>
 <td width="430pxl">
-<p>Add a child to the selected element using the <strong>Link bar</strong>. The Link bar is available in the <a href="18_broadway_flow_window.md#main-menu">Main menu</a> area and can be used to define the new element's Name and the Type.</p>
+<p>Add a child to the selected element using the <strong>Field Type Editor</strong>. The Field Type Editor is available in the <a href="18_broadway_flow_window.md#main-menu">Main menu</a> area and can be used to define the new element's Name and the Type.</p>
 <p><img src="images/99_27_03.PNG" alt="Add Child" /></p>
 <p>Note that <strong>Add Child</strong> menu item is available in the context menu when clicking on the parent node.</p>
 </td>
@@ -26,12 +26,12 @@ A Schema can be edited during runtime. To do so, click the yellow segment next t
 <tr>
 <td width="200">Add Sibling</td>
 <td style="width: 465px;">
-<p>Add a sibling to the selected element using the <strong>Link bar</strong>.</p>
+<p>Add a sibling to the selected element using the <strong>Field Type Editor</strong>.</p>
 </td>
 </tr>
 <tr>
 <td width="200">Edit</td>
-  <td style="width: 465px;">Edit the element's name or type using the <strong>Link bar</strong>.</td>
+  <td style="width: 465px;">Edit the element's name or type using the <strong>Field Type Editor</strong>.</td>
 </tr>
 <tr>
 <td width="200">Delete</td>
@@ -47,14 +47,14 @@ A Schema can be edited during runtime. To do so, click the yellow segment next t
 </tr>
 <tr>
 <td width="200">Link</td>
-<td style="width: 465px;">Link the element to a target Actor using the <strong>Link bar</strong>.</td>
+<td style="width: 465px;">Link the element to a target Actor using the <strong>Field Type Editor</strong>.</td>
 </tr>
 </tbody>
 </table>
 
-### How Do I Edit the Schema Using the Data Viewer?
+### How Do I Edit the Schema Using the Editor?
 
-Additional way to edit the schema is using the Data Viewer. To do so, click **Edit Schema** in the output argument's properties to open the **Edit Schema** window. Edit the Schema manually and then click **Submit** to refresh the yellow segment and update the Schema. 
+Additional way to edit the schema is using the Schema editor. To do so, click **Edit Schema** in the output argument's properties to open the **Edit Schema** window. Edit the Schema manually and then click **Submit** to refresh the yellow segment and update the Schema. 
 
 ![image](images/99_27_04_data_viewer.PNG)
 
