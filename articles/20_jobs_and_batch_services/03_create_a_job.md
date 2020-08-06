@@ -124,8 +124,10 @@ Set the job type to broadway_job, and the name of the flow with the list of its 
 Example: 
 ```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
 
-
-
+### How Do I Create a New CDC Job?
+Fabric can execute CDC jobs (Change Data Capture) to ensure the notification to external systems about data changes. 
+Jobs can also execute cross-instance searches using ElasticSearch.
+ 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_jobs_commands.md)
 
