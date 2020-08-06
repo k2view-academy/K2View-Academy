@@ -4,12 +4,12 @@
 
 The **JavaScript** Actor is an important and useful [built-in Actor type](04_built_in_actor_types.md) that can be used to simplify a flow by writing business logic or validation code in JavaScript in the **script** input parameter.
 
-Although there are no limitations on the number of rows in an Actor, to improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code.
+There are no limitations on the number of rows in an Actor. However, to improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code.
 
 
 ### Special Keywords and Conventions
 
-- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. There is no need to write the **return** keyword in the script. Use the **result** output parameter to read the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
+- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. The **return** keyword does not need to be written in the script since the **result** output parameter can be used to read the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
 
   ```
   var rowSum = 0;
@@ -23,7 +23,7 @@ Although there are no limitations on the number of rows in an Actor, to improve 
 
   ``` self.agg += value ```
 
-- To [read data from completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), access their ID as a local variable, and read the output ports. For example, use **Const1.value** to access the value of an Actor named Const1.
+- To [read data from completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), access their ID as a local variable and read the output ports. For example, use **Const1.value** to access the value of an Actor named Const1.
 
 - To access iteration data, use the **contextLoop** object to access **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**.
 
@@ -83,7 +83,7 @@ where **SumArray** and **ForEach** are the names of the Actors in the flow that 
 
 #### **Example of Reading and Writing Data to Flow Arguments**
 
-The **JavaScript** Actor can be used to read the values of a flow argument using the **flowArgs** and then overriding or removing them.
+The **JavaScript** Actor can be used to read the values of a flow argument using **flowArgs** and then overriding or removing them.
 
 ```
     for (var i in flowArgs) {
