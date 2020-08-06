@@ -2,8 +2,9 @@
 
 
 ### Setting Run and Debug Arguments
+Prior to running or debugging a flow, set the types and values of input arguments that have an **External** [population type](03_broadway_actor_window.md#input-parameters-properties). Once they are set, the types and values are saved to the flow's cache. 
 
-Setting the input arguments types and values is necessary prior to running a flow that has arguments with **External** [population type](03_broadway_actor_window.md#input-parameters-properties). Do the following:
+
 
 1. Click **Actions** > **Debug / Run Arguments** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar to open a window displaying a list of external input arguments.
 
@@ -22,34 +23,34 @@ Setting the input arguments types and values is necessary prior to running a flo
    </tbody>
    </table>
 
-4. Click **OK** to save the types and the values.
+4. Click **OK** to save the types and their values.
 
 ### Running and Debugging a Broadway Flow
 
 ![image](images/99_25_tool_bar.PNG)
 
-The Broadway flow execution can be performed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow window by either:
+A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow's window by either:
 
 - Running the entire flow and displaying the results.
 - Debugging the flow by adding break points. Debug can only be performed when Debug is ON.
 
-Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes were done to the flow, they will be automatically saved even if they were not saved explicitly. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
+Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they will be automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
-To run the flow do either: 
+To run the flow, do either: 
 
 - Click **Run Flow** to run the entire flow and display the results. 
   - If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
   - If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
-  - If the break points were added to the flow, the flow will stop at the first break point.
-  - Clicking **Resume Debug** will resume the flow from the place where it stopped.
-- Clicking **Debug Step** to debug the current step and move to the next step.
-- Clicking **Stop Run** to stop the flow run.
+  - If the break points have been added to the flow, the flow stops at the first break point.
+  - Click **Resume Debug** to continue the flow from where it stopped.
+- Click **Debug Step** to debug the current step and move to the next step.
+- Click **Stop Run** to stop the flow run.
 
-Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow, for example - when invoked by a Job.
+Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
-### Displaying Input and Output Data During the Debug
+### Displaying Input and Output Data During a Debug
 
-When Debug is ON, the values of input and output arguments of each executed step are displayed in blue balloons.
+When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons.
 
 ![image](images/99_25_blue_balloons.PNG)
 
@@ -71,7 +72,7 @@ When debugging an Actor with a complex output parameter, the parameter port is r
 
 2. Click **Update** to update the output parameter's Schema. To open the [Data Inspector](27_broadway_data_inspection.md), click ![image](images/99_27_red_cross.PNG) adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the Schema on the left and the data values on the right.
 
-3. [Link](20_broadway_flow_linking_actors.md) the output parameters of the Schema to another actor.
+3. [Link](20_broadway_flow_linking_actors.md) the output parameters of the Schema to another Actor.
 
   ![](images/data_insepction_debug.png)
 
