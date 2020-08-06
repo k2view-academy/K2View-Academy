@@ -8,7 +8,7 @@
         <li><a href="/articles/01_fabric_overview/02_fabric_glossary.md">Fabric Glossary</a></li>
 </ul>
 </details>
-
+        
 <details>
 <summary markdown="span"><strong>Fabric Fabric Architecture<strong><a href="/articles/02_fabric_architecture/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Fabric Architecture Overview</a></li>
@@ -199,7 +199,7 @@
 </ul>
         </ul>
 </details>
-
+        
 <details>
 <summary markdown="span"><strong>Web Services and Graphit<strong><a href="/articles/15_web_services_and_graphit/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/15_web_services_and_graphit/01_web_services_overview.md">Overview</a></li>
@@ -228,20 +228,26 @@
 <li><a href="/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md">Invoke Java from Graphit</a></li> 
 <li><a href="/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md">Invoke Graphit from Outside Fabric Studio</a></li> 
 <li><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md">Graphit Examples</a></li>
+        
+</ul> 
+         </ul>
+</details>
+ 
 <details>
 <summary markdown="span"><strong>CDC and Search Capabilities <strong><a href="/articles/18_cdc_and_search/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
 </ul> 
 </details>        
+        
 <details>
 <summary markdown="span"><strong>Broadway<strong><a href="/articles/19_Broadway/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a></li>
 <li><a href="/articles/19_Broadway/02_broadway_high_level_components.md">Broadway High Level Components</a></li>
-<li><a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway Flow Overview</a></li>
 <li><a href="/articles/19_Broadway/03_broadway_actor.md">Broadway Actor Overview</a></li>
 <li><a href="/articles/19_Broadway/03_broadway_actor_window.md">Broadway Actor Window</a></li>
 <li><a href="/articles/19_Broadway/04_built_in_actor_types.md">Built-in Actor Types</a></li>
 <li><a href="/articles/19_Broadway/05_data_types.md">Broadway Data Types</a></li>
+<li><a href="/articles/19_Broadway/16_broadway_flow_overview.md">Broadway Flow Overview</a></li>
 <li><a href="/articles/19_Broadway/17_tutorial_and_flow_examples.md">Broadway Tutorial and Flow Examples</a></li>
 <li><a href="/articles/19_Broadway/18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="/articles/19_Broadway/19_broadway_flow_stages.md">Broadway Stages</a></li>
@@ -250,9 +256,7 @@
 <li><a href="/articles/19_Broadway/27_broadway_data_inspection.md">Data Inspection in Broadway</a></li>
 </ul> 
 </details>        
-
+    
  
-
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
-
