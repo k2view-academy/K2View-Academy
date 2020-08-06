@@ -82,6 +82,8 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tbody>
 </table>
 
+[Click for more information how to run and debug the Broadway flow](20_broadway_flow_linking_actors.md).
+
 ### Stage Context Menu
 
 To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the right corner of the Stage. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage. 
