@@ -10,31 +10,6 @@ Similar to most Fabric entities, a Job's flow has Define, Configure and Deploy s
 
 
 
-**DEFINE** 
-
-A function, flow or process need to be defined as a method to be invoked by the job when scheduled.
-
-For example: 
-User job: a java function needs to be defined and attached to a specific LU type under the LU Utilities folder. 
-Broadway job: a broadway flow will be defined in the broadway GUI
-Process job: a script will be stored on Fabric server. 
-
-
-**CONFIGURE** 
-
-A new job entry must be added to the jobs' table that sits under the LU Type tree
-A number of configuration parameters must be entered:
-- Schedule
-- Job type
-- Method
-- Affinity flag that specifies which Fabric node is to be allocated to this job (if any).
-
-
-**DEPLOY** 
-
-The LU, its associated job functions and the jobs table are processed by the the Fabric Node onto which the deployment was performed. 
-The job will be triggered either automatically or manually depending on the parameter specified during the configuration phase.
-
 
 # **Fabric Jobs Status** 
 
