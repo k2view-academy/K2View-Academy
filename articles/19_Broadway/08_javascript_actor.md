@@ -2,13 +2,14 @@
 
 ### JavaScript Actor Overview
 
-**JavaScript** Actor is an important and useful [built-in Actor type](04_built_in_actor_types.md) since it helpד to simplify the flow by writing some of its business logic or validations using the JavaScript code in the **script** input parameter.
+The **JavaScript** Actor is an important and useful [built-in Actor type](04_built_in_actor_types.md) that can be used to simplify a flow by writing business logic or validation code in JavaScript in the **script** input parameter.
 
-For the good usability of the Actor and the whole flow, it is recommended to write short pieces of JavaScript code though the Actor doesn't have a limitation and can include any number of the rows.
+Although there are no limitations on the number of rows in an Actor, to improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code.
+
 
 ### Special Keywords and Conventions
 
-- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. There is no need to write the **return** keyword within the script. Use the **result** output parameter to read the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
+- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. There is no need to write the **return** keyword in the script. Use the **result** output parameter to read the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
 
   ```
   var rowSum = 0;
@@ -18,21 +19,21 @@ For the good usability of the Actor and the whole flow, it is recommended to wri
   rowSum;
   ```
 
-- Use the [**self** keyword](08_javascript_actor.md#example-of-how-to-sum-the-values-of-an-array) to maintain state across script executions, such as loop aggregation. For example: 
+- Use the [**self** keyword](08_javascript_actor.md#example-of-how-to-sum-the-values-of-an-array) to maintain a state across script executions, such as a loop aggregation. For example: 
 
   ``` self.agg += value ```
 
-- To [read data from the completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), you can access their id as a local variable, and read the output ports. For example, you can use **Const1.value** to access the value of an Actor named Const1.
+- To [read data from completed Actors](08_javascript_actor.md#example-of-how-to-access-data-of-completed-actors-in-the-flow), access their ID as a local variable, and read the output ports. For example, use **Const1.value** to access the value of an Actor named Const1.
 
-- To access iteration data, use the **contextLoop** object. You have access to **contextLoop.index()**, **contextLoop.stop()**, **contextLoop.skip()**.
+- To access iteration data, use the **contextLoop** object to access **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**.
 
-- To read and write data to the flow arguments, you can use the [**flowArgs** keyword](08_javascript_actor.md#example-of-how-to-read-and-write-data-to-the-flow-arguments). You can also use **flowArgs** to write data to the flow context and refer to it in other actors.
+- To read and write data to the flow arguments, use the [**flowArgs** keyword](08_javascript_actor.md#example-of-how-to-read-and-write-data-to-the-flow-arguments). You can also use **flowArgs** to write data to the flow context and refer to it in other Actors.
 
-- To iterate over a collection, use the standard syntax: 
+- To iterate over a collection, use standard syntax: 
 
   ``` rows.forEach(row => {...}) ```
 
-- A special [**for...each** syntax](08_javascript_actor.md#example-of-how-to-use-foreach-syntax) is also supported: 
+- The [**for...each** syntax](08_javascript_actor.md#example-of-how-to-use-foreach-syntax) is also supported: 
 
   ``` for each (var row in rows) { ... } ```
 
@@ -46,9 +47,9 @@ For the good usability of the Actor and the whole flow, it is recommended to wri
 
 ### Code Examples
 
-#### **Example of How to Sum the Values of an Array**
+#### **Example of Summarizing the Values in an Array**
 
-To summarize the values of an array, use the **self** keyword which gives an access to the Actor's state. The state is kept between the executions of the same Actor in the flow. For example, when **SumArray** Actor is invoked in an [Iteration](21_iterations.md) within the flow, its JavaScript code is executed across all Actor's executions.
+To summarize the values of an array, use the **self** keyword to access the Actor's state. The state is maintained between the executions of the same Actor in the flow. For example, when the **SumArray** Actor is invoked in an [Iteration](21_iterations.md) in the flow, its JavaScript code is executed across all the Actor's executions.
 
 ![image](/images/99_08_01.PNG)
 
@@ -60,9 +61,9 @@ for (var i =0;i<input.length;++i) {
 self.sum
 ```
 
-#### **Example of How to Use For...Each Syntax**
+#### **Example of Using For...Each Syntax**
 
-**For...each** is a syntax extension allowing JavaScript to iterate over an Iterable instance.
+**For...each** is a syntax extension that enables JavaScript to iterate over an Iterable instance.
 
 ```
 var sum = 0;
@@ -72,17 +73,17 @@ for each (var i in input) {
 sum;
 ```
 
-#### **Example of How to Access Data of Completed Actors in the Flow**
+#### **Example of Accessing Data of Completed Actors in the Flow**
 
-The **JavaScript** Actor can access the data of the previous Actors in the flow. For example:
+The **JavaScript** Actor can access the data of previous Actors in the flow. For example:
 
  ```SumArray.result == ForEach.result && ForEach.result == 21 ```
 
 where **SumArray** and **ForEach** are the names of the Actors in the flow that precede the current Actor.
 
-#### **Example of How to Read And Write Data to the Flow Arguments**
+#### **Example of Reading and Writing Data to Flow Arguments**
 
-The **JavaScript** Actor enables you to read the values of the flow arguments using the **flowArgs** scope and override or remove them.
+The **JavaScript** Actor can be used to read the values of a flow argument using the **flowArgs** and then overriding or removing them.
 
 ```
     for (var i in flowArgs) {
