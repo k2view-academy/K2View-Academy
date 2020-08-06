@@ -104,7 +104,7 @@ Starts the job using arguments.
 - EXEC_INTERVAL: definition of job scheduling execution interval, supports three formats:
     timestamp - 'yyyy-MM-dd HH:mm:ss' - a datetime to schedule job execution - one time
     Time interval - 'HH:MM:SS' - run every X time
-    Cron - crontab command combined. e.g. DC1,DC2...,IP1,IP2...</p>
+    Cron - crontab command combined. e.g. 23 0-20/2 03 12 2 - At minute 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December</p>
 <p>&nbsp;</p>
 
 </td>
@@ -232,7 +232,7 @@ Updates properties of existing job.
 - *EXEC_INTERVAL: definition of job scheduling execution interval, supports three formats:
     timestamp - 'yyyy-MM-dd HH:mm:ss' - a datetime to schedule job execution - one time
     Time interval - 'HH:MM:SS' - run every X time
-    Cron - crontab command
+    Cron - crontab command: e.g. 23 0-20/2 03 12 2 - At minute 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December
 - *ARGS: String which represents a json to pass additional arguments to the update job command. e.g. {"userJobName":"userTest"}
 
 NOTE: in order to update a cron job to a one-time job, use EXEC_INTERVAL=''
