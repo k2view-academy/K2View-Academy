@@ -3,7 +3,7 @@
 The Fabric Jobs mechanism is rich, resilient and scalable and can be used to run any script or executable. For example, asynchronous recurring one-time only or scheduled actions that run Fabric functions according to a predefined schedule.
 
 
-Once set up by the user, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs canalso be used to collect data from structured DB or any files (HTTP), streams or message queues.
+Once set up, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can also be used to collect data from structured DB or any files (HTTP), streams or message queues.
 
 Fabric Jobs can be one of the following categories:
 
@@ -13,20 +13,21 @@ Fabric Jobs can be one of the following categories:
 
 - Migrate process, that sync multiple instances of a specific Logical Unit.
 
-- Parsers executions, that get data from both tables and unstructured files which can then be pushed to a table in Cassandra and then used to build a, LUT Schema.
+- Parser executions, that get data from tables and unstructured files which can be pushed to a table in Cassandra and then used to build an LUT Schema.
 
 - Broadway flows, that can be scheduled for execution and are therefore defined as Jobs.
 
  # **What is a Fabric Job ?** 
-A Fabric Job is a process that can be exposed across Fabric nodes to be run to execute scripts, flows or functions according to a specific schedule, or once only.
+A Fabric Job process can be exposed across Fabric nodes and be run to execute scripts, flows or functions according to a specific schedule or once only.
 
-Jobs should be deployed to Fabric separately and can then be invoked either by the node onto which it as been deployed or by any other Fabric nodes that would have received the job allocation from Cassandra distribution .... In the Fabric Studio, Jobs functions can be defined and saved to the project file and be deployed to the Fabric server.
+Jobs should be deployed to Fabric separately and can then be invoked either by the node onto which it as been deployed or by other Fabric nodes that would have received the job allocation from Cassandra distribution. 
 
-The following articles will address:
-- the different types of jobs
-- their mechanism and lifecycle
-- how to define them from Fabric Studio
-- how to invoke and manage them from Fabric Runtime console.
+In the Fabric Studio, Job functions can be defined and saved to the project file and be deployed to the Fabric server.
+
+For more information, click:
+- Different types of jobs, their mechanism and lifecycle.
+- Defining Jobs from the Fabric Studio.
+- Invoking and manageing Jobs from the Fabric Runtime console.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md) 
