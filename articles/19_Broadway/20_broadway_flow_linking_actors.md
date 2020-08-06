@@ -58,7 +58,7 @@ A link holds the following settings:
 </ul>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on the fly. For instance, consider the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string.</p>
+<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string.</p>
 </li>
 </ul>
 </td>
@@ -68,14 +68,14 @@ A link holds the following settings:
 
 **Example of Varargs Setting**
 
-Sometimes it is required to concatenate several strings into a single string, for example  when you need to format an address string from separate address elements. This can be easily done using **Varargs** setting.
+Occasionally, there may be a need to concatenate several strings into a single string. For example, to format an address string from separate address elements. This can be easily done using **Varargs** setting.
 
 - Link the **A1** Actor to the **Concat1** Actor with Varargs set to OFF. 
 
     ![image](images/99_20_example_01.PNG)
 
 
-- Update the Varargs setting to ON. It modifies the **elements** input variable to an array that holds two elements - the first is linked to the **A1.value** and the second is available for an additional link:
+- Update the Varargs setting to ON. This modifies the **elements** input variable to an array that holds two elements - the first is linked to the **A1.value** and the second is available for an additional link:
 
   ![varargs-on1](images/99_20_example_02.PNG)
 
@@ -87,7 +87,7 @@ Sometimes it is required to concatenate several strings into a single string, fo
 
   **Notes:**
 
-  - The number of string that can be concatenated is unlimited. 
+  - The number of strings that can be concatenated is unlimited. 
   - All additional links to the target array are created automatically when **Varagrs** is set to ON.
   - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
 
@@ -144,7 +144,7 @@ A Schema can be connected to another Actor. For example, connecting the output S
 
 ## How Do I Remove Links from the Flow?
 
-Click the link's connection line and press **Delete** on  your keyboard.
+Click the link's connection line and press **Delete** on your keyboard.
 
 ## How Do I Edit Links in the Flow?
 
@@ -152,18 +152,18 @@ Click the link's connection line to open the [Link Object Properties window](20_
 
 ## Show Only Connected Objects
 
-Click ![image](images/99_19_dots.PNG) > **Show only connected** in [Actor's context menu](18_broadway_flow_window.md#actors-context-menu) to display only Actors linked to this Actor.
+Click ![image](images/99_19_dots.PNG) > **Show only connected** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu) to display only Actors linked to this Actor.
 Click **Show only connected** again to remove this filter and display all Actors in the flow.
 
 This option is useful when tracking complex flows.
 
 **Example:**
 
-A complex String handling flow:
+A complex string handling flow:
 
 <img src="images/string_flow_example.png" alt="String flow" style="zoom:80%;" />
 
-To view only the  Actors connected to **Regex1** Actor, click ![image](images/99_19_dots.PNG) in the Actor's right corner > **Show only connected** . The following Actors are displayed:
+To view only the  Actors connected to the **Regex1** Actor, click ![image](images/99_19_dots.PNG) in the Actor's right corner > **Show only connected** . The following Actors are displayed:
 
 ![image](images/show_connected_examples.png)
 
