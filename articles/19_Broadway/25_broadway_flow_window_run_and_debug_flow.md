@@ -4,8 +4,6 @@
 ### Setting Run and Debug Arguments
 Prior to running or debugging a flow, set the types and values of input arguments that have an **External** [population type](03_broadway_actor_window.md#input-parameters-properties). Once they are set, the types and values are saved to the flow's cache. 
 
-
-
 1. Click **Actions** > **Debug / Run Arguments** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar to open a window displaying a list of external input arguments.
 
 2. Select the **Type** of each input argument.

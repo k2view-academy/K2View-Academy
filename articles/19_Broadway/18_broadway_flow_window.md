@@ -30,9 +30,9 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <td width="170pxl">Actions</td>
 <td width="630pxl">
 <ul>
-<li><a href="17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
-<li>Save as Actor, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
-<li>Debug/Run Arguments, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
+<li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
+<li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
+<li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
 <li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
@@ -82,6 +82,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tbody>
 </table>
 
+
 [Click for more information how to run and debug the Broadway flow](20_broadway_flow_linking_actors.md).
 
 ### Stage Context Menu
@@ -122,19 +123,19 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 465px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages">Stage Condition</a></td>
+<td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
 <td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages">Else</a></td>
+<td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
 <td style="width: 465px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
 <tr>
-<td width="200">Error Handler</td>
+<td width="200"><a href="24_error_handling.md">Error Handler</a></td>
 <td style="width: 465px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
-<td width="200">Transaction</td>
+<td width="200"><a href="23_transactions.md">Transaction</a></td>
 <td style="width: 465px;">Click to open or close the transaction.</td>
 </tr>
 <tr>
@@ -147,6 +148,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 </tbody>
 </table>
+
 
 
 
