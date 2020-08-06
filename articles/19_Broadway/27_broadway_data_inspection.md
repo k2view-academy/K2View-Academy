@@ -58,4 +58,4 @@ Additional way to edit the schema is using the Schema editor. To do so, click **
 
 ![image](images/99_27_04_data_viewer.PNG)
 
-[![Previous](/articles/images/Previous.png)]()[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](25_broadway_flow_window_run_and_debug_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
