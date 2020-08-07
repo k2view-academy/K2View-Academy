@@ -63,22 +63,18 @@ When checked, the Job is run and deployed.
 
 **Schedule Type** 
 
-##### 3 schedule modes are avaialble: #####
-```
-	- CRON
-	Example: Execution set to: ```30 0/2 8-18 5 3 ? 2021``` the job will run the job with the following frequency described in the CRON description tab:
-	At 30 sec past the minute (30), every 2 minutes (0/2), between 08:00 and 18:59 (8-18), on day 5 of the month (5), only in March (3), only in year 2021 (2021).
-
-	- TimeStamp
-	The job is scheduled to run one time on a given date and time
-	Example: Execution set to: ```2022-08-20 10:32:12``` - the job will run once at the date and time mentioned.
-
-	- Time Interval
-	The job is scheduled to run at the frequency specified in the **Execute Every** field:
-	Example: Execution set to: ```10.11:22:33``` - the job will run every 10 days, 11 hours, 22 minutes, 33 seconds. 
-	If the time interval is set to 00:00:00, the job will run once automatically.
+##### Three schedule modes are avaialble: #####-
+ -  CRON, runs the Job according to the frequency described in the Cron description tab. For example, set the execution to:
+	 ```30 0/2 8-18 5 3 ? 2021```
+	 At 30 seconds past the minute (30), every 2 minutes (0/2), between 08:00 and 18:59 (8-18), on day 5 of the month (5), only in March (3), only in year 2021 (2021).
 	
-```
+ -  TimeStamp, schedules a Job to run once on a given date and time. For example, set the execution to 
+	 ```2022-08-20 10:32:12``` 
+ -  Time Interval, schedules the Job to run at the frequency specified in the **Execute Every** field: For example, set the execution to:
+	 ```10.11:22:33```
+	 he jobT will run every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job will run once automatically.
+	
+
 
 **Affinity**
 
