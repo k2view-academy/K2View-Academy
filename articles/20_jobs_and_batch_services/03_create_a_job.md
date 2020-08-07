@@ -8,9 +8,9 @@ Fabric Studio supports defining a Job function, saving it to the project file an
 
    <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
-2. Write the User Job function either:
-   -    In the Function Editor window.
-   -    Using IntelliJ.
+2. Write the **User Job function** either:
+   -    In the **Function Editor** window.
+   -    Using **IntelliJ**.
 3. Set the **Function Type** to the **User Job** value in the right panel. 
 
    Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The file is located in the Fabric Home directory. 
@@ -33,35 +33,35 @@ while (test<5 && !isAborted()){
    <img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
    
 
-5. Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**
+5. Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**.
 
    <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
 
-6. In the **Job table** enter the values pertaining to the Job.
+6. In the **Job table**, enter the values pertaining to the Job.
 
 
-**Method:** 
+**Method** 
 
 Where the name of the User Job Function defined in Step 4 is associated to the Job.
 
 
-**Unique Job Name:** 
+**Unique Job Name** 
 
 Where the unique name for the Job service is defined and used for all manual or system operations executed on this job.
 
 
-**Execution Mode:**
+**Execution Mode**
 
 Can be set to either **automatically** or **manually** depending on whether the Job service is started from the Command Line or is managed by Fabric.
 
 
-**Active:**
+**Active**
 
 When checked, the Job is run and deployed.
 
 
-**Schedule Type:** 
+**Schedule Type** 
 
 ##### 3 schedule modes are avaialble: #####
 ```
@@ -110,9 +110,13 @@ echo "2nd argument = $2"
 ```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
 
    Where:
+   
    Process, defines the type of Job; in this case a process job.
+   
    UID, defines the unique name of the processed job.
+   
    ARGS, defines a list of parameters to be parsed to the script when executed.
+   
    EXEC_INTERVAL - refers to the frequency of the job's occurence; in this case every 3 seconds.
 
 
@@ -124,7 +128,7 @@ Example:
 ```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
 
 ### How Do I Create a New CDC Job?
-Fabric can execute CDC jobs (Change Data Capture) to notify external systems about data changes. 
+Fabric can execute CDC Jobs (Change Data Capture) to notify external systems about data changes. 
 Jobs can also execute cross-instance searches using ElasticSearch.
  
 
