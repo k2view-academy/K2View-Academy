@@ -4,16 +4,16 @@ Fabric Studio supports defining a Job function, saving it to the project file an
 
 ### How Do I Create a New User Job?
 
-The following steps discuss how a new User Job is created:
-
-1. In the **Project Tree**, go to your LUT > **Java** > **Utilities** and right-click on **New Function** to display the **Function Editor** window.
+1. Go to **Project Tree** > **LUT** > **Java** > **Utilities** and right click **New Function** to display the **Function Editor** window.
 
    <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
-2. Write the User Job Function in the Function Editor window (or use IntelliJ to write it).
+2. Write the User Job function either:
+   -    In the Function Editor window.
+   -    Using IntelliJ.
+3. Set the **Function Type** to the **User Job** value in the right panel. 
 
-Once done, set the Function Type to the **User Job** value in the right-hand panel.
-Once the job is triggered, the following java user code will write every second a line into a new file job_test.txt until counter test reaches the value 5. The file is located in the Fabric Home directory. 
+   Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The file is located in the Fabric Home directory. 
 
 ```java
 //writing into a file
@@ -28,42 +28,42 @@ while (test<5 && !isAborted()){
 	}
 ```
   
-3. Name and save your function.
+4. Name and save the **function**.
 
    <img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
    
 
-4. Then in the **Project Tree**, go to your LUT > **Jobs** > **User Jobs**
+5. Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**
 
    <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
 
-5. In the **Job table** start filling in the values pertaining to the Job.
+6. In the **Job table** enter the values pertaining to the Job.
 
 
 **Method:** 
 
-This is where the name of the User Job Function defined in Step 3 is associated to the job.
+Where the name of the User Job Function defined in Step 4 is associated to the Job.
 
 
 **Unique Job Name:** 
 
-The unique name for the Job service is defined here and will be used for all manual or system operations executed on thsi job.
+Where the unique name for the Job service is defined and used for all manual or system operations executed on this job.
 
 
 **Execution Mode:**
 
-Can be set to either **automatically** or **manually** depending on whether you intend to start the job service from the Command Line or let Fabric manage the service.
+Can be set to either **automatically** or **manually** depending on whether the Job service is started from the Command Line or is managed by Fabric.
 
 
 **Active:**
 
-Must be check-in to deploy and run the Job
+When checked, the Job is run and deployed.
 
 
 **Schedule Type:** 
 
-##### 3 schedules modes are avaialble: #####
+##### 3 schedule modes are avaialble: #####
 ```
 	- CRON
 	Example: Execution set to: ```30 0/2 8-18 5 3 ? 2021``` the job will run the job with the following frequency described in the CRON description tab:
@@ -80,25 +80,24 @@ Must be check-in to deploy and run the Job
 	
 ```
 
-**Affinity:**
+**Affinity**
 
-This is where the details of the node assigned to the job are entered.
-Affinity can be set using either one of the following options:
-- IP address of a Fabric node
-- Data Center (DC) Name
-- Node identifier- a logical identifier a Fabric node or a group of several Fabric nodes
+Where the details of the node assigned to the job are entered.  Affinity can be set using either one of the following options:
+- IP address of a Fabric node.
+- Data Center (DC) Name.
+- Node identifier, a logical identifier of  Fabric node or a group of several Fabric nodes.
 
 Example:
 ``` AFFINITY=’DC1’, ’10.21.1.121 ```
 
 
 ### How Do I Create a New Process Job?
-Process jobs are batch files or scripts stored in Fabric server and triggered manually.
-1. Create your bash script and save it in /home/k2view/ directory.
-2. Invoke the startjob command to trigger the job with the necessary parameters:
-
-Example:
-Save the following code into /home/k2view/echoArg.sh
+Process Jobs are batch files or scripts stored in Fabric server and triggered manually.
+1. Create a bash script and save it in /home/k2view/ directory.
+2. Invoke the **startjob** command to trigger the job with the relevant parameters. 
+   For Example:
+  
+   -  Save the following code into /home/k2view/echoArg.sh
 
 ```bash
 #!/bin/bash
@@ -107,25 +106,25 @@ echo "1st Argument = $1"
 echo "2nd argument = $2"
 ```
 
-Form Fabric Runtime Command Line, execute the following command:
+   -  Go to the Fabric runtime command line and execute the following command:
 ```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
 
-Where:
-process - defines the type of job; in this case a process job
-UID - defines the unique name for the process job
-ARGS - defines a list of parameters to be parsed to the script when executed
-EXEC_INTERVAL - refers to the frequency of the job's occurence; in this case every 3 seconds.
+   Where:
+   Process, defines the type of Job; in this case a process job.
+   UID, defines the unique name of the processed job.
+   ARGS, defines a list of parameters to be parsed to the script when executed.
+   EXEC_INTERVAL - refers to the frequency of the job's occurence; in this case every 3 seconds.
 
 
 ### How Do I Create a New Broadway Job?
-Fabric Jobs mechanism also provides the ability to run a broadway flow.
-Set the job type to broadway_job, and the name of the flow with the list of its arguments.
+The Fabric Jobs mechanism also enables running a Broadway flow.
+Set the **Job** type to **broadway_job** and the name of the flow with a list of its arguments.
 
 Example: 
 ```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
 
 ### How Do I Create a New CDC Job?
-Fabric can execute CDC jobs (Change Data Capture) to ensure the notification to external systems about data changes. 
+Fabric can execute CDC jobs (Change Data Capture) to notify external systems about data changes. 
 Jobs can also execute cross-instance searches using ElasticSearch.
  
 
