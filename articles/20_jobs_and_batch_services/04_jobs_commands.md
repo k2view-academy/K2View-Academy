@@ -1,6 +1,6 @@
 # Jobs Commands
 
-The following Jobs commands are available to use from the Fabric Runtime Environment.
+The following Jobs commands are available in the Fabric Runtime Environment:
 
 
 <table width="900pxl">
@@ -24,7 +24,9 @@ The following Jobs commands are available to use from the Fabric Runtime Environ
 <h5>JOBSTATUS [x days ago]</h5>
 </td>
 <td valign="top" width="400pxl">
-<p>When days are provided- returns the status for all jobs that were created during the last X days, including archived jobs. When daysare not provided – returns all active (not archived) jobs.</p>
+<p>When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
+   
+   When days are not provided, returns all active (not archived) Jobs.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
@@ -42,7 +44,7 @@ The following Jobs commands are available to use from the Fabric Runtime Environ
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all running jobs according to jobType.</p>
+<p>Returns the status of all running jobs according to the <strong>jobType</strong>.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
@@ -76,7 +78,7 @@ The following Jobs commands are available to use from the Fabric Runtime Environ
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all jobs that match the give type, name and uid.</p>
+<p>Returns the status of all jobs that match the give type, name and UID.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
@@ -145,7 +147,7 @@ Stops all matching jobs with this name and type.
 <td valign="top" width="400pxl">
 
 <p>
-Stops a specific job matching a UID.
+Stops a specific Job matching a UID.
 </p>
 <p>&nbsp;</p>
 </td>
@@ -167,7 +169,7 @@ Stops a specific job matching a UID.
 <td valign="top" width="400pxl">
 
 <p>
-Restarts all matching jobs with this name and type.
+Restarts all matching Jobs with this name and type.
 </p>
 <p>&nbsp;</p>
 </td>
@@ -187,7 +189,7 @@ Restarts all matching jobs with this name and type.
 <td valign="top" width="400pxl">
 
 <p>
-Restarts a specific job matching a UID.
+Restarts a specific Job matching a UID.
 </p>
 <p>&nbsp;</p>
 </td>
@@ -207,7 +209,7 @@ Restarts a specific job matching a UID.
 <td valign="top" width="400pxl">
 
 <p>
-Resumes a specific matching job. This command applies only to an existing job.
+Resumes a specific matching Job. This command applies only to an existing Job.
 </p>
 <p>&nbsp;</p>
 </td>
