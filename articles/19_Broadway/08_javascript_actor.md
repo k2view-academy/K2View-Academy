@@ -2,7 +2,7 @@
 
 ### JavaScript Actor Overview
 
-The **JavaScript** Actor is an important and useful [built-in Actor type](04_built_in_actor_types.md) that can be used to simplify a flow by writing business logic or validation code in JavaScript in the **script** input parameter.
+The **JavaScript** Actor is an important and useful [built-in Actor type](04_built_in_actor_types.md) that can be used to simplify a flow by writing JavaScript business logic or validation code in the **script** input parameter.
 
 There are no limitations on the number of rows in an Actor. However, to improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code.
 
@@ -27,7 +27,7 @@ There are no limitations on the number of rows in an Actor. However, to improve 
 
 - To access iteration data, use the **contextLoop** object to access **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**.
 
-- To read and write data to the flow arguments, use the [**flowArgs** keyword](08_javascript_actor.md#example-of-how-to-read-and-write-data-to-the-flow-arguments). You can also use **flowArgs** to write data to the flow context and refer to it in other Actors.
+- To read and write data to the flow's arguments, use the [**flowArgs** keyword](08_javascript_actor.md#example-of-how-to-read-and-write-data-to-the-flow-arguments). You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors.
 
 - To iterate over a collection, use standard syntax: 
 
@@ -79,11 +79,11 @@ The **JavaScript** Actor can access the data of previous Actors in the flow. For
 
  ```SumArray.result == ForEach.result && ForEach.result == 21 ```
 
-where **SumArray** and **ForEach** are the names of the Actors in the flow that precede the current Actor.
+where the **SumArray** and **ForEach** Actors precede the current Actor in the flow.
 
 #### **Example of Reading and Writing Data to Flow Arguments**
 
-The **JavaScript** Actor can be used to read the values of a flow argument using **flowArgs** and then overriding or removing them.
+The **JavaScript** Actor can be used to read the values of a flow argument using **flowArgs** and to then override or remove them.
 
 ```
     for (var i in flowArgs) {
