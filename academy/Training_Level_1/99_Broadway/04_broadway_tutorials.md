@@ -41,7 +41,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 1.4 Select **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
-2.1 Click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
+2.1 Click the [Debug ON]()icon to set it to [Debug OFF]() and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
   <ul>
  <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
