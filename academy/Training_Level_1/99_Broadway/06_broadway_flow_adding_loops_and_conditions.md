@@ -12,11 +12,11 @@ You can add loops either by:
 
 - Adding loops on Stages: setting the [Link Type](/articles/99_Broadway/20_broadway_flow_linking_actors.md#link-object-properties)  to **Iterate** when linking an Actor to another Actor opens a loop. The loop runs on the next Stages in the flow and is closed by the first Stage which is marked as **Iterate Close**.
 
-  Read [Broadway Flow Window](/articles/99_Broadway/18_broadway_flow_window.md) to learn more about the Stage context menu.
+  Read [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md) to learn more about the Stage context menu.
 
 - Adding a loop to the Actor to iterate the data and handle each iteration.
 
-  Read [Broadway Flows Loops] to learn more about adding loops to Broadway flows.
+  Read [Broadway Iterations](/articles/19_Broadway/21_iterations.md) to learn more about adding loops to Broadway flows.
 
 ### Adding Conditions
 
@@ -28,7 +28,7 @@ A Broadway flow can be split into different execution paths based on conditions.
 
   - Else => Do something else.
 
-  Read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting or merging the Stages of a flow and about adding conditions to a Stage.  
+  Read [Broadway Flow - Stages](/articles/19_Broadway/19_broadway_flow_stages.md) to learn about spliting or merging the Stages of a flow and about adding conditions to a Stage.  
 
   Please continue to the next exercise to enhance your first Broadway flow and add a condition to it. 
 
