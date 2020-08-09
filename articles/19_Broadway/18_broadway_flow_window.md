@@ -186,7 +186,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
 </tr>
 <tr>
-<td width="200">Export Actor</td>
+<td width="200"><a href="06_export_actor.md">Export Actor</a></td>
 <td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
 </tr>
 <tr>
