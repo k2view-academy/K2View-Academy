@@ -4,7 +4,7 @@ Welcome to your first Broadway course!
 
 ### Objectives
 
-Our goal is to provide you with the information you need to kick-start your first Broadway flow while giving you the confidence needed to explore Broadway flow examples and the various built-in Actors provided by the Fabric Broadway ETL. 
+This course provides you with the information you need to kick-start your first Broadway flow while giving you the confidence needed to explore Broadway flow examples and the various built-in Actors provided by the Fabric Broadway ETL. 
 
 In addition, you will also learn about how Broadway interfaces with Fabric and how to incorporate and execute Broadway flows into your Fabric project.
 
