@@ -1,6 +1,6 @@
 # **Fabric Jobs Flow** 
 
-Similar to most Fabric entities, a Job's flow has the following stages:
+Similarily to most Fabric entities, a Job's flow will go through the following stages:
 
 <figure><table>
 <thead>
