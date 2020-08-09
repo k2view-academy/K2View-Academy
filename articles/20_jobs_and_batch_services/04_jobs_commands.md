@@ -17,8 +17,6 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 </td>
 </tr>
 
-
-
 <tr>
 <td valign="top" width="300pxl">
 <h5>JOBSTATUS [x days ago]</h5>
@@ -27,15 +25,13 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 <p>When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
    
    When days are not provided, returns all active (not archived) Jobs.</p>
-<p>&nbsp;</p>
+
 </td>
 <td valign="top" width="300pxl">
 <p>JOBSTATUS;</p>
 <p>JOBSTATUS 2 days ago;</p>
 </td>
 </tr>  
-
-
 
 <tr>
 <td valign="top" width="300pxl">
@@ -44,8 +40,8 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all running jobs according to the <strong>jobType</strong>.</p>
-<p>&nbsp;</p>
+<p>Returns the status of all Jobs running according to the <strong>jobType</strong>.</p>
+
 </td>
 <td valign="top" width="300pxl">
 <p>JOBSTATUS TestJob1;</p>
@@ -61,9 +57,7 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all running jobs that match the given type and name.</p>
-<p>&nbsp;</p>
-</td>
+<p>Returns the status of all running Jobs that match the given type and name.</p>
 <td valign="top" width="300pxl">
 
 <p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
@@ -78,8 +72,7 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all jobs that match the give type, name and UID.</p>
-<p>&nbsp;</p>
+<p>Returns the status of all Jobs that match the give type, name and UID.</p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -97,17 +90,16 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 <td valign="top" width="400pxl">
 
 <p>
-Starts the job using arguments.
+Starts the Job using arguments:
+   
 - Affinity, UID and other Arguments are optional inputs.
-- Jobtype – BROADWAY, PROCESS, USER_JOB
-- Name - job’s name
-- * args: String which represents a json to pass additional arguments to the start job command. e.g. {"jobName":"jobTest"}
-- Affinity: Comma separated list of DCs, IPs and Node IDs
-- EXEC_INTERVAL: definition of job scheduling execution interval, supports three formats:
-    timestamp - 'yyyy-MM-dd HH:mm:ss' - a datetime to schedule job execution - one time
-    Time interval - 'HH:MM:SS' - run every X time
-    Cron - crontab command combined. e.g. 23 0-20/2 03 12 2 - At minute 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December</p>
-<p>&nbsp;</p>
+- Jobtype, BROADWAY, PROCESS, USER_JOB
+- Name, Job’s name.
+- args, a string represeting a JSON that passes additional arguments to the **start Job** command. For example, {"jobName":"jobTest"}.
+- Affinity, comm, definition of Jobs scheduling execution interval that supports three formats:
+  - Timestamp, yyyy-MM-dd HH:mm:ss, a one time only timedatetime that schedules a Job's execution. 
+  - Time interval, HH:MM:SS to run the Job every X time.
+  - Cron, combined **crontab** command. For example, 23 0-20/2 03 12 2. At minutes 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December.</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -126,9 +118,8 @@ Starts the job using arguments.
 <td valign="top" width="400pxl">
 
 <p>
-Stops all matching jobs with this name and type.
+Stops all Jobs matching this name and type.
 </p>
-<p>&nbsp;</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -147,9 +138,9 @@ Stops all matching jobs with this name and type.
 <td valign="top" width="400pxl">
 
 <p>
-Stops a specific Job matching a UID.
+Stops a specific Job matching an UID.
 </p>
-<p>&nbsp;</p>
+
 </td>
 <td valign="top" width="300pxl">
 
@@ -171,7 +162,6 @@ Stops a specific Job matching a UID.
 <p>
 Restarts all matching Jobs with this name and type.
 </p>
-<p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -189,7 +179,7 @@ Restarts all matching Jobs with this name and type.
 <td valign="top" width="400pxl">
 
 <p>
-Restarts a specific Job matching a UID.
+Restarts a specific Job matching an UID.
 </p>
 <p>&nbsp;</p>
 </td>
@@ -229,17 +219,17 @@ Resumes a specific matching Job. This command applies only to an existing Job.
 <td valign="top" width="400pxl">
 
 <p>
-Updates properties of existing job.
-- AFFINITY: Comma-separated list of DCs and IPs combined. e.g. DC1,DC2...,IP1,IP2...
-- *EXEC_INTERVAL: definition of job scheduling execution interval, supports three formats:
-    timestamp - 'yyyy-MM-dd HH:mm:ss' - a datetime to schedule job execution - one time
-    Time interval - 'HH:MM:SS' - run every X time
-    Cron - crontab command: e.g. 23 0-20/2 03 12 2 - At minute 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December
-- *ARGS: String which represents a json to pass additional arguments to the update job command. e.g. {"userJobName":"userTest"}
+Updates properties of an existing Job:
+   
+- AFFINITY, combined comma-separated list of DCs and IPs. For example, DC1,DC2...,IP1,IP2...
+- EXEC_INTERVAL, definition of Job's scheduling execution interval, supports three formats:
+  - Timestamp, yyyy-MM-dd HH:mm:ss a one-time only datetime for scheduling the Job's execution.
+  - Time interval, HH:MM:SS, run every X time.
+  - Cron, <strong>crontab</strong> command: e.g. 23 0-20/2 03 12 2. At minute 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December.
+- ARGS, string representing a JSON that passes additional arguments to the update Job command. For example {"userJobName":"userTest"}
 
-NOTE: in order to update a cron job to a one-time job, use EXEC_INTERVAL=''
+NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 </p>
-<p>&nbsp;</p>
 
 </td>
 <td valign="top" width="300pxl">
