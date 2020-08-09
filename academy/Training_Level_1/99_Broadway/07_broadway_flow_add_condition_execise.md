@@ -92,7 +92,7 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
  <ul>
  <pre><code> 
- Step 1.
+ Step 5.1
  A. The output value of the <strong>Count</strong> Actor is 3. This is the number of the records returned by the <strong></strong>DbCommand</strong> Actor.
  B. The output value of <strong>GreaterThanEquals</strong> Actor is <strong>true</strong>.
  C. <strong>Stage 6</strong> has been executed since the condition returned <strong>true</strong>.
@@ -103,7 +103,7 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
 
 <ul>
 <pre><code>
- Step 3.
+ Step 5.3
  A.The output value of <strong>GreaterThanEquals</strong> Actor is <strong>false</strong>.
  B.<strong>Stage 7</strong> has been executed since the condition returned <strong>false</strong>.
  C.The following messsage has been given by Stage 7's Logger Actor: 
