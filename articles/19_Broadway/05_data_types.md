@@ -75,4 +75,4 @@ Not all conversions are possible. When Broadway cannot convert a data type, an E
 
 In such cases, or when the implicit conversion is unsatisfactory, you can consider using an Actor to explicitly convert between data types and data representations.
 
-[![Previous](/articles/images/Previous.png)](04_built_in_actor_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](04_built_in_actor_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_export_actor.md)
