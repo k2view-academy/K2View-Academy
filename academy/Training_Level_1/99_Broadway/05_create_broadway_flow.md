@@ -46,7 +46,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 
 
- 2.2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
+ 2.2 Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
 - Read How Do I Add Actor to StageAdding Actor] (https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.1/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stagee) to learn how to add the **DbCommand** Actor to Stage 1.
 
@@ -60,27 +60,27 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
        ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
 #### Step 3 - Read the Customer's List and Create a File
-1. The next Stages run a loop on the list of selected customers. For each selected record: 
+3.1 The next Stages run a loop on the list of selected customers. For each selected record: 
 
    - Build a JSON object.
 
    - Write the JSON object to an output file.
 
-2. Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer record.
+3.2 Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer record.
 
-3. Add a **JsonStringify** Actor to Stage 2 and link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop:
+3.3 Add a **JsonStringify** Actor to Stage 2 and link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop:
 
    ![JsonStringify](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage2.png)
 
    Read [linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
 
-4. Add Stage 3 to the flow. Both Stages 2 and 3 are marked in grey since they are included in the loop that has been opened by linking Stages 1 and 2. 
+3.4 Add Stage 3 to the flow. Both Stages 2 and 3 are marked in grey since they are included in the loop that has been opened by linking Stages 1 and 2. 
 
-   Read [Broadway Loops] to learn more about handling loops on Broadway flows. 
+   Read [Broadway Iterations](/articles/19_Broadway/21_iterations.md) to learn more about handling loops on Broadway flows. 
 
-5. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**. Create this directory in your local Windows server.
+3.5 Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**. Create this directory in your local Windows server.
 
-6. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
+3.6 Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
    - Set **Interface** to **LocalFileSystem**. 
 
@@ -95,16 +95,16 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
   Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn about the Actor window and setting the Actor's parameters. 
 
-7. Link the **JsonStringify** Actor's **string** output parameter to the **[stream]** input parameter of the **FileWrite** Actor. The **FileWrite** Actor executes the following activities:
+3.7 Link the **JsonStringify** Actor's **string** output parameter to the **[stream]** input parameter of the **FileWrite** Actor. The **FileWrite** Actor executes the following activities:
 
    - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
    - Appends each JSON object sent for each selected customer to the file.
 
-8. Close the loop after executing Stage 3: Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
+3.8. Close the loop after executing Stage 3: Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
     Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
-9. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
+3.9. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
 
    ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3_close_loop.png)
 
