@@ -51,7 +51,7 @@ There are no limitations on the number of rows in an Actor. However, to improve 
 
 To summarize the values of an array, use the **self** keyword to access the Actor's state. The state is maintained between the executions of the same Actor in the flow. For example, when the **SumArray** Actor is invoked in an [Iteration](21_iterations.md) in the flow, its JavaScript code is executed across all the Actor's executions.
 
-![image](/images/99_08_01.PNG)
+![image](images/99_08_01.PNG)
 
 ```  
 self.sum = self.sum || 0;
@@ -92,3 +92,5 @@ The **JavaScript** Actor can be used to read the values of a flow argument using
     }
     print(flowArgs.v3); //read the value of argument v3
 ```
+
+[![Previous](/articles/images/Previous.png)]()[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
