@@ -84,7 +84,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
    - Set **Interface** to **LocalFileSystem**. 
 
-   - Set the path's **Population Type** to **Const** instead of **Link**.
+   - Set the **path's Population Type** to **Const** instead of **Link**.
 
    - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
 
@@ -100,8 +100,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
    - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
    - Appends each JSON object sent for each selected customer to the file.
 
-3.8. Close the loop after executing Stage 3: Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
-
+3.8 Close the loop after executing Stage 3: Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
     Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
 3.9. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
