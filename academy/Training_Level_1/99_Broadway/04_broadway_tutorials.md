@@ -91,13 +91,13 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
  <ul>
  <pre><code> 
-Step 2.1
+<strong>Step 2.1</strong>
 A. The flow's result is "Hello Broadway"</code></pre>
  </ul>
 
 <ul>
 <pre><code>
-Step 2.3
+<strong>Step 2.3</strong>
 A and B, The flow executes two iteration runs on the <strong>StringBuilder</strong> Actor. The first iteration runs on **Hello** and the second iteration runs on **Broadway**.
 C. The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. The <strong>for each</strong> State is marked <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
@@ -107,22 +107,22 @@ E. The next Stage executed after the <strong>Splitting the flow</strong> Stage i
 
  <ul>
 <pre><code>
-Step 3.2
+<strong>Step 3.2</strong>
 A. The new <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
 
 <ul>
  <pre><code>
- Step 3.6 
+<strong>Step 3.6</strong> 
 A. The flow result is <strong>Broadway Training</strong>.</code></pre>
 </ul> 
 
 <ul><pre><code>
-Step 4.1
+<strong>Step 4.1</strong>
 A. There are two flows. A local copy of the Tutorial flow has been saved in the Fabric project during its execution.</code></pre></ul>
 
 <ul><pre><code>
-Step 4.2
+<strong>Step 4.2</strong>
 A. The value of the input parameter is <strong>Broadway Training</strong>. You can edit the flow and save the changes or execute the flow. A local copy of the flow is saved in the Fabric project. </code></pre></ul> 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/99_Broadway/03_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md)
