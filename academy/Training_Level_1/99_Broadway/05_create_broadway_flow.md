@@ -32,29 +32,32 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 #### Step 2 - Populate Stage 1 of the Flow
 
-2.1. Get a list of customers purchasing one or more new subscriptions (contracts) over the last 24 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
+2.1 Get a list of customers purchasing one or more new subscriptions (contracts) over the last 24 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
 
-     ```
-     Select count(*) As no_of_contracts,
-     max(CONTRACT.FROM_DATE) As from_date,
-     CONTRACT.CUSTOMER_ID
-     From CRM_DB.CONTRACT
-     Where CONTRACT.FROM_DATE >= add_months(sysdate, -24)
-     Group By CONTRACT.CUSTOMER_ID
-     Having count(*) > 2;
-     ```
+```
+ Select count(*) As no_of_contracts,
+ max(CONTRACT.FROM_DATE) As from_date,
+ CONTRACT.CUSTOMER_ID
+ From CRM_DB.CONTRACT
+ Where CONTRACT.FROM_DATE >= add_months(sysdate, -24)
+ Group By CONTRACT.CUSTOMER_ID
+ Having count(*) > 2;
+```
+
+
 
  2.2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
-      Read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
+- Read How Do I Add Actor to StageAdding Actor] (https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.1/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stagee) to learn how to add the **DbCommand** Actor to Stage 1.
 
-       - Edit the **DbCommand** Actor in Stage 1.
 
-         - Select **CRM_DB** as the **Interface**.
+   - Edit the **DbCommand** Actor in Stage 1.
 
-         - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter.
+     - Select **CRM_DB** as the **Interface**.
 
-           ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
+     - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter.
+
+       ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
 #### Step 3 - Read the Customer's List and Create a File
 1. The next Stages run a loop on the list of selected customers. For each selected record: 
@@ -69,7 +72,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
    ![JsonStringify](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage2.png)
 
-   Read [linking Actors in a Broadway Flow](/articles/99_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
+   Read [linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
 
 4. Add Stage 3 to the flow. Both Stages 2 and 3 are marked in grey since they are included in the loop that has been opened by linking Stages 1 and 2. 
 
@@ -89,7 +92,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
      ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3.png)
 
-  
+
   Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn about the Actor window and setting the Actor's parameters. 
 
 7. Link the **JsonStringify** Actor's **string** output parameter to the **[stream]** input parameter of the **FileWrite** Actor. The **FileWrite** Actor executes the following activities:
@@ -108,8 +111,6 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 #### Step 4 - Flow Execution
 
 Run the flow, check your local directory and open the new JSON file that contains the list of customers selected from CONTRACT table.
-
-
 
 Congratulations.
 
