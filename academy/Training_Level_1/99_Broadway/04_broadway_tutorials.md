@@ -41,12 +41,13 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 1.4 Select **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
-2.1 Click the [Debug ON]()icon to set it to [Debug OFF]() and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
+2.1 Click the Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png) to set it to Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
   <ul>
  <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
 
-2.2 Add a **Breakpoint** to **for each Stage**, click ![Debug Play](/academy/Training_Level_1/99_Broadway/images/debug_play_icon.png) in the **Flow window** and then click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps of the flow.
+2.2 Add a **Breakpoint** to **for each Stage**, click the Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) to set it back to Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png), and then click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
+2.3 Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
 <ul>
 <pre><code>
@@ -96,7 +97,7 @@ A. The flow's result is "Hello Broadway"</code></pre>
 
 <ul>
 <pre><code>
-Step 2.2
+Step 2.3
 A and B, The flow executes two iteration runs on the <strong>StringBuilder</strong> Actor. The first iteration runs on **Hello** and the second iteration runs on **Broadway**.
 C. The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. The <strong>for each</strong> State is marked <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
