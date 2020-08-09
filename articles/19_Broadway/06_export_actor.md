@@ -18,10 +18,9 @@ For example, when it is required that all dates will be formatted using the same
 
 
 
-Once the Export Actor creates a new inherited Actor, the new Actor is added to the list of Actors and can be [added to any Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the flow.
+Once the Export Actor creates a new inherited Actor, the new Actor is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
 
-The Actor's input and output arguments can be filtered using the [Parameter's filter in the Properties window](03_broadway_actor_window.md#properties-overview).
-
+The [Actor's input and output arguments](03_broadway_actor_window.md#properties-overview) in the Properties window can be filtered using the Parameter's filter to display only the inherited Actor's arguments, or only the ancestor's arguments or all.
  
 
 ### How Do I Modify the Inherited Actor?
