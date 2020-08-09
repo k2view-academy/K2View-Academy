@@ -1,4 +1,9 @@
-**Nodes Assignment**
+# Jobs Configuration
+
+When running jobs a few parameters must be configured at both node and cluster levels.
+
+
+## Nodes Assignment
 Priority for a given job on a given logical and physical node can be defined in the node configuration file.
 For example: it is possible to define that node X will handle maximum 10 threads in parallel by setting the #K2JOBS_POOL_SIZE variable to 10 in the config.ini file located in
 In node.id file in Fabric/config it is possible to define the following
@@ -32,11 +37,13 @@ uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7
 #cluster_id:
 
 
-[fabric_cluster]
+## Cluster Configuration
 
+***Heartbit***
 ## This value will define the delay of fabric heartbeat frequency. Default is 10 sec.
 FABRIC_HEARTBEAT_INTERVAL_MS=5000
 
+***KeepAlive***
 ## Defined the number of the heartbeat that fabric node can miss before it will be considered as not alive.
 FABRIC_HEARTBEAT_MISS=12
 
