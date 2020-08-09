@@ -11,9 +11,7 @@ By the end of the Broadway Tutorial Flows learning item you will:
 - Know how to open and use Broadway flow examples.
 - View, run and debug Broadway Tutorial flows to have a better understanding of Broadway.
 
-To learn more about a Broadway flow, please refer to the [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md) and the
-
-[Broadway Flow Examples](/articles/99_Broadway/17_tutorial_and_flow_examples.md).
+To learn more about a Broadway flow, please refer to the [Broadway Flow Overview](/articles/19_Broadway/02a_broadway_flow_overview.md), [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md) and the [Broadway Flow Examples](/articles/19_Broadway/17_tutorial_and_flow_examples.md).
 
 ### How Do I Open The Broadway Tutorial Flow  
 
@@ -28,7 +26,7 @@ Broadway Tutorials flows can be opened in the Broadway Flow window.
 
 The Broadway Tutorial flow runs manipulations on the **Hello Broadway** string and returns the **Hello Broadway** result.
 
-In the following exercise you will run and debug the flow to view the input and the output of each [Stage](/articles/99_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
+In the following exercise you will run and debug the flow to view the input and the output of each [Stage](/articles/19_Broadway/19_broadway_flow_stages.md) and each [Actor](/articles/99_Broadway/03_broadway_actor.md) in the flow.
 
 
 Before you start the exercise, please read [Run and Debug Broadway Flow](/articles/99_Broadway/25_broadway_flow_window_run_and_debug_flow.md) to debug the Broadway Tutorial flow steps.
@@ -88,8 +86,7 @@ A. The flow's result is "Hellow Broadway"</code></pre>
 
 <ul>
 <pre><code>
-Step 7
-
+Step 7.
 A and B, The flow executes two iteration runs on the <strong>StringBuilder</strong> Actor. The first iteration runs on **Hello** and the second iteration runs on **Broadway**.
 C. The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. The <strong>for each</strong> State is marked <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
@@ -99,15 +96,13 @@ E. The next Stage executed after the <strong>Splitting the flow</strong> Stage i
 
  <ul>
 <pre><code>
-Step 9. 
-
+Step 9.
 A. The new <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
 
 <ul>
  <pre><code>
- Step 13.
- 
+ Step 13. 
 A. The flow result is <strong>Broadway Training</strong>.</code></pre>
 </ul> 
 
