@@ -18,52 +18,52 @@ In this exercise you will add a condition to your flow that does the following:
 Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_broadway_flow_stages.md) to learn about spliting and merging the Stages of a flow and about adding conditions to a Stage. 
 
 #### Step 1 - Open the Broadway Flow
-1. 1 Go to the **project tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
+1.1 Go to the **project tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](/academy/Training_Level_1/99_Broadway/05_create_broadway_flow.md).
 
 
 #### Step 2 - Add Counting of Selected Customers
 
-2. 1 Add the **Count** Actor to **Stage 2**. This Actor returns the number of times an Actor is called. When this Actor is added to the loop, it counts the number of selected customers.
+2.1 Add the **Count** Actor to **Stage 2**. This Actor returns the number of times an Actor is called. When this Actor is added to the loop, it counts the number of selected customers.
 
 #### Step 3 - Add a Condition to the Flow
 
-3. 1 Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A window opens where you can add an Actor to the Stage.
+3.1 Add a new Stage to the flow, click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) and select **Stage Condition**. A window opens where you can add an Actor to the Stage.
 
-3. 2 Select the **GreaterThanEquals** Actor and click  **SUBMIT**. The **GreaterThanEquals** Actor returns **true** if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is in grey since it is added in a condition.
+3.2 Select the **GreaterThanEquals** Actor and click  **SUBMIT**. The **GreaterThanEquals** Actor returns **true** if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is in grey since it is added in a condition.
 
    Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn more about Broadway Actors.
 
-3. 3 Link the output of the **Count** condition to the **GreaterThanEquals** **a** input parameter to set the **b** parameter to be a **Const** and set its value to 3:
+3.3 Link the output of the **Count** condition to the **GreaterThanEquals** **a** input parameter to set the **b** parameter to be a **Const** and set its value to 3:
 
    ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_GreaterThanEqual_Actor.png)
 
    
 
-3 .4 Split **Stage 4**: click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) in the newly created **Stage 5** and select **Else**.
+3.4 Split **Stage 4**: click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) in the newly created **Stage 5** and select **Else**.
 
 #### Step 4 - Add the Next Stages
 
-4. 1 Add a Stage to the flow and split it into **Stage 6** and **Stage 7**.
+4. Add a Stage to the flow and split it into **Stage 6** and **Stage 7**.
 
-4. 2 Add the **Logger** Actors to **Stage 6** and **Stage 7**.
+4.1 Add the **Logger** Actors to **Stage 6** and **Stage 7**.
 
-4. 3 Set the **Logger** Actor's parameters of **Stage 6**:
+4.2 Set the **Logger** Actor's parameters of **Stage 6**:
 - Set the **message** input parameter as **Const**.
    
 - Set the **message** input parameter value to: **There are ${0} customers in the list**. The **${0}** is set for the first parameter of the **params** input parameter.
    
 - Set the **level** input parameter to **info**.
    
-4. 4 Link the **Count** Actor to the **Logger** Actor or to **Stage 6**.
+4.3 Link the **Count** Actor to the **Logger** Actor or to **Stage 6**.
 
-4. 5 Set the **Logger** Actor's parameters of **Stage 7**:
+4.4 Set the **Logger** Actor's parameters of **Stage 7**:
 - Set the **message** input parameter as **Const**.
    - Set the **message** input parameter value to: **Error- there are not enough customers in the list**.
    - Set the **level** input parameter to **error**.
 
 #### Step 5 - Debug the Updated Flow
 
-5. 1 Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode:
+5.1 Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode:
 
    <ul>
    <pre><code>
@@ -74,9 +74,9 @@ Before you start, please read [Broadway Flow - Stages](/articles/99_Broadway/19_
    </code></pre>
    </ul>
 
-5. 2 Update the **GreaterThanEquals** Actor, set the **b** parameter to 10 instead of 3.
+5.2 Update the **GreaterThanEquals** Actor, set the **b** parameter to 10 instead of 3.
 
-5. 3 Rerun the Debug on the flow: 
+5.3 Rerun the Debug on the flow: 
 
    <ul>
    <pre><code>
