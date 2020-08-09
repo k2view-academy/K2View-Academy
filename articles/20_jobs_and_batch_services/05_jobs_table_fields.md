@@ -35,35 +35,12 @@ type, name, uid, affinity, archived, arguments, creation_time, end_time, error_m
 <img src="/articles/20_jobs_and_batch_services/images/07_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 <img src="/articles/20_jobs_and_batch_services/images/08_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
-#### Arguments
-The arguments are parsed from the SET command from Fabric Runtime Environment as shown below:
 
-```
-fabric>set;
-|key                                        |value                        |
-+-------------------------------------------+-----------------------------+
-|SCOPE                                      |empty                        |
-|PROJECT_NAME                               |KB_FABRIC_PROJECT            |
-|Global.BILLING.TOO_MANY_INPUTS             |10                           |
-|Global.BILLING.MISSING_INPUT               |20                           |
-|Global.BILLING.TRN_TABLE_NAME_COLUMN_HEADER|TABLE_NAME                   |
-|Global.CRM.ACTIVITY_NOTE                   |Activity created successfully|
-|Global.CRM.SOURCE_ENV_NAME                 |UAT                          |
-|ENVIRONMENT                                |_dev                         |
-|ALLOW_FILTERING                            |false                        |
-|ASYNC_TRX                                  |false                        |
-|ATTACH_POLICY                              |LATEST                       |
-|LOG_ID                                     |10000000017ae                |
-|SYNC                                       |ON                           |
-
-(49 rows)
-fabric>
-```
-
-<img src="/articles/20_jobs_and_batch_services/images/09_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
 #### Worker_ID
 <img src="/articles/20_jobs_and_batch_services/images/10_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
+
+
 
 #### Error_msg
 <img src="/articles/20_jobs_and_batch_services/images/11_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
