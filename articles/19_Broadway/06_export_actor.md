@@ -8,7 +8,7 @@ For example, when it is required that all dates will be formatted using the same
 
 1. Add an Actor to the flow and update its arguments and/or logic. For example, add a **DateFormat**  Actor and set its **format** input argument to **'E  dd-MM-yy HH:mm a'** and the time zone to **Israel**. With these settings, the **string** output argument will be displayed as **'Thu  06-08-20 15:30 PM'**.
 
-2. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu]() to open the Export Actor pop-up.
+2. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
    ![export](images/99_06_export_1.PNG)
 
@@ -35,7 +35,7 @@ The difference between the two is whether to override the inherited Actor or not
 
 To override the extended Actor do the following:
 
-1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu]() to open the Export Actor pop-up.
+1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
 2. Click **override current** checkbox in the Export Actor pop-up. The name is prepopulated with the Actor's name and it is read-only.
 
@@ -45,7 +45,7 @@ To override the extended Actor do the following:
 
 To extend the behavior of the exported Actor do the following:
 
-1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu]() to open the Export Actor pop-up.
+1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
 2. Populate a new Actor's name and click SUBMIT.
 
