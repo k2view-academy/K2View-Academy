@@ -47,17 +47,15 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 
  2.2 Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
+- Read How [Do I Add Actor to Stage](/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage) to learn how to add an Actor to the Broadway flow.
+- Read more about [DbCommand](/articles/19_Broadway/04_built_in_actor_types.md#db) Built-In Actor. 
 
-- Read How Do I Add Actor to Stage (/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage) to learn how to add the **DbCommand** Actor to Stage 1.
+2.3 Edit the **DbCommand** Actor in Stage 1:
 
+- Select **CRM_DB** as the **Interface**.
+- Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter.
 
-   - Edit the **DbCommand** Actor in Stage 1.
-
-     - Select **CRM_DB** as the **Interface**.
-
-     - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter.
-
-       ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
+ ![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1.png)
 
 #### Step 3 - Read the Customer's List and Create a File
 3.1 The next Stages run a loop on the list of selected customers. For each selected record: 
@@ -93,7 +91,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
      ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3.png)
 
 
-  Read [Broadway Actors](/articles/99_Broadway/03_broadway_actor.md) to learn about the Actor window and setting the Actor's parameters. 
+  Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
 3.7 Link the **JsonStringify** Actor's **string** output parameter to the **[stream]** input parameter of the **FileWrite** Actor. The **FileWrite** Actor executes the following activities:
 
