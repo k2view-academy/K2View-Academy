@@ -48,7 +48,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
  2.2 Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
-- Read How Do I Add Actor to StageAdding Actor] (https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.1/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stagee) to learn how to add the **DbCommand** Actor to Stage 1.
+- Read How Do I Add Actor to Stage (/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage) to learn how to add the **DbCommand** Actor to Stage 1.
 
 
    - Edit the **DbCommand** Actor in Stage 1.
@@ -100,8 +100,11 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
    - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
    - Appends each JSON object sent for each selected customer to the file.
 
-3.8 Close the loop after executing Stage 3: Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
-    Read [Stage Context Menu](/articles/99_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
+3.8 Close the loop after executing Stage 3: 
+
+- Click ***...*** in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
+
+  Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
 3.9. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
 
