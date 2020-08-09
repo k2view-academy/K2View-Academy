@@ -13,10 +13,10 @@ By the end of the Broadway Flow learning item you will:
 
 A Broadway Flow:
 -  Represents a business process that binds other objects into the same flow. 
--  Acts as a graph or a tree that has several [Stages](/articles/99_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/99_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right, where the Actors in each Stage of the flow are executed top-down.
+-  Acts as a graph or a tree that has several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/19_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right, where the Actors in each Stage of the flow are executed top-down.
 
 
-To learn more about a Broadway flow, please refer to [Broadway Flow Overview](/articles/99_Broadway/16_broadway_flow_overview.md).
+To learn more about a Broadway flow, please refer to [Broadway Flow Overview](/articles/19_Broadway/02a_broadway_flow_overview.md).
 
 ### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
@@ -24,15 +24,15 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 #### Step 1 - Create a New Broadway Flow
 
-1. Download and open the [Demo Project](/articles/demo_project) in the Fabric Studio. 
+1.1 Download and open the [Demo Project](/articles/demo_project) in the Fabric Studio. 
 
-2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
+1.2 Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
 
-3. Populate the **Flow Name** and click **OK** to open an empty flow.
+1.3 Populate the **Flow Name** and click **OK** to open an empty flow.
 
 #### Step 2 - Populate Stage 1 of the Flow
 
-1. Get a list of customers purchasing one or more new subscriptions (contracts) over the last 24 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
+2.1. Get a list of customers purchasing one or more new subscriptions (contracts) over the last 24 months. The data must be selected from the **CONTRACT** table in the **CRM_DB** interface based on the following SQL query:
 
      ```
      Select count(*) As no_of_contracts,
@@ -44,7 +44,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
      Having count(*) > 2;
      ```
 
- 2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
+ 2.2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
       Read [Adding or Deleting an Actor] (/articles/99_Broadway/03_broadway_actor.md#how-can-i-add-or-delete-an-actor-to-a-stage) to learn how to add the **DbCommand** Actor to Stage 1.
 
