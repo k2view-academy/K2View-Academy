@@ -23,35 +23,32 @@ Example: ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
 The logical_id name helps define affinity between a node and candidate jobs. Therefore, in order to limit the number of fabric jobs running on a node (i.e. with the same affinity), each logical_id can be associated with the maximum number of jobs.
 
 Example:
-3 logical names were given for NODE 1.
+3 logical names were given for NODE 1, sharing the 10 threads allocated to Job processing on Node 1. 
 node_b:1
 node_c:3
 node_d:6
-Assuming 3 jobs are running, with the following afinities:
-- Job 1 with AFFINITY=node_b
-- Job 2 with AFFINITY=node_c 
-- Job 3 with AFFINITY=node_d
-It means the third job will get the highest priority on node 1
+You can then define 3 jobs with the following affinities:
+- Job 1 with AFFINITY=Node1_LogicalId1
+- Job 2 with AFFINITY=Node1_LogicalId2
+- Job 3 with AFFINITY=Node1_LogicalId3
 
-
-
-
-#cluster identifier - should contain only letters and numbers
-#cluster_id: FabCluster1
-
-
-
+Note: If no empty slot is left on the pool, and a new job has been allocated to this pool, the job will remain in WAITING status. The user will be able to see this note only in trace but not in the log.
 
 
 ## Cluster Configuration
 
+#### cluster identifier
+It should contain only letters and numbers:
+cluster_id: FabCluster1
+
+
 ***Heartbit***
-## This value will define the delay of fabric heartbeat frequency. Default is 10 sec.
-FABRIC_HEARTBEAT_INTERVAL_MS=5000
+A heartbit value can be defined to setup the delay of fabric node heartbeat frequency. Default is set to 10 seconds.
+```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - the hearbit has been set to 5 seconds.
 
 ***KeepAlive***
-## Defined the number of the heartbeat that fabric node can miss before it will be considered as not alive.
-FABRIC_HEARTBEAT_MISS=12
+You can define the number of heartbeats that a fabric node can miss before it will be considered as unavailable, in which case all jobs that have been defined without a specific affinity to this node will be reallocated to another node. It is important to note, that any job whose affinity was set to this node will not run, and will have to be restarted manually.
+```FABRIC_HEARTBEAT_MISS=12``` - if the node has been down for 60 seconds (12 missed heartbits, each of 5 seconds), it will be considered as unavailable and will be removed from the pool.
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/04_jobs_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/06_jobs_configuration.md)
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/05_jobs_table_fields.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/07_jobs_examples.md)
