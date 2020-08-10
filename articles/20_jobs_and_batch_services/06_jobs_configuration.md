@@ -37,16 +37,19 @@ Note: If no empty slot is left on the pool, and a new job has been allocated to 
 
 ## Cluster Configuration
 
-#### cluster identifier
+#### Cluster Identifier
+
 It should contain only letters and numbers:
 cluster_id: FabCluster1
 
 
 ***Heartbit***
+
 A heartbit value can be defined to setup the delay of fabric node heartbeat frequency. Default is set to 10 seconds.
 ```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - the hearbit has been set to 5 seconds.
 
 ***KeepAlive***
+
 You can define the number of heartbeats that a fabric node can miss before it will be considered as unavailable, in which case all jobs that have been defined without a specific affinity to this node will be reallocated to another node. It is important to note, that any job whose affinity was set to this node will not run, and will have to be restarted manually.
 ```FABRIC_HEARTBEAT_MISS=12``` - if the node has been down for 60 seconds (12 missed heartbits, each of 5 seconds), it will be considered as unavailable and will be removed from the pool.
 
