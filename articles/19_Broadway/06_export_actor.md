@@ -8,13 +8,13 @@ For example, to format all dates using the same pattern, set a specific pattern 
 
 Do the following:
 
-1. Add an Actor to the flow and update its arguments and/or logic. For example, add a **DateFormat**  Actor and set its **format** input argument to **'E  dd-MM-yy HH:mm a'** and the time zone to **Israel**. Using these settings, the **string** output argument will be displayed as **'Thu  06-08-20 15:30 PM'**.
+1. Add an **Actor** to the flow and update its arguments and/or logic. For example, add a **DateFormat**  Actor and set its **format** input argument to **'E  dd-MM-yy HH:mm a'** and the time zone to **Israel**. Using these settings, the **string** output argument is displayed as **'Thu  06-08-20 15:30 PM'**.
 
 2. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
    ![export](images/99_06_export_1.PNG)
 
-3. Populate the new Actor's Name as **myDateFormat** and Tag to create a new Actor in a new (different) category and click **SUBMIT**. 
+3. Populate the new Actor's **Name** as **myDateFormat** and **Tag** to create a new Actor in a new (different) category and click **SUBMIT**. 
    - The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type.
    - The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
@@ -34,7 +34,7 @@ An inherited Actor can be modified for two reasons:
 
 The difference between the two reasons is whether the inherited Actor is overridden or not.  If the Actor needs to be updated, it is overridden. 
 
-To override an extended Actor, do the following:
+To override an extended Actor, do the following: 
 
 1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
@@ -42,13 +42,13 @@ To override an extended Actor, do the following:
 
    ![export](images/99_06_export_2.PNG)
 
-3. Click SUBMIT to save the changes.
+3. Click **SUBMIT** to save the changes.
 
 To extend the behavior of the exported Actor, do the following:
 
 1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
-2. Populate the new Actor's name and click SUBMIT.
+2. Populate the new Actor's **name** and click **SUBMIT**. 
 
    ![export](images/99_06_export_3.PNG)
 
