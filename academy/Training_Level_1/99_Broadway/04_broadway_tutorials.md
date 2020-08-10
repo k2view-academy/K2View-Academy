@@ -43,10 +43,14 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
 1. Click the Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png) to set it to Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
 
-  <ul>
- <pre><code>A. What is the result of the flow?</code></pre>
-  </ul>
-2. Add a **Breakpoint** to **for each Stage**, click the Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) to set it back to Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png), and then click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
+   <ul>
+   <pre><code>A. What is the result of the flow?</code></pre>
+   </ul>
+
+   
+
+2. Add a  **Breakpoint** to **for each Stage**, click the Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) to set it back to Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png), and then click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
+
 3. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
 <ul>
