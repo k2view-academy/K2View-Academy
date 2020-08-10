@@ -23,7 +23,7 @@ Do the following:
 Once the Export Actor creates a new inherited Actor, the new Actor is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
 
 The [Actor's input and output arguments](03_broadway_actor_window.md#properties-overview) in the Properties window can be filtered using the Parameter's filter to display only the inherited Actor's arguments, or only the ancestor's arguments or all.
- 
+
 
 ### How Do I Modify an Inherited Actor?
 
@@ -58,5 +58,5 @@ Note that an override option only exists for inherited Actors. The product's [bu
 
 
 
-[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_stream_actors.md)
 

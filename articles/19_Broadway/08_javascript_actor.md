@@ -6,6 +6,12 @@ The **JavaScript** Actor is an important and useful [built-in Actor type](04_bui
 
 There are no limitations on the number of rows in an Actor. However, to improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code.
 
+The **javascript.flow** and **javascript-advanced.flow** examples shows various ways to use a **JavaScript** Actor in a flow.
+
+Click **Actions** > **Examples** in the [Main menu](18_broadway_flow_window.md#main-menu) to open the examples. 
+
+![image](C:/K2View-Academy/articles/19_Broadway/images/99_08_02.PNG)
+
 
 ### Special Keywords and Conventions
 
@@ -93,4 +99,4 @@ The **JavaScript** Actor can be used to read the values of a flow argument using
     print(flowArgs.v3); //read the value of argument v3
 ```
 
-[![Previous](/articles/images/Previous.png)]()[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](07_stream_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_parsers_actors.md)
