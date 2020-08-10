@@ -4,7 +4,7 @@
 
 The **JavaScript** Actor is an important and useful [built-in Actor type](04_built_in_actor_types.md) that can be used to simplify a flow by writing JavaScript business logic or validation code in the **script** input parameter.
 
-There are no limitations on the number of rows in an Actor. However, to improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code.
+To improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code. Note that an Actor can include any number of  JavaScript rows.  
 
 The **javascript.flow** and **javascript-advanced.flow** examples shows various ways to use a **JavaScript** Actor in a flow.
 
@@ -15,7 +15,7 @@ Click **Actions** > **Examples** in the [Main menu](18_broadway_flow_window.md#m
 
 ### Special Keywords and Conventions
 
-- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. The **return** keyword does not need to be written in the script since the **result** output parameter can be used to read the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
+- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. The **return** keyword does not need to be written in the script since the **result** output parameter is used to return the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
 
   ```
   var rowSum = 0;
@@ -47,7 +47,7 @@ Click **Actions** > **Examples** in the [Main menu](18_broadway_flow_window.md#m
 
   ``` print("The value of Const1 is: " + Const1.value) ```
 
-- An error should be communicated by throwing an exception. For example: 
+- An error is communicated by throwing an exception. For example: 
 
   ``` throw "Invalid Data Received" ```
 
