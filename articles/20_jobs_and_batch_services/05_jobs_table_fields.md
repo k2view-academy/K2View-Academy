@@ -45,15 +45,4 @@ type, name, uid, affinity, archived, arguments, creation_time, end_time, error_m
 #### Error_msg
 <img src="/articles/20_jobs_and_batch_services/images/11_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
-
-
-
-
-
-
-
-
-
-
-
-
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/04_jobs_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/06_jobs_configuration.md)
