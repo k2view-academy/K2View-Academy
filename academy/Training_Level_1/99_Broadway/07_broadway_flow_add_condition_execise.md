@@ -69,7 +69,6 @@ Before you start, please read [Broadway Flow - Stages](/articles/19_Broadway/19_
    </ul>
    
    
-   
 2. Update the **GreaterThanEquals** Actor, set the **b** parameter to 10 instead of 3.
 
 3. Rerun the Debug on the flow: 
