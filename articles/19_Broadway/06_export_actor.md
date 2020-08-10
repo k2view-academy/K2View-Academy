@@ -29,32 +29,32 @@ The [Actor's input and output arguments](03_broadway_actor_window.md#properties-
 
 An inherited Actor can be modified for two reasons:
 
-- To update the behavior of the exported Actor, due to changed requirements or a bug fix. 
+- To update the behavior of the exported Actor due to changed requirements or a bug fix. 
 - To extend the behavior of the exported Actor to create an additional level of inheritance.
 
-The difference between the two is whether to override the inherited Actor or not.  When we need to update the Actor, override is required. 
+The difference between the two reasons is whether the inherited Actor is overridden or not.  If the Actor needs to be updated, it is overridden. 
 
-To override the extended Actor do the following:
+To override an extended Actor, do the following:
 
-1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
+1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
-2. Click **override current** checkbox in the Export Actor pop-up. The name is prepopulated with the Actor's name and it is read-only.
+2. Check **override current**. The name is prepopulated with the Actor's name and is read-only.
 
    ![export](images/99_06_export_2.PNG)
 
 3. Click SUBMIT to save the changes.
 
-To extend the behavior of the exported Actor do the following:
+To extend the behavior of the exported Actor, do the following:
 
-1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** from the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
+1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
-2. Populate a new Actor's name and click SUBMIT.
+2. Populate the new Actor's name and click SUBMIT.
 
    ![export](images/99_06_export_3.PNG)
 
 
 
-Note that an override option only exists for the inherited Actors. The product [built-in Actors](04_built_in_actor_types.md) cannot be overridden. 
+Note that an override option only exists for inherited Actors. The product's [built-in Actors](04_built_in_actor_types.md) cannot be overridden. 
 
 
 
