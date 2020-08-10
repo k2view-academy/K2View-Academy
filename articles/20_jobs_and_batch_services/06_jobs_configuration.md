@@ -39,9 +39,8 @@ Note: If no empty slot is left on the pool, and a new job has been allocated to 
 
 #### Cluster Identifier
 
-It should contain only letters and numbers:
-cluster_id: FabCluster1
-
+It should contain only letters and numbers and is defined in the node.id file:
+cluster_id: FabCluster1 
 
 ***Heartbeat***
 
@@ -52,6 +51,15 @@ A heartbit value can be defined to setup the delay of fabric node heartbeat freq
 
 You can define the number of heartbeats that a fabric node can miss before it will be considered as unavailable, in which case all jobs that have been defined without a specific affinity to this node will be reallocated to another node. It is important to note, that any job whose affinity was set to this node will not run, and will have to be restarted manually.
 ```FABRIC_HEARTBEAT_MISS=12``` - if the node has been down for 60 seconds (12 missed heartbits, each of 5 seconds), it will be considered as unavailable and will not be considered as part of the pool during next job allocation.
+
+The configuration of these parameters can be found in the k2view/config/config.ini file under the *Fabric Cluster* section
+The values of the nodes' heartbeats are systematically stored in Cassandra, in the k2system.nodes table and can be queried from the cqlsh shell: 
+
+```select * from k2system.nodes ```
+
+Result:
+<img src="/articles/20_jobs_and_batch_services/images/12_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/05_jobs_table_fields.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/07_jobs_examples.md)
