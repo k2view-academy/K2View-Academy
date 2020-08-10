@@ -6,21 +6,19 @@
 
 - Course Introduction
   - Course Overview & Main Objectives
-  - Broadway Overview and Use Cases
-- HL components
-  - Broadway flow / Stage / Actors
-  - Loops and stage condition
+- Broadway Overview High Level Components
 - Broadway Tutorials
 
 #### **DAY 1 – Afternoon**
 
 - How to Build a Simple Flow
-  - Adding an Actor to Stage 1
-  - Adding additional Stages
-  - Linking between the Stages
-  - Loops and Conditions
-  - Run and Debug 
-- Exercise: build a simple flow and add a condition to the flow
+  - Creating a simple flow that selects data from a DB table and creates a JSON file based on the selected DB records:
+    - Adding Stages and Actores
+    - Linking between the Stages
+    - Add a loop to the flow
+    - Run and Debug the flow
+  - Broadway Loops and Stage Condition
+- Exercise: enhance the simple flow- add a condition to the flow
 
 #### **DAY 2 – Morning**
 
