@@ -43,9 +43,9 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
 1. Click the Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png) to set it to Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
 
-   <ul>
-   <pre><code>A. What is the result of the flow?</code></pre>
-   </ul>
+  <ul>
+  <pre><code>A. What is the result of the flow?</code></pre>
+  </ul>
 
    
 
@@ -53,15 +53,15 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 3. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
-<ul>
-<pre><code>
+  <ul>
+  <pre><code>
   A. How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>for each Stage</strong>?<br>
   B. Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
   C. What is the output of the <strong>StringBuilder</strong> Actor?
   D. How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
   E. Which Stage is executed after the <strong>Splitting the flow</strong> Stage? Why?
-</code></pre>
-</ul>
+  </code></pre>
+  </ul>
 
   ![info](/academy/images/information.png) Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
 
@@ -71,8 +71,8 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 2. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow's steps in **Debug mode**. 
 
   <ul>
-<pre><code>A. Has the new <strong>Now</strong> Actor of <strong>Stage 3</strong> been executed? Why?</code></pre>
-</ul>
+  <pre><code>A. Has the new <strong>Now</strong> Actor of <strong>Stage 3</strong> been executed? Why?</code></pre>
+  </ul>
 
  ![info](/academy/images/information.png) Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
 
@@ -81,7 +81,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 5. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 6. Run the flow. 
 
-<ul><pre><code>A. What is the flow's result?</code></pre></ul> 
+  <ul><pre><code>A. What is the flow's result?</code></pre></ul> 
 
  #### Step 4 - Add the Flow to the Project Tree in the Fabric Studio
 
