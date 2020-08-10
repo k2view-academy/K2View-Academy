@@ -79,12 +79,12 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 6. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
-        - Set **Interface** to **LocalFileSystem**.
-        - Set the **path's Population Type** to **Const** instead of **Link**.
-        - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
-        - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
+   - Set **Interface** to **LocalFileSystem**.
+   - Set the **path's Population Type** to **Const** instead of **Link**.
+   - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
+   - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
-     ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3.png) 
+    ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3.png) 
 
    Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
