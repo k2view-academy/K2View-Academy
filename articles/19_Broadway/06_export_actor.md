@@ -1,12 +1,10 @@
-# Actor and Inheritance
+# Actor Inheritance Mechanism
 
-In Broadway an Actor can be extended to create a new Actor type using the **Export Actor** functionality. By exporting an Actor, a new Actor inherits their logic and arguments and extends it with additional functionalities so that specific inherited business logic can be reused in different Broadway flows.  
+In Broadway, an Actor can be extended to create a new Actor type using the **Export Actor** functionality. 
+
+When an Actor is exported, a new Actor inherits its logic and arguments and also extends it with additional functionalities whereby specific business logic can be reused in different Broadway flows. For example, to format all dates using the same pattern, set a specific pattern in the **DateFormat** Actor and then export the Actor in order to reuse it in various Broadway flows. 
 
 ### How Do I Export an Actor?
-
-For example, to format all dates using the same pattern, set a specific pattern in the **DateFormat** Actor and then export the Actor in order to reuse it in various Broadway flows. 
-
-Do the following:
 
 1. Add an **Actor** to the flow and update its arguments and/or logic. For example, add a **DateFormat**  Actor and set its **format** input argument to **'E  dd-MM-yy HH:mm a'** and the time zone to **Israel**. Using these settings, the **string** output argument is displayed as **'Thu  06-08-20 15:30 PM'**.
 
@@ -14,9 +12,14 @@ Do the following:
 
    ![export](images/99_06_export_1.PNG)
 
-3. Populate the new Actor's **Name** as **myDateFormat** and **Tag** to create a new Actor in a new (different) category and click **SUBMIT**. 
-   - The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type.
-   - The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
+3. Populate the new Actor's **Name** as **myDateFormat**. 
+
+4. Optional: to create a new Actor in a new (different) category populate the **Tag**.
+
+5. Click **SUBMIT**. 
+   
+The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type.
+The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
 
 
