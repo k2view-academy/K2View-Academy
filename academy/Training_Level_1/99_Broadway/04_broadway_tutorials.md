@@ -35,19 +35,19 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 #### Step 1 - Open the Broadway Tutorial Flow
 
-1.1 Download the [Demo Project](/articles/demo_project) and open it in the **Fabric Studio**. \
-1.2 Go to the **project tree**, right click **Broadway** and select **New Flow** to open the **Flow name** window. \
-1.3 In the **Name** field type **test**, click **Actions** and select **Examples**. \
-1.4 Select **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
+1. Download the [Demo Project](/articles/demo_project) and open it in the **Fabric Studio**.
+2. Go to the **project tree**, right click **Broadway** and select **New Flow** to open the **Flow name** window.
+3. In the **Name** field type **test**, click **Actions** and select **Examples**. 
+4. Select **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
-2.1 Click the Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png) to set it to Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
+1. Click the Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png) to set it to Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
+
   <ul>
  <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
-
-2.2 Add a **Breakpoint** to **for each Stage**, click the Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) to set it back to Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png), and then click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
-2.3 Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
+2. Add a **Breakpoint** to **for each Stage**, click the Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) to set it back to Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png), and then click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
+3. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
 <ul>
 <pre><code>
@@ -60,11 +60,11 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 </ul>
 
   ![info](/academy/images/information.png) Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
-  
+
   #### Step 3 - Edit the Flow to Test a Conditinal Stage
 
- 3.1 Click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**. \
- 3.2 Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow's steps in **Debug mode**. 
+1. Click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
+2. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow's steps in **Debug mode**. 
 
   <ul>
 <pre><code>A. Has the new <strong>Now</strong> Actor of <strong>Stage 3</strong> been executed? Why?</code></pre>
@@ -72,18 +72,21 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
  ![info](/academy/images/information.png) Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
 
-3.3 Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the **Debug process**. \
-3.4 Click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed. \
-3.5 Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**. \
-3.6 Run the flow. 
+3. Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the **Debug process**. 
+4. Click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
+5. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
+6. Run the flow. 
+
 <ul><pre><code>A. What is the flow's result?</code></pre></ul> 
 
  #### Step 4 - Add the Flow to the Project Tree in the Fabric Studio
 
-4.1 Close the Broadway Turorial flow and check the list of Broadway flows under the <strong>project tree</strong>
+1. Close the Broadway Tutorial flow and check the list of Broadway flows under the <strong>project tree.</strong>
+
 <ul><pre><code>A. How may flows do you have now?</code></pre></ul>
 
-4.2 Reopen the **Broadway Tutorial flow** and click the **Const** Actor in the <strong>Hello Broadway</strong> Stage.
+2. Reopen the **Broadway Tutorial flow** and click the **Const** Actor in the <strong>Hello Broadway</strong> Stage.
+
 <ul><pre><code>A. Which value is set for the input parameter?</code></pre></ul> 
 
 
