@@ -45,9 +45,7 @@ Before you start, please read [Broadway Flow - Stages](/articles/19_Broadway/19_
 2. Add the **Logger** Actors to **Stage 6** and **Stage 7**.
 3. Set the **Logger** Actor's parameters of **Stage 6**:
    - Set the **message** input parameter as **Const**.
-
    - Set the **message** input parameter value to: **There are ${0} customers in the list**. The **${0}** is set for the first parameter of the **params** input parameter.
-
    - Set the **level** input parameter to **info**.
 4. Link the **Count** Actor to the **Logger** Actor or to **Stage 6**.
 5. Set the **Logger** Actor's parameters of **Stage 7**:
