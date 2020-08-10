@@ -10,7 +10,7 @@ The **javascript.flow** and **javascript-advanced.flow** examples shows various 
 
 Click **Actions** > **Examples** in the [Main menu](18_broadway_flow_window.md#main-menu) to open the examples. 
 
-![image](C:/K2View-Academy/articles/19_Broadway/images/99_08_02.PNG)
+![image](images/99_08_02.PNG)
 
 
 ### Special Keywords and Conventions
