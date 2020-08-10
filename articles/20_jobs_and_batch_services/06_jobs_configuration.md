@@ -18,6 +18,7 @@ In this file can be set node and cluster-related configuration variables. It is 
 In node.id file in k2view/config it is possible to define a set a number of logical names or Node Identifiers for the node in question; such node identifiers can be used for the job affinity mechanism. Note that there can be more than one logical names since a node can have more than one logical role.
 
 The node UUID is unique and if left undefined, fabric will generate a random one while starting, the first time.
+
 Example: ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
 
 The logical_id name helps define affinity between a node and candidate jobs. Therefore, in order to limit the number of fabric jobs running on a node (i.e. with the same affinity), each logical_id can be associated with the maximum number of jobs.
@@ -43,10 +44,13 @@ It should contain only letters and numbers and is defined in the node.id file:
 cluster_id: FabCluster1 
 
 ***Heartbeat***
+
 A heartbeat value can be defined to setup the delay of fabric node heartbeat frequency. Default is set to 10 seconds.
 ```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - the hearbit has been set to 5 seconds.
 
+
 ***KeepAlive***
+
 You can define the number of heartbeats that a fabric node can miss before it will be considered as unavailable, in which case all jobs that have been defined without a specific affinity to this node will be reallocated to another node. It is important to note, that any job whose affinity was set to this node will not run, and will have to be restarted manually.
 ```FABRIC_HEARTBEAT_MISS=12``` - if the node has been down for 60 seconds (12 missed heartbits, each of 5 seconds), it will be considered as unavailable and will not be considered as part of the pool during next job allocation.
 
