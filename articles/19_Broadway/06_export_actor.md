@@ -1,6 +1,6 @@
-# Actor's Inheritance
+# Actor and Inheritance
 
-In Broadway an Actor can be extended to create a new Actor type using **Export Actor** functionality. By exporting an Actor, the new Actor inherits the current Actor’s logic and arguments and extends it with additional functionality. Actor's inheritance enables the reuse of specific business logic in different flows in Broadway.  
+In Broadway an Actor can be extended to create a new Actor type using the **Export Actor** functionality. By exporting an Actor, a new Actor inherits the current Actor’s logic and arguments and extends it with additional functionalities so that specific inherited business logic can be reused in different Broadway flows.  
 
 ### How Do I Export an Actor?
 
