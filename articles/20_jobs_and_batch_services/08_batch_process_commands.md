@@ -126,3 +126,39 @@ Start batch process to sync all instances of a Logical Unit:
 
 </td>
 </tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>batch_details '&ltbatch id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Show instances status for a given batch process id
+- STATUS, shows one of the following states: WAITING, COMPLETED, FAILED
+- ENTITIES, lists of entities separated by a comma
+- AFFINITY, DCs or nodes
+- SORT_BY_PROCESS_TIME, if true, shows only the entities with the highest process time. If set, ignore all other parameters
+- LIMIT, default LIMIT is defined in config.ini if no LIMIT is provided as an argument </p>
+</td>
+<td valign="top" width="300pxl">
+<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>batch_in_process filter='&ltfilter regex&gt'</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Lists of all batch processes at work and returns the following information: node id, batch process id, entity id, LU type, time at work (ms), exeid, command|
+- filter, must be a regex compatible argument
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+</td>
+</tr> 
