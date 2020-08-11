@@ -30,7 +30,7 @@ Each Stage can contain one or more [Actor](03_broadway_actor.md) which are reusa
 
 In the example above, the **Fetch** Stage queries data and transfers it as input to the Actors in the next Stages. Based on the data, either the **Transform Consumer** Stage or the **Transform Business** Stage is executed. In turn, these Stages execute the Actors that build data for the **DbLoad** Actor in the last Stage.
 
-An entire Broadway flow can be exported and encapsulated into an Actor and then be reused across flows. This is powerful tool for reusing logic and working with highly-complex flows.
+An entire Broadway flow can be exported and encapsulated into an Actor and then be reused across flows. This is a powerful tool for reusing logic and working with highly-complex flows.
 
 [Click for more information about Broadway flows.](02a_broadway_flow_overview.md)
 
