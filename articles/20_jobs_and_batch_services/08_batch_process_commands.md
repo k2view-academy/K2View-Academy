@@ -137,7 +137,6 @@ Start batch process to sync all instances of a Logical Unit:
 <p>
 Shows instances status for a given batch process id:
    
-- DC, specify dc name to force the batch process within specified dc, can also be defined on the affinity parameter                                                   - - AFFINITY, list of nodes and DCs to be involved in the batch process command
 - STATUS, shows one of the following states: WAITING, COMPLETED, FAILED
 - ENTITIES, lists of entities separated by a comma
 - AFFINITY, DCs or nodes
@@ -175,7 +174,9 @@ Shows instances status for a given batch process id:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Lists all active batch processes if no arguments provided and their respective statuses: NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL:
+<p>
+Lists all active batch processes if no arguments provided and their respective statuses:
+   - NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
    - FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
    - FILTER - filtering the batch processes. The filter parameter needs to be populated by a String, included in the Fabric Command of the batch process (note: the filter supports regex).
 </p>
