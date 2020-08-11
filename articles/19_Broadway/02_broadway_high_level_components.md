@@ -16,13 +16,13 @@ There are a few other core capabilities that are important for a high-level of u
   <div>
     <p>Actors can get their input from three different sources:</p>
     <ul>
-      <li>The output of a previous Actor: the connecting lines between Actors.</li>
+      <li>The output of a previous Actor - the connecting lines between Actors.</li>
       <li>A Constant value supplied by the user.</li>
       <li>An input argument to the flow (external).</li>
     </ul>
 <p>When the Actor executes, it is completely unaware of the source of its data.</p>
-<p>Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.</p>
-<p>In the image we can see the JavaScript Actor obtaining the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
+<p>Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow.</p>
+<p>In the image, the JavaScript Actor obtains the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous Actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
 </div>
 </td>
 <td width="400">
@@ -80,7 +80,7 @@ Transactions also take into account inner Broadway flows. If a Transactional Sta
 
 ## Error Handling
 
-Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform in case an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
+Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
 
 <div align="center"><img src="images/overview_error.png" height="200"></div>
 
