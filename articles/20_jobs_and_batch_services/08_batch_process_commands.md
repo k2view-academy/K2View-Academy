@@ -35,20 +35,13 @@ BATCH *LUT* from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" w
 
 <tr>
 <td valign="top" width="500pxl">
-<h5>batch <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=<number>]]; </h5>
+<h5>batch &ltLUT&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]; </h5>
 </td>
 <td valign="top" width="400pxl">
    
 <p>
-Start batch process all instances of a Logical Unit:
+Start batch process to sync all instances of a Logical Unit:
    
-- Affinity, UID and other Arguments are optional inputs.
-- Jobtype, BROADWAY, PROCESS, USER_JOB
-- Name, Job’s name.
-- args, a string represeting a JSON that passes additional arguments to the **start Job** command. For example, {"jobName":"jobTest"}.
-- Affinity, comm, definition of Jobs scheduling execution interval that supports three formats:
-  - Timestamp, yyyy-MM-dd HH:mm:ss, a one time only timedatetime that schedules a Job's execution. 
-  - Time interval, HH:MM:SS to run the Job every X time.
 - DC, specify dc name to force the batch process within specified dc, can also be defined on the affinity parameter                                                   - - AFFINITY, list of nodes and DCs to be involved in the batch process command
 - JOB_AFFINITY, affinity for the batch process job
 - ASYNC, defines if batch process should run on sync or async mode, default is false
