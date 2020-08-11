@@ -4,6 +4,8 @@ Broadway has a large list of built-in [Actors](03_broadway_actor.md#actor-overvi
 
 The following table presents a list of Actor's categories with examples per each category. This is not an exhaustive list of Actors.
 
+[Click for more information about the most useful Actors and the code examples](actors/README.md).
+
 <table width="900pxl">
 <tbody>
 <tr>
