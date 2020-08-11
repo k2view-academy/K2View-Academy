@@ -33,15 +33,13 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 ![image](../images/99_08_01.PNG)
 
-```  
-      self.sum = self.sum || 0;
-      for (var i =0;i<input.length;++i) {
-          self.sum += input[i];
-      }
-      self.sum
-```
+- To access iteration data, use the **contextLoop** object to access **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**. For example, when you need to stop the iteration when a condition is true:
 
-- To access iteration data, use the **contextLoop** object to access **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**.
+```  
+      if ( xxx ) {
+          contextLoop.stop();
+      }
+```
 
 - To read and write data to the flow's arguments, use the **flowArgs** keyword. You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors.
 
