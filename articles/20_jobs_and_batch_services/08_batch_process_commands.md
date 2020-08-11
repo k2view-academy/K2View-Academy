@@ -2,17 +2,17 @@
 
 The following Batch commands are available in the Fabric Runtime Environment:
 
-Migrate:
+*Migrate:*
 
 BATCH OracleLU.('1','2','3','4') FABRIC_COMMAND="sync_instance OracleLU.?" with ASYNC='true';
 
 
-Broadway:
+*Broadway:*
 
 BATCH OracleLU fabric_command="broadway OracleLU.SampleFlow SampleIID=?" with async=true;
 
 
-Cdc republish:
+*CDC Republish:*
 
 BATCH OracleLU from fabric fabric_command="cdc_republish_instance OracleLU.?" with async=true;
 
