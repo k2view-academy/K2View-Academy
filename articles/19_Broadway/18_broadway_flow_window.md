@@ -33,7 +33,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
 <li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
+<li>Flip Scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
@@ -83,7 +83,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </table>
 
 
-[Click for more information how to run and debug the Broadway flow](20_broadway_flow_linking_actors.md).
+[Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
 
@@ -124,7 +124,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
-<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Note that Stage condition Actors are grey.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a Stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
 <td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
@@ -209,7 +209,7 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 
 ![image](images/99_18_04_properties.PNG)
 
-[Click for more information about Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
+[Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 
 Note that if the [link between two Actors](20_broadway_flow_linking_actors.md#link-object-properties) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
 
