@@ -134,7 +134,10 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Show instances status for a given batch process id
+<p>
+Shows instances status for a given batch process id:
+   
+- DC, specify dc name to force the batch process within specified dc, can also be defined on the affinity parameter                                                   - - AFFINITY, list of nodes and DCs to be involved in the batch process command
 - STATUS, shows one of the following states: WAITING, COMPLETED, FAILED
 - ENTITIES, lists of entities separated by a comma
 - AFFINITY, DCs or nodes
