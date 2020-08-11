@@ -34,13 +34,32 @@ BATCH *LUT* from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" w
 </tr>
 
 <tr>
-<td valign="top" width="300pxl">
-<h5>JOBSTATUS [x days ago]</h5>
+<td valign="top" width="500pxl">
+<h5>batch <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=<number>]]; </h5>
 </td>
 <td valign="top" width="400pxl">
-<p>When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
    
-   When days are not provided, returns all active (not archived) Jobs.</p>
+<p>
+Start batch process all instances of a Logical Unit:
+   
+- Affinity, UID and other Arguments are optional inputs.
+- Jobtype, BROADWAY, PROCESS, USER_JOB
+- Name, Job’s name.
+- args, a string represeting a JSON that passes additional arguments to the **start Job** command. For example, {"jobName":"jobTest"}.
+- Affinity, comm, definition of Jobs scheduling execution interval that supports three formats:
+  - Timestamp, yyyy-MM-dd HH:mm:ss, a one time only timedatetime that schedules a Job's execution. 
+  - Time interval, HH:MM:SS to run the Job every X time.
+- DC, specify dc name to force the batch process within specified dc, can also be defined on the affinity parameter                                                   - - AFFINITY, list of nodes and DCs to be involved in the batch process command
+- JOB_AFFINITY, affinity for the batch process job
+- ASYNC, defines if batch process should run on sync or async mode, default is false
+- GENERATE_ENTITIES_FIRST, if set to true - generate all entities before starting processing them
+- FABRIC_COMMAND, fabric command to be executed by the batch process.  It can be any command that includes one '?' that will represent entity id.
+  - for migration,  the following command must be set: "sync_instance <LUT>.?"
+  - for broadway flow, ...
+  - for CDC republish, ...
+- ALLOW_MULTIPLY, set to true to allow multiply executions of the same batch process command (default is false)
+- MAX_NODES, The maximum nodes that will be participated in the batch process (randomly nodes)
+- MAX_WORKERS_PER_NODE, enables setting a smaller number of maximum workers to run on each node, than the maximum number of workers, defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
 
 </td>
 <td valign="top" width="300pxl">
