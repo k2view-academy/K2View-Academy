@@ -58,7 +58,7 @@ A link holds the following settings:
 </ul>
 </li>
 <li class="unchanged">
-<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful to build a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string using the Varargs setting.</p>
+<p class="unchanged"><strong>Varargs</strong> (variable arguments). When set to ON, the target Actor accepts an arbitrary number of values by updating the target parameter to an array and linking each source parameter to a different element in the array. This can be useful for building a variable length array on-the-fly. For example, the <strong>Concat</strong> Actor that can be used to concatenate several values into a single string using the Varargs setting.</p>
 </li>
 </ul>
 </td>
@@ -93,7 +93,7 @@ In a flow there may be a need to concatenate several strings into a single strin
 
 ## How Do I Add Links to the Flow?
 
-To create a **Link** do either:
+To create a **Link**, do either:
 
 - Click the **output parameter** of the source Actor and drag the **connection line** to the **input parameter** of the target Actor.
 - Click the **input parameter** of the target Actor and drag the **connection line** to the **output parameter** of the source Actor.
@@ -133,7 +133,7 @@ To connect a specific element in the Schema, click ![image](images/99_27_red_cro
 
 ![data inspection](images/99_20_data_inspection_example.PNG)
 
- To link a Schema to a target Actor do either:
+ To link a Schema to a target Actor, do either:
 - Click the parameter name in the **Data Inspection** and drag the **connection line** to the **input parameter** of the target Actor.
 - Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu) and select **Link**. Populate the **Target Actor**, **Target Parameter**, **Selection Parameter** (source Schema parameter) and **Selection Schema** (parameter name in the source Schema). Click **V** to save the changes.
 
