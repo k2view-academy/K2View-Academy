@@ -16,9 +16,6 @@ BATCH *LUT* *fabric_command*="broadway *LUT*.SampleFlow SampleIID=?" with async=
 
 BATCH *LUT* from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" with async=true;
 
-
-
-
 <table width="900pxl">
 <tbody>
 <tr>
@@ -225,6 +222,8 @@ Lists all active batch processes if no arguments provided and their respective s
 </p>
 </td>
 </tr> 
+
+</table>
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/07_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
