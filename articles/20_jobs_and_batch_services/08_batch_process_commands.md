@@ -176,9 +176,10 @@ Shows instances status for a given batch process id:
 
 <p>
 Lists all active batch processes if no arguments provided and their respective statuses:
-   - NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
-   - FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
-   - FILTER - filtering the batch processes. The filter parameter needs to be populated by a String, included in the Fabric Command of the batch process (note: the filter supports regex).
+   
+- NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
+- FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
+- FILTER - filtering the batch processes. The filter parameter needs to be populated by a String, included in the Fabric Command of the batch process (note: the filter supports regex).
 </p>
 </td>
 <td valign="top" width="300pxl">
