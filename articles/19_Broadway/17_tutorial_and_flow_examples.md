@@ -8,8 +8,8 @@ To open the Tutorial and example flows, in the [Broadway Flow](18_broadway_flow_
 ![image](images/99_17_01_tutorial.PNG)
 
 Explanations in the Tutorial are written in **Remarks** and can be displayed by either:
-- Click ![image](images/99_17_main_ast.PNG) in the [Main menu](18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
-- Click ![image](images/99_17_green_ast.PNG) in the right corner of a [Stage](19_broadway_flow_stages.md) or [Actor](04_built_in_actor_types.md) to see its remarks.
+- Clicking ![image](images/99_17_main_ast.PNG) in the [Main menu](18_broadway_flow_window.md#main-menu) of the flow to display all remarks.
+- Clicking ![image](images/99_17_green_ast.PNG) in the right corner of a [Stage](19_broadway_flow_stages.md) or [Actor](04_built_in_actor_types.md) to see its remarks.
 
 More remarks can be added by selecting **Remark** from either the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) or the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu).
 
@@ -37,7 +37,7 @@ The tutorial provides an explanation about main Broadway features and refers to 
 
 The **json.flow** example shows how to parse a collection of byte arrays (stream). In the example the source is a constant. Based on the requirements, the source can be set to a **FileReader**, **Http** or any Actor that produces a stream / string.
 
-A **JsonParser** Actor can either parse a single JSON object or multiple JSON objects arriving on the same stream. Note that an array is a single JSON object. In this example you can see both, the first handles a stream and initiates an Iteration loop and the other handles a single entry.
+A **JsonParser** Actor can either parse a single JSON object or multiple JSON objects arriving on the same stream. Note that an array is a single JSON object. In this example you can see both, the first handles a stream and initiates an Iteration loop and the second handles a single entry.
 
 ![image](images/99_17_02_tutorial.PNG)
 
