@@ -64,11 +64,11 @@ Start batch process to sync all instances of a Logical Unit:
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>JOBSTATUS &ltJOBTYPE&gt</h5>
+<h5>batch &ltLUT>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all Jobs running according to the <strong>jobType</strong>.</p>
+<p>Batch-processes a subset of Logical Unit Instances, based on the Instance Group specified with the &ltIG&gt parameter</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -80,12 +80,12 @@ Start batch process to sync all instances of a Logical Unit:
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt'</h5>
+<h5>batch &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all running Jobs that match the given type and name.</p>
+<p>Batch process a subset of Logical Unit Instances, based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
 <td valign="top" width="300pxl">
 
 <p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
@@ -95,12 +95,30 @@ Start batch process to sync all instances of a Logical Unit:
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt' WITH UID='&ltUID&gt'</h5>
+<h5>batch &ltLUT>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Returns the status of all Jobs that match the give type, name and UID.</p>
+<p>Batch-processes a subset of Logical Unit Instances based on existing instances in fabric from entity table </p>
+</td>
+<td valign="top" width="300pxl">
+
+<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+
+<h5>batch &ltLUT>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Batch-processes a subset of Logical Unit Instances, based on list of instances defined in the &ltinstance 1,instance 2,...&gt parameters' list</p>
 </td>
 <td valign="top" width="300pxl">
 
