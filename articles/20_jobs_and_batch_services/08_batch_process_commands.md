@@ -162,3 +162,61 @@ Start batch process to sync all instances of a Logical Unit:
 <p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
 </td>
 </tr> 
+
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>batch_list [STATUS='&ltstatus&gt' [FROM_DATE='&ltfrom date&gt' [TO_DATE='&ltto date&gt']] [FILTER=&ltfilter criteria&gt]</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Lists all active batch processes if no arguments provided and their respective statuses: NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL:
+   - FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
+   - FILTER - filtering the batch processes. The filter parameter needs to be populated by a String, included in the Fabric Command of the batch process (note: the filter supports regex).
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+   - batch_list STATUS='ALL'; – list the history of all the batch processes
+   - batch_list status='ALL' FILTER='sync_instance';  list the history of all batch processes. (This command returns the same results as migrate_list STATUS = ‘ALL’; command)
+</p>
+</td>
+</tr> 
+
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>batch_retry '&ltbatch id&gt'</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Resumes a previous batch process by re-processing all failed or non-handled entities if the batch process was not completed. Otherwise, it only retries failed entities. 
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+  
+</p>
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>batch_summary '&ltbatch id&gt'</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>This report will bring the summary information in table structure format for the following levels:*node,* DC,* Cluster                                              
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+  
+</p>
+</td>
+</tr> 
