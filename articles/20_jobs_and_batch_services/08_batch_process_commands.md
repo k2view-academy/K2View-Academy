@@ -56,8 +56,8 @@ Start batch process to sync all instances of a Logical Unit:
 
 </td>
 <td valign="top" width="300pxl">
-<p>JOBSTATUS;</p>
-<p>JOBSTATUS 2 days ago;</p>
+<p></p>
+<p></p>
 </td>
 </tr>  
 
@@ -72,7 +72,7 @@ Start batch process to sync all instances of a Logical Unit:
 
 </td>
 <td valign="top" width="300pxl">
-<p>JOBSTATUS TestJob1;</p>
+<p></p>
 
 </td>
 </tr> 
@@ -88,7 +88,7 @@ Start batch process to sync all instances of a Logical Unit:
 <p>Batch process a subset of Logical Unit Instances, based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
 <td valign="top" width="300pxl">
 
-<p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
+<p></p>
 </td>
 </tr> 
 
@@ -104,7 +104,7 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="300pxl">
 
-<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+<p></p>
 
 </td>
 </tr> 
@@ -122,7 +122,7 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="300pxl">
 
-<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+<p></p>
 
 </td>
 </tr> 
@@ -144,7 +144,7 @@ Shows instances status for a given batch process id:
 - LIMIT, default LIMIT is defined in config.ini if no LIMIT is provided as an argument </p>
 </td>
 <td valign="top" width="300pxl">
-<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+<p></p>
 </td>
 </tr> 
 
@@ -161,7 +161,7 @@ Shows instances status for a given batch process id:
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+<p></p>
 </td>
 </tr> 
 
@@ -225,3 +225,6 @@ Lists all active batch processes if no arguments provided and their respective s
 </p>
 </td>
 </tr> 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/07_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
