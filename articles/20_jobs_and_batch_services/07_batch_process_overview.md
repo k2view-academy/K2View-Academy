@@ -18,4 +18,4 @@ Using the Batch process will provide the following assets:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/06_jobs_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/08_batch_commands.md)
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/06_jobs_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/08_batch_process_commands.md)
