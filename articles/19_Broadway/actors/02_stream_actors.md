@@ -6,6 +6,9 @@ In addition, Broadway provides the Actors to perform the file system commands, s
 
 The **file.flow** example shows how these Actors handle the flow that includes the steps of compressing the data, creating a directory and the files, moving the files between the directories, etc.
 
+* Memory: works in blocs (memory) ... need to have a parser. works line by line...
+* should be followed by parsers
+
 Click **Actions** > **Examples** in the [Main menu](18_broadway_flow_window.md#main-menu) to open the **file.flow** example. 
 
 ![image](images/99_07_01.PNG)
