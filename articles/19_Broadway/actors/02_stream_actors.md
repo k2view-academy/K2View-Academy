@@ -4,7 +4,7 @@ Broadway provides a group of [built-in Actors](../04_built_in_actor_types.md) to
 
 Use the **FileRead** Actor to read the data from a file in the provided location and return the collection of blobs. Note that the **path** input argument expects to receive the relative path and the file name. 
 
-When Broadway is reading from a stream or a file, it is done in blocks with constant size of 8K, in order to prevent loading too much data into the memory. Due to a constant size of the data blocks, the data can be cut in the middle of the object (e.g. in the middle of a line in the file), thus the stream handling must be followed by a [parser Actor](03_parsers_actors.md). The following example shows a **FileRead** Actor which is reading from a CSV file and it followed by a **CsvParser** Actor.
+When Broadway is reading from a stream or a file, it is done in blocks with constant size of 8K, in order to prevent loading too much data into the memory. Due to a constant size of the data blocks, the data can be cut in the middle of the object (e.g. in the middle of a line in the file), thus the stream handling must be followed by a [parser Actor](03_parsers_actors.md). The following example shows a flow where the **FileRead** Actor is reading the data from a CSV file and is followed by a **CsvParser** Actor to parse the data into separate lines.
 
 ![image](../images/99_actors_01_1.PNG)
 
