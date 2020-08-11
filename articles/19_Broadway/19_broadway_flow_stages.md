@@ -53,7 +53,7 @@ The condition Actor can have any number of output parameters, however a True / F
 
 [Click for more information about Broadway data types](05_data_types.md).
 
-The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages which don't have a Stage condition or marked as **else** are always executed and have no impact on the **else** Stage.
+The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages without a Stage condition or marked as **else** are always executed and have no impact on the **else** Stage.
 
 The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 -  If a Stage condition is false, the execution of its branch stops.
