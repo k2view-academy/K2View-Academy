@@ -1,6 +1,6 @@
 # Parser Actors
 
-Broadway provides a groups of [built-in Actors](../04_built_in_actor_types.md) to parse the input stream provided in various formats: JSON, XML, CSV and more. These Actors belong to a **parsers** category. The Actors read the input stream and parse it into valid objects based on the delimiters specific per each input format, keeping only one object at a time in the memory. Memory consideration should be taken when an individual object is taking much memory. 
+Broadway provides a groups of [built-in Actors](../04_built_in_actor_types.md) to parse the input stream provided in various formats: JSON, CSV, XML and more. These Actors belong to a **parsers** category. The Actors read the input stream and parse it into valid objects based on the delimiters specific per each input format, keeping only one object at a time in the memory. Memory consideration should be taken when an individual object is taking much memory. 
 
 ### JsonParser Actor
 
@@ -27,6 +27,7 @@ The following example shows how to read and parse a CSV file which includes a li
 ![image](../images/99_actors_03_2.PNG)
 
 
+Check out **xml.flow** for **XmlParser** example and **lines.flow** for **LinesParser** example. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
 
 [![Previous](/articles/images/Previous.png)](02_stream_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
 
