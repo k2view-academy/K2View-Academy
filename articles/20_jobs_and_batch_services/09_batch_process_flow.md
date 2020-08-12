@@ -135,6 +135,9 @@ Example:
 </td>
 </tr>
 
+</tbody>
+</table>
+
 
 <img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
