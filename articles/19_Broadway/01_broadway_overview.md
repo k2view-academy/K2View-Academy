@@ -24,7 +24,7 @@ In the example above, the **Fetch** Stage is executed first. The system then exe
 
 ## Logic and Data Transformation
 
-Each Stage can contain one or more [Actor](03_broadway_actor.md) which are reusable pieces of logic with input and output arguments that can be assembled together to create complex logic. Actors are executed by Stages.
+Each Stage can contain one or more [Actors](03_broadway_actor.md) which are reusable pieces of logic with input and output arguments that can be assembled together to create complex logic. Actors are executed by Stages.
 
 ![image](images/Broadway_actors.png)
 
