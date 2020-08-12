@@ -17,10 +17,10 @@ To learn more about a Broadway flow, please refer to the [Broadway Flow Overview
 
 Broadway Tutorials flows can be opened in the Broadway Flow window.
 
-1. Go to the **Fabric Studio** and create a new **Fabric project** named **Broadway_Training**. 
-2. Go to the **K2view Academy repository** and download the [Demo Project](/articles/demo_project) and import it to your **Fabric project**.
-3. Go to the **project tree**, right click **Broadway > New Flow** and define the **Flow Name**. The **Broadway flow** window opens.
-4. Select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
+1. Download and open the [Demo Project](/articles/demo_project) in the **Fabric Studio**. 
+2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
+3. Populate the **Flow Name** and click **OK** to open an empty flow.
+4. In the flow window: select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
 
 ### Debugging The Broadway Tutorials Flow
 
@@ -35,10 +35,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 #### Step 1 - Open the Broadway Tutorial Flow
 
-1. Download the [Demo Project](/articles/demo_project) and open it in the **Fabric Studio**.
-2. Go to the **project tree**, right click **Broadway** and select **New Flow** to open the **Flow name** window.
-3. In the **Name** field type **test**, click **Actions** and select **Examples**. 
-4. Select **a-broadway-tutorial** to open the **Broadway Tutorial flows**.
+1. Open the  **a-broadway-tutorial**  flow as [explained above](/academy/Training_Level_1/99_Broadway/04_broadway_tutorials.md#how-do-i-open-the-broadway-tutorial-flow).
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
 1. Click the Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png) to set it to Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) and click ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to run the flow.
@@ -47,7 +44,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
   <pre><code>A. What is the result of the flow?</code></pre>
   </ul>
 
-   
+
 
 2. Add a  **Breakpoint** to **for each Stage**, click the Debug OFF ![debug off](/academy/Training_Level_1/99_Broadway/images/debug_off.png) to set it back to Debug ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png), and then click the ![Run Flow](/academy/Training_Level_1/99_Broadway/images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
 
@@ -67,7 +64,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
   #### Step 3 - Edit the Flow to Test a Conditinal Stage
 
-1. Click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
+1. Add **Now** Actor to **Stage 3**: click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
 2. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow's steps in **Debug mode**. 
 
   <ul>
@@ -77,7 +74,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
  ![info](/academy/images/information.png) Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
 
 3. Click ![Stop Debug](/academy/Training_Level_1/99_Broadway/images/stop_debug_icon.png) to stop the **Debug process**. 
-4. Click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
+4. Edit the **Const** Actor in the **Hello Broadway** Stage:  click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
 5. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 6. Run the flow. 
 
