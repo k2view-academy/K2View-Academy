@@ -16,6 +16,7 @@ For example: <br>- User Job, a Java function defined and attached to a specific 
 All Fabric Jobs undergo different stages, where each stage indicates a specific step in the Job's handling process:
 
 
+## **Statuses**
 <figure><table>
 <thead>
 
@@ -68,6 +69,8 @@ All Fabric Jobs undergo different stages, where each stage indicates a specific 
 </table></figure>
 
 
+
+## **Job's Lifecycle**
 The  following image illustrates the different stages of a Job's lifecycle and the different types of actions that can get a specific Job to transit from one specific state to another:
 The blue arrows show the natural path of a Job during its lifecycle in Automatic Execution mode. The dotted or plain arrows show the transition between stages in Manual Execution mode, when applying one of the following commands:
 -  **startjob** 
