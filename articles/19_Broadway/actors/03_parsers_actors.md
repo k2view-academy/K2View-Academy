@@ -1,6 +1,6 @@
 # Parser Actors
 
-Broadway provides a groups of [built-in Actors](../04_built_in_actor_types.md) to parse the input stream provided in various formats: JSON, XML, CSV and more. These Actors belong to a **parsers** category. The Actors read the input stream and parse them into the valid objects, keeping only one object at a time in the memory. Memory consideration should be taken when even an individual object is taking much memory. 
+Broadway provides a groups of [built-in Actors](../04_built_in_actor_types.md) to parse the input stream provided in various formats: JSON, XML, CSV and more. These Actors belong to a **parsers** category. The Actors read the input stream and parse it into valid objects based on the delimiters specific per each input format, keeping only one object at a time in the memory. Memory consideration should be taken when an individual object is taking much memory. 
 
 ### JsonParser Actor
 
