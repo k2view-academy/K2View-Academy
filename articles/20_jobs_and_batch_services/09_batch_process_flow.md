@@ -27,7 +27,7 @@ In fact, this consists in creating a Job that calls a Batch process which in tur
 # **Batch process table in Cassandra**
 All batch related information will be found in the *k2batchprocess* keyspace in the *batchprocess_list* table;
 
-Example:
+## Example:
 
 <img src="/articles/20_jobs_and_batch_services/images/15_jobs_and_batch_services_scheduled_batch_process.PNG">
 
@@ -156,7 +156,7 @@ extra_stats:
 
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
-
+## **Batch and job tables corelation in Cassandra**
 Information about the JOB that was created when executing the batch process will be found in the *k2system* keyspace, in the *k2_jobs* table.
 Example:
 The previous batch process can be seen in the job's table and its **output** field can be cross-referenced with the **bid** field in the batch table with :
