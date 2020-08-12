@@ -15,41 +15,57 @@ For example: <br>- User Job, a Java function defined and attached to a specific 
 
 All Fabric Jobs undergo different stages, where each stage indicates a specific step in the Job's handling process:
 
-**Scheduled** 
 
-This stage is for repetitive Jobs and has the following schedules:
+<figure><table>
+<thead>
+
+<tbody><tr><td>Stage</td><td>Description</td></tr><tr><td>**Scheduled**</td><td>This stage is for repetitive Jobs and has the following schedules:
 - Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time the previous occurrence of this Job ended. 
 - Timestamp, the date and time a specific Job is scheduled to run. 
 - Cron, a series of the same Job must be run according to the **crontab** scheduling format. Note that the actual execution of the Job is handled by the Fabric Scheduler. 
+</td>
+ </tr>
+ 
+ 
+<tr>
+<td>**Waiting**</td><td>A Job is waiting to be executed by the Fabric node to which it is allocated. Note that in previous stages a Job will be overridden if it has been redeployed and registered by Fabric and its row already exists in the Jobs table. That is, if a recurring Job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
+</td></tr>
 
 
-**Waiting**
+<tr>
+<td>**In Process**</td><td>The actual stage when the execution happens.
+</td></tr>
 
-A Job is waiting to be executed by the Fabric node to which it is allocated. Note that in previous stages a Job will be overridden if it has been redeployed and registered by Fabric and its row already exists in the Jobs table. That is, if a recurring Job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
 
-**In Process** 
+<tr>
+<td>**Processed**
+</td><td>A Job has been executed successfully.
+</td></tr>
 
-The actual stage when the execution happens.
+<tr>
+<td>**Stopping**</td><td>Either a user or a system action has triggered a **stopjob** command and the Job is being terminated.
+</td></tr>
 
-**Processed**
 
-A Job has been executed successfully.
+<tr>
+<td>**Terminated**</td><td>The end of the Stopping process. The Job in process is no longer being executed or has been requested to stop.
+</td></tr>
 
-**Stopping**
 
-Either a user or a system action has triggered a **stopjob** command and the Job is being terminated.
 
-**Terminated** 
+<tr>
+<td>**Failed**</td><td>The Job failed to run and the process did not run.
+</td></tr>
 
-The end of the Stopping process. The Job in process is no longer being executed or has been requested to stop.
 
-**Failed**
 
-The Job failed to run and the process did not run.
+<tr>
+<td>**Restart**
+</td><td>A Job has been actively restarted.
+</td></tr>
 
-**Restart**
-
-A Job has been actively restarted.
+</tbody>
+</table></figure>
 
 
 The  following image illustrates the different stages of a Job's lifecycle and the different types of actions that can get a specific Job to transit from one specific state to another:
