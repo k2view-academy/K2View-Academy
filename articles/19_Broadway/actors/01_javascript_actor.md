@@ -43,14 +43,16 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
   }
 ```
 
-- To read and write data to the flow's arguments, use the **flowArgs** keyword. You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors.
+- To read data from the flow's arguments, use the **flowArgs** keyword. You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors. The access to **flowArgs** arguments can be done using one of the following syntaxes: 
 
 ```
   for (var i in flowArgs) {
     print(flowArgs[i]); //read the value
     flowArgs[i] = null; //remove the value
+    flowArgs[i] = "abc"; //write the value
   }
   print(flowArgs.v3); //read the value of argument v3
+  print(flowArgs["v3"]); //read the value of argument v3
 ```
 
 - To iterate over a collection, use standard syntax: 
