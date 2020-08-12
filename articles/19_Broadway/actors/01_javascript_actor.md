@@ -89,7 +89,7 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
   SumArray.result == ForEach.result && ForEach.result == 21 
 ```
 
-where the **SumArray** and **ForEach** Actors precede the current Actor in the flow.
+  where the **SumArray** and **ForEach** Actors precede the current Actor in the flow.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_stream_actors.md)
