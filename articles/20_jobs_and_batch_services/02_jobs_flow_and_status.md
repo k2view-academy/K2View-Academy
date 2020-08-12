@@ -7,7 +7,7 @@ Similarily to most Fabric entities, a Job's flow will go through the following s
 
 <tbody><tr><td>Define</td><td>A function, flow or process defined as the method to be invoked by the Job when scheduled. 
  
-For example: <br>- User Job, a Java function defined and attached to a specific LU type under the LU Utilities folder. <br>- Broadway Job, a Broadway flow defined in the Broadway GUI.<br>- Process Job, a script stored on the Fabric server.</td></tr><tr><td>Configure</td><td>A new job entry must be added to the Jobs table under the LU Type tree and must have the following parameters:<br>- Schedule Job type.<br>- MethodAffinity flag that specifies the Fabric node to be allocated to this Job (if any).</td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the deployed Fabric node. The Job is triggered either automatically or manually depending on the parameters specified during configuration.</td></tr></tbody>
+For example: <br>- User Job, a Java function defined and attached to a specific LU type under the LU Utilities folder. <br>- Broadway Job, a Broadway flow defined in the Broadway GUI.<br>- Process Job, a script stored on the Fabric server.</td></tr><tr><td>Configure</td><td>A new job entry must be added to the Jobs table under the LU Type tree and must have the following parameters:<br>- Schedule Job type.<br>- MethodAffinity field that specifies the Fabric node to be allocated to this Job (if any).</td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the deployed Fabric node. The Job is triggered either automatically or manually depending on the parameters specified during configuration.</td></tr></tbody>
 </table></figure>
  
 
