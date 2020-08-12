@@ -138,8 +138,8 @@ Example:
 </tbody>
 </table>
 
+<img src="/articles/20_jobs_and_batch_services/images/16_jobs_and_batch_services_scheduled_batch_table1.PNG">
 
-<img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
 arguments: 
 
@@ -149,16 +149,19 @@ command:
 
 ```BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';``` - in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
+<img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
-<img src="/articles/20_jobs_and_batch_services/images/16_jobs_and_batch_services_scheduled_batch_table1.PNG">
 
 extra_stats: 
 
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
 
+Information about the JOB that was created when executing the batch process will be found in the *k2system* keyspace, in the *k2_jobs* table.
+Example:
+The previous batch process can be seen in the job's table and its **output** field can be cross-referenced with the **bid** field in the batch table with :
 
-
+<img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
 
 
 
