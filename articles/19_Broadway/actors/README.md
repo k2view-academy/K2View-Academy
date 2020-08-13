@@ -6,6 +6,7 @@
 <li><a href="01_javascript_actor.md">JavaScript Actor</a></li>
 <li><a href="02_stream_actors.md">Stream Actors</a></li>
 <li><a href="03_parsers_actors.md">Parser Actors</a></li>
+<li><a href="04_queue_actors.md">Queue Actors - Pub/Sub</a></li>
 </ul>
 
 
