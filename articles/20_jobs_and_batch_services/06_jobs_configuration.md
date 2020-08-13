@@ -13,13 +13,13 @@ Job-related configuration variables can be set in this file that is saved in the
 
 -  **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
 
-- **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours(30 days).
+- **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
 **Node.ini** 
 
 Node and cluster-related configuration variables can be set in this file which is saved in the **k2view/config/node.ini** file.
 
-A set a number of logical names or node identifiers for the node can be defined in the **node.id** file in the **k2view/config**. Node identifiers can be used in the Job affinity mechanism. 
+A set a number of logical names or node identifiers for the node can be defined in the **node.id** file in the **k2view/config**. Node identifiers can be used in the Job Affinity mechanism. 
 
 Note that there can be more than one logical name since a node can have more than one logical role.
 The node UUID is unique and if left undefined, Fabric generates a random node while starting up the first time.
@@ -62,7 +62,7 @@ A heartbeat value can be defined to set the delay of the Fabric node's heartbeat
 
 **KeepAlive**
 
-The number of heartbeats that a Fabric node can miss before it is considered as unavailable can be defined so that all Jobs without a specific affinity to this node are allocated to another node. It is important to note, that any Job whose affinity has been set to this node will not run, and must be restarted manually.
+The number of heartbeats that a Fabric node can miss before it is considered as unavailable can be defined so that all Jobs without a specific affinity to this node are allocated to another node. It is important to note that any Job whose affinity has been set to this node will not run, and must be restarted manually.
 
 ```FABRIC_HEARTBEAT_MISS=12```
 
