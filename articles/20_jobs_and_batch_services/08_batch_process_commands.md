@@ -261,6 +261,45 @@ This command returns execution information and statistics for a given *BID* on e
 *All other fields are self-explanatory.*
 
 
+## Instance Groups
+
+### Create a new Instance Group
+To create a new Instance Group
+1. Open Fabric Studio and select the corresponding LU -> Select *Instance Groups* in the menu -> Right-click and select *New Instance Group*
+2. Write a valid SQL query to select the instances to be included in the Instance Group.
+3. Save the *Instance Group*
+
+<img src="/articles/20_jobs_and_batch_services/images/23_jobs_and_batch_services_commandsExamples.PNG">
+
+The Instance Group (referred to as *customer_IG_600To700* in the illustartion above) will be deployed along with the LUT it belongs to.
+
+### Invoke an Instance Group from the Batch Command
+
+Example:
+
+    migrate Customer.customer_IG_600To700 with JOB_AFFINITY='10.21.2.102' async='true';
+
+The Instance Group 
+Result:
+All instances with ID values between 600 and 700 will be sync-ed into Fabric.
+
+fabric>migrate Customer.customer_IG_600To700;
+```
+|Added|Updated|Unchanged|Failed|Total|Duration|
++-----+-------+---------+------+-----+--------+
+|99   |0      |0        |0     |99   |875     |
+```
+
+## Batch command with embedded SQL statements
+
+## Migrate commands - Legacy Support
+|migrate               |
+|migrate_details       |
+|migrate_in_process    |
+|migrate_list          |
+|migrate_resume        |
+|migrate_summary       |
+|migratef              |
 
 
 
