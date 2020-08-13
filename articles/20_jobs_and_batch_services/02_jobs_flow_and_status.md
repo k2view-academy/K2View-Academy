@@ -17,56 +17,100 @@ All Fabric Jobs undergo different stages, where each stage indicates a specific 
 
 
 ## **Statuses**
-<figure><table>
-<thead>
 
-<tbody><tr><td><strong>Stage</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Scheduled</strong></td><td>This stage is for repetitive Jobs and has the following schedules:
-      <li>Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time the previous occurrence of this Job ended.</li> 
-      <li>Timestamp, the date and time a specific Job is scheduled to run.</li> 
-      <li>Cron, a series of the same Job must be run according to the <strong>crontab</strong> scheduling format. Note that the actual execution of the Job is handled by the Fabric Scheduler.</li> 
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Stage</strong></p>
 </td>
- </tr>
- 
- 
+<td>
+<p><strong>Description</strong></p>
+</td>
+</tr>
 <tr>
-<td><strong>Waiting</strong></td><td>A Job is waiting to be executed by the Fabric node to which it is allocated. Note that in previous stages, a Job is overridden if it has been redeployed and registered by Fabric and its row already exists in the Jobs table. That is, if a recurring Job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.
-</td></tr>
-
-
+<td>
+<p><strong>Scheduled</strong></p>
+</td>
+<td>
+<p>This stage is for repetitive Jobs and has the following schedules:</p>
+<ul>
+<li>Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time the previous occurrence of this Job ended.</li>
+<li>Timestamp, the date and time a specific Job is scheduled to run.</li>
+<li>Cron, a series of the same Job must be run according to the&nbsp;<strong>crontab</strong>&nbsp;scheduling format. Note that the actual execution of the Job is handled by the Fabric Scheduler.</li>
+</ul>
+</td>
+</tr>
 <tr>
-<td><strong>In Process</strong></td><td>The actual stage when the execution happens.
-</td></tr>
-
-
+<td>
+<p><strong>Waiting</strong></p>
+</td>
+<td>
+<p>A Job is waiting to be executed by the Fabric node to which it is allocated.</p>
+<p>Note that in previous stages, a Job is overridden if it has been redeployed and registered by Fabric and its row already exists in the Jobs table. That is, if a recurring Job is redeployed after it has been run one or more times, the schedule for the next run will not be affected or reset.</p>
+</td>
+</tr>
 <tr>
-<td><strong>Processed</strong>
-</td><td>A Job has been executed successfully.
-</td></tr>
-
+<td>
+<p><strong>In Process</strong></p>
+</td>
+<td>
+<p>The actual stage when the execution happens.</p>
+</td>
+</tr>
 <tr>
-<td><strong>Stopping</strong></td><td>Either a user or a system action has triggered a <strong>stopjob</strong> command and the Job is being terminated.
-</td></tr>
-
-
+<td>
+<p><strong>Processed</strong></p>
+</td>
+<td>
+<p>A Job has been executed successfully.</p>
+</td>
+</tr>
 <tr>
-<td><strong>Terminated</strong></td><td>The end of the <strong>Stopping</strong> process. The Job in process is no longer being executed or has been requested to stop.
-</td></tr>
-
-
-
+<td>
+<p><strong>Stopping</strong></p>
+</td>
+<td>
+<p>Either a user or a system action has triggered a&nbsp;<strong>stopjob</strong>&nbsp;command and the Job is being terminated.</p>
+</td>
+</tr>
 <tr>
-<td><strong>Failed</strong></td><td>The Job failed to run and the process did not run.
-</td></tr>
-
-
-
+<td>
+<p><strong>Terminated</strong></p>
+</td>
+<td>
+<p>The end of the&nbsp;<strong>Stopping</strong>&nbsp;process. The Job in process is no longer being executed or has been requested to stop.</p>
+</td>
+</tr>
 <tr>
-<td><strong>Restart</strong>
-</td><td>A Job has been actively restarted.
-</td></tr>
-
+<td>
+<p><strong>Failed</strong></p>
+</td>
+<td>
+<p>The Job failed to run and the process did not run.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Restart</strong></p>
+</td>
+<td>
+<p>A Job has been actively restarted.</p>
+</td>
+</tr>
 </tbody>
-</table></figure>
+</table>
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
 
 
 
