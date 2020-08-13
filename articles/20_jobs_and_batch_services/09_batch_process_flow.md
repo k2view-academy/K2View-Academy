@@ -2,7 +2,7 @@
 
 ## **Fabric Batch Processes Flow**  
 
-When a new Batch process is executed the following are automatically triggered:
+The following activities are automatically triggered when a new Batch process is executed:
 -  A new entry is added in Cassandra under the k2viewsystem keyspace in the Batch table.
 -  A new job entry is recorded in the k2viewsystem.jobs table with the following parameters:
    
@@ -11,7 +11,7 @@ When a new Batch process is executed the following are automatically triggered:
    -  Type = BATCH PROCESS.
 -  The Batch process is assigned a WAITING_FOR_JOB status.  
 
-From there on, any available node, or any node whose affinity has been specified in the Batch command, handles the execution of the Job and of the subcommand as specified in the Batch command.
+After this, any available node, or any node whose affinity has been specified in the Batch command, handles the execution of the Job and of the subcommand as specified in the Batch command.
 
 Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Batch process undergoes the following stages:
 1. NEW
@@ -26,10 +26,7 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 
 ## **Scheduling Batch Processes**
 
-To schedule the execution of a Batch process at a given time or recurrently, a scheduled process must be created and be called by a script holding the Batch command to be repeatidly invoked. This consists of creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time jobs with the execution parameters parsed in the Batch command.
-
-It is not per-se possible possible to schedule a Batch process to be executed at a given time, or recurrently. In order to achieve this, a scheduled process job must be created, and called with a script containing the batch command to be repeatidly invoked.
-In fact, this consists in creating a Job that calls a Batch process which in turn will create multiple or scheduled one-time jobs with the execution parameters parsed in the batch command.
+To schedule a Batch process to be executed at a given time, or recurrently. a scheduled Job process must be created with a script containing the batch command to be repeatedly invoked. This consists of creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs with the execution parameters parsed in the Batch command.
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
  
@@ -78,7 +75,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <p>2020-08-12 12:20:07.894000+0000</p>
 </td>
 <td valign="top" width="400pxl">
-<p>timestamp of batch process creation</p>
+<p>Timestamp of when the Batch process was created.</p>
 </td>
 </tr>
 
@@ -90,7 +87,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <p>2020-08-12 12:20:09.176000+0000</p>
 </td>
 <td valign="top" width="400pxl">
-<p>timestamp for the end of batch process</p>
+<p>Timestamp of when the Batch process ended.</p>
 </td>
 </tr>
 
@@ -102,7 +99,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <p>AUTODATA_DELTA</p>
 </td>
 <td valign="top" width="400pxl">
-<p>name of LUT for which instances are being retrieved</p>
+<p>Name of the LUT recieving the instances.</p>
 </td>
 </tr>
 
@@ -115,7 +112,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <p>2020-08-12 12:20:07.907000+0000</p>
 </td>
 <td valign="top" width="400pxl">
-<p>timestamp for the start of batch process</p>
+<p>Timestamp of when the Batch process started.</p>
 </td>
 </tr>
 
@@ -128,7 +125,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <p>Done</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Stage of the batch process flow</p>
+<p>Stage of the Batch process.</p>
 </td>
 </tr>
 
@@ -141,7 +138,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <p>200</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Number of entities processed</p>
+<p>Number of entities processed.</p>
 </td>
 </tr>
 
@@ -151,24 +148,26 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 <img src="/articles/20_jobs_and_batch_services/images/16_jobs_and_batch_services_scheduled_batch_table1.PNG">
 
 
-arguments: 
+**Arguments**  
 
 ```{"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}```
 
-command: 
+**Command**  
 
 ```BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';``` - in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
 <img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
 
-extra_stats: 
+**extra_stats**  
 
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
 ### **Batch Tables and Job Tables Correlation in Cassandra**
-Information about the Job created during the execution of the Batch process is displayed in the **k2system** keyspace, in the **k2_jobs** table.
-Example:
+Information about the Job created during the execution of the Batch process is displayed in the **k2system** keyspace in the **k2_jobs** table.
+
+**Example** 
+
 The previous Batch process is displayed in the Job's table. Its **output** field can be cross-referenced with the **bid** field in the Batch table with:
 
 <img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
