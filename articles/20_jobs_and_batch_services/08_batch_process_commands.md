@@ -288,13 +288,42 @@ The Instance Group (referred to as **customer_IG_600To700** in the illustration 
 
 Example 
 
-    migrate Customer.customer_IG_600To700 with JOB_AFFINITY='10.21.2.102' async='true';
+    batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?" with JOB_AFFINITY='10.21.2.102' async='true';
 
-The Instance Group 
+The Instance Group is the one defined from Fabric Studio - *customer_IG_600To700*
 
-Result 
+Result:
 
 All instances with ID values between 600 and 700 are synced into Fabric.
+
+fabric>batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";
+```
+|Added|Updated|Unchanged|Failed|Total|Duration|
++-----+-------+---------+------+-----+--------+
+|99   |0      |0        |0     |99   |875     |
+```
+
+## Batch Command with Embedded SQL Statements
+Instead of referring to an *Instance Group*, the batch command can embed an SQL statement that will select the entities on which the batch command needs to be executed:
+```
+batch <LUT> from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?'
+```
+
+Example:
+
+fabric>batch Customer from CRM_DB USING('select customer_id from Customer where customer_id <=10') FABRIC_COMMAND="sync_instance CUSTOMER.?";
+```
+|Batch id                            |Execution succeeded|Execution failed|Total|Duration|Batch id                            |
++------------------------------------+-------------------+----------------+-----+--------+------------------------------------+
+|83fade2f-2ae6-4359-8b7a-bdd1866d2191|10                 |0               |10   |1       |83fade2f-2ae6-4359-8b7a-bdd1866d2191|
+```
+
+## Migrate Commands - Legacy Support
+The Migrate command is a particular use-case of the batch command dealing with the synchronization of instances.
+It is equivallent to running the batch command without the *FABRIC_COMMAND* parameter:
+``` batch <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
+
+Using the same example as above:
 
 fabric>migrate Customer.customer_IG_600To700;
 ```
@@ -303,16 +332,9 @@ fabric>migrate Customer.customer_IG_600To700;
 |99   |0      |0        |0     |99   |875     |
 ```
 
-## Batch Command with Embedded SQL Statements
+## batchf & migratef commands 
 
-## Migrate Commands - Legacy Support
-|migrate               |
-|migrate_details       |
-|migrate_in_process    |
-|migrate_list          |
-|migrate_resume        |
-|migrate_summary       |
-|migratef              |
+migratef              |
 
 
 
