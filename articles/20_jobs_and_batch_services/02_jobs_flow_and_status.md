@@ -141,7 +141,7 @@ When running multiple Fabric nodes, Jobs can be allocated to different nodes. On
 
 The following image displays two examples whereby JOB 1 is allocated to Node 2 according to its configurations: 
 
-<img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation.PNG">
+<img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG">
 
 
 
