@@ -71,7 +71,7 @@ The following commands must be set:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes, a subset of the LUI based on the Instance Group specified with the &ltIG&gt parameter.</p>
+<p>Batch-processes, a subset of the LUI based on the Instance Group specified by the &ltIG&gt parameter.</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -104,7 +104,7 @@ The following commands must be set:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes, a subset of the LUI based on existing instances in Fabric from the entity table. </p>
+<p>Batch-processes, a subset of the LUI based on existing instances in Fabric in the entity table. </p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -122,7 +122,7 @@ The following commands must be set:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of LUI based on list of instances defined in the &ltinstance 1,instance 2,...&gt parameters' list</p>
+<p>Batch-processes, a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list</p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -160,9 +160,14 @@ Displays the status of instances of a given Batch process ID:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Lists all running Batch processes and returns the following information: Node ID, Batch process ID, Entity ID, LU type, time at work (ms), exeid, command|
-
-- Filter, must be a regex compatible argument.
+<p>Lists all running Batch processes and returns the following information: 
+   <li>Node ID</li>  <li>Batch process ID</li>
+    <li>Entity ID</li>
+    <li>LU type</li>
+    <li>Time at work (ms)</li>  
+    <li>exeid</li>
+    <li>command|</li>
+<li>Filter, must be a regex compatible argument.</li>
 </p>
 </td>
 <td valign="top" width="300pxl">
@@ -183,8 +188,10 @@ Displays the status of instances of a given Batch process ID:
 If there are no arguments, lists all active Batch processes together with their respective status:
    
 - NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
-- FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
-- FILTER - filtering the batch processes. The filter parameter needs to be populated by a String, included in the Fabric Command of the batch process (note: the filter supports regex).
+- FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
+- FILTER, filters Batch processes. The filter field must be populated by a string in a Fabric command in the Batch process. 
+
+Note that the filter supports regex.
 </p>
 </td>
 <td valign="top" width="300pxl">
@@ -204,7 +211,7 @@ If there are no arguments, lists all active Batch processes together with their 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Resumes a previous Batch process by re-processing all failed or unhandled entities if the Batch process has not been completed. Otherwise, it retries the failed entities only.
+<p>Resumes a previous Batch process by reprocessing all failed or unhandled entities if the Batch process has not been completed. Otherwise, it retries the failed entities only.
 </p>
 </td>
 <td valign="top" width="300pxl">
@@ -258,8 +265,8 @@ Result
 
 <img src="/articles/20_jobs_and_batch_services/images/22_jobs_and_batch_services_commandsExamples.PNG">
 
-This command returns execution information and statistics for a given bid on each node in the execution.
-- Name:, the NodeId.
+This command returns execution information and statistics for a given bid on each node in the execution:
+- Name, the Node Id.
 - %Completed, percentage of executions run on each node.
 - Ent/sec, average entities executed per seconds (pace).
 
