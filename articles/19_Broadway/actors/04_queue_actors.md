@@ -54,3 +54,6 @@ The following part of the example flow shows how to publish few messages to an i
 To read the messages in batches, use **SubscribeBatch** Actor and define **max_batch_records** to the required batch size.
 
 ![image](../images/99_actors_04_2.PNG)
+
+
+[![Previous](/articles/images/Previous.png)](03_parsers_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
