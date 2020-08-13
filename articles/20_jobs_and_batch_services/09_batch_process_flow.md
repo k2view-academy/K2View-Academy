@@ -18,7 +18,7 @@ Once the corresponding JOB kicks off, and is set to **IN_PROCESS** stage, the ba
 
 
 
-## **Scheduling batch processes**
+## **Scheduling Batch Processes**
 
 It is not per-se possible possible to schedule a batch process to be executed at a given time, or recurrently. In order to achieve this, a scheduled process job will have to be created, and called with a script containing the batch command to be repeatidly invoked.
 In fact, this consists in creating a Job that calls a Batch process which in turn will create multiple or scheduled one-time jobs with the execution parameters parsed in the batch command.
@@ -26,7 +26,7 @@ In fact, this consists in creating a Job that calls a Batch process which in tur
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
  
 
-## **Batch process table in Cassandra**
+## **Batch Process Table in Cassandra**
 All batch related information will be found in the *k2batchprocess* keyspace in the *batchprocess_list* table;
 
 ### Example:
@@ -158,14 +158,14 @@ extra_stats:
 
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
-### **Batch and job tables corelation in Cassandra**
+### **Batch Tables and Job Tables Correlation in Cassandra**
 Information about the JOB that was created when executing the batch process will be found in the *k2system* keyspace, in the *k2_jobs* table.
 Example:
 The previous batch process can be seen in the job's table and its **output** field can be cross-referenced with the **bid** field in the batch table with :
 
 <img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
 
-## **Batch process execution**
+## **Batch Process Execution**
 - orchestrators
 
 
