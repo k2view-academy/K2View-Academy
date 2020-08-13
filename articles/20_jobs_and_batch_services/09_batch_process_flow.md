@@ -1,9 +1,7 @@
 # **Fabric Batch Processes Architecture**
 
 ## **Fabric Batch Processes Flow** 
-When a new Batch process is executed it automatically triggers a new entry in Cassandra in the k2viewsystem keyspace in the Batch table. 
-The execution of a new Batch process automatically triggers a new entry in Cassandra, under the k2viewsystem keyspace in the Batch table. 
-The batch process will be granted the following status: **WAITING_FOR_JOB**. This is because, in parallel, the execution of a new batch process automatically triggers a new job entry that is recorded in the k2viewsystem.jobs table with the following parameters:
+The execution of a new batch process automatically triggers a new entry in Cassandra, under k2viewsystem keyspace in the batch table. The batch process will be granted the following status: **WAITING_FOR_JOB**. This is because, in parallel, the execution of a new batch process automatically triggers a new job entry that is recorded in the k2viewsystem.jobs table with the following parameters:
 - Name set to the name of the batch process.
 - Type set to "BATCH PROCESS".
 
@@ -29,7 +27,7 @@ In fact, this consists in creating a Job that calls a Batch process which in tur
  
 
 ## **Batch Process Table in Cassandra**
-All batch related information will be found in the *k2batchprocess* keyspace in the *batchprocess_list* table;
+All batch related information will be found in the *batchprocess_list* table of the *k2batchprocess* keyspace ;
 
 ### Example:
 
@@ -161,14 +159,44 @@ extra_stats:
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
 ### **Batch Tables and Job Tables Correlation in Cassandra**
-Information about the JOB that was created when executing the batch process will be found in the *k2system* keyspace, in the *k2_jobs* table.
+Information about the JOB that was created when executing the batch process can be found in the *k2_jobs* table of the *k2system* keyspace.
 Example:
 The previous batch process can be seen in the job's table and its **output** field can be cross-referenced with the **bid** field in the batch table with :
 
 <img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
 
+### **Batch Tables and Node Info Correlation in Cassandra**
+Information about the NODE that handled a specific batch process can be found in the *batchprocess_node_info* table of the *k2batchprocess* keyspace.
+Example:
+The previous batch process can be seen in the *node_info* table where the *bid*, *nodeid* and *dc_name* fields can be cross-referenced with the supplementary information:
+
+- aggregated_results: Number of entities added, updated or unchanged
+- failed_count: Number of failed entities executions
+- succeeded_count: Number of successful entities executions
+- pace: Number of entities per secong
+
+<img src="/articles/20_jobs_and_batch_services/images/19_jobs_and_batch_services_scheduled_batch_table4.PNG">
+
+### **Batch Tables and Entities Info Correlation in Cassandra**
+Information about the entities that were handled by a specific batch process can be found in the *batchprocess_entities_info* table of the *k2batchprocess* keyspace, .
+Example:
+The previous batch process can be seen in the entities' table where the *bid*, *nodeid* and *entityid* fields can be cross-referenced with the supplementary information:
+
+- creation/start/end: Timestamps of the command and of its execution.
+- status: Stage of the batch process.
+- results: Number of entities added, updated or unchanged - in this case (0 or 1) as each row represents one entity.
+- error: Error message displayed in case of failure of the execution process on a specific entity.
+
+<img src="/articles/20_jobs_and_batch_services/images/20_jobs_and_batch_services_scheduled_batch_table5.PNG">
+
+### **Batch Tables and Entities Error Info**
+Information about failed entities' executions can be found in the *batchprocess_entities_errors* table of the *k2batchprocess* keyspace, whereby.
+Example:
+
+
+
 ## **Batch Process Execution**
-Orchestrators
+- orchestrators
 
 
 
