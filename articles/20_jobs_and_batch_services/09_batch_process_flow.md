@@ -4,7 +4,7 @@
 
 The following activities are automatically triggered when a new Batch process is executed:
 -  A new entry is added in Cassandra under the k2viewsystem keyspace in the Batch table.
--  A new job entry is recorded in the k2viewsystem.jobs table with the following parameters:
+-  A new Job entry is recorded in the k2viewsystem.jobs table with the following parameters:
    
    -  Name = the name of the Batch process.
    
@@ -26,7 +26,7 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 
 ## **Scheduling Batch Processes**
 
-To schedule a Batch process to be executed at a given time, or recurrently. a scheduled Job process must be created with a script containing the batch command to be repeatedly invoked. This consists of creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs with the execution parameters parsed in the Batch command.
+To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created with a script containing the batch command to be repeatedly invoked. This consists of creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs with the execution parameters parsed in the Batch command.
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
  
