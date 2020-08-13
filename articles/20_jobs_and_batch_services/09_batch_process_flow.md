@@ -190,9 +190,9 @@ The previous batch process can be seen in the entities' table where the *bid*, *
 <img src="/articles/20_jobs_and_batch_services/images/20_jobs_and_batch_services_scheduled_batch_table5.PNG">
 
 ### **Batch Tables and Entities Error Info**
-Information about failed entities' executions can be found in the *batchprocess_entities_errors* table of the *k2batchprocess* keyspace, whereby.
+Information about failed entities' executions can be found in the *batchprocess_entities_errors* table of the *k2batchprocess* keyspace.
 Example:
-
+<img src="/articles/20_jobs_and_batch_services/images/21_jobs_and_batch_services_scheduled_batch_table6.PNG">
 
 
 ## **Batch Process Execution**
