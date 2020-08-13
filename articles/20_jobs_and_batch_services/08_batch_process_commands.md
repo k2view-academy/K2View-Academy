@@ -51,6 +51,8 @@ Start batch process to sync all instances of a Logical Unit:
 - MAX_NODES, The maximum nodes that will be participated in the batch process (randomly nodes)
 - MAX_WORKERS_PER_NODE, enables setting a smaller number of maximum workers to run on each node, than the maximum number of workers, defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
 
+
+## Batch Commands Summary
 </td>
 <td valign="top" width="300pxl">
 <p></p>
@@ -85,7 +87,8 @@ Start batch process to sync all instances of a Logical Unit:
 <p>Batch process a subset of Logical Unit Instances, based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
 <td valign="top" width="300pxl">
 
-<p></p>
+<p>batch_summary '35408af6-b26a-4243-bc95-f114335bfa5e'
+</p>
 </td>
 </tr> 
 
@@ -224,6 +227,23 @@ Lists all active batch processes if no arguments provided and their respective s
 </tr> 
 
 </table>
+
+
+## Batch Commands Examples
+
+### batch_list
+
+Command to type: 
+
+``` batch_list status='all'```
+
+Result:
+```|Id                                  |Command                                                                                                                                                         |Start date         |End date           |Status|Created by|Completion %|Error|
++------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+-------------------+------+----------+------------+-----+
+|35408af6-b26a-4243-bc95-f114335bfa5e|BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 200') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';|2020-08-12 12:20:07|2020-08-12 12:20:09|DONE  |          |100         |null |```
+
+
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/07_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
