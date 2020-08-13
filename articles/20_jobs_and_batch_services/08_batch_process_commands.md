@@ -16,6 +16,9 @@ BATCH *LUT* *fabric_command*="broadway *LUT*.SampleFlow SampleIID=?" with async=
 
 BATCH *LUT* from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" with async=true;
 
+
+## Batch Commands Summary
+
 <table width="900pxl">
 <tbody>
 <tr>
@@ -51,8 +54,6 @@ Start batch process to sync all instances of a Logical Unit:
 - MAX_NODES, The maximum nodes that will be participated in the batch process (randomly nodes)
 - MAX_WORKERS_PER_NODE, enables setting a smaller number of maximum workers to run on each node, than the maximum number of workers, defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
 
-
-## Batch Commands Summary
 </td>
 <td valign="top" width="300pxl">
 <p></p>
@@ -87,7 +88,7 @@ Start batch process to sync all instances of a Logical Unit:
 <p>Batch process a subset of Logical Unit Instances, based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
 <td valign="top" width="300pxl">
 
-<p>batch_summary '35408af6-b26a-4243-bc95-f114335bfa5e'
+<p>
 </p>
 </td>
 </tr> 
@@ -220,9 +221,7 @@ Lists all active batch processes if no arguments provided and their respective s
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p>
-  
-</p>
+<p>batch_summary '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
 </td>
 </tr> 
 
