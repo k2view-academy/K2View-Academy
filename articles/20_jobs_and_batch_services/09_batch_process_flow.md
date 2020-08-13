@@ -1,13 +1,16 @@
 # **Fabric Batch Processes Architecture**
 
 ## **Fabric Batch Processes Flow** 
-The execution of a new batch process automatically triggers a new entry in Cassandra, under k2viewsystem keyspace in the batch table. The batch process will be granted the following status: **WAITING_FOR_JOB**. This is because, in parallel, the execution of a new batch process automatically triggers a new job entry that is recorded in the k2viewsystem.jobs table with the following parameters:
-- Name set to the name of the batch process.
-- Type set to "BATCH PROCESS".
 
-From there, any available node, or any node whose affinity has been specified in the batch command, will handle the execution of the Job and of the subcommand as specified in the batch command.
+When a new Batch process is executed, a new entry is automatically added in Cassandra under the k2viewsystem keyspace in the Batch table. The Batch process is assigned a WAITING_FOR_JOB status since at the same time a new job entry is recorded in the k2viewsystem.jobs table with the following parameters:
+   
+   -  Name = the name of the Batch process.
+   
+   -  Type = BATCH PROCESS.
+ 
+From there on, any available node, or any node whose affinity has been specified in the Batch command, will handle the execution of the Job and of the subcommand as specified in the Batch command.
 
-Once the corresponding JOB kicks off, and is set to **IN_PROCESS** stage, the batch process itself will move through the following stages:
+Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Batch process undergoes the following stages:
 1. NEW
 2. GENERATE_IID
 3. IN_PROGRESS
@@ -20,16 +23,18 @@ Once the corresponding JOB kicks off, and is set to **IN_PROCESS** stage, the ba
 
 ## **Scheduling Batch Processes**
 
-It is not per-se possible possible to schedule a batch process to be executed at a given time, or recurrently. In order to achieve this, a scheduled process job will have to be created, and called with a script containing the batch command to be repeatidly invoked.
+To schedule the execution of a Batch process at a given time or recurrently, a scheduled process must be created and be called by a script holding the Batch command to be repeatidly invoked. This consists of creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time jobs with the execution parameters parsed in the Batch command.
+
+It is not per-se possible possible to schedule a Batch process to be executed at a given time, or recurrently. In order to achieve this, a scheduled process job must be created, and called with a script containing the batch command to be repeatidly invoked.
 In fact, this consists in creating a Job that calls a Batch process which in turn will create multiple or scheduled one-time jobs with the execution parameters parsed in the batch command.
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
  
 
 ## **Batch Process Table in Cassandra**
-All batch related information will be found in the *batchprocess_list* table of the *k2batchprocess* keyspace ;
+All batch-related information is displayed in the **k2batchprocess** keyspace in the **batchprocess_list** table.
 
-### Example:
+### Example 
 
 <img src="/articles/20_jobs_and_batch_services/images/15_jobs_and_batch_services_scheduled_batch_process.PNG">
 
@@ -145,61 +150,28 @@ All batch related information will be found in the *batchprocess_list* table of 
 
 arguments: 
 
-    {"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}
+```{"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}```
 
 command: 
 
-    BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';
-In this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
+```BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';``` - in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
 <img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
 
 extra_stats: 
 
-    {"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}
+```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
 ### **Batch Tables and Job Tables Correlation in Cassandra**
-Information about the JOB that was created when executing the batch process can be found in the *k2_jobs* table of the *k2system* keyspace.
+Information about the Job created during the execution of the Batch process is displayed in the **k2system** keyspace, in the **k2_jobs** table.
 Example:
-The previous batch process can be seen in the job's table and its **output** field can be cross-referenced with the **bid** field in the batch table with :
+The previous Batch process is displayed in the Job's table. Its **output** field can be cross-referenced with the **bid** field in the Batch table with:
 
 <img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
 
-### **Batch Tables and Node Info Correlation in Cassandra**
-Information about the NODE that handled a specific batch process can be found in the *batchprocess_node_info* table of the *k2batchprocess* keyspace.
-Example:
-The previous batch process can be seen in the *node_info* table where the *bid*, *nodeid* and *dc_name* fields can be cross-referenced with the supplementary information:
-
-- aggregated_results: Number of entities added, updated or unchanged.
-- failed_count: Number of failed entities executions.
-- succeeded_count: Number of successful entities executions.
-- pace: Number of entities per second.
-
-<img src="/articles/20_jobs_and_batch_services/images/19_jobs_and_batch_services_scheduled_batch_table4.PNG">
-
-### **Batch Tables and Entities Info Correlation in Cassandra**
-Information about the entities that were handled by a specific batch process can be found in the *batchprocess_entities_info* table of the *k2batchprocess* keyspace, .
-Example:
-The previous batch process can be seen in the entities' table where the *bid*, *nodeid* and *entityid* fields can be cross-referenced with the supplementary information:
-
-- creation/start/end: Timestamps of the batch command and of its execution.
-- status: Stage of the batch process.
-- results: Number of entities added, updated or unchanged - in this case (0 or 1) as each row represents one entity.
-- error: Error message displayed in case of failure of the execution process on a specific entity.
-
-<img src="/articles/20_jobs_and_batch_services/images/20_jobs_and_batch_services_scheduled_batch_table5.PNG">
-
-### **Batch Tables and Entities Error Info**
-Information about failed entities' executions can be found in the *batchprocess_entities_errors* table of the *k2batchprocess* keyspace.
-
-Example:
-
-<img src="/articles/20_jobs_and_batch_services/images/21_jobs_and_batch_services_scheduled_batch_table6.PNG">
-
-
 ## **Batch Process Execution**
-- orchestrators
+Orchestrators
 
 
 
