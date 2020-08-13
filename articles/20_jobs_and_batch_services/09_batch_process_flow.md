@@ -172,8 +172,15 @@ The previous Batch process is displayed in the Job's table. Its **output** field
 
 <img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
 
-## **Batch Process Execution**
-Orchestrators
+
+## **Batch Process Execution & Resiliency**
+
+When executed asynchrounously (*async* flag set to *true*), the batch process will inherit from the Jobs ability to transfer the process to a different node in cases where a node is no longer active or no longer responding according to the *hearbeats* and *keepalive* parameters defined in the node.id file.
+The next handling node will pick-up the batch process (via its associated job), and resume its execution from the last recorded stage.   
+
+Each Fabric node uses its Fabric built-in BatchProcessAPI class to navigate the Batch process through the different lifecycle stages, as defined in the illustrations above.
+
+
 
 
 
