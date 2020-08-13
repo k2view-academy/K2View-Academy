@@ -244,6 +244,23 @@ Result:
 ```
 
 
+### batch_summary
+
+Command to type: 
+
+``` batch_list status='all'```
+
+Result:
+
+<img src="/articles/20_jobs_and_batch_services/images/22_jobs_and_batch_services_commandsExamples.PNG">
+
+This command returns execution information and statistics for a given *BID* on each node involved in the execution.
+- Name: Refers to the NodeId
+- %Completed: Refers to the percentage of the executions run on each node
+- Ent/sec: Average entities executed per seconds (pace)
+*All other fields are self-explanatory.*
+
+
 
 
 
