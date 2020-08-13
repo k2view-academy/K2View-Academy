@@ -170,10 +170,10 @@ Information about the NODE that handled a specific batch process can be found in
 Example:
 The previous batch process can be seen in the *node_info* table where the *bid*, *nodeid* and *dc_name* fields can be cross-referenced with the supplementary information:
 
-- aggregated_results: Number of entities added, updated or unchanged
-- failed_count: Number of failed entities executions
-- succeeded_count: Number of successful entities executions
-- pace: Number of entities per secong
+- aggregated_results: Number of entities added, updated or unchanged.
+- failed_count: Number of failed entities executions.
+- succeeded_count: Number of successful entities executions.
+- pace: Number of entities per second.
 
 <img src="/articles/20_jobs_and_batch_services/images/19_jobs_and_batch_services_scheduled_batch_table4.PNG">
 
