@@ -55,7 +55,7 @@ The following commands must be set:
   - CDC republish, ...
 - ALLOW_MULTIPLY, when set to true, multiplies executions of the same Batch process command. Default is false.
 - MAX_NODES, the maximum nodes participating in the Batch process (random nodes).
-- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
+- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file (MAX_WORKERS_PER_NODE parameter).</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -122,7 +122,7 @@ The following commands must be set:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes, a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list</p>
+<p>Batch-processes, a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list.</p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -277,7 +277,7 @@ Note that all other fields are self-explanatory.
 
 ### How Do I Create a New Instance Group?
 1. Go to the **Fabric Studio**, select the **LU** > **Instance Groups** and right click and select **New Instance Group**.
-2. Write a valid SQL query to select the instances to be included in the Instance Group.
+2. Write a valid **SQL query** to select the instances to be included in the Instance Group.
 3. Save the **Instance Group**.
 
 <img src="/articles/20_jobs_and_batch_services/images/23_jobs_and_batch_services_commandsExamples.PNG">
