@@ -7,14 +7,13 @@ As such, the batch process is used to trigger the following applications:
 
 
 # **Fabric Batch Features**
-Using the Batch process will provide the following assets:
-- Efficient distribution of jobs between nodes
+The Batch process enables:
+- Efficient distribution of jobs between nodes.
 - Ability to dynamically change the configuration of work balance between nodes during the execution phases.
-- Monitoring of the instances synchronization progress (batch sync) at the following levels: Cluster, DC, or nodes.
+- Monitoring the instances synchronization progress (batch sync) at cluster, DC or node levels.
 - Recovery process in case of failure during the process (Nodes are getting down, etc..)
-- Ability to stop and resume the migration process (LUI synchronization)
-- Process tracking at entity level (timing, duration, handling node, failure management)
-
+- Stop and resume the migration process (LUI synchronization)
+- Track processes at an entity level. For example, timing, duration, handling node or failure management.
 
 
 
