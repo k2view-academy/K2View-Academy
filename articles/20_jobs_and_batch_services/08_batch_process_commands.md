@@ -238,9 +238,11 @@ Command to type:
 ``` batch_list status='all'```
 
 Result:
-```|Id                                  |Command                                                                                                                                                         |Start date         |End date           |Status|Created by|Completion %|Error|
+```
+|Id                                  |Command                                                                                                                                                         |Start date         |End date           |Status|Created by|Completion %|Error|
 +------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+-------------------+------+----------+------------+-----+
-|35408af6-b26a-4243-bc95-f114335bfa5e|BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 200') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';|2020-08-12 12:20:07|2020-08-12 12:20:09|DONE  |          |100         |null |```
+|35408af6-b26a-4243-bc95-f114335bfa5e|BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 200') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';|2020-08-12 12:20:07|2020-08-12 12:20:09|DONE  |          |100         |null |
+```
 
 
 
