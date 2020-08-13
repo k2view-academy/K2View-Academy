@@ -59,8 +59,9 @@ The following commands must be set:
 
 </td>
 <td valign="top" width="300pxl">
-<p></p>
-<p></p>
+<p>batch CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;
+This command migrates all customers from the source systems into Fabric CUSTOMER keyspace within the Fabric database.</p>
+
 </td>
 </tr>  
 
@@ -75,7 +76,8 @@ The following commands must be set:
 
 </td>
 <td valign="top" width="300pxl">
-<p></p>
+<p>batch CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;
+This command migrates the customers that are defined in ‘ig10CustomersList’ Instance Group into the CUSTOMER keyspace in Fabric database.</p>
 
 </td>
 </tr> 
@@ -91,7 +93,7 @@ The following commands must be set:
 <p>Batch process, a subset of the LUI based on a query to a source interface defined in the &ltdb_interface&gt parameter.</p>
 <td valign="top" width="300pxl">
 
-<p>
+<p>batch CUSTOMER FROM CRM_DB USING (‘select customer_id from CUSTOMER where customer_id <= 1000’) FABRIC_COMMAND="sync_instance PATIENT.?" with async=’true’;
 </p>
 </td>
 </tr> 
@@ -126,7 +128,7 @@ The following commands must be set:
 </td>
 <td valign="top" width="300pxl">
 
-<p></p>
+<p>batch Customer.('100', '101', '102','103') FABRIC_COMMAND="sync_instance PATIENT.?" with async=’true’;</p>
 
 </td>
 </tr> 
