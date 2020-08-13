@@ -1,6 +1,6 @@
 # **Fabric Jobs Overview** 
 
-The Fabric Jobs mechanism is rich, resilient and scalable and can be used to run any script or executable. For example, asynchronous recurring one-time only or scheduled actions that run Fabric functions according to a predefined schedule.
+The Fabric Jobs mechanism is rich, resilient and scalable and can be used to run any script or executable. For example, recurring or one-time only scheduled asynchronous actions that run Fabric functions according to a predefined schedule.
 
 
 Once set up, Fabric creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can also be used to collect data from structured DB or HTTP files, streams or message queues.
@@ -11,7 +11,7 @@ Fabric Jobs can be one of the following categories:
 
 - Process Jobs, that run a script or other executables.
 
-- Migrate process, that sync multiple instances of a specific Logical Unit.
+- Migrate process, that sync multiple instances of a specific LU.
 
 - Parser executions, that get data from tables and unstructured files which can be pushed to a table in Cassandra and then used to build an LUT Schema.
 
