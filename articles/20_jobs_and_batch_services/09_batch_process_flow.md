@@ -182,7 +182,7 @@ Information about the entities that were handled by a specific batch process can
 Example:
 The previous batch process can be seen in the entities' table where the *bid*, *nodeid* and *entityid* fields can be cross-referenced with the supplementary information:
 
-- creation/start/end: Timestamps of the command and of its execution.
+- creation/start/end: Timestamps of the batch command and of its execution.
 - status: Stage of the batch process.
 - results: Number of entities added, updated or unchanged - in this case (0 or 1) as each row represents one entity.
 - error: Error message displayed in case of failure of the execution process on a specific entity.
@@ -191,7 +191,9 @@ The previous batch process can be seen in the entities' table where the *bid*, *
 
 ### **Batch Tables and Entities Error Info**
 Information about failed entities' executions can be found in the *batchprocess_entities_errors* table of the *k2batchprocess* keyspace.
+
 Example:
+
 <img src="/articles/20_jobs_and_batch_services/images/21_jobs_and_batch_services_scheduled_batch_table6.PNG">
 
 
