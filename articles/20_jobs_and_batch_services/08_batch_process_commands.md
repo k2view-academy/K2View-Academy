@@ -40,19 +40,20 @@ BATCH *LUT* from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" w
 <td valign="top" width="400pxl">
    
 <p>
-Start batch process to sync all instances of a Logical Unit:
+Start the Batch process and sync all LU instances:
    
-- DC, specify dc name to force the batch process within specified dc, can also be defined on the affinity parameter                                                   - - AFFINITY, list of nodes and DCs to be involved in the batch process command
-- JOB_AFFINITY, affinity for the batch process job
-- ASYNC, defines if batch process should run on sync or async mode, default is false
-- GENERATE_ENTITIES_FIRST, if set to true - generate all entities before starting processing them
-- FABRIC_COMMAND, fabric command to be executed by the batch process.  It can be any command that includes one '?' that will represent entity id.
-  - for migration,  the following command must be set: "sync_instance <LUT>.?"
-  - for broadway flow, ...
-  - for CDC republish, ...
-- ALLOW_MULTIPLY, set to true to allow multiply executions of the same batch process command (default is false)
-- MAX_NODES, The maximum nodes that will be participated in the batch process (randomly nodes)
-- MAX_WORKERS_PER_NODE, enables setting a smaller number of maximum workers to run on each node, than the maximum number of workers, defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
+- DC, specify the DC name to force the Batch process within the specified DC. This can also be defined in the Affinity parameter  
+  - AFFINITY, list of nodes and DCs to be involved in the Batch process command.
+- JOB_AFFINITY, affinity for the Batch process Job.
+- ASYNC, defines whether the Batch process should run on a sync or async mode, default is false.
+- GENERATE_ENTITIES_FIRST, if set to true, generate all entities before processing them.
+- FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes one '?' that represents an Entity ID. The following commands must be set:
+  - Migration, "sync_instance <LUT>.?"
+  - Broadway flow, ...
+  - CDC republish, ...
+- ALLOW_MULTIPLY, set to true to multiply executions of the same batch process command (default is false).
+- MAX_NODES, the maximum nodes participating in the Batch process (random nodes).
+- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers, defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -68,7 +69,7 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of Logical Unit Instances, based on the Instance Group specified with the &ltIG&gt parameter</p>
+<p>Batch-processes a subset of LUI based on the Instance Group specified with the &ltIG&gt parameter</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -85,7 +86,7 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch process a subset of Logical Unit Instances, based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
+<p>Batch process a subset of LUI based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
 <td valign="top" width="300pxl">
 
 <p>
@@ -101,7 +102,7 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of Logical Unit Instances based on existing instances in fabric from entity table </p>
+<p>Batch-processes a subset of LUI based on existing instances in Fabric from the entity table. </p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -119,7 +120,7 @@ Start batch process to sync all instances of a Logical Unit:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of Logical Unit Instances, based on list of instances defined in the &ltinstance 1,instance 2,...&gt parameters' list</p>
+<p>Batch-processes a subset of LUI based on list of instances defined in the &ltinstance 1,instance 2,...&gt parameters' list</p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -136,13 +137,13 @@ Start batch process to sync all instances of a Logical Unit:
 <td valign="top" width="400pxl">
 
 <p>
-Shows instances status for a given batch process id:
+Displays the status of instances of a given Batch process ID:
    
-- STATUS, shows one of the following states: WAITING, COMPLETED, FAILED
-- ENTITIES, lists of entities separated by a comma
-- AFFINITY, DCs or nodes
-- SORT_BY_PROCESS_TIME, if true, shows only the entities with the highest process time. If set, ignore all other parameters
-- LIMIT, default LIMIT is defined in config.ini if no LIMIT is provided as an argument </p>
+- STATUS, shows one of the following states: WAITING, COMPLETED, FAILED.
+- ENTITIES, lists of entities separated by a comma.
+- AFFINITY, DCs or nodes.
+- SORT_BY_PROCESS_TIME, if true, shows only the entities with the highest process time. If set, ignore all other parameters.
+- LIMIT, default LIMIT defined in the config.ini if no LIMIT is provided as an argument. </p>
 </td>
 <td valign="top" width="300pxl">
 <p></p>
@@ -157,7 +158,7 @@ Shows instances status for a given batch process id:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Lists of all batch processes at work and returns the following information: node id, batch process id, entity id, LU type, time at work (ms), exeid, command|
+<p>Lists of all running Batch processes and returns the following information: node ID, batch process ID, entity ID, LU type, time at work (ms), exeid, command|
 - filter, must be a regex compatible argument
 </p>
 </td>
@@ -176,7 +177,7 @@ Shows instances status for a given batch process id:
 <td valign="top" width="400pxl">
 
 <p>
-Lists all active batch processes if no arguments provided and their respective statuses:
+If there are no arguments, lists all active Batch processes together with their respective status:
    
 - NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
 - FROM/TO_DATE - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
@@ -200,7 +201,7 @@ Lists all active batch processes if no arguments provided and their respective s
 </td>
 <td valign="top" width="400pxl">
 
-<p>Resumes a previous batch process by re-processing all failed or non-handled entities if the batch process was not completed. Otherwise, it only retries failed entities. 
+<p>Resumes a previous Batch process by re-processing all failed or unhandled entities if the Batch process has not been completed. Otherwise, it retries the failed entities only.
 </p>
 </td>
 <td valign="top" width="300pxl">
@@ -217,7 +218,7 @@ Lists all active batch processes if no arguments provided and their respective s
 </td>
 <td valign="top" width="400pxl">
 
-<p>This report will bring the summary information in table structure format for the following levels:*node,* DC,* Cluster                                              
+<p>This report brings a table holding a summary about node, DC and cluster levels.                                    
 </p>
 </td>
 <td valign="top" width="300pxl">
