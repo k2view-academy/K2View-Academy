@@ -236,7 +236,7 @@ If there are no arguments, lists all active Batch processes together with their 
 
 ### batch_list
 
-Command: 
+Command  
 
 ``` batch_list status='all'```
 
@@ -258,24 +258,24 @@ Result
 
 <img src="/articles/20_jobs_and_batch_services/images/22_jobs_and_batch_services_commandsExamples.PNG">
 
-This command returns execution information and statistics for a given *BID* on each node in the execution.
-- Name: Refers to the NodeId
-- %Completed: Refers to the percentage of the executions run on each node.
-- Ent/sec: Average entities executed per seconds (pace)
+This command returns execution information and statistics for a given bid on each node in the execution.
+- Name:, the NodeId.
+- %Completed, percentage of executions run on each node.
+- Ent/sec, average entities executed per seconds (pace).
 
-*All other fields are self-explanatory.*
+Note that all other fields are self-explanatory. 
 
 
 ## Instance Groups
 
 ### How Do I Create a New Instance Group?
-1. Go to the Fabric Studio, select the LU > Instance Groups and right click and select New Instance Group.
+1. Go to the **Fabric Studio**, select the **LU** > **Instance Groups** and right click and select **New Instance Group**.
 2. Write a valid SQL query to select the instances to be included in the Instance Group.
-3. Save the Instance Group
+3. Save the **Instance Group**.
 
 <img src="/articles/20_jobs_and_batch_services/images/23_jobs_and_batch_services_commandsExamples.PNG">
 
-The Instance Group (referred to as *customer_IG_600To700* in the illustration above) is deployed together with the LUT it belongs to.
+The Instance Group (referred to as **customer_IG_600To700** in the illustration above) is deployed together with its LUT.
 
 ### How Do I Invoke an Instance Group from the Batch Command
 
@@ -298,7 +298,7 @@ fabric>migrate Customer.customer_IG_600To700;
 
 ## Batch Command with Embedded SQL Statements
 
-## Migrate commands - Legacy Support
+## Migrate Commands - Legacy Support
 |migrate               |
 |migrate_details       |
 |migrate_in_process    |
