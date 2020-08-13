@@ -176,7 +176,7 @@ The previous batch process can be seen in the *node_info* table where the *bid*,
 - succeeded_count: Number of successful entities executions.
 - pace: Number of entities per second.
 
-<img src="/articles/20_jobs_and_batch_services/images/19_jobs_and_batch_services_scheduled_batch_table4.PNG">
+      <img src="/articles/20_jobs_and_batch_services/images/19_jobs_and_batch_services_scheduled_batch_table4.PNG">
 
 ### **Batch Tables and Entities Info Correlation in Cassandra**
 Information about the entities that were handled by a specific batch process can be found in the *batchprocess_entities_info* table of the *k2batchprocess* keyspace, .
