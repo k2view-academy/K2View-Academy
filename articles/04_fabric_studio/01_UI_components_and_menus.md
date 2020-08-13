@@ -73,12 +73,13 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 </tr>
 <tr>
 <td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon7.png" alt="" /></td>
-<td width="161">
-<p>Help (F1 for User Guide)</p>
+<td width="600 pxl">
+<p>Help (link to the Knowledge Base)</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 [Click for more information about the Query Builder.](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview)
