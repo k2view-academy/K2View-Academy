@@ -185,4 +185,6 @@ Each Fabric node uses its Fabric built-in BatchProcessAPI class to navigate the 
 
 
 
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/08_batch_process_commands.md)
+
 
