@@ -1,14 +1,17 @@
 # **Fabric Batch Processes Architecture**
 
-## **Fabric Batch Processes Flow** 
+## **Fabric Batch Processes Flow**  
 
-When a new Batch process is executed, a new entry is automatically added in Cassandra under the k2viewsystem keyspace in the Batch table. The Batch process is assigned a WAITING_FOR_JOB status since at the same time a new job entry is recorded in the k2viewsystem.jobs table with the following parameters:
+When a new Batch process is executed the following are automatically triggered:
+-  A new entry is added in Cassandra under the k2viewsystem keyspace in the Batch table.
+-  A new job entry is recorded in the k2viewsystem.jobs table with the following parameters:
    
    -  Name = the name of the Batch process.
    
    -  Type = BATCH PROCESS.
- 
-From there on, any available node, or any node whose affinity has been specified in the Batch command, will handle the execution of the Job and of the subcommand as specified in the Batch command.
+-  The Batch process is assigned a WAITING_FOR_JOB status.  
+
+From there on, any available node, or any node whose affinity has been specified in the Batch command, handles the execution of the Job and of the subcommand as specified in the Batch command.
 
 Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Batch process undergoes the following stages:
 1. NEW
