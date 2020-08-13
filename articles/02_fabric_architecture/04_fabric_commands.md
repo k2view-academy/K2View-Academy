@@ -188,15 +188,14 @@ For example:
 
 #### Get Instance
 
-The **GET** command is used to bring information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
+- The **GET** command is used to bring information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
 
-Note that you can get LUIs from multiple LUs using one GET command, but you cannot get multiple LUIs from the same LU using one GET command. 
-
-The following message is displayed when trying to get multiple LUIs from the same LU using one GET command:
-
-`Only single instance per LUT can be used on the same GET command.`
-
-The following table lists the GET commands:
+- Note that you can get LUIs from multiple LUs using one GET command, but you cannot get multiple LUIs from the same LU using one GET command. The following message is displayed when trying to get multiple LUIs from the same LU using one GET command:
+  - `Only single instance per LUT can be used on the same GET command.`
+- You can set the consistency level for the GET LUI command to "ONE" when fails to achieve a "QUORUM" consistency level the the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, you need to run the following Fabric command on your session:
+  -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
+  - Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
+- The following table lists the GET commands:
 
 <table width="900pxl">
 <tbody>
@@ -288,11 +287,12 @@ Note that users are responsibile for identifying if a [sync](/articles/14_sync_L
 
 ### Delete LUI Command
 
-The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. 
+- The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. 
 
-Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
+- Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
+- The consistency level of delete instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
+- The following table lists the  DELETE commands:
 
-The following table lists the  DELETE commands:
 
 <table width="900pxl">
 <tbody>
@@ -370,7 +370,7 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
 
 - Information about the [deployed implementation](/articles/16_deploy_fabric/01_deploy_Fabric_project.md):
   - **DESCRIBE,** to query Fabric's metadata structure.
-  - **LIST,** a list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server).
+  - **LIST,** a list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server) and [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) (ROLES, USERS, TOKENS, ROLE_PERMISSIONS and METHODS).
 
 - General information:
   - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in the scope (the latest LUI, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Globals' values](/articles/08_globals/01_globals_overview.md#globals-overview) and the active environment. 
@@ -378,7 +378,7 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
 <!--Drop 2- Add a link to Environments--> 
 
 ### Fabric Settings
- 
+
 #### Fabric Setting - Session Level
 
 The Fabric **SET** command enables updating Fabric settings on a session level:
@@ -390,6 +390,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   - Set [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md).
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
+  - Set [always_sync]()
 
 - Set the active environment.
 
@@ -398,6 +399,8 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 - **SET OUTPUT** command, set the output format of query results. 
 
 - **SET INSTANCE_TTL** command, set the time to live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends.
+
+- **SET LUI_READ_ONE_WHEN_FAIL** command , set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to "ONE" when fails to achieve a "QUORUM" consistency level the the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
 ##### Reset Session Level Setting
 
@@ -486,13 +489,11 @@ Click for more information about Fabric batch process mechanism.
 
 #### PS and Kill Commands
 
-- The **PS** command displays the current tasks running on Fabric. For example, Fabric commands, Fabric Jobs, Web Service and Graphit, [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), Broadway actor or parser.
+- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks, running on node2. The **PS** command displays different types of tasks like  Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md),  parser, or User Logic.  It displays the node id of each task.
 
-- The **KILL** command is used to kill any running task displayed by the PS command.
+- The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
 
 <!--Drop 2- add a links to jobs, parsers, graphit, broadway-->
-
-<!--Drop 1- add a link to WS-->
 
 ### Execution Monitoring
 
@@ -541,9 +542,7 @@ Click for more information about Fabric CDC and Search.
 
 ### Fabric Broadway
 
-Fabric **BROADWAY** command runs a Broadway flow.
-
-<!--Drop 2- add a link to Broadway -->
+Fabric [BROADWAY](/articles/19_Broadway/01_broadway_overview.md) command runs a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md).
 
 ### Queries Helpers
 
