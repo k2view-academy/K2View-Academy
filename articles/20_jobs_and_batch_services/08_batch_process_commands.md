@@ -42,18 +42,20 @@ BATCH *LUT* from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" w
 <p>
 Start the Batch process and sync all LU instances:
    
-- DC, specify the DC name to force the Batch process within the specified DC. This can also be defined in the Affinity parameter  
+- DC, specify the DC name to force the Batch process within the specified DC. This can also be defined in the Affinity parameter:  
   - AFFINITY, list of nodes and DCs to be involved in the Batch process command.
 - JOB_AFFINITY, affinity for the Batch process Job.
-- ASYNC, defines whether the Batch process should run on a sync or async mode, default is false.
+- ASYNC, defines whether the Batch process should run in a sync or async mode. Default is false.
 - GENERATE_ENTITIES_FIRST, if set to true, generate all entities before processing them.
-- FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes one '?' that represents an Entity ID. The following commands must be set:
+- FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes one '?' that represents an Entity ID. 
+
+The following commands must be set:
   - Migration, "sync_instance <LUT>.?"
   - Broadway flow, ...
   - CDC republish, ...
-- ALLOW_MULTIPLY, set to true to multiply executions of the same batch process command (default is false).
+- ALLOW_MULTIPLY, when set to true, multiplies executions of the same Batch process command. Default is false.
 - MAX_NODES, the maximum nodes participating in the Batch process (random nodes).
-- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers, defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
+- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file (MAX_WORKERS_PER_NODE parameter)./p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -69,7 +71,7 @@ Start the Batch process and sync all LU instances:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of LUI based on the Instance Group specified with the &ltIG&gt parameter</p>
+<p>Batch-processes, a subset of the LUI based on the Instance Group specified with the &ltIG&gt parameter.</p>
 
 </td>
 <td valign="top" width="300pxl">
@@ -86,7 +88,7 @@ Start the Batch process and sync all LU instances:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch process a subset of LUI based on a query to one of the source interfaces defined in the &ltdb_interface&gt parameter</p>
+<p>Batch process, a subset of the LUI based on a query to a source interface defined in the &ltdb_interface&gt parameter.</p>
 <td valign="top" width="300pxl">
 
 <p>
@@ -102,7 +104,7 @@ Start the Batch process and sync all LU instances:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of LUI based on existing instances in Fabric from the entity table. </p>
+<p>Batch-processes, a subset of the LUI based on existing instances in Fabric from the entity table. </p>
 </td>
 <td valign="top" width="300pxl">
 
@@ -158,8 +160,9 @@ Displays the status of instances of a given Batch process ID:
 </td>
 <td valign="top" width="400pxl">
 
-<p>Lists of all running Batch processes and returns the following information: node ID, batch process ID, entity ID, LU type, time at work (ms), exeid, command|
-- filter, must be a regex compatible argument
+<p>Lists all running Batch processes and returns the following information: Node ID, Batch process ID, Entity ID, LU type, time at work (ms), exeid, command|
+
+- Filter, must be a regex compatible argument.
 </p>
 </td>
 <td valign="top" width="300pxl">
