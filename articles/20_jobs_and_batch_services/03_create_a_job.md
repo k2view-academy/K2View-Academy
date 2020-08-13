@@ -125,7 +125,7 @@ Example:
 
 ### How Do I Create a New CDC Job?
 Fabric can execute CDC Jobs (Change Data Capture) to notify external systems about data changes. 
-Jobs can also execute cross-instance searches using ElasticSearch.
+Jobs can also execute cross-instance searches using Fabric's Search capability.
  
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_jobs_commands.md)
