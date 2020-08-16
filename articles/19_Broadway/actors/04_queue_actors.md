@@ -1,70 +1,85 @@
-# Queue Actors - Pub/Sub
+# Queue Actors - Pub / Sub
 
-### Pub/Sub Overview
+### Pub / Sub Overview
 
-Broadway provides a group of [built-in Actors](../04_built_in_actor_types.md) to manage Pub/Sub asynchronous message handling. These Actors are:
+Broadway has a group of [built-in Actors](../04_built_in_actor_types.md) that manage Pub / Sub asynchronous message handling. 
+
+These Actors are:
 
 - **Publish** Actor, publishes messages using a message broker.
 - **Subscribe** Actor, subscribes to messages provided by a message broker.
-- **SubscribeBatch** Actor, same as **Subscribe** but it can read the messages in batches. 
+- **SubscribeBatch** Actor, similar to the **Subscribe** Actor but also reads messages in batches. 
 
-These Actors provide to Broadway users the Pub/Sub services functionality via the Actors input arguments whereby the input arguments of the Pub/Sub Actors correspond to the functionality of the supported message providers. The message provider types supported in Broadway are:
+ 
+The input arguments of these Actors correspond to the functionality of the supported message providers, whereby providing  Broadway users with Pub / Sub services.
+
+Message provider types supported in Broadway are:
 
 * Apache Kafka.
 * JMS Queue and Topic by any JMS provider (for example, RabbitMQ or Active MQ).
-* Broker memory (in-memory queue), a Fabric internal queue which doesn't have any partitions and manages the messages using the key.  
+* Broker memory (in-memory queue), a Fabric internal queue without partitions that manages messages using a key.  
 
-The publisher and the subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then set in the **interface** input argument of the Pub/Sub Actors. 
+Publisher and the subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Pub / Sub
+**interface** of the Actor's input argument. 
 
-Some of the input arguments are relevant only for Kafka and some - only for JMS. For example, **key** input argument of the **Publish** Actor is relevant for Kafka only and it is the key commonly used for partitioning. The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. In case left empty, the server will generate one. 
+Some input arguments are relevant only for Kafka and some, only for JMS. 
 
-The arguments that are not supported by the message provider can be left empty and will be ignored. For example, the batch size is set by **max_batch_records** input argument. However this parameter is ignored by interfaces that do not support batches (such as JMS) considering all batches having a size of 1.
+For example:
 
-The **topic** and few other input arguments (such as **group_id**) can be left empty in case a default topic was configured on the interface. However when a value is defined in the Actor, it will be used in the flow rather than the value defined on the interface. 
+-  The **key** input argument of the **Publish** Actor is relevant only for Kafka and is the key commonly used for partitioning. 
+-  The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. When left empty, the server generates a reply. 
 
-The message type to be processes by Broadway Pub/Sub must be aligned with the Interface **Data type** and is limited to: String, byte[], JSON, long. The message type of in-memory broker is not limited to any specific types.
+Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
-The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
+The **topic** and other input arguments (such as **group_id**) can be left empty when a default topic is configured in the interface. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
+
+The message type to be processesd by the Broadway Pub / Sub functionality must be aligned with the **Data type** interface and is limited to: String, byte[], JSON, long. 
+
+The message type of an in-memory broker is not limited to any specific types.
+
+The **Subscribe** Actor should always listen to the same topic. 
+
+The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
 
 ### Timeout Setting
 
-The timeout must be defined for the **Subscribe** Actor to indicate the time to wait for a new message. If the timeout elapses the collection will come to an end.
+The timeout must be defined for the **Subscribe** Actor to indicate the time to wait for a new message. If the timeout elapses, the collection ends.
 
 The **Subscribe** Actor has two timeout related settings:
 
-* **poll_timeout**, the timeout to wait for a new message or the first message in a batch. If the timeout elapses the collection will come to an end. If set to -1 the wait will be forever.
-* **batch_timeout**, the duration the system will wait to accumulate messages in a batch. After the first message, the system accumulates additional messages until the batch_timeout is encountered or the batch is full (max_batch_records). If the timeout elapses, the system will return a batch with the available messages (at least 1 but not more than max_batch_records).
+* **poll_timeout**, the time to wait for a new message or the first message in a batch. If the timeout elapses, the collection ends. If set to -1, it waits forever.
+* **batch_timeout**, the duration the system waits to accumulate messages in a batch. After the first message, the system accumulates additional messages until the batch_timeout is reached or the batch is full (max_batch_records). If the timeout elapses, the system returns a batch with at least one available message and no more than the max_batch_records).
 
-When debugging the flow, the **Subscribe** Actor waits only 1 sec in order not to stuck the [Debug run](../25_broadway_flow_window_run_and_debug_flow.md).
+When debugging the flow, the **Subscribe** Actor waits only 1 sec to prevent the [Debug run](../25_broadway_flow_window_run_and_debug_flow.md) from getting stuck.
 
-In a regular run the timeout can be controlled by setting it to the required elapsed time and even can be set to -1, meaning an infinite wait for messages.
+In a regular run, timeout can be controlled by setting it to the required elapsed time. It can also be set to -1, meaning an infinite wait for messages.
 
-### Acknowledgement in Broadway Pub/Sub
+### Acknowledgement in Broadway Pub / Sub
 
-The **Subscribe** Actor sends an acknowledgement to the Pub/Sub service for each received message.
+The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each mesage received:
 
-- In a [Transaction](../23_transactions.md) the acknowledgment is performed upon commit. 
+- In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
 
-- If not in Transaction, the acknowledgement is performed on the next  received message. Meaning that if the server fails after reading the message, the same message will be processed again.  
+- When not in Transaction, the acknowledgement is performed during the next received message. Meaning that if the server fails after reading the message, the same message is processed again.  
 
 
-### Pub/Sub Examples 
+### Pub / Sub Examples 
 
-Check out **message-broker-pubsub.flow** for Pub/Sub examples. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
+Check out **message-broker-pubsub.flow** for Pub / Sub examples. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
 
-The following part of the example flow shows how to publish few messages to an in-memory queue using a **Publish** Actor and then read them from a queue using the **Subscribe** Actor.
+The following section of the example flow shows how to publish messages to an in-memory queue using a **Publish** Actor and then reading them from a queue using the **Subscribe** Actor.
 
 ![image](../images/99_actors_04_1.PNG)
 
 
 
-To read the messages in batches, use **SubscribeBatch** Actor and define **max_batch_records** to the required batch size.
+To read messages in batches, use the **SubscribeBatch** Actor and set **max_batch_records** to the required batch size.
 
 ![image](../images/99_actors_04_2.PNG)
 
 
 
-The following example shows a subscribe flow which includes a transaction. In case of failure, all the messages from the beginning of the transaction are rolled back. Meaning that when a server is up again, the **Subscribe** Actor will read all the messages again. If the same flow didn't include a transaction, only the last message should be repeated after the server fails and go up again.
+The following example shows a Subscribe flow which includes a transaction. During a failure all messages from the beginning of the transaction are rolled back. Meaning that when a server is up again, the **Subscribe** Actor reads all the messages again. If the same flow does not include a transaction, only the last message is repeated after the server fails and starts again.
 
 ![image](../images/99_actors_04_3.PNG)
 
