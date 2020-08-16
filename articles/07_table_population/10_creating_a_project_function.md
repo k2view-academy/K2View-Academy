@@ -4,7 +4,7 @@
 
 Fabric Project functions are user-defined Java functions that are added to the project implementation to perform complex data manipulations or to execute queries on a specific [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id). 
 
-In Fabric Studio functions can be edited either by:
+Functions can be edited in the Fabric Studio by either:
 
 -  Opening the function’s code from the Project Tree.
 -  Opening the specific category’s **Logic.java** source file.
@@ -12,9 +12,9 @@ In Fabric Studio functions can be edited either by:
 
 Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, Web Services, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md).
 
-1.	To create a function from the existing **Table Population**, go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] and double click  [**Population Name**] to open the existing population. Then do either:
+1.	To create a function from an existing **Table Population**, go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] and double click  [**Population Name**] to open the existing population. Then do either:
     * Right click in the working area and select **Insert New Function**. 
-    * Click the **Objects tab** in the right panel of the working area, select **Functions** and double click on **Create New Function**.
+    * Click the **Objects tab** in the right panel of the working area, select **Functions** and double click **Create New Function**.
  2. To create a function from the **Project Tree** do either:
     *	Click **Logical Units** > [**LU Name**], right click **Java** > **New Function**. 
     *	Click **Shared Objects** > [**LU Name**], right click **Java** > **New Function**.
@@ -37,8 +37,8 @@ The Function Manager window displays the following panes on the right of the win
 *	Output Parameters.
 
 Both panes include the following components:
-*	**List panel**, displaying a list of the parameter’s Name, Data Type and Comments.
-*	**Text entry fields**, displaying the parameter’s Name, Data Type and Comments.
+*	**List panel**, displays a list of the parameter’s Name, Data Type and Comments.
+*	**Text entry fields**, displays the parameter’s Name, Data Type and Comments.
 
 To define Input and Output settings manually, do the following:
 1.	Complete the **Name** field.
@@ -77,7 +77,7 @@ Input / Output settings can be automatically defined based on DB objects either 
 2.	Click the **Parameter** in the **Parameters List** to edit the parameter’s **Name**, **Type** and **Comments** fields. The updated Input / Output parameter names are automatically applied to all occurrences of the parameter in the function’s Java code.
 
 
-### How Do I Delete Function's Parameters? 
+### How Do I Delete a Function's Parameters? 
 
 1.	Select a **parameter** in the **Parameter List**.
 2.	Press **Delete** on your keyboard or click the **Delete** icon next to the parameter to remove it from the parameters list.
@@ -87,7 +87,7 @@ Input / Output settings can be automatically defined based on DB objects either 
 1.	Go to the **Objects / Database** pane (left of the Function Manager) and click the **Database** tab.
 2.	Click **DB Connection** and select an **Interface** from the dropdown menu (top of the pane).
 3.	Click a **Table** in the database hierarchy.
-4.	Right click the **Column Name(s)** to use as a basis for the **generated code** and select **Generate Code**.
+4.	Right click the **Column Name(s)** to use as the basis for the **generated code** and then select **Generate Code**.
 
 Example of the code generated for the function with **Input = CUSTOMER_ID** from the CUSTOMER table:
 <pre><code>
@@ -98,17 +98,17 @@ db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 
 **Notes** 
 *	The code generated in the above example acts as the basis for a function and should be further updated according to the function’s requirements.
-*	When writing Java code, you can use any Java methods and are not limited to Fabric methods. 
+*	When writing Java code, other Java methods can be used in addition to Fabric methods. 
 *	It is recommended to use binding parameters in SQL statements for prepared statements.
 
 
 Click to display the Fabric API list: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
-### How Do I Invoke a Project Function of Another Category?
+### How Do I Invoke a Project Function From Another Category?
 
-To invoke a project function belonging to another category in the same LU, do the following to add an import:
+To invoke a project function from another category in the same LU, do the following to add an import:
 1. Open the **function** using IntelliJ.
-2. Locate the mouse on the invoked function (marked in red), click **ALT+ENTER** and select the option for adding the required import.
+2. Position the mouse on the invoked function (marked in red), press **ALT+ENTER** and select the option for adding the required import.
 3. Save the function to add the import.
 
 To see the import, open the source file of the function's category. For example, when adding an invocation to the fnCheckSourceEnv() function which belongs to the DECISION category in the CRM Logical Unit, the following import is added:
