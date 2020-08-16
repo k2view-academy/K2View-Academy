@@ -21,10 +21,29 @@ If the **header** input argument is set to true, the Actor will use the first ro
 
 The parsers are usually followed by the iteration, that allow to iterate over the parser's output object row by row.
 
-The following example shows how to read and parse a CSV file which includes a list of countries with their area codes and to find an area code of one specific countries provided as external input argument.
+### Parser Flow Example
+
+The following example shows how to read and parse a CSV file which includes a list of countries with their area codes and to find an area code of a specific country provided as external input argument. 
 
 ![image](../images/99_actors_03_2.PNG)
 
+The parser processes the file row by row validating the data at Stage 5 using the [**JavaScript** Actor's code](01_javascript_actor.md#special-keywords-and-conventions) - via the access to **flowArgs** arguments and the **contextLoop** object. When the required country is found, the iteration stops.
+
+```
+if (input1.CNTRY_CD == flowArgs.country_code) {
+  contextLoop.stop();
+  input1.AREA_CD;
+}
+```
+
+### Other Supported Parsers
+
+Additional parsers supported by Broadway are:
+
+* **Base64Decode** / **Base64Encode** Actors, analyzes an input and outputs it as encoded string or a decoded buffer
+* **FixedColumnParser** Actor, traverses an incoming stream and for each line parses the columns using their fixed position in the line.
+* **LinesParser** Actor, traverses an incoming stream and outputs individual lines.
+* XmlParser Actor, analyzes an input stream and outputs the objects found in the stream.
 
 Check out **xml.flow** for **XmlParser** example and **lines.flow** for **LinesParser** example. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
 
