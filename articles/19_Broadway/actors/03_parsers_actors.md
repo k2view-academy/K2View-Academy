@@ -43,7 +43,7 @@ Additional parsers supported by Broadway are:
 * **Base64Decode** / **Base64Encode** Actors, analyzes an input and outputs it as encoded string or a decoded buffer
 * **FixedColumnParser** Actor, traverses an incoming stream and for each line parses the columns using their fixed position in the line.
 * **LinesParser** Actor, traverses an incoming stream and outputs individual lines.
-* XmlParser Actor, analyzes an input stream and outputs the objects found in the stream.
+* **XmlParser Actor**, analyzes an input stream and outputs the objects found in the stream.
 
 Check out **xml.flow** for **XmlParser** example and **lines.flow** for **LinesParser** example. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
 
