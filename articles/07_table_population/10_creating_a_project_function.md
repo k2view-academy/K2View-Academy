@@ -8,7 +8,7 @@ Functions can be edited in the Fabric Studio by either:
 
 -  Opening the function’s code from the Project Tree.
 -  Opening the specific category’s **Logic.java** source file.
--  Opening the function in [**IntelliJ**], an Integrated Development Environment (IDE)] for developing computer software. 
+-  Opening the function in **IntelliJ**, an Integrated Development Environment (IDE) for developing computer software. 
 
 Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, Web Services, [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md).
 
@@ -107,16 +107,16 @@ Click to display the Fabric API list: http://[Fabric IP address]:3213/static/doc
 ### How Do I Invoke a Project Function From Another Category?
 
 To invoke a project function from another category in the same LU, do the following to add an import:
-1. Open the **function** using IntelliJ.
-2. Position the mouse on the invoked function (marked in red), press **ALT+ENTER** and select the option for adding the required import.
-3. Save the function to add the import.
+1. Open the function using IntelliJ.
+2. Position the mouse on the invoked function (marked in red), press **ALT+ENTER** and select the option to add the required import.
+3. Save the function.
 
 To see the import, open the source file of the function's category. For example, when adding an invocation to the fnCheckSourceEnv() function which belongs to the DECISION category in the CRM Logical Unit, the following import is added:
    ~~~
    import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.fnCheckSourceEnv;
    ~~~
 
-Note that to invoke several functions in the same category, modify the import as follows:
+To invoke several functions in the same category, modify the import as follows:
    ~~~
    import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.*;
    ~~~
