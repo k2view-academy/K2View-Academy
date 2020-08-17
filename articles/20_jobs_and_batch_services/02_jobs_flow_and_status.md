@@ -5,16 +5,21 @@ Similar to most Fabric entities, a Job's flow undegoes the following stages:
 <figure><table>
 <thead>
 
-<tbody><tr><td>Define</td><td>A function, flow or process defined as the method to be invoked by the Job when scheduled. 
- 
-For example: <br><Li>User Job, a Java function defined and attached to a specific LU type under the LU Utilities folder.</Li> <br><Li>Broadway Job, a Broadway flow defined in the Broadway GUI.</Li><br><Li>Process Job, a script stored on the Fabric server.</Li></td></tr><tr><td>Configure</td><td>A new job entry must be added to the Jobs table under the LU Type tree and must have the following parameters:<br><Li>Schedule Job type.</Li><br><Li>MethodAffinity field that specifies the Fabric node to be allocated to this Job (if any)</Li>.</td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the deployed Fabric node. The Job is triggered either automatically or manually depending on the parameters specified during configuration.</td></tr></tbody>
+<tbody><tr><td>Define</td><td>A function, flow or process defined as the method to be invoked by the Job when scheduled.  
+For example: 
+<Li>User Job, a Java function defined and attached to a specific LU type under the LU Utilities folder.</Li> 
+<Li>Broadway Job, a Broadway flow defined in the Broadway GUI.</Li>
+<Li>Process Job, a script stored on the Fabric server.</Li>
+</td></tr><tr><td>Configure</td>
+<td>A new job entry must be added to the Jobs table under the LU Type tree and must have the following parameters:<br><Li>Schedule Job type.</Li>
+<Li>MethodAffinity field that specifies the Fabric node to be allocated to this Job (if any).</Li>
+</td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the deployed Fabric node. The Job is triggered either automatically or manually depending on the parameters specified during configuration.</td></tr></tbody>
 </table></figure>
  
 
 # **Fabric Jobs Status** 
 
 All Fabric Jobs undergo different stages, where each stage indicates a specific step in the Job's handling process:
-
 
 ## **Statuses**
 
@@ -118,7 +123,7 @@ All Fabric Jobs undergo different stages, where each stage indicates a specific 
 The  following image illustrates the different stages of a Job's lifecycle and the different types of actions that transit a specific Job from one specific state to another.
 
 -  The blue arrows show the natural path of a Job during its lifecycle in Automatic Execution mode. 
--  The dotted or plain arrows show the transition between stages in Manual Execution mode, when applying one of the following commands:
+-  The dotted or plain arrows show the transition between stages in Manual Execution mode when applying one of the following commands:
    -  **startjob** 
    -  **stopjob**
    -  **restartjob**
@@ -156,7 +161,7 @@ The Fabric runtime server offers dedicated Java classes that handle the Jobs lif
 **Job Execution Resiliency**
 
 Fabric ensures that Job executions have multiple recovery opportunities if the node responsible for its execution fails. 
-A heartbit variable can be configured for each node so that each Fabric node status can be monitored and Jobs can be reallocated to different nodes. 
+A heartbeat variable can be configured for each node so that each Fabric node status can be monitored and Jobs can be reallocated to different nodes. 
 If a node restarts, and if there is insufficient time before the scheduled Job's execution, the rebooting node has precedence over all other nodes for the execution of the Job's instance.
 
 
