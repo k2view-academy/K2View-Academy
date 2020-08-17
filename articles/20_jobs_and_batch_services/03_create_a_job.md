@@ -90,10 +90,6 @@ while (test<5 && !isAborted()){
 </tbody>
 </table>
 <p class="unchanged rich-diff-level-one">&nbsp;</p>
-<p class="unchanged rich-diff-level-one">&nbsp;</p>
-<p class="unchanged rich-diff-level-one">&nbsp;</p>
-<p class="unchanged rich-diff-level-one">&nbsp;</p>
-<p class="unchanged rich-diff-level-one"><code></code></p>
 
 ### How Do I Create a New Process Job?
 Process Jobs are batch files or scripts stored in the Fabric server and triggered manually.
