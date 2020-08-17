@@ -68,7 +68,7 @@ The Broadway Debug process *learns* the Schema of complex output parameters and 
 
 When debugging an Actor with a complex output parameter, the parameter port is red:
 
-  ![](images/debug_update_schema.png)
+  <img src="images/debug_update_schema.png" style="zoom:80%;" />
 
 1. Click the **parameter's port** (red) to open the Compare Schema window.
 

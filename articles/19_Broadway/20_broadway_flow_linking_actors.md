@@ -164,7 +164,7 @@ A complex string handling flow:
 
 To view only the  Actors connected to the **Regex1** Actor, click ![image](images/99_19_dots.PNG) in the Actor's right corner > **Show only connected** . The following Actors are displayed:
 
-![image](images/show_connected_examples.png)
+<img src="images/show_connected_examples.png" alt="image" style="zoom:80%;" />
 
 [![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
 
