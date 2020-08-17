@@ -33,20 +33,16 @@ The **Subscribe** Actor should always listen to the same topic. The **Publish** 
 The timeout must be defined for the **Subscribe** Actor to indicate the time to wait for a new message. If the timeout elapses, the collection ends.
 
 The **Subscribe** Actor has two timeout related settings:
-
 * **poll_timeout**, the time to wait for a new message or the first message in a batch. If the timeout elapses, the collection ends. If set to -1, it waits forever.
 * **batch_timeout**, the duration the system waits to accumulate messages in a batch. After the first message, the system accumulates additional messages until the batch_timeout is reached or the batch is full (max_batch_records). If the timeout elapses, the system returns a batch with at least one available message and no more than the max_batch_records).
 
 When debugging the flow, the **Subscribe** Actor waits only 1 sec to prevent the [Debug run](../25_broadway_flow_window_run_and_debug_flow.md) from getting stuck.
-
 In a regular run, timeout can be controlled by setting it to the required elapsed time. It can also be set to -1, meaning an infinite wait for messages.
 
 ### Acknowledgement in Broadway Pub / Sub
 
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each mesage received:
-
 - In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
-
 - When not in Transaction, the acknowledgement is performed during the next received message. Meaning that if the server fails after reading the message, the same message is processed again.  
 
 
