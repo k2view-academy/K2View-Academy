@@ -53,7 +53,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
    **Cause**:  InnerFlowException: **Flow**: CheckZeroDiv **Level**: 1 Stage: **Stage 1 Actor**: ErrorMsg  class jdk.nashorn.internal.runtime.ECMAException **Cause**: Can't divide by zero!
 
-   <img src="images/99_24_06.PNG"/>
+   <img src="images/99_24_06.png"/>
 
 4. Several validations can be performed using different inner flows. For example, add a validation that input numbers are not negative and if yes - throw an exception and stop the flow. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
 
