@@ -2,7 +2,7 @@
 
 Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
-### How Do I Create a New User Job?
+# How Do I Create a New User Job?
 
 1. Go to the **Project Tree** > **LUT** > **Java** > **Utilities** and right click **New Function** to display the **Function Editor** window.
 
@@ -94,7 +94,6 @@ while (test<5 && !isAborted()){
 <p class="unchanged rich-diff-level-one">&nbsp;</p>
 <p class="unchanged rich-diff-level-one">&nbsp;</p>
 <p class="unchanged rich-diff-level-one"><code></code></p>
-
 
 ### How Do I Create a New Process Job?
 Process Jobs are batch files or scripts stored in the Fabric server and triggered manually.
