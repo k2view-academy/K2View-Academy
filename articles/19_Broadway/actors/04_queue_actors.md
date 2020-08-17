@@ -1,6 +1,4 @@
-# Queue Actors - Pub / Sub
-
-### Pub / Sub Overview
+# Pub / Sub Actors
 
 Broadway has a group of [built-in Actors](../04_built_in_actor_types.md) that manage Pub / Sub asynchronous message handling. 
 
@@ -84,4 +82,4 @@ The following example shows a Subscribe flow which includes a transaction. Durin
 ![image](../images/99_actors_04_3.PNG)
 
 
-[![Previous](/articles/images/Previous.png)](03_parsers_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](03_parsers_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_db_actors.md)
