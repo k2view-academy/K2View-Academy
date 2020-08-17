@@ -1,18 +1,14 @@
 # Pub / Sub Actors
 
 Broadway has a group of [built-in Actors](../04_built_in_actor_types.md) that manage Pub / Sub asynchronous message handling. 
-
 These Actors are:
-
 - **Publish** Actor, publishes messages using a message broker.
 - **Subscribe** Actor, subscribes to messages provided by a message broker.
 - **SubscribeBatch** Actor, similar to the **Subscribe** Actor but also reads messages in batches. 
 
- 
-The input arguments of these Actors correspond to the functionality of the supported message providers, whereby providing  Broadway users with Pub / Sub services.
+These Actors enable the Pub/Sub services functionality, whereby their input arguments correspond to the functionality of the supported message providers.
 
 Message provider types supported in Broadway are:
-
 * Apache Kafka.
 * JMS Queue and Topic by any JMS provider (for example, RabbitMQ or Active MQ).
 * Broker memory (in-memory queue), a Fabric internal queue without partitions that manages messages using a key.  
@@ -20,10 +16,7 @@ Message provider types supported in Broadway are:
 Publisher and the subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Pub / Sub
 **interface** of the Actor's input argument. 
 
-Some input arguments are relevant only for Kafka and some, only for JMS. 
-
-For example:
-
+Some input arguments are relevant only for Kafka and some, only for JMS. For example:
 -  The **key** input argument of the **Publish** Actor is relevant only for Kafka and is the key commonly used for partitioning. 
 -  The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. When left empty, the server generates a reply. 
 
@@ -31,13 +24,9 @@ Arguments not supported by the message provider can be left empty and be ignored
 
 The **topic** and other input arguments (such as **group_id**) can be left empty when a default topic is configured in the interface. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
-The message type to be processesd by the Broadway Pub / Sub functionality must be aligned with the **Data type** interface and is limited to: String, byte[], JSON, long. 
+The message type to be processesd by the Broadway Pub / Sub functionality must be aligned with the **Data type** interface and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
 
-The message type of an in-memory broker is not limited to any specific types.
-
-The **Subscribe** Actor should always listen to the same topic. 
-
-The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
+The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
 
 ### Timeout Setting
 
