@@ -10,13 +10,13 @@ Th **db** category of [built-in Actors](../04_built_in_actor_types.md) includes 
 
 Each of the **db** category Actors includes the setting of the **interface** input argument that can be either a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or a JDBC URL. 
 
-When executing queries, the query can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only in case it is a map. In case of ordered parameters, the **params** input argument should be an array or a single value (not a map).
+The query defined in the Actor can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
 ### How Can I Load the Data?
 
 The data can be loaded in a Broadway flow using either a **DbCommand** Actor or a **DbLoad** Actor.
 
-To load the data using the **DbCommand** Actor, write the SQL INSERT statement into the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the named parameters. For example:
+To load the data using the **DbCommand** Actor, write the SQL INSERT statement in the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the named parameters. For example:
 
 ​	`INSERT INTO DATA (TEXT) VALUES (${text} )`
 
