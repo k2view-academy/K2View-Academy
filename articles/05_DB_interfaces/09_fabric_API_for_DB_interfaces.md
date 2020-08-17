@@ -214,11 +214,11 @@ Iterating the result set and checking the column name and value for each record:
 ```java
 Db.Rows rows = db(..).fetch(...);
 row.forEach(r->{
-      // each r is a map that represents a row.
-      // Iteration order is guaranteed to follow the column order.
-                r.forEach((col,value)->{
-                        ...
-                });
+   // each r is a map that represents a row.
+   // Iteration order is guaranteed to follow the column order.
+   r.forEach((col,value)->{
+      ...
+   });
  });
 ```
 
