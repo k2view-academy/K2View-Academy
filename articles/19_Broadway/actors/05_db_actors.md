@@ -1,12 +1,12 @@
 # DB Commands Actors 
 
-Th **db** category of [built-in Actors](../04_built_in_actor_types.md) includes very useful Broadway Actors for performing the DB commands and actions, such as creating a new table, loading data or fetching it, or executing a DB command. These Actors are:
+Th **db** category of [built-in Actors](../04_built_in_actor_types.md) includes very useful Broadway Actors for performing the DB commands and actions, such as creating a new table, loading data or fetching it, or executing any other DB command. These Actors are:
 
 - **DbCommand** Actor, performs database commands against a DB interface. It has two extensions: 
   - **DbFetchField** Actor, returns the first field of the first row or null if not present.
   - **DbFetchFirstRow** Actor, returns the first row or an empty row if no result is present.
 - **DbCreateTable** Actor, creates a new database table.
-- **DbLoad** Actor, loads data into a database using INSERT, UPDATE or UPSERT where supported.
+- **DbLoad** Actor, loads data into a database using INSERT, UPDATE or UPSERT command.
 
 Each of the **db** category Actors includes the setting of the **interface** input argument that can be either a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or a JDBC URL. 
 
@@ -27,5 +27,20 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 ![image](../images/99_actors_05_1.PNG)
 
 
+
+### Example of How to Load the Data
+
+There are two alternatives how the data can be loaded in a Broadway flow:
+
+- Using **DbCommand** Actor.
+- Using **DbLoad** Actor.
+
+When the data is loaded to the DB using the **DbCommand** Actor, the **sql** input argument should include the SQL statement. For example:
+
+​	`INSERT INTO DATA (TEXT) VALUES (${text} )`
+
+Where **${text}** is replaced with the value of **text** input argument in the prepared statement.
+
+Another way to load the data in a Broadway flow is by using the **DbLoad** Actor. 
 
 [![Previous](/articles/images/Previous.png)](04_queue_actors.md)
