@@ -1,6 +1,6 @@
-# Jobs Commands
+# Job Commands
 
-The following Jobs commands are available in the Fabric Runtime Environment:
+The following Job commands are available in the Fabric runtime environment:
 
 
 <table width="900pxl">
@@ -92,11 +92,11 @@ The following Jobs commands are available in the Fabric Runtime Environment:
 <p>
 Starts the Job using arguments:
    
-- Affinity, UID and other Arguments are optional inputs.
+- Affinity, UID and other arguments are optional inputs.
 - Jobtype, BROADWAY, PROCESS, USER_JOB
 - Name, Job’s name.
-- args, a string represeting a JSON that passes additional arguments to the **start Job** command. For example, {"jobName":"jobTest"}.
-- Affinity, comm, definition of Jobs scheduling execution interval that supports three formats:
+- ARGS, a string represeting a JSON that passes additional arguments to the **start Job** command. For example, {"jobName":"jobTest"}.
+- Affinity, comm definition of Jobs scheduling execution interval that supports three formats:
   - Timestamp, yyyy-MM-dd HH:mm:ss, a one time only timedatetime that schedules a Job's execution. 
   - Time interval, HH:MM:SS to run the Job every X time.
   - Cron, combined **crontab** command. For example, 23 0-20/2 03 12 2. At minutes 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December.</p>
@@ -225,7 +225,7 @@ Updates properties of an existing Job:
 - EXEC_INTERVAL, definition of Job's scheduling execution interval, supports three formats:
   - Timestamp, yyyy-MM-dd HH:mm:ss a one-time only datetime for scheduling the Job's execution.
   - Time interval, HH:MM:SS, run every X time.
-  - Cron, <strong>crontab</strong> command: e.g. 23 0-20/2 03 12 2. At minute 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December.
+  - Cron, <strong>crontab</strong> command: e.g. 23 0-20/2 03 12 2. At minute 23 past every 2nd hour from 0 through 20 on day of month 3 and on Tuesday in December.
 - ARGS, string representing a JSON that passes additional arguments to the update Job command. For example {"userJobName":"userTest"}
 
 NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
