@@ -44,13 +44,13 @@ To do so, set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) i
 
 Note that the **luType** input argument includes the list of all Logical Units in the Project including the [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) and the References.
 
-##### LuFunction Actor
+#### LuFunction Actor
 
 **LuFunction** Actor is used when a Fabric [Project function](/articles/07_table_population/08_project_functions.md) needs to be invoked from a Broadway flow. This is also the way to write the business logic in Java rather than in JavaScript in Broadway. 
 
 After the **luType** input argument is set, the list of values in the **functionName** drop-down will be filtered by the LU name. It will display the functions of the selected LU and the Shared Object's functions. The Actor's input and output arguments will be updated with the inputs and output of the selected function.
 
-##### Graphit Actor
+#### Graphit Actor
 
 The purpose of **Graphit** Actor is to execute Graphit logic for data serialization. Parameters to the Graphit execution are picked up from input arguments or, if not there, from the **params** input argument.
 
@@ -58,7 +58,7 @@ After the **luType** input argument is set, the list of values in the **graphit*
 
 ### Broadway as a Population
 
-Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) replacing the complex Java code in the population logic by the Stages and Actors in the flow. 
+Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) replacing the complex Java code in the population logic by the [Stages](19_broadway_flow_stages.md) and [Actors](03_broadway_actor.md) in the flow. 
 
 To create the population based on the Broadway flow, right click the table name in the Project Tree and select **New Table Population Based Broadway Flow**. The population template is created and can be modify as needed.
 
