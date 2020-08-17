@@ -1,10 +1,9 @@
 # Jobs Management & Configuration
 
-Fabric provides a range of tools and informative data to manage jobs and configure Jobs management processes.
+Fabric provides a range of tools and informative data for configuring and managing Jobs and their processes.
 
-### How Do I Monitor Jobs at Fabric cluster level ?
-
-As described in the previous article, you can run the JOBSTATUS command from your fabric runtime environment to collect the full list of scheduled jobs for any given LU.
+### How Do I Monitor Jobs at a Fabric cluster Level?
+Run the JOBSTATUS command from your fabric runtime environment to get a full list of scheduled Jobs for any given LU.
 
 Example:
 
@@ -13,20 +12,53 @@ Example:
 Result:
 <img src="/articles/20_jobs_and_batch_services/images/06_jobs_and_batch_services_create_a_job_jobstatus.PNG"></img>
 
-- *Type:* Refers to the job's type (user_job, process, broadway)
-- *Status:* One of the following statuses defined [here](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#fabric-jobs-status).
-- *Time:* *Creation Time*, *Start Time* and *End Time* fields will provide the full timeline of the job's lifecycle.
-- *Affinity:* Displays the IP or name of the node/cluster or DC in charge of the execution of the Job.
-- *Next Run:* Displays the timestamp for the execution of a job or the next scheduled execution of a recurring job
-- *Notes:* Displays messages relevant to the job
-- *isArchived:* Is set automatically to *true* once the last run of a job has reached one of the following states: *terminated*, *failed*, *processed*
-- *Ownership Candidates Num:* Displays the number of Fabric nodes that can handle the job.
+<table style="width: 592px;">
+<tbody>
+<tr>
+<td style="width: 144.091px;">Type</td>
+<td style="width: 444.909px;">The Job's type like user_job, process or Broadway</td>
+</tr>
+<tr>
+<td style="width: 144.091px;">Status</td>
+<td style="width: 444.909px;">One of the following statuses defined&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_20_Jobs_and_Batches_Services_Greg/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#fabric-jobs-status">here</a></td>
+</tr>
+<tr>
+<td style="width: 144.091px;">Time</td>
+<td style="width: 444.909px;">Provides the timeline of the Job's lifecycle in the Creation Time,&nbsp;Start Time&nbsp;and&nbsp;End Time&nbsp;fields.</td>
+</tr>
+<tr>
+<td style="width: 144.091px;">Affinity</td>
+<td style="width: 444.909px;">Displays the IP or name of the node/cluster or DC responsible for the execution of the Job.</td>
+</tr>
+<tr>
+<td style="width: 144.091px;">Next Run</td>
+<td style="width: 444.909px;">
+<p>Displays the timestamp for the execution of a Job or the next scheduled execution of a recurring Job.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 144.091px;">Notes</td>
+<td style="width: 444.909px;">
+<p>Displays messages relevant to the job.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 144.091px;">&nbsp;isArchived</td>
+<td style="width: 444.909px;">Is set automatically to&nbsp;True&nbsp;once the last run of a Job has reached a&nbsp;terminated,&nbsp;failed or&nbsp;processed state.</td>
+</tr>
+<tr>
+<td style="width: 144.091px;">Ownership Candidates Num</td>
+<td style="width: 444.909px;">Displays the number of Fabric nodes that can handle the job.</td>
+</tr>
+</tbody>
+</table>
+<ul class="vicinity rich-diff-level-zero">
+ 
+For more information, go to:
 
-
-
-### How Do I Monitor Jobs from Cassandra Keyspace ?
+### How Do I Monitor Jobs from the Cassandra Keyspace?
 Each job is recorded in the k2_jobs table of the k2system keyspace.
-To do this, open up Cassandra CQLSH with the appropriate credentials, and execute a Select query:
+Open Cassandra CQLSH using the relevant credentials, and execute a Selct query:
 ``` select * from k2system.k2tables ```
 
 The table contains the following fields:
