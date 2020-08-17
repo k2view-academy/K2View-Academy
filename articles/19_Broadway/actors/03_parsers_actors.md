@@ -29,10 +29,10 @@ The following example shows how to read and parse a CSV file which includes a li
 
 The parser processes the file row by row validating the data at Stage 5 using the [**JavaScript** Actor's code](01_javascript_actor.md#special-keywords-and-conventions) - via the access to **flowArgs** arguments and the **contextLoop** object. When the required country is found, the iteration stops.
 
-```
+```java
 if (input1.CNTRY_CD == flowArgs.country_code) {
-  contextLoop.stop();
-  input1.AREA_CD;
+   contextLoop.stop();
+   input1.AREA_CD;
 }
 ```
 
