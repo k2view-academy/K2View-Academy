@@ -71,4 +71,4 @@ To create the population based on the Broadway flow, right click the table name 
 Interface Listener functionality is the enhancement of the Fabric Jobs which allows to define SFTP or a local file system listener for a Broadway flow. The Listener Job is attached to a Broadway flow and when a file with the predefined path arrives to the predefined interface, it triggers the flow.
 
 
-
+[![Previous](/articles/images/Previous.png)](06_export_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
