@@ -19,10 +19,10 @@ Job-related configuration variables can be set in this file that is saved in the
 
 Node and cluster-related configuration variables can be set in this file which is saved in the **k2view/config/node.ini** file.
 
-A set a number of logical names or node identifiers for the node can be defined in the **node.id** file in the **k2view/config**. Node identifiers can be used in the Job Affinity mechanism. 
+A set number of logical names or node identifiers for the node can be defined in the **node.id** file in the **k2view/config**. Node identifiers can be used in the Job Affinity mechanism. 
 
 Note that there can be more than one logical name since a node can have more than one logical role.
-The node UUID is unique and if left undefined, Fabric generates a random node while starting up the first time.
+The node UUID is unique and if left undefined, Fabric generates a random node when starting up the first time.
 
 Example
  ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
@@ -55,7 +55,7 @@ cluster_id: FabCluster1
 
 **Heartbeat**
 
-A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is set to 10 seconds.
+A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is 10 seconds.
 
 ```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - the hearbit has been set to 5 seconds.
 
@@ -66,7 +66,7 @@ The number of heartbeats that a Fabric node can miss before it is considered as 
 
 ```FABRIC_HEARTBEAT_MISS=12```
 
-- If the node has been down for 60 seconds (12 missed heartbits, each of 5 seconds), it is considered as unavailable and is not part of the pool during next Job allocation.
+- If the node has been down for 60 seconds (12 missed heartbeats of 5 seconds each), it is considered as unavailable and is not part of the pool during next Job allocation.
 
 The configuration of these parameters can be found in the **k2view/config/config.ini** file under the **Fabric Cluster** section. 
 The values of the nodes' heartbeats are systematically stored in Cassandra in the k2system.nodes table and can be queried from the cqlsh shell: 
