@@ -22,7 +22,7 @@ A Fabric Job process can be exposed across Fabric nodes and be run to execute sc
 
 A Job should be deployed to Fabric separately and then be invoked either by the node onto which it as been deployed or by other Fabric nodes that would have been allocated this Job by Cassandra distribution. 
 
-In the Fabric Studio, Job functions can be defined and saved to the project file and be deployed to the Fabric server.
+Job functions can be defined in the Fabric Studio, saved to the project file and be deployed to the Fabric server.
 
 For more information, click:
 - Different types of jobs, their mechanism and lifecycle.
