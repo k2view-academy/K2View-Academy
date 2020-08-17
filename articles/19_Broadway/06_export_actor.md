@@ -18,6 +18,7 @@ When an Actor is exported, a new Actor inherits its logic and arguments and also
 
 5. Click **SUBMIT**. 
    
+
 The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type.
 The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
@@ -61,5 +62,5 @@ Note that an override option only exists for inherited Actors. The product's [bu
 
 
 
-[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_integration_with_Fabric.md)
 

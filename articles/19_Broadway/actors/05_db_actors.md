@@ -12,15 +12,29 @@ Each of the **db** category Actors includes the setting of the **interface** inp
 
 When executing queries, the query can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only in case it is a map. In case of ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
+### How Can I Load the Data?
 
+The data can be loaded in a Broadway flow using either a **DbCommand** Actor or a **DbLoad** Actor.
 
-### DB Commands Example
+To load the data using the **DbCommand** Actor, write the SQL INSERT statement into the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the named parameters. For example:
+
+​	`INSERT INTO DATA (TEXT) VALUES (${text} )`
+
+Where **${text}** is replaced with the value of **text** input argument in the prepared statement.
+
+Another way to load the data in a Broadway flow is by using the **DbLoad** Actor. To do so, populate the Actor's input arguments:
+
+* **command**, select INSERT, UPDATE or UPSERT from the drop-down list.
+* **schema**, **table**, either type or click the **DB** button to select it via DB able Selection popup. 
+* **fields, keys**, if table was selected the fields and keys are automatically populated from the DB schema. Otherwise you can type the fields names.
+
+### DB Commands Examples
 
 The **db-commands.flow** example shows how **DbCommand** Actor can be used to perform various DB actions:
 
 * To create a table using the SQL provided in **sql** input argument.
-* To insert the data into the table using the **sql** input argument with names parameters marked as **${text}**. The parameters values are populated from the **params** input argument.
-* To select the data from the table using the **sql** input argument with order parameter marked as **?**. 
+* To insert the data into the table using the **sql** input argument with named parameters marked as **${text}**. The parameters values are populated from the **params** input argument.
+* To select the data from the table using the **sql** input argument with ordered parameter marked as **?**. 
 
 Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu) to open the **db-commands.flow** example. 
 
@@ -28,19 +42,6 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 
 
-### Example of How to Load the Data
 
-There are two alternatives how the data can be loaded in a Broadway flow:
-
-- Using **DbCommand** Actor.
-- Using **DbLoad** Actor.
-
-When the data is loaded to the DB using the **DbCommand** Actor, the **sql** input argument should include the SQL statement. For example:
-
-​	`INSERT INTO DATA (TEXT) VALUES (${text} )`
-
-Where **${text}** is replaced with the value of **text** input argument in the prepared statement.
-
-Another way to load the data in a Broadway flow is by using the **DbLoad** Actor. 
 
 [![Previous](/articles/images/Previous.png)](04_queue_actors.md)

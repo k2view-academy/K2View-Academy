@@ -1,10 +1,11 @@
 # Pub / Sub Actors
 
 Broadway has a group of [built-in Actors](../04_built_in_actor_types.md) that manage Pub / Sub asynchronous message handling. 
-These Actors are:
+These Actors belong to the **queue** category and they are:
+
 - **Publish** Actor, publishes messages using a message provider.
 - **Subscribe** Actor, subscribes to messages provided by a message provider.
-- **SubscribeBatch** Actor, subscribes to messages provided by a message provider and reads them in batches. 
+- **SubscribeBatch** Actor, subscribes to messages and reads them in batches. 
 
 Message provider types supported in Broadway are:
 * Apache Kafka.
@@ -13,19 +14,19 @@ Message provider types supported in Broadway are:
 
 ### Pub / Sub Input Arguments
 
-Publisher and Subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Actor's
-**interface** input argument. 
-
-The **topic** and other input arguments (such as **group_id**) can be left empty when a default topic is configured in the interface. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
-The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
-
-The Actors enable the Pub / Sub services functionality of the supported message providers, whereby their input arguments correspond to the functionality of these message providers. Some input arguments are relevant only for Kafka and some, only for JMS. For example:
+The **queue** category Actors enable the Pub / Sub services functionality of the supported message providers, whereby their input arguments correspond to the functionality of these message providers. Some input arguments are relevant only for Kafka and some, only for JMS. For example:
 -  The **key** input argument of the **Publish** Actor is relevant only for Kafka and is the key commonly used for partitioning. 
 -  The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. When left empty, the server generates a reply. 
 
+Publisher and Subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Actor's **interface** input argument. 
+
+The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
+
+The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
+
 Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
-The message type to be processesd by the Broadway Pub / Sub functionality must be aligned with the **Data type** interface and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
+The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** interface and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
 
 ### Timeout Setting
 
@@ -42,7 +43,7 @@ In a regular run, timeout can be controlled by setting it to the required elapse
 
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each message received:
 - In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
-- When not in Transaction, the acknowledgement is performed during the next received message. Meaning that if the server fails after reading the message, the same message is processed again.  
+- When not in Transaction, the acknowledgement is performed during the next received message. If the server fails after reading the message, the same message is processed again.  
 
 
 ### Pub / Sub Examples 
