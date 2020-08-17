@@ -234,25 +234,16 @@ rows.each(row-> yield(row.cells()));
 2. Using for loop:
 
 ```java
-Db.Rows rows = db(..).fetch(...);
-for (Db.Row row:rows) {
-	….
- }
-```
-
-Note that since you are not using the each/forEach method the ResultSet will not close immediately and is deferred to the end of the current execution (sync/webservice/job).
-
-To use a loop and control closure of the result set, use the try-resource structure:
-
-```java
 try (Db.Rows rows = db(..).fetch(...)) {
-      for (Db.Row row:rows) {
-      		…
-}
- } finally {
-	rows.close();
+   for (Db.Row row:rows) {
+      	
+   }
 } 
 ```
+
+Note that since you are not using the each/forEach method the ResultSet will not close at the end of the loop and is deferred to the end of the current execution (sync/webservice/job). The safet way to control closure of the result set, is to use the try-resource structure as seen above.
+
+
 
 ### Code Examples
 
@@ -263,12 +254,17 @@ String sql = "SELECT COUNT(*) AS TOT_NUM_OF_ORDERS FROM ORDERS WHERE CONTRACT_ID
 Db.Rows rows = ludb().fetch(sql, contractId, orderStatus);
 Integer noOfOrders = Integer.parseInt(rows.firstValue().toString());
 ```
+
+Note that calling firstValue also closes the result set.
+
 2. Select a single record from the DB. Use the **firstRow()** method to get the single record returned by the DB query.
 
 ```java
 String sql = "SELECT * from CONTRACT WHERE CONTRACT_ID = ? “;
 Db.Row row = ludb().fetch(sql, contractId).firstRow();
 ```
+
+Note that calling firstRow also closes the result set.
 
 3. [Root function](/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
 
@@ -280,7 +276,7 @@ rows.each(row-> yield(row.cells()));
 
 // Option 2- using for loop
 for (Db.Row row:rows) {
-	yield(row.cells());
+   yield(row.cells());
 }
 ```
 
@@ -290,8 +286,9 @@ for (Db.Row row:rows) {
 Db.Rows rows = ludb().fetch(sql);
    
 for (Db.Row row : rows) {
- if (row.cell(0) != null) // check the value of first column of the select statement
-  values.append("\"" + row.cell(0) + "\",");
+   if (row.cell(0) != null) { // check the value of first column of the select statement
+      values.append("\"" + row.cell(0) + "\",");
+   }
 }
 ```
 
