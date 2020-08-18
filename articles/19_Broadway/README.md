@@ -12,11 +12,12 @@
 <li><a href="actors/README.md">Actors Specifications and Examples</a></li>
 <li><a href="05_data_types.md">Data Types in Broadway</a></li>
 <li><a href="06_export_actor.md">Actor Inheritance Mechanism</a></li>
-<li><a href="07_broadway_integration_with_Fabric.md">Broadway Integration with Fabric</a></li>
+<li><a href="07_broadway_flow_linking_actors.md">Linking Actors in Broadway Flow</a></li>  
+<li><a href="08_show_only_connected_actors.md">Show Only Connected Actors</a></li>  
+<li><a href="09_broadway_integration_with_Fabric.md">Broadway Integration with Fabric</a></li>
 <li><a href="17_tutorial_and_flow_examples.md">Broadway Tutorial and Flow Examples</a></li>
 <li><a href="18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="19_broadway_flow_stages.md">Broadway Stages</a></li>
-<li><a href="20_broadway_flow_linking_actors.md">Linking Actors in Broadway Flow</a></li>  
 <li><a href="21_iterations.md">Iterations in Broadway</a></li>
 <li><a href="22_broadway_flow_inner_flows.md">Inner Flows</a></li>
 <li><a href="23_transactions.md">Transactions</a></li>
