@@ -213,12 +213,12 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="400pxl">
 
-<p>Resumes a previous Batch process by reprocessing all failed or unhandled entities if the Batch process has not been completed. Otherwise, it retries the failed entities only.
+<p>Resumes a previous Batch process by reprocessing all failed or unhandled entities, if the Batch process has not been completed. Otherwise, it retries the failed entities only. If the batch process was not completed before the retry command, Fabric gets the list of instances from the source DB. If the batch process was completed before the retry command, Fabric gets the list of failed entities from batchprocess_entities_errors Cassandra table.
 </p>
 </td>
 <td valign="top" width="300pxl">
 <p>
-  
+batch_retry ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’; 
 </p>
 </td>
 </tr> 
