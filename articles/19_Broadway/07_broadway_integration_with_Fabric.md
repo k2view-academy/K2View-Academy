@@ -75,7 +75,7 @@ GET ${luType}.${iid}
 
 Where **${luType}** and **${iid}** are replaced by the values of the input arguments in the prepared statement. 
 
-Set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument of the Actor and type the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the **iid** input argument.
+Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument of the Actor from the list of all Logical Units in the Project and type the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the **iid** input argument.
 
 ![image](images/99_07_FABRIC.PNG)
 
