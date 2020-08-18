@@ -42,12 +42,12 @@ The Root function’s main SELECT statement and loop over the SELECT results can
 
 **Example of the Generated Code of a Root Function** 
 
-<pre><code>
+~~~java
 String sql = "SELECT SSN, FIRST_NAME, LAST_NAME FROM CRM_DB.CUSTOMER";
 db("CRM_DB").fetch(sql, [val1], [val2], ...).each(row->{
-	yield(row.cells());
+   yield(row.cells());
 });
-</code></pre>
+~~~
 
 
 The Root function should be edited as follows:
@@ -57,14 +57,14 @@ The Root function should be edited as follows:
 
 **Example of the Edited Code of a Root Function** 
 
-<pre><code>
+~~~java
 String sql = 
 "SELECT SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER WHERE CUSTOMER_ID = ?";
 db("CRM_DB").fetch(sql, i_customer_id).each(row->{
-	//do something
-	yield(row.cells());
+   //do something
+   yield(row.cells());
 }
-</code></pre>
+~~~
  
 [Click to go to the Root Function’s Code Example.](/articles/07_table_population/11_2_root_functions_code_examples.md)
 

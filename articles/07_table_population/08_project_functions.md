@@ -31,8 +31,8 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 [Click for Code Examples of a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases)
 
 #### **Switch Function**
-*	A specific Fabric Project function used by Parsers to split records to populate more than one record type in the Parser map.
-*	A Switch function enables users to define different types of records for the same parser User Job. 
+*	A specific Fabric Project function used by [Parsers] to split records to populate more than one record type in the Parser map.
+*	A Switch function enables users to define different types of records for the same parser [User Job]. 
 * A specific Fabric function used by the [Job’s] mechanism. Jobs can only invoke functions of this type.
 
 
