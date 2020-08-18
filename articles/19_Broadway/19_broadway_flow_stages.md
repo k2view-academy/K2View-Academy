@@ -90,4 +90,4 @@ Depending on the flow input, the execution order of the Actors in this flow is:
 
 ![image](images/99_19_cond_example_1.PNG)
 
-[![Previous](/articles/images/Previous.png)](18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](20_broadway_flow_linking_actors.md)
+[![Previous](/articles/images/Previous.png)](18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
