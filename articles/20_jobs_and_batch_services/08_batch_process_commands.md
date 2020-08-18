@@ -110,7 +110,7 @@ This command migrates the customers that are defined in ‘ig10CustomersList’ 
 </td>
 <td valign="top" width="300pxl">
 
-<p></p>
+<p>batch Customer from fabric fabric_command='sync_instance Customer.?';</p>
 
 </td>
 </tr> 
