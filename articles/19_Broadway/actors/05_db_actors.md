@@ -1,6 +1,6 @@
 # DB Commands Actors 
 
-Broadway has a group of built-in **db** Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it, or executing other DB commands. These Actors are:
+Broadway has a group of built-in **db** Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
 - **DbCommand** Actor, performs database commands against a DB interface. It has two extensions: 
   - **DbFetchField** Actor, returns the first field of the first row or null if not present.
   - **DbFetchFirstRow** Actor, returns the first row or an empty row if no result is present.
