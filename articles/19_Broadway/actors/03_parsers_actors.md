@@ -21,13 +21,13 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 The **CsvParser** Actor analyzes an input stream and returns an array of objects whereby each array row is a row of the input CSV stream. The Parser runs until it detects the end of the stream.
 
-If the **header** input argument is set to true, the Actor uses the first row as a header row. In this case, the labels in the header are used to mark the row object.
+If the **header** input argument is set to True, the Actor uses the first row as a header row. In this case, the labels in the header are used to mark the row object.
 
 Parsers are usually followed by an iteration that allow iterating over each row in the parser's output object consecutively.
 
 ### Parser Flow Example
 
-The following example shows how to read and parse a CSV file which includes a list of countries and their area codes, and to find an area code of a specific country provided as external input argument. 
+The following example shows how to read and parse a CSV file which includes a list of countries and their area codes, to find an area code of a specific country provided as external input argument. 
 
 ![image](../images/99_actors_03_2.PNG)
 
@@ -44,7 +44,7 @@ if (input1.CNTRY_CD == flowArgs.country_code) {
 
 Additional parsers supported by Broadway are:
 
-* **Base64Decode** / **Base64Encode** Actors, analyze an input and outputs it as an encoded string or a decoded buffer.
+* **Base64Decode** / **Base64Encode** Actor, analyzes an input and outputs it as an encoded string or a decoded buffer.
 * **FixedColumnParser** Actor, traverses an incoming stream and for each line parses the columns using their fixed position in the line.
 * **LinesParser** Actor, traverses an incoming stream and outputs individual lines.
 * **XmlParser Actor**, analyzes an input stream and outputs the objects found in the stream.
