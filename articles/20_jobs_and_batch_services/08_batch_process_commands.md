@@ -246,7 +246,7 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="400pxl">
 
-<p>Run the batch process on a list of instances defined with a function</p>
+<p>Runs the batch process on a list of instances which will be then saved with a name defined within a function</p>
 <p>
 1) batchf &ltLUT>[@&ltDC&gt].&ltfunction&gt() FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
