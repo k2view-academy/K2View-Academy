@@ -129,9 +129,7 @@ The  following image illustrates the different stages of a Job's lifecycle and t
    -  **restartjob**
    -  **resumejob**
 
-
 <img src="/articles/20_jobs_and_batch_services/images/01_jobs_and_batch_services_status_flow.PNG">
-
 
 
 # **Fabric Nodes and Jobs Processes** 
