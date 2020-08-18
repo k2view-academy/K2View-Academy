@@ -387,6 +387,7 @@ Use this command to migrate a selective list of instances defined by a function.
 </p>
 </td>
 </tr>  
-
+</tbody>
+<table>
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/07_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
