@@ -150,7 +150,7 @@ Displays the status of instances of a given Batch process ID:
 - LIMIT, default LIMIT defined in the config.ini if no LIMIT is provided as an argument. </p>
 </td>
 <td valign="top" width="300pxl">
-<p></p>
+<p>batch_details 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
 </td>
 </tr> 
 
