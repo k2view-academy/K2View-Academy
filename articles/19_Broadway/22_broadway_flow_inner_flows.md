@@ -14,7 +14,7 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
 **Example of Saving an Actor and Using it in Another Flow**
 
-1. Create a flow that incapsulates a specific business logic. For example, give two input numbers, divide a bigger number by a smaller number. 
+1. Create a flow that incapsulates a specific business logic. For example, given two input numbers, divide a bigger number by a smaller number. 
 
    ![image](images/99_22_01.PNG)
 
