@@ -91,7 +91,7 @@ In a flow there may be a need to concatenate several strings into a single strin
   - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
 
 
-### How Do I Add Links to the Flow?
+### How Do I Edit Links in the Flow?
 
 To create a **Link**, do either:
 
@@ -100,6 +100,10 @@ To create a **Link**, do either:
 - Click ![image](images/99_19_dots.PNG) in the source [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) > **Link**. Populate the **Target Actor**, **Target Parameter** and the **Selection Parameter** (source parameter) and then click **V** to save the changes. It is recommended to use this option when the Actors are far from each other in the flow.
 
    ![Adding link](images/99_20_add_link_1.PNG)
+   
+To delete a **Link**, click the link's connection line and press **Delete** on your keyboard.
+
+To edit a **Link**, click the link's connection line to open the [Link Object Properties window](07_broadway_flow_linking_actors.md#link-object-properties) and edit the **Link Type** or **Varargs** settings.
 
 ### Linking a Schema Object
 
@@ -140,14 +144,6 @@ To connect a specific element in the Schema, click ![image](images/99_27_red_cro
     ![Adding link](images/99_20_add_link_2.PNG)
 
 A Schema can be connected to another Actor. For example, connecting the output Schema to the **params** input parameter of the **DbLoad** Actor. Note that if a specific element of the Data Inspection object is connected to another input parameter of the **DbLoad** Actor, the specific link overrides the link of the Schema to the **params** input parameter.  
-
-### How Do I Remove Links from the Flow?
-
-Click the link's connection line and press **Delete** on your keyboard.
-
-### How Do I Edit Links in the Flow?
-
-Click the link's connection line to open the [Link Object Properties window](20_broadway_flow_linking_actors.md#link-object-properties) on the right of the Flow window. Edit the **Link Type** or **Varargs** settings.
 
 
 
