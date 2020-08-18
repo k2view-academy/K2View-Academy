@@ -223,6 +223,29 @@ batch_retry ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 </td>
 </tr> 
 
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>cancel batch ['&ltbatch id&gt']</h5>
+</td>
+<td valign="top" width="400pxl">
+<p>
+This commands cancels the last started batch process coordinated by the current node. Basically, the *cancel* command needs to be executed from the node that started the operation. 
+When adding the '&ltbatch id&gt' parameter, the batch processed with the defined batch id will be cancelled. In that case, there is no need to run the *cancel* command from the node coordinating the specific batch process.
+
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+Cancel batch;
+</p>
+Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+</p>
+</td>
+</tr> 
+
+
+
 <tr>
 <td valign="top" width="300pxl">
 <h5>batch_summary '&ltbatch id&gt'</h5>
@@ -421,6 +444,33 @@ Use this command to migrate a selective list of instances defined by a function.
 </p>
 </td>
 </tr>  
+
+
+<tr>
+<td valign="top" width="500pxl">
+<h5>
+migrate_resume '&ltmigrate id&gt';
+</h5>
+</td>
+<td valign="top" width="400pxl">
+   
+<p>
+Resumes a migrate command by processing all failed or non-handled instances from previous executions.
+</p>
+   
+</td>
+<td valign="top" width="300pxl">
+<p>
+migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
+</p>
+</td>
+</tr>
+
+
+
+
+
+
 </tbody>
 </table>
 
