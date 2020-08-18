@@ -20,7 +20,7 @@ Fabric Jobs can be one of the following categories:
  # **What is a Fabric Job ?** 
 A Fabric Job process can be exposed across Fabric nodes and be run to execute scripts, flows or functions according to a specific schedule or once only.
 
-A Job should be deployed to Fabric separately and then be invoked either by the node onto which it has been deployed or by other Fabric nodes that would have been allocated to this Job by Cassandra distribution. 
+A Job must be deployed to Fabric so that it can be invoked either by the node onto which it has been deployed or by any other Fabric nodes allocated by Cassandra distribution engine. 
 
 Job functions can be defined in the Fabric Studio, saved to the project file and be deployed to the Fabric server.
 
