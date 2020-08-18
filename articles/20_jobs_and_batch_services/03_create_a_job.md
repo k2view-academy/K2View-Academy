@@ -99,9 +99,9 @@ Process Jobs are batch files or scripts stored in the Fabric server and triggere
 
 ```bash
 #!/bin/bash
-echo "Total arguments : $#"
+echo "Total Arguments : $#"
 echo "1st Argument = $1"
-echo "2nd argument = $2"
+echo "2nd Argument = $2"
 ```
 
    -  Go to the Fabric runtime command line and execute the following command:
