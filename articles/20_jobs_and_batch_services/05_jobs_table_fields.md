@@ -2,7 +2,7 @@
 
 Fabric provides a range of tools and informative data for configuring and managing Jobs and their processes.
 
-### How Do I Monitor Jobs at a Fabric cluster Level?
+## How Do I Monitor Jobs at a Fabric Cluster Level?
 Run the JOBSTATUS command from your fabric runtime environment to get a full list of scheduled Jobs for any given LU.
 
 Example:
@@ -56,7 +56,7 @@ Result:
  
 For more information, go to:
 
-### How Do I Monitor Jobs from the Cassandra Keyspace?
+## How Do I Monitor Jobs from the Cassandra Keyspace?
 Each job is recorded in the k2_jobs table of the k2system keyspace.
 Open Cassandra CQLSH using the relevant credentials, and execute a Selct query:
 ``` select * from k2system.k2tables ```
@@ -69,12 +69,12 @@ type, name, uid, affinity, archived, arguments, creation_time, end_time, error_m
 
 
 
-#### Worker_ID
+### Worker_ID
 <img src="/articles/20_jobs_and_batch_services/images/10_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
 
 
-#### Error_msg
+### Error_msg
 <img src="/articles/20_jobs_and_batch_services/images/11_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/04_jobs_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/06_jobs_configuration.md)
