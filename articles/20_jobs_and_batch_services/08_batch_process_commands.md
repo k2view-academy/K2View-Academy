@@ -132,6 +132,24 @@ This command migrates the customers that are defined in ‘ig10CustomersList’ 
 
 </td>
 </tr> 
+</table>
+
+
+## Batch Monitoring Commands Summary
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Command Name</strong></p>
+</td>
+<td valign="top" width="400pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+</tr>
 
 <tr>
 <td valign="top" width="300pxl">
@@ -296,7 +314,6 @@ Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 </td>
 </tr> 
 </table>
-
 
 ## Batch Commands Examples
 
