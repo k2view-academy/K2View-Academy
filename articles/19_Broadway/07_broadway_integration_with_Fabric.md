@@ -69,7 +69,7 @@ The **sql** input argument displays the command to be executed on the Fabric int
 
 For example, **FabricGet** Actor displays the command:
 
-~~~ java
+~~~
 GET ${luType}.${iid}
 ~~~
 
