@@ -56,6 +56,26 @@ The purpose of **Graphit** Actor is to execute Graphit logic for data serializat
 
 After the **luType** input argument is set, the list of values in the **graphit** drop-down is filtered by the LU name. The Actor's input and output arguments are updated with the inputs and output of the selected Graphit resource.
 
+### Fabric Commands Actors
+
+Broadway provides the **fabric** category of [built-in Actors](../04_built_in_actor_types.md) which purpose is to perform the Fabric commands. 
+
+* **FabricGet** Actor performs the GET command on the current Fabric session
+* **FabricSet** Actor sets a value on the Fabric session.
+* **FabricSetRead** Actor read a key from the Fabric session.
+
+These Actors include a read-only **sql** input argument which displays the command to be executed on the Fabric interface. 
+
+For example, **FabricGet** Actor displays the command:
+
+~~~ java
+GET ${luType}.${iid}
+~~~
+
+Where **${luType}** and **${iid}** are replaced by the values of the input arguments in the prepared statement.
+
+![image](images/99_07_FABRIC.PNG)
+
 ### Broadway as a Population
 
 Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) replacing the complex Java code in the population logic by the [Stages](19_broadway_flow_stages.md) and [Actors](03_broadway_actor.md) in the flow. 
@@ -69,6 +89,10 @@ To create the population based on the Broadway flow, right click the table name 
 ### Interface Listener For Broadway Flows
 
 Interface Listener functionality is the enhancement of the Fabric Jobs which allows to define SFTP or a local file system listener for a Broadway flow. The Listener Job is attached to a Broadway flow and when a file with the predefined path arrives to the predefined interface, it triggers the flow.
+
+![image](images/99_07_JOBS.PNG)
+
+
 
 
 [![Previous](/articles/images/Previous.png)](06_export_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
