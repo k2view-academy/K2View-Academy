@@ -1,4 +1,4 @@
-# Broadway Flow - Linking Actors
+# Linking Actors
 
 **A Broadway Flow** is a main Broadway object that represents a business process. A flow has several [Stages](16_broadway_flow_overview.md) where each Stage includes one or more [Actors](03_broadway_actor.md). Stages are executed consecutively from left to right whereas the Actors in each Stage of the flow are executed top-down.
 
@@ -8,7 +8,7 @@ Each actor has [data input and output parameters](03_broadway_actor_window.md#ac
 - **Const**, a constant value that is set for the parameter.
 - **External**, which gets an input value as a parameter from an external process that executes the Broadway flow.
 
-The output of a source Actor can be linked to the input of a target Actor that runs after the source Actor.
+The output of a source Actor should be linked to the input of a target Actor that runs after the source Actor.
 
 Note that an Actor can only be linked to input parameters with Population Type = **Link**.
 
@@ -18,7 +18,7 @@ Two **Const** Actors are linked to a **DbCommand** Actor and send input for a DB
 
 ![link-example1](images/valid_link_example.png)
 
-This link is valid since the source Const Actors run before the target DbCommand Actor.
+This link is valid since the source **Const** Actors run before the target **DbCommand** Actor.
 
 **Example 2: Invalid Link**
 
@@ -26,7 +26,7 @@ A **Const** Actor named FileName sends the file name as a parameter to the **Fil
 
 ![link-example2](images/invalid_link_example.png)
 
-## Link Object Properties
+### Link Object Properties
 
 A link holds the following settings:
 
@@ -91,7 +91,7 @@ In a flow there may be a need to concatenate several strings into a single strin
   - When the Varargs of one of these links is set to OFF, the target array returns to its original type as created by Varargs and removes other links to this target parameter.
 
 
-## How Do I Add Links to the Flow?
+### How Do I Add Links to the Flow?
 
 To create a **Link**, do either:
 
@@ -141,30 +141,15 @@ To connect a specific element in the Schema, click ![image](images/99_27_red_cro
 
 A Schema can be connected to another Actor. For example, connecting the output Schema to the **params** input parameter of the **DbLoad** Actor. Note that if a specific element of the Data Inspection object is connected to another input parameter of the **DbLoad** Actor, the specific link overrides the link of the Schema to the **params** input parameter.  
 
-## How Do I Remove Links from the Flow?
+### How Do I Remove Links from the Flow?
 
 Click the link's connection line and press **Delete** on your keyboard.
 
-## How Do I Edit Links in the Flow?
+### How Do I Edit Links in the Flow?
 
 Click the link's connection line to open the [Link Object Properties window](20_broadway_flow_linking_actors.md#link-object-properties) on the right of the Flow window. Edit the **Link Type** or **Varargs** settings.
 
-## Show Only Connected Objects
 
-Click ![image](images/99_19_dots.PNG) > **Show only connected** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu) to display only Actors linked to this Actor.
-Click **Show only connected** again to remove this filter and display all Actors in the flow.
-
-This option is useful when tracking complex flows.
-
-**Example:**
-
-A complex string handling flow:
-
-<img src="images/string_flow_example.png" alt="String flow" style="zoom:80%;" />
-
-To view only the  Actors connected to the **Regex1** Actor, click ![image](images/99_19_dots.PNG) > **Show only connected** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu). The following Actors are displayed:
-
-<img src="images/show_connected_examples.png" alt="image" style="zoom:80%;" />
 
 [![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
 
