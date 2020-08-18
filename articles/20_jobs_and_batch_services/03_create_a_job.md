@@ -40,7 +40,7 @@ while (test<5 && !isAborted()){
 
 6. In the **Job table**, enter the values pertaining to the Job.
 
-<table style="width: 606px; height: 193px;">
+<table style="width: 900px; height: 193px;">
 <tbody>
 <tr>
 <td style="width: 300px"><strong>Method</strong></td>
@@ -76,8 +76,8 @@ while (test<5 && !isAborted()){
 </td>
 </tr>
 <tr>
-<td style="width: 141.545px;"><strong>Affinity</strong></td>
-<td style="width: 450.455px;">
+<td style="width: 300px;"><strong>Affinity</strong></td>
+<td style="width: 600px;">
 <p class="unchanged rich-diff-level-one">Where the details of the node assigned to the job are entered. Affinity can be set using either one of the following options:</p>
 <ul class="unchanged rich-diff-level-one">
 <li class="unchanged">IP address of a Fabric node.</li>
