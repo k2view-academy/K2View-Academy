@@ -377,9 +377,13 @@ fabric>batch Customer from CRM_DB USING('select customer_id from Customer where 
 |83fade2f-2ae6-4359-8b7a-bdd1866d2191|10                 |0               |10   |1       |83fade2f-2ae6-4359-8b7a-bdd1866d2191|
 ```
 
-## Migrate Commands - Legacy Support
-The Migrate command is a particular use-case of the batch command  that deals exclusively with the migration of instances into Fabric Database. Behind the scenes, Fabric activates the batch command when running migrate command:
-It is equivallent to running the batch command without the *FABRIC_COMMAND* parameter:
+## Legacy Support
+
+### Migrate Commands
+The Migrate command is a particular use-case of the batch command  that deals exclusively with the migration of instances into Fabric Database. 
+Behind the scenes, Fabric activates the batch command when running the migrate command. All the verbose defined for the batch process commands can be applied to the *Migrate* command without specifying the *FABRIC_COMMAND* parameter.
+For example:
+The 2 following commands are equivallent.
 ``` batch <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
 
 Using the same example as above:
@@ -398,7 +402,7 @@ batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";```
 |99   |0      |0        |0     |99   |875     |
 ```
 
-## migratef commands 
+### migratef command 
 
 The migratef command enable the migration of a selective list of instances by function. 
 
