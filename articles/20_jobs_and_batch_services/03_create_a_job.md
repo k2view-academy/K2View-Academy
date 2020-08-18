@@ -43,24 +43,24 @@ while (test<5 && !isAborted()){
 <table style="width: 606px; height: 193px;">
 <tbody>
 <tr>
-<td style="width: 141.545px;"><strong>Method</strong></td>
-<td style="width: 450.455px;">Where the name of the User Job Function defined in Step 4 is associated to the Job.</td>
+<td style="width: 300px"><strong>Method</strong></td>
+<td style="width: 600px">Where the name of the User Job Function defined in Step 4 is associated to the Job.</td>
 </tr>
 <tr>
-<td style="width: 141.545px;"><strong>Unique Job Name</strong></td>
-<td style="width: 450.455px;">Where the unique name for the Job service is defined and used for all manual or system operations executed on this job.</td>
+<td style="width: 300px;"><strong>Unique Job Name</strong></td>
+<td style="width: 600px;">Where the unique name for the Job service is defined and used for all manual or system operations executed on this job.</td>
 </tr>
 <tr>
-<td style="width: 141.545px;"><strong>Execution Mode</strong></td>
-<td style="width: 450.455px;">Can be set to either&nbsp;<strong>automatically</strong>&nbsp;or&nbsp;<strong>manually</strong>&nbsp;depending on whether the Job service is started from the Command Line or is managed by Fabric.</td>
+<td style="width: 300px;"><strong>Execution Mode</strong></td>
+<td style="width: 600px;">Can be set to either&nbsp;<strong>automatically</strong>&nbsp;or&nbsp;<strong>manually</strong>&nbsp;depending on whether the Job service is started from the Command Line or is managed by Fabric.</td>
 </tr>
 <tr>
-<td style="width: 141.545px;"><strong>Active</strong></td>
-<td style="width: 450.455px;">When checked, the Job is run and deployed.</td>
+<td style="width: 300px;"><strong>Active</strong></td>
+<td style="width: 600px;">When checked, the Job is run and deployed.</td>
 </tr>
 <tr>
-<td style="width: 141.545px;"><strong>Schedule Type</strong></td>
-<td style="width: 450.455px;">
+<td style="width: 300px;"><strong>Schedule Type</strong></td>
+<td style="width: 600px;">
 <p>There are three schedule modules:</p>
 <ul class="unchanged rich-diff-level-one">
 <li class="unchanged">
