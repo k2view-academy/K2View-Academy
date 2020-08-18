@@ -7,7 +7,7 @@ Broadway has a group of built-in **db** Actors that are useful for performing DB
 - **DbCreateTable** Actor, creates a new database table.
 - **DbLoad** Actor, loads data into a database using an INSERT, UPDATE or UPSERT command.
 
-Each **db** Actor category includes setting an **interface** input argument that can be either a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or a JDBC URL. 
+Each **db** Actor category requires setting an **interface** input argument that can be either a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or a JDBC URL. 
 
 The query defined in the Actor can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
@@ -25,7 +25,7 @@ Another way to load the data in a Broadway flow is by using the **DbLoad** Actor
 
 * **command**, select INSERT, UPDATE or UPSERT from the dropdown list.
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
-* **fields, keys**, if a table has been selected, the fields and keys are automatically populated from the DB schema. If not, type in the fields names.
+* **fields, keys**, if a table has been selected, the fields and keys are automatically populated from the DB schema. If not, type in the field names.
 
 ### DB Commands Examples
 
