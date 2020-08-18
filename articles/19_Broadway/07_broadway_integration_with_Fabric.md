@@ -58,13 +58,14 @@ After the **luType** input argument is set, the list of values in the **graphit*
 
 ### Fabric Commands Actors
 
-Broadway provides the **fabric** category of [built-in Actors](../04_built_in_actor_types.md) which purpose is to perform the Fabric commands. 
+Broadway provides the **fabric** category of [built-in Actors](../04_built_in_actor_types.md) which purpose is to execute the Fabric commands. 
 
-* **FabricGet** Actor performs the GET command on the current Fabric session
+* **FabricGet** Actor executes the GET command on the current Fabric session.
 * **FabricSet** Actor sets a value on the Fabric session.
-* **FabricSetRead** Actor read a key from the Fabric session.
+* **FabricSetRead** Actor reads a key from the Fabric session.
 
-These Actors include a read-only **sql** input argument which displays the command to be executed on the Fabric interface. 
+The **interface** input argument of the Actors should include [Fabric or Fabric Remote interface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md). 
+The **sql** input argument displays the command to be executed on the Fabric interface. This argument is read-only and it contains named params using ${} notation. 
 
 For example, **FabricGet** Actor displays the command:
 
@@ -72,7 +73,9 @@ For example, **FabricGet** Actor displays the command:
 GET ${luType}.${iid}
 ~~~
 
-Where **${luType}** and **${iid}** are replaced by the values of the input arguments in the prepared statement.
+Where **${luType}** and **${iid}** are replaced by the values of the input arguments in the prepared statement. 
+
+Set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument of the Actor and type the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the **iid** input argument.
 
 ![image](images/99_07_FABRIC.PNG)
 
