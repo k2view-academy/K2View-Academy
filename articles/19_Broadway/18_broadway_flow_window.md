@@ -211,7 +211,7 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 
 [Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 
-Note that if the [link between two Actors](20_broadway_flow_linking_actors.md#link-object-properties) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
+Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
 
 
 [![Previous](/articles/images/Previous.png)](17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](19_broadway_flow_stages.md)
