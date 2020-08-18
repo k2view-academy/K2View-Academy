@@ -52,7 +52,6 @@ Result:
 </tr>
 </tbody>
 </table>
-<ul class="vicinity rich-diff-level-zero">
  
 For more information, go to:
 
