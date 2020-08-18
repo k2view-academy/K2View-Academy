@@ -2,7 +2,7 @@
  
 In Broadway, the Error Handling mechanism can be used to assign an **Error Handler** to any [Stage](19_broadway_flow_stages.md) of a flow. 
 
-Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a **JavaScript** Actor, custom logic can be included in the **script's** input parameter.
+Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
 
 - When an error handler returns true, the flow continues.
 
