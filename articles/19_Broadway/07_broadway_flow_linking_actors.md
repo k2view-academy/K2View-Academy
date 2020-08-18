@@ -151,5 +151,5 @@ Click the link's connection line to open the [Link Object Properties window](20_
 
 
 
-[![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
+[![Previous](/articles/images/Previous.png)](06_export_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_show_only_connected_actors.md)
 
