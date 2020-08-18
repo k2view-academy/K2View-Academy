@@ -24,7 +24,7 @@ The following table presents a list of Actor's categories with examples per each
 <h4><a id="user-content-favorites" class="anchor" href="04_built_in_actor_types.md#favorites" aria-hidden="true"></a><strong>Favorites</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
-<p>Most commonly used Actors. </p>
+<p>Most commonly used Actors.</p>
 <p>Favorites is not a separate category. Each Actor in Favorites belongs to a category.</p>
 </td>
 <td style="vertical-align: top;" width="600">
@@ -95,6 +95,16 @@ The following table presents a list of Actor's categories with examples per each
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
+<h4><strong>fabric</strong></h4>
+</td>
+<td style="vertical-align: top;" width="433">Actors which execute the Fabric commands.</td>
+<td style="width: 600px; vertical-align: top;" width="600">
+<p><strong><span class="md-pair-s md-expand"><span class="md-plain">FabricGet</span></span></strong><span class="md-plain md-expand"> Actor performs the GET command on the current Fabric session.</span></p>
+<p><span class="md-plain md-expand"><strong>FabricSet</strong> Actor sets a value on the Fabric session.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;" width="210">
 <h4><a id="user-content-logic" class="anchor" href="04_built_in_actor_types.md#logic" aria-hidden="true"></a><strong>logic</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">Logical operation on Actors<strong> A</strong> and <strong>B</strong> which returns a <strong>True</strong> or <strong>False</strong> boolean result.
@@ -110,6 +120,16 @@ The following table presents a list of Actor's categories with examples per each
 <p><strong>And</strong> Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
 <p><strong>Elvis</strong> Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise returns B.</p>
 <p><strong>IfElse</strong> Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;" width="210">
+<h4><strong>masking</strong></h4>
+</td>
+<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email.</td>
+<td style="width: 600px; vertical-align: top;" width="600">
+<p><strong>MaskingSSN</strong> Actor,&nbsp;masks the original SSN number with a valid fake SSN.</p>
+<p><strong>MaskingCreditCard</strong> Actor,&nbsp;generates fake but valid credit card number similar to original card type.</p>
 </td>
 </tr>
 <tr>
@@ -194,5 +214,6 @@ The following table presents a list of Actor's categories with examples per each
 </tr>
 </tbody>
 </table>
+
 
 [![Previous](/articles/images/Previous.png)](03_broadway_actor_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_types.md)
