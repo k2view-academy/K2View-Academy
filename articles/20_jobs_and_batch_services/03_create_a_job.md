@@ -2,7 +2,7 @@
 
 Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
-# How Do I Create a New User Job?
+## How Do I Create a New User Job?
 
 1. Go to the **Project Tree** > **LUT** > **Java** > **Utilities** and right click **New Function** to display the **Function Editor** window.
 
@@ -115,14 +115,14 @@ echo "2nd argument = $2"
   - INTERVAL, refers to the frequency of the job's occurence; in this case every 3 seconds.
 
 
-### How Do I Create a New Broadway Job?
+## How Do I Create a New Broadway Job?
 The Fabric Jobs mechanism also enables running a Broadway flow.
 Set the **Job** type to **broadway_job** and the name of the flow with a list of its arguments.
 
 Example: 
 ```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
 
-### How Do I Create a New CDC Job?
+## How Do I Create a New CDC Job?
 Fabric can execute CDC Jobs (Change Data Capture) to notify external systems about data changes. 
 Jobs can also execute cross-instance searches using Fabric's Search capability.
  
