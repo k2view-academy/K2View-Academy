@@ -321,14 +321,21 @@ fabric>batch Customer from CRM_DB USING('select customer_id from Customer where 
 ```
 
 ## Migrate Commands - Legacy Support
-The Migrate command is a particular use-case of the batch command dealing with the synchronization of instances.
+The Migrate command is a particular use-case of the batch command  that deals exclusively with the migration of instances into Fabric Database. Behind the scenes, Fabric activates the batch command when running migrate command:
 It is equivallent to running the batch command without the *FABRIC_COMMAND* parameter:
 ``` batch <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
 
 Using the same example as above:
-
+```
 fabric>migrate Customer.customer_IG_600To700;
 ```
+The results will be the same as when running the batch command: 
+
+```
+batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";``` 
+```
+```
+
 |Added|Updated|Unchanged|Failed|Total|Duration|
 +-----+-------+---------+------+-----+--------+
 |99   |0      |0        |0     |99   |875     |
@@ -336,8 +343,50 @@ fabric>migrate Customer.customer_IG_600To700;
 
 ## batchf & migratef commands 
 
-migratef              |
+The migratef command enable the migration of a selective list of instances by function. 
 
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Command Name</strong></p>
+</td>
+<td valign="top" width="400pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+
+<tr>
+<td valign="top" width="500pxl">
+<h5>
+MigrateF – migrate a list of instances by function.
+Use this command to migrate a selective list of instances defined by a function.</h5>
+</td>
+<td valign="top" width="400pxl">
+   
+<p>
+1) migratef <LUT>[@<DC>].<function>().<IG> [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];</p>
+
+<p>2) migratef <LUT>[@<DC>].<function>() from <db_interface> using ('<SQL>') [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];</p>
+<p>  
+3) migratef <LUT>[@<DC>].<function>().(<Instance 1, Instance 2, etc...>) [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];</p>
+   
+</td>
+<td valign="top" width="300pxl">
+<p>
+   1) migratef P7.migrateFtest4().ig20;
+</p>
+<p>   
+2) migratef P1@DC1.migrateFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894');
+</p>
+<p>
+3) migratef P7.migrateFtest4().(‘1’,’2’,’3’);
+</p>
+</td>
+</tr>  
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/07_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
