@@ -162,7 +162,7 @@ A complex string handling flow:
 
 <img src="images/string_flow_example.png" alt="String flow" style="zoom:80%;" />
 
-To view only the  Actors connected to the **Regex1** Actor, click ![image](images/99_19_dots.PNG) in the Actor's right corner > **Show only connected** . The following Actors are displayed:
+To view only the  Actors connected to the **Regex1** Actor, click ![image](images/99_19_dots.PNG) > **Show only connected** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu). The following Actors are displayed:
 
 <img src="images/show_connected_examples.png" alt="image" style="zoom:80%;" />
 
