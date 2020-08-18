@@ -50,7 +50,7 @@ A link holds the following settings:
 </li>
 <li class="unchanged">
 <p class="unchanged"><strong>Iterate</strong>, opens a loop on the transferred parameter. When set, the link line is displayed as a double-dashed line. Note that if an array is linked to an output with a single element of the same type - for example, linking an array of string to a string output - the link is created automatically with an <strong>Iterate</strong> link type.</p>
-<p class="unchanged"><a href="21_iterations.md">Click for more information about handling loops.</a></p>
+<p class="unchanged"><a href="21_iterations.md">Click for more information about handling iterations.</a></p>
 </li>
 <li class="unchanged">
 <p class="unchanged"><strong>First</strong>, sends the first value of the parameter. For example, sends the first record of the result set.</p>
