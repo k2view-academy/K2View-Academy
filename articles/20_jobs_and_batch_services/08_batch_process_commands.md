@@ -2,19 +2,19 @@
 
 The following Batch commands are available in the Fabric Runtime environment:
 
-**Migrate**
+**For Instances Migration Process**
 
-BATCH LUT ('*LUI1*','*LUI2*','*LUI3*','*LUI4*') *FABRIC_COMMAND*="sync_instance LUT.?" with ASYNC='true';
-
-
-**Broadway**
-
-BATCH LUT *fabric_command*="broadway *LUT*.SampleFlow SampleIID=?" with async=true;
+```BATCH LUT ('LUI*','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LUT.?" with ASYNC='true';```
 
 
-**CDC Republish**
+**For Broadway Flows Execution Process**
 
-BATCH LUT from *fabric* *fabric_command*="cdc_republish_instance OracleLU.?" with async=true;
+```BATCH LUT fabric_command="broadway LUT.SampleFlow SampleIID=?" with async=true;```
+
+
+**For CDC Republish Process**
+
+```BATCH LUT from fabric fabric_command="cdc_republish_instance OracleLU.?" with async=true;```
 
 
 ## Batch Commands Summary
@@ -465,10 +465,6 @@ migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 </p>
 </td>
 </tr>
-
-
-
-
 
 
 </tbody>
