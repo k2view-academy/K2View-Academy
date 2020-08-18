@@ -236,7 +236,9 @@
 <summary markdown="span"><strong>CDC and Search Capabilities <strong><a href="/articles/18_cdc_and_search/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
 </ul> 
-</details>        
+</ul> 
+</details>
+        
 <details>
 <summary markdown="span"><strong>Broadway<strong><a href="/articles/19_Broadway/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a></li>
@@ -246,17 +248,21 @@
 <li><a href="/articles/19_Broadway/04_built_in_actor_types.md">Built-in Actor Types</a></li>
 <li><a href="/articles/19_Broadway/actors/README.md">Actors Specifications and Examples</a></li>
 <li><a href="/articles/19_Broadway/05_data_types.md">Broadway Data Types</a></li>
-<li><a href="/articles/19_Broadway/16_broadway_flow_overview.md">Broadway Flow Overview</a></li>
+<li><a href="/articles/19_Broadway/06_export_actor.md">Actor Inheritance Mechanism</a></li>
+<li><a href="/articles/19_Broadway/07_broadway_integration_with_Fabric.md">Broadway Integration with Fabric</a></li>
 <li><a href="/articles/19_Broadway/17_tutorial_and_flow_examples.md">Broadway Tutorial and Flow Examples</a></li>
 <li><a href="/articles/19_Broadway/18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="/articles/19_Broadway/19_broadway_flow_stages.md">Broadway Stages</a></li>
-<li><a href="/articles/19_Broadway/21_iterations.md">Iteractions in Broadway</a></li>
+<li><a href="/articles/19_Broadway/20_broadway_flow_linking_actors.md">Linking Actors in Broadway Flow</a></li>  
+<li><a href="/articles/19_Broadway/21_iterations.md">Iterations in Broadway</a></li>
+<li><a href="/articles/19_Broadway/22_broadway_flow_inner_flows.md">Inner Flows</a></li>
+<li><a href="/articles/19_Broadway/23_transactions.md">Transactions</a></li>
+<li><a href="/articles/19_Broadway/24_error_handling.md">Error Handling</a></li>
 <li><a href="/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md">Run and Debug Broadway Flow</a></li>
-<li><a href="/articles/19_Broadway/27_broadway_data_inspection.md">Data Inspection in Broadway</a></li>
+<li><a href="/articles/19_Broadway/27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
 </ul> 
-</details>        
-
-​    
+</ul> 
+</details>         
 
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
