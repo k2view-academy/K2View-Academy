@@ -62,5 +62,5 @@ Note that an override option only exists for inherited Actors. The product's [bu
 
 
 
-[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_integration_with_Fabric.md)
+[![Previous](/articles/images/Previous.png)](05_data_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_flow_linking_actors.md)
 
