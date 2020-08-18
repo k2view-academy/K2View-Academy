@@ -11,10 +11,16 @@
 <li><a href="04_built_in_actor_types.md">Built-in Actor Types</a></li>
 <li><a href="actors/README.md">Actors Specifications and Examples</a></li>
 <li><a href="05_data_types.md">Data Types in Broadway</a></li>
+<li><a href="06_export_actor.md">Actor Inheritance Mechanism</a></li>
+<li><a href="07_broadway_integration_with_Fabric.md">Broadway Integration with Fabric</a></li>
 <li><a href="17_tutorial_and_flow_examples.md">Broadway Tutorial and Flow Examples</a></li>
 <li><a href="18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="19_broadway_flow_stages.md">Broadway Stages</a></li>
+<li><a href="20_broadway_flow_linking_actors.md">Linking Actors in Broadway Flow</a></li>  
 <li><a href="21_iterations.md">Iterations in Broadway</a></li>
+<li><a href="22_broadway_flow_inner_flows.md">Inner Flows</a></li>
+<li><a href="23_transactions.md">Transactions</a></li>
+<li><a href="24_error_handling.md">Error Handling</a></li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Run and Debug Broadway Flow</a></li>
 <li><a href="27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
 </ul>
