@@ -238,6 +238,40 @@ Note that the filter supports regex.
 </td>
 </tr> 
 
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>batchF </h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Run the batch process on a list of instances defined with a function</p>
+<p>
+1) batchf <LUT>[@<DC>].<function>() FABRIC_COMMAND='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=<number>]];
+</p>
+<p>
+2) batchf <LUT>[@<DC>].<function>().<IG> fabric_command='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];
+</p>
+<p>
+3) batchf <LUT>[@<DC>].<function>() from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];
+</p>
+<p>
+4) batchf <LUT>[@<DC>].<function>().(<instance 1,instance 2,etc...>) fabric_command='<fabric command> ?' [WITH [AFFINITY='<affinity>']</p>
+</td>
+
+<td valign="top" width="300pxl">
+<p>
+1) batchf Customer.batchFtest4().ig20 FABRIC_COMMAND='sync_instance Customer.?';
+</p>
+<p>   
+2) batchf Customer@DC1.batchFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894') FABRIC_COMMAND='sync_instance Customer.?';
+</p>
+<p>
+3) batchf Customer.batchFtest4().(‘1’,’2’,’3’) FABRIC_COMMAND='sync_instance Customer.?';
+</p>
+</td>
+</tr> 
 </table>
 
 
@@ -341,7 +375,7 @@ batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";```
 |99   |0      |0        |0     |99   |875     |
 ```
 
-## batchf & migratef commands 
+## migratef commands 
 
 The migratef command enable the migration of a selective list of instances by function. 
 
@@ -377,13 +411,13 @@ Use this command to migrate a selective list of instances defined by a function.
 </td>
 <td valign="top" width="300pxl">
 <p>
-   1) migratef P7.migrateFtest4().ig20;
+1) migratef Customer.migrateFtest4().ig20;
 </p>
 <p>   
-2) migratef P1@DC1.migrateFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894');
+2) migratef Customer@DC1.migrateFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894');
 </p>
 <p>
-3) migratef P7.migrateFtest4().(‘1’,’2’,’3’);
+3) migratef Customer.migrateFtest4().(‘1’,’2’,’3’);
 </p>
 </td>
 </tr>  
