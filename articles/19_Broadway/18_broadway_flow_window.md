@@ -166,7 +166,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td width="420pxl">Collapse or expand the Actor and display its title.</td>
 </tr>
 <tr>
-<td width="200"><a href="20_broadway_flow_linking_actors.md#show-only-connected-objects">Show Only Connected</a></td>
+<td width="200"><a href="08_show_only_connected_actors.md">Show Only Connected</a></td>
 <td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
 </tr>
 <tr>
@@ -178,7 +178,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
 </tr>
 <tr>
-<td width="200"><a href="21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
+<td width="200"><a href="07_broadway_flow_linking_actors">Link</a></td>
 <td style="width: 465px;">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
 <tr>
