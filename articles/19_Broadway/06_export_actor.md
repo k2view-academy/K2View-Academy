@@ -1,6 +1,6 @@
 # Actor Inheritance Mechanism
 
-In Broadway, an Actor can be extended to create a new Actor type using the **Export Actor** functionality. 
+A Broadway Actor can be extended to create a new Actor type using the **Export Actor** functionality. 
 
 When an Actor is exported, a new Actor inherits its logic and arguments and also extends it with additional functionalities whereby specific business logic can be reused in different Broadway flows. For example, to format all dates using the same pattern, set a specific pattern in the **DateFormat** Actor and then export the Actor in order to reuse it in various Broadway flows. 
 
@@ -14,7 +14,7 @@ When an Actor is exported, a new Actor inherits its logic and arguments and also
 
 3. Populate the new Actor's **Name** as **myDateFormat**. 
 
-4. Optional: to create a new Actor in a new (different) category populate the **Tag**.
+4. Optional: override the **Tag** to create a new Actor in a new (different) category.
 
 5. Click **SUBMIT**. 
    
@@ -24,7 +24,7 @@ The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
 
 
-Once the Export Actor creates a new inherited Actor, the new Actor is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
+Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
 
 The [Actor's input and output arguments](03_broadway_actor_window.md#properties-overview) in the Properties window can be filtered using the Parameter's filter to display only the inherited Actor's arguments, or only the ancestor's arguments or all.
 
