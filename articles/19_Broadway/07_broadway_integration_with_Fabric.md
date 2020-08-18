@@ -42,7 +42,7 @@ To set the table and the fields on **DbLoad** Actor, do the following:
 
 To do so, set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument and then select a [Project function](/articles/07_table_population/08_project_functions.md) or a [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) resource. 
 
-Note that the **luType** input argument includes the list of all Logical Units in the Project including the [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) and the References.
+Note that the **luType** input argument includes the list of all Logical Units in the Project including the [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) and the References. It is recommended to use the same LU as the one where the Broadway flow is created.
 
 #### LuFunction Actor
 
@@ -74,7 +74,7 @@ GET ${luType}.${iid}
 
 Where **${luType}** and **${iid}** are replaced by the values of the input arguments in the prepared statement. 
 
-Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument of the Actor from the list of all Logical Units in the Project and type the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the **iid** input argument.
+Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument and type the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the **iid** input argument.
 
 ![image](images/99_07_FABRIC.PNG)
 
