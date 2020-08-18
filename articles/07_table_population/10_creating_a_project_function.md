@@ -98,5 +98,22 @@ db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 
 Click to display the Fabric API list: http://[Fabric IP address]:3213/static/doc/user-api/index.html
 
+### How Do I Invoke a Project Function From Another Category?
+
+To invoke a project function from another category in the same LU, do the following to add an import:
+1. Open the function using IntelliJ.
+2. Position the mouse on the invoked function (marked in red), press **ALT+ENTER** and select the option to add the required import.
+3. Save the function.
+
+To see the import, open the source file of the function's category. For example, when adding an invocation to the fnCheckSourceEnv() function which belongs to the DECISION category in the CRM Logical Unit, the following import is added:
+
+~~~java
+import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.fnCheckSourceEnv;
+~~~
+
+To invoke several functions in the same category, modify the import as follows:
+~~~java
+import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.*;
+~~~
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/09_creating_an_LUDB_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)
