@@ -1,6 +1,6 @@
 # Stream Actors
 
-Broadway has a group of [built-in](../04_built_in_actor_types.md) **Stream** Actors for handling streams like reading from and writing to a file or compressing and decompressing  data.  
+Broadway has a group of [built-in](../04_built_in_actor_types.md) **Stream** Actors that handle streams like reading from and writing to a file or compressing and decompressing  data.  
 
 The **FileRead** Actor can be used to read data from a file in a provided location and return a collection of blobs. Note that the **path** input argument expects to receive the relative path and filename. 
 
