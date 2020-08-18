@@ -181,7 +181,7 @@ Displays the status of instances of a given Batch process ID:
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batch_list [STATUS='&ltstatus&gt' [FROM_DATE='&ltfrom date&gt' [TO_DATE='&ltto date&gt']] [FILTER=&ltfilter criteria&gt]</h5>
+<h5>batch_list [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h5>
 
 </td>
 <td valign="top" width="400pxl">
