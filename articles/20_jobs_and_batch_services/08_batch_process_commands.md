@@ -248,16 +248,16 @@ Note that the filter supports regex.
 
 <p>Run the batch process on a list of instances defined with a function</p>
 <p>
-1) batchf <LUT>[@<DC>].<function>() FABRIC_COMMAND='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=<number>]];
+1) batchf &ltLUT>[@&ltDC&gt].&ltfunction&gt() FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
 <p>
-2) batchf <LUT>[@<DC>].<function>().<IG> fabric_command='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];
+2) batchf &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
 <p>
-3) batchf <LUT>[@<DC>].<function>() from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?' [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];
+3) batchf &ltLUT&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
 <p>
-4) batchf <LUT>[@<DC>].<function>().(<instance 1,instance 2,etc...>) fabric_command='<fabric command> ?' [WITH [AFFINITY='<affinity>']</p>
+4) batchf &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().(&ltinstance 1,instance 2,etc...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt']</p>
 </td>
 
 <td valign="top" width="300pxl">
@@ -402,11 +402,11 @@ Use this command to migrate a selective list of instances defined by a function.
 <td valign="top" width="400pxl">
    
 <p>
-1) migratef <LUT>[@<DC>].<function>().<IG> [WITH [AFFINITY='<affinity>'] [JOB_AFFINITY='<job affinity>'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];</p>
+1) migratef &ltLUT>[@&ltDC&gt].&ltfunction&gt().&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
 
-<p>2) migratef <LUT>[@<DC>].<function>() from <db_interface> using ('<SQL>') [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];</p>
+<p>2) migratef &ltLUT&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
 <p>  
-3) migratef <LUT>[@<DC>].<function>().(<Instance 1, Instance 2, etc...>) [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=<number>] [MAX_WORKERS_PER_NODE=<number>]];</p>
+3) migratef &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().(&ltInstance 1, Instance 2, etc...&gt) [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
    
 </td>
 <td valign="top" width="300pxl">
