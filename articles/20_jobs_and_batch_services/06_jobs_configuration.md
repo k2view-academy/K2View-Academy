@@ -7,7 +7,7 @@ Job execution environments can be configured at both node and cluster levels.
 Priority for a given job on any given logical or physical node can be defined in the node's configuration file.
 For example: to define that node X handles a maximum of 10 threads in parallel by setting the #K2JOBS_POOL_SIZE variable to 10. 
 
-**Config.ini**
+### **Config.ini**
 
 Job-related configuration variables can be set in this file that is saved in the in the **k2view/config/config.ini** file under the **JOBS** section.
 
@@ -15,7 +15,7 @@ Job-related configuration variables can be set in this file that is saved in the
 
 - **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
-**Node.ini** 
+### **Node.ini** 
 
 Node and cluster-related configuration variables can be set in this file which is saved in the **k2view/config/node.ini** file.
 
