@@ -3,7 +3,7 @@
 Job execution environments can be configured at both node and cluster levels.
 
 
-### Nodes Configuration
+## Nodes Configuration
 Priority for a given job on any given logical or physical node can be defined in the node's configuration file.
 For example: to define that node X handles a maximum of 10 threads in parallel by setting the #K2JOBS_POOL_SIZE variable to 10. 
 
@@ -47,7 +47,7 @@ Note that if no empty slot is left in the pool and a new Job has been allocated 
 
 ## Cluster Configuration
 
-#### Cluster Identifier
+### Cluster Identifier
 
 A Cluster Identifier must contain only letters and numbers and is defined in the **node.id** file:
 
