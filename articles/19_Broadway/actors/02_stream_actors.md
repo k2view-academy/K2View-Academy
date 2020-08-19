@@ -1,10 +1,10 @@
 # Stream Actors
 
-Broadway has a group of [built-in](../04_built_in_actor_types.md) **Stream** Actors that handle streams like reading from and writing to a file or compressing and decompressing  data.  
+Broadway has a category of [built-in](../04_built_in_actor_types.md) **Stream** Actors that handle streams like reading from and writing to a file or compressing and decompressing  data.  
 
 The **FileRead** Actor can be used to read data from a file in a provided location and return a collection of blobs. Note that the **path** input argument expects to receive the relative path and filename. 
 
-To prevent overloading data into the memory, when Broadways reads from a stream or file, the data is split into blocks that have a constant size of 8K. As a result, data can be cut in the middle of an object (e.g. in the middle of a line in the file), whereby the stream can then be handled by a [Parser Actor](03_parsers_actors.md). 
+To prevent overloading data into the memory, when Broadways reads from a stream or file, the data is split into blocks that have a constant size of 8K. As a result, data can be cut in the middle of an object (e.g. in the middle of a line in the file), whereby the stream must then be handled by a [Parser Actor](03_parsers_actors.md). 
 
 ### FileRead Examples
 
