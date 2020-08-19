@@ -1,33 +1,33 @@
 # Broadway Integration with Fabric
 
-The Broadway module can run either standalone in a Web browser or embedded in the Fabric Studio. 
+Broadway is a Fabric module that can run either standalone in a Web browser or embedded in the Fabric Studio. 
 
-The Fabric Studio includes several integration points exposed to Broadway Actors that can simplify the creation of Broadway flows.
+The Fabric Studio includes several integration points that are used by Broadway Actors to simplify the creation of Broadway flows.
 
 ### Interfaces List
 
-Several Broadway [Actors](03_broadway_actor.md) include an **interface** as one of their input arguments. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type, keeping only the interfaces relevant to Actor type.
+Several Broadway [Actors](03_broadway_actor.md) include an **interface** as one of their input arguments. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown, as follows:
 
 * [DB Commands Actors](actors/05_db_actors.md), the interface only displays the Fabric [DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 * [Pub / Sub Actors](actors/04_queue_actors.md), the list of interfaces is limited to Kafka or JMS interface types. 
 * [**FileRead** /**FileWrite** Actors](actors/02_stream_actors.md), the list of interfaces includes only local file system interface types. 
 
-Note that the list of values in the Actor's **interface** dropdown list also includes the custom values applicable for the Actor type that do not arrive from Project interfaces. For example, **custom url**. 
+Note that the list of values in the Actor's **interface** dropdown list also includes the custom values applicable for the Actor type that are not retrieved from Project interfaces. For example, **custom url**. 
 
 ### Table Selection and Query Builder
 
 The input arguments of [DB Commands Actors](actors/05_db_actors.md) include integration to Fabric windows which simplifies the creatiion and validation of queries. 
 
-To populate the SQL statement of a**DbCommand** Actor, do the following:
+To populate the SQL statement of a **DbCommand** Actor, do the following:
 
 1. Set the **interface** input argument and then click **QB** in the **sql** input argument field. The [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) opens and is filtered by the selected DB connection.
-2. Click the required **table** and **fields** or write the query manually. 
-3. Click **Execute Query** and then **OK**. The SQL statement is populated in the **sql** input argument of the **DbCommand** Actor.
+2. Click the required table and fields or write the query manually. 
+3. Click **Execute Query** to validate it and then click **OK**. The SQL statement is populated in the **sql** input argument of the **DbCommand** Actor.
 
 To set the table and the fields of a **DbLoad** Actor, do the following:
 
 1. Set the **interface** input argument and click **DB** in the **table** input argument field. The Table Selection popup window  opens and is filtered by the selected DB connection.
-2. Click the required **table** and then **OK** to populate the table name and the columns in the table and the fields input arguments of the **DbLoad** Actor.
+2. Click the required **table** and then **OK** to populate the table name and the columns in the **table** and the **fields** input arguments of the **DbLoad** Actor.
 
 <table>
 <tbody>
