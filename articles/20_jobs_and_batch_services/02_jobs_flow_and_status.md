@@ -142,25 +142,25 @@ A specific Job can be assigned to a specific Fabric node by specifying the node'
 
 When running multiple Fabric nodes, Jobs can be allocated to different nodes. Once a new Job is deployed, each node competes to execute it. The Cassandra Optimistic Locking process ensures an agreement is reached between all nodes and that each Job is executed only once by the best candidate node at any given time. A running thread in each Fabric node checks whether a new Job has been deployed and if the Cassandra LiteWeight Transactions process has allocated the Job to it. The thread handles the processing and lifecycle of the Job.
 
-The following image displays two examples whereby JOB 1 is allocated to Node 2 according to its configurations: 
+The following image displays two examples whereby JOB 1 is allocated to Node 1 because the job's affinity was specifically set to Node 1 in the Fabric Studio from the [Job's Parameters Configuration table](/articles/20_jobs_and_batch_services/03_create_a_job.md#step-6), or from the Command Line using one of the following commands: ([startjob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#startjob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval), [restartjob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#restartjob-jobtype-namename), [updatejob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#updatejob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval-reset_end_timetruefalse)
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG">
 
 
 
-**Job Process**
+**Job Lifecycle**
 
-The Fabric runtime server offers dedicated Java classes that handle the Jobs lifecycle. The following classes are particularily important:
-- JobsExecutor, manages the Job's execution during the different phases of its lifecycle, retries when necessary and updates Job status. 
-- JobsScheduler, manages the ownership of a specific Job waiting in the queue.
-- JobsReconcile, handles the reallocation of Jobs to the correct Fabric node if a node is offline.
+Each instance of Fabric runtime server (Fabric node) comprises the dedicated Java logic and classes responsible to handle any Job's lifecycle. Among these classes, the following are particularily significant in the process:
+- JobsExecutor - managing the Job's execution and transitions between the different stages, including a multiple retry mechanism when necessary. 
+- JobsScheduler - managing the node ownership of a specific Job waiting in the queue.
+- JobsReconcile - handling the re-allocation of Jobs to a new Fabric node, if the one dedicated through affinity or allocated by Cassandra, is not reachable.
 
 
 **Job Execution Resiliency**
 
 Fabric ensures that Job executions have multiple recovery opportunities if the node responsible for its execution fails. 
-A heartbeat variable can be configured for each node so that each Fabric node status can be monitored and Jobs can be reallocated to different nodes. 
-If a node restarts, and if there is insufficient time before the scheduled Job's execution, the rebooting node has precedence over all other nodes for the execution of the Job's instance.
+A [heartbeat](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#heartbeat) variable can be configured for each node so that the status of each Fabric node can be monitored and their dedicated Jobs reallocated to different nodes if necessary. 
+If a node restarts, and insufficient time is left before a scheduled Job's execution, the rebooting node has precedence over all other nodes for the execution of this particular Job.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/03_create_a_job.md)
