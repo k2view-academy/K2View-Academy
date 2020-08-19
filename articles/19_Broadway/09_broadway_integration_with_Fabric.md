@@ -51,7 +51,7 @@ Note that the **luType** input argument includes the list of all Logical Units i
 
 The **LuFunction** Actor is used when a Fabric [Project function](/articles/07_table_population/08_project_functions.md) must be invoked from a Broadway flow and is also a way to write business logic in Java rather than in JavaScript in Broadway. 
 
-After the **luType** input argument is set, the list of values in the **functionName** dropdown list are filtered by the LU name and display the functions of the selected LU and the Shared Object. The Actor's input and output arguments are updated with the inputs and output of the selected function.
+After the **luType** input argument is set, the list of values in the **functionName** dropdown list are filtered by the LU name and display the functions of the selected LU and Shared Object. The Actor's input and output arguments are updated with the inputs and output of the selected function.
 
 #### Graphit Actor
 
