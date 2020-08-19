@@ -426,6 +426,234 @@ BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";```
 |99   |0      |0        |0     |99   |875     |
 ```
 
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Command Name</strong></p>
+</td>
+<td valign="top" width="400pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+   
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate <LUT>[@<DC>] [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Migrates all instances of a Logical Unit.
+DC, - specify dc name to force the migration within specified dc, can also be defined on the affinity parameter, remained for backward compatibility
+AFFINITY, - is an optional parameter for choosing list of nodes and DCs to be involved in the migrate command
+ASYNC, - is an optional parameter that overrides whatever was defined on the session by default it is set to false for backward compatibility
+JOB_AFFINITY, - Affinity for the migrate job
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p> ??? </p>
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate <LUT>[@<DC>].<IG> [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Migrates a subset of Logical Unit Instances, based on an Instance Group
+DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p> ??? </p>
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate <LUT>[@<DC>] from <db_interface> using ('<SQL>') [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Migrates a subset of Logical Unit Instances, based on a query to one of the source interfaces.
+DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p> ??? </p>
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate <LUT>[@<DC>].(<instance 1,instance 2,etc...>) [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Migrates a subset of Logical Unit Instances, based on list of instances.
+DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
+
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p> ??? </p>
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate_list [STATUS='<status>' [FROM_DATE='<from date>' [TO_DATE='<to date>’]]];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+List of active migrates if no arguments provided
+STATUS, - run with STATUS='' where STATUS belongs to one of the following: NEW,SYNC_REFERENCES, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED,DONE.
+FROM/TO_DATE, - support DATE_FORMAT/DATETIME_FORMAT, according to the configuration in config.ini
+
+In order to get all the migration processes run in the past for all statuses, refer to from Cassandra table k2migrate.migration_list
+
+
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>migrate_list status=‘ALL’</p>
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate_summary ‘<migrate id>’</h6>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>
+The report will bring the following summary in table structure format for the following levels: Cluster, DC, Node. 
+The following information will be dispayed:
+   
+Level – Node, DC or Cluster
+Name – Node ID, or DC name or empty in case of Cluster
+Status – NEW,SYNC_REFERENCES,GENERATE_IID_LIST,IN_PROGRESS,FAILED,CANCELLED,DONE,  or ALL
+Start Time – datetime
+End  Time – datetime
+Duration – running duration in HH:MM:SS format
+Remaining Duration – expected remaining duration for ending the migrate in HH:MM:SS format
+Remaining – remaining entities to be handled
+Total to handle – total number of entities to be handled
+Failed – number of failed entities
+Added – number of added entities
+Updated – number of updated entities
+Unchanged – number of unchanged entities
+%Completed - % of processed entities out of the total in case of node, DC level will show the load balance between the nodes/DCs
+Entities/sec (avg.) – number of processed entities per second in the Entities/secrelevant level</p>
+</td>
+<td valign="top" width="300pxl">
+<p> ??? </p>
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate <LUT>[@<DC>].(<instance 1,instance 2,etc...>) [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Migrates a subset of Logical Unit Instances, based on list of instances.
+DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
+
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p> ??? </p>
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>migrate_details '<mig_id>' [STATUS='<status>' [AFFINITY='<Affinity>']] [LIMIT <limit>];</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Show instances status for a given migrate_id (mig_id).
+STATUS, - define STATUS='' where STATUS belongs to one of the following: NEW,SYNC_REFERENCES, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED,DONE.
+AFFINITY - DCs or nodes
+LIMIT - default LIMIT is defined in config.ini (MIGRATE_DETAIL_MAX_ROWS_SIZE 10000) if no LIMIT is provided as an argument
+
+In order to get all the migration processes run in the past for all migration IDs refer to Cassandra table k2migrate.migration_iid_info
+
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>migrate_list status=‘ALL’</p>
+</td>
+</tr> 
+
+
+
+<tr>
+<td valign="top" width="500pxl">
+<h6>
+cancel batch '&ltmig_id&gt';
+</h6>
+</td>
+<td valign="top" width="400pxl">
+   
+<p>
+Cancels a specific migrate command, using the BATCH command 
+Note: The stopjob command can be also used, according to the job created for the migrate by the coordinator node.
+
+</p>
+   
+</td>
+<td valign="top" width="300pxl">
+<p>
+migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
+</p>
+</td>
+</tr>
+
+<tr>
+<td valign="top" width="500pxl">
+<h6>
+migrate_resume '&ltmigrate id&gt';
+</h6>
+</td>
+<td valign="top" width="400pxl">
+   
+<p>
+Resumes a Migrate command by processing all failed or unhandled instances from previous executions.
+</p>
+   
+</td>
+<td valign="top" width="300pxl">
+<p>
+migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
+</p>
+</td>
+</tr>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
 ### migratef Command 
 
 The migratef command enables the migration of a selective list of instances using a function. 
@@ -475,25 +703,6 @@ Use this command to migrate a selective list of instances defined by a function.
 </tr>  
 
 
-<tr>
-<td valign="top" width="500pxl">
-<h6>
-migrate_resume '&ltmigrate id&gt';
-</h6>
-</td>
-<td valign="top" width="400pxl">
-   
-<p>
-Resumes a Migrate command by processing all failed or unhandled instances from previous executions.
-</p>
-   
-</td>
-<td valign="top" width="300pxl">
-<p>
-migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
-</p>
-</td>
-</tr>
 
 
 </tbody>
