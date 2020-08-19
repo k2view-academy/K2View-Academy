@@ -2,15 +2,15 @@
 
 The Broadway module can run either standalone in a Web browser or embedded in the Fabric Studio. 
 
-The Fabric Studio includes several integration points exposed to Broadway Actors that can simplify the creation of the Broadway flows.
+The Fabric Studio includes several integration points exposed to Broadway Actors that can simplify the creation of Broadway flows.
 
 ### Interfaces List
 
 Several Broadway [Actors](03_broadway_actor.md) include an **interface** as one of their input arguments. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type, keeping only the interfaces relevant to Actor type.
 
-* For [DB Commands Actors](actors/05_db_actors.md) the interface only displays the Fabric [DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
-* For [Pub / Sub Actors](actors/04_queue_actors.md) the list of interfaces is limited to Kafka or JMS interface types. 
-* For [**FileRead** /**FileWrite** Actors](actors/02_stream_actors.md) the list of interfaces includes only local file system interface types. 
+* [DB Commands Actors](actors/05_db_actors.md), the interface only displays the Fabric [DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
+* [Pub / Sub Actors](actors/04_queue_actors.md), the list of interfaces is limited to Kafka or JMS interface types. 
+* [**FileRead** /**FileWrite** Actors](actors/02_stream_actors.md), the list of interfaces includes only local file system interface types. 
 
 Note that the list of values in the Actor's **interface** dropdown list also includes the custom values applicable for the Actor type that do not arrive from Project interfaces. For example, **custom url**. 
 
@@ -20,9 +20,9 @@ The input arguments of [DB Commands Actors](actors/05_db_actors.md) include inte
 
 To populate the SQL statement of a**DbCommand** Actor, do the following:
 
-1. Set the **interface** input argument, then click **QB** in the **sql** input argument field. The [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) opens and is filtered by the selected DB connection.
+1. Set the **interface** input argument and then click **QB** in the **sql** input argument field. The [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) opens and is filtered by the selected DB connection.
 2. Click the required **table** and **fields** or write the query manually. 
-3. Click **Execute Query** and then **OK**. The SQL statement is populated in the **sql** input argument of **DbCommand** Actor.
+3. Click **Execute Query** and then **OK**. The SQL statement is populated in the **sql** input argument of the **DbCommand** Actor.
 
 To set the table and the fields of a **DbLoad** Actor, do the following:
 
@@ -51,7 +51,7 @@ Note that the **luType** input argument includes the list of all Logical Units i
 
 The **LuFunction** Actor is used when a Fabric [Project function](/articles/07_table_population/08_project_functions.md) must be invoked from a Broadway flow and is also a way to write business logic in Java rather than in JavaScript in Broadway. 
 
-After the **luType** input argument is set, the list of values in the **functionName** dropdown list are filtered by the LU name and display the functions of the selected LU and the Shared Object's functions. The Actor's input and output arguments are updated with the inputs and output of the selected function.
+After the **luType** input argument is set, the list of values in the **functionName** dropdown list are filtered by the LU name and display the functions of the selected LU and the Shared Object. The Actor's input and output arguments are updated with the inputs and output of the selected function.
 
 #### Graphit Actor
 
