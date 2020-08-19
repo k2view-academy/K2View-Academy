@@ -69,7 +69,7 @@ type, name, uid, affinity, archived, arguments, creation_time, end_time, error_m
 
 
 ### Worker_ID
-This is the [*Node ID*](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#nodeini) of the node handling the job's execution.
+This is the ID ([*Node UUID*](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#nodeini)) of the node handling the job's execution.
 
 <img src="/articles/20_jobs_and_batch_services/images/10_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
