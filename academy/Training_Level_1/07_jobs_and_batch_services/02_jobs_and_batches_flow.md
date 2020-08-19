@@ -30,6 +30,14 @@ Through the following articles, you will understand Jobs' flows and their execut
 [Batch Processes' Commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md)
 [Batch Flow](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
 
+## Jobs & Batch - Exercise 1
+
+## Jobs & Batch - Solution 1
+
+## Jobs & Batch - Exercise 2
+
+## Jobs & Batch - Solution 2
+
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/01_jobs_and_batch_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/03_quiz_jobs_and_batch_services.md)
