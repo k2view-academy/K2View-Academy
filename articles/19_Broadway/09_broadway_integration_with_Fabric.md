@@ -41,7 +41,7 @@ To set the table and the fields of a **DbLoad** Actor, do the following:
 
 ### LuFunction and Graphit Actors
 
-The [built-in](../04_built_in_actor_types.md) **LuFunction** and **Graphit** Actors fully utilize Fabric integration with Broadway to enable the reuse of the Fabric logic within Broadway flows. 
+The **LuFunction** and **Graphit** Actors fully utilize Fabric integration with Broadway to enable the reuse of the Fabric logic within Broadway flows. 
 
 To do so, set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument and then select a [Project function](/articles/07_table_population/08_project_functions.md) or a [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) resource. 
 
@@ -61,7 +61,7 @@ After the **luType** input argument is set, the list of values in the **graphit*
 
 ### Fabric Commands Actors
 
-The **fabric** category of [built-in Actors](../04_built_in_actor_types.md) executes Fabric commands.
+The **fabric** category of [built-in Actors](04_built_in_actor_types.md) executes Fabric commands.
 
 * **FabricGet** Actor, executes the GET command on the current Fabric session.
 * **FabricSet** Actor, sets a value on the Fabric session.
