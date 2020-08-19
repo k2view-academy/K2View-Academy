@@ -2,19 +2,19 @@
 The Batch process is a Fabric utility that can be used to run multiple commands on a population's instances, regardless of its size or type. 
 
 The Batch process is used to trigger the following:
-- Sync instances, to perform multiple syncs on a set or group of LUIs.
-- Broadway flow, to run multiple flows.
-- Publish changes, to republish data using the CDC notification mechanism.
+- Sync instances, to perform multiple syncs on all (or a subset of) instances for a specific Logical Unit. This process is also referred to as the Migration Process, handled by the *migrate* command.
+- [Broadway flow](/articles/19_Broadway/01_broadway_overview.md), to run multiple flows.
+- Publish changes and republish data using the [CDC](/articles/18_cdc_and_search/02_cdc_messages.md) notification mechanism.
 
 
 # **Fabric Batch Features**
-The Batch process enables:
+Fabric's integrated Batch process provides the following advantages to ensure the smooth execution of heavy-resources demanding processes:
 - Efficient distribution of jobs between nodes.
-- Dynamically changing the configuration of the work balance between nodes during execution phases.
-- Monitoring an instance's synchronization progress (batch sync) at cluster, DC or node levels.
-- Recovery of a process due to a failure during the process. For example, nodes that are down.
-- Stopping and resuming the migration process (LUI synchronization).
-- Tracking processes at an entity level. For example, timing, duration, handling nodes or failure management.
+- Dynamic adjusting of work balance configuration between nodes during execution phases.
+- Monitoring of instances' synchronization progress (batch sync) at cluster, DC or node levels.
+- Process failure recovering. (e.g non-responding nodes).
+- Stopping and resuming of the migration process (LUI synchronization).
+- Process tracking at entity level. (e.g. timing, duration, handling node or failure management).
 
 
 
