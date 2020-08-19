@@ -109,16 +109,6 @@ All Fabric Jobs undergo different stages, where each stage indicates a specific 
 
 
 
-
-
-
-
-
-
-
-
-
-
 ## **Job's Lifecycle**
 The  following image illustrates the different stages of a Job's lifecycle and the different types of actions that transit a specific Job from one specific state to another.
 
@@ -134,11 +124,11 @@ The  following image illustrates the different stages of a Job's lifecycle and t
 
 # **Fabric Nodes and Jobs Processes** 
 
-**Nodes Affinity**
+## **Nodes Affinity**
 
 A specific Job can be assigned to a specific Fabric node by specifying the node's parameters in the Jobs definition table in the Fabric Studio or from the **startjob** command in the Fabric Runtime environment. Once deployed, the Job is only allocated to the specified node.
 
-**Nodes Competition**
+## **Nodes Competition**
 
 When running multiple Fabric nodes, Jobs can be allocated to different nodes. Once a new Job is deployed, each node competes to execute it. The Cassandra Optimistic Locking process ensures an agreement is reached between all nodes and that each Job is executed only once by the best candidate node at any given time. A running thread in each Fabric node checks whether a new Job has been deployed and if the Cassandra LiteWeight Transactions process has allocated the Job to it. The thread handles the processing and lifecycle of the Job.
 
@@ -153,7 +143,7 @@ The following image illustrates two different examples:
 
 
 
-**Job Lifecycle**
+## **Job Lifecycle**
 
 Each instance of Fabric runtime server (Fabric node) comprises the dedicated Java logic and classes responsible to handle any Job's lifecycle. Among these classes, the following are particularily significant in the process:
 - JobsExecutor - managing the Job's execution and transitions between the different stages, including a multiple retry mechanism when necessary. 
@@ -161,7 +151,7 @@ Each instance of Fabric runtime server (Fabric node) comprises the dedicated Jav
 - JobsReconcile - handling the re-allocation of Jobs to a new Fabric node, if the one dedicated through affinity or allocated by Cassandra, is not reachable.
 
 
-**Job Execution Resiliency**
+## **Job Execution Resiliency**
 
 Fabric ensures that Job executions have multiple recovery opportunities if the node responsible for its execution fails. 
 A [heartbeat](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#heartbeat) variable can be configured for each node so that the status of each Fabric node can be monitored and their dedicated Jobs reallocated to different nodes if necessary. 
