@@ -102,8 +102,8 @@ In the **Job table**, enter the values pertaining to the Job.
 Process Jobs are batch files or scripts stored in the Fabric server and triggered manually.
 ### Step 1. 
 Create a bash script and save it in /home/k2view/ directory.
-For example, save the following code into /home/k2view/echoArg.sh
 
+For example, save the following code into /home/k2view/echoArg.sh
 ```bash
 #!/bin/bash
 echo "Total Arguments : $#"
