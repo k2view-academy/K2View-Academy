@@ -599,7 +599,7 @@ Note: The stopjob command can be also used, according to the job created for the
 </td>
 <td valign="top" width="300pxl">
 <p>
-migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
+CANCEL batch ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 </p>
 </td>
 </tr>
