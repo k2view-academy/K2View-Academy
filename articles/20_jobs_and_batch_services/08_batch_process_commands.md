@@ -402,8 +402,11 @@ fabric>batch Customer from CRM_DB USING('select customer_id from Customer where 
 ## Legacy Support
 
 ### Migrate Commands
-The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database. 
-Behind the scenes, Fabric activates the batch command when running the Migrate command. All the verbose defined for the batch process commands can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
+
+The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database.
+
+Behind the scenes, Fabric activates the batch command when running the Migrate command. 
+All the verbose defined for the [batch process commands]() can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
 
 For example:
 The following two commands are equivallent.
