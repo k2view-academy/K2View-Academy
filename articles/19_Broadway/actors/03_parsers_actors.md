@@ -1,8 +1,8 @@
 # Parser Actors
 
-Broadway has a group of [built-in](../04_built_in_actor_types.md) **Parser** Actors that parse input stream into different formats like JSON, CSV and XML.
+Broadway has a category of [built-in](../04_built_in_actor_types.md) **Parser** Actors that parse input stream into different formats like JSON, CSV and XML.
 
-When reading input stream, Parser Actors parse it into valid objects based on the specific delimiters of each input format while saving only one object in the memory at a time.
+When reading input stream, Parser Actors parse it into valid objects based on the specific delimiters of each input format while holding only one object in the memory at a time.
 
 ### JsonParser Actor
 
@@ -47,7 +47,7 @@ Additional parsers supported by Broadway are:
 * **Base64Decode** / **Base64Encode** Actor, analyzes an input and outputs it as an encoded string or a decoded buffer.
 * **FixedColumnParser** Actor, traverses an incoming stream and for each line parses the columns using their fixed position in the line.
 * **LinesParser** Actor, traverses an incoming stream and outputs individual lines.
-* **XmlParser Actor**, analyzes an input stream and outputs the objects found in the stream.
+* **XmlParser** Actor, analyzes an input stream and outputs the objects found in the stream.
 
 Checkout **xml.flow** for the **XmlParser** example and **lines.flow** for the **LinesParser** example. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
 
