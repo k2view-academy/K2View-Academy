@@ -33,7 +33,7 @@ The Fabric runtime environment provides the following sets of Batch commands:
 </td>
 </tr>
 <td valign="top" width="500pxl">
-<strong>BATCH &ltLUT&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</strong>;
+<h6>BATCH &ltLUT&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h6>;
 </td>
 <td valign="top" width="400pxl">
    
@@ -67,7 +67,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 <tr>
 <td valign="top" width="300pxl">
 
-<strong>BATCH &ltLUT>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</strong>
+<h6>BATCH &ltLUT>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
 </td>
 <td valign="top" width="400pxl">
 
@@ -84,7 +84,7 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 <tr>
 <td valign="top" width="300pxl">
 
-<strong>BATCH &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</strong>
+<h6>BATCH &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -99,7 +99,7 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCH &ltLUT>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</strong>
+<h6>BATCH &ltLUT>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -117,7 +117,7 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 <tr>
 <td valign="top" width="300pxl">
 
-<strong>BATCH &ltLUT>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</strong>
+<h6>BATCH &ltLUT>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -151,7 +151,7 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCH_DETAILS '&ltbatch_id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</strong>
+<h6>BATCH_DETAILS '&ltbatch_id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -173,7 +173,7 @@ Displays the status of instances of a given Batch process ID:
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCH_IN_PROCESS filter='&ltfilter regex&gt'</strong>
+<h6>BATCH_IN_PROCESS filter='&ltfilter regex&gt'</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -197,7 +197,7 @@ Displays the status of instances of a given Batch process ID:
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCH_LIST [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</strong>
+<h6>BATCH_LIST [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -224,7 +224,7 @@ Note that the filter supports regex.
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCH_RETRY '&ltbatch_id&gt'</strong>
+<h6>BATCH_RETRY '&ltbatch_id&gt'</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -246,7 +246,7 @@ BATCH_RETRY ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>CANCEL BATCH ['&ltbatch_id&gt']</strong>
+<h6>CANCEL BATCH ['&ltbatch_id&gt']</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -268,7 +268,7 @@ CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCH_SUMMARY '&ltbatch_id&gt'</strong>
+<h6>BATCH_SUMMARY '&ltbatch_id&gt'</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -284,7 +284,7 @@ CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 
 <tr>
 <td valign="top" width="300pxl">
-<strong>BATCHF </strong>
+<h6>BATCHF </h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -446,14 +446,14 @@ The migratef command enables the migration of a selective list of instances usin
 
 <tr>
 <td valign="top" width="500pxl">
-<strong>
-MigrateF – migrate a list of instances by function.
-   
-Use this command to migrate a selective list of instances defined by a function.</strong>
+<h6>
+MigrateF
+</h6>
 </td>
 <td valign="top" width="400pxl">
    
 <p>
+Use this command to migrate a selective list of instances defined by a function.
 1) migratef &ltLUT>[@&ltDC&gt].&ltfunction&gt().&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
 
 <p>2) migratef &ltLUT&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
@@ -477,9 +477,9 @@ Use this command to migrate a selective list of instances defined by a function.
 
 <tr>
 <td valign="top" width="500pxl">
-<strong>
+<h6>
 migrate_resume '&ltmigrate id&gt';
-</strong>
+</h6>
 </td>
 <td valign="top" width="400pxl">
    
