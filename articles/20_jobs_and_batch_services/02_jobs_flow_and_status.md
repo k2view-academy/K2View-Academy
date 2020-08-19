@@ -144,7 +144,7 @@ When running multiple Fabric nodes, Jobs can be allocated to different nodes. On
 
 The following image displays two examples:
 
-- JOB 1 is allocated to Node 1 because the job's affinity was specifically set to Node 1 in the Fabric Studio from the [Job's Parameters Configuration table](/articles/20_jobs_and_batch_services/03_create_a_job.md#step-6), or from the Command Line using one of the following commands: [startjob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#startjob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval), [updatejob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#updatejob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval-reset_end_timetruefalse)
+- JOB 1 is allocated to Node 1 because the job's affinity was specifically set to Node 1 in the Fabric Studio from the [Job's Parameters Configuration table](/articles/20_jobs_and_batch_services/03_create_a_job.md#step-6), or from the Command Line using one of the following commands: [startjob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#startjob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval) and [updatejob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#updatejob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval-reset_end_timetruefalse).
 
 - JOB2 (to which no affinity is set) is allocated to Node 2, according to Cassandra's assignment resulting from its Quorum Consistency mechanism.
 
