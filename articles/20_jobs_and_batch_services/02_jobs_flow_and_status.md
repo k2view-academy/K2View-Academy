@@ -142,7 +142,7 @@ A specific Job can be assigned to a specific Fabric node by specifying the node'
 
 When running multiple Fabric nodes, Jobs can be allocated to different nodes. Once a new Job is deployed, each node competes to execute it. The Cassandra Optimistic Locking process ensures an agreement is reached between all nodes and that each Job is executed only once by the best candidate node at any given time. A running thread in each Fabric node checks whether a new Job has been deployed and if the Cassandra LiteWeight Transactions process has allocated the Job to it. The thread handles the processing and lifecycle of the Job.
 
-The following image displays two examples:
+The following image illustrates two different examples:
 
 - JOB 1 is allocated to Node 1 because the job's affinity was specifically set to Node 1 in the Fabric Studio from the [Job's Parameters Configuration table](/articles/20_jobs_and_batch_services/03_create_a_job.md#step-6), or from the Command Line using one of the following commands: [startjob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#startjob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval) and [updatejob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#updatejob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval-reset_end_timetruefalse).
 
