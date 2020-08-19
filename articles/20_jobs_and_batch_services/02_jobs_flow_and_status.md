@@ -123,7 +123,7 @@ All Fabric Jobs undergo different stages, where each stage indicates a specific 
 The  following image illustrates the different stages of a Job's lifecycle and the different types of actions that transit a specific Job from one specific state to another.
 
 -  The blue arrows show the natural path of a Job during its lifecycle in Automatic Execution mode. 
--  The dotted or plain arrows show the transition between stages in Manual Execution mode when applying one of the following commands:
+-  The dotted or plain arrows show the transition between stages in Manual Execution mode when manually applying one of the following commands:
    -  **startjob** 
    -  **stopjob**
    -  **restartjob**
