@@ -426,7 +426,7 @@ BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";```
 |99   |0      |0        |0     |99   |875     |
 ```
 
-
+### Migrate and Migrate Monitoring Commands 
 <table width="900pxl">
 <tbody>
 <tr>
@@ -443,7 +443,7 @@ BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";```
    
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate <LUT>[@<DC>] [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+<h6>migrate &ltLUT&gt[@&ltDC&gt] [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -462,7 +462,7 @@ JOB_AFFINITY, - Affinity for the migrate job
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate <LUT>[@<DC>].<IG> [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+<h6>migrate &ltLUT&gt[@&ltDC>].&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -478,7 +478,7 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate <LUT>[@<DC>] from <db_interface> using ('<SQL>') [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+<h6>migrate &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -489,12 +489,11 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 <td valign="top" width="300pxl">
 <p> ??? </p>
 </td>
-</tr> 
-
+</tr>
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate <LUT>[@<DC>].(<instance 1,instance 2,etc...>) [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
+<h6>migrate &ltLUT&gt[@&ltDC&gt].(&ltinstance 1,instance 2,etc...&gt) [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -508,9 +507,11 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 </td>
 </tr> 
 
+
+
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate_list [STATUS='<status>' [FROM_DATE='<from date>' [TO_DATE='<to date>’]]];</h6>
+<h6>migrate_list [STATUS='&ltstatus&gt' [FROM_DATE='&ltfrom date&gt' [TO_DATE='&ltto date&gt’]]];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -530,7 +531,7 @@ In order to get all the migration processes run in the past for all statuses, re
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate_summary ‘<migrate id>’</h6>
+<h6>migrate_summary ‘&ltmigrate id&gt’</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -563,23 +564,7 @@ Entities/sec (avg.) – number of processed entities per second in the Entities/
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate <LUT>[@<DC>].(<instance 1,instance 2,etc...>) [WITH [AFFINITY='<affinity>'] [ASYNC=true/false] [JOB_AFFINITY='<job affinity>']];</h6>
-</td>
-<td valign="top" width="400pxl">
-<p>
-Migrates a subset of Logical Unit Instances, based on list of instances.
-DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
-
-</p>
-</td>
-<td valign="top" width="300pxl">
-<p> ??? </p>
-</td>
-</tr> 
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>migrate_details '<mig_id>' [STATUS='<status>' [AFFINITY='<Affinity>']] [LIMIT <limit>];</h6>
+<h6>migrate_details '&ltmig_id&gt' [STATUS='&ltstatus&gt' [AFFINITY='&ltAffinity&gt']] [LIMIT &ltlimit&gt];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -596,8 +581,6 @@ In order to get all the migration processes run in the past for all migration ID
 <p>migrate_list status=‘ALL’</p>
 </td>
 </tr> 
-
-
 
 <tr>
 <td valign="top" width="500pxl">
@@ -640,17 +623,8 @@ migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 </p>
 </td>
 </tr>
-
-
-
-
-
-
- 
-
-
-
-
+</tbody>
+</table>
 
 
 
@@ -701,9 +675,6 @@ Use this command to migrate a selective list of instances defined by a function.
 </p>
 </td>
 </tr>  
-
-
-
 
 </tbody>
 </table>
