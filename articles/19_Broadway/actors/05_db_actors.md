@@ -1,6 +1,6 @@
 # DB Commands Actors 
 
-Broadway has a category of built-in **db** Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
+Broadway has a **db** category of Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
 - **DbCommand** Actor, performs database commands against a DB interface. It has two extensions: 
   - **DbFetchField** Actor, returns the first field of the first row or null if not present.
   - **DbFetchFirstRow** Actor, returns the first row or an empty row if no result is present.
@@ -21,7 +21,7 @@ To load the data using the **DbCommand** Actor, write the SQL INSERT statement i
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
-Another way to load the data in a Broadway flow is by using the **DbLoad** Actor. To do so, populate the Actor's input arguments:
+Another way to load the data in a Broadway flow is by using the **DbLoad** Actor. This is a simplified version of the **DbCommand** Actor that doesn't require to write the SQL statment but only to populate the Actor's input arguments:
 
 * **command**, select INSERT, UPDATE or UPSERT from the dropdown list.
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
