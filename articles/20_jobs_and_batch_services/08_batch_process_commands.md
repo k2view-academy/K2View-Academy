@@ -59,7 +59,7 @@ The following commands must be set:
 
 </td>
 <td valign="top" width="300pxl">
-<p>batch CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;
+<p>BATCH CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;
 
 This command migrates all customers from the source systems into the Fabric CUSTOMER keyspace in the Fabric database.</p>
 
@@ -69,15 +69,15 @@ This command migrates all customers from the source systems into the Fabric CUST
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>batch &ltLUT>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
+<h5>BATCH &ltLUT>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes, a subset of the LUI based on the Instance Group specified by the &ltIG&gt parameter.</p>
+<p>Batch-processes a subset of the LUI based on the Instance Group specified by the &ltIG&gt parameter.</p>
 
 </td>
 <td valign="top" width="300pxl">
-<p>batch CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;
+<p>BATCH CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;
 This command migrates the customers defined in the ‘ig10CustomersList’ Instance Group into the CUSTOMER keyspace in the Fabric database.</p>
 
 </td>
@@ -86,15 +86,15 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>batch &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
+<h5>BATCH &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch process, a subset of the LUI based on a query to a source interface defined in the &ltdb_interface&gt parameter.</p>
+<p>Batch-processes a subset of the LUI based on a query to a source interface defined in the &ltdb_interface&gt parameter.</p>
 <td valign="top" width="300pxl">
 
-<p>batch CUSTOMER FROM CRM_DB USING (‘select customer_id from CUSTOMER where customer_id <= 1000’) FABRIC_COMMAND="sync_instance PATIENT.?" with async=’true’;
+<p>BATCH CUSTOMER FROM CRM_DB USING (‘select customer_id from CUSTOMER where customer_id <= 1000’) FABRIC_COMMAND="sync_instance PATIENT.?" with async=’true’;
 </p>
 </td>
 </tr> 
@@ -102,16 +102,16 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>batch &ltLUT>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
+<h5>BATCH &ltLUT>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h5>
 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes, a subset of the LUI based on existing instances in Fabric in the entity table. </p>
+<p>Batch-processes a subset of the LUI based on existing instances in Fabric in the entity table. </p>
 </td>
 <td valign="top" width="300pxl">
 
-<p>batch Customer from fabric fabric_command='sync_instance Customer.?';</p>
+<p>BATCH Customer from fabric fabric_command='sync_instance Customer.?';</p>
 
 </td>
 </tr> 
@@ -120,16 +120,16 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>batch &ltLUT>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h5>
+<h5>BATCH &ltLUT>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h5>
 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes, a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list.</p>
+<p>Batch-processes a subset of the LUI based on a list of instances defined in the &ltinstance 1,instance 2,...&gt parameters list.</p>
 </td>
 <td valign="top" width="300pxl">
 
-<p>batch Customer.('100', '101', '102','103') FABRIC_COMMAND="sync_instance PATIENT.?" with async=’true’;</p>
+<p>BATCH Customer.('100', '101', '102','103') FABRIC_COMMAND="sync_instance PATIENT.?" with async=’true’;</p>
 
 </td>
 </tr> 
@@ -154,7 +154,7 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batch_details '&ltbatch id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h5>
+<h5>BATCH_DETAILS '&ltbatch_id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h5>
 
 </td>
 <td valign="top" width="400pxl">
@@ -169,14 +169,14 @@ Displays the status of instances of a given Batch process ID:
 - LIMIT, default limit defined in the config.ini if no limit is provided as an argument. </p>
 </td>
 <td valign="top" width="300pxl">
-<p>batch_details 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
+<p>BATCH_DETAILS 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
 </td>
 </tr> 
 
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batch_in_process filter='&ltfilter regex&gt'</h5>
+<h5>BATCH_IN_PROCESS filter='&ltfilter regex&gt'</h5>
 
 </td>
 <td valign="top" width="400pxl">
@@ -200,7 +200,7 @@ Displays the status of instances of a given Batch process ID:
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batch_list [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h5>
+<h5>BATCH_LIST [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h5>
 
 </td>
 <td valign="top" width="400pxl">
@@ -217,9 +217,9 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="300pxl">
 <p>
-   - batch_list STATUS='ALL'; – list the history of all batch processes.
+   - BATCH_LIST STATUS='ALL'; – list the history of all batch processes.
    
-   - batch_list status='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
+   - BATCH_LIST status='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
 </td>
 </tr> 
 
@@ -227,21 +227,21 @@ Note that the filter supports regex.
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batch_retry '&ltbatch id&gt'</h5>
+<h5>BATCH_RETRY '&ltbatch_id&gt'</h5>
 
 </td>
 <td valign="top" width="400pxl">
 
 <p>If the Batch process has not been completed, resumes a previous Batch process by reprocessing all failed or unhandled entities. Otherwise, it retries the failed entities only.
    
-   If the batch process is completed before the Retry command, Fabric gets the list of instances from the source DB. 
+   If the Batch process is completed before the Retry command, Fabric gets the list of instances from the source DB. 
    
-   If the batch process is completed before the Retry command, Fabric gets the list of failed entities from batchprocess_entities_errors Cassandra table.
+   If the Batch process is completed before the Retry command, Fabric gets the list of failed entities from the batchprocess_entities_errors Cassandra table.
 </p>
 </td>
 <td valign="top" width="300pxl">
 <p>
-batch_retry ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’; 
+BATCH_RETRY ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’; 
 </p>
 </td>
 </tr> 
@@ -249,20 +249,20 @@ batch_retry ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>cancel batch ['&ltbatch id&gt']</h5>
+<h5>CANCEL BATCH ['&ltbatch_id&gt']</h5>
 </td>
 <td valign="top" width="400pxl">
 <p>
-Cancels the last started batch process coordinated by the current node. The Cancel command must be executed from the node that started the operation. 
-When adding the '&ltbatch id&gt' parameter, the batch processed with the defined batch ID is cancelled whereby the Cancel command does not need to run from the node coordinating the specific batch process.
+Cancels the last started Batch process coordinated by the current node. The Cancel command must be executed from the node that started the operation. 
+When adding the '&ltbatch_id&gt' parameter, the Batch process with the defined batch_ID is cancelled. Note that in this case, the Cancel command does not need to be run from the node coordinating the specific Batch process.
 
 </p>
 </td>
 <td valign="top" width="300pxl">
 <p>
-Cancel batch;
+CANCEL BATCH;
 </p>
-Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
 </p>
 </td>
 </tr> 
@@ -271,7 +271,7 @@ Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batch_summary '&ltbatch id&gt'</h5>
+<h5>BATCH_SUMMARY '&ltbatch_id&gt'</h5>
 
 </td>
 <td valign="top" width="400pxl">
@@ -280,41 +280,41 @@ Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p>batch_summary '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
+<p>BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
 </td>
 </tr> 
 
 
 <tr>
 <td valign="top" width="300pxl">
-<h5>batchF </h5>
+<h5>BATCHF </h5>
 
 </td>
 <td valign="top" width="400pxl">
 
-<p>Runs the batch process on a list of instances that are saved with a name defined within a function.</p>
+<p>Runs the Batch process on a list of instances that are saved with a name defined within a function.</p>
 <p>
-1) batchf &ltLUT>[@&ltDC&gt].&ltfunction&gt() FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
+1) BATCHF &ltLUT>[@&ltDC&gt].&ltfunction&gt() FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
 <p>
-2) batchf &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
+2) BATCHF &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
 <p>
-3) batchf &ltLUT&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
+3) BATCHF &ltLUT&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
 <p>
-4) batchf &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().(&ltinstance 1,instance 2,etc...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt']</p>
+4) BATCHF &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().(&ltinstance 1,instance 2,etc...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt']</p>
 </td>
 
 <td valign="top" width="300pxl">
 <p>
-1) batchf Customer.batchFtest4().ig20 FABRIC_COMMAND='sync_instance Customer.?';
+1) BATCHF Customer.batchFtest4().ig20 FABRIC_COMMAND='sync_instance Customer.?';
 </p>
 <p>   
-2) batchf Customer@DC1.batchFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894') FABRIC_COMMAND='sync_instance Customer.?';
+2) BATCHF Customer@DC1.batchFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894') FABRIC_COMMAND='sync_instance Customer.?';
 </p>
 <p>
-3) batchf Customer.batchFtest4().(‘1’,’2’,’3’) FABRIC_COMMAND='sync_instance Customer.?';
+3) BATCHF Customer.batchFtest4().(‘1’,’2’,’3’) FABRIC_COMMAND='sync_instance Customer.?';
 </p>
 </td>
 </tr> 
@@ -322,11 +322,11 @@ Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 
 ## Batch Commands Examples
 
-### batch_list
+### BATCH_LIST
 
 Command  
 
-``` batch_list status='all'```
+``` BATCH_LIST status='all'```
 
 Result 
 ```
@@ -336,11 +336,11 @@ Result
 ```
 
 
-### batch_summary
+### BATCH_SUMMARY
 
 Command 
 
-``` batch_list status='all'```
+``` BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e' ```
 
 Result
 
@@ -369,15 +369,15 @@ The Instance Group (referred to as **customer_IG_600To700** in the screenshot ab
 
 Example 
 
-    batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?" with JOB_AFFINITY='10.21.2.102' async='true';
+    BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?" with JOB_AFFINITY='10.21.2.102' async='true';
 
 The Instance Group is defined from Fabric Studio - *customer_IG_600To700*
 
-Result 
+Result:
 
 All instances with ID values between 600 and 700 are synced into Fabric.
 
-fabric>batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";
+fabric>BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";
 ```
 |Added|Updated|Unchanged|Failed|Total|Duration|
 +-----+-------+---------+------+-----+--------+
@@ -385,14 +385,14 @@ fabric>batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT
 ```
 
 ## Batch Command with Embedded SQL Statements
-Instead of referring to an Instance Group, the batch command can embed an SQL statement to select the entities on which the batch command is executed:
+Instead of referring to an Instance Group, the Batch command can embed an SQL statement to select the entities on which the Batch command is executed:
 ```
-batch <LUT> from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?'
+BATCH <LUT> from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?'
 ```
 
 Example 
 
-fabric>batch Customer from CRM_DB USING('select customer_id from Customer where customer_id <=10') FABRIC_COMMAND="sync_instance CUSTOMER.?";
+fabric>BATCH Customer from CRM_DB USING('select customer_id from Customer where customer_id <=10') FABRIC_COMMAND="sync_instance CUSTOMER.?";
 ```
 |Batch id                            |Execution succeeded|Execution failed|Total|Duration|Batch id                            |
 +------------------------------------+-------------------+----------------+-----+--------+------------------------------------+
@@ -405,22 +405,22 @@ fabric>batch Customer from CRM_DB USING('select customer_id from Customer where 
 
 The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database.
 
-Behind the scenes, Fabric activates the batch command when running the Migrate command. 
-All the verbose defined for the [batch process commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md#batch-commands-summary) can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
+Behind the scenes, Fabric activates the Batch command when running the Migrate command. 
+All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md#batch-commands-summary) can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
 
 For example:
 The following two commands are equivallent.
 
-``` batch <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
+``` BATCH <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
 
 Using the same example as above:
 ```
 fabric>migrate Customer.customer_IG_600To700;
 ```
-The results are the same as when running the batch command: 
+The results are the same as when running the Batch command: 
 
 ```
-batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";``` 
+BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";``` 
 ```
 ```
 
