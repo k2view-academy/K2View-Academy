@@ -162,11 +162,11 @@ This command migrates the customers defined in the ‘ig10CustomersList’ Insta
 <p>
 Displays the status of instances of a given Batch process ID:
    
-- STATUS, shows one of the following states: WAITING, COMPLETED, FAILED.
+- STATUS, which can be either WAITING, COMPLETED, FAILED.
 - ENTITIES, lists of entities separated by a comma.
 - AFFINITY, DCs or nodes.
 - SORT_BY_PROCESS_TIME, if True, shows only the entities with the highest process time. If set, ignore all other parameters.
-- LIMIT, default LIMIT defined in the config.ini if no LIMIT is provided as an argument. </p>
+- LIMIT, default limit defined in the config.ini if no limit is provided as an argument. </p>
 </td>
 <td valign="top" width="300pxl">
 <p>batch_details 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
@@ -217,7 +217,8 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="300pxl">
 <p>
-   - batch_list STATUS='ALL'; – list the history of all the batch processes
+   - batch_list STATUS='ALL'; – list the history of all batch processes.
+   
    - batch_list status='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
 </td>
 </tr> 
@@ -231,7 +232,11 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="400pxl">
 
-<p>Resumes a previous Batch process by reprocessing all failed or unhandled entities, if the Batch process has not been completed. Otherwise, it retries the failed entities only. If the batch process is completed before the retry command, Fabric gets the list of instances from the source DB. If the batch process is completed before the retry command, Fabric gets the list of failed entities from batchprocess_entities_errors Cassandra table.
+<p>If the Batch process has not been completed, resumes a previous Batch process by reprocessing all failed or unhandled entities. Otherwise, it retries the failed entities only.
+   
+   If the batch process is completed before the Retry command, Fabric gets the list of instances from the source DB. 
+   
+   If the batch process is completed before the Retry command, Fabric gets the list of failed entities from batchprocess_entities_errors Cassandra table.
 </p>
 </td>
 <td valign="top" width="300pxl">
@@ -287,7 +292,7 @@ Cancel batch ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 </td>
 <td valign="top" width="400pxl">
 
-<p>Runs the batch process on a list of instances which will be then saved with a name defined within a function</p>
+<p>Runs the batch process on a list of instances that are saved with a name defined within a function.</p>
 <p>
 1) batchf &ltLUT>[@&ltDC&gt].&ltfunction&gt() FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
 </p>
@@ -342,7 +347,7 @@ Result
 <img src="/articles/20_jobs_and_batch_services/images/22_jobs_and_batch_services_commandsExamples.PNG">
 
 This command returns execution information and statistics for a given bid on each node in the execution:
-- Name, the Node Id.
+- Name, the Node ID.
 - %Completed, percentage of executions run on each node.
 - Ent/sec, average entities executed per seconds (pace).
 
@@ -380,7 +385,7 @@ fabric>batch Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT
 ```
 
 ## Batch Command with Embedded SQL Statements
-Instead of referring to an *Instance Group*, the batch command can embed an SQL statement to select the entities on which the batch command is executed:
+Instead of referring to an Instance Group, the batch command can embed an SQL statement to select the entities on which the batch command is executed:
 ```
 batch <LUT> from <db_interface> using ('<SQL>') fabric_command='<fabric command> ?'
 ```
@@ -397,8 +402,8 @@ fabric>batch Customer from CRM_DB USING('select customer_id from Customer where 
 ## Legacy Support
 
 ### Migrate Commands
-The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric Database. 
-Behind the scenes, Fabric activates the batch command when running the migrate command. All the verbose defined for the batch process commands can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
+The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database. 
+Behind the scenes, Fabric activates the batch command when running the Migrate command. All the verbose defined for the batch process commands can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
 
 For example:
 The following two commands are equivallent.
@@ -479,7 +484,7 @@ migrate_resume '&ltmigrate id&gt';
 <td valign="top" width="400pxl">
    
 <p>
-Resumes a migrate command by processing all failed or unhandled instances from previous executions.
+Resumes a Migrate command by processing all failed or unhandled instances from previous executions.
 </p>
    
 </td>
