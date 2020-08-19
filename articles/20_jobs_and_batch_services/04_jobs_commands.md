@@ -261,11 +261,8 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 
 </td>
 </tr> 
-
-
-
-
-</tr> 
 </tbody>
 </table>
+
+
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/03_create_a_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/05_jobs_table_fields.md)
