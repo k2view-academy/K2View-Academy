@@ -10,8 +10,8 @@ Example:
 ```jobstatus 90 days ago;```
 
 Result:
-<img src="/articles/20_jobs_and_batch_services/images/06_jobs_and_batch_services_create_a_job_jobstatus.PNG"></img>
-
+<img src="/articles/20_jobs_and_batch_services/images/06a_jobs_and_batch_services_create_a_job_jobstatus.PNG"></img>
+<img src="/articles/20_jobs_and_batch_services/images/06b_jobs_and_batch_services_create_a_job_jobstatus.PNG"></img>
 <table style="width: 592px;">
 <tbody>
 <tr>
