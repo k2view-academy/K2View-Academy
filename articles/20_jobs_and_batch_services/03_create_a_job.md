@@ -10,14 +10,10 @@ Go to the **Project Tree** > **LUT** > **Java** > **Utilities** and right click 
    <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
 ### Step 2. 
-Write the **User Job function** either:
-   -    In the **Function Editor** window.
-   -    Using **IntelliJ**.
-
-### Step 3. 
-Set the **Function Type** to the **User Job** value in the right panel. 
-Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The output file is located in the Fabric Home directory. 
-
+Write the **User Job function** either from:
+   -    the **Function Editor** window.
+   -    **IntelliJ** IDE.
+   
 ```java
 //writing into a file
 int test = 1;
@@ -30,7 +26,12 @@ while (test<5 && !isAborted()){
 	myWriter.close();
 	}
 ```
-  
+
+### Step 3. 
+Set the **Function Type** to the **User Job** value in the right panel. 
+Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The output file is located in the Fabric Home directory. 
+
+
 ### Step 4. 
 Name and save the **function**.
 
@@ -40,7 +41,7 @@ Name and save the **function**.
 ### Step 5. 
 Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**.
 
-   <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
+<img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
 
 ### Step 6. 
@@ -99,9 +100,9 @@ In the **Job table**, enter the values pertaining to the Job.
 
 ## How Do I Create a New Process Job?
 Process Jobs are batch files or scripts stored in the Fabric server and triggered manually.
-1. Create a bash script and save it in /home/k2view/ directory.
-2. Invoke the **startjob** command to trigger the job with the relevant parameters. 
-   For example, save the following code into /home/k2view/echoArg.sh
+### Step 1. 
+Create a bash script and save it in /home/k2view/ directory.
+For example, save the following code into /home/k2view/echoArg.sh
 
 ```bash
 #!/bin/bash
@@ -110,11 +111,13 @@ echo "1st Argument = $1"
 echo "2nd Argument = $2"
 ```
 
-   -  Go to the Fabric runtime command line and execute the following command:
+### Step 2. 
+Invoke the **startjob** command to trigger the job with the relevant parameters. 
+
+-  Go to the Fabric runtime command line and execute the following command:
 ```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
 
    Where:
-   
   - Process, defines the type of Job; in this case a process job.
   - ID, defines the unique name of the processed job.
   - ARGS, defines a list of parameters to be parsed to the script when executed.
@@ -129,7 +132,7 @@ Example:
 ```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
 
 ## How Do I Create a New CDC Job?
-Fabric can execute CDC Jobs (Change Data Capture) to notify external systems about data changes. 
+Fabric can execute [CDC](/articles/18_cdc_and_search/02_cdc_messages.md) Jobs (Change Data Capture) to notify external systems about any data changes occuring in Fabric DB. 
 Jobs can also execute cross-instance searches using Fabric's Search capability.
  
 
