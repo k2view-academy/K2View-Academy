@@ -57,7 +57,7 @@ For more information, go to:
 
 ## How Do I Monitor Jobs from the Cassandra Keyspace?
 Each job is recorded in the k2_jobs table of the k2system keyspace.
-Open Cassandra CQLSH using the relevant credentials, and execute a Selct query:
+Open Cassandra CQLSH using the relevant credentials, and execute a *Select query*:
 ``` select * from k2system.k2tables ```
 
 The table contains the following fields:
@@ -69,6 +69,8 @@ type, name, uid, affinity, archived, arguments, creation_time, end_time, error_m
 
 
 ### Worker_ID
+This is the ID of the node handling the job's execution.
+
 <img src="/articles/20_jobs_and_batch_services/images/10_jobs_and_batch_services_create_a_job_k2JobsTable.PNG"></img>
 
 
