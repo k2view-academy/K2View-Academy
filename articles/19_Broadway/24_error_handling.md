@@ -1,14 +1,16 @@
 #  Error Handling
- 
-In Broadway, the Error Handling mechanism can be used to assign an **Error Handler** to any [Stage](19_broadway_flow_stages.md) of a flow. 
+
+Broadway Error Handling mechanism handles the exceptions in a flow using **Error Handlers**. 
+
+An error handler be either an [Actor](03_broadway_actor.md) or an [Inner flow](22_broadway_flow_inner_flows.md) and it can be assigned to any [Stage](19_broadway_flow_stages.md) of a flow. This is recommended to use Inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
 Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
+
+The Actor's logic is validated as follows:
 
 - When an error handler returns true, the flow continues.
 
 - When an error handler returns false, the flow stops.
-
-Errors can also be handled using an [Inner flow](22_broadway_flow_inner_flows.md) functionality. This is recommended when the same error handler validation is required in several flows.
 
 ### How Do I Add an Error Handler to a Stage?
 
@@ -40,7 +42,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
    ![image](images/99_24_04.PNG)
 
 2. Save the flow and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor). The name of the flow is **CheckZeroDiv** and the name of the new Actor is **CheckZeroDiv_Actor**.
- 
+
 3. Create another flow that requires validation of a zero division and name it **myFlow** and then add a new **CheckZeroDiv_Actor** to it as an inner flow. If during the flow's execution the error occurs (min number = 0), the exception is thrown and the flow stops.
 
    ![image](images/99_24_05.PNG)

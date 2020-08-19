@@ -41,7 +41,7 @@ To run the flow, click **Run Flow** ![image](images/99_25_run.PNG) to run the en
 - If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
   
 
-If the break points have been added to the flow, the flow stops at the first break point.
+If the break points have been added to the flow, the flow stops at the first break point. Note that when a flow contains an inner flow and it has break points, the flow stops at the inner flow's break points too.
 
   - Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
 
@@ -49,8 +49,7 @@ If the break points have been added to the flow, the flow stops at the first bre
 
 To stop the flow, click **Stop Run** ![image](images/99_25_stop.PNG) to stop the flow run.
 
-
-Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
+When Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
 ### Displaying Input and Output Data During a Debug
 
