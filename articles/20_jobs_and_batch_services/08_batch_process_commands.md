@@ -1,6 +1,6 @@
 # Batch Commands
 
-Fabric Runtime Environment supplies the following Batch commands:
+The Fabric runtime environment provides the following sets of Batch commands:
 
 **Instances Migration**
 
@@ -32,8 +32,6 @@ Fabric Runtime Environment supplies the following Batch commands:
 <p><strong>Example</strong></p>
 </td>
 </tr>
-
-<tr>
 <td valign="top" width="500pxl">
 <h5>BATCH &ltLUT&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]; </h5>
 </td>
@@ -42,12 +40,12 @@ Fabric Runtime Environment supplies the following Batch commands:
 <p>
 Start the Batch process and sync all LU instances:
    
-- DC, specify the DC name to force the Batch process in the specified DC. This can also be defined in the Affinity parameter:  
-  - AFFINITY, list of nodes and DCs to be involved in the Batch process command.
+- DC, specifies the DC name to force the Batch process in the specified DC. 
+- AFFINITY, list of nodes and DCs to be used during the Batch process execution.
 - JOB_AFFINITY, affinity for the Batch process Job.
 - ASYNC, defines whether the Batch process should run in a sync or async mode. Default is False.
 - GENERATE_ENTITIES_FIRST, if set to True, generate all entities before processing them.
-- FABRIC_COMMAND, Fabric command executed by the Batch process which can be any command that includes a '?' that represents an Entity ID. 
+- FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes a '?' to represent a singular Entity ID. 
 
 The following commands must be set:
   - Migration, "sync_instance <LUT>.?"
