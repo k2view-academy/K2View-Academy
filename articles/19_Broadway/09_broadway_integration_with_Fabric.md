@@ -1,4 +1,4 @@
-# Broadway Integration with Fabric
+# Broadway Integration with Fabric Studio
 
 Broadway is a Fabric module that can run either standalone in a Web browser or embedded in the Fabric Studio. 
 
@@ -6,17 +6,19 @@ The Fabric Studio includes several integration points that are used by Broadway 
 
 ### Interfaces List
 
-Several Broadway [Actors](03_broadway_actor.md) include an **interface** as one of their input arguments. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown, as follows:
+Several Broadway [Actors](03_broadway_actor.md) include an **interface** as one of their input arguments. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
+
+For example:
 
 * [DB Commands Actors](actors/05_db_actors.md), the interface only displays the Fabric [DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 * [Pub / Sub Actors](actors/04_queue_actors.md), the list of interfaces is limited to Kafka or JMS interface types. 
-* [**FileRead** /**FileWrite** Actors](actors/02_stream_actors.md), the list of interfaces includes only local file system interface types. 
+* [**FileRead** /**FileWrite** Actors](actors/02_stream_actors.md), the list of interfaces includes SFTP and local file system interface types. 
 
 Note that the list of values in the Actor's **interface** dropdown list also includes the custom values applicable for the Actor type that are not retrieved from Project interfaces. For example, **custom url**. 
 
 ### Table Selection and Query Builder
 
-The input arguments of [DB Commands Actors](actors/05_db_actors.md) include integration to Fabric windows which simplifies the creatiion and validation of queries. 
+The input arguments of [DB Commands Actors](actors/05_db_actors.md) include integration to Fabric windows which simplifies the creation and validation of queries. 
 
 To populate the SQL statement of a **DbCommand** Actor, do the following:
 
@@ -85,7 +87,7 @@ Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the *
 
 A Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) to replace  complex Java code in the population logic from [Stages](19_broadway_flow_stages.md) and [Actors](03_broadway_actor.md) in the flow. 
 
-To create the population based on the Broadway flow, right click the **table name** in the **Project Tree** and select **New Table Population Based Broadway Flow**. The population template is created and can be modify as needed.
+To create the population based on the Broadway flow, right click the table name in the **Project Tree** and select **New Table Population Based Broadway Flow**. The population template is created and can be modify as needed.
 
 ![image](images/99_07_POPULATION.PNG)
 
