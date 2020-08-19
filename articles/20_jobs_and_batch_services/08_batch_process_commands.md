@@ -607,7 +607,7 @@ migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 <tr>
 <td valign="top" width="500pxl">
 <h6>
-migrate_resume '&ltmigrate id&gt';
+migrate_resume '&ltmig_id&gt';
 </h6>
 </td>
 <td valign="top" width="400pxl">
