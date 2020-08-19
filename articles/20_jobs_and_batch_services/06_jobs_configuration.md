@@ -53,14 +53,14 @@ A Cluster Identifier must contain only letters and numbers and is defined in the
 
 cluster_id: FabCluster1 
 
-**Heartbeat**
+#### **Heartbeat**
 
 A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is 10 seconds.
 
 ```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - the hearbit has been set to 5 seconds.
 
 
-**KeepAlive**
+#### **KeepAlive**
 
 The number of heartbeats that a Fabric node can miss before it is considered as unavailable can be defined so that all Jobs without a specific affinity to this node are allocated to another node. It is important to note that any Job whose affinity has been set to this node will not run, and must be restarted manually.
 
