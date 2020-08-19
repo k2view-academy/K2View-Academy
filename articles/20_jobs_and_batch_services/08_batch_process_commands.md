@@ -412,7 +412,7 @@ The following two commands are equivallent.
 
 Using the same example as above:
 ```
-fabric>migrate Customer.customer_IG_600To700;
+MIGRATE Customer.customer_IG_600To700;
 ```
 The results are the same as when running the Batch command: 
 
