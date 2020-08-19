@@ -143,7 +143,7 @@ The following image illustrates two different examples:
 
 
 
-## **Job Lifecycle**
+## **Job's Logic**
 
 Each instance of Fabric runtime server (Fabric node) comprises the dedicated Java logic and classes responsible to handle any Job's lifecycle. Among these classes, the following are particularily significant in the process:
 - JobsExecutor - managing the Job's execution and transitions between the different stages, including a multiple retry mechanism when necessary. 
