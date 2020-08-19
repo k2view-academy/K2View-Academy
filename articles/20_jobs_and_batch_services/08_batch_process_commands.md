@@ -1,20 +1,20 @@
 # Batch Commands
 
-The following Batch commands are available in the Fabric runtime environment:
+Fabric Runtime Environment supplies the following Batch commands:
 
 **Instances Migration**
 
-```BATCH LUT ('LUI*','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LUT.?" with ASYNC='true';```
+```BATCH LUT ('LUI*','LUI2','LUI3','LUI4') FABRIC_COMMAND="**sync_instance LUT.?**" with ASYNC='true';```
 
 
 **Broadway Flows Execution**
 
-```BATCH LUT fabric_command="broadway LUT.SampleFlow SampleIID=?" with async=true;```
+```BATCH LUT FABRIC_COMMAND="**broadway LUT.SampleFlow SampleIID=?**" with async=true;```
 
 
 **CDC Republish**
 
-```BATCH LUT from fabric fabric_command="cdc_republish_instance OracleLU.?" with async=true;```
+```BATCH LUT from fabric FABRIC_COMMAND="**cdc_republish_instance OracleLU.?**" with async=true;```
 
 
 ## Batch Commands Summary
