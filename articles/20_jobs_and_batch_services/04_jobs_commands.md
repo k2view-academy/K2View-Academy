@@ -2,7 +2,7 @@
 
 The following Job commands are available in the Fabric runtime environment:
 
-
+## Job Execution Commands 
 <table width="900pxl">
 <tbody>
 <tr>
@@ -17,69 +17,7 @@ The following Job commands are available in the Fabric runtime environment:
 </td>
 </tr>
 
-<tr>
-<td valign="top" width="300pxl">
-<h5>JOBSTATUS [x days ago]</h5>
-</td>
-<td valign="top" width="400pxl">
-<p>When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
-   
-   When days are not provided, returns all active (not archived) Jobs.</p>
 
-</td>
-<td valign="top" width="300pxl">
-<p>JOBSTATUS;</p>
-<p>JOBSTATUS 2 days ago;</p>
-</td>
-</tr>  
-
-<tr>
-<td valign="top" width="300pxl">
-
-<h5>JOBSTATUS &ltJOBTYPE&gt</h5>
-</td>
-<td valign="top" width="400pxl">
-
-<p>Returns the status of all Jobs running according to the <strong>jobType</strong>.</p>
-
-</td>
-<td valign="top" width="300pxl">
-<p>JOBSTATUS TestJob1;</p>
-
-</td>
-</tr> 
-
-<tr>
-<td valign="top" width="300pxl">
-
-<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt'</h5>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>Returns the status of all running Jobs that match the given type and name.</p>
-<td valign="top" width="300pxl">
-
-<p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
-</td>
-</tr> 
-
-<tr>
-<td valign="top" width="300pxl">
-
-<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt' WITH UID='&ltUID&gt'</h5>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>Returns the status of all Jobs that match the give type, name and UID.</p>
-</td>
-<td valign="top" width="300pxl">
-
-<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
-
-</td>
-</tr> 
 
 <tr>
 <td valign="top" width="300pxl">
@@ -244,5 +182,90 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 
 
 
+## Job Monitoring Commands
 
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Command Name</strong></p>
+</td>
+<td valign="top" width="400pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+
+<tr>
+<td valign="top" width="300pxl">
+<h5>JOBSTATUS [x days ago]</h5>
+</td>
+<td valign="top" width="400pxl">
+<p>When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
+   
+   When days are not provided, returns all active (not archived) Jobs.</p>
+
+</td>
+<td valign="top" width="300pxl">
+<p>JOBSTATUS;</p>
+<p>JOBSTATUS 2 days ago;</p>
+</td>
+</tr>  
+
+<tr>
+<td valign="top" width="300pxl">
+
+<h5>JOBSTATUS &ltJOBTYPE&gt</h5>
+</td>
+<td valign="top" width="400pxl">
+
+<p>Returns the status of all Jobs running according to the <strong>jobType</strong>.</p>
+
+</td>
+<td valign="top" width="300pxl">
+<p>JOBSTATUS TestJob1;</p>
+
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+
+<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt'</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Returns the status of all running Jobs that match the given type and name.</p>
+<td valign="top" width="300pxl">
+
+<p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+
+<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt' WITH UID='&ltUID&gt'</h5>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Returns the status of all Jobs that match the give type, name and UID.</p>
+</td>
+<td valign="top" width="300pxl">
+
+<p>JOBSTATUS PROCESS TestJob2 WITH UID='CUST-TestJob2';</p>
+
+</td>
+</tr> 
+
+
+
+
+</tr> 
+</tbody>
+</table>
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/03_create_a_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/05_jobs_table_fields.md)
