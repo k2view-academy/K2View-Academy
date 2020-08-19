@@ -176,11 +176,11 @@ The previous Batch process is displayed in the Job's table. Its **output** field
 ## **Batch Process Execution & Resiliency**
 
 
-When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs ability to transfer the process to a different node where a node is no longer active or no longer responding, according to the *hearbeats* and *keepalive* parameters defined in the node.id file.
+When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs ability to transfer the process to a different node when a node is no longer active or no longer responding. This handover mechanism uses the [*hearbeats*](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#heartbeat) and [*keepalive*](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#keepalive) parameters defined within the node.id file.
 
-The next handling node picks up the batch process (ia its associated job and resumes its execution from the last recorded stage.   
+The next handling node picks up the batch process (via its associated job) and resumes its execution from the latest known recorded stage.   
 
-Each Fabric node uses its Fabric built-in BatchProcessAPI class to navigate the Batch process through the different lifecycle stages, as defined in the illustrations above.
+Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#jobs-logic) classes to manage the Batch process through its different lifecycle stages, as defined in the illustrations above.
 
 
 
