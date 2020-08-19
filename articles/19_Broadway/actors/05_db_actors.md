@@ -1,13 +1,13 @@
 # DB Commands Actors 
 
-Broadway has a group of built-in **db** Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
+Broadway has a category of built-in **db** Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
 - **DbCommand** Actor, performs database commands against a DB interface. It has two extensions: 
   - **DbFetchField** Actor, returns the first field of the first row or null if not present.
   - **DbFetchFirstRow** Actor, returns the first row or an empty row if no result is present.
 - **DbCreateTable** Actor, creates a new database table.
 - **DbLoad** Actor, loads data into a database using an INSERT, UPDATE or UPSERT command.
 
-Each **db** Actor category requires setting an **interface** input argument that can be either a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or a JDBC URL. 
+Each Actor in the **db** category requires an **interface** input argument that can be defined either as a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or as a JDBC URL. 
 
 The query defined in the Actor can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
