@@ -4,16 +4,19 @@ Jobs are defined in the Fabric Studio and can be saved to a project file and be 
 
 ## How Do I Create a New User Job?
 
-1. Go to the **Project Tree** > **LUT** > **Java** > **Utilities** and right click **New Function** to display the **Function Editor** window.
+### Step 1. 
+Go to the **Project Tree** > **LUT** > **Java** > **Utilities** and right click **New Function** to display the **Function Editor** window.
 
    <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
-2. Write the **User Job function** either:
+### Step 2. 
+Write the **User Job function** either:
    -    In the **Function Editor** window.
    -    Using **IntelliJ**.
-3. Set the **Function Type** to the **User Job** value in the right panel. 
 
-   Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The file is located in the Fabric Home directory. 
+### Step 3. 
+Set the **Function Type** to the **User Job** value in the right panel. 
+Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The output file is located in the Fabric Home directory. 
 
 ```java
 //writing into a file
@@ -28,17 +31,20 @@ while (test<5 && !isAborted()){
 	}
 ```
   
-4. Name and save the **function**.
+### Step 4. 
+Name and save the **function**.
 
    <img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
    
 
-5. Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**.
+### Step 5. 
+Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**.
 
    <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
 
-6. In the **Job table**, enter the values pertaining to the Job.
+### Step 6. 
+In the **Job table**, enter the values pertaining to the Job.
 
 <table style="width: 900px; height: 193px;">
 <tbody>
