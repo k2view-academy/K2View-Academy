@@ -455,7 +455,7 @@ JOB_AFFINITY, - Affinity for the migrate job
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p> ??? </p>
+<p> MIGRATE CUSTOMER with async=’true’; </p>
 </td>
 </tr> 
 
@@ -471,7 +471,7 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p> ??? </p>
+<p>MIGRATE CUSTOMER.ig10CustomersList with async=’true’; </p>
 </td>
 </tr> 
 
@@ -487,7 +487,7 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p> ??? </p>
+<p> MIGRATE Customer from fabric</p>
 </td>
 </tr>
 
@@ -503,7 +503,7 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p> ??? </p>
+<p> MIGRATE Customer.('100', '101', '102','103') with async=’true’; </p>
 </td>
 </tr> 
 
@@ -557,7 +557,7 @@ Unchanged – number of unchanged entities
 Entities/sec (avg.) – number of processed entities per second in the Entities/secrelevant level</p>
 </td>
 <td valign="top" width="300pxl">
-<p> ??? </p>
+<p>migrate_summary '4ddeed1a-0951-42ed-b2d0-709a36215f42';</p>
 </td>
 </tr> 
 
