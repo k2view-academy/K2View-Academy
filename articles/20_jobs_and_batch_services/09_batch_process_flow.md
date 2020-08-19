@@ -173,6 +173,11 @@ The previous Batch process is displayed in the Job's table. Its **output** field
 <img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
 
 
+### **Migrate Tables in Cassandra**
+All migrate-related information is displayed in the **k2migrate.migration_list** and **k2migrate.migration_iid_info** tables in Cassandra's **k2migrate** keyspace.
+
+
+
 ## **Batch Process Execution & Resiliency**
 
 
