@@ -531,7 +531,7 @@ In order to get all the migration processes run in the past for all statuses, re
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate_summary ‘&ltmigrate id&gt’</h6>
+<h6>migrate_summary ‘&ltmig_id&gt’</h6>
 
 </td>
 <td valign="top" width="400pxl">
