@@ -1,12 +1,12 @@
 # Parser Actors
 
-Broadway has a category of [built-in](../04_built_in_actor_types.md) **Parser** Actors that parse input stream into different formats like JSON, CSV and XML.
+Broadway has a **parsers** category of Actors that parse input stream into different formats like JSON, CSV and XML.
 
-When reading input stream, Parser Actors parse it into valid objects based on the specific delimiters of each input format while holding only one object in the memory at a time.
+When reading input stream, they parse it into valid objects based on the specific delimiters of each input format while holding only one object in the memory at a time.
 
 ### JsonParser Actor
 
-The JsonParser Actor analyzes input streams, represented by an iterable collection of blobs or strings, and returns a collection of the JSON objects found in the stream. If the **single** input attribute is set to True, the Actor expects only a single object in the input stream. Otherwise, the Parser can handle input with multiple JSON objects.
+The **JsonParser** Actor analyzes input streams, represented by an iterable collection of blobs or strings, and returns a collection of the JSON objects found in the stream. If the **single** input attribute is set to True, the Actor expects only a single object in the input stream. Otherwise, the parser can handle input with multiple JSON objects.
 
 
 The **json.flow** example shows how the **JsonParser** handles two types of inputs - a single JSON object and one with multiple objects.
@@ -19,7 +19,7 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 ### CsvParser Actor
 
-The **CsvParser** Actor analyzes an input stream and returns an array of objects whereby each array row is a row of the input CSV stream. The Parser runs until it detects the end of the stream.
+The **CsvParser** Actor analyzes an input stream and returns an array of objects whereby each array row is a row of the input CSV stream. The parser runs until it detects the end of the stream.
 
 If the **header** input argument is set to True, the Actor uses the first row as a header row. In this case, the labels in the header are used to mark the row object.
 
