@@ -158,7 +158,7 @@ Which commands can be used to sync the entire population of Customer LU ?
 
 A: ```BATCH CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;```
 
-B: ```IGRATE CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;```
+B: ```MIGRATE CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;```
 
 C: ```MIGRATE CUSTOMER MIGRATE_COMMAND="sync_instance Customer.?" with async=’true’;```
 
