@@ -42,7 +42,7 @@ Then the following articles will explain how to run new batch processes as well 
 
 
 
-## Jobs & Batch - Exercise 1
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 1
 
 In this exercise we will create a Fabric Scheduled User Job, designed to run daily and that creates a file (list_entities.txt) in which will be appended, every 5 minutes, the following information:
 - Current date and time, 
@@ -60,7 +60,7 @@ Check in Fabric Home Directory. Can you see the list_entities.txt file?
 What is the Timestamp of the first entry? How many Customers are there in CRM_DB ?
 
 
-## Jobs & Batch - Solution Exercise 1
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 1
 
 *Step 1.*
 
@@ -87,7 +87,7 @@ Jobs table in Fabric Studio:
 Ans: 10,000
 
 
-## Jobs & Batch - Exercise 2
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 2
 In this exercise we will interact with the job created above from the command line.
 
 *Step 1.*
@@ -110,7 +110,7 @@ Re-run the command listing all the jobs created over the last 2 days. What is th
 
 
 
-## Jobs & Batch - Solution Exercise 2
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 2
 
 *Step 1.*
 
@@ -178,7 +178,7 @@ fabric>jobstatus 1 days ago;
 
 
 
-## Jobs & Batch - Exercise 3
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 3
 
 In this exercise we will use the batch command to sync instances of Customer LU.
 
@@ -196,10 +196,9 @@ Using the *batch_summary* command, how many instances were retrieved?
 Create a new instance group where by all customers live in CA State
 Run the appropriate *migrate* command to sync all customers residing in CA State 
 
-*Step 4.*
 
 
-## Jobs & Batch - Solution Exercise 3
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 3
 
 
 *Step 1.*
