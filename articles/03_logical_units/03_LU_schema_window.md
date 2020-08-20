@@ -11,7 +11,7 @@ The following objects are located under each [Logical Unit (LU)](/articles/03_lo
 * [Tables](/articles/06_LU_tables/01_LU_tables_overview.md).
 * Parsers.
 * Instance Groups: lists of instances to be migrated into Fabric for the LU. 
-* Broadway.
+* [Broadway](/articles/19_Broadway/01_broadway_overview.md).
 * Jobs.
 * IIDFinder. 
 
