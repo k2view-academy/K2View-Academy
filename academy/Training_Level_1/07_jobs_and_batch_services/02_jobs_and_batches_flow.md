@@ -77,7 +77,7 @@ myWriter.close();
 
 Step 2.
 
-<img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/01_jobs_and_batch_services_overview.PNG">
+<img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise1Step2.PNG">
 
 
 Step 3.
