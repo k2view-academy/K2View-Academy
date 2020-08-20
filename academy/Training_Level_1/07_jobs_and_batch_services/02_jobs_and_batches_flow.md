@@ -48,13 +48,13 @@ In this exercise we will create a Fabric Scheduled User Job, designed to run dai
 - Current date and time, 
 - Number of Customers records in CRM_DB
 
-*Step 1.*
+**Step 1.**
 Create the relevant Java file.
 
-*Step 2.*
+**Step 2.**
 Create a Job Entry in the JOBS table under Customer LU that runs the job every 5 minutes.
 
-*Step 3.*
+**Step 3.**
 Deploy Customer LU.
 Check in Fabric Home Directory. Can you see the list_entities.txt file?
 What is the Timestamp of the first entry? How many Customers are there in CRM_DB ?
@@ -62,7 +62,7 @@ What is the Timestamp of the first entry? How many Customers are there in CRM_DB
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 1
 
-*Step 1.*
+**Step 1.**
 
 ```java
 String TS_job = k2_currentDateTime();
@@ -75,14 +75,14 @@ myWriter.write("At this Date & Time :: "+ TS_job + ", there are: "+number_of_iDs
 myWriter.close();
 ```
 
-*Step 2.*
+**Step 2.**
 
 Jobs table in Fabric Studio:
 
 <img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise1Step2.PNG">
 
 
-*Step 3.*
+**Step 3.**
 
 Ans: 10,000
 
@@ -90,29 +90,29 @@ Ans: 10,000
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 2
 In this exercise we will interact with the job created above from the command line.
 
-*Step 1.*
+**Step 1.**
 Open up Fabric console.
 Which command will you use to list all jobs created over the last 48 hours ?
 Which date was this job created? Which affinity has been set for this job ?
 When is next run scheduled for?
 
-*Step 2.
+**Step 2.**
 Which command will you use to stop this job ?
 To which status is the job set once you have run the previous command?
 
-*Step 3.*
+**Step 3.**
 Delete or rename the list_entities.txt file in Fabric Home Direcory.
 Which command needs to be run to resume the job ?
 What is the status of the job in the table displayed after running the command ?
 
-*Step 4.*
+**Step 4.**
 Re-run the command listing all the jobs created over the last 2 days. What is the new status of the job?
 
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 2
 
-*Step 1.*
+**Step 1.**
 
 Command: ```jobstatus 1 days ago;```
 
@@ -133,7 +133,7 @@ Affinity: ``` ``` (none has been defined)
 Next scheduled run: ```2020-08-20 08:39:10```
 
 
-*Step 2.*
+**Step 2.**
 
 Command: ```stopjob USER_JOB NAME='Customer.numberOfIDs';```
 
@@ -149,7 +149,7 @@ fabric>stopjob USER_JOB NAME='Customer.numberOfIDs';
 
 Status has been set to: TERMINATED
 
-*Step 3.*
+**Step 3.**
 
 Command: ```resumejob USER_JOB NAME='Customer.numberOfIDs';```
 
@@ -165,7 +165,7 @@ fabric>resumejob USER_JOB NAME='Customer.numberOfIDs';
 
 Status has been set to: WAITING
 
-*Step 4.*
+**Step 4.**
 Status has been set back to: SCHEDULED
 
 ```
@@ -182,7 +182,7 @@ fabric>jobstatus 1 days ago;
 
 In this exercise we will use the batch command to sync instances of Customer LU.
 
-*Step 1.*
+**Step 1.**
 Which BATCH command do I need to type to sync instances 996, 997, 998, 999 ?
 Run the batch_summary command with the appropriate *bid* parameter. 
 How many entries have been sync-ed per second? 
@@ -201,7 +201,7 @@ Run the appropriate *migrate* command to sync all customers residing in CA State
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 3
 
 
-*Step 1.*
+**Step 1.**
 
 Command: ```BATCH Customer.('996','997','998','999') FABRIC_COMMAND="sync_instance Customer.?" with ASYNC='true';```
 
@@ -228,7 +228,7 @@ Answer:
 Ent./sec (avg.): 3.94
 
 
-*Step 2.*
+**Step 2.**
 
 Create the following Instance Group: *NY_IG_toSync*, in Fabric Studio, under the Customer LU section:
 
@@ -279,7 +279,7 @@ Response:
 
 
 
-*Step 3.*
+**Step 3.**
 
 Create the following Instance Group: *CA_IG_toSync*, in Fabric Studio, under the Customer LU section:
 
