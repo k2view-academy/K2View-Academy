@@ -27,8 +27,12 @@ First, read about [Batch Processes Overview](/articles/20_jobs_and_batch_service
 The following articles, explain how to run new batch processes and their execution flow:
 
 Through the following articles, you will understand Jobs' flows and their executions' environment:
+
 [Batch Processes' Commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md)
+
 [Batch Flow](/articles/20_jobs_and_batch_services/09_batch_process_flow.md)
+
+
 
 ## Jobs & Batch - Exercise 1
 
