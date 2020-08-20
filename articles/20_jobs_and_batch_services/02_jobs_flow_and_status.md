@@ -40,9 +40,9 @@ All Fabric Jobs undergo different stages, where each stage indicates a specific 
 <td>
 <p>This stage is for repetitive Jobs and has the following schedules:</p>
 <ul>
-<li>Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time the previous occurrence of this Job ended.</li>
+<li>Time interval, the recurring Job is scheduled to run at every given time. If the Job is scheduled to run every 60 minutes, it counts 60 minutes from the time when the previous occurrence of this Job ended.</li>
 <li>Timestamp, the date and time a specific Job is scheduled to run.</li>
-<li>Cron, a series of the same Job must be run according to the&nbsp;<strong>crontab</strong>&nbsp;scheduling format. Note that the actual execution of the Job is handled by the Fabric Scheduler.</li>
+<li>Cron, a series of the same Job must be run according to the&nbsp;<strong>crontab</strong>&nbsp;scheduling format. Note that the actual execution of the Job is handled by Fabric Scheduler.</li>
 </ul>
 </td>
 </tr>
