@@ -16,5 +16,5 @@ By the end of the Web Services learning item you will know how to:
 - Monitor batch processes and their executing nodes
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/02_jobs_and_batches_flow.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)
 
