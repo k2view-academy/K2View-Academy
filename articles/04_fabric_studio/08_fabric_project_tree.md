@@ -23,7 +23,7 @@ Each project has the following main components:
   * [Java](/articles/07_table_population/06_table_population_transformation_rules.md) 
   * Resources, files that can be saved as part of a project. For example, an Excel file.
   * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md) 
-  * Broadway
+  * [Broadway](/articles/19_Broadway/01_broadway_overview.md)
 
 * **References**, reference information that can be used throughout the LU instances and may include the following sub-branches:
   * Java, Globals and Functions
