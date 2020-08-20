@@ -187,12 +187,12 @@ Which BATCH command do I need to type to sync instances 996, 997, 998, 999 ?
 Run the batch_summary command with the appropriate *bid* parameter. 
 How many entries have been sync-ed per second? 
 
-*Step 2.*
+**Step 2.**
 Create a new instance group where by all customers live in NY State
 Run the appropriate *batch* command to sync all customers residing in NY State.
 Using the *batch_summary* command, how many instances were retrieved?
 
-*Step 3.*
+**Step 3.**
 Create a new instance group where by all customers live in CA State
 Run the appropriate *migrate* command to sync all customers residing in CA State 
 
