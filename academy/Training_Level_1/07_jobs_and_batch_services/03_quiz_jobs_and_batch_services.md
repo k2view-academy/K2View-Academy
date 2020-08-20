@@ -1,3 +1,6 @@
+# Jobs and Batch Services Quiz
+
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Quiz.png)
 Excellent! 
 You have completed the Jobs and Batch services items.
 
