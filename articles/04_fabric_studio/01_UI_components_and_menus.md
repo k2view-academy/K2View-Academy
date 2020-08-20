@@ -109,9 +109,10 @@ The Project Tree displays the components of the current project as a hierarchy o
     * Environments. 
     * Database types. 
     * Interfaces. 
-    * Functions. 
+    * Functions.
     * Java, Java files and resource files. 
     * Translations. 
+    * Broadway flows. 
 * References, reference information that may be used throughout the instance. 
 * Web Services, a collection of all functions that are defined as Web Services for this project.
 * [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
