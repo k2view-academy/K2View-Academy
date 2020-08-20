@@ -23,7 +23,7 @@ Below are some examples of Fabric components which have a Diagram window working
 </tr>
 <tr>
 <td width="453">
-<p><strong>Creating a new <a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md">function</a></strong></p>
+<p><strong>Creating a new <a href="/articles/07_table_population/08_project_functions.md">function</a></strong></p>
 </td>
 <td width="189">
 <p>Function Manager window.</p>
@@ -35,6 +35,14 @@ Below are some examples of Fabric components which have a Diagram window working
 </td>
 <td width="189">
 <p>Translation&nbsp; Manager window.</p>
+</td>
+</tr>
+<tr>
+<td width="453">
+<p><strong>Creating &nbsp;a new <a href="/articles/19_Broadway/02a_broadway_flow_overview.md">Broadway flow</a></strong></p>
+</td>
+<td width="189">
+<p>Broadway flow window.</p>
 </td>
 </tr>
 <tr>
