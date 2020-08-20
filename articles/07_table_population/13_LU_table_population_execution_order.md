@@ -52,4 +52,4 @@ Go to the [**LU Schema window**](/articles/03_logical_units/03_LU_schema_window.
 
 [Click for more information about Disable / Enable Populations](/articles/03_logical_units/13_disable_enable_populations_in_schema.md).
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/12_table_population_diagram_outline.md)
+[![Previous](/articles/images/Previous.png)](12_table_population_diagram_outline.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_table_population_based_Broadway.md)
