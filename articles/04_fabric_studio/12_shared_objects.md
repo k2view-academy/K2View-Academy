@@ -14,10 +14,11 @@ The following components can be shared in a Fabric project:
   * SharedGlobals.java, containing all shared [Globals](/articles/08_globals/01_globals_overview.md) in a set of global parameters. 
 Note that if a Global that is defined in both a Shared Object and a specific Logical Unit, the Global defined in the specific Logical Unit is used. Other Logical Units use the definitions in the Shared Object.
   * Resources, various files that can be saved both as part of a project and also in version control.
-  * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), sets of translations which can be used for the transformation of data. A Translation defined at a Shared Objects level may be used in any LU included in the project. 
+* [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), sets of translations which can be used for the transformation of data. A Translation defined at a Shared Objects level may be used in any LU included in the project. 
+* [Broadway](/articles/19_Broadway/01_broadway_overview.md), set of flows which can be used for the data movement, its transformation and orchestration. A Broadway flow defined at a Shared Objects level may be used in any LU included in the project. 
 
 **Notes** 
-* If a function or a translation is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
+* If a function, a translation or a Broadway flow is defined both under Shared Objects and under a Logical Unit with the same name and parameters, the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) function code has priority.
 * Since Shared Objects **are not** self-deployed, changes to an item under a Shared Object used by several components require redeployment to become available.
 
 [Click for more information about Project Structure and Creating a New Project in Fabric.](/articles/04_fabric_studio/05_creating_a_new_project.md)
