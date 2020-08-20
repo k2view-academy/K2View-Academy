@@ -43,11 +43,11 @@ D: All the above
 
 Jobs can be stopped using the following command:
 
-A: STOP JOB NAME='<name>' UID='<uid>';
+A: ```STOP JOB NAME='<name>' UID='<uid>';```
 
-B: JOBSTOP UID='<uid>' NAME='<name>' ;
+B: ```JOBSTOP UID='<uid>' NAME='<name>';```
 
-C: STOPJOB <JOBTYPE> NAME='<name>' UID='<uid>';
+C: ```STOPJOB <JOBTYPE> NAME='<name>' UID='<uid>';```
   
 D: All the above.
 
@@ -60,11 +60,11 @@ D: All the above.
 A Joc can be scheduled using the Crontab syntax. Which of the options is valid and describes following schedule: 
 "Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"?
   
-A: 30 04-16/3 05 11 5
+A: ```30 04-16/3 05 11 5```
 
-B: 04-16/3 1/2 05 11 5
+B: ```04-16/3 1/2 05 11 5```
 
-C: 5 11 05 04-16/3 30
+C: ```5 11 05 04-16/3 30```
 
 D: Fabric does not support CronTab.
 
@@ -94,13 +94,13 @@ E: Answers A, B & C.
 
 To list all the Jobs that have been created over the last day, you will type the following command:
 
-A: JOBSTATUS 1 day ago;
+A: ```JOBSTATUS 1 day ago;```
 
-B: STATUSJOB 1 days ago;
+B: ```STATUSJOB 1 days ago;```
 
-C: JOBSTATUS 1 days ago;
+C: ```JOBSTATUS 1 days ago;```
 
-D: JOBSTATUS --24;
+D: ```JOBSTATUS --24;```
 
 (**Solution 6: C**)
 
@@ -109,13 +109,13 @@ D: JOBSTATUS --24;
 
 If no affinity is specified when configuring a job then
 
-A: the job is run on the next available node.
+A: The job is run on the next available node.
 
-B: on a node chosen by Cassandra quorum consistency logic.
+B: On a node chosen by Cassandra quorum consistency logic.
 
-C: the job wont run because an affinity must be specified.
+C: The job wont run because an affinity must be specified.
 
-D: the job will be queued until a node requests the job specifically .
+D: The job will be queued until a node specifically requests for it.
 
 (**Solution 7: A**)
 
@@ -156,13 +156,13 @@ D: All the above.
 
 Which commands can be used to sync the entire population of Customer LU ?
 
-A: BATCH CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;
+A: ```BATCH CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;```
 
-B: MIGRATE CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;
+B: ```IGRATE CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;```
 
-C: MIGRATE CUSTOMER MIGRATE_COMMAND="sync_instance Customer.?" with async=’true’;
+C: ```MIGRATE CUSTOMER MIGRATE_COMMAND="sync_instance Customer.?" with async=’true’;```
 
-D: MIGRATE CUSTOMER with async=’true’;
+D: ```MIGRATE CUSTOMER with async=’true’;```
 
 E: A & C
 
@@ -188,11 +188,11 @@ C: The BATCH_DETAILS command.
 
 SQL statements can be embedded as a parameter parsed into a Batch command as followed:
 
-A: "from CRM_DB USING('select customer_id from Customer where customer_id <=10')"
+A: ```from CRM_DB USING('select customer_id from Customer where customer_id <=10')"```
 
-B: "USING SQL ('select customer_id from CRM_DB.Customer where customer_id <=10').
+B: ```USING SQL ('select customer_id from CRM_DB.Customer where customer_id <=10')```
 
-C: "USING ('select customer_id from CRM_DB.Customer where customer_id <=10')".
+C: ```USING ('select customer_id from CRM_DB.Customer where customer_id <=10')```
 
 D: The Batch command does not support SQL statements. Instance Groups must be defined for this purpose.
 
