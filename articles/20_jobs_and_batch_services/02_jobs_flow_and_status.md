@@ -12,7 +12,7 @@ For example:
 <Li>Process Job, a script stored on the Fabric server.</Li>
 </td></tr><tr><td>Configure</td>
 <td>A new job entry must be added to the Jobs table under the LU Type tree and must have the following parameters:<br><Li>Schedule Job type.</Li>
-<Li>MethodAffinity field that specifies the Fabric node to be allocated to this Job (if any).</Li>
+<Li>A method and affinity fields that specifies the function and the Fabric node to be allocated to this Job (if any).</Li>
 </td></tr><tr><td>Deploy</td><td>The LU, its associated Job functions and Jobs table are processed by the deployed Fabric node. The Job is triggered either automatically or manually depending on the parameters specified during configuration.</td></tr></tbody>
 </table></figure>
  
