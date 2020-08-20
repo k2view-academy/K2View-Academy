@@ -389,7 +389,9 @@ BATCH <LUT> from <db_interface> using ('<SQL>') fabric_command='<fabric command>
 
 Example 
 
-fabric>BATCH Customer from CRM_DB USING('select customer_id from Customer where customer_id <=10') FABRIC_COMMAND="sync_instance CUSTOMER.?";
+```fabric>BATCH Customer from CRM_DB USING('select customer_id from Customer where customer_id <=10') FABRIC_COMMAND="sync_instance CUSTOMER.?";```
+
+
 ```
 |Batch id                            |Execution succeeded|Execution failed|Total|Duration|Batch id                            |
 +------------------------------------+-------------------+----------------+-----+--------+------------------------------------+
