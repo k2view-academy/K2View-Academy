@@ -145,13 +145,13 @@ The following image illustrates two different examples:
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG">
 
 ### **Node Configuration**
-A configurable parameter *OPTIMISTIC_LOCKING* in the node's config.ini file can be set to support lightweight transactions between nodes to decide on a Job's allocation:
+A configurable parameter **OPTIMISTIC_LOCKING** in the node's config.ini file can be set to support lightweight transactions between nodes to decide on a Job's allocation:
 The supported values are as follow:
 - NONE - this is the default value. The latest transaction overrides the instance ID.
 - QUORUM - the first transaction locks the instance ID. Latest transaction will fail until the transaction is committed (the commit requires a quorum).
 - LOCAL QUORUM - the first transaction locks the instance ID. Latest transaction will fail until the transaction is committed (the commit requires a local quorum on the DC).
 
-OPTIMISTIC_LOCKING modes - Example:
+**OPTIMISTIC_LOCKING** modes - Example:
 
 Fabric has 2 Data Centers DC1 and DC2:
 - Transaction 1- runs on Node1 (DC1)
