@@ -156,9 +156,12 @@ Fabric has 2 Data Centers DC1 and DC2:
 - Transaction 1- runs on Node1 (DC1)
 - Transaction 2- runs on Node4 (DC2)
 
-If OPTIMISTIC_LOCKING is set to ‘NONE’ then transaction2 (the latest transaction) overrides transaction 1
-If OPTIMISTIC_LOCKING is set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC
-If OPTIMISTIC_LOCKING is set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1
+      If OPTIMISTIC_LOCKING is set to ‘NONE’ then transaction2 (the latest transaction) overrides transaction 1.
+
+      If OPTIMISTIC_LOCKING is set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
+
+      If OPTIMISTIC_LOCKING is set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.
+
 
 ## **Job's Logic**
 
