@@ -131,6 +131,8 @@ A specific Job can be assigned to a specific Fabric node by specifying the node'
 
 ## **Nodes Competition**
 
+### **Node Allocation to a Job**
+
 When running multiple Fabric nodes, Jobs can be allocated to different nodes. Once a new Job is deployed, each node competes to execute it. The Cassandra Optimistic Locking process ensures an agreement is reached between all nodes and that each Job is executed only once by the best candidate node at any given time. A running thread in each Fabric node checks whether a new Job has been deployed and if the Cassandra LiteWeight Transactions process has allocated the Job to it. The thread handles the processing and lifecycle of the Job.
 
 The following image illustrates two different examples:
@@ -142,7 +144,21 @@ The following image illustrates two different examples:
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG">
 
+### **Node Configuration**
+A configurable parameter *OPTIMISTIC_LOCKING* in the node's config.ini file can be set to support lightweight transactions between nodes to decide on a Job's allocation:
+The supported values are as follow:
+- NONE - this is the default value. The latest transaction overrides the instance ID.
+- QUORUM - the first transaction locks the instance ID. Latest transaction will fail until the transaction is committed (the commit requires a quorum).
+- LOCAL QUORUM - the first transaction locks the instance ID. Latest transaction will fail until the transaction is committed (the commit requires a local quorum on the DC).
 
+OPTIMISTIC_LOCKING modes - Example:
+Fabric has 2 Data Centers DC1 and DC2:
+- Transaction 1- runs on Node1 (DC1)
+- Transaction 2- runs on Node4 (DC2)
+
+If OPTIMISTIC_LOCKING is set to ‘NONE’ then transaction2 (the latest transaction) overrides transaction 1
+If OPTIMISTIC_LOCKING is set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC
+If OPTIMISTIC_LOCKING is set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1
 
 ## **Job's Logic**
 
