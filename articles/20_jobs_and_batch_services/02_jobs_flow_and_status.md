@@ -152,6 +152,7 @@ The supported values are as follow:
 - LOCAL QUORUM - the first transaction locks the instance ID. Latest transaction will fail until the transaction is committed (the commit requires a local quorum on the DC).
 
 OPTIMISTIC_LOCKING modes - Example:
+
 Fabric has 2 Data Centers DC1 and DC2:
 - Transaction 1- runs on Node1 (DC1)
 - Transaction 2- runs on Node4 (DC2)
