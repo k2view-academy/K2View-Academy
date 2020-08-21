@@ -125,16 +125,26 @@ Invoke the **startjob** command to trigger the job with the relevant parameters.
 
 
 ## How Do I Create a New Broadway Job?
-The Fabric Jobs mechanism also enables running a Broadway flow.
+The Fabric Jobs mechanism also enables running a [Broadway flow](/articles/19_Broadway/01_broadway_overview.md).
 Set the **Job** type to **broadway_job** and the name of the flow with a list of its arguments.
 
 Example: 
 ```startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];```
+where args consists of a json-type format string containing the parameters to be parsed to broadway:                                                                              e.g. {"first_param":"first_value","second_param":"second_value"}
+``` startjob broadway_job name='Customer.Flow1' args='A=10, B=20';```
 
 ## How Do I Create a New CDC Job?
 Fabric can execute [CDC](/articles/18_cdc_and_search/02_cdc_messages.md) Jobs (Change Data Capture) to notify external systems about any data changes occuring in Fabric DB. 
-Jobs can also execute cross-instance searches using Fabric's Search capability.
- 
+Jobs can also execute cross-instance searches using Fabric's Search capability - (Elastic Search command syntax should be used).
+
+Set the **Job** type to **cdc_republish_instance_job**
+
+Example:
+``` startjob cdc_republish_instance_job Customer.1000 tables='customer,address'```
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_jobs_commands.md)
 
