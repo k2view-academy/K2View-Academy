@@ -152,18 +152,24 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 
 **Arguments**  
 
-```{"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}```
+      {"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}
 
 **Command**  
 
-```BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';``` - in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
+```BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';```
+
+- in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
 <img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
 
 **extra_stats**  
 
+This field shows the slowest-processed entities, along with their ID, processing time, status, and fields changes: 
+
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
+
+
 
 ### **Batch Tables and Job Tables Correlation in Cassandra**
 Information about the Job created during the execution of the Batch process is displayed in the **k2system** keyspace in the **k2_jobs** table.
