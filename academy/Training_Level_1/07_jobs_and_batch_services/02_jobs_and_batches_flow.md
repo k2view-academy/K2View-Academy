@@ -5,19 +5,21 @@
 
 ## Jobs - Types and Purposes
 
-Let's take a look at the different types of jobs that can be used to execute specific commands or code:
+Let's take a look at the different types of jobs that can be used to execute specific commands or code. 
+
+Please read:
 
 - [Jobs Overview](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)
 
 
-Through the following articles, you will understand Jobs' flows and their executions' environment:
+The following articles discuss Jobs flows and their executions environment:
 
 - [Jobs' Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
 
 - [How to Create a Job](/articles/20_jobs_and_batch_services/03_create_a_job.md)
 
 
-The next articles will get you acquainted with Jobs' management and configuration:
+These articles introducw Jobs' management and configuration:
 
 - [Jobs' Commands](/articles/20_jobs_and_batch_services/04_jobs_commands.md)
 
