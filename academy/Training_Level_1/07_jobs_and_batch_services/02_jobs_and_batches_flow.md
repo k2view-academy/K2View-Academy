@@ -47,13 +47,13 @@ Create the relevant Java file.
 
 **Step 2.**
 
-Create a Job Entry in the JOBS table under Customer LU that runs the job every 5 minutes.
+Create a Job entry in the JOBS table under the Customer LU that runs the Job every 5 minutes.
 
 **Step 3.**
 
-Deploy Customer LU.
-Check in Fabric Home Directory. Can you see the list_entities.txt file?
-What is the Timestamp of the first entry? How many Customers are there in CRM_DB ?
+Deploy the Customer LU.
+Check the Fabric Home directory. Can you see the list_entities.txt file?
+What is the Timestamp of the first entry? How many Customers are there in the CRM_DB?
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 1
