@@ -32,7 +32,7 @@ The next articles will get you acquainted with Jobs' management and configuratio
 
 Let's take a look at the different types of Batch processes that Fabric offers for running automated processes. 
 
-First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_services/07_batch_process_overview.md) followed by [Batch Process Commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md) and [Batch Flow](/articles/20_jobs_and_batch_services/09_batch_process_flow.md) to learn how to run new Batch processes and their execution flow.
+First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_services/07_batch_process_overview.md) followed by [Batch Process Commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md) and [Batch Flow](/articles/20_jobs_and_batch_services/09_batch_process_flow.md) to learn about running new Batch processes and their execution flow.
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 1
@@ -55,7 +55,9 @@ Deploy the Customer LU.
 
 Check the Fabric Home directory. Can you see the list_entities.txt file?
 
-What is the Timestamp of the first entry? How many customers are there in the CRM_DB?
+What is the Timestamp of the first entry? 
+
+How many customers are there in the CRM_DB?
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 1 Solution 
@@ -103,6 +105,7 @@ When is the next run scheduled for?
 **Step 2.**
 
 Which command will you use to stop this Job?
+
 What was the Job's status after you ran the previous command?
 
 **Step 3.**
@@ -193,7 +196,7 @@ In this exercise you will use the Batch command to sync Customer LU instances.
 
 **Step 1.**
 
-Which Batch command do I type to sync instances 996, 997, 998 and 999?
+Which Batch command is used to sync instances 996, 997, 998 and 999?
 
 Run the batch_summary command with the appropriate **Bid** parameter. 
 
@@ -246,7 +249,7 @@ Ent./sec (avg.): 3.94
 
 **Step 2.**
 
-Create the following Instance Group: **NY_IG_toSync** in the Fabric Studio, under the Customer LU section:
+Create the **NY_IG_toSync** instance group in the Fabric Studio under the Customer LU section:
 
 <img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step2.PNG">
 
@@ -272,7 +275,7 @@ Response:
 |Cluster|--          |DONE  |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |569  |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
 ```
 
-Answer: 569
+Answer: 569.
 
 Command: ```batch_details 'fe051b44-413c-42de-83da-c2158747a844';```
 
@@ -296,7 +299,7 @@ Response:
 
 **Step 3.**
 
-Create the following Instance Group: **CA_IG_toSync** in the Fabric Studio under the Customer LU section:
+Create the **CA_IG_toSync** instance group in the Fabric Studio under the Customer LU section:
 
 <img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step3.PNG">
 
@@ -321,8 +324,7 @@ Response:
 |Cluster|--          |DONE  |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |577  |0     |0    |577    |0        |100        |124.11         |124.11         |
 ```
 
-Answer:
-577
+Answer: 577.
 
 Command: ```migrate_details '991a1199-1a81-41d9-b4f6-3abb587bb99d';```
 
