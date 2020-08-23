@@ -55,7 +55,7 @@ Deploy the Customer LU.
 
 Check the Fabric Home directory. Can you see the list_entities.txt file?
 
-What is the Timestamp of the first entry? How many Customers are there in the CRM_DB?
+What is the Timestamp of the first entry? How many customers are there in the CRM_DB?
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 1 Solution 
@@ -107,11 +107,11 @@ What was the Job's status after you ran the previous command?
 
 **Step 3.**
 
-Delete or rename the list_entities.txt file in the Fabric Home direcory.
+Delete or rename the list_entities.txt file in the Fabric Home directory.
 
 Which command must be run to resume the Job?
 
-What is the status of the Job in the table displayed after running the command?
+What is the Job's status in the table after the command is run?
 
 **Step 4.**
 
