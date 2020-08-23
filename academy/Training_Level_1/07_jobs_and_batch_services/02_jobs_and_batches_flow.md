@@ -39,7 +39,7 @@ First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_se
 
 In this exercise you will create a scheduled Fabric user Job that runs daily and that creates the list_entities.txt file where the following information is appended  every 5 minutes:
 - Current date and time. 
-- Number of Customer records in the CRM_DB.
+- Number of customer records in the CRM_DB.
 
 **Step 1.**
 
@@ -86,10 +86,10 @@ Answer: 10,000.
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 2
-In this exercise you will interact with the Job created above from the command line.
+In this exercise you will interact with the above Job using the command line.
 
 **Step 1.**
-Open the Fabric console.
+Open the Fabric Console.
 Which command is used to list all Jobs created over the last 48 hours?
 When was the Job created? Which affinity has been set for this Job?
 When is the next run scheduled for?
