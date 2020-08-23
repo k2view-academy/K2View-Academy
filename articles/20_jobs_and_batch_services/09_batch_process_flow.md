@@ -19,7 +19,7 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 3. IN_PROGRESS
 4. FAILED/CANCELLED/DONE
 
-The illustration below shows how, once triggered from the command line, a batch process is automatically encapsulated into a Job process. In turn, the Job Process launches and manages the batch command through its lifecycle phases. 
+The illustration below shows how, once triggered from the command line, a batch process is automatically encapsulated into a Job process. In turn, the Job Process launches the batch command that then, runs through its lifecycle phases. 
  
 
 <img src="/articles/20_jobs_and_batch_services/images/13_jobs_and_batch_services_batch_process.PNG">
