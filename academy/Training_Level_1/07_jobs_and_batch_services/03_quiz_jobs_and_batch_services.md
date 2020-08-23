@@ -29,9 +29,9 @@ D: A tool that schedules the creation of Logical Units.
 
 #### Question 2: Jobs Configuration
 
-To create a new user Job you need to define:
+To create a new user Job, you need to define:
 
-A: A method written in Java that is saved as a Utility Function in the Fabric Studio.
+A: A method written in Java that is saved as a Utility function in the Fabric Studio.
 
 B: A dedicated entry in the Jobs table of a given LU.
 
@@ -62,7 +62,8 @@ D: All the above.
 
 A Job can be scheduled using Crontab syntax. 
 
-Which of the following options is valid and describes the schedule below: 
+Which of these options is valid and describes the following schedule:
+
 "Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"?
   
 A: ```30 04-16/3 05 11 5```
@@ -191,7 +192,7 @@ C: The BATCH_DETAILS command.
 
 #### Question 12: Batch Command & SQL
 
-SQL statements can be embedded as a parameter parsed into a Batch command as followed:
+SQL statements can be embedded as a parameter parsed into a Batch command as follows:
 
 A: ```from CRM_DB USING('select customer_id from Customer where customer_id <=10')"```
 
