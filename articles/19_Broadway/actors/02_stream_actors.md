@@ -1,6 +1,6 @@
 # Stream Actors
 
-Broadway has a **streams** category of Actors that handle streams like reading from and writing to a file or compressing and decompressing  data.  
+Broadway has a **streams** category of Actors that handle streams such as reading from and writing to a file or compressing and decompressing  data.  
 
 For example:
 * The **FileRead** Actor reads data from a file in a defined interface and path and returns a collection of blobs. The **path** input argument expects to receive the relative path and filename.
