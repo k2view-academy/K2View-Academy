@@ -2,39 +2,42 @@
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Quiz.png)
 Excellent! 
-You have completed the Jobs and Batch services items.
+You have completed the Jobs and Batch Services items.
 
 
-Take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
+Take the following Quiz to see what you have learnt. 
 
+The Quiz consists of of multiple-choice questions, each providing a number of possible answers. 
+
+Click the answer you think is correct. 
 
 
 #### Question 1: Jobs Services
 
-A Fabric Jobs is a Fabric utility that can be used to:
+Fabric Jobs is a Fabric utility that can be used to:
 
 A: Develop new skills and send your resume.
 
 B: A rich, resilient and scalable mechanism that can be used to run any script or executable.
 
-C: A tool to create Instances Groups.
+C: A tool that creates Instances Groups.
 
-D: A tool to schedule Logical Units creation.
+D: A tool that schedules the creation of Logical Units.
 
 (**Solution 1: B**).
 
 
 #### Question 2: Jobs Configuration
 
-In order to create a new user job you need to define:
+To create a new user Job you need to define:
 
-A: A method written in Java to be saved as a Utility Function in Fabric Studio .
+A: A method written in Java that is saved as a Utility Function in the Fabric Studio.
 
-B: An dedicated entry in the Jobs Table of a given LU.
+B: A dedicated entry in the Jobs table of a given LU.
 
-C: A recurring CRON schedule, Time Interval or One-time only parameter.
+C: A recurring CRON schedule, time interval or one-time only parameter.
 
-D: All the above
+D: All the above.
 
 (**Solution 2: D**).
 
@@ -57,7 +60,9 @@ D: All the above.
 
 #### Question 4: Jobs Commands
 
-A Joc can be scheduled using the Crontab syntax. Which of the options is valid and describes following schedule: 
+A Job can be scheduled using Crontab syntax. 
+
+Which of the following options is valid and describes the schedule below: 
 "Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"?
   
 A: ```30 04-16/3 05 11 5```
@@ -76,7 +81,7 @@ D: Fabric does not support CronTab.
 
 When using the UpdateJob command, you can update:
 
-A: The affinity of the Job (on which node it will be run).
+A: The affinity of the Job. (The node where it is run).
 
 B: The scheduling scheme of the Job.
 
@@ -107,26 +112,26 @@ D: ```JOBSTATUS --24;```
 
 #### Question 7: Jobs Affinity
 
-If no affinity is specified when configuring a job then
+If no affinity is specified when configuring a Job then:
 
-A: The job is run on the next available node.
+A: The Job is run on the next available node.
 
-B: On a node chosen by Cassandra quorum consistency logic.
+B: The Job is run on a node chosen by Cassandra quorum consistency logic.
 
-C: The job wont run because an affinity must be specified.
+C: The Job won't run because an affinity must be specified.
 
-D: The job will be queued until a node specifically requests for it.
+D: The Job will be queued until a node specifically requests for it.
 
 (**Solution 7: A**)
 
 
 #### Question 8: Jobs Types 
 
-The following types of jobs can be defined:
+The following types of Jobs can be defined:
 
-A: User jobs.
+A: User Job.
 
-B: Process jobs.
+B: Process Jobs.
 
 C: Broadway flows.
 
@@ -139,13 +144,13 @@ E: All the above.
 
 #### Question 9: Batch Processes
 
-A Batch process is a Fabric utility that can be used to run multiple commands on a population's instances such as:
+A Batch process is a Fabric utility that can be used to run multiple commands on a population's instances, such as:
 
 A: Sync instances, to perform multiple syncs on all (or a subset of) instances for a specific Logical Unit. 
 
 B: Broadway flows.
 
-C: Fabric data changes publishing. 
+C: Publishing Fabric data changes. 
 
 D: All the above.
 
@@ -154,7 +159,7 @@ D: All the above.
 
 #### Question 10: Batch Commands 
 
-Which commands can be used to sync the entire population of Customer LU ?
+Which commands can be used to sync the entire population of a Customer LU?
 
 A: ```BATCH CUSTOMER FABRIC_COMMAND="sync_instance Customer.?" with async=’true’;```
 
