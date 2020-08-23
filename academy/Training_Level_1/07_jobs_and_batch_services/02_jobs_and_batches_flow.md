@@ -56,7 +56,7 @@ Check the Fabric Home directory. Can you see the list_entities.txt file?
 What is the Timestamp of the first entry? How many Customers are there in the CRM_DB?
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 1
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 1 Solution 
 
 **Step 1.**
 
@@ -73,40 +73,40 @@ myWriter.close();
 
 **Step 2.**
 
-Jobs table in Fabric Studio:
+Jobs table in the Fabric Studio:
 
 <img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise1Step2.PNG">
 
 
 **Step 3.**
 
-Ans: 10,000
+Answer: 10,000
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 2
-In this exercise we will interact with the job created above from the command line.
+In this exercise you will interact with the Job created above from the command line.
 
 **Step 1.**
-Open up Fabric console.
-Which command will you use to list all jobs created over the last 48 hours ?
-Which date was this job created? Which affinity has been set for this job ?
-When is next run scheduled for?
+Open the Fabric console.
+Which command is used to list all Jobs created over the last 48 hours?
+When was the Job created? Which affinity has been set for this Job?
+When is the next run scheduled for?
 
 **Step 2.**
-Which command will you use to stop this job ?
-To which status is the job set once you have run the previous command?
+Which command will you use to stop this Job?
+What is the Job's status after you run the previous command?
 
 **Step 3.**
-Delete or rename the list_entities.txt file in Fabric Home Direcory.
-Which command needs to be run to resume the job ?
-What is the status of the job in the table displayed after running the command ?
+Delete or rename the list_entities.txt file in the Fabric Home direcory.
+Which command must be run to resume the Job?
+What is the status of the Job in the table displayed after running the command?
 
 **Step 4.**
-Re-run the command listing all the jobs created over the last 2 days. What is the new status of the job?
+Re-run the command listing all Jobs created over the last 2 days. What is the new status of the Job?
 
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 2
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 2 Solution
 
 **Step 1.**
 
@@ -122,7 +122,7 @@ fabric>jobstatus 1 days ago;
 |USER_JOB|Customer.testJob    |testJOB1      |RESTART  |2020 08 20 08:12:03|2020 08 13 10:02:34|1970 01 01 00:00:00|’DC1’, ’10.21.1.121|false      |2021-03-05 08:00:30|0                       |     |            |
 ```
 
-Creation Time: ```2020 08 20 08:12:03```
+Creation time: ```2020 08 20 08:12:03```
 
 Affinity: ``` ``` (none has been defined)
 
