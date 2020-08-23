@@ -75,8 +75,8 @@ This command migrates all customers from the source systems into the Fabric CUST
 
 </td>
 <td valign="top" width="300pxl">
-<p>BATCH CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;
-This command migrates the customers defined in the ‘ig10CustomersList’ Instance Group into the CUSTOMER keyspace in the Fabric database.</p>
+<p>BATCH CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;</p>
+<p>This command migrates the customers defined in the ‘ig10CustomersList’ Instance Group into the CUSTOMER keyspace in the Fabric database.</p>
 
 </td>
 </tr> 
