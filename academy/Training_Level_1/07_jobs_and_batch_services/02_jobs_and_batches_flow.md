@@ -89,21 +89,32 @@ Answer: 10,000.
 In this exercise you will interact with the above Job using the command line.
 
 **Step 1.**
+
 Open the Fabric Console.
+
 Which command is used to list all Jobs created over the last 48 hours?
-When was the Job created? Which affinity has been set for this Job?
+
+When was the Job created? 
+
+Which affinity has been set for this Job?
+
 When is the next run scheduled for?
 
 **Step 2.**
+
 Which command will you use to stop this Job?
-What is the Job's status after you run the previous command?
+What was the Job's status after you ran the previous command?
 
 **Step 3.**
+
 Delete or rename the list_entities.txt file in the Fabric Home direcory.
+
 Which command must be run to resume the Job?
+
 What is the status of the Job in the table displayed after running the command?
 
 **Step 4.**
+
 Re-run the command listing all Jobs created over the last 2 days. What is the new status of the Job?
 
 
@@ -178,25 +189,32 @@ fabric>jobstatus 1 days ago;
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 3
 
-In this exercise we will use the batch command to sync instances of Customer LU.
+In this exercise you will use the Batch command to sync Customer LU instances.
 
 **Step 1.**
-Which BATCH command do I need to type to sync instances 996, 997, 998, 999 ?
-Run the batch_summary command with the appropriate *bid* parameter. 
-How many entries have been sync-ed per second? 
+
+Which Batch command do I type to sync instances 996, 997, 998 and 999?
+
+Run the batch_summary command with the appropriate **Bid** parameter. 
+
+How many entries have been synced per second? 
 
 **Step 2.**
-Create a new instance group where by all customers live in NY State
-Run the appropriate *batch* command to sync all customers residing in NY State.
-Using the *batch_summary* command, how many instances were retrieved?
+
+Create a new instance group where by all customers live in NY State.
+
+Run the appropriate **Batch** command to sync all customers residing in NY State.
+Using the **batch_summary** command, how many instances have been retrieved?
 
 **Step 3.**
-Create a new instance group where by all customers live in CA State
-Run the appropriate *migrate* command to sync all customers residing in CA State 
+
+Create a new instance group where all customers live in CA State.
+
+Run the appropriate **migrate** command to sync all customers residing in CA State. 
 
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Solution Exercise 3
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 3 Solution
 
 
 **Step 1.**
@@ -228,7 +246,7 @@ Ent./sec (avg.): 3.94
 
 **Step 2.**
 
-Create the following Instance Group: *NY_IG_toSync*, in Fabric Studio, under the Customer LU section:
+Create the following Instance Group: **NY_IG_toSync** in the Fabric Studio, under the Customer LU section:
 
 <img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step2.PNG">
 
@@ -254,8 +272,7 @@ Response:
 |Cluster|--          |DONE  |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |569  |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
 ```
 
-Answer:
-569
+Answer: 569
 
 Command: ```batch_details 'fe051b44-413c-42de-83da-c2158747a844';```
 
@@ -279,7 +296,7 @@ Response:
 
 **Step 3.**
 
-Create the following Instance Group: *CA_IG_toSync*, in Fabric Studio, under the Customer LU section:
+Create the following Instance Group: **CA_IG_toSync** in the Fabric Studio under the Customer LU section:
 
 <img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step3.PNG">
 
