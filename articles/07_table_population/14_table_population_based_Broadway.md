@@ -1,18 +1,18 @@
-# Table Population Based on Broadway Flow
+# Table Population Based on a Broadway Flow
 
-[Broadway](01_broadway_overview.md) is the Fabric module that is used to design data movement, its transformation and the orchestration of business flows. A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md.md) is a core Broadway object that represents a business process and is built from several [Stages](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY/articles/19_Broadway/03_broadway_actor.md).
+[Broadway](01_broadway_overview.md) is a Fabric module that is used to design data movement, its transformation and the orchestration of business flows. A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md.md) is a core Broadway object that represents a business process and is built from several [Stages](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY/articles/19_Broadway/03_broadway_actor.md).
 
-A table population can be created based on a Broadway flow. The advantage of using a Broadway flow for table population rather than a source object based population is to streamline the logic and all the related validations into one business process and by that to improve the Project maintainability.
+A table population can be created based on a Broadway flow. The advantage of using a Broadway flow for table population rather than a source object based population, is to streamline the logic and all related validations into one business process to improve the project's maintainability.
 
 ### How Do I Create a Population Based on a Broadway Flow?
 
-The trigger points for creating a population based on a Broadway flow are the same as for [creating any new table population](03_creating_a_new_table_population.md) but using **Create Table Population based Broadway Flow** option.
+The triggers for creating a population based on a Broadway flow are the same as for [creating any new table population](03_creating_a_new_table_population.md) but using **Create Table Population based Broadway Flow** option.
 
 For example:
 
-1. Right click the table name under the **Project Tree** and then click **New Table Population based Broadway Flow** to open the Population Name  popup.
+1. Right click the table name under the **Project Tree** and then click **New Table Population based Broadway Flow** to open the Population Name popup.
 
-2. Enter the population name and click **OK** to open a Broadway flow window. The population flow template is created and includes the basic steps for retrieving  source data and loading it into the target. The template can be modified according to the Project's requirements.
+2. Enter the population name and click **OK** to open a Broadway flow window. The Population Flow template is created and includes the basic steps for retrieving  source data and loading it into the target. The template can be modified according to the Project's requirements.
 
    ![image](images/07_14_01.PNG)
 
@@ -20,15 +20,15 @@ For example:
 
 ### How Do I Use a Flow Population Template?
 
-Broadway mechanism creates a template of a population flow that includes predefined Stages and uses designated Actors. This template can be modified by adding more Actors if needed. 
+A Broadway Population Flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
 
-The population flow template includes the following Stages:
+A Population Flow template has the following Stages:
 
-* **Input** Stage, defines the population input arguments using a designated **PopulationArgs** Actor.
-* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The interface for the query's execution is selected from the list of Fabric [DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). The query can be validated using the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clickig **QB** in the **sql** input argument field of the Actor. The **SourceDbQuery** Actor inherits from [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance with less calls to the source.
-* **Stage 1** an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
-* **LU Table** Stage, defines the target LU Table using the **DbLoad** Actor. The target interface, table and the INSERT, UPDATE or UPSERT command are set using the Actor's input arguments. The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the query to the load is set as **Iterate** to enable the loop over the query results.
-* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB. This is similar to the functionality of [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) which are executed on an [LU table's](/articles/06_LU_tables/01_LU_tables_overview.md) data after it has already been populated from a source object.
+* **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor.
+* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field of the Actor. The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance with less calls to the source.
+* **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
+* **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. The target interface, table and INSERT, UPDATE or UPSERT command are set using the Actor's input arguments. The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the query to the load is set as **Iterate** to enable looping over the query results.
+* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB. This is similar to the functionality of [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) that are executed on an [LU table's](/articles/06_LU_tables/01_LU_tables_overview.md) data after it has already been populated from a source object.
 
 [Click for more information about Broadway and its building blocks](/articles/19_Broadway/README.md).
 
