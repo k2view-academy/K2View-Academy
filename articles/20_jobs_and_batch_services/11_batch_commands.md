@@ -1,4 +1,4 @@
-# Batch Commands
+# Batch Sync Commands
 
 The Fabric runtime environment provides the following sets of Batch commands:
 
@@ -6,15 +6,6 @@ The Fabric runtime environment provides the following sets of Batch commands:
 
 ```BATCH LUT ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LUT.?" with ASYNC='true';```
 
-
-**Broadway Flows Execution**
-
-```BATCH LUT FABRIC_COMMAND="broadway LUT.SampleFlow SampleIID=?" with async=true;```
-
-
-**CDC Republish**
-
-```BATCH LUT from fabric FABRIC_COMMAND="cdc_republish_instance OracleLU.?" with async=true;```
 
 
 ## Batch Commands Summary
