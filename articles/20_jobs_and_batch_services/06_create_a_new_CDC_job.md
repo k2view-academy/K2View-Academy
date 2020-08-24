@@ -9,7 +9,10 @@ Jobs can also execute cross-instance searches using Fabric's Search capability -
 Set the **Job** type to **cdc_republish_instance_job**
 
 ## Example:
-``` startjob cdc_republish_instance_job Customer.1000 tables='customer,address'```
+[Data Republish Example](/articles/18_cdc_and_search/02_cdc_messages.md#data-republish)
+
+Based on the example above, the startjob command will be as follow:
+``` startjob cdc_republish_instance_job CTN.1 tables='T1,address'```
 
 
 
