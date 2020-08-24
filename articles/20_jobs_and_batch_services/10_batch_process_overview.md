@@ -16,6 +16,20 @@ Fabric's integrated Batch process provides the following advantages to ensure th
 - Stopping and resuming of the migration process (LUI synchronization).
 - Process tracking at entity level. (e.g. timing, duration, handling node or failure management).
 
+# **Fabric Batch Use Cases**
+
+**Instances Migration**
+
+```BATCH LUT ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LUT.?" with ASYNC='true';```
+
+**Broadway Flows Execution**
+
+```BATCH LUT FABRIC_COMMAND="broadway LUT.SampleFlow SampleIID=?" with async=true;```
+
+**CDC Republish**
+
+```BATCH LUT from fabric FABRIC_COMMAND="cdc_republish_instance OracleLU.?" with async=true;```
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/08_jobs_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/11_batch_process_commands.md)
