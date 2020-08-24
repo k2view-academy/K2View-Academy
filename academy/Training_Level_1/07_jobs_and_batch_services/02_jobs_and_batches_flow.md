@@ -5,16 +5,16 @@
 
 ## Jobs - Types and Purposes
 
-Let's take a look at the different types of jobs that can be used to execute specific commands or code. 
+Let's take a look at the different types of Jobs that can be used to execute specific commands or code. 
 
 Please read:
 
 - [Jobs Overview](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)
 
 
-The following articles discuss Jobs flows and their executions environment:
+The following articles discuss Jobs flows and their execution environments:
 
-- [Jobs' Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
+- [Jobs Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
 
 - [How to Create a Job](/articles/20_jobs_and_batch_services/03_create_a_job.md)
 
@@ -57,7 +57,7 @@ Deploy the Customer LU.
 
 Check the Fabric Home directory. Can you see the list_entities.txt file?
 
-What is the Timestamp of the first entry? 
+What is the timestamp of the first entry? 
 
 How many customers are there in the CRM_DB?
 
@@ -120,7 +120,7 @@ What is the Job's status in the table after the command is run?
 
 **Step 4.**
 
-Re-run the command listing all Jobs created over the last 2 days. What is the new status of the Job?
+Rerun the command listing all Jobs created over the last 2 days. What is the new status of the Job?
 
 
 
@@ -161,7 +161,7 @@ fabric>stopjob USER_JOB NAME='Customer.numberOfIDs';
 
 ```
 
-Status has been set to: TERMINATED
+Status has been set to TERMINATED.
 
 **Step 3.**
 
@@ -177,10 +177,10 @@ fabric>resumejob USER_JOB NAME='Customer.numberOfIDs';
 
 ```
 
-Status has been set to: WAITING
+Status has been set to WAITING.
 
 **Step 4.**
-Status has been set back to: SCHEDULED
+Status has been set back to SCHEDULED.
 
 ```
 fabric>jobstatus 1 days ago;
@@ -206,7 +206,7 @@ How many entries have been synced per second?
 
 **Step 2.**
 
-Create a new instance group where by all customers live in NY State.
+Create a new instance group where all customers live in NY State.
 
 Run the appropriate **Batch** command to sync all customers residing in NY State.
 Using the **batch_summary** command, how many instances have been retrieved?
