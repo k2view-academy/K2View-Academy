@@ -3,16 +3,19 @@
 ## Migrate Commands
 
 The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database.
+Instances Migration
+
+```MIGRATE LUT[@<DC>] with ASYNC='true';```
 
 Behind the scenes, Fabric activates the Batch command when running the Migrate command. 
-All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md#batch-commands-summary) can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
+All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/11_batch_process_commands.md#batch-commands-summary) can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
 
 For example:
 The following two commands are equivallent.
 
 ``` BATCH <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
 
-Using the same example as above:
+Using the same example as in previous article, using the same Instance Group pertaining to the Customer LU **customer_IG_600To700**:
 ```
 MIGRATE Customer.customer_IG_600To700;
 ```
