@@ -18,7 +18,7 @@ Invoke the **startjob** command to trigger the job with the relevant parameters.
 
 -  Go to the Fabric runtime command line and execute the following command:
 
-         ```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
+   ```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
 
    Where:
   - Process, defines the type of Job; in this case a process job.
