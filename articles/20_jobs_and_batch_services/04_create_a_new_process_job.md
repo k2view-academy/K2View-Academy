@@ -25,3 +25,5 @@ Invoke the **startjob** command to trigger the job with the relevant parameters.
   - INTERVAL, refers to the frequency of the job's occurence; in this case every 3 seconds.
 
 
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md)
