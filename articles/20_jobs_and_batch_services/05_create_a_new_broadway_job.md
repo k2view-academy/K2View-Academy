@@ -15,7 +15,10 @@ startjob broadway_job name='<lu>.<flow>' [args='{"key":"value"}'];
 
 where args consists of a json-type format string containing the parameters to be parsed to broadway: 
 
-``` args='{"first_param":"first_value","second_param":"second_value"}'```
+```
+args='{"first_param":"first_value","second_param":"second_value"}'
+```
+
 e.g. 
 ``` startjob broadway_job name='Customer.Flow1' args='A=10, B=20';```
 
