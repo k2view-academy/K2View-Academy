@@ -3,6 +3,7 @@
 ## Purpose
 The Fabric Jobs mechanism also enables running a [Broadway flow](/articles/19_Broadway/01_broadway_overview.md).
 
+## Job Type
 Set the **Job** type to **broadway_job** and the name of the flow with a list of its arguments.
 
 ## Example: 
