@@ -9,7 +9,8 @@ Set the **Job** type to **broadway_job** and the name of the flow with a list of
 
 where args consists of a json-type format string containing the parameters to be parsed to broadway: 
 
-e.g. {"first_param":"first_value","second_param":"second_value"}
+``` args='{"first_param":"first_value","second_param":"second_value"}'```
+e.g. 
 
 ``` startjob broadway_job name='Customer.Flow1' args='A=10, B=20';```
 
