@@ -5,6 +5,7 @@ Process Jobs are batch files or scripts stored in the Fabric server and triggere
 Create a bash script and save it in /home/k2view/ directory.
 
 For example, save the following code into /home/k2view/echoArg.sh
+
 ```bash
 #!/bin/bash
 echo "Total Arguments : $#"
@@ -16,6 +17,7 @@ echo "2nd Argument = $2"
 Invoke the **startjob** command to trigger the job with the relevant parameters. 
 
 -  Go to the Fabric runtime command line and execute the following command:
+
 ```startjob process NAME='/home/k2view/echoArg.sh' UID='processJobtest' ARGS='{"0":"ARG 1 value","1":"ARG 2 value"}' EXEC_INTERVAL='00:00:03';```
 
    Where:
