@@ -78,4 +78,4 @@ Result
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/05_jobs_table_fields.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/07_batch_process_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/08_jobs_table_fields.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/10_batch_process_overview.md)
