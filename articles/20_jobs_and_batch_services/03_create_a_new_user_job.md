@@ -83,7 +83,7 @@ In the **Job table**, enter the values pertaining to the Job.
 </td>
 </tr>
 <tr>
-<td style="width: 300px;"><strong>[Affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md)</strong></td>
+<td style="width: 300px;"><strong>Affinity</strong></td>
 <td style="width: 600px;">
 <p class="unchanged rich-diff-level-one">Where the details of the node assigned to the job are entered. Affinity can be set using either one of the following options:</p>
 <ul class="unchanged rich-diff-level-one">
