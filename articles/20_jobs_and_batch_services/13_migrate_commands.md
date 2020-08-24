@@ -285,3 +285,5 @@ Use this command to migrate a selective list of instances defined by a function.
 </tbody>
 </table>
 
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/14_batch_broadway_commands.md)
