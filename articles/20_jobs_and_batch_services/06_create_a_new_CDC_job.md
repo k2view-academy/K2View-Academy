@@ -12,7 +12,9 @@ Set the **Job** type to **cdc_republish_instance_job**
 [Data Republish Example](/articles/18_cdc_and_search/02_cdc_messages.md#data-republish)
 
 Based on the example above, the startjob command will be as follow:
-``` startjob cdc_republish_instance_job CTN.1 tables='T1,address'```
+```
+startjob cdc_republish_instance_job CTN.1 tables='T1,address'
+```
 
 
 
