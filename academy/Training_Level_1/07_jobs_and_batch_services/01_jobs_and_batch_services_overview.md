@@ -15,7 +15,7 @@ By the end of the Jobs and Batch Services learning item you will know how to:
 - Deploy a Job and execute it across multiple Fabric nodes.
 - Interact with Jobs as they run and monitor their status.
 - Create a new Batch process and use its commands.
-- Monitor Batch processes and their executing nodes.
+- Monitor Batch processes and their handling nodes.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)
