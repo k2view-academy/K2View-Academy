@@ -14,8 +14,10 @@ For example - large sync-ing processes would be executed by a specific node whil
 ### Physical Affinity:
 It consists of a node's IP or a DC name
 
-e.g. 
-```10.20.30.40``` 
+e.g.
+
+```10.20.30.40```
+
 ```DC-Europe```
 
 
