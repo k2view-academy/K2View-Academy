@@ -1,6 +1,6 @@
 # Jobs & Batch Services Overview
 
-Excellent work on your sixth quiz! Well Done! 
+Excellent work on your sixth quiz!
 
 You already know how to expose Fabric data and how it interacts with the outside world. 
 
