@@ -19,7 +19,7 @@ The following articles discuss Jobs flows and their execution environments:
 - [How to Create a Job](/articles/20_jobs_and_batch_services/03_create_a_job.md)
 
 
-These articles introducw Jobs' management and configuration:
+These articles introduce Jobs management and configuration:
 
 - [Jobs' Commands](/articles/20_jobs_and_batch_services/04_jobs_commands.md)
 
@@ -32,10 +32,10 @@ These articles introducw Jobs' management and configuration:
 
 ## Batch Processes - Types and Purposes
 
-Let's take a look at the different types of Batch processes that Fabric offers for running automated processes. 
+Let's take a look at the different types of Batch processes that Fabric offers for managing automated processes and their lifecycle.
+ 
 
-First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_services/07_batch_process_overview.md) followed by [Batch Process Commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md) and [Batch Flow](/articles/20_jobs_and_batch_services/09_batch_process_flow.md) to learn about running new Batch processes and their execution flow.
-
+First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_services/07_batch_process_overview.md) followed by [Batch Process Commands](/articles/20_jobs_and_batch_services/08_batch_process_commands.md) and [Batch Flow](/articles/20_jobs_and_batch_services/09_batch_process_flow.md). 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 1
 
