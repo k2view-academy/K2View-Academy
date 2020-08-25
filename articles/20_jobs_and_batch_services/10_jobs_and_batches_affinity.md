@@ -27,11 +27,11 @@ Each node can have multiple logical ids.
 
 Let's assume the following configuration, featuring a Fabric cluster comprised of 3 different physical nodes with the following IPs:
 
-Node 1: 10.0.0.10
+```Node 1: 10.0.0.10```
 
-Node 2: 10.0.0.20
+```Node 2: 10.0.0.20```
 
-Node 3: 10.0.0.30
+```Node 3: 10.0.0.30```
 
 
 The project consists in running a Fabric Job to monitor a Kafka Messaging Queue, on which network QoS alarms are continuously published and streamed by a source external to the Fabric Cluster.
