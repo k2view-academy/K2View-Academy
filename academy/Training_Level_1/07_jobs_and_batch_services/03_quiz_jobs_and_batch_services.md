@@ -14,22 +14,22 @@ Click the answer you think is correct.
 
 #### Question 1: Jobs Services
 
-Fabric Jobs is a Fabric utility that can be used to:
+Fabric Jobs is a Fabric utility that is:
 
-A: Develop new skills and send your resume.
+A: A career development and jobs search tool.
 
 B: A rich, resilient and scalable mechanism that can be used to run any script or executable.
 
-C: A tool that creates Instances Groups.
+C: A tool that creates instances groups.
 
-D: A tool that schedules the creation of Logical Units.
+D: A tool that schedules the creation of LUs.
 
 (**Solution 1: B**).
 
 
 #### Question 2: Jobs Configuration
 
-To create a new user Job, you need to define:
+To create a new User Job, you need to define:
 
 A: A method written in Java that is saved as a Utility function in the Fabric Studio.
 
@@ -60,11 +60,9 @@ D: All the above.
 
 #### Question 4: Jobs Commands
 
-A Job can be scheduled using Crontab syntax. 
+A Job can be scheduled using Crontab syntax. Which of these options is valid and describes the following schedule?
 
-Which of these options is valid and describes the following schedule:
-
-"Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"?
+"Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"
   
 A: ```30 04-16/3 05 11 5```
 
@@ -192,7 +190,7 @@ C: The BATCH_DETAILS command.
 
 #### Question 12: Batch Command & SQL
 
-SQL statements can be embedded as a parameter parsed into a Batch command as follows:
+An SQL statement can be embedded as a parameter parsed into a Batch command as follows:
 
 A: ```from CRM_DB USING('select customer_id from Customer where customer_id <=10')"```
 
