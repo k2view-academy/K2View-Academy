@@ -142,7 +142,7 @@ fabric>jobstatus 1 days ago;
 
 Creation time: ```2020 08 20 08:12:03```
 
-Affinity: ``` ``` (none has been defined)
+Affinity: ```(none has been defined)```
 
 Next scheduled run: ```2020-08-20 08:39:10```
 
