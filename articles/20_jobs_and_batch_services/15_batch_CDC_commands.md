@@ -7,7 +7,7 @@ The Batch command can be used to run the cdc_republish_instance command on diffe
 
 In addition, this process can benefit from all Batch configuration parameters, such as nodes affinity, capacity (max_nodes, max_workers_per_node) and multiplicity factor (allow_multiply)
 
-## Broadway Batch Commands
+## CDC Batch Commands
 The *FABRIC_COMMAND* parameter must be set using the usual [CDC_republish_instance](/articles/18_cdc_and_search/02_cdc_messages.md) syntax.
 
 ```BATCH LUT[@<DC>].<IG>  FABRIC_COMMAND="cdc_republish_instance OracleLU.?" with async=true;```
