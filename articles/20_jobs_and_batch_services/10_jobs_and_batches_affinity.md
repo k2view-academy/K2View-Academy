@@ -25,9 +25,22 @@ Each node can have multiple logical ids.
 
 ## Affinity Use Cases
 
-### Use Case 1
+Let's assume the following configuration, featuring a Fabric cluster comprised of 3 different physical nodes with the following IPs:
+Node 1: 10.0.0.10
+Node 2: 10.0.0.20
+Node 3: 10.0.0.30
 
-### Use Case 2
+The project consists in running a Fabric Job to monitor a Kafka Messaging Queue, on which network QoS alarms are continuously published and streamed by a source external to the Fabric Cluster.
+
+In turn each message, which can consists of hundreds of entries, will be handled by the Fabric Cluster as follows:
+
+- Update the corresponding CommonDB table located on each Fabric node,
+- Save the data in Cassandra for backup purposes.
+
+Supposing an incoming message rate of 3 messages per second and an average message size of 1KB, we can easily understand that we need to dedicate a node to handle this Job that we require strong i/o capabilities for read/write operations in Fabric nodes commonDB tables.
+
+Then all 3 nodes will be kept in-sync, using Fabric Node synchronization capability. 
+
 
 
 
