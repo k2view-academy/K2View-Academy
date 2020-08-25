@@ -239,7 +239,7 @@ migrate_resume ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’;
 
 ## migratef Command 
 
-The migratef command enables the migration of a selective list of instances using a function. 
+The migratef command enables the migration of a selective list of instances using a function to define the name under which they will be saved .
 
 <table width="900pxl">
 <tbody>
