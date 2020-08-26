@@ -63,7 +63,7 @@ Result:
 </tr>
 <tr>
 <td style="width: 144.091px;">&nbsp;isArchived</td>
-<td style="width: 444.909px;">Is set automatically to&nbsp;True&nbsp;once the last run of a Job has reached a&nbsp;terminated,&nbsp;failed or&nbsp;processed state.</td>
+<td style="width: 444.909px;">Is set automatically to&nbsp;True&nbsp;once the last run of a Job has reached a&nbsp;terminated,&nbsp;failed or&nbsp;processed state. When not specified, the TTL default value will be used (default set to 30 days).</td>
 </tr>
 <tr>
 <td style="width: 144.091px;">Owner</td>
