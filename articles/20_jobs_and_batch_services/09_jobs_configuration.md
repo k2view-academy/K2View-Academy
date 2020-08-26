@@ -86,8 +86,11 @@ The number of heartbeats that a Fabric node can miss before it is considered as 
 
 - If the node has been down for 60 seconds (12 missed heartbeats of 5 seconds each), it is considered as unavailable and is not part of the pool during next Job allocation.
 
-The configuration of these parameters can be found in the **k2view/config/config.ini** file under the **Fabric Cluster** section. 
+The configuration of these parameters can be found in the **k2view/config/config.ini** file under the **Fabric Cluster** section.
+
 The values of the nodes' heartbeats are systematically stored in Cassandra in the k2system.nodes table and can be queried from the cqlsh shell: 
+
+Example:
 
 ```select * from k2system.nodes ```
 
