@@ -182,7 +182,7 @@ The previous Batch process is displayed in the Job's table. Its **output** field
 ```
 type                 | name                              | status     | output | start_time                      | affinity                                                                            | worker_id
 ---------------------+-----------------------------------+------------+--------+---------------------------------+-------------------------------------------------------------------------------------+--------------------------------------
- USER_JOB            |           AUTODATA_DELTA.Executor |  PROCESSED |   SKIP | 2020-08-26 14:12:13.011000+0000 |                                                                     {"Affinity":[]} |10.21.2.101
+ USER_JOB            |           AUTODATA_DELTA.Executor |  PROCESSED |   SKIP | 2020-08-26 14:12:13.011000+0000 |                                                                     {"Affinity":[]} |                                 10.21.2.101
  USER_JOB            |      AUTODATA_DELTA.runInitFinder |  PROCESSED |   1000 | 2020-08-26 14:11:44.953000+0000 |                                                        {"Affinity":["10.21.2.102"]} | f3e9dc7f-7b98-4dad-96a3-9689851873d1
  USER_JOB            |          AUTODATA_DELTA.create_ws |  PROCESSED |        | 2020-08-26 13:59:48.930000+0000 |  {"Affinity":["10.21.2.103","10.21.2.99","10.21.2.98","10.21.2.100","10.21.2.101"]} |                          10.21.2.103
 BATCH_JOB            |                    Batch_AUTODATA |  PROCESSED |        | 2020-08-26 13:57:09.757000+0000 | {"Affinity":["10.21.2.103","10.21.2.98","10.21.2.100","10.21.2.102","10.21.2.101"]} |                          10.21.2.100
