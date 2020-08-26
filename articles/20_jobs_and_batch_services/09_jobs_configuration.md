@@ -11,15 +11,17 @@ For example: to define that node X handles a maximum of 10 threads in parallel b
 
 Job-related configuration variables can be set in this file that is saved in the **k2view/config/config.ini** file under the **JOBS** section.
 
-- **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
+#### **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
 
-- **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
+#### **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
-- **OPTIMISTIC_LOCKING**:
-      
-- If set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1.
-- If set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
-- If set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes.
+#### **OPTIMISTIC_LOCKING**:
+
+##### If set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1
+
+##### If set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
+
+##### If set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes.
    
 
 ### **Node.ini** 
@@ -34,16 +36,16 @@ The node UUID is unique and if left undefined, Fabric generates a random node wh
 Example:
  ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
 
-The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e. with the same affinity), each logical_id can be associated with the maximum number of Jobs.
+The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e. with the same affinity), each logical name can be associated with the maximum number of threads.
 
 Example:
 
 Three logical names have been given for NODE 1 that share the 10 threads allocated to Job processing on Node 1.
 
 ```
-- node_b:1
-- node_c:3
-- node_d:6
+- Node_b:1
+- Node_c:3
+- Node_d:6
 ```
 
 Defining three jobs with the following affinities:
@@ -54,13 +56,13 @@ Defining three jobs with the following affinities:
 - Job 3 with AFFINITY=Node_d
 ```
 
-In this case, Job 3 (the job with affinity set to node_d) will get 6 out of the 10 threads reserved on that node.
+In this case, Job 3 (the job with affinity set to Node_d) will get up to 6 out of the 10 threads reserved on that node.
 
 
 Note:
 - if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status until a processing slot is available.
 - Logical nodes and physical nodes cannot be specified as shared affinity in the same Job. 
-- Several nodes can share the same logical_id. 
+- Several nodes can share the same logical name.
 
 
 ## Cluster Configuration
@@ -71,14 +73,19 @@ A Cluster Identifier must contain only letters and numbers and is defined in the
 
 ```cluster_id: FabCluster1```
 
-#### **Heartbeat**
+Cluster are used in the following cases:
+- Run multiple Fabric nodes on the same Cassandra server 
+- In Fabric Studio, run multiple projects (each one as a single node) on the same Cassandra server
+
+
+### **Heartbeat**
 
 A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is set to 10 seconds.
 
 ```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - in this case, the heartbit has been set to 5 seconds.
 
 
-#### **KeepAlive**
+### **KeepAlive**
 
 The number of heartbeats that a Fabric node can miss before it is considered as unavailable can be defined so that all Jobs without a specific affinity to this node are allocated to another node. It is important to note that any Job whose affinity has been set to this node will not run, and must be restarted manually.
 
