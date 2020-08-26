@@ -15,7 +15,8 @@ Fabric Jobs can be one of the following categories:
 
 - Parser executions, that get data from tables and unstructured files which can be pushed to a table in Cassandra and then used to build an LUT Schema.
 
-- Broadway flows, that can be scheduled for execution and are therefore defined as Jobs.
+- Broadway flows, that can be scheduled and benefit from Jobs execution parameters.
+
 
  # **What is a Fabric Job ?** 
 A Fabric Job process can be exposed across Fabric nodes and be run to execute scripts, flows or functions according to a specific schedule or once only.
