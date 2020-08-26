@@ -15,9 +15,7 @@
   - Data Flows
   - Security / Resiliency
 ### Quiz (1)
-<br><br><br></br></br></br>
-  
-  
+<br></br>
 ## **DAY 1 – Afternoon**
 ### Fabric Main Flow (Simple LU)
   - Fabric Main Flow Overview
@@ -38,9 +36,7 @@
   - Fabric Deployment
   - Fabric Basic Commands
   - Cassandra Main Keyspaces & Commands
-<br><br><br></br></br></br>  
-  
-  
+<br></br> 
 ## **DAY 2 – Afternoon**  
 ### LU Enhancement (1) (Data manipulations)
   - Population Tables Mapping
@@ -52,8 +48,6 @@
   - Lookup, Translation Tables & Global Variables
   - Sync Modes
 <br><br><br></br></br></br>
-
-
 ## **DAY 3 – Morning**  
 ### Q&As
 ### Hands-on Exercises (LU Enhancements)
@@ -63,9 +57,7 @@
   - Implementation Changes & Re-deployment
   - Server-side
 ### Quiz (3)
-<br><br><br></br></br></br>  
-  
-  
+<br></br>  
 ## **DAY 3 – Afternoon**
 ### Web Services
   - Overview 
@@ -80,8 +72,6 @@
   - Graphit & Java
   - Invoking Graphit
 <br><br><br></br></br></br> 
-  
-    
 ## **DAY 4 – Morning** 
 ### Q&As
 ### Hands-on Exercises (Graphit) 
@@ -94,9 +84,7 @@
   - Batch Commands and Configuration
 ### Hands-on Exercises (Jobs & Batch Services)
 ### Quiz (6)
-<br><br><br></br></br></br>  
-  
-  
+<br></br>
 ## **DAY 4 – Afternoon** 
 ### Q&A Session
 ### Certification Exam (1 hour)
