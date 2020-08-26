@@ -9,7 +9,7 @@ For example: to define that node X handles a maximum of 10 threads in parallel b
 
 ### **Config.ini**
 
-Job-related configuration variables can be set in this file that is saved in the in the **k2view/config/config.ini** file under the **JOBS** section.
+Job-related configuration variables can be set in this file that is saved in the **k2view/config/config.ini** file under the **JOBS** section.
 
 - **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
 
