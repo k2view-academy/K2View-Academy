@@ -11,7 +11,7 @@ For example: to define that node X handles a maximum of 10 threads in parallel b
 
 Job-related configuration variables can be set in this file that is saved in the in the **k2view/config/config.ini** file under the **JOBS** section.
 
--  **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
+- **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
 
 - **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
@@ -19,7 +19,7 @@ Job-related configuration variables can be set in this file that is saved in the
       
       If OPTIMISTIC_LOCKING is set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1.
       If OPTIMISTIC_LOCKING is set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
-      If OPTIMISTIC_LOCKING is set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes Example:
+      If OPTIMISTIC_LOCKING is set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes.
    
 
 ### **Node.ini** 
