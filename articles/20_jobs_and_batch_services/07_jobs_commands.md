@@ -34,7 +34,7 @@ Starts the Job using arguments:
 - Jobtype, BROADWAY, PROCESS, USER_JOB
 - Name, Job’s name.
 - ARGS, a string represeting a JSON that passes additional arguments to the **start Job** command. For example, {"jobName":"jobTest"}.
-- Affinity, comm definition of Jobs scheduling execution interval that supports three formats:
+- EXEC_INTERVAL, definition of Jobs scheduling execution interval that supports three formats:
   - Timestamp, yyyy-MM-dd HH:mm:ss, a one time only timedatetime that schedules a Job's execution. 
   - Time interval, HH:MM:SS to run the Job every X time.
   - Cron, combined **crontab** command. For example, 23 0-20/2 03 12 2. At minutes 23 past every 2nd hour from 0 through 20 on day-of-month 3 and on Tuesday in December.</p>
