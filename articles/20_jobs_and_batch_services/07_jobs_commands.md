@@ -234,7 +234,7 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 <tr>
 <td valign="top" width="300pxl">
 
-<h5>JOBSTATUS &ltJOBTYPE&gt '&ltNAME&gt'</h5>
+<h5>JOBSTATUS USER_JOB</h5>
 
 </td>
 <td valign="top" width="400pxl">
@@ -242,7 +242,7 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 <p>Returns the status of all running Jobs that match the given type and name.</p>
 <td valign="top" width="300pxl">
 
-<p>JOBSTATUS USER_JOB'TDM.fnValidateAndRebuildRefTables';</p>
+<p>JOBSTATUS USER_JOB 'TDM.fnValidateAndRebuildRefTables';</p>
 </td>
 </tr> 
 
