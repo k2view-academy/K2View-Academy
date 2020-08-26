@@ -11,11 +11,11 @@ For example: to define that node X handles a maximum of 10 threads in parallel b
 
 Job-related configuration variables can be set in this file that is saved in the **k2view/config/config.ini** file under the **JOBS** section.
 
-#### **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
+### **K2JOBS_POOL_SIZE=10**, defines the size of the thread pool for processing Fabric Jobs. 
 
-#### **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
+### **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
-#### **OPTIMISTIC_LOCKING**:
+### **OPTIMISTIC_LOCKING**:
 
 If set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1
 
