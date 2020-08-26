@@ -10,8 +10,27 @@ Example:
 ```jobstatus 90 days ago;```
 
 Result:
-<img src="/articles/20_jobs_and_batch_services/images/06a_jobs_and_batch_services_create_a_job_jobstatus.PNG"></img>
-<img src="/articles/20_jobs_and_batch_services/images/06b_jobs_and_batch_services_create_a_job_jobstatus.PNG"></img>
+
+```
+|Type     |Name                |UID                                                                                                |Status    |Creation Time      |Start Time         |End Time           |Affinity           |Is Archived|Next Run                   |Ownership Candidates Num|Notes|Owner       |
++---------+--------------------+---------------------------------------------------------------------------------------------------+----------+-------------------+-------------------+-------------------+-------------------+-----------+---------------------------+------------------------+-----+------------+
+|USER_JOB |Customer.numberOfIDs|checkNumberIDs                                                                                     |FAILED    |2020 08 20 11:10:50|2020 08 20 14:01:53|2020 08 20 13:56:13|                   |true       |no more execution scheduled|1                       |     |fabric_debug|
+|BATCH_JOB|BATCH_JOB_Customer  |BATCH Customer.('996','997','998','999') FABRIC_COMMAND="sync_instance CUSTOMER.?" with async=true;|PROCESSED |2020 08 20 10:29:09|2020 08 20 10:29:10|2020 08 20 10:29:12|DC1                |true       |no more execution scheduled|1                       |     |fabric_debug|
+|BATCH_JOB|BATCH_JOB_Customer  |BATCH Customer.('996','997','998','999') FABRIC_COMMAND="sync_instance Customer.?" with async=true;|PROCESSED |2020 08 20 10:40:03|2020 08 20 10:40:04|2020 08 20 10:40:05|DC1                |true       |no more execution scheduled|1                       |     |fabric_debug|
+|BATCH_JOB|BATCH_JOB_Customer  |BATCH Customer.CA_IG_toSync FABRIC_COMMAND="sync_instance Customer.?" with async=true;             |PROCESSED |2020 08 20 11:10:59|2020 08 20 11:10:59|2020 08 20 11:11:04|DC1                |true       |no more execution scheduled|1                       |     |fabric_debug|
+|BATCH_JOB|BATCH_JOB_Customer  |BATCH Customer.NY_IG_toSync FABRIC_COMMAND="sync_instance Customer.?" with async=true;             |PROCESSED |2020 08 20 10:52:54|2020 08 20 10:52:54|2020 08 20 10:52:58|DC1                |true       |no more execution scheduled|1                       |     |fabric_debug|
+|USER_JOB |Customer.testJOB2   |9704d0e3-7247-4b6c-83a7-2c9028dea496                                                               |TERMINATED|2020 07 30 11:05:59|2020 07 30 12:14:02|2020 07 30 12:15:31|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJOB2   |testJOB2                                                                                           |TERMINATED|2020 08 04 16:05:58|2020 08 19 13:50:45|1970 01 01 00:00:00|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJob    |c5163cf1-2f4b-434d-8508-40b53b303ee6                                                               |TERMINATED|2020 08 02 06:25:12|2020 08 03 13:30:37|2020 08 04 10:18:43|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJob    |c5844330-07c8-4448-967e-da9d0a64c22e                                                               |TERMINATED|2020 07 28 15:39:13|2020 07 30 08:49:06|2020 07 30 08:49:07|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJob    |testJOB1                                                                                           |RESTART   |2020 08 20 11:10:50|2020 08 13 10:02:34|1970 01 01 00:00:00|’DC1’, ’10.21.1.121|false      |2021-03-05 08:00:30        |0                       |     |            |
+|USER_JOB |Customer.testJob    |testJob2G                                                                                          |TERMINATED|2020 07 30 10:59:46|2020 07 30 10:59:48|2020 07 30 12:08:09|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJob    |testJobGreg                                                                                        |TERMINATED|2020 07 28 15:26:04|2020 07 28 15:38:32|2020 07 28 15:38:33|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+
+(12 rows)
+
+```
+
 <table style="width: 592px;">
 <tbody>
 <tr>
