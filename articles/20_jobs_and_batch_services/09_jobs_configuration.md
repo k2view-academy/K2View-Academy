@@ -17,11 +17,11 @@ Job-related configuration variables can be set in this file that is saved in the
 
 #### **OPTIMISTIC_LOCKING**:
 
-##### If set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1
+If set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1
 
-##### If set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
+If set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
 
-##### If set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes.
+If set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes.
    
 
 ### **Node.ini** 
