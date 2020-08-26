@@ -190,7 +190,7 @@ All migrate-related information is displayed in the **k2migrate.migration_list**
 ## **Batch Process Execution & Resiliency**
 
 
-When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs ability to transfer the process to a different node when a node is no longer active or no longer responding. This handover mechanism uses the [*hearbeats*](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#heartbeat) and [*keepalive*](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#keepalive) parameters defined within the node.id file.
+When executed asynchrounously (*async* flag set to *true*), the batch process inherits from the Jobs ability to transfer the process to a different node when a node is no longer active or no longer responding. This handover mechanism uses the [*hearbeats*](/articles/20_jobs_and_batch_services/09_jobs_configuration.md#heartbeat) and [*keepalive*](/articles/20_jobs_and_batch_services/09_jobs_configuration.md#keepalive) parameters defined within the node.id file.
 
 The next handling node picks up the batch process (via its associated job) and resumes its execution from the latest known recorded stage.   
 
