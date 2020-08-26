@@ -24,10 +24,7 @@ A Job must be deployed to Fabric so that it can be invoked either by the node on
 
 Job functions can be defined in the Fabric Studio, saved to the project file and be deployed to the Fabric server.
 
-For more information, click:
-- Different types of jobs, their mechanism and lifecycle.
-- Defining Jobs from the Fabric Studio.
-- Invoking and managing Jobs from the Fabric Runtime console.
+
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md) 
