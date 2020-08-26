@@ -49,7 +49,7 @@ Define three jobs with the following affinities:
 - Job 2 with AFFINITY=Node1_LogicalId2
 - Job 3 with AFFINITY=Node1_LogicalId3
 
-Note that if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status. Users can see this node in the trace but not in the log.
+Note that if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status until a processing slot is available.
 
 
 ## Cluster Configuration
