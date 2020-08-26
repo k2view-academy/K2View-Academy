@@ -90,7 +90,7 @@ In the **Job table**, enter the values pertaining to the Job.
 <li class="unchanged">Data Center (DC) Name.</li>
 <li class="unchanged">Node identifier, a logical identifier of Fabric node or a group of several Fabric nodes.</li>
 </ul>
-<p class="unchanged rich-diff-level-one">Example:&nbsp;<code>AFFINITY=&rsquo;DC1&rsquo;, &rsquo;10.21.1.121</code></p>
+<p class="unchanged rich-diff-level-one">Example:&nbsp;<code>AFFINITY=&rsquo;DC1&rsquo;, &rsquo;10.21.1.121&rsquo;</code></p>
 </td>
 </tr>
 </tbody>
