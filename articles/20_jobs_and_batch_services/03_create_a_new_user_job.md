@@ -5,7 +5,7 @@ Jobs are defined in the Fabric Studio and can be saved to a project file and be 
 ## How Do I Create a New User Job?
 
 ### Step 1. 
-Go to the **Project Tree** > **LUT** > **Java** > **Utilities** and right click **New Function** to display the **Function Editor** window.
+Go to the **Project Tree** > **LU** > **Java** > **Category** and right click **New Function** to display the **Function Editor** window.
 
    <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
 
@@ -39,12 +39,11 @@ Name and save the **function**.
    
 
 ### Step 5. 
-Go to the **Project Tree** > your **LUT** > **Jobs** > **User Jobs**.
+Go to the **Project Tree** > your **LU** > **Jobs**.
 
 <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
-
-### Step 6. 
+ 
 In the **Job table**, enter the values pertaining to the Job.
 
 <table style="width: 900px; height: 193px;">
