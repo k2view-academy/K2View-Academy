@@ -31,26 +31,30 @@ A set number of logical names or node identifiers for the node can be defined in
 Note that there can be more than one logical name since a node can have more than one logical role.
 The node UUID is unique and if left undefined, Fabric generates a random node when starting up the first time.
 
-Example
+Example:
  ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
 
 The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e. with the same affinity), each logical_id can be associated with the maximum number of Jobs.
 
-Example
+Example:
 
 Three logical names have been given for NODE 1 that share the 10 threads allocated to Job processing on Node 1. 
+```
 - node_b:1
 - node_c:3
 - node_d:6
-
+```
 
 Define three jobs with the following affinities:
+```
 - Job 1 with AFFINITY=Node1_LogicalId1
 - Job 2 with AFFINITY=Node1_LogicalId2
 - Job 3 with AFFINITY=Node1_LogicalId3
+```
 
-Note that if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status until a processing slot is available.
-
+Note:
+- if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status until a processing slot is available.
+- Logical nodes and physical nodes cannot be
 
 ## Cluster Configuration
 
