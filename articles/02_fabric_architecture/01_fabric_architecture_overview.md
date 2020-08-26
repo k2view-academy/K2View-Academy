@@ -47,7 +47,7 @@ Fabric relies on a resilient architecture and a strong set of 3rd party technolo
 Fabric uses three types of storage engines:
 
 #### 2.1.1 MicroDB ![](/articles/02_fabric_architecture/images/microDBPic.gif)
-The core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/_LU_overview.md)) for every business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
+At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/_LU_overview.md)) for each business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
 
 A MicroDB provides several advantages:
 
@@ -59,9 +59,9 @@ A MicroDB provides several advantages:
 
     
 #### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across nodes. 
+CommonDB is an additional SQLite database schema used for storing reference tables common to all MicroDB. For example, it could be a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across nodes. 
 
-A common database is always available to be queried during every Fabric session enabling joining data between Common tables and a MicroDB in one SQL query.
+CommonDB is always made available for queries within every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB using one SQL query only.
 
 
 #### 2.1.3 Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
@@ -96,14 +96,14 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 
 ## 3. Data Flow
 ### 3.1 Overview
-Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate with data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
 
 ![](/articles/02_fabric_architecture/images/fabDataFlow.png)
 
 
 ### 3.2 Fabric Data Access Layer
 
-The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
+The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB). Conversely, these same interfaces are used so Fabric data can be published, or accessed by 3rd party systems.
 
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
