@@ -54,7 +54,7 @@ Result:
 <tr>
 <td style="width: 144.091px;">Notes</td>
 <td style="width: 444.909px;">
-<p>Displays messages relevant to the job.</p>
+<p>Displays the last error message relevant to the job in case the job was failed.</p>
 </td>
 </tr>
 <tr>
