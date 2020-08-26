@@ -38,6 +38,18 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 
 ### Example 
 
+```
+cassandra@cqlsh:k2batchprocess> select * from batchprocess_list;
+
+ bid | arguments | command | creation_time | end_time | error | extra_stats | lut_name | owner | start_time | status | total_entities
+-----+-----------+---------+---------------+----------+-------+-------------+----------+-------+------------+--------+----------------
+
+(0 rows)
+```
+
+
+
+
 <img src="/articles/20_jobs_and_batch_services/images/15_jobs_and_batch_services_scheduled_batch_process.PNG">
 
 
