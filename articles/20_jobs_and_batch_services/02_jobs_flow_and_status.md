@@ -139,7 +139,7 @@ The following image illustrates two different examples:
 
 - JOB 1 is allocated to Node 1 because the job's affinity was specifically set to Node 1 in the Fabric Studio from the [Job's Parameters Configuration table](/articles/20_jobs_and_batch_services/03_create_a_job.md#step-6), or from the Command Line using one of the following commands: [startjob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#startjob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval) and [updatejob](/articles/20_jobs_and_batch_services/04_jobs_commands.md#updatejob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval-reset_end_timetruefalse).
 
-- JOB2 (to which no affinity is set) is allocated to Node 2, according to Cassandra's assignment resulting from its Quorum Consistency mechanism.
+- JOB 2 (to which no affinity is set) is allocated to Node 2, according to Cassandra's assignment resulting from its Quorum Consistency mechanism.
 
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG">
