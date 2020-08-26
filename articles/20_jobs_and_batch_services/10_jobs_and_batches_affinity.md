@@ -47,7 +47,7 @@ In turn each message, which can consists of hundreds of entries, will be handled
 - Update the corresponding CommonDB table located on each Fabric node,
 - Save the data in Cassandra for backup purposes.
 
-Supposing an incoming message rate of 3 messages per second and an average message size of 1KB, we can easily understand that we need to dedicate a node to handle this Job that we require strong i/o capabilities for read/write operations in Fabric nodes commonDB tables.
+Assuming an incoming message rate of 3 messages per second and an average message size of 1MB, it becomes clear that a specific node handling this Job needs to be allocated since on-going strong i/o capabilities for read/write operations in commonDB tables are essential.
 
 Using Fabric Node synchronization capability, all 3 nodes will then be kept in-sync using the nechanism described in the [Fabric CommonDB](/articles/) article.
 
