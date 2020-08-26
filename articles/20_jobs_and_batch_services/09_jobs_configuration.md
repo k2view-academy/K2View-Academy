@@ -73,9 +73,9 @@ A Cluster Identifier must contain only letters and numbers and is defined in the
 
 #### **Heartbeat**
 
-A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is 10 seconds.
+A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is set to 10 seconds.
 
-```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - the hearbit has been set to 5 seconds.
+```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - in this case, the heartbit has been set to 5 seconds.
 
 
 #### **KeepAlive**
