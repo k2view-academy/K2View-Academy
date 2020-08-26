@@ -152,9 +152,6 @@ cassandra@cqlsh:k2batchprocess> select * from batchprocess_list;
 </tbody>
 </table>
 
-<img src="/articles/20_jobs_and_batch_services/images/16_jobs_and_batch_services_scheduled_batch_table1.PNG">
-
-
 **Arguments**  
 
       {"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}
