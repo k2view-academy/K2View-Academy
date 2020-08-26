@@ -164,7 +164,7 @@ Each instance of Fabric runtime server (Fabric node) comprises the dedicated Jav
 ## **Job Execution Resiliency**
 
 Fabric ensures that Job executions have multiple recovery opportunities if the node responsible for its execution fails. 
-A [heartbeat](/articles/20_jobs_and_batch_services/06_jobs_configuration.md#heartbeat) variable can be configured for each node so that the status of each Fabric node can be monitored and their dedicated Jobs reallocated to different nodes if necessary. 
+A [heartbeat](/articles/20_jobs_and_batch_services/09_jobs_configuration.md#heartbeat) variable can be configured for each node so that the status of each Fabric node can be monitored and their dedicated Jobs reallocated to different nodes if necessary. 
 If a node restarts, and insufficient time is left before a scheduled Job's execution, the rebooting node has precedence over all other nodes for the execution of this particular Job.
 
 
