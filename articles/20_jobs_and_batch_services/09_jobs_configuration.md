@@ -1,4 +1,4 @@
-# Nodes & Clusters Configuration
+# Nodes Configuration in Clusters
 
 Job execution environments can be configured at both node and cluster levels.
 
