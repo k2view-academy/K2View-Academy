@@ -13,7 +13,7 @@ Result:
 
 ```
 |Type     |Name                |UID                                    |Status    |Creation Time      |Start Time         |End Time           |Affinity           |Is Archived|Next Run                   |Ownership Candidates Num|Notes|Owner       |
-+---------+--------------------+------------------------------------------------+----------+-------------------+-------------------+-------------------+-------------------+-----------+---------------------------+------------------------+-----+------------+
++---------+--------------------+---------------------------------------+----------+-------------------+-------------------+-------------------+-------------------+-----------+---------------------------+------------------------+-----+------------+
 |USER_JOB |Customer.numberOfIDs|checkNumberIDs                         |FAILED    |2020 08 20 11:10:50|2020 08 20 14:01:53|2020 08 20 13:56:13|                   |true       |no more execution scheduled|1                       |     |fabric_debug|
 |USER_JOB |Customer.testJOB2   |9704d0e3-7247-4b6c-83a7-2c9028dea496   |TERMINATED|2020 07 30 11:05:59|2020 07 30 12:14:02|2020 07 30 12:15:31|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
 |USER_JOB |Customer.testJOB2   |testJOB2                               |TERMINATED|2020 08 04 16:05:58|2020 08 19 13:50:45|1970 01 01 00:00:00|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
