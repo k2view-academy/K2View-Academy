@@ -203,9 +203,10 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 <h5>JOBSTATUS [x days ago]</h5>
 </td>
 <td valign="top" width="400pxl">
-<p>When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
-   
-   When days are not provided, returns all active (not archived) Jobs.</p>
+<p>
+   When days are not provided, returns all active (not archived) Jobs.
+   When days are provided, returns the status of all Jobs that have been created over the last X days, including archived Jobs. 
+   </p>
 
 </td>
 <td valign="top" width="300pxl">
