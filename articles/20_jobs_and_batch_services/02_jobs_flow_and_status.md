@@ -127,7 +127,7 @@ The  following image illustrates the different stages of a Job's lifecycle and t
 
 ## **Nodes Affinity**
 
-A specific Job can be assigned to a specific Fabric node by specifying the node's parameters in the Jobs definition table in the Fabric Studio or from the **startjob** command in the Fabric Runtime environment. Once deployed, the Job is only allocated to the nodes specified in the affinity flag.
+A specific Job can be assigned to a specific Fabric node by specifying the node's parameters in the Jobs [affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md) definition table in the Fabric Studio or from the **startjob** command in the Fabric Runtime environment. Once deployed, the Job is only allocated to the nodes specified in the affinity flag.
 
 ## **Nodes Competition**
 
