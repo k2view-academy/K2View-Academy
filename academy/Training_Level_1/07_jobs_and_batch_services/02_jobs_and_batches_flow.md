@@ -9,7 +9,7 @@ Let's take a look at the different types of Jobs that can be used to execute spe
 
 Please read:
 
-- [Jobs Overview](/articles/20_jobs_and_batch_services/01_fabric%20jobs_overview.md)
+- [Jobs Overview](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md)
 
 
 The following articles discuss Jobs flows and their execution environments:
