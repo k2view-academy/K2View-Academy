@@ -62,7 +62,7 @@ Result:
 <td style="width: 444.909px;">Is set automatically to&nbsp;True&nbsp;once the last run of a Job has reached a&nbsp;terminated,&nbsp;failed or&nbsp;processed state.</td>
 </tr>
 <tr>
-<td style="width: 144.091px;">Owner<td>
+<td style="width: 144.091px;">Owner</td>
 <td style="width: 444.909px;">Displays the name of the node handling the job.</td>
 </tr>
 </tbody>
