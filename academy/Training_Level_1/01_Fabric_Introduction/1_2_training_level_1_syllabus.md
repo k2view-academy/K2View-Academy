@@ -3,7 +3,6 @@
 ![](/academy/Training_Level_1/01_Fabric_Introduction/images/syllabus.png) 
 
 ## **DAY 1 – Morning**  
-<br></br>  
 ### Course Introduction
   - Course Overview & Main Objectives
   - Course User Story
@@ -20,7 +19,6 @@
   
   
 ## **DAY 1 – Afternoon**
-<br></br>  
 ### Fabric Main Flow (Simple LU)
   - Fabric Main Flow Overview
   - Create a Fabric Project
@@ -29,8 +27,7 @@
 <br><br><br></br></br></br>    
    
    
-## **DAY 2 – Morning**
-<br></br>  
+## **DAY 2 – Morning** 
 ### Fabric Min Flow (LU Properties)
   - Populations
   - Sync Strategies
@@ -44,8 +41,7 @@
 <br><br><br></br></br></br>  
   
   
-## **DAY 2 – Afternoon**
-<br></br>  
+## **DAY 2 – Afternoon**  
 ### LU Enhancement (1) (Data manipulations)
   - Population Tables Mapping
   - Hands-on Exercises
@@ -58,8 +54,7 @@
 <br><br><br></br></br></br>
 
 
-## **DAY 3 – Morning**
-<br></br>   
+## **DAY 3 – Morning**  
 ### Q&As
 ### Hands-on Exercises (LU Enhancements)
   -  Functions, Lookup, Translation & Globals
@@ -72,7 +67,6 @@
   
   
 ## **DAY 3 – Afternoon**
-<br></br>  
 ### Web Services
   - Overview 
   - Create and Deploy a Web Service
@@ -88,8 +82,7 @@
 <br><br><br></br></br></br> 
   
     
-## **DAY 4 – Morning**
-<br></br>  
+## **DAY 4 – Morning** 
 ### Q&As
 ### Hands-on Exercises (Graphit) 
 ### Quiz (5)
@@ -104,8 +97,7 @@
 <br><br><br></br></br></br>  
   
   
-## **DAY 4 – Afternoon**
-<br></br>  
+## **DAY 4 – Afternoon** 
 ### Q&A Session
 ### Certification Exam (1 hour)
 <br><br><br></br></br></br>  
