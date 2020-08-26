@@ -58,7 +58,7 @@ Note that if no empty slot is left in the pool and a new Job has been allocated 
 
 A Cluster Identifier must contain only letters and numbers and is defined in the **node.id** file:
 
-cluster_id: FabCluster1 
+```cluster_id: FabCluster1```
 
 #### **Heartbeat**
 
