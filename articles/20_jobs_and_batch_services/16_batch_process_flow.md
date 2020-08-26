@@ -162,7 +162,6 @@ cassandra@cqlsh:k2batchprocess> select * from batchprocess_list;
 
 - in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
-<img src="/articles/20_jobs_and_batch_services/images/17_jobs_and_batch_services_scheduled_batch_table2.PNG">
 
 
 **extra_stats**  
