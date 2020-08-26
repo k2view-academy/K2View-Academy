@@ -23,7 +23,7 @@ Result:
 |USER_JOB |Customer.testJob    |testJob2G                                                                                          |TERMINATED|2020 07 30 10:59:46|2020 07 30 10:59:48|2020 07 30 12:08:09|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
 |USER_JOB |Customer.testJob    |testJobGreg                                                                                        |TERMINATED|2020 07 28 15:26:04|2020 07 28 15:38:32|2020 07 28 15:38:33|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
 
-(12 rows)
+(8 rows)
 
 ```
 
