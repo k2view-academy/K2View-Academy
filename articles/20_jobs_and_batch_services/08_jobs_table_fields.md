@@ -3,6 +3,10 @@
 Fabric provides a range of tools and informative data for configuring and managing Jobs and their processes.
 
 ## How Do I Monitor Jobs at a Fabric Cluster Level?
+
+
+### JOBSTATUS
+
 Run the JOBSTATUS command from your fabric runtime environment to get a full list of scheduled Jobs for any given LU.
 
 Example:
@@ -68,5 +72,12 @@ Result:
 </tbody>
 </table>
  
+### PS Command
+
+The Fabric Process Command can also be used as described [here](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands)
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/07_jobs_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/09_jobs_configuration.md)
