@@ -1,9 +1,9 @@
 # How Do I Create a New CDC Job?
 
 ## Purpose
-Fabric can execute [CDC](/articles/18_cdc_and_search/02_cdc_messages.md) Republish Jobs (Change Data Capture) to re-notify data changes in a set of LUI tables in cases where the changes need to be republished.
+Fabric can execute [CDC](/articles/18_cdc_and_search/02_cdc_messages.md) Republish Jobs (Change Data Capture) to re-publish LU tables data for a given list of instances.
 
-Jobs can also execute cross-instance searches using Fabric's Search capability - (Elastic Search command syntax should be used).
+Jobs can also execute cross-instance searches using Fabric's Search capability - (Search command syntax should be used).
 
 ## Job Type
 Set the **Job** type to **cdc_republish_instance_job**
