@@ -38,23 +38,30 @@ The logical_id name helps define the affinity between a node and candidate Jobs.
 
 Example:
 
-Three logical names have been given for NODE 1 that share the 10 threads allocated to Job processing on Node 1. 
+Three logical names have been given for NODE 1 that share the 10 threads allocated to Job processing on Node 1.
+
 ```
 - node_b:1
 - node_c:3
 - node_d:6
 ```
 
-Define three jobs with the following affinities:
+Defining three jobs with the following affinities:
+
 ```
-- Job 1 with AFFINITY=Node1_LogicalId1
-- Job 2 with AFFINITY=Node1_LogicalId2
-- Job 3 with AFFINITY=Node1_LogicalId3
+- Job 1 with AFFINITY=Node_b
+- Job 2 with AFFINITY=Node_c
+- Job 3 with AFFINITY=Node_d
 ```
+
+In this case, Job 3 (the job with affinity set to node_d) will get 6 out of the 10 threads reserved on that node.
+
 
 Note:
 - if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status until a processing slot is available.
-- Logical nodes and physical nodes cannot be
+- Logical nodes and physical nodes cannot be specified as shared affinity in the same Job. 
+- Several nodes can share the same logical_id. 
+
 
 ## Cluster Configuration
 
