@@ -144,7 +144,7 @@ The following image illustrates two different examples:
 
 <img src="/articles/20_jobs_and_batch_services/images/02_jobs_and_batch_services_Nodes_Allocation2.PNG">
 
-### **Node Configuration**
+### **Jobs Optimistic Locking Configuration**
 A configurable parameter **OPTIMISTIC_LOCKING** in the node's config.ini file can be set to support lightweight transactions between nodes to decide on a Job's allocation:
 The supported values are as follow:
 - NONE - this is the default value. The latest transaction overrides the instance ID.
