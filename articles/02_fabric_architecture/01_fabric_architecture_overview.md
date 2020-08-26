@@ -89,7 +89,7 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 - Create REST APIs to access your data model.
 - Design data flows.
 
-[Click for more informtion about Fabric Studio.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
+[Click for more information about Fabric Studio.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
 
 
