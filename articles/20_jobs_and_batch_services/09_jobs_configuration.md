@@ -15,6 +15,13 @@ Job-related configuration variables can be set in this file that is saved in the
 
 - **K2JOB_ARCHIVING_TIME_HOUR=720**, defines the time when to delete the Job row in the **k2_jobs table**. Default is 720 hours (30 days).
 
+- **OPTIMISTIC_LOCKING**:
+      
+      If OPTIMISTIC_LOCKING is set to ‘NONE’ then transaction 2 (the latest transaction) overrides transaction 1.
+      If OPTIMISTIC_LOCKING is set to ‘QUORUM’ then transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of each DC.
+      If OPTIMISTIC_LOCKING is set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transaction is committed and updates at least 2 nodes of DC1.modes Example:
+   
+
 ### **Node.ini** 
 
 Node and cluster-related configuration variables can be set in this file which is saved in the **k2view/config/node.ini** file.
