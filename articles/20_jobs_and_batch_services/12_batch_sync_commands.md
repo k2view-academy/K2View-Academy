@@ -175,7 +175,8 @@ Displays the status of instances of a given Batch process ID:
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p></p>
+<p>BATCH_IN_PROCESS filter='&lt'^(cust)*$'&gt'</p>
+<p>This command will return all running batch processes with names containing the "cust" pattern</p>
 </td>
 </tr> 
 
