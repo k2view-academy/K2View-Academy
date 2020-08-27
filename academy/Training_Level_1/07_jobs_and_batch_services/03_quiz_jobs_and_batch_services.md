@@ -18,7 +18,7 @@ Fabric Jobs is a Fabric utility that is:
 
 A: A career development and jobs search tool.
 
-B: A rich, resilient and scalable mechanism that can be used to run any script or executable.
+B: A rich, resilient and scalable mechanism that can be used to run any script or java functions.
 
 C: A tool that creates instances groups.
 
@@ -31,7 +31,7 @@ D: A tool that schedules the creation of LUs.
 
 To create a new User Job, you need to define:
 
-A: A method written in Java that is saved as a Utility function in the Fabric Studio.
+A: A method written in Java that is saved as a Java User Job function in the Fabric Studio.
 
 B: A dedicated entry in the Jobs table of a given LU.
 
