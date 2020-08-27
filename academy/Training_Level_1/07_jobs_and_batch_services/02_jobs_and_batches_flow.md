@@ -343,7 +343,7 @@ Status has been set to TERMINATED.
 
 **Step 3.**
 
-Command: ```resumejob USER_JOB NAME='Customer.numberOfIDs';```
+Command: ```resumejob USER_JOB NAME='Customer.numberOfIDs' UID='checkNumberIDs';```
 
 Response:
 
