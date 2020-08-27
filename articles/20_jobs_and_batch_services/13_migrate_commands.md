@@ -8,7 +8,7 @@ Instances Migration
 ```MIGRATE LU[@<DC>] with ASYNC='true';```
 
 Behind the scenes, Fabric activates the Batch command when running the Migrate command. 
-All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
+All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) can be applied to the Migrate command **without specifying the FABRIC_COMMAND parameter**.
 
 For example:
 The following two commands are equivallent.
@@ -28,9 +28,9 @@ The results are the same as when running the Batch command:
 ```
 
 
-## Migrate and Migrate Monitoring Commands 
+## Migrate Monitoring Commands 
 
-The Migrate and Migrate Monitoring commands do operate in the exact same way and with the same parameters as the batch command. Click [here](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) for a comprehensive list of the all the parameters and options available.
+The Migrate and Migrate Monitoring commands do operate in the exact same way and with the same parameters as the batch command. Click [here](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-monitoring-commands-summary) for a comprehensive list of the all the parameters and options available.
 
 
 
