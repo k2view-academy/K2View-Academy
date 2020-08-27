@@ -16,7 +16,7 @@ The following articles discuss Jobs flows and their execution environments:
 
 - [Jobs Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
 
-- [How to Create a new User Job](/articles/20_jobs_and_batch_services/03_create_a_job.md)
+- [How to Create a new User Job](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md)
 
 - [How to Create a new Process Job](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)
 
@@ -59,6 +59,160 @@ Batch process commands are fully detailed in the following articles:
 To understand Batch process flow: 
 - [Batch Flow](/articles/20_jobs_and_batch_services/16_batch_process_flow.md). 
 
+
+
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 3
+
+In this exercise you will use the Batch command to sync Customer LU instances.
+
+**Step 1.**
+
+Which Batch command is used to sync instances 996, 997, 998 and 999?
+
+Run the batch_summary command with the appropriate **Bid** parameter. 
+
+How many entries have been synced per second? 
+
+**Step 2.**
+
+Create a new instance group where all customers live in NY State.
+
+Run the appropriate **Batch** command to sync all customers residing in NY State.
+Using the **batch_summary** command, how many instances have been retrieved?
+
+**Step 3.**
+
+Create a new instance group where all customers live in CA State.
+
+Run the appropriate **migrate** command to sync all customers residing in CA State. 
+
+
+
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 3 Solution
+
+
+**Step 1.**
+
+Command: ```BATCH Customer.('996','997','998','999') FABRIC_COMMAND="sync_instance Customer.?" with ASYNC='true';```
+
+Response:
+```
+|Batch id                            |Notes|
++------------------------------------+-----+
+|6145b8cc-f050-4776-b1d2-f4798283e663|null |
+```
+
+Command: ```batch_summary '6145b8cc-f050-4776-b1d2-f4798283e663';```
+
+Response:
+```
+|Level  |Name        |Status|Start time         |End time           |Duration|Remaining dur.|Remaining|Total|Succeeded|Failed|Added|Updated|Unchanged|% Completed|Ent./sec (pace)|Ent./sec (avg.)|
++-------+------------+------+-------------------+-------------------+--------+--------------+---------+-----+---------+------+-----+-------+---------+-----------+---------------+---------------+
+|Node   |fabric_debug|      |2020-08-20 10:31:51|2020-08-20 10:31:52|00:00:01|00:00:00      |0        |--   |4        |0     |0    |4      |0        |100        |3.94           |3.94           |
+|DC     |DC1         |      |2020-08-20 10:31:51|2020-08-20 10:31:52|00:00:01|00:00:00      |0        |--   |4        |0     |0    |4      |0        |100        |3.94           |3.94           |
+|Cluster|--          |DONE  |2020-08-20 10:31:51|2020-08-20 10:31:52|00:00:01|00:00:00      |0        |4    |4        |0     |0    |4      |0        |100        |3.94           |3.94           |
+```
+
+Answer:
+
+Ent./sec (avg.): 3.94
+
+
+**Step 2.**
+
+Create the **NY_IG_toSync** instance group in the Fabric Studio under the Customer LU section:
+
+<img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step2.PNG">
+
+
+Command: ```BATCH Customer.NY_IG_toSync FABRIC_COMMAND="sync_instance Customer.?" with ASYNC='true';```
+
+Response:
+```
+|Batch id                            |Notes|
++------------------------------------+-----+
+|fe051b44-413c-42de-83da-c2158747a844|null |
+```
+
+Command: ```batch_summary 'fe051b44-413c-42de-83da-c2158747a844';```
+
+Response:
+
+```
+|Level  |Name        |Status|Start time         |End time           |Duration|Remaining dur.|Remaining|Total|Succeeded|Failed|Added|Updated|Unchanged|% Completed|Ent./sec (pace)|Ent./sec (avg.)|
++-------+------------+------+-------------------+-------------------+--------+--------------+---------+-----+---------+------+-----+-------+---------+-----------+---------------+---------------+
+|Node   |fabric_debug|      |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |--   |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
+|DC     |DC1         |      |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |--   |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
+|Cluster|--          |DONE  |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |569  |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
+```
+
+Answer: 569.
+
+Command: ```batch_details 'fe051b44-413c-42de-83da-c2158747a844';```
+
+Response:
+
+```
+|Entity ID|Node id     |Status   |Error|Results                              |
++---------+------------+---------+-----+-------------------------------------+
+|9419     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+|6737     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+|2380     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+|3449     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+|6824     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+........................................
+........................................
+|3336     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+|1013     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
+```
+
+
+
+**Step 3.**
+
+Create the **CA_IG_toSync** instance group in the Fabric Studio under the Customer LU section:
+
+<img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step3.PNG">
+
+
+Command: ```migrate Customer.CA_IG_toSync with ASYNC='true';```
+
+Response:
+```
+|Batch id                            |Notes|
++------------------------------------+-----+
+|991a1199-1a81-41d9-b4f6-3abb587bb99d|null |
+```
+
+Command: ```migrate_summary '991a1199-1a81-41d9-b4f6-3abb587bb99d';```
+
+Response:
+```
+|Level  |Name        |Status|Start time         |End time           |Duration|Remaining dur.|Remaining|Total|Failed|Added|Updated|Unchanged|% Completed|Ent./sec (pace)|Ent./sec (avg.)|
++-------+------------+------+-------------------+-------------------+--------+--------------+---------+-----+------+-----+-------+---------+-----------+---------------+---------------+
+|Node   |fabric_debug|      |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |--   |0     |0    |577    |0        |100        |124.11         |124.11         |
+|DC     |DC1         |      |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |--   |0     |0    |577    |0        |100        |124.11         |124.11         |
+|Cluster|--          |DONE  |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |577  |0     |0    |577    |0        |100        |124.11         |124.11         |
+```
+
+Answer: 577.
+
+Command: ```migrate_details '991a1199-1a81-41d9-b4f6-3abb587bb99d';```
+
+Response:
+
+```
+|Node id     |Instance ID|Status |Error|
++------------+-----------+-------+-----+
+|fabric_debug|9165       |Updated|     |
+|fabric_debug|7822       |Updated|     |
+|fabric_debug|1749       |Updated|     |
+|fabric_debug|7229       |Updated|     |
+........................................
+........................................
+|fabric_debug|9634       |Updated|     |
+|fabric_debug|9914       |Updated|     |
+```
 
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 1
@@ -216,158 +370,7 @@ fabric>jobstatus 1 days ago;
 
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 3
 
-In this exercise you will use the Batch command to sync Customer LU instances.
-
-**Step 1.**
-
-Which Batch command is used to sync instances 996, 997, 998 and 999?
-
-Run the batch_summary command with the appropriate **Bid** parameter. 
-
-How many entries have been synced per second? 
-
-**Step 2.**
-
-Create a new instance group where all customers live in NY State.
-
-Run the appropriate **Batch** command to sync all customers residing in NY State.
-Using the **batch_summary** command, how many instances have been retrieved?
-
-**Step 3.**
-
-Create a new instance group where all customers live in CA State.
-
-Run the appropriate **migrate** command to sync all customers residing in CA State. 
-
-
-
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 3 Solution
-
-
-**Step 1.**
-
-Command: ```BATCH Customer.('996','997','998','999') FABRIC_COMMAND="sync_instance Customer.?" with ASYNC='true';```
-
-Response:
-```
-|Batch id                            |Notes|
-+------------------------------------+-----+
-|6145b8cc-f050-4776-b1d2-f4798283e663|null |
-```
-
-Command: ```batch_summary '6145b8cc-f050-4776-b1d2-f4798283e663';```
-
-Response:
-```
-|Level  |Name        |Status|Start time         |End time           |Duration|Remaining dur.|Remaining|Total|Succeeded|Failed|Added|Updated|Unchanged|% Completed|Ent./sec (pace)|Ent./sec (avg.)|
-+-------+------------+------+-------------------+-------------------+--------+--------------+---------+-----+---------+------+-----+-------+---------+-----------+---------------+---------------+
-|Node   |fabric_debug|      |2020-08-20 10:31:51|2020-08-20 10:31:52|00:00:01|00:00:00      |0        |--   |4        |0     |0    |4      |0        |100        |3.94           |3.94           |
-|DC     |DC1         |      |2020-08-20 10:31:51|2020-08-20 10:31:52|00:00:01|00:00:00      |0        |--   |4        |0     |0    |4      |0        |100        |3.94           |3.94           |
-|Cluster|--          |DONE  |2020-08-20 10:31:51|2020-08-20 10:31:52|00:00:01|00:00:00      |0        |4    |4        |0     |0    |4      |0        |100        |3.94           |3.94           |
-```
-
-Answer:
-
-Ent./sec (avg.): 3.94
-
-
-**Step 2.**
-
-Create the **NY_IG_toSync** instance group in the Fabric Studio under the Customer LU section:
-
-<img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step2.PNG">
-
-
-Command: ```BATCH Customer.NY_IG_toSync FABRIC_COMMAND="sync_instance Customer.?" with ASYNC='true';```
-
-Response:
-```
-|Batch id                            |Notes|
-+------------------------------------+-----+
-|fe051b44-413c-42de-83da-c2158747a844|null |
-```
-
-Command: ```batch_summary 'fe051b44-413c-42de-83da-c2158747a844';```
-
-Response:
-
-```
-|Level  |Name        |Status|Start time         |End time           |Duration|Remaining dur.|Remaining|Total|Succeeded|Failed|Added|Updated|Unchanged|% Completed|Ent./sec (pace)|Ent./sec (avg.)|
-+-------+------------+------+-------------------+-------------------+--------+--------------+---------+-----+---------+------+-----+-------+---------+-----------+---------------+---------------+
-|Node   |fabric_debug|      |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |--   |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
-|DC     |DC1         |      |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |--   |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
-|Cluster|--          |DONE  |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |569  |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
-```
-
-Answer: 569.
-
-Command: ```batch_details 'fe051b44-413c-42de-83da-c2158747a844';```
-
-Response:
-
-```
-|Entity ID|Node id     |Status   |Error|Results                              |
-+---------+------------+---------+-----+-------------------------------------+
-|9419     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-|6737     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-|2380     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-|3449     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-|6824     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-........................................
-........................................
-|3336     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-|1013     |fabric_debug|COMPLETED|     |{"Added":1,"Updated":0,"Unchanged":0}|
-```
-
-
-
-**Step 3.**
-
-Create the **CA_IG_toSync** instance group in the Fabric Studio under the Customer LU section:
-
-<img src="/academy/Training_Level_1/07_jobs_and_batch_services/images/JobsAndBatch_Exercise3Step3.PNG">
-
-
-Command: ```migrate Customer.CA_IG_toSync with ASYNC='true';```
-
-Response:
-```
-|Batch id                            |Notes|
-+------------------------------------+-----+
-|991a1199-1a81-41d9-b4f6-3abb587bb99d|null |
-```
-
-Command: ```migrate_summary '991a1199-1a81-41d9-b4f6-3abb587bb99d';```
-
-Response:
-```
-|Level  |Name        |Status|Start time         |End time           |Duration|Remaining dur.|Remaining|Total|Failed|Added|Updated|Unchanged|% Completed|Ent./sec (pace)|Ent./sec (avg.)|
-+-------+------------+------+-------------------+-------------------+--------+--------------+---------+-----+------+-----+-------+---------+-----------+---------------+---------------+
-|Node   |fabric_debug|      |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |--   |0     |0    |577    |0        |100        |124.11         |124.11         |
-|DC     |DC1         |      |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |--   |0     |0    |577    |0        |100        |124.11         |124.11         |
-|Cluster|--          |DONE  |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |577  |0     |0    |577    |0        |100        |124.11         |124.11         |
-```
-
-Answer: 577.
-
-Command: ```migrate_details '991a1199-1a81-41d9-b4f6-3abb587bb99d';```
-
-Response:
-
-```
-|Node id     |Instance ID|Status |Error|
-+------------+-----------+-------+-----+
-|fabric_debug|9165       |Updated|     |
-|fabric_debug|7822       |Updated|     |
-|fabric_debug|1749       |Updated|     |
-|fabric_debug|7229       |Updated|     |
-........................................
-........................................
-|fabric_debug|9634       |Updated|     |
-|fabric_debug|9914       |Updated|     |
-```
 
 
 
