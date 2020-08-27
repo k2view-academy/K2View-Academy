@@ -147,7 +147,7 @@ A: Sync instances, to perform multiple syncs on all (or a subset of) instances f
 
 B: Broadway flows.
 
-C: Publishing Fabric data changes. 
+C: Re-publishing Fabric data changes using the CDC mechanism. 
 
 D: All the above.
 
