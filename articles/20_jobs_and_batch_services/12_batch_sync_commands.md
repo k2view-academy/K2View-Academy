@@ -175,7 +175,7 @@ Displays the status of instances of a given Batch process ID:
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p>BATCH_IN_PROCESS filter='&lt'^(cust)*$'&gt'</p>
+<p>BATCH_IN_PROCESS filter='^(cust)*$'</p>
 <p>This command will return all running batch processes with names containing the "cust" pattern</p>
 </td>
 </tr> 
@@ -200,10 +200,8 @@ Note that the filter supports regex.
 </p>
 </td>
 <td valign="top" width="300pxl">
-<p>
-   - BATCH_LIST STATUS='ALL'; – list the history of all batch processes.
-   
-   - BATCH_LIST status='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
+   <p>BATCH_LIST STATUS='ALL'; – list the history of all batch processes.</p>
+   <p>BATCH_LIST STATUS='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
 </td>
 </tr> 
 
