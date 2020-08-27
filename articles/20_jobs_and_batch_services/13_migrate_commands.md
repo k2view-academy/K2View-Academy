@@ -27,9 +27,6 @@ The results are the same as when running the Batch command:
 |99   |0      |0        |0     |99   |875     |
 ```
 
-## Invoking an Instance Group from the Migrate Command 
-As for the Batch command, the [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md) can be created from within Fabric Studio.
-
 
 ## Migrate and Migrate Monitoring Commands 
 <table width="900pxl">
@@ -284,6 +281,9 @@ Use this command to migrate a selective list of instances defined by a function.
 
 </tbody>
 </table>
+
+## Invoking an Instance Group from the Migrate Command 
+As for the Batch command, the [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md) can be created from within Fabric Studio.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/14_instances_groups.md)
