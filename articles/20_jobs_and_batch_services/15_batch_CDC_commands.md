@@ -10,7 +10,7 @@ In addition, this process can benefit from all Batch configuration parameters, s
 ## CDC Batch Commands
 The *FABRIC_COMMAND* parameter must be set using the usual [CDC_republish_instance](/articles/18_cdc_and_search/02_cdc_messages.md) syntax.
 
-```BATCH LUT[@<DC>].<IG>  FABRIC_COMMAND="cdc_republish_instance OracleLU.?" with async=true;```
+```BATCH LUT[@<DC>].<IG>  FABRIC_COMMAND="cdc_republish_instance CUSTOMER.?" with async=true;```
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/14_batch_broadway_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/16_batch_process_flow.md)
