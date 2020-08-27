@@ -1,5 +1,5 @@
 # **Fabric Batch Overview** 
-The Batch process is a Fabric utility that can be used to run multiple commands on a population's instances, regardless of its size or type. 
+The Batch process is a Fabric utility that can be used to run multiple commands on a list of instances, regardless of its size or type. 
 
 The Batch process is used to trigger the following:
 - [Sync instances](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), to perform multiple syncs on all (or a subset of) instances for a specific Logical Unit. This process is also referred to as the Migration Process, handled by the *migrate* command.
