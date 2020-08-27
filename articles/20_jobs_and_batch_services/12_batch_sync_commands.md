@@ -4,7 +4,7 @@ The Fabric runtime environment provides the following sets of Batch commands:
 
 **Instances Migration**
 
-```BATCH LUT ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LUT.?" with ASYNC='true';```
+```BATCH LU ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LU.?" with ASYNC='true';```
 
 
 
