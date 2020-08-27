@@ -134,11 +134,9 @@ B: Process Jobs.
 
 C: Broadway flows.
 
-D: Parser executions.
+D: All the above.
 
-E: All the above.
-
-(**Solution 8: E**)
+(**Solution 8: D**)
 
 
 #### Question 9: Batch Processes
