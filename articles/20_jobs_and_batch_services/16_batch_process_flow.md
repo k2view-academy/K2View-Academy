@@ -3,13 +3,13 @@
 ## **Fabric Batch Processes Flow**  
 
 The following activities are automatically triggered when a new Batch process is executed:
--  A new entry is added in Cassandra under the k2viewsystem keyspace in the Batch table.
--  A new Job entry is recorded in the k2viewsystem.jobs table with the following parameters:
+-  A new Batch entry is added in Cassandra.
+-  A new Job entry is recorded in also the k2system_jobs table with the following parameters:
    
    -  Name = the name of the Batch process.
-   
    -  Type = BATCH PROCESS.
--  The Batch process is assigned a WAITING_FOR_JOB status.  
+   
+-  The WAITING_FOR_JOB status is then assigned to the Batch process.  
 
 After this, any available node, or any node whose affinity has been specified in the Batch command, handles the execution of the Job and of the subcommand as specified in the Batch command.
 
@@ -19,18 +19,18 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 3. IN_PROGRESS
 4. FAILED/CANCELLED/DONE
 
-The illustration below shows how, once triggered from the command line, a batch process is automatically encapsulated into a Job process. In turn, the Job Process launches the batch command that then, runs through its lifecycle phases. 
+The illustration below shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. The Job Process then launches the batch command which, in turn, is executed through its lifecycle phases. 
  
-
 <img src="/articles/20_jobs_and_batch_services/images/13_jobs_and_batch_services_batch_process.PNG">
 
 
 
 ## **Scheduling Batch Processes**
 
-To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created with a script containing the batch command to be repeatedly invoked. This consists of creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs with the execution parameters parsed in the Batch command.
+To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created, using a user job, containing the batch command that needs to be repeatedly invoked. This consists in creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs (each one parametered with the execution settings parsed in the Batch command).
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
+
  
 
 ## **Batch Process Table in Cassandra**
@@ -38,13 +38,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 
 ### Example 
 
-```
-cassandra@cqlsh:k2batchprocess> select * from batchprocess_list;
-
- bid | arguments | command | creation_time | end_time | error | extra_stats | lut_name | owner | start_time | status | total_entities
------+-----------+---------+---------------+----------+-------+-------------+----------+-------+------------+--------+----------------
-
-```
+```cassandra@cqlsh:k2batchprocess> select * from batchprocess_list;```
 
 
 <table width="900pxl">
@@ -154,14 +148,14 @@ cassandra@cqlsh:k2batchprocess> select * from batchprocess_list;
 
 **Arguments**  
 
-      {"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}
+```{"AUTH_TOKEN":"ws","FABRIC_COMMAND":"sync_instance AUTODATA_DELTA.?","JOB_UID":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"sync_instance AUTODATA_DELTA.?\" with async=trub9c7eb\",\"LOG_ID\":\"1000000000072\"}","SRC_DB_INTERFACE_NAME":"idsFile","AUTH_USER":"","sync_mode":"ON","INSTANCES_LIST":"","lu_name":"AUTODATA_DELTA","COMMAND":"BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND=\"syn_Delta","SRC_DB_QUERY":"select id from ids  limit 100","environment_name":"_dev"}```
+
 
 **Command**  
 
 ```BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 100') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';```
 
-- in this case a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
-
+In this case the command describes a synchronization process of a list of IDs with affinity set to Node: 10.21.2.102 
 
 
 **extra_stats**  
@@ -170,20 +164,6 @@ This field shows the slowest-processed entities, along with their ID, processing
 
 ```{"slowestProcessed":[{"entityId":"4","processTimeMS":572,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"5","processTimeMS":573,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"},{"entityId":"47","processTimeMS":645,"status":"COMPLETED","result":"{\"Added\":1,\"Updated\":0,\"Unchanged\":0}"}```
 
-
-
-### **Batch Tables and Job Tables Correlation in Cassandra**
-
-Information about the Job created during the execution of the Batch process is displayed in the **k2system** keyspace in the **k2_jobs** table. 
-
-The same Batch process also recorded is in the batchprocess_list table located in the k2batchprocess keyspace.  
-Therefore a Batch process can be cross-referenced using the **bid** field that is displayed both in the *output* field of the k2_jobs table and in the *bid* field of the batchprocess_list table.
-
-<img src="/articles/20_jobs_and_batch_services/images/18_jobs_and_batch_services_scheduled_batch_table3.PNG">
-
-
-### **Migrate Tables in Cassandra**
-All migrate-related information is displayed in the **k2migrate.migration_list** and **k2migrate.migration_iid_info** tables in Cassandra's **k2migrate** keyspace.
 
 
 
