@@ -27,3 +27,11 @@ fabric>BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance CUSTOME
 +-----+-------+---------+------+-----+--------+
 |99   |0      |0        |0     |99   |875     |
 ```
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/13_migrate_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)
+
+
+
