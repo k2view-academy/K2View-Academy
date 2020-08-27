@@ -166,7 +166,7 @@ C: ```MIGRATE CUSTOMER MIGRATE_COMMAND="sync_instance Customer.?" with async=’
 
 D: ```MIGRATE CUSTOMER with async=’true’;```
 
-E: A & C
+E: A, D
 
 F: All the above.
 
