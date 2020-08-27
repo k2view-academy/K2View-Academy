@@ -31,8 +31,5 @@ Fabric's integrated Batch process provides the following advantages to ensure th
 ```BATCH LU from fabric FABRIC_COMMAND="cdc_republish_instance CustomerLU.?" with async=true;```
 
 
-# **Fabric Batch Mechanism**
-
-The same mechanism applies when a batch process is started 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md)
