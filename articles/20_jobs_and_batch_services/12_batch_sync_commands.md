@@ -271,7 +271,7 @@ Note that the filter supports regex.
     <li>LU type</li>
     <li>Time at work (ms)</li>  
     <li>exeid</li>
-    <li>command|</li>
+    <li>command</li>
 <li>Filter, must be a regex compatible argument.</li>
 </p>
 </td>
