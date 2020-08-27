@@ -186,7 +186,7 @@ Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](/art
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/6_batch_CDC_commands.md)
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)
 
 
 
