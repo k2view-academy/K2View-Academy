@@ -116,156 +116,6 @@ This command migrates all customers from the source systems into the Fabric CUST
 
 </td>
 </tr> 
-</table>
-
-
-## Batch Monitoring Commands Summary
-
-<table width="900pxl">
-<tbody>
-<tr>
-<td valign="top" width="300pxl">
-<p><strong>Command Name</strong></p>
-</td>
-<td valign="top" width="400pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="300pxl">
-<p><strong>Example</strong></p>
-</td>
-</tr>
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>BATCH_DETAILS '&ltbatch_id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h6>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>
-Displays the status of instances of a given Batch process ID:
-   
-- STATUS, which can be either WAITING, COMPLETED, FAILED.
-- ENTITIES, lists of entities separated by a comma.
-- AFFINITY, DCs or nodes.
-- SORT_BY_PROCESS_TIME, if True, shows only the entities with the highest process time. If set, ignore all other parameters.
-- LIMIT, default limit defined in the config.ini if no limit is provided as an argument. </p>
-</td>
-<td valign="top" width="300pxl">
-<p>BATCH_DETAILS 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
-</td>
-</tr> 
-
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>BATCH_IN_PROCESS filter='&ltfilter regex&gt'</h6>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>Lists all running Batch processes and returns the following information: 
-   <li>Node ID</li>  <li>Batch process ID</li>
-    <li>Entity ID</li>
-    <li>LU type</li>
-    <li>Time at work (ms)</li>  
-    <li>exeid</li>
-    <li>command|</li>
-<li>Filter, must be a regex compatible argument.</li>
-</p>
-</td>
-<td valign="top" width="300pxl">
-<p>BATCH_IN_PROCESS filter='^(cust)*$'</p>
-<p>This command will return all running batch processes with names containing the "cust" pattern</p>
-</td>
-</tr> 
-
-
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>BATCH_LIST [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h6>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>
-If there are no arguments, lists all active Batch processes together with their respective status:
-   
-- NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
-- FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
-- FILTER, filters Batch processes. The filter field must be populated by a string in a Fabric command in the Batch process. 
-
-Note that the filter supports regex.
-</p>
-</td>
-<td valign="top" width="300pxl">
-   <p>BATCH_LIST STATUS='ALL'; – list the history of all batch processes.</p>
-   <p>BATCH_LIST STATUS='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
-</td>
-</tr> 
-
-
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>BATCH_RETRY '&ltbatch_id&gt'</h6>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>If the Batch process has not been completed, resumes a previous Batch process by reprocessing all failed or unhandled entities. Otherwise, it retries the failed entities only.
-   
-   If the Batch process is completed before the Retry command, Fabric gets the list of instances from the source DB. 
-   
-   If the Batch process is completed before the Retry command, Fabric gets the list of failed entities from the batchprocess_entities_errors Cassandra table.
-</p>
-</td>
-<td valign="top" width="300pxl">
-<p>
-BATCH_RETRY ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’; 
-</p>
-</td>
-</tr> 
-
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>CANCEL BATCH ['&ltbatch_id&gt']</h6>
-</td>
-<td valign="top" width="400pxl">
-<p>
-Cancels the last started Batch process coordinated by the current node. The Cancel command must be executed from the node that started the operation. 
-When adding the '&ltbatch_id&gt' parameter, the Batch process with the defined batch_ID is cancelled. Note that in this case, the Cancel command does not need to be run from the node coordinating the specific Batch process.
-
-</p>
-</td>
-<td valign="top" width="300pxl">
-<p>
-CANCEL BATCH;
-</p>
-CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
-</p>
-</td>
-</tr> 
-
-
-
-<tr>
-<td valign="top" width="300pxl">
-<h6>BATCH_SUMMARY '&ltbatch_id&gt'</h6>
-
-</td>
-<td valign="top" width="400pxl">
-
-<p>This report brings a table holding a summary about node, DC and cluster levels.                                    
-</p>
-</td>
-<td valign="top" width="300pxl">
-<p>BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
-</td>
-</tr> 
-
 
 <tr>
 <td valign="top" width="300pxl">
@@ -299,7 +149,162 @@ CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 3) BATCHF Customer.batchFtest4().(‘1’,’2’,’3’) FABRIC_COMMAND='sync_instance Customer.?';
 </p>
 </td>
+</tr>
+
+
+
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_RETRY '&ltbatch_id&gt'</h6>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>If the Batch process has not been completed, resumes a previous Batch process by reprocessing all failed or unhandled entities. Otherwise, it retries the failed entities only.
+   
+   If the Batch process is completed before the Retry command, Fabric gets the list of instances from the source DB. 
+   
+   If the Batch process is completed before the Retry command, Fabric gets the list of failed entities from the batchprocess_entities_errors Cassandra table.
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+BATCH_RETRY ‘161f9717-bd93-4882-a3aa-7b58c1f61b27’; 
+</p>
+</td>
 </tr> 
+
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>CANCEL BATCH ['&ltbatch_id&gt']</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Cancels the last started Batch process coordinated by the current node. The Cancel command must be executed from the node that started the operation. 
+When adding the '&ltbatch_id&gt' parameter, the Batch process with the defined batch_ID is cancelled. Note that in this case, the Cancel command does not need to be run from the node coordinating the specific Batch process.
+
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+CANCEL BATCH;
+</p>
+CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+</p>
+</td>
+</tr> 
+
+
+
+</table>
+
+
+## Batch Monitoring Commands Summary
+
+<table width="900pxl">
+<tbody>
+<tr>
+<td valign="top" width="300pxl">
+<p><strong>Command Name</strong></p>
+</td>
+<td valign="top" width="400pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+</tr>
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_LIST [STATUS='&ltstatus&gt'] [FROM_DATE='&ltfrom_date&gt' [TO_DATE='&ltto_date&gt']] [FILTER=&ltfilter criteria&gt]</h6>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>
+If there are no arguments, lists all active Batch processes together with their respective status:
+   
+- NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
+- FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
+- FILTER, filters Batch processes. The filter field must be populated by a string in a Fabric command in the Batch process. 
+
+Note that the filter supports regex.
+</p>
+</td>
+<td valign="top" width="300pxl">
+   <p>BATCH_LIST STATUS='ALL'; – list the history of all batch processes.</p>
+   <p>BATCH_LIST STATUS='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
+</td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_SUMMARY '&ltbatch_id&gt'</h6>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>This report brings a table holding a summary about node, DC and cluster levels.                                    
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>BATCH_SUMMARY '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
+</td>
+</tr> 
+
+
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_IN_PROCESS filter='&ltfilter regex&gt'</h6>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>Lists all running Batch processes and returns the following information: 
+   <li>Node ID</li>  <li>Batch process ID</li>
+    <li>Entity ID</li>
+    <li>LU type</li>
+    <li>Time at work (ms)</li>  
+    <li>exeid</li>
+    <li>command|</li>
+<li>Filter, must be a regex compatible argument.</li>
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>BATCH_IN_PROCESS filter='^(cust)*$'</p>
+<p>This command will return all running batch processes with names containing the "cust" pattern</p>
+</td>
+</tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_DETAILS '&ltbatch_id&gt' [STATUS='&ltstatus&gt'] [ENTITIES='&ltentity 1,entity 2,...&gt'] [AFFINITY='&ltAffinity&gt'] [LIMIT=&ltlimit&gt] [SORT_BY_PROCESS_TIME=&lttrue/false&gt]</h6>
+
+</td>
+<td valign="top" width="400pxl">
+
+<p>
+Displays the status of instances of a given Batch process ID:
+   
+- STATUS, which can be either WAITING, COMPLETED, FAILED.
+- ENTITIES, lists of entities separated by a comma.
+- AFFINITY, DCs or nodes.
+- SORT_BY_PROCESS_TIME, if True, shows only the entities with the highest process time. If set, ignore all other parameters.
+- LIMIT, default limit defined in the config.ini if no limit is provided as an argument. </p>
+</td>
+<td valign="top" width="300pxl">
+<p>BATCH_DETAILS 'a4587541-b12d-4329-affd-7c25516c9cde';</p>
+</td>
+</tr> 
+
 </table>
 
 ## Batch Commands Examples
