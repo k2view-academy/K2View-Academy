@@ -14,4 +14,4 @@ The *FABRIC_COMMAND* parameter must be set using the usual [CDC_republish_instan
 ```BATCH LUT[@<DC>].<IG>  FABRIC_COMMAND="cdc_republish_instance CUSTOMER.?" with async=true;```
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/14_batch_broadway_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/16_batch_process_flow.md)
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/17_batch_process_flow.md)
