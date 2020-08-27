@@ -13,17 +13,13 @@ All the verbose defined for the [Batch process commands](/articles/20_jobs_and_b
 For example:
 The following two commands are equivallent.
 
-```BATCH <LU>[@<DC>] FABRIC_COMMAND='<fabric command> ?'``` is the same as ```migrate <LU>[@<DC>]```
+```BATCH <LU>[@<DC>] FABRIC_COMMAND='<fabric command> ?';``` is the same as ```migrate <LU>[@<DC>];```
 
 Using the same example as in previous article, using the same Instance Group pertaining to the Customer LU **customer_IG_600To700**:
-```
-MIGRATE Customer.customer_IG_600To700;
-```
+```MIGRATE Customer.customer_IG_600To700;```
 The results are the same as when running the Batch command: 
 
-```
-BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance CUSTOMER.?";
-```
+```BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance CUSTOMER.?";```
 
 ```
 |Added|Updated|Unchanged|Failed|Total|Duration|
