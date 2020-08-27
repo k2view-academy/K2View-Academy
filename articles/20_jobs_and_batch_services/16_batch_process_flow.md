@@ -19,7 +19,10 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 3. IN_PROGRESS
 4. FAILED/CANCELLED/DONE
 
-The illustration below shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. The Job Process then launches the batch command which, in turn, is executed through its lifecycle phases. 
+
+The illustration below shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. 
+
+The Job Process then launches the batch command which, in turn, is executed through its lifecycle phases. 
  
 <img src="/articles/20_jobs_and_batch_services/images/13_jobs_and_batch_services_batch_process.PNG">
 
@@ -27,7 +30,10 @@ The illustration below shows how, once triggered from the command line, an async
 
 ## **Scheduling Batch Processes**
 
-To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created, using a user job, containing the batch command that needs to be repeatedly invoked. This consists in creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs (each one parametered with the execution settings parsed in the Batch command).
+
+To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created, using a user job, containing the batch command that needs to be repeatedly invoked. 
+
+This consists in creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs (each one parametered with the execution settings parsed in the Batch command).
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
 
