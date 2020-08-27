@@ -10,7 +10,7 @@ In addition, this process can benefit from all Batch configuration parameters, s
 ## Broadway Batch Commands
 The *FABRIC_COMMAND* parameter must be set using the usual [Broadway command](/articles/19_Broadway/17_tutorial_and_flow_examples.md) syntax.
 
-```BATCH LUT[@<DC>].<IG> FABRIC_COMMAND="broadway LUT.SampleFlow SampleIID=?" with async=true;```
+```BATCH LUT[@<DC>].<IG> FABRIC_COMMAND="broadway LU.SampleFlow SampleIID=?" with async=true;```
 
 
 
