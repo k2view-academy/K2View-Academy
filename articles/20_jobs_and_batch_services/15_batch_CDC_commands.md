@@ -4,6 +4,7 @@
 ## Use Case
 
 The Batch command can be used to run the cdc_republish_instance command on different instances using Instance Groups or embedded SQL statements as described in the [Batch Commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md) section.
+For example, if an external system became out-of-sync, it can send a request to Fabric to republish all the instances that were modified, and Fabric will use the batch process to execute this request. 
 
 In addition, this process can benefit from all Batch configuration parameters, such as nodes affinity, capacity (max_nodes, max_workers_per_node) and multiplicity factor (allow_multiply).
 
