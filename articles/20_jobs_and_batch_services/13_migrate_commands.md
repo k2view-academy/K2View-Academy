@@ -28,7 +28,7 @@ The results are the same as when running the Batch command:
 ```
 
 ## Invoking an Instance Group from the Migrate Command 
-As for the Batch command, the [Instance Group](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#how-do-i-invoke-an-instance-group-from-the-batch-command) can be created from within Fabric Studio.
+As for the Batch command, the [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md) can be created from within Fabric Studio.
 
 
 ## Migrate and Migrate Monitoring Commands 
