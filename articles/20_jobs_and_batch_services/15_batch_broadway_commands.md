@@ -4,6 +4,8 @@
 ## Use Case
 
 A Broadway Batch process can be executed to loop through a list of external parameters such as a list of payments records (of a specific set of instances), or over a list of files. 
+Broadway batch processes can also be run on multiple instances using Instance Groups or embedded SQL statements as described in the [Batch Commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md) section.
+
 In addition, this process can benefit from all [Batch configuration parameters](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-ludc-fabric_commandfabric-command--with-affinityaffinity-job_affinityjob-affinity-asynctruefalse-generate_entities_firsttruefalse-allow_multiplytruefalse-max_workers_per_nodenumberh6-), such as nodes affinity, capacity (max_nodes, max_workers_per_node) and multiplicity factor (allow_multiply).
 
 
