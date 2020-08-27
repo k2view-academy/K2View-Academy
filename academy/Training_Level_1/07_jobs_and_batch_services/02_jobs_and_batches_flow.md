@@ -240,7 +240,7 @@ What is the timestamp of the first entry?
 How many customers are there in the CRM_DB?
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 1 Solution 
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 2 Solution 
 
 **Step 1.**
 
@@ -267,7 +267,7 @@ Jobs table in the Fabric Studio:
 Answer: 10,000.
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 2
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 3
 In this exercise you will interact with the above Job using the command line.
 
 **Step 1.**
@@ -302,7 +302,7 @@ Rerun the command listing all Jobs created over the last 2 days. What is the new
 
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 2 Solution
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 3 Solution
 
 **Step 1.**
 
