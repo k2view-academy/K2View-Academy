@@ -69,7 +69,7 @@ In this exercise you will use the Batch command to sync Customer LU instances.
 
 Which Batch command is used to sync instances 996, 997, 998 and 999?
 
-Run the batch_summary command with the appropriate **Bid** parameter. 
+Run the batch_summary command with the appropriate **Batch ID** parameter. 
 
 How many entries have been synced per second? 
 
