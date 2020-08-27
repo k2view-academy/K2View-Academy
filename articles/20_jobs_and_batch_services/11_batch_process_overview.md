@@ -28,7 +28,7 @@ Fabric's integrated Batch process provides the following advantages to ensure th
 
 **CDC Republish**
 
-```BATCH LUT from fabric FABRIC_COMMAND="cdc_republish_instance OracleLU.?" with async=true;```
+```BATCH LUT from fabric FABRIC_COMMAND="cdc_republish_instance CustomerLU.?" with async=true;```
 
 
 
