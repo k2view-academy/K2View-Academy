@@ -61,7 +61,7 @@ To understand Batch process flow:
 
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 3
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 1
 
 In this exercise you will use the Batch command to sync Customer LU instances.
 
@@ -88,7 +88,7 @@ Run the appropriate **migrate** command to sync all customers residing in CA Sta
 
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 3 Solution
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Jobs & Batch - Exercise 1 Solution
 
 
 **Step 1.**
@@ -215,7 +215,7 @@ Response:
 ```
 
 
-## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 1
+## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Jobs & Batch - Exercise 2
 
 In this exercise you will create a scheduled Fabric user Job that runs daily and that creates the list_entities.txt file where the following information is appended  every 5 minutes:
 - Current date and time. 
