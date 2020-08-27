@@ -306,7 +306,7 @@ Rerun the command listing all Jobs created over the last 2 days. What is the new
 
 **Step 1.**
 
-Command: ```jobstatus 1 days ago;```
+Command: ```jobstatus 2 days ago;```
 
 Response:
 
