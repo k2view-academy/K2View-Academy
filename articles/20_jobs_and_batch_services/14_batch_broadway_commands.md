@@ -3,14 +3,16 @@
 
 ## Use Case
 
-The Batch command can be used to run multiple broadway flows on different instances using Instance Groups or embedded SQL statements as described in the [Batch Commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md) section.
-
+A Broadway Batch process can be executed to loop through a list of external parameters such as a list of payments records (of a specific set of instances), or over a list of files. 
 In addition, this process can benefit from all Batch configuration parameters, such as nodes affinity, capacity (max_nodes, max_workers_per_node) and multiplicity factor (allow_multiply).
+
+
 
 ## Broadway Batch Commands
 The *FABRIC_COMMAND* parameter must be set using the usual [Broadway command](/articles/19_Broadway/17_tutorial_and_flow_examples.md) syntax.
 
-```BATCH LUT[@<DC>].<IG> FABRIC_COMMAND="broadway LU.SampleFlow SampleIID=?" with async=true;```
+Example:
+```BATCH CUSTOMER FABRIC_COMMAND="broadway LU.SampleFlow SampleIID=?" with async=true;```
 
 
 
