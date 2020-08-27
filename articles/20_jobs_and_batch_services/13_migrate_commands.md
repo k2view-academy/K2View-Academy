@@ -5,7 +5,7 @@
 The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database.
 Instances Migration
 
-```MIGRATE LUT[@<DC>] with ASYNC='true';```
+```MIGRATE LU[@<DC>] with ASYNC='true';```
 
 Behind the scenes, Fabric activates the Batch command when running the Migrate command. 
 All the verbose defined for the [Batch process commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) can be applied to the Migrate command without specifying the FABRIC_COMMAND parameter.
@@ -13,7 +13,7 @@ All the verbose defined for the [Batch process commands](/articles/20_jobs_and_b
 For example:
 The following two commands are equivallent.
 
-``` BATCH <LUT>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LUT>[@<DC>]```
+``` BATCH <LU>[@<DC>] FABRIC_COMMAND='<fabric command> ?' ``` is the same as ```migrate <LU>[@<DC>]```
 
 Using the same example as in previous article, using the same Instance Group pertaining to the Customer LU **customer_IG_600To700**:
 ```
@@ -22,7 +22,7 @@ MIGRATE Customer.customer_IG_600To700;
 The results are the same as when running the Batch command: 
 
 ```
-BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance PATIENT.?";
+BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance CUSTOMER.?";
 ```
 ```
 
@@ -52,7 +52,7 @@ As for the Batch command, the [Instance Group](/articles/20_jobs_and_batch_servi
    
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate &ltLUT&gt[@&ltDC&gt] [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
+<h6>migrate &ltLU&gt[@&ltDC&gt] [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -71,7 +71,7 @@ JOB_AFFINITY, - Affinity for the migrate job
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate &ltLUT&gt[@&ltDC>].&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
+<h6>migrate &ltLU&gt[@&ltDC>].&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -87,7 +87,7 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate &ltLUT&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
+<h6>migrate &ltLU&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -102,7 +102,7 @@ DC, AFFINITY, ASYNC, JOB_AFFINITY - as above
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>migrate &ltLUT&gt[@&ltDC&gt].(&ltinstance 1,instance 2,etc...&gt) [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
+<h6>migrate &ltLU&gt[@&ltDC&gt].(&ltinstance 1,instance 2,etc...&gt) [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [JOB_AFFINITY='&ltjob affinity&gt']];</h6>
 </td>
 <td valign="top" width="400pxl">
 <p>
@@ -266,11 +266,11 @@ MigrateF
 <p>
 Use this command to migrate a selective list of instances defined by a function.
    
-1) migratef &ltLUT>[@&ltDC&gt].&ltfunction&gt().&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
+1) migratef &ltLU>[@&ltDC&gt].&ltfunction&gt().&ltIG&gt [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
 
-<p>2) migratef &ltLUT&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
+<p>2) migratef &ltLU&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
 <p>  
-3) migratef &ltLUT&gt[@&ltDC&gt].&ltfunction&gt().(&ltInstance 1, Instance 2, etc...&gt) [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
+3) migratef &ltLU&gt[@&ltDC&gt].&ltfunction&gt().(&ltInstance 1, Instance 2, etc...&gt) [WITH [AFFINITY='&ltaffinity&gt'] [ASYNC=true/false] [GENERATE_IIDS_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</p>
    
 </td>
 <td valign="top" width="300pxl">
@@ -278,7 +278,7 @@ Use this command to migrate a selective list of instances defined by a function.
 1) migratef Customer.migrateFtest4().ig20;
 </p>
 <p>   
-2) migratef Customer@DC1.migrateFtest4() from HIS_DB using ('select patient_id from invoice where balance=12894');
+2) migratef Customer@DC1.migrateFtest4() from HIS_DB using ('select customer_id from invoice where balance=12894');
 </p>
 <p>
 3) migratef Customer.migrateFtest4().(‘1’,’2’,’3’);
