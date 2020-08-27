@@ -20,15 +20,15 @@ Fabric's integrated Batch process provides the following advantages to ensure th
 
 **Instances Sync (Migration)**
 
-```BATCH LUT ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LUT.?" with ASYNC='true';```
+```BATCH LU ('LUI','LUI2','LUI3','LUI4') FABRIC_COMMAND="sync_instance LU.?" with ASYNC='true';```
 
 **Broadway Flows Execution**
 
-```BATCH LUT FABRIC_COMMAND="broadway LUT.SampleFlow SampleIID=?" with async=true;```
+```BATCH LU FABRIC_COMMAND="broadway LU.SampleFlow SampleIID=?" with async=true;```
 
 **CDC Republish**
 
-```BATCH LUT from fabric FABRIC_COMMAND="cdc_republish_instance CustomerLU.?" with async=true;```
+```BATCH LU from fabric FABRIC_COMMAND="cdc_republish_instance CustomerLU.?" with async=true;```
 
 
 
