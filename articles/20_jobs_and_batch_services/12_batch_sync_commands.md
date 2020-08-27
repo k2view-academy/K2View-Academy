@@ -124,18 +124,10 @@ This command migrates all customers from the source systems into the Fabric CUST
 </td>
 <td valign="top" width="400pxl">
 
-<p>Runs the Batch process on a list of instances that are saved with a name defined within a function.</p>
+<p>Runs the Batch process using a function that will match the name if the instance from the external source with its ID as used internally by Fabric</p>
 <p>
-1) BATCHF &ltLU>[@&ltDC&gt].&ltfunction&gt() FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
+The BATCHF command uses the exact same parameters as the BATCH command described above. 
 </p>
-<p>
-2) BATCHF &ltLU&gt[@&ltDC&gt].&ltfunction&gt().&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
-</p>
-<p>
-3) BATCHF &ltLU&gt[@&ltDC&gt].&ltfunction&gt() from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];
-</p>
-<p>
-4) BATCHF &ltLU&gt[@&ltDC&gt].&ltfunction&gt().(&ltinstance 1,instance 2,etc...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt']</p>
 </td>
 
 <td valign="top" width="300pxl">
@@ -194,6 +186,11 @@ When adding the '&ltbatch_id&gt' parameter, the Batch process with the defined b
 CANCEL BATCH;
 </p>
 CANCEL BATCH ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+</p>
+
+</p>
+Note that the KILL command can be used as well, using the batch ID (*bid*):
+KILL ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’; 
 </p>
 </td>
 </tr> 
