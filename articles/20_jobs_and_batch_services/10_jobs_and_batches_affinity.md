@@ -2,10 +2,8 @@
 
 
 ## Affinity Overview
-The term Nodes Affinity, refers to the ability of Fabric to initiate node that sends and allocates a job or a batch process to a specific handling node in a Fabric Cluster. 
-Nodes Affinity is particularily useful when specific nodes are reserved for specific tasks or need to be dedicated for executions that are time-consuming or require heavy processing.
-
-The ability to allocate specific node to handle specific types of jobs can have a positive impact on the overall cluster's performance and Quality of Service.
+The term Nodes Affinity refers to the ability of Fabric to initiate a node that sends and allocates a Job or a batch process to a specific handling node in a Fabric cluster. This is particularly useful when specific nodes are reserved for specific tasks or need to be dedicated for processes that are time-consuming or require heavy-handling.
+The ability to allocate specific nodes to handle specific types of jobs can have a positive impact on the overall cluster's performance and Quality of Service.
 For example, large sync processes can be executed by a specific node while CDC or Cross-instance searches are handled by another process.
 
 
@@ -18,16 +16,16 @@ For example, large sync processes can be executed by a specific node while CDC o
 <td style="width: 503px;">
 <p>The node's IP or DC name. For example:</p>
 <ul>
-<li>10.20.30.40&nbsp;</li>
-<li>DC-Europe&nbsp;</li>
+<li>10.20.30.40</li>
+<li>DC-Europe</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td style="width: 103px;">Logical Affinity</td>
 <td style="width: 503px;">
-<p>A role attached to a specific physical node which can have a&nbsp;dedicated a number of threads, lower or equal to the number of threads allocated to the node.</p>
-<p>A Logical ID can be allocated to the node by adding the requested ID to the <strong>node.id</strong> file in the <strong>fabric_home/config</strong> directory.&nbsp;Each node can have multiple logical names, and a logical node can be shared by multiple physical nodes.</p>
+<p>A role attached to a specific physical node which can have a dedicated a number of threads, lower or equal to the number of threads allocated to the node.</p>
+<p>A Logical ID can be allocated to the node by adding the requested ID to the <strong>node.id</strong> file in the <strong>fabric_home/config</strong> directory. Each node can have multiple logical names, and a logical node can be shared by multiple physical nodes.</p>
 </td>
 </tr>
 </tbody>
@@ -44,14 +42,14 @@ Let's assume the following configuration featuring a Fabric cluster comprised of
 ```Node 3: 10.0.0.30```
 
 
-The project consists of running a Fabric Job to monitor a Kafka messaging queue on which network QoS alarms are continuously published and streamed by a source external to the Fabric Cluster.
+The project consists of running a Fabric Job to monitor a Kafka messaging queue on which network QoS alarms are continuously published and streamed by a source external to the Fabric cluster.
 
-In turn each message, which can consists of hundreds of entries, are handled by the Fabric Cluster as follows:
+In turn each message, which can consist of hundreds of entries, is handled by the Fabric cluster as follows:
 
 - Updating the corresponding CommonDB table located on each Fabric node.
-- Saveing the data in Cassandra for backup purposes.
+- Saving the data in Cassandra for backup purposes.
 
-Assuming an incoming message rate of 3 messages per second and an average message size of 1MB, a specific node (let's say Node 1) must be allocated to handle this Job  since ongoing strong i/o capabilities for read/write operations in commonDB tables are essential.
+Assuming an incoming message rate of three messages per second and an average message size of 1MB, a specific node (let's say Node 1) must be allocated to handle this Job since ongoing strong i/o capabilities for read/write operations in commonDB tables are essential.
 
 Using the Fabric Node synchronization capability, all three nodes will be kept in-sync using the mechanism described in the [Fabric CommonDB](/articles/22_commonDB/01_fabric_commonDB_overview.md) article.
 
