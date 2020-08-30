@@ -2,7 +2,7 @@
 
 
 ## Affinity Overview
-The term Nodes Affinity refers to the ability of Fabric to initiate a node that sends and allocates a Job or a batch process to a specific handling node in a Fabric cluster. This is particularly useful when specific nodes are reserved for specific tasks or need to be dedicated for processes that are time-consuming or require heavy-handling.
+The term Nodes Affinity refers to Fabric's ability to initiate a node that sends and allocates a Job or a batch process to a specific handling node in a Fabric cluster. This is particularly useful when specific nodes are reserved for specific tasks or are dedicated for time-consuming and complex processes.
 The ability to allocate specific nodes to handle specific types of jobs can have a positive impact on the overall cluster's performance and Quality of Service.
 For example, large sync processes can be executed by a specific node while CDC or Cross-instance searches are handled by another process.
 
@@ -51,7 +51,7 @@ In turn each message, which can consist of hundreds of entries, is handled by th
 
 Assuming an incoming message rate of three messages per second and an average message size of 1MB, a specific node (let's say Node 1) must be allocated to handle this Job since ongoing strong i/o capabilities for read/write operations in commonDB tables are essential.
 
-Using the Fabric Node synchronization capability, all three nodes will be kept in-sync using the mechanism described in the [Fabric CommonDB](/articles/22_commonDB/01_fabric_commonDB_overview.md) article.
+Using the Fabric Node synchronization capability, all three nodes are kept in-sync using the mechanism described in the [Fabric CommonDB](/articles/22_commonDB/01_fabric_commonDB_overview.md) article.
 
 
 
