@@ -204,7 +204,7 @@ This module manages access rights, authentication and authorization of users, We
 
 
 ### 5.1.1 Fabric Tokens Encryption
-Fabric uses tokens to enable the execution of Web Services requests. Users can also define different roles and assign each role to a specific token. All tokens are encrypted before they are saved into Cassandra.
+Fabric uses tokens (secured or not) to enable the execution of Web Services requests. Users can also define different roles and assign each role to a specific token. All tokens are encrypted before they are saved into Cassandra.
 
 ### 5.1.2 JWT Tokens
 For additional security, Fabric can accept JWT (JSON Web Token) signed externally by a shared secret.

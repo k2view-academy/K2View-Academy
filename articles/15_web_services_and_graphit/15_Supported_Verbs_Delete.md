@@ -24,7 +24,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | VERSION_NO    | Version number                                | N             | V1.4            | Latest version |
 | LU Name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
 | Iid           | Instance Id                                   | Y             | 1               |                |
-| Token         | Token Name                                    | Y             |                 |                |
+| Token         | API Key                                       | Y             |                 |                |
 | Format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
 
 **Example:**
@@ -43,7 +43,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 ## DELETE Data From LU Table
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 | **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
@@ -55,7 +55,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | Iid           | Instance Id                                   | Y             | 1               |                |
 | TABLE_NAME    | Table name for data deletion                  | Y             | PAYMENT         |                |
 | WHERE CLAUSE  | Where clause statement                        | Y             | INVOICE_ID=1    |                |
-| token         | Token Name                                    | Y             |                 |                |
+| token         | API Key                                       | Y             |                 |                |
 | format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
 
 **Example:**
@@ -72,7 +72,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 ##  Delete Data From Common Table
 
-<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;?&lt;WHERE CLAUSE&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</p></code>
+<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;?&lt;WHERE CLAUSE&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</p></code>
 
 | **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
 | ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
@@ -82,7 +82,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | COMMON            | Specify that scope is common | Y             | COMMON        |             |
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
 | WHERE CLAUSE      | Where clause statement       | Y             | CITY_ID=1     |             |
-| token             | Token Name                   | Y             |               |             |
+| token             | API Key                      | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
 **Example:**

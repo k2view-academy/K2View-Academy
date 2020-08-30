@@ -75,12 +75,13 @@ The following tables discuss how user access control is managed using Fabric com
 <p><h4>CREATE TOKEN</p>
 </td>
 <td width="700pxl">
-<p><strong>Description</strong>: Create a new token.</p>
+<p><strong>Description</strong>: Create a new API Key.</p>
 <p><strong>Usage</strong>:</p>
-<p>CREATE TOKEN &lt;'token_name'&gt;</p>
+<p>CREATE TOKEN &lt;'token_name'&gt; [SECURED]</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li>&lt;'token_name'&gt; &ndash; mandatory, token name.</li>
+<li>&lt;'token_name'&gt; &ndash; mandatory, API Key name.</li>
+<li>SECURED &ndash; optional in case of secured API Key.</li>    
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
@@ -94,6 +95,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -117,7 +119,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 <tr>
 <td width="400pxl">
-<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;TOKEN&gt;</p>
+<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API Key&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a token.</p>
@@ -128,6 +130,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 </tbody>
 </table>
+
 
 ## GRANT Command
 
@@ -366,9 +369,9 @@ Below is a list of GRANT WS_NAME command parameters:
 
 #### Web Services Authorization
 
-The [Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is done using the **token**:
-  - Project Web Services: give permission to the **role** on the Web Service or all Web Services,  and assign the token to the role.
-  - Product Web Services: assign the token to the user. The permission to the Product Web Services are defined by the combination of the token assigned to the user and the permissions of the roles, assigned to the user. 
+The [Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is done using the **API Key**:
+  - Project Web Services: give permission to the **role** on the Web Service or all Web Services,  and assign the API Key to the role.
+  - Product Web Services: assign the API Key to the user. The permission to the Product Web Services are defined by the combination of the API Key assigned to the user and the permissions of the roles, assigned to the user. 
 
 **Example**
 <pre><code>
@@ -379,11 +382,11 @@ The [Web Service](/articles/15_web_services/01_web_services_overview.md) authori
     assign role 'readonly' to user 'test_read';
     create token 'test_read_token' user 'test_read';
 </code></pre>
-    
+
 When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fabric throws the following error:
   "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]"
 
-    
+​    
 
 ## Additional Commands
 
@@ -415,7 +418,7 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fa
 </td>
 <td width="700pxl">
 <p><strong>Description</strong>: Drop a token from Fabric.</p>
-<p><strong>Usage</strong>: DROP TOKEN &lt;token&gt;</p>
+<p><strong>Usage</strong>: DROP TOKEN &lt;API Key&gt;</p>
 <p><strong>Example: </strong>drop token test_token;</p>
 </td>
 </tr>
@@ -463,6 +466,7 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fa
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/01_fabric_credentials_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/03_fabric_credentials_backup.md)

@@ -12,7 +12,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 
 ##  Put Data Into LU Table
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 | **Component** | **Description**                               | **Mandatory** | **Example**      | **Default**    |
 | ------------- | --------------------------------------------- | ------------- | ---------------- | -------------- |
@@ -43,7 +43,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 
 ##  Put Data Into Common Table
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 | **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
 | ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
@@ -52,7 +52,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 | api               | API                          | Y             | api           |             |
 | COMMON            | Specify that scope is common | Y             | COMMON        |             |
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
-| token             | Token name                   | Y             |               |             |
+| token             | API Key                      | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
 **Example:**
@@ -73,7 +73,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 
 ##  Put Custom Web Service 
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{&lt;Customized Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{&lt;Customized Web-Service name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 Parameters should be populated on the body in the following structure:
 ```
@@ -97,8 +97,8 @@ Parameters should be populated on the body in the following structure:
 
 | **Parameter**             | **Mandatory** | **Value**                                                   |
 | ------------------------- | ------------- | ----------------------------------------------------------- |
-| Token                     | Y             | Token name                                                  |
-| Accept                    | Y             | Json/XML/RAW/YAML/CSV                                       |
+| Token                     | Y             | API Key                                                     |
+| Accept                    | Y             | Json/XML/CSV                                                |
 | Any additional parameters | N             | Parameter=value&     Can be provided on both URL and header |
 
 **Example:**

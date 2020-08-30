@@ -13,9 +13,9 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1.png" alt="drawing"/> 
- 
+
  The following are the Web Services properties:
- 
+
  <table width="900pxl">
 <tbody>
 <tr>
@@ -45,7 +45,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <tr>
 <td width="200pxl" valign="top"><p>Return Type</p></td>
 <td width="700pxl" valign="top">
-<p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long or Object. Output values in the list can be overridden with new values.&nbsp;</p>
+<p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long, Map, List, Customized Class or Object. Output values in the list can be overridden with new values.&nbsp; Fabric knows how to serialize complex structures automatically when sent as json in the request body. </p>
 </td>
 </tr>
 <tr>
@@ -103,7 +103,8 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
 <p>Additional formats: XML and CSV.
- 
+
+
  To select the format/s, click the dropdown menu and enable them.</p>
 </td>
 </tr>
@@ -120,7 +121,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </tr>
 </tbody>
 </table>
- 
+
 ## How Do I Generate HTML format or legacy JSON/XML ? 
 
 In order to generate these types of formats, open the java logic file and add the following tag before the public class in which are encapsulated all the Web-Services defined in the specific Logic Category:

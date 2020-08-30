@@ -310,6 +310,22 @@ Fabric's main configuration file which holds different sections of parameters wh
 <p>&nbsp;</p>
 </td>
 </tr>
+                               <tr>
+<td width="250pxl" valign="top">
+<p>Consistency Level</p>
+</td>
+<td width="200pxl" valign="top">
+<ul>
+<li>default_session</li>
+</ul>
+</td>
+<td width="450pxl" valign="top">
+<ul>
+<li>CONSISTENCY_LEVEL - default LOCAL_QUORUM - used internally for fabric commands such as delete instance</li>
+<li>SERIAL_CONSISTENCY_LEVEL - default LOCAL_SERIAL - used internally for fabric jobs</li>                            
+</ul>                               
+</td>
+</tr>
 </tbody>
 </table>
 <p>&nbsp;</p>

@@ -116,7 +116,7 @@ Both the wsCustomerInfo and wsCustomerInfo2 Web Services in the examples share t
 
 - To invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
-### Example of a complex input structure
+### Example of a complex Java input structure
 A complex JSON format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
 
 For example:
@@ -141,6 +141,69 @@ Web Service inside logic
      String company = m.get("company"); // will return Telco1
 ```
 
+### Example of a complex Customized input structure
+
+Same as the example above, however with a customized Java classes.
+
+For example:
+
+Requested body 
+
+```
+{
+  "person": {
+    "address": [
+      {
+        "number": 10,
+        "city": "Net York",
+        "street": "5th Ave."
+      }
+    ],
+    "name": "Lion",
+    "id": "1234",
+    "age": 45
+  }
+}
+```
+
+Web Service markup
+
+```
+static class Person {
+   String name;
+   String id;
+   int age;
+   List<Address> address;
+}
+
+static class Address {
+   String city;
+   String street;
+   int number;
+}
+
+	@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = 					false, produce = {Produce.XML, Produce.JSON})
+	public static Address CustomClassExample(Person person) throws Exception {
+```
+
+Web Service inside logic 
+
+```
+     return person.address.get(0);
+```
+
+Web Service response
+
+```
+{
+  "city": "Net York",
+  "street": "5th Ave.",
+  "number": 10
+}
+```
+
+
+### 
 
 ### Example of a complex TDM Web Service 
 

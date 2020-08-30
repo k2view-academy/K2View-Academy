@@ -1,4 +1,4 @@
-# Post Verb
+Post Verb
 
 Use POST APIs to create **new subordinate resources**. For example, a file that is subordinate to the directory containing it, or a row  that is subordinate to a database table. 
 
@@ -15,18 +15,18 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 ## Post Data Into LU Table
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;common table name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;common table name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-| **Component**   | **Description**                                    | **Mandatory** | **Example**          | **Default**        |
-| --------------- | -------------------------------------------------- | ------------- | -------------------- | ------------------ |
-| Domain name     | Domain name                                        | Y             | 10.21.1.69           |                    |
-| PORT            | PORT                                               | Y             | 3213                 |                    |
-| api             | API                                                | Y             | api                  |                    |
-| VERSION_NO      | Version number                                     | N             | V1.4                 | Latest version     |
-| LU Name         | Logical unit name or COMMON for common  tables     | Y             | CUSTOMER  COMMON     |                    |
-| Iid             | Instance ID                                        | Y             | 1                    |                    |
-| token           | Token name                                         | Y             |                      |                    |
-| format          | Response format                                    | Y             | JSON/XML/YAML        | JSON               |
+| **Component** | **Description**                                | **Mandatory** | **Example**      | **Default**    |
+| ------------- | ---------------------------------------------- | ------------- | ---------------- | -------------- |
+| Domain name   | Domain name                                    | Y             | 10.21.1.69       |                |
+| PORT          | PORT                                           | Y             | 3213             |                |
+| api           | API                                            | Y             | api              |                |
+| VERSION_NO    | Version number                                 | N             | V1.4             | Latest version |
+| LU Name       | Logical unit name or COMMON for common  tables | Y             | CUSTOMER  COMMON |                |
+| Iid           | Instance ID                                    | Y             | 1                |                |
+| token         | API Key                                        | Y             |                  |                |
+| format        | Response format                                | Y             | JSON/XML/YAML    | JSON           |
 
  **Example:**
 
@@ -43,17 +43,13 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 ##  Post Data Into Common Table
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-| **Component**     | **Description**                                  | **Mandatory** | **Example**          | **Default**        |
-| ----------------- | ------------------------------------------------ | ------------- | -------------------- | ------------------ |
-| Domain name       | Domain name                                      | Y             | 10.21.1.69           |                    |
-| PORT              | PORT                                             | Y             | 3213                 |                    |
-| api               | API                                              | Y             | api                  |                    |
-| COMMON            | Specify that scope is common                     | Y             | COMMON               |                    |
-| COMMON TABLE NAME | Common table name                                | N             | ADDRESSES            |                    |
-| token             | Token name                                       | Y             |                      |                    |
-| format            | Response format                                  | Y             | JSON/XML/YAML        | JSON               |
+| **Component** | **Description** | **Mandatory** | **Example** | **Default** |
+| ------------- | --------------- | ------------- | ----------- | ----------- |
+| Domain name   | Domain name     | Y             | 10.21.1.69  |             |
+| PORT          | PORT            | Y             | 3213        |             |
+| api           | API             | Y             | api         |             |
 
 
 **Example:**
@@ -73,9 +69,104 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
   ]
 }
 ```
+##  Post Authenticate
+
+* <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/authenticate
+
+  Generate a JWT digital signed cookie for Web-Services calls on the same session. Next Fabric Web-services calls will not require a token as a parameter. Located under fabric category.
+
+| **Component** | **Description** | **Mandatory** | **Example** | **Default** |
+| ------------- | --------------- | ------------- | ----------- | ----------- |
+| Domain name   | Domain name     | Y             | 10.21.1.69  |             |
+| PORT          | PORT            | Y             | 3213        |             |
+| api           | API             | Y             | api         |             |
+
+
+**Example:**
+
+`http://10.21.1.69:3213/api/v1.0/authenticate
+
+- Authenticate by apikey (token)
+
+  Request Body
+
+```
+{
+  "apikey": "string"
+}
+```
+
+- Authenticate by user/password
+
+  Request Body
+
+```
+{
+  "username": "string",
+  "password": "string",
+}
+```
+
+##  Post fabric-commands
+
+* <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/fabric-commands
+
+  Run fabric command or a set of fabric commands. Located under fabric category.
+
+| **Component** | **Description** | **Mandatory** | **Example** | **Default** |
+| ------------- | --------------- | ------------- | ----------- | ----------- |
+| Domain name   | Domain name     | Y             | 10.21.1.69  |             |
+| PORT          | PORT            | Y             | 3213        |             |
+| api           | API             | Y             | api         |             |
+
+
+**Example:**
+
+`http://10.21.1.69:3213/api/v1.0/fabric-commands
+
+Request Body
+
+```
+{
+    "commands": [
+        {
+            "command":"list ?",
+            "params":['lut']
+
+        }
+    ]
+ }
+```
+
+Response Body
+
+```
+{
+  "results": [
+    {
+      "resultSet": {
+        "columns": [
+          "LU_NAME"
+        ],
+        "rows": [
+          [
+            "Customer"
+          ],
+          [
+            "CRM"
+          ]
+        ]
+      }
+    }
+  ]
+}
+```
+
+##  
+
 ##  Post Custom Web Service 
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 Parameters should be populated in the body in the following structure:
 
@@ -96,11 +187,11 @@ Parameters should be populated in the body in the following structure:
 
 ##  Request Header
 
-| **Parameter**              | **Mandatory** | **Value**                                                                |
-| -------------------------- | ------------- | ------------------------------------------------------------------------ |
-| Token                      | Y             | Token name                                                               |
-| Accept                     | Y             | Json/XML/RAW/YAML/CSV                                                    |
-| Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header             |
+| **Parameter**              | **Mandatory** | **Value**                                                    |
+| -------------------------- | ------------- | ------------------------------------------------------------ |
+| Token                      | Y             | API Key                                                      |
+| Accept                     | Y             | Json/XML/RAW/YAML/CSV                                        |
+| Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header |
 
 **Example:**
 

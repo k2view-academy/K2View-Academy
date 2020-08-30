@@ -34,11 +34,17 @@ A RESTful API should be stateless, whereby the request's authentication does not
 By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. It is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
 token can be provided as a part of the URL as a parameter, or in the header request.
 
+Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
+
+* Secured mode, using a digital signature on the client side, the secret key is shared only once when API Key is created.
+
+* Unsecured mode signed by Fabric. When using this option, it is possible to call Fabric product Web-Service,  called authenticate, with a request body apikey or username/password. All remaining Fabric Web-services calls on the same session should not use the token parameter( including Swagger client) as client is already authenticated.
+
 To invoke a Web Service call, do the following:
 
-1. Create a **Token** and assign it to the user. If a built-in product Web Service is required, define the **Token** as **ABC** and the **User** as **Admin**.
+1. Create a **API Key** . (can be defined as SECURED or not)
 2. Create a **Role**, click **CREATE ROLE** > [**role_name**] > **Description** [**Role Description**].
-3. Assign the **Role** to a **Token**, click **ASSIGN ROLE** > [**ROLE]> to Token <'TOKEN'>**.
+3. Assign the **Role** to an **API Key**, click **ASSIGN ROLE** > [**ROLE]> to API Key<'API Key'>**.
 4. Grant **Privilege's** to the role, click **GRANT** > **Operation> ON <RESOURCE> TO > ROLE**.
 
 [Click for more information about Web Services Authorization.](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization)

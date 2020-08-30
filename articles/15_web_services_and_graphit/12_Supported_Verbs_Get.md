@@ -13,8 +13,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Data
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/[[TABLE_NAME]?fields=VALUE1,VALUE2&amp;where=WHERE STATEMENT]] query=QUERY STATMENT]&amp;token=[TOKEN NAME]&amp;[format=json/xml]&amp;SET={mode,value}</code></p>
-
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/[[TABLE_NAME]?fields=VALUE1,VALUE2&amp;where=WHERE STATEMENT]] query=QUERY STATMENT]&amp;token=[API Key]&amp;[format=json/xml]&amp;SET={mode,value}</code></p>
 
  <table width="900pxl">
 <tbody>
@@ -213,7 +212,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>token</p>
 </td>
 <td width="250pxl" valign="top" >
-<p>Token name</p>
+<p>API Key</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
@@ -344,7 +343,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get LU Schema (Metadata)
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;?token=&lt;TONEN NAME&gt;&amp;[format=json/xml/yaml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml/yaml]</code></p>
 
 <table width="900pxl">
 <tbody>
@@ -464,7 +463,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Token</p>
 </td>
 <td width="250pxl" valign="top" >
-<p>Token name</p>
+<p>API Key</p>
 </td>
 <td width="100pxl" valign="top" >
 <p>Y</p>
@@ -501,7 +500,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Schema (Metadata)
 
-`http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[TOKEN NAME]&[format=json/xml/yaml]`
+`http://[Domain name]:[PORT]/api/[VERSION_NO]/COMMON/[table name]?token=[API Key]&[format=json/xml/yaml]`
 
 <table width="900pxl">
 <tbody>
@@ -606,7 +605,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Token</p>
 </td>
 <td width="250pxl" valign="top">
-<p>Token name</p>
+<p>API Key</p>
 </td>
 <td width="100pxl" valign="top">
 <p>Y</p>
@@ -643,7 +642,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Common Table
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of fields separated by comma&amp;where=WHERE STATEMENT]&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/common/[COMMON TABLE NAME?fields=list of fields separated by comma&amp;where=WHERE STATEMENT]&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -778,7 +777,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Token</p>
 </td>
 <td valign="top" width="250pxl">
-<p>Token name</p>
+<p>API Key</p>
 </td>
 <td valign="top" width="100pxl">
 <p>Y</p>
@@ -819,7 +818,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Based On Graphit File
 
-<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;Graphit file name&gt;/ PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml/yaml]</code></p>
+<p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;Graphit file name&gt;/ PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;API Key&gt;&amp;[format=json/xml/yaml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -909,7 +908,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Token</p>
 </td>
 <td valign="top" width="250pxl">
-<p>Token name</p>
+<p>API Key</p>
 </td>
 <td valign="top" width="100pxl">
 <p>Y</p>
@@ -980,7 +979,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # Get Custom Web Service
 
-<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</code></p>
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{customized Web-Service name}/PARAM1 VALUE1/PARAM2 VALUE2?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
 <table width="900pxl">
 <thead>
@@ -1147,7 +1146,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td valign="top" width="500pxl">
-<p>Token name</p>
+<p>API Key</p>
 </td>
 </tr>
 <tr>

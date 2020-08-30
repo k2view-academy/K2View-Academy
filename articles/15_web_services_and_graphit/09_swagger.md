@@ -15,7 +15,7 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
    Or, 
    
 2. Go to **User Preferences** > **Server Configuration** and do the following:
-    
+   
     a. Set the **Web Service Invoke Path Template** to **static/swaggerUI/dist/index.html#/<CATEGORY>/<WS_VERB>_<WS_PATH>**.  
 
     b. Go the the **Project Tree**, right click the **Web Service** and then click **Invoke Web Service**.
@@ -41,6 +41,8 @@ The relevant invoked Web Service is expended and points to the correct verb.
 
 4. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
+   In order to skip this step for the remaining Web-Services calls, use the authenticate product Web-Service, provide as input on the body request the apikey or username/password and afterwards you will be able to skip the Authorize step as client is already authorized.
+
 5. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-3.png" alt="drawing"/>
@@ -60,7 +62,7 @@ Fabric Web Services are displayed in Swagger in categories and in alphabetical o
    * LU - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
    
    * Project defined categories for Web Services.
-   
+
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/10_legacy_annotation.md)
- 
+
 
