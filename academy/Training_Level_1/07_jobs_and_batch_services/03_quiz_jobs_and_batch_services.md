@@ -215,7 +215,24 @@ D: Link 2 or more jobs together to optimize execution
 
 E: Answer A & B
 
-(**Solution 12: E**)
+(**Solution 13: E**)
+
+
+#### Question 14: Batch,Jobs & Nodes
+
+If one of the nodes of a given Fabric Cluster is down, Jobs with affinity allocated to this node will:
+
+A: Need to be restarted.
+
+B: Be automatically handled by a different node since the failing node will be deemed unavailable by the other Fabric sessions
+
+C: Need to be re-defined alltogether.
+
+D: No such a thing, Fabric nodes never fail
+
+
+(**Solution 14: B**)
+
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)
