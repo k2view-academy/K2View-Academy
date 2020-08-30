@@ -33,15 +33,12 @@ Once the job is triggered, the following Java user code writes a line into a new
 
 Note that the loop control parameter (variable *test*) is defined as an input parameter of the User Job function, and that a second variable *inSecTime* is also defined as an output parameter. As such, its value is recorded in the *argument* field of the k2_jobs table in the k2system keyspace.
 
- 
-
-### Step 4. 
 Name and save the **function**.
 
-   <img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
+<img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
    
 
-### Step 5. 
+### Step 4. 
 Go to the **Project Tree** > your **LU** > **Jobs**.
 
 <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
@@ -110,6 +107,8 @@ In the **Job table**, enter the values pertaining to the Job.
 </table>
 <p class="unchanged rich-diff-level-one">&nbsp;</p>
 
+### Step 5. 
+Right-click on the **LU** in the **Project Tree**, deploy and check for the file in the **Fabric Home directory**.
 
 
 
