@@ -16,12 +16,8 @@
 	<li><a href="/articles/20_jobs_and_batch_services/11_batch_process_overview.md">Batch Processes</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/12_batch_sync_commands.md">Batch Synchronization</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/13_migrate_commands.md">Migrate Command</a></li>
-	<li><a href="/articles/20_jobs_and_batch_services/14_batch_broadway_commands.md">Broadway flows & Batches</a></li>
-	<li><a href="/articles/20_jobs_and_batch_services/15_batch_CDC_commands.md">CDC Republish & Batches</a></li>
-	<li><a href="/articles/20_jobs_and_batch_services/16_batch_process_flow.md">Batch Processes Flows</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/14_instances_groups.md">Instance Groups</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md">Broadway flows & Batches</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md">CDC Republish & Batches</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/17_batch_process_flow.md">Batch Processes Flows</a></li>
 </ul>
-
-
-
-
-
