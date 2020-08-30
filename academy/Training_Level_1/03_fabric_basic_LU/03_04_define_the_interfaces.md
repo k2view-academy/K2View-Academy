@@ -54,7 +54,7 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 
 <!--Once loaded to Git: 11_1 Query Builder Overview-->
 
-- [Q- uery_Builder_Window]()
+- [Query_Builder_Window]()
 
 <!--Once loaded to Git: 11_2 Query_Builder_Window-->
 
