@@ -1,7 +1,7 @@
 # Table Population Overview
 
 ### What Is a Table Population? 
-A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the Source Object to the target LU table. Source data can be mapped directly to LU table columns and Fabric transformation objects like [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU table. 
+A **Table Population** is a component that defines and executes the mapping and data transformation rules from a data source, like a DB table or Input file, into a target [Logical Unit (LU) table](/articles/06_LU_tables/01_LU_tables_overview.md). The population acts as a map that renders a graphical display of the transformation’s business logic from the source object to the target LU table. Source data can be mapped directly to LU table columns and Fabric transformation objects like [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md), [Functions](/articles/07_table_population/08_project_functions.md) or [Globals](/articles/08_globals/01_globals_overview.md), and can be added to define the mapping logic into the LU table. 
 
 Each table can have one or several table populations that can be executed simultaneously or according to a predefined [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md).
 Each table population extracts data from a data source, transforms it when needed and then populates the data into an LU table. Table populations can be categorized as follows:
@@ -145,7 +145,7 @@ The **Expand / Collapse** and **Refresh** links are displayed above the **Object
 </tbody>
 </table>
 
-[Click for more information about Table Population Diagram Outline.](/articles/07_table_population/12_table_population_diagram_outline.md)
+[Click for more information about the Table Population Diagram Outline.](/articles/07_table_population/12_table_population_diagram_outline.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/02_source_object_types.md)
 
