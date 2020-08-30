@@ -130,12 +130,12 @@ Requested body
 }
 ```
 Web Service markup
-```
+```java
 public static String wsExample(List<Map<String,String>> ID, String parent_customer_id, String company){
 }
 ```
 Web Service inside logic 
-```
+```java
      Map<String,String> m = ID.get(0);
      String id = m.get("id"); // will return 78999
      String company = m.get("company"); // will return Telco1
@@ -168,7 +168,7 @@ Requested body
 
 Web Service markup
 
-```
+```java
 static class Person {
    String name;
    String id;
@@ -188,7 +188,7 @@ static class Address {
 
 Web Service inside logic 
 
-```
+```java
      return person.address.get(0);
 ```
 
