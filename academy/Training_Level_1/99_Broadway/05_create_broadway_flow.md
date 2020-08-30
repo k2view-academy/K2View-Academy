@@ -50,8 +50,9 @@ Group By CASES.STATUS
 
    - Select **CRM_DB** as the **Interface**.
 - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter: 
-   
-![DbCommand-Example](/images/MyFirstFlow_Example_Stage1_DbCommand.png)
+  
+
+![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1_DbCommand.png)
 
 #### Step 3 - Read the Customer's List and Create a File
 1. The SQL query, executed by the **DbCommand**, returns several records. The next Stages run a loop on the list of  the selected records. For each selected record you need to:
@@ -84,7 +85,7 @@ Group By CASES.STATUS
    - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
    - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
-    ![FileWrite](/images/MyFirstFlow_Example_Stage3_FileWrite.png) 
+    ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3_FileWrite.png) 
 
    Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
@@ -103,7 +104,7 @@ Group By CASES.STATUS
 
 12. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
 
-          
+    ​      
 
 #### Step 4 - Flow Execution and Debug
 
@@ -115,7 +116,7 @@ Group By CASES.STATUS
 
    - Click the red port next to the **[result]** output of the **DbCommand**.  The **Compare Schema** window is opened. Click the UPDATE to update the schema.
 
-       ![Update Schema](/images/MyFirstFlow_DbCommand_Update_Schema.png) 
+       ![Update Schema](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_DbCommand_Update_Schema.png) 
 
    - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the [Data Inspection]() and display the Schema on the left and the data values on the right.
 
@@ -125,7 +126,7 @@ Group By CASES.STATUS
 
    - Click each one of the debug values (marked by blue) to open the **Data Viewer** window for the selected parameter. See example below:
 
-     ![image](images/MyFirstFlow_Example_debug.png)
+     ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_debug.png)
 
      
 
