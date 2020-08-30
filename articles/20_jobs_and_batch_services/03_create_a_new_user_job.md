@@ -107,8 +107,11 @@ In the **Job table**, enter the values pertaining to the Job.
 </table>
 <p class="unchanged rich-diff-level-one">&nbsp;</p>
 
+
+
 ### Step 5. 
 Right-click on the **LU** in the **Project Tree**, deploy and check for the file in the **Fabric Home directory**.
+
 
 
 
