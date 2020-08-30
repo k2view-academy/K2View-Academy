@@ -30,7 +30,7 @@ In the Step, you check the number of records: check if the number of records >= 
 
 1. Add a new Stage to the flow.
 
-2. Click ![three dots](/images/three_dots_icon.png) in the new Stage and select  **Stage Condition** option. A window opens where you can select the required Actor and add it to the Stage.
+2. Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) in the new Stage and select  **Stage Condition** option. A window opens where you can select the required Actor and add it to the Stage.
 
 3. Select the **GreaterThanEquals** Actor and click  **SUBMIT**:
 
@@ -44,9 +44,9 @@ In the Step, you check the number of records: check if the number of records >= 
 
 6. Now you need to split **Stage 4** into two forks: one fork to be executed if the **GreaterThanEquals** Actor returns **true** and another fork if the **GreaterThanEquals** returns **false**:
 
-      - Click ![three dots](/images/three_dots_icon.png) in **Stage 4** and select **Split**. 
+      - Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) in **Stage 4** and select **Split**. 
       - A new **Stage 5** is created in the same level of **Stage 4**.  
-      - Click ![three dots](images/three_dots_icon.png) in the newly created **Stage 5** and select **Else**.
+      - Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) in the newly created **Stage 5** and select **Else**.
 
 #### Step 4 - Add the Next Stages
 
@@ -66,11 +66,11 @@ In the Step, you check the number of records: check if the number of records >= 
    
      Now you have a condition in your flow:
    
-     ![image](/images/MyFirstFlow_including_condition.png)
+     ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_including_condition.png)
 
 #### Step 5 - Debug the Updated Flow
 
-1. Click ![Debug Step](/images/debug_step_icon.png) to execute the flow steps in Debug mode:
+1. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the flow steps in Debug mode:
 
    <ul>
    <pre><code>

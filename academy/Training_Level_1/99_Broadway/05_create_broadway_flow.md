@@ -50,8 +50,9 @@ Group By CASES.STATUS
 
    - Select **CRM_DB** as the **Interface**.
 - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter: 
-   
-![DbCommand-Example](/images/MyFirstFlow_Example_Stage1_DbCommand.png)
+  
+
+![DbCommand-Example](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage1_DbCommand.png)
 
 #### Step 3 - Read the Customer's List and Create a File
 1. The SQL query, executed by the **DbCommand**, returns several records. The next Stages run a loop on the list of  the selected records. For each selected record you need to:
@@ -61,7 +62,7 @@ Group By CASES.STATUS
 
    ##### Building a JSON Object for Each Selected Record
 
-2. Click ![plus](/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer record.
+2. Click ![plus](/academy/Training_Level_1/99_Broadway/images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer record.
 
 3. Add a **JsonStringify** Actor to Stage 2.
 
@@ -84,7 +85,7 @@ Group By CASES.STATUS
    - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
    - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
-    ![FileWrite](/images/MyFirstFlow_Example_Stage3_FileWrite.png) 
+    ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3_FileWrite.png) 
 
    Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
@@ -97,13 +98,13 @@ Group By CASES.STATUS
 
 11. Close the loop after executing Stage 3: 
 
-      - Click ![three dots](/images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
+      - Click ![three dots](/academy/Training_Level_1/99_Broadway/images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
         Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
 12. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
 
-          
+    ​      
 
 #### Step 4 - Flow Execution and Debug
 
@@ -111,21 +112,21 @@ Group By CASES.STATUS
 
 1. The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value. To update the output parameter of the **DbCommand**, do the following:
 
-   - Run the flow in a debug mode when the debug is set to ON ![debug on](/images/debug_on.png).
+   - Run the flow in a debug mode when the debug is set to ON ![debug on](/academy/Training_Level_1/99_Broadway/images/debug_on.png).
 
    - Click the red port next to the **[result]** output of the **DbCommand**.  The **Compare Schema** window is opened. Click the UPDATE to update the schema.
 
-       ![Update Schema](/images/MyFirstFlow_DbCommand_Update_Schema.png) 
+       ![Update Schema](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_DbCommand_Update_Schema.png) 
 
-   - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the [Data Inspection]() and display the Schema on the left and the data values on the right.
+   - Click ![image](/academy/Training_Level_1/99_Broadway/images/red_cross.png) adjacent to the Actor's output argument to open the [Data Inspection]() and display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1 ** and run again the debug. Click ![Debug Step](/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
+   - Add a  **Breakpoint** to **Stage 1 ** and run again the debug. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
    - Now you see the input and output values are displayed for each iteration in the flow.
 
    - Click each one of the debug values (marked by blue) to open the **Data Viewer** window for the selected parameter. See example below:
 
-     ![image](images/MyFirstFlow_Example_debug.png)
+     ![image](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_debug.png)
 
      
 
