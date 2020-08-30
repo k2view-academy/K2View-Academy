@@ -101,6 +101,7 @@ In the **Job table**, enter the values pertaining to the Job.
 <td style="width: 300px;"><strong>Input parameters</strong></td>
 <td style="width: 600px;">
 <p class="unchanged rich-diff-level-one">Where the values of the input parameters are initialized. In this case the variable *test* is set to 0</p>
+<p class="unchanged rich-diff-level-one">Its value is recorded in the argument field of the k2_jobs table in the k2system keyspace.</p>
 </td>
 </tr>
 	
