@@ -259,7 +259,7 @@
  
         
 <details>
-<summary markdown="span"><strong>Broadway<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <ul>
   <li><a href="/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md">Overview</a></li>
   <li><a href="/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md">Jobs Lifecycle & Flows</a></li>
