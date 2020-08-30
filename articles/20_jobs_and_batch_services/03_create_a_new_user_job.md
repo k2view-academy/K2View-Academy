@@ -101,12 +101,6 @@ In the **Job table**, enter the values pertaining to the Job.
 <td style="width: 300px;"><strong>Input parameters</strong></td>
 <td style="width: 600px;">
 <p class="unchanged rich-diff-level-one">Where the values of the input parameters are initialized. In this case the variable *test* is set to 0</p>
-<ul class="unchanged rich-diff-level-one">
-<li class="unchanged">IP address of a Fabric node.</li>
-<li class="unchanged">Data Center (DC) Name.</li>
-<li class="unchanged">Node identifier, a logical identifier of Fabric node or a group of several Fabric nodes.</li>
-</ul>
-<p class="unchanged rich-diff-level-one">Example:&nbsp;<code>AFFINITY=&rsquo;DC1&rsquo;, &rsquo;10.21.1.121&rsquo;</code></p>
 </td>
 </tr>
 	
