@@ -201,5 +201,22 @@ D: The Batch command does not support SQL statements. Instance Groups must be de
 (**Solution 12: A**)
 
 
+#### Question 13: Batch,Jobs & Nodes
+
+Affinity is a Fabric parameter used to:
+
+A: Allocate a specific node to a given Job and is set during the Job's definition phase
+
+B: Allocate a specific batch process to a job process using the Job Allocation parameter.
+
+C: Allocate a schedule to a job or batch process
+
+D: Link 2 or more jobs together to optimize execution
+
+E: Answer A & B
+
+(**Solution 12: E**)
+
+
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)
 
