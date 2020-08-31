@@ -391,7 +391,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   - Set [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md).
   - Set [sync timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
-  - Set [always_sync]()
+  - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync)
 
 - Set the active environment.
 
