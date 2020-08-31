@@ -45,7 +45,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <tr>
 <td width="200pxl" valign="top"><p>Return Type</p></td>
 <td width="700pxl" valign="top">
-<p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long, Map, List, Customized Class or Object. Output values in the list can be overridden with new values.&nbsp; Fabric knows how to serialize complex structures automatically when sent as json in the request body. </p>
+<p>Type of Output value returned from the Web Service that is displayed in a dropdown list. For example, String, Long, Map, List, Customized Class or Object. Output values in the list can be overridden with new values.&nbsp; Fabric knows how to serialize complex structures automatically when sent as JSON in the request body. </p>
 </td>
 </tr>
 <tr>
@@ -124,28 +124,29 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 
 ## How Do I Generate HTML format or legacy JSON/XML ? 
 
-In order to generate these types of formats, open the java logic file and add the following tag before the public class in which are encapsulated all the Web-Services defined in the specific Logic Category:
+To generate these formats, open the Java Logic file and add the following tag above the public class which encapsulates the Web Services defined in the specific Logic category:
+
 ```java 
 @legacy
 public class Logic extends WebServiceUserCode {...}
 ```
 
-Then add the "UNKNOWN" value to the Produce fonction call at the line where the Web Service is defined: 
+Then add the UNKNOWN value to the Produce function call in the line where the Web Service is defined: 
 
 ```java 
 @webService(path = "test/getCustomerInfo", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, produce = {Produce.UNKNOWN})
 ```
 
-Modify the properties panel of the Web Service as shown below:
+Modify the Properties panel of the Web Service as shown below:
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce1.png">
 
-After deploying the Web Service, call it from the browser, using the appropriate token, parameter and format.
+After deploying the Web Service, call it from the browser using the appropriate token, parameter and format.
 
 Example with HTML format:
 ```html 
 http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
 ```
-The response will appear in the body of the browser's web page:
+The response is displayed in the body of the browser's web page:
 <img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce2.PNG">
 
 
