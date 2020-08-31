@@ -86,7 +86,85 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 
 Click for more information about the Studio [Debug](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) and [Log](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) Capabilities.
 
+### Fabric Studio Debug Panel
+
+Fabric Studio has the debug panel in the left upper side of the window:
+
+![debug toolbar](images/fabric_studio_debug_panel.png)
+
+ The debug panel enables an easy access to the local Fabric debut server, local Cassandra debug server, and the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
+
+<table>
+<tbody>
+<tr>
+<td colspan="2" width="450pxl">
+<p><Strong>Fabric</Strong></p>
+</td>
+</tr>    
+<tr>
+<td width="60pxl"><p>
+    <img src="images/deploy_LUs_to_debug_server.png" alt="" /></p></td>
+<td width="390pxl">
+<p>Deploy all updated LUs to Fabric debug server</p>
+</td>
+</tr>
+<tr>
+<td width="60pxl"><p>
+    <img src="images/open_debug_server_or_cassandra.png" alt="" /></p></td>
+<td width="390pxl">
+<p>Open Fabric console. Opens the console of the debug Fabric server with the appropriate port for each Fabric project.</p>
+</td>
+</tr>
+<tr>
+<td width="60pxl"><p>
+    <img src="images/open_web_admin.png" alt="" /></p></td>
+<td width="390pxl">
+<p>Open the Fabric Web Admin on the localhost.</p>
+</td>
+</tr>
+<tr>
+<td width="60pxl">
+<p><img src="images/start_fabric.png" alt="" /></p>
+<p><img src="images/stop_cassandra_or_fabric.png" alt="" /></p>
+</td>
+<td width="390pxl">
+<p>Start and stop Fabric debug console.</p>
+</td>
+</tr>
+<tr>
+<td width="60pxl"><p>
+    <img src="images/run_reset_drop.png" alt="" /></p></td>
+<td width="390pxl">
+<p>Run <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset Drop</a> on the Fabric debug server.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="450pxl">
+<p><Strong>Cassandra</Strong></p>
+</td>
+</tr>    
+<tr>    
+<tr>
+<td width="60pxl"><p>
+    <img src="images/open_debug_server_or_cassandra.png" alt="" /></p></td>
+<td width="390pxl">
+<p>Open Cassandra console for <a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md#cassandra-useful-commands">CQLSH commands.</a></p>
+</td>
+<tr>
+<td width="60pxl">
+<p><img src="images/start_fabric.png" alt="" /></p>
+<p><img src="images/stop_cassandra_or_fabric.png" alt="" /></p>
+</td>
+<td width="390pxl">
+<p>Start and stop Cassandra console.</p>
+</td>
+</tr>    
+</tr>
+</tbody>
+</table>
+
 ### What Are the File Tab Options?
+
 The File tab has the following options:
 * New Project. 
 * Open Project. 
