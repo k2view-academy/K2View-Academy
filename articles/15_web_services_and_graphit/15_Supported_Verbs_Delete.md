@@ -24,7 +24,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | VERSION_NO    | Version number                                | N             | V1.4            | Latest version |
 | LU Name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
 | Iid           | Instance Id                                   | Y             | 1               |                |
-| Token         | API Key                                       | Y             |                 |                |
+| Token         | API key                                       | Y             |                 |                |
 | Format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
 
 **Example:**
@@ -55,7 +55,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | Iid           | Instance Id                                   | Y             | 1               |                |
 | TABLE_NAME    | Table name for data deletion                  | Y             | PAYMENT         |                |
 | WHERE CLAUSE  | Where clause statement                        | Y             | INVOICE_ID=1    |                |
-| token         | API Key                                       | Y             |                 |                |
+| token         | API key                                       | Y             |                 |                |
 | format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
 
 **Example:**
@@ -82,7 +82,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | COMMON            | Specify that scope is common | Y             | COMMON        |             |
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
 | WHERE CLAUSE      | Where clause statement       | Y             | CITY_ID=1     |             |
-| token             | API Key                      | Y             |               |             |
+| token             | API key                      | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
 **Example:**

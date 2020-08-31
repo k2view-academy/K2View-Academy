@@ -754,7 +754,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>WHERE={CITY=&rsquo;TEL AVIV&rsquo;}</p>
 </td>
 <td valign="top" width="200pxl">
-<p>Can be populated in case of COMMON TABLE NAME was populated</p>
+<p>Can be populated if the COMMON TABLE NAME is populated</p>
 </td>
 </tr>
 <tr>
@@ -962,7 +962,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>iid=1&amp;name=moshe</p>
 </td>
 <td valign="top" width="200pxl">
-<p>Supported only on post verb, should be part of request body {parameter name:parameter value}</p>
+<p>Supported only for Post verb, should be part of the request body {parameter name:parameter value}</p>
 </td>
 </tr>
 </tbody>
@@ -1066,7 +1066,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 </tr>
 <tr>
 <td>
-<p>Customized Web-Service name</p>
+<p>Customized Web Service name</p>
 </td>
 <td>
 <p>Name of the Web Service to be executed</p>
@@ -1119,7 +1119,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 - `http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
-  Call Web-Service Orders and bring output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
+  Call Web Service orders and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
 
 # Request Header
 
@@ -1168,7 +1168,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>N</p>
 </td>
 <td valign="top" width="500pxl">
-<p>Parameter=value&amp; Can be provided on both URL and header</p>
+<p>Parameter=value, can be provided on both the URL and header</p>
 </td>
 </tr>
 </tbody>
@@ -1176,7 +1176,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>&nbsp;</p>
 
 
-# Response Body In Failure
+# Response Body During A Failure
 
 During a failure, the error description structure is returned according to RFC 7807 guidelines with the required details.
 

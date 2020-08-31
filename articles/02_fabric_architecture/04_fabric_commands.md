@@ -56,7 +56,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p>View of the Fabric configurations and settings</p>
+<p>View of the Fabric configurations and settings.</p>
 </td>
 </tr>
 <tr>
@@ -192,9 +192,10 @@ For example:
 
 - Note that you can get LUIs from multiple LUs using one GET command, but you cannot get multiple LUIs from the same LU using one GET command. The following message is displayed when trying to get multiple LUIs from the same LU using one GET command:
   - `Only single instance per LUT can be used on the same GET command.`
-- You can set the consistency level for the GET LUI command to "ONE" when fails to achieve a "QUORUM" consistency level the the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, you need to run the following Fabric command on your session:
+- Set the consistency level of the GET LUI command to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
   -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
-  - Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
+
+  Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
 - The following table lists the GET commands:
 
 <table width="900pxl">
@@ -283,7 +284,7 @@ For example:
 
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 
-Note that users are responsibile for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This will prevent unnecessary calls to the remote Fabric node and getting the local LUI version instead.
+Note that users are responsibile for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
 
 ### Delete LUI Command
 
@@ -354,7 +355,7 @@ Note that users are responsibile for identifying if a [sync](/articles/14_sync_L
 
 ### Release LU
 
-The Fabric Release command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
+The Fabric RELEASE command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
 
 <!--Drop 2- Add a link to LU storage and management--> 
 
@@ -400,7 +401,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 - **SET INSTANCE_TTL** command, set the time to live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends.
 
-- **SET LUI_READ_ONE_WHEN_FAIL** command , set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to "ONE" when fails to achieve a "QUORUM" consistency level the the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
+- **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
 ##### Reset Session Level Setting
 
@@ -433,7 +434,7 @@ Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_
 
 #### Drop LU Command
 
-The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The drop command also deletes the keyspace for the LU from Cassandra and the related LU entry from k2_lut_info in Cassandra. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the keyspace for the LU from Cassandra and the related LU entry from k2_lut_info in Cassandra. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
 [Click for more information about Cassandra Keyspaces.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
@@ -489,7 +490,7 @@ Click for more information about Fabric batch process mechanism.
 
 #### PS and Kill Commands
 
-- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks, running on node2. The **PS** command displays different types of tasks like  Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md),  parser, or User Logic.  It displays the node id of each task.
+- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks, running on node2. The **PS** command displays different types of tasks like Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or User Logic.  It displays the Node ID of each task.
 
 - The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
 
@@ -515,7 +516,7 @@ Click for more information about Common (Reference) Tables.
 
 The Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a (common) Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Common table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
 
-Fabric has a set of commands to support the SOR functionality:
+Fabric has a set of commands that support the SOR functionality:
 
 - **BEGIN**, start a transaction.
 - **SELECT**, **UPDATE**, **INSERT**, and **DELETE**, run Select, Insert, Update and Delete transactions on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common table data.

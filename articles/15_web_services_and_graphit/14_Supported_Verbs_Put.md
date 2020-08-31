@@ -52,7 +52,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 | api               | API                          | Y             | api           |             |
 | COMMON            | Specify that scope is common | Y             | COMMON        |             |
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
-| token             | API Key                      | Y             |               |             |
+| token             | API key                      | Y             |               |             |
 | format            | Response format              | Y             | JSON/XML/YAML | JSON        |
 
 **Example:**
@@ -75,7 +75,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/{&lt;Customized Web-Service name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-Parameters should be populated on the body in the following structure:
+Parameters should be populated in the body in the following structure:
 ```
 {
 “parameter name 1”:”value”,
@@ -97,7 +97,7 @@ Parameters should be populated on the body in the following structure:
 
 | **Parameter**             | **Mandatory** | **Value**                                                   |
 | ------------------------- | ------------- | ----------------------------------------------------------- |
-| Token                     | Y             | API Key                                                     |
+| Token                     | Y             | API key                                                     |
 | Accept                    | Y             | Json/XML/CSV                                                |
 | Any additional parameters | N             | Parameter=value&     Can be provided on both URL and header |
 
@@ -114,7 +114,7 @@ Parameters should be populated on the body in the following structure:
   }
   ```
 
-  Call Web Service Orders and bring output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
+  Call Web Service Orders and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/13_Supported_Verbs_Post.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/15_Supported_Verbs_Delete.md)
 
