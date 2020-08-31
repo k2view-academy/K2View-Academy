@@ -183,14 +183,14 @@ Note that this area allows you to open a new item only for LU or Shared Objects.
 The Project Tree displays the components of the current project as a hierarchy of entities. The main elements of the hierarchy include:
 * Project, the top-level of the hierarchy. Each project has the following branches (sub-objects): 
   * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) used by all Logical Units and project references and may include a sub-hierarchy, as follows:
-    * Globals. 
+    * [Globals](/articles/08_globals/01_globals_overview.md). 
     * Environments. 
     * Database types. 
-    * Interfaces. 
-    * Functions.
-    * Java, Java files and resource files. 
-    * Translations. 
-    * Broadway flows. 
+    * [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md). 
+    * [Functions](/articles/07_table_population/08_project_functions.md).
+    * Java, [Java files](/articles/04_fabric_studio/09_logic_files_and_categories.md) and resource files. 
+    * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md). 
+    * [Broadway flows](/articles/19_Broadway/01_broadway_overview.md). 
 * References, reference information that may be used throughout the instance. 
 * Web Services, a collection of all functions that are defined as Web Services for this project.
 * [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
