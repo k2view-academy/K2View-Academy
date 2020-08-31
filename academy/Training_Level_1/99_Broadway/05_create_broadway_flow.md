@@ -102,7 +102,6 @@ Group By CASES.STATUS
 
         Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
-12. Stages 2 and 3 have a grey background and a black frame to indicate that the loop has been opened and closed.
 
     ​      
 
