@@ -102,7 +102,6 @@ Group By CASES.STATUS
 
         Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
-
     ​      
 
 #### Step 4 - Flow Execution and Debug
