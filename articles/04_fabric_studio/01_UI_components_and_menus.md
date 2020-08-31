@@ -148,7 +148,7 @@ Fabric Studio has the debug panel in the left upper side of the window:
 <td width="60pxl" valign="top"><p>
     <img src="images/open_debug_server_or_cassandra.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
-<p>Open Cassandra console for <a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md#cassandra-useful-commands">CQLSH commands.</a></p>
+<p>Open Cassandra console for <a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md#cassandra-useful-commands">cqlsh commands.</a></p>
 </td>
 <tr>
 <td width="60pxl" valign="top">
