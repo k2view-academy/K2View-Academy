@@ -42,7 +42,7 @@ If the break points have been added to the flow, the flow stops at the first bre
 - Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
 - Click **Debug Step** ![image](images/99_25_step.PNG)to debug the current step and move to the next step.
 
-To stop the flow or to stop the debeg, click **Stop Run** ![image](images/99_25_stop.PNG) to stop the flow run.
+To stop the flow or to stop the debug, click **Stop Run** ![image](images/99_25_stop.PNG) to stop the flow run.
 
 Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
