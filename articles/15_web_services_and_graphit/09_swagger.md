@@ -26,7 +26,7 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
-The relevant invoked Web Service is expended and points to the correct verb. 
+The relevant invoked Web Service is expanded and points to the correct verb. 
 *	If only the GET verb is defined as illegible for the invoked Web Service, it will only display the GET verb  as an option.
 
 *	If all the four verbs are defined as illegible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
@@ -35,13 +35,13 @@ The relevant invoked Web Service is expended and points to the correct verb.
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-2.png" alt="drawing"/>
 
-   If JSON / XML or CSV examples were defined in the Web Service properties in the Studio, they are displayed in Swagger.
+   If JSON / XML or CSV examples have been defined in the Web Service properties in the Studio, they are displayed in Swagger.
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-4.png" alt="drawing"/>
 
 4. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
-   In order to skip this step for the remaining Web-Services calls, use the authenticate product Web-Service, provide as input on the body request the apikey or username/password and afterwards you will be able to skip the Authorize step as client is already authorized.
+   Use the Authenticate Product Web Service and enter the API Key or Username / Password as input in the body request to skip the Authorize as Client step in the remaining Web Services calls. 
 
 5. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 
