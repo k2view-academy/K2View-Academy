@@ -14,7 +14,7 @@ Message provider types supported in Broadway are:
 
 ### Pub / Sub Input Arguments
 
-The **queue** category Actors enable the Pub / Sub services functionality of the supported message providers, whereby their input arguments correspond to the functionality of these message providers. Some input arguments are relevant only for Kafka and some, only for JMS. For example:
+The **queue** category Actors enable the Pub / Sub services functionality of the supported message providers, whereby their input arguments correspond to the functionality of these message providers. Some input arguments are relevant only for Kafka and some only for JMS. For example:
 -  The **key** input argument of the **Publish** Actor is relevant only for Kafka and is the key commonly used for partitioning. 
 -  The **correlation_id** input argument is only used by JMS publishers. This is a unique identifier that correlates the request message and its reply. When left empty, the server generates a reply. 
 
@@ -22,11 +22,11 @@ Publisher and Subscriber applications must be defined in Fabric as an [Interface
 
 The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
-The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topic thus the **topic** argument of the Actor can be overridden during the flow.
+The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
 
 Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
-The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** interface and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
+The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** defined on the [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
 
 ### Timeout Setting
 

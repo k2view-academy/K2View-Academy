@@ -49,6 +49,8 @@ Additional parsers supported by Broadway are:
 * **LinesParser** Actor, traverses an incoming stream and outputs individual lines.
 * **XmlParser** Actor, analyzes an input stream and outputs the objects found in the stream.
 
+The Actor's description includes the detailed explanation of the Actor's capabilities. Click ![image](../images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](../18_broadway_flow_window.md#actors-context-menu) and select **Description** to view it.
+
 Checkout **xml.flow** for the **XmlParser** example and **lines.flow** for the **LinesParser** example. To do so, go to **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu).
 
 [![Previous](/articles/images/Previous.png)](02_stream_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_queue_actors.md)

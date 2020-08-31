@@ -4,7 +4,7 @@
 
 The **JavaScript** Actor is an important and useful [built-in Actor type](../04_built_in_actor_types.md) that can be used to simplify a flow by writing JavaScript business logic or validation code in the **script** input parameter.
 
-To improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code. Note that an Actor can include any number of  JavaScript rows.  
+To improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code even though an Actor can include any number of  JavaScript rows.  
 
 The **javascript.flow** and **javascript-advanced.flow** examples show various ways to use a **JavaScript** Actor in a flow.
 
@@ -15,14 +15,12 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 ### Special Keywords and Conventions
 
-- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. The **return** keyword does not need to be written in the script since the **result** output parameter is used to return the Actor's result. For example, when the following code is written in the **JavaScript** Actor, the value of **rowSum** is returned. 
+The Actor's description includes the detailed explanation of the Actor's capabilities. Click ![image](../images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](../18_broadway_flow_window.md#actors-context-menu) and select **Description**.
+
+- The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. The **return** keyword should not be written in the script whereby the **result** output parameter is used to return the Actor's result. For example, when the following code is written in the **JavaScript** Actor's last line, the value of either **a** or **b** is returned. 
 
 ```javascript
-  var rowSum = 0;
-  for each (var col in row) { 
-     rowSum += col;
-  }
-  rowSum;
+  a > b ? a : b
 ```
 
 - Use the **self** keyword to maintain a state across script executions, such as a loop aggregation. 
@@ -46,13 +44,14 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 - To read data from the flow's arguments, use the **flowArgs** keyword. You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors. The access to **flowArgs** arguments can be done using one of the following syntaxes: 
 
 ```javascript
+  print(flowArgs.v3); //read the value of argument v3
+  flowArgs["v3"] = "Hello"; //write into the argument v3
+
   for (var i in flowArgs) {
      print(flowArgs[i]); //read the value
      flowArgs[i] = null; //remove the value
      flowArgs[i] = "abc"; //write the value
   }
-  print(flowArgs.v3); //read the value of argument v3
-  print(flowArgs["v3"]); //read the value of argument v3
 ```
 
 - To iterate over a collection, use standard syntax: 

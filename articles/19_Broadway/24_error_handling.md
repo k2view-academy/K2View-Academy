@@ -2,15 +2,15 @@
 
 Broadway Error Handling mechanism handles the exceptions in a flow using **Error Handlers**. 
 
-An error handler be either an [Actor](03_broadway_actor.md) or an [Inner flow](22_broadway_flow_inner_flows.md) and it can be assigned to any [Stage](19_broadway_flow_stages.md) of a flow. This is recommended to use Inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
-
-Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
+An error handler is implemented using an [Actor](03_broadway_actor.md) and it can be assigned to any [Stage](19_broadway_flow_stages.md) of a flow. Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
 
 The Actor's logic is validated as follows:
 
 - When an error handler returns true, the flow continues.
 
 - When an error handler returns false, the flow stops.
+
+An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it allows to include complex logic as part of the error handling. This is recommended to use Inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
 ### How Do I Add an Error Handler to a Stage?
 
