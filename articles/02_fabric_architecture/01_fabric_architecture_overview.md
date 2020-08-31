@@ -1,19 +1,19 @@
 # Fabric Architecture Overview
 The following topics are discussed in this section:
 
-1. [Fabric Systems Overview](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#1-fabric-systems-overview)
-2. [Fabric Server Main Components](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components)
-3. [Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#3-data-flow)
-4. [Search](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#4-search)
-5. [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security)
-6. [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#6-resiliency)
+1. [Fabric Systems Overview](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#1-fabric-systems-overview).
+2. [Fabric Server Main Components](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components).
+3. [Data Flow](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#3-data-flow).
+4. [Search](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#4-search).
+5. [Security](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security).
+6. [Resiliency](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#6-resiliency).
 
 ## 1. Fabric Systems Overview
 Fabric can be viewed as a distributed, business-entity-centric data management system, designed to get, store, transform and expose data for real-time operational needs.
 
 Fabric takes ownership of the E2E data lifecycle, including:
 - Data discovery, modelling and curation.
-- Data acquisition and syncronization.
+- Data acquisition and synchronization.
 - Data validation, aggregation, enrichment, matching, masking, cleansing and transformation.
 - Data storage, distribution, replication and encryption.
 - Data exposure.
@@ -59,9 +59,9 @@ A MicroDB provides several advantages:
 
     
 #### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-CommonDB is an additional SQLite database schema used for storing reference tables common to all MicroDB. For example, it could be a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across nodes. 
+The CommonDB is an additional SQLite database schema used for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across nodes. 
 
-CommonDB is always made available for queries within every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB using one SQL query only.
+The CommonDB is always made available for queries in every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB using one SQL query only.
 
 
 #### 2.1.3 Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
@@ -103,7 +103,7 @@ Data flows in and out of Fabric via multiple types of interfaces and data format
 
 ### 3.2 Fabric Data Access Layer
 
-The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB). Conversely, these same interfaces are used so Fabric data can be published, or accessed by 3rd party systems.
+The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB). Conversely, these same interfaces are used so that Fabric data can be published or accessed by 3rd party systems.
 
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
@@ -121,7 +121,7 @@ Fabric supports real-time, inbound data updates via a Kafka interface using the 
 To publish change events externally via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of MicroDB changes.
 
 #### 3.2.4 Manual / Scripted Input
-External data can also be injected into theFabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
+External data can also be injected into the FabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) that are available in the Fabric Console application.
 
 ### 3.3 Fabric ETL Layer
 
@@ -139,21 +139,21 @@ Fabric can consume external APIs such as Web Services, Soap and Java Libraries t
 APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 
 **3.3.1.4 DB Query:**
-By default, Fabric supports any [connection to any Database](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) supporting a JDBC driver. If not supported in Fabric&#39;s standard interface types module, users can define new DB types in accordance with the database and its JDBC driver specifications. Fabric can also be extended programmatically to invoke proprietary drivers or interfaces.
+By default, Fabric supports any [connection to any database](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) supporting a JDBC driver. If not supported in Fabric&#39;s standard interface types module, users can define new DB types in accordance with the database and its JDBC driver specifications. Fabric can also be extended programmatically to invoke proprietary drivers or interfaces.
 
 #### 3.3.2 Data-processing & Business Logic
-This section discusses the types of transformations used by the business rules and flows created by users depending upon the project requirements.
+This section discusses the types of transformations used by the business rules and flows created by users depending upon project requirements.
 
 **3.3.2.1 Data Pre-processing:**
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
 
 - Data anonymization: Fabric provides a [masking process](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security) that can be used to anonymize data for R&amp;D or QA purposes.
 
-- Data cleansing: Fabric can be setup to retrieve (from external sources) only the data necessary to populate LUI while disregarding any data that is not relevant to a project's implementation.
+- Data cleansing: Fabric can be set up to retrieve (from external sources) only the data necessary to populate LUI while disregarding any data that is not relevant to a project's implementation.
 
-- Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or Javascript.
+- Data transformation: Fabric provides a large set of functions needed to execute data transformations. This set can be extended by combining existing functions or by adding functions using Java or JavaScript.
 
-- PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful to enforce GDPR or CCPA compliancy.
+- PII discovery: A built-in set of libraries enabling sensitive data discovery such as Personally Identifiable Information, especially useful for enforcing GDPR or CCPA compliancy.
 
 - Data reconciliation, comparing and matching: Fabric analyzes the collected data to decide which data to keep or to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs.
 
@@ -170,7 +170,7 @@ Since Fabric creates Digital Entities by extracting data from multiple sources a
 In environments where source data constantly changes, Fabric enables a lazy mode, whereby the iiDFinder retrieves the delta updates upon explicit demand from the user.
 
 - Data Enrichment:
-Users can enrich data by using [built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) or adding to them using Java / Javascript code designed to transform data according to the business requirements.
+Users can enrich data using [built-in functions](/articles/07_table_population/07_fabric_built_in_functions.md) or adding to them using Java / JavaScript code designed to transform data according to business requirements.
 
 - Jobs:
 Where all async recurring or scheduled actions happen, enabling users to run Fabric functions according to a predefined schedule. Once set up by the user, Fabric  creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can be used to collect data from structured DB or any files (HTTP), streams, message queues.
@@ -222,12 +222,12 @@ To reduce load and improve compression, specific fields of an LUI can be encrypt
 
 ### 5.3 Environment Encryption
 
-Users can define a number of environments for source connectivity according to their specific needs and switch between the environments within the same Fabric session. By default, Fabric encrypts the interfaces&#39; details of each environment using the same master key used to encrypt LUI. If necessary, users can re-key all interfaces that belong to a given environment. If the connection details of any interface in an environment are modified, the updated connection details are re-encrypted. Fabric also encrypts the interfaces&#39; details of each environment using the same master key used to encrypt LUI. Once the data is store in Fabric it is used for connectivity and is not available for querying by external APIs.
+Users can define a number of environments for source connectivity according to their specific needs and switch between the environments within the same Fabric session. By default, Fabric encrypts the interfaces details of each environment using the same master key used to encrypt LUI. If necessary, users can re-key all interfaces that belong to a given environment. If the connection details of any interface in an environment are modified, the updated connection details are re-encrypted. Fabric also encrypts the interfaces details of each environment using the same master key used to encrypt LUI. Once the data is store in Fabric it is used for connectivity and is not available for querying by external APIs.
 
 
 ### 5.4 Masking Algorithm
 
-To protect your company&#39;s data, Fabric's masking service creates a structurally similar but an unauthentic version of your data that can be used for development, integration or testing purposes.
+To protect your company&#39;s data, Fabric's masking service creates a structurally similar but  unauthentic version of your data that can be used for development, integration or testing purposes.
 
 
 ## 6. Resiliency
