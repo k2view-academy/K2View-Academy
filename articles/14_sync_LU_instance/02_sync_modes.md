@@ -66,6 +66,14 @@ SYNTAX: SET SYNC [SYNC MODE];
 
 Note that the Sync returns an error message when a source is not available. To change this behavior, use [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
+## Sync ON Protection
+- This feature improves the response time of multiple GET requests using **SYNC ON** mode on the same LUI and Fabric node. For example: executing a stress test of running a Web-Service with the same LUI on multiple threads. 
+- In principle, multiple requests on the same LUI and Fabric node are executed sequentially if all of them implements a Sync ON mode, since each one requires a write lock of the LUI's MicroDB. This means that even if the LUI's populations are not running, the short check can accumulate to a long duration before that last GET is successful.
+- To avoid this check on each LUI, Fabric implements a SYNC ON mode only on the first GET reuquest on the LUI. The remainig requests, executed in parallel to the first req uestm are executed with a SYNC OFF mode.  
+- You can configure this behavious by editing the SYNC_PROTECTION parameter of the [config.ini](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) file:
+  - The default values is zero. Fabric implements a SYNC ON mode only on the first request.
+  - If this parameter is set to -1, the SYNC ON protection is disabled and Fabric implements a SYNC ON on each request.
+  - You can set this parameter by a number of the milliseconds. For example: if it is set to 1000, all the SYNC request that are executed on the same LUI and Fabric node during the 1000ms after the first request, will run with a SYNC ON mode. After 1000ms (and until the first GET request on the LUI is completed), Fabric sets the sync mode to OFF.
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
 The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
