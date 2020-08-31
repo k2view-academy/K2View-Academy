@@ -35,7 +35,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 #### Step 1 - Open the Broadway Tutorial Flow
 
-1. Open the  **a-broadway-tutorial**  flow as [explained above](04_broadway_tutorials.md#how-do-i-open-the-broadway-tutorial-flow).
+1. Open the  **a-broadway-tutorial**  flow as [explained above](#how-do-i-open-the-broadway-tutorial-flow).
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
 1. Click the Debug ON ![debug on](images/debug_on.png) to set it to Debug OFF. Click ![Run Flow](images/run_flow_icon.png) to run the flow.
