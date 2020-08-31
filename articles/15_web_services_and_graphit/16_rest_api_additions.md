@@ -15,17 +15,17 @@ A user may ask for http://www.somesite.com/widgets/blue/, but receives http://ww
 
 ### Configuration
 
-Copy the **rewrite.config** file (sample file attached) to **$FABRIC_HOME\webserver\WEB-INF**
+Copy the **rewrite.config** file (sample file attached) to **$FABRIC_HOME\webserver\WEB-INF**.
 
-To use this functionality, users must at least have a basic knowledge of Rewrite rules / conditions and their different parameters. 
+To use this functionality, users must have at least a basic knowledge of Rewrite rules / conditions and their different parameters. 
 
 Useful tutorials: 
 
-- https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html
+- https://tomcat.apache.org/tomcat-8.0-doc/rewrite.html.
 
-- https://www.sitepoint.com/apache-mod_rewrite-examples-2/
+- https://www.sitepoint.com/apache-mod_rewrite-examples-2/.
 
-- http://helpful.knobs-dials.com/index.php/Apache_config_and_.htaccess_-_URL_rewriting
+- http://helpful.knobs-dials.com/index.php/Apache_config_and_.htaccess_-_URL_rewriting.
 
 ## Authentication
 
@@ -34,11 +34,11 @@ A RESTful API should be stateless, whereby the request's authentication does not
 By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. It is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
 token can be provided as a part of the URL as a parameter, or in the header request.
 
-Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
+The Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
 
-* Secured mode, using a digital signature on the client side, the secret key is shared only once when API Key is created.
+* Secured mode, using a digital signature on the client side, the secret key is shared only once when the API key is created.
 
-* Unsecured mode signed by Fabric. When using this option, it is possible to call Fabric product Web-Service,  called authenticate, with a request body apikey or username/password. All remaining Fabric Web-services calls on the same session should not use the token parameter( including Swagger client) as client is already authenticated.
+* Unsecured mode signed by Fabric. When using this option, an Authenticate Web Service can be called with a request body API key or Username / Password. All remaining Fabric Web Services calls on the same session should not use the token parameter (including the Swagger client) since the client is already authenticated.
 
 To invoke a Web Service call, do the following:
 
@@ -60,7 +60,7 @@ JSON (default), XML and CSV formats are supported for data returned in the body 
 
 In general, URIs allow only ASCII values. However, there are specific cases like internationalized domain names (IDN), where non-ASCII characters may be used in the domain name. For the purposes of communicating data using query string parameters, you cannot directly send non-ASCII (unsafe) characters. Also, some characters like spaces, “=”, and “&” have a specific meaning when sent in the query string section of the URI and are reserved. 
 
-In order to handle unsafe characters and to distinguish between data and reserved characters that have special meaning in a URI, the URI must be “URL Encoded”. This encoding replaces non-ACII and reserved characters parameter data with ASCII equivalents. This is also known as “Percent Encoding” since each unsafe character is replaced with a value starting with percent sign (“%”).
+To handle unsafe characters and to distinguish between data and reserved characters that have special meaning in a URI, the URI must be URL Encoded. This encoding replaces non-ACII and reserved characters parameter data with ASCII equivalents. This is also known as Percent Encoding since each unsafe character is replaced with a value starting with percent sign (“%”).
 All parameter values should be URL encoded to ensure correct transmission. For example, the query string: “name=Mañana” is URL encoded as “name= %20Ma%C3%B1ana”. 
 A URI cannot have a space and is encoded to the value “%20”. 
 The Spanish letter “ñ” is not a valid ASCII value and is encoded as “%C3%B1”. 
@@ -71,7 +71,7 @@ There is no use case for transmitting repeated parameters since the required res
 
 ## Request Data Encoding
 
-By default, UTF-8 is used to decode the request body, since this handles the majority of characters for the supported languages. However, for situations where customers choose to use a different encoding, it can be specified in the Content-Type header’s optional “charset” parameter: Content-Type: application/json; charset=latin-1 will use the provided charset to decode the request body data. 
+By default, UTF-8 is used to decode the request body since this handles the majority of characters for the supported languages. However, in situations where customers choose to use a different encoding, it can be specified in the Content-Type header’s optional “charset” parameter: Content-Type: application/json; charset=latin-1 will use the provided charset to decode the request body data. 
 
 Users are responsible for ensuring that their data is correctly encoded using the required charset before transmission to k2view API. Failure to do so may result in incorrect characters or an inability to process the request. It is also important to note that this only applies to the encoding of the request body and does not apply to the encoding used in any response body data.
 
