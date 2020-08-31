@@ -211,96 +211,86 @@ Note that the **each** method is similar to the **forEach** method and uses a La
 **Example 1**
 
 Iterating the result set and checking the column name and value for each record:
-<pre><code>
+```java
 Db.Rows rows = db(..).fetch(...);
 row.forEach(r->{
-      // each r is a map that represents a row.
-      // Iteration order is guaranteed to follow the column order.
-                r.forEach((col,value)->{
-                        ...
-                });
+   // each r is a map that represents a row.
+   // Iteration order is guaranteed to follow the column order.
+   r.forEach((col,value)->{
+      ...
+   });
  });
-</code></pre>
-
+```
 
 **Example 2** 
 
 Iterating the result set and yielding the values of each record:
 
-<pre><code>
+```java
 Db.Rows rows = db(..).fetch(...);
 rows.each(row-> yield(row.cells()));
-</code></pre>
+```
 
 2. Using for loop:
 
-<pre><code>
-Db.Rows rows = db(..).fetch(...);
-for (Db.Row row:rows) {
-	….
- }
-</code></pre>
- 
-Note that since you are not using the each/forEach method the ResultSet will not close immediately and is deferred to the end of the current execution (sync/webservice/job).
-
-To use a loop and control closure of the result set, use the try-resource structure:
-
-<pre><code>
- try (Db.Rows rows = db(..).fetch(...)) {
-      for (Db.Row row:rows) {
-      		…
-}
- } finally {
-	rows.close();
+```java
+try (Db.Rows rows = db(..).fetch(...)) {
+   for (Db.Row row:rows) {
+      	
+   }
 } 
-</code></pre>
+```
+
+Note that since you are not using the each/forEach method the ResultSet will not close at the end of the loop and is deferred to the end of the current execution (sync/webservice/job). The safet way to control closure of the result set, is to use the try-resource structure as seen above.
+
 
 
 ### Code Examples
 
 1. Select the number of orders by contract_id and order_status. The Select statement returns only one record and one field. Therefore, use the **firstValue()** method.
 
-<pre><code>
+```java
 String sql = "SELECT COUNT(*) AS TOT_NUM_OF_ORDERS FROM ORDERS WHERE CONTRACT_ID = ? and ORDER_STATUS != ?";
 Db.Rows rows = ludb().fetch(sql, contractId, orderStatus);
 Integer noOfOrders = Integer.parseInt(rows.firstValue().toString());
-</code></pre>
+```
+
+Note that calling firstValue also closes the result set.
 
 2. Select a single record from the DB. Use the **firstRow()** method to get the single record returned by the DB query.
 
-<pre><code>
+```java
 String sql = "SELECT * from CONTRACT WHERE CONTRACT_ID = ? “;
 Db.Row row = ludb().fetch(sql, contractId).firstRow();
-</code></pre>
+```
 
+Note that calling firstRow also closes the result set.
 
 3. [Root function](/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
 
-<pre><code>
+```java
 String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CRM_DB.CASES where activity_id = ?";
 Db.Rows rows = db("CRM_DB").fetch(sql, input);
 // Option 1 - using each method 
 rows.each(row-> yield(row.cells()));
 
 // Option 2- using for loop
-//for (Db.Row row:rows)
-//{
-//	yield(row.cells());
-//}
-</code></pre>
-
+for (Db.Row row:rows) {
+   yield(row.cells());
+}
+```
 
 4. Run a Select and check the first value of each record.
 
-<pre><code>
+```java
 Db.Rows rows = ludb().fetch(sql);
    
 for (Db.Row row : rows) {
- if (row.cell(0) != null) // check the value of first column of the select statement
-  values.append("\"" + row.cell(0) + "\",");
+   if (row.cell(0) != null) { // check the value of first column of the select statement
+      values.append("\"" + row.cell(0) + "\",");
+   }
 }
-</code></pre>
-
+```
 
 ### Fabric - DB Interface - Deprecated Methods
 

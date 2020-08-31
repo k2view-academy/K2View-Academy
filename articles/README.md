@@ -238,6 +238,50 @@
 <li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
 </ul> 
 </details>        
+        
+<details>
+<summary markdown="span"><strong>Broadway<strong><a href="/articles/19_Broadway/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a></li>
+<li><a href="/articles/19_Broadway/02_broadway_high_level_components.md">Broadway High Level Components</a></li>
+<li><a href="/articles/19_Broadway/03_broadway_actor.md">Broadway Actor Overview</a></li>
+<li><a href="/articles/19_Broadway/03_broadway_actor_window.md">Broadway Actor Window</a></li>
+<li><a href="/articles/19_Broadway/04_built_in_actor_types.md">Built-in Actor Types</a></li>
+<li><a href="/articles/19_Broadway/05_data_types.md">Broadway Data Types</a></li>
+<li><a href="/articles/19_Broadway/16_broadway_flow_overview.md">Broadway Flow Overview</a></li>
+<li><a href="/articles/19_Broadway/17_tutorial_and_flow_examples.md">Broadway Tutorial and Flow Examples</a></li>
+<li><a href="/articles/19_Broadway/18_broadway_flow_window.md">Broadway Flow Window</a></li>
+<li><a href="/articles/19_Broadway/19_broadway_flow_stages.md">Broadway Stages</a></li>
+<li><a href="/articles/19_Broadway/21_iterations.md">Iteractions in Broadway</a></li>
+<li><a href="/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md">Run and Debug Broadway Flow</a></li>
+<li><a href="/articles/19_Broadway/27_broadway_data_inspection.md">Data Inspection in Broadway</a></li>
+</ul> 
+</details>        
+ 
+        
+<details>
+<summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<ul>
+  <li><a href="/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md">Overview</a></li>
+  <li><a href="/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md">Jobs Lifecycle & Flows</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md">User Jobs</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md">Process Jobs</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md">Broadway Jobs</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/06_create_a_new_CDC_job.md">CDC Jobs</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/07_jobs_commands.md">Commands list</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/08_jobs_table_fields.md">Operational Tables</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md">Jobs Configuration</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md">Fabric Affinity Concept</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/11_batch_process_overview.md">Batch Processes</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/12_batch_sync_commands.md">Batch Synchronization</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/13_migrate_commands.md">Migrate Command</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/14_instances_groups.md">Instance Groups</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md">Broadway flows & Batches</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md">CDC Republish & Batches</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/17_batch_process_flow.md">Batch Processes Flows</a></li>
+</ul>
+</details>        
+ 
+  
  
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
