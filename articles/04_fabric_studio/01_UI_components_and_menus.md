@@ -192,7 +192,7 @@ The Project Tree displays the components of the current project as a hierarchy o
     * [Translations](/articles/09_translations/01_translations_overview_and_use_cases.md). 
     * [Broadway flows](/articles/19_Broadway/01_broadway_overview.md). 
 * References, reference information that may be used throughout the instance. 
-* Web Services, a collection of all functions that are defined as Web Services for this project.
+* [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), a collection of all functions that are defined as Web Services for this project.
 * [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
 **Note:** All operations performed in the project tree’s options are accessible from the context menus of the different components in the project tree. For example, creating a new function is accessed from the context menu when you right click the Functions object in the project tree.
