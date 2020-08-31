@@ -10,7 +10,7 @@ In addition, you will also learn about how Broadway interfaces with Fabric and h
 
 ### Course Syllabus
 
-Please go to the [Level 1 Broadway Training Syllabus](/academy/Training_Level_1/99_Broadway/02_broadway_training_syllabus.md).
+Please go to the [Level 1 Broadway Training Syllabus](02_broadway_training_syllabus.md).
 
 
 
@@ -36,6 +36,6 @@ To learn more about Fabric terminology at any time during the course, you are in
 
 But first, let’s understand more about Broadway.
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/03_broadway_overview.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_overview.md)
 
 
