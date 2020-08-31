@@ -85,7 +85,7 @@ Group By CASES.STATUS
    - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
    - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
-    ![FileWrite](/academy/Training_Level_1/99_Broadway/images/MyFirstFlow_Example_Stage3_FileWrite.png) 
+    ![FileWrite](images/MyFirstFlow_Example_Stage3_FileWrite.png) 
 
    Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
@@ -140,4 +140,4 @@ Congratulations.
 
 You've just created your first Broadway flow. Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
 
-[![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/99_Broadway/06_broadway_flow_adding_loops_and_conditions.md)
+[![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_broadway_flow_adding_loops_and_conditions.md)
