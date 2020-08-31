@@ -3,7 +3,7 @@
 ## Supported K2view Web Services URL Structure
 <p><code>http://&lt;IP address&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;web-service name&gt;?token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</p></code>
 
-URL parameters, including the token and format, are supported in both the URL and header request.
+URL parameters, including the token and format are supported in both the URL and header request.
 
 ## URL Redirect
 
@@ -31,18 +31,18 @@ Useful tutorials:
 
 A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
-By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth. It is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
+By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth and is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
 token can be provided as a part of the URL as a parameter, or in the header request.
 
-The Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
+The Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on a JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
 
 * Secured mode, using a digital signature on the client side, the secret key is shared only once when the API key is created.
 
-* Unsecured mode signed by Fabric. When using this option, an Authenticate Web Service can be called with a request body API key or Username / Password. All remaining Fabric Web Services calls on the same session should not use the token parameter (including the Swagger client) since the client is already authenticated.
+* Unsecured mode signed by Fabric. When using this option, a Fabric Authenticate Web Service can be called using a request body API key or Username / Password. All remaining Fabric Web Services calls on the same session should not use the token parameter (including the Swagger client) since the client is already authenticated.
 
 To invoke a Web Service call, do the following:
 
-1. Create a **API Key** . (can be defined as SECURED or not)
+1. Create an **API Key** which can be defined as SECURED or not.
 2. Create a **Role**, click **CREATE ROLE** > [**role_name**] > **Description** [**Role Description**].
 3. Assign the **Role** to an **API Key**, click **ASSIGN ROLE** > [**ROLE]> to API Key<'API Key'>**.
 4. Grant **Privilege's** to the role, click **GRANT** > **Operation> ON <RESOURCE> TO > ROLE**.
@@ -73,7 +73,7 @@ There is no use case for transmitting repeated parameters since the required res
 
 By default, UTF-8 is used to decode the request body since this handles the majority of characters for the supported languages. However, in situations where customers choose to use a different encoding, it can be specified in the Content-Type header’s optional “charset” parameter: Content-Type: application/json; charset=latin-1 will use the provided charset to decode the request body data. 
 
-Users are responsible for ensuring that their data is correctly encoded using the required charset before transmission to k2view API. Failure to do so may result in incorrect characters or an inability to process the request. It is also important to note that this only applies to the encoding of the request body and does not apply to the encoding used in any response body data.
+Users are responsible for ensuring that their data is correctly encoded using the required charset before transmission to K2View API. Failure to do so may result in incorrect characters or an inability to process the request. It is also important to note that this only applies to the encoding of the request body and does not apply to the encoding used in any response body data.
 
 ## Response Data Encoding 
 
@@ -89,7 +89,7 @@ The order of data cannot be consistent since it is performance consumed, unless 
 
 ## Override RESTful API Response
 
-In order to override the RESTful API reponse that is generated automatically, it is possible to use HttpServletResponse Class.
+In order to override the RESTful API reponse that is generated automatically, use HttpServletResponse Class.
 
 For Example:
 
