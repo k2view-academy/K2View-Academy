@@ -13,18 +13,18 @@ Each table population extracts data from a data source, transforms it when neede
 
 * Based on a Broadway flow, whereby a Broadway Flow template is created to extract the data from the source and populate it into the target LU table. A Broadway Flow template can be enhanced with additional logic pre and post loading.
 
-  [Click for more information about Table Population based on Broadway flow](14_table_population_based_Broadway.md).
+  [Click for more information about Table Population based on a Broadway flow](14_table_population_based_Broadway.md).
 
   
 
 ### Table Population In an LU Schema 
-An [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects:
+An [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) displays a hierarchical representation of the data related to the Root Table. Parent-child links in LU tables are created via their Table Population objects:
 *	Each [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) can have one or several Table Population objects. 
 *	Each Table Population object, apart from the Table Population of the LU's Root Table, must be linked to a parent table via its Input columns.
 *	Each Table Population object can be linked to a different parent LU table.
-Note that an LU table can be added to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync process](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction.
+Note that an LU table can be added to an [LU Schema](/articles/03_logical_units/03_LU_schema_window.md)  without a Table Population object. This table is not populated by the [sync process](/articles/01_fabric_overview/02_fabric_glossary.md#sync) of the [LU Instance](/articles/01_fabric_overview/02_fabric_glossary.md#lui) but can be populated by a separate transaction.
 
-[Click for more information about Building an LU Hierarchy and Linking Table Populations.](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md)
+[Click for more information about Building an LU Hierarchy and Linking Table Populations.](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) 
 
 ### Table Population Window
 The Table Population window is used to define and display the transformation rules that are applied to data when it is loaded into a Fabric database. 
@@ -52,7 +52,7 @@ The **Debug toolbar** holds options for testing the Population process by execut
 *	If there is an error, it is displayed in the [Fabric Studio Log](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) section.
 *	If the outcome has more than one row, you can navigate between the different rows.
 
-[Click for more information about the Debug of the Table Population.](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md)
+[Click for more information about Debugging the Table Population.](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md)
 
 ### Options Toolbar
 The **Options toolbar** includes **Refresh** and **Group** / **Ungroup** options.
@@ -93,7 +93,7 @@ The Working Area includes:
 <p>Fabric LU table (right)</p>
 </td>
 <td width="435">
-<p>A target LU table in the LU schema.</p>
+<p>A target LU table in the LU Schema.</p>
 </td>
 </tr>
 <tr>
@@ -112,7 +112,7 @@ The Working Area includes:
 ### Properties Tab
 The **Properties Tab** in a Table Population window (right pane) displays the properties of each selected object in the Table Population object. For example, source table, target LU table or a translation. Note that some properties are editable.  
 
-[Click for more information about Table Population Properties Tab.](/articles/07_table_population/04_table_population_properties_tab.md)
+[Click for more information about the Table Population Properties Tab.](/articles/07_table_population/04_table_population_properties_tab.md)
 
 ### Objects Tab
 The **Objects Tab** in a Table Population window (right pane) displays all available Fabric objects. For example, [Databases](/articles/05_DB_interfaces/03_DB_interfaces_overview.md), [Globals](/articles/08_globals/01_globals_overview.md), [Built-In Functions](/articles/07_table_population/07_fabric_built_in_functions.md) or [Project Functions](/articles/07_table_population/08_project_functions.md). 
