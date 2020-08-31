@@ -118,7 +118,7 @@ Group By CASES.STATUS
 
    - Click ![image](/academy/Training_Level_1/99_Broadway/images/red_cross.png) adjacent to the Actor's output argument to open the [Data Inspection]() and display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1 ** and run again the debug. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
+   - Add a  **Breakpoint** to **Stage 1** and run again the debug. Click ![Debug Step](/academy/Training_Level_1/99_Broadway/images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
    - Now you see the input and output values are displayed for each iteration in the flow.
 
