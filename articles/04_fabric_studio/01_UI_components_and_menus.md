@@ -3,7 +3,7 @@
 ### What Is the Fabric Studio User Interface?
 Fabric Studio is a designer tool that manages the construction of [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity). As an integrated tool, Fabric allows you to implement mapping rules into a project and to deploy your implementation to the Fabric Server.
 
-Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each project is initiated and maintained through this platform and working space.\
+Built over a Windows-based platform, Fabric Studio offers a user friendly look-and-feel development environment known as the Implementation Layer. Each project is initiated and maintained through this platform and working space. 
 
 As an integrated tool, Fabric Studio allows you to:
 * Design [Digital Entities](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) and their associated [Logical Units (LUs)](/articles/03_logical_units/01_LU_overview.md).
@@ -95,8 +95,8 @@ The File tab has the following options:
 * Recent Projects.
 
 ### New Item Tab Options
-Click **New Item** to open a **New Item** under a selected **LU** or Shared **Objects**:
-* Select a **LU** from the current **Logical Unit** dropdown list to create the new item under the selected **LU**. For example, a new [Function](/articles/07_table_population/09_creating_an_LUDB_function.md), [LU Table,](/articles/06_LU_tables/01_LU_tables_overview.md) [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) or [Global](/articles/08_globals/01_globals_overview.md).
+Click **New Item** to open a **New Item** under a selected **LU** or **Shared Objects**:
+* Select an **LU** from the current **Logical Unit** dropdown list to create the new item under the selected **LU**. For example, a new [Function](/articles/07_table_population/09_creating_an_LUDB_function.md), [LU Table,](/articles/06_LU_tables/01_LU_tables_overview.md) [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) or [Global](/articles/08_globals/01_globals_overview.md).
 * To create a new item under [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), the current Logical Unit dropdown list should be blank.
 
 Note that this area allows you to open a new item only for LU or Shared Objects. 
@@ -117,7 +117,7 @@ The Project Tree displays the components of the current project as a hierarchy o
 * Web Services, a collection of all functions that are defined as Web Services for this project.
 * [Logical Units](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
-**Note:** All operations performed in the Project Tree’s options are accessible from the context menus of the different components in the Project Tree. For example, creating a new function is accessed from the context menu when you right click the Functions object in the Project Tree.
+**Note:** All operations performed in the project tree’s options are accessible from the context menus of the different components in the project tree. For example, creating a new function is accessed from the context menu when you right click the Functions object in the project tree.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/02_window_tab_context_menu.md)
 
