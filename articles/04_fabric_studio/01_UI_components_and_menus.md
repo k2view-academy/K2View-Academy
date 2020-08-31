@@ -35,45 +35,45 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 <table>
 <tbody>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon1.png" alt="" /></td>
-<td width="300">
+ <td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon1.png" alt="" /></p></td>
+<td width="600pxl" valign="top">
 <p>file</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon2.png" alt="" /></td>
-<td width="161">
+<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon2.png" alt="" /></p></td>
+<td width="600pxl" valign="top">
 <p>New Item (CTRL+N)</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon3.png" alt="" /></td>
-<td width="161">
+<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon3.png" alt="" /></p></td>
+<td width="600pxl" valign-"top">
 <p>Project Tree (CTRL+T)</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon4.png" alt="" /></td>
-<td width="161">
+<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon4.png" alt="" /></p></td>
+<td width="600pxl" valign="top">
 <p>Query Builder</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon5.png" alt="" /></td>
-<td width="161">
+<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon5.png" alt="" /></p></td>
+<td width="600pxl" valign="top">
 <p>Tools</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon6.png" alt="" /></td>
-<td width="161">
+<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon6.png" alt="" /></p></td>
+<td width="600pxl" valign="top">
 <p>Server Activity</p>
 </td>
 </tr>
 <tr>
-<td width="57">&nbsp;<img src="/articles/04_fabric_studio/images/04_01_02_icon7.png" alt="" /></td>
-<td width="600 pxl">
+<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon7.png" alt="" /></p></td>
+<td width="600pxl" valign="top">
 <p>Help (link to the Knowledge Base)</p>
 </td>
 </tr>
@@ -97,65 +97,65 @@ Fabric Studio has the debug panel in the left upper side of the window:
 <table>
 <tbody>
 <tr>
-<td colspan="2" width="450pxl">
-<p><Strong>Fabric</Strong></p>
+<td colspan="2" width="660pxl">
+<p><h4>Fabric</p>
 </td>
 </tr>    
 <tr>
-<td width="60pxl"><p>
+<td width="60pxl" valign="top"><p>
     <img src="images/deploy_LUs_to_debug_server.png" alt="" /></p></td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Deploy all updated LUs to Fabric debug server</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl"><p>
+<td width="60pxl" valign="top"><p>
     <img src="images/open_debug_server_or_cassandra.png" alt="" /></p></td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Open Fabric console. Opens the console of the debug Fabric server with the appropriate port for each Fabric project.</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl"><p>
+<td width="60pxl" valign="top"><p>
     <img src="images/open_web_admin.png" alt="" /></p></td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Open the Fabric Web Admin on the localhost.</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl">
+<td width="60pxl" valign="top">
 <p><img src="images/start_fabric.png" alt="" /></p>
 <p><img src="images/stop_cassandra_or_fabric.png" alt="" /></p>
 </td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Start and stop Fabric debug console.</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl"><p>
+<td width="60pxl" valign="top"><p>
     <img src="images/run_reset_drop.png" alt="" /></p></td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Run <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#reset-fabric">Reset Drop</a> on the Fabric debug server.</p>
 </td>
 </tr>
 <tr>
-<td colspan="2" width="450pxl">
-<p><Strong>Cassandra</Strong></p>
+<td colspan="2" width="660pxl">
+<p><h4>Cassandra</p>
 </td>
 </tr>    
 <tr>    
 <tr>
-<td width="60pxl"><p>
+<td width="60pxl" valign="top"><p>
     <img src="images/open_debug_server_or_cassandra.png" alt="" /></p></td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Open Cassandra console for <a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md#cassandra-useful-commands">CQLSH commands.</a></p>
 </td>
 <tr>
-<td width="60pxl">
+<td width="60pxl" valign="top">
 <p><img src="images/start_fabric.png" alt="" /></p>
 <p><img src="images/stop_cassandra_or_fabric.png" alt="" /></p>
 </td>
-<td width="390pxl">
+<td width="600pxl" valign="top">
 <p>Start and stop Cassandra console.</p>
 </td>
 </tr>    
