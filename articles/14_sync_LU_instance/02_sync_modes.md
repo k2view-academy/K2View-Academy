@@ -113,6 +113,11 @@ If the sync mode is FORCE, then return True to sync the instance. Else, do not s
 
 Click to open the list of Fabric APIs: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
 
+## Always Sync
+- The Always Sync mode enables synchronizing the attahced LUI when running select queries on the LUI. The sync of the LUI is executed before the execution of the select queries.
+- You can define an Always Sync mode weather by:
+   - Set the ALWAYS_SYNC parameter of the [config.ini](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) file to true. The default value is false.
+   - Run the **SET ALWAYS_SYNC=TRUE** [Fabric command](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-commands) to override the **Always Sync** mode and set it to true on the session level. 
 
 [![Previous](/articles/images/Previous.png)](/articles/14_sync_LU_instance/01_sync_LUI_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md)
 
