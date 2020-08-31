@@ -4,7 +4,7 @@ The following tables discuss how user access control is managed using Fabric com
 
 ## CREATE Command
 
-**CREATE** commands are used to create a user, role or token in [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra:
+**CREATE** commands are used to create a user, role or token in the [k2auth keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) in Cassandra:
 
 <table width="900pxl">
 <tbody>
@@ -75,13 +75,13 @@ The following tables discuss how user access control is managed using Fabric com
 <p><h4>CREATE TOKEN</p>
 </td>
 <td width="700pxl">
-<p><strong>Description</strong>: Create a new API Key.</p>
+<p><strong>Description</strong>: Create a new API key.</p>
 <p><strong>Usage</strong>:</p>
 <p>CREATE TOKEN &lt;'token_name'&gt; [SECURED]</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li>&lt;'token_name'&gt; &ndash; mandatory, API Key name.</li>
-<li>SECURED &ndash; optional in case of secured API Key.</li>    
+<li>&lt;'token_name'&gt; &ndash; mandatory, API key name.</li>
+<li>SECURED &ndash; optional in case of a secured API key.</li>    
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
@@ -116,10 +116,10 @@ The following tables discuss how user access control is managed using Fabric com
 <p><strong>Example: </strong></p>
 <p>assign role role1 to user test_user;</p>
 </td>
-</tr>
+</tr>AP
 <tr>
 <td width="400pxl">
-<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API Key&gt;</p>
+<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API key&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a token.</p>
@@ -296,12 +296,12 @@ Below is a list of GRANT OPERATION command parameters:
 
 <p><h4><span class="md-tag md-raw-inline" spellcheck="false">GRANT &lt;WS_NAME&gt; TO &lt;ROLE&gt; </span></h4></p>
 
-Enables users to give a generic access to a given Web-Services to access the Fabric database.
+Enables users to give generic access to a given Web Service to access the Fabric database.
 
 Notes:
 
-- Use **GRANT OPERATION** command to limit the access of the [Web Services](/articles/15_web_services/01_web_services_overview.md) to a given [Logical Unit](/articles/03_logical_units/01_LU_overview.md) or LUI.
-- Use **GRANT OPERATION** command to grant an access to all Web Services: populate the **Operation** parameter by **ALL_WS**.
+- Use the **GRANT OPERATION** command to limit the access of the [Web Service](/articles/15_web_services/01_web_services_overview.md) to a given [LU](/articles/03_logical_units/01_LU_overview.md) or LUI.
+- Use the **GRANT OPERATION** command to grant an access to all Web Services: populate the **Operation** parameter by **ALL_WS**.
 
 Below is a list of GRANT WS_NAME command parameters:
 
@@ -369,9 +369,9 @@ Below is a list of GRANT WS_NAME command parameters:
 
 #### Web Services Authorization
 
-The [Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is done using the **API Key**:
-  - Project Web Services: give permission to the **role** on the Web Service or all Web Services,  and assign the API Key to the role.
-  - Product Web Services: assign the API Key to the user. The permission to the Product Web Services are defined by the combination of the API Key assigned to the user and the permissions of the roles, assigned to the user. 
+[Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is performed using the **API key**:
+  - Project Web Services: give permission to the **role** on the Web Service or all Web Services and assign the API key to the role.
+  - Product Web Services: assign the API key to the user. The permission for the Product Web Services are defined by combining the API key assigned to the user and the permissions of the roles assigned to the user. 
 
 **Example**
 <pre><code>
