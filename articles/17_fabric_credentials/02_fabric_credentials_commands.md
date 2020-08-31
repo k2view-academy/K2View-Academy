@@ -172,7 +172,7 @@ Below is a list of GRANT OPERATION command parameters:
 <li>Role activities: REVOKE_ROLE, ASSIGN_ROLE, EDIT_ROLE</li>
 <li>Other Fabric activities: READ, DROP_LUTYPE, DEPLOY, MIGRATE&hellip;</li>
 </ul>
-<p>Run <a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-help">help grant; </a> command to view the full list of operations.</p>
+<p>Run a <a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-help">help grant; </a> command to view the full list of operations.</p>
 </td>
 </tr>
 <tr>
@@ -370,8 +370,8 @@ Below is a list of GRANT WS_NAME command parameters:
 #### Web Services Authorization
 
 [Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is performed using the **API key**:
-  - Project Web Services: give permission to the **role** on the Web Service or all Web Services and assign the API key to the role.
-  - Product Web Services: assign the API key to the user. The permission for the Product Web Services are defined by combining the API key assigned to the user and the permissions of the roles assigned to the user. 
+  - Project Web Services: give permission to the **role** in the Web Service or all Web Services and assign the API key to the role.
+  - Product Web Services: assign the API key to the user. The permissions for Product Web Services are defined by combining the API key assigned to the user and the permissions of the roles assigned to the user. 
 
 **Example**
 <pre><code>
