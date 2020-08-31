@@ -121,7 +121,7 @@ Fabric supports real-time, inbound data updates via a Kafka interface using the 
 To publish change events externally via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of MicroDB changes.
 
 #### 3.2.4 Manual / Scripted Input
-External data can also be injected into theFabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
+External data can also be injected into the FabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
 
 ### 3.3 Fabric ETL Layer
 
