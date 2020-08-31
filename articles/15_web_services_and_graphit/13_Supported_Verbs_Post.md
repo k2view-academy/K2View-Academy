@@ -107,7 +107,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 }
 ```
 
-##  Post fabric-commands
+##  Post Fabric Commands
 
 * <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/fabric-commands
 
