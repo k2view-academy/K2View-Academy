@@ -24,12 +24,10 @@ The **Debug Toolbar** is used to test the Table Population map by executing its 
 
 The **Debug Toolbar** has the following icons:
 
-![image-20200901135722222](C:\Users\TaliEinhorn\AppData\Roaming\Typora\typora-user-images\image-20200901135722222.png)
-
 <table>
 <tbody>
 <tr>
-<td width="200pxl">&nbsp; <img src="images/table_population_sync_mode.png" alt="" /></td>
+  <td width="200pxl"><p><img src="images/table_population_sync_mode.png" alt="" /></p></td>
 <td width="700pxl">
 <p>Sync Mode. Sync mode values:</p>
 <li><strong>Sync On</strong>. This is the default value. Set the&nbsp;<a href="/articles/14_sync_LU_instance/02_sync_modes.md">sync mode</a> to ON when running the <a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">GET LUI</a> command on the selected Instance.</li>
@@ -39,107 +37,27 @@ The **Debug Toolbar** has the following icons:
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="images/table_population_save_to_fabric.png" alt="" /></td>
+  <td width="200pxl"><p><img src="images/table_population_save_to_fabric.png" alt="" /></p></td>
 <td width="700pxl">
 <p>If checked, the sync of the Instance will be committed on local Fabric debug server. Otherwise, the sync transaction is rollbacked on the local Fabric debug server. By default, this checkbox is unchecked.</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="images/table_population_instance.png" alt="" /></td>
+  <td width="200pxl"><p><img src="images/table_population_instance.png" alt="" /></p></td>
 <td width="700pxl">
 <p>Populate the LUI (instance ID) for the debug.</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="images/table4.png" alt="" /></td>
-<td width="364">
+  <td width="200pxl"><p><img src="images/table4.png" alt="" /></p></td>
+<td width="700pxl">
 <p>Displays the current record&rsquo;s number.</p>
 </td>
 </tr>
 <tr>
-<td width="200pxl">&nbsp; <img src="images/table_population_run_debug.png" alt="" /><img src="images/fetch_record_and_stop_debug.png" alt="" /></td>
-<td width="364">
+<td width="200pxl"><p><img src="images/table_population_run_debug.png" alt="" /><img src="images/fetch_record_and_stop_debug.png" alt="" /></p></td>
+<td width="700pxl">
 <p>Execute Debug, Debug Next Record, and Stop Debug.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-==========================
-
-<table>
-<tbody>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table1.png" alt="" /></td>
-<td width="500pxl">
-<p>Enable / Disable Debug.</p>
-<p>By default, the Debug icon is disabled. To enable Debug Mode and display its icons on the toolbar, click the Debug icon.</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table2_1.png" alt="" /><img src="images/table2_2.PNG" alt="" /></td>
-<td width="364">
-<p>Displays a list of <a href="/articles/01_fabric_overview/02_fabric_glossary.md#instance-id">Instance IDs</a> for which the LUDB file exists.</p>
-<p>Either search for the Instance ID or select it from the dropdown list of debugged Instance IDs.</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table3_1.png" alt="" /><img src="images/table3_2.PNG" alt="" /></td>
-<td width="364">
-<p>Displays a list of existing LUDB files.</p>
-<p>Click to select the file from the existing LUDB files or generate a new one. By default, the newest LUDB file is selected for the Debug&rsquo;s execution. &nbsp;&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table4.png" alt="" /></td>
-<td width="364">
-<p>Displays the current record&rsquo;s number.</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table5.png" alt="" /></td>
-<td width="364">
-<p>Execute Debug Mode: Options include Debug, Debug Next Record or Debug Next Instance which enable moving between the returned records.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<tbody>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table1.png" alt="" /></td>
-<td width="500pxl">
-<p>Enable / Disable Debug.</p>
-<p>By default, the Debug icon is disabled. To enable Debug Mode and display its icons on the toolbar, click the Debug icon.</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table2_1.png" alt="" /><img src="images/table2_2.PNG" alt="" /></td>
-<td width="364">
-<p>Displays a list of <a href="/articles/01_fabric_overview/02_fabric_glossary.md#instance-id">Instance IDs</a> for which the LUDB file exists.</p>
-<p>Either search for the Instance ID or select it from the dropdown list of debugged Instance IDs.</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table3_1.png" alt="" /><img src="images/table3_2.PNG" alt="" /></td>
-<td width="364">
-<p>Displays a list of existing LUDB files.</p>
-<p>Click to select the file from the existing LUDB files or generate a new one. By default, the newest LUDB file is selected for the Debug&rsquo;s execution. &nbsp;&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table4.png" alt="" /></td>
-<td width="364">
-<p>Displays the current record&rsquo;s number.</p>
-</td>
-</tr>
-<tr>
-<td width="200pxl">&nbsp; <img src="images/table5.png" alt="" /></td>
-<td width="364">
-<p>Execute Debug Mode: Options include Debug, Debug Next Record or Debug Next Instance which enable moving between the returned records.</p>
 </td>
 </tr>
 </tbody>
