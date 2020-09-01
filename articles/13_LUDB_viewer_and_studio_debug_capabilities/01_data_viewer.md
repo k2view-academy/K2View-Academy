@@ -82,7 +82,7 @@ For example:
 
 Instance ID by function: **fnCreateInstID** (205):
 
-```
+```java
 if (i_id!=null && !i_id.isEmpty()){
 	 return Integer.sum(Integer.valueOf(i_id),10)+"";
    }
