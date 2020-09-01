@@ -4,7 +4,7 @@ A Fabric project has a tree-like structure known as the Project Tree which displ
 To initiate an action, right click a component and select the action. For example, to create a new function right click Functions in the Project Tree.\
 The Project Tree is displayed on the left side of the Fabric Studio window.
 
-![image](/articles/04_fabric_studio/images/04_08_01%20fabric%20studio%20window.jpg)
+![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/Logical_Units_Tree.png)
 
 [Click for more information about UI Components and Menus.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
