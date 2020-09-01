@@ -1,55 +1,75 @@
 # Data Viewer
 
-The Data Viewer enables you to view a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) database (LUDB), add debugging capabilities and improve testing abilities and defect resolution times. Since a LUDB is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis.\
-Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\\[project name]\\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data
+The Data Viewer enables you to view a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) database (LUDB), add debugging capabilities and improve testing abilities and defect resolution times. Since a LUDB is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis. 
+Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\\[project name]\\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
-### How Do I View Data in a Logical Unit?
+Note that the Data Viewer runs on the Fabric debug server. Therefore you must deploy the LU to the Fabric debug server before you can run the Data Viewer on this LU.
 
-![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_01%20LOGICAL%20UNIT.jpg)
+[Click for more information about deploying LU to the Fabric debug server](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md). 
 
-1. Go to the **Project Tree**, click **Logical Units**, hover over the **Logical Unit** and click <img src="/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> to open the **Data Viewer** window.
-2. In the **Instance ID** field (top central pane) complete the **Instance ID** or **Instance ID by Function** fields and then click ![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
-Fabric retrieves data via the interfaces defined for the LU from the source DB and runs the LU mapping and transformation rules to create a new file for the LU instance. The LU instance is displayed in the tree. 
-3. Click the **Instance ID** to open the **Instances Tree** dropdown list.
+## How Do I View Data in a Logical Unit?
 
-![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_03%20instances%20tree.jpg)
+![image](images/Logical_Units_Tree.png)
+
+1. Go to the **Project Tree**, click **Logical Units**, and verify that your LU is marked by green, i.e. deployed to the debug server. If your LU is not marked by green like the **test** LU in the image above, you must deploy it  to the debug server before you can run the Data Viewer on the selected LU either by:
+
+   - Right click the LU > **Deploy To debug**.
+   - Click the deploy icon in the upper [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel)
+
+2. Click  <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
+
+3. Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) in the top left pane. The default Sync mode is ON.
+
+4. In the **Instance ID** field (top central pane) complete the **Instance ID** or **Instance ID by Function** fields.
+
+5. Click ![image](images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
+  Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server for the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the tree. 
+
+  Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, you get the following error message:
+
+  *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
+
+6. Click the **Instance ID** to open the **Instances Tree** dropdown list.
+
+![image](images/13_01_03%20instances%20tree.jpg)
 
 4. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
 
-![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_04%20Instance%20DB%20tree.jpg)
+![image](images/13_01_04%20Instance%20DB%20tree.jpg)
 
-5. Click a **table** to display its data and then right click the **table** to open a context menu with the following options:\
-   a. **Show Data**, displays the table’s data.\
-   b. **Show Schema**, displays the table’s structure.\
+5. Click a **table** to display its data and then right click the **table** to open a context menu with the following options: 
+   a. **Show Data**, displays the table’s data.
+   b. **Show Schema**, displays the table’s structure.
    c. **Show Indexes**, displays the table’s indexes, if defined.
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
-### What Are the Data Viewer Components?
+## What Are the Data Viewer Components?
 
 The Logical Unit DB Viewer contains the following areas:
-* Instance ID.
+* Sync Mode and Instance ID.
 * Instance Tree.
 * Instance DB Tree.
 * Scripting Area.
 * Results Pane and Toolbar.
 
-![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_05%20DB%20Viewer.png)
+![image](images/data_viewer_window.png)
 
-### Instance ID
+### Sync Mode and Instance ID
 
-The Instance ID area has the following components:
+This area has the following components:
 
+#### Import DB File ![image](images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)
 
- 
-### Import DB File ![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)
-	
 When clicked, loads and displays an external Data Viewer file. 
 
+#### Sync Mode
 
-### Instance ID
+Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands), initiated by the Data Viewer execution. The options are **On**, **Off**, and **Force**.  The default mode is **On**.
+
+#### Instance ID
 
 To complete this field, do either:
 * Enter a specific Instance ID value.
@@ -59,19 +79,18 @@ To complete this field, do either:
 
 For example:
 
-<pre><code>
-	
+
 Instance ID by function: **fnCreateInstID** (205):
 
+```
 if (i_id!=null && !i_id.isEmpty()){
 	 return Integer.sum(Integer.valueOf(i_id),10)+"";
    }
 return "0";
+```
 
-</code></pre>
 
-
-![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_07%20play%20icon.jpg) **Play**
+![image](images/13_01_07%20play%20icon.jpg) **Play**
 
 When clicked, retrieves and saves the data file of the Instance ID for debugging.
 	
@@ -101,31 +120,31 @@ Click for more information about References.
  <table>
 <tbody>
 <tr>
-<td width="60">&nbsp; <img src="/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg" alt="" /></td>
+<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg" alt="" /></td>
 <td width="274">
 <p>Print results.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%202.jpg" alt="" /></td>
+<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%202.jpg" alt="" /></td>
 <td width="274">
 <p>Export results as an Excel file.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%203.jpg" alt="" /></td>
+<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%203.jpg" alt="" /></td>
 <td width="274">
 <p>Filter results by one or more columns.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%204.jpg" alt="" /></td>
+<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%204.jpg" alt="" /></td>
 <td width="274">
 <p>Toggle groupings.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%205.jpg" alt="" /></td>
+<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%205.jpg" alt="" /></td>
 <td width="274">
 <p>Toggle summaries.</p>
 </td>
@@ -134,10 +153,11 @@ Click for more information about References.
 </table>
 
 
+
 ### Scripting Area
 An SQL scripting area where you can write and run SQL statements on the selected LUDB (Upper right pane).
 
-![image](/articles/13_LUDB_viewer_and_studio_debug_capabilities/images/13_01_09%20SCRIPTING%20AREA.jpg)
+![image](images/13_01_09%20SCRIPTING%20AREA.jpg)
 
 
 The following options are supported:
@@ -216,17 +236,17 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 * **Delete Selected DB Files**, deletes the selected **Instance DB files** from the **project folder**:
    Fabric\\[project name]\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
 
+**Notes:**
 
-**Notes**\
 The latest Data Viewer file can be used in the following components:
+
 * New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
 [Click for more information on How to Create a New Function.](/articles/07_table_population/10_creating_a_project_function.md)
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
 * Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
 
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_fabric_studio_log_files.md)
 
 
 
