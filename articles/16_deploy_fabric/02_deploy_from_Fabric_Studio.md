@@ -20,7 +20,7 @@ The following steps should be performed in the Fabric Studio for each deployed o
 
 ### Deploy Fabric Objects to Fabric Debug Server
 
-You must deploy your LUs to the local Fabric debug server to enable a debugging of the LU. A deployed LU is marked by a green point next to the LU.
+You must deploy your LUs to the local Fabric debug server to enable a debugging of the LU. A deployed LU is marked by a green circle next to the LU.
 
 You can deploy the Fabric implementation to the Fabric debug server by either:
 
