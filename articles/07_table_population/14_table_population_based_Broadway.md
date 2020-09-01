@@ -12,7 +12,7 @@ For example:
 
 1. Right click the table name under the **Project Tree** and then click **New Table Population based Broadway Flow** to open the Population Name popup.
 
-2. Enter the population name and click **OK** to open a Broadway flow window. The Population Flow template is created and includes the basic steps for retrieving  source data and loading it into the target. The template can be modified according to the Project's requirements.
+2. Enter the population name and click **OK** to open a Broadway flow window. The flow template is created and includes the basic steps for retrieving  source data and loading it into the target. The template can be modified according to the project's requirements.
 
    ![image](images/07_14_01.PNG)
 
@@ -20,9 +20,9 @@ For example:
 
 ### How Do I Use a Flow Population Template?
 
-A Broadway Population Flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
+A Broadway population flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
 
-A Population Flow template has the following Stages:
+A population flow template has the following Stages:
 
 * **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor.
 * **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field of the Actor. The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance and less calls to the source.
