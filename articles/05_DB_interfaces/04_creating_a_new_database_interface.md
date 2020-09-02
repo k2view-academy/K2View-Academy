@@ -19,18 +19,19 @@ The following screenshot displays a list of supported built-in interface types.
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
     **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
-   
+     
     * To check if the connection settings are correct, click the **Test Connection String**
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
-       
+    
 5. Optional: Edit the **Pool Properties**.
 
-6. Optional: Set the **Post Connection Commands** to define multi commands post JDBC interface connection on the DB Interface.
+6. Optional: Set the **Post Connection Commands** to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
 
     
+
 Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a product package.
 
 Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.
@@ -45,7 +46,7 @@ The DB Interface window enables you to define DB interfaces for your project. By
 ![image](/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
 
 Interfaces created using previous Fabric versions remain as is and can be converted to the generic interface.
- 
+
 
 #### Previous Fabric Version Interface Definition
 
@@ -72,7 +73,8 @@ Note that it is **recommended** that you convert the existing interface into a g
 New generic interfaces cannot be converted to older interface format based on ADO.NET/ODBC drivers. 
 
 #### Post Connection Commands
-The **Post Connection Commands** tab of the DB Interface window enables a definition of multiple init commands to be executed post JDBC connection and befire running the SQL statements on the DB Interface. See an example below:
+The **Post Connection Commands** tab of the DB Interface window enables a definition of multiple init commands to be executed post JDBC connection and before running the SQL statements on the DB Interface. See an example below:
 
+![post connection](images/db_interface_post_connection_commands.png)
 
 [![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
