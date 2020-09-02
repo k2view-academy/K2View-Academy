@@ -3,7 +3,7 @@
 The Table Properties tab is displayed in the right pane of the Table's window.
 
 
-![image](/articles/06_LU_tables/images/06_04_table_properties.png)
+![image](images/06_04_table_properties.png)
 
 
 The Properties tab displays a list of properties that must be defined for each LU table, as follows:
@@ -85,7 +85,18 @@ The Properties tab displays a list of properties that must be defined for each L
 <li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no Enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
 <li>When one or more Enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
 </ul>
-<p>To select an Enrichment function, click the three dots next to the Enrichment functions option and select the function name. Only functions without input and output parameters are displayed.</p>
+<p>To select an Enrichment function, click the three dots next to the Enrichment functions property and select the function name. Only functions without input and output parameters are displayed.</p>
+</td>
+</tr>
+</tr>
+<tr>
+<td width="150">
+<p><h4>
+<a href="/articles/07_table_population/08_project_functions.md"><strong>On Change</strong></a></p>
+</td>
+<td width="474">
+<p>Trigger functions which are executed when there is a change in LU table's data.</p>
+<p>To select a Trigger function, click the three dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
 </td>
 </tr>
 </tbody>
