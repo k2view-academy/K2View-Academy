@@ -28,6 +28,39 @@ The **TableDataChange** data type exposes a set of methods which allows to get a
 
 The Trigger function can analyze the change using the above information and execute a business logic, for example write the old and the new values into a log table.
 
+### How Do I Attach an Enrichment Function to an LU Table?
+
+A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU schema](articles/03_logical_units/03_LU_schema_window.md) to be executed  when there is a change in LU table's data. 
+
+Do the following:
+
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
+
+2. To attach the Trigger function using the [LU Table Properties tab](/articles/06_LU_tables/04_table_properties.md), click the **three dots** next to the **On Change** option to open the **Trigger Item Collection Editor**. 
+
+   ![image](images/07_11_4_01.PNG)
+
+3. Click **Add** and then click the area next to **Name** to display the list of Trigger functions. Select the function from the list. 
+
+   ![image](images/07_11_4_02.PNG)
+
+4. (Optional) To add more **Trigger functions** to the same LU table, click **Add** again and select the additional functions. Define the Trigger functions execution order using the **arrows** next to the **function names** in the **Editor**.
+
+5. Click **OK** to close the Editor and then **Save** the table.
+
+### How Do I Remove an Enrichment Function from an LU Table? 
+
+To remove a Trigger function from the LU table, do the following:
+
+1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
+
+2. In the [Table Properties tab](/articles/06_LU_tables/04_table_properties.md), click the **three dots** next to the **Enrichment Functions** option to open the **Trigger Item Collection Editor**.
+
+3. Select the function and click **Remove**.
+
+4. Click **OK** to close the Editor and then **Save** the table.
+
+
 ### Example of a Trigger Function
 
 1. Create a new function with **Function Type = Trigger Function**.
