@@ -92,7 +92,7 @@ Fabric Studio has the debug panel in the left upper side of the window:
 
 ![debug toolbar](images/fabric_studio_debug_panel.png)
 
- The debug panel enables an easy access to the local Fabric debut server, local Cassandra debug server, and the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
+ The debug panel enables an easy access to the Fabric debug server, Cassandra debug server, and the Fabric Web Admin. The debug panel is divided into two main areas: Fabric and Cassandra:
 
 <table>
 <tbody>
