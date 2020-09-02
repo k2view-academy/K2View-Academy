@@ -42,7 +42,7 @@ Dynamic Logic Actors include dynamic logic as one of their input parameters. The
 
 ## Actor Description and Remarks
 
-The description of the Actor is part of the Actor file. A remark is a user's comment added during the flow implementation.
+The description of the Actor is part of the Actor's file. A remark is a user's comment added during the flow implementation.
 
 When exporting an Actor, the Actor's remarks are copied to the description of the new Actor type.
 
@@ -54,6 +54,6 @@ To add your own remark to an Actor, select **Remark** in the [Actor's context me
 
 ![image](images/99_03_actor_remark.PNG)
 
-To delete a remark, simple remove its text and close. 
+To delete a remark, remove its text and close the remark. 
 
 [![Previous](/articles/images/Previous.png)](02a_broadway_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_actor_window.md)

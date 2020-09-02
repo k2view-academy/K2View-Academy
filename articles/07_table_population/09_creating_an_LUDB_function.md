@@ -21,14 +21,14 @@ When creating an LUBD fuction, make sure that:
 2.	Define the Input (optional) and **Output** parameters of the function.
 3.	Create another function, for example a **Root function**, that invokes the **LUDB function** from the **SELECT** statement:
 
-<pre><code>
+~~~java
 String sql = 
 "SELECT CUSTOMER_ID, ACTIVITY_ID, ACTIVITY_DATE, ACTIVITY_NOTE, fnCreateInstId(?) IID FROM Customer.ACTIVITY";
 Db.Rows rows = ludb().fetch(sql,input);
 for (Db.Row row:rows){
 	yield(row.cells());
 }
-</code></pre>
+~~~
 
 [Click to display an example of **fnCreateInstId** LUDB Function in the Demo project.](/articles/demo_project)
 
