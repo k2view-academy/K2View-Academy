@@ -1,9 +1,9 @@
 # Transactions
 
-Broadway has a built-in Transactions Management mechanism which handles the transactions over one or more resources. The transactional resources are defined by the Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) and can be shared or non-shared.
+Broadway has a built-in Transactions Management mechanism that handles transactions over one or more resources. Transactional resources are defined by Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) and can be shared or non-shared.
 
-* Using a **shared** resource in a flow, the connection is opened only once within the same transaction, when the first Actor is calling this resource. All other Actors will use the same connection. The examples of shared resources used by Broadway are DB Interface, file system or SFTP.
-* Using  a **non-shared** resource, the connection is established each time when an Actor is calling the resource in the flow. The example of a non-shared resource used by Broadway is HTTP. 
+* Using a **shared** resource in a flow, the connection is opened only once within the same transaction, when the first Actor calls this resource. All other Actors will use the same connection. The examples of shared resources used by Broadway are DB Interface, file system or SFTP.
+* Using  a **non-shared** resource, the connection is established each time an Actor calls the resource in the flow. An example of a non-shared resource used by Broadway is HTTP. 
 
 A transaction can be defined on DB-related activities as well as on different types of entities. For example, writing into a file. When a Broadway flow writes into a file, the end transaction closes the file. 
 
@@ -15,31 +15,31 @@ A transaction can be defined on DB-related activities as well as on different ty
 
 ### Inner Flows Behavior
 
-Transactions can include [inner flows](22_broadway_flow_inner_flows.md). If a transactional Stage executes an inner flow, it automatically becomes a part of the outer transaction and it can use a shared resource of the outer transaction.
+Transactions can include [inner flows](22_broadway_flow_inner_flows.md). If a transactional Stage executes an inner flow, it automatically becomes a part of the outer transaction and can use its shared resource.
 
-When the outer flow starts the transaction and then invokes an inner flow, the inner flow does not close the transaction. The transaction will be closed by the outer flow.
+When the outer flow starts the transaction and then invokes an inner flow, the inner flow does not close the transaction. The transaction is closed by the outer flow.
 
 ### Iterations Behavior
 
-There can be two transactional approaches within the iterations in Broadway: 
+There are two approaches for handling transactions during an iteration: 
 
-* To close the transaction and perform commit only after the loop over the data set is completed.
+* Closing the transaction and performing a commit after the loop over the data set is completed.
 
   ![image](images/99_23_commit_at_end.PNG)
 
-* Or, to close the transaction and commit on each iteration. In this case, empty Stage 3 is required to indicate that the transaction of **Iterate on array** Stage is finished before the iteration is closed.
+* Closing the transaction and performing a commit on each iteration. In this case, empty Stage 3 is required to indicate that the transaction of **Iterate on array** Stage is finished before the iteration is closed.
 
   ![image](images/99_23_commit_each.PNG)
 
-### Stage Conditions Impact on Transaction
+### Impact of Stage Conditions on Transactions
 
-If the flow is split into several branches, the transaction can be defined per each branch and it will be a separate transaction per branch. 
+If the flow is split into several branches, the transaction can be defined for each branch separately. 
 
-When a [Stage condition](19_broadway_flow_stages.md#what-is-a-stage-condition) is not met in the transactional Stage of the flow, the transaction ends with a rollback and the execution of its branch stops. Other branches can be still executed as per the flow logic including their respective transactions.
+When a [Stage condition](19_broadway_flow_stages.md#what-is-a-stage-condition) is not met in the transactional Stage of the flow, the transaction ends with a rollback and the execution of its branch stops. Other branches and their respective transactions can still be executed according to the flow’s logic.
 
 ![image](images/99_23_split.PNG)
 
-### Error Handling Impact on Transaction
+### Impact of Error Handling on Transactions
 
 When an [Error Handler](24_error_handling.md) is defined in the transactional Stage of the flow and it catches an error, the transaction ends with a rollback and the flow execution stops. The error message displays the failure reason.
 
