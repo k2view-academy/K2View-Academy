@@ -11,6 +11,8 @@ For example, to notify an external consumer system about a customer's change of 
 -  HOUSE_NO
 -  ZIP_CODE 
 
+Note that Fabric Studio does not allow to define more than 63 columns as a CDC fields in the same LU table, assuming that all columns are positioned by 1 to 63 in the LU table.
+
 A specific CDC message is generated for each type of change on the CDC columns. 
 
 ## Controlling the Publishment of the CDC Messages
