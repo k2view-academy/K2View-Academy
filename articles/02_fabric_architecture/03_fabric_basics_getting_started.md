@@ -53,11 +53,9 @@ Run the **k2fabric -version** script through the Fabric server command line to g
 
 Type **fabric** in the Fabric server command line. 
 
-### Enter the Local Fabric Server
+### Enter the Fabric Debug Server
 
-Open the **Fabric Console** via the **Windows Search** option. When opening a project, the Fabric Studio logs into the local Fabric server. 
-
-Note that if there are no open projects in the Fabric Studio, you will not be able to open the local Fabric server.
+[Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) enables starting, stopping, and opening the **Fabric Console** of the Fabric debug server.
 
 ## Reset Fabric
 
