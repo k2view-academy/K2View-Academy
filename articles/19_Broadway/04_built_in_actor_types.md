@@ -2,7 +2,9 @@
 
 Broadway has a large list of built-in [Actors](03_broadway_actor.md#actor-overview) that can be added to a flow in order to create various types of activities. Broadway's built-in Actors are split into categories, where each category includes several Actor types.
 
-The below tables presents a list of Actor's categories with examples per each category. This is not an exhaustive list of Actors.
+The following table presents a list of Actor's categories with examples per each category. This is not an exhaustive list of Actors.
+
+[Click for more information about the most useful Actors and the code examples](actors/README.md).
 
 <table width="900pxl">
 <tbody>
@@ -22,7 +24,8 @@ The below tables presents a list of Actor's categories with examples per each ca
 <h4><a id="user-content-favorites" class="anchor" href="04_built_in_actor_types.md#favorites" aria-hidden="true"></a><strong>Favorites</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
-<p>Most commonly used Actors. Favorites is not a separate category. Each Actor in Favorites belongs to some category.</p>
+<p>Most commonly used Actors.</p>
+<p>Favorites is not a separate category. Each Actor in Favorites belongs to a category.</p>
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>Const</strong> Actor, copies the input value argument to the output value argument. A Const Actor can:</p>
@@ -86,8 +89,18 @@ The below tables presents a list of Actor's categories with examples per each ca
 <p><strong>DbLoad</strong> Actor, loads data into a database using INSERT, UPDATE or UPSERT (if supported). The interface used as input can be the same as for <strong>DbCommand</strong> Actor.</p>
 <ul>
 <li>The Actor supports named parameters with the parameter name inside ${}. Values are taken from the Actor's input parameters.</li>
-<li>In the case of INSERT, the actor also supports ordered parameters using the <strong>?</strong> as a replacement for the parameter.</li>
+<li>In an INSERT command, the Actor also supports ordered parameters using the <strong>?</strong> as a replacement for the parameter.</li>
 </ul>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;" width="210">
+<h4><strong>fabric</strong></h4>
+</td>
+<td style="vertical-align: top;" width="433">Actors which execute the Fabric commands.</td>
+<td style="width: 600px; vertical-align: top;" width="600">
+<p><strong><span class="md-pair-s md-expand"><span class="md-plain">FabricGet</span></span></strong><span class="md-plain md-expand"> Actor performs the GET command on the current Fabric session.</span></p>
+<p><span class="md-plain md-expand"><strong>FabricSet</strong> Actor sets a value on the Fabric session.</span></p>
 </td>
 </tr>
 <tr>
@@ -107,6 +120,16 @@ The below tables presents a list of Actor's categories with examples per each ca
 <p><strong>And</strong> Actor, returns&nbsp;True&nbsp;if and only&nbsp;if both A and B&nbsp;are&nbsp;True. Both A and B must be boolean values or a value that can be converted to a boolean.&nbsp;&nbsp;</p>
 <p><strong>Elvis</strong> Actor, returns&nbsp;A&nbsp;if converted to boolean is&nbsp;True. Otherwise returns B.</p>
 <p><strong>IfElse</strong> Actor, includes the&nbsp;test&nbsp;input to be validated as either True or False.&nbsp;If test is True, return&nbsp;A, else return&nbsp;B.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;" width="210">
+<h4><strong>masking</strong></h4>
+</td>
+<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email.</td>
+<td style="width: 600px; vertical-align: top;" width="600">
+<p><strong>MaskingSSN</strong> Actor,&nbsp;masks the original SSN number with a valid fake SSN.</p>
+<p><strong>MaskingCreditCard</strong> Actor,&nbsp;generates fake but valid credit card number similar to original card type.</p>
 </td>
 </tr>
 <tr>
@@ -191,5 +214,6 @@ The below tables presents a list of Actor's categories with examples per each ca
 </tr>
 </tbody>
 </table>
+
 
 [![Previous](/articles/images/Previous.png)](03_broadway_actor_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_types.md)

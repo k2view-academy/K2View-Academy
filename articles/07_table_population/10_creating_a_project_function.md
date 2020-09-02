@@ -90,11 +90,11 @@ Input / Output settings can be automatically defined based on DB objects either 
 4.	Right click the **Column Name(s)** to use as the basis for the **generated code** and then select **Generate Code**.
 
 Example of the code generated for the function with **Input = CUSTOMER_ID** from the CUSTOMER table:
-```java
+~~~java
 String sql = "SELECT CUSTOMER_ID FROM CRM_DB.CUSTOMER";
 db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 });
-```
+~~~
 
 **Notes** 
 *	The code generated in the above example acts as the basis for a function and should be further updated according to the function’s requirements.
@@ -113,15 +113,15 @@ To invoke a project function from another category in the same LU, do the follow
 
 To see the import, open the source file of the function's category. For example, when adding an invocation to the fnCheckSourceEnv() function which belongs to the DECISION category in the CRM Logical Unit, the following import is added:
 
-```java
+~~~java
 import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.fnCheckSourceEnv;
-```
+~~~
 
 To invoke several functions in the same category, modify the import as follows:
 
-```java
+~~~java
 import static com.k2view.cdbms.usercode.lu.CRM.DECISION.Logic.*;
-```
+~~~
 
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/09_creating_an_LUDB_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)

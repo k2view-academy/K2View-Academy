@@ -35,16 +35,21 @@ A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#
 Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they will be automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
 To run the flow, click **Run Flow** ![image](images/99_25_run.PNG) to run the entire flow and display the results. 
-- If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
-- If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
 
-If the break points have been added to the flow, the flow stops at the first break point.
-- Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
+- If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
+
+- If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
+  
+
+If the break points have been added to the flow, the flow stops at the first break point. Note that when a flow contains an inner flow and it has break points, the flow stops at the inner flow's break points too.
+
+  - Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
+
 - Click **Debug Step** ![image](images/99_25_step.PNG)to debug the current step and move to the next step.
 
-To stop the flow or to stop the debug, click **Stop Run** ![image](images/99_25_stop.PNG) to stop the flow run.
+To stop the flow, click **Stop Run** ![image](images/99_25_stop.PNG) to stop the flow run.
 
-Note that when Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
+When Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
 ### Displaying Input and Output Data During a Debug
 
@@ -62,7 +67,7 @@ The Broadway Debug process *learns* the Schema of complex output parameters and 
 
 When debugging an Actor with a complex output parameter, the parameter port is red:
 
-  ![](images/debug_update_schema.png)
+  <img src="images/debug_update_schema.png" style="zoom:80%;" />
 
 1. Click the **parameter's port** (red) to open the Compare Schema window.
 
@@ -75,4 +80,5 @@ When debugging an Actor with a complex output parameter, the parameter port is r
   ![](images/data_insepction_debug.png)
 
 
-[![Previous](/articles/images/Previous.png)](21_iterations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](27_broadway_data_inspection.md)
+
+[![Previous](/articles/images/Previous.png)](24_error_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](27_broadway_data_inspection.md)

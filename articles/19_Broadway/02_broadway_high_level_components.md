@@ -16,13 +16,13 @@ There are a few other core capabilities that are important for a high-level of u
   <div>
     <p>Actors can get their input from three different sources:</p>
     <ul>
-      <li>The output of a previous Actor: the connecting lines between Actors.</li>
+      <li>The output of a previous Actor - the connecting lines between Actors.</li>
       <li>A Constant value supplied by the user.</li>
       <li>An input argument to the flow (external).</li>
     </ul>
 <p>When the Actor executes, it is completely unaware of the source of its data.</p>
-<p>Output arguments can also be exposed (external) as results of the flow execution. This makes the data available to the module that executed the Broadway flow.</p>
-<p>In the image we can see the JavaScript Actor obtaining the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
+<p>Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow.</p>
+<p>In the image, the JavaScript Actor obtains the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous Actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
 </div>
 </td>
 <td width="400">
@@ -69,16 +69,23 @@ The *else* fork will be executed if none of the other splits were executed.
 
 Actors have an inheritance hierarchy. This enables activities such as pinning a constant value and reusing it across multiple flows, reusing some Actor logic such as JavaScript or SQL and even overriding the Actor Java implementation and tailoring it to a specific use case.  
 
+[Click for more information about Actor Inheritance](06_export_actor.md).
+
 ## Transactions
 
 Broadway has a built-in transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the Actors in these Stages use, such as database or queue, automatically becomes part of a transaction. Once the Transactional Stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
 Transactions also take into account inner Broadway flows. If a Transactional Stage executes an inner Broadway flow, the flow automatically becomes part of the outer transaction.
 
+[Click for more information about Transactions](23_transactions.md).
+
 ## Error Handling
 
-Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform in case an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
+Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
 
 <div align="center"><img src="images/overview_error.png" height="200"></div>
+
+[Click for more information about Error Handling](24_error_handling.md).
+
 
 
 [![Previous](/articles/images/Previous.png)](01_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02a_broadway_flow_overview.md)

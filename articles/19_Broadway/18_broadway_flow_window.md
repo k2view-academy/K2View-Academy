@@ -1,6 +1,6 @@
 # Broadway Flow Window
 
-The **Broadway flow** window is the main Broadway interface that enables the definition and execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](20_broadway_flow_linking_actors.md). 
+The **Broadway flow** window is the main Broadway interface that enables the definition and execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
 
 To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
@@ -30,10 +30,10 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <td width="170pxl">Actions</td>
 <td width="630pxl">
 <ul>
-<li><a href="17_tutorial_and_flow_examples.md">Examples</a> - open the tutorial or an example flow.</li>
-<li>Save as Actor, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
-<li>Debug/Run Arguments, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Flip Scroll-wheel, command the mouse to move the window scrollbar horizontally instead of vertically.</li>
+<li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
+<li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
+<li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
+<li>Flip Scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
@@ -82,7 +82,8 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tbody>
 </table>
 
-[Click for more information how to run and debug the Broadway flow](20_broadway_flow_linking_actors.md).
+
+[Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
 
@@ -123,18 +124,18 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
-<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a stage condition. Note that Stage condition Actors are grey.</td>
+<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a Stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
 <td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
 <td style="width: 465px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
 <tr>
-<td width="200">Error Handler</td>
+<td width="200"><a href="24_error_handling.md">Error Handler</a></td>
 <td style="width: 465px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
-<td width="200">Transaction</td>
+<td width="200"><a href="23_transactions.md">Transaction</a></td>
 <td style="width: 465px;">Click to open or close the transaction.</td>
 </tr>
 <tr>
@@ -147,6 +148,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -164,7 +166,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td width="420pxl">Collapse or expand the Actor and display its title.</td>
 </tr>
 <tr>
-<td width="200"><a href="20_broadway_flow_linking_actors.md#show-only-connected-objects">Show Only Connected</a></td>
+<td width="200"><a href="08_show_only_connected_actors.md">Show Only Connected</a></td>
 <td style="width: 465px;">Mark to display the selected Actor and its connections.</td>
 </tr>
 <tr>
@@ -176,7 +178,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
 </tr>
 <tr>
-<td width="200"><a href="21_broadway_flow_linking_actors.md#how-do-i-add-links-to-the-flow">Link</a></td>
+<td width="200"><a href="07_broadway_flow_linking_actors">Link</a></td>
 <td style="width: 465px;">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
 <tr>
@@ -184,7 +186,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to open a popup window and select an Actor for the Stage.&nbsp;</td>
 </tr>
 <tr>
-<td width="200">Export Actor</td>
+<td width="200"><a href="06_export_actor.md">Export Actor</a></td>
 <td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
 </tr>
 <tr>
@@ -207,9 +209,9 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 
 ![image](images/99_18_04_properties.PNG)
 
-[Click for more information about Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
+[Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 
-Note that if the [link between two Actors](20_broadway_flow_linking_actors.md#link-object-properties) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
+Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
 
 
 [![Previous](/articles/images/Previous.png)](17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](19_broadway_flow_stages.md)
