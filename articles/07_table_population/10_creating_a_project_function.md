@@ -83,7 +83,7 @@ Input / Output settings can be automatically defined based on DB objects either 
 3.	Click a **Table** in the database hierarchy.
 4.	Right click the **Column Name(s)** to use as a basis for the **generated code** and select Generate Code.
 
-Example of generated code of the function with **Input = CUSTOMER_ID** from the CUSTOMER table:
+Example of the code generated for the function with **Input = CUSTOMER_ID** from the CUSTOMER table:
 ~~~java
 String sql = "SELECT CUSTOMER_ID FROM CRM_DB.CUSTOMER";
 db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
