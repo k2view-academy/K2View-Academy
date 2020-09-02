@@ -8,9 +8,7 @@ The following is an example of the Table Population window:
 
 ![image](images/debug_population_window.png)
 
-The The new population debug uses get/ref sync commands over the local fabric server and not the existing Sqlite files from the data viewer as before.
-
-The Population window has a **Debug** option which activates a [GET LUI](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) Fabric command over the local Fabric debug server.  
+The Population window has a **Debug** option which activates a [GET LUI](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) Fabric command over the Fabric debug server.  
 
 The mapped data is displayed in the Population Window working area and errors, if they exist, are displayed in the [Log window](02_fabric_studio_log_files.md). 
 
@@ -32,14 +30,14 @@ The **Debug Toolbar** has the following icons:
 <p>Sync Mode. Sync mode values:</p>
 <li><strong>Sync On</strong>. This is the default value. Set the&nbsp;<a href="/articles/14_sync_LU_instance/02_sync_modes.md">sync mode</a> to ON when running the <a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">GET LUI</a> command on the selected Instance.</li>
 <li><strong>Sync Force</strong>. Set the&nbsp;<a href="/articles/14_sync_LU_instance/02_sync_modes.md">sync mode</a> to FORCE when running the <a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">GET LUI</a> command on the selected Instance.</li>
-<li><strong>New</strong>. Delete the LUI (Instance) from the local Fabric debug server and and run GET LUI with a sync ON mode to get the selected Instance.</li>
-<li><strong>Attach</strong>. Listens to external sync in the local Fabric debug server which activates the population debug. Displays the input and output values for the table population.</li>
+<li><strong>New</strong>. Delete the LUI (Instance) from the Fabric debug server and and run GET LUI with a sync ON mode to get the selected Instance.</li>
+<li><strong>Attach</strong>. Listens to external sync in the Fabric debug server which activates the population debug. Displays the input and output values for the table population.</li>
 </td>
 </tr>
 <tr>
   <td width="200pxl"><p><img src="images/table_population_save_to_fabric.png" alt="" /></p></td>
 <td width="700pxl">
-<p>If checked, the sync of the Instance will be committed on local Fabric debug server. Otherwise, the sync transaction is rollbacked on the local Fabric debug server. By default, this checkbox is unchecked.</p>
+<p>If checked, the sync of the Instance will be committed on Fabric debug server. Otherwise, the sync transaction is rollbacked on the Fabric debug server. By default, this checkbox is unchecked.</p>
 </td>
 </tr>
 <tr>
