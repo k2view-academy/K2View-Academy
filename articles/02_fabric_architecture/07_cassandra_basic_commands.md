@@ -91,15 +91,7 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 
 #### Run CQLSH on Local Cassandra 
 
-When working on the local Fabric server installed on a Windows machine, open the command line window from the following Windows directory: **C:\k2view\[Fabric version]\apache-cassandra-3.11.4\bin**.
-
-Login to Cassandra from the command line (cmd) window:
-
-<p><strong>cqlsh -u &lt;username&gt; -p &lt;password&gt;</strong>;</p>
-
-Notes:
- 
-- Use **cassandra** as user and password when connecting the local Cassandra server.
+[Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) enables starting, stopping, and opening the local **Cassandra Console**.
 
 Alternatively, do the following:
 
