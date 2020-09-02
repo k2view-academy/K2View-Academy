@@ -1,8 +1,8 @@
 #  Error Handling
 
-Broadway Error Handling mechanism handles the exceptions in a flow using **Error Handlers**. 
+Broadway has a built-in Error Handling mechanism that handles exceptions in a flow using **Error Handlers**. 
 
-An error handler is implemented using an [Actor](03_broadway_actor.md) and it can be assigned to any [Stage](19_broadway_flow_stages.md) of a flow. Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
+An error handler is an [Actor](03_broadway_actor.md) that can be assigned to any [Stage](19_broadway_flow_stages.md) of a flow. Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
 
 The Actor's logic is validated as follows:
 
@@ -10,7 +10,7 @@ The Actor's logic is validated as follows:
 
 - When an error handler returns false, the flow stops.
 
-An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it allows to include complex logic as part of the error handling. This is recommended to use Inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
+An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. It is recommended using inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
 ### How Do I Add an Error Handler to a Stage?
 
@@ -20,13 +20,13 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 **Example of an Error Handler in a Flow** 
 
-1. Create a flow with the required business logic. For example: given two input numbers, divide a bigger number by a smaller number. 
+1. Create a flow with the required business logic. For example: given two input numbers, divide a higher number by a lower number. 
 
-2. Before the division in Stage 4, check that the smaller number does not equal zero using an error handler named **Validation** in Stage 3 of the flow. 
+2. Before the division in Stage 4, check that the lower number does not equal zero using the **Validation** error handler in Stage 3 of the flow. 
 
    ![image](images/99_24_02.PNG)
 
-3. If the smaller number equals zero, throw an error using the **ErrorMsg** **JavaScript** Actor. Stage 4 is not executed since the error handler stops the flow's execution. 
+3. If the lower number equals zero, throw an error using the **ErrorMsg** **JavaScript** Actor. Stage 4 is not executed since the error handler stops the flow's execution. 
 
    ![image](images/99_24_03.PNG)
 
