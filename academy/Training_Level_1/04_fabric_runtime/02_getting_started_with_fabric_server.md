@@ -23,11 +23,9 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 6. Let's restart Fabric using **k2fabric start**. Which message is prompted?**++++++++++Fabric is READY**
 7. In another server session, go to **$K2_HOME/logs** and **tail k2fabric.log**. Which message is prompted? **Starting** marked in blue.
 
-###### Local Fabric - Window
+###### Fabric Debug Server - Windows
 
-1. To verify the Fabric version, run **fabric>version;** in the Fabric Console.
-
-2. Go to the Fabric **C:\k2view\Fabric_6.1\Server\fabric** directory in the Windows Explorer.
+1. Go to the Fabric  directory under the **[Fabric Studio]\Server\fabric** directory in the Windows Explorer.
 
 3. Let's list the folders. How many folders are there? *8* folders.
 
