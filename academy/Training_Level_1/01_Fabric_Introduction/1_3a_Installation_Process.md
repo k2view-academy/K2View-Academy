@@ -10,7 +10,6 @@ Keep in mind that the minimal requirements for installing Fabric for development
 
 * Operating System: Windows 10.
 
-* (optional) Additional software for running cqlsh on Cassandra: Python 2.7.
 
 Please click [Training Request Ticket](https://www.k2view.com/) to receive an email from our Technical Support team with instructions and details for your selected option, as follows:
 - IP addresses and credentials for the databases that you will be requested to enter during the Interfaces Configuration phase of the course.
