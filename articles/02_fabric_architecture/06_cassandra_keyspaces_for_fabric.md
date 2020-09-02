@@ -9,7 +9,7 @@ Fabric creates several keyspaces for its operation:
 **Notes:**
 
 -  When set in the [node.id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) configuration file, the cluster_id is concatenated to each keyspace name. For example: if the cluster_id is set to crm1, the keyspace k2view_customer_crm1 is created.
-- When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the local Cassandra server and concatenates the project name to the keyspace name.
+- When a Fabric project is opened in the Fabric Studio, it creates the keyspaces of the project in the Cassandra debug server and concatenates the project name to the keyspace name.
 - A <strong>k2view_k2_ws</strong> keyspace is created for deployed WS.
 
 ## Login Cassandra DB
