@@ -49,7 +49,7 @@ To remove an Enrichment function from the LU table, do the following:
 
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
-2. In the [Table Properties tab](/articles/06_LU_tables/04_table_properties.md#enrichment-functions), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**.
+2. In the [Table Properties tab](/articles/06_LU_tables/04_table_properties.md), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**.
 
    ![10_03_create_enrichment_3](images/10_03_create_enrichment_3.PNG)
 
