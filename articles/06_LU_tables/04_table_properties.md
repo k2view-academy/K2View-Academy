@@ -55,10 +55,10 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="/articles/14_sync_LU_instance/04_sync_methods.md"><strong>Sync Method</strong></a></p>
+<p><strong>Sync Method</strong></p>
 </td>
 <td width="474">
-<p>There are four Sync methods:</p>
+<p>There are four <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync methods</a>:</p>
 <ul>
 <li>None.</li>
 <li>Inherited (default).</li>
@@ -69,18 +69,18 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><a href="/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync"><strong>Truncate Before Sync</strong></a></p>
+<p><strong>Truncate Before Sync</strong></p>
 </td>
 <td width="474">
-<p>When Truncate Before Sync = True, the entire LU table is truncated before the populations are executed.</p>
+<p>When <a href="/articles/14_sync_LU_instance/04_sync_methods.md#truncate-before-sync">Truncate Before Sync</a> = True, the entire LU table is truncated before the populations are executed.</p>
 </td>
 </tr>
 <tr>
 <td width="150">
-<p><h4><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md"><strong>Enrichment Functions</strong></a></p>
+<p><strong>Enrichment Functions</strong></p>
 </td>
 <td width="474">
-<p>Functions which are executed after all LU tables are populated.</p>
+<p><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Functions</a> which are executed after all LU tables are populated.</p>
 <ul>
 <li>The execution order is determined on an LU level and based on the Sync policy of the attached table. When no Enrichment function is attached - displays &lsquo;Empty&rsquo;.</li>
 <li>When one or more Enrichment functions are attached &ndash; displays &lsquo;&lt;x&gt; enrichments&rsquo; (where &lt;x&gt; is the number of attached Enrichment functions).</li>
@@ -91,11 +91,10 @@ The Properties tab displays a list of properties that must be defined for each L
 </tr>
 <tr>
 <td width="150">
-<p><h4>
-<a href="/articles/07_table_population/08_project_functions.md"><strong>On Change</strong></a></p>
+<p><strong>On Change</strong></p>
 </td>
 <td width="474">
-<p>Trigger functions which are executed when there is a change in LU table's data.</p>
+<p><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Trigger functions</a> which are executed when there is a change in LU table's data.</p>
 <p>To select a Trigger function, click the three dots next to the On Change property and select the function name. Only Trigger functions are displayed.</p>
 </td>
 </tr>
