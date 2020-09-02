@@ -13,7 +13,7 @@ For example, to notify an external consumer system about a customer's change of 
 
 A specific CDC message is generated for each type of change on the CDC columns. 
 
-### Controlling the Publishment of the CDC Messages
+## Controlling the Publishment of the CDC Messages
 
 To control whether a CDC message is published to the external systems, do either:
 - Update the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). Set the CDC_PUBLISH_MODE parameter:
@@ -22,7 +22,7 @@ To control whether a CDC message is published to the external systems, do either
   - IF_SETUP, (Studio Debug default) when implemented, publish the CDC message only if the CDC publisher has been configured in the config.ini.
 - Run **SET CDC_PUBLISH** Fabric command to set the CDC mode on a session level. The values of the CDC_PUBLISH are **true** (enabling the CDC publishing) or **false** (disabling the CDC publishing). The default value is **true**.
 
-### CDC Message Types
+## CDC Message Types
 
 Fabric has the following CDC messages:
 
@@ -37,7 +37,7 @@ Fabric has the following CDC messages:
 <p>CDC Schema</p>
 </td>
 <td valign="top" width="600pxl">
-<p>Generated when an LU is deployed to Fabric for the first time. These messages hold the LU Schema's name and information about its CDC tables.&nbsp;</p>
+<p>Generated when an LU is deployed to Fabric for the first time, or when executing the <strong>CDC_REPUBLISH_SCHEMA</strong> Fabric command. These messages hold the LU Schema's name and information about its CDC tables.&nbsp;</p>
 <p>See the example in&nbsp;<a href="/articles/18_cdc_and_search/02_cdc_messages.md#appendix-a-cdc-schema-message---example">Appendix A</a>.</p>
 </td>
 </tr>
