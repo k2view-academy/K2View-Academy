@@ -67,7 +67,6 @@ The following is a list of server configuration items:
 <p><strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
 <p><strong>Unchecked</strong>: performs a sync on schema changes only.</p>
 <p>Note that each LU undergoes one forced sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
- <p> Fabric displays <strong>Force Upgrade Post Deploy</strong> note next to the severs, marked as Force Upgrade Post Deploy, when you right click a Fabric object in the project tree an select the <strong>Deploy to Server</strong> to display the list of Fabric servers, available for deploy.</p> 
 </td>
 </tr>
 <tr>
