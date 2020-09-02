@@ -6,7 +6,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 ### Project Function Types
 
 #### **Regular Function**
-*	A function that executes the business logic required within a project and can be invoked from any Fabric object like a [Table Population](/articles/07_table_population/01_table_population_overview.md), [Parser], [Web Services](/articles/15_web_services/01_web_services_overview.md) or from another function. 
+*	A function that executes the business logic required within a project and can be invoked from any Fabric object like a [Table Population](/articles/07_table_population/01_table_population_overview.md), Parser, [Web Services](/articles/15_web_services/01_web_services_overview.md) or from another function. 
 *	A Regular function has a specific category known as an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) which is executed once all LU tables have been populated to extract data from any LU table and use it as needed. An Enrichment function must not have Input parameters and must not return any value.
 
 #### **Root Function**  
@@ -31,12 +31,16 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 [Click for Code Examples of a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#decision-functions-for-lui-sync--example-use-cases)
 
 #### **Switch Function**
-*	A specific Fabric Project function used by [Parsers] to split records to populate more than one record type in the Parser map.
-*	A Switch function enables users to define different types of records for the same parser [User Job]. 
-* A specific Fabric function used by the [Job’s] mechanism. Jobs can only invoke functions of this type.
-
+*	A specific Fabric Project function used by Parsers to split records to populate more than one record type in the Parser map.
+*	A Switch function enables users to define different types of records for the same parser. 
 
 #### **User Job**
-* A specific Fabric function used by the Job’s mechanism. Jobs can only invoke functions of this type.
+
+* A specific Fabric function used by the Job’s mechanism. [Fabric Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) can only invoke functions of this type.
+
+#### **Trigger Function**
+
+* A function that is triggered when an LU table data  is modified. 
+* A trigger function is invoked from the **On Change** [LU table property](/articles/06_LU_tables/04_table_properties.md#on-change) that contains a list of trigger functions names (on Shared and LU level).
 
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/07_fabric_built_in_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/09_creating_an_LUDB_function.md)
