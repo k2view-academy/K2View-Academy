@@ -10,7 +10,7 @@ The steps which are unique for Enrichment functions are as follows:
 2. Do not define Input / Output parameters.
 3. It is recommended to set the **Category** to **Enrichment**.
 
-![10_03_create_enrichment_1](/articles/10_enrichment_function/images/10_03_create_enrichment_1.PNG)
+![10_03_create_enrichment_1](images/10_03_create_enrichment_1.PNG)
 
 [Click for more information about How to Create a Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
 
@@ -21,19 +21,19 @@ An Enrichment function must be attached to one or more [LU tables](/articles/06_
 Do the following:
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
-2. To attach the [Enrichment function](/articles/06_LU_tables/04_table_properties.md#enrichment-functions) using the Table Properties tab, click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**. 
+2. To attach the Enrichment function using the [LU Table Properties tab](/articles/06_LU_tables/04_table_properties.md), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**. 
 
-   ![10_03_create_enrichment_2_1](/articles/10_enrichment_function/images/10_03_create_enrichment_2_1.PNG)
+   ![10_03_create_enrichment_2_1](images/10_03_create_enrichment_2_1.PNG)
 
 3. Click **Add** and then click the area next to **Name** to display the list of Enrichment functions. Note that only the functions without Input and Output parameters are displayed.
 
-   ![10_03_create_enrichment_2_2](/articles/10_enrichment_function/images/10_03_create_enrichment_2_2.PNG)
+   ![10_03_create_enrichment_2_2](images/10_03_create_enrichment_2_2.PNG)
 
 4. Select the function from the list. 
 
 5. (Optional) To add more **Enrichment functions** to the same LU table, click **Add** again and select the additional functions. Define the Enrichment functions execution order using the **arrows** next to the **function names** in the **Editor**.
 
-   ![10_03_create_enrichment_3](/articles/10_enrichment_function/images/10_03_create_enrichment_3.PNG)
+   ![10_03_create_enrichment_3](images/10_03_create_enrichment_3.PNG)
 
 6. Click **OK** to close the Editor.
 
@@ -51,7 +51,7 @@ To remove an Enrichment function from the LU table, do the following:
 
 2. In the [Table Properties tab](/articles/06_LU_tables/04_table_properties.md#enrichment-functions), click the **three dots** next to the **Enrichment Functions** option to open the **Enrichment Item Collection Editor**.
 
-   ![10_03_create_enrichment_3](/articles/10_enrichment_function/images/10_03_create_enrichment_3.PNG)
+   ![10_03_create_enrichment_3](images/10_03_create_enrichment_3.PNG)
 
 3. Select the function and click **Remove**.
 
