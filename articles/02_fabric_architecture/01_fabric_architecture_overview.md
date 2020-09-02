@@ -47,7 +47,7 @@ Fabric relies on a resilient architecture and a strong set of 3rd party technolo
 Fabric uses three types of storage engines:
 
 #### 2.1.1 MicroDB ![](/articles/02_fabric_architecture/images/microDBPic.gif)
-The core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/_LU_overview.md)) for every business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
+At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/_LU_overview.md)) for each business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
 
 A MicroDB provides several advantages:
 
@@ -59,9 +59,9 @@ A MicroDB provides several advantages:
 
     
 #### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
-An additional SQLite database schema for storing reference tables common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across nodes. 
+CommonDB is an additional SQLite database schema used for storing reference tables common to all MicroDB. For example, it could be a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their synchronization across nodes. 
 
-A common database is always available to be queried during every Fabric session enabling joining data between Common tables and a MicroDB in one SQL query.
+CommonDB is always made available for queries within every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB using one SQL query only.
 
 
 #### 2.1.3 Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
@@ -89,21 +89,21 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 - Create REST APIs to access your data model.
 - Design data flows.
 
-[Click for more informtion about Fabric Studio.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
+[Click for more information about Fabric Studio.](/articles/04_fabric_studio/01_UI_components_and_menus.md)
 
 
 
 
 ## 3. Data Flow
 ### 3.1 Overview
-Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate with data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
 
 ![](/articles/02_fabric_architecture/images/fabDataFlow.png)
 
 
 ### 3.2 Fabric Data Access Layer
 
-The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB) or through which data can be published to, or accessed by 3rd party systems.
+The following discusses the protocols and standard interfaces through which data can be injected from external sources into the Fabric DB (MicroDB or commonDB). Conversely, these same interfaces are used so Fabric data can be published, or accessed by 3rd party systems.
 
 
 #### 3.2.1 Standard DML via JDBC or ADO.NET
@@ -121,7 +121,7 @@ Fabric supports real-time, inbound data updates via a Kafka interface using the 
 To publish change events externally via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of MicroDB changes.
 
 #### 3.2.4 Manual / Scripted Input
-External data can also be injected into theFabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
+External data can also be injected into the FabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) available from the Fabric Console application.
 
 ### 3.3 Fabric ETL Layer
 
@@ -186,7 +186,7 @@ Graphit is a Fabric utility used to dynamically generate CSV, XML and JSON docum
 
 ### 4.1 Search Engine
 
-Since data is spread across multiple MicroDB, Fabric provides an indexing process that is run during data synchronization phases. This enable users to execute queries on indexed fields across any number of LUIs.
+Since data is spread across multiple MicroDB, Fabric provides an indexing process that is run during data synchronization phases. This enables users to execute queries on indexed fields across any number of LUIs.
 
 ### 4.2 Elastic Search
 
@@ -234,7 +234,7 @@ To protect your company&#39;s data, Fabric's masking service creates a structura
 
 ### 6.1 Fabric Cluster
 
-Fabric relies on Cassandra distributed storage to store the massive amount of data pertaining to the LUIs generated by data retrieved from external data sources and potentially transformed by Fabric data processing modules. Fabric also provides strong capabilities to publish data to external third parties. To this effect, Fabric can be configured as a cluster constituted of multiple nodes spread over multiple datacenters to provide boosted levels of accessibility to the systems from any 3rd parties issuing inbound data queries.
+Fabric relies on Cassandra distributed storage to store the massive amount of data pertaining to the LUIs generated by data retrieved from external data sources and potentially transformed by Fabric data processing modules. Fabric also provides strong capabilities to publish data to external third parties. To this effect, Fabric can be configured as a cluster constituted of multiple nodes spread over multiple datacenters and therefore provide boosted accessibility levels to Fabric for any 3rd parties issuing inbound data queries.
 These configurations allow unparalleled flexibility whereby the DevOps Manager responsible for Fabric configuration, can decide to adapt the number of Fabric nodes according to the demand at any given time, and also increase or reduce the number of Cassandra nodes depending on the quantity of storage needed for the LUIs.
 
 ![](/articles/02_fabric_architecture/images/fabCluster.png)
