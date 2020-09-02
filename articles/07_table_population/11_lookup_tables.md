@@ -1,6 +1,6 @@
 # Lookup Tables
 
-A **Lookup table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference table]. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
+A **Lookup table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or Reference table. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
 *	**Input** fields are used for the WHERE clause of an SQL statement. 
 *	**Output** fields are used for the SELECT statement of an SQL statement.
 
@@ -21,7 +21,7 @@ Click **Database** to display the list of tables, select the table and drag it t
     *	Optional: connect the Lookup **Input** fields to the **Source Table**.
     *	Connect the Lookup **Output** fields to the **Target**.
     
-    ![image](/articles/07_table_population/images/07_11_01_screen.png)
+    ![image](images/07_11_01_screen.png)
     
 6.	Right click the **Lookup** and select **Minimize** to display only the Lookup’s connected fields.
 7.	In the [**Properties Tab**](/articles/07_table_population/04_table_population_properties_tab.md) (right panel of the Table Population working area), click the dropdown list and select the action for when a Lookup Value is not found. 
@@ -34,7 +34,7 @@ Click **Database** to display the list of tables, select the table and drag it t
 
 ### Lookup Properties Tab
 
-![image](/articles/07_table_population/images/07_11_02_lookup_prop.png)
+![image](images/07_11_02_lookup_prop.png)
 
 The following information is displayed in the Lookup Properties:
 
@@ -104,6 +104,5 @@ The following information is displayed in the Lookup Properties:
 </tr>
 </tbody>
 </table>
-
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/10_creating_a_project_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/12_table_population_diagram_outline.md) 
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_4_creating_a_trigger_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/12_table_population_diagram_outline.md) 
 

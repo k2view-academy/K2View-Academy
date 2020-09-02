@@ -3,7 +3,7 @@
 ### Example of a Root Function that Includes a Fabric Command
 Use a Root function to set an environment prior to fetching the data, for example to ensure that source data is not extracted from Production to avoid overloading the source system. The Root function sets the environment on a session level and selects the data from the source environment:
 1. Create a **Root function** using the generated code, add the **WHERE** clause and the parameters binding.
- 
+
 ~~~java
 String sql = "SELECT * From ACTIVITY WHERE CUSTOMER_ID = ? ";
 ludb().fetch(sql, i_customer_id).each(row->{
@@ -47,8 +47,7 @@ for (Db.Row row:rows) {
 }
 ~~~
 
-
 [Click to display an example of the entire **fnPop_ACT_CASE_NOTE** Root Function in the Demo project.](/articles/demo_project) 
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_lookup_tables.md)
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_3_creating_an_LUDB_function.md)
 

@@ -20,7 +20,7 @@ There are several ways to create a Root function:
 
 The steps for creating a Root Function in Fabric Studio are the same as those for a regular function. Set the **Function Type** to **Root Function**. It is recommended to include all Root functions under one category file named Root.
 
-![image](/articles/07_table_population/images/4_1_1%20file%20named%20root.png)
+![image](images/4_1_1%20file%20named%20root.png)
 
 [Click for more information about How to Create a Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
 
@@ -33,8 +33,8 @@ The Input and Output parameters can be [added to the function automatically](/ar
 
 **Example of the Input and Output Parameters Settings**
 
-![image](/articles/07_table_population/images/4_1_1_1_first_image.png)
-![image](/articles/07_table_population/images/4_1_2%20%20Parameters%20settings.png)
+![image](images/4_1_1_1_first_image.png)
+![image](images/4_1_2%20%20Parameters%20settings.png)
 
 ### Function Body
 
@@ -65,12 +65,12 @@ db("CRM_DB").fetch(sql, i_customer_id).each(row->{
    yield(row.cells());
 }
 ~~~
- 
+
 [Click to go to the Root Function’s Code Example.](/articles/07_table_population/11_2_root_functions_code_examples.md)
 
 
 ### How Do I Delete a Root Function?
- 
+
 1.	Go to **Project Tree > Logical Units > [LU Name]**.
 2.	Click **Java > Root Category**, right click **[Root Function Name] > Delete Selected Items**.
 3.	Click **Yes** in the confirmation pop-up message.

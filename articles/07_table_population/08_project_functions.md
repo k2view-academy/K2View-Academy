@@ -21,7 +21,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 *	An LUDB function is invoked from an SQL statement.
 *	An LUDB function must have at least one Output value.
 
-[Click for Code Examples of an LUDB Function.](/articles/07_table_population/09_creating_an_LUDB_function.md#example-of-an-ludb-function)
+[Click for Code Examples of an LUDB Function.](/articles/07_table_population/11_3_creating_an_LUDB_function.md#example-of-an-ludb-function)
 
 #### **Decision Function**  
 *	A function that assess whether a [sync](/articles/01_fabric_overview/02_fabric_glossary.md#sync) is performed on an LUI. 
@@ -43,4 +43,4 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 * A function that is triggered when an LU table data  is modified. 
 * A trigger function is invoked from the **On Change** [LU table property](/articles/06_LU_tables/04_table_properties.md#on-change) that contains a list of trigger functions names (on Shared and LU level).
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/07_fabric_built_in_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/09_creating_an_LUDB_function.md)
+[![Previous](/articles/images/Previous.png)](/articles/07_table_population/07_fabric_built_in_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/10_creating_a_project_function.md)
