@@ -88,14 +88,13 @@
 </ul>
         </ul>
 </details>
-
 <details>
 <summary markdown="span"><strong>Table Population <strong><a href="/articles/07_table_population/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
 <li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</li>
 <li><a href="/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</li>
 <li><a href="/articles/07_table_population/04_table_population_properties_tab.md">Table Population Properties Tab</a></li>
-<li><a href="/articles/07_table_population/05_table_population_mode.md">Table Population Mode</a></li
+<li><a href="/articles/07_table_population/05_table_population_mode.md">Table Population Mode</a></li>
 <li><a href="/articles/07_table_population/06_table_population_transformation_rules.md">Table Population Transformation Rules</a></li>
 <li><a href="/articles/07_table_population/07_fabric_built_in_functions.md">Fabric Built-in Functions</a></li>
 <li><a href="/articles/07_table_population/08_project_functions.md">Project Functions</a></li>
@@ -110,6 +109,7 @@
 </ul>
                 </ul>
 </details>
+
 
 <details>
 <summary markdown="span"><strong>Globals <strong><a href="/articles/08_globals/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
