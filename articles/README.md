@@ -8,7 +8,7 @@
         <li><a href="/articles/01_fabric_overview/02_fabric_glossary.md">Fabric Glossary</a></li>
 </ul>
 </details>
-        
+
 <details>
 <summary markdown="span"><strong>Fabric Fabric Architecture<strong><a href="/articles/02_fabric_architecture/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Fabric Architecture Overview</a></li>
@@ -199,7 +199,7 @@
 </ul>
         </ul>
 </details>
-        
+
 <details>
 <summary markdown="span"><strong>Web Services and Graphit<strong><a href="/articles/15_web_services_and_graphit/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/15_web_services_and_graphit/01_web_services_overview.md">Overview</a></li>
@@ -231,14 +231,13 @@
 </ul> 
          </ul>
 </details>
- 
+
 <details>
 <summary markdown="span"><strong>CDC and Search Capabilities <strong><a href="/articles/18_cdc_and_search/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
 </ul> 
 </ul> 
 </details>        
-        
 <details>
 <summary markdown="span"><strong>Broadway<strong><a href="/articles/19_Broadway/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/19_Broadway/01_broadway_overview.md">Broadway Overview</a></li>
@@ -264,7 +263,7 @@
 <li><a href="/articles/19_Broadway/27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
 </ul> 
 </ul> 
-</details>        
+</details> 
 
 <details>
 <summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
@@ -288,9 +287,8 @@
 	<li><a href="/articles/20_jobs_and_batch_services/17_batch_process_flow.md">Batch Processes Flows</a></li>
 </ul>
 </details>        
- 
-  
- 
+
+
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
 
