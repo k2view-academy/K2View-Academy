@@ -4,11 +4,13 @@ The Fabric Studio includes several integration points that are used by Broadway 
 
 ### Broadway as a Population
 
-A Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) to replace  complex Java code in the population logic from [Stages](19_broadway_flow_stages.md) and [Actors](03_broadway_actor.md) in the flow. 
+A Broadway flow can be used as a [Table population](/articles/07_table_population/01_table_population_overview.md) to replace  complex Java code in the population logic by [Stages](19_broadway_flow_stages.md) and [Actors](03_broadway_actor.md) in the flow. 
 
 To create the population based on the Broadway flow, right click the table name in the **Project Tree** and select **New Table Population Based Broadway Flow**. The population template is created and can be modify as needed.
 
 ![image](images/99_07_POPULATION.PNG)
+
+[Click for more information about creating a table population based on a Broadway flow](/articles/07_table_population/14_table_population_based_Broadway.md).
 
 ### Interface Listener For Broadway Flows
 
