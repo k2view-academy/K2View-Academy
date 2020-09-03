@@ -94,7 +94,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are True or False.</p>
-<p>Default = False. When True, Fabric brings the data response without parsing or formatting for the representation.</p>
+<p>Default = False. When True, Fabric brings the data response as is without parsing or formatting the response to be aligned with the Web Service output format.</p>
 </td>
 </tr>
 <tr>
@@ -102,10 +102,8 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <td width="700pxl" valign="top">
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
-<p>Additional formats: XML and CSV.
-
-
- To select the format/s, click the dropdown menu and enable them.</p>
+<p>Additional formats: XML and CSV.</p>
+ <p>To select the format/s, click the dropdown menu and enable them.</p>
 </td>
 </tr>
 <tr>
@@ -120,7 +118,9 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </td>
 </tr>
 </tbody>
-</table>
+</table>    
+
+  
 
 ## How Do I Generate HTML format or legacy JSON/XML ? 
 

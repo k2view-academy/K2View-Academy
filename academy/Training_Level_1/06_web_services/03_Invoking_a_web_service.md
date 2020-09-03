@@ -20,7 +20,7 @@ To ensure that the data being exposed by the Web Service is secured, authenticat
   
     What is the response? Failed to authorize. 
 
-    Why? The Web Service is requiring a token for authentication, unless authenticate product Web Service was called on the same session. 
+    Why? The Web Service requires a token for authentication, unless authenticate product Web Service was called on the same session. 
   
 4. For the request to succeed, create the permissions and a token:
    ```
