@@ -9,22 +9,21 @@ Note that to **force the sync** of the LU Instances after deployment, check [For
 
 ### How Do I Deploy a Fabric Object from the Fabric Studio?  
 
-The following steps should be performed in the Fabric Studio for each deployed object, [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flow](/articles/19_Broadway/01_broadway_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) and Reference tables.
+The following steps must be performed in the Fabric Studio for each deployed object, [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flow](/articles/19_Broadway/01_broadway_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) or Reference table.
 
-1. To start the deployment of a Fabric object, right click the **object** to be deployed.
-2. Select **Deploy to Server** to display the list of servers defined in the **User Preferences** window. Note that Fabric displays **Force Upgrade Post Deploy** note next to the severs, marked as Force Upgrade Post Deploy in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) tab. 
+1. Right click the **object** to be deployed and then select **Deploy to Server** to display the list of servers defined in the **User Preferences** window. The **Force Upgrade Post Deploy** notification displayed next to the severs is marked Force Upgrade Post Deploy in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) tab. 
 3. Do either:
 
   - Click [**Server Name**].
   - Click **Add/Edit** to open the **User Preferences** window if the required server configuration is missing. 
 
-### Deploy Fabric Objects to Fabric Debug Server
+### Deploying Fabric Objects to the Fabric Debug Server
 
-You must deploy your LUs to the local Fabric debug server to enable a debugging of the LU. A deployed LU is marked by a green circle next to the LU.
+To debug an LU it must first be deployed to the local Fabric debug server. A deployed LU has a green circle next to its name.
 
-You can deploy the Fabric implementation to the Fabric debug server by either:
+To deploy the Fabric implementation to the Fabric debug server, do either:
 
 - Right click the selected Fabric object > **Deploy To debug**.
-- Click the deploy icon in the upper [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
+- Click **Deploy** in the upper [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/16_deploy_fabric/03_offline_deploy.md)
