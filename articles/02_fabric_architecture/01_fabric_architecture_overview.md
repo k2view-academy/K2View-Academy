@@ -112,7 +112,7 @@ A user / application can connect to Fabric via JDBC or ADO.NET, open a transacti
 
 
 #### 3.2.2 REST API and Web Services
-External sources can also read and write data using standard [REST Web Services](/articles/15_web_services/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric Storage.
+External sources can also read and write data using standard [REST Web Services](/articles/15_web_services/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric storage.
 Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
@@ -132,7 +132,7 @@ When data needs to be processed before being stored or exposed, it goes through 
 Data can be captured via SFTP or any other transfer protocol and/or streaming service. Standard file types such as JSON/XML/CSV can be parsed and injected. Users can also easily introduce new formats.
 
 **3.3.1.2 Queue Messaging Services (QMS):**
-Fabric allows subscription to queue messaging systems to stream-in data using services such as Apache Kafka, JMS and rabbit. Fabric can then step-in and apply transformations and logic to incoming events.
+Fabric allows subscription to queue messaging systems to stream-in data using services such as Apache Kafka, JMS and RabbitMQ. Fabric can then step-in and apply transformations and logic to incoming events.
 
 **3.3.1.3 APIs:**
 Fabric can consume external APIs such as Web Services, Soap and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
