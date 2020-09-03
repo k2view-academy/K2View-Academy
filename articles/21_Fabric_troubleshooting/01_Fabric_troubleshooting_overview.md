@@ -2,7 +2,7 @@
 
 Fabric provides the following methods for troubleshooting executed processes.
 
-- **Log files**. All activities performed in Fabric are written into [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) in the server. In addition the activities run on the Fabric debug server started by the Studio are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md). The log messages display the failed [LU](/articles/03_logical_units/01_LU_overview.md) and [Table Population](/articles/07_table_population/01_table_population_overview.md) names in case of failure. 
+- **Log files**. All activities performed in Fabric are written into [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) in the server. In addition, the activities run on the Fabric debug server started by the Studio are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md). The log messages display the failed [LU](/articles/03_logical_units/01_LU_overview.md) and [Table Population](/articles/07_table_population/01_table_population_overview.md) names in case of failure. 
 
  
 - **Monitoring stuck processes**, using the following tools:
