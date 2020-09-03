@@ -41,7 +41,7 @@ The relevant invoked Web Service is expanded and points to the correct verb.
 
 4. Click the **Lock**, set a valid **Token** and then click [**Authorize**](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#web-services-authorization).
 
-   Use the Authenticate Product Web Service and enter the API Key or Username / Password as input in the body request to skip the Authorize as Client step in the remaining Web Services calls. 
+   Use the **authenticate** Product Web Service and enter the API Key or Username / Password as input in the body request to skip the Authorize as Client step in the remaining Web Services calls. 
 
 5. Click **Try it Out**!. Complete the parameters and then click **Execute** to display a response.
 

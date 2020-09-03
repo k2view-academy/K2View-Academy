@@ -1119,7 +1119,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 - `http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
-  Call Web Service orders and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
+  Call **Orders** Web Service and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
 
 # Request Header
 
