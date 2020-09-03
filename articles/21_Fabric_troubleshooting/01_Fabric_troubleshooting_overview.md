@@ -2,12 +2,12 @@
 
 Fabric provides the following methods for troubleshooting executed processes.
 
-- **Log files**. All activities performed in Fabric are written into [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) in the server. In addition, the activities run on the Fabric debug server started by the Studio are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md). The log messages display the failed [LU](/articles/03_logical_units/01_LU_overview.md) and [Table Population](/articles/07_table_population/01_table_population_overview.md) names in case of failure. 
+- **Log files**. All activities performed in Fabric are written into [log files](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) in the server. In addition, the activities run on the Fabric debug server started by the Studio, are written to the [Log screen in the Fabric Studio](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md). The log messages display the failed [LU](/articles/03_logical_units/01_LU_overview.md) and [Table Population](/articles/07_table_population/01_table_population_overview.md) names in case of failure. 
 
  
 - **Monitoring stuck processes**, using the following tools:
 
-  - [**PS** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – a Fabric command like [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md), [Web Services](/articles/15_web_services/01_web_services_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) or a [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) which displays tasks running on the Fabric cluster. The PS command can be used to identify stuck processes and their running duration and when needed, to kill stuck processes using the [**kill** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
+  - [**PS** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands) – a Fabric command like [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md), [Web Service](/articles/15_web_services/01_web_services_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) or a [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) which displays tasks running on the Fabric cluster. The PS command can be used to identify stuck processes and their running duration and when needed, to kill stuck processes using the [**kill** command](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
 
   - [**jjstack.sh** script](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-do-i-run-jjstack) – a Fabric script that collects Java stack traces for a given process, stores the stacks and analyzes the results. The script can be applied to the Fabric server or the IID Finder. 
 
@@ -23,9 +23,9 @@ Use cases for running **jjstack.sh** are:
 - When you suspect that a job or a **Migrate** command is stuck.
 - To investigate a performance issue in the implementation layer.
 
-The procedure is to run the script. You can analyze the output either on your own or with the help of R&D.
+When running jjstack, first run the script and then analyze the output either on your own or with the help of R&D.
 
-The following table describes the syntax and the parameters for calling the **jjstack.sh** script. The script is located under **$K2_HOME/fabric/scripts** in the Fabric server.
+The following table describes the syntax and parameters for calling the **jjstack.sh** script. The script is located under **$K2_HOME/fabric/scripts** in the Fabric server.
 
 <table>
 <tbody>
@@ -39,7 +39,7 @@ The following table describes the syntax and the parameters for calling the **jj
 <p><strong>Options</strong>:</p>
 <ul>
 <li>[pid] &ndash; optional parameter. Java process ID to sample. By default, the script scans the Fabric server - see Example 1. When this parameter is a default and other parameters must be provided, use &ldquo;&rdquo; - see Example 2.</li>
-<li>[sample count] - optional parameter. Number of samples and number of output files created.</li>
+<li>[sample count] - optional parameter. Number of samples and output files created.</li>
 <li>[store directory] - optional parameter. Location for storing output files that can be later analyzed. By default, the output directory is <strong>/tmp</strong>.</li>
 <li>[cutoff limit] - optional parameter. Minimum number of appearances of the Java methods to show in the output file.</li>
 </ul>
@@ -78,7 +78,7 @@ The following table describes the syntax and the parameters for calling the **jj
 
 ### How Is a Heap Dump File Created?
 
-A Heap Dump file is automatically created if Fabric crashes due to memory usage exceeding the definition. When required, a Heap Dump file can also be created manually using the **jmap** command. 
+A Heap Dump file is automatically created when Fabric crashes due to memory usage exceeding the definition. When required, a Heap Dump file can also be created manually using the **jmap** command. 
 
 Default memory usage is defined in the **$K2_HOME/config/ jvm.options** configuration file and is equal to 2G.  The location of a Heap Dump file is defined in the **jvm.options** configuration file. If it is not defined there, it is created in the folder where Fabric is started, which is usually **$K2_HOME** or **$K2_HOME/fabric/scripts**. 
 
