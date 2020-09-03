@@ -17,14 +17,14 @@ To create a Trigger function, refer to the steps in [How to Create Project Funct
 When creating a Trigger function, make sure that:
 
 *	**Function Type = Trigger Function.** 
-*	The function has an  **tableDataChange** input parameter in the **TableDataChange** data type.
+*	The function has an  **tableDataChange** input parameter with a **TableDataChange** data type.
 
 The **TableDataChange** data type exposes a set of methods which allow getting additional information about the change such as:
 
 * What kind of change occurred? Possible values are INSERT / UPDATE / DELETE.
 * Which table has changed?
 * Which fields have changed?
-* Which values are old and which are new?
+* What are the old values and the new values?
 
 The Trigger function analyzes the change using the above information and executes business logic, for example, write the old and the new values into a log table.
 

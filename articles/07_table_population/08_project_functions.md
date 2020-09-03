@@ -34,8 +34,8 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 #### **Trigger Function**
 
-* A function that is triggered when an LU table data  is modified. 
-* A trigger function is invoked from the **On Change** [LU table property](/articles/06_LU_tables/04_table_properties.md) that contains a list of trigger functions names (on Shared and LU level).
+* A function that is triggered when an LU table's data is modified. 
+* A trigger function is invoked from the **On Change** [LU table property](/articles/06_LU_tables/04_table_properties.md) that contains a list of Trigger functions on a Shared and LU level.
 
 [Click for Code Examples of a Trigger Function.](11_4_creating_a_trigger_function.md#example-of-a-trigger-function)
 

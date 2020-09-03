@@ -4,12 +4,12 @@ A Broadway Actor can be extended to create a new Actor type using the **Export A
 
 When an Actor is exported, a new Actor inherits its logic and arguments and also extends it with additional functionality whereby specific business logic can be reused in different Broadway flows. For example, to format all dates using the same pattern, set a specific pattern in the **DateFormat** Actor and then export the Actor to reuse it in various Broadway flows. 
 
-During the Actor's export you can set each of its input and output arguments as hidden or final. 
+When exporting the Actor each input and output argument can be set as hidden or final. 
 
-* Setting an argument as **hidden**, the ancestor's argument will be hidden in the inherited Actor. For example, when an argument is irrelevant for the inherited Actor's functionality.
-* Setting an argument as **final**, the inherited Actor won't be able to change the ancestor's argument value. 
+* Setting an argument as **hidden**, the ancestor's argument is hidden in the inherited Actor. For example, when an argument is irrelevant for the inherited Actor's functionality.
+* Setting an argument as **final**, the inherited Actor cannot change the ancestor's argument value. 
 
-This setting is optional whereas neither hidden nor final is set, the argument remains as is in the inherited Actor.
+This setting is optional where if hidden or final are not set, the argument remains as is in the inherited Actor.
 
 ### How Do I Export an Actor?
 
@@ -23,12 +23,12 @@ This setting is optional whereas neither hidden nor final is set, the argument r
 
 4. Optional: override the **Tag** to create a new Actor in a new (different) category.
 
-5. Optional: for each of input and output arguments set if it's hidden or final.
+5. Optional: set the hidden or final value for each input or output argument.
 
 6. Click **SUBMIT**. 
 
 
-The new **myDateFormat** Actor is created and it inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
+The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
 Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
 
@@ -54,7 +54,7 @@ To override an extended Actor, do the following:
 
 3. Optional: override the **Tag** to create an Actor in a new (different) category.
 
-4. Optional: for each of input and output arguments set if it's hidden or final.
+4. Optional: set the hidden or final value for each input or output argument.
 
 5. Click **SUBMIT** to save the changes.
 
@@ -69,7 +69,7 @@ To extend the behavior of the exported Actor, do the following:
 
 3. Optional: override the **Tag** to create an Actor in a new (different) category.
 
-4. Optional: for each of input and output arguments set if it's hidden or final.
+4. Optional: set the hidden or final value for each input or output argument.
 
 5. Click **SUBMIT** to save the changes.
 
