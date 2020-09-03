@@ -69,8 +69,8 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 <ul>
 <li><strong>desc keyspaces</strong>, returns the list of keyspaces in the Cassandra cluster.</li>
 <li><strong>desc tables</strong>, returns the list of Cassandra keyspaces and the related tables of each keyspace.</li>
-<li><strong>desc schema</strong>, returns the details for all non-system objects in the Cassandra cluster.</li>
-<li><strong>desc keyspace &lt;keyspace name&gt;</strong>, returns the details for the specified keyspace and objects it contains.</li>
+<li><strong>desc schema</strong>, returns the details of all non-system objects in the Cassandra cluster.</li>
+<li><strong>desc keyspace &lt;keyspace name&gt;</strong>, returns the details of the specified keyspace and objects it contains.</li>
 </ul>
 </td>
 </tr>
@@ -91,9 +91,7 @@ For more information, see https://docs.datastax.com/en/cql-oss/3.x/cql/cql_refer
 
 #### Run CQLSH on Local Cassandra 
 
-[Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) enables starting, stopping, and opening the local **Cassandra Console**.
-
-Alternatively, do the following:
+The [Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) can be used to start, stop and open the local **Cassandra Console**. Alternatively, do the following:
 
 - Run queries on Cassandra in the Fabric server using the [cql command](/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra).
 - Define a Cassandra [DB interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) in the Fabric Studio and set the host to localhost. Set the user and password to **cassandra**. Then open the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md) to view the list of Cassandra keyspaces and run SQL queries on Cassandra tables. 
