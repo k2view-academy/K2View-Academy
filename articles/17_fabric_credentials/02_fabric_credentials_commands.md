@@ -116,7 +116,7 @@ The following tables discuss how user access control is managed using Fabric com
 <p><strong>Example: </strong></p>
 <p>assign role role1 to user test_user;</p>
 </td>
-</tr>AP
+</tr>
 <tr>
 <td width="400pxl">
 <p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API key&gt;</p>
