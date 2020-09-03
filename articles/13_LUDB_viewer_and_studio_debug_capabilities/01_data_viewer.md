@@ -29,9 +29,9 @@ Note that the Data Viewer runs on the Fabric debug server. Therefore you must de
 5. Click ![image](images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
     Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the tree. 
 
-  Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
+  	Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
 
-  *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
+ 	 *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
 
 6. Click the **Instance ID** to open the **Instances Tree** dropdown list.
 
@@ -95,7 +95,7 @@ return "0";
 ```
 
 
-![image](images/13_01_07%20play%20icon.jpg) **Play**
+ #### Play ![image](images/13_01_07%20play%20icon.jpg)
 
 When clicked, retrieves and saves the data file of the Instance ID for debugging.
 	
