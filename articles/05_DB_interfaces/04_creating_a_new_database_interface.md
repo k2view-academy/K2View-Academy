@@ -15,12 +15,12 @@ The following screenshot displays a list of supported built-in interface types.
 
 3. Populate the **DB Connection Name** and set the **Connection** to **Active**.
 
-4. Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings)
+4. Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings):
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
     **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
      
-    * To check if the connection settings are correct, click the **Test Connection String**
+    * To check if the connection settings are correct, click the **Test Connection String**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
     
@@ -70,10 +70,10 @@ In this setting, value = a list of DB types to be created in an old format, sepa
 
 Note that it is **recommended** that you convert the existing interface into a generic format to avoid the need for ADO.NET/ODBC drivers. To do so, click the **Convert to Generic DB Interface** link.
 
-New generic interfaces cannot be converted to older interface format based on ADO.NET/ODBC drivers. 
+New generic interfaces cannot be converted to older interface formats based on ADO.NET/ODBC drivers. 
 
 #### Post Connection Commands
-The **Post Connection Commands** tab of the DB Interface window enables a definition of multiple init commands to be executed post JDBC connection and before running the SQL statements on the DB Interface. See an example below:
+The **Post Connection Commands** tab of the DB Interface window enables definition of multiple init commands to be executed post JDBC connection and before running SQL statements on the DB Interface. See the example below:
 
 ![post connection](images/db_interface_post_connection_commands.png)
 
