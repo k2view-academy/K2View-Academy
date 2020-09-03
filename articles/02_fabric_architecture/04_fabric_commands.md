@@ -191,8 +191,9 @@ For example:
 - The **GET** command is used to bring information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
 
 - Note that you can get LUIs from multiple LUs using one GET command, but you cannot get multiple LUIs from the same LU using one GET command. The following message is displayed when trying to get multiple LUIs from the same LU using one GET command:
+  
   - `Only single instance per LUT can be used on the same GET command.`
-- Set the consistency level of the GET LUI command to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
+- It is possible to set the consistency level of the GET LUI command to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
   -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
 
   Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
