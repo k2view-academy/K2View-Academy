@@ -32,7 +32,7 @@ Useful tutorials:
 A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
 By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth and is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
-token can be provided as a part of the URL as a parameter, or in the header request.
+token can be provided as a part of the URL as a parameter or in the header request.
 
 The Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on a JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
 
