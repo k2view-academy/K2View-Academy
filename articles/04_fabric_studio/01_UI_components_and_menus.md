@@ -35,44 +35,44 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 <table>
 <tbody>
 <tr>
- <td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon1.png" alt="" /></p></td>
+ <td width="60pxl" valign="top"><p><img src="images/04_01_02_icon1.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>file</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon2.png" alt="" /></p></td>
+<td width="60pxl" valign="top"><p><img src="images/04_01_02_icon2.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>New Item (CTRL+N)</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon3.png" alt="" /></p></td>
+<td width="60pxl" valign="top"><p><img src="images/04_01_02_icon3.png" alt="" /></p></td>
 <td width="600pxl" valign-"top">
 <p>Project Tree (CTRL+T)</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon4.png" alt="" /></p></td>
+<td width="60pxl" valign="top"><p><img src="images/04_01_02_icon4.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>Query Builder</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon5.png" alt="" /></p></td>
+<td width="60pxl" valign="top"><p><img src="images/04_01_02_icon5.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>Tools</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon6.png" alt="" /></p></td>
+<td width="60pxl" valign="top"><p><img src="images/04_01_02_icon6.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>Server Activity</p>
 </td>
 </tr>
 <tr>
-<td width="60pxl" valign="top"><p><img src="/articles/04_fabric_studio/images/04_01_02_icon7.png" alt="" /></p></td>
+<td width="60pxl" valign="top"><p><img src="images/04_01_02_icon7.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
 <p>Help (link to the Knowledge Base)</p>
 </td>
@@ -84,7 +84,7 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 
 [Click for more information about the Query Builder.](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview)
 
-Click for more information about the Studio [Debug](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) and [Log](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md) Capabilities.
+Click for more information [Fabric Studio log file](/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md).
 
 ### Fabric Studio Debug Panel
 
