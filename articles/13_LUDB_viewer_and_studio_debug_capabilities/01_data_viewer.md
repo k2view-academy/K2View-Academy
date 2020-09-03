@@ -1,6 +1,8 @@
 # Data Viewer
 
-The Data Viewer enables you to view a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) database (LUDB), add debugging capabilities and improve testing abilities and defect resolution times. Since a LUDB is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis. 
+The Data Viewer enables you to view a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) database (LUDB), add debugging capabilities and improve testing and defect resolution times. 
+
+Since an LUDB is in-memory, it can be viewed by dumping it into an SQLite file which can be shared via email or a common file directory for additional investigations using the Fabric Studio. This file can also be used to execute SQL queries and for analysis. 
 Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\\[project name]\\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
@@ -13,10 +15,10 @@ Note that the Data Viewer runs on the Fabric debug server. Therefore you must de
 
 ![image](images/Logical_Units_Tree.png)
 
-1. Go to the **Project Tree**, click **Logical Units**, and verify that your LU is marked by green, i.e. deployed to the debug server. If your LU is not marked by green like the **test** LU in the image above, you must deploy it  to the debug server before you can run the Data Viewer on the selected LU either by:
+1. Go to the **Project Tree**, click **Logical Units** and verify that the LU has a green icon, indicating that it is deployed to the debug server. If the LU has a white icon like the **test** LU in the image above, deploy it  to the debug server before running the Data Viewer on it. Do either:
 
-   - Right click the LU > **Deploy To debug**.
-   - Click the deploy icon in the upper [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel)
+   - Right click the **LU** > **Deploy To debug**.
+   - Click **Deploy** on the top [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
 2. Click  <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
 
@@ -27,7 +29,7 @@ Note that the Data Viewer runs on the Fabric debug server. Therefore you must de
 5. Click ![image](images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
     Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server for the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the tree. 
 
-  Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, you get the following error message:
+  Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
 
   *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
 
@@ -35,20 +37,23 @@ Note that the Data Viewer runs on the Fabric debug server. Therefore you must de
 
 ![image](images/13_01_03%20instances%20tree.jpg)
 
-4. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
+7. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
 
 ![image](images/13_01_04%20Instance%20DB%20tree.jpg)
 
-5. Click a **table** to display its data and then right click the **table** to open a context menu with the following options: 
+8. Click a **table** to display its data and then right click the **table** to open a context menu with the following options: 
+
    a. **Show Data**, displays the table’s data.
+   
    b. **Show Schema**, displays the table’s structure.
+   
    c. **Show Indexes**, displays the table’s indexes, if defined.
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
 ## What Are the Data Viewer Components?
 
-The Logical Unit DB Viewer contains the following areas:
+The Logical Unit DB Viewer has the following areas:
 * Sync Mode and Instance ID.
 * Instance Tree.
 * Instance DB Tree.
@@ -67,7 +72,7 @@ When clicked, loads and displays an external Data Viewer file.
 
 #### Sync Mode
 
-Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands), initiated by the Data Viewer execution. The options are **On**, **Off**, and **Force**.  The default mode is **On**.
+Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands), initiated by the execution of the Data Viewer. The options are **On**, **Off**, and **Force**. The default mode is **On**.
 
 #### Instance ID
 
@@ -103,9 +108,9 @@ The Instance Tree area (top left) displays a tree of available data files in the
 ### Instance DB Tree
 
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
-* **k2_lu_object_info**, contains statistics per table, population and Enrichment function.
-* **k2_main_info**, contains the LU’s basic information like LU Name or Instance ID.
-* **k2_object_stats**, contains object timing statistics. 
+* **k2_lu_object_info**, holding statistics per table, population and an Enrichment function.
+* **k2_main_info**, holding basic information about the LU like LU Name or Instance ID.
+* **k2_object_stats**, holding object timing statistics. 
 * **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
 
 To display the values of a table in the tree, right click the table and select either:
@@ -155,7 +160,7 @@ Click for more information about References.
 
 
 ### Scripting Area
-An SQL scripting area where you can write and run SQL statements on the selected LUDB (Upper right pane).
+The SQL scripting area is used to write and run SQL statements on a selected LUDB (upper right pane).
 
 ![image](images/data_viewer_scripting_area.png)
 
@@ -236,7 +241,7 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 * **Delete Selected DB Files**, deletes the selected **Instance DB files** from the **project folder**:
    Fabric\\[project name]\Implementation\LogicalUnits\\[LU name]\VirtualDB_Data.
 
-**Notes:**
+**Notes**
 
 The latest Data Viewer file can be used in the following components:
 
