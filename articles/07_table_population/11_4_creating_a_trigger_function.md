@@ -4,9 +4,9 @@
 
 A Trigger function is a Project function invoked from the **On Change** [LU table property](/articles/06_LU_tables/04_table_properties.md#on-change) when the LU table's data has been modified.
 
-* Any trigger function on Shared or LU level can be attached to an LU table.
-* The same trigger function can be attached to several LU tables of the same LU.
-* Several trigger functions can be attached to one LU table and their execution order is established at the time of the functions attachment to an LU table.
+* Any Trigger function on a Shared or LU level can be attached to an LU table.
+* The same Trigger function can be attached to several LU tables in the same LU.
+* Several Trigger functions can be attached to an LU table. Their execution order is established when the function is attached to the LU table.
 
 ### How Do I Create or Edit a Trigger Function?
 
@@ -17,20 +17,20 @@ To create a Trigger function, refer to the steps in [How to Create Project Funct
 When creating a Trigger function, make sure that:
 
 *	**Function Type = Trigger Function.** 
-*	The function has an input parameter **tableDataChange** of the data type = **TableDataChange**.
+*	The function has an  **tableDataChange** input parameter in the **TableDataChange** data type.
 
-The **TableDataChange** data type exposes a set of methods which allows to get additional information about the change such as:
+The **TableDataChange** data type exposes a set of methods which allow getting additional information about the change such as:
 
 * What kind of change occurred? Possible values are INSERT / UPDATE / DELETE.
-* Which table was changed?
-* Which fields were changed?
-* What are the old values and the new values?
+* Which table has changed?
+* Which fields have changed?
+* Which values are old and which are new?
 
-The Trigger function can analyze the change using the above information and execute a business logic, for example write the old and the new values into a log table.
+The Trigger function analyzes the change using the above information and executes business logic, for example, write the old and the new values into a log table.
 
 ### How Do I Attach an Enrichment Function to an LU Table?
 
-A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU schema](articles/03_logical_units/03_LU_schema_window.md) to be executed  when there is a change in LU table's data. 
+A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](articles/03_logical_units/03_LU_schema_window.md) to be executed when there are changes in an LU table's data. 
 
 Do the following:
 
@@ -65,7 +65,7 @@ To remove a Trigger function from the LU table, do the following:
 
 1. Create a new function with **Function Type = Trigger Function**.
 
-2. Write the business logic, for example if the change type = INSERT populate the table name,  the old values and the new values into a specific log table defined in the Fabric Common DB.
+2. Write the business logic, for example if the change type = INSERT, populate the table name, the old values and the new values into a specific log table defined in the Fabric Common DB.
 
    ~~~java
    String tbl = tableDataChange.getTable().toString();

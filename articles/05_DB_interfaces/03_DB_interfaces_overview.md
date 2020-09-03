@@ -66,7 +66,7 @@ Accurate definition of connection settings is especially important when building
 </td>
 <td width="433">
   <p>Database, schema or service name. </p>
-  <p> Note, that for SQLite DB Interface, you need to populate the Database by the full path of the SQLite file.</p>
+  <p> Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
 <p>For example: C:\Users\TaliEinhorn\Documents\Knowledge Base\KB_DB_Scripts\SqliteDB\crm_db.db </p>
 </td>
 </tr>
@@ -91,7 +91,7 @@ Accurate definition of connection settings is especially important when building
 <p><strong>Proactive Indicator</strong></p>
 </td>
 <td width="433">
-<p>Default = False. Defines whether Proactive Sync&nbsp; should be enabled.</p>
+<p>Default = False. Defines whether Proactive Sync should be enabled.</p>
 </td>
 </tr>
 <tr>

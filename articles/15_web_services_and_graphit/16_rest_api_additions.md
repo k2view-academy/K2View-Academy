@@ -32,13 +32,13 @@ Useful tutorials:
 A RESTful API should be stateless, whereby the request's authentication does not depend on cookies or sessions and each request arrives with authentication credentials.
 
 By always using SSL, authentication credentials can be simplified and be a randomly-generated access token that is delivered in the **Username** field of the HTTP Basic Auth and is fully browser-explorable. If a browser receives a **401 Unauthorized** status code from the server, it displays a prompt asking for credentials. A
-token can be provided as a part of the URL as a parameter, or in the header request.
+token can be provided as a part of the URL as a parameter or in the header request.
 
 The Fabric Authentication mechanism supports Web Service calls using a username and password or a secured token based on a JSON Web Tokens (JWT) solution. A JWT is an open industry standard [RFC 7519](https://tools.ietf.org/html/rfc7519) method that securely represents claims between two parties. Tokens can be used in two modes:
 
-* Secured mode, using a digital signature on the client side, the secret key is shared only once when the API key is created.
+* Secured mode, using a digital signature on the client side, the secret key is shared only once when the API Key is created.
 
-* Unsecured mode signed by Fabric. When using this option, a Fabric Authenticate Web Service can be called using a request body API key or Username / Password. All remaining Fabric Web Services calls on the same session should not use the token parameter (including the Swagger client) since the client is already authenticated.
+* Unsecured mode signed by Fabric. When using this option, the Fabric **authenticate** Web Service can be called using a request body **apikey** or **username /password** parameters. All remaining Fabric Web Services calls on the same session should not use the token parameter (including the Swagger client) since the client is already authenticated.
 
 To invoke a Web Service call, do the following:
 
