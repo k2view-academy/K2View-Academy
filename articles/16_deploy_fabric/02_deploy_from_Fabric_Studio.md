@@ -11,7 +11,7 @@ Note that to **force the sync** of the LU Instances after deployment, check [For
 
 The following steps must be performed in the Fabric Studio for each deployed object, [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flow](/articles/19_Broadway/01_broadway_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) or Reference table.
 
-1. Right click the **object** to be deployed and then select **Deploy to Server** to display the list of servers defined in the **User Preferences** window. The **Force Upgrade Post Deploy** notification displayed next to the severs is marked Force Upgrade Post Deploy in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) tab. 
+1. Right click the **object** to be deployed and then select **Deploy to Server** to display the list of servers defined in the **User Preferences** window. Note that the **Force Upgrade Post Deploy** notification is displayed next to the server if the server is checked as Force Upgrade Post Deploy in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) tab. 
 3. Do either:
 
   - Click [**Server Name**].
