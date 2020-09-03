@@ -23,10 +23,10 @@ The [DB interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) has 
 
 ![image](/articles/11_query_builder/images/12_1_3%20query%20builder.png)
 
-7.	**Instance Group**, right click and select **Open Query Builder** > **Schema**.
-8.	**Graphit window** click <img src="/articles/11_query_builder/images/12_1_1%20icon.png"> **Query Builder** in the **SQL** or **SQL non-prepared** node type.
+7.	[Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md), right click and select **Open Query Builder** > **Schema**.
+8.	[Graphit window](/articles/15_web_services_and_graphit/17_Graphit/02_create_and_edit_a_graphit_file.md) click <img src="/articles/11_query_builder/images/12_1_1%20icon.png"> **Query Builder** in the **SQL** or **SQL non-prepared** node type.
 
-9.	**Broadway**, click the **QB button** in the **DbCommand actor** to open the **Query Builder**.   
+9.	[Broadway](/articles/19_Broadway/01_broadway_overview.md), click the **QB button** in the **DbCommand actor** to open the **Query Builder**.   
 <!--Next drops (drop 2)- add links to Broaway, Instance Group, Graphit-->
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/11_query_builder/02_query_builder_window.md)
