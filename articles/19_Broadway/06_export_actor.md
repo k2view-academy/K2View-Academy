@@ -28,7 +28,7 @@ This setting is optional where if hidden or final are not set, the argument rema
 6. Click **SUBMIT**. 
 
 
-The new **myDateFormat** Actor is created and it inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
+The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
 Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
 
