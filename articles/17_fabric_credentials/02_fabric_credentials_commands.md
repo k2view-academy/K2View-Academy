@@ -99,7 +99,7 @@ The following tables discuss how user access control is managed using Fabric com
 
 
 
-## **ASSIGN Command**
+## ASSIGN Command
 
 **ASSIGN** commands are used to assign a role either for a user or for a token:
 
