@@ -55,7 +55,7 @@ Type **fabric** in the Fabric server command line.
 
 ### Enter the Fabric Debug Server
 
-[Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) enables starting, stopping, and opening the **Fabric Console** of the Fabric debug server.
+[Fabric Studio Debug Panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel) can be used to start, stop and open the **Fabric Console** of the Fabric debug server.
 
 ## Reset Fabric
 
