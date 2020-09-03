@@ -75,13 +75,13 @@ The following tables discuss how user access control is managed using Fabric com
 <p><h4>CREATE TOKEN</p>
 </td>
 <td width="700pxl">
-<p><strong>Description</strong>: Create a new API key.</p>
+<p><strong>Description</strong>: Create a new API Key.</p>
 <p><strong>Usage</strong>:</p>
 <p>CREATE TOKEN &lt;'token_name'&gt; [SECURED]</p>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li>&lt;'token_name'&gt; &ndash; mandatory, API key name.</li>
-<li>SECURED &ndash; optional in case of a secured API key.</li>    
+<li>&lt;'token_name'&gt; &ndash; mandatory, API Key name.</li>
+<li>SECURED &ndash; optional in case of a secured API Key.</li>    
 </ul>
 <p><strong>Examples:</strong></p>
 <ul>
@@ -95,6 +95,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -119,7 +120,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 <tr>
 <td width="400pxl">
-<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API key&gt;</p>
+<p><h4>ASSIGN ROLE &lt;ROLE&gt; to token &lt;API Key&gt;</p>
 </td>
 <td width="500pxl">
 <p><strong>Description</strong>: Assign a role to a token.</p>
@@ -130,6 +131,7 @@ The following tables discuss how user access control is managed using Fabric com
 </tr>
 </tbody>
 </table>
+
 
 
 ## GRANT Command
@@ -369,9 +371,10 @@ Below is a list of GRANT WS_NAME command parameters:
 
 #### Web Services Authorization
 
-[Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is performed using the **API key**:
-  - Project Web Services: give permission to the **role** in the Web Service or all Web Services and assign the API key to the role.
-  - Product Web Services: assign the API key to the user. The permissions for Product Web Services are defined by combining the API key assigned to the user and the permissions of the roles assigned to the user. 
+[Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is performed using the **API Key**:
+
+  - Project Web Services: give permission to the **role** in the Web Service or all Web Services and assign the API Key to the role.
+  - Product Web Services: assign the API key to the user. The permissions for Product Web Services are defined by combining the API Key assigned to the user and the permissions of the roles assigned to the user. 
 
 **Example**
 <pre><code>
