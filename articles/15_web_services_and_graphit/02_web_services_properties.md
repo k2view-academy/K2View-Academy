@@ -94,7 +94,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are True or False.</p>
-<p>Default = False. When True, Fabric brings the data response as is without parsing or formatting the response to be aligned with the Web Service output format.</p>
+<p>Default = False. When True, Fabric brings the data response as is without parsing or formatting the response to be aligned with the Web Service's output format.</p>
 </td>
 </tr>
 <tr>
