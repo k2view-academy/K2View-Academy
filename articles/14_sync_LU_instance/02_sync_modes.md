@@ -121,7 +121,7 @@ public static String getSyncMode();
 This method can be invoked by a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
 If the Sync Mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
 
-Click to open the list of Fabric APIs: **http://[Fabric IP address]:3213/static/doc/user-api/index.html**
+To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**.
 
 ## Always Sync
 - The Always Sync mode enables synchronizing the attached LUI when running select queries on the LUI. The sync of the LUI is executed before the execution of the select queries.
