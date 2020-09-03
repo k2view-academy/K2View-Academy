@@ -125,31 +125,31 @@ Click for more information about References.
  <table>
 <tbody>
 <tr>
-<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg" alt="" /></td>
+	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%201.jpg" alt="" /></p></td>
 <td width="274">
 <p>Print results.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%202.jpg" alt="" /></td>
+	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%202.jpg" alt="" /></p></td>
 <td width="274">
 <p>Export results as an Excel file.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%203.jpg" alt="" /></td>
+	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%203.jpg" alt="" /></p></td>
 <td width="274">
 <p>Filter results by one or more columns.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%204.jpg" alt="" /></td>
+	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%204.jpg" alt="" /></p></td>
 <td width="274">
 <p>Toggle groupings.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%205.jpg" alt="" /></td>
+	<td width="60"><p><img src="images/13_01_08%20PANE%20AND%20TOOLBAR%20icon%205.jpg" alt="" /></p></td>
 <td width="274">
 <p>Toggle summaries.</p>
 </td>
@@ -169,11 +169,11 @@ The following options are supported:
 <table>
 <tbody>
 <tr>
-<td width="200pxl">
+<td width="200pxl" valign="top">
 <p><strong>Run or Run on New Tab</strong></p>
 <p><strong>&nbsp;</strong></p>
 </td>
-<td width="650pxl">
+<td width="650pxl" valign="top">
 <ul>
 <li>Click Run to execute the given SQL statement.</li>
 <li>Click Run on New Tab to open a new Results tab.</li>
@@ -181,18 +181,18 @@ The following options are supported:
 </td>
 </tr>
 <tr>
-<td width="236">
+<td width="236" valign="top">
 <p><strong>Explain query</strong></p>
 </td>
-<td width="368">
+<td width="368" valign="top">
 <p>Description of the strategy or plan that SQLite uses to implement a specific SQL query (e.g. SCAN TABLE)</p>
 </td>
 </tr>
 <tr>
-<td width="236">
+<td width="236" valign="top">
 <p><strong>Dropdown menu of special Run options</strong></p>
 </td>
-<td width="368">
+<td width="368" valign="top">
 <ul>
 <li>On current DB file: The SQL is executed on the currently selected instance file.</li>
 <li>On newest DB file for each instance: The SQL is executed on the newest instance file of each instance in the Instances tree.</li>
@@ -203,18 +203,18 @@ The following options are supported:
 </td>
 </tr>
 <tr>
-<td width="236">
+<td width="236" valign="top">
 <p><strong>Save SQL to File</strong></p>
 </td>
-<td width="368">
+<td width="368" valign="top">
 <p>Saves the current SQL statements to a file.</p>
 </td>
 </tr>
 <tr>
-<td width="236">
+<td width="236" valign="top">
 <p><strong>Load SQL from File</strong></p>
 </td>
-<td width="368">
+<td width="368" valign="top">
 <p>Retrieves an SQL statement from a file previously created in the Scripting area.</p>
 </td>
 </tr>
