@@ -24,13 +24,13 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>ON</p>
 </td>
 <td style="width: 146px;">
-<p>Run a sync according to the <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync method</a> which can be: None, Time Interval, Inherited or Decision Function.</p>
+<p>Run a sync according to the <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync method</a> which can be None, Time Interval, Inherited or Decision Function.</p>
 </td>
 <td style="width: 316px;">
 <ul>
 <li>The <a href="/articles/03_logical_units/03_LU_schema_window.md"> LU Schema </a> has changed and is redeployed.</li>
 <li>First sync, the instance does not yet exist in Fabric.</li>
-<li>Sync the instance according to the predefined Sync method, set for each <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU table</a> and <a href="/articles/07_table_population/01_table_population_overview.md">table population object</a></li>
+<li>Sync the instance according to the predefined Sync method set for each <a href="/articles/06_LU_tables/01_LU_tables_overview.md">LU table</a> and <a href="/articles/07_table_population/01_table_population_overview.md">table population object.</a></li>
 </ul>
 </td>
 </tr>
@@ -39,7 +39,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>OFF</p>
 </td>
 <td style="width: 146px;">
-<p>Don&rsquo;t sync</p>
+<p>Don't sync.</p>
 </td>
 <td style="width: 316px;">
 <ul>
@@ -54,7 +54,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>FORCE</p>
 </td>
 <td style="width: 146px;">
-<p>Always sync</p>
+<p>Always sync.</p>
 </td>
 <td style="width: 316px;">
 <p>Synchronization is performed on every operation on the Fabric LU instance, regardless of the sync method definitions of the LU.</p>
@@ -64,7 +64,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </tbody>
 </table>
 
-Note that the Sync returns an error message when a source is not available. To change this behavior, use the [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
+Note that the sync returns an error message when a source is not available. To change this behavior, use the [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
 ## Sync ON Protection
 - This feature improves the response time of multiple GET requests using **SYNC ON** mode on the same LUI and Fabric node. For example: executing a stress test of running a Web Service with the same LUI on multiple threads. 
@@ -84,7 +84,7 @@ This checkbox defines the Sync mode of the first GET of each LU instance (LUI) a
 * If checked, the Sync mode is set to FORCE.
 * When unchecked, the Sync mode is set to ON.
 
-**Notes:**
+**Notes**
 * Checking / unchecking the **Force Upgrade Post Deploy** checkbox impacts the LU only after redeployment of the LU to the checked / unchecked Fabric server. It does not impact the LU instances retroactively.
 * Sync mode is set to FORCE only for the first GET of each LUI after the redeployment of the LU.  
 * Sync mode is set to FORCE for the first GET of each LUI even if the **Force Upgrade Post Deploy** checkbox is later unchecked. The LU is redeployed, and the instance is not synchronized while the **Force Upgrade Post Deploy** checkbox is still checked.
@@ -94,9 +94,9 @@ This checkbox defines the Sync mode of the first GET of each LU instance (LUI) a
 * Get Customer 1.
 * Update the source DB of Customer 1. 
 * Check the **Force Upgrade Post Deploy** checkbox of the Fabric development server and redeploy the Customer LU to this server. 
-* Get Customer 1 again. The customer is synchronized, and their data is updated, since the  **Force Upgrade Post Deploy** checkbox set the sync mode to FORCE.
+* Get Customer 1 again. The customer is synchronized and their data is updated since the  **Force Upgrade Post Deploy** checkbox set the sync mode to FORCE.
 * Update the source data of Customer 1 again. 
-* Get Customer 1 again. This time Customer 1 is **not** synchronized, since the Sync mode is set back to ON for the Customer after their first sync that was initiated by checking the **Force Upgrade Post Deploy** checkbox.
+* Get Customer 1 again. This time Customer 1 is **not** synchronized since the Sync mode is set back to ON for the Customer after their first sync that was initiated by checking the **Force Upgrade Post Deploy** checkbox.
 
 **Example 2**
 * Set the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md) of the Customer LU to **None**.
@@ -106,8 +106,8 @@ This checkbox defines the Sync mode of the first GET of each LU instance (LUI) a
 * Get Customer 2 again. This Customer is synchronized and their data is updated. 
 * Uncheck the **Force Upgrade Post Deploy** checkbox of the Fabric development server and redeploy the Customer LU to this server. 
 * Get Customers 1 and 2 again: 
-  * Customer 1 is synchronized, since this is their first GET after checking the **Force Upgrade Post Deploy** checkbox, even though this checkbox was later unchecked.
-  * Customer 2 is **not** synchronized, since it was already synchronized after checking the **Force Upgrade Post Deploy** checkbox.
+  * Customer 1 is synchronized since this is their first GET after checking the **Force Upgrade Post Deploy** checkbox, even though this checkbox was later unchecked.
+  * Customer 2 is **not** synchronized since it was already synchronized after checking the **Force Upgrade Post Deploy** checkbox.
 
 [Click for more information about the Get LUI Fabric Command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands).
 
