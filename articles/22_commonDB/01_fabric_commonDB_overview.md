@@ -18,4 +18,4 @@ To ensure that a Reference table in an LU schema is always synched, check that t
 When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them. 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_commonDB/02_add_a_reference_table.md) 
