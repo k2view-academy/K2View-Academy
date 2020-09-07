@@ -73,8 +73,8 @@ Considering the information above, which interface should be used ? **CRM DB**
  Let’s do this together!
 
 1. Open your **Fabric Studio**, go to the **Project Tree**, right click **Interface** and select **New Interface.**
-2. Select **Oracle** as the **Interface type**.
-3. Name the **Interface: CRM_DB**.
+2. Select **SQLite** as the **Interface type**.
+3. Name the Interface: **CRM_DB**.
 4. Add additional parameters based on the bolded items below. Pay attention that the **Password** equals the **user’s** **credentials**.
 5. Test the **connection string**.
 6. Click **Save**.
@@ -102,11 +102,7 @@ results:10,000
  **BILLING_DB Details**
 
 ```
-DB type: MySQL
-
-Server: 
-
-Port: 3306
+DB type: SQLite
 
 Database: BILLING_DB
 
@@ -124,11 +120,7 @@ Password:
  **ORDERS_DB details**
 
 ```
-DB type: PostgreSQL
-
-Server: 
-
-Port: 5436
+DB type: SQLite
 
 Database: ORDERS_DB
 
