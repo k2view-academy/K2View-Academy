@@ -6,7 +6,7 @@ A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md.md) is a c
 
 The advantage of using a Broadway flow for table population rather than a source object based population, is to streamline logic and all related validations into one business process to improve the project's maintainability.
 
-[Click for more information about Broadway.](/articles/19_Broadway/01_broadway_overview.md).
+[Click for more information about Broadway](/articles/19_Broadway/01_broadway_overview.md).
 
 ### How Do I Create a Population Based on a Broadway Flow?
 
