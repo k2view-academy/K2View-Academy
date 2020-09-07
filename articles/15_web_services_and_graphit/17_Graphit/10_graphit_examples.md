@@ -1,5 +1,5 @@
 # Graphit - Code Examples
-### Simple example of a Customer Info Web Service that brings data for an LUI
+### Simple Example of a Customer Info Web Service that brings data for an LUI
 
 The following Graphit file gets an input LUI which extracts customer data from the CUSTOMER LU, calculates its balance and sets its status accordingly. 
 
@@ -64,7 +64,7 @@ This example displays how to retrieve data from multiple tables in the BILLING_D
 
 <img src="images/63_graphit_examples.PNG"></img>
 
-Running the Graphit file in Debug mode with 2 and 3 as consecutive values for the SubscriberID:
+Run the Graphit file in Debug mode with 2 and 3 as consecutive values for the SubscriberID:
 
 <img src="images/65_graphit_examples.PNG"></img>
 
@@ -113,7 +113,7 @@ Output:
 <img src="images/grConditionResp.PNG"></img>
 
 #### grGroup.graphit
-The ${x} string has been added to both TRUE and FALSE groups, while the ${y} value is not declared in the groups. The display ${x} also lists the group of origin.<br></br>
+The ${x} string has been added to both TRUE and FALSE groups while the ${y} value is not declared in the groups. The display ${x} also lists the group of origin.<br></br>
 <img src="images/14_graphit_examples_tags.PNG"></img>
 
 Output:
@@ -140,7 +140,7 @@ Output:
 ###  Graphit Node Properties Examples
 
 #### grShowFormat.graphit
-The **sessionProvider** flag is set to CRM_DB whereby enabling direct references to CRM_DB tables and fields.<br></br>
+The **sessionProvider** flag is set to CRM_DB to enable direct references to CRM_DB tables and fields.<br></br>
 <img src="images/17_graphit_examples_tags.PNG"></img>
 
 Output:
@@ -189,9 +189,9 @@ Output:
 <img src="images/grAttributeResp.png"></img>
 
 #### grFormat.graphit
-The **format** flag has been set to XML in the CRM_DB node. If format is specified, the node will only be evaluated and added if the output format, matches the format value.
+The **format** flag has been set to XML in the CRM_DB node. If the format is specified, the node will only be evaluated and added if the output format matches the format value.
 
-The example below sets a JSON in the output format. Therefore the CRM_DB node is not displayed in the response, since its format is XML.
+The example below sets a JSON in the output format. There CRM_DB node is not displayed in the response since its format is in XML.
 
 ![grFormat](images/23_graphit_examples_tags.PNG)
 
@@ -209,7 +209,7 @@ Output:
 <img src="images/grShowEmptyResp.png"></img>
 
 #### grShowNull.graphit
-The **showNull** flag has been set to False and applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node since is has a Null values and Null values are ignored and not shown in the section of the response referring to the CRM_DB. On the other hand,  the flag has not been applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
+The **showNull** flag has been set to False and applied to the CRM_DB node. The response does not display the LAST_NAM field in the CRM_DB node since it has Null values which are ignored and not shown in the section of the response referring to the CRM_DB. The flag has not been applied to the BILLING_DB node, and therefore Null values are displayed.<br></br>
 <img src="images/25_graphit_examples_tags.PNG"></img>
 
 Output:
