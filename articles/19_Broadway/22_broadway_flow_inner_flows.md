@@ -29,4 +29,6 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
    ![image](images/99_22_02.PNG)
 
+[Click to display an example of a Broadway flow with Inner Flow Actors in the Demo project.](/articles/demo_project)
+
 [![Previous](/articles/images/Previous.png)](21_iterations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_transactions.md)
