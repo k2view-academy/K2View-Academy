@@ -8,9 +8,7 @@ To download the KB_FABRIC_PROJECT.k2proj locally to your computer, click [here](
 
 ## Fabric 6.2 DBs Setup
 
-The Fabric Knowledge Base project includes three databases that can be accessed locally from your computer without DB Management Software.
-
-To enable this all three **BILLING_DB**, **CRM_DB**, **ORDERS_DB** databases have been migrated to SQLite from their initial mySQL, Oracle or PostGrSQL format.
+The Fabric Knowledge Base project includes three databases that can be accessed locally from your computer without DB Management Software. To enable this, the BILLING_DB, CRM_DB and ORDERS_DB databases have been migrated to SQLite from their initial mySQL, Oracle or PostGrSQL format.
 
 To configure these databases, do the following:
 
