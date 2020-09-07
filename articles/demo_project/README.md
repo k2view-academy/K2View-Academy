@@ -1,12 +1,12 @@
 # KNOWLEDGE_BASE_FABRIC_DEMO_PROJECT- Fabric 6.2.1
 
-## Fabric 6.2 PROJECT SETUP
+## Fabric 6.2 Project Setup
 Fabric's Knowledge Base project includes a set of Logical Units, code examples and objects needed throughout the Knowledge Base articles or Learning Items:
 
 Download KB_FABRIC_PROJECT.k2proj locally on your computer from this [location](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export).
 
 
-## Fabric 6.2 DBs SETUP
+## Fabric 6.2 DBs Setup
 
 Fabric's Knowledge Base project includes three Databases that can be accessed locally from your computer without any DB Management Software.
 
