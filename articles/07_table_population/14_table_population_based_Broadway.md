@@ -23,6 +23,10 @@ The population is created as a template with predefined Stages and designated Ac
 
 [Click for more information about building an LU hierarchy and linking table populations](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md).
 
+Note that to make the population become effective on the server side, you need to deploy the population's Logical Unit.
+
+[Click for more information about how to deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
+
 ### How Do I Use a Flow Population Template?
 
 A Broadway population flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
