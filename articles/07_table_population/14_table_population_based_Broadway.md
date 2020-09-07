@@ -70,7 +70,7 @@ There are several ways to generate a WHERE clause for the **Query** Actor:
    Where CASES.STATUS = ${value}
    ~~~
 
-3. Passing an object, for example using a **Const** Actor the syntax is:
+3. Passing an object, for example using a **Const** Actor and passing its value to **params** input argument of the **Query** Actor.
 
    ~~~javascript
    {
@@ -85,7 +85,7 @@ There are several ways to generate a WHERE clause for the **Query** Actor:
    where CASES.STATUS = ${STATUS}
    ~~~
 
-4. Passing an array of values, for example using a **Const** Actor the syntax is:
+4. Passing an array of values, for example using a **Const** Actor and passing the values to **params** input argument of the **Query** Actor.
 
    ~~~javascript
    [
