@@ -118,7 +118,7 @@ The ${x} string has been added to both TRUE and FALSE groups, while the ${y} val
 
 Output:
 
-<img src="/images/grGroupResp.PNG"></img>
+<img src="images/grGroupResp.PNG"></img>
 
 #### grCollect.graphit
 This example shows how both Subscriber and Billing datasets are collected into one single array.<br></br>
