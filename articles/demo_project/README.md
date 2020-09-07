@@ -1,14 +1,14 @@
 # Fabric 6.2.1 - FABRIC KNOWLEDGE BASE DEMO PROJECT 
 
-## Fabric 6.2 Project Setup
+## Fabric 6.2 - Project Setup
 The Fabric Knowledge Base project includes a set of LU, code examples and objects that are used in all Knowledge Base articles and Learning Items.
 
 To download the KB_FABRIC_PROJECT.k2proj locally to your computer, click [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export).
 
 
-## Fabric 6.2 DBs Setup
+## Fabric 6.2 - DBs Setup
 
-The Fabric Knowledge Base project includes three databases that can be accessed locally from your computer without any DB management software. To enable this, the BILLING_DB, CRM_DB and ORDERS_DB databases have been migrated to SQLite from their initial mySQL, Oracle or PostGrSQL format.
+The Fabric Knowledge Base project includes three databases that can be accessed locally from your computer without any DB management software. To enable this, the BILLING_DB, CRM_DB and ORDERS_DB databases have been migrated to SQLite from their initial mySQL, Oracle or PostGrSQL formats.
 
 To configure these databases, do the following:
 
