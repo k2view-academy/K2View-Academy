@@ -234,7 +234,7 @@ Click for more information about Fabric Security Hardening.</p>
 </tr>
 <tr>
 <td rowspan="3" width="150pxl" valign="top">
-<p>K2view_&lt;LU Name&gt;</p>
+<p>k2view_&lt;LU Name&gt;</p>
 </td>
 <td rowspan="3" width="250pxl" valign="top">
 <p>A new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU.</a></p>
