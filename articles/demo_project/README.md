@@ -17,7 +17,7 @@ To configure these databases, do the following:
 2. Open the Fabric Studio, create a new project and then import the [KB_FABRIC_PROJECT.export](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export) file to your project.
 
 3. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB interfaces, as follows:
-    - Edit the **Database** field, set the location of the `*.db file` to the local directory.
+    - Edit the **Database** field, set the location of the *.db file to the local directory.
     - Test the connection and save the changes.
     - Close the DB interface.
 
