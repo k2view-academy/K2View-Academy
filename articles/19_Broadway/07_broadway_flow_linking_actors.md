@@ -83,6 +83,7 @@ In a flow there may be a need to concatenate several strings into a single strin
 
   ![varagrs-on2](images/99_20_example_03.PNG)
 
+[Click to display an example of Varargs in a Broadway flow in the Demo project.](/articles/demo_project)
 
   **Notes:**
 

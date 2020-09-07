@@ -18,6 +18,8 @@ The Interface Listener functionality, an enhancement of the Fabric Jobs function
 
 ![image](images/99_07_JOBS.PNG)
 
+[Click to display an example of an Interface Listener in the Demo project.](/articles/demo_project)
+
 ### Fabric Commands Actors
 
 The **fabric** category of [built-in Actors](04_built_in_actor_types.md) executes Fabric commands.

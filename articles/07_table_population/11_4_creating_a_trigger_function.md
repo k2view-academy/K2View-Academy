@@ -85,5 +85,7 @@ To remove a Trigger function from the LU table, do the following:
 
 3. Open LU table's properties window and attach the Trigger function to the table's **On Change** property.
 
+[Click to display an example of a Trigger Function in the Demo project.](/articles/demo_project)
+
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/08_project_functions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/09_creating_an_LUDB_function.md.md)
 
