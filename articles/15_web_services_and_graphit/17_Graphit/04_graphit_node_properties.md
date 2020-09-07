@@ -39,7 +39,7 @@ Please refer to the files in the following table's Example column. We suggest th
 <tr>
 <td valign="top" width="50pxl">Nice</td>
 <td valign="top" width="900pxl">Defines the layout of the output format. True defines that each tag is printed in a new line and is indented.&nbsp;<br />Note that this property affects the node and its child nodes.</td> 
-<td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grshownicegraphit">grShowNice</a></td>  
+<td valign="top" width="50pxl"><a href="articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grshowenabledgraphit">grShowEnabled</a></td>  
 </tr>
 <tr>
 <td valign="top" width="50pxl">One</td>
@@ -65,6 +65,7 @@ Please refer to the files in the following table's Example column. We suggest th
 <td valign="top" width="50pxl">Show Empty</td>
 <td valign="top" width="900pxl">Defines whether empty nodes are displayed in the output. Default = True.<br />Note that this property affects the node and its children nodes.
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grshowemptygraphit">grShowEmpty</a></td>
+
 
 </td>
 </tr>
