@@ -62,7 +62,7 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 
 <!--Once loaded to Git: 11_3 Query_Builder_Build_SQL_Query-->
 
-​       
+  
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example - Define an Interface and Validate It
 
@@ -75,7 +75,7 @@ Considering the information above, which interface should be used ? **CRM DB**
 1. Open your **Fabric Studio**, go to the **Project Tree**, right click **Interface** and select **New Interface.**
 2. Select **SQLite** as the **Interface type**.
 3. Name the Interface: **CRM_DB**.
-4. Add additional parameters based on the bolded items below. Pay attention that the **Password** equals the **user’s** **credentials**.
+4. Add additional parameters based on the bolded items below.
 5. Test the **connection string**.
 6. Click **Save**.
 
@@ -105,10 +105,7 @@ results:10,000
 DB type: SQLite
 
 Database: BILLING_DB
-
-User: root
-
-Password: 
+ 
 ```
 
 1. `Question: List the tables that are part of the Schema.`
@@ -124,9 +121,6 @@ DB type: SQLite
 
 Database: ORDERS_DB
 
-User: ORDERS_USER
-
-Password: 
 ```
 
 
