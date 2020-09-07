@@ -3,7 +3,7 @@
 ## Fabric 6.2 PROJECT SETUP
 Fabric's Knowledge Base project includes a set of Logical Units, code examples and objects:
 
-1. Download KB_FABRIC_PROJECT.k2proj locally on your computer from this [location](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export)
+1. Download KB_FABRIC_PROJECT.k2proj locally on your computer from this [location](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export)..
 
 
 ## Fabric 6.2 DBs SETUP
@@ -17,7 +17,7 @@ All 3 databases **BILLING_DB**, **CRM_DB**, **ORDERS_DB** have been especially m
 
 2. Define SQLite type interfaces for each of these as explained in the [Interfaces Definition](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md) article.
 
-N.B. Add the full location path (to where you downloaded the 3 DBs) to each of the DBs in the Fabric Studio interfaces screens
+N.B. Add the full location path (to where you downloaded the 3 DBs) to each of the DBs in the Fabric Studio interfaces screens.
 
 
 
