@@ -39,22 +39,23 @@ else{
 
 The first Graphit file displays the customer's basic information and their subscriber lines with a Gold or Platinum VIP status while the second Graphit file displays the customer's basic information and corresponding subscriber lines in Bronze VIP status.
 
-Graphit file 1: grSQLGldPlus.graphit:
+Graphit file 1: **grSQLGldPlus.graphit**:
 
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/60_graphit_examples.PNG"></img>
+<img src="images/60_graphit_examples.PNG"></img>
 
 
-Graphit file 2: grSQLBrz.graphit:
+Graphit file 2: **grSQLBrz.graphit**:
 
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/62_graphit_examples.PNG"></img>
+<img src="images/62_graphit_examples.PNG"></img>
 
 
 Output from the Swagger GUI for grSQLGldPlus.graphit with Customer Instance ID = 1234:
 
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59_graphit_examples.PNG"></img>
+<img src="images/59_graphit_examples.PNG"></img>
 
 Output from the Swagger GUI for grSQLBrz.graphit with Customer Instance ID = 1000:
-<img src="/articles/15_web_services_and_graphit/17_Graphit/images/59a_graphit_examples.PNG"></img>
+
+<img src="images/59a_graphit_examples.PNG"></img>
 
 ### Simple Example of a CSV Output
 This example displays how to retrieve data from multiple tables in the BILLING_DB database and use Graphit to prepare a CSV-formatted response:
