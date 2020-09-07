@@ -33,7 +33,7 @@ Please refer to the files in the following table's Example column. We suggest th
 </tr>
 <tr>
 <td valign="top" width="50pxl">Enabled</td>
-<td valign="top" width="900pxl">If enabled is set to false, the node and its children are disregarded.</td>
+<td valign="top" width="900pxl">If enabled is set to False, the node and its children are disregarded.</td>
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grshowenabledgraphit">grShowEnabled</a></td>
 </tr>
 <tr>
