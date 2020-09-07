@@ -12,7 +12,7 @@ The Fabric Knowledge Base project includes three databases that can be accessed 
 
 To configure these databases, do the following:
 
-1. Click [here](https://github.com/k2view-academy/K2View-Academy/tree/Academy_6.2/articles/demo_project/SqliteDB) and save the BILLING_DB.db, CRM_DB.db, ORDERS_DB.db *.db* files locally on your computer whereever convenient.
+1. Click [here](https://github.com/k2view-academy/K2View-Academy/tree/Academy_6.2/articles/demo_project/SqliteDB) and save the BILLING_DB.db, CRM_DB.db, ORDERS_DB.db, and COLLECTION_DB.db files locally on your computer whereever convenient.
 
 2. Define SQLite type interfaces for each database as explained in the [Interfaces Definition](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md) article.
 
