@@ -43,18 +43,27 @@ A Broadway population flow template includes predefined Stages and designated Ac
 
 A population flow template has the following Stages:
 
-* **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor.
-  <!-- Tali- please add an explanation about the inout fields, and the output parent rows -->
+* **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
+  
+* The input arguments are either added automatically based on the selected table's fields or must be added manually. 
+  * The **iid** output argument indicates the instance ID of the execution and the **parent_rows** output argument is an array of objects to iterate over the parents rows.
+  
+* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
 
-* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field of the Actor. The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance and less calls to the source. **Size** is a value that will be used as the group size of rows from **parent_rows** whereas each group will be used to generate the WHERE clause for the provided SQL.
+  * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
+  * A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field of the Actor. 
+  * The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance and less calls to the source. **Size** is a value that will be used as the group size of rows from **parent_rows** whereas each group will be used to generate the WHERE clause for the provided SQL.
 
   <!-- Tali -please add a more detailed explanation about the size. In addition- does it add a where statement automatically to the select like Fabric does for a DbQuery?. Also- how can we use parameters in the query? Please add a screenshot with an exapmple for a source query that has a where statement with parameters.  -->
 
 * **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
 
-* **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. The target interface, table and INSERT, UPDATE or UPSERT commands are set using the Actor's input arguments. The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the query to the load is set as **Iterate** to enable looping over the query results.
+* **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
-* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded from the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the target DB. If not needed, this Stage can be deleted and left empty.
+  * The target interface, table and INSERT, UPDATE or UPSERT commands are set using the Actor's input arguments. 
+  * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
+
+* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded from the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the target DB. If not needed, this Stage can be deleted or left empty.
 
 [Click for more information about Broadway and its building blocks](/articles/19_Broadway/README.md).
 
