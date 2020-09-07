@@ -14,13 +14,13 @@ Let’s understand which interfaces are available in the Fabric Studio. Please r
 
 To define the interfaces and their respective parameters, you need to look into their sources using the following [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
 
-Our Training environment has three main DBs of various types, which in essence, represent a typical Telco IT ecosystem:
+In order to simplify the Training environment, and allow trainees to connect locally to multiple databases, we have set up three main DBs of the same type, which in essence, represent a typical Telco IT ecosystem:
 
--  **BILLING_DB** (type: MySQL) – Stores information required for preparing or sending a bill or invoice, such as: Payments or Balance. 
+-  **BILLING_DB** (type: SQLite) – Stores information required for preparing or sending a bill or invoice, such as: Payments or Balance. 
 
-- **CRM_DB** (type: Oracle) – Stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
+- **CRM_DB** (type: SQLite) – Stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
 
-- **ORDERS_DB** (type: PostgreSQL) – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
+- **ORDERS_DB** (type: SQLite) – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
   
 
