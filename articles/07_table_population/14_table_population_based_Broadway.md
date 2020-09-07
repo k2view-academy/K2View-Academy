@@ -11,11 +11,11 @@ The advantage of using a Broadway flow for table population rather than a source
 The trigger points for creating a population based on a Broadway flow are:
 
 * [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md), check the **Table population based Broadway flow** checkbox in step 2 of the Wizard.
-* [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema) by either:
+* [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), either:
   * Right click and select **New table from SQL based Broadway flow**.
-  * Drag a DB table and select **Create table based Broadway flow**
-* Project Tree - right click a table object and select **Create Table Population based Broadway Flow**.
-* Reference - right click and select **Create References from DB tables**.
+  * Drag a DB table and select **Create table based Broadway flow**.
+* Project Tree, right click a table object and select **Create Table Population based Broadway Flow**.
+* Reference, right click and select **Create References from DB tables**.
 
 The population is created as a template with predefined Stages and designated Actors. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
 
@@ -25,15 +25,15 @@ The population is created as a template with predefined Stages and designated Ac
 
 1. Right click the table name under the **Project Tree** and then click **New Table Population based Broadway Flow**.
 
-2. Enter the population name and click **OK** to open a Broadway flow window. The flow template is created and includes the basic steps for retrieving  source data and loading it into the target. 
+2. Enter the **population name** and click **OK** to open a Broadway flow window. The Flow template is created and includes the basic steps for retrieving  source data and loading it into the target. 
 
    ![image](images/07_14_01.PNG)
 
 
 
-3. Populate the **PopulationArgs** Actor's input arguments, the **Query** Actor's **interface** and the **sql** statement to complete the flow. Add or modify the steps if needed.
+3. Populate the **PopulationArgs** Actor's input arguments, the **Query** Actor's **interface**, and the **sql** statement to complete the flow. Add or modify steps if needed.
 
-Note that when a population flow creation is initiated from the [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), the input fields, interface and SQL statement are added automatically based on the selected table's fields. If needed, remove the redundant fields. 
+Note that when the creation of a population flow is initiated from the [LU Schema window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema), the input fields, interface and SQL statement are added automatically based on the selected table's fields. If needed, remove redundant fields. 
 
 ![image](images/07_14_02.PNG)
 
@@ -45,14 +45,14 @@ A population flow template has the following Stages:
 
 * **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
   
-* Input arguments are either added automatically based on the selected table's fields or must be added manually. 
-  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterates over the parents rows.
+  * Input arguments are either added automatically based on the selected table's fields or must be added manually. 
+  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parents rows.
   
 * **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
 
   * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
   * A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field of the Actor. 
-  * The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance and less calls to the source. **Size** is a value that will be used as the group size of rows from **parent_rows** whereas each group will be used to generate the WHERE clause for the provided SQL.
+  * The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance and generating less calls to the source. The **Size** value is used to group the size of rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL.
 
   <!-- Tali -please add a more detailed explanation about the size. In addition- does it add a where statement automatically to the select like Fabric does for a DbQuery?. Also- how can we use parameters in the query? Please add a screenshot with an exapmple for a source query that has a where statement with parameters.  -->
 
