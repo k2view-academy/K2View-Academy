@@ -1,15 +1,8 @@
 # Transactions
 
-Broadway has a built-in Transactions Management mechanism that handles transactions over one or more resources. Transactional resources are defined by Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) and can be shared or non-shared.
-
-* Using a **shared** resource in a flow, the connection is opened only once within the same transaction, when the first Actor calls this resource. All other Actors will use the same connection. The examples of shared resources used by Broadway are DB Interface, file system or SFTP.
-* Using  a **non-shared** resource, the connection is established each time an Actor calls the resource in the flow. An example of a non-shared resource used by Broadway is HTTP. 
-
-A transaction can be defined on DB-related activities as well as on different types of entities. For example, writing into a file. When a Broadway flow writes into a file, the end transaction closes the file. 
-
 ### Transaction Definition
 
-- The transaction starts when the [Actor](03_broadway_actor.md) in the first [Stage](19_broadway_flow_stages.md) marked as a transaction requests to start a connection. 
+- Broadway has a built-in Transactions Management mechanism. The transaction starts when the [Actor](03_broadway_actor.md) in the first [Stage](19_broadway_flow_stages.md) marked as a transaction requests to start a connection. 
 - Several sequential Stages marked as transactions are part of the same transaction.
 - The transaction ends after the last Stage marked as a transaction and is followed by a commit (or by a rollback if there are errors). 
 
@@ -31,17 +24,16 @@ There are two approaches for handling transactions during an iteration:
 
   ![image](images/99_23_commit_each.PNG)
 
-### Impact of Stage Conditions on Transactions
-
-If the flow is split into several branches, the transaction can be defined for each branch separately. 
-
-When a [Stage condition](19_broadway_flow_stages.md#what-is-a-stage-condition) is not met in the transactional Stage of the flow, the transaction ends with a rollback and the execution of its branch stops. Other branches and their respective transactions can still be executed according to the flow’s logic.
-
-![image](images/99_23_split.PNG)
-
 ### Impact of Error Handling on Transactions
 
-When an [Error Handler](24_error_handling.md) is defined in the transactional Stage of the flow and it catches an error, the transaction ends with a rollback and the flow execution stops. The error message displays the failure reason.
+When an [Error Handler](24_error_handling.md) is defined in the transactional Stage of the flow and it catches an error, the Error Handler can either true to continue the flow or false to stop the flow. If the Error Handler returns false, the transaction ends with a rollback and the flow execution stops. The error message displays the failure reason.
+
+### Shared and Non-Shared Transactional Interfaces
+
+Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) used in a Broadway flow can be shared or non-shared during the transaction.
+
+* Using a **shared** interface in a flow, the Fabric opens a connection only once within the same transaction, when the first Actor calls this interface. All other Actors will use the same connection. The shared interfaces used by Broadway are DB Interface, file system or SFTP.
+* Using  a **non-shared** interface, the Fabric establishes a connection each time an Actor calls the interface in the flow. A non-shared interface used by Broadway is HTTP.  
 
 ### How Do I Mark or Unmark a Stage as a Transaction?
 
