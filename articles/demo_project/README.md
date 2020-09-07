@@ -3,7 +3,7 @@
 ## Fabric 6.2 PROJECT SETUP
 Fabric's Knowledge Base project includes a set of Logical Units, code examples and objects:
 
-1. Download KB_FABRIC_PROJECT.k2proj locally on your computer from this [location](https://github.com/k2view-academy/K2View-Academy/tree/Academy_6.2/articles/demo_project)
+1. Download KB_FABRIC_PROJECT.k2proj locally on your computer from this [location](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export)
 
 
 ## Fabric 6.2 DBs SETUP
