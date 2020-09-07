@@ -37,6 +37,8 @@ Note that when the creation of a population flow is initiated from the [LU Schem
 
 ![image](images/07_14_02.PNG)
 
+[Click to display an example of a population flow in the Demo project.](/articles/demo_project)
+
 ### How Do I Use a Flow Population Template?
 
 A Broadway population flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
