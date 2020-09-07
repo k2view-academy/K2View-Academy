@@ -46,7 +46,7 @@ A population flow template has the following Stages:
 * **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
   
   * Input arguments are either added automatically based on the selected table's fields or must be added manually. 
-  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parents rows.
+  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows.
   
 * **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
 
