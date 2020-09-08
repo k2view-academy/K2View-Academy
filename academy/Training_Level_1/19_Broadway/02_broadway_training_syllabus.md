@@ -22,8 +22,8 @@
 
 #### **DAY 2 – Morning**
 
-- Common use cases - DB, Files, Parsers
-  - Use case 1: manipulate data and load it to a DB, parsing and manipulating files and tables
+- Actor Types: common use cases - DB, Files, Steams, Parsers, Queue, Javascript
+  - Use case 1: manipulate data and load it to a DB, parsing and manipulating files and load then to tables
   - Use case 2: subscribe Kafka topic and write it to a file
 
 #### **DAY 2 – Afternoon**
