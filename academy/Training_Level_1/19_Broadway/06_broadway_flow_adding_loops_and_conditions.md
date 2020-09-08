@@ -10,7 +10,7 @@ For example, the  [Simple Broadway Flow](/05_create_broadway_flow.md#example---b
 
 You can add iterations to the flow either by:
 
-- Adding Iterations on Stages: setting the [Link Type](/articles/19_Broadway/20_broadway_flow_linking_actors.md#link-object-properties)  to **Iterate** when linking an Actor to another Actor opens a loop. The loop runs on the next Stages in the flow and is closed by the first Stage which is marked as **Iterate Close**.
+- Adding Iterations on Stages: setting the [Link Type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties)  to **Iterate** when linking an Actor to another Actor opens a loop. The loop runs on the next Stages in the flow and is closed by the first Stage which is marked as **Iterate Close**.
 
   Read [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md) to learn more about the Stage context menu.
 
