@@ -37,6 +37,7 @@
 - Use of LU Functions and Graphit in Broadway Actors
 - Fabric Commands Actors
 - Interface Listener For Broadway Flows
+- Linking Actors
 - Data inspection
 - Exercises: 
   - Creating a Broadway flow for LU table population
