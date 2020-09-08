@@ -22,7 +22,7 @@
 
 #### **DAY 2 – Morning**
 
-- Actor Types, common use cases - DB, Files, Steams, Parsers, Queue, Javascript.
+- Actor Types, common use cases - DB, Files, Steams, Parsers and Queue.
 - Execises: 
   - Use case 1: manipulate data and load it to a DB, parsing and manipulating files and load then to tables
   - Use case 2: subscribe Kafka topic and write it to a file
@@ -31,15 +31,15 @@
 
 - Actors
   - Edit Actor's input and output, edit schema, add remark
-  - Actors input and output types
-  - Write JavaScript code in Actor
-  - Dynamic Actors
-- Edit Actors using Fabric Interfaces and functions
+  - Actors input and output data types
+  - Dynamic logic Actors
+  - Javascript actor- writing JavaScript code in Actor  
+- Use of LU Functions and Graphit in Broadway Actors
+- Interface Listener For Broadway Flows
 - Data inspection
-- Actor's data handling
-  - Data State
-  - Streaming data
-- Exercise: use Broadway for table population
+- Exercises: 
+  - Creating a Broadway flow for LU table population
+  - Interface Listener For Broadway Flows
 
 #### **DAY 3 – Morning**
 
