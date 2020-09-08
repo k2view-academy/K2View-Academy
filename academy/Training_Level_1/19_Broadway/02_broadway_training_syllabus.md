@@ -22,7 +22,7 @@
 
 #### **DAY 2 – Morning**
 
-- Actor Types: common use cases - DB, Files, Steams, Parsers, Queue, Javascript.
+- Actor Types, common use cases - DB, Files, Steams, Parsers, Queue, Javascript.
 - Execises: 
   - Use case 1: manipulate data and load it to a DB, parsing and manipulating files and load then to tables
   - Use case 2: subscribe Kafka topic and write it to a file
