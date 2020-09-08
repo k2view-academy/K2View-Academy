@@ -35,6 +35,7 @@
   - Dynamic logic Actors
   - Javascript actor- writing JavaScript code in Actor  
 - Use of LU Functions and Graphit in Broadway Actors
+- Fabric Commands Actors
 - Interface Listener For Broadway Flows
 - Data inspection
 - Exercises: 
