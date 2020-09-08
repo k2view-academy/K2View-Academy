@@ -46,14 +46,10 @@
 #### **DAY 3 – Morning**
 
 - Error Handling
-- Flow Enhanement
-  - Transaction
-- Edit Actors - special cases
-  - Edit DbCommand using DB interface, defined in Fabric Studio
-  - Define Translation table and use it by Lookup table
-  - Parse input files
 - Actor inheritance mechanism and Export Actor
 - Inner Flows
+- Flow Enhanement
+  - Transaction
 - Reset parameters schemas
 - Run batch commands to execute Broadway flow
 
