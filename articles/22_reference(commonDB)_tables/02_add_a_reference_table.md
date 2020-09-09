@@ -136,7 +136,7 @@ Reference Tables must be deployed before being used.
 - Select the Server on which to deploy the Reference Table.
   
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/01_fabric_commonDB_overview)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/01_fabric_commonDB_overview.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/03_commonDB.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_flow.md)
 
