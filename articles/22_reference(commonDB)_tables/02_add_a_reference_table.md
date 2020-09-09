@@ -30,16 +30,14 @@ A  reference table is a table that holds information common to all LU instances 
   - We recommend to use a prefix that indicates the project name and that this is a Reference table. For example <proj-prefix>_REF.
 
 
-![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
-
-
-
 - Click the Create Tables button.
 
   - The New Reference table appears in Project Tree under References. 
   - Note: If a new table does not appear immediately, click Refresh icon ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree and the new table appear.
 
-  
+![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
+
+
 
 ## Editing and Viewing Reference Tables
 
