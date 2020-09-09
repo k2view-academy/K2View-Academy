@@ -48,7 +48,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 2. Add a  **Breakpoint** to **for each** Stage, click the Debug OFF ![debug off](images/debug_off.png) to set it back to Debug ON ![debug on](images/debug_on.png), and then click the ![Run Flow](images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
 
-3. Click the Step ![Debug Step](images/debug_step_icon.png) or the Resume ![resume](images/resume.png)to execute the next steps after the breakpoint step.
+3. Click the Step ![Debug Step](images/debug_step_icon.png) or the Resume ![resume](images/resume.PNG) to execute the next steps after the breakpoint step.
 
   <ul>
   <pre><code>
@@ -65,7 +65,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
   #### Step 3 - Edit the Flow to Test a Conditinal Stage
 
 1. Add **Now** Actor to **Stage 3**: click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
-2. Click the Step ![Debug Step](images/debug_step_icon.png) or the Resume ![resume](images/resume.png) to execute the flow's steps in **Debug mode**. 
+2. Click the Step ![Debug Step](images/debug_step_icon.png) or the Resume ![resume](images/resume.PNG) to execute the flow's steps in **Debug mode**. 
 
   <ul>
   <pre><code>A. Has the new <strong>Now</strong> Actor of <strong>Stage 3</strong> been executed? Why?</code></pre>
@@ -105,9 +105,11 @@ A and B, The flow executes two iteration runs on the <strong>StringBuilder</stro
 The first iteration runs on **Hello** and the second iteration runs on **Broadway**.
 C. The <strong>StringBuilder</strong> returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuilder</strong> Actor returns one output. It gets its inputs by a loop and builds the string. 
-The <strong>for each</strong> Stage is marked as <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
+The <strong>for each</strong> Stage is marked as <strong>Iterate Close</strong>. 
+As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
 E. The next Stage executed after the <strong>Splitting the flow</strong> Stage is the <strong>Dynamic Logic Actors</strong> Stage, 
-since this Stage is on the same level as the <strong>else</strong> of the condition, and the condition returns <strong>false</strong>. See <a href="/articles/19_Broadway/02a_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
+since this Stage is on the same level as the <strong>else</strong> of the condition, and the condition returns <strong>false</strong>. 
+See <a href="/articles/19_Broadway/02a_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
 </code></pre>
 </ul>
 
@@ -115,7 +117,7 @@ since this Stage is on the same level as the <strong>else</strong> of the condit
  <ul>
 <pre><code>
 <strong>Step 3.2</strong>
-A. The new <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
+A. The <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
 
 <ul>
