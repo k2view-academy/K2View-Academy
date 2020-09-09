@@ -4,7 +4,7 @@ Fabric uses the Cassandra DB as a storage layer and also as a Fabric application
 
 Fabric creates several keyspaces for its operation:
 -  Each Fabric keyspace starts with the **k2** prefix.
--  Each deployed LU creates an additional **k2view_[LU Name** Cassandra keyspace. For example: **k2view_customer**.
+-  Each deployed LU creates an additional **k2view_[LU Name]** Cassandra keyspace. For example: **k2view_customer**.
 
 **Notes:**
 
