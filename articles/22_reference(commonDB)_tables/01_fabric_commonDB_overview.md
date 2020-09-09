@@ -17,5 +17,5 @@ In Fabric Studio, the Reference tab displays a list of the common Reference tabl
 To ensure that a Reference table in an LU schema is always synched, check that the Reference table is checked-in in the References section of the LU schema tab on the right-hand pane. 
 When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them. 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference(commonDB)_tables/02_add_a_reference_table.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md) 
 
