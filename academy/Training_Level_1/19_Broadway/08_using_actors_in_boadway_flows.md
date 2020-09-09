@@ -12,7 +12,7 @@ By the end of this learning item you will:
 
 ### Actor Overview
 
-A Broadway **Actor** represents an action that is executed on a [Stage](/articles/19_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) to get input parameters and return output parameters. Please read the following to about about Broadway Actors, to understand what is a dynamic logic Actor, which built-in Actors are available and how implicit type conversions are supported in Broadway:
+A Broadway **Actor** represents an action that is executed on a [Stage](/articles/19_Broadway/19_broadway_flow_stages.md) of the [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) to get input parameters and return output parameters. To learn more about Broadway Actors, to understand what are dynamic logic Actors, which built-in Actors are available and how implicit type conversions are supported in Broadway, please refer to:
 
 * [Actor Overview](/articles/19_Broadway/03_broadway_actor.md)
 * [Built-In Actor Types](/articles/19_Broadway/04_built_in_actor_types.md)
@@ -44,7 +44,7 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 
 
-![](images/information.png) To learn more about linking the Actors and the link object properties refer to:
+![info](images/information.png) To learn more about linking the Actors and the link object properties refer to:
 
 * [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md)
 * [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md)
