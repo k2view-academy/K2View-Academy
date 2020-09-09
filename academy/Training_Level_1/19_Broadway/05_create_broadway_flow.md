@@ -32,14 +32,12 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 1. Select the number of cases for each case status from **CASES** table in **CRM_DB**  interface. Use the following SQL query:
 
-```
+```sql
 Select Count(*) AS NUMBER_OF_CASES,
 CASES.STATUS
 From CASES
 Group By CASES.STATUS
 ```
-
-
 
 2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
@@ -136,8 +134,8 @@ Group By CASES.STATUS
 
    
 
-Congratulations.
+Congratulations! You've just created your first Broadway flow. 
 
-You've just created your first Broadway flow. Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
+Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
 
 [![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_broadway_flow_adding_loops_and_conditions.md)

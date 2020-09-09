@@ -11,19 +11,19 @@
 
 #### **DAY 1 – Afternoon**
 
-- How to Build a Simple Flow
-  - Creating a simple flow that selects data from a DB table and creates a JSON file based on the selected DB records:
-    - Adding Stages and Actores
+- How to Build a Broadway Flow
+  - Creating a simple flow that selects data from a DB table and creates a JSON file
+    - Adding Stages and Actors
     - Linking between the Stages
     - Add a loop to the flow
     - Run and Debug the flow
-  - Broadway Loops and Stage Condition
-- Exercise: enhance the simple flow- add a condition to the flow
+- Broadway Loops and Stage Condition
+- Exercise: enhance the simple flow by adding a condition to the flow
 
 #### **DAY 2 – Morning**
 
-- Actor Types, common use cases - DB, Files, Steams, Parsers and Queue.
-- Execises: 
+- Actor Types, common use cases - DB, Files, Steams, Parsers and Queue
+- Exercises: 
   - Use case 1: manipulate data and load it to a DB, parsing and manipulating files and load then to tables
   - Use case 2: subscribe Kafka topic and write it to a file
 
