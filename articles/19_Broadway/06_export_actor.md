@@ -73,7 +73,7 @@ To extend the behavior of the exported Actor, do the following:
 
 5. Click **SUBMIT** to save the changes.
 
-Note that an override option only exists for inherited Actors. The product's [built-in Actors](04_built_in_actor_types.md) cannot be overridden. 
+
 
 
 
