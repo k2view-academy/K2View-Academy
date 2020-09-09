@@ -53,11 +53,13 @@ Reference tables may be edited in many ways. You can change the default data map
 *The Data viewer window is displayed with data file hierarchy in the Instances Tree pane.*
 
 - Click the data file to display.
+
   *The Hierarchy of components is displayed in the Instance DB Tree pane.*
 
 ![image](/articles/22_reference(commonDB)_tables/images/05_create_new_common_tables_dataviewer.PNG)
 
 - Click the table name.
+
   *The Table data is displayed in the main Data Viewer window.*
 
 ![image](/articles/22_reference(commonDB)_tables/images/04_create_new_common_tables_dataviewer.PNG)
@@ -132,7 +134,9 @@ Reference Tables must be deployed before being used.
 
 - Right-click the References item in the Project Tree pane.
 - Select the Deploy to Server option.
+
   *The menu of configured server scripts is displayed.*
+  
 - Select the Server on which to deploy the Reference Table.
   
 
