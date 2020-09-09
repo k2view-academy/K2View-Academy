@@ -68,7 +68,7 @@ Group By CASES.STATUS
 
    
 
-   ![](images/information.png)Read [linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
+![](images/information.png) Read [linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
 
    
 
@@ -89,7 +89,7 @@ Group By CASES.STATUS
 
     ![FileWrite](images/MyFirstFlow_Example_Stage3_FileWrite.png) 
 
-   ![](images/information.png)Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
+![](images/information.png) Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
 9.  The **FileWrite** Actor executes the following activities:
 
@@ -104,7 +104,7 @@ Group By CASES.STATUS
 
         
     
-        ![](images/information.png)Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
+![](images/information.png) Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
     
     ​      
 
@@ -132,7 +132,7 @@ Group By CASES.STATUS
 
      
 
-   Read about [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
+![](images/information.png) Read about [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
 
    ##### Checking the Flow's Execution Results
 
