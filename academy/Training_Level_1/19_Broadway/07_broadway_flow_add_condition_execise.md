@@ -90,7 +90,8 @@ In the Step, you check the number of records: check if the number of records >= 
    <pre><code>
    A. What is the output value of <strong>GreaterThanEquals</strong> Actor? Is it different now? Why? 
    B. Which Stage has been executed - <strong>Stage 6</strong> or <strong>Stage 7</strong>? Why?
-   C. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? Is it different now? Why? 
+   C. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? 
+   What is the level of the message? Is it different now? Why? 
    </code></pre>
    </ul>
 
@@ -108,7 +109,6 @@ In the Step, you check the number of records: check if the number of records >= 
  <strong>INFO: There are 4 records in the list.</strong>
  </code></pre>
  </ul>
-
 <ul>
 <pre><code>
  Step 5.3
@@ -116,9 +116,10 @@ In the Step, you check the number of records: check if the number of records >= 
  B.<strong>Stage 7</strong> has been executed since the condition returned <strong>false</strong>.
  C.The following messsage has been given by Stage 7's Logger Actor: 
      <strong>ERROR: Error- Error- there are not enough records in the list.</strong> 
-     Stage 6 and Stage 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
+     Stage 6 and 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
  </code></pre>
  </ul>
+
 
 
 
