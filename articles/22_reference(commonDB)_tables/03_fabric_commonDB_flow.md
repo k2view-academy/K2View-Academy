@@ -55,12 +55,12 @@ In addition, if a delete request is sent without a ```where``` statements, is au
 2 types of transactions can be differentiated Short or long message (kafka vs Cassandra) depending on whether the update exceeds 
 ### Short Message
 
-[](/articles/22_reference(commonDB)_tables/08_commonDB_RefSyncShort.PNG)
+![](/articles/22_reference(commonDB)_tables/08_commonDB_RefSyncShort.PNG)
 
 
 ### Long Message
 
-[](/articles/22_reference(commonDB)_tables/09_commonDB_RefSyncLong.PNG)
+![](/articles/22_reference(commonDB)_tables/09_commonDB_RefSyncLong.PNG)
 
 
 ## Common Area table initialization
