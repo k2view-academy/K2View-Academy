@@ -118,7 +118,7 @@ Before accessing the Reference Table from a specific LU, it must be attached to 
 
 - Select boxes for relevant reference tables.
 
-  ![image](/articles/22_reference(commonDB)_tables/images/07_create_new_common_tables_LU_Ref)
+  ![image](/articles/22_reference(commonDB)_tables/images/07_create_new_common_tables_LU_Ref.PNG)
 
 - Click the Save icon or press CTRL+S to save the association. 
 
