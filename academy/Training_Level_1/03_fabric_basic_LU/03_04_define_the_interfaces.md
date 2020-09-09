@@ -87,7 +87,7 @@ The Query Builder is displayed where you can see the list of tables and execute 
 
 How many customers do you have?
 
-```
+```sql
 Select count (*) From CRM_DB.CUSTOMER
 
 results:10,000
