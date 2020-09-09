@@ -53,7 +53,7 @@ Reference tables may be edited in many ways. You can change the default data map
 
   *The Hierarchy of components is displayed in the Instance DB Tree pane.*
 
-
+![image](/articles/22_reference(commonDB)_tables/images/05_create_new_common_tables_dataviewer.PNG)
 
 - Click the table name.
 
@@ -61,8 +61,6 @@ Reference tables may be edited in many ways. You can change the default data map
 
 ![image](/articles/22_reference(commonDB)_tables/images/04_create_new_common_tables_dataviewer.PNG)
 
-
-![image](/articles/22_reference(commonDB)_tables/images/05_create_new_common_tables_dataviewer.PNG)
 
 
 ### Reference Tables Properties
