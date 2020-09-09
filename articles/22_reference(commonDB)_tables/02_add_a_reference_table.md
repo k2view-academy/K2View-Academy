@@ -16,7 +16,7 @@ A  reference table is a table that holds information common to all LU instances 
 
   - *The Directory of tables in the source DB is displayed in the window*
 
-  ![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
+![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
 
   
 
@@ -55,12 +55,12 @@ Reference tables may be edited in many ways. You can change the default data map
 - Click the data file to display.
   *The Hierarchy of components is displayed in the Instance DB Tree pane.*
 
-  ![image](/articles/22_reference(commonDB)_tables/images/05_create_new_common_tables_dataviewer.PNG)
+![image](/articles/22_reference(commonDB)_tables/images/05_create_new_common_tables_dataviewer.PNG)
 
 - Click the table name.
   *The Table data is displayed in the main Data Viewer window.*
 
-   ![image](/articles/22_reference(commonDB)_tables/images/04_create_new_common_tables_dataviewer.PNG)
+![image](/articles/22_reference(commonDB)_tables/images/04_create_new_common_tables_dataviewer.PNG)
 
 
 
@@ -118,7 +118,7 @@ Before accessing the Reference Table from a specific LU, it must be attached to 
 
 - Select boxes for relevant reference tables.
 
-  ![image](/articles/22_reference(commonDB)_tables/images/07_create_new_common_tables_LU_Ref.PNG)
+![image](/articles/22_reference(commonDB)_tables/images/07_create_new_common_tables_LU_Ref.PNG)
 
 - Click the Save icon or press CTRL+S to save the association. 
 
