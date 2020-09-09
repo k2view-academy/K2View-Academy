@@ -107,7 +107,7 @@ Functions or other tables can be attached to the reference table:
 
 Before accessing the Reference Table from a specific LU, it must be attached to the LU.
 
-### Configure LU to use a Reference Table
+### Configure LU to Use a Reference Table
 
 - Open the LU Schema Window as described 
 
@@ -123,7 +123,7 @@ Note: Reference tables can also be accessed via [lookup tables](/articles/07_tab
 
 
 
-## Deploying Reference Tables
+## Deploy the Reference Tables
 
 Reference Tables must be deployed before being used.
 
