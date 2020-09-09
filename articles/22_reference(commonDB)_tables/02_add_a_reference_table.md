@@ -137,7 +137,6 @@ Reference Tables must be deployed before being used.
   
 
 
+<img align="right" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview)
+<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference(commonDB)_tables/03_commonDB.md)
 
-<img align="right" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference(commonDB)__tables/01_fabric_commonDB_overview)_
-
-<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference(commonDB)_tables/03_commonDB.md) 
