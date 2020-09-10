@@ -24,12 +24,12 @@
 #### **DAY 2 – Morning**
 
 - Using Actors in Broadway Flows
-  - Actors input and output data types
-  - Editing an Actor's input and output, editing a Schema, adding a remark
+  - Editing Actor's inputs and outputs 
+  - Adding a remark
   - Linking Actors
-- Frequently Used Actor Types
-  - JavaScript Actor - writing JavaScript code
-  - DB commands, streams, parsers and queues Actors
+- Built-In Actor Types
+  - Dynamic logic Actors - JavaScript, DbCommand
+  - Frequently used Actor for streams, parsers and queues
 - Exercises: 
   - Manipulate data and load it into a DB, parse a file and load it to the DB
   - Subscribe to a Kafka topic and write it to a file
