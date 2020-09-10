@@ -29,7 +29,7 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 2. Draw a link between them. Verify that the connection's **Link Type** = **Value** by default.
 
-![info](images/information.png) To learn more about Link Types refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
+   ![info](images/information.png) To learn more about Link Types refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
 
 ![image](images/08_link_type_1.PNG)
 
@@ -39,7 +39,7 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 4. Then change its Link Type to **Iterate** / **First** and verify the impact on the flow.
 
-![](images/information.png) To learn more about iteration in a Broadway flows refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
+   ![](images/information.png) To learn more about iteration in a Broadway flows refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
 
 5. Delete the link's connection line.
 
@@ -49,13 +49,13 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 7. In a flow with many connection lines, use Actor's context menu > **Show only connected** option to display only Actors linked to the selected Actor.
 
-![info](images/information.png) To learn more refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
+   ![info](images/information.png) To learn more refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
 
 8. Add a remark to the Actor via Actor's context menu > **Remark** option.
 
 9. Change the population type of **A1** Actor's input argument from **Const** to **External**, then update the argument's external name.
 
-![info](images/information.png) To learn more refer to [Actor's Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
+   ![info](images/information.png) To learn more refer to [Actor's Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
 ![image](images/08_link_type_external.PNG)
 
