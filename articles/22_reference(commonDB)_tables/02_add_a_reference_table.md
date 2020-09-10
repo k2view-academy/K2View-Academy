@@ -1,6 +1,6 @@
 # Creating a New Reference Table in Fabric
 
-A  Reference table holds information common to all LU instances or to multiple LU. For optimization reasons, this information is stored in an external table and not within each LUI MicroDB.
+A  Reference table holds information common to all LU instances or to multiple LU. For optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
 
 
 
@@ -10,17 +10,16 @@ A  Reference table holds information common to all LU instances or to multiple L
 
 2.  Click **DB Connection** (top of the window) and select the **Data Source Interface** to display the Tables directory in the source DB.
 
-3. Select a table to add as a **Reference Table**. To select multiple tables, press the Ctrl key.
+3. Select the **table**. To select multiple tables, press the Ctrl key.
   
 ![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
 
 
 
-4. Optional: If required, enter the prefix of the Reference table name in the **File Name Prefix** field (window's footer).
-5. If there is more than one object in the project with the same name, set a prefix to be added to differentiate between Reference tables and LU tables with similar names. We recommend using a prefix that indicates the project name as a Reference table. For example <proj-prefix>_REF.
+4. Optional: add a prefix to the Reference table's name in the **File Name Prefix** field (window's footer). If there are objects in the project with the same name, add a prefix to differentiate between Reference tables and LU tables with similar names. We recommend using a prefix that indicates the project name as a Reference table. For example <proj-prefix>_REF.
 
 
-6. Click **Create Tables** to add the new Reference table to the Project Tree under References. If the table does not appear immediately, click Refresh ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
+6. Click **Create Tables** to add the new Reference table under References in the Project Tree. If the table does not appear immediately, click Refresh ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
 
 ![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
 
@@ -33,7 +32,7 @@ Reference tables can be edited by either changing the default data mapping, addi
 ### Viewing Table Data 
 
 To access the Reference Viewer do the following:
-1.  Go to **Project Tree** > **References**, right click **References Viewer**, and then select the table. The Data Viewer window is displayed with data file hierarchy in the Instances Tree pane.
+1.  Go to **Project Tree** > **References**, right click **References Viewer**, and then select the **table**. The Data Viewer window is displayed according to its hierarchy in the Instances Tree pane.
 
 2.  Click the **data file** to display the components hierarchy in the Instance DB Tree pane.
 
@@ -53,8 +52,8 @@ Additional properties can be defined in the **Table Properties** panel in the ri
 
 #### Main Properties
 
-- Name, can be defined or modified
-- Primary Key column, ensures records uniqueness
+- Name, can be defined or modified.
+- Primary Key column, ensures records uniqueness.
 - Column collation type:
   - BINARY, compares string data regardless of text encoding.
   - NOCASE, folds upper case characters to their lower case equivalents.
@@ -64,7 +63,7 @@ Additional properties can be defined in the **Table Properties** panel in the ri
 
 #### Sync Method
 
-By default Reference tables are synched in the background of each table according to the defined sync policy. The following Sync options can be selected in the Table Properties panel:
+By default Reference tables are synched in the background of each table according to the defined Sync policy. The following Sync options can be selected in the Table Properties panel:
 
 - None, default value, synchronization is according to the Sync policy defined.
 
@@ -78,7 +77,7 @@ By default Reference tables are synched in the background of each table accordin
 
 Functions or other tables can be attached to the Reference table:
 
-- [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), to perform data manipulations on the table's content
+- [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), to perform data manipulations on the table's content.
 - Reference Tables, to add other Reference tables as dependencies. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
