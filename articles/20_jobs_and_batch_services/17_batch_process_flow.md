@@ -186,6 +186,55 @@ Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](/art
 
 
 
+## **How Does Fabric Handle the Migration Process?**
+
+When a migration process is initiated, it is treated as a batch of multiple entities [synchronization processes](/articles/20_jobs_and_batch_services/13_migrate_commands.md#migrate-commands).
+
+The illustration below shows the sequence of actions involved in this process.
+
+<img src="/articles/20_jobs_and_batch_services/images/24_jobs_and_batch_services_migration_process.png>
+
+
+### Step 1 
+
+- The batch command (or migrate) is executed from a Fabric node. This node (Node 1) will assume the role of Coordinator all along this process. 
+- A job process for this batch command is started.
+
+
+### Step 2
+
+- The node responsible for the overall execution of the migration process is selected in the Fabric cluster as per the nodes allocation rules described in the [Affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md#affinity-properties) article. 
+- This node (Node 3) is referred to as the Job Owner node.
+- The job Owner Node initiates the migration's statistic collection process
+
+
+### Step 3
+
+- The Job Owner node (Node 3) generates a list of iiDs to migrate from the External Sources systems. In our example, the iiDs are X1, X2, X3, X4, and X5, referred to as iiDX1, iiDX2, iiDX3, iiDX4, iiDX5.
+
+
+### Step 4
+
+- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
+
+
+### Step 5
+
+- Each node syncs the instances that has been allocated from the External Sources systems.
+- N3 collects statistics information on each of the nodes and entity synchronization. The information collected is written onto Cassandra.
+
+
+### Step 6
+
+- Each node writes iiDs into Cassandra
+
+
+
+
+
+
+
+
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)
 
 
