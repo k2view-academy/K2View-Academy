@@ -11,7 +11,7 @@ In a distributed system, a copy of the CommonDB is stored on each Fabric node th
 A Reference table is an SQLite table containing metadata that is referenced by different LU instances of a specific LU, by instances from a different LU or by Web Service.
 
 In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project.
-To ensure that a Reference table in an LU schema is always synched, check that the Reference table is checked in the References section of the LU Schema tab in the right pane. 
+To ensure that a Reference table in an LU Schema is always synched, check that the Reference table is checked in the References section of the LU Schema tab in the right pane. 
 When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them. 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md) 
