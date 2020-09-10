@@ -23,7 +23,7 @@ This mode is (automatically) selected in cases where an update from a reference 
 In this mode, update are performed in ways of Create/Update/Delete SQL queries directly on the table
 
 - Small updates: - In cases where less than 1000 updates needs to be performed
-- Big updates: - In cases exceeding 100 rows, in which case bilks of 1000 rows are created in Cassandrsa
+- Big updates: - In cases exceeding 100 rows, in which case bulks of 1000 rows are created in Cassandrsa
 
 
 ### Snapshot Mode:
@@ -52,7 +52,11 @@ Note that in addition, if a delete request is sent to a Reference Table without 
 
 ## Synchronization Flow
 
-2 types of transactions can be differentiated Short or long message (kafka vs Cassandra) depending on whether the update exceeds 
+2 types of transactions can be differentiated: 
+- Short message updates - update's content on Kafka queue.
+- Long message updates - update's content stored on Cassandra
+
+2 different flows occur for each of these cases, depending on whether the update content size exceeds 1000 rows or not. 
 
 
 ### Short Message
@@ -60,7 +64,6 @@ Note that in addition, if a delete request is sent to a Reference Table without 
 The case illustrated below shows how a Synchronisation Job (Sync Job 2) publishes an update notification and short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes in the cluster to write the update directly from Kafka to its SQLite CommonDB copy. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/08_commonDB_RefSyncShort.png)
-
 
 
 
@@ -91,16 +94,19 @@ Existing Reference list used by LU has only meaning on first / force sync (see A
 -	First time ever Reference Table for node, get of LUI will wait first for Ref Table to re-sync -> if reference needed
 -	Sync from reference and then GET – ref_sync and then GET in same session for cases where I need most updates ref table
 
-## Deploy process
-1.	Stop all running table sync jobs.
-2.	Create table / index on 'Common' 
-3.	Clear Kafka Consumer / Topic if table was removed.
-4.	Create a Kafka topic (if configured Kafka mode)
-5.	Create a Kafka consumer for each node.
-Start sync jobs (even if deploy failed) so not to prevent existing sync-ing although the ref table deploy failed
-Apply existing config parameters (Sync job retry interval; ) on coordinator server (one addressed by deploy) on sync jobs
+## Deploy Process
 
-## Sync
+Deploying a new reference table will have the following consequences:
+1. All running reference table synchronization jobs will stop.
+2  A new table/index will be created on CommonDB 
+3. All Kafka Consumer/Topic will be cleared if the table was removed.
+4. A new Kafka topic will be created if a new table was added.
+5. A new Kafka consumer will be created for each node.
+6. New sync jobs will be started (even if deploy failed so not to prevent existing sync-ing although the ref table deploy failed)
+7. Existing configuration parameters are applied (such as sync job retry interval) on coordinator node
+
+
+## Sync Process
 If truncate applied 
 •	Start snap
 •	Add all rows to the snap
@@ -113,10 +119,39 @@ If no truncate defined
 •	Run updates for table (note, no transactions are available at this stage)
 •	batch of transactions is available -> everything in one commit, unless failures (1 by 1)
 
-## Configuration
+## Configuration Settings
 
-Config.ini
-•	Uses Cassandra for snapshot storing; same Cassandra definition; separate keyspace for long messages
+### CommonDB General Settings
+Within the Config.ini file located in the home directory.
+
+#### TIMEOUT
+Maximum idle time when consuming snapshot messages
+```
+CASSANDRA_WAIT_MESSAGE_TIMEOUT=60000
+```
+
+#### MAXIMUM TRANSACTIONS in BULK
+```
+MAX_TRANSACTIONS_COMMIT=100
+```
+
+#### SNAPSHOTS
+```
+COMMONS_SNAP_TABLE=snapshots
+```
+
+#### Snapshot table TTL in seconds - Default is one week
+
+```
+# set to one day
+COMMONS_TABLE_TTL=86400 
+```
+
+### Cassandra Snapshots Settings
+
+One separate keyspace is configured for long messages.
+
+
 •	Kafka consumer and producer setting - two sections. + 2 SSL parameters sections for consumer and producer 
 •	Reference commonDB sqlite files location 
 •	Operation mode one of (Kafka , Memory )
