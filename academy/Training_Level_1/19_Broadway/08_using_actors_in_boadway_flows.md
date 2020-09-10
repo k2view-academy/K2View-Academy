@@ -19,7 +19,7 @@ A Broadway **Actor** represents an action that is executed on a [Stage](/article
 * [Data Types in Broadway](/articles/19_Broadway/05_data_types.md)
 
 
-### ![](/academy/images/example.png) Example - Add, Remove and Edit the Links Between Actors in a Flow
+### ![](/academy/images/example.png)Example - Change the Links Between Actors, Add the Remark and Update the Population Type
 
 Use a flow you created in a previous exercise to try various ways of connecting two Actors in the flow. 
 
@@ -29,11 +29,11 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 ![info](images/information.png) To learn more about Link Types refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
 
-   ![image](images/08_link_type_1.PNG)
+![image](images/08_link_type_1.PNG)
 
 3. Click the connection line to set Varargs to OFF and verify the impact on the flow.
 
-   ![image](images/08_link_type_vararg.PNG)
+![image](images/08_link_type_vararg.PNG)
 
 4. Then change its Link Type to **Iterate** / **First** and verify the impact on the flow.
 
@@ -53,7 +53,7 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 ![info](images/information.png) To learn more refer to [Actor's Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
-   ![image](images/08_link_type_external.PNG)
+![image](images/08_link_type_external.PNG)
 
 Let's continue to the next item to learn more about some of frequently used Actor types.
 
