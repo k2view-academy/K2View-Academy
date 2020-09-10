@@ -20,7 +20,9 @@ To learn more about a Broadway flow, please refer to [Broadway Flow Overview](/a
 
 ### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
-Let's create a new Broadway flow that selects data from a DB table and creates a JSON file based on the selected records. Note that in this exercise you will use some Broadway capabilities (such as specific built-in Actors or the linking between the Actors) that will be explained in more details later in this training.
+Let's create a new Broadway flow that selects data from a DB table and creates a JSON file based on the selected records. 
+
+Note that in this exercise you will use some Broadway capabilities (such as built-in Actors or the linking between the Actors) that will be explained in more details later in this training.
 
 
 
@@ -70,7 +72,7 @@ The SQL query, executed by the **DbCommand**, returns several records. The next 
 
 3. Link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop.
 
-![](images/information.png) Read [linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
+![](images/information.png) Read [linking Actors in a Broadway Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
 
    ##### Writing the JSON Object to an Output File for Each Selected Record
 
@@ -85,13 +87,11 @@ The SQL query, executed by the **DbCommand**, returns several records. The next 
 7. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
    - Set **Interface** to **LocalFileSystem**.
-   - Set the **path's Population Type** to **Const** instead of **Link**.
-   - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
+   - Change the Population Type of **path** to **Const**.
+   - Set the value of the **path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
    - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
     ![FileWrite](images/MyFirstFlow_Example_Stage3_FileWrite.png) 
-
-![](images/information.png) Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
 8.  The **FileWrite** Actor executes the following activities:
 
@@ -121,7 +121,7 @@ The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *lear
 
    ![Update Schema](images/MyFirstFlow_DbCommand_Update_Schema.png) 
 
-   - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the [Data Inspection]() and display the Schema on the left and the data values on the right.
+   - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the Data Inspection yellow segment and display the Schema on the left and the data values on the right.
 
    - Add a  **Breakpoint** to **Stage 1** and run again the debug. Click ![Debug Step](images/debug_step_icon.png) to execute the next steps after the breakpoint step.
 
@@ -130,13 +130,13 @@ The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *lear
    - Click each one of the debug values (marked by blue) to open the **Data Viewer** window for the selected parameter. See example below:
 
    ![image](images/MyFirstFlow_Example_debug.png)
-  
+
 
 ![](images/information.png) Read about [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
 
    ##### Checking the Flow's Execution Results
 
-Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from CASE table.
+* Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from CASE table.
 
    
 
