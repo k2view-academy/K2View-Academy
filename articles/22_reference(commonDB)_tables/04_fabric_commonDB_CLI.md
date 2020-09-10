@@ -1,3 +1,6 @@
+# Reference Tables Runtime Commands
+
+
 <table width="900pxl">
 <tbody>
   
@@ -32,25 +35,79 @@
 </table>
 
 
+# Reference Tables Synchronization Supported statuses
 
 
-Supported statuses:
-WAITING_FOR_SYNC
-Request for sync was issued but sync didn’t start yet
-IN_SYNC
-In sync process
-READY
-Sync completed
-READY_WITH_BACKLOG
-Sync completed, be notified that there are still messages waiting in the backlog queue
-IN_BACKGROUND_SYNC
-Sync in background is currently running
-Current Session Transaction values:
-STARTED
-The transaction has started in the current session, but is not committed yet.
-COMMIT IN PROGRESS
-COMPLETED
-Commit is completed
-ROLLBACK IN PROGRESS
-ROLLED BACK
-Rollback is completed
+
+<table width="900pxl">
+<tbody>
+  
+<tr>
+<td valign="top" width="300pxl"><p><strong>Status</strong></p></td>
+<td valign="top" width="400pxl"><p><strong>Description</strong></p></td>
+</tr>
+
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>WAITING_FOR_SYNC</h5></td>
+<td valign="top" width="400pxl"><p>Request for sync was issued but sync didn’t start yet</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>IN_SYNC</h5></td>
+<td valign="top" width="400pxl"><p>In sync process</p></td>
+</tr> 
+
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>READY</h5></td>
+<td valign="top" width="400pxl"><p>Sync completed</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>READY_WITH_BACKLOG</h5></td>
+<td valign="top" width="400pxl"><p>Sync completed, be notified that there are still messages waiting in the backlog queue</p></td>
+</tr> 
+
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>IN_BACKGROUND_SYNC</h5></td>
+<td valign="top" width="400pxl"><p>Sync in background is currently running</p><p>Current Session Transaction values</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>STARTED</h5></td>
+<td valign="top" width="400pxl"><p>The transaction has started in the current session, but is not committed yet.</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>COMMIT IN PROGRESS</h5></td>
+<td valign="top" width="400pxl"><p>Commit is in progress</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>COMPLETED</h5></td>
+<td valign="top" width="400pxl"><p>Commit is completed</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>ROLLBACK IN PROGRESS</h5></td>
+<td valign="top" width="400pxl"><p>Rollback is in progress</p></td>
+</tr> 
+
+
+<tr>
+<td valign="top" width="300pxl"><h5>ROLLED BACK</h5></td>
+<td valign="top" width="400pxl"><p>Rollback is completed</p></td>
+</tr> 
+
+
