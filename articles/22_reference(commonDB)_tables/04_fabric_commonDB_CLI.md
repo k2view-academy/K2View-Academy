@@ -94,7 +94,7 @@
 
 # Reference Tables Runtime Examples
 
-```fabric>fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
+```fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
 
 ```
 |table_name |status          |backlog|node                                |current_session_transaction|sync_error|notes|
