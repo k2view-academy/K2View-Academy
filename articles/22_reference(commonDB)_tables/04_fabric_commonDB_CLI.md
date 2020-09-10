@@ -94,10 +94,9 @@
 
 # Reference Tables Runtime Examples
 
-```fabric>REF_STATUS;```
+```fabric>fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
 
 ```
-fabric>REF_STATUS TABLES='ALL' SCOPE='table';
 |table_name |status          |backlog|node                                |current_session_transaction|sync_error|notes|
 +-----------+----------------+-------+------------------------------------+---------------------------+----------+-----+
 |REFNUMBERS |READY           |0      |bac20345-74b0-4d45-baea-746bef4af388|                           |          |     |
