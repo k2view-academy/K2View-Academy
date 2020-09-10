@@ -1,10 +1,10 @@
 # Built-In Actor Types
 
-After you have understood how to work with Actors, let's explore which built-in Actor types are available in Broadway and lean about some of the most frequently used ones.
+After you have understood how to work with Actors, let's explore which built-in Actor types are available in Broadway and learn about some of the most frequently used ones.
 
-![info](images/information.png)Please read [Built-in Actor Types](/articles/19_Broadway/04_built_in_actor_types.md) to get the overview of the available built-in Actors. 
+![info](images/information.png)Read [Built-in Actor Types](/articles/19_Broadway/04_built_in_actor_types.md) to get the overview of the available built-in Actors. 
 
-Now we can take a closer looks at some of the most useful Actors.
+Now we can take a closer look at some of the most useful Actors.
 
 * **Dynamic Logic Actors** are the Actors which include dynamic logic as one of their input parameters. The most frequently used dynamic logic Actors are:
   * **JavaScript** Actor that can be used to simplify a flow by writing JavaScript business logic or validation code in the **script** input parameter.
@@ -15,9 +15,11 @@ Now we can take a closer looks at some of the most useful Actors.
   * **Parser** Actors that parse input stream into different formats like JSON, CSV and XML.
   * **Queue** Actors that manage Pub / Sub asynchronous message handling.
 
-![info](images/information.png)To learn more about the specifications and examples of each of the above Actor type, please refer to [Actors Specifications and Examples](/articles/19_Broadway/actors/README.md).
+![info](images/information.png)Read [Actors Specifications and Examples](/articles/19_Broadway/actors/README.md) to learn more about the specifications and examples of each of the above Actor type.
 
 
 
 ### ![info](/academy/images/example.png)Example - xxxx
 
+
+[![Previous](/articles/images/Previous.png)](08_using_actors_in_boadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
