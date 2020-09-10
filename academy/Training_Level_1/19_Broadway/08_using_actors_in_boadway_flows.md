@@ -6,9 +6,9 @@ Now you have seen how to create and run a Broadway flow, let's learn more about 
 
 By the end of this learning item you will:
 
-- Know which Actor's data types exist
-- Learn how to edit the input and output arguments and link the Actors
-- Learn what are dynamic logic Actors.
+- Know which Actor's data types exist.
+- Learn how to edit the input and output arguments and add the remarks.
+- Learn about different link types between the Actors.
 
 ### Actor Overview
 
@@ -19,14 +19,15 @@ A Broadway **Actor** represents an action that is executed on a [Stage](/article
 * [Data Types in Broadway](/articles/19_Broadway/05_data_types.md)
 
 
-
 ### ![](/academy/images/example.png) Example - Add, Remove and Edit the Links Between Actors in a Flow
 
 Use a flow you created in a previous exercise to try various ways of connecting two Actors in the flow. 
 
-1. Add two Actors A1 and A2 to two different Stages of the flow.
+1. Add two Actors **A1** and **B1** to two different Stages of the flow.
 
-2. Draw a link between them. Verify that the connection's **Link Type** = **Value** by default. 
+2. Draw a link between them. Verify that the connection's **Link Type** = **Value** by default.
+
+![info](images/information.png) To learn more about Link Types refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
 
    ![image](images/08_link_type_1.PNG)
 
@@ -36,20 +37,25 @@ Use a flow you created in a previous exercise to try various ways of connecting 
 
 4. Then change its Link Type to **Iterate** / **First** and verify the impact on the flow.
 
+![](images/information.png) To learn more about iteration in a Broadway flows refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
+
 5. Delete the link's connection line.
 
 6. Add a connection using the source [Actor's context menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu) > **Link** option. 
 
-7. In a flow with many connection lines, use [Actor's context menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu) > **Show only connected **option to display only Actors linked to the selected Actor.
+7. In a flow with many connection lines, use [Actor's context menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu) > **Show only connected** option to display only Actors linked to the selected Actor.
 
+![info](images/information.png) To learn more refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
 
+8. Add a remark to the Actor via [Actor's context menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu) > **Remark** option.
 
-![info](images/information.png) To learn more about linking the Actors and the link object properties refer to:
+9. Change the population type of **A1** Actor's input argument from **Const** to **External**.
 
-* [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md)
-* [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md)
+![info](images/information.png) To learn more refer to [Actor's Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
-
+   ![image](images/08_link_type_external.PNG)
 
 Let's continue to the next item to learn more about some of frequently used Actor types.
+
+[![Previous](/articles/images/Previous.png)](07_broadway_flow_add_condition_execise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_frequently_used_actor_types.md)
 
