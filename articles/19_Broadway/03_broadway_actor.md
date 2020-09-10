@@ -31,7 +31,7 @@ To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main m
 
 An Actor can be exported to create another Actor that inherits the current Actor’s logic. By doing so, specific business logic can be reused in different places in the flow. Once exported, the new Actor is added to the list of built-in Actors.
 
-To export an Actor, click **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu).
+To export an Actor, click **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu).
 
 ## Dynamic Logic Actors
 
@@ -46,11 +46,11 @@ The description of the Actor is part of the Actor's file. A remark is a user's c
 
 When exporting an Actor, the Actor's remarks are copied to the description of the new Actor type.
 
-Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode as in the following example:
+Click ![image](images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) and select **Description** to view the description of the Actor type. The Description window is displayed in a read-only mode as in the following example:
 
 ![image](images/99_03_actor_desc.PNG)
 
-To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actors-context-menu). Once there is a remark you can pull it up by clicking the green asterisk.
+To add your own remark to an Actor, select **Remark** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu). Once there is a remark you can pull it up by clicking the green asterisk.
 
 ![image](images/99_03_actor_remark.PNG)
 
