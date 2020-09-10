@@ -6,13 +6,13 @@
 
 - Course Introduction
   - Course overview and main objectives
-- Overview of High-level Broadway Components
+- Broadway High-level Components Overview
 - Broadway Tutorials
 
 #### **DAY 1 – Afternoon**
 
-- Building a Broadway Flow
-  - Creating a simple flow that selects data from a DB table and creates a JSON file
+- Creating a Broadway Flow
+  - Builing a simple flow that selects data from a DB table and creates a JSON file
     - Adding Stages and Actors
     - Linking between Stages
     - Adding a loop to a flow
@@ -27,10 +27,9 @@
   - Actors input and output data types
   - Editing an Actor's input and output, editing a Schema, adding a remark
   - Linking Actors
-  - Dynamic logic Actors
 - Frequently Used Actor Types
   - JavaScript Actor - writing JavaScript code
-  - DB, streams, parsers and queues
+  - DB commands, streams, parsers and queues Actors
 - Exercises: 
   - Manipulate data and load it into a DB, parse a file and load it to the DB
   - Subscribe to a Kafka topic and write it to a file
