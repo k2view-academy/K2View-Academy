@@ -178,7 +178,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
 </tr>
 <tr>
-<td width="200"><a href="07_broadway_flow_linking_actors">Link</a></td>
+<td width="200"><a href="07_broadway_flow_linking_actors.md">Link</a></td>
 <td style="width: 465px;">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
 <tr>
