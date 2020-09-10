@@ -5,60 +5,60 @@
 #### **DAY 1 – Morning**
 
 - Course Introduction
-  - Course overview & main objectives
-- Broadway Overview High Level Components
+  - Course overview and main objectives
+- Overview of High-level Broadway Components
 - Broadway Tutorials
 
 #### **DAY 1 – Afternoon**
 
-- How to Build a Broadway Flow
+- Building a Broadway Flow
   - Creating a simple flow that selects data from a DB table and creates a JSON file
     - Adding Stages and Actors
-    - Linking between the Stages
-    - Add a loop to the flow
-    - Run and Debug the flow
-- Broadway Iterations and Stage condition
+    - Linking between Stages
+    - Adding a loop to a flow
+    - Running and debugging a flow
+- Broadway Iterations and Stage Conditions
 - Exercise: 
   - Enhance a simple Broadway flow by adding a condition
 
 #### **DAY 2 – Morning**
 
-- Using Actors in Broadway flows
+- Using Actors in Broadway Flows
   - Actors input and output data types
-  - Edit Actor's input and output, edit schema, add remark
+  - Editing an Actor's input and output, editing a Schema, adding a remark
   - Linking Actors
   - Dynamic logic Actors
-- Frequently used Actor types
+- Frequently Used Actor Types
   - JavaScript Actor - writing JavaScript code
-  - DB, Steams, Parsers and Queue
+  - DB, streams, parsers and queues
 - Exercises: 
-  - Manipulate data and load it to a DB, parse a file and load it to DB
-  - Subscribe to Kafka topic and write it to a file
+  - Manipulate data and load it into a DB, parse a file and load it to the DB
+  - Subscribe to a Kafka topic and write it to a file
 
 #### **DAY 2 – Afternoon**
 
-- Broadway as a population
-- Interface Listener for Broadway flows
+- Broadway as a Population
+- Interface Listener for Broadway Flows
 - Exercises: 
-  - Create a Broadway flow for LU table population
-  - Create an Interface Listener for a Broadway flows
-- Additional Actors capabilities:
+  - Create a Broadway flow for an LU table population
+  - Create an Interface Listener for a Broadway flow 
+- Additional Actors Capabilities:
   - LU Function Actor 
   - Graphit Actor
-  - Fabric Commands Actors
-- Actor inheritance mechanism
+  - Fabric Command Actors
+- Actor Inheritance Mechanism
 
 #### **DAY 3 – Morning**
 
-- Flow enhancements:
+- Flow Enhancements:
   - Error handling
   - Inner flows
   - Transaction
 - Exercise:
-  - Create a Broadway flow with inner flow and an error handler
-- Data inspection
-- Reset parameters schemas
-- Run batch commands to execute Broadway flow
+  - Create a Broadway flow with an inner flow and an error handler
+- Data Inspection
+- Reset Parameters Schemas
+- Running Batch Commands to Execute a Broadway Flow
 
 **DAY 3 – Afternoon**
 
