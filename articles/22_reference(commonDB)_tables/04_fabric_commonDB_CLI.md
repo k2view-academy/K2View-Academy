@@ -88,6 +88,8 @@
 <td valign="top" width="400pxl"><p>Rollback is in progress/completed</p></td>
 </tr> 
 
+</tbody>
+</table>
 
 
 # Reference Tables Runtime Examples
