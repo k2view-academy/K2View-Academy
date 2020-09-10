@@ -8,11 +8,20 @@ Fabric CommonDB architecture has been designed to answer the following requireme
 - Manage their synchronization with the source, either automatically in the background or on-demand according to a specific schedule.
 - Ensure high availability levels at all times with the lowest access time possible.
 
-## Properties
-
 CommonDB consists of a single SQLite file that contains all the common reference tables that have been designed during their creation process. 
 This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single file. 
 As a rule of thumb, reference tables updates are managed in Kafka, while snapshot updates will be managed via Cassandra.
+
+
+
+ Parallel transactions on common tables:
+ The first commit updates the table. The commit is initiated:
+• Short transaction- the user runs the commit command.
+• Large transaction- the commit is initiated internally for each bulk size, populated in the Cassandra.
+ Common Snapshot:
+ When you run delete and then insert on a common table in the same trx, or you run delete command in the trx, the fabric creates a snapshot on the common table. Note: You can still create a snapshot using population, and ref_sync when the population includes a truncate of the table. The sync is a separate trx.
+
+
 
 ## Synchronization modes
 
@@ -47,6 +56,13 @@ o	Scheduled Sync time has come.
 o	Manually, when requested by the user.
 
 Note that in addition, if a delete request is sent to a Reference Table without a ```where``` statement, it is automatically treated as a snapshot update. 
+
+## Synchronization Properties
+The transaction of the common table is done in asynchronous mode, i.e. you cannot view the updated data until you run the commit, and the fabric updates the common table.
+ The transaction is sent to Kafka and is saved into the Kafka or the Cassandra, depending on its size:
+ A new configurable parameter in config.ini - TRANSACTION_BULK_SIZE- defines the maximum number of commands, sent by each bulk.
+ For example:
+ 
 
 
 
@@ -122,7 +138,31 @@ If no truncate defined
 ## Configuration Settings
 
 ### CommonDB General Settings
-Within the Config.ini file located in the home directory.
+
+These are located in the *common_area_config* section of the Config.ini file located in the home directory of each Fabric Node.
+
+
+#### Messages distribution mode - MEMORY / KAFKA
+```MESSAGES_BROKER_TYPE=MEMORY```
+
+#### Max retry for a poisoned message
+```PROCESS_UPDATE_MESSAGE_RETRIES_COUNT=3```
+
+#### Max idle time when consuming snapshot messages, if processing hangs longer the consumer will return IDLE_TIMOUT
+```CONSUMER_IDLE_TIME=60000```
+
+#### Max retry for common area operation
+```OPERATION_RETRIES_COUNT=3```
+
+#### Affinity to common sync job (comma separated), default: no affinity
+```SYNC_JOBS_AFFINITY=10.23.10.11```
+
+#### If true, remove all topics that not in use on drop
+```DELETE_TOPICS_ON_DROP=true```
+
+##### Size of transaction bulk size
+```TRANSACTION_BULK_SIZE= 1000```
+If 2500 insert commands are required, each bulk of 1000 commands is sent to Kafka, while the update content is kept in Cassandra. These 2500 inserts are divided into 3 transactions, the first 2 containing 1000 rows to insert, and the third one 500.
 
 #### TIMEOUT
 Maximum idle time when consuming snapshot messages
@@ -134,6 +174,10 @@ CASSANDRA_WAIT_MESSAGE_TIMEOUT=60000
 ```
 MAX_TRANSACTIONS_COMMIT=100
 ```
+
+
+
+
 
 #### SNAPSHOTS
 ```
@@ -149,13 +193,17 @@ COMMONS_TABLE_TTL=86400
 
 ### Cassandra Snapshots Settings
 
-One separate keyspace is configured for long messages.
+One separate keyspace is dedicated to long messages, each one stored in a table.
 
 
 •	Kafka consumer and producer setting - two sections. + 2 SSL parameters sections for consumer and producer 
 •	Reference commonDB sqlite files location 
 •	Operation mode one of (Kafka , Memory )
 •	Mode for PoCs w/o kafka dependency (no data persistency) (achi)
+
+
+
+
 
 
 
