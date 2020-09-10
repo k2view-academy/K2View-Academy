@@ -6,9 +6,9 @@ Now you have seen how to create and run a Broadway flow, let's learn more about 
 
 By the end of this learning item you will:
 
-- Know which Actor's data types exist.
-- Learn how to edit the input and output arguments and add the remarks.
 - Learn about different link types between the Actors.
+- Know how to edit the input and output arguments and add the remarks.
+- Get familiar with the most useful built-in Actor types.
 
 ### Actor Overview
 

@@ -18,7 +18,7 @@ In this exercise you will add a condition to your flow that does the following:
 Before you start, please read [Broadway Flow - Stages](/articles/19_Broadway/19_broadway_flow_stages.md) to learn about splitting and merging the Stages of a flow and about adding conditions to a Stage. 
 
 #### Step 1 - Open the Broadway Flow
-1. Go to the **project tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](05_create_broadway_flow.md).
+1. Go to the **Project Tree** > **Shared Objects** > **Broadway** and click the flow you created in the [previous lesson](05_create_broadway_flow.md).
 
 #### Step 2 - Add Counting of Selected Records
 
@@ -35,8 +35,6 @@ In the Step, you check the number of records: check if the number of records >= 
 3. Select the **GreaterThanEquals** Actor and click  **SUBMIT**:
 
      - The **GreaterThanEquals** Actor returns **true** if the value of the **a** parameter is greater than or equals the value of the **b** parameter. This Actor is in grey since it is added in a condition.
-
-     Read [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), [Broadway Actor's Properties Window](/articles/19_Broadway/03_broadway_actor_window.md), and [Built-In Actor Types](/articles/19_Broadway/04_built_in_actor_types.md) to learn more about Broadway Actors.
 
 4. Link the output of the **Count** condition to the **GreaterThanEquals** **a** input parameter.
 
@@ -119,8 +117,6 @@ In the Step, you check the number of records: check if the number of records >= 
      Stage 6 and 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
  </code></pre>
  </ul>
-
-
 
 
 
