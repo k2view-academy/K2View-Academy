@@ -157,3 +157,11 @@ One separate keyspace is configured for long messages.
 •	Operation mode one of (Kafka , Memory )
 •	Mode for PoCs w/o kafka dependency (no data persistency) (achi)
 
+
+
+
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md)
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_CLI.md)
+
+
