@@ -18,6 +18,8 @@ You can add iterations to the flow either by:
 
 - Iterating a data by the code in a [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
 
+Note that some Broadway capabilities (such as specific built-in Actors or the linking between the Actors) that will be explained in more details later in this training.
+
 ### Adding Conditions
 
 A Broadway flow can be split into different execution paths based on conditions. More than one Stage can be executed in each fork in the path. If a condition is required in the flow, the flow can be split and a **Stage condition** Actor can be added to one or more Stages that have been created as a result of the split. 
