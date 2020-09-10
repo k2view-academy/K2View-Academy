@@ -108,7 +108,7 @@ Note: Reference tables can also be accessed via [Lookup tables](/articles/07_tab
 
 Reference Tables must be deployed before being used.
 
-Go to the **Project Tree**, right-click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.  
+Go to the **Project Tree**, right click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.  
   
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/01_fabric_commonDB_overview.md)
