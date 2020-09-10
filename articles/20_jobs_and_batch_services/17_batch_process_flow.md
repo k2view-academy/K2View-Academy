@@ -192,7 +192,7 @@ When a migration process is initiated, it is treated as a batch of multiple enti
 
 The illustration below shows the sequence of actions involved in this process.
 
-<img src="/articles/20_jobs_and_batch_services/images/24_jobs_and_batch_services_migration_process.png>
+<img src="/articles/20_jobs_and_batch_services/images/24_jobs_and_batch_services_migration_process.png"></img>
 
 
 ### Step 1 
