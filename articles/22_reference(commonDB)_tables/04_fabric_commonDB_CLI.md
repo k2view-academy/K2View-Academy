@@ -1,77 +1,31 @@
 <table width="900pxl">
 <tbody>
+  
 <tr>
-<td valign="top" width="300pxl">
-<p><strong>Command Name</strong></p>
-</td>
-<td valign="top" width="400pxl">
-<p><strong>Description</strong></p>
-</td>
-<td valign="top" width="300pxl">
-<p><strong>Example</strong></p>
-</td>
+<td valign="top" width="300pxl"><p><strong>Command Name</strong></p></td>
+<td valign="top" width="400pxl"><p><strong>Description</strong></p></td>
+<td valign="top" width="300pxl"><p><strong>Example</strong></p></td>
 </tr>
 
 
 
 <tr>
-<td valign="top" width="300pxl">
-<h5>REF_SYNC [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'] [FORCE=true/false];</h5>
-</td>
-  
-<td valign="top" width="400pxl">
-<p>Start sync job for the specified common tables.</p>
-</td>
-
-<td valign="top" width="300pxl">
-<p>REF_SYNC TABLES=’ALL’;</p>
-</td>
+<td valign="top" width="300pxl"><h5>REF_SYNC [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'] [FORCE=true/false];</h5></td>
+<td valign="top" width="400pxl"><p>Start sync job for the specified common tables.</p></td>
+<td valign="top" width="300pxl"><p>REF_SYNC TABLES=’ALL’;</p></td>
 </tr> 
 
 <tr>
-<td valign="top" width="300pxl">
-<h5>REF_SYNC_WAIT [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'];</h5>
-</td>
-  
-<td valign="top" width="400pxl">
-<p>Waits for list of tables to be synced or transaction to be completed on the session, until a pre-defined timeout. Should run after REF_SYNC command or after insert/delete/update on the common table.</p>
-</td>
-
-<td valign="top" width="300pxl">
-<p>REF_SYNC_WAIT TABLES=’ALL’;</p>
-</td>
+<td valign="top" width="300pxl"><h5>REF_SYNC_WAIT [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'];</h5></td>
+<td valign="top" width="400pxl"><p>Waits for list of tables to be synced or transaction to be completed on the session, until a pre-defined timeout. Should run after REF_SYNC command or after insert/delete/update on the common table.</p></td>
+<td valign="top" width="300pxl"><p>REF_SYNC_WAIT TABLES=’ALL’;</p></td>
 </tr> 
 
 
 <tr>
-<td valign="top" width="300pxl">
-<h5>REF_SYNC [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'] [FORCE=true/false];</h5>
-</td>
-  
-<td valign="top" width="400pxl">
-<p>Start sync job for the specified common tables.</p>
-</td>
-
-<td valign="top" width="300pxl">
-<p>REF_SYNC TABLES=’ALL’;</p>
-</td>
-</tr> 
-
-
-<tr>
-<td valign="top" width="300pxl">
-<h5>REF_STATUS [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'] [SCOPE='table' or 'population'];</h5>
-</td>
-  
-<td valign="top" width="400pxl">
-<p>REF_STATUS provides the tables sync status for the specified reference tables across all nodes. In addition, it provides the ‘Current Session Transaction’, i.e. the status of the latest transaction, executed on the table in the current session.</p>
-</td>
-
-<td valign="top" width="300pxl">
-<p>REF_STATUS;</p>
-<p>REF_STATUS TABLES=’ALL’ SCOPE=’population’;</p>
-</td>
-</tr> 
+<td valign="top" width="300pxl"><h5>REF_STATUS [LU_NAME='lu name'] [TABLES='ALL' or '<table 1,table 2,etc...>'] [SCOPE='table' or 'population'];</h5></td>
+<td valign="top" width="400pxl"><p>REF_STATUS provides the tables sync status for the specified reference tables across all nodes. In addition, it provides the ‘Current Session Transaction’, i.e. the status of the latest transaction, executed on the table in the current session.</p></td>
+<td valign="top" width="300pxl"><p>REF_STATUS;</p><p>REF_STATUS TABLES=’ALL’ SCOPE=’population’;</p></td></tr> 
 
 </tbody>
 </table>
