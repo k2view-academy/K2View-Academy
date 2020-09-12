@@ -36,7 +36,9 @@ In this mode, update are performed in ways of Create/Update/Delete SQL queries d
 
 
 ### Snapshot Mode:
-This mode is (automatically) selected in cases where synchronizing the entire table is needed. A full snapshot of the table is then created by an available Fabric node, and is published both to the corresponding Kafka topic dedicated to the table being updated (header only) and to Cassandra (data).
+
+This mode is (automatically) selected in cases where synchronizing the entire table is needed. 
+A full snapshot of the table is then created by an available Fabric node, and is published both to the corresponding Kafka topic dedicated to the table being updated (header only) and to Cassandra (data).
 
 - The header published on the Kafka update topic contains the UUID of the snapshot
 
@@ -44,8 +46,11 @@ This mode is (automatically) selected in cases where synchronizing the entire ta
   - Uuid – unique per snapshot.
   - Table name
   - message id (from 0 upwards)
-  - Data - *list of updates* (as for regular update message), *size of list* (default set using the configuration parameter and which user can changed on a per-snapshot basis). 
-
+  - Data:
+  ```
+  *list of updates* (as for regular update message), 
+  *size of list* (default set using the configuration parameter and which user can changed on a per-snapshot basis). 
+  ```
 
 A snapshot will only be published once one of the following actions will be triggered: 
 
