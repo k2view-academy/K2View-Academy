@@ -41,12 +41,12 @@ This mode is (automatically) selected in cases where synchronizing the entire ta
 - The header published on the Kafka update topic contains the UUID of the snapshot
 
 - The Cassandra table row contains the following:
-*- Uuid – unique per snapshot.
-*- Table name
-*- message id (from 0 upwards)
-*- Data
- **- List of updates (as for regular update message).
- **- The size of list (default set using the configuration parameter and which user can changed on a per-snapshot basis). 
+  - Uuid – unique per snapshot.
+  - Table name
+  - message id (from 0 upwards)
+  - Data
+        List of updates (as for regular update message).
+         The size of list (default set using the configuration parameter and which user can changed on a per-snapshot basis). 
 
 
 A snapshot will only be published once one of the following actions will be triggered: 
