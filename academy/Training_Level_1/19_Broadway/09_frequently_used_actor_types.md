@@ -11,7 +11,7 @@ Let's take a closer look at some of the most useful Actors.
   * **DB Commands** Actors, that perform DB commands and actions like creating a new table, loading data, etc.
 
 * Other Actors for handling useful activities are:
-  * **Stream** Actors, that handle streams such as reading from and writing to a file or compressing and decompressing data.
+  * **Stream** Actors, that handle streams like reading from and writing to a file or compressing and decompressing data.
   * **Parser** Actors, that parse input streams into different formats like JSON, CSV and XML.
   * **Queue** Actors, that manage Pub / Sub asynchronous message handling.
 
@@ -31,7 +31,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
    * Change the **path** population type to **External**. 
 
-   * Populate the **path** value, click the **Main menu toolbar** > **Actions** > **Debug / Run Arguments**. Use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
+   * Populate the **path** value, in the **Main menu toolbar**  click **Actions** > **Debug / Run Arguments**. Use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
 
      ![debug](images/09_debug_arg.PNG)
 
@@ -44,7 +44,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 4. Add a **Logger** Actor to Stage 3 and populate its input arguments as follows:
 
    * Change the **message** population type to **Const**. 
-   * Set the **message** value to: *Num of cases = ${NUM_OF_CASES}, Status is ${CASE_STS}*
+   * Set the **message** value to: *Num of cases = ${NUM_OF_CASES}, Status is ${CASE_STS}*.
    * Check that the new input arguments are added to the Actor: NUM_OF_CASES and CASE_STS.
 
 5. Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
@@ -63,7 +63,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
      ![](images/information.png) To learn more about Debug options, refer to [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md).
 
-7. Check the output log area to see the print results.
+7. Check the output log area to see the printed results.
 
    
 
