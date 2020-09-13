@@ -35,8 +35,7 @@
 </table>
 
 
-# Reference Tables Synchronization Supported statuses
-
+# Reference Tables Synchronization Statuses
 
 
 <table width="900pxl">
