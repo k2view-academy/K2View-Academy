@@ -102,3 +102,11 @@ CASSANDRA_WAIT_MESSAGE_TIMEOUT=60000
 ```
 
 One separate keyspace is dedicated to long messages, each one of the messages being stored in a table.
+
+
+
+
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_flow.md)
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/05_fabric_commonDB_runtime.md)
+
