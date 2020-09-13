@@ -168,6 +168,8 @@ This happens when running the following command ```drop lutype k2_ref;``` from a
 - Operation mode can be with Kafka or in Memory depending on project scope
   - Mode for PoCs w/o kafka dependency
   - no data persistency
+  
+- Selecting and modifying data contained in Reference TablesSet can be done by setting the ```common_local_trx``` flag to TRUE, before running a commit.
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md)
