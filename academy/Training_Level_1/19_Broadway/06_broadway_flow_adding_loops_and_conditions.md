@@ -4,15 +4,11 @@
 
 A Broadway flow is built in Stages which are executed from left to right. Each Stage can contain one or more Actors that implement logic and data transformation. 
 
-You may occasionally need to iterate the output of an Actor and to handle each iteration. 
+You may occasionally need to iterate the output of an Actor and to handle each iteration. For example, the [Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) built in the previous lesson selects a list of customers from the database and then builds a JSON object for each customer and writes it into an output file.
 
-For example, the [Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) built in the previous lesson selects a list of customers from the database and then builds a JSON object for each customer and writes it into an output file.
+Iterations can be added to the flow either by:
 
-You can add iterations to the flow either by:
-
-- Adding Iterations on Stages: setting the [Link Type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties)  to **Iterate** when linking an Actor to another Actor opens a loop. The loop runs on the next Stages in the flow and is closed by the first Stage which is marked as **Iterate Close**.
-
- To learn more about the Stage context menu, read [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md).
+- Adding iterations on Stages: setting the [Link Type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties)  to **Iterate** when linking an Actor to another Actor opens a loop. The loop runs on the next Stages in the flow and is closed by the first Stage which is marked as **Iterate Close**. To learn more about the Stage context menu, read about the [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md).
 
 - Adding a [ForLoop Actor](/articles/19_Broadway/21_iterations.md#forloop-actor) to the flow.
 
