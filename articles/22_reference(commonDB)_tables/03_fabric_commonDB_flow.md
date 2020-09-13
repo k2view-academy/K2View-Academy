@@ -119,6 +119,7 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishe
 When a new node is  coming up online, and rejoins the current Fabric cluster, all the common tables need to be brought to this node. Two options are available to perform this enrollment:
 
 - Option 1: *Directly from kafka*
+
 The new node connects directly to each kafka topics (one per reference table) to look whether a snapshot is available:
 
   -	the table is regularly sync-ed as per defined in its sync schedule and therefore a snapshot is available
