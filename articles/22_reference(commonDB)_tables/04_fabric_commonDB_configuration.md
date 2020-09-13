@@ -78,11 +78,6 @@ TRANSACTION_BULK_SIZE= 1000
 MAX_TRANSACTIONS_COMMIT=100
 ```
 
-### SNAPSHOTS NAME
-
-```
-COMMONS_SNAP_TABLE=snapshots
-```
 
 ### Memory queue size for snapshot
 ```
@@ -154,15 +149,25 @@ Fabric supports the following Kafka security encryption, authentication and auth
 
 ## Cassandra Snapshots Settings
 
+### SNAPSHOTS NAME
+```
+COMMONS_SNAP_TABLE=snapshots
+```
+
+### Entry TTL 
+```
+Snapshot table TTL in seconds - Default is one week
+#COMMONS_TABLE_TTL=8640
+```
+
 ### TIMEOUT
 
 Maximum idle time when consuming snapshot messages
-
 ```
 CASSANDRA_WAIT_MESSAGE_TIMEOUT=60000
 ```
 
-One separate keyspace is dedicated to long messages, each one of the messages being stored in a table.
+
 
 
 
