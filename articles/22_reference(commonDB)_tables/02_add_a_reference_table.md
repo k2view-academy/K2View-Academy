@@ -23,7 +23,7 @@ A  Reference table holds information common to all LU instances or to multiple L
 
 
 6. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
-If the table does not appear immediately, click Refresh ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
+If the table does not appear immediately, click the Refresh icon: ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
 
 ![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
 
