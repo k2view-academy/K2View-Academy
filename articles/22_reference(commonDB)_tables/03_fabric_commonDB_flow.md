@@ -99,7 +99,7 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishe
 
 ## Snapshots Synchronization Mechanism
 
-### Option 1 - The truncate option is set
+### Option 1 - Truncate option is set
 
 - The snapshot is started
 - All rows are added to the snapshot
@@ -108,7 +108,7 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishe
   - The old reference table is dropped.
   - The temporary table is renamed to the Reference Table name.
 
-### Option 2 - The truncate option is not set
+### Option 2 - Truncate option is not set
 
 - All updates for the Reference Table are executed 
 - Once the batch of transactions is available, all the updates are executed in one commit, unless there are failures in which case each update is executed one by one.
