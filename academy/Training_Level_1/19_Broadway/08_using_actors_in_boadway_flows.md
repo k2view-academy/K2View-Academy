@@ -6,9 +6,9 @@ Now that you know how to create and run a Broadway flow, let's learn more about 
 
 By the end of this learning item you will:
 
-- Know about the different link types between Actors.
+- Know about the different types of links between Actors.
 - Know how to edit input and output arguments and add remarks.
-- Be familiar with the most useful built-in Actor types.
+- Be familiar with the most used built-in Actor types.
 
 ### Actors Overview
 
@@ -21,15 +21,13 @@ To learn more about Broadway Actors, their properties and how to link them in a 
 * [Broadway Data Types](/articles/19_Broadway/05_data_types.md).
 
 
-### ![](/academy/images/example.png)Example - Setting and Updating Links Between Actors, Remarks and Population Type
+### ![](/academy/images/example.png)Example - Setting and Updating Links Between Actors, Remarks and Population Types
 
-In this exercise you will use a flow that created in a previous exercise and connect two Actors to it. 
+In this exercise you will use a flow that you created in a previous exercise and connect two Actors to it. 
 
-1. Add Actors **A1** and **B1** to two different Stages of the flow. For instructions, refer to [How Do I Edit Links in a Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md#how-do-i-edit-links-in-the-flow).
+1. Add Actors **A1** and **B1** to two different Stages of the flow. For more information, refer to [How Do I Edit Links in a Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md#how-do-i-edit-links-in-the-flow).
 
-2. Draw a link between the Stages. Verify that the connection's **Link Type** = **Value** (default).
-
-   ![info](images/information.png) To learn more about Link Types, refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
+2. Draw a link between the Stages. Verify that the connection's **Link Type** = **Value** (default). For more information, refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
 
 ![image](images/08_link_type_1.PNG)
 
@@ -37,25 +35,17 @@ In this exercise you will use a flow that created in a previous exercise and con
 
 ![image](images/08_link_type_vararg.PNG)
 
-4. Change its Link Type to **Iterate** / **First** and check the impact on the flow.
-
-   ![](images/information.png) To learn more about iteration in Broadway flows, refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
+4. Change the Link Type to **Iterate** / **First** and check the impact on the flow. For more information, refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
 
 5. Delete the link's connection line.
 
-6. To add a connection, click **Source Actor** > **Link**. 
+6. To add a connection, click **Source Actor** > **Link**. For more information, refer to [Actor's Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu).
 
-   ![](images/information.png)To learn more, refer to [Actor's Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu).
-
-7. In a flow with many connection lines, click **Actor** > **Show only connected** to display only the Actors linked to the selected Actor.
-
-   ![info](images/information.png) To learn more, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
+7. In a flow with many connection lines, click **Actor** > **Show only connected** to display only the Actors linked to the selected Actor. For more information, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
 
 8. Click **Actor** > **Remark** and add a remark.
 
-9. Change the **A1** Actor's population type input argument from **Const** to **External** and then update the argument's external name.
-
-   ![info](images/information.png) To learn more, refer to [Actor's Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
+9. Change the **A1** Actor's population type input argument from **Const** to **External** and then update the argument's external name. For more information, refer to [Actor Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
 ![image](images/08_link_type_external.PNG)
 
