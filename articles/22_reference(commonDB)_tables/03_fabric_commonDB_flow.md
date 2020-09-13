@@ -12,12 +12,19 @@ CommonDB consists of a single SQLite file that contains all the common reference
 
 This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single file. In case of parallel transactions on common tables, the first node to commit the change updates the table.
 
-Example: 
-Node 1 and Node 3 wish to modify table T5 of commonDB with the same update, assuming that table T5 is in-sync across all nodes. If Node 3 commits its update first then table T5 will be first updated by Node 3 and all other nodes will subsequently update their tables using the message published by Node 3. 
+Examples:
 
-Node 1 and Node 3 wish to modify table T5 of commonDB with a different update, assuming that table T5 is in-sync across all nodes. All nodes will catch up with the update messages published by Node 1 and Node 3.
+- Node 1 and Node 3 wish to modify table T5 of commonDB with an update on same row but with different value:
 
-Note: The publishing Node also updates its own commonDB table after reading the very message it published on Kafka.
+  - Node 3 wants to update T5 on Row 10 with value = 3
+  - Node 1 wants to update T5 on Row 10 with value = 1
+  - Assuming that table T5 is in-sync across all nodes, if Node 3 commits its update (on T5, Row 10, Value=3) first then table T5 will be first updated by Node 3 and all other nodes will subsequently update their tables using the message published by Node 3. 
+  - Then, all nodes will re-update their tables using the message published by Node 1.
+
+- Node 1 and Node 3 wish to modify table T5 of commonDB with a different update.
+  - Assuming that table T5 is in-sync across all nodes, all nodes will catch up with the update messages published by Node 1 and Node 3, starting with the update that was first committed.
+
+- Note: The publishing Node also updates its own commonDB table after reading the very message it published on Kafka, and using the update data available on Kafka's update.
 
 
 ## Synchronization modes
