@@ -31,7 +31,7 @@ Fabric solves the following high-level requirements:
 - Data that is as close as possible to the data consumers.
 - Always secured data.
 
-Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what is fabric.md) and the [Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
+Fabric does all this using a patented approach for storing, syncing and securing data. For more information, refer to [What is Fabric](/articles/01_fabric_overview/01_what%20is%20fabric.md) and the [Logical Unit Overview](/articles/03_logical_units/01_LU_overview.md). 
 
 
 ## 2. Fabric Server Main Components
