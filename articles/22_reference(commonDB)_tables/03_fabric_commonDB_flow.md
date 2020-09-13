@@ -2,13 +2,12 @@
 
 
 ## Overview
-Fabric CommonDB architecture has been designed to answer the following requirements:
+Copies of Reference tables are kept within each Fabric Node, therefore Fabric CommonDB architecture has been designed to answer the following requirements:
 
-- Keep reference tables in each node
 - Manage their synchronization with the source, either automatically in the background or on-demand according to a specific schedule.
 - Ensure high availability levels at all times with the lowest access time possible.
 
-CommonDB consists of a single SQLite file that contains all the common reference tables that have been designed during their creation process.
+CommonDB consists of a single SQLite file that contains all the Reference Tables that have been populated from External Sources or as Fabric SOR .
 
 This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single file. In case of parallel transactions on common tables, the first node to commit the change updates the table.
 
