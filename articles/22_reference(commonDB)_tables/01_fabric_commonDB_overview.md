@@ -1,7 +1,7 @@
 # **Fabric CommonDB Overview** 
 
-A CommonDB is an additional SQLite database used for storing reference tables common to all MicroDB. 
-For example, a table storing a list of objects to which all MicroDB Schemas point to, detailed information about a specific set of services to which all LUIs subscribe, or a geo-code table that identifies customer zip addresses. 
+A CommonDB is an additional SQLite database used for storing reference tables common to all MicroDBs. 
+For example, a table storing a list of objects to which all MicroDB Schemas point to, detailed information about a specific set of services to which all LUIs subscribe, a geo-code table that identifies customer zip addresses, or a report of number of customers per customer type. 
 
 In a distributed system, a copy of the CommonDB is stored on each Fabric node that is involved. Fabric handles their cross-synchronization and ensures the local CommonDB SQLite file is always available for queries within each Fabric session. 
 This enables writing JOIN clauses between common tables and any MicroDB using only one SQL query from the same node, thus providing instantenous data access and computing resources to these queries. 
