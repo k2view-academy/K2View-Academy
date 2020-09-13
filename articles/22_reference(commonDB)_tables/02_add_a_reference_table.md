@@ -110,9 +110,9 @@ Note: Reference tables can also be accessed via [Lookup tables](/articles/07_tab
 
 ## Deploy the Reference Tables
 
-Reference Tables must be deployed before being used.
+Reference Tables must be deployed before being used since the deployment process will trigger the background synchronization [job](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) needed to keep all commonDB file in-sync across the Fabric Cluster.
 
-Go to the **Project Tree**, right click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.  
+In order to do so, go to the **Project Tree**, right click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.  
   
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/01_fabric_commonDB_overview.md)
