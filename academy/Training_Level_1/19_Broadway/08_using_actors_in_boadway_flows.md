@@ -17,7 +17,7 @@ A Broadway Actor represents an action that is executed on a [Stage](/articles/19
 To learn more about Broadway Actors, their properties and how to link them in a Broadway flow, please refer to:
 
 * [Actors Overview](/articles/19_Broadway/03_broadway_actor.md).
-* [Actor's Properties Window](/articles/19_Broadway/03_broadway_actor_window.md).
+* [Actor Properties Window](/articles/19_Broadway/03_broadway_actor_window.md).
 * [Broadway Data Types](/articles/19_Broadway/05_data_types.md).
 
 
@@ -45,7 +45,7 @@ Using a flow you created in a previous exercise, connect two Actors to the flow.
 
 5. Delete the link's connection line.
 
-6. Add a connection, click **Source Actor** > **Link**. 
+6. To add a connection, click **Source Actor** > **Link**. 
 
    ![](images/information.png)To learn more, refer to [Actor's Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu).
 
@@ -53,7 +53,7 @@ Using a flow you created in a previous exercise, connect two Actors to the flow.
 
    ![info](images/information.png) To learn more, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
 
-8. Add a remark, click **Actor** > **Remark**.
+8. Click **Actor** > **Remark** and add a remark.
 
 9. Change the **A1** Actor's population type input argument from **Const** to **External** and then update the argument's external name.
 
