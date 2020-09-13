@@ -89,6 +89,25 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishe
 ![image](/articles/22_reference(commonDB)_tables/images/09_commonDB_RefSyncLong.png)
 
 
+
+## Snapshots Synchronization Mechanism
+
+### Option 1 - The truncate option is set
+
+- The snapshot is started
+- All rows are added to the snapshot
+- If any error or exception occurs the rollback process is engaged, otherwise the transaction is committed in a single transaction:
+  - Indices are created on the temporary table.
+  - The old reference table is dropped.
+  - The temporary table is renamed to the Reference Table name.
+
+### Option 2 - The truncate option is not set
+
+- All updates for the Reference Table are executed 
+- Once the batch of transactions is available, all the updates are executed in one commit, unless there are failures in which case each update is executed one by one.
+
+
+
 ## Common Area table initialization
 When a new node is  coming up online, and rejoins the current Fabric cluster, all the common tables need to be brought to this node. Two options are available to perform this enrollment:
 
@@ -105,7 +124,10 @@ The new node connects directly to each kafka topics (one per reference table) to
   - another node prepared a snapshot and puts it either in kafka (short) or cassandra (long)
 
 
-## Deployment Process
+
+## Use Cases
+
+### Deployment Process
 
 Deploying a new reference table will have the following consequences:
 1. All running reference table synchronization jobs will stop.
@@ -117,21 +139,20 @@ Deploying a new reference table will have the following consequences:
 7. Existing configuration parameters are applied (such as sync job retry interval) on coordinator node
 
 
-## Reference Table Synchronization Mechanism
+### Table Removal
+This happens as a result of deployment process:
 
-### Option 1 - The truncate option is set
+- Table is dropped from CommonDB
+-	All local topic consumers and producers are dropped.
 
-- The snapshot is started
-- All rows are added to the snapshot
-- If any error or exception occurs the rollback process is engaged, otherwise the transaction is committed in a single transaction:
-  - Indices are created on the temporary table.
-  - The old reference table is dropped.
-  - The temporary table is renamed to the Reference Table name.
+### commonDB drop
+This happens when running the following command ```drop lutype k2_ref;``` from a Fabric Node:
 
-### Option 2 - The truncate option is not set
+- All existing tables in common.db are dropped (including the internal and temporary tables)
+- All existing sync jobs are stopped.
+- All existing consumer / producers are terminated.
 
-- All updates for the Reference Table are executed 
-- Once the batch of transactions is available, all the updates are executed in one commit, unless there are failures in which case each update is executed one by one.
+
 
 
 
