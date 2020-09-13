@@ -16,7 +16,7 @@ Let's take a closer look at some of the most useful Actors.
   * **Queue** Actors, that manage Pub / Sub asynchronous message handling.
 
 ![info](images/information.png) To learn more about the above Actors, their specifications and examples, read
-[Actors Specifications and Examples](/articles/19_Broadway/actors/README.md). 
+[Actor Specifications and Examples](/articles/19_Broadway/actors/README.md). 
 
 
 ### ![info](/academy/images/example.png)Example - Reading and Parsing a File
