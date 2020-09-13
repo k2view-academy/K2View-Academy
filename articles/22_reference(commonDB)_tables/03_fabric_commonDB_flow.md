@@ -10,16 +10,11 @@ Fabric CommonDB architecture has been designed to answer the following requireme
 
 CommonDB consists of a single SQLite file that contains all the common reference tables that have been designed during their creation process.
 
-This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single file. 
+This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single file. In case of parallel transactions on common tables, the first node to commit the change updates the table.
 
+Scenari: 
+Node 1 and Node 3 wish to modify table T5 of commonDB, assuming that table T5 is in-sync across all nodes. If Node 3 commits its update first then table T5 will be first updated by Node 3 and all other nodes will subsequently update their tables using the message published by Node 3. 
 
-
- Parallel transactions on common tables:
- The first commit updates the table. The commit is initiated:
-• Short transaction- the user runs the commit command.
-• Large transaction- the commit is initiated internally for each bulk size, populated in the Cassandra.
- Common Snapshot:
- When you run delete and then insert on a common table in the same trx, or you run delete command in the trx, the fabric creates a snapshot on the common table. Note: You can still create a snapshot using population, and ref_sync when the population includes a truncate of the table. The sync is a separate trx.
 
 
 
@@ -149,6 +144,6 @@ Deploying a new reference table will have the following consequences:
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_CLI.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_Configuration.md)
 
 
