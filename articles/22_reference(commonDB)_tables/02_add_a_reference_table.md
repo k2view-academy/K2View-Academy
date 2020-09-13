@@ -16,7 +16,10 @@ A  Reference table holds information common to all LU instances or to multiple L
 
 
 
-4. Optional: add a prefix to the Reference table's name in the **File Name Prefix** field (window's footer). If there are objects in the project with the same name, add a prefix to differentiate between Reference tables and LU tables with similar names. We recommend using a prefix that indicates the project name as a Reference table. For example <proj-prefix>_REF.
+4. Optional: 
+- add a prefix to the Reference table's name in the **File Name Prefix** field (window's footer). 
+- If there are objects in the project with the same name, add a prefix to differentiate between Reference tables and LU tables with similar names. 
+We recommend using a prefix that indicates the project name as a Reference table. For example <proj-prefix>_REF.
 
 
 6. Click **Create Tables** to add the new Reference table under References in the Project Tree. If the table does not appear immediately, click Refresh ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
