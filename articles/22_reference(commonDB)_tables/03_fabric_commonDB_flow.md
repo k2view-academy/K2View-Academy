@@ -137,9 +137,9 @@ Deploying a new reference table will have the following consequences:
 
 ## Miscellaneous
 
-•	Kafka consumer and producer must be setup along with 2 SSL parameters, one for the consumer topic and one for the producer topic. 
+- Kafka consumer and producer must be setup along with 2 SSL parameters, one for the consumer topic and one for the producer topic. 
 
-•	Operation mode can be with Kafka or in Memory depending on project scope
+- Operation mode can be with Kafka or in Memory depending on project scope
   - Mode for PoCs w/o kafka dependency
   - no data persistency
 
