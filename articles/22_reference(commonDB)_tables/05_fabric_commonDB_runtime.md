@@ -94,22 +94,33 @@ The following commands are available from the Fabric Command Line.
 
 # Reference Tables Runtime Examples
 
-```fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
+```
+fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
+```
 
 ```
-|table_name |status          |backlog|node                                |current_session_transaction|sync_error|notes|
-+-----------+----------------+-------+------------------------------------+---------------------------+----------+-----+
-|REFNUMBERS |READY           |0      |bac20345-74b0-4d45-baea-746bef4af388|                           |          |     |
-|REFSIMPLE  |IN_SYNC         |0      |bac20345-74b0-4d45-baea-746bef4af388|                           |          |     |
-|REF_INVOICE|WAITING_FOR_SYNC|0      |bac20345-74b0-4d45-baea-746bef4af388|                           |          |     |
+fabric>REF_STATUS;
+|table_name|status          |backlog|node                                |current_session_transaction|sync_error|notes|
++----------+----------------+-------+------------------------------------+---------------------------+----------+-----+
+|REF_USAGE |WAITING_FOR_SYNC|0      |b028b082-4ad3-477a-8188-c07bbeecc6e1|                           |          |     |
+|REF_USAGE |WAITING_FOR_SYNC|0      |cde47595-5222-4642-8d37-1757d6719693|                           |          |     |
+|REF_USAGE |WAITING_FOR_SYNC|0      |809f729c-9334-4565-825b-3daf026ba34d|                           |          |     |
+|REF_USAGE |WAITING_FOR_SYNC|0      |13dfb26f-f6d7-42f7-96d6-6d45742964be|                           |          |     |
+|REF_USAGE |WAITING_FOR_SYNC|0      |f550f905-777f-43e5-a96a-ea8a673a5a81|                           |          |     |
+|REF_USAGE |WAITING_FOR_SYNC|0      |80ca785a-82c5-4cbf-9fce-b9d27b3c1f63|                           |          |     |
 
 ```
+
+Note that, in this example 6 different Nodes are waiting to sync the same REF_USAGE table
 
 - table_name: - the name of the Reference Table
 - status: - one of the statuses defined [here](/articles/22_reference(commonDB)_tables/05_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses)
 - node: The ID of the node operating the sync
 
-```fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’```
+
+```
+fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’
+```
 
 ```
 |table_name |population            |verified_time          |start_sync_time        |end_sync_time          |start_write_time       |last_write_time        |next_planned_sync      |sync_error  |node                                |notes|
@@ -121,6 +132,17 @@ The following commands are available from the Fabric Command Line.
 - table_name: - the name of the Reference Table
 - population: - the name of the Population querying the External Sources
 - node: The ID of the node operating the sync
+
+
+```
+fabric>REF_SYNC_WAIT TABLES='ALL';
+```
+
+|Table name|Required sync time|Current session transaction|
++----------+------------------+---------------------------+
+|REF_USAGE |null              |                           |
+|T1        |null              |                           |
+|T2        |null              |                           |
 
 
 
