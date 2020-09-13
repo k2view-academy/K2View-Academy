@@ -8,7 +8,7 @@ By the end of this learning item you will:
 
 - Know about the different types of links between Actors.
 - Know how to edit input and output arguments and add remarks.
-- Be familiar with the most used built-in Actor types.
+- Be familiar with the most used built-in Actors.
 
 ### Actors Overview
 
