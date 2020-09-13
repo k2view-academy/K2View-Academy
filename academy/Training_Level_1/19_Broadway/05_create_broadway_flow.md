@@ -105,7 +105,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
    - Click ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
 
-![](images/information.png) Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
+![](images/information.png) To learn more about editing this Stage's settings, read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
 
 
 
@@ -124,16 +124,14 @@ The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *l
 
    - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click ![Debug Step](images/debug_step_icon.png) to execute the next steps after the breakpoint step.
-
-   - You can now see the input and output values displayed for each iteration in the flow.
+   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click ![Debug Step](images/debug_step_icon.png) to execute the next steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
 
    - Click each Debug value (marked by blue) to open the **Data Viewer** window for the selected parameter. See the example below:
 
    ![image](images/MyFirstFlow_Example_debug.png)
 
 
-![](images/information.png) Read about [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
+![](images/information.png) For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
 
    ##### Checking the Flow's Execution Results
 
@@ -143,6 +141,6 @@ The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *l
 
 Congratulations! You've just created your first Broadway flow. 
 
-Let's continue to the next item to learn more about adding iteration and conditions to the Broadway flow.
+Let's continue to the next item to learn more about adding iterations and conditions to the Broadway flow.
 
 [![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_broadway_flow_adding_loops_and_conditions.md)
