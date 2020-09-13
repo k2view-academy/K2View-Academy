@@ -115,3 +115,8 @@ The following commands are available from the Fabric Command Line.
 |REFSIMPLE  |refpop2               |2020-09-10 17:23:52.199|2020-09-10 17:23:52.199|1970-01-01 02:00:00.000|2020-09-10 17:25:32.262|1970-01-01 02:00:00.000|1970-01-01 02:00:00.000|null        |bac20345-74b0-4d45-baea-746bef4af388|     |
 ```
 
+
+
+
+
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_configuration.md)
