@@ -19,7 +19,7 @@ Let's take a closer look at some of the most useful Actors.
 [Actors Specifications and Examples](/articles/19_Broadway/actors/README.md). 
 
 
-### ![info](/academy/images/example.png)Example - Reading and Parsing the File
+### ![info](/academy/images/example.png)Example - Reading and Parsing a File
 
 Let's create a new Broadway flow that reads data from a JSON file, parses it and prints it into a log. 
 
@@ -39,7 +39,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 3. Add a **JsonParser** Actor to Stage 2 of the flow and connect its input argument to the previous Actor's output. 
 
-   * Set the **single** input argument to correspond with the input JSON file. For example, if the input file includes a valid JSON, keep the value as **true**. However, if the input file includes an array of JSON objects, set the value to **false**.
+   * Set the **single** input argument to correspond with the input JSON file. For example, if the input file includes a valid JSON file, keep the value as **true**. However, if the input file includes an array of JSON objects, set the value to **false**.
 
 4. Add a **Logger** Actor to Stage 3 and populate its input arguments as follows:
 
@@ -49,7 +49,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 5. Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
 
-   * Connect the fields in the yellow segment with the **Logger** Actor's new input arguments.
+   * Connect the fields in the yellow segment to the **Logger** Actor's new input arguments.
 
    * Set the **Link Type** of each **xxxx** to **Iterate**. 
 
@@ -57,7 +57,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 6. The flow is ready! Make sure the input file exists in the designated working directory and run the flow. 
 
-   * Run the flow in Debug mode when Debug is set to ON ![debug on](images/debug_on.png).
+   * Run the flow in Debug mode when Debug is set to ![debug on](images/debug_on.png) ON.
 
      ![flow](images/09_read_and_parse.PNG)
 
