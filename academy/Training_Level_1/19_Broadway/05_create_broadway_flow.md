@@ -77,6 +77,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
    ##### Writing the JSON Object to an Output File for Each Selected Record
 
 4. Add Stage 3 to the flow. Both Stages 2 and 3 are marked in grey since they are included in the loop that has been opened by linking Stages 1 and 2. 
+
 ![](images/information.png) To learn more about handling loops on Broadway flows, read [Broadway Iterations](/articles/19_Broadway/21_iterations.md).
 
 5. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**.
