@@ -21,13 +21,11 @@ To learn more about Broadway Actors, their properties and how to link them in a 
 * [Broadway Data Types](/articles/19_Broadway/05_data_types.md).
 
 
-### ![](/academy/images/example.png)Example - Setting and Updating Links Between Actors, Remarks and a Population Type
+### ![](/academy/images/example.png)Example - Setting and Updating Links Between Actors, Remarks and Population Type
 
-Using a flow you created in a previous exercise, connect two Actors to the flow. 
+In this exercise you will use a flow that created in a previous exercise and connect two Actors to it. 
 
-1. Add the **A1** and **B1** Actors to two different Stages of the flow.
-
-   ![info](images/information.png)To learn more, refer to [How Do I Edit Links in a Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md#how-do-i-edit-links-in-the-flow).
+1. Add Actors **A1** and **B1** to two different Stages of the flow. For instructions, refer to [How Do I Edit Links in a Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md#how-do-i-edit-links-in-the-flow).
 
 2. Draw a link between the Stages. Verify that the connection's **Link Type** = **Value** (default).
 
