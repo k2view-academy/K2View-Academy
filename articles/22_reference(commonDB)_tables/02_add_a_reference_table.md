@@ -1,6 +1,6 @@
-# Creating a New Reference Table in Fabric
+# New Reference Table in Fabric Studio
 
-A  Reference table holds information common to all LU instances or to multiple LU. For optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
+A  Reference table holds information common to all LU instances or to multiple LU. For obvious optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
 
 
 
