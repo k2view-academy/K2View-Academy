@@ -7,13 +7,13 @@ Now that you know how to work with Actors, let's explore the different types of 
 Let's take a closer look at some of the most useful Actors.
 
 * **Dynamic Logic Actors**, include dynamic logic as one of their input parameters. The most frequently used Dynamic Logic Actors are:
-  * **JavaScript** Actor, that simplify a flow by writing JavaScript business logic or validation code in the **script** input parameter.
+  * **JavaScript** Actors, that simplify flows by writing JavaScript business logic or validation code in the **script** input parameter.
   * **DB Commands** Actors, that perform DB commands and actions like creating a new table, loading data, etc.
 
 * Other Actors for handling useful activities are:
-  * **Stream** Actors that handle streams such as reading from and writing to a file or compressing and decompressing data.
-  * **Parser** Actors that parse input streams into different formats like JSON, CSV and XML.
-  * **Queue** Actors that manage Pub / Sub asynchronous message handling.
+  * **Stream** Actors, that handle streams such as reading from and writing to a file or compressing and decompressing data.
+  * **Parser** Actors, that parse input streams into different formats like JSON, CSV and XML.
+  * **Queue** Actors, that manage Pub / Sub asynchronous message handling.
 
 ![info](images/information.png) To learn more about the above Actors, their specifications and examples, read
 [Actors Specifications and Examples](/articles/19_Broadway/actors/README.md). 
@@ -27,11 +27,11 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 2. Add a **FileRead** Actor to Stage 1 of the flow and populate its input arguments as follows:
 
-   * Set **Interface** to **LocalFileSystem**. If this Interface is not been defined in Fabric, follow the instructions in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
+   * Set **Interface** to **LocalFileSystem**. If this Interface has not been defined in Fabric, follow the instructions in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
 
-   * Change the **path** Population Type to **External**. 
+   * Change the **path** population type to **External**. 
 
-   * Populate the **path** value, click **Main menu toolbar** > **Actions** > **Debug / Run Arguments**. Use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
+   * Populate the **path** value, click the **Main menu toolbar** > **Actions** > **Debug / Run Arguments**. Use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
 
      ![debug](images/09_debug_arg.PNG)
 
@@ -43,17 +43,17 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 4. Add a **Logger** Actor to Stage 3 and populate its input arguments as follows:
 
-   * Change the **message** Population Type to **Const**. 
+   * Change the **message** population type to **Const**. 
    * Set the **message** value to: *Num of cases = ${NUM_OF_CASES}, Status is ${CASE_STS}*
-   * Note that new input arguments are added to the Actor: NUM_OF_CASES and CASE_STS.
+   * Check that the new input arguments are added to the Actor: NUM_OF_CASES and CASE_STS.
 
-5. Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the Data Inspection yellow segment and display the Schema on the left and the data values on the right. 
+5. Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
 
    * Connect the fields in the yellow segment with the **Logger** Actor's new input arguments.
 
    * Set the **Link Type** of each **xxxx** to **Iterate**. 
 
-     ![](images/information.png) Read about [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md). To learn more about Link Types, refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
+     ![](images/information.png) To learn more, read [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md). To learn more about Link Types, refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
 
 6. The flow is ready! Make sure the input file exists in the designated working directory and run the flow. 
 
