@@ -94,12 +94,13 @@ The following commands are available from the Fabric Command Line.
 
 # Reference Tables Runtime Examples
 
+
+## Status per table, on all tables
 ```
 fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
 ```
 
 ```
-fabric>REF_STATUS;
 |table_name|status          |backlog|node                                |current_session_transaction|sync_error|notes|
 +----------+----------------+-------+------------------------------------+---------------------------+----------+-----+
 |REF_USAGE |WAITING_FOR_SYNC|0      |b028b082-4ad3-477a-8188-c07bbeecc6e1|                           |          |     |
@@ -118,6 +119,7 @@ Note that, in this example 6 different Nodes are waiting to sync the same REF_US
 - node: The ID of the node operating the sync
 
 
+## Status per population, on all tables
 ```
 fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’
 ```
@@ -134,16 +136,18 @@ fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’
 - node: The ID of the node operating the sync
 
 
+
+## Sync Wait
 ```
 fabric>REF_SYNC_WAIT TABLES='ALL';
 ```
-
+```
 |Table name|Required sync time|Current session transaction|
 +----------+------------------+---------------------------+
 |REF_USAGE |null              |                           |
 |T1        |null              |                           |
 |T2        |null              |                           |
-
+```
 
 
 
