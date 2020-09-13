@@ -1,5 +1,6 @@
 # Reference Tables Runtime Commands
 
+The following commands are available from the Fabric Command Line.
 
 <table width="900pxl">
 <tbody>
