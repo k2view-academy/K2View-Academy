@@ -103,8 +103,11 @@ The following commands are available from the Fabric Command Line.
 |REFSIMPLE  |IN_SYNC         |0      |bac20345-74b0-4d45-baea-746bef4af388|                           |          |     |
 |REF_INVOICE|WAITING_FOR_SYNC|0      |bac20345-74b0-4d45-baea-746bef4af388|                           |          |     |
 
-
 ```
+
+- table_name: - the name of the Reference Table
+- status: - one of the statuses defined [here](/articles/22_reference(commonDB)_tables/05_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses)
+- node: The ID of the node operating the sync
 
 ```fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’```
 
@@ -115,6 +118,9 @@ The following commands are available from the Fabric Command Line.
 |REFSIMPLE  |refpop2               |2020-09-10 17:23:52.199|2020-09-10 17:23:52.199|1970-01-01 02:00:00.000|2020-09-10 17:25:32.262|1970-01-01 02:00:00.000|1970-01-01 02:00:00.000|null        |bac20345-74b0-4d45-baea-746bef4af388|     |
 ```
 
+- table_name: - the name of the Reference Table
+- population: - the name of the Population querying the External Sources
+- node: The ID of the node operating the sync
 
 
 
