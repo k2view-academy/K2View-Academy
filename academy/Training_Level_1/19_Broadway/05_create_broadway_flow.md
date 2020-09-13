@@ -1,6 +1,6 @@
 # Creating a Broadway Flow 
 
-Now you are now familiar with Broadway and its main components and have checked out and executed the Broadway Tutorial flow, you are ready to create your first Broadway flow. 
+Now you are familiar with Broadway and its main components and have checked out and executed the Broadway Tutorial flow, you are ready to create your first Broadway flow. 
 
 
 ### What Will You Experience In This Learning Item?
@@ -46,12 +46,12 @@ Group By CASES.STATUS
 
 2. Add a **DbCommand** Actor to run the above SELECT statement in Stage 1. 
 
-![info](images/information.png)To learn how to add an Actor to a Broadway flow, refer to [How Do I Add Actor to Stage](/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage).
+![info](images/information.png)To learn how to add an Actor to a Broadway flow, refer to [How Do I Add an Actor to Stage](/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage).
 
 3. Populate the **interface** and **sql** input arguments of the **DbCommand** Actor in Stage 1. 
 
    - Select **CRM_DB** as the **Interface**.
-   - Populate the SELECT statement in the **sql** input argument. To validate your query, click the **QB** button to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), then click **Execute Query**. When done, click **OK** to close the Query Builder. 
+   - Populate the SELECT statement in the **sql** input argument. To validate your query, click the **QB** button to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) and then click **Execute Query**. When done, click **OK** to close the Query Builder. 
 
 ![DbCommand-Example](images/MyFirstFlow_Example_Stage1_DbCommand.png)
 
@@ -59,7 +59,7 @@ Group By CASES.STATUS
 
 #### Step 3 - Read the Customer's List and Create a File
 
-The SQL query executed by the **DbCommand** returns several records. The next Stages iterate on the list of selected records. For each selected record, do the following:
+The SQL query executed by the **DbCommand** returns several records. The next Stages iterate on the list of selected records. Do the following for each selected record:
 
 - Build a JSON object.
 - Write the JSON object to an output file.
@@ -72,7 +72,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
 
 3. Link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop.
 
-![](images/information.png) To learn how to link Actors in a Broadway flow, read [linking Actors in a Broadway Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md). 
+![](images/information.png) To learn how to link Actors in a Broadway flow, read [Linking Actors in a Broadway Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md). 
 
    ##### Writing the JSON Object to an Output File for Each Selected Record
 
@@ -86,10 +86,10 @@ The SQL query executed by the **DbCommand** returns several records. The next St
 
 7. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
-   - Set **Interface** to **LocalFileSystem**.
+   - Set the **Interface** to **LocalFileSystem**.
    - Change the **path** population type to **Const**.
    - Set the value of the **path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
-   - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
+   - Set the **Append** Boolean parameter to **false** to rewrite each flow's execution into the file.
 
     ![FileWrite](images/MyFirstFlow_Example_Stage3_FileWrite.png) 
 
@@ -105,7 +105,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
    - Click ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
 
-![](images/information.png) To learn more about editing this Stage's settings, read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
+![](images/information.png) To learn more about editing this Stage's settings, read the [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
 
 
 
@@ -115,7 +115,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
 
 The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *learns* the Schema and its complex output parameters and can suggest how to update it based on a parameter's value. To update the output parameter of the **DbCommand**, do the following:
 
-   - Run the flow in Debug mode when Debug is set to ON ![debug on](images/debug_on.png).
+   - Run the flow in Debug mode when Debug is set to ![debug on](images/debug_on.png) ON.
 
    - Click the red port next to the **[result]** output of the **DbCommand** to open the **Compare Schema** window and then click **UPDATE** to update the Schema.
 
@@ -124,23 +124,23 @@ The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *l
 
    - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click ![Debug Step](images/debug_step_icon.png) to execute the next steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
+   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click ![Debug Step](images/debug_step_icon.png) to execute the steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
 
-   - Click each Debug value (marked by blue) to open the **Data Viewer** window for the selected parameter. See the example below:
+   - Click each Debug value (marked blue) to open the **Data Viewer** window for the selected parameter. See the example below:
 
    ![image](images/MyFirstFlow_Example_debug.png)
 
 
-![](images/information.png) For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
+![](images/information.png) For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and the [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
 
    ##### Checking the Flow's Execution Results
 
-* Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from the CASE table.
+* Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file holding the list of cases selected from the CASE table.
 
    
 
 Congratulations! You've just created your first Broadway flow. 
 
-Let's continue to the next item to learn more about adding iterations and conditions to the Broadway flow.
+Let's continue to the next item and learn more about adding iterations and conditions to the Broadway flow.
 
 [![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_broadway_flow_adding_loops_and_conditions.md)
