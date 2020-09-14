@@ -4,9 +4,67 @@ A [Table Population](/articles/07_table_population/01_table_population_overview.
 
 A [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md.md) is a core Broadway object that represents a business process and is built from several [Stages](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actor](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP2_99_BROADWAY/articles/19_Broadway/03_broadway_actor.md).
 
-The advantage of using a Broadway flow for table population rather than a source object based population, is to streamline logic and all related validations into one business process to improve the project's maintainability.
+The advantages of using a Broadway flow for table population rather than a source object based population are:
+
+* Streamline logic and all related validations into one business process to improve the project's maintainability.
+* Populate more than one table in a single population flow.
+* Replace the source select with other Actors such as HTTP call.
 
 [Click for more information about Broadway](/articles/19_Broadway/01_broadway_overview.md).
+
+### Flow Population Template
+
+A Broadway population flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
+
+The following Broadway flow is a default template created to populate CASES table which is connected to the parent ACTIVITY table in a Customer LU.
+
+![image](images/07_14_01.PNG)
+
+
+
+![image](images/07_14_03.PNG)
+
+The default population flow template includes the following Stages and Actors:
+
+* **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
+
+  * Input arguments are either added automatically based on the selected table's fields or must be added manually. 
+  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
+
+* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
+
+* The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance. 
+
+  * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
+
+  * A query is either populated automatically in the **sql** input argument or must be added manually. A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field. 
+
+  * The **size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL statement. The **size** is important for the Actor's performance because it allows  to generate less calls to the source DB.
+
+  * The WHERE clause is generated automatically in the same way as for regular populations and is not visible in the Actor's UI. 
+
+    For example, when the **sql** input argument includes:
+
+    ~~~sql
+    SELECT * FROM CASES
+    ~~~
+
+    The SQL statement with the generated WHERE clause is:
+
+    ~~~sql
+    SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
+    ~~~
+
+  * Additional parameters can be added to the WHERE clause if needed. For example, to filter the cases by the status.
+
+* **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
+
+* **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
+
+  * The target interface, table and INSERT, UPDATE or UPSERT commands are set using the Actor's input arguments. 
+  * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
+
+* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded from the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the target DB. If not needed, this Stage can be deleted or left empty.
 
 ### How Do I Create a Population Based on a Broadway Flow?
 
@@ -27,86 +85,6 @@ Note that to make the population become effective on the server side, you need t
 
 [Click for more information about how to deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
-### How Do I Use a Flow Population Template?
-
-A Broadway population flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
-
-![image](images/07_14_01.PNG)
-
-A population flow template has the following Stages:
-
-* **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
-  
-  * Input arguments are either added automatically based on the selected table's fields or must be added manually. 
-  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows.
-  
-* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
-
-  * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
-  * A query is either populated automatically in the **sql** input argument or must be added manually. The WHERE clause can be added if needed.
-  * A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field of the Actor. 
-* The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance and generating less calls to the source. The **Size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL.
-  
-* **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
-
-* **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
-
-  * The target interface, table and INSERT, UPDATE or UPSERT commands are set using the Actor's input arguments. 
-  * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
-
-* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded from the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the target DB. If not needed, this Stage can be deleted or left empty.
-
-### How Do I Pass Parameters to Where Clause?
-
-There are several ways to generate a WHERE clause for the **Query** Actor:
-
-1. Setting a "hard-coded" value in the WHERE clause of **sql** input argument. For example:
-
-   ~~~sql
-   Select * From CASES
-   Where CASES.STATUS = 'Open'
-   ~~~
-
-2. Passing a single value, for example by passing a value from a **Const** Actor to **params** input argument of the **Query** Actor. Then the SQL of the **Query** Actor should be edited as follows:
-
-   ~~~ sql
-   Select * From CASES
-   Where CASES.STATUS = ${value}
-   ~~~
-
-3. Passing an object, for example using a **Const** Actor and passing its value to **params** input argument of the **Query** Actor.
-
-   ~~~javascript
-   {
-     "STATUS": "Open"
-   }
-   ~~~
-
-   Then the SQL of the **Query** Actor should be edited as follows:
-
-   ~~~sql
-   Select * From CASES
-   where CASES.STATUS = ${STATUS}
-   ~~~
-
-4. Passing an array of values, for example using a **Const** Actor and passing the values to **params** input argument of the **Query** Actor.
-
-   ~~~javascript
-   [
-   "12",
-   "Open"
-   ]
-   ~~~
-
-   Then the SQL of the **Query** Actor should be edited as follows:
-
-   ~~~sql
-   Select * From CASES
-   where CASES.ID = ? AND CASES.STATUS = ?
-   ~~~
-
-   
-
 ### Example of Creating a Population Based Broadway Flow
 
 1. In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**.
@@ -121,6 +99,25 @@ There are several ways to generate a WHERE clause for the **Query** Actor:
 
 
 4. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
+
+### How Do I Pass Additional Parameters to Where Clause?
+
+The WHERE clause is generated automatically and includes the filter by parent rows. However if additional filter is needed, it can be added manually to the **sql** input parameter of  the **SourceDbQuery** Actor.
+
+There are several ways to pass the parameters to the WHERE clause of the **SourceDbQuery** Actor - in the same way as they are passed to the [**DbCommand** Actor](05_db_actors.md) in general.
+
+For example, to filter the cases by a status, the SQL statement is:
+
+~~~sql
+Select * From CASES
+Where CASES.STATUS = ${VALUE}
+~~~
+
+When the above query is written in the **sql** input parameter, a new input argument **VALUE** is added to the **SourceDbQuery** Actor and the parameter should be passed to it as showed below: 
+
+![image](images/07_14_04.PNG)
+
+
 
 [Click to display an example of a population flow in the Demo project.](/articles/demo_project)
 
