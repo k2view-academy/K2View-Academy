@@ -39,7 +39,7 @@ To learn about Broadway Actors, their properties and how to link them in a Broad
 
 6. To add a connection, click ![image](images/three_dots_icon.png) in the source Actor's context menu > **Link**. For more information, refer to [Actor's Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu).
 
-7. In a flow with many connection lines, click **Actor** > **Show only connected** to display only the Actors linked to the selected Actor. For more information, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
+7. In a flow with many connection lines, click ![image](images/three_dots_icon.png) in the source Actor's context menu > **Show only connected** to display only the Actors linked to the selected Actor. For more information, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md).
 
 8. Click ![image](images/three_dots_icon.png) in the Actor's context menu > **Remark** and add a remark.
 
