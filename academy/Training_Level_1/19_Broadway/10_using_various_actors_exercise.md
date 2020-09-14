@@ -84,10 +84,12 @@ Your flow is ready now! Run the flow in the Debug mode.
 
 <ul>
 <pre><code>
-1. When running the flow for the first time, Debug / Run Arguments window pops-up to set the value of cust_id external input argument. The next time this window will not pop-up, using the same value until it is reset by the user.
-2. When <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor is set to <strong>true</strong>, the Actor expects only a single object in the input stream.
+1. When running the flow for the first time, Debug / Run Arguments window pops-up to set the value of cust_id external 
+input argument. The next time this window will not pop-up, using the same value until it is reset by the user.
+2. When <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor is set to <strong>true</strong>, the Actor expects only a single object 
+in the input stream.
 3. It can be replaced with the <strong>Count</strong> Actor.
-4. The date format will be changed.
+4. The date format will be changed indicating the weekday, AM/PM, etc.
 </code></pre>
 </ul>
 
