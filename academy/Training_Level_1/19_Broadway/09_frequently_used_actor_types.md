@@ -6,7 +6,7 @@ For an overview on built-in Broadway Actors, please read [Built-in Actor Types](
 
 Let's take a closer look at some of the most useful Actors.
 
-* **Dynamic Logic Actors** are the Actors which include dynamic logic as one of their input parameters. The most frequently used are:
+* Dynamic Logic Actors are Actors that include dynamic logic as one of their input parameters. The most frequently used are:
   * **JavaScript** Actors, that simplify flows by writing JavaScript business logic or validation code in the **script** input parameter.
   * **DB Commands** Actors, that perform DB commands and actions like creating a new table, loading data, etc.
 
@@ -20,7 +20,7 @@ To learn more about the above Actors, their specifications and examples, read [A
 
 ### ![info](/academy/images/example.png)Example - Reading and Parsing a File
 
-Let's create a new Broadway flow that reads data from a JSON file, parses it and prints it into a log. You can use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example as an input file.
+Let's create a new Broadway flow that reads data from a JSON file, parses it and prints it into a log. Use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example as an input file.
 
 1. Create a new Broadway flow as explained in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
 
@@ -62,7 +62,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 8. Check the output log area to see the printed results.
 
-9. Now change the following:
+9. Change the following:
 
    * Set the **message** value of  the **Logger** Actor to: *Num of cases = ${0}, Status is ${1}*.
    * Connect the **[object]** output argument of the **JsonParser** Actor directly with the **[params]** input argument of the **Logger** Actor. 
