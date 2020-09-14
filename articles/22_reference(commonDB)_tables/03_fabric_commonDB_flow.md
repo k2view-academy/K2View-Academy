@@ -169,11 +169,13 @@ This happens when running the following command ```drop lutype k2_ref;``` from a
   - Mode for PoCs w/o kafka dependency
   - no data persistency
   
-- Selecting and modifying data contained in Reference Tables can be done by setting the ```common_local_trx``` flag to TRUE, before running a commit. 
+- Selecting and modifying data contained in Reference Tables can be done by setting the ```common_local_trx``` flag to TRUE, before running a commit.
+    ```fabric>set COMMON_LOCAL_TRX=true;```
+  
   - Using the [example](/articles/22_reference(commonDB)_tables/02_add_a_reference_table.md#how-do-i-create-a-new-reference-table-in-fabric) defined earlier, and the DEVICESTABLE2017 Reference Table:
   - Enable Reference Table modification: ```fabric>set COMMON_LOCAL_TRX=true;```
   - Use the ```select``` command to view the row that needs modification:
-    e.g.
+  
     ```
     fabric>select TAC, BRANDMODEL  from DEVICESTABLE2017 where TAC=35156209;
     |TAC     |BRANDMODEL             |
@@ -184,13 +186,15 @@ This happens when running the following command ```drop lutype k2_ref;``` from a
   - Start a transaction: ```fabric>begin;```
   - Using the ```update``` command, operate a change in the table: ```fabric>update DEVICESTABLE2017 set BRANDMODEL='GALAXY J3--2016 SM-J320F' where TAC=35156209;```
   - Check that the change was committed:
-  ```
-  fabric>select TAC, BRANDMODEL  from DEVICESTABLE2017 where TAC=35156209;
-  |TAC     |BRANDMODEL              |
-  +--------+------------------------+
-  |35156209|GALAXY J3--2016 SM-J320F|
-  ```
+  
+    ```
+    fabric>select TAC, BRANDMODEL  from DEVICESTABLE2017 where TAC=35156209;
+    |TAC     |BRANDMODEL              |
+    +--------+------------------------+
+    |35156209|GALAXY J3--2016 SM-J320F|
+    ```
   - Close the transaction: ```fabric>end;```
+  - Note that if you forget to close the transaction, write sessions to the Reference Table (such as a scheduled Sync) will not work.
   
   
 
