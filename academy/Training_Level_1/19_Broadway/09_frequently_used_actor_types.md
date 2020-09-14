@@ -2,11 +2,11 @@
 
 Now that you know how to work with Actors, let's explore the different types of built-in Broadway Actors and learn about the most frequently used ones.
 
-![info](images/information.png)For an overview on built-in Broadway Actors, please read [Built-in Actor Types](/articles/19_Broadway/04_built_in_actor_types.md). 
+For an overview on built-in Broadway Actors, please read [Built-in Actor Types](/articles/19_Broadway/04_built_in_actor_types.md). 
 
 Let's take a closer look at some of the most useful Actors.
 
-* **Dynamic Logic Actors**, include dynamic logic as one of their input parameters. The most frequently used Dynamic Logic Actors are:
+* **Dynamic Logic Actors** are the Actors which include dynamic logic as one of their input parameters. The most frequently used are:
   * **JavaScript** Actors, that simplify flows by writing JavaScript business logic or validation code in the **script** input parameter.
   * **DB Commands** Actors, that perform DB commands and actions like creating a new table, loading data, etc.
 
@@ -15,13 +15,12 @@ Let's take a closer look at some of the most useful Actors.
   * **Parser** Actors, that parse input streams into different formats like JSON, CSV and XML.
   * **Queue** Actors, that manage Pub / Sub asynchronous message handling.
 
-![info](images/information.png) To learn more about the above Actors, their specifications and examples, read
-[Actor Specifications and Examples](/articles/19_Broadway/actors/README.md). 
+To learn more about the above Actors, their specifications and examples, read [Actor Specifications and Examples](/articles/19_Broadway/actors/README.md). 
 
 
 ### ![info](/academy/images/example.png)Example - Reading and Parsing a File
 
-Let's create a new Broadway flow that reads data from a JSON file, parses it and prints it into a log. 
+Let's create a new Broadway flow that reads data from a JSON file, parses it and prints it into a log. You can use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example as an input file.
 
 1. Create a new Broadway flow as explained in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
 
@@ -31,11 +30,11 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
    * Change the **path** population type to **External**. 
 
-   * Populate the **path** value, in the **Main menu toolbar**  click **Actions** > **Debug / Run Arguments**. Use the JSON file you created in the [Building a Simple Broadway Flow](05_create_broadway_flow.md#example---building-a-simple-broadway-flow) example.
+   * To populate the **path** value, click **Actions** > **Debug / Run Arguments** in the [Main menu toolbar](/articles/19_Broadway/18_broadway_flow_window.md#main-menu). 
 
      ![debug](images/09_debug_arg.PNG)
 
-     ![](images/information.png) To learn more, refer to [Setting Run and Debug Arguments](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md#setting-run-and-debug-arguments) and the [Main menu toolbar](/articles/19_Broadway/18_broadway_flow_window.md#main-menu).
+     To learn more, refer to [Setting Run and Debug Arguments](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md#setting-run-and-debug-arguments).
 
 3. Add a **JsonParser** Actor to Stage 2 of the flow and connect its input argument to the previous Actor's output. 
 
@@ -49,22 +48,25 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 5. Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
 
-   * Connect the fields in the yellow segment to the **Logger** Actor's new input arguments.
+6. Connect the fields in the yellow segment to the **Logger** Actor's new input arguments and set their **Link Type** to **Iterate**. 
 
-   * Set the **Link Type** of each **xxxx** to **Iterate**. 
+   To learn more about the Data Inspection and the Link Types, refer to [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md) and [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
 
-     ![](images/information.png) To learn more, read [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md). To learn more about Link Types, refer to [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md).
-
-6. The flow is ready! Make sure the input file exists in the designated working directory and run the flow. 
+7. The flow is ready! Make sure the input file exists in the designated working directory and run the flow. 
 
    * Run the flow in Debug mode when Debug is set to ![debug on](images/debug_on.png) ON.
 
-     ![flow](images/09_read_and_parse.PNG)
+   ![flow](images/09_read_and_parse.PNG)
 
-     ![](images/information.png) To learn more about Debug options, refer to [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md).
+     To learn more about Debug options, refer to [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md).
 
-7. Check the output log area to see the printed results.
+8. Check the output log area to see the printed results.
 
+9. Now modify the connection between the **JsonParser** Actor in Stage 2 and **Logger** Actor in Stage 3 by connecting the [object] output argument of the **JsonParser** Actor with the [params] input argument of the **Logger** Actor. And change the **message** value of  the **Logger** to: *Num of cases = ${0}, Status is ${1}*.
+
+   ![flow](images/09_read_and_parse.PNG)
+
+10. Run the flow again and verify that the result is identical.
    
 
 
