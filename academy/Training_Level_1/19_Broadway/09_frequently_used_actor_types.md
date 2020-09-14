@@ -62,12 +62,16 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 8. Check the output log area to see the printed results.
 
-9. Now modify the connection between the **JsonParser** Actor in Stage 2 and **Logger** Actor in Stage 3 by connecting the [object] output argument of the **JsonParser** Actor with the [params] input argument of the **Logger** Actor. And change the **message** value of  the **Logger** to: *Num of cases = ${0}, Status is ${1}*.
+9. Now change the following:
 
-   ![flow](images/09_read_and_parse.PNG)
+   * Set the **message** value of  the **Logger** Actor to: *Num of cases = ${0}, Status is ${1}*.
+   * Connect the **[object]** output argument of the **JsonParser** Actor directly with the **[params]** input argument of the **Logger** Actor. 
+   * Set the **Link Type** to **Iterate**.
 
 10. Run the flow again and verify that the result is identical.
-   
+
+    ![flow](images/09_read_and_parse_2.PNG)
+
 
 
 [![Previous](/articles/images/Previous.png)](08_using_actors_in_boadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
