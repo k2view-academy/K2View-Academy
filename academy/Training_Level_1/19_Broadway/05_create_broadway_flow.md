@@ -104,8 +104,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
 
    - Click ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
-
-     To learn more about editing this Stage's settings, read the [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
+To learn more about editing this Stage's settings, read the [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
 
 
 
