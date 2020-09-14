@@ -47,7 +47,7 @@ To learn about Broadway Actors, their properties and how to link them in a Broad
 
 ![image](images/08_link_type_external.PNG)
 
-Let's continue to the next item and learn about the supported built-in Actors.
+Let's continue to the next item and learn about frequently used built-in Actors.
 
 [![Previous](/articles/images/Previous.png)](07_broadway_flow_add_condition_execise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_frequently_used_actor_types.md)
 

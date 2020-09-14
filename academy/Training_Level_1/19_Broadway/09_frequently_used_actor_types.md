@@ -1,4 +1,4 @@
-# Built-in Actor Types
+# Frequently Used Actors
 
 Now that you know how to work with Actors, let's explore the different types of built-in Broadway Actors and learn about the most frequently used ones.
 
@@ -54,7 +54,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 7. The flow is ready! Make sure the input file exists in the designated working directory and run the flow. 
 
-   * Run the flow in Debug mode when Debug is set to ![debug on](images/debug_on.png) ON.
+   * Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:70%;" /> ON.
 
    ![flow](images/09_read_and_parse.PNG)
 

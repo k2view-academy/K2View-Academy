@@ -46,7 +46,7 @@ Group By CASES.STATUS
 
 2. Add a **DbCommand** Actor to run the above SELECT statement in Stage 1. 
 
-![info](images/information.png)To learn how to add an Actor to a Broadway flow, refer to [How Do I Add an Actor to Stage](/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage).
+   To learn how to add an Actor to a Broadway flow, refer to [How Do I Add an Actor to Stage](/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage).
 
 3. Populate the **interface** and **sql** input arguments of the **DbCommand** Actor in Stage 1. 
 
@@ -72,13 +72,13 @@ The SQL query executed by the **DbCommand** returns several records. The next St
 
 3. Link the **result** output parameter of the **DbCommand** Actor to the **object** input parameter of the **JsonStringify** Actor. Click the link and set the **Link Type** to **Iterate** to get the selected records returned by the **DbCommand** by a loop.
 
-![](images/information.png) To learn how to link Actors in a Broadway flow, read [Linking Actors in a Broadway Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md). 
+   To learn how to link Actors in a Broadway flow, read [Linking Actors in a Broadway Flow](/articles/19_Broadway/07_broadway_flow_linking_actors.md). 
 
    ##### Writing the JSON Object to an Output File for Each Selected Record
 
 4. Add Stage 3 to the flow. Both Stages 2 and 3 are marked in grey since they are included in the loop that has been opened by linking Stages 1 and 2. 
 
-![](images/information.png) To learn more about handling loops on Broadway flows, read [Broadway Iterations](/articles/19_Broadway/21_iterations.md).
+   To learn more about handling loops on Broadway flows, read [Broadway Iterations](/articles/19_Broadway/21_iterations.md).
 
 5. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**.
 
@@ -93,7 +93,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
 
     ![FileWrite](images/MyFirstFlow_Example_Stage3_FileWrite.png) 
 
-8.  The **FileWrite** Actor executes the following activities:
+8. The **FileWrite** Actor executes the following activities:
 
    - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
    - Appends each JSON object sent for each selected customer to the file.
@@ -105,7 +105,7 @@ The SQL query executed by the **DbCommand** returns several records. The next St
    - Click ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
 
 
-![](images/information.png) To learn more about editing this Stage's settings, read the [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
+     To learn more about editing this Stage's settings, read the [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu).
 
 
 
@@ -120,7 +120,7 @@ The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *l
    - Click the red port next to the **[result]** output of the **DbCommand** to open the **Compare Schema** window and then click **UPDATE** to update the Schema.
 
    ![Update Schema](images/MyFirstFlow_DbCommand_Update_Schema.png) 
-   
+
 
    - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right.
 
