@@ -23,21 +23,22 @@ At the end, populate the data into a table.
    * Populate **sql** with the following SQL statement:
 
      ~~~sql
-     Select * From ACTIVITY 
-     Where CUSTOMER_ID = ${cust_id}
+     Select * From ACTIVITY Where CUSTOMER_ID = ${cust_id}
      ~~~
-
-   * Note that a new input argument **cust_id** is added to the Actor.
-
-   * Set its population type to **External**.
-
+     
+* Note that a new input argument **cust_id** is added to the Actor.
+   
+* Set its population type to **External**.
+   
 3. Add a **JsonParser** Actor to Stage 2 and connect it with the **DbCommand** Actor.
 
    * Set **single** input argument to **false**.
 
 4. Add a **JavaScript** Actor to Stage 3, connect it with the  **JsonParser** Actor using **Iterate** link type and write a script to calculate the number of times the Actor is called.
 
-   * *self.count += 1;*
+   ~~~javascript
+   self.count += 1;
+   ~~~
 
    To learn more, refer to [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
 
@@ -51,7 +52,9 @@ At the end, populate the data into a table.
 
 9. Add  **JavaScript** Actor to Stage 5 to get the value of the **cust_id** argument by using **flowArgs**: 
 
-   * *flowArgs["cust_id"]*;
+   ~~~javascript
+   flowArgs["cust_id"];
+   ~~~
 
 10. Add a **DbLoad** Actor to Stage 6 to load the data to the DB.
 

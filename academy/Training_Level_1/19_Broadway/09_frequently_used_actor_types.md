@@ -74,4 +74,4 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 
 
-[![Previous](/articles/images/Previous.png)](08_using_actors_in_boadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
+[![Previous](/articles/images/Previous.png)](08_using_actors_in_boadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_using_various_actors_exercise.md)
