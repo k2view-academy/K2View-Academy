@@ -41,6 +41,27 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 
 
+**Example of Passing Parameters to SQL**
 
+The following example shows how to execute a SELECT statement which includes a WHERE clause using **ordered params**:
+
+![image](../images/99_actors_05_2.PNG)
+
+The parameters for the WHERE clause are passed using the **Const** Actor's [values] object which is connected to the **params** input argument of **DbCommand** Actor.
+
+~~~javascript
+[
+  "Denver",
+  "CO"
+]
+~~~
+
+The following example shows how to execute a SELECT statement using **named params**:
+
+![image](../images/99_actors_05_3.PNG)
+
+When the above query is written in the **sql** input parameter, a new input argument **city_name** is added to the **DbCommand** Actor and the parameter should be passed to it. 
+
+ 
 
 [![Previous](/articles/images/Previous.png)](04_queue_actors.md)
