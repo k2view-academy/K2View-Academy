@@ -8,7 +8,7 @@ The advantages of using a Broadway flow for table population rather than a sourc
 
 * Streamlining logic and all related validations into one business process whereby improving the project's maintainability.
 * Populating more than one table in a single population flow.
-* Replacing the selected source with other Actors such as an HTTP call.
+* Replacing the source DB with other action such as an HTTP call.
 
 [Click for more information about Broadway](/articles/19_Broadway/01_broadway_overview.md).
 
@@ -41,7 +41,7 @@ The default population flow template includes the following Stages and Actors:
 
   * The **size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL statement. The **size** is important for the Actor's performance since it enables generating less calls to the source DB.
 
-  * The WHERE clause is generated automatically in the same way as regular populations and is not visible in the Actor's UI. 
+  * The WHERE clause is generated automatically in the same way as for regular populations and is not visible in the Actor's UI. 
 
     For example, when the **sql** input argument includes:
 
@@ -102,7 +102,7 @@ Note that for the population to be effective on the server side, deploy the popu
 
 ### How Do I Transfer Additional Parameters to a Where Clause?
 
-The WHERE clause is generated automatically and includes filters from parent rows. However, if additional filters are needed, they can be added manually to the **sql** input parameter of  the **SourceDbQuery** Actor.
+The WHERE clause is generated automatically and includes filters by the parent rows. However, if additional filters are needed, they can be added manually to the **sql** input parameter of  the **SourceDbQuery** Actor.
 
 Generally, parameters can be transferred to the WHERE clause of the **SourceDbQuery** Actor in the same way as they are transferred to the [**DbCommand** Actor](05_db_actors.md).
 
