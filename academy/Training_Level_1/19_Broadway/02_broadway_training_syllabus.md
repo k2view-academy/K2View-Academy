@@ -30,25 +30,22 @@
 - Built-In Actor Types
   - Dynamic logic Actors - JavaScript, DbCommand
   - Frequently used Actor for streams, parsers and queues
-- Exercises: 
+- Exercise: 
   - Manipulate data and load it into a DB, parse a file and load it to the DB
-  - Subscribe to a Kafka topic and write it to a file
 
 #### **DAY 2 – Afternoon**
 
-- Broadway as a Population
-- Interface Listener for Broadway Flows
+- Broadway Integration with Fabric Studio
+  - Broadway as a Population
+  - Interface listener for Broadway flows
+  - Additional integration points
 - Exercises: 
   - Create a Broadway flow for an LU table population
-  - Create an Interface Listener for a Broadway flow 
-- Additional Actors Capabilities:
-  - LU Function Actor 
-  - Graphit Actor
-  - Fabric Command Actors
-- Actor Inheritance Mechanism
+  - Create an Interface listener for a Broadway flow 
 
 #### **DAY 3 – Morning**
 
+- Actor Inheritance Mechanism
 - Flow Enhancements:
   - Error handling
   - Inner flows

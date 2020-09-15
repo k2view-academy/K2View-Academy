@@ -1,16 +1,15 @@
 # ![](/academy/images/Exercise.png) Exercise - Using Actors in a Flow
 
 In this exercise you will create a Broadway flow using built-in Broadway Actors. 
-The flows selects data in an ACTIVITY DB table using a given CUSTOMER_ID, it then parses the data, performs manipulations and loads it into a DB table.
+The flows will include the following steps:
 
-
-The data manipulations are:
-
-* Calculating the number of activities. 
-* Concatenating active IDs.
-* Capturing the current date / time and formatting it.
-
-At the end of the process, the data is populated into a table.
+* Select the data from an ACTIVITY table using a given CUSTOMER_ID.
+* Parse the data.
+* Perform several manipulations:
+  * Calculate the number of iterations.
+  * Concatenate activity IDs into a string.
+  * Capture the current date / time and formatting it.
+* Load the calculated data into a DB table.
 
 
 
@@ -25,17 +24,23 @@ At the end of the process, the data is populated into a table.
      ~~~sql
      Select * From ACTIVITY Where CUSTOMER_ID = ${cust_id}
      ~~~
-     
+   
+     Note that a new input argument **cust_id** is added to the Actor.
+   
+   * Set its population type to **External**.
 
-Note that a new input argument **cust_id** is added to the Actor.
-
-* Set its population type to **External**.
-  
 3. Add a **JsonParser** Actor to Stage 2 and connect it with the **DbCommand** Actor.
 
    * Set **single** input argument to **false**.
 
-4. Add a **JavaScript** Actor to Stage 3, connect it with the  **JsonParser** Actor using **Iterate** link type and write a script to calculate the number of times the Actor is called. If the Actor is called more than 3 times, exist the loop and continue the flow.
+4. Add a **StringBuild** Actor to Stage 3 as well and connect its input with ACTIVITY_ID of the  **JsonParser** Actor in Stage 2 to concatenate all the activity IDs into one string. 
+
+   * Update the **delimiter** to '**'. 
+   * Set the link type to **Iterate**. 
+
+5. Close the iteration by clicking ![dots](images/three_dots_icon.png)> **Iterate Close** in the Stage 3 context menu . 
+
+6. Add a **JavaScript** Actor to Stage 3 and write a script to calculate the number of times the Actor is called. Add an IF condition to the script - when the Actor is called more than 3 times, exit the loop and continue the flow.
 
    ~~~javascript
       self.count += 1;
@@ -46,10 +51,6 @@ Note that a new input argument **cust_id** is added to the Actor.
    ~~~
 
    To learn more about special keywords and conventions, refer to [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
-
-5. Add a **StringBuild** Actor to Stage 3 as well and connect its input with ACTIVITY_ID of the  **JsonParser** Actor in Stage 2 to concatenate all the activity IDs into one string. Update the **delimiter** to '||'. 
-
-6. Close the iteration by clicking ![dots](images/three_dots_icon.png)> **Iterate Close** in the Stage 3 context menu . 
 
 7. Add a **Now** Actor to Stage 4 to get the current date-time stamp. 
 
@@ -64,8 +65,8 @@ Note that a new input argument **cust_id** is added to the Actor.
 10. Add a **DbLoad** Actor to Stage 6 to load the data to the DB.
 
     * Set the **interface** input argument to **fabric** and the **command** to **insert**. 
-
-       * Create a common table **ACT_SUM** in the Fabric with the following columns: CUSTOMER_ID, NUM_OF_ACTIVITIES, SUMMARY_DATE, ACTIVITY_SUMMARY. Set this table in the **table** input argument. After the table is selected, its columns are added to the Actor's input arguments.
+    * Create a common table **ACT_SUM** in the Fabric with the following columns: CUSTOMER_ID, NUM_OF_ACTIVITIES, SUMMARY_DATE, ACTIVITY_SUMMARY. 
+    * Set this table in the **table** input argument. After the table is selected, its columns are added to the Actor's input arguments.
 
 11. Connect **DbLoad** Actor's input arguments with the output of the Actors in previous stages.
 
@@ -76,7 +77,7 @@ Note that a new input argument **cust_id** is added to the Actor.
 
 12. Mark Stage 6 as a Transaction by clicking ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu. Note that working with transactions in Broadway is explained in more detail later in this training.
 
-Your flow is ready now! Run the flow in the Debug mode. 
+Your flow is ready now! Run the flow in the Debug mode to see the results. 
 
 ![image](images/10_flow.PNG)
 
@@ -84,7 +85,7 @@ Your flow is ready now! Run the flow in the Debug mode.
 
 <ul>
 <pre><code>
-1. What happens when you run the flow for the first time?
+1. Which screen pops-up when you run the flow for the first time?
 2. What happens if you change <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor to <strong>true</strong>?
 3. With which Actor can the <strong>JavaScript</strong> Actor in Stage 3 be replaced to calculate the number of times the Actor is called?
 4. Update the <strong>format</strong> input argument of the <strong>DateFormat</strong> Actor in Stage 5 to <strong>E dd-MM-yy K:m a</strong>. How does it impact the output?
@@ -97,12 +98,15 @@ Your flow is ready now! Run the flow in the Debug mode.
 
 <ul>
 <pre><code>
-1. When running the flow for the first time, Debug / Run Arguments window pops-up to set the value of cust_id external 
+1. When running the flow for the first time, Debug / Run Arguments window pops-up to set the value of cust_id external. 
 input argument. The next time this window will not pop-up, using the same value until it is reset by the user.
 2. When <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor is set to <strong>true</strong>, the Actor expects only a single object 
 in the input stream.
-3. It can be replaced with the <strong>Count</strong> Actor.
-4. The date format will be changed indicating the weekday, AM/PM, etc.
+3. If only the number of calls is required to be calculated, it can be replaced with the <strong>Count</strong> Actor. However since this exercise requires to stop iterating the data on a certain condition, we cannot replace the <strong>JavaScript</strong> Actor by another Actor. 
+4. The date format will be changed indicating the weekday, AM/PM and a different from the default date format.
 </code></pre>
 </ul>
 
+
+
+[![Previous](/articles/images/Previous.png)](09a_frequently_used_actor_types_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_integration_with_fabric_studio.md)
