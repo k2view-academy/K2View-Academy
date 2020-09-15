@@ -38,12 +38,12 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 3. Add a **JsonParser** Actor to Stage 2 of the flow and connect its input argument to the previous Actor's output. 
 
-   * Set the **single** input argument to correspond with the input JSON file. For example, if the input file includes a valid JSON file, keep the value as **true**. However, if the input file includes an array of JSON objects, set the value to **false**.
+   * Set the **single** input argument to correspond with the input JSON file. If the input file includes a valid JSON file, keep the value as **true**. However, if the input file includes an array of JSON objects, set the value to **false**.
 
 4. Add a **Logger** Actor to Stage 3 and populate its input arguments as follows:
 
    * Change the **message** population type to **Const**. 
-   * Set the **message** value to: *Num of cases = ${NUM_OF_CASES}, Status is ${CASE_STS}*.
+   * Set the **message** value to: *There are ${NUM_OF_CASES} cases with Status = ${CASE_STS}*.
    * Check that the new input arguments are added to the Actor: NUM_OF_CASES and CASE_STS.
 
 5. Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
@@ -64,7 +64,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 9. Change the following:
 
-   * Set the **message** value of  the **Logger** Actor to: *Num of cases = ${0}, Status is ${1}*.
+   * Set the **message** value of  the **Logger** Actor to: *There are ${0} cases with Status = ${1}*.
    * Connect the **[object]** output argument of the **JsonParser** Actor directly with the **[params]** input argument of the **Logger** Actor. 
    * Set the **Link Type** to **Iterate**.
 
