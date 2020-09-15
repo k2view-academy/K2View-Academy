@@ -1,4 +1,4 @@
-# DB Commands Actors 
+# DBCommand Actors 
 
 Broadway has a **db** category of Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
 - **DbLoad** Actor, loads data into a database using an INSERT, UPDATE or UPSERT command.
@@ -15,7 +15,7 @@ The query defined in the Actor can contain either ordered parameters using **?**
 
 Data can be loaded in a Broadway flow using either a **DbLoad** Actor or a **DbCommand** Actor.
 
-To load the data use the **DbLoad** Actor by populating the Actor's input arguments as follows:
+To load the data, use the **DbLoad** Actor by populating the Actor's input arguments as follows:
 
 * **command**, select INSERT, UPDATE or UPSERT from the dropdown list.
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
@@ -27,7 +27,7 @@ Another way to load the data in a Broadway flow is by using the **DbCommand** Ac
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
-### DB Commands Examples
+### DBCommand Examples
 
 The **db-commands.flow** example shows how the **DbCommand** Actor can be used to perform various DB actions, including:
 
@@ -47,7 +47,7 @@ The following example shows how to execute a SELECT statement which includes a W
 
 ![image](../images/99_actors_05_2.PNG)
 
-The parameters for the WHERE clause are passed using the **Const** Actor's [values] object which is connected to the **params** input argument of **DbCommand** Actor.
+The parameters for the WHERE clause are transferred using the **Const** Actor's [values] object that is connected to the **params** input argument of the **DbCommand** Actor.
 
 ~~~javascript
 [
@@ -60,7 +60,7 @@ The following example shows how to execute a SELECT statement using **named para
 
 ![image](../images/99_actors_05_3.PNG)
 
-When the above query is written in the **sql** input parameter, a new input argument **city_name** is added to the **DbCommand** Actor and the parameter should be passed to it. 
+When the above query is written in the **sql** input parameter, a new **city_name** input argument is added to the **DbCommand** Actor and the parameter is transferred to it. 
 
  
 
