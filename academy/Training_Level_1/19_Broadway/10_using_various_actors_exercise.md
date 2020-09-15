@@ -1,16 +1,16 @@
-# ![](/academy/images/Exercise.png) Exercise - Using Various Actors in a Flow
+# ![](/academy/images/Exercise.png) Exercise - Using Actors in a Flow
 
-The purpose of this exercise is to use various built-in Actors in a flow that you create.
+In this exercise you will create a Broadway flow using built-in Broadway Actors. 
+The flows selects data in an ACTIVITY DB table using a given CUSTOMER_ID, it then parses the data, performs manipulations and loads it into a DB table.
 
-Let's create a new Broadway flow that selects data from a DB table ACTIVITY by given CUSTOMER_ID, parses it, performs some data manipulations and loads the data into a DB table.
 
 The data manipulations are:
 
-* Calculate how many activities exist 
-* Concatenate the activity IDs 
-* Capture the current date / time and format it
+* Calculating the number of activities. 
+* Concatenating active IDs.
+* Capturing the current date / time and formatting it.
 
-At the end, populate the data into a table.
+At the end of the process, the data is populated into a table.
 
 
 
@@ -18,15 +18,15 @@ At the end, populate the data into a table.
 
 2. Add a **DbCommand** Actor to Stage 1 to select the data from the DB:
 
-   * Set **interface** to **CRM_DB**.
+   * Set the **interface** to **CRM_DB**.
 
-   * Populate **sql** with the following SQL statement:
+   * Populate the **sql** with the following SQL statement:
 
      ~~~sql
      Select * From ACTIVITY Where CUSTOMER_ID = ${cust_id}
      ~~~
      
-* Note that a new input argument **cust_id** is added to the Actor.
+Note that a new input argument **cust_id** is added to the Actor.
    
 * Set its population type to **External**.
    
