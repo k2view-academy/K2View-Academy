@@ -12,6 +12,7 @@ The flows will include the following steps:
 * Load the calculated data into a DB table.
 
 
+**Exercise Steps**:
 
 1. Create a new Broadway flow.
 
@@ -102,7 +103,9 @@ Your flow is ready now! Run the flow in the Debug mode to see the results.
 input argument. The next time this window will not pop-up, using the same value until it is reset by the user.
 2. When <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor is set to <strong>true</strong>, the Actor expects only a single object 
 in the input stream.
-3. If only the number of calls is required to be calculated, it can be replaced with the <strong>Count</strong> Actor. However since this exercise requires to stop iterating the data on a certain condition, we cannot replace the <strong>JavaScript</strong> Actor by another Actor. 
+3. If only the number of calls is required to be calculated, it can be replaced with the <strong>Count</strong> Actor. 
+However since this exercise requires to stop iterating the data on a certain condition, we cannot replace 
+the <strong>JavaScript</strong> Actor by another Actor. 
 4. The date format will be changed indicating the weekday, AM/PM and a different from the default date format.
 </code></pre>
 </ul>
