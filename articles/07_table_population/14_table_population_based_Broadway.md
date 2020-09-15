@@ -49,7 +49,7 @@ The default population flow template includes the following Stages and Actors:
     SELECT * FROM CASES
     ~~~
 
-    The SQL statement with the generated WHERE clause is:
+    The SQL statement that will actually be executed is:
 
     ~~~sql
     SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
