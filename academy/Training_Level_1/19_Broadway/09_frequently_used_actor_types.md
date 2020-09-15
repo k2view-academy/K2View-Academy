@@ -8,7 +8,7 @@ Let's take a closer look at some of the most useful Actors.
 
 * Dynamic Logic Actors are Actors that include dynamic logic as one of their input parameters. The most frequently used are:
   * **JavaScript** Actors, that simplify flows by writing JavaScript business logic or validation code in the **script** input parameter.
-  * **DB Commands** Actors, that perform DB commands and actions like creating a new table, loading data, etc.
+  * **DbCommand** Actors, that perform DB commands and actions like creating a new table, loading data, etc.
 
 * Other Actors for handling useful activities are:
   * **Stream** Actors, that handle streams like reading from and writing to a file or compressing and decompressing data.
@@ -65,7 +65,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 9. Change the following:
 
    * Set the **message** value of  the **Logger** Actor to: *There are ${0} cases with Status = ${1}*.
-   * Connect the **[object]** output argument of the **JsonParser** Actor directly with the **[params]** input argument of the **Logger** Actor. 
+   * Connect the **[object]** output argument of the **JsonParser** Actor directly to the **[params]** input argument of the **Logger** Actor. 
    * Set the **Link Type** to **Iterate**.
 
 10. Run the flow again and verify that the result is identical.
