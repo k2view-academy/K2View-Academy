@@ -15,7 +15,7 @@ A user may ask for http://www.somesite.com/widgets/blue/, but receives http://ww
 
 ### Configuration
 
-Copy the **rewrite.config** file (sample file attached) to **$FABRIC_HOME\webserver\WEB-INF**.
+Copy the **rewrite.config** file to **$FABRIC_HOME\webserver\WEB-INF**.
 
 To use this functionality, users must have at least a basic knowledge of Rewrite rules / conditions and their different parameters. 
 
