@@ -26,21 +26,26 @@ At the end of the process, the data is populated into a table.
      Select * From ACTIVITY Where CUSTOMER_ID = ${cust_id}
      ~~~
      
+
 Note that a new input argument **cust_id** is added to the Actor.
-   
+
 * Set its population type to **External**.
-   
+  
 3. Add a **JsonParser** Actor to Stage 2 and connect it with the **DbCommand** Actor.
 
    * Set **single** input argument to **false**.
 
-4. Add a **JavaScript** Actor to Stage 3, connect it with the  **JsonParser** Actor using **Iterate** link type and write a script to calculate the number of times the Actor is called.
+4. Add a **JavaScript** Actor to Stage 3, connect it with the  **JsonParser** Actor using **Iterate** link type and write a script to calculate the number of times the Actor is called. If the Actor is called more than 3 times, exist the loop and continue the flow.
 
    ~~~javascript
-   self.count += 1;
+      self.count += 1;
+      if (self.count >= 3) {
+         contextLoop.stop();
+      }
+      self.count;
    ~~~
 
-   To learn more, refer to [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
+   To learn more about special keywords and conventions, refer to [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
 
 5. Add a **StringBuild** Actor to Stage 3 as well and connect its input with ACTIVITY_ID of the  **JsonParser** Actor in Stage 2 to concatenate all the activity IDs into one string. Update the **delimiter** to '||'. 
 
@@ -58,10 +63,18 @@ Note that a new input argument **cust_id** is added to the Actor.
 
 10. Add a **DbLoad** Actor to Stage 6 to load the data to the DB.
 
-   * Set the **interface** input argument to **fabric** and the **command** to **insert**. 
-   * Create a common table **ACT_SUM** in the Fabric with the following columns: CUSTOMER_ID, NUM_OF_ACTIVITIES, SUMMARY_DATE, ACTIVITY_SUMMARY. Set this table in the **table** input argument. After the table is selected, its columns are added to the Actor's input arguments.
-   *  Connect **DbLoad** Actor's input arguments with the output of the Actors in previous stages.
-   * Mark Stage 6 as a Transaction by clicking ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu. Note that working with transactions in Broadway is explained in more detail later in this training.
+    * Set the **interface** input argument to **fabric** and the **command** to **insert**. 
+
+       * Create a common table **ACT_SUM** in the Fabric with the following columns: CUSTOMER_ID, NUM_OF_ACTIVITIES, SUMMARY_DATE, ACTIVITY_SUMMARY. Set this table in the **table** input argument. After the table is selected, its columns are added to the Actor's input arguments.
+
+11. Connect **DbLoad** Actor's input arguments with the output of the Actors in previous stages.
+
+    * Connect the CUSTOMER_ID with the output of **JavaScript** Actor in Stage 5.
+    * Connect the NUM_OF_ACTIVITIES with the output of **JavaScript** Actor in Stage 3.
+    * Connect the SUMMARY_DATE with the output of **DateFormat** Actor in Stage 5.
+    * Connect the ACTIVITY_SUMMARY with the output of **StringBuild** Actor in Stage 3.
+
+12. Mark Stage 6 as a Transaction by clicking ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu. Note that working with transactions in Broadway is explained in more detail later in this training.
 
 Your flow is ready now! Run the flow in the Debug mode. 
 
