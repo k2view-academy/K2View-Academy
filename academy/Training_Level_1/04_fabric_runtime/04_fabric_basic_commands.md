@@ -8,7 +8,9 @@ You have just deployed your project and  its objects and have listed them - incl
 
 
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Fabric Commands
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) 
+
+### Example- Fabric Commands
 
 Let’s test an LU Instance and see the results:
 
@@ -37,7 +39,9 @@ Let’s test an LU Instance and see the results:
 
 
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise – Fabric Commands
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) 
+
+### Exercise – Fabric Commands
 
 Using the training materials and examples covered so far:
 
@@ -51,29 +55,6 @@ Using the training materials and examples covered so far:
 
 5. `Advanced Question: Update the CRM_DB source database: update CUSTOMER.FIRST_NAME of Instance 215 to your own name. Run set sync force; command and then run get Customer.215; command again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
 
-   
-
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Fabric Commands
-
-1. `Answer: 12 tables including the _K2 tables`
-
-   `fabric>describe schema Customer;`
-
-2. `Answer: ACTIVITY_ID`
-
-3. `Answer: 2 Subscriber, 209 & 210`
-
-4. `Answer: Active (true)`
-
-   `fabric>test_connection DbInterface='CRM_DB';`
-
-5. `Answer: My First Name, set sync force command brings the data from the source`
-
-
-
-
-
-
 
 
 
@@ -82,4 +63,6 @@ Using the training materials and examples covered so far:
  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/03_fabric_deployment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/05_cassandra_main_keyspaces_and_commands.md)
 
  
+
+------
 
