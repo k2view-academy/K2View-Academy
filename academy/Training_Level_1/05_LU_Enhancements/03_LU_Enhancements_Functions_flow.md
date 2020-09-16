@@ -37,10 +37,9 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 - [Code Example](/articles/10_enrichment_function/04_enrichment_function_code_examples.md).
 
 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)
-
-**Exercise 1 - Enrichment functions**
+#### **Exercise 1 - Enrichment functions**
 
 As you saw in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md) at the beginning of this training, and as part of the company's marketing initiative, you need to ensure that all 5G/LTE contract lines are in international format. This enables new data roaming offers to be sent as text to the owners while they are abroad. 
 
@@ -102,9 +101,9 @@ is experiencing with the network. The case notes reflect issues that are still o
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution - Enrichment functions**
+#### **Solution - Enrichment functions**
 
 ##### Question 1: Standardization
     1. 4.
@@ -226,9 +225,9 @@ is experiencing with the network. The case notes reflect issues that are still o
 
 
   
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png)
 
-**Exercise 2 - Decision functions**
+#### **Exercise 2 - Decision functions**
 
 To save network resources, ensure that data synchronization of LUIs only occurs if the number of entries in a given external source's table is above the CRMCases_threshold threshold.
 
@@ -250,9 +249,9 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
 
   
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution - Decision functions**
+#### **Solution - Decision functions**
 
 ##### Question 1:
 
