@@ -3,8 +3,8 @@
 In this exercise you will do the following:
 
 * Create a new population for CASES table in the Customer LU based on a Broadway flow.
-* Filter the retrieved cases by their status (only Open cases).
-* Load the data into the Fabric.
+* Filter the retrieved cases by the status = Open.
+* Load the data into Fabric.
 
 
 
@@ -40,7 +40,7 @@ Your flow is ready now! Run the Data viewer to sync a customer instance and veri
      Select * From CASES where STATUS = ${case_sts}
      ~~~
 
-     Note that a new input argument **case_sts** is added to the **Query** Actor.
+   * Note that a new input argument **case_sts** is added to the **Query** Actor.
 
 8. Add a **Const** Actor to the **Input** Stage and populate its value as **Open**. Connect the output of the  **Const** Actor to the **case_sts** input argument of the **Query** Actor.
 
@@ -54,7 +54,9 @@ Your flow is ready now! Run the Data viewer to sync a customer instance and veri
 
 <ul>
 <pre><code>
-1. If you need to edit the selected data before loading it to the target DB, how can you do it?
+1. Which values are populated in the output arguments of the <strong>PopulationArgs</strong> Actor?
+2. Which SQL statement is executed on the DB Interface by the <strong>Query</strong> Actor?
+3. If you need to edit the data before loading it to the target DB, how can you do it?
 </code></pre>
 </ul>
 
@@ -64,7 +66,10 @@ Your flow is ready now! Run the Data viewer to sync a customer instance and veri
 
 <ul>
 <pre><code>
-1. Add an Actor to <strong>Stage 1</strong> in the template flow to perform the required data manipulations.
+1. The <strong>iid</strong> holds the Instance ID of the execution, in the above example - customer ID. 
+The <strong>parent_rows</strong> is the iterator of the parent rows, in the example - the list of activity IDs under the given customer.
+2. The SQL statement is: SELECT * FROM CASES WHERE ACTIVITY_ID IN (...) AND STATUS = ...
+3. Add an Actor to <strong>Stage 1</strong> in the template flow to perform the required data manipulations.
 
 </code></pre>
 </ul>
