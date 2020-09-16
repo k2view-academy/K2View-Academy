@@ -8,7 +8,7 @@
 2. Click **Debug** and select **Instance 82** from the Instances List. 
 3. Click **Execute Debug** or **Debug Record**.
 
-`Question: What is the BALANCE_ID for the first record? Answer:2322`
+`Question: What is the BALANCE_ID for the first record?`
 
  
  
