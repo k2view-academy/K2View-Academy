@@ -16,21 +16,25 @@ To define the interfaces and their respective parameters, you need to look into 
 
 Our Training environment has three main DBs of various types, which in essence, represent a typical Telco IT ecosystem:
 
--  **BILLING_DB** (type: MySQL) – Stores information required for preparing or sending a bill or invoice, such as: Payments or Balance. 
+-  **BILLING_DB** – Stores information required for preparing or sending a bill or invoice, such as: Payments or Balance. 
 
-- **CRM_DB** (type: Oracle) – Stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
+- **CRM_DB**  – Stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
 
-- **ORDERS_DB** (type: PostgreSQL) – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
+- **ORDERS_DB** – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
-  
+ Download the BILLING_DB.db, CRM_DB.db, and ORDERS_DB.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
 
 ### How to define an Interface
 
-Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) article to learn about the properties that define an interface. 
+Create the CRM_DB, BILLING_DB, and ORDERS_DB interfaces, as follows:
 
-Let’s look at the steps for creating the interface. Please read [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md).
+- Set the **Interface Type** to **SQLite**. 
+- Edit the Database field, set the location of the related *.db file (for example- crm_db.db file for the CRM_DB interface) to the local directory.
+- Test the connection and save the changes.
+- Close the DB interface.
 
- 
+Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
+
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
 
