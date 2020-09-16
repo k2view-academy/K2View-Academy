@@ -14,7 +14,7 @@ a. True.
 
  b. False.
 
-#### When you use Swagger and call  GET /lu/CustomerLU API, what information will you get on CustomerLU?:
+#### When you use Swagger and call  GET /lu/Customer API, what information will you get on Customer LU?:
 
 a. Tables metdata and links.
 
