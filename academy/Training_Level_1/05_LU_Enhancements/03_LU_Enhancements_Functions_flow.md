@@ -44,11 +44,11 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 
 As you saw in the [Course User Story](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md) at the beginning of this training, and as part of the company's marketing initiative, you need to ensure that all 5G/LTE contract lines are in international format. This enables new data roaming offers to be sent as text to the owners while they are abroad. 
 
-Let's focus for now on the CustomerLU in the course's project. 
+Let's focus for now on the Customer LU in the course's project. 
 
 ##### Question 1: Standardization of the phone number
 
-To develop the functions pertaining to this course's section, use the CustomerLU data viewer to retrieve the LUI with the following IDs: 1123, 1125 and 1472.   
+To develop the functions pertaining to this course's section, use the Customer data viewer to retrieve the LUI with the following IDs: 1123, 1125 and 1472.   
 
     1. How many distinct lines are associated with the LUI in the Contract table?
     
@@ -261,7 +261,7 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
 in the CRMCases_threshold=25000; //latest known number of cases in CRM_DB.CASES.
 Boolean syncInd = false;
 
-String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
+String count = db("CRM_DB").fetch("SELECT count(*) FROM CASES").firstValue().toString();
 //puts the number of rows in the CASES DB into a variable count.
 
 reportUserMessage(count);
