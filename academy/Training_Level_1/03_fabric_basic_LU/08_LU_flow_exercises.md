@@ -1,5 +1,7 @@
 
-###   ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)  Example – Run the Data Viewer 
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)  
+
+###   Example – Run the Data Viewer 
 
 Let’s test an LU Instance and see the result. 
 
@@ -22,7 +24,9 @@ Go to the Project Tree, right click the **Customer** LU, and select **Deploy To 
 
  
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Add New Tables to The LU and Validate Them
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)
+
+### Exercise – Add New Tables to The LU and Validate Them
 
 The LU you have just created using the Auto Discovery Wizard contains basic Customer information only. However, you also need to see their Subscription and Billing info.
 
@@ -37,7 +41,6 @@ Add the BILLING_DB.BALANCE table to the **Customer** LU. Redeploy the LU to the 
 3. `Question: How long did it take to populate the CUSTOMER table?`
 
 4.  `Question: What is the first AVAILABLE_AMOUNT for Subscriber 209?`
-
 
 5.   `Question: What is total AVAILABLE_AMOUNT for Subscriber 209?`
 
