@@ -92,7 +92,7 @@ Input / Output settings can be automatically defined based on DB objects either 
 
 Example of the code generated for the function with **Input = CUSTOMER_ID** from the CUSTOMER table:
 ~~~java
-String sql = "SELECT CUSTOMER_ID FROM CRM_DB.CUSTOMER";
+String sql = "SELECT CUSTOMER_ID FROM CUSTOMER";
 db("CRM_DB").fetch(sql, <val1>, <val2>, ...).each(row->{
 });
 ~~~
