@@ -1,4 +1,4 @@
-# DBCommand Actors 
+# DB Commands Actors 
 
 Broadway has a **db** category of Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
 - **DbLoad** Actor, loads data into a database using an INSERT, UPDATE or UPSERT command.
@@ -27,7 +27,7 @@ Another way to load the data in a Broadway flow is by using the **DbCommand** Ac
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
-### DBCommand Examples
+### Examples
 
 The **db-commands.flow** example shows how the **DbCommand** Actor can be used to perform various DB actions, including:
 
