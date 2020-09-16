@@ -51,15 +51,13 @@ Create a new version for **wsGetCustomer** to enhance the current functionality:
 
 - [ ] Make sure the WS path is the same for both Web Services.
 
-  
 
-1. `Question: What is the SSN of Customer 1?`
 
-2. `Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?`
+1. `Question: How many subscribers has Customer 1 with VIP_STATUS "Platinum"?`
 
-3. `Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?`
+2. `Question: What is the CONTRACT_DESCRIPTION of the Subscriber with VIP_STATUS "Silver" ?`
 
-4. `Question: Which version of your Web Service will be executed if the version is not set?` 
+3. `Question: Which version of your Web Service will be executed if the version is not set?` 
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) Solution - Invoking a Web Service
 
@@ -77,10 +75,9 @@ return rows;
 
 
 
-1. `Answer: 5153527856.`
-2. `Answer: 3.` 
-3. `Answer: 5G tether.` 
-4. `Answer: The Web Version that was the last to be deployed.`  
+1. `Answer: 3.` 
+2. `Answer: 5G tether.` 
+3. `Answer: The Web Version that was the last to be deployed.`  
 
 
 
