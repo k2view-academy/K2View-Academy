@@ -39,7 +39,7 @@ In this section the following topics are addressed:
 
 **Exercise 1 - Lookup tables**
   
-  Using the CustomerLU schema, let's look at the Address population map. 
+  Using the Customer LU schema, let's look at the Address population map. 
 
   Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
 
@@ -93,7 +93,7 @@ Associate a unique geo-location code to the Address table to build a heat map of
             Step 1: 
             Using the GeoLocUSCities0620 CSV file provided with this course, create a new translation called 
             trnCityGeoLoc that will return the Latitude and Longitude of the Customer's address into a new field 
-            that you created in the CustomerLU Address table.
+            that you created in the Customer Address table.
             
             Step 2: 
             Do the same for the International City Code.
@@ -134,7 +134,7 @@ Using the enrichment and decision functions from the previous exercises, please 
 
             Step 1: 
             1. Create a new Global (Final) named OLDInvoices of the "date" type which will indicate which invoice records 
-               can be deleted from the CustomerLU INVOICE table depending on the value of the ISSUED_DATE field of the
+               can be deleted from the Customer INVOICE table depending on the value of the ISSUED_DATE field of the
                INVOICES table.
             
             2. Using the Query Builder, execute an SQL query with a WHERE statement that selects all records older than 
@@ -178,14 +178,14 @@ Using the enrichment and decision functions from the previous exercises, please 
 
             Step 1:
             SQL Query with embedded reference to Globals:
-                        Select INVOICE.* From BILLING_DB.INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
+                        Select INVOICE.* From INVOICE Where INVOICE.ISSUED_DATE < '@OLDINVOICES@'
                         
             Step 2:
             1. Decision function based on Globals:
 
             // This function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
             Boolean syncInd = false;
-            String count = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CASES").firstValue().toString();
+            String count = db("CRM_DB").fetch("SELECT count(*) FROM CASES").firstValue().toString();
             //puts the number of rows in CASES DB into variable count
             int cnt=Integer.parseInt(count);
             // using the RUN_POP object defined as Globals
