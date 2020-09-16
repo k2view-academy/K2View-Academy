@@ -15,7 +15,8 @@
    
    Note, you can also review the results from fabric executing the following:
 
-   **cql select * from [customer keyspace name].entity;** The results varies a bit ,  instead of a  huge blob  you'll be able to review the microDB file sizing.
+   ```cql select * from [customer keyspace name].entity;``` 
+   The results varies a bit ,  instead of a  huge blob  you'll be able to review the microDB file sizing.
 
 |id |batch_id|chunks_count|data           |key_desc_id|schema_hash|sync_version |
 
