@@ -269,7 +269,7 @@ Note that calling firstRow also closes the result set.
 3. [Root function](/articles/07_table_population/02_source_object_types.md), select records from the CASES table and yield each record: 
 
 ```java
-String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CRM_DB.CASES where activity_id = ?";
+String sql = "SELECT ACTIVITY_ID, CASE_ID, CASE_DATE, CASE_TYPE, STATUS FROM CASES where activity_id = ?";
 Db.Rows rows = db("CRM_DB").fetch(sql, input);
 // Option 1 - using each method 
 rows.each(row-> yield(row.cells()));
