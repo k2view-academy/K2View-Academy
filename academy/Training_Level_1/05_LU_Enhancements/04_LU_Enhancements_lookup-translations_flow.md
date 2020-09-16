@@ -64,7 +64,7 @@ In this section the following topics are addressed:
 **Solution Exercise 1 - Lookup table**
 
             Step 1: 
-            In the table from customerLU, it is much more efficient to use the data already populated into the LU table 
+            In the table from customer LU, it is much more efficient to use the data already populated into the LU table 
             than the CRM table.
             
             Step 2: 
