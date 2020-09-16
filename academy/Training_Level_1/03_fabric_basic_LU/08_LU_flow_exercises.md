@@ -44,3 +44,10 @@ Add the BILLING_DB.BALANCE table to the **Customer** LU. Redeploy the LU to the 
 
 5.   `Question: What is total AVAILABLE_AMOUNT for Subscriber 209?`
 
+
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/07_LU_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/09_LU_flow_solutions.md)
+
+ 
+
+ 
+------
