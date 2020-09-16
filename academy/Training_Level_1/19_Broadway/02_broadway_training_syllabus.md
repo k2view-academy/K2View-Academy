@@ -31,7 +31,7 @@
   - Dynamic logic Actors - JavaScript, DbCommand
   - Frequently used Actor for streams, parsers and queues
 - Exercise: 
-  - Manipulate data and load it into a DB, parse a file and load it to the DB
+  - Create a Broadway flow using various built-in Actors
 
 #### **DAY 2 – Afternoon**
 
