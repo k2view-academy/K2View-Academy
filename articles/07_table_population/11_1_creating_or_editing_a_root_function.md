@@ -43,7 +43,7 @@ The Root function’s main SELECT statement and loop over the SELECT results can
 **Example of the Generated Code of a Root Function** 
 
 ~~~java
-String sql = "SELECT SSN, FIRST_NAME, LAST_NAME FROM CRM_DB.CUSTOMER";
+String sql = "SELECT SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 db("CRM_DB").fetch(sql, [val1], [val2], ...).each(row->{
    yield(row.cells());
 });
