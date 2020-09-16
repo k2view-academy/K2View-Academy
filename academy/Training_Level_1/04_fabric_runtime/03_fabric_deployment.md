@@ -19,7 +19,7 @@ See how your design and implementation can be executed in large-scale and on dem
 
 Let's deploy the Logical Unit we have just created in the Fabric Studio:
 
-1. Right click  **CustomerLU** and select **Deploy To Server**:
+1. Right click  **Customer** LU and select **Deploy To Server**:
 
    1. If you are using a **Fabric Linux server**, select the server defined under **User Peferences**.
    2. In **local Fabric**, select **Debug Server**. 
