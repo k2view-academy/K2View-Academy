@@ -192,9 +192,9 @@ An SQL statement can be embedded as a parameter parsed into a Batch command as f
 
 A: ```from CRM_DB USING('select customer_id from Customer where customer_id <=10')"```
 
-B: ```USING SQL ('select customer_id from CRM_DB.Customer where customer_id <=10')```
+B: ```USING SQL ('select customer_id from Customer where customer_id <=10')```
 
-C: ```USING ('select customer_id from CRM_DB.Customer where customer_id <=10')```
+C: ```USING ('select customer_id from Customer where customer_id <=10')```
 
 D: The Batch command does not support SQL statements. Instance Groups must be defined for this purpose.
 
