@@ -65,7 +65,7 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
    * Write the following JavaScript code in the **script** input argument of the Actor:
 
    ~~~javascript
-   if (input1.CNTRY_CD == "ISL") {
+   if (input1.CNTRY_CD == "ISR") {
        contextLoop.stop();
        input1.AREA_CD;
    }
@@ -84,7 +84,7 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
 
    * Go to the **Project Tree** > **Shared Objects** > **Interfaces** and click **New Interface**. 
    * Set **Interface Type** = **Local File System**.
-   * Write **C:\k2view\listener** in the **Working Directory** and ***** in the **Files Filter**.
+   * Write **C:\k2view\listener** in the **Working Directory** and * in the **Files Filter**.
    * Set the Interface name and save it.
 
    ![flow](images/13_interface.PNG)
@@ -104,14 +104,14 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
 
 You are ready for the Interface Listener execution! 
 
-Create a folder **C:\k2view\listener** in your local file system and copy there a CSV file with the format and data as described at the beginning of this exercise. 
+Create a folder **C:\k2view\listener** in your local file system and copy there a CSV file with the described above format and data. 
 
 The Interface Listener will pick up the file and run the flow.
 
 ![cases population](images/13_flow_final.PNG)
 
 
-
+Note that if you edit the Broadway flow, you need to re-deploy the LU in order that the updated flow will be picked by the Interface Listener.
 
 
 [![Previous](/articles/images/Previous.png)](12_broadway_as_a_population_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
