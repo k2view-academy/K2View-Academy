@@ -63,20 +63,21 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             Step 2:
             1. Decision function based on Globals:
 
-            // This function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
-            Boolean syncInd = false;
-            String count = db("CRM_DB").fetch("SELECT count(*) FROM CASES").firstValue().toString();
-            //puts the number of rows in CASES DB into variable count
-            int cnt=Integer.parseInt(count);
-            // using the RUN_POP object defined as Globals
-            if (cnt > Integer.parseInt(RUN_POP)){
-            syncInd = true;	
-            }
-            else {
-            syncInd = false;
-            }
-            return syncInd;
-            
+```
+// This function will decide to synchronize an LUI if the number of cases is higher than an arbitrary hardcoded threshold
+Boolean syncInd = false;
+String count = db("CRM_DB").fetch("SELECT count(*) FROM CASES").firstValue().toString();
+//puts the number of rows in CASES DB into variable count
+int cnt=Integer.parseInt(count);
+// using the RUN_POP object defined as Globals
+if (cnt > Integer.parseInt(RUN_POP)){
+syncInd = true;	
+}
+else {
+syncInd = false;
+}
+return syncInd;
+```            
 
             2. Answer: 5.
             
@@ -94,29 +95,30 @@ Globals definition:
             
             Step 3:
            
-                  ```
-                  reportUserMessage("Invoice Cleaning fonction is running");
-                  String SQLINVOICES="SELECT * FROM INVOICE";
-                  String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
-                  Db.Rows rows = ludb().fetch(SQLINVOICES);
-                  for (Db.Row row:rows){
-                        String cellCaseDate=""+row.get("ISSUED_DATE");
-                       String[] date = cellCaseDate.split("\\s+");
-                   if(date[0].compareTo(OLDINVOICES) < 0) {
-                     reportUserMessage("invoice date is earlier than 2015/12/31");
-                      fabric().execute(SQLInvoicesDelete,cellCaseDate);
-                  }
-                  }
+```
+reportUserMessage("Invoice Cleaning fonction is running");
+String SQLINVOICES="SELECT * FROM INVOICE";
+String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
+Db.Rows rows = ludb().fetch(SQLINVOICES);
+for (Db.Row row:rows){
+String cellCaseDate=""+row.get("ISSUED_DATE");
+String[] date = cellCaseDate.split("\\s+");
+if(date[0].compareTo(OLDINVOICES) < 0) {
+reportUserMessage("invoice date is earlier than 2015/12/31");
+fabric().execute(SQLInvoicesDelete,cellCaseDate);
+}
+}
 ```
             Step 4: Answer: 19 entries.
             
             Step 5: Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
+
 ```
-                if ((cellValue.matches("(.*)+(.*)") == false))
-                {
-                    formattedNumber = INTERCODE_UK + cellValue; 
-                    //Makes use of the GLOBAL here w/o having to declare it
-                    fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
-                    //ending the if statement		
-                }
+if ((cellValue.matches("(.*)+(.*)") == false))
+{
+formattedNumber = INTERCODE_UK + cellValue; 
+//Makes use of the GLOBAL here w/o having to declare it
+fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
+//ending the if statement		
+}
 ```                    
