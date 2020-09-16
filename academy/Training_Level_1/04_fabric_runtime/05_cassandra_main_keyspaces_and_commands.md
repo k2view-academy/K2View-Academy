@@ -36,14 +36,14 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png)Exercise – Keyspaces & Commands
 
-1. `Question: Which Instance IDs are stored in k2view_customerlu?` `How will you list them?`
+1. `Question: Which Instance IDs are stored in k2view_customer?` `How will you list them?`
 2. `Question: How will you list the LUTs that have been deployed?`
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png)Solution - Keyspaces & Commands
 
 1. `Answer:215, 82;` 
 
-   `cassandra@cqlsh> select id from k2view_customerlu.entity ;` 
+   `cassandra@cqlsh> select id from k2view_customer.entity ;` 
 
    
 
