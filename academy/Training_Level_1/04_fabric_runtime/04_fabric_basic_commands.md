@@ -2,7 +2,7 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-You have just deployed your project and  its objects and have listed them - including the CustomerLU that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will help you to retrieve and query data.
+You have just deployed your project and  its objects and have listed them - including the Customer that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will help you to retrieve and query data.
 
 [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
 
@@ -14,7 +14,7 @@ Let’s test an LU Instance and see the results:
 
 1. Open the **Fabric console** in **Windows** or log in to **Fabric** on the **Linux server**.
 
-2. Run **get CustomerLU.215**;
+2. Run **get Customer.215**;
 
 3. Execute **select * from customer**. You should get the following results:
 
@@ -41,7 +41,7 @@ Let’s test an LU Instance and see the results:
 
 Using the training materials and examples covered so far:
 
-1. `Question: How many tables are in the CustomerLU?`
+1. `Question: How many tables are in the Customer?`
 
 2. `Question: Which columns are not nullables in the ACTIVITY table?`
 
@@ -49,7 +49,7 @@ Using the training materials and examples covered so far:
 
 4. `Question: What is the status of the CRM_DB interface?`
 
-5. `Advanced Question: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Perform a get CustomerLU.215 again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
+5. `Advanced Question: Update the CRM_DB source database: update CUSTOMER.FIRST_NAME of Instance 215 to your own name. Run set sync force; command and then run get Customer.215; command again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
 
    
 
@@ -57,7 +57,7 @@ Using the training materials and examples covered so far:
 
 1. `Answer: 12 tables including the _K2 tables`
 
-   `fabric>describe schema CustomerLU;`
+   `fabric>describe schema Customer;`
 
 2. `Answer: ACTIVITY_ID`
 
@@ -67,7 +67,7 @@ Using the training materials and examples covered so far:
 
    `fabric>test_connection DbInterface='CRM_DB';`
 
-5. `Answer: My First Name, set syc force brings the data from the source`
+5. `Answer: My First Name, set sync force command brings the data from the source`
 
 
 
