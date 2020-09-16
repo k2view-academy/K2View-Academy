@@ -22,16 +22,9 @@ Our Training environment has three main DBs of various types, which in essence, 
 
 - **ORDERS_DB** – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
 
- Download the BILLING_DB.db, CRM_DB.db, and ORDERS_DB.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
+ Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
 
 ### How to define an Interface
-
-Create the CRM_DB, BILLING_DB, and ORDERS_DB interfaces, as follows:
-
-- Set the **Interface Type** to **SQLite**. 
-- Edit the Database field, set the location of the related *.db file (for example- crm_db.db file for the CRM_DB interface) to the local directory.
-- Test the connection and save the changes.
-- Close the DB interface.
 
 Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
 
@@ -45,7 +38,6 @@ Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interf
 - [Deleting disabling an interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
 
 - [Clearing the database objects cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
-
 
 
  Now let’s understand how to view the data using the interface.
@@ -77,9 +69,9 @@ Considering the information above, which interface should be used ? **CRM DB**
  Let’s do this together!
 
 1. Open your **Fabric Studio**, go to the **Project Tree**, right click **Interface** and select **New Interface.**
-2. Select **Oracle** as the **Interface type**.
+2. Select **SQLite** as the **Interface Type**.
 3. Name the **Interface: CRM_DB**.
-4. Add additional parameters based on the bolded items below. Pay attention that the **Password** equals the **user’s** **credentials**.
+4. Populate the **Database** property by the full path of **cdm_db.db** in your computer. For example: C:\Training\SqliteDB\crm_db.db.
 5. Test the **connection string**.
 6. Click **Save**.
 
@@ -92,7 +84,7 @@ The Query Builder is displayed where you can see the list of tables and execute 
 How many customers do you have?
 
 ```sql
-Select count (*) From CRM_DB.CUSTOMER
+Select count (*) From CUSTOMER
 
 results:10,000
 ```
@@ -106,17 +98,10 @@ results:10,000
  **BILLING_DB Details**
 
 ```
-DB type: MySQL
+Interface type: SQLite
 
-Server: 
+Database: [full path of the billing_db.db SQLite file. For example: C:\Training\SqliteDB\billing_db.db]
 
-Port: 3306
-
-Database: BILLING_DB
-
-User: root
-
-Password: 
 ```
 
 1. `Question: List the tables that are part of the Schema.`
@@ -128,17 +113,10 @@ Password:
  **ORDERS_DB details**
 
 ```
-DB type: PostgreSQL
+Interface type: SQLite
 
-Server: 
-
-Port: 5436
-
-Database: ORDERS_DB
-
-User: ORDERS_USER
-
-Password: 
+Database: [full path of the billing_db.db SQLite file. For example: C:\Training\SqliteDB\orders_db.db]
+ 
 ```
 
 
