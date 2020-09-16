@@ -35,9 +35,9 @@ In this section the following topics are addressed:
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-**Exercise 1 - Lookup tables**
+#### **Exercise 1 - Lookup tables**
   
   Using the Customer LU schema, let's look at the Address population map. 
 
@@ -59,9 +59,9 @@ In this section the following topics are addressed:
             Save the lookup table and deploy and run instance 2472. Which name appears in the Address table ?
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution Exercise 1 - Lookup table**
+#### **Solution Exercise 1 - Lookup table**
 
             Step 1: 
             In the table from customer LU, it is much more efficient to use the data already populated into the LU table 
@@ -84,9 +84,9 @@ In this section the following topics are addressed:
 
 
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-**Exercise 2 - Translations**
+#### **Exercise 2 - Translations**
 
 Associate a unique geo-location code to the Address table to build a heat map of the customer's location.
             
@@ -103,11 +103,9 @@ Associate a unique geo-location code to the Address table to build a heat map of
             
             What is the International City Code for LUI 2217 ?
 
+[](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png)
 
-#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png)
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
-
-**Solution Exercise 2 - Translations**
+####**Solution Exercise 2 - Translations**
 
             Steps 1 and 2:
 Translation table schema:
@@ -124,9 +122,9 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             InstanceID 2217: 1840034016
             
 
-#### ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
+![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
-**Exercise 3 - Globals**
+#### **Exercise 3 - Globals**
 
 Let's use Globals rather than values hardcoded into Java functions or SQL statements. 
 
