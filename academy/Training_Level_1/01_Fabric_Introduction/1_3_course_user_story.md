@@ -7,7 +7,6 @@ During this training course, we will evolve within a Telco environment that prov
 - CRM. 
 - Billing.
 - Orders.
-- Collection.
 
 You will be seeing various details about customers such as their private information, contracts, payments and invoices. But we will come back and explore the content of these databases in the Interfaces section.
 
