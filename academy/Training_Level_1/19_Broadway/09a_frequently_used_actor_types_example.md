@@ -37,7 +37,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 7. The flow is ready! Make sure the input file exists in the designated working directory and run the flow. 
 
-   * Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:70%;" /> ON.
+   * Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
 
    ![flow](images/09_read_and_parse.PNG)
 

@@ -38,7 +38,7 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 1. Open the  **a-broadway-tutorial**  flow as [explained above](#how-do-i-open-the-broadway-tutorial-flow).
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
-1. Click the Debug ON ![debug on](images/debug_on.png) to set it to Debug OFF. Click ![Run Flow](images/run_flow_icon.png) to run the flow.
+1. Click the Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> to set it to Debug OFF. Click <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to run the flow.
 
   <ul>
   <pre><code>A. What is the result of the flow?</code></pre>
@@ -46,9 +46,9 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
 
 
 
-2. Add a  **Breakpoint** to **for each** Stage, click the Debug OFF ![debug off](images/debug_off.png) to set it back to Debug ON ![debug on](images/debug_on.png), and then click the ![Run Flow](images/run_flow_icon.png) to execute the flow in a debug mode till the breakpoint.
+2. Add a  **Breakpoint** to **for each** Stage, click the Debug OFF <img src="images/debug_off.png" alt="debug off" style="zoom:80%;" /> to set it back to Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" />, and then click the <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to execute the flow in a debug mode till the breakpoint.
 
-3. Click the Step ![Debug Step](images/debug_step_icon.png) or the Resume ![resume](images/resume.PNG) to execute the next steps after the breakpoint step.
+3. Click the Step <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> or the Resume <img src="images/resume.PNG" alt="resume" style="zoom:80%;" /> to execute the next steps after the breakpoint step.
 
   <ul>
   <pre><code>
@@ -60,20 +60,20 @@ Before you start the exercise, please read [Run and Debug Broadway Flow](/articl
   </code></pre>
   </ul>
 
-  ![info](/academy/images/information.png) Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
+Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
 
-  #### Step 3 - Edit the Flow to Test a Conditinal Stage
+  #### Step 3 - Edit the Flow to Test a Conditional Stage
 
 1. Add **Now** Actor to **Stage 3**: click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
-2. Click the Step ![Debug Step](images/debug_step_icon.png) or the Resume ![resume](images/resume.PNG) to execute the flow's steps in **Debug mode**. 
+2. Click the Step <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> or the Resume <img src="images/resume.PNG" alt="resume" style="zoom:80%;" /> to execute the flow's steps in **Debug mode**. 
 
   <ul>
   <pre><code>A. Has the new <strong>Now</strong> Actor of <strong>Stage 3</strong> been executed? Why?</code></pre>
   </ul>
 
- ![info](/academy/images/information.png) Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
+​		Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
 
-3. Click ![Stop Debug](images/stop_debug_icon.png) to stop the **Debug process**. 
+3. Click <img src="images/stop_debug_icon.png" alt="Stop Debug" style="zoom:80%;" /> to stop the **Debug process**. 
 4. Edit the **Const** Actor in the **Hello Broadway** Stage:  click the **Const** Actor in the **Hello Broadway** Stage. The [Actor window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
 5. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 6. Run the flow. 

@@ -1,6 +1,6 @@
 # Broadway Introduction - Overview
 
-Welcome to the first section of this course !
+**Welcome to the first section of this course!**
 
  
 

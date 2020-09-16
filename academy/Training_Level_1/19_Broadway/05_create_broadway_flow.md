@@ -39,7 +39,7 @@ Note that in this exercise you will use Broadway capabilities like built-in Acto
 1. Prepare the SELECT statement to retrieve the data. For example, select the number of cases for each case status from the **CASES** table in the **CRM_DB**  interface. Use the following SQL query:
 
 ```sql
-Select Count(*) AS NUMBER_OF_CASES, CASES.STATUS
+Select CASES.STATUS, Count(*) AS NUMBER_OF_CASES
 From CASES
 Group By CASES.STATUS
 ```
@@ -114,7 +114,7 @@ To learn more about editing this Stage's settings, read the [Stage Context Menu]
 
 The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *learns* the Schema and its complex output parameters and can suggest how to update it based on a parameter's value. To update the output parameter of the **DbCommand**, do the following:
 
-   - Run the flow in Debug mode when Debug is set to ![debug on](images/debug_on.png) ON.
+   - Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
 
    - Click the red port next to the **[result]** output of the **DbCommand** to open the **Compare Schema** window and then click **UPDATE** to update the Schema.
 
@@ -123,20 +123,20 @@ The **DbCommand** Actor returns  a complex Schema. The Broadway Debug process *l
 
    - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click ![Debug Step](images/debug_step_icon.png) to execute the steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
+   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> to execute the steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
 
    - Click each Debug value (marked blue) to open the **Data Viewer** window for the selected parameter. See the example below:
 
    ![image](images/MyFirstFlow_Example_debug.png)
 
 
-![](images/information.png) For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and the [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
+For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and the [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
 
    ##### Checking the Flow's Execution Results
 
 * Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file holding the list of cases selected from the CASE table.
 
-   
+  
 
 Congratulations! You've just created your first Broadway flow. 
 
