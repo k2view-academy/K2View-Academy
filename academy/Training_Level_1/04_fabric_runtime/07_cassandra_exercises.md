@@ -31,3 +31,11 @@
 1. `Question: Which Instance IDs are stored in k2view_customer?` `How will you list them?`
 2. `Question: How will you list the LUTs that have been deployed?`
 
+
+
+
+ [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/06_cassandra_main_keyspaces_and_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/08_cassandra_solutions.md)
+
+ 
+
+------
