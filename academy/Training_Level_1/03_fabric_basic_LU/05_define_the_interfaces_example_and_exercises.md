@@ -66,5 +66,5 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 3. `Question: How many orders are in the database?` 
 
 
-
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/06_define_the_interfaces_solutions.md)
 
