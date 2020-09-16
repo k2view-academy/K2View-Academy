@@ -61,7 +61,6 @@ Your flow is ready now! Run the Data viewer to sync a customer instance and veri
 </ul>
 
 
-
 **Answers:**
 
 <ul>
@@ -70,9 +69,8 @@ Your flow is ready now! Run the Data viewer to sync a customer instance and veri
 The <strong>parent_rows</strong> is the iterator of the parent rows, in the example - the list of activity IDs under the given customer.
 2. The SQL statement is: SELECT * FROM CASES WHERE ACTIVITY_ID IN (...) AND STATUS = ...
 3. Add an Actor to <strong>Stage 1</strong> in the template flow to perform the required data manipulations.
-
 </code></pre>
 </ul>
 
-[![Previous](/articles/images/Previous.png)](11_integration_with_fabric_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
+[![Previous](/articles/images/Previous.png)](11_integration_with_fabric_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_interface_listener_exercise.md)
 
