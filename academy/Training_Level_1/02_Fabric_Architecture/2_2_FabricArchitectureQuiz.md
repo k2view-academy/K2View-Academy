@@ -118,7 +118,7 @@ Fabric enables all data retrieved from external sources to be stored as:
 \- C: A single binary file pointing to different databases distributed across external networks.
 
 
- (***Solution 5: B - Note that Fabric can be configured to avoid storing Sqlite files in Cassandra***).
+ (**Solution 5: B - Note that Fabric can be configured to avoid storing Sqlite files in Cassandra***).
 
 
 
