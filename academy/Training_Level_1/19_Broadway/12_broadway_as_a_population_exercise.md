@@ -26,7 +26,7 @@ In this exercise you will do the following:
 
    
 
-   Your flow is ready now! Run the Data viewer to sync a customer instance and verify the population results.
+Your flow is ready now! Run the Data viewer to sync a customer instance and verify the population results.
 
    ![cases population](images/12_cases_table_population_1.PNG)
 
