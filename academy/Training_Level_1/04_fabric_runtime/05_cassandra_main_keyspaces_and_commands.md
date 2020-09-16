@@ -14,11 +14,16 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 1. Run **describe keyspaces;**.
 
-2. Change the keyspace to **CustomerLU**  by executing **use k2view_customerlu;**
+2. Check the name of the keyspace, created for Customer LU. In pronciple Fabric concatenates **k2view_** to the LU name. When deploying the LU to Fabric debug server, Fabric also concatenates the Fabric version and the project name to the keyspace of each LU. For example: k2view_test_cust_6_2_kb_fabric_project.
 
-3. Let's review the entities in **k2view_customerlu.entity** using the following statement: **select * from k2view_customerlu.entity**;  Note, you can also review the results from fabric executing the following:
+3. Change the keyspace scope to the Customer's keyspace by executing **use [customer keyspace name];**.
 
-   **cql select * from k2view_customerlu.entity;** The results varies a bit ,  instead of a  huge blob  you'll be able to review the microDB file sizing.
+4. Let's review the entities in **[customer keyspace name].entity** using the following statement: 
+   *select * from [customer keyspace name].entity;. 
+   
+   Note, you can also review the results from fabric executing the following:
+
+   **cql select * from [customer keyspace name].entity;** The results varies a bit ,  instead of a  huge blob  you'll be able to review the microDB file sizing.
 
 |id |batch_id|chunks_count|data       |key_desc_id|schema_hash|sync_version |
 
