@@ -21,7 +21,7 @@ Let's look at what needs to be considered to ensure that the LU data you are sou
 
   
 
-Based on the above, the transformations will be defined on the Digital Entity you defined as **Customer** and its associated **CustomerLU** that you defined in the Fabric Basic LU section, using the CRM, Billing, Orders and Collection databases. 
+Based on the above, the transformations will be defined on the **Customer** LU that you defined in the Fabric Basic LU section, using the CRM, Billing, and Orders databases. 
 
 
 
