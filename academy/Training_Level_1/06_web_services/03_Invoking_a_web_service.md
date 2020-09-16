@@ -68,7 +68,7 @@ String sql = "select cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CO
         "sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE,sub.VIP_STATUS " +
 		"from CUSTOMER cust, CONTRACT cont, SUBSCRIBER sub where cont.CONTRACT_ID=sub.SUBSCRIBER_ID and sub.VIP_STATUS=?";
 
-Db.Rows rows = ludb("CustomerLU", i_id).fetch(sql, i_vipStatus);
+Db.Rows rows = ludb("Customer", i_id).fetch(sql, i_vipStatus);
 
 return rows;
 ```
