@@ -29,7 +29,7 @@ You may  remember that the main business requirement is to create a 360 Customer
 
 Based on the above, the Digital Entity should be a **Customer** and the LU should be defined using various DBs. 
 
-Let’s start from the **CRM_DB.CUSTOMER** database which holds the Customer entity and create the LU using Auto Discovery.
+Let’s start from the **CRM_DB** interface which holds the Customer entity and create the LU using Auto Discovery.
 
 ### Creating a New LU 
 Please read the [Create New Logical Unit](/articles/03_logical_units/05_create_a_new_LU_object.md) article. 
