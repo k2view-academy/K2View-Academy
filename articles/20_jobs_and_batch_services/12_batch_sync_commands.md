@@ -36,7 +36,7 @@ Start the Batch process and sync all LU instances:
 - JOB_AFFINITY, affinity for the Batch process Job.
 - ASYNC, defines whether the Batch process should run in a sync or async mode. Default is False.
 - GENERATE_ENTITIES_FIRST, if set to True, generate all entities before processing them.
-- FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes a '?' to represent a singular Entity ID. One of the following commands must be set: (for Migration, "sync_instance <LU>.?", for Broadway, "broadway LU.SampleFlow SampleIID=?", for CDC republish, "cdc_republish_instance CustomerLU.?")
+- FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes a '?' to represent a singular Entity ID. One of the following commands must be set: (for Migration, "sync_instance <LU>.?", for Broadway, "broadway LU.SampleFlow SampleIID=?", for CDC republish, "cdc_republish_instance Customer.?")
 - ALLOW_MULTIPLY, when set to True, multiplies executions of the same Batch process command. Default is False.
 - MAX_NODES, maximum (random) nodes participating in the Batch process.
 - MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file. (MAX_WORKERS_PER_NODE parameter).</p>
