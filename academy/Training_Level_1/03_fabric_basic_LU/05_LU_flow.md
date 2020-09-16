@@ -39,23 +39,23 @@ We have already acknowledged that the Digital Entity should be the Customer ID t
 
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)Example – Auto Discovering an LU
 
-Following the Auto Discovery Tutorial, you can generate the **CustomerLU** using the Fabric Studio Wizard. 
+Following the Auto Discovery Tutorial, you can generate the **Customer** using the Fabric Studio Wizard. 
 
 Please open your Fabric project and do the following:
 
-1. Select the **New Logical Unit** and name it **CustomerLU**.
+1. Select the **New Logical Unit** and name it **Customer**.
 2. Set the **DB Connection** as **CRM_DB** and click **Next**.
-3. Select the **CUSTOMER_ID.CUSTOMER** as a **Column Name** so that the **Table Name** is also populated. Note that you can uncheck the **Add Schema Name** option.
+3. Select the **CUSTOMER.CUSTOMER_ID** as a **Column Name** so that the **Table Name** is also populated. Note that you can uncheck the **Add Schema Name** option.
 4. Select the **Fast** **Auto Discovery**.
 5. Click **Next** to review the suggested **ERD** and if you are satisfied, click **Finish**.
 
 Note that the **Root Table** and **InstanceID** are created automatically.
 
-Yay! your **CustomerLU** is now defined:
+Your **Customer** LU is now defined:
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/CustomerLU.png) 
 
-`Question: Are all the tables in the CRM_DB Schema part of the CustomerLU? Why?`
+`Question: Are all the tables in the CRM_DB Schema part of the Customer? Why?`
 
 
 
@@ -102,23 +102,22 @@ Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s l
 
 Let’s test an LU Instance and see the result. 
 
-Open the CustomerLU Data Viewer and execute Instance ID 215:
+Go to the Project Tree, right click the **Customer** LU, and select **Deploy To debug**. Now you can open the Customer Data Viewer window and execute Instance ID 215:
 
 1. Check that in the **Instance Tree** there is a **DB file** that has the **Current Date** and **Timestamp**.
 
-2. Look at the **tables** that have been populated under the **Instance DB Tree **and their **data**.
+2. Look at the **Tables** that have been populated under the **Instance DB Tree** and their data.
 
-3. Validate the _ K2 generated tables. 
+3. Validate the generated tables with the k2_ prefix. 
 
-4. Execute the following **query** in the **Data Viewer**:
-
+4. Execute the following query in the **Data Viewer**:
    
 
    `select cases.status,cases.activity_id, activity.ACTIVITY_DATE,activity.ACTIVITY_NOTE from cases, activity where cases.ACTIVITY_ID=activity.ACTIVITY_ID` 
 
    
 
-5. Do the same using the **CRM_DB Query Builder** and add the **CUSTOMER_ID** number. Is the displayed data the same?
+5. Do the same using the **CRM_DB Query Builder** and add the **CUSTOMER_ID** number to the WHERE statement. Is the displayed data the same?
 
  
 
@@ -126,13 +125,13 @@ Open the CustomerLU Data Viewer and execute Instance ID 215:
 
 The LU you have just created using the Auto Discovery Wizard contains basic Customer information only. However, you also need to see their Subscription and Billing info.
 
-Using the training materials and examples covered so far, add the **CRM_DB.SUBSCRIBER** to the **CustomerLU**. 
+Using the training materials and examples covered so far, add the **CRM_DB.SUBSCRIBER** table to the **Customer** LU. Redeploy the LU to the debug server, and run the Data Viewer for Instance ID 82.
 
 1. `Question: How are you connecting the additional table?`
 
 2. `Question: How many subscribers has Customer 82 got? What are their IDs?`
 
-Add the BILLING_DB.BALANCEtable to the CustomerLU.
+Add the BILLING_DB.BALANCE table to the **Customer** LU. Redeploy the LU to the debug server, and run again the Data Viewer for Instance ID 82.
 
 3. `Question: How long did it take to populate the CUSTOMER table?`
 
