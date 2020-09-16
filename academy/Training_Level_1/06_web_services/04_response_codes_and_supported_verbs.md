@@ -60,7 +60,7 @@ if ( i_info != null && i_info.size() >0 ){
 		// Insert into CASES table 	
 					fabric().execute("Begin");
 					String sql = "insert into cases (activity_id,case_id,case_date,case_type,status) values (?,?,?,?,?)";
-					ludb("CustomerLU", i_id).execute(sql,activity_id,case_id,case_date,case_type,status);
+					ludb("Customer", i_id).execute(sql,activity_id,case_id,case_date,case_type,status);
 					fabric().execute("Commit");
 				}
 			else{
@@ -103,7 +103,7 @@ if ( i_info != null && i_info.size() >0 ){
          "activity_id":"437", 
          "case_id":"225",
          "case_date":"2015-08-02 08:33:06",
-         case_type":"Network Issue",
+         "case_type":"Network Issue",
          "status":"Open"
        
        }]}  
