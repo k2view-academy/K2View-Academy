@@ -238,6 +238,7 @@ Click for more information about Fabric Security Hardening.</p>
 </td>
 <td rowspan="3" width="250pxl" valign="top">
 <p>A new keyspace is created for each <a href="/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-cassandra">deployed LU.</a></p>
+<p> Note that when deploying the LU to Fabric debug server, Fabric also concatenates the Fabric version and the project name to the keyspace of each LU. For example: k2view_test_cust_6_2_kb_fabric_project. </p>    
 </td>
 <td width="150pxl" valign="top">
 <p><strong>Table Name</strong></p>
