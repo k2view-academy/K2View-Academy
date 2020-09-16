@@ -20,7 +20,7 @@ The following are the basic steps for creating a Web Service and understanding i
 Let's create your first simple Web Service which will retrieve basic information on a specific instance of a customer:
 
 1. Go to **Project Tree**, right click **Web Services** > **New Web Service** to display the **Function Editor** window.
-2. Select **Newest CustomerLU** as the Database and **CUSTOMER** as the table to generate the code from. 
+2. Select **Newest Customer File** as the Database and **CUSTOMER** as the table to generate the code from. 
 3. Select the **CUSTOMER_ID**, **SSN**, **FIRST_NAME** and **LAST_NAME** columns.
 4. Set the input parameter as **i_id** and data type as **String**.
 5. Edit the Web Service function:
@@ -47,10 +47,10 @@ Now, let's validate that the Web Service has been deployed:
 
 1. Log into Fabric. 
 2. Execute: 
-   `cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
+   `cql select lut_name,lut_version,properties from k2system.k2_lut_info where lut_name='k2_ws';`
 3. You can now verify that your Web Service has been deployed:
 
-`fabric>cql select lut_name,lut_version,properties from k2system_kb_fabric_project.k2_lut_info where lut_name='k2_ws';`
+`fabric>cql select lut_name,lut_version,properties from k2system.k2_lut_info where lut_name='k2_ws';`
 
 
 
