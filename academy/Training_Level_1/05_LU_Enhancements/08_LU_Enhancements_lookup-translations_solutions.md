@@ -94,6 +94,7 @@ Globals definition:
             
             Step 3:
            
+                  ```
                   reportUserMessage("Invoice Cleaning fonction is running");
                   String SQLINVOICES="SELECT * FROM INVOICE";
                   String SQLInvoicesDelete="DELETE FROM INVOICE WHERE ISSUED_DATE = ?";
@@ -106,11 +107,11 @@ Globals definition:
                       fabric().execute(SQLInvoicesDelete,cellCaseDate);
                   }
                   }
-
+```
             Step 4: Answer: 19 entries.
             
             Step 5: Exercise 1 of Enrichment Functions and the adjusted line below in the if statement
-
+```
                 if ((cellValue.matches("(.*)+(.*)") == false))
                 {
                     formattedNumber = INTERCODE_UK + cellValue; 
@@ -118,4 +119,4 @@ Globals definition:
                     fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
                     //ending the if statement		
                 }
-                    
+```                    
