@@ -31,7 +31,7 @@
 
 [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png)
 
-####**Solution Exercise 2 - Translations**
+#### **Solution Exercise 2 - Translations**
 
             Steps 1 and 2:
 Translation table schema:
@@ -52,9 +52,9 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
 
 
 
-#### [](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
+[](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
 
-**Solution Exercise 3 - Globals**
+####  **Solution Exercise 3 - Globals**
 
             Step 1:
             SQL Query with embedded reference to Globals:
