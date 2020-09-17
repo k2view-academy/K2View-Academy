@@ -22,7 +22,7 @@ Broadway is the Fabric module that will allow you to:
 
 \- B:  Subscribe to a message bus and consume messages.
 
-\- C:  Execute scheduled activities (jobs) .
+\- C:  Execute scheduled activities (user jobs) .
 
 \- D:  All the above.
 
@@ -42,6 +42,8 @@ The Broadway Actors are:
 
 \- C:  Ready-to-use classes with predefined business logic that can be extended with additional functionality if needed.
 
+\- D:  None of the above.
+
 
 (**Solution 2: C; Broadway offers a number of built-in Actors which address a wide range of predefined activities and can be extended by creating inherited Actors**).
 
@@ -57,7 +59,9 @@ The values in the Actors input parameters are:
 
 \- B:  Constant for some Actors, Link for other.
 
-\- C:  Populated depending on the Actor's position in the flow.
+\- C:  Always defined as Constant.
+
+\- D:  Populated depending on the Actor's position in the flow.
 
 
 (**Solution 3: A; The population of the input parameter depends on the population type. The supported types are:  Link, Const or External**).
@@ -76,8 +80,10 @@ If the Actor expects to receive a Boolean value but receives a number instead, B
 
 \- C:  Ignore the input argument's value.
 
+\- D:  Open a pop-up window to insert the correct value.
 
-(**Solution 4: B; Broadway can convert the value to the type expected by the Actor**).
+
+(**Solution 4: B; Supported Broadway types can be converted automatically to other supported types expected by the Actor**).
 
 
 
@@ -86,7 +92,7 @@ If the Actor expects to receive a Boolean value but receives a number instead, B
 A Broadway flow is built of several Stages whereby:
 
 
-\- A:  The Stages are executed from left to right in the flow, each Stage can include one ore more Actors and the Actors are executed top-down within the Stage.
+\- A:  The Stages are executed from left to right in the flow, each Stage can include one or more Actors and the Actors are executed top-down within the Stage.
 
 
 \- B:  Any Stage in a flow can be split to create parallel execution branches.
