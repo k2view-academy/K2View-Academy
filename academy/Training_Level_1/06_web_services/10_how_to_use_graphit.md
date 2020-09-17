@@ -30,5 +30,5 @@ Please refer to [Code Examples](/articles/15_web_services_and_graphit/17_Graphit
 
             
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/05_quiz.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/07_graphit_quiz.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/09_web_services_quiz.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/11_graphit_exercises.md)
