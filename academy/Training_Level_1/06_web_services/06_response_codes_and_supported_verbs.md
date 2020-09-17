@@ -16,7 +16,7 @@ In addition to the above supported verbs and response codes, the following infor
 
 [REST API Additions](/articles/15_web_services_and_graphit/16_rest_api_additions.md)
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png)Click the  [Web Services code examples](https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP1_15_Web_Services_Merav/articles/15_web_services_and_graphit/06_web_services_code_examples.md) to find code examples worth reviewing. 
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png)Click the  [Web Services code examples](/articles/15_web_services_and_graphit/06_web_services_code_examples.md) to find code examples worth reviewing. 
 
 
    
