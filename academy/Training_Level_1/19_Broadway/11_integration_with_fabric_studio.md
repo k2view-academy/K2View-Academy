@@ -25,7 +25,7 @@ To learn about the above functionalities, please refer to:
 
 
 
-Now let's do the Creating a Broadway Flow as a Population exercise.
+Now let's do an exercise and practice creating a Broadway flow as a population.
 
 
 
