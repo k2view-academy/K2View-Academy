@@ -12,11 +12,11 @@ Considering the information above, which interface should be used ? **CRM DB**
 1. Open your **Fabric Studio**, go to the **Project Tree**, right click **Interface** and select **New Interface.**
 2. Select **SQLite** as the **Interface Type**.
 3. Name the **Interface: CRM_DB**.
-4. Populate the **Database** property by the full path of **cdm_db.db** in your computer. For example: C:\Training\SqliteDB\crm_db.db.
+4. Populate the **Database** property using the full path of **cdm_db.db** in your computer. For example: C:\Training\SqliteDB\crm_db.db
 5. Test the **connection string**.
 6. Click **Save**.
 
-**Great!  your first interface is ready to be explored:**
+**Your first interface is ready to be explored:**
 
 Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
@@ -36,7 +36,7 @@ results:10,000
 
 ### **Exercise – Define Your Project’s Interfaces and Validate Them**
 
-Your Customer’s 360 view requires additional data such as Billing and Order. Using the training materials covered so far and the above example, configure the following DB interfaces:
+Your Customer’s 360 view requires additional data such as Billing and Order. Using the Training materials covered so far and the above example, configure the following DB interfaces:
 
  **BILLING_DB Details**
 
@@ -63,7 +63,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 ```
 
 
-3. `Question: How many orders are in the database?` 
+3. `Question: How many orders are there in the database?` 
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/06_define_the_interfaces_solutions.md)
