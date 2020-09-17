@@ -2,9 +2,9 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-You have just deployed your project and  its objects and have listed them - including the Customer that you built. Now that you know how to use  Fabric tools and are able to log into Fabric, let's review some basic commands that will help you to retrieve and query data.
-
-[Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
+You have just deployed your project and  its objects (including the Customer you built) and have listed them. Now that you know how to use Fabric tools and can log into Fabric, let's review some basic commands that will help you to retrieve and query data.
+ 
+Please refer to [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
 
 
 
@@ -33,9 +33,7 @@ Let’s test an LU Instance and see the results:
    
    
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about Fabric Configuration Files, refer to: 
-
-[Fabric Main Configuration Files](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about Fabric Configuration Files, refer to: [Fabric Main Configuration Files](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md).
 
 
 
@@ -45,15 +43,15 @@ Let’s test an LU Instance and see the results:
 
 Using the training materials and examples covered so far:
 
-1. `Question: How many tables are in the Customer?`
+1. `Question: How many tables does the Customer have?`
 
 2. `Question: Which columns are not nullables in the ACTIVITY table?`
 
-3. `Question: How many subscribers has Customer 82? What are their IDs?`
+3. `Question: How many subscribers does Customer 82 have? What are their IDs?`
 
 4. `Question: What is the status of the CRM_DB interface?`
 
-5. `Advanced Question: Update the CRM_DB source database: update CUSTOMER.FIRST_NAME of Instance 215 to your own name. Run set sync force; command and then run get Customer.215; command again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
+5. `Advanced Question: Update the CRM_DB source database: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Run thebset sync force; command and then run the get Customer.215; command again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
 
 
 
