@@ -1,10 +1,10 @@
-#   Define the Interfaces
+#   Defining Interfaces
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_03.png)
 
-Now your project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the project’s interfaces. 
+Now that your project has been defined and a preliminary analysis of the data requirements has been performed, it’s time to define the project’s interfaces. 
 
- An interface can be based on database or non-database files and is defined in the Fabric Studio. Some database / non-database items might be new in the system and we will also show you how to define them and use them as Interfaces.
+ An interface can be based on database or non-database files and is defined in the Fabric Studio. Some database / non-database items might be new in the system and we will also show you how to define them and use them as interfaces.
 
  
 
@@ -12,32 +12,32 @@ Now your project has been defined and a preliminary analysis of the data require
 
 Let’s understand which interfaces are available in the Fabric Studio. Please read [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md).
 
-To define the interfaces and their respective parameters, you need to look into their sources using the following [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
+To define the interfaces and their respective parameters, read about their sources in the following [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
 
-Our Training environment has three main DBs of various types, which in essence, represent a typical Telco IT ecosystem:
+Our Training environment has three main and different DBs, which in essence, represent a typical Telco IT ecosystem:
 
--  **BILLING_DB** – Stores information required for preparing or sending a bill or invoice, such as: Payments or Balance. 
+-  **BILLING_DB**, stores information required for preparing or sending a bill or invoice. For example, Payments or Balance. 
 
-- **CRM_DB**  – Stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
+- **CRM_DB**, stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
 
-- **ORDERS_DB** – Usually stores information for filling the order functions required to complete a customer’s order created in a CRM such as, Orders, Order items, Items or Pricing. In the Fabric Training environment, Orders table. 
+- **ORDERS_DB**, usually stores information for filling an order's functions required to complete a customer’s order created in a CRM. For example, Orders, Order items, Items or Pricing and in the Fabric Training environment, an Orders table. 
 
  Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
 
-### How to define an Interface
+### Instructions for Defining an Interface 
 
-Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a new database interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
+Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
 
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using Interfaces, refer to:
 
-- [Adding a fabric and remote fabric interface type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
+- [Adding a Fabric and Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
 
-- [Editing interface settings](/articles/05_DB_interfaces/06_editing_interface_settings.md)
+- [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md)
 
-- [Deleting disabling an interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
+- [Deleting Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md)
 
-- [Clearing the database objects cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
+- [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
 
 
  Now let’s understand how to view the data using the interface.
@@ -58,6 +58,6 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 
 <!--Once loaded to Git: 11_3 Query_Builder_Build_SQL_Query-->
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/05_define_the_interfaces_example_and_exercises.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/05_define_the_interfaces_example_and_exercises.md)  
 
 
