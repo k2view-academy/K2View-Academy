@@ -32,31 +32,21 @@ Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interf
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using interfaces, refer to:
 
 - [Adding a Fabric and Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md).
-
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
-
 - [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
-
 - [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
 
 
- Now let’s understand how to view the data using the interface.
+ Now let’s understand how to view the data using the interface and the Query Builder.
 
 ### Query Builder
 
 Similar to other DB studios, Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries. Please read:
 
 - [Query Builder Overview](/articles/11_query_builder/01_query_builder_overview.md).
+- [Query_Builder_Window](/articles/11_query_builder/02_query_builder_window.md).
+- [Query_Builder_Build_SQL_Query](/articles/11_query_builder/03_building_and_running_an_sql_query.md#main-window---editing-an-sql-query).
 
-<!--Once loaded to Git: 11_1 Query Builder Overview-->.
-
-- [Query_Builder_Window]().
-
-<!--Once loaded to Git: 11_2 Query_Builder_Window-->.
-
-- [Query_Builder_Build_SQL_Query]().
-
-<!--Once loaded to Git: 11_3 Query_Builder_Build_SQL_Query-->.
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/05_define_the_interfaces_example_and_exercises.md)  
 
