@@ -106,7 +106,7 @@ in the input stream.
 3. If only the number of calls needs to be calculated, they can be replaced by the <strong>Count</strong> Actor. 
 However since this exercise needs to stop iterating the data on a specifc condition, 
 the <strong>JavaScript</strong> Actor cannot be replaced by another Actor. 
-4. The Date format changes indicating a different weekday, AM/PM from the default Date format.
+4. The date format changes indicating a different weekday, AM/PM from the default date format.
 </code></pre>
 </ul>
 
