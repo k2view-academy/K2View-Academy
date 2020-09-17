@@ -64,9 +64,11 @@ if ( i_info != null && i_info.size() >0 ){
 
   
 
-2. `Answer : POST`
+2. 
+`Answer : POST`
 
-3. ```json
+3. 
+```json
     Answer: i_id : String ; i_info: List<Map<String,String>>
    
    Example request body :{
@@ -80,7 +82,7 @@ if ( i_info != null && i_info.size() >0 ){
          "status":"Open"
        
        }]}  
-   ```
+```
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/07_additional_web_services_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/09_web_services_quiz.md)
