@@ -131,3 +131,4 @@ fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/07_LU_Enhancements_lookup-translations_exercises.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/09_LU_Enhancements_Quiz.md)
 
+------
