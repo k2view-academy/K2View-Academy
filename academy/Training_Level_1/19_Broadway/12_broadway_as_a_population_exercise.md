@@ -2,19 +2,17 @@
 
 In this exercise you will do the following:
 
-* Create a new population for CASES table in the Customer LU based on a Broadway flow.
+* Create a new population for the CASES table in the Customer LU based on a Broadway flow.
 * Filter the retrieved cases by the status = Open.
 * Load the data into Fabric.
 
 
 
-##### Exercise Steps:
+##### Exercise Steps 
 
 1. Go to the **Project Tree** > **Logical Units** > **Customer** and delete the CASES table with its population from both the tables list and the LU Schema of the Customer LU.
 
-2. Drag the CASES table from the **DB Objects tab** of the LU Schema window to the LU Schema main area and click on the **Table Based Broadway Flow** in the context menu. 
-
-   * The CASES table and the population flow are created.
+2. Drag the CASES table from the **DB Objects tab** of the LU Schema window to the LU Schema main area and click the **Table Based Broadway Flow** in the context menu. The CASES table and the population flow are created.
 
 3. Connect the CASES  table to its parent ACTIVITY table in the LU Schema by ACTIVITY_ID.
 
@@ -26,7 +24,7 @@ In this exercise you will do the following:
 
    
 
-Your flow is ready now! Run the Data viewer to sync a customer instance and verify the population results.
+Your flow is now ready! Run the Data viewer to sync a customer instance and verify the population results.
 
    ![cases population](images/12_cases_table_population_1.PNG)
 
