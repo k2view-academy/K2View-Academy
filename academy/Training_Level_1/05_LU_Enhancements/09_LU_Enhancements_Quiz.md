@@ -174,3 +174,5 @@ D: All enrichment functions and is determined on the LU schema level in the Enri
 ####    
 
 [![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/04_LU_Enhancements_lookup-translations_flow.md)
+
+------
