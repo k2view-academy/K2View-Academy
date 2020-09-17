@@ -60,7 +60,7 @@ a. False.
 
 b. True.
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/04_response_codes_and_supported_verbs.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/06_how_to_use_graphit.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/08_additional_web_services_solutions.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/10_how_to_use_graphit.md)
 
 
