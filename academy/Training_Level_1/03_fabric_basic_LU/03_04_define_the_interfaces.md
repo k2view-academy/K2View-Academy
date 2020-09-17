@@ -12,7 +12,7 @@ Now that your project has been defined and a preliminary analysis of the data re
 
 Let’s understand which interfaces are available in the Fabric Studio. Please read [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md).
 
-To define the interfaces and their respective parameters, read about their sources in the following [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
+To define the interfaces and their respective parameters, read about their sources in the [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
 
 Our Training environment has three main and different DBs, which in essence, represent a typical Telco IT ecosystem:
 
@@ -35,7 +35,7 @@ Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interf
 
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
 
-- [Deleting Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
+- [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
 
 - [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
 
