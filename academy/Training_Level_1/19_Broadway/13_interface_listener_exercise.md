@@ -5,7 +5,7 @@ In this exercise you will do the following:
 * Create a flow that reads a CSV file, parses it, searches for a specific value in the file and prints this value into the log.
 * Define an Interface Listener for the above flow.
 
-For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and AREA_CD. The file should be populated with the relevant codes, for example:
+For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD columns. The file should be populated with the relevant codes, for example:
 
 <table>
 <tbody>
@@ -53,7 +53,7 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
 
 2. Add a **FileRead** Actor to Stage 1 to read the input file.
 
-   * Set the input arguments **interface** and **path** as External.
+   * Set the **interface** and **path** input arguments to External.
 
 3. Add a **CsvParser** Actor to Stage 2 and connect it with the **FileRead** Actor.
 
@@ -73,14 +73,14 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
 
 5. Add a **Logger** Actor to Stage 4 
 
-   * Set the **message** value of  the **Logger** Actor to: *The required area code is: ${0}*.
+   * Set the **message** value of the **Logger** Actor to: *The required area code is: ${0}*.
    * Connect the **result** output argument of the **JavaScript** Actor to the **[params]** input argument of the **Logger** Actor. 
 
-6. Save the flow. The flow is ready and you can start the definition of the Interface Listener.
+6. Save the flow. The flow is ready and you can now define the Interface Listener.
 
    ![flow](images/13_flow.PNG)
 
-7. Start from defining the Interface. 
+7. Start by defining the Interface. 
 
    * Go to the **Project Tree** > **Shared Objects** > **Interfaces** and click **New Interface**. 
    * Set **Interface Type** = **Local File System**.
@@ -91,9 +91,8 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
 
 8. Now create an Interface Listener.
 
-   * In the Interface window click **Add interface listener as Broadway job** and select CRM - the LU for which the job should be created.
-   * The **Interface Listener** tab of the **Jobs (CRM)** window opens.
-   * Select the above flow from the **Broadway Flow** drop-down and the above Interface from the **Interface Name** drop-down and save the Jobs. 
+   * In the Interface window click **Add interface listener as Broadway job** and select CRM - the LU for which the job should be created. The **Interface Listener** tab of the **Jobs (CRM)** window opens.
+   * Select the above flow from the **Broadway Flow** dropdown and the above Interface from the **Interface Name** dropdown and save the Jobs. 
    * Keep the **Execution Mode** = **Automatically**. 
 
 9. Deploy the CRM LU.
@@ -102,16 +101,16 @@ For this exercise you will need a CSV file with the columns CNTRY_CD, NAME and A
 
    
 
-You are ready for the Interface Listener execution! 
+You are ready to execute the Interface Listener! 
 
-Create a folder **C:\k2view\listener** in your local file system and copy there a CSV file with the described above format and data. 
+Create the **C:\k2view\listener** folder in your local file system and copy / paste a CSV file with the described above format and data. 
 
 The Interface Listener will pick up the file and run the flow.
 
 ![cases population](images/13_flow_final.PNG)
 
 
-Note that if you edit the Broadway flow, you need to re-deploy the LU in order that the updated flow will be picked by the Interface Listener.
+Note that if you edit the Broadway flow, you need to redeploy the LU so that the updated flow is picked by the Interface Listener.
 
 
 [![Previous](/articles/images/Previous.png)](12_broadway_as_a_population_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
