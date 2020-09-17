@@ -45,7 +45,7 @@
 
 #### **DAY 3 – Morning**
 
-- Broadway Advanced Topics
+- Broadway Advanced Features
   - Actor Inheritance Mechanism
   - Error handling
   - Inner flows
@@ -54,7 +54,7 @@
 - Exercise:  
   - Create a Broadway flow with an inner flow and an error handler
   
-- Broadway Advanced Topics - Continue
+- Broadway Advanced Features - Continue
   - Data Inspection
   - Reset Parameters Schemas
   - Running Batch Commands to Execute a Broadway Flow
