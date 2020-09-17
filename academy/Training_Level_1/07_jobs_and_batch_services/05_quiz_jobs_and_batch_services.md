@@ -237,3 +237,4 @@ D: No such a thing, Fabric nodes never fail
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)
 
+------
