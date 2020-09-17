@@ -1,4 +1,4 @@
-# Legacy Support - Backward Compatibility 
+# Legacy Support
 
 ## Migrate Commands
 
