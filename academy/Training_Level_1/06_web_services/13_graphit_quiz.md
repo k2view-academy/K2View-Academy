@@ -174,4 +174,4 @@ C: Responses A & B.
 (**Solution 11: C**)
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/06_how_to_use_graphit.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/12_graphit_solutions.md)
