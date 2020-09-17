@@ -4,8 +4,7 @@
 
 
 
-Excellent! 
-You have completed the Broadway learning items.
+Excellent! You have completed the Broadway learning items.
 
 
 Let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
@@ -106,7 +105,44 @@ A Broadway flow is built of several Stages whereby:
 
 
 
-#### Question 6: Broadway Flow Iterations
+#### Question 6: Stage Conditions
+
+A Stage condition:
+
+
+\- A:  Can only be defined using a **JavaScript** Actor.
+
+
+\- B:  Stops the execution of the branch if **false** is returned by the Actor's first output.
+
+\- C:  Should be the only Actor in the Stage.
+
+\- D:  Is needed to define the **else** condition.
+
+
+(**Solution 6: B; If a Stage condition is false, its branch's execution stops. The condition Actor can have any number of output parameters, however a true / false check is performed on the first on the first one.**).
+
+
+
+#### Question 7: Iterations
+
+Iterations in Broadway:
+
+
+\- A:  Are started by setting the link type of the Actor that begins the loop to **Iterate**.
+
+
+\- B:  Can be stopped programmatically by accessing the context object.
+
+\- C:  Support having more than one loop over the same data structure .
+
+\- D:  All the above.
+
+(**Solution 7: D; All the above is supported by Broadway Iterations**).
+
+
+
+#### Question 8: Broadway Flow Iterations
 
 xxx:
 
@@ -118,12 +154,10 @@ xxx:
 
 \- C:  ???.
 
-
-(**Solution 6: X; XXX**).
-
+\- D:  ???.
 
 
-
+(**Solution 8: X; XXX**).
 
 
 
