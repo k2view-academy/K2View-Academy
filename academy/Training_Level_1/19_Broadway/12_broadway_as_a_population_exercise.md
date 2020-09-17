@@ -54,7 +54,7 @@ Your flow is now ready! Run the Data viewer to sync a customer instance and veri
 <pre><code>
 1. Which values are populated in the output arguments of the <strong>PopulationArgs</strong> Actor?
 2. Which SQL statement is executed on the DB Interface by the <strong>Query</strong> Actor?
-3. If you need to edit the data before loading it to the target DB, how can you do it?
+3. If you need to edit the data before loading it to the target DB, how do you do it?
 </code></pre>
 </ul>
 
