@@ -1,4 +1,4 @@
-# ![](/academy/images/Exercise.png) Exercise - Interface Listener and Stream Handling
+# ![](/academy/images/Exercise.png) Exercise - Interface Listener and Handling a Stream 
 
 In this exercise you will do the following:
 
@@ -55,11 +55,11 @@ For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD colum
 
    * Set the **interface** and **path** input arguments to External.
 
-3. Add a **CsvParser** Actor to Stage 2 and connect it with the **FileRead** Actor.
+3. Add a **CsvParser** Actor to Stage 2 and connect it to the **FileRead** Actor.
 
 4. Add a **JavaScript** Actor to Stage 3 and add an **input1** input argument to it.
 
-   * Now connect **input1** with the output of the **CsvParser** Actor.
+   * Now connect **input1** to the output of the **CsvParser** Actor.
    * Set  the **Link Type** to **Iterate**.
    * Click ![image](images/three_dots_icon.png) in the Stage context menu > **Iterate Close**. 
    * Write the following JavaScript code in the **script** input argument of the Actor:
@@ -101,9 +101,9 @@ For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD colum
 
    
 
-You are ready to execute the Interface Listener! 
+The Interface Listener is now ready! 
 
-Create the **C:\k2view\listener** folder in your local file system and copy / paste a CSV file with the described above format and data. 
+Create the **C:\k2view\listener** folder in your local file system and copy a CSV file with the described above format and data into it. 
 
 The Interface Listener will pick up the file and run the flow.
 
