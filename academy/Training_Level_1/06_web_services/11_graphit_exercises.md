@@ -27,3 +27,4 @@ In this exercise we refer to the exercise in [LU Enhancements - Translations](/a
 
  [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/10_how_to_use_graphit.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/12_graphit_solutions.md)
 
+------
