@@ -3,6 +3,8 @@
 
 ### Solution - Additional Web Service
 
+1.
+
 ```java
 Map<String,String> result = new HashMap<>();
 String name ="";
@@ -62,9 +64,9 @@ if ( i_info != null && i_info.size() >0 ){
 
   
 
-1. `Answer : POST`
+2. `Answer : POST`
 
-2. ```json
+3. ```json
     Answer: i_id : String ; i_info: List<Map<String,String>>
    
    Example request body :{
