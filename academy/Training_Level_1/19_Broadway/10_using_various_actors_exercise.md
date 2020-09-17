@@ -30,11 +30,11 @@ The flows will include the following steps:
    
    * Set its population type to **External**.
 
-3. Add a **JsonParser** Actor to Stage 2 and connect it with the **DbCommand** Actor.
+3. Add a **JsonParser** Actor to Stage 2 and connect it to the **DbCommand** Actor.
 
    * Set the **single** input argument to **false**.
 
-4. Add a **StringBuild** Actor to Stage 3 and connect its input with the ACTIVITY_ID of the  **JsonParser** Actor in Stage 2 to concatenate all the activity IDs into one string. 
+4. Add a **StringBuild** Actor to Stage 3 and connect its input to the ACTIVITY_ID of the  **JsonParser** Actor in Stage 2 to concatenate all the activity IDs into one string. 
 
    * Update the **delimiter** to '**'. 
    * Set the link type to **Iterate**. 
@@ -55,7 +55,7 @@ The flows will include the following steps:
 
 7. Add a **Now** Actor to Stage 4 to get the current date timestamp. 
 
-8. Add a **DateFormat** Actor to Stage 5 and connect it with the output of **Now**.
+8. Add a **DateFormat** Actor to Stage 5 and connect it to the output of **Now**.
 
 9. Add a **JavaScript** Actor to Stage 5 to get the value of the **cust_id** argument using **flowArgs**: 
 
@@ -69,12 +69,12 @@ The flows will include the following steps:
     * Create a  **ACT_SUM** common table in Fabric with the following columns: CUSTOMER_ID, NUM_OF_ACTIVITIES, SUMMARY_DATE, ACTIVITY_SUMMARY. 
     * Set this table in the **table** input argument. After the table is selected, its columns are added to the Actor's input arguments.
 
-11. Connect the **DbLoad** Actor's input arguments with the output of the Actors in previous stages.
+11. Connect the **DbLoad** Actor's input arguments to the output of the Actors in previous stages.
 
-    * Connect the CUSTOMER_ID with the output of **JavaScript** Actor in Stage 5.
-    * Connect the NUM_OF_ACTIVITIES with the output of **JavaScript** Actor in Stage 3.
-    * Connect the SUMMARY_DATE with the output of **DateFormat** Actor in Stage 5.
-    * Connect the ACTIVITY_SUMMARY with the output of **StringBuild** Actor in Stage 3.
+    * Connect the CUSTOMER_ID to the output of **JavaScript** Actor in Stage 5.
+    * Connect the NUM_OF_ACTIVITIES to the output of **JavaScript** Actor in Stage 3.
+    * Connect the SUMMARY_DATE to the output of **DateFormat** Actor in Stage 5.
+    * Connect the ACTIVITY_SUMMARY to the output of **StringBuild** Actor in Stage 3.
 
 12. Mark Stage 6 as a Transaction by clicking ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu. Note that working with transactions in Broadway is explained in more detail later in this training.
 
@@ -99,8 +99,8 @@ Your flow is now ready! Run the flow in Debug mode to see the results.
 
 <ul>
 <pre><code>
-1. When running the flow for the first time, the Debug / Run Arguments window pops-up to set the value of the cust_id external. 
-input argument. The next time this window does not pop-up, and it uses the same value until it is reset by the user.
+1. When running the flow for the first time, the Debug / Run Arguments window pops-up to set the value of the cust_id 
+external input argument. The next time this window does not pop-up, and it uses the same value until it is reset by the user.
 2. When the <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor is set to <strong>true</strong>, the Actor expects only a single object 
 in the input stream.
 3. If only the number of calls needs to be calculated, they can be replaced by the <strong>Count</strong> Actor. 
