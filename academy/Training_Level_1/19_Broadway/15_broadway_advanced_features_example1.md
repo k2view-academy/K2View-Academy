@@ -1,6 +1,6 @@
 # Examples of Broadway Advanced Features
 
-### ![info](/academy/images/example.png)Actor Inheritance
+### ![info](/academy/images/example.png)Example 1 - Actor Inheritance
 
 1. Create a new Broadway flow.
 
