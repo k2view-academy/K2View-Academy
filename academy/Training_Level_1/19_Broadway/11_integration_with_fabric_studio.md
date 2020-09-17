@@ -13,7 +13,7 @@ By the end of this learning item you will:
 The Fabric Studio includes several integration points that are used by Broadway Actors to simplify the creation of Broadway flows such as:
 
 * **Broadway as a Population**, to create a flow which can be used to populate one or more tables streamlining the logic and the related validations.
-* **Interface Listener for Broadway flows**, to define a SFTP or a local file system listener for a Broadway flow.
+* **Interface Listener for Broadway flows**, to define an SFTP or a local file system listener for a Broadway flow.
 * **FabricGet** / **FabricSet** Actors to execute Fabric commands.
 * **LuFunction** Actor to invoke any LU Project function from the flow.
 * **Graphit** Actor to execute Graphit logic for data serialization.
