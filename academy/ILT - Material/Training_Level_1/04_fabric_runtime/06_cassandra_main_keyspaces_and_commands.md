@@ -10,9 +10,4 @@ Now that you can retrieve and view data in Fabric, let's learn how the data is s
 
 
 
-
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/05_fabric_basic_commands_solutions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/07_cassandra_exercises.md)
-
- 
-
 ------

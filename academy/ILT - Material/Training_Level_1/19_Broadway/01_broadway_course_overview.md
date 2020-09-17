@@ -36,6 +36,6 @@ To learn more about Fabric terminology at any time during the course, you are in
 
 But first, let’s understand more about Broadway.
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_broadway_overview.md)
+
 
 

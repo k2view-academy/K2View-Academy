@@ -18,7 +18,7 @@ You will then apply data transformation techniques to enrich and extract added-v
 
 You will also learn how to present this data to whoever needs to access it, thanks to Web Services or queue messaging services specifically designed to expose the data in any format like the Web. 
 
- 
+
 You can easily imagine customers receiving this link by email while the Web Service redirects them to the summary of their details.
 
 During the course you will assume the following roles within the Telco environment:
@@ -36,7 +36,3 @@ Click the following link to start the [Installation Process](/academy/Training_L
 ##### Enjoy and Let's Roll !!!
 
 
-
-
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_1_Course_Overview.md)
- [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)

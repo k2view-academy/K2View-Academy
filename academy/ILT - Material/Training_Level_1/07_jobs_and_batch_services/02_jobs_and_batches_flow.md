@@ -1,7 +1,7 @@
 #   Jobs and Batch Process
-                           
 
- 
+
+
 
 ## Jobs - Types and Purposes
 
@@ -41,7 +41,7 @@ These articles introduce Jobs management and configuration:
 ## Batch Processes - Types and Purposes
 
 Let's take a look at the different types of Batch processes that Fabric offers for managing automated processes and their lifecycle.
- 
+
 
 First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
 
@@ -60,7 +60,5 @@ To understand Batch process flow:
 - [Batch Flow](/articles/20_jobs_and_batch_services/16_batch_process_flow.md). 
 
 
-
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/01_jobs_and_batch_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/03_jobs_and_batches_flow_exercises.md)
 
 ------

@@ -11,8 +11,5 @@
 2. `Answer: select lut_name, lut_version, lut_index_status from k2system.k2_lut_info; or by k2view_* keyspaces being created`
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/07_cassandra_exercises.md)
-
- 
 
 ------

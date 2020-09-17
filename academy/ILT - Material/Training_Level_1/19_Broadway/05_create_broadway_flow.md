@@ -140,4 +140,4 @@ Congratulations.
 
 You've just created your first Broadway flow. Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
 
-[![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_broadway_flow_adding_loops_and_conditions.md)
+

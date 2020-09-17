@@ -1,9 +1,9 @@
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/EnhancementFuncState.PNG)    
 
 #   LU Enhancement Functions
-                           
 
- 
+
+
 
 ### Types of data manipulation
 
@@ -54,9 +54,7 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 - [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md).
 
 
-  
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/02_LU_Enhancements_PopulationMap_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/04_LU_enhancement_functions_exercises.md)
 
  
 

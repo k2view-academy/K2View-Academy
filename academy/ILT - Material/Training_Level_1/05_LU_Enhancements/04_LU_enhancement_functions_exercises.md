@@ -14,11 +14,11 @@ Let's focus for now on the Customer LU in the course's project.
 To develop the functions pertaining to this course's section, use the Customer data viewer to retrieve the LUI with the following IDs: 1123, 1125 and 1472.   
 
     1. How many distinct lines are associated with the LUI in the Contract table?
-    
+
 
     2. How many lines are associated to a 5G/LTE offer and how many match the international standard format for US numbers?
        +1-xxx-xxx-xxxx (disregard the parenthesis and minus signs).
-         
+
 
     3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
        contract_ID 2787 and 2788 to validate the code. 
@@ -26,7 +26,7 @@ To develop the functions pertaining to this course's section, use the Customer d
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
             - Use the fabric() execute function to update data. 
-            
+
 
     4. Apply the previous data transformation to telephone lines that belong to a 5G/LTE contract. 
        Please modify the code accordingly.
@@ -42,13 +42,13 @@ is experiencing with the network. The case notes reflect issues that are still o
 
     1. Let's first list the contracts owned by Tamar in the data viewer.
            - How many contracts does she own ?
-           
+
 
     2.  Let's look at the different notes in the Case_Note table of Tamar's LUI.
            - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type description 
              (in the Cases table).
            - How many cases are still open ?
-           
+
 
     3. Write a Java function that operates the following data transformations:
        - All case notes belonging to cases of the "Billing issues" type should be changed to "insolvent customer due to 
@@ -58,6 +58,7 @@ is experiencing with the network. The case notes reflect issues that are still o
        - All open cases should be set to Status="closed".
 
  
+
 ##### Question 3: Attaching the enrichment function to the appropriate table
       1. What happens if you attach the enrichment function to the CASES table ? 
       
@@ -89,8 +90,5 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
        How many cases entries can you see?
 
   
-
-
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/05_LU_enhancement_functions_solutions.md)
 
 ------

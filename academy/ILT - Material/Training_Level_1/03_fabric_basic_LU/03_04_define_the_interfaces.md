@@ -48,6 +48,3 @@ Similar to other DB studios, Fabric Studio’s Query Builder allows you to view 
 - [Query_Builder_Build_SQL_Query](/articles/11_query_builder/03_building_and_running_an_sql_query.md#main-window---editing-an-sql-query).
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/05_define_the_interfaces_example_and_exercises.md)  
-
-

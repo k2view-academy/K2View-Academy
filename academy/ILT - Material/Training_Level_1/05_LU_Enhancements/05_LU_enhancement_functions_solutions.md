@@ -43,7 +43,7 @@
 
 
 ##### Question 2: Case notes clean-up
-   
+
     1. None.
     
     2. Q1 -> 3708; Q2 -> 4.
@@ -100,8 +100,8 @@
    fabric().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
    }
    }
-   ```
-                                                                       
+  ```
+
 ##### Question 3: 
     Nothing since the CASE_NOTE table has not been synced yet. The function needs to be attached to the case_notes table.
 
@@ -139,7 +139,5 @@ return syncInd;
     CRMCases_threshold=30000 -> 0 entries.
 
 
-
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/04_LU_enhancement_functions_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/06_LU_Enhancements_lookup-translations_flow.md)
 
 ------

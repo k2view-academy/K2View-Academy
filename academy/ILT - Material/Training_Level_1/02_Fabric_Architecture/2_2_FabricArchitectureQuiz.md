@@ -248,5 +248,3 @@ Fabric can be deployed and used across:
  (***Solution 11: A***)
 
 
-
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Previous.png)](/academy/Training_Level_1/02_Fabric_Architecture/2_1_FabricArchitectureOverview.md)

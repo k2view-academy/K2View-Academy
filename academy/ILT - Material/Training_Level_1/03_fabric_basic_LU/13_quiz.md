@@ -64,8 +64,5 @@ c.     Different format and data types.
 
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/12_table_pop_solutions.md)
-
-
 ------
 

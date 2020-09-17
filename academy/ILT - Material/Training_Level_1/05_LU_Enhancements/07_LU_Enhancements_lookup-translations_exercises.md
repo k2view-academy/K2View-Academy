@@ -2,7 +2,7 @@
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
 #### **Exercise 1 - Lookup tables**
-  
+
   Using the Customer LU schema, let's look at the Address population map. 
 
   Add the first name and last name of the customer to the Address LU table so that full information about the customer is readily available.
@@ -39,9 +39,10 @@ Associate a unique geo-location code to the Address table to build a heat map of
             What is the Lat / Long value for LUI 1000 ? 
             
             What is the International City Code for LUI 2217 ?
-            
-            
-            
+
+
+​            
+​            
 #### **Exercise 3 - Globals**
 
 Let's use Globals rather than values hardcoded into Java functions or SQL statements. 
@@ -88,8 +89,7 @@ Using the enrichment and decision functions from the previous exercises, please 
 
 
 
-          
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/06_LU_Enhancements_lookup-translations_flow.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/08_LU_Enhancements_lookup-translations_solutions.md)
+
+
 
 ------

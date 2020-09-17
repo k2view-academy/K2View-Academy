@@ -21,6 +21,6 @@ return rows;
 3. `Answer: The Web Version that was the last to be deployed.`  
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/04_invoking_a_web_service_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/06_response_codes_and_supported_verbs.md)
+
 
 ------

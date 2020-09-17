@@ -98,16 +98,7 @@ You have created your first LU in a few clicks and understood its components and
 Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s look at the Data Viewer, see how it is used and learn about its options. Please read the 
 [Data Viewer Capabilities](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) article.
 
- 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/06_define_the_interfaces_solutions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/08_LU_flow_exercises.md)
 
- 
-
- 
-
- 
-
- 
 
  
 

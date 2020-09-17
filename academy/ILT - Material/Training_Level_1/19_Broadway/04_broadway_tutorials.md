@@ -129,4 +129,4 @@ A. There are two flows. A local copy of the Tutorial flow has been saved in the 
 <strong>Step 4.2</strong>
 A. The value of the input parameter is <strong>Broadway Training</strong>. You can edit the flow and save the changes or execute the flow. A local copy of the flow is saved in the Fabric project. </code></pre></ul> 
 
-[![Previous](/articles/images/Previous.png)](03_broadway_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_broadway_flow.md)
+

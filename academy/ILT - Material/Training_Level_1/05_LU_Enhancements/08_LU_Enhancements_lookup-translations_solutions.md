@@ -46,7 +46,7 @@ Address population diagram featuring translation table and LAT/LONG concatenatio
             Step 3:
             InstanceID 1000: 39.7771::-86.1458
             InstanceID 2217: 1840034016
-            
+
 
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/Exercise.png) 
 
@@ -77,24 +77,25 @@ else {
 syncInd = false;
 }
 return syncInd;
-```            
+```
 
             2. Answer: 5.
             
             3. The sync did not happen.
-
+    
             4. Yes the sync happened (since there are more than 20000 entries in the CRM_ DB CASES table). 
                This time, the sync process did happen since you defined RUN_POP as a non-final GLOBAL and since you have overridden 
                its value for all the *.RUN_POP instances in the scope of this Fabric session.
-            
-            
+
+
+​            
 Globals definition:    
 ![image](/academy/Training_Level_1/05_LU_Enhancements/images/GlobalExe3OverviewCapture.png)
-            
-                      
-            
+​            
+​                      
+​            
             Step 3:
-           
+
 ```
 reportUserMessage("Invoice Cleaning fonction is running");
 String SQLINVOICES="SELECT * FROM INVOICE";
@@ -121,14 +122,8 @@ formattedNumber = INTERCODE_UK + cellValue;
 fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
 //ending the if statement		
 }
-```                    
+```
 
 
-
-
-
-          
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/07_LU_Enhancements_lookup-translations_exercises.md)
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/09_LU_Enhancements_Quiz.md)
 
 ------

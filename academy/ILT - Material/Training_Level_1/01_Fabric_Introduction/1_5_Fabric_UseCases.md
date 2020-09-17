@@ -44,9 +44,5 @@ Implementing K2View Fabric enabled the company to integrate their customer data 
 
 
 
- 
-
-[![img](https://github.com/k2view-academy/K2View-Academy/raw/master/articles/images/Previous.png)](/academy/Training_Level_1/01_Fabric_Introduction/1_4_Fabric_Overview.md)
-
 
 

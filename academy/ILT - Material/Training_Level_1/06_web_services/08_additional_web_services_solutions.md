@@ -85,6 +85,6 @@ if ( i_info != null && i_info.size() >0 ){
 ```
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/07_additional_web_services_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/09_web_services_quiz.md)
+
 
 ------

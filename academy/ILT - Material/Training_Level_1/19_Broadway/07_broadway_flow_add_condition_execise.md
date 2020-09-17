@@ -120,7 +120,3 @@ In the Step, you check the number of records: check if the number of records >= 
  </code></pre>
  </ul>
 
-
-
-
-[![Previous](/articles/images/Previous.png)](06_broadway_flow_adding_loops_and_conditions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()

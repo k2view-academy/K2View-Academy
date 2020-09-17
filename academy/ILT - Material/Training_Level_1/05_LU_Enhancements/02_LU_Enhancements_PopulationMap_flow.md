@@ -42,11 +42,5 @@ To conclude this section, read about [Execution Orders](/articles/07_table_popul
 
 
 
-
-
-
-
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/01_LU_Enhancement_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)
-
 ------
 

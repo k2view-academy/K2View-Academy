@@ -23,4 +23,4 @@ By the end of the Fabric Main Flow learning item you will know:
 Please open your Fabric Studio and let’s start to define your first Fabric project, Data Sources and Logical Unit!
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/02_create_a_fabric_project.md)
+

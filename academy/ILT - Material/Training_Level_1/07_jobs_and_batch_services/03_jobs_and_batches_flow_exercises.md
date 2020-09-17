@@ -96,8 +96,6 @@ Rerun the command listing all Jobs created over the last 2 days. What is the new
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/04_jobs_and_batches_flow_solutions.md)
-
 ------
 
 

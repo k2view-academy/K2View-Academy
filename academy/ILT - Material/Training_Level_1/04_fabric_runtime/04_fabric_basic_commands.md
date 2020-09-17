@@ -3,7 +3,7 @@
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
 You have just deployed your project and  its objects (including the Customer you built) and have listed them. Now that you know how to use Fabric tools and can log into Fabric, let's review some basic commands that will help you to retrieve and query data.
- 
+
 Please refer to [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
 
 
@@ -56,11 +56,6 @@ Using the training materials and examples covered so far:
 
 
 
-
-
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/03_fabric_deployment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/05_fabric_basic_commands_solutions.md)
-
- 
 
 ------
 

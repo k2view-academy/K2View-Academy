@@ -23,6 +23,4 @@ By the end of the Fabric Enhancement learning item you will know:
 
 Let's start !
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/02_LU_Enhancements_PopulationMap_flow.md)
-
 ------

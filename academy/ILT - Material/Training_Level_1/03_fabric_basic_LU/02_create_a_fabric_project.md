@@ -31,6 +31,4 @@ Now that you have created a new project, let’s define basic configurations usi
 
 You have now set the basic configurations needed to start your first Fabric project implementation. 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)
-
 

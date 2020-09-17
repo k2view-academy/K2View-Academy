@@ -66,4 +66,4 @@
 
 ##### Certification Exam (1 hour)
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/99_Broadway/01_broadway_course_overview.md)
+

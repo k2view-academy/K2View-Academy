@@ -1,4 +1,4 @@
-   
+
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Solution.png) 
 
 ### Solution - Fabric Commands
@@ -16,11 +16,6 @@
    `fabric>test_connection DbInterface='CRM_DB';`
 
 5. `Answer: My First Name, set sync force command brings the data from the source`
-
-
-
- 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/04_fabric_basic_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/06_cassandra_main_keyspaces_and_commands.md)
 
 
 ------

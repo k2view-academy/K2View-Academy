@@ -36,5 +36,3 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 
    
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/04_fabric_runtime/01_fabric_runtime_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/03_fabric_deployment.md)
-

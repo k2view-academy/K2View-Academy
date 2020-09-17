@@ -23,4 +23,4 @@ You have just seen how Fabric helps our customers across different types of indu
 
 Now let's learn about [Fabric's architecture](/academy/Training_Level_1/02_Fabric_Architecture/2_1_FabricArchitectureOverview.md), and more specifically on how data flows between 3rd party systems while providing and consuming data.
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/01_Fabric_Introduction/1_3_course_user_story.md)
+

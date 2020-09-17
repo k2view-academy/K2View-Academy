@@ -10,6 +10,6 @@
 3.  Question: What are the input parameters and their data types?
 
 
- [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/06_web_services/06_response_codes_and_supported_verbs.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/06_web_services/08_additional_web_services_solutions.md)
+
 
 ------

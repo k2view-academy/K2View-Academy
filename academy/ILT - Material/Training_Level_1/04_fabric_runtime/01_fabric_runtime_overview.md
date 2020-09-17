@@ -27,12 +27,10 @@ By the end of the Fabric Runtime learning item you will know about:
 
 
 Please open the Fabric runtime environment. You can either:
- 
+
 1. Log in to the **Fabric Linux server**.  
 
 2. Open the **Fabric Console** using the **Windows Search** option.
 
    
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/04_fabric_runtime/02_getting_started_with_fabric_server.md) 
 

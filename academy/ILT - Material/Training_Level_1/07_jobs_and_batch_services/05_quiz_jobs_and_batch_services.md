@@ -51,7 +51,7 @@ A: ```STOP JOB NAME='<name>' UID='<uid>';```
 B: ```JOBSTOP UID='<uid>' NAME='<name>';```
 
 C: ```STOPJOB <JOBTYPE> NAME='<name>' UID='<uid>';```
-  
+
 D: All the above.
 
 
@@ -63,7 +63,7 @@ D: All the above.
 A Job can be scheduled using Crontab syntax. Which of these options is valid and describes the following schedule?
 
 "Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"
-  
+
 A: ```30 04-16/3 05 11 5```
 
 B: ```04-16/3 1/2 05 11 5```
@@ -234,7 +234,5 @@ D: No such a thing, Fabric nodes never fail
 (**Solution 14: B**)
 
 
-
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)
 
 ------
