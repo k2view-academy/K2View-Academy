@@ -92,3 +92,4 @@ Using the enrichment and decision functions from the previous exercises, please 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/06_LU_Enhancements_lookup-translations_flow.md)
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/08_LU_Enhancements_lookup-translations_solutions.md)
 
+------
