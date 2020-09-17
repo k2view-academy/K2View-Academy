@@ -92,3 +92,5 @@ To save network resources, ensure that data synchronization of LUIs only occurs 
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/03_LU_Enhancements_Functions_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/05_LU_enhancement_functions_solutions.md)
+
+------
