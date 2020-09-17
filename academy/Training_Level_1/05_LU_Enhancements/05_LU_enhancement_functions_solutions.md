@@ -140,4 +140,4 @@ return syncInd;
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/04_LU_enhancement_functions_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/05_LU_enhancements_functions_solutions.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/04_LU_enhancement_functions_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/06_LU_Enhancements_lookup-translations_flow.md)
