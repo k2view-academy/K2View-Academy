@@ -4,7 +4,7 @@
 
 You have just deployed your project and  its objects (including the Customer you built) and have listed them. Now that you know how to use Fabric tools and can log into Fabric, let's review some basic commands that will help you to retrieve and query data.
  
-Please refer to [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md)
+Please refer to [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
 
 
 
@@ -51,7 +51,7 @@ Using the training materials and examples covered so far:
 
 4. `Question: What is the status of the CRM_DB interface?`
 
-5. `Advanced Question: Update the CRM_DB source database: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Run thebset sync force; command and then run the get Customer.215; command again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
+5. `Advanced Question: Update the CRM_DB source database: Update the CUSTOMER.FIRST_NAME of Instance 215 to your own name. Run the set sync force; command and then run the get Customer.215; command again. What is the CUSTOMER.FIRST_NAME? How will you change it to become the source value?`
 
 
 
