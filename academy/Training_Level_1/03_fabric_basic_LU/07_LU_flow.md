@@ -2,9 +2,9 @@
 
  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
 
-You have just set up your Fabric project, configured its components and defined the interfaces for the Customer 360 view. Based on the business requirements, let’s look at your next steps:
+You have just set up your Fabric project, configured its components and defined the interfaces for a Customer 360 view. Based on the business requirements, let’s look at your next steps:
 
-You need to understand how to model data retrieval, storage and its view options.
+Understanding how to model data retrieval, storage and its view options.
 
 What should be considered?
 
@@ -48,7 +48,7 @@ Please open your Fabric project and do the following:
 1. Select the **New Logical Unit** and name it **Customer**.
 2. Set the **DB Connection** as **CRM_DB** and click **Next**.
 3. Select the **CUSTOMER.CUSTOMER_ID** as a **Column Name** so that the **Table Name** is also populated. Note that you can uncheck the **Add Schema Name** option.
-4. Select the **Fast** **Auto Discovery**.
+4. Select **Fast** **Auto Discovery**.
 5. Click **Next** to review the suggested **ERD** and if you are satisfied, click **Finish**.
 
 Note that the **Root Table** and **InstanceID** are created automatically.
