@@ -61,6 +61,6 @@ To understand Batch process flow:
 
 
 
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/01_jobs_and_batch_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow_exercises.md)
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/01_jobs_and_batch_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/03_jobs_and_batches_flow_exercises.md)
 
 ------
