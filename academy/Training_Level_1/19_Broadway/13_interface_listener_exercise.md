@@ -110,7 +110,7 @@ The Interface Listener will pick up the file and run the flow.
 ![cases population](images/13_flow_final.PNG)
 
 
-Note that if you edit the Broadway flow, you need to redeploy the LU so that the updated flow is picked by the Interface Listener.
+Note that if you edit the Broadway flow, you need to redeploy the LU so that the updated flow is picked up by the Interface Listener.
 
 
 [![Previous](/articles/images/Previous.png)](12_broadway_as_a_population_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
