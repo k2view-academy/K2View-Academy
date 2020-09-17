@@ -1,9 +1,9 @@
 ### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) Exercise  – Additional Web Service
 
-Create a new Web Service that inserts entries into the CASES table with the following considerations: 
--    The Web Service can insert multiple subscribers for a given LUI. 
--    The Web Service response should include success or failure in the process.
--    The Web Service can perform basic input validations.
+1.  Create a new Web Service that inserts entries into the CASES table with the following considerations: 
+    -    The Web Service can insert multiple subscribers for a given LUI. 
+    -    The Web Service response should include success or failure in the process.
+    -    The Web Service can perform basic input validations.
 
 2.  Question: Which supported verbs will you use?
 
