@@ -86,3 +86,9 @@ Using the enrichment and decision functions from the previous exercises, please 
             Using a new Global named "*InterCode_UK*", modify the PhoneFormat enrichment function so that all phone entries
             of Instance ID=1000 that do not already have an international code are set to "+44".
 
+
+
+          
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/05_LU_Enhancements/06_LU_Enhancements_lookup-translations_flow.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/05_LU_Enhancements/08_LU_Enhancements_lookup-translations_solutions.md)
+
