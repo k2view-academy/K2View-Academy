@@ -1,9 +1,8 @@
-# Legacy Support
+# Legacy Support - Backward Compatibility 
 
 ## Migrate Commands
 
 The Migrate command is a specific use-case of the Batch command which deals exclusively with the migration of instances into the Fabric database.
-Instances Migration
 
 ```MIGRATE LU[@<DC>] with ASYNC='true';```
 
