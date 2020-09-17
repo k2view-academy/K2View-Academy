@@ -152,6 +152,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 </tbody>
 </table>
 
+Additional fields featuring in the table:
 
 **Command**  
 
