@@ -30,17 +30,17 @@ When an [Error Handler](24_error_handling.md) is defined in the transactional St
 
 ### Impact of Stage Conditions on Transactions
 
-When the flow is split due to [Stage conditions](/articles/19_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition), it is possible to define the transaction only on some of the branches. For example, in case of IF-ELSE condition, you can define that the transaction will happen only when the condition is true. 
+When the flow is split due to [Stage conditions](/articles/19_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition), the transaction can be defined only for specific branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true. 
 
-In the example below, the transaction will start at Stage B1 if the condition is true and end after the completion of Stage C1. If the condition is false, there will be no transaction in this flow.
+In the example below, the transaction starts in Stage B1 if the condition is true and ends after the completion of Stage C1. If the condition is false, there is no transaction in this flow.
 
 ![image](images/99_23_split1.PNG)
 
-In the second example, the transaction will start at Stage A. If the condition is true, the transaction will end after the completion of Stage C1. If the condition is false, the transaction will end at the end of Stage A.
+In the second example, the transaction starts in Stage A. If the condition is true, the transaction ends after the completion of Stage C1. If the condition is false, the transaction ends at the end of Stage A.
 
 ![image](images/99_23_split2.PNG)
 
-Note that in case of several conditions or when there are two many parallel branches in the flow, it is not recommended to use the Transactions mechanism across the branches.
+Note that for several conditions or when there are two many parallel branches in the flow, it is not recommended to use the Transactions mechanism across the branches.
 
 ### Shared and Non-Shared Transactional Interfaces
 
