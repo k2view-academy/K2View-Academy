@@ -22,8 +22,8 @@ Explain all Fabric components and features featuring in the following picture:
 
 
 
-You are ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
+NTT -> Student [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md)
 
-You are now a Fabric rookie. Let's move on to the next section and build your first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md) !
+NTT -> Build first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)
 
 
