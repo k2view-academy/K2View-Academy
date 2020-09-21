@@ -3,9 +3,7 @@
 
 # Logical Units Enhancements
 
-NTT -> Insist on a crucial Fabric feature - data manipulation and executing functions over the data. 
-
-NTT -> Reminder: How to design and create a simple LU by connecting to the data's external sources, testing its consistency by querying its tables using Fabric commands and the Cassandra storage environment, and then checking whether it is fit for use. 
+Insist on a crucial Fabric feature - data manipulation and executing functions over the data. 
 
  
 
