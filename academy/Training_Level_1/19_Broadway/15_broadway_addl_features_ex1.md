@@ -33,5 +33,5 @@
 
 
 
-[![Previous](/articles/images/Previous.png)](14_broadway_advanced_features.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_broadway_advanced_features_example2.md)
+[![Previous](/articles/images/Previous.png)](14_broadway_addl_features.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](16_broadway_addl_features_ex2.md)
 
