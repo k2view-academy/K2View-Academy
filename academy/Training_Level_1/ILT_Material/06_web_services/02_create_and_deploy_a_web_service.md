@@ -15,7 +15,7 @@ Present:
 
 -  [Editing Web Service Code](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Creating a Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example - Creating a Web Service
 
 Let's create your first simple Web Service which will retrieve basic information on a specific instance of a customer:
 
@@ -38,12 +38,13 @@ Let's create your first simple Web Service which will retrieve basic information
 
 ### Deploying a Web Service
 
- Deployed into Fabric. 
-
 Present: 
+
 - [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services.md).
 
- Validate that the Web Service has been deployed:
+ 
+
+Validate deployment:
 
 1. Log into Fabric. 
 2. Execute: 
