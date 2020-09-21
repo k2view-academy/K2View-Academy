@@ -2,9 +2,9 @@
 
 ### ![](/academy/Training_Level_1/04_fabric_runtime/images/fabric_execute_04.png)
 
-You have just deployed your project and  its objects (including the Customer you built) and have listed them. Now that you know how to use Fabric tools and can log into Fabric, let's review some basic commands that will help you to retrieve and query data.
+NTT -> Project and objects (including the Customer you built) are deployed. 
 
-Please refer to [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
+Present: [Fabric Commands](/articles/02_fabric_architecture/04_fabric_commands.md).
 
 
 
@@ -33,7 +33,9 @@ Let’s test an LU Instance and see the results:
    
    
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about Fabric Configuration Files, refer to: [Fabric Main Configuration Files](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md).
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
+
+?NTT -> Mention Fabric Configuration Files, refer to: [Fabric Main Configuration Files](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md).
 
 
 
