@@ -5,7 +5,7 @@ Click [Web Services Overview](/articles/15_web_services_and_graphit/01_web_servi
 
 ### Creating a Web Service
 
-The following are the basic steps for creating a Web Service and understanding its structure and properties:
+NTT -> Present following:
 
 -  [Creating a Web Service ](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
 
@@ -38,12 +38,12 @@ Let's create your first simple Web Service which will retrieve basic information
 
 ### Deploying a Web Service
 
-Before testing your Web Service, it must be deployed into Fabric. Click [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services.md) to understand how.
+NTT -> Deployed into Fabric. 
 
+Present: 
+- [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services.md).
 
-You can now deloy the Web Service into the Fabric server that you defined for your project. 
-
-Now, let's validate that the Web Service has been deployed:
+NTT -> Validate that the Web Service has been deployed:
 
 1. Log into Fabric. 
 2. Execute: 
