@@ -66,7 +66,7 @@ Your **Customer** LU is now defined:
 
 
 
-NTT -> Show the following articles:
+Present:
 
 -  [Logical Unit Schema Window](/articles/03_logical_units/03_LU_schema_window.md)
 
