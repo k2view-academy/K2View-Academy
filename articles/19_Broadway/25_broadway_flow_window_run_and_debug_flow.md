@@ -63,21 +63,25 @@ To view a step's data, click the blue balloon to open the Data Viewer and its di
 
 ### Updating a Schema
 
-The Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value.
+The Broadway Debug process *learns* the Schema of Actor's arguments and can suggest how to update it based on a parameter's value.
 
-When debugging an Actor with a complex output parameter, the parameter port is red:
+1. When debugging an Actor, the parameter port becomes red:
 
-  <img src="images/debug_update_schema.png" style="zoom:80%;" />
+   <img src="images/debug_update_schema.png"  />
 
-1. Click the **parameter's port** (red) to open the Compare Schema window.
+2. Click the **parameter's port** (red) to open the Compare Schema window.
 
   ![](images/compare_schema.png)
 
-2. Click **Update** to update the output parameter's Schema. To open the [Data Inspector](27_broadway_data_inspection.md), click ![image](images/99_27_red_cross.PNG) adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the Schema on the left and the data values on the right.
+3. Click **Update** to update the output parameter's Schema. 
 
-3. [Link](20_broadway_flow_linking_actors.md) the output parameters of the Schema to another Actor.
+<img src="images/debug_update_schema_1.png"  />
 
-  ![](images/data_insepction_debug.png)
+Note that the Update Schema can be done for complex structures as well.
+
+![image](images/compare_schema_1.PNG)
+
+
 
 [![Previous](/articles/images/Previous.png)](24_error_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](27_broadway_data_inspection.md)
 
