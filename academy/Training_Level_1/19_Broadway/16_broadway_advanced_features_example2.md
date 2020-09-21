@@ -1,6 +1,6 @@
 # Examples of Broadway Advanced Features
 
-### ![info](/academy/images/example.png)Inner Flow and Error Handling
+### ![info](/academy/images/example.png)Example 2 - Inner Flow and Error Handling
 
 **Part 1 - Error Handling**
 
@@ -31,8 +31,10 @@
 **Part 2 - Save a Flow as an Actor**
 
 1. Click **Save as Actor** from the Main menu toolbar in order to save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.
+
 2. Populate the tag (category) name, for example **validatationChecks** and click **SUBMIT**. 
-3. The new category **validatationChecks** is added and it holds an **CheckNegative_Actor** Actor.
+
+3. The new category **validatationChecks** is added and it holds a **CheckNegative_Actor** Actor.
 
 **Part 3 - Use an Inner Flow in a Flow**
 
