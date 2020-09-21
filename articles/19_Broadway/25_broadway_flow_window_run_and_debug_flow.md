@@ -40,6 +40,7 @@ To run the flow, click **Run Flow** ![image](images/99_25_run.PNG) to run the en
 
 - If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
   
+
 If the break points have been added to the flow, the flow stops at the first break point. Note that when a flow contains an inner flow and it has break points, the flow stops at the inner flow's break points too.
 
   - Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
@@ -52,13 +53,13 @@ When Debug is ON, the flow can be debugged when invoked by any Fabric entity and
 
 ### Displaying Input and Output Data During a Debug
 
-When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons.
+When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons called the Data Viewer. The Data Viewer displays the Java objects using a JSON-like visualization of Broadway data types (maps, lists and Java primitives).
 
 ![image](images/99_25_blue_balloons.PNG)
 
-To view a step's data, click the blue balloon to open the data and its displayed format. To set another data display format, click the format and make your selection.
+To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format drop-down and make your selection.
 
-![](images/flow_debug_display_data.png)
+![](images/flow_debug_display_data.PNG)
 
 ### Updating a Schema
 
