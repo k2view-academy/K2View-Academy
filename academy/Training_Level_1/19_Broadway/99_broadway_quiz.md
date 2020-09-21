@@ -210,7 +210,7 @@ When creating an Inherited Actor, the new Actor:
 
 \- C:  Can set the Ancestor's input and output arguments as either hidden or final.
 
-\- D:  Will be created in a new category (tag) designated for inherited Actors.
+\- D:  Will be created in a new category (tag) designated for inherited Actors only.
 
 (**Solution 11: C; When exporting the Actor each input and output argument can be set as hidden or final.**).
 

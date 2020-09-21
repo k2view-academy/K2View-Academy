@@ -1,4 +1,6 @@
-# ![](/academy/images/Exercise.png) Exercise – Adding a Condition to a Broadway Flow 
+# Iterations and Conditions in a Flow
+
+### ![](/academy/images/Exercise.png) Exercise – Adding a Condition to a Broadway Flow 
 
 You have just created and tested your first Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records. You have also practiced adding Stages and Actors to a Broadway flow and then adding a loop to the flow. 
 
@@ -52,13 +54,14 @@ In the Step, you check the number of records: check if the number of records >= 
 2. Add the **Logger** Actors to **Stage 6** and **Stage 7**.
 3. Set the **Logger** Actor's parameters of **Stage 6**:
    - Set the **message** input parameter as **Const**.
-   - Set the **message** input parameter value to: **There are ${0} records in the list**. The **${0}** is set for the first parameter of the **params** input parameter.
+   - Set the **message** input parameter value to: *There are ${0} records in the list*. 
+   - The **${0}** is set for the first parameter of the **params** input parameter.
    - Set the **level** input parameter to **info**.
 4. Link the **Count** Actor to the **Logger** Actor or to **Stage 6**.
 5. Set the **Logger** Actor's parameters of **Stage 7**:
    - Set the **message** input parameter as **Const**.
    
-   - Set the **message** input parameter value to: **Error- there are not enough records in the list**.
+   - Set the **message** input parameter value to: *Error - there are not enough records in the list*.
    
    - Set the **level** input parameter to **error**.
    
@@ -95,29 +98,5 @@ In the Step, you check the number of records: check if the number of records >= 
 
 
 
-### ![](/academy/images/Solution.png)Solution - Add a Condition to a Broadway Flow Exercise 
 
- <ul>
- <pre><code> 
- Step 5.1
- A. The output value of the <strong>Count</strong> Actor is 4. This is the number of the records returned by the <strong></strong>DbCommand</strong> Actor.
- B. The output value of <strong>GreaterThanEquals</strong> Actor is <strong>true</strong>.
- C. <strong>Stage 6</strong> has been executed since the condition returned <strong>true</strong>.
- D. The following messsage has been given by the Logger Actor of Stage 6: 
- <strong>INFO: There are 4 records in the list.</strong>
- </code></pre>
- </ul>
-<ul>
-<pre><code>
- Step 5.3
- A.The output value of <strong>GreaterThanEquals</strong> Actor is <strong>false</strong>.
- B.<strong>Stage 7</strong> has been executed since the condition returned <strong>false</strong>.
- C.The following messsage has been given by Stage 7's Logger Actor: 
-     <strong>ERROR: Error- Error- there are not enough records in the list.</strong> 
-     Stage 6 and 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
- </code></pre>
- </ul>
-
-
-
-[![Previous](/articles/images/Previous.png)](06_broadway_flow_adding_loops_and_conditions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_using_actors_in_boadway_flows.md)
+[![Previous](/articles/images/Previous.png)](06_broadway_flow_adding_loops_and_conditions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07a_broadway_flow_add_condition_exercise_solution.md)

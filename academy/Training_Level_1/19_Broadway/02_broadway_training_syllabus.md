@@ -1,68 +1,116 @@
 # Level 1 Broadway Training Syllabus
 
-![](/academy/images/syllabus.png) 
 
-#### **DAY 1 – Morning**
 
-- Course Introduction
-  - Course overview and main objectives
-- Broadway High-level Components Overview
-- Broadway Tutorials
+<table style="width: 900px;">
+<tbody>
+<tr>
+<td style="text-align: center;" width="80pxl">
+<h2><strong>Day</strong></h2>
+</td>
+<td style="text-align: center;" width="410pxl">
+<h2><strong>Morning</strong></h2>
+</td>
+<td style="text-align: center;" width="410pxl">
+<h2><strong>Afternoon</strong></h2>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Day 1</strong></td>
+<td>
+<ul>
+<li>Course Introduction
+<ul>
+<li>Overview and main objectives</li>
+</ul>
+</li>
+<li>Broadway Components Overview</li>
+<li>Broadway Tutorials</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Create, Run and Debug a Broadway Flow</li>
+<li>Iterations and Stage Conditions</li>
+<li>Exercise:
+<ul>
+<li>Create a flow with a condition</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Day 2</strong></td>
+<td>
+<ul>
+<li>Using Actors in Broadway Flows</li>
+<li>Built-In Actor Types
+<ul>
+<li>Dynamic Logic Actors</li>
+<li>Additional Frequently Used Actors</li>
+</ul>
+</li>
+<li>Exercise:
+<ul>
+<li>Create a flow using built-in Actors</li>
+</ul>
+</li>
+</ul>
+</td>
+<td>&nbsp;
+<ul>
+<li>Broadway Integration with Fabric Studio
+<ul>
+<li>Broadway as a Population</li>
+<li>Interface listener for Broadway flows</li>
+</ul>
+</li>
+<li>Exercises:
+<ul>
+<li>Create a flow for an LU table population</li>
+<li>Define an Interface listener for a flow</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>Day 3</strong></td>
+<td>
+<ul >
+<li >Broadway Additional Features
+<ul >
+<li >Actor Inheritance Mechanism</li>
+<li >Error handling</li>
+<li >Inner flows</li>
+<li >Transactions</li>
+</ul>
+</li>
+<li >Exercise:
+<ul >
+<li >Create a flow with an inner flow and an error handler</li>
+</ul>
+</li>
+<li >Broadway and Fabric
+<ul >
+<li >Execute a Flow by Batch Command</li>
+</ul>
+</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>
+<h3>Summary Exercise</h3>
+</li>
+<li class="md-end-block md-heading md-focus">
+<h3><span class="md-plain md-expand">Certification Exam</span></h3>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 
-#### **DAY 1 – Afternoon**
 
-- Creating a Broadway Flow
-  - Builing a simple flow that selects data from a DB table and creates a JSON file
-    - Adding Stages and Actors
-    - Linking between Stages
-    - Adding a loop to a flow
-    - Running and debugging a flow
-- Broadway Iterations and Stage Conditions
-- Exercise: 
-  - Enhance a simple Broadway flow by adding a condition
-
-#### **DAY 2 – Morning**
-
-- Using Actors in Broadway Flows
-  - Editing Actor's inputs and outputs 
-  - Adding a remark
-  - Linking Actors
-- Built-In Actor Types
-  - Dynamic logic Actors - JavaScript, DbCommand
-  - Frequently used Actor for streams, parsers and queues
-- Exercise: 
-  - Create a Broadway flow using various built-in Actors
-
-#### **DAY 2 – Afternoon**
-
-- Broadway Integration with Fabric Studio
-  - Broadway as a Population
-  - Interface listener for Broadway flows
-  - Additional integration points
-- Exercises: 
-  - Create a Broadway flow for an LU table population
-  - Create an Interface listener for a Broadway flow 
-
-#### **DAY 3 – Morning**
-
-- Broadway Advanced Features
-  - Actor Inheritance Mechanism
-  - Error handling
-  - Inner flows
-  - Transactions
-
-- Exercise:  
-  - Create a Broadway flow with an inner flow and an error handler
-  
-- Broadway Advanced Features - Continue
-  - Data Inspection
-  - Reset Parameters Schemas
-  - Running Batch Commands to Execute a Broadway Flow
-
-**DAY 3 – Afternoon**
-
-- Summary Exercise
-
-##### Certification Exam (1 hour)
-
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/academy/Training_Level_1/99_Broadway/01_broadway_course_overview.md)
