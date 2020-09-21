@@ -18,7 +18,7 @@ A Broadway flow:
 -  Acts as a graph or a tree that has several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/19_Broadway/03_broadway_actor.md). 
 -  Stages are executed consecutively from left to right, where the Actors in each Stage of the flow are executed top-down.
 
-A Broadway flow can run with Debug ON or OFF. When Debug is ON, breakpoints can be added in order that the flow will stop and the data can be inspected by the Data Viewer that displays the Java objects using a JSON-like visualization of maps, lists and Java primitives.
+A Broadway flow can run with Debug mode ON or OFF. When Debug is ON, breakpoints can be added in order that the flow will stop and the data can be inspected by the Data Viewer that displays the Java objects using a JSON-like visualization of maps, lists and Java primitives.
 
 To learn more about creating and running a Broadway flow, please refer to:
 
