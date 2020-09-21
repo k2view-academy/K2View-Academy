@@ -1,6 +1,5 @@
 #  Create a Fabric Project
 
-Now that you are familiar with Fabric’s use cases and benefits and know how to analyze an implementation’s business requirements, let’s look at your first business scenario and follow its steps: ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_02.png)                                               
 
 ### Create a New Fabric Project
 
@@ -16,19 +15,13 @@ To do so, follow these steps:
 
   
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about our best practices for working with version control, refer to [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
 
+NTT -> To learn more about our best practices for working with version control, refer to [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
-
-Now that you have created a new project, let’s define basic configurations using the Fabric Studio so that you can understand its components:
-
-- [User Preferences](/articles/04_fabric_studio/04_user_preferences.md)
-- [UI Components and Menus](/articles/04_fabric_studio/01_UI_components_and_menus.md)
-- [Window Tabs Context Menus](/articles/04_fabric_studio/02_window_tab_context_menu.md)
-- [Diagram and Toolbars](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
  
 
-You have now set the basic configurations needed to start your first Fabric project implementation. 
+NTT -> Introduce first Fabric project implementation. 
 
 
