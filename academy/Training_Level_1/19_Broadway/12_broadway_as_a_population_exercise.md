@@ -1,4 +1,6 @@
-# ![](/academy/images/Exercise.png) Exercise - Broadway Flow as a Population
+# Broadway Flow as a Population
+
+### ![](/academy/images/Exercise.png)Exercise - Creating a Broadway Flow Based Population
 
 In this exercise you will do the following:
 
@@ -59,16 +61,5 @@ Your flow is now ready! Run the Data viewer to sync a customer instance and veri
 </ul>
 
 
-**Answers:**
-
-<ul>
-<pre><code>
-1. The <strong>iid</strong> holds the Instance ID of the execution, in the above example - customer ID. 
-The <strong>parent_rows</strong> is the iterator of the parent rows, in the example - the list of activity IDs under the given customer.
-2. The SQL statement is: SELECT * FROM CASES WHERE ACTIVITY_ID IN (...) AND STATUS = ...
-3. Add an Actor to <strong>Stage 1</strong> in the template flow to perform the required data manipulations.
-</code></pre>
-</ul>
-
-[![Previous](/articles/images/Previous.png)](11_integration_with_fabric_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](13_interface_listener_exercise.md)
+[![Previous](/articles/images/Previous.png)](11_integration_with_fabric_studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12a_broadway_as_a_population_exercise_solution.md)
 

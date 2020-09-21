@@ -1,4 +1,6 @@
-# ![](/academy/images/Exercise.png) Exercise - Interface Listener and Handling a Stream 
+# Interface Listener and Handling a Stream
+
+### ![](/academy/images/Exercise.png)Exercise - Create a Flow and Trigger it by Interface Listener
 
 In this exercise you will do the following:
 
