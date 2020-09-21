@@ -5,9 +5,9 @@
 
 ### Using tables for data manipulations
 
-Now you have seen how functions can be attached to LU tables to modify data, let's see how tables and functions can be used to enrich data.
+NTT -> Show how tables and functions can be used to enrich data.
 
-In this section the following topics are addressed:
+NTT -> Present the following articles:
 
 -  [Lookup tables](/articles/07_table_population/11_lookup_tables.md)
 
@@ -19,11 +19,15 @@ In this section the following topics are addressed:
 
 -  [Using Translations in Fabric](/articles/09_translations/04_using_translations_in_fabric.md)
 
+
+NTT -> Go thru each one of the following examples:
 -  [Translations code example](/articles/09_translations/05_translations_code_examples.md)
 
 
 
 ### Globals
+
+NTT -> Present Globals:
 
 -  [Globals overview](/articles/08_globals/01_globals_overview.md)
 
@@ -31,6 +35,8 @@ In this section the following topics are addressed:
 
 -  [Globals in Fabric commands](/articles/08_globals/03_set_globals.md)
 
+
+NTT -> Go thru each one of the following examples:
 -  [Globals code example](/articles/08_globals/04_globals_code_examples.md)
 
 
