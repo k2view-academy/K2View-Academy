@@ -19,6 +19,13 @@ To do so, follow these steps:
 
 NTT -> To learn more about our best practices for working with version control, refer to [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
+NTT -> optional  
+basic configurations using the Fabric Studio so that you can understand its components:
+
+- User Preferences
+- UI Components and Menus
+- Window Tabs Context Menus
+- Diagram and Toolbars
 
  
 
