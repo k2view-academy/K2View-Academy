@@ -13,13 +13,13 @@ By the end of this learning item you will:
 
 After learning about Broadway flows, Stages and Actors it is time to become familiar with additional Broadway features that are essential for creating complex business flows. These features are:
 
-* **Actor Inheritance Mechanism**, that enables extending an Actor with additional logic and arguments when specific business logic is required in several flows. For example, to set the same date format of all the dates in all Broadway flows.
+* **Actor Inheritance Mechanism**, that extends an Actor with additional logic and arguments when specific business logic is required in several flows. For example, to set the same date format of all the dates in all Broadway flows.
 
 * **Inner Flows**, that encapsulate a flow to create an Actor that can be used in other flows. For example, to implement the same validation in several Broadway flows.
 
 * **Error Handling**, a built-in mechanism that handles exceptions in a flow using an Error Handler Actor. The Actor's logic is validated and if it returns true, the flow continues. Otherwise the flow stops.
 
-* **Transactions Management**, that enables starting a transaction at any Stage of the flow and performs a commit or a rollback at the end of the transaction in the flow.
+* **Transactions Management**, that starts a transaction at any Stage of the flow and performs a commit or a rollback at the end of the transaction in the flow.
 
   
 
@@ -32,7 +32,7 @@ For more details about the above functionalities, please refer to:
 
 
 
-Now let's see some examples that demonstrate the above Broadway features.
+Now let's go to some examples that demonstrate the above Broadway features.
 
 
 
