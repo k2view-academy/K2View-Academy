@@ -2,9 +2,8 @@
 
  
 
-### What Will You Experience in this Learning Item?
+### Learning Item Content
 
-By the end of the Fabric Architecture learning item you will know:
 
 - Why Fabric architecture is especially fit for the task at hand 
 - How Fabric stores and manages inbound and outbound data flows
