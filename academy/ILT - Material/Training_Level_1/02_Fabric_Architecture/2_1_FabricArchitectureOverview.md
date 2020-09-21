@@ -14,8 +14,13 @@ By the end of the Fabric Architecture learning item you will know:
 
 
 
+NTT -> Architecture Illustration:
 
-Let’s get started by reading the [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md) document.
+Explain all Fabric components and features featuring in the following picture:
+
+[Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components) document.
+
+
 
 You are ready to pass your very first [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md) ! Good Luck !
 
