@@ -1,14 +1,10 @@
-# ­­Fabric Main Flow Overview
+# Fabric Main Flow Overview
 
-Congratulations on successfully completing your first quiz!  
-
-You are now familiar with Fabric’s architecture and the concept of Logical Units. Let’s understand how it all comes together into a basic Fabric Main Flow implementation using your business requirements checklist.
+NTT -> Understand basic Fabric Main Flow implementation using your business requirements checklist.
 
  
 
-### What Will You Experience In This Learning Item?
-
-By the end of the Fabric Main Flow learning item you will know:
+### Learning Item Content?
 
 - How to create your first Fabric project
 - How to use the Fabric Studio’s general toolbars and menus
@@ -19,8 +15,4 @@ By the end of the Fabric Main Flow learning item you will know:
 - How to populate and validate your LU implementation
 
  
-
-Please open your Fabric Studio and let’s start to define your first Fabric project, Data Sources and Logical Unit!
-
-
-
+NTT -> Use Fabric Studio and define Fabric project, Data Sources and Logical Unit
