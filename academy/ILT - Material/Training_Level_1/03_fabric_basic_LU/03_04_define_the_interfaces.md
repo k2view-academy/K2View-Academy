@@ -16,7 +16,7 @@ To define the interfaces and their respective parameters, read about their sourc
 
 Our Training environment has three main and different DBs, which in essence, represent a typical Telco IT ecosystem:
 
--  **BILLING_DB**, stores information required for preparing or sending a bill or invoice. For example, Payments or Balance. 
+- **BILLING_DB**, stores information required for preparing or sending a bill or invoice. For example, Payments or Balance. 
 
 - **CRM_DB**, stores the information that manages a company's interaction with current and potential customers, specifically focusing on customer retention and ultimately driving sales growth. For example, Customer info, Contracts, Cases or Offers.
 
@@ -24,24 +24,30 @@ Our Training environment has three main and different DBs, which in essence, rep
 
  Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
 
+
 ### Instructions for Defining an Interface 
 
-Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
+NTT -> Present: [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
 
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using interfaces, refer to:
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
+
+
+NTT -> Refer to the content and purpose of the following subjects:
 
 - [Adding a Fabric and Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md).
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
 - [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
 - [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
 
-
  Now let’s understand how to view the data using the interface and the Query Builder.
+
 
 ### Query Builder
 
-Similar to other DB studios, Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries. Please read:
+NTT -> Compare with other DB studios -(Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries). 
+
+Present:
 
 - [Query Builder Overview](/articles/11_query_builder/01_query_builder_overview.md).
 - [Query_Builder_Window](/articles/11_query_builder/02_query_builder_window.md).
