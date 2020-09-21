@@ -10,9 +10,11 @@ Now that your project has been defined and a preliminary analysis of the data re
 
 ### Interfaces Overview
 
-Let’s understand which interfaces are available in the Fabric Studio. Please read [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md).
+Let’s understand which interfaces are available in the Fabric Studio. 
 
-To define the interfaces and their respective parameters, read about their sources in the [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
+Present: 
+- [Interface Overview](/articles/05_DB_interfaces/01_interfaces_overview.md).
+- [Interfaces Source Analysis Guidelines](/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md).
 
 Our Training environment has three main and different DBs, which in essence, represent a typical Telco IT ecosystem:
 
@@ -22,35 +24,36 @@ Our Training environment has three main and different DBs, which in essence, rep
 
 - **ORDERS_DB**, usually stores information for filling an order's functions required to complete a customer’s order created in a CRM. For example, Orders, Order items, Items or Pricing and in the Fabric Training environment, an Orders table. 
 
- Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
+Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
 
 
 ### Instructions for Defining an Interface 
 
-NTT -> Present: [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
+Present: 
+[DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
 
 
+For additional reference:
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
-
-
-NTT -> Refer to the content and purpose of the following subjects:
 
 - [Adding a Fabric and Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md).
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
 - [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
 - [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
 
- Now let’s understand how to view the data using the interface and the Query Builder.
+![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
 
+
+
+Now let’s understand how to view the data using the interface and the Query Builder.
 
 ### Query Builder
 
-NTT -> Compare with other DB studios -(Fabric Studio’s Query Builder allows you to view source DB structures, data and to invoke complex queries). 
+Fabric Studio’s Query Builder also allows you to view source DB structures, data and to invoke complex queries. 
 
 Present:
 
 - [Query Builder Overview](/articles/11_query_builder/01_query_builder_overview.md).
 - [Query_Builder_Window](/articles/11_query_builder/02_query_builder_window.md).
 - [Query_Builder_Build_SQL_Query](/articles/11_query_builder/03_building_and_running_an_sql_query.md#main-window---editing-an-sql-query).
-
 
