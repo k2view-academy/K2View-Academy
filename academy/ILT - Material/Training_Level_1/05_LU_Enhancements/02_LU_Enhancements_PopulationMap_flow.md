@@ -7,9 +7,9 @@
 
 ### Different types of data manipulations
 
-NTT -> Look at what needs to be considered to ensure that the LU data from external systems is processed efficiently: 
+Look at what needs to be considered to ensure that the LU data from external systems is processed efficiently: 
 
-NTT -> Questions for audience:
+Questions for audience:
 
 - What changes would I want to apply to the data?
 
@@ -23,7 +23,7 @@ NTT -> Questions for audience:
 
   
 
-NTT -> Apply data transformations using the following available objects:
+Apply data transformations using the following available objects:
 
 - Functions
 - Translations
@@ -36,7 +36,7 @@ To learn more, read the following [article](/articles/07_table_population/06_tab
 Present: 
 [Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article. 
 
-NTT -> Mention [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) to understand how to set different execution orders for the population objects you defined above. 
+Mention [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) to understand how to set different execution orders for the population objects you defined above. 
 
 
 

@@ -1,9 +1,9 @@
 # Web Services Overview
 
-NTT -> Reminder on Enhanced LU and project by adding the capabilities needed for retrieving and storing data in Fabric. 
+ Reminder on Enhanced LU and project by adding the capabilities needed for retrieving and storing data in Fabric. 
 
 
-NTT -> Questions to audience:
+ Questions to audience:
 
 - Whether it now meets all predefined business requirements when it is compiled.
 - Currently, who can view the data ? (the enriched data can only be viewed in the Fabric console and only by users who have access) 

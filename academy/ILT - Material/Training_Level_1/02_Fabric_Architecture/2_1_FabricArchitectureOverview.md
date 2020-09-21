@@ -13,16 +13,16 @@
 
 
 
-NTT -> Architecture Illustration:
+Architecture Illustration:
 
-Explain all Fabric components and features featuring in the following picture:
+Explain all Fabric components and features featuring in the following picture
+
+
+
+Present:
 
 [Fabric Architecture](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#2-fabric-server-main-components) document.
 
-
-
-NTT -> Student [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md)
-
-NTT -> Build first [Logical Unit](/academy/Training_Level_1/03_fabric_basic_LU/01_Fabric_main_flow_overview.md)
+Student [Quiz](/academy/Training_Level_1/02_Fabric_Architecture/2_2_FabricArchitectureQuiz.md)
 
 

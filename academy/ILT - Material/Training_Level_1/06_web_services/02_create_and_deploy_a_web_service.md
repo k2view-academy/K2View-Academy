@@ -5,7 +5,7 @@ Click [Web Services Overview](/articles/15_web_services_and_graphit/01_web_servi
 
 ### Creating a Web Service
 
-NTT -> Present following:
+Present:
 
 -  [Creating a Web Service ](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
 
@@ -38,12 +38,12 @@ Let's create your first simple Web Service which will retrieve basic information
 
 ### Deploying a Web Service
 
-NTT -> Deployed into Fabric. 
+ Deployed into Fabric. 
 
 Present: 
 - [Deploy Web Service from Fabric Studio](/articles/15_web_services_and_graphit/07_deploy_web_services.md).
 
-NTT -> Validate that the Web Service has been deployed:
+ Validate that the Web Service has been deployed:
 
 1. Log into Fabric. 
 2. Execute: 

@@ -5,15 +5,9 @@
 
 ## Jobs - Types and Purposes
 
-Let's take a look at the different types of Jobs that can be used to execute specific commands or code. 
-
-Please read:
+Present:
 
 - [Jobs Overview](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md)
-
-
-The following articles discuss Jobs flows and their execution environments:
-
 - [Jobs Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
 
 - [How to Create a new User Job](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md)
@@ -26,7 +20,9 @@ The following articles discuss Jobs flows and their execution environments:
 
 
 
-These articles introduce Jobs management and configuration:
+These articles introduce Jobs management and configuration
+
+Present:
 
 - [Jobs' Commands](/articles/20_jobs_and_batch_services/07_jobs_commands.md)
 
@@ -40,23 +36,22 @@ These articles introduce Jobs management and configuration:
 
 ## Batch Processes - Types and Purposes
 
-Let's take a look at the different types of Batch processes that Fabric offers for managing automated processes and their lifecycle.
 
 
-First, please read the [Batch Processes Overview](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
+Present:
 
-Batch process commands are fully detailed in the following articles:
+-  [Batch Processes Overview](/articles/20_jobs_and_batch_services/11_batch_process_overview.md)
 
 - [Batch Sync Process Commands](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md)
 
 - [Migrate Process Commands](/articles/20_jobs_and_batch_services/13_migrate_commands.md)
 
-- [Batch Broadway Process Commands](/articles/20_jobs_and_batch_services/14_batch_broadway_commands.md)
-
-- [Batch CDC Republish Commands](/articles/20_jobs_and_batch_services/15_batch_CDC_commands.md)
-
+  
 
 To understand Batch process flow: 
+
+Present:
+
 - [Batch Flow](/articles/20_jobs_and_batch_services/16_batch_process_flow.md). 
 
 
