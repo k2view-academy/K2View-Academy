@@ -77,7 +77,7 @@ The Broadway Debug process *learns* the Schema of an Actor's arguments and can s
 
 <img src="images/debug_update_schema_1.png"  />
 
-Note that the Update Schema can also be implemented for complex structures.
+Note that the Update Schema option can also be implemented on complex structures.
 
 ![image](images/compare_schema_1.PNG)
 
