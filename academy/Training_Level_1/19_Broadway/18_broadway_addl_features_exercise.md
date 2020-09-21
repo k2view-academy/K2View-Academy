@@ -2,23 +2,23 @@
 
 ### ![](/academy/images/Exercise.png) Exercise
 
-1. In the Broadway Additional Feature's [Exampe 1 - Actor Inheritance](15_broadway_addl_features_ex1.md#example-1---actor-inheritance):
+1. In the Broadway Additional Features [Example 1 - Actor Inheritance](15_broadway_addl_features_ex1.md#example-1---actor-inheritance):
 
-   a. Can you use **myDate** Actor in another flow?
+   a. Can you use the **myDate** Actor in another flow?
 
-   b. How can you update the inherited Actor's arguments?
+   b. How do you update the inherited Actor's arguments?
 
-2. In the Broadway Additional Feature's [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md#example-2---inner-flow-and-error-handling):
+2. In Broadway Additional Features [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md#example-2---inner-flow-and-error-handling):
 
-   a. Is the only way to manage the described Error Handler using a **JavaScript** Actor? If not - how?
+   a. Does the only way to manage the described Error Handler use a **JavaScript** Actor? If not - how?
 
-   b. Add Stage 2 to the flow and add a **Now** Actor. When **a** input argument is negative, is the **Now** Actor invoked? Is it invoked, when **a** is positive?
+   b. Add Stage 2 to the flow and add a **Now** Actor. When the **a** input argument is negative, is the **Now** Actor invoked? Is it invoked, when **a** is positive?
 
-3. In the Broadway Additional Feature's [Example 3 - Transactions](17_broadway_addl_features_ex3.md#example-3---transactions):
+3. In Broadway Additional Features [Example 3 - Transactions](17_broadway_addl_features_ex3.md#example-3---transactions):
 
    * Add Stage 7 at the end of the flow and a **CheckNegative_Actor** Actor to it. 
    * Mark both Stage 6 and 7 as Transaction.
-   * Run the flow when **a** input argument of **CheckNegative_Actor** Actor is negative.
+   * Run the flow when the **a** input argument of **CheckNegative_Actor** Actor is negative.
    * Is the transaction committed or rolled back? Explain you answer.
 
 
