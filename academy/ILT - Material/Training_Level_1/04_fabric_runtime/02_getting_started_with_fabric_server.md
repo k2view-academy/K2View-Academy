@@ -1,6 +1,8 @@
 # Getting Started with Fabric Server
 
-Now that the Fabric console is open, let's get started by reviewing the key components of the Fabric server:
+Now that the Fabric console is open:
+
+Present:
 
 -  [Fabric Directories](/articles/02_fabric_architecture/02_fabric_directories.md)
 
@@ -36,3 +38,4 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 
    
 
+------
