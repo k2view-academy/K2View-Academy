@@ -3,15 +3,13 @@
 
 # Logical Units Enhancements
 
-You are now ready to move on and to learn about a crucial Fabric feature - data manipulation and executing functions over the data that will be modified and exposed. 
+NTT -> Insist on a crucial Fabric feature - data manipulation and executing functions over the data. 
 
-So far you have seen how to design and create a simple LU by connecting to the data's external sources, testing its consistency by querying its tables using Fabric commands and the Cassandra storage environment, and then checking whether it is fit for use. 
+NTT -> Reminder: How to design and create a simple LU by connecting to the data's external sources, testing its consistency by querying its tables using Fabric commands and the Cassandra storage environment, and then checking whether it is fit for use. 
 
  
 
-### What Will You Experience In This Learning Item?
-
-By the end of the Fabric Enhancement learning item you will know:
+### Learning Item Content
 
 - How to create populations
 - How to write and execute root and DB functions 
@@ -20,7 +18,5 @@ By the end of the Fabric Enhancement learning item you will know:
 - How to establish efficient synchronization strategies with external sources
 
  
-
-Let's start !
 
 ------
