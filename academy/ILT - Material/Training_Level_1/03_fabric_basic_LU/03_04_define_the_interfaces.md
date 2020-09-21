@@ -32,20 +32,16 @@ Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [D
 Present: 
 [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
 
+For Additional Reference:
 
-For additional reference:
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
 
 - [Adding a Fabric and Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md).
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
 - [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
-- [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
-
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
+- [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
 
 
-
-Now let’s understand how to view the data using the interface and the Query Builder.
 
 ### Query Builder
 

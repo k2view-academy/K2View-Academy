@@ -14,5 +14,5 @@ NTT -> Explain to audience basic Fabric Main Flow implementation using your busi
 - How to initiate your first LU implementation 
 - How to populate and validate your LU implementation
 
- 
-NTT -> Use Fabric Studio and define Fabric project, Data Sources and Logical Unit
+
+Use Fabric Studio and define Fabric project, Data Sources and Logical Unit

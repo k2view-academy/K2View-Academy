@@ -17,10 +17,12 @@ To do so, follow these steps:
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
 
-NTT -> To learn more about our best practices for working with version control, refer to [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
+To learn more about our best practices for working with version control, refer to [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
-NTT -> optional  
-basic configurations using the Fabric Studio so that you can understand its components:
+
+
+For Additional References  
+Basic configurations using the Fabric Studio:
 
 - User Preferences
 - UI Components and Menus
@@ -29,6 +31,6 @@ basic configurations using the Fabric Studio so that you can understand its comp
 
  
 
-NTT -> Introduce first Fabric project implementation. 
+
 
 
