@@ -1,4 +1,4 @@
-# Examples of Broadway Advanced Features
+# Examples of Broadway Additional Features
 
 ### ![info](/academy/images/example.png)Example 2 - Inner Flow and Error Handling
 
@@ -56,5 +56,5 @@
 
 6. Now change the value in the **Const** Actor to a negative value and run the flow again. Validate that the error is thrown and the message of the **Logger** Actor is not printed into the log.
 
-[![Previous](/articles/images/Previous.png)](15_broadway_advanced_features_example1.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
+[![Previous](/articles/images/Previous.png)](15_broadway_addl_features_ex1.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_broadway_addl_features_ex3.md)
 

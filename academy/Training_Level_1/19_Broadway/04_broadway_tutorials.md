@@ -11,7 +11,7 @@ By the end of the Broadway Tutorial Flows learning item you will:
 - Know how to open and use Broadway flow examples.
 - View, run and debug Broadway Tutorial flows to have a better understanding of Broadway.
 
-To learn more about a Broadway flow, please refer to the [Broadway Flow Overview](/articles/19_Broadway/02a_broadway_flow_overview.md), [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md) and the [Broadway Flow Examples](/articles/19_Broadway/17_tutorial_and_flow_examples.md).
+To learn more, please refer to the [Broadway Tutorial and Flow Examples](/articles/19_Broadway/17_tutorial_and_flow_examples.md).
 
 ### How Do I Open The Broadway Tutorial Flow  
 

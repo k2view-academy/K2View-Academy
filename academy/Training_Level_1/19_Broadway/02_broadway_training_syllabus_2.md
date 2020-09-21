@@ -79,7 +79,7 @@
 <td style="text-align: center;"><strong>Day 3</strong></td>
 <td>
 <ul >
-<li >Broadway Advanced Features
+<li >Broadway Additional Features
 <ul >
 <li >Actor Inheritance Mechanism</li>
 <li >Error handling</li>
@@ -92,10 +92,9 @@
 <li >Create a flow with an inner flow and an error handler</li>
 </ul>
 </li>
-<li >Broadway Advanced Features - Continue
+<li >Broadway Additional Features - Continue
 <ul >
-<li >Data Inspection
-</li>
+<li >Data Inspection</li>
 <li >Reset Parameters Schemas</li>
 <li >Execute a Flow by Batch Command</li>
 </ul>
@@ -108,10 +107,11 @@
 <h3>Summary Exercise</h3>
 </li>
 <li class="md-end-block md-heading md-focus">
-<h3><span class="md-plain md-expand">Certification Exam (1 hour)</span></h3>
+<h3><span class="md-plain md-expand">Certification Exam</span></h3>
 </li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+

@@ -1,6 +1,8 @@
 # Broadway Course Overview
 
-Welcome to your first Broadway course!   
+**Welcome to your first Broadway course!**   
+
+
 
 ### Objectives
 
