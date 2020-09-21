@@ -2,13 +2,15 @@
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_07.png)
 
-NTT -> Deploy the Logical Unit and other components to the Fabric server where the data is actually stored, searched and available for inquiries.
+Deploy the Logical Unit and other components to the Fabric server where the data is actually stored, searched and available for inquiries.
 
  
 
 ### Deployment to the Fabric Server
 
-NTT -> Explain how  design and implementation can be executed in large-scale and on demand:
+Explain how  design and implementation can be executed in large-scale and on demand:
+
+Present:
 
 [Deploy Fabric Project](/articles/16_deploy_fabric/01_deploy_Fabric_project.md)
 
