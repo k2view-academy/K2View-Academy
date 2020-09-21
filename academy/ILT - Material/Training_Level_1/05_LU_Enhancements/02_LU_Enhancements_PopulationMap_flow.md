@@ -7,7 +7,9 @@
 
 ### Different types of data manipulations
 
-Let's look at what needs to be considered to ensure that the LU data you are sourcing from external systems is processed efficiently: 
+NTT -> Look at what needs to be considered to ensure that the LU data from external systems is processed efficiently: 
+
+NTT -> Questions for audience:
 
 - What changes would I want to apply to the data?
 
@@ -21,11 +23,7 @@ Let's look at what needs to be considered to ensure that the LU data you are sou
 
   
 
-Based on the above, the transformations will be defined on the **Customer** LU that you defined in the Fabric Basic LU section, using the CRM, Billing, and Orders databases. 
-
-
-
-You will apply data transformations using the following available objects:
+NTT -> Apply data transformations using the following available objects:
 
 - Functions
 - Translations
@@ -35,10 +33,10 @@ You will apply data transformations using the following available objects:
 To learn more, read the following [article](/articles/07_table_population/06_table_population_transformation_rules.md).
 
 
+Present: 
+[Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article. 
 
-Now you are acquainted with the different data transformation means, let's look at the Populations diagrams's outline in the [Populations Diagrams Outline](/articles/07_table_population/12_table_population_diagram_outline.md) article. You will see an example of how functions, lookup or translation tables are inserted between the external sources table and the target LU table to enable data transformation during its migration from its sources.  
-
-To conclude this section, read about [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) to understand how to set different execution orders for the population objects you defined above. 
+NTT -> Mention [Execution Orders](/articles/07_table_population/13_LU_table_population_execution_order.md) to understand how to set different execution orders for the population objects you defined above. 
 
 
 
