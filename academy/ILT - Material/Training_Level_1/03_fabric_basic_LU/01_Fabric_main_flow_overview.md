@@ -1,6 +1,6 @@
 # Fabric Main Flow Overview
 
-NTT -> Understand basic Fabric Main Flow implementation using your business requirements checklist.
+NTT -> Explain to audience basic Fabric Main Flow implementation using your business requirements checklist.
 
  
 
