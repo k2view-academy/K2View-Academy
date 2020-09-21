@@ -18,13 +18,8 @@ Present:
 
 -  [Table Population Overview](/articles/07_table_population/01_table_population_overview.md)
 
-- [Population Types and Comparison Analysis](/articles/07_table_population/02_source_object_types.md)
+-  [Population Types and Comparison Analysis](/articles/07_table_population/02_source_object_types.md)
 
-  
-
-Introduce difference between DB query or a Java **Root function**, let’s see how to create one. 
-
-Present:
 - [Create New Table Population](/articles/07_table_population/03_creating_a_new_table_population.md)
 
 - [Debug Table Population](/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md) 
@@ -32,7 +27,7 @@ Present:
 
 
 How to adjust or manipulate the extracted data depending on business requirements ?
-How can your Call Centre continue to see the most accurate data? 
+How can the Call Centre continue to see the most accurate data? 
 
 
 
@@ -51,8 +46,3 @@ Present:
 ------
 
  
-
-
-
-
-

@@ -27,7 +27,7 @@
 
 ### Globals
 
- Present Globals:
+ Present:
 
 -  [Globals overview](/articles/08_globals/01_globals_overview.md)
 
