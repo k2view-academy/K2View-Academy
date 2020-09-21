@@ -1,13 +1,11 @@
-# Broadway Quiz
+# Broadway Certification Exam
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/Quiz.png) 
-
-
+<img src="images/Quiz.png" style="zoom:80%;" /> 
 
 Excellent! You have completed the Broadway learning items.
 
 
-Let's take the following quiz to see what you have learnt. The Quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
+Let's take the following quiz to see what you have learnt. The quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
 
 
 
@@ -216,7 +214,25 @@ When creating an Inherited Actor, the new Actor:
 
 
 
-#### Question 12: Actor Inheritance in Broadway
+#### Question 12: Run and Debug the Flow
+
+When running the flow with Debug ON:
+
+
+\- A:  You can view the data object in the JSON-like representation via the Data Viewer.
+
+
+\- B:  You can compare and update the schema based on the proposed Debug Schema.
+
+\- C:  Only A is correct.
+
+\- D:  A and B are correct.
+
+(**Solution 12: D; Both A and B are correct.**).
+
+
+
+#### Question 13: XXX
 
 xxxxx:
 
@@ -231,7 +247,6 @@ xxxxx:
 \- D:  x.
 
 
-(**Solution 12: X; xxx.**).
-
+(**Solution 13: X; xxx.**).
 
 [![img](/articles/images/Previous.png)](XXX.md)
