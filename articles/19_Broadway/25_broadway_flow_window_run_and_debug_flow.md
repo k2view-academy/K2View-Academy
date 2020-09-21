@@ -59,7 +59,7 @@ When Debug is ON, the values of the input and output arguments of each executed 
 
 To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format drop-down and make your selection.
 
-![](images/flow_debug_display_data.PNG)
+![](images/flow_debug_display_data.png)
 
 ### Updating a Schema
 
