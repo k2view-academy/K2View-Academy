@@ -1,4 +1,4 @@
-# Broadway Additional Features
+# Additional Broadway Features
 
 ### ![](/academy/images/Solution.png) Solution
 
