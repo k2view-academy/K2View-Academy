@@ -22,4 +22,4 @@ fabric>broadway CRM.CheckNegative a = 10;
 
 
 
-[![Previous](/articles/images/Previous.png)](20_broadway_and_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xx.md)
+[![Previous](/articles/images/Previous.png)](20_broadway_and_fabric.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](22_broadway_summary_exercise.md)
