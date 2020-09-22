@@ -161,7 +161,7 @@ Population of an LU table using a Broadway flow is performed by:
 
 #### Question 9: Population based on a Broadway Flow
 
-The data for a table population using a Broadway Flow is retrieved by:
+The data for a table population using a Broadway flow is retrieved by:
 
 
 \- A:  Either a DB query or a Root function.
@@ -183,7 +183,7 @@ The data for a table population using a Broadway Flow is retrieved by:
 In a Broadway flow you can:
 
 
-\- A:  Invoke any Fabric Project function or a Graphit resource under the selected Logical Unit.
+\- A:  Invoke any Project function or a Graphit resource under the selected Logical Unit.
 
 
 \- B:  Execute the SET and GET commands on the current Fabric session.
@@ -210,7 +210,7 @@ When creating an Inherited Actor, the new Actor:
 
 \- D:  Will be created in a new category (tag) designated for inherited Actors only.
 
-(**Solution 11. C: When exporting the Actor each input and output argument can be set as hidden or final**).
+(**Solution 11. C: When exporting the Actor each input and output argument can optionally be set as hidden or final**).
 
 
 
@@ -242,7 +242,7 @@ The transaction in a Broadway flow:
 
 \- B:  Impacts the transactional Stages but don't impact Inner flows which fall within the transaction.
 
-\- C:  Can do commit (or rollback) either at the end of the loop or on each iteration.
+\- C:  When defined on an iteration, can do commit (or rollback) either on each iteration or at the end of the iteration data set.
 
 \- D:  Cannot be defined on a split Stage.
 
@@ -260,11 +260,11 @@ When handling the errors and exceptions in a Broadway flow:
 
 \- B:  Several error handling Actors can be defined in a flow but not in an inner flow.
 
-\- C:  Only a JavaScript Actor can be used for handling the errors.
+\- C:  Only a JavaScript Actor can be used for handling errors.
 
 \- D:  The flow continues when an error handler returns true, otherwise the flow stops.
 
-(**Solution 14. D: Any Actor can be used as an error handler and it can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as a powerful error handler.**).
+(**Solution 14. D: Any Actor can be used as an error handler and it can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler.**).
 
 
 
