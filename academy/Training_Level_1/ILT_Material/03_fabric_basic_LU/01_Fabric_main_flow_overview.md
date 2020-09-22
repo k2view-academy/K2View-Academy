@@ -1,8 +1,7 @@
 # Fabric Main Flow Overview
 
-NTT -> Explain to audience basic Fabric Main Flow implementation using your business requirements checklist.
 
- 
+
 
 ### Learning Item Content?
 
