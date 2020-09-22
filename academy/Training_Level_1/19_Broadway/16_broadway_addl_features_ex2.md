@@ -42,13 +42,13 @@
 
 3. Add a **CheckNegative_Actor** Actor to Stage 2 and connect it to the **Const** Actor.
 
-4. Add a **Logger** Actor to Stage 2 and connect it to the **Const** Actor also. Add the following message to the **Logger** Actor:
+4. Add a **Logger** Actor to Stage 2 and connect it to the **Const** Actor too. Add the following message to the **Logger** Actor:
 
    ~~~javascript
    Hello ***${0}*** Hello!
    ~~~
 
-5. The flow is ready and can be run and validated by the message in the log file.
+5. The flow is ready and can be run and validated. Check that the message of the **Logger** Actor is printed into the log.
 
    ![image](images/16_ex3.PNG)
 
