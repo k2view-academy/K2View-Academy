@@ -34,7 +34,7 @@ A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#
 
 Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they are automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
-To run the flow, click **Run Flow** ![image](images/99_25_run.PNG) to run the entire flow and display the results. 
+To run the flow, click ![image](images/99_25_run.PNG) **Run Flow** to run the entire flow and display the results. 
 
 - If Debug mode is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
 
