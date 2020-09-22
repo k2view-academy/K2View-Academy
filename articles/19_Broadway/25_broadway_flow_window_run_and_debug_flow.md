@@ -65,7 +65,7 @@ To view a step's data, click the blue balloon to open the Data Viewer and its di
 
 The Broadway Debug process *learns* the Schema of an Actor's arguments and can suggest how to update it based on a parameter's value.
 
-1. When debugging an Actor, the parameter port turns red:
+1. When debugging an Actor, the parameter port turns red indicating that the Schema needs to be updated:
 
    <img src="images/debug_update_schema.png"  />
 
@@ -77,7 +77,7 @@ The Broadway Debug process *learns* the Schema of an Actor's arguments and can s
 
 <img src="images/debug_update_schema_1.png"  />
 
-Note that the Update Schema option can also be implemented on complex structures.
+Note that the Update Schema option can also be applied on complex structures.
 
 ![image](images/compare_schema_1.PNG)
 
