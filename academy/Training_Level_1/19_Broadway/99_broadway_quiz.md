@@ -118,7 +118,7 @@ A Stage condition:
 \- D:  Is needed to define the Else condition.
 
 
-(**Solution 6. B: If a Stage condition is false, its branch's execution stops. The condition Actor can have any number of output parameters, however a true / false check is performed on the first**).
+(**Solution 6. B: If a Stage condition is false, its branch's execution stops. The condition Actor can have any number of output parameters; however a true / false check is performed on the first**).
 
 
 
