@@ -20,11 +20,11 @@
    throw "Can't be negative!"
    ~~~
 
-5. The flow is ready and can be run with different positive and negative input arguments to check the results. 
+   The flow is ready and can be run with different positive and negative input arguments to check the results. 
 
    ![image](images/16_ex1.PNG)
 
-6. When the input is negative, the following error message is thrown:
+   When the input is negative, the following error message is thrown:
 
    ![image](images/16_ex2.PNG)
 
