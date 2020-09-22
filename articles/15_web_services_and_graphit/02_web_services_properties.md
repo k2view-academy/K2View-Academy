@@ -145,7 +145,12 @@ Then add the UNKNOWN value to the Produce function call in the line where the We
 ```
 
 Modify the Properties panel of the Web Service as shown below:
+
+
+
 <img src="images/Web-Service-KI-2-1_Produce1.png">
+
+
 
 After deploying the Web Service, call it from the browser using the appropriate token, parameter and format.
 
