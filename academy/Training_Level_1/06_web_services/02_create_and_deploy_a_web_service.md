@@ -15,7 +15,7 @@ The following are the basic steps for creating a Web Service and understanding i
 
 -  [Editing Web Service Code](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)
 
-### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example- Creating a Web Service
+### ![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png) Example - Creating a Web Service
 
 Let's create your first simple Web Service which will retrieve basic information on a specific instance of a customer:
 
