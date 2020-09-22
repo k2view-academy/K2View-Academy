@@ -232,21 +232,40 @@ When running the flow with Debug ON:
 
 
 
-#### Question 13: XXX
+#### Question 13: Transactions
 
-xxxxx:
-
-
-\- A:  x.
+The transaction in a Broadway flow:
 
 
-\- B:  x.
-
-\- C:  x.
-
-\- D:  x.
+\- A:  Can only be defined on DB interfaces.
 
 
-(**Solution 13. X: xxx.**).
+\- B:  Impacts the transactional Stages but don't impact Inner flows which fall within the transaction.
+
+\- C:  Can do commit (or rollback) either at the end of the loop or on each iteration.
+
+\- D:  Cannot be defined on a split Stage.
+
+(**Solution 13. C: There are two approaches for handling transactions during an iteration: closing the transaction and performing a commit on each iteration or after the loop ends.**).
+
+
+
+#### Question 14: Error Handling
+
+When handling the errors and exceptions in a Broadway flow:
+
+
+\- A:  An error handler must be defined at the last Stage of the flow.
+
+
+\- B:  Several error handling Actors can be defined in a flow but not in an inner flow.
+
+\- C:  Only a JavaScript Actor can be used for handling the errors.
+
+\- D:  The flow continues when an error handler returns true, otherwise the flow stops.
+
+(**Solution 14. D: Any Actor can be used as an error handler and it can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as a powerful error handler.**).
+
+
 
 [![img](/articles/images/Previous.png)](XXX.md)
