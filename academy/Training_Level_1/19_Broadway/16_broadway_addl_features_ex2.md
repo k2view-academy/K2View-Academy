@@ -42,7 +42,7 @@
 
 3. Add a **CheckNegative_Actor** Actor to Stage 2 and connect it to the **Const** Actor.
 
-4. Add a **Logger** Actor to Stage 2 and connect it to the **Const** Actor too. Add the following message to the **Logger** Actor:
+4. Add a **Logger** Actor to Stage 2 and connect it to the **Const** Actor also. Add the following message to the **Logger** Actor:
 
    ~~~javascript
    Hello ***${0}*** Hello!
@@ -52,7 +52,7 @@
 
    ![image](images/16_ex3.PNG)
 
-6. Now change the value in the **Const** Actor to a negative value and run the flow again. Check that the error is thrown and the message of the **Logger** Actor is not printed into the log.
+6. Now change the value in the **Const** Actor to a negative value and run the flow again. Check that the error is thrown and the message from the **Logger** Actor is not printed into the log.
 
 [![Previous](/articles/images/Previous.png)](15_broadway_addl_features_ex1.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_broadway_addl_features_ex3.md)
 
