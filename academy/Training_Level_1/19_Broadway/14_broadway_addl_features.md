@@ -6,7 +6,7 @@ By the end of this learning item you will:
 
 - Be familiar with the Actor Inheritance Mechanism.
 - Learn what are the Inner flows, how to do Error handling and to manage Transactions.
-- Create a Broadway flow with an Inner flow and an Error handler.
+- Create a Broadway flow with an Inner flow, an Error handler and a Transaction.
 
 
 
