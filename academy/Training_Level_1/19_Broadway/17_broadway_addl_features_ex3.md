@@ -1,8 +1,8 @@
-# Examples of Broadway Additional Features
+# Examples of Additional Broadway Features
 
 ### ![info](/academy/images/example.png)Example 3 - Transactions
 
-Open the flow you created in the [Using Actors in a Flow](10_using_various_actors_exercise.md) exercise. The flow already has a Transaction. Now let's examine how it works.
+To see this example, open the flow you created in the [Using Actors in a Flow](10_using_various_actors_exercise.md) exercise. The flow already has a Transaction that has not yet been examined.
 
 ![image](images/10_flow.PNG)
 
