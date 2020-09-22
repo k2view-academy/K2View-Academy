@@ -15,15 +15,15 @@ To do so, follow these steps:
 
   
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) 
+![](/academy/Training_Level_1/ILT_Material/03_fabric_basic_LU/images/information.png) 
 
 To learn more about our best practices for working with version control, refer to [Best Practices for Working with GIT and SVN](/articles/04_fabric_studio/07_best_practices_for_working_with_GIT_and_SVN.md).
 
 
 
-For Additional References  
-Basic configurations using the Fabric Studio:
+For Additional References: 
 
+Basic configurations using the Fabric Studio:
 - User Preferences
 - UI Components and Menus
 - Window Tabs Context Menus
