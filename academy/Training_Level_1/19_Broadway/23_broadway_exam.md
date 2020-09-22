@@ -2,10 +2,11 @@
 
 <img src="images/Quiz.png" style="zoom:80%;" /> 
 
-Excellent! You have completed the Broadway learning items.
+Excellent! You have completed the Broadway Training and the Summary Exercise.
 
+Let's take the following certification example to see what you have learnt. The exam consists of a number of multiple-choice questions, each providing a number of possible answers. 
 
-Let's take the following quiz to see what you have learnt. The quiz consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
+Click the answer you think is correct. 
 
 
 
@@ -268,4 +269,4 @@ When handling the errors and exceptions in a Broadway flow:
 
 
 
-[![img](/articles/images/Previous.png)](XXX.md)
+[![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)
