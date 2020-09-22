@@ -18,6 +18,8 @@ Please proceed to the summary exercise to apply your knowledge.
 
 ### Summary Exercise Steps
 
+TBD
+
 
 
 
