@@ -12,7 +12,7 @@ To see this example, open the flow you created in the [Using Actors in a Flow](1
 2. Click ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu to uncheck the Transaction.
 3. Run the flow again and verify that a new entry has not been added to the table.
 4. Check the  message in the log file to verify that a rollback has been performed.
-5. Add Stage 7 and then add a **CheckNegative_Actor** Actor to it. Mark this Stage as a Transaction also.
+5. Add Stage 7, add a **CheckNegative_Actor** to it and then mark this Stage as a Transaction.
 6. Run the flow again with a positive or a negative input for a **CheckNegative_Actor** Actor and check the flow's behavior in each run. 
    * When the input is a positive number, the flow finishes successfully with a commit. 
    * When the input is a negative number, the **CheckNegative_Actor** throws an error and the flow ends with a rollback.
