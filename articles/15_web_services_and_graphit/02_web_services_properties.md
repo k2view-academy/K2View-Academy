@@ -6,13 +6,13 @@ Fabric Web Services properties include the definitions, methods, categories and 
 
 Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** to display the **Function Manager** window. 
 
-<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-3-1.png" alt="drawing"/> 
+<img src="images/Web-Service-KI-3-1.png" alt="drawing"/> 
 
 ## What Are Web Service Properties? 
 
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
-<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1.png" alt="drawing"/> 
+<img src="images/Web-Service-KI-2-1.png" alt="drawing"/> 
 
  The following are the Web Services properties:
 
@@ -107,6 +107,12 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </td>
 </tr>
 <tr>
+<td width="200pxl" valign="top"><p>Serialize null</p></td>
+<td width="700pxl" valign="top">
+    <p>If True, display fields with null value in the reponse. Else- ignore fields with null values. The default is True.</p>
+    </td>    
+</tr>    
+<tr>
 <td width="200pxl" valign="top"><p>Description</p></td>
 <td width="700pxl" valign="top"><p>Web Service&rsquo;s description on Swagger.</td>
 </tr>
@@ -120,7 +126,8 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </tbody>
 </table>    
 
-  
+
+
 
 ## How Do I Generate HTML format or legacy JSON/XML ? 
 
@@ -138,7 +145,7 @@ Then add the UNKNOWN value to the Produce function call in the line where the We
 ```
 
 Modify the Properties panel of the Web Service as shown below:
-<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce1.png">
+<img src="images/Web-Service-KI-2-1_Produce1.png">
 
 After deploying the Web Service, call it from the browser using the appropriate token, parameter and format.
 
@@ -147,7 +154,7 @@ Example with HTML format:
 http://localhost:3213/api/test/getCustomerInfo?ID=1000&token=tgreg&format=html
 ```
 The response is displayed in the body of the browser's web page:
-<img src="/articles/15_web_services_and_graphit/images/Web-Service-KI-2-1_Produce2.PNG">
+<img src="images/Web-Service-KI-2-1_Produce2.PNG">
 
 
 
