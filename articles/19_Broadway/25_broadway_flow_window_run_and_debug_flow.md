@@ -36,18 +36,18 @@ Running the flow or debugging it saves a local copy of the flow in the Fabric pr
 
 To run the flow, click ![image](images/99_25_run.PNG) **Run Flow** to run the entire flow and display the results. 
 
-- If Debug mode is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
+- If Debug mode is ![](images/99_25_debug_on.PNG) ON, the flow can be debugged.
 
-- If Debug mode is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
+- If Debug mode is ![](images/99_25_debug_off.PNG) OFF, the flow cannot be debugged.
   
 
 If the breakpoints have been added to the flow, the flow stops at the first breakpoint. Note that when a flow contains an inner flow and it has breakpoints, the flow also stops at the inner flow's breakpoints.
 
-  - Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
+  - Click ![images](images/99_25_resume.PNG) **Resume Debug** to continue the flow from where it stopped.
 
-- Click **Debug Step** ![image](images/99_25_step.PNG) to debug the current step and move to the next step.
+- Click ![image](images/99_25_step.PNG) **Debug Step** to debug the current step and move to the next step.
 
-To stop the flow, click **Stop Run** ![image](images/99_25_stop.PNG).
+To stop the flow, click ![image](images/99_25_stop.PNG) **Stop Run**.
 
 When Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
