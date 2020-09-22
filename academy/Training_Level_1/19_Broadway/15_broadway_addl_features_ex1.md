@@ -1,4 +1,4 @@
-# Examples of Broadway Additional Features
+# Examples of Additional Broadway Features
 
 ### ![info](/academy/images/example.png)Example 1 - Actor Inheritance
 

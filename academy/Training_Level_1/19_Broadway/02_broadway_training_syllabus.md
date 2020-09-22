@@ -79,7 +79,7 @@
 <td style="text-align: center;"><strong>Day 3</strong></td>
 <td>
 <ul >
-<li >Broadway Additional Features
+<li >Additional Broadway Features
 <ul >
 <li >Actor Inheritance Mechanism</li>
 <li >Error handling</li>
@@ -112,5 +112,6 @@
 </tr>
 </tbody>
 </table>
+
 
 
