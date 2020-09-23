@@ -128,7 +128,7 @@
 <li>Implementation Changes &amp; Re-deployment</li>
 <li>Server-side</li>
 </ul>
-<h3 style="color: #20c1dd;">Quiz (3) - 0.5 hrs</h3>
+<h3 style="color: #20c1dd;">Quiz (3) - 0.5 hr</h3>
 
 </td>
   
