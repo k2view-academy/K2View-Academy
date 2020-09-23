@@ -206,7 +206,6 @@
  
 <h3 style="color: #20c1dd;">Hands-on Exercises (Reference Tables) - 1 hr</h3>
 
-<h3 style="color: #20c1dd;">Q&amp;A Session - 1 hrs</h3>
 
 </td>
 
