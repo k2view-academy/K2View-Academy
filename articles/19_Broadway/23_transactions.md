@@ -16,11 +16,11 @@ When the outer flow starts the transaction and then invokes an inner flow, the i
 
 There are two approaches for handling transactions during an iteration: 
 
-* Closing the transaction and performing a commit after the loop over the data set is completed.
+* Commit the data after the loop over the data set is completed. In this case you need to open the transaction on the Stage before the Iteration starts and close it at the end of the iteration.
 
   ![image](images/99_23_commit_at_end.PNG)
 
-* Closing the transaction and performing a commit on each iteration. In this case, empty Stage 3 is required to indicate that the transaction of **Iterate on array** Stage is finished before the iteration is closed.
+* Commit on each iteration. In this case, open the transaction inside the loop and add an empty Stage 3 to indicate that the transaction of Stage 4 is finished before the iteration is closed.
 
   ![image](images/99_23_commit_each.PNG)
 
