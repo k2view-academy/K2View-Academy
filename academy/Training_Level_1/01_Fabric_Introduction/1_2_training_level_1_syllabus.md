@@ -163,9 +163,9 @@
 
 <td valign="top">
 <h3 style="color: #20c1dd;">Q&amp;As - 0.5 hr</h3>
-<h3 style="color: #20c1dd;">Hands-on Exercises (Graphit) - 1.5 hrs</h3>
+<h3 style="color: #20c1dd;">Hands-on Exercises (Graphit) - 1 hr</h3>
 <h3 style="color: #20c1dd;">Quiz (5) - 0.5 hrs</h3>
-<h3 style="color: #20c1dd;">Jobs &amp; Batch Services - 1.5 hrs</h3>
+<h3 style="color: #20c1dd;">Jobs &amp; Batch Services - 1 hr</h3>
 <ul>
 <li>Jobs Overview &amp; Types</li>
 <li>Jobs Commands and Configuration</li>
