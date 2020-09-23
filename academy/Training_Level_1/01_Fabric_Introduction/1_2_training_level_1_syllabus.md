@@ -179,8 +179,18 @@
 </td>
 
 <td valign="top">
-<h3 style="color: #20c1dd;">Q&amp;A Session - 2 hrs</h3>
-<h3 style="color: #20c1dd;">Certification Exam - 1 hr</h3>
+ 
+<h3 style="color: #20c1dd;">Reference Tables & CommobDB - 1 hr</h3>
+<ul>
+<li>CommonDB Overview &amp; Types</li>
+<li>Reference Tables</li>
+<li>CommonDB Architecture and Synchronization Process</li>
+</ul>
+ 
+<h3 style="color: #20c1dd;">Hands-on Exercises (Reference Tables) - 1 hr</h3>
+
+<h3 style="color: #20c1dd;">Q&amp;A Session - 1 hrs</h3>
+<h3 style="color: #20c1dd;">Certification Exam - 1.5 hr</h3>
 </td>
 
 </tr>
