@@ -31,9 +31,25 @@ The Job Process then launches the batch command which, in turn, is executed thro
 ## **Scheduling Batch Processes**
 
 
-To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created, using a user job, containing the batch command that needs to be repeatedly invoked. 
+To schedule that a Batch process be executed either at a given time or recurrently, a scheduled Job process must be created. This can be achieved using a user job, containing the batch command that needs to be repeatedly invoked. 
 
-This consists in creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs (each one parametered with the execution settings parsed in the Batch command).
+Basically, this consists in creating a scheduled Job that calls a Batch process - which in turn will create multiple or scheduled one-time Jobs (each one parametered thanks to the execution settings parsed in the Batch command).
+
+The illustration below describes the following steps:
+
+### Step 1 
+User defines a job scheduled job to run a specific batch command. 
+Fabric assigns a job process for this batch command.
+
+### Step 2 
+The dedicated job runs the scheduled or multiple instances of the batch command.
+The Batch process triggers a new (temporary) job dedicated for this specific process as described in the [section above](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#fabric-batch-processes-flow).  
+The new job runs the batch command.
+
+### Step 3
+The Jobs table is updated for next run and the dedicated job will wait for the next instance of the scheduled batch process.
+
+
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
 
@@ -152,6 +168,7 @@ All batch-related information is displayed in the **k2batchprocess** keyspace in
 </tbody>
 </table>
 
+Additional fields featuring in the table:
 
 **Command**  
 
@@ -183,6 +200,55 @@ This handover mechanism uses the [*hearbeats*](/articles/20_jobs_and_batch_servi
 The next handling node picks up the batch process (via its associated job) and resumes its execution from the latest known recorded stage.   
 
 Each Fabric node uses its Fabric built-in BatchProcessAPI and [Job Manager](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#jobs-logic) classes to manage the Batch process through its different lifecycle stages, as defined in the illustrations above.
+
+
+
+## **How Does Fabric Handle the Migration Process?**
+
+When a migration process is initiated, it is treated as a batch of multiple entities [synchronization processes](/articles/20_jobs_and_batch_services/13_migrate_commands.md#migrate-commands).
+
+The illustration below shows the sequence of actions involved in this process.
+
+<img src="/articles/20_jobs_and_batch_services/images/24_jobs_and_batch_services_migration_process.png"></img>
+
+
+### Step 1 
+
+- The batch command (or migrate) is executed from a Fabric node. This node (Node 1) will assume the role of Coordinator all along this process. 
+- A job process for this batch command is started.
+
+
+### Step 2
+
+- The node responsible for the overall execution of the migration process is selected in the Fabric cluster as per the nodes allocation rules described in the [Affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md#affinity-properties) article. 
+- This node (Node 3) is referred to as the Job Owner node.
+- The job Owner Node initiates the migration's statistic collection process
+
+
+### Step 3
+
+- The Job Owner node (Node 3) generates a list of iiDs to migrate from the External Sources systems. In our example, the iiDs are X1, X2, X3, X4, and X5, referred to as iiDX1, iiDX2, iiDX3, iiDX4, iiDX5.
+
+
+### Step 4
+
+- Node 3 initiates worker threads for each node that will be involved in the migration process. In our example, all 5 nodes are required to contribute, the Job owner node (Node 3), the Coordinator node (Node 1) and the non-coordinator nodes (N2, N4, N5).
+
+
+### Step 5
+
+- Each node syncs the instances that has been allocated from the External Sources systems.
+- N3 collects statistics information on each of the nodes and entity synchronization. The information collected is written onto Cassandra.
+
+
+### Step 6
+
+- Each node writes iiDs into Cassandra
+
+
+
+
+
 
 
 
