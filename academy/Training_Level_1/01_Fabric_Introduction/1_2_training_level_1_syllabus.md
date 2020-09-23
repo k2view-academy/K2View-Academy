@@ -89,9 +89,8 @@
 <li>Fabric Deployment</li>
 <li>Fabric Basic Commands</li>
 <li>Cassandra Main Keyspaces &amp; Commands</li>
-<li>Fabric Server Exercises</li>
 </ul>
-
+<h3 style="color: #20c1dd;">Fabric Runtime Exercises</h3>
 </td>
   
 <td valign="top">
@@ -101,9 +100,8 @@
 <li>Hands-on Exercises</li>
 <li>Functions Development<ul>
 <li>Built-in, Root, DB &amp; Enrichment Functions </li>
-<li>Hands-on Exercises</li>
 </ul>
-
+<h3 style="color: #20c1dd;">Hands-on Exercises - LU Enhancements (1)</h3>
 
 <h3 style="color: #20c1dd;">LU Enhancement (2)</h3>
 <ul>
