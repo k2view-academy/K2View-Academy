@@ -13,6 +13,7 @@ In addition, this process can benefit from all [Batch configuration parameters](
 
 ## Broadway Batch Commands
 The *FABRIC_COMMAND* parameter must be set using the Broadway command syntax as described below:
+
 ```BATCH <LU_TYPE> <FABRIC_COMMAND="fabric_command"> [with async=true/false;]```
 
 Example:
