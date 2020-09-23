@@ -20,8 +20,7 @@ Once this is done, you will be shown how to expose this data through a set of cu
 
 ### Course Syllabus
 
-Please go to the [Level 1 Training Syllabus](/academy/Training_Level_1/01_Fabric_Introduction/1_2_training_level_1_syllabus.md).
-
+Please go to the [Level 1 Training Syllabus](/Academy_6.2/academy/Training_Level_1/01_Fabric_Introduction/1_2_training_level_1_syllabus.md).
 
 
 ### Course Prerequisites 
