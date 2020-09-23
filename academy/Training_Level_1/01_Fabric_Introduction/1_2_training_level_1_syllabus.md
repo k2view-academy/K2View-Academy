@@ -101,6 +101,7 @@
 <li>Functions Development<ul>
 <li>Built-in, Root, DB &amp; Enrichment Functions </li>
 </ul>
+  
 <h3 style="color: #20c1dd;">Hands-on Exercises - LU Enhancements (1)</h3>
 
 <h3 style="color: #20c1dd;">LU Enhancement (2)</h3>
