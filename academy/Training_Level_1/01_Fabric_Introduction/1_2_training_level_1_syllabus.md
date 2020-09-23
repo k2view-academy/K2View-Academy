@@ -145,14 +145,6 @@
 
 <h3 style="color: #20c1dd;">Quiz (4) - 0.5 hr</h3>
 
-<h3 style="color: #20c1dd;">Graphit Utility - 1 hr</h3>
-<ul>
-<li>Overview</li>
-<li>Graphit nodes</li>
-<li>Graphit &amp; Java</li>
-<li>Invoking Graphit</li>
-</ul>
-
 </td>
 </tr>
   
@@ -163,8 +155,23 @@
 
 <td valign="top">
 <h3 style="color: #20c1dd;">Q&amp;As - 0.5 hr</h3>
+
+<h3 style="color: #20c1dd;">Graphit Utility - 1 hr</h3>
+<ul>
+<li>Overview</li>
+<li>Graphit nodes</li>
+<li>Graphit &amp; Java</li>
+<li>Invoking Graphit</li>
+</ul>
+
+
 <h3 style="color: #20c1dd;">Hands-on Exercises (Graphit) - 1 hr</h3>
 <h3 style="color: #20c1dd;">Quiz (5) - 0.5 hrs</h3>
+</td>
+
+<td valign="top">
+ 
+
 <h3 style="color: #20c1dd;">Jobs &amp; Batch Services - 1 hr</h3>
 <ul>
 <li>Jobs Overview &amp; Types</li>
@@ -176,11 +183,21 @@
  
 <h3 style="color: #20c1dd;">Hands-on Exercises (Jobs &amp; Batch Services) - 1 hr</h3>
 <h3 style="color: #20c1dd;">Quiz (6) - 0.5 hr</h3>
+
+</td>
+</tr>
+
+
+
+<tr>
+<td>
+<h2><strong>DAY 5</strong></h2>
 </td>
 
 <td valign="top">
- 
+
 <h3 style="color: #20c1dd;">Reference Tables & CommobDB - 1 hr</h3>
+
 <ul>
 <li>CommonDB Overview &amp; Types</li>
 <li>Reference Tables</li>
@@ -190,10 +207,17 @@
 <h3 style="color: #20c1dd;">Hands-on Exercises (Reference Tables) - 1 hr</h3>
 
 <h3 style="color: #20c1dd;">Q&amp;A Session - 1 hrs</h3>
+
+</td>
+
+<td valign="top">
+<h3 style="color: #20c1dd;">Q&amp;As - 1 hr</h3>
 <h3 style="color: #20c1dd;">Certification Exam - 1.5 hr</h3>
 </td>
 
 </tr>
+
+
 
 </tbody></table>
 
