@@ -25,7 +25,7 @@
 <h2><strong>DAY 1</strong></h2>
 </td>
 
-<td>
+<td valign="top">
 
 <h3 style="color: #20c1dd;">Course Introduction</h3> 
 <ul>
@@ -53,7 +53,7 @@
   
 </td>  
 
-<td>
+<td valign="top">
 
 <h3 style="color: #20c1dd;">Fabric Main Flow (Simple LU)</h3>
 <ul>
@@ -73,7 +73,7 @@
 <h2><strong>DAY 2</strong></h2>
 </td>
 
-<td>  
+<td valign="top">  
 <h3 style="color: #20c1dd;">Fabric Min Flow (LU Properties)</h3>
 <ul>
 <li>Populations</li>
@@ -92,7 +92,7 @@
 
 </td>
   
-<td>
+<td valign="top">
 <h3 style="color: #20c1dd;">LU Enhancement (1) (Data manipulations)</h3>
 <ul>
 <li>Population Tables Mapping</li>
@@ -119,7 +119,7 @@
 <h2><strong>DAY 3</strong></h2>
 </td>
   
-<td>
+<td valign="top">
 <h3 style="color: #20c1dd;">Q&amp;As</h3>
 <h3 style="color: #20c1dd;">Hands-on Exercises - LU Enhancements (2)</h3>
 
@@ -133,7 +133,7 @@
 
 </td>
   
-<td>
+<td valign="top">
 <h3 style="color: #20c1dd;">Web Services</h3>
 <ul>
 <li>Overview </li>
@@ -161,7 +161,7 @@
 <h2><strong>DAY 4</strong></h2>
 </td>
 
-<td>
+<td valign="top">
 <h3 style="color: #20c1dd;">Q&amp;As</h3>
 <h3 style="color: #20c1dd;">Hands-on Exercises (Graphit)</h3>
 <h3 style="color: #20c1dd;">Quiz (5)</h3>
@@ -178,7 +178,7 @@
 <h3 style="color: #20c1dd;">Quiz (6)</h3>
 </td>
 
-<td>
+<td valign="top">
 <h3 style="color: #20c1dd;">Q&amp;A Session</h3>
 <h3 style="color: #20c1dd;">Certification Exam (1 hour)</h3>
 </td>
