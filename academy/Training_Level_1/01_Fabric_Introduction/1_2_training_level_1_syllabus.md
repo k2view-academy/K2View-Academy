@@ -5,16 +5,16 @@
   
 
   
-<table style="width: 900px;">
+<table style="width: 1100px;">
 <tbody>
 <tr>
 <td style="text-align: center;" width="100pxl">
 <h1><strong>Day</strong></h1>
 </td>
-<td style="text-align: center;" width="400pxl">
+<td style="text-align: center;" width="500pxl">
 <h1><strong>Morning</strong></h1>
 </td>
-<td style="text-align: center;" width="400pxl">
+<td style="text-align: center;" width="500pxl">
 <h1><strong>Afternoon</strong></h1>
 </td>
 </tr>
