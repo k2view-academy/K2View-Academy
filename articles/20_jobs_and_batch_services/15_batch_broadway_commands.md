@@ -16,7 +16,8 @@ The *FABRIC_COMMAND* parameter must be set using the Broadway command syntax as 
 
 ```BATCH <LU_TYPE> <FABRIC_COMMAND="fabric_command"> [with async=true/false;]```
 
-Example:
+**Example:**
+
 ```BATCH CUSTOMER FABRIC_COMMAND="broadway LU.SampleFlow SampleIID=?" with async=true;```
 
 Refer to the [Batch Command](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) description.
