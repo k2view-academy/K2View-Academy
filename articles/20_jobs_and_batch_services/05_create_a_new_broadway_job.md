@@ -20,7 +20,7 @@ where args consists of a json-type format string containing the parameters to be
 args=[first_param=first_value, second_param=second_value]
 ```
 
-and where EXEC_INTERVAL describes the time schedule pattern for the job. As for regular jobs, the following types of schedules are also valid for broadway jobs: [Jobs Schedules](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) 
+and where EXEC_INTERVAL describes the time schedule pattern for the job. As for regular jobs, the following types of schedules are also valid for Broadway jobs: [Schedule Types](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) 
 
 e.g. 
 ``` startjob broadway_job name='Customer.Flow1' args='A=10, B=20' EXEC_INTERVAL='00:00:10';```
