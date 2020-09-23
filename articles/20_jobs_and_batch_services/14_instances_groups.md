@@ -21,7 +21,8 @@ Result:
 
 All instances with ID values between 600 and 700 are synced into Fabric.
 
-fabric>BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance CUSTOMER.?";
+```fabric>BATCH Customer.customer_IG_600To700 FABRIC_COMMAND="sync_instance CUSTOMER.?";```
+
 ```
 |Added|Updated|Unchanged|Failed|Total|Duration|
 +-----+-------+---------+------+-----+--------+
