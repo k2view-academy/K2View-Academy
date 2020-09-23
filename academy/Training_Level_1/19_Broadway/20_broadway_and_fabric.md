@@ -15,10 +15,12 @@ You have already learnt about Broadway integration with the Fabric Studio, for e
 * Setting up the Interface Listener to invoke a Broadway flow.
 * Opening a Query Builder from DB Commands Actors to perform SQL query validations.
 
-Now let's take a look at how Broadway can be invoked by the Fabric Console. Please refer to the following:
+Now let's take a look at how Broadway can be invoked by the Fabric Console. 
+
+Please refer to the following:
 
 * Broadway command, to run a flow once to provide the LU name and flow name execution parameters after the flow has been deployed. If the flow receives external input arguments, they can be sent using param=value syntax. 
-* [A Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md), to run a flow as a Job using the Fabric Jobs mechanism to provide the LU name and the flow name execution parameters.
+* [Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md), to run a flow as a Job using the Fabric Jobs mechanism to provide the LU name and the flow name execution parameters.
 * [Batch commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md), to run a flow as a batch process to provide both the batch configuration parameters and the LU name and flow name execution parameters.
 * Consuming CDC messages by Broadway.
 
