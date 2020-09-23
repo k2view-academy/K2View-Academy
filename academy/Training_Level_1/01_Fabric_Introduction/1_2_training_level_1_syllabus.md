@@ -8,13 +8,13 @@
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td style="text-align: center;" width="80pxl">
-<h2><strong>Day</strong></h2>
+<td style="text-align: center;" width="100pxl">
+<h1><strong>Day</strong></h1>
 </td>
-<td style="text-align: center;" width="410pxl">
+<td style="text-align: center;" width="400pxl">
 <h2><strong>Morning</strong></h2>
 </td>
-<td style="text-align: center;" width="410pxl">
+<td style="text-align: center;" width="400pxl">
 <h2><strong>Afternoon</strong></h2>
 </td>
 </tr>
