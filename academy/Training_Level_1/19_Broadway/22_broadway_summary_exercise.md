@@ -1,6 +1,8 @@
 # Broadway Summary Exercise
 
-You have completed the Broadway Training where you have learned what is a Broadway flow, an Actor and a Stage. You acquired the knowledge and saw the examples of how to:
+You have completed the Broadway Training where you have learned what is a Broadway flow, an Actor and a Stage. 
+
+You acquired the knowledge and saw the examples of how to:
 
 * Create a flow which includes several Stages with one or more Actors at each step. 
 * Utilize the existing built-in Actors and extend them via the internal inheritance mechanism.
@@ -64,16 +66,22 @@ b. b. Create a **Local File System** Interface and locate the CSV file into the 
 7. Set the transaction at Stages 2 and 3. 
 8. Save the flow and run it. Verify that the table is populated with the **EMPLOYEE_LOOKUP** data.
 
+**Question 1:**
+
+What should be changed in order that the flow will be invoked from the Interface Listener?
+
 **Step 2 - Create an LU, Lookup Data & Add It Into a Population**
 
 1. Create a new **SummaryExercise** LU:
 
    * DB Connection: CRM_DB.
-   * Schema: Customer (root table), Address and Contract
+   * Schema: Customer (root table), Address, Contract and Subscriber.
 
 2. Modify Customer LU table:
 
    * Add two new columns: FULL_NAME (Text) and IS_EMP (Integer).
+
+   ![image](images/exam_schema.PNG)
 
 3. In the **Customer.population** flow:
 
@@ -81,34 +89,32 @@ b. b. Create a **Local File System** Interface and locate the CSV file into the 
 
    * Add a **Concat** Actor to the empty Stage 1 and using it concatenate the FIRST_NAME and the LAST_NAME of the **Query** Actor's output. Connect the **Concat** Actor's output to the CUSTOMER **DbLoad** Actor's input.
 
-   * Add a **DbCommand** Actor to Stage 1 and rename it to **Lookup**. Define the Actor's interface = **fabric**. Write the query:
+   * Add a **DbCommand** Actor to Stage 1 and rename it to **Lookup**. Define the Actor's interface = **fabric**. Write the following query in order to check if the customer exists in the **EMPLOYEE_LIST** table.
 
      ~~~sql
      SELECT COUNT(*) AS IS_EMP FROM EMPLOYEE_LIST
      WHERE emp_name = ${emp_name}
      ~~~
 
-     To check if the customer exists in the **EMPLOYEE_LIST** table.
-
    * Connect the  **Query** Actor's FIRST_NAME to the newly created **emp_name** input argument of the **Lookup** Actor.
 
-   * Add a Stage 2 after Stage 1 and add a **JavaScript** Actor. Add a **res** input argument to it and connect it with the **result** output argument of the **Lookup** Actor. Write in the script:
+   * Add a Stage 2 after Stage 1 and add a **JavaScript** Actor. Add a **res** input argument to it and connect it with the **result** output argument of the **Lookup** Actor. Write in the following script to return either 1 or 0. 
 
-     ~~~javascript
+     ~~~ javascript
      res.IS_EMP;
      ~~~
 
-     To return either 1 or 0. Connect the **JavaScript** Actor's output with IS_EMP input of the  CUSTOMER **DbLoad** Actor using the **First** link type.
+   * Connect the **JavaScript** Actor's output with IS_EMP input of the  CUSTOMER **DbLoad** Actor using the **First** link type.
 
 4. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. 
 
-**Question 1:**
+**Question 2:**
 
 What should be changed in the flow in order to have the following population logic:
 
 * If the customer is an employee (meaning the customer is found in the EMPLOYEE_LIST table), populate the EMP_ID into the CUSTOMER LU table. Otherwise - set it to 0.
 
-**Question 2:**
+**Question 3:**
 
 What should be changed in the flow in order to have the following population logic:
 
@@ -172,7 +178,7 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 
 5. Save the flow, deploy the **SummaryExercise** LU and run the flow with different input values. Validate the output.
 
-**Question 3**:
+**Question 4**:
 
 * Does the JavaScript Actor iterate over the whole CSV file? Explain.
 
@@ -194,7 +200,7 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 6. Add another **exerciseDateFormat** Actor and connect it to the TO_DATE columns.
 7. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
-**Question 4**:
+**Question 5**:
 
 * Is it possible to modify the input/output arguments setting of the inherited Actor? If yes - how and does it impact other instances of the same Actor?
 
@@ -206,15 +212,15 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
    input1 != "Roaming special"
    ~~~
 
-   * Add a new input1 input argument and connect it to CONTRACT_DESCRIPTION column of the **Query** Actor's output using the **Iterate** link type.
+2. Add a new **input1** input argument to the  **JavaScript** Actor and connect it to CONTRACT_DESCRIPTION column of the **Query** Actor's output using the **Iterate** link type.
 
-2. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it.  Connect the Actor's input to the **Query** Actor's output using the **Iterate** link type.
+3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using the **Iterate** link type.
 
-3. Split the LU Table Stage too and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the  **JsonStringify** Actor's output. 
+4. Split the LU Table Stage too and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the  **JsonStringify** Actor's output. 
 
-4. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
+5. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
-**Question 5**:
+**Question 6**:
 
 Explain the purpose of this split and what changes in the LU data.
 

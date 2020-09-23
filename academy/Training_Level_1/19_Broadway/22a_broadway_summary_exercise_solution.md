@@ -2,11 +2,17 @@
 
 **Step 1 - Create a Common Table and Populate it Using Broadway Flow**
 
+**Question 1:**
+
+a. Modify the input arguments of the **FileRead** Actor to make them External.
+
+b. Create an Interface Listener on the **Local File System** Interface for the **SummaryExercise** LU and attach it to the **EmployeeLookupPopulation** flow.
+
 ![image](images/exam_0.PNG)
 
 **Step 2 - Create an LU, Lookup Data & Add It Into a Population**
 
-**Question 1:**
+**Question 2:**
 
 a. Modify the SQL statement in the **Lookup** Actor to:
 
@@ -16,7 +22,7 @@ select COUNT(*) AS IS_EMP, EMP_ID
 
 b. Modify the **JavaScript** Actor to return **res.EMP_ID** if IS_EMP > 0, otherwise **0**.
 
-**Question 2:**
+**Question 3:**
 
 a. Add an Error Handler **JavaScript** Actor to Stage 2 with the following script:
 
@@ -40,7 +46,7 @@ res.EMP_ID
 
 **Step 3 - Read Data from File**
 
-**Question 3:**
+**Question 4:**
 
 The JavaScript Actor exists the loop once the required value is found. This is due to the following script line:
 
@@ -54,7 +60,7 @@ contextLoop.stop();
 
 **Step 5 - Use Actor Inheritance in the Flow**
 
-**Question 4:**
+**Question 5:**
 
 Yes, if the inherited Actor needs to be modifies, do **Export Actor** again and use **Override current** option. The change then will impact all the existing instances of the inherited Actor.
 
@@ -62,7 +68,7 @@ Yes, if the inherited Actor needs to be modifies, do **Export Actor** again and 
 
 **Step 6 - Split the Stages and Write into File**
 
-**Question 5**:
+**Question 6**:
 
 The purpose is to split the data based on the condition. The contracts with type "Roaming special" will be written into the file, while all other contracts will be populated in the LU.
 
