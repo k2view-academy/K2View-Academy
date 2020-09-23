@@ -12,11 +12,13 @@ In addition, this process can benefit from all [Batch configuration parameters](
 
 
 ## Broadway Batch Commands
-The *FABRIC_COMMAND* parameter must be set using the usual [Broadway command](/articles/19_Broadway/17_tutorial_and_flow_examples.md) syntax.
+The *FABRIC_COMMAND* parameter must be set using the Broadway command syntax as described below:
+```BATCH <LU_TYPE> <FABRIC_COMMAND="fabric_command"> [with async=true/false;]```
 
 Example:
 ```BATCH CUSTOMER FABRIC_COMMAND="broadway LU.SampleFlow SampleIID=?" with async=true;```
 
+Refer to the [Batch Command](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-commands-summary) description.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/14_instances_groups.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)
