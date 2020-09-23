@@ -98,7 +98,7 @@
 <ul>
 <li>Population Tables Mapping</li>
 <li>Hands-on Exercises</li>
-<li>Functions Development<ul>
+<li>Functions Development</li>
 <li>Built-in, Root, DB &amp; Enrichment Functions </li>
 </ul>
   
