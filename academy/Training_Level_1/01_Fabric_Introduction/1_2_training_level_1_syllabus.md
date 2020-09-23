@@ -22,7 +22,7 @@
 <tr>
 
 <td style="text-align: center;">
-<strong>Day 1</strong>
+<h2><strong>DAY 1</strong></h2>
 </td>
 
 <td>
