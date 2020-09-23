@@ -18,7 +18,7 @@ Please proceed to the summary exercise to apply your knowledge.
 
 ### Summary Exercise Steps
 
-**Step 1 - Create a Common Table and Populate it Using Broadway Flow.**
+**Step 1 - Create a Common Table and Populate it Using Broadway Flow**
 
 Prior to starting this exercise, do the following:
 
