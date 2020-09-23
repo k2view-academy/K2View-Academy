@@ -1,6 +1,6 @@
 # Broadway Summary Exercise - Solution
 
-**Step 1 - Create a Common Table and Commit the Data.**
+**Step 1 - Create a Common Table and Populate it Using Broadway Flow**
 
 ![image](images/exam_0.PNG)
 
