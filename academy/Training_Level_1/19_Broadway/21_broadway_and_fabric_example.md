@@ -1,6 +1,6 @@
 # Broadway and Fabric - Examples
 
-### ![info](/academy/images/example.png)Example 1 - Run a Flow via the Broadway Command
+### ![info](/academy/images/example.png)Example 1 - Run a Flow using the Broadway Command
 
 In this example you can use the **CheckNegative** Broadway flow which you created in [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md) or create a new flow.
 

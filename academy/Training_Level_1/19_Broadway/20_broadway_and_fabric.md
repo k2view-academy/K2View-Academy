@@ -12,10 +12,10 @@ By the end of this learning item you will:
 
 You have learned about the Broadway and its various features accessible via the Fabric Studio. Now let's take a look at how Broadway can be invoked by the Fabric Console. Please refer to the following:
 
-* [Running a Broadway flow as a Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md) - the Fabric Jobs mechanism enables running a flow providing the execution parameters (LU name and the flow name).
-* [Batch commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) - ability to run a flow as a batch process providing the batch configuration parameters as well as the execution parameters (LU name and the flow name).
 * A Broadway command - ability to run a flow once providing the execution parameters (LU name and the flow name) once the flow has been deployed. If the flow receives external input arguments, they can be sent using the param=value syntax. 
-* [Consuming CDC messages by Broadway] => Tali
+* [A Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md) -  ability to run a flow as a Job using the Fabric Jobs mechanism by providing the execution parameters (LU name and the flow name).
+* [Batch commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) - ability to run a flow as a batch process providing the batch configuration parameters as well as the execution parameters (LU name and the flow name).
+* Consuming CDC messages by Broadway.
 
 
 
