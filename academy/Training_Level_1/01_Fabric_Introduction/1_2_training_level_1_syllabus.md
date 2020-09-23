@@ -1,95 +1,192 @@
-# Level 1 Training  Syllabus
 
-![](/academy/Training_Level_1/01_Fabric_Introduction/images/syllabus.png) 
-
-## **DAY 1 – Morning**  
-### Course Introduction
-  - Course Overview & Main Objectives
-  - Course User Story
-  - Fabric Installation
-### Fabric Introduction
-  - Fabric Overview
-  - Fabric Use Cases
-### Fabric Architecture Overview
-  - Components
-  - Data Flows
-  - Security / Resiliency
-### Quiz (1)
-<br></br>
-## **DAY 1 – Afternoon**
-### Fabric Main Flow (Simple LU)
-  - Fabric Main Flow Overview
-  - Create a Fabric Project
-  - Interfaces Definition and Query Builder
-  - Logical Unit Flow
-<br><br><br></br></br></br>    
-   
-   
-## **DAY 2 – Morning** 
-### Fabric Min Flow (LU Properties)
-  - Populations
-  - Sync Strategies
-### Quiz (2)
-### Fabric Runtime
-  - Overview
-  - Getting Started with Fabric Server
-  - Fabric Deployment
-  - Fabric Basic Commands
-  - Cassandra Main Keyspaces & Commands
-<br></br> 
-## **DAY 2 – Afternoon**  
-### LU Enhancement (1) (Data manipulations)
-  - Population Tables Mapping
-  - Hands-on Exercises
-  - Functions Development
-    - Built-in, Root, DB & Enrichment Functions 
-  - Hands-on Exercises
-### LU Enhancement (2)
-  - Lookup, Translation Tables & Global Variables
-  - Sync Modes
-<br><br><br></br></br></br>
-## **DAY 3 – Morning**  
-### Q&As
-### Hands-on Exercises (LU Enhancements)
-  -  Functions, Lookup, Translation & Globals
-### Deploy & Project Validation
-  - Decision Functions
-  - Implementation Changes & Re-deployment
-  - Server-side
-### Quiz (3)
-<br></br>  
-## **DAY 3 – Afternoon**
-### Web Services
-  - Overview 
-  - Create and Deploy a Web Service
-  - Invoking a Web Service
-  - Response Codes & Verbs
-### Hands-on Exercises (Web Services) 
-### Quiz (4)
-### Graphit Utility
-  - Overview
-  - Graphit nodes
-  - Graphit & Java
-  - Invoking Graphit
-<br><br><br></br></br></br> 
-## **DAY 4 – Morning** 
-### Q&As
-### Hands-on Exercises (Graphit) 
-### Quiz (5)
-### Jobs & Batch Services
-  - Jobs Overview & Types
-  - Jobs Commands and Configuration
-  - Fabric Affinity
-  - Batch Overview & Types
-  - Batch Commands and Configuration
-### Hands-on Exercises (Jobs & Batch Services)
-### Quiz (6)
-<br></br>
-## **DAY 4 – Afternoon** 
-### Q&A Session
-### Certification Exam (1 hour)
-<br><br><br></br></br></br>  
+<p><img alt="" src="/academy/Training_Level_1/01_Fabric_Introduction/images/syllabus.png" /> </p>
   
+<h1>Level 1 - Fabric Basics - Training Syllabus</h1>
+  
+
+  
+<table style="width: 900px;">
+<tbody>
+<tr>
+<td style="text-align: center;" width="80pxl">
+<h2><strong>Day</strong></h2>
+</td>
+<td style="text-align: center;" width="410pxl">
+<h2><strong>Morning</strong></h2>
+</td>
+<td style="text-align: center;" width="410pxl">
+<h2><strong>Afternoon</strong></h2>
+</td>
+</tr>
+  
+<tr>
+
+<td style="text-align: center;">
+<strong>Day 1</strong>
+</td>
+
+<td>
+
+<h3 style="color: #20c1dd;">Course Introduction</h3> 
+<ul>
+<li>Course Overview &amp; Main Objectives</li>
+<li>Course User Story</li>
+<li>Fabric Installation</li>
+</ul>
+
+<h3 style="color: #20c1dd;">Fabric Introduction</h3>
+<ul>
+<li>Fabric Overview</li>
+<li>Fabric Use Cases</li>
+</ul>
+
+<h3 style="color: #20c1dd;">Fabric Architecture Overview</h3>
+<ul>
+<li>Components</li>
+<li>Data Flows</li>
+<li>Security/Resiliency</li>
+</ul>
+
+<ul>
+<h3 style="color: #20c1dd;">Quiz (1)</h3>
+</ul>
+  
+</td>  
+
+<td>
+
+<h3 style="color: #20c1dd;">Fabric Main Flow (Simple LU)</h3>
+<ul>
+<li>Fabric Main Flow Overview</li>
+<li>Create a Fabric Project</li>
+<li>Interfaces Definition and Query Builder</li>
+<li>Logical Unit Flow</li>
+</ul>
+
+</td>
+</tr>  
+
+
+  
+<tr>
+<td>
+<h2><strong>DAY 2</strong></h2>
+</td>
+
+<td>  
+<h3 style="color: #20c1dd;">Fabric Min Flow (LU Properties)</h3>
+<ul>
+<li>Populations</li>
+<li>Sync Strategies</li>
+</ul>
+<h3 style="color: #20c1dd;">Quiz (2)</h3>
+
+<h3 style="color: #20c1dd;">Fabric Runtime</h3>
+<ul>
+<li>Overview</li>
+<li>Getting Started with Fabric Server</li>
+<li>Fabric Deployment</li>
+<li>Fabric Basic Commands</li>
+<li>Cassandra Main Keyspaces &amp; Commands</li>
+</ul>
+
+</td>
+  
+<td>
+<h3 style="color: #20c1dd;">LU Enhancement (1) (Data manipulations)</h3>
+<ul>
+<li>Population Tables Mapping</li>
+<li>Hands-on Exercises</li>
+<li>Functions Development<ul>
+<li>Built-in, Root, DB &amp; Enrichment Functions </li>
+<li>Hands-on Exercises</li>
+</ul>
+
+
+<h3 style="color: #20c1dd;">LU Enhancement (2)</h3>
+<ul>
+<li>Lookup, Translation Tables &amp; Global Variables</li>
+<li>Sync Modes</li>
+</ul>
+ 
+</td>
+</tr>  
+  
+
+<tr>  
+
+<td>
+<h2><strong>DAY 3</strong></h2>
+</td>
+  
+<td>
+<h3 style="color: #20c1dd;">Q&amp;As</h3>
+<h3 style="color: #20c1dd;">Hands-on Exercises - LU Enhancements (2)</h3>
+
+<h3 style="color: #20c1dd;">Deploy &amp; Project Validation</h3>
+<ul>
+<li>Decision Functions</li>
+<li>Implementation Changes &amp; Re-deployment</li>
+<li>Server-side</li>
+</ul>
+<h3 style="color: #20c1dd;">Quiz (3)</h3>
+
+</td>
+  
+<td>
+<h3 style="color: #20c1dd;">Web Services</h3>
+<ul>
+<li>Overview </li>
+<li>Create and Deploy a Web Service</li>
+<li>Invoking a Web Service</li>
+<li>Response Codes &amp; Verbs</li>
+</ul>
+
+<h3 style="color: #20c1dd;">Hands-on Exercises (Web Services)</h3>
+<h3 style="color: #20c1dd;">Quiz (4)</h3>
+<h3 style="color: #20c1dd;">Graphit Utility</h3>
+
+<ul>
+<li>Overview</li>
+<li>Graphit nodes</li>
+<li>Graphit &amp; Java</li>
+<li>Invoking Graphit</li>
+</ul>
+
+</td>
+</tr>
+  
+<tr>
+<td>
+<h2><strong>DAY 4</strong></h2>
+</td>
+
+<td>
+<h3 style="color: #20c1dd;">Q&amp;As</h3>
+<h3 style="color: #20c1dd;">Hands-on Exercises (Graphit)</h3>
+<h3 style="color: #20c1dd;">Quiz (5)</h3>
+<h3 style="color: #20c1dd;">Jobs &amp; Batch Services</h3>
+<ul>
+<li>Jobs Overview &amp; Types</li>
+<li>Jobs Commands and Configuration</li>
+<li>Fabric Affinity</li>
+<li>Batch Overview &amp; Types</li>
+<li>Batch Commands and Configuration</li>
+</ul>
+ 
+<h3 style="color: #20c1dd;">Hands-on Exercises (Jobs &amp; Batch Services)</h3>
+<h3 style="color: #20c1dd;">Quiz (6)</h3>
+</td>
+
+<td>
+<h3 style="color: #20c1dd;">Q&amp;A Session</h3>
+<h3 style="color: #20c1dd;">Certification Exam (1 hour)</h3>
+</td>
+
+</tr>
+
+</body></html>
+
   
   
     
