@@ -1,12 +1,12 @@
 # Broadway and Fabric - Examples
 
-### ![info](/academy/images/example.png)Example 1 - Run a Flow using the Broadway Command
+### ![info](/academy/images/example.png)Example 1 - Running a Flow using a Broadway Command
 
-In this example you can use the **CheckNegative** Broadway flow which you created in [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md) or create a new flow.
+In this example you can either use the **CheckNegative** Broadway flow you created in [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md) or create a new flow.
 
-1. Deploy the LU which includes the flow definition. 
-   * If the flow is created under the Shared Objects, deploy any LU, for example CRM LU.
-2. Open the Fabric Console and run the **Broadway** command twice, providing different input.
+1. Deploy an LU that includes the flow definitions. 
+   * If the flow is created under Shared Objects, deploy any LU, for example CRM LU.
+2. Open the Fabric Console and run the **Broadway** command twice using different input.
 
 ~~~
 fabric>broadway CRM.CheckNegative a = "-10";
@@ -18,7 +18,7 @@ fabric>broadway CRM.CheckNegative a = 10;
 |date  |2020-09-22 12:08:12.620|
 ~~~
 
-3. Check that the flow results are as expected.
+3. Check that the flow's results are as expected.
 
 
 
