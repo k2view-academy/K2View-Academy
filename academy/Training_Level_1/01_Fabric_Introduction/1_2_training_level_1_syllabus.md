@@ -12,10 +12,10 @@
 <h1><strong>Day</strong></h1>
 </td>
 <td style="text-align: center;" width="400pxl">
-<h2><strong>Morning</strong></h2>
+<h1><strong>Morning</strong></h1>
 </td>
 <td style="text-align: center;" width="400pxl">
-<h2><strong>Afternoon</strong></h2>
+<h1><strong>Afternoon</strong></h1>
 </td>
 </tr>
   
@@ -61,6 +61,7 @@
 <li>Create a Fabric Project</li>
 <li>Interfaces Definition and Query Builder</li>
 <li>Logical Unit Flow</li>
+<li>Fabric Main Flow Exercises</li>  
 </ul>
 
 </td>
@@ -74,7 +75,7 @@
 </td>
 
 <td valign="top">  
-<h3 style="color: #20c1dd;">Fabric Min Flow (LU Properties)</h3>
+<h3 style="color: #20c1dd;">Fabric Main Flow (LU Properties)</h3>
 <ul>
 <li>Populations</li>
 <li>Sync Strategies</li>
@@ -88,6 +89,7 @@
 <li>Fabric Deployment</li>
 <li>Fabric Basic Commands</li>
 <li>Cassandra Main Keyspaces &amp; Commands</li>
+<li>Fabric Server Exercises</li>
 </ul>
 
 </td>
