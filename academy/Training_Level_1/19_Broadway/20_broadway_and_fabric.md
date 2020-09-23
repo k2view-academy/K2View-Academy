@@ -10,21 +10,21 @@ By the end of this learning item you will:
 
 ### Overview
 
-You have already learned about the Broadway integration with the Fabric Studio, for example:
-* Creating and running a flow to serve as LU table population.
+You have already learnt about Broadway integration with the Fabric Studio, for example:
+* Creating and running a flow to serve as an LU table population.
 * Setting up the Interface Listener to invoke a Broadway flow.
 * Opening a Query Builder from DB Commands Actors to perform SQL query validations.
 
 Now let's take a look at how Broadway can be invoked by the Fabric Console. Please refer to the following:
 
-* A Broadway command - ability to run a flow once providing the execution parameters (LU name and the flow name) once the flow has been deployed. If the flow receives external input arguments, they can be sent using the param=value syntax. 
-* [A Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md) -  ability to run a flow as a Job using the Fabric Jobs mechanism by providing the execution parameters (LU name and the flow name).
-* [Batch commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md) - ability to run a flow as a batch process providing the batch configuration parameters as well as the execution parameters (LU name and the flow name).
+* Broadway command, to run a flow once to provide the LU name and flow name execution parameters after the flow has been deployed. If the flow receives external input arguments, they can be sent using param=value syntax. 
+* [A Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md), to run a flow as a Job using the Fabric Jobs mechanism to provide the LU name and the flow name execution parameters.
+* [Batch commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md), to run a flow as a batch process to provide both the batch configuration parameters and the LU name and flow name execution parameters.
 * Consuming CDC messages by Broadway.
 
 
 
-Now let's see few examples that will demonstrate the above Broadway features.
+Now let's see some examples that demonstrate the above Broadway features.
 
 
 
