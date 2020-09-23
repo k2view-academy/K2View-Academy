@@ -31,9 +31,25 @@ The Job Process then launches the batch command which, in turn, is executed thro
 ## **Scheduling Batch Processes**
 
 
-To schedule a Batch process to be executed either at a given time or recurrently, a scheduled Job process must be created, using a user job, containing the batch command that needs to be repeatedly invoked. 
+To schedule that a Batch process be executed either at a given time or recurrently, a scheduled Job process must be created. This can be achieved using a user job, containing the batch command that needs to be repeatedly invoked. 
 
-This consists in creating a Job that calls a Batch process which in turn creates multiple or scheduled one-time Jobs (each one parametered with the execution settings parsed in the Batch command).
+Basically, this consists in creating a scheduled Job that calls a Batch process - which in turn will create multiple or scheduled one-time Jobs (each one parametered thanks to the execution settings parsed in the Batch command).
+
+The illustration below describes the following steps:
+
+### Step 1 
+User defines a job scheduled job to run a specific batch command. 
+Fabric assigns a job process for this batch command.
+
+### Step 2 
+The dedicated job runs the scheduled or multiple instances of the batch command.
+The Batch process triggers a new (temporary) job dedicated for this specific process as described in the [section above](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#fabric-batch-processes-flow).  
+The new job runs the batch command.
+
+### Step 3
+The Jobs table is updated for next run and the dedicated job will wait for the next instance of the scheduled batch process.
+
+
 
 <img src="/articles/20_jobs_and_batch_services/images/14_jobs_and_batch_services_scheduled_batch_process.PNG">
 
