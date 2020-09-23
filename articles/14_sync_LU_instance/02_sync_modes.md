@@ -75,7 +75,7 @@ To avoid checking each LUI, Fabric implements Sync ON mode only on the first GET
 SYNC_PROTECTION can be edited in the config.ini file: 
 1.	The default value is zero. Fabric implements Sync ON mode only on the first request.
 2.	If this parameter is set to -1, Sync ON protection is disabled and Fabric implements Sync ON mode on each request.
-3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request, run in Sync ON mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to OFF.
+3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request, run in Sync OFF mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to ON.
 
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
 The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
