@@ -97,8 +97,8 @@
 <h3 style="color: #20c1dd;">LU Enhancement (1) (Data manipulations)</h3>
 <ul>
 <li>Population Tables Mapping</li>
-<li>Functions Development</li>
-  <li><ul>Built-in Functions</ul><ul>Root, DB &amp; Functions</ul><ul>Enrichment Functions</ul></li>
+<li>Functions Development <ul>Built-in Functions</ul><ul>Root, DB &amp; Functions</ul><ul>Enrichment Functions</ul></li>
+
 </ul>
   
 <h3 style="color: #20c1dd;">Hands-on Exercises - LU Enhancements (1)</h3>
