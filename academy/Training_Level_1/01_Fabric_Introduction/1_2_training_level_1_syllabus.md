@@ -108,7 +108,7 @@
 <h3 style="color: #20c1dd;">LU Enhancement (2) - 1 hr</h3>
 <ul>
 <li>Lookup, Translation Tables &amp; Global Variables</li>
-<li>Sync Modes</li>
+<li>Sync Modes & Methods</li>
 </ul>
  
 </td>
