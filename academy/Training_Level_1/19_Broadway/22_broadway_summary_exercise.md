@@ -14,11 +14,28 @@ You have completed Broadway Training and learnt about a Broadway flow, an Actor 
 
 Now let’s go to the following exercise which summarizes what you have learnt.
 
+In this exercise you will do the following:
+
+* Create a reference table and populate it using a Broadway flow.
+* Create a Logical Unit including 4 tables whereby all of them will be populated by Broadway flows.
+* Perform data manipulations using various Actors, for example:
+  * Lookup the data from a reference table.
+  * Concatenate the values of separate columns. 
+  * Update the data format.
+  * Read data from a file and write into a file.
+* Practice various Broadway features such as:
+  * Inner flow.
+  * Transactions.
+  * Error Handling.
+  * Setup SFTP listener.
+* Perform Fabric commands via Broadway.
+* Publish the data from Fabric to Kafka topic.
+
 
 
 ### Summary Exercise Steps
 
-**Step 1 - Create a Common Table and Populate it Using a Broadway Flow**
+**Step 1 - Create a Reference Table and Populate it Using a Broadway Flow**
 
 Before starting this exercise, do the following:
 
@@ -60,13 +77,15 @@ b. Create a **Local File System** interface and locate the CSV file into the **W
 3. Add a **FileRead** Actor and set its **interface** to the local file system interface you created prior to this exercise. Set its path to **emp_list_lookup.csv**. 
 4. Add a **CsvParser** Actor to the next Stage and connect it to the **FileRead** Actor.
 5. Add a **DbLoad** Actor to the next Stage, connect its **interface** to **fabric** and its table to **EMPLOYEE_LOOKUP**. 
-6. Connect the fields using an **Iterate** link.
-7. Set the transaction in Stages 2 and 3. 
+6. Connect the fields using an **Iterate** link type.
+7. Mark the Stages 2 and 3 as **Transaction**. 
 8. Save the flow and run it. Verify that the table is populated with the **EMPLOYEE_LOOKUP** data.
 
 **Question 1:**
 
-**Step 2 - Create an LU and Lookup Data and Add them to a Population**
+What should be changed in the flow to support the automatic file upload to the reference table, once it is copied to an interface?
+
+**Step 2 - Create an LU and Make the Data Modifications a Customer Population**
 
 1. Create a new **SummaryExercise** LU:
 
@@ -79,11 +98,11 @@ b. Create a **Local File System** interface and locate the CSV file into the **W
 
    ![image](images/exam_schema.PNG)
 
-3. In the **Customer.population** flow:
+3. Perform data manipulations in the **Customer.population** flow as follows:
 
    * Modify the CUSTOMER **DbLoad** Actor by adding two new fields to the **fields** input arguments.
 
-   * Add a **Concat** Actor to the empty Stage 1 and use it to concatenate the FIRST_NAME and the LAST_NAME of the **Query** Actor's output. Connect the **Concat** Actor's output to the CUSTOMER **DbLoad** Actor's input. 
+   * Add a **Concat** Actor to the empty Stage 1 and use it to concatenate the FIRST_NAME and the LAST_NAME of the **Query** Actor's output. Connect the **Concat** Actor's output to the FULL_NAME of the CUSTOMER **DbLoad** Actor's input. 
 
    * Add a **DbCommand** Actor to Stage 1 and rename it **Lookup**. Define the Actor's interface = **fabric**. Write the following query to check that the customer exists in the **EMPLOYEE_LIST** table.
 
@@ -104,19 +123,19 @@ b. Create a **Local File System** interface and locate the CSV file into the **W
 
 4. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. 
 
-**Question 2:**
+**Question 2a:**
 
 What should be changed in the flow to get the following population logic:
 
-* If the customer is an employee whereby their name is in the EMPLOYEE_LIST table, populate the EMP_ID into the CUSTOMER LU table. Otherwise, set it to 0.
+* If the customer is an employee, populate the EMP_ID into the IS_EMP column of the CUSTOMER LU table. Otherwise, set it to 0.
 
-**Question 3:**
+**Question 2b:**
 
 What should be changed in the flow to get the following population logic:
 
-* If the customer is not an employee whereby their name is not in the EMPLOYEE_LIST table, throw an error. Otherwise continue and populate the EMP_ID into the CUSTOMER LU table.
+* If the customer is not an employee, throw an error. Otherwise continue and populate the EMP_ID into the IS_EMP column of the CUSTOMER LU table.
 
-**Step 3 - Read Data from the File**
+**Step 3 - Create a Flow that Reads Data from the File and Searches for a Value**
 
 Prior to starting this exercise, do the following:
 
@@ -174,33 +193,39 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 
 5. Save the flow, deploy the **SummaryExercise** LU and run the flow with different input values. Validate the output.
 
-**Question 4**:
+**Question 3**:
 
-* Does the JavaScript Actor iterate over the entire CSV file? Explain.
+Does the **JavaScript** Actor iterate over the entire CSV file? Explain.
 
-**Step 4 - Add an Inner Flow to the Population**
+**Step 4 - Create an Inner Flow and Add it to the Subscriber Population**
 
-1. Open the **lookupSubscType** flow and save it as an Actor.
+1. Save the **lookupSubscType** flow as an Actor.
 2. Open the **Subscriber.population** flow and add the **lookupSubscType_Actor** to the empty Stage 1. 
-3. Connect its input to the SUBSCRIBER_TYPE column of the **Query** Actor's output using an **Iterate** link.
+3. Connect its input to the SUBSCRIBER_TYPE column of the **Query** Actor's output using an **Iterate** link type.
 4. Connect its output to the SUBSCRIBER_TYPE column of the SUBSCRIBER **DbLoad** Actor's input.
 5. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Subscriber LU table.
 
-**Step 5 - Use Actor Inheritance in the Flow**
+**Question 4:**
+
+Please describe the impact of adding the inner flow on the target population.
+
+What happens if the value is not found in the CSV file?
+
+**Step 5 - Use Actor Inheritance in the Contract Population**
 
 1. Open the **Contract.population** flow and add a **DateFormat** Actor to the empty Stage 1.  
 2. Set the **format** to 'dd-MM-yy' and the **tz** to GMT. 
 3. Export the Actor by setting the **format** to **final**. Name the new Actor **exerciseDateFormat**. 
-4. Connect the **exerciseDateFormat** Actor to the FROM_DATE column of the **Query** Actor's output using an **Iterate** link.
+4. Connect the **exerciseDateFormat** Actor to the FROM_DATE column of the **Query** Actor's output using an **Iterate** link type.
 5. Connect its output to the FROM_DATE column of the CONTRACT **DbLoad** Actor's input.
 6. Add another **exerciseDateFormat** Actor and connect it to the TO_DATE columns.
 7. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
 **Question 5**:
 
-* Can the inherited Actor's input / output argument settings be modified? If yes, how and does this impact other instances of the same Actor?
+Can the inherited Actor's input / output argument settings be modified? If yes, how and does this impact other instances of the same Actor?
 
-**Step 6 - Split the Stages and Write into the File**
+**Step 6 - Split the Stages, Set the Condition and Write Data into the File**
 
 1. Split Stage 1 and add a Stage condition to it using a **JavaScript** Actor with the following script:
 
@@ -208,9 +233,9 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
    input1 != "Roaming special"
    ~~~
 
-2. Add an **input1** input argument to the  **JavaScript** Actor and connect it to the CONTRACT_DESCRIPTION column of the **Query** Actor's output using an **Iterate** link.
+2. Add an **input1** input argument to the  **JavaScript** Actor and connect it to the CONTRACT_DESCRIPTION column of the **Query** Actor's output using an **Iterate** link type.
 
-3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link.
+3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link type.
 
 4. Split the LU Table Stage and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the  **JsonStringify** Actor's output. 
 
@@ -220,6 +245,30 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 
 Explain the purpose of this split and what changes in the LU data.
 
+**Step 7 - Publish the Customer Data to Kafka Topic**
 
+Prior to starting this exercise, create a **Kafka** interface to connect to Apache Kafka server and set the **Data Type** to **JSON**.
+
+1. Create a new **publishCustomer** flow.
+
+2. Add a **FabricGet** Actor to Stage 1 and do the following:
+
+   * Set the **luType** input argument to **SummaryExercise** and iid to **External** population type.
+
+3. Add a **DbCommand** Actor to Stage 2 and do the following:
+
+   * Set its **interface** to **fabric** and populate its **sql** input argument with the following query:
+
+   ~~~sql
+   SELECT * FROM CUSTOMER
+   ~~~
+
+4. Add a **Publish** Actor to Stage 3 and connect its **message** to the **result** of **DbCommand**. Set the interface to the **Kafka** interface which you created earlier.
+
+5. Save all the changes, deploy the **SummaryExercise** LU and run the flow.
+
+**Question 7:**
+
+What should be changed in order to publish the Customer's data to the Kafka topic as part of the SYNC process?
 
 [![Previous](/articles/images/Previous.png)](21_broadway_and_fabric_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](22a_broadway_summary_exercise_solution.md)
