@@ -1,6 +1,6 @@
 # Broadway Flow as a Population
 
-### ![](/academy/images/Exercise.png)Exercise - Creating a Broadway Flow Based Population
+### ![](/academy/images/Exercise.png)Exercise 1 - Creating a Broadway Flow Based Population
 
 In this exercise you will do the following:
 

@@ -69,6 +69,7 @@
 <li>Exercises:
 <ul>
 <li>Create a flow for an LU table population</li>
+<li>Populate an LU table using an HTTP call</li>
 <li>Define an Interface listener for a flow</li>
 </ul>
 </li>
@@ -112,6 +113,7 @@
 </tr>
 </tbody>
 </table>
+
 
 
 
