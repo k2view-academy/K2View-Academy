@@ -30,7 +30,7 @@ a. Add an Error Handler **JavaScript** Actor to Stage 2 with the following scrip
 res != null 
 ~~~
 
-b. Add another JavaScript Actor with the following error message:
+b. Add another **JavaScript** Actor with the following error message:
 
 ~~~javascript
 throw "Not in EMPLOYEE table!!!"
@@ -44,11 +44,11 @@ res.EMP_ID
 
 ![image](images/exam_1.PNG)
 
-**Step 3 - Read Data from the File**
+**Step 3 - Read the Data from the File**
 
 **Question 4:**
 
-The **JavaScript** Actor exits the loop once the required value is found, due to the following script line:
+The **JavaScript** Actor exits the loop once the required value is found due to the following script line:
 
 ~~~javascript
 contextLoop.stop();
@@ -58,11 +58,11 @@ contextLoop.stop();
 
 ![image](images/exam_2.PNG)
 
-**Step 5 - Use an Actor Inheritance in the Flow**
+**Step 5 - Use Actor Inheritance in the Flow**
 
 **Question 5:**
 
-Yes, if the inherited Actor needs to be modified, use the **Export Actor** again with the **Override current** option. The change impacts all the existing instances of the inherited Actor.
+Yes, if the inherited Actor needs to be modified, use the **Export Actor** again with the **Override current** option. The change impacts all existing instances of the inherited Actor.
 
 ![image](images/exam_3.PNG)
 
@@ -70,7 +70,7 @@ Yes, if the inherited Actor needs to be modified, use the **Export Actor** again
 
 **Question 6**:
 
-The purpose is to split the data based on the condition. The **Roaming special** contracts types are written into the file, while all other contracts are populated in the LU.
+The purpose is to split the data based on the condition. **Roaming special** contracts types are written into the file and all other contracts are populated in the LU.
 
 ![image](images/exam_4.PNG)
 
