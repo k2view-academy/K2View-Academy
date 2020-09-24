@@ -22,7 +22,7 @@ Please refer to the following:
 * Broadway command, to run a flow once to provide the LU name and flow name execution parameters after the flow has been deployed. If the flow receives external input arguments, they can be sent using param=value syntax. 
 * [Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md), to run a flow as a Job using the Fabric Jobs mechanism to provide the LU name and the flow name execution parameters.
 * [Batch commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md), to run a flow as a batch process to provide both the batch configuration parameters and the LU name and flow name execution parameters.
-* Consuming CDC messages by Broadway.
+* Consuming CDC messages by Broadway. Since Fabric publishes the CDC messages to Kafka, a dedicated CDC consumer can be defined for Broadway in order to subscribe to the CDC messages.
 
 
 
