@@ -35,6 +35,8 @@ The node UUID is unique and if left undefined, Fabric generates a random node wh
 
 Example:
  ```uuid:7da16985-a8ac-4ea1-8e93-3118a225edd7```
+ 
+#### Affinity Allocation
 
 The logical_id name helps define the affinity between a node and candidate Jobs. Therefore, to limit the number of Fabric Jobs running on a node (i.e. with the same affinity), each logical name can be associated with the maximum number of threads.
 
@@ -63,6 +65,11 @@ Note:
 - if no empty slot is left in the pool and a new Job has been allocated to it, the Job remains in WAITING status until a processing slot is available.
 - Logical nodes and physical nodes cannot be specified as shared affinity in the same Job. 
 - Several nodes can share the same logical name.
+
+#### *ANY* flag
+The *ANY* option is added to all nodes by default. This means that any node can contribute and compete for the job's execution. 
+1. It is possible to exclude a node for by setting the *any* flag to 0 on the node.id, then the node will not be part of any job execution. 
+2. If set to a value greater than zero, the chosen number will reflect the maximum number of threads to be allocated to a job executed by this node.
 
 
 ## Cluster Configuration
