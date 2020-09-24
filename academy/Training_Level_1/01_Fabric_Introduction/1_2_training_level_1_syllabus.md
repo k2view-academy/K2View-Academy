@@ -48,7 +48,7 @@
 </ul>
 
 
-<h3 style="color: #20c1dd;">Quiz (1) - 1/2 hr</h3>
+<h3 style="color: #20c1dd;">Quiz (1) - 0.5 hr</h3>
 
   
 </td>  
