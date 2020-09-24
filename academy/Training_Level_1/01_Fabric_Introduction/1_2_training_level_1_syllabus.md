@@ -75,13 +75,13 @@
 </td>
 
 <td valign="top">  
-<h3 style="color: #20c1dd;">Fabric Main Flow (LU Properties) - 1 hr</h3>
+<h3 style="color: #20c1dd;">Fabric Main Flow (LU Properties) - 1.5 hr</h3>
 <ul>
 <li>Populations</li>
 <li>Sync Strategies</li>
 </ul>
   
-<h3>Fabric Population - Exercises - 1 hr</h3>  
+<h3>Fabric Population - Exercises - 0.5 hr</h3>  
 <h3 style="color: #20c1dd;">Quiz (2) - 0.5 hr</h3>
 
 <h3 style="color: #20c1dd;">Fabric Runtime - 1 hr</h3>
