@@ -53,14 +53,14 @@ a. Create an **emp_list_lookup.csv** file with the following values:
 </tbody>
 </table>
 
-b. Create a **Local File System** Interface and locate the CSV file into the **Working Directory** of the Interface.
+b. Create a **Local File System** interface and locate the CSV file into the **Working Directory** of the interface.
 
 1. Create a common EMPLOYEE_LOOKUP table with EMP_ID and EMP_FIRST_NAME columns. Save it and deploy the **References** LU.
 2. Create a new **EmployeeLookupPopulation** flow.
-3. Add a **FileRead** Actor and set its **interface** to the local file system interface you created prior this exercise. Set its path to **emp_list_lookup.csv**. 
+3. Add a **FileRead** Actor and set its **interface** to the local file system interface you created prior to this exercise. Set its path to **emp_list_lookup.csv**. 
 4. Add a **CsvParser** Actor to the next Stage and connect it to the **FileRead** Actor.
 5. Add a **DbLoad** Actor to the next Stage, connect its **interface** to **fabric** and its table to **EMPLOYEE_LOOKUP**. 
-6. Connect the fields using the **Iterate** link type.
+6. Connect the fields using an **Iterate** link.
 7. Set the transaction in Stages 2 and 3. 
 8. Save the flow and run it. Verify that the table is populated with the **EMPLOYEE_LOOKUP** data.
 
@@ -75,7 +75,7 @@ b. Create a **Local File System** Interface and locate the CSV file into the **W
 
 2. Modify the Customer LU table:
 
-   * Add two new FULL_NAME (Text) and IS_EMP (Integer) columns.
+   * Add the FULL_NAME (Text) and IS_EMP (Integer) columns.
 
    ![image](images/exam_schema.PNG)
 
@@ -83,7 +83,7 @@ b. Create a **Local File System** Interface and locate the CSV file into the **W
 
    * Modify the CUSTOMER **DbLoad** Actor by adding two new fields to the **fields** input arguments.
 
-   * Add a **Concat** Actor to the empty Stage 1 and use it to concatenate the FIRST_NAME and the LAST_NAME of the **Query** Actor's output. Connect the **Concat** Actor's output to the CUSTOMER **DbLoad** Actor's input.
+   * Add a **Concat** Actor to the empty Stage 1 and use it to concatenate the FIRST_NAME and the LAST_NAME of the **Query** Actor's output. Connect the **Concat** Actor's output to the CUSTOMER **DbLoad** Actor's input. 
 
    * Add a **DbCommand** Actor to Stage 1 and rename it **Lookup**. Define the Actor's interface = **fabric**. Write the following query to check that the customer exists in the **EMPLOYEE_LIST** table.
 
@@ -94,7 +94,7 @@ b. Create a **Local File System** Interface and locate the CSV file into the **W
 
    * Connect the  **Query** Actor's FIRST_NAME to the newly created **emp_name** input argument of the **Lookup** Actor.
 
-   * Add a Stage 2 after Stage 1 and add a **JavaScript** Actor. Add a **res** input argument to it and connect it with the **result** output argument of the **Lookup** Actor. Write the following script to return either 1 or 0. 
+   * Add Stage 2 after Stage 1 and add a **JavaScript** Actor. Add a **res** input argument to it and connect it to the **result** output argument of the **Lookup** Actor. Write the following script to return either 1 or 0. 
 
      ~~~ javascript
      res.IS_EMP;
@@ -159,7 +159,7 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 
 3. Add a **CsvParser** Actor to Stage 2 and connect it to the **FileRead** Actor.
 
-4. Add a **JavScript** Actor to Stage 3 and connect it to the  **CsvParser** Actor using the **Iterate** link type.
+4. Add a **JavScript** Actor to Stage 3 and connect it to the  **CsvParser** Actor using an **Iterate** link.
 
    * Add **input1** and **input2** input arguments and set input2 to **External** by setting its external name to **input_subs_type**.
 
@@ -182,7 +182,7 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 
 1. Open the **lookupSubscType** flow and save it as an Actor.
 2. Open the **Subscriber.population** flow and add the **lookupSubscType_Actor** to the empty Stage 1. 
-3. Connect its input to the SUBSCRIBER_TYPE column of the **Query** Actor's output using the **Iterate** link type.
+3. Connect its input to the SUBSCRIBER_TYPE column of the **Query** Actor's output using an **Iterate** link.
 4. Connect its output to the SUBSCRIBER_TYPE column of the SUBSCRIBER **DbLoad** Actor's input.
 5. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Subscriber LU table.
 
@@ -191,7 +191,7 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
 1. Open the **Contract.population** flow and add a **DateFormat** Actor to the empty Stage 1.  
 2. Set the **format** to 'dd-MM-yy' and the **tz** to GMT. 
 3. Export the Actor by setting the **format** to **final**. Name the new Actor **exerciseDateFormat**. 
-4. Connect the **exerciseDateFormat** Actor to the FROM_DATE column of the **Query** Actor's output using the **Iterate** link type.
+4. Connect the **exerciseDateFormat** Actor to the FROM_DATE column of the **Query** Actor's output using an **Iterate** link.
 5. Connect its output to the FROM_DATE column of the CONTRACT **DbLoad** Actor's input.
 6. Add another **exerciseDateFormat** Actor and connect it to the TO_DATE columns.
 7. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
@@ -208,9 +208,9 @@ b. Locate the CSV file into the **Working Directory** of the **Local File System
    input1 != "Roaming special"
    ~~~
 
-2. Add a new **input1** input argument to the  **JavaScript** Actor and connect it to the CONTRACT_DESCRIPTION column of the **Query** Actor's output using the **Iterate** link type.
+2. Add an **input1** input argument to the  **JavaScript** Actor and connect it to the CONTRACT_DESCRIPTION column of the **Query** Actor's output using an **Iterate** link.
 
-3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using the **Iterate** link type.
+3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link.
 
 4. Split the LU Table Stage and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the  **JsonStringify** Actor's output. 
 
