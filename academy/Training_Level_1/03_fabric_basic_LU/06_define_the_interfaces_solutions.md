@@ -14,8 +14,9 @@ From BILLING_DB.INVOICE
 Group By INVOICE.SUBSCRIBER_ID
 ```
 
-Check the highest value for ``` sum(INVOICE.BALANCE)``` in the result table of the query builder: 8021
-Check the associated subscriber_id value: ```14825``` in the juxtaposing column
+Check the highest value for ``` sum(INVOICE.BALANCE)``` in the result table of the query builder: 8021.
+
+Check the associated subscriber_id value: ```14825``` in the juxtaposing column.
 
 
 3. `Answer: 37351 orders`
