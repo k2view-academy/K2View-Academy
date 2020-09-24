@@ -4,9 +4,9 @@
 
 **Question 1:**
 
-a. Modify the input arguments of the **FileRead** Actor to make them external.
+a. Modify the input arguments of the **FileRead** Actor to define them as External link types.
 
-b. Create an Interface Listener on the **Local File System** Interface for the LU **SummaryExercise** and attach it to the **EmployeeLookupPopulation** flow.
+b. Create an Interface Listener in the **Local File System** Interface for the **SummaryExercise** Logical Unit and attach it to the **EmployeeLookupPopulation** flow.
 
 ![image](images/exam_0.PNG)
 
