@@ -68,8 +68,8 @@ Note:
 
 #### *ANY* flag
 The *ANY* option is added to all nodes by default. This means that any node can contribute and compete for the job's execution. 
-1. It is possible to exclude a node for by setting the *any* flag to 0 on the node.id, then the node will not be part of any job execution. 
-2. If set to a value greater than zero, the chosen number will reflect the maximum number of threads to be allocated to a job executed by this node.
+1. It is possible to exclude a node for by setting the *any* flag to 0 in the node.id file - in which case, the node will not be part of any job execution. 
+2. If set to a value greater than zero, the chosen value will reflect the maximum number of threads that can be allocated to a job when executed by this node.
 
 
 ## Cluster Configuration
