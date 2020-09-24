@@ -18,14 +18,15 @@ Result:
 ```
 |Type     |Name                |UID                                    |Status    |Creation Time      |Start Time         |End Time           |Affinity           |Is Archived|Next Run                   |Ownership Candidates Num|Notes|Owner       |
 +---------+--------------------+---------------------------------------+----------+-------------------+-------------------+-------------------+-------------------+-----------+---------------------------+------------------------+-----+------------+
-|USER_JOB |Customer.numberOfIDs|checkNumberIDs                         |FAILED    |2020 08 20 11:10:50|2020 08 20 14:01:53|2020 08 20 13:56:13|                   |true       |no more execution scheduled|1                       |     |fabric_debug|
+|USER_JOB |Customer.numberOfIDs|checkNumberIDs                         |SCHEDULED |2020 08 20 11:10:50|2020 08 20 14:01:53|2020 08 20 13:56:13|                   |true       |no more execution scheduled|1                       |     |fabric_debug|
 |USER_JOB |Customer.testJOB2   |9704d0e3-7247-4b6c-83a7-2c9028dea496   |TERMINATED|2020 07 30 11:05:59|2020 07 30 12:14:02|2020 07 30 12:15:31|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
-|USER_JOB |Customer.testJOB2   |testJOB2                               |TERMINATED|2020 08 04 16:05:58|2020 08 19 13:50:45|1970 01 01 00:00:00|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
-|USER_JOB |Customer.testJob    |c5163cf1-2f4b-434d-8508-40b53b303ee6   |TERMINATED|2020 08 02 06:25:12|2020 08 03 13:30:37|2020 08 04 10:18:43|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJOB2   |testJOB2                               |FAILED    |2020 08 04 16:05:58|2020 08 19 13:50:45|1970 01 01 00:00:00|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+|USER_JOB |Customer.testJob    |c5163cf1-2f4b-434d-8508-40b53b303ee6   |PROCESSED |2020 08 02 06:25:12|2020 08 03 13:30:37|2020 08 04 10:18:43|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
 |USER_JOB |Customer.testJob    |c5844330-07c8-4448-967e-da9d0a64c22e   |TERMINATED|2020 07 28 15:39:13|2020 07 30 08:49:06|2020 07 30 08:49:07|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
 |USER_JOB |Customer.testJob    |testJOB1                               |RESTART   |2020 08 20 11:10:50|2020 08 13 10:02:34|1970 01 01 00:00:00|’DC1’, ’10.21.1.121|false      |2021-03-05 08:00:30        |0                       |     |            |
 |USER_JOB |Customer.testJob    |testJob2G                              |TERMINATED|2020 07 30 10:59:46|2020 07 30 10:59:48|2020 07 30 12:08:09|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
 |USER_JOB |Customer.testJob    |testJobGreg                            |TERMINATED|2020 07 28 15:26:04|2020 07 28 15:38:32|2020 07 28 15:38:33|ANY                |true       |no more execution scheduled|0                       |     |fabric_debug|
+
 
 (8 rows)
 
