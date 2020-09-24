@@ -47,9 +47,9 @@
 <li>Security/Resiliency</li>
 </ul>
 
-<ul>
-<h3 style="color: #20c1dd;">Quiz (1) (1/4 hr)</h3>
-</ul>
+
+<h3 style="color: #20c1dd;">Quiz (1) - 1/2 hr</h3>
+
   
 </td>  
 
