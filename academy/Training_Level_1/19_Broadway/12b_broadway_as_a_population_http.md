@@ -41,9 +41,11 @@ In this exercise you will do the following:
 10. Add a **Concat** Actor to the same Stage to concatenate the following:
 
     * id and employee_name from the **JsonParser** output and NOTE_TEXT from the  **Query** Actor output using the **Iterate** link type.
-    * Connect the Concat Actor's output to the NOTE_TEXT column of the **DbLoad** Actor.
+    * Connect the **Concat** Actor's output to the NOTE_TEXT column of the **DbLoad** Actor.
 
-11. Save the flow, deploy the Customer LU and sync an instance.
+11. Save the flow, deploy the **Customer** LU and sync an instance.
+
+![iamge](images/12_case_notes.PNG)
 
 
 
