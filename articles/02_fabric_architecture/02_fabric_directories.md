@@ -134,9 +134,9 @@ As of version 6.1, the Fabric server is automatically installed on Windows when 
 
 Fabric and Cassandra are installed under the following directories:
 
-- Fabric Studio, C:\K2View\<Fabric version>\Studio.
-- Fabric server, C:\K2View\<Fabric version>\Server.
-- Apache-cassandra-3.11.x, C:\K2View\Fabric_6.1\Server and C:\K2View\<Fabric version>\ apache-cassandra-3.11.x
+- Fabric Studio, ```C:\K2View\<Fabric version>\Studio```.
+- Fabric server, ```C:\K2View\<Fabric version>\Server```.
+- Apache-cassandra-3.11.x, ```C:\K2View\Fabric_6.1\Server and C:\K2View\<Fabric version>\ apache-cassandra-3.11.x```
 
 ### Fabric Server Directories
 
