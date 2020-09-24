@@ -57,12 +57,12 @@ This command migrates all customers from the source systems into the Fabric CUST
 </td>
 <td valign="top" width="400pxl">
 
-<p>Batch-processes a subset of the LUI based on the [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command) specified by the &ltIG&gt parameter.</p>
+<p>Batch-processes a subset of the LUI based on the <a href="/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command">Instance Group</a> specified by the &ltIG&gt parameter.</p>
 
 </td>
 <td valign="top" width="300pxl">
 <p>BATCH CUSTOMER.ig10CustomersList FABRIC_COMMAND="sync_instance CUST.?" with async=’true’;</p>
-<p>This command migrates the customers defined in the ‘ig10CustomersList’ [Instance Group](/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command) into the CUSTOMER keyspace in the Fabric database.</p>
+<p>This command migrates the customers defined in the ‘ig10CustomersList’ <a href="/articles/20_jobs_and_batch_services/14_instances_groups.md#how-do-i-invoke-an-instance-group-from-the-batch-command">Instance Group</a> into the CUSTOMER keyspace in the Fabric database.</p>
 
 </td>
 </tr> 
