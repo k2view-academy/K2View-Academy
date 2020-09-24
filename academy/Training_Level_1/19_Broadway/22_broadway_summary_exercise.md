@@ -1,20 +1,18 @@
 # Broadway Summary Exercise
 
-You have completed the Broadway Training where you have learned what is a Broadway flow, an Actor and a Stage. 
+You have completed Broadway Training and learnt about a Broadway flow, an Actor and a Stage and have also seen the following examples of how to:
 
-You acquired the knowledge and saw the examples of how to:
-
-* Create a flow which includes several Stages with one or more Actors at each step. 
-* Utilize the existing built-in Actors and extend them via the internal inheritance mechanism.
-* Split the flow into branches under certain If-Else conditions.
-* Re-use the same business logic by creating the inner flows.
-* Manage the transactions and error handling process.
-* Use a Broadway flow as a population of LU tables in Fabric.
-* Invoke a Broadway flow using a SFTP listener, a job or a Fabric command.
+* Create a flow which includes several Stages with one or more Actors in each step. 
+* Utilize built-in Actors and extend them via the internal inheritance mechanism.
+* Split a flow into branches under specific If-Else conditions.
+* Re-use the same business logic by creating inner flows.
+* Manage Transactions and Error Handling processes.
+* Use a Broadway flow as a population for LU tables in Fabric.
+* Invoke a Broadway flow using a SFTP listener, Job or a Fabric command.
 
 
 
-Please proceed to the summary exercise to apply your knowledge.
+Please proceed to the Summary Exercise to apply your knowledge.
 
 
 
