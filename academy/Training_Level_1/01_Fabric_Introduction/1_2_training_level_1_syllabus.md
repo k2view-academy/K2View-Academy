@@ -80,6 +80,8 @@
 <li>Populations</li>
 <li>Sync Strategies</li>
 </ul>
+  
+<h3>Fabric Population - Exercises - 1 hr</h3>  
 <h3 style="color: #20c1dd;">Quiz (2) - 0.5 hr</h3>
 
 <h3 style="color: #20c1dd;">Fabric Runtime - 1 hr</h3>
