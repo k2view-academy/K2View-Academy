@@ -198,7 +198,7 @@
 
 <td valign="top">
 
-<h3 style="color: #20c1dd;">Reference Tables & CommonbDB - 1 hr</h3>
+<h3 style="color: #20c1dd;">Reference Tables & CommonDB - 1 hr</h3>
 
 <ul>
 <li>CommonDB Overview &amp; Types</li>
