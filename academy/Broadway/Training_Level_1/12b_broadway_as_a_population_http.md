@@ -5,8 +5,8 @@
 In this exercise you will do the following:
 
 * Create a new population for the CASE_NOTE table in the Customer LU based on a Broadway flow.
-* Invoke an HTTP call using a Demo HTTP server.
-* Concatenate the NOTE_TEXT retrieved by the DB query with the employee ID and name from HTTP call and populate it into the LU table.
+* Invoke an HTTP call using a demo HTTP server.
+* Concatenate the NOTE_TEXT retrieved by the DB query with the employee ID and name from the HTTP call and populate it into the LU table.
 
 
 
@@ -16,7 +16,7 @@ In this exercise you will do the following:
 
 2. Drag the CASE_NOTE table from the **DB Objects tab** of the LU Schema window to the LU Schema main area and click the **Table Based Broadway Flow** in the context menu. The CASE_NOTE table and the population flow are created.
 
-3. Connect the CASES  table to the CASE_NOTES table by CASE_ID and save the LU Schema.
+3. Connect the CASES table to the CASE_NOTES table by CASE_ID and save the LU Schema.
 
 4. Open the CASE_NOTE  **population.flow**. 
 
@@ -24,9 +24,9 @@ In this exercise you will do the following:
 
 6. Insert 2 new Stages by clicking ![image](images/three_dots_icon.png)> **Insert After** twice.
 
-7. Split the Stage and add a **JsonParser** Actor to the branch of HTTP Actors. 
+7. Split the Stage and add a **JsonParser** Actor to the HTTP Actors branch. 
 
-8. Move the **Query** Actor to be above the **JsonParser**, so that the iteration will start right after it.
+8. Move the **Query** Actor to be above the **JsonParser**, so that the iteration begins directly after.
 
 9. Add a Stage condition to the next Stage using the **JavaScript** Actor and do the following:
 
