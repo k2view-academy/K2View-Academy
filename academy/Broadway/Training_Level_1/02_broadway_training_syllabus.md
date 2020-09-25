@@ -1,7 +1,6 @@
 # Level 1 Broadway Training Syllabus
 
 
-
 <table style="width: 900px;">
 <tbody>
 <tr>
@@ -21,7 +20,7 @@
 <ul>
 <li>Course Introduction
 <ul>
-<li>Overview and main objectives</li>
+<li>Overview and Main Objectives</li>
 </ul>
 </li>
 <li>Broadway Components Overview</li>
@@ -34,7 +33,7 @@
 <li>Iterations and Stage Conditions</li>
 <li>Exercise:
 <ul>
-<li>Create a flow with a condition</li>
+<li>Create a Flow with a Condition</li>
 </ul>
 </li>
 </ul>
@@ -45,7 +44,7 @@
 <td>
 <ul>
 <li>Using Actors in Broadway Flows</li>
-<li>Built-In Actor Types
+<li>Built-in Actor Types
 <ul>
 <li>Dynamic Logic Actors</li>
 <li>Additional Frequently Used Actors</li>
@@ -53,7 +52,7 @@
 </li>
 <li>Exercise:
 <ul>
-<li>Create a flow using built-in Actors</li>
+<li>Create a Flow using Built-in Actors</li>
 </ul>
 </li>
 </ul>
@@ -63,14 +62,14 @@
 <li>Broadway Integration with Fabric Studio
 <ul>
 <li>Broadway as a Population</li>
-<li>Interface listener for Broadway flows</li>
+<li>Interface Listener for Broadway Flows</li>
 </ul>
 </li>
 <li>Exercises:
 <ul>
-<li>Create a flow for an LU table population</li>
-<li>Populate an LU table using an HTTP call</li>
-<li>Define an Interface listener for a flow</li>
+<li>Create a Flow for an LU Table Population</li>
+<li>Populate an LU Table using an HTTP Call</li>
+<li>Define an Interface Listener for a Flow</li>
 </ul>
 </li>
 </ul>
@@ -83,19 +82,19 @@
 <li >Additional Broadway Features
 <ul >
 <li >Actor Inheritance Mechanism</li>
-<li >Error handling</li>
-<li >Inner flows</li>
+<li >Error Handling</li>
+<li >Inner Flows</li>
 <li >Transactions</li>
 </ul>
 </li>
 <li >Exercise:
 <ul >
-<li >Create a flow with an inner flow and an error handler</li>
+<li >Create a Flow with an Inner Flow and an Error Handler</li>
 </ul>
 </li>
 <li >Broadway and Fabric
 <ul >
-<li >Execute a Flow by Batch Command</li>
+<li >Execute a Flow using a Batch Command</li>
 </ul>
 </li>
 </ul>
