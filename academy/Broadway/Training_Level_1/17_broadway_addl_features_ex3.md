@@ -8,7 +8,7 @@ Open the flow you created in the [Using Actors in a Flow](10_using_various_actor
 
 
 
-1. Run the flow and verify that a new entry has been added to the ACT_SUM Fabric LU table.
+1. Run the flow and verify that a new entry has been added to the ACT_SUM Fabric LU table by the **DbLoad** Actor.
 2. Click ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu to uncheck the Transaction.
 3. Run the flow again and verify that a new entry has not been added to the table.
 4. Check the  message in the log file to verify that a rollback has been performed.
