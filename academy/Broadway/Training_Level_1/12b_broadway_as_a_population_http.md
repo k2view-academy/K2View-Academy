@@ -1,6 +1,6 @@
 # Broadway Flow as a Population
 
-### ![](/academy/images/Exercise.png)Exercise 2 - Populate an LU Table Using a DB Query and an HTTP Call via a Broadway Flow
+### ![](/academy/images/Exercise.png)Exercise 2 - Populate an LU Table Using a DB Query and an HTTP Call
 
 In this exercise you will do the following:
 
