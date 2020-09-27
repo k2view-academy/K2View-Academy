@@ -30,4 +30,4 @@ To learn about splitting or merging the Stages of a flow and adding conditions t
 
 Continue to the exercise to enhance your first Broadway flow and add a condition to it. 
 
-[![Previous](/articles/images/Previous.png)](05_create_broadway_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_flow_add_condition_exercise.md)
+[![Previous](/articles/images/Previous.png)](05a_create_broadway_flow_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_flow_add_condition_exercise.md)

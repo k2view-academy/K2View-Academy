@@ -31,5 +31,5 @@ To learn more about creating and running a Broadway flow, please refer to:
 
 Now let's see an example of creating a simple flow.
 
-[![Previous](/articles/images/Previous.png)](04_broadway_tutorials.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05a_create_broadway_flow_example.md)
+[![Previous](/articles/images/Previous.png)](04b_broadway_tutorials_solution.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05a_create_broadway_flow_example.md)
 

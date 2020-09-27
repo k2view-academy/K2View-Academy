@@ -26,5 +26,5 @@ Note that Broadway supports additional activities such as Export an Actor or Sav
 
 Now let's see the example of using Actors in flows, linking them, setting and removing the remarks and changing population types.
 
-[![Previous](/articles/images/Previous.png)](07_broadway_flow_add_condition_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08a_using_actors_in_boadway_flows_example.md)
+[![Previous](/articles/images/Previous.png)](07a_broadway_flow_add_condition_exercise_solution.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08a_using_actors_in_boadway_flows_example.md)
 
