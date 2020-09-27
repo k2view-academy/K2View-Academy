@@ -1,6 +1,6 @@
 # Broadway Flow as a Population
 
-### ![](/academy/images/Exercise.png)Exercise 2 - Populate an LU Table Using Both DB Query and an HTTP Call via a Broadway Flow
+### ![](/academy/images/Exercise.png)Exercise 2 - Populate an LU Table Using a DB Query and an HTTP Call via a Broadway Flow
 
 In this exercise you will do the following:
 
@@ -16,17 +16,17 @@ In this exercise you will do the following:
 
 2. Drag the CASE_NOTE table from the **DB Objects tab** of the LU Schema window to the LU Schema main area and click the **Table Based Broadway Flow** in the context menu. The CASE_NOTE table and the population flow are created.
 
-3. Connect the CASES table to the CASE_NOTES table by CASE_ID and save the LU Schema.
+3. Connect the CASES table to the CASE_NOTES table using the CASE_ID and save the LU Schema.
 
-4. Open the CASE_NOTE  **population.flow**. 
+4. Open the CASE_NOTE **population.flow**. 
 
-5. Split the **Source** Stage and add **HttpDemoServer** and **Http** Actors to the new Stage.
+5. Split the **Source** Stage and add the **HttpDemoServer** and **Http** Actors to the new Stage.
 
-6. Insert 2 new Stages by clicking ![image](images/three_dots_icon.png)> **Insert After** twice.
+6. Insert two new Stages by clicking ![image](images/three_dots_icon.png)> **Insert After** twice.
 
 7. Split the Stage and add a **JsonParser** Actor to the HTTP Actors branch. 
 
-8. Move the **Query** Actor to be above the **JsonParser**, so that the iteration begins directly after.
+8. Move the **Query** Actor to above the **JsonParser** so that the iteration begins directly after.
 
 9. Add a Stage condition to the next Stage using the **JavaScript** Actor and do the following:
 
