@@ -26,7 +26,7 @@ In this exercise you will do the following:
 
 7. Split the Stage and add a **JsonParser** Actor to the HTTP Actors branch. 
 
-8. Move the **Query** Actor to above the **JsonParser** so that the iteration begins directly after.
+8. Move the **Query** Actor above the **JsonParser** so that the iteration begins directly after.
 
 9. Add a Stage condition to the next Stage using the **JavaScript** Actor and do the following:
 
