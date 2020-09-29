@@ -2,7 +2,7 @@
 
 You have completed Broadway Training and learnt about a Broadway flow, an Actor and a Stage. 
 
-You have seen the following How To examples:
+You have also seen the following How To examples:
 
 * Create a flow which includes several Stages with one or more Actors in each step. 
 * Utilize built-in Actors and extend them via the internal inheritance mechanism.
@@ -10,7 +10,7 @@ You have seen the following How To examples:
 * Re-use the same business logic by creating inner flows.
 * Manage Transactions and Error Handling processes.
 * Use a Broadway flow as a population for LU tables in Fabric.
-* Invoke a Broadway flow using a SFTP listener or a Fabric command.
+* Invoke a Broadway flow using an SFTP listener or a Fabric command.
 
 
 
@@ -19,20 +19,20 @@ Now let’s go to the following exercise which summarizes what you have learnt.
 In this exercise you will do the following:
 
 * Create a reference table and populate it using a Broadway flow.
-* Create a Logical Unit including 4 tables whereby all of them will be populated by Broadway flows.
+* Create a Logical Unit including 4 tables whereby all tables are populated by Broadway flows.
 * Perform data manipulations using various Actors, for example:
-  * Lookup the data from a reference table.
-  * Concatenate the values of separate columns. 
-  * Update the data format.
-  * Perform some checks using JavaScript.
-  * Read from a file and write into a file.
+  * Looking up the data in a reference table.
+  * Concatenating the values of separate columns. 
+  * Updating the data format.
+  * Performing checks using JavaScript.
+  * Reading from a file and writing into a file.
 * Practice various Broadway features such as:
   * Transactions, to save the data of the Reference table.
-  * Error Handling, to fail the flow if the data is not found in the lookup.
+  * Error Handling, to fail a flow if the data is not found in the lookup.
   * Inner flow, to invoke one flow from another.
   * Setup SFTP listener, to invoke a flow that reads data from a file.
 * Perform Fabric commands via Broadway.
-* Publish the data from Fabric to Kafka topic.
+* Publish the data from Fabric to a Kafka topic.
 * Write into a target DB while handling DB errors.
 
 
@@ -74,7 +74,7 @@ a. Create an **emp_list_lookup.csv** file with the following values:
 </tbody>
 </table>
 
-b. Create a **Local File System** interface and locate the CSV file into the **Working Directory** of the interface.
+b. Create a **Local File System** interface and save the CSV file into the **Working Directory** of the interface.
 
 1. Create a common EMPLOYEE_LOOKUP table with EMP_ID and EMP_FIRST_NAME columns. Save it and deploy the **References** LU.
 2. Create a new **EmployeeLookupPopulation** flow.
@@ -82,14 +82,14 @@ b. Create a **Local File System** interface and locate the CSV file into the **W
 4. Add a **CsvParser** Actor to the next Stage and connect it to the **FileRead** Actor.
 5. Add a **DbLoad** Actor to the next Stage, connect its **interface** to **fabric** and its table to **EMPLOYEE_LOOKUP**. 
 6. Connect the fields using an **Iterate** link type.
-7. Mark the Stages 2 and 3 as **Transaction**. 
+7. Mark Stages 2 and 3 as **Transaction**. 
 8. Save the flow and run it. Verify that the table is populated with the **EMPLOYEE_LOOKUP** data.
 
 **Question 1:**
 
-What should be changed in the flow to support the automatic file upload to the reference table, once it is copied to an interface?
+What should be changed in the flow to support automatic file upload to the Reference table, once it is copied to an interface?
 
-**Step 2 - Create an LU and Make the Data Modifications a Customer Population**
+**Step 2 - Create an LU and Make the Data Modifications in a Customer Population**
 
 1. Create a new **SummaryExercise** LU:
 
@@ -125,7 +125,7 @@ What should be changed in the flow to support the automatic file upload to the r
 
    * Connect the **JavaScript** Actor's output with the IS_EMP input of the  CUSTOMER **DbLoad** Actor using the **First** link type.
 
-4. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. 
+4. Save the changes, deploy the **SummaryExercise** LU and sync an instance. 
 
 **Question 2a:**
 
@@ -174,7 +174,7 @@ a. Create a **subs_type.csv** file with the following values:
 </tbody>
 </table>
 
-b. Locate the CSV file into the **Working Directory** of the **Local File System** Interface.
+b.Save the CSV file into the **Working Directory** of the **Local File System** Interface.
 
 1. Create a new **lookupSubscType** flow.
 
@@ -207,11 +207,11 @@ Does the **JavaScript** Actor iterate over the entire CSV file? Explain.
 2. Open the **Subscriber.population** flow and add the **lookupSubscType_Actor** to the empty Stage 1. 
 3. Connect its input to the SUBSCRIBER_TYPE column of the **Query** Actor's output using an **Iterate** link type.
 4. Connect its output to the SUBSCRIBER_TYPE column of the SUBSCRIBER **DbLoad** Actor's input.
-5. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Subscriber LU table.
+5. Save the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Subscriber LU table.
 
 **Question 4:**
 
-Please describe the impact of adding the inner flow on the target population.
+Describe the impact of adding an inner flow on the target population.
 
 What happens if the value is not found in the CSV file?
 
@@ -223,11 +223,11 @@ What happens if the value is not found in the CSV file?
 4. Connect the **exerciseDateFormat** Actor to the FROM_DATE column of the **Query** Actor's output using an **Iterate** link type.
 5. Connect its output to the FROM_DATE column of the CONTRACT **DbLoad** Actor's input.
 6. Add another **exerciseDateFormat** Actor and connect it to the TO_DATE columns.
-7. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
+7. Save the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
 **Question 5**:
 
-Can the inherited Actor's input / output argument settings be modified? If yes, how and does this impact other instances of the same Actor?
+Can the inherited Actor's input / output argument settings be modified? If yes, how? Does this impact other instances of the same Actor?
 
 **Step 6 - Split the Stages, Set the Condition and Write Data into the File**
 
@@ -241,9 +241,9 @@ Can the inherited Actor's input / output argument settings be modified? If yes, 
 
 3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link type.
 
-4. Split the LU Table Stage and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the  **JsonStringify** Actor's output. 
+4. Split the LU Table Stage and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the **JsonStringify** Actor's output. 
 
-5. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
+5. Save the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
 **Question 6**:
 
@@ -251,13 +251,13 @@ Explain the purpose of this split and what changes in the LU data.
 
 **Step 7 - Publish the Customer Data to Kafka Topic**
 
-Prior to starting this exercise, create a **Kafka** interface to connect to Apache Kafka server and set the **Data Type** to **JSON**.
+Prior to starting this exercise, create a **Kafka** interface to connect to the Apache Kafka server and set the **Data Type** to **JSON**.
 
 1. Create a new **publishCustomer** flow.
 
 2. Add a **FabricGet** Actor to Stage 1 and do the following:
 
-   * Set the **luType** input argument to **SummaryExercise** and iid to **External** population type.
+   * Set the **luType** input argument to **SummaryExercise** and **iid** to **External** population type.
 
 3. Add a **DbCommand** Actor to Stage 2 and do the following:
 
@@ -267,9 +267,9 @@ Prior to starting this exercise, create a **Kafka** interface to connect to Apac
    SELECT * FROM CUSTOMER
    ~~~
 
-4. Add a **Publish** Actor to Stage 3 and connect its **message** to the **result** of **DbCommand**. Set the interface to the **Kafka** interface which you created earlier.
+4. Add a **Publish** Actor to Stage 3 and connect its **message** to the **result** of the **DbCommand**. Set the interface to the **Kafka** interface you created earlier.
 
-5. Save all the changes, deploy the **SummaryExercise** LU and run the flow.
+5. Save the changes, deploy the **SummaryExercise** LU and run the flow.
 
 **Question 7a:**
 
@@ -279,7 +279,7 @@ What should be changed in order to publish the Customer's data to the Kafka topi
 
 How can you publish the data of a group of customers to the Kafka topic?
 
-**Step 8 - Write into Target DB and Handle a DB Error**
+**Step 8 - Write into the Target DB and Handle a DB Error**
 
 Prior to starting this exercise, create a new table in the **CRM_DB** interface:
 
@@ -289,9 +289,9 @@ b. Columns: CUSTOMER_ID (NN), CONTRACT_ID (NN, PK), CONTRACT_REF_ID.
 
 1. Create a new **Contract.populationCopy** flow that retrieves the data from the CONTRACT LU table of the **fabric** interface and loads the data to the CONTRACT_COPY table of the  **CRM_DB** interface.
 
-2. In the LU Schema connect a new population to its parent CUSTOMER table using the CUSTOMER_ID and set the population execution order to 4.
+2. In the LU Schema, connect a new population to its parent CUSTOMER table using the CUSTOMER_ID and set the population execution order to 4.
 
-3. In the  **Contract.populationCopy** flow add an Error Handler **JavaScript** Actor to the LU Table Stage and write the following script:
+3. In the  **Contract.populationCopy** flow, add an Error Handler **JavaScript** Actor to the LU Table Stage and write the following script:
 
    ~~~javascript
    if (error.rootClassName == "SQLiteException") {
@@ -302,7 +302,7 @@ b. Columns: CUSTOMER_ID (NN), CONTRACT_ID (NN, PK), CONTRACT_REF_ID.
        false;
    ~~~
 
-4. Add a new Count Stage after the LU Table Stage and add an **Aggregate** Actor to it. Connect its **input** argument with the **affected** output argument of the **DbLoad** Actor.
+4. Add a new Count Stage after the LU Table Stage and add an **Aggregate** Actor to it. Connect its **input** argument to the **affected** output argument of the **DbLoad** Actor.
 
 5. Add a **Count** Actor to the same Stage.
 
@@ -312,11 +312,11 @@ b. Columns: CUSTOMER_ID (NN), CONTRACT_ID (NN, PK), CONTRACT_REF_ID.
    * Connect the **Logger** Actor's **cnt** input to the output of the **Count** Actor.
    * Connect the **Logger** Actor's **sum** input to the **sum** output of the **Aggregate** Actor.
 
-7. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the log.
+7. Save the changes, deploy the **SummaryExercise** LU and sync an instance. Check the log.
 
 **Question 8:**
 
-What is the purpose of the Error Handler? What will happen there is no Error Handler in this flow?
+What is the purpose of the Error Handler? What will happen if there is no Error Handler in this flow?
 
 
 
