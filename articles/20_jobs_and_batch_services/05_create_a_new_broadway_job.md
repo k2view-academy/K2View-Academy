@@ -28,4 +28,6 @@ e.g.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/06_create_a_new_CDC_job.md)
+
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/07_jobs_commands.md)
