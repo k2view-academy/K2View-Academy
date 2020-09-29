@@ -174,7 +174,7 @@ a. Create a **subs_type.csv** file with the following values:
 </tbody>
 </table>
 
-b.Save the CSV file into the **Working Directory** of the **Local File System** Interface.
+b. Save the CSV file into the **Working Directory** of the **Local File System** Interface.
 
 1. Create a new **lookupSubscType** flow.
 
