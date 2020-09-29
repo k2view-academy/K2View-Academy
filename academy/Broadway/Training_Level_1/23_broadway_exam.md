@@ -170,9 +170,9 @@ The data for a table population using a Broadway flow is retrieved by:
 
 \- B:  A DbCommand Actor which must include a WHERE clause that connects the table to its parent table.
 
-\- C:  A SourceDbQuery Actor which inherits from the DbCommand that must include a WHERE clause that connects the table to its parent table.
+\- C:  A SourceDbQuery Actor that must include a WHERE clause that connects the table to its parent table.
 
-\- D:  A SourceDbQuery Actor which inherits from the DbCommand whereby the WHERE clause is generated in the background by connecting the parent_rows input argument to the PopulationArgs Actor's output.
+\- D:  A SourceDbQuery Actor whereby the WHERE clause is generated in the background by connecting the parent_rows input argument to the PopulationArgs Actor's output.
 
 
 (**Solution 9. D: The data is retrieved by a SourceDbQuery Actor that inherits from the DbCommand Actor. The WHERE clause is generated automatically and is not visible in the Actor's UI.**).
@@ -277,7 +277,7 @@ Is it possible to run a Broadway flow for several instances? If yes - how?
 \- A:  It is not possible.
 
 
-\- B:  Via the Fabric Studio.
+\- B:  Via the Fabric Studio proving an instance ID for each run.
 
 \- C:  Using a BATCH command for a given Instance Group.
 
@@ -287,7 +287,79 @@ Is it possible to run a Broadway flow for several instances? If yes - how?
 
 
 
-#### Question 16: xxx
+#### Question 16: Broadway Actors
+
+Does Broadway support the asynchronous message handling? If yes - how?
+
+
+\- A:  It is not supported by Broadway.
+
+
+\- B:  it is supported via the Web Services.
+
+\- C:  Broadway can subscribe to and publish the messages to Kafka only.
+
+\- D:  Broadway can subscribe to and publish the messages to Kafka and any JMS provider.
+
+(**Solution 16. D: Message provider types supported in Broadway are: Apache Kafka, JMS Queue and Topic by any JMS provider.**).
+
+
+
+#### Question 17: Broadway Actors
+
+Can you read and update the flow arguments during the flow?
+
+
+\- A:  The flow arguments are read-only and only accessible when the flow is invoked.
+
+
+\- B:  The flow arguments can be accessed by JavaScript Actor using flowArgs keyword whereby you can read the data and update the flow context.
+
+\- C:  The flow arguments can be accessed by FabricGet Actor and updated by FabricSet Actor.
+
+\- D:  The flow arguments are accessible via the sync process only.
+
+(**Solution 17. B: To read data from the flow's arguments and write into the flow's context, use the flowArgs keyword.**).
+
+
+
+#### Question 18: Data Inspector
+
+Broadway Data Inspector (the yellow segment):
+
+
+\- A:  Allows to view and edit the data when running a flow with Debug ON.
+
+
+\- B:  Can identify and display complex Object data type structures regardless of DEBUG flag.
+
+\- C:  Displays the columns of complex Object data types but doesn't allow to connect them individually to other Actors arguments.
+
+\- D:  None of the above.
+
+(**Solution 18. D: A is incorrect because the data cannot be edited. B is incorrect because the structure can be identified in Debug mode only. C is incorrect since the columns of the complex data type can be connected individually to other Actors.**).
+
+
+
+#### Question 19: Transactions
+
+When the flow is split due to Stage conditions, the transaction:
+
+
+\- A:  Can be defined for only some branches.
+
+
+\- B:  Must be defined for all the branches.
+
+\- C:  Must start one Stage before the flow split.
+
+\- D:  Cannot be defined.
+
+(**Solution 19. A: The transaction can be defined for only some branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true.**).
+
+
+
+#### Question 20: Error Handling
 
 xxx
 
@@ -301,60 +373,6 @@ xxx
 
 \- D:  xx.
 
-(**Solution 16. X: XXX.**).
-
-
-
-#### Question 17: xxx
-
-xxx
-
-
-\- A:  xx.
-
-
-\- B:  xx.
-
-\- C:  xx.
-
-\- D:  xx.
-
-(**Solution 17. X: XXX.**).
-
-
-
-#### Question 18: xxx
-
-xxx
-
-
-\- A:  xx.
-
-
-\- B:  xx.
-
-\- C:  xx.
-
-\- D:  xx.
-
-(**Solution 18. X: XXX.**).
-
-
-
-#### Question 19: xxx
-
-xxx
-
-
-\- A:  xx.
-
-
-\- B:  xx.
-
-\- C:  xx.
-
-\- D:  xx.
-
-(**Solution 19. X: XXX.**).
+(**Solution 20. X: XXX.**).
 
 [![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)
