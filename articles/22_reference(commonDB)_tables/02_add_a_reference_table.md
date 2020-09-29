@@ -90,7 +90,7 @@ Functions or other tables can be attached to the Reference table:
 
 ## Attach the Reference Table to an LU Schema
 
-Before accessing the Reference Table from a specific LU, it must be attached to the LU.
+Before accessing the Reference Table from a specific LU, it must be attached to the LU in order to be synchronized when performing a ```get``` operation on LUI or to be used as a reference ///// [link](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md#how-do-i-edit-a-reference-tab)
 
 ### Configure LU to Use a Reference Table
 
