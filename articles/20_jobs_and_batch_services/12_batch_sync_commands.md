@@ -1,4 +1,4 @@
-# Batch Sync Commands
+# Batch Commands
 
 The Fabric runtime environment provides the following sets of Batch commands:
 
