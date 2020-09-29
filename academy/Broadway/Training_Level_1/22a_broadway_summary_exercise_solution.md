@@ -116,6 +116,14 @@ d. Connect to the Kafka bootstrap server and check the messages:
 kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic <topic_name>
 ~~~
 
+**Step 8 - Write into Target DB and Handle a DB Error**
 
+**Question 8:**
+
+The purpose of the Error Handler is to prevent the SQLite Exception. If the exception occurs due to unique constraint violation, the Error Handler will catch this error and continue to the next step. Otherwise the flow will fail. 
+
+For example, the unique constraint can happen if you sync the same instance twice and flow will attempt to write the same information into the CONTRACT_COPY table in CRM_DB. 
+
+![image](images/exam_7.PNG)
 
 [![Previous](/articles/images/Previous.png)](22_broadway_summary_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_broadway_exam.md)

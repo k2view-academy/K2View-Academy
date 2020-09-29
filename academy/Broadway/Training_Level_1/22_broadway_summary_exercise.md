@@ -275,4 +275,45 @@ What should be changed in order to publish the Customer's data to the Kafka topi
 
 How can you publish the data of a group of customers to the Kafka topic?
 
+**Step 8 - Write into Target DB and Handle a DB Error**
+
+Prior to starting this exercise, create a new table in the **CRM_DB** interface:
+
+a. Table name: CONTRACT_COPY.
+
+b. Columns: CUSTOMER_ID (NN), CONTRACT_ID (NN, PK), CONTRACT_REF_ID.
+
+1. Create a new **Contract.populationCopy** flow that retrieves the data from the CONTRACT LU table of the **fabric** interface and loads the data to the CONTRACT_COPY table of the  **CRM_DB** interface.
+
+2. In the LU Schema connect a new population to its parent CUSTOMER table using the CUSTOMER_ID and set the population execution order to 4.
+
+3. In the  **Contract.populationCopy** flow add an Error Handler **JavaScript** Actor to the LU Table Stage and write the following script:
+
+   ~~~javascript
+   if (error.rootClassName == "SQLiteException") {
+       print("The entry already exists!!! Continue...");
+       true;
+   }
+   else
+       false;
+   ~~~
+
+4. Add a new Count Stage after the LU Table Stage and add an **Aggregate** Actor to it. Connect its **input** argument with the **affected** output argument of the **DbLoad** Actor.
+
+5. Add a **Count** Actor to the same Stage.
+
+6. Add a **Logger** Actor to the Post Load Stage and do the following:
+
+   * Write the **message**: *There are ${cnt} contracts. CONTRACT_COPY was populated with ${sum} entries*.
+   * Connect the **Logger** Actor's **cnt** input to the output of the **Count** Actor.
+   * Connect the **Logger** Actor's **sum** input to the **sum** output of the **Aggregate** Actor.
+
+7. Save all the changes, deploy the **SummaryExercise** LU and sync an instance. Check the log.
+
+**Question 8:**
+
+What is the purpose of the Error Handler? What will happen there is no Error Handler in this flow?
+
+
+
 [![Previous](/articles/images/Previous.png)](21_broadway_and_fabric_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](22a_broadway_summary_exercise_solution.md)
