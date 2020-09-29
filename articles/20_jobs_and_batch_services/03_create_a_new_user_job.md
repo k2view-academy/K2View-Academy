@@ -7,8 +7,6 @@ Jobs are defined in the Fabric Studio and can be saved to a project file and be 
 ### Step 1. 
 Go to the **Project Tree** > **LU** > **Java** > **Category** and right click **New Function** to display the **Function Editor** window.
 
-   <img src="/articles/20_jobs_and_batch_services/images/03_jobs_and_batch_services_create_a_job_userjob.PNG">     
-
 ### Step 2. 
 Write the **User Job function** either from:
    -    the **Function Editor** window.
