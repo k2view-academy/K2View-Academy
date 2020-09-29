@@ -4,9 +4,9 @@
 
 **Question 1:**
 
-In order to support an automatic file upload, you need to define an Interface Listener on an interface and attach a Broadway flow to it. Do the following:
+In order to support an automatic file upload, define an Interface Listener on an interface and attach a Broadway flow to it. Do the following:
 
-a. Modify the input arguments of the **FileRead** Actor to make them **External** link type.
+a. Change the input arguments of the **FileRead** Actor to **External** link type.
 
 b. Create an Interface Listener in the **Local File System** Interface for the **SummaryExercise** Logical Unit and attach it to the **EmployeeLookupPopulation** flow.
 
@@ -14,7 +14,7 @@ Note that an Interface Listener handles the file only once.
 
 ![image](images/exam_0.PNG)
 
-**Step 2 - Create an LU and Make the Data Modifications a Customer Population**
+**Step 2 - Create an LU and Make the Data Modifications on a Customer Population**
 
 **Question 2a:**
 
@@ -64,7 +64,7 @@ contextLoop.stop();
 
 In the target Subscriber LU table, the value of the SUBSCRIBER_TYPE (such as 1, 2, 3...) is replaced with the value of the SUBSCRIBER_DESCRIPTION from the CSV file.
 
-If the value is not found in the CSV file, the original value of the SUBSCRIBER_TYPE (such as 1, 2, 3...) will be set in the target table.
+If the value is not found in the CSV file, the original value of the SUBSCRIBER_TYPE (such as 1, 2, 3...) is set in the target table.
 
 ![image](images/exam_2.PNG)
 
@@ -80,7 +80,7 @@ If the inherited Actor needs to be modified, use the **Export Actor** again with
 
 **Question 6**:
 
-The purpose is to split the data based on the condition. **Roaming special** contracts types are written into the file and all other contracts are populated in the LU target table.
+The purpose is to split the data based on the condition. **Roaming special** contract types are written into the file and all other contracts are populated in the LU target table.
 
 ![image](images/exam_4.PNG)
 
@@ -92,7 +92,7 @@ a. Save the **publishCustomer** flow as an Actor.
 
 b. Add **publishCustomer_Actor** to the end of the **Customer.population** flow and connect its **iid** input argument with the **PopulationArgs** output. 
 
-c. Save all the changes, deploy the LU and sync an instance. 
+c. Save the changes, deploy the LU and sync an instance. 
 
 ![image](images/exam_5.PNG)
 
