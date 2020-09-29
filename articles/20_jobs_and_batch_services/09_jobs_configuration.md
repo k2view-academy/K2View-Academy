@@ -71,6 +71,7 @@ The *ANY* option is - by default - attributed to all nodes and only applies to j
 
 1. It is possible to exclude a node for by setting the *ANY* flag to 0 in the node.id file - in which case, the node will not execute jobs defined without affinity. 
 2. If set to a value greater than zero, the chosen value will reflect the maximum number of threads that can be allocated to a job when executed by this node.
+3. If no *ANY* parameter is added to the node.id file, by default, the node will be contributing to all jobs without affinity.
 
 
 ## Cluster Configuration
