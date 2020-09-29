@@ -86,7 +86,7 @@ The purpose is to split the data based on the condition. **Roaming special** con
 
 **Step 7 - Publish the Customer Data to Kafka Topic**
 
-**Question 7:**
+**Question 7a:**
 
 a. Save the **publishCustomer** flow as an Actor.
 
@@ -97,6 +97,24 @@ c. Save all the changes, deploy the LU and sync an instance.
 ![image](images/exam_5.PNG)
 
 ![image](images/exam_6.PNG)
+
+**Question 7b:**
+
+a. Create an Instance Group that will define the list of customers.
+
+b. Deploy the LU.
+
+c. In the Fabric Console, run the **BATCH** command providing the LUT, the Instance Group and the Fabric command as follows:
+
+~~~
+batch SummaryExercise.ig_CUST_ID_LIST fabric_command="broadway SummaryExercise.publishCustomer iid=?" with async=true;
+~~~
+
+d. Connect to the Kafka bootstrap server and check the messages:
+
+~~~
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic <topic_name>
+~~~
 
 
 

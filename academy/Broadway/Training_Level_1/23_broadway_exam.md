@@ -269,4 +269,92 @@ When handling the errors and exceptions in a Broadway flow:
 
 
 
+#### Question 15: Invoke a Flow for Multiple Instances
+
+Is it possible to run a Broadway flow for several instances? If yes - how?
+
+
+\- A:  It is not possible.
+
+
+\- B:  Via the Fabric Studio.
+
+\- C:  Using a BATCH command for a given Instance Group.
+
+\- D:  Using a BROADWAY command.
+
+(**Solution 15. C: It is possible run a flow as a batch process providing the batch configuration parameters and the LU name and flow name execution parameters.**).
+
+
+
+#### Question 16: xxx
+
+xxx
+
+
+\- A:  xx.
+
+
+\- B:  xx.
+
+\- C:  xx.
+
+\- D:  xx.
+
+(**Solution 16. X: XXX.**).
+
+
+
+#### Question 17: xxx
+
+xxx
+
+
+\- A:  xx.
+
+
+\- B:  xx.
+
+\- C:  xx.
+
+\- D:  xx.
+
+(**Solution 17. X: XXX.**).
+
+
+
+#### Question 18: xxx
+
+xxx
+
+
+\- A:  xx.
+
+
+\- B:  xx.
+
+\- C:  xx.
+
+\- D:  xx.
+
+(**Solution 18. X: XXX.**).
+
+
+
+#### Question 19: xxx
+
+xxx
+
+
+\- A:  xx.
+
+
+\- B:  xx.
+
+\- C:  xx.
+
+\- D:  xx.
+
+(**Solution 19. X: XXX.**).
+
 [![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)

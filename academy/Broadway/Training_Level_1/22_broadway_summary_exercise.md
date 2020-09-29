@@ -267,8 +267,12 @@ Prior to starting this exercise, create a **Kafka** interface to connect to Apac
 
 5. Save all the changes, deploy the **SummaryExercise** LU and run the flow.
 
-**Question 7:**
+**Question 7a:**
 
 What should be changed in order to publish the Customer's data to the Kafka topic as part of the SYNC process?
+
+**Question 7b:**
+
+How can you publish the data of a group of customers to the Kafka topic?
 
 [![Previous](/articles/images/Previous.png)](21_broadway_and_fabric_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](22a_broadway_summary_exercise_solution.md)
