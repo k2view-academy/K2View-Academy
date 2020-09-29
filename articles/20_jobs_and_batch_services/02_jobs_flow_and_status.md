@@ -140,7 +140,7 @@ The following image illustrates two different examples:
 
 - JOB 1 is allocated to Node 1 because the job's affinity was specifically set to Node 1 in the Fabric Studio from the [Job's Parameters Configuration table](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-6), or from the Command Line using one of the following commands: [startjob](/articles/20_jobs_and_batch_services/07_jobs_commands.md#startjob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval) and [updatejob](/articles/20_jobs_and_batch_services/07_jobs_commands.md#updatejob-jobtype-namename-uiduid-affinityaffinity-argsargs-exec_intervalexecinterval-reset_end_timetruefalse).
 
-- JOB 2 (to which no affinity is set) is allocated to Node 2, as the ANY option has been added to all nodes config.ini files from Node 2 to Node (N-1) included.
+- JOB 2 (to which no affinity is set) is allocated to Node 2, as the ANY option has been added to all nodes *node.id* files from Node 2 to Node (N-1) included.
 When ANY is set to 0 on the node.id, the node is not part of any job execution.
 When ANY is set to a value greater than zero, the number shows the maximum number of threads to be allocated to this job.
 
