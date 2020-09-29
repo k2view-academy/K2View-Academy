@@ -73,9 +73,9 @@ Result:
 </tbody>
 </table>
  
-### PS Command
+### PS & KILL Commands
 
-The Fabric Process Command can also be used as described [here](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
+Fabric Process Commands can also be used as described [here](/articles/02_fabric_architecture/04_fabric_commands.md#ps-and-kill-commands).
 
 
 
