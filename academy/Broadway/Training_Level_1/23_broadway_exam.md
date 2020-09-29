@@ -353,7 +353,7 @@ When the flow is split due to Stage conditions, the transaction:
 
 \- C:  Must start one Stage before the flow split.
 
-\- D:  Cannot be defined.
+\- D:  Cannot be defined on the split part of the flow.
 
 (**Solution 19. A: The transaction can be defined for only some branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true.**).
 
@@ -361,18 +361,18 @@ When the flow is split due to Stage conditions, the transaction:
 
 #### Question 20: Error Handling
 
-xxx
+Error Handling in a flow:
 
 
-\- A:  xx.
+\- A:  Always catches any type of error.
 
 
-\- B:  xx.
+\- B:  Can programmatically catch some errors and continue the flow.
 
-\- C:  xx.
+\- C:  Will always cause the rollback in the transactional Stage.
 
-\- D:  xx.
+\- D:  Must include the validation logic.
 
-(**Solution 20. X: XXX.**).
+(**Solution 20. B: The Error Handler can catch an error and return 'true' in order to continue the flow.**).
 
 [![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)
