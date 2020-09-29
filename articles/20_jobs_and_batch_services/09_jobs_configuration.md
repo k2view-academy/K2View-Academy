@@ -67,8 +67,9 @@ Note:
 - Several nodes can share the same logical name.
 
 #### *ANY* flag
-The *ANY* option is added to all nodes by default. This means that any node can contribute and compete for the job's execution. 
-1. It is possible to exclude a node for by setting the *ANY* flag to 0 in the node.id file - in which case, the node will not be part of any job execution. 
+The *ANY* option is - by default - attributed to all nodes and only applies to jobs that were defined without affinity. This means that any node can contribute and compete for the execution of the jobs that were defined without a specific affinity.
+
+1. It is possible to exclude a node for by setting the *ANY* flag to 0 in the node.id file - in which case, the node will not execute jobs defined without affinity. 
 2. If set to a value greater than zero, the chosen value will reflect the maximum number of threads that can be allocated to a job when executed by this node.
 
 
