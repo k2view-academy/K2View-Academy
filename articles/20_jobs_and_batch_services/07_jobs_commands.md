@@ -266,4 +266,6 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 </table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/06_create_a_new_CDC_job.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/08_jobs_table_fields.md)
+
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md
+)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/08_jobs_table_fields.md)
