@@ -156,7 +156,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td width="250pxl" valign="top">
-<p>Fabric Jobs</p>
+<p><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md#nodes-configuration-in-clusters">Fabric Jobs</a></p>
 </td>
 <td width="200pxl" valign="top">
 <ul>
