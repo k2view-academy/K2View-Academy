@@ -1,6 +1,8 @@
 # Broadway Summary Exercise
 
-You have completed Broadway Training and learnt about a Broadway flow, an Actor and a Stage. You have also seen the following How To examples:
+You have completed Broadway Training and learnt about a Broadway flow, an Actor and a Stage. 
+
+You have seen the following How To examples:
 
 * Create a flow which includes several Stages with one or more Actors in each step. 
 * Utilize built-in Actors and extend them via the internal inheritance mechanism.
@@ -8,7 +10,7 @@ You have completed Broadway Training and learnt about a Broadway flow, an Actor 
 * Re-use the same business logic by creating inner flows.
 * Manage Transactions and Error Handling processes.
 * Use a Broadway flow as a population for LU tables in Fabric.
-* Invoke a Broadway flow using a SFTP listener, Job or a Fabric command.
+* Invoke a Broadway flow using a SFTP listener or a Fabric command.
 
 
 
@@ -22,14 +24,16 @@ In this exercise you will do the following:
   * Lookup the data from a reference table.
   * Concatenate the values of separate columns. 
   * Update the data format.
-  * Read data from a file and write into a file.
+  * Perform some checks using JavaScript.
+  * Read from a file and write into a file.
 * Practice various Broadway features such as:
-  * Inner flow.
-  * Transactions.
-  * Error Handling.
-  * Setup SFTP listener.
+  * Transactions, to save the data of the Reference table.
+  * Error Handling, to fail the flow if the data is not found in the lookup.
+  * Inner flow, to invoke one flow from another.
+  * Setup SFTP listener, to invoke a flow that reads data from a file.
 * Perform Fabric commands via Broadway.
 * Publish the data from Fabric to Kafka topic.
+* Write into a target DB while handling DB errors.
 
 
 
