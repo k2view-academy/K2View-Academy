@@ -12,7 +12,7 @@ Open the flow you created in the [Using Actors in a Flow](10_using_various_actor
 2. Click ![dots](images/three_dots_icon.png)> **Transaction** in the Stage 6 context menu to uncheck the Transaction.
 3. Run the flow again and verify that a new entry has not been added to the table. 
 4. Check the  message in the log file to verify that a rollback has been performed.
-   * Note that in case of writing into the DB that supports an auto commit, the data will be committed. However when writing into the fabric, the Transaction must be added explicitly otherwise it will be not committed.
+   * Note that data is automatically committed when writing into a DB that supports the Auto Commit process. However, when writing into Fabric, the Transaction must be explicitly added  otherwise it will be not committed.
 5. Add Stage 7, add a **CheckNegative_Actor** to it and then mark the Stage as a Transaction.
 6. Run the flow again with a positive or a negative input for a **CheckNegative_Actor** Actor and check the flow's behavior in each run. 
    * When the input is a positive number, the flow finishes successfully with a commit. 
