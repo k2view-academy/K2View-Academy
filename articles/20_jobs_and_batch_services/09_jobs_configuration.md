@@ -89,7 +89,7 @@ Cluster are used in the following cases:
 
 ### **Heartbeat**
 
-A heartbeat value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is set to 10 seconds.
+A [heartbeat](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#job-execution-resiliency) value can be defined to set the delay of the Fabric node's heartbeat frequency. Default is set to 10 seconds.
 
 ```FABRIC_HEARTBEAT_INTERVAL_MS=5000``` - in this case, the heartbit has been set to 5 seconds.
 
