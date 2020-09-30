@@ -27,5 +27,5 @@ This enables writing JOIN clauses, locally, between any common table and any LUI
 
 
  
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md) 
 
