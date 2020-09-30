@@ -25,7 +25,7 @@ Add a prefix to the Reference table's name in the **File Name Prefix** field (wi
 
 To populate the Reference Table using a Broadway flow, tick the **Table population based Broadway flow** box.
 
-![image](/articles/22_reference(commonDB)_tables/images/02a_create_new_common_tables_schema.PNG)
+![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
 
 5. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
 If the table does not appear immediately, click the Refresh icon: ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
@@ -40,7 +40,7 @@ Reference tables can be edited by either changing the default data mapping, addi
 
 If cases where the Broadway flow population option was selected as defined above in Step 4, the table population process can be edited using the Broadway flow described [here](/articles/07_table_population/14_table_population_based_Broadway.md#example-of-creating-a-population-based-broadway-flow).
 
-![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
+
 
 
 ### How do I View Reference Table Data 
