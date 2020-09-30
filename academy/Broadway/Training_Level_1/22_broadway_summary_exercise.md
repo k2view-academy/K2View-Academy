@@ -23,7 +23,7 @@ In this exercise you will do the following:
 * Perform data manipulations using various Actors, for example:
   * Looking up the data in a reference table.
   * Concatenating the values of separate columns. 
-  * Updating the data format.
+  * Updating the date format.
   * Performing checks using JavaScript.
   * Reading from a file and writing into a file.
 * Practice various Broadway features such as:
