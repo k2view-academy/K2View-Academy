@@ -253,7 +253,7 @@ The transaction in a Broadway flow:
 
 #### Question 14: Error Handling
 
-When handling the errors and exceptions in a Broadway flow:
+When an error occurs in a Broadway flow:
 
 
 \- A:  An error handler must be defined in the last Stage of the flow.
@@ -263,7 +263,7 @@ When handling the errors and exceptions in a Broadway flow:
 
 \- C:  Only a JavaScript Actor can be used for handling errors.
 
-\- D:  The flow continues when an error handler returns true, otherwise the flow stops.
+\- D:  The flow continues if an error handler returns true, otherwise the flow stops.
 
 (**Solution 14. D: Any Actor can be used as an error handler and can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler**).
 
@@ -279,7 +279,7 @@ Is it possible to run a Broadway flow for several instances? If yes - how?
 
 \- B:  Via the Fabric Studio by providing an instance ID for each run.
 
-\- C:  Using a BATCH command for a given Instance Group.
+\- C:  Using a BATCH command for a given list of instances.
 
 \- D:  Using a BROADWAY command.
 
@@ -313,7 +313,7 @@ Can you read and update flow arguments during the flow?
 \- A:  Flow arguments are read-only and are only accessible when the flow is invoked.
 
 
-\- B:  Flow arguments can be accessed by a JavaScript Actor using a flowArgs keyword whereby you can read the data and update the flow context.
+\- B:  Flow arguments can be accessed by a JavaScript Actor using a flowArgs keyword which enables reading the data and updating the flow context.
 
 \- C:  Flow arguments can be accessed by a FabricGet Actor and updated by a FabricSet Actor.
 
@@ -343,10 +343,10 @@ Broadway Data Inspector (the yellow segment):
 
 #### Question 19: Transactions
 
-When the flow is split due to Stage conditions, the transaction:
+When the flow is split into several branches, the transaction:
 
 
-\- A:  Can be defined for only some branches.
+\- A:  Can be defined for selective branches.
 
 
 \- B:  Must be defined for all branches.
@@ -355,7 +355,7 @@ When the flow is split due to Stage conditions, the transaction:
 
 \- D:  Cannot be defined on the split part of the flow.
 
-(**Solution 19. A: The transaction can be defined for only some branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true**).
+(**Solution 19. A: The transaction can be defined for selective branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true**).
 
 
 
@@ -367,12 +367,12 @@ Error Handling in a flow:
 \- A:  Always catches any type of error.
 
 
-\- B:  Can programmatically catch some errors and continue the flow.
+\- B:  Can programmatically catch some errors and continue or stop the flow.
 
 \- C:  Will always cause a rollback in the transactional Stage.
 
 \- D:  Must include the error validation check.
 
-(**Solution 20. B: The Error Handler can catch an error and return 'true' in order to continue the flow**).
+(**Solution 20. B: The Error Handler can catch an error and either continue the flow or stop it**).
 
 [![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)
