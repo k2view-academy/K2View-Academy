@@ -10,7 +10,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Fabric Fabric Architecture<strong><a href="/articles/02_fabric_architecture/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<summary markdown="span"><strong>Fabric Architecture<strong><a href="/articles/02_fabric_architecture/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Fabric Architecture Overview</a></li>
 <li><a href="/articles/02_fabric_architecture/02_fabric_directories.md">Fabric Server- Main Directories</a></li>
 <li><a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md">Fabric Basics - Getting Started</a></li>
