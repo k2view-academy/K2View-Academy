@@ -18,7 +18,7 @@ Broadway is the Fabric module that will allow you to:
 \- A:  Populate Logical Units from external sources.
 
 
-\- B:  Subscribe to a message bus and consume messages.
+\- B:  Read from and write data into DBs or files.
 
 \- C:  Execute scheduled activities (user jobs).
 
@@ -55,7 +55,7 @@ Actors input parameters values are:
 \- A:  Populated based on the selected Link, Const or External population type.
 
 
-\- B:  Constant for some Actors and Link for others.
+\- B:  Either hold Constant values or receive the data from the external source.
 
 \- C:  Always defined as Constant.
 
@@ -112,7 +112,7 @@ A Stage condition:
 \- A:  Can only be defined using a JavaScript Actor.
 
 
-\- B:  Stops the execution of the branch if false is returned by the Actor's first output.
+\- B:  Stops the execution of the branch if the Actor's first output returns false.
 
 \- C:  Should be the only Actor in the Stage.
 
@@ -371,7 +371,7 @@ Error Handling in a flow:
 
 \- C:  Will always cause a rollback in the transactional Stage.
 
-\- D:  Must include validation logic.
+\- D:  Must include the error validation check.
 
 (**Solution 20. B: The Error Handler can catch an error and return 'true' in order to continue the flow**).
 
