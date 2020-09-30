@@ -51,7 +51,8 @@ In a way each Kafka queue plays the role of a virtual table on which all transac
   - Assuming that table T5 is in-sync across all nodes, all nodes will catch up with the update messages published by Node 1 and Node 3, starting with the update that was first committed.
 
 
-Note: 
+Note:
+
 The publishing Node also updates its own commonDB table after reading the very message it published on Kafka and after using the update data available on Kafka's update.
 
   
