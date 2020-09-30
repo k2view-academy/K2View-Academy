@@ -58,13 +58,15 @@ The **JavaScript** Actor exits the loop once the required value is found due to 
 contextLoop.stop();
 ~~~
 
+![image](images/exam_1_1.PNG)
+
 **Step 4 - Create an Inner Flow and Add it to the Subscriber Population**
 
 **Question 4:**
 
 In the target Subscriber LU table, the value of the SUBSCRIBER_TYPE (such as 1, 2, 3...) is replaced with the value of the SUBSCRIBER_DESCRIPTION from the CSV file.
 
-If the value is not found in the CSV file, the original value of the SUBSCRIBER_TYPE (such as 1, 2, 3...) is set in the target table.
+If the value is not found in the CSV file, the original value of the SUBSCRIBER_TYPE (such as 1, 2, 3...) is populated in the target table.
 
 ![image](images/exam_2.PNG)
 
@@ -80,7 +82,7 @@ If the inherited Actor needs to be modified, use the **Export Actor** again with
 
 **Question 6**:
 
-The purpose is to split the data based on the condition. **Roaming special** contract types are written into the file and all other contracts are populated in the LU target table.
+The purpose is to split the data based on the condition. **Roaming special** contract types are written into the file and all other contracts are populated in the target LU table.
 
 ![image](images/exam_4.PNG)
 

@@ -26,7 +26,7 @@ Please refer to the following:
 
 
 
-Now let's see some examples that demonstrate the above Broadway features.
+Now let's see an example that demonstrates how to use a Broadway command.
 
 
 

@@ -12,9 +12,9 @@ You have also seen the following How To examples:
 * Use a Broadway flow as a population for LU tables in Fabric.
 * Invoke a Broadway flow using an SFTP listener or a Fabric command.
 
+### Summary Exercise Overview
 
-
-Now let’s go to the following exercise which summarizes what you have learnt.
+Now let’s go to the following exercise which summarizes what you have learned.
 
 In this exercise you will do the following:
 
@@ -27,21 +27,21 @@ In this exercise you will do the following:
   * Performing checks using JavaScript.
   * Reading from a file and writing into a file.
 * Practice various Broadway features such as:
-  * Transactions, to save the data of the Reference table.
+  * Transactions, to populate and save the data into the Reference table.
   * Error Handling, to fail a flow if the data is not found in the lookup.
   * Inner flow, to invoke one flow from another.
   * Setup SFTP listener, to invoke a flow that reads data from a file.
-* Perform Fabric commands via Broadway.
 * Publish the data from Fabric to a Kafka topic.
+* Run a Broadway flow as a batch process.
 * Write into a target DB while handling DB errors.
 
-
+For the exercise you need to download and open the [Demo Project](/articles/demo_project) in the Fabric Studio.
 
 ### Summary Exercise Steps
 
 **Step 1 - Create a Reference Table and Populate it Using a Broadway Flow**
 
-Before starting this exercise, do the following:
+Before starting the exercise, do the following:
 
 a. Create an **emp_list_lookup.csv** file with the following values:
 
@@ -73,6 +73,7 @@ a. Create an **emp_list_lookup.csv** file with the following values:
 </tr>
 </tbody>
 </table>
+You can add more entries into the above CSV file, using the first names from the CUSTOMER table of CRM_DB.
 
 b. Create a **Local File System** interface and save the CSV file into the **Working Directory** of the interface.
 
@@ -131,13 +132,13 @@ What should be changed in the flow to support automatic file upload to the Refer
 
 What should be changed in the flow to get the following population logic:
 
-* If the customer is an employee, populate the EMP_ID into the IS_EMP column of the CUSTOMER LU table. Otherwise, set it to 0.
+* If the customer is an employee, populate the EMP_ID output of the **Lookup** Actor into the IS_EMP column of the CUSTOMER **DbLoad** Actor. Otherwise, set it to 0.
 
 **Question 2b:**
 
 What should be changed in the flow to get the following population logic:
 
-* If the customer is not an employee, throw an error. Otherwise continue and populate the EMP_ID into the IS_EMP column of the CUSTOMER LU table.
+* If the customer is not an employee, throw an error. Otherwise continue and populate the EMP_ID into the IS_EMP column of the CUSTOMER **DbLoad** Actor.
 
 **Step 3 - Create a Flow that Reads Data from the File and Searches for a Value**
 
@@ -182,7 +183,7 @@ b. Save the CSV file into the **Working Directory** of the **Local File System**
 
 3. Add a **CsvParser** Actor to Stage 2 and connect it to the **FileRead** Actor.
 
-4. Add a **JavScript** Actor to Stage 3 and connect it to the  **CsvParser** Actor using an **Iterate** link.
+4. Add a **JavaScript** Actor to Stage 3 and connect it to the  **CsvParser** Actor using an **Iterate** link.
 
    * Add **input1** and **input2** input arguments and set input2 to **External** by setting its external name to **input_subs_type**.
 
@@ -219,7 +220,7 @@ What happens if the value is not found in the CSV file?
 
 1. Open the **Contract.population** flow and add a **DateFormat** Actor to the empty Stage 1.  
 2. Set the **format** to 'dd-MM-yy' and the **tz** to GMT. 
-3. Export the Actor by setting the **format** to **final**. Name the new Actor **exerciseDateFormat**. 
+3. Export the Actor by setting the name to **exerciseDateFormat** and the **format** to **final**. 
 4. Connect the **exerciseDateFormat** Actor to the FROM_DATE column of the **Query** Actor's output using an **Iterate** link type.
 5. Connect its output to the FROM_DATE column of the CONTRACT **DbLoad** Actor's input.
 6. Add another **exerciseDateFormat** Actor and connect it to the TO_DATE columns.
@@ -231,7 +232,7 @@ Can the inherited Actor's input / output argument settings be modified? If yes, 
 
 **Step 6 - Split the Stages, Set the Condition and Write Data into the File**
 
-1. Split Stage 1 and add a Stage condition to it using a **JavaScript** Actor with the following script:
+1. In the **Contract.population** flow split Stage 1 and add a Stage condition to it using a **JavaScript** Actor with the following script:
 
    ~~~javascript
    input1 != "Roaming special"
@@ -239,9 +240,9 @@ Can the inherited Actor's input / output argument settings be modified? If yes, 
 
 2. Add an **input1** input argument to the  **JavaScript** Actor and connect it to the CONTRACT_DESCRIPTION column of the **Query** Actor's output using an **Iterate** link type.
 
-3. Set the new Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link type.
+3. Set the new split Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link type.
 
-4. Split the LU Table Stage and add a **FileWrite** Actor to it. Define the Actor's **interface** and path input arguments and connect its **stream** input to the **JsonStringify** Actor's output. 
+4. Split the LU Table Stage and add a **FileWrite** Actor to the new split Stage, so that it will be in the branch of **else** condition. Define the Actor's **interface** and **path** input arguments and connect its **stream** input to the **JsonStringify** Actor's output. 
 
 5. Save the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
@@ -257,7 +258,8 @@ Prior to starting this exercise, create a **Kafka** interface to connect to the 
 
 2. Add a **FabricGet** Actor to Stage 1 and do the following:
 
-   * Set the **luType** input argument to **SummaryExercise** and **iid** to **External** population type.
+   * Set the **luType** input argument to **SummaryExercise**.
+   * Change the **iid** to **External** population type.
 
 3. Add a **DbCommand** Actor to Stage 2 and do the following:
 
@@ -267,25 +269,19 @@ Prior to starting this exercise, create a **Kafka** interface to connect to the 
    SELECT * FROM CUSTOMER
    ~~~
 
-4. Add a **Publish** Actor to Stage 3 and connect its **message** to the **result** of the **DbCommand**. Set the interface to the **Kafka** interface you created earlier.
+4. Add a **Publish** Actor to Stage 3 and connect its **message** to the **result** of the **DbCommand**. Set the interface to the **Kafka** interface you defined earlier.
 
 5. Save the changes, deploy the **SummaryExercise** LU and run the flow.
 
 **Question 7a:**
 
-What should be changed in order to publish the Customer's data to the Kafka topic as part of the SYNC process?
+What should be changed in order to publish the Customer's data to the Kafka topic as part of the sync process?
 
 **Question 7b:**
 
 How can you publish the data of a group of customers to the Kafka topic?
 
 **Step 8 - Write into the Target DB and Handle a DB Error**
-
-Prior to starting this exercise, create a new table in the **CRM_DB** interface:
-
-a. Table name: CONTRACT_COPY.
-
-b. Columns: CUSTOMER_ID (NN), CONTRACT_ID (NN, PK), CONTRACT_REF_ID.
 
 1. Create a new **Contract.populationCopy** flow that retrieves the data from the CONTRACT LU table of the **fabric** interface and loads the data to the CONTRACT_COPY table of the  **CRM_DB** interface.
 
