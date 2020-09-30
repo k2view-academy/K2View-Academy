@@ -1,19 +1,43 @@
-# CommmonDB - Architecture and Flow
+# CommmonDB - Synchronization Overview
 
 
 ## Overview
 Copies of Reference tables are kept within each Fabric Node, therefore Fabric CommonDB architecture has been designed to answer the following requirements:
 
-- Manage their synchronization with the source, either automatically in the background or on-demand according to a specific schedule.
+- Manage the synchronization process with their source, either automatically in the background, on-demand at any given time, or according to a specific schedule.
 - Ensure high availability levels at all times with the lowest access time possible.
 
-CommonDB consists of a single SQLite file that contains all the Reference Tables that have been populated from External Sources or as Fabric SOR .
+CommonDB consists of a single SQLite file that contains all the Reference Tables that have been populated from External Sources or from Fabric System of Records (SOR).
 
-This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single file. In case of parallel transactions on common tables, the first node to commit the change updates the table.
+This means that in a distributed environment (Fabric Cluster) each Fabric node contains all common tables within this single SQLite file. 
 
-Examples:
 
-- Node 1 and Node 3 wish to modify table T5 of commonDB with an update on same row but with different value:
+
+## Synchronization Use Cases
+
+1. 
+A system might need to operate a synchronization process every day at 2 AM as a result of a maintenance task - i.e. all new customers, or new transactions created over the last 24 hours. In this case, a recurring background sync will be scheduled for this specific time.
+
+2.
+A customer service operative needs get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  refsync and ref_sync_wait commands described [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
+
+3. 
+A sales manager is closing the case he just treated - resulting in creating a new case entry in the Billing Database. 
+Assuming the customer provided a new email address whereby the email provider details are kept on a Reference Table (featuring all email providers from all customers), all nodes will need to synchronize the reference table so to provide the most updated list of providers to other sales managers.  
+
+
+## Examples
+
+In cases of multiple transactions on a given common table (multiple nodes execute transactions with their local commonDB file copy) , the first node to commit the change will also updates the table.
+
+Let's assume a simple case: 2 nodes are modifying the same Reference Table, each one kept locally. 
+
+As will be explained later, Kafka queues are used as the transaction broker common between all nodes. 
+
+In a way each Kafka queue plays the role of a virtual table on which all transactions updates are published, and from which each node reads the transactions of all the nodes (including its own) to physically update its own local copy of commonDB SQLite file.  
+
+
+- Node 1 and Node 3 wish to modify table T5 of commonDB with an update on same row, but with different value:
 
   - Node 3 wants to update T5 on Row 10 with value = 3
   - Node 1 wants to update T5 on Row 10 with value = 1
@@ -199,8 +223,8 @@ This happens when running the following command ```drop lutype k2_ref;``` from a
   
 
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/02_add_a_reference_table.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_configuration.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/04_commonDB_synch_modes_and_flow.md)
 
 
