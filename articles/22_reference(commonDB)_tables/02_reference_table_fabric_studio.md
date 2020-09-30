@@ -37,7 +37,8 @@ If the table does not appear immediately, click the Refresh icon: ![image](/arti
 ## Editing and Viewing Reference Tables
 
 Reference tables can be edited by either changing the default data mapping, adding transformations or adding or removing columns like in [LU tables](/articles/07_table_population/01_table_population_overview.md). 
-If you have selected the Broadway flow population in Step 4 defined above, the table population process can be edited using the Broadway flow described [here](/articles/07_table_population/14_table_population_based_Broadway.md#example-of-creating-a-population-based-broadway-flow)
+
+If cases where the Broadway flow population option was selected as defined above in Step 4, the table population process can be edited using the Broadway flow described [here](/articles/07_table_population/14_table_population_based_Broadway.md#example-of-creating-a-population-based-broadway-flow).
 
 ![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
 
