@@ -1,4 +1,4 @@
-# **Fabric CommonDB Overview** 
+# **Fabric CommonDB and Reference Overview** 
 
 
 # **What are Reference (Common) Tables ?** 
@@ -17,11 +17,12 @@ To ensure that a Reference table in an LU Schema is always synched, verify that 
 When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them. 
 
 
-# **Where are stored Reference Tables ?** 
+# **Where are Reference Tables Stored ?**
 
 CommonDB is an additional SQLite database used for storing reference tables common to all LUIs (MicroDBs).
 
-In a distributed system, a copy of the CommonDB is stored on each Fabric node that is involved. Fabric handles their cross-synchronization and ensures that the local CommonDB SQLite file is always available for queries from within each Fabric session. 
+In a distributed system, a copy of the CommonDB is stored on each Fabric node that is involved.
+Fabric handles their cross-synchronization and ensures that the local CommonDB SQLite file is always available for queries from within each Fabric session. 
 This enables writing JOIN clauses, locally, between any common table and any LUI using only one SQL query, thus providing instantenous data access and computing resources to these queries. 
 
 
