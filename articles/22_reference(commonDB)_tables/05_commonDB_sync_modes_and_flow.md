@@ -70,8 +70,7 @@ A snapshot will only be published once one of the following actions will be trig
 -	The full table synchronization is initialized by a job.
 -	Scheduled Sync time has come.
 -	Manually, when requested by the user.
-
-Note that in addition, if a delete request is sent to a Reference Table without a ```where``` statement, it is automatically treated as a snapshot update. 
+- When a delete request is sent to a Reference Table without a ```where``` statement
 
 
 #### Snapshots Synchronization Mechanism
@@ -93,8 +92,8 @@ Each node will perform the following snapshot synchronization as follow:
 - Once the batch of transactions is available, all updates are executed in one commit, unless there are failures in which case each update is executed one by one.
 
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_runtime.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/05_fabric_commonDB_misc.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/06_fabric_commonDB_misc.md)
 
 
