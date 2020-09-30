@@ -48,7 +48,7 @@ CONSUMER_IDLE_TIME=60000
 
 ### Affinity 
 
-Using the [affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md) parameter, The sync table process can be allocated to a specific node (default: no affinity)
+Using the [affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md) parameter, the table synchronization process can be allocated to a specific node (by default, no affinity is set)
 
 ```
 SYNC_JOBS_AFFINITY=10.23.10.11
