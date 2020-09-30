@@ -175,7 +175,7 @@ The data for a table population using a Broadway flow is retrieved by:
 \- D:  A SourceDbQuery Actor whereby the WHERE clause is generated in the background by connecting the parent_rows input argument to the PopulationArgs Actor's output.
 
 
-(**Solution 9. D: The data is retrieved by a SourceDbQuery Actor that inherits from the DbCommand Actor. The WHERE clause is generated automatically and is not visible in the Actor's UI.**).
+(**Solution 9. D: The data is retrieved by a SourceDbQuery Actor that inherits from the DbCommand Actor. The WHERE clause is generated automatically and is not visible in the Actor's UI**).
 
 
 
@@ -247,7 +247,7 @@ The transaction in a Broadway flow:
 
 \- D:  Cannot be defined on a split Stage.
 
-(**Solution 13. C: There are two approaches for handling transactions during an iteration, closing the transaction and performing a commit on each iteration or after the loop ends.**).
+(**Solution 13. C: There are two approaches for handling transactions during an iteration, closing the transaction and performing a commit on each iteration or after the loop ends**).
 
 
 
@@ -265,7 +265,7 @@ When handling the errors and exceptions in a Broadway flow:
 
 \- D:  The flow continues when an error handler returns true, otherwise the flow stops.
 
-(**Solution 14. D: Any Actor can be used as an error handler and can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler.**).
+(**Solution 14. D: Any Actor can be used as an error handler and can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler**).
 
 
 
@@ -283,7 +283,7 @@ Is it possible to run a Broadway flow for several instances? If yes - how?
 
 \- D:  Using a BROADWAY command.
 
-(**Solution 15. C: A flow can be run as a batch process by providing the batch configuration parameters and the LU name and flow name execution parameters.**).
+(**Solution 15. C: A flow can be run as a batch process by providing the batch configuration parameters and the LU name and flow name execution parameters**).
 
 
 
@@ -301,7 +301,7 @@ Does Broadway support asynchronous message handling? If yes - how?
 
 \- D:  Broadway can subscribe to and publish the messages to Kafka and any JMS provider.
 
-(**Solution 16. D: Message provider types supported in Broadway are, Apache Kafka, JMS Queue and Topic by any JMS provider.**).
+(**Solution 16. D: Message provider types supported in Broadway are, Apache Kafka, JMS Queue and Topic by any JMS provider**).
 
 
 
@@ -319,7 +319,7 @@ Can you read and update flow arguments during the flow?
 
 \- D:  Flow arguments are accessible via the sync process only.
 
-(**Solution 17. B: To read data from the flow's arguments and write into the flow's context, use the flowArgs keyword.**).
+(**Solution 17. B: To read data from the flow's arguments and write into the flow's context, use the flowArgs keyword**).
 
 
 
@@ -337,7 +337,7 @@ Broadway Data Inspector (the yellow segment):
 
 \- D:  None of the above.
 
-(**Solution 18. D: A is incorrect because the data cannot be edited. B is incorrect because the structure can be identified in Debug mode only. C is incorrect since the columns of the complex data type can be connected individually to other Actors.**).
+(**Solution 18. D: A is incorrect because the data cannot be edited. B is incorrect because the structure can be identified in Debug mode only. C is incorrect since the columns of the complex data type can be connected individually to other Actors**).
 
 
 
@@ -355,7 +355,7 @@ When the flow is split due to Stage conditions, the transaction:
 
 \- D:  Cannot be defined on the split part of the flow.
 
-(**Solution 19. A: The transaction can be defined for only some branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true.**).
+(**Solution 19. A: The transaction can be defined for only some branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true**).
 
 
 
@@ -373,6 +373,6 @@ Error Handling in a flow:
 
 \- D:  Must include validation logic.
 
-(**Solution 20. B: The Error Handler can catch an error and return 'true' in order to continue the flow.**).
+(**Solution 20. B: The Error Handler can catch an error and return 'true' in order to continue the flow**).
 
 [![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)
