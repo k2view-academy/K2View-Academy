@@ -4,7 +4,7 @@
 
 Excellent! You have completed the Broadway Training and the Summary Exercise.
 
-Let's take the following certification example to see what you have learnt. The exam consists of a number of multiple-choice questions, each providing a number of possible answers. 
+It's now time to take the following certification exam to see what you have learnt. The exam consists of a number of multiple-choice questions, each providing a number of possible answers. 
 
 Click the answer you think is correct. 
 
@@ -62,7 +62,7 @@ Actors input parameters values are:
 \- D:  Populated based on the Actor's position in the flow.
 
 
-(**Solution 3. A: The population of the input parameter depends on the population type. The supported types are:  Link, Const or External**).
+(**Solution 3. A: The population of the input parameter depends on the population type. The supported types are: Link, Const or External**).
 
 
 
@@ -90,7 +90,7 @@ If the Actor expects to receive a Boolean value but receives a number instead, B
 A Broadway flow is built of several Stages whereby:
 
 
-\- A:  The Stages are executed from left to right in the flow, each Stage can include one or more Actors and the Actors are executed top-down within the Stage.
+\- A:  The Stages are executed from left to right in the flow, each Stage can include one or more Actors which are executed top-down within the Stage.
 
 
 \- B:  Any Stage in a flow can be split to create parallel execution branches.
@@ -199,15 +199,15 @@ In a Broadway flow you can:
 
 #### Question 11: Actor Inheritance
 
-When creating an Inherited Actor, the new Actor:
+When creating an inherited Actor, the new Actor:
 
 
-\- A:  Must keep their Ancestor's input and output arguments as-is.
+\- A:  Must keep their ancestor's input and output arguments as-is.
 
 
-\- B:  Must set all their Ancestor's input and output arguments as either hidden or final.
+\- B:  Must set all their ancestor's input and output arguments as either hidden or final.
 
-\- C:  Can set their Ancestor's input and output arguments as either hidden or final.
+\- C:  Can set their ancestor's input and output arguments as either hidden or final.
 
 \- D:  Will be created in a new category (tag) designated for inherited Actors only.
 
@@ -241,13 +241,13 @@ The transaction in a Broadway flow:
 \- A:  Can only be defined on DB interfaces.
 
 
-\- B:  Impacts the transactional Stages but don't impact Inner flows which fall within the transaction.
+\- B:  Impacts the transactional Stages but does not impact the inner flows within the transaction.
 
-\- C:  When defined on an iteration, can do commit (or rollback) either on each iteration or at the end of the iteration data set.
+\- C:  When defined on an iteration, can do a commit (or rollback) either on each iteration or at the end of the iteration data set.
 
 \- D:  Cannot be defined on a split Stage.
 
-(**Solution 13. C: There are two approaches for handling transactions during an iteration: closing the transaction and performing a commit on each iteration or after the loop ends.**).
+(**Solution 13. C: There are two approaches for handling transactions during an iteration, closing the transaction and performing a commit on each iteration or after the loop ends.**).
 
 
 
@@ -256,7 +256,7 @@ The transaction in a Broadway flow:
 When handling the errors and exceptions in a Broadway flow:
 
 
-\- A:  An error handler must be defined at the last Stage of the flow.
+\- A:  An error handler must be defined in the last Stage of the flow.
 
 
 \- B:  Several error handling Actors can be defined in a flow but not in an inner flow.
@@ -265,7 +265,7 @@ When handling the errors and exceptions in a Broadway flow:
 
 \- D:  The flow continues when an error handler returns true, otherwise the flow stops.
 
-(**Solution 14. D: Any Actor can be used as an error handler and it can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler.**).
+(**Solution 14. D: Any Actor can be used as an error handler and can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler.**).
 
 
 
@@ -277,47 +277,47 @@ Is it possible to run a Broadway flow for several instances? If yes - how?
 \- A:  It is not possible.
 
 
-\- B:  Via the Fabric Studio proving an instance ID for each run.
+\- B:  Via the Fabric Studio by providing an instance ID for each run.
 
 \- C:  Using a BATCH command for a given Instance Group.
 
 \- D:  Using a BROADWAY command.
 
-(**Solution 15. C: It is possible run a flow as a batch process providing the batch configuration parameters and the LU name and flow name execution parameters.**).
+(**Solution 15. C: A flow can be run as a batch process by providing the batch configuration parameters and the LU name and flow name execution parameters.**).
 
 
 
 #### Question 16: Broadway Actors
 
-Does Broadway support the asynchronous message handling? If yes - how?
+Does Broadway support asynchronous message handling? If yes - how?
 
 
 \- A:  It is not supported by Broadway.
 
 
-\- B:  it is supported via the Web Services.
+\- B:  It is supported via Web Services.
 
 \- C:  Broadway can subscribe to and publish the messages to Kafka only.
 
 \- D:  Broadway can subscribe to and publish the messages to Kafka and any JMS provider.
 
-(**Solution 16. D: Message provider types supported in Broadway are: Apache Kafka, JMS Queue and Topic by any JMS provider.**).
+(**Solution 16. D: Message provider types supported in Broadway are, Apache Kafka, JMS Queue and Topic by any JMS provider.**).
 
 
 
 #### Question 17: Broadway Actors
 
-Can you read and update the flow arguments during the flow?
+Can you read and update flow arguments during the flow?
 
 
-\- A:  The flow arguments are read-only and only accessible when the flow is invoked.
+\- A:  Flow arguments are read-only and are only accessible when the flow is invoked.
 
 
-\- B:  The flow arguments can be accessed by JavaScript Actor using flowArgs keyword whereby you can read the data and update the flow context.
+\- B:  Flow arguments can be accessed by a JavaScript Actor using a flowArgs keyword whereby you can read the data and update the flow context.
 
-\- C:  The flow arguments can be accessed by FabricGet Actor and updated by FabricSet Actor.
+\- C:  Flow arguments can be accessed by a FabricGet Actor and updated by a FabricSet Actor.
 
-\- D:  The flow arguments are accessible via the sync process only.
+\- D:  Flow arguments are accessible via the sync process only.
 
 (**Solution 17. B: To read data from the flow's arguments and write into the flow's context, use the flowArgs keyword.**).
 
@@ -328,12 +328,12 @@ Can you read and update the flow arguments during the flow?
 Broadway Data Inspector (the yellow segment):
 
 
-\- A:  Allows to view and edit the data when running a flow with Debug ON.
+\- A:  Enables viewing and editing data when running a flow with Debug ON.
 
 
-\- B:  Can identify and display complex Object data type structures regardless of DEBUG flag.
+\- B:  Can identify and display complex Object data type structures regardless of the DEBUG flag.
 
-\- C:  Displays the columns of complex Object data types but doesn't allow to connect them individually to other Actors arguments.
+\- C:  Displays the columns of complex Object data types but does not enable connecting them individually to other Actors arguments.
 
 \- D:  None of the above.
 
@@ -349,7 +349,7 @@ When the flow is split due to Stage conditions, the transaction:
 \- A:  Can be defined for only some branches.
 
 
-\- B:  Must be defined for all the branches.
+\- B:  Must be defined for all branches.
 
 \- C:  Must start one Stage before the flow split.
 
@@ -369,9 +369,9 @@ Error Handling in a flow:
 
 \- B:  Can programmatically catch some errors and continue the flow.
 
-\- C:  Will always cause the rollback in the transactional Stage.
+\- C:  Will always cause a rollback in the transactional Stage.
 
-\- D:  Must include the validation logic.
+\- D:  Must include validation logic.
 
 (**Solution 20. B: The Error Handler can catch an error and return 'true' in order to continue the flow.**).
 
