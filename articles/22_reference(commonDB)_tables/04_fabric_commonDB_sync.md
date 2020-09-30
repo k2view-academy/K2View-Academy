@@ -1,4 +1,4 @@
-# CommmonDB - Synchronization Overview
+# CommonDB - Synchronization Overview
 
 
 ## Overview
