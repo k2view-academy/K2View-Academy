@@ -87,9 +87,9 @@ When running the following command ```drop lutype k2_ref;``` from any Fabric Nod
   
    
 
-[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/04_commonDB_synch_modes_and_flow.md)
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/05_commonDB_sync_modes_and_flow.md)
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/06_fabric_commonDB_configuration.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/07_fabric_commonDB_configuration.md)
 
 
    
