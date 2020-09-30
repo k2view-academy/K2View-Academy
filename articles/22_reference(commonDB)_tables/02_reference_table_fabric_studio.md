@@ -100,7 +100,7 @@ Functions or other tables can be attached to the Reference table:
 
 ## Attach the Reference Table to an LU Schema
 
-Before accessing the Reference Table from a specific LU, it must be attached to the LU so it is synchronized when executing a ```get``` on LUI or to be used as a reference ///// [link](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md#how-do-i-edit-a-reference-tab)
+Before accessing the Reference Table from a specific LU, or before it can be used as a [lookup object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md#how-do-i-edit-a-reference-tab), it must be attached to the LU, in which case it is automatically synchronized when executing a ```get``` on LUI.
 
 ### Configure LU to Use a Reference Table
 
@@ -114,7 +114,7 @@ Before accessing the Reference Table from a specific LU, it must be attached to 
 
 4. Click **Save** to save the association created between the LU and the Reference Table(s). 
 
-Note: Reference tables can also be accessed via [Lookup tables](/articles/07_table_population/11_lookup_tables.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), [jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) and [Broadway Actors(/articles/19_Broadway/04_built_in_actor_types.md#db).
+Note: Reference tables can also be accessed via [Lookup tables](/articles/07_table_population/11_lookup_tables.md), [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), [functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), [jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) and [Broadway Actors](/articles/19_Broadway/04_built_in_actor_types.md#db).
 
 
 
