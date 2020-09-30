@@ -15,13 +15,13 @@ This means that in a distributed environment (Fabric Cluster) each Fabric node c
 
 ## Synchronization Use Cases
 
-### Use Case 1 
+*Case 1*
 A system might need to operate a synchronization process every day at 2 AM as a result of a maintenance task - i.e. all new customers, or new transactions created over the last 24 hours. In this case, a recurring background sync will be scheduled for this specific time.
 
-### Use Case 2
+*Case 2*
 A customer service operative needs get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  refsync and ref_sync_wait commands described [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
 
-### Use Case 3
+*Case 3*
 A sales manager is closing the case he just treated - resulting in creating a new case entry in the Billing Database. 
 Assuming the customer provided a new email address whereby the email provider details are kept on a Reference Table (featuring all email providers from all customers), all nodes will need to synchronize the reference table so to provide the most updated list of providers to other sales managers.  
 
