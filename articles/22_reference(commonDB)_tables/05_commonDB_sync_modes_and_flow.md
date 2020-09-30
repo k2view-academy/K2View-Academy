@@ -11,7 +11,7 @@
 2 different flows occur for each of these cases, depending on whether the update content size exceeds 1000 rows or not. 
 
 
-### Short Message
+### Short Message Case
 
 The case illustrated below shows how a Synchronisation Job (Sync Job 2) publishes an update notification and short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes, in the cluster, to write the update directly from Kafka to its SQLite CommonDB copy. 
 
@@ -19,16 +19,16 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 2) publishe
 
 
 
-### Long Message
+### Long Message Case
 
 The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishes an update message on the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra, subsequently causing any listening node, within the cluster, to write the update content directly from Cassandra to its SQLite CommonDB copy. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/09_commonDB_RefSyncLong.png)
 
 
-## Synchronization Properties
+### Synchronization Properties
 
-Any transaction involving the common table is done in asynchronous mode, i.e. the updated data cannot be seen until it has been committed, and Fabric updates the relevant commonDB table.
+Any transaction involving the common table is done in asynchronous mode, i.e. the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table.
 
 The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in Cassandra, depending on its size.
 
@@ -42,7 +42,9 @@ This mode is (automatically) selected in cases where row updates to the referenc
 In this mode, updates are performed in ways of Create/Update/Delete SQL queries directly on the table itself - each node will execute this change locally on his local SQLite commonDB copy) 
 
 - Small updates: - In cases where less than 1000 updates needs to be performed
-- Big updates: - In cases exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra
+- Big updates: - In cases exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra:
+
+e.g. Supposing the update consists of  running 2500 insert commands, each bulk of 1000 commands is written to Cassandra (the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each) while Kafka gets the transaction message (one message is sent to Kafka per table and per transaction). 
 
 
 ### Snapshot Mode:
@@ -74,6 +76,8 @@ Note that in addition, if a delete request is sent to a Reference Table without 
 
 #### Snapshots Synchronization Mechanism
 
+Each node will perform the following snapshot synchronization as follow: 
+
 ##### Option 1 - Truncate option is set
 
 - The snapshot is started
@@ -86,7 +90,7 @@ Note that in addition, if a delete request is sent to a Reference Table without 
 ##### Option 2 - Truncate option is not set
 
 - All updates for the Reference Table are executed 
-- Once the batch of transactions is available, all the updates are executed in one commit, unless there are failures in which case each update is executed one by one.
+- Once the batch of transactions is available, all updates are executed in one commit, unless there are failures in which case each update is executed one by one.
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_runtime.md)
