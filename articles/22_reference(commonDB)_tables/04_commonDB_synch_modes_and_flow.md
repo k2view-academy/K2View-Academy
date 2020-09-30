@@ -173,3 +173,12 @@ This happens when running the following command ```drop lutype k2_ref;``` from a
     ```
   - Close the transaction: ```fabric>end;```
   - Note that if you forget to close the transaction, write sessions to the Reference Table (such as a scheduled Sync) will not work.
+  
+  
+   
+
+[<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/03_fabric_commonDB_runtime.md)
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/22_reference%28commonDB%29_tables/05_fabric_commonDB_misc.md)
+
+
