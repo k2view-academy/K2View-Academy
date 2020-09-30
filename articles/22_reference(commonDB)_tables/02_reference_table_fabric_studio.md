@@ -124,7 +124,9 @@ Reference Tables must be deployed before being used. As a result of the deployme
 
 To deploy the Reference Tables, go to the **Project Tree**, right click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.
 
-Note: If the reference table as been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU will also need to be (re-)deployed.
+Note:
+
+If the reference table as been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU will also need to be (re-)deployed.
 
   
 
