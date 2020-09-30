@@ -87,14 +87,10 @@
 <li >Transactions</li>
 </ul>
 </li>
-<li >Exercise:
-<ul >
-<li >Create a Flow with an Inner Flow and an Error Handler</li>
-</ul>
-</li>
 <li >Broadway and Fabric
 <ul >
-<li >Execute a Flow using a Batch Command</li>
+<li >Broadway / Batch commands</li>
+<li >Broadway Job</li>
 </ul>
 </li>
 </ul>
