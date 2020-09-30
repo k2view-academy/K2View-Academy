@@ -114,7 +114,7 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishe
 
 
 
-## Common Area table initialization
+## CommonDB Table Initialization
 When a new node is  coming up online, and rejoins the current Fabric cluster, all the common tables need to be brought to this node. Two options are available to perform this enrollment:
 
 - **Option 1: Directly from kafka**
