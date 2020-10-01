@@ -28,7 +28,7 @@ A new node comes on line and requests for an update:
 
 Deploying a new reference table will have the following consequences:
 1. All running reference table synchronization jobs will stop.
-2  A new table/index will be created on CommonDB 
+2  A new table/index will be created on CommonDB.
 3. All Kafka Consumer/Topic will be cleared if the table was removed.
 4. A new Kafka topic will be created if a new table was added.
 5. A new Kafka consumer will be created for each node.
