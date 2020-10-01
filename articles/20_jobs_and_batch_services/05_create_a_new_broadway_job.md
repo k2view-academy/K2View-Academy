@@ -23,7 +23,7 @@ where args consists of a json-type format string containing the parameters to be
 and where ```EXEC_INTERVAL``` describes the time schedule pattern for the job as described [here](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) 
 
 e.g. 
-``` startjob broadway_job name='Customer.Flow1' ARGS='A=10, B=20' EXEC_INTERVAL='00:00:10';```
+``` startjob broadway_job name='Customer.Flow1' ARGS={a:10,b:20} EXEC_INTERVAL='00:00:10';```
 
 
 
