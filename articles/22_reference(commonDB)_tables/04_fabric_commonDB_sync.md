@@ -1,4 +1,4 @@
-# CommonDB - Cross Nodes Synchronization Overview
+# CommonDB - Cross-Nodes Synchronization Overview
 
 
 ## Overview
@@ -13,25 +13,27 @@ This means that in a distributed environment (Fabric Cluster) each Fabric node c
 
 
 
-## Synchronization Use Cases
+## Synchronization Use Case
+
+Let's consider a sales manager closing the case he just treated. This resulted in creating a new case entry in the Billing database. The customer update consists of a new email address whereby the email provider details are kept on a Reference Table (featuring all email providers from all customers). 
+
+All other Fabric nodes will need to synchronize the reference table so to provide the most updated list of email providers to other sales managers.  
+
+More, what happens if two such sales managers operate similar changes on the same row and entry of the same Reference Table (each one on his local copy of commonDB)?
 
 
-////*Case 4: - Ongoing Background Sync* 
-The most updated data always available and distributed across all nodes - check with sergey bg_
-A sales manager is closing the case he just treated - resulting in creating a new case entry in the Billing Database. 
-Assuming the customer provided a new email address whereby the email provider details are kept on a Reference Table (featuring all email providers from all customers), all nodes will need to synchronize the reference table so to provide the most updated list of providers to other sales managers.  
-////
+Fabric provides a resilient mechanism to unsure that the most updated data is always available and distributed across all Fabric nodes in the same cluster. 
+
 
 ## Examples
 
-In cases of multiple transactions on a given common table (multiple nodes execute transactions with their local commonDB file copy) , the first node to commit the change will also updates the table.
+In cases of multiple transactions on a given common table (multiple nodes execute transactions with their local commonDB file copy), the first node to commit the change will also be the first one to update the table.
 
 Let's assume a simple case: 2 nodes are modifying the same Reference Table, each one kept locally. 
 
 As will be explained later, Kafka queues are used as the transaction broker common between all nodes. 
 
 In a way each Kafka queue plays the role of a virtual table on which all transactions updates are published, and from which each node reads the transactions of all the nodes (including its own) to physically update its own local copy of commonDB SQLite file.  
-
 
 - Node 1 and Node 3 wish to modify table T5 of commonDB with an update on same row, but with different value:
 
