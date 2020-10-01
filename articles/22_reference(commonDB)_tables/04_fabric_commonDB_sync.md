@@ -21,7 +21,7 @@ A system might need to operate a synchronization process every day at 2 AM as a 
 
 *Case 2:*
 
-A customer service operative needs get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  refsync and ref_sync_wait commands described [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
+A customer service operative needs get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  ref_sync and ref_sync_wait commands described [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
 
 *Case 3:*
 
