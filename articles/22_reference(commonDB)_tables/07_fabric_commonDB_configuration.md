@@ -72,7 +72,7 @@ TRANSACTION_BULK_SIZE= 1000
 ```
 
 
-### MAXIMUM TRANSACTIONS in BULK
+### Maximum Transactions in Bulk
 
 ```
 MAX_TRANSACTIONS_COMMIT=100
