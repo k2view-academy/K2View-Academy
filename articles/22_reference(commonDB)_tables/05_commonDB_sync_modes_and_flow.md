@@ -4,7 +4,7 @@
 
 ## Synchronization Flow
 
-2 types of transactions can be differentiated when updating a commonDB reference table: 
+2 types of transactions can be differentiated when a commonDB reference table is updated: 
 - Short message updates - whereby both update's message and content are both stored on the dedicated Kafka queue.
 - Long message updates - whereby the update's message is published on the dedicated Kafka queue while the update's content is stored on Cassandra.
 
@@ -13,7 +13,7 @@
 
 ### Short Message Case
 
-The case illustrated below shows how a Synchronisation Job (Sync Job 2) publishes an update notification and short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes, in the cluster, to write the update directly from Kafka to its SQLite CommonDB copy. 
+The case illustrated below shows how a Synchronisation Job (Sync Job 2) publishes an update notification and short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes, in the cluster, to write the update directly from Kafka to its own SQLite CommonDB copy. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/08_commonDB_RefSyncShort.png)
 
@@ -21,16 +21,16 @@ The case illustrated below shows how a Synchronisation Job (Sync Job 2) publishe
 
 ### Long Message Case
 
-The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishes an update message on the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra, subsequently causing any listening node, within the cluster, to write the update content directly from Cassandra to its SQLite CommonDB copy. 
+The case illustrated below shows how a Synchronisation Job (Sync Job 1) publishes an update message on the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra, subsequently causing any listening node, within the cluster, to write the update content directly from Cassandra to its own SQLite CommonDB copy. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/09_commonDB_RefSyncLong.png)
 
 
 ### Synchronization Properties
 
-Any transaction involving the common table is done in asynchronous mode, i.e. the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table.
+Any transaction involving the common table is done in asynchronous mode, meaning that the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table.
 
-The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in Cassandra, depending on its size.
+The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in a Cassandra keyspace, depending on its size.
 
 
 ## Synchronization modes
