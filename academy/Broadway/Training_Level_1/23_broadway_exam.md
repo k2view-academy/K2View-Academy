@@ -359,7 +359,7 @@ Broadway Data Inspector (the yellow segment):
 
 #### Question 20: Invoke a Flow for Multiple Instances
 
-Given that a Broadway flow executes business logic (for example, customer ID) on one instance, can this flow be run for several instances? If yes - how?
+Can a Broadway flow that executes business logic (for example, customer ID) on one instance be run on several instances? If yes - how?
 
 
 \- A:  It is not possible.
