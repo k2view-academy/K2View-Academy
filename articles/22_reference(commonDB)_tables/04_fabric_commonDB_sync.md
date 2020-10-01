@@ -26,7 +26,7 @@ A customer service operative needs get the most updated list of new services sub
 *Case 3:*
 
 A sales manager is closing the case he just treated - resulting in creating a new case entry in the Billing Database. 
-Assuming the customer provided a new email address whereby the email provider details are kept on a Reference Table (featuring all email providers from all customers), all nodes will need to synchronize the reference table so to provide the most updated list of providers to other sales managers.  
+Assuming the customer provided a new email address whereby the email provider details are kept on a Reference Table (featuring all email providers from all customers), all nodes will need to be synchronized the reference table so to provide the most updated list of providers to other sales managers.  
 
 
 ## Examples
