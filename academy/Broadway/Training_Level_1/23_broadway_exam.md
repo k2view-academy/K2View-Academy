@@ -375,4 +375,4 @@ Error Handling in a flow:
 
 (**Solution 20. B: The Error Handler can catch an error and either continue the flow or stop it**).
 
-[![img](/articles/images/Previous.png)](22_broadway_summary_exercise.md)
+[![img](/articles/images/Previous.png)](22a_broadway_summary_exercise_solution.md)
