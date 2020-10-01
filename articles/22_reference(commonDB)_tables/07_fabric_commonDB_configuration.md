@@ -168,5 +168,38 @@ CASSANDRA_WAIT_MESSAGE_TIMEOUT=60000
 ```
 
 
+
+## commonDB Statistics
+
+Fabric provides the following statistics about commonDB-related operations. These can be viewed sing the JMX metrics tool located at: ```http://<IP address>:3213/static/status/status.html```
+
+1. commonUpdate
+Common area update messages count per table formatted as follow: count, timestamp, sinceDate.
+
+2. commonTransactions
+Common area transaction/commit count per table formatted as follow: count, timestamp, sinceDate.
+
+3. commonKafkaRead
+Common area Kafka message read count per table formatted as follow: count, timestamp, sinceDate.
+
+4. commonKafkaCommit
+Common area Kafka commit count per table" formatted as follow: count, timestamp, sinceDate.
+
+5. commonSnapshot
+Common area snapshot bulk and statement count per table formatted as follow: last, totalLast, average, count, timestamp, sinceDate.
+
+6. commonSnapshotDuration
+Common area snapshot duration per table formatted as follow: last, totalLast, average, count, timestamp, sinceDate.
+
+7. commonMessagesBulkProcessDuration
+Common area process bulk messages duration, including failures and retries, formatted as follow: last, totalLast, average, count, timestamp, sinceDate.
+
+
+
+
+
+
+
+
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/06_fabric_commonDB_misc.md)
 
