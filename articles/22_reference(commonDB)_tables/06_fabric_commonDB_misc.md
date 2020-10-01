@@ -27,18 +27,21 @@ A new node comes on line and requests for an update:
 ### What Happens When I Deploy a New Reference Table ?
 
 Deploying a new reference table will have the following consequences:
-1. All running reference table synchronization jobs will stop.
-2. A new table/index will be created on CommonDB.
-3. All Kafka Consumer/Topic will be cleared if the table was removed.
-4. A new Kafka topic will be created if a new table was added.
-5. A new Kafka consumer will be created for each node.
-6. New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
-7. All already existing configuration parameters are used (such as sync_job_retry_interval) on the [coordinating node](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#step-1-1).
+1. A new table/index will be created on CommonDB.
+2. A new Kafka topic will be created if a new table was added.
+3. A new Kafka consumer will be created for each node.
+4. New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
 
+### What Happens When I Deploy an existing Reference Table ?
+Deploying a new reference table will have the following consequences:
+1. All running reference table synchronization jobs will stop.
+2. New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
+3. All already existing configuration parameters are used (such as sync_job_retry_interval) on the [coordinating node](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#step-1-1).
 
 ### What Happens When I Remove a Reference Table ?
 
 - The Reference Table is dropped from CommonDB
+- All running reference table synchronization jobs will stop.
 -	All local topic consumers and producers on each node are dropped.
 
 ### What Happens When CommonDB is Dropped ?
