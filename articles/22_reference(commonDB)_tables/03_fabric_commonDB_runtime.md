@@ -8,6 +8,7 @@ This article deals with the synchronization between any Fabric session and the E
 
 
 *Case 1 - Background Sync*
+
 This mode enables a Fabric Session to ask for reference table to be updated from external source according to a predifined interval. The [ref_sync and ref_sync_wait commands] will be triggered automatically in the background either according to the method selected in Fabric Studio (Time Interval or Decision Function) as described [here](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#sync-method).
 
 
