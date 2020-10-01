@@ -53,7 +53,7 @@ In a way each Kafka queue plays the role of a virtual table on which all transac
 
 Note:
 
-The publishing Node also updates its own commonDB table after reading the very message it published on Kafka and after using the update data available on Kafka's update.
+The Node originating the update will also update its own commonDB table by reading the very same message it published on Kafka and by using the update data available on Kafka's message.
 
   
   
