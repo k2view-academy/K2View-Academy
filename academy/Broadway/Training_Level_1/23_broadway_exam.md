@@ -2,11 +2,9 @@
 
 <img src="images/Quiz.png" style="zoom:80%;" /> 
 
-Excellent! You have completed the Broadway Training and the Summary Exercise.
+Excellent! You have completed the Broadway Training and the Summary Exercise. It's now time to take the following certification exam to see what you have learned. 
 
-It's now time to take the following certification exam to see what you have learnt. The exam consists of a number of multiple-choice questions, each providing a number of possible answers. 
-
-Click the answer you think is correct. 
+The exam consists of a number of multiple-choice questions, each providing a number of possible answers. Click the answer you think is correct. 
 
 
 
