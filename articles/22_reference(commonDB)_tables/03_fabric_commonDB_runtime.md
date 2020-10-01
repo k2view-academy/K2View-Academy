@@ -9,12 +9,12 @@ This article deals with the synchronization between any Fabric session and the E
 
 **Case 1 - Background Sync**
 
-This mode enables a Fabric Session to ask for reference table to be updated from external source according to a predifined interval. The [ref_sync and ref_sync_wait commands] will be triggered automatically in the background either according to the method selected in Fabric Studio (Time Interval or Decision Function) as described [here](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#sync-method).
+This mode enables a Fabric Session to ask for reference table to be updated from external source according to a predifined interval. The [ref_sync and ref_sync_wait commands] will be triggered automatically in the background either according to the [method](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#sync-method) selected in Fabric Studio (Time Interval or Decision Function).
 
 
 **Case 2 - Pro-Active Sync**
 
-A customer service operative needs to get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  ref_sync and ref_sync_wait commands described [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
+A customer service operative needs to get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  [ref_sync and ref_sync_wait commands](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
 
 
 **Case 3 - Scheduled Sync**
