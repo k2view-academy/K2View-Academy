@@ -75,7 +75,7 @@ In the **Job table**, enter the values pertaining to the Job.
 </li>
 <li class="unchanged">
 <p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp;the jobT runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
-<p> It is important to note that if a scheduled job is started manually (before its scheduled occurence) then the CRON-scheduled occurence will still start on time, even though the previous manual occurence of the job, is still running.</p>
+<p> It is important to note that if a scheduled job is started manually (before its scheduled occurence) then the CRON-scheduled occurence will still start on time, unless the previous manual occurence of the job, is still running.</p>
 <p> In the Time Interval case whereby a job is set to run every x minutes, the next occurence will be skipped and will happen again automatically x minutes after the end of the manually triggered job instance. In that case there will be no collusion between the manual and automated occurences.</p>	
 </li>
 </ul>
