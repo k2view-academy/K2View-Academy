@@ -114,9 +114,9 @@ fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
 
 Note that, in this example 6 different Nodes are waiting to sync the same REF_USAGE table
 
-- table_name: - the name of the Reference Table
-- status: - one of the statuses defined [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses)
-- node: The ID of the node operating the sync
+- table_name: - the name of the Reference Table.
+- status: - one of the statuses defined [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#reference-tables-synchronization-statuses).
+- node: - the ID of the node operating the Reference Table synchronization.
 
 
 ## Status per population, on all tables
