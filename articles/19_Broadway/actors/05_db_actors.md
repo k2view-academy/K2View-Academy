@@ -27,7 +27,11 @@ Another way to load the data in a Broadway flow is by using the **DbCommand** Ac
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
+<<<<<<< HEAD
 ### DB Commands Examples
+=======
+### Examples
+>>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2
 
 The **db-commands.flow** example shows how the **DbCommand** Actor can be used to perform various DB actions, including:
 

@@ -8,15 +8,15 @@ Prior to running or debugging a flow, set the types and values of input argument
 
 2. Select the **Type** of each input argument.
 
-   ![image](images/flow_set_run_or_debug_param_set_type2.png)
+   <img src="images/flow_set_run_or_debug_param_set_type2.png" alt="image" style="zoom:80%;" />
 
 3. Set the **value** of each input argument. The value's format is defined by the selected argument type.
 
    <table>
    <tbody>
    <tr>
-   <td><p><img src="images/flow_set_run_or_debug_param_set_value1.png" alt="value1"/></p></td>
-   <td><p><img src="images/flow_set_run_or_debug_param_set_value2.png" alt="value2"/></p></td>
+   <td><p><img src="images/flow_set_run_or_debug_param_set_value1.png" alt="value1" style="zoom:80%;"/></p></td>
+   <td><p><img src="images/flow_set_run_or_debug_param_set_value2.png" alt="value2" style="zoom:80%;"/></p></td>
    </tr>
    </tbody>
    </table>
@@ -30,53 +30,58 @@ Prior to running or debugging a flow, set the types and values of input argument
 A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow's window by either:
 
 - Running the entire flow and displaying the results.
-- Debugging the flow by adding break points. Debug can only be performed when Debug is ON.
+- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is ON.
 
-Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they will be automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
+Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they are automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
-To run the flow, click **Run Flow** ![image](images/99_25_run.PNG) to run the entire flow and display the results. 
+To run the flow, click <img src="images/99_25_run.PNG" alt="image" style="zoom:80%;" /> **Run Flow** to run the entire flow and display the results. 
 
-- If the Debug is ON ![](images/99_25_debug_on.PNG), the flow can be debugged.
+- If Debug mode is <img src="images/99_25_debug_on.PNG" style="zoom:80%;" /> ON, the flow can be debugged.
 
-- If the Debug is OFF ![](images/99_25_debug_off.PNG), the flow cannot be debugged.
+- If Debug mode is <img src="images/99_25_debug_off.PNG" style="zoom:80%;" /> OFF, the flow cannot be debugged.
   
-If the break points have been added to the flow, the flow stops at the first break point. Note that when a flow contains an inner flow and it has break points, the flow stops at the inner flow's break points too.
 
-  - Click **Resume Debug** ![images](images/99_25_resume.PNG) to continue the flow from where it stopped.
+If the breakpoints have been added to the flow, the flow stops at the first breakpoint. Note that when a flow contains an inner flow and it has breakpoints, the flow also stops at the inner flow's breakpoints.
 
-- Click **Debug Step** ![image](images/99_25_step.PNG)to debug the current step and move to the next step.
+  - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
 
-To stop the flow, click **Stop Run** ![image](images/99_25_stop.PNG) to stop the flow run.
+- Click <img src="images/99_25_step.PNG" alt="image" style="zoom:80%;" /> **Debug Step** to debug the current step and move to the next step.
+
+To stop the flow, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run**.
 
 When Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
 
 ### Displaying Input and Output Data During a Debug
 
-When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons.
+When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of Broadway map, list and Java primitive data types.
 
 ![image](images/99_25_blue_balloons.PNG)
 
-To view a step's data, click the blue balloon to open the data and its displayed format. To set another data display format, click the format and make your selection.
+To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format drop-down and make your selection.
 
 ![](images/flow_debug_display_data.png)
 
 ### Updating a Schema
 
-The Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value.
+The Broadway Debug process *learns* the Schema of an Actor's arguments and can suggest how to update it based on a parameter's value.
 
-When debugging an Actor with a complex output parameter, the parameter port is red:
+1. When debugging an Actor, the parameter port turns red indicating that the Schema needs to be updated:
 
-  <img src="images/debug_update_schema.png" style="zoom:80%;" />
+   <img src="images/debug_update_schema.png"  />
 
-1. Click the **parameter's port** (red) to open the Compare Schema window.
+2. Click the **parameter's port** (red) to open the Compare Schema window.
 
   ![](images/compare_schema.png)
 
-2. Click **Update** to update the output parameter's Schema. To open the [Data Inspector](27_broadway_data_inspection.md), click ![image](images/99_27_red_cross.PNG) adjacent to the Actor's output argument. The **yellow segment** is expanded and displays the Schema on the left and the data values on the right.
+3. Click **Update** to update the output parameter's Schema. 
 
-3. [Link](20_broadway_flow_linking_actors.md) the output parameters of the Schema to another Actor.
+<img src="images/debug_update_schema_1.png"  />
 
-  ![](images/data_insepction_debug.png)
+Note that the Update Schema option can also be applied on complex structures.
+
+![image](images/compare_schema_1.PNG)
+
+
 
 [![Previous](/articles/images/Previous.png)](24_error_handling.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](27_broadway_data_inspection.md)
 

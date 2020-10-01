@@ -16,17 +16,31 @@ When the outer flow starts the transaction and then invokes an inner flow, the i
 
 There are two approaches for handling transactions during an iteration: 
 
-* Closing the transaction and performing a commit after the loop over the data set is completed.
+* Commit the data after the loop over the data set is completed. In this case you need to open the transaction on the Stage before the Iteration starts and close it at the end of the iteration.
 
   ![image](images/99_23_commit_at_end.PNG)
 
-* Closing the transaction and performing a commit on each iteration. In this case, empty Stage 3 is required to indicate that the transaction of **Iterate on array** Stage is finished before the iteration is closed.
+* Commit on each iteration. In this case, open the transaction inside the loop and add an empty Stage 3 to indicate that the transaction of Stage 4 is finished before the iteration is closed.
 
   ![image](images/99_23_commit_each.PNG)
 
 ### Impact of Error Handling on Transactions
 
 When an [Error Handler](24_error_handling.md) is defined in the transactional Stage of the flow and it catches an error, the Error Handler can either true to continue the flow or false to stop the flow. If the Error Handler returns false, the transaction ends with a rollback and the flow execution stops. The error message displays the failure reason.
+
+### Impact of Stage Conditions on Transactions
+
+When the flow is split due to [Stage conditions](/articles/19_Broadway/19_broadway_flow_stages.md#what-is-a-stage-condition), the transaction can be defined for only some branches. For example, for an IF-ELSE condition, you can define that the transaction occurs only when the condition is true. 
+
+In the example below, the transaction starts in Stage B1 if the condition is true and ends after the completion of Stage C1. If the condition is false, there is no transaction in this flow.
+
+![image](images/99_23_split1.PNG)
+
+In the second example, the transaction starts in Stage A. If the condition is true, the transaction ends after the completion of Stage C1. If the condition is false, the transaction ends at the end of Stage A.
+
+![image](images/99_23_split2.PNG)
+
+Note that if there are several conditions or too many parallel branches in the flow, it is not recommended to use the Transactions mechanism across the branches.
 
 ### Shared and Non-Shared Transactional Interfaces
 
