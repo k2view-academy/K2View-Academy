@@ -226,7 +226,7 @@ Population of an LU table using a Broadway flow:
 \- D:  Is performed using Fabric commands and functions.
 
 
-(**Solution 12. B: A Broadway population flow can combine several sources such as DBs and HTTP calls**).
+(**Solution 12. B: A Broadway population flow can combine several sources such as DB queries and HTTP calls**).
 
 
 
@@ -359,7 +359,7 @@ Broadway Data Inspector (the yellow segment):
 
 #### Question 20: Invoke a Flow for Multiple Instances
 
-Can a Broadway flow that executes business logic (for example, customer ID) on one instance be run on several instances? If yes - how?
+Can a Broadway flow that executes business logic on one instance (for example, customer ID) be run on several instances? If yes - how?
 
 
 \- A:  It is not possible.
@@ -373,5 +373,5 @@ Can a Broadway flow that executes business logic (for example, customer ID) on o
 
 (**Solution 20. C: A flow can be run as a batch process by providing the batch configuration parameters and the LU name and flow name execution parameters**).
 
- 
+
 [![img](/articles/images/Previous.png)](22a_broadway_summary_exercise_solution.md)
