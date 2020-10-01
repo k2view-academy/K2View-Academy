@@ -1,5 +1,25 @@
 # Reference Tables Runtime Commands
 
+
+## Synchronization Overview
+
+*Case 1 - Background Sync*
+- asks for reference table to be updated from external source according to a predifined interval
+
+
+*Case 2 - Pro-Active Sync*
+
+A customer service operative needs get the most updated list of new services subscribed by a customer in real-time. In this case the web-service or job request will trigger the  ref_sync and ref_sync_wait commands described [here](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
+
+
+*Case 3 - Scheduled Sync*
+
+A system might need to operate a synchronization process every day at 2 AM as a result of a maintenance task - i.e. all new customers, or new transactions created over the last 24 hours. In this case, a recurring background sync will be scheduled for this specific time.
+
+
+## Synchronization Commands
+
+
 The following commands are available from the Fabric Command Line.
 
 <table width="900pxl">
@@ -36,7 +56,7 @@ The following commands are available from the Fabric Command Line.
 </table>
 
 
-# Reference Tables Synchronization Statuses
+## Reference Tables Synchronization Statuses
 
 
 <table width="900pxl">
@@ -92,10 +112,10 @@ The following commands are available from the Fabric Command Line.
 </table>
 
 
-# Reference Tables Runtime Examples
+## Reference Tables Runtime Examples
 
 
-## Status per table, on all tables
+### Status per table, on all tables
 ```
 fabric>REF_STATUS TABLES='ALL' SCOPE='table';```
 ```
@@ -119,7 +139,7 @@ Note that, in this example 6 different Nodes are waiting to sync the same REF_US
 - node: - the ID of the node operating the Reference Table synchronization.
 
 
-## Status per population, on all tables
+### Status per population, on all tables
 ```
 fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’
 ```
@@ -137,7 +157,7 @@ fabric>REF_STATUS TABLES=’ALL’ SCOPE=’population’
 
 
 
-## Sync Wait
+### Sync Wait
 ```
 fabric>REF_SYNC_WAIT TABLES='ALL';
 ```
