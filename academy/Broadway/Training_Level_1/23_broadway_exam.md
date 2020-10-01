@@ -142,7 +142,7 @@ When creating an inherited Actor, the new Actor:
 A Broadway flow is built of several Stages whereby:
 
 
-\- A:  The Stages are executed from left to right in the flow, each Stage can include one or more Actors which are executed top-down within the Stage.
+\- A:  The Stages are executed from left to right, each Stage can include one or more Actors which are executed top-down within the Stage.
 
 
 \- B:  Any Stage in a flow can be split to create parallel execution branches.
@@ -226,7 +226,7 @@ Population of an LU table using a Broadway flow:
 \- D:  Is performed using Fabric commands and functions.
 
 
-(**Solution 12. B: Broadway population flow can combine several sources such as Data bases and HTTP calls **).
+(**Solution 12. B: Broadway population flow can combine several sources such as Data bases and HTTP calls**).
 
 
 
@@ -293,7 +293,7 @@ When an error occurs in a Broadway flow:
 \- A:  An error handler must be defined in the last Stage of the flow.
 
 
-\- B:  They can be handled by an error handler in a flow but not in an inner flow.
+\- B:  The error can be handled by an error handler in a flow but not in an inner flow.
 
 \- C:  Only a JavaScript Actor can be used for catching the errors.
 
