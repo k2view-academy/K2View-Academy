@@ -27,16 +27,16 @@ A new node comes on line and requests for an update:
 ### What Happens When I Deploy a New Reference Table ?
 
 Deploying a new reference table will have the following consequences:
-1. A new table/index will be created on CommonDB.
-2. A new Kafka topic will be created if a new table was added.
-3. A new Kafka consumer will be created for each node.
-4. New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
+- A new table/index will be created on CommonDB.
+- A new Kafka topic will be created if a new table was added.
+- A new Kafka consumer will be created for each node.
+- New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
 
 ### What Happens When I Deploy an existing Reference Table ?
 Deploying a new reference table will have the following consequences:
-1. All running reference table synchronization jobs will stop.
-2. New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
-3. All already existing configuration parameters are used (such as sync_job_retry_interval) on the [coordinating node](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#step-1-1).
+- All running reference table synchronization jobs will stop.
+- New sync jobs will be started (even if the deployment process failed so not to prevent existing synchronization processes).
+- All already existing configuration parameters are used (such as sync_job_retry_interval) on the [coordinating node](/articles/20_jobs_and_batch_services/17_batch_process_flow.md#step-1-1).
 
 ### What Happens When I Remove a Reference Table ?
 
@@ -49,7 +49,7 @@ When running the following command ```drop lutype k2_ref;``` from any Fabric Nod
 
 - All existing tables in common.db are dropped.
 - All existing sync jobs are stopped.
-- All existing consumer / producers are terminated.
+- All existing consumer/producers are terminated.
 
 
 
