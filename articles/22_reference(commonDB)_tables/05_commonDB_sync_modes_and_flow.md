@@ -77,7 +77,7 @@ A snapshot will only be published once one of the following actions will be trig
 
 Each node will perform the following snapshot synchronization as follow: 
 
-##### Option 1 - Truncate option is set
+##### Option 1 - Truncate option is set in the [Truncate Before Sync]() property. 
 
 - The snapshot is started
 - All rows are added to the snapshot
