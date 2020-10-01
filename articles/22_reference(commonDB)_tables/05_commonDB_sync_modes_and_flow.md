@@ -47,7 +47,7 @@ In this mode, updates are performed in ways of Create/Update/Delete SQL queries 
 e.g. Supposing the update consists of  running 2500 insert commands, each bulk of 1000 commands is written to Cassandra (the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each) while Kafka gets the transaction message (one message is sent to Kafka per table and per transaction). 
 
 Note:
-The [bulk size](/articles/22_reference(commonDB)_tables/07_fabric_commonDB_configuration.md#bulk-size) can be configured, but due to Kafka message size limitations, it is recommended not to exceed 1000 rows per bulk. 
+The [bulk size](/articles/22_reference(commonDB)_tables/07_fabric_commonDB_configuration.md#bulk-size) can be configured, but it is recommended not to change the default value unless requested by a Fabric expert. 
 
 ### Snapshot Mode:
 
