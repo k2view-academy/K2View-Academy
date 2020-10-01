@@ -72,13 +72,13 @@ The External population type is used:
 \- A:  When the flow gets its input from the external process.
 
 
-\- B:  When the flow requires to use a read-only parameter.
+\- B:  When the flow requires using a read-only parameter.
 
 \- C:  When using a FabricGet Actor.
 
 \- D:  When you need to iterate over the data set.
 
-(**Solution 4. A: When the flow is executed by an external process, the input arguments which serve as flow parameters are set to External population type**).
+(**Solution 4. A: When the flow is executed by an external process, the input arguments serving as flow parameters are set as External population type**).
 
 
 
@@ -133,7 +133,7 @@ When creating an inherited Actor, the new Actor:
 
 \- D:  Will be created in a new category (tag) designated for inherited Actors only.
 
-(**Solution 7. C: When exporting the Actor each input and output argument can optionally be set as hidden or final**).
+(**Solution 7. C: When exporting the Actor each input and output argument can be set either as hidden or final**).
 
 
 
@@ -226,7 +226,7 @@ Population of an LU table using a Broadway flow:
 \- D:  Is performed using Fabric commands and functions.
 
 
-(**Solution 12. B: Broadway population flow can combine several sources such as Data bases and HTTP calls**).
+(**Solution 12. B: A Broadway population flow can combine several sources such as DBs and HTTP calls**).
 
 
 
@@ -359,13 +359,13 @@ Broadway Data Inspector (the yellow segment):
 
 #### Question 20: Invoke a Flow for Multiple Instances
 
-Given a Broadway flow that executes some business logic per one instance (for example, customer ID), is it possible to run this flow for several instances? If yes - how?
+Given that a Broadway flow executes business logic (for example, customer ID) on one instance, can this flow be run for several instances? If yes - how?
 
 
 \- A:  It is not possible.
 
 
-\- B:  Via the Fabric Studio by providing a single customer ID for each run.
+\- B:  Via the Fabric Studio by providing one customer ID for each run.
 
 \- C:  Using a BATCH command for a given list of instances (list of customers ID).
 
@@ -373,6 +373,5 @@ Given a Broadway flow that executes some business logic per one instance (for ex
 
 (**Solution 20. C: A flow can be run as a batch process by providing the batch configuration parameters and the LU name and flow name execution parameters**).
 
-
-
+ 
 [![img](/articles/images/Previous.png)](22a_broadway_summary_exercise_solution.md)
