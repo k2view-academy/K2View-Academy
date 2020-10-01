@@ -1,4 +1,4 @@
-# CommonDB - Cross-Nodes Synchronization Overview
+# CommonDB - Cluster Synchronization Overview
 
 
 ## Overview
