@@ -77,4 +77,4 @@ The **Post Connection Commands** tab of the DB Interface window enables definiti
 
 ![post connection](images/db_interface_post_connection_commands.png)
 
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md)
+[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md)
