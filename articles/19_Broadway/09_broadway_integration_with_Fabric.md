@@ -28,7 +28,7 @@ The **fabric** category of [built-in Actors](04_built_in_actor_types.md) execute
 * **FabricSet** Actor, sets a value on the Fabric session.
 * **FabricSetRead** Actor, reads a key from the Fabric session.
 
-The **sql** input argument of these Actors displays the command to be executed on the [Fabric Interface](/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md). This argument is read-only and contains named params using ${} notation. 
+The **sql** input argument of these Actors displays the command to be executed on the Fabric server. This argument is read-only and contains named params using ${} notation. 
 
 For example, **FabricGet** Actor displays the command:
 
