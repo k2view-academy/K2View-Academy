@@ -77,7 +77,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <li><strong>jobs</strong>,running Fabric jobs.</li>
 <li><strong>webserver</strong>,connecting Fabric via http or https. For example: <a href="/articles/15_web_services/01_web_services_overview.md">invoke Fabric WS</a>, <a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">deploy Fabric implementation from Fabric Studio.</a></li>
 <li><strong>commonarea</strong>, accessing common (reference) tables. </li>
-<li><strong>dbserve</strong>, connecting Fabric via remote JDBC connection. For example: login Fabric console using <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric">fabric command,</a> defining Fabric node as a <a href="/articles/05_DB_interfaces/05_adding_a_fabric_and_remote_fabric_interface_type.md">remote Fabric interface.</a></li>
+<li><strong>dbserve</strong>, connecting Fabric via remote JDBC connection. For example: login Fabric console using <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric">fabric command,</a> defining Fabric node as a <a href="/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md">remote Fabric interface.</a></li>
 <li><strong>clustertimecheck</strong>, comparing the time between the Fabric nodes, included in the Fabric cluster and throwing an error if a difference is identified.</li>
 </ul>
 </td>
