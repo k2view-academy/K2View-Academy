@@ -35,7 +35,7 @@ In this exercise you will do the following:
 * Run a Broadway flow as a batch process.
 * Write into a target DB while handling DB errors.
 
-For the exercise you need to download and open the [Demo Project](/articles/demo_project) in the Fabric Studio.
+To do this exercise, please download and open the [Demo Project](/articles/demo_project) in the Fabric Studio.
 
 ### Summary Exercise Steps
 
@@ -73,7 +73,7 @@ a. Create an **emp_list_lookup.csv** file with the following values:
 </tr>
 </tbody>
 </table>
-You can add more entries into the above CSV file, using the first names from the CUSTOMER table of CRM_DB.
+More entries can be added into the above CSV file, using the first names in the CUSTOMER table of the CRM_DB.
 
 b. Create a **Local File System** interface and save the CSV file into the **Working Directory** of the interface.
 
@@ -88,7 +88,7 @@ b. Create a **Local File System** interface and save the CSV file into the **Wor
 
 **Question 1:**
 
-What should be changed in the flow to support automatic file upload to the Reference table, once it is copied to an interface?
+What should be changed in the flow to support automatic file upload to the Reference table once it is copied to an interface?
 
 **Step 2 - Create an LU and Make the Data Modifications in a Customer Population**
 
@@ -109,7 +109,7 @@ What should be changed in the flow to support automatic file upload to the Refer
 
    * Add a **Concat** Actor to the empty Stage 1 and use it to concatenate the FIRST_NAME and the LAST_NAME of the **Query** Actor's output. Connect the **Concat** Actor's output to the FULL_NAME of the CUSTOMER **DbLoad** Actor's input. 
 
-   * Add a **DbCommand** Actor to Stage 1 and rename it **Lookup**. Define the Actor's interface = **fabric**. Write the following query to check that the customer exists in the **EMPLOYEE_LIST** table.
+   * Add a **DbCommand** Actor to Stage 1 and rename it **Lookup**. Set the Actor's interface to **fabric**. Write the following query to check that the customer exists in the **EMPLOYEE_LIST** table.
 
      ~~~sql
      SELECT COUNT(*) AS IS_EMP FROM EMPLOYEE_LIST
@@ -242,7 +242,7 @@ Can the inherited Actor's input / output argument settings be modified? If yes, 
 
 3. Set the new split Stage (Stage 2) as **else** and add a **JsonStringify** Actor to it. Connect the Actor's input to the **Query** Actor's output using an **Iterate** link type.
 
-4. Split the LU Table Stage and add a **FileWrite** Actor to the new split Stage, so that it will be in the branch of **else** condition. Define the Actor's **interface** and **path** input arguments and connect its **stream** input to the **JsonStringify** Actor's output. 
+4. Split the LU Table Stage and add a **FileWrite** Actor to the new split Stage, so that it is in the **else** branch's condition. Define the Actor's **interface** and **path** input arguments and connect its **stream** input to the **JsonStringify** Actor's output. 
 
 5. Save the changes, deploy the **SummaryExercise** LU and sync an instance. Check the values in the Contract LU table.
 
@@ -279,7 +279,7 @@ What should be changed in order to publish the Customer's data to the Kafka topi
 
 **Question 7b:**
 
-How can you publish the data of a group of customers to the Kafka topic?
+How do you publish the data of a group of customers to the Kafka topic?
 
 **Step 8 - Write into the Target DB and Handle a DB Error**
 
