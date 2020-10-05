@@ -1,20 +1,18 @@
 # **Fabric CommonDB and Reference Overview** 
 
 
-# **What are Reference (Common) Tables ?** 
 
-A Reference table is an SQLite table containing metadata that is referenced by different LU instances of a specific LU, by instances from a different LU, by a web service, or by any other Fabric object (jobs, broadway flows, ...) .
+A Reference table is an SQLite table containing metadata that is referenced via different LU instances of a specific / different LU, Web Services and other Fabric objects like Jobs or Broadway flows.
+For example, a Reference Table can be:
 
-For example, a Reference Table could be:
-- a table storing a list of objects to which all MicroDB Schemas point to, 
-- detailed information about a specific set of services to which all LUIs subscribe, 
-- a geo-code table that identifies customer zip addresses, 
-- a report of number of customers per customer type. 
+- A table storing a list of objects to which all MicroDB Schemas point to, 
+- Detailed information about a specific set of services to which all LUIs subscribe, 
+- A geo-code table that identifies customer zip addresses, 
+- A report of number of customers per customer type. 
 
-In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project.
-To ensure that a Reference table in an LU Schema is always synched, verify that the Reference table name is checked in the References section of the LU Schema tab in the right pane.
+In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project. To ensure that a Reference table in an LU Schema is always synched, verify the Reference table name is checked in the References section of the LU Schema tab in the right pane.
+When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them.
 
-When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them. 
 
 
 # **Where are Reference Tables Stored ?**
