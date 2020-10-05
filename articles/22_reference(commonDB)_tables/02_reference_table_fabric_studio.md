@@ -28,7 +28,7 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 ![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
 
 5. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
-If the table does not appear immediately, click the Refresh icon: ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) at the top of the Project Tree.
+If the table does not appear immediately, click ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) Refresh on the top of the Project Tree.
 
 ![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
 
@@ -38,12 +38,12 @@ If the table does not appear immediately, click the Refresh icon: ![image](/arti
 
 Reference tables can be edited by either changing the default data mapping, adding transformations or adding or removing columns like in [LU tables](/articles/07_table_population/01_table_population_overview.md). 
 
-If cases where the Broadway flow population option was selected as defined above in Step 4, the table population process can be edited using the Broadway flow described [here](/articles/07_table_population/14_table_population_based_Broadway.md#example-of-creating-a-population-based-broadway-flow).
+When the Broadway flow population option is selected as defined above in Step 4, the table population process can be edited using the Broadway flow described [here](/articles/07_table_population/14_table_population_based_Broadway.md#example-of-creating-a-population-based-broadway-flow).
 
 
 
 
-### How do I View Reference Table Data 
+### How do I View Reference Table Data? 
 
 To access the Reference Viewer do the following:
 1.  Go to **Project Tree** > **References**, right click **References Viewer**, and then select the **table**. The Data Viewer window is displayed according to its hierarchy in the Instances Tree pane.
@@ -67,7 +67,7 @@ Additional properties can be defined in the **Table Properties** panel in the ri
 #### Main Properties
 
 - Name, can be defined or modified.
-- Primary Key column, ensures records uniqueness.
+- Primary Key column, ensures uniqueness of records.
 - Column collation type:
   - BINARY, compares string data regardless of text encoding.
   - NOCASE, folds upper case characters to their lower case equivalents.
@@ -120,13 +120,13 @@ Note: Reference tables can also be accessed via [Lookup tables](/articles/07_tab
 
 ## Deploy the Reference Tables
 
-Reference Tables must be deployed before being used. As a result of the deployment a synchronization [job](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) process will be triggered in the background to ensure that all commonDB copies are kept in-sync across the Fabric Cluster.
+Reference Tables must be deployed before being used. As a result of the deployment, a synchronization [job](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) process is triggered in the background to ensure that all commonDB copies are kept in-sync across the Fabric Cluster.
 
 To deploy the Reference Tables, go to the **Project Tree**, right click **References**, select **Deploy to Server** and then the **Server** to deploy to the Reference table.
 
 Note:
 
-If the reference table as been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU will also need to be (re-)deployed.
+If the reference table as been attached to an LU Schema as described [above](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#configure-lu-to-use-a-reference-table), the LU must also be (re-)deployed.
 
   
 
