@@ -116,12 +116,22 @@ External sources can also read and write data using standard [REST Web Services]
 Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
-#### 3.2.3  CDC (Change Data Capture) via Kafka
-Fabric supports real-time, inbound data updates via a Kafka interface using the IIDFinder module. The IIDFinder identifies incoming events and associates them with the correct MicroDB. This interface can be easily integrated with CDC providers such as Oracle Golden Gate.
-To publish change events externally via this interface, Fabric provides a full CDC solution that notifies external systems about Fabric data changes occurring to LUIs, enabling 3rd party systems to subscribe to a Kafka topic and get a stream of MicroDB changes.
+#### 3.2.3  CDC (Change Data Capture) using Queue Messaging
+Fabric supports real-time, inbound data updates via Queue Messaging interfaces. Fabric's Change Data Capture (CDC) solution then notifies external systems about any LUI data changes published via the queue messaging interface. 
+Any update occurring on the MicroDBs will trigger a CDC message onto the queue, allowing subscribing 3rd-party systems to stream the MicroDB updates.
 
-#### 3.2.4 Manual / Scripted Input
+
+#### 3.2.4 Manual/Scripted Input
 External data can also be injected into the FabricDB via [standard commands](/articles/02_fabric_architecture/04_fabric_commands.md) that are available in the Fabric Console application.
+
+
+#### 3.2.5 Fabric Triggers
+Fabric can activate triggers upon MicroDB change (such as insert, update, or delete) in the following cases once:
+•	CDC fields have been added to LU tables.
+•	Trigger functions have been attached to LU tables.
+
+Any change occuring on the LU tables will then activate a trigger and Fabric will either send a CDC message or activate the (trigger) function.
+
 
 ### 3.3 Fabric ETL Layer
 
