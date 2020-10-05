@@ -15,7 +15,7 @@ When Fabric synchronizes any LU instance, it first searches for the checked Refe
 
 
 
-# **Where are Reference Tables Stored ?**
+# **Where are Reference Tables Stored?**
 
 CommonDB is an SQLite database used for storing reference tables common to all LUIs (MicroDBs).
 
