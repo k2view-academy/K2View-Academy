@@ -4,7 +4,7 @@
 
 In this exercise you will create a Reference Table and add it to the Customer LU Schema.
 
-The purpose of this exercise is to provide a reference table for new cases of Corona and updates numbers 
+The purpose of this exercise is to provide a reference table for new cases of Corona and updates numbers and use Fabric to support the international crisis at play.
 
 For this purpose, you will find a CSV file in the repository published by the health authorities and that provide the following information: States, New cases, New cases per 100K etc ... 
 
@@ -41,32 +41,11 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
     - FATALITIES_LAST_7 = 1
     - FATALITIES_PER_100K = 100    
 
-  
-
-  fabric>set COMMON_LOCAL_TRX=true;
-  (1 row affected)
-  fabric>begin;
-  (0 rows affected)
-  fabric>insert into ref_USA_CoV19_cases_Oct2020(STATE,TOTALCASES,CASES_LAST_7,CASES_PER_100K,FATALITIES_LAST_7,FATALITIES_PER_100K) VALUES ('GUAM','400','14','800','1','100');
-
-  
-
-  
 
   - Verify whether the new entry was added.
 
-  |TX   |756004    |32085       |2634          |531              |55                 |
-  |UT   |75157     |6627        |2378          |26               |14                 |
-  |VA   |150803    |5395        |1770          |126              |38                 |
-  |VT   |1768      |29          |282           |0                |9                  |
-  |WA   |88810     |3584        |1178          |43               |28                 |
-  |WI   |134948    |17619       |2321          |79               |23                 |
-  |WV   |16307     |1354        |903           |25               |19                 |
-  |WY   |6214      |794         |1076          |3                |9                  |
-  |USA  |7310625   |301539      |2209          |4940             |63                 |
-  |GUAM |400       |14          |800           |1                |100                |
-
-  - Which other State has the closest number of cases per 100K to GUAM
+ 
+  - Which other State has a number of cases per 100K higher than the one for GUAM, by 100.
 
     
 
@@ -75,12 +54,6 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/02_jobs_and_batches_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/04_jobs_and_batches_flow_solutions.md)
-
-------
-
-
-
-
 
 ------
 
