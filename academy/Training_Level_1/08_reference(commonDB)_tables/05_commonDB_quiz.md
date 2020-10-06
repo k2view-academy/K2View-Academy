@@ -12,68 +12,35 @@ The Quiz consists of of multiple-choice questions, each providing a number of po
 Click the answer you think is correct. 
 
 
-#### Question 1: Jobs Services
+#### Question 1: Reference Tables
 
-Fabric Jobs is a Fabric utility that is:
+Reference Tables are:
 
-A: A career development and jobs search tool.
+A: Tables keeping data within SQLlite in the LUI microDB.
 
-B: A rich, resilient and scalable mechanism that can be used to run any script or java functions.
+B: Oracle tables used as data model references to create a new LU.
 
-C: A tool that creates instances groups.
-
-D: A tool that schedules the creation of LUs.
-
-(**Solution 1: B**).
+C: Statistics and maintenance tables, belonging to the LU schema .
 
 
-#### Question 2: Jobs Configuration
+(**Solution 1: A**).
 
-To create a new User Job, you need to define:
 
-A: A method written in Java that is saved as a Java User Job function in the Fabric Studio.
+#### Question 2: Reference Tables Creation
 
-B: A dedicated entry in the Jobs table of a given LU.
+To create a new Reference Table, you need to:
 
-C: A recurring CRON schedule, time interval or one-time only parameter.
+A: Create a new reference table and its population from Fabric Studio.
+
+B: Use SQL statements from Fabric Runtime.
+
+C: Create 
 
 D: All the above.
 
 (**Solution 2: D**).
 
 
-#### Question 3: Jobs Commands
-
-Jobs can be stopped using the following command:
-
-A: ```STOP JOB NAME='<name>' UID='<uid>';```
-
-B: ```JOBSTOP UID='<uid>' NAME='<name>';```
-
-C: ```STOPJOB <JOBTYPE> NAME='<name>' UID='<uid>';```
-  
-D: All the above.
-
-
-(**Solution 3: C**).
-
-
-#### Question 4: Jobs Commands
-
-A Job can be scheduled using Crontab syntax. Which of these options is valid and describes the following schedule?
-
-"Every third hour at half past, from 04:00 till 16:00 on day-of-month 5 and on Friday in November"
-  
-A: ```30 04-16/3 05 11 5```
-
-B: ```04-16/3 1/2 05 11 5```
-
-C: ```5 11 05 04-16/3 30```
-
-D: Fabric does not support CronTab.
-
-
-(**Solution 4: A**).
 
 
 
