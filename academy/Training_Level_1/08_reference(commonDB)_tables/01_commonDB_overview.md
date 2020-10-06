@@ -16,6 +16,6 @@ By the end of the Jobs and Batch Services learning item you will know how to:
 - Understand Reference Tables and commonDB intrinsic flow
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/02_commonDB_flow.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/02_commonDB_flow.md)
 
 ------
