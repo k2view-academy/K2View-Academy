@@ -81,7 +81,7 @@ A Decision function is a:
 
 A: Complex SQL query with multiple WHERE statements that decide which records to create, update or delete.
 
-B: Java function with multiple input parameters and one Boolean output parameter.
+B: Java function with multiple input parameters and no output parameter.
 
 C: Java project function that assesses whether a sync should be performed on an LUI.
 
