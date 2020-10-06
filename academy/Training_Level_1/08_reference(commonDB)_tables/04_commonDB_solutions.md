@@ -4,7 +4,7 @@
 
 Step 1:
 
-![](/academy/Training_Level_1/08_reference(commonDB)_tables/images/01_commonDB_refExercise.png) 
+![](/academy/Training_Level_1/08_reference(commonDB)_tables/images/01_commonDB_refExercise.PNG) 
 
 
 
