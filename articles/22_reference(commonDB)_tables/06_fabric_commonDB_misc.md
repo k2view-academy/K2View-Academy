@@ -1,7 +1,7 @@
 
 
 ## CommonDB Table Initialization
-When a new node is  coming up online, and rejoins the current Fabric cluster, all the common tables need to be brought to this node. Two options are available to perform this enrollment:
+When a new node comes up online or rejoins the current Fabric cluster, all common tables must also be updated on this node. There are two enrollment options:
 
 - **Option 1: Directly from kafka**
 
@@ -52,14 +52,6 @@ When running the following command ```drop lutype k2_ref;``` from any Fabric Nod
 - All existing consumer/producers are terminated.
 
 
-
-## Miscellaneous
-
-- Kafka consumer and producer must be setup along with 2 SSL parameters, one for the consumer topic and one for the producer topic. 
-
-- Updates can use either Kafka or happen in-memory depending on the project scope and in order to avoid unnecessary complexity at start. 
-  - Mode for PoCs w/o kafka dependency
-  - no data persistency needed
    
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/05_commonDB_sync_modes_and_flow.md)
