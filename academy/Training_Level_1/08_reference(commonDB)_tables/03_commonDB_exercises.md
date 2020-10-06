@@ -4,7 +4,7 @@
 
 In this exercise you will create a Reference Table and add it to the Customer LU Schema.
 
-The purpose of this exercise is to provide a reference table for new cases of Corona and updates numbers and use Fabric to support the international crisis at play.
+The purpose of this exercise is to provide a reference table for new cases of Covid19 and updates numbers and use Fabric to support the international crisis at play.
 
 For this purpose, you will find a CSV file in the repository published by the health authorities and that provide the following information: States, New cases, New cases per 100K etc ... 
 
