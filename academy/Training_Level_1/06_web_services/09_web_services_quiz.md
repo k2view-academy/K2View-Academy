@@ -8,11 +8,11 @@ Excellent! you have finished the Fabric Web Services learning items.
 
 
 
-#### True or False: The Fabric Web Service layer will return the same results for each role and user as long as these users have permission to execute this Web Service:
+#### True or False: The Fabric Web Service layer will return the same results for each role and user as long as these users have permission to execute this Web Service at the same time:
 
 a. True.
 
- b. False.
+b. False.
 
 #### When you use Swagger and call  GET /lu/Customer API, what information will you get on Customer LU?:
 
