@@ -9,7 +9,16 @@ Broadway has a **db** category of Actors that are useful for performing DB comma
 
 Each Actor in the **db** category requires an **interface** input argument that can be defined either as a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or as a JDBC URL. 
 
-The query defined in the Actor can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
+The **schema**, **table**, **fields** and **sql** input arguments of the **db** category Actors are case-insensitive. 
+
+The SQL statement defined in the Actor's **sql** input argument can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
+
+In case the DB command fails, the actual SQL statement is sent to the log file. For example:
+
+~~~
+Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: CONTRACT_COPY.CONTRACT_ID)
+INSERT INTO "main"."CONTRACT_COPY" ("CUSTOMER_ID","CONTRACT_ID","CONTRACT_REF_ID") VALUES (?,?,?)
+~~~
 
 ### How Can I Load the Data?
 
@@ -21,13 +30,40 @@ To load the data use the **DbLoad** Actor by populating the Actor's input argume
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
 * **fields, keys**, if a table has been selected, the fields and keys are automatically populated from the DB schema. If not, type in the field names.
 
+Note that when performing an UPDATE or an UPSERT command, you can set **ignoreNull** input argument to true. In this mode, the SQL statement will not contain fields that have null values.
+
 Another way to load the data in a Broadway flow is by using the **DbCommand** Actor and writing the SQL INSERT statement in the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the named parameters. For example:
 
 ​	`INSERT INTO DATA (TEXT) VALUES (${text} )`
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
+### Non-Prepared Statement Parameters Support
+
+The **sql** input argument of the **DbCommand** Actor includes the SQL statement which needs to be executed by the Actor. The SQL statement can be created dynamically using the prepared and non-prepared statement parameters. 
+
+The syntax is:
+
+**${param_value}** - for prepared statement parameters.
+
+**${@param}** - for non-prepared statement parameters.
+
+For example, the SQL statement:
+
+~~~sql
+Select * From CASES where STATUS = 'Open'
+~~~
+
+Can be written in the following way:
+
+~~~sql
+Select * From ${@table} where ${@column} = ${case_sts}
+~~~
+
+The values for the input arguments **table**, **column** and **case_sts** are passed to the Actor that translates them into an SQL statement. When the Actor is called several times, if the resulting SQL is the same as in the previous run, the prepared statement is not recalculated.
+
 ### DB Commands Examples
+
 ### Examples
 The **db-commands.flow** example shows how the **DbCommand** Actor can be used to perform various DB actions, including:
 

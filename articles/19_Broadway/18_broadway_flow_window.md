@@ -159,7 +159,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="9" width="400pxl">
+<td rowspan="10" width="400pxl">
 <p><img src="images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
 </td>
 <td width="80pxl">Collapse / Expand</td>
@@ -172,6 +172,10 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <tr>
 <td width="200">Copy Selection</td>
 <td style="width: 465px;">Copy the selected Actor.</td>
+</tr>
+<tr>
+<td width="200">Disable Actor</td>
+<td style="width: 465px;">Click to disable the Actor in the flow. Click again to enable the Actor.</td>
 </tr>
 <tr>
 <td width="200">Delete Actor</td>
@@ -199,6 +203,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
 
 
 ### Actor Properties Window

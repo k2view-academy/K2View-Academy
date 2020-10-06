@@ -41,7 +41,9 @@ To run the flow, click <img src="images/99_25_run.PNG" alt="image" style="zoom:8
 - If Debug mode is <img src="images/99_25_debug_off.PNG" style="zoom:80%;" /> OFF, the flow cannot be debugged.
   
 
-If the breakpoints have been added to the flow, the flow stops at the first breakpoint. Note that when a flow contains an inner flow and it has breakpoints, the flow also stops at the inner flow's breakpoints.
+If the breakpoints have been added to the flow, the flow stops at the first breakpoint. 
+
+When a flow contains an inner flow and it has breakpoints, the flow execution stops at the inner flow's breakpoints. In this case the inner flow will be brought to the front.
 
   - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
 

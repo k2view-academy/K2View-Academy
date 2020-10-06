@@ -57,12 +57,15 @@ The default population flow template includes the following Stages and Actors:
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
+  * The **SourceDbQuery** Actor supports [non-prepared statement parameters](), for example in order to pass the table or a column name dynamically to the query.
+
 * **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
-  * The target interface, table and INSERT, UPDATE or UPSERT commands are set using the Actor's input arguments. 
+  * The target **interface**, **schema**, **table** and INSERT, UPDATE or UPSERT **commands** are set using the Actor's input arguments. 
   * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
+  * Note that by default **schema** and **table** input arguments are defined as [**External** population type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs) in order to enable populating these parameters dynamically. If needed, the population type can be changed to **Const** or **Link**. 
 
 * **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded from the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the target DB. If not needed, this Stage can be deleted or left empty.
 
