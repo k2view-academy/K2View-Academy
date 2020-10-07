@@ -179,7 +179,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 <tr>
 <td width="200">Disable Actor</td>
-<td style="width: 465px;">Click to disable the Actor in the flow. Click again to enable the Actor.</td>
+<td style="width: 465px;">Click to disable / enable the Actor in the flow.</td>
 </tr>
 <tr>
 <td width="200">Delete Actor</td>
@@ -207,6 +207,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
 
 
 

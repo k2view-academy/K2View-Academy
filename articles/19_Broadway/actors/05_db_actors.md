@@ -22,15 +22,17 @@ INSERT INTO "main"."CONTRACT_COPY" ("CUSTOMER_ID","CONTRACT_ID","CONTRACT_REF_ID
 
 ### How Can I Load the Data?
 
-Data can be loaded into a Broadway flow using either a **DbLoad** Actor or a **DbCommand** Actor.
+**Using DbLoad Actor**
 
 To load the data, use the **DbLoad** Actor by populating the Actor's input arguments as follows:
 
 * **command**, select INSERT, UPDATE or UPSERT from the dropdown list.
+  * When performing an UPDATE or an UPSERT command, you can set **ignoreNull** input argument to true. In this mode, the SQL statement will not contain fields that have null values.
+  * When running UPSERT on non-supporting dialects, the command is performed by first attempting an UPDATE. If the number of affected rows is 0, an INSERT is performed. Note that these two actions are not atomic.
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
 * **fields, keys**, if a table has been selected, the fields and keys are automatically populated from the DB schema. If not, type in the field names.
 
-Note that when performing an UPDATE or an UPSERT command, you can set the **ignoreNull** input argument to true. In this mode, the SQL statement will not contain fields that have null values.
+**Using DbCommand Actor**
 
 Another way to load the data in a Broadway flow is by using the **DbCommand** Actor and writing the SQL INSERT statement in the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the named parameters. For example:
 
@@ -40,7 +42,7 @@ Where **${text}** is replaced with the value of the **text** input argument in t
 
 ### Support for Non-Prepared Statement Parameters 
 
-The DbCommand Actor’s **sql** input argument includes an SQL statement which must be executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
+The **DbCommand** Actor’s **sql** input argument includes an SQL statement which must be executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
 
 The syntax is:
 
@@ -61,8 +63,6 @@ Select * From ${@table} where ${@column} = ${case_sts}
 ~~~
 
 The values for the **table**, **column** and **case_sts** input arguments are passed to the Actor where they are translated into an SQL statement. When the Actor is called several times, if the resulting SQL is the same as in the previous run, the prepared statement is not recalculated.
-
-### DB Command Examples
 
 ### Examples
 The **db-commands.flow** example shows how the **DbCommand** Actor can be used to perform various DB actions, including:
@@ -96,6 +96,14 @@ The following example shows how a SELECT statement is executed using **named par
 ![image](../images/99_actors_05_3.png)
 
 When the above query is written in the **sql** input parameter, a new **city_name** input argument is added to the **DbCommand** Actor and the parameter is transferred to it. 
+
+**Example of Non-Prepared Statement**
+
+The following example shows the SQL statement which includes parameters to populate the table and column name:
+
+![image](../images/99_actors_05_4.png)
+
+The new input arguments **table** and **column** are added to the **SourceDbQuery** Actor and are populated by 'CASES' and 'STATUS' **Const** values in the above example. Alternatively these attributes can be populated using **Link** or **External** population types.
 
 
 
