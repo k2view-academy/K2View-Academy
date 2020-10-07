@@ -47,7 +47,7 @@ The relevant invoked Web Service is expanded and points to the correct verb.
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-3.png" alt="drawing"/>
 
-6. The default **Media Type** is set to **application/json** and can be modified to another supported illegible format (XML or CSV) and respond accordingly.
+6. The default **Media Type** is set to **application/json** and can be modified to another supported eligible format (XML or CSV) and respond accordingly.
 
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-5.png" alt="drawing"/>
 
