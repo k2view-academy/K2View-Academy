@@ -5,7 +5,7 @@ Use a GET request without modifying it to retrieve **resource representation** o
 Since GET requests do not change the status of the resource, they are considered to be a **safe method**. Additionally, GET APIs should be **idempotent**, meaning that multiple identical requests must produce the same result every time until another POST or PUT API changes the status of the resource on the server.
 
 - If the Request-URI refers to a data-producing process, the produced data is returned as the entity in the response and not the source text of the process, unless that text is the output of the process.
-- If the resource of a given HTTP GET API is not found on the server, it returns the HTTP 200 OK response code together with the response body, which is either XML or JSON content (due to their platform independent nature). 
+- If the resource of a given HTTP GET API is found on the server, it returns the HTTP 200 OK response code together with the response body, which is either XML or JSON content (due to their platform independent nature). 
 - If the resource is NOT found on server, it returns the HTTP 404 NOT FOUND response code. 
 - If the GET request is incorrectly written, the server returns the HTTP 400 BAD REQUEST response code.
 
@@ -1120,6 +1120,87 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 - `http://localhost:3213/api/v1.0/Orders/1/Open?token=ABC&format=json`
 
   Call **Orders** Web Service and bring the output structure in JSON format according to input parameters i_order_id = 1 and i_order_status=Open
+
+# isAlive
+
+Indicates if the Fabric is up and running on the given domain and port.
+
+<p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/isAlive</code></p>
+
+<table width="900pxl">
+<thead>
+<tr>
+<td valign="top" width="150pxl">
+<p><strong>Component</strong></p>
+</td>
+<td valign="top" width="200pxl">
+<p><strong>Description</strong></p>
+</td>
+<td valign="top" width="100pxl">
+<p><strong>Mandatory</strong></p>
+</td>
+<td valign="top" width="300pxl">
+<p><strong>Example</strong></p>
+</td>
+<td valign="top" width="150pxl">
+<p><strong>Default</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td valign="top" width="150pxl">
+<p>Domain name</p>
+</td>
+<td valign="top" width="200pxl">
+<p>Domain name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="300pxl">
+<p>localhost</p>
+</td>
+<td valign="top" width="150pxl">&nbsp;</td>
+</tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>PORT</p>
+</td>
+<td valign="top" width="200pxl">
+<p>PORT</p>
+</td>
+<td valign="top" width="100pxl">
+<p>Y</p>
+</td>
+<td valign="top" width="300pxl">
+<p>3213</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>
+<p>Api</p>
+</td>
+<td>
+<p>API</p>
+</td>
+<td>
+<p>Y</p>
+</td>
+<td>
+<p>api</p>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+**Example:**
+
+- `http://localhost:3213/api/isAlive`
+
+  
 
 # Request Header
 
