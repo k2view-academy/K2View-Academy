@@ -1,10 +1,10 @@
 # SET and SET_GLOBAL GLOBAL Commands for Global Variables 
 
 There are two Fabric commands that can override a global:
- 
+
 * **set_global global**, overrides the value at a **cluster level** whereby both the original and new values are saved in Cassandra. Note that when a global is overridden it maintains its new value after re-deployment and after Fabric is restarted.  
 * **set**, overrides the value at a **session level**.
- 
+
 Both commands can override a global value only if the global is not defined as Final.
 
 ### How Do I Use Set_Global Global Command?
@@ -96,13 +96,14 @@ The **set** command can be used to set a variable **per session** so that the va
 <p>set &lt;PARAM_NAME&gt;;</p>
 </td>
 <td width="319">
-<p>Get the value of &lt;PARAM_NAME&gt; from the current session. If &lt;PARAM_NAME&gt; is not overridden, the command returns null.</p>
+<p>Get the value of &lt;PARAM_NAME&gt;.</p>
 <p>Example:</p>
 <p>set SOURCE_PRODUCT_VERSION;</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/02_globals_use_cases.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/04_globals_code_examples.md)
