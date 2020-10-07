@@ -14,9 +14,9 @@ Transactions can include [inner flows](22_broadway_flow_inner_flows.md). If a tr
 
 When the outer flow starts the transaction and then invokes an inner flow, the inner flow does not close the transaction. The transaction is closed by the outer flow.
 
-### Iterations Behavior
+### Iteration Behavior
 
-Transactions can be handled during an iteration either as a commit at the end of a data set or as a commit per iteration. This definition is based on whether the Iterator is marked as a transactional Stage in the flow or not. An Iterator is a Stage holding an Actor that starts the loop over the data set. The Iterator dictates the number of times the iteration occurs. Thus if the Iterator Stage is transactional, the commit is performed at the end of data set. However, if the Iterator Stage is not transactional, the transaction starts inside the loop and the commit is per each iteration.
+Transactions can be handled during an iteration either as a commit at the end of a data set or as a commit per iteration. This definition is based on whether the Iterator is marked as a transactional Stage in the flow or not. An Iterator is a Stage holding an Actor that starts the loop over the data set. The Iterator dictates the number of times the iteration occurs. Thus if the Iterator Stage is transactional, the commit is performed at the end of the data set. However, if the Iterator Stage is not transactional, the transaction starts inside the loop and the commit is per each iteration.
 
 **Examples**
 
@@ -28,11 +28,11 @@ Transactions can be handled during an iteration either as a commit at the end of
 
   ![image](images/99_23_commit_each.PNG)
 
-* A mixed approach for handling transactions during an iteration can be used when the data set is very big (for example, 1M records) and a commit is required every 10K records. The transaction then starts before the loop and commits each time the counter 10,000. Otherwise continues the transaction.
+* A mixed approach for handling transactions during an iteration can be used when the data set is very big (for example, 1M records) and a commit is required every 10K records. The transaction then starts before the loop and commits each time the counter reaches 10,000. Otherwise, it continues the transaction.
 
   ![image](images/99_23_condition.PNG)
 
-* An example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. In the following example, there are transactions in each iteration: one at the **insert data** Stage which is followed by commit and another at the **query params** Stage which is also followed by commit.
+* An example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. In the following example, there are transactions in each iteration: one at the **insert data** Stage which is followed by a commit and another at the **query params** Stage which is also followed by a commit.
 
   ![image](images/99_23_complex_ex.PNG)
 
