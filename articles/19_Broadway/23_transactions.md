@@ -4,7 +4,7 @@
 
 - Broadway has a built-in Transactions Management mechanism. The transaction starts when the [Actor](03_broadway_actor.md) in the first [Stage](19_broadway_flow_stages.md) marked as a transaction requests to start a connection. 
 - Several sequential Stages marked as transactions are part of the same transaction.
-- The transaction ends after the last Stage marked as a transaction and is followed by a commit (or by a rollback if there are errors). 
+- The transaction ends after the last Stage marked as a transaction or at the end of the flow and is followed by a commit (or by a rollback if there are errors). 
 
 ![image](images/99_23_general_ex.PNG)
 
@@ -16,7 +16,7 @@ When the outer flow starts the transaction and then invokes an inner flow, the i
 
 ### Iterations Behavior
 
-There are two approaches for handling the transactions during an iteration: commit at the end of the data set or commit on each iteration. The control which approach to follow depends on the definition of the one Stage before the Iteration start. This Stage holds an iterator that dictates how many times the iteration will occur. Thus if this Stage is transactional, the commit will be performed at the end of data set, otherwise the commit will be per each iteration.
+There are two approaches for handling the transactions during an iteration: commit at the end of the data set or commit on each iteration. The definition in the flow depends on whether the Iterator is marked as a transactional Stage or not. The Iterator is a Stage holding an Actor that starts the loop over the data set. The Iterator dictates how many times the iteration will occur. Thus if the Iterator Stage is transactional, the commit will be performed at the end of data set. However if the Iterator Stage is not transactional, the transaction will start inside the loop and the commit will be per each iteration.
 
 **Examples**
 
