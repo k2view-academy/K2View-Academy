@@ -3,23 +3,16 @@
 ### What Are User Preferences Used For?
 User Preferences are used to define key operational functionalities for development, debugging, deployment and runtime execution activities.\
 To open the User Preferences options, click the [Tools](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-toolbar-tabs) icon in the Fabric Studio to display the default General Preferences folder and its configuration items.
- 
-![image](/articles/04_fabric_studio/images/04_04_01%20default%20General%20Preferences.png)
+
+![image](images/04_04_01_user_pref.PNG)
 
 User Preferences are saved in: [Fabric Studio Installation Dir]\Preferences. 
-
-### What Is the Purpose of the General Preferences Tab?
-The General Preferences tab is used to define the system’s Projects Directory folder which is by default saved in:
-
-C:\users\\[username]\documents\K2View Fabric Studio\Projects.
-
-To update the location of the folder or to edit it, click **Browse**.
 
 ### What Is the Purpose of the Server Configuration Tab?
 
 The Server Configuration tab is used to define the Deployment URLs of Fabric servers. Each Fabric server can be accessed to deploy an implementation, debug and to validate Web Services. 
 
-![image](/articles/04_fabric_studio/images/04_04_02%20Web%20Services.png)
+![image](images/04_04_02_server_config.PNG)
 
 
 The following is a list of server configuration items: 
@@ -36,11 +29,29 @@ The following is a list of server configuration items:
 </tr>
 <tr>
 <td width="133">
-<p><strong>URL</strong></p>
+<p><strong>Deployment Web Service URL</strong></p>
 </td>
 <td width="467">
 <p>Displays a generic URL for the deployment in the following format: http://&lt;host&gt;:3213/deploy.</p>
 <p>Edit the Hostname or Host IP Address in the &lt;host&gt; field to deploy your project or its components such as a <a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit</a> or Web Services to the configured server.</p>
+</td>
+</tr>
+<tr>
+<td width="133">
+<p><strong>Driver Port</strong></p>
+</td>
+<td width="467">
+<p>The JDBC driver port to connect to the Fabric in this environment.</p>
+</td>
+</tr>
+<tr>
+<td width="133">
+<p><strong>Force Upgrade Post Deploy</strong></p>
+</td>
+<td width="467">
+<p><strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
+<p><strong>Unchecked</strong>: performs a sync on schema changes only.</p>
+<p>Note that each LU undergoes one forced sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
 </td>
 </tr>
 <tr>
@@ -61,17 +72,39 @@ The following is a list of server configuration items:
 </tr>
 <tr>
 <td width="133">
-<p><strong>Force Upgrade Post Deploy</strong></p>
+<p><strong>Debug Env</strong></p>
 </td>
 <td width="467">
-<p><strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
-<p><strong>Unchecked</strong>: performs a sync on schema changes only.</p>
-<p>Note that each LU undergoes one forced sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
+<p>Indicates the debug environment. Only one environment can be marked as debug.</p>
 </td>
 </tr>
 <tr>
 <td width="133">
-<p><strong>Web service invoke path template</strong></p>
+<p><strong>Test URL</strong></p>
+</td>
+<td width="467">
+<p>Click to test the connection to the server and to validate the URL.</p>
+</td>
+</tr>
+<tr>
+<td width="133">
+<p><strong>Fabric Console</strong></p>
+</td>
+<td width="467">
+<p>Click to open the Fabric Console using the selected server info: host, JDBC port, user and password.</p>
+</td>
+</tr>
+<tr>
+<td width="133">
+<p><strong>Web Admin</strong></p>
+</td>
+<td width="467">
+<p>Click to open the Web Admin using the selected server info: host and web server port.</p>
+</td>
+</tr>
+<tr>
+<td width="133">
+<p><strong>Web Service Invoke Path Template</strong></p>
 </td>
 <td width="467">
 <p>By default, Web Services are invoked using Swagger. For example: static/swaggerUI/dist/index.html#/&lt;CATEGORY&gt;/&lt;WS_VERB&gt;_&lt;WS_PATH&gt;</p>
@@ -86,30 +119,32 @@ The following is a list of server configuration items:
 <p>For example: ws?format=html&amp;methodName=&lt;WS_NAME&gt;&amp;token=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 </td>
 </tr>
-<tr>
-<td width="133">
-<p><strong>Test</strong></p>
-</td>
-<td width="467">
-<p>Test the connection to the server to validate the URL.</p>
-</td>
-</tr>
 </tbody>
 </table>
 
+ Note that the Delete button of the special debug environment is disabled in order to support debug on remote server.
 
-Click for more information about Deployment from the Fabric Studio.
+
+
+[Click for more information about Deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
 [Click for more information about the Sync Method.](/articles/14_sync_LU_instance/04_sync_methods.md)
 
-Click for more information about Invoking a Web Service from the Studio.
+[Click for more information about Invoking a Web Service from the Studio](/articles/15_web_services_and_graphit/09_swagger.md#invoking-and-testing-web-services-using-fabric-studio).
 
 Note that once defined, both General Preferences and Server Configurations will continue to apply after the Fabric Studio is upgraded.
 
-### How Do I Add Application Shortcuts?
-Application shortcuts enable you to define shortcuts to other applications directly from the Fabric Studio without exiting the application. Once defined, the new shortcut is displayed in the upper left corner of the window.
+### What Is the Purpose of the General Preferences Tab?
 
-![image](/articles/04_fabric_studio/images/04_04_03%20new%20shortcut.png)
+The General Preferences tab is used to define the system’s Projects Directory folder which is by default saved in:
+
+C:\users\\[username]\documents\K2View Fabric Studio\Projects.
+
+To update the location of the folder or to edit it, click **Browse**.
+
+### How Do I Add Application Shortcuts?
+
+Application shortcuts enable you to define shortcuts to other applications directly from the Fabric Studio without exiting the application. Once defined, the new shortcut is displayed in the upper left corner of the window.
 
 1. Go to **Application Shortcuts** and click Add **New Shortcut**.  
 2. Enter the **Application Name** in the **Title** field.
@@ -117,6 +152,7 @@ Application shortcuts enable you to define shortcuts to other applications direc
 4. Enter any **Settings** for the application in the **Parameters** field.
 5. Click **OK** and then click **Save** or press **CTRL+S** to save the updated shortcuts. 
 
+![image](images/04_04_03_app_shortcut.PNG)
 
 ### How Do I Configure GIT Preferences?
 
