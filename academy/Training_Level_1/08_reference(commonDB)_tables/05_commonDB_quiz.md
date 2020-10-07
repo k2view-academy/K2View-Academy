@@ -30,9 +30,9 @@ C: Statistics and maintenance tables, belonging to the LU schema .
 
 To create a new Reference Table, you need to:
 
-A: Create a new reference table and its population from Fabric Studio.
+A: Create a new reference table and its population in the LU section.
 
-B: Use SQL statements from Fabric Runtime.
+B: Create a table in the Reference folder of the Studio.
 
 C: Create 
 
