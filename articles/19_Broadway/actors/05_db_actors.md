@@ -11,9 +11,7 @@ Each Actor in the **db** category requires an **interface** input argument that 
 
 The **schema**, **table**, **fields** and **sql** input arguments of **db** Actors are case-insensitive. 
 
-The SQL statement defined in the Actor's **sql** input argument can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
-
-If the DB command fails, the actual SQL statement is sent to the log file. For example:
+If the DB command executed by the Actor fails, the actual SQL statement is sent to the log file. For example:
 
 ~~~
 Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: CONTRACT_COPY.CONTRACT_ID)
@@ -40,15 +38,19 @@ Another way to load the data in a Broadway flow is by using the **DbCommand** Ac
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
-### Support for Non-Prepared Statement Parameters 
+### Parameters Support 
 
 The **DbCommand** Actor’s **sql** input argument includes an SQL statement which must be executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
 
 The syntax is:
 
-**${param_value}** - for prepared statement parameters.
+**?** - for **ordered** parameters.
+
+**${param_value}** - for **named** parameters.
 
 **${@param}** - for non-prepared statement parameters.
+
+The values of **named** parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
 For example, the SQL statement:
 
