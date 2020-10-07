@@ -16,7 +16,11 @@ When the outer flow starts the transaction and then invokes an inner flow, the i
 
 ### Iteration Behavior
 
-Transactions can be handled during an iteration either as a commit at the end of a data set or as a commit per iteration. This definition is based on whether the Iterator is marked as a transactional Stage in the flow or not. An Iterator is a Stage holding an Actor that starts the loop over the data set. The Iterator dictates the number of times the iteration occurs. Thus if the Iterator Stage is transactional, the commit is performed at the end of the data set. However, if the Iterator Stage is not transactional, the transaction starts inside the loop and the commit is per each iteration.
+A transaction's behavior within an iteration depends on how the Iterator step is defined in the flow. 
+
+An Iterator is a Stage holding an Actor that starts the loop over the data set. The Iterator dictates the number of times the iteration occurs. 
+
+If the Iterator Stage is transactional, the commit is performed at the end of the data set. However, if the Iterator Stage is not transactional, the transaction starts inside the loop and the commit is per each iteration.
 
 **Examples**
 
@@ -32,7 +36,7 @@ Transactions can be handled during an iteration either as a commit at the end of
 
   ![image](images/99_23_condition.PNG)
 
-* An example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. In the following example, there are transactions in each iteration: one at the **insert data** Stage which is followed by a commit and another at the **query params** Stage which is also followed by a commit.
+* The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. There are two transactions in each iteration: one at the **insert data** Stage which is followed by a commit and another at the **query params** Stage which is also followed by a commit.
 
   ![image](images/99_23_complex_ex.PNG)
 

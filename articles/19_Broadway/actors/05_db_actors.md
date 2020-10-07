@@ -11,10 +11,11 @@ Each Actor in the **db** category requires an **interface** input argument that 
 
 The **schema**, **table**, **fields** and **sql** input arguments of **db** Actors are case-insensitive. 
 
-If the DB command executed by the Actor fails, the actual SQL statement is sent to the log file. For example:
+If the DB command executed by the **db** Actor fails, the actual SQL statement is sent to the log file. For example:
 
 ~~~
-Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: CONTRACT_COPY.CONTRACT_ID)
+Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation
+(UNIQUE constraint failed: CONTRACT_COPY.CONTRACT_ID)
 INSERT INTO "main"."CONTRACT_COPY" ("CUSTOMER_ID","CONTRACT_ID","CONTRACT_REF_ID") VALUES (?,?,?)
 ~~~
 
@@ -22,17 +23,17 @@ INSERT INTO "main"."CONTRACT_COPY" ("CUSTOMER_ID","CONTRACT_ID","CONTRACT_REF_ID
 
 **Using DbLoad Actor**
 
-To load the data, use the **DbLoad** Actor by populating the Actor's input arguments as follows:
+To load the data using the **DbLoad** Actor, populate the Actor's input arguments as follows:
 
 * **command**, select INSERT, UPDATE or UPSERT from the dropdown list.
   * When performing an UPDATE or an UPSERT command, you can set **ignoreNull** input argument to true. In this mode, the SQL statement will not contain fields that have null values.
-  * When running UPSERT on non-supporting dialects, the command is performed by first attempting an UPDATE. If the number of affected rows is 0, an INSERT is performed. Note that these two actions are not atomic.
+  * When running UPSERT on non-supporting dialects, the command is performed by first attempting to do an UPDATE. If the number of affected rows is 0, an INSERT is performed. Note that these two actions are not atomic.
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
 * **fields, keys**, if a table has been selected, the fields and keys are automatically populated from the DB schema. If not, type in the field names.
 
 **Using DbCommand Actor**
 
-Another way to load the data in a Broadway flow is by using the **DbCommand** Actor and writing the SQL INSERT statement in the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the named parameters. For example:
+Another way to load the data in a Broadway flow is by using the **DbCommand** Actor and writing the SQL INSERT statement in the **sql** input argument. The values to be populated in the table can be taken from the input arguments using the parameters. For example:
 
 ​	`INSERT INTO DATA (TEXT) VALUES (${text} )`
 
@@ -40,7 +41,7 @@ Where **${text}** is replaced with the value of the **text** input argument in t
 
 ### Parameters Support 
 
-The **DbCommand** Actor’s **sql** input argument includes an SQL statement which must be executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
+The **DbCommand** Actor’s **sql** input argument includes an SQL statement which is executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
 
 The syntax is:
 
@@ -50,7 +51,7 @@ The syntax is:
 
 **${@param}** - for non-prepared statement parameters.
 
-The values of **named** parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
+The values of **named** parameters are taken from the Actor's input arguments or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
 For example, the SQL statement:
 
