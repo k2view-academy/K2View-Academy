@@ -22,17 +22,15 @@ When an LU table has two populations, a second Table Population can extract data
 1.	Go to **Project Tree > Logical Units** > [**LU Name**].
 2.	Click **Tables**, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
 3.	Click the **Objects tab** in the right panel of the **Table Population** working area.
-4.	Click **Databases** to display the Databases List holding a list of interfaces defined in the project. 
-5.	Do either: 
-    *	Double click the [**Interface Name**] and drag a table into the working area.
-    *	Use the **Newest LUDB File** or **Newest Reference File** options to populate the data from the table of the current LU. Double click the [**LU Name**] and drag the LU table into the working area. These options will be available after running the Data Viewer for the LU or for the Reference to create the LUDB file [using the Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) or [Reference file]. 
+4.	Click **Databases** to display the list of interfaces defined in the project or a built-in Fabric interface. 
+5.	Double click the [**Interface Name**] and drag a table into the working area. 
 6.	Click **Create as DB Query** to create the DB query source object in the working area. 
 7.	Optional: use the **Edit Query** option to edit the input query via the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview), for example, to choose specific columns or conditions in SQL statements. Do either:
-    *	Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
-    *	Double click the **source object**.
+   *	Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
+   *	Double click the **source object**.
 8.	To connect the source object to the target LU table, right click the **DB Query object** and either:
-    *	Click **Auto Connect to Table**.
-    *	Connect the fields **manually**.
+   *	Click **Auto Connect to Table**.
+   *	Connect the fields **manually**.
 
 ### How Do I Create a New Table Population From a Root Function? 
 
@@ -45,5 +43,5 @@ When an LU table has two populations, a second Table Population can extract data
 5.	Right click the **source object** and do either:
     * Check **Auto Connect to Table**.
     * Connect the fields **manually**.
-   
+
 [![Previous](/articles/images/Previous.png)](/articles/07_table_population/02_source_object_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/04_table_population_properties_tab.md)
