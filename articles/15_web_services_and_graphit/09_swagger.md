@@ -27,9 +27,9 @@ Web Services can be deployed to the K2view Fabric server either using the Fabric
    <img src="/articles/15_web_services_and_graphit/images/Web-Service-Swagger-1-1.png" alt="drawing"/>
 
 The relevant invoked Web Service is expanded and points to the correct verb. 
-*	If only the GET verb is defined as illegible for the invoked Web Service, it will only display the GET verb  as an option.
+*	If only the GET verb is defined as eligible for the invoked Web Service, it will only display the GET verb  as an option.
 
-*	If all the four verbs are defined as illegible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
+*	If all the four verbs are defined as eligible, it will display GET, POST, PUT and DELETE, but zoom into GET by default.
 
 3. Click a **Web Service** in the Swagger user interface to view more details including its parameters, as shown below. If a description of the method or comments have been added to the Input parameters in the K2View Studio, they are displayed in the Swagger user interface, as shown in the following examples (customer_id description):
 
