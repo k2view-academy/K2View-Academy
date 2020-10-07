@@ -1,19 +1,20 @@
-# DB Commands Actors 
+# DB Command Actors 
 
 Broadway has a **db** category of Actors that are useful for performing DB commands and actions like creating a new table, loading data or fetching it and executing other DB commands. These Actors are:
 - **DbLoad** Actor, loads data into a database using an INSERT, UPDATE or UPSERT command.
-- **DbCommand** Actor, performs database commands against a DB interface. It has two extensions: 
-  - **DbFetchField** Actor, returns the first field of the first row or null if not present.
-  - **DbFetchFirstRow** Actor, returns the first row or an empty row if no result is present.
+- **DbCommand** Actor, performs database commands on a DB interface. It has two extensions: 
+  - **DbFetchField** Actor, returns the first field of the first row or null if this is empty.
+  - **DbFetchFirstRow** Actor, returns the first row or an empty row if there is no result.
 - **DbCreateTable** Actor, creates a new database table.
 
 Each Actor in the **db** category requires an **interface** input argument that can be defined either as a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or as a JDBC URL. 
 
-The **schema**, **table**, **fields** and **sql** input arguments of the **db** category Actors are case-insensitive. 
+**db** category Actors **schema**, **table**, **fields** and **sql** input arguments are case-insensitive.
+The **schema**, **table**, **fields** and **sql** input arguments of **db** category Actors are case-insensitive. 
 
 The SQL statement defined in the Actor's **sql** input argument can contain either ordered parameters using **?** or named parameters using **${}** notation. The values of named parameters are taken from the Actor's input parameters or from the **params** input argument and only if it is a map. For ordered parameters, the **params** input argument should be an array or a single value (not a map).
 
-In case the DB command fails, the actual SQL statement is sent to the log file. For example:
+If the DB command fails, the actual SQL statement is sent to the log file. For example:
 
 ~~~
 Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation (UNIQUE constraint failed: CONTRACT_COPY.CONTRACT_ID)
@@ -22,7 +23,7 @@ INSERT INTO "main"."CONTRACT_COPY" ("CUSTOMER_ID","CONTRACT_ID","CONTRACT_REF_ID
 
 ### How Can I Load the Data?
 
-Data can be loaded in a Broadway flow using either a **DbLoad** Actor or a **DbCommand** Actor.
+Data can be loaded into a Broadway flow using either a **DbLoad** Actor or a **DbCommand** Actor.
 
 To load the data use the **DbLoad** Actor by populating the Actor's input arguments as follows:
 
@@ -38,9 +39,9 @@ Another way to load the data in a Broadway flow is by using the **DbCommand** Ac
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
-### Non-Prepared Statement Parameters Support
+### Support for Non-Prepared Statement Parameters 
 
-The **sql** input argument of the **DbCommand** Actor includes the SQL statement which needs to be executed by the Actor. The SQL statement can be created dynamically using the prepared and non-prepared statement parameters. 
+The DbCommand Actor’s **sql** input argument includes an SQL statement which must be executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
 
 The syntax is:
 
@@ -60,9 +61,9 @@ Can be written in the following way:
 Select * From ${@table} where ${@column} = ${case_sts}
 ~~~
 
-The values for the input arguments **table**, **column** and **case_sts** are passed to the Actor that translates them into an SQL statement. When the Actor is called several times, if the resulting SQL is the same as in the previous run, the prepared statement is not recalculated.
+The values for the **table**, **column** and **case_sts** input arguments are passed to the Actor and are translated into an SQL statement. When the Actor is called several times, if the resulting SQL is the same as in the previous run, the prepared statement is not recalculated.
 
-### DB Commands Examples
+### DB Command Examples
 
 ### Examples
 The **db-commands.flow** example shows how the **DbCommand** Actor can be used to perform various DB actions, including:
@@ -91,7 +92,7 @@ The parameters for the WHERE clause are transferred using the **Const** Actor's 
 ]
 ~~~
 
-The following example shows how to execute a SELECT statement using **named params**:
+The following example shows how a SELECT statement is executed using **named params**:
 
 ![image](../images/99_actors_05_3.png)
 
