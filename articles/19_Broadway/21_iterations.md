@@ -5,7 +5,7 @@ The most common iteration use cases are iterating over a database result set or 
 
 ## Iterable Line Type
 
-To start the iterable logic, select the line at the beginning of the loop and change the [Link Type](20_broadway_flow_linking_actors.md#link-object-properties) to Iterable. The line is now double-dotted, the background of the loop's scope is highlighted grey and a thick divider line is displayed at the starting point.
+To start the iterable logic, select the line at the beginning of the loop and change the [Link Type](07_broadway_flow_linking_actors.md#link-object-properties) to Iterable. The line is now double-dotted, the background of the loop's scope is highlighted grey and a thick divider line is displayed at the starting point.
 
 In the following image, Stage 2 runs on each data entry returned by the Actor at Stage 1.
 
