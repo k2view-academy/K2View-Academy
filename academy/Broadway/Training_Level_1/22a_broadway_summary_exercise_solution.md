@@ -1,6 +1,6 @@
 # Broadway Summary Exercise - Solution
 
-**Step 1 - Create a Reference Table and Populate it Using a Broadway Flow**
+**Step 1 - Create a [Reference Table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) and Populate it Using a Broadway Flow**
 
 **Question 1:**
 
