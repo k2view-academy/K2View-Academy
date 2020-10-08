@@ -1,6 +1,6 @@
 # Lookup Tables
 
-A **Lookup table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or Reference table. A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
+A **Lookup table** is an object that is added to a [Table Population](/articles/07_table_population/01_table_population_overview.md) to get information from a source DB table, [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Reference table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md). A lookup returns one record for each input record. The matching SQL query is generated for a Lookup table by Fabric: 
 *	**Input** fields are used for the WHERE clause of an SQL statement. 
 *	**Output** fields are used for the SELECT statement of an SQL statement.
 
