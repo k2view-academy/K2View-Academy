@@ -23,7 +23,7 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong><a href="/articles/22_commonDB/01_fabric_commonDB_overview.md">Common (Reference)</a></strong></p></h4>
+  <h4><p><strong><a href="/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md">Reference Table</a></strong></p></h4>
 </td>
 <td width="516">
 <p>A Fabric allocated area for tables defined as Reference (metadata). These tables can be used by all LUI or within a specific LU's instances. For example: the postal code of a customer&rsquo;s address.</p>
@@ -152,7 +152,7 @@
   <h4><p><strong><a href="/articles/07_table_population/11_lookup_tables.md">Lookup</a></strong></p></h4>
 </td>
 <td width="516">
-<p>A Lookup is an object that is added to a Table Population to get information from a source DB, LU table or reference table.</p>
+<p>A Lookup is an object that is added to a Table Population to get information from a source DB, LU table or Reference table.</p>
 </td>
 </tr>
 <tr>
