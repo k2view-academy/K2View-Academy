@@ -262,7 +262,8 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong>Swagger</strong></p></h4>
+  <h4><p><strong><a href="/articles/15_web_services_and_graphit/09_swagger.md">Swagger</a></strong></p></h4>
+ 
 </td>
 <td width="516">
 <p>Fabric Studio supports invocation and testing of Web Services using Swagger (Open Source under Apache License 2.0), a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful Web Services.</p>
