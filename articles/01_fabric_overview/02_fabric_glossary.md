@@ -12,8 +12,7 @@
 </tr>
 <tr>
 <td width="125">
-<p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/19_Broadway/01_broadway_overview.md">Broadway</a></strong></p>
-</td>
+<h4><p><strong><a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/19_Broadway/01_broadway_overview.md">Broadway</a></strong></p></h4>
 <td width="516">
 <p>Broadway is the Fabric module that is used to design data movement, its transformation and the orchestration of business flows.&nbsp;</p>
 <p>A Broadway flow is built from&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/19_Broadway/19_broadway_flow_stages.md">Stages</a>&nbsp;which are executed from left to right where each Stage can include one or more&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/19_Broadway/03_broadway_actor.md">Actors</a>.</p>
