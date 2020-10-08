@@ -503,24 +503,23 @@ The **TRACE** command enables tracing internal Fabric operations by request and 
 
 <!--Drop 3- add a links to trace-->
 
-### Common (Reference) Tables
+### CommonDB & Reference Tables
 
-Fabric enables creating Common (Reference) tables which can be used by all LUs or Web Services. A Common table typically contains metadata. For example, a Postal Code table that identifies the postal code of customer addresses.
+Fabric enables creating [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) which can be used by all LUs or Web Services. A Reference table typically contains metadata. For example, a Postal Code table that identifies the postal code of customer addresses.
 
-Common table commands enable synchronizing, getting the sync status and waiting for sync processing of Common tables to be completed before continuing the workflow.
+Reference table commands enable synchronizing, getting the sync status and waiting for sync processing of Reference tables to be completed before continuing the workflow.
 
-Click for more information about Common (Reference) Tables.
+Click for more information about [Reference Tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
 
-<!--Drop 2- add a link to Common (reference) tables -->
 
 ### Fabric Transactions
 
-The Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a (common) Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Common table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
+The Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
 
 Fabric has a set of commands that support the SOR functionality:
 
 - **BEGIN**, start a transaction.
-- **SELECT**, **UPDATE**, **INSERT**, and **DELETE**, run Select, Insert, Update and Delete transactions on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Common table data.
+- **SELECT**, **UPDATE**, **INSERT**, and **DELETE**, run Select, Insert, Update and Delete transactions on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Reference table data.
 - **COMMIT** and **ROLLBACK**, commit or rollback the updates.
 
 Fabric also enables writing the transaction into a delta table using the **SET ASYNC_TRX=true** command.
@@ -528,7 +527,7 @@ Fabric also enables writing the transaction into a delta table using the **SET A
 Click for more information about Fabric as a System of Record.
 
 
-<!--Drop 2- add links to SOR + Common (reference) tables -->
+<!--Drop 2- add links to SOR + Reference tables -->
 
 ### CDC and Search
 
