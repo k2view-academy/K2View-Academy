@@ -1,5 +1,0 @@
-common_area_config
-common_area_kafka_producer
-common_area_kafka_consumer
-kafka_ssl_properties
-common_area_memory_queues_config     
