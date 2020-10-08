@@ -40,7 +40,7 @@ The transaction 1 runs on Node 1 and the transaction 2 runs on Node 4.
 
 * If OPTIMISTIC_LOCKING=‘QUORUM’,  the transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of each DC.
 
-* OPTIMISTIC_LOCKING=‘ LOCAL QUORUM, the transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of DC1.
+* If OPTIMISTIC_LOCKING=‘LOCAL QUORUM', the transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of DC1.
 
 <img src="images/23_02_1.PNG" alt="image" style="zoom: 67%;" />
 
