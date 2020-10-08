@@ -140,10 +140,10 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#common-reference-tables">Common (Reference) Tables</a></p>
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#common-reference-tables">Reference Tables</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p>Commands for handling Common (reference) tables.</p>
+<p>Commands for handling Reference tables.</p>
 </td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ For example:
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
-<p>Support transactions to update LUI or Common (reference) table data (Fabric as System of Record).</p>
+<p>Support transactions to update LUI or Reference table data (Fabric as System of Record).</p>
 </td>
 </tr>
 <tr>
