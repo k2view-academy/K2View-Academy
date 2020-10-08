@@ -9,7 +9,7 @@ To start the iterable logic, select the line at the beginning of the loop and ch
 
 In the following image, Stage 2 runs on each data entry returned by the Actor at Stage 1.
 
-![image](images/iterate_simple.png)
+<img src="images/iterate_simple.png" alt="image" style="zoom: 67%;" />
 
 
 ## Scope of Iteration
@@ -25,13 +25,13 @@ The following image displays an iteration loop that starts in Stage 2 and runs u
 
 Path connections work well when combined with an iteration loop. The following displays an iterate connection selecting a field in a database result set and iterating over it.
 
-![image](images/iterate_path.png)
+<img src="images/iterate_path.png" alt="image" style="zoom:67%;" />
 
 ## Nested Arrays
 
 Looping an item in an inner array of a data set with nested arrays generates an interation over the entire data set. For example, in a data set of the **[names]** map holding an array of maps with a Broadway field name, Broadway traverses all **name** values.
 
-![image](images/iterate_nested_array.png)
+<img src="images/iterate_nested_array.png" alt="image" style="zoom:67%;" />
 
 
 ## Nested Iterations
@@ -48,7 +48,7 @@ In the following image, the first name is an input to a query that gets a list o
 A Stage can have more than one collection. A common case is a JSON data structure that contains more than one array.
 Using the Stage Split functionality you can split the flow and manage several loops over the same data structure.
 
-![image](images/iterate_split.png)
+<img src="images/iterate_split.png" alt="image" style="zoom:67%;" />
 
 ## ForLoop Actor
 
