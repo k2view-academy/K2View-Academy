@@ -39,7 +39,7 @@ Fabric does all this using a patented approach for storing, syncing and securing
 Fabric relies on a resilient architecture and a strong set of 3rd party technologies widely used across the industry. To ensure scalability, quality of service and resiliency, Fabric has been engineered as a set of layers, each designed to address a different part of the overall data flow.
 
 
-![](/articles/02_fabric_architecture/images/fabOverviewPic.png)
+![](images/fabOverviewPic.png)
 
 
 ### 2.1 Fabric Storage
@@ -98,7 +98,7 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 ### 3.1 Overview
 Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
 
-![](/articles/02_fabric_architecture/images/fabDataFlow.png)
+![](images/fabDataFlow.png)
 
 
 ### 3.2 Fabric Data Access Layer
@@ -139,22 +139,27 @@ When data needs to be processed before being stored or exposed, it goes through 
 
 #### 3.3.1 Protocols
 **3.3.1.1 Files:**
+
 Data can be captured via SFTP or any other transfer protocol and/or streaming service. Standard file types such as JSON/XML/CSV can be parsed and injected. Users can also easily introduce new formats.
 
 **3.3.1.2 Queue Messaging Services (QMS):**
+
 Fabric allows subscription to queue messaging systems to stream-in data using services such as Apache Kafka, JMS and RabbitMQ. Fabric can then step-in and apply transformations and logic to incoming events.
 
 **3.3.1.3 APIs:**
+
 Fabric can consume external APIs such as Web Services, Soap and Java Libraries through which data can be obtained and populated into the Fabric storage engine.
 APIs can also be invoked as part of flows inside the ETL/Business Logic layer.
 
 **3.3.1.4 DB Query:**
+
 By default, Fabric supports any [connection to any database](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) supporting a JDBC driver. If not supported in Fabric&#39;s standard interface types module, users can define new DB types in accordance with the database and its JDBC driver specifications. Fabric can also be extended programmatically to invoke proprietary drivers or interfaces.
 
 #### 3.3.2 Data-processing & Business Logic
 This section discusses the types of transformations used by the business rules and flows created by users depending upon project requirements.
 
 **3.3.2.1 Data Pre-processing:**
+
 Different projects have different data processing needs, for which Fabric offers a range of built-in functions and libraries, that can be invoked either individually or collectively:
 
 - Data anonymization: Fabric provides a [masking process](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#5-security) that can be used to anonymize data for R&amp;D or QA purposes.
@@ -167,16 +172,15 @@ Different projects have different data processing needs, for which Fabric offers
 
 - Data reconciliation, comparing and matching: Fabric analyzes the collected data to decide which data to keep or to discard, depending upon whether the data is trustable. This process can also use Machine Learning algorithms to decide which data set is more trusted when comparing similar entries from multiple tables or DBs.
 
-
 **3.3.2.2 Data Processing Modules:**
 
 Data can be processed in six different modules:
 
 - Synchronization process: 
-As part of on-demand or initial load data synchronization using Fabric&#39;s population object, the Sync process uses LU schemas defined in the Fabric Studio to create or update the MicroDBs (LUIs). When synchronizing multiple digital entities, Fabric invokes a migration process (distributed parallel sync) for a list of LUI.
+As part of on-demand or initial load data synchronization using Fabric&#39;s population object, the [Sync process](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) uses LU schemas defined in the Fabric Studio to create or update the MicroDBs (LUIs). When synchronizing multiple Digital Entities, Fabric invokes a migration process (distributed parallel sync) for a list of LUI.
 
 - IIDFinder:
-Since Fabric creates Digital Entities by extracting data from multiple sources and then by populating and transforming the data into LUI tables, changes occurring at a source level must be reflected to the LUI tables fields. The iiDFinder process manages the deployment of incremental updates as soon as a change in the data source is detected via notification systems like Oracle Golden Gate and/or queue messaging services.
+Since Fabric creates Digital Entities by extracting data from multiple sources and then by populating and transforming the data into [LUI tables](/articles/06_LU_tables/01_LU_tables_overview.md), changes occurring at a source level must be reflected to the LUI tables fields. The iiDFinder process manages the deployment of incremental updates as soon as a change in the data source is detected via notification systems like Oracle Golden Gate and/or queue messaging services.
 In environments where source data constantly changes, Fabric enables a lazy mode, whereby the iiDFinder retrieves the delta updates upon explicit demand from the user.
 
 - Data Enrichment:
@@ -186,11 +190,11 @@ Users can enrich data using [built-in functions](/articles/07_table_population/0
 Where all async recurring or scheduled actions happen, enabling users to run Fabric functions according to a predefined schedule. Once set up by the user, Fabric  creates asynchronous tasks (running threads) that execute specific commands, Broadway flows or Java code at specific dates and times. Jobs can be used to collect data from structured DB or any files (HTTP), streams, message queues.
 
 - Broadway:
-Fabric&#39;s data and business flow management system (Broadway) enables implementors to define, orchestrate and run complete flows of data manipulation and tasks. It provides a work environment that unifies data and execution flows under the same framework. 
+Fabric&#39;s data and business flow management system ([Broadway](/articles/19_Broadway/01_broadway_overview.md)) enables implementers to define, orchestrate and run complete flows of data manipulation and tasks. It provides a work environment that unifies data and execution flows under the same framework. 
 Broadway enables you to graphically render your business and data flows and modify them with a set of visual and draggable elements each acting as a function, source or target.
 
 - Graphit&#39;s APIs Generator:
-Graphit is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of Fabric Web Service customized responses whose content is formatted during its execution according to specific parameters pertaining to the Web Service calls and the LUI in use.
+[Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) is a Fabric utility used to dynamically generate CSV, XML and JSON documents. It is useful for the design and generation of [Fabric Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md) customized responses whose content is formatted during its execution according to specific parameters pertaining to the Web Service calls and the LUI in use.
 
 ## 4. Search
 
