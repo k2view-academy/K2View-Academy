@@ -76,7 +76,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <ul>
 <li><strong>jobs</strong>,running Fabric jobs.</li>
 <li><strong>webserver</strong>,connecting Fabric via http or https. For example: <a href="/articles/15_web_services/01_web_services_overview.md">invoke Fabric WS</a>, <a href="/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md">deploy Fabric implementation from Fabric Studio.</a></li>
-<li><strong>commonarea</strong>, accessing common (reference) tables. </li>
+<li><strong>commonarea</strong>, accessing common Reference Tables. </li>
 <li><strong>dbserve</strong>, connecting Fabric via remote JDBC connection. For example: login Fabric console using <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric">fabric command,</a> defining Fabric node as a <a href="/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md">remote Fabric interface.</a></li>
 <li><strong>clustertimecheck</strong>, comparing the time between the Fabric nodes, included in the Fabric cluster and throwing an error if a difference is identified.</li>
 </ul>
@@ -144,7 +144,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <li>The maximum number of concurrent connections that are allowed for a single data source.</li>
 <li>Batch process settings</li>
 <li>Default <a href="/articles/14_sync_LU_instance/02_sync_modes.md">Sync mode</a></li>
-<li><a href="/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-protection">SYNC_PROTECTION</a> parameter</li>                                                                <li>Sync of Common (reference) tables</li>
+<li><a href="/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-protection">SYNC_PROTECTION</a> parameter</li>                                                                <li>Sync of CommonDB Reference tables</li>
 <li>Parallel Sync on <a href="/articles/07_table_population/13_LU_table_population_execution_order.md#how-do-i-set-the-population-order">Table Populations with the same execution order</a>.</li>
 <li>Enable running <a href="/articles/02_fabric_architecture/04_fabric_commands.md#delete-instances-if-not-exist">DELETE INSTANCES IF NOT EXIST</a> Fabric command.</li>
 <li>LUI compression types when storing the LUI in Cassandra.</li>
@@ -251,7 +251,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td width="250pxl" valign="top">
-<p>Common (reference) tables</p>
+<p>CommonDB Reference Tables</p>
 </td>
 <td width="200pxl" valign="top">
 <ul>
