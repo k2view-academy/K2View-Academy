@@ -213,14 +213,6 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong>SOR</strong></p></h4>
-</td>
-<td width="516">
-<p>System of Record, refers to the source system / application. This functionality enables running a single transaction on a specific LU table of the Instance ID, or on the (common) Reference table. This functionality enables Fabric to become the master of the data rather than syncing data from external systems.</p>
-</td>
-</tr>
-<tr>
-<td width="125">
   <h4><p><strong><a href="/articles/07_table_population/02_source_object_types.md">Source Object</a></strong></p></h4>
 </td>
 <td width="516">
