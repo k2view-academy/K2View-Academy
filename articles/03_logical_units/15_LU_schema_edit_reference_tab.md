@@ -7,7 +7,7 @@ A Reference table typically contains metadata that is referenced by different LU
 
 ## LU Schema - Reference Tab
 The Reference tab displays a list of the common Reference tables defined in the project. 
-To ensure that a [Reference table](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md#how-do-i-create-a-new-reference-table-in-fabric-studio) in an LU schema is always synched, check the Reference table in the list in the Reference tab. When Fabric synchronizes the LU instance, Fabric searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them.
+To ensure that a [Reference table](/articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md#sync-method) in an LU schema is always synched, check the Reference table in the list in the Reference tab. When Fabric synchronizes the LU instance, Fabric searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them.
 
 Click [here](articles/22_reference%28commonDB%29_tables/02_reference_table_fabric_studio.md) for more information about Reference Tables.
 
