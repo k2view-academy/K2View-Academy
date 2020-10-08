@@ -12,6 +12,9 @@ The update is performed in the following way:
 
 Several insert, update or delete commands can be executed on the instance ID in the same transaction.
 
+[Click for more information about running the INSERT, UPDATE or DELETE commands on Common (reference) tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md).
+
+
 ### Update LU Instance
 
 The transaction is performed on LUI level whereby you need to get the LUI before running the commands. It is not possible to get several instances inside a transaction even if you do not run insert, update or delete commands on them.
