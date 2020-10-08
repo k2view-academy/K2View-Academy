@@ -269,7 +269,6 @@
 
 <details>
 <summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
-<ul>
 <li><a href="/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md">Overview</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md">Jobs Lifecycle & Flows</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md">User Jobs</a></li>
@@ -292,7 +291,6 @@
 
 <details>
 <summary markdown="span"><strong>Reference Tables & CommonDB<strong><a href="/articles/22_reference(commonDB)_tables/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
-<ul>
 <li><a href="/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md">Overview</a></li>
 <li><a href="/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md">Reference Tables in Fabric Studio</a></li>
 <li><a href="/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md">Reference Tables in Fabric Runtime</a></li>
