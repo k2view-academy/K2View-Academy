@@ -28,24 +28,151 @@ C: Statistics and maintenance tables, belonging to the LU schema .
 
 #### Question 2: Reference Tables Creation
 
-To create a new Reference Table, you need to:
+New Reference Tables can be created from:
 
-A: Create a new reference table and its population in the LU section.
+A: Within the LU schema.
 
-B: Create a table in the Reference folder of the Studio.
+B: Within the Reference folder in Fabric Studio (and only from there.
 
-C: Create 
+C: Cassandra CQLSH command line 
 
-D: All the above.
+D: Fabric runtime console.
 
-(**Solution 2: D**).
+E: All of the above
 
-
-
-
+(**Solution 2: B**).
 
 
 
+#### Question 3: commonDB Type
+
+commonDB is a Fabric database of the following type:
+
+A: Cassandra.
+
+B: mySQL.
+
+C: SQLite 
+
+D: postGrSQL.
+
+(**Solution 2: C**).
+
+
+#### Question 4: commonDB Location
+
+How many copies of commonDB are there in a Fabric Cluster?
+
+A: One only (it is common duhhh)
+
+B: One per Fabric node.
+
+C: Multiple - it is configurable depending on the need. 
+
+D: One per LUI schema - a copy of commonDB is kept in each instance
+
+(**Solution 2: B**)
+
+
+#### Question 5: commonDB Synchronization
+
+commonDB tables are synchronized across the Fabric Cluster ...
+
+A: Each time a change occurs in one of the tables.
+
+B: Once day at a given time.
+
+C: According to a specific schedule.
+
+D: Upon user request only.
+
+E: All of the above
+
+(**Solution 2: E**)
+
+
+#### Question 5: commonDB Synchronization
+
+commonDB tables are synchronized across the Fabric Cluster (between nodes) ...
+
+A: Each time a change occurs in one of the tables.
+
+B: Once day at a given time.
+
+C: According to a specific schedule.
+
+D: Upon user request only.
+
+E: All of the above
+
+(**Solution 2: A**)
+
+
+#### Question 6: commonDB Synchronization
+
+commonDB tables can be synchronized from their external sources ...
+
+A: Once a day at a given time.
+
+B: According to a specific schedule (CRON or functions).
+
+C: Upon user request only
+
+D: All of the above
+
+(**Solution 2: D**)
+
+
+#### Question 7: commonDB Runtime Commands
+
+A sync job on a specified common table, from the command line, can be triggered using the following command:
+
+A: REF_SYNC.
+
+B: SYNC_REF.
+
+C: SYNC_commonDB
+
+(**Solution 2: A**)
+
+
+#### Question 8: commonDB Runtime Commands
+
+To sync all tables contained in commonDB, can be done using the following command:
+
+A: REF_SYNC TABLES=’ALL’;
+
+B: REF_SYNC ALL;
+
+C: SYNC_REF TABLES=’ALL’;
+
+(**Solution 2: A**)
+
+
+#### Question 9: commonDB Runtime Status Commands
+
+Information on all reference tables synchronization status, can be displayed using the following command:
+
+A: STATUS_REF ALL;
+
+B: REF_STATUS TABLES=’ALL’;
+
+C: REF_STATUS TABLES=’ALL’;
+
+(**Solution 2: B**)
+
+
+#### Question 10: commonDB Runtime Status Commands
+
+Information on all reference tables synchronization status, can be displayed for the following scopes:
+
+A: Tables;
+
+B: Populations;
+
+C: Both tables and populations;
+
+(**Solution 2: C**)
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/04_commonDB_solutions.md)
 
