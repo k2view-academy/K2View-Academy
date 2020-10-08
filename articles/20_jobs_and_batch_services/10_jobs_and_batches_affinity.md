@@ -49,7 +49,7 @@ In turn each message, which can consists of hundreds of entries, will be handled
 
 Assuming an incoming message rate of 3 messages per second and an average message size of 1MB, it becomes clear that a specific node (let's say Node 1) handling this Job needs to be allocated since on-going strong i/o capabilities for read/write operations in commonDB tables are essential.
 
-Using Fabric Node synchronization capability, all 3 nodes will then be kept in-sync using the mechanism described in the [Fabric CommonDB]() article.
+Using Fabric Node synchronization capability, all 3 nodes will then be kept in-sync using the mechanism described in the [Fabric CommonDB](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) article.
 
 
 
