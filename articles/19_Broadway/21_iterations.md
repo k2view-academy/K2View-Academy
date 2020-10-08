@@ -7,14 +7,14 @@ The most common iteration use cases are iterating over a database result set or 
 
 To start the iterable logic, select the line at the beginning of the loop and change the [Link Type](20_broadway_flow_linking_actors.md#link-object-properties) to Iterable. The line is now double-dotted, the background of the loop's scope is highlighted grey and a thick divider line is displayed at the starting point.
 
-In the following image, Stage 2 runs on each data entry returned by the the first Actor.
+In the following image, Stage 2 runs on each data entry returned by the Actor at Stage 1.
 
 <div align="center"><img src="images/iterate_simple.png" height="130px"/></div>
 
 
 ## Scope of Iteration
 
-The scope of the interation's logic starts immediately after the Actor that is the Iterate line type's origin and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as Closed, click ![image](images/99_19_dots.PNG) to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**.
+The scope of the iteration's logic starts immediately after the Iterate line type's origin Actor and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as Closed, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close**.
 
 The following image displays an iteration loop that starts in Stage 2 and runs until Stage 3 on each entry. After the data is traversed, the loop is complete and Stage 4 is executed.
 
@@ -31,7 +31,7 @@ Path connections work well when combined with an iteration loop. The following d
 
 ## Nested Arrays
 
-Looping an item in an inner array of a data set with nested arrays generates an interation over the entire data set. For example, in a data set of map names holding an array of maps with a Broadway field name, Broadway traverses all **name** values.
+Looping an item in an inner array of a data set with nested arrays generates an interation over the entire data set. For example, in a data set of the **[names]** map holding an array of maps with a Broadway field name, Broadway traverses all **name** values.
 
 <div align="center"><img src="images/iterate_nested_array.png" height="160px"/></div>
 
@@ -39,7 +39,7 @@ Looping an item in an inner array of a data set with nested arrays generates an 
 ## Nested Iterations
 
 Iterations can also be nested. For example, a value in an iteration can be used as an input for another iteration. The depth of the iteration is highlighted in shades of grey. To limit the loop's scope using **Iterate Close**, add a closing Stage to each level of the loop.
-There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels and using Inner Flows when more are needed.
+There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels and using [Inner Flows](22_broadway_flow_inner_flows.md) when more are needed.
 
 
 In the following image, the first name is an input to a query that gets a list of relevant phone numbers. Stage 2 is run on every entry in Stage 1 and Stage 3 on every entry in Stage 2.
@@ -57,7 +57,7 @@ Using the Stage Split functionality you can split the flow and manage several lo
 
 ## ForLoop Actor
 
-The ForLoop Actor can be used to create a virtual data set of integers in a given range. This enables creating a loop that runs N times over a synthetic data set and is useful for repeat iterations when there is no data set to traverse.
+The **ForLoop** Actor can be used to create a virtual data set of integers in a given range. This enables creating a loop that runs N times over a synthetic data set and is useful for repeat iterations when there is no data set to traverse.
 
 
 ## Programmatic Control

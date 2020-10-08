@@ -1,6 +1,6 @@
 # Broadway Actor
 
-## Actor Overview
+### Actor Overview
 
 A Broadway  **Actor** represents an action that is executed on a [Stage](19_broadway_flow_stages.md) of the [Broadway flow](02a_broadway_flow_overview.md) to get input parameters and return output parameters. For example, reading a file, creating a table, parsing an object or concatenating a string.
 
@@ -33,14 +33,14 @@ An Actor can be exported to create another Actor that inherits the current Actor
 
 To export an Actor, click **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu).
 
-## Dynamic Logic Actors
+### Dynamic Logic Actors
 
 Dynamic Logic Actors include dynamic logic as one of their input parameters. The most frequently used Actors include:
 
 - **JavaScript** Actor, which executes the JavaScript code provided in the **script** parameter and returns the value of the last expression.
 - **DbCommand** Actor, which executes the SQL command provided in the **sql** parameter.
 
-## Actor Description and Remarks
+### Actor Description and Remarks
 
 The description of the Actor is part of the Actor's file. A remark is a user's comment added during the flow implementation.
 
