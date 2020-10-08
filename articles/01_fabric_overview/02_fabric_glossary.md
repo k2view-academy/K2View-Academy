@@ -298,10 +298,10 @@
 </tr>
 <tr>
 <td width="125">
-<p><strong><a href="/articles/15_web_services/01_web_services_overview.md">WS</a></strong></p>
+<h4><p><strong><a href="/articles/15_web_services/01_web_services_overview.md">WS</a></strong></p></h4>
 </td>
 <td width="516">
-  <h4><p>Web Service, a Java function that can be exposed through Fabric&rsquo;s Web Service layer.</p></h4>
+ <p>Web Service, a Java function that can be exposed through Fabric&rsquo;s Web Service layer.</p>
 </td>
 </tr>
 </tbody>
