@@ -9,7 +9,7 @@ To start the iterable logic, select the line at the beginning of the loop and ch
 
 In the following image, Stage 2 runs on each data entry returned by the Actor at Stage 1.
 
-<div align="center"><img src="images/iterate_simple.png" height="130px"/></div>
+![image](images/iterate_simple.png)
 
 
 ## Scope of Iteration
@@ -18,22 +18,20 @@ The scope of the iteration's logic starts immediately after the Iterate line typ
 
 The following image displays an iteration loop that starts in Stage 2 and runs until Stage 3 on each entry. After the data is traversed, the loop is complete and Stage 4 is executed.
 
-<div align="center"><img src="images/iterate_scope.png" height="160px"/></div>
+![image](images/iterate_scope.png)
 
 
 ## Complex Objects and Paths
 
 Path connections work well when combined with an iteration loop. The following displays an iterate connection selecting a field in a database result set and iterating over it.
 
-<div align="center"><img src="images/iterate_path.png" height="160px"/></div>
-
-
+![image](images/iterate_path.png)
 
 ## Nested Arrays
 
 Looping an item in an inner array of a data set with nested arrays generates an interation over the entire data set. For example, in a data set of the **[names]** map holding an array of maps with a Broadway field name, Broadway traverses all **name** values.
 
-<div align="center"><img src="images/iterate_nested_array.png" height="160px"/></div>
+![image](images/iterate_nested_array.png)
 
 
 ## Nested Iterations
@@ -41,19 +39,16 @@ Looping an item in an inner array of a data set with nested arrays generates an 
 Iterations can also be nested. For example, a value in an iteration can be used as an input for another iteration. The depth of the iteration is highlighted in shades of grey. To limit the loop's scope using **Iterate Close**, add a closing Stage to each level of the loop.
 There are no limitations on the iteration nesting level. However, to make a flow more readable, consider limiting a flow to 3-4 nesting levels and using [Inner Flows](22_broadway_flow_inner_flows.md) when more are needed.
 
-
 In the following image, the first name is an input to a query that gets a list of relevant phone numbers. Stage 2 is run on every entry in Stage 1 and Stage 3 on every entry in Stage 2.
 
-<div align="center"><img src="images/iterate_nested_iterations.png" height="160px"/></div>
-
-
+![image](images/iterate_nested_iterations.png)
 
 ## Split Iterations
 
 A Stage can have more than one collection. A common case is a JSON data structure that contains more than one array.
 Using the Stage Split functionality you can split the flow and manage several loops over the same data structure.
 
-<div align="center"><img src="images/iterate_split.png" height="180px"/></div>
+![image](images/iterate_split.png)
 
 ## ForLoop Actor
 
