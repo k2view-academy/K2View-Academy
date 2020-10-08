@@ -60,7 +60,7 @@ set ASYNC_TRX=true;
 > set async_trx=true;
 > begin;
 > get Customer.22;
-//Run the insert/update/delete command
+>//insert/update/delete command
 > commit;
 ~~~
 
