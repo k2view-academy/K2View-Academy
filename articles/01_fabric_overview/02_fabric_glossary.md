@@ -23,10 +23,10 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong>Common (Reference)</strong></p></h4>
+  <h4><p><strong><a href="/articles/22_commonDB/01_fabric_commonDB_overview.md">Common (Reference)</a></strong></p></h4>
 </td>
 <td width="516">
-<p>A Fabric allocated area for tables defined as Reference (metadata). These tables can be used by all LUI or within a specific LU's instances. For example; the postal code of a customer&rsquo;s address.</p>
+<p>A Fabric allocated area for tables defined as Reference (metadata). These tables can be used by all LUI or within a specific LU's instances. For example: the postal code of a customer&rsquo;s address.</p>
 </td>
 </tr>
 <tr>
