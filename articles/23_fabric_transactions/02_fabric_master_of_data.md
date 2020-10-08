@@ -42,7 +42,7 @@ The transaction 1 runs on Node 1 and the transaction 2 runs on Node 4.
 
 * OPTIMISTIC_LOCKING=‘ LOCAL QUORUM, the transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of DC1.
 
-<img src="images/23_02_1.PNG" alt="image" style="zoom:80%;" />
+<img src="images/23_02_1.PNG" alt="image" style="zoom: 67%;" />
 
 ### Asynchronous Mode
 
@@ -74,5 +74,5 @@ Notes:
 
 
 
-
+[![Previous](/articles/images/Previous.png)](01_fabric_transactions_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_update_lui_code_examples.md)
 
