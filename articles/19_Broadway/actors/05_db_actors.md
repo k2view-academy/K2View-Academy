@@ -27,7 +27,6 @@ To load the data using the **DbLoad** Actor, populate the Actor's input argument
 
 * **command**, select INSERT, UPDATE or UPSERT from the dropdown list.
   * When performing an UPDATE or an UPSERT command, you can set **ignoreNull** input argument to true. In this mode, the SQL statement will not contain fields that have null values.
-  * When running UPSERT on non-supporting dialects, the command is performed by first attempting to do an UPDATE. If the number of affected rows is 0, an INSERT is performed. Note that these two actions are not atomic.
 * **schema**, **table**, either type it in or click the **DB** button to select it from the DB Table Selection popup. 
 * **fields, keys**, if a table has been selected, the fields and keys are automatically populated from the DB schema. If not, type in the field names.
 

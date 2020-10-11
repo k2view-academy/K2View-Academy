@@ -43,7 +43,7 @@ To run the flow, click <img src="images/99_25_run.PNG" alt="image" style="zoom:8
 
 If the breakpoints have been added to the flow, the flow stops at the first breakpoint. 
 
-If a flow has an inner flow with breakpoints, the execution of the flow stops at the inner flow’s breakpoints. The inner flow is then displayed at the top of the current flow in the Fabric Studio.
+If a flow has an inner flow with breakpoints, the execution of the flow stops at the inner flow’s breakpoints. The inner flow is then brought to the front and displayed at the top of the current flow in the Fabric Studio.
 
   - Click <img src="images/99_25_resume.PNG" alt="images" style="zoom:80%;" /> **Resume Debug** to continue the flow from where it stopped.
 
