@@ -266,7 +266,7 @@ For example:
 <p>Get an LUI:</p>
 <p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>use &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>use &lt;LUT_NAME&gt;.&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>use Customer.1;</p>
