@@ -10,7 +10,7 @@ User Preferences are saved in: [Fabric Studio Installation Dir]\Preferences.
 
 ### What Is the Purpose of the Server Configuration Tab?
 
-The Server Configuration tab is used to define the Deployment URLs of Fabric servers. Each Fabric server can be accessed to deploy an implementation, debug and to validate Web Services. 
+The Server Configuration tab is used to define Fabric server deployment URLs. Each Fabric server can be accessed to deploy an implementation, to debug and to validate Web Services. 
 
 ![image](images/04_04_02_server_config.PNG)
 
@@ -122,7 +122,7 @@ The following is a list of server configuration items:
 </tbody>
 </table>
 
- Note that the Delete button of the special debug environment is disabled in order to support debug on remote server.
+Note that the Delete button of the special debug environment is disabled to support running a debug on a remote server.
 
 
 
@@ -132,7 +132,7 @@ The following is a list of server configuration items:
 
 [Click for more information about Invoking a Web Service from the Studio](/articles/15_web_services_and_graphit/09_swagger.md#invoking-and-testing-web-services-using-fabric-studio).
 
-Note that once defined, both General Preferences and Server Configurations will continue to apply after the Fabric Studio is upgraded.
+Note that once defined, both General Preferences and Server Configurations continue to apply after the Fabric Studio is upgraded.
 
 ### What Is the Purpose of the General Preferences Tab?
 
