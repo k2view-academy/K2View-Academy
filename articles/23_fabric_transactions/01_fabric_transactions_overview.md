@@ -10,10 +10,10 @@ During a synchronization of an [LU Instance (LUI)](/articles/01_fabric_overview/
 
 ### Broadway Flows
 
-[Broadway](/articles/19_Broadway/01_broadway_overview.md) flows can be split into two categories: [an LU table population based on Broadway flow](/articles/07_table_population/14_table_population_based_Broadway.md) and [a regular Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) executed not as part of a population. The transaction is managed differently in each of these categories:
+[Broadway](/articles/19_Broadway/01_broadway_overview.md) flows can be split into two categories: [an LU table population based on a Broadway flow](/articles/07_table_population/14_table_population_based_Broadway.md) and [a regular Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) executed not as part of a population. The transaction is managed differently in each of these categories:
 
-* Broadway population flows are executed during the Sync process thus the data is committed or rolled back as part of the overall Sync process transaction.
-* When a regular Broadway flow is executed not as part of a population, it needs to manage their own transaction. 
+* Broadway population flows are executed during the Sync process thus the transaction management of a flow is done as part of the overall Sync process transaction. There is no separate transaction for a Broadway flow in this case.
+* When a regular Broadway flow is executed not as part of a population, Broadway needs to manage this transaction. 
 
 [Click for more information about Transactions in Broadway flows](/articles/19_Broadway/23_transactions.md).
 

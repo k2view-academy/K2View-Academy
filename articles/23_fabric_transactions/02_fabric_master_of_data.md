@@ -25,7 +25,7 @@ The LU tables that will be populated by this process must be part of the [LU sch
 
 Note that even though it is possible to run this process on an LU table with population, it is not recommended to do so in order to prevent conflict or override the changes in the table. 
 
-There is a write lock per LUI during the process. It means that you can begin several transactions on one LUI only if the transactions are open in different nodes. You cannot begin several transactions on the same LUI on one node. 
+There is a write lock per LUI during the process. It means that you can begin several transactions on one LUI only if the transactions are open in different nodes. It is not allowed to begin several transactions on the same LUI on one node. 
 
 ### Parallel Transactions
 

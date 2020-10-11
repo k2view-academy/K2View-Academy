@@ -1,6 +1,6 @@
 # Update LU Instance - Code Examples
 
-* Run transaction using Fabric user code as follows:
+* Run the transaction using Fabric user code as follows:
 
 ~~~
 Db ci = db("fabric");
@@ -23,7 +23,7 @@ ci.execute("commit");
 
 
 
-* Run transaction using the Fabric console as follows:
+* Run the transaction using the Fabric Console as follows:
 
 ~~~
  // get the instance ID  
@@ -32,10 +32,10 @@ ci.execute("commit");
  // Begin Trx
  begin;
 
- // Run update command
+ // Run the UPDATE command
  update CONTRACT_COPY set CONTRACT_REF_ID = 'AXD1234' where CUSTOMER_ID = 22;	
     
- // Commit;
+ // Commit Trx
  commit;
 ~~~
 
