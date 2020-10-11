@@ -7,7 +7,7 @@ Data Viewer files are saved under the LU VirtualDB_Data directory in:   \Fabric\
 
 [Click for more information about Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 
-Note that the Data Viewer runs on the Fabric debug server. Therefore you must deploy the LU to the Fabric debug server before running the Data Viewer on this LU.
+Note that the Data Viewer runs on the Fabric local server. Therefore you must deploy the LU to the Fabric local server before running the Data Viewer on this LU.
 
 [Click for more information about deploying LU to the Fabric debug server](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md). 
 
