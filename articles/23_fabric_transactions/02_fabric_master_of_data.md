@@ -14,8 +14,6 @@ Several insert, update or delete commands can be executed on the instance ID in 
 
 Note that after the update is completed, the data is only available on the current node. It becomes available to other nodes of the [Fabric Cluster](articles/02_fabric_architecture/01_fabric_architecture_overview.md#61-fabric-cluster) after the distribution process is completed. 
 
-[Click for more information about running the INSERT, UPDATE or DELETE commands on Reference tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md).
-
 
 ### Update LU Instance
 
@@ -25,9 +23,10 @@ For example, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but it i
 
 The LU tables that will be populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and they can be defined either with our without a population. 
 
-Note that it is recommended not to define a population for these tables in order to prevent data conflicts or override of the changes, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. 
+Note that it is recommended not to define a population for these tables in order to prevent data conflicts, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. It is the implementation responsibility to verify that the data, populated by the population object when the LUI is synced, does not conflict or override the changes of the LU table.
 
 There is a write lock per LUI during the process. It means that you can begin several transactions on one LUI only if the transactions are open in different nodes. It is not allowed to begin several transactions on the same LUI on the same node. 
+
 
 ### Parallel Transactions
 
@@ -80,6 +79,28 @@ Notes:
 * The **set async_trx** command must be executed outside the transaction and prior to it.
 
 * The get of the LUI must run inside the transaction.
+
+### Update Reference Tables
+
+It is possible to update the Reference tables and similar to the LU tables, a Reference table can be defined without a population. This table can be populated by an update transaction.
+
+The transaction is done in an asynchronous mode thus you cannot view the updated data until the commit is performed and the Fabric updates the Common DB. The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size:
+
+* The TRANSACTION_BULK_SIZE parameter in **config.ini** defines the maximum number of commands in each bulk.
+
+For example, Run 2500 insert commands whereby the TRANSACTION_BULK_SIZE = 1000. 
+
+* Each bulk of 1000 commands it sent to Kafka, the commands are kept in Cassandra, and Kafka gets the transaction ID. 
+* The 2500 inserts are divided into 3 transactions (1000 + 1000 + 500).
+* Then, run another 900 inserts. The 900 inserts are sent and stored in Kafka.
+
+Parallel transactions are supported on Reference tables as follows:
+
+* The first commit updates the table. The commit is initiated either by:
+  * Short transaction - the user runs the commit command.
+  * Large transaction - the commit is initiated internally for each bulk size, populated in Cassandra.
+
+[Click for more information about running the INSERT, UPDATE or DELETE commands on Reference tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md).
 
 
 
