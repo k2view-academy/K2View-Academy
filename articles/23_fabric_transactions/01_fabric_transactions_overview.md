@@ -19,6 +19,8 @@ When a Sync process is invoked by a [Web Service](/articles/15_web_services_and_
 * Broadway population flows are executed during the Sync process thus the transaction management of a flow is done as part of the overall Sync process transaction. There is no separate transaction for a Broadway flow in this case.
 * When a regular Broadway flow is executed not as part of a population, Broadway needs to manage this transaction. 
 
+Note that when a Broadway flow is invoked by a Web Service or a User Job, the transaction can also be managed by the calling process - as explained [above](/articles/23_fabric_transactions/01_fabric_transactions_overview.md#sync-process) in regards to the Sync process.
+
 [Click for more information about Transactions in Broadway flows](/articles/19_Broadway/23_transactions.md).
 
 ### Fabric as a Master of Data
