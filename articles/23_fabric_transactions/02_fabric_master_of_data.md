@@ -2,7 +2,7 @@
 
 ### Overview
 
-Fabric as a master of data is the ability to update a specific  [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the given [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the Fabric database or an entry in the [Common table](/articles/22_commonDB/01_fabric_commonDB_overview.md) instead of synchronizing the entire instance ID or the Common table from the source. 
+Fabric as a master of data is the ability to update a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_commonDB/01_fabric_commonDB_overview.md) instead of synchronizing the LUI or the Reference table from the source. 
 
 The update is performed in the following way:
 
@@ -12,28 +12,32 @@ The update is performed in the following way:
 
 Several insert, update or delete commands can be executed on the instance ID in the same transaction.
 
-[Click for more information about running the INSERT, UPDATE or DELETE commands on Common (reference) tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md).
+Note that after the update is completed, the data is only available on the current node. It becomes available to other nodes of the [Fabric Cluster](articles/02_fabric_architecture/01_fabric_architecture_overview.md#61-fabric-cluster) after the distribution process is completed. 
+
+[Click for more information about running the INSERT, UPDATE or DELETE commands on Reference tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md).
 
 
 ### Update LU Instance
 
-The transaction is performed on LUI level whereby you need to get the LUI before running the commands. It is not possible to get several instances inside a transaction even if you do not run insert, update or delete commands on them.
+The transaction is performed on LUI level whereby get the LUI is required before running the commands. It is not possible to get several instances inside a transaction even if you do not run insert, update or delete commands on them.
 
 For example, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but it is not allowed to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
 
-The LU tables that will be populated by this process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md)  but should have no population in the [LU](/articles/03_logical_units/01_LU_overview.md). They will not be populated by the Sync process but can be populated later by an external process, such as User job, Parser, Web Service or using the Fabric Console.
+The LU tables that will be populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and they can be defined either with our without a population. 
 
-Note that even though it is possible to run this process on an LU table with population, it is not recommended to do so in order to prevent conflict or override the changes in the table. 
+Note that it is recommended not to define a population for these tables in order to prevent data conflicts or override of the changes, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. 
 
-There is a write lock per LUI during the process. It means that you can begin several transactions on one LUI only if the transactions are open in different nodes. It is not allowed to begin several transactions on the same LUI on one node. 
+There is a write lock per LUI during the process. It means that you can begin several transactions on one LUI only if the transactions are open in different nodes. It is not allowed to begin several transactions on the same LUI on the same node. 
 
 ### Parallel Transactions
 
+Fabric can be configured as a [cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#61-fabric-cluster) with multiple nodes spread over multiple datacenters and it can support parallel transactions on the same LUI. 
+
 The OPTIMISTIC_LOCKING parameter in **config.ini** can be set per node to support the lightweight transaction as follows:
 
-- **NONE** (default). The latest transaction overrides the instance ID.
-- **QUORUM**. The first transaction locks the instance ID. Latest transaction fails until the first transaction is committed (the commit requires a quorum).
-- **LOCAL QUORUM**. The first transaction locks the instance ID. Latest transaction fails until the first transaction is committed (the commit requires a local quorum on the DC).
+- **NONE** (default). The latest transaction overrides the LUI (Instance ID).
+- **QUORUM**. The first transaction locks the LUI. Latest transaction fails until the first transaction is committed (the commit requires a quorum).
+- **LOCAL QUORUM**. The first transaction locks the LUI. Latest transaction fails until the first transaction is committed (the commit requires a local quorum on the DC).
 
 **Example**
 
@@ -41,7 +45,7 @@ The transaction 1 runs on Node 1 and the transaction 2 runs on Node 4.
 
 * If OPTIMISTIC_LOCKING=‘NONE’, the transaction 2 (the latest one) overrides the transaction 1.
 
-* If OPTIMISTIC_LOCKING=‘QUORUM’,  the transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of each DC.
+* If OPTIMISTIC_LOCKING=‘QUORUM’,  the transaction 1 locks the LUI until the transaction is committed and updates at least 2 nodes of each DC.
 
 * If OPTIMISTIC_LOCKING=‘LOCAL QUORUM', the transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of DC1.
 
@@ -49,7 +53,9 @@ The transaction 1 runs on Node 1 and the transaction 2 runs on Node 4.
 
 ### Asynchronous Mode
 
-This transaction can be populated in the delta table of the iidFinder mechanism whereby the delta table is created under the [Cassandra **k2staging** keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). 
+Fabric supports an asynchronous mode of INSERT, UPDATE or DELETE transactions simulating the **iidFinder** mechanism. 
+
+These transactions can be populated in the iidFInder delta table whereby the delta table is created under the [Cassandra **k2staging** keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The iidFinder then gets the transactions from the delta table and updates the LUI.
 
 The asynchronous mode can be using the following command:
 
@@ -71,7 +77,7 @@ Notes:
 
 * The transaction is added to the delta table “as is” without any validation.
 
-* The **set async_trx** command must be executed outside the transaction.
+* The **set async_trx** command must be executed outside the transaction and prior to it.
 
 * The get of the LUI must run inside the transaction.
 
