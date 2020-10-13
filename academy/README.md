@@ -1,9 +1,9 @@
 ![image](/academy/images/academy_header.PNG)
 
-[![image](/academy/images/asset20.png)(/academy/Training_Level_1) Fabric Training
+![Fabric Training](/academy/images/asset20.png)(/academy/Training_Level_1)
 
-![image](/academy/images/asset21.png)(/academy/Broadway/Training_Level_1) Broadway Training
+![Broadway Training](/academy/images/asset21.png)(/academy/Broadway/Training_Level_1)
 
-![image](/academy/images/asset22.png) CDC Training (coming soon)
+![CDC Training (coming soon)](/academy/images/asset22.png)
 
-![umage](/academy/images/asset23.png) iID Finder Training (coming soon)
+![iID Finder Training (coming soon)](/academy/images/asset23.png)
