@@ -29,14 +29,14 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
    ![image](images/99_22_02.PNG)
 
-[Click to display an example of a Broadway flow with Inner Flow Actors in the Demo project.](/articles/demo_project)
+[Click to display an example of a Broadway flow with inner flow Actors in the Demo project.](/articles/demo_project)
 
-### Open Inner Flow
+### Open an Inner Flow
 
-When you have a flow with inner flows, Broadway enables opening an inner flow from the main one:
+When a flow has inner flows, an inner flow can be opened from the main flow:
 
-1. Click on the inner flow Actor to display the Open button in the Actor properties menu next to the inner flow name.
-2. Click Open to open the inner flow.
+1. Click the **inner flow Actor** to display the Open button in the Actor properties menu next to the inner flow's name.
+2. Click **Open** to open the inner flow.
 
 ![image](images/99_22_03.PNG)
 
