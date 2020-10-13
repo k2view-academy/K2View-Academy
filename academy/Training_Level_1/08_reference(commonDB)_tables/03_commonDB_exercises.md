@@ -18,7 +18,7 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
 
     - add "ref_" as a prefix to the name of the table 
 
-  - Add the Reference Table to the Customer LU schema
+  - Attach the Reference Table to the Customer LU schema
 
   - Deploy both reference table and LU
 
