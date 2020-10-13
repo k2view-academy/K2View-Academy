@@ -32,9 +32,11 @@ If the Iterator Stage is transactional, the commit is performed at the end of th
 
   ![image](images/99_23_commit_each.PNG)
 
-* A mixed approach for handling transactions during an iteration can be used when the data set is very big (for example, 1M records) and a commit is required every 10K records. The transaction then starts before the loop and commits each time the counter reaches 10,000. Otherwise, it continues the transaction.
+* A mixed approach for handling transactions during an iteration can be used when the data set is very big (for example, 1M records) and a commit is required every X records. The transaction then starts before the loop and commits each time the counter reaches 10,000. 
 
-  ![image](images/99_23_condition.PNG)
+  The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method.
+
+  ![image](images/99_23_batch.png)
 
 * The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. There are two transactions in each iteration: one at the **insert data** Stage which is followed by a commit and another at the **query params** Stage which is also followed by a commit.
 
