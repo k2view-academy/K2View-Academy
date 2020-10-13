@@ -103,7 +103,7 @@ When the above query is written in the **sql** input parameter, a new **city_nam
 
 The following example shows the SQL statement which includes parameters to populate the table and column name:
 
-![image](../images/99_actors_05_4.png)
+![image](../images/99_actors_05_4.PNG)
 
 The new input arguments **table** and **column** are added to the **SourceDbQuery** Actor and are populated by 'CASES' and 'STATUS' **Const** values in the above example. Alternatively these attributes can be populated using **Link** or **External** population types.
 
