@@ -1,6 +1,6 @@
 # Update LU Instance - Code Examples
 
-* Run the  INSERT command using Fabric user code as follows:
+* Run the  INSERT command using the Fabric user code as follows:
 
 ~~~
 Db ci = db("fabric");
