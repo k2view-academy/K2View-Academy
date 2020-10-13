@@ -34,7 +34,7 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
 
 - Step 3
 
-  - We would like to add latest cov19 for Guam to the table as many customers do frequently fly there.
+  - We would like to add latest cov19 for a new state (Guam) to the table, as many customers do frequently fly there.
   - Using the transaction mechanism described in the course, execute an SQL insert query on the table with the following data:
     - STATE = GUAM
     - TOTALCASES = 400
