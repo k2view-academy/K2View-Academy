@@ -163,7 +163,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <p><img src="images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
 </td>
 <td width="80pxl">Open Inner Flow</td>
-<td width="420pxl">Click to open the Inner flow. The menu item appears only when the Actor is an Inner flow.</td>
+<td width="420pxl">Click to open the inner flow. The menu item is displayed only when the Actor is an Inner flow.</td>
 </tr>
 <tr>
 <td width="80pxl">Collapse / Expand</td>
