@@ -1123,7 +1123,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 
 # isAlive
 
-Indicates if the Fabric is up and running on the given domain and port.
+Indicates whether the Fabric is up and running on the given domain and port. 
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/isAlive</code></p>
 
