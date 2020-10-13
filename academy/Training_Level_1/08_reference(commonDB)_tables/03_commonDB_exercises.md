@@ -4,11 +4,11 @@
 
 In this exercise you will create a Reference Table and add it to the Customer LU Schema.
 
-The purpose of this exercise is to provide a reference table for new cases of Covid19 and updates numbers and use Fabric to support the international crisis at play.
+The purpose of this exercise is to provide a reference table for new cases of Cov19 and updates numbers and use Fabric to support the international crisis at play.
 
-For this purpose, you will find a CSV file in the repository published by the health authorities and that provide the following information: States, New cases, New cases per 100K etc ... 
+You will find a table in the billingDB which data is extracted from the health authorities and that provides the following information: States, New cases, New cases per 100K etc ... 
 
-We wish to create a Reference table based upon this table, so the Network Operator can send alerts to users roaming in specific states and alert them on the specific table's fields value changes
+We wish to create a Reference table based upon this table, so the Network Operator can send alerts to users roaming in specific states and alert them on the specific table's fields value changes.
 
 We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that the reference table can be populated easily. In the Broadway course we will show you how to parse the data directly from the CSV.
 
