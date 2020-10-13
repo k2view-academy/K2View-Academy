@@ -37,7 +37,7 @@ Please read the [Create New Logical Unit](/articles/03_logical_units/05_create_a
 We have already acknowledged that the Digital Entity should be the Customer ID that uses the CRM_DB.Customer table as the root of the LU’s modelling. You can use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) to create the LU.
 
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/example.png)
+![](images/example.png)
 
 ### Example – Auto Discovering an LU
 
@@ -55,7 +55,7 @@ Note that the **Root Table** and **InstanceID** are created automatically.
 
 Your **Customer** LU is now defined:
 
-![](/academy/Training_Level_1/03_fabric_basic_LU/images/CustomerLU.png) 
+![](images/CustomerLU.png) 
 
 `Question: Are all the tables in the CRM_DB Schema part of the Customer? Why?`
 
