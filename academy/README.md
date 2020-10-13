@@ -1,8 +1,10 @@
 ![image](/academy/images/academy_header.PNG)
 
-![](/academy/images/asset20.png)[Fabric Training](/academy/Training_Level_1)
+[![Foo](http://www.google.com.au/images/nav_logo7.png)](http://google.com.au/)
 
-![](/academy/images/asset21.png)[Broadway Training](/academy/Broadway/Training_Level_1)
+[![](/academy/images/asset20.png)](/academy/Training_Level_1)
+
+[![](/academy/images/asset21.png)](/academy/Broadway/Training_Level_1)
 
 ![](/academy/images/asset22.png)[CDC Training (coming soon)]
 
