@@ -11,7 +11,7 @@ Now let's take a look at Fabrics' commonDB layer and reference tables so to work
 
 By the end of this learning item you will know how to:
 
-- Create Reference Tables.
+- Create and Deploy Reference Tables.
 - Query and Interact with Reference Tables from the Runtime Environment.
 - Understand Reference Tables and commonDB intrinsic flow
 
