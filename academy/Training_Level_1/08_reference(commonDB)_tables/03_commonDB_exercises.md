@@ -14,7 +14,7 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
 
 - Step 1
 
-  - Create a reference table based on the table mentioned below
+  - Create a reference table based on the table mentioned above
 
     - add "ref_" as a prefix to the name of the table 
 
