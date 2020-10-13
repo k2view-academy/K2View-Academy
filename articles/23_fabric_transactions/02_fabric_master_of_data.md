@@ -17,9 +17,9 @@ Note that after the update is completed, the data is only available on the curre
 
 ### Update LU Instance
 
-The transaction is performed on an LUI level whereby the LUI must be received before running the commands. Several instances in a transaction cannot be received even when  INSERT, UPDATE or DELETE commands are not run on them.
+The transaction is performed on an LUI level whereby the **get LUI** must be performed before running the commands. Several LUI instances cannot be received in a transaction even when INSERT, UPDATE or DELETE commands are not run on them.
 
-For example, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in another transaction.
+For example, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
 
 The LU tables that are populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and can be defined either with or without a population. 
 
@@ -82,13 +82,13 @@ Notes:
 
 ### Update Reference Tables
 
-Reference tables can also be updated. Similar to LU tables, a Reference table can be defined without a population and be populated by an update transaction.
+Similar to LU tables, a Reference table can be defined with or without a population, and be populated by an update transaction.
 
-The transaction is done in an asynchronous mode and the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size:
+The transaction is done in an asynchronous mode and the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size. 
 
-* The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
+The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
 
-For example, Run 2500 insert commands whereby the TRANSACTION_BULK_SIZE = 1000. 
+For example, run 2500 insert commands whereby the TRANSACTION_BULK_SIZE = 1000. 
 
 * Each bulk of 1000 commands is sent to Kafka, the commands are kept in Cassandra, and Kafka gets the transaction ID. 
 * The 2500 inserts are divided into 3 transactions (1000 + 1000 + 500).
