@@ -3,7 +3,7 @@
 ### Inner Flow Actor Types
 A Broadway flow can be executed as part of another Broadway flow. This function can be used when the same logic needs to be executed in several flows or several Stages of the same flow. 
 
-An inner flow can be executed by three [built-in Actor types](04_built_in_actor_types.md):
+An inner flow can be run using of the following [built-in Actor types](04_built_in_actor_types.md):
 
 * **InnerFlow** Actor, executes a Broadway flow. Input and output arguments reflect the inputs and outputs of external arguments to and from the inner flow.
 * **InnerFlowAsync** Actor, executes a Broadway flow asynchronously in a thread pool. When called, the Actor returns immediately once a working thread becomes available. When the flow is completed, the Actor waits for all threads to be completed. 
@@ -30,5 +30,14 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
    ![image](images/99_22_02.PNG)
 
 [Click to display an example of a Broadway flow with Inner Flow Actors in the Demo project.](/articles/demo_project)
+
+### Open Inner Flow
+
+When you have a flow with inner flows, Broadway enables opening an inner flow from the main one:
+
+1. Click on the inner flow Actor to display the Open button in the Actor properties menu next to the inner flow name.
+2. Click Open to open the inner flow.
+
+![image](images/99_22_03.PNG)
 
 [![Previous](/articles/images/Previous.png)](21_iterations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](23_transactions.md)

@@ -159,13 +159,9 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="11" width="400pxl">
+<td rowspan="10" width="400pxl">
 <p><img src="images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
 </td>
-<td width="80pxl">Open Inner Flow</td>
-<td width="420pxl">Click to open the inner flow. The menu item is displayed only when the Actor is an Inner flow.</td>
-</tr>
-<tr>
 <td width="80pxl">Collapse / Expand</td>
 <td width="420pxl">Collapse or expand the Actor and display its title.</td>
 </tr>
@@ -207,6 +203,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
 
 
 

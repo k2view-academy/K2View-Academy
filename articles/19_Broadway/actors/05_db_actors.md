@@ -6,6 +6,8 @@ Broadway has a category of **db** Actors that are useful for performing DB comma
   - **DbFetchField** Actor, returns the first field of the first row or null if this is empty.
   - **DbFetchFirstRow** Actor, returns the first row or an empty row if there is no result.
 - **DbCreateTable** Actor, creates a new database table.
+  - **DbCassandraCreateTable** Actor, creates a new Cassandra table.
+- **DbDelete** Actor, deletes data from a database using DELETE based on keys.
 
 Each Actor in the **db** category requires an **interface** input argument that can be defined either as a reference to the Fabric [DB Interface](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) or as a JDBC URL. 
 
