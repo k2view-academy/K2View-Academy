@@ -1,9 +1,7 @@
 ![image](/academy/images/academy_header.PNG)
 
-
-
-
-
+<br></br>
+<br></br>
 
 [![<img align="center">](/academy/images/asset20.png)](/academy/Training_Level_1)
 
