@@ -1,9 +1,6 @@
 ![image](/academy/images/academy_header.PNG)
 
 
-<p align="center">
-  <img "src="/academy/images/asset20.png">(/academy/Training_Level_1)
-</p>
 
 [![<img align="center">](/academy/images/asset20.png)](/academy/Training_Level_1)
 
