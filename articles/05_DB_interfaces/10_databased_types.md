@@ -48,7 +48,7 @@ To create a new database type from template, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Database Types** and select **New Database Type From Template** and then select the required DB type, for example Oracle.
 
-2. Edit the required properties. for example, you can add the following connection for Oracle:
+2. Edit the required properties. For example, you can add the following connection property for Oracle:
 
    ~~~
    oracle.jdbc.ReadTimeout=10000
