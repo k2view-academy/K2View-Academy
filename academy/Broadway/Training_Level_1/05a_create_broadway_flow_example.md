@@ -80,11 +80,14 @@ Group By CASES.STATUS
 
         Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
-    ​      
 
-#### Step 4 - Flow Execution and Debug
 
-##### Updating the Output Schema of the DbCommand Actor
+
+You are ready to run your flow! Note that you need to deploy the interfaces prior to running the flow. It can be done by deploying one of the Logical Units in your project.
+
+
+
+#### Step 4 - Flow Execution, Debug and Update the Output Schema
 
 The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value. To update the output parameter of the **DbCommand**, do the following:
 
@@ -104,7 +107,7 @@ The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *lear
      
 
 For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and the [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
-   ##### Checking the Flow's Execution Results
+   #### Step 5 - Check the Flow's Execution Results
 
 Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from CASE table.
 
