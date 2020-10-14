@@ -10,7 +10,7 @@ Submit the following query in the Query_builder window of the Billing_DB interfa
 ```
 Select sum(INVOICE.BALANCE),
   INVOICE.SUBSCRIBER_ID
-From BILLING_DB.INVOICE
+From main.INVOICE
 Group By INVOICE.SUBSCRIBER_ID
 ```
 
