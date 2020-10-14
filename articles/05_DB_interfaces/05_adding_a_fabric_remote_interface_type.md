@@ -19,5 +19,4 @@ A **Fabric Remote** DB interface type is defined in a project in the following c
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
 5.	Click **Save**.
 
-
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/06_editing_interface_settings.md)
+[![Previous](/articles/images/Previous.png)](04_creating_a_new_database_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_editing_interface_settings.md)
