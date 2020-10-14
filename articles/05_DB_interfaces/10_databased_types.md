@@ -4,9 +4,7 @@
 
 Sometimes in a project implementation it is required to define a database type according to the Database and JDBC driver specifications.
 
-Creating a new database type is supported in Fabric and it allows supporting additional database types without Fabric product enhancement.
-
-It is also possible to override one of the database types provided as a part of the product package, if customizations are required.
+Creating a new database type is supported in Fabric and it allows supporting additional database types without Fabric product enhancement. It is also possible to override one of the database types provided as a part of the product package, if customizations are required.
 
 ### How Do I Create a Database Type?
 
