@@ -14,4 +14,4 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_xxx.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_SFTP_interface.md) 
