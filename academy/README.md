@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img width="460" height="300" src="/academy/images/asset20.png">
+  <img "src="/academy/images/asset20.png">(/academy/Training_Level_1)
 </p>
 
 [![<img align="center">](/academy/images/asset20.png)](/academy/Training_Level_1)
