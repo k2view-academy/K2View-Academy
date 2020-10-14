@@ -22,18 +22,14 @@ You can add iterations to the flow either by:
 
 A Broadway flow can be split into different execution paths based on conditions. More than one Stage can be executed in each fork in the path. If a condition is required in the flow, the flow can be split and a **Stage condition** Actor can be added to one or more Stages that have been created as a result of the split. 
 
-  For example:
+For example:
 
   - If (A>3) => Do something.
   - If (B<1) => Do something.
   - Else => Do something else.
 
-  Read [Broadway Flow - Stages](/articles/19_Broadway/19_broadway_flow_stages.md) to learn about splitting or merging the Stages of a flow and about adding conditions to a Stage.  
+To learn about splitting or merging the Stages of a flow and adding conditions to a Stage, read [Broadway Flow - Stages](/articles/19_Broadway/19_broadway_flow_stages.md).
 
 Continue to the exercise to enhance your first Broadway flow and add a condition to it. 
 
-<<<<<<< HEAD:academy/Training_Level_1/19_Broadway/06_broadway_flow_adding_loops_and_conditions.md
-  [![Previous](/articles/images/Previous.png)](05_create_broadway_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_flow_add_condition_execise.md)
-=======
 [![Previous](/articles/images/Previous.png)](05a_create_broadway_flow_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_broadway_flow_add_condition_exercise.md)
->>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2:academy/Broadway/Training_Level_1/06_broadway_flow_adding_loops_and_conditions.md
