@@ -176,7 +176,7 @@ To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/
 </tr>
 </tbody>
 </table>
-	
+
 ### Using Binding Variables on SQL Statements
 In specific cases, a query or statement may require input parameters. For example, Select all Customers by Customer Status.\
 When using prepared statement queries always use binding parameters: 
@@ -304,14 +304,8 @@ Fabric has the following set of deprecated methods for handling DB interfaces:
 
 Although they work, a warning message is displayed when deprecated methods are used in Fabric code. It is recommended to use the new Fabric methods to invoke DB interfaces instead of working with deprecated methods. 
 
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md)
+[![Previous](/articles/images/Previous.png)](08_clearing_the_database_objects_cache.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_databased_types.md)
 
-
-
-
-
-
- 
 
 
 
