@@ -1,27 +1,4 @@
-<<<<<<< HEAD:academy/Training_Level_1/19_Broadway/05_create_broadway_flow.md
-# Creating a Broadway Flow 
-
-Now you are now familiar with Broadway and its main components and have checked out and executed the Broadway Tutorial flow, you are ready to create your first Broadway flow. 
-
-
-### What Will You Experience In This Learning Item?
-
-By the end of the Broadway Flow learning item you will:
-
-- Know how to create your first Broadway flow.
-- View, run and debug your Broadway flow.
-
-
-A Broadway Flow:
--  Represents a business process that binds other objects into the same flow. 
--  Acts as a graph or a tree that has several [Stages](/articles/19_Broadway/19_broadway_flow_stages.md) where each Stage includes one or more [Actors](/articles/19_Broadway/03_broadway_actor.md). Stages are executed consecutively from left to right, where the Actors in each Stage of the flow are executed top-down.
-
-
-To learn more about a Broadway flow, please refer to [Broadway Flow Overview](/articles/19_Broadway/02a_broadway_flow_overview.md).
-=======
 # Example of Creating a Broadway Flow 
->>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2:academy/Broadway/Training_Level_1/05a_create_broadway_flow_example.md
-
 ### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
 Let's create a new Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records:
@@ -36,19 +13,11 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 1. Select the number of cases for each case status from **CASES** table in **CRM_DB**  interface. Use the following SQL query:
 
-<<<<<<< HEAD:academy/Training_Level_1/19_Broadway/05_create_broadway_flow.md
-```
-Select Count(*) AS NUMBER_OF_CASES,
-CASES.STATUS
-=======
 ```sql
 Select CASES.STATUS, Count(*) AS NUMBER_OF_CASES
->>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2:academy/Broadway/Training_Level_1/05a_create_broadway_flow_example.md
 From CASES
 Group By CASES.STATUS
 ```
-
-
 
 2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
@@ -117,27 +86,16 @@ Group By CASES.STATUS
 
 ##### Updating the Output Schema of the DbCommand Actor
 
-1. The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value. To update the output parameter of the **DbCommand**, do the following:
+The **DbCommand** Actor returns  a complex schema.  Broadway Debug process *learns* the Schema of complex output parameters and can suggest how to update it based on a parameter's value. To update the output parameter of the **DbCommand**, do the following:
 
-<<<<<<< HEAD:academy/Training_Level_1/19_Broadway/05_create_broadway_flow.md
-   - Run the flow in a debug mode when the debug is set to ON ![debug on](images/debug_on.png).
-=======
    - Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
->>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2:academy/Broadway/Training_Level_1/05a_create_broadway_flow_example.md
-
-   - Click the red port next to the **[result]** output of the **DbCommand**.  The **Compare Schema** window is opened. Click the UPDATE to update the schema.
+   - Click the red port next to the **[result]** output of the **DbCommand**.  The **Compare Schema** window is opened. Click the **UPDATE** to update the schema.
 
        ![Update Schema](images/MyFirstFlow_DbCommand_Update_Schema.png) 
 
-   - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the [Data Inspection]() and display the Schema on the left and the data values on the right.
+   - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the Data Inspection and display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1** and run again the debug. Click ![Debug Step](images/debug_step_icon.png) to execute the next steps after the breakpoint step.
-
-<<<<<<< HEAD:academy/Training_Level_1/19_Broadway/05_create_broadway_flow.md
-   - Now you see the input and output values are displayed for each iteration in the flow.
-=======
    - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> to execute the steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
->>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2:academy/Broadway/Training_Level_1/05a_create_broadway_flow_example.md
 
    - Click each one of the debug values (marked by blue) to open the **Data Viewer** window for the selected parameter. See example below:
 
@@ -145,20 +103,15 @@ Group By CASES.STATUS
 
      
 
-<<<<<<< HEAD:academy/Training_Level_1/19_Broadway/05_create_broadway_flow.md
-   Read about [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
-=======
 For more information, read [Run and Debug Broadway Flow](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) and the [Broadway Data Inspector](/articles/19_Broadway/27_broadway_data_inspection.md).
->>>>>>> remotes/origin/Broadway_Training_WIP_Nataly_6.2:academy/Broadway/Training_Level_1/05a_create_broadway_flow_example.md
-
    ##### Checking the Flow's Execution Results
 
-2. Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from CASE table.
+Check your local directory (C:\k2view\Broadway_Training) and open the new JSON file that contains the list of cases selected from CASE table.
 
   
 
-Congratulations.
+Congratulations! You've just created your first Broadway flow. 
 
-You've just created your first Broadway flow. Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
+Let's continue to the next item to learn more about adding loops and conditions to the Broadway flow.
 
 [![Previous](/articles/images/Previous.png)](05_create_broadway_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_broadway_flow_adding_loops_and_conditions.md)
