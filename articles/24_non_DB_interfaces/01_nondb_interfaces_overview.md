@@ -8,7 +8,7 @@ When multiple data sources are needed by the project implementation, several int
 
 Fabric distinguishes between DB interfaces and Non-DB interfaces.
 
-Non-DB Interfaces are used to define a connection with data sources that are not databases. For example, search engines, FTP servers or message queues like JMS or Kafka.
+**Non-DB Interfaces** are used to define a connection with data sources that are not databases. For example, search engines, FTP servers or message queues like JMS or Kafka.
 
 [Click for more information about DB Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md).
 
