@@ -33,7 +33,7 @@ The default population flow template includes the following Stages and Actors:
 
 * **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
 
-* The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance. 
+* The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance. 
 
   * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 
@@ -57,7 +57,7 @@ The default population flow template includes the following Stages and Actors:
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
-  * The **SourceDbQuery** Actor supports [non-prepared statement parameters](actors/05_db_actors.md#support-for-non-prepared-statement-parameters). For example, to dynamically transfer a table or column name to a query.
+  * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#support-for-non-prepared-statement-parameters). For example, to dynamically transfer a table or column name to a query.
 
 * **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
 
