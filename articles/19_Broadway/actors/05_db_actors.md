@@ -107,7 +107,9 @@ The following example shows the SQL statement which includes parameters to popul
 
 ![image](../images/99_actors_05_4.PNG)
 
-The new input arguments **table** and **column** are added to the **SourceDbQuery** Actor and are populated by 'CASES' and 'STATUS' **Const** values in the above example. Alternatively these attributes can be populated using **Link** or **External** population types.
+The new input arguments **table**, **clm_name** and **clm_value** are added to the **SourceDbQuery** Actor and are populated by 'cases', 'status' and 'Open' values respectively.
+
+In this example, **table** and **clm_name** are non-prepared statement parameters while **clm_value** is a prepared statement  **named** parameter.
 
 
 
