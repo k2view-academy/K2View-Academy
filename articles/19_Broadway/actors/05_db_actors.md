@@ -80,7 +80,7 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 ![image](../images/99_actors_05_1.PNG)
 
 
-**Example of Passing Parameters to SQL**
+#### Example of Passing Parameters to SQL
 
 The following example shows how to execute a SELECT statement which includes a WHERE clause using **ordered params**:
 
@@ -101,7 +101,7 @@ The following example shows how a SELECT statement is executed using **named par
 
 When the above query is written in the **sql** input parameter, a new **city_name** input argument is added to the **DbCommand** Actor and the parameter is transferred to it. 
 
-**Example of Non-Prepared Statement**
+#### Example of Non-Prepared Statement
 
 The following example shows the SQL statement which includes parameters to populate the table and column name:
 
