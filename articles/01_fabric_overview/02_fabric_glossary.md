@@ -181,10 +181,8 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#211-microdb-">MDB / MicroDB</a></strong></p></h4>
-<https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/02_fabric_architecture/01_fabric_architecture_overview.md#211-microdb-/t
-  d>
-  
+  <h4><p><strong><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></strong></p></h4>
+</td>
 <td width="516">
 <p>Micro-database, a small SQL database used for the storage of a Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
 </td>
