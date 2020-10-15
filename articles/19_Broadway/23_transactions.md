@@ -2,7 +2,7 @@
 
 ### Transaction Definition
 
-- Broadway has a built-in Transactions Management mechanism. The transaction starts when the [Actor](03_broadway_actor.md) in the first [Stage](19_broadway_flow_stages.md) marked as a transaction requests to start a connection. 
+- Broadway has a built-in Transactions Management mechanism. The transaction starts when the [Actor](03_broadway_actor.md) in a [Stage](19_broadway_flow_stages.md) marked as a transaction requests to start a connection. 
 - Several sequential Stages marked as transactions are part of the same transaction.
 - The transaction ends after the last Stage marked as a transaction or at the end of the flow and is followed by a commit (or by a rollback if there are errors). 
 
@@ -16,31 +16,40 @@ When the outer flow starts the transaction and then invokes an inner flow, the i
 
 ### Iteration Behavior
 
-A transaction's behavior within an iteration depends on how the Iterator step is defined in the flow. 
+A transaction's behavior within an iteration is based on the flow principal to return to the Stage holding the [**Iterable** Line](21_iterations.md#iterable-line-type) and check if there is a next value there. If this Stage is transactional, the transaction continues and commits after the loop is completed. Otherwise it commits. 
 
-An Iterator is a Stage holding an Actor that starts the loop over the data set. The Iterator dictates the number of times the iteration occurs. 
+**One Commit Example**
 
-If the Iterator Stage is transactional, the commit is performed at the end of the data set. However, if the Iterator Stage is not transactional, the transaction starts inside the loop and the commit is per each iteration.
+Begin the transaction on the **source data** Stage and commit it at the end of the data set.
 
-**Examples**
+![image](images/99_23_commit_at_end.PNG)
 
-* Commit the data after the loop over the data set is completed. Start the transaction on the **source data** Stage and close it at the end of the iteration.
+**Commit per Iteration Example**
 
-  ![image](images/99_23_commit_at_end.PNG)
+Only the **insert data** Stage inside the loop is transactional.
 
-* Commit per iteration. Only the **insert data** Stage inside the loop is transactional.
+![image](images/99_23_commit_each.PNG)
 
-  ![image](images/99_23_commit_each.PNG)
+**Batch Commit Example**
 
-* A mixed approach for handling transactions during an iteration can be used when the data set is very big (for example, 1M records) and a commit is required every X records. The transaction then starts before the loop and commits each time the counter reaches 10,000. 
+When the data set is very big (for example, 1M records) and a commit is required every X records, you can perform the commit per batch. 
 
-  The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method.
+The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, the Stage 7 is only reached every 3rd record. Then, the transaction is committed because Stage 7 is not marked as transactional and a new one begins due to return to Stage 2.
 
-  ![image](images/99_23_batch.png)
+![image](images/99_23_batch.png)
 
-* The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. There are two transactions in each iteration: one at the **insert data** Stage which is followed by a commit and another at the **query params** Stage which is also followed by a commit.
+Alternative way to implement the transaction per batch is adding a **JavaScript** Stage Condition to Stage 7 instead of the **JavaScript** Actor in Stage 3.
 
-  ![image](images/99_23_complex_ex.PNG)
+
+
+**Many Commits per Each Iteration Example**
+
+The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. There are two transactions in each iteration: 
+
+- The first transaction begins at the **insert data** Stage and is followed by a commit because the **Additional Step**s Stage is not transactional.
+- The second transaction begins at the **query params** Stage and is followed by a commit because the **source data** Stage is not transactional. 
+
+![image](images/99_23_complex_ex.PNG)
 
 ### Impact of Error Handling on Transactions
 
