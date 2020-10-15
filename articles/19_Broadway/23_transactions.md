@@ -38,9 +38,9 @@ The following example shows how to perform a commit every 3 records using the **
 
 ![image](images/99_23_batch.png)
 
-Alternative way to implement the transaction per batch is adding a **JavaScript** Stage Condition to Stage 7 instead of the **JavaScript** Actor in Stage 3.
+Alternative way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, the Stage 4 is only reached every 3rd record. Then, the transaction is committed because Stage 4 is not marked as transactional and a new one begins due to return to Stage 2.
 
-
+![image](images/99_23_batch2.png)
 
 **Many Commits per Each Iteration Example**
 
