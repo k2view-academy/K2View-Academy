@@ -57,7 +57,7 @@ The default population flow template includes the following Stages and Actors:
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
-  * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#support-for-non-prepared-statement-parameters). For example, to dynamically transfer a table or column name to a query.
+  * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#example-of-non-prepared-statement). For example, to dynamically transfer a table or column name to a query.
 
 * **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB, like it si done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
 
