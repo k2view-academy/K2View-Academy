@@ -59,7 +59,7 @@ The default population flow template includes the following Stages and Actors:
 
   * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#support-for-non-prepared-statement-parameters). For example, to dynamically transfer a table or column name to a query.
 
-* **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB. 
+* **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB, like it si done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
@@ -67,7 +67,7 @@ The default population flow template includes the following Stages and Actors:
   * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
   * Note that by default, **schema** and **table** input arguments are defined as an [**External** population type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs) to enable populating these parameters dynamically. When required, a **Const** or **Link** population type can be defined. 
 
-* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded from the [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the target DB. If not needed, this Stage can be deleted or left empty.
+* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB, like it is done by an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If not needed, this Stage can be deleted or left empty.
 
 ### How Do I Create a Population Based on a Broadway Flow?
 
