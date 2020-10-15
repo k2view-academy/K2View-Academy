@@ -6,7 +6,7 @@ To create a new HTTP interface:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select the **HTTP** Interface Type to open the **New Interface** window.
 
-   ![image](images/02_http_1.PNG)
+   ![image](images/03_http_1.png)
 
 2. Populate the connection settings and **Save**.
 
