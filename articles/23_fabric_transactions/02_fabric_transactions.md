@@ -1,8 +1,8 @@
-# Fabric as a Master of Data
+# Fabric Transactions
 
 ### Overview
 
-Fabric, as a master of data, can update a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for a given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_commonDB/01_fabric_commonDB_overview.md) instead of synchronizing the LUI or the Reference table from the source. 
+Fabric can update a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for a given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_commonDB/01_fabric_commonDB_overview.md) instead of synchronizing the LUI or the Reference table from the source. 
 
 The update is performed as follows:
 
@@ -19,7 +19,7 @@ Note that after the update is completed, the data is only available on the curre
 
 The transaction is performed on an LUI level whereby the **get LUI** must be performed before running the update commands. The **get LUI** can be performed before or after starting the transaction. Note that you cannot get a different LUI until the changes on the current one are committed or rolled back.
 
-For example, when the LUI Root table is CUSTOMER, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
+For example, when the LU's [Root table](/articles/01_fabric_overview/02_fabric_glossary.md#root-table) is CUSTOMER, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
 
 The LU tables that are populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and can be defined either with or without a population. 
 
@@ -59,7 +59,7 @@ These transactions can be populated in the iidFinder delta table where the delta
 The asynchronous mode is set using the following command:
 
 ~~~
-set ASYNC_TRX=true;
+set async_trx=true;
 ~~~
 
 **Example**
@@ -84,7 +84,19 @@ Notes:
 
 Similar to LU tables, a Reference table can be defined with or without a population, and be populated by an update transaction.
 
-The transaction is done in an asynchronous mode and the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size. 
+The transaction can be done in a synchronous or an asynchronous mode using the following command:
+
+~~~
+set common_local_trx=true;
+~~~
+
+When **common_local_trx** is set to true, the updated data is available in the session even before the commit and publish to Kafka.
+
+~~~
+set common_local_trx=false;
+~~~
+
+When **common_local_trx** is set to false, the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size. 
 
 The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
 
@@ -106,5 +118,5 @@ When running a DELETE command on a Reference table within the transaction, Fabri
 
 [Click for more information about the synchronization commands on Reference tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#synchronization-commands).
 
-[![Previous](/articles/images/Previous.png)](01_fabric_transactions_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_update_lui_code_examples.md)
+[![Previous](/articles/images/Previous.png)](01_fabric_transactions_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_trx_code_examples.md)
 

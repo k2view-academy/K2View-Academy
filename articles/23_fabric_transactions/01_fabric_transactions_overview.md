@@ -23,15 +23,18 @@ Note that when a Broadway flow is invoked by a Web Service or a User Job, the tr
 
 [Click for more information about Transactions in Broadway flows](/articles/19_Broadway/23_transactions.md).
 
-### Fabric as a Master of Data
+### Fabric Transactions
 
-Fabric enables updating a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) instead of synchronizing the entire Instance ID or the Reference table from the source. This functionality enables Fabric to become the master of the data rather than synchronizing the data from external systems.
+Fabric enables updating a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) instead of synchronizing the entire Instance ID or the Reference table from the source. This functionality is used when:
 
-[Click for more information about Fabric as a master of data](02_fabric_master_of_data.md).
+* Fabric is the master of the specific data.
+* Fabric needs to be updated if the feeds from the source didn't arrive or the data is not in-sync for some reason.
+
+[Click for more information about Fabric Transactions](02_fabric_transactions.md).
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_fabric_master_of_data.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_fabric_transactions.md)
 
 
 

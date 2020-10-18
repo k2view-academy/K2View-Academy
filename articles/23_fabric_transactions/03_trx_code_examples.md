@@ -1,4 +1,4 @@
-# Update LU Instance - Code Examples
+# Update Transactions - Code Examples
 
 * Run the  INSERT command using the Fabric user code as follows:
 
@@ -68,6 +68,17 @@ try {
 
 
 
+- Run the Reference update transaction:
+
+~~~
+Db ci = db(“fabric”);
+ci.beginTransaction(); 
+ci.execute("INSERT INTO REF_STATUS (STATUS_CODE, STATUS_DESC) VALUES (?,?)", i_cd, i_desc);
+ci.commit();
+~~~
 
 
-[![Previous](/articles/images/Previous.png)](/articles/23_fabric_transactions/02_fabric_master_of_data.md)
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/23_fabric_transactions/02_fabric_transactions.md)
