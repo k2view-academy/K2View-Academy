@@ -54,7 +54,7 @@ Transaction 1 runs on Node 1 (DC1) and Transaction 2 runs on Node 4 (DC2).
 
 Fabric supports an asynchronous mode of INSERT, UPDATE or DELETE transactions simulating the **iidFinder** mechanism. 
 
-These transactions can be populated in the iidFinder delta table where the delta table is created under the [Cassandra **k2staging** keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The iidFinder then gets the transactions from the delta table and updates the LUI.
+These transactions can be populated in the iidFinder delta table where the delta table is created under the [Cassandra **k2staging** keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The Sync process then triggers the iidFinder to get the transactions from the delta table and updates the LUI.
 
 The asynchronous mode is set using the following command:
 
