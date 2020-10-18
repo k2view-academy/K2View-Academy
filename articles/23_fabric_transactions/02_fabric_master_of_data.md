@@ -17,13 +17,13 @@ Note that after the update is completed, the data is only available on the curre
 
 ### Update LU Instance
 
-The transaction is performed on an LUI level whereby the **get LUI** must be performed before running the commands. Several LUI instances cannot be received in a transaction even when INSERT, UPDATE or DELETE commands are not run on them.
+The transaction is performed on an LUI level whereby the **get LUI** must be performed before running the update commands. The **get LUI** can be performed before or after starting the transaction. Note that you cannot get a different LUI until the changes on the current one are committed or rolled back.
 
-For example, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
+For example, if CUSTOMER is an LUI Root table, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
 
 The LU tables that are populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and can be defined either with or without a population. 
 
-Note that it is recommended not to define a population for these tables in order to prevent data conflicts, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. It is the implementation's responsibility to verify that the data, populated by the population object when the LUI is synced, does not conflict or override the changes of the LU table.
+Note that it is recommended not to define a population for these tables in order to prevent data conflicts, however the creation of a population for LU tables that will be populated by the update process in not blocked in Fabric. It is the implementation's responsibility to verify that the data, populated during the LUI update, does not conflict or override the changes of the LU table populated during the Sync process.
 
 There is a write lock per LUI during the process. This means that you can begin several transactions on an LUI only if the transactions are open in different nodes. It is not allowed to begin several transactions on the same LUI on the same node. 
 
@@ -40,23 +40,23 @@ The OPTIMISTIC_LOCKING parameter in the **config.ini** can be set per node to su
 
 **Example**
 
-Transaction 1 runs on Node 1 and Transaction 2 runs on Node 4.
+Transaction 1 runs on Node 1 (DC1) and Transaction 2 runs on Node 4 (DC2).
 
 * If OPTIMISTIC_LOCKING=‘NONE’, Transaction 2 (the latest one) overrides Transaction 1.
 
 * If OPTIMISTIC_LOCKING=‘QUORUM’, Transaction 1 locks the LUI until the transaction is committed and updates at least 2 nodes of each DC.
 
-* If OPTIMISTIC_LOCKING=‘LOCAL QUORUM', Transaction 1 locks the instance until the transaction is committed and updates at least 2 nodes of DC1.
+* If OPTIMISTIC_LOCKING=‘LOCAL QUORUM', Transaction 1 locks the LUI until the transaction is committed and updates at least 2 nodes of DC1.
 
 <img src="images/23_02_1.PNG" alt="image" style="zoom: 67%;" />
 
-### Asynchronous Mode
+### Asynchronous Mode of Update LUI
 
 Fabric supports an asynchronous mode of INSERT, UPDATE or DELETE transactions simulating the **iidFinder** mechanism. 
 
-These transactions can be populated in the iidFInder delta table where the delta table is created under the [Cassandra **k2staging** keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The iidFinder then gets the transactions from the delta table and updates the LUI.
+These transactions can be populated in the iidFinder delta table where the delta table is created under the [Cassandra **k2staging** keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The iidFinder then gets the transactions from the delta table and updates the LUI.
 
-The asynchronous mode can be use the following command:
+The asynchronous mode is set using the following command:
 
 ~~~
 set ASYNC_TRX=true;
@@ -100,9 +100,11 @@ Parallel transactions are supported on Reference tables as follows:
   * Short transaction - the user runs the commit command.
   * Large transaction - the commit is initiated internally for each bulk size, populated in Cassandra.
 
-[Click for more information about running the INSERT, UPDATE or DELETE commands on Reference tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md).
+The REF_SYNC_WAIT and REF_STATUS commands support transactions on Reference tables. 
 
+When running a DELETE command on a Reference table within the transaction, Fabric creates a snapshot on the common table. Note that you can create a snapshot using the population and REF_SYNC when the population includes a truncate of the table. The sync is a separate transaction.
 
+[Click for more information about the synchronization commands on Reference tables](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#synchronization-commands).
 
 [![Previous](/articles/images/Previous.png)](01_fabric_transactions_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_update_lui_code_examples.md)
 

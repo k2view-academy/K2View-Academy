@@ -1,6 +1,6 @@
 # Fabric Transaction Management
 
-Fabric has a built-in Transaction management mechanism that handles a transaction during data processing. Tansactions are handled differently in different data processing modules.
+Fabric has a built-in Transaction management mechanism that handles a transaction during data processing. Transactions are handled differently in different data processing modules.
 
 ### Sync Process
 
@@ -17,7 +17,7 @@ When a Sync process is invoked by a [Web Service](/articles/15_web_services_and_
 [Broadway](/articles/19_Broadway/01_broadway_overview.md) flows can be split into two categories: [an LU table population based on a Broadway flow](/articles/07_table_population/14_table_population_based_Broadway.md) and [a regular Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) executed not as part of a population. The transaction is managed differently in each of these categories:
 
 * Broadway population flows are executed during the Sync process and therefore the management of a transaction in a flow is done as part of the overall Sync process transaction. There is no separate transaction for a Broadway flow in this case.
-* When a regular Broadway flow is executed not as part of a population, Broadway must manage this transaction. 
+* When a Broadway flow is executed not as part of a population, Broadway must manage this transaction. 
 
 Note that when a Broadway flow is invoked by a Web Service or a User Job, the transaction can also be managed by the calling process, as explained [above](/articles/23_fabric_transactions/01_fabric_transactions_overview.md#sync-process) in reference to the Sync process.
 
@@ -25,7 +25,7 @@ Note that when a Broadway flow is invoked by a Web Service or a User Job, the tr
 
 ### Fabric as a Master of Data
 
-Fabric enables updating a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the Reference table instead of synchronizing the entire Instance ID or the Reference table from the source. This functionality enables Fabric to become the master of the data rather than synchronizing the data from external systems.
+Fabric enables updating a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for the given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) instead of synchronizing the entire Instance ID or the Reference table from the source. This functionality enables Fabric to become the master of the data rather than synchronizing the data from external systems.
 
 [Click for more information about Fabric as a master of data](02_fabric_master_of_data.md).
 
