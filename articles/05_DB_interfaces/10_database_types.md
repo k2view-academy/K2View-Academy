@@ -23,7 +23,7 @@ To create a new database type, do the following:
 
 4. If the JDBC driver does not enable access to metadata, populate the **Studio – Metadata** settings as follows:
    * **SQL Query for Tables List** and **SQL Query for Column List** settings with a SQL query.
-   * **SQL Query for FKs List** and **SQL Query for PKs List** with custom SQL queries for retrieving the list of foreign keys (FK) and primary keys (PK) of the tables. These keys can be used by the Auto-discovery Wizard when creating a new [Logical Unit](/articles/03_logical_units/01_LU_overview.md). 
+   * **SQL Query for FKs List** and **SQL Query for PKs List** with custom SQL queries to retrieve the list of foreign keys (FK) and primary keys (PK) of the tables. These keys can be used by the Auto-discovery Wizard when creating a new [Logical Unit](/articles/03_logical_units/01_LU_overview.md). 
 
 5. Set **Query Builder: identifiers Case Sensitivity** as either:
    * Insensitive.
@@ -53,7 +53,7 @@ To create a new database type from a template to customize a built-in database t
 
 3. **Save** the database type. 
 
-   * Note that when creating a database type from a template based on an existing template (for example, Oracle) make sure to save it with the same name (Oracle) in order to override default configurations, otherwise it will be handled as a new database type.
+Note that when creating a database type from a template based on an existing template (for example, Oracle) make sure to save it with the same name (Oracle) in order to override default configurations, otherwise it will be handled as a new database type.
 
 
 
