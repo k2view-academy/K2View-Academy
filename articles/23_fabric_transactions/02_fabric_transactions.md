@@ -90,15 +90,11 @@ The transaction can be done in a synchronous or an asynchronous mode using the f
 set common_local_trx=true;
 ~~~
 
-When **common_local_trx** is set to true, the updated data is available in the session even before the commit and publish to Kafka.
+- When **common_local_trx** is set to **true**, the updated data is available in the session even before the commit and publish to Kafka.
 
-~~~
-set common_local_trx=false;
-~~~
+- When **common_local_trx** is set to **false**, the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. 
 
-When **common_local_trx** is set to false, the updated data cannot be viewed until a commit is performed and Fabric updates the Common DB. The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size. 
-
-The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
+The transaction is sent to Kafka and is saved into Kafka or Cassandra, depending on its size. The TRANSACTION_BULK_SIZE parameter in the **config.ini** files defines the maximum number of commands in each bulk.
 
 For example, run 2500 insert commands whereby the TRANSACTION_BULK_SIZE = 1000. 
 
