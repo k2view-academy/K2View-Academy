@@ -2,15 +2,17 @@
 
 ### Overview
 
-Fabric supports creating a new database type according to a JDBC driver specifications or overriding the existing database types without the need for product enhancement. 
+Fabric supports creating a new database type based on JDBC driver specifications or overriding the existing database types without the need for product enhancement. 
 
-### How Do I Create a Database Type?
-
-To introduce a new database type, save the JDBC driver under:
+When introducing a new database type, the JDBC driver is saved under:
 
 **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib\\[new database type]**.
 
-Then do the following:
+Each database type is kept in a separate folder in order to avoid overlapping or conflicts with other drivers (dynamically loaded).
+
+### How Do I Create a Database Type?
+
+To create a new database type, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Database Types** and select **New Database Type**.
 
@@ -25,7 +27,8 @@ Then do the following:
 4. If the JDBC driver does not enable access to metadata, populate the **Studio – Metadata** settings as follows:
    * **SQL Query for Tables List** and **SQL Query for Column List** settings with a SQL query.
    * **SQL Query for FKs List** and **SQL Query for PKs List** with custom SQL queries to retrieve the list of foreign keys (FK) and primary keys (PK) of the tables. These keys can be used by the Auto-discovery Wizard when creating a new [Logical Unit](/articles/03_logical_units/01_LU_overview.md). 
-
+* Note that if such queries don’t exist, you can still work with this DB and run queries on it, however **DBQuery** and **QueryBuilder** schemas will not work on top of it. The implementer will need to write the root functions manually. 
+   
 5. Set **Query Builder: identifiers Case Sensitivity** as either:
    * Insensitive.
    * SensitiveUpperCase.
