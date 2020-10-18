@@ -19,7 +19,7 @@ Note that after the update is completed, the data is only available on the curre
 
 The transaction is performed on an LUI level whereby the **get LUI** must be performed before running the update commands. The **get LUI** can be performed before or after starting the transaction. Note that you cannot get a different LUI until the changes on the current one are committed or rolled back.
 
-For example, if CUSTOMER is an LUI Root table, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
+For example, when the LUI Root table is CUSTOMER, you can get CUSTOMER 1 and ADDRESS 100 in one transaction, but are not permitted to get CUSTOMER 1 and CUSTOMER 2 in one transaction.
 
 The LU tables that are populated by the update process must be part of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md) and can be defined either with or without a population. 
 
