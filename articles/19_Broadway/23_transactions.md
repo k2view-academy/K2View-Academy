@@ -8,15 +8,15 @@
 
 ![image](images/99_23_general_ex.PNG)
 
-### Inner Flows 
+### Transaction in Inner Flows 
 
 Transactions can include [inner flows](22_broadway_flow_inner_flows.md). If a transactional Stage executes an inner flow, it automatically becomes a part of the outer transaction and can use its shared resource.
 
 When the outer flow starts the transaction and then invokes an inner flow, the inner flow does not close the transaction. The transaction is closed by the outer flow.
 
-### Iterations
+### Transaction in Iterations
 
-A transaction's behavior during an iteration is based on the flow's return to the Stage holding the [**Iterable** Line](21_iterations.md#iterable-line-type) where it checks for a new value. If this Stage is transactional, the transaction continues and commits after the loop is completed. Otherwise it commits. 
+The transaction ends after the last Stage marked as a transaction. A transaction's behavior during an iteration is based on the flow's return to the Stage holding the [**Iterable** Line](21_iterations.md#iterable-line-type) to get the next value. If this Stage is transactional, the transaction continues and commits after the data set is completed. Otherwise it commits and starts a new transaction for each iteration in the data set. 
 
 **One Commit Example**
 
