@@ -12,8 +12,7 @@ ci.execute("get Customer.'" + IID + "'");
 ci.beginTransaction();
 
 //Perform the INSERT command
-String SQL = 
-"INSERT into CONTRACT_COPY (CUSTOMER_ID,CONTRACT_ID,CONTRACT_REF_ID ) values (?, ?, ?)";
+String SQL = "INSERT into CONTRACT_COPY (CUSTOMER_ID,CONTRACT_ID,CONTRACT_REF_ID) values (?, ?, ?)";
 Object[] params = new Object[]{IID, contrID, contrRefID};
 ci.execute(SQL, params);
 
@@ -42,7 +41,7 @@ try {
         ci.commit();
     }		
 } catch (Exception e) {
-    log.info("*-*-* Insert failed: " + e.getMessage());
+    log.info("Insert failed: " + e.getMessage());
     ci.rollback();
     status = "FAILURE";	
 }
