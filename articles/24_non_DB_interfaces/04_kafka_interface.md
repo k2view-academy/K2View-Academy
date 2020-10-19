@@ -65,6 +65,7 @@ The connection settings are:
 </tr>
 </tbody>
 </table>
+
 ### Example of Publish to Kafka Broadway Flow
 
 ![image](images/04_kafka_2.PNG)
