@@ -3,19 +3,19 @@
 ### How Do I Create a Database Interface?
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
-The following screenshot displays a list of supported built-in interface types.
+The following screenshot displays a list of existing [Interface Types](/articles/05_DB_interfaces/10_database_types.md), both built-in and created in the project.
      * ![image](images/05_04_icon1.png) = DB interfaces.
      * ![image](images/05_04_icon2.png) = Non-DB interfaces.
 
-![image](images/05_04_01%20interface%20types.png)
+![image](images/05_04_01_interface_types.PNG)
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
-![image](images/05_04_02%20DB%20Interface.png)
+![image](images/05_04_02_DB_Interface.PNG)
 
-3. Populate the **DB Connection Name** and set the **Connection** to **Active**.
+3. Populate the **DB Connection Name** and set **Active** to **True**.
 
-4. Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings):
+4. Populate the [**Connection Details**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings).
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
     **[Fabric Project's Directory]\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
