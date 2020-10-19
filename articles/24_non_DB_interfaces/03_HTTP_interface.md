@@ -1,6 +1,6 @@
 # HTTP Interface
 
-HTTP interface defines the ability to connect to HTTP host. The HTTP interface is used when creating a parser map.
+HTTP interface type defines the ability to connect to HTTP host. It is used when creating a parser map or by a Broadway **Http** Actor.
 
 To create a new HTTP interface:
 
@@ -10,9 +10,7 @@ To create a new HTTP interface:
 
 2. Populate the connection settings and **Save**.
 
-
-
-**Connection Settings**
+### Connection Settings
 
 The connection settings are:
 
@@ -48,4 +46,4 @@ The connection settings are:
 
 
 
-[![Previous](/articles/images/Previous.png)](02_SFTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_xxx.md) 
+[![Previous](/articles/images/Previous.png)](02_SFTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_kafka_interface.md) 

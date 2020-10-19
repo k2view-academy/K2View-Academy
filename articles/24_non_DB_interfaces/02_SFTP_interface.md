@@ -1,18 +1,16 @@
 # SFTP Interface
 
-SFTP interface defines the ability to connect to FTP Server and stream a file content. The SFTP interface is used when creating a [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+SFTP interface type defines the ability to connect to FTP Server and stream a file content. It is used when creating a [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
 
 To create a new SFTP interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select the **SFTP** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** to select **New Interface** and then select the **SFTP** Interface Type to open the **New Interface** window.
 
    ![image](images/02_sftp_1.PNG)
 
 2. Populate the connection settings and **Save**.
 
-
-
-**Connection Settings**
+### Connection Settings
 
 The connection settings are:
 
@@ -51,6 +49,15 @@ The connection settings are:
 </tr>
 </tbody>
 </table>
+
+### How Do I Create a Listener Job on SFTP Interface?
+
+To create an Interface Listener Job on SFTP interface: 
+
+1. Click **Add interface listener as Broadway job** link and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
+2. Select the Broadway flow, Execution Mode and save the job.
+
+![images](images/02_sftp_2.PNG)
 
 
 

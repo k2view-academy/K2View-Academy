@@ -12,8 +12,8 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 
 * [SFTP Interface](02_SFTP_interface.md)
 * [HTTP Interface](03_HTTP_interface.md)
+* [Kafka Interface](04_kafka_interface.md)
 * JMS Interface
-* Kafka Interface
 * Local File System
 * Search Engine
 
