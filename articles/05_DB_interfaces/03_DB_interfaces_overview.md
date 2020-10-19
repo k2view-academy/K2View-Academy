@@ -66,8 +66,8 @@ Accurate definition of connection settings is especially important when building
 </td>
 <td width="433">
   <p>Database, schema or service name. </p>
-  <p> Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
-<p>For example: C:\Users\TaliEinhorn\Documents\Knowledge Base\KB_DB_Scripts\SqliteDB\crm_db.db </p>
+  <p>Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
+<p>For example: C:\SqliteDB\crm_db.db </p>
 </td>
 </tr>
 <tr>
@@ -132,6 +132,14 @@ Accurate definition of connection settings is especially important when building
 </td>
 <td width="433">
 <p>Name of the Database Schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong><h4>Connection Properties</strong></p>
+</td>
+<td width="433">
+<p>List of JDBC Connection Properties of the selected <a href="10_database_types.md">Interface type</a>. This section is visible only when the selected Interface type has any JDBC Connection Properties. </p>
 </td>
 </tr>
 </tbody>
