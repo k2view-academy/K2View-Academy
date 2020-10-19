@@ -3,7 +3,7 @@
 ### How Do I Create a Database Interface?
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
-The following screenshot displays a list of existing [Interface Types](/articles/05_DB_interfaces/10_database_types.md), both built-in and created in the project.
+The following screenshot displays a list of available Interface Types.
      * ![image](images/05_04_icon1.png) = DB interfaces.
      * ![image](images/05_04_icon2.png) = Non-DB interfaces.
 
@@ -26,15 +26,15 @@ The following screenshot displays a list of existing [Interface Types](/articles
     
 5. Optional: Edit the **Pool Properties**.
 
-6. Optional: Set the **Post Connection Commands** to define multi commands to be executed post JDBC interface connection on the DB Interface.
+6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
 
     
 
-Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a product package.
+Note that if required, a new database type can be defined or an existing database type can be overwritten as a part of a product package.
 
-Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.
+[Click for more information about the Database Types](/articles/05_DB_interfaces/10_database_types.md).
 
 ### DB Interface Window
 
