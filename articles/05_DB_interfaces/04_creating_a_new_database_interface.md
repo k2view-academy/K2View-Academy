@@ -18,7 +18,7 @@ The following screenshot displays a list of supported built-in interface types.
 4. Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings):
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
-    **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
+    **[Fabric Project's Directory]\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
     
     * To check if the connection settings are correct, click the **Test Connection String**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
