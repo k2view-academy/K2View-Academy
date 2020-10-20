@@ -50,9 +50,10 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
   - Which other State has a number of cases per 100K higher than the one for GUAM, by 100.
 
     
-
-
-
+    
+- Step 4
+  - We would like to add a new field **STATECASESper100K** to the Customer LU table subscriber, populated from the Reference table upon LUI synchronization.
+ 
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/02_commonDB_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/04_commonDB_solutions.md)
