@@ -14,7 +14,60 @@ To create a new JMS interface:
 
 The connection settings are:
 
+<table>
+<tbody>
+<tr>
+<td width="300pxl">&nbsp;<strong>Parameter</strong></td>
+<td width="600pxl">&nbsp;<strong>Description</strong></td>
+</tr>
+<tr>
+<td>&nbsp;<strong>Provider Type</strong></td>
+<td>
+<p>&nbsp;Message provider types, supporting:</p>
+<ul>
+<li>ActiveMQ, RabbitMq, MQ queue or topic</li>
+<li>Custom provider queue or topic</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>&nbsp;<strong>Bindings Factory&nbsp;</strong></td>
+<td>&nbsp;Bindings Factory.</td>
+</tr>
+<tr>
+<td>&nbsp;<strong>Bindings Source</strong></td>
+<td>&nbsp;Bindings Source.</td>
+</tr>
+<tr>
+<td>&nbsp;<strong>Password</strong></td>
+<td>&nbsp;Password.</td>
+</tr>
+<tr>
+<td>&nbsp;<strong>Group ID</strong></td>
+<td>
+<p>&nbsp;JMS queue / topic group ID.</p>
+<p>&nbsp;Can be overriden by the Broadway Actor's setting.&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>&nbsp;<strong>Poll Timeout (ms)</strong></td>
+<td>&nbsp;The time to wait for a new message.</td>
+</tr>
+<tr>
+<td><strong>&nbsp;Data Type</strong></td>
+<td>
+<p>&nbsp;Supported data types: String, byte[], JSON, long.</p>
+<p>&nbsp;The message type to be processed by the Broadway Actors must be aligned with the Data type definition.</p>
+</td>
+</tr>
+</tbody>
+</table>
 
+### Example of Publish to JMS Broadway Flow
+
+![image](images/jms_2.PNG)
+
+The above Broadway flow is using a **Publish** Actor in order to publish the data to predefined JMS interface. In case of using JMS Queue provider,  **topic** input argument stands for the queue name.
 
 
 

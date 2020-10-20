@@ -1,6 +1,6 @@
 # Kafka Interface
 
-Kafka interface type defines the ability to connect to Apache Kafka which is used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) and by iidFinder.
+Kafka interface type defines the ability to connect to Apache Kafka which is used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder and User Jobs.
 
 To create a new Kafka interface:
 
@@ -42,7 +42,7 @@ The connection settings are:
 <td>&nbsp;<strong>Data Type</strong>&nbsp;</td>
 <td>
 <p>&nbsp;Supported data types: String, byte[], JSON, long.</p>
-<p>&nbsp;The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the Data type definition.</p>
+<p>&nbsp;The message type to be processed by the Broadway Actors must be aligned with the Data type definition.</p>
 </td>
 </tr>
 <tr>
@@ -66,6 +66,7 @@ The connection settings are:
 </tbody>
 </table>
 
+
 ### Example of Publish to Kafka Broadway Flow
 
 ![image](images/04_kafka_2.PNG)
@@ -73,8 +74,6 @@ The connection settings are:
 
 
 The above Broadway flow is using a **Publish** Actor in order to publish the data to predefined Kafka interface. The data is published to the **Example** topic which overrides the topic in the Interface definition.
-
-
 
 
 
