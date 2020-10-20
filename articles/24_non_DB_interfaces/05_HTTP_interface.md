@@ -1,6 +1,6 @@
 # HTTP Interface
 
-HTTP interface type defines the ability to connect to HTTP host. It is used when creating a parser map or by a Broadway **Http** Actor.
+HTTP interface type defines the ability to connect to HTTP host. It cab be used by Broadway Actors.
 
 To create a new HTTP interface:
 
@@ -46,4 +46,4 @@ The connection settings are:
 
 
 
-[![Previous](/articles/images/Previous.png)](02_SFTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_kafka_interface.md) 
+[![Previous](/articles/images/Previous.png)](04_JMS_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_search_interface.md) 

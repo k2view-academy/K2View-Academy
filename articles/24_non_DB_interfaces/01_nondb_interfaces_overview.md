@@ -11,11 +11,11 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 **Non-DB Interfaces** are used to define a connection with data sources that are not databases. The following non-DB interfaces are described further:
 
 * [SFTP Interface](02_SFTP_interface.md)
-* [HTTP Interface](03_HTTP_interface.md)
-* [Kafka Interface](04_kafka_interface.md)
-* JMS Interface
+* [Kafka Interface](03_kafka_interface.md)
+* [JMS Interface](04_JMS_interface.md)
+* [HTTP Interface](05_HTTP_interface.md)
+* [Search Engine](06_search_interface.md)
 * Local File System
-* Search Engine
 
 **DB interfaces** enable Fabric server connections to databases like the SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
 

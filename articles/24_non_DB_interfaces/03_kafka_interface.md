@@ -1,6 +1,6 @@
 # Kafka Interface
 
-Kafka interface type defines the ability to connect to Apache Kafka which is used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder or the [CommonDB](/articles/22_reference(commonDB)_tables/05_commonDB_sync_modes_and_flow.md).
+Kafka interface type defines the ability to connect to Apache Kafka which is used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) and by iidFinder.
 
 To create a new Kafka interface:
 
@@ -78,4 +78,4 @@ The above Broadway flow is using a **Publish** Actor in order to publish the dat
 
 
 
-[![Previous](/articles/images/Previous.png)](03_HTTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_JMS_interface.md) 
+[![Previous](/articles/images/Previous.png)](02_SFTP_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_JMS_interface.md) 
