@@ -1,4 +1,4 @@
-![image](/academy/images/academy_header.PNG)
+&nbsp; &nbsp; &nbsp; &nbsp;![image](/academy/images/academy_header.PNG)
 
 <br></br>
 <br></br>
