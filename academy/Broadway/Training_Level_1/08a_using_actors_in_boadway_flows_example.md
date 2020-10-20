@@ -5,7 +5,7 @@
 
 1. Create a new Broadway flow as explained in the [Building a Simple Broadway Flow](05a_create_broadway_flow_example.md#example---building-a-simple-broadway-flow) example. 
 
-2. Add Actors **A1** and **B1** to two different Stages of the flow and draw a link between the Stages as explained in [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md). Verify that the connection's **Link Type** = **Value** (default). 
+2. Add two **Const** Actors **A1** and **B1** to two different Stages of the flow. Set the input of **A1** to some value and change the input of **B1** to **Link** population type. Then draw a link between the Actors as explained in [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md). Verify that the connection's **Link Type** = **Value** (default). 
 
 ![image](images/08_link_type_1.PNG)
 
