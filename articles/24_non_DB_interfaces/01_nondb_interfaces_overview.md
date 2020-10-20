@@ -8,18 +8,19 @@ When multiple data sources are needed by the project implementation, several int
 
 Fabric distinguishes between DB interfaces and Non-DB interfaces.
 
-**Non-DB Interfaces** are used to define a connection with data sources that are not databases. The following non-DB interfaces are described further:
+**DB interfaces** enable Fabric server connections to databases like the SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
+
+[Click for more information about DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md.md).
+
+**Non-DB Interfaces** are used to define a connection with data sources that are not Databases. The following non-DB interfaces are described further:
 
 * [SFTP Interface](02_SFTP_interface.md)
 * [Kafka Interface](03_kafka_interface.md)
 * [JMS Interface](04_JMS_interface.md)
 * [HTTP Interface](05_HTTP_interface.md)
-* [Search Engine](06_search_interface.md)
-* Local File System
-
-**DB interfaces** enable Fabric server connections to databases like the SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
-
-[Click for more information about DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md.md).
+* [Local File System](06_local_file_sys.md)
+* [Custom Interface](07_custom_interface.md)
+* Search Interface. This interface type supports cross instance search functionality and is needed to enable Fabric connecting the search engine when Search is defined on any of LU tables. [Click for more information about Search Implementation Steps](/articles/18_fabric_cdc/cdc_consumers/search/02_search_implementation.md).
 
 
 

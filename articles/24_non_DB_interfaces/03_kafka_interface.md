@@ -1,6 +1,6 @@
 # Kafka Interface
 
-Kafka interface type defines the ability to connect to Apache Kafka which is used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder and User Jobs.
+Kafka interface type defines the ability to connect to Apache Kafka. The interface can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder or by the [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
 To create a new Kafka interface:
 
@@ -47,12 +47,15 @@ The connection settings are:
 </tr>
 <tr>
 <td>&nbsp;<strong>Max Poll Records</strong></td>
-<td>&nbsp;Maximum poll records.</td>
+<td><p>&nbsp;Maximum poll records.</p>
+<p>&nbsp;Can be overriden by the Broadway Actor's setting.&nbsp;</p>
+</td>
 </tr>
 <tr>
 <td><strong>&nbsp;Affinity</strong></td>
 <td>&nbsp;(Optional) Populate this parameter by IP address of by a Fabric node, DC name, or logical identifier for Fabric nodes. Fabric allocates an execution server based on the populated affinity. If the affinity is not populated, Fabric allocates one of the available servers for the execution.
 <p>&nbsp;Example of affinity: &rsquo;10.21.1.169&rsquo;, &lsquo;DC1&rsquo;.</p>
+<p>&nbsp;Can be overriden by the User Job's setting.</p>
 </td>
 </tr>
 <tr>
@@ -65,6 +68,7 @@ The connection settings are:
 </tr>
 </tbody>
 </table>
+
 
 
 ### Example of Publish to Kafka Broadway Flow

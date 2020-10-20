@@ -1,6 +1,6 @@
 # JMS Interface
 
-JMS interface type defines the ability to connect to JMS Queue or Topic by any JMS provider (for example, RabbitMQ or Active MQ) which is used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md).
+JMS interface type defines the ability to connect to JMS Queue or Topic by any JMS provider (for example, RabbitMQ or Active MQ). The interface can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) or by the [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
 To create a new JMS interface:
 
@@ -17,26 +17,26 @@ The connection settings are:
 <table>
 <tbody>
 <tr>
-<td width="300pxl">&nbsp;<strong>Parameter</strong></td>
-<td width="600pxl">&nbsp;<strong>Description</strong></td>
+<td width="200pxl">&nbsp;<strong>Parameter</strong></td>
+<td width="700pxl">&nbsp;<strong>Description</strong></td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Provider Type</strong></td>
 <td>
-<p>&nbsp;Message provider types, supporting:</p>
+<p>&nbsp;Message provider types (brokers), supporting:</p>
 <ul>
-<li>ActiveMQ, RabbitMq, MQ queue or topic</li>
-<li>Custom provider queue or topic</li>
+<li>ActiveMQ, RabbitMQ, MQ - Queue or Topic.</li>
+<li>Custom provider - Queue or Topic. in this case the implementer has to write the provider class name and provide path to the <strong>.bindings</strong> file.</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Bindings Factory&nbsp;</strong></td>
-<td>&nbsp;Bindings Factory.</td>
+<td>&nbsp;Settings from <strong>.bindings</strong> file that define the connection to the broker.</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Bindings Source</strong></td>
-<td>&nbsp;Bindings Source.</td>
+<td>&nbsp;Settings from <strong>.bindings</strong> file that define the parameters of a queue or a topic.</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Password</strong></td>
@@ -67,7 +67,7 @@ The connection settings are:
 
 ![image](images/jms_2.PNG)
 
-The above Broadway flow is using a **Publish** Actor in order to publish the data to predefined JMS interface. In case of using JMS Queue provider,  **topic** input argument stands for the queue name.
+The above Broadway flow is using a **Publish** Actor in order to publish the data to predefined JMS interface. In case of using JMS Queue provider, **topic** input argument stands for the queue name.
 
 
 
