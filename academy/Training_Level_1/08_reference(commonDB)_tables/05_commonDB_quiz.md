@@ -12,21 +12,24 @@ The Quiz consists of of multiple-choice questions, each providing a number of po
 Click the answer you think is correct. 
 
 
+
 #### Question 1: Reference Tables
 
 Reference Tables are:
 
-A: Tables keeping data within SQLlite in the LUI microDB.
+A: Tables keeping data in SQLlite format in the LUI microDB.
 
-B: Oracle tables used as data model references to create a new LU.
+B: Oracle SQL tables used as data model references to create a new LU.
 
-C: Statistics and maintenance tables, belonging to the LU schema .
+C: Statistics and maintenance tables, part of the LU schema tables .
 
 
 (**Solution 1: A**).
 
 
-#### Question 2: Reference Tables Creation
+
+
+#### Question 2: Creation of Reference Tables
 
 New Reference Tables can be created from:
 
@@ -43,41 +46,45 @@ E: All of the above
 (**Solution 2: B**).
 
 
+
+
 #### Question 3: commonDB Type
 
-commonDB is a Fabric database of the following type:
+commonDB is a supplemntary Fabric database of the following type:
 
 A: Cassandra.
 
 B: mySQL.
 
-C: SQLite 
+C: SQLite
 
 D: postGrSQL.
 
-(**Solution 2: C**).
+(**Solution 3: C**).
+
 
 
 #### Question 4: commonDB Location
 
-How many copies of commonDB are there in a Fabric Cluster?
+How many copies of commonDB can be found in a Fabric Cluster?
 
-A: One only (it is common duhhh)
+A: One only (it is common ...)
 
-B: One per Fabric node.
+B: One for each Fabric node within the cluster.
 
 C: Multiple - it is configurable depending on the need. 
 
-D: One per LUI schema - a copy of commonDB is kept in each instance
+D: One per LUI schema - a new copy of commonDB is kept in each new generated instance
 
-(**Solution 2: B**)
+(**Solution 4: B**)
 
 
-#### Question 5: commonDB Synchronization
 
-commonDB tables are synchronized across the Fabric Cluster (between nodes) ...
+#### Question 5: Reference Tables Synchronization
 
-A: Each time a change occurs in one of the tables.
+A reference tables is synchronized (between nodes) across the Fabric Cluster 
+
+A: Each time a change occurs in the table using Queue Messaging topics.
 
 B: Once day at a given time.
 
@@ -87,12 +94,13 @@ D: Upon user request only.
 
 E: All of the above
 
-(**Solution 2: A**)
+(**Solution 5: A**)
 
 
-#### Question 6: commonDB Synchronization
 
-commonDB tables can be synchronized from their external sources ...
+#### Question 6: Reference Tables Updates
+
+Reference tables can be synchronized from their external sources,
 
 A: Once a day at a given time.
 
@@ -102,12 +110,13 @@ C: Upon user request only
 
 D: All of the above
 
-(**Solution 2: D**)
+(**Solution 6: D**)
+
 
 
 #### Question 7: commonDB Runtime Status Commands
 
-Information on all reference tables synchronization status, can be displayed using the following command:
+Reference Tables synchronization status for all tables can be displayed using the following command:
 
 A: STATUS_REF ALL;
 
@@ -115,20 +124,38 @@ B: REF_STATUS TABLES=’ALL’;
 
 C: REF_STATUS TABLES=’ALL’;
 
-(**Solution 2: B**)
+(**Solution 7: B**)
 
 
-#### Question 8: commonDB Runtime Status Commands
 
-Information on all reference tables synchronization status, can be displayed for the following scopes:
+#### Question 8: Reference Tables Synchronization Statuses
 
-A: Tables;
+If a request for sync has been issued but not yet started, the status will be:
 
-B: Populations;
+A: IN_BACKGROUND_SYNC
 
-C: Both tables and populations;
+B: WAITING_FOR_SYNC
 
-(**Solution 2: C**)
+C: IN_SYNC
+Sync in process.
+
+(**Solution 8: B**)
+
+
+
+#### Question 9: Session's Transaction values
+
+A transaction that has been successfully reverted will show which one of the following status?
+
+A: STARTED
+
+B: COMMIT COMPLETED
+
+C: ROLLED BACK
+
+(**Solution 9: C**)
+
+
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/04_commonDB_solutions.md)
 
