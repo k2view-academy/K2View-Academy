@@ -61,11 +61,6 @@ Response:
 HI - (Hawaii)
 
 
-
-[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/03_commonDB_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/05_commonDB_quiz.md)
-
-------
-
 Step 4:
 
 Code for Enrichment function:
@@ -92,3 +87,8 @@ fabric().execute(SQL_SUBSCRIBER,cov_Status,prev_Status);
 
 Response: 2358 cases/100K therefore Status is Orange
 
+
+
+[![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/03_commonDB_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/05_commonDB_quiz.md)
+
+------
