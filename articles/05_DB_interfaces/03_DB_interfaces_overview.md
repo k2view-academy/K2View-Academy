@@ -16,7 +16,8 @@ A database interface includes the following details:
 
 ### Database Connection Settings
 
-Accurate definition of connection settings is especially important when building a DB interface. The connection settings defined depend on whether the interface is a DB interface or a Non-DB interface. The following fields are displayed for all types of DB interfaces: 
+When building a DB interface it is very important that connection settings are defined accurately. Connection setting parameters depend on whether the interface is a DB interface or a Non-DB interface. 
+The following fields are displayed for all types of DB interfaces: 
 
 <table width="643">
 <tbody>
@@ -25,7 +26,7 @@ Accurate definition of connection settings is especially important when building
 <p><strong>Name</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Filename of the database.</strong></p>
+<p><strong>Database Filename</strong></p>
 </td>
 </tr>
 <tr>
@@ -33,7 +34,7 @@ Accurate definition of connection settings is especially important when building
 <p><strong>Active</strong></p>
 </td>
 <td width="433">
-<p>When checked indicates if the database connection is active during runtime. This parameter allows you to disable a connection so that it is ignored by the server side.</p>
+<p>When checked indicates whether the database connection is active during runtime. When a connection is disabled it is ignored by the server side.</p>
 </td>
 </tr>
 <tr>
@@ -131,7 +132,7 @@ Accurate definition of connection settings is especially important when building
 <p><strong><h4>Schema Filter</strong></p>
 </td>
 <td width="433">
-<p>Name of the Database Schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
+<p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
 </td>
 </tr>
 <tr>
