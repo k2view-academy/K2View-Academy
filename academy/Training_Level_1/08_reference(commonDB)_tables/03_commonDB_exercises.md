@@ -52,8 +52,17 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that
     
     
 - Step 4
-  - We would like to add a new field **STATECASESper100K** to the Customer LU table subscriber, populated from the Reference table upon LUI synchronization.
- 
+  We would like to add a new field named **STATE_STATUS** to the *Subscriber* table of Customer LU.
+  To do so:
+  - Write an enrichment function that returns the status of the State (from the address table) in which a customer lives by comparing it to the Reference table field describing the number of CASES_PER_100K.
+  - Consider the following values and rules:
+      ```
+      Less than 1500 cases per 100K -> Status is set to Green
+      Between 1500 and 2700 cases -> Status is set to Orange
+      Over 2700 cases -> Status is set to Red
+      ```  
+  - Attach the enrichment function to Customer LU Schema.
+  - Which Status color is set for Customer ID : 1000
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/02_commonDB_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/04_commonDB_solutions.md)
