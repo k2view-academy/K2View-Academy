@@ -2,7 +2,7 @@
 
 ## ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Quiz.png)
 Excellent! 
-You have completed the commonDB  items.
+You have completed the commonDB items.
 
 
 Take the following Quiz to see what you have learnt. 
@@ -32,7 +32,7 @@ New Reference Tables can be created from:
 
 A: Within the LU schema.
 
-B: Within the Reference folder in Fabric Studio (and only from there.
+B: Within the Reference folder in Fabric Studio (and only from there).
 
 C: Cassandra CQLSH command line 
 
@@ -41,7 +41,6 @@ D: Fabric runtime console.
 E: All of the above
 
 (**Solution 2: B**).
-
 
 
 #### Question 3: commonDB Type
@@ -76,23 +75,6 @@ D: One per LUI schema - a copy of commonDB is kept in each instance
 
 #### Question 5: commonDB Synchronization
 
-commonDB tables are synchronized across the Fabric Cluster ...
-
-A: Each time a change occurs in one of the tables.
-
-B: Once day at a given time.
-
-C: According to a specific schedule.
-
-D: Upon user request only.
-
-E: All of the above
-
-(**Solution 2: E**)
-
-
-#### Question 5: commonDB Synchronization
-
 commonDB tables are synchronized across the Fabric Cluster (between nodes) ...
 
 A: Each time a change occurs in one of the tables.
@@ -123,33 +105,7 @@ D: All of the above
 (**Solution 2: D**)
 
 
-#### Question 7: commonDB Runtime Commands
-
-A sync job on a specified common table, from the command line, can be triggered using the following command:
-
-A: REF_SYNC.
-
-B: SYNC_REF.
-
-C: SYNC_commonDB
-
-(**Solution 2: A**)
-
-
-#### Question 8: commonDB Runtime Commands
-
-To sync all tables contained in commonDB, can be done using the following command:
-
-A: REF_SYNC TABLES=’ALL’;
-
-B: REF_SYNC ALL;
-
-C: SYNC_REF TABLES=’ALL’;
-
-(**Solution 2: A**)
-
-
-#### Question 9: commonDB Runtime Status Commands
+#### Question 7: commonDB Runtime Status Commands
 
 Information on all reference tables synchronization status, can be displayed using the following command:
 
@@ -162,7 +118,7 @@ C: REF_STATUS TABLES=’ALL’;
 (**Solution 2: B**)
 
 
-#### Question 10: commonDB Runtime Status Commands
+#### Question 8: commonDB Runtime Status Commands
 
 Information on all reference tables synchronization status, can be displayed for the following scopes:
 
