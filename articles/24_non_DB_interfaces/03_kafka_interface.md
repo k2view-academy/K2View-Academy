@@ -1,6 +1,6 @@
 # Kafka Interface
 
-Kafka interface type defines the ability to connect to Apache Kafka. The interface can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder or by the [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
+A Kafka interface type defines the connections to Apache Kafka and can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
 To create a new Kafka interface:
 
@@ -21,50 +21,50 @@ The connection settings are:
 <td width="600pxl">&nbsp;<strong>Description</strong></td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Topic</strong></td>
+<td><strong>Topic</strong></td>
 <td>
-<p>&nbsp;Apache Kafka topic name.</p>
-<p>&nbsp;Can be overriden by the Broadway Actor's setting.</p>
+<p>Apache Kafka topic name.</p>
+<p>Can be overriden by the Broadway Actor's setting.</p>
 </td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Bootstrap Servers</strong></td>
-<td>&nbsp;Server IP.</td>
+<td><strong>Bootstrap Servers</strong></td>
+<td>Server IP.</td>
 </tr>
 <tr>
-<td><strong>&nbsp;Group ID</strong></td>
+<td><strong>Group ID</strong></td>
 <td>
-<p>&nbsp;Apache Kafka group ID.</p>
-<p>&nbsp;Can be overriden by the Broadway Actor's setting.&nbsp;</p>
+<p>Apache Kafka group ID.</p>
+<p>Can be overriden by the Broadway Actor's setting.&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Data Type</strong>&nbsp;</td>
+<td><strong>Data Type</strong>&nbsp;</td>
 <td>
-<p>&nbsp;Supported data types: String, byte[], JSON, long.</p>
-<p>&nbsp;The message type to be processed by the Broadway Actors must be aligned with the Data type definition.</p>
+<p>Supported data types: String, byte[], JSON, long.</p>
+<p>The message type to be processed by Broadway Actors must be aligned with the Data type definition.</p>
 </td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Max Poll Records</strong></td>
-<td><p>&nbsp;Maximum poll records.</p>
-<p>&nbsp;Can be overriden by the Broadway Actor's setting.&nbsp;</p>
+<td><strong>Max Poll Records</strong></td>
+<td><p>Maximum poll records.</p>
+<p>Can be overriden by the Broadway Actor's setting.&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td><strong>&nbsp;Affinity</strong></td>
-<td>&nbsp;(Optional) Populate this parameter by IP address of by a Fabric node, DC name, or logical identifier for Fabric nodes. Fabric allocates an execution server based on the populated affinity. If the affinity is not populated, Fabric allocates one of the available servers for the execution.
-<p>&nbsp;Example of affinity: &rsquo;10.21.1.169&rsquo;, &lsquo;DC1&rsquo;.</p>
-<p>&nbsp;Can be overriden by the User Job's setting.</p>
+<td><strong>Affinity</strong></td>
+<td>(Optional) Populate this parameter with the IP address of a Fabric node, DC name, or logical identifier for Fabric nodes. Fabric allocates an execution server based on the populated affinity. If the affinity is not populated, Fabric allocates an available server for the execution.
+<p>Example of an affinity: &rsquo;10.21.1.169&rsquo;, &lsquo;DC1&rsquo;.</p>
+<p>Can be overriden by the User Job's settings.</p>
 </td>
 </tr>
 <tr>
-<td>&nbsp;<strong>SSL properties</strong></td>
-<td>&nbsp;Mandatory properties if Kafka is defined with SSL.</td>
+<td><strong>SSL properties</strong></td>
+<td>Mandatory properties if Kafka is defined with SSL.</td>
 </tr>
 <tr>
-<td>&nbsp;<strong>SSL optional properties</strong></td>
-<td>&nbsp;Optional properties if Kafka is defined with SSL.</td>
+<td><strong>SSL optional properties</strong></td>
+<td>Optional properties if Kafka is defined with SSL.</td>
 </tr>
 </tbody>
 </table>
@@ -77,7 +77,7 @@ The connection settings are:
 
 
 
-The above Broadway flow is using a **Publish** Actor in order to publish the data to predefined Kafka interface. The data is published to the **Example** topic which overrides the topic in the Interface definition.
+The above Broadway flow uses a **Publish** Actor to publish the data to the predefined Kafka interface. The data is published to the **Example** topic which overrides the topic in the Interface definition.
 
 
 
