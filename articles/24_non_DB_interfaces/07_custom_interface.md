@@ -1,18 +1,16 @@
 # Custom Interface
 
-Custom interface type is used to interact with interface types that are not defined as a dedicated interface type in Fabric, such as SSH or any other interface that requires user, password, port and host. For example,  connect to Email server.
+The Custom interface type is used to interact with interface types that are not defined as a dedicated interface type in Fabric, such as SSH or any other interface that requires user, password, port and host. For example,  connect to Email server.
 
 To create a new interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** to select **New Interface** and then select the **Custom** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **Custom** Interface Type to open the **New Interface** window.
 
    ![image](images/custom_1.PNG)
 
 2. Populate the connection settings and **Save**.
 
 ### Connection Settings
-
-The connection settings are:
 
 <table>
 <tbody>
