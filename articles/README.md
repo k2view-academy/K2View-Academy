@@ -236,8 +236,14 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>CDC and Search Capabilities <strong><a href="/articles/18_cdc_and_search/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<summary markdown="span"><strong>Change Data Capture (CDC) Capabilities<strong><a href="/articles/18_fabric_cdc/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href=/articles/18_fabric_cdc/01_change_data_capture_overview.md>CDC Overview</a></li>
 <li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
+<li><a href="/articles/18_cdc_and_search/03_cdc_consumers_implementation.md">CDC Implementation Steps</a></li>
+<li><a href="/articles/18_cdc_and_search/04_cdc_publication_flow.md">CDC Publication Flow</a></li>
+<li><a href="/articles/18_cdc_and_search/05_cdc_process_architecture.md">CDC Process Architecture</a></li>
+<li><a href="/articles/18_cdc_and_search/06_cdc_configuration.md">CDC Configuration</a></li>
+<li><a href="/articles/18_fabric_cdc/cdc_consumers/README.md">CDC Consumers</a></li>   
 </ul> 
 </ul> 
 </details>        
