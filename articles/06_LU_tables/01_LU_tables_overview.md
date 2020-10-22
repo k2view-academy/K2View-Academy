@@ -18,7 +18,7 @@ An LU table window has the following tabs:
 *	[Table Columns](/articles/06_LU_tables/02_create_an_LU_table.md), holding a list of columns and their definitions.
 *	[Table Indexes](/articles/06_LU_tables/03_table_indexes.md#index-definition), holding a list of indexes which are added to an LU table to improve the selection process. Each LU table can have several indexes where each index can contain several columns.
 *	Search, holding  a list of fields available for a cross-instance search.
-*	[CDC Topic](/articles/18_cdc_and_search/02_cdc_messages.md), holding a list of fields to be published to an external system (CDC topic) using the CDC mechanism.
+*	[CDC Topic](/articles/18_fabric_Cdc/02_cdc_messages.md), holding a list of fields to be published to an external system (CDC topic) using the CDC mechanism.
 *	[Table Properties](/articles/06_LU_tables/04_table_properties.md), where the table’s properties like the Primary Key, [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md) or related [Enrichment functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) are defined. 
 
 ### Built-in Product LU Tables
