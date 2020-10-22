@@ -32,7 +32,7 @@ The following diagram describes a list of events that trigger CDC messages:
 ### Update and Redeploy LU
 
 When updating CDC metadata, i.e. adding, updating, or deleting CDC columns in LU tables, the LU must be redeployed to Fabric. The deployment initiates republishment of the  changes both in the LU schema and background LUI data whereby:
-- Sending a [CDC Schema](18_cdc_and_search/02_cdc_messages.md#cdc-schema) message.
+- Sending a [CDC Schema](18_fabric_cdc/02_cdc_messages.md#cdc-schema) message.
 - Initiating a [batch process](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md) to run the CDC_REPUBLISH_INSTANCE command on all LUIs of the deployed LU if the CDC fields have been added to existing LU table columns.
 
 Note that if a new LU table with CDC columns is added to the LU schema, deployment of the updated LU republishes the metadata of the new LU table. However, the data of the new LU table cannot be republished to CDC consumers since it has not been synced with Fabric. In this scenario it is recommended to remigrate all LUIs to enable the population of the new LU table in Fabric and to enable Fabric to republish the data of the new LU table to CDC consumers. For example, to remigrate all customers:
