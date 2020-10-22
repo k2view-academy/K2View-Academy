@@ -1,10 +1,10 @@
 # Local File System
 
-This interface type supports processing files from a local directory of a specific Fabric server and can be used when creating a [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+This interface type supports processing files from a local directory of a specific Fabric server and can be used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
 
 To create a new interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** to select **New Interface** and then select the **Local File System** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **Local File System** Interface Type to open the **New Interface** window.
 
    ![image](images/local_1.PNG)
 
@@ -12,7 +12,6 @@ To create a new interface:
 
 ### Connection Settings
 
-The connection settings are:
 
 <table>
 <tbody>
@@ -34,9 +33,9 @@ The connection settings are:
 
 ### How Do I Create a Listener Job on Local File System Interface?
 
-To create an Interface Listener Job on Local File System interface: 
+To create an Interface Listener Job on a local file system interface: 
 
-1. Click **Add interface listener as Broadway job** link and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
+1. Click the **Add interface listener as Broadway job** link and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
 2. Select the Broadway flow, Execution Mode and save the job.
 
 ![images](images/02_sftp_2.PNG)
