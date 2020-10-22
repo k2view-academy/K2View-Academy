@@ -1,10 +1,10 @@
 # HTTP Interface
 
-HTTP interface type defines the ability to connect to HTTP host. It cab be used by Broadway Actors.
+The HTTP interface type defines the connection the to HTTP host and can be used by Broadway Actors.
 
 To create a new HTTP interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select the **HTTP** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **HTTP** Interface Type to open the **New Interface** window.
 
    ![image](images/03_http_1.png)
 
@@ -12,7 +12,6 @@ To create a new HTTP interface:
 
 ### Connection Settings
 
-The connection settings are:
 
 <table>
 <tbody>
