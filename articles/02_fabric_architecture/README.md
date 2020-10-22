@@ -12,5 +12,6 @@
         <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric- Main Configuration Files</a></li>
         <li><a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Keyspaces for Fabric</a></li>
         <li><a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md">Cassandra Basic Commands</a></li>
+        <li><a href="/articles/02_fabric_architecture/08_kafka_basic_commands.md">Kafka Basic Commands</a></li>
 </ul>
 
