@@ -531,13 +531,13 @@ Click for more information about Fabric as a System of Record.
 
 ### CDC and Search
 
-The Fabric [CDC (Change Data Capture)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution notifies external systems about data changes and has built-in integration with Elasticsearch to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
+The Fabric CDC (Change Data Capture) solution notifies external systems about data changes and has built-in integration with Elasticsearch to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
 
 For example: search all customers called “John Doe” that live in “New-York”.
 
 Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In addition, the Fabric **CDC_REPUBLISH_INSTANCE** command can be used to republish CDC data on LUI.
 
-Click for more information about Fabric CDC and Search.
+[Click for more information about Fabric CDC and Search](/articles/18_fabric_cdc/01_change_data_capture_overview.md).
 
 <!--Drop 2- add a link to CDC and Search -->
 
