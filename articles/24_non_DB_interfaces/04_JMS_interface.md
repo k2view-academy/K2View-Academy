@@ -1,18 +1,16 @@
 # JMS Interface
 
-JMS interface type defines the ability to connect to JMS Queue or Topic by any JMS provider (for example, RabbitMQ or Active MQ). The interface can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) or by the [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
+The JMS interface type defines the connection to a JMS Queue or Topic using a JMS provider like RabbitMQ or Active MQ). The interface can be used by [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
 To create a new JMS interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select the **JMS** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **JMS** Interface Type to open the **New Interface** window.
 
    ![image](images/jms_1.png)
 
 2. Populate the connection settings and **Save**.
 
 ### Connection Settings
-
-The connection settings are:
 
 <table>
 <tbody>
@@ -23,20 +21,20 @@ The connection settings are:
 <tr>
 <td>&nbsp;<strong>Provider Type</strong></td>
 <td>
-<p>&nbsp;Message provider types (brokers), supporting:</p>
+<p>&nbsp;Message provider types (brokers) that support:</p>
 <ul>
 <li>ActiveMQ, RabbitMQ, MQ - Queue or Topic.</li>
-<li>Custom provider - Queue or Topic. in this case the implementer has to write the provider class name and provide path to the <strong>.bindings</strong> file.</li>
+<li>Custom provider - Queue or Topic. In this scenario the implementer must write the provider class name and provide a path to the <strong>.bindings</strong> file.</li>
 </ul>
 </td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Bindings Factory&nbsp;</strong></td>
-<td>&nbsp;Settings from <strong>.bindings</strong> file that define the connection to the broker.</td>
+<td>&nbsp;Settings from the <strong>.bindings</strong> file that define the connection to the broker.</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Bindings Source</strong></td>
-<td>&nbsp;Settings from <strong>.bindings</strong> file that define the parameters of a queue or a topic.</td>
+<td>&nbsp;Settings from the <strong>.bindings</strong> file that define the parameters of a queue or a topic.</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Password</strong></td>
@@ -46,7 +44,7 @@ The connection settings are:
 <td>&nbsp;<strong>Group ID</strong></td>
 <td>
 <p>&nbsp;JMS queue / topic group ID.</p>
-<p>&nbsp;Can be overriden by the Broadway Actor's setting.&nbsp;</p>
+<p>&nbsp;Can be overriden by the Broadway Actor's settings.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -57,7 +55,7 @@ The connection settings are:
 <td><strong>&nbsp;Data Type</strong></td>
 <td>
 <p>&nbsp;Supported data types: String, byte[], JSON, long.</p>
-<p>&nbsp;The message type to be processed by the Broadway Actors must be aligned with the Data type definition.</p>
+<p>&nbsp;The message type processed by Broadway Actors must be aligned with the Data type definition.</p>
 </td>
 </tr>
 </tbody>
@@ -67,7 +65,7 @@ The connection settings are:
 
 ![image](images/jms_2.PNG)
 
-The above Broadway flow is using a **Publish** Actor in order to publish the data to predefined JMS interface. In case of using JMS Queue provider, **topic** input argument stands for the queue name.
+The above Broadway flow uses a **Publish** Actor to publish the data to the predefined JMS interface. When using a JMS Queue provider, the **topic** input argument indicates the queue name.
 
 
 
