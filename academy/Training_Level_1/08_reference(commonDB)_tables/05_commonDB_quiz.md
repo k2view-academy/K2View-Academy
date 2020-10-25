@@ -74,7 +74,7 @@ B: One for each Fabric node within the cluster.
 
 C: Multiple - it is configurable depending on the need. 
 
-D: One per LUI schema - a new copy of commonDB is kept in each new generated instance
+D: One per Reference Table - a new copy of commonDB is kept for each Reference Table
 
 (**Solution 4: B**)
 
