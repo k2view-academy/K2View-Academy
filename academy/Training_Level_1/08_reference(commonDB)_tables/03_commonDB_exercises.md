@@ -59,7 +59,7 @@ for the State in which Customer 1472 lives.
 #### Step 4
   We would like to add a new field named **STATE_STATUS** to the *Subscriber* table of Customer LU.
   To do so:
-  - Write an enrichment function that returns the status of the State (from the address table) in which a customer lives by comparing it to the Reference table field describing the number of CASES_PER_100K.
+  - Write an [enrichment function](/articles/10_enrichment_function/03_create_edit_enrichment_function.md) that returns the status of the State (from the address table) in which a customer lives by comparing it to the Reference table field describing the number of CASES_PER_100K.
   - Consider the following values and rules:
       ```
       Less than 1500 cases per 100K -> Status is set to Green
