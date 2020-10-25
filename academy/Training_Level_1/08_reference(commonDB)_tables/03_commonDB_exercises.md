@@ -22,7 +22,7 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the BILLING_DB so that
 
   - Deploy both reference table and LU
   
-  - Using the REF_STATUS command, make sure that the reference table has been synchronized into Fabric. 
+  - Using the REF_STATUS command, make sure that the reference table has been synchronized into Fabric when it was deployed. 
 
     
 
