@@ -6,7 +6,7 @@ In this exercise you will create a Reference Table and attach it to our Customer
 
 The purpose of this exercise is to provide a reference table for new cases of Cov19 and updates numbers and use Fabric to support the international crisis at play.
 
-You will find a table in the Billing_DB which data is extracted from the health authorities and that provides the following information: States, New cases, New cases per 100K etc ... 
+You will find a table in the BILLING_DB which data is extracted from the health authorities and that provides the following information: States, New cases, New cases per 100K etc ... 
 
 We wish to create a Reference table based upon this table, so the Network Operator can send alerts to users roaming in specific states and alert them on the specific table's fields value changes.
 
