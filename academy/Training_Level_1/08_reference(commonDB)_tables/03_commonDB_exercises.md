@@ -28,7 +28,12 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the BILLING_DB so that
 
 ##### Step 2
 
-  - Using Fabric console, and a SELECT JOIN statement, retrieve the STATE, the number of weekly new Cov19 cases  and the rate of new cases per 100K, in the State where lives Customer with customer_id=1472
+Using Fabric console, and a ```SELECT JOIN``` statement between the LU ADDRESS table and the Reference Table, retrieve:
+  - the STATE, 
+  - the number of weekly new Cov19 cases,
+  - and the rate of new cases per 100K,
+for the State in which Customer 1472 lives.
+
   
     
 
