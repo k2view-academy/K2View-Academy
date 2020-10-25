@@ -12,7 +12,7 @@ We wish to create a Reference table based upon this table, so the Network Operat
 
 We have added a table called 'USA_CoV19_cases_Oct2020' to the BILLING_DB so that the reference table can be populated easily.
 
-##### Step 1
+#### Step 1
 
   - Create a reference table based on the table mentioned above
 
@@ -26,7 +26,7 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the BILLING_DB so that
 
     
 
-##### Step 2
+#### Step 2
 
 Using Fabric console, and a ```SELECT JOIN``` statement between the LU ADDRESS table and the Reference Table, retrieve:
   - the STATE, 
@@ -37,7 +37,7 @@ for the State in which Customer 1472 lives.
   
     
 
-##### Step 3
+#### Step 3
 
   - We would like to add latest cov19 for a new state (Guam) to the table, as many customers do frequently fly there.
   - Using the [transaction mechanism](/articles/23_fabric_transactions/02_fabric_transactions.md#update-reference-tables) described in the course, execute an ```SQL insert query``` on the table with the following data:
@@ -56,7 +56,7 @@ for the State in which Customer 1472 lives.
 
     
     
-##### Step 4
+#### Step 4
   We would like to add a new field named **STATE_STATUS** to the *Subscriber* table of Customer LU.
   To do so:
   - Write an enrichment function that returns the status of the State (from the address table) in which a customer lives by comparing it to the Reference table field describing the number of CASES_PER_100K.
