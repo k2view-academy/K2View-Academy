@@ -295,7 +295,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td width="250pxl" valign="top">
-<p>Change Data Capture (CDC) and Search</p>
+<p><a href="/articles/18_fabric_cdc/06_cdc_configuration.md">Change Data Capture (CDC) and Search</a></p>
 </td>
 <td width="200pxl" valign="top">
 <ul>

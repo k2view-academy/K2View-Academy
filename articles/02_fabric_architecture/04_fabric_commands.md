@@ -537,7 +537,7 @@ For example: search all customers called “John Doe” that live in “New-York
 
 Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In addition, the Fabric **CDC_REPUBLISH_INSTANCE** command can be used to republish CDC data on LUI.
 
-Click for more information about Fabric CDC and Search.
+[Click for more information about Fabric CDC and Search](/articles/18_fabric_cdc/01_change_data_capture_overview.md).
 
 <!--Drop 2- add a link to CDC and Search -->
 

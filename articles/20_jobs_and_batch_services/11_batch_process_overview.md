@@ -4,7 +4,7 @@ The Batch process is a Fabric utility that can be used to run multiple commands 
 The Batch process is used to trigger the following:
 - [Sync instances](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), to perform multiple syncs on all (or a subset of) instances (iIDs) for a specific Logical Unit. This process is also referred to as the Migration Process, handled by the *migrate* command.
 - [Broadway flow](/articles/19_Broadway/01_broadway_overview.md), to run a given flow on multiple instances.
-- Republish data changes using the [CDC](/articles/18_cdc_and_search/02_cdc_messages.md) notification mechanism.
+- Republish data changes using the [CDC](/articles/18_fabric_cdc/02_cdc_messages.md) notification mechanism.
 
 
 # **Fabric Batch Features**

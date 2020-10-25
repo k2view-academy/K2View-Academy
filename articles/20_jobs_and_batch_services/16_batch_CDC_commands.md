@@ -9,7 +9,7 @@ For example, if an external system became out-of-sync, it can send a request to 
 In addition, this process can benefit from all [Batch configuration parameters](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch-ludc-fabric_commandfabric-command--with-affinityaffinity-job_affinityjob-affinity-asynctruefalse-generate_entities_firsttruefalse-allow_multiplytruefalse-max_workers_per_nodenumberh6-), such as nodes affinity, capacity (max_nodes, max_workers_per_node) and multiplicity factor (allow_multiply).
 
 ## CDC Batch Commands
-The *FABRIC_COMMAND* parameter must be set using the usual [CDC_republish_instance](/articles/18_cdc_and_search/02_cdc_messages.md) syntax.
+The *FABRIC_COMMAND* parameter must be set using the usual [CDC_republish_instance](/articles/18_fabric_cdc/02_cdc_messages.md) syntax.
 
 ```BATCH LUT[@<DC>].<IG>  FABRIC_COMMAND="cdc_republish_instance CUSTOMER.?" with async=true;```
 

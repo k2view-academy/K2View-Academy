@@ -18,6 +18,7 @@
 <li><a href="/articles/02_fabric_architecture/05_fabric_main_configuration_files.md">Fabric- Main Configuration Files</a></li>
 <li><a href="/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md">Cassandra Keyspaces for Fabric</a></li>
 <li><a href="/articles/02_fabric_architecture/07_cassandra_basic_commands.md">Cassandra Basic Commands</a></li>
+<li><a href="/articles/02_fabric_architecture/08_kafka_basic_commands.md">Kafka Basic Commands</a></li>
 </ul>
 </details>
 
@@ -235,8 +236,14 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>CDC and Search Capabilities <strong><a href="/articles/18_cdc_and_search/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
-<li><a href="/articles/18_cdc_and_search/02_cdc_messages.md">CDC Messages</a></li>
+<summary markdown="span"><strong>Change Data Capture (CDC) Capabilities<strong><a href="/articles/18_fabric_cdc/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href=/articles/18_fabric_cdc/01_change_data_capture_overview.md>CDC Overview</a></li>
+<li><a href="/articles/18_fabric_cdc/02_cdc_messages.md">CDC Messages</a></li>
+<li><a href="/articles/18_fabric_cdc/03_cdc_consumers_implementation.md">CDC Implementation Steps</a></li>
+<li><a href="/articles/18_fabric_cdc/04_cdc_publication_flow.md">CDC Publication Flow</a></li>
+<li><a href="/articles/18_fabric_cdc/05_cdc_process_architecture.md">CDC Process Architecture</a></li>
+<li><a href="/articles/18_fabric_cdc/06_cdc_configuration.md">CDC Configuration</a></li>
+<li><a href="/articles/18_fabric_cdc/cdc_consumers/README.md">CDC Consumers</a></li>   
 </ul> 
 </ul> 
 </details>        

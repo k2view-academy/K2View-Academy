@@ -61,8 +61,34 @@ Response:
 HI - (Hawaii)
 
 
+Step 4:
+
+Code for Enrichment function:
+
+```java
+String prev_Status="";
+String cov_Status="";
+
+String SQLREF="SELECT CASES_PER_100K FROM ref_USA_CoV19_cases_Oct2020 where STATE ='NV'";
+String casesState = fabric().fetch(SQLREF).firstValue().toString();
+
+
+
+Integer count = Integer.parseInt(casesState);
+
+if (count >1500 && count<2700){cov_Status="orange";};
+if (count<=1500){cov_Status="green";};
+if (count>=2700){cov_Status="red";};
+
+String SQL_SUBSCRIBER="UPDATE SUBSCRIBER SET STATE_STATUS  = ? WHERE STATE_STATUS  = ? ";
+fabric().execute(SQL_SUBSCRIBER,cov_Status,prev_Status);
+
+```
+
+Response: 2358 cases/100K therefore Status is Orange
+
+
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/03_commonDB_exercises.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/05_commonDB_quiz.md)
 
 ------
-

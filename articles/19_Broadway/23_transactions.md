@@ -34,11 +34,11 @@ Only the **insert data** Stage inside the loop is transactional.
 
 When the data set is very big (for example, 1M records) and a commit is required every X records, you can perform the commit per batch. 
 
-The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, Stage 7 is only reached every third record. Then, the transaction is committed because Stage 7 is not marked as transactional and a new one begins due to return to Stage 2.
+The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, Stage 7 is only reached every third record. The transaction is then committed since Stage 7 is not marked as transactional and a new one begins due to return to Stage 2.
 
 ![image](images/99_23_batch.png)
 
-Alternative way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, the Stage 4 is only reached every third record. The transaction is then committed since Stage 4 is not marked as transactional and a new transaction begins due to returning to Stage 2.
+Another way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, Stage 4 is only reached every third record. The transaction is then committed since Stage 4 is not marked as transactional and a new transaction begins due to returning to Stage 2.
 
 ![image](images/99_23_batch2.png)
 
@@ -53,7 +53,7 @@ The following is an example of a transaction's behavior in the loop when not all
 
 ### Impact of Error Handling on Transactions
 
-When an [Error Handler](24_error_handling.md) is defined on the transactional Stage of the flow and it catches an error, the Error Handler can either be true and to continue the flow or false to stop the flow. If the Error Handler returns false, the transaction ends with a rollback and the flow's execution stops. The error message displays the failure reason.
+When an [Error Handler](24_error_handling.md) is defined on the transactional Stage of the flow and it catches an error, the Error Handler can either be true to continue the flow or false to stop the flow. If the Error Handler returns false, the transaction ends with a rollback and the flow's execution stops. The error message displays the failure reason.
 
 ### Impact of Stage Conditions on Transactions
 
@@ -74,7 +74,7 @@ Note that if there are several conditions or too many parallel branches in the f
 Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) used in a Broadway flow can be shared or non-shared during the transaction.
 
 * Using a **shared** interface in a flow, Fabric opens a connection only once within the same transaction, when the first Actor calls this interface. All other Actors use the same connection. Shared interfaces used by Broadway are: DB Interface, file system or SFTP.
-* Using  a **non-shared** interface, Fabric establishes a connection each time an Actor calls the interface in the flow. A non-shared interface used by Broadway is HTTP.  
+* Using a **non-shared** interface, Fabric establishes a connection each time an Actor calls the interface in the flow. A non-shared interface used by Broadway is HTTP.  
 
 ### How Do I Mark or Unmark a Stage as a Transaction?
 
