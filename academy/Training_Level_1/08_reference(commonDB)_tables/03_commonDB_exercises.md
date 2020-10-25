@@ -1,6 +1,6 @@
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/Exercise.png) 
 
-### Reference Tables - Exercise 1
+# Reference Tables - Exercise 1
 
 In this exercise you will create a Reference Table and add it to the Customer LU Schema.
 
