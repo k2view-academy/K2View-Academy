@@ -22,11 +22,11 @@ The following fields are displayed for all types of DB interfaces:
 <table width="643">
 <tbody>
 <tr>
-<td width="300pxl">
+<td width="200pxl">
 <p><strong>Name</strong></p>
 </td>
-<td width="600pxl">
-<p><strong>Database Filename</strong></p>
+<td width="700pxl">
+<p>Database Filename.</p>
 </td>
 </tr>
 <tr>
@@ -145,6 +145,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 </tbody>
 </table>
+
 
 
 

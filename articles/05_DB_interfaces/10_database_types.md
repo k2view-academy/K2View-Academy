@@ -28,10 +28,10 @@ To create a new database type, do the following:
    * **SQL Query for FKs List** and **SQL Query for PKs List**, with SQL queries to retrieve the list of foreign keys (FK) and primary keys (PK) of the tables. These keys can be used by the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) when creating a new [Logical Unit](/articles/03_logical_units/01_LU_overview.md). 
    * Note that if the JDBC driver does not enable access to metadata and the above settings have not been populated, you can still work with this DB and run queries on it. However the Fabric Studio's Auto Discovery Wizard, DB Query and [Query Builder](/articles/11_query_builder/02_query_builder_window.md) schemas will not work above it. The implementer must write the Root functions and all SQL queries manually. 
    * Populating the above queries can be also done to customize the list of tables or columns to be returned by the schema. For example, when the schema includes many tables and only a small subset of tables is required.
-5. Set **Query Builder: Identifiers Case Sensitivity** as either:
-   * Insensitive (default).
-   * SensitiveUpperCase.
-   * SensitiveLowerCase.
+   5. Set **Query Builder: Identifiers Case Sensitivity** as either:
+      * Insensitive (default).
+      * SensitiveUpperCase.
+      * SensitiveLowerCase.
 6. Set **JDBC Connection Properties** as follows:
    * **Name** and a **Value** for parameters to be used as a part of JDBC connection properties.
    * When setting the **Enable Interface Override**, the parameters are displayed under the Connection Properties section of the [Interface window](03_DB_interfaces_overview.md), parameter values can be updated. 
@@ -60,7 +60,7 @@ abc=false
 
 ### How Do I Create a Database Type from a Template?
 
-A new database type can be createdfrom a template to customize a built-in database type or when a new database type is very similar to an existing type. 
+A new database type can be created from a template to customize a built-in database type or when a new database type is very similar to an existing type. 
 
 To create a new database type from a template, do the following:
 
