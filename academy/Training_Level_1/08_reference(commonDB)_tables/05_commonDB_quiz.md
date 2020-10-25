@@ -79,26 +79,7 @@ D: One per Reference Table - a new copy of commonDB is kept for each Reference T
 (**Solution 4: B**)
 
 
-
 #### Question 5: Reference Tables Synchronization
-
-A reference tables is synchronized (between nodes) across the Fabric Cluster 
-
-A: Each time a change occurs in the table using Queue Messaging topics.
-
-B: Once day at a given time.
-
-C: According to a specific schedule.
-
-D: Upon user request only.
-
-E: All of the above
-
-(**Solution 5: A**)
-
-
-
-#### Question 6: Reference Tables Updates
 
 Reference tables can be synchronized from their external sources,
 
@@ -110,7 +91,29 @@ C: Upon user request only
 
 D: All of the above
 
-(**Solution 6: D**)
+(**Solution 5: D**)
+
+
+
+#### Question 6: Reference Tables Cross-Nodes Updates
+
+Reference tables are synchronized (between nodes) across the Fabric Cluster 
+
+A: Each time a change occurs in the table using Queue Messaging topics.
+
+B: Once day at a given time.
+
+C: According to a specific schedule.
+
+D: Upon user request only.
+
+E: All of the above
+
+(**Solution 6: A**)
+
+
+
+
 
 
 
