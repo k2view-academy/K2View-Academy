@@ -114,9 +114,6 @@ E: All of the above
 
 
 
-
-
-
 #### Question 7: commonDB Runtime Status Commands
 
 Reference Tables synchronization status for all tables can be displayed using the following command:
@@ -126,6 +123,8 @@ A: STATUS_REF ALL;
 B: REF_STATUS TABLES=’ALL’;
 
 C: REF_STATUS TABLES=’ALL’;
+
+D: REF_SYNC_WAIT 'ALL';
 
 (**Solution 7: B**)
 
