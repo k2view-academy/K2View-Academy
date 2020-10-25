@@ -40,7 +40,7 @@ for the State in which Customer 1472 lives.
 ##### Step 3
 
   - We would like to add latest cov19 for a new state (Guam) to the table, as many customers do frequently fly there.
-  - Using the transaction mechanism described in the course, execute an SQL insert query on the table with the following data:
+  - Using the [transaction mechanism](/articles/23_fabric_transactions/02_fabric_transactions.md#update-reference-tables) described in the course, execute an ```SQL insert query``` on the table with the following data:
     - STATE = GUAM
     - TOTALCASES = 400
     - CASES_LAST_7 = 14
