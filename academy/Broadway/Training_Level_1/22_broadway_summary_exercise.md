@@ -77,14 +77,14 @@ More entries can be added into the above CSV file, using the first names in the 
 
 b. Create a **Local File System** interface and save the CSV file into the **Working Directory** of the interface.
 
-1. Create a common EMPLOYEE_LOOKUP table with EMP_ID and EMP_FIRST_NAME columns. Save it and deploy the **References** LU.
+1. Create a common EMPLOYEE_LIST table with EMP_ID and EMP_FIRST_NAME columns. Save it and deploy the **References** LU.
 2. Create a new **EmployeeLookupPopulation** flow.
 3. Add a **FileRead** Actor and set its **interface** to the local file system interface you created prior to this exercise. Set its path to **emp_list_lookup.csv**. 
 4. Add a **CsvParser** Actor to the next Stage and connect it to the **FileRead** Actor.
-5. Add a **DbLoad** Actor to the next Stage, connect its **interface** to **fabric** and its table to **EMPLOYEE_LOOKUP**. 
+5. Add a **DbLoad** Actor to the next Stage, connect its **interface** to **fabric** and its table to **EMPLOYEE_LIST**. 
 6. Connect the fields using an **Iterate** link type.
 7. Mark Stages 2 and 3 as **Transaction**. 
-8. Save the flow and run it. Verify that the table is populated with the **EMPLOYEE_LOOKUP** data.
+8. Save the flow and run it. Verify that the table is populated with the **EMPLOYEE_LIST** data.
 
 **Question 1:**
 
