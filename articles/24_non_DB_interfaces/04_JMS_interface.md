@@ -15,51 +15,52 @@ To create a new JMS interface:
 <table>
 <tbody>
 <tr>
-<td width="200pxl">&nbsp;<strong>Parameter</strong></td>
-<td width="700pxl">&nbsp;<strong>Description</strong></td>
+<td width="200pxl"><strong>Parameter</strong></td>
+<td width="700pxl"><strong>Description</strong></td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Provider Type</strong></td>
+<td><strong>Provider Type</strong></td>
 <td>
-<p>&nbsp;Message provider types (brokers) that support:</p>
+<p>Message provider types (brokers):</p>
 <ul>
 <li>ActiveMQ, RabbitMQ, MQ - Queue or Topic.</li>
-<li>Custom provider - Queue or Topic. In this scenario the implementer must write the provider class name and provide a path to the <strong>.bindings</strong> file.</li>
+<li>Custom provider - Queue or Topic. In this scenario the implementer must write the provider class name and give a path to the <strong>.bindings</strong> file.</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Bindings Factory&nbsp;</strong></td>
-<td>&nbsp;Settings from the <strong>.bindings</strong> file that define the connection to the broker.</td>
+<td><strong>Bindings Factory&nbsp;</strong></td>
+<td>Settings from the <strong>.bindings</strong> file that define the connection to the broker.</td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Bindings Source</strong></td>
-<td>&nbsp;Settings from the <strong>.bindings</strong> file that define the parameters of a queue or a topic.</td>
+<td><strong>Bindings Source</strong></td>
+<td>Settings from the <strong>.bindings</strong> file that define the parameters of a queue or a topic.</td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Password</strong></td>
-<td>&nbsp;Password.</td>
+<td><strong>Password</strong></td>
+<td>Password.</td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Group ID</strong></td>
+<td><strong>Group ID</strong></td>
 <td>
-<p>&nbsp;JMS queue / topic group ID.</p>
-<p>&nbsp;Can be overriden by the Broadway Actor's settings.&nbsp;</p>
+<p>JMS queue / topic group ID.</p>
+<p>Can be overriden by the Broadway Actor's settings.&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td>&nbsp;<strong>Poll Timeout (ms)</strong></td>
-<td>&nbsp;The time to wait for a new message.</td>
+<td><strong>Poll Timeout (ms)</strong></td>
+<td>The time to wait for a new message.</td>
 </tr>
 <tr>
-<td><strong>&nbsp;Data Type</strong></td>
+<td><strong>Data Type</strong></td>
 <td>
-<p>&nbsp;Supported data types: String, byte[], JSON, long.</p>
-<p>&nbsp;The message type processed by Broadway Actors must be aligned with the Data type definition.</p>
+<p>Supported data types: String, byte[], JSON, long.</p>
+<p>The message type processed by Broadway Actors must be aligned with the Data type definition.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 ### Example of Publish to JMS Broadway Flow
 

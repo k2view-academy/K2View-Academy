@@ -17,8 +17,8 @@ The connection settings are:
 <table>
 <tbody>
 <tr>
-<td width="300pxl">&nbsp;<strong>Parameter</strong></td>
-<td width="600pxl">&nbsp;<strong>Description</strong></td>
+<td width="300pxl"><strong>Parameter</strong></td>
+<td width="600pxl"><strong>Description</strong></td>
 </tr>
 <tr>
 <td><strong>Topic</strong></td>
@@ -68,6 +68,7 @@ The connection settings are:
 </tr>
 </tbody>
 </table>
+
 
 
 
