@@ -6,9 +6,11 @@
 ## CommonDB & Reference Tables
 
 
-
+Lets' first understand the concept of Reference Tables:
 - [CommonDB Overview](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md)
 
+
+Now, let's learn about Reference Tables within Fabric context:
 - [Reference Tables & Fabric Studio](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md)
 
 - [Reference Tables & Fabric Runtime](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md)
