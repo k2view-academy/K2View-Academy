@@ -10,7 +10,7 @@ You will find a table in the BILLING_DB which data is extracted from the health 
 
 We wish to create a Reference table based upon this table, so the Network Operator can send alerts to users roaming in specific states and alert them on the specific table's fields value changes.
 
-We have added a table called 'USA_CoV19_cases_Oct2020' to the Billing_DB so that the reference table can be populated easily. In the Broadway course we will show you how to parse the data directly from the CSV.
+We have added a table called 'USA_CoV19_cases_Oct2020' to the BILLING_DB so that the reference table can be populated easily.
 
 - Step 1
 
