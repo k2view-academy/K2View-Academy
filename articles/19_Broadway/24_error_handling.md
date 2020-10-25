@@ -13,7 +13,7 @@ The Broadway error handling is similar to the **Java try and catch** mechanism a
 
   * When an error handler returns false, the flow stops.
 
-In order to be able to analyze the exception, Broadway exposes the following error properties:
+In order to be able to analyze the exception, Broadway exposes the following properties:
 
 ~~~javascript
 error.message
@@ -35,11 +35,11 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 1. Create a flow to insert an entry into the target DB using **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without failure.
 
-2. To catch the DB exception, add the **DbExeptionCheck** **Error Handler** of LU Table Stage as follows:
+2. To catch the DB exception, add the **DbExeptionCheck** error handler using the **JavaScript** Actor to the **LU Table** Stage as follows:
 
    ![image](images/99_24_08.PNG)
 
-3. Add the following validation to the **JavaScript** Actor:
+3. The following validation is performed by the error handler:
 
    ~~~javascript
    if (error.rootClassName == "SQLiteException") {
