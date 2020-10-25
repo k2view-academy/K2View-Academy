@@ -70,7 +70,8 @@ for the State in which Customer 1472 lives.
       ```  
   - Attach the enrichment function to Customer LU Schema.
   - Which Status color is set for Customer ID : 1000
-
+  
+  
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/08_reference(commonDB)_tables/02_commonDB_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/08_reference(commonDB)_tables/04_commonDB_solutions.md)
 
