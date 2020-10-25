@@ -1,14 +1,27 @@
 #  Error Handling
 
-Broadway has a built-in Error Handling mechanism that handles exceptions in a flow using **Error Handlers**. 
+Broadway has a built-in error handling mechanism that handles exceptions in a flow using **Error Handlers**. 
 
-An error handler is an [Actor](03_broadway_actor.md) that can be assigned to any [Stage](19_broadway_flow_stages.md) of a flow. Any [Actor](03_broadway_actor.md) can act as an error handler whereby the Actor's logic is validated by the error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
+An error handler can be assigned per each flow's [Stage](19_broadway_flow_stages.md) in order to catch exceptions of that Stage and decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
 
-The Actor's logic is validated as follows:
+The Broadway error handling is similar to the **Java try and catch** mechanism and it works as follows:
 
-- When an error handler returns true, the flow continues.
+* If during the Stage execution the exception is thrown, the error handler is triggered.
+* The error handler catches the exception.
+* Then the Actor's logic is validated by the error handler: 
+  * When an error handler returns true, the flow continues.
 
-- When an error handler returns false, the flow stops.
+  * When an error handler returns false, the flow stops.
+
+In order to be able to analyze the exception, Broadway exposes the following error properties:
+
+~~~javascript
+error.message
+error.actor
+error.stage
+error.className
+error.rootClassName
+~~~
 
 An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. It is recommended using inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
@@ -18,11 +31,30 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 ![image](images/99_24_01.PNG)
 
+**Example of Catching an Exception by an Error Handler**
+
+1. Create a flow to insert an entry into the target DB using **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without failure.
+
+2. To catch the DB exception, add the **DbExeptionCheck** **Error Handler** of LU Table Stage as follows:
+
+   ![image](images/99_24_08.PNG)
+
+3. Add the following validation to the **JavaScript** Actor:
+
+   ~~~javascript
+   if (error.rootClassName == "SQLiteException") {
+       print("The entry already exists! Continue...");
+       true;
+   }
+   else
+       false;
+   ~~~
+
+4. When **DbLoad** Actor tries to insert the data which already exists in the table, *SQLiteException* is thrown and the **Error Handler** catches it and returns **true** to continue the flow.
+
 **Example of an Error Handler in a Flow** 
 
-1. Create a flow with the required business logic. For example: given two input numbers, divide a higher number by a lower number. 
-
-2. Before the division in Stage 4, check that the lower number does not equal zero using the **Validation** error handler in Stage 3 of the flow. 
+1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, check that the lower number does not equal zero using the **Validation** **Error Handler** in Stage 3 of the flow. 
 
    ![image](images/99_24_02.PNG)
 
@@ -30,14 +62,12 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
    ![image](images/99_24_03.PNG)
 
-
-
 **Example of Handling an Error Using an Inner Flow**
 
 1. Create a simple flow that performs a validation and throws an error. For example, check that the input number is not zero and if it is - throw an exception. 
 
-   - The validation is implemented using a **JavaScript** Actor set as **Error Handler** which includes the validation check: *a != 0*.
-   - The exception is implemented using a **JavaScript** Actor which throws an exception if the Error Handler returns false: *throw "Can't divide by zero!"*.
+   - Throw an exception using a **JavaScript** Actor: *throw "Can't divide by zero!"*.
+   - Validation the input using a **JavaScript** **Error Handler** which checks: *a != 0*.
 
    ![image](images/99_24_04.PNG)
 
