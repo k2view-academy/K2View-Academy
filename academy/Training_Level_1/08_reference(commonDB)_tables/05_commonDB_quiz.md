@@ -17,7 +17,7 @@ Click the answer you think is correct.
 
 Reference Tables are:
 
-A: Tables keeping data in SQLlite format in the LUI microDB.
+A: Tables keeping data in SQLlite format.
 
 B: Oracle SQL tables used as data model references to create a new LU.
 
