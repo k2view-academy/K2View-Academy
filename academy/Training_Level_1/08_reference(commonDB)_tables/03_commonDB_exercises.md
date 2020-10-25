@@ -16,7 +16,9 @@ We have added a table called 'USA_CoV19_cases_Oct2020' to the BILLING_DB so that
 
   - Create a reference table based on the table mentioned above
 
-    - add "ref_" as a prefix to the name of the table 
+    - add "ref_" as a prefix to the name of the table
+    - set sync method to ```time interval``` (every 2 minutes)
+    - set ```Truncate Before Sync``` to false.
 
   - Attach the Reference Table to the Customer LU schema
 
