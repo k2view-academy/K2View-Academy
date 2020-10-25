@@ -52,7 +52,7 @@ for the State in which Customer 1472 lives.
   - Verify whether the new entry was added.
 
  
-  - Which other State has a number of cases per 100K higher than the one for GUAM, by 100.
+  - Which other State has a *number of cases per 100K* higher than the one for GUAM, by 100.
 
     
     
