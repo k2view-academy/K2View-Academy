@@ -2,7 +2,7 @@
 
 # Reference Tables - Exercise 1
 
-In this exercise you will create a Reference Table and add it to the Customer LU Schema.
+In this exercise you will create a Reference Table and attach it to our Customer LU Schema.
 
 The purpose of this exercise is to provide a reference table for new cases of Cov19 and updates numbers and use Fabric to support the international crisis at play.
 
