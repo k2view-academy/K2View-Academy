@@ -12,6 +12,8 @@ To create a new HTTP interface:
 
 ### Connection Settings
 
+The connection settings are:
+
 
 <table>
 <tbody>

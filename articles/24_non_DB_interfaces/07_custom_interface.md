@@ -12,6 +12,8 @@ To create a new interface:
 
 ### Connection Settings
 
+The connection settings are:
+
 <table>
 <tbody>
 <tr>
