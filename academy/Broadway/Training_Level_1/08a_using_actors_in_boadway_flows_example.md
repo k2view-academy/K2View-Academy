@@ -5,7 +5,7 @@
 
 1. Create a new Broadway flow as explained in the [Building a Simple Broadway Flow](05a_create_broadway_flow_example.md#example---building-a-simple-broadway-flow) example. 
 
-2. Add two **Const** Actors **A1** and **B1** to two different Stages of the flow. Set the input of **A1** to some value and change the input of **B1** to **Link** population type. Then draw a link between the Actors as explained in [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md). Verify that the connection's **Link Type** = **Value** (default). 
+2. Add two **Const** Actors named **A1** and **B1** to two different Stages of the flow. Set the input of **A1** to a value and change the input of **B1** to the **Link**  population type. Then draw a link between the Actors as explained in [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md). Verify that the connection's **Link Type** = **Value** (default). 
 
 ![image](images/08_link_type_1.PNG)
 
@@ -13,7 +13,7 @@
 
 ![image](images/08_link_type_vararg.PNG)
 
-4. Create another flow by adding **ConstStrings** Actor and **StringBuild** Actor  to two different Stages. Populate the input of the  **ConstStrings** Actor by the array of strings. Set the Link Type between the Actors to **Iterate** and run the flow.
+4. Create another flow by adding the **ConstStrings** Actor and **StringBuild** Actor  to two different Stages. Populate the input of the  **ConstStrings** Actor using the array of strings. Set the Link Type between the Actors to **Iterate** and run the flow.
 
    ![image](images/08_link_type_iterate.PNG)
 
@@ -27,13 +27,13 @@
 
 7. To add a connection, click ![image](images/three_dots_icon.png) in the source Actor's context menu > **Link**. For more information, refer to the [Actor Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#actor-context-menu).
 
-8. Click **A1** Actor and then click ![image](images/three_dots_icon.png) in the Actor's context menu > **Show only connected** to display only the Actors linked to **A1**. For more information, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md). Click **Show only connected** again to bring all the links back.
+8. Click the **A1** Actor and then click ![image](images/three_dots_icon.png) in the Actor's context menu > **Show only connected** to display only the Actors linked to **A1**. For more information, refer to [Show Only Connected](/articles/19_Broadway/08_show_only_connected_actors.md). Click **Show only connected** again to return the links.
 
 9. Click ![image](images/three_dots_icon.png) in the Actor's context menu > **Remark** and add a remark.
 
 10. Click ![image](images/green_asterisk.PNG) in the Actor's right corner to open the Remark pop-up, remove the text and close it to delete the remark.
 
-11. Change the population type of **A1** and **A2** Actors input arguments from **Const** to **External** and then update the argument's external name to **a1_value** and **a2_value**. For more information about Actor's population types, refer to [Actor Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
+11. Change the population type of the **A1** and **A2** Actors input arguments from **Const** to **External** and then update the argument's external name to **a1_value** and **a2_value**. For more information about Actor's population types, refer to [Actor Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
 ![image](images/08_link_type_external.PNG)
 
