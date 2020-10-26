@@ -5,7 +5,7 @@ Broadway is the Fabric module that is used to design data movement, its transfor
 
 Broadway is used throughout Fabric, wherever data movement and orchestration are needed. For example:
 * [Logical Unit](/articles/03_logical_units/01_LU_overview.md) data population from external databases or REST APIs.
-* Moving data from Fabric to external systems based on [CDC](/articles/18_fabric_cdc/01_change_data_capture_overview.md) or batch processes.
+* Moving data from Fabric to external systems based on [CDC](/articles/18_fabric_cdc/01_change_data_capture_overview.md) or [batch processes](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
 * Subscribing to a message bus and consuming messages.
 * Orchestration of scheduled activities through Fabric's job system.
 * Data transformation for [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md).
