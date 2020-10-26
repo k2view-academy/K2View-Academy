@@ -2,7 +2,7 @@
 
 ## Creating a Search Engine Interface 
 
-The Search Engine is used to connect Fabric to the Elasticsearch engine when running search commands. During a search, the Search Engine's interface is populated with the Elasticsearch engine's connection details.  
+The Search Engine is used to connect Fabric to the Elasticsearch engine when running Search commands. During a search, the Search Engine's interface is populated with the Elasticsearch engine's connection details.  
 
 
 To  create a new Search Engine interface:
