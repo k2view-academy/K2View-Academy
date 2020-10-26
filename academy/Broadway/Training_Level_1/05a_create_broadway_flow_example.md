@@ -38,7 +38,7 @@ Group By CASES.STATUS
    - Build a JSON object.
    - Write the JSON object to an output file.
 
-   ##### Building a JSON Object for Each Selected Record
+   **Building a JSON Object for Each Selected Record**
 
 2. Click ![plus](images/plus_icon.png) in the right of the Flow window to create Stage 2 which builds a JSON object for each selected customer record.
 
@@ -48,39 +48,34 @@ Group By CASES.STATUS
 
    Read [linking Actors in a Broadway Flow](/articles/19_Broadway/20_broadway_flow_linking_actors.md) to learn how to link Actors in a Broadway flow.
 
-   ##### Writing the JSON Object to an Output File for Each Selected Record
+   **Writing the JSON Object to an Output File for Each Selected Record**
 
-5. Add Stage 3 to the flow. Both Stages 2 and 3 are marked in grey since they are included in the loop that has been opened by linking Stages 1 and 2. Read [Broadway Iterations](/articles/19_Broadway/21_iterations.md) to learn more about handling loops on Broadway flows. 
+5. Add Stage 3 to the flow. Both Stages 2 and 3 have grey background since they are included in the loop that has been opened by linking Stages 1 and 2 using **Iterate** link type. 
 
-6. Open the **LocalFileSystem** interface in the Fabric Project. The **Working Directory** property of this interface is **C:\k2view\Broadway_Training**.
+   Read [Broadway Iterations](/articles/19_Broadway/21_iterations.md) to learn more about handling loops on Broadway flows. 
 
-7.  Create the **C:\k2view\Broadway_Training** directory in your local Windows server.
+6. Open the **LocalFileSystem** interface in the Fabric Project and set the **Working Directory** property of this interface to **C:\k2view\Broadway_Training**. Then create the **C:\k2view\Broadway_Training** directory in your local Windows server.
 
-8. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
+7. Add a **FileWrite** Actor to **Stage 3** and edit it as follows:
 
    - Set **Interface** to **LocalFileSystem**.
-   - Set the **path's Population Type** to **Const** instead of **Link**.
-   - Set the value of the **Path** to **customer_list.json**. This parameter is populated by the new filename created by the **FileWrite** Actor.
-   - Set the **Append** Boolean parameter to **false** to rewrite each flow execution into the file.
+   - Set the **path's Population Type** to **Const** and set its value to **customer_list.json**. This parameter is populated by the file name created by the **FileWrite** Actor.
+   - Set the **append** Boolean parameter to **false** to rewrite each flow execution into the file.
 
-    ![FileWrite](images/MyFirstFlow_Example_Stage3_FileWrite.png) 
+    <img src="images/MyFirstFlow_Example_Stage3_FileWrite.png" alt="image" style="zoom:80%;" /> 
 
    Read [Broadway Actor's Window](/articles/19_Broadway/03_broadway_actor_window.md) to learn about the Actor window and setting the Actor's parameters. 
 
-9.  The **FileWrite** Actor executes the following activities:
+8. The **FileWrite** Actor executes the following activities:
 
    - Creates a new file named **customer_list.json** under the working directory defined in the **LocalFileSystem** interface object.
-   - Appends each JSON object sent for each selected customer to the file.
+   - Writes each JSON object sent for each selected customer to the file. Note that since the **append** input argument is set to **false**, the data is not appended to the file but it overrides the file on each flow run.
 
-10. Link the **JsonStringify** Actor's **string** output parameter to the **stream** input parameter of the **FileWrite** Actor.
+9. Link the **JsonStringify** Actor's **string** output parameter to the **stream** input parameter of the **FileWrite** Actor.
 
-11. Close the loop after executing Stage 3: 
+10. Close the loop after executing Stage 3 by clicking ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage. 
 
-      - Click ![three dots](images/three_dots_icon.png) in the right corner of the **Stage** to open the **Stage context menu**. Select **Iterate Close** to close the loop after the execution of the Stage.
-
-        Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
-
-
+    Read [Stage Context Menu](/articles/19_Broadway/18_broadway_flow_window.md#stage-context-menu) to learn more about editing this Stage's settings.
 
 
 You are ready to run your flow! Note that you need to deploy the interfaces prior to running the flow. It can be done by deploying one of the Logical Units in your project.

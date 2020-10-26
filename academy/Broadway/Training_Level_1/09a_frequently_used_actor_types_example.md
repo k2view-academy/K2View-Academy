@@ -21,7 +21,8 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 3. Add a **JsonParser** Actor to Stage 2 of the flow and connect its input argument to the previous Actor's output. 
 
-   * Set the **single** input argument to correspond with the input JSON file. If the input file includes a valid JSON file, keep the value as **true**. However, if the input file includes an array of JSON objects, set the value to **false**.
+   * Set the **single** input argument to **false**.
+   * The **single** input argument must correspond with the input JSON file. If the input file includes a valid JSON file, keep the value as **true**. However, if the input file includes an array of JSON objects, set the value to **false**.
 
 4. Make sure the input file exists in the designated working directory and run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
 
@@ -44,6 +45,8 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
    * Check that the new input arguments are added to the Actor: NUM_OF_CASES and CASE_STS.
 
 7. Connect the fields in the yellow segment to the **Logger** Actor's new input arguments and set their **Link Type** to **Iterate**. 
+
+   * Note that since Stage 3 is the last Stage in the flow, it's not mandatory to close the loop. If however there are additional Stages in the flow, you need to close the loop explicitly by clicking  ![image](images/three_dots_icon.png) in the Stage context menu > **Iterate Close**.
 
 8. The flow is ready! Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
 
