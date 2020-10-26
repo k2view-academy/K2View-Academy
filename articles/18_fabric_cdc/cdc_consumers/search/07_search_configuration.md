@@ -2,7 +2,7 @@
 
 ### Fabric Config.ini File
 
-Configure the [CDC sections](articles/18_fabric_cdc/06_cdc_configuration.md) including the **cdc_data_consume** sections. The cdc_data_consume sections are used by the 
+Configure the [CDC sections](/articles/18_fabric_cdc/06_cdc_configuration.md) including the **cdc_data_consume** sections. The cdc_data_consume sections are used by the 
 
 ### Elasticsearch Configuration
 
