@@ -26,17 +26,17 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 4. Make sure the input file exists in the designated working directory and run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
 
-   * **JsonParser** Actor's output datatype is object. However after running the flow in the Debug mode, Broadway learns the output structure and enables updating the schema. 
+   * The **JsonParser** Actor's output datatype is object. However after running the flow in the Debug mode, Broadway learns the output structure and enables updating the schema. 
 
    ![flow](images/09_read_and_parse_0.PNG)
 
-   * Note the red circle mark of the **JsonParser** Actor's output. Click the red circle to open Compare Schema window.
+   * Note the red circle marked on the **JsonParser** Actor's output. Click the red circle to open Compare Schema window.
 
      <img src="images/09_read_and_parse_1.PNG" alt="flow" style="zoom:80%;" />
 
    * Then click **Update**.
 
-5. Click ![image](images/red_cross.png) that appears now adjacent to the **JsonParser** Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
+5. Click ![image](images/red_cross.png) that now appears adjacent to the **JsonParser** Actor's output argument to open the yellow Data Inspection segment and display the Schema on the left and the data values on the right. 
 
 6. Add a **Logger** Actor to Stage 3 and populate its input arguments as follows:
 
@@ -46,7 +46,7 @@ Let's create a new Broadway flow that reads data from a JSON file, parses it and
 
 7. Connect the fields in the yellow segment to the **Logger** Actor's new input arguments and set their **Link Type** to **Iterate**. 
 
-   * Note that since Stage 3 is the last Stage in the flow, it's not mandatory to close the loop. If however there are additional Stages in the flow, you need to close the loop explicitly by clicking  ![image](images/three_dots_icon.png) in the Stage context menu > **Iterate Close**.
+   * Note that since Stage 3 is the last Stage in the flow, it is not mandatory to close the loop. If however there are additional Stages in the flow, you must close the loop explicitly by clicking ![image](images/three_dots_icon.png) in the Stage context menu > **Iterate Close**.
 
 8. The flow is ready! Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON.
 
