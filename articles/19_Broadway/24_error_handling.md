@@ -31,6 +31,16 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 ![image](images/99_24_01.PNG)
 
+**Example of an Error Handler in a Flow** 
+
+1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, check that the lower number does not equal zero using the **Validation** **Error Handler** in Stage 3 of the flow. 
+
+   ![image](images/99_24_02.PNG)
+
+3. If the lower number equals zero, throw an error using the **ErrorMsg** **JavaScript** Actor. Stage 4 is not executed since the error handler stops the flow's execution. 
+
+   ![image](images/99_24_03.PNG)
+
 **Example of Catching an Exception by an Error Handler**
 
 1. Create a flow to insert an entry into the target DB using **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without failure.
@@ -51,16 +61,6 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
    ~~~
 
 4. When **DbLoad** Actor tries to insert the data which already exists in the table, *SQLiteException* is thrown and the **Error Handler** catches it and returns **true** to continue the flow.
-
-**Example of an Error Handler in a Flow** 
-
-1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, check that the lower number does not equal zero using the **Validation** **Error Handler** in Stage 3 of the flow. 
-
-   ![image](images/99_24_02.PNG)
-
-3. If the lower number equals zero, throw an error using the **ErrorMsg** **JavaScript** Actor. Stage 4 is not executed since the error handler stops the flow's execution. 
-
-   ![image](images/99_24_03.PNG)
 
 **Example of Handling an Error Using an Inner Flow**
 
