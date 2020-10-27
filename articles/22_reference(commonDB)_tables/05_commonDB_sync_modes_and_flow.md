@@ -38,11 +38,11 @@ The transaction message is sent to Kafka while its content is saved into Kafka (
 Regardless of the synchronization type (background or on-demand), Fabric provides two different modes for synchronizing Reference tables data.
 
 ### Update Mode
-This mode is (automatically) selected when any row update to the reference table is needed. 
-In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. Each node executes this change locally on its local SQLite commonDB copy.
+This mode is by default, selected when any row update to the reference table is needed. 
+In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. Each node executes this change locally on its local SQLite commonDB copy as a single transaction.
 
 - Small updates: applicable for less than 1000 updates.
-- Big updates: applicable for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra:
+- Big updates: applicable for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra.
 
 For example, an update consists of running 2500 insert commands. Each 1000 command bulk is written to Cassandra. The 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each. Kafka gets the transaction message. One message is sent to Kafka per table and per transaction. 
 
@@ -50,7 +50,7 @@ For example, an update consists of running 2500 insert commands. Each 1000 comma
 ### Snapshot Mode
 
 #### Snapshot Content 
-For example, an update consists of running 2500 insert commands. Each 1000 command bulk is written to Cassandra. The 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each. Kafka gets the transaction message. One message is sent to Kafka per table and per transaction.
+A snapshot consists consists of a copy of the entire table and is structured as below:
 
 - The header published in the Kafka update topic contains the UUID of the snapshot
 
