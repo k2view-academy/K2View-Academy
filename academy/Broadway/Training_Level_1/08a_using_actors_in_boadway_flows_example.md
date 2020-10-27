@@ -7,19 +7,19 @@
 
 2. Add two **Const** Actors named **A1** and **B1** to two different Stages of the flow. Set the input of **A1** to a value and change the input of **B1** to the **Link**  population type. Then draw a link between the Actors as explained in [Linking Actors](/articles/19_Broadway/07_broadway_flow_linking_actors.md). Verify that the connection's **Link Type** = **Value** (default). 
 
-![image](images/08_link_type_1.PNG)
+   ![image](images/08_link_type_1.PNG)
 
 3. Click the connection line to set the **Varargs** to **ON**, add **Const** Actor **A2**, connect it to the input of **B1** and run the flow to check the impact.
 
-![image](images/08_link_type_vararg.PNG)
+   ![image](images/08_link_type_vararg.PNG)
 
 4. Create another flow by adding the **ConstStrings** Actor and **StringBuild** Actor  to two different Stages. Populate the input of the  **ConstStrings** Actor using the array of strings. Set the Link Type between the Actors to **Iterate** and run the flow.
 
-![image](images/08_link_type_iterate.PNG)
+   ![image](images/08_link_type_iterate.PNG)
 
 5. Then change the Link Type to **First** and run the flow again to check the impact. 
 
-![image](images/08_link_type_first.PNG)
+   ![image](images/08_link_type_first.PNG)
 
    For more information about handling loops in Broadway, refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
 
@@ -35,11 +35,11 @@
 
 11. Change the population type of the **A1** and **A2** Actors input arguments from **Const** to **External** and then update the argument's external name to **a1_value** and **a2_value**. For more information about Actors population types, refer to [Actor Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
-![image](images/08_link_type_external.PNG)
+   ![image](images/08_link_type_external.PNG)
 
 12. Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON. The Debug / Run Arguments window pops up to insert the flow input arguments.
 
-![images](images/08_link_type_debug.PNG)
+   ![images](images/08_link_type_debug.PNG)
 
 13. Populate the values and click **OK** to run the flow. 
 
