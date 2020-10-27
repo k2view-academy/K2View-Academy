@@ -28,7 +28,7 @@ The following illustration shows how a Synchronisation Job (Sync Job 1) publishe
 
 ### Synchronization Properties
 
-Any transaction involving the common table is done in asynchronous mode, meaning that the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table.
+Any transaction involving the common table is done in asynchronous mode, meaning that the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table. more over, each node will perform the update in its own time.
 
 The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in a Cassandra keyspace, depending on its size.
 
