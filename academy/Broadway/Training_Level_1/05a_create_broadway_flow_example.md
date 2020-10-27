@@ -1,7 +1,7 @@
 # Example of Creating a Broadway Flow 
 ### ![](/academy/images/example.png)Example - Building a Simple Broadway Flow
 
-Let's create a new Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records:
+Let's create a new Broadway flow that selects data from a DB table and creates a JSON file based on the selected DB records.
 
 #### Step 1 - Create a New Broadway Flow
 
@@ -24,7 +24,7 @@ Group By CASES.STATUS
    - Read How [Do I Add an Actor to a Stage](/articles/19_Broadway/03_broadway_actor.md#how-do-i-add-actor-to-stage) to learn how to add an Actor to the Broadway flow.
    - Read more about the built-in [DbCommand](/articles/19_Broadway/04_built_in_actor_types.md#db) Actor. 
 
-3. Edit the **DbCommand** Actor in Stage 1. Add the DB interface and the SQL above to the Actor:
+3. Edit the **DbCommand** Actor in Stage 1. Add the DB interface and the above SQL to the Actor:
 
    - Select **CRM_DB** as the **Interface**.
 - Click **QB** in the **SQL** parameter value to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md), populate the **SQL** in the **Query Builder** window and click **OK** to populate the **SQL** parameter: 
