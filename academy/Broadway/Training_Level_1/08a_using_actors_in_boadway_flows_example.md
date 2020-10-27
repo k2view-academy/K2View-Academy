@@ -15,11 +15,11 @@
 
 4. Create another flow by adding the **ConstStrings** Actor and **StringBuild** Actor  to two different Stages. Populate the input of the  **ConstStrings** Actor using the array of strings. Set the Link Type between the Actors to **Iterate** and run the flow.
 
-   ![image](images/08_link_type_iterate.PNG)
+![image](images/08_link_type_iterate.PNG)
 
 5. Then change the Link Type to **First** and run the flow again to check the impact. 
 
-   ![image](images/08_link_type_first.PNG)
+![image](images/08_link_type_first.PNG)
 
    For more information about handling loops in Broadway, refer to [Broadway Iterations](/articles/19_Broadway/21_iterations.md). 
 
@@ -39,7 +39,7 @@
 
 12. Run the flow in Debug mode when Debug is set to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> ON. The Debug / Run Arguments window pops up to insert the flow input arguments.
 
-    ![images](images/08_link_type_debug.PNG)
+![images](images/08_link_type_debug.PNG)
 
 13. Populate the values and click **OK** to run the flow. 
 
