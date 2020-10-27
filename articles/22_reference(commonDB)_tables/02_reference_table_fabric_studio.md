@@ -100,7 +100,7 @@ Functions or other tables can be attached to the Reference table:
 
 ## Attach the Reference Table to an LU Schema
 
-Before accessing the Reference Table from a specific LU, or before it can be used as a [lookup object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md#how-do-i-edit-a-reference-tab), it must be attached to the LU, in which case it is automatically synchronized when executing a ```get``` on LUI.
+Before accessing the Reference Table from a specific LU, or before it can be used as a [lookup object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md#how-do-i-edit-a-reference-tab), it must be attached to the LU.
 
 ### Configure LU to Use a Reference Table
 
