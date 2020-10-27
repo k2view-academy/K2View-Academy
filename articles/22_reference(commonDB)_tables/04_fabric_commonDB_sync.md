@@ -2,7 +2,7 @@
 
 
 ## Overview
-Copies of Reference tables are kept within each Fabric Node, therefore Fabric CommonDB architecture has been designed to answer the following requirements:
+Replications of Reference tables are kept within each Fabric Node, therefore Fabric CommonDB architecture has been designed to answer the following requirements:
 
 - Manage the synchronization process with their source, either automatically in the background, on-demand at any given time, or according to a specific schedule.
 - Ensure high availability levels at all times with the lowest access time possible.
@@ -13,7 +13,7 @@ This means that in a distributed Fabric Cluster environment, each Fabric node co
 
 
 
-## Synchronization Use Case
+## Replication Use Case
 
 Let’s consider a Sales Manager who has just closed a case whereby a new case entry has been created in the Billing database. In this update a new email address has been added to the customer’s details. The email provider’s details are saved in a Reference table featuring all email providers from all customers.
 
