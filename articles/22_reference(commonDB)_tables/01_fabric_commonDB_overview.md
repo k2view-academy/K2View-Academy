@@ -21,12 +21,12 @@ Use Fabric transactions to populate a Reference table. In this specific case, no
 
 # **Where are Reference Tables Stored?**
 
-CommonDB is an SQLite database used for storing reference tables common to all LUIs (MicroDBs).
+CommonDB is an SQLite database used for storing all Reference Tables.
 
-In a distributed system, a copy of the CommonDB is stored on each Fabric node that is involved.
+In a distributed system, a copy of the CommonDB is stored on each Fabric Node.
 Fabric handles their cross-synchronization and ensures that the local CommonDB SQLite file is always available for queries from within each Fabric session. 
 
-This enables writing JOIN clauses, locally, between any common table and any LUI using only one SQL query, thus providing instantenous data access and computing resources to these queries. 
+This enables writing JOIN clauses, locally, between any common table and any LUI using regular SQL queries, thus providing instantenous data access and local computing resources to these queries. 
 
 
  
