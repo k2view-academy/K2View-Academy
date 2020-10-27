@@ -34,7 +34,7 @@ K2View will not be liable for any unauthorized, unlicensed or unallowed use (“
 2.  Copy the Kafka zip file to  to your local directory, for example: **C:\k2view**, and extract the zip file. 
 3.  Go to the **config** sub-directory under the Kafka directory, for example: **C:\K2View\kafka_2.12-2.5.0\config**. 
 4.  Open the **server.properties** file for editing. Find and edit the **log.dirs=/tmp/kafka-logs** line and replace the **/tmp/kafka-logs** with **[Kafka local directory]\data**. For example **log.dir= C:\K2View\kafka_2.12-2.5.0\data**.
-4.  Start Kafka, open a new cmd window from the Kafka directory and run the following command in the cmd window: .\bin\windows\kafka-server-start.bat .\config\server.properties.
+4.  Start Kafka, open a new cmd window from the Kafka directory and run the following command in the cmd window: **.\bin\windows\kafka-server-start.bat .\config\server.properties**
 
   
 
