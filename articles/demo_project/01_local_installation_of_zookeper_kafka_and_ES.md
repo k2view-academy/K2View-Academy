@@ -21,7 +21,7 @@ K2View will not be liable for any unauthorized, unlicensed or unallowed use (“
 
 8. Add the **ZOOKEEPER_HOME** environment variable and populate it using the Zookeeper directory. For example: **ZOOKEEPER_HOME = C:\k2view\apache-zookeeper-3.6.1-bin\**.
 
-9. Edit the**Path** environmentvariable and add **;%ZOOKEEPER_HOME%\bin;** 
+9. Edit the **Path** environmentvariable and add **;%ZOOKEEPER_HOME%\bin;** 
 
 10. To run ZooKeeper, open a new cmd window from the Zookeeper directory and type **zkserver**.
 
