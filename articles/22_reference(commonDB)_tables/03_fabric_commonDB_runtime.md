@@ -10,12 +10,12 @@ For information about the Cross-nodes Synchronization process within a Fabric Cl
 
 **Case 1 - Background Sync**
 
-In this scenario a Fabric Session requests to update a Reference table from an external source according to a predefined interval. The [ref_sync and ref_sync_wait commands] are triggered automatically in the background according to the [method](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#sync-method) selected in Fabric Studio (Time Interval or Decision Function).
+In this scenario a Fabric Session requests to update a Reference table from an external source according to a predefined interval. The [ref_sync and ref_sync_wait commands](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#synchronization-commands) are triggered automatically in the background according to the [method](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#sync-method) selected in Fabric Studio (Time Interval or Decision Function).
 
 
 **Case 2 - Pro-Active Sync**
 
-In this scenario a customer service operative needs to get the most updated list of new services subscribed by a customer in real-time. The Web Service or Job request triggers the [ref_sync and ref_sync_wait commands](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
+In this scenario, for example, a customer service operative needs to get the most updated list of new services subscribed by a customer in real-time. The Web Service or Job request triggers the [ref_sync and ref_sync_wait commands](/articles/22_reference(commonDB)_tables/03_fabric_commonDB_runtime.md#ref_sync-lu_namelu-name-tablesall-or-table-1table-2etc-forcetruefalse).
 
 
 **Case 3 - Scheduled Sync**
