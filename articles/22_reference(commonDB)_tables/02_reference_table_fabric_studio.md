@@ -92,7 +92,7 @@ By default Reference tables are synched in the background of each table accordin
 Functions or other tables can be attached to the Reference table:
 
 - [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), to perform data manipulations on the table's content.
-- Reference Tables, to add other Reference tables as dependencies. 
+- Other Reference Tables, onto which the current Reference table is depending (e.g. it needs data from these tables).  
 
 ![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
 
