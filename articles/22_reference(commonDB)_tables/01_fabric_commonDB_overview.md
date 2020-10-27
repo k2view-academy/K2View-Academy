@@ -1,8 +1,6 @@
-# **Fabric CommonDB and Reference Overview** 
+# **Fabric CommonDB and Reference Table Overview** 
 
-
-
-A Reference table is an SQLite table containing metadata that is referenced via different LU instances of a specific / different LU, Web Services and other Fabric objects like Jobs or Broadway flows.
+A Reference table is an SQLite table containing data that is used by different instances of a specific LU or of multiple LUs, Web Services and other Fabric objects like Jobs or Broadway flows.
 For example, a Reference Table can be:
 
 - A table storing a list of objects to which all MicroDB Schemas point to, 
@@ -10,9 +8,15 @@ For example, a Reference Table can be:
 - A geo-code table that identifies customer zip addresses, 
 - A report of number of customers per customer type. 
 
-In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project. To ensure that a Reference table in an LU Schema is always synched, verify the Reference table name is checked in the References section of the LU Schema tab in the right pane.
-When Fabric synchronizes any LU instance, it first searches for the checked Reference tables, checks if they need to be synchronized and then synchronizes them.
+In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project. It is strongly recommended to ensure that the Reference table is attached to an LU Schema by ticking on the appropriate Reference table in the References section of the LU Schema tab in the right panel.
 
+
+# ** Reference Tables Types
+## Type 1:
+Reference Table can be synchronizing from External Sources by defining a population in Fabric Studio. 
+
+## Type 2:
+Use Fabric transactions to populate a Reference table. In this specific case, no population appears in Fabric Studio. 
 
 
 # **Where are Reference Tables Stored?**
