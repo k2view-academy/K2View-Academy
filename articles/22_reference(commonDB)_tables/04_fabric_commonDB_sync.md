@@ -19,8 +19,7 @@ Let’s consider a Sales Manager who has just closed a case whereby a new case e
 
 All other Fabric nodes must synchronize the reference table so as to provide other sales managers with the most updated list of email providers.  
 
-Moreover, what happens when two sales managers both make changes on the same row and entry in the same Reference Table on two local copies of the same commonDB?
-
+Moreover, what happens when two sales managers both make changes on the same row and entry in the same Reference Table ?
 
 Fabric provides a resilient mechanism to unsure that the most updated data is always available and distributed across all Fabric nodes in the same cluster. 
 
