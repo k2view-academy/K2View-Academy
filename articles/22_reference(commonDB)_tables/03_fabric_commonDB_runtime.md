@@ -3,8 +3,8 @@
 
 ## Synchronization Overview
 
-This article discusses synchronization between any Fabric session and the external source where the Reference table was first populated. 
-For information about the Cross-nodes Synchronization process within a Fabric Cluster, refer to [article](04_fabric_commonDB_sync.md).   
+This article discusses synchronization between any Fabric session and the external source from where the Reference table is populated. 
+For information about the Cross-nodes Synchronization process within a Fabric Cluster, refer to this [article](04_fabric_commonDB_sync.md).   
 
 ## Use Cases
 
