@@ -49,27 +49,10 @@ For example, an update consists of running 2500 insert commands. Each 1000 comma
 
 ### Snapshot Mode
 
-#### Snapshot Content 
-A snapshot consists consists of a copy of the entire table and is structured as below:
-
-- The header published in the Kafka update topic contains the UUID of the snapshot
-
-- The Cassandra table row contains the following:
-  - Uuid – unique per snapshot.
-  - Table name
-  - message id (from 0 upwards)
-  - Data:
-  ```
-  *list of updates* (as for regular update message), 
-  *size of list* (default set using the configuration parameter and which the user can change on a per-snapshot basis). 
-  ```
-
 A snapshot will only be published once one of the following actions is triggered: 
 
 -	The full table synchronization is initialized by a job.
--	A scheduled Sync time has arrived.
--	Manually, when requested by the user.
-- When a delete request is sent to a Reference Table without a ```where``` statement
+-	Manually, when requested by the user sending a delete request is sent to a Reference Table without a ```where``` statement
 
 
 #### Snapshots Synchronization Mechanism
