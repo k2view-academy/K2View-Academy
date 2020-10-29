@@ -8,14 +8,14 @@ For example, a Reference Table can be:
 - A geo-code table that identifies customer zip addresses, 
 - A report of number of customers per customer type. 
 
-In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project. It is strongly recommended to ensure that the Reference table is attached to an LU Schema by ticking on the appropriate Reference table in the References section of the LU Schema tab in the right panel.
+In Fabric Studio, the Reference tab displays a list of the common Reference tables defined in a project. It is strongly recommended to ensure that the Reference table is attached to an LU Schema by ticking on the appropriate Reference table in the References section of the LU Schema tab in the right panel. 
+By attaching the reference table to the LU, we ensure that when fetching any instance for the first time, the process will always wait for the reference table to be populated.
 
-
-## **Reference Tables Types**
-### Type 1:
+### **Reference Tables Types**
+#### Type 1:
 Reference Table that can be synchronized from External Sources by defining a population in Fabric Studio. 
 
-### Type 2:
+#### Type 2:
 Reference Table that can be populating by using Fabric transactions. In this specific case, no population appears in Fabric Studio. 
 
 
