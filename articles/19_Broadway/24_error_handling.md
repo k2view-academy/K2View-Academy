@@ -31,7 +31,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 ![image](images/99_24_01.PNG)
 
-**Example of an Error Handler in a Flow** 
+**Example 1 - Using an Error Handler in a Flow** 
 
 1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, using the **Validation** **Error Handler** in Stage 3 of the flow, check that the lower number does not equal zero. 
 
@@ -41,7 +41,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
    ![image](images/99_24_03.PNG)
 
-**Example of Catching an Exception using an Error Handler**
+**Example 2 - Catching an Exception using an Error Handler**
 
 1. Create a flow that inserts an entry into the target DB using the **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without a failure.
 
@@ -49,7 +49,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
    ![image](images/99_24_08.PNG)
 
-3. The following validation is performed by the error handler:
+3. The following validation is performed by the **JavaScript** error handler:
 
    ~~~javascript
    if (error.rootClassName == "SQLiteException") {
@@ -62,7 +62,27 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 4. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the **Error Handler** catches it and returns **true** to continue the flow.
 
-**Example of Handling an Error Using an Inner Flow**
+**Example 3 - Catching an Exception by an Error Handler Implemented by Inner Flow**
+
+The following example presents how to do Error Handling using an an inner flow as an **Error Handler**. You can use the flow created in Example 2 replacing the **JavaScript** Error Handler by the **Inner Flow** Error Handler. 
+
+The flow inserts an entry into the target DB using the **DbLoad** Actor. If the same data already exists in the target table, the Error Handler is triggered by the SQLite exception and performs the inner flow logic - print a message into the log and continue without a failure.
+
+1. Create an inner flow with the **Logger** Actor in Stage 1 to print the message into the log file and **JavaScript** Actor in Stage 2 to return **true** - to prevent the failure of the main flow.
+
+   ![image](images/99_24_09.PNG)
+
+2. The Logger Actor receives 3 **External** input arguments: table name, IID and contract ID.
+
+3. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
+
+4. Use the flow from Example 2 as the main flow modifying the Error Handler to use an **errorHndlFlow_Actor** as an Error Handler of LU Table Stage. 
+
+   ![image](images/99_24_10.PNG)
+
+5. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the **Error Handler** catches and executes the inner flow which returns **true** to continue the flow.
+
+**Example 4 - Handling an Error Using in an Inner Flow**
 
 1. Create a simple flow that performs a validation and throws an error. For example, check that the input number is not zero and if it is, throw an exception. 
 
@@ -91,7 +111,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
    <img src="images/99_24_07.PNG"/>
 
-   
+
 
 [![Previous](/articles/images/Previous.png)](23_transactions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](25_broadway_flow_window_run_and_debug_flow.md)
 
