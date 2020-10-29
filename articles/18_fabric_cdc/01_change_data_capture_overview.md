@@ -1,10 +1,13 @@
 # Change Data Capture Overview
 
-Fabric's Change Data Capture (CDC) solution notifies external systems about data changes published via Kafka and also offers cross-instance Search capabilities through its built-in integration with Elasticsearch.
+The Fabric Change Data Capture (CDC) solution notifies external systems about data changes published via Kafka. It also offers cross-instance Search capabilities through its built-in integration with Elasticsearch.
 
-Fabric CDC  enables the sending of different data segments to different CDC consumers. It is possible to define different LU table columns as CDC fields on different CDC consumers. Each CDC consumer has its own Kafka topic and gets its own CDC messages. This way **each CDC consumer gets only the data changes that are relevant for it**. 
+Fabric CDC can send different data segments to different CDC consumers and different LU table columns can be defined as CDC fields on different CDC consumers. Each CDC consumer has its own Kafka topic and gets its own CDC messages so that **each CDC consumer gets only the data changes that are relevant for it**. 
 
-For example, Consumer A gets the data changes about the Customer's usage, Consumer B gets the data changes about the Customer's financial transactions and Consumer C gets the data changes about the Customer's personal details. 
+For example:
+-  Consumer A gets data changes about the Customer's usage.
+-  Consumer B gets data changes about the Customer's financial transactions.
+-  Consumer C gets data changes about the Customer's personal details. 
 
 The following HL flow describes the CDC flow and the population of CDC data in consumers:
 
@@ -17,7 +20,7 @@ The following HL flow describes the CDC flow and the population of CDC data in c
 
 - The Fabric CDC_TRANSACTION_CONSUMER job consumes the Search topic from Kafka and updates Elasticsearch. Other consumers must create their own consumer processes to consume Kafka CDC messages. 
 
-Note that publication of CDC changes requires a [predefined implementation](03_cdc_consumers_implementation.md) in the Fabric Studio. When defining an LU in the Fabric Studio, selected LU table columns can be set to publish CDC messages each time they are updated. 
+Note that publication of CDC changes must be [predefined](03_cdc_consumers_implementation.md) in the Fabric Studio. When defining an LU in the Fabric Studio, selected LU table columns can be set to publish CDC messages each time they are updated. 
 
 To publish CDC columns to CDC consumers, LUs with CDC indexes must be deployed to Fabric:
 
