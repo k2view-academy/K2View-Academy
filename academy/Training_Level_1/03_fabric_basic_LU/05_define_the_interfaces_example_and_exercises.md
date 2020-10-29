@@ -20,14 +20,11 @@ Considering the information above, which interface should be used ? **CRM DB**
 
 Go to the **Project Tree**, right click the **CRM_DB interface** and select **Query Builder** or click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. 
 
-The Query Builder is displayed where you can see the list of tables and execute the following sample query.
-
-How many customers do you have?
+The Query Builder is displayed where you can see the list of tables. Which SQL query do you need to execute to show how many customers there are in the Customer table?
 
 ```sql
 Select count (*) From CUSTOMER
 
-results:10,000
 ```
 
  
@@ -49,7 +46,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 
 1. `Question: List the tables that are part of the Schema.`
 
-2. `Question: Which Subscriber has the largest BALANCE?`
+2. `Question: Which command would you execute to show which subscriber has the largest BALANCE?`
 
    
 
@@ -63,7 +60,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 ```
 
 
-3. `Question: How many orders are there in the database?` 
+3. `Question: Which command would you execute to show the number of orders are there in the database?` 
 
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/03_fabric_basic_LU/03_04_define_the_interfaces.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/03_fabric_basic_LU/06_define_the_interfaces_solutions.md)
