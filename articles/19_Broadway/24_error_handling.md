@@ -2,18 +2,18 @@
 
 Broadway has a built-in error handling mechanism that handles exceptions in a flow using **Error Handlers**. 
 
-An error handler can be assigned per each flow's [Stage](19_broadway_flow_stages.md) in order to catch exceptions of that Stage and decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
+An error handler can be assigned to each flow's [Stage](19_broadway_flow_stages.md)  to catch its exceptions and to decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter.
 
-The Broadway error handling is similar to the **Java try and catch** mechanism and it works as follows:
+Error handling in Broadway is similar to the **Java try and catch** mechanism and works as follows:
 
-* If during the Stage execution the exception is thrown, the error handler is triggered.
+* If an exception is thrown during the execution of a Stage, an error handler is triggered.
 * The error handler catches the exception.
-* Then the Actor's logic is validated by the error handler: 
+* The Actor's logic is then validated by the error handler: 
   * When an error handler returns true, the flow continues.
 
   * When an error handler returns false, the flow stops.
 
-In order to be able to analyze the exception, Broadway exposes the following properties:
+To analyze the exception, Broadway exposes the following properties:
 
 ~~~javascript
 error.message
@@ -23,7 +23,7 @@ error.className
 error.rootClassName
 ~~~
 
-An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. It is recommended using inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
+An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. It is recommended to use inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
 ### How Do I Add an Error Handler to a Stage?
 
@@ -33,7 +33,7 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 **Example of an Error Handler in a Flow** 
 
-1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, check that the lower number does not equal zero using the **Validation** **Error Handler** in Stage 3 of the flow. 
+1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, using the **Validation** **Error Handler** in Stage 3 of the flow, check that the lower number does not equal zero. 
 
    ![image](images/99_24_02.PNG)
 
@@ -41,9 +41,9 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
    ![image](images/99_24_03.PNG)
 
-**Example of Catching an Exception by an Error Handler**
+**Example of Catching an Exception using an Error Handler**
 
-1. Create a flow to insert an entry into the target DB using **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without failure.
+1. Create a flow that inserts an entry into the target DB using the **DbLoad** Actor. If the same data already exists in the target table, the flow should continue without a failure.
 
 2. To catch the DB exception, add the **DbExeptionCheck** error handler using the **JavaScript** Actor to the **LU Table** Stage as follows:
 
@@ -60,20 +60,20 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
        false;
    ~~~
 
-4. When **DbLoad** Actor tries to insert the data which already exists in the table, *SQLiteException* is thrown and the **Error Handler** catches it and returns **true** to continue the flow.
+4. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the **Error Handler** catches it and returns **true** to continue the flow.
 
 **Example of Handling an Error Using an Inner Flow**
 
-1. Create a simple flow that performs a validation and throws an error. For example, check that the input number is not zero and if it is - throw an exception. 
+1. Create a simple flow that performs a validation and throws an error. For example, check that the input number is not zero and if it is, throw an exception. 
 
    - Throw an exception using a **JavaScript** Actor: *throw "Can't divide by zero!"*.
-   - Validation the input using a **JavaScript** **Error Handler** which checks: *a != 0*.
+   - Validate the input using a **JavaScript** **Error Handler** which checks: *a != 0*.
 
    ![image](images/99_24_04.PNG)
 
-2. Save the flow and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor). The name of the flow is **CheckZeroDiv** and the name of the new Actor is **CheckZeroDiv_Actor**.
+2. Save the flow as **CheckZeroDiv** and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **CheckZeroDiv_Actor**.
 
-3. Create another flow that requires validation of a zero division and name it **myFlow** and then add a new **CheckZeroDiv_Actor** to it as an inner flow. If during the flow's execution the error occurs (min number = 0), the exception is thrown and the flow stops.
+3. Create another flow that requires the validation of a zero division and name it **myFlow** and then add a new **CheckZeroDiv_Actor** to it as an inner flow. If during the flow's execution the error occurs (min number = 0), the exception is thrown and the flow stops.
 
    ![image](images/99_24_05.PNG)
 
