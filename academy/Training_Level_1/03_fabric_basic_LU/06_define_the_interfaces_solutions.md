@@ -14,12 +14,12 @@ From main.INVOICE
 Group By INVOICE.SUBSCRIBER_ID
 ```
 
-Check the highest value for ``` sum(INVOICE.BALANCE)``` in the result table of the query builder: 8021.
+Check the highest value for ``` sum(INVOICE.BALANCE)``` in the result table of the query builder.
 
-Check the associated subscriber_id value: ```14825``` in the juxtaposing column.
+Check the associated subscriber_id value (in the juxtaposing column) matching the value discovered in the query builder.
 
 
-3. `Answer: 37351 orders`
+3. `select count(*) from orders`
 
 
  
