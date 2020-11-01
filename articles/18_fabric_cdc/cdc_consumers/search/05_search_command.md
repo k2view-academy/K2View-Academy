@@ -40,7 +40,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html
   - query_string
 
 - #### Search Example
-  - Search lutype=CUSTOMER table=CUSTOMER '{ "query": { "query_string": { "fields": ["FIRST_NAME"], "query": "Tal*" } } }';
+  - Search lutype=CUSTOMER tables=CUSTOMER '{ "query": { "query_string": { "fields": ["FIRST_NAME"], "query": "Tal*" } } }';
 
 ### 2. Identical Values, Case Sensitive Check
 
