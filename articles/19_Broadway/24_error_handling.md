@@ -64,13 +64,13 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 **Example 3 - Catching an Exception using an Error Handler Implemented by an Inner Flow**
 
-The following is an example of Error Handling using an inner flow as an **Error Handler**. Use the flow created in Example 2, replace the **JavaScript** Error Handler with the **Inner Flow** Error Handler. 
+The following is an example of Error Handling using an inner flow as an **Error Handler**. Use the flow created in Example 2 and replace the **JavaScript** Error Handler with the **Inner Flow** Error Handler. 
 
 The flow inserts an entry into the target DB using the **DbLoad** Actor. If the same data exists in the target table, the Error Handler is triggered by the SQLite exception and performs the inner flow logic - print a message into the log and continue without a failure.
 
 1. Create an inner flow as follows:
    -  Stage 1, **Logger** Actor to print the message into the log file.
-   -  Stage 2, **JavaScript** Actor to return **true** and prevent failure in the main flow.
+   -  Stage 2, **JavaScript** Actor to return **true** to prevent failure in the main flow.
 
    ![image](images/99_24_09.PNG)
 
@@ -78,11 +78,11 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 3. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
 
-4. Using the flow in Example 2 as the main flow, modify it so that it uses an **errorHndlFlow_Actor** as an Error Handler in the LU Table Stage. 
+4. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow_Actor** as an Error Handler in the LU Table Stage. 
 
    ![image](images/99_24_10.PNG)
 
-5. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the **Error Handler** catches and executes the inner flow which returns **true** to continue the flow.
+5. When the **DbLoad** Actor attempts to insert data that already exists into the table, an *SQLiteException* is thrown and the **Error Handler** catches and executes the inner flow which returns **true** to continue the flow.
 
 **Example 4 - Handling an Error Using in an Inner Flow**
 
