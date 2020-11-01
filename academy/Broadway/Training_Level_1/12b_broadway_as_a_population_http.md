@@ -22,6 +22,8 @@ In this exercise you will do the following:
 
 5. Split the **Source** Stage and add the **HttpDemoServer** and **Http** Actors to the new Stage.
 
+   * Populate **Http** Actor's input arguments: **interface** = http://127.0.0.1:8841/api/v1 and **path** = /employees.
+
 6. Insert two new Stages by clicking ![image](images/three_dots_icon.png)> **Insert After** twice.
 
 7. Split the Stage and add a **JsonParser** Actor to the HTTP Actors branch. 
