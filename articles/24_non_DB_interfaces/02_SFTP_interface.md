@@ -1,6 +1,6 @@
 # SFTP Interface
 
-The SFTP interface type defines the connections between the FTP Server and a stream of file content and is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+The SFTP interface type defines the connections between the secured FTP Server and a stream of file content and is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
 
 To create a new SFTP interface:
 

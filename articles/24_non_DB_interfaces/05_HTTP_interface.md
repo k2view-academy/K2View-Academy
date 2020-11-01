@@ -1,6 +1,6 @@
 # HTTP Interface
 
-The HTTP interface type defines the connection the to HTTP host and can be used by Broadway Actors.
+The HTTP interface type defines the connection the to HTTP/s host and can be used by Broadway Actors.
 
 To create a new HTTP interface:
 
@@ -44,6 +44,12 @@ The connection settings are:
 </tbody>
 </table>
 
+
+### Example of Using HTTP Connection in Broadway Flow
+
+![image](images/03_http_2.PNG)
+
+The above Broadway flow uses a **Actor** to connect to the HTTP server populating the predefined HTTP interface into the **interface** input argument. The **path** input argument should be populated by the path relative to the interface.
 
 
 

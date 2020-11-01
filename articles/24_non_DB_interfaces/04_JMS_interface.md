@@ -1,6 +1,6 @@
 # JMS Interface
 
-The JMS interface type defines the connection to a JMS Queue or Topic using a JMS provider like RabbitMQ or Active MQ). The interface can be used by [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
+The JMS interface type defines the connection to a JMS Queue or Topic using a JMS provider (RabbitMQ , Active MQ, etc). The interface can be used by [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
 To create a new JMS interface:
 

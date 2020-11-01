@@ -20,6 +20,8 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 * [HTTP Interface](05_HTTP_interface.md)
 * [Local File System](06_local_file_sys.md)
 * [Custom Interface](07_custom_interface.md)
+* [SMTP Interface](08_SMTP_interface.md)
+* [Redis](09_redis.md)
 * Search Interface. This interface type supports cross-instance searches and is needed to enable Fabric to connect to the search engine when a Search is defined on LU tables. [Click for more information about Search Implementation Steps](/articles/18_fabric_cdc/cdc_consumers/search/02_search_implementation.md).
 
 
