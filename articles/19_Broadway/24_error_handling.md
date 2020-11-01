@@ -62,13 +62,15 @@ Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open t
 
 4. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the **Error Handler** catches it and returns **true** to continue the flow.
 
-**Example 3 - Catching an Exception by an Error Handler Implemented by Inner Flow**
+**Example 3 - Catching an Exception using an Error Handler Implemented by an Inner Flow**
 
-The following example presents how to do Error Handling using an an inner flow as an **Error Handler**. You can use the flow created in Example 2 replacing the **JavaScript** Error Handler by the **Inner Flow** Error Handler. 
+The following is an example of Error Handling using an inner flow as an **Error Handler**. Use the flow created in Example 2, replace the **JavaScript** Error Handler with the **Inner Flow** Error Handler. 
 
-The flow inserts an entry into the target DB using the **DbLoad** Actor. If the same data already exists in the target table, the Error Handler is triggered by the SQLite exception and performs the inner flow logic - print a message into the log and continue without a failure.
+The flow inserts an entry into the target DB using the **DbLoad** Actor. If the same data exists in the target table, the Error Handler is triggered by the SQLite exception and performs the inner flow logic - print a message into the log and continue without a failure.
 
-1. Create an inner flow with the **Logger** Actor in Stage 1 to print the message into the log file and **JavaScript** Actor in Stage 2 to return **true** - to prevent the failure of the main flow.
+1. Create an inner flow as follows:
+   -  Stage 1, **Logger** Actor to print the message into the log file.
+   -  Stage 2, **JavaScript** Actor to return **true** and prevent failure in the main flow.
 
    ![image](images/99_24_09.PNG)
 
@@ -76,7 +78,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 3. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
 
-4. Use the flow from Example 2 as the main flow modifying the Error Handler to use an **errorHndlFlow_Actor** as an Error Handler of LU Table Stage. 
+4. Using the flow in Example 2 as the main flow, modify it so that it uses an **errorHndlFlow_Actor** as an Error Handler in the LU Table Stage. 
 
    ![image](images/99_24_10.PNG)
 
