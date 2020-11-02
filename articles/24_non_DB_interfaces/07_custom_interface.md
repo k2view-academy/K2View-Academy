@@ -58,7 +58,7 @@ The connection settings are:
    String user = props.get("User");
    String password = props.get("Password");
    String host = props.get("Host");
-int port = Integer.parseInt(props.get("Port"));
+   int port = Integer.parseInt(props.get("Port"));
    JSch jsch = new JSch();
    Session session = jsch.getSession(user, host, port);
    session.setPassword(password);
