@@ -51,7 +51,7 @@ The connection settings are:
 
 ### Example of Using SMTP Interface in Broadway Flow
 
-![image](images/08_smtp_2.PNG)
+![image](images/08_smtp_2.png)
 
 The above Broadway flow uses an **Email** Actor to send an email via predefined SMTP interface. If the **recipients** input argument is provided, it overrides the interface's setting. 
 
