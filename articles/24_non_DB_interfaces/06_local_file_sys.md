@@ -1,6 +1,6 @@
 # Local File System
 
-This interface type supports processing files from a local directory of a specific Fabric server and can be used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+This interface type supports processing files from a local directory of a specific Fabric server and can be used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows). The directory can be either Window or Linux. 
 
 To create a new interface:
 
@@ -14,7 +14,6 @@ To create a new interface:
 
 The connection settings are:
 
-
 <table>
 <tbody>
 <tr>
@@ -23,7 +22,7 @@ The connection settings are:
 </tr>
 <tr>
 <td>&nbsp;<strong>Working Directory&nbsp;</strong></td>
-<td>&nbsp;The directory where files are stored.</td>
+<td>&nbsp;The directory where files are stored - Windows or Linux.</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Files filter</strong></td>
@@ -33,14 +32,22 @@ The connection settings are:
 </table>
 
 
-### How Do I Create a Listener Job on Local File System Interface?
+
+### Example of Using Local File System Interface
 
 To create an Interface Listener Job on a local file system interface: 
 
-1. Click the **Add interface listener as Broadway job** link and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
-2. Select the Broadway flow, Execution Mode and save the job.
+1. Create an interface using **Local File System** interface type.
 
-![images](images/02_sftp_2.PNG)
+2. Create a Broadway flow that reads data from a file using the defined interface and populates it into the DB.
+
+   ![images](images/broadway_file_read.PNG)
+
+3. Click the **Add interface listener as Broadway job** link on the Interface window and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
+
+4. Select the Broadway flow, Execution Mode and save the job.
+
+   ![images](images/02_sftp_2.PNG)
 
 
 

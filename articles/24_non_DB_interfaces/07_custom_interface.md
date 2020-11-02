@@ -1,6 +1,6 @@
 # Custom Interface
 
-The Custom interface type is used to interact with interface types that are not defined as a dedicated interface type in Fabric, such as SSH or any other interface that requires user, password, port and host. For example, to connect to Email server. 
+The Custom interface type is used to interact with interface types that are not defined as a dedicated interface type in Fabric, such as SSH or any other interface that requires user, password, port and host. For example,xxxxxx. 
 
 You can also use Custom interface type in order to store an encrypted password. For example, to connect to a website using a user and a password. Then, in order to get the password's original value, use getCustomProperties API in the user code.
 
@@ -46,5 +46,8 @@ The connection settings are:
 </table>
 
 
+### Example of Using a Custom Interface
 
-[![Previous](/articles/images/Previous.png)](06_local_file_sys.md)
+
+
+[![Previous](/articles/images/Previous.png)](06_local_file_sys.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_SMTP_interface.md) 

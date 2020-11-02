@@ -2,7 +2,7 @@
 
 The Redis interface type defines the connection to Redis in-memory storage to be used as key-value data store and enable fast access to data sets.
 
-Redis interface connection is used by K2View TDM for handling the sequences or for the masking of sensitive data.
+Redis interface connection is used by K2View TDM or by Broadway Actors for handling the sequences or for the masking of sensitive data, which is required for data uniqueness and consistency across multiple nodes or the Fabric cluster.  
 
 To create a new Redis interface:
 
@@ -84,3 +84,15 @@ The connection settings are:
 </tr>
 </tbody>
 </table>
+
+
+
+### Example of Using Redis Interface in Broadway Flow
+
+![image](images/09_redis_2.PNG)
+
+The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor is connecting to predefined Redis interface populated in the Actor's **redisInterface** input argument.
+
+
+
+[![Previous](/articles/images/Previous.png)](08_SMTP_interface.md)

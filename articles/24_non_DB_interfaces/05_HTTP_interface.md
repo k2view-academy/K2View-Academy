@@ -45,7 +45,7 @@ The connection settings are:
 </table>
 
 
-### Example of Using HTTP Connection in Broadway Flow
+### Example of Using HTTP Interface in Broadway Flow
 
 ![image](images/03_http_2.PNG)
 
