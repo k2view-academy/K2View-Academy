@@ -91,7 +91,7 @@ The connection settings are:
 
 ![image](images/09_redis_2.PNG)
 
-The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor is connecting to predefined Redis interface populated in the Actor's **redisInterface** input argument.
+The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor connects to predefined Redis interface populated in the Actor's **redisInterface** input argument.
 
 
 

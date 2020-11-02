@@ -1,4 +1,4 @@
-# Local File System
+# Local File System Interface
 
 This interface type supports processing files from a local directory of a specific Fabric server and can be used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows). The directory can be either Window or Linux. 
 
@@ -39,7 +39,7 @@ To create an Interface Listener Job on a local file system interface:
 
 1. Create an interface using **Local File System** interface type.
 
-2. Create a Broadway flow that reads data from a file using the defined interface and populates it into the DB.
+2. Create a Broadway flow that reads data from a file using the predefined interface and populates it into the DB.
 
    ![images](images/broadway_file_read.PNG)
 

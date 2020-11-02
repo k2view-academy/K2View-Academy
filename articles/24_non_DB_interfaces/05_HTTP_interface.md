@@ -49,7 +49,7 @@ The connection settings are:
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses a **Actor** to connect to the HTTP server populating the predefined HTTP interface into the **interface** input argument. The **path** input argument should be populated by the path relative to the interface.
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server populating the predefined HTTP interface into the **interface** input argument. The **path** input argument should be populated by the path relative to the interface.
 
 
 

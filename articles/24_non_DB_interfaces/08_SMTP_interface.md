@@ -6,7 +6,7 @@ To create a new SMTP interface:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **SMTP** Interface Type to open the **New Interface** window.
 
-   
+   ![image](images/08_smtp_1.PNG)
 
 2. Populate the connection settings and **Save**.
 
@@ -51,6 +51,10 @@ The connection settings are:
 
 ### Example of Using SMTP Interface in Broadway Flow
 
+![image](images/08_smtp_2.PNG)
+
+The above Broadway flow uses an **Email** Actor to send an email via predefined SMTP interface. If the **recipients** input argument is provided, it overrides the interface's setting. 
 
 
-[![Previous](/articles/images/Previous.png)](07_custom_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_redis.md) 
+
+[![Previous](/articles/images/Previous.png)](07_custom_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_redis_interface.md) 
