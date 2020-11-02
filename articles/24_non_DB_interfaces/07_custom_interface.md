@@ -1,6 +1,6 @@
 # Custom Interface
 
-The Custom interface type is used to interact with interface types that are not defined as a dedicated interface type in Fabric, such as SSH or any other interface that requires user, password, port and host. For example,xxxxxx. 
+The Custom interface type is used to interact with interface types that are not defined as a dedicated interface type in Fabric, such as SSH or any other interface that requires user, password, port and host.  
 
 You can also use Custom interface type in order to store an encrypted password. For example, to connect to a website using a user and a password. Then, in order to get the password's original value, use getCustomProperties API in the user code.
 
@@ -48,6 +48,17 @@ The connection settings are:
 
 ### Example of Using a Custom Interface
 
+1. Define a custom interface type.
 
+2. In the Fabric user code, get the connection details using **getCustomProperties()** API as follows:
+
+   ~~~java
+   String remoteHost = getCustomProperties("myCustomInterface").get("Host");
+   String remotePort = getCustomProperties("myCustomInterface").get("Port");
+   String username = getCustomProperties("myCustomInterface").get("User");
+   String password = getCustomProperties("myCustomInterface").get("Password");
+   ~~~
+
+   
 
 [![Previous](/articles/images/Previous.png)](06_local_file_sys.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_SMTP_interface.md) 
