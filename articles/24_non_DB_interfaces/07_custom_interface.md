@@ -48,17 +48,28 @@ The connection settings are:
 
 ### Example of Using a Custom Interface
 
-1. Define a custom interface type.
+1. Define a **Custom** interface type.
 
 2. In the Fabric user code, get the connection details using **getCustomProperties()** API as follows:
 
    ~~~java
-   String remoteHost = getCustomProperties("myCustomInterface").get("Host");
-   String remotePort = getCustomProperties("myCustomInterface").get("Port");
-   String username = getCustomProperties("myCustomInterface").get("User");
-   String password = getCustomProperties("myCustomInterface").get("Password");
+   String remoteFile = "/home/k2view/Test-Automaton-Report.html";
+   Map<String, String> props = getCustomProperties("CustomInterface");
+   String user = props.get("User");
+   String password = props.get("Password");
+   String host = props.get("Host");
+int port = Integer.parseInt(props.get("Port"));
+   JSch jsch = new JSch();
+   Session session = jsch.getSession(user, host, port);
+   session.setPassword(password);
+   session.connect();
+   log.info("Connection established.");
+   ChannelSftp sftpChannel = (ChannelSftp) session.openChannel("sftp");
+   sftpChannel.connect();
+   log.info("SFTP Channel created.");
+   InputStream inputStream = sftpChannel.get(remoteFile);
    ~~~
-
+   
    
 
 [![Previous](/articles/images/Previous.png)](06_local_file_sys.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_SMTP_interface.md) 
