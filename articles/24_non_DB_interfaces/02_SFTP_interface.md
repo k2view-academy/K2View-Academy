@@ -1,10 +1,10 @@
 # SFTP Interface
 
-The SFTP interface type defines the connections between the secured FTP Server (a remote server with SSH connection) and a stream of file content and is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+An SFTP interface defines the connections between a secured FTP server (a remote server with an SSH connection) and a stream of file content and is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
 
 To create a new SFTP interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **SFTP** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/02_sftp_1.PNG)
 
@@ -12,7 +12,6 @@ To create a new SFTP interface:
 
 ### Connection Settings
 
-The connection settings are:
 
 <table>
 <tbody>
@@ -55,15 +54,15 @@ The connection settings are:
 
 To create an Interface Listener Job on an SFTP interface: 
 
-1. Create an interface using **SFTP** interface type.
+1. Create an interface using an **SFTP** interface.
 
 2. Create a Broadway flow that reads data from a file using the predefined interface and populates it into the DB.
 
    ![images](images/broadway_file_read.PNG)
 
-3. Click the **Add interface listener as Broadway job** link on the Interface window and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
+3. Click the **Add interface listener as Broadway job** link in the Interface window and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
 
-4. Select the Broadway flow, Execution Mode and save the job.
+4. Select the **Broadway flow** and **Execution mode** and then save the job.
 
 ![images](images/02_sftp_2.PNG)
 
