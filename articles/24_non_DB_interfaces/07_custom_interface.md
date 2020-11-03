@@ -46,7 +46,7 @@ The connection settings are:
 </table>
 
 
-### Example of Using a Custom Interface
+### Example of Using a Custom Interface to Connect to a Session
 
 1. Define a **Custom** interface type.
 
@@ -70,6 +70,20 @@ The connection settings are:
    InputStream inputStream = sftpChannel.get(remoteFile);
    ~~~
    
-   
+
+### Example of Using a Custom Interface to Encode a Password
+
+1. Define a **Custom** interface type.
+2. In the Fabric user code, get the connection details using **getCustomProperties()** API as follows:
+
+~~~java
+Map <String,String> mapInterface = getCustomProperties("intPdmBambooHR");
+final String USERNAME = mapInterface.get("User");
+final String PASSWORD = mapInterface.get("Password");
+		
+String encodedUPass = Base64.getEncoder()		                               .encodeToString((USERNAME+":"+PASSWORD).getBytes(StandardCharsets.UTF_8.name()));
+~~~
+
+
 
 [![Previous](/articles/images/Previous.png)](06_local_file_sys.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_SMTP_interface.md) 
