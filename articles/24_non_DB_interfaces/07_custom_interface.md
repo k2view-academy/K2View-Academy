@@ -77,7 +77,7 @@ The connection settings are:
 2. In the Fabric user code, get the connection details using **getCustomProperties()** API as follows:
 
 ~~~java
-Map <String,String> mapInterface = getCustomProperties("intPdmBambooHR");
+Map <String,String> mapInterface = getCustomProperties("myCustInterface");
 final String USERNAME = mapInterface.get("User");
 final String PASSWORD = mapInterface.get("Password");
 		
