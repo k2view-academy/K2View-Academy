@@ -81,7 +81,7 @@ Map <String,String> mapInterface = getCustomProperties("intPdmBambooHR");
 final String USERNAME = mapInterface.get("User");
 final String PASSWORD = mapInterface.get("Password");
 		
-String encodedUPass = Base64.getEncoder()		                               .encodeToString((USERNAME+":"+PASSWORD).getBytes(StandardCharsets.UTF_8.name()));
+String encodedUPass = Base64.getEncoder().encodeToString((USERNAME+":"+PASSWORD).getBytes(StandardCharsets.UTF_8.name()));
 ~~~
 
 
