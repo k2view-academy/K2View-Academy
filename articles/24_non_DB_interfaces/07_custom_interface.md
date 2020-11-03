@@ -52,23 +52,23 @@ The connection settings are:
 
 2. In the Fabric user code, get the connection details using **getCustomProperties()** API as follows:
 
-   ~~~java
-   String remoteFile = "/home/k2view/Test-Automaton-Report.html";
-   Map<String, String> props = getCustomProperties("CustomInterface");
-   String user = props.get("User");
-   String password = props.get("Password");
-   String host = props.get("Host");
-   int port = Integer.parseInt(props.get("Port"));
-   JSch jsch = new JSch();
-   Session session = jsch.getSession(user, host, port);
-   session.setPassword(password);
-   session.connect();
-   log.info("Connection established.");
-   ChannelSftp sftpChannel = (ChannelSftp) session.openChannel("sftp");
-   sftpChannel.connect();
-   log.info("SFTP Channel created.");
-   InputStream inputStream = sftpChannel.get(remoteFile);
-   ~~~
+~~~java
+String remoteFile = "/home/k2view/Test-Automaton-Report.html";
+Map<String, String> props = getCustomProperties("CustomInterface");
+String user = props.get("User");
+String password = props.get("Password");
+String host = props.get("Host");
+int port = Integer.parseInt(props.get("Port"));
+JSch jsch = new JSch();
+Session session = jsch.getSession(user, host, port);
+session.setPassword(password);
+session.connect();
+log.info("Connection established.");
+ChannelSftp sftpChannel = (ChannelSftp) session.openChannel("sftp");
+sftpChannel.connect();
+log.info("SFTP Channel created.");
+InputStream inputStream = sftpChannel.get(remoteFile);
+~~~
    
 
 ### Example of Using a Custom Interface to Encode a Password
