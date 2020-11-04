@@ -1,18 +1,15 @@
 # SMTP Interface
 
-The SMTP interface type defines the connection to SMTP (Simple Mail Transfer Protocol) server for sending and receiving emails 
+An SMTP interface defines the connections to the SMTP (Simple Mail Transfer Protocol) server used to send and receive emails. 
 
 To create a new SMTP interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **SMTP** Interface Type to open the **New Interface** window.
-
-   ![image](images/08_smtp_1.PNG)
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SMTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 2. Populate the connection settings and **Save**.
 
 ### Connection Settings
 
-The connection settings are:
 
 <table>
 <tbody>
@@ -49,11 +46,11 @@ The connection settings are:
 
 
 
-### Example of Using SMTP Interface in Broadway Flow
+### Example of Using an SMTP Interface in a Broadway Flow
 
 ![image](images/08_smtp_3.PNG)
 
-The above Broadway flow uses an **Email** Actor to send an email via predefined SMTP interface. If the **recipients** input argument is provided, it overrides the interface's setting. 
+The above Broadway flow uses an **Email** Actor to send an email via a predefined SMTP interface. If a **recipient's** input argument is provided, it overrides the interface's setting. 
 
 
 
