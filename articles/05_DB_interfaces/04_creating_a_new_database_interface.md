@@ -3,38 +3,38 @@
 ### How Do I Create a Database Interface?
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
-The following screenshot displays a list of supported built-in interface types.
-     * ![image](/articles/05_DB_interfaces/images/05_04_icon1.png) = DB interfaces.
-     * ![image](/articles/05_DB_interfaces/images/05_04_icon2.png) = Non-DB interfaces.
+The following screenshot displays a list of available Interface Types.
+     * ![image](images/05_04_icon1.png) = DB interfaces.
+     * ![image](images/05_04_icon2.png) = Non-DB interfaces.
 
-![image](/articles/05_DB_interfaces/images/05_04_01%20interface%20types.png)
+![image](images/05_04_01_interface_types.PNG)
 
 2. Click **Interface Type** and select the **Type** value to open the **DB Interface** window. The **DB Interface** window displays the Connection IDs and Connection Details to be populated. 
 
-![image](/articles/05_DB_interfaces/images/05_04_02%20DB%20Interface.png)
+![image](images/05_04_02_DB_Interface.PNG)
 
-3. Populate the **DB Connection Name** and set the **Connection** to **Active**.
+3. Populate the **DB Connection Name** and set **Active** to **True**.
 
-4. Populate the [**Connection Settings**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings):
+4. Populate the [**Connection Details**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md#database-connection-settings).
 
     * For DB Interface types other than Oracle, PostgreSQL or SQL Server, go to the project's **Lib directory** in Windows at:
-    **[Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
-     
+    **[Fabric Project's Directory]\\[Project Name]\lib** and add a **JDBC driver jar** of this DB type there.   
+    
     * To check if the connection settings are correct, click the **Test Connection String**:
        * If the connection is OK, the **Connection is OK** notification is displayed on the bottom of the window.
        * If the connection fails, a description of the problem is displayed on the bottom of the window. 
     
 5. Optional: Edit the **Pool Properties**.
 
-6. Optional: Set the **Post Connection Commands** to define multi commands to be executed post JDBC interface connection on the DB Interface.
+6. Optional: Set the [**Post Connection Commands**](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md#post-connection-commands) to define multi commands to be executed post JDBC interface connection on the DB Interface.
 
 7. Click **Save**.
 
     
 
-Note that if required, a [new Database Type] can be defined or an existing Database Type can be overwritten as a part of a product package.
+Note that if required, a new database type can be defined or an existing database type can be overwritten as a part of a product package.
 
-Click for more information about Generic DB Solution, DB Drivers Jars in Fabric Studio and Server.
+[Click for more information about the Database Types](/articles/05_DB_interfaces/10_database_types.md).
 
 ### DB Interface Window
 
@@ -43,7 +43,7 @@ The DB Interface window enables you to define DB interfaces for your project. By
 
 #### Generic Interface Definition
 
-![image](/articles/05_DB_interfaces/images/05_04_03%20Generic%20Interface%20Definition.png)
+![image](images/05_04_03%20Generic%20Interface%20Definition.png)
 
 Interfaces created using previous Fabric versions remain as is and can be converted to the generic interface.
 
@@ -52,7 +52,7 @@ Interfaces created using previous Fabric versions remain as is and can be conver
 
 The following screenshot displays an interface configuration in an older format which uses ADO.NET/ODBC drivers.
 
-![image](/articles/05_DB_interfaces/images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
+![image](images/05_04_04%20Previous%20Fabric%20Version%20Interface%20Definition.png)
 
 
 #### When are Interfaces Created in an Older Format in the Current Fabric Version?
@@ -77,4 +77,4 @@ The **Post Connection Commands** tab of the DB Interface window enables definiti
 
 ![post connection](images/db_interface_post_connection_commands.png)
 
-[![Previous](/articles/images/Previous.png)](/articles/05_DB_interfaces/03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md)
+[![Previous](/articles/images/Previous.png)](03_DB_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_adding_a_fabric_remote_interface_type.md)

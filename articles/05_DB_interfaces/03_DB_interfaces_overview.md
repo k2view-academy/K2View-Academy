@@ -16,16 +16,17 @@ A database interface includes the following details:
 
 ### Database Connection Settings
 
-Accurate definition of connection settings is especially important when building a DB interface. The connection settings defined depend on whether the interface is a DB interface or a Non-DB interface. The following fields are displayed for all types of DB interfaces: 
+When building a DB interface it is very important that connection settings are defined accurately. Connection setting parameters depend on whether the interface is a DB interface or a Non-DB interface. 
+The following fields are displayed for all types of DB interfaces: 
 
 <table width="643">
 <tbody>
 <tr>
-<td width="300pxl">
+<td width="200pxl">
 <p><strong>Name</strong></p>
 </td>
-<td width="600pxl">
-<p><strong>Filename of the database.</strong></p>
+<td width="700pxl">
+<p>Database Filename.</p>
 </td>
 </tr>
 <tr>
@@ -33,7 +34,7 @@ Accurate definition of connection settings is especially important when building
 <p><strong>Active</strong></p>
 </td>
 <td width="433">
-<p>When checked indicates if the database connection is active during runtime. This parameter allows you to disable a connection so that it is ignored by the server side.</p>
+<p>When checked indicates whether the database connection is active during runtime. When a connection is disabled it is ignored by the server side.</p>
 </td>
 </tr>
 <tr>
@@ -66,8 +67,8 @@ Accurate definition of connection settings is especially important when building
 </td>
 <td width="433">
   <p>Database, schema or service name. </p>
-  <p> Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
-<p>For example: C:\Users\TaliEinhorn\Documents\Knowledge Base\KB_DB_Scripts\SqliteDB\crm_db.db </p>
+  <p>Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
+<p>For example: C:\SqliteDB\crm_db.db </p>
 </td>
 </tr>
 <tr>
@@ -131,11 +132,20 @@ Accurate definition of connection settings is especially important when building
 <p><strong><h4>Schema Filter</strong></p>
 </td>
 <td width="433">
-<p>Name of the Database Schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
+<p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
+</td>
+</tr>
+<tr>
+<td width="210">
+<p><strong><h4>Connection Properties</strong></p>
+</td>
+<td width="433">
+<p>List of JDBC Connection Properties of the selected <a href="10_database_types.md">Interface type</a>. This section is visible only when the selected Interface type has any JDBC Connection Properties. </p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
