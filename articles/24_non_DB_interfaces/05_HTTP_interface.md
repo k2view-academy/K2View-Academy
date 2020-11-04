@@ -1,18 +1,17 @@
 # HTTP Interface
 
-The HTTP interface type defines the connection the to HTTP/s host and can be used by Broadway Actors.
+An HTTP interface defines the connection to an HTTP/s host and can be used by Broadway Actors.
 
 To create a new HTTP interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **HTTP** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **HTTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
+
 
    ![image](images/03_http_1.png)
 
 2. Populate the connection settings and **Save**.
 
 ### Connection Settings
-
-The connection settings are:
 
 
 <table>
@@ -45,11 +44,11 @@ The connection settings are:
 </table>
 
 
-### Example of Using HTTP Interface in Broadway Flow
+### Example of Using an HTTP Interface in a Broadway Flow
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server populating the predefined HTTP interface into the **interface** input argument. The **path** input argument should be populated by the path relative to the interface.
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server populating the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface.
 
 
 
