@@ -53,7 +53,7 @@ The condition Actor can have any number of output parameters, however a True / F
 
 [Click for more information about Broadway data types](05_data_types.md).
 
-The **else** condition can be set only on a Stage on the same level and is only executed if all conditions are false. Stages without a Stage condition or marked as **else** are always executed and have no impact on the **else** Stage.
+The **else** condition can be set on a Stage on the same level as the Stage Condition and is only executed if all conditions are false. Stages without a Stage condition are always executed and have no impact on the **else** Stage.
 
 The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 -  If a Stage condition is false, the execution of its branch stops.
@@ -72,7 +72,9 @@ To mark a Stage as **else**, click ![image](images/99_19_dots.PNG) > **Else**.
 
 Note that although any Actor can be used as a condition, a **JavaScript** Actor is a powerful actor for expressing complex conditions. The script returns the value of the last line and does not expect the **return** keyword.
 
-**Stage Conditions Example**
+### Stage Conditions Example
+
+**Example 1**
 
 The following example shows a flow with four Stages on the second flow level:
 -  Two Stages have conditions.
@@ -89,5 +91,15 @@ Depending on the flow input, the execution order of the Actors in this flow is:
 - If both **Cond1 and Cond2 are false**: A1 -> Cond1 (false) -> Cond2 (false) -> B2 -> B3 -> Logger1 -> Logger2
 
 ![image](images/99_19_cond_example_1.PNG)
+
+**Example 2**
+
+The following example displays a split flow with a condition and an else Stage. Then each branch is also split into a condition and an else Stage.
+
+Depending on the flow input, the execution can run via one of four alternatives on the third level.
+
+![image](images/99_19_cond_example_2.PNG)
+
+
 
 [![Previous](/articles/images/Previous.png)](18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)

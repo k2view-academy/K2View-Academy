@@ -13,7 +13,7 @@ Error handling in Broadway is similar to the **Java try and catch** mechanism an
 
   * When an error handler returns false, the flow stops.
 
-To analyze the exception, Broadway exposes the following properties:
+To analyze the exception, Broadway exposes the **error** object with the following properties:
 
 ~~~javascript
 error.message
@@ -23,7 +23,9 @@ error.className
 error.rootClassName
 ~~~
 
-An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. It is recommended to use inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
+An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. The **error** object can be passed to the inner flow for the analysis and further handling (for example, writing an error message into the DB).
+
+It is recommended to use inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
 ### How Do I Add an Error Handler to a Stage?
 
@@ -70,19 +72,29 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 1. Create an inner flow as follows:
    -  Stage 1, add the **Logger** Actor to print the message into the log file.
-   -  Stage 2, add the **JavaScript** Actor to return **true** to prevent failure in the main flow.
+   -  Stage 2, add the **JavaScript** Actor to return **true** to prevent failure in the main flow. Note that the **result** output argument should be set as **External**. 
+
+2. Set the **message** input argument of the **Logger** Actor to **Const** and write the following in it:
+
+   ~~~
+   Failed to write into ${table} 
+   for IID = ${iid} and 
+   contract ID = ${contract}
+   ~~~
+
+3. The **Logger** Actor receives 3 input arguments: table name, IID and contract ID. Set them to **External**.
+
+4. Add an **error** input argument to the  **JavaScript** Actor and set it to **External**. Using the **error** object you can analyze the error and handle it as needed.
 
    ![image](images/99_24_09.PNG)
 
-2. The Logger Actor receives 3 **External** input arguments: table name, IID and contract ID.
+5. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
 
-3. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
-
-4. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow_Actor** as an Error Handler in the LU Table Stage. 
+6. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow_Actor** as an Error Handler in the LU Table Stage. 
 
    ![image](images/99_24_10.PNG)
 
-5. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the **Error Handler** catches and executes the inner flow which returns **true** to continue the flow.
+7. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the **Error Handler** catches and executes the inner flow which returns **true** to continue the flow.
 
 **Example 4 - Handling an Error Using in an Inner Flow**
 
