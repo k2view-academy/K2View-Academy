@@ -2,7 +2,7 @@
 
 The HTTP interface type defines the connections to an HTTP/s host and can be used by Broadway Actors.
 
-To create a new HTTP interface:
+To create a new HTTP interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **HTTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
