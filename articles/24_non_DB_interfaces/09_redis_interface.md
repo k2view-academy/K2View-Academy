@@ -1,10 +1,9 @@
 # Redis Interface
-
-A Redis interface defines the connection to the Redis in-memory storage used as key-value data storage to enable quick access to data sets.
+The Redis interface type defines the connections to the Redis in-memory storage used as key-value data storage to enable quick access to data sets.
 
 A Redis interface connection is used by K2View TDM or by Broadway Actors to handle sequences or to mask sensitive data which is required for data uniqueness and consistency across multiple nodes or a Fabric cluster.  
 
-To create a new Redis interface:
+To create a new Redis interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Redis** from the  **Interface Type** dropdown menu to open the **New Interface** window.
 
