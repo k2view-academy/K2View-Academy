@@ -6,6 +6,8 @@ To create a new SMTP interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SMTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
+   ![image](images/08_smtp_1.PNG)
+
 2. Populate the connection's settings and **Save**.
 
 ### Connection Settings

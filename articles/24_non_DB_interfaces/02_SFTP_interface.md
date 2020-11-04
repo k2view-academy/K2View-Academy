@@ -14,7 +14,6 @@ To create a new SFTP interface, do the following:
 
 ### Connection Settings
 
-
 <table>
 <tbody>
 <tr>
@@ -39,7 +38,7 @@ To create a new SFTP interface, do the following:
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Type of file</td>
+<td>Regular expression</td>
 </tr>
 <tr>
 <td><strong>Actions</strong></td>
@@ -52,9 +51,10 @@ To create a new SFTP interface, do the following:
 </table>
 
 
+
 ### Example of Using an SFTP Interface
 
-To create an Interface Listener Job in an SFTP interface, do the following: 
+To create an Interface Listener Job that runs on an SFTP interface, do the following: 
 
 1. Create an interface using an **SFTP** interface.
 

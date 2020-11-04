@@ -2,17 +2,15 @@
 
 A Kafka interface type defines the connections to Apache Kafka and can be used by the [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md), iidFinder or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
-To create a new Kafka interface:
+To create a new Kafka interface, do the following:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select the **Kafka** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Kafka** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/04_kafka_1.PNG)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and click **Save**.
 
 ### Connection Settings
-
-The connection settings are:
 
 <table>
 <tbody>

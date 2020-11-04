@@ -47,7 +47,7 @@ To create an Interface Listener Job in a Local File System interface, do the fol
 
 3. Click the **Add interface listener as Broadway job** link in the Interface window and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) to open the Jobs window. 
 
-4. Select the **Broadway flow**, **Execution mode** and then save the job.
+4. Select the **Broadway flow** and **Execution mode** and then save the job.
 
    ![images](images/02_sftp_2.PNG)
 

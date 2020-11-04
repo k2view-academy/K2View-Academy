@@ -2,7 +2,7 @@
 
 The Custom interface type is used to interact with interfaces that are not defined as dedicated interface types in Fabric, such as SSH or any interface that requires a user, password, port and host.  
 
-A Custom interface type can be used to store encrypted passwords. For example, to connect to a website using a user and a password and to then use the getCustomProperties API in the user code to get the password's original value.
+A Custom interface type can be used to store encrypted passwords. For example, to connect to a website using a user and a password, use the getCustomProperties API in the user code to get the password's original value.
 
 To create a new interface, do the following:
 
@@ -67,7 +67,7 @@ sftpChannel.connect();
 log.info("SFTP Channel created.");
 InputStream inputStream = sftpChannel.get(remoteFile);
 ~~~
-   
+
 
 ### Example of Using a Custom Interface to Encode a Password
 

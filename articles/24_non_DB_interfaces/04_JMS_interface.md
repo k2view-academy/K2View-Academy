@@ -2,17 +2,15 @@
 
 The JMS interface type defines the connection to a JMS Queue or Topic using a JMS provider (RabbitMQ , Active MQ, etc). The interface can be used by [Broadway Pub / Sub Actors](/articles/19_Broadway/actors/05_db_actors.md) or by [User Jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
-To create a new JMS interface:
+To create a new JMS interface, do the following:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select the **JMS** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **JMS** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/jms_1.png)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and click **Save**.
 
 ### Connection Settings
-
-The connection settings are:
 
 <table>
 <tbody>
