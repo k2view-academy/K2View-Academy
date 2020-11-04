@@ -1,6 +1,8 @@
 # SFTP Interface
 
-An SFTP interface defines the connections between a secured FTP server (a remote server with an SSH connection) and a stream of file content and is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+The SFTP interface type defines the connections between a secured FTP server (a remote server with an SSH connection) and a stream of file content.
+
+An SFTP interface is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
 
 To create a new SFTP interface:
 
@@ -8,7 +10,7 @@ To create a new SFTP interface:
 
    ![image](images/02_sftp_1.PNG)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and **Save**.
 
 ### Connection Settings
 
@@ -52,7 +54,7 @@ To create a new SFTP interface:
 
 ### Example of Using an SFTP Interface
 
-To create an Interface Listener Job on an SFTP interface: 
+To create an Interface Listener Job in an SFTP interface: 
 
 1. Create an interface using an **SFTP** interface.
 
