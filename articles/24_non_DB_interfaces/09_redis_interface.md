@@ -1,20 +1,19 @@
 # Redis Interface
 
-The Redis interface type defines the connection to Redis in-memory storage to be used as key-value data store and enable fast access to data sets.
+A Redis interface defines the connection to the Redis in-memory storage used as key-value data storage to enable quick access to data sets.
 
-Redis interface connection is used by K2View TDM or by Broadway Actors for handling the sequences or for the masking of sensitive data, which is required for data uniqueness and consistency across multiple nodes or the Fabric cluster.  
+A Redis interface connection is used by K2View TDM or by Broadway Actors to handle sequences or to mask sensitive data which is required for data uniqueness and consistency across multiple nodes or a Fabric cluster.  
 
 To create a new Redis interface:
 
-1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select the **Redis** Interface Type to open the **New Interface** window.
+1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Redis** from the  **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/09_redis_1.PNG)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection settings and click **Save**.
 
 ### Connection Settings
 
-The connection settings are:
 
 <table>
 <tbody>
@@ -32,11 +31,11 @@ The connection settings are:
 </tr>
 <tr>
 <td><strong>Connection Timeout</strong></td>
-<td>How long to allow for new connections to be established (in milliseconds)</td>
+<td>Amount of time to allow new connections to be established (in milliseconds)</td>
 </tr>
 <tr>
 <td><strong>Socket Timeout</strong></td>
-<td>How long to wait for a response from Redis (in milliseconds)</td>
+<td>Amount of time to wait for a response from Redis (in milliseconds)</td>
 </tr>
 <tr>
 <td><strong>Max Attempts</strong></td>
@@ -52,7 +51,7 @@ The connection settings are:
 </tr>
 <tr>
 <td><strong>Min Idle</strong></td>
-<td>Number of ready for immediate use&nbsp; connections that remain in the pool even when load had reduced</td>
+<td>Number of connections that are ready for immediate use that remain in the pool even when the load has been reduced</td>
 </tr>
 <tr>
 <td><strong>Test On Borrow</strong></td>
@@ -68,7 +67,7 @@ The connection settings are:
 </tr>
 <tr>
 <td><strong>Min Evictable Idle</strong></td>
-<td>Specifies the minimus amount of time a connection may be idle in the pool before it is eligible for eviction due to idle time</td>
+<td>Minimum amount of time a connection is idle in the pool before it is evicted due to being idle</td>
 </tr>
 <tr>
 <td><strong>Eviction Run Intervals</strong></td>
@@ -79,7 +78,7 @@ The connection settings are:
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><strong>Block When Exhaused</strong></td>
+<td><strong>Block When Exhausted</strong></td>
 <td>&nbsp;</td>
 </tr>
 </tbody>
@@ -87,11 +86,11 @@ The connection settings are:
 
 
 
-### Example of Using Redis Interface in Broadway Flow
+### Example of Using a Redis Interface in a Broadway Flow
 
 ![image](images/09_redis_2.PNG)
 
-The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor connects to predefined Redis interface populated in the Actor's **redisInterface** input argument.
+The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor connects to a predefined Redis interface populated in the Actor's **redisInterface** input argument.
 
 
 
