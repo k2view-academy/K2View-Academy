@@ -1,16 +1,16 @@
 # Custom Interface
 
-A Custom interface is used to interact with interfaces that are not defined as dedicated interface types in Fabric, such as SSH or any interface that requires a user, password, port and host.  
+The Custom interface type is used to interact with interfaces that are not defined as dedicated interface types in Fabric, such as SSH or any interface that requires a user, password, port and host.  
 
 A Custom interface type can be used to store encrypted passwords. For example, to connect to a website using a user and a password and to then use the getCustomProperties API in the user code to get the password's original value.
 
-To create a new interface:
+To create a new interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Custom** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
    ![image](images/custom_1.PNG)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and click **Save**.
 
 ### Connection Settings
 
@@ -48,7 +48,7 @@ To create a new interface:
 
 1. Define a **Custom** interface.
 
-2. In the Fabric user code, get the connection details using the **getCustomProperties()** API as follows:
+2. In the Fabric user code, get the connection's details using the **getCustomProperties()** API as follows:
 
 ~~~java
 String remoteFile = "/home/k2view/Test-Automaton-Report.html";
@@ -72,7 +72,7 @@ InputStream inputStream = sftpChannel.get(remoteFile);
 ### Example of Using a Custom Interface to Encode a Password
 
 1. Define a **Custom** interface type.
-2. In the Fabric user code, get the connection details using the **getCustomProperties()** API as follows:
+2. In the Fabric user code, get the connection's details using the **getCustomProperties()** API as follows:
 
 ~~~java
 Map <String,String> mapInterface = getCustomProperties("myCustInterface");
