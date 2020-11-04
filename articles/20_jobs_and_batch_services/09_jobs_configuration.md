@@ -28,7 +28,7 @@ If set to ‘LOCAL QUORUM’ => transaction 1 locks the instance till the transa
 
 Node and cluster-related configuration variables can be set in this file which is saved in the **k2view/config/node.ini** file.
 
-A set number of logical names or node identifiers for the node can be defined in the **node.id** file in the **k2view/config**. Node identifiers can be used in the Job Affinity mechanism. 
+A set number of logical names or node identifiers for the node can be defined in the **node.ini** file in the **k2view/config** repository. Node identifiers can be used in the Job Affinity mechanism. 
 
 Note that there can be more than one logical name since a node can have more than one logical role.
 The node UUID is unique and if left undefined, Fabric generates a random node when starting up the first time.
@@ -69,9 +69,9 @@ Note:
 #### *ANY* flag
 The *ANY* option is - by default - attributed to all nodes and only applies to jobs that were defined without affinity. This means that any node can contribute and compete for the execution of the jobs that were defined without a specific affinity.
 
-1. It is possible to exclude a node for by setting the *ANY* flag to 0 in the node.id file - in which case, the node will not execute jobs defined without affinity. 
+1. It is possible to exclude a node for by setting the *ANY* flag to 0 in the node.ini file - in which case, the node will not execute jobs defined without affinity. 
 2. If set to a value greater than zero, the chosen value will reflect the maximum number of threads that can be allocated to a job when executed by this node.
-3. If the *ANY* parameter is not added to the node.id file, by default, the node will be contributing to all jobs that have been defined without affinity.
+3. If the *ANY* parameter is not added to the node.ini file, by default, the node will be contributing to all jobs that have been defined without affinity.
 
 
 ## Cluster Configuration
