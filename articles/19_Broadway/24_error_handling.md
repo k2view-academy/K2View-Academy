@@ -82,7 +82,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
    contract ID = ${contract}
    ~~~
 
-3. The **Logger** Actor receives the table name, IID and contract IDinput arguments. Set the arguments to **External**.
+3. The **Logger** Actor receives the table name, IID and contract ID input arguments. Set the arguments to **External** population type.
 
 4. Add an **error** input argument to the  **JavaScript** Actor and set it to **External**. Using the **error** object, analyze the error and handle it as needed.
 
