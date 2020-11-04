@@ -1,12 +1,12 @@
 # SMTP Interface
 
-An SMTP interface defines the connections to the SMTP (Simple Mail Transfer Protocol) server used to send and receive emails. 
+The SMTP interface type defines the connections to the SMTP (Simple Mail Transfer Protocol) server used to send and receive emails. 
 
-To create a new SMTP interface:
+To create a new SMTP interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SMTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and **Save**.
 
 ### Connection Settings
 
