@@ -1,16 +1,18 @@
 # Local File System Interface
 
 
-A Local File System interface enables processing files from a local directory on a specific Fabric server and can be used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows). The directory can be either Window or Linux. 
+The Local File System interface type enables processing files from a local directory in a specific Fabric server.
 
-To create a new interface:
+A Local File System interface can be used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows). The directory can be either Windows or Linux. 
+
+To create a new interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **Local File System** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
 
    ![image](images/local_1.PNG)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and click **Save**.
 
 ### Connection Settings
 
@@ -22,7 +24,7 @@ To create a new interface:
 </tr>
 <tr>
 <td>&nbsp;<strong>Working Directory&nbsp;</strong></td>
-<td>&nbsp;Directory where the files are stored - Windows or Linux.</td>
+<td>Directory where the files are stored - Windows or Linux.</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Files filter</strong></td>
@@ -35,7 +37,7 @@ To create a new interface:
 
 ### Example of Using a Local File System Interface
 
-To create an Interface Listener Job on a local file system interface: 
+To create an Interface Listener Job in a Local File System interface, do the following: 
 
 1. Create an interface using a **Local File System** interface type.
 
