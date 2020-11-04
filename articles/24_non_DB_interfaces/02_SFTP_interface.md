@@ -33,7 +33,7 @@ To create a new SFTP interface:
 </tr>
 <tr>
 <td><strong>Remote Directory</strong></td>
-<td>The directory where the files are stored</td>
+<td>Directory where the files are stored</td>
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
