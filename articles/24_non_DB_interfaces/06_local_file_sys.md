@@ -28,7 +28,7 @@ To create a new interface, do the following:
 </tr>
 <tr>
 <td>&nbsp;<strong>Files filter</strong></td>
-<td>&nbsp;Filters files.</td>
+<td>Filters files.</td>
 </tr>
 </tbody>
 </table>
