@@ -4,7 +4,7 @@ The SFTP interface type defines the connections between a secured FTP server (a 
 
 An SFTP interface is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
 
-To create a new SFTP interface:
+To create a new SFTP interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SFTP** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
@@ -54,7 +54,7 @@ To create a new SFTP interface:
 
 ### Example of Using an SFTP Interface
 
-To create an Interface Listener Job in an SFTP interface: 
+To create an Interface Listener Job in an SFTP interface, do the following: 
 
 1. Create an interface using an **SFTP** interface.
 
