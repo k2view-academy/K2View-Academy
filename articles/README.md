@@ -76,6 +76,7 @@
 <li><a href="/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md">Deleting Disabling an Interface</a></li>
 <li><a href="/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md">Clearing DB Object Cache</a></li>
 <li><a href="/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md">Fabric API for DB Interface</a></li>
+<li><a href="/articles/05_DB_interfaces/10_database_types.md">Database Types</a></li>
         </ul>
 </ul>
 </details>
@@ -313,6 +314,19 @@
 <li><a href="/articles/23_fabric_transactions/01_fabric_transactions_overview.md">Fabric Transaction Management Overview</a></li>
 <li><a href="/articles/23_fabric_transactions/02_fabric_transactions.md">Fabric Transactions</a></li>
 <li><a href="/articles/23_fabric_transactions/03_trx_code_examples.md">Transactions Code Examples</a></li>
+</details> 
+
+<details>
+<summary markdown="span"><strong>Non-DB Interfaces<strong><a href="/articles/24_non_DB_interfaces/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/24_non_DB_interfaces/01_nondb_interfaces_overview.md">Non-DB Interfaces Overview</a></li>
+<li><a href="/articles/24_non_DB_interfaces/02_SFTP_interface.md">SFTP Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/03_kafka_interface.md">Kafka Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/04_JMS_interface.md">JMS Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/05_HTTP_interface.md">HTTP Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/06_local_file_sys.md">Local File System Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/07_custom_interface.md">Custom Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/08_SMTP_interface.md">SMTP Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/09_redis_interface.md">Redis Interface</a></li>
 </details> 
         
 <details>
