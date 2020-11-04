@@ -23,7 +23,7 @@ error.className
 error.rootClassName
 ~~~
 
-An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. The **error** object can be passed to the inner flow for the analysis and further handling (for example, writing an error message into the DB).
+An [Inner flow](22_broadway_flow_inner_flows.md) can be used as a powerful error handler since it can include complex logic as part of the error handling process. The **error** object can be passed to the inner flow for analysis and further handling, for example, writing an error message into the DB.
 
 It is recommended to use inner flows as error handlers when the same error validation is required in several flows or in several Stages of a flow.
 
@@ -82,9 +82,9 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
    contract ID = ${contract}
    ~~~
 
-3. The **Logger** Actor receives 3 input arguments: table name, IID and contract ID. Set them to **External**.
+3. The **Logger** Actor receives the table name, IID and contract IDinput arguments. Set the arguments to **External**.
 
-4. Add an **error** input argument to the  **JavaScript** Actor and set it to **External**. Using the **error** object you can analyze the error and handle it as needed.
+4. Add an **error** input argument to the  **JavaScript** Actor and set it to **External**. Using the **error** object, analyze the error and handle it as needed.
 
    ![image](images/99_24_09.PNG)
 
@@ -94,7 +94,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
    ![image](images/99_24_10.PNG)
 
-7. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the **Error Handler** catches and executes the inner flow which returns **true** to continue the flow.
+7. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the **Error Handler** catches and executes an inner flow which returns **true** to continue the flow.
 
 **Example 4 - Handling an Error Using in an Inner Flow**
 
@@ -107,11 +107,11 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 2. Save the flow as **CheckZeroDiv** and then [save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **CheckZeroDiv_Actor**.
 
-3. Create another flow that requires the validation of a zero division and name it **myFlow** and then add a new **CheckZeroDiv_Actor** to it as an inner flow. If during the flow's execution the error occurs (min number = 0), the exception is thrown and the flow stops.
+3. Create another flow that requires the validation of a zero division. Name it **myFlow** and then add a new **CheckZeroDiv_Actor** to it as an inner flow. If during the flow's execution the error occurs (min number = 0), the exception is thrown and the flow stops.
 
    ![image](images/99_24_05.PNG)
 
-   The exception displays the message that helps to identify the flow and the Stage where the error occurred. If the error occurred in the inner flow, it also displays the name and the Stage of the inner flow.
+   The exception displays a message that identifies the flow and the Stage where the error occurred. If the error occurred in the inner flow, it also displays the name and the Stage of the inner flow.
 
    In the example below, the following information is displayed in the error message:
 
@@ -121,7 +121,7 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
    <img src="images/99_24_06.png"/>
 
-4. Several validations can be performed using different inner flows. For example, add a validation that input numbers are not negative and if yes - throw an exception and stop the flow. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
+4. Several types of validations can be performed using different inner flows. For example, add a validation that input numbers are not negative and if yes - throw an exception and stop the flow. This check is also implemented by creating another flow, saving it as an Actor and adding it to the current flow.
 
    <img src="images/99_24_07.PNG"/>
 
