@@ -98,7 +98,7 @@ The following example displays a split flow with a condition and an else Stage. 
 
 Depending on the flow input, the execution can run via one of four alternatives on the third level.
 
-![image](images/99_19_cond_example_2.PNG)
+![image](images/99_19_cond_example_2.png)
 
 
 
