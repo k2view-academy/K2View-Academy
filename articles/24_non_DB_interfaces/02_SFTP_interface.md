@@ -10,7 +10,7 @@ To create a new SFTP interface:
 
    ![image](images/02_sftp_1.PNG)
 
-2. Populate the connection's settings and **Save**.
+2. Populate the connection's settings and click **Save**.
 
 ### Connection Settings
 
