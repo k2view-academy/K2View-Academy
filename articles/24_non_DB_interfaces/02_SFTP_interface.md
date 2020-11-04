@@ -50,7 +50,7 @@ To create a new SFTP interface:
 </table>
 
 
-### Example of Using SFTP Interface
+### Example of Using an SFTP Interface
 
 To create an Interface Listener Job on an SFTP interface: 
 
