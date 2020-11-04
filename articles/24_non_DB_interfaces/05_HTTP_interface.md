@@ -1,6 +1,6 @@
 # HTTP Interface
 
-An HTTP interface defines the connection to an HTTP/s host and can be used by Broadway Actors.
+The HTTP interface type defines the connections to an HTTP/s host and can be used by Broadway Actors.
 
 To create a new HTTP interface:
 
@@ -9,7 +9,7 @@ To create a new HTTP interface:
 
    ![image](images/03_http_1.png)
 
-2. Populate the connection settings and **Save**.
+2. Populate the connection's settings and click **Save**.
 
 ### Connection Settings
 
@@ -34,7 +34,7 @@ To create a new HTTP interface:
 </tr>
 <tr>
 <td>&nbsp;<strong>User</strong>&nbsp;</td>
-<td>&nbsp;User name</td>
+<td>&nbsp;Username</td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Password&nbsp;</strong></td>
@@ -48,7 +48,7 @@ To create a new HTTP interface:
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server populating the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface.
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface.
 
 
 
