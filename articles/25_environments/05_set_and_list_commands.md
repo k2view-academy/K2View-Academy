@@ -69,4 +69,4 @@
 
 
 
-[![Previous](/articles/images/Previous.png)](04_manual_deployment_from_XML_file.md)
+[![Previous](/articles/images/Previous.png)](04_offline_deployment.md)

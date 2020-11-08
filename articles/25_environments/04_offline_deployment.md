@@ -1,6 +1,8 @@
-# Manual Deployment from XML File
+# Offline Environment Deployment
 
-To deploy an environment to server from the XML file, do the following:
+Offline environment deployment is the ability to deploy an environment to server from the XML file. 
+
+Do the following:
 
 1. Connect to a server by using the Fabric Console.
 

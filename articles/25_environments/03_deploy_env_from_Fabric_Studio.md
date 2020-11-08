@@ -26,4 +26,4 @@ Notes:
 * Setting an active environment during the deployment is optional. If you don't change the active environment at deployment, **_dev** remains an active one. The active environment can be checked, set and changed later using one of SET commands.
 * [Click for more information about SET and LIST commands for environments](/articles/25_environments/05_set_and_list_commands.md).
 
-[![Previous](/articles/images/Previous.png)](02_create_new_environment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_manual_deployment_from_XML_file.md)
+[![Previous](/articles/images/Previous.png)](02_create_new_environment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_offline_deployment.md)
