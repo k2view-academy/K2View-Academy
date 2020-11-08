@@ -4,7 +4,9 @@ To deploy an environment to server from the XML file, do the following:
 
 1. Connect to a server by using the Fabric Console.
 
-2. Use the command:
+2. Copy the **Environments.k2fabEnv.XML** file from the following location on Windows: **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments**.
+
+3. Deploy it using the following command:
 
    ~~~
    Deploy environments from file ‘{filename}’
