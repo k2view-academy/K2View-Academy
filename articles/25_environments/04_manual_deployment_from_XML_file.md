@@ -18,8 +18,6 @@ Fabric encrypts the passwords in the file (if not already encrypted) and saves t
 
 Note that deploying an XML overrides all existing environments except for the **_dev**, which is the default environment. If the environment exists in Fabric, but not in the deployed XML, it is removed from Fabric.
 
-The required permission for this action: DEPLOY_ENVIRONMENTS.
-
 ### XML File Example
 
 ~~~
