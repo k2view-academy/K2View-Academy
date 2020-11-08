@@ -4,11 +4,13 @@ To deploy an environment to server from the XML file, do the following:
 
 1. Connect to a server by using the Fabric Console.
 
-2. Use the command
+2. Use the command:
 
    ~~~
    Deploy environments from file ‘{filename}’
    ~~~
+
+Where {filename} includes the file's path and name on the server.
 
 Fabric encrypts the passwords in the file (if not already encrypted) and saves the XML with the encrypted passwords.
 
