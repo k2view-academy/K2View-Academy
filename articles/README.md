@@ -328,7 +328,13 @@
 <li><a href="/articles/24_non_DB_interfaces/08_SMTP_interface.md">SMTP Interface</a></li>
 <li><a href="/articles/24_non_DB_interfaces/09_redis_interface.md">Redis Interface</a></li>
 </details> 
-        
+
+<details>
+<summary markdown="span"><strong>Auditing<strong><a href="/articles/27_auditing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/27_auditing/01_auditing_overview.md">Auditing Overview</a></li>
+<li><a href="/articles/27_auditing/02_filtering_strategy.md">Filtering Strategy</a></li>
+<li><a href="/articles/27_auditing/03_persistence_strategy.md">Persistence Strategy</a></li>
+</details>         
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
 
