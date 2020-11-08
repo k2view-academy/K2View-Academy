@@ -8,13 +8,9 @@
     fabric>set;
     |key                                   |value                               |
     +--------------------------------------+------------------------------------+
-    |ALWAYS_SYNC                           |false                               |
-    |ASYNC_TRX                             |false                               |
-    |ATTACH_POLICY                         |LATEST                              |
-    |CDC_PUBLISH                           |true                                |
-    |COMMON_LOCAL_TRX                      |false                               |
+    |...           
     |ENVIRONMENT                           |UAT1                                |
-    ...
+    |...
     ~~~
 
 - **SET_GLOBAL ENVIRONMENT** command is used to set the environment **for the whole cluster**. This command has a global impact and replaces the active environment for all open Fabric sessions and for the new Fabric sessions. The values are kept in the **global_settings** Cassandra table under [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
