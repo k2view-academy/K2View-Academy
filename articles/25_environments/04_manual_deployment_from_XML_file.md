@@ -172,7 +172,7 @@ The required permission for this action: DEPLOY_ENVIRONMENTS.
 
 
 
-[![Previous](/articles/images/Previous.png)](03_deploy_env_from_Fabric_Studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_set_and_set_global.md)
+[![Previous](/articles/images/Previous.png)](03_deploy_env_from_Fabric_Studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_set_and_list_commands.md)
 
 
 
