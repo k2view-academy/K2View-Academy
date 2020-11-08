@@ -1,6 +1,6 @@
 # Auditing Overview
 
-Fabric has a robust Auditing mechanism that logs activities running in Fabric like logins, Web Service calls and Fabric commands.
+Fabric has a robust Auditing mechanism that logs activities like logins, Web Service calls and Fabric commands running in Fabric.
 
 Two major functionalities can be controlled:
 
@@ -13,14 +13,14 @@ When an activity is logged by the Fabric Auditing mechanism it is logged in the 
 
 | Name       | Description                                                  | Example                                                  |
 | ---------- | ------------------------------------------------------------ | -------------------------------------------------------- |
-| action     | Type  of activity performed in Fabric.                   | LOGIN, GetCommand, called Web-Service  name, etc.        |
+| action     | Type  of activity performed in Fabric                    | LOGIN, GetCommand, called Web-Service  name, etc.        |
 | date       | Activity date                                                | 2020-11-05                                               |
 | user       | Fabric User ID                                               | admin, etc...                                            |
 | written_at | Activity date and timestamp                                 | 2020-11-05 11:49:14.452000+0000                          |
 | address    | IP address of the node where the activity was performed. In http/https protocol this appears as a concatenation of the IP address:port | 10.21.1.1 or 10.21.1.1:3213                              |
-| params     | Activity parameters.                                          | For a GetCommand [DC_NAME=null\|LU_NAME=CRM\|IID=1] |
+| params     | Activity parameters                                           | For a GetCommand [DC_NAME=null\|LU_NAME=CRM\|IID=1] |
 | protocol   | Contains the protocol used for the activity, valid values, HTTP/1.1, HTTPS/1.3 or DRIVER or JDBC driver | DRIVER                                                   |
-| query      | Activity's details like a CQL query for an CQLCommand or DESCRIBE SCHEMA CRM for a DescribeCommand | SELECT * FROM CRM.SUBSCRIBER                             |
+| query      | Activity details like a CQL query for a CQLCommand or DESCRIBE SCHEMA CRM for a DescribeCommand | SELECT * FROM CRM.SUBSCRIBER                             |
 | result     | Number of affected rows                                      | Rows Affected: 3                                         |
 | session_id | Session ID                                                   | 73ae6592                                                 |
 
