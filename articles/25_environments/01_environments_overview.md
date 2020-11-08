@@ -1,6 +1,6 @@
 # Environments Overview
 
-Environments is a Fabric feature that enables a user to run the same project implementation on various data source by switching between them per specific needs. For example, you can define environments for development, UAT testing and production. Or in case of K2View TDM, you can switch between several different testing environments. 
+Environments is a Fabric feature that enables a user to run the same project implementation on various data sources by switching between them per specific needs. For example, you can define environments for development, UAT testing and production. Or in case of K2View TDM, you can switch between several different testing environments. 
 
 Environment is defined by a list of project's [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) with their connection details (server, port, etc.) and must be deployed to the server. Only one environment can be active from the list of deployed environments. The user then can set another environment from the list to become an active one.
 
