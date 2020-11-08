@@ -1,16 +1,16 @@
 # Persistence Strategy
 
-Users can control the persistence of data to be published by the auditing mechanism. By default persistence will be defined as the Cassandra cluster used by Fabric, however it can be customized to be published to Kafka queue or file system or any other platform/technology.
+The persistence of data to be published by the Auditing mechanism can be controlled. By default, the persistence is defined in the Cassandra cluster used by Fabric, however it can be customized and published to a Kafka queue, a file system or another platform or technology.
 
-The persistence strategy is defined on config.ini by AUDIT_PERSISTENCE_STRATEGY parameter (default is set to com.k2view.fabric.session.auditing.persistence.CassandraBeanPersistence).
+Persistence strategy is defined in the config.ini file in the AUDIT_PERSISTENCE_STRATEGY parameter which by default, is set to com.k2view.fabric.session.auditing.persistence.CassandraBeanPersistence.
 
-### Example of setting persistence as file
+### Example of Setting Persistence Strategy
 
-* Create a new class under the package "com.k2view.external.fabric.audit.persistencies”. Implement the following Interface: com.k2view.fabric.session.auditing.persistence.AuditBeanPersistence;
+1.  Create a new class under the com.k2view.external.fabric.audit.persistencies package.
 
-* Below is an example of a persistency class: com.k2view.external.fabric.audit.persistencies.SamplePersist. 
+2. Implement the following interface: com.k2view.fabric.session.auditing.persistence.AuditBeanPersistence;
 
-  This class writes the audit operations into a file.
+   The following is an example of the com.k2view.external.fabric.audit.persistencies.SamplePersist persistency class which writes the Audit operations into a file.
 
   
 
@@ -45,11 +45,9 @@ public class SamplePersist implements AuditBeanPersistence {
 
 ~~~
 
-* Update config.ini - populate the full path of your class into  AUDIT_PERSISTENCY_STRATEGY parameter. For example:
+3. Update the config.ini file and populate the full path of the class in the  AUDIT_PERSISTENCY_STRATEGY parameter. For example: AUDIT_PERSISTENCY_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
 
-  AUDIT_PERSISTENCY_STRATEGY = com.k2view.external.fabric.audit.persistencies.SamplePersist
-
-* Restart fabric node.
+4.  Restart the Fabric node.
 
 [![Previous](/articles/images/Previous.png)](02_filtering_strategy.md)
 
