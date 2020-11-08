@@ -1,30 +1,23 @@
 # Filtering Strategy
 
-Users can control the list of activities to be reported by the auditing mechanism. By default once AUDIT parameter is set to ON all fabric activities are logged by the auditing mechanism.
-
-AUDIT_FILTER_STRATEGY parameter in config.ini should be populated with a full path to the class defining the filter strategy, to allow/avoid audit of certain operations.
+The list of activities reported by the Auditing mechanism can be controlled. By default, once the AUDIT parameter is set to ON, all Fabric activities are logged by the Auditing mechanism. To allow / avoid auditing specific activities, the AUDIT_FILTER_STRATEGY parameter in the config.ini file must be populated with the full path of the class defining the filter strategy. 
 
  
 
-### Example of reporting only Web-Services
+### Example of Reporting Web Services Only
 
-* Create a new class under the package "com.k2view.external.fabric.audit.filters”. 
+1. Create a new class under the com.k2view.external.fabric.audit.filters folder. 
 
-* Implement the following Interface to define audit filter, com.k2view.fabric.session.auditing.filters.AuditingFilter;
+2. To define the Auditing filter, implement the com.k2view.fabric.session.auditing.filters.AuditingFilter; interface. 
 
-* Save the artifacts into the following path: AuditCustomStrategies/out/artifacts/<module>/<module>.jar
+3. Save the artifacts into the following path: AuditCustomStrategies/out/artifacts/<module>/<module>.jar under the $K2_HOME/ExternalJars directory.
 
-* Place the artifacts under $K2_HOME/ExternalJars directory.
-
-* Update config.ini - populate the full path of your filtering class in the AUDIT_FILTER_STRATEG parameter. 
-
+5. Update the config.ini file and populate the full path of the filtering class in the AUDIT_FILTER_STRATEG field. 
   AUDIT_FILTER_STRATEGY=com.k2view.external.fabric.audit.filters.SampleFilter.
 
-* Restart your Fabric node.
+6. Restart the Fabric node.
 
-* Below is an example of a filter class - com.k2view.external.fabric.audit.filters.SampleFilter. 
-
-  This class accepts auditing only for Web-services calls.
+The following example displays the com.k2view.external.fabric.audit.filters.SampleFilter filter class that accepts auditing for Web Service calls only.
 
 ~~~java
    package com.k2view.external.fabric.audit.filters;
