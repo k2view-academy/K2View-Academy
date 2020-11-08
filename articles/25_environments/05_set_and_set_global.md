@@ -8,7 +8,7 @@
     SET;
     ~~~
 
-- **SET_GLOBAL ENVIRONMENT** command is used to set the environment **for the whole cluster**. This command has a global impact and replaces the active environment for all open Fabric sessions and for new Fabric sessions. The values are kept in the **global_settings** Cassandra table under [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
+- **SET_GLOBAL ENVIRONMENT** command is used to set the environment **for the whole cluster**. This command has a global impact and replaces the active environment for all open Fabric sessions and for the new Fabric sessions. The values are kept in the **global_settings** Cassandra table under [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md).
 
   - Use the following syntax:
 
