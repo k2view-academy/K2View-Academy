@@ -8,7 +8,7 @@ Environment can be deployed either from the [Fabric Studio](/articles/25_environ
 
 Explicit definition of the environments in a project is optional. When no environment is defined and a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) is deployed to a Fabric server, all the project's interfaces are deployed with their connection details to a default *_dev* environment. The default environment is not displayed in the Fabric Studio or in the environment's configuration XML file.
 
-An environment can be defined on a cluster level and on a session level. Therefore a user can override an active environment per session and work on it without interacting with the changes of other users. Setting and resetting an active environment per cluster or per session is performed using [one of the SET environment commands](05_set_and_list_commands).
+An environment can be defined on a cluster level and on a session level. Therefore a user can override an active environment per session and work on it without interacting with the changes of other users. Setting and resetting an active environment per cluster or per session is performed using [one of the SET environment commands](05_set_and_list_commands.md).
 
 
 
