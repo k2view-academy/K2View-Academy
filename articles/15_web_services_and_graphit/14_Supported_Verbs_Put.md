@@ -53,7 +53,7 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 | COMMON            | Specify that scope is common | Y             | COMMON        |             |
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
 | token             | API key                      | Y             |               |             |
-| format            | Response format              | Y             | JSON/XML/YAML | JSON        |
+| format            | Response format              | Y             | JSON/XML      | JSON        |
 
 **Example:**
 
@@ -91,7 +91,7 @@ Parameters should be populated in the body in the following structure:
 | Api                         | API                                    | Y             | api           |                |
 | VERSION_NO                  | Version number                         | N             | V1.4          | Latest version |
 | Customized Web-Service name | Name of the Web Service to be executed | Y             | Orders        |                |
-| Format                      | Response format                        | Y             | JSON/XML/YAML | JSON           |
+| Format                      | Response format                        | Y             | JSON/XML      | JSON           |
 
 ## Request Header
 
