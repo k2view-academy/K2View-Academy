@@ -1,29 +1,26 @@
-# Deploy Environment from Fabric Studio
+# Deploying an Environment from the Fabric Studio
 
-To deploy an environment to server from the Fabric Studio, do the following:
+To deploy an environment to the server from the Fabric Studio, do the following:
 
-1. Go to **Project Tree** > **Shared Objects** and double click on **Environments** to open the Environments window.
+1. Go to **Project Tree** > **Shared Objects** and double click **Environments** to open the Environments window.
 
-2. Click on the environment in the **Environments List** tab and then click **Deploy** to open the popup screen with two drop-down lists.
+ ![image](images/25_03_1.png)
 
-   ![image](images/25_03_1.png)
+2. Click the environment in the **Environments List** tab and then click **Deploy** to open the popup screen.
 
-3. Click **Deploy environments to server** drop-down list to select the server.
+  ![image](images/25_03_2.png)  
 
-4. After the deployment server is set, click to set an active environment from the second drop-down list or keep the value *Don't change active environment*.
+3. Select the server from the **Deploy environments to server** dropdown list and the environment from thr **Set active environment** dropdown list. 
 
-   ![image](images/25_03_2.png)
+4. Click **Deploy**. If a deployment is successful, a confirmation notification is displayed.
 
-5. Once the values are selected, click **Deploy**.
-
-6. In case of successful deployment, the dialog box opens confirming the activity completion.
-
-   ![image](images/25_03_3.PNG)
+![image](images/25_03_3.PNG)
 
 Notes:
 
-* All the environments (not only the active one) are deployed to the server. You can see all the deployed environments using the LIST command.
-* Setting an active environment during the deployment is optional. If you don't change the active environment at deployment, **_dev** remains an active one. The active environment can be checked, set and changed later using one of SET environments commands.
-* [Click for more information about SET and LIST commands for environments](/articles/25_environments/05_set_and_list_commands.md).
+* Both active and inactive environments are deployed to the server. A list of deployed environments can be displayed using the LIST command.
+* Setting an active environment during the deployment is optional. If the active environment is not updated during deployment, the *_dev* environment remains active and can be checked, set and later changed using the SET environments commands.
+
+[Click for more information about SET and LIST commands for environments](/articles/25_environments/05_set_and_list_commands.md).
 
 [![Previous](/articles/images/Previous.png)](02_create_new_environment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_offline_deployment.md)
