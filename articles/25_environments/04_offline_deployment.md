@@ -1,6 +1,6 @@
 # Offline Environment Deployment
 
-Offline environment deployment can be used to deploy an environment to a server from an XML file. 
+Offline environment deployment is used to deploy an environment to a server from an XML file. 
 
 Do the following:
 

@@ -1,6 +1,6 @@
 # SET and LIST Commands for Environments
 
-- The **SET** command displays a list of active environments deployed to the Fabric Server.
+- The **SET** command displays an active environment from the list of the environments deployed to the Fabric Server.
 
   - Use the following syntax:
 
@@ -52,7 +52,7 @@
   * Use the following syntax:
 
     ~~~
-    LIST ENVIRONMENTS; or LIST ENVs;
+    LIST ENVIRONMENTS; or LIST ENVS;
     
     fabric>list envs;
     |Environments|
@@ -62,10 +62,9 @@
     |_dev        |
     
     (3 rows)
-    fabric>
     ~~~
-
     
+
 
 
 
