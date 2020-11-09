@@ -25,7 +25,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | LU Name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
 | Iid           | Instance Id                                   | Y             | 1               |                |
 | Token         | API key                                       | Y             |                 |                |
-| Format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
+| Format        | Response format                               | Y             | JSON/XML        | JSON           |
 
 **Example:**
 
@@ -56,7 +56,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | TABLE_NAME    | Table name for data deletion                  | Y             | PAYMENT         |                |
 | WHERE CLAUSE  | Where clause statement                        | Y             | INVOICE_ID=1    |                |
 | token         | API key                                       | Y             |                 |                |
-| format        | Response format                               | Y             | JSON/XML/YAML   | JSON           |
+| format        | Response format                               | Y             | JSON/XML        | JSON           |
 
 **Example:**
 
@@ -83,7 +83,7 @@ If the request passes through a cache and the Request-URI identifies one or more
 | COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
 | WHERE CLAUSE      | Where clause statement       | Y             | CITY_ID=1     |             |
 | token             | API key                      | Y             |               |             |
-| format            | Response format              | Y             | JSON/XML/YAML | JSON        |
+| format            | Response format              | Y             | JSON/XML      | JSON        |
 
 **Example:**
 
