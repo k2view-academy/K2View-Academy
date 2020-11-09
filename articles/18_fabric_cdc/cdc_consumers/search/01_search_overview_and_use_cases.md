@@ -10,7 +10,7 @@ Deployment of the LU creates indexes in Elasticsearch, where every data change i
 
 LUIs must be loaded to Fabric to enable a cross-instance search. For example, a search for all customers named “John Doe” and live in “New-York” will only return customers that exist in Fabric.
 
-A search can be executed either by running a Search request directly in Elasticsearch, or by using [Fabric Search Commands]. 
+A search can be executed either by running a Search request directly in Elasticsearch, or by using [Fabric Search Commands](05_search_command.md). 
 
 ### Search Use Cases
 
