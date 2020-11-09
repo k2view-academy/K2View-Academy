@@ -26,7 +26,7 @@ A search can be executed either by running a Search request directly in Elastics
 
    - Example: when the user types "Ber",  completes the value to "Berlin" or "Berry".
 
-   [Click here for more information about Search examples](05_search_command.md#search-command--examples).
+   [Click here for more information about Search examples](05_search_command.md#search-command---examples).
 
    
 
