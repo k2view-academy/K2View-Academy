@@ -88,7 +88,7 @@ Fabric has the following CDC messages:
 </table>
 
 
-Note that you can find samples of CDC messages under $K2_HOME//fabric/samples/cdc-messages directory of Fabric server.
+Note that you can find samples of CDC messages under $K2_HOME/fabric/samples/cdc-messages directory of Fabric server.
 
 ## Serialization
 CDC messages are stored in Kafka topics by their CDC Consumer Name as defined in the Fabric Studio and can be serialized or deserialized using the **com.k2view.fabric.cdc.Serialization** Fabric Java Class.
