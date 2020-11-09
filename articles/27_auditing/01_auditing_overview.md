@@ -4,7 +4,7 @@ Fabric has a robust Auditing mechanism that logs activities running in Fabric li
 
 Two major Auditing functionalities can be controlled:
 
--  Filtering strategies, for full flexibility over the type of activities that are introduced to the Auditing mechanism, like reporting only Web Service calls. This flexibility does not impact the performance of other activities and saves a lot for disk space.
+-  Filtering strategies, for full flexibility over the type of activities that are introduced to the Auditing mechanism, like reporting only Web Service calls. This flexibility does not impact the performance of other activities and saves a lot of disk space.
 -  Persistence strategies, defining the channel for reporting the activities logged by the Auditing mechanism, like Cassandra (default), Kafka, files, etc.
 
 ### Auditing Reporting Structure
