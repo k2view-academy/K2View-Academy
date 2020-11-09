@@ -231,7 +231,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td width="200pxl" valign="top" >
-<p>JSON/XML/YAML</p>
+<p>JSON/XML</p>
 </td>
 <td width="200pxl" valign="top" >
 <p>JSON</p>
@@ -482,7 +482,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td width="200pxl" valign="top" >
-<p>JSON/XML/YAML</p>
+<p>JSON/XML</p>
 </td>
 <td width="200pxl" valign="top" >
 <p>JSON</p>
@@ -624,7 +624,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td width="200pxl" valign="top">
-<p>JSON/XML/YAML</p>
+<p>JSON/XML</p>
 </td>
 <td width="200pxl" valign="top">
 <p>JSON</p>
@@ -796,7 +796,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td valign="top" width="200pxl">
-<p>JSON/XML/YAML</p>
+<p>JSON/XML</p>
 </td>
 <td valign="top" width="200pxl">
 <p>JSON</p>
@@ -927,7 +927,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td valign="top" width="200pxl">
-<p>JSON/XML/YAML</p>
+<p>JSON/XML</p>
 </td>
 <td valign="top" width="200pxl">
 <p>JSON</p>
@@ -1105,7 +1105,7 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>Y</p>
 </td>
 <td>
-<p>JSON/XML/YAML</p>
+<p>JSON/XML</p>
 </td>
 <td>
 <p>JSON</p>
@@ -1238,7 +1238,7 @@ Indicates whether the Fabric is up and running on the given domain and port.
 <p>Y</p>
 </td>
 <td valign="top" width="500pxl">
-<p>Json/XML/RAW/YAML/CSV</p>
+<p>Json/XML/RAW/CSV</p>
 </td>
 </tr>
 <tr>
