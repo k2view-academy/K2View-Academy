@@ -22,7 +22,7 @@ An environment is created in two steps:
        The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm - ???? 
  [Click for more information about Fabric security hardening].
 
-   -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the interfaces passwords.
+   -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
  
    -  Click **Deploy** to deploy an environment to the Fabric server. An environment is not deployed together with an LUT, Reference tables and Web Services. Note that environments can be deployed to Fabric either by the Fabric Studio or by using a command line to deploy the environment from an xml file.
 
