@@ -36,7 +36,7 @@ To  create a new Search Engine interface:
 <p>User</p>
 </td>
 <td valign="top" width="700pxl">
-<p>&nbsp;</p>
+<p>User Id</p>
 </td>
 </tr>
 <tr>
@@ -44,7 +44,7 @@ To  create a new Search Engine interface:
 <p>Password</p>
 </td>
 <td valign="top" width="700pxl">
-<p>&nbsp;</p>
+<p>User Password</p>
 </td>
 </tr>
 <tr>
