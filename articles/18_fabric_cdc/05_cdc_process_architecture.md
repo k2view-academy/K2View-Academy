@@ -36,6 +36,8 @@ The following diagram displays how Fabric handles this parameter:
 
 ![acknowledge time](images/cdc_publish_acknowledge_time_seq.png)
 
+Note that the [OPTIMISTIC_LOCKING](/articles/23_fabric_transactions/02_fabric_transactions.md) parameter in the config.ini can be set per node to support lightweight transactions between nodes when saving the LUIs into Cassandra.
+
 ### CDC Consumer
 
 Fabric has built-in integration with Elasticsearch. The CDC_TRANSACTION_CONSUMER jobs starts automatically when deploying an LU with Search indexes. The Jobs UID is **Search**. The CDC consumer job consumes the messages in the Kafka **Search** topic and creates search indexes in Elasticsearch.
