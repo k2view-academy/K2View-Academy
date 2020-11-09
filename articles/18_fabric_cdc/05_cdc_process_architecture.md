@@ -26,7 +26,7 @@ The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka a
 
 #### TRANSACTION_ACKNOWLEDGE_TIME_SEC Parameter
 
-The Fabric [confing.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file defines the following parameter which sets the maximum waiting time between the commit of the transaction and the Publish Acknowledge message which is sent when the transaction is successfully saved into Cassandra: 
+The Fabric [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file defines the following parameter which sets the maximum waiting time between the commit of the transaction and the Publish Acknowledge message which is sent when the transaction is successfully saved into Cassandra: 
 
 - TRANSACTION_ACKNOWLEDGE_TIME_SEC=60
 
@@ -52,4 +52,4 @@ startjob DEBUG_CDC_JOB name='DEBUG_CDC_JOB' ARGS='{"topic":Tableau", "partition"
 
 
 
-[![Previous](/articles/images/Previous.png)](05_cdc_publication_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_cdc_configuration.md)
+[![Previous](/articles/images/Previous.png)](04_cdc_publication_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_cdc_configuration.md)

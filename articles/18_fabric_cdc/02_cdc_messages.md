@@ -81,14 +81,14 @@ Fabric has the following CDC messages:
 <li>Run the <strong>CDC_REPUBLISH_INSTANCE</strong> Fabric command to republish the CDC data of a given LUI.</li>
 </ul>
 <p>These messages hold a list of PK columns in LU tables and relevant changes in CDC columns.</p>
-<p>See the examples in <a href="02_cdc_messages.md#appendix-d-cdc-table-change-info-message--example">Appendix D</a>.</p>
+<p>See the examples in <a href="02_cdc_messages.md#appendix-d-cdc-table-change-info-message---example">Appendix D</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
 
-Note that you can find samples of CDC messages under $K2_HOME//fabric/samples/cdc-messages directory of Fabric server.
+Note that you can find samples of CDC messages under $K2_HOME/fabric/samples/cdc-messages directory of Fabric server.
 
 ## Serialization
 CDC messages are stored in Kafka topics by their CDC Consumer Name as defined in the Fabric Studio and can be serialized or deserialized using the **com.k2view.fabric.cdc.Serialization** Fabric Java Class.

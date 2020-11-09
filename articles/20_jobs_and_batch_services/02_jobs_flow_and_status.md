@@ -115,10 +115,10 @@ The  following image illustrates the different stages of a Job's lifecycle and t
 
 -  The blue arrows show the natural path of a Job during its lifecycle in Automatic Execution mode. 
 -  The dotted or plain arrows show the transition between stages in Manual Execution mode when manually applying one of the following commands:
-   -  **startjob** 
-   -  **stopjob**
-   -  **restartjob**
-   -  **resumejob**
+   -  **startjob** - plain line 
+   -  **stopjob** - plain line
+   -  **restartjob** - dotted line
+   -  **resumejob** - dotted line
 
 <img src="/articles/20_jobs_and_batch_services/images/01_jobs_and_batch_services_status_flow.PNG">
 

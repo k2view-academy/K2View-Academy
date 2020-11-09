@@ -46,7 +46,7 @@ The Fabric Studio can be customized. Consumers can be added for CDC fields by ed
    
 
    The name of the Kafka topic added for the new CDC consumer is identical to the name of the new tab. 
-
+   Note that Fabric concatenates the [cluster id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) to each topic name if there are several Fabric clusters on one Cassandra cluster.
     
 
 ### Creating Indexes for Other CDC Consumers
