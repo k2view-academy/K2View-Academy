@@ -23,7 +23,7 @@ This example shows how to check the value of a Global variable and to determine 
 
 Open the **Globals** window under a **Logical Unit** and [define a new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global).
 
-The global can be used in an SQL prepared statement in an LU function. The syntax is: '@<global name>@'. For Integer value, the use of apostrophe is optional.
+The global can be used in an SQL prepared statement in an LU function. The syntax is: '@[global_name]@'. For Integer value, the use of apostrophe is optional.
 
 ~~~java
 String sql = "SELECT * From ACTIVITY WHERE CUSTOMER_ID = ? AND ACTIVITY_ID = ? AND NEW_NOTE_IND = @NEW_IND@";
