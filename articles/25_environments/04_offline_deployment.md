@@ -1,12 +1,12 @@
 # Offline Environment Deployment
 
-Offline environment deployment is the ability to deploy an environment to server from the XML file. 
+Offline environment deployment can be used to deploy an environment to a server from an XML file. 
 
 Do the following:
 
-1. Connect to a server by using the Fabric Console.
+1. Connect to a server using the Fabric Console.
 
-2. Copy the **Environments.k2fabEnv.XML** file from the following location on Windows: **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments**.
+2. Copy the **Environments.k2fabEnv.XML** file from the following Windows location: **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments**.
 
 3. Deploy it using the following command:
 
@@ -16,9 +16,9 @@ Do the following:
 
 Where {filename} includes the file's path and name on the server.
 
-Fabric encrypts the passwords in the file (if not already encrypted) and saves the XML with the encrypted passwords.
+Fabric encrypts the passwords in the file (if they are not already encrypted) and saves the XML file with the encrypted passwords.
 
-Note that deploying an XML overrides all existing environments except for the **_dev**, which is the default environment. If the environment exists in Fabric, but not in the deployed XML, it is removed from Fabric.
+Note that deploying an XML file overrides all existing environments except for *_dev*, which is the default environment. If the environment exists in Fabric, but not in the deployed XML file, it is removed from Fabric.
 
 ### XML File Example
 
