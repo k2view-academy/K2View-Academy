@@ -6,9 +6,9 @@ There are two types of **Source Objects** in a Table Population object:
 
 Note that a Table Population can extract data from other [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md)  in the same Logical Unit. It is recommended to always check the [execution order](/articles/07_table_population/13_LU_table_population_execution_order.md) of a source table’s population objects to verify that the source LU tables are poplated before the target LU tables. For example, the SUBSCRIBER LU table must be populated before the OFFER LU table to enable populating the OFFER LU table based on data from the SUBSCRIBER LU table.
 
-When an LU table has two populations, a second table population can extract data from the same LU table. For example, the ADDRESS LU table has two table populations:
+An LU table can have two or more populations; for example the second table population could extract data from the same LU table. e.g. The following ADDRESS LU table has two table populations:
 *	Population 1 extracts data from the CRM DB.
-*	Population 2 extracts data from the ADDRESS LU table that has been inserted by Population 1.
+*	Population 2 extracts data from the same ADDRESS LU table that has been inserted by Population 1 or from any other transformed data coming from any other table already populated. To do so, it must be ensured that the first population has been completed before starting any subsequent ones.
 
 [Click for more information about Creating Table Population Objects.](/articles/07_table_population/03_creating_a_new_table_population.md)
 
