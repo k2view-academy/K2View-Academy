@@ -2,12 +2,7 @@
 
 ### Configuration Logic
 
-The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file and it includes the following sections:
-
-* Loader configuration sections:
-  * default_loader, parser_loader, batch_process_loader, iid_finder_loader.
-* Session configuration section:
-  * default_session, loader_session, iid_finder_session.
+The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file and it includes the loader and session configuration sections.
 
 The loader configuration works by the following priority:
 
