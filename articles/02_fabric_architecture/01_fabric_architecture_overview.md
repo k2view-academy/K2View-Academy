@@ -96,7 +96,7 @@ Fabric Studio is a Windows application development tool for building Fabric proj
 
 ## 3. Data Flow
 ### 3.1 Overview
-Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters and to generate its uniquely patented Digital Entities.
+Data flows in and out of Fabric via multiple types of interfaces and data formats. Fabric users can use multiple configurations between their data-supplying and data-subscribing systems. Connection flexibility is essential for Fabric to integrate data spread across multiple databases and datacenters, to generate its uniquely patented Digital Entities, to allow any type of data transformations as per required by the business flow design and to expose the data to third-party systems. Both data push and data pull modes are supported between Fabric and any external systems.   
 
 ![](images/fabDataFlow.png)
 
@@ -126,9 +126,11 @@ External data can also be injected into the FabricDB via [standard commands](/ar
 
 
 #### 3.2.5 Fabric Triggers
+
 Fabric can activate triggers upon MicroDB change (such as insert, update, or delete) in the following cases once:
-•	CDC fields have been added to LU tables.
-•	Trigger functions have been attached to LU tables.
+
+- CDC fields have been added to LU tables.
+- Trigger functions have been attached to LU tables.
 
 Any change occuring on the LU tables will then activate a trigger and Fabric will either send a CDC message or activate the (trigger) function.
 
