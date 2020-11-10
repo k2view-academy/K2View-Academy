@@ -1,8 +1,8 @@
 # Cassandra Loader Configuration
 
+### Execution Modes
 
-
-Cassandra loader execution modes are:
+The Cassandra loader execution modes are:
 
 <table>
 <tbody>
@@ -24,7 +24,7 @@ Cassandra loader execution modes are:
 </tr>
 </tbody>
 </table>
-
+### Configuration Properties
 
 
 
