@@ -1,18 +1,22 @@
 # Cassandra Loader Overview
 
-Fabric uses the [Cassandra DB](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a storage layer and a Fabric application management database. Various Fabric processes, such as batch processes or iidFinder, need to be able to simultaneously insert massive amount of data into the Cassandra DB without getting the *Busy pool exception* yet consuming the hardware effectively. In addition, Fabric needs to be able to run internal processes, such as [Project Deployment](/articles/16_deploy_fabric/01_deploy_Fabric_project.md), without the dependency on other processes running on the same Fabric session.
+Fabric uses the [Cassandra DB](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) as a storage layer and a Fabric application management database. Various Fabric processes, such as batch processes or iidFinder, need to be able to simultaneously insert massive amount of data into the Cassandra DB without getting the *Busy pool exception* yet consuming the hardware effectively. In addition, Fabric needs to be able to run internal processes, such as [Project Deployment](/articles/16_deploy_fabric/01_deploy_Fabric_project.md), without the dependency on other running processes.
 
-**Cassandra Loader** is a library that supports massive WRITE operations to Cassandra DB. This library exposes a simple API to be invoked by the user code in the Fabric's projects implementation.
+**Cassandra Loader** is a Fabric robust mechanism that supports massive WRITE operations to Cassandra DB efficiently. The loader's default architecture can be modified by the configuration that does not require Fabric restart and allows updating the ratio of processes per loader and loaders per session. The best configuration can be found by "trial and error", given the project's hardware and expected data volumes. 
+
+The default loader's execution mode is asynchronous single. The configuration enables overriding the default settings such as a mode (batch or single), queue size, number of threads, etc. 
+
+The [loader's configuration](03_loader_configuration.md) also enables the loader to work by predefined priority, providing more resources to the higher priority processes and by that enabling their processing before the other processes.
+
+The loader exposes a simple API to be invoked by the user code in the Fabric's projects implementation. 
+
+<!--is the below correct? what about WS?? -->
+
+<!--in case of WS - to which section will it write??-->
+
+<!--can we add a new section to config.ini??-->
 
 The Cassandra loader is supported for [batch processes](/articles/20_jobs_and_batch_services/11_batch_process_overview.md), iidFinder and parsers. 
-
-The loader has a [default architecture](02_loader_architecture.md#default-architecture) that can be modified by overriding the default settings such as a mode (batch or single), queue size, number of threads, etc in the loader's configuration file. The [loader's configuration](03_loader_configuration.md) also enables the loader to work by predefined priority, for example process the batches before the iidFinder and within the batches process LU batches before the general ones.
-
-The [session can be configured](TBD) as well, for example enabling the definition of separate sessions per loader and iidFinder.
-
-The JDBC connection of the loader can be defined using a [DbCassandraLoader interface type](TBD), to prevent the definition of the Loader section hardcoded.
-
-
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_loader_architecture.md)
 

@@ -8,15 +8,11 @@
 
 <img src="images/28_01_2.PNG" alt="default" style="zoom:67%;" />
 
-The default loader configuration makes a distinction between the Fabric processes that need to perform WRITE operations to the Cassandra DB and the Fabric internal processes like Deploy. 
+The default architecture defines two sessions: one for the loaders to perform WRITE operations to the Cassandra DB and another one for the Fabric internal processes like Deploy. The internal processes run on a separate session to prevent the dependency on other heavy processes.
 
-By default, all the processes that need to write into the Cassandra run via one default loader and one session with maximum up to 1K concurrent requests. The internal processes run on a separate session, to prevent the dependency on other heavy processes.
-
-The loader can be configured to the optimal efficiency using the configuration parameters in *config.ini*. The optimal configuration is based on the combination of the effective project's hardware consumption, the best possible performance and the least number of *Busy pool exceptions*. 
+This architecture can be changed by the configuration to reach the optimal efficiency using the *config.ini* file. The optimal configuration is based on the combination of the effective project's hardware consumption, the best possible performance and the least number of *Busy pool exceptions*. 
 
 The configuration parameters override the default settings, thus via the configuration it is possible to define several loaders, each one with separate session. For example, one loader per each parser or separate loaders for parsers and for iidFinder. 
-
-The default loader's [execution mode](03_loader_configuration.md#execution-modes) is BATCH. The loader performs the transaction management, thus when the process needs to write 1,000,000 records into the Cassandra DB, the loader splits the data into batches, executes the statements and commits every batch. 
 
 
 

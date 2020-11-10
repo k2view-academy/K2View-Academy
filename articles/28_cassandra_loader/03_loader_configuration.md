@@ -44,7 +44,7 @@ The session configuration works by the following priority:
 <tbody>
 <tr>
 <td width=250px>SINGLE</td>
-<td width=650px>Every query submitted to the loader will be executed.</td>
+<td width=650px>Default. Every query submitted to the loader will be executed.</td>
 </tr>
 <tr>
 <td>BATCH</td>
@@ -60,6 +60,7 @@ The session configuration works by the following priority:
 </tr>
 </tbody>
 </table>
+
 
 
 ### Configuration Properties
@@ -87,13 +88,7 @@ The session configuration works by the following priority:
 <td>SINGLE</td>
 </tr>
 <tr>
-<td>&nbsp;ASYNC</td>
-<td>Statement execution mode - synchronous or asynchronous.</td>
-<td>true, false</td>
-<td>true</td>
-</tr>
-<tr>
-<td>&nbsp;ENABLE_FAILED_ QUERIES_LOGGING</td>
+<td>&nbsp;ENABLE_FAILED_QUERIES_LOGGING</td>
 <td>Enables query error logging when running the parser.</td>
 <td>true, false</td>
 <td>false</td>
@@ -115,6 +110,9 @@ The session configuration works by the following priority:
 </tbody>
 </table>
 
+### Loader JDBC Connection
+
+The JDBC connection of the loader can be defined using a **DbCassandraLoader** interface type, to prevent the definition of the Loader section hardcoded.
 
 
 
