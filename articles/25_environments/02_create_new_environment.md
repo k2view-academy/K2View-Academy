@@ -33,12 +33,13 @@ Once **Name** in the  **Environments List** grid is clicked, all DB and non-DB i
 
 By default, all interfaces are enabled whereby the settings of each relevant interface can be disabled if it is not applicable for the environment.
 
-![image](images/25_02_2.PNG)
-
 1. Select the interface and enable or disable it to add it to the environment or to remove it from the environment by either:
    * Clicking the **Enabled** column.
    * Right clicking the row and clicking **Set Selected Rows as Enabled** or **Set Selected Rows as Disabled**. Hold the **Ctrl** key to select multiple rows. 
 2. Populate the relevant fields of each active interface in the  **Selected Environment** grid: server, user, password, etc. If the project has several interface types, go through the tabs and populate all mandatory fields.
+
+   ![image](images/25_02_2.PNG)
+
 
 **Step 3 - Deploying the Environments**
 
