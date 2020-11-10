@@ -1,29 +1,20 @@
 # Cassandra Loader Architecture
 
-<table style="width: 800px;">
-<tbody>
-<tr>
-<td width="400pxl"><h4><strong>Default Architecture</strong></h4></td>
-<td width="400pxl"><h4><strong>Custom Architecture</strong></h4></td>
-</tr>
-<tr>
-<td>
-    <p><img src="images/28_01_1.PNG" alt="Default" /></p>
-</td>
-<td>
-    <p><img src="images/28_01_2.PNG" alt="Custom" /></p>
-</td>
-</tr>
-</tbody>
-</table>
+**Default Architecture**
 
-The default loader configuration makes a distinction between the Fabric processes that need to perform WRITE operations to Cassandra DB and the Fabric internal processes like Deploy. The internal processes run on a separate session, to prevent the dependency on other heavy processes.
+<img src="images/28_01_1.PNG" alt="default" style="zoom:67%;" />
 
+**Custom Architecture**
 
+<img src="images/28_01_2.PNG" alt="default" style="zoom:67%;" />
 
+The default loader configuration makes a distinction between the Fabric processes that need to perform WRITE operations to the Cassandra DB and the Fabric internal processes like Deploy. 
 
+By default, all the processes that need to write into the Cassandra run via one default loader and one session with maximum up to 1K concurrent requests. The internal processes run on a separate session, to prevent the dependency on other heavy processes.
 
+The loader can be configured to the optimal efficiency using the configuration parameters in *config.ini*. The optimal configuration is based on the combination of the effective project's hardware consumption, the best possible performance and the least number of  *Busy pool exceptions*. 
 
+Thus, it is possible to define several loaders, for example one loader per parser or separate loaders for parsers and for iidFinder, each one with separate session.
 
 
 
