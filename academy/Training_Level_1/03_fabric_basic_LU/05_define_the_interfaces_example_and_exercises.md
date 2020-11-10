@@ -55,7 +55,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 ```
 Interface type: SQLite
 
-Database: [full path of the billing_db.db SQLite file. For example: C:\Training\SqliteDB\orders_db.db]
+Database: [full path of the orders_db.db SQLite file. For example: C:\Training\SqliteDB\orders_db.db]
  
 ```
 
