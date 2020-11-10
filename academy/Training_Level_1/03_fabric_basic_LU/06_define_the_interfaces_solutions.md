@@ -18,6 +18,17 @@ Step 2: Check the highest value for ``` sum(INVOICE.BALANCE)``` in the result ta
 
 Step 3: Check the associated subscriber_id value (in the juxtaposing column) matching the value discovered in the query builder.
 
+NB - you could also have executed the following command to extract the max value without using the ```sort column``` capability of the Query Builder.
+
+```
+Select max(sum), sub
+From (Select sum(INVOICE.BALANCE) As sum,
+    INVOICE.SUBSCRIBER_ID As sub
+  From main.INVOICE
+  Group By INVOICE.SUBSCRIBER_ID)
+```
+
+
 
 3. `select count(*) from orders`
 
