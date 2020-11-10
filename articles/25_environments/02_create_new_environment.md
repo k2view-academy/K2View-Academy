@@ -20,8 +20,8 @@ An environment creation steps are:
 
     - (Optional) In the **Fabric URL** field, select the server from the predefined list in the **Server Configuration** tab in the [**User Preferences**](/articles/04_fabric_studio/04_user_preferences.md) window. 
 
-       The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm - ???? 
- [Click for more information about Fabric security hardening].
+       The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm. Full explanation will be provided in the Fabric hardening knowledge base article.
+ <!--[Click for more information about Fabric security hardening].-->
 
    -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
 
