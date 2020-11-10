@@ -40,7 +40,7 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 
 ### Decision functions
 
-- [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md).
+Decision functions are one of the multiple Sync methods proposed by Fabric. First read about [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md) to get acquainted with Fabric different Sync methods.
 
 - [Sync Decision Functions](/articles/14_sync_LU_instance/05_sync_decision_functions.md).
 
