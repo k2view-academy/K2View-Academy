@@ -21,7 +21,7 @@ To develop the functions pertaining to this course's section, use the Customer d
          
 
     3. Let's write a Java function that will modify any LUI "Associated Line" fields to the international format using the 
-       contract_ID 2787 and 2788 to validate the code. 
+       contract_ID 2787 and 2788 of ID 1123 to validate the code. 
         Tips:
             - Use the LUDB class to fetch data from the LUDB.  
             - Use regular expressions to identify the fields that need to be modified.
