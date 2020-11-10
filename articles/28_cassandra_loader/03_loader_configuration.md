@@ -26,29 +26,21 @@ The loader configuration works by the following priority:
 The session configuration works by the following priority:
 
 - Fabric internal
-
   - Use the **default_session** section.
-
 - Batch_process
-
   - Look for **[LU type]_batch_process_session** section.
   - If not exist, use **batch_process_session** section.
   - If not exist, use **loader_session** section.
   - If not exist, use **default_session** section.
-
 - Parser
-
   - Look for **[LU type]_[parser name]_session** section.
   - If not exist, use **parser_session** section.
   - If not exist, use **loader_session** section.
   - If not exist, use **default_session** section.
-
 - iidFinder
-
   - Look for **iid_finder_session** section.
   - If not exist, use **loader_session** section.
   - If not exist, use **default_session** section.
-
     
 
 ### Execution Modes
