@@ -32,7 +32,7 @@ Now that the Fabric console is open, let's get started by reviewing the key comp
 4. To review the k2fabric logs: 
 
    1. Check the **Output** option under the **Fabric Studio Server** \ **Activity Logs** component.
-   2. Go to the Fabric **C:\k2view\k2Projects\Fabric\\[Learning Project]\FabricHome\logs** log directory and check the **k2fabric** file. Note that there are additional directories under **FabricHome**. For example: **config**. 
+   2. Go to the Fabric **...\K2View Fabric Studio\Projects\[Learning Project]\FabricHome\logs** log directory and check the **k2fabric** file. Note that there are additional directories under **FabricHome**. For example: **config**. 
 
    
 
