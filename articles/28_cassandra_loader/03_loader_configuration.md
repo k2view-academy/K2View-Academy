@@ -1,5 +1,58 @@
 # Cassandra Loader Configuration
 
+### Configuration Logic
+
+The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file and it includes the following sections:
+
+* Loader configuration sections:
+  * default_loader, parser_loader, batch_process_loader, iid_finder_loader
+* Session configuration section:
+  * default_session, loader_session, iid_finder_session
+
+The loader configuration works by priority:
+
+- Batch_process
+  - Look for [<LU type>_batch_process_loader] section
+  - If not exist, user [batch_process_loader] section
+  - if not exist, use [default_loader] section
+- Parser
+  - Look for [<LU type>_<parser name>_loader] section
+  - if not exist, use [parser_loader] section
+  - If not exist, user [default_loader] section
+- iidFinder
+  - Look for [iid_finder_loader] section
+  - If not exist, use [default_loader] section
+
+The session configuration works by priority:
+
+- Fabric internal
+
+  - Use [default_session] section
+
+- Batch_process
+
+  - Look for [<LU type>_batch_process_session] section
+  - If not exist, use [batch_process_session] section
+  - If not exist, use [loader_session] section
+  - If not exist, use [default_session] section
+
+- Parser
+
+  - Look for [<LU type>_<parser name>_session] section
+  - If not exist, use [parser_session] section
+  - If not exist, use [loader_session] section
+  - If not exist, use [default_session] section
+
+- iidFinder
+
+  - Look for [iid_finder_session] section
+
+  - If not exist, use [loader_session] section
+
+  - If not exist, use [default_session] section
+
+    
+
 ### Execution Modes
 
 <table>
@@ -25,8 +78,6 @@
 
 
 ### Configuration Properties
-
-The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file - loader and session configuration sections.
 
 <table>
 <tbody>
@@ -79,41 +130,6 @@ The loader configuration is set in the [config.ini](/articles/02_fabric_architec
 </tbody>
 </table>
 
-
-The loader configuration works by priority:
-
-- Batch_process
-  - Look for [<LU type>_batch_process_loader] section
-  - If not exist, user [batch_process_loader] section
-  - if not exist, use [default_loader] section
-- Parser
-  - Look for [<LU type>_<parser name>_loader] section
-  - if not exist, use [parser_loader] section
-  - If not exist, user [default_loader] section
-- iidFinder
-  - Look for [iid_finder_loader] section
-  - If not exist, use [default_loader] section
-
-
-
-The session configuration works by priority:
-
-- Fabric internal
-  - Use [default_session] section
-- Batch_process
-  - Look for [<LU type>_batch_process_session] section
-  - If not exist, use [batch_process_session] section
-  - If not exist, use [loader_session] section
-  - If not exist, use [default_session] section
-- Parser
-  - Look for [<LU type>_<parser name>_session] section
-  - If not exist, use [parser_session] section
-  - If not exist, use [loader_session] section
-  - If not exist, use [default_session] section
-- iidFinder
-  - Look for [iid_finder_session] section
-  - If not exist, use [loader_session] section
-  - If not exist, use [default_session] section
 
 
 
