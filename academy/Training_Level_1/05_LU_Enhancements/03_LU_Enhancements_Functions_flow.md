@@ -33,7 +33,7 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 - [Enrichment Function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md).
 - [Root Functions and Enrichment Functions Differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md).
 - [Create & Edit an Enrichment function](/articles/10_enrichment_function/03_create_edit_enrichment_function.md).
-- [Enrichment Order](\articles\03_logical_units\14_edit_enrichment_order.md).
+- [Enrichment Order](/articles/03_logical_units/14_edit%20enrichment%20order.md).
 - [Code Example](/articles/10_enrichment_function/04_enrichment_function_code_examples.md).
 
 
