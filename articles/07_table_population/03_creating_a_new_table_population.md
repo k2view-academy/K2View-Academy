@@ -23,7 +23,7 @@ When an LU table has two populations, a second Table Population can extract data
 2.	Click **Tables**, right click [**Table Name**] > **New Table Population** to open the working area for creating the mapping.
 3.	Click the **Objects tab** in the right panel of the **Table Population** working area.
 4.	Click **Databases** to display the list of interfaces defined in the project or a built-in Fabric interface. 
-5.	Double click the [**Interface Name**] and drag a table into the working area. 
+5.	Double-click on the required table name or drag it into the working area. 
 6.	Click **Create as DB Query** to create the DB query source object in the working area. 
 7.	Optional: use the **Edit Query** option to edit the input query via the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview), for example, to choose specific columns or conditions in SQL statements. Do either:
    *	Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
