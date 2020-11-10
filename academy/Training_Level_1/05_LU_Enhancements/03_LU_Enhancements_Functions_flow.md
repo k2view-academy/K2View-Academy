@@ -50,7 +50,7 @@ Decision functions are one of the multiple Sync methods proposed by Fabric. Firs
 
 - [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md).
 - [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
-- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md.md).
+- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md).
 - [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md).
 
 
