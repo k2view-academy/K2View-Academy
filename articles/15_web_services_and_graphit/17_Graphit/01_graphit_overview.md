@@ -1,6 +1,6 @@
 # Graphit Overview
 
-Graphit is a Fabric UI utility which can be used to design Fabric[Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) responses. 
+Graphit is a Fabric UI utility which can be used to design Fabric [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) responses. 
 Graphit provides a very user-friendly interface and requires minimal coding while enabling powerful debugging capabilities. The content of a response is defined during its execution, either according to specific parameters relevant to the specific Web Service call, or by retrieving dynamic information from other databases or interfaces.
 
 ### Main Features
