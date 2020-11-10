@@ -21,7 +21,7 @@ Please read:
 
 -  [Broadway as a Population](/articles/14_table_population_based_Broadway.md)
 
-Now that you understand the benefits of a Table Population and its use cases, whether it is a DB query or a Java function known as a **Root function**, let’s see how to create one. 
+Now that you understand the benefits of a Table Population and its use cases, whether it is a DB query or a Root function, let’s see how to create one. 
 
 Please read:
 
