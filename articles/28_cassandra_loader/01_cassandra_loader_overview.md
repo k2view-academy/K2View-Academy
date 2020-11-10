@@ -14,5 +14,5 @@ The JDBC connection of the loader can be defined using a [DbCassandraLoader inte
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_loader_configuration.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_loader_architecture.md)
 
