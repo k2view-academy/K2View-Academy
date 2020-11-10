@@ -3,15 +3,15 @@
 <table style="width: 800px;">
 <tbody>
 <tr>
-<td width="400pxl"><strong>Default Architecture</strong></td>
-<td width="400pxl"><strong>Custom Architecture</strong></td>
+<td width="400pxl"><h4><strong>Default Architecture</strong></h4></td>
+<td width="400pxl"><h4><strong>Custom Architecture</strong></h4></td>
 </tr>
 <tr>
-<td><h4>
-    <p><img src="images/28_01_1.PNG" alt="Default" /></p></h4>
+<td>
+    <p><img src="images/28_01_1.PNG" alt="Default" /></p>
 </td>
-<td><h4>
-    <p><img src="images/28_01_2.PNG" alt="Custom" /></p></h4>
+<td>
+    <p><img src="images/28_01_2.PNG" alt="Custom" /></p>
 </td>
 </tr>
 </tbody>
