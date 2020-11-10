@@ -7,8 +7,8 @@ The Cassandra loader execution modes are:
 <table>
 <tbody>
 <tr>
-<td>SINGLE</td>
-<td>Every query submitted to the loader will be executed.</td>
+<td width=250px>SINGLE</td>
+<td width=650px>Every query submitted to the loader will be executed.</td>
 </tr>
 <tr>
 <td>BATCH</td>
@@ -24,7 +24,12 @@ The Cassandra loader execution modes are:
 </tr>
 </tbody>
 </table>
+
+
+
 ### Configuration Properties
+
+
 
 
 

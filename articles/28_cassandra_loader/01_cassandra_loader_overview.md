@@ -6,7 +6,7 @@ Fabric uses the [Cassandra DB](/articles/02_fabric_architecture/06_cassandra_key
 
 The Cassandra loader is supported for [batch processes](/articles/20_jobs_and_batch_services/11_batch_process_overview.md), iidFinder and parsers. 
 
-The loader has a [default architecture] that can be modified by overriding the default settings such as a mode (batch or single), queue size, number of threads, etc in the loader's configuration file. The [loader's configuration](TBD) also enables the loader to work by predefined priority, for example process the batches before the iidFinder and within the batches process LU batches before the general ones.
+The loader has a [default architecture](02_loader_architecture.md#default-architecture) that can be modified by overriding the default settings such as a mode (batch or single), queue size, number of threads, etc in the loader's configuration file. The [loader's configuration](03_loader_configuration.md) also enables the loader to work by predefined priority, for example process the batches before the iidFinder and within the batches process LU batches before the general ones.
 
 The [session can be configured](TBD) as well, for example enabling the definition of separate sessions per loader and iidFinder.
 

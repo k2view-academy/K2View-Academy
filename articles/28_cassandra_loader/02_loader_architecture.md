@@ -16,7 +16,7 @@ The loader can be configured to the optimal efficiency using the configuration p
 
 The configuration parameters override the default settings, thus via the configuration it is possible to define several loaders, each one with separate session. For example, one loader per each parser or separate loaders for parsers and for iidFinder. 
 
-The default loader's [execution mode](03_loader_configuration.md#execution-modes) is BATCH. The loader performs the transaction management, thus when the process needs to write 1,000,000 records into the Cassandra DB, the loader splits the data into batches and commits every statement. 
+The default loader's [execution mode](03_loader_configuration.md#execution-modes) is BATCH. The loader performs the transaction management, thus when the process needs to write 1,000,000 records into the Cassandra DB, the loader splits the data into batches, executes the statements and commits every batch. 
 
 
 
