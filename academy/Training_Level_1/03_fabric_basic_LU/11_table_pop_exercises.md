@@ -8,7 +8,7 @@
 2. Click **Debug** and select **Instance 82** from the Instances List. 
 3. Click **Execute Debug** or **Debug Record**.
 
-`Question: Which command would you execute to discover the BALANCE_ID value of the first record?`
+`Question: Whats is the BALANCE_ID value of Instance 82?`
 
  
  
