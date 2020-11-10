@@ -2,8 +2,6 @@
 
 ### Execution Modes
 
-The Cassandra loader execution modes are:
-
 <table>
 <tbody>
 <tr>
@@ -29,7 +27,56 @@ The Cassandra loader execution modes are:
 
 ### Configuration Properties
 
-
+<table>
+<tbody>
+<tr>
+<td><strong>Property Name</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>Valid Values</strong></td>
+<td><strong>Default Value</strong></td>
+</tr>
+<tr>
+<td>&nbsp;PARSER_WRITING_TYPE</td>
+<td>Writing method into Cassandra using the Cassandra loader or JDBC driver for parsers.</td>
+<td>JDBC, LOADER</td>
+<td>JDBC</td>
+</tr>
+<tr>
+<td>&nbsp;EXECUTION_MODE</td>
+<td>Loader execution mode.</td>
+<td>
+<p>SINGLE, BATCH, NOP, TOKEN_AWARE_BATCH</p>
+</td>
+<td>SINGLE</td>
+</tr>
+<tr>
+<td>&nbsp;ASYNC</td>
+<td>Statement execution mode - synchronous or asynchronous.</td>
+<td>true, false</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&nbsp;ENABLE_FAILED_ QUERIES_LOGGING</td>
+<td>Enables query error logging when running the parser.</td>
+<td>true, false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>&nbsp;BATCH_SIZE</td>
+<td>
+<p>The number of statements in a batch. Applicable for execution modes BATCH and TOKEN_AWARE_BATCH.</p>
+</td>
+<td>Recommended 100</td>
+<td>100</td>
+</tr>
+<tr>
+<td>&nbsp;BATCH_THREADS_NUM</td>
+<td>The number of threads for committing batch statements.</td>
+<td>Recommended 5</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
 
 
 
