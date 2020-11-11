@@ -10,7 +10,7 @@
 
 The default architecture defines two session objects: one is used by the loaders to perform WRITE operations to the Cassandra DB and another one is used by the Fabric internal processes like Deploy. The internal processes run on a separate session to prevent the dependency on other heavy processes.
 
-This architecture can be changed by the configuration to reach the optimal efficiency using the *config.ini* file. The optimal configuration is based on the combination of the effective project's hardware consumption and the best possible performance. 
+This architecture can be changed by the configuration to reach the optimal efficiency using the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file. The optimal configuration is based on the combination of the effective hardware consumption and the best possible performance. 
 
 The configuration parameters override the default settings, thus several loaders can be defined via the configuration, each one with a separate session. For example, one loader per each parser or separate loaders for parsers and for iidFinder. 
 
