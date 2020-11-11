@@ -22,7 +22,14 @@ The CDC Message publishes transaction messages to **Kafka**  for each UPDATE, IN
 
 When the MicroDB is saved into Cassandra, the transaction's thread sends a **Publish Acknowledge**  message to the Kafka **CDC_TOPIC** when the MicroDB is saved to Cassandra. 
 
-The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates a [CDC message](02_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic.
+The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates [CDC messages](02_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic.
+
+Notes: 
+- Each transaction can generate multiple CDC messages. For example, if an LUI sync inserts five records to an an LU table, a separate CDC message will be generated on each insert.
+-	All CDC messages, initiated by a given transaction, have the same value in their **trxId** property.
+- Each CDC message has its own value in the **msgNo** property.
+- The **msgCount** property of each CDC message is populated by the number of CDC messages initiated by a transaction for a given CDC consumer. 
+
 
 #### TRANSACTION_ACKNOWLEDGE_TIME_SEC Parameter
 
