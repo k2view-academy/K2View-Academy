@@ -16,7 +16,7 @@ Below is an example of the loader invocation from the Web Service. Note that the
 Db ci = db("loaderDefaultInterface");
 
 for (int i = 0; i < 10; i++){
-    ci.execute("INSERT INTO k2view_LoaderLu.tbl(PATIENT_ID,test) VALUES ('2','McLoaderPopulation"+i+"');");    
+    ci.execute("INSERT INTO k2view_LoaderLu.tbl(CUSTOMER_ID,test) VALUES ('2','McLoaderPopulation"+i+"');");    
 }
 ci.commit();
 ~~~
