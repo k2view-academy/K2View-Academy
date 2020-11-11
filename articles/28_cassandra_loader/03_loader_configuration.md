@@ -2,7 +2,30 @@
 
 ### Configuration Logic
 
-The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file and it includes the loader and session configuration sections.
+The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file and it includes the loader and session configuration sections. Each section includes the configuration parameters, such as queue size, number of threads, etc. which can be updated during the loader's fine-tuning optimization process.
+
+The loader execution modes are:
+
+<table>
+<tbody>
+<tr>
+<td width=250px>SINGLE</td>
+<td width=650px>Default. Every query submitted to the loader will be executed.</td>
+</tr>
+<tr>
+<td>BATCH</td>
+<td>The loader will execute statements in batches, the batch size is set by the BATCH_SIZE property from config.ini or iifConfig.ini.</td>
+</tr>
+<tr>
+<td>TOKEN_AWARE_BATCH</td>
+<td>The loader will execute statements in batches, the statements will be grouped to batches by token to improve performance, the batch size is set by the BATCH_SIZE property from config.ini or iifConfig.ini.</td>
+</tr>
+</tbody>
+</table>
+
+Note that for the testing purpose it is possible to disable the writing into the Cassandra DB. It is controlled by the IS_NOP loader's configuration parameter.
+
+### Work by Priority
 
 The loader configuration works by the following priority:
 
@@ -38,83 +61,7 @@ The session configuration works by the following priority:
   - If not exist, use **default_session** section.
     
 
-### Execution Modes
-
-<table>
-<tbody>
-<tr>
-<td width=250px>SINGLE</td>
-<td width=650px>Default. Every query submitted to the loader will be executed.</td>
-</tr>
-<tr>
-<td>BATCH</td>
-<td>The loader will execute statements in batches, the batch size is set by the BATCH_SIZE property from config.ini or iifConfig.ini.</td>
-</tr>
-<tr>
-<td>TOKEN_AWARE_BATCH</td>
-<td>The loader will execute statements in batches, the statements will be grouped to batches by token to improve performance, the batch size is set by the BATCH_SIZE property from config.ini or iifConfig.ini.</td>
-</tr>
-<tr>
-<td>NOP</td>
-<td>The loader doesn’t execute the statements and discards them, should be used only for testing.</td>
-</tr>
-</tbody>
-</table>
 
 
-
-### Configuration Properties
-
-<table>
-<tbody>
-<tr>
-<td><strong>Property Name</strong></td>
-<td><strong>Description</strong></td>
-<td><strong>Valid Values</strong></td>
-<td><strong>Default Value</strong></td>
-</tr>
-<tr>
-<td>&nbsp;PARSER_WRITING_TYPE</td>
-<td>Writing method into Cassandra using the Cassandra loader or JDBC driver for parsers.</td>
-<td>JDBC, LOADER</td>
-<td>JDBC</td>
-</tr>
-<tr>
-<td>&nbsp;EXECUTION_MODE</td>
-<td>Loader execution mode.</td>
-<td>
-<p>SINGLE, BATCH, NOP, TOKEN_AWARE_BATCH</p>
-</td>
-<td>SINGLE</td>
-</tr>
-<tr>
-<td>&nbsp;ENABLE_FAILED_QUERIES_LOGGING</td>
-<td>Enables query error logging when running the parser.</td>
-<td>true, false</td>
-<td>false</td>
-</tr>
-<tr>
-<td>&nbsp;BATCH_SIZE</td>
-<td>
-<p>The number of statements in a batch. Applicable for execution modes BATCH and TOKEN_AWARE_BATCH.</p>
-</td>
-<td>Recommended 100</td>
-<td>100</td>
-</tr>
-<tr>
-<td>&nbsp;BATCH_THREADS_NUM</td>
-<td>The number of threads for committing batch statements.</td>
-<td>Recommended 5</td>
-<td>5</td>
-</tr>
-</tbody>
-</table>
-
-### Loader JDBC Connection
-
-The JDBC connection of the loader can be defined using a **DbCassandraLoader** interface type, to prevent the definition of the Loader section hardcoded.
-
-
-
-[![Previous](/articles/images/Previous.png)](02_loader_architecture.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md) 
+[![Previous](/articles/images/Previous.png)](02_loader_architecture.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_loader_invocation.md) 
 

@@ -8,13 +8,9 @@ The default loader is executed in an **asynchronous single** mode. The configura
 
 The loader's configuration also enables the loader to work by predefined priority, providing more resources to the higher priority processes and by that enabling their processing before the others.
 
-The loader exposes a simple API to be invoked by the user code in the Fabric's projects implementation which can be accessed from the [batch processes](/articles/20_jobs_and_batch_services/11_batch_process_overview.md), iidFinder and parsers.
+The loader can be invoked by the user code in the Fabric's projects implementation.
 
-<!-- what about WS?? -->
 
-<!-- in case of WS - to which section will it write??-->
-
-<!-- can we add a new section to config.ini??-->
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_loader_architecture.md)
 
