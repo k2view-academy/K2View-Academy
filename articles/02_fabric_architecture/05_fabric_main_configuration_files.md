@@ -6,7 +6,7 @@
 - Fabric configuration **template files** are located under the $K2_HOME/fabric/config.template. 
 
 
-Make sure to edit the configuration files under the **$K2_HOME/config** directory and not under the template directory.
+Make sure to edit the configuration files under the **$K2_HOME/config** directory and not under the template directory. Configuration files should be edited on all Fabric nodes so it will became effective on the cluster level.
 
 ## Main Configuration Files
 
