@@ -8,7 +8,7 @@
 
 <img src="images/28_01_2.PNG" alt="default" style="zoom:67%;" />
 
-The default architecture defines two sessions: one for the loaders to perform WRITE operations to the Cassandra DB and another one for the Fabric internal processes like Deploy. The internal processes run on a separate session to prevent the dependency on other heavy processes.
+The default architecture defines two session objects: one for the loaders to perform WRITE operations to the Cassandra DB and another one for the Fabric internal processes like Deploy. The internal processes run on a separate session to prevent the dependency on other heavy processes.
 
 This architecture can be changed by the configuration to reach the optimal efficiency using the *config.ini* file. The optimal configuration is based on the combination of the effective project's hardware consumption, the best possible performance and the least number of *Busy pool exceptions*. 
 
