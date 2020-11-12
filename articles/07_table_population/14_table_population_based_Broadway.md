@@ -57,7 +57,7 @@ The default population flow template includes the following Stages and Actors:
 
   * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#example-of-non-prepared-statement). For example, to dynamically transfer a table or column name to a query.
 
-* **Stage 1**, an empty Stage in the template to enable adding additional activities can be performed on the data prior to loading it to the target DB, like it is done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
+* **Stage 1**, an empty Stage in the template to enable adding additional activities that can be performed on the data prior to loading it to the target DB, like it is done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
