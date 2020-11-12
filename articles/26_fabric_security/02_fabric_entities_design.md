@@ -81,8 +81,15 @@ When starting Fabric, the user must key-in the password of the keystore otherwis
 When a new master key is generated, the master key store opens the keystore, gets the protection key stored in the keystore, and uses it with an initialization vector (IV) to encrypt the master key of Fabric. 
 The keystore contains the history of all encryptions. Each encryption of a master key creates a record in the keystore with the protection key and the key description of the encrypted master key. This way, when users change the protection key in the keystore, the old protection key can still be used to get entities already encrypted with the previous protection key. 
 
+#### Keys in Cassandra
 
-#### Master Key Commands
+Keys are stored in the KEYS table in the K2AUTH keyspace. This table contains the key description, index, and value fields.
+By using Cassandra distribution data logic, each node stores only part of the Master Key. The access to the KEYS table is enabled only through K2View Fabric and is disabled through regular access to Cassandra. 
+The fact that the master key is stored in a dedicated Cassandra table, enables adding/removing nodes without impacting the solution, because each byte of the key is duplicated into several nodes (number of nodes depends on the replication factor of the Fabric cluster).
+
+
+
+### Master Key Commands
 
 The key is generated from Performed by using Fabric command - activate key. The activate key command activates 2 components:
 o	Key generator
@@ -95,7 +102,7 @@ e.g.
 ```activatekey name='keyProjectX' [generatorType='Java_AES'] [storeType='Stripe_AES']```
 
 
-#### Master Key Rotation
+### Master Key Rotation
 
 Master key rotation enables generating and activating a new master key. The new master key impacts instance IDs saved in Cassandra from the moment it was generated onwards. The already existing instance IDs are not impacted by the new key, until they are next sync-ed and saved on Cassandra.
 
@@ -103,6 +110,25 @@ Upon retrieval of a specific instance ID, K2View Fabric collects the information
 
 
 
+## LUI Encryption
+
+### LUI Encryption Key
+Fabric encrypts each instance (LUI) using the AES-256 in OFB mode encryption algorithm. Hence, the key length is 256 bytes. If an input key is shorter than the maximum key length, the key content is repeated as many times as necessary to complete the key.
+
+The underlying key will be the hash (using SHA-256 algorithm) of the following parts:
+
+- LU type name (logical unit name). For example: “CUSTOMER”
+- LUI (instance id). For example: “123”
+- Master key- input key generated as detailed in the previous section of this document.
+
+As a result, Fabric creates a different key for each instance id, because each instance id has a different value. Fabric saves the key description for each instance id (in the ENTITY table in cassandra). This way, Fabric can decrypt the entity when necessary.
+The encrypted master key that was used to encrypt the instance id, can be taken from the KEYS table by the key description.
+
+### Encrypt LUI Using Fabric Studio
+
+By default, when creating a logical unit, the *enable data encryption* property field is set to ‘False’.
+
+If you wish to encrypt each instance (LUI), set the ‘Enable data encryption’ property of your LU schema to ‘True’. See the screenshot below:
 
 
 
