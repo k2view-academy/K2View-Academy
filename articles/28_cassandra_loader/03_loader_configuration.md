@@ -1,8 +1,8 @@
-# Cassandra Loader Configuration
+# Cassandra Loader Configuration 
 
 ### Configuration Logic
 
-The loader configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file and it includes the loader and session configuration sections. Each section includes the configuration parameters, such as queue size, number of threads, etc. which can be updated during the loader's fine-tuning optimization process.
+The loader's configuration is set in the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) file which includes the loader and session configuration sections. Each section includes configuration parameters, such as queue size, number of threads, etc. which can be updated during the loader's fine-tuning optimization process.
 
 The loader execution modes are:
 
@@ -10,24 +10,24 @@ The loader execution modes are:
 <tbody>
 <tr>
 <td width=250px>SINGLE</td>
-<td width=650px>Default. Every query submitted to the loader will be executed.</td>
+<td width=650px>Default. Every query submitted to the loader is executed.</td>
 </tr>
 <tr>
 <td>BATCH</td>
-<td>The loader will execute statements in batches, the batch size is set by the BATCH_SIZE property from config.ini or iifConfig.ini.</td>
+<td>The loader executes statements in batches, the batch size is set by the BATCH_SIZE property in the config.ini or iifConfig.ini.</td>
 </tr>
 <tr>
 <td>TOKEN_AWARE_BATCH</td>
-<td>The loader will execute statements in batches, the statements will be grouped to batches by token to improve performance, the batch size is set by the BATCH_SIZE property from config.ini or iifConfig.ini.</td>
+<td>The loader executes statements in batches, the statements are grouped into batches by a token to improve performance, the batch size is set by the BATCH_SIZE property in the config.ini or iifConfig.ini.</td>
 </tr>
 </tbody>
 </table>
 
-Note that for the testing purpose it is possible to disable the writing into the Cassandra DB. It is controlled by the IS_NOP loader's configuration parameter.
+Note that writing into the Cassandra DB can be disabled for testing purposes. This is controlled by the IS_NOP loader's configuration parameters.
 
 ### Work by Priority
 
-The loader configuration works by the following priority:
+Configuration of the loader is according to the following priority:
 
 - Batch_process
   - Look for **[LU type]_batch_process_loader** section.
@@ -41,7 +41,7 @@ The loader configuration works by the following priority:
   - Look for **iid_finder_loader** section.
   - If not exist, use **default_loader** section.
 
-The session configuration works by the following priority:
+The session's configuration is according to the following priority:
 
 - Fabric internal
   - Use the **default_session** section.
