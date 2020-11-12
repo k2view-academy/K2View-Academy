@@ -1,6 +1,6 @@
 # Glossary
 
-```
+
 <table width="641">
 <tbody>
 <tr>
@@ -62,5 +62,3 @@
   [![Previous](/articles/images/Previous.png)](/articles/01_DPM_Introduction/01_DPM%20Introduction.md)
   
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_DPM_Overview/03_DPM%20Overview.md)
-```
-
