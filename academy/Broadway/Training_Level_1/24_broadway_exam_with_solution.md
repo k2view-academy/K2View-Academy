@@ -22,6 +22,8 @@ Broadway is the Fabric module that will allow you to:
 
 \- D:  All the above.
 
+(**Solution 1. D: All the above activities can be performed using Broadway**).
+
 
 
 #### Question 2: Actor Overview
@@ -37,6 +39,9 @@ Broadway Actors are:
 \- C:  Ready-to-use classes with predefined logic that can be extended if needed.
 
 \- D:  None of the above.
+
+
+(**Solution 2. C: Broadway offers a number of built-in Actors which address a wide range of predefined activities and can be extended by creating inherited Actors**).
 
 
 
@@ -55,6 +60,9 @@ Actors input parameters values are:
 \- D:  Populated based on the Actor's position in the flow.
 
 
+(**Solution 3. A: The population of the input parameter depends on the population type. The supported types are: Link, Const or External**).
+
+
 
 #### Question 4: Actors Inputs and Outputs
 
@@ -69,6 +77,8 @@ The External population type is used:
 \- C:  When using a FabricGet Actor.
 
 \- D:  When you need to iterate over the data set.
+
+(**Solution 4. A: When the flow is executed by an external process, the input arguments serving as flow parameters are set as External population type**).
 
 
 
@@ -87,6 +97,9 @@ If the Actor expects to receive a Boolean value but receives a number instead, B
 \- D:  Open a pop-up window to insert the correct value.
 
 
+(**Solution 5. B: Supported Broadway types can be converted automatically to other supported types expected by the Actor**).
+
+
 
 #### Question 6: Built-in Actors
 
@@ -101,6 +114,8 @@ Does Broadway support asynchronous message handling? If yes - how?
 \- C:  Broadway can subscribe to and publish the messages to Kafka only.
 
 \- D:  Broadway can subscribe to and publish the messages to Kafka and any JMS provider.
+
+(**Solution 6. D: Message provider types supported in Broadway are, Apache Kafka, JMS Queue and Topic by any JMS provider**).
 
 
 
@@ -117,6 +132,8 @@ When creating an inherited Actor, the new Actor:
 \- C:  Can set their ancestor's input and output arguments as either hidden or final.
 
 \- D:  Will be created in a new category (tag) designated for inherited Actors only.
+
+(**Solution 7. C: When exporting the Actor each input and output argument can be set either as hidden or final**).
 
 
 
@@ -135,6 +152,9 @@ A Broadway flow is built of several Stages whereby:
 \- D:  All the above.
 
 
+(**Solution 8. A: B is incorrect because a root Stage cannot be split. C is incorrect because only the Stages with the same parent Stage can be merged**).
+
+
 
 #### Question 9: Stage Conditions
 
@@ -149,6 +169,9 @@ A Stage condition:
 \- C:  Should be the only Actor in the Stage.
 
 \- D:  Is needed to define the Else condition.
+
+
+(**Solution 9. B: If a Stage condition is false, its branch's execution stops. The condition Actor can have any number of output parameters; however a true / false check is performed on the first**).
 
 
 
@@ -166,6 +189,8 @@ Iterations in Broadway:
 
 \- D:  All the above.
 
+(**Solution 10. D: All the above are supported by Broadway Iterations**).
+
 
 
 #### Question 11: Broadway Integration with Fabric Studio
@@ -181,6 +206,8 @@ In a Broadway flow you can:
 \- C:  Connect to any Fabric interface and validate an SQL query using the Query Builder window.
 
 \- D:  All the above.
+
+(**Solution 11. D: All the above are supported**).
 
 
 
@@ -199,6 +226,9 @@ Population of an LU table using a Broadway flow:
 \- D:  Is performed using Fabric commands and functions.
 
 
+(**Solution 12. B: A Broadway population flow can combine several sources such as DB queries and HTTP calls**).
+
+
 
 #### Question 13: Population based on a Broadway Flow
 
@@ -213,6 +243,9 @@ When using the SourceDbQuery Actor in a Broadway population flow:
 \- C:  You can edit the SQL statement in the Actor's sql input argument but cannot add the WHERE clause to it.
 
 \- D:  The WHERE clause is generated in the background by connecting the parent_rows input argument to the PopulationArgs Actor's output.
+
+
+(**Solution 13. D: The data is retrieved by a SourceDbQuery Actor whereby the WHERE clause is generated automatically and is not visible in the Actor's UI**).
 
 
 
@@ -230,6 +263,8 @@ When the flow includes the transaction:
 
 \- D:  All the above.
 
+(**Solution 14. D: All the above are supported**).
+
 
 
 #### Question 15: Transactions
@@ -245,6 +280,8 @@ The transaction in a Broadway flow:
 \- C:  When defined on an iteration, can do a commit (or rollback) either on each iteration or at the end of the iteration data set.
 
 \- D:  Cannot be defined on a split Stage.
+
+(**Solution 15. C: There are two approaches for handling transactions during an iteration, closing the transaction and performing a commit on each iteration or after the loop ends**).
 
 
 
@@ -262,6 +299,8 @@ When an error occurs in a Broadway flow:
 
 \- D:  The error handler catches it and returns either true to continue the flow or false to stop it.
 
+(**Solution 16. D: Any Actor can be used as an error handler and can be defined in any Stage. The Actor's logic is validated and when an error handler returns true, the flow continues. Otherwise the flow stops. An inner flow can be used as an error handler**).
+
 
 
 #### Question 17: Error Handling
@@ -277,6 +316,8 @@ Error Handling in a flow:
 \- C:  Will always cause a rollback in the transactional Stage.
 
 \- D:  Must include the error validation check.
+
+(**Solution 17. B: The Error Handler can catch an error and either continue the flow or stop it**).
 
 
 
@@ -294,6 +335,8 @@ When running the flow with Debug ON:
 
 \- D:  A and B are correct.
 
+(**Solution 18. D: Both A and B are correct**).
+
 
 
 #### Question 19: Data Inspector
@@ -309,6 +352,8 @@ Broadway Data Inspector (the yellow segment):
 \- C:  Displays the columns of complex Object data types but does not enable connecting them individually to other Actors arguments.
 
 \- D:  None of the above.
+
+(**Solution 19. A: The Broadway Data inspector allows editing the metadata during runtime. B is incorrect because the structure can be identified in Debug mode only. C is incorrect since the columns of the complex data type can be connected individually to other Actors**).
 
 
 
@@ -326,6 +371,7 @@ Can a Broadway flow that executes business logic on one instance (for example, c
 
 \- D:  Using a BROADWAY command.
 
+(**Solution 20. C: A flow can be run as a batch process by providing the batch configuration parameters and the LU name and flow name execution parameters**).
 
 
-[![img](/articles/images/Previous.png)](22a_broadway_summary_exercise_solution.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](24_broadway_exam_with_solution.md)
+[![img](/articles/images/Previous.png)](23_broadway_exam.md)
