@@ -27,7 +27,7 @@ Note that writing into the Cassandra DB can be disabled for testing purposes. Th
 
 ### Work by Priority
 
-Configuration of the loader is according to the following priority:
+The loader works according to the following priority:
 
 - Batch_process
   - Look for **[LU type]_batch_process_loader** section.
@@ -41,7 +41,7 @@ Configuration of the loader is according to the following priority:
   - Look for **iid_finder_loader** section.
   - If not exist, use **default_loader** section.
 
-The session's configuration is according to the following priority:
+The session works according to the following priority:
 
 - Fabric internal
   - Use the **default_session** section.
