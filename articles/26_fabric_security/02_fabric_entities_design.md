@@ -1,4 +1,4 @@
-# **Fabric Data: secured-by-design** 
+# **Fabric Data: Secured-By-Design** 
 
 
 
@@ -78,30 +78,8 @@ Fabric setup must use Java keytool to create a keystore, which contains an AES-2
 The keystore is locked by a password and is copied to each node of the Fabric cluster.
 When starting Fabric, the user must key-in the password of the keystore otherwise Fabric cannot start.
 
-When a new master key is generated, the master key store opens the keystore, gets the protection key in the keystore, and uses this AES 256 key with an initialization vector (IV) to encrypt the master key of Fabric. 
-The keystore contains the history of encryptions. Each encryption of a master key creates a record in the keystore with the protection key + key description of the encrypted master key. 
-This way user can change the protection key in the keystore, but the old protection key can still be used to get encrypted entities, when the previous protection key was used in the encryption.
-For example:
-o	Protection (Encryption) key = 2345. This key is used to encrypt the master key of Fabric. Master key= 678. The master key description = 55. The following records are stored in the keystore file:
-o	Key Identified	o	Protection Key Value
-o	Protection key	o	2345
-o	55	o	2345
-o	Master key of Fabric changes to 899. The new master key is also encrypted using protection key 2345. The new master key description = 66. The following records are stored in the keystore file:
-o	Key Identified	o	Protection Key Value
-o	Protection key	o	2345
-o	55	o	2345
-o	66	o	2345
-o	Protection key is changed from 2345 to 4567. The following records are stored in the keystore file:
-o	Key Identified	o	Key Value
-o	Protection key	o	4567
-o	55	o	2345
-o	66	o	2345
-o	Master key of Fabric is changed. The new master key is encrypted using the new protection key (4567). The key description of the new master key = 77. The following records are stored in the keystore file:
-o	Key Identified	o	Key Value
-o	Protection key	o	4567
-o	55	o	2345
-o	66	o	2345
-o	77	o	4567
+When a new master key is generated, the master key store opens the keystore, gets the protection key stored in the keystore, and uses it with an initialization vector (IV) to encrypt the master key of Fabric. 
+The keystore contains the history of all encryptions. Each encryption of a master key creates a record in the keystore with the protection key and the key description of the encrypted master key. This way, when users change the protection key in the keystore, the old protection key can still be used to get entities already encrypted with the previous protection key. 
 
 
 #### Master Key Commands
