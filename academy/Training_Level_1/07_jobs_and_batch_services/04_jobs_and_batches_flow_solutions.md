@@ -59,7 +59,7 @@ Response:
 |Cluster|--          |DONE  |2020-08-20 10:52:54|2020-08-20 10:52:58|00:00:04|00:00:00      |0        |569  |569      |0     |0    |569    |0        |100        |160.64         |160.64         |
 ```
 
-Answer: 569.
+Answer: 569. (Please note that if you are working on a local environment with limited resources, not all instances might have been successfully fetched with a few failed values in the table above. You can re-run this exercise using a select with a where statement pointing to a smaller state with fewer customers) 
 
 Command: ```batch_details 'fe051b44-413c-42de-83da-c2158747a844';```
 
@@ -108,7 +108,7 @@ Response:
 |Cluster|--          |DONE  |2020-08-20 11:10:59|2020-08-20 11:11:04|00:00:05|00:00:00      |0        |577  |0     |0    |577    |0        |100        |124.11         |124.11         |
 ```
 
-Answer: 577.
+Answer: 577. 
 
 Command: ```migrate_details '991a1199-1a81-41d9-b4f6-3abb587bb99d';```
 

@@ -46,7 +46,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 
 1. `Question: List the tables that are part of the Schema.`
 
-2. `Question: Which command would you execute to show which subscriber has the largest BALANCE?`
+2. `Question: Which steps would you execute to show which subscriber has the largest BALANCE?`
 
    
 
@@ -55,7 +55,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 ```
 Interface type: SQLite
 
-Database: [full path of the billing_db.db SQLite file. For example: C:\Training\SqliteDB\orders_db.db]
+Database: [full path of the orders_db.db SQLite file. For example: C:\Training\SqliteDB\orders_db.db]
  
 ```
 

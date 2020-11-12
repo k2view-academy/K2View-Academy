@@ -33,14 +33,14 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 - [Enrichment Function Overview](/articles/10_enrichment_function/01_enrichment_function_overview.md).
 - [Root Functions and Enrichment Functions Differences](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md).
 - [Create & Edit an Enrichment function](/articles/10_enrichment_function/03_create_edit_enrichment_function.md).
-- [Enrichment Order](\articles\03_logical_units\14_edit_enrichment_order.md).
+- [Enrichment Order](/articles/03_logical_units/14_edit%20enrichment%20order.md).
 - [Code Example](/articles/10_enrichment_function/04_enrichment_function_code_examples.md).
 
 
 
 ### Decision functions
 
-- [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md).
+Decision functions are one of the multiple Sync methods proposed by Fabric. First read about [Sync Methods](/articles/14_sync_LU_instance/04_sync_methods.md) to get acquainted with Fabric different Sync methods.
 
 - [Sync Decision Functions](/articles/14_sync_LU_instance/05_sync_decision_functions.md).
 
@@ -50,7 +50,7 @@ Use enrichment functions to work directly on the data in the LU tables AFTER the
 
 - [Sync Method Levels](/articles/14_sync_LU_instance/07_sync_levels.md).
 - [Sync Timeout](/articles/14_sync_LU_instance/08_sync_timeout.md).
-- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md.md).
+- [Skip Sync](/articles/14_sync_LU_instance/09_skip_sync.md).
 - [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md).
 
 

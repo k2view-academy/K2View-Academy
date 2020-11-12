@@ -8,7 +8,7 @@ The following diagram describes the CDC process:
 
 ### MicroDB Update
 
-A transaction on an LUI may involve several updates in several of its LU tables. Each update (write) in the MicroDB SQLite file of the LUI activates a Fabric trigger that sends the change to the **CDC Message**. The CDC Message publishes a message to Kafka for each insert, update, or delete event in the MicroDB. Each message has the LUI (iid), event type, old and new values of each CDC column, PK columns of the LU table and transaction ID.
+A transaction on an LUI may involve several updates in several of its LU tables. Each update (write) in the MicroDB SQLite file of the LUI activates a Fabric trigger that sends the change to the **CDC Message**. The CDC Message publishes a message to Kafka for each INSERT, UPDATE, or DELETE event in the MicroDB. Each message has the LUI (iid), event type, old and new values of each CDC column, PK columns of the LU table and transaction ID.
 
 -  If the transaction is committed, a **Commit message** is sent by the **CDC Message**. 
 
@@ -20,9 +20,16 @@ The CDC Message publishes transaction messages to **Kafka**  for each UPDATE, IN
 
 ### CDC Publisher
 
-When the MicroDB is saved into Cassandra, the transaction's thread sends a **Publish Acknowledge**  message to the Kafka **CDC_TOPIC** when the MicroDB is saved to Cassandra. 
+When the MicroDB is saved into Cassandra, the transaction's thread sends a **Publish Acknowledge**  message to the Kafka **CDC_TOPIC**. 
 
-The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates a [CDC message](02_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic.
+The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates [CDC messages](02_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic.
+
+Notes: 
+- Each transaction can generate multiple CDC messages. For example, if an LUI sync inserts five records into an LU table, a separate CDC message is generated for each insert.
+-	All CDC messages initiated by a given transaction have the same value in their **trxId** property.
+- Each CDC message has its own value in the **msgNo** property.
+- The **msgCount** property of each CDC message is populated by the number of CDC messages initiated by a transaction for a given CDC consumer. 
+
 
 #### TRANSACTION_ACKNOWLEDGE_TIME_SEC Parameter
 
@@ -36,7 +43,7 @@ The following diagram displays how Fabric handles this parameter:
 
 ![acknowledge time](images/cdc_publish_acknowledge_time_seq.png)
 
-Note that the [OPTIMISTIC_LOCKING](/articles/23_fabric_transactions/02_fabric_transactions.md) parameter in the config.ini can be set per node to support lightweight transactions between nodes when saving the LUIs into Cassandra.
+Note that the [OPTIMISTIC_LOCKING](/articles/23_fabric_transactions/02_fabric_transactions.md) parameter in the config.ini file can be set per node to support lightweight transactions between nodes when saving the LUIs into Cassandra.
 
 ### CDC Consumer
 

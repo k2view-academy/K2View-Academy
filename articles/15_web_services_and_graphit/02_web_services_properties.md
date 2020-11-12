@@ -67,7 +67,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 <td width="700pxl" valign="top">
 <p>The URL path of the Web Service. The actual name to be called by external applications when using the Web Service.</p>
 <p>The URL path requires permissions and should be unique per Path / Version / Response Format / Request Format.</p>
-<p>Web Service Permissions:&nbsp;<strong>set on the URL path.</strong>&nbsp;</p>
+<p>Web Service Permissions:&nbsp;<strong>set on the URL with the parameter **token=** and its value.</strong>&nbsp;</p>
 <p>For example, two Web Services sharing the same URL path:</p>
 <ul>
 <li>wsGetCustomerInfo version is set to 1.</li>
