@@ -29,7 +29,14 @@ For example:
 - An Instance Key used to encrypt LU Instances is the hashed combination of the LU name, LU Instance, and the master key.
 - Fabric masking utility uses the SHA-256 algorithm when hashing the original value of any encrypted field (such as interface passwords etc ...).
 
+<img src="/articles/26_fabric_security/images/01_hashing_data.PNG">
 
+
+
+## Fabric Project Encryption
+
+The following illustration shows how Logical Units Instances 
+<img src="/articles/26_fabric_security/images/02_fabric_encryption_process.PNG">
 
 
 
