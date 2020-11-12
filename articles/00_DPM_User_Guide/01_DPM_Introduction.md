@@ -2,7 +2,7 @@
 
 ## K2View’s Data Privacy Management (DPM) tool. 
 
-```
+
 <strong>DPM Overview<strong>
         
 <ul>
@@ -12,5 +12,5 @@
         <li><a href="/articles/00_DPM_User_Guide/04_DPM_Entities">DPM Entities</a></li>
         
 </ul>
-```
+
 
