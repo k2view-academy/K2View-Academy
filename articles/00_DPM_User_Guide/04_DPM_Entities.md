@@ -20,8 +20,10 @@ An example of the relation between the above entities is depicted in the followi
 
 ![](images/Main_DPM_Entities.png)
 
-Figure 1. Main DPM Entities
+     Figure 1. Main DPM Entities
 
 
 
- [![Previous](/articles/images/Previous.png)](/articles/03_DPM_Overview/03_DPM%20Overview.md)
+
+
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/03_DPM_Overview.md)
