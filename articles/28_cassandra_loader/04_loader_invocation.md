@@ -2,7 +2,7 @@
 
 ### Loader JDBC Connection
 
-The JDBC connection of the loader is defined using a **DbCassandraLoader** interface type. Its only property is the loader's section name which represents a section in the  *config.ini* file. When the provided section name does not exist in the configuration, a new section with the relevant configuration parameters must be added to the config.ini file.
+The loader's JDBC connection is defined using a **DbCassandraLoader** interface type. Its only property is the loader's section name which represents a section in the  *config.ini* file. When the provided section name does not exist in the configuration, a new section with the relevant configuration parameters must be added to the config.ini file.
 
 The section name property of the **DbCassandraLoad** interface can be overridden for each [environment](/articles/25_environments/01_environments_overview.md).
 
@@ -10,7 +10,7 @@ The section name property of the **DbCassandraLoad** interface can be overridden
 
 The loader is invoked from the user code in the Fabric project's implementation via the **DbCassandraLoad** interface type.
 
-Below is an example of the loader's invocation from the Web Service. Note that the loader is invoked via the **loaderDefaultInterface** interface defined as **DbCassandraLoad** interface type.
+Below is an example of the loader's invocation from the Web Service. Note that the loader is invoked via the **loaderDefaultInterface** interface defined as a  **DbCassandraLoad** interface type.
 
 ~~~java
 Db ci = db("loaderDefaultInterface");
