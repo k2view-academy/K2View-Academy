@@ -10,12 +10,14 @@ The section name property of the **DbCassandraLoad** interface can be overridden
 
 The loader is invoked from the user code in the Fabric project's implementation via the **DbCassandraLoad** interface type.
 
-Below is an example of the loader's invocation from the Web Service. Note that the loader is invoked via the **loaderDefaultInterface** interface defined as a  **DbCassandraLoad** interface type.
+Below is an example of the loader's invocation from the Web Service. The loader is invoked via the **loaderDefaultInterface** interface defined as a  **DbCassandraLoad** interface type.
+
+Note that since the loader is executed asynchronously, the commit will block the thread until all executed queries are completed.
 
 ~~~java
 Db ci = db("loaderDefaultInterface");
 
-for (int i = 0; i < 10; i++){
+for (int i = 0; i < 1000; i++){
     ci.execute("INSERT INTO k2view_LoaderLu.tbl(CUSTOMER_ID,test) VALUES ('2','McLoaderPopulation"+i+"');");    
 }
 ci.commit();
