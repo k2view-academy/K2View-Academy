@@ -36,7 +36,7 @@ For example:
 ## Fabric Project Encryption
 
 The following illustration shows how Logical Units Instances 
-<img src="/articles/26_fabric_security/images/02_fabric_encryption_process.PNG">
+<img src="/articles/26_fabric_security/images/02_fabric_encryption_process.png">
 
 
 
