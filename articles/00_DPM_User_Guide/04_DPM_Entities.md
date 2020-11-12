@@ -1,6 +1,6 @@
-```
+
 ## Main DPM Entities
-```
+
 
 The DPM configuration is based on the following main entities: 
 
