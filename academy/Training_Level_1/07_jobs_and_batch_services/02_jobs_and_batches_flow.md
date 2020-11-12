@@ -57,7 +57,7 @@ Batch process commands are fully detailed in the following articles:
 
 
 To understand Batch process flow: 
-- [Batch Flow](/articles/20_jobs_and_batch_services/16_batch_process_flow.md). 
+- [Batch Flow](/articles/20_jobs_and_batch_services/17_batch_process_flow.md). 
 
 
 
