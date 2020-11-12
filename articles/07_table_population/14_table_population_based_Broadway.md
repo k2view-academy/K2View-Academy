@@ -31,9 +31,7 @@ The default population flow template includes the following Stages and Actors:
   * Input arguments are either added automatically based on the selected table's fields or must be added manually. 
   * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
 
-* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. 
-
-* The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance. 
+* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance.
 
   * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 
@@ -59,7 +57,7 @@ The default population flow template includes the following Stages and Actors:
 
   * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#example-of-non-prepared-statement). For example, to dynamically transfer a table or column name to a query.
 
-* **Stage 1**, an empty Stage added to the template to indicate that additional activities can be performed on the data prior to loading it to the target DB, like it si done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
+* **Stage 1**, an empty Stage in the template to enable adding additional activities can be performed on the data prior to loading it to the target DB, like it is done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
