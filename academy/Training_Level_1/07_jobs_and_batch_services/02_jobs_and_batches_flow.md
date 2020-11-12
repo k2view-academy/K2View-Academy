@@ -51,9 +51,9 @@ Batch process commands are fully detailed in the following articles:
 
 - [Migrate Process Commands](/articles/20_jobs_and_batch_services/13_migrate_commands.md)
 
-- [Batch Broadway Process Commands](/articles/20_jobs_and_batch_services/14_batch_broadway_commands.md)
+- [Batch Broadway Process Commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)
 
-- [Batch CDC Republish Commands](/articles/20_jobs_and_batch_services/15_batch_CDC_commands.md)
+- [Batch CDC Republish Commands](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)
 
 
 To understand Batch process flow: 
