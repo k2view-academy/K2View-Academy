@@ -128,8 +128,11 @@ The encrypted master key that was used to encrypt the instance id, can be taken 
 
 By default, when creating a logical unit, the *enable data encryption* property field is set to ‘False’.
 
-If you wish to encrypt each instance (LUI), set the ‘Enable data encryption’ property of your LU schema to ‘True’. See the screenshot below:
+If you wish to encrypt each instance (LUI), set the ‘Enable data encryption’ property of your LU schema to ‘True’. 
 
+See the screenshot below:
+
+<img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md) 
