@@ -18,7 +18,7 @@ The loader execution modes are:
 </tr>
 <tr>
 <td>TOKEN_AWARE_BATCH</td>
-<td>The loader executes statements in batches, the statements are grouped into batches by a token to improve performance, the batch size is set by the BATCH_SIZE property in the config.ini or iifConfig.ini.</td>
+<td>The loader executes statements in batches. To improve performance, the statements are grouped into batches by a token. The batch size is set by the BATCH_SIZE property in the config.ini or iifConfig.ini.</td>
 </tr>
 </tbody>
 </table>
