@@ -54,11 +54,4 @@
 </tbody>
 </table> 
 
-
-
-
-
-
-  [![Previous](/articles/images/Previous.png)](/articles/01_DPM_Introduction/01_DPM%20Introduction.md)
-  
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_DPM_Overview/03_DPM%20Overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/01_DPM_Introduction.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/03_DPM_Overview.md)
