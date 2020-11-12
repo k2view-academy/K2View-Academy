@@ -20,3 +20,6 @@ K2View’s DPM is a configurable, flexible system which allows each company to d
 
 
 These components cover the end-to-end life cycle of data privacy-related requests, from the submission of a new request, request fulfilment process, SLA management, management dashboards, and generation of audit data. In the next chapters this user guide describes in detail the functionality of each of the modules. 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/02_DPM_Glossary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/04_DPM_Entities.md)
