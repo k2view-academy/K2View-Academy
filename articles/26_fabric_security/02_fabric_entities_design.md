@@ -135,4 +135,13 @@ See the screenshot below:
 <img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
 
 
+### LUI Partial Encryption
+
+If you wish to encrypt only selected fields on the LU instance, you need to set the following parameter to false in the config.ini file ```FULL_ENTITY_ENCRYPTION=false```.
+
+Then, you can encrypt specific fields in your implementation using the luEncrypt() and luRekey() product functions.
+
+
+
+
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md) 
