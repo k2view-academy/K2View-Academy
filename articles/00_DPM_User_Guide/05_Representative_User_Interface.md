@@ -6,7 +6,7 @@ A Representative can:
 - Search for Requests that were previously submitted.
 - Submit a new Request. 
 
- ![image](/images/Figure_32_Representative_menu.png)
+ ![image](images/Figure_32_Representative_menu.png)
 
 ## Submit a Request
 
@@ -166,6 +166,7 @@ Once the search results are presented, the representative can view further detai
 </tr>
 </tbody>
 </table>
+
 
  ## Representative Submits a Request
 
