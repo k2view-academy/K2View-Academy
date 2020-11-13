@@ -6,7 +6,7 @@ A Representative can:
 - Search for Requests that were previously submitted.
 - Submit a new Request. 
 
- ![image](articles/images/Figure_32_Representative_menu.png)
+ ![image](/images/Figure_32_Representative_menu.png)
 
 ## Submit a Request
 
@@ -20,7 +20,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p><strong>Column</strong></p>
 </td>
-<td width="443">
+<td width="815">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -28,7 +28,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p>Request ID</p>
 </td>
-<td width="443">
+<td width="815">
 <p>The unique identification of the request.</p>
 </td>
 </tr>
@@ -36,7 +36,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p>Regulation</p>
 </td>
-<td width="443">
+<td width="815">
 <p>The Regulation that this request was created for.</p>
 </td>
 </tr>
@@ -44,7 +44,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p>Activity</p>
 </td>
-<td width="443">
+<td width="815">
 <p>The Activity that this Request executes.</p>
 </td>
 </tr>
@@ -52,7 +52,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p>Status</p>
 </td>
-<td width="443">
+<td width="815">
 <p>The Request status. Values may be: In Progress, Completed, Stopped. A Stopped Request is a Request that during its execution the system identified it should stop the execution. For example, if there is a validation that the same customer cannot open two equal Requests, and there is already another Request for this same customer and Activity which is still in progress</p>
 </td>
 </tr>
@@ -60,7 +60,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p>Created</p>
 </td>
-<td width="443">
+<td width="815">
 <p>The date and time that the Request was submitted.</p>
 </td>
 </tr>
@@ -68,12 +68,13 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <td width="85">
 <p>Completed</p>
 </td>
-<td width="443">
+<td width="815">
 <p>The date and time that the Request was completed (completed requests only).</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 For the search criteria that are selected by a drop-down list or selecting a date: Regulation, Activity, Request Status, Created and Completed – the search is executed as soon as a value is selected. 
 For the search criteria which allow typing: customer ID and Request ID, the search is invoked as soon as the representative types 3 characters or more. 
@@ -84,82 +85,82 @@ Once the search results are presented, the representative can view further detai
 <table>
 <tbody>
 <tr>
-<td width="103">
+<td width="85">
 <p><strong>Field</strong></p>
 </td>
-<td width="425">
+<td width="815">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Request ID</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The unique identification of the request.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Regulation name</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The Regulation that this request was created for.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Activity name</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The Activity that this Request executes.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Request Status</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The Request status.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Created on</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The date and time that the Request was submitted.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Last Update Date</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The last time this request was updated. The Request is updated as its execution is progressing &ndash; so this date indicates the last date that a Task was executed in the Flow that is fulfilling this Request.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Estimated completion in</p>
 </td>
-<td width="425">
+<td width="815">
 <p>The number of days till the request is expected to be completed. The number of days is calculated based on the Request creation date and the Activity SLA.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Extended</p>
 </td>
-<td width="425">
+<td width="815">
 <p>Indicates if the Request SLA was extended. The values are true/false</p>
 </td>
 </tr>
 <tr>
-<td width="103">
+<td width="85">
 <p>Extendable</p>
 </td>
-<td width="425">
+<td width="815">
 <p>Indicates if the Request SLA can be extended. This depends on the configuration of the Activity of this task.</p>
 </td>
 </tr>
