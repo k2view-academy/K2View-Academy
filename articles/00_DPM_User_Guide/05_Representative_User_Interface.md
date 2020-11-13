@@ -17,63 +17,64 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <table>
 <tbody>
 <tr>
-<td width="85">
+<td width="100">
 <p><strong>Column</strong></p>
 </td>
-<td width="815">
+<td width="800">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Request ID</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The unique identification of the request.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Regulation</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The Regulation that this request was created for.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Activity</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The Activity that this Request executes.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Status</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The Request status. Values may be: In Progress, Completed, Stopped. A Stopped Request is a Request that during its execution the system identified it should stop the execution. For example, if there is a validation that the same customer cannot open two equal Requests, and there is already another Request for this same customer and Activity which is still in progress</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Created</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The date and time that the Request was submitted.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Completed</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The date and time that the Request was completed (completed requests only).</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 For the search criteria that are selected by a drop-down list or selecting a date: Regulation, Activity, Request Status, Created and Completed – the search is executed as soon as a value is selected. 
@@ -85,82 +86,82 @@ Once the search results are presented, the representative can view further detai
 <table>
 <tbody>
 <tr>
-<td width="85">
+<td width="100">
 <p><strong>Field</strong></p>
 </td>
-<td width="815">
+<td width="800">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Request ID</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The unique identification of the request.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Regulation name</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The Regulation that this request was created for.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Activity name</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The Activity that this Request executes.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Request Status</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The Request status.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Created on</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The date and time that the Request was submitted.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Last Update Date</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The last time this request was updated. The Request is updated as its execution is progressing &ndash; so this date indicates the last date that a Task was executed in the Flow that is fulfilling this Request.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Estimated completion in</p>
 </td>
-<td width="815">
+<td width="800">
 <p>The number of days till the request is expected to be completed. The number of days is calculated based on the Request creation date and the Activity SLA.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Extended</p>
 </td>
-<td width="815">
+<td width="800">
 <p>Indicates if the Request SLA was extended. The values are true/false</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Extendable</p>
 </td>
-<td width="815">
+<td width="800">
 <p>Indicates if the Request SLA can be extended. This depends on the configuration of the Activity of this task.</p>
 </td>
 </tr>
@@ -182,55 +183,55 @@ Once the Request type is selected, the right side of the form presents the list 
 <table>
 <tbody>
 <tr>
-<td width="85">
+<td width="100">
 <p><strong>Field</strong></p>
 </td>
-<td width="443">
+<td width="800">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Regulation</p>
 </td>
-<td width="443">
+<td width="800">
 <p>The Regulation that applies to the customer that is asking to submit a request.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Customer</p>
 </td>
-<td width="443">
+<td width="800">
 <p>The customer identification of the customer that is asking to submit the request</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Notes</p>
 </td>
-<td width="443">
+<td width="800">
 <p>Free text. Comments that the representative would like to be registered as part of the request.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Request Type</p>
 </td>
-<td width="443">
+<td width="800">
 <p>The specific Request that should be submitted. The options in this section depend on the selected Regulation.</p>
 </td>
 </tr>
 <tr>
-<td width="85">
+<td width="100">
 <p>Request Form Fields</p>
 </td>
-<td width="443">
+<td width="800">
 <p>Depending on the selected Request Type, different fields will be presented in this section, and the representative should populate them according to the information of the requesting customer.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/04_3_Roles_Management.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/06_customer_direct_requests.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/04_3_Roles_Management.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/06_Customer_Direct_Requests.md)
 
