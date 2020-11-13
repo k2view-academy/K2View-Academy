@@ -65,5 +65,5 @@ Under the Representative menu, select the “Requests List” menu option. The s
 </tbody>
 </table>
 
-[![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/01_fabric_architecture_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/05_Representative_User_Interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/05_Representative_User_Interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/06_customer_direct_requests.md)
 
