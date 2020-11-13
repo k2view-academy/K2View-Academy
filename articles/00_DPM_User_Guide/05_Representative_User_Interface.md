@@ -6,6 +6,6 @@ A Representative can:
 - Search for Requests that were previously submitted.
 - Submit a new Request. 
 
- ![image](articles/images/Figure_32_Representative_menu.png)
+![](images/Figure_32_Representative_menu.png)
 
-[!<img align="right" width="60" height="54" src="/articles/images/Next.png">](05a_search_a_request.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/05a_search_a_request.md)
