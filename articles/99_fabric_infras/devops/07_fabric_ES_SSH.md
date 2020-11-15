@@ -4,19 +4,19 @@ Assumptions:
 - An ElasticSearch instance is running with TLS support
 - Password set for elastic built-in user as Elastic system authentication is required for every HTTPS call/request
 
-- Step 1 - Make sure Fabric is stopped
+Step 1 - Make sure Fabric is stopped
 
 ```~/fabric/scripts/stop.sh```
 
 - Make sure elasticsearch instance is stopped (kill the elasticsearch PID if required)
 
-- Step 2 - ES Soft Link
+Step 2 - ES Soft Link
 
 - Create a soft link named ```elasticsearch``` which will point to the elasticsearch root directory:
 
 ```ln -s elasticsearch-* elasticsearch```
 
-- Step 3 - ES_HOME configuration
+Step 3 - ES_HOME configuration
 
 - Make sure the bash_profile for the elasticsearch user is defined with ES_HOME variable (point to the user’s home directory or the elasticsearch root path
 
@@ -25,15 +25,15 @@ NOTE:
 and set password require temporary elastic certificates and key generation to take place together with commands to be used for the process please hold in continue to step #4 and proceeding to Appendix – How to setup elastic built-in user with password, once done return back and continue forward
 
 
-- Step 4 - Copy the fabric keys tar file from previous steps to elasticsearch user/system (modify path as required):
+Step 4 - Copy the fabric keys tar file from previous steps to elasticsearch user/system (modify path as required):
 
 ```scp keyz.tar.gz k2view@10.10.10.10:/opt/apps/k2view/```
 
-- Step 5 - Create temporary directory and untar the keys into it:
+Step 5 - Create temporary directory and untar the keys into it:
 
 ```mkdir -p $ES_HOME/.cassandra_ssl && tar -zxvf keyz.tar.gz -C $ES_HOME/.cassandra_ssl```
 
-- Step 6 - Copy the following two keys from the extracted directory to elasticsearch configuration directory (modify path as required):
+Step 6 - Copy the following two keys from the extracted directory to elasticsearch configuration directory (modify path as required):
 
 ```
 cp $ES_HOME/.cassandra_ssl/cassandra.keystore /home/elasticsearch/elastic/config/
@@ -44,7 +44,7 @@ The directory can be removed after copy process done:
 
 ```rm -rf $ES_HOME/.cassandra_ssl```
 
-- Step 7 -	Acript download 
+Step 7 -	Acript download 
 
 - [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_ES.sh) the script into $ES_HOME to set ElasticSearch instance in secure mode
 
@@ -60,28 +60,28 @@ e.g.: ./secure_ES.sh {Password}
 
 Note that the script will set two set of parameters for TLS (transport) and HTTPS, it might require other ELK component associated with Elastic Search Engine to be defined with TLS/HTTPS too (i.e. Kibana connection for ElasticSearch web GUI).
 
-- Step 8 - Once the script is executed, re-run the elasticsearch instance (which now includes TLS/SSL support)
+Step 8 - Once the script is executed, re-run the elasticsearch instance (which now includes TLS/SSL support)
 
-- Step 9 -	Fabric shall be configured with search engine support but running the following command under each fabric node (in case it was configured already):
+Step 9 -	Fabric shall be configured with search engine support but running the following command under each fabric node (in case it was configured already):
 
 ```sed -i 's/#PROVIDER=ElasticSearchProvider/PROVIDER=ElasticSearchProvider/' $K2_HOME/config/config.ini```
 
-- Step 10 - Start the Fabric service:
+Step 10 - Start the Fabric service:
 
 ```K2fabric start``` 
 
-- Step 11 - Fabric Studio 
+Step 11 - Fabric Studio 
 
 In Fabric Studio, define interface for SearchEngine type:
  
 Define the connection details to Elastic Search system with port 9200, credentials to authentication for HTTPS requests
 The SSL properties shall be set as True, the keystore path shall point to path exists location with the .keystore file extension on Fabric server system, Password is the same one as took place in generation of the JKS keystore files (in current example: Q1w2e3r4t5), keystore type shall be set as JKS  Save the changes
 
-- Step 12 - LU Validation
+Step 12 - LU Validation
 - Before deploying the LU ensure the LU contains valid search fields so elastic will be part of deployment process
  
 
-- Step 13 - Run URL
+Step 13 - Run URL
 When deployment is successfully done – the data shall be also visible in Elastic side by running the following url in browser (when prompted, insert the authentication details):
 ```https://(ES_ip_address_or_hostname):9200/(LU_name)/_search```
 
