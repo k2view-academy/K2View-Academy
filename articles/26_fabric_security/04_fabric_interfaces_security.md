@@ -12,7 +12,9 @@ When defining a new interface, the password for this interface is hashed and sav
 <dbPasswordEncrypted>dqmdIUWuyC+4KaNDEKDlBimtd2utoESMq2Oj4NhUzCY=:X8P+ihKPTG2WuwfX0xztOPSS3lDLrr7Y+UrkzjkHf/c=</dbPasswordEncrypted>
 ```
 
-<img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.png>
+<img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.png">
+          
+  
 
 ## Environments
 
