@@ -132,7 +132,7 @@ If you wish to encrypt each instance (LUI), set the ‘Enable data encryption’
 
 See the screenshot below:
 
-<img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
+<img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.PNG">
 
 
 ### LUI Partial Encryption
