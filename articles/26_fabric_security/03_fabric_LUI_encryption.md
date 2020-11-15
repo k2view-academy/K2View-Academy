@@ -1,8 +1,6 @@
+# LUI Encryption
 
-
-## LUI Encryption
-
-### LUI Encryption Key
+## LUI Encryption Key
 Fabric encrypts each instance (LUI) using the AES-256 in OFB mode encryption algorithm. Hence, the key length is 256 bytes. If an input key is shorter than the maximum key length, the key content is repeated as many times as necessary to complete the key.
 
 The underlying key will be the hash (using SHA-256 algorithm) of the following parts:
@@ -14,7 +12,7 @@ The underlying key will be the hash (using SHA-256 algorithm) of the following p
 As a result, Fabric creates a different key for each instance id, because each instance id has a different value. Fabric saves the key description for each instance id (in the ENTITY table in cassandra). This way, Fabric can decrypt the entity when necessary.
 The encrypted master key that was used to encrypt the instance id, can be taken from the KEYS table by the key description.
 
-### Encrypt LUI Using Fabric Studio
+## Encrypt LUI Using Fabric Studio
 
 By default, when creating a logical unit, the *enable data encryption* property field is set to ‘False’.
 
@@ -25,7 +23,7 @@ See the screenshot below:
 <img src="/articles/26_fabric_security/images/03_fabric_LUencryption_studio.png">
 
 
-### LUI Partial Encryption
+## LUI Partial Encryption
 
 If you wish to encrypt only selected fields on the LU instance, you need first to set the following parameter to false in the config.ini file ```FULL_ENTITY_ENCRYPTION=false```.
 
@@ -33,6 +31,8 @@ It is then possible to encrypt specific fields in your implementation using the 
 
 <img src="/articles/26_fabric_security/images/04_fabric_LUencryption_LUEncrypt.PNG">
 
+
+### LUI Partial Encryptions Functions
 
 **luEncrypt()**
 
