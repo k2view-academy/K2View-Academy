@@ -22,8 +22,6 @@ How is CDC used in Fabric?
 
 \- D:  A and C are correct.
 
-(**Solution 1. D**).
-
 
 
 #### Question 2: CDC Messages
@@ -41,9 +39,6 @@ CDC messages:
 \- D:  None of the above.
 
 
-(**Solution 2. B: CDC Messages are published to Kafka. Each CDC consumer has their own topic. CDC consumers can consume CDC messages from Kafka**).
-
-
 
 #### Question 3: CDC Messages
 
@@ -59,9 +54,6 @@ Which events trigger the publication of a CDC Schema message?
 \- D:   A and B are correct.
 
 
-(**Solution 3. D**).
-
-
 
 #### Question 4: CDC Messages
 
@@ -75,9 +67,6 @@ To avoid publishing CDC messages on a session level you can either:
 \- C:  Run the SET CDC_PUBLISH= false command.
 
 \- D:  All of the above.
-
-
-(**Solution 4. C: Option A removes all CDC fields of a given LU and option B blocks the publication of CDC messages on all Fabric sessions**).
 
 
 
@@ -96,9 +85,6 @@ Which CDC consumers can get CDC messages from Fabric?
 \- D:  None of the above.
 
 
-(**Solution 5. C**).
-
-
 
 #### Question 6: CDC Consumers
 
@@ -115,9 +101,6 @@ Assuming there are three CDC Consumers in your project, how many Kafka topics ar
 \- D:  None of the above.
 
 
-(**Solution 6. A**).
-
-
 
 #### Question 7: Implementation Changes
 
@@ -130,8 +113,6 @@ What happens when you define LU table columns as CDC fields and redeploy the upd
 \- C:  Fabric publishes a CDC Update Schema message to the CDC consumers and initiates a batch process running the CDC_REPUBLISH_INSTANCE command on each Fabric LUI to publish the CDC data of the new CDC fields to the CDC consumers.
 
 \- D:  None of the above.
-
-(**Solution 7. A**).
 
 
 
@@ -150,9 +131,6 @@ You have added a new LU table with CDC fields to the LU. How do you update the d
 \- D:  You need to manually run a batch process to run CDC_REPUBLISH_INSTANCE on all the LUIs.
 
 
-(**Solution 8. C: Re-migrate all LUIs to bring the data from the new LU table into Fabric. The migration updates the MicroDB and publishes a CDC Table Change Info message on each LUI to the CDC consumers**).
-
-
 
 #### Question 9: Drop LU
 
@@ -165,8 +143,6 @@ What happens when you drop an LU with CDC fields?
 \- C:  You cannot drop an LU with CDC fields. You must remove the CDC fields, redeploy the LU, and only then drop it.
 
 \- D:  None of the above.
-
-(**Solution 9. B**).
 
 
 
@@ -182,8 +158,6 @@ Which CDC messages does the CDC_REPUBLISH_INSTANCE command publish?
 
 \- D:  None of the above.
 
-(**Solution 10. C**).
-
 
 
 #### Question 11: Rollbacked Transaction
@@ -197,8 +171,6 @@ A transaction which updates several LU tables on a given LUI, fails and is rollb
 \- C:  The publication of CDC messages on rollbacked transactions depends on the Fabric configuration (config.ini file).
 
 \- D:  None of the above.
-
-(**Solution 11. A**).
 
 
 
@@ -214,8 +186,6 @@ How does Broadway consume CDC messages?
 
 \- D:  None of the above.
 
-(**Solution 12. C**).
-
 
 
 #### Question 13: Search
@@ -229,8 +199,6 @@ How do you add Search fields to an LU?
 \- C: Add a CDC  consumer to the k2proj file, define CDC fields for this consumer, and manually create the indexes in Elasticsearch.
 
 \- D:  None of the above.
-
-(**Solution 13. B**).
 
 
 
@@ -246,8 +214,6 @@ You need to search instances using their Full Name field. Which Search field typ
 
 \- D:  None of the above.
 
-(**Solution 14. A**).
-
 
 
 #### Question 15: Search
@@ -261,8 +227,6 @@ How do you run a cross-instance search in Elasticsearch?
 \- C: Run the Fabric Search command. 
 
 \- D:  B and C are correct.
-
-(**Solution 15. D**).
 
 
 
@@ -278,8 +242,6 @@ The search does not return a customer that exists in the source system. Why?
 
 \- D:  A and B are correct.
 
-(**Solution 16. D: Option C cannot be correct since in missing implementations, the search does not return all customers**).
-
 
 
 #### Question 17: Search
@@ -293,8 +255,6 @@ The search does not return a customer using the ID number. Why?
 \- C: The ID number is defined as a data Search field.
 
 \- D:  All of the above.
-
-(**Solution 17. D: a data Search field is returned by the Search command and you cannot run a search using a data field**).
 
 
 
@@ -310,8 +270,6 @@ The customer's name and ID number are stored in the Customer source table and th
 
 \- D:  Create separate LUs for the Customer and the Address data and run a Search on both LUs.
 
-(**Solution 18. B**).
-
 
 
 #### Question 19: Search
@@ -326,8 +284,6 @@ I searched for customers whose birth date is in Apr and the search failed. Why?
 
 \- D:  All of the above.
 
-(**Solution 19. D**).
-
 
 
 #### Question 20: Search
@@ -341,8 +297,6 @@ How many LUs can be included in one search?
 \- C: The Search command supports only one LU.
 
 \- D:  None of the above.
-
-(**Solution 20. C**).
 
 
 
