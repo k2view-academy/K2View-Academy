@@ -7,8 +7,8 @@
 - Statistics - JMX monitoring of the processes running on the Fabric server, Fabric & Cassandra integration, etc.
 - [Swagger](/articles/15_web_services_and_graphit/09_swagger.md) - Specification and complete framework implementation for invocation and testing of Fabric Web Services.
 - Trace - ???
-- Documentation - 
-- Data Catalog / Data Editor - 
+- Documentation - links to the frequently-used K2View documentation, such as the Knowledge base and Fabric Java docs.
+- <!--6.4 Data Catalog / Data Editor - -->
 
 
 
