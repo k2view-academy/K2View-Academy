@@ -57,8 +57,8 @@ sed -i s@#ENDPOINT_IDENTIFICATION_ALGORITHM=@ENDPOINT_IDENTIFICATION_ALGORITHM=@
 
 ## Testing Fabric and IIDFinder SSL/TLS with Kafka
 
-- Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD) 
-- Assumption 2: Knowledge to simulate message creation in Kafka with format similat to message pushed by OGG BD replicat component
+Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD) 
+Assumption 2: Knowledge to simulate message creation in Kafka with format similat to message pushed by OGG BD replicat component
 
 - 	Fabric, IIDFinder, Kafka and OGG BD systems are up and running in SSL/TLS mode
 
