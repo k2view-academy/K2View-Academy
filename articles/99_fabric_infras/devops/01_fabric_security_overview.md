@@ -10,14 +10,18 @@ K2View has embraced DevOps perception and implemented security along the DevOps 
 
 # **Fabric DevOps Targets** 
 
-Fabric product includes the following components: 
+Fabric product includes the following servers: 
 
-- Fabric 
+- Fabric
 - Kafka
-- Cassandra servers
+- Cassandra
 
 Each one of these servers can be configured as a single node, but to ensure high availability and resiliency purposes, it is better to configure each one as in a cluster mode.
-To achieve and maintain compliance with a plethora of international regulations and standards, and to reduce cyber security risks, we strongly recommend that the following security hardening best practices are implemented. Fabric will require these to be in place in order for the systems to operate optimally or even to operate all together.
+To achieve and maintain compliance with a plethora of international regulations and standards, and to reduce cyber security risks, we strongly recommend that the following security hardening best practices are implemented. 
+
+Fabric will require these to be in place in order for the systems to operate optimally or even to operate all together.
+
+For the purpose of clarity we assume that each Operating System on which these servers instances are installed should be hardened based on the most up-to-date standards and policy. 
 
 The following steps describe Fabric hardening for each one of the servers and functionality involved.
 
