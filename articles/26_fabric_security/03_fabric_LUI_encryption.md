@@ -88,6 +88,4 @@ The function returns the following:
 
 
 
-
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md) 
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/02_fabric_entities_design.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/04_fabric_interfaces_security.md)
