@@ -137,9 +137,65 @@ See the screenshot below:
 
 ### LUI Partial Encryption
 
-If you wish to encrypt only selected fields on the LU instance, you need to set the following parameter to false in the config.ini file ```FULL_ENTITY_ENCRYPTION=false```.
+If you wish to encrypt only selected fields on the LU instance, you need first to set the following parameter to false in the config.ini file ```FULL_ENTITY_ENCRYPTION=false```.
 
-Then, you can encrypt specific fields in your implementation using the luEncrypt() and luRekey() product functions.
+It is then possible to encrypt specific fields in your implementation using the following built-in functions:
+
+<img src="/articles/26_fabric_security/images/04_fabric_LUencryption_LUEncrypt.png">
+
+
+**luEncrypt()**
+
+```public static String luEncrypt(String plainData) throws Exception```
+
+The function encrypts data in text format using the latest master key and LUI key. This method can be used to encrypt individual fields in the LUI micro-database
+
+Parameters:
+
+- plainData - the text to encrypt
+
+
+The function returns the following:
+
+- Data encrypted with the LUI key described above.
+
+
+**luDecrypt()**
+
+```public static String luDecrypt(String encryptedData, String luName, String entityID) throws Exception```
+
+The function decrypts a string that was previously encrypted using the ```luEncrypt``` method:
+
+Parameters:
+
+- encryptedData - the encrypted data
+- luName - The LUType for the data to decrypt
+- entityID - The instance id of the instance holding this data
+
+
+The function returns the following:
+
+- Decrypted text
+- Exception in cases when decryption failed
+
+
+
+**luRekey()** 
+
+```public static String luRekey(String encryptedData) throws Exception```
+
+The function decrypts data with it's key and encrypts it with the latest master key. For a system to support the rekey option, data needs to be re-keyed when re-syncing the LUI.
+
+Parameters:
+
+encryptedData - Encrypted data to be rekeyed
+
+
+The function returns the following:
+
+- Encrypted data, encrypted with the active key
+- Exception in cases when the process has failed
+
 
 
 
