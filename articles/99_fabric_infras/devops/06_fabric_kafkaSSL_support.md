@@ -60,15 +60,16 @@ sed -i s@#ENDPOINT_IDENTIFICATION_ALGORITHM=@ENDPOINT_IDENTIFICATION_ALGORITHM=@
 - Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD) 
 - Assumption 2: Knowledge to simulate message creation in Kafka with format similat to message pushed by OGG BD replicat component
 
-### Step 1 - 	Fabric, IIDFinder, Kafka and OGG BD systems are up and running in SSL/TLS mode
+- 	Fabric, IIDFinder, Kafka and OGG BD systems are up and running in SSL/TLS mode
 
-### Step 2 - 	Create update in OGG so new message will be pushed to Kafka
+- 	Create update in OGG so new message will be pushed to Kafka
 
-### Step 3 - 	IDFinder will authenticate against Kafka and will pull the new message generated
+- 	IDFinder will authenticate against Kafka and will pull the new message generated
 
-### Step 4 - 	Message will be written to cache instance {under keyspace k2staging tables}
+- 	Message will be written to cache instance {under keyspace k2staging tables}
 
-### Step 5 - 	From Fabric console run the ```GET``` command on to the instance to validate the data was received and written as expected
+- 	From Fabric console run the ```GET``` command on to the instance to validate the data was received and written as expected
+
 
 Note:
 In case IIDFinder was not set with SSL/TLS setup as required, the data in cache (k2staging) will not be written as expected
