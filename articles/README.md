@@ -343,7 +343,16 @@
 <li><a href="/articles/27_auditing/01_auditing_overview.md">Auditing Overview</a></li>
 <li><a href="/articles/27_auditing/02_filtering_strategy.md">Filtering Strategy</a></li>
 <li><a href="/articles/27_auditing/03_persistence_strategy.md">Persistence Strategy</a></li>
-</details>         
+</details>  
+
+<details>
+<summary markdown="span"><strong>Cassandra Loader<strong><a href="/articles/27_auditing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/28_cassandra_loader/01_cassandra_loader_overview.md">Cassandra Loader Overview</a></li>
+<li><a href="/articles/28_cassandra_loader/02_loader_architecture.md">Cassandra Loader Architecture</a></li>
+<li><a href="/articles/28_cassandra_loader/03_loader_configuration.md">Cassandra Loader Configuration</a></li>
+<li><a href="/articles/28_cassandra_loader/04_loader_invocation.md">Cassandra Loader Invocation and JMX</a></li>
+</details>  
+       
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
 
