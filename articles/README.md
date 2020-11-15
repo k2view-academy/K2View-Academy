@@ -346,12 +346,21 @@
 </details>  
 
 <details>
-<summary markdown="span"><strong>Cassandra Loader<strong><a href="/articles/27_auditing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<summary markdown="span"><strong>Cassandra Loader<strong><a href="/articles/28_cassandra_loader/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/28_cassandra_loader/01_cassandra_loader_overview.md">Cassandra Loader Overview</a></li>
 <li><a href="/articles/28_cassandra_loader/02_loader_architecture.md">Cassandra Loader Architecture</a></li>
 <li><a href="/articles/28_cassandra_loader/03_loader_configuration.md">Cassandra Loader Configuration</a></li>
 <li><a href="/articles/28_cassandra_loader/04_loader_invocation.md">Cassandra Loader Invocation and JMX</a></li>
 </details>  
+        
+ <details>
+<summary markdown="span"><strong>Tracing<strong><a href="/articles/29_tracing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/29_tracing/01_tracing_overview.md">Tracing Overview</a></li>
+<li><a href="/articles/29_tracing/02_trace_command.md">Trace Commands</a></li>
+<li><a href="/articles/29_tracing/03_trace_examples.md">Trace Examples</a></li>
+<li><a href="/articles/29_tracing/04_trace_custom.md">Trace Custom</a></li>
+<li><a href="/articles/29_tracing/05_trace_view.md">Trace View</a></li>
+</details>    
        
 <details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
