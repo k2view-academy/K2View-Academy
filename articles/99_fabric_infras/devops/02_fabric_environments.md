@@ -54,7 +54,7 @@ Note that:
 <img src="/articles/99_fabric_infras/devops/images/03_devop-preProdEnv.png">
 
 
-## PProduction Environment
+## Production Environment
 This environment should be isolated from the Dev & QA and be the same as the Pre-Production environment:
 
 - Fabric servers cluster, according to the production sizing definitions.
@@ -62,7 +62,7 @@ This environment should be isolated from the Dev & QA and be the same as the Pre
 - Access to the Fabric WS (API) should be done via load balancer (LB).
 - Access to SVN/GIT for version control. (access should be limited to the relevant users)
 
-<img src="/articles/99_fabric_infras/devops/images/03_devop-prodEnv.png">
+<img src="/articles/99_fabric_infras/devops/images/04_devop-prodEnv.png">
 
 
 
