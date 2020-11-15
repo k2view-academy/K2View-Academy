@@ -141,7 +141,7 @@ If you wish to encrypt only selected fields on the LU instance, you need first t
 
 It is then possible to encrypt specific fields in your implementation using the following built-in functions:
 
-<img src="/articles/26_fabric_security/images/04_fabric_LUencryption_LUEncrypt.png">
+<img src="/articles/26_fabric_security/images/04_fabric_LUencryption_LUEncrypt.PNG">
 
 
 **luEncrypt()**
