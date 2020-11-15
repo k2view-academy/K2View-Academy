@@ -109,3 +109,5 @@ Master key rotation enables generating and activating a new master key. The new 
 Upon retrieval of a specific instance ID, K2View Fabric collects the information of the Master Key that was used for the encryption of the LU instance and performs on the fly the de-encryption of the data.
 
 
+
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/01_fabric_security_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/03_fabric_LUI_encryption.md)
