@@ -25,7 +25,7 @@ ci.commit();
 
 ### JMX Metrics
 
-When running the Cassandra loader, you can monitor it using K2View Web Admin Statistics.
+When running the Cassandra loader, you can monitor it using K2View Web Framework Statistics.
 
 ![image](images/28_loader_stat.png)
 
