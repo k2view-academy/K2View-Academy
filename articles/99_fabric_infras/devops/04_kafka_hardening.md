@@ -77,16 +77,18 @@ Certificate was added to keystore
 
 The 10 following files have been generated in the $K2_HOME/.kafka_ssl directory:
 
-ca-crt.crt
-ca-key.key
-kafka.client.csr
-kafka.client.keystore.jks
-kafka-client-signed.crt
-kafka.client.truststore.jks
-kafka.server.csr
-kafka.server.keystore.jks
-kafka-server-signed.crt
-kafka.server.truststore.jks
+```
+- ca-crt.crt
+- ca-key.key
+- kafka.client.csr
+- kafka.client.keystore.jks
+- kafka-client-signed.crt
+- kafka.client.truststore.jks
+- kafka.server.csr
+- kafka.server.keystore.jks
+- kafka-server-signed.crt
+- kafka.server.truststore.jks
+```
 
 -	Tar & Copy them to all nodes in the cluster (Kafka and Fabric/IIDFinder nodes) as shown below:
 
@@ -97,6 +99,105 @@ mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_s
 ## for Fabric (after file copied):
 mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
 ```
+
+
+# Zookeeper configuration
+
+Notes: 
+- Required to be applied over every node in cluster
+- ZooKeeper does not support SSL authentication so MD5 authentication (username and password) is used
+
+## Step 1 - SASL Authentication
+
+```echo "authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider" >> $CONFLUENT_HOME/zookeeper.properties```
+
+
+## Step 2 - zookeeper_jaas.conf
+
+- Edit the newly created file zookeeper_jaas.conf
+
+```vi $CONFLUENT_HOME/zookeeper_jaas.conf```
+
+
+## Step 3 - Copy the following data into zookeeper_jaas.conf
+
+```
+Server {
+org.apache.zookeeper.server.auth.DigestLoginModule required
+user_super="kafka"
+user_kafka="kafka";
+};
+
+Client {
+	org.apache.zookeeper.server.auth.DigestLoginModule required
+	username="kafka"
+	password="kafka";
+};
+```
+
+## Step 4 - Start ZooKeeper service
+
+- Upon starting ZooKeeper make sure the following command is being invoked: 
+``` export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties ```
+
+The ZooKeeper daemon will also have been started.
+
+
+# Kafka Server Configuration
+Note that the following steps must be applied over each node in cluster.
+
+## Step 1 - SSL authentication
+- Define the 2-way SSL authentication between Kafka server and clients:
+
+```
+sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
+sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
+sed -i "32isecurity.inter.broker.protocol=SSL" $CONFLUENT_HOME/server.properties
+sed -i "33issl.client.auth=required" $CONFLUENT_HOME/server.properties
+sed -i 's/^advertised.listeners/#&/' $CONFLUENT_HOME/server.properties
+sed -i 's/^advertised.host.name/#&/' $CONFLUENT_HOME/server.properties
+sed -i "60issl.truststore.location=$K2_HOME/.kafka_ssl/kafka.server.truststore.jks" $CONFLUENT_HOME/server.properties
+sed -i "61issl.truststore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
+sed -i "62i ssl.keystore.location=$K2_HOME/.kafka_ssl/kafka.server.keystore.jks" $CONFLUENT_HOME/server.properties
+sed -i "63issl.keystore.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
+sed -i "64issl.key.password=Q1w2e3r4t5" $CONFLUENT_HOME/server.properties
+sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.properties
+```
+
+
+## Step 2 - kafka_server_jaas.conf
+
+- Edit new created file kafka_server_jaas.conf:
+
+```
+vi $CONFLUENT_HOME/kafka_server_jaas.conf
+```
+
+- Copy the following data into kafka_server_jaas.conf:
+
+```
+KafkaServer {
+	org.apache.kafka.common.security.plain.PlainLoginModule required
+	username="kafka"
+	password="kafka"
+	user_kafkabroker="kafka"
+	user_client1="kafka";
+};
+
+Client {
+	org.apache.zookeeper.server.auth.DigestLoginModule required
+	username="kafka"
+	password="kafka";
+};
+
+```
+## Step 3 - Start Kafka server
+
+- Upon starting Kafka make sure the following command is being invoked:
+```export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/kafka_server_jaas.conf" && ~/kafka/bin/kafka-server-start -daemon ~/kafka/server.properties```
+
+The Kafka daemon will also have been started.
+
 
 
 
