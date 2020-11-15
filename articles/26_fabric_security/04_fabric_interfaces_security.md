@@ -27,3 +27,11 @@ As it is the case for entities, Fabric keeps the key description of the master k
 
 
 <img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
+
+
+## File Systems
+
+Fabric enables connection to SFTP servers hosting files.
+In case there is a need to use the “SFTP” connection to pull/push files, it is highly recommended to use authentication between the servers based on SSH keys exchange. 
+In this case, the password in the SFTP interface ust be left blank.  
+ 
