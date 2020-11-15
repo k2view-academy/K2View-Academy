@@ -11,3 +11,5 @@ This environment should contain:
 
 Please note that the access to this server and SVN/GIT should be limited to the relevant developers to avoid uncontrolled access to external sources or any other project confidential information.
 
+/articles/99_fabric_infras/devops/images/01_devop-devEnv.png
+
