@@ -2,7 +2,7 @@
 
 K2View Web Framework is a container for hosting multiple web applications and providing services out of the box. The purpose of the K2View Web Framework is to serve as a user's desktop that contains frequently-used web applications running on the same application server. Instead of manually typing the URL, the user logs into the K2View Web Framework and selects the required application from the context menu. 
 
-The framework can be opened using the following URL: **http://[Fabric IP address]:3213/app/admin/cluster**.
+The framework can be opened using the following URL: **http://[Fabric IP address]:3213/app/login**.
 
 Login - ??? is there RBA / different permissions for different users???
 
