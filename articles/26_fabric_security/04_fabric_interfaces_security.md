@@ -1,5 +1,8 @@
 # **Fabric Interfaces Security** 
 
+Fabric enables you to define a number of source environments and to switch between these environments within the same Fabric session. This way, you can change your source connections without re-deploying your LU.
+Define your environments using Fabric Studio. For each environment, set the connection details of your interfaces, and then deploy the environments to your Fabric cluster. The deployment of the environments is separate from the deployment of your LUs.
+The passwords of the interfaces are encrypted by the fabric master key.
 
 
 ## Interfaces 
@@ -17,6 +20,7 @@ When defining a new interface, the password for this interface is hashed and sav
   
 
 ## Environments
+
 
 Fabric encrypts the interfaces’ details for each environment using the same master key generated on Fabric start (or regenerated) and that is also used to encrypt LU instances. 
 
