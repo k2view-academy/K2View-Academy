@@ -155,7 +155,7 @@ Jobs table in the Fabric Studio:
 
 **Step 3.**
 
-Answer: 10,000.
+Answer: 10,003.
 
 
 
