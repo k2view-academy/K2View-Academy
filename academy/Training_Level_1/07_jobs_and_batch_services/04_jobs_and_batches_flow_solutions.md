@@ -137,7 +137,7 @@ Response:
 
 ```java
 String TS_job = k2_currentDateTime();
-String number_of_iDs = db("CRM_DB").fetch("SELECT count(*) FROM CRM_DB.CUSTOMER").firstValue().toString();
+String number_of_iDs = db("CRM_DB").fetch("SELECT count(*) FROM CUSTOMER").firstValue().toString();
 
 FileWriter myWriter = new FileWriter("list_entities.txt", true); 
 //set to true to enable append mode
