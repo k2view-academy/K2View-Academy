@@ -69,4 +69,8 @@ Assumption 2: Knowledge to simulate message creation in Kafka with format simila
 
 
 Note:
-In case IIDFinder was not set with SSL/TLS setup as required, the data in cache (k2staging) will not be written as expected
+In case IIDFinder was not set with SSL/TLS setup as required, the data in cache (k2staging) will not be written as expected.
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_oracleGG_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_ES_SSH.md)
