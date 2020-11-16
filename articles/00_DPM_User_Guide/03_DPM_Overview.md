@@ -39,7 +39,7 @@ An example of the relation between the above entities is depicted in the followi
 
 ![](images/Main_DPM_Entities.png)
 
-Figure 1. Main DPM Entities
+
 
 
 
