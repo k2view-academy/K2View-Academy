@@ -472,7 +472,7 @@ When a Flow that includes a conditional Task is executed, the conditional Task w
 Reminders are used in order to preemptively call attention to Tasks that might not be progressing at the expected pace. 
 In the Reminders tab, the user can define one or more reminders that should be sent after a predetermined time.
 
- ![image](images/Figure 16_Task_configuration_Reminders_tab.png)
+ ![image](images/Figure_16_Task_configuration_Reminders_tab.png)
 
 Use the   ![image](images/Figure_16a_plus_minus_icon.png) control in order to add more than one reminder or remove unwanted reminder. 
 
@@ -528,7 +528,7 @@ The user selects an Operation from the operation dropdown list. As a result, the
 
 As an example, for a Task that should execute the Operation “SendMail” the system expects the parameters “Message”, “Subject” and “to” to be configured.
 
- ![image](images/Figure 17_Task_configuration_Operation_tab.png)
+ ![image](images/Figure_17_Task_configuration_Operation_tab.png)
 
 Configuring operation’s parameters: 
 When an operation requires the configuration of one or more parameters, the value of those parameters can be defined in several different ways. Each parameter can be one of the following types: 
