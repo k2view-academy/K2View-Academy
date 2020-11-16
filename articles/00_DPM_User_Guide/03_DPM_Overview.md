@@ -43,4 +43,5 @@ Figure 1. Main DPM Entities
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/02_DPM_Glossary.md)
+
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/02_DPM_Glossary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](articles/00_DPM_User_Guide/04_0_Admin_Module.md)
