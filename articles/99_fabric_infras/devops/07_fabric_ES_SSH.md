@@ -166,4 +166,4 @@ rm -rf ~/certs.zip ~/ESCerts ~/secure_ES_temp.sh ~/elasticsearch/config/ca.crt
 mv ~/elasticsearch/config/elasticsearch.yml.backup ~/elasticsearch/config/elasticsearch.yml
 ```
 
-
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/06_fabric_kafkaSSL_support.md)
