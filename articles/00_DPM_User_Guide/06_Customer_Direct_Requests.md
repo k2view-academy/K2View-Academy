@@ -244,5 +244,5 @@ Further details about a specific request can be viewed by clicking the request r
 For companies that prefer to integrate the DPM requests in their own customer portal using their standard user interface design, DPM provides a set of APIs to be used by any client application.  
 For detailed documentation of those APIs access the swagger documentation of the DPM system.
 
-[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/05_Representative_User_Interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/06_Steward_User_Interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/05_Representative_User_Interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/07_Steward_User_Interface.md)
 
