@@ -28,4 +28,4 @@ The following steps describe Fabric hardening for each one of the servers and fu
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles99_fabric_infras/devops/02_fabric_entities_design.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/02_fabric_environments.md) 
