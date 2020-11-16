@@ -179,4 +179,4 @@ Information about the overall Flow of the Request is provided to the user in the
 In this bar, the Stages of the Flow that were already completed appear in green, the current Stage of the Request appears in blue if it is on track and in red if it is past due. The Stage that the specific Task you are looking at makes part, is marked with two black lines. 
 In the example above, the Stages of “Case Opening”, “Data Collection” and “Data Review” were already completed. The Flow is currently at one of the Tasks that comprise the “Review and Approve” Stage. The Task which screen the user is viewing makes part of the “Data Review” Stage.
 
-[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/06_Steward_User_Interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/08_Case_Owner_User_Interface.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/06_Customer_Direct_Requests.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/08_Case_Owner_User_Interface.md)
