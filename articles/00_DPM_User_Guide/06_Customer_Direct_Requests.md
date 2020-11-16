@@ -1,6 +1,6 @@
 
 
-# CUSTOMER DIRECT REQUESTS
+# Customer Direct Requests
 
 The DPM system provides different ways to allow a customer to submit a DPM request, search for a request previously submitted and view its details:
 
