@@ -25,6 +25,7 @@ For the purpose of clarity we assume that each Operating System on which these s
 
 The following steps describe Fabric hardening for each one of the servers and functionality involved.
 
+Please note that this section deals only with devops security concerns. An entire section dealing with all the aspects of Fabric security from an architecture perspective is available [here](/articles/26_fabric_security/01_fabric_security_overview.md).
 
 
 
