@@ -8,7 +8,7 @@ A Representative can:
 
  ![image](images/Figure_32_Representative_menu.png)
 
-## Submit a Request
+## Representative Search a Request
 
 Under the Representative menu, select the “Requests List” menu option. The screen that is presented includes the list of existing requests and allows searching for a specific request based on multiple parameters.
 
@@ -233,5 +233,5 @@ Once the Request type is selected, the right side of the form presents the list 
 </tbody>
 </table>
 
-[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/04_3_Roles_Management.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/06_Customer_Direct_Requests.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/04_4_DPM_Main_Menu.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/06_Customer_Direct_Requests.md)
 
