@@ -50,7 +50,7 @@ E: All of the above
 
 #### Question 3: commonDB Type
 
-commonDB is a supplemntary Fabric database of the following type:
+commonDB is a supplementary Fabric database of the following type:
 
 A: Cassandra.
 
