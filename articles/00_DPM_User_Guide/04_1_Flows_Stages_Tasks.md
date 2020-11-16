@@ -586,4 +586,4 @@ The following image demonstrates the information that the DPM requests the Admin
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/04_Admin_Module.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/04_2_Regulations_and_Activities.md)
+[![Previous](/articles/images/Previous.png)](/articles/00_DPM_User_Guide/04_0_Admin_Module.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/00_DPM_User_Guide/04_2_Regulations_and_Activities.md)
