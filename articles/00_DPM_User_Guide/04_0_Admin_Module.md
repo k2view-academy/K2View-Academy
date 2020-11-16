@@ -12,7 +12,7 @@ Once a user logs into the DPM system as Administrator, the Admin menu options ar
 
 ![image](images/figure_2_admin_module.png)                           
 
-Figure 2. Admin Module
+
 
 By using the Menu on the left side of the window, the Administrator can access any of the DPM configuration options. The details for each of those options is described in this chapter.
 
@@ -20,7 +20,6 @@ By using the Menu on the left side of the window, the Administrator can access a
 
 ![image](images/figure_3_admin_menu.png)
 
-Figure 3. Admin Menu
 
 
 
