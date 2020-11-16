@@ -1,11 +1,16 @@
-# Interface Listener and Handling a Stream
+# Handling a Stream by a Broadway Flow
 
 ### ![](/academy/images/Exercise.png)Exercise - Create a Flow and Trigger it by Interface Listener
+
+To learn about the Interface Listener, please refer to:
+
+- [Interface Listener For Broadway Flows](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+- [Example of Using a Local File System Interface](/articles/24_non_DB_interfaces/06_local_file_sys.md#example-of-using-a-local-file-system-interface).
 
 In this exercise you will do the following:
 
 * Create a flow that reads a CSV file, parses it, searches for a specific value in the file and prints this value into the log.
-* Define an Interface Listener for the above flow.
+* Define an Interface Listener for the above flow that will be triggered every time a new file arrives to the directory defined in the interface.
 
 For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD columns. The file should be populated with the relevant codes, for example:
 

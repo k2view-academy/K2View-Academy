@@ -13,7 +13,7 @@ This exercise demonstrates how to combine the data from different sources (such 
 
 **Exercise Steps** 
 
-**Part 1 - Creating a Broadway Flow Based Population**
+**Step 1 - Creating a Broadway Flow Based Population**
 
 1. Go to the **Project Tree** > **Logical Units** > **Customer** and delete the CASE_NOTE table with its population from both the tables list and the LU Schema of the Customer LU.
 
@@ -29,19 +29,20 @@ This exercise demonstrates how to combine the data from different sources (such 
 
    Your initial flow is ready and now you can move to retrieving the data from the HTTP server!
 
-**Part 2 - Retrieve the Data from HTTP** 
+**Step 2 - Retrieve the Data from HTTP** 
 
 1. Add the **HttpDemoServer** and **Http** Actors to the Input Stage.
 
    * Populate **Http** Actor's input arguments: **interface** = http://127.0.0.1:8841/api/v1 and **path** = /employees.
+   * Note that **HttpDemoServer** Actor is a web server that exposes a REST API for demo purposes.
 
-2. Add a **JsonParser** Actor to the Source Stage and connect it to Http Actor's output. 
+2. Add a **JsonParser** Actor to the Source Stage and connect it to Http Actor's output. The **JsonParser** Actor is analyzing an input stream and outputting the JSON objects found in the stream.
 
 3. Save the flow, deploy the Customer LU and run the flow.
 
    ![image](images/12_cases_table_population_http.PNG)
 
-**Part 3 - Concatenate Two Inputs before Loading to Target**
+**Step 3 - Concatenate Inputs from Two Sources before Loading them to Target**
 
 1. Add a Stage condition to Stage 1 using the **JavaScript** Actor and do the following:
 
