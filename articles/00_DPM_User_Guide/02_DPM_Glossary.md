@@ -45,7 +45,7 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong>LGBD</strong></p></h4>
+  <h4><p><strong>LGPD</strong></p></h4>
 </td>
 <td width="516">
 <p>Brazil’s General Data Protection law.</p>
