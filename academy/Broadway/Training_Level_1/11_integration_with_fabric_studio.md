@@ -5,8 +5,8 @@
 By the end of this learning item you will:
 
 - Be familiar with the integration points between Broadway and the Fabric Studio.
-- Create a Broadway flow for the table population.
-- Define an Interface Listener for a Broadway flow.
+- Create a Broadway flow for the table population in the Logical Unit.
+- Define an Interface Listener for a Broadway flow that will serve as a daemon for handling the stream.
 
 ### Overview
 

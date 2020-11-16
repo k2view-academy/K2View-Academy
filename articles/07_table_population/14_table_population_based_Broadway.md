@@ -14,44 +14,49 @@ The advantages of using a Broadway flow for table population rather than a sourc
 
 ### Flow Population Template
 
-A Broadway population flow template includes predefined Stages and designated Actors and can be modified by adding more Actors when needed. 
+A Broadway population is created as a template with predefined Stages and designated Actors. The template flow is ready to be used and can be executed as part the Logical Unit population without any changes. If needed the flow can be modified by adding or removing Actors and Stages.
 
-The following Broadway flow is a default template created to populate the CASES table which is connected to the parent's ACTIVITY table in a Customer LU.
+The below example displays a Broadway flow template created to populate the CASES table in the Logical Unit. 
 
 ![image](images/07_14_01.PNG)
 
 
 
-![image](images/07_14_03.PNG)
-
-The default population flow template includes the following Stages and Actors:
+**Template's Predefined Stages and Actors**
 
 * **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
 
-  * Input arguments are either added automatically based on the selected table's fields or must be added manually. 
-  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
+  * **PopulationArgs** is a mandatory Actor of the Broadway population and is the only Actor that cannot be removed from the template. The purpose of the **PopulationArgs** is to connect the current population with the LU Schema by setting the parent-child relation via **iid** and **parent_rows** output arguments.
 
-* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments whereby improving the Actor's performance.
+  * Input arguments of the **PopulationArgs** are either added automatically based on the selected table's fields or must be added manually. 
+
+  * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, when the CASES table is related to the ACTIVITY table in the LU Schema, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
+
+    <img src="images/07_14_03.PNG" alt="image" style="zoom:75%;" />
+
+* **Source** Stage, defines a query that retrieves source data using the **SourceDbQuery** Actor. The **SourceDbQuery** Actor inherits from the [**DbCommand** Actor](/articles/19_Broadway/actors/05_db_actors.md) and extends it with additional **parent_rows** and **size** input arguments.
 
   * The interface for the query's execution is selected from the list of Fabric [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md). 
 
-  * A query is either populated automatically in the **sql** input argument or must be added manually. A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field. 
+  * The **sql** input argument holds a query that is either populated automatically or must be added manually. A query can be validated in the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) by clicking **QB** in the **sql** input argument field. 
 
   * The **size** value is used to group the rows from **parent_rows** where each group is used to generate the WHERE clause for the provided SQL statement. The **size** is important for the Actor's performance since it enables generating less calls to the source DB.
 
   * The WHERE clause is generated automatically in the same way as for regular populations and is not visible in the Actor's UI. 
 
-    For example, when the **sql** input argument includes:
+    For example, when the **sql** input argument displays the statement:
 
     ~~~sql
     SELECT * FROM CASES
     ~~~
 
-    The SQL statement that will actually be executed is:
+    The SQL statement that will actually be executed in the server side is:
 
     ~~~sql
     SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
     ~~~
+
+  * The **size** value will determine the number of ACTIVITY_ID values included in the SQL.
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
@@ -80,9 +85,7 @@ The starting points for creating a population based on a Broadway flow are:
 
 The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
 
-[Click for more information about building an LU hierarchy and linking table populations](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md).
-
-Note that for the population to be effective on the server side, deploy the population's Logical Unit.
+Note that for the population to be effective on the server side, LU deployment is required.
 
 [Click for more information about deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
