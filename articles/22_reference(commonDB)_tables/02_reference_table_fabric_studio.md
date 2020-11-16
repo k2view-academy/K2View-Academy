@@ -19,7 +19,7 @@ For obvious optimization reasons, this information is stored in an external tabl
 
 4. Optional: 
 
-Add a prefix to the Reference table's name in the **File Name Prefix** field (window's footer). 
+Add a prefix to the Reference table's name in the **Name Prefix** field (window's footer). 
 - If there are objects in the project with the same name, add a prefix to differentiate between Reference tables and LU tables with similar names.
 - We recommend using a prefix that indicates the project name as a Reference table. 
 
