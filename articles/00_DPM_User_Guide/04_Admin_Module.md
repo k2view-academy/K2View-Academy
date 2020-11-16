@@ -35,5 +35,5 @@ The configuration is comprised of:
 
 
 
-[![Previous](/articles/images/Previous.png)](03_DPM_Overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_1_Flows_Stages_and_Tasks.md)
+[![Previous](/articles/images/Previous.png)](03_DPM_Overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_1_Flows_Stages_Tasks.md)
 
