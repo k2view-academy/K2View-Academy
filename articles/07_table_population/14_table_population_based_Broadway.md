@@ -8,7 +8,7 @@ The advantages of using a Broadway flow for table population rather than a sourc
 
 * Streamlining logic and all related validations into one business process whereby improving the project's maintainability.
 * Populating more than one table in a single population flow.
-* Replacing the source DB with other action such as an HTTP call.
+* Replacing the source DB with another action such as an HTTP call.
 
 [Click for more information about Broadway](/articles/19_Broadway/01_broadway_overview.md).
 
@@ -16,19 +16,19 @@ The advantages of using a Broadway flow for table population rather than a sourc
 
 A Broadway population is created as a template with predefined Stages and designated Actors. The template flow is ready to be used and can be executed as part the Logical Unit population without any changes. If needed the flow can be modified by adding or removing Actors and Stages.
 
-The below example displays a Broadway flow template created to populate the CASES table in the Logical Unit. 
+The following example displays a Broadway flow template created to populate the CASES table in the Logical Unit. 
 
 ![image](images/07_14_01.PNG)
 
 
 
-**Template's Predefined Stages and Actors**
+**Predefined Stages and Actors**
 
 * **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
 
-  * **PopulationArgs** is a mandatory Actor of the Broadway population and is the only Actor that cannot be removed from the template. The purpose of the **PopulationArgs** is to connect the current population with the LU Schema by setting the parent-child relation via **iid** and **parent_rows** output arguments.
+  *  **PopulationArgs** is a mandatory Actor in the Broadway population and is the only Actor that cannot be removed from the template. The purpose of the **PopulationArgs** is to connect the current population with the LU Schema by setting the parent-child relationship via the **iid** and **parent_rows** output arguments.
 
-  * Input arguments of the **PopulationArgs** are either added automatically based on the selected table's fields or must be added manually. 
+  * The input arguments of the **PopulationArgs** are either added automatically based on the selected table's fields or must be added manually. 
 
   * The **iid** output argument indicates the instance ID of the execution. The **parent_rows** output argument is an array of objects that iterate over parent rows. For example, when the CASES table is related to the ACTIVITY table in the LU Schema, the **iid** is a customer ID and the **parent_rows** includes the list of activity IDs of this customer.
 
@@ -56,13 +56,13 @@ The below example displays a Broadway flow template created to populate the CASE
     SELECT * FROM CASES WHERE ACTIVITY_ID IN (...)
     ~~~
 
-  * The **size** value will determine the number of ACTIVITY_ID values included in the SQL.
+  * The **size** value determines the number of ACTIVITY_ID values included in the SQL.
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
   * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#example-of-non-prepared-statement). For example, to dynamically transfer a table or column name to a query.
 
-* **Stage 1**, an empty Stage in the template to enable adding additional activities that can be performed on the data prior to loading it to the target DB, like it is done by a [Root function](/articles/07_table_population/02_source_object_types.md) in a regular population object.  
+* **Stage 1**, an empty Stage in the template to enable adding additional activities that can be performed on the data prior to loading it to the target DB, similar to by a [Root function](/articles/07_table_population/02_source_object_types.md) that is added in a regular population object.  
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
@@ -70,7 +70,7 @@ The below example displays a Broadway flow template created to populate the CASE
   * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
   * Note that by default, **schema** and **table** input arguments are defined as an [**External** population type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs) to enable populating these parameters dynamically. When required, a **Const** or **Link** population type can be defined. 
 
-* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB, like it is done by an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If not needed, this Stage can be deleted or left empty.
+* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB, similar to by an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If it is not needed, this Stage can be deleted or left empty.
 
 ### How Do I Create a Population Based on a Broadway Flow?
 
@@ -83,7 +83,7 @@ The starting points for creating a population based on a Broadway flow are:
 * Project Tree, right click a table object and select **Create Table Population based Broadway Flow**.
 * Reference, right click and select **Create References from DB tables**.
 
-The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
+The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface, and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
 
 Note that for the population to be effective on the server side, LU deployment is required.
 
@@ -106,7 +106,7 @@ Note that for the population to be effective on the server side, LU deployment i
 
 ### How Do I Transfer Additional Parameters to a Where Clause?
 
-The WHERE clause is generated automatically and includes filters by the parent rows. However, if additional filters are needed, they can be added manually to the **sql** input parameter of  the **SourceDbQuery** Actor.
+The WHERE clause is generated automatically and includes filters by parent rows. If additional filters are needed, they can be added manually to the **sql** input parameter of  the **SourceDbQuery** Actor.
 
 Generally, parameters can be transferred to the WHERE clause of the **SourceDbQuery** Actor in the same way as they are transferred to the [**DbCommand** Actor](05_db_actors.md).
 
