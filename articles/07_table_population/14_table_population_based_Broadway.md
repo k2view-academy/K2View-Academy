@@ -26,7 +26,7 @@ The following example displays a Broadway flow template created to populate the 
 
 * **Input** Stage, defines the population's input arguments using a designated **PopulationArgs** Actor. 
 
-  *  **PopulationArgs** is a mandatory Actor in the Broadway population and is the only Actor that cannot be removed from the template. The purpose of the **PopulationArgs** is to connect the current population with the LU Schema by setting the parent-child relationship via the **iid** and **parent_rows** output arguments.
+  *  **PopulationArgs** is a mandatory Actor in the Broadway population and is the only Actor that cannot be removed from the template. The purpose of the **PopulationArgs** Actor is to connect the current population with the LU Schema by setting the parent-child relationship via the **iid** and **parent_rows** output arguments.
 
   * The input arguments of the **PopulationArgs** are either added automatically based on the selected table's fields or must be added manually. 
 
