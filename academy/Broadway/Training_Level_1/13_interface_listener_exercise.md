@@ -1,6 +1,6 @@
-# Handling a Stream by a Broadway Flow
+# Handling a Stream by a Broadway Flow 
 
-### ![](/academy/images/Exercise.png)Exercise - Create a Flow and Trigger it by Interface Listener
+### ![](/academy/images/Exercise.png)Exercise - Create a Flow and Trigger it Using an Interface Listener 
 
 To learn about the Interface Listener, please refer to:
 
@@ -9,8 +9,8 @@ To learn about the Interface Listener, please refer to:
 
 In this exercise you will do the following:
 
-* Create a flow that reads a CSV file, parses it, searches for a specific value in the file and prints this value into the log.
-* Define an Interface Listener for the above flow that will be triggered every time a new file arrives to the directory defined in the interface.
+* Create a flow that reads a CSV file, parses it, searches for a specific value in the file, and prints this value into the log.
+* Define an Interface Listener for the above flow that is triggered each time a new file arrives to the directory defined in the interface.
 
 For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD columns. The file should be populated with the relevant codes, for example:
 
@@ -28,12 +28,12 @@ For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD colum
 </tr>
 <tr>
 <td>&nbsp;GIB</td>
-<td>&nbsp;Gibraltar</td>
+<td>&nbsp;Gibraltar</td> 
 <td>&nbsp;350</td>
 </tr>
 <tr>
 <td>&nbsp;HKG</td>
-<td>&nbsp;Hong Kong</td>
+<td>&nbsp;Hong Kong</td> 
 <td>&nbsp;852</td>
 </tr>
 <tr>
@@ -66,8 +66,8 @@ For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD colum
 
 4. Add a **JavaScript** Actor to Stage 3 and add an **input1** input argument to it.
 
-   * Now connect **input1** to the output of the **CsvParser** Actor.
-   * Set  the **Link Type** to **Iterate**.
+   * Connect **input1** to the output of the **CsvParser** Actor.
+   * Set the **Link Type** to **Iterate**.
    * Click ![image](images/three_dots_icon.png) in the Stage context menu > **Iterate Close**. 
    * Write the following JavaScript code in the **script** input argument of the Actor:
 
@@ -78,7 +78,7 @@ For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD colum
    }
    ~~~
 
-5. Add a **Logger** Actor to Stage 4 
+5. Add a **Logger** Actor to Stage 4: 
 
    * Set the **message** value of the **Logger** Actor to: *The required area code is: ${0}*.
    * Connect the **result** output argument of the **JavaScript** Actor to the **[params]** input argument of the **Logger** Actor. 
@@ -108,16 +108,16 @@ For this exercise you will need a CSV file with CNTRY_CD, NAME and AREA_CD colum
 
    
 
-The Interface Listener is now ready! 
+The Interface Listener is now ready!  
 
-Create the **C:\k2view\listener** folder in your local file system and copy a CSV file with the described above format and data into it. 
+Create the **C:\k2view\listener** folder in your local file system and copy a CSV file with the above format and data into it. 
 
 The Interface Listener will pick up the file and run the flow.
 
 ![cases population](images/13_flow_final.PNG)
 
 
-Note that if you edit the Broadway flow, you need to redeploy the LU so that the updated flow is picked up by the Interface Listener.
+Note that if you edit the Broadway flow, you must redeploy the LU so that the updated flow is picked up by the Interface Listener.
 
 [![Previous](/articles/images/Previous.png)](12b_broadway_as_a_population_http.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](14_broadway_addl_features.md)
 
