@@ -60,7 +60,9 @@ The following example displays a Broadway flow template created to populate the 
 
   * Additional parameters can be added to the WHERE clause if needed. For example, to filter cases by their status.
 
-  * The **SourceDbQuery** Actor supports [non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#example-of-non-prepared-statement). For example, to dynamically transfer a table or column name to a query.
+  * The **SourceDbQuery** Actor supports non-prepared statement parameters. For example, to dynamically transfer a table or column name to a query.
+
+  * [Click for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
 
 * **Stage 1**, an empty Stage in the template to enable adding additional activities that can be performed on the data prior to loading it to the target DB, similar to by a [Root function](/articles/07_table_population/02_source_object_types.md) that is added in a regular population object.  
 
@@ -104,24 +106,7 @@ Note that for the population to be effective on the server side, LU deployment i
 
 4. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
-### How Do I Transfer Additional Parameters to a Where Clause?
-
-The WHERE clause is generated automatically and includes filters by parent rows. If additional filters are needed, they can be added manually to the **sql** input parameter of  the **SourceDbQuery** Actor.
-
-Generally, parameters can be transferred to the WHERE clause of the **SourceDbQuery** Actor in the same way as they are transferred to the [**DbCommand** Actor](05_db_actors.md).
-
-For example, to filter cases according to a status, the SQL statement is:
-
-~~~sql
-Select * From CASES
-Where CASES.STATUS = ${VALUE}
-~~~
-
-When the above query is written in the **sql** input parameter, a new input argument **VALUE** is added to the **SourceDbQuery** Actor and the parameter should be transferred to it as shown below: 
-
-![image](images/07_14_04.PNG)
-
-
+[Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
 [Click to display an example of a population flow in the Demo project.](/articles/demo_project)
 
