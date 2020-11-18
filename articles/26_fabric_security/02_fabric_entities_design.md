@@ -81,12 +81,6 @@ When starting Fabric, the user must key-in the password of the keystore otherwis
 When a new master key is generated, the master key store opens the keystore, gets the protection key stored in the keystore, and uses it with an initialization vector (IV) to encrypt the master key of Fabric. 
 The keystore contains the history of all encryptions. Each encryption of a master key creates a record in the keystore with the protection key and the key description of the encrypted master key. This way, when users change the protection key in the keystore, the old protection key can still be used to get entities already encrypted with the previous protection key. 
 
-#### Keys in Cassandra
-
-Keys are stored in the KEYS table in the K2AUTH keyspace. This table contains the key description, index, and value fields.
-By using Cassandra distribution data logic, each node stores only part of the Master Key. The access to the KEYS table is enabled only through K2View Fabric and is disabled through regular access to Cassandra. 
-The fact that the master key is stored in a dedicated Cassandra table, enables adding/removing nodes without impacting the solution, because each byte of the key is duplicated into several nodes (number of nodes depends on the replication factor of the Fabric cluster).
-
 
 
 ### Master Key Commands
