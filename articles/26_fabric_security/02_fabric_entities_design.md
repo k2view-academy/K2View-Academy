@@ -29,7 +29,7 @@ For example:
 - An Instance Key used to encrypt LU Instances is the hashed combination of the LU name, LU Instance, and the master key.
 - Fabric masking utility uses the SHA-256 algorithm when hashing the original value of any encrypted field (such as interface passwords etc ...).
 
-<img src="/articles/26_fabric_security/images/01_hashing_data.PNG">
+
 
 
 
@@ -54,7 +54,7 @@ The master key is encrypted using the protection key:
 - JAVA_AES library generates a new key using an AES-256 algorithm. 
 - The generated key size is 256 bit. 
 - The key generation is based on secured random generation.
-- Fabric uses ARS256 algorithm to encrypt the master key.
+- Fabric uses AES-256 algorithm as well as Initialization Vector algorithm, to encrypt the master key.
 
 
 #### Master Key Storage
