@@ -1,6 +1,6 @@
 # Trace View
 
-Trace files can be viewed using a dedicated web application that is already incorporated into the Fabric Web framework. The site can be accessed using the following URL http://[Fabric IP address]:[Fabric port]>/app/trace/. 
+Trace files can be viewed using a dedicated web application that is already incorporated into the Fabric Web framework. The site can be accessed using the following URL: **http://[Fabric IP address]:[Fabric port]>/app/trace/**. 
 
 After logging into the Trace view application, you will be asked to choose the trace file to be loaded.
 
