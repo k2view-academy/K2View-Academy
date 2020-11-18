@@ -26,4 +26,4 @@ Admin displays the history of the commands executed on the framework. It is show
 
 ![image](images/30_03_history.PNG)
 
-[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/02_preintegrated_apps_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/30_web_framework/02_preintegrated_apps_overview.md)
