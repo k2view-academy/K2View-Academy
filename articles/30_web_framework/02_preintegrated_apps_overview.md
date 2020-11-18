@@ -1,8 +1,8 @@
 # Pre-Integrated Applications Overview
 
-K2View Web Framework provides a list of pre-integrated applications that can be accessed from the framework toolbar. 
+K2View Web Framework provides a list of pre-integrated applications that can be accessed from the framework toolbar. When the user logs into the framework, Admin is displayed by default since it is the first application in the **apps.json** list. 
 
-![image](images/30_02_toolbar.PNG)
+<img src="images/30_02_toolbar.PNG" alt="image" style="zoom:80%;" />
 
 Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> icon to open the list of applications:
 
