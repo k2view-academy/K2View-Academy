@@ -64,7 +64,7 @@ The following example displays a Broadway flow template created to populate the 
 
   * [Click for more information about parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md).
 
-* **Stage 1**, an empty Stage in the template to enable adding additional activities that can be performed on the data prior to loading it to the target DB, similar to by a [Root function](/articles/07_table_population/02_source_object_types.md) that is added in a regular population object.  
+* **Stage 1**, a placeholder in the template that enables adding additional activities that can be performed on the data prior to loading it to the target DB. This feature is similar to using a [Root function](/articles/07_table_population/02_source_object_types.md) that is added in a regular population object.  
 
 * **LU Table** Stage, defines the target LU table using the **DbLoad** Actor. 
 
@@ -72,7 +72,7 @@ The following example displays a Broadway flow template created to populate the 
   * The [link type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties) from the Query to the load is set as **Iterate** to enable looping over the query results.
   * Note that by default, **schema** and **table** input arguments are defined as an [**External** population type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs) to enable populating these parameters dynamically. When required, a **Const** or **Link** population type can be defined. 
 
-* **Post Load** Stage, an empty Stage added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB, similar to by an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If it is not needed, this Stage can be deleted or left empty.
+* **Post Load** Stage, a placeholder added to the template to indicate that additional activities can be performed after the data has been loaded to the target DB. This feature is  similar to using an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). If it is not needed, this Stage can be deleted or left empty.
 
 ### How Do I Create a Population Based on a Broadway Flow?
 

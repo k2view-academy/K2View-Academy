@@ -54,7 +54,7 @@ This exercise demonstrates how to combine the data from different sources (such 
      input1 != null
      ~~~
 
-   Note that the condition is added since the number of rows returned from the Http call is different to the number of CASE_NOTE table rows. The condition enables skipping the empty rows.
+   Note that the condition is added since the number of rows returned from the HTTP call is different from the number of CASE_NOTE table rows. The condition enables skipping the empty rows.
 
 2. Add a **Concat** Actor to the same Stage to concatenate the following:
 
