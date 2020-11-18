@@ -12,8 +12,8 @@ Click ![image](images/30_02_icon.PNG) icon to open the list of applications:
 - [Swagger](/articles/15_web_services_and_graphit/09_swagger.md) - complete framework implementation for invocation and testing of Fabric Web Services.
 - [Trace](/articles/29_tracing/05_trace_view.md) - Fabric powerful mechanism for writing internal operations performed by Fabric into the trace files. Tracing can be set on both global and session levels. The result of the tracing process is logged into a file that can be loaded for viewing in the Web Framework.
 - Documentation - links to the frequently-used K2View documentation, such as the Knowledge base and Fabric Java docs.
-- <!--6.4 Data Catalog - TBD-->
-- <!--6.4 Data Editor - TBD-->
+<!-- - 6.4 Data Catalog - TBD-->
+<!-- - 6.4 Data Editor - TBD-->
 
 
 
