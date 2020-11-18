@@ -2,7 +2,7 @@
 
 K2View Web Framework is a container for hosting multiple web applications and providing services out of the box. The purpose of the K2View Web Framework is to improve the system's usability by providing one unified tool with the links to several frequently-used web applications running on the same application server. Instead of manually typing the URL for opening each one of the applications, the user logs into the K2View Web Framework and selects the required application from the context menu. 
 
-The framework can be opened using the following URL: **http://[Fabric IP address]:[Fabric port]/app/login**, for example http://localhost:3213/app/login or using the ![image](images/30_01_icon.PNG)icon from the Fabric Studio's toolbar:
+The framework can be opened using the following URL: **http://[Fabric IP address]:[Fabric port]/app/login**, for example http://localhost:3213/app/login or using the ![image](images/30_01_icon.PNG) icon from the Fabric Studio's toolbar:
 
 ![image](images/30_01_toolbar.PNG)
 
