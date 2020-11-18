@@ -1,7 +1,7 @@
 # LUI Encryption
 
 ## LUI Encryption Key
-Fabric encrypts each instance (LUI) using the AES-256 mode encryption algorithm. Hence, the key length is 256 bytes. If an input key is shorter than the maximum key length, the key content is repeated as many times as necessary to complete the key.
+Fabric encrypts each instance (LUI) using the AES-256 mode encryption algorithm. Hence, the key length is 256 bytes.
 
 The underlying key will be the hash (using SHA-256 algorithm) of the following parts:
 
