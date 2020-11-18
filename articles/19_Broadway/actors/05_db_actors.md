@@ -40,7 +40,7 @@ Another way to load the data in a Broadway flow is by using the **DbCommand** Ac
 
 Where **${text}** is replaced with the value of the **text** input argument in the prepared statement.
 
-### Parameters Support 
+### Parameters and Non-Prepared Statements Support 
 
 The **DbCommand** Actor’s **sql** input argument includes an SQL statement which is executed by the Actor. The SQL statement can be created dynamically using prepared and non-prepared statement parameters. 
 
