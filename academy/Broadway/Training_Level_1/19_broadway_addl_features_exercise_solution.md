@@ -15,6 +15,7 @@ Thus when <strong>a</strong> is negative, the flow stops before the <strong>Now<
 Thus when <strong>a</strong> is negative, the flow stops and the transaction is rolled back.
 </code></pre>
 </ul>
-​        ![image](images/10_flow_1.PNG)
+
+![image](images/10_flow_1.PNG)
 
 [![Previous](/articles/images/Previous.png)](18_broadway_addl_features_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](20_broadway_and_fabric.md)
