@@ -113,7 +113,7 @@ What should be changed in the flow to support automatic file upload to the Refer
 
      ~~~sql
      SELECT COUNT(*) AS IS_EMP FROM EMPLOYEE_LIST
-     WHERE emp_name = ${emp_name}
+     WHERE emp_first_name = ${emp_name}
      ~~~
 
    * Connect the  **Query** Actor's FIRST_NAME to the newly created **emp_name** input argument of the **Lookup** Actor.
@@ -124,7 +124,7 @@ What should be changed in the flow to support automatic file upload to the Refer
      res.IS_EMP;
      ~~~
 
-   * Connect the **JavaScript** Actor's output with the IS_EMP input of the  CUSTOMER **DbLoad** Actor using the **First** link type.
+   * Connect the **JavaScript** Actor's input with the **result** output argument of the **Lookup** (the **DbCommand** Actor) using the **First** link type because the **DbCommand** returns a result set of rows while we need to use the first row.
 
 4. Save the changes, deploy the **SummaryExercise** LU and sync an instance. 
 
