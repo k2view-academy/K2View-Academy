@@ -2,11 +2,11 @@
 
 ### Default Architecture
 
-<img src="images/28_01_1_new.PNG" alt="default"  />
+<img src="images/28_01_1_new.png" alt="default"  />
 
 ### Custom Architecture
 
-<img src="images/28_01_2_new.PNG" alt="default"  />
+<img src="images/28_01_2_new.png" alt="default"  />
 
 The default architecture defines two session objects, one used by loaders to perform WRITE operations to the Cassandra DB, and one used by internal Fabric processes like Deploy. The internal processes run on a separate session to prevent dependency on other heavy processes.
 
