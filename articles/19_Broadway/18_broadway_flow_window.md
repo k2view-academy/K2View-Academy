@@ -140,7 +140,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td width="200">Breakpoint</td>
-<td style="width: 465px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking the left of the Stage title.</td>
+<td style="width: 465px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title.</td>
 </tr>
 <tr>
 <td width="200">Remark</td>

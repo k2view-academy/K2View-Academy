@@ -30,7 +30,7 @@ Prior to running or debugging a flow, set the types and values of input argument
 A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow's window by either:
 
 - Running the entire flow and displaying the results.
-- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is ON.
+- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is ON. To add a breakpoint, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > Breakpoint or click on the left of the Stage title.
 
 Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they are automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
