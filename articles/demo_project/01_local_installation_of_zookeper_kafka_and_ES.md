@@ -14,12 +14,13 @@ K2View will not be liable for any unauthorized, unlicensed or unallowed use (“
 
 4.  Rename the **zoo_sample.cfg** file to **zoo.cfg**.
 5.  Open the **zoo.cfg** file for editing in any text editor like Notepad++. Find **dataDir=/tmp/zookeeper** and replace the **/tmp/zookeeper** with the Zookeeper data directory. For example **dataDir=C:\k2view\apache-zookeeper-3.6.1-bin\data**. 
-
+ 
 6. (Optional) Modify the default Zookeeper port (2181) in the **zoo.cfg** file.
 
 7.  Open the **System Properties** of your Windows environment and edit the **Environment Variables**:
 
-8. Add the **ZOOKEEPER_HOME** environment variable and populate it using the Zookeeper directory. For example: **ZOOKEEPER_HOME = C:\k2view\apache-zookeeper-3.6.1-bin\**.
+8. Add the **ZOOKEEPER_HOME** environment variable and populate it using the Zookeeper directory. 
+   For example: **ZOOKEEPER_HOME = C:\k2view\apache-zookeeper-3.6.1-bin\\**.
 
 9. Edit the **Path** environmentvariable and add **;%ZOOKEEPER_HOME%\bin;** 
 
@@ -51,6 +52,7 @@ K2View will not be liable for any unauthorized, unlicensed or unallowed use (“
 
 - The local Kafka runs on default port 9092 and connects to the ZooKeeper’s 2181 port (default).
 - Update the **config.ini** and **iifConfig.ini** Fabric files and update the Kafka port from 9093 to 9092.
+- When creating a Kafka interface in Fabric to connect to the local Kafka installation, use **localhost:9092** to populate the Bootstrap Server parameter of the interface. 
 
 ### Installing the Elasticsearch 
 
