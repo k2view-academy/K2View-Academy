@@ -4,15 +4,16 @@
 
 Fabric provides a secured mechanism for web-services to access to the data it exposes - such as LUI data or Reference Tables.
 This is done by means of authentication mechanism that support Web Service calls using either of the following credentials:
-- username and password 
-- secured token based on JSON Web Tokens (JWT) solution. 
+- unsecured API key  
+- secured API key based on JSON Web Tokens (JWT) solution. 
 
 JWT is an open industry standard method (RFC 7519 ) that securely represents claims between two parties. 
 
-Tokens can be used in two modes:
+API keys can be used in two modes:
 
-- Secured mode, using a digital signature on the client side. The secret key will be shared as an output only once to be used by the client to generate the digital signature
 - Unsecured mode signed by Fabric.
+- Secured mode, using a digital signature on the client side. The secret key will be shared as an output only once to be used by the client to generate the digital signature.
+
 
 Fabric supports backward capability via Token Authentication and an enhanced "Create Token" command for secured tokens. 
 
