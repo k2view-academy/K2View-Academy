@@ -58,7 +58,9 @@ The roles supported are described [here](/articles/17_fabric_credentials/02_fabr
 
 #### Project Web Services
 
-Permission is granted to the role in the Web Service or to all Web Services and the API Key is assigned to the role.
+Permission is granted to the role in the Web Service or to all Web Services and the API Key is assigned to the role. This is achieved from the command line by using the following command:
+
+```GRANT <ws_name> TO <ROLE>```
 
 
 #### Product Web Services
