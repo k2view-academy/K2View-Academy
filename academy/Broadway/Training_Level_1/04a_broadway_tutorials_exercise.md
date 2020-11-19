@@ -21,10 +21,10 @@
 
   <ul>
   <pre><code>
-  A. How many iterations run on the <strong>StringBuilder</strong> Actor of the <strong>for each Stage</strong>?<br>
-  B. Which input value is sent to the <strong>StringBuilder</strong> Actor on each iteration?<br>
-  C. What is the output of the <strong>StringBuilder</strong> Actor?
-  D. How many outputs are returned by the <strong>StringBuilder</strong> Actor? Please explain.
+  A. How many iterations run on the <strong>StringBuild</strong> Actor of the <strong>for each Stage</strong>?<br>
+  B. Which input value is sent to the <strong>StringBuild</strong> Actor on each iteration?<br>
+  C. What is the output of the <strong>StringBuild</strong> Actor?
+  D. How many outputs are returned by the <strong>StringBuild</strong> Actor? Please explain.
   E. Which Stage is executed after the <strong>Splitting the flow</strong> Stage? Why?
   </code></pre>
   </ul>
@@ -53,7 +53,7 @@ Click the green asterisk in **Splitting the flow** to read its remarks and check
 
 1. Close the Broadway Tutorial flow and check the list of Broadway flows under the <strong>project tree.</strong>
 
-<ul><pre><code>A. How may flows do you have now?</code></pre></ul>
+<ul><pre><code>A. Can you see the tutorial flow in the project tree?</code></pre></ul>
 
 2. Reopen the **Broadway Tutorial flow** and click the **Const** Actor in the <strong>Hello Broadway</strong> Stage.
 

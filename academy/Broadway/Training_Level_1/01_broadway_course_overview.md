@@ -28,7 +28,7 @@ To fully understand this course, you should be familiar with the following princ
 
 Throughout the course, we will evolve within a Telco customer management environment that provides a set of DBs and tables that you will use to operate your first Fabric-based queries and data manipulations. 
 
-This work environment features sets of tables  like customers, subscribers, invoices and contracts that you are already familiar with. 
+This work environment features the tables  like customers, subscribers, invoices and contracts that you are already familiar with. 
 
 The Broadway exercises are based on the [Demo Project](/articles/demo_project) in the K2view Academy repository.
 

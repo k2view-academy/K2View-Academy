@@ -11,7 +11,7 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 #### Step 2 - Populate Stage 1 of the Flow
 
-1. Select the number of cases of each case status from the **CASES** table in the **CRM_DB** interface. Use the following SQL query:
+1. Let's prepare a query that selects the number of cases of each case status from the **CASES** table in the **CRM_DB** interface using the following SQL query:
 
 ```sql
 Select CASES.STATUS, Count(*) AS NUMBER_OF_CASES

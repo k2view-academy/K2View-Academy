@@ -252,7 +252,11 @@ Explain the purpose of this split and what changes in the LU data.
 
 **Step 7 - Publish the Customer Data to Kafka Topic**
 
-Prior to starting this exercise, create a **Kafka** interface to connect to the Apache Kafka server and set the **Data Type** to **JSON**.
+Prior to starting this exercise:
+
+* Follow the installation guidelines to [install the Zookeper and Kafka locally](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md). 
+
+* Create a **Kafka** interface to connect to the Apache Kafka server and set the **Data Type** to **JSON**.
 
 1. Create a new **publishCustomer** flow.
 

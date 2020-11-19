@@ -40,9 +40,9 @@ In the Step, you check the number of records: check if the number of records >= 
 
      Read [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), [Broadway Actor's Properties Window](/articles/19_Broadway/03_broadway_actor_window.md), and [Built-In Actor Types](/articles/19_Broadway/04_built_in_actor_types.md) to learn more about Broadway Actors.
 
-4. Link the output of the **Count** condition to the **GreaterThanEquals** **a** input parameter.
+4. Link the output of the **Count** condition to the **GreaterThanEquals** **a** input argument.
 
-5.  Set the **b** input parameter to be a **Const** and set its value to 3.
+5.  Set the **b** input argument to be a **Const** and set its value to 3.
 
 6. Now you need to split **Stage 4** into two forks: one fork to be executed if the **GreaterThanEquals** Actor returns **true** and another fork if the **GreaterThanEquals** returns **false**:
 
@@ -55,17 +55,16 @@ In the Step, you check the number of records: check if the number of records >= 
 1. Add a Stage to the flow and split it into **Stage 6** and **Stage 7**.
 2. Add the **Logger** Actors to **Stage 6** and **Stage 7**.
 3. Set the **Logger** Actor's parameters of **Stage 6**:
-   - Set the **message** input parameter as **Const**.
-   - Set the **message** input parameter value to: *There are ${0} records in the list*. 
-   - The **${0}** is set for the first parameter of the **params** input parameter.
-   - Set the **level** input parameter to **info**.
+   - Set the **message** input argument's population type as **Const**.
+   - Set the **message** input argument's value to: *There are ${0} records in the list*.  Note that the **${0}** is used to set the value of the first parameter of the **params** input argument into the message.
+   - Set the **level** input argument to **info**.
 4. Link the **Count** Actor to the **Logger** Actor or to **Stage 6**.
 5. Set the **Logger** Actor's parameters of **Stage 7**:
-   - Set the **message** input parameter as **Const**.
+   - Set the **message** input argument as **Const**.
    
-   - Set the **message** input parameter value to: *Error - there are not enough records in the list*.
+   - Set the **message** input argument value to: *Error - there are not enough records in the list*.
    
-   - Set the **level** input parameter to **error**.
+   - Set the **level** input argument to **error**.
    
      Now you have a condition in your flow:
    

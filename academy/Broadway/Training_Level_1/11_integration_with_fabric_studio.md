@@ -10,7 +10,7 @@ By the end of this learning item you will:
 
 ### Overview
 
-The Fabric Studio includes several integration points that are used by Broadway Actors to simplify the creation of Broadway flows, such as:
+The Fabric Studio includes several integration points that are used by Broadway Actors to enhance the Fabric and to simplify the creation of Broadway flows, such as:
 
 * **Broadway as a Population**, to create a flow which can be used to populate one or more tables of the Logical Unit to streamline the logic and the related validations.
 * **Interface Listener for Broadway flows**, to define a daemon on an SFTP or a local file system interface to invoke a Broadway flow that handles input files.

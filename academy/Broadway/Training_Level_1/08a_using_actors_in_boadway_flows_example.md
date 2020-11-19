@@ -33,7 +33,7 @@
 
 10. Click ![image](images/green_asterisk.PNG) in the Actor's right corner to open the Remark pop-up, remove the text and close it to delete the remark.
 
-11. Change the population type of the **A1** and **A2** Actors input arguments from **Const** to **External** and then update the argument's external name to **a1_value** and **a2_value**. For more information about Actors population types, refer to [Actor Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
+11. In the flow of #3 change the population type of the **A1** and **A2** Actors input arguments from **Const** to **External** and then update the argument's external name to **a1_value** and **a2_value**. For more information about Actors population types, refer to [Actor Inputs and Outputs](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs).
 
    ![image](images/08_link_type_external.PNG)
 
