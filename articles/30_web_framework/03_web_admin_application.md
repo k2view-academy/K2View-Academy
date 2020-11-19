@@ -1,4 +1,4 @@
-# Web Admin Application
+# Web Admin
 
 Admin is a web application that enables a user to conduct various Fabric Server and Cassandra activities, such as monitoring batch processes, managing user credentials or executing other Fabric commands. It is a graphical web-based tool that wraps up the Fabric commands and enables running and monitoring them in a more user-friendly manner. 
 
