@@ -8,7 +8,7 @@ The Web Framework can be opened using the following URL: **http://[Fabric IP add
 
 ![image](images/30_01_toolbar.PNG)
 
-Login to the Web Framework using your username and password. This enables a Single Sign On (SSO) process with secure authentication to multiple applications using one set of credentials. Access to the various functions in the applications is restricted by a user's [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) and are handled in the same way as in the Fabric server.
+Login to the Web Framework using your username and password. This enables a Single Sign On (SSO) process with secure authentication to multiple applications using one set of credentials. Access to the various functions in the applications is restricted by a user's [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) and is handled in the same way as in the Fabric server.
 
 ### How Can I Integrate an Application into the Framework?
 
@@ -16,7 +16,7 @@ The K2View Web Framework includes several [pre-integrated applications](02_prein
 
 The order of the applications in the context menu list is determined by their order in **apps.json**. 
 
-The Framework exposes a **k2api** object with various methods used by the application, such as navigation, formatting and Fabric commands invocation. An application's style can be set either using K2View Web Framework style sheets (**k2.css**) for a unified look & feel or using a different set of style sheets. The Framework supports any application type (multi-page or single page) and any routing method (History API, hash base or regular links).
+The Framework exposes a **k2api** object with various methods used by the application, such as navigation, formatting and Fabric commands invocation. An application's style can be set either using K2View Web Framework style sheets (**k2.css**) for a unified look & feel or using a different set of style sheets. The Framework supports any application type (multi-page or single page) and any routing method (History API, hash-based or regular links).
 
 **Example**
 
@@ -30,7 +30,7 @@ To add the **Simple History API Route** application to the Framework, add the fo
    }
 ~~~
 
-In addition, create th  **historyApi** folder ((this must be the same as the JSON **appId**) in the same location and save the application code there.
+In addition, create th  **historyApi** folder (this must be the same as the JSON **appId**) in the same location and save the application code there.
 
 Detailed Web Framework API documentation can be found under K2View Web Framework > Documentation and describes development guidelines, supported methods and code examples.
 
