@@ -363,5 +363,12 @@
 </details>    
        
 <details>
+<summary markdown="span"><strong>Web Framework<strong><a href="/articles/30_web_framework/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/30_web_framework/01_web_framework_overview.md">Web Framework Overview</a></li>
+<li><a href="/articles/30_web_framework/02_preintegrated_apps_overview.md">Pre-Integrated Application Overview</a></li>
+<li><a href="/articles/30_web_framework/03_web_admin_application.md">Web Admin Application</a></li>
+</details>    
+
+<details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
 
