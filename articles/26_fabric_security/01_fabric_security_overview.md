@@ -19,7 +19,7 @@ In this section, we will address how fabric security tools address each one of t
 
 We will show, in details, how to deal with each of the following components that are crucial to any Fabric implementation 
 
-- Data stored in Fabric (secured-by-design) 
+- Data stored in Fabric
 - Interfaces 
 - Web-services
 - Role Based Access Control management
