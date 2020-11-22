@@ -34,7 +34,7 @@ To add the **Simple History API Route** application to the Framework, add the fo
 
 In addition, create the **historyApi** folder (the folder name must be the same as the JSON **appId**) in the same location and save the application code there.
 
-Refer to K2View Web Framework > Documentation for the detailed Web Framework API documentation that provides development guidelines, supported methods and code examples.
+Refer to **K2View Web Framework > Documentation** for the detailed Web Framework API documentation that provides development guidelines, supported methods and code examples.
 
 
 
