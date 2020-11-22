@@ -2,7 +2,7 @@
 
 The following steps will ensure that the keys necessary to secure both Fabric and Cassandra are generated and configured.
 
-- The assumption is that the password for the TLS keys is ```Q1w2e3r4t5``` - replace accordingly all the following sections with a new password.
+- We will use the following Password example for the TLS keys is ```1234Q!``` - replace accordingly all the following sections with a new password.
 - Do not forget to replace all the $K2_HOME/ value with the full and correct path location for both Fabric and Cassandra.
 
 
