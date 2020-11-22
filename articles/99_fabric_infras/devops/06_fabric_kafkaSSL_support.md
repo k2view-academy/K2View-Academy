@@ -1,4 +1,4 @@
-# Fabric and Fabric Modules Configuration  
+# Fabric Modules Configuration  
 
 ## Setup Fabric with Kafka connection SSL support
 
