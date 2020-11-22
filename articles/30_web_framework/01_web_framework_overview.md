@@ -34,7 +34,7 @@ To add the **My Web App** application to the Framework, add the following to the
 
 In addition, create the **myApp** folder (the folder name must be the same as the JSON **appId**) in the same location and save the application code there. Clean the browser's cache before opening the Web Framework with the new application.
 
-For detailed Web Framework API documentation refer to **K2View Web Framework > Documentation** that provides development guidelines, supported methods and code examples.
+For detailed documentation about development guidelines, supported methods and code examples of the Web Framework API refer to **K2View Web Framework > Documentation**.
 
 
 

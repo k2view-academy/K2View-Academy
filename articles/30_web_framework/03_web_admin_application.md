@@ -1,8 +1,8 @@
 # Web Admin
 
-Admin is a graphical web-based application used to conduct various Fabric Server and Cassandra activities, such as monitoring batch processes, managing user credentials or executing other Fabric commands. Admin wraps the [Fabric commands](/articles/02_fabric_architecture/04_fabric_commands.md) by REST APIs that are called from the Web Framework UI so that the commands can be invoked in a more user-friendly manner. 
+Admin is a graphical web-based application used to conduct various Fabric Server and Cassandra activities, like monitoring batch processes, managing user credentials or executing other Fabric commands. Admin wraps [Fabric commands](/articles/02_fabric_architecture/04_fabric_commands.md) using REST APIs invoked by the Web Framework UI so that the commands can be run in a more user-friendly manner. 
 
-Admin has four categories where each category has additional sub-categories. Navigation through the application is via the framework's menu whereby **breadcrumbs** display a user's location in the application. 
+Admin has four categories where each category has additional sub-categories. Navigation through the application is via the Web Framework's menu whereby breadcrumbs display a user's location. 
 
 For example, the following image shows that the user navigated to **Admin > Security > Permissions**.
 
@@ -10,7 +10,7 @@ For example, the following image shows that the user navigated to **Admin > Secu
 
 ### Admin Categories
 
-* **Processes**, initiate and monitor Fabric [batch processes](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) and [jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) according to a selected time period. Processes category includes the following sub-categories:
+* **Processes**, initiate and monitor Fabric [batch processes](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) and [jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) according to a selected time period. This category includes the following sub-categories:
 
   * Cluster, displays information about the cluster and nodes such as the Node ID, Status, IP, etc.
   * Tasks, Job and Batches, displays running processes. Set the filter to show a list of processes that are currently active, or run today, 3 days ago, etc. To start a job or a batch, select the LU name and set the relevant parameters.
