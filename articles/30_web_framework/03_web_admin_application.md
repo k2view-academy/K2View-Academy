@@ -2,7 +2,7 @@
 
 Admin is a graphical web-based application used to conduct various Fabric Server and Cassandra activities, such as monitoring batch processes, managing user credentials or executing other Fabric commands. When processing Fabric commands, Admin wraps them up so that they are run and monitored in a more user-friendly manner. 
 
-Admin has four categories where each category has additional sub-categories. Navigation through the categories is via the framework's menu where **breadcrumbs** display a user's location in the application. 
+Admin has four categories where each category has additional sub-categories. Navigation through the categories is via the framework's menu whereby **breadcrumbs** display a user's location in the application. 
 
 For example, the following image shows that the user navigated to **Admin > Processes > Cluster**.
 
