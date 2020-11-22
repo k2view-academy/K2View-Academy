@@ -6,7 +6,7 @@ The K2View Web Framework includes a list of [pre-integrated applications](02_pre
 
 ### How Do I Access the Web Framework?
 
-The Web Framework can be opened using the following URL: **http://[Fabric IP address]:[Fabric port]/app/login**. For example http://localhost:3213/app/login or using the ![image](images/30_01_icon.PNG) icon in the Fabric Studio toolbar:
+The Web Framework can be opened using the following URL: **http://[Fabric IP address]:[Fabric port]** or using the ![image](images/30_01_icon.PNG) icon in the Fabric Studio toolbar. For example http://localhost:3213.
 
 ![image](images/30_01_toolbar.PNG)
 
@@ -14,7 +14,7 @@ Login to the Web Framework using your username and password. This enables a Sing
 
 ### How Can I Integrate an Application into the Framework?
 
-The K2View Web Framework includes several [pre-integrated applications](02_preintegrated_apps_overview.md). Additional applications can be  integrated into the Framework with minimal development effort by adding the application name to the **apps.json** file and a folder with the application's code in the Fabric installation folder in Windows in: **K2View\Fabric_[version]\Server\fabric\staticWeb**. 
+The K2View Web Framework includes several [pre-integrated applications](02_preintegrated_apps_overview.md). Additional applications can be  integrated into the Framework with minimal development effort by adding the application name to the **apps.json** file and a folder with the application's code in the Fabric installation folder in Windows in: **K2View\Fabric_[version]\Server\fabric\staticWeb**. Make sure to clean the browser's cache after updating the **apps.json** file.
 
 The order of the applications in the context menu list is determined by their order in **apps.json**. 
 
@@ -22,17 +22,17 @@ The Framework exposes a **k2api** object with various methods that can be used b
 
 **Example**
 
-To add the **Simple History API Route** application to the Framework, add the following to the **apps.json** file:
+To add the **My Web App** application to the Framework, add the following to the **apps.json** file:
 
 ~~~json
    {
-      "name": "Simple History API Route",
-      "appId": "historyApi",
+      "name": "My Simple Web App",
+      "appId": "myApp",
       "hidden": false
    }
 ~~~
 
-In addition, create the **historyApi** folder (the folder name must be the same as the JSON **appId**) in the same location and save the application code there.
+In addition, create the **myApp** folder (the folder name must be the same as the JSON **appId**) in the same location and save the application code there.
 
 Refer to **K2View Web Framework > Documentation** for the detailed Web Framework API documentation that provides development guidelines, supported methods and code examples.
 
