@@ -13,7 +13,7 @@ By design, Fabric eliminates a significant number of potential large-scale breac
 
 
 
- # **Fabric Security Arsenal** 
+ # **Fabric Security Layers** 
 
 In this section, we will address how fabric security tools address each one of the layers at play in a Fabric cluster that has been fully deployed across multiple data centres and that is interacting with northbound or southbound systems spread across the cloud. 
 
