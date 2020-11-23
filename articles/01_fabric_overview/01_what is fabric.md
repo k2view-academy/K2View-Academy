@@ -38,6 +38,6 @@ Note that Fabric is a less appropriate solution for storing and managing data th
 * [Logical Units.](/articles/03_logical_units/01_LU_overview.md)
 * [Interfaces.](/articles/05_DB_interfaces/01_interfaces_overview.md)
 * [Web Services.](/articles/15_web_services/01_web_services_overview.md)
-* Reference Tables.
+* [CommonDB and Reference Tables.](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/01_fabric_overview/02_fabric_glossary.md)
