@@ -2,6 +2,8 @@
 
 The K2View Web Framework is a container that hosts multiple web applications and provides out-of-the-box services. It improves the system's usability by providing one unified tool with links to several frequently-used web applications running on the same application server. Instead of manually typing the URL to open each application, users can log into the K2View Web Framework and select the application from the context menu. 
 
+![image](images/30_01_menu.PNG)
+
 The K2View Web Framework includes a list of [pre-integrated applications](02_preintegrated_apps_overview.md) such as the Admin. Several of the pre-integrated applications expose the Fabric commands and by that enable the user to work with web-based graphic tool rather than with the Fabric Console.  
 
 ### How Do I Access the Web Framework?
@@ -34,7 +36,9 @@ To add the **My Web App** application to the Framework, add the following to the
 
 In addition, create the **myApp** folder (the folder name must be the same as the JSON **appId**) in the same location and save the application code there. Clean the browser's cache before opening the Web Framework with the new application.
 
-For detailed documentation about development guidelines, supported methods and code examples of the Web Framework API refer to **K2View Web Framework > Documentation**.
+For detailed documentation about the integration development guidelines, supported methods and code examples, refer to **Documentation > Web Framework API / Styles** in the K2View Web Framework's menu.
+
+![image](images/30_01_doc.PNG)
 
 
 
