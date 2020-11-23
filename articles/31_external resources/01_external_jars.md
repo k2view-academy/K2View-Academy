@@ -8,7 +8,8 @@ Fabric enables 3<sup>rd</sup> party JAR libraries usage. This powerful capabilit
 
 #### Development and Debug Stage
 
-* place the jar at the project's local lib directory **[Fabric Project's Directory]\[Project Name]\lib** (place it at the *lib* root directory and not at subdirectories).
+* place the jar at the project's local lib directory **[Fabric Projects Directory]\[Project Name]\lib** (place it at the *lib* root directory and not at subdirectories).
+* Restart you Fabric Studio, if it is already opened.
 * Add the relevant JAR's classes ("import") at the *Logic* java file (make it on the relevant file in the tree, such as under "Enrichment" directory).
 * Use the JAR classes and methods inside the Fabric function.
 
@@ -36,7 +37,9 @@ In order to achieve the goal of enabling the carrier to use a single format, we 
 
    ![image](images/external_lib.png)
 
-3. Create a new enrichment function at the **CUSTOMER** LU, named "E164PhoneFormat", using the external JAR: 
+3. Restart Fabric Studio.
+
+4. Create a new enrichment function at the **CUSTOMER** LU, named "E164PhoneFormat", using the external JAR: 
 
    - Add the relevant JAR's classes at the *Logic* java file:
 
