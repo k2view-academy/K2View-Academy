@@ -260,8 +260,8 @@ Click for more information about Fabric Security Hardening.</p>
 <p>entity_chunks</p>
 </td>
 <td width="350pxl" valign="top">
-<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb">MicroDB </a> of a Large LUI is divided into chunks and stored in entity_chunks.</p>
-<p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#microdb-">Click for more information about LU storage.</a></p>
+<p>Stores large LUIs. The <a href="/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb">MicroDB </a> of a Large LUI is divided into chunks and stored in entity_chunks.</p>
+<p><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md##21-fabric-storage">Click for more information about Fabric storage.</a></p>
 </td>
 </tr>
 </tbody>
