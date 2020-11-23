@@ -2,9 +2,9 @@
 
 ### Overview
 
-Fabric enables 3rd party JAR libraries usage. This powerful capability can be useful for expediting project timelines, using 3rd party code. 
+Fabric enables 3<sup>rd</sup> party JAR libraries usage. This powerful capability can be useful for expediting project timelines, using 3<sup>rd</sup> party code. 
 
-### How Do I use  a new library
+### How Do I use a new library
 
 #### Development and Debug Stage
 
