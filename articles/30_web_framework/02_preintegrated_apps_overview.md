@@ -11,7 +11,7 @@ Click <img src="images/30_02_icon.PNG" alt="image" style="zoom:67%;" /> to open 
 - Statistics - JMX monitoring of the processes running on the Fabric server, Cassandra, etc.
 - [Swagger](/articles/15_web_services_and_graphit/09_swagger.md) - a full framework implementation for invocating and testing Fabric Web Services.
 - [Trace](/articles/29_tracing/05_trace_view.md) - a powerful Fabric mechanism for writing internal operations performed by Fabric into trace files. Tracing can be set on both global and session levels. The result of the tracing process is logged into a file that can be loaded for viewing in the Web Framework.
-- Documentation - links to frequently-used K2View documentation, such as the Knowledge Base and Fabric Java docs.
+- Documentation - links to frequently-used K2View documentation, such as the Knowledge Base, Fabric Java docs or Web Framework integration documentation.
 <!-- - 6.4 Data Catalog - TBD-->
 <!-- - 6.4 Data Editor - TBD-->
 
