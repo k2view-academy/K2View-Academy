@@ -12,17 +12,17 @@ The storage mechanism of the Logical Unit depends on the setting of the LU Schem
 
 * **Default**, inherit the storage type definition of **[fabricdb]** section in the config.ini file.
 * **None**, do not store the instance in the Cassandra after the GET command retrieves the instance data from the source DB. 
-* **Cassandra**, store the instances in the Cassandra DB.
+* **Cassandra**, store the instances in the Cassandra after the GET command execution.
 
-### Storage Process
-
-The [GET](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) command is used to synchronize a specific instance ID (one or several) from the source systems to Fabric and to load it into the Fabric's memory. 
-
-During GET, Fabric either retrieves the data from the source if Sync is needed, or brings the latest version of the LUI from Cassandra DB. The LUI version is kept in **k2view_[LU_name].entity** table together with the corresponding MicroDB.
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_storage_management.md)
 
 
 
-![image](images/32_01_diagram.PNG)
+
+
+
+
+
 
 
 
