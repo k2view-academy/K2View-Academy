@@ -4,7 +4,8 @@
 
 ## The Logical Unit 
 
-Most database management systems store data in silos, organized according to the type of data being stored (e.g. customer data, financial data, address data, device data). When data is needed, hundreds or thousands of tables may need to be queried using complex joins to deliver the information. The process is very cumbersome, complex and time consuming. 
+Most database management systems store data in silos, organized according to the type of data being stored (e.g. customer data, financial data, address data, device data). When data is needed, hundreds or thousands of tables may need to be queried using complex joins to deliver the information. The process is very cumbersome, complex and time consuming.
+
 Most importantly, data safety is challenged and security is increasingly compromised each time these tables are accessed. Fabric's unique data approach offers a new paradigm for data management especially when it comes to protecting data integrity. Indeed, Fabric organizes and stores data very differently all together. 
 
 Storing data by using an entity-centric pre-defined structure, re-inforce consisderably its security and integrity. This is yet another crucial and unparalelled advantage that Fabric adds in addition to other benefits such as very fast access and high availability of the data. 
