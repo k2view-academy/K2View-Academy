@@ -86,5 +86,5 @@ When trying to invoke the web service with the DELETE verb, using the 'test_toke
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/04_fabric_interfaces_security.md)
 
