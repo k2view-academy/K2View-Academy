@@ -9,7 +9,7 @@ Fabric enables 3rd party JAR libraries usage. This powerful capability can be us
 #### Development and Debug Stage
 
 * place the jar at the project's local lib directory **[Fabric Project's Directory]\[Project Name]\lib** (place it at the *lib* root directory and not at subdirectories).
-* Add ("import") the relevant JAR's classes at the *Logic* java file.
+* Add the relevant JAR's classes ("import") at the *Logic* java file (make it on the relevant file in the tree, such as under "Enrichment" directory).
 * Use the JAR classes and methods inside the Fabric function.
 
 #### Deploying at Server
