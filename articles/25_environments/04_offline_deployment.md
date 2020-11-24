@@ -6,7 +6,7 @@ Do the following:
 
 1. Connect to a server using the Fabric Console.
 
-2. Copy the **Environments.k2fabEnv.XML** file from the following Windows location: **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments**.
+2. Copy the **Environments.k2fabEnv.XML** file from the following Windows location: **[Fabric Project's Directory]\\[Project Name]\Implementation\SharedObjects\Environments** prepare the file manually.
 
 3. Deploy it using the following command:
 
