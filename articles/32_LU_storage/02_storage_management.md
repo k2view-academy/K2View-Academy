@@ -22,6 +22,16 @@ The below diagram describes how GET process is executed on the Fabric server.
 </tr>
 </tbody>
 </table>
+### Storage Definition in config.ini
+
+- MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache file on server.
+- MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE, holds the storage type:
+  - MDB - ???
+  - None
+  - Cassandra
+- MDB_DEFAULT_SCHEMA_CACHE_SIZE, defines ache size limit in bytes per Schema for MicroDB instances. (not in use???)
+- anything else???
+
 
 
 [![Previous](/articles/images/Previous.png)](01_LU_storage_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_big_lu_storage.md) 
