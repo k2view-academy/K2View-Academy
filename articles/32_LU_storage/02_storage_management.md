@@ -1,6 +1,6 @@
 # LU Storage Management
 
-The Sync mechanism synchronizes data between data sources and the Fabric database. During a sync, extraction and transformation processes are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) whereby data is retrieved from the source systems and then loaded into the Fabric database.
+The Sync mechanism synchronizes data between the data sources and the Fabric database. During the sync, extraction and transformation processes are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) whereby data is retrieved from the source systems and then loaded into the Fabric database.
 
 The GET command is used to synchronize one or multiple instance IDs (LUI) from the source systems to Fabric. The response time of the GET command is highly important due to multiple requests that Fabric receives concurrently. To optimize the LUI retrieval process, Fabric has a cache mechanism that holds a pre-defined number of instances and enables faster load of the instance into the memory. 
 
@@ -24,7 +24,7 @@ The below diagram describes how GET process is executed on the Fabric server.
 </table>
 
 
-
+[![Previous](/articles/images/Previous.png)](01_LU_storage_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_big_lu_storage.md) 
 
 
 
