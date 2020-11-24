@@ -23,5 +23,5 @@ The chunk size is set using the config.ini file parameters, defined per node:
 
 
 
-[![Previous](/articles/images/Previous.png)](02_storage_management.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md) 
+[![Previous](/articles/images/Previous.png)](02_storage_management.md)
 
