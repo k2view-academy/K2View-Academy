@@ -22,6 +22,7 @@ The below diagram describes how GET process is executed on the Fabric server.
 </tr>
 </tbody>
 </table>
+
 ### Storage Definition in config.ini
 
 - MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache file on server.
