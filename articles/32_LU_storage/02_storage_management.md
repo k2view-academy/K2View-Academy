@@ -13,8 +13,6 @@ The cache size and location on Fabric server are defined in the **[fabricdb]** s
 Note that only one version LUI can be kept in the memory - per session and LU.
 
 
-
-
 ### Storage Definition in [fabricdb] Section of config.ini
 
 - MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache file on server.
@@ -24,8 +22,6 @@ Note that only one version LUI can be kept in the memory - per session and LU.
   - Cassandra
 - MDB_DEFAULT_SCHEMA_CACHE_SIZE, defines ache size limit in bytes per Schema for MicroDB instances. (not in use???)
 - anything else???
-
-
 
 ### LIST Command
 
@@ -50,6 +46,20 @@ The **LIST LU_TYPES / LIST LUT** command is used to list the Logical Unit types 
   
   (1 rows)
   ~~~
+
+### Change Cache Location <!--6.4-->
+
+Fabric enables the implementer to update the cache location per LU per node from the default product setting to a different path.
+
+This is performed by setting the LU Schema's **Cache Location** property to one of two valid values: 
+
+* **Default**, /dev/shm/fdb_cache per config.ini setting.
+* **Storage**, under the storage folder in Fabric: storage/fdb_cache/[lu_name].
+  * This path can be updated in the fabric-server-start.sh script using **-DFABRIC_STORAGE** variable.
+
+The change of the Cache Location property on LU Schema becomes effective after the Fabric restart only.
+
+If the default path in config.ini is updated to another path, the cache will always be located according to config.ini regardless of the LU Schema property setting.
 
 
 
