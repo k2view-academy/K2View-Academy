@@ -1,18 +1,18 @@
 # Big LU Storage
 
-There is a 2G limitation on writing the compressed SQLite LUI file into the Cassandra **entity** table as blob. Fabric allows storing big LUIs with no limitation on sizing using split into chunks. The SQLite file is split into chunks that are written into Cassandra **entity_chunks** table in parallel. First, the data is written into the entity_chunks table. After it's done, the entity table is populated.
+There is a 2G limitation on writing the compressed SQLite LUI files into the Cassandra **entity** table as blob. Fabric allows storing big LUIs with no limitation on sizing by splitting the data into chunks. The SQLite file's chunks are written into Cassandra **entity_chunks** table in parallel. First, the data is written into the **entity_chunks** table. After it's completed, the **entity** table is populated.
 
 The **entity** table includes the following data:
 
 * batch_id, unique ID that represents the relation between **entity** and **entity_chunks** tables.
 * chunks_count, number of chunks.
-* data, is always size zero if number of chunks > 1, for performance optimization during the parallel inserts.
+* data, always size zero if number of chunks > 1, for performance optimization during the parallel inserts.
 
 The **entity_chunks** table includes the following data:
 
 * id, holds the instance ID.
-* sync_version, holds the same version as **entity**. 
-* batch_id, holds the same ID as **entity**.
+* sync_version, holds the same version as version populated in **entity** table. 
+* batch_id, holds the same ID as in **entity** table.
 * chunk_index, holds the chunk number.
 * data, holds the split SQLite file after compression for chunk index.
 
