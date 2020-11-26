@@ -8,11 +8,15 @@ Fabric uses Cassandra DB as a Logical Unit's [storage layer](/articles/02_fabric
 
 ### Storage Types
 
-The storage mechanism of the Logical Unit depends on the setting of the LU Schema's **Storage** property. There are three Storage types:
+The Logical Unit permanent storage location depends on the setting of the LU Schema's **Storage** property. There are three Storage types:
 
-* **Default**, inherit the storage settings in **[fabricdb]** section of the [config.ini file](TO_DO).
-* **None**, do not store the instance in the Cassandra after the GET command retrieves the instance data from the source DB. 
+* **Default**, inherit the storage settings in **[fabricdb]** section of the **config.ini** file.
+* **None**, do not store the instance in the Cassandra after the GET  retrieves the instance data from the source DB. 
 * **Cassandra**, store the instances in the Cassandra DB after the GET command execution.
+
+[Click for more information about the storage setting in config.ini](/articles/32_LU_storage/02_storage_management.md#storage-definition-in-fabricdb-section-of-configini). 
+
+
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_storage_management.md)
 

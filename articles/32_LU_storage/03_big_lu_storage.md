@@ -1,6 +1,6 @@
-# Big LU Storage
+# Big Logical Units
 
-There is a 2G limitation on writing the compressed SQLite LUI files into the Cassandra **entity** table as blob. Fabric allows storing big LUIs with no limitation on sizing by splitting the data into chunks. The SQLite file's chunks are written into Cassandra **entity_chunks** table in parallel. First, the data is written into the **entity_chunks** table. After it's completed, the **entity** table is populated.
+There is a 2G limitation in Cassandra on writing the compressed SQLite LUI files into the Cassandra **entity** table as blob. Fabric allows storing big LUIs with no limitation on sizing by splitting the data into chunks. The SQLite file's chunks are written into Cassandra **entity_chunks** table in parallel. First, the data is written into the **entity_chunks** table. After it's completed, the **entity** table is populated.
 
 The **entity** table includes the following data:
 
