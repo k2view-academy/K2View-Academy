@@ -100,26 +100,6 @@ When trying to invoke the web service with the DELETE verb, using the 'test_toke
 
 ``` "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]" ```
 
-## Steps to simulate a Secured API key
-
-1.	Create a secured token and save secret key
-2.	Create regular token
-3.	Assign a secured token to a specific role
-4.	Generate a JWT token on the regular token (http://localhost:3213/api/authenticate)
-5.	Copy the jwt (from postman for example)
-6.	Go to https://www.base64decode.org/ and paste the JWT token in first box
-8.	Click Decode
-9.	Go to the jwt.io website
-10.	Enter part in first brackets in ‘header’ box
-11.	Enter part in second bracket in ‘payload’ part and edit the name of the apk tag to name of secured token
-for example apk: “lion2” -> apk: “lion1”
-12.	Enter secret key in ‘verify signature’ part
- 
-13.	The jwt should appear in the left box.
-14.	Override the jwt in the cookie
-
- 
-15.	Run a WS – should work fine
 
 
 
