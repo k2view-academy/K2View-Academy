@@ -12,7 +12,7 @@ The location of a Logical Unit's permanent storage depends on the settings of th
 
 * **Default**, inherits storage settings in the **[fabricdb]** section of the **config.ini** file.
 * **None**, does not store the instance in Cassandra after a GET retrieves instance data from the source DB. 
-* **Cassandra**, stores the instances in the Cassandra DB after the execution of the GET command.
+* **Cassandra**, stores instances in the Cassandra DB after the execution of the GET command.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_storage_management.md)
