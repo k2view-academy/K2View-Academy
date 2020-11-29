@@ -29,7 +29,7 @@ In order to generate a JWT token using Fabric Authenticate API, follow the next 
 - Open the *Cookies* tab next to the response body.
 - The API key is displayedin the value field - e.g: 
 
-``` eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsImlzcyI6ImZiciIsImlhdCI6MTYwNjY2MDg4MiwiZXhwIjoxNjA2NjYxNzgyLCJ1bm0iOiJhZG1pbiJ9.sQpH343SbfLPHrR7lp5eG4qZKGXXhMrkggX9wqVzLBQ ```
+            ``` eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsImlzcyI6ImZiciIsImlhdCI6MTYwNjY2MDg4MiwiZXhwIjoxNjA2NjYxNzgyLCJ1bm0iOiJhZG1pbiJ9.sQpH343SbfLPHrR7lp5eG4qZKGXXhMrkggX9wqVzLBQ ```
 
 <img src="/articles/26_fabric_security/images/05_devop-prodEnv_PostMAN.png">
     
