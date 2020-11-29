@@ -24,7 +24,7 @@ We will show, in details, how to deal with each of the following components that
 - Web-services
 - Role Based Access Control management
 
-It is important to note that, here, we will only address the security features that are related to Fabric as a product. An entire section dealing with all the aspects of Fabric DevOps environment safeguarding, rules, policies and best practices is available [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md).   
+It is important to note that, here, we will only address the security features that are related to Fabric as a product. An full section dealing with all the aspects of Fabric DevOps environment safeguarding, rules, policies and best practices is available [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md).   
 
 
 
