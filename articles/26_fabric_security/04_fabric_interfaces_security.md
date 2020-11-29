@@ -12,17 +12,23 @@ The passwords of the interfaces are encrypted by the fabric master key.
 
 Fabric encrypts the interfaces’ details for each environment using the same master key generated on Fabric start (or regenerated) and that is also used to encrypt LU instances. 
 
-In order to re-key all interfaces that belong to a given environment, open the Environments window of the Fabric Studio, set a Fabric node in the Fabric URL for each environment, 
-and click on the ‘Re-Key’ option.
+In order to re-key all interfaces that belong to a given environment, execute the following steps:
+- open the Environments window of the Fabric Studio
+- set a Fabric node in the Fabric URL for each environment
+- click on the ‘Re-Key’ option.
+
 In addition, if you change the connection details of the interfaces for the environment and save the changes, the updated connection details will be re-encrypted.
 As it is the case for entities, Fabric keeps the key description of the master key used for the encryption, for each environment.
 
-<img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
-
 Note:
+
 - When changing and saving the environment interfaces passwords, Fabric will encrypt the modified passwords using the server logic to re-key automatically the master key.
 - A new Fabric URL field is added in order to define the Fabric node to be used in order to encrypt the passwords and run the test connection function. Note that if left un-checked, the local test connection and previous encryption algorithm will be used.
 - The *Re-Key* column was added in order to use the mostly updated encryption mechanism and the latest master key to encrypt all the interfaces passwords
+
+
+
+<img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
 
 
 
