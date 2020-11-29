@@ -7,7 +7,7 @@ This is done by means of authentication mechanism that support Web Service calls
 - unsecured API key  
 - secured API key based on JSON Web Tokens (JWT) solution. 
 
-JWT is an open industry standard method (RFC 7519 ) that securely represents claims between two parties. 
+JWT is an open industry standard method (RFC 7519) that securely represents claims between two parties. 
 
 API keys can be used in two modes:
 
@@ -16,6 +16,24 @@ API keys can be used in two modes:
 
 
 Fabric supports backward capability via Token Authentication and an enhanced "Create Token" command for secured tokens. 
+
+
+### JWT Tokens Generation 
+
+In order to generate a JWT token using Fabric Authenticate API, follow the next steps:
+
+- Open Postman
+- Select the POST method and enter your Fabric Server Address: http://localhost:3213/api/authenticate in the URL window
+- Under the *body* tab, enter both username and password as keys and enter corresponding values (e.g. admin/admin)
+- Click the SEND button
+- Open the *Cookies* tab next to the response body.
+- The API key is displayedin the value field - e.g: 
+
+``` eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsImlzcyI6ImZiciIsImlhdCI6MTYwNjY2MDg4MiwiZXhwIjoxNjA2NjYxNzgyLCJ1bm0iOiJhZG1pbiJ9.sQpH343SbfLPHrR7lp5eG4qZKGXXhMrkggX9wqVzLBQ ```
+
+<img src="/articles/26_fabric_security/images/05_devop-prodEnv_PostMAN.png">
+    
+
 
 
 ## Tokens and the Admin Panel
@@ -81,6 +99,10 @@ This sniplet shows how the WRITE permission (granted to the writeRole) role was 
 When trying to invoke the web service with the DELETE verb, using the 'test_token' token, Fabric will throw the following error as the delete permission was not granted to the specific token: 
 
 ``` "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]" ```
+
+
+
+
 
 
 
