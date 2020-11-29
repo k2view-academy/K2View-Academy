@@ -2,7 +2,7 @@
 
 The Sync mechanism synchronizes data between data sources and the Fabric database. During a synchronization, extraction and transformation processes are executed on an [LU Instance (LUI)](/articles/01_fabric_overview/02_fabric_glossary.md#lui) whereby data is retrieved from source systems using the GET command and then loaded into the Fabric database.
 
-Since Fabric receives multiple requests concurrently, the GET command's response time is highly important. To optimize the LUI retrieval process, Fabric uses a cache mechanism that holds a predefined number of instances which enables loading an instance into the memory faster.
+Since Fabric receives multiple requests concurrently, the GET command's response time is highly important. To optimize the LUI retrieval process, Fabric uses a cache mechanism that has a predefined size limit which enables loading an instance into the memory faster.
 
 The size and location of the cache on the Fabric server are defined in the **[fabricdb]** section of the config.ini file.
 
@@ -42,7 +42,7 @@ Fabric enables to modify the default location of the cache per Logical Unit usin
   * The definition of the **${FABRIC_STORAGE}** path can be updated via the **fabric-server-start.sh** script using the **-DFABRIC_STORAGE** variable.
 * If the default path in the config.ini is updated to another path, the cache is always located according to the config.ini regardless of the LU Schema property setting in the Fabric Studio.
 
-Note that these changes become effective in the LU Schema only after Fabric is restarted.
+Note that both the config.ini and the Fabric Studio configuration changes become effective in the LU Schema only after Fabric is restarted.
 
 ### LIST Command
 
