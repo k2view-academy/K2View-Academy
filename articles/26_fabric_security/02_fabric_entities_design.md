@@ -94,7 +94,8 @@ e.g.
 
 ### Master Key Rotation
 
-Master key rotation is yet another crucial feature provided by Fabric to ensure data security stringency. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled job (daily or weekly) calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function that will re-issue the master key and therefore re-encrypt all instances data. 
+Master key rotation is yet another crucial feature provided by Fabric to ensure data security stringency. Although the data is organized and encrypted on a per-instance basis, Fabric users can regenerate keys by setting a regularly scheduled job (daily or weekly) calling Fabric's [rekey](/articles/26_fabric_security/03_fabric_LUI_encryption.md#lurekey) function to re-issue the master key and therefore re-encrypt all instances data.
+
 Note that the job does not have to be time-based but triggered by any other condition you might decide (such as the number of LUIs per node, etc ..)
 
 Master key rotation enables generating and activating a new master key. The new master key impacts instance IDs saved in Cassandra from the moment it was generated onwards. The already existing instance IDs are not impacted by the new key, until they are next sync-ed and saved on Cassandra.
