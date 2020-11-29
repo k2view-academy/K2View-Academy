@@ -1,6 +1,6 @@
 # **Fabric Web Services Security** 
 
-## Tokenization
+## Tokens
 
 Fabric provides a secured mechanism for web-services to access to the data it exposes - such as LUI data or Reference Tables.
 This is done by means of authentication mechanism that support Web Service calls using either of the following credentials:
@@ -18,7 +18,7 @@ API keys can be used in two modes:
 Fabric supports backward capability via Token Authentication and an enhanced "Create Token" command for secured tokens. 
 
 
-## Tokenization in the Admin Panel
+## Tokens and the Admin Panel
 
 In order to generate a new token for accessing Fabric API, open the Admin Panel web page:
 
@@ -43,8 +43,7 @@ If the secured option was selected, the secret key will appear in a pop=up windo
 Note that in cases where the secured option was not selected the token value is the token name itself.
 
 
-
-## Tokenization from the Command Line
+## Tokens from the Command Line
 
 The creation of a token from the command line is described [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)
 
