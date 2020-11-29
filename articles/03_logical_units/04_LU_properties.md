@@ -6,10 +6,10 @@ The Properties tab in the LU window contains the following properties:
 <tbody>
 <tr>
 <td width="170pxl">
-<p><strong><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync properties</a></strong></p>
+<p><strong>Sync properties</strong></p>
 </td>
 <td width="630pxl">
-<p>Sets the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> and properties on an LU level.</p>
+<p>Sets the <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync properties</a> and the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> on an LU level.</p>
 </td>
 </tr>
 <tr>
@@ -17,7 +17,7 @@ The Properties tab in the LU window contains the following properties:
 <p><strong>Events</strong></p>
 </td>
 <td>
-<p>Sets the Event functions that are triggered upon sync success or failure, or upon delete instance success.</p>
+<p>Sets the <a href="/articles/07_table_population/08_project_functions.md#event-function">Event functions</a> that are triggered upon sync success or failure, or upon delete instance success.</p>
 <p>To select an Event function, click the three dots next to the Events property and select the function name. Only Events functions are displayed.</p>
 </td>
 </tr>
@@ -64,6 +64,8 @@ The Properties tab in the LU window contains the following properties:
 </tr>
 </tbody>
 </table>
+
+
 
 
 [![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
