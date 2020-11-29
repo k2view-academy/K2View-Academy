@@ -24,7 +24,7 @@ In order to generate a JWT token using Fabric Authenticate API, follow the next 
 
 - Open Postman
 - Select the POST method and enter your Fabric Server Address: http://localhost:3213/api/authenticate in the URL window
-- Under the *body* tab, enter both username and password as keys and enter corresponding values (e.g. admin/admin)
+- Under the *body* tab, enter both username and password as keys and enter corresponding values (e.g. admin/admin). Similarily, an API key can be defined.
 - Click the SEND button
 - Open the *Cookies* tab next to the response body.
 - The API key is displayedin the value field - e.g: 
