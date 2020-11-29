@@ -51,8 +51,12 @@ In that scenario, the protection key is used to encrypt the master key (by using
 - Access to environments xml (like on previous solution)
 - Access to master key stored in Cassandra (environment dependent) – need access to all Cassandra cluster
 - Access to keystore
-- Access to keystore password (config.ini) to get the protection key storing the encrypted master key
+- Access to keystore password (config.ini) to get the protection key storing the encrypted master key.
 
+
+- When changing and saving the environment interfaces passwords, Fabric will encrypt the modified passwords using the server logic to re-key automatically the master key.
+- A new Fabric URL field is added in order to define the Fabric node to be used in order to encrypt the passwords and run the test connection function. Note that if left un-checked, the local test connection and previous encryption algorithm will be used.
+- The *Re-Key* column was added in order to use the mostly updated encryption mechanism and the latest master key to encrypt all the interfaces passwords
 
 
 ## Interfaces 
