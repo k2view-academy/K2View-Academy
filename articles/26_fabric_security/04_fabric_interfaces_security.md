@@ -1,9 +1,58 @@
 # **Fabric Interfaces Security** 
 
+
+
+
+## Environments
+
 Fabric enables you to define a number of source [environments]() and to switch between these environments within the same Fabric session. This way, you can change your source connections without re-deploying your LU.
 
 For each environment, set the connection details of your interfaces, and then deploy the environments to your Fabric cluster. The deployment of the environments is separate from the deployment of your LUs.
 The passwords of the interfaces are encrypted by the fabric master key.
+
+Fabric encrypts the interfaces’ details for each environment using the same master key generated on Fabric start (or regenerated) and that is also used to encrypt LU instances. 
+
+In order to re-key all interfaces that belong to a given environment, open the Environments window of the Fabric Studio, set a Fabric node in the Fabric URL for each environment, 
+and click on the ‘Re-Key’ option.
+In addition, if you change the connection details of the interfaces for the environment and save the changes, the updated connection details will be re-encrypted.
+As it is the case for entities, Fabric keeps the key description of the master key used for the encryption, for each environment.
+
+<img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
+
+
+
+## Environments - 3 Levels of Security 
+
+Fabric enable users to define and use three different levels of environment interfaces encryption (from strong to strongest levels).
+
+
+### Level 1 - Unassigned environment 
+In this case Fabric cannot be reached via URL and the following configuration parameters apply:
+
+- Master key is hardcoded in Fabric code
+- The Encryption process is similar on all environments, for all projects and accounts deployed and setup.
+
+This means that in order to get full access to all interfaces on any given project, the environment xml file is required and must be added to the **Projects\PROJECT_NAME\Implementation\SharedObjects\Environments** folder.
+
+
+### Level 2 - Assigned environment without keystore
+
+At this level the following mechanism is at play:
+
+- The master key is generated and the encrypted master key is saved in Cassandra. 
+- Fabric uses AES256 algorithm with GCM (Galois/Counter Mode) to encrypt the master key
+- The interface password encryption is valid *only* on the defined Fabric cluster
+- The interface password can be re-encrypted by using re-key button or by saving password changes
+
+
+### Level 3 - Assigned environment with keystore (protection key)
+
+In that scenario, the protection key is used to encrypt the master key (by using java keystore). In order to decrypt password to environment using this option, the following accesses are needed:
+- Access to environments xml (like on previous solution)
+- Access to master key stored in Cassandra (environment dependent) – need access to all Cassandra cluster
+- Access to keystore
+- Access to keystore password (config.ini) to get the protection key storing the encrypted master key
+
 
 
 ## Interfaces 
@@ -18,20 +67,6 @@ When defining a new interface, the password for this interface is hashed and sav
 
 <img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.png">
           
-  
-
-## Environments
-
-
-Fabric encrypts the interfaces’ details for each environment using the same master key generated on Fabric start (or regenerated) and that is also used to encrypt LU instances. 
-
-In order to re-key all interfaces that belong to a given environment, open the Environments window of the Fabric Studio, set a Fabric node in the Fabric URL for each environment, 
-and click on the ‘Re-Key’ option.
-In addition, if you change the connection details of the interfaces for the environment and save the changes, the updated connection details will be re-encrypted.
-As it is the case for entities, Fabric keeps the key description of the master key used for the encryption, for each environment.
-
-
-<img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
 
 
 ## File Systems
