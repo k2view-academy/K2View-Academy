@@ -25,7 +25,7 @@ The following variables of the **[fabricdb]** section of the **config.ini** are 
   
 - MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache files on server.
 
-  - The default path is set in config.ini and [can be changed](/articles/32_LU_storage/02_storage_management.md#change-cache-location-) if required.
+  - The default path is set in config.ini and can be changed if required.
 
     ~~~
     #MDB_DEFAULT_CACHE_PATH=/dev/shm/fdb_cache
@@ -39,9 +39,9 @@ Fabric enables the implementer to update the cache location per Logical Unit fro
 
 This is performed by using the MDB_DEFAULT_CACHE_PATH variable of the **[fabricdb]** section of the **config.ini** and the LU Schema's **Cache Location** property as follows:
 
-* When Cache Location property is set to **Default**, storing the cache in **/dev/shm/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**. 
+* When Cache Location property is set to **Default**, store the cache in **/dev/shm/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**. 
 
-* When Cache Location property is set to **Storage**, storing it under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**.
+* When Cache Location property is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**.
   * The definition of **${FABRIC_STORAGE}** path can be updated via the **fabric-server-start.sh** script using **-DFABRIC_STORAGE** variable.
 * If the default path in config.ini is updated to another path, the cache will always be located according to config.ini regardless of the LU Schema property setting in the Fabric Studio.
 
