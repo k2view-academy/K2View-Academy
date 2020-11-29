@@ -44,30 +44,6 @@ Fabric enables to modify the default location of the cache per Logical Unit usin
 
 Note that both the config.ini and the Fabric Studio configuration changes become effective in the LU Schema only after Fabric is restarted.
 
-### LIST Command
-
-The **LIST LU_TYPES / LIST LUT** command is used to list Logical Unit types and can display an LU's storage type. This command can be invoked for all deployed Logical Unit types or for a specific one.
-
-* Use the following syntax:
-
-  ~~~
-  fabric>list lut storage=y;
-  |LU_NAME        |STORAGE|
-  +---------------+-------+
-  |SummaryExercise|Default|
-  |Customer       |Default|
-  |ORDERS         |Default|
-  |CRM            |Default|
-  
-  (4 rows)
-  fabric>list lut lu_name=CRM storage=y;
-  |LU_NAME|STORAGE|
-  +-------+-------+
-  |CRM    |Default|
-  
-  (1 rows)
-  ~~~
-
 
 
 [![Previous](/articles/images/Previous.png)](01_LU_storage_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_big_lu_storage.md) 
