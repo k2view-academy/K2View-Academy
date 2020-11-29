@@ -9,7 +9,7 @@ The cache size and location on Fabric server are defined in the **[fabricdb]** s
 The cache has limited size which can be updated if needed. Note that increasing the cache size requires more disk space.
 
 
-### Storage and Cache Location Definition
+### Storage and Cache Location Definition in config.ini
 
 The following variables of the **[fabricdb]** section of the **config.ini** are used to define the permanent storage and cache location on the Fabric server:
 
