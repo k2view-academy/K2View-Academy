@@ -34,7 +34,7 @@ It is then possible to encrypt specific fields in your implementation using the 
 
 ### LUI Partial Encryptions Functions
 
-**luEncrypt()**
+#### **luEncrypt()**
 
 ```public static String luEncrypt(String plainData) throws Exception```
 
@@ -50,7 +50,7 @@ The function returns the following:
 - Data encrypted with the LUI key described above.
 
 
-**luDecrypt()**
+#### **luDecrypt()**
 
 ```public static String luDecrypt(String encryptedData, String luName, String entityID) throws Exception```
 
@@ -70,7 +70,7 @@ The function returns the following:
 
 
 
-**luRekey()** 
+#### **luRekey()** 
 
 ```public static String luRekey(String encryptedData) throws Exception```
 
