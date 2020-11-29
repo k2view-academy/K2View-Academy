@@ -13,6 +13,15 @@ The Properties tab in the LU window contains the following properties:
 </td>
 </tr>
 <tr>
+<td>
+<p><strong>Events</strong></p>
+</td>
+<td>
+<p>Sets the Event functions that are triggered upon sync success or failure, or upon delete instance success.</p>
+<p>To select an Event function, click the three dots next to the Events property and select the function name. Only Events functions are displayed.</p>
+</td>
+</tr>
+<tr>
 <td width="236">
 <p><strong>Storage</strong></p>
 </td>
@@ -55,6 +64,7 @@ The Properties tab in the LU window contains the following properties:
 </tr>
 </tbody>
 </table>
+
 
 
 
