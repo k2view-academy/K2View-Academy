@@ -26,7 +26,7 @@ The Properties tab in the LU window contains the following properties:
 <p><strong>Storage</strong></p>
 </td>
 <td width="368">
-<p>Enables setting the <a href="/articles/32_LU_storage/01_LU_storage_overview.md">storage type</a> of the LU instances and overrides the default settings defined in the config.ini file.</p>
+<p>Enables setting the <a href="/articles/32_LU_storage/01_LU_storage_overview.md#storage-types">storage type</a> of the LU instances and overrides the default settings defined in the config.ini file.</p>
 </td>
 </tr>
 <tr>
@@ -64,9 +64,6 @@ The Properties tab in the LU window contains the following properties:
 </tr>
 </tbody>
 </table>
-
-
-
 
 
 [![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
