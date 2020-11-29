@@ -35,9 +35,11 @@ Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabri
 
 To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console. 
 ###### Syntax:
-<pre><code>
-    set;
-</code></pre>
+
+~~~
+set;
+~~~
+
 
 This command displays the currently **deployed project name**, as well as the values of various project parameters. 
 
@@ -45,7 +47,7 @@ This command displays the currently **deployed project name**, as well as the va
 
 ### How Are Deployed Objects Reflected in the Fabric Server?
 You can check which objects are deployed in the Fabric server using the Fabric **LIST** command.
-- **list LU_TYPES/LUT**, provides a list of Logical Unit Types deployed to the Fabric server.
+- **list LU_TYPES/LUT**, provides a list of LU Types deployed to the Fabric server and can display an LU's [storage type](/articles/32_LU_storage/01_LU_storage_overview.md). This command can be invoked for all deployed LU Types or for a specific one.
 - **list WS**, provides a list of all Web Service methods deployed to the Fabric server. 
 - **list ENVIRONMENTS/ENVS**, provides a list of environments deployed to the Fabric server.
 - **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server .
@@ -53,7 +55,7 @@ You can check which objects are deployed in the Fabric server using the Fabric *
 - **list DB_SOURCES**, lists all the DB interfaces.
 
 ###### Syntax:
-<pre><code> 
+~~~
     list lut; 
     list lu_types;
     list ws;
@@ -64,12 +66,25 @@ You can check which objects are deployed in the Fabric server using the Fabric *
     list IGS;
     list INSTANCE_GROUPS;
     list DB_SOURCES;
-</code></pre>
+~~~
+
+**Examples:**
+
+~~~
+fabric>list lut storage=y;
+|LU_NAME        |STORAGE|
++---------------+-------+
+|SummaryExercise|Default|
+|Customer       |Default|
+|ORDERS         |Default|
+|CRM            |Default|
+~~~
+
 
 ### How Are Deployed Objects Reflected in Cassandra?
 Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#cassandra-) as follows:
-- The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References] <!--Future link to DROP 2 item-->and [Web Services](/articles/15_web_services/01_web_services_overview.md) creates new records in the [**k2_lut_info** table](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) under the **k2system** keyspace. A separate record is created for each LU and Reference table and for each deployed Web Service.
-- Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]**.
+- The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) and [Web Services](/articles/15_web_services/01_web_services_overview.md) creates new records in the [**k2_lut_info** table](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) under the **k2system** keyspace. A separate record is created for each LU and Reference table and for each deployed Web Service.
+- Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]_[cluster id if exists]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
 
 ### How Do I Get the Deployed Implementation?
