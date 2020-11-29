@@ -14,8 +14,6 @@ The Logical Unit permanent storage location depends on the setting of the LU Sch
 * **None**, do not store the instance in the Cassandra after the GET  retrieves the instance data from the source DB. 
 * **Cassandra**, store the instances in the Cassandra DB after the GET command execution.
 
-[Click for more information about the storage setting in config.ini](/articles/32_LU_storage/02_storage_management.md#storage-and-cache-location-definition-in-configini).
-
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_storage_management.md)
 
