@@ -39,7 +39,16 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 [Click for Code Examples of a Trigger Function.](11_4_creating_a_trigger_function.md#example-of-a-trigger-function)
 
+#### Event Function
+
+- A function that is triggered on:
+  - Post Sync success, post Sync failure, post Delete Instance success.
+- An Event function is invoked from the **Events** [LU Schema property](/articles/03_logical_units/04_LU_properties.md) that contains a list of Event functions on a Shared and LU level.
+
+[Click for Code Examples of an Event Function](11_5_creating_an_event_function.md).
+
 #### **Switch Function**
+
 *	A specific Fabric Project function used by Parsers to split records to populate more than one record type in the Parser map.
 *	A Switch function enables users to define different types of records for the same parser. 
 
