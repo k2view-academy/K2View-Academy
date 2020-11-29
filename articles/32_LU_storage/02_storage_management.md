@@ -31,7 +31,7 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
     #MDB_DEFAULT_CACHE_PATH=/dev/shm/fdb_cache
     ~~~
 
-- MDB_DEFAULT_SCHEMA_CACHE_SIZE, defines the cache's size limit in bytes per schema for MicroDB instances. 
+- MDB_DEFAULT_SCHEMA_CACHE_SIZE, defines the size limit of the cache in bytes per schema in the MicroDB. 
 
 ### Changing the Location of the Cache 
 Fabric enables users to modify the location of the cache per Logical Unit from the default product setting using the MDB_DEFAULT_CACHE_PATH variable in the **[fabricdb]** section of the **config.ini** and the LU Schema's **Cache Location** property as follows:
@@ -40,13 +40,13 @@ Fabric enables users to modify the location of the cache per Logical Unit from t
 
 * When the Cache Location is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**.
   * The definition of the **${FABRIC_STORAGE}** path can be updated via the **fabric-server-start.sh** script using the **-DFABRIC_STORAGE** variable.
-* If the default path in the config.ini is updated to another path, the cache will always be located according to the config.ini regardless of the LU Schema property setting in the Fabric Studio.
+* If the default path in the config.ini is updated to another path, the cache is always located according to the config.ini regardless of the LU Schema property setting in the Fabric Studio.
 
 Note that these changes become effective in the LU Schema only after Fabric is restarted.
 
 ### LIST Command
 
-The **LIST LU_TYPES / LIST LUT** command is used to list the Logical Unit types and can display an LU's storage type. This command can be invoked for all deployed Logical Unit types or for a specific one.
+The **LIST LU_TYPES / LIST LUT** command is used to list Logical Unit types and can display an LU's storage type. This command can be invoked for all deployed Logical Unit types or for a specific one.
 
 * Use the following syntax:
 
