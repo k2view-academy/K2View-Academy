@@ -2,22 +2,31 @@
 
 The Properties tab in the LU window contains the following properties:
 
-<table>
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td width="236">
+<td width="170pxl">
 <p><strong><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync properties</a></strong></p>
 </td>
-<td width="368">
+<td width="630pxl">
 <p>Sets the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> and properties on an LU level.</p>
 </td>
 </tr>
 <tr>
 <td width="236">
-<p><strong>Storage property</strong></p>
+<p><strong>Storage</strong></p>
 </td>
 <td width="368">
-<p>Enables setting the storage type of the LU instances and overrides the default storage type defined in the config.ini file.</p>
+<p>Enables setting the <a href="/articles/32_LU_storage/01_LU_storage_overview.md">storage type</a> of the LU instances and overrides the default settings defined in the config.ini file.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Cache Location</strong></p>
+</td>
+<td>
+<p>Enables modification of the default <a href="/articles/32_LU_storage/02_storage_management.md#changing-the-location-of-the-cache">cache location</a> of the LU instances.</p>
+<p>If the default path in the config.ini is updated to another path, the cache is always located according to the config.ini regardless of this property setting in the Fabric Studio.</p>
 </td>
 </tr>
 <tr>
@@ -47,4 +56,7 @@ The Properties tab in the LU window contains the following properties:
 </tbody>
 </table>
 
-[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/05_create_a_new_LU_object.md)
+
+
+
+[![Previous](/articles/images/Previous.png)](03_LU_schema_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_create_a_new_LU_object.md)
