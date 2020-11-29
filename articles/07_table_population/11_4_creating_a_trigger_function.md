@@ -28,7 +28,7 @@ The **TableDataChange** data type exposes a set of methods which allow getting a
 
 The Trigger function analyzes the change using the above information and executes business logic, for example, write the old and the new values into a log table.
 
-### How Do I Attach an Enrichment Function to an LU Table?
+### How Do I Attach a Trigger Function to an LU Table?
 
 A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](articles/03_logical_units/03_LU_schema_window.md) to be executed when there are changes in an LU table's data. 
 
@@ -48,13 +48,13 @@ Do the following:
 
 5. Click **OK** to close the Editor and then **Save** the table.
 
-### How Do I Remove an Enrichment Function from an LU Table? 
+### How Do I Remove a Trigger Function from an LU Table? 
 
 To remove a Trigger function from the LU table, do the following:
 
 1. Go to **Project Tree** > **Logical Units** > [**LU Name**] > **Tables** > [**Table Name**] to display the **Table Schema** window.
 
-2. In the [Table Properties tab](/articles/06_LU_tables/04_table_properties.md), click the **three dots** next to the **Enrichment Functions** option to open the **Trigger Item Collection Editor**.
+2. In the [Table Properties tab](/articles/06_LU_tables/04_table_properties.md), click the **three dots** next to the **On Change** option to open the **Trigger Item Collection Editor**.
 
 3. Select the function and click **Remove**.
 
