@@ -1,22 +1,22 @@
 # LUI Encryption
 
 ## LUI Encryption Key
-Fabric encrypts each instance (LUI) using the AES-256 mode encryption algorithm. Hence, the key length is 256 bytes.
+Fabric encrypts each LUI using the AES-256 mode encryption algorithm. Hence, the key length is 256 bytes. 
 
-The underlying key will be the hash (using SHA-256 algorithm) of the following parts:
+The underlying key is the hash (using SHA-256 algorithm) of the following parts:
 
-- LU type name (logical unit name). For example: “CUSTOMER”
-- LUI (instance id). For example: “123”
-- Master key- input key generated as detailed in the previous section of this document.
+- LU type name (Logical Unit name). For example: “CUSTOMER”
+- LUI (instance ID). For example: “123”
+- Master key, input key generated. See the **Link**.
 
-As a result, Fabric creates a different key for each instance id, because each instance id has a different value. Fabric saves the key description for each instance id (in the ENTITY table in cassandra). This way, Fabric can decrypt the entity when necessary.
-The encrypted master key that was used to encrypt the instance id, can be taken from the KEYS table by the key description.
+Fabric creates a different key for each Instance ID, since each Instance ID has a different value. Fabric saves the key description of each Instance ID in the ENTITY table in Cassandra. This way, Fabric can decrypt the entity when necessary.
+The encrypted master key used to encrypt the Instance ID, can be taken from the KEYS table according to the key's description.
 
 ## Encrypt LUI Using Fabric Studio
 
-By default, when creating a logical unit, the *enable data encryption* property field is set to ‘False’.
+By default, when creating a Logical Unit, the **Enable data encryption** field is set to **False**.
 
-If you wish to encrypt each instance (LUI), set the ‘Enable data encryption’ property of your LU schema to ‘True’. 
+To encrypt each instance (LUI), set the **Enable data encryption** property of the LU schema to **True**. 
 
 See the screenshot below:
 
@@ -25,9 +25,7 @@ See the screenshot below:
 
 ## LUI Partial Encryption
 
-If you wish to encrypt only selected fields on the LU instance, you need first to set the following parameter to false in the config.ini file ```FULL_ENTITY_ENCRYPTION=false```.
-
-It is then possible to encrypt specific fields in your implementation using the following built-in functions:
+To encrypt only selected fields on the LU instance, first to set the ```FULL_ENTITY_ENCRYPTION=false``` parameter to false in the config.ini file and then encrypt specific fields in the implementation using the following built-in functions:
 
 <img src="/articles/26_fabric_security/images/04_fabric_LUencryption_LUEncrypt.PNG">
 
@@ -38,11 +36,11 @@ It is then possible to encrypt specific fields in your implementation using the 
 
 ```public static String luEncrypt(String plainData) throws Exception```
 
-The function encrypts data in text format using the latest master key and LUI key. This method can be used to encrypt individual fields in the LUI micro-database
+This function encrypts data in text format using the latest master key and LUI key and can be used to encrypt individual fields in the LUI micro-database
 
 Parameters:
 
-- plainData - the text to encrypt
+- plainData, the text to encrypt
 
 
 The function returns the following:
@@ -54,19 +52,18 @@ The function returns the following:
 
 ```public static String luDecrypt(String encryptedData, String luName, String entityID) throws Exception```
 
-The function decrypts a string that was previously encrypted using the ```luEncrypt``` method:
+This function decrypts a string previously encrypted using the ```luEncrypt``` method:
 
 Parameters:
 
-- encryptedData - the encrypted data
-- luName - The LUType for the data to decrypt
-- entityID - The instance id of the instance holding this data
+- encryptedData, the encrypted data
+- luName, LUType for the data to decrypt
+- entityID, Instance ID of the instance holding this data
 
-
-The function returns the following:
+This function returns the following:
 
 - Decrypted text
-- Exception in cases when decryption failed
+- Exceptions of failed decryptions 
 
 
 
@@ -74,17 +71,17 @@ The function returns the following:
 
 ```public static String luRekey(String encryptedData) throws Exception```
 
-The function decrypts data with it's key and encrypts it with the latest master key. For a system to support the rekey option, data needs to be re-keyed when re-syncing the LUI.
+This function decrypts data using its key and encrypts it using the latest master key. For a system to support the rekey option, data must be rekeyed when resyncing the LUI.
 
 Parameters:
 
-encryptedData - Encrypted data to be rekeyed
+encryptedData, encrypted data to be rekeyed
 
 
-The function returns the following:
+Thisfunction returns the following:
 
 - Encrypted data, encrypted with the active key
-- Exception in cases when the process has failed
+- Exceptions when the process fails
 
 
 
