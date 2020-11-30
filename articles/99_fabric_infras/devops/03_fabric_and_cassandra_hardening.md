@@ -1,15 +1,15 @@
 # Fabric Hardening
 
-The following steps will ensure that the keys necessary to secure both Fabric and Cassandra are generated and configured.
+The following steps ensure that the keys that secure Fabric and Cassandra are generated and configured.
 
-- We will use the following Password example for the TLS keys is ```1234Q!``` - replace accordingly all the following sections with a new password.
-- Do not forget to replace all the $K2_HOME/ value with the full and correct path location for both Fabric and Cassandra.
+- The example password ```1234Q!``` is used for TLS keys and can be replaced in all the following sections with a new password.
+- Do not forget to replace all $K2_HOME/ values with the full and correct path location in both Fabric and Cassandra.
 
 
 ## Step 1 - Keys Generation
 
-- Run the Keys Script that you can download at this [location](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh) 
-- Stop Fabric & Cassandra services before running the script
+- Run the Keys Script that can be downloaded from this [location](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+- Stop Fabric and Cassandra services before running the script.
 
 
 ```
@@ -19,7 +19,7 @@ rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 chmod +x secure_cassandra.sh
 
 !! run on single Fabric node only !!
-* in order to change the password or the cluster name edit the secure_cassandra.sh or execute with password and cluster name parameters
+* To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
 e.g.: ./secure_cassandra.sh {Password} {Cluster_Name}
 
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
@@ -49,7 +49,7 @@ MAC verified OK
 MAC verified OK 
 ```
 
-The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` directory
+The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` directory:
 - k2tls_CLIENT.key.pem
 - k2tls_CLIENT.cer.pem
 - cassandra.keystore
@@ -58,9 +58,9 @@ The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` direct
 - CLIENT_k2tls_PUBLIC.cer
 - CLUSTER_k2tls_PUBLIC.cer
 
-## Step 2 - Transfer keys and certificates to all cassandra and Fabric nodes
+## Step 2 - Transfer keys and certificates to all Cassandra and Fabric nodes
 
-- Tar & Copy them to all nodes in the cluster (Cassandra and Fabric nodes).  
+- Tar & Copy them to all Cassandra and Fabric nodes in the cluster.  
 
 See the example below: 
 ``` 
@@ -74,8 +74,8 @@ mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSLATT_DIR/.c
 
 ## Step 3 - Cassandra YAML
 
-- Edit cassandra.yaml file with appropriate passwords and certification files
-- Execute this on all cassandra nodes as cassandra user 
+- Edit the cassandra.yaml file with the appropriate passwords and certification files.
+- Execute this on all Cassandra nodes as a Cassandra user. 
 
 ```
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -100,12 +100,12 @@ sed -i "s@native_transport_port: .*@native_transport_port: 9142@" $CASSANDRA_HOM
 sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cassandra.yaml
 ```
 
-Re-start Cassandra service on each node: ```cassandra```
+Restart the Cassandra service on each node: ```cassandra```
 
 
 ## Step 4 - Cassandra CQLSHRC
-- Edit .cassandra/cqlshrc file with appropriate passwords and certification files
-- Execute this on all cassandra nodes as cassandra user
+- Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
+- Execute this on all Cassandra nodes as a Cassandra user
 
 ```
 cp $INSLATT_DIR/cassandra/conf/cqlshrc.sample $INSLATT_DIR/.cassandra/cqlshrc
@@ -122,8 +122,8 @@ sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_D
 
 
 ## Step 5 - $K2_HOME/config/cqlshrc
-- Edit $K2_HOME/config/cqlshrc file with appropriate passwords and certification files
-- Execute this on all Fabric nodes
+- Edit the $K2_HOME/config/cqlshrc file with the appropriate passwords and certification files:
+- Execute this on all Fabric nodes.
 
 ```
 sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $K2_HOME/config/cqlshrc
@@ -136,17 +136,17 @@ sed -i "s@port = .*@port = 9142@" $K2_HOME/config/cqlshrc
 ```
 
 NOTE:
-If there is no cqlshrc file under $K2_HOME/config path, please perform the following step and repeat the previous setup phase of the file:
+If there is no cqlshrc file under the $K2_HOME/config path, do the following and repeat the previous setup phase of the file:
 
 ```cp $K2_HOME/apps/apache-cassandra-3.11.4/conf/cqlshrc.sample $K2_HOME/config/cqlshrc```
 
-Version path location may change based on the Fabric version
+The location of the version path may change based on the Fabric version.
 
 
 
 ## Step 6 - Config.ini setup
 
-- Edit config.ini file to support SSL and set up the WS SSL Key (Fabric only)
+- Edit the config.ini file to support SSL and set up the WS SSL Key (Fabric only).
 - Run the following on all Fabric Nodes:
 
 ```
@@ -164,7 +164,7 @@ sed -i 's@#SSL=false@SSL=true@g' $K2_HOME/config/config.ini
 
 ## Step 7 - JVM options
 
-- Edit $K2_HOME/config/jvm.options file with appropriate passwords and certification files:
+- Edit the $K2_HOME/config/jvm.options file using the appropriate passwords and certification files:
 
 ```
 sed -i 's@#-Djavax.net.ssl.keyStore=.*@-Djavax.net.ssl.keyStore=$K2_HOME/.cassandra_ssl/cassandra.keystore@g' $K2_HOME/config/jvm.options
@@ -173,14 +173,14 @@ sed -i 's@#-Djavax.net.ssl.trustStore=.*@-Djavax.net.ssl.trustStore=$K2_HOME/.ca
 sed -i 's@#-Djavax.net.ssl.trustStorePassword=.*@-Djavax.net.ssl.trustStorePassword=Q1w2e3r4t5@g' $K2_HOME/config/jvm.options
 ```
 
-- Start Fabric service on each node: ```K2fabric start```
+- Start the Fabric service on each node: ```K2fabric start```
 
 
 ## Step 8 - CQLSH & SSL
 
-Configure CQLSH to use the SSL flag: 
+Configure the CQLSH to use the SSL flag: 
 
-- Copy the file cqlshrc from path $K2_HOME/config/cqlshrc to local path $K2_HOME/.cassandra/ on each Fabric node
+- Copy the cqlshrc file from the $K2_HOME/config/cqlshrc path to the local $K2_HOME/.cassandra/ path on each Fabric node.
 
 ```cp $K2_HOME/config/cqlshrc $K2_HOME/.cassandra/```
 
@@ -190,13 +190,13 @@ Note: Create the directory if it does not exist:
 - Run the following command:
 ```cqlsh -u k2admin -p Q1w2e3r4t5 --ssl```
 
-Note: In case k2admin user credentials do not exist, please use a valid user.
+Note: If the k2admin user credentials do not exist, use a valid user.
 
 ## Step 9 - Configure HTTPS for Web Services
 
-From one of the Fabric nodes, run the following command: ```curl https://10.10.10.10:9443/ws -k ```
+Run the ```curl https://10.10.10.10:9443/ws -k ``` command from a Fabric node: 
 
-The response will be similar to the following one:
+The response should be similar to the following:
 ```
 "data" : null,
 "error" : "General Fabric error - <com.k2view.cdbms.exceptions.WebServiceException: method name is missing>"
@@ -207,8 +207,8 @@ Note: From version 6.2 and above you can access the Web Framework website using 
 
 ## Step 10 - Fabric Encryption Support
 
-- Edit fabric-server-start.sh on each node in the $K2_HOME/fabric/scripts/ folder
-- Add the encryption flag to the ```exec $JAVA``` section
+- Edit fabric-server-start.sh on each node in the $K2_HOME/fabric/scripts/ folder.
+- Add the encryption flag to the ```exec $JAVA``` section.
 
 ```
 
@@ -243,7 +243,7 @@ exec $JAVA |
 ```
 
 NOTE: 
-Do not forget to add | after the value *clustertimecheck* for the new line to be taken in consideration.
+Do not forget to add | after the value *clustertimecheck* for the new line to be taken into consideration.
 
 
 - Execute the following commands:
@@ -259,11 +259,11 @@ sed -i -e '/clustertimecheck \\/a\        encryption\' $K2_HOME/fabric/scripts/f
 
 ### Generate Master Key Without Keystore
 
-Set the *MASTERKEY_KEY_STORE_ENABLED* parameter of the config.ini file to *false* (default) to generate a master key without a keystore. 
+Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **false** (default) to generate a master key without a keystore. 
 
 
 ### Generate Master Key Using Keytore
-Set the *MASTERKEY_KEY_STORE_ENABLED* parameter of the config.ini file to ‘true’.
+Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **true**.
 
 #### Create Keystore Directory 
 After adding the encryption module to the fabric-server-start.sh module, create the keystore folder under the k2view home directory for all nodes:
@@ -280,7 +280,7 @@ Run the keytool command on the coordinator node:
 ``` scp $K2_HOME/keystore/fabric.keystore fabric@10.10.10.10:/$K2_HOME/keystore/ ```
 
 #### Edit Config.ini Script
-- Edit the *KEY_STORE_PASSWORD* parameter in the config.ini to the password used in the keytool command, and enable the *KEY_STORE_LOCATION* parameter as well as and set it to point to the correct path for all fabric nodes:
+- Edit the *KEY_STORE_PASSWORD* parameter in the config.ini to the password used in the keytool command, and enable the *KEY_STORE_LOCATION* parameter and set it to point to the correct path for all Fabric nodes:
 
 ```
 sed -i "s@#KEY_STORE_LOCATION=.*@KEY_STORE_LOCATION=$K2_HOME/keystore/fabric.keystore@" $K2_HOME/config/config.ini
@@ -288,7 +288,7 @@ sed -i 's@#KEY_STORE_PASSWORD=.*@KEY_STORE_PASSWORD= <password>@' $K2_HOME/confi
 ```
 
 ### Restart Fabric Nodes
-- Restart all fabric nodes.
+- Restart all Fabric nodes.
  
 
 ## Step 11 - Replace the Fabric Admin Password
