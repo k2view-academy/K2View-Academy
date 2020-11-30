@@ -10,6 +10,11 @@ An Event function is a Project function invoked from the **Events** [LU Schema p
 * Any Event function on a Shared or LU level can be attached to an LU Schema.
 * The same Event  function can be attached to several LU Schema event.
 
+Notes:
+
+*  The Event functions run synchronously. If needed to run a function asynchronously, it can be done by implementation in the Event function's code. 
+* The implementer is responsible to handle the Event function's exceptions. It will decide whether to catch an exception or to display it to the user in case the Event function fails.
+
 ### How Do I Create or Edit an Event Function?
 
 To create an Event function, refer to the steps in [How to Create Project Functions](10_creating_a_project_function.md).
