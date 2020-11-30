@@ -42,7 +42,7 @@ Fabric enables to modify the default location of the cache per Logical Unit usin
   * The definition of the **${FABRIC_STORAGE}** path can be updated via the **fabric-server-start.sh** script using the **-DFABRIC_STORAGE** variable.
 * If the default path in the config.ini is updated to another path, the cache is always located according to the config.ini regardless of the LU Schema property setting in the Fabric Studio.
 
-Note that both the config.ini and the Fabric Studio configuration changes become effective in the LU Schema only after Fabric is restarted.
+Note that both the config.ini and the Fabric Studio configuration changes become effective only after Fabric is restarted. On the first LU deployment the restart is not required.
 
 
 
