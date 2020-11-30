@@ -24,7 +24,7 @@ We  show, in detail, how to handle each of the following components that are cru
 - Web Services
 - Role-based access control management
 
-It is important to note that this section only addresses security features related to Fabric as a product. For information about safeguarding the Fabric DevOps environment, rules, policies and best practices, click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md).   
+Note that this section only addresses security features related to Fabric as a product. For information about safeguarding the Fabric DevOps environment, rules, policies and best practices, click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md).   
 
 
 
