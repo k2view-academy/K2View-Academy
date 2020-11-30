@@ -3,9 +3,9 @@
 
 ## Environments
 
-Fabric enables you to define a number of source [environments]() and to switch between them duing the same Fabric session. This way, you can change source connections without redeploying an LU.
+Fabric enables you to define a number of source [environments]() and to switch between them during the same Fabric session. This way, you can change source connections without redeploying an LU.
 
-For each environment, set the connection details of the interfaces and then deploy the environments to the Fabric cluster. Deployment of the environments is separate from the deployment of LUs. The passwords of the interfaces are encrypted by the Fabric master key.
+For each environment, set the connection details of the interfaces and then deploy the environments to the Fabric cluster. Deployment of the environments is separate from the deployment of the LUs. The passwords of the interfaces are encrypted by the Fabric master key.
 
 Fabric encrypts the interface details of each environment using the same master key generated when Fabric starts (or regenerates it). This key is also used to encrypt LU instances. 
 
@@ -14,12 +14,12 @@ To rekey the interfaces belonging to a given environment, do the following:
 2. Set a Fabric node in the Fabric URL of each environment.
 3. Click Re-Key.
 
-When the connection details of the interfaces for the environment are updated and saved, the updated connection details are re-encrypted.
+When the connection details of the interfaces of the environment are updated and saved, the updated connection details are re-encrypted.
 Similar to entities, Fabric keeps the key description of the master key used for the encryption of each environment.
 
 Notes:
 
-- When changing and saving the passwords of an interface in an environment, Fabric encrypts the modified passwords using the server logic to automatically rekey the master key.
+- When changing and saving the passwords of an interface in an environment, Fabric encrypts the modified passwords using server logic to automatically rekey the master key.
 - A new Fabric URL field is added to define the Fabric node to be used to encrypt the passwords and run the test connection function. Note that when unchecked, the local test connection and previous encryption algorithm is used.
 - The **Re-Key** column has been added in order to use the most updated encryption mechanism and the latest master key to encrypt the passwords of all interfaces.
 
@@ -41,7 +41,7 @@ Fabric cannot be reached via the URL and the following configuration parameters 
 - Master key is hardcoded in Fabric code
 - The Encryption process is similar on all environments, for all projects and accounts deployed and setup.
 
-This means that to get full access to all interfaces on any given project, the environment xml file is required and must be added to the **Projects\PROJECT_NAME\Implementation\SharedObjects\Environments** folder.
+This means that to get full access to all interfaces in any given project, the environment XML file is required and must be added to the **Projects\PROJECT_NAME\Implementation\SharedObjects\Environments** folder.
 
 
 ### Level 2 - Assigned environment without keystore
@@ -74,8 +74,6 @@ When defining a new interface, the password for this interface is hashed and sav
 
 <img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.png">
           
-
-
 ## File Systems
 
 Fabric enables connection to SFTP servers hosting files.
