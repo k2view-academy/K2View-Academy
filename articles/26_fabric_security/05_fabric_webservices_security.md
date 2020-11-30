@@ -2,32 +2,33 @@
 
 ## Tokens
 
-Fabric provides a secured mechanism for web-services to access to the data it exposes - such as LUI data or Reference Tables.
-This is done by means of authentication mechanism that support Web Service calls using either of the following credentials:
-- unsecured API key  
-- secured API key based on JSON Web Tokens (JWT) solution. 
+Fabric uses an authentication mechanism that secures Web Service access to expossed data like in LUI or reference tables. The following credentials are required for authenticating Web Service calls:
+- Unsecured API key.  
+- Secured API key based on the JSON Web Tokens (JWT) solution. 
 
 JWT is an open industry standard method (RFC 7519) that securely represents claims between two parties. 
 
 API keys can be used in two modes:
 
-- Unsecured mode signed by Fabric.
-- Secured mode, using a digital signature on the client side. The secret key will be shared as an output only once to be used by the client to generate the digital signature.
+- Unsecured mode, signed by Fabric.
+- Secured mode, using a digital signature on the client side. The secret key is shared as an output only once to be used by the client to generate the digital signature.
 
 
-Fabric supports backward capability via Token Authentication and an enhanced "Create Token" command for secured tokens. 
+Fabric supports backward capability via Token Authentication and an enhanced Create Token command for secured tokens. 
 
 
 ### JWT Tokens Generation 
 
-In order to generate a JWT token using Fabric Authenticate API, follow the next steps:
+To generate a JWT token using Fabric Authenticate API, do the following:
 
-- Open Postman
-- Select the POST method and enter your Fabric Server Address: http://localhost:3213/api/authenticate in the URL window
-- Under the *body* tab, enter both username and password as keys and enter corresponding values (e.g. admin/admin). Similarily, an API key can be defined.
-- Click the SEND button
-- Open the *Cookies* tab next to the response body.
-- The API key is displayedin the value field - e.g: 
+1. Open Postman.
+2. Select the POST method and enter the Fabric Server Address: http://localhost:3213/api/authenticate in the URL window.
+3. In the **Body** tab, enter the **username** and **password** as keys and then enter the corresponding values, for example; admin/admin. 
+4. Follow the above steps to define an API key.
+5. Click **SEND**.
+6. Open the **Cookies** tab next to the response body, the API key is displayed in the Value field. 
+
+For example: 
 
              eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsImlzcyI6ImZiciIsImlhdCI6MTYwNjY2MDg4MiwiZXhwIjoxNjA2NjYxNzgyLCJ1bm0iOiJhZG1pbiJ9.sQpH343SbfLPHrR7lp5eG4qZKGXXhMrkggX9wqVzLBQ
 
@@ -38,51 +39,49 @@ In order to generate a JWT token using Fabric Authenticate API, follow the next 
 
 ## Tokens and the Admin Panel
 
-In order to generate a new token for accessing Fabric API, open the Admin Panel web page:
+To generate a new token for accessing Fabric API, do the following: 
 
-Step 1: Select the *Admin* -> *Security* -> *API keys* tab.
+1. Open the **Admin Panel** web page and select **Admin**, **Security** and then click the **API keys** tab.
 
-Step 2: Select the *Add API Key +* button on the upper right of the window.
+2. Click the **Add API Key +** button on the upper right of the window.
 
-Step 3: Fill in the following details:
-- Name (Mandatory)
-- Secured (Optional)
-
-Step 4: Click on the *Save* button
-
-
-If the secured option was selected, the secret key will appear in a pop=up window, with the ability to select and copy it.
+3. Fill in the following details:
+  - Name (Mandatory).
+  - Secured (Optional).
+4. Click  **Save**.
+ 
+When the secured option has been selected, the secret key is displayed in a pop=up window and can be copied.
+For example:
 ```f151c40f-fede-4fb3-8010-398ffbc02329```
 
 
 <img src="/articles/26_fabric_security/images/07_fabric_webToken.PNG">
 
 
-Note that in cases where the secured option was not selected the token value is the token name itself.
+Note that if the secured option has not been selected,  the Token Name is used as the token value.
 
 
 ## Tokens from the Command Line
 
-The creation of a token from the command line is described [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token)
+For information about creating a token from the command line, click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-token).
 
-## Granting Web-services Permissions to Roles 
+## Granting Web Service Permissions to Roles 
 
 When assigning a role to a user, different types of methods can be attributed. 
-The roles supported are described [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-)
+
+For more information about the roles supported, click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-).
 
 
-### Web Service authorization using the API Key:
+### Web Service Authorization Using the API Key:
 
 #### Project Web Services
 
-Permission is granted to the role in the Web Service or to all Web Services and the API Key is assigned to the role. This is achieved from the command line by using the following command:
-
-```GRANT <ws_name> TO <ROLE>```
+Permissions can be granted to a role in a Web Service or in all Web Services. An API Key is assigned to the role using the ```GRANT <ws_name> TO <ROLE>``` command line.
 
 
 #### Product Web Services
 
-The API key is assigned to a user. The permissions for Product Web Services are defined by combining the API Key assigned to the user and the permissions of the roles assigned to the user.
+The API key is assigned to a user. Permissions for product Web Services are defined by combining the API Key assigned to the user and the permissions of the roles assigned to the user.
 
 Example:
 
@@ -94,9 +93,9 @@ Example:
     create token 'test_token' user 'greg';
 ```
 
-This sniplet shows how the WRITE permission (granted to the writeRole) role was assigned to the user; and how a token (test_token) reflecting this role/permission was generated for the user.
+This sniplet shows how the WRITE permission granted to the writeRole has been assigned to the user; and how the test_token token reflecting this role/permission has been generated for the user.
 
-When trying to invoke the web service with the DELETE verb, using the 'test_token' token, Fabric will throw the following error as the delete permission was not granted to the specific token: 
+When trying to invoke the Web Service with the DELETE verb, using the 'test_token' token, Fabric throws the following error since the delete permission has not been granted to the specific token: 
 
 ``` "Com.k2view.cdbms.exceptions.UnauthorizedException: test_read is not allowed to perform [DELETE_INSTANCE]" ```
 
