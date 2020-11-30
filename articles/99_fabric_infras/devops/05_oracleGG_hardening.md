@@ -2,7 +2,7 @@
 
 ## Step 1	- Copy Kafka_ssl content
 
-Copy from Kafka node the content of $K2_HOME/.kafka_ssl to local directory on Oracle GG client
+Copy the content of $K2_HOME/.kafka_ssl to the local directory on Oracle GG client from the Kafka node.
 
 
 ## Step 2 - Update Properties	
