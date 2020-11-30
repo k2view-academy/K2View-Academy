@@ -9,7 +9,7 @@ The Properties tab in the LU window contains the following properties:
 <p><strong>Sync properties</strong></p>
 </td>
 <td width="630pxl">
-<p>Sets the <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync properties</a> and the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> on an LU level.</p>
+<p>Sets the <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync properties</a> and the <a href="/articles/14_sync_LU_instance/04_sync_methods.md">sync method</a> on an LU level.</p>
 </td>
 </tr>
 <tr>
@@ -64,6 +64,7 @@ The Properties tab in the LU window contains the following properties:
 </tr>
 </tbody>
 </table>
+
 
 
 

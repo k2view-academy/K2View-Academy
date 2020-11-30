@@ -41,7 +41,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 
 #### Event Function
 
-- A function that is triggered on:
+- A function that is triggered on one of the following events:
   - Post Sync success, post Sync failure, post Delete Instance success.
 - An Event function is invoked from the **Events** [LU Schema property](/articles/03_logical_units/04_LU_properties.md) that contains a list of Event functions on a Shared and LU level.
 
