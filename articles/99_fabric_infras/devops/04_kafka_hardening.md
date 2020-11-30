@@ -1,6 +1,6 @@
 # Kafka Hardening (SSL mode)
 
-The following steps will ensure the hardening of Kafka server in a Fabric cluster.
+The following steps ensure the hardening of the Kafka server in a Fabric cluster.
 
 ## Step 1 - Shut down services	
 
@@ -9,7 +9,7 @@ Ensure the following services are switched off:
 - ZooKeeper
 - Fabric
 
-## Step 2.	Keys Generation
+## Step 2. Keys Generation
 
 - [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the following script (secure_kafka.sh) to generate self-signed keys and certificates.
 
@@ -75,7 +75,7 @@ Certificate was added to keystore
 
 ## Step 3 - Replicate to all nodes
 
-The 10 following files have been generated in the $K2_HOME/.kafka_ssl directory:
+The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 
 ```
 - ca-crt.crt
@@ -90,7 +90,7 @@ The 10 following files have been generated in the $K2_HOME/.kafka_ssl directory:
 - kafka.server.truststore.jks
 ```
 
--	Tar & Copy them to all nodes in the cluster (Kafka and Fabric/IIDFinder nodes) as shown below:
+- Tar & Copy them to all Kafka and Fabric/IIDFinder nodes in the cluster as shown below:
 
 ``` 
 tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
@@ -104,8 +104,8 @@ mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_s
 # Zookeeper configuration
 
 Notes: 
-- Required to be applied over every node in cluster
-- ZooKeeper does not support SSL authentication so MD5 authentication (username and password) is used
+- These configuration must be applied to every node in cluster
+- Since ZooKeeper does not support SSL authentication, MD5 authentication (username and password) is used.
 
 ## Step 1 - SASL Authentication
 
@@ -137,17 +137,17 @@ Client {
 
 ## Step 4 - Start ZooKeeper service
 
-- Upon starting ZooKeeper make sure the following command is being invoked: 
+- When starting ZooKeeper make sure the following command is invoked: 
 ``` export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties ```
 
-The ZooKeeper daemon will also have been started.
+The ZooKeeper daemon also starts up.
 
 
 # Kafka Server Configuration
-Note that the following steps must be applied over each node in cluster.
+Note that the following steps must be applied for each node in cluster.
 
 ## Step 1 - SSL authentication
-- Define the 2-way SSL authentication between Kafka server and clients:
+- Define the 2-way SSL authentication between the Kafka server and clients:
 
 ```
 sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
@@ -167,7 +167,7 @@ sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.proper
 
 ## Step 2 - kafka_server_jaas.conf
 
-- Edit new created file kafka_server_jaas.conf:
+- Edit the new file kafka_server_jaas.conf:
 
 ```
 vi $CONFLUENT_HOME/kafka_server_jaas.conf
@@ -193,7 +193,7 @@ Client {
 ```
 ## Step 3 - Start Kafka server
 
-- Upon starting Kafka make sure the following command is being invoked:
+- When starting Kafka make sure the following command is invoked:
 ```export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/kafka_server_jaas.conf" && ~/kafka/bin/kafka-server-start -daemon ~/kafka/server.properties```
 
 The Kafka daemon will also have been started.
