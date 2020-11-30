@@ -10,7 +10,7 @@ The underlying key is the hash (using SHA-256 algorithm) of the following parts:
 - Master key, input key generated. See the **Link**.
 
 Fabric creates a different key for each Instance ID, since each Instance ID has a different value. Fabric saves the key description of each Instance ID in the ENTITY table in Cassandra. This way, Fabric can decrypt the entity when necessary.
-The encrypted master key used to encrypt the Instance ID, can be taken from the KEYS table according to the key's description.
+The encrypted master key used to encrypt the Instance ID can be taken from the KEYS table according to the key's description.
 
 ## Encrypt LUI Using Fabric Studio
 
@@ -78,7 +78,7 @@ Parameters:
 encryptedData, encrypted data to be rekeyed
 
 
-Thisfunction returns the following:
+This function returns the following:
 
 - Encrypted data, encrypted with the active key
 - Exceptions when the process fails
