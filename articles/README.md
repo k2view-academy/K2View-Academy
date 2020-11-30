@@ -235,14 +235,13 @@
 </ul> 
          </ul>
 </details>
-
 <details>
 <summary markdown="span"><strong>Change Data Capture (CDC) Capabilities<strong><a href="/articles/18_fabric_cdc/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href=/articles/18_fabric_cdc/01_change_data_capture_overview.md>CDC Overview</a></li>
-<li><a href="/articles/18_fabric_cdc/02_cdc_messages.md">CDC Messages</a></li>
-<li><a href="/articles/18_fabric_cdc/03_cdc_consumers_implementation.md">CDC Implementation Steps</a></li>
+<li><a href="/articles/18_fabric_cdc/02_cdc_process_architecture.md">CDC Process Architecture</a></li>
+<li><a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC Messages</a></li>
 <li><a href="/articles/18_fabric_cdc/04_cdc_publication_flow.md">CDC Publication Flow</a></li>
-<li><a href="/articles/18_fabric_cdc/05_cdc_process_architecture.md">CDC Process Architecture</a></li>
+<li><a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a></li>
 <li><a href="/articles/18_fabric_cdc/06_cdc_configuration.md">CDC Configuration</a></li>
 <li><a href="/articles/18_fabric_cdc/cdc_consumers/README.md">CDC Consumers</a></li>   
 </ul> 
@@ -274,6 +273,7 @@
 </ul> 
 </ul> 
 </details> 
+
 
 <details>
 <summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
@@ -352,7 +352,7 @@
 <li><a href="/articles/28_cassandra_loader/03_loader_configuration.md">Cassandra Loader Configuration</a></li>
 <li><a href="/articles/28_cassandra_loader/04_loader_invocation.md">Cassandra Loader Invocation and JMX</a></li>
 </details>  
-        
+
  <details>
 <summary markdown="span"><strong>Tracing<strong><a href="/articles/29_tracing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/29_tracing/01_tracing_overview.md">Tracing Overview</a></li>
@@ -361,7 +361,7 @@
 <li><a href="/articles/29_tracing/04_trace_custom.md">Trace Custom</a></li>
 <li><a href="/articles/29_tracing/05_trace_view.md">Trace View</a></li>
 </details>    
-       
+
 <details>
 <summary markdown="span"><strong>Web Framework<strong><a href="/articles/30_web_framework/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/30_web_framework/01_web_framework_overview.md">Web Framework Overview</a></li>

@@ -20,9 +20,9 @@ Please read:
 
 - [CDC Publication Flow](/articles/18_fabric_cdc/04_cdc_publication_flow.md) to learn which scenarios trigger the publication of CDC messages and about the different types of CDC messages.
 
-- [CDC Messages](/articles/18_fabric_cdc/02_cdc_messages.md) to have a better understanding about the different types of CDC messages and to see examples of each message type.
+- [CDC Messages](/articles/18_fabric_cdc/03_cdc_messages.md) to have a better understanding about the different types of CDC messages and to see examples of each message type.
 
-- [CDC Process Architecture](articles/18_fabric_cdc/05_cdc_process_architecture.md) to have a better understanding of the CDC flow.
+- [CDC Process Architecture](/articles/18_fabric_cdc/02_cdc_process_architecture.md) to have a better understanding of the CDC flow.
 
 Now that you have read these articles, and have a better understanding of the CDC process, lets begin by defining CDC fields in the Fabric project.
 

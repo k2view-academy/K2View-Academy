@@ -12,7 +12,7 @@ This exercise includes the following steps:
 * Deploying the updated Customer LU and checking Kafka messages in the CDCTraining topic.
 * Getting an LUI into Customer LU and checking CDCTraining topic Kafka messages. 
 
-Please read [CDC Implementation Steps](/articles/18_fabric_cdc/03_cdc_consumers_implementation.md) and [CDC Configuration](/articles/18_fabric_cdc/06_cdc_configuration.md) to learn how to add a CDC implementation and CDC configurations to your working environment.
+Please read [CDC Implementation Steps](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md) and [CDC Configuration](/articles/18_fabric_cdc/06_cdc_configuration.md) to learn how to add a CDC implementation and CDC configurations to your working environment.
 
 ### Prerequisites
 
@@ -46,7 +46,7 @@ To open the **config.ini file** of the local Fabric server, do the following:
 
 5. Close and reopen the project in Fabric Studio to reload the updated **k2proj** file.
 
-[Click to read more about adding CDC consumers to a Fabric project](/articles/18_fabric_cdc/03_cdc_consumers_implementation.md#adding-cdc-consumers).
+[Click to read more about adding CDC consumers to a Fabric project](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md#adding-cdc-consumers).
 
 #### Step 3 - Editing a Customer LU, Adding CDC Fields to an Invoice LU Table
 
@@ -61,7 +61,7 @@ To open the **config.ini file** of the local Fabric server, do the following:
 
 3. Save the changes and close the LU table window.
 
-[Click to read more about adding CDC fields to an LU table](/articles/18_fabric_cdc/03_cdc_consumers_implementation.md#creating-indexes-for-other-cdc-consumers).
+[Click to read more about adding CDC fields to an LU table](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md#creating-indexes-for-other-cdc-consumers).
 
 #### Step 4 - Deploy the Customer LU 
 
