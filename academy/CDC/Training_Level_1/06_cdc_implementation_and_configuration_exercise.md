@@ -50,7 +50,7 @@ To open the **config.ini file** of the local Fabric server, do the following:
 
 #### Step 3 - Editing a Customer LU, Adding CDC Fields to an Invoice LU Table
 
-1. Open the **Customer LU Invoice table**. Verify that the **CDCTraining** tab is added to the table's window.
+1. Open the **Invoice  LU table** of Customer LU. Verify that the **CDCTraining** tab is added to the table's window.
 
 2. Define **CDCTraining** fields (indexes) on the following LU table columns:
    - INVOICE_ID
@@ -96,7 +96,7 @@ A. Which topic has been added for the CDCTraining consumer? What is the relation
 </code></pre>
 </ul>
 
-5. Get the Kafka topic messages from the CDCTraining consumer. When using the local Kafka installation, do the following:
+5. Get the Kafka topic messages from the CDCTraining consumer topic. When using the local Kafka installation, do the following:
 
    - Open a **cmd window** from the **[local Kafka Windows directory]\bin\windows** directory. 
 
@@ -108,13 +108,14 @@ A. Which topic has been added for the CDCTraining consumer? What is the relation
 
 <ul>
 <pre><code>
-A. What is the dataType of the Kafka message? 
+A. What is the dataType of the Kafka message published to the CDCTraining topic? 
 </code></pre>
 </ul>
 
 
 
-#### Step 5 - Get Instances into a Customer LU
+
+#### Step 5 - Get and Update Instances into a Customer LU
 
 1. Get Customer 1 into the Customer LU.
 
@@ -124,38 +125,66 @@ A. What is the dataType of the Kafka message?
 
 <ul>
 <pre><code>
-A. What is the <strong>dataType</strong> of the Kafka messages? 
+A. What is the <strong>dataType</strong> of the Kafka messages published to the CDCTraining topic? 
 B. How many Invoice records does this customer have? 
 C. How many Kafka messages have been published by the Get instance of Customer 1? 
 </code></pre>
 </ul>
 
-3. Get Customers 2, 3, and 4 into Customer LU.
 
-4. Redeploy the Customer LU and check the Kafka messages.  Note that if you remove the **--from-beginning** of the command, you get only new Kafka messages.
+3. Set the Sync Mode to Force (run **set sync force** command) and get again Customer 1 to re-sync its data. Note that the source data has not been changed between the previous and the current sync.
+
+   **Question**
+
+   <ul>
+   <pre><code>
+   A. Has the second sync published Kafka messages to the CDCTraining topic? 
+   </code></pre>
+   </ul>
+
+4. Begin a transaction and update the Invoice data of LUI 1:
+
+   - Update one of the Status of one of the Invoice records.
+   - Insert a new record to the Invoice LU.
+   - Delete one of the Invoice records. 
+
+5. Commit the transaction and check the CDCTraining Kafka topic.
+
+   **Question**
+
+   <ul>
+   <pre><code>
+   A. How many Kafka messages have been published to the CDCTraining topic? 
+   </code></pre>
+   </ul>
+
+6. Get Customers 2, 3, and 4 into Customer LU.
+
+7. Redeploy the Customer LU and check the Kafka messages.  Note that if you remove the **--from-beginning** of the command, you get only new Kafka messages.
+
+   **Question**
+
+   <ul>
+   <pre><code>
+   A. Has the redeployment published a transation to the CDCTraining Kafka topic? Why?  
+   </code></pre>
+   </ul
+
+   
+
+8. Update the Customer LU schema, add a CDC field (index) to Invoice.ISSUE_DATE column. 
+
+9. Redeploy  the updated LU and check the Kafka messages.
 
 **Question**
 
 <ul>
 <pre><code>
-A. Has the redeployment published a transation to Kafka? Why?  
+A. Has the redeployment published a transation to the CDCTraining Kafka topic? Why?  
+B. How many transactions have been published to the CDCTraining Kafka topic? What are the <strong>dataType</strong> values of the published transactions? Please explain. 
 </code></pre>
 </ul>
 
-5. Update the Customer LU, add a CDC field (index) to Invoice.ISSUE_DATE column. 
-
-6. Redeploy the updated LU and check the Kafka messages.
-
-
-
-**Question**
-
-<ul>
-<pre><code>
-A. Has the redeployment published a transation to Kafka? Why?  
-B. How many transactions have been published to Kafka? What are the <strong>dataType</strong> values of the published transactions? Please explain. 
-</code></pre>
-</ul>
 
 
 
