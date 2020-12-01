@@ -1,13 +1,13 @@
-# Oracle GG (Golden Gate) Big Data setup with Kafka SSL
+# Oracle GG (Golden Gate) Big Data Setup with Kafka SSL
 
 ## Step 1	- Copy Kafka_ssl content
 
-Copy the content of $K2_HOME/.kafka_ssl to the local directory on Oracle GG client from the Kafka node.
+Copy the contents of the $K2_HOME/.kafka_ssl file on the Kafka node to the local directory in the Oracle GG client.
 
 
 ## Step 2 - Update Properties	
 
-Update the custom_kafka_producer.properties file to contain the following details at the bottom of the file:
+Update the custom_kafka_producer.properties file by adding the following details at the bottom of the file:
 
 ```
 bootstrap.servers=(Kafka_server_IP_Address/_Hostname):9093
@@ -33,16 +33,16 @@ ssl.endpoint.identification.algorithm=
 
 ## Step 3 - Restart Service
 
-- Open the Oracle GG Software Command Interface (ggcsi)
+1. Open the Oracle GG Software Command Interface (ggcsi).
 
-- Execute the command: 
-```ALTER REPLICAT (replicat_name), BEGIN NOW```
+2. Execute the ```ALTER REPLICAT (replicat_name), BEGIN NOW```command. 
 
-- Update Kafka server.properties file (if not done previously):
+
+3. Update the Kafka server.properties file (if not done previously):
 
 ```sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.properties```
 
- - Restart Kafka service
+ 4. Restart the Kafka service.
  
 
 [![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/04_kafka_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/06_fabric_kafkaSSL_support.md)
