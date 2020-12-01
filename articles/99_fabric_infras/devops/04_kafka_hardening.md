@@ -114,7 +114,7 @@ Notes:
 
 ## Step 2 - zookeeper_jaas.conf
 
-- Edit the newly created file zookeeper_jaas.conf
+Edit the newly created file zookeeper_jaas.conf
 
 ```vi $CONFLUENT_HOME/zookeeper_jaas.conf```
 
