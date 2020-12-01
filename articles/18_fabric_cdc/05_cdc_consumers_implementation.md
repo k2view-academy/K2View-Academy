@@ -47,7 +47,6 @@ The Fabric Studio can be customized. Consumers can be added for CDC fields by ed
 
    The name of the Kafka topic added for the new CDC consumer is identical to the name of the new tab. 
    Note that Fabric concatenates the [cluster id](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid) to each topic name if there are several Fabric clusters on one Cassandra cluster.
-    
 
 ### Creating Indexes for Other CDC Consumers
 
@@ -64,10 +63,10 @@ For example, to notify an external consumer system about a customer's change of 
 
 Note that Fabric Studio does not enable defining more than 63 columns as CDC fields in the same LU table, assuming that all columns are positioned according to 1 to 63 in the LU table.
 
-A specific [CDC message](02_cdc_messages.md) is generated for each type of change in the CDC column. 
+A specific [CDC message](03_cdc_messages.md) is generated for each type of change in the CDC column. 
 
 
 
 
 
-[![Previous](/articles/images/Previous.png)](02_cdc_messages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_cdc_publication_flow.md)
+[![Previous](/articles/images/Previous.png)](04_cdc_publication_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_cdc_configuration.md)

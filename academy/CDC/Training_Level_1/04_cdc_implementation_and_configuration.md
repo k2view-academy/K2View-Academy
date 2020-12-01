@@ -18,7 +18,7 @@ A CDC implementation consists of two steps:
 1. Adding CDC consumers to the k2proj file of the Fabric project.
 2. Adding CDC fields to selected LU table columns.
 
-Please read [CDC Implementation Steps](/articles/18_fabric_cdc/03_cdc_consumers_implementation.md) to learn more about how to add a CDC implementation to a Fabric project.
+Please read [CDC Implementation Steps](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md) to learn more about how to add a CDC implementation to a Fabric project.
 
 ### CDC Configuration
 

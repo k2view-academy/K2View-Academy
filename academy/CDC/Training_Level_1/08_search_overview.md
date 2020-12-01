@@ -62,7 +62,7 @@ A Fabric Search is based on the [CDC mechanism](/articles/18_fabric_cdc/01_chang
 
 When deploying an LU with Search fields, Fabric creates indexes in Elasticsearch. Read [Creating Elasticsearch Indexes on Search Fields](/articles/18_fabric_cdc/cdc_consumers/search/03_creating_elasticsearch_indexes_on_search_fields.md) to learn more about the Elasticsearch indexes created for Search fields.
 
-**CDC Delete Tables** and **CDC Table Change Info** [CDC Messages](/articles/18_fabric_cdc/02_cdc_messages.md) also update the data in Elasticsearch using the Search fields in each Fabric LUI.
+**CDC Delete Tables** and **CDC Table Change Info** [CDC Messages](/articles/18_fabric_cdc/03_cdc_messages.md) also update the data in Elasticsearch using the Search fields in each Fabric LUI.
 
 ### Search Limitations
 
