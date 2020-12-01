@@ -1,6 +1,6 @@
 # Fabric Environments
 
-Fabric requires the following environments for phase in the lifecycle of the project from its inception to its delivery and maintenance. 
+Fabric requires the following environments for each phase in the lifecycle of the project from its inception to its delivery and maintenance. 
 
 ## Development Environment
 This environment should contain:
@@ -20,7 +20,7 @@ This environment should be isolated from the Development environment and contain
 - Windows terminal server, for installing and running the Fabric Studio.
 - Access to Fabric WS (API) via the load balancer (LB).
 - Access to SVN / GIT for version control, limited to the relevant users. 
-- Source databases, including data that should have the same structure as in the production environment.
+- Source databases, including data that should have the same structure as in the Production environment.
 
 Note that all connection methods and protocols must be the same type as those defined in the Production environment. 
 All access to servers described above should be limited to the QA team only.
@@ -33,7 +33,7 @@ This environment should be isolated from the Development and QA environments and
 - Fabric servers cluster, identical as possible to the Production environment ***(minimum 3 on each DC).....***
 - Windows terminal server for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
 - Access to the Fabric WS (API) via the load balancer (LB).
-- Access to SVN/GIT for version control, limited to the relevant users.
+- Access to SVN / GIT for version control, limited to the relevant users.
 - Source databases, including data that should have the same structure as in the Production environment.
 
 Note that:
@@ -50,7 +50,7 @@ This environment should be isolated from the Development and QA environments and
 - Fabric servers cluster, according to the production sizing definitions.
 - Windows terminal server, for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
 - Access to the Fabric WS (API) via the load balancer (LB).
-- Access to SVN/GIT for version control, access should be limited to the relevant users.
+- Access to SVNv/vGIT for version control, access should be limited to the relevant users.
 
 <img src="/articles/99_fabric_infras/devops/images/04_devop-prodEnv.png">
 
