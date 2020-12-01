@@ -190,7 +190,7 @@ Parameters should be populated in the body in the following structure:
 | **Parameter**              | **Mandatory** | **Value**                                                    |
 | -------------------------- | ------------- | ------------------------------------------------------------ |
 | Token                      | Y             | API Key                                                      |
-| Accept                     | Y             | Json/XML/RAW/CSV                                             |
+| Accept                     | Y             | Json/XML/RAW                                                 |
 | Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header |
 
 **Example:**
