@@ -4,16 +4,16 @@
 
 An Event function is a Project function invoked from the **Events** [LU Schema property](/articles/04_LU_properties.md).
 
-* An Event function enables running user code upon the completion of Sync or Delete Instance.
+* An Event function enables running user code upon the completion of a Sync or Delete Instance.
 * The function is triggered on one of the following events:
   * Post Sync success, post Sync failure, post Delete Instance success.
-* Any Event function on a Shared or LU level can be attached to an LU Schema.
-* The same Event  function can be attached to several LU Schema event.
+* Any Event function on a shared or LU level can be attached to an LU Schema.
+* The same Event function can be attached to several LU Schema events.
 
 Notes:
 
-*  The Event functions run synchronously. If needed to run a function asynchronously, it can be done by implementation in the Event function's code. 
-* The implementer is responsible to handle the Event function's exceptions. It will decide whether to catch an exception or to display it to the user in case the Event function fails.
+*  Event functions run synchronously. If needed, an event function can be defined to run asynchronously in the Event function's code. 
+* The implementer is responsible for handling Event function exceptions. It will decide whether to catch an exception or to display it to the user if the Event function fails.
 
 ### How Do I Create or Edit an Event Function?
 
@@ -32,7 +32,7 @@ The **EventDataContext** data type exposes a set of methods which allow getting 
 * LU Type name
 * Exception
 
-Using the above information the function can execute any required business logic, for example, write the Instance ID and the exception into a log table or publish a message to Kafka. 
+Using the above information the function can execute any required business logic, for example, to write the Instance ID and the exception into a log table or publish a message to Kafka. 
 
 ### How Do I Attach an Event Function to an LU Schema?
 
@@ -46,7 +46,7 @@ Using the above information the function can execute any required business logic
 
    ![image](images/07_11_5_03.PNG)
 
-4. (Optional) To add more **Event functions** to the same LU, click **Add** again and select the additional functions and select an event type for each one of them.
+4. (Optional) To add more **Event functions** to the same LU, click **Add** again, select the additional functions and select an event type for each function.
 
 5. Click **OK** to close the Editor and then **Save** the LU Schema.
 
@@ -83,7 +83,7 @@ Using the above information the function can execute any required business logic
 
    ![image](images/07_11_5_04.PNG)
 
-4. Open LU Schema's properties window and attach the Event function to the **Events** property.
+4. Open the LU Schema's properties window and attach the Event function to the **Events** property.
 
 [Click to display an example of a Trigger Function in the Demo project.](/articles/demo_project)
 
