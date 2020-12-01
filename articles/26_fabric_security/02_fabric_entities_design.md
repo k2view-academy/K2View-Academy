@@ -97,9 +97,9 @@ Master key rotation is another crucial feature provided by Fabric to ensure data
 
 Note that the job does not have to be time-based but must be triggered by any other condition such as the number of LUIs per node.
 
-Master key rotation enables generating and activating a new master key. The new master key impacts instance IDs saved in Cassandra from the moment they are generated onwards. The existing instance IDs are not impacted by the new key until they are next synced and saved in Cassandra.
+Master key rotation enables generating and activating a new master key. The new master key impacts Instance IDs saved in Cassandra from the moment they are generated onwards. The existing Instance IDs are not impacted by the new key until they are next synced and saved in Cassandra.
 
-Upon retrieval of a specific instance ID, Fabric collects the master key's information used for the encryption of the LU instance and performs on-the-fly de-encryption of the data.
+Upon retrieval of a specific Instance ID, Fabric collects the master key's information used for the encryption of the LU instance and performs on-the-fly de-encryption of the data.
 
 
 
