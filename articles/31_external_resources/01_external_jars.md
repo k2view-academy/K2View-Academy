@@ -4,6 +4,12 @@
 
 Fabric enables 3<sup>rd</sup> party JAR libraries usage within Fabric functions. This powerful capability can be useful for expediting project timelines, using 3<sup>rd</sup> party code which already fulfil some required task, such as special calculations or mapping. Using such JAR libraries save the time of self coding and testing it. In some other cases, customers might ask to use their libraries (e.g. security or connectivity) within Fabric code. 
 
+In this article we will go thru and explain: 
+
+* The required steps during development and debug stage
+* The required steps when deploying it at server 
+* Step by step example
+
 ### How Do I use a new library
 
 #### Development and Debug Stage
