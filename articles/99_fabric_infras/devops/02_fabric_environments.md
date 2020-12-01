@@ -50,7 +50,7 @@ This environment should be isolated from the Development and QA environments and
 - Fabric servers cluster, according to the production sizing definitions.
 - Windows terminal server, for installing and running the Fabric Studio. Access to this server should be limited to the relevant Admin team only.
 - Access to the Fabric WS (API) via the load balancer (LB).
-- Access to SVNv/vGIT for version control, access should be limited to the relevant users.
+- Access to SVN / GIT for version control, access should be limited to the relevant users.
 
 <img src="/articles/99_fabric_infras/devops/images/04_devop-prodEnv.png">
 
