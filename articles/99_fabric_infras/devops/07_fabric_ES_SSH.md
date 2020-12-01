@@ -1,68 +1,64 @@
-# Setup Fabric with Elastic Search and SSL support
+# Setup Fabric with Elasticsearch and SSL Support
 
 Assumptions:
-- An ElasticSearch instance is running with TLS support
-- Password set for elastic built-in user as Elastic system authentication is required for every HTTPS call/request
+- An Elasticsearch instance is running with TLS support.
+- Since authentication of an Elasticsearch system is required for every HTTPS call / request, a password has been set for a built-in Elasticsearch user. 
 
-Step 1 - Make sure Fabric is stopped
+Step 1 - Make sure Fabric has stopped.
 
 ```~/fabric/scripts/stop.sh```
 
-- Make sure elasticsearch instance is stopped (kill the elasticsearch PID if required)
+Make sure the Elasticsearch instance has stopped. Kill the Elasticsearch PID if required.
 
-Step 2 - ES Soft Link
+Step 2 - ES soft link
 
-- Create a soft link named ```elasticsearch``` which will point to the elasticsearch root directory:
+Create a soft link named ```elasticsearch``` which points to the Elasticsearch root directory:
 
 ```ln -s elasticsearch-* elasticsearch```
 
 Step 3 - ES_HOME configuration
 
-- Make sure the bash_profile for the elasticsearch user is defined with ES_HOME variable (point to the user’s home directory or the elasticsearch root path
+Make sure the bash_profile for the Elasticsearch user is defined with an ES_HOME variable that points to the user’s home directory or the Elasticsearch root path.
 
-NOTE: 
-- In case a password is set to the elastic built-in user 
-and set password require temporary elastic certificates and key generation to take place together with commands to be used for the process please hold in continue to step #4 and proceeding to Appendix – How to setup elastic built-in user with password, once done return back and continue forward
+Note that if a password is set for the built-in Elasticsearch user and it requires temporary elastic certificates and key generation to take place together with commands for the process, continue to step #4 and then go to the Appendix – Defining a Built-in Elasticsearch User and Password. When done, return to the following step.
 
-
-Step 4 - Copy the fabric keys tar file from previous steps to elasticsearch user/system (modify path as required):
+Step 4 - Copy the Fabric keys tar file from the previous steps to the Elasticsearch user / system. Modify path as required:
 
 ```scp keyz.tar.gz k2view@10.10.10.10:/opt/apps/k2view/```
 
-Step 5 - Create temporary directory and untar the keys into it:
+Step 5 - Create a temporary directory and untar the keys into it: 
 
 ```mkdir -p $ES_HOME/.cassandra_ssl && tar -zxvf keyz.tar.gz -C $ES_HOME/.cassandra_ssl```
 
-Step 6 - Copy the following two keys from the extracted directory to elasticsearch configuration directory (modify path as required):
+Step 6 - Copy the following two keys from the extracted directory to the Elasticsearch configuration directory. Modify path as required:
 
 ```
 cp $ES_HOME/.cassandra_ssl/cassandra.keystore /home/elasticsearch/elastic/config/
 cp $ES_HOME/.cassandra_ssl/cassandra.truststore /home/elasticsearch/elastic/config/
 ```
 
-The directory can be removed after copy process done:
+The directory can be removed after it has been copied:
 
 ```rm -rf $ES_HOME/.cassandra_ssl```
 
-Step 7 -	Acript download 
+Step 7 -	Script download 
 
-- [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_ES.sh) the script into $ES_HOME to set ElasticSearch instance in secure mode
+[Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_ES.sh) the script into $ES_HOME to set Elasticsearch instance in secure mode.
 
 ```
 cd $ES_HOME
 chmod +x secure_ES.sh
 ```
 
-Note that in order to change the password, edit the secure_ES.sh or execute with password parameter
-e.g.: ./secure_ES.sh {Password}
+Note that to change the password, edit the secure_ES.sh or execute it using a password. For example, ./secure_ES.sh {Password}
 
 ```./secure_ES.sh Q1w2e3r4t5```
 
-Note that the script will set two set of parameters for TLS (transport) and HTTPS, it might require other ELK component associated with Elastic Search Engine to be defined with TLS/HTTPS too (i.e. Kibana connection for ElasticSearch web GUI).
+Note that the script defines two set of parameters for TLS (transport) and HTTPS. It may require other ELK components associated with the Elasticsearch engine to be defined with TLS / HTTPS also. For example, a Kibana connection for the Elasticsearch web GUI.
 
-Step 8 - Once the script is executed, re-run the elasticsearch instance (which now includes TLS/SSL support)
+Step 8 - Once the script is executed, re-run the Elasticsearch instance which now includes TLS / SSL support.
 
-Step 9 -	Fabric shall be configured with search engine support but running the following command under each fabric node (in case it was configured already):
+Step 9 -	Configure Fabric to support search engines by running the following command under each Fabric node:
 
 ```sed -i 's/#PROVIDER=ElasticSearchProvider/PROVIDER=ElasticSearchProvider/' $K2_HOME/config/config.ini```
 
@@ -70,39 +66,45 @@ Step 10 - Start the Fabric service:
 
 ```K2fabric start``` 
 
-Step 11 - Fabric Studio 
-
-In Fabric Studio, define interface for SearchEngine type:
+Step 11 - In the Fabric Studio define the SearchEngine interface type:
  
-Define the connection details to Elastic Search system with port 9200, credentials to authentication for HTTPS requests
-The SSL properties shall be set as True, the keystore path shall point to path exists location with the .keystore file extension on Fabric server system, Password is the same one as took place in generation of the JKS keystore files (in current example: Q1w2e3r4t5), keystore type shall be set as JKS  Save the changes
+1. Define the connection details to Elasticsearch on port 9200.
+2. Set the authentication credentials for HTTPS requests:
+-   Set SSL properties to True. 
+-   Set the Keystore path to point to the Keystore file's extension on the Fabric server. 
+-   The password is the same as that generated by the JKS Keystore files. In the current example this is Q1w2e3r4t5.
+-    Set the Keystore type to JKS.
+3.  Save the changes.
 
 Step 12 - LU Validation
-- Before deploying the LU ensure the LU contains valid search fields so elastic will be part of deployment process
- 
 
-Step 13 - Run URL
-When deployment is successfully done – the data shall be also visible in Elastic side by running the following url in browser (when prompted, insert the authentication details):
+Before deploying the LU, ensure it contains valid search fields so that Elasticsearch is part of deployment process.
+ 
+Step 13 - Run the URL
+
+When the deployment is successful, the data can also be displayed in Elasticsearch by running the following url. When prompted, insert the authentication details:
 ```https://(ES_ip_address_or_hostname):9200/(LU_name)/_search```
 
  
 
-#	Appendix – How to setup elastic built-in user with password
-As setup password for any built-in user in ElasticSearch system require validation of SSL certificates/keys generated by elastic mechanism.
-Run the following commands: (the password which will be set in the coming example will be Q1w2e3r4t5 and should be set to any other value)
+# Appendix – Defining a Built-in Elasticsearch User and Password
+When defining passwords for built-in Elasticsearch users, SSL certificates and keys generated by the Elasticsearch system must be validated.
+
+Run the following commands: 
+Note that the Q1w2e3r4t5 password set in the following example must be reset.
 
 Step 1 - Generate CA and server certificates 
-- Update values as required
-- In case the IP address is not required but the hostname is, use the ```key --dns``` command and set the DNS name
-- output file can be named too as well as the path:
+1. Update the required values.
+2. If the IP address is not required and the hostname is, use the ```key --dns``` command and set the DNS name.
+3. Name the output file and the path:
 
 ```~/elasticsearch/bin/elasticsearch-certutil cert ca --pass Q1w2e3r4t5 --ip 10.21.1.109 --pem --out ~/certs.zip```
 
-Step 2 - Create dirctory called ESCerts to extract the certs files into it and unzip certs.zip:
+Step 2 - Create the ESCerts directory, extract the certificate files into it and unzip the certs.zip:
 
 ```mkdir ESCerts && unzip certs.zip -d ~/ESCerts```
 
-Step 3 - Copy certs files and key to config folder in elasticsearch:
+Step 3 - Copy the certificate files and key to configure the folder in Elasticsearch:
 
 ```
 cp ~/ESCerts/ca/ca.crt ~/elasticsearch/config/
@@ -110,13 +112,13 @@ cp ~/ESCerts/instance/instance.crt ~/elasticsearch/config/ && \
 cp ~/ESCerts/instance/instance.key ~/elasticsearch/config/
 ```
 
-Step 4 - Create copy of the current elasticsearch.yml file:
+Step 4 - Create a copy of the current elasticsearch.yml file:
 
 ```
 cp ~/elasticsearch/config/elasticsearch.yml ~/elasticsearch/config/elasticsearch.yml.backup
 ```
 
-Step 5 - Download the script to set ElasticSearch instance in secure mode 
+Step 5 - Download the script to set the ElasticSearch instance in secure mode. 
 [Secure_ElasticSearch_temporary_download_link](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_ES_temp.sh) into $ES_HOME
 
 ```
@@ -124,29 +126,29 @@ cd $ES_HOME
 chmod +x secure_ES_temp.sh
 ```
 
-* in order to change the password, edit the secure_ES_temp.sh or execute with password parameter
+* To change the password, edit the secure_ES_temp.sh or execute it using a password.
 
 ```
 e.g.: ./secure_ES_temp.sh {Password}
 ./secure_ES_temp.sh Q1w2e3r4t5
 ```
 
-Step 6 - Set secure password (https & transport) for instance.key in elastic-keystore. When prompted to do so, insert the password that was set when temporary certificates and key was generated in step #1:
+Step 6 - Set a secure password (https & transport) for the instance.key in elastic-keystore. When prompted to do so, insert the password set when the temporary certificates and key were generated in step #1:
 
 ```
 ~/elasticsearch/bin/elasticsearch-keystore add xpack.security.http.ssl.secure_key_passphrase
 ~/elasticsearch/bin/elasticsearch-keystore add xpack.security.transport.ssl.secure_key_passphrase
 ```
 
-Step 7 - Run the ElasticSearch service
+Step 7 - Run the ElasticSearch service.
 
-Step 8 - Set built-in users with password (proceed with confirmation and upon each user prompt set the required password for authentication)
+Step 8 - Set a password for the built-in users. Continue to confirmation and for each user prompt, set the required password for authentication.
 
 ```
 ~/elasticsearch/bin/elasticsearch-setup-passwords interactive
 ```
 
-- Upon confirmation of the passwords updates the following lines will be presented in the terminal:
+Upon confirmation of the passwords updates the following lines are displayed in the terminal:
 ```
 Changed password for user [apm_system]
 Changed password for user [kibana]
@@ -156,9 +158,9 @@ Changed password for user [remote_monitoring_user]
 Changed password for user [elastic]
 ```
 
-Step 9 - Turnoff the elasticsearch service (kill -9 PID)
+Step 9 - Turn off Elasticsearch. Kill -9 PID.
 
-Step 10 - Cleanup the system from redundant files and setup:
+Step 10 - Clean the system from redundant files and setup:
 
 ```
 rm -rf ~/certs.zip ~/ESCerts ~/secure_ES_temp.sh ~/elasticsearch/config/ca.crt 
