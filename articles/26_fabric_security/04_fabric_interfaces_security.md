@@ -24,10 +24,7 @@ Notes:
 - The **Re-Key** column has been added in order to use the most updated encryption mechanism and the latest master key to encrypt the passwords of all interfaces.
 
 
-
 <img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
-
-
 
 
 ## Environments - Three Levels of Security 
@@ -35,16 +32,16 @@ Notes:
 Fabric enables users to define and apply strong, stronger and strongest levels of encryption on environment interfaces.
 
 
-### Level 1 - Unassigned environment 
+### Level 1 - Unassigned Environment 
 Fabric cannot be reached via the URL and the following configuration parameters apply:
 
-- Master key is hardcoded in Fabric code
+- Master key is hardcoded in Fabric code.
 - The Encryption process is similar on all environments, for all projects and accounts deployed and setup.
 
 This means that to get full access to all interfaces in any given project, the environment XML file is required and must be added to the **Projects\PROJECT_NAME\Implementation\SharedObjects\Environments** folder.
 
 
-### Level 2 - Assigned environment without keystore
+### Level 2 - Assigned Environment Without Keystore
 
 The following mechanism is used:
 
@@ -54,13 +51,12 @@ The following mechanism is used:
 - The interface password can be re-encrypted using the Re-Key button or by saving the password changes.
 
 
-### Level 3 - Assigned environment with keystore (protection key)
-The protection key is used to encrypt the master key using a Java keystore. To decrypt the password to the environment using this option, the following access is needed:
+### Level 3 - Assigned Environment With Keystore (Protection Key)
+The protection key is used to encrypt the master key using a Java Keystore. To decrypt the password to the environment using this option, the following access is needed:
 - Environment's XML (like for the previous solution).
 - Master key stored in Cassandra (environment dependent), access to the entire Cassandra cluster is required.
 - Keystore.
 - Keystore password (config.ini) to get the protection key storing the encrypted master key.
-
 
 ## Interfaces 
 
@@ -71,7 +67,6 @@ When defining a new interface, the password for this interface is hashed and sav
 <dbUser>postgres</dbUser>
 <dbPasswordEncrypted>dqmdIUWuyC+4KaNDEKDlBimtd2utoESMq2Oj4NhUzCY=:X8P+ihKPTG2WuwfX0xztOPSS3lDLrr7Y+UrkzjkHf/c=</dbPasswordEncrypted>
 ```
-
 <img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.png">
           
 ## File Systems
