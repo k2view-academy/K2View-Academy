@@ -3,17 +3,15 @@
 
 Iterations are used to repeatedly perform a section of a Broadway flow in a data set. Iterations are similar to a **for...each loop** in the sense that a logic is repeatedly run until no data remains to act upon.
 
-Broadway Iterations enable to:
+Broadway enables to:
 
 * Loop over:
-  * One or several fields of a result set.
-  * Data elements on different levels in the object's hierarchy, for example a field and a nested array.
-  * More than one nested array of the same result set in the same iteration. 
-  * Several result sets of different Actors in the same iteration (split loops).
-
-* Combine different [Link Types](07_broadway_flow_linking_actors.md#link-object-properties) in the same iteration. 
-
-* Execute a nested iteration within an iteration.
+  * A field of a result set using a [single connection line](21_iterations.md#single-connection-line).
+  * [Multiple elements of a result set](21_iterations.md#multiple-connection-lines-from-a-result-array) with various combination of connection lines.
+  * [Multiple JSON elements](21_iterations.md#multiple-connection-lines-from-a-json-object) with various combination of connection lines and data elements on different levels in the object's hierarchy, for example a field and a nested array.
+  * Multiple result sets of different Actors in the same iteration - [Split Iterations](21_iterations.md#split-iterations).
+* Execute a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
+* [Control the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
 
 The common use cases are iterating over a database result set, over a data returned by an HTTP call or an API or over Kafka messages. For example, [Broadway population flow](/articles/07_table_population/14_table_population_based_Broadway.md) includes an iteration over the source DB data for loading it into the target DB. 
 
@@ -113,7 +111,9 @@ If the connected elements of the JSON are on the same level of hierarchy (such a
 
 <img src="images/iterate_mult_04.PNG" alt="image" style="zoom:80%;" />
 
-### Split Iterations - to be updated
+### Split Iterations
+
+*TO BE UPDATED AFTER THE DESIGN IS FINILIZED*
 
 A Stage can have more than one collection. A common case is a JSON data structure that contains more than one array.
 Using the Stage Split functionality you can split the flow and manage several loops over the same data structure.
