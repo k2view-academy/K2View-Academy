@@ -1,30 +1,30 @@
 # Kafka Hardening (SSL mode)
 
-The following steps ensure the hardening of the Kafka server in a Fabric cluster.
+The following steps are used to harden the Kafka server in a Fabric cluster.
 
-## Step 1 - Shut down services	
+## Step 1 - Shut Down Services	
 
-Ensure the following services are switched off:
+Check that the following services are switched off:
 - Kafka
 - ZooKeeper
 - Fabric
 
 ## Step 2. Keys Generation
 
-- [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the following script (secure_kafka.sh) to generate self-signed keys and certificates.
+- [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
 
 - Run the following commands on a single Kafka node only:
 ```
 cd $K2_HOME
 chmod +x secure_kafka.sh
 ```
-- Edit the secure_Kafka.sh or execute with password parameters: 
+- Edit the secure_Kafka.sh script or execute it using password parameters: 
 
 ```
 ./secure_kafka.sh Q1w2e3r4t5
 ```
 
-The following output will be generated:
+The following output is generated:
 
 ```
 Generating a 2048 bit RSA private key
@@ -35,45 +35,45 @@ writing new private key to '/opt/apps/kafka/.kafka_ssl/ca-key.key'
 Subject Attribute S has no known NID, skipped
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
 Signature ok
 subject=/C=IL/ST=IL/L=Israel/O=K2VIEW/OU=K2VIEW/CN=kafka
 Getting CA Private Key
 Certificate was added to keystore
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
 Certificate reply was installed in keystore
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.server.keystore.jks -deststoretype pkcs12".
 Certificate was added to keystore
  
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
 Signature ok
 subject=/C=IL/ST=Il/L=Israel/O=K2VIEW/OU=K2VIEW/CN=kafka
 Getting CA Private Key
 Certificate was added to keystore
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
 Certificate reply was installed in keystore
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -destkeystore /opt/apps/kafka/.kafka_ssl/kafka.client.keystore.jks -deststoretype pkcs12".
 Certificate was added to keystore
 
 ```
 
 
-## Step 3 - Replicate to all nodes
+## Step 3 - Replicate to All Nodes
 
 The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 
@@ -90,7 +90,7 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 - kafka.server.truststore.jks
 ```
 
-- Tar & Copy them to all Kafka and Fabric/IIDFinder nodes in the cluster as shown below:
+- Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
 
 ``` 
 tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
@@ -101,10 +101,10 @@ mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_s
 ```
 
 
-# Zookeeper configuration
+# Zookeeper Configuration
 
 Notes: 
-- These configuration must be applied to every node in cluster
+- These configuration must be applied to every node in the cluster
 - Since ZooKeeper does not support SSL authentication, MD5 authentication (username and password) is used.
 
 ## Step 1 - SASL Authentication
@@ -119,7 +119,7 @@ Notes:
 ```vi $CONFLUENT_HOME/zookeeper_jaas.conf```
 
 
-## Step 3 - Copy the following data into zookeeper_jaas.conf
+## Step 3 - Copy the Following Data into zookeeper_jaas.conf
 
 ```
 Server {
@@ -135,18 +135,18 @@ Client {
 };
 ```
 
-## Step 4 - Start ZooKeeper service
+## Step 4 - Start the ZooKeeper Service
 
 - When starting ZooKeeper make sure the following command is invoked: 
 ``` export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties ```
 
-The ZooKeeper daemon also starts up.
+The ZooKeeper daemon starts.
 
 
 # Kafka Server Configuration
 Note that the following steps must be applied for each node in cluster.
 
-## Step 1 - SSL authentication
+## Step 1 - SSL Authentication
 - Define the 2-way SSL authentication between the Kafka server and clients:
 
 ```
@@ -167,13 +167,13 @@ sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.proper
 
 ## Step 2 - kafka_server_jaas.conf
 
-- Edit the new file kafka_server_jaas.conf:
+- Edit the new kafka_server_jaas.conf file:
 
 ```
 vi $CONFLUENT_HOME/kafka_server_jaas.conf
 ```
 
-- Copy the following data into kafka_server_jaas.conf:
+- Copy the following data into the kafka_server_jaas.conf:
 
 ```
 KafkaServer {
@@ -191,12 +191,12 @@ Client {
 };
 
 ```
-## Step 3 - Start Kafka server
+## Step 3 - Start the Kafka Server
 
 - When starting Kafka make sure the following command is invoked:
 ```export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/kafka_server_jaas.conf" && ~/kafka/bin/kafka-server-start -daemon ~/kafka/server.properties```
 
-The Kafka daemon will also have been started.
+The Kafka daemon starts.
 
 
 
