@@ -93,7 +93,7 @@ Example:
     create token 'test_token' user 'greg';
 ```
 
-This sniplet shows how the WRITE permission granted to the writeRole has been assigned to the user; and how the test_token token reflecting this role/permission has been generated for the user.
+This snipet shows how the WRITE permission granted to the writeRole has been assigned to the user; and how the test_token token reflecting this role/permission has been generated for the user.
 
 When trying to invoke the Web Service with the DELETE verb using the 'test_token' token, Fabric throws the following error since the delete permission has not been granted to the specific token: 
 
