@@ -1,7 +1,7 @@
 # Project Functions
 
 Fabric Project functions are user-defined Java functions that are added to the project implementation to perform complex data manipulations or to execute queries on a specific [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id). Project functions can be either connected in a map (Table Population or Parser), to other Fabric objects or invoked from another function using Java code.
-Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, [Web Services](/articles/15_web_services/01_web_services_overview.md), [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md). A function can be defined as a Shared Object and can be used in any object in a project. If a function is defined within an LU, Reference or Web Services, it is accessible only within that specific object.
+Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_overview.md), References, [Web Services](/articles/15_web_services/01_web_services_overview.md), [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) or from existing [Table Populations](/articles/07_table_population/01_table_population_overview.md). A function can be defined as a Shared Object and can be used in any object in a project. If a function is defined in an LU, Reference or Web Services, it is accessible only within that specific object.
 
 ### Project Function Types
 
