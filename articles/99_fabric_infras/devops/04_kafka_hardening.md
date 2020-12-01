@@ -11,14 +11,14 @@ Check that the following services are switched off:
 
 ## Step 2. Keys Generation
 
-- [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
+1. [Download](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
 
-- Run the following commands on a single Kafka node only:
+2. Run the following commands on a single Kafka node only:
 ```
 cd $K2_HOME
 chmod +x secure_kafka.sh
 ```
-- Edit the secure_Kafka.sh script or execute it using password parameters: 
+3. Edit the secure_Kafka.sh script or execute it using password parameters: 
 
 ```
 ./secure_kafka.sh Q1w2e3r4t5
@@ -90,7 +90,7 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 - kafka.server.truststore.jks
 ```
 
-- Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
+Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
 
 ``` 
 tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
@@ -137,7 +137,7 @@ Client {
 
 ## Step 4 - Start the ZooKeeper Service
 
-- When starting ZooKeeper make sure the following command is invoked: 
+When starting ZooKeeper make sure the following command is invoked: 
 ``` export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties ```
 
 The ZooKeeper daemon starts.
@@ -147,7 +147,7 @@ The ZooKeeper daemon starts.
 Note that the following steps must be applied for each node in cluster.
 
 ## Step 1 - SSL Authentication
-- Define the 2-way SSL authentication between the Kafka server and clients:
+Define the 2-way SSL authentication between the Kafka server and clients:
 
 ```
 sed -i "s@listeners=.*@listeners=SSL://$(hostname -I |awk {'print $1'}):9093@"  $CONFLUENT_HOME/server.properties 
@@ -167,13 +167,13 @@ sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.proper
 
 ## Step 2 - kafka_server_jaas.conf
 
-- Edit the new kafka_server_jaas.conf file:
+1. Edit the new kafka_server_jaas.conf file:
 
 ```
 vi $CONFLUENT_HOME/kafka_server_jaas.conf
 ```
 
-- Copy the following data into the kafka_server_jaas.conf:
+2. Copy the following data into the kafka_server_jaas.conf:
 
 ```
 KafkaServer {
@@ -193,7 +193,7 @@ Client {
 ```
 ## Step 3 - Start the Kafka Server
 
-- When starting Kafka make sure the following command is invoked:
+When starting Kafka make sure the following command is invoked:
 ```export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/kafka_server_jaas.conf" && ~/kafka/bin/kafka-server-start -daemon ~/kafka/server.properties```
 
 The Kafka daemon starts.
