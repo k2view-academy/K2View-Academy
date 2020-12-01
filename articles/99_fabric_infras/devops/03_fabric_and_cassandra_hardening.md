@@ -2,13 +2,13 @@
 
 The following steps ensure that the keys that secure Fabric and Cassandra are generated and configured.
 
-- The example password ```1234Q!``` is used for TLS keys and can be replaced in all the following sections with a new password.
+- The example password ```1234Q!``` is used for TLS keys and can be replaced in all the following sections by a new password.
 - Do not forget to replace all $K2_HOME/ values with the full and correct path location in both Fabric and Cassandra.
 
 
 ## Step 1 - Keys Generation
 
-- Run the Keys Script that can be downloaded from this [location](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+- Run the keys script that can be downloaded from [location](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
 - Stop Fabric and Cassandra services before running the script.
 
 
@@ -25,20 +25,20 @@ e.g.: ./secure_cassandra.sh {Password} {Cluster_Name}
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 Certificate stored in file </opt/apps/k2view/.cassandra_ssl/CLUSTER_k2tls_PUBLIC.cer>
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 Certificate was added to keystore
 [Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 Certificate stored in file </opt/apps/k2view/.cassandra_ssl/CLIENT_k2tls_PUBLIC.cer>
 
 Warning:
-The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 Certificate was added to keystore
 [Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]
 Importing keystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore to /opt/apps/k2view/.cassandra_ssl/cassandra.pks12.keystore...
@@ -58,9 +58,9 @@ The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` direct
 - CLIENT_k2tls_PUBLIC.cer
 - CLUSTER_k2tls_PUBLIC.cer
 
-## Step 2 - Transfer keys and certificates to all Cassandra and Fabric nodes
+## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
 
-- Tar & Copy them to all Cassandra and Fabric nodes in the cluster.  
+- Tar and copy them to all Cassandra and Fabric nodes in the cluster.  
 
 See the example below: 
 ``` 
@@ -75,7 +75,7 @@ mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSLATT_DIR/.c
 ## Step 3 - Cassandra YAML
 
 - Edit the cassandra.yaml file with the appropriate passwords and certification files.
-- Execute this on all Cassandra nodes as a Cassandra user. 
+- Execute this as a Cassandra user on all Cassandra nodes. 
 
 ```
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -105,8 +105,7 @@ Restart the Cassandra service on each node: ```cassandra```
 
 ## Step 4 - Cassandra CQLSHRC
 - Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
-- Execute this on all Cassandra nodes as a Cassandra user
-
+- Execute this as a Cassandra user on all Cassandra nodes. 
 ```
 cp $INSLATT_DIR/cassandra/conf/cqlshrc.sample $INSLATT_DIR/.cassandra/cqlshrc
 
@@ -122,7 +121,7 @@ sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_D
 
 
 ## Step 5 - $K2_HOME/config/cqlshrc
-- Edit the $K2_HOME/config/cqlshrc file with the appropriate passwords and certification files:
+- Edit the $K2_HOME/config/cqlshrc file with the appropriate passwords and certification files.
 - Execute this on all Fabric nodes.
 
 ```
@@ -144,7 +143,7 @@ The location of the version path may change based on the Fabric version.
 
 
 
-## Step 6 - Config.ini setup
+## Step 6 - Config.ini Setup
 
 - Edit the config.ini file to support SSL and set up the WS SSL Key (Fabric only).
 - Run the following on all Fabric Nodes:
@@ -162,7 +161,7 @@ sed -i 's@#PORT=${cassandra.default.port}@PORT=9142@g' $K2_HOME/config/config.in
 sed -i 's@#SSL=false@SSL=true@g' $K2_HOME/config/config.ini
 ```
 
-## Step 7 - JVM options
+## Step 7 - JVM Options
 
 - Edit the $K2_HOME/config/jvm.options file using the appropriate passwords and certification files:
 
@@ -243,7 +242,7 @@ exec $JAVA |
 ```
 
 NOTE: 
-Do not forget to add | after the value *clustertimecheck* for the new line to be taken into consideration.
+Do not forget to add | after the **clustertimecheck** value for the new line to be taken into consideration.
 
 
 - Execute the following commands:
@@ -259,28 +258,28 @@ sed -i -e '/clustertimecheck \\/a\        encryption\' $K2_HOME/fabric/scripts/f
 
 ### Generate Master Key Without Keystore
 
-Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **false** (default) to generate a master key without a keystore. 
+Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **false** (default) to generate a master key without a Keystore. 
 
 
 ### Generate Master Key Using Keytore
 Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **true**.
 
 #### Create Keystore Directory 
-After adding the encryption module to the fabric-server-start.sh module, create the keystore folder under the k2view home directory for all nodes:
+After adding the encryption module to the fabric-server-start.sh module, create the Keystore folder under the k2view home directory for all nodes:
 ```
 cd $K2_HOME
 mkdir keystore
 ```
 
 #### Run the Keytool
-Run the keytool command on the coordinator node:
+Run the Keytool command on the coordinator node:
 ``` keytool -genseckey -alias masterkey_key_name -keyalg aes -keysize 256 -storepass <password> -keystore  $K2_HOME/keystore/fabric.keystore -storetype JCEKS ```
 
 - Copy the key to all other nodes:
 ``` scp $K2_HOME/keystore/fabric.keystore fabric@10.10.10.10:/$K2_HOME/keystore/ ```
 
 #### Edit Config.ini Script
-- Edit the *KEY_STORE_PASSWORD* parameter in the config.ini to the password used in the keytool command, and enable the *KEY_STORE_LOCATION* parameter and set it to point to the correct path for all Fabric nodes:
+- Edit the **KEY_STORE_PASSWORD** parameter in the config.ini to the password used in the Keytool command, and enable the **KEY_STORE_LOCATION** parameter and set it to point to the correct path for all Fabric nodes:
 
 ```
 sed -i "s@#KEY_STORE_LOCATION=.*@KEY_STORE_LOCATION=$K2_HOME/keystore/fabric.keystore@" $K2_HOME/config/config.ini
