@@ -1,14 +1,14 @@
 # Fabric Modules Configuration  
 
-## Setup Fabric with Kafka connection SSL support
+## Setup Fabric to Support Kafka SSL Connections 
 
-- Execute the following command to stop Fabric:
+Execute the following command to stop Fabric:
 
 ```k2fabric stop```
 
 ### Step 1: Connect with SSL
 
-- Configure Fabric for connection to Kafka with SSL support.
+Configure Fabric connections to Kafka with SSL support.
 
 ```
 sed -i s/#SSL_ENABLED=.*/SSL_ENABLED=true/g $K2_HOME/config/config.ini
@@ -27,16 +27,16 @@ sed -i s@#ENDPOINT_IDENTIFICATION_ALGORITHM=@ENDPOINT_IDENTIFICATION_ALGORITHM=@
 ```k2fabric start```
 
  
-## Setup IIDFinder with Kafka connection SSL support
+## Setup the IIDFinder to Support Kafka SSL Connections
 
-- Make sure IIDFinder has stopped.
+Make sure the IIDFinder has stopped.
 
 ```$K2_HOME/fabric/scripts/iid_finder_stop.sh```
 
 
-### Step 1 - On Fabric 6.x and higher versions:
+### Step 1 - On Fabric 6.x and Higher Versions 
 
-- Configure IIDFinder for connection to Kafka with SSL support per node (assumption is that IIDFinder is already configured with basic setup to get connected to Kafka in non SSL/TLS Mode):
+Configure the IIDFinder to connect to Kafka with SSL support per node. The assumption is that the IIDFinder is already configured with basic connections to Kafka in non SSL / TLS modes:
 
 ```
 sed -i s@#SSL_ENABLED=.*@SSL_ENABLED=true@g $K2_HOME/config/iifConfig.ini
@@ -49,27 +49,27 @@ sed -i s@#KEY_PASSWORD=.*@KEY_PASSWORD=Q1w2e3r4t5@g $K2_HOME/config/iifConfig.in
 sed -i s@#ENDPOINT_IDENTIFICATION_ALGORITHM=@ENDPOINT_IDENTIFICATION_ALGORITHM=@g $K2_HOME/config/iifConfig.ini
 ```
 
-### Step 2 - Start IIDFinder
+### Step 2 - Start the IIDFinder
 
-- Run the following command:
+Run the following command:
 ```$K2_HOME/fabric/scripts/iid_finder.sh```
 
 
-## Testing Fabric and IIDFinder SSL/TLS with Kafka
+## Testing Fabric and the IIDFinder SSL / TLS with Kafka
 
-Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD) 
+Assumption 1: Usage of Oracle Golden Gate for Big Data (OGG - BD). 
 
-Assumption 2: Knowledge to simulate message creation in Kafka with format similat to message pushed by OGG BD replicat component
+Assumption 2: Know how to simulate message creation in Kafka in a format similar to a message pushed by the OGG BD replicate component
 
-- 	Fabric, IIDFinder, Kafka and OGG BD systems are up and running in SSL/TLS mode
-- 	Create update in OGG so new message will be pushed to Kafka
-- 	IDFinder will authenticate against Kafka and will pull the new message generated
-- 	Message will be written to cache instance {under keyspace k2staging tables}
-- 	From Fabric console run the ```GET``` command on to the instance to validate the data was received and written as expected
+1. Check the	Fabric, IIDFinder, Kafka and OGG BD systems are up and running in SSL/TLS mode.
+2.	Create an update in OGG to push a new message to Kafka.
+3. The IDFinder authenticates with Kafka and pulls the new message.
+4.	The message is written to a cache instance under the keyspace k2staging tables.
+5.	In the Fabric console, run the ```GET``` command on the instance to validate the data has been received and written as expected.
 
 
 Note:
-In case IIDFinder was not set with SSL/TLS setup as required, the data in cache (k2staging) will not be written as expected.
+If the IIDFinder has not been configured with the SSL/TLS setup as required, the data in the k2staging cache is not be written as expected.
 
 
 
