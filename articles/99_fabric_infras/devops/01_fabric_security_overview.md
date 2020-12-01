@@ -5,7 +5,7 @@
 DevOps Information security, as we know it, is struggling considerably to keep up with today's fast-paced DevOps world. DevOps security refers to the discipline and practice of safeguarding an entire DevOps environment through strategies, policies, processes and technology. 
 DevOps has seen a decade of growth and success in many software organizations. DevOps security enables the development and delivery pipeline to move faster, and enhances overall throughput to the system, in a safe manner. 
 
-Security in DevOps should be built into every part of its lifecycle: instead of functioning as a blocker to innovation, or being an outsider, security must be adapted to being an integral part of software delivery efforts throughout the entire process, rather than just at the very end.
+Security in DevOps should be built into every part of its lifecycle. Instead of functioning as a blocker to innovation, or being an outsider, security must be adapted to being an integral part of software delivery efforts throughout the entire process, rather than just at the very end.
 
 K2View has embraced the DevOps perception and has implemented security throughout the DevOps pipeline from the intial design of a project up to its deployment.
 
