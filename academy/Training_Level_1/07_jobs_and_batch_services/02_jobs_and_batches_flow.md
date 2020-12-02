@@ -22,9 +22,6 @@ The following articles discuss Jobs flows and their execution environments:
 
 - [How to Create a new Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md)
 
-- [How to Create a new CDC Job](/articles/20_jobs_and_batch_services/06_create_a_new_CDC_job.md)
-
-
 
 These articles introduce Jobs management and configuration:
 
