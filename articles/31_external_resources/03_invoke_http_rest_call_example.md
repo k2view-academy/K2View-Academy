@@ -1,4 +1,4 @@
-# Example of Invoking HTTP REST Call
+# Invoking an HTTP REST Call
 
 ### Objective and Introduction
 
@@ -82,7 +82,7 @@ For this demo example we created a new reference table **SERVICE_ISSUES**. We po
    	String issueStatusDB = fabric().fetch(SQLREF,countryCode,region).firstValue().toString();
    	log.info("status: " + issueStatusDB);
    	if ((issueStatusDB != null) && (!issueStatusDB.isEmpty())) {
-   issueStatusDetails = issueStatusDB;
+   		issueStatusDetails = issueStatusDB;
    	}
    	
    } else {
