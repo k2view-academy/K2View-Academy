@@ -26,7 +26,7 @@ Functions can be created in [Logical Units](/articles/03_logical_units/01_LU_ove
 [Click for Code Examples of an LUDB Function.](11_3_creating_an_LUDB_function.md#example-of-an-ludb-function)
 
 #### **Decision Function**  
-*	A function that assess whether a [sync](/articles/01_fabric_overview/02_fabric_glossary.md#sync) is performed on an LUI. 
+*	A function that assesses whether a [sync](/articles/01_fabric_overview/02_fabric_glossary.md#sync) is performed on an LUI. 
 *	A Decision function can be defined on [LU schema](/articles/03_logical_units/03_LU_schema_window.md), [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or [Table Population](/articles/07_table_population/01_table_population_overview.md) levels. 
 *	A Decision function must have no Input parameter and return a Boolean (True or False) parameter. An LUI sync is performed or not performed based on the returned result. 
 
