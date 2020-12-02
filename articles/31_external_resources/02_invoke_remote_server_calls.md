@@ -1,6 +1,8 @@
-# Invoke Remote Servers Calls
+# Invoke Remote API Calls
 
-There are cases where there us a need to retrieve information from remote services, for example when it is required to combine data from different sources (such as a source DB, HTTP APIs or files) and load it into the target tables. On other cases we might required to call remote server to update it with some information.
+There are cases where there us a need to retrieve information from remote services, for example when it is required during LUI sync to combine data from an API together with the data which exists in the source DB. 
+
+On other cases we might require to call a remote API to update it with some information or changes (note that [CDC](/articles/18_fabric_cdc/) is the recommended method for such task, yet sometimes API calls are required)  .
 
 Broadway already supports such capability with its built-in [Streams actors (http & files)](/articles/19_Broadway/04_built_in_actor_types.md#streams), along with some response [parsers actors](/articles/19_Broadway/04_built_in_actor_types.md#parsers) (for JSON, CSV, XML) . In addition Broadway supported special related interfaces ([HTTP Interface](/articles/24_non_DB_interfaces/05_HTTP_interface.md#http-interface) and [SFTP Interface](/articles/24_non_DB_interfaces/02_SFTP_interface.md#sftp-interface)). 
 
