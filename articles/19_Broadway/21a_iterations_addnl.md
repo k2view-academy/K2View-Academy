@@ -5,7 +5,7 @@ When the originating Actor's output is a complex object, the iteration's complex
 
 * Are the connected elements on the same level of hierarchy or on different levels?
 * Are the link types the same (all **Iterate**) or different (**Iterate** combined with other types)?
-* Do the connected elements belong to different nested arrays? See the explanation and the examples of this scenario in the Blend with Condition section of this article below.
+* Do the connected elements belong to different nested arrays? 
 
 This article described how Broadway performs complex iteration use cases, such as:
 

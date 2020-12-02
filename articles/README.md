@@ -267,6 +267,7 @@
 <li><a href="/articles/19_Broadway/18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="/articles/19_Broadway/19_broadway_flow_stages.md">Broadway Stages</a></li>
 <li><a href="/articles/19_Broadway/21_iterations.md">Iterations in Broadway</a></li>
+<li><a href="/articles/19_Broadway/21a_iterations_addnl.md">Complex Iteration Flows</a></li>
 <li><a href="/articles/19_Broadway/22_broadway_flow_inner_flows.md">Inner Flows</a></li>
 <li><a href="/articles/19_Broadway/23_transactions.md">Transactions</a></li>
 <li><a href="/articles/19_Broadway/24_error_handling.md">Error Handling</a></li>

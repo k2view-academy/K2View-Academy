@@ -51,7 +51,7 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Hostname or IP address of the database server.</p>
-<p>To define a Cassandra interface for multiple nodes, populate several IP addresses, separated by ; sign.</p>
+<p>In case of Cassandra interface, it is possible to define a list of IP nodes separated by ; sign for the establishment of the initial connection to the Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
@@ -146,6 +146,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 </tbody>
 </table>
+
 
 
 
