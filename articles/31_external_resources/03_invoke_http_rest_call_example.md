@@ -50,7 +50,6 @@ For this demo example we created a new reference table **SERVICE_ISSUES**. We po
    log.info("wsTrnIpToLocationREST");
    
    String issueStatusDetails = "No issues were found at customer's region";
-   //String userIP = "24.48.0.1";
    String SQLREF="SELECT ISSUE_DETAILS from SERVICE_ISSUES where COUNTRY_CODE = ? and REGION = ? and HAS_ISSUE = 1";
    
    URL url = new URL("http://ip-api.com/json/" + userIP);
@@ -94,21 +93,21 @@ For this demo example we created a new reference table **SERVICE_ISSUES**. We po
    return issueStatusDetails;
    
    ```
-
-   The WS steps:
-
-   * Look for the userIP input parameter and call to the REST API service to get information about it.
+   
+The WS steps:
+   
+* Look for the userIP input parameter and call to the REST API service to get information about it.
    * In case getting back good response, parse it and take the countryCode and the region.
    * look at the SERVICE_ISSUES if there is an open issue (*has_issue = 1*) for this country-code and region.
    * In case an open issue is found - set it as the WS result string. 
-
    
 
-   ### Authentication & Authorization
-
-   In some cases the REST API requires authentication & authorization to be sent as headers. At the "java.net" library which we used in the example, this can be achieved by using the **setRequestProperty** method. For example, when the API provider supplied us user-name + passwords and works with base authentication, the following can be used:
-
-   ```java
+   
+### Authentication & Authorization
+   
+In some cases the REST API requires authentication & authorization to be sent as headers. At the "java.net" library which we used in the example, this can be achieved by using the **setRequestProperty** method. For example, when the API provider supplied us user-name + passwords and works with base authentication, the following can be used:
+   
+```java
    String encoded = Base64.encode(username+":"+password);
    cons.setRequestProperty("Authorization", "Basic "+encoded);
    ```
