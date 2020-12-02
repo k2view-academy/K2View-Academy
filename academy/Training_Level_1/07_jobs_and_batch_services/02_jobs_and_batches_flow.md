@@ -50,8 +50,6 @@ Batch process commands are fully detailed in the following articles:
 
 - [Batch Broadway Process Commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)
 
-- [Batch CDC Republish Commands](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)
-
 
 To understand Batch process flow: 
 - [Batch Flow](/articles/20_jobs_and_batch_services/17_batch_process_flow.md). 
