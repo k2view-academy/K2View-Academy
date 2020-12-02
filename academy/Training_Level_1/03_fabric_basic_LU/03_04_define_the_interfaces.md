@@ -26,12 +26,12 @@ Our Training environment has three main and different DBs, which in essence, rep
 
 ### Instructions for Defining an Interface 
 
-Please read the [DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
+Please read the [Interface Overview](01_interfaces_overview.md),[DB Interfaces Overview](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) and [Creating a New Database Interface](/articles/05_DB_interfaces/04_creating_a_new_database_interface.md) articles to learn about the properties that define an interface. 
 
 
 ![](/academy/Training_Level_1/03_fabric_basic_LU/images/information.png) To learn more about the options available using interfaces, refer to:
 
-- [Adding a Fabric and Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md).
+- [Adding a Remote Fabric Interface Type](/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md).
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
 - [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
 - [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
