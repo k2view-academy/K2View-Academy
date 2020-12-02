@@ -7,12 +7,12 @@ The common use cases are iterating over a database result set, over a data retur
 
 This article described how Broadway performs the following:
 
-* Ho to define an iteration in a flow.
+* Define an iteration in a flow.
 * Loop over one or more elements of a result set.
 * Create a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
 * [Control the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
 
-To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to [Iteration Complex Flows](21a_iterations_addnl.md).
+To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_iterations_addnl.md) article.
 
 
 ### How Do I Define an Iteration in a Flow?
@@ -21,7 +21,7 @@ To start the iteration, draw the line from the originating Actor's output and se
 
 The scope of the iteration's logic starts immediately after the iteration line and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as closed, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close** to display a second thick divider line at the iteration ending point.
 
-In the below example, the **StringsArray** Actor is the iteration's originating Actor that returns an array of strings and the **Iterate on array** Stage runs on each array element. Then the iteration is closed and the flow continues.
+In the below example, the **StringsArray** Actor is the iteration's originating Actor that returns an array of strings and the **Iterate on array** Stage runs on each array element. The iteration is closed at the end of **Iterate on array** Stage.
 
 ![image](images/iterate_simple1.PNG)
 
@@ -29,7 +29,7 @@ In the below example, the **StringsArray** Actor is the iteration's originating 
 
 The iteration over the data set starts once the originating Actor's output is connected to another Actor's input using an **Iterate** link type. 
 
-The originating Actor's output can be a simple object such as an SQL query result set or a complex object that includes internal hierarchy such as a JSON object. 
+The originating Actor's output can be a simple object (for example, an SQL query result set) or a complex object that includes internal hierarchy (for example, a JSON object). 
 
 The **Iterate** connection can be drawn from the output object itself or from any of its elements. 
 
@@ -51,7 +51,7 @@ Iterate over several elements of the result set whereby it is possible to combin
 
 - Broadway takes the values of the connected elements from the same iteration.
 
-- In the below example: iterate over the **result** output array and in each iteration take the values of the connected elements of the **current** iteration.
+- In the below example: iterate over the **result** output array and in each iteration take the values of the **current** iteration.
 
   ![image](images/iterate_mult_01.PNG)
 
@@ -60,7 +60,7 @@ Note that combining the link types will change the data flow as follows:
 - Elements connected by an **Iterate** link type, will return the value of the **current** iteration.
 - Elements connected by a **Value** (or **First**) link type, will return the value of the **first** iteration during all iterations.
 
-[Click for more information about Iteration Complex Flows](21a_iterations_addnl.md).
+[Click for more information about Complex Iteration Flows](21a_iterations_addnl.md).
 
 ### How Can I Create a Nested Iteration?
 
