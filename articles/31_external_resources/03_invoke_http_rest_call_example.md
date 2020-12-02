@@ -60,10 +60,14 @@ We will apply this capability at an enrichment function.
    ```
 
      \* Note: for simplicity we skipped on the null value validations and on catching exceptions.
+   
+   
+   
+   In some cases the REST API requires **authentication & authorization** to be sent as headers. At the "java.net" library which we used in the example, this can be achieved by using the **setRequestProperty** method. For example, when the API provider supplied us user-name + passwords and works with base authentication, the following can be used:
+   
+   ```java
+   String encoded = Base64.encode(username+":"+password);
+   cons.setRequestProperty("Authorization", "Basic "+encoded);
+   ```
 
-
-
-
-
-
-
+​		There are alternative HTTPP client JAR, such as apache, which already have specific "setHeader" method.
