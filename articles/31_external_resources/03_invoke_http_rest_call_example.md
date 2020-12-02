@@ -103,11 +103,17 @@ The WS steps:
    
 
    
-### Authentication & Authorization
+Here is an execution example result of this WS, get as an input IP = "24.48.0.1":
    
-In some cases the REST API requires authentication & authorization to be sent as headers. At the "java.net" library which we used in the example, this can be achieved by using the **setRequestProperty** method. For example, when the API provider supplied us user-name + passwords and works with base authentication, the following can be used:
+<img src="images/REST_examle_results.png" alt="image"  />
    
-```java
+
+   
+   ### Authentication & Authorization
+   
+   In some cases the REST API requires authentication & authorization to be sent as headers. At the "java.net" library which we used in the example, this can be achieved by using the **setRequestProperty** method. For example, when the API provider supplied us user-name + passwords and works with base authentication, the following can be used:
+   
+   ```java
    String encoded = Base64.encode(username+":"+password);
    cons.setRequestProperty("Authorization", "Basic "+encoded);
    ```
