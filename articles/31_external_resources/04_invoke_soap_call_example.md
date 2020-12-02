@@ -18,7 +18,7 @@ There are 2 options when integrating with SOAP service provider:
 
 * The service provider publishes the service's WSDL, either as URL or a supplied file, where client shall learn it. For such cases we can use a JDK special command line tool called `wsimport`, aimed to reduce the hassles, by making the discovery of the WSDL, "translating" it into Java code form - the SOAP Client code.
 
-Following we will describe the later cases, where service is published with WSDL, and we will explain the preparation steps, before can be used at Fabric functions code. When using a provided JAR these steps are not required.
+Following we will describe the second case, where service is published with WSDL, and we will explain the preparation steps, before can be used at Fabric functions code. When using a provided JAR these steps are not required.
 
 #### 1. WSDL Discovery: Generating SOAP Client Code
 
@@ -34,7 +34,7 @@ It is recommended to use the following command options:
 
 For more options, available for this command, please see [here](https://docs.oracle.com/javase/7/docs/technotes/tools/share/wsimport.html).
 
-The outcome when running this command is a new package, containing 2 Java files, one of them is an interface. These files contain java methods that can be used smoothly, in Fabric code, without being aware of the protocol or format, SOAP XML in this case. The file names are derived from the names in WSDL.
+The outcome when running this command is a new package, containing 2 Java files, one of them is an interface and the other one is the "service". These files contain java methods that can be used smoothly, in Fabric code, without being aware of the protocol or format, SOAP XML in this case. The file names are derived from the names in WSDL.
 
 **Note**: the generated code is using the JAX-WS built in JAVA library. There is no need to use an external JAR.
 
@@ -56,7 +56,7 @@ The WSDL contains the service address. This is auto populated at the generated J
 
 Sometimes the supplied WSDL does not contain the actual service address, and it shall be updated.
 
-Open the file - in our example - the "CalculatorImplService.java" and look for the URL value. Verify or update the value.
+Open the service file and look for the URL value. Verify or update the value.
 
 ### End To End Example
 
