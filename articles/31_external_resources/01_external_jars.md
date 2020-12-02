@@ -2,7 +2,7 @@
 
 ### Overview
 
-Fabric enables Java JAR libraries usage within Fabric functions. This powerful capability can be useful for expediting project timelines, using 3<sup>rd</sup> party code which already fulfil some required task, such as special calculations or mapping. Using such JAR libraries save the time of self-coding and testing cycles. In some other cases, customers might ask to use their libraries (e.g. security or connectivity) within Fabric code. 
+Fabric enables Java JAR libraries usage within Fabric objects (for example functions, WSs). This powerful capability can be useful for expediting project timelines, using 3<sup>rd</sup> party code which already fulfil some required task, such as special calculations or mapping. Using such JAR libraries save the time of self-coding and testing cycles. In some other cases, customers might ask to use their libraries (e.g. security or connectivity) within Fabric code. 
 
 In this article we will go thru and explain: 
 
@@ -14,10 +14,10 @@ In this article we will go thru and explain:
 
 #### Development and Debug Stage
 
-* Place the JAR file at the project's local lib directory **[Fabric Projects Directory]\\[Project Name]\lib** (place it at the lib **root** directory and not at its subdirectories).
-* Restart you Fabric Studio, if it is already opened.
-* Refer to the relevant JAR's classes ("import") at the *Logic* java file (make it on the relevant file in the tree, such as under "Enrichment" directory/category).
-* Use the JAR classes and methods inside the Fabric function.
+* Place the JAR file at the project's local lib directory **[Fabric Projects Directory]\\[Project Name]\lib** (place it at the lib **root** directory and not at its subdirectories, in order it will effect on exporting the project).
+* in Fabric Studio is opened, you shall restart the local associated Fabric (Can be done via the Studio top left menu bar). Alternatively - close and reopen the project you are working on. This step is required in order Fabric will add it to its CLASSPATH, on runtime. 
+* Refer to the relevant JAR's classes ("import") at the *Logic* java file (make it on the relevant file in the tree, such as under "Enrichment" directory/category). Note: import statement cannot be done at Fabric objects, as they are Java methods. 
+* Use the JAR classes and methods inside the Fabric object.
 
 #### Deploying at Server
 
@@ -43,7 +43,7 @@ In order to achieve the goal of enabling the carrier to use a single format, we 
 
    ![image](images/external_lib.png)
 
-3. Restart Fabric Studio.
+3. Restart local Fabric or reopen the project.
 
 4. Create a new enrichment function at the **CUSTOMER** LU, named "E164PhoneFormat", using the external JAR: 
 
@@ -73,11 +73,11 @@ In order to achieve the goal of enabling the carrier to use a single format, we 
      	cellValue=""+row.get("ASSOCIATED_LINE");
      	parsedNumber = phoneUtil.parse(cellValue, COUNTRY_CODE); 
      	formattedNumber = phoneUtil.format(parsedNumber, PhoneNumberUtil.PhoneNumberFormat.E164);
-         fabric().execute(SQLFormattedNumberE164,formattedNumber,cellValue);
+     	fabric().execute(SQLFormattedNumberE164,formattedNumber,cellValue);
      }
      ~~~
 
-     \* Note: for simplicity we skipped null value validations and catching exceptions. 
+     \* Note: CONUTRY_CODE was defined at [Fabric Globals](/articles/08_globals/01_globals_overview.md).  
 
 
 After associating the enrichment function to the **CONTRACT** table and deploying the **CUSTOMER** LU, look for customer "55" via the the data viewer:
