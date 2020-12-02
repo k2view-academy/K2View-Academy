@@ -62,7 +62,9 @@ Open the service file and look for the URL value. Verify or update the value.
 
 In our example, we are going to use a web service named "Calculator" that provides base math operations - *add, subtract, multiple* and *divide*.
 
-We will follow the preparation steps, which described above.
+The demo service server-side, which is used here can be found [here](/articles/31_external_resources/SOAP_Server_Example.zip). It contains 3 Java files - the interface (*CalculatorI*) which contains the declarations, and according the WSDL is published; the implantation which make the calculations (*CalculatorImpl*); the 3rd (*CalcPublisher*) is the executable class that publish it and expose it at localhost in port 10000.
+
+First, we will follow the preparation steps, as described above.
 
 1. **Generate the SOAP client Java files**
 
@@ -122,3 +124,7 @@ We will follow the preparation steps, which described above.
    To see and feel it in action, we can create a LuFucntion Actor at Broadway, which uses this function, as illustrated below:
 
 <img src="images/LuFuncActor_soap.png" alt="LuFucntion Actor using soap function" />
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/31_external_resources/03_invoke_http_rest_call_example.md)
