@@ -5,13 +5,13 @@ When the originating Actor's output is a complex object, the iteration's complex
 
 * Are the connected elements on the same level of hierarchy or on different levels?
 * Are the link types the same (all **Iterate**) or different (**Iterate** combined with other types)?
-* Do the connected elements belong to different nested arrays? 
+* Do the connected elements belong to different nested arrays, and if yes - do they have the same or different size? 
 
 This article described how Broadway performs complex iteration use cases, such as:
 
 * Loop over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
 * Use different connection line types when iterating over a complex object's elements.
-* Blend with Condition - iterate over multiple result sets in the same iteration.
+* Iterate over multiple arrays in the same iteration.
 
 If the connected elements of the object are on the same level of hierarchy (such as two fields of the same array), the iteration behavior is the same as the iteration over [two or more elements in a result array](21_iterations.md#iterate-over-two-or-more-elements) as described in the previous article. 
 
@@ -47,14 +47,18 @@ If the connected elements of the object are on the same level of hierarchy (such
 
 <img src="images/iterate_mult_04.PNG" alt="image" style="zoom:80%;" />
 
-### Blend with Condition
+### Iterate Over Multiple Arrays
 
-*TO BE UPDATED AFTER THE DESIGN IS FINILIZED*
+The originating Actor's output can have more than one collection. A common use case is a JSON data structure that contains more than one array.
+Occasionally it may be required to manage several loops over the same data structure, for example in order to combine the data from two arrays or to perform other kind of data manipulation. In this case, both arrays (or elements in the arrays) need to be connected using an **Iterate** link type to one or more Actors. 
 
-A Stage can have more than one collection. A common case is a JSON data structure that contains more than one array.
-Using the Stage Split functionality you can split the flow and manage several loops over the same data structure.
+In this case the iteration logic is impacted by the answers to the question - do these arrays have the same or different size? When the arrays have different size, at some point one of them is finished and returns a null while the another one still has values. To prevent the redundant loops over the empty array, use the **IsNull** Actor to check if the array returns a value or null.
 
-<img src="images/iterate_split.png" alt="image" style="zoom:50%;" />
+![image](images/iterate_blend1.PNG)
+
+Another recommended way to handle two collections with different sizes is by using the [Inner Flows](22_broadway_flow_inner_flows.md). You can pass each array by value into its respective inner flow and then iterate inside each inner flow on the array values.
+
+![image](images/iterate_blend2.PNG)
 
 
 
