@@ -65,18 +65,25 @@ Using the above information the function can execute any required business logic
 
 1. Create a new function with **Function Type = Event Function**.
 
-2. Write the business logic, for example populate the IID, LU name and a message into a specific log table defined in the Fabric Common DB. In addition, publish a message to Kafka using a Broadway flow.
+2. Write the business logic, for example populate the IID, LU name and a message into a specific log table defined in the Fabric Common DB. In addition, publish a message to Kafka using a Broadway flow. Note that you need to add the exception handling to the function.
 
    ~~~java
-   String IID = eventDataContext.getInstanceId();
-   String luTypeName = eventDataContext.getLuTypeName();
-   
-   Db ci = db("fabric");
-   ci.beginTransaction();
-   ci.execute("insert into DATA_CHANGES values (?,?,?,?)",IID,luTypeName,"NA","Post Sync Success");
-   ci.commit();
-   
-   fabric().execute("broadway Customer.publishCustomer iid="+ IID);
+   try {
+   	String IID = eventDataContext.getInstanceId();
+   	String luTypeName = eventDataContext.getLuTypeName();
+   	
+   	log.info("Event function - instance ID = "+ IID);
+   	log.info("Event function - LU type = "+ luTypeName);
+   	
+   	Db ci = db("fabric");
+   	ci.beginTransaction();
+   	ci.execute("insert into DATA_CHANGES values (?,?,?,?)", IID, luTypeName, NA", "Post Sync Success");
+   	ci.commit();
+   	
+   	//fabric().execute("broadway CRM.publishCustomer iid="+ IID);
+   } catch (Exception  e) {
+   	log.error("The function eventFuncSuccess failed: "+e.getMessage());	
+   }
    ~~~
    
 3. Create a Broadway flow that publishes a message to Kafka.
