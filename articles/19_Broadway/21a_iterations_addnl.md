@@ -1,23 +1,21 @@
 # Complex Iteration Flows
 ### Overview
 
-This article described how Broadway performs complex iteration use cases, such as:
-
-* Loop over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
-* Combination of connection line types when iterating over a complex object's elements.
-* Blend with Condition - iteration over multiple result sets in the same iteration.
-
-### Multiple Connection Lines from a Complex Object
-
 When the originating Actor's output is a complex object, the iteration's complexity increases due to the object's internal hierarchy of fields and nested arrays. Thus the iteration logic over an object with multiple links is impacted by the answers to the following questions:
 
 * Are the connected elements on the same level of hierarchy or on different levels?
 * Are the link types the same (all **Iterate**) or different (**Iterate** combined with other types)?
 * Do the connected elements belong to different nested arrays? See the explanation and the examples of this scenario in the Blend with Condition section of this article below.
 
-If the connected elements of the object are on the same level of hierarchy (such as two fields of the same array), the iteration behavior is the same as the iterations over [multiple connection lines in a result array](TO ADD). 
+This article described how Broadway performs complex iteration use cases, such as:
 
-#### Iterate Over Both an Element and a Nested Array
+* Loop over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
+* Use different connection line types when iterating over a complex object's elements.
+* Blend with Condition - iterate over multiple result sets in the same iteration.
+
+If the connected elements of the object are on the same level of hierarchy (such as two fields of the same array), the iteration behavior is the same as the iteration over [two or more elements in a result array](21_iterations.md#iterate-over-two-or-more-elements) as described in the previous article. 
+
+### Iterate Over Both an Element and a Nested Array
 
 * The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and **objectType** field in [hardware] nested array.
 * Both are connected using the **Iterate** link type. 
@@ -25,7 +23,7 @@ If the connected elements of the object are on the same level of hierarchy (such
 
 <img src="images/iterate_mult_02.PNG" alt="image" style="zoom:80%;" />
 
-#### Iterate Over a Field and Take a Nested Array by Value
+### Iterate Over a Field and Take a Nested Array by Value
 
 - The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and the **[hardware]** nested array.
 - The **entityType** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **Value** link type.
@@ -33,7 +31,7 @@ If the connected elements of the object are on the same level of hierarchy (such
 
 <img src="images/iterate_mult_03.PNG" alt="image" style="zoom:80%;" />
 
-#### Iterate Over a Field and Take a First Value of a Nested Array
+### Iterate Over a Field and Take a First Value of a Nested Array
 
 * This is a private case of the previous scenario with the same connected elements.
 * The **entityType** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **First** link type.
@@ -41,7 +39,7 @@ If the connected elements of the object are on the same level of hierarchy (such
 
 <img src="images/iterate_mult_05.PNG" alt="image" style="zoom:80%;" />
 
-#### Take an Array by Value and Iterate Over a Field in the Same Array
+### Take an Array by Value and Iterate Over a Field in the Same Array
 
 * The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and the whole **[resources]** array.
 * The **entityType** is connected using the **Iterate** link type, while the **[resources]** array is connected using the **Value** link type.
