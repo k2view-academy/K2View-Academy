@@ -33,7 +33,7 @@ Please read the [Interface Overview](01_interfaces_overview.md),[DB Interfaces O
 
 - [Add/Remove a Fabric Interface](/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md).
 - [Editing Interface Settings](/articles/05_DB_interfaces/06_editing_interface_settings.md).
-- [Deleting / Disabling an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
+- [Delete/Disable an Interface](/articles/05_DB_interfaces/07_deleting_disabling_an_interface.md).
 - [Clearing the Database Objects Cache](/articles/05_DB_interfaces/08_clearing_the_database_objects_cache.md).
 
 
