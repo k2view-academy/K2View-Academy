@@ -120,7 +120,7 @@ sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_D
 ```
 
 
-## Step 5 - $K2_HOME/config/cqlshrc
+## Step 5 - CQLSHRC Configuration
 1. Edit the $K2_HOME/config/cqlshrc file with the appropriate passwords and certification files.
 2. Execute this on all Fabric nodes.
 
@@ -190,6 +190,7 @@ Configure the CQLSH to use the SSL flag:
 ```cqlsh -u k2admin -p Q1w2e3r4t5 --ssl```
 
    Note: If the k2admin user credentials do not exist, use a valid user.
+
 
 ## Step 9 - Configure HTTPS for Web Services
 
