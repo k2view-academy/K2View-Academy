@@ -340,7 +340,7 @@
 
 
 <details>
-<summary markdown="span"><strong>Environments<strong><a href="/articles/26_fabric_security/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<summary markdown="span"><strong>Fabric Security<strong><a href="/articles/26_fabric_security/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 
 <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Security Overview</a></li>
 <li><a href="/articles/26_fabric_security/02_fabric_entities_design.md">Fabric - Secure-by-Design</a></li>
