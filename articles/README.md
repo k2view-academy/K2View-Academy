@@ -105,6 +105,7 @@
 <li><a href="/articles/07_table_population/11_2_root_functions_code_examples.md">Root Functions - Code Examples</a></li>
 <li><a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">Creating an LUDB Function</a></li>
 <li><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Creating a Trigger Function</a></li>
+<li><a href="/articles/07_table_population/11_5_creating_an_event_function.md">Creating an Event Function</a></li>
 <li><a href="/articles/07_table_population/11_lookup_tables.md">Lookup Tables</a></li>
 <li><a href="/articles/07_table_population/12_table_population_diagram_outline.md">Table Population Diagram Outline</a></li>
 <li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
@@ -265,6 +266,7 @@
 <li><a href="/articles/19_Broadway/18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="/articles/19_Broadway/19_broadway_flow_stages.md">Broadway Stages</a></li>
 <li><a href="/articles/19_Broadway/21_iterations.md">Iterations in Broadway</a></li>
+<li><a href="/articles/19_Broadway/21a_iterations_addnl.md">Complex Iteration Flows</a></li>
 <li><a href="/articles/19_Broadway/22_broadway_flow_inner_flows.md">Inner Flows</a></li>
 <li><a href="/articles/19_Broadway/23_transactions.md">Transactions</a></li>
 <li><a href="/articles/19_Broadway/24_error_handling.md">Error Handling</a></li>
@@ -380,6 +382,13 @@
 <li><a href="/articles/30_web_framework/01_web_framework_overview.md">Web Framework Overview</a></li>
 <li><a href="/articles/30_web_framework/02_preintegrated_apps_overview.md">Pre-Integrated Application Overview</a></li>
 <li><a href="/articles/30_web_framework/03_web_admin_application.md">Web Admin Application</a></li>
+</details>    
+
+<details>
+<summary markdown="span"><strong>Logical Unit Storage<strong><a href="/articles/32_LU_storage/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/32_LU_storage/01_LU_storage_overview.md">Logical Unit Storage Overview</a></li>
+<li><a href="/articles/32_LU_storage/02_storage_management.md">LU Storage and Cache Management</a></li>
+<li><a href="/articles/32_LU_storage/03_big_lu_storage.md">Big Logical Units</a></li>
 </details>    
 
 <details>
