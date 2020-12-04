@@ -2,52 +2,59 @@
 
 ### Overview
 
-Fabric enables Java JAR libraries usage within Fabric objects (for example functions, WSs). This powerful capability can be useful for expediting project timelines, using 3<sup>rd</sup> party code which already fulfil some required task, such as special calculations or mapping. Using such JAR libraries save the time of self-coding and testing cycles. In some other cases, customers might ask to use their libraries (e.g. security or connectivity) within Fabric code. 
+Fabric enables using Java JAR libraries in Fabric objects like functions and Web Services to expedite project timelines via 3rd  party code that already implements tasks like specific calculations or mapping. Using JAR libraries reduces the need for self-coding and also saves time during testing cycles. There is also an option for customers to use their own libriaries like for security or connectivity in Fabric code. 
 
-In this article we will go thru and explain: 
+This article discusses the following: 
 
-* The required steps during development and debug stage
-* The required steps when deploying it at server 
-* Step by step example
+- Development and debugging stages.
+- Deploying Java JAR libraries in the server. 
+- Step-by-step example.
 
-### How Do I use a new library
+### How Do I Use a New Library
 
 #### Development and Debug Stage
+1. Save the JAR file in **[Fabric Projects Directory]\\[Project Name]\lib** in the lib **root** directory. Make sure not save the JAR file in the subdirectories since this has an impact when exporting the project. 
+2. Do either:
+   -   Open the Fabric Studio and in the top left menu bar, click Restart to associate the file to the currently open project. 
+   -   Close and reopen the project you are working on to add the JAR file to the CLASSPATH in Fabric during runtime. 
+3. Check the relevant JAR classes have been imported into the **Logic** Java file in the tree, for example, under the **Enrichment** directory/category. Note that since import statements are Java methods they cannot be implemented in Fabric objects.
+4. Use the JAR classes and methods in the Fabric object.
+ 
 
-* Place the JAR file at the project's local lib directory **[Fabric Projects Directory]\\[Project Name]\lib** (place it at the lib **root** directory and not at its subdirectories, in order it will effect on exporting the project).
-* in Fabric Studio is opened, you shall restart the local associated Fabric (Can be done via the Studio top left menu bar). Alternatively - close and reopen the project you are working on. This step is required in order Fabric will add it to its CLASSPATH, on runtime. 
-* Refer to the relevant JAR's classes ("import") at the *Logic* java file (make it on the relevant file in the tree, such as under "Enrichment" directory/category). Note: import statement cannot be done at Fabric objects, as they are Java methods. 
-* Use the JAR classes and methods inside the Fabric object.
+#### Deploying Java JAR Libraries in the Server
 
-#### Deploying at Server
+After the JAR files are associated to a specific project in the Fabric Studio, to be deployed they must be copied into the project in the Fabric server.
 
-While JARs at the development stage within the Studio are associated to a specific project, at server the JARs are located regardless to projects. The following shall be Done at the server: 
+1. Copy the JAR files into the **/home/k2view/ExternalJars/** folder in the Fabric server.
+2. Restart the Fabric server.
 
-* Copy the new JAR to the Fabric server into the following folder:
+Note that the JAR files are copied to **All** Fabric nodes. 
 
-  `/home/k2view/ExternalJars/`. For more information refers to [Fabric Server - Main Directories](/articles/02_fabric_architecture/02_fabric_directories.md). 
-
-  Note: JAR shall be copied to **all** Fabric nodes
-
-* Restart the Fabric server (**all** nodes) in order your changes will take effect and can be used. 
+For more information refer to [Fabric Server - Main Directories](/articles/02_fabric_architecture/02_fabric_directories.md). 
 
 ### Example
 
-This example demonstrates how a Telco carrier can align all its subscribers' phone number to follow the [E.164](https://en.wikipedia.org/wiki/E.164) standard format. The phone numbers, which are populated by CRM representatives or by integrated DBs, might vary. For example, at the Training Demo project, the LU **CONTRACT** table contains the following associated phone numbers for customer ID "55": "+1 (343) 842-1521", "680 463 5415", "5846694228", "(820) 633-6790". 
+This example demonstrates how a Telco carrier can align their subscribers phone numbers to follow the [E.164](https://en.wikipedia.org/wiki/E.164) standard format. The phone numbers, which are populated by CRM representatives or by integrated DBs, might vary. For example, in the Training Demo project, the LU **CONTRACT** table contains the following associated phone numbers for customer ID "55": "+1 (343) 842-1521", "680 463 5415", "5846694228", "(820) 633-6790". 
 
-In order to achieve the goal of enabling the carrier to use a single format, we will use Google's [libphonenumber](https://github.com/google/libphonenumber) library, by applying it at the Demo project, with the following steps:
+To enable the carrier to use a single format, the Google [libphonenumber](https://github.com/google/libphonenumber) library is used in the Demo project, as follows:
 
-1. Add an additional column to the **CONTRACT** table, named ***E164_LINE_FMT*** which we will be populated by an [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). 
+1. Add an additional column to the **CONTRACT** table, named ***E164_LINE_FMT*** populated by an [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). 
 
-2. Place the  [libphonenumber](https://github.com/google/libphonenumber) JAR (e.g. "libphonenumber-8.12.13.jar") at the project's local lib directory *[Fabric Project's Directory]\demo\lib*. It should looks like similar to the following (added jar is yellow highlighted):
+2. Save the  [libphonenumber](https://github.com/google/libphonenumber) JAR (e.g. "libphonenumber-8.12.13.jar") in the **[Fabric Project's Directory]\demo\lib**. 
+
+For example:
+
+
 
    ![image](images/external_lib.png)
 
-3. Restart local Fabric or reopen the project.
+   Note that JAR is highlighted in yellow.
+   
+3. Restart Fabric or reopen the project.
 
-4. Create a new enrichment function at the **CUSTOMER** LU, named "E164PhoneFormat", using the external JAR: 
+4. Using the external JAR file, create a new enrichment function in the **CUSTOMER** LU, named **E164PhoneFormat**: 
 
-   - Add the relevant JAR's classes at the *Logic* java file:
+   - Add the relevant JAR classes in the **Logic** Java file:
 
      ~~~java
      import com.google.i18n.phonenumbers.Phonenumber.PhoneNumber;
@@ -80,10 +87,10 @@ In order to achieve the goal of enabling the carrier to use a single format, we 
      \* Note: CONUTRY_CODE was defined at [Fabric Globals](/articles/08_globals/01_globals_overview.md).  
 
 
-After associating the enrichment function to the **CONTRACT** table and deploying the **CUSTOMER** LU, look for customer "55" via the the data viewer:
+The enrichment function is associated to the **CONTRACT** table and deployed to the **CUSTOMER** LU. Search for customer "55" via the the Data Viewer:
 
 
 
 ![image](images/external_e164.png)
 
-As can be seen, the new table's column is populated with the required single format, for all associated lines.
+The new table's column is populated with the required single format in all associated lines.
