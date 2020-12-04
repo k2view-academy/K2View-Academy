@@ -1,16 +1,21 @@
 # Invoke Remote API Calls
 
-There are cases where there us a need to retrieve information from remote services, for example when it is required during LUI sync to combine data from an API together with the data which exists in the source DB. 
+Data can be retrieved from remote services, for example; during an LUI sync to combine the data from an API with the data in the source DB or, to call and update a remote API. 
 
-On other cases we might require to call a remote API to update it with some information or changes (note that [CDC](/articles/18_fabric_cdc/) is the recommended method for such task, yet sometimes API calls are required)  .
+Note that we recommend using a CDC to call and update a remote API. For information, see [CDC](/articles/18_fabric_cdc/).
 
-Broadway already supports such capability with its built-in [Streams actors (http & files)](/articles/19_Broadway/04_built_in_actor_types.md#streams), along with some response [parsers actors](/articles/19_Broadway/04_built_in_actor_types.md#parsers) (for JSON, CSV, XML) . In addition Broadway supported special related interfaces ([HTTP Interface](/articles/24_non_DB_interfaces/05_HTTP_interface.md#http-interface) and [SFTP Interface](/articles/24_non_DB_interfaces/02_SFTP_interface.md#sftp-interface)). 
+Data can also be retrieved via the following built-in Broadway actors and interfaces:
+-  [Streams actors](/articles/19_Broadway/04_built_in_actor_types.md#streams), http and files.
+-  [Parsers actors](/articles/19_Broadway/04_built_in_actor_types.md#parsers) for JSON, CSV and XML files.
+-  [HTTP Interface](/articles/24_non_DB_interfaces/05_HTTP_interface.md#http-interface) and [SFTP Interface](/articles/24_non_DB_interfaces/02_SFTP_interface.md#sftp-interface). 
 
-However, this capability is required also at Fabric functions. Moreover, in some cases other external source types or formats might be needed, for example SOAP response format.
+Remote API calls can be invoked in Fabric functions and other external source types or formats like a SOAP response.
 
-Remote servers interactions require to be familiar with their protocols and formats, in order to call them properly and to be enabled parse their response.  For this, we shall use Java JAR libraries (or generated code) which encapsulate these interactions into java methods and objects. See [here](/articles/31_external_resources/01_external_jars.md) for more information about using external JAR libraries.
+An understanding of remote API protocols and their formats is required to interact with remote servers and parse their response. To do so, Fabric uses Java JAR libraries or generated code that  encapsulates these interactions into Java methods and objects.
 
-Next you can see examples for invoking HTTP REST API with a JSON response and HTTP SOAP call.
+For more information about external JAR libraries, click [here](/articles/31_external_resources/01_external_jars.md).
+
+For examples refer to:
 
 * [HTTP REST API Call with JSON response](/articles/31_external_resources/03_invoke_http_rest_call_example.md) 
 * [HTTP SOAP Call](/articles/31_external_resources/04_invoke_soap_call_example.md) 
