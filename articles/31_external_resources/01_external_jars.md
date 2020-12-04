@@ -2,7 +2,7 @@
 
 ### Overview
 
-Fabric enables using Java JAR libraries in Fabric objects like functions and Web Services to expedite project timelines via 3rd  party code that already implements tasks like specific calculations or mapping. Using JAR libraries reduces the need for self-coding and also saves time during testing cycles. There is also an option for customers to use their own libriaries like for security or connectivity in Fabric code. 
+Fabric enables using Java JAR libraries in Fabric objects like functions and Web Services to expedite project timelines via 3rd  party code that already implements tasks like specific calculations or mapping. Using JAR libraries reduces the need for self-coding and also saves time during testing. There is also an option for customers to use their own libriaries like for security or connectivity in Fabric code. 
 
 This article discusses the following: 
 
@@ -13,7 +13,7 @@ This article discusses the following:
 ### How Do I Use a New Library
 
 #### Development and Debug Stage
-1. Save the JAR file in **[Fabric Projects Directory]\\[Project Name]\lib** in the lib **root** directory. Make sure not save the JAR file in the subdirectories since this has an impact when exporting the project. 
+1. Save the JAR file in the lib **root** directory in the **[Fabric Projects Directory]\\[Project Name]\lib** folder. Make sure not save the JAR file in the subdirectories since this has an impact when exporting the project. 
 2. Do either:
    -   Open the Fabric Studio and in the top left menu bar, click Restart to associate the file to the currently open project. 
    -   Close and reopen the project you are working on to add the JAR file to the CLASSPATH in Fabric during runtime. 
@@ -52,7 +52,7 @@ For example:
    
 3. Restart Fabric or reopen the project.
 
-4. Using the external JAR file, create a new enrichment function in the **CUSTOMER** LU, named **E164PhoneFormat**: 
+4. Using the external JAR file, create a new enrichment function named **E164PhoneFormat** in the **CUSTOMER** LU: 
 
    - Add the relevant JAR classes in the **Logic** Java file:
 
