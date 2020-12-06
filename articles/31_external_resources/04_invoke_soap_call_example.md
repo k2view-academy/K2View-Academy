@@ -71,7 +71,7 @@ The demo service server-side can be found [here](/articles/31_external_resources
 
    To access the WSDL in this example, click [here](/articles/31_external_resources/calculator.wsdl).
 
-   As can be shown in the `-p` package option in the command, this service is used in a specific LU. Although the command can located and used elsewhere, including in the project's shared area, the web service can be LU oriented and therefore it is recommended to use this option. In this example it is saved in the  **Utilities** functions category/directory. 
+   As shown in the `-p` package option in the command, this service is used in a specific LU. Although the command can be located and used elsewhere, including in the project's shared area, the web service can be LU oriented and therefore it is recommended to use this option. In this example it is saved in the  **Utilities** functions category/directory. 
 
 2. **Copy the Generated Files into the Fabric Folder**
 
