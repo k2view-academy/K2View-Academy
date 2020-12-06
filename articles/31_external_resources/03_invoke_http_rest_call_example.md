@@ -103,14 +103,14 @@ The following displays how the the Web Service gets input IP = "24.48.0.1":
    
    ### Authentication & Authorization
    
-A REST API may require that authentication and authorization is sent as headers. In the "java.net" library used in this example, this can be implemented using the **setRequestProperty** method. For example, if the API provider supplies a username and passwords and works with basic authentication, the following can be used:
+A REST API may require that authentication and authorization is sent as headers. In the java.net library used in this example, this can be implemented using the **setRequestProperty** method. For example, if the API provider supplies a username and passwords and works with basic authentication, the following can be used:
    
    ```java
    String encoded = Base64.encode(username+":"+password);
    cons.setRequestProperty("Authorization", "Basic "+encoded);
    ```
 
-Note that there are alternative HTTPP client JAR, such as apache, which already have specific "setHeader" method.
+Note that there are alternative HTTPP client JAR, such as apache, which already have the specific setHeader method.
 
 
 
