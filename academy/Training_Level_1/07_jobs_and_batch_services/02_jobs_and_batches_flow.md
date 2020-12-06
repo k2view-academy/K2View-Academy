@@ -14,7 +14,7 @@ Please read:
 
 The following articles discuss Jobs flows and their execution environments:
 
-- [Jobs Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
+- [Jobs Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#fabric-jobs-flow)
 
 - [How to Create a new User Job](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md)
 
