@@ -102,8 +102,8 @@ T
 </td>
 <td width="500">
 <p>Perform sync every:&nbsp;</p>
-<p>Format = D.HH:DD:MM.</p>
-<p>Default = 1 day.</p>
+<p>Format = D.HH:MM:SS.</p>
+<p>Default = 1 day (1:00:00:00).</p>
 </td>
 </tr>
 </tbody>
