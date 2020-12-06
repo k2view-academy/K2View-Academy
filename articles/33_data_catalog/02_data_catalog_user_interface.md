@@ -20,8 +20,14 @@ The navigation through the Data Catalog is performed using the following tools:
 
   ![image](images/33_02_view.PNG)
 
-* Click on any of the data elements to display its properties, such as name, ID, type, etc. Click on the empty screen area to hide the Properties screen.
+* Zoom in to deeper hierarchy level by double-clicking on the data element. For example, double click on the Table data element will display all Column data elements related to it.
 
-* Unselect or select data elements in the Legend (displayed in the down right corner of the screen) to remove or add various data types to the tree. For example, if COLUMN is unselected, the Column data elements will disappear from the tree.
+* Click on any of the data elements to display its properties, such as name, ID or type in the Properties screen. Click anywhere in the empty screen area to hide the Properties screen.
+
+* Remove or add various data types to the tree by unselecting or selecting the data elements in the Legend (displayed in the down right corner of the screen) . For example, if COLUMN is unselected, the Column data elements will disappear from the tree.
+
+* How to Zoom out ???
+
+* What is looking glass icon doing???
 
 [![Previous](/articles/images/Previous.png)](01_data_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md) 
