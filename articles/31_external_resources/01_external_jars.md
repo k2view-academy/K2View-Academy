@@ -34,9 +34,9 @@ For more information refer to [Fabric Server - Main Directories](/articles/02_fa
 
 ### Example
 
-This example demonstrates how a Telco carrier can align their subscribers phone numbers to follow the [E.164](https://en.wikipedia.org/wiki/E.164) standard format. The phone numbers, which are populated by CRM representatives or by integrated DBs, might vary. For example, in the Training Demo project, the LU **CONTRACT** table contains the following associated phone numbers for customer ID "55": "+1 (343) 842-1521", "680 463 5415", "5846694228", "(820) 633-6790". 
+This example demonstrates how a Telco carrier can align their subscribers phone numbers to follow the [E.164](https://en.wikipedia.org/wiki/E.164) standard format. The phone numbers, which are populated by CRM representatives or by integrated DBs, might vary. For example, in the Training demo project, the LU **CONTRACT** table contains the following associated phone numbers for customer ID "55": "+1 (343) 842-1521", "680 463 5415", "5846694228", "(820) 633-6790". 
 
-To enable the carrier to use a single format, the Google [libphonenumber](https://github.com/google/libphonenumber) library is used in the Demo project, as follows:
+To enable the carrier to use a single format, the Google [libphonenumber](https://github.com/google/libphonenumber) library is used in the demo project, as follows:
 
 1. Add an additional column to the **CONTRACT** table, named ***E164_LINE_FMT*** populated by an [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md). 
 
@@ -84,7 +84,7 @@ For example:
      }
      ~~~
 
-     \* Note: CONUTRY_CODE was defined at [Fabric Globals](/articles/08_globals/01_globals_overview.md).  
+     \* Note that the COUNTRY_CODE is defined in [Fabric Globals](/articles/08_globals/01_globals_overview.md).  
 
 
 The enrichment function is associated to the **CONTRACT** table and deployed to the **CUSTOMER** LU. Search for customer "55" via the the Data Viewer:
