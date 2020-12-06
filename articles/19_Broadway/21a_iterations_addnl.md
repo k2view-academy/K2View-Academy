@@ -19,7 +19,7 @@ If the connected elements of the object are on the same level of hierarchy (such
 
 * The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and **objectType** field in [hardware] nested array.
 * Both are connected using the **Iterate** link type. 
-* The iteration runs over all **entityTypes** of the [resources] array, and over all the elements of each **entityType** in the [hardware] nested array.
+* The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** over all **objectTypes** in the **[hardware]** nested array.
 
 <img src="images/iterate_mult_02.PNG" alt="image" style="zoom:80%;" />
 
@@ -50,9 +50,9 @@ If the connected elements of the object are on the same level of hierarchy (such
 ### Iterate Over Multiple Arrays
 
 The originating Actor's output can have more than one collection. A common use case is a JSON data structure that contains more than one array.
-Occasionally there may be a requirement to manage several loops over the same data structure, for example; to combine the data from two arrays or to perform other types of data manipulation. In this case, both arrays (or elements in the arrays) must be connected using an **Iterate** link type to one or more Actors. 
+Occasionally there may be a requirement to manage several loops over the same data structure, for example to combine the data from two arrays or to perform other types of data manipulation. In this case, both arrays (or elements in the arrays) must be connected using an **Iterate** link type to one or more Actors. 
 
-In this case the iteration logic is impacted by the answers to the question - do these arrays have the same or a different size? When the arrays have a different size, at some point one array ends and returns a null while another array still has values. To prevent the redundant loops over the empty array, use the **IsNull** Actor to check if the array returns a value or a null.
+The iteration logic is impacted by the answers to the question - do these arrays have the same or a different size? When the arrays have a different size, at some point one array ends and returns a null while another array still has values. To prevent the redundant loops over the empty array, use the **IsNull** Actor to check if the array returns a value or a null.
 
 ![image](images/iterate_blend1.PNG)
 
