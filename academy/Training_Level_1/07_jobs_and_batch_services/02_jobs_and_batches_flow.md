@@ -49,10 +49,6 @@ Batch process commands are fully detailed in the following articles:
 - [Batch Broadway Process Commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)
 
 
-To understand Batch process flow: 
-- [Batch Flow](/articles/20_jobs_and_batch_services/17_batch_process_flow.md). 
-
-
 
 [![Previous](/articles/images/Previous.png)](/academy/Training_Level_1/07_jobs_and_batch_services/01_jobs_and_batch_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/academy/Training_Level_1/07_jobs_and_batch_services/03_jobs_and_batches_flow_exercises.md)
 
