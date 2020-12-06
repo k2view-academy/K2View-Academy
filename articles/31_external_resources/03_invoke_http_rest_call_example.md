@@ -2,17 +2,13 @@
 
 ### Objective and Introduction
 
-In this example we demonstrates how a Telco mobile carrier can use REST API to reveal customer's location (such as country, city, long&lat coordinates) by customer's current IP domain. 
+This example demonstrates how a Telco mobile carrier responds to customers complaining about bad service using a REST API to reveal the location (country, city, long and lat coordinates) of a customer via their current IP domain. Note that this use case has already been implemented in a Fabric project, whereby proactive messages are sent to customers. 
 
-In our example use case, the carrier wishes to give good response to its customers who might call and complain about a bad service they are experiencing (note that such case is already applied at a Fabric project, with a proactive messages that are sent to customers). 
+Let's assume that a feed updates Fabric with data about the carrier's regional problems and that this information is stored in a Fabric reference table. When customers contact the Call Center to complain, a match is made between their current location and the reference table. To do so, the carrier's CRM calls the Fabric Web Service whose response  indicates whether the customer is located in a known bad service area.     
 
-Let's assume that there is a feed which update Fabric with carrier's regional issues and that this information is store at a Fabric reference table. When customer calls to the call center to complain, a match between current customer's location and that reference table. For this, the carrier CRM can call Fabric WS which will response with indication if the customer located in a known bas service area.     
-
-We will show in our example such web-service (WS). For information of creating web-services within Fabric please read [here](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
-
-We will use REST API call to one of the existing IP Geolocation services - https://ip-api.com/. This service provides several response format options and we will use the JSON format, using a JSON parser provided in an external JAR. 
-
-See here to learn about [External Jars](/articles/31_external_resources/01_external_jars.md) usage. In this example we will omit the external JAR handling guidelines.
+The following example features:
+-  A Web Service. For more information about creating Web Services in Fabric, click [here](/articles/15_web_services_and_graphit/03_create_a_web_service.md).
+-  A REST API that calls the IP Geolocation service - https://ip-api.com/ - which responds in JSON format via a JSON parser provided in an external JAR. For more information, click [External Jars](/articles/31_external_resources/01_external_jars.md) usage. In this scenario we have omitted external JAR handling guidelines.
 
 
 
@@ -20,7 +16,7 @@ See here to learn about [External Jars](/articles/31_external_resources/01_exter
 
 #### Preparations
 
-For this demo example we created a new reference table **SERVICE_ISSUES**. We populated it with 2 rows, simulating feed process.
+In this example we created a new **SERVICE_ISSUES** reference table and populated it with 2 rows to simulate the feed process.
 
 
 
@@ -28,9 +24,9 @@ For this demo example we created a new reference table **SERVICE_ISSUES**. We po
 
 #### Implementation
 
-1. Place the "org.json" JAR at the fabric JARs directory (can be downloaded [here](https://mvnrepository.com/artifact/org.json/json). for more information about this library see [here](https://github.com/stleary/JSON-java)). 
+1.  Download the org.json JAR file from  [org.json](https://mvnrepository.com/artifact/org.json/json) and save it in the Fabric JARs directory. For more information about this library, click [here](https://github.com/stleary/JSON-java). 
 
-2. Add these *import* statements to the Logic file. We place this WS at Web Services --> Translation directory/category ("k2_ws\Translation"):
+2. Add the following **import** statements to the Logic file and save it in Web Service > Translation directory/category ("k2_ws\Translation"):
 
    ```java
    import org.json.JSONObject;
@@ -40,11 +36,9 @@ For this demo example we created a new reference table **SERVICE_ISSUES**. We po
    import java.net.URL;
    ```
 
-   The first 2 lines aimed for JSON parsing while the later are for performing the HTTP call (Java internal support, thus no need an external JAR). 
+   The first 2 lines parse the JSON. The other rows perform the HTTP call via Java internal support and therefore an external JAR is not required. 
 
-3. Following is the web service code example. 
-
-   It gets one input parameter "userIP" and return back a string with the known status and information. 
+ The following is example displays the Web Service code which gets the **userIP** input parameter and returns a string with the status and information. 
 
    ```java
    log.info("wsTrnIpToLocationREST");
@@ -94,16 +88,16 @@ For this demo example we created a new reference table **SERVICE_ISSUES**. We po
    
    ```
    
-The WS steps:
+Web Service steps:
    
-* Look for the userIP input parameter and call to the REST API service to get information about it.
-   * In case getting back good response, parse it and take the countryCode and the region.
-   * look at the SERVICE_ISSUES if there is an open issue (*has_issue = 1*) for this country-code and region.
-   * In case an open issue is found - set it as the WS result string. 
+Search for the **userIP** input parameter and call the REST API service to get information about it.
+   * If a good response is returned, parse it and take the countryCode and the region.
+   * Check for an open entry in SERVICE_ISSUES (*has_issue = 1*) for this country-code and region.
+   * If an open issue is found, set it as the Web Service result string. 
    
 
    
-Here is an execution example result of this WS, get as an input IP = "24.48.0.1":
+The following displays how the the Web Service gets input IP = "24.48.0.1":
    
 <img src="images/REST_examle_results.png" alt="image"  />
    
@@ -111,7 +105,7 @@ Here is an execution example result of this WS, get as an input IP = "24.48.0.1"
    
    ### Authentication & Authorization
    
-   In some cases the REST API requires authentication & authorization to be sent as headers. At the "java.net" library which we used in the example, this can be achieved by using the **setRequestProperty** method. For example, when the API provider supplied us user-name + passwords and works with base authentication, the following can be used:
+Sometimes the REST API requires that authentication and authorization is sent as headers. In the "java.net" library used in this example, this can be implemented using the **setRequestProperty** method. For example, if the API provider supplies a username and passwords and works with base authentication, the following can be used:
    
    ```java
    String encoded = Base64.encode(username+":"+password);
