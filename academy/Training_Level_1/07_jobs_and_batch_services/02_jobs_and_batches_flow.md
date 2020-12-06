@@ -29,8 +29,6 @@ These articles introduce Jobs management and configuration:
 
 - [Jobs' Monitoring](/articles/20_jobs_and_batch_services/08_jobs_table_fields.md)
 
-- [Jobs' Configuration](/articles/20_jobs_and_batch_services/09_jobs_configuration.md)
-
 - [Jobs and Batches Affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md)
 
 
