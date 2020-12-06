@@ -1,4 +1,4 @@
-# Catalog Command
+# The Catalog Command
 
 The **CATALOG** command builds a catalog file that represents the project entities and its relations. The file can then be deployed to the relevant environment. 
 
@@ -34,3 +34,6 @@ The following operations are supported:
 
   * INTERFACE (optional), the Data Catalog interface to use. If not provided, the **catalogdb** interface is used.
 
+
+
+[![Previous](/articles/images/Previous.png)](03_dc_configuration_and_deploy.md)

@@ -30,4 +30,4 @@ The navigation through the Data Catalog is performed using the following tools:
 
 * What is looking glass icon doing???
 
-[![Previous](/articles/images/Previous.png)](01_data_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md) 
+[![Previous](/articles/images/Previous.png)](01_data_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_dc_configuration_and_deploy.md) 
