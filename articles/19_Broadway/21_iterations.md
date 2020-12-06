@@ -3,7 +3,7 @@
 
 Iterations are used to repeatedly perform a section of a Broadway flow in a data set. Iterations are similar to a **for...each loop** in the sense that a logic is repeatedly run until no data remains to act upon.
 
-The common use cases are iterating over a database result set, over data returned by an HTTP call or an API or over Kafka messages. For example, the [Broadway population flow](/articles/07_table_population/14_table_population_based_Broadway.md) includes an iteration over the source DB data to load it into the target DB. 
+Common use cases are iterating over a database result set, over data returned by an HTTP call or an API or, over Kafka messages. For example, the [Broadway population flow](/articles/07_table_population/14_table_population_based_Broadway.md) includes an iteration over the data in the source DB to load it into the target DB. 
 
 This article described how Broadway performs the following:
 
@@ -57,8 +57,8 @@ Iterate over several elements of the result set to combine different link types.
 
 Note that combining the link types changes the data flow as follows:
 
-- Elements connected by an **Iterate** link type, returns the value of the **current** iteration.
-- Elements connected by a **Value** (or **First**) link type, returns the value of the **first** iteration during all iterations.
+- Elements connected by an **Iterate** link type, return the value of the **current** iteration.
+- Elements connected by a **Value** (or **First**) link type, return the value of the **first** iteration during all iterations.
 
 [Click for more information about Complex Iteration Flows](21a_iterations_addnl.md).
 
@@ -88,7 +88,7 @@ The following methods are supported:
 
 * **Loop.index()**, returns the current loop index. The index of the first iteration = 0.
 
-In a nested loop, you can only access the inner-most (deepest) loop that is running in the current Stage.
+In a nested loop, only the inner-most (deepest) loop that is running in the current Stage can be accessed.
 
 For more information, refer to the **iterate-for-each.flow** Broadway example.
 
