@@ -3,14 +3,14 @@
 
 Iterations are used to repeatedly perform a section of a Broadway flow in a data set. Iterations are similar to a **for...each loop** in the sense that a logic is repeatedly run until no data remains to act upon.
 
-The common use cases are iterating over a database result set, over a data returned by an HTTP call or an API or over Kafka messages. For example, [Broadway population flow](/articles/07_table_population/14_table_population_based_Broadway.md) includes an iteration over the source DB data for loading it into the target DB. 
+The common use cases are iterating over a database result set, over data returned by an HTTP call or an API or over Kafka messages. For example, the [Broadway population flow](/articles/07_table_population/14_table_population_based_Broadway.md) includes an iteration over the source DB data to load it into the target DB. 
 
 This article described how Broadway performs the following:
 
-* Define an iteration in a flow.
-* Loop over one or more elements of a result set.
-* Create a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
-* [Control the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
+* Defines an iteration in a flow.
+* Loops over one or more elements of a result set.
+* Creates a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
+* [Controls the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
 
 To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_iterations_addnl.md) article.
 
@@ -19,23 +19,23 @@ To learn about more complex iteration scenarios, such as iterating on different 
 
 To start the iteration, draw the line from the originating Actor's output and set the line's [Link Type](07_broadway_flow_linking_actors.md#link-object-properties) to **Iterate**. The connection line becomes double-dotted, the background of the loop's scope is highlighted grey and a thick divider line is displayed at the starting point.
 
-The scope of the iteration's logic starts immediately after the iteration line and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as closed, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close** to display a second thick divider line at the iteration ending point.
+The scope of the iteration's logic starts immediately after the iteration line and continues until the end of the flow or until the **Iterate Close** Stage. To mark an iteration Stage as closed, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) >  **Iterate Close** to display a second thick divider line on the iteration's ending point.
 
-In the below example, the **StringsArray** Actor is the iteration's originating Actor that returns an array of strings and the **Iterate on array** Stage runs on each array element. The iteration is closed at the end of **Iterate on array** Stage.
+In the following example, the **StringsArray** Actor is the iteration's originating Actor that returns an array of strings and the **Iterate on array** Stage runs on each array element. The iteration is closed at the end of **Iterate on array** Stage.
 
 ![image](images/iterate_simple1.PNG)
 
 ### How Do I Iterate Over a Data Set?
 
-The iteration over the data set starts once the originating Actor's output is connected to another Actor's input using an **Iterate** link type. 
+Iteration over the data set starts once the originating Actor's output is connected to another Actor's input using an **Iterate** link type. 
 
 The originating Actor's output can be a simple object (for example, an SQL query result set) or a complex object that includes internal hierarchy (for example, a JSON object). 
 
-The **Iterate** connection can be drawn from the output object itself or from any of its elements. 
+The **Iterate** connection can be drawn from the output object or from any of its elements. 
 
 #### Iterate Over a Row in a Result Array
 
-The **result** output returns an array of maps. In each iteration, take the values of the entire map.
+The **result** output returns an array of maps. In each iteration, takes the values of the entire map.
 
 ![image](images/iterate_path0.PNG)
 
@@ -47,18 +47,18 @@ Iterate on all the values of the **CUSTOMER_ID** field in the **result** output 
 
 #### Iterate Over Two or More Elements
 
-Iterate over several elements of the result set whereby it is possible to combine different link types. 
+Iterate over several elements of the result set to combine different link types. 
 
 - Broadway takes the values of the connected elements from the same iteration.
 
-- In the below example: iterate over the **result** output array and in each iteration take the values of the **current** iteration.
+- In the following example: iterate over the **result** output array and in each iteration take the values of the **current** iteration.
 
   ![image](images/iterate_mult_01.PNG)
 
-Note that combining the link types will change the data flow as follows:
+Note that combining the link types changes the data flow as follows:
 
-- Elements connected by an **Iterate** link type, will return the value of the **current** iteration.
-- Elements connected by a **Value** (or **First**) link type, will return the value of the **first** iteration during all iterations.
+- Elements connected by an **Iterate** link type, returns the value of the **current** iteration.
+- Elements connected by a **Value** (or **First**) link type, returns the value of the **first** iteration during all iterations.
 
 [Click for more information about Complex Iteration Flows](21a_iterations_addnl.md).
 
