@@ -1,22 +1,20 @@
 # Invoking an HTTP REST Call
 
-### Objective and Introduction
-
 This example demonstrates how a Telco mobile carrier responds to customers complaining about bad service using a REST API to reveal the location (country, city, long and lat coordinates) of a customer via their current IP domain. Note that this use case has already been implemented in a Fabric project, whereby proactive messages are sent to customers. 
 
 Let's assume that a feed updates Fabric with data about the carrier's regional problems and that this information is stored in a Fabric reference table. When customers contact the Call Center to complain, a match is made between their current location and the reference table. To do so, the carrier's CRM calls the Fabric Web Service whose response  indicates whether the customer is located in a known bad service area.     
 
 The following example features:
 -  A Web Service. For more information about creating Web Services in Fabric, click [here](/articles/15_web_services_and_graphit/03_create_a_web_service.md).
--  A REST API that calls the IP Geolocation service - https://ip-api.com/ - which responds in JSON format via a JSON parser provided in an external JAR. For more information, click [External Jars](/articles/31_external_resources/01_external_jars.md) usage. In this scenario we have omitted external JAR handling guidelines.
+-  A REST API that calls the IP Geolocation service - https://ip-api.com/ - which responds in JSON format via a JSON parser provided in an external JAR. For more information, click [External Jars](/articles/31_external_resources/01_external_jars.md) usage. Note that in this scenario external JAR handling guidelines have been omitted.
 
 
 
 ### Example 
 
-#### Preparations
+#### Preparation
 
-In this example we created a new **SERVICE_ISSUES** reference table and populated it with 2 rows to simulate the feed process.
+Create a new **SERVICE_ISSUES** reference table and populate it with 2 rows to simulate the feed process.
 
 
 
@@ -36,9 +34,9 @@ In this example we created a new **SERVICE_ISSUES** reference table and populate
    import java.net.URL;
    ```
 
-   The first 2 lines parse the JSON. The other rows perform the HTTP call via Java internal support and therefore an external JAR is not required. 
+The first 2 lines parse the JSON. The other rows perform the HTTP call via Java internal support and therefore an external JAR is not required. 
 
- The following is example displays the Web Service code which gets the **userIP** input parameter and returns a string with the status and information. 
+The following example displays Web Service code which gets the **userIP** input parameter and returns a string with the status and information. 
 
    ```java
    log.info("wsTrnIpToLocationREST");
@@ -90,7 +88,7 @@ In this example we created a new **SERVICE_ISSUES** reference table and populate
    
 Web Service steps:
    
-Search for the **userIP** input parameter and call the REST API service to get information about it.
+Search for the **userIP** input parameter and call the REST API service to get information:
    * If a good response is returned, parse it and take the countryCode and the region.
    * Check for an open entry in SERVICE_ISSUES (*has_issue = 1*) for this country-code and region.
    * If an open issue is found, set it as the Web Service result string. 
@@ -105,14 +103,14 @@ The following displays how the the Web Service gets input IP = "24.48.0.1":
    
    ### Authentication & Authorization
    
-Sometimes the REST API requires that authentication and authorization is sent as headers. In the "java.net" library used in this example, this can be implemented using the **setRequestProperty** method. For example, if the API provider supplies a username and passwords and works with base authentication, the following can be used:
+A REST API may require that authentication and authorization is sent as headers. In the "java.net" library used in this example, this can be implemented using the **setRequestProperty** method. For example, if the API provider supplies a username and passwords and works with basic authentication, the following can be used:
    
    ```java
    String encoded = Base64.encode(username+":"+password);
    cons.setRequestProperty("Authorization", "Basic "+encoded);
    ```
 
-​		There are alternative HTTPP client JAR, such as apache, which already have specific "setHeader" method.
+Note that there are alternative HTTPP client JAR, such as apache, which already have specific "setHeader" method.
 
 
 
