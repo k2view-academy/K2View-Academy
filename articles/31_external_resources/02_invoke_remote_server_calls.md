@@ -5,7 +5,7 @@ Data can be retrieved from remote services, for example; during an LUI sync to c
 Note that we recommend using a CDC to call and update a remote API. For information, see [CDC](/articles/18_fabric_cdc/).
 
 Data can also be retrieved via the following built-in Broadway actors and interfaces:
--  [Streams actors](/articles/19_Broadway/04_built_in_actor_types.md#streams), http and files.
+-  [Streams actors](/articles/19_Broadway/04_built_in_actor_types.md#streams), for http and files.
 -  [Parsers actors](/articles/19_Broadway/04_built_in_actor_types.md#parsers) for JSON, CSV and XML files.
 -  [HTTP Interface](/articles/24_non_DB_interfaces/05_HTTP_interface.md#http-interface) and [SFTP Interface](/articles/24_non_DB_interfaces/02_SFTP_interface.md#sftp-interface). 
 
@@ -17,8 +17,8 @@ For more information about external JAR libraries, click [here](/articles/31_ext
 
 For examples refer to:
 
-* [HTTP REST API Call with JSON response](/articles/31_external_resources/03_invoke_http_rest_call_example.md) 
-* [HTTP SOAP Call](/articles/31_external_resources/04_invoke_soap_call_example.md) 
+* [HTTP REST API Call with JSON response](/articles/31_external_resources/03_invoke_http_rest_call_example.md). 
+* [HTTP SOAP Call](/articles/31_external_resources/04_invoke_soap_call_example.md). 
 
 
 
