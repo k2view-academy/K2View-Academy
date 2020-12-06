@@ -11,18 +11,19 @@ K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary
 ### Key TDM Features
 
 - A built-in Self-Service web application, a place where testers can request data to be provisioned on demand and in real-time. 
+- Store data centrally in Fabric. The copied (provisioned) entities are stored in Fabric.
 - Support for partial data requests, re-deployments, and data appending: 
   - Copy (provision) a predefined list of Business Entities from a selected source environment to a selected target environment.  The full data, related to the selected entities, is extracted and copied to the relevant data systems.
   - Copy a sub setting of entities based on pre-defined parameters. For example, copy 10 Customers, located in NY, and use a Small Business packages.
 - Synthetic data generation:
-  - Clone a given entity into the target environment.
+  - Clone a given entity into the target environment. The TDM replaces the sequences of each clone to avoid a sequence duplication.
+- Support a replacement of sequences of the provisioned entities to avoid duplication in the target DB. 
 - Automatic data security and masking on an entity-by-entity basis.
 - Support for fresh and entity-specific data.
 - Cross-application integrity.
 - Data Flux features:
   - Enable the user to save (extract) specific versions on a selected list of entities or selected list of metadata (reference) tables.
   - Enable the user to load a selected version of entities or metadata tables to the selected target environment.
-
 -  Support a provisioning of data on demand or an automatic provisioning based on scheduling parameters. For example, provision the data automatically every week.
 
 
