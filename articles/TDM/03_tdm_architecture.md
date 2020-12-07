@@ -51,7 +51,7 @@ Fabric serves as a staging DB of the provisioned entities as well as the ETL lay
 
 - In general, the data provisioning can be divided to two main parts:
 
-  - Data provisioning request - the request is created by a [TDM task](/articles/101_test_data_management/02_tdm_glossary.md#task). The TDM task is created by the user via the TDM GUI and is saved in the TDM DB. The TDM task specifies that **what and when** for the data request: 
+  - Data provisioning request - the request is created by a [TDM task](/articles/101_test_data_management/02_tdm_glossary.md#task). The TDM task is created by the user via the TDM GUI and is saved in the TDM DB. The TDM task specifies the details about **what and when** for the data request: 
     - What: which Business Entity to be provisioned (Customer, Employee, Order, Product ...),  what are the source and target environments, what is the subset of entities, Sync mode, etc.
     - When: when the task needs to be executed, execute by request, or set scheduling parameters to execute the task periodically.     
   - Task execution. A task can be executed manually by the user via the **TDM GUI**, or can be executed periodically by the **TDM Scheduler** process based on a predefined scheduling parameters. 
