@@ -82,9 +82,17 @@ To setup the OrientDB, do the following:
    * Go to **C:\K2View\orientdb-tp3-3.1.2\orientdb-tp3-3.1.2\bin**.
    * Open CMD and run **server.bat**.
 
-6. Once OrientDB is up and running, copy the link http://[yourIP]:2480/studio/index.html to the browser to open the OrientDB web application.
+6. Once OrientDB is up and running, you will see the following lines:
 
+   ~~~
+   INFO  {db=demodb} Gremlin started correctly [OGremlinServerPlugin]
+   INFO  {db=demodb} OrientDB Studio available at http://<yourIP>:2480/studio/index.html [OServer]
+   INFO  {db=demodb} OrientDB Server is active v3.1.2 - Veloce (build 8b6ef394ce7b45017e84a65efb9ce7534c56aa8e, branch 3.1.x)
+   ~~~
 
+7. Copy the link to the browser to open the OrientDB web application to create a new database.
+
+   * Note that you can also create a new OrientDB database during the definition of your Data Catalog Interface Type by populating the Database setting.
 
 
 
