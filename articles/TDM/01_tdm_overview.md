@@ -32,7 +32,7 @@ K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary
 
 **Learn about Main TDM Platform Modules:**
 
-- TDM Architecture
+- [TDM Architecture](03_tdm_architecture.md)
 - TDM Implementation and Set-up.
 - TDM Self-Service Activities.
 
