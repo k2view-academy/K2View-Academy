@@ -70,3 +70,4 @@ Fabric serves as a staging DB of the provisioned entities as well as the ETL lay
 - A dedicated Fabric process checks for completed executions, and updated the TDM DB accordingly with the execution status and statistics. In addition Fabric gets the information and statistics of executed tasks into Fabric TDM LU.
 
   
+  [![Previous](/articles/images/Previous.png)](02_tdm_glossary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_tdm_db.md)
