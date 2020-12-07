@@ -1,10 +1,6 @@
-# The Catalog Command
+# The Catalog Commands
 
-The **CATALOG** commands are used to build a catalog file that represents the project entities and to deploy them to the environment or to drop the catalog. Use the following syntax:
-
-~~~
-CATALOG <OPERATION> <KEY=VALUE ARGS>
-~~~
+The **CATALOG** commands are used to build catalog files that represents the project entities and to deploy them to the environment or to drop the catalog deployed to the server. 
 
 The following operations are supported:
 
