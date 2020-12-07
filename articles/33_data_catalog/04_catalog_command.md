@@ -1,8 +1,6 @@
 # The Catalog Command
 
-The **CATALOG** command builds a catalog file that represents the project entities and its relations. The file can then be deployed to the relevant environment. 
-
-Use the following syntax:
+The **CATALOG** commands are used to build a catalog file that represents the project entities and to deploy them to the environment or to drop the catalog. Use the following syntax:
 
 ~~~
 CATALOG <OPERATION> <KEY=VALUE ARGS>
@@ -10,19 +8,17 @@ CATALOG <OPERATION> <KEY=VALUE ARGS>
 
 The following operations are supported:
 
-* CATALOG BUILD, builds a catalog files for all the entities of the project. The files will be created in the resources folder of each entity (LU, WS, Common). The command can be executed only from the Fabric Studio.
-
-* CATALOG WRITE, writes all the catalog files (that were created by the build command) of the project using the provided interface or using the default interface (if the interface is not provided). 
+* **CATALOG WRITE**, deploys the Catalog of the project to the server, creates the catalog files and uploads them to OrientDB using the provided interface or using the default interface (if the interface is not provided). 
 
   * Use the following syntax:
 
     ~~~
-    CATALOG WRITE [INTERFACE=<name>] [LU=<name>];
+    CATALOG WRITE [INTERFACE=<name>];
     ~~~
 
   * INTERFACE (optional), the Data Catalog interface to use. If not provided, the **catalogdb** interface is used.
 
-* CATALOG DROP, drops the provided project using the provided interface.
+* **CATALOG DROP**, drops the provided project using the provided interface.
 
   * Use the following syntax:
 
@@ -33,7 +29,7 @@ The following operations are supported:
   * PROJECT (optional), the project to drop. If not provided, the deployed project is chosen.
 
   * INTERFACE (optional), the Data Catalog interface to use. If not provided, the **catalogdb** interface is used.
+  
+  
 
-
-
-[![Previous](/articles/images/Previous.png)](03_dc_configuration_and_deploy.md)
+[![Previous](/articles/images/Previous.png)](03_dc_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_build_catalog_from_Fabric_Studio.md) 

@@ -5,8 +5,11 @@
 <ul>
 <li><a href="/articles/33_data_catalog/01_data_catalog_overview.md">Data Catalog Overview</a></li>
 <li><a href="/articles/33_data_catalog/02_data_catalog_user_interface.md">Data Catalog User Interface</a></li>
-<li><a href="/articles/33_data_catalog/03_dc_configuration_and_deploy.md">Data Catalog Configuration and Deploy</a></li>
-<li><a href="/articles/33_data_catalog/04_catalog_command.md">The Catalog Command</a></li>
+<li><a href="/articles/33_data_catalog/03_build_catalog_from_Fabric_Studio.md">Build Catalog from Fabric Studio</a></li>
+<li><a href="/articles/33_data_catalog/04_catalog_command.md">The Catalog Commands</a></li>
+<li><a href="/articles/33_data_catalog/05_override_data_catalog_tree.md">Override Data Catalog Tree</a></li>
+<li><a href="/articles/33_data_catalog/06_data_catalog_configuration.md">Data Catalog Configuration</a></li>
+
 </ul>
 
 
