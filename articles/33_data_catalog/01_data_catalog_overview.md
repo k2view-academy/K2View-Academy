@@ -20,7 +20,7 @@ The data relations indicate the connections between the data entities that deter
 
 The entities and the connections between them are used to parse the data, analyze it and display it from the Project level, through the Schema to the API and Table fields level. 
 
-The solution has a [Build Catalog](03_build_catalog_from_Fabric_Studio.md) option that creates a JSON files representing an entire project.
+The solution has a [Build Catalog](03_build_catalog_from_Fabric_Studio.md) option that creates JSON files representing the entire project.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_data_catalog_user_interface.md)
 

@@ -6,7 +6,7 @@ Data Catalog is a web application based on a distributed graph database OrientDB
 
 The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** from the Web Framework context menu to display the circle representing your project. If multiple projects were deployed to the same OrientDB database, all of them will be displayed.
 
-![image](images/33_02_proj.PNG)
+<img src="images/33_02_proj.PNG" alt="image" style="zoom:80%;" />
 
 ### How Do I Navigate Through the Data Catalog?
 
@@ -32,7 +32,7 @@ The navigation through the Data Catalog is performed using the following tools:
 
 * Expand the tree, focus on specific node or clear the node or the connection line by selecting the option either from the Properties screen or from the right click context menu. Clear multiple data elements can be done once they are selected using right click > hold and drag the line.
 
-  <img src="images/33_02_select.PNG" alt="image" style="zoom: 67%;" />
+  <img src="images/33_02_select.PNG" alt="image" style="zoom: 55%;" />
 
   
 
