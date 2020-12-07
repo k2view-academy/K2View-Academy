@@ -4,18 +4,18 @@
 
 K2view TDM product consists of the following components:
 
-- TDM Server 
+- TDM GUI (Self-Service)
+- TDM DB
 - Fabric
 
 ![tdm_architecture](images/tdm_architecture.png)
 
-### TDM Server
-
-The TDM server consists of two layers:
-
-- TDM GUI - this web application serves as the self-service for the following activities:
+### TDM GUI
+- This web application serves as the self-service for the following activities:
   - TDM setup, define Business Entities, TDM environments,  Roles and Permissions. 
   - Create and execute TDM tasks to provision the selected subset of entities or Reference tables to the selected environment. 
+
+### TDM GUI
 
 - TDM DB - the TDM settings and TDM tasks are kept in the TDM PostgreSQL DB. Both TDM components - TDM GUI and Fabric - connects the TDM DB to get or update the TDM settings or the TDM tasks.
 
@@ -27,7 +27,7 @@ Fabric serves as a staging DB of the provisioned entities as well as the ETL lay
 
 - When running a TDM task, the data of the selected entities is stored and synchronized according in Fabric to the LUs definitions. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) on each entity (LUI). This provides several advantages:
 
-  - Encapsulation of ALL data of a single business entity (like a customer) in one place so that consumers can ask any question about data usually residing in many different data sources.
+  - Encapsulation of all data of a single business entity (like a customer) in one place so that consumers can ask any question about data usually residing in many different data sources.
   - Security: individual encryption at MicroDB or field levels.
   - Masking capabilities. Fabric enables masking the sensitive data when storing the entity.
   - Flexibly Sync policy based on business needs:
