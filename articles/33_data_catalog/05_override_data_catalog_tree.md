@@ -57,4 +57,4 @@ The following example adds a **Test2** Logical Unit with a **TestCustomer** tabl
 
 
 
-[![Previous](/articles/images/Previous.png)](04_catalog_command.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_data_catalog_configuration.md) 
+[![Previous](/articles/images/Previous.png)](04_catalog_command.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_data_catalog_setup.md) 
