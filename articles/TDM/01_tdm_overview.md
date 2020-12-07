@@ -1,10 +1,10 @@
 # What is TDM? 
 
+K2view Test Data Management (TDM) product offers an automated solution to provision (copy) a subset of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from the source systems into selected testing environments and provide a real, high quality data to the testing teams.
+
 While enterprise IT continues to adopt DevOps to accelerate delivery of solutions to both internal and external customers, one thing still holds them back: provisioning realistic data to test those solutions in a timely manner. With increasing complexity and system interdependencies, testing budgets now consume a large portion of all IT resources, and yet the time required for testing brings the agility of DevOps to a halt.
 
-K2view Test Data Management (TDM) product offers an automated solution to copy a subset of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from the source systems into selected testing environments and provide a real, high quality data to the testing teams.
-
-The Business Entity data is often split between different data sources.  For example, a Customer may be divided between Customer Care, Billing, Ordering, Ticketing, and Collection systems. To run functional tests on a Customer in an integrative testing environment, it is necessary to have its data, extracted from all the relevant source systems.
+One of the main challenges to provide a real data to the testing teams is that data is often split between different data sources.  For example, a Customer may be divided between Customer Care, Billing, Ordering, Ticketing, and Collection systems. To run functional tests on a Customer in an integrative testing environment, it is necessary to have its data, extracted from all the relevant source systems.
 
 K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) based [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb), a data lake for each Digital Entity instance, ensures a smooth data copy, based on the company's business needs rather than running a separate copy on each data source.
 
