@@ -28,4 +28,4 @@ The following operations are supported:
   
   
 
-[![Previous](/articles/images/Previous.png)](03_dc_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_build_catalog_from_Fabric_Studio.md) 
+[![Previous](/articles/images/Previous.png)](03_dc_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_override_data_catalog_tree.md) 
