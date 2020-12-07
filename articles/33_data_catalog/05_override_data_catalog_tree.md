@@ -1,6 +1,6 @@
 # Override Data Catalog Tree
 
-Occasionally there might be a need to modify the catalog structure prior to deploying it to the server. For example, if the table is supposed to be added to the DB source interface but this change has not been performed yet by the 3rd party. Or if you need to reflect the future project changes.
+Occasionally there might be a need to modify the catalog structure prior to deploying it to the server. For example, if the table is supposed to be added to the Source DB interface but this change has not been performed yet by the 3rd party. Or if you need to reflect the future project changes.
 
 Fabric Data Catalog enables performing manual updates of the catalog files, which includes adding new data entities or modifying the existing ones.
 
