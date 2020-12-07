@@ -38,4 +38,4 @@ K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/101_test_data_management//02_tdm_glossary.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdm_glossary.md)
