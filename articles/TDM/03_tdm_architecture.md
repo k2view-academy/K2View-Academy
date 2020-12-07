@@ -11,13 +11,13 @@ K2view TDM product consists of the following components:
 ![tdm_architecture](images/tdm_architecture.png)
 
 ### TDM GUI
-- This web application serves as the self-service for the following activities:
-  - TDM setup, define Business Entities, TDM environments,  Roles and Permissions. 
-  - Create and execute TDM tasks to provision the selected subset of entities or Reference tables to the selected environment. 
+This web application serves as the self-service for the following activities:
+- TDM setup, define Business Entities, TDM environments,  Roles and Permissions. 
+- Create and execute TDM tasks to provision the selected subset of entities or Reference tables to the selected environment. 
 
 ### TDM GUI
 
-- TDM DB - the TDM settings and TDM tasks are kept in the TDM PostgreSQL DB. Both TDM components - TDM GUI and Fabric - connects the TDM DB to get or update the TDM settings or the TDM tasks.
+TDM DB - the TDM settings and TDM tasks are kept in the TDM PostgreSQL DB. Both TDM components - TDM GUI and Fabric - connects the TDM DB to get or update the TDM settings or the TDM tasks.
 
 ### Fabric
 
@@ -54,7 +54,7 @@ Fabric serves as a staging DB of the provisioned entities as well as the ETL lay
   - Data provisioning request - the request is created by a [TDM task](/articles/101_test_data_management/02_tdm_glossary.md#task). The TDM task is created by the user via the TDM GUI and is saved in the TDM DB. The TDM task specifies that **what and when** for the data request: 
     - What: which Business Entity to be provisioned (Customer, Employee, Order, Product ...),  what are the source and target environments, what is the subset of entities, Sync mode, etc.
     - When: when the task needs to be executed, execute by request, or set scheduling parameters to execute the task periodically.     
-  - Task execution. A task can be executed manually by the user via the TDM GUI, or can be executed periodically by the **TDM Scheduler** process based on a predefined scheduling parameters. 
+  - Task execution. A task can be executed manually by the user via the **TDM GUI**, or can be executed periodically by the **TDM Scheduler** process based on a predefined scheduling parameters. 
 
 - The diagram below displays the process of the TDM task creation and execution:
 
@@ -65,7 +65,7 @@ Fabric serves as a staging DB of the provisioned entities as well as the ETL lay
 - Fabric runs a [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) to execute pending execution requests: 
 
   - Extract tasks - the selected entities need to be extracted from the source environment and migrated into Fabric. The batch process initiates a [Sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) of the selected entities into Fabric. 
-  - Load task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which [gets the entities](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed, and loads the entities to the selected target environment.
+  - Load task - the batch process initiates a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) which [gets the LUIs](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) from Fabric, transforms the data if needed, and loads the entities to the selected target environment.
 
 - A dedicated Fabric process checks for completed executions, and updated the TDM DB accordingly with the execution status and statistics. In addition Fabric gets the information and statistics of executed tasks into Fabric TDM LU.
 
