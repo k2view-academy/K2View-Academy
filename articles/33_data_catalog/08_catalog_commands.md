@@ -4,7 +4,7 @@ The **CATALOG** commands are used to build catalog files that represents the pro
 
 The following operations are supported:
 
-* **CATALOG WRITE**, deploys the Catalog of the project to the server, creates the catalog files and uploads them to OrientDB using the provided interface or using the default interface (if the interface is not provided). 
+* **CATALOG WRITE**, writes the catalog files (that were created by the Build Catalog option from the Fabric Studio) using the provided interface or using the default interface (if the interface is not provided).  Note that if the files don’t exist (the Catalog Build didn’t run yet) , the command will fail.   
 
   * Use the following syntax:
 
@@ -28,4 +28,4 @@ The following operations are supported:
   
   
 
-[![Previous](/articles/images/Previous.png)](03_build_catalog_from_Fabric_Studio.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_override_data_catalog_tree.md) 
+[![Previous](/articles/images/Previous.png)](07_OrientDB_setup.md)
