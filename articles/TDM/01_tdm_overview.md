@@ -19,7 +19,7 @@ K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary
   - Clone a given entity into the target environment. The TDM replaces the sequences of each clone to avoid a sequence duplication.
 - Support a replacement of sequences of the provisioned entities to avoid duplication in the target DB. 
 - Automatic data security and masking on an entity-by-entity basis.
-- Support for fresh and entity-specific data.
+- Support for up-to-date data of the selected entities.
 - Cross-application integrity.
 - Data Flux features:
   - Enable the user to save (extract) specific versions on a selected list of entities or selected list of metadata (reference) tables.
