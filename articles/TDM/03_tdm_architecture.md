@@ -15,7 +15,7 @@ This web application serves as the self-service for the following activities:
 - TDM definitions, define Business Entities, TDM environments,  Roles and Permissions. 
 - Create and execute TDM tasks to provision the selected subset of entities or Reference tables to the selected environment. 
 
-### TDM GUI
+### TDM DB
 
 TDM DB - the TDM settings and TDM tasks are kept in the TDM PostgreSQL DB. Both TDM components - TDM GUI and Fabric - connects the TDM DB to get or update the TDM settings or the TDM tasks.
 
