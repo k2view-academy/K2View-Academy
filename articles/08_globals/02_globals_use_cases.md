@@ -3,7 +3,7 @@
 Globals are predefined global variables that can be accessed by different objects within a project and are used when the same information is required repeatedly by various Fabric objects. 
 
 A Global can be used either in a map ([Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) or a Reference table or Parser) or in a Java code (a [Project function](/articles/07_table_population/08_project_functions.md) or a [Web Services](/articles/15_web_services/01_web_services_overview.md)).
- 
+
 The following scenarios describe how Globals can be used in Fabric objects.
 
 ### How Do I Add a Global to a Table Population?
@@ -52,6 +52,7 @@ Click the grey arrow on the left of the window to display the panel and the list
 Globals can be overridden via the Fabric Server using Fabric commands **without re-deploying an LU**.
 * Only Globals that are not defined as Final can be overridden. 
 * Globals defined as Final on a Shared Objects level but are not defined as Final under the same name on an LU level, can be overridden in the context of this LU only.
+* Globals can be overridden per environment. Click [here](articles/25_environments/02_create_new_environment.md) for more information about Globals settings per environment.
 
 [Click for more information about Global's override using SET and SET_GLOBAL commands](/articles/08_globals/03_set_globals.md). 
 
@@ -62,4 +63,4 @@ Globals can be overridden via the Fabric Server using Fabric commands **without 
 
 
 
- 
+
