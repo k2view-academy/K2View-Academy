@@ -2,7 +2,7 @@
 
 There are two Fabric commands that can override a global:
 
-* **set_global global**, overrides the value at a **cluster level** whereby both the original and new values are saved in Cassandra. Note that when a global is overridden it maintains its new value after re-deployment and after Fabric is restarted.  
+* **set_global global**, overrides the value at a **cluster level** whereby both the original and new values are saved in Cassandra.
 * **set**, overrides the value at a **session level**.
 
 Both commands can override a global value only if the global is not defined as Final.
