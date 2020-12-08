@@ -107,12 +107,12 @@ On running `set_global global '*.CASES_THRESHOLD=10000';` the outcome will be:
 set;
 |key                              |value                               |
 +---------------------------------+------------------------------------+
-|...							  |									   | 	
-|ENVIRONMENT					  |UAT2								   |	
-|...							  |									   |
-|Customer.CASES_THRESHOLD         |10000                          	   |
-|Global.CRM.CASES_THRESHOLD  	  |10000                          	   |
-|...							  |									   |
+|...                              |                                    | 	
+|ENVIRONMENT                      |UAT2                                |	
+|...                              |                                    |
+|Customer.CASES_THRESHOLD         |10000                               |
+|Global.CRM.CASES_THRESHOLD       |10000                          	   |
+|...                              |                                    |
 ```
 
 In order to reset it (e.g. the day after) back to the original environment values, this command shall be executed:
