@@ -117,7 +117,7 @@ result.put("p_error", receivedErr);
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/08_globals/03_set_globals.md)
+[![Previous](/articles/images/Previous.png)](/articles/08_globals/03_set_globals.md)  [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/05_globals_overrides_priorities.md)
 
 
 
