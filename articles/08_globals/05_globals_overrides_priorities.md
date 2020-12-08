@@ -93,12 +93,12 @@ The required change is for the Shared Object Global variable CASES_THERSHOLD, th
 set;
 |key                              |value                               |
 +---------------------------------+------------------------------------+
-|...							  |									   | 	
-|ENVIRONMENT					  |UAT2								   |	
-|...							  |									   |
-|Global.Customer.CASES_THRESHOLD  |30000                          	   |
-|Global.CRM.CASES_THRESHOLD  	  |30000                          	   |
-|...							  |									   |
+|...                              |                                    |
+|ENVIRONMENT                      |UAT2                                |	
+|...                              |                                    |
+|Global.Customer.CASES_THRESHOLD  |30000                               |
+|Global.CRM.CASES_THRESHOLD       |30000                               |
+|...                              |                                    |
 ```
 
 On running `set_global global '*.CASES_THRESHOLD=10000';` the outcome will be:
@@ -107,11 +107,11 @@ On running `set_global global '*.CASES_THRESHOLD=10000';` the outcome will be:
 set;
 |key                              |value                               |
 +---------------------------------+------------------------------------+
-|...                              |                                    | 	
+|...                              |                                    |
 |ENVIRONMENT                      |UAT2                                |	
 |...                              |                                    |
 |Customer.CASES_THRESHOLD         |10000                               |
-|Global.CRM.CASES_THRESHOLD       |10000                          	   |
+|Global.CRM.CASES_THRESHOLD       |10000                               |
 |...                              |                                    |
 ```
 
@@ -186,3 +186,8 @@ On reset the session values, the actual values will be:
 | Global.k2_ws.SOURCE_ENV_NAME  | UAT2_ALPHA     |
 | Global.k2_ref.SOURCE_ENV_NAME | UAT2_ALPHA     |
 
+
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/08_globals/04_globals_code_examples.md)
