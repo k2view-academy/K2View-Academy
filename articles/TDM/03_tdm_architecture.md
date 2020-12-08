@@ -12,7 +12,7 @@ K2view TDM product consists of the following components:
 
 ### TDM GUI
 This web application serves as the self-service for the following activities:
-- TDM setup, define Business Entities, TDM environments,  Roles and Permissions. 
+- TDM definitions, define Business Entities, TDM environments,  Roles and Permissions. 
 - Create and execute TDM tasks to provision the selected subset of entities or Reference tables to the selected environment. 
 
 ### TDM GUI
