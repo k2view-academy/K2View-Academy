@@ -23,6 +23,7 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 * [SMTP Interface](08_SMTP_interface.md)
 * [Redis Interface](09_redis.md)
 * Search Interface. This interface type supports cross-instance searches and is needed to enable Fabric to connect to the search engine when a Search is defined on LU tables. [Click for more information about Search Implementation Steps](/articles/18_fabric_cdc/cdc_consumers/search/02_search_implementation.md).
+* Data Catalog Interface. This interface type is required for enabling Fabric Data Catalog. [Click for more information about Data Catalog Setup](/articles//articles/06_data_catalog_setup.md).
 
 
 
