@@ -148,7 +148,6 @@ Click [here](/articles/03_logical_units/05_globals_overrides_priorities.md) for 
 
 
 
-
 ### Understand the Globals Appearance as result of *Set* Command
 
 When running the `set;` commend (with no parameters) at Fabric console, it shows, as outcome, the values of variables exist at current session.
