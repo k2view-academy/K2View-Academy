@@ -9,7 +9,7 @@ Both commands can override a global value only if the global is not defined as F
 
 ### How Do I Use *Set_Global Global* Command?
 
-This command overrides a global value on the **entire cluster**, impacting all Fabric sessions, including open ones.\
+This command overrides a global value on the **entire cluster**, impacting all Fabric sessions, including open ones.
 **set_global global '<LUT_NAME>.<PARAM_NAME>[=<PARAM_VALUE>]';**
 
 The **set_global global** command sets the value of the global indicated by <PARAM_NAME> to the value provided by the <PARAM_VALUE>. The PARAM_NAME must be defined as a Global Variable in Fabric.
@@ -25,7 +25,7 @@ The **set_global global** command sets the value of the global indicated by <PAR
 <p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt;.</p>
 <p>
 <UL>
-<LI>Specifying &lt;LUT NAME&gt; is supported even when the Global is defined under Shared Objects. In such case the Global value is overridden only for the given &lt;LUT NAME&gt; scope. <br/>NOTE: Override takes effect only if settings of the specific LU is done <b>after</b> the all-LUs settings (using the '*' - see next command) ran.</LI>
+<LI>When &lt;LUT NAME&gt; is specified and the Global is also defined under Shared Objects, the Global value is overridden only for the given &lt;LUT NAME&gt; scope. <br/>(note that the override takes effect only if the command for the specific LU is executed <b>after</b> the all-LUs settings. In case the command with '*.&lt;LUT NAME&gt;' is executed after, it will be applied also on that LU.)</LI>
 <LI>In case variable was not defined at implmentation - neither at Shared Objects nor at LU, action will not take effect. An error message appears then, indicating that it does not exist in that LU.</LI>
 </UL>
 </p>
@@ -71,9 +71,10 @@ The **set_global global** command sets the value of the global indicated by <PAR
 
 
 
+
 ### How Do I Use the *Set* Command?
 
-The **set** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable, or to override an existing global for the Fabric session if the global is not Final.\
+The **set** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable (not defined at all at Fabric implementation), or to override an existing global for the Fabric session if the global is not Final.
 
 <table>
 <tbody style="vertical-align:top">
@@ -97,7 +98,7 @@ The **set** command can be used to set a variable **per session** so that the va
 <p>set &lt;PARAM_NAME&gt; =&rsquo;&rsquo;;</p>
 </td>
 <td width="600">
-<p>Reset the variable value to the global one, if defined before at the session.</p>
+<p>Reset the variable value. If it is a new ad-hoc variable, then after reset it will be equal to "NULL". If it was already defined (cluster/environment/implementation) it will revert to the original value.</p>
 <p>Example:<br>
     Assume that the original value of the SOURCE_PRODUCT_VERSION is &rsquo;prod&rsquo;
 </p>
@@ -118,8 +119,7 @@ The **set** command can be used to set a variable **per session** so that the va
     <p>
         NOTES:
         <UL>
-            <LI>In case a variable value was set different for a LU and for all others, and the command does not specify the 'LUT_NAME' (e.g. "set SOURCE_PRODUCT_VERSION;"), the result of the such set command will be a message that there is ambiguty.</LI>
-            <LI>In case &lt;LUT_NAME&gt; is specified in the command but the variable was not defined at implmentation - neither at Shared Objects nor at LU, action will not take effect. An error message appears then, indicating that it does not exist in that LU.</LI>
+            <LI>In case a variable value was set different for a specific LU and for all others, and the command does <B>not</B> specify the 'LUT_NAME' (e.g. "set SOURCE_PRODUCT_VERSION;"), the command outcome will be an error message, indicating that there is ambiguty.</LI>
         </UL>
     </p>
 </td>
@@ -140,6 +140,7 @@ The **set** command can be used to set a variable **per session** so that the va
 </tr>    
 </tbody>
 </table>
+
 
 
 
