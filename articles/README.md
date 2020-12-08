@@ -236,7 +236,6 @@
 </ul> 
          </ul>
 </details>
-
 <details>
 <summary markdown="span"><strong>Change Data Capture (CDC) Capabilities<strong><a href="/articles/18_fabric_cdc/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href=/articles/18_fabric_cdc/01_change_data_capture_overview.md>CDC Overview</a></li>
@@ -277,6 +276,7 @@
 </ul> 
 </details> 
 
+
 <details>
 <summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md">Overview</a></li>
@@ -285,7 +285,7 @@
 <li><a href="/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md">Process Jobs</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md">Broadway Jobs</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/07_jobs_commands.md">Commands list</a></li>
-<li><a href="/articles/20_jobs_and_batch_services/08_jobs_table_fields.md">Operational Tables</a></li>
+<li><a href="/articles/20_jobs_and_batch_services/08_jobs_table_fields.md">Jobs Monitoring</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md">Jobs Configuration</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md">Fabric Affinity Concept</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/11_batch_process_overview.md">Batch Processes</a></li>
@@ -339,6 +339,19 @@
 <li><a href="/articles/25_environments/04_offline_deployment.md">Offline Environment Deployment</a></li>
 <li><a href="/articles/25_environments/05_set_and_list_commands.md">SET and LIST Commands for Environments</a></li>
 </details> 
+
+
+<details>
+<summary markdown="span"><strong>Fabric Security<strong><a href="/articles/26_fabric_security/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+
+<li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Security Overview</a></li>
+<li><a href="/articles/26_fabric_security/02_fabric_entities_design.md">Fabric - Secure-by-Design</a></li>
+<li><a href="/articles/26_fabric_security/03_fabric_LUI_encryption.md">Digital Entities Encryption</a></li>
+<li><a href="/articles/26_fabric_security/04_fabric_interfaces_security.md">Interfaces Encryption</a></li>
+<li><a href="/articles/26_fabric_security/05_fabric_webservices_security.md">Web Services Security</a></li>
+    
+</details> 
+
 
 <details>
 <summary markdown="span"><strong>Auditing<strong><a href="/articles/27_auditing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>

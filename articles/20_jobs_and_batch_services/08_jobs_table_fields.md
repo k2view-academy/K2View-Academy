@@ -1,4 +1,4 @@
-# Jobs Management & Configuration
+# Jobs Monitoring
 
 Fabric provides a range of tools and informative data for configuring and managing Jobs and their processes.
 

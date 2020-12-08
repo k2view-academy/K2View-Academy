@@ -15,7 +15,7 @@ A Digital Entity is a digital version of a person, place or thing and is usually
 ### Key Fabric Features
 * Modern and distributed architecture that **provides linear scalability and proven fault-tolerance** on commodity hardware and cloud infrastructures.
 * Data replication capabilities across nodes and datacenters that **provide customers with the peace of mind of knowing they can survive node failures or regional outages**.
-* Patented Digital Entity based [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdbmicrodb), a data lake for each Digital Entity instance that **provides unparalleled performance with standard (ANSI) SQL queries**.
+* Patented Digital Entity based [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb), a data lake for each Digital Entity instance that **provides unparalleled performance with standard (ANSI) SQL queries**.
 * Patented data security approach, every MicroDB is encrypted individually, **providing the peace of mind that massive data breaches are prevented**.
 * Unique near-data-logic architecture that **enables millisecond performance and throughput for APIs**. 
 * Built-in integrated drag-and-drop data management capabilities to enable a **time-to-market that is measured in days to weeks and not weeks to months**.  

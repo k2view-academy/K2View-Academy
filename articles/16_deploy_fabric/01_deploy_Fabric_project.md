@@ -55,7 +55,6 @@ You can check which objects are deployed in the Fabric server using the Fabric *
 - **list DB_SOURCES**, lists all the DB interfaces.
 
 ###### Syntax:
-
 ~~~
     list lut; 
     list lu_types;
