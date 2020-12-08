@@ -70,11 +70,10 @@ When running the switch environment command `set_global environment='UAT2';` the
 set;
 |key                              |value                               |
 +---------------------------------+------------------------------------+
-|...							  |									   | 	
-|ENVIRONMENT					  |UAT2								   |	
-|...							  |									   |
+|...                              |                                    |
+|ENVIRONMENT                      |UAT2                                |
+|...                              |                                    |
 |Global.CRM.SOURCE_ENV_NAME       |UAT2_ALPHA                          |
-
 ```
 
 No set global command had to be  executed, since values are defined at the Environment. 
