@@ -4,6 +4,7 @@ An environment is defined in Fabric using the following steps:
 
 * Creating the environment in the Fabric Studio using the **Environments List** grid.
 * Populating the connection details of the interfaces via the **Selected Environment** grid.
+* Overriding Globals in any of the levels - Shared, Reference or LUs via the dedicated tab at the **Selected Environment** grid.   
 * Deploying all the environments to the server while defining the active environment.
 
 ### Step 1 - Creating the Environment
@@ -40,10 +41,43 @@ By default, all interfaces are enabled whereby the settings of each relevant int
 
    ![image](images/25_02_2.PNG)
 
+### Step 3 - Overriding Globals per Environment
 
-### Step 3 - Deploying the Environments
+In addition to the interfaces that are copied automatically to the created environment, ready for updates, the Globals are also shown in the environment's tabs (yellow highlighted in the below).
 
-Repeat steps 1 and 2 to create the required environments and then do the following:
+![image](images/25_globals_menu.png)
+
+
+
+By default, all Globals has the origin implementation values, yet with the option to change them. 
+
+Note that:
+
+1. There is option to override Globals among **any level** - Shared Objects, References and LUs. The Globals environment's table reflects their type within a dedicated column - "*Logical Unit*", as following: for *LU* it is shown with the LU name, for *References* it appears as "k2_ref" and for Shared Objects this column will be empty. Here is an example:
+
+   ![image](images/globals_table.png)
+
+   
+
+2. Only *non-final* Globals are shown at this Globals environment's table, because those that are defined as final are anyway not changeable. In the above Globals environment's table we can see only two Shared Objects Globals, while actually four Globals were set in this project:
+
+   ![image](images/shared_globals.png)
+
+   As can be seen, the two other are signed as *Final* and thus are not shown at Environment Globals table.
+
+
+
+Once a Global value is changed - it shown in bold form, indicating that this value is overriding the default, as illustrated at the below example: ![image](images/globals_table_with_change.png)
+
+
+
+**Note**: if you made a change in the implementation (on any level), for example - adding a new Global, you have to reopen the Environment window in order to see it reflected in the table.
+
+
+
+### Step 4 - Deploying the Environments
+
+Repeat steps 1-3 to create the required environments and then do the following:
 
 1. Save the environments definitions:
 
