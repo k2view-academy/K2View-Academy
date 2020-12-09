@@ -176,4 +176,4 @@ The table below lists the TDM tables and their description.
 
 
 
-[![Previous](/articles/images/Previous.png)](01_tdm_overview.md)
+[![Previous](/articles/images/Previous.png)](01_tdm_architecture.md)
