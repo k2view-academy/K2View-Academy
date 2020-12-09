@@ -33,7 +33,7 @@ In addition to levels, priority is managed by **scope**: if the Global is define
 
 Following is a *by-scope* prioritization illustration.  
 
-##### <img src="images/08_05_globals_override_priority_lu.png" alt="image" style="zoom:80%;" />
+##### <img src="images/08_05_globals_override_priority_lu.png" alt="image" style="zoom:60%;" />
 
 * Once a Global variable is set in a lower level, per scope/LU, it will be reflected and inherited by upper levels (unless overridden). For example - in case Implementation holds a value for LU "A", then when creating an environment it will be shown also there as Global variable associated to that LU.
 * Yet, in any upper level, another split can be applied
@@ -144,7 +144,7 @@ Once tests are done - it can be reset back to the original cluster/environment/i
 
 Following is an illustration example demonstrating a combined settings priority rules. Colored objects are those which hold Global settings, as described below
 
-##### <img src="images/08_05_priority_combined_example.png" alt="image" style="zoom:90%;" />
+##### <img src="images/08_05_priority_combined_example.png" alt="image" style="zoom:60%;" />
 
  In this example
 
