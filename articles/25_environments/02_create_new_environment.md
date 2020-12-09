@@ -1,4 +1,4 @@
-# Create New Environment
+# Create and Edit Environment
 
 An environment is defined in Fabric using the following steps:
 
@@ -6,6 +6,8 @@ An environment is defined in Fabric using the following steps:
 * Populating the connection details of the interfaces via the **Selected Environment** grid.
 * Overriding Globals in any of the levels - Shared, Reference or LUs via the dedicated tab at the **Selected Environment** grid.   
 * Deploying all the environments to the server while defining the active environment.
+
+When editing an existing environment, step 1 below shall be skipped.  
 
 ### Step 1 - Creating the Environment
 
@@ -34,46 +36,40 @@ Once **Name** in the  **Environments List** grid is clicked, all DB and non-DB i
 
 By default, all interfaces are enabled whereby the settings of each relevant interface can be disabled if it is not applicable for the environment.
 
-1. Select the interface and enable or disable it to add it to the environment or to remove it from the environment by either:
-   * Clicking the **Enabled** column.
+1. Select the interface and enable or disable it for the environment by either:
+   * Clicking the **Enabled** column checkbox.
    * Right clicking the row and clicking **Set Selected Rows as Enabled** or **Set Selected Rows as Disabled**. Hold the **Ctrl** key to select multiple rows. 
-2. Populate the relevant fields of each active interface in the  **Selected Environment** grid: server, user, password, etc. If the project has several interface types, go through the tabs and populate all mandatory fields.
+2. Populate the relevant fields of each active interface in the  **Selected Enviדronment** grid: server, user, password, etc. If the project has several interface types, go through the tabs and populate all mandatory fields.
 
    ![image](images/25_02_2.PNG)
 
 ### Step 3 - Overriding Globals per Environment
 
-In addition to the interfaces that are copied automatically to the created environment, ready for updates, the Globals are also shown in the environment's tabs (yellow highlighted in the below).
+In addition to the interfaces that are copied automatically to the created environment, ready for updates, the Globals can also be overridden, per environment, via the Globals' tab. 
 
-![image](images/25_globals_menu.png)
+The Globals tab grid contains the following columns:
 
+* Logical Unit [read-only, grayed-out], indicates if this is a Shared Object variable or associated to a specific unit/scope. 
+  * For *LU* it is shown with the LU name, for *References* it appears as "k2_ref" and for Shared Objects this column will be empty).
+  * If Global is defined both at Shared Objects and at LU, it will appear twice, accordingly.
+* Category [read-only, grayed-out], shows its category as it was originally defined (if at all)  
+* Name  [read-only, grayed-out], shows the variable name
+* Value - shows the value which is set for this environment. As long as not changed - Globals inherit the origin implementation value. Once a Global value is changed - it shown in a bold form as illustrated below.
+* Comment, recommended to be used for explaining why it was changed for this environment.
 
+![image](images/globals_table_with_change.png)
 
-By default, all Globals has the origin implementation values, yet with the option to change them. 
+To **edit** the Global variable value: Type in the new value for the required Global variable. Once a Global value is changed - it will be shown in a bold form (also when opened this window later).
 
-Note that:
-
-1. There is option to override Globals among **any level** - Shared Objects, References and LUs. The Globals environment's table reflects their type within a dedicated column - "*Logical Unit*", as following: for *LU* it is shown with the LU name, for *References* it appears as "k2_ref" and for Shared Objects this column will be empty. Here is an example:
-
-   ![image](images/globals_table.png)
-
-   
-
-2. Only *non-final* Globals are shown at this Globals environment's table, because those that are defined as final are anyway not changeable. In the above Globals environment's table we can see only two Shared Objects Globals, while actually four Globals were set in this project:
-
-   ![image](images/shared_globals.png)
-
-   As can be seen, the two other are signed as *Final* and thus are not shown at Environment Globals table.
+To **revert** the changes - click on the left-hand gray area of the Global variable entry. Once the entry is shown as "selected" right click and choose to "Reset To Original Values". 
 
 
 
-Once a Global value is changed - it shown in bold form, indicating that this value is overriding the default, as illustrated at the below example: ![image](images/globals_table_with_change.png)
+Notes:
 
-
-
-**Note**: if you made a change in the implementation (on any level), for example - adding a new Global, you have to reopen the Environment window in order to see it reflected in the table.
-
-
+1. Only *non-final* Globals are shown at this Globals environment's table, because those that are defined as final are anyway not changeable. 
+2. Globals variables values can be overridden per environment but creating new Global variables per environment is not available.
+3. If a change was done in the implementation, for example - adding a new Global at *Shared Objects*, the the Environment window shall be closed and reopened, in order to see it reflected in the Globals' grid table.
 
 ### Step 4 - Deploying the Environments
 

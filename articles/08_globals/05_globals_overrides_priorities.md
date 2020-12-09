@@ -33,7 +33,7 @@ In addition to levels, priority is managed by **scope**: if the Global is define
 
 Following is a *by-scope* prioritization illustration.  
 
-##### <img src="images/08_05_globals_override_priority_lu.png" alt="image" style="zoom:80%;" />
+##### <img src="images/08_05_globals_override_priority_lu.png" alt="image" style="zoom:60%;" />
 
 * Once a Global variable is set in a lower level, per scope/LU, it will be reflected and inherited by upper levels (unless overridden). For example - in case Implementation holds a value for LU "A", then when creating an environment it will be shown also there as Global variable associated to that LU.
 * Yet, in any upper level, another split can be applied
@@ -142,26 +142,26 @@ Once tests are done - it can be reset back to the original cluster/environment/i
 
 ### Example - Combined Priorities
 
-Following is an illustration example demonstrating a combined settings priority rules:
+Following is an illustration example demonstrating a combined settings priority rules. Colored objects are those which hold Global settings, as described below
 
-##### <img src="images/08_05_priority_combined_num.png" alt="image" style="zoom:90%;" />
+##### <img src="images/08_05_priority_combined_example.png" alt="image" style="zoom:60%;" />
 
- In this example (numbers refers to the illustration's numbers. colored numbers indicate a settings which was made on that object):
+ In this example
 
-* At Fabric Implementation there is no override per LU (5), meaning taking the *Shared Objects* values (1) for *all* objects
-* At Environment level - an override is made (2) on the Shared Object, i.e. - applied on *all* objects and LUs. No change per LU on that level (6) 
-* At Cluster level - an override is done (7) for one of LUs, while for other - not, meaning that inherit the previous level (2)
-* At Session level - an override is made (9, 10) for two LUs, and in addition a change was done on the Shared Objects (4), which applied on other LUs and objects (Ref. & WS).
+* At Fabric Implementation there is no override per LU, meaning taking the *Shared Objects* values for *all* objects
+* At Environment level - an override is made on the Shared Object, i.e. - applied on *all* objects and LUs. No change per LU on that level.
+* At Cluster level - an override is done for one of LUs, while for other - not, meaning that inherit the previous level.
+* At Session level - an override is made for two LUs, and in addition a change was done on the Shared Objects, which applied on other LUs and objects (Ref. & WS).
 
 
 
-Taking the above cases examples, let's refer to the SOURCE_ENV_NAME Global variable, following the example illustration, and examine what will be the actual values (as will be retrieved within the `set;` command).
+Taking the previous cases examples, let's refer to the SOURCE_ENV_NAME Global variable, following the example illustration, and examine what will be the actual values (as will be retrieved within the `set;` command).
 
 The defined values for the SOURCE_ENV_NAME :
 
-* Fabric Implementation - Shared Objects - "UAT" (1)
-* Environment - Shared Objects (empty Logical Unit) - "UAT2_ALPHA" (2)
-* Cluster - LU "A" - "UAT2_ALPHA_123" (7)
+* Fabric Implementation - Shared Objects - "UAT" 
+* Environment - Shared Objects (empty Logical Unit) - "UAT2_ALPHA" 
+* Cluster - LU "A" - "UAT2_ALPHA_123" 
 * Session - Shared Objects -  "UAT2_ALPHA_EXPORT_5" ; LU "A" - "UAT12"; LU "B" - "UAT17"
 
 The actual values:
