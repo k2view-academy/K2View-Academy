@@ -135,4 +135,4 @@
 
 
 
-[![Previous](/articles/images/Previous.png)](01_tdm_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_architecture.md)
+[![Previous](/articles/images/Previous.png)](01_tdm_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/tdm_architecture/01_tdm_architecture.md)
