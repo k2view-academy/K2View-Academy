@@ -8,6 +8,14 @@ The Data Catalog describes how an organization collects, transforms and stores i
 
 Moreover, the solution answers data privacy requirements for compliance with GDPR, CCPA and other global data protection regulations by enabling users to know how Fabric brings data from source systems, where in Fabric it is stored and how it is published externally.
 
+### Data Catalog Architecture
+
+![image](images/33_architecture.PNG)
+
+Data Catalog is a web application based on a distributed graph database OrientDB (Apache 2). The Fabric creates a JSON-format representation of the project, deploys it to the Fabric server and uses the OrientDB for creating and saving the graph structure. Then the catalog becomes available for the Web Framework for navigation.
+
+[Click for more information about the E2E Catalog creation process](02_e2e_catalog_creation_process).
+
 ### Data Catalog Components
 
 The Data Catalog introduces a list of data entities with relations between them. The data entities are Project, Interface, Schema, Table, Column, etc. 

@@ -1,6 +1,6 @@
 # Data Catalog Navigation
 
-Data Catalog is a web application based on a distributed graph database OrientDB (Apache 2). The catalog's UI enables the users to move through a data model’s graph, move from one level to another and filter specific elements. 
+Data Catalog's UI enables the users to move through a data model’s graph, move from one level to another and filter specific elements. 
 
 ### How Do I Access the Data Catalog?
 
