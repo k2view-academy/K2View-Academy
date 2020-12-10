@@ -12,12 +12,12 @@ The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_fr
 
 Legend is located in the down right corner of the screen and provides a visual description of each graph's component. The graph's data types can be split into the following categories:
 
-<table style="height: 116px; width: 700px;">
+<table style="height: 116px; width: 750px;">
 <tbody>
 <tr style="height: 18px;">
-<td style="width: 100px;"><strong>Category</strong></td>
-<td style="height: 18px; width: 200px;"><strong>Data Type</strong></td>
-<td style="height: 18px; width: 400px;"><strong>Description</strong></td>
+<td style="width: 150px;"><strong>Category</strong></td>
+<td style="width: 200px;"><strong>Data Type</strong></td>
+<td style="width: 400px;"><strong>Description</strong></td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 120px;"><strong>Project</strong></td>
