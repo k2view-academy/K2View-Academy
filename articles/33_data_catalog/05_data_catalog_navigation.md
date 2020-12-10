@@ -21,50 +21,49 @@ Legend is located in the down right corner of the screen and provides a visual d
 </tr>
 <tr style="height: 18px;">
 <td style="width: 120px;"><strong>Project</strong></td>
-<td style="height: 18px; width: 226px;"><img src="images/project_icon.PNG" alt="Project" /></td>
-<td style="height: 18px; width: 308px;">Project name</td>
+<td style="height: 18px; width: 226px;">PROJECT</td>
+<td style="height: 18px; width: 308px;">Project name.</td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 120px;"><strong>Source Components</strong></td>
-<td style="height: 18px; width: 226px;">
-<img src="images/interface_icon.PNG" alt="Interface" />
-</td>
-<td style="height: 18px; width: 308px;">Data Source components</td>
+<td style="height: 18px; width: 226px;">INTERFACE, INTERFACE_SCHEMA, INTERFACE_TABLE, INTERFACE_COLUMN</td>
+<td style="height: 18px; width: 308px;">Data Source components.</td>
 </tr>
 <tr style="height: 28px;">
 <td style="width: 120px;" rowspan="3"><strong>Target Components</strong><br /><strong><br /></strong><strong><br /></strong></td>
-<td style="width: 226px; height: 28px;"><img src="images/schema_icon.PNG" alt="Schema" /></td>
+<td style="width: 226px; height: 28px;">SCHEMA</td>
 <td style="width: 308px; height: 28px;">
-<p>Project's entity (LU, Web Services or Common)</p>
+<p>Project's entity (LU, Web Services or Common).</p>
 </td>
 </tr>
 <tr>
-<td style="width: 226px;"><img src="images/table_col_icon.PNG" alt="TableCol" /></td>
+<td style="width: 226px;">TABLE, COLUMN</td>
 <td style="width: 308px;">
 <p>LU's tables and columns</p>
 </td>
 </tr>
 <tr>
-<td style="width: 226px;"><img src="images/api_icon.PNG" alt="API" /></td>
+<td style="width: 226px;">API, API_FIELD</td>
 <td style="width: 308px;">
 <p>Web service and its fields</p>
 </td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 120px;" rowspan="3"><strong>Connection Lines</strong><br /><strong><br /></strong><strong><br /></strong></td>
-<td style="height: 18px; width: 226px;"><img src="images/contained_icon.PNG" alt="CONTAINED" /></td>
+<td style="height: 18px; width: 226px;">CONTAINED</td>
 <td style="height: 18px; width: 308px;">In which data entity the current entity is contained. For example, a table is contained schema (LU).</td>
 </tr>
 <tr style="height: 16px;">
-<td style="height: 16px; width: 226px;"><img src="images/use_icon.PNG" alt="USE" /></td>
+<td style="height: 16px; width: 226px;">USE</td>
 <td style="height: 16px; width: 308px;">Which data entity the current entity uses. For example, a TABLE (an LU table) uses an INTERFACE_TABLE.</td>
 </tr>
 <tr>
-<td style="width: 226px;"><img src="images/pop_keys_icon.PNG" alt="POPULATION_KEYS" /></td>
+<td style="width: 226px;">POPULATION_KEYS</td>
 <td style="width: 308px;">How the current table is populated in the LU schema. For example, when the relation is ACTIVITY -&gt; CUSTOMER, it means that the ACTIVITY table is populated using the key from CUSTOMER table.</td>
 </tr>
 </tbody>
 </table>
+
 
 To clear data elements from the tree or add them,  unselect or select the data types in the Legend. For example, if COLUMN is unselected, the Column data elements will disappear from the tree.
 
