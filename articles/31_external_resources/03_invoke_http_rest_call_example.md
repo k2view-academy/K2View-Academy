@@ -4,13 +4,13 @@ This example demonstrates how a Telco mobile carrier responds to customers compl
 
 Let's assume that a feed updates Fabric with data about the carrier's regional problems and that this information is stored in a Fabric reference table. When customers contact the Call Center to complain, a match is made between their current location and the reference table. To do so, the carrier's CRM calls the Fabric Web Service whose response  indicates whether the customer is located in a known bad service area.     
 
-The following example features:
--  A Web Service. For more information about creating Web Services in Fabric, click [here](/articles/15_web_services_and_graphit/03_create_a_web_service.md).
--  A REST API that calls the IP Geolocation service - https://ip-api.com/ - which responds in JSON format via a JSON parser provided in an external JAR. For more information, click [External Jars](/articles/31_external_resources/01_external_jars.md) usage. Note that in this scenario external JAR handling guidelines have been omitted.
-
-
 
 ### Example 
+
+The following example features a REST API call to the [IP-API](https://ip-api.com/) geolocation service which responds in JSON format parsed via a JSON parser provided in an [external JAR](/articles/31_external_resources/01_external_jars.md). Note that in this scenario external JAR handling guidelines have been omitted.
+
+This example also uses a Web Service. For more information about creating Web Services in Fabric, click [here](/articles/15_web_services_and_graphit/03_create_a_web_service.md).
+
 
 #### Preparation
 
