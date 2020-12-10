@@ -1,6 +1,6 @@
 # Invoking an HTTP REST Call
 
-This example demonstrates how a Telco mobile carrier responds to customers complaining about bad service using a REST API to reveal the location (country, city, long and lat coordinates) of a customer via their current IP domain. Note that this use case has already been implemented in a Fabric project, whereby proactive messages are sent to customers. 
+This example demonstrates how a Telco mobile carrier responds to customers complaining about bad service using a REST API to reveal the location (country, city, long and lat coordinates) of a customer via their current IP domain. 
 
 Let's assume that a feed updates Fabric with data about the carrier's regional problems and that this information is stored in a Fabric reference table. When customers contact the Call Center to complain, a match is made between their current location and the reference table. To do so, the carrier's CRM calls the Fabric Web Service whose response  indicates whether the customer is located in a known bad service area.     
 
