@@ -14,6 +14,8 @@ The following operations are supported:
 
   * INTERFACE (optional), the Data Catalog interface to use. If not provided, the **catalogdb** interface is used.
 
+  * Prior to running the command, execute the [Catalog Build](/articles/33_data_catalog/03_build_and_write_catalog.md) from the Fabric Studio and then perform the [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md) of the project's components.
+
 * **CATALOG DROP**, drops the provided project using the provided interface.
 
   * Use the following syntax:
