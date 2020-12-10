@@ -46,7 +46,7 @@ Note that you must perform **Write Catalog** in order to apply your catalog chan
 
 5. Logic to the Data Catalog using the K2View Web Framework to navigate the catalog:
 
-   ![image](images/33_05_example1.PNG)
+   ![image](images/33_01_tree.PNG)
 
 
 
