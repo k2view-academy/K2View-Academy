@@ -24,11 +24,14 @@ To create a new Data Catalog interface, do the following:
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Port</strong></td>
-<td style="height: 18px; width: 318px;">Port</td>
+<td style="height: 18px; width: 318px;">Port of the OrientDB server</td>
 </tr>
 <tr style="height: 28px;">
 <td style="width: 179px; height: 28px;"><strong>Database</strong></td>
-<td style="width: 318px; height: 28px;">OrientDB database name</td>
+<td style="width: 318px; height: 28px;">
+<p>OrientDB database name. Provide a name of the existing database or a new one.</p>
+<p>If new name is provided, the Orient DB database is created during Write Catalog.</p>
+</td>
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>User</strong>&nbsp;</td>
@@ -44,6 +47,9 @@ To create a new Data Catalog interface, do the following:
 </tr>
 </tbody>
 </table>
+
+
+
 
 
 
