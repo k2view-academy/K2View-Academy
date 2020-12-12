@@ -19,3 +19,4 @@ Various statistics using JMX counters within Fabric can be gathered. Below are s
 - Resources - such as cassandra, tasks, jdbc sessions, mdb sessions etc ...
 - Custom - Provides statistics to beans you would have manually added to your java code
 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/02_JMX_infoformat.md)
