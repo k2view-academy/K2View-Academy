@@ -1,12 +1,18 @@
 ## JMX Fabric Built-In Statistics
 
-JMX statistics is presented as a single web page that displays each of the relevant statistics extracted from Fabric systems during runtime execution.  
+JMX statistics is presented as a single web page that displays each of the relevant statistics extracted from Fabric systems during runtime execution.
+
+
 
 ### Access JMX Statistics
 
-To do so, open your Fabric web admin panel and select the **Statistics** section of the left-hand panel.
+Access the admin panel by clicking on the globe icon on the top left corner of **Fabric Studio**. 
 
-The admin panel can be accessed by clicking on the globe icon on the top left corner of **Fabric Studio** .
+<img src="/articles/34_JMX_statistics/images/JMX-pic2.png">
+
+Enter your credentials to the admin panel home page, then select the **Statistics** section of the left-hand panel.
+
+<img src="/articles/34_JMX_statistics/images/JMX-pic1.PNG">
 
 From the main window panel the various statistics can be accesses by expanding the required section located under one of the five main sections:
 
@@ -143,3 +149,6 @@ timestamp		2020-12-12 21:38:39.794 UTC		The time, in miliseconds since 1970-1-1 
 since			0:00:09.544						Time in miliseconds since the event last occured
 ```
 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/01_JMX_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/03_JMX_custom.md)
