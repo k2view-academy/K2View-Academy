@@ -33,3 +33,6 @@ The purpose of this method is to measure the duration of the function's call bet
 `key` - designates the sub key for this statistics
 
 This method is returned by calling ```.close()``` on this object to indicate the end of the duration measurement
+
+
+[![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/02_JMX_infoformat.md)
