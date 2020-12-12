@@ -35,7 +35,7 @@ The purpose of this method is to measure the duration of the function's call bet
 This method is returned by calling ```.close()``` on this object to indicate the end of the duration measurement
 
 
-#### Code Example:
+### Code Example:
 
 ```java 
   public static String fnCustomStats() throws Exception { String status= "success";
