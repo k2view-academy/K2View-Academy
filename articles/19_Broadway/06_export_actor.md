@@ -30,7 +30,7 @@ This setting is optional where if hidden or final are not set, the argument rema
 
 The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
-Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
+Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow. In addition, ***. actor** file of the inherited Actor is added to the project tree. 
 
 The [Actor's input and output arguments](03_broadway_actor_window.md#properties-overview) in the Properties window can be filtered using the Parameter's filter to display only the inherited Actor's arguments, or only the ancestor's arguments or all.
 
@@ -73,7 +73,7 @@ To extend the behavior of the exported Actor, do the following:
 
 5. Click **SUBMIT** to save the changes.
 
-
+Note that you can also modify an inherited Actor by manually editing the JSON of the ***.actor** file.
 
 
 
