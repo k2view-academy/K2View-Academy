@@ -18,7 +18,7 @@ The data relationships indicate the connections between the data entities and de
 
 * *{Interface} CONTAINED in a {Project}*
 * *{Schema} CONTAINED in a {Project}*
-* *{Api} USE a {Table}*
+* *{API} USE a {Table}*
 
 The entities and the connections between them are used to parse the data, analyze it and display it from the Project level, through the Schema to the API and Table fields level. 
 
