@@ -1,10 +1,10 @@
-# The Catalog Commands
+# Catalog Commands
 
-The **CATALOG** commands are used to build catalog files that represents the project entities and to deploy them to the environment or to drop the catalog deployed to the server. 
+**CATALOG** commands are used to build the catalog files that represent the project entities and to then deploy them to the environment or to drop the catalog deployed to the server. 
 
 The following operations are supported:
 
-* **CATALOG WRITE**, writes the catalog files (that were created by the Build Catalog option from the Fabric Studio) using the provided interface or using the default interface (if the interface is not provided).  Note that if the files don’t exist (the Catalog Build didn’t run yet) , the command will fail.   
+* **CATALOG WRITE**, writes the catalog files (created by the Build Catalog option from the Fabric Studio) using the provided interface or using the default interface (if the interface is not provided).  Note that if the files don’t exist (the Catalog Build has not yet run), the command will fail.   
 
   * Use the following syntax:
 
@@ -12,7 +12,7 @@ The following operations are supported:
     CATALOG WRITE [INTERFACE=<name>];
     ~~~
 
-  * INTERFACE (optional), the Data Catalog interface to use. If not provided, the **catalogdb** interface is used.
+  * INTERFACE (optional), the Data Catalog interface used. If not provided, the **catalogdb** interface is used.
 
   * Prior to running the command, execute the [Catalog Build](/articles/33_data_catalog/03_build_and_write_catalog.md) from the Fabric Studio and then perform the [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md) of the project's components.
 
