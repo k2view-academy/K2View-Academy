@@ -1,11 +1,11 @@
 # Broadway Flow - Stages
 
-**A Broadway flow** acts as a graph / tree and is built of several **Stages** where each Stage is a step of the flow.
-- A Stage can have one or more [Actors](03_broadway_actor.md).
+A Broadway flow is a graph / tree built of several **Stages** where each Stage is a step of the flow that can include one or more [Actors](03_broadway_actor.md).
+This article describes the following Stage's abilities:
 - A Stage can be [added to or deleted from](19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage) the flow.
 - A Stage can be split to create [more than one Stage on the same level](19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages).
 - [Stage conditions](19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow.  
-- Actors can be executed in parallel within a Stage.
+- Actors can be [executed in parallel](19_broadway_flow_stages.md#support-parallel-actors-execution) within a Stage.
 
 The flow's Stages are executed consecutively from left to right. When there are several Stages on the same level, the execution order is top down. The Actors within each Stage are also executed top down.
 
