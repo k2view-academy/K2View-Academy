@@ -1,16 +1,16 @@
 # Data Catalog Navigation
 
-Data Catalog's UI enables the users to move through a data model’s graph, move from one level to another and filter specific elements. 
+The Data Catalog UI enables users to move through a data model’s graph, from one level to another and to filter specific elements. 
 
 ### How Do I Access the Data Catalog?
 
-The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu to display the circle representing your project. If multiple projects were deployed to the same OrientDB database, all of them will be displayed.
+The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu to display the circle representing your project. If multiple projects have been deployed to the same OrientDB database, all projects are displayed.
 
 <img src="images/33_02_proj.PNG" alt="image" style="zoom:80%;" />
 
-### Data Catalog's Legend
+### Data Catalog Legend
 
-Legend is located in the down right corner of the screen and provides a visual description of each graph's component. The graph's data types can be split into the following categories:
+The Legend is displayed on the bottom right corner of the screen and provides a visual description of each graph's components. The graph's data types can be split into the following categories:
 
 <table style="height: 116px; width: 750px;">
 <tbody>
@@ -26,68 +26,68 @@ Legend is located in the down right corner of the screen and provides a visual d
 </tr>
 <tr style="height: 18px;">
 <td style="width: 120px;"><strong>Source Components</strong></td>
-<td style="height: 18px; width: 226px;">INTERFACE, INTERFACE_SCHEMA, INTERFACE_TABLE, INTERFACE_COLUMN</td>
-<td style="height: 18px; width: 308px;">Data Source components.</td>
+<td style="height: 18px; width: 226px;">INTERFACE INTERFACE_SCHEMA INTERFACE_TABLE INTERFACE_COLUMN</td>
+<td style="height: 18px; width: 308px;">Data source components.</td>
 </tr>
 <tr style="height: 28px;">
 <td style="width: 120px;" rowspan="3"><strong>Target Components</strong><br /><strong><br /></strong><strong><br /></strong></td>
 <td style="width: 226px; height: 28px;">SCHEMA</td>
 <td style="width: 308px; height: 28px;">
-<p>Project's entity (LU, Web Services or Common).</p>
+<p>Project entity (LU, Web Services or Common).</p>
 </td>
 </tr>
 <tr>
 <td style="width: 226px;">TABLE, COLUMN</td>
 <td style="width: 308px;">
-<p>LU's tables and columns</p>
+<p>LU tables and columns.</p>
 </td>
 </tr>
 <tr>
 <td style="width: 226px;">API, API_FIELD</td>
 <td style="width: 308px;">
-<p>Web service and its fields</p>
+<p>Web service and its fields.</p>
 </td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 120px;" rowspan="3"><strong>Connection Lines</strong><br /><strong><br /></strong><strong><br /></strong></td>
 <td style="height: 18px; width: 226px;">CONTAINED</td>
-<td style="height: 18px; width: 308px;">In which data entity the current entity is contained. For example, a table is contained schema (LU).</td>
+<td style="height: 18px; width: 308px;">The data entity that holds the current entity. For example, a table is contained in a Schema (LU).</td>
 </tr>
 <tr style="height: 16px;">
 <td style="height: 16px; width: 226px;">USE</td>
-<td style="height: 16px; width: 308px;">Which data entity the current entity uses. For example, a TABLE (an LU table) uses an INTERFACE_TABLE.</td>
+<td style="height: 16px; width: 308px;">The data entity used by the current entity. For example, a TABLE (LU table) uses an INTERFACE_TABLE.</td>
 </tr>
 <tr>
 <td style="width: 226px;">POPULATION_KEYS</td>
-<td style="width: 308px;">How the current table is populated in the LU schema. For example, when the relation is ACTIVITY -&gt; CUSTOMER, it means that the ACTIVITY table is populated using the key from CUSTOMER table.</td>
+<td style="width: 308px;">The method the current table is populated in the LU schema. For example, when the relationship is ACTIVITY > CUSTOMER, the ACTIVITY table is populated using the key from the CUSTOMER table.</td>
 </tr>
 </tbody>
 </table>
 
 
-To clear data elements from the tree or add them,  unselect or select the data types in the Legend. For example, if COLUMN is unselected, the Column data elements will disappear from the tree.
+To clear / add data elements from / to the tree,  uncheck / check the data types in the Legend. For example, if the COLUMN is unchecked, the Column data elements are removed  from the tree.
 
 ### How Do I Navigate Through the Data Catalog?
 
-The navigation through the Data Catalog is performed using the following tools:
+The following tools are used to navigate the Data Catalog:
 
-* Search the required data element using the **Search** area in the top left corner of the screen. The search is performed using the *search-as-you-type* field type. The search results are presented in a table, enabling the user to either add an entity to the tree or to replace the tree focus to the selected entity.
+* Search the data element using the **Search** area in the top left corner of the screen. The search is performed using the *search-as-you-type* field type. The search results are presented in a table, enabling users to either add an entity to the tree or to replace the tree's focus to the selected entity.
 
   ![image](images/33_02_search.PNG)
 
-* Change the tree view by using the icons in the top right corner of the screen:
+* Change the tree view using the icons in the top right corner of the screen:
 
   ![image](images/33_02_view.PNG)
 
-  * Display the tree horizontally, vertically or using a centralized view by clicking one of the <img src="images/33_02_tree.PNG" alt="image" style="zoom: 67%;" />icons. 
+  * Display the tree horizontally, vertically or using a centralized view by clicking an <img src="images/33_02_tree.PNG" alt="image" style="zoom: 67%;" />icon. 
   * Zoom the tree to fit the screen by clicking the <img src="images/33_02_fit.PNG" alt="image" style="zoom: 67%;" /> icon.
   * Return to the collapsed project by clicking the <img src="images/33_02_home.PNG" alt="image" style="zoom: 67%;" /> icon.
 
-* Move to lower hierarchy level by double-clicking on the data element. For example, double click on the Table data element will display all Column data elements related to it.
+* Move to lower hierarchy level by double-clicking the data element. For example, double click the Table data element to display all related Column data elements.
 
-* Click on any of the data elements or the connection lines to display its properties, such as name, ID or type in the Properties screen. Click anywhere in the empty screen area to hide the Properties screen.
+* Click any data element or connection line to display its properties, such as name, ID or type in the Properties screen. Click anywhere in the empty screen area to hide the Properties screen.
 
-* Expand the tree, focus on specific node or clear the node or the connection line by selecting the option either from the Properties screen or from the right click context menu. Clear multiple data elements can be done once they are selected using right click > hold and drag the line.
+* Expand the tree, focus on a specific node or clear the node or the connection line by selecting the option either from the Properties screen or from the right click context menu. To clear multiple data elements, right click and select them and then hold and drag the line.
 
   <img src="images/33_02_select.PNG" alt="image" style="zoom: 55%;" />
 
