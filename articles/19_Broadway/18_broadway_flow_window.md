@@ -139,7 +139,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <tr>
 <td><a href="19_broadway_flow_stages.md#support-parallel-actors-execution">Parallel</a></td>
 <td style="width: 465px;">
-<p>Click to set a number of Actors to be executed in parallel within a Stage.</p>
+Click to set a number of Actors to be executed in parallel within a Stage.
 </td>
 </tr>
 <tr>
