@@ -56,9 +56,10 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td width="200">Debug ON / OFF</td>
+<td width="200"><a title="Debug" href="/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
 <td style="width: 465px;">
-<p>Enable the Debug mechanism. Only when Debug is ON, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
+<p>Enable the Debug mechanism.</p>
+<p>When Debug is ON or Live, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
 </td>
 </tr>
 <tr>
@@ -83,6 +84,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </table>
 
 
+
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
@@ -92,7 +94,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="13" width="400pxl">
+<td rowspan="14" width="400pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
 <td width="80pxl">Paste Selection</td>
@@ -135,6 +137,12 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 465px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
+<td><a href="19_broadway_flow_stages.md#support-parallel-actors-execution">Parallel</a></td>
+<td style="width: 465px;">
+<p>Click to set a number of Actors to be executed in parallel within a Stage.</p>
+</td>
+</tr>
+<tr>
 <td width="200"><a href="23_transactions.md">Transaction</a></td>
 <td style="width: 465px;">Click to open or close the transaction.</td>
 </tr>
@@ -148,6 +156,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 </tbody>
 </table>
+
 
 
 

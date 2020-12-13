@@ -5,6 +5,7 @@
 - A Stage can be [added to or deleted from](19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage) the flow.
 - A Stage can be split to create [more than one Stage on the same level](19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages).
 - [Stage conditions](19_broadway_flow_stages.md#what-is-a-stage-condition) can be added to the flow to create different scenarios (branches) of the same flow.  
+- Actors can be executed in parallel within a Stage.
 
 The flow's Stages are executed consecutively from left to right. When there are several Stages on the same level, the execution order is top down. The Actors within each Stage are also executed top down.
 
@@ -100,6 +101,20 @@ Depending on the flow's input, the execution can run via one of four alternative
 
 ![image](images/99_19_cond_example_2.png)
 
+### Support Parallel Actors Execution
 
+Broadway enables running several Actors of the same Stage in parallel. 
+
+To set the parallel execution, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Parallel** to populate the number of parallel threads. Once submitted, the orange mark is displayed above the Stage name:
+
+<img src="images/99_19_parallel_01.PNG" alt="Parallel" />
+
+To remove the parallel execution, click ![image](images/99_19_dots.PNG) > **Parallel** and set the number to zero. 
+
+**Example**
+
+The following example displays a flow with two Inner Flows on Stage 2 that are executed in parallel.
+
+<img src="images/99_19_parallel_02.PNG" alt="Parallel" />
 
 [![Previous](/articles/images/Previous.png)](18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)
