@@ -120,14 +120,6 @@
 <p>The Data Flux mode enables the user to keep versions (backups) of his data during his functional tests. This way, the user can return to the latest saved version of his data if something goes wrong during the testing. The user can create an Extract task to create a version of his data and save the version into Fabric. Then if something goes wrong during the functional testing, and the tester wishes to get back the extracted version in his testing environment, the tester can create a load task and ask to delete the corrupted data and re-load the selected version of his data to this environment.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="250 pxl">
-<p>&nbsp;</p>
-</td>
-<td valign="top" width="650 pxl">
-<p>&nbsp;</p>
-</td>
-</tr>
 </tbody>
 </table>
 
