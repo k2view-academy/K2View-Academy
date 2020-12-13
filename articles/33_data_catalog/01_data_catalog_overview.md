@@ -2,7 +2,7 @@
 
 ![image](images/33_architecture.PNG)
 
-Data Catalog is a web application based on a distributed graph database OrientDB (Apache 2). It is a graphical tool that visualizes the Project’s data structure and relationships between the entities. The Fabric creates a JSON-format representation of the project, deploys it to the Fabric server and uses the OrientDB for creating and saving the graph structure. Then the catalog becomes available for the Web Framework for navigation. 
+Data Catalog is a web application based on a distributed OrientDB (Apache 2) graph database that visualizes a project’s data structure and the relationships between its entities.  Fabric creates a JSON-format representation of the project, deploys it to the Fabric server and uses the OrientDB to create and save the graph structure. The resulting Data Catalog then becomes available to the Web Framework for navigation. 
 
 ![image](images/33_01_tree.PNG)
 
@@ -12,9 +12,9 @@ Moreover, the solution answers data privacy requirements for compliance with GDP
 
 ### Data Catalog Components
 
-The Data Catalog introduces a list of data entities with relations between them. The data entities are Project, Interface, Schema, Table, Column, etc. 
+The Data Catalog introduces a list of data entities and the relationships between them. These data entities include Project, Interface, Schema, Table and Column. 
 
-The data relations indicate the connections between the data entities that determine their hierarchy. For example:
+The data relationships indicate the connections between the data entities and determine their hierarchy. For example:
 
 * *{Interface} CONTAINED in a {Project}*
 * *{Schema} CONTAINED in a {Project}*
@@ -22,7 +22,7 @@ The data relations indicate the connections between the data entities that deter
 
 The entities and the connections between them are used to parse the data, analyze it and display it from the Project level, through the Schema to the API and Table fields level. 
 
-The solution has a Build Catalog option that creates JSON format files representing the entire project. The automatic catalog files can be overridden if needed.
+The solution has a Build Catalog option that creates JSON format files representing an entire project. The automatic catalog files can be overridden if needed.
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_e2e_catalog_creation_process.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_e2e_catalog_creation_process.md)  
 
