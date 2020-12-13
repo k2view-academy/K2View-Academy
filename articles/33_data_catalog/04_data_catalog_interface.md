@@ -1,6 +1,6 @@
 # Data Catalog Interface
 
-Fabric requires the definition of an Interface type = **Data Catalog** for enabling the Data Catalog functionality. At least one interface of this type must be defined in the project. The name of the default Data Catalog interface must be **catalogdb**, while the name of additional interfaces of this type is not restricted to any specific value.
+To enable Data Catalog in a Fabric project, at least one interface type must be defined as a **Data Catalog**. The name of the default Data Catalog interface must be **catalogdb**. The names of additional interfaces of this type are not restricted to any specific values.
 
 To create a new Data Catalog interface, do the following:
 
@@ -20,30 +20,30 @@ To create a new Data Catalog interface, do the following:
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Server</strong></td>
-<td style="height: 18px; width: 318px;">IP address of the OrientDB server</td>
+<td style="height: 18px; width: 318px;">IP address of the OrientDB server.</td>
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Port</strong></td>
-<td style="height: 18px; width: 318px;">Port of the OrientDB server</td>
+<td style="height: 18px; width: 318px;">Port of the OrientDB server.</td>
 </tr>
 <tr style="height: 28px;">
 <td style="width: 179px; height: 28px;"><strong>Database</strong></td>
 <td style="width: 318px; height: 28px;">
-<p>OrientDB database name. Provide a name of the existing database or a new one.</p>
-<p>If new name is provided, the Orient DB database is created during Write Catalog.</p>
+<p>OrientDB database name. Provide the name of an existing database or add a new one.</p>
+<p>If a new name is added, the Orient DB database is created during Write Catalog.</p>
 </td>
 </tr>
 <tr style="height: 18px;">
-<td style="height: 18px; width: 179px;"><strong>User</strong>&nbsp;</td>
-<td style="height: 18px; width: 318px;">Username</td>
+<td style="height: 18px; width: 179px;"><strong>User</strong></td>.
+<td style="height: 18px; width: 318px;">Username.</td> 
 </tr>
 <tr style="height: 16px;">
-<td style="height: 16px; width: 179px;"><strong>Password&nbsp;</strong></td>
-<td style="height: 16px; width: 318px;">Password&nbsp;</td>
+<td style="height: 16px; width: 179px;"><strong>Password</strong></td>.
+<td style="height: 16px; width: 318px;">Password.</td>.
 </tr>
 <tr>
 <td style="width: 179px;"><strong>Transactional</strong></td>
-<td style="width: 318px;">True/False</td>
+<td style="width: 318px;">True/False.</td>
 </tr>
 </tbody>
 </table>
