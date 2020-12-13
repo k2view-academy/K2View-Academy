@@ -50,4 +50,4 @@ If the user asks to extact a specific version of Customer 1 from PROD source env
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_business_entity_overview.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdm_implementation_flow.md)
