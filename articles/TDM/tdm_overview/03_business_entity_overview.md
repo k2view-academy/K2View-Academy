@@ -41,84 +41,73 @@ An LU is called a **Root LU** in a BE if it has no parent LU. In this case, the 
 
 ​                               
 
-Customer LU is the **Root LU** of the Customer BE. Each LU has its own LUs. When creating a TDM task to provision Customer 1,  the TDM task also needs to copy all the related children LUIs the following LUIs are extracted from source and created in Fabric:
-
+Customer LU is the **Root LU** of the Customer BE. Each LU has its own LUs. When creating a TDM task to copy Customer 1 from PROD environment,  the TDM task also needs to copy all the related Billing Accounts and Orders of Customer 1, and the related Network Elements and Devices of the customer's related Orders. The following LUIs are extracted from source and created in Fabric for Customer 1:
  
 
-| LU Name          | Parent LU Name | LU Instances                       |
-| ---------------- | -------------- | ---------------------------------- |
-| Customer         |                | 1                                  |
-| Ordering         | Customer       | 89, 90, 91, 92                     |
-| Billing          | Customer       | 10, 11, 12                         |
-| Network Elements | Ordering       | 600, 601, 602, 507, 889, 563, 432  |
-| Device           | Ordering       | 1000, 1001, 1002, 1003, 1004, 1005 |
-
- 
-
- <table width="&quot;900">
+ <table width="900 pxl">
 <tbody>
 <tr>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 <strong>LU Name</strong>
 </td>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 <strong>Parent LU Name</strong>
 </td>
-<td valign="top" width="300 pxl">
+<td valign="top" width="400 pxl">
 <strong>LU Instances</strong>
 </td>
 </tr>
 <tr>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Customer
 </td>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 &nbsp;
 </td>
-<td valign="top" width="300 pxl">
-1
+<td valign="top" width="400 pxl">
+PROD_1
 </td>
 </tr>
 <tr>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Ordering
 </td>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Customer
 </td>
-<td valign="top" width="300 pxl">
-89, 90, 91, 92
+<td valign="top" width="400 pxl">
+PROD_89, PROD_90, PROD_91, PROD_92
 </td>
 </tr>
 <tr>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Billing
 </td>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Customer
 </td>
-<td valign="top" width="300 pxl">
-10, 11, 12
+<td valign="top" width="400 pxl">
+PROD_10, PROD_11, PROD_12
 </td>
 </tr>
 <tr>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Network Elements
 </td>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Ordering
 </td>
-<td valign="top" width="300 pxl">
-600, 601, 602, 507, 889, 563, 432
+<td valign="top" width="400 pxl">
+PROD_600, PROD_601, PROD_602, PROD_507, PROD_889, PROD_563, PROD_432
 </td>
 </tr>
 <tr>
-<td valign="top" width="300 pxl">
+<td valign="top" width="250 pxl">
 Device
 </td>
-<td valign="top" width="300 pxl">Ordering</td>
-<td valign="top" width="300 pxl">
-1000, 1001, 1002, 1003, 1004, 1005
+<td valign="top" width="250 pxl">Ordering</td>
+<td valign="top" width="400 pxl">
+PROD_1000, PROD_1001, PROD_1002, PROD_1003, PROD_1004, PROD_1005
 </td>
 </tr>
 </tbody>
