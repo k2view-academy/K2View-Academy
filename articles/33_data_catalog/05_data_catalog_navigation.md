@@ -1,6 +1,6 @@
 # Data Catalog Navigation
 
-The Data Catalog UI enables users to move through a data model’s graph, from one level to another and to filter specific elements. 
+The Data Catalog UI enables users to move through a data model’s graph, move from one level to another and to filter specific elements.  
 
 ### How Do I Access the Data Catalog?
 
