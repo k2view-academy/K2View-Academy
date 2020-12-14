@@ -1,6 +1,6 @@
 # Override Data Catalog 
 
-Occasionally there may be a need to modify the catalog's structure before deploying it to the server. For example, if the table should be added to the Source DB interface but this change has not yet been performed by the 3rd party or, to reflect the future project changes.
+Occasionally there may be a need to modify the catalog's structure before deploying it to the server. For example, if the table should be added to the Source DB interface but this change has not yet been performed by the 3rd party, or to reflect future project changes.
 
 In the Data Catalog, catalog files can be updated manually. This includes adding new data entities or modifying the properties of existing entities.
 
