@@ -25,8 +25,8 @@ The **set_global global** command sets the value of the global indicated by <PAR
 <p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt;.</p>
 <p>
 <UL>
-<LI>When &lt;LUT NAME&gt; is specified and the Global is also defined under Shared Objects, the Global value is overridden only for the given &lt;LUT NAME&gt; scope. <br/>(note that the override takes effect only if the command for the specific LU is executed <b>after</b> the all-LUs settings. In case the command with '*.&lt;LUT NAME&gt;' is executed after, it will be applied also on that LU.)</LI>
-<LI>In case variable was not defined at implmentation - neither at Shared Objects nor at LU, action will not take effect. An error message appears then, indicating that it does not exist in that LU.</LI>
+<LI>When LUT NAME is specified and the Global is also defined under Shared Objects, the Global value is overridden only for the given LUT NAME&gt; scope. <br/>Note that the override takes effect only if the command for the specific LU is executed <b>after</b> all LU settings. If the command with the '*.&lt;LUT NAME&gt;' is executed later, it is also applied on the LU.)</LI>
+<LI>If the variable was not defined during implementation on a Shared Objects or LU level, the command is not applied and an error message is displayed indicating that it does not exist in the LU.</LI>
 </UL>
 </p>
 <p>Example:</p>
@@ -74,7 +74,7 @@ The **set_global global** command sets the value of the global indicated by <PAR
 
 ### How Do I Use the *Set* Command?
 
-The **set** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable (not defined at all at Fabric implementation), or to override an existing global for the Fabric session if the global is not Final.
+The **set** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable (not defined in the Fabric implementation), or to override an existing global for the Fabric session if the global is not Final.
 
 <table>
 <tbody style="vertical-align:top">
@@ -85,11 +85,11 @@ The **set** command can be used to set a variable **per session** so that the va
     set [&lt;LUT_NAME&gt;.]&lt;PARAM_NAME&gt;&nbsp; &lt;PARAM_VALUE&gt;;</p>
 </td>
 <td width="600pxl" >
-<p>Set the value of the variable indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt;.  A value of a Global parameter within a specific LUT can be set by specifting its name, as prefix</p>
+<p>Set the value of the variable indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt;.  A value of a Global parameter within a specific LUT can be set by specifting its name, as a prefix</p>
 <p>Example:</p>
 <p>set SOURCE_PRODUCT_VERSION=100;<br/>or<br/>set SOURCE_PRODUCT_VERSION 100;</p>
     <p>
-        Note: when specifying a Global variable value of LU on a session level, it is applied no matter when its SET command ran. Even if a general SET command will run <b>after</b> that, with same variable name, the LU scope value will still valid and will not be overriden.
+        Note that when specifying a Global variable value of an  LU on a session level, it is always applied when its SET command runs, even when a general SET command  runs <b>after</b> with same variable name. The LU scope value remains valid and will not be overriden.
     </p>
 </td>
 </tr>
@@ -98,9 +98,9 @@ The **set** command can be used to set a variable **per session** so that the va
 <p>set &lt;PARAM_NAME&gt; =&rsquo;&rsquo;;</p>
 </td>
 <td width="600">
-<p>Reset the variable value. If it is a new ad-hoc variable, then after reset it will be equal to "NULL". If it was already defined (cluster/environment/implementation) it will revert to the original value.</p>
+<p>Reset the variable value. If it is a new ad-hoc variable, after reset it will be equal to "NULL". If it has already been defined (cluster/environment/implementation) it  reverts to the original value.</p>
 <p>Example:<br>
-    Assume that the original value of the SOURCE_PRODUCT_VERSION is &rsquo;prod&rsquo;
+    Assuming that the original value of the SOURCE_PRODUCT_VERSION is &rsquo;prod&rsquo;
 </p>
 <p>    
     set SOURCE_PRODUCT_VERSION=&rsquo;uat&rsquo;;  // now the value at session is &rsquo;uat&rsquo; <br>
@@ -112,15 +112,15 @@ The **set** command can be used to set a variable **per session** so that the va
 <p>set [&lt;LUT_NAME&gt;.]&lt;PARAM_NAME&gt;;</p>
 </td>
 <td width="600">
-<p>Shows the value of &lt;PARAM_NAME&gt;.  A value of a Global parameter within a specific LUT can be retrieved by specifting its name, as prefix.</p>
+<p>Shows the value of &lt;PARAM_NAME&gt;.  A value of a Global parameter within a specific LUT can be retrieved by specifting its name as a prefix.</p>
 <p>Examples:</p>
 <p>set SOURCE_PRODUCT_VERSION;<br> 
     set CRM.SOURCE_PRODUCT_VERSION;</p>
     <p>
         NOTES:
         <UL>
-            <LI>In case a variable value was set different for a specific LU and for all others, and the command does <B>not</B> specify the 'LUT_NAME' (e.g. "set SOURCE_PRODUCT_VERSION;"), the command outcome will be an error message, indicating that there is ambiguty.</LI>
-        </UL>
+            <LI>If a variable value is different for a specific LU the command does <B>not</B> specify the 'LUT_NAME' (for example, "set SOURCE_PRODUCT_VERSION;"), the outcome of the command is an error message, indicating that there is ambiguty.</LI>
+        </UL>pl
     </p>
 </td>
 </tr>
@@ -132,8 +132,8 @@ The **set** command can be used to set a variable **per session** so that the va
     <p>Shows the session variables values.</p>
     <p>
        <UL>
-           <LI>Globals are shown with "Global" prefix, as "set" command shows not only Globals but other session variables too.</LI>
-           <LI>The Globals are shown in a "full" exapnded mode, include also values which are permeated from the Shared Objects toward  other levels. see <a href="/articles/08_globals/03_set_globals.md#understand-the-globals-appearance-as-result-of-set-command">below</a> for more information.</LI>
+           <LI>Globals are displayed with a Global prefix. The SET command also displays other session variables.</LI>
+           <LI>The Globals are shown in a fully expanded mode. This includes values going from the Shared Objects toward other levels. Refer to <a href="/articles/08_globals/03_set_globals.md#understand-the-globals-appearance-as-result-of-set-command">below</a> for more information.</LI>
         </UL> 
     </p>     
 </td>
@@ -144,13 +144,13 @@ The **set** command can be used to set a variable **per session** so that the va
 
 
 
-Click [here](/articles/03_logical_units/05_globals_overrides_priorities.md) for more information and more examples of variable scopes, level and priorities, as reflected also by the SET command.  
+Click [here](/articles/03_logical_units/05_globals_overrides_priorities.md) for more information and more examples on variable scopes, level and priorities, as reflected also by the SET command.  
 
 
 
-### Understand the Globals Appearance as result of *Set* Command
+### Understanding the Globals Appearance as result of a SET Command
 
-When running the `set;` commend (with no parameters) at Fabric console, it shows, as outcome, the values of variables exist at current session.
+When running the `set;` command (with no parameters) in a Fabric console, the displayed outcome shows the values of variables existing in the current session.
 
 * This outcome shows the Globals values as was set among the various ***scopes*** - Shared Objects, LUs, and References. Moreover - The Shared Objects Globals are permeated toward other objects  - References, WS and LUs, so that these values also shown at that command outcome.  
 
