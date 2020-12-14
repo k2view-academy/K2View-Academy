@@ -6,7 +6,7 @@ Broadway's [Actors inheritance mechanism](06_export_actor.md) provides an abilit
 
 If [modification of an inherited Actor](06_export_actor.md#how-do-i-modify-an-inherited-actor) is needed, you can either manually edit the JSON of the ***.actor** file, or open the Broadway flow that includes this Actor, edit it and save it selecting the **Override Current** option. 
 
-To simplify the Actor modification process and enhance it with additional options, Broadway introduces the **Actor Editor**. The Actor Editor window is based on the Actor's [Properties window](03_broadway_actor_window.md) and it enables editing the inherited build-in Actors as well as the user created Actors.  The Actor Editor is accessed from the project tree rather than via the flow.
+To simplify the Actor modification process and enhance it with additional options, Broadway introduces the **Actor Editor**. The Actor Editor window is based on the Actor's [Properties window](03_broadway_actor_window.md) and it enables editing the inherited Actors as well as creating new Actors.  The Actor Editor is accessed from the project tree.
 
 ### How Do I Use an Actor Editor?
 
@@ -28,3 +28,9 @@ The Actor Editor can be used to modify the ***.actor** file of either an inherit
 2. Populate the new Actor's name and click OK to open the Actor Editor.
 3. Select the Parent Actor to get the parent's input and output arguments. 
 4. Modify the required settings and debug.
+
+
+
+
+
+[![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)
