@@ -239,9 +239,7 @@ Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) i
 
 ### Flow Validation
 
-The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />.  
-
-Click the icon to display the window footer with the error messages:
+The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. Click the icon to display the window footer with the error messages:
 
 ![image](images/99_validation_output.PNG)
 
