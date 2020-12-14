@@ -2,25 +2,23 @@
 
 Occasionally there may be a need to modify the catalog's structure before deploying it to the server. For example, if the table should be added to the Source DB interface but this change has not yet been performed by the 3rd party, or to reflect future project changes.
 
-In the Data Catalog, catalog files can be updated manually. This includes adding new data entities or modifying the properties of existing entities.
+To support this requirement, Fabric provides an override catalog option that includes adding new data entities or modifying the properties of existing entities using **override.catalog** files.
 
 ### How Do I Override Catalog Files?
 
-1. Go to the **Resources** folder of the project entity and create a new **override.catalog** resource file. 
-2. To add a new node to the catalog:
-   * Add the new node description into the **override.catalog** file under:
-   
-     ~~~
-     {
-     	"nodes": [
-     	
-     	]
-     }
-     ~~~
-   
+1. Go to the **Resources** folder of the project entity and create an **override.catalog** resource file. 
+2. To add a new node to the catalog, add the new node description into the **override.catalog** file under:
+   ~~~
+   {
+   	"nodes": [
+   	
+   	]
+   }
+   ~~~
+
 3. Perform [Write Catalog]().
 
-#### Example of override.catalog
+#### Example of an override.catalog file
 
 The following override.catalog file adds a **Test2** Logical Unit with a **TestCustomer** table to the **testCatalogDB** project's Data Catalog:
 

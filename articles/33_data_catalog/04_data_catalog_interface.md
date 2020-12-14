@@ -15,8 +15,8 @@ To create a new Data Catalog interface, do the following:
 <table style="height: 116px;">
 <tbody>
 <tr style="height: 18px;">
-<td style="height: 18px; width: 179px;"><strong>Parameter</strong></td>
-<td style="height: 18px; width: 318px;"><strong>Description</strong></td>
+<td style="height: 18px; width: 150px;"><strong>Parameter</strong></td>
+<td style="height: 18px; width: 500px;"><strong>Description</strong></td>
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Server</strong></td>
@@ -29,17 +29,17 @@ To create a new Data Catalog interface, do the following:
 <tr style="height: 28px;">
 <td style="width: 179px; height: 28px;"><strong>Database</strong></td>
 <td style="width: 318px; height: 28px;">
-<p>OrientDB database name. Provide the name of an existing database or add a new one.</p>
-<p>If a new name is added, the Orient DB database is created during Write Catalog.</p>
+<p>OrientDB database name. Enter the name of an existing / new database.</p>
+<p>If a new name is entered, the new OrientDB database is created during Write Catalog.</p>
 </td>
 </tr>
 <tr style="height: 18px;">
-<td style="height: 18px; width: 179px;"><strong>User</strong></td>.
-<td style="height: 18px; width: 318px;">Username.</td> 
+<td style="height: 18px; width: 179px;"><strong>User</strong></td>
+<td style="height: 18px; width: 318px;">Username.</td>
 </tr>
 <tr style="height: 16px;">
-<td style="height: 16px; width: 179px;"><strong>Password</strong></td>.
-<td style="height: 16px; width: 318px;">Password.</td>.
+<td style="height: 16px; width: 179px;"><strong>Password</strong></td>
+<td style="height: 16px; width: 318px;">Password.</td>
 </tr>
 <tr>
 <td style="width: 179px;"><strong>Transactional</strong></td>
@@ -47,9 +47,6 @@ To create a new Data Catalog interface, do the following:
 </tr>
 </tbody>
 </table>
-
-
-
 
 
 

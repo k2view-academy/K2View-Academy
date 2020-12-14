@@ -1,4 +1,4 @@
-# Build and Write Catalog from Fabric Studio
+# Build and Write Data Catalog
 
 A Data Catalog implementation must be deployed to the server side so that all changes are compiled and ready for use. This is done using one of the following options in the Fabric Studio:
 
@@ -8,7 +8,7 @@ A Data Catalog implementation must be deployed to the server side so that all ch
   * The catalog supports [overriding automatic files](06_override_data_catalog.md) to include the elements that are not part of the project implementation.
 
 * **Write Catalog**, deploys the catalog to the server. This includes building the catalog files of all the project entities (each LU, WS, Common) and uploading them to OrientDB. 
-  * Once Write Catalog is completed, log in to the K2View Web Framework and navigate it. 
+  * Once Write Catalog is completed, login to the K2View Web Framework and navigate it. 
   * Note that Write Catalog can also be performed by running the [CATALOG WRITE](08_catalog_commands.md) command in the Fabric Server. In this scenario, the automatic files must be created before running the command using Build Catalog from the Fabric Studio.
 
 ### How Do I Build the Catalog?
@@ -29,20 +29,20 @@ A Data Catalog implementation must be deployed to the server side so that all ch
 2. Alternatively, run the [CATALOG WRITE](08_catalog_commands.md) command in the Fabric Server.
 
 3.The Catalog Write command is executed and the results are displayed in the popup screen indicating the status of each project entity (LU, WS, Common). If there are problems, an error is displayed in the popup screen.
- 
+
 Note that you must perform **Write Catalog** to apply the changes in the catalog to the server.
 
 ### Example of the Catalog Creation Process
 
 1. Create a new project or use an existing one, for example the **testCatalogDB** project with the **Customer** LU, WS and Reference tables.
 
-2. Create a  [Data Catalog interface](04_data_catalog_interface.md) named **catalogdb**.
+2. Create a  [Data Catalog interface](04_data_catalog_interface.md) named **catalogdb**. This is a one-time activity.
 
-3. [Install OrientDB](07_OrientDB_setup) and start it.
+3. [Install OrientDB](07_OrientDB_setup) and start it. This is a one-time activity.
 
 4. Right click the **Project** and select **Data Catalog > Write Catalog To debug**.
 
-5. Add logic to the Data Catalog using the K2View Web Framework to navigate the catalog:
+5. Login to the Data Catalog using the K2View Web Framework to navigate the catalog:
 
    ![image](images/33_01_tree.PNG)
 

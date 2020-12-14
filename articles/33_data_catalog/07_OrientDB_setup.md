@@ -10,7 +10,7 @@ To setup the OrientDB, do the following:
 
    * For a Windows installation: extract the file under **C:\K2View**
 
-3. Edit the **orientdb-server-config.xm**l by adding the parameter value 'GREMLIN' as follows:
+3. Edit the **orientdb-server-config.xml** by adding the parameter value 'GREMLIN' as follows:
 
    ~~~
    <handler class="com.orientechnologies.orient.server.handler.OServerSideScriptInterpreter">
