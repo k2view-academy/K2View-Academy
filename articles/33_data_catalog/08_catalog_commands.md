@@ -4,7 +4,7 @@
 
 The following operations are supported:
 
-* **CATALOG WRITE**, writes the catalog files (created by the Build Catalog option from the Fabric Studio) using the provided interface or using the default interface (if the interface is not provided).  Note that if the files don’t exist (the Catalog Build has not yet run), the command will fail.   
+* **CATALOG WRITE**, writes the catalog files (created by the Build Catalog option in the Fabric Studio) using the provided interface or using the default interface (if the interface is not provided).  Note that if the files don’t exist (the Catalog Build has not yet run), the command will fail.   
 
   * Use the following syntax:
 
@@ -14,7 +14,7 @@ The following operations are supported:
 
   * INTERFACE (optional), the Data Catalog interface used. If not provided, the **catalogdb** interface is used.
 
-  * Prior to running the command, execute the [Catalog Build](/articles/33_data_catalog/03_build_and_write_catalog.md) from the Fabric Studio and then perform the [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md) of the project's components.
+  * Prior to running the command, execute the [Catalog Build](/articles/33_data_catalog/03_build_and_write_catalog.md) in the Fabric Studio and then perform the [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md) of the project's components.
 
 * **CATALOG DROP**, drops the provided project using the provided interface.
 
