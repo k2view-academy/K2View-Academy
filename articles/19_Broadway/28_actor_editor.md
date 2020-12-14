@@ -10,7 +10,7 @@ To simplify the Actor modification process and enhance it with additional option
 
 ### How Do I Use an Actor Editor?
 
-The Actor Editor can be used to modify the ***.actor** file of either an inherited Actor or an [Inner Flow](22_broadway_flow_inner_flows.md) saved as Actor. Once the Actor is modified, the change becomes effective in every flow where this Actor is used. 
+The Actor Editor can be used to modify the ***.actor** file of either an inherited Actor or an [Inner Flow](22_broadway_flow_inner_flows.md) saved as Actor. Once the Actor is modified, the change becomes effective in every flow where this Actor is used.  
 
 **To modify** an Actor, do the following:
 
