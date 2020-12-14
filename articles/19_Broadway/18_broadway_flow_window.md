@@ -56,7 +56,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td width="200"><a title="Debug" href="/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
+<td width="200"><a title="Debug" href="25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
 <td style="width: 465px;">
 <p>Enable the Debug mechanism.</p>
 <p>When Debug is ON or Live, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
@@ -75,6 +75,12 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
+<td><a href="18_broadway_flow_window.md#flow-validation">Validation</a></td>
+<td style="width: 465px;">
+<p>Displays the number of validation errors, if found in the flow.</p>
+</td>
+</tr>
+<tr>
 <td width="200">Remarks</td>
 <td style="width: 465px;">
 <p>Click to display all remarks in the flow.</p>
@@ -82,6 +88,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -229,6 +236,20 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 [Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 
 Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
+
+### Flow Validation
+
+The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />.  
+
+Click the icon to display the window footer with the error messages:
+
+![image](images/99_validation_output.PNG)
+
+You can then click on the error and choose to ignore the exception or fix the problem.
+
+For example, a flow includes an inherited **myDate** Actor that needs to be deleted for some reason. After the Actor is deleted from the project tree and the flow is opened, it will display validation errors. You can then update the flow as needed, for example by adding another Actor. 
+
+
 
 
 [![Previous](/articles/images/Previous.png)](17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](19_broadway_flow_stages.md)

@@ -1,5 +1,7 @@
 # Actor Inheritance Mechanism
 
+### Overview
+
 A Broadway Actor can be extended to create a new Actor type using the **Export Actor** functionality. 
 
 When an Actor is exported, a new Actor inherits its logic and arguments and also extends it with additional functionality whereby specific business logic can be reused in different Broadway flows. For example, to format all dates using the same pattern, set a specific pattern in the **DateFormat** Actor and then export the Actor to reuse it in various Broadway flows. 
@@ -10,6 +12,8 @@ When exporting the Actor each input and output argument can be set as hidden or 
 * Setting an argument as **final**, the inherited Actor cannot change the ancestor's argument value. 
 
 This setting is optional where if hidden or final are not set, the argument remains as is in the inherited Actor.
+
+This article describes how to extend an Actor or to modify the extended Actor using the **Export Actor** functionality. To learn about advanced options of Actors inheritance, refer to the [Actor Editor](28_actor_editor.md) article. 
 
 ### How Do I Export an Actor?
 
@@ -73,7 +77,7 @@ To extend the behavior of the exported Actor, do the following:
 
 5. Click **SUBMIT** to save the changes.
 
-Note that you can also modify an inherited Actor by manually editing the JSON of the ***.actor** file.
+
 
 
 
