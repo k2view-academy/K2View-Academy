@@ -39,7 +39,7 @@ To setup the OrientDB, do the following:
 
 7. Copy the link to the browser to open the OrientDB web application to create a new database.
 
-   * Note that you can also create a new OrientDB database during the definition of your Data Catalog Interface Type by populating the Database settings.
+   * Note that you can also create a new OrientDB database during the definition of the Data Catalog Interface Type by populating the Database settings.
 
 
 
