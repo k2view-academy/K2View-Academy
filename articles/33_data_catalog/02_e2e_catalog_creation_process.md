@@ -1,6 +1,6 @@
 # E2E Catalog Creation Process
 
-This article is an end-to-end description of the catalog creation process. The details for each step are described in other articles or can be accessed via the links in the instructions below.
+This article is an end-to-end description of the catalog creation process. The details for each step are described in other articles and can also can be accessed via the links in the instructions below.
 
 To create a Data Catalog from the Fabric project and to start using it, do the following:
 
