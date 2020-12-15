@@ -152,10 +152,10 @@ When running the `set;` command without parameters in a Fabric console, the valu
 
 - Values of Globals set for Shared Objects, LUs and References. Shared Objects Globals are permeated towards other objects like References, WS and LUs whose values are also shown.  
 
-- The Globals naming convention is: **Global.\<unit type>.\<variable-name>**:
-  -  Unit-type refers to the LU name.
-  -  k2_ref refers to the references. 
-  -  k2_ws refers to the Web Services. 
+- The Globals naming convention is: **Global.\<unit type>.\<variable-name>** where unit-type is either
+  -  An LU name.
+  -  "k2_ref", refers to the references. 
+  -  "k2_ws", refers to the Web Services. 
   
   The first Global prefix is displayed since the SET command also displays non Globals variables.
   
