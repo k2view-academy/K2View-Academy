@@ -1,10 +1,10 @@
 # Data Table Editor
 
-This screen enables viewing table's data as well as editing - add, update and delete data. It is built from two main areas - top **Action Bar** and main **Table Data** areas. 
+This screen enables viewing table's data as well as editing it - add, update and delete data. It is built from two main areas - top **Action Bar** and main **Table Data** areas. 
 
 <img src="images/30_dataeditor_04.png" alt="Table Data Editor" />
 
-##### Actions Bar
+### Actions Bar
 
 The **action bar** provides the options to:
 
@@ -15,36 +15,38 @@ The **action bar** provides the options to:
 
 
 
-##### Table Data
+### Table Data
 
-Table content is shown at this screen, enabling:
+The table content is shown, with the following options:
 
 * Sort or filter data by table's field/column, by using table's heading actions.
 
-* See and navigate to the linked tables - upper or lower in the scheme hierarchy.
+* View and navigate to the linked tables - upper or lower in the scheme hierarchy.
 
-  To do so - click on the ellipsis button appears at each table's entry. Once clicked - a pupup is opened that shows the linked tables, with a sign if it is upper or lower in tree. It also shows the population method - query or custom function name.  
+  To do so - click on the ellipsis button appears at each table's entry. Once clicked - a pupup is opened that shows the linked tables, with a sign if it is upper or lower in tree. It also shows the population method - query or custom function name, ass can be seen in the below example.  
 
   Selecting a lower table drills down to its Table Editor screen, with content related only to its predecessor.
 
-  For example, if Customer LU has several subscribers associated to and for each of them invoices were generated, then at the Subscriber Table Editor screen select to drill down to Invoices. As can be shown in the screenshot below - only invoices for Subscriber #13 are shown.    
+  
+
+  In the below example, a customer LUI has several subscribers associated to and for each of them several invoices were generated. In the example the Invoice table is shown filtered by subscriber #13, that is - only invoices which are associated to subscriber #13 are shown.   
 
   <img src="images/30_dataeditor_05a.png" alt="Table Data Editor" />  
 
-  Notice that this filtering is also reflected at the top action chips area, which also contains subscriber #13 chip. Clicking on the X at this chip leads to removing this filter and whole table data will be shown.
-
+  The filtering is reflected at the top action chips area, which also contains subscriber #13 chip. Clicking on the X at this chip leads to removing this filter and whole table data will be shown.
+  
     
 
-To edit the table's content - click on the **Edit** button at the top Actions Bar, switching to Edit Mode.
+#### Table Edit Mode 
 
-##### Table Edit Mode 
+To edit the table's content - click on the **Edit** button at the top Actions Bar, switching to Edit Mode.
 
 The table in this mode shown with:
 
 * Delete button aside any of the table's entries. 
-* An empty row at top, for adding new entry.
+* An empty row at top, for adding a new entry. One or more entries can be added.
 
- Once entry is added/edited or signed for deletion, it will be colored as following:
+ Once an entry is added, edited or signed for deletion, it will be colored as following:
 
 * new entry - blue
 * Edited entry - orange
@@ -52,6 +54,8 @@ The table in this mode shown with:
 
 Any of the actions will take effect **only** after clicking on the **Update** button at the top Actions Bar.
 
+
+
 As long as Update was not done, those actions are reversible: Click on the revert button icon that appears at edited or signed to deletion rows, or click on the Delete icon for a new entry that shall be removed.
 
- 
+ <img src="images/30_dataeditor_06.png" alt="actions colors" />
