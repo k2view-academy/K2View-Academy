@@ -175,11 +175,10 @@ This example discusses the following:
 
 Notes that this example does not show Global overrides.
 
-The result of the `set;` command is similar to the following:
+The result of the `set;` command is similar to the following. Note that the coloring and the separation by unit-type that are shown here are just an illustration, used to clarify the explainations.
 
 ![image](images/08_03_globals_console.png)
 
-In the above command the result is separated by unit types and colored for emphasis. 
 
 The green, yellow, dark-red <span style="color:yellow; background-color: black;">OLDINVOICES</span>, <span style="color:lightgreen; background-color: black;">CASES_THERSHOLD</span>, <span style="color:darkorange; background-color: black;">INTERCODE_UK</span> lines inherit from Shared Objects. 
 
