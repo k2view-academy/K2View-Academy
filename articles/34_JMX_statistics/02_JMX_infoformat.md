@@ -20,14 +20,15 @@ From the main window panel the various statistics can be accesses by expanding t
 
 The information provided will feature statistics about the **Loading phase** of each of the components at play in the current sessions, e.g:
 
-    ``` Fabric Launch Sequence ```
+``` Fabric Launch Sequence ```
+    
 
     ```bash
     since		56:38:23.041					Time in miliseconds since the event last occured
     timestamp	2020-12-10 12:34:39.733 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC, this event last occured
     ```
 
-    ```Loading Common Area```
+```Loading Common Area```
 
     ```bash
     since		56:38:23.730					Time in miliseconds since the event last occured
@@ -41,7 +42,7 @@ The information provided will feature statistics about the **Loading phase** of 
 
 In the section statistics for actions such as project deployment or fabric commands are displayed, e.g. :
 
-    ```Deployment count for a specific LU```
+```Deployment count for a specific LU```
 
     ```
     count		1								The number of times this event has occured
@@ -53,7 +54,7 @@ In the section statistics for actions such as project deployment or fabric comma
 
 
 
-    ```Count of Fabric Commands Executed```
+```Count of Fabric Commands Executed```
 
     ```bash
     count		22								The number of times this event has occured
@@ -63,7 +64,7 @@ In the section statistics for actions such as project deployment or fabric comma
 
 
 
-    ```GET```
+```GET```
 
     ```bash
     count		1								The number of times this event has occured
@@ -77,7 +78,7 @@ In the section statistics for actions such as project deployment or fabric comma
 
 Statistics about  Fabric jobs, get performances, web services, LUI queries and LU population sync are  available in this section:
 
-    ``` GET Duration```
+ ``` GET Duration```
 
     ```
     last			0:00:00.408					The last value for this event
@@ -88,9 +89,9 @@ Statistics about  Fabric jobs, get performances, web services, LUI queries and L
     total			0:00:00.408					The accumulated total of this event value
     ```
 
-    ```Web Services Calls```
+ ```Web Services Calls```
 
-    Executions as well as authentications statistics will be provided.
+ Executions as well as authentications statistics will be provided.
 
     ```
     count				10							The number of times this event has occured
@@ -106,7 +107,7 @@ Statistics about  Fabric jobs, get performances, web services, LUI queries and L
 
 Statistics about general information on systems resources are displayed in this section:
 
-    ``` Number of LU in the systems```
+ ``` Number of LU in the systems```
 
     ```
     last			3								The last value for this event
@@ -116,7 +117,7 @@ Statistics about general information on systems resources are displayed in this 
 
 
 
-    ```Number of Active Cassandra Sessions```
+ ```Number of Active Cassandra Sessions```
 
     ```
     total			1								The accumulated total of this event value
@@ -131,7 +132,8 @@ Statistics about general information on systems resources are displayed in this 
 
 Very useful information such as number of LUIs sync-ed, fetching times and sizes can be viewed here:
 
-    ```mdb Cache Count```
+ ```mdb Cache Count```
+ 
 
     ```
     last			3								The last value for this event
