@@ -15,12 +15,15 @@ To create a new Data Catalog interface, do the following:
 <table style="height: 116px;">
 <tbody>
 <tr style="height: 18px;">
-<td style="height: 18px; width: 150px;"><strong>Parameter</strong></td>
+<td style="height: 18px; width: 200px;"><strong>Parameter</strong></td>
 <td style="height: 18px; width: 500px;"><strong>Description</strong></td>
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Server</strong></td>
-<td style="height: 18px; width: 318px;">IP address of the OrientDB server.</td>
+<td style="height: 18px; width: 318px;">
+<p>IP address of the OrientDB server.</p>
+<p><a href="07_OrientDB_setup.md">Click for more information about OrientDB setup</a>.</p>
+</td>
 </tr>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Port</strong></td>
@@ -44,6 +47,10 @@ To create a new Data Catalog interface, do the following:
 <tr>
 <td style="width: 179px;"><strong>Transactional</strong></td>
 <td style="width: 318px;">True/False.</td>
+</tr>
+<tr>
+<td style="width: 179px;"><strong>SSL Properties</strong></td>
+<td style="width: 318px;"><em>Placeholder, currently not in use.</em></td>
 </tr>
 </tbody>
 </table>
