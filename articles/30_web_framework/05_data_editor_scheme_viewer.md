@@ -40,7 +40,7 @@ The screen contains a top actions bar
 
   * Once LUI is found its value is shown at top, in an input chip form, used also as a breadcrumbs when drilling down the tree. 
   
-    <img src="images/30_dataeditor_chip_icon.PNG" alt="chip" align="left"/>
+    <img src="images/30_dataeditor_chip_icon.PNG" alt="chip" />
   
   * In case LUI is not found an error message will appear.
 
