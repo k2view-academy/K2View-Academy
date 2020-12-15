@@ -148,7 +148,7 @@ Click [here](/articles/03_logical_units/05_globals_overrides_priorities.md) for 
 
 ### Understanding Globals Following a SET Command
 
-When running the `set;` command without parameters in a Fabric console, the results display the values of variables from the current session, as follows:
+When running the `set;` command without parameters in a Fabric console, the values of variables of the current session are displayed, as follows:
 
 - Values of Globals set for Shared Objects, LUs and References. Shared Objects Globals are permeated towards other objects like References, WS and LUs whose values are also shown.  
 
