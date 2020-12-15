@@ -59,3 +59,9 @@ Any of the actions will take effect **only** after clicking on the **Update** bu
 As long as Update was not done, those actions are reversible: Click on the revert button icon that appears at edited or signed to deletion rows, or click on the Delete icon for a new entry that shall be removed.
 
  <img src="images/30_dataeditor_06.png" alt="actions colors" />
+
+
+
+
+
+[![Previous](/articles/images/Previous.png)](05_data_editor_schema_viewer.md)
