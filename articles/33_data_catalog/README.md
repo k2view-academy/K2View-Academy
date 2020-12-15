@@ -9,7 +9,7 @@
 <li><a href="/articles/33_data_catalog/04_data_catalog_interface.md">Data Catalog Interface</a></li>
 <li><a href="/articles/33_data_catalog/05_data_catalog_navigation.md">Data Catalog Navigation</a></li>
 <li><a href="/articles/33_data_catalog/06_override_data_catalog.md">Override Data Catalog</a></li>
-<li><a href="/articles/33_data_catalog/07_OrientDB_setup.md">OrientDB Setupp</a></li>
+<li><a href="/articles/33_data_catalog/07_OrientDB_setup.md">OrientDB Setup</a></li>
 <li><a href="/articles/33_data_catalog/08_catalog_commands.md">Catalog Commands</a></li>
 </ul>
 
