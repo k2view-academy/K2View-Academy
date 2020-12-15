@@ -1,6 +1,6 @@
 # SET and SET_GLOBAL GLOBAL Commands for Global Variables 
 
-There are two Fabric commands that can override a global:
+Two Fabric commands can override a Global:
 
 * **set_global global**, overrides the value at a **cluster level** whereby both the original and new values are saved in Cassandra. 
 * **set**, overrides or shows the value at a **session level**.
@@ -74,7 +74,7 @@ The **set_global global** command sets the value of the global indicated by <PAR
 
 ### How Do I Use the Set Command?
 
-The **set** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable (not defined in the Fabric implementation), or to override an existing global for the Fabric session if the global is not Final.
+The **SET** command can be used to set a variable **per session** so that the variable is available for all Fabric objects in the same session. This command can be used either to set a new ad-hoc variable (not defined in the Fabric implementation), or to override an existing global for the Fabric session if the global is not Final.
 
 <table>
 <tbody style="vertical-align:top">
@@ -85,11 +85,11 @@ The **set** command can be used to set a variable **per session** so that the va
     set [&lt;LUT_NAME&gt;.]&lt;PARAM_NAME&gt;&nbsp; &lt;PARAM_VALUE&gt;;</p>
 </td>
 <td width="600pxl" >
-<p>Set the value of the variable indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt;.  A value of a Global parameter within a specific LUT can be set by specifying its name, as a prefix</p>
+<p>Set the value of the variable indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt;.  A value of a Global parameter within a specific LUT can be set by specifying its name as a prefix</p>
 <p>Example:</p>
 <p>set SOURCE_PRODUCT_VERSION=100;<br/>or<br/>set SOURCE_PRODUCT_VERSION 100;</p>
     <p>
-        Note that when specifying a Global variable value of an  LU on a session level, it is always applied when its SET command runs, even when a general SET command  runs <b>after</b> with same variable name. The LU scope value remains valid and will not be overridden.
+        Note that when specifying a Global variable value of an  LU on a session level, it is always applied when its SET command runs, even when a general SET command runs <b>after</b> with the same variable name. The LU value remains valid and is not overridden.
     </p>
 </td>
 </tr>
@@ -98,7 +98,7 @@ The **set** command can be used to set a variable **per session** so that the va
 <p>set &lt;PARAM_NAME&gt; =&rsquo;&rsquo;;</p>
 </td>
 <td width="600">
-<p>Reset the variable value. If it is a new ad-hoc variable, after reset it will be equal to "NULL". If it has already been defined (cluster/environment/implementation) it  reverts to the original value.</p>
+<p>Reset the variable value. If it is a new ad-hoc variable, after reset it equals NULL. If it has already been defined (cluster/environment/implementation) it  reverts to the original value.</p>
 <p>Example:<br>
     Assuming that the original value of the SOURCE_PRODUCT_VERSION is &rsquo;prod&rsquo;
 </p>
@@ -117,7 +117,7 @@ The **set** command can be used to set a variable **per session** so that the va
 <p>set SOURCE_PRODUCT_VERSION;<br> 
     set CRM.SOURCE_PRODUCT_VERSION;</p>
     <p>
-        Note that if a variable value is different for a specific LU, the command does <B>not</B> specify the 'LUT_NAME' (for example, "set SOURCE_PRODUCT_VERSION;") and an error message is displayed.</LI>
+        Note that if a variable value is different for a specific LU, the command does <B>not</B> specify the LUT_NAME (for example, set SOURCE_PRODUCT_VERSION;) and an error message is displayed.</LI>
         </UL> 
     </p>
 </td>
@@ -179,7 +179,11 @@ The result of the `set;` command is similar to the following:
 
 ![image](images/08_03_globals_console.png)
 
-In the above command the result is separated by unit types and colored to emphasize and demonstrate the example: the colored green, yellow, dark-red lines <span style="color:yellow; background-color: black;">OLDINVOICES</span>, <span style="color:lightgreen; background-color: black;">CASES_THERSHOLD</span>, <span style="color:darkorange; background-color: black;">INTERCODE_UK</span>) inherit from Shared Objects. The Shared Objects Globals appear for CRM and Customer LUs, References ("k2_ref") and Web-Services ("k2_ws").
+In the above command the result is separated by unit types and colored for emphasis. 
+
+The green, yellow, dark-red lines <span style="color:yellow; background-color: black;">OLDINVOICES</span>, <span style="color:lightgreen; background-color: black;">CASES_THERSHOLD</span>, <span style="color:darkorange; background-color: black;">INTERCODE_UK</span> inherit from Shared Objects. 
+
+The Shared Objects Globals appear for CRM and Customer LUs, References (k2_ref) and Web Services (k2_ws).
 
 
 
