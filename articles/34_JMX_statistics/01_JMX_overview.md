@@ -17,6 +17,7 @@ Various statistics using JMX counters within Fabric can be gathered. Below are s
 - Actions - such as schema maintenances and fabric commands
 - Transactions - web-services statistics
 - Resources - such as cassandra, tasks, jdbc sessions, mdb sessions etc ...
+- iidFinder - messages related to iidFinder queries and events 
 - Custom - Provides statistics to beans you would have manually added to your java code
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/02_JMX_infoformat.md)
