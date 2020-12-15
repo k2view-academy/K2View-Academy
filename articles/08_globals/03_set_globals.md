@@ -89,7 +89,7 @@ The **SET** command can be used to set a variable **per session** so that the va
 <p>Example:</p>
 <p>set SOURCE_PRODUCT_VERSION=100;<br/>or<br/>set SOURCE_PRODUCT_VERSION 100;</p>
     <p>
-        Note that when specifying a Global variable value of an  LU on a session level, it is always applied when its SET command runs, even when a general SET command runs <b>after</b> with the same variable name. The LU value remains valid and is not overridden.
+        Note that when specifying a Global variable value of an  LU on a session level, it is always applied when its SET command runs, even when a general SET command, without &lt;LUT NAME&gt;, runs <b>after</b> with the same variable name. The LU value remains valid and is not overridden.
     </p>
 </td>
 </tr>
@@ -117,7 +117,7 @@ The **SET** command can be used to set a variable **per session** so that the va
 <p>set SOURCE_PRODUCT_VERSION;<br> 
     set CRM.SOURCE_PRODUCT_VERSION;</p>
     <p>
-        Note that if a variable value is different for a specific LU, the command does <B>not</B> specify the LUT_NAME (for example, set SOURCE_PRODUCT_VERSION;) and an error message is displayed.</LI>
+        Note that if a variable value is different for a specific LU and the command does <B>not</B> specify the LUT_NAME (for example, set SOURCE_PRODUCT_VERSION;) an error message is displayed.</LI>
         </UL> 
     </p>
 </td>
