@@ -102,11 +102,12 @@ The supported types are:
 
 
 
-### Example of Using an HTTP Interface in a Broadway Flow
+### Example of Using an HTTP/HTTPS Interface in a Broadway Flow
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface.
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface. 
+Note: HTTPS requests are included into this HTTP actor (for which security parameters are defined within the interface)  
 
 
 
