@@ -6,7 +6,9 @@ Data Catalog is a web application based on a distributed OrientDB (Apache 2) gra
 
 
 
-The Data Catalog describes how an organization collects, transforms and stores its data inventory. Due to its user-friendly UI, the catalog enables users to follow a data flow from its source to its target and by that, drastically increases a user’s comprehension of an organization’s data model. For example, when developing a Web Service, it can assist to clarify the source system of the Web Service’s required output fields.
+The Data Catalog describes how an organization collects, transforms and stores its data inventory. Due to its user-friendly UI, the catalog enables users to follow a data flow from its source to its target and by that, drastically increases a user’s comprehension of an organization’s data model. 
+
+For example, when developing a Web Service, it can assist to clarify the source system of the Web Service’s required output fields.
 
 ![image](images/33_01_tree_ws.PNG)
 
