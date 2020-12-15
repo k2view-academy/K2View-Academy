@@ -20,4 +20,7 @@ Various statistics using JMX counters within Fabric can be gathered. Below is th
 - iidFinder - messages related to iidFinder queries and events 
 - Custom - Provides statistics to beans you would have manually added to your java code
 
+Note that all JMX metrics can be accessed using monitoring tools such as Grafana or Kibana.
+
+
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/34_JMX_statistics/02_JMX_infoformat.md)
