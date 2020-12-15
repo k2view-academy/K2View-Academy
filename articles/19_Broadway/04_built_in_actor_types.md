@@ -26,8 +26,8 @@ The following table presents a list of Actor's categories with examples per each
 <td style="vertical-align: top;" width="433">
 <p>Most commonly used Actors.</p>
 <p>Favorites is not a separate category. Each Actor in Favorites belongs to a category.</p>
-<p>The Actor that belongs to Favirots displays <img src="images/99_favorites1.PNG" alt="lev"/> in its desription in the Add Actors window.</p>
-<p>Click <img src="images/99_favorites.PNG" alt="lev"/> in the Add Actors window to add an Actor to Favoties.</p>
+<p>The Actor that belongs to Favirots displays <img src="images/99_favorites1.PNG" alt="lev" /> in its desription in the Add Actors window.</p>
+<p>Click <img src="images/99_favorites.PNG" alt="lev" /> to add an Actor to Favoties.</p>
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>Const</strong> Actor, copies the input value argument to the output value argument. A Const Actor can:</p>
@@ -51,6 +51,17 @@ The following table presents a list of Actor's categories with examples per each
 <p><strong>InnerFlow</strong> Actor, executes a Broadway flow.</p>
 <p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or from the params input argument.</p>
 <p><strong>Email</strong> Actor, sends an email using a given SMTP interface.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+<h4><strong>data</strong></h4>
+</td>
+<td style="vertical-align: top;">
+<p>Various data manipulations, such as accumulate values into a map, build an array or sort the input collection.</p>
+</td>
+<td style="vertical-align: top;">
+<p><strong>MapBuild</strong> Actor, accumulates key/value pairs into a map. Duplicate keys are treated according to duplicateKeys mode field.</p>
 </td>
 </tr>
 <tr>
@@ -168,6 +179,16 @@ The following table presents a list of Actor's categories with examples per each
 </td>
 </tr>
 <tr>
+<td>
+<h4><strong>stats</strong></h4>
+</td>
+<td>Actors to maintain the statistics.</td>
+<td style="width: 600px; vertical-align: top;">
+<p><strong>StatsWriter</strong> Actor, sets or increments statistics that can then be read by the StatsReader.</p>
+<p><strong>StatsReader</strong> Actor, reads statistics written by other Actors such as StatsWriter, DbCommand or ErrorHandler.</p>
+</td>
+</tr>
+<tr>
 <td width="210">
 <h4><a id="user-content-streams" class="anchor" href="04_built_in_actor_types.md#streams" aria-hidden="true"></a><strong>streams</strong></h4>
 </td>
@@ -216,6 +237,7 @@ The following table presents a list of Actor's categories with examples per each
 </tr>
 </tbody>
 </table>
+
 
 
 

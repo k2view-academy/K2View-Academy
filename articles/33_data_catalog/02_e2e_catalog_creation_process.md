@@ -7,7 +7,7 @@ To create a Data Catalog from the Fabric project and to start using it, do the f
 ![image](images/33_02_e2e.PNG)
 
 1. Create a new project or use the existing one.
-2. Create a [Data Catalog interface](04_data_catalog_interface.md) named **catalogdb**. This is a one-time only activity. 
+2. Create a [Data Catalog interface](02a_data_catalog_interface.md) named **catalogdb**. This is a one-time only activity. 
    * This interface is the default Data Catalog interface and must exist in the project. 
    * If needed, additional Data Catalog interfaces can be defined, for example for an OrientDB cluster.
 3. (Optional) Use the [Build Catalog](03_build_and_write_catalog.md) option using the Fabric Studio to build the catalog files for all entities (each LU, WS, Common) in the project. 
@@ -19,5 +19,5 @@ To create a Data Catalog from the Fabric project and to start using it, do the f
 
 
 
-[![Previous](/articles/images/Previous.png)](01_data_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_build_and_write_catalog.md) 
+[![Previous](/articles/images/Previous.png)](01_data_catalog_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02a_data_catalog_interface.md) 
 

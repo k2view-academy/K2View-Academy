@@ -51,4 +51,4 @@ To create a new Data Catalog interface, do the following:
 
 
 
-[![Previous](/articles/images/Previous.png)](03_build_and_write_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_catalog_navigation.md) 
+[![Previous](/articles/images/Previous.png)](02_e2e_catalog_creation_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_build_and_write_catalog.md) 

@@ -5,7 +5,7 @@ A Data Catalog implementation must be deployed to the server side so that all ch
 * **Build Catalog**, builds the catalog files of all the project entities (each LU, WS, Common). 
   * The files are created in JSON format in the Resources folder of the project entities  - one file for each project entity. 
   * All the files are named **auto.catalog**, except for the file created under Shared Objects that is named **shared.catalog**. 
-  * The catalog supports [overriding automatic files](06_override_data_catalog.md) to include the elements that are not part of the project implementation.
+  * The catalog supports [overriding automatic files](06_override_data_catalog.md) to include the additional elements if the automatic process doesn’t find them or if they are not part of the project.
 
 * **Write Catalog**, deploys the catalog to the server. This includes building the catalog files of all the project entities (each LU, WS, Common) and uploading them to OrientDB. 
   * Once Write Catalog is completed, login to the K2View Web Framework and navigate it. 
@@ -36,7 +36,7 @@ Note that you must perform **Write Catalog** to apply the changes in the catalog
 
 1. Create a new project or use an existing one, for example the **testCatalogDB** project with the **Customer** LU, WS and Reference tables.
 
-2. Create a  [Data Catalog interface](04_data_catalog_interface.md) named **catalogdb**. This is a one-time activity.
+2. Create a  [Data Catalog interface](02a_data_catalog_interface.md) named **catalogdb**. This is a one-time activity.
 
 3. [Install OrientDB](07_OrientDB_setup) and start it. This is a one-time activity.
 
@@ -48,4 +48,4 @@ Note that you must perform **Write Catalog** to apply the changes in the catalog
 
 
 
-[![Previous](/articles/images/Previous.png)](02_e2e_catalog_creation_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_data_catalog_interface.md) 
+[![Previous](/articles/images/Previous.png)](02a_data_catalog_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_catalog_navigation.md) 
