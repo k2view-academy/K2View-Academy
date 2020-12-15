@@ -16,7 +16,7 @@ The scheme's tables are shown in a top-down nested tree view, starting from the 
 * Each table is clickable leading to the table Data Viewer screen.
 * The scheme name appears in the screen title as well as breadcrumbs at the top data editor catalog bar.  
 
-<img src="images/30_dataeditor_02.png" alt="Data Editor Catalog" align="left" />
+<img src="images/30_dataeditor_02.png" alt="Data Editor Catalog" />
 
  Note: a table might appear more than once when there is more than a single population stage.
 
@@ -26,7 +26,7 @@ The scheme's tables are shown in a top-down nested tree view, starting from the 
 
 The screen contains a top actions bar
 
-<img src="images/30_dataeditor_03.png" alt="Data Editor Catalog" align="left" />
+<img src="images/30_dataeditor_03.png" alt="Data Editor Catalog" />
 
  The first three elements are used for LUI fetch:
 
@@ -40,7 +40,7 @@ The screen contains a top actions bar
 
   * Once LUI is found its value is shown at top, in an input chip form, used also as a breadcrumbs when drilling down the tree. 
   
-    <img src="images/30_dataeditor_chip_icon.png" alt="chip" align="left"/>
+    <img src="images/30_dataeditor_chip_icon.PNG" alt="chip" align="left"/>
   
   * In case LUI is not found an error message will appear.
 
