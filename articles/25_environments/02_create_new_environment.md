@@ -30,7 +30,7 @@ When editing an existing environment, skip this step.
    -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
    
 
-**For information about Fabric hardening, click XXX.**
+Full explanation will be provided in a Fabric hardening knowledgebase article.
         <!--[Click for more information about Fabric security hardening].-->
 
 ### Step 2 - Defining Interface Settings per Environment 
