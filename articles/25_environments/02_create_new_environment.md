@@ -26,9 +26,10 @@ When editing an existing environment, skip this step.
 
        The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm. 
 
-      
+   
    -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
    
+
 **For information about Fabric hardening, click XXX.**
         <!--[Click for more information about Fabric security hardening].-->
 
@@ -69,7 +70,7 @@ The Globals tab grid has the following columns:
 
    <li>LU, displays the LU name.</li>
 
-   <li>References, indicates the k2_ref.</li>
+   <li>References, indicated by "k2_ref".</li>
 
    <li>Shared Objects, this column is empty. </li>
 
@@ -125,7 +126,7 @@ The Globals tab grid has the following columns:
 
   <td style="width:109px">Comment</td>
 
-  <td style="width:562px">Recommendation explaining why the value has been updated. </td>
+  <td style="width:562px">Explaining why the value has been updated. </td>
 
  </tr>
 
@@ -141,7 +142,7 @@ The Globals tab grid has the following columns:
 
 ![image](images/globals_table_with_change.png)
 
--  To edit the Global variable value, type in the new value. The new value is in bold when this window is next accessed.
+-  To edit the Global variable value, type in the new value. The new value becomes bold, also when this window is next accessed.
 
 -  To revert to the previous value, click the left gray area of the Global variable entry and then click **Reset To Original Values**. 
 
@@ -149,9 +150,9 @@ The Globals tab grid has the following columns:
 
 Notes:
 
--  Only **non-final** Globals are displayed in the Globals environment's table. Final Globals cannot be updated. 
--  Global variable values can be overridden per environment. New Global variables cannot be created per environment.
--  When an implementation has been updated, for example; adding a new Global in Shared Objects, close and then open the Environment window to see the changes in the Globals grid table.
+-  Only **non-final** Globals are displayed in the Globals environment's table. 
+-  New Global variables cannot be created per environment.
+-  When an implementation has been updated, for example: adding a new Global in Shared Objects, close and then open the Environment window to see the changes in the Globals grid table.
 
 ### Step 4 - Deploying the Environments
 
