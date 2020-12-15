@@ -59,9 +59,9 @@ NOTE: you can drill down in the tree, even when IID is not defined and set it la
 
 
 
-### Refences / Common Tables 
+### Reference / Common Tables 
 
- This screen presents the common table list. Click an entry in the list in order to navigate to table Data Viewer screen.
+ This screen presents the common tables list. Click an entry in the list in order to navigate to table Data Viewer screen.
 
 
 
