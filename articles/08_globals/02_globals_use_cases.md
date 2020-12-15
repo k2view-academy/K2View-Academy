@@ -19,7 +19,7 @@ The following scenarios describe how Globals can be used in Fabric objects.
 ### How Do I Add a Global to a Parser Map?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**].
 2.	Click **Parsers** > [**Parser Map**] to open the existing parser map.
-3.	Click the **Objects tab**in the right panel of the Parser Map working area.
+3.	Click the **Objects tab** in the right panel of the Parser Map working area.
 4.	Click **Globals** and select the **global** in the **Globals list**.
 5.	Drag the **global** into the working area.
 6.	Connect the **global** to the **table column**.
