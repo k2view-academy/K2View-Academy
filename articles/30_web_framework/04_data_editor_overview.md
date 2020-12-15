@@ -8,7 +8,7 @@ The Data Editor is part of the K2View Web Framework.
 
 ### Catalog Screen
 
-When opening the Data Editor it shows first the **Catalog** - a table that contains the current schemes of the deployed project, that is - the LUs and the references/common. Click an entry in the list in order to navigate to the [Scheme Viewer](04_data_editor_scheme_viewer.md) screen.
+When opening the Data Editor it first shows the **Catalog** - a table that contains the current schemes of the deployed project, that is - the LUs and the references/common. Click an entry in the list in order to navigate to the [Scheme Viewer](04_data_editor_scheme_viewer.md) screen.
 
 Following is an example of a project's Catalog:
 
