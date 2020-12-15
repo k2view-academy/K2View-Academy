@@ -8,63 +8,60 @@ Global variables are defined within **scopes**:
 * [References Tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md)
 * [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby a Global variable is available and permeated to all objects in a project under all Logical Units, Reference Tables and [Web Services](/articles/15_web_services/01_web_services_overview.md).
 
-The base definition, also called "Fabric Implementation" can be overridden over several **levels** - environment, global cluster and session.
+The basic definition aka Fabric Implementation can be overridden at environment, global cluster and session levels.
 
-This article explains these levels and scopes overrides priorities, along with examples.
 
 ### Override Priority and Hierarchy
 
-**The Priority Rule** among all levels and scopes is - the upper, when specified, as visualized below, is stronger.
-
-Override priority **levels** is illustrated in the following diagram:
+The override priority **levels** are illustrated in the following diagram, where the upper level has the highest priority in all levels and scopes:
 
 ##### <img src="images/08_05_globals_override_priority_perspct.png" alt="image" style="zoom:30%;" />
 
 
 
-* **Fabric Implementation**, as populated at Studio Globals tables, as reflection of the Globbals.java files.
-* **Environment**, as populated at Environment Settings Globals table  
-* **Cluster**, uses set_global commands, within a Fabric runtime, which persist at DB and thus affect on all cluster nodes and sessions.
-* **Session**, uses set commands, within a Fabric runtime, which affect only on the session where it have been executed.
+* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globbals.java files.
+* **Environment**, populated in the Environment Settings Globals table.  
+* **Cluster**, use SET_GLOBAL commands during Fabric runtime which persists in the DB and impact all cluster nodes and sessions.
+* **Session**, use SET commands during Fabric runtime, which only impacts the session where it is executed.
 
 
 
-In addition to levels, priority is managed by **scope**: if the Global is defined at both Shared Objects and Logical Unit scopes, the Logical Unit definition is used within that Logical Unit scope. Other Logical Units use the Shared Objects definition.
+The priority is also managed by the **scope**. If a Global is defined in both Shared Objects and Logical Unit scopes, the Logical Unit definition is used in the Logical Unit scope. Other Logical Units use the Shared Objects definition.
 
-Following is a *by-scope* prioritization illustration.  
+The following illustrates by-scope prioritization:  
 
 ##### <img src="images/08_05_globals_override_priority_lu.png" alt="image" style="zoom:60%;" />
 
-* Once a Global variable is set in a lower level, per scope/LU, it will be reflected and inherited by upper levels (unless overridden). For example - in case Implementation holds a value for LU "A", then when creating an environment it will be shown also there as Global variable associated to that LU.
-* Yet, in any upper level, another split can be applied
+-  Once a Global variable is set at a lower level, per scope / LU, it is reflected and inherited by upper levels (unless overridden). For example, an Implementation holding a value for LU A, when creating an environment it is also displayed as a Global variable associated to that LU.
+-  Another split can be applied on any upper level.
 
 
 
-### Apply Overrides
+### Applying Overrides
 
-In order to apply overrides, set commands shall be used. 
+SET commands are used to apply overrides:
 
-* Click [here](/articles/08_globals/03_set_globals.md) for more information about Global's override using SET and SET_GLOBAL commands.
+-   Click [here](/articles/08_globals/03_set_globals.md) for more information about overriding Globals using SET and SET_GLOBAL commands.
 
-* Click [here](/articles/25_environments/05_set_and_list_commands.md) for more information about Environment switching SET commands.
+-   Click [here](/articles/25_environments/05_set_and_list_commands.md) for more information about Environments and switching SET commands.
 
-Overrides can be **canceled/reset**, as explained at the above links, and in that cases Globals get back to their original values. 
+Note that as explained in the above links, overrides can be canceled / reset whereby the Globals return to their original values. 
 
 
 
-### Examples - Level's Priorities
+### Examples - Levelled Priorities
 
-The below examples demonstrate some use cases of the priorities that explained above. Note that we show example of close levels - one level above another, but the priority is also between other levels, for example - *session* is stronger than *environment*.
+The following examples demonstrate use cases of the priorities explained above. Note that the examples display the consecutive levels and the priority between other levels like session which is stronger than environment.
 
 ##### Environment VS. Implementation 
 
-In this example we will refer to the SOURCE_ENV_NAME which is defined at the CRM LU. The base value - the Fabric implementation is set to UAT.
+This example refers to the SOURCE_ENV_NAME which is defined in the CRM LU. The Fabric Implementation is set to UAT.
 
-Assume that we created several UAT environments UAT1, UAT2, UAT3.
+Assuming that the UAT  UAT1, UAT2, UAT3 environments have been created:
 
-We wish to switch the entire environment - the cluster - to work with UAT2, which there CRM.SOURCE_ENV_NAME="UAT2_ALPHA".
+The entire environment cluster which includes the CRM.SOURCE_ENV_NAME="UAT2_ALPHA" has been switched to work with UAT2.
 
-When running the switch environment command `set_global environment='UAT2';` the "UAT2_ALPHA" value for CRM.SOURCE_ENV_NAME Global will be set among all sessions in all cluster nodes.
+When running the `set_global environment='UAT2';` switch environment command the UAT2_ALPHA value for CRM.SOURCE_ENV_NAME Global is set for all sessions in all cluster nodes.
 
 ```
 set;
@@ -76,17 +73,15 @@ set;
 |Global.CRM.SOURCE_ENV_NAME       |UAT2_ALPHA                          |
 ```
 
-No set global command had to be  executed, since values are defined at the Environment. 
+Since values are defined for the Environment, a SET_GLOBAL command was not required. 
 
-For more information about create and edit Globals per environment click [here](/articles/25_environments/02_create_new_environment.md).
+For more information about creating and editing Globals per environment, click [here](/articles/25_environments/02_create_new_environment.md).
 
 For more information about switching between environments click [here](/articles/25_environments/05_set_and_list_commands.md).
 
 ##### Cluster VS. Environment
 
-In this example we assume that even though we set specific values for our UAT environment, we shall change it temporary for today.
-
-The required change is for the Shared Object Global variable CASES_THERSHOLD, that shall be reduced from 30,000 to 10,000.
+In this example although specific values have been for the UAT environment, they are updated for today by reducing the CASES_THERSHOLD Shared Object Global variable from 30,000 to 10,000.
 
 ```
 set;
@@ -100,7 +95,7 @@ set;
 |...                              |                                    |
 ```
 
-On running `set_global global '*.CASES_THRESHOLD=10000';` the outcome will be:
+When running `set_global global '*.CASES_THRESHOLD=10000';` the result is:
 
 ```
 set;
@@ -114,59 +109,56 @@ set;
 |...                              |                                    |
 ```
 
-In order to reset it (e.g. the day after) back to the original environment values, this command shall be executed:
+To return to the environment's original values, the following `set_global global '*.CASES_THRESHOLD=';` command is executed.
 
-`set_global global '*.CASES_THRESHOLD=';`
+
 
 ##### Session VS. Cluster
 
-Assume that in the previous example the threshold was set to 10000 but we still wish that one session will be used  as probe, examining another value.
+Assuming that in the previous example the threshold was set to 10000, this time a session is used as a means for examining another value by running the `set CASES_THRESHOLD='20000';` command. 
 
-For this we can run the `set CASES_THRESHOLD='20000';` command. 
+To return to its original non-session level value the `set CASES_THRESHOLD='';` command is executed. Note that if at cluster level this value has not been overwritten, it returns to the environment's Global variable value, and if it has not been overwritten for the environment, it returns to the implementation value.
 
-In order to reset it back to its original value - the non-session level - this command shall be executed, for our example - `set CASES_THRESHOLD='';`.\ Note that if at cluster level this value was not overwritten then it will be get back to the environment Global variable value, and if also was not overwritten  for the environment, it will be set back to the implementation value.
+### Examples - Scope Priorities
 
-### Examples - Scope's Priorities
+Scope priorities are applied using SET commands. Click here for the command syntax and available options. 
 
-Scope priorities are applied using SET commands. Click here for the command syntax and various available options. 
+##### Session LU vs Session
 
-##### Session LU VS. Session
+There are times that when tests on an UAT environment are required while the system is running. Sessions can be used for this whereby an LU refers to another UAT environment for data.
+To do so, `set SOURCE_ENV_NAME='UAT1'` is used to call for all LUs in this session, and `set SOURCE_ENV_NAME='UAT2'` is used to run the CRM LU at a session level. The order the commands are run is irrelevant, although the LU command is stronger in both scenarios.
 
-Sometimes while the system is working, we wish to make some testing toward an UAT environment. We might use one of the sessions for this task. Yet,  one of the LUs shall refer to another UAT environment to take its data.
-
-For this we can call to `set SOURCE_ENV_NAME='UAT1'` for all LUs in this session, and for the CRM LU to run `set SOURCE_ENV_NAME='UAT2'` (at session level it is not matter which command you run first. The LU command will be stronger either it called before or after the general).
-
-Once tests are done - it can be reset back to the original cluster/environment/implementation sestinas, but running `set SOURCE_ENV_NAME=''`.
+Once tests are completed, use the `set SOURCE_ENV_NAME=''` command to return to the original cluster / environment / implementation. 
 
 
 
 ### Example - Combined Priorities
 
-Following is an illustration example demonstrating a combined settings priority rules. Colored objects are those which hold Global settings, as described below
+The following example demonstrates combined priority rules settings. Colored objects hold Global settings, as described below
 
 ##### <img src="images/08_05_priority_combined_example.png" alt="image" style="zoom:60%;" />
 
- In this example
+ In this example:
 
-* At Fabric Implementation there is no override per LU, meaning taking the *Shared Objects* values for *all* objects
-* At Environment level - an override is made on the Shared Object, i.e. - applied on *all* objects and LUs. No change per LU on that level.
-* At Cluster level - an override is done for one of LUs, while for other - not, meaning that inherit the previous level.
-* At Session level - an override is made for two LUs, and in addition a change was done on the Shared Objects, which applied on other LUs and objects (Ref. & WS).
+-  Fabric Implementation, there is no override per LU, the Shared Objects values are taken for all objects.
+-  Environment level, an override is performed on the Shared Object and applied on all objects and LUs. The LU is not updated.
+-  Cluster level, an override is performed on one LU only which inherits from the previous level.
+-  Session level, an override is performed on two LUs, and the Shared Objects are updated and applied on other reference and WS LUs and objects.
 
 
 
-Taking the previous cases examples, let's refer to the SOURCE_ENV_NAME Global variable, following the example illustration, and examine what will be the actual values (as will be retrieved within the `set;` command).
+Using the previous examples, let's refer to the SOURCE_ENV_NAME Global variable, the following the example examines the actual values retrieved in the `set;` command.
 
-The defined values for the SOURCE_ENV_NAME :
+The defined values for the SOURCE_ENV_NAME are:
 
-* Fabric Implementation - Shared Objects - "UAT" 
-* Environment - Shared Objects (empty Logical Unit) - "UAT2_ALPHA" 
-* Cluster - LU "A" - "UAT2_ALPHA_123" 
-* Session - Shared Objects -  "UAT2_ALPHA_EXPORT_5" ; LU "A" - "UAT12"; LU "B" - "UAT17"
+* Fabric Implementation, Shared Objects - UAT.
+* Environment, Shared Objects (empty Logical Unit) - UAT2_ALPHA. 
+* Cluster, LU A - UAT2_ALPHA_123. 
+* Session, Shared Objects - UAT2_ALPHA_EXPORT_5 ; LU A - UAT12; LU B - UAT17.
 
-The actual values:
+The actual values are:
 
-| Variable key                  | variable Value      |
+| Variable Key                  | Variable Value      |
 | ----------------------------- | ------------------- |
 | Global.A.SOURCE_ENV_NAME      | UAT12               |
 | Global.B.SOURCE_ENV_NAME      | UAT17               |
@@ -175,7 +167,7 @@ The actual values:
 | Global.k2_ref.SOURCE_ENV_NAME | UAT2_ALPHA_EXPORT_5 |
 | SOURCE_ENV_NAME               | UAT2_ALPHA_EXPORT_5 |
 
-On reset the session values, the actual values will be:
+When reseting the session values, the actual values are:
 
 | Variable key                  | variable Value |
 | ----------------------------- | -------------- |
