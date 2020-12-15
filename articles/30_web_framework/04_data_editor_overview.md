@@ -1,6 +1,6 @@
 # Data Editor
 
-Data Editor is a graphical web-based application used for viewing and editing Fabric [LU](/articles/06_LU_tables/01_LU_tables_overview.md) and [refences](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) tables tables. Data Editor also shows the data structure and relationships between the tables within a Fabric LU scheme.
+Data Editor is a graphical web-based application used for viewing and editing Fabric [LU](/articles/06_LU_tables/01_LU_tables_overview.md) and [reference](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) tables. Data Editor also shows the data structure and relationships between the tables within a Fabric LU scheme.
 
 The Data Editor is part of the K2View Web Framework.
 
