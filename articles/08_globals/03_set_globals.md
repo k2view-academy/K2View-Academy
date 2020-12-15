@@ -181,7 +181,7 @@ The result of the `set;` command is similar to the following:
 
 In the above command the result is separated by unit types and colored for emphasis. 
 
-The green, yellow, dark-red lines <span style="color:yellow; background-color: black;">OLDINVOICES</span>, <span style="color:lightgreen; background-color: black;">CASES_THERSHOLD</span>, <span style="color:darkorange; background-color: black;">INTERCODE_UK</span> inherit from Shared Objects. 
+The green, yellow, dark-red <span style="color:yellow; background-color: black;">OLDINVOICES</span>, <span style="color:lightgreen; background-color: black;">CASES_THERSHOLD</span>, <span style="color:darkorange; background-color: black;">INTERCODE_UK</span> lines inherit from Shared Objects. 
 
 The Shared Objects Globals appear for CRM and Customer LUs, References (k2_ref) and Web Services (k2_ws).
 
