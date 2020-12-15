@@ -8,7 +8,7 @@ To create a new Broadway flow:
 
 ![image](images/99_18_01_main_flow_area.PNG)
 
-The **Broadway flow** window includes the following elements:
+The **Broadway flow** window includes the following elements described in this article:
 
 - The flow area, which displays Stages and their Actors. 
   - To [add a Stage](19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage), either click the big **+**, or go to the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > **Insert After** or **Insert Before**. 
@@ -16,7 +16,8 @@ The **Broadway flow** window includes the following elements:
 - [Main menu](18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object. 
+- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object.
+- [Run Results window](18_broadway_flow_window.md#run-results-window), which displays the results of the flow execution. 
 
 ### Main Menu
 
@@ -237,9 +238,20 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 
 Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
 
+### Run Results Window
+
+The Run Results window is a small window displayed at the bottom of a Broadway flow window and it displays the results upon the completion of the flow run:
+
+- When the flow is finished successfully, it either displays the values of external arguments (if exist in the flow) or remains empty.
+- When the flow fails, it displays the exception.
+
+![image](images/99_18_run_res_1.PNG)
+
 ### Flow Validation
 
-The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. Click the icon to display the window footer with the error messages:
+The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow, prior to running it. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
+
+Click the icon to display the window footer with the error messages:
 
 ![image](images/99_validation_output.PNG)
 
