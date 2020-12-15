@@ -1,16 +1,16 @@
 # Create and Edit Environment
 
-An environment is defined in Fabric using the following steps:
+The following steps are used to create an environment in Fabric:
 
-* Creating the environment in the Fabric Studio using the **Environments List** grid.
-* Populating the connection details of the interfaces via the **Selected Environment** grid.
-* Overriding Globals at any Sared, Reference or LU level via the dedicated tab in the **Selected Environment** grid.   
-* Deploying all environments to the server while defining the active environment.
+1. Creating the environment in the Fabric Studio using the Environments List grid.
+2. Populating the connection details of the interfaces via the Selected Environment grid.
+3. Overriding Globals at any Shared, Reference or LU level via the dedicated tab in the Selected Environment grid.   
+4. Deploying all environments to the server while defining the active environment.
 
 
 ### Step 1 - Creating the Environment
 
-When editing an existing environment, skip step 1.  
+When editing an existing environment, skip this step.  
 
 1. Go to **Project Tree** > **Shared Objects** and double click **Environments** to open the Environments window.
 
@@ -29,27 +29,27 @@ When editing an existing environment, skip step 1.
       
    -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
    
-For information about Fabric hardening, click XXX.
+**For information about Fabric hardening, click XXX.**
         <!--[Click for more information about Fabric security hardening].-->
 
 ### Step 2 - Defining Interface Settings per Environment 
 
 Once **Name** in the  **Environments List** grid is clicked, all DB and non-DB interfaces in the project are copied to the **Selected Environment** grid and displayed in the tabs. Each interface type is displayed in a separate tab. For example, if the project has DB, SMTP, Kafka and HTTP interfaces, each type is displayed in a separate tab.
 
-By default, all interfaces are enabled whereby the settings of each relevant interface can be disabled if they are not applicable for the environment.
+By default, all interfaces are enabled whereby the settings of each interface can be disabled if they are not applicable for the environment.
 
 1. Select the interface and enable or disable it for the environment by either:
    * Clicking the **Enabled** column checkbox.
    * Right clicking the row and clicking **Set Selected Rows as Enabled** or **Set Selected Rows as Disabled**. Hold the **Ctrl** key to select multiple rows. 
-2. Populate the relevant fields of each active interface in the **Selected Enviדronment** grid: server, user, password, etc. If the project has several interface types, go through the tabs and populate all mandatory fields.
+2. Populate the relevant fields of each active interface in the **Selected Environment** grid: Server, User, Password, etc. If the project has several interface types, go through the tabs and populate all mandatory fields.
 
    ![image](images/25_02_2.PNG)
 
 ### Step 3 - Overriding Globals per Environment
 
-In addition to the interfaces that are copied automatically to the created environment, the Globals can also be overridden per environment, via the Globals tab. 
+In addition to the interfaces that are automatically copied to the created environment, Globals can also be overridden per environment via the Globals tab. 
 
-The Globals tab grid contains the following columns:
+The Globals tab grid has the following columns:
 
 <table border="1" cellpadding="1" cellspacing="1" style="width:685px">
 
@@ -77,7 +77,7 @@ The Globals tab grid contains the following columns:
 
 
 
-  <p>When a global is defined in both Shared Objects and LU, it is displayed twice accordingly.</p>
+  <p>When a global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>
 
   </td>
 
@@ -141,17 +141,17 @@ The Globals tab grid contains the following columns:
 
 ![image](images/globals_table_with_change.png)
 
--  To **edit** the Global variable value, type in the new value. The new value is in bold when this window is next accessed.
+-  To edit the Global variable value, type in the new value. The new value is in bold when this window is next accessed.
 
--  To **revert** to the previous value, click the left gray area of the Global variable entry and then click **Reset To Original Values**. 
+-  To revert to the previous value, click the left gray area of the Global variable entry and then click **Reset To Original Values**. 
 
 
 
 Notes:
 
 -  Only **non-final** Globals are displayed in the Globals environment's table. Final Globals cannot be updated. 
--  Globals variables values can be overridden per environment. New Global variables cannnot be created per environment.
--  When an implementation has been updated, for example - adding a new Global in **Shared Objects**, close and then open the Environment window to see the changes in the Globals grid table.
+-  Globals variable values can be overridden per environment. New Global variables cannot be created per environment.
+-  When an implementation has been updated, for example; adding a new Global in Shared Objects, close and then open the Environment window to see the changes in the Globals grid table.
 
 ### Step 4 - Deploying the Environments
 
@@ -159,14 +159,14 @@ Repeat steps 1-3 to create the environments and then do the following:
 
 1. Save the environments definitions:
 
--   The environment cannot be saved when ![image](images/25_red_sign.PNG) is displayed to indicate that a mandatory field is not populated.
+   -   The environment cannot be saved when ![image](images/25_red_sign.PNG) is displayed to indicate that a mandatory field is not populated.
 
--   If the mandatory settings are missing, a validation error message opens:
+   -   If the mandatory settings are missing, a validation error message opens:
 
-     ![image](images/25_02_3.PNG)
+      ![image](images/25_02_3.PNG)
 
 2. Click **Deploy** to deploy an environment to the Fabric server. Unlike interfaces, environments are not deployed together with an LUT, Reference tables and Web Services and require an explicit deployment.
 
-Note that environments can be deployed to the Fabric Server either by the [Fabric Studio](03_deploy_env_from_Fabric_Studio.md) or by using a command line to perform an [offline deployment](04_offline_deployment.md) from an XML file.
+Note that environments can be deployed to the Fabric Server either from the [Fabric Studio](03_deploy_env_from_Fabric_Studio.md) or using a command line to perform an [offline deployment](04_offline_deployment.md) from an XML file.
 
 [![Previous](/articles/images/Previous.png)](01_environments_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_deploy_env_from_Fabric_Studio.md)
