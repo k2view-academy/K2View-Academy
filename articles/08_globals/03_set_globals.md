@@ -17,12 +17,23 @@ The **set_global global** command sets the value of the global indicated by <PAR
 <table>
 <tbody style="vertical-align:top">
 <tr>
+<td width="234">
+<p>set_global global</p>
+<p>'*.&lt;PARAM_NAME&gt;[=&lt;PARAM_VALUE&gt;] &lsquo;;</p>
+</td>
+<td width="319">
+<p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt; - for <b>all</b> LUT.</p>
+<p>Example:</p>
+<p>set_global global &lsquo;*.SOURCE_PRODUCT_VERSION=100&rsquo;;</p>
+</td>
+</tr>
+<tr>
 <td width="300pxl">
 <p>set_global global</p>
 <p>'&lt;LUT NAME&gt;.&lt;PARAM_NAME&gt; [=&lt;PARAM_VALUE&gt;]';</p>
 </td>
 <td width="600pxl">
-<p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; to the value provided by the PARAM_VALUE.</p>
+<p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; and optionally also by &lt;LUT NAME&gt; to the value provided by the PARAM_VALUE.</p>
 <p>
 <UL>
 <LI>When the LUT NAME is specified and the Global is also defined under Shared Objects, the Global value is overridden only for the given LUT NAME. <br/>Note that if the command of all LU settings is executed after the command with the LUT NAME it is also applied on that LU.</LI>
@@ -31,17 +42,6 @@ The **set_global global** command sets the value of the global indicated by <PAR
 </p>
 <p>Example:</p>
 <p>set_global global &lsquo;CRM.SOURCE_PRODUCT_VERSION=100&rsquo;;</p>
-</td>
-</tr>
-<tr>
-<td width="234">
-<p>set_global global</p>
-<p>'*.&lt;PARAM_NAME&gt;[=&lt;PARAM_VALUE&gt;] &lsquo;;</p>
-</td>
-<td width="319">
-<p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; to the value provided by the &lt;PARAM_VALUE&gt; - for all LUT.</p>
-<p>Example:</p>
-<p>set_global global &lsquo;*.SOURCE_PRODUCT_VERSION=100&rsquo;;</p>
 </td>
 </tr>
 <tr>
