@@ -30,7 +30,7 @@ Prior to running or debugging a flow, set the types and values of input argument
 A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow's window by either:
 
 - Running the entire flow and displaying the results.
-- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is ON. To add a breakpoint, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > Breakpoint or click on the left of the Stage title.
+- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is set to ON or Live. To add a breakpoint, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > Breakpoint or click on the left of the Stage title.
 
 Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they are automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
@@ -40,6 +40,8 @@ To run the flow, click <img src="images/99_25_run.PNG" alt="image" style="zoom:8
 
 - If Debug mode is <img src="images/99_25_debug_off.PNG" style="zoom:80%;" /> OFF, the flow cannot be debugged.
   
+
+Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:80%;" /> Live, the flow runs automatically on every change in the flow except for changing the Debug / Run arguments. For example, when adding a new Actor, adding or removing a link or modifying a value.
 
 If the breakpoints have been added to the flow, the flow stops at the first breakpoint. 
 

@@ -26,6 +26,7 @@ The following table presents a list of Actor's categories with examples per each
 <td style="vertical-align: top;" width="433">
 <p>Most commonly used Actors.</p>
 <p>Favorites is not a separate category. Each Actor in Favorites belongs to a category.</p>
+<p>Click <img src="images/99_favorites.PNG" alt="lev"/> in the Add Actors window to add / remove an Actor to / from Favoties.</p>
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>Const</strong> Actor, copies the input value argument to the output value argument. A Const Actor can:</p>
@@ -214,6 +215,7 @@ The following table presents a list of Actor's categories with examples per each
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](03_broadway_actor_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_types.md)

@@ -1,6 +1,6 @@
 # OrientDB Setup
 
-Data Catalog is using OrientDB distributed graph database. OrientDB is an Open Source NoSQL DBMS that combines the power of graphs and the flexibility of documents into one scalable, high-performance operational database.
+The Data Catalog uses a distributed OrientDB graph database, an Open Source NoSQL DBMS that combines the power of graphs and the flexibility of documents into one scalable, high-performance operational database.
 
 To setup the OrientDB, do the following:
 
@@ -8,9 +8,9 @@ To setup the OrientDB, do the following:
 
 2. Extract the zip file:
 
-   * For Windows installation: extract the file under **C:\K2View**
+   * For a Windows installation: extract the file under **C:\K2View**
 
-3. Edit **orientdb-server-config.xm**l by adding the parameter value 'GREMLIN' as follows:
+3. Edit the **orientdb-server-config.xml** by adding the parameter value 'GREMLIN' as follows:
 
    ~~~
    <handler class="com.orientechnologies.orient.server.handler.OServerSideScriptInterpreter">
@@ -22,14 +22,14 @@ To setup the OrientDB, do the following:
    </handler>
    ~~~
 
-4. On the first time you run OrientDB, you will be asked you to create username & password.
+4.The first time you run the OrientDB, you will be asked you to create a username and password.
 
-5. To run OrientDB:
+5. To run the OrientDB:
 
    * Go to **C:\K2View\orientdb-tp3-3.1.2\orientdb-tp3-3.1.2\bin**.
-   * Open CMD and run **server.bat**.
+   * Open the CMD and run the **server.bat**.
 
-6. Once OrientDB is up and running, you will see the following lines:
+6. Once the OrientDB is up and running, the following lines are displayed:
 
    ~~~
    INFO  {db=demodb} Gremlin started correctly [OGremlinServerPlugin]
@@ -39,7 +39,7 @@ To setup the OrientDB, do the following:
 
 7. Copy the link to the browser to open the OrientDB web application to create a new database.
 
-   * Note that you can also create a new OrientDB database during the definition of your Data Catalog Interface Type by populating the Database setting.
+   * Note that you can also create a new OrientDB database during the definition of the Data Catalog Interface Type by populating the Database settings.
 
 
 

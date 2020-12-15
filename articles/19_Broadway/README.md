@@ -25,5 +25,6 @@
 <li><a href="24_error_handling.md">Error Handling</a></li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Run and Debug Broadway Flow</a></li>
 <li><a href="27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
+<li><a href="28_actor_editor.md">Actor Editor</a></li>
 </ul>
 

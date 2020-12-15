@@ -1,0 +1,93 @@
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://jaxws.examples.k2view.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://jaxws.examples.k2view.com/" name="CalculatorImplService">
+<types/>
+<message name="add">
+<part name="arg0" type="xsd:int"/>
+<part name="arg1" type="xsd:int"/>
+</message>
+<message name="addResponse">
+<part name="return" type="xsd:int"/>
+</message>
+<message name="divide">
+<part name="arg0" type="xsd:int"/>
+<part name="arg1" type="xsd:int"/>
+</message>
+<message name="divideResponse">
+<part name="return" type="xsd:int"/>
+</message>
+<message name="subtract">
+<part name="arg0" type="xsd:int"/>
+<part name="arg1" type="xsd:int"/>
+</message>
+<message name="subtractResponse">
+<part name="return" type="xsd:int"/>
+</message>
+<message name="multiply">
+<part name="arg0" type="xsd:int"/>
+<part name="arg1" type="xsd:int"/>
+</message>
+<message name="multiplyResponse">
+<part name="return" type="xsd:int"/>
+</message>
+<portType name="CalculatorI">
+<operation name="add" parameterOrder="arg0 arg1">
+<input wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/addRequest" message="tns:add"/>
+<output wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/addResponse" message="tns:addResponse"/>
+</operation>
+<operation name="divide" parameterOrder="arg0 arg1">
+<input wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/divideRequest" message="tns:divide"/>
+<output wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/divideResponse" message="tns:divideResponse"/>
+</operation>
+<operation name="subtract" parameterOrder="arg0 arg1">
+<input wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/subtractRequest" message="tns:subtract"/>
+<output wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/subtractResponse" message="tns:subtractResponse"/>
+</operation>
+<operation name="multiply" parameterOrder="arg0 arg1">
+<input wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/multiplyRequest" message="tns:multiply"/>
+<output wsam:Action="http://jaxws.examples.k2view.com/CalculatorI/multiplyResponse" message="tns:multiplyResponse"/>
+</operation>
+</portType>
+<binding name="CalculatorImplPortBinding" type="tns:CalculatorI">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+<operation name="add">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</output>
+</operation>
+<operation name="divide">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</output>
+</operation>
+<operation name="subtract">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</output>
+</operation>
+<operation name="multiply">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://jaxws.examples.k2view.com/"/>
+</output>
+</operation>
+</binding>
+<service name="CalculatorImplService">
+<port name="CalculatorImplPort" binding="tns:CalculatorImplPortBinding">
+<soap:address location="http://127.0.0.1:10000/calcServer"/>
+</port>
+</service>
+</definitions>

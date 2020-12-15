@@ -8,7 +8,7 @@ To create a new Broadway flow:
 
 ![image](images/99_18_01_main_flow_area.PNG)
 
-The **Broadway flow** window includes the following elements:
+The **Broadway flow** window includes the following elements described in this article:
 
 - The flow area, which displays Stages and their Actors. 
   - To [add a Stage](19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage), either click the big **+**, or go to the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > **Insert After** or **Insert Before**. 
@@ -16,7 +16,8 @@ The **Broadway flow** window includes the following elements:
 - [Main menu](18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object. 
+- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object.
+- [Run Results window](18_broadway_flow_window.md#run-results-window), which displays the results of the flow execution. 
 
 ### Main Menu
 
@@ -56,9 +57,10 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td width="200">Debug ON / OFF</td>
+<td width="200"><a title="Debug" href="25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
 <td style="width: 465px;">
-<p>Enable the Debug mechanism. Only when Debug is ON, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
+<p>Enable the Debug mechanism.</p>
+<p>When Debug is ON or Live, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
 </td>
 </tr>
 <tr>
@@ -74,6 +76,12 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
+<td><a href="18_broadway_flow_window.md#flow-validation">Validation</a></td>
+<td style="width: 465px;">
+<p>Displays the number of validation errors, if found in the flow.</p>
+</td>
+</tr>
+<tr>
 <td width="200">Remarks</td>
 <td style="width: 465px;">
 <p>Click to display all remarks in the flow.</p>
@@ -81,6 +89,8 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
+
 
 
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
@@ -92,7 +102,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="13" width="400pxl">
+<td rowspan="14" width="400pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
 <td width="80pxl">Paste Selection</td>
@@ -135,6 +145,12 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 465px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
+<td><a href="19_broadway_flow_stages.md#support-parallel-actors-execution">Parallel</a></td>
+<td style="width: 465px;">
+Click to set a number of Actors to be executed in parallel within a Stage.
+</td>
+</tr>
+<tr>
 <td width="200"><a href="23_transactions.md">Transaction</a></td>
 <td style="width: 465px;">Click to open or close the transaction.</td>
 </tr>
@@ -148,6 +164,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -220,6 +237,29 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 [Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 
 Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
+
+### Run Results Window
+
+The Run Results window is a small window displayed at the bottom of a Broadway flow window and it displays the results upon the completion of the flow run:
+
+- When the flow is finished successfully, it either displays the values of external arguments (if exist in the flow) or remains empty.
+- When the flow fails, it displays the exception.
+
+![image](images/99_18_run_res_1.PNG)
+
+### Flow Validation
+
+The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow, prior to running it. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
+
+Click the icon to display the window footer with the error messages:
+
+![image](images/99_validation_output.PNG)
+
+You can then click on the error and choose to ignore the exception or fix the problem.
+
+For example, a flow includes an inherited **myDate** Actor that needs to be deleted for some reason. After the Actor is deleted from the project tree and the flow is opened, it will display validation errors. You can then update the flow as needed, for example by adding another Actor. 
+
+
 
 
 [![Previous](/articles/images/Previous.png)](17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](19_broadway_flow_stages.md)

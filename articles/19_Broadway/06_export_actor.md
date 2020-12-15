@@ -1,5 +1,7 @@
 # Actor Inheritance Mechanism
 
+### Overview
+
 A Broadway Actor can be extended to create a new Actor type using the **Export Actor** functionality. 
 
 When an Actor is exported, a new Actor inherits its logic and arguments and also extends it with additional functionality whereby specific business logic can be reused in different Broadway flows. For example, to format all dates using the same pattern, set a specific pattern in the **DateFormat** Actor and then export the Actor to reuse it in various Broadway flows. 
@@ -10,6 +12,8 @@ When exporting the Actor each input and output argument can be set as hidden or 
 * Setting an argument as **final**, the inherited Actor cannot change the ancestor's argument value. 
 
 This setting is optional where if hidden or final are not set, the argument remains as is in the inherited Actor.
+
+This article describes how to extend an Actor or to modify the extended Actor using the **Export Actor** functionality. To learn about advanced options of Actors inheritance, refer to the [Actor Editor](28_actor_editor.md) article. 
 
 ### How Do I Export an Actor?
 
@@ -30,7 +34,7 @@ This setting is optional where if hidden or final are not set, the argument rema
 
 The new **myDateFormat** Actor is created and inherits from the **DateFormat** Actor type. The **myDateFormat** Actor can be reused by any Broadway flow in Fabric.
 
-Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow.
+Once the inherited Actor is created, it is added to the list of Actors and can be [added to a Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage) in the current or another flow. In addition, ***. actor** file of the inherited Actor is added to the project tree. 
 
 The [Actor's input and output arguments](03_broadway_actor_window.md#properties-overview) in the Properties window can be filtered using the Parameter's filter to display only the inherited Actor's arguments, or only the ancestor's arguments or all.
 

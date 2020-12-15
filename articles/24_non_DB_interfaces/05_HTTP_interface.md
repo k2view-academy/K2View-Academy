@@ -46,30 +46,30 @@ To create a new HTTP interface, do the following:
 
 ##### Authentication Settings
 
-Fabric HTTP Interface supports various standard authentication and authorization types, also known as scheme, when access to external protected resources. 
+Fabric HTTP Interface supports various standard authentication and authorization types, also known as schemes, when accessing to external protected resources. 
 
-Each type requires several security and credentials definitions, which shall be supplied to the Fabric implementer by the resource vendor and that shall be populated at HTTP interface properties. According to the type and the properties, Fabric makes all required authentication interactions with the remote vendor servers.
+Each type requires several specific security and credentials definitions, which shall be supplied to the Fabric implementer by the resource provider and that shall be populated in HTTP interface properties. According to the type and the properties, Fabric makes all required authentication interactions with the remote vendor servers.
 
 The supported types are: 
 
 * ***Basic* HTTP Authentication** is built into the HTTP protocol. The client (Fabric) sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by  \<user:password\> in base64-encoded form. 
 
-  Accordingly, this interface properties at Fabric are:
+  Accordingly, the properties for this interface are:
 
-  *  User
+  * User
   * Password
 
   Note that since this mechanism does not provide confidentiality it is usually used over HTTPS and not HTTP.
 
-* ***Bearer* Authentication** (also known as *token authentication*) is an HTTP authentication type/scheme that uses security tokens called bearer tokens. The bearer token is a cryptic string. The client (Fabric) sends this token in the `Authorization` header when making requests to the resource. 
+* ***Bearer* Authentication** (also known as *token authentication*) is an HTTP authentication type/scheme that uses security tokens called bearer tokens. The bearer token is a cryptic string. The client (Fabric) sends this token in the `Authorization` header when sending requests to the resource. 
 
-  Accordingly, this interface properties at Fabric are:
+  Accordingly, the properties for this interface are:
 
   * token
 
-* **OAuth 2.0 Password Credentials**  is one of the OAuth protocol's grant type flow. The client (Fabric) interacts first with an authorization server, supplying it user&password and gets back an access token. Then, the client uses the access token for the resource server calls. 
+* **OAuth 2.0 Password Credentials**  is one of the OAuth protocol's grant type flow. The client (Fabric) interacts first with an authorization server, supplying it user & password and gets back an access token. Then, the client uses the access token for the resource server calls. 
 
-  Accordingly, this interface properties at Fabric are:
+  Accordingly, the properties for this interface are:
 
   * User 
 
@@ -81,13 +81,12 @@ The supported types are:
 
   * Client Secret (optional) - shall be provided by the external resource/auth vendor.
 
-  * Scope (optional) - specify the scope of the access request using.  In turn, the authorization server uses the "scope" response parameter to inform the client of the scope of the access token issued. 
+  * Scope (optional) - used to validate that the required scopes of actions are indeed permitted by the authenticating server. In turn, the authorization server uses the "scope" response parameter to inform the client of the scope of the access token issued. 
+  The value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
 
-    he value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
+  * Token Timeout - request timeout toward the authorization server.
 
-  * Token Timeout - request timeout toward the authorization server
-
-* **OAuth 2.0 Client Credentials** is one of the OAuth protocol's grant type flow. The client (Fabric) interacts first with an authorization server, supplying it client-ID and Client-Secret and gets back an access token. Then, the client uses the access token for the resource server calls.
+* **OAuth 2.0 Client Credentials** is another OAuth protocol's grant type flow. Fabric interacts first with the authorization server, supplying it client-ID and Client-Secret and gets back an access token. Fabric then uses the access token for the resource server calls.
 
   Accordingly, this interface properties at Fabric are:
 
@@ -103,11 +102,12 @@ The supported types are:
 
 
 
-### Example of Using an HTTP Interface in a Broadway Flow
+### Example of Using an HTTP/HTTPS Interface in a Broadway Flow
 
 ![image](images/03_http_2.PNG)
 
-The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface.
+The above Broadway flow uses an **Http** Actor to connect to the HTTP server that populates the predefined HTTP interface into the **interface** input argument. The **path** input argument must be populated by the path relative to the interface. 
+Note: HTTPS requests are included into this HTTP actor (for which security parameters are defined within the interface)  
 
 
 

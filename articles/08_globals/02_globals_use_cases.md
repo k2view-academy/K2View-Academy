@@ -19,7 +19,7 @@ The following scenarios describe how Globals can be used in Fabric objects.
 ### How Do I Add a Global to a Parser Map?
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**].
 2.	Click **Parsers** > [**Parser Map**] to open the existing parser map.
-3.	Click the **Objects tab**in the right panel of the Parser Map working area.
+3.	Click the **Objects tab** in the right panel of the Parser Map working area.
 4.	Click **Globals** and select the **global** in the **Globals list**.
 5.	Drag the **global** into the working area.
 6.	Connect the **global** to the **table column**.
@@ -52,9 +52,11 @@ Click the grey arrow on the left of the window to display the panel and the list
 Globals can be overridden via the Fabric Server using Fabric commands **without re-deploying an LU**.
 * Only Globals that are not defined as Final can be overridden. 
 * Globals defined as Final on a Shared Objects level but are not defined as Final under the same name on an LU level, can be overridden in the context of this LU only.
-* Globals can be overridden per environment. Click [here](/articles/25_environments/02_create_new_environment.md) for more information about Globals settings per environment.
+* Globals can be overridden per environment. 
 
-[Click for more information about Global's override using SET and SET_GLOBAL commands](/articles/08_globals/03_set_globals.md). 
+For more information about Globals settings per environment. Click [here](/articles/25_environments/02_create_new_environment.md).
+
+For more information about overriding Globals using SET and SET_GLOBAL commands, click [here](/articles/08_globals/03_set_globals.md). 
 
 [![Previous](/articles/images/Previous.png)](/articles/08_globals/01_globals_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/08_globals/03_set_globals.md)
 
