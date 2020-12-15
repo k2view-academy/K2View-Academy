@@ -11,7 +11,7 @@ Using the JMX report page will also provide you with valuable information about 
 
 ### What can I monitor with JMX?
 
-Various statistics using JMX counters within Fabric can be gathered. Below are some examples of some statistics that can be monitored:
+Various statistics using JMX counters within Fabric can be gathered. Below is the list of the main statistics fields that can be monitored:
 
 - Processes - provides information about the major services at play across Fabric during execution.
 - Actions - such as schema maintenances and fabric commands
