@@ -1,6 +1,6 @@
 # Data Catalog Overview
 
-Data Catalog is a web application based on a distributed OrientDB (Apache 2) graph database that visualizes a project’s data structure and the relationships between its entities.  Fabric creates a JSON-format representation of the project, deploys it to the Fabric server and uses the OrientDB to create and save the graph structure. Data Catalog also enables the user to define additional nodes and relations if the automatic process doesn’t find them or if they are not part of the project. The resulting Data Catalog becomes available to the Web Framework for navigation. 
+Data Catalog is a web application based on a distributed OrientDB (Apache 2) graph database that visualizes a project’s meta data structure and the relationships between its entities.  Fabric creates a JSON-format representation of the project, deploys it to the Fabric server and uses the OrientDB to create and save the graph structure. Data Catalog also enables the user to define additional nodes and relations if the automatic process doesn’t find them or if they are not part of the project. The resulting Data Catalog becomes available to the Web Framework for navigation. 
 
 ![image](images/33_architecture.PNG)
 
