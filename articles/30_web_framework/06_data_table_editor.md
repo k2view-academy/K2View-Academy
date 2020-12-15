@@ -35,11 +35,15 @@ The table content is shown, with the following options:
 
   The filtering is reflected at the top action chips area, which also contains subscriber #13 chip. Clicking on the X at this chip leads to removing this filter and whole table data will be shown.
   
+  
+  
+  Note that table data is presented up to 1000 entries per table.
+  
     
 
 #### Table Edit Mode 
 
-To edit the table's content - click on the **Edit** button at the top Actions Bar, switching to Edit Mode.
+To edit the table's content - click on the **Edit** button at the top Actions Bar, switching to Edit Mode. Editing is available according to the permission that granted to the user. 
 
 The table in this mode shown with:
 
