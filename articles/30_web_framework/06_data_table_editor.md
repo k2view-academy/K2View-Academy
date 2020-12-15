@@ -37,7 +37,7 @@ The table content is shown, with the following options:
   
   
   
-  Note that table data is presented up to 1000 entries per table.
+  Note that only first 1000 entries are presented per table.
   
     
 
