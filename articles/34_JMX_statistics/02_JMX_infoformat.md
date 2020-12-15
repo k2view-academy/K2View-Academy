@@ -14,7 +14,7 @@ Enter your credentials to the admin panel home page, then select the **Statistic
 
 <img src="/articles/34_JMX_statistics/images/JMX-pic1.PNG">
 
-From the main window panel the various statistics can be accesses by expanding the required section located under one of the five main sections:
+From the main window panel the various statistics can be accesses by expanding the required section located under one of the seven main sections:
 
 #### Processes
 
