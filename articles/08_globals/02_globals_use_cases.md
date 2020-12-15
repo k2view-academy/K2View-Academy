@@ -54,7 +54,7 @@ Globals can be overridden via the Fabric Server using Fabric commands **without 
 * Globals defined as Final on a Shared Objects level but are not defined as Final under the same name on an LU level, can be overridden in the context of this LU only.
 * Globals can be overridden per environment. 
 
-For more information about Globals settings per environment. Click [here](/articles/25_environments/02_create_new_environment.md).
+For more information about Globals settings per environment, click [here](/articles/25_environments/02_create_new_environment.md).
 
 For more information about overriding Globals using SET and SET_GLOBAL commands, click [here](/articles/08_globals/03_set_globals.md). 
 
