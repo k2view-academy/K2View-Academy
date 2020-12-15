@@ -25,7 +25,7 @@ The **set_global global** command sets the value of the global indicated by <PAR
 <p>Set the value of the Global indicated by &lt;PARAM_NAME&gt; to the value provided by the PARAM_VALUE.</p>
 <p>
 <UL>
-<LI>When the LUT NAME is specified and the Global is also defined under Shared Objects, the Global value is overridden only for the given LUT NAME. <br/>Note that the override takes effect only if the command for the specific LU is executed <b>after</b> all LU settings. If the command with the LUT NAME is executed later, it is also applied on the LU.</LI>
+<LI>When the LUT NAME is specified and the Global is also defined under Shared Objects, the Global value is overridden only for the given LUT NAME. <br/>Note that if the command of all LU settings is executed after the command with the LUT NAME it is also applied on that LU.</LI>
 <LI>If the variable was not defined during implementation on a Shared Objects or LU level, the command is not applied and an error message is displayed indicating that it does not exist in the LU.</LI>
 </UL>
 </p>
