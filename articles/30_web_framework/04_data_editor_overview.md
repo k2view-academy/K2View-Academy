@@ -16,7 +16,7 @@ Following is an example of a project's Catalog:
 
 Click on the top action bar **Refresh** button<img src="images/30_dataeditor_refresh_icon.png" alt="refresh" />In order to refresh the table list.
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_editor_scheme_viewer.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_editor_schema_viewer.md) 
 
 
 
