@@ -1,6 +1,6 @@
-# Data Editor Scheme Viewer
+# Data Editor Schema Viewer
 
-The Scheme Viewer shows the scheme structure and enables fetching its data. It is shown once a unit - a specific LU or "common", is selected at the Data Editor [Catalog](04_data_editor_overview.md#catalog-screen) screen. Depends on the selected unit type, either of the following will be shown.
+The Schema Viewer shows the scheme structure and enables fetching its data. It is shown once a unit - a specific LU or "common", is selected at the Data Editor [Catalog](04_data_editor_overview.md#catalog-screen) screen. Depends on the selected unit type, either of the following will be shown.
 
 ### LU Tables
 
