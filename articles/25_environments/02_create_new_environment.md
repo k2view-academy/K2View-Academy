@@ -20,7 +20,7 @@ When editing an existing environment, skip this step.
 
    -  Enter a meaningful name for the environment in the **Name** field.
 
-    - (Optional) In the **Comments** field add a description of the environment.
+    - (Optional) In the **Comments** field, add a description of the environment.
 
     - (Optional) In the **Fabric URL** field, select the server from the predefined list in the **Server Configuration** tab in the [**User Preferences**](/articles/04_fabric_studio/04_user_preferences.md) window. 
 
@@ -67,9 +67,9 @@ The Globals tab grid has the following columns:
 
   <ul>
 
-   <li>LU, displays the LU name</li>
+   <li>LU, displays the LU name.</li>
 
-   <li>References, indicates the k2_ref</li>
+   <li>References, indicates the k2_ref.</li>
 
    <li>Shared Objects, this column is empty. </li>
 
@@ -77,7 +77,7 @@ The Globals tab grid has the following columns:
 
 
 
-  <p>When a global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>
+  <p>When a Global is defined in both Shared Objects and LUs, it is displayed twice accordingly.</p>
 
   </td>
 
@@ -150,7 +150,7 @@ The Globals tab grid has the following columns:
 Notes:
 
 -  Only **non-final** Globals are displayed in the Globals environment's table. Final Globals cannot be updated. 
--  Globals variable values can be overridden per environment. New Global variables cannot be created per environment.
+-  Global variable values can be overridden per environment. New Global variables cannot be created per environment.
 -  When an implementation has been updated, for example; adding a new Global in Shared Objects, close and then open the Environment window to see the changes in the Globals grid table.
 
 ### Step 4 - Deploying the Environments
