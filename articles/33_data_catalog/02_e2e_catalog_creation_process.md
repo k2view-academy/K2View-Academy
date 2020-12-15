@@ -12,7 +12,7 @@ To create a Data Catalog from the Fabric project and to start using it, do the f
    * If needed, additional Data Catalog interfaces can be defined, for example for an OrientDB cluster.
 3. (Optional) Use the [Build Catalog](03_build_and_write_catalog.md) option using the Fabric Studio to build the catalog files for all entities (each LU, WS, Common) in the project. 
    * This step is optional and is only performed when there is a requirement to override catalog files prior to uploading the catalog to the server.
-4. (Optional) [Override the automatic files](06_override_data_catalog.md) to include the elements that are not part of the project implementation or if the automatic process doesn’t recognize the elements.
+4. (Optional) [Override the automatic files](06_override_data_catalog.md) to include the elements that the automatic process doesn't recognize them or they are not part of the project implementation.
 5. [Install OrientDB](07_OrientDB_setup) and start it. This is a one-time only activity. 
 6. Use the [Write Catalog](03_build_and_write_catalog.md) option in the Fabric Studio to deploy the Catalog to the server. This includes building the catalog files and uploading them to OrientDB. 
 7. Login to the Data Catalog using the K2View Web Framework and [navigate the catalog](05_data_catalog_navigation.md).
