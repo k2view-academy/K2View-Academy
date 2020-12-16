@@ -1,8 +1,8 @@
 # TDM Database
 
- The TDM settings and TDM tasks are kept in a dedicated  PostgreSQL DB. Both TDM components - TDM GUI and the task execution processes - connects the TDM DB to get or update the TDM settings or the TDM tasks.
+TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. Both the TDM and TDM GUI and task execution processes connect to the TDM DB to get or update TDM settings or  tasks.
 
-The table below lists the TDM tables and their description.
+The following table lists the TDM tables and their description.
 
 
 
@@ -20,31 +20,31 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tdm_lu_type_relation_eid</td>
-<td>TDM relation table. This table maps the source parent entity ID to his source children entity IDs per source environment. For example Customer 1 have orders 56, 63, and 73 in Production environment. This table needs to be populated by the Sync of the parent LU, and is used to build the entities list of the children LUs on Load (Copy) tasks.</td>
+<td>TDM relationships table. This table maps the source parent entity ID to its source children entity IDs per source environment. For example Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used to build the entities list of the children LUs during Load (copy) tasks.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>tdm_lu_type_rel_tar_eid</td>
-<td>TDM relation table for target IDs. This table maps the target parent entity ID to his target children entity IDs per target environment. This table needs to be populated by the Sync of the parent LU, and is used to build the entities list of the children LUs on Delete Only tasks, when the TDM task deletes the parent entites and their related data from the target environment.</td>
+<td>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment. This table is populated by a aync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entites and their related data from a target environment.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>[LU_NAME]_params</td>
-<td>Parameters table. Contains the list of all entities, migrated into Fabric per LU. Each combination of entity and source envirtonment has its own record. Each reconrds contains the entity ID (IID), the source environment name, and the list of parameters, defined on the LU. For example, Customert Type. This table is created by Fabric Sync on each LU and is used to support the following Task's selection methods: Random Selection, and select by Parameters.</td>
+<td>Parameters table. Contains the list of all entities, migrated into Fabric per LU. Each combination of an entity and source environment has a specific record which holds the entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customert Type. This table is created by a Fabric sync on each LU and is used to support random selection and select by parameters task selection methods.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>tdm_be_post_exe_process</td>
-<td>The list of post execution process attached to each Business Entity. A post execution process is executed in the end of the task execution. For example- sending a mail to the user.</td>
+<td>List of post execution processes attached to each Business Entity. A post execution process is executed at the end of the task execution process. For example, sending a mail to a user.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>product_logical_units</td>
 <td valign="top" width="500 pxl">
 <ul>
-<li>Map the list of LUs to each Business Entity.</li>
-<li>Map the relation of LUs within a Business Entity: parallel LUs, or parent-child LUs.</li>
-<li>Map the combination of Business Entity and LU to a Product&nbsp;</li>
+<li>Maps a list of LUs to each Business Entity.</li>
+<li>Maps the relationship of LUs within parallel LUs or parent-child LUs in a Business Entity.</li>
+<li>Maps the combined Business Entity and LU to a Product</li>
 </ul>
 </td>
 <td>Business Entity/Product</td>
@@ -61,22 +61,22 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_globals</td>
-<td>The list of Global parameters, set on the Task level.</td>
+<td>List of Global parameters set on a task level.</td>
 <td>Task</td>
 </tr>
 <tr>
 <td><h4>task_ref_tables</td>
-<td>The list of Reference Tables included in each TDM task.</td>
+<td>List of Reference tables included in each TDM task.</td>
 <td>Task</td>
 </tr>
 <tr>
 <td><h4>tasks_logical_units</td>
-<td>The list of LUs included in each TDM task.</td>
+<td>List of LUs included in each TDM task.</td>
 <td>Task</td>
 </tr>
 <tr>
 <td><h4>instance_table_count</td>
-<td>This table contains the number of records, added to each LU table on each LU and LUI. The table is populated by Fabric Sync and is used to generate the TDM Statistics report.</td>
+<td>Holds the records added to each LU table in each LU and LUI. The table is populated by a Fabric sync and is used to generate the TDM Statistics report.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -91,12 +91,12 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_execution_entities</td>
-<td>The detailed&nbsp; list of entities and their execution status per each task execution.</td>
+<td>Detailed list of entities and their execution status per each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
 <td><h4>task_execution_list</td>
-<td>The table holds the list of execution requests of each task execution. A separate record is created for each LU and post execution process.&nbsp;</td>
+<td>Holds the list of execution requests of each task execution. A separate record is created for each LU and post execution process.&nbsp;</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -106,12 +106,12 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_ref_exe_stats</td>
-<td>The list of Reference Table to be processed by a given task execution.</td>
+<td>List of Reference Table to be processed by a given task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
 <td><h4>tasks_post_exe_process</td>
-<td>The list of post execution processes to be executed per each task execution.</td>
+<td>List of post execution processes to be executed per each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -121,7 +121,7 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_exe_stats_summary</td>
-<td>Summary statistics on each task execution. One record is created on each task_Execution_id.</td>
+<td>Summary statistics on each task execution. A record is created for each task_Execution_id.</td>
 <td>Task Execution Statistics</td>
 </tr>
 <tr>
@@ -136,22 +136,22 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>environment_owners</td>
-<td>The list of environment owner users of each TDM environment.</td>
+<td>List of environment owner users of each TDM environment.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
 <td><h4>environment_products</td>
-<td>The list of products (applications), attached to each LU.</td>
+<td>List of products (applications) attached to each LU.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
 <td><h4>environment_roles</td>
-<td>The list of roles and the permissions of each role per each TDM environment.</td>
+<td>List of roles and their permissions per TDM environment.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
 <td><h4>environment_role_users</td>
-<td>The list of users, attached to a role.</td>
+<td>List of users attached to a role.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
@@ -161,13 +161,13 @@ The table below lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tdm_env_globals</td>
-<td>The list of Global parameters, set on the Environment level.</td>
+<td>List of Global parameters set on an Environment level.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
 <td><h4>tdm_general_parameters</td>
 <td>TDM general parameters.</td>
-<td>TDM General Parameters</td>
+<td>General TDM parameters</td>
 </tr>
 </tbody>
 </table>
