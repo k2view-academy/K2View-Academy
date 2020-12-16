@@ -375,9 +375,7 @@ Fabric has commands that display a Fabric configuration and its settings. For ex
   - **LIST,** a list of [deployed objects](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-are-deployed-objects-reflected-in-the-fabric-server) and [Fabric credentials](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) (ROLES, USERS, TOKENS, ROLE_PERMISSIONS and METHODS).
 
 - General information:
-  - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in the scope (the latest LUI, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Globals' values](/articles/08_globals/01_globals_overview.md#globals-overview) and the active environment. 
-
-<!--Drop 2- Add a link to Environments--> 
+  - **SET,** displays the current session’s settings: [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1), the LUI in the scope (the latest LUI, get on each LU), the [deployed project name](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#how-do-i-check-which-project-is-deployed-to-fabric), [Globals' values](/articles/08_globals/01_globals_overview.md#globals-overview) and the [active environment](/articles/25_environments/05_set_and_list_commands.md). 
 
 ### Fabric Settings
 
@@ -394,9 +392,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   - Set [ignore source exception](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md).
   - Set [always_sync](/articles/14_sync_LU_instance/02_sync_modes.md#always-sync)
 
-- Set the active environment.
-
-  <!--Drop 2- Add a link to Environments-->
+- Set the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 - **SET OUTPUT** command, set the output format of query results. 
 
@@ -429,9 +425,7 @@ The values are kept in the **global_settings** Cassandra table under [k2system k
 
 ###  Deploy and Drop Commands
 
-Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_offline_deploy.md) and Fabric Environments on the Fabric console.
-
-<!--Drop 2- Add a link to Environments-->
+Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_offline_deploy.md) and [Fabric Environments](/articles/25_environments/03_deploy_env_from_Fabric_Studio.md) on the Fabric console.
 
 #### Drop LU Command
 
@@ -443,27 +437,31 @@ Note that this command is used mainly in a Testing environment to restart deploy
 
 ##### Drop LU Syntax
 
+~~~
 DROP LUTYPE [LU Name];
+~~~
 
-Example: 
+**Example:** 
 
-DROP LUTYPE Customer;
+~~~
+fabric>DROP LUTYPE Customer;
+~~~
 
 ### Fabric Environments and Interfaces
 
 Fabric enables the deployment of Fabric environments and setting active environments on [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
-The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the active environment.
-
-<!-- drop 3- add a link on environments -->
+The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 ### Run Queries on Cassandra
 
 CQL queries can be run on Cassandra in the Fabric server using the **CQL** command only for select statement.
 
-Example:
+**Example:**
 
-`fabric>cql select * from k2view_customer.entity;`
+~~~
+fabric>cql select * from k2view_customer.entity;
+~~~
 
 [Click for more information about Cassandra Basic Commands.](/articles/02_fabric_architecture/07_cassandra_basic_commands.md)
 
@@ -471,9 +469,7 @@ Example:
 
 Get the Fabric jobs' list and status, start, stop, update and resume jobs.
 
-Click for more information about Fabric jobs.
-
-<!--Drop 2- add a link to Fabric jobs-->
+[Click for more information about Fabric jobs](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md).
 
 ### Batch Process Commands
 
@@ -483,9 +479,7 @@ Fabric has commands that start an execution, retry and cancel the execution of a
 
 Note that MIGRATE commands are used as aliases to BATCH commands.
 
-Click for more information about Fabric batch process mechanism.
-
-<!--Drop 2- add a link to Batch Process-->
+[Click for more information about Fabric batch process mechanism](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
 
 ### Process Control
 
@@ -495,13 +489,11 @@ Click for more information about Fabric batch process mechanism.
 
 - The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
 
-<!--Drop 2- add a links to jobs, parsers, graphit, broadway-->
-
 ### Execution Monitoring
 
 The **TRACE** command enables tracing internal Fabric operations by request and writing them into Tracing files.
 
-<!--Drop 3- add a links to trace-->
+[Click for more information about Tracing mechanism](/articles/29_tracing/01_tracing_overview.md).
 
 ### CommonDB & Reference Tables
 
@@ -536,7 +528,32 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 
 ### Fabric Broadway
 
-Fabric [BROADWAY](/articles/19_Broadway/01_broadway_overview.md) command runs a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md).
+Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), proving the LU name and the execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
+
+There two types of execution parameters for a BROADWAY command:
+
+* [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if exist.
+
+* Recovery parameters, as follows:
+  * **recoveryId** - unique ID to save and recover the flow. The flow recovery is enabled only if the **recovery ID** is supplied.
+
+  * **recoveryTtl** (optional) - *time to live* in seconds for the recovery point to be kept in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_TTL_SEC.
+
+  * **recoveryMaxTries** (optional) - maximum number of retries until the flow is deleted from **broadway_recovery_point** Cassandra table. The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_MAX_RETRIES.
+
+    [Click for more information about Broadway Recovery](/articles/19_Broadway/29_recovery_point.md).
+
+##### Syntax
+
+~~~
+broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...]
+~~~
+
+**Example:**
+
+```
+fabric>Broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
+```
 
 ### Queries Helpers
 
@@ -546,6 +563,6 @@ An SQL statement can be preceded by the **EXPLAIN** keyword or by the **EXPLAIN 
 
 Example:
 
-![Query Helpers](/articles/02_fabric_architecture/images/04_fabric_command_query_helpers.png)
+![Query Helpers](images/04_fabric_command_query_helpers.png)
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md)

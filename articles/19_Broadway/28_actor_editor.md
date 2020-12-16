@@ -54,4 +54,4 @@ Let's create a new **CheckMaxVal** Actor that inherits from a **JavaScript** Act
 
 5. Once the debug is finished, close the Actor Edit and add the Actor to the required flow.
 
-[![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)
+[![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](29_recovery_point.md)
