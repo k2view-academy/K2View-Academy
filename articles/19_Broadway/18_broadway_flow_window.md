@@ -60,8 +60,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <tr>
 <td width="200"><a title="Debug" href="25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
 <td style="width: 465px;">
-<p>Enable the Debug mechanism.</p>
-<p>When Debug is ON or Live, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
+<p>Enable the Debug mechanism. When the mode is Debug ON or Live Debug, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
 </td>
 </tr>
 <tr>
