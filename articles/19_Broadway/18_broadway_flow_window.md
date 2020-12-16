@@ -18,6 +18,7 @@ The **Broadway flow** window includes the following elements described in this a
 - [Actor context menu](18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
 - [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object.
 - [Run Results window](18_broadway_flow_window.md#run-results-window), which displays the results of the flow execution. 
+- [Flow Validation Footer](18_broadway_flow_window.md#flow-validation-footer), which displays the error messages in the flow, if exist.
 
 ### Main Menu
 
@@ -76,7 +77,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td><a href="18_broadway_flow_window.md#flow-validation">Validation</a></td>
+<td><a href="18_broadway_flow_window.md#flow-validation-footer">Validation</a></td>
 <td style="width: 465px;">
 <p>Displays the number of validation errors, if found in the flow.</p>
 </td>
@@ -89,6 +90,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -240,16 +242,16 @@ Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) i
 
 ### Run Results Window
 
-The Run Results window is a small window displayed at the bottom of a Broadway flow window and it displays the results upon the completion of the flow run:
+The Run Results window is a small popup window displayed on top of a Broadway flow window and it shows the results upon the completion of the flow run:
 
 - When the flow is finished successfully, it either displays the values of external arguments (if exist in the flow) or remains empty.
 - When the flow fails, it displays the exception.
 
 ![image](images/99_18_run_res_1.PNG)
 
-### Flow Validation
+### Flow Validation Foot
 
-The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow, prior to running it. If the flow has errors, the validation icon in the main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
+The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow, prior to running it. If the flow has errors, the validation icon in the Main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
 
 Click the icon to display the window footer with the error messages:
 
@@ -257,7 +259,7 @@ Click the icon to display the window footer with the error messages:
 
 You can then click on the error and choose to ignore the exception or fix the problem.
 
-For example, a flow includes an inherited **myDate** Actor that needs to be deleted for some reason. After the Actor is deleted from the project tree and the flow is opened, it will display validation errors. You can then update the flow as needed, for example by adding another Actor. 
+For example, a flow includes an inherited **myDate** Actor that needs to be deleted for some reason. After the Actor is deleted from the project tree and the flow is opened, the validation errors are displayed. You can then update the flow as needed, for example by adding another Actor. 
 
 
 

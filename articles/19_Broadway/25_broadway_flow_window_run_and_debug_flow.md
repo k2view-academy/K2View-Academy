@@ -36,12 +36,10 @@ Running the flow or debugging it saves a local copy of the flow in the Fabric pr
 
 To run the flow, click <img src="images/99_25_run.PNG" alt="image" style="zoom:80%;" /> **Run Flow** to run the entire flow and display the results. 
 
-- If Debug mode is <img src="images/99_25_debug_on.PNG" style="zoom:80%;" /> ON, the flow can be debugged.
+- If Debug mode is <img src="images/99_25_debug_on.PNG" style="zoom:80%;" /> ON or <img src="images/99_25_debug_live.PNG" style="zoom:80%;" /> Live Debug, the flow can be debugged.
 
 - If Debug mode is <img src="images/99_25_debug_off.PNG" style="zoom:80%;" /> OFF, the flow cannot be debugged.
   
-
-Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:80%;" /> Live, the flow runs automatically on every change in the flow except for changing the Debug / Run arguments. For example, when adding a new Actor, adding or removing a link or modifying a value.
 
 If the breakpoints have been added to the flow, the flow stops at the first breakpoint. 
 
@@ -53,7 +51,9 @@ If a flow has an inner flow with breakpoints, the execution of the flow stops at
 
 To stop the flow, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run**.
 
-When Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
+When Debug is ON or Live Debug, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
+
+Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:80%;" /> Live Debug, the flow runs automatically on every change in the flow except for changing the Debug / Run arguments. For example, when adding a new Actor, adding or removing a link or modifying a value.
 
 ### Displaying Input and Output Data During a Debug
 
