@@ -101,68 +101,68 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 
 To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the right corner of the Stage. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage. 
 
-<table style="width: 900px; height: 503px;">
+<table style="width: 900px">
 <tbody>
-<tr style="height: 36px;">
-<td style="height: 503px; width: 323px;" rowspan="15">
+<tr>
+<td rowspan="15" width="380pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
-<td style="height: 36px; width: 174px;">Paste Selection</td>
-<td style="height: 36px; width: 381px;">Paste the copied selection, for example an Actor from another Stage.</td>
+<td width="120pxl">Paste Selection</td>
+<td width="400pxl">Paste the copied selection, for example an Actor from another Stage.</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a></td>
 <td style="height: 18px; width: 381px;">Add a new Stage after the selected one.</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
 <td style="width: 381px; height: 18px;">Add a new Stage before the selected one.</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
 <td style="width: 381px; height: 18px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split</a></td>
 <td style="width: 381px; height: 18px;">Split the selected Stage.</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Merge</a></td>
 <td style="width: 381px; height: 18px;">Merge the selected Stage.</td>
 </tr>
-<tr style="height: 36px;">
+<tr>
 <td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages">Iterate Close</a></td>
 <td style="width: 381px; height: 36px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
 </tr>
-<tr style="height: 17px;">
+<tr>
 <td style="height: 17px; width: 174px;"><a href="29_recovery_point.md">Recovery Point</a></td>
 <td style="width: 381px; height: 17px;">Click to set the flow recovery point to enable the flow re-run from the this point on in case of failure.</td>
 </tr>
-<tr style="height: 54px;">
+<tr>
 <td style="height: 54px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
 <td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a Stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
-<tr style="height: 36px;">
+<tr>
 <td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
 <td style="width: 381px; height: 36px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
-<tr style="height: 54px;">
+<tr>
 <td style="height: 54px; width: 174px;"><a href="24_error_handling.md">Error Handler</a></td>
 <td style="width: 381px; height: 54px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
-<tr style="height: 36px;">
+<tr>
 <td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#support-parallel-actors-execution">Parallel</a></td>
 <td style="width: 381px; height: 36px;">Click to set a number of Actors to be run in parallel within a Stage. When set, displays the number of parallel threds.</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="height: 18px; width: 174px;"><a href="23_transactions.md">Transaction</a></td>
 <td style="width: 381px; height: 18px;">Click to open or close the transaction.</td>
 </tr>
-<tr style="height: 54px;">
+<tr>
 <td style="height: 54px; width: 174px;">Breakpoint</td>
 <td style="width: 381px; height: 54px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title.</td>
 </tr>
-<tr style="height: 72px;">
+<tr>
 <td style="height: 72px; width: 174px;">Remark</td>
 <td style="width: 381px; height: 72px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
