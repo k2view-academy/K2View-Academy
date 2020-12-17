@@ -2,13 +2,13 @@
 
 ## Overview
 
-The TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Users can also create a task that extracts and saves different versions of the data of the selected entities.
+The TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Tasks can also be created to extract and save different versions of the data of the selected entities.
 
-**Examples:**
+**Examples**
 
-- Customer 1 exists in both the Production and UAT environments, with different data saved in each environment. Therefore, the TDM must create separate instances of Customer 1, one for Production and another for UAT.
+- Customer 1 exists in both the Production and UAT environments where different data is saved in each environment. In this scenario, the TDM creates separate instances of Customer 1, one for Production and another for UAT.
 
-- [Data Flux task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A user creates a task to save a version of Customer 1 in their testing environment and runs the task every couple of hours to backup the data. Each version of Customer 1 must create a separate instance.
+- [Data Flux task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a version of Customer 1 in a testing environment and to run the task every couple of hours to backup the data. Each version of Customer 1 must create a separate instance.
 
   
 
@@ -18,31 +18,31 @@ To create different LUIs per environment and version, each LUI created by the TD
 
 ### Regular Tasks
 
-When a version indicator is not set, i.e. the user does not need to save a separate version of the entity, the LUI format is as follows: 
+When a version indicator is not set, and a separate version of the entity is not saved, the LUI format is as follows: 
 
 ```
 <Source Env><separator><entity id>
 ```
 
- **Example:**
+ **Example**
 
-Copy Customer 1 from PROD source env. The LUI is PROD_1.
+Copy Customer 1 from the PROD source env. The LUI is PROD_1.
 
 #### Delete Only Load Tasks
 
-When the user requests to delete an entity only from a selected target environment, the target environment is concatenated to the LUI instead of the source environment.
+To delete an entity only from a selected target environment, the target environment is concatenated to the LUI instead of the source environment.
 
 ### DataFlux Tasks
 
-When the version indicator set, i.e. the user needs to save a separate version of the entity, the LUI format is as follows: 
+When the version indicator is set, that is to save a separate version of the entity, the LUI format is as follows: 
 
 ```
 <Source Env><separator><entity id><separator><version name><separator><version datetime>
 ```
 
-**Example:**
+**Example**
 
-If the user requests to extact a specific version of Customer 1 from the PROD source env, the LUI is PROD_1_copyCust_20201105090000. 
+To extract a specific version of Customer 1 from the PROD source env, the LUI is PROD_1_copyCust_20201105090000. 
 
 ### TDM Separator
 
