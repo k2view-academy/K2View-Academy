@@ -6,14 +6,14 @@ A Business Entity (BE) represents the central entity of a data selection for pro
 
 Each LU can be attached to multiple BEs.
 
-The ability to break a BE into several LUs enables a maximal flexibility and avoiding duplicate development. In addition, defining a hierarchical structure of parent-child LUs enable creating LUs based on the natural root entity of the related data sources instead of forcing a setting of one unified root entities on all the LUs, related to a given BE.
+The ability to break a BE into several LUs enables maximum flexibility and avoiding duplicate development. In addition, defining a hierarchical structure of parent-child LUs enables creating LUs based on the natural root entity of the related data sources instead of forcefully setting unified root entities on all LUs related to a given BE.
 
 **Example:**
 
-- Customer LU's root entity is Customer ID.
-- Ordering LU's root entity is Order ID.
+- Customer LU's root entity = Customer ID.
+- Ordering LU's root entity = Order ID.
 - Network Element LU's root entity is Element ID.
-- Device LU's root entity is Device ID.
+- Device LU's root entity = Device ID.
 - Ordering, Network, and Device LUs are attached to two BEs:
   - Customer 
   - Ordering
@@ -22,8 +22,8 @@ The ability to break a BE into several LUs enables a maximal flexibility and avo
 
 ![Multiple BEs for one LU](images/using_lu_in_multiple_BEs.png) 
 
-- The user can ask to copy a selected list of Customer IDs. The TDM task also copies the related Ordering, Network Elements, and Device data of the selected Customers.
-- Alternatively, the user can ask to copy a selected list of Order IDs. The TDM task also copies the related Network Elements and Device data of the selected Orders.
+Users can request to copy a selected list of Customer IDs. The TDM task also copies the related Ordering, Network Elements and Device data of the selected Customers.
+Alternatively, users can request to copy a selected list of Order IDs. The TDM task also copies the related Network Elements and Device data of the selected Orders.
 
 
 
@@ -31,9 +31,9 @@ The BEs are defined via the TDM GUI and are saved in the [TDM DB](/articles/TDM/
 
 ### Building an LU Hierarchy in a BE
 
-It is possible to define a hierarchy of parent-child LUs under a business entity. The relation between **parent and child** LUs is **one to many**. Each parent LUI can have many children LUIs. 
+A parent-child hierarchy of LUs can also be defined under a business entity. The relationship between the **parent and child** LUs is **one to many**. Each parent LUI can have many children LUIs. 
 
-An LU is called a **Root LU** in a BE if it has no parent LU. In this case, the root entity of this LU equals to the root entity of the BE. 
+In a BE, if an LU has no parent LU, it is named a **Root LU**. In this case, the root entity of this LU equals the root entity of the BE. 
 
 **Customer #1- Hierarchy – Example:**
 
@@ -41,7 +41,7 @@ An LU is called a **Root LU** in a BE if it has no parent LU. In this case, the 
 
 ​                               
 
-Customer LU is the **Root LU** of the Customer BE. Each LU has its own LUs. When creating a TDM task to copy Customer 1 from PROD environment,  the TDM task also needs to copy all the related Billing Accounts and Orders of Customer 1, and the related Network Elements and Devices of the customer's related Orders. The following LUIs are extracted from source and created in Fabric for Customer 1:
+The Customer LU is the **Root LU** of the Customer BE. Each LU has its own LUs. When creating a TDM task to copy Customer 1 from the PROD environment, the TDM task must also  copy all the related Billing Accounts and Orders of Customer 1, and the related Network Elements and Devices of the customer's related Orders. The following LUIs are extracted from the source and created in Fabric for Customer 1:
  
 
  <table width="900 pxl">
@@ -117,7 +117,7 @@ PROD_1000, PROD_1001, PROD_1002, PROD_1003, PROD_1004, PROD_1005
 
 #### TDM Hierarchy with Several Root LUs 
 
-A TDM BE may include several Root LUs which have the same list of entities. For example, if the entity ID of both LUs- Customer and Billing- is Customer ID, then the BE hierarchy may look as follows:
+A TDM BE may include several Root LUs which have the same list of entities. For example, if the entity ID of both the Customer and Billing LUs is Customer ID, then the BE hierarchy may look as follows:
 
 ![BE with several roots](images/be_hierarchy_with_several_root_lu.png) 
 
