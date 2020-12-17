@@ -17,7 +17,7 @@ To learn about more complex scenarios, such as creating or editing an Actor, ref
 
 ### How Do I Add Actor to Stage?
 
-To add an Actor to Stage in a Broadway flow:
+To add an Actor to a Stage in a Broadway flow:
 1.  Click anywhere in the **Stage** area to open the **Add Actors to [Stage Name]** window which displays a list of categories on the left and the built-in Actors of each categories on the right.
 2.  Click **SUBMIT** to finish the action and to add the Actor to the Stage.
 
@@ -27,7 +27,7 @@ To add an Actor to Stage in a Broadway flow:
 ### How Do I Save a Flow as an Actor?
 A flow can be packaged and then reused as an inner flow in another flow. For example, an inner flow that handles errors. This is an excellent solution for reusing business logic and for avoiding complex flows with many steps.
 
-To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of Broadway flow window.
+To save a flow as an Actor, click **Actions** > **Save as Actor** in the [Main menu](18_broadway_flow_window.md#main-menu) of the Broadway flow window.
 
 ### How Do I Export an Actor?
 
