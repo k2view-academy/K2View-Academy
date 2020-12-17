@@ -1,23 +1,25 @@
 # Data Table Editor
 
-This screen enables viewing table's data as well as editing it - add, update and delete data. It is built from two main areas - top **Action Bar** and main **Table Data** areas. 
+This screen displays table's data which can be edited, added, updated and deleted. The screen has two main areas:
+- Top Action Bar.
+- Main Table Data areas. 
 
 <img src="images/30_dataeditor_04.png" alt="Table Data Editor" />
 
 ### Actions Bar
 
-The **action bar** provides the options to:
+The **action bar** has the folllowing options:
 
-* Fetch data for the IID, even when the screen is of an inner table, i.e. not the LU's root table. To do so - select the sync-mode, type in the IID and click on Fetch
-* View the sync information, using the info button, as described at the Scheme Tables screen.
-* Switch to Edit mode, by clicking on the Edit button.
-* Reset LUI - by clicking on the X at the IID chip 
+* Fetch data for the IID, also if the screen is an inner table that is not the LU's root table. To do so, select the **sync-mode**, type in the **IID** and click **Fetch**.
+* Click Info to display the synced information. Refer to the Schema Tables screen.
+* Click Edit to switch to Edit mode.
+* Click X on the IID chip to reset the LUI. 
 
 
 
 ### Table Data
 
-The table content is shown, with the following options:
+The table data has the following options:
 
 * Sort or filter data by table's field/column, by using table's heading actions.
 
