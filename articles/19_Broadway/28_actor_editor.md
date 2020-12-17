@@ -24,7 +24,7 @@ The Actor Editor can be used to create a new inherited Actor or modify an existi
 
 **To modify** an Actor, do the following:
 
-1. Go to the **Broadway** folder in the project tree and double click the **.actor** file to open the Actor Editor.
+1. Go to the **Broadway** folder in the project tree and double click the ***.actor** file to open the Actor Editor.
 
 2. Modify the required settings, for example set a value of an input argument.
 3. Debug the Actor by running it from the Main menu toolbar. If the Actor receives input parameters, they can be set using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md). 
@@ -52,6 +52,6 @@ Let's create a new **CheckMaxVal** Actor that inherits from a **JavaScript** Act
 
 4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
 
-5. Once the debug has finished, close Actor Edit and add the Actor to the required flow.
+5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
 [![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](29_recovery_point.md)
