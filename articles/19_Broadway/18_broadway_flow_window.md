@@ -1,6 +1,6 @@
 # Broadway Flow Window
 
-The **Broadway flow** window is the main Broadway interface that enables the definition and execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
+The **Broadway flow** window is the main Broadway interface that enables the definition the execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
 
 To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
@@ -35,7 +35,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
 <li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Flip Scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
+<li>Flip scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
@@ -60,7 +60,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <tr>
 <td width="200"><a title="Debug" href="25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
 <td style="width: 465px;">
-<p>Enable the Debug mechanism. When the mode is Debug ON or Live Debug, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
+<p>Enable the Debug mechanism. When the mode is Debug ON or Live Debug, the flow can be debugged even if it is triggered from another Fabric object, for example a job.</p>
 </td>
 </tr>
 <tr>
@@ -135,11 +135,11 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td style="height: 17px; width: 174px;"><a href="29_recovery_point.md">Recovery Point</a></td>
-<td style="width: 381px; height: 17px;">Click to set the flow recovery point to enable the flow re-run from the this point on in case of failure.</td>
+<td style="width: 381px; height: 17px;">Click to set the flow recovery point to enable the flow to re-run from this point on during a failure.</td>
 </tr>
 <tr>
 <td style="height: 54px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
-<td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a Stage condition. Note that Stage condition Actors are grey.</td>
+<td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor acts as a Stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
 <td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
@@ -151,7 +151,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#support-parallel-actors-execution">Parallel</a></td>
-<td style="width: 381px; height: 36px;">Click to set a number of Actors to be run in parallel within a Stage. When set, displays the number of parallel threds.</td>
+<td style="width: 381px; height: 36px;">Click to set a number of Actors to be run parallelly within a Stage. When set, displays the number of parallel threads.</td>
 </tr>
 <tr>
 <td style="height: 18px; width: 174px;"><a href="23_transactions.md">Transaction</a></td>
@@ -163,7 +163,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td style="height: 72px; width: 174px;">Remark</td>
-<td style="width: 381px; height: 72px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
+<td style="width: 381px; height: 72px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> it is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -244,24 +244,24 @@ Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) i
 
 ### Run Results Window
 
-The Run Results window is a small popup window displayed on top of a Broadway flow window and it shows the results upon the completion of the flow run:
+The Run Results window is a small popup window on the top of a Broadway flow window which displays the results after a flow is run:
 
-- When the flow is finished successfully, it either displays the values of external arguments (if exist in the flow) or remains empty.
+- When the flow is completed successfully, it either displays the values of the external arguments (if they exist in the flow) or remains empty.
 - When the flow fails, it displays the exception.
 
 ![image](images/99_18_run_res_1.PNG)
 
 ### Flow Validation Foot
 
-The Broadway flow window has a built-in mechanism for errors validation which is invoked upon opening the flow, prior to running it. If the flow has errors, the validation icon in the Main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
+The Broadway flow window has a built-in mechanism for errors validation which is invoked when opening the flow before it is run. If the flow has errors, the validation icon in the Main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
 
 Click the icon to display the window footer with the error messages:
 
 ![image](images/99_validation_output.PNG)
 
-You can then click on the error and choose to ignore the exception or fix the problem.
+Click the error and choose to ignore the exception or fix the problem.
 
-For example, a flow includes an inherited **myDate** Actor that needs to be deleted for some reason. After the Actor is deleted from the project tree and the flow is opened, the validation errors are displayed. You can then update the flow as needed, for example by adding another Actor. 
+For example, a flow includes an inherited **myDate** Actor that needs to be deleted. After the Actor is deleted from the project tree and the flow is opened, the validation errors are displayed. You can then update the flow as needed, for example by adding another Actor. 
 
 
 
