@@ -1,6 +1,6 @@
 ## JMX Fabric Custom Statistics
 
-Fabric provides developers with two methods to add JMX probes to their implementation Java code and to expose their values as JMX counters.  
+Fabric provides developers with two Java methods to add customized JMX probes to their implementation and to expose their values as JMX counters.  
 
 ### Fabric Statistics APIs
 
@@ -18,7 +18,7 @@ public static void statsCount(String entry, String key, long value)
 
 `value` - the measure of the value for this statistic.
 
-The statistic method will use this value to calculate total, last and average. values for this measure. In addition this function also counts the number of times the function has been called and will provide a timestamp for the last call.
+The statistic method will use this value to calculate total, last and average values for this measure. In addition this function also counts the number of times the function has been called and will provide a timestamp for the last call.
 
 #### statsDuration
 
