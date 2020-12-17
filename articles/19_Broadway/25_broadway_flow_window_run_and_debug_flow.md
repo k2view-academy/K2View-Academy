@@ -57,11 +57,11 @@ Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:
 
 ### Displaying Input and Output Data During a Debug
 
-When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of Broadway map, list and Java primitive data types.
+When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of a Broadway map, list and Java primitive data types.
 
 ![image](images/99_25_blue_balloons.PNG)
 
-To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format drop-down and make your selection.
+To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format dropdown and make your selection.
 
 ![](images/flow_debug_display_data.png)
 
