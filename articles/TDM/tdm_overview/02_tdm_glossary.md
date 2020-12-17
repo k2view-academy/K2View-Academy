@@ -17,7 +17,7 @@
 <p><h5>TDM</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>Test Data Management. K2view Test Data Management (TDM) product offers an automated solution to copy a subset of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from the source systems into selected testing environments and provide real, high-quality data to the testing teams.</p>
+<p>Test Data Management. K2view Test Data Management (TDM) offers an automated solution to copy a subset of Business Entities (Digital Entities) like Customer, Order, Patient, Product or Household from the source systems into selected testing environments and provide real, high-quality data to the testing teams.</p>
 </td>
 </tr>
 <tr>
@@ -83,7 +83,7 @@
 <p><h5>Business Entity / BE</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>A Business Entity (BE) represents the central entity of a data selection for provisioning when using the TDM. A Business Entity can have multiple LUs with hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering, and Usage LUs.</p>
+<p>A Business Entity (BE) represents the central entity of a data selection for provisioning when using the TDM. A Business Entity can have multiple LUs with hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering and Usage LUs.</p>
 </td>
 </tr>
 <tr>
@@ -91,7 +91,7 @@
 <p><h5>Environment</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>A logical definition of a source or target environment. For example, Production, UAT1, UAT2, etc. One environment can contain multiple systems and multiple data sources. It is required to define in the TDM GUI the list of source and target environments, available for the TDM.</p>
+<p>A logical definition of a source or target environment. For example, Production, UAT1, UAT2, etc. An environment can contain multiple systems and multiple data sources. The list of source and target environments available for the TDM must be defined in the TDM GUI.</p>
 </td>
 </tr>
 <tr>
@@ -99,7 +99,7 @@
 <p><h5>Product</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>A system or application, installed in the source or target environment. For example, the UAT1 environment cotains the CRM and Billing products. Each product can have multiple data sources.</p>
+<p>A system or application, installed in the source or target environment. For example, the UAT1 environment contains CRM and Billing products. Each product can have multiple data sources.</p>
 </td>
 </tr>
 <tr>
@@ -107,8 +107,8 @@
 <p><h5>Task</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>The data provisioning is done by creating and execution TDM tasks. The TDM task is created by the TDM GUI. The following task types are supported by the TDM: </p>
-    <li>Extract task - extract the selected entities or Reference tables from the selected source environment and save this data in Fabric for a later use. </li>
+<p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM GUI. The following task types are supported by the TDM: </p>
+    <li>Extract task - extract the selected entities or Reference tables from the selected source environment and save this data in Fabric for later use. </li>
     <li>Load task - get the selected entities or Reference tables from the selected source environment and copy (provision) them to the selected target environment.</li>
 </td>
 </tr>
@@ -117,7 +117,7 @@
 <p><h5>Data Flux</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>The Data Flux mode enables the user to keep versions (backups) of his data during his functional tests. This way, the user can return to the latest saved version of his data if something goes wrong during the testing. The user can create an Extract task to create a version of his data and save the version into Fabric. Then if something goes wrong during the functional testing, and the tester wishes to get back the extracted version in his testing environment, the tester can create a load task and ask to delete the corrupted data and re-load the selected version of his data to this environment.</p>
+<p>The Data Flux mode enables users to keep versions (backups) of data during functional tests and return to the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, request to delete the corrupted data and re-load the selected version of the data to the environment.</p>
 </td>
 </tr>
 </tbody>
