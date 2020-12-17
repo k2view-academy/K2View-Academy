@@ -6,7 +6,7 @@ Fabric arrives tightly pre-integrated with JMX ([Java Management eXtensions](htt
 
 When working with large clusters of Fabric nodes, enabling JMX allows you to more easily monitor the consumption of resources per services used. This enables you to make better decisions about how to maintain your implementation and optimize the machine resources allocated to your project.
 
-Using the JMX report page will also provide you with valuable information about your specific projects objects behavior, such as LUIs of course, but also web-services, jobs and other functions that you might deem necessary to monitor.
+Using the JMX Report page will also provide you with valuable information about the behavior of specific objects in your project, like LUIs, Web Services, Jobs or other functions that you might deem necessary to monitor.
 
 
 ### What can I monitor with JMX?
