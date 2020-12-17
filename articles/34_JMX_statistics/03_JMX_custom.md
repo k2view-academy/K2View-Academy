@@ -1,6 +1,6 @@
 ## JMX Fabric Custom Statistics
 
-Fabric provides developers 2 methods to add JMX probes to their implementation Java code and to expose their values as JMX counters.  
+Fabric provides developers with two methods to add JMX probes to their implementation Java code and to expose their values as JMX counters.  
 
 ### Fabric Statistics APIs
 
