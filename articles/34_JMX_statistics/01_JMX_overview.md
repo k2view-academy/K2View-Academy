@@ -1,6 +1,6 @@
 ## What is JMX?
 
-Fabric arrives tightly pre-integrated with JMX ([Java Management eXtensions](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html)) technology to enable comprehensive and low-resolution monitoring and management of applications. JMX uses objects called MBeans (Managed Beans) to expose data and resources from Fabric.
+Fabric arrives tightly pre-integrated with JMX [Java Management eXtensions](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) technology to enable comprehensive and low-resolution monitoring and management of applications. JMX uses objects called MBeans (Managed Beans) to expose data and resources from Fabric.
 
 ### Why would I want to enable JMX monitoring in Fabric?
 
@@ -18,7 +18,7 @@ Various statistics using JMX counters in Fabric can be gathered. The following i
 - Transactions, Web Services statistics.
 - Resources, like Cassandra, tasks and JDBC or mdb sessions.
 - iidFinder, messages related to iidFinder queries and events. 
-- Custom, provides statistics to the beans you would have manually added to the Java code.
+- Custom, provides statistics to the MBeans you would have manually added to the Java code.
 
 Note that all JMX metrics can be accessed using monitoring tools such as Grafana or Kibana.
 
