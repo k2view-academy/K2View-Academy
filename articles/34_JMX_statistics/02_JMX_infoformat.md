@@ -6,19 +6,19 @@ JMX statistics is presented as a single web page that displays each of the relev
 
 ### Access JMX Statistics
 
-Access the admin panel by clicking on the globe icon on the top left corner of **Fabric Studio**. 
+To access the Admin panel, click the **Globe** icon on the top left corner of the **Fabric Studio**. 
 
 <img src="/articles/34_JMX_statistics/images/JMX-pic2.png">
 
-Enter your credentials to the admin panel home page, then select the **Statistics** section of the left-hand panel.
+Enter your Admin credentials in the Admin panel home page and then click **Statistics** in the left panel.
 
 <img src="/articles/34_JMX_statistics/images/JMX-pic1.PNG">
 
-From the main window panel the various statistics can be accesses by expanding the required section located under one of the seven main sections:
+The following statistics sections can be viewed:
 
 #### Processes
 
-The information provided will feature statistics about the **Loading phase** of each of the components at play in the current sessions, e.g:
+The information provided will feature statistics about the **Loading phase** of each of the components running in the current sessions:
 
 ``` Fabric Launch Sequence ```
     
@@ -37,7 +37,7 @@ The information provided will feature statistics about the **Loading phase** of 
 
 #### Actions
 
-In the section statistics for actions such as project deployment or fabric commands are displayed, e.g. :
+In this section, statistics information like project deployment or Fabric commands are displayed:
 
 ```Deployment count for a specific LU```
 
@@ -72,7 +72,7 @@ In the section statistics for actions such as project deployment or fabric comma
 
 #### Transactions
 
-Statistics about  Fabric jobs, get performances, web services, LUI queries and LU population sync are  available in this section:
+Statistics about Fabric jobs, **get** performances, Web Services, LUI queries and LU population sync are  available in this section:
 
 ``` GET Duration```
 
@@ -85,7 +85,7 @@ Statistics about  Fabric jobs, get performances, web services, LUI queries and L
 
 ```Web Services Calls```
 
- Executions as well as authentications statistics will be provided.
+Executions as well as authentications statistics are also provided.
 
     count				10							The number of times this event has occured
     total				0:00:04.684					The accumulated total of this event value
@@ -97,7 +97,7 @@ Statistics about  Fabric jobs, get performances, web services, LUI queries and L
 
 #### Resources 
 
-Statistics about general information on systems resources are displayed in this section:
+Statistics about general information on systems resources are displayed:
 
 ``` Number of LU in the systems```
  
@@ -117,7 +117,7 @@ Statistics about general information on systems resources are displayed in this 
 
 
 
-#### Micro-DBs
+#### MicroDBs
 
 Very useful information such as number of LUIs sync-ed, fetching times and sizes can be viewed here:
 
