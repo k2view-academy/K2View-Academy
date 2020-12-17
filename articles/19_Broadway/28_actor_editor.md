@@ -4,7 +4,7 @@
 
 The Broadway [Actors inheritance mechanism](06_export_actor.md) enables reusing the same business logic in different places in a flow or in several flows of the project. 
 
-If an an inherited Actor needs to be modified, open the Broadway flow with this Actor, edit it and save the updated Actor via the **Export Actor** menu with the **Override Current** option. 
+If an inherited Actor needs to be modified, open the Broadway flow with this Actor, edit it and save the updated Actor via the **Export Actor** menu with the **Override Current** option. 
 
 To simplify the Actor modification process and enhance it with additional editing options, Broadway uses an **Actor Editor** which enables creating new Actors and editing inherited ones.  
 
