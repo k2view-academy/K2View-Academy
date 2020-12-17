@@ -1,6 +1,6 @@
 # TDM Database
 
-TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. Both the TDM and TDM GUI and task execution processes connect to the TDM DB to get or update TDM settings or  tasks.
+TDM settings and TDM tasks are kept in a dedicated PostgreSQL DB. The TDM, TDM GUI and task execution processes connect to the TDM DB to get or update TDM settings or  tasks.
 
 The following table lists the TDM tables and their description.
 
@@ -25,17 +25,17 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tdm_lu_type_rel_tar_eid</td>
-<td>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment. This table is populated by a aync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entites and their related data from a target environment.</td>
+<td>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment. This table is populated by a sync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entities and their related data from a target environment.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>[LU_NAME]_params</td>
-<td>Parameters table. Contains the list of all entities, migrated into Fabric per LU. Each combination of an entity and source environment has a specific record which holds the entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customert Type. This table is created by a Fabric sync on each LU and is used to support random selection and select by parameters task selection methods.</td>
+<td>Parameters table. Contains the list of all entities migrated into Fabric per LU. Each combination of an entity and source environment has a specific record which holds the entity ID (IID), source environment name and the list of parameters defined for the LU. For example, Customer Type. This table is created by a Fabric sync on each LU and is used to support random selection and select by parameters task selection methods.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>tdm_be_post_exe_process</td>
-<td>List of post execution processes attached to each Business Entity. A post execution process is executed at the end of the task execution process. For example, sending a mail to a user.</td>
+<td>List of post-execution processes attached to each Business Entity. A post-execution process is executed at the end of the task execution process. For example, sending a mail to a user.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
@@ -44,7 +44,7 @@ The following table lists the TDM tables and their description.
 <ul>
 <li>Maps a list of LUs to each Business Entity.</li>
 <li>Maps the relationship of LUs within parallel LUs or parent-child LUs in a Business Entity.</li>
-<li>Maps the combined Business Entity and LU to a Product</li>
+<li>Maps the combined Business Entity and LU to a Product.</li>
 </ul>
 </td>
 <td>Business Entity/Product</td>
