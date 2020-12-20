@@ -12,7 +12,8 @@ The K2view patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 
 - A built-in self-service web application, a place where testers can request data to be provisioned on demand and in real-time. 
 - Store data centrally in Fabric. The copied (provisioned) entities are stored in Fabric.
-- Support for partial data requests, re-deployments, and data appending: 
+- Support a copy of data into a living testing environments. 
+- Support for partial data requests, re-deployments of data, and data appending: 
   - Copy (provision) a predefined list of Business Entities from a selected source environment to a selected target environment.  The full data, related to the selected entities, is extracted and copied to the relevant data systems.
   - Copy a sub-set of entities based on predefined parameters. For example, copy 10 Customers located in NY and use small business packages.
 - Synthetic data generation:

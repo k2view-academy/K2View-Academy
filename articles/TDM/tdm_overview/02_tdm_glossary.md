@@ -80,7 +80,7 @@
 </tr>
 <tr>
 <td valign="top" width="250 pxl">
-<p><h5>Business Entity / BE</p>
+<p><h5><a href="/articles/TDM/tdm_overview/03_business_entity_overview.md">Business Entity / BE</a></p>
 </td>
 <td valign="top" width="650 pxl">
 <p>A Business Entity (BE) represents the central entity of a data selection for provisioning when using the TDM. A Business Entity can have multiple LUs with hierarchical structure. For example, a Customer Business Entity consists of Customer Care, Billing, Ordering and Usage LUs.</p>
@@ -91,7 +91,7 @@
 <p><h5>Environment</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>A logical definition of a source or target environment. For example, Production, UAT1, UAT2, etc. An environment can contain multiple systems and multiple data sources. The list of source and target environments available for the TDM must be defined in the TDM GUI.</p>
+<p>A logical definition of a source or target environment. For example, Production, UAT1, UAT2, etc. An environment can contain multiple systems and multiple data sources. The list of source and target environments available for the TDM must be defined in the TDM GUI and in <a href="/articles/25_environments/02_create_new_environment.md">Fabric</a>.</p>
 </td>
 </tr>
 <tr>
@@ -109,7 +109,7 @@
 <td valign="top" width="650 pxl">
 <p>Data provisioning is implemented by creating and executing TDM tasks. TDM tasks are created via the TDM GUI. The following task types are supported by the TDM: </p>
     <li>Extract task - extract the selected entities or Reference tables from the selected source environment and save this data in Fabric for later use. </li>
-    <li>Load task - get the selected entities or Reference tables from the selected source environment and copy (provision) them to the selected target environment.</li>
+    <li>Load task - extract the selected entities or Reference tables from the selected source environment and copy (provision) them to the selected target environment.</li>
 </td>
 </tr>
 <tr>
@@ -117,11 +117,12 @@
 <p><h5>Data Flux</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>The Data Flux mode enables users to keep versions (backups) of data during functional tests and return to the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, request to delete the corrupted data and re-load the selected version of the data to the environment.</p>
+<p>The Data Flux mode enables users to keep versions (backups) of data during functional tests and return to the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, select the required version and re-load the selected version of the data to the environment instead of the corrupted data.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
  [![Previous](/articles/images/Previous.png)](01_tdm_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_business_entity_overview.md)

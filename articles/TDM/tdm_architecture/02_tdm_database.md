@@ -106,7 +106,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_ref_exe_stats</td>
-<td>List of Reference Table to be processed by a given task execution.</td>
+<td>List of reference tables to be processed by a given task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -171,6 +171,7 @@ The following table lists the TDM tables and their description.
 </tr>
 </tbody>
 </table>
+
 
 
 
