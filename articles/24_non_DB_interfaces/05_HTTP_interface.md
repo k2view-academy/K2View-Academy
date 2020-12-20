@@ -79,7 +79,7 @@ The supported types are:
 
   * Client ID - shall be provided by the external resource/auth vendor. 
 
-  * Client Secret - shall be provided by the external resource/auth vendor.
+  * Client Secret - shall be provided by the external resource/auth vendor. Note: the secret key is saved encrypted, although it is shown as clear text in the Fabric Studio.
 
   * Scope (optional) - used to validate that the required scopes of actions are indeed permitted by the authenticating server. In turn, the authorization server uses the "scope" response parameter to inform the client of the scope of the access token issued. 
   The value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
@@ -92,7 +92,7 @@ The supported types are:
 
   * Client ID - shall be provided by the external resource/auth vendor.
 
-  * Client Secret - shall be provided by the external resource/auth vendor.
+  * Client Secret - shall be provided by the external resource/auth vendor. Note: the secret key is saved encrypted, although it is shown as clear text in the Fabric Studio.
 
   * Scope (optional) - specify the scope of the access request using.  In turn, the authorization server uses the "scope" response parameter to inform the client of the scope of the access token issued. 
 
