@@ -530,18 +530,18 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 
 Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), proving the LU name and the execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
 
-There two types of execution parameters for a BROADWAY command:
+There are two types of execution parameters:
 
 * [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if exist.
 
-* Recovery parameters, as follows:
+* Recovery parameters:
   * **recoveryId** - unique ID to save and recover the flow. The flow recovery is enabled only if the **recovery ID** is supplied.
 
   * **recoveryTtl** (optional) - *time to live* in seconds for the recovery point to be kept in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_TTL_SEC.
 
   * **recoveryMaxTries** (optional) - maximum number of retries until the flow is deleted from **broadway_recovery_point** Cassandra table. The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_MAX_RETRIES.
 
-    [Click for more information about Broadway Recovery](/articles/19_Broadway/29_recovery_point.md).
+    [Click for more information about Broadway Recovery Point](/articles/19_Broadway/29_recovery_point.md).
 
 ##### Syntax
 
