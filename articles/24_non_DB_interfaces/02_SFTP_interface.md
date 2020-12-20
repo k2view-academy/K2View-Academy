@@ -54,7 +54,7 @@ To create a new SFTP interface, do the following:
 
 ### Example of Using an SFTP Interface
 
-To create an Interface Listener Job that runs on an SFTP interface, do the following: 
+To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows) Job that runs on an SFTP interface, do the following: 
 
 1. Create an interface using an **SFTP** interface type.
 
