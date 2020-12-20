@@ -390,6 +390,18 @@
 <li><a href="/articles/32_LU_storage/02_storage_management.md">LU Storage and Cache Management</a></li>
 <li><a href="/articles/32_LU_storage/03_big_lu_storage.md">Big Logical Units</a></li>
 </details> 
+
+<details>
+<summary markdown="span"><strong>Data Catalog<strong><a href="/articles/33_data_catalog/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/33_data_catalog/01_data_catalog_overview.md">Data Catalog Overview</a></li>
+<li><a href="/articles/33_data_catalog/02_e2e_catalog_creation_process.md">E2E Catalog Creation Process</a></li>
+<li><a href="/articles/33_data_catalog/02a_data_catalog_interface.md">Data Catalog Interface</a></li>
+<li><a href="/articles/33_data_catalog/03_build_and_write_catalog.md">Build and Write Data Catalog</a></li>
+<li><a href="/articles/33_data_catalog/05_data_catalog_navigation.md">Data Catalog Navigation</a></li>
+<li><a href="/articles/33_data_catalog/06_override_data_catalog.md">Override Data Catalog</a></li>
+<li><a href="/articles/33_data_catalog/07_OrientDB_setup.md">OrientDB Setup</a></li>
+<li><a href="/articles/33_data_catalog/08_catalog_commands.md">Catalog Commands</a></li>
+</details>
                 
 <details>
 <summary markdown="span"><strong>JMX Stats<strong><a href="/articles/34_JMX_statistics/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
