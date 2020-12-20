@@ -1,37 +1,59 @@
-# Data Table Editor
+# Data Editor Table
 
-This screen displays table's data which can be edited, added, updated and deleted. The screen has two main areas:
-- Top Action Bar.
-- Main Table Data areas. 
+Information in the Data Editor is displayed in a table and can be edited, added, updated and deleted using the functions displayed in the top Actions bar.  
 
 <img src="images/30_dataeditor_04.png" alt="Table Data Editor" />
 
 ### Actions Bar
 
-The **action bar** has the folllowing options:
+<ul class="unchanged rich-diff-level-one">
+<li class="unchanged">Fetch data for the IID, also if the screen is an inner table that is not the LU's root table. To do so, select the&nbsp;<strong>sync-mode</strong>, type in the&nbsp;<strong>IID</strong>&nbsp;and click&nbsp;<strong>Fetch</strong>.</li>
+<li class="unchanged">Click Info to display the synced information. Refer to the Schema Tables screen.</li>
+<li class="unchanged">Click Edit to switch to Edit mode.</li>
+<li class="unchanged">Click X on the IID chip to reset the LUI.</li>
+</ul>
+<table style="border-collapse: collapse; width: 100%; height: 68px;" border="1">
+<tbody>
+<tr style="height: 17px;">
+<td style="width: 12.4762%; height: 17px;">Fetch</td>
+<td style="width: 87.5238%; height: 17px;">Click to fetch data for the IID. This option is also available for inner screens that are not the LU's root table.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 12.4762%; height: 17px;">Info</td>
+<td style="width: 87.5238%; height: 17px;">Click to display the synced data.&nbsp;</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 12.4762%; height: 17px;">Edit</td>
+<td style="width: 87.5238%; height: 17px;">Click to switch to Edit mode.</td>
+</tr>
+<tr style="height: 17px;">
+<td style="width: 12.4762%; height: 17px;">IID X</td>
+<td style="width: 87.5238%; height: 17px;">Click to reset the LUI.</td>
+</tr>
+</tbody>  
+</table> 
 
-* Fetch data for the IID, also if the screen is an inner table that is not the LU's root table. To do so, select the **sync-mode**, type in the **IID** and click **Fetch**.
-* Click Info to display the synced information. Refer to the Schema Tables screen.
-* Click Edit to switch to Edit mode.
-* Click X on the IID chip to reset the LUI. 
+
+To fetch data, select the **sync-mode**, enter the **IID** and click **Fetch**.
+
+For information about synced information, click Schema Tables.
 
 
 
 ### Table Data
 
-The table data has the following options:
+Information in the data table can be filtered, sorted and navigated by clicking the XXX icons at the top of each column:  
 
-* Sort or filter data by table's field/column, by using table's heading actions.
+-  To filter data, click XXX to open the XXX and enter the filtering criteria.
+-  To go to a linked table and edit its hierarchy in the schema, click XXX, click the linked table and the click xxxx xxxx. 
 
-* View and navigate to the linked tables - upper or lower in the scheme hierarchy.
-
-  To do so - click on the ellipsis button appears at each table's entry. Once clicked - a pupup is opened that shows the linked tables, with a sign if it is upper or lower in tree. It also shows the population method - query or custom function name, ass can be seen in the below example.  
+The data table also displays the   To do so - click on the ellipsis button appears at each table's entry. Once clicked - a pupup is opened that shows the linked tables, with a sign if it is upper or lower in tree. It also shows the population method - query or custom function name, ass can be seen in the below example.  
 
   Selecting a lower table drills down to its Table Editor screen, with content related only to its predecessor.
 
   
 
-  In the below example, a customer LUI has several subscribers associated to and for each of them several invoices were generated. In the example the Invoice table is shown filtered by subscriber #13, that is - only invoices which are associated to subscriber #13 are shown.   
+In the following example, a customer LUI has several subscribers each having several invoices.  In the example the Invoice table is shown filtered by subscriber #13, that is - only invoices which are associated to subscriber #13 are shown.   
 
   <img src="images/30_dataeditor_05a.png" alt="Table Data Editor" />  
 
