@@ -52,7 +52,7 @@ If the connected elements of the object are on the same level of hierarchy (such
 The originating Actor's output can have more than one collection. A common use case is a JSON data structure that contains more than one array.
 Occasionally there may be a requirement to manage several loops over the same data structure, for example to combine the data from two arrays or to perform other types of data manipulation. In this case, both arrays (or elements in the arrays) must be connected using an **Iterate** link type to one or more Actors. 
 
-The iteration logic is impacted by the answers to the question - do these arrays have the same or a different size? When the arrays have a different size, at some point one array ends and returns a null while another array still has values. To prevent the redundant loops over the empty array, split the flow and use the **IsNull** Actor as a Stage Condition to check if the array returns a value or a null.
+The iteration logic is impacted by the answers to the question - do these arrays have the same or a different size? When the arrays have a different size, at some point one array ends and returns a null while another array still has values. To prevent the redundant loops over the empty array, split the flow and create a Stage Condition to check if the array returns a value or a null.
 
 ![image](images/iterate_blend1.PNG)
 
