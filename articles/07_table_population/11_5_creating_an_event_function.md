@@ -80,9 +80,9 @@ Using the above information the function can execute any required business logic
    	ci.execute("insert into DATA_CHANGES values (?,?,?,?)", IID, luTypeName, NA", "Post Sync Success");
    	ci.commit();
    	
-   	//fabric().execute("broadway CRM.publishCustomer iid="+ IID);
+   	fabric().execute("broadway CRM.publishCustomer iid="+ IID);
    } catch (Exception  e) {
-   	log.error("The function eventFuncSuccess failed: "+e.getMessage());	
+   	log.error("The function eventFuncSuccess failed: "+e.getMessage(),e);	
    }
    ~~~
    
