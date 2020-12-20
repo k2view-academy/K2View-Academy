@@ -37,7 +37,7 @@ To create a new interface, do the following:
 
 ### Example of Using a Local File System Interface
 
-To create an Interface Listener Job in a Local File System interface, do the following: 
+To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows) Job in a Local File System interface, do the following: 
 
 1. Create an interface using a **Local File System** interface type.
 
