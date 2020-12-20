@@ -15,8 +15,8 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 
 * Each table has:
   * Input, its predecessor in the hierarchy and their linkage field/s.
-  * Output if existing, the linkage field/s to its linked tables. 
-* Each table is has a clickable link to the table Data Viewer screen.
+  * Output (optional), the linkage field/s to its linked tables. 
+* Each table has a clickable link to the table Data Viewer screen.
 * The schema name appears in the screen title as well as in the breadcrumbs in the top Data Editor Catalog bar.  
 
 <img src="images/30_dataeditor_02.png" alt="Data Editor Catalog" />
@@ -44,7 +44,7 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 
 
 
-Note that you can drill down the tree also when an IID has not been defined and set it later in any level. When the LUI is fetched, data from its level is displayed. 
+Note that you can drill down the tree also when an IID has not been defined and set it later at any level. When the LUI is fetched, data from its level is displayed. 
 
 Other available actions include:
 
