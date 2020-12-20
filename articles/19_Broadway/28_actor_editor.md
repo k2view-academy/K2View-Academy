@@ -6,7 +6,7 @@ The Broadway [Actors inheritance mechanism](06_export_actor.md) enables reusing 
 
 If an inherited Actor needs to be modified, open the Broadway flow with this Actor, edit it and save the updated Actor via the **Export Actor** menu with the **Override Current** option. 
 
-To simplify the Actor modification process and enhance it with additional editing options, Broadway uses an **Actor Editor** which enables creating new Actors and editing inherited ones.  
+To simplify the Actor modification process and enhance it with additional editing options, Broadway provides an **Actor Editor** which enables creating new Actors and editing inherited ones.  
 
 The Actor Editor can be accessed by opening the ***.actor** file from the Project tree. It is displayed as a dummy flow with one Actor that can be setup / modified using the extended Actor's [Properties window](03_broadway_actor_window.md).
 
@@ -28,7 +28,7 @@ The Actor Editor can be used to create a new inherited Actor or modify an existi
 
 2. Modify the required settings, for example set a value of an input argument.
 3. Debug the Actor by running it from the Main menu toolbar. If the Actor receives input parameters, they can be set using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md). 
-4. Save the Actor. The change is implemented in every flow where this Actor is used.  
+4. Save the Actor. The change impacts every flow where this Actor is used.  
 
 #### Example of New Actor Creation
 
