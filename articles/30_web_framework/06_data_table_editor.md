@@ -42,7 +42,7 @@ A table displays data on the population method, query and customized functions a
 -  To filter data, click XXX to open the XXX and enter the filtering criteria.
 -  To go to a linked table and edit its hierarchy in the schema, click XXX, click the linked table and then click xxxx xxxx. 
  
-In the following Invoice table, a customer LUI has several subscribers each having several invoices. The data has been filtered to display Subscriber #13 and their invoices:   
+In the following Invoice table, a customer LUI has several subscribers each having several invoices. The data has been filtered to display Subscriber #13 and its invoices:   
 
   <img src="images/30_dataeditor_05a.png" alt="Table Data Editor" /> 
   
@@ -60,15 +60,16 @@ The Editing option is permissions based.
     -  Click Delete to remove a table entry.
     -  Click XXXX to add a row above.
 
-Once an entry is added, edited or marked for deletion it is highlighted. 
+    Once an entry is added, edited or marked for deletion it is highlighted. 
 
--  New = blue.
--  Edited = orange.
--  Deleted = red. 
+    -  New = blue.
+    -  Edited = orange.
+    -  Deleted = red. 
 
+2.  To undo your changes, click Revert or Delete.
+3.  To implement your changes, click **Update** in the top Actions bar.
 
-To implement your changes, click **Update** in the top Actions bar.
-As long as Update was not done, those actions are reversible: Click on the revert button icon that appears at edited or signed to deletion rows, or click on the Delete icon for a new entry that shall be removed.
+Note that edits can only be deleted or reverted before Update is clicked.
 
  <img src="images/30_dataeditor_06.png" alt="actions colors" />
 
