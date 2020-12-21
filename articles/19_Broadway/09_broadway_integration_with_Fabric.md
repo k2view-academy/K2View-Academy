@@ -14,7 +14,7 @@ To create the population based on the Broadway flow, right click the table name 
 
 ### Interface Listener For Broadway Flows
 
-The Interface Listener functionality, an enhancement of the Fabric Jobs functionality, can be used to read and parse the files using a Broadway flow. An Interface Listener is triggered each time a new file arrives to the directory defined in the interface, which can be either as SFTP or a local file system. Each file is only picked up once by the Listener.
+The Interface Listener functionality, an enhancement of the Fabric Jobs functionality, can be used to read and parse files using a Broadway flow. An Interface Listener is triggered each time a new file arrives to the directory defined in the interface, which can be either an SFTP or a local file system. Each file is only picked up once by the Listener.
 
 ![images](/articles/24_non_DB_interfaces/images/broadway_file_read.PNG)
 
@@ -26,7 +26,7 @@ The Listener invokes the attached Broadway flow that needs to include the **File
 
 ### Fabric Commands Actors
 
-The **fabric** category of [built-in Actors](04_built_in_actor_types.md) executes Fabric commands.
+The **Fabric** category of [built-in Actors](04_built_in_actor_types.md) executes Fabric commands.
 
 * **FabricGet** Actor, executes the GET command on the current Fabric session.
 * **FabricSet** Actor, sets a value on the Fabric session.
@@ -49,11 +49,11 @@ Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the *
 
 ### Use of LU Functions and Graphit in Broadway
 
-The **LuFunction** and **Graphit** Actors fully utilize Fabric integration with Broadway to enable the reuse of the Fabric logic within Broadway flows. 
+The **LuFunction** and **Graphit** Actors utilize Fabric integration with Broadway to enable the reuse of the Fabric logic within Broadway flows. 
 
 To do so, set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument and then select a [Project function](/articles/07_table_population/08_project_functions.md) or a [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) resource. 
 
-Note that the **luType** input argument includes the list of all Logical Units in the Project including the [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) and the References. It is recommended to use the same LU as the one where the Broadway flow is created.
+Note that the **luType** input argument includes the list of all Logical Units in the Project including the [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) and the References. It is recommended to use the same LU as that where the Broadway flow is created.
 
 #### LuFunction Actor
 
@@ -94,7 +94,7 @@ To set the table and the fields of a **DbLoad** Actor, do the following:
 
 ### Interfaces List
 
-Several Broadway [Actors](03_broadway_actor.md) include an **interface** as one of their input arguments. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
+Several Broadway [Actors](03_broadway_actor.md) include an **interface** as an input argument. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
 
 
 [![Previous](/articles/images/Previous.png)](06_export_actor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](17_tutorial_and_flow_examples.md)
