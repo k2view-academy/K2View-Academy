@@ -44,7 +44,7 @@ The following table lists the TDM tables and their description.
 <ul>
 <li>Maps a list of LUs to each Business Entity.</li>
 <li>Maps the relationship of LUs within parallel LUs or parent-child LUs in a Business Entity.</li>
-<li>Maps the combined Business Entity and LU to a Product.</li>
+<li>Maps the combined Business Entity and LU to a product.</li>
 </ul>
 </td>
 <td>Business Entity/Product</td>
@@ -91,17 +91,17 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_execution_entities</td>
-<td>Detailed list of entities and their execution status per each task execution.</td>
+<td>Detailed list of entities and their execution status for each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
 <td><h4>task_execution_list</td>
-<td>Holds the list of execution requests of each task execution. A separate record is created for each LU and post execution process.&nbsp;</td>
+<td>Holds the list of execution requests of each task execution. A separate record is created for each LU and post-execution process.&nbsp;</td>
 <td>Task Execution</td>
 </tr>
 <tr>
 <td><h4>task_execution_summary</td>
-<td>Summary information of each task execution. One record is created per each task execution.</td>
+<td>Summary information of each task execution. One record is created for each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tasks_post_exe_process</td>
-<td>List of post execution processes to be executed per each task execution.</td>
+<td>List of post-execution processes to be executed for each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -156,12 +156,12 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tdm_be_env_exclusion_list</td>
-<td>Exclusion lists per Business Entities and TDM environment</td>
+<td>Exclusion lists per Business Entities and TDM environment.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
 <td><h4>tdm_env_globals</td>
-<td>List of Global parameters set on an Environment level.</td>
+<td>List of Global parameters set on an environment level.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
