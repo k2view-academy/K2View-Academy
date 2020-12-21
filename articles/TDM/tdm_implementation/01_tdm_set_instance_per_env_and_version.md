@@ -2,7 +2,7 @@
 
 ## Overview
 
-The TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Tasks can also be created to extract and save different versions of the data of the selected entities.
+The TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Tasks can also be created to extract and save different versions of the data from the selected entities.
 
 **Examples**
 
@@ -34,7 +34,7 @@ To delete an entity only from a selected target environment, the target environm
 
 ### DataFlux Tasks
 
-When the version indicator is set, that is to save a separate version of the entity, the LUI format is as follows: 
+When the version indicator is set that is, to save a separate version of the entity, the LUI format is as follows: 
 
 ```
 <Source Env><separator><entity id><separator><version name><separator><version datetime>
