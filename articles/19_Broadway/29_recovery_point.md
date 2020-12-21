@@ -2,13 +2,21 @@
 
 ### Overview
 
-Broadway flows and jobs can serve complex systems with hundreds of transactions executed every second for data movement across various systems, such as populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow fails or crashes amid transactions, it should be able to recover lost data.
+Broadway flows and jobs can serve complex systems with hundreds of transactions executed every second for data movement across various systems, such as populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow crashes before it reaches the end, it should be possible to recover lost data to prevent re-running the flow from the beginning. 
 
-Setting a **Recovery Point** in a Broadway flow allows to mark one or more Stages at which the flow data should be serialized and saved in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). Then if a flow fails, the flow can be re-run from the last saved recovery point rather than from the beginning using the same data.  
+Setting a **Recovery Point** in a Broadway flow allows to mark a Stages at which the flow data should be serialized and saved in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). Then if a flow fails to complete (for example, if the process was killed), the flow can be re-run and it will start from the last saved recovery point rather than from the beginning using the serialized data. Once the flow is completed, the recovery info is deleted from Cassandra.
+
+Recovery point should be used to save the persistent data in the flow. For example, in a complex flow after completing one sub-process and before starting another one. Note that setting a recovery point on a DB result set or inside an [iteration](21_iterations.md) is not supported. 
 
 ### How Do I Set a Recovery Point?
 
-Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick divider line. Repeat the same in additional Stages if more than one Recovery point should be set in the same flow. Note that setting a recovery point inside the loop is not supported. 
+Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick divider line. Repeat the same in additional Stages if more than one Recovery point should be set in the same flow. 
+
+**Example**
+
+The below flow prepares the data, creates a table, selects data from a DB and then inserts the data into the created table.
+
+Set the Recovery Point at **Create Table** Stage. If the flow crashes after this Stage, it can be re-run and then it will start from the **Query** Stage. 
 
 ![image](images/99_29_recovery_01.PNG)
 
@@ -21,8 +29,8 @@ The flow can be executed in one of the following ways:
 * By running the flow using a [BROADWAY command](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway).
   * When running a Broadway command, it is mandatory to provide a recovery ID in order to enable the Broadway recovery mechanism. Then if the flow fails, re-run the same flow with the same recovery ID.
 * By running a [Broadway job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md) using the STARTJOB command. 
-  * When running a Broadway job, it is not required to provide a recovery ID since the recovery mechanism is enabled automatically for the jobs.
-* By running a flow from the Fabric Studio.
+  * When running a Broadway job, there is no need to provide a recovery ID since the recovery mechanism is enabled automatically for the jobs.
+* From the Fabric Studio by clicking **Actions** > **Run from Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
 
 
 
