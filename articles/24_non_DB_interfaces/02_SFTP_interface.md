@@ -22,23 +22,23 @@ To create a new SFTP interface, do the following:
 </tr>
 <tr>
 <td><strong>IP</strong></td>
-<td>Hostname or IP address of the FTP server</td>
+<td>Hostname or IP address of the FTP server.</td>
 </tr>
 <tr>
 <td><strong>User</strong>&nbsp;</td>
-<td>Username</td>
+<td>Username.</td>
 </tr>
 <tr>
 <td><strong>Password&nbsp;</strong></td>
-<td>Password&nbsp;</td>
+<td>Password.&nbsp;</td>
 </tr>
 <tr>
 <td><strong>Remote Directory</strong></td>
-<td>Directory where the files are stored</td>
+<td>Directory where the files are stored.</td>
 </tr>
 <tr>
 <td><strong>Files Filter</strong></td>
-<td>Regular expression</td>
+<td>Regular expression.</td>
 </tr>
 <tr>
 <td><strong>Actions</strong></td>
