@@ -14,9 +14,9 @@ The DPM configuration is based on the following main entities:
 
 An example of the relation between the above entities is depicted in the following diagram: 
 
-​                           
+                
 
-![](articles/DPM/images/main_entities.png)
+![Flowchart](articles/DPM/images/main_entities.png)
 
 
 
