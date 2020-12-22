@@ -10,8 +10,8 @@ The following are the required steps to review, understand, and fix the results 
        Default login user/pass is admin/admin.
        Default url is https://localhost:9000
 
-   Note: You have the option to create/manage users under Administration  Security  Users.  
-   (see [SonarQube security information](https://docs.sonarqube.org/latest/instance-administration/security/))
+   *Note: You have the option to create/manage users under Administration  Security  Users.  
+   (see [SonarQube security information](https://docs.sonarqube.org/latest/instance-administration/security/))*
         
 
 **2.	You will be directed to the projects you have permission to access.**  
@@ -34,7 +34,7 @@ The following are the required steps to review, understand, and fix the results 
       MINOR:	Not urgent.
       INFO:		Not urgent.
 
-   You can find additional information using the below links:  
+   *You can find additional information using the below links:*  
    
    [https://docs.sonarqube.org/latest/user-guide/issues/](https://docs.sonarqube.org/latest/user-guide/issues/)  
    [https://docs.sonarqube.org/latest/user-guide/security-hotspots/](https://docs.sonarqube.org/latest/user-guide/security-hotspots/)
@@ -98,7 +98,7 @@ The following are the required steps to review, understand, and fix the results 
 
 
 
-For additional details on issues review and how to handle them, please refer to: 
+*For additional details on issues review and how to handle them, please refer to:*  
 [SonarQube User Guide]( https://docs.sonarqube.org/latest/user-guide/issues/)
 
 
