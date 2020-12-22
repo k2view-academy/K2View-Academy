@@ -28,13 +28,25 @@ To install this plugin in your IntelliJ IDE:
 3. Go to
 
    C:\sonarQube\sonarqube-8.5.1.38104\sonarqube-8.5.1.38104\extensions\plugins.
-   Copy the plugin Snapshots java-custom-rules-1.0-SNAPSHOT & sonar-xml-plugin-2.1.0-SNAPSHOT 
+   Copy the plugin Snapshots java-custom-rules-1.0-SNAPSHOT & sonar-xml-plugin-2.1.0-SNAPSHOT (under installation folder).
 
-4. Open command line (windows cmd) and execute: 
-   C:\sonarQube\sonarqube-8.5.1.38104\sonarqube-8.5.1.38104\bin\windows-x86-64\StartSonar.bat
+4. Delete all plugins (jars) under C:\sonarQube\sonarqube-8.5.1.38104\lib\extensions
+   except of sonar-java-plugin-*.jar.
 
-5. Open your browser and type http://localhost:9000/ (9000 is default) , log-in using default System Administrator credentials (login=admin, password=admin).
+5. Open command line (windows cmd) and execute: 
+   C:\sonarQube\sonarqube-8.5.1.38104\sonarqube-8.5.1.38104\bin\windows-x86-64\StartSonar.bat.
 
+6. Open your browser and type http://localhost:9000/ (9000 is default) , log-in using default System Administrator credentials (login=admin, password=admin).
+
+7. Create Quality Profiles.
+   Quality Profiles are sets of rules to be applied on project when scanned.
+	
+	Follow below steps in order to import k2view customized QPs.
+   - Download XML and java profiles (under installation folder)
+   - Go to Home Page --> Quality Profiles --> Restore:
+     You will be asked to choose a back up file, choose the files you downloaded for XML and Java.
+   - After restoring set each profile as Default.
+ 
 **Note:**
 For any configuration changes go to conf folder and sonar.properties file.
 Here you can configure database, LDAP, webserver, SSO authentication, logging, etc.
