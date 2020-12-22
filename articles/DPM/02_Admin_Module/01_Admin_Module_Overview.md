@@ -24,4 +24,4 @@ By using the Menu on the left side of the window, the Administrator can access a
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/READ_ME.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_module/02_DPM_Configuration.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md)
