@@ -16,8 +16,8 @@ To install this plugin in your IntelliJ IDE:
 
 ## <u>2.2	SonarQube Installation</u>
 
-1. Download and install SonarQube-8.5 or higher version.
-	https://www.sonarqube.org/downloads/
+1. [Download](https://www.sonarqube.org/downloads/) and install SonarQube-8.5 or higher version.
+	
 	
  	e.g., install under *C:\sonarQube\sonarqube-8.5.1.38104*
 
@@ -33,7 +33,7 @@ To install this plugin in your IntelliJ IDE:
 	**except** of *sonar-java-plugin-* *.jar.*
 
 
-4. Download and copy the plugin Snapshots 
+4. [Download](https://github.com/k2view-academy/K2View-Academy/tree/Academy_6.2/articles/COE/SonarQube/05_Reference_and_Document) and copy the plugin Snapshots 
 	*java-custom-rules-1.0-SNAPSHOT* & *sonar-xml-plugin-2.1.0-SNAPSHOT* to 
 	*C:\sonarQube\sonarqube-8.5.1.38104\extensions\plugins.*
 
@@ -66,8 +66,8 @@ To install this plugin in your IntelliJ IDE:
 
 ## <u>2.3	 SonarScanner Installation</u>
 
-1. Download and Install sonarScanner 
-   https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
+1. [Download](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/) and Install sonarScanner 
+  
    
 2. In the window, register the sonar-scanner path in environment variable.
 
