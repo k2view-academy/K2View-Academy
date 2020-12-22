@@ -89,4 +89,4 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 Use the  ![image](/articles/DPM/images/Figure_29_a_delete_icon.png) button to delete a User. 
 Use the  ![image](/articles/DPM/images/Figure_29_b_edit_icon.png) button to edit the name, Email address and Corporate Roles of a User.  
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/12_Corporate_Roles.md)[<img align="right" width="60" height="54" src="/articles/images/DPM/Next.png">](/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/12_Corporate_Roles.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md)
