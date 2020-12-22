@@ -47,5 +47,5 @@ reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or f
 
   
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_Customized_Rules/01_Customized_Rules.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_Customerized_Rules/03_Cassandra.md)
+[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/01_Customized_Rules.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_Customerized_Rules/03_Cassandra.md)
 
