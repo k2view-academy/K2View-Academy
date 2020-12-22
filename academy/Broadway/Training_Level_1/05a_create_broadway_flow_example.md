@@ -5,19 +5,18 @@ Let's create a new Broadway flow that selects data from a DB table and creates a
 
 #### Step 1 - Create a New Broadway Flow
 
-1. Download and open the [Demo Project](/articles/demo_project) in the Fabric Studio. 
-2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
-3. Populate the **Flow Name** and click **OK** to open an empty flow.
+1. Go to the **Project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
+2. Populate the **Flow Name** and click **OK** to open an empty flow.
 
 #### Step 2 - Populate Stage 1 of the Flow
 
 1. Let's prepare a query that selects the number of cases of each case status from the **CASES** table in the **CRM_DB** interface using the following SQL query:
 
-```sql
+~~~sql
 Select CASES.STATUS, Count(*) AS NUMBER_OF_CASES
 From CASES
 Group By CASES.STATUS
-```
+~~~
 
 2. Add a **DbCommand** Actor to run the above **SELECT statement** in Stage 1: 
 
