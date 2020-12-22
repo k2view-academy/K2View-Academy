@@ -13,5 +13,5 @@ Scanning the project using the customized plugin will:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/01_Overview/03_Customized_Library.md)
+[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/01_Overview/02_Why_Use_It.md)
 
