@@ -18,9 +18,11 @@ To install this plugin in your IntelliJ IDE:
 
 1. Download and install SonarQube-8.5 or higher version.
 	https://www.sonarqube.org/downloads/
+	
  	e.g., install under C:\sonarQube\sonarqube-8.5.1.38104
 
 2. Modify wrapper.conf  (located under C:\sonarQube\sonarqube-8.5.1.38104\conf) as below:
+
 	wrapper.java.command=C:/Program Files/ojdkbuild/jdk-11.0.8/bin/java
 	Java path might be installed in different location, make sure to use the right path.
 
@@ -31,7 +33,8 @@ To install this plugin in your IntelliJ IDE:
 	except of sonar-java-plugin-*.jar.
 
 
-4. Download and copy the plugin Snapshots java-custom-rules-1.0-SNAPSHOT & sonar-xml-plugin-2.1.0-SNAPSHOT to 		C:\sonarQube\sonarqube-8.5.1.38104\extensions\plugins.
+4. Download and copy the plugin Snapshots java-custom-rules-1.0-SNAPSHOT & sonar-xml-plugin-2.1.0-SNAPSHOT to 
+	C:\sonarQube\sonarqube-8.5.1.38104\extensions\plugins.
 
 5. Open command line (windows cmd) and execute: 
  	C:\sonarQube\sonarqube-8.5.1.38104\sonarqube-8.5.1.38104\bin\windows-x86-64\StartSonar.bat.
