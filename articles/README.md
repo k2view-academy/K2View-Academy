@@ -272,6 +272,9 @@
 <li><a href="/articles/19_Broadway/24_error_handling.md">Error Handling</a></li>
 <li><a href="/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md">Run and Debug Broadway Flow</a></li>
 <li><a href="/articles/19_Broadway/27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
+<li><a href="/articles/19_Broadway/28_actor_editor.md">Actor Editor</a></li>
+<li><a href="/articles/19_Broadway/29_recovery_point.md">Recovery Point</a></li>
+
 </ul> 
 </ul> 
 </details> 
