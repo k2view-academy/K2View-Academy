@@ -2,7 +2,7 @@
 
 
 
-###### **<u>3.2 Review the results</u>**
+## **<u>3.2 Review the results</u>**
 
 Following are the required steps to review, understand, and fix the results based on their priority:
 
