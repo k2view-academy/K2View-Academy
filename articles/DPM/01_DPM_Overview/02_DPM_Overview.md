@@ -4,7 +4,7 @@ The Data Privacy Management module provides a company with the tools it requires
 
 K2View’s DPM is a configurable, flexible system which allows each company to define the regulations it supports, the types of requests to which it attends, procedures for fulfilling each request, and other aspects associated with compliance to the various Privacy legislations.
 
-#### K2View’s DPM is composed of two main modules: 
+### K2View’s DPM is composed of two main modules: 
 
 <u>**Admin module**</u>: The Admin module is used by the DPM Administrator for the configuration of the system. Through this module the Administrator can define all Data Privacy Management aspects, such as the supported regulations, the types of requests that can be made for each regulation, the task flow required to fulfill each request, consent configuration, and more. such as the supported regulations, which type of requests can be made for each regulation, what is the task flow required for the fulfilment of each request, consent configuration, and more. 
 
