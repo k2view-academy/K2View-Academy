@@ -2,7 +2,7 @@
 
 
 
-###### <u>3.1 Scan the project</u>
+## <u>3.1 Scan the project</u>
 
 1. Create new file and name it sonar-project.properties under your project (e.g. C:/Users/<userName>/Documents/K2View Fabric Studio/Projects/<projectName>) with the following parameters 
    sonar.projectKey=<yourProjectKey>
