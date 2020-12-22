@@ -46,13 +46,13 @@ The following are the required steps to review, understand, and fix the results 
 
 ![](/articles/COE/SonarQube/images/05_issues.png)
 
-       You will be directed to the issues page:
+   You will be directed to the issues page:
 
 ![](/articles/COE/SonarQube/images/06_issues_page.png)
 
-       As you can see in the above screenshot, the left panel contains filters that can be used to search for specific types or specific rules.
-
-       On the right panel of the window, the exact issue, along with the severity and few additional details, will be displayed.
+   As you can see in the above screenshot, the left panel contains filters that can be used to search for specific types or specific rules.
+   
+   On the right panel of the window, the exact issue, along with the severity and few additional details, will be displayed.
 
 
 **5.** There are many available filters. The most common ones are listed below:
