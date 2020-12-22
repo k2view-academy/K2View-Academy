@@ -2,7 +2,7 @@
 
 ### Overview
 
-Broadway flows and jobs can serve complex systems with hundreds of transactions executed every second for data movement across various systems, such as populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow crashes before it reaches the end, it should be possible to recover lost data to prevent re-running the flow from the beginning. 
+Broadway flows and jobs can serve complex systems with hundreds of transactions executed every second for data movement across various systems, such as populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow crashes before it reaches the end, it should be possible to recover lost data to prevent re-running the flow from the beginning.  
 
 Setting a **Recovery Point** in a Broadway flow allows to mark a Stages at which the flow data should be serialized and saved in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). Then if a flow fails to complete (for example, if the process was killed), the flow can be re-run and it will start from the last saved recovery point rather than from the beginning using the serialized data. Once the flow is completed, the recovery info is deleted from Cassandra.
 
