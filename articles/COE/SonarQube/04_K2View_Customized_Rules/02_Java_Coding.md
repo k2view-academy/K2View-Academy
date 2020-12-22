@@ -36,7 +36,7 @@
 		log.info("message");
 		ReportUserMessage("message");
 	
-   -Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.
+   -*Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.*
 
 **7.** Deprecated functions should not be used
  	
