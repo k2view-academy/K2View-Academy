@@ -1,15 +1,13 @@
 
 
-![image](/articles/images/00_k2view.png)
+![image](/articles/COE/SonarQube/images/00_k2view.png)
 
-| Sonar Documentation |
-| :-----------------: |
-|                     |
-|     11/15/2020      |
+   **Sonar Documentation  
+11/15/2020**
 
  
 
-Confidentiality
+## **Confidentiality**
 
 This document contains copyrighted work and proprietary information belonging to K2View.
 
