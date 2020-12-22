@@ -84,5 +84,5 @@ The Request List table presents the following information:
 </table>
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/02_Case_Owner_User_Interface_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/DPM?images/Next.png">](/articles/DPM/06_Case_Owner_User_Interface/04_Case_Owner_User_Interface_Details.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/02_Case_Owner_User_Interface_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/06_Case_Owner_User_Interface/04_Case_Owner_User_Interface_Details.md)
 
