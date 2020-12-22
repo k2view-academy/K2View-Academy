@@ -12,5 +12,5 @@
 * [Main DPM Entities](03_Main_DPM_Entities.md)
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/100_DPM_User_Guide/02_Admin_Module/02_Admin_Module_Overview.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/01_DPM_Overview/01_DPM_Glossary.md)
 
