@@ -2,7 +2,9 @@
 
 Broadway has a built-in error handling mechanism that handles exceptions in a flow using **Error Handlers**. 
 
-An error handler can be assigned to each flow's [Stage](19_broadway_flow_stages.md)  to catch its exceptions and to decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor or an [Inner flow](22_broadway_flow_inner_flows.md) can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter. However the most advanced error handling features can be achieved using an **ErrorHandler** and **ErrorFields** Actors that can allow to configure different kinds of behavior depending on the received error kinds.  [Click for more information about Error Handling Actors](06_error_handling_actors.md).
+An error handler can be assigned to each flow's [Stage](19_broadway_flow_stages.md)  to catch its exceptions and to decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor or an [Inner flow](22_broadway_flow_inner_flows.md) can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter. 
+
+Advanced error handling features can be achieved using an **ErrorHandler** and **ErrorFields** Actors that can allow to configure different kinds of behavior depending on the exception type. To learn about the advanced error handling options, refer to the [Error Handling Actors](06_error_handling_actors.md) article.
 
 Error handling in Broadway is similar to the **Java try and catch** mechanism and works as follows:
 
@@ -10,7 +12,6 @@ Error handling in Broadway is similar to the **Java try and catch** mechanism an
 * The error handler catches the exception.
 * The Actor's logic is then validated by the error handler: 
   * When an error handler returns true, the flow continues.
-
   * When an error handler returns false, the flow stops.
 
 To analyze the exception, Broadway exposes the **error** object with the following properties:
