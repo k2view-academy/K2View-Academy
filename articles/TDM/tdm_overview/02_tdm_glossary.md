@@ -117,7 +117,7 @@
 <p><h5>Data Flux</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>TData Flux mode enables users to keep versions (backups) of data during functional tests and return to the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, select the required version and re-load the selected version of the data to the environment instead of the corrupted data.</p>
+<p>Data Flux mode enables users to keep versions (backups) of data during functional tests and return to the latest saved version of the data when needed. Users can create an Extract task to create a version of the data and save it in Fabric. To get the extracted version in the testing environment, the tester can create a load task, select the required version and re-load the selected version of the data to the environment instead of the corrupted data.</p>
 </td>
 </tr>
 </tbody>
