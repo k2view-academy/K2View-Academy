@@ -20,5 +20,5 @@
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/02_Installation/01_Installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/03_Operation/02_Review.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/03_Operation/02_Review.md)
 
