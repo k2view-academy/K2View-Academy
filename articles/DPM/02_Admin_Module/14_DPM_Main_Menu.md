@@ -23,5 +23,5 @@ The order that the menu options are presented is defined according to the order 
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/13_User_Management.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/READ_ME.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/13_User_Management.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/README.md)
 
