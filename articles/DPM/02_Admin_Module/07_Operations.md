@@ -1,4 +1,4 @@
-#### “Operations” Tab:
+## “Operations” Tab:
 
 The Operations tab allows the Admin to add an automated Activity that should be executed to perform the Task. 
 
@@ -6,7 +6,7 @@ The user selects an Operation from the operation dropdown list. As a result, the
 
 As an example, for a Task that should execute the Operation “SendMail” the system expects the parameters “Message”, “Subject” and “to” to be configured.
 
- ![image](images/Figure_17_Task_configuration_Operation_tab.png)
+ ![image](/articles/DPM/images/Figure_17_Task_configuration_Operation_tab.png)
 
 Configuring operation’s parameters: 
 When an operation requires the configuration of one or more parameters, the value of those parameters can be defined in several different ways. Each parameter can be one of the following types: 
@@ -15,7 +15,7 @@ When an operation requires the configuration of one or more parameters, the valu
 - Link
 - Input
 
- ![image](images/Figure_18_Operation_parameters_types.png)
+ ![image](/articles/DPM/images/Figure_18_Operation_parameters_types.png)
 
 Each of those types allows the user to define a different way to obtain the information that is needed for the execution of the operation. The following table describes the different options:
 
@@ -64,5 +64,5 @@ The following image demonstrates the information that the DPM requests the Admin
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02_Admin_Module/06_Reminders.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/08_Regulations.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/06_Reminders.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/08_Regulations.md)
 
