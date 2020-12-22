@@ -21,4 +21,4 @@ These components cover the end-to-end life cycle of data privacy-related request
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/01_DPM_Overview/01_DPM_Glossary.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/01_DPM_Overview/03_Main_DPM_Entities.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/01_DPM_Overview/01_DPM_Glossary.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/01_DPM_Overview/03_Main_DPM_Entities.md)
