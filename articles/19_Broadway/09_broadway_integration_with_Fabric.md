@@ -49,7 +49,7 @@ Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the *
 
 ### Use of LU Functions and Graphit in Broadway
 
-The **LuFunction** and **Graphit** Actors use Fabric integration with Broadway to enable the reuse of Fabric logic in Broadway flows. 
+**LuFunction** and **Graphit** Actors use Fabric integration with Broadway to enable the reuse of Fabric logic in Broadway flows. 
 
 To do so, set the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument and then select a [Project function](/articles/07_table_population/08_project_functions.md) or a [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) resource. 
 
