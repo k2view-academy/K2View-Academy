@@ -42,5 +42,5 @@ This rule checks if LU has IIDFinder enabled, then decision function fnIIDFCheck
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_Customized_Rules/03_Cassandra.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/05_Reference_and_Document/01_Reference.md)
+[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/03_Cassandra.md)
 
