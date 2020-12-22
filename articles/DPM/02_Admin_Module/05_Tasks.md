@@ -10,7 +10,7 @@ The Tasks tab includes the configuration of parameters, such as the following:
 - Task expected execution time
 - Task execution timing
 
- ![image](images/Figure_13_New_Task_first_tab.png)
+ ![image](/articles/DPM/images/Figure_13_New_Task_first_tab.png)
 
 The following table describes in detail the options in this tab:
 
@@ -72,7 +72,7 @@ The following table describes in detail the options in this tab:
 <td width="775">
 <p>This property allows for defining whether the task should be initiated immediately after the predecessor task is completed, or to initiate it only after a configurable time lag.</p>
 <p>The time lag configuration:</p>
-<p> ![image](images/Figure_14_task_schedule.png)</p>
+<p> ![image](/articles/DPM/images/Figure_14_task_schedule.png)</p>
 <p>&nbsp;</p>
 <p>The configuration depends on the selected time unit:</p>
 <p>If &ldquo;hour&rdquo; was selected, then the user should define at what minute the task should start. Once the preceding task was completed, then this task will start in the defined minute of the following hour.</p>
@@ -135,7 +135,7 @@ The following table describes in detail the options in this tab:
 
 When the “Conditional Dependent Task” is switched on, the Tasks Tab changes to present the properties that should be configured in this case:
 
- ![image](images/Figure_15_Task_configuration_Task_tab.png)
+ ![image](/articles/DPM/images/Figure_15_Task_configuration_Task_tab.png)
 
 The additional properties that can be configured when the “Conditional Dependent Task is switched on are:
 
@@ -181,4 +181,4 @@ When a Flow that includes a conditional Task is executed, the conditional Task w
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02/Admin_Module_04_Stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/06_Reminders.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02/Admin_Module_04_Stages.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/06_Reminders.md)
