@@ -10,11 +10,11 @@ The roles are structured in two layers:
 
 For a user to be able to perform a specific Activity in the DPM, the user should be assigned to a Corporate Role that has enabled the Application Role where this Activity is included. 
 
- ![image](images/Figure_22_User_Roles.png)
+ ![image](/articles/DPM/images/Figure_22_User_Roles.png)
 
 Upon login, the system identifies the user’s corporate role and the DPM Application Role associated with it. The user will get access only to the functionality allowed for his role.
 The Admin module allows the DPM Administrator to define the relation between the users, corporate defined roles and the functions they assume in the DPM system. 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02_Admin_Module/09_Activities.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/11_DPM_Roles.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/09_Activities.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/11_DPM_Roles.md)
