@@ -2,7 +2,7 @@
 
 When a customer selects the option to create a new request, the system directs the customer to a screen where the request details are collected. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module. 
 
- ![image](images/Figure_37_Customer_submits_a_Reqeust.png)
+ ![image](articles/DPM/images/Figure_37_Customer_submits_a_Reqeust.png)
 
 When submitting a new request, the customer first selects the relevant regulation out of the Regulation dropdown list. 
 The customer can add notes to the Request before submitting it. 
@@ -58,5 +58,5 @@ The customer number is not requested when submitting the request, since the cust
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/02_Customer_Direct_Requests_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/04_Customer_Direct_Requests_View.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/04_Customer_Direct_Requests/02_Customer_Direct_Requests_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/04_Customer_Direct_Requests/04_Customer_Direct_Requests_View.md)
 
