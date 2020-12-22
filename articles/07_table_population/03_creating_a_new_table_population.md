@@ -26,11 +26,11 @@ When an LU table has two populations, a second Table Population can extract data
 5.	Double-click on the required table name or drag it into the working area. 
 6.	Click **Create as DB Query** to create the DB query source object in the working area. 
 7.	Optional: use the **Edit Query** option to edit the input query via the [Query Builder](/articles/11_query_builder/01_query_builder_overview.md#query-builder-overview), for example, to choose specific columns or conditions in SQL statements. Do either:
-   *	Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
-   *	Double click the **source object**.
+    * Click the **source object**, then go to the **Properties tab** > **Edit Query** in the right panel of the working area.
+    * Double click the **source object**.
 8.	To connect the source object to the target LU table, right click the **DB Query object** and either:
-   *	Click **Auto Connect to Table**.
-   *	Connect the fields **manually**.
+    * Click **Auto Connect to Table**.
+    * Connect the fields **manually**.
 
 ### How Do I Create a New Table Population From a Root Function? 
 
