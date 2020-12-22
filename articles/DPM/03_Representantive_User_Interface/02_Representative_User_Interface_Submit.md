@@ -2,7 +2,7 @@
 
 A representative can submit a request on behalf of a customer, using the “Submit a Request” button that is located on the search screen or by using the menu on the left. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module.
 
-![](images/Figure_35_Representative_submits_a_new_Request.png)
+![](/articles/DPM/images/Figure_35_Representative_submits_a_new_Request.png)
 
 When submitting a new request, the representative first selects the regulation that applies to the customer out of the Regulation dropdown list and fills the customer number at the Customer field. 
 The representative can add notes to the Request before submitting it. 
@@ -61,5 +61,5 @@ Once the Request type is selected, the right side of the form presents the list 
 </tr>
 </tbody>
 </table>
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/03_Representative_User_Interface/02_Representative_User_Interface_Search.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/03_Representative_User_Interface/README.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representative_User_Interface/02_Representative_User_Interface_Search.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Representative_User_Interface/README.md)
 
