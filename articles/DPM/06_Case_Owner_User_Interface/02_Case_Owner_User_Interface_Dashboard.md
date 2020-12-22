@@ -44,5 +44,5 @@ Clicking each of those totals will take the user to the “Requests List” scre
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/01_Case_Owner_User_Interface_Overview.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Case_Owner_User_Interface/01_Case_Owner_User_Interface_List.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/01_Case_Owner_User_Interface_Overview.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/06_Case_Owner_User_Interface/03_Case_Owner_User_Interface_List.md)
 
