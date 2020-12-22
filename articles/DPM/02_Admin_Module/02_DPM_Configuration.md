@@ -1,4 +1,4 @@
-## DPM Configuration
+# DPM Configuration
 **Overview**
 As described in the first chapter, the Admin module is where the DPM Administrator can define the support for the different Privacy Regulations and their respective Activities.
 The configuration is comprised of:
