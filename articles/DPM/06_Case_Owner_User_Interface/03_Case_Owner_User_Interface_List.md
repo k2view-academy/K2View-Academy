@@ -2,7 +2,7 @@
 
 The Case Owner Requests List presents to the Case Owner the list of Requests that are under his responsibility.
 
- ![image](images/Figure_47_Case_Owner_Requests_List.png)
+ ![image](/articles/DPM/images/Figure_47_Case_Owner_Requests_List.png)
 
 The Request list can be filtered based on: 
 
@@ -84,5 +84,5 @@ The Request List table presents the following information:
 </table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/06_Case_Owner_User_Interface/02_Case_Owner_User_Interface_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/06_Case_Owner_User_Interface/04_Case_Owner_User_Interface_Details.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/02_Case_Owner_User_Interface_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/DPM?images/Next.png">](/articles/DPM/06_Case_Owner_User_Interface/04_Case_Owner_User_Interface_Details.md)
 
