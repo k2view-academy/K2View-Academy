@@ -2,7 +2,7 @@
 
 ![image](/articles/images/welcome_to_wiki.png)
 
-## DPM Admin Module 
+## DPM Overview 
 
 
 * [DPM Glossary](01_DPM_Glossary.md)  
