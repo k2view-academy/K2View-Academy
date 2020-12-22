@@ -2,7 +2,7 @@
 
 When a customer selects the option to create a new request, the system directs the customer to a screen where the request details are collected. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module. 
 
- ![image](articles/DPM/images/Figure_37_Customer_submits_a_Reqeust.png)
+ ![image](/articles/DPM/images/Figure_37_Customer_submits_a_Reqeust.png)
 
 When submitting a new request, the customer first selects the relevant regulation out of the Regulation dropdown list. 
 The customer can add notes to the Request before submitting it. 
