@@ -98,8 +98,7 @@ The following are the required steps to review, understand, and fix the results 
 
 
 
-*For additional details on issues review and how to handle them, please refer to:*  
-[SonarQube User Guide]( https://docs.sonarqube.org/latest/user-guide/issues/)
+*For additional details on issues review and how to handle them, please refer to:* [SonarQube User Guide]( https://docs.sonarqube.org/latest/user-guide/issues/)
 
 
 
