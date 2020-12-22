@@ -113,4 +113,4 @@ In this example, **table** and **clm_name** are non-prepared statement parameter
 
 
 
-[![Previous](/articles/images/Previous.png)](04_queue_actors.md)
+[![Previous](/articles/images/Previous.png)](04_queue_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_error_handling_actors.md)
