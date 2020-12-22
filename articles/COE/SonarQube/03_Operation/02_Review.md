@@ -100,5 +100,5 @@ For additional details on issues review and how to handle them, please refer to:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/03_Operation/01_Review.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_Operation/01_Customized_Rules.md)
+[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/03_Operation/01_Scan.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_Operation/01_Customized_Rules.md)
 
