@@ -6,9 +6,9 @@
 
 **2.** Catch block should not be Empty!
 
-  	 -Checks if catch block was defined to be empty, which is not recommended as it will make it very hard to locate failures in code.
+  	 *Checks if catch block was defined to be empty, which is not recommended as it will make it very hard to locate failures in code.*
 
-  	 -Caught exception should be handled or printed out.
+  	 >*Caught exception should be handled or printed out.*
 
 **3.** Use binding to get instance
 
