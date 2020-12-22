@@ -6,13 +6,13 @@
 
 **2.** Catch block should not be Empty!
 
-	-*Checks if catch block was defined to be empty, which is not recommended as it will make it very hard to locate failures in code.*
+   -*Checks if catch block was defined to be empty, which is not recommended as it will make it very hard to locate failures in code.*
 
-	-*Caught exception should be handled or printed out.*
+   -*Caught exception should be handled or printed out.*
 
 **3.** Use binding to get instance
 
-	-*This rule detects an execution of get command without binding*
+   -*This rule detects an execution of get command without binding*
 
 		use: 		db("Fabric").execute("get LUTYPE.?",  IID );
 		instead of: 	db("Fabric").execute("get LUTYPE.IID", null );
@@ -21,7 +21,7 @@
 
 **4.** Fetch single value/row using firstValue()/firstRow() functions
 
-	-*This rule detects a use of multi rows function instead of using the above mentioned functions for single value\row*
+   -*This rule detects a use of multi rows function instead of using the above mentioned functions for single value\row*
 
 
 **5.** Use Prepare and send the values as parameters to the SQL
@@ -31,18 +31,18 @@
 
 **6.** ReportUserMessage/log.info should only be used for debugging
 
-	-*This rule detects usage of log.info/ReportUserMessage*
+   -*This rule detects usage of log.info/ReportUserMessage*
 
 		log.info("message");
 		ReportUserMessage("message");
 	
-	- Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.
+   - Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.
 
 **7.** Deprecated functions should not be used
  	
-	-*This rule detects usage of deprecated functions*
+   -*This rule detects usage of deprecated functions*
   	
-	*Please check the [User Guide](https://docs.sonarqube.org/latest/instance-administration/quality-profiles/) for more details on deprecated functions.*
+   *Please check the [User Guide](https://docs.sonarqube.org/latest/instance-administration/quality-profiles/) for more details on deprecated functions.*
 
   
 
