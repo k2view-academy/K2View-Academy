@@ -8,11 +8,11 @@ When a customer logs into the DPM user interface, the initial screen that is pre
 - Open Requests: the number of requests that are in processing for this customer.
 - View Requests: view the list of this customer’s requests.
 
- ![image](images/Figure_36_customer_landing_page.png)
+ ![image](/articles/DPM/images/Figure_36_customer_landing_page.png)
 
 The same options can be reached also from the menu items on the left side of the screen.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/01_Customer_Direct_Requests_Overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/03_Customer_Direct_Requests_Submit.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/04_Customer_Direct_Requests/01_Customer_Direct_Requests_Overview.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/04_Customer_Direct_Requests/03_Customer_Direct_Requests_Submit.md)
 
