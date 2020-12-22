@@ -20,5 +20,5 @@ This rule detects executing read transactions on Cassandra using allow filtering
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_Customized_Rules/02_Java_Coding.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_Customerized_Rules/04_IIDFinder.md)
+[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/02_Java_Coding.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/04_IIDFinder.md)
 
