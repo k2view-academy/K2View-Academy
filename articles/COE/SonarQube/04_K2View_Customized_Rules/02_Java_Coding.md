@@ -2,15 +2,15 @@
 
 ## 4.2	Java Coding
 
-1. Resource must be closed
+**1.** Resource must be closed
 
-2. Catch block should not be Empty!
+**2.** Catch block should not be Empty!
 
 	-*Checks if catch block was defined to be empty, which is not recommended as it will make it very hard to locate failures in code.*
 
 	-*Caught exception should be handled or printed out.*
 
-3. Use binding to get instance
+**3.** Use binding to get instance
 
 	-*This rule detects an execution of get command without binding*
 
@@ -19,17 +19,17 @@
 
 
 
-4. fetch single value/row using firstValue()/firstRow() functions
+**4.** Fetch single value/row using firstValue()/firstRow() functions
 
 	-*This rule detects a use of multi rows function instead of using the above mentioned functions for single value\row*
 
 
-5. Use Prepare and send the values as parameters to the SQL
+**5.** Use Prepare and send the values as parameters to the SQL
 
 		use:		db(InterfaceName).fetch(select * from table where id =?,ID);
 		instead of:	db(InterfaceName).fetch(select * from table where id = "+ ID +",null);
 
-6. ReportUserMessage/log.info should only be used for debugging
+**6.** ReportUserMessage/log.info should only be used for debugging
 
 	-*This rule detects usage of log.info/ReportUserMessage*
 
@@ -38,7 +38,7 @@
 	
 	- Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.
 
-7. Deprecated functions should not be used
+**7.** Deprecated functions should not be used
  	
 	-*This rule detects usage of deprecated functions*
   	
