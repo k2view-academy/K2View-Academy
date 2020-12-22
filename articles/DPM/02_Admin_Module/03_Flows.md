@@ -14,7 +14,7 @@ The screen that is presented allows the Admin to search for a specific Flow, rev
 
 The list of existing Flows provides the high-level information about each of the configured Flows. 
 
- ![image](images/Figure_4_Flows_List_screen.png)
+ ![image](/articles/DPM/images/Figure_4_Flows_List_screen.png)
 
 In this screen, the information about each Flow includes: 
 
@@ -52,7 +52,7 @@ Any Flow can have multiple versions. A new version should be created when a chan
 The Administrator can create a new Flow by using the “Add a Flow” button on the top-right corner of the screen. 
 The Administrator is then prompted to define the Flow name, version, and description:
 
- ![image](images/Figure_5_New_Flow.png)
+ ![image](/articles/DPM/images/Figure_5_New_Flow.png)
 
 <table>
 <tbody>
@@ -109,13 +109,13 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 Once the Flow information is defined and the new Flow is saved, the system presents the Flow Editing screen, where the Administrator can add Stages and Tasks under those Stages. 
 The Flow name and the Flow description can be updated at any  time, by using the edit icon next to the Flow name.
 
- ![image](images/Figure_6_Configuration_of_a_new_Flow_initial_screen.png)
+ ![image](/articles/DPM/images/Figure_6_Configuration_of_a_new_Flow_initial_screen.png)
 
 ## Flow Level Actions
 
 The set of icons next to the Flow name are Activities at Flow level:
 
- ![image](images/Figure_7_Flow_status_icons.png)
+ ![image](/articles/DPM/images/Figure_7_Flow_status_icons.png)
 
 <table>
 <tbody>
@@ -134,14 +134,14 @@ The set of icons next to the Flow name are Activities at Flow level:
 </td>
 </tr>
 <tr>
-<td width="100"> ![image](images/Figure_7b_mark_flow_as_complete_icon.png)
+<td width="100"> ![image](/articles/DPM/images/Figure_7b_mark_flow_as_complete_icon.png)
 </td>
 <td width="800">
 <p>Mark as Complete: Once the Flow configuration is complete, use this icon in order to mark the Flow as <em>Completed</em>. No further changes to the Flow are allowed after a Flow was marked as complete, and the Flow is made available to be associated with an Activity in the Activity configuration screens.</p>
 </td>
 </tr>
 <tr>
-<td width="100"> ![image](images/Figure_7c_duplicate_this_flow.png)</td>
+<td width="100"> ![image](/articles/DPM/images/Figure_7c_duplicate_this_flow.png)</td>
 <td width="800">
 <p>Duplicate this Flow: this button is used in order to create a new version of the Flow. The new version is created in <em>Draft</em> status and allows the user to change the details of the Flow in the new version.</p>
 </td>
@@ -157,7 +157,7 @@ The set of icons next to the Flow name are Activities at Flow level:
 
 At the upper-right corner of the Flow screen, the system shows general Flow information: 
 
- ![image](images/Figure_8_Flow_information.png)
+ ![image](/articles/DPM/images/Figure_8_Flow_information.png)
 
 <table>
 <tbody>
@@ -206,9 +206,9 @@ At the upper-right corner of the Flow screen, the system shows general Flow info
 
 ### Add a Stage
 
-Use the  ![image](images/Figure_8a_plus_icon.png) button on the left side of the Flow screen in order to add a new Stage. As a result, the user is prompted to define the Stage name and description:
+Use the  ![image](/articles/DPM/images/Figure_8a_plus_icon.png) button on the left side of the Flow screen in order to add a new Stage. As a result, the user is prompted to define the Stage name and description:
 
- ![image](images/Figure_9_Adding_a_new_Stage.png)
+ ![image](/articles/DPM/images/Figure_9_Adding_a_new_Stage.png)
 
 <table>
 <tbody>
@@ -250,10 +250,10 @@ Use the  ![image](images/Figure_8a_plus_icon.png) button on the left side of the
 
 Saving the new Stage will open the screen to define tasks in this stage. 
 
- ![image](images/Figure_10_New_Flow_initial_state.png)
+ ![image](/articles/DPM/images/Figure_10_New_Flow_initial_state.png)
 
 As long as the Flow is not marked  Completed, additional Stages can be added, and Tasks under them can be added or modified. 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02_Admin_Module/02_DPM_Configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/04_Stages.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/04_Stages.md)
