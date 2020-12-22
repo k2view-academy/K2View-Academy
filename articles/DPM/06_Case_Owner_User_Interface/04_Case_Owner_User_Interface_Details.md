@@ -2,17 +2,17 @@
 
 From the Requests List screen, the case owner can click on the row of a specific Request in order to open the Request Details Screen:
 
- ![image](images/Figure_48_Case_Owner_Request_Details.png)
+ ![image](/articles/DPM/images/Figure_48_Case_Owner_Request_Details.png)
 
 This screen presents to the Case Owner the full view of the request, complete with all its details. 
 
 At the upper part of the screen, general information about the Request is presented:
 
- ![image](images/Figure_48_a_Case_owner_Request_details_header.png)
+ ![image](/articles/DPM/images/Figure_48_a_Case_owner_Request_details_header.png)
 
 Under the header section, the different stages that make part of the Request process are presented: 
 
- ![image](images/Figure_48_b_Case_owner_Request_details_Flow_stages.png)
+ ![image](/articles/DPM/images/Figure_48_b_Case_owner_Request_details_Flow_stages.png)
 
 Stages that were already completed are presented in green. The current Stage is presented in blue if it is on track, and red if it is past due. Future Stages appear in grey. 
 
@@ -22,7 +22,7 @@ The Case Owner can navigate between the stages by clicking on the Stage section 
 
 At the bottom of the screen, the list of Tasks is presented:
 
- ![image](images/Figure_48_c_Case_owner_Request_details_Task_list.png)
+ ![image](/articles/DPM/images/Figure_48_c_Case_owner_Request_details_Task_list.png)
 
 <table>
 <tbody>
@@ -121,5 +121,5 @@ The Case Owner can select a specific Task to view it in detail.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/03_Case_Owner_User_Interface/01_Case_Owner_User_Interface_List.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/06_Case_Owner_User_Interface/05_Case_Owner_User_Interface_Task.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/03_Case_Owner_User_Interface_List.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/06_Case_Owner_User_Interface/05_Case_Owner_User_Interface_Task.md)
 
