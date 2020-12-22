@@ -39,7 +39,8 @@
 	- Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.
 
 7. Deprecated functions should not be used
- 	-* This rule detects usage of deprecated functions*
+ 	
+	-*This rule detects usage of deprecated functions*
   	
 	*Please check the [User Guide](https://docs.sonarqube.org/latest/instance-administration/quality-profiles/) for more details on deprecated functions.*
 
