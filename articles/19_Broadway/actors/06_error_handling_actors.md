@@ -6,11 +6,11 @@ This article describes the advanced error handling features provided by an **Err
 
 For basic Broadway error handling mechanism, refer to [Error Handling article](/articles/19_Broadway/24_error_handling.md).
 
-### ErrorHandler Actor
+### How Do I Use the ErrorHandler Actor?
 
 The **ErrorHanlder** Actor can be used as an Error Handler to enable handling various exception. For example, you can setup to suppress one kind of error and not to suppress another one.
 
-### ErrorFields Actor
+### How Do I Use the ErrorFields Actor?
 
 
 
