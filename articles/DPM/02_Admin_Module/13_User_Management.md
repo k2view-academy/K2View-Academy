@@ -3,15 +3,15 @@
 For a person to be able to access and perform Activities in the DPM, a User must be defined for this person in the DPM system, and this user should have a Corporate Role assigned to it. 
 Enter the User Management menu option under the Admin menu in order to manage the users and privileges for the DPM system. 
 
- ![image](images/Figure_28_User_management.png)
+ ![image](/articles/DPM/images/Figure_28_User_management.png)
 
 The list of existing users is displayed. For each user, the user ID, username and email are presented. In the Corporate Role column, the list of Corporate Roles that were assigned to this user is presented. Each user can have multiple Corporate Roles, and the functionality this user will be able to perform is a sum of all the options that are enabled under each of the roles assigned.
 
 ### Create a new user
 
-Use the  ![image](images/Figure_28_a_new_user_icon.png) button in order to add a user to the system. The system presents the “Create New User”:
+Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in order to add a user to the system. The system presents the “Create New User”:
 
- ![image](images/Figure_29_New_User_screen.png)
+ ![image](/articles/DPM/images/Figure_29_New_User_screen.png)
 
 <table>
 <tbody>
@@ -86,7 +86,7 @@ Use the  ![image](images/Figure_28_a_new_user_icon.png) button in order to add a
 
 ### Edit or Delete a User
 
-Use the  ![image](images/Figure_29_a_delete_icon.png) button to delete a User. 
-Use the  ![image](images/Figure_29_b_edit_icon.png) button to edit the name, Email address and Corporate Roles of a User.  
+Use the  ![image](/articles/DPM/images/Figure_29_a_delete_icon.png) button to delete a User. 
+Use the  ![image](/articles/DPM/images/Figure_29_b_edit_icon.png) button to edit the name, Email address and Corporate Roles of a User.  
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02_Admin_Module/12_Corporate_Roles.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/14_DPM_Main_Menu.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/12_Corporate_Roles.md)[<img align="right" width="60" height="54" src="/articles/images/DPM/Next.png">](/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md)
