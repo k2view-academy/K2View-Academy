@@ -4,7 +4,7 @@
 
 When selecting one of the lines in the Activities table, or by using the “Edit” icon, the system presents the “Edit Activity” pop-up screen. 
 
- ![image](images/Figure_21_Edit_Activity.png)
+ ![image](/articles/DPM/images/Figure_21_Edit_Activity.png)
 
 In this screen the user can:
 
@@ -23,4 +23,4 @@ The pop-up screen that is presented is the same as the one used for “Edit and 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02_Admin_Module/08_Regulations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/10_Roles_Management.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/08_Regulations.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/10_Roles_Management.md)
