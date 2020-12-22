@@ -25,7 +25,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tdm_lu_type_rel_tar_eid</td>
-<td>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment. This table is populated by a sync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entities and their related data from a target environment.</td>
+<td>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment and is populated by a sync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entities and their related data from a target environment.</td>
 <td>Business Entity</td>
 </tr>
 <tr>
@@ -43,7 +43,7 @@ The following table lists the TDM tables and their description.
 <td valign="top" width="500 pxl">
 <ul>
 <li>Maps a list of LUs to each Business Entity.</li>
-<li>Maps the relationship of LUs within parallel LUs or parent-child LUs in a Business Entity.</li>
+<li>Maps the relationship of LUs in parallel LUs or parent-child LUs in a Business Entity.</li>
 <li>Maps the combined Business Entity and LU to a product.</li>
 </ul>
 </td>
@@ -91,7 +91,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_execution_entities</td>
-<td>Detailed list of entities and their execution status for each task execution.</td>
+<td>Detailed list of entities and their execution status of each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -101,7 +101,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_execution_summary</td>
-<td>Summary information of each task execution. One record is created for each task execution.</td>
+<td>Summary information of each task execution. A record is created for each task execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -111,7 +111,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tasks_post_exe_process</td>
-<td>List of post-execution processes to be executed for each task execution.</td>
+<td>List of post-execution processes to be executed for each task's execution.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
@@ -121,7 +121,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_exe_stats_summary</td>
-<td>Summary statistics on each task execution. A record is created for each task_Execution_id.</td>
+<td>Summary statistics of each task's execution. A record is created for each task_Execution_id.</td>
 <td>Task Execution Statistics</td>
 </tr>
 <tr>
