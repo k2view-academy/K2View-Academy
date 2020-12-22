@@ -159,5 +159,5 @@ Once the search results are presented, the representative can view further detai
 </table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/03_Representative_User_Interface/01_Representative_User_Interface_Overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/03_Representative_User_Interface/03_Representative_User_Interface_Submit.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representative_User_Interface/01_Representative_User_Interface_Overview.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Representative_User_Interface/03_Representative_User_Interface_Submit.md)
 
