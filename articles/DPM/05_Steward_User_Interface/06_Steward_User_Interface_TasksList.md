@@ -2,7 +2,7 @@
 
 The Tasks List screen presents the Tasks that are allocated to the Corporate Role of the specific Steward. 
 
- ![image](images/Figure_44_Tasks_List.png)
+ ![image](/articles/DPM/images/Figure_44_Tasks_List.png)
 
 At the top of the screen, filters allow the user to search tasks that answer specific criteria.
 The filters are:
@@ -23,4 +23,4 @@ Once the Tasks List is presented, the Steward can perform the following actions 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/05_Steward_User_Interface/05_Steward_User_Interface_Graphs.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/05_Steward_User_Interface/07_Steward_User_Interface_Execution.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/05_Steward_User_Interface/05_Steward_User_Interface_Graphs.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/05_Steward_User_Interface/07_Steward_User_Interface_Execution.md)
