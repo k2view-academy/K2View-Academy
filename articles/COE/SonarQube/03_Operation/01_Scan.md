@@ -5,9 +5,9 @@
 ## <u>3.1 Scan the project</u>
 
 1. Create a new file and name it **sonar-project.properties** under your project (e.g. *C:/Users/<userName>/Documents/K2View Fabric Studio/Projects/<projectName>*) with the following parameters 
-   - sonar.projectKey=<yourProjectKey>
-   - sonar.projectName=<yourProjectName>
-   - sonar.java.binaries=C:/Users/<userName>/Documents/K2View Fabric Studio/Projects/<projectName>/Implementation 
+   - sonar.projectKey=\<yourProjectKey>
+   - sonar.projectName=\<yourProjectName>
+   - sonar.java.binaries=*C:/Users/<userName>/Documents/K2View Fabric Studio/Projects/<projectName>/Implementation*  
       (or location of Implementation folder wherever your project is located)
    - sonar.java.source=1.8
 
