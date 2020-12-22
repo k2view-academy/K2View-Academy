@@ -62,5 +62,4 @@ e.g. For port changes, under web-server section, you can add sonar.web.port=9001
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/01_Overview/03_Customized_Library.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/03_Operation/01_Scan.md)
 
