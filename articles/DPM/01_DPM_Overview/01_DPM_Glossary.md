@@ -54,6 +54,4 @@
 </tbody>
 </table> 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/01_DPM_Overview)
-
-[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/01_DPM_Overview)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md)
