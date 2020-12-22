@@ -3,7 +3,7 @@
 The customer can view his own requests by either selecting the “Requests List” menu option, or by clicking the “View Requests” options on the Dashboard. 
 The requests that are presented include both completed requests as well as requests that are still in-progress.
 
- ![image](images/Figure_38_Customer_views_requests.png)
+ ![image](/articles/DPM/images/Figure_38_Customer_views_requests.png)
 
 <table width="594">
 <tbody>
@@ -69,7 +69,7 @@ The requests that are presented include both completed requests as well as reque
 
 Further details about a specific request can be viewed by clicking the request row:
 
- ![image](images/Figure_39_Customer_Requests_details.png)
+ ![image](/articles/DPM/images/Figure_39_Customer_Requests_details.png)
 
 <table>
 <tbody>
@@ -157,5 +157,5 @@ Further details about a specific request can be viewed by clicking the request r
 </table>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/03_Customer_Direct_Requests_Submit.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/05_Customer_Direct_Requests_APIs.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/04_Customer_Direct_Requests/03_Customer_Direct_Requests_Submit.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/04_Customer_Direct_Requests/05_Customer_Direct_Requests_APIs.md)
 
