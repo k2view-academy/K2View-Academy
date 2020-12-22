@@ -51,16 +51,17 @@ To install this plugin in your IntelliJ IDE:
 	
 	 ![image](/articles/COE/SonarQube/images/09_restore.png)
 	 
-     	You will be asked to choose a back up file, choose the files you downloaded for XML and Java.
+     You will be asked to choose a back up file, choose the files you downloaded for XML and Java.
    	
 	- After restoring set each profile as Default.
 	
 	 ![image](/articles/COE/SonarQube/images/13_default.png)
  
-		**Note:**
-		For any configuration changes go to conf folder and sonar.properties file.
-		Here you can configure database, LDAP, webserver, SSO authentication, logging, etc.
-		e.g. For port changes, under web-server section, you can add sonar.web.port=9001.
+	**Note:**
+	For any configuration changes go to conf folder and sonar.properties file.
+	Here you can configure database, LDAP, webserver, SSO authentication, logging, etc.
+	
+	For port changes, under web-server section, you can add sonar.web.port=9001.
 
 
 
@@ -76,12 +77,13 @@ To install this plugin in your IntelliJ IDE:
 3. Go to
 
    *C:\ sonar-scanner-cli-4.4.0.2170-windows\sonar-scanner-4.4.0.2170-windows\conf.* 
-   	Modify prop sonar.host.url within sonar-scanner.properties to point to your sonarQube server:
+   	
+	Modify prop sonar.host.url within sonar-scanner.properties to point to your sonarQube server:
 
-   •	Local sonarQube server: -
+   	•	Local sonarQube server: -
    	 sonar.host.url= http://localhost:9000 (default)
 
-   •	Remote sonarQube server: -
+   	•	Remote sonarQube server: -
   	 sonar.host.url= http(s)://IP:Port       sonar.login=223eadd44dd0cc401ed977c101347bde2269e206 (the shared token (each project will have his token)
 
 
