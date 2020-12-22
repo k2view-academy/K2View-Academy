@@ -30,7 +30,7 @@ It is recommended to use inner flows as error handlers when the same error valid
 
 ### How Do I Add an Error Handler to a Stage?
 
-Click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Error Handler** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
+Click ![image](images/99_19_dots.PNG) > **Error Handler** from the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
 
 ![image](images/99_24_01.PNG)
 
