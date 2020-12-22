@@ -13,5 +13,5 @@ DPM includes a set of screens that allow a customer to submit DPM Requests, as w
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/README.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/04_Customer_Direct_Requests/02_Customer_Direct_Requests_Dashboard.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/04_Customer_Direct_Requests/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/04_Customer_Direct_Requests/02_Customer_Direct_Requests_Dashboard.md)
 
