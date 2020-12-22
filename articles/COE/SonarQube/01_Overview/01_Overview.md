@@ -14,5 +14,5 @@ SonarQube can record metrics history and provides evolution graphs. SonarQube pr
 
 
 
-[[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/01_Overview/02_Why_Use_It.md)
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/01_Overview/02_Why_Use_It.md)
 
