@@ -11,8 +11,7 @@ This article described how Broadway performs complex iteration use cases, such a
 
 * Looping over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
 * Using different connection line types when iterating over a complex object's elements.
-* Iterating over multiple arrays in the same iteration.
-* Iterating in a flow split into branches
+* Iterating over a loop split into branches
 
 If the connected elements of the object are on the same level of hierarchy (such as two fields of the same array), the iteration's behavior is the same as an iteration over [two or more elements in a result array](21_iterations.md#iterate-over-two-or-more-elements). 
 
@@ -61,7 +60,7 @@ Another recommended way to handle two collections of different sizes is to use [
 
 ![image](images/iterate_blend2.PNG)
 
-### Iterating in a Flow Split into Branches
+### Iterating Over a Loop Split into Branches
 
 When a flow is split into branches and includes additional split inside the iteration, the split inside the loop is only applicable for the duration of the loop.
 
