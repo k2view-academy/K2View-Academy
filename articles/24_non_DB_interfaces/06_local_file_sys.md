@@ -43,11 +43,11 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
 2. Click the **Add interface listener as Broadway job** link in the Interface window and select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) from the list to open the Jobs window. 
 
-3. Create a Broadway flow either under Shared Objects or under the same Logical Unit flows. The flow reads data from a file using the predefined interface and populates it into the DB. 
+3. Create a Broadway flow either under Shared Objects or under the same Logical Unit flow. The flow reads data from a file using the predefined interface and populates it into the DB. 
 
    ![images](images/broadway_file_read.PNG)
 
-   * Note that the **interface** and the **path** input arguments of the **FileRead** Actor are defined as [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the interface definition by the listener.
+   * Note that the **interface** and the **path** input arguments of the **FileRead** Actor are defined as an [External link type](/articles/19_Broadway/03_broadway_actor_window.md#actors-inputs-and-outputs). Their values are passed from the defined interface by the Listener.
 
 4. In the Jobs window, select the **Broadway flow** and **Execution mode** and then save the job.
 
