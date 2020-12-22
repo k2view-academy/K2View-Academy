@@ -1,11 +1,11 @@
-#### “Reminders” Tab:
+## “Reminders” Tab:
 
 Reminders are used in order to preemptively call attention to Tasks that might not be progressing at the expected pace. 
 In the Reminders tab, the user can define one or more reminders that should be sent after a predetermined time.
 
- ![image](C:/Users/Tanya Traiberman/Desktop/Academy_6.2_DPM_Tanya/articles/100_DPM_User_Guide/02_Admin_module/images/Figure_16_Task_configuration_Reminders_tab.png)
+ ![image](/articles/DPM/images/Figure_16_Task_configuration_Reminders_tab.png)
 
-Use the   ![image](C:/Users/Tanya Traiberman/Desktop/Academy_6.2_DPM_Tanya/articles/100_DPM_User_Guide/02_Admin_module/images/Figure_16a_plus_minus_icon.png) control in order to add more than one reminder or remove unwanted reminder. 
+Use the   ![image](/articles/DPM/images/Figure_16a_plus_minus_icon.png) control in order to add more than one reminder or remove unwanted reminder. 
 
 <table>
 <tbody>
@@ -56,4 +56,4 @@ In addition to the reminders that are configured in this tab, the system also ha
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/DPM/DPM_User_Guide/02_Admin_Module/05_Tasks.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/DPM_User_Guide/02_Admin_Module/07_Operations.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/05_Tasks.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/07_Operations.md)
