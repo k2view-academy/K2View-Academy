@@ -26,7 +26,7 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 | LU Name       | Logical unit name or COMMON for common  tables | Y             | CUSTOMER  COMMON |                |
 | Iid           | Instance ID                                    | Y             | 1                |                |
 | token         | API Key                                        | Y             |                  |                |
-| format        | Response format                                | Y             | JSON/XML/CSV     | JSON           |
+| format        | Response format                                | Y             | JSON/XML         | JSON           |
 
  **Example:**
 
@@ -183,14 +183,14 @@ Parameters should be populated in the body in the following structure:
 | Api                         | API                                    | Y             | api           |                |
 | VERSION_NO                  | Version number                         | N             | V1.4          | Latest version |
 | Customized Web Service name | Name of the Web Service to be executed | Y             | Orders        |                |
-| Format                      | Response format                        | Y             | JSON/XML/CSV  | JSON           |
+| Format                      | Response format                        | Y             | JSON/XML      | JSON           |
 
 ##  Request Header
 
 | **Parameter**              | **Mandatory** | **Value**                                                    |
 | -------------------------- | ------------- | ------------------------------------------------------------ |
 | Token                      | Y             | API Key                                                      |
-| Accept                     | Y             | Json/XML/RAW/CSV                                             |
+| Accept                     | Y             | Json/XML/RAW                                                 |
 | Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header |
 
 **Example:**

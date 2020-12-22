@@ -1,5 +1,5 @@
 # How Do I Create a New Process Job?
-Process Jobs are batch files or scripts stored in the Fabric server and triggered manually from the Command Line.
+Process Jobs are batch files or scripts stored in the Fabric server and triggered manually from the Command Line for scheduled execution. 
 
 ## Step 1. 
 Create a bash script and save it in /home/k2view/ directory.

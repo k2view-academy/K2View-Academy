@@ -124,7 +124,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 </td>
 <td valign="top" width="400pxl">
 
-<p>Runs the Batch process using a function that will match the name if the instance from the external source with its ID as used internally by Fabric</p>
+<p>Runs the Batch process using a function that returns the LUI (IID). For example if LUI is stored in Fabric as a combination of ID + Environment name, use a function to concatenate the ID and Environment name.</p>
 <p>
 The BATCHF command uses the exact same parameters as the BATCH command described above. 
 </p>

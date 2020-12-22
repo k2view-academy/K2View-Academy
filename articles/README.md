@@ -105,6 +105,7 @@
 <li><a href="/articles/07_table_population/11_2_root_functions_code_examples.md">Root Functions - Code Examples</a></li>
 <li><a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">Creating an LUDB Function</a></li>
 <li><a href="/articles/07_table_population/11_4_creating_a_trigger_function.md">Creating a Trigger Function</a></li>
+<li><a href="/articles/07_table_population/11_5_creating_an_event_function.md">Creating an Event Function</a></li>
 <li><a href="/articles/07_table_population/11_lookup_tables.md">Lookup Tables</a></li>
 <li><a href="/articles/07_table_population/12_table_population_diagram_outline.md">Table Population Diagram Outline</a></li>
 <li><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Table Population Excecution Order</a></li>
@@ -235,14 +236,13 @@
 </ul> 
          </ul>
 </details>
-
 <details>
 <summary markdown="span"><strong>Change Data Capture (CDC) Capabilities<strong><a href="/articles/18_fabric_cdc/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href=/articles/18_fabric_cdc/01_change_data_capture_overview.md>CDC Overview</a></li>
-<li><a href="/articles/18_fabric_cdc/02_cdc_messages.md">CDC Messages</a></li>
-<li><a href="/articles/18_fabric_cdc/03_cdc_consumers_implementation.md">CDC Implementation Steps</a></li>
+<li><a href="/articles/18_fabric_cdc/02_cdc_process_architecture.md">CDC Process Architecture</a></li>
+<li><a href="/articles/18_fabric_cdc/03_cdc_messages.md">CDC Messages</a></li>
 <li><a href="/articles/18_fabric_cdc/04_cdc_publication_flow.md">CDC Publication Flow</a></li>
-<li><a href="/articles/18_fabric_cdc/05_cdc_process_architecture.md">CDC Process Architecture</a></li>
+<li><a href="/articles/18_fabric_cdc/05_cdc_consumers_implementation.md">CDC Implementation Steps</a></li>
 <li><a href="/articles/18_fabric_cdc/06_cdc_configuration.md">CDC Configuration</a></li>
 <li><a href="/articles/18_fabric_cdc/cdc_consumers/README.md">CDC Consumers</a></li>   
 </ul> 
@@ -266,6 +266,7 @@
 <li><a href="/articles/19_Broadway/18_broadway_flow_window.md">Broadway Flow Window</a></li>
 <li><a href="/articles/19_Broadway/19_broadway_flow_stages.md">Broadway Stages</a></li>
 <li><a href="/articles/19_Broadway/21_iterations.md">Iterations in Broadway</a></li>
+<li><a href="/articles/19_Broadway/21a_iterations_addnl.md">Complex Iteration Flows</a></li>
 <li><a href="/articles/19_Broadway/22_broadway_flow_inner_flows.md">Inner Flows</a></li>
 <li><a href="/articles/19_Broadway/23_transactions.md">Transactions</a></li>
 <li><a href="/articles/19_Broadway/24_error_handling.md">Error Handling</a></li>
@@ -275,6 +276,7 @@
 </ul> 
 </details> 
 
+
 <details>
 <summary markdown="span"><strong>Jobs & Batch Services<strong><a href="/articles/20_jobs_and_batch_services/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md">Overview</a></li>
@@ -283,7 +285,7 @@
 <li><a href="/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md">Process Jobs</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md">Broadway Jobs</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/07_jobs_commands.md">Commands list</a></li>
-<li><a href="/articles/20_jobs_and_batch_services/08_jobs_table_fields.md">Operational Tables</a></li>
+<li><a href="/articles/20_jobs_and_batch_services/08_jobs_table_fields.md">Jobs Monitoring</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md">Jobs Configuration</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md">Fabric Affinity Concept</a></li>
 <li><a href="/articles/20_jobs_and_batch_services/11_batch_process_overview.md">Batch Processes</a></li>
@@ -338,6 +340,19 @@
 <li><a href="/articles/25_environments/05_set_and_list_commands.md">SET and LIST Commands for Environments</a></li>
 </details> 
 
+
+<details>
+<summary markdown="span"><strong>Fabric Security<strong><a href="/articles/26_fabric_security/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+
+<li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Security Overview</a></li>
+<li><a href="/articles/26_fabric_security/02_fabric_entities_design.md">Fabric - Secure-by-Design</a></li>
+<li><a href="/articles/26_fabric_security/03_fabric_LUI_encryption.md">Digital Entities Encryption</a></li>
+<li><a href="/articles/26_fabric_security/04_fabric_interfaces_security.md">Interfaces Encryption</a></li>
+<li><a href="/articles/26_fabric_security/05_fabric_webservices_security.md">Web Services Security</a></li>
+    
+</details> 
+
+
 <details>
 <summary markdown="span"><strong>Auditing<strong><a href="/articles/27_auditing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/27_auditing/01_auditing_overview.md">Auditing Overview</a></li>
@@ -352,7 +367,7 @@
 <li><a href="/articles/28_cassandra_loader/03_loader_configuration.md">Cassandra Loader Configuration</a></li>
 <li><a href="/articles/28_cassandra_loader/04_loader_invocation.md">Cassandra Loader Invocation and JMX</a></li>
 </details>  
-        
+
  <details>
 <summary markdown="span"><strong>Tracing<strong><a href="/articles/29_tracing/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/29_tracing/01_tracing_overview.md">Tracing Overview</a></li>
@@ -361,12 +376,19 @@
 <li><a href="/articles/29_tracing/04_trace_custom.md">Trace Custom</a></li>
 <li><a href="/articles/29_tracing/05_trace_view.md">Trace View</a></li>
 </details>    
-       
+
 <details>
 <summary markdown="span"><strong>Web Framework<strong><a href="/articles/30_web_framework/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/30_web_framework/01_web_framework_overview.md">Web Framework Overview</a></li>
 <li><a href="/articles/30_web_framework/02_preintegrated_apps_overview.md">Pre-Integrated Application Overview</a></li>
 <li><a href="/articles/30_web_framework/03_web_admin_application.md">Web Admin Application</a></li>
+</details>    
+
+<details>
+<summary markdown="span"><strong>Logical Unit Storage<strong><a href="/articles/32_LU_storage/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
+<li><a href="/articles/32_LU_storage/01_LU_storage_overview.md">Logical Unit Storage Overview</a></li>
+<li><a href="/articles/32_LU_storage/02_storage_management.md">LU Storage and Cache Management</a></li>
+<li><a href="/articles/32_LU_storage/03_big_lu_storage.md">Big Logical Units</a></li>
 </details>    
 
 <details>

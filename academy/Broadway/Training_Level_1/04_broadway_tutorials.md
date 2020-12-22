@@ -17,10 +17,12 @@ To learn more, please refer to the [Broadway Tutorial and Flow Examples](/articl
 
 Broadway Tutorials flows can be opened in the Broadway Flow window.
 
-1. Download and open the [Demo Project](/articles/demo_project) in the **Fabric Studio**. 
-2. Go to the **project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
-3. Populate the **Flow Name** and click **OK** to open an empty flow.
-4. In the flow window: select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
+1. Download the latest [Demo Project](/articles/demo_project) export file.
+2. Create a new Project named BroadwayTutorial (or something similar)
+3. Right click the root of the newly created Project tree, select Import All, and navigate to the downloaded Demo Project export file.
+4. Go to the **Project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
+5. Populate the **Flow Name** and click **OK** to open an empty flow.
+6. In the flow window: select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
 
 ### Debugging The Broadway Tutorials Flow
 

@@ -514,9 +514,9 @@ Click for more information about [Reference Tables](/articles/22_reference(commo
 
 ### Fabric Transactions
 
-The Fabric System of Record (SOR) functionality enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
+Fabric enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a ***\*BEGIN\**** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
 
-Fabric has a set of commands that support the SOR functionality:
+Fabric has a set of commands that support transactions:
 
 - **BEGIN**, start a transaction.
 - **SELECT**, **UPDATE**, **INSERT**, and **DELETE**, run Select, Insert, Update and Delete transactions on the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) or Reference table data.
@@ -524,22 +524,15 @@ Fabric has a set of commands that support the SOR functionality:
 
 Fabric also enables writing the transaction into a delta table using the **SET ASYNC_TRX=true** command.
 
-Click for more information about Fabric as a System of Record.
-
-
-<!--Drop 2- add links to SOR + Reference tables -->
+[Click for more information about Fabric Transactions](/articles/23_fabric_transactions/02_fabric_transactions.md).
 
 ### CDC and Search
 
-The Fabric CDC (Change Data Capture) solution notifies external systems about data changes and has built-in integration with Elasticsearch to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
+The Fabric [Change Data Capture(CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution notifies external systems about data changes and has [built-in integration with Elasticsearch](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md) to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
 
 For example: search all customers called “John Doe” that live in “New-York”.
 
 Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In addition, the Fabric **CDC_REPUBLISH_INSTANCE** command can be used to republish CDC data on LUI.
-
-[Click for more information about Fabric CDC and Search](/articles/18_fabric_cdc/01_change_data_capture_overview.md).
-
-<!--Drop 2- add a link to CDC and Search -->
 
 ### Fabric Broadway
 

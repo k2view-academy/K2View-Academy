@@ -51,6 +51,7 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Hostname or IP address of the database server.</p>
+<p>In case of Cassandra interface, it is possible to define a list of IP nodes separated by ; sign for the establishment of the initial connection to the Cassandra cluster.</p>
 </td>
 </tr>
 <tr>
@@ -66,9 +67,9 @@ The following fields are displayed for all types of DB interfaces:
 <p><strong>Database</strong></p>
 </td>
 <td width="433">
-  <p>Database, schema or service name. </p>
-  <p>Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
-<p>For example: C:\SqliteDB\crm_db.db </p>
+<p>Database, schema or service name.</p>
+<p>Note that for SQLite DB Interfaces, populate the database using the full path of the SQLite file.</p>
+<p>For example: C:\SqliteDB\crm_db.db</p>
 </td>
 </tr>
 <tr>
@@ -129,7 +130,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 <tr>
 <td width="210">
-<p><strong><h4>Schema Filter</strong></p>
+<h4>Schema Filter</h4>
 </td>
 <td width="433">
 <p>Name of the Database schema to access. Required if more than one schema exists. The Schema Filter setting in the DB Interface filters the list of schemas to be used by the Query Builder and DB Queries.</p>
@@ -137,14 +138,16 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 <tr>
 <td width="210">
-<p><strong><h4>Connection Properties</strong></p>
+<h4>Connection Properties</h4>
 </td>
 <td width="433">
-<p>List of JDBC Connection Properties of the selected <a href="10_database_types.md">Interface type</a>. This section is visible only when the selected Interface type has any JDBC Connection Properties. </p>
+<p>List of JDBC Connection Properties of the selected <a href="10_database_types.md">Interface type</a>. This section is visible only when the selected Interface type has any JDBC Connection Properties.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+
 
 
 

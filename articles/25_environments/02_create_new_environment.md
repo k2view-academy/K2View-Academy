@@ -6,7 +6,7 @@ An environment is defined in Fabric using the following steps:
 * Populating the connection details of the interfaces via the **Selected Environment** grid.
 * Deploying all the environments to the server while defining the active environment.
 
-**Step 1 - Creating the Environment**
+### Step 1 - Creating the Environment
 
 1. Go to **Project Tree** > **Shared Objects** and double click **Environments** to open the Environments window.
 
@@ -20,14 +20,11 @@ An environment is defined in Fabric using the following steps:
 
     - (Optional) In the **Fabric URL** field, select the server from the predefined list in the **Server Configuration** tab in the [**User Preferences**](/articles/04_fabric_studio/04_user_preferences.md) window. 
 
-       The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm. 
-
-    Full explanation will be provided in the Fabric hardening knowledge base article.
-        <!--[Click for more information about Fabric security hardening].-->
+       The selected Fabric node is used to encrypt the passwords of all interfaces related to the given environment and to run the test connection. If the node is not selected, Fabric uses the local test connection and previous encryption algorithm. Click [here](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) for more information about Fabric security hardening.
    
    -  Click **Re-Key** to use the most updated encryption mechanism and the latest master key to encrypt the passwords of the interfaces.
 
-**Step 2 - Defining Interface Settings per Environment**
+### Step 2 - Defining Interface Settings per Environment 
 
 Once **Name** in the  **Environments List** grid is clicked, all DB and non-DB interfaces in the project are copied to the **Selected Environment** grid and displayed in the tabs. Each interface type is displayed in a dedicated tab. For example, if the project has DB, SMTP, Kafka and HTTP interfaces, each type is displayed in a separate tab.
 
@@ -41,7 +38,7 @@ By default, all interfaces are enabled whereby the settings of each relevant int
    ![image](images/25_02_2.PNG)
 
 
-**Step 3 - Deploying the Environments**
+### Step 3 - Deploying the Environments
 
 Repeat steps 1 and 2 to create the required environments and then do the following:
 

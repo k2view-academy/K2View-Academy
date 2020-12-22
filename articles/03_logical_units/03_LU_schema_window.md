@@ -19,7 +19,7 @@ The following objects are located under each [Logical Unit (LU)](/articles/03_lo
 Go to the **Project Tree**, click the **LU Name** and then click the **schema** to open the **Logical Unit** window.
 
 ### Logical Unit (LU) Window
-![image](/articles/03_logical_units/images/1.3_LU_Schema_WIndow.PNG)
+![image](images/1.3_LU_Schema_WIndow.PNG)
 
 
 The Logical Unit window has three main sections:
@@ -39,7 +39,7 @@ The Logical Unit schema is a work area where you can define the Logical Unit’s
 
 ### Customer LU Schema Example 
 
-![image](/articles/03_logical_units/images/1.4_LU_schema_example.png)
+![image](images/1.4_LU_schema_example.png)
 
 The Logical Unit Schema window shows the Root Table and hierarchy of the tables included in the Logical Unit and the relationships between them:
 * The Root Table of the LU schema is Customer. 
@@ -57,19 +57,19 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 
 ### Logical Unit (LU) Tabs
 
-<table style="width: 547px;">
+<table style="width: 900px;">
 <tbody>
 <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
-<td style="width: 119px;">
-<p><a href="/articles/03_logical_units/04_LU_properties.md"><b>Properties Tab<b></a>
+<td width="170pxl">
+<p><a href="04_LU_properties.md"><strong>Properties Tab</strong></a></p>
 </td>
-<td style="width: 414px;">
+<td width="630pxl">
 <p>Contains the properties on an LU level.</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 1; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><strong><a href="/articles/03_logical_units/15_LU_schema_edit_reference_tab.md">References Tab</a></p>
+<p><strong><a href="15_LU_schema_edit_reference_tab.md">References Tab</a></strong></p>
 </td>
 <td style="width: 414px;">
 <p>Used to configure the Reference Tables that are accessible from this LU.</p>
@@ -77,16 +77,15 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </tr>
 <tr style="mso-yfti-irow: 2; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><a href="/articles/03_logical_units/14_edit%20enrichment%20order.md"><b>Enrichment Order Tab<b></p>
+<p><a href="14_edit%20enrichment%20order.md"><strong>Enrichment Order Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
-<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Eenrichment functions that are directly related to specific LU tables are included in the display. </p>
-
+<p>Defines the execution order of Enrichment functions using the up and down arrows. Only Eenrichment functions that are directly related to specific LU tables are included in the display.</p>
 </td>
 </tr>
 <tr style="mso-yfti-irow: 3; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><b>DB Objects Tab<b></p>
+<p><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md"><strong>DB Objects Tab</strong></a></p>
 </td>
 <td style="width: 414px;">
 <p>Displays the list of objects in the source database according to the DB Interface selected in the DB Connection field.</p>
@@ -104,7 +103,7 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 </tr>
 <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; mso-prop-change: 'Einav Velan' 20200412T1629;">
 <td style="width: 119px;">
-<p><strong><a href="/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline">Diagram Outline Tab</strong></a></p>
+<p><strong><a href="/articles/12_LU_navigation/01_Navigating_an_LU_schema.md#how-do-i-use-the-diagram-outline">Diagram Outline Tab</a></strong></p>
 </td>
 <td style="width: 414px;">
 <p>Displays an overview of the LU structure and enables searching for a subset of tables included in the schema.</p>
@@ -115,29 +114,30 @@ To make the structure of the table schema clearer, group or ungroup a list of ta
 
 
 
+
 ### Logical Unit (LU) Schema Window Toolbar
 By default, the LU Diagram window displays the following toolbar:
 
-![image](/articles/03_logical_units/images/1.3_LU_window_icons.png)
+![image](images/1.3_LU_window_icons.png)
 
 You can customize your window by adding or deleting toolbars to/from diagram windows:
 
 <table>
 <tbody>
 <tr>
-<td width="60">&nbsp; <img src="/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
+<td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_1.png" alt="" /></td>
 <td width="557">
 <p>Group SubGraph.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_2.png"/></td>
+<td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_2.png"/></td>
 <td width="557">
 <p>Ungroup SubGraph.</p>
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp;<img src="/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
+<td width="60">&nbsp;<img src="images/1.3_logical_unit_schema_window_table_icon_3.png" alt="" /></td>
 <td width="557">
 <p>Update Tables from Database.</p>
 <p>When clicked, the LU tables schema is refreshed from the source database. This action is needed if the LU tables schema has been updated in the source database.</p>
@@ -145,7 +145,7 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 </td>
 </tr>
 <tr>
-<td width="60">&nbsp; <img src="/articles/03_logical_units/images/1.3_logical_unit_schema_window_table_icon_4.png" alt="" </td>
+<td width="60">&nbsp; <img src="images/1.3_logical_unit_schema_window_table_icon_4.png" alt="" </td>
 <td width="557">
 <p>Refresh Items, refreshes items from an implementation into the LU schema.</p>
 </td>
@@ -154,10 +154,11 @@ You can customize your window by adding or deleting toolbars to/from diagram win
 </table>
 
 
+
 [Click for more information about Group and Ungroup SubGraph Objects.](/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md)
 
 [Click for more information about Fabric Studio Diagrams Toolbars.](/articles/04_fabric_studio/03_diagram_and_toolbars.md)
 
 [Click for more information about LU Refresh Options.](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md)
 
-[![Previous](/articles/images/Previous.png)](/articles/03_logical_units/02_create_a_logical_unit_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/04_LU_properties.md)
+[![Previous](/articles/images/Previous.png)](02_create_a_logical_unit_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_LU_properties.md)

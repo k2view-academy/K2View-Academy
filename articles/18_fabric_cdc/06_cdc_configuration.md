@@ -62,7 +62,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 </td>
 <td valign="top" width="400pxl">
 <p>Maximum number of seconds to acknowledge an idle transaction which has not yet been saved to Cassandra.</p>
-<p><a href="06_cdc_process_architecture.md#transaction_acknowledge_time_sec-parameter">Click for more infromation about this parameter.</a></p>    
+<p><a href="02_cdc_process_architecture.md#transaction_acknowledge_time_sec-parameter">Click for more infromation about this parameter.</a></p>    
 </td>
 </tr>
 <tr>
@@ -183,4 +183,4 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 
 
 
-[![Previous](/articles/images/Previous.png)](05_cdc_process_architecture.md)
+[![Previous](/articles/images/Previous.png)](05_cdc_consumers_implementation.md)

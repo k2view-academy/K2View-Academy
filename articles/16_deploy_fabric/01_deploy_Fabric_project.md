@@ -47,7 +47,7 @@ This command displays the currently **deployed project name**, as well as the va
 
 ### How Are Deployed Objects Reflected in the Fabric Server?
 You can check which objects are deployed in the Fabric server using the Fabric **LIST** command.
-- **list LU_TYPES/LUT**, provides a list of LU Types deployed to the Fabric server and can display an LU's storage type. This command can be invoked for all deployed LU Types or for a specific one.
+- **list LU_TYPES/LUT**, provides a list of LU Types deployed to the Fabric server and can display an LU's [storage type](/articles/32_LU_storage/01_LU_storage_overview.md). This command can be invoked for all deployed LU Types or for a specific one.
 - **list WS**, provides a list of all Web Service methods deployed to the Fabric server. 
 - **list ENVIRONMENTS/ENVS**, provides a list of environments deployed to the Fabric server.
 - **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server .
@@ -58,6 +58,7 @@ You can check which objects are deployed in the Fabric server using the Fabric *
 ~~~
     list lut; 
     list lu_types;
+    list lut storage=y;
     list ws;
     list ENVIRONMENTS; 
     list ENVS;
@@ -80,15 +81,15 @@ fabric>list lut storage=y;
 |CRM            |Default|
 ~~~
 
-
 ### How Are Deployed Objects Reflected in Cassandra?
+
 Project deployment is reflected in [**Cassandra**](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#cassandra-) as follows:
 - The deployment of a [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [References](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) and [Web Services](/articles/15_web_services/01_web_services_overview.md) creates new records in the [**k2_lut_info** table](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) under the **k2system** keyspace. A separate record is created for each LU and Reference table and for each deployed Web Service.
 - Each deployed LU creates a new Cassandra **keyspace** named **k2view_[LU Name]_[cluster id if exists]**.
 - The first deployed WS creates a new Cassandra **keyspace** named **k2view_k2_ws**.
 
 ### How Do I Get the Deployed Implementation?
-After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementor can download the code deployed in the environment and check it.
+After the project is deployed to the server, there might be a need to clarify which code has been deployed in a specific environment. For example, if there are many code changes in the project and you need to verify whether a specific change has already been deployed to the server. Fabric supports the creation of a zip file for a selected LU name, so that the implementer can download the code deployed in the environment and check it.
 
 ###### Syntax:
 <pre><code>

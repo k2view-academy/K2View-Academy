@@ -14,7 +14,7 @@ Please read:
 
 The following articles discuss Jobs flows and their execution environments:
 
-- [Jobs Lifecycle](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)
+- [Jobs Flow and Status](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#fabric-jobs-flow)
 
 - [How to Create a new User Job](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md)
 
@@ -22,17 +22,12 @@ The following articles discuss Jobs flows and their execution environments:
 
 - [How to Create a new Broadway Job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md)
 
-- [How to Create a new CDC Job](/articles/20_jobs_and_batch_services/06_create_a_new_CDC_job.md)
-
-
 
 These articles introduce Jobs management and configuration:
 
 - [Jobs' Commands](/articles/20_jobs_and_batch_services/07_jobs_commands.md)
 
 - [Jobs' Monitoring](/articles/20_jobs_and_batch_services/08_jobs_table_fields.md)
-
-- [Jobs' Configuration](/articles/20_jobs_and_batch_services/09_jobs_configuration.md)
 
 - [Jobs and Batches Affinity](/articles/20_jobs_and_batch_services/10_jobs_and_batches_affinity.md)
 
@@ -52,12 +47,6 @@ Batch process commands are fully detailed in the following articles:
 - [Migrate Process Commands](/articles/20_jobs_and_batch_services/13_migrate_commands.md)
 
 - [Batch Broadway Process Commands](/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md)
-
-- [Batch CDC Republish Commands](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)
-
-
-To understand Batch process flow: 
-- [Batch Flow](/articles/20_jobs_and_batch_services/17_batch_process_flow.md). 
 
 
 

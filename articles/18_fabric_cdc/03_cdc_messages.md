@@ -40,7 +40,7 @@ Fabric has the following CDC messages:
 </td>
 <td valign="top" width="600pxl">
 <p>Generated either when an LU is deployed to Fabric for the first time, or when executing the <strong>CDC_REPUBLISH_SCHEMA</strong> Fabric command. These messages hold the LU Schema's name and information about its CDC tables.&nbsp;</p>
-<p>See the example in&nbsp;<a href="02_cdc_messages.md#appendix-a-cdc-schema-message---example">Appendix A</a>.</p>
+<p>See the example in&nbsp;<a href="03_cdc_messages.md#appendix-a-cdc-schema-message---example">Appendix A</a>.</p>
 </td>
 </tr>
 <tr>
@@ -54,7 +54,7 @@ Fabric has the following CDC messages:
 <li>An <a href="/articles/02_fabric_architecture/04_fabric_commands.md#drop-lu-command">LU drop command.&nbsp;</a></li>
 </ul>
 <p>These messages hold the LU Schema's name and updates on the affected CDC LU tables.</p>
-<p>See the examples in&nbsp;<a href="02_cdc_messages.md#appendix-b-cdc-schema-update-message---example">Appendix B</a>.</p>
+<p>See the examples in&nbsp;<a href="03_cdc_messages.md#appendix-b-cdc-schema-update-message---example">Appendix B</a>.</p>
 </td>
 </tr>
 <tr>
@@ -67,7 +67,7 @@ Fabric has the following CDC messages:
 <li>Delete LUI command.</li>
 <li>Run <span class="md-pair-s "><strong><span class="md-plain">CDC_REPUBLISH_INSTANCE</span></strong></span><span class="md-plain md-expand"> Fabric command to republish the CDC data of a given LUI. The CDC data of the LU tables of the republished LUI must be recreated by the CDC consumer.</span></li>
 </ul>
-<p>See the example in <a href="02_cdc_messages.md#appendix-c-cdc-delete-tables-message---example">Appendix C</a>.</p>
+<p>See the example in <a href="03_cdc_messages.md#appendix-c-cdc-delete-tables-message---example">Appendix C</a>.</p>
 </td>
 </tr>
 <tr>
@@ -81,11 +81,12 @@ Fabric has the following CDC messages:
 <li>Run the <strong>CDC_REPUBLISH_INSTANCE</strong> Fabric command to republish the CDC data of a given LUI.</li>
 </ul>
 <p>These messages hold a list of PK columns in LU tables and relevant changes in CDC columns.</p>
-<p>See the examples in <a href="02_cdc_messages.md#appendix-d-cdc-table-change-info-message---example">Appendix D</a>.</p>
+<p>See the examples in <a href="03_cdc_messages.md#appendix-d-cdc-table-change-info-message---example">Appendix D</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 Note that you can find samples of CDC messages under $K2_HOME/fabric/samples/cdc-messages directory of Fabric server.
@@ -479,4 +480,4 @@ To view the list of Fabric APIs, click http://[Fabric IP address]:3213/static/do
 
  
 
-[![Previous](/articles/images/Previous.png)](01_change_data_capture_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_cdc_consumers_implementation.md)
+[![Previous](/articles/images/Previous.png)](02_cdc_process_architecture.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_cdc_publication_flow.md)
