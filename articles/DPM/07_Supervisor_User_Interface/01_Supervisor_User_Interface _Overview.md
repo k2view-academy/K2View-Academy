@@ -21,5 +21,5 @@ The Supervisor Request List and subsequent Request Details and Task Details scre
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/07_Supervisor_User_Interface/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/07_Supervisor_User_Interface/02_Supervisor_User_Interface _Config.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/07_Supervisor_User_Interface/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/07_Supervisor_User_Interface/02_Supervisor_User_Interface_Config.md)
 
