@@ -22,7 +22,7 @@ The ability to break a BE up into several LUs enables maximum flexibility and av
 
 ![Multiple BEs for one LU](images/using_lu_in_multiple_BEs.png) 
 
-Users can request to copy a selected list of Customer IDs. The TDM task also copies the related ordering, network elements and device data of the selected customers.
+Users can request to copy a list of selected Customer IDs. The TDM task also copies the related ordering, network elements and device data of the selected customers.
 Alternatively, users can request to copy a list of selected Order IDs whereby the TDM task also copies the related network elements and device data of the selected orders.
 
 The BEs are defined via the TDM GUI and are saved in the [TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md).
