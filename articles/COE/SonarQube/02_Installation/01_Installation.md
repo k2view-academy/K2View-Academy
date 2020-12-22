@@ -26,7 +26,7 @@ To install this plugin in your IntelliJ IDE:
 	wrapper.java.command=* *C:/Program Files/ojdkbuild/jdk-11.0.8/bin/java*
 	Java path might be installed in different location, make sure to use the right path.
 
-	Note: You must download and config java 11 to execute sonarQube.
+	*Note: You must download and config java 11 to execute SonarQube.*
 
    
 3. Delete all plugins (jars) under *C:\sonarQube\sonarqube-8.5.1.38104\lib\extensions*
@@ -58,8 +58,8 @@ To install this plugin in your IntelliJ IDE:
 	 ![image](/articles/COE/SonarQube/images/13_default.png)
  
 	**Note:**
-	For any configuration changes go to conf folder and sonar.properties file.
-	Here you can configure database, LDAP, webserver, SSO authentication, logging, etc.
+	*For any configuration changes go to conf folder and sonar.properties file.
+	Here you can configure database, LDAP, webserver, SSO authentication, logging, etc.*
 	
 	For port changes, under web-server section, you can add sonar.web.port=9001.
 
