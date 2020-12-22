@@ -128,7 +128,7 @@ The set of icons next to the Flow name are Activities at Flow level:
 </td>
 </tr>
 <tr>
-<td width="100"><img src="/images/Figure_7a_edit_flow_icon.png)alt=""/></td>
+<td width="100"><img src="/articles/DPM/images/Figure_7a_edit_flow_icon.png)alt=""/></td>
 <td width="800">
 <p>Edit this Flow: Edit Flow Name and Description. The Flow name and the Flow description can be updated as long as the Flow is not marked as <em>Completed</em>.</p>
 </td>
@@ -147,7 +147,7 @@ The set of icons next to the Flow name are Activities at Flow level:
 </td>
 </tr>
 <tr>
-<td width="100"> ![image](images/Figure_7d_save_flow_as.png)</td>
+<td width="100"> ![image](/articles/DPM/images/Figure_7d_save_flow_as.png)</td>
 <td width="800">
 <p>Save Flow As: Use the &ldquo;save as&rdquo; button to create a new Flow in <em>Draft</em> status, that initially has the same details of the original Flow. The new Flow that is created as a result is independent from the source Flow.</p>
 </td>
