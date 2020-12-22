@@ -29,14 +29,15 @@
 		• Use IifProperties.getInstance() to get the IIDFinder configuration setting of the cluster.
 
 **4. Check Source Available attribute defined in staging xml file**  
-	-*This rule checks the "sourceAvailable" attribute defined staging xml per lu:*
+	-*This rule checks the "sourceAvailable" attribute defined staging xml per lu:*  
 
-	Issues are created depending on the return value of the XPath expression. If the XPath expression returns:
-			•The latest iidFinder implementation is tested with sourceAvailable set to "false",
-			therefor the recommendation is to use this setting
-			•If this property is not set in your project, the default is true. If you are using version
-			older than 2019, special scenarios will not be supported
-			LPK & Cross instances)
+ -*Issues are created depending on the return value of the XPath expression. If the XPath expression returns:*  
+ 				
+		•The latest iidFinder implementation is tested with sourceAvailable set to "false",
+		therefor the recommendation is to use this setting  
+		•If this property is not set in your project, the default is true. If you are using version
+		older than 2019, special scenarios will not be supported
+		LPK & Cross instances)
 
 **5. Check decision function level for enabled IIDFinder LUs**  
 
