@@ -48,7 +48,7 @@ e.g. For port changes, under web-server section, you can add sonar.web.port=9001
    https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
 2. In the window, register the sonar-scanner path in environment variable.
 
-  ![image](images/02_installation.png)
+  ![image](../images/02_installation.png)
 
 3. Go to
 
