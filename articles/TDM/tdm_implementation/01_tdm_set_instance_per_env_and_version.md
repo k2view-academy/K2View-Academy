@@ -2,11 +2,11 @@
 
 ## Overview
 
-The TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Tasks can also be created to extract and save different versions of the data from the selected entities.
+The TDM enables users to create a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task) and select the source environment from which the entity is extracted. Tasks can also be created to extract and save different versions of the data in the selected entities.
 
 **Examples**
 
-- Customer 1 exists in both the Production and UAT environments where different data is saved in each environment. The TDM must create a separate instances of Customer 1, one for Production and another for UAT.
+- Customer 1 exists in both the Production and UAT environments where different data is saved in each environment. The TDM must create separate instances of Customer 1, one for Production and another for UAT.
 
 - [Data Flux task](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux): A task is created to save a version of Customer 1 in a testing environment and to run the task every couple of hours to backup the data. Each version of Customer 1 must create a separate instance.
 
