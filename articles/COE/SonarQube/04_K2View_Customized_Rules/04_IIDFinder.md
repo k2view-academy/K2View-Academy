@@ -2,8 +2,7 @@
 
 ## 4.4	IIDFinder
 
-**1. Check Root table configuration**
-
+**1. Check Root table configuration**  
    -*Below are the correct settings:*
 	
 		• Truncate = false  
@@ -22,14 +21,13 @@
  			 "validate if we get all columns in the message then store=false "
 
 **3. Check IIDF Kafka Details**  
-
    -*This rule checks below recommendations:* 
 
 		• Do not store the IIDF Kafka details in translation table.
 		• Use IifProperties.getInstance() to get the IIDFinder configuration setting of the cluster.
 
 **4. Check Source Available attribute defined in staging xml file**  
-	-*This rule checks the "sourceAvailable" attribute defined staging xml per lu:*  
+ -*This rule checks the "sourceAvailable" attribute defined staging xml per lu:*  
 
  -*Issues are created depending on the return value of the XPath expression. If the XPath expression returns:*  
  				
@@ -40,7 +38,6 @@
 		LPK & Cross instances)
 
 **5. Check decision function level for enabled IIDFinder LUs**  
-
    -*This rule checks if LU has IIDFinder enabled, then decision function fnIIDFCheckExtractFromSourceInd should be set on Schema level*
 
 
