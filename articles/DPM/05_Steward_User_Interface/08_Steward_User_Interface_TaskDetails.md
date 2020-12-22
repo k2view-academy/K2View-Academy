@@ -87,7 +87,7 @@ The actions that can be done in this screen:
 
 - Add a Note - The Steward and Case Owner can both add notes to a Task.  To add a note, type the text in the textbox next to the button, and then click the “Add Note” to submit it. The notes appear at the textbox just below the “Add Note” line, in chronological order.
 
-- Get or Release a Task – use the    ![image](images/Figure_45_a_release_get_icon.png) buttons to either “Get” a Task or “Release a Task. Getting a Task is enabled only if this Task is not yet assigned to another user. Releasing a Task is only enabled if the Task is assigned to the user currently viewing the screen. Both buttons are disabled if the Task is not expecting to be executed (for example, the Task was already completed, waived or not yet ready for execution since the Flow had not yet reached the point where it should be executed).
+- Get or Release a Task – use the    ![image](/articles/DPM/images/Figure_45_a_release_get_icon.png) buttons to either “Get” a Task or “Release a Task. Getting a Task is enabled only if this Task is not yet assigned to another user. Releasing a Task is only enabled if the Task is assigned to the user currently viewing the screen. Both buttons are disabled if the Task is not expecting to be executed (for example, the Task was already completed, waived or not yet ready for execution since the Flow had not yet reached the point where it should be executed).
 
 - Mark a Task as Complete: if the Task is assigned to this user, then this user can mark it as Complete by using the  ![image](/articles/DPM/images/Figure_45_b_mark_as_complete_icon.png)  button. Naturally a Task should be marked as complete after the user had performed the action that is expected in this Task. 
 
