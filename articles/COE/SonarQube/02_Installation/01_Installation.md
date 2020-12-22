@@ -2,7 +2,7 @@
 
 
 
-###### <u>2.1 SonarLint Installation</u>
+## <u>2.1 SonarLint Installation</u>
 
 To install this plugin in your IntelliJ IDE:
 
@@ -14,7 +14,7 @@ To install this plugin in your IntelliJ IDE:
 
    
 
-###### <u>2.2	SonarQube Installation</u>
+## <u>2.2	SonarQube Installation</u>
 
 1.  Download and install SonarQube-8.5 or higher version.
    https://www.sonarqube.org/downloads/
@@ -42,7 +42,7 @@ e.g. For port changes, under web-server section, you can add sonar.web.port=9001
 
 
 
-###### <u>2.3	 SonarScanner Installation</u>
+## <u>2.3	 SonarScanner Installation</u>
 
 1. Download and Install sonarScanner 
    https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/
