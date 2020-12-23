@@ -17,9 +17,10 @@ To learn more, please refer to the [Broadway Tutorial and Flow Examples](/articl
 
 Broadway Tutorials flows can be opened in the Broadway Flow window.
 
-1. Download the latest [Demo Project](/articles/demo_project) export file.
-2. Create a new Project named BroadwayTutorial (or something similar)
+1. Download the latest [Demo Project](/articles/demo_project) export file.  
+2. Create a new Project named BroadwayTutorial (or something similar). 
 3. Right click the root of the newly created Project tree, select Import All, and navigate to the downloaded Demo Project export file.
+   - Follow the [Project and DB Setup instructions](/articles/demo_project/README.md).
 4. Go to the **Project tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
 5. Populate the **Flow Name** and click **OK** to open an empty flow.
 6. In the flow window: select **Actions > Examples** > **a-broadway-tutorial** to open the **Broadway Tutorial flow**.
