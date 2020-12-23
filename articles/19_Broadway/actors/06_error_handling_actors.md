@@ -8,7 +8,7 @@ For basic Broadway error handling mechanism, refer to [Error Handling article](/
 
 ### How Do I Use the ErrorHandler Actor?
 
-The **ErrorHanlder** Actor can be used as an Error Handler to enable handling various exceptions. You can configure it to suppress one kind of exceptions and not to suppress other types or to invoke an Inner flow when an exception is thrown. When the error is suppressed, the error handler returns **true** and the flow continues. 
+The **ErrorHandler** Actor can be used as an Error Handler to enable handling various exceptions. You can configure it to suppress one kind of exceptions and not to suppress other types or to invoke an Inner flow when an exception is thrown. When the error is suppressed, the error handler returns **true** and the flow continues. 
 
 The following example shows how to use an **ErrorHanlder** Actor as an Error Handler in the **LU Table** Stage. In the below configuration only the **Unique Constraint** SQL errors are suppressed. Any other error will cause the flow to fail. 
 
