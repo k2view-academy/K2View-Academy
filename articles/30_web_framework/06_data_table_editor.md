@@ -29,7 +29,7 @@ Information in the Data Editor is displayed in a table and can be edited, added,
 </table> 
 
 
-To fetch data, select the [**sync-mode**](), enter the **IID** and click **Fetch**.
+To fetch data, select the [**sync-mode**](/articles/14_sync_LU_instance/02_sync_modes.md), enter the **IID** and click **Fetch**.
 
 
 ### Table Data
