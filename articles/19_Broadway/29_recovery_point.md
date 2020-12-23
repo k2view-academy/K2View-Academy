@@ -4,25 +4,27 @@
 
 Broadway flows and jobs can serve complex systems with hundreds of processes for data movement across various systems. For example, populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow crashes before it reaches the end, lost data is recovered to avoid re-running a flow from the beginning.  
 
-Setting a **Recovery Point** in a Broadway flow enables marking the Stage where the flow data is serialized and saved in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). If a flow fails, for example, due to outage, using the serialized data, the flow can be re-run and start from the last saved recovery point rather than from the beginning. Once the flow is completed, the recovered information is deleted from Cassandra.
+Setting a **Recovery Point** in a Broadway flow enables marking the Stage where the flow's data is serialized and saved in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). If a flow fails, for example, due to outage, using the serialized data, the flow can be re-run and start from the last saved recovery point rather than from the beginning. Once the flow is completed, the recovered information is deleted from Cassandra.
 
-The recovery point should be used to save the persistent data in the flow. For example, in a complex flow after completing a sub-process and before starting another. Note that setting a recovery point on a DB result set, on a [transactional Stage](23_transactions.md) or inside an [iteration](21_iterations.md) is not supported. 
+The recovery point should be used to save the persistent data in the flow. For example, in a complex flow after completing a sub-process and before starting another. 
+
+Note that setting a recovery point on a DB result set, on a [transactional Stage](23_transactions.md) or inside an [iteration](21_iterations.md) is not supported. 
 
 ### How Do I Set a Recovery Point?
 
-Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick divider line. Do the same in additional Stages if more than one Recovery point should be set in the same flow. 
+Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick divider line. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
 
 **Example**
 
 The following flow prepares the data, creates a table, selects data from a DB and then inserts the data into the created table.
 
-Set the Recovery Point in the **Create Table** Stage. If the flow crashes after this Stage, it can be re-run and will start from the **Query** Stage. 
+Set the recovery point at the **Create Table** Stage. If the flow crashes after this Stage, it can be re-run and will start from the **Query** Stage. 
 
 ![image](images/99_29_recovery_01.PNG)
 
 
 
-### How Do I Run the Flow with Recovery Point?
+### How Do I Run the Flow with a Recovery Point?
 
 The flow can be executed in one of the following ways:
 
@@ -45,7 +47,7 @@ The flow can be executed in one of the following ways:
   
     
   
-    Note that the **RecoveryInfo** Actor can be used to receive recovered information. To do so, place the Actor in a flow after a Recovery Point.
+ Note that the **RecoveryInfo** Actor can be used to receive recovered information. To do so, place the Actor in a flow after a Recovery Point.
 
 
 
