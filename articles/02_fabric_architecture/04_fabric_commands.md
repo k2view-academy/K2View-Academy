@@ -6,7 +6,7 @@ Note that Fabric commands are **not** case sensitive. For example, a Get, get, o
 
 ## Fabric Help
 
-After [logging in to Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type help/Help/HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
+After [logging into Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type help/Help/HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
 
 For example: 
 
@@ -48,7 +48,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p> Detaches the <a href="/articles/01_fabric_ov Dw/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
+<p> Detach the <a href="/articles/01_fabric_ov Dw/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
 </td>
 </tr>
 <tr>
