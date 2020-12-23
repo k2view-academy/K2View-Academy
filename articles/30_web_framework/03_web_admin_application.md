@@ -17,9 +17,10 @@ For example, the following image shows that the user navigated to **Admin > Secu
 
 * **Objects**, display various Project level objects such as:
   
-  * Interfaces, displayed per the deployed [environment](/articles/25_environments/01_environments_overview.md).
+  * Interfaces, displayed with their connection status.
   * List of [CommonDB reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md). To initiate a sync of the reference tables, select either the LU or a specific table.
-  * List of various implementation objects and their details: Project's LUs, Web Services, Broadway flows, etc.
+  * List of the implementation LU objects with the option to download thier implmentation's zip.
+  * List of [Environments](/articles/25_environments/01_environments_overview.md) and thier active status, as well as the otion to switch the active environment.
   
 * **Security**, manage a user's access control and restrictions via the [Fabric credentials mechanism](/articles/17_fabric_credentials/01_fabric_credentials_overview.md):
   * Roles, view existing roles and create new roles.
