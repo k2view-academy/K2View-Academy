@@ -34,16 +34,13 @@ To fetch data, select the [**sync-mode**](/articles/14_sync_LU_instance/02_sync_
 
 ### Table Data
 
-A table displays data on the population method, query and customized functions and can be filtered, sorted and navigated by clicking the XXX icons at the top of each column:  
+A table displays data which can be filtered, sorted and navigated. Click the *** icon here *** to display the data's predecessor, decendants and its connections in the hierarchy.
 
--  To filter data, click XXX to open the XXX and enter the filtering criteria.
--  To go to a linked table and edit its hierarchy in the schema, click XXX, click the table and then click xxxx xxxx. 
- 
 In the following Invoice table, a customer LUI has several subscribers each having several invoices. The data has been filtered to display Subscriber #13 and its invoices:   
 
   <img src="images/30_dataeditor_05a.png" alt="Table Data Editor" /> 
   
--   Click a table to display its data and its predecessor in a lower hierarchy.  
+
 -   To remove the filter, click IID X.
 
 Note that a table displays the first 1000 entries.
@@ -54,8 +51,9 @@ Note that a table displays the first 1000 entries.
 
 The Editing option is permissions based.
 1.  To edit the table's content, click **Edit** to switch to Edit mode:  
+    -  New rows are automatically added.
     -  Click Delete to remove a table entry.
-    -  Click XXXX to add a row above.
+    
 
     Once an entry is added, edited or marked for deletion it is highlighted: 
 
@@ -69,7 +67,6 @@ The Editing option is permissions based.
 
  <img src="images/30_dataeditor_06.png" alt="actions colors" />
 
-Note that once Update is clicked edit actions cannot deleted or reverted.
 
 
 
