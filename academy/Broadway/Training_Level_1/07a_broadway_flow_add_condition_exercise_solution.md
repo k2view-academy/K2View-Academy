@@ -18,8 +18,8 @@
  A.The output value of <strong>GreaterThanEquals</strong> Actor is <strong>false</strong>.
  B.<strong>Stage 7</strong> has been executed since the condition returned <strong>false</strong>.
  C.The following messsage has been given by Stage 7's Logger Actor: 
-     <strong>ERROR: Error- Error- there are not enough records in the list.</strong> 
-     Stage 6 and 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
+   <strong>ERROR: Error- Error- there are not enough records in the list.</strong> 
+   Stage 6 and 7 Logger Actors have set different message levels since each has a different value in the level input parameter.
  </code></pre>
  </ul>
 
