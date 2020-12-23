@@ -92,7 +92,8 @@ In the Step, you check the number of records: check if the number of records >= 
    <pre><code>
    A. What is the output value of <strong>GreaterThanEquals</strong> Actor? Is it different now? Why? 
    B. Which Stage has been executed - <strong>Stage 6</strong> or <strong>Stage 7</strong>? Why?
-   C. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? What is the level of the message? Is it different now? Why? 
+   C. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? 
+   What is the level of the message? Is it different now? Why? 
    </code></pre>
    </ul>
 
