@@ -1,13 +1,12 @@
 # Data Editor Schema Viewer
-
-The Schema Viewer opens after a specific LU or common unit is selected in the Data Editor [Catalog](04_data_editor_overview.md#catalog-screen) screen. It 
-displays a schema's structure and enables fetching its data. Depending on the selected unit type, either of the following are displayed:
+The Schema Viewer opens after a specific LU or common is selected in the Data Editor [Catalog](04_data_editor_overview.md#catalog-screen) screen. It 
+displays a schema's structure and enables fetching its data. Depending on your selection, either of the following is displayed:
 
 ### LU Tables
 
 This screen enables viewing the LU schema structure and fetching an LUI of a specific IID. It has two main areas:
 - Top Action Bar.
-- Main Schema View areas.
+- Schema View.
 
 #### Schema View
 
@@ -16,7 +15,7 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 * Each table has:
   * Input, its predecessor in the hierarchy and their linkage field/s.
   * Output (optional), the linkage field/s to its linked tables. 
-* Each table has a clickable link to the table Data Viewer screen.
+* Each table links to the table Data Viewer screen.
 * The schema name appears in the screen title as well as in the breadcrumbs in the top Data Editor Catalog bar.  
 
 <img src="images/30_dataeditor_02.png" alt="Data Editor Catalog" />
@@ -36,7 +35,7 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 
 * **IID** text field, where the LU IID are populated.
 
-* **Set IID** that activates LUI data retrieval. Once an LUI is retrieved its value is shown on the top, in an input chip form, and is also as a breadcrumbs when drilling down the tree. 
+* **Set IID** that activates LUI data retrieval. Once an LUI is retrieved its value is shown on the top, in an input chip form, and is also displayed as breadcrumbs when drilling down the tree. 
   
     <img src="images/30_dataeditor_chip_icon.PNG" alt="chip" />
   
