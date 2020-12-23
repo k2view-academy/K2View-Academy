@@ -11,7 +11,7 @@ Information in the Data Editor is displayed in a table and can be edited, added,
 <tbody>
 <tr style="height: 17px;">
 <td style="width: 12.4762%; height: 17px;">Fetch</td>
-<td style="width: 87.5238%; height: 17px;">Click to fetch data for the IID. This option is also available for inner screens that are not the LU's root table.</td>
+<td style="width: 87.5238%; height: 17px;">Click to fetch data for the IID.</td>
 </tr>
 <tr style="height: 17px;">
 <td style="width: 12.4762%; height: 17px;">Info</td>
@@ -29,10 +29,7 @@ Information in the Data Editor is displayed in a table and can be edited, added,
 </table> 
 
 
-To fetch data, select the **sync-mode**, enter the **IID** and click **Fetch**.
-
-For information about synced information, click Schema Tables. 
-
+To fetch data, select the [**sync-mode**](), enter the **IID** and click **Fetch**.
 
 
 ### Table Data
