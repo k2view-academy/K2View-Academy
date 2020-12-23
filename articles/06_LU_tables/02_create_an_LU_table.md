@@ -87,19 +87,6 @@ The **LU Table Schema** is defined in the **Columns Tab** in the **Table** windo
 </tr>
 <tr>
 <td width="122">
-<p><h4><strong>Column Type</strong></p>
-</td>
-<td width="502">
-<p>Two Column Types are supported:</p>
-<ul>
-<li>Regular, (default) whereby the column is populated using the table&rsquo;s mapping.</li>
-<li>Computed field, whereby the column is updated using an Enrichment function.</li>
-</ul>
-<p>The difference between the Column Types is the timing of their execution. When a column is defined as a Computed Column, the execution of the function is performed <strong>after</strong> all tables in the Logical Unit have been populated.</p>
-</td>
-</tr>
-<tr>
-<td width="122">
 <p><strong>Comment</strong></p>
 </td>
 <td width="502">
