@@ -10,7 +10,7 @@ After [logging in to Fabric](/articles/02_fabric_architecture/03_fabric_basics_g
 
 For example: 
 
-![help example](/articles/02_fabric_architecture/images/04_fabric_commands_help_example.png)
+![help example](images/04_fabric_commands_help_example.png)
 
 ## Fabric Commands - Main Groups
 
@@ -485,7 +485,7 @@ Note that MIGRATE commands are used as aliases to BATCH commands.
 
 #### PS and Kill Commands
 
-- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks, running on node2. The **PS** command displays different types of tasks like Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or User Logic.  When specifity a task/thread as parameter it shows the its stack trace.
+- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks, running on node2. The **PS** command displays different types of tasks like Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or User Logic.  When specifity a task/thread as parameter it shows its stack trace.
 
 - The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
 
@@ -506,7 +506,7 @@ Click for more information about [Reference Tables](/articles/22_reference(commo
 
 ### Fabric Transactions
 
-Fabric enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a ***\*BEGIN\**** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
+Fabric enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
 
 Fabric has a set of commands that support transactions:
 
