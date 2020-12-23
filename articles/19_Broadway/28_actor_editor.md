@@ -25,9 +25,8 @@ The Actor Editor can be used to create a new inherited Actor or modify an existi
 **To modify** an Actor, do the following:
 
 1. Go to the **Broadway** folder in the project tree and double click the ***.actor** file to open the Actor Editor.
-
 2. Modify the required settings, for example set a value of an input argument.
-3. Debug the Actor by running it from the Main menu toolbar. If the Actor receives input parameters, they can be set using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md). 
+3. Debug the Actor by running it from the Main menu toolbar. The Actor's input parameters can be set using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md). 
 4. Save the Actor. The change impacts every flow where this Actor is used.  
 
 #### Example of New Actor Creation
