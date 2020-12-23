@@ -30,7 +30,12 @@ The flow can be executed in one of the following ways:
   * When running a Broadway command, it is mandatory to provide a recovery ID in order to enable the Broadway recovery mechanism. Then if the flow fails, re-run the same flow with the same recovery ID.
 * By running a [Broadway job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md) using the STARTJOB command. 
   * When running a Broadway job, there is no need to provide a recovery ID since the recovery mechanism is enabled automatically for the jobs.
-* From the Fabric Studio by clicking **Actions** > **Run from Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
+* From the Fabric Studio simulating the flow crash by stopping the Fabric. Do the following:
+  * Set a breakpoint in the flow at a Stage after the Recovery Point.
+  * Click **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
+  * When the flow reaches the breakpoint, click **Stop Local Fabric** using the [Fabric Studio debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
+  * After the Fabric stops, start the Fabric from the debug panel.
+  * Re-run the flow clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
 
 
 
