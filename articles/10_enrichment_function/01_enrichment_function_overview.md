@@ -12,8 +12,6 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 
 - One or more Enrichment function can be attached to an LU table using the [Enrichment Functions](/articles/06_LU_tables/04_table_properties.md#enrichment-functions) field in the LU table’s Properties tab.
 
-- An LU table’s columns can be updated by an Enrichment function if the LU table column type is set to [Computed Field](/articles/06_LU_tables/02_create_an_LU_table.md#column-type).
-
 - Unlike a [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), which is executed on each record of an LU table, an Enrichment function is executed only once per LU table and [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui). 
 
   For example, Customer 123 has five Subscribers and each Subscriber has 10 INVOICE records. The Root function that populates the INVOICE LU table runs five times for Customer   123. The Enrichment function on the INVOICE LU table runs only once per instance, after all populations runs for all tables in the LU schema.
