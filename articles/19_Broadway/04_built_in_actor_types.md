@@ -139,10 +139,11 @@ The following table presents a list of Actors categories with examples of each c
 <td style="vertical-align: top;" width="210">
 <h4><strong>masking</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email.</td>
+<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email. It also includes the Actors that can define a sequence.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong>MaskingSSN</strong> Actor,&nbsp;masks the original SSN number with a valid fake SSN.</p>
 <p><strong>MaskingCreditCard</strong> Actor,&nbsp;generates a fake but valid credit card number similar to the original card's type.</p>
+<p><strong>MaskingSequence</strong> Actor, &nbsp;implements a unique sequence number.</p>
 </td>
 </tr>
 <tr>
@@ -243,6 +244,7 @@ The following table presents a list of Actors categories with examples of each c
 </tr>
 </tbody>
 </table>
+
 
 
 

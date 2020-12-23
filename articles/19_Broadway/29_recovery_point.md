@@ -35,7 +35,7 @@ The flow can be executed in one of the following ways:
   * Click **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
   * When the flow reaches the breakpoint, click **Stop Local Fabric** using the [Fabric Studio debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
   * After the Fabric stops, start the Fabric from the debug panel.
-  * Re-run the flow clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
+  * Close and reopen the flow and then run it again clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
 
 
 
