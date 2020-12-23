@@ -20,6 +20,8 @@ To configure these databases, do the following:
     - Edit the **Database** field, set the location of the *.db file to the local directory.
     - Test the connection and save the changes.
     - Close the DB interface.
+    
+    [Click for more information about DB Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 
 Note, make sure to add the full path of the downloaded databases to each database in the Fabric Studio Interfaces screens.
 
