@@ -1,7 +1,7 @@
 # Enrichment Functions - Code Examples
-### Simple Example of an Enrichment Function that Populates a Computed Field
+### Simple Example of an Enrichment Function that Populates a Table's Field
 
-Use an Enrichment function to validate the retrieved data and update the column with the type = [Computed Field in an LU table](/articles/06_LU_tables/02_create_an_LU_table.md#column-type). For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
+Use an Enrichment function to validate the retrieved data and update a table. For example, to calculate the number of months a case is not Closed and populate this information in the CASES table for each case, whereby for all Closed cases - set the number of month to 0.
 
 1. Create an **Enrichment function**.
  <pre><code>
@@ -14,7 +14,7 @@ String sqlClosed = "UPDATE CASES SET CASE_OPEN_MONTHS = 0 WHERE STATUS = ?";
 ludb().execute(sqlClosed,caseStatus);
 </code></pre>
 
-2. Add a new column to the **CASES table** with **Column Type** = **Computed Field** and attach the **Enrichment function** to the **CASES table** via the Table Properties tab. 
+2. Add a new column to the **CASES table** and attach the **Enrichment function** to the **CASES table** via the Table Properties tab. 
 
 [Click to display an example of the **fnMonthsOpenCase** Enrichment Function in the Demo project.](/articles/demo_project)
 
