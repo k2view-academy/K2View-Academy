@@ -34,23 +34,15 @@ The Actor Editor can be used to create a new inherited Actor or modify an existi
 Let's create a new **CheckMaxVal** Actor that inherits from a **JavaScript** Actor, receives two integers and returns their maximum value. Do the following:
 
 1.  Right click the **Broadway** folder in the Project tree and click **New Actor**.
-
 2. Populate the **CheckMaxVal** Actor's name and click **OK**.
-
 3. Define the Actor as follows:
-
    * Set Badge to **Max**.
-
    * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the parent using the **Add Actors** window.
-
    * Populate the **script** input argument with the regex: **a > b ? a : b**.
-
    * Click **Add Input** to add two input arguments and update their names to **a** and **b**.
-
      ![image](images/99_10_editor_1.PNG)
 
 4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
-
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
 [![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](29_recovery_point.md)
