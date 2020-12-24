@@ -8,7 +8,7 @@ Parameters can be set when:
 - Calling Graphit from a Web Service whereby parameters are parsed as a mapped object. 
 
 ## Graphit Window - How Do I Configure Graphit Parameters?
-Click **Parameters** in the **Graphit window** to open the **Graphit Parameters** dialog box. 
+Click on the **://** icon in the **Graphit window** to open the **Graphit Parameters** dialog box. 
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/38_graphit_with_parameters.PNG)
 
