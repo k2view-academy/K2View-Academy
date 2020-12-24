@@ -34,25 +34,22 @@ To fetch data, select the [**sync-mode**](/articles/14_sync_LU_instance/02_sync_
 
 ### Table Data
 
-A table displays data which can be filtered, sorted and navigated. Click the *** icon here *** to display the data's predecessor, decendants and its connections in the hierarchy.
+A table displays data which can be filtered, sorted and navigated. Click the <img src="images/elypsis.png" alt="..." /> to display the data's predecessor, descendants and its connections in the hierarchy.
 
 In the following Invoice table, a customer LUI has several subscribers each having several invoices. The data has been filtered to display Subscriber #13 and its invoices:   
 
   <img src="images/30_dataeditor_05a.png" alt="Table Data Editor" /> 
-  
-
--   To remove the filter, click IID X.
 
 Note that a table displays the first 1000 entries.
-  
-    
+
+​    
 
 #### Table Edit Mode 
 
 The Editing option is permissions based.
 1.  To edit the table's content, click **Edit** to switch to Edit mode:  
-    -  New rows are automatically added.
-    -  Click Delete to remove a table entry.
+    -  New rows are automatically added at the top of the table.
+    -  Click <img src="images/trash.png" alt="delete" /> to remove a table entry.
     
 
     Once an entry is added, edited or marked for deletion it is highlighted: 
@@ -61,8 +58,8 @@ The Editing option is permissions based.
     -  Edited = orange.
     -  Deleted = red. 
 
-2.  To undo your changes, click **Revert** or **Delete**.
-3.  To implement your changes, click **Update** in the top Actions bar.
+2.  To undo your changes, click <img src="images/revert.png" alt="revert" />.
+3.  To apply the changes, click **Update** in the top Actions bar.
 
 
  <img src="images/30_dataeditor_06.png" alt="actions colors" />
