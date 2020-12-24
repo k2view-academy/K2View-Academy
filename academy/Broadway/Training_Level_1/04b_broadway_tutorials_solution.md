@@ -22,14 +22,19 @@ since this Stage is on the same level as the <strong>else</strong> of the condit
 See <a href="/articles/19_Broadway/02a_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
 </code></pre>
 </ul>
+<ul> 
+<pre><code> 
+<strong>Step 2.4</strong>
+A. Once the debug option is set to <strong>Live Debug</strong>, every change in the flow data (such as change of a <strong>Const</strong> Actor's value) causes the flow to be run automatically.
+</code></pre> 
+</ul>
 
-
-
- <ul>
+<ul>
 <pre><code>
 <strong>Step 3.2</strong>
 A. The <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
+
 
 <ul>
  <pre><code>

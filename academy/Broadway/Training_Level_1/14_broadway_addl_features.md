@@ -28,7 +28,7 @@ To learn about the described above functionality in more details, please refer t
 
 * [Actor Inheritance Mechanism](/articles/19_Broadway/06_export_actor.md).
 * [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md).
-* [Error Handling](/articles/19_Broadway/24_error_handling.md).
+* [Error Handling](/articles/19_Broadway/24_error_handling.md) and [Error Handling Actors](/articles/19_Broadway/actors/06_error_handling_actors.md).
 * [Transactions](/articles/19_Broadway/23_transactions.md).
 
 

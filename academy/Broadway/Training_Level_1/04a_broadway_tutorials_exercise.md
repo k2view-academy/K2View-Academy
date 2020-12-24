@@ -7,7 +7,7 @@
 1. Open the  **a-broadway-tutorial**  flow.
 
 #### Step 2 - Run and Debug the Broadway Tutorial Flow
-1. Click the Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> to set it to Debug OFF. Click <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to run the flow.
+1. Click <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and select the option to set it to Debug OFF. Click <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to run the flow.
 
   <ul>
   <pre><code>A. What is the result of the flow?</code></pre>
@@ -15,21 +15,30 @@
 
 
 
-2. Add a  **Breakpoint** to **for each** Stage, click the Debug OFF <img src="images/debug_off.png" alt="debug off" style="zoom:80%;" /> to set it back to Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" />, and then click the <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to execute the flow in a debug mode till the breakpoint.
+2. Add a  **Breakpoint** to **for each** Stage, click <img src="images/debug_off.png" alt="debug off" style="zoom:80%;" /> and select the option to set it back to Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" />, and then click the <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to execute the flow in a debug mode till the breakpoint.
 
 3. Click the Step <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> or the Resume <img src="images/resume.PNG" alt="resume" style="zoom:80%;" /> to execute the next steps after the breakpoint step.
 
-  <ul>
-  <pre><code>
+<ul>
+<pre><code>
   A. How many iterations run on the <strong>StringBuild</strong> Actor of the <strong>for each Stage</strong>?<br>
   B. Which input value is sent to the <strong>StringBuild</strong> Actor on each iteration?<br>
   C. What is the output of the <strong>StringBuild</strong> Actor?
   D. How many outputs are returned by the <strong>StringBuild</strong> Actor? Please explain.
   E. Which Stage is executed after the <strong>Splitting the flow</strong> Stage? Why?
-  </code></pre>
+</code></pre>
+</ul>
+
+ Click the green asterisk in <strong>Splitting the flow</strong> to read its remarks   and check the value of the Actor in the <strong>Paradox</strong> Stage to help you answer the last question.
+
+
+4. Remove the Breakpoint, click <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and select the option to set the debug mode to Live Debug <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" />. Then change the value of the **Const** Actor at **Hello Broadway** Stage to "Goodbye".
+
+  <ul>
+  <pre><code>A. What happens as a result of each change?</code></pre>
   </ul>
 
-Click the green asterisk in **Splitting the flow** to read its remarks and check the value of the Actor in the **Paradox** Stage to help you answer this question.
+5. Keep the Live Debug mode or click <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" /> and select the option to set it to Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" />. 
 
   #### Step 3 - Edit the Flow to Test a Conditional Stage
 

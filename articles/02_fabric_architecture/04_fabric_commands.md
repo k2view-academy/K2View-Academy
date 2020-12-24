@@ -292,7 +292,7 @@ Note that users are responsibile for identifying if a [sync](/articles/14_sync_L
 - The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. 
 
 - Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
-- The consistency level of the deleted instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
+- The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 - The following table lists the  DELETE commands:
 
 
@@ -535,7 +535,7 @@ There are two types of execution parameters:
 * [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if exist.
 
 * Recovery parameters:
-  * **recoveryId**, unique ID for saving and recovering the flow. Flow recovery is enabled only if the **recovery ID** is supplied.
+  * **recoveryId**, unique ID for running the flow with recovery point. Flow recovery is enabled only if the **recovery ID** is supplied.
 
   * **recoveryTtl** (optional), *time to live* in seconds for the recovery point to be kept in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_TTL_SEC.
 

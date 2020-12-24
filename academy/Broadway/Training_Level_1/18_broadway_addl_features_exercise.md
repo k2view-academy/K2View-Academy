@@ -10,9 +10,11 @@
 
 2. In Additional Broadway Features [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md#example-2---inner-flow-and-error-handling):
 
-   a. Does the only way to manage the described Error Handler use a **JavaScript** Actor? If not - how?
+   a. Is the only way to manage the described Error Handler by using a **JavaScript** Actor? If not - how?
 
    b. Add Stage 2 to the flow and add a **Now** Actor. When the **a** input argument is negative, is the **Now** Actor invoked? Is it invoked when **a** is positive?
+
+   c. Modify the flow by using an **ErrorHandler** Actor as the Stage's error handler instead of the **JavaScript** Actor. Run the flow first suppressing the exception and then not suppressing it. What is the result?
 
 3. In Additional Broadway Features [Example 3 - Transactions](17_broadway_addl_features_ex3.md#example-3---transactions):
 
