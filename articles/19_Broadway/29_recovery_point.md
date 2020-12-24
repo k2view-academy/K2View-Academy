@@ -1,10 +1,10 @@
 # Recovery Point
- 
+
 ### Overview
 
-Broadway flows and jobs can serve complex systems with hundreds of processes for data movement across various systems. For example, populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow crashes before it reaches the end, lost data is recovered to avoid re-running a flow from the beginning.  
+Broadway flows and jobs can serve complex systems with hundreds of processes for data movement across various systems. For example, populating Logical Units with data from external sources, moving data from Fabric to external systems or consuming messages. If a flow crashes before it reaches the end, the system should enable the recovery mode to avoid re-running a flow from the beginning.  
 
-Setting a **Recovery Point** in a Broadway flow enables marking the Stage where the flow's data is serialized and saved in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). If a flow fails, for example, due to outage, using the serialized data, the flow can be re-run and start from the last saved recovery point rather than from the beginning. Once the flow is completed, the recovered information is deleted from Cassandra.
+Setting a **Recovery Point** in a Broadway flow enables marking the Stage where the flow's data is serialized and saved in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). If a flow fails, for example, due to outage, the flow can be re-run using the serialized data and start from the last saved recovery point rather than from the beginning. Once the flow is completed, the recovered information is deleted from Cassandra.
 
 The recovery point should be used to save the persistent data in the flow. For example, in a complex flow after completing a sub-process and before starting another. 
 
@@ -12,7 +12,7 @@ Note that setting a recovery point on a DB result set, on a [transactional Stage
 
 ### How Do I Set a Recovery Point?
 
-Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick divider line. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
+Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick purple divider line. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
 
 **Example**
 
@@ -30,10 +30,10 @@ The flow can be executed in one of the following ways:
 
 * By running the flow using a [BROADWAY command](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway).
   
-  * When running a Broadway command, it is mandatory to provide a Recovery ID in order to enable the Broadway Recovery mechanism. If the flow fails, the same flow can be re-run  with the same Recovery ID.
+  * When running a Broadway command, it is mandatory to provide a Recovery ID in order to enable the Broadway Recovery mechanism. If the flow crashes, it should be re-run  with the same Recovery ID.
 * By running a [Broadway job](/articles/20_jobs_and_batch_services/05_create_a_new_broadway_job.md) using the STARTJOB command. 
   
-  * When running a Broadway job, there is no need to provide a Recovery ID since the Recovery mechanism is enabled automatically for the job.
+  * When running a Broadway job, there is no need to provide a Recovery ID since the Recovery mechanism is enabled automatically for the jobs.
 * From the Fabric Studio by simulating the flow's crash and stopping Fabric. Do the following:
   * Set a breakpoint in the flow at a Stage after the Recovery Point.
   
@@ -45,9 +45,10 @@ The flow can be executed in one of the following ways:
   
   * Close and reopen the flow and then run it again by clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
   
-    
-  
- Note that the **RecoveryInfo** Actor can be used to receive recovered information. To do so, place the Actor in a flow after a Recovery Point.
+
+The **RecoveryInfo** Actor can be used to receive the recovery information, such as the Recovery ID. To do so, place the Actor in a flow after a Recovery Point.
+
+![image](images/99_29_recovery_02.PNG)
 
 
 

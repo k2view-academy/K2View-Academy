@@ -41,7 +41,7 @@ If the connected elements of the object are on the same level of hierarchy such 
 
 ### Take an Array by Value and Iterate Over a Field in the Same Array
 
-* The connected elements are on different levels of hierarchy: the  **entityType** field is in the [resources] array and the **[resources]** array.
+* The connected elements are on different levels of hierarchy: the **entityType** field is in the [resources] array and the **[resources]** array.
 * The **entityType** is connected using the **Iterate** link type, while the **[resources]** array is connected using the **Value** link type.
 * The iteration runs over all **entityTypes** of the [resources] array while during each iteration, the map of the current resource is passed by a value.
 

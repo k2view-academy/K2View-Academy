@@ -4,7 +4,7 @@ Broadway has a built-in Error Handling mechanism that handles exceptions in a fl
 
 This article describes the advanced error handling features provided by the **ErrorHandler** and **ErrorFields** Actors.
 
-For information about the Broadway Error Handling mechanism, refer to [Error Handling](/articles/19_Broadway/24_error_handling.md).
+For information about the basic Broadway Error Handling mechanism, refer to [Error Handling](/articles/19_Broadway/24_error_handling.md).
 
 ### How Do I Use the ErrorHandler Actor?
 
