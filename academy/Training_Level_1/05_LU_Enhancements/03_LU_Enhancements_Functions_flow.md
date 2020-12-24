@@ -16,6 +16,7 @@ Please read the following articles about specific Fabric functions:
 - [Project functions](/articles/07_table_population/10_creating_a_project_function.md) that can be added to the project implementation to perform complex data manipulations or to execute queries on a specific instance.
 - [LUDB functions](/articles/07_table_population/11_3_creating_an_LUDB_function.md) that can be invoked from within an SQL query.
 - [Trigger functions](/articles/07_table_population/11_4_creating_a_trigger_function.md) that are triggered when an LU table's data is modified.
+- [Event functions](/articles/07_table_population/11_5_creating_an_event_function.md) that run upon the completion of a sync or delete instance.
 
 
 
