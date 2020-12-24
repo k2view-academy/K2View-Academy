@@ -35,6 +35,7 @@ Each project has the following main components:
 * **Web Services**, a collection of functions that can be exposed through Fabric’s Web Service layer which may include the following sub-components:
   * Java
   * Resources, files and Graphit objects.
+  * Broadway
 
 * [**Logical Units**](/articles/03_logical_units/01_LU_overview.md), a collection of all Logical Units defined in the project.
 
