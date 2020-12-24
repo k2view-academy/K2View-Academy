@@ -1,4 +1,4 @@
-# Data Editor Table
+# Table Data Editor
 
 Information in the Data Editor is displayed in a table and can be edited, added, updated and deleted using the functions displayed in the top Actions bar.  
 
