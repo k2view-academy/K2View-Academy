@@ -25,10 +25,6 @@ Click for more information about [Graphit Input parameters](/articles/15_web_ser
   
 </tr>
 <tr>
-<td valign="top" width="300pxl">Server</td>
-<td valign="top" width="600pxl">Select the server used during the simulation. See <a href="/articles/04_fabric_studio/04_user_preferences.md#">User Configuration</a>.</td>
-</tr>
-<tr>
 <td valign="top" width="300pxl">Run</td>
 <td valign="top" width="600pxl">Click to debug the Graphit file. Debug results are displayed in the right corner of the window.</td>
 </tr>
@@ -37,12 +33,15 @@ Click for more information about [Graphit Input parameters](/articles/15_web_ser
 <td valign="top" width="600pxl">
 <p>The following Output types can be selected:  
 
--  JSON</p>
+-  JSON by selecting the {:} icon
 
--  CSV  
+-  CSV  by selecting the </> icon
 
 -  XML  
--  Profiler, profiles the performance of the Graphic code and sets the runtime of each Graphit section. Note that after the Profiler is selected for the first time, it runs automatically.</p>
+
+-  Profiler, profiles the performance of the Graphic code and sets the runtime of each Graphit section. Note that after the Profiler is selected for the first time, it runs automatically.
+
+</p>
 </td>
 </tr>
 </tbody>
