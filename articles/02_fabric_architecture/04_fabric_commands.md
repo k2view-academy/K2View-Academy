@@ -6,11 +6,11 @@ Note that Fabric commands are **not** case sensitive. For example, a Get, get, o
 
 ## Fabric Help
 
-After [logging in to Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type help/Help/HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
+After [logging into Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type help/Help/HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
 
 For example: 
 
-![help example](/articles/02_fabric_architecture/images/04_fabric_commands_help_example.png)
+![help example](images/04_fabric_commands_help_example.png)
 
 ## Fabric Commands - Main Groups
 
@@ -48,7 +48,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#release-lu">Release LU</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p> Detaches the <a href="/articles/01_fabric_ov Dw/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
+<p> Detach the <a href="/articles/01_fabric_ov Dw/02_fabric_glossary.md#lui">LUI</a> from the session for a list of LUs or for all LUs.</p>
 </td>
 </tr>
 <tr>
@@ -75,7 +75,7 @@ For example:
 </td>
 <td width="550pxl" valign="top">
 <p>Set the Master Key for an LUI or the encryption details of an interface.</p>
-<p>Set users, roles, and permissions.</p>
+<p>Set users, roles and permissions.</p>
 </td>
 </tr>
 <tr>
@@ -152,7 +152,7 @@ For example:
 <p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
-<p>Support transactions to update LUI or Reference table data (Fabric as System of Record).</p>
+<p>Support transactions to update LUI or Reference table data (Fabric as the System of Record).</p>
 </td>
 </tr>
 <tr>
@@ -193,7 +193,7 @@ For example:
 - Note that you can get LUIs from multiple LUs using one GET command, but you cannot get multiple LUIs from the same LU using one GET command. The following message is displayed when trying to get multiple LUIs from the same LU using one GET command:
   
   - `Only single instance per LUT can be used on the same GET command.`
-- It is possible to set the consistency level of the GET LUI command to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
+- The consistency level of the GET LUI command can be set to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
   -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
 
   Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
@@ -260,7 +260,7 @@ For example:
 <h5>USE</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>USE command is an alias of GET command.</p>
+<p>USE command as an alias of GET command.</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
@@ -272,7 +272,7 @@ For example:
 <p>use Customer.1;</p>
 <p>Get Instance ID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34;</p>
-<p>Get instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
+<p>Get Instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
 </td>
 </tr>
 </tbody>
@@ -292,7 +292,7 @@ Note that users are responsibile for identifying if a [sync](/articles/14_sync_L
 - The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. 
 
 - Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
-- The consistency level of delete instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
+- The consistency level of the deleted instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 - The following table lists the  DELETE commands:
 
 
@@ -394,9 +394,9 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 - Set the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
-- **SET OUTPUT** command, set the output format of query results. 
+- **SET OUTPUT** command, set the output format of the query's results. 
 
-- **SET INSTANCE_TTL** command, set the time to live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends.
+- **SET INSTANCE_TTL** command, set the Time To Live (TTL) in seconds for each [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui); the LUI is deleted automatically from Fabric after the TTL ends.
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
@@ -408,7 +408,7 @@ Use the following command to reset all the related parameters set on a session l
 
 Use the **SET_GLOBAL** command to set an active environment or a [global value](/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
 
-The values are kept in the **global_settings** Cassandra table under [k2system keyspace.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
+The values are kept in the Cassandra **global_settings** table under [k2system keyspace.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
 ### Fabric Security and Credentials
 
@@ -429,7 +429,7 @@ Fabric commands to deploy [Fabric implementation](/articles/16_deploy_fabric/03_
 
 #### Drop LU Command
 
-The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the keyspace for the LU from Cassandra and the related LU entry from k2_lut_info in Cassandra. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
+The **DROP LUTYPE** command deletes [LU metadata (LU schema)](/articles/03_logical_units/01_LU_overview.md) and its [LUIs](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from Fabric. The DROP command also deletes the keyspace for the LU from Cassandra and the related LU entry from the k2_lut_info in Cassandra. Once the LU is dropped it should be [redeployed to the Fabric server](/articles/16_deploy_fabric/01_deploy_Fabric_project.md).
 
 [Click for more information about Cassandra Keyspaces.](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md)
 
@@ -449,13 +449,13 @@ fabric>DROP LUTYPE Customer;
 
 ### Fabric Environments and Interfaces
 
-Fabric enables the deployment of Fabric environments and setting active environments on [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
+Fabric enables the deployment of Fabric environments and setting active environments on a [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
 The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 ### Run Queries on Cassandra
 
-CQL queries can be run on Cassandra in the Fabric server using the **CQL** command only for select statement.
+CQL queries can be run on Cassandra in the Fabric server using the **CQL** command only for the selected statement.
 
 **Example:**
 
@@ -473,19 +473,19 @@ Get the Fabric jobs' list and status, start, stop, update and resume jobs.
 
 ### Batch Process Commands
 
-The Batch process mechanism enables executing different types of Fabric commands in a batch mode on remote Fabric nodes.
+The Batch Process mechanism enables executing different types of Fabric commands in a batch mode on remote Fabric nodes.
 
 Fabric has commands that start an execution, retry and cancel the execution of a batch process and commands that monitor an execution on batch processes in Fabric.
 
 Note that MIGRATE commands are used as aliases to BATCH commands.
 
-[Click for more information about Fabric batch process mechanism](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
+[Click for more information about the Fabric Batch Process mechanism](/articles/20_jobs_and_batch_services/11_batch_process_overview.md).
 
 ### Process Control
 
 #### PS and Kill Commands
 
-- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks, running on node2. The **PS** command displays different types of tasks like Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or User Logic.  It displays the Node ID of each task.
+- The **PS** command displays the current tasks running on the Fabric cluster, i.e. you can run this command on node1 and view tasks running on node2. The **PS** command displays different types of tasks like Fabric commands, Fabric Jobs, [Web Service and Graphit](/articles/15_web_services_and_graphit), [Sync processes](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), [Broadway Actor](/articles/19_Broadway/03_broadway_actor.md), parser, or user logic.  When a task/thread is specified as a parameter it shows its stack trace.
 
 - The **KILL** command is used to kill any running task displayed by the PS command. Note that you can kill a task that runs on a different node on the Fabric cluster.
 
@@ -499,14 +499,14 @@ The **TRACE** command enables tracing internal Fabric operations by request and 
 
 Fabric enables creating [Reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) which can be used by all LUs or Web Services. A Reference table typically contains metadata. For example, a Postal Code table that identifies the postal code of customer addresses.
 
-Reference table commands enable synchronizing, getting the sync status and waiting for sync processing of Reference tables to be completed before continuing the workflow.
+Reference table commands enable synchronizing, getting the sync status and waiting for a sync's processing of Reference tables to be completed before continuing the workflow.
 
 Click for more information about [Reference Tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md).
 
 
 ### Fabric Transactions
 
-Fabric enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a ***\*BEGIN\**** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
+Fabric enables running a single transaction on a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) of the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) or on a Reference table. When this functionality is used, Fabric becomes the master of the data rather than [syncing data](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) from external systems. This way, Fabric can get transaction feeds and update a related Instance ID or Reference table accordingly. Always start a transaction with a **BEGIN** command before running INSERT, UPDATE or DELETE commands, and use **COMMIT** or **ROLLBACK** commands to commit or rollback the updates.
 
 Fabric has a set of commands that support transactions:
 
@@ -528,18 +528,18 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 
 ### Fabric Broadway
 
-Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), proving the LU name and the execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
+The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
 
 There are two types of execution parameters:
 
 * [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if exist.
 
 * Recovery parameters:
-  * **recoveryId** - unique ID to save and recover the flow. The flow recovery is enabled only if the **recovery ID** is supplied.
+  * **recoveryId**, unique ID for saving and recovering the flow. Flow recovery is enabled only if the **recovery ID** is supplied.
 
-  * **recoveryTtl** (optional) - *time to live* in seconds for the recovery point to be kept in the **broadway_recovery_point** Cassandra table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_TTL_SEC.
+  * **recoveryTtl** (optional), *time to live* in seconds for the recovery point to be kept in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_TTL_SEC.
 
-  * **recoveryMaxTries** (optional) - maximum number of retries until the flow is deleted from **broadway_recovery_point** Cassandra table. The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_MAX_RETRIES.
+  * **recoveryMaxTries** (optional), maximum number of retries until the flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway section of *config.ini* with the key: RECOVERY_MAX_RETRIES.
 
     [Click for more information about Broadway Recovery Point](/articles/19_Broadway/29_recovery_point.md).
 

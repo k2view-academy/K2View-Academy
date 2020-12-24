@@ -385,7 +385,16 @@
 <li><a href="/articles/30_web_framework/01_web_framework_overview.md">Web Framework Overview</a></li>
 <li><a href="/articles/30_web_framework/02_preintegrated_apps_overview.md">Pre-Integrated Application Overview</a></li>
 <li><a href="/articles/30_web_framework/03_web_admin_application.md">Web Admin Application</a></li>
+<li><a href="/articles/30_web_framework/04_data_editor_overview.md">Data Editor</a></li>       
 </details>    
+
+<details>
+<summary markdown="span"><strong>External Resources<strong><a href="/articles/31_external_resources/README.md" style="text-decoration: none;">&#9734;</a></summary>
+        <ul>
+                <li><a href="/articles/31_external_resources/01_external_jars.md ">External JARs</a></li>
+                <li><a href="/articles/31_external_resources/02_invoke_remote_server_calls.md">Invoking Remote API Calls</a></li>
+        </ul>        
+</details>
 
 <details>
 <summary markdown="span"><strong>Logical Unit Storage<strong><a href="/articles/32_LU_storage/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>

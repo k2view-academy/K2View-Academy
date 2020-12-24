@@ -139,10 +139,11 @@ The following table presents a list of Actors categories with examples of each c
 <td style="vertical-align: top;" width="210">
 <h4><strong>masking</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email.</td>
+<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email. It also includes the Actors that can define a sequence.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong>MaskingSSN</strong> Actor,&nbsp;masks the original SSN number with a valid fake SSN.</p>
 <p><strong>MaskingCreditCard</strong> Actor,&nbsp;generates a fake but valid credit card number similar to the original card's type.</p>
+<p><strong>MaskingSequence</strong> Actor, &nbsp;implements a unique sequence number.</p>
 </td>
 </tr>
 <tr>
@@ -182,10 +183,16 @@ The following table presents a list of Actors categories with examples of each c
 <td>
 <h4><strong>stats</strong></h4>
 </td>
-<td>Actors that maintain statistics.</td>
+<td>Actors that gather the flow statistics.</td>
 <td style="width: 600px; vertical-align: top;">
 <p><strong>StatsWriter</strong> Actor, sets or increments statistics that can then be read by the StatsReader.</p>
 <p><strong>StatsReader</strong> Actor, reads statistics written by other Actors such as StatsWriter, DbCommand or ErrorHandler.</p>
+<p>The Actor has two outputs:</p>
+<ul>
+<li>Flow, returns the flow level statistics map.</li>
+<li>Global, returns the global/session level statistics map.</li>
+</ul>
+<p>For example, if <strong>StatsReader</strong> is added to the flow after the <strong>DbCommand</strong> Actor that executes an INSERT query, the <strong>StatsReader</strong> displays the number of executed and the number of affected records.</p>
 </td>
 </tr>
 <tr>
@@ -237,6 +244,8 @@ The following table presents a list of Actors categories with examples of each c
 </tr>
 </tbody>
 </table>
+
+
 
 
 

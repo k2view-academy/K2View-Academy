@@ -1,10 +1,10 @@
 #  Error Handling
 
-Broadway has a built-in error handling mechanism that handles exceptions in a flow using **Error Handlers**. 
+Broadway has a built-in error handling mechanism that handles exceptions in a flow using **error handlers**. 
 
 An error handler can be assigned to each flow's [Stage](19_broadway_flow_stages.md)  to catch its exceptions and to decide whether to continue or to stop the flow. An error handler is defined using a Broadway [Actor](03_broadway_actor.md). Any Actor or an [Inner flow](22_broadway_flow_inner_flows.md) can act as an error handler. If the selected error handler is a [**JavaScript** Actor](actors/01_javascript_actor.md), custom logic can be included in the **script's** input parameter. 
 
-Advanced error handling features can be achieved using an **ErrorHandler** and **ErrorFields** Actors that can allow to configure different kinds of behavior depending on the exception type. To learn about the advanced error handling options, refer to the [Error Handling Actors](06_error_handling_actors.md) article.
+Advanced error handling features can be implemented using **ErrorHandler** and **ErrorFields** Actors that enable configuring different types of behavior depending on the exception type. To learn about the advanced error handling options, refer to the [Error Handling Actors](actors/06_error_handling_actors.md) article.
 
 Error handling in Broadway is similar to the **Java try and catch** mechanism and works as follows:
 
@@ -30,13 +30,13 @@ It is recommended to use inner flows as error handlers when the same error valid
 
 ### How Do I Add an Error Handler to a Stage?
 
-Click ![image](images/99_19_dots.PNG) > **Error Handler** from the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
+Click ![image](images/99_19_dots.PNG) > **Error Handler** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor has a red background to indicate that it is an error handler.
 
 ![image](images/99_24_01.PNG)
 
 **Example 1 - Using an Error Handler in a Flow** 
 
-1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, using the **Validation** **Error Handler** in Stage 3 of the flow, check that the lower number does not equal zero. 
+1. Create a flow which divides a higher number by a lower number. Before the division in Stage 4, using the **Validation** error handler in Stage 3 of the flow, check that the lower number does not equal zero. 
 
    ![image](images/99_24_02.PNG)
 
@@ -63,13 +63,13 @@ Click ![image](images/99_19_dots.PNG) > **Error Handler** from the [Stage contex
        false;
    ~~~
 
-4. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the **Error Handler** catches it and returns **true** to continue the flow.
+4. When the **DbLoad** Actor attempts to insert the data that already exists in the table, the *SQLiteException* is thrown, the error handler catches it and returns **true** to continue the flow.
 
 **Example 3 - Catching an Exception using an Error Handler Implemented by an Inner Flow**
 
-The following is an example of Error Handling using an inner flow as an **Error Handler**. Use the flow created in Example 2 and replace the **JavaScript** Error Handler with the **Inner Flow** Error Handler. 
+The following is an example of error handling using an inner flow as an error handler. Use the flow created in Example 2 and replace the **JavaScript** error handler with the **Inner Flow** error handler. 
 
-The flow inserts an entry into the target DB using the **DbLoad** Actor. If the same data exists in the target table, the Error Handler is triggered by the SQLite exception and performs the inner flow logic - print a message into the log and continue without a failure.
+The flow inserts an entry into the target DB using the **DbLoad** Actor. If the same data exists in the target table, the error handler is triggered by the SQLite exception and performs the inner flow logic - print a message into the log and continue without a failure.
 
 1. Create an inner flow as follows:
    -  Stage 1, add the **Logger** Actor to print the message into the log file.
@@ -91,18 +91,18 @@ The flow inserts an entry into the target DB using the **DbLoad** Actor. If the 
 
 5. [Save the flow as an Actor](22_broadway_flow_inner_flows.md#save-as-actor) named **errorHndlFlow_Actor**. 
 
-6. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow_Actor** as an Error Handler in the LU Table Stage. 
+6. Use the flow in Example 2 as the main flow. Modify it to use an **errorHndlFlow_Actor** as an error handler in the LU Table Stage. 
 
    ![image](images/99_24_10.PNG)
 
-7. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the **Error Handler** catches and executes an inner flow which returns **true** to continue the flow.
+7. When the **DbLoad** Actor attempts to insert data that already exists in the table, an *SQLiteException* is thrown and the error handler catches and executes an inner flow which returns **true** to continue the flow.
 
 **Example 4 - Handling an Error Using in an Inner Flow**
 
 1. Create a simple flow that performs a validation and throws an error. For example, check that the input number is not zero and if it is, throw an exception. 
 
    - Throw an exception using a **JavaScript** Actor: *throw "Can't divide by zero!"*.
-   - Validate the input using a **JavaScript** **Error Handler** which checks: *a != 0*.
+   - Validate the input using a **JavaScript** error handler which checks: *a != 0*.
 
    ![image](images/99_24_04.PNG)
 
