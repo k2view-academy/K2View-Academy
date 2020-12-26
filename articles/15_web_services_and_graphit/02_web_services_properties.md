@@ -157,4 +157,3 @@ The response is displayed in the body of the browser's web page:
 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_create_a_web_service.md)
-

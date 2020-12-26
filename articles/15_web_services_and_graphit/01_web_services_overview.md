@@ -23,5 +23,4 @@ Fabric Web Services apply REST API guidelines which can be fully integrated into
 
 Web Services that conform to the REST architectural style known as RESTful Web Services (RWS), provide interoperability between computer systems on the internet. RESTful Web Services allow requesting systems to access and manipulate textual representations of web resources via a uniform and predefined set of stateless operations.  
 
-
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/03_create_a_web_service.md)

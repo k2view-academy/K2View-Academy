@@ -48,5 +48,3 @@ The following steps discuss how a new Web Service is created and include options
 9. Set the [**Web Service Properties**](/articles/15_web_services_and_graphit/02_web_services_properties.md) in the upper right corner pane.
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/01_web_services_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/02_web_services_properties.md)
-
-
