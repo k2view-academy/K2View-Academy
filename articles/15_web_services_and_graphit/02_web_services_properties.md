@@ -2,14 +2,6 @@
 
 Fabric Web Services properties include the definitions, methods, categories and essential metadata that contribute to the main functionalities and characteristics of the Web Service.  
 
-## **How Do I Access Web Service Properties?** 
-
-Go to the **Project Tree**, right click **Web** **Services** and select **New Web Service** to display the **Function Manager** window. 
-
-<img src="images/Web-Service-KI-3-1.png" alt="drawing"/> 
-
-## What Are Web Service Properties? 
-
 **Web Service Properties** are located on the top right corner of the **Web Service** window. 
 
 <img src="images/Web-Service-KI-2-1.png" alt="drawing"/> 
@@ -113,6 +105,10 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
     </td>    
 </tr>    
 <tr>
+<td width="200pxl" valign="top"><p>Custom Payload</p></td>
+<td width="700pxl" valign="top"><p>Indicate if input parameters will be auto acquired by Fabric from the input stream, according to the input parameters pane, or let implementor to handle it manually. <br/>Default is False, meaning that input parameters are auto handled and served to the implementor by Farbic.</td>
+</tr>
+<tr>
 <td width="200pxl" valign="top"><p>Description</p></td>
 <td width="700pxl" valign="top"><p>Web Service&rsquo;s description on Swagger.</td>
 </tr>
@@ -125,6 +121,7 @@ Go to the **Project Tree**, right click **Web** **Services** and select **New We
 </tr>
 </tbody>
 </table>    
+
 
 
 
@@ -144,13 +141,7 @@ Then add the UNKNOWN value to the Produce function call in the line where the We
 @webService(path = "test/getCustomerInfo", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, produce = {Produce.UNKNOWN})
 ```
 
-Modify the Properties panel of the Web Service as shown below:
-
-
-
-<img src="images/Web-Service-KI-2-1_Produce1.png">
-
-
+Modify the Properties panel of the Web Service with Produce = "UNKNOWN" and Return Type = "Object". 
 
 After deploying the Web Service, call it from the browser using the appropriate token, parameter and format.
 
