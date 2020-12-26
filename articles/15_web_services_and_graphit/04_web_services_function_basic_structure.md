@@ -60,5 +60,5 @@ Fabric Studio enables you to automatically generate Java code that holds the bas
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/03_create_a_web_service.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/02_web_services_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)
 
