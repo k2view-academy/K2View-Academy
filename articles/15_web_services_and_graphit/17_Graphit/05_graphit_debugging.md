@@ -35,11 +35,11 @@ Click for more information about [Graphit Input parameters](/articles/15_web_ser
 
 -  JSON by selecting the {:} icon
 
--  CSV  by selecting the </> icon
+-  XML  by selecting the </> icon
 
--  XML  
+-  CSV  
 
--  Profiler, profiles the performance of the Graphic code and sets the runtime of each Graphit section. Note that after the Profiler is selected for the first time, it runs automatically.
+-  Profiler, profiles the performance of the Graphic code and sets the runtime of each Graphit section. Note that once the Profiler has been selected for the first time, it will run automatically.
 
 </p>
 </td>
