@@ -8,12 +8,12 @@ Parameters can be set when:
 - Calling Graphit from a Web Service whereby parameters are parsed as a mapped object. 
 
 ## Graphit Window - How Do I Configure Graphit Parameters?
-Click on the **://** icon in the **Graphit window** to open the **Graphit Parameters** dialog box. 
+Click **://** in the **Graphit window** to open the **Graphit Parameters** dialog box. 
 
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/38_graphit_with_parameters.PNG)
 
 Graphit Parameters are added to support the following:
-- Running Graphit from the Fabric Studio in Debug mode. The debug server on which the graphit web service will run, is the one that has been selected in the *User Preferences* panel, under the [*server configuration*](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) section.  
+- Running Graphit from the Fabric Studio in Debug mode. The debug server on which the Graphit Web Service runs has been selected in the **User Preferences** panel, under the [**server configuration**](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) section.  
 - Running a GET request for the Graphit file according to the parameters defined in the Graphit Parameters dialog box. The parameters are added to the [URL](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md#get-based-on-graphit-file). In addition, the input parameters are displayed when invoking the Graphit file using [Swagger](/articles/15_web_services_and_graphit/09_swagger.md).
 
 Note that if the parameters have not been added to the Graphit Parameters dialog box, you can create a POST request for the Graphit file and add the parameters in the Request body. Alternatively, you can wrap the Graphit file using a Web Service and send the parameters to the Graphit file via the Web Service. 
@@ -48,7 +48,7 @@ Click **Run** to see the results on the right side of the output window.
 ## How Do I Configure Parameters When Calling Graphit Directly From Swagger?
 Add the parameters to the Parameters window to create a GET request for the Graphit file and populate the parameters in Swagger. 
 
-Note that to execute the Graphit file, populate the parameter's value in Swagger. The Debug values are only taken as input in Debug mode.
+Note that to execute the Graphit file, first populate the parameter's value in Swagger. The Debug values are only taken as input in Debug mode.
 
 Example:
 
