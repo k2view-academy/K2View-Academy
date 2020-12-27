@@ -9,12 +9,12 @@
 
 2. Inner Flow and Error Handling:
   a. It is not the only way, the Error Handler can be defined using any Actor. 
-  For example, the described validation can be performed using <strong>GreaterThanEquals</strong> Actor.
+  For example, the described validation can be performed using the <strong>GreaterThanEquals</strong> Actor.
   b. When an error handler returns false, the flow stops. Thus when <strong>a</strong> is negative, the flow stops before the <strong>Now</strong> Actor is invoked.
 
   c. Modify the flow as follows:
 
-  * Remove the existing error handler and add a new one selecting a **ErrorHandler** Actor. 
+  * Remove the existing error handler and add a new one by selecting the **ErrorHandler** Actor. 
 
   * Modify the ErrorMsg **JavaScript** Actor to include the following script:
 
@@ -24,11 +24,11 @@
     }
     ~~~
 
-  * Run the flow once suppressing the exception via the **ErrorHandler** Actor and another time not suppressing.
+  * Run the flow once while suppressing the exception via the **ErrorHandler** Actor and again without suppressing it.
 
   ![image](images/19_errHndl_1.png)
 
-  * When the error is suppressed, the flow continues till the end.
+  * When the error is suppressed, the flow continues until the end.
 
   ![image](images/19_errHndl_2.png)
 
