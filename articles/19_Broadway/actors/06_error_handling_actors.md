@@ -24,4 +24,4 @@ The **ErrorFields** Actor can be used to get detailed information about an excep
 
 
 
-[![Previous](/articles/images/Previous.png)](05_db_actors.md)
+[![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)

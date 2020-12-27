@@ -15,7 +15,7 @@ The **schema**, **table**, **fields** and **sql** input arguments of **db** Acto
 
 If the DB command executed by the **db** Actor fails, the actual SQL statement is sent to the log file. For example:
 
-~~~
+~~~sql
 Caused by: java.sql.SQLException: [SQLITE_CONSTRAINT]  Abort due to constraint violation
 (UNIQUE constraint failed: CONTRACT_COPY.CONTRACT_ID)
 INSERT INTO "main"."CONTRACT_COPY" ("CUSTOMER_ID","CONTRACT_ID","CONTRACT_REF_ID") VALUES (?,?,?)
