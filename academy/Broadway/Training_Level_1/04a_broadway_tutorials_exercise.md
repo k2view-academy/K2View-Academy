@@ -15,7 +15,7 @@
 
 
 
-2. Add a  **Breakpoint** to **for each** Stage, click <img src="images/debug_off.png" alt="debug off" style="zoom:80%;" /> and select the option to set it to return to Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and then click <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to execute the flow in Debug mode until the breakpoint.
+2. Add a  **Breakpoint** to **for each** Stage, click <img src="images/debug_off.png" alt="debug off" style="zoom:80%;" /> and select the option to set it to return to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" />  Debug ON and then click <img src="images/run_flow_icon.png" alt="Run Flow" style="zoom:80%;" /> to execute the flow in Debug mode until the breakpoint.
 
 3. Click the <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> Step or  <img src="images/resume.PNG" alt="resume" style="zoom:80%;" /> Resume to execute the steps after the breakpoint step.
 
@@ -32,17 +32,17 @@
  Click the green asterisk in <strong>Splitting the flow</strong> to read its remarks and check the value of the Actor in the <strong>Paradox</strong> Stage to help you answer the last question.
 
 
-4. Remove the Breakpoint, click <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and select the option to set debug mode to Live Debug <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" />. Then change the value of the **Const** Actor in the **Hello Broadway** Stage to "Goodbye".
+4. Remove the Breakpoint, click <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and select the option to set the debug mode to <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" /> Live Debug. Then change the value of the **Const** Actor in the **Hello Broadway** Stage to "Goodbye".
 
   <ul>
   <pre><code>A. What happens as a result of each change?</code></pre>
   </ul>
 
-5. Keep the Live Debug mode or click <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" /> and select the option to set it to Debug ON <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" />. 
+5. Keep the Live Debug mode or click <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" /> and select the option to set it to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> Debug ON. 
 
   #### Step 3 - Edit the Flow to Test a Conditional Stage
 
-1. Add the **Now** Actor to **Stage 3**: click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
+1. Add the **Now** Actor to **Stage 3**, click **Stage 3** in the flow and select the **Now** Actor in the popup window to add an Actor to **Stage 3**.
 2. Click the <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> Step or <img src="images/resume.PNG" alt="resume" style="zoom:80%;" /> Resume to execute the flow's steps in **Debug mode**. 
 
   <ul>
@@ -52,8 +52,8 @@
 ​		Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
 
 3. Click <img src="images/stop_debug_icon.png" alt="Stop Debug" style="zoom:80%;" /> to stop the **Debug process**. 
-4. Edit the **Const** Actor in the **Hello Broadway** Stage: click the **Const** Actor in the **Hello Broadway** Stage. The [Actor's Properties window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
-5. Edit the value of the first input variable from **Hello Broadway** to **Broadway Training**.
+4. Edit the **Const** Actor in the **Hello Broadway** Stage, click the **Const** Actor in the **Hello Broadway** Stage. The [Actor's Properties window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
+5. Change the value of the first input variable from **Hello Broadway** to **Broadway Training**.
 6. Run the flow. 
 
   <ul><pre><code>A. What is the flow's result?</code></pre></ul> 
