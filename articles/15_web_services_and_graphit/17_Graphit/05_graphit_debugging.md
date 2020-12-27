@@ -4,7 +4,7 @@ The Graphit **Debug** option can be used to test JSON, XML or CSV output without
 
 A Debug process can be run on an LUDB file that has been generated in the Fabric LUDB Viewer or on the local Fabric or Fabric server defined for the project's deployment.
 
-To define input parameter values, click **://** on the top of the Graphit window.
+To define input parameter values, click **://** in the Graphit window.
 
 Click for more information about [Graphit Input parameters](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md).
 
