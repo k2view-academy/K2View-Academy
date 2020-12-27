@@ -105,7 +105,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
     </td>    
 </tr>    
 <tr>
-<td width="200pxl" valign="top"><p>Custom Payload</p></td>
+<td width="200pxl" valign="top"><h4><p>Custom Payload</p></td>
 <td width="700pxl" valign="top"><p>Indicate if input parameters will be auto acquired by Fabric from the input stream, according to the input parameters pane, or let implementor to handle it manually. <br/>Default is False, meaning that input parameters are auto handled and served to the implementor by Farbic.</td>
 </tr>
 <tr>
