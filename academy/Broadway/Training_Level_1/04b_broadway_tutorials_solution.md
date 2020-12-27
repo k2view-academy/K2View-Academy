@@ -25,7 +25,8 @@ See <a href="/articles/19_Broadway/02a_broadway_flow_overview.md#flow-with-condi
 <ul> 
 <pre><code> 
 <strong>Step 2.4</strong>
-A. Once the debug option is set to <strong>Live Debug</strong>, every change in the flow data (such as change of a <strong>Const</strong> Actor's value) causes the flow to be run automatically.
+A. Once the debug option is set to <strong>Live Debug</strong>, every change in the flow data (such as change of a <strong>Const</strong> Actor's value)
+causes the flow to be run automatically.
 </code></pre> 
 </ul>
 
