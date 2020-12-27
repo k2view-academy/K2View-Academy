@@ -13,7 +13,7 @@ A. The flow's result is "Hello Broadway"</code></pre>
 <strong>Step 2.3</strong>
 A and B, the flow executes two iteration runs on the <strong>StringBuild</strong> Actor. 
 The first iteration runs on <strong>Hello</strong> and the second iteration runs on <strong>Broadway</strong>.
-C. The <strong>StringBuild</strong> returns the following output: <strong>Hello Broadway</strong>.
+C. The <strong>StringBuild</strong> Actor returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuild</strong> Actor returns one output. It gets its inputs by a loop and builds the string. 
 The <strong>for each</strong> Stage is marked as <strong>Iterate Close</strong>. 
 As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
@@ -33,7 +33,7 @@ causes the flow to be run automatically.
 <ul>
 <pre><code>
 <strong>Step 3.2</strong>
-A. The <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been exectued since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
+A. The <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been executed since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
 
 
