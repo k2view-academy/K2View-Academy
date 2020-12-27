@@ -15,8 +15,8 @@ A and B, the flow executes two iteration runs on the <strong>StringBuild</strong
 The first iteration runs on <strong>Hello</strong> and the second iteration runs on <strong>Broadway</strong>.
 C. The <strong>StringBuild</strong> Actor returns the following output: <strong>Hello Broadway</strong>.
 D. The <strong>StringBuild</strong> Actor returns one output. It gets its inputs by a loop and builds the string. 
-The <strong>for each</strong> Stage is marked as <strong>Iterate Close</strong>. 
-As a result, the StringBuilder in this Stage closes the loop and only then returns its output.
+The <strong>for each</strong> Stage is marked as <strong>Iterate Close</strong>. As a result, the StringBuilder in this Stage closes the loop
+and only then returns its output.
 E. The next Stage executed after the <strong>Splitting the flow</strong> Stage is the <strong>Dynamic Logic Actors</strong> Stage, 
 since this Stage is on the same level as the <strong>else</strong> of the condition which returns <strong>false</strong>. 
 See <a href="/articles/19_Broadway/02a_broadway_flow_overview.md#flow-with-condition">Flow with Conditions</a>.
@@ -25,7 +25,7 @@ See <a href="/articles/19_Broadway/02a_broadway_flow_overview.md#flow-with-condi
 <ul> 
 <pre><code> 
 <strong>Step 2.4</strong>
-A. Once the debug option is set to <strong>Live Debug</strong>, every change in the flow's data (such as change of a <strong>Const</strong> Actor's value)
+A. Once the debug option is set to <strong>Live Debug</strong>, every change in the flow's data (such as the change of a <strong>Const</strong> Actor's value)
 causes the flow to be run automatically.
 </code></pre> 
 </ul>
