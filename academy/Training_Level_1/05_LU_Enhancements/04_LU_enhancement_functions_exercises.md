@@ -45,16 +45,13 @@ is experiencing with the network. The case notes reflect issues that are still o
            
 
     2.  Let's look at the different notes in the Case_Note table of Tamar's LUI.
-           - What is the ID number of the note suggesting that Tamar has been alienated and the associated Case Type description 
-             (in the Cases table).
+           - What is the ID number of the note suggesting that Tamar's associated Case Note (notes_text field description contains the following text "Travel time to the nearest starbase? The Federation's gone; the Borg is everywhere!").
            - How many cases are still open ?
            
 
     3. Write a Java function that operates the following data transformations:
-       - All case notes belonging to cases of the "Billing issues" type should be changed to "insolvent customer due to 
-         alien assimilation".
-       - All case notes belonging to cases of the "Network issues" type should be changed to "Customer has been 
-         assimilated to a phone and is no longer network compatible".
+       - All case notes belonging to cases of the "Billing issues" type should be changed to "insolvent customer".
+       - All case notes belonging to cases of the "Network issues" type should be changed to "Customer no longer in network".
        - All open cases should be set to Status="closed".
 
  
