@@ -6,7 +6,7 @@ The Data Catalog UI enables users to move through a data model’s graph, move f
 
 The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu to display the circle representing your project. If multiple projects have been deployed to the same OrientDB database, all projects are displayed.
 
-<img src="images/33_02_proj.PNG" alt="image" style="zoom:80%;" />
+<img src="images/33_02_proj.PNG" alt="image"  />
 
 ### Data Catalog Legend
 
@@ -78,9 +78,10 @@ The following tools are used to navigate the Data Catalog:
 
 * Change the tree view using the icons in the top right corner of the screen:
 
-  ![image](images/33_02_view.PNG)
+  ![image](images/33_01_tree.PNG)
 
   * Click to display the tree <img src="images/33_H.png" alt="image" style="zoom: 67%;" /> horizontally, <img src="images/33_V.png" alt="image" style="zoom: 67%;" /> vertically or <img src="images/33_center.png" alt="image" style="zoom: 67%;" />centered.
+  * Click <img src="images/33_T.PNG" alt="image" style="zoom: 67%;" />to display a set of tables that include the graph data.
   * Click <img src="images/33_02_fit.PNG" alt="image" style="zoom: 67%;" /> to fit the tree to the screen.
   * Click <img src="images/33_02_home.PNG" alt="image" style="zoom: 67%;" /> to return to the collapsed project.
 
