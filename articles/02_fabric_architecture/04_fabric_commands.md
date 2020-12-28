@@ -415,8 +415,6 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 Use the following command to reset all the related parameters set on a session level to their default value: **SET DEFAULT**;
 
-
-
 #### Fabric Setting - Cluster Level
 
 Use the **SET_GLOBAL** command to set an active environment or a [global value](/articles/08_globals/03_set_globals.md#how-do-i-use-set_global-global-command) on a Fabric cluster. 
