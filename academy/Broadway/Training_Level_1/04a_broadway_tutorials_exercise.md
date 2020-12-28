@@ -21,13 +21,14 @@
 
 <ul>
 <pre><code>
-  A. How many iterations run on the <strong>StringBuild</strong> Actor of <strong>for each Stage</strong>?<br>
-  B. Which input value is sent to the <strong>StringBuild</strong> Actor on each iteration?<br>
+  A. How many iterations run the <strong>StringBuild</strong> Actor of <strong>for each</strong> Stage?
+  B. Which input value is sent to the <strong>StringBuild</strong> Actor on each iteration?
   C. What is the output of the <strong>StringBuild</strong> Actor?
   D. How many outputs are returned by the <strong>StringBuild</strong> Actor? Please explain.
   E. Which Stage is executed after the <strong>Splitting the flow</strong> Stage? Why?
 </code></pre>
 </ul>
+
 
  Click the green asterisk in <strong>Splitting the flow</strong> to read its remarks and check the value of the Actor in the <strong>Paradox</strong> Stage to help you answer the last question.
 
@@ -52,9 +53,10 @@
 ​		Read more about [Stage Condition](/articles/19_Broadway/02_broadway_high_level_components.md#stage-conditions) to help you answer this question.
 
 3. Click <img src="images/stop_debug_icon.png" alt="Stop Debug" style="zoom:80%;" /> to stop the **Debug process**. 
-4. Edit the **Const** Actor in the **Hello Broadway** Stage, click the **Const** Actor in the **Hello Broadway** Stage. The [Actor's Properties window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
-5. Change the value of the first input variable from **Hello Broadway** to **Broadway Training**.
-6. Run the flow. 
+4. Edit the **Const** Actor in the **Hello Broadway** Stage:
+   * Click the **Const** Actor in the **Hello Broadway** Stage. The [Actor's Properties window](/articles/19_Broadway/03_broadway_actor_window.md) is displayed.
+   * Change the value of the first input variable from **Hello Broadway** to **Broadway Training**.
+5. Run the flow. 
 
   <ul><pre><code>A. What is the flow's result?</code></pre></ul> 
 

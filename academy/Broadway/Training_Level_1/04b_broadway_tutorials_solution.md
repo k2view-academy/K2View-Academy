@@ -35,8 +35,6 @@ causes the flow to be run automatically.
 <strong>Step 3.2</strong>
 A. The <strong>Now</strong> Actor added to <strong>Stage 3</strong> has not been executed since this Stage runs only if the <strong>Paradox</strong> condition is fulfilled.</code></pre>
 </ul>
-
-
 <ul>
  <pre><code>
 <strong>Step 3.6</strong> 
