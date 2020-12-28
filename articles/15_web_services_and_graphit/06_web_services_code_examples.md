@@ -1,4 +1,17 @@
 # Web Services - Code Examples
+Example List:
+
+* [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance)
+* [Complex response - multiple entries from various LU's tables](#example-of-a-wscustomerinfo2-web-service-that-brings-a-dbrows-structure-as-an-output-for-a-given-instance)
+* [Versioning](#example-of-versioning)
+* [Compllex JSON input using standard Java objects](#example-of-a-complex-java-input-structure)
+* [Compllex JSON input using customized Java objects](#example-of-a-complex-customized-input-structure)
+* [complex TDM](#example-of-a-complex-tdm-web-service)
+* [Customized Payroll -  JSON]()
+* [Customized Payroll -  XML]()
+
+
+
 ### Simple example of a wsCustomerInfo Web Service that brings a line of data for a given instance  
 
 The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
@@ -203,7 +216,7 @@ Web Service response
 ```
 
 
-### 
+ 
 
 ### Example of a complex TDM Web Service 
 
@@ -279,5 +292,117 @@ if (otherRootRecs != null) {
 
 return mainOutput;
 ```
+
+### Example of a Custom Payload - JSON 
+
+The following Web Service is similar tp [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages itself the input request payload.
+
+it starts of reading the request body payload, acquiring it by  `request().getInputStream()`:
+
+```java
+StringBuffer sbf = new StringBuffer();
+try {
+   InputStream inputStream = WebServiceUserCode.request().getInputStream();
+   BufferedReader in = new BufferedReader(new InputStreamReader(inputStream,"UTF-8"));
+   char[] bufferChar = new char[1024];
+   int index = 0;
+   while((index=in.read(bufferChar))!=-1){
+      sbf.append(bufferChar,0,index);
+   }
+   inputStream.close();
+} catch (IOException e) {
+   log.error(e.getMessage(), e);
+}
+```
+
+After reading the payload - transform it to the expected JSON form, used in this example, and fetch the data from the LU, accordingly: 
+
+```java
+if (sbf!=null) {
+   jsonRequest = new JSONObject(sbf.toString());
+   log.info("json - " + jsonRequest.toString());
+   ID = jsonRequest.getString("ID");
+   if (ID != null) {
+      rows = ludb("Customer", ID).fetch(sql);
+   }
+}
+```
+
+The function "wsCustomerInfoCustomPayload" is available at the [demo project](/articles/demo_project). 
+
+### Example of a Custom Payload - XML 
+
+The following Web Service insert rows to the CASES table at CUSTOMER LU where the input is retrieved in XML form. Look at the [demo project](/articles/demo_project) for "wsInsertCasesCustomPayloadXML" function.
+
+Request Body:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<cases iid="1">
+    <case id="20007">
+        <activity_id>1</activity_id>
+        <case_date>2020-03-17 16:16:47</case_date>
+        <case_type>Network Issue</case_type>
+		<status>Open</status>
+	</case>	
+	<case id="20008">
+        <activity_id>1</activity_id>
+        <case_date>2020-03-18 16:16:47</case_date>
+        <case_type>Device Issue</case_type>
+		<status>Closed</status>
+	</case>	
+</cases>
+```
+
+In order to parse XML, we add several import statements to the file:
+
+```java
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.DocumentBuilder;
+import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.w3c.dom.Element;
+```
+
+At the function we add XML DOM reading code:
+
+```java
+DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+factory.setNamespaceAware(true);
+DocumentBuilder documentBuilder = factory.newDocumentBuilder();
+Document doc = documentBuilder.parse(WebServiceUserCode.request().getInputStream());
+doc.getDocumentElement().normalize();
+```
+
+Note the `WebServiceUserCode.request().getInputStream()` statement, for manually handle the request body.
+
+From here we use DOM functions to acquire the input attributes and elements.
+
+For example, the iid is located in this example as attribute on the XML's root element 
+
+```java
+Element iidEelem = (Element) doc.getDocumentElement();
+String iid = iidEelem.getAttribute("iid");
+```
+
+To read the list of cases make loop iteration on the "case" list 
+
+```
+NodeList nList = doc.getElementsByTagName("case");
+```
+
+Then we read each of them, for example
+
+```java
+Node node1 = elem.getElementsByTagName("activity_id").item(0);
+String activityId = node1.getTextContent();
+```
+
+Insert into DB is done similar to the code at "wsInsertCases" function, available at the demo project.
+
+
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/05_edit_web_service_code.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/07_deploy_web_services.md)
