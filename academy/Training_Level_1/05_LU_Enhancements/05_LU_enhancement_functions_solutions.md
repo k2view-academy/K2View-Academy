@@ -102,11 +102,9 @@
    }
    ```
                                                                        
-##### Question 3: 
-    Nothing since the CASE_NOTE table has not been synced yet. The function needs to be attached to the case_notes table.
+##### Question 3:
 
-
-
+    The function will be executed , no matter to which table it is attached to, since enrichment functions are executed based on enrichment order (defined at schema level), after all LUDB tables will have been populated.
 
 
 ![](/academy/Training_Level_1/05_LU_Enhancements/images/Solution.png) 
