@@ -77,7 +77,7 @@ Using the above information the function can execute any required business logic
    	
    	Db ci = db("fabric");
    	ci.beginTransaction();
-   	ci.execute("insert into DATA_CHANGES values (?,?,?,?)", IID, luTypeName, NA", "Post Sync Success");
+   	ci.execute("insert into DATA_CHANGES values (?,?,?,?)", IID, luTypeName, "NA", "Post Sync Success");
    	ci.commit();
    	
    	fabric().execute("broadway CRM.publishCustomer iid="+ IID);
