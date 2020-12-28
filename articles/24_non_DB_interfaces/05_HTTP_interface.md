@@ -100,6 +100,8 @@ The supported types are:
 
   * Token Timeout  - request timeout toward the authorization server
 
+In case service provider does not require authentication select **None** for the Authentication Type.
+
 
 
 ### Example of Using an HTTP/HTTPS Interface in a Broadway Flow
