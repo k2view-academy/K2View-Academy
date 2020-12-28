@@ -96,7 +96,7 @@ The supported types are:
 
   * Scope (optional) - specify the scope of the access request using.  In turn, the authorization server uses the "scope" response parameter to inform the client of the scope of the access token issued. 
 
-    he value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
+    The value of the scope parameter is expressed as a list of space-delimited, case-sensitive strings.
 
   * Token Timeout  - request timeout toward the authorization server
 
