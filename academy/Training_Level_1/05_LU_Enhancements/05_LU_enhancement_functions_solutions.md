@@ -58,8 +58,8 @@
    ArrayList<String> billing_cases = new ArrayList<String>();
    ArrayList<String> network_cases = new ArrayList<String>();
    
-   String newBillingNote ="insolvent customer due to alien assimilation";
-   String newNetworkNote ="customer has been assimilated into a phone and is no longer network compatible";
+   String newBillingNote ="insolvent customer";
+   String newNetworkNote ="customer no longer in network";
    String statusClose="CLOSED";
    String SQLBillingNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
    String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
@@ -103,7 +103,7 @@
    ```
                                                                        
 ##### Question 3: 
-    Nothing since the CASE_NOTE table has not been synced yet. The function needs to be attached to the case_notes table.
+   The function will be executed , no matter to which table it is attached to, since enrichment functions are executed based on enrichment order (defined at schema level), after all LUDB tables will have been populated.
 
 
 
