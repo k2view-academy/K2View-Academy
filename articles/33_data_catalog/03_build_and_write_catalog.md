@@ -26,9 +26,8 @@ A Data Catalog implementation must be deployed to the server side so that all ch
 ### How Do I Write the Catalog?
 
 1. In the Fabric Studio, right click the **Project** and select **Data Catalog > Write Catalog To debug** or **Write Catalog To Server**. 
-2. Alternatively, run the [CATALOG WRITE](08_catalog_commands.md) command in the Fabric Server.
-
-3.The Catalog Write command is executed and the results are displayed in the popup screen indicating the status of each project entity (LU, WS, Common). If there are problems, an error is displayed in the popup screen.
+2. Alternatively, run the [CATALOG WRITE](08_catalog_commands.md) command in the Fabric Server. 
+3. The Catalog Write command is executed and the results are displayed in the popup screen indicating the status of each project entity (LU, WS, Common). If there are problems, an error is displayed in the popup screen.
 
 Note that you must perform **Write Catalog** to apply the changes in the catalog to the server.
 
