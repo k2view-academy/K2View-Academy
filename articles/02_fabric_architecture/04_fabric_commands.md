@@ -400,9 +400,22 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
+- **SET FROM** command, update several settings in a single compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
+
+  - scope - contains one or more set commands which described above, such as "sync", "environment".
+  - attached - when relevant - which LUs to load into the session. several LUI can be specified, as long as they are from different LUTs
+
+  Here are some examples:
+
+  * set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
+  * set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
+  * set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
+
 ##### Reset Session Level Setting
 
 Use the following command to reset all the related parameters set on a session level to their default value: **SET DEFAULT**;
+
+
 
 #### Fabric Setting - Cluster Level
 
