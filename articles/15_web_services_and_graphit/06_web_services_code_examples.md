@@ -8,7 +8,7 @@ Example List:
 * [Complex JSON input using customized Java objects](#example-of-a-complex-customized-input-structure)
 * [complex TDM](#example-of-a-complex-tdm-web-service)
 * [Customized Payroll -  JSON](#example-of-a-custom-payload---json)
-* [Customized Payroll -  XML]()
+* [Customized Payroll -  XML](#example-of-a-custom-payload---xml)
 
 
 
