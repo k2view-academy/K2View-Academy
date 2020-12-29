@@ -333,7 +333,7 @@ Result
 This command returns execution information and statistics for a given bid on each node in the execution:
 - Name, the Node ID.
 - %Completed, percentage of executions run on each node.
-- Ent/sec, average entities executed per seconds (pace).
+- Ent/sec, average entities executed per seconds (pace - counting the average on the last 100 sec).
 
 Note that all other fields are self-explanatory. 
 
