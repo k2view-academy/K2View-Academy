@@ -46,7 +46,7 @@ The flow can be executed in one of the following ways:
 
 The **RecoveryInfo** Actor can be used to receive the recovery information, such as the Recovery ID and the number of attempts to recover. To get the recovery information, place the Actor in a flow after a Recovery Point.
 
-![image](images/99_29_recovery_02.PNG)
+![image](images/99_29_recovery_02.png)
 
 
 
