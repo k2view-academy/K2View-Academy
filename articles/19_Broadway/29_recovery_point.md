@@ -8,7 +8,7 @@ Setting a **Recovery Point** in a Broadway flow enables marking the Stage where 
 
 The recovery point should be used to save the persistent data in the flow. For example, in a complex flow after completing a sub-process and before starting another. 
 
-Note that setting a recovery point on a DB result set, on a [transactional Stage](23_transactions.md) or inside an [iteration](21_iterations.md) is not supported. 
+Note that setting a recovery point on a Stage with DB result set, on a [transactional Stage](23_transactions.md) or inside an [iteration](21_iterations.md) is not supported. 
 
 ### How Do I Set a Recovery Point?
 
@@ -39,11 +39,9 @@ The flow can be executed in one of the following ways:
   
   * Click **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar.
   
-  * When the flow reaches the breakpoint, click **Stop Local Fabric** using the [Fabric Studio debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
+  * When the flow gets to the breakpoint, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run** to abort the debug session from the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
   
-  * After the Fabric stops, start Fabric from the Debug panel.
-  
-  * Close and reopen the flow and then run it again by clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
+  * Then run the flow again by clicking **Actions** > **Run with Recovery Point** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar. 
   
 
 The **RecoveryInfo** Actor can be used to receive the recovery information, such as the Recovery ID. To do so, place the Actor in a flow after a Recovery Point.
