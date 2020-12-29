@@ -295,9 +295,9 @@ return mainOutput;
 
 ### Example of a Custom Payload - JSON 
 
-The following Web Service is similar tp [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages itself the input request payload.
+The following Web Service is similar to [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages itself the input request payload.
 
-it starts of reading the request body payload, acquiring it by  `request().getInputStream()`:
+It starts of reading the request body payload, acquiring it by  `request().getInputStream()`:
 
 ```java
 StringBuffer sbf = new StringBuffer();
