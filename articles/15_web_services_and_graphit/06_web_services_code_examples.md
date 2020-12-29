@@ -315,7 +315,7 @@ try {
 }
 ```
 
-After reading the payload - transform it to the expected JSON form, used in this example, and fetch the data from the LU, accordingly: 
+After reading the payload - transform it to the JSON form, used in this example, and fetch the data from the LU, accordingly: 
 
 ```java
 if (sbf!=null) {
@@ -386,20 +386,20 @@ Element iidEelem = (Element) doc.getDocumentElement();
 String iid = iidEelem.getAttribute("iid");
 ```
 
-To read the list of cases make loop iteration on the "case" list 
+To read the list of cases we make a loop iteration on the "case" list: 
 
 ```
 NodeList nList = doc.getElementsByTagName("case");
 ```
 
-Then we read each of them, for example
+Then we read each of the cases' elements and attributes, for example:
 
 ```java
 Node node1 = elem.getElementsByTagName("activity_id").item(0);
 String activityId = node1.getTextContent();
 ```
 
-Insert into DB is done similar to the code at "wsInsertCases" function, available at the demo project.
+Insert into DB is done similar to the code which can be found at "wsInsertCases" function, available at the demo project.
 
 
 
