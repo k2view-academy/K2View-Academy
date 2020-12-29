@@ -13,7 +13,7 @@ The basic definition aka Fabric Implementation can be overridden at environment,
 
 ### Override Priority and Hierarchy
 
-The override priority **levels** are illustrated in the following diagram, where the upper level has the highest priority in all levels and scopes:
+The override prioritization is based on **levels** as illustrated in the following diagram, where the upper level has the highest priority:
 
 ##### <img src="images/08_05_globals_override_priority_perspct.png" alt="image" style="zoom:30%;" />
 
@@ -140,10 +140,10 @@ The following example demonstrates combined priority rules settings. Colored obj
 
  In this example:
 
--  Fabric Implementation, there is no override per LU, the Shared Objects values are taken for all objects.
--  Environment level, an override is performed on the Shared Object and applied on all objects and LUs. The LU is not updated.
--  Cluster level, an override is performed on one LU only which inherits from the previous level.
--  Session level, an override is performed on two LUs, and the Shared Objects are updated and applied on other reference and WS LUs and objects.
+-  At the Fabric Implementation, there is no override per LU, the Shared Objects values are taken for all objects.
+-  At the Environment level, an override is performed on the Shared Object and applied on all objects and LUs. The LU is not updated.
+-  At the Cluster level, an override is performed on one LU only which inherits from the previous level.
+-  At the Session level, an override is performed on two LUs, and the Shared Objects are updated and applied on other reference and WS LUs and objects.
 
 
 
