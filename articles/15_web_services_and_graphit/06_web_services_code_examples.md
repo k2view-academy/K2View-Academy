@@ -21,7 +21,7 @@ String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 
 Db.Rows rows = ludb("Customer", i_id).fetch(sql);
 
-reportUserMessage("WS executed Succesfully for Customer ID :" + i_id);
+log.info("WS executed Succesfully for Customer ID :" + i_id);
 
 return rows;
 ```
@@ -49,7 +49,7 @@ String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_N
 
 Db.Rows rows = ludb("Customer", i_id).fetch(sql);
 
-reportUserMessage("WS executed Succesfully for Customer ID :" + i_id);
+log.info("WS executed Succesfully for Customer ID :" + i_id);
 
 return rows;
 ```
