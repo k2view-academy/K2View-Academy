@@ -81,7 +81,7 @@ The following items should be edited after they are automatically generated:
 </td>
 <td  width="600pxl" valign="top">
 <p>When required, handle the service request body manually.<br/>
-To do so, change at the <a href="/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties">Web Service Properties</a> the "Custom Payroll" value to "True" and change the code to hanlde the request body using WebServiceUserCode.request().getInputStream().<br/>
+To do so, change at the <a href="/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties">Web Service Properties</a> the "Custom Payroll" value to "True" and change the code to handle the request body using WebServiceUserCode.request().getInputStream().<br/>
     Note: custom payload supports POST and PUT request methods.
 </p>
 </td>
