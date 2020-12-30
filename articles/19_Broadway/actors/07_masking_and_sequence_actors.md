@@ -29,7 +29,6 @@ The following input arguments specific for the **MaskingSequence** Actor are:
 
 * The **sequenceInterface** is where the sequence is defined. The **maskingId** of the **MaskingSequence** Actor holds the sequence name and it should be defined in the **sequenceInterface**.
 * The **initialValue** and **increment** define the initial value of the sequence and the value of increment. 
-* The **redisInterface** defines the connection to the Redis in-memory storage used as key-value data storage to enable quick access to data sets. [Click for more information about Redis Interface](/articles/24_non_DB_interfaces/09_redis_interface.md).
 
 ### How Do I Mask Data using  the Masking Actors?
 

@@ -3,6 +3,8 @@ The Redis interface type defines the connections to the Redis in-memory storage 
 
 A Redis interface connection is used by K2View TDM or by Broadway Actors to handle sequences or to mask sensitive data which is required for data uniqueness and consistency across multiple nodes or a Fabric cluster.  
 
+<!--[Click for more information about TDM7 implementation]().  TBD !!!-->
+
 To create a new Redis interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface** and then select **Redis** from the  **Interface Type** dropdown menu to open the **New Interface** window.
@@ -89,7 +91,7 @@ To create a new Redis interface, do the following:
 
 ![image](images/09_redis_2.PNG)
 
-The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor connects to a predefined Redis interface populated in the Actor's **redisInterface** input argument.
+The above Broadway flow uses a **MaskingSequence** Actor to mask an input list of customer IDs. The Actor connects to a predefined Redis interface populated in the Actor's **sequenceInterface** input argument.
 
 
 
