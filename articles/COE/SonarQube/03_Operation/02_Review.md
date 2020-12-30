@@ -6,11 +6,15 @@
 
 The following are the required steps to review, understand, and fix the results based on their priority:
 
-**1.	Login into sonarQube UI https://\<sonar server ip>:<sonar server port>**
+**1.	Login into sonarQube UI https://\<sonar server ip>:\<sonar server port>**
+
+*Note: url is defined in sonar.properties file under conf folder. 
+       check sonar.web.host and sonar.web.port under WEB SERVER section.*
+       
        Default login user/pass is admin/admin.
        Default url is https://localhost:9000
 
-   *Note: You have the option to create/manage users under Administration  Security  Users.  
+   *Note: You have the option to create/manage users under Administration -> Security -> Users.  
    (see [SonarQube security information](https://docs.sonarqube.org/latest/instance-administration/security/))*
         
 
@@ -43,7 +47,7 @@ The following are the required steps to review, understand, and fix the results 
 
 
 
-**4.	Click on the issues tab to see a more detailed view of the identified issues.**
+**4.	Click on the issues tab to see more detailed view of the identified issues.**
 
 ![](/articles/COE/SonarQube/images/05_issues.png)
 
@@ -60,10 +64,10 @@ The following are the required steps to review, understand, and fix the results 
 
      - Type: Type of the issue.
      - Severity: Severity of the issues.
-     - Rule: Search by rule name, for k2view customized rule names please refer to  K2View Customized Rules.
+     - Rule: Search by rule name, for k2view customized rule names please refer to K2View Customized Rules.
      - Tag:	K2view customized rules are tagged with “k2view” and “k2view-iidf”
 
-   By selecting “k2view” tag, you will only see issues related to k2view code/configuration and not java SonarQube built in rules 
+   By selecting “k2view” tag, you will only see issues related to k2view code/configuration. 
 
 ![](/articles/COE/SonarQube/images/07_tag.png)
 
@@ -71,7 +75,7 @@ The following are the required steps to review, understand, and fix the results 
 
 **6.	Navigate to see the details of the issues:**
 
-   On the right panel, all the issues are being listed. Each block contains the rule name that identified this issue, type, severity, etc… 
+   On the right panel, all the issues are being listed. Each block contains the rule name that identifies this issue, type, severity, etc… 
 
 
 
