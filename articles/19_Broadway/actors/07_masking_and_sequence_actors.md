@@ -7,6 +7,8 @@ For example:
 * The **MaskingSSN** Actor masks the original SSN number with a valid fake SSN.
 * The **MaskingCreditCard** Actor generates a fake but valid credit card number similar to the original one.
 
+Note that if it is needed to keep the data masked in Fabric, use the **masking** Actors in the Broadway population flows.
+
 Another important functionality for the systems that need to load data frequently to target DBs is the ability to generate and populate a unique sequence ID.
 
 The **MaskingSequence** Actor which also belongs to the **masking** category generates a unique sequence ID based on the provided input arguments.
@@ -31,9 +33,9 @@ The following input arguments specific for the **MaskingSequence** Actor are:
 
 ### How Do I Mask Data using  the Masking Actors?
 
-The following example shows how to use a **MaskingSSN** Actor in a Broadway flow that selects data from Fabric and loads it into the target DB, for example as part of a TDM flow. 
+The following example shows how to mask the Address description and the ZIP code using two **masking** Actors in the population flow. 
 
-Note that if it is needed to keep the data masked in Fabric, use the **masking** Actors in the Broadway population flows.
+The same masking can be done in several flows of the same project. For example, if the ZIP code is populated in several LU tables in Fabric, use the same Actor in those flows and specify the same masking ID.
 
 ![image](../images/99_actors_07_1.PNG)
 
