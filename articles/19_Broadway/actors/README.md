@@ -10,7 +10,7 @@
 <li><a href="05_db_actors.md">DB Commands Actors</a></li>
 <li><a href="06_error_handling_actors.md">Error Handling Actors</a></li>
 <li><a href="07_masking_and_sequence_actors.md">Masking and Sequence Actors</a></li>
-<li><a href="08_sequence_implementation_examples.md">Sequence Implementation Examples</a></li>
+<li><a href="08_sequence_implementation_guide.md">Sequence Implementation Guide</a></li>
 </ul>
 
 
