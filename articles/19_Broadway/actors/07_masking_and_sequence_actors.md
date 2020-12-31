@@ -49,4 +49,4 @@ The following example shows how to use a **MaskingSequence** Actor to generate a
 
 
 
-[![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)
+[![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_examples.md)s
