@@ -101,12 +101,12 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <tr>
 <td width="200pxl" valign="top"><p>Serialize null</p></td>
 <td width="700pxl" valign="top">
-    <p>If True, display fields with null value in the reponse. Else- ignore fields with null values. The default is True.</p>
+    <p>If True, display fields with a null value in the reponse. Else, ignore fields with null values. The default is True.</p>
     </td>    
 </tr>    
 <tr>
  <td width="200pxl" valign="top"><h4></h4><p>Custom Payload</p></td>
-<td width="700pxl" valign="top"><p>Indicate if input parameters will be auto acquired by Fabric from the input stream, according to the input parameters pane, or let implementor to handle it manually. <br/>Default is False, meaning that input parameters are auto handled and served to the implementor by Fabric.</td>
+<td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters pane, or if this is implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric.</td>
 </tr>
 <tr>
 <td width="200pxl" valign="top"><p>Description</p></td>
@@ -126,7 +126,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 
 
 
-## How Do I Generate HTML format or legacy JSON/XML ? 
+## How Do I Generate HTML Format or Legacy JSON/XML ? 
 
 To generate these formats, open the Java Logic file and add the following tag above the public class which encapsulates the Web Services defined in the specific Logic category:
 
