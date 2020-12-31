@@ -2,7 +2,7 @@
 Example List:
 
 * [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance)
-* [Complex response - multiple entries from various LU's tables](#example-of-a-wscustomerinfo2-web-service-that-brings-a-dbrows-structure-as-an-output-for-a-given-instance)
+* [Complex response - multiple entries from various LU tables](#example-of-a-wscustomerinfo2-web-service-that-brings-a-dbrows-structure-as-an-output-for-a-given-instance)
 * [Versioning](#example-of-versioning)
 * [Complex JSON input using standard Java objects](#example-of-a-complex-java-input-structure)
 * [Complex JSON input using customized Java objects](#example-of-a-complex-customized-input-structure)
@@ -14,7 +14,7 @@ Example List:
 
 ### Simple example of a wsCustomerInfo Web Service that brings a line of data for a given instance  
 
-The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
+The following Web Service gets an input LUI for the CUSTOMER LU and returns data from the CUSTOMER table in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object which is then converted by Fabric into DB.Rows structure.
 ```java
 String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 
@@ -26,7 +26,7 @@ log.info("WS executed Succesfully for Customer ID :" + i_id);
 return rows;
 ```
 
-Output:
+Output 
 
 ```
 [
@@ -41,7 +41,7 @@ Output:
 
 ###  Example of a wsCustomerInfo2 Web Service that brings a Db.Rows structure as an output for a given instance   
 
-The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a Join query on several tables in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an Object which is then converted by Fabric into DB.Rows structure.
+The following Web Service gets an input LUI for the CUSTOMER LU and returns several rows of data by running a Join query on several tables in the CUSTOMER LU. Output data is returned in DB.Rows structure. It can also be returned as an object which is then converted by Fabric into DB.Rows structure.
 
 ```java
 String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_NAME CUSTOMER_NAME, cont.CONTRACT_ID,cont.CONTRACT_DESCRIPTION,sub.SUBSCRIBER_ID,sub.MSISDN,sub.IMSI,sub.SIM,sub.SUBSCRIBER_TYPE " +
@@ -154,9 +154,9 @@ Web Service inside logic
      String company = m.get("company"); // will return Telco1
 ```
 
-### Example of a complex Customized input structure
+### Example of a complex customized input structure
 
-Same as the example above, however with a customized Java classes.
+This example is similar to the above example, this time with customized Java classes.
 
 For example:
 
@@ -166,7 +166,7 @@ Requested body
 {
   "person": {
     "address": [
-      {
+      
         "number": 10,
         "city": "Net York",
         "street": "5th Ave."
@@ -295,9 +295,9 @@ return mainOutput;
 
 ### Example of a Custom Payload - JSON 
 
-The following Web Service is similar to [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages itself the input request payload.
+The following Web Service is similar to the [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages the input request payload by itself.
 
-It starts of reading the request body payload, acquiring it by  `request().getInputStream()`:
+It starts by reading the request body payload and acquiring it using `request().getInputStream()`:
 
 ```java
 StringBuffer sbf = new StringBuffer();
@@ -315,7 +315,7 @@ try {
 }
 ```
 
-After reading the payload - transform it to the JSON form, used in this example, and fetch the data from the LU, accordingly: 
+After reading the payload it transforms it into the JSON format used in this example. It then fetches the data from the LU: 
 
 ```java
 if (sbf!=null) {
@@ -328,13 +328,15 @@ if (sbf!=null) {
 }
 ```
 
-The function "wsCustomerInfoCustomPayload" is available at the [demo project](/articles/demo_project). 
+The wsCustomerInfoCustomPayload function is available in the [Demo project](/articles/demo_project). 
 
 ### Example of a Custom Payload - XML 
 
-The following Web Service insert rows to the CASES table at CUSTOMER LU where the input is retrieved in XML form. Look at the [demo project](/articles/demo_project) for "wsInsertCasesCustomPayloadXML" function.
+The following Web Service inserts rows into the CASES table in the CUSTOMER LU where the input is retrieved in XML format. 
 
-Request Body:
+The wsInsertCasesCustomPayloadXML function is available in the [Demo project](/articles/demo_project).
+
+Request body 
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -354,7 +356,7 @@ Request Body:
 </cases>
 ```
 
-In order to parse XML, we add several import statements to the file:
+To parse the XML several import statements are added to the file:
 
 ```java
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -365,7 +367,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 ```
 
-At the function we add XML DOM reading code:
+The following XML DOM reading code is added to the function:
 
 ```java
 DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -375,31 +377,31 @@ Document doc = documentBuilder.parse(WebServiceUserCode.request().getInputStream
 doc.getDocumentElement().normalize();
 ```
 
-Note the `WebServiceUserCode.request().getInputStream()` statement, for manually handle the request body.
+Note that the `WebServiceUserCode.request().getInputStream()` statement is used to manually handle the request body.
 
-From here we use DOM functions to acquire the input attributes and elements.
+From here DOM functions are used to acquire the input attributes and elements.
 
-For example, the iid is located in this example as attribute on the XML's root element 
+For example, the iid is located in this example as an attribute on the XML's root element. 
 
 ```java
 Element iidEelem = (Element) doc.getDocumentElement();
 String iid = iidEelem.getAttribute("iid");
 ```
 
-To read the list of cases we make a loop iteration on the "case" list: 
+To read the list of cases a loop iteration was performed on the case list: 
 
 ```
 NodeList nList = doc.getElementsByTagName("case");
 ```
 
-Then we read each of the cases' elements and attributes, for example:
+Each element and attribute of the case can then be read, for example:
 
 ```java
 Node node1 = elem.getElementsByTagName("activity_id").item(0);
 String activityId = node1.getTextContent();
 ```
 
-Insert into DB is done similar to the code which can be found at "wsInsertCases" function, available at the demo project.
+The code for inserting this into the DB is similar to the code in the wsInsertCases function, which is available in the [Demo project](/articles/demo_project).
 
 
 
