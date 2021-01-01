@@ -189,7 +189,7 @@ For example:
 #### Get Instance
 
 The **GET** command is used to get information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
-Note that multiple LUs can be recieved using a GET command. However, multiple LUIs cannot be received from the same LU using a GET command. 
+Note that multiple LUs can be received using a GET command. However, multiple LUIs cannot be received from the same LU using a GET command. 
 
 The following message is displayed when attempting to get multiple LUIs from the same LU using a GET command:
   
@@ -288,7 +288,7 @@ The following table lists the GET commands:
 
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 
-Note that users are responsibile for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
+Note that users are responsible for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
 
 ### Delete LUI Command
 
@@ -506,7 +506,7 @@ Note that MIGRATE commands are used as aliases to BATCH commands.
 
 The **TRACE** command enables tracing internal Fabric operations by request and writing them into Tracing files.
 
-[Click for more information about Tracing mechanism](/articles/29_tracing/01_tracing_overview.md).
+[Click for more information about the Tracing mechanism](/articles/29_tracing/01_tracing_overview.md).
 
 ### CommonDB & Reference Tables
 
@@ -554,7 +554,7 @@ There are two types of execution parameters:
 
   * **recoveryMaxTries** (optional), maximum number of retries until the flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway *config.ini* section with the RECOVERY_MAX_RETRIES key.
 
-    [Click for more information about Broadway Recovery Point](/articles/19_Broadway/29_recovery_point.md).
+    [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
 
 ##### Syntax
 
