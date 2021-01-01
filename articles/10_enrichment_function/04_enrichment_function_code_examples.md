@@ -77,18 +77,18 @@ Run validation functions to validate LUI data during the [Sync process](/article
 
 5. Attach the **Enrichment function** to the **EXEC_VALIDATIONS** table via the **Table Properties** tab. 
 
-[Click to display full code example of all the above functions in the Demo project.](/articles/demo_project)
+[Click to display an example of the full code in all the above functions in the Demo project.](/articles/demo_project)
 
 
 ### Example of an Enrichment Function that Populates the Param Table
 
-A common scenario in Test Data Management (TDM) projects is to add a Parameters [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) to the LU schema, populate it and then aggregate the LU's parameters for business logic and validations. For example, in the Orders LU you need to get various parameters for each Order type, like the number of MSISDNS or the number of open orders. The list of parameters and the SQL query to be executed on the LU tables for each parameter must be defined in a [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). The execution of the SQL queries for each parameter, and the population of the Parameters LU table will be implemented by the Enrichment function.
+A common scenario in Test Data Management (TDM) projects is to add a Parameters [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) to the LU schema, populate it and then aggregate the LU's parameters for business logic and validations. For example, in the Orders LU to get various parameters like the number of MSISDNS or the number of open orders for each Order type, define the list of parameters and the SQL query to be executed on the LU tables for each parameter in a [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). The Enrichment function then executes the SQL queries for each parameter and populates the Parameters LU table.
 
 1. Create a new **translation** named **trnOrdersParams** that defines a list of parameters and an SQL query for calculating each parameter.
 
    ![10_04_create_enrichment_3](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_3.PNG)
    
-2. Create a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) named **ORDERS_PARAMS** which is populated by a dummy **fnRootORdersParams** [Root function](/articles/07_table_population/08_project_functions.md#root-function), the actual population of the table is done by the enrichment function.
+2. Create a new [LU table](/articles/06_LU_tables/02_create_an_LU_table.md) named **ORDERS_PARAMS** which is populated by a dummy **fnRootORdersParams** [Root function](/articles/07_table_population/08_project_functions.md#root-function), the actual population of the table is implemented by the enrichment function.
 
    ![10_04_create_enrichment_4](/articles/10_enrichment_function/images/10_04_enrichment_code_examples_4.PNG)
 
@@ -96,7 +96,7 @@ A common scenario in Test Data Management (TDM) projects is to add a Parameters 
    if (1 == 2) yield(new Object[]{null});
    </code></pre>
 
-3. Create an Enrichment function named **fnEnrichmentOrderParam** that retrieves and loops over the translation's data, and calculates the parameter and populates it into the target ORDERS_PARAMS [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for each entry.
+3. Create an Enrichment function named **fnEnrichmentOrderParam** that retrieves and loops over the translation's data, calculates the parameter and populates it into the target ORDERS_PARAMS [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for each entry.
 
 ~~~
    Map<String,Map<String,String>> data = getTranslationsData("trnOrdersParams");
