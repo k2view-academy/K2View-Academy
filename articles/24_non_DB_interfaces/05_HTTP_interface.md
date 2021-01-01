@@ -52,18 +52,18 @@ Each Authentication Type requires specific security credentials (provided by the
 
 Fabric supports the following: 
 
-* ***Basic* HTTP Authentication**, built into the HTTP protocol. Fabric (the client) sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by  \<user:password\> in base64-encoded form. The properties for this interface are:
+* ***Basic* HTTP Authentication**, built into the HTTP protocol. Fabric (the client) sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by  \<user:password\> in base64-encoded form. This interface requires the following properties:
 
   * User
   * Password
 
   Note that since this mechanism does not provide confidentiality it is usually used over HTTPS and not HTTP.
 
-* ***Bearer* Authentication** (aka token authentication), an HTTP Authentication Type / schema that uses cryptic string security tokens called Bearer Tokens. Fabric (the client) sends this token in the `Authorization` header when sending requests to a resource. The properties for this interface are:
+* ***Bearer* Authentication** (aka token authentication), an HTTP Authentication Type / schema that uses cryptic string security tokens called Bearer Tokens. Fabric (the client) sends this token in the `Authorization` header when sending requests to a resource. This interface requires the following properties:
 
   * token
 
-* **OAuth 2.0 Password Credentials**, an OAuth protocol's grant type flow. Fabric (the client) first interacts  with an authorization server, provides a user and password and gets an access token which is then used for the resource server's calls. The properties for this interface are:
+* **OAuth 2.0 Password Credentials**, an OAuth protocol's grant type flow. Fabric (the client) first interacts  with an authorization server, provides a user and password and gets an access token which is then used for the resource server's calls. This interface requires the following properties:
 
   * User 
 
@@ -80,7 +80,7 @@ Fabric supports the following:
 
   * Token Timeout, request timeout to the authorization server.
 
-* **OAuth 2.0 Client Credentials**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server which returns the access token used by Fabric for the resource's server calls. The properties of ths interface in Fabric are:
+* **OAuth 2.0 Client Credentials**, an OAuth protocol grant type flow. Fabric provides the client-ID and Client-Secret to the authorization server which returns the access token used by Fabric for the resource's server calls. In Fabric this interface requires the following properties:
 
   * Client ID, provided by the external resource / authorized vendor.
 
