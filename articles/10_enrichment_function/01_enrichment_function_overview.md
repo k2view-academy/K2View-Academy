@@ -14,7 +14,7 @@ An Enrichment function is a [Project function](/articles/07_table_population/08_
 
 - Unlike a [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md), which is executed on each record of an LU table, an Enrichment function is executed only once per LU table and [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui). 
 
-  For example, Customer 123 has five Subscribers and each Subscriber has 10 INVOICE records. The Root function that populates the INVOICE LU table runs five times for Customer   123. The Enrichment function on the INVOICE LU table runs only once per instance, after all populations runs for all tables in the LU schema.
+  For example, Customer 123 has five Subscribers and each Subscriber has 10 INVOICE records. The Root function that populates the INVOICE LU table runs five times for Customer   123. The Enrichment function on the INVOICE LU table runs only once per instance, after all populations run on all tables in the LU schema.
 
 ### When Should I Use Enrichment Functions?
 
@@ -22,11 +22,11 @@ Enrichment functions are needed when complex logic must be applied on all LU tab
 
 [Click for more information about the differences between Enrichment Functions and Root Functions](/articles/10_enrichment_function/02_enrichment_vs_root_func_comparison_analysis.md).
 
-#### Most Common Use Cases of Enrichment functions:
+#### Most Common Use Cases of Enrichment Functions 
 
-- Populating an LU table based on the calculated data from other LU tables. For example, calculating the total amount of a customer's payments and updating the value in CUSTOMER LU table.
-- Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, the Fabric should notify the customer’s status to another system. 
-- Masking sensitive data on LU tables.
+- Populating an LU table based on the calculated data from other LU tables. For example, calculating the total amount of a customer's payments and updating the value in the CUSTOMER LU table.
+- Updating an external system based on the LUI data. For example, after populating the CUSTOMER table, Fabric should notify another system about the customer’s status. 
+- Masking sensitive data in LU tables.
 
 
 
