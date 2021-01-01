@@ -188,16 +188,19 @@ For example:
 
 #### Get Instance
 
-- The **GET** command is used to bring information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
+The **GET** command is used to get information for a given [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) and to synchronize information from data sources if needed.
+Note that multiple LUs can be recieved using a GET command. However, multiple LUIs cannot be received from the same LU using a GET command. 
 
-- Note that you can get LUIs from multiple LUs using one GET command, but you cannot get multiple LUIs from the same LU using one GET command. The following message is displayed when trying to get multiple LUIs from the same LU using one GET command:
+The following message is displayed when attempting to get multiple LUIs from the same LU using a GET command:
   
-  - `Only single instance per LUT can be used on the same GET command.`
-- The consistency level of the GET LUI command can be set to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
+`Only single instance per LUT can be used on the same GET command.`
+
+The consistency level of the GET LUI command can be set to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
   -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
 
-  Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
-- The following table lists the GET commands:
+Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
+
+The following table lists the GET commands:
 
 <table width="900pxl">
 <tbody>
@@ -289,11 +292,10 @@ Note that users are responsibile for identifying if a [sync](/articles/14_sync_L
 
 ### Delete LUI Command
 
-- The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. 
+The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
+The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 
-- Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
-- The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
-- The following table lists the  DELETE commands:
+The following table lists the  DELETE commands:
 
 
 <table width="900pxl">
@@ -400,12 +402,12 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 - **SET LUI_READ_ONE_WHEN_FAIL** command, set the consistency level for the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF.
 
-- **SET FROM** command, update several settings in a single compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
+- **SET FROM** command, update several settings in one compound command using JSON structure with the following syntax: "set from '{\["scope" : {\<list of key and value command elements \>}],\]["attached" : {"\<LUT 1\>": "\<LUI\>"\[ , "<LUT 2\>": "\<LUI\>"} , ...\]}' " . The command is built from two optional parts, each can be omitted:
 
-  - scope - contains one or more set commands which described above, such as "sync", "environment".
-  - attached - when relevant - which LUs to load into the session. several LUI can be specified, as long as they are from different LUTs
+  - Scope, holds one or more set commands like "sync" or "environment".
+  - Attached, the LUs to load into the session. Several LUI can be specified if they are from different LUTs. 
 
-  Here are some examples:
+  Examples 
 
   * set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
   * set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
@@ -531,7 +533,7 @@ Fabric also enables writing the transaction into a delta table using the **SET A
 
 ### CDC and Search
 
-The Fabric [Change Data Capture(CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution notifies external systems about data changes and has [built-in integration with Elasticsearch](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md) to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
+The Fabric [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution notifies external systems about data changes and has [built-in integration with Elasticsearch](/articles/18_fabric_cdc/cdc_consumers/search/01_search_overview_and_use_cases.md) to enable a cross [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) search.
 
 For example: search all customers called “John Doe” that live in “New-York”.
 
