@@ -41,7 +41,7 @@ Go to the **Project Tree** > your **LU** > **Jobs**.
 
 <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
-Jobs can be created also at References regardless of the specific LU. In the **Job table**, enter the values pertaining to the Job.
+Jobs can be created also as References regardless of the specific LU. In the **Job table**, enter the values pertaining to the Job.
 
 <table style="width: 900px; height: 193px;">
 <tbody>
@@ -74,7 +74,7 @@ Jobs can be created also at References regardless of the specific LU. In the **J
 </li>
 <li class="unchanged">
 <p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp;the jobT runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
-<p> It is important to note that if a scheduled job is started manually (before its scheduled occurence) then its next scheduled occurence will still start on time, unless the previous manual occurence of the job is still running.</p>	
+<p> It is important to note that if a scheduled job is started manually (before its scheduled occurance) then its next scheduled occurance will still start on time, unless the previous manual occurance of the job is still running.</p>	
 </li>
 </ul>
 </td>
@@ -95,7 +95,7 @@ Jobs can be created also at References regardless of the specific LU. In the **J
 <tr>
 <td style="width: 300px;"><strong>Input parameters</strong></td>
 <td style="width: 600px;">
-<p class="unchanged rich-diff-level-one">Defines where the values of the input parameters are initialized. In this case the variable *test* is set to 0</p>
+<p class="unchanged rich-diff-level-one">Defines where the values of the input parameters are initialized. In this case the variable *test* is set to 0.</p>
 <p class="unchanged rich-diff-level-one">(The output parameter value is recorded in the argument field of the k2_jobs table in the k2system keyspace.)</p>
 </td>
 </tr>
