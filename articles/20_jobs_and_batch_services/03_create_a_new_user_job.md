@@ -41,23 +41,21 @@ Go to the **Project Tree** > your **LU** > **Jobs**.
 
 <img src="/articles/20_jobs_and_batch_services/images/05_jobs_and_batch_services_create_a_job_userjob.PNG">  
    
-Jobs can be created also at References regardless to a specific LU.
-
-In the **Job table**, enter the values pertaining to the Job.
+Jobs can be created also at References regardless of the specific LU. In the **Job table**, enter the values pertaining to the Job.
 
 <table style="width: 900px; height: 193px;">
 <tbody>
 <tr>
 <td style="width: 300px"><strong>Method</strong></td>
-<td style="width: 600px">Where the name of the User Job Function defined in Step 4 is associated to the Job.</td>
+<td style="width: 600px">The name of the User Job Function (defined in Step 4) associated with the Job.</td>
 </tr>
 <tr>
 <td style="width: 300px;"><strong>Unique Job Name</strong></td>
-<td style="width: 600px;">Where the unique name for the Job service is defined and used for all manual or system operations executed on this job.</td>
+<td style="width: 600px;">The unique name of the Job service used for all manual or system operations executed on this job.</td>
 </tr>
 <tr>
 <td style="width: 300px;"><strong>Execution Mode</strong></td>
-<td style="width: 600px;">Can be set to either&nbsp;<strong>automatically</strong>&nbsp;or&nbsp;<strong>manually</strong>&nbsp;depending on whether the Job service is started from the Command Line or is managed by Fabric.</td>
+<td style="width: 600px;">Can be set either <strong>automatically</strong> or <strong>manually</strong> depending on whether the Job service is started from the Command Line or is managed by Fabric.</td>
 </tr>
 <tr>
 <td style="width: 300px;"><strong>Active</strong></td>
@@ -76,7 +74,7 @@ In the **Job table**, enter the values pertaining to the Job.
 </li>
 <li class="unchanged">
 <p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp;the jobT runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
-<p> It is important to note that if a scheduled job is started manually (before its scheduled occurence) then its next scheduled occurence will still start on time, unless the previous manual occurence of the job, is still running.</p>	
+<p> It is important to note that if a scheduled job is started manually (before its scheduled occurence) then its next scheduled occurence will still start on time, unless the previous manual occurence of the job is still running.</p>	
 </li>
 </ul>
 </td>
@@ -84,7 +82,7 @@ In the **Job table**, enter the values pertaining to the Job.
 <tr>
 <td style="width: 300px;"><strong>Affinity</strong></td>
 <td style="width: 600px;">
-<p class="unchanged rich-diff-level-one">Where the details of the node assigned to the job are entered. Affinity can be set using either one of the following options:</p>
+<p class="unchanged rich-diff-level-one">The details of the node assigned to the job. Affinity can be set using either one of the following options:</p>
 <ul class="unchanged rich-diff-level-one">
 <li class="unchanged">IP address of a Fabric node.</li>
 <li class="unchanged">Data Center (DC) Name.</li>
@@ -97,7 +95,7 @@ In the **Job table**, enter the values pertaining to the Job.
 <tr>
 <td style="width: 300px;"><strong>Input parameters</strong></td>
 <td style="width: 600px;">
-<p class="unchanged rich-diff-level-one">Where the values of the input parameters are initialized. In this case the variable *test* is set to 0</p>
+<p class="unchanged rich-diff-level-one">Defines where the values of the input parameters are initialized. In this case the variable *test* is set to 0</p>
 <p class="unchanged rich-diff-level-one">(The output parameter value is recorded in the argument field of the k2_jobs table in the k2system keyspace.)</p>
 </td>
 </tr>
@@ -110,7 +108,7 @@ In the **Job table**, enter the values pertaining to the Job.
 
 
 ### Step 5. 
-Right-click on the **LU** in the **Project Tree**, deploy and check for the file in the **Fabric Home directory**.
+Right click the **LU** in the **Project Tree**, deploy and then search for the file in the **Fabric Home directory**.
 
 
 
