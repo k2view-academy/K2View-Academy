@@ -21,7 +21,7 @@ String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM CUSTOMER";
 
 Db.Rows rows = ludb("Customer", i_id).fetch(sql);
 
-log.info("WS executed Succesfully for Customer ID :" + i_id);
+log.info("WS executed Successfully for Customer ID :" + i_id);
 
 return rows;
 ```
@@ -49,12 +49,12 @@ String sql = "select cust.CUSTOMER_ID,cust.SSN,cust.FIRST_NAME||' '||cust.LAST_N
 
 Db.Rows rows = ludb("Customer", i_id).fetch(sql);
 
-log.info("WS executed Succesfully for Customer ID :" + i_id);
+log.info("WS executed Successfully for Customer ID :" + i_id);
 
 return rows;
 ```
 
-Output:
+Output 
 
 ```
 [
@@ -125,9 +125,9 @@ Output:
 
 Both the wsCustomerInfo and wsCustomerInfo2 Web Services in the examples share the same URL path named test/getCustomerInfo. The version property of wsCustomerInfo is set to 1 and the version property of wsCustomerInfo1 is set to 2.
 
-- To invoke a call to wsCustomerInfo the following URL should be called: http://localhost:3213/api/v1/test/getCustomerInfo?i_id=1&token=ABC&format=json
+- To invoke a call to wsCustomerInfo, call the following URL: http://localhost:3213/api/v1/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
-- To invoke a call to wsCustomerInfo2 the following URL should be called: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
+- To invoke a call to wsCustomerInfo2, call the following URL: http://localhost:3213/api/v2/test/getCustomerInfo?i_id=1&token=ABC&format=json
 
 ### Example of a complex Java input structure
 A complex JSON format can also be sent as input to a Fabric Web Service using the POST verb. Data is automatically serialized according to the input structure defined as a part of the Web Service's markup.
@@ -256,7 +256,7 @@ if (!parentRec.isEmpty()) {
 //If the the input entity has parents get the hierarchy above it
 if (parentLuName != null && !"".equals(parentLuName)) {
 	//Starting for the parent as the details of the input entity is already included in the children part
-	//Sending the chilren hierarchy in order to add it to the ancestors as child hierarchy
+	//Sending the children hierarchy in order to add it to the ancestors as child hierarchy
 	parentHierarchyDetails = fnGetParentHierarchy(parentLuName, parentTargetId, childHierarchyDetails);
 } else {// Given inputs are of a root entity
 	parentHierarchyDetails =  childHierarchyDetails;
@@ -315,7 +315,7 @@ try {
 }
 ```
 
-After reading the payload it transforms it into the JSON format used in this example. It then fetches the data from the LU: 
+After reading the payload, it transforms it into the JSON format used in this example. It then fetches the data from the LU: 
 
 ```java
 if (sbf!=null) {
@@ -388,7 +388,7 @@ Element iidEelem = (Element) doc.getDocumentElement();
 String iid = iidEelem.getAttribute("iid");
 ```
 
-To read the list of cases a loop iteration was performed on the case list: 
+To read the list of cases, a loop iteration was performed on the case list: 
 
 ```
 NodeList nList = doc.getElementsByTagName("case");
