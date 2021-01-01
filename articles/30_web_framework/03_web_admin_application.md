@@ -19,7 +19,7 @@ For example, the following image shows that the user navigated to **Admin > Secu
   
   * Interfaces, displayed with their connection status.
   * List of [CommonDB reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md). To initiate a sync of the reference tables, select either the LU or a specific table.
-  * List of the implementation LU objects with the option to download thier implmentation's zip.
+  * List of the implementation LU objects with the option to download their implmentation's zip.
   * List of [Environments](/articles/25_environments/01_environments_overview.md) and thier active status, as well as the option to switch to another environment.
   
 * **Security**, manage a user's access control and restrictions via the [Fabric credentials mechanism](/articles/17_fabric_credentials/01_fabric_credentials_overview.md):
