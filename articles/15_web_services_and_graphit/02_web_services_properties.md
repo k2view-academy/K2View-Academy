@@ -101,7 +101,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <tr>
 <td width="200pxl" valign="top"><p>Serialize null</p></td>
 <td width="700pxl" valign="top">
-    <p>If True, display fields with a null value in the reponse. Else, ignore fields with null values. The default is True.</p>
+    <p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
     </td>    
 </tr>    
 <tr>
