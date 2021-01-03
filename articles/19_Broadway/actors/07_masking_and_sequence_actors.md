@@ -19,9 +19,9 @@ The **MaskingSequence** Actor, which also belongs to the **masking** category, g
 
 The common input arguments of the **masking** category of Actors are:
 
-* **maskingId**, a unique masking identifier used to generate a target value. Since the same Actor can be used in several flows of the same project, use this parameter to refer to the same cache.
-* **useExecutionID**, indication whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is running. Keep the setting as **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
-* **hashedInputValue**, indication whether to store the original or the hashed value. By default the hashed value is stored. Set to **false** when it is required to disable caching and store the original value.
+* **maskingId**, a unique masking identifier used to generate a target value. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache.
+* **useExecutionID**, indication whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is running. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
+* **hashedInputValue**, indication whether to store the original or the hashed input value. By default the hashed value is stored. Set to **false** when it is required to disable caching and store the original value.
 * **interface**, set this input argument to the interface to be used to cache the masked values. Cassandra or in-memory interfaces should be used for this purpose. 
   * When the Cassandra interface is set, the Cassandra **masking_cache** and **uniqueness** tables under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) are used to cache the masked values and to enable their uniqueness when required. The data kept in these tables reflects the setting in the Actor's input arguments.
 * **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **maskingId** and Execution ID. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
@@ -49,4 +49,4 @@ The following example shows how to use a **MaskingSequence** Actor to generate a
 
 
 
-[![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_guide.md)s
+[![Previous](/articles/images/Previous.png)](06_error_handling_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_sequence_implementation_guide.md)
