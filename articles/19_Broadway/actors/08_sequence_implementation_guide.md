@@ -37,7 +37,7 @@ Broadway supports various ways how the sequence can be mapped. The following use
 
 * Simple mapping from the old to the new value.
 
-  ![image](../images/99_actors_08_ex_4.png)
+  ![image](../images/99_actors_08_ex_4.PNG)
 
 * Set the sequence as part of the attribute list. To do so, generate the sequence and then create the concatenated attributes list using the **JavaScript** Actor.
 
