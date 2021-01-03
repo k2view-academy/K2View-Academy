@@ -29,7 +29,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands">Get LUI</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Get an <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> into Fabric.</p>
@@ -62,7 +61,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-settings">Fabric Settings</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Session and cluster levels settings.</p>
@@ -71,7 +69,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-security-and-credentials">Fabric Security and Credentials</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Set the Master Key for an LUI or the encryption details of an interface.</p>
@@ -81,7 +78,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-deployment--deploy-and-drop-commands">Fabric Deployment and Drop</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Deploy and drop Fabric implementation commands.</p>
@@ -90,7 +86,6 @@ For example:
 <tr>
 <td width="350pxl">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-environments-and-interfaces">Fabric Environments and Interfaces</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Deploy environments and test connections on an active environment.</p>
@@ -99,7 +94,7 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
-<p>&nbsp;</p>
+
 </td>
 <td width="550pxl" valign="top">
 <p>Run CQL queries on Cassandra.</p>
@@ -132,7 +127,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#execution-monitoring">Execution Monitoring</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Trace Fabric operations and write the results to trace files.</p>
@@ -149,7 +143,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-transactions">Fabric Transactions</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Support transactions to update LUI or Reference table data (Fabric as the System of Record).</p>
@@ -166,7 +159,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-broadway">Fabric Broadway</a></p>
-<p>&nbsp;</p>
 </td>
 <td width="550pxl" valign="top">
 <p>Run Broadway flow.</p>
@@ -175,7 +167,7 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
-<p>&nbsp;</p>
+
 </td>
 <td width="550pxl" valign="top">
 <p>Use EXPLAIN and EXPLAIN QUERY PLAN to analyze SQL queries on Fabric data.</p>
