@@ -65,7 +65,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <li>wsGetCustomerInfo version is set to 1.</li>
 <li>wsGetCustomerInfoDev&nbsp;version is set to 2.</li>
 </ul>
-<p>The path is defined as follows:</p>
+<p>For example:</p>
 <p>http://localhost:3213/api/v1/getCustomerInfo?token=t1&amp;format=json&amp;customerId=543; When the above URL is run it invokes wsGetCustomerInfo. When the URL version is modified from v1 to v2, wsGetCustomerInfoDev is invoked.</p>
 </td>
 </tr>
@@ -78,6 +78,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <li><strong>POST</strong>, create new data based on the data provided.&nbsp;</li>
 <li><strong>PUT</strong>, update data.&nbsp;</li>
 <li><strong>DELETE</strong>, delete data.</li>
+ </ul> 
 <p>To select a method, click the dropdown list and enable it. Note that at least one method should be selected.</p>
 </td>
 </tr>
