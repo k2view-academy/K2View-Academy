@@ -420,7 +420,7 @@ The values are kept in the Cassandra **global_settings** table under [k2system k
 #### Fabric Security Commands
 
 - Master key generation commands used to encrypt LUI data and to encrypt an [interface’s](/articles/05_DB_interfaces/01_interfaces_overview.md) details.\
-  Click for more information about Fabric Security Hardening.
+  [Click](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) for more information about Fabric Security Hardening.
 
 - Fabric Credentials Commands, a list of commands for setting Fabric credentials like, users, roles, tokens or permissions.
 
