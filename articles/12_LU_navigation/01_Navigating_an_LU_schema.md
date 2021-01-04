@@ -24,6 +24,8 @@ The Navigation pane in the right corner of an [LU schema](/articles/03_logical_u
 
 ![image](/articles/12_LU_navigation/images/10_01_02.jpg)
 
+To hide the Navigation Pane use the context menu and uncheck the Show Overview Control. Studio lets you to reveal it back when needed via the context menu on the Working Area. 
+
 ### What are the LU Working Area View Options?
  
 LU Tables relationship options:\
