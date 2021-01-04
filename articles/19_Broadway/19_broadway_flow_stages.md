@@ -101,20 +101,6 @@ Depending on the flow's input, the execution can run via one of four alternative
 
 ![image](images/99_19_cond_example_2.png)
 
-### Support Parallel Actors Execution
-
-Broadway enables running several Actors of the same Stage in parallel. 
-
-To define the parallel execution, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Parallel** to populate the number of parallel threads. Once submitted, the orange marking is displayed above the Stage name:
-
-<img src="images/99_19_parallel_01.PNG" alt="Parallel" />
-
-To remove the parallel execution, click ![image](images/99_19_dots.PNG) > **Parallel** and set the number to zero. 
-
-**Example**
-
-The following example displays a flow with two Inner Flows on Stage 2 that are executed in parallel.
-
-<img src="images/99_19_parallel_02.PNG" alt="Parallel" />
+### 
 
 [![Previous](/articles/images/Previous.png)](18_broadway_flow_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21_iterations.md)

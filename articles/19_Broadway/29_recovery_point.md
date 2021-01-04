@@ -50,5 +50,5 @@ The **RecoveryInfo** Actor can be used to receive the recovery information, such
 
 
 
-[![Previous](/articles/images/Previous.png)](28_actor_editor.md)
+[![Previous](/articles/images/Previous.png)](28_actor_editor.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](30_support_parallel_execution.md)
 

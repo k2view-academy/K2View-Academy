@@ -27,5 +27,6 @@
 <li><a href="27_broadway_data_inspection.md">Broadway Data Inspector</a></li>
 <li><a href="28_actor_editor.md">Actor Editor</a></li>
 <li><a href="29_recovery_point.md">Recovery Point</a></li>
+<li><a href="30_support_parallel_execution.md">Support Parallel Execution</a></li>
 </ul>
 

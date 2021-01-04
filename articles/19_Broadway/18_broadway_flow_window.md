@@ -89,33 +89,28 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
-
-
-
-
-
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
 
 To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the right corner of the Stage. This menu is dynamic, whereby some items are displayed only when they are applicable to the selected Stage. 
 
-<table style="width: 900px">
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="15" width="380pxl">
+<td rowspan="15" width="360pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
 <td width="120pxl">Paste Selection</td>
-<td width="400pxl">Paste the copied selection, for example an Actor from another Stage.</td>
+<td width="420pxl">Paste the copied selection, for example an Actor from another Stage.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a></td>
-<td style="height: 18px; width: 381px;">Add a new Stage after the selected one.</td>
+<td style="height: 18px; width: 174px;">Collapse</td>
+<td style="height: 18px; width: 381px;">Collapse the Stage.</td>
 </tr>
 <tr>
-<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
-<td style="width: 381px; height: 18px;">Add a new Stage before the selected one.</td>
+<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a> / <a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
+<td style="width: 381px; height: 18px;">Add a new Stage after or before the selected one.</td>
 </tr>
 <tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
@@ -150,7 +145,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <td style="width: 381px; height: 54px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
-<td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#support-parallel-actors-execution">Parallel</a></td>
+<td style="height: 36px; width: 174px;"><a href="30_support_parallel_execution.md">Parallel</a></td>
 <td style="width: 381px; height: 36px;">Click to set a number of Actors to be run parallelly within a Stage. When set, displays the number of parallel threads.</td>
 </tr>
 <tr>
@@ -167,12 +162,6 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
 
 ### Actor Context Menu
 
@@ -225,12 +214,6 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
 ### Actor Properties Window
 
 The Actor's Properties in the Broadway flow window dynamically adjusts its layout to display data based on the structure of the selected Actor. For example, the number of input and output parameters, their data types and default values. To hide the Properties window, click anywhere in the empty Stage area. 
