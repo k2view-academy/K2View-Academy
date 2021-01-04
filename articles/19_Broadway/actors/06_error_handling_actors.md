@@ -14,6 +14,13 @@ The following example shows how to use an **ErrorHanlder** Actor as an error han
 
 ![image](../images/99_actors_06_1.PNG)
 
+The following example shows how you can handle different kind of errors whereby the error handling is performed according to the order of the Actor's execution.
+
+* Suppress the **Unique Constraint** SQL error
+* Call the **dbCommandFlow** [Inner Flow](../22_broadway_flow_inner_flows) on any other exception.
+
+![image](../images/99_actors_06_3.PNG)
+
 ### How Do I Use the ErrorFields Actor?
 
 The **ErrorFields** Actor can be used to get detailed information about an exception. The Actor can be used either as an error handler or as a regular Actor in an inner flow to access error information. The **ErrorFields** Actor always suppresses exceptions. 
