@@ -7,6 +7,12 @@ Before starting the Deployment process on a project, check that the target Fabri
 
 Note that to **force the sync** of the LU Instances after deployment, check [Force Upgrade Post Deploy]((/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox) ) in the **Server Configuration** window.
 
+### Auto Deploy to Debug
+
+The Fabric Studio **Auto Deploy** capability performs the automatic deployment of the code changes to debug while debugging various components, such as the Data Viewer, LU Schema, Broadway, Broadway as population, Parser and GraphIt. 
+
+This reduces frictions while debugging and released the user from doing the manual deployment upon each code change.
+
 ### How Do I Deploy a Fabric Object from the Fabric Studio?  
 
 The following steps must be performed in the Fabric Studio for each deployed object, [Logical Unit](/articles/03_logical_units/01_LU_overview.md), [Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md), [Broadway flow](/articles/19_Broadway/01_broadway_overview.md), [Graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md) or Reference table.
