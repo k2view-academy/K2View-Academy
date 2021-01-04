@@ -4,7 +4,7 @@
 
 In this example you can either use the **CheckNegative** Broadway flow you created in [Example 2 - Inner Flow and Error Handling](16_broadway_addl_features_ex2.md) or create a new flow.
 
-The purpose of **CheckNegative** flow is to validate if the input is a negative number or not. In case of a negative number return the current date, otherwise throw an error message.
+The purpose of **CheckNegative** flow is to validate if the input is a negative number or not. In case of a positive number return the current date, otherwise throw an error message.
 
 1. Deploy an LU that includes the flow definitions. 
    * If the flow is created under Shared Objects, deploy any LU, for example CRM LU.
