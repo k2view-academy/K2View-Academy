@@ -2,11 +2,11 @@
 
 Broadway enables running several Actors of the same Stage in parallel.
 
-To define the parallel execution, click ![image](C:\K2View-Academy\articles\19_Broadway\images\99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Parallel** to populate the number of parallel threads. Once submitted, the orange marking is displayed above the Stage name:
+To define the parallel execution, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Parallel** to populate the number of parallel threads. Once submitted, the orange marking is displayed above the Stage name:
 
-<img src="C:\K2View-Academy\articles\19_Broadway\images\99_19_parallel_01.PNG" alt="Parallel" />
+<img src="images/99_19_parallel_01.PNG" alt="Parallel" />
 
-To remove the parallel execution, click ![image](C:\K2View-Academy\articles\19_Broadway\images\99_19_dots.PNG) > **Parallel** and set the number to zero. 
+To remove the parallel execution, click ![image](images/99_19_dots.PNG) > **Parallel** and set the number to zero. 
 
 ### Parallel Execution Examples
 
