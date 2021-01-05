@@ -19,7 +19,7 @@ To implement the above use cases, set the unique **maskingId** and populate it o
 
 The sequence next value method depends on where the sequence is managed. It is determined by the **sequenceInterface** setting. The following use cases are supported:
 
-* In-memory or Redis, useful to testing purpose only since it can be used only by a single node configuration.
+* IN-MEMORY or Redis, useful for testing purpose only since it can be used only by a single node configuration.
 * DB sequence. To implement it, set the **maskingId** to the sequence name that is defined in the **sequenceInterface** DB.  
 
 ### Sequence Initiation Method
