@@ -18,7 +18,7 @@ The following example displays a flow with two Inner Flows on Stage 2 that are e
 
 ##### Example 2 - Read and Update LUI
 
-The following example displays a flow which synchronizes an LUI into the Fabric, then reads from two different LU tables in parallel and writes into two different LU tables in parallel. 
+The following example displays a flow which synchronizes an LUI into Fabric, then reads from two different LU tables in parallel and writes into two different LU tables in parallel. 
 
 <img src="images/99_19_parallel_03.PNG" alt="Parallel" />
 
