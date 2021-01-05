@@ -282,6 +282,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 </td>
 <td style="height: 184px; width: 317px;" rowspan="4" valign="top">
 <p>Tables that support Broadway masking mechanism.</p>
+<p>The <strong>k2masking</strong> keyspace can be created using the installation SQL script provided as part of the Masking library.</p>
 <p><a href="/articles/19_Broadway/actors/07_masking_and_sequence_actors.md">Click for more information about Broadway Masking.</a></p>
 </td>
 <td style="height: 46px; width: 209px;" valign="top">
@@ -317,6 +318,7 @@ The following table lists the Cassandra keyspaces created by Fabric:
 </tr>
 </tbody>
 </table>
+
 
 
 
