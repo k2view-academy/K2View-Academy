@@ -26,6 +26,6 @@ The following example displays a flow which synchronizes an LUI into the Fabric,
 
 The following example of performing two GET Instance commands in parallel is invalid. The attempt to execute the flow causes an exception. 
 
-<img src="images/99_19_parallel_04.png" alt="Parallel" />
+<img src="images/99_19_parallel_04.PNG" alt="Parallel" />
 
 [![Previous](/articles/images/Previous.png)](29_recovery_point.md)
