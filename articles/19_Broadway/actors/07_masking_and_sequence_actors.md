@@ -30,7 +30,7 @@ The common input arguments of the **masking** category of Actors are:
 
 The following input arguments are specific to the **MaskingSequence** Actor:
 
-* **sequenceInterface**, the interface where the sequence is defined. The **MaskingSequence** Actor's **maskingId** setting holds the sequence name and must be defined in the **sequenceInterface** setting.
+* **sequenceInterface**, the interface where the sequence is defined with the name stored in the **maskingId** input argument.
 * **initialValue** and **increment**, define the initial value of the sequence and the value of the increment. 
 
 ### How Do I Mask Data using Masking Actors?
