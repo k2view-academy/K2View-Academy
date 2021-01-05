@@ -18,14 +18,14 @@ The following example displays a flow with two Inner Flows on Stage 2 that are e
 
 ##### Example 2 - Read and Update LUI
 
-The following example displays a flow which synchronizes an LUI into the Fabric, reads from two different LU tables and writes into two different LU tables in parallel. 
+The following example displays a flow which synchronizes an LUI into the Fabric, then reads from two different LU tables in parallel and writes into two different LU tables in parallel. 
 
 <img src="images/99_19_parallel_03.PNG" alt="Parallel" />
 
 ##### Example 3 - Invalid Use of Parallel Execution
 
-The following example of getting two instance IDs of the same LU is the invalid use of the parallel execution. The attempt to execute it causes an exception. 
+The following example of performing two GET Instance commands in parallel is invalid. The attempt to execute the flow causes an exception. 
 
-<img src="images/99_19_parallel_04.PNG" alt="Parallel" />
+<img src="images/99_19_parallel_04.png" alt="Parallel" />
 
 [![Previous](/articles/images/Previous.png)](29_recovery_point.md)
