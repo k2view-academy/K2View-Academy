@@ -69,6 +69,7 @@ The flows will include the following steps:
 
     * Set the **interface** input argument to **fabric** and the **command** to **insert**. 
     * Create a  **ACT_SUM** common table in Fabric with the following columns: CUSTOMER_ID, NUM_OF_ACTIVITIES, SUMMARY_DATE, ACTIVITY_SUMMARY. 
+    * Deploy the References LU to debug.
     * Set this table in the **table** input argument. After the table is selected, its columns are added to the Actor's input arguments.
     *  Rename the Actor to the **ACT_SUM** Actor.
 
