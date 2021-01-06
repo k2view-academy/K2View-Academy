@@ -126,12 +126,12 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>activities</td>
-<td>TDM activities log.</td>
+<td>TDM activities log. A new record is created on each TDM activity and specifies the activity datetime, user, activity type (create or update), impacted TDM component and activity description.  </td>
 <td>TDM Activities</td>
 </tr>
 <tr>
 <td><h4>environments</td>
-<td>TDM environments.</td>
+<td>TDM source and target environments. Each record contains the environment name, environment type (source, target, or both), and the environment name in Fabric.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
@@ -141,7 +141,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>environment_products</td>
-<td>List of products (applications) attached to each LU.</td>
+<td>List of products (applications) attached to each LU. The connection details of the environments interfaces are defined and saved in Fabric.</td>
 <td>TDM Environments</td>
 </tr>
 <tr>
