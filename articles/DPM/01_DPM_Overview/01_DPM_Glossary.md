@@ -40,7 +40,7 @@
   <h4><p><strong>CCPA</strong></p></h4>
 </td>
 <td width="516">
-<p>California Consumer Privacy Act.</p>
+<p>California Consumer Privacy Act</p>
 </td>
 </tr>
 <tr>
