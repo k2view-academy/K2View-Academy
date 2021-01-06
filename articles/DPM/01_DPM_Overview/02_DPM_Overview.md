@@ -1,6 +1,6 @@
 # K2View DPM Overview
 
-The Data Privacy Management module provides a company with the tools it requires to configure, manage, and audit the data subject requests which are associated with data privacy regulations such as GDPR, CCPA, LGPD, and many others.
+The Data Privacy Management module provides a company with the tools it requires to configure, manage, and audit the data subject requests which are associated with data privacy regulations such as GDPR, CCPA, LGPD, and many others.......
 
 K2View’s DPM is a configurable, flexible system which allows each company to define the regulations it supports, the types of requests to which it attends, procedures for fulfilling each request, and other aspects associated with compliance to the various Privacy legislations.
 
