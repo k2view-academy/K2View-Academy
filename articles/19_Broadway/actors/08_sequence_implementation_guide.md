@@ -6,7 +6,7 @@ This article describes the most useful use cases of sequence implementation by B
 
 ### Sequence Caching
 
-A common scenario of sequence implementation is when the same sequence needs to be used per entity and be executed across several flows. The following use cases of sequence caching are supported:
+A common scenario of sequence implementation is when the same sequence needs to be used per entity across several flows during the same execution. The following use cases of sequence caching are supported:
 
 * Using a sequence across several tables of the same LU. For example, Customer ID is a sequential field in the CUSTOMER LU and is populated in several LU tables such as CUSTOMER and SUBSCRIBER. 
 * Using a sequence across different LUIs within the same LU. For example, the same ADDRESS ID can be used for different customers during the same execution.
@@ -17,9 +17,9 @@ To implement the above use cases, set a unique **maskingId** and populate it on 
 
 ### Sequence Next Value
 
-The implemented Sequence Next Value method depends on where the sequence is managed and is determined by the **sequenceInterface** setting. The following use cases are supported:
+The sequence next value implementation method depends on where the sequence is managed that is defined by the **sequenceInterface** setting. The following use cases are supported:
 
-* IN-MEMORY or Redis, useful for testing purposes only since it can be used only in a single node configuration.
+* IN-MEMORY or Redis, useful for testing only since it can be used only in a single node configuration.
 * DB sequence. To implement it, set the **maskingId** to the sequence name defined in the **sequenceInterface** DB.  
 
 ### Sequence Initiation Method
