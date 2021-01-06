@@ -39,7 +39,7 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_4.PNG)
 
-* Set the sequence as part of the attribute list. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
+* Set the sequence as part of the attributes list. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
 
   ![image](../images/99_actors_08_ex_2.png) 
 
@@ -51,15 +51,15 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_5.png)
 
-* Replace the IID by with a new sequence. This use case is the same as mapping the old value to the new one.
+* Replace the IID with a new sequence. This use case is the same as mapping the old value to the new one.
 
   ![image](../images/99_actors_08_ex_6.png)
 
-* When parent-child relationships exist across Logical Units, the same sequence can exist in both parent and children. The updated flow can be executed on the parent LU to add a child sequence. For example, the Customer LU is a parent while the Order LU is a child. After the population of both Customer and Order LUs is completed, update the Customer LU with the sequence from the Order LU.
+* When parent-child relationships exist across Logical Units, the same sequence can exist in both the parent and children. The updated flow can be executed on the parent LU to add a child sequence. For example, the Customer LU is a parent while the Order LU is a child. After the population of both the Customer and Order LUs is completed, update the Customer LU with the sequence from the Order LU.
 
 * Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), for example for reporting purposes. 
 
-* Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of TDM7 implementation. <!--add link to TDM7-->
+* Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the TDM7 implementation. <!--add link to TDM7-->
 
 
 
