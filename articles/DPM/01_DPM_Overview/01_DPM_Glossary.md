@@ -8,7 +8,7 @@
 <p><strong>Item</strong></p>
 </td>
 <td width="516">
-<p><strong>Descriptions</strong></p>
+<p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
@@ -16,7 +16,7 @@
   <h4><p><strong>DPM</strong></p></h4>
 </td>
 <td width="516">
-<p>Data Privacy Management system.</p>
+<p>Data Privacy Management system</p>
 </td>
 </tr>
 <tr>
@@ -24,7 +24,7 @@
   <h4><p><strong>DSR</strong></p></h4>
 </td>
 <td width="516">
-<p>Data Subject Request.</p>
+<p>Data Subject Request</p>
 </td>
 </tr>
 <tr>
@@ -32,7 +32,7 @@
   <h4><p><strong>GDPR</strong></p></h4>
 </td>
 <td width="516">
-<p>General Data Protection Regulation – The European Union regulation.</p>
+<p>General Data Protection Regulation – European Union regulation</p>
 </td>
 </tr>
 <tr>
@@ -48,7 +48,7 @@
   <h4><p><strong>LGPD</strong></p></h4>
 </td>
 <td width="516">
-<p>Brazil’s General Data Protection law.</p>
+<p>Brazil’s General Data Protection law</p>
 </td>
 </tr>
 </tbody>
