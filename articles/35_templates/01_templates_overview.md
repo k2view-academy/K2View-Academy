@@ -1,21 +1,23 @@
 # Templates Overview
 
-Templates are ready made Fabric objects that can be used by implementers instead of building them from scratch. 
+Templates are ready made Fabric objects that can be used throughout a project rather than having to build them from scratch. 
 
-* Having a defined structure already built is extremely cost effective rather than having to rebuild objects over again.
+* Having a defined structure already built saves time and offers increased efficiency when creating objects
 * Using templates can reduce implementation mistakes as they adopt and embed the right methodologies and Fabric best practices.
 
-Templates can be used for various purposes among the following objects which managed  by Fabric:  Broadway flows and actors, Java files,  Graphit and Data Catalog.
+Templates can be used for various purposes in Broadway flows and Actors, Java files, Graphit and the Data Catalog.
 
-While templates can be useful for many scenarios, TDM is a good example where it heavily been in use. At TDM Broadway flows are created for transferring data from LU tables into target tables. Instead of creating manually such flows, which shall fulfill same or almost the same task, templates are used with just populating the specific target tables and interfaces.
+Fabric Templates support using placeholders for smoother and smarter reuse. When selecting a template, the user populates the template’s placeholder so that the new object is auto-generated based on the template.
 
-Fabric Templates support **placeholders’** usage for smoother and smarter reuse. Using placeholders is a better way than using copy-and-paste because it automates all places needed to be changed, preventing by that mistakes.
-
-Templates can be created per LU or can be part of the shared objects. Once a template is set, it is available at the required target location in the Fabric Studio Tree. On selecting the required template implementer shall populate the template’s placeholders, if exist, and then the new object is auto generated, based on the template.
-
-   
+The integrated Templates engine has powerful capabilities such as iteration over lists, conditions and lookup expressions. 
 
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_.md)  
+While templates can be useful for many scenarios, TDM is a good example where this capability is heavily been in use. At TDM Broadway flows are created for transferring data from LU tables into target tables. Instead of creating manually a flow for each of the LU tables, that get its data and load it to the target,  templates are used where only source table, target tables and interfaces shall be supplied.   
+
+
+
+
+
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_create_and_edit_template.md)  
 
