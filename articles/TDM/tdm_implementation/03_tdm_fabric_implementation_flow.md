@@ -6,7 +6,7 @@ The TDM implementation on Fabric involves several steps. The following illustrat
 
 Fabric TDM projects consists on the following parts:
 
-- TDM Utilities: TDM Web-Services and [TDM LU].
+- TDM Utilities: TDM Web-Services and [TDM LU](04_fabric_tdm_library.md#tdm-lu).
 -  Logical Units: model the TDM entities and their related data to LUs such as Customer, Billing, Ordering, etc ..
 - Broadway Flows: define the Broadway flows under each LU to delete or load the entities from the target environment.
 - Handle special cases: reference handling,  post execution processes such as sending a mail in the end of the task execution, masking sensitive data...
