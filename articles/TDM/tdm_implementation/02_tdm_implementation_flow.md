@@ -2,7 +2,7 @@
 
 A TDM implementation involves several steps. The following illustration displays the main ones:
 
-[<img src="images/tdm_implementation_flow_step1.png" alt="drawing" width="170pxl"/>](03_tdm_fabric_implementation_flow.md)[<img src="images/tdm_implementation_flow_step2.png" alt="drawing" width="170pxl"/>](/articles/TDM/tdm_user_setup/01_tdm_fabric_credentials_setup.md)[<img src="images/tdm_implementation_flow_step4.png" alt="drawing" width="170pxl"/>](/articles/TDM/tdm_gui/01_tdm_gui_admin_activities.md)
+[<img src="images/tdm_implementation_flow_step1.png" alt="drawing" width="200pxl"/>](03_tdm_fabric_implementation_flow.md)[<img src="images/tdm_implementation_flow_step2.png" alt="drawing" width="200pxl"/>](/articles/TDM/tdm_user_setup/01_tdm_fabric_credentials_setup.md)[<img src="images/tdm_implementation_flow_step4.png" alt="drawing" width="200pxl"/>](/articles/TDM/tdm_gui/01_tdm_gui_admin_activities.md)
 
 
 
