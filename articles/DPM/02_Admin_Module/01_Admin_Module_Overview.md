@@ -4,17 +4,21 @@
 
 **Overview**
 
-The Admin module controls the definitions of which regulations are covered by the DPM, the Activities that are supported for each regulation, the Flows that are executed, user and role management, consent management, and more.
+The Admin module provides the means to:
+- Define regulations covered by the DPM
+- Direct the Activities supported for each regulation 
+- Execute the Flows for the Activities 
+- Manage user roles and customer consent, and more.
 
 **Admin Menu options**
 
-Once a user logs into the DPM system as Administrator, the Admin menu options are presented on the left side of the screen, and the list of Regulations is presented in the center. 
+Once a user logs into the DPM system as Administrator, the screen is updated with two frames (windows) of information. The left frame displays a list of Admin menu options for this module.  The right frame displays the Regulations list.   
 
 ![image](/articles/DPM/images/figure_2_admin_module.png)                           
 
 
 
-By using the Menu on the left side of the window, the Administrator can access any of the DPM configuration options. The details for each of those options is described in this chapter.
+From the left window (frame), the Administrator can access the available DPM configuration options. The details for each option are described in the next section, <i>DPM Configuration</i>.
 
 
 
