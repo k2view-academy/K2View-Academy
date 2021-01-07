@@ -3,12 +3,12 @@
 A Flow is an entity that defines the sequence of actions to be executed in order to fulfill a specific DPM request type. For example, the actions to fulfil the request to “get my data” or “forget me”. 
 Flow is the main component in the DPM request definition and can be viewed as the “brain” of a DPM request. 
 
-A Flow is composed of Stages, and Stages include one or multiple tasks in them. 
+A Flow is composed of <i>Stages</i>, and Stages include one or multiple tasks. 
 
-Once a Flow’s configuration is complete, it can be linked to a DPM Activity. From that moment on, any time a customer request for this Activity is processed, the execution will follow the stages and tasks defined in this Flow.  
+Once a Flow’s configuration is complete, it can be linked to a DPM Activity. From that point on, any time a customer request for this DPM Activity is processed, the stages and tasks defined in this Flow are followed.  
 
-The Admin can view the list of existing flows by selecting the “Flows List” menu option at the left side of the application screen. 
-The screen that is presented allows the Admin to search for a specific Flow, review any of the Flows, and create a new Flow.
+The Admin can view the list of existing flows by selecting the “Flows List” menu option at the left frame of the application screen. 
+The right frame displays the details for each listed flow and allows the Admin to search for a specific Flow, review any particular flow, and create a new Flow.
 
 ## Flows List
 
