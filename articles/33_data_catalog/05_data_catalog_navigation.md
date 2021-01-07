@@ -81,10 +81,9 @@ The following tools are used to navigate the Data Catalog:
   ![image](images/33_01_tree.PNG)
 
   * Click to display the tree <img src="images/33_H.png" alt="image" style="zoom: 67%;" /> horizontally, <img src="images/33_V.png" alt="image" style="zoom: 67%;" /> vertically or <img src="images/33_center.png" alt="image" style="zoom: 67%;" />centered.
-  * Click <img src="images/33_T.PNG" alt="image" style="zoom: 67%;" />to display a set of tables that include the graph data.
   * Click <img src="images/33_02_fit.PNG" alt="image" style="zoom: 67%;" /> to fit the tree to the screen.
   * Click <img src="images/33_02_home.PNG" alt="image" style="zoom: 67%;" /> to return to the collapsed project.
-
+  
 * Move to lower hierarchy level by double-clicking the data element. For example, double click the Table data element to display all related Column data elements.
 
 * Click any data element or connection line to display its properties, such as name, ID or type in the Properties screen. Click anywhere in the empty screen area to hide the Properties screen.
@@ -92,6 +91,10 @@ The following tools are used to navigate the Data Catalog:
 * Expand the tree, focus on a specific node or clear the node or the connection line by selecting the option either from the Properties screen or from the right click context menu. To clear multiple data elements, click and hold the mouse and then drag the line selecting the required elements.
 
   <img src="images/33_02_select.PNG" alt="image" style="zoom: 55%;" />
+
+* Click <img src="images/33_T.PNG" alt="image" style="zoom: 67%;" />to switch from a tree view to a table view. The graph data is converted into a set of tables. Each table represents a data type with its properties. The table view enables exporting the data into Excel, changing the focus and displaying the links.
+
+  ![image](images/33_02_table.PNG)
 
   
 
