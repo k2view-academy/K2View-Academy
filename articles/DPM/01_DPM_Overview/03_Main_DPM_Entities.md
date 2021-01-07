@@ -12,7 +12,7 @@ An example of the relation between the above entities is depicted in the followi
 
 ​                
 
-![Flowchart](/articles/DPM/images/entities.png)
+![Flowchart](/articles/DPM/images/entities1.png)
 
 
 
