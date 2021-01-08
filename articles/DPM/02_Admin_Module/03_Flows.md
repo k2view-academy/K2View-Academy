@@ -16,41 +16,38 @@ The list of existing Flows provides the high-level information about each of the
 
  ![image](/articles/DPM/images/Figure_4_Flows_List_screen.png)
 
-In this screen, the information about each Flow includes: 
+The preceding figure is an example of listed flows. Information about each Flow includes:  
 
-- Name: The Flow name.
-- Description: describes the purpose of this Flow.
+- Name: The Flow name
+- Description: Identifies the purpose of this Flow
 - Version: A Flow may have more than one version. All versions are presented.
-- Status: A Flow is created as a Draft, and then changed into Completed. Only Draft Flows can be altered.
+- Status: A Flow is created as a <i>Draft</i>, and then changed into <i>Completed</i>. Only Draft Flows can be altered. Completed Flows cannot be changed and are  assigned to Activities.
+- Regulation/Activity: List of all the Activities that use this Flow.
+- Actions: Provide the option to delete a Flow. 
 
-Only Completed Flows can be assigned to Activities.
-
-- Regulation/Activity: List of all the Activities that uses this Flow.
-- Actions: provide the option to delete a Flow. 
-
-The following sections provide some additional information about the options and data in the “Flows List” screen. 
+The following sections provide additional information about the options and data in the “Flows List” screen. 
 
 ### View Flow Details
 
-To view the details of a specific Flow, select the table line of the Flow, and the Flow details screen will be presented.
+View the details of a specific Flow by clicking the desired line of information displayed.
 
 ### Delete a Flow
-
-To delete a Flow, click on the delete (x) button under the Action column. Only Flows that are not linked to an Activity can be deleted.
+ 
+Delete a Flow by selecting the "x" (Delete) button under the <i>Actions</i> column. Only Flows not linked to an Activity can be deleted.
 
 ### Flow Status
 
-Flow Status - When a new Flow is created, its status is defined as Draft. In this status, the DPM Administrator can perform any configuration on this Flow, such as creating new stages, adding new tasks, etc.  
-Once the Administrator completes the configuration, the Flow is marked as Completed. Marking the Flow as Completed blocks further changes to the Flow. Afterward, this Flow can be linked to a DPM Activity so that it can be executed as part of a DPM fulfillment process. The same Flow can be linked to more than one DPM Activity. 
+Flow Status - When a new Flow is created, its status is defined as <i>Draft</i>. In this status, the DPM Administrator can perform any configuration on this Flow; such as creating new stages, adding new tasks, etc.  
+Once the Administrator completes the configuration, the Flow is marked as <i>Completed</i>. Marking the Flow as Completed blocks further changes to the Flow. At this point, this Flow can be linked to a DPM Activity for execution as part of a DPM fulfillment process. The same Flow can be linked to more than one DPM Activity. 
 
 ### Flow Version
 
-Any Flow can have multiple versions. A new version should be created when a change to an existing Completed Flow is required. The version number is determined by the Administrator when the new Flow version is created. Creating a new version of a Flow is described in the sub-chapter about the “Flow Details” screen.
+Any Flow can have multiple versions. A new version should be created when a change to an existing Completed Flow is required. The version number is determined by the Administrator at the time the Flow is created.  Creating a new version of a Flow is described in the section “Flow Details."
 
 ### Create New Flow
 
-The Administrator can create a new Flow by using the “Add a Flow” button on the top-right corner of the screen. 
-The Administrator is then prompted to define the Flow name, version, and description:
+The Administrator creates a new Flow by selecting the “Add a Flow” button at the top-right corner of the screen. 
+The Administrator is then prompted to define the Flow name, version, and description, as shown by the next image and defined by the subsequent table.
 
  ![image](/articles/DPM/images/Figure_5_New_Flow.png)
 
@@ -75,7 +72,7 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 <p>M</p>
 </td>
 <td width="785">
-<p>The name of this Flow.</p>
+<p>The name of this Flow</p>
 </td>
 </tr>
 <tr>
@@ -105,9 +102,9 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 </tr>
 </tbody>
 </table>
-
-Once the Flow information is defined and the new Flow is saved, the system presents the Flow Editing screen, where the Administrator can add Stages and Tasks under those Stages. 
-The Flow name and the Flow description can be updated at any  time, by using the edit icon next to the Flow name.
+ 
+Once the Flow information is defined and the new Flow is saved, the system displays the "Flow Editing screen." The Administrator can add Stages and Tasks under those Stages. 
+The Flow name and the Flow description can be updated at anytime by using the edit  icon next to the Flow name.
 
  ![image](/articles/DPM/images/Figure_6_Configuration_of_a_new_Flow_initial_screen.png)
 
