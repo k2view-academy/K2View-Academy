@@ -34,15 +34,19 @@ Graphit files can be generated either:
 Using *postman* (or any other similar tool), paste the POST link into the Query fieldand append the graphit parameter **&graphit=%7B%0%220%2...** (copied from from the GET URL) to the POST URL. 
 
 Example:
+
 ```http://localhost:3213/graphit?nullformat=json&luName=k2_ws&graphit=%7B%0%220%2...``` 
 
 
 6.  Test Graphit cURL
 
-Using a the cURL command of your shell environment type the following command, replacing the ```@myfile.graphit``` with the actual name and local path of the graphit file you wish to invoke. 
+Using a the cURL command of your shell environment type the following command, replacing the ```@myfile.graphit``` with the actual name and local path of the graphit file you wish to invoke.
+
 ``` curl -H "Content-Type: application/json" -d @myfile.graphit "http://localhost:3213/graphit?nullformat=json&luName=k2_ws" ```
 
+
 Example:
+
 ```curl -H "Content-Type: application/json" -d @C:\Users\DaniellaDavis\Downloads\graphit_file.graphit.graphit "http://localhost:3213/graphit?nullformat=json&luName=k2_ws"```
 
 
