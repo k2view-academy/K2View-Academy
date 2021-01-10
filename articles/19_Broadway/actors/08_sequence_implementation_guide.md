@@ -1,6 +1,6 @@
 # Sequence Implementation Guide
 
-Broadway enables generating and setting new sequences before loading data into Fabric or a target database. Various sequence patterns can be implemented via the **MaskingSequence** Actor and other Broadway features.
+Broadway enables generating and setting new sequences before loading data into a target database. Various sequence patterns can be implemented via the **MaskingSequence** Actor and other Broadway features.
 
 This article describes the most useful use cases of sequence implementation by Broadway. 
 
@@ -11,16 +11,15 @@ A common scenario of sequence implementation is when the same sequence needs to 
 * Using a sequence across several tables of the same LU. For example, Customer ID is a sequential field in the CUSTOMER LU and is populated in several LU tables such as CUSTOMER and SUBSCRIBER. 
 * Using a sequence across different LUIs within the same LU. For example, the same ADDRESS ID can be used for different customers during the same execution.
 * Using a sequence across different LU types. For example, the same CUSTOMER ID can be used in a CUSTOMER LU and a Billing LU during the same execution.
-* Using a sequence across different DCs.
 
-To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** Actor everywhere the same sequence is used. Keep the **useExecutionID** as **true** in each Actor's settings.
+To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** Actor everywhere the same sequence is used. Keep the **useExecutionID** as **true** in each Actor's settings to generate a new masked value in each execution or set it to **false** to use the same masked value across different executions.
 
 ### Sequence Next Value
 
-The sequence next value implementation method depends on where the sequence is managed that is defined by the **sequenceInterface** setting. The following use cases are supported:
+The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. The following use cases are supported:
 
-* IN-MEMORY or Redis, useful for testing only since it can be used only in a single node configuration.
-* DB sequence. To implement it, set the **maskingId** to the sequence name defined in the **sequenceInterface** DB.  
+* IN-MEMORY, useful for testing only since it can be used only in a single node configuration.
+* Redis or DB sequence. To implement the DB sequence, set the **maskingId** to hold the sequence name defined in the **sequenceInterface** DB.  
 
 ### Sequence Initiation Method
 
@@ -39,11 +38,11 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_4.PNG)
 
-* Set the sequence as part of the attributes list. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
+* Set the sequence as part of the attributes list. The example of the attributes list can be a string which concatenates several pairs of key and value and the sequence is one of them. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
 
   ![image](../images/99_actors_08_ex_2.png) 
 
-* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the function are implemented in the same method as for an [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
+* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the function are implemented by the **MaskingLuFunction** Actor in the same manner as by the [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
 
   ![image](../images/99_actors_08_ex_3.png)
 
