@@ -17,7 +17,9 @@ The TDM relation tables keep the link between the parent ID to its children IDs.
 
 This table keeps the link between the parent-child **source IDs**. The relation is kept per source environment. In addition, each [DataFlux](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) extract task creates separate records in the TDM_LU_TYPE_RELATION_EID table with the version name and version date time of the extracted version of entities.
 
-This table is used to build a list of entities (entity inclusion) on the child LUs when executing a task. In addition this table is used to display the hierarchy of the processed entities by the task execution. 
+This table is used for the following:
+- Build the list of entities (entity inclusion) on the child LUs when executing the task (Extract or Load tasks). The TDM execution process gets the children entities of the parent entities, processed successfully by the task execution.
+- Display the hierarchy of the processed entities by the task execution. 
 
 #### Which Process Populates the TDM_LU_TYPE_RELATION_EID? 
 
