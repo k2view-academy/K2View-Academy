@@ -218,7 +218,7 @@ The TDM_TYPE_REL_TAR_EID is populated by [Broadway Flow] of the parent LU: this 
 
 Although the definition of the Business Entities is implemented in the TDM GUI, you must fulfill the following guidelines to support the parent-child LU hierarchy:
 
-- Populate [trnChildLink](/articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#trnchildlink)[translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). Note that a parent LU can have several children LUs. Populate a separate record on each child LU. 
+- Populate [trnChildLink](/articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#trnchildlink) [translation object](/articles/09_translations/01_translations_overview_and_use_cases.md). Note that a parent LU can have several children LUs. Populate a separate record on each child LU. 
 -  Add the **fnEnrichmentChildLink** function as enrichment function (in addition to **fnCheckInsFound**) to the root LU table: FABRIC_TDM_ROOT. The enrichment function runs the sql queries populated in the **trnChildLink** translation, on the LU data an  populates [TDM_LU_TYPE_RELATION_EID](/articles/TDM/tdm_architecture/02_tdm_database.md#tdm_lu_type_relation_eid)  table in the TDM DB by the link of the parent IID to its children IIDs.
 
 
