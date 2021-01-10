@@ -10,7 +10,7 @@ This article discusses the following:
 - Deploying Java JAR libraries in the server. 
 - Step-by-step example.
 
-### How Do I Use a New Library
+### How Do I Use a New Library?
 
 #### Development and Debug Stage
 1. Save the JAR file in the lib **root** directory in the **[Fabric Projects Directory]\\[Project Name]\lib** folder. Make sure not save the JAR file in the subdirectories since this has an impact when exporting the project. 
@@ -49,7 +49,7 @@ For example:
    ![image](images/external_lib.png)
 
    Note that JAR is highlighted in yellow.
-   
+
 3. Restart the Fabric local server or reopen the project.
 
 4. Create a new enrichment function named **E164PhoneFormat** in the **CUSTOMER** LU: 
@@ -87,7 +87,7 @@ For example:
      \* Note that the COUNTRY_CODE is defined in [Fabric Globals](/articles/08_globals/01_globals_overview.md).  
 
 
-Asociate the enrichment function to the **CONTRACT** table and then deploy the **CUSTOMER** LU. Search for customer "55" via the the Data Viewer:
+Associate the enrichment function to the **CONTRACT** table and then deploy the **CUSTOMER** LU. Search for customer "55" via the the Data Viewer:
 
 
 
