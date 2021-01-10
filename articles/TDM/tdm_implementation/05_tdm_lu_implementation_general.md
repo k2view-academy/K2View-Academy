@@ -132,7 +132,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 
 The LUI must include the source environment. The source environment must be set as the [active environment](/articles/25_environments/01_environments_overview.md) of Fabric. When debugging the TDM implementation on Fabric debug server, you can either:
 
-- Populate the source environment by **_dev_**. For example, **_dev_1**.
+- Populate the source environment by `_dev_`. For example, **_dev_1**.
 - Create and deploy the environments to Fabric debug server, set the source environment as an active environment, and concatenate this source environment to the entity ID (IID). For example, **UAT_1**.  
 
 [![Previous](/articles/images/Previous.png)](04_fabric_tdm_library.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdm_implementation_support_hierarchy.md)
