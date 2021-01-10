@@ -16,29 +16,32 @@ When the outer flow starts the transaction and then invokes an inner flow, the i
 
 ### Transaction in Iterations
 
-The transaction ends after the last Stage marked as a transaction. A transaction's behavior during an iteration is based on the flow's return to the Stage holding the [**Iterable** Line](21_iterations.md#iterable-line-type) to get the next value. If this Stage is transactional, the transaction continues and commits after the data set is completed. Otherwise it commits and starts a new transaction for each iteration in the data set. 
+The transaction ends after the last Stage marked as a transaction. A transaction's behavior during an iteration is based on marking of the Stages within the [iteration](21_iterations.md). 
+
+* If all the iteration's Stages are transactional, the transaction continues and commits after the data set is completed. 
+* If an iteration includes a non-transactional Stage, the transaction is committed  and then a new transaction is started for each iteration in the data set. 
 
 **One Commit Example**
 
-Begin the transaction in the **source data** Stage and commit it at the end of the data set.
+The **Load** Stage inside the loop is transactional. The **Source** Stage before the loop can be transactional or not. The commit is performed at the end of the data set. 
 
-![image](images/99_23_commit_at_end.PNG)
+![image](images/99_23_one_commit.PNG)
 
 **Commit per Iteration Example**
 
-Only the **insert data** Stage inside the loop is transactional.
+If a non-transactional Stage is added at the end of the loop, the commit is performed per each iteration.
 
-![image](images/99_23_commit_each.PNG)
+![image](images/99_23_each_commit.PNG)
 
 **Batch Commit Example**
 
 When the data set is very big (for example, 1M records) and a commit is required every X records, you can perform the commit per batch. 
 
-The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, Stage 7 is only reached every third record. The transaction is then committed since Stage 7 is not marked as transactional and a new one begins due to return to Stage 2.
+The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, Stage 1 is only reached every third record. The transaction is then committed since Stage 1 is not marked as transactional and a new one begins.
 
 ![image](images/99_23_batch.png)
 
-Another way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, Stage 4 is only reached every third record. The transaction is then committed since Stage 4 is not marked as transactional and a new transaction begins due to returning to Stage 2.
+Another way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, Stage 1 is only reached every third record. The transaction is then committed since Stage 1 is not marked as transactional and a new transaction begins.
 
 ![image](images/99_23_batch2.png)
 

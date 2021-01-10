@@ -1,6 +1,6 @@
 # Broadway Flow Window
 
-The **Broadway flow** window is the main Broadway interface that enables the definition and execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
+The **Broadway flow** window is the main Broadway interface that enables the definition and the execution of business processes including [Stages](19_broadway_flow_stages.md), [Actors](03_broadway_actor.md) and [links between the Actors](07_broadway_flow_linking_actors.md). 
 
 To create a new Broadway flow:
 1. Go to **Project Tree** > **Shared Objects**, right click **Broadway** > **New Flow** to open the Flow Name window.
@@ -8,7 +8,7 @@ To create a new Broadway flow:
 
 ![image](images/99_18_01_main_flow_area.PNG)
 
-The **Broadway flow** window includes the following elements:
+The **Broadway flow** window includes the following elements described in this article:
 
 - The flow area, which displays Stages and their Actors. 
   - To [add a Stage](19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage), either click the big **+**, or go to the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > **Insert After** or **Insert Before**. 
@@ -16,7 +16,9 @@ The **Broadway flow** window includes the following elements:
 - [Main menu](18_broadway_flow_window.md#main-menu), which enables running the flow and executing additional actions like **Save as Actor**.
 - [Stage context menu](18_broadway_flow_window.md#stage-context-menu), which provides Stage activities like **Merge** or **Delete**.
 - [Actor context menu](18_broadway_flow_window.md#actor-context-menu), which provides Actor activities like **Add**, **Link** or **Export Actor**. 
-- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object. 
+- [Actor Properties window](18_broadway_flow_window.md#actor-properties-window), which enables setting and editing the properties of a selected object.
+- [Run Results window](18_broadway_flow_window.md#run-results-window), which displays the results of the flow execution. 
+- [Flow Validation Footer](18_broadway_flow_window.md#flow-validation-footer), which displays the error messages in the flow, if exist.
 
 ### Main Menu
 
@@ -33,7 +35,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <li><a href="17_tutorial_and_flow_examples.md">Examples</a>, open the tutorial or an example flow.</li>
 <li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
-<li>Flip Scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
+<li>Flip scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
 </ul>
 </td>
 </tr>
@@ -56,9 +58,9 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
-<td width="200">Debug ON / OFF</td>
+<td width="200"><a title="Debug" href="25_broadway_flow_window_run_and_debug_flow.md#running-and-debugging-a-broadway-flow">Debug ON / OFF / Live</a></td>
 <td style="width: 465px;">
-<p>Enable the Debug mechanism. Only when Debug is ON, the flow can be debugged even if it was tirggered from another Fabric object, for example a job.</p>
+<p>Enable the Debug mechanism. When the mode is Debug ON or Live Debug, the flow can be debugged even if it is triggered from another Fabric object, for example a job.</p>
 </td>
 </tr>
 <tr>
@@ -74,6 +76,12 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </td>
 </tr>
 <tr>
+<td><a href="18_broadway_flow_window.md#flow-validation-footer">Validation</a></td>
+<td style="width: 465px;">
+<p>Displays the number of validation errors, if found in the flow.</p>
+</td>
+</tr>
+<tr>
 <td width="200">Remarks</td>
 <td style="width: 465px;">
 <p>Click to display all remarks in the flow.</p>
@@ -81,8 +89,6 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
-
-
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
@@ -92,65 +98,70 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="13" width="400pxl">
+<td rowspan="15" width="360pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
-<td width="80pxl">Paste Selection</td>
+<td width="120pxl">Paste Selection</td>
 <td width="420pxl">Paste the copied selection, for example an Actor from another Stage.</td>
 </tr>
 <tr>
-<td width="80pxl"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a></td>
-<td width="420pxl">Add a new Stage after the selected one.</td>
+<td style="height: 18px; width: 174px;">Collapse</td>
+<td style="height: 18px; width: 381px;">Collapse the Stage.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
-<td style="width: 465px;">Add a new Stage before the selected one.</td>
+<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a> / <a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
+<td style="width: 381px; height: 18px;">Add a new Stage after or before the selected one.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
-<td style="width: 465px;">Delete the selected Stage and its dependent branch.</td>
+<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage "> Delete</a></td>
+<td style="width: 381px; height: 18px;">Delete the selected Stage and its dependent branch.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split</a></td>
-<td style="width: 465px;">Split the selected Stage.</td>
+<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Split</a></td>
+<td style="width: 381px; height: 18px;">Split the selected Stage.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Merge</a></td>
-<td style="width: 465px;">Merge the selected Stage.</td>
+<td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages"> Merge</a></td>
+<td style="width: 381px; height: 18px;">Merge the selected Stage.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages">Iterate Close</a></td>
-<td style="width: 465px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
+<td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-split-or-merge-the-stages">Iterate Close</a></td>
+<td style="width: 381px; height: 36px;">Close the iteration scope. The Iteration scope starts where the Iterate line type originates in the Stage.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
-<td style="width: 465px;">Click to open a popup window and select an Actor for the Stage. The Actor will serve as a Stage condition. Note that Stage condition Actors are grey.</td>
+<td style="height: 17px; width: 174px;"><a href="29_recovery_point.md">Recovery Point</a></td>
+<td style="width: 381px; height: 17px;">Click to set the flow recovery point to enable the flow to re-run from this point on during a failure.</td>
 </tr>
 <tr>
-<td width="200"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
-<td style="width: 465px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
+<td style="height: 54px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
+<td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor acts as a Stage condition. Note that Stage condition Actors are grey.</td>
 </tr>
 <tr>
-<td width="200"><a href="24_error_handling.md">Error Handler</a></td>
-<td style="width: 465px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
+<td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
+<td style="width: 381px; height: 36px;">Click to mark the Stage to be executed if none of the conditions on the same level are true.</td>
 </tr>
 <tr>
-<td width="200"><a href="23_transactions.md">Transaction</a></td>
-<td style="width: 465px;">Click to open or close the transaction.</td>
+<td style="height: 54px; width: 174px;"><a href="24_error_handling.md">Error Handler</a></td>
+<td style="width: 381px; height: 54px;">Click to open a popup window and select the Stage's Error Handler Actor. Note that Error Handler Actors are red.</td>
 </tr>
 <tr>
-<td width="200">Breakpoint</td>
-<td style="width: 465px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title.</td>
+<td style="height: 36px; width: 174px;"><a href="30_support_parallel_execution.md">Parallel</a></td>
+<td style="width: 381px; height: 36px;">Click to set a number of Actors to be run parallelly within a Stage. When set, displays the number of parallel threads.</td>
 </tr>
 <tr>
-<td width="200">Remark</td>
-<td style="width: 465px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
+<td style="height: 18px; width: 174px;"><a href="23_transactions.md">Transaction</a></td>
+<td style="width: 381px; height: 18px;">Click to open or close the transaction.</td>
+</tr>
+<tr>
+<td style="height: 54px; width: 174px;">Breakpoint</td>
+<td style="width: 381px; height: 54px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title.</td>
+</tr>
+<tr>
+<td style="height: 72px; width: 174px;">Remark</td>
+<td style="width: 381px; height: 72px;">Click to add a remark to the Stage. If the remark already exists, a <img src="images/99_17_green_ast.PNG" alt="green asterisk" /> is displayed on the left of the three dots and the Remark popup is open displaying its text.&nbsp;</td>
 </tr>
 </tbody>
 </table>
-
-
-
 
 ### Actor Context Menu
 
@@ -203,12 +214,6 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
-
-
-
-
-
-
 ### Actor Properties Window
 
 The Actor's Properties in the Broadway flow window dynamically adjusts its layout to display data based on the structure of the selected Actor. For example, the number of input and output parameters, their data types and default values. To hide the Properties window, click anywhere in the empty Stage area. 
@@ -220,6 +225,29 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 [Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 
 Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) is selected, the window's layout is adjusted to display the names of the From and To Actors, their parameters and the Link type.
+
+### Run Results Window
+
+The Run Results window is a small popup window on the top of a Broadway flow window which displays the results after a flow is run:
+
+- When the flow is completed successfully, it either displays the values of the external arguments (if they exist in the flow) or remains empty.
+- When the flow fails, it displays the exception.
+
+![image](images/99_18_run_res_1.PNG)
+
+### Flow Validation Foot
+
+The Broadway flow window has a built-in mechanism for errors validation which is invoked when opening the flow before it is run. If the flow has errors, the validation icon in the Main menu displays the number of errors, for example: <img src="images/99_validation_icon.PNG" alt="image" style="zoom: 80%;" />. 
+
+Click the icon to display the window footer with the error messages:
+
+![image](images/99_validation_output.PNG)
+
+Click the error and choose to ignore the exception or fix the problem.
+
+For example, a flow includes an inherited **myDate** Actor that needs to be deleted. After the Actor is deleted from the project tree and the flow is opened, the validation errors are displayed. You can then update the flow as needed, for example by adding another Actor. 
+
+
 
 
 [![Previous](/articles/images/Previous.png)](17_tutorial_and_flow_examples.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](19_broadway_flow_stages.md)

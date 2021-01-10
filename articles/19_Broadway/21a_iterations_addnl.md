@@ -5,29 +5,29 @@ When the originating Actor's output is a complex object, the iteration's complex
 
 * Are the connected elements on the same level of hierarchy or on different levels?
 * Are the link types the same (all **Iterate**) or different (**Iterate** combined with other types)?
-* Do the connected elements belong to different nested arrays, and if yes - do they have the same or different size? 
+* Do the connected elements belong to different nested arrays, and if yes - do they have the same or a different size? 
 
-This article described how Broadway performs complex iteration use cases, such as:
+This article describes how Broadway performs complex iteration use cases, such as:
 
-* Loop over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
-* Use different connection line types when iterating over a complex object's elements.
-* Iterate over multiple arrays in the same iteration.
+* Looping over multiple elements of a complex object on different levels of the object's hierarchy, for example a field and a nested array.
+* Using different connection line types when iterating over a complex object's elements.
+* Iterating over a loop split into branches.
 
-If the connected elements of the object are on the same level of hierarchy (such as two fields of the same array), the iteration behavior is the same as the iteration over [two or more elements in a result array](21_iterations.md#iterate-over-two-or-more-elements) as described in the previous article. 
+If the connected elements of the object are on the same level of hierarchy such as two fields of the same array, the iteration's behavior is the same as an iteration over [two or more elements in a result array](21_iterations.md#iterate-over-two-or-more-elements). 
 
-### Iterate Over Both an Element and a Nested Array
+### Iterate Over an Element and a Nested Array
 
-* The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and **objectType** field in [hardware] nested array.
+* The connected elements are on different levels of hierarchy: the **entityType** field in a [resources] array and the **objectType** field in a [hardware] nested array.
 * Both are connected using the **Iterate** link type. 
-* The iteration runs over all **entityTypes** of the [resources] array, and for each one - over all the elements of the [hardware] nested array.
+* The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** over all **objectTypes** in the **[hardware]** nested array.
 
 <img src="images/iterate_mult_02.PNG" alt="image" style="zoom:80%;" />
 
 ### Iterate Over a Field and Take a Nested Array by Value
 
-- The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and the **[hardware]** nested array.
+- The connected elements are on different levels of hierarchy: the **entityType** field in the [resources] array and the **[hardware]** nested array.
 - The **entityType** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **Value** link type.
-- The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** takes all its hardware (the nested array's data).
+- The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** takes all the hardware (the nested array's data).
 
 <img src="images/iterate_mult_03.PNG" alt="image" style="zoom:80%;" />
 
@@ -41,24 +41,34 @@ If the connected elements of the object are on the same level of hierarchy (such
 
 ### Take an Array by Value and Iterate Over a Field in the Same Array
 
-* The connected elements are on different levels of hierarchy: **entityType** field in [resources] array and the whole **[resources]** array.
+* The connected elements are on different levels of hierarchy: the **entityType** field is in the [resources] array and the **[resources]** array.
 * The **entityType** is connected using the **Iterate** link type, while the **[resources]** array is connected using the **Value** link type.
-* The iteration runs over all **entityTypes** of the [resources] array while during each iteration - the whole [resources] array is passed by value (the same data in all iterations).
+* The iteration runs over all **entityTypes** of the [resources] array while during each iteration, the map of the current resource is passed by a value.
 
 <img src="images/iterate_mult_04.PNG" alt="image" style="zoom:80%;" />
 
 ### Iterate Over Multiple Arrays
 
 The originating Actor's output can have more than one collection. A common use case is a JSON data structure that contains more than one array.
-Occasionally it may be required to manage several loops over the same data structure, for example in order to combine the data from two arrays or to perform other kind of data manipulation. In this case, both arrays (or elements in the arrays) need to be connected using an **Iterate** link type to one or more Actors. 
+Occasionally there may be a requirement to manage several loops over the same data structure, for example to combine the data from two arrays or to perform other types of data manipulation. In this case, both arrays (or elements in the arrays) must be connected using an **Iterate** link type to one or more Actors. 
 
-In this case the iteration logic is impacted by the answers to the question - do these arrays have the same or different size? When the arrays have different size, at some point one of them is finished and returns a null while the another one still has values. To prevent the redundant loops over the empty array, use the **IsNull** Actor to check if the array returns a value or null.
+The iteration logic is impacted by the answers to the question - do these arrays have the same or a different size? When the arrays have a different size, at some point one array ends and returns a null while another array still has values. To prevent the redundant loops over the empty array, split the flow and create a Stage Condition to check if the array returns a value or a null.
 
 ![image](images/iterate_blend1.PNG)
 
-Another recommended way to handle two collections with different sizes is by using the [Inner Flows](22_broadway_flow_inner_flows.md). You can pass each array by value into its respective inner flow and then iterate inside each inner flow on the array values.
+Another recommended way to handle two collections of different sizes is to use [Inner Flows](22_broadway_flow_inner_flows.md). You can pass each array by a value into its respective inner flow and then iterate within each inner flow on the array's values.
 
 ![image](images/iterate_blend2.PNG)
+
+### Iterating Over a Loop Split into Branches
+
+When a flow is split into branches and includes an additional split inside the iteration, the split inside the loop is only applicable for the duration of the loop.
+
+The following flow displays an example of a flow that has a split inside the iteration. If Stage 2 is true, its branch will start and execute Stage 5. Then, either Stage 6 or 11 will be executed starting an additional split. 
+
+Note that after the loop is completed, both Stage 12 and 13 will run since they depend on Stage 2 and not on the conditions inside the loop.
+
+![image](images/iterate_over_branches.PNG)
 
 
 

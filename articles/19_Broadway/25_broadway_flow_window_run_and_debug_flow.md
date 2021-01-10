@@ -30,13 +30,13 @@ Prior to running or debugging a flow, set the types and values of input argument
 A Broadway flow can be executed from the [Main menu](18_broadway_flow_window.md#main-menu) of the flow's window by either:
 
 - Running the entire flow and displaying the results.
-- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is ON. To add a breakpoint, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > Breakpoint or click on the left of the Stage title.
+- Debugging the flow by adding breakpoints. The debug can only be performed when Debug is set to ON or Live. To add a breakpoint, click ![image](images/99_19_dots.PNG) in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) > Breakpoint or click on the left of the Stage title.
 
 Running the flow or debugging it saves a local copy of the flow in the Fabric project. If the changes have been made in the flow, they are automatically saved even if they have not been explicitly saved. For example, when a [Tutorial flow](17_tutorial_and_flow_examples.md) is run or debugged, a local copy of the flow is saved in the Fabric project.
 
 To run the flow, click <img src="images/99_25_run.PNG" alt="image" style="zoom:80%;" /> **Run Flow** to run the entire flow and display the results. 
 
-- If Debug mode is <img src="images/99_25_debug_on.PNG" style="zoom:80%;" /> ON, the flow can be debugged.
+- If Debug mode is <img src="images/99_25_debug_on.PNG" style="zoom:80%;" /> ON or <img src="images/99_25_debug_live.PNG" style="zoom:80%;" /> Live Debug, the flow can be debugged.
 
 - If Debug mode is <img src="images/99_25_debug_off.PNG" style="zoom:80%;" /> OFF, the flow cannot be debugged.
   
@@ -51,15 +51,17 @@ If a flow has an inner flow with breakpoints, the execution of the flow stops at
 
 To stop the flow, click <img src="images/99_25_stop.PNG" alt="image" style="zoom:80%;" /> **Stop Run**.
 
-When Debug is ON, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
+When Debug is ON or Live Debug, the flow can be debugged when invoked by any Fabric entity and not necessarily by another Broadway flow. For example, when invoked by a Job.
+
+Note that when Debug mode is <img src="images/99_25_debug_live.PNG" style="zoom:80%;" /> Live Debug, the flow runs automatically on every change in the flow except for changing the Debug / Run arguments. For example, when adding a new Actor, adding or removing a link or modifying a value.
 
 ### Displaying Input and Output Data During a Debug
 
-When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of Broadway map, list and Java primitive data types.
+When Debug is ON, the values of the input and output arguments of each executed step are displayed in blue balloons known as Data Viewers. A Data Viewer displays Java objects using a JSON-like visualization of a Broadway map, list and Java primitive data types.
 
 ![image](images/99_25_blue_balloons.PNG)
 
-To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format drop-down and make your selection.
+To view a step's data, click the blue balloon to open the Data Viewer and its displayed format. To set another data display format, click the format dropdown and make your selection.
 
 ![](images/flow_debug_display_data.png)
 

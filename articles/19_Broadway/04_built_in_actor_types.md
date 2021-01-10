@@ -1,10 +1,10 @@
 # Built-In Actor Types
 
-Broadway has a large list of built-in [Actors](03_broadway_actor.md#actor-overview) that can be added to a flow in order to create various types of activities. Broadway's built-in Actors are split into categories, where each category includes several Actor types.
+Broadway has a large list of built-in [Actors](03_broadway_actor.md#actor-overview) that can be added to a flow to create various types of activities. Broadway's built-in Actors are split into categories, where each category includes several Actor types.
 
-The following table presents a list of Actor's categories with examples per each category. This is not an exhaustive list of Actors.
+The following table presents a list of Actors categories with examples of each category. This is not an exhaustive list of Actors.
 
-[Click for more information about the most useful Actors and the code examples](actors/README.md).
+[Click for more information about the most useful Actors and code examples](actors/README.md).
 
 <table width="900pxl">
 <tbody>
@@ -26,6 +26,8 @@ The following table presents a list of Actor's categories with examples per each
 <td style="vertical-align: top;" width="433">
 <p>Most commonly used Actors.</p>
 <p>Favorites is not a separate category. Each Actor in Favorites belongs to a category.</p>
+<p>Click <img src="images/99_favorites.PNG" alt="lev" /> in an Actor's description in the Add Actors window to add the Actor to Favorites.</p>
+<p>Actors in Favorites have a <img src="images/99_favorites1.PNG" alt="lev" />.</p>
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>Const</strong> Actor, copies the input value argument to the output value argument. A Const Actor can:</p>
@@ -34,14 +36,14 @@ The following table presents a list of Actor's categories with examples per each
 <li>Receive its input from the output of a previous Actor and transfer it to the next Actor.</li>
 <li>Receive an external flow argument and transfer it to the next Actor.</li>
 </ul>
-<strong>Concat</strong> Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong> Actor, executes the Javascript provided in the script parameter. The script returns the value of the last line.</td>
+<strong>Concat</strong> Actor, concatenates an array of strings and joins them with the given delimiter. <strong><br /></strong><strong>JavaScript</strong> Actor, executes the JavaScript provided in the script parameter. The script returns the value of the last line.</td>
 </tr>
 <tr>
 <td style="vertical-align: top;" width="210">
 <h4><a id="user-content-basic" class="anchor" href="04_built_in_actor_types.md#basic" aria-hidden="true"></a><strong>basic</strong></h4>
 </td>
 <td style="vertical-align: top;" width="433">
-<p>Actors serving as the basic building blocks for creating the Broadway flow.</p>
+<p>Actors serve as the basic building blocks for creating a Broadway flow.</p>
 </td>
 <td style="vertical-align: top;" width="600">
 <p><strong>ForLoop</strong> Actor, iterates over a range of numbers.</p>
@@ -49,6 +51,17 @@ The following table presents a list of Actor's categories with examples per each
 <p><strong>InnerFlow</strong> Actor, executes a Broadway flow.</p>
 <p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or from the params input argument.</p>
 <p><strong>Email</strong> Actor, sends an email using a given SMTP interface.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;">
+<h4><strong>data</strong></h4>
+</td>
+<td style="vertical-align: top;">
+<p>Various data manipulations, such as accumulate values into a map, build an array or sort the input collection.</p>
+</td>
+<td style="vertical-align: top;">
+<p><strong>MapBuild</strong> Actor, accumulates key/value pairs into a map. Duplicate keys are handled according to the duplicateKeys mode field.</p>
 </td>
 </tr>
 <tr>
@@ -83,7 +96,7 @@ The following table presents a list of Actor's categories with examples per each
 <ul>
 <li>A JDBC URL.</li>
 <li>Reference to a predefined interface.</li>
-<li>Others, like the Schema, table name, fields definition, SQL dialect to use and append text appended to the CREATE command.</li>
+<li>Others, like the schema, table name, fields definition, SQL dialect to use and append text appended to the CREATE command.</li>
 </ul>
 <p>The DbCommand can be used to create the WITH section where required.</p>
 <p><strong>DbLoad</strong> Actor, loads data into a database using INSERT, UPDATE or UPSERT (if supported). The interface used as input can be the same as for <strong>DbCommand</strong> Actor.</p>
@@ -101,6 +114,7 @@ The following table presents a list of Actor's categories with examples per each
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong><span class="md-pair-s md-expand"><span class="md-plain">FabricGet</span></span></strong><span class="md-plain md-expand"> Actor performs the GET command on the current Fabric session.</span></p>
 <p><span class="md-plain md-expand"><strong>FabricSet</strong> Actor sets a value on the Fabric session.</span></p>
+<p><span class="md-plain md-expand"><strong>BatchWait</strong> Actor waits for a batch process to complete or throw an error if the batch does not complete successfully or does not complete withing the predefined time.</span></p>
 </td>
 </tr>
 <tr>
@@ -126,10 +140,11 @@ The following table presents a list of Actor's categories with examples per each
 <td style="vertical-align: top;" width="210">
 <h4><strong>masking</strong></h4>
 </td>
-<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email.</td>
+<td style="vertical-align: top;" width="433">A group of Actors to mask sensitive information, such as SSN, credit card number, email. It also includes the Actors that can define a sequence.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong>MaskingSSN</strong> Actor,&nbsp;masks the original SSN number with a valid fake SSN.</p>
-<p><strong>MaskingCreditCard</strong> Actor,&nbsp;generates fake but valid credit card number similar to original card type.</p>
+<p><strong>MaskingCreditCard</strong> Actor,&nbsp;generates a fake but valid credit card number similar to the original card's type.</p>
+<p><strong>MaskingSequence</strong> Actor, &nbsp;implements a unique sequence number.</p>
 </td>
 </tr>
 <tr>
@@ -157,7 +172,7 @@ The following table presents a list of Actor's categories with examples per each
 </td>
 <td width="433">Publish / subscribe messages to the queue.</td>
 <td style="width: 600px; vertical-align: top;" width="600">
-<p><strong>Publish</strong> Actor, publlishes messages using a message broker.&nbsp;The inputs are:</p>
+<p><strong>Publish</strong> Actor, publishes messages using a message broker.&nbsp;The inputs are:</p>
 <ul>
 <li>Broker interface to use.</li>
 <li>Topic to publish to.</li>
@@ -166,12 +181,28 @@ The following table presents a list of Actor's categories with examples per each
 </td>
 </tr>
 <tr>
+<td>
+<h4><strong>stats</strong></h4>
+</td>
+<td>Actors that gather the flow statistics.</td>
+<td style="width: 600px; vertical-align: top;">
+<p><strong>StatsWriter</strong> Actor, sets or increments statistics that can then be read by the StatsReader.</p>
+<p><strong>StatsReader</strong> Actor, reads statistics written by other Actors such as StatsWriter, DbCommand or ErrorHandler.</p>
+<p>The Actor has two outputs:</p>
+<ul>
+<li>Flow, returns the flow level statistics map.</li>
+<li>Global, returns the global/session level statistics map.</li>
+</ul>
+<p>For example, if <strong>StatsReader</strong> is added to the flow after the <strong>DbCommand</strong> Actor that executes an INSERT query, the <strong>StatsReader</strong> displays the number of executed and the number of affected records.</p>
+</td>
+</tr>
+<tr>
 <td width="210">
 <h4><a id="user-content-streams" class="anchor" href="04_built_in_actor_types.md#streams" aria-hidden="true"></a><strong>streams</strong></h4>
 </td>
 <td width="433">Various stream manipulation functions, such as Compress, FileRead or Http.</td>
 <td width="600">
-<p><strong>FileRead</strong> Actor, reads data from a file given an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
+<p><strong>FileRead</strong> Actor, reads data from a file given in an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
 <p><strong>Http</strong> Actor, sends a request to a Web Server. Supports streaming payload and results and sending and receiving header parameters.</p>
 </td>
 </tr>
@@ -189,10 +220,10 @@ The following table presents a list of Actor's categories with examples per each
 <ul>
 <li>LU containing the Graphit file (initial value = k2_ws).</li>
 <li>Graphit filename.</li>
-<li>Required output format (inital value = JSON).</li>
+<li>Required output format (initial value = JSON).</li>
 <li>Parameters for Graphit execution.</li>
 </ul>
-<p>The Actor first looks at the input parameters (first level) and, if it is not found there, looks at the params input argument.</p>
+<p>The Actor first looks at the input parameters (first level) and, if it is not found there, looks in the params input argument.</p>
 </td>
 </tr>
 <tr>
@@ -209,11 +240,19 @@ The following table presents a list of Actor's categories with examples per each
 <li>Destination (to).</li>
 </ul>
 <p>The output is a number of affected files.</p>
-<p><strong>Exec</strong> Actor, executes a system process and waits for it to complete.</p>
+<p><strong>Exec</strong> Actor, executes a system process and waits for it to be completed.</p>
 </td>
 </tr>
 </tbody>
 </table>
+
+
+
+
+
+
+
+
 
 
 [![Previous](/articles/images/Previous.png)](03_broadway_actor_window.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_data_types.md)
