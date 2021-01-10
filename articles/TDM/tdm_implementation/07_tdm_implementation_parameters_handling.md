@@ -42,11 +42,11 @@ The parameters tables are used for the following:
 
   - Edit the **trnLuParams**.  Populate  the parameter name and the SQL query of each parameter. The SQL query runs on the LU.  The query must  return only one column to be populated into the parameter column of LU_PARAMS table.  Note that you can validate each SQL query by clicking on the SQL button for each record to open the [Query Builder](/articles/11_query_builder/02_query_builder_window.md) where you can populate the DB connection **fabric** and select your LU. See the example below:
 
-    ![trnLuParams](images\trnLuParams_example.png)
+    ![trnLuParams](images/trnLuParams_example.png)
 
   - Edit the **LU_PARAMS** table. Each parameter defined for **trnLuParams**, must be added to the LU table as a separate column.  Set the type of all columns to be **text**. See the example below:
 
-    ![Lu_Params](images\lu_params_example.png)
+    ![Lu_Params](images/lu_params_example.png)
 
 - The **fnEnrichmentLuParams** enrichment function runs the SQL queries of the **trnLuParams** and populate each column of the LU_PARAMS by the results of its related SQL query. 
 
