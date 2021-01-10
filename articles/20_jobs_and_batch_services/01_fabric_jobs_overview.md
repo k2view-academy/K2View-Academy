@@ -1,4 +1,4 @@
-# **Fabric Jobs Overview** 
+# Fabric Jobs Overview 
 
 The Fabric Jobs mechanism is rich, resilient and scalable and can be used to run any script or executable. For example, recurring or one-time only scheduled asynchronous actions that run Fabric functions according to a predefined schedule.
 
@@ -18,7 +18,7 @@ Fabric Jobs can be one of the following categories:
 - Broadway flows, that can be scheduled and benefit from Jobs execution parameters.
 
 
- # **What is a Fabric Job ?** 
+ # What is a Fabric Job? 
 A Fabric Job process can be exposed across Fabric nodes and be run to execute scripts, flows or functions according to a specific schedule or once only.
 
 A Job must be deployed to Fabric so that it can be invoked by one of the Fabric Cluster's nodes following an allocation process that we will describe in more details in this section.
