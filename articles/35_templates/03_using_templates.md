@@ -16,16 +16,16 @@ Once templates are ready at the project, they can be used when creating new obje
 
 4. Populate the expressions/placeholders, if exist for this template, within the opened Template Parameters popup window. This windows contain two tabs which show the same information - one shows it in parameters property view and the other one in JSON view.
 
-   <img src="images/templates_03_use_tmplt_params_json.png" alt="image" style="zoom:50%;" /><img src="images/templates_03_use_tmplt_params_proprty.png" alt="image" style="zoom:50%;" />
+   <img src="images/templates_03_use_tmplt_params_json.png" alt="image" /><img src="images/templates_03_use_tmplt_params_proprty.png" alt="image"  />
 
    Note that in some cases there is a need to define complex input structure which cannot be edited at the property view but only at the JSON view. For example, if the template contains  `{{person.firstname}} {{person.lastname}}` the expected input shall be like the following structure:
 
    ```json
    {
-     person: {
-       firstname: "",
-       lastname: "",
-     },
+     "person": {
+       "firstname": "",
+       "lastname": "",
+     }
    }
    ```
 
