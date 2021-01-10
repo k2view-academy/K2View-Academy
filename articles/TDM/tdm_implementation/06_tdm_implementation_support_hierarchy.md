@@ -29,7 +29,7 @@ The TDM_TYPE_RELATION_EID is populated by the Sync on the parent LUI:  **fnEnric
 <tbody>
 <tr>
 <td valign="top" width="200pxl"><strong>Column Name</strong></td>
-<td valign="top" width="700pxl"><strong>Description</strong></td>
+<td valign="top" width="750pxl"><strong>Description</strong></td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">source_env</td>
