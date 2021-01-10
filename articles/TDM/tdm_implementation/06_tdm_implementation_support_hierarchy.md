@@ -225,4 +225,4 @@ Although the definition of the Business Entities is implemented in the TDM GUI, 
 
 
 
-[![Previous](/articles/images/Previous.png)](05_tdm_lu_implementation_general.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdm_implementation_parameters_handling.md)
+[![Previous](/articles/images/Previous.png)](05_tdm_lu_implementation_general.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_tdm_implementation_parameters_handling.md)

@@ -110,18 +110,29 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 
 
 
-- Add LU_PARAMS, INSTANCE_TABLE_COUNT, and TDM_LU_TYPE_RELATION_EID to the LU schema. Connect these tables to the IID field of FABRIC_TDM_ROOT table in the LU schema.
+- Add **FABRIC_TDM_ROOT** LU table to the LU schema and set it as a [Root table](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md). Set the **Instance PK Column** to **k2_tdm_eid** column.
+
+- Add **LU_PARAMS**, **INSTANCE_TABLE_COUNT**, and **TDM_LU_TYPE_RELATION_EID** to the LU schema. Connect these tables to the entity id column of the main source LU table. For example, the main source LU table of Customer LU is Customer. CUSTOMER.CUSTOMER_ID is linked to FABRIC_ROOT_TABLE.IID column. Link LU_PARAMS, INSTANCE_TABLE_COUNT, and TDM_LU_TYPE_RELATION_EID to CUSTOMER.CUSTOMER_ID column:
+
+  ![tdm lu example](images/tdm_lu_example1.png)
+
+  
 
 - The LU_PARAMS LU table must be added to every LU schema even it is not needed to define parameters on the LU. In this case, the LU_PARAM table will only contain the ENTITY_ID and SOURCE_ENVIRONMENT fields.
 
 - Edit trnLuParams and LU_PARAMS to add selection parameters to the LU. 
 
-  [Click for more information about the TDM parameters handling.]
+  [Click for more information about the TDM parameters handling](07_tdm_implementation_parameters_handling.md).
 
 - You can mask sensitive data on  the LU tables using a Broadway population and the [masking actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
   [Click for more information about TDM masking.]
 
+### LU Debug
 
+The LUI must include the source environment. The source environment must be set as the [active environment](/articles/25_environments/01_environments_overview.md) of Fabric. When debugging the TDM implementation on Fabric debug server, you can either:
+
+- Populate the source environment by **_dev_**. For example, **_dev_1**.
+- Create and deploy the environments to Fabric debug server, set the source environment as an active environment, and concatenate this source environment to the entity ID (IID). For example, **UAT_1**.  
 
 [![Previous](/articles/images/Previous.png)](04_fabric_tdm_library.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdm_implementation_support_hierarchy.md)
