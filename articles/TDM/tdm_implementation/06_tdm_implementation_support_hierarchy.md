@@ -21,7 +21,7 @@ This table is used to build a list of entities (entity inclusion) on the child L
 
 #### Which Process Populates the TDM_LU_TYPE_RELATION_EID? 
 
-The TDM_TYPE_RELATION_EID is populated by the Sync on the parent LUI:  **fnEnrichmentChildLink** enrichment function is attached to each parent LU, and populates TDM_TYPE_RELATION_EID table.  This function runs on the parent LU the sql queries that are populated in [trnChildLink]() translation to get the child IDs of each parent LUI.
+The TDM_TYPE_RELATION_EID is populated by the Sync on the parent LUI:  **fnEnrichmentChildLink** enrichment function is attached to each parent LU, and populates TDM_TYPE_RELATION_EID table.  This function runs on the parent LU the sql queries that are populated in [trnChildLink](/articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#trnchildlink) translation to get the child IDs of each parent LUI.
 
 #### TDM_LU_TYPE_RELATION_EID Structure
 
@@ -70,47 +70,47 @@ The TDM_TYPE_RELATION_EID is populated by the Sync on the parent LUI:  **fnEnric
 
 - Customer 1 has Orders 10, 12, and 13 in Production environment. The **LUI** of Customer 1 is **Production_1**.The Sync of **Production_1** LUI of Customer LU populates the TDM_LU_TYPE_RELATION_EID by the following records:
 
-<table style="height: 122px;" width="900pxl">
+<table width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="110pxl"><strong>source_env</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type_1</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type_2</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type1_eid</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type2_eid</strong></td>
-<td valign="top" width="110pxl"><strong>creation_date</strong></td>
-<td valign="top" width="110pxl"><strong>version_name</strong></td>
-<td valign="top" width="110pxl"><strong>version_datetime</strong></td>
+<td valign="top" width="100pxl"><strong>source_env</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type_1</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type_2</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type1_eid</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type2_eid</strong></td>
+<td valign="top" width="150pxl"><strong>creation_date</strong></td>
+<td valign="top" width="100pxl"><strong>version_name</strong></td>
+<td valign="top" width="150pxl"><strong>version_datetime</strong></td>
 </tr>
 <tr>
-<td valign="top" width="110pxl">Production</td>
-<td valign="top" width="110pxl">Customer</td>
-<td valign="top" width="110pxl">Order</td>
-<td valign="top" width="110pxl">1</td>
-<td valign="top" width="110pxl">10</td>
-<td valign="top" width="110pxl">1/8/2021 13:31</td>
-<td valign="top" width="110pxl">&nbsp;</td>
-<td valign="top" width="110pxl">1/1/1970 0:00</td>
+<td valign="top" width="100pxl">Production</td>
+<td valign="top" width="100pxl">Customer</td>
+<td valign="top" width="100pxl">Order</td>
+<td valign="top" width="100pxl">1</td>
+<td valign="top" width="100pxl">10</td>
+<td valign="top" width="150pxl">1/8/2021 13:31</td>
+<td valign="top" width="100pxl">&nbsp;</td>
+<td valign="top" width="150pxl">1/1/1970 00:00</td>
 </tr>
-<tr style="height: 35px;">
-<td valign="top" width="110pxl">Production</td>
-<td valign="top" width="110pxl">Customer</td>
-<td valign="top" width="110pxl">Order</td>
-<td valign="top" width="110pxl">1</td>
+<tr>
+<td valign="top" width="100pxl">Production</td>
+<td valign="top" width="100pxl">Customer</td>
+<td valign="top" width="100pxl">Order</td>
+<td valign="top" width="100pxl">1</td>
 <td valign="top" width="110pxl">12</td>
-<td valign="top" width="110pxl">1/8/2021 13:31</td>
-<td valign="top" width="110pxl">&nbsp;</td>
-<td valign="top" width="110pxl">1/1/1970 0:00</td>
+<td valign="top" width="150pxl">1/8/2021 13:31</td>
+<td valign="top" width="100pxl">&nbsp;</td>
+<td valign="top" width="150pxl">1/1/1970 00:00</td>
 </tr>
-<tr style="height: 35px;">
-<td valign="top" width="110pxl">Production</td>
-<td valign="top" width="110pxl">Customer</td>
-<td valign="top" width="110pxl">Order</td>
-<td valign="top" width="110pxl">1</td>
-<td valign="top" width="110pxl">13</td>
-<td valign="top" width="110pxl">1/8/2021 13:31</td>
-<td valign="top" width="110pxl">&nbsp;</td>
-<td valign="top" width="110pxl">1/1/1970 0:00</td>
+<tr>
+<td valign="top" width="100pxl">Production</td>
+<td valign="top" width="100pxl">Customer</td>
+<td valign="top" width="100pxl">Order</td>
+<td valign="top" width="100pxl">1</td>
+<td valign="top" width="100pxl">13</td>
+<td valign="top" width="150pxl">1/8/2021 13:31</td>
+<td valign="top" width="100pxl">&nbsp;</td>
+<td valign="top" width="150pxl">1/1/1970 00:00</td>
 </tr>
 </tbody>
 </table>
@@ -123,44 +123,44 @@ The TDM_TYPE_RELATION_EID is populated by the Sync on the parent LUI:  **fnEnric
 <table width="900pxl">
 <tbody>
 <tr>
-<td valign="top" width="110pxl"><strong>source_env</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type_1</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type_2</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type1_eid</strong></td>
-<td valign="top" width="110pxl"><strong>lu_type2_eid</strong></td>
-<td valign="top" width="110pxl"><strong>creation_date</strong></td>
-<td valign="top" width="110pxl"><strong>version_name</strong></td>
-<td valign="top" width="110pxl"><strong>version_datetime</strong></td>
+<td valign="top" width="100pxl"><strong>source_env</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type_1</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type_2</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type1_eid</strong></td>
+<td valign="top" width="100pxl"><strong>lu_type2_eid</strong></td>
+<td valign="top" width="150pxl"><strong>creation_date</strong></td>
+<td valign="top" width="100pxl"><strong>version_name</strong></td>
+<td valign="top" width="150pxl"><strong>version_datetime</strong></td>
 </tr>
 <tr>
-<td valign="top" width="110pxl">Production</td>
-<td valign="top" width="110pxl">Customer</td>
-<td valign="top" width="110pxl">Order</td>
-<td valign="top" width="110pxl">1</td>
-<td valign="top" width="110pxl">10</td>
-<td valign="top" width="110pxl">1/8/2021 14:15:30</td>
-<td valign="top" width="110pxl">saveCust1</td>
-<td valign="top" width="110pxl">1/8/2021 14:15:30</td>
+<td valign="top" width="100pxl">Production</td>
+<td valign="top" width="100pxl">Customer</td>
+<td valign="top" width="100pxl">Order</td>
+<td valign="top" width="100pxl">1</td>
+<td valign="top" width="100pxl">10</td>
+<td valign="top" width="150pxl">1/8/2021 14:15:30</td>
+<td valign="top" width="100pxl">saveCust1</td>
+<td valign="top" width="150pxl">1/8/2021 14:15:30</td>
 </tr>
 <tr>
-<td valign="top" width="110pxl">Production</td>
-<td valign="top" width="110pxl">Customer</td>
-<td valign="top" width="110pxl">Order</td>
-<td valign="top" width="110pxl">1</td>
-<td valign="top" width="110pxl">12</td>
-<td valign="top" width="110pxl">1/8/2021 14:15:30</td>
-<td valign="top" width="110pxl">saveCust1</td>
-<td valign="top" width="110pxl">1/8/2021 14:15:30</td>
+<td valign="top" width="100pxl">Production</td>
+<td valign="top" width="100pxl">Customer</td>
+<td valign="top" width="100pxl">Order</td>
+<td valign="top" width="100pxl">1</td>
+<td valign="top" width="100pxl">12</td>
+<td valign="top" width="150pxl">1/8/2021 14:15:30</td>
+<td valign="top" width="100pxl">saveCust1</td>
+<td valign="top" width="150pxl">1/8/2021 14:15:30</td>
 </tr>
 <tr>
-<td valign="top" width="110pxl">Production</td>
-<td valign="top" width="110pxl">Customer</td>
-<td valign="top" width="110pxl">Order</td>
-<td valign="top" width="110pxl">1</td>
-<td valign="top" width="110pxl">13</td>
-<td valign="top" width="110pxl">1/8/2021 14:15:30</td>
-<td valign="top" width="110pxl">saveCust1</td>
-<td valign="top" width="110pxl">1/8/2021 14:15:30</td>
+<td valign="top" width="100pxl">Production</td>
+<td valign="top" width="100pxl">Customer</td>
+<td valign="top" width="100pxl">Order</td>
+<td valign="top" width="100pxl">1</td>
+<td valign="top" width="100pxl">13</td>
+<td valign="top" width="150pxl">1/8/2021 14:15:30</td>
+<td valign="top" width="100pxl">saveCust1</td>
+<td valign="top" width="150pxl">1/8/2021 14:15:30</td>
 </tr>
 </tbody>
 </table>
