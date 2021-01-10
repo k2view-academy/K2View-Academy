@@ -34,4 +34,3 @@ Once templates are ready at the project, they can be used when creating new obje
   
 
 [![Previous](/articles/images/Previous.png)](02_create_and_edit_template.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_advanced_template_capabilities.md)  
-
