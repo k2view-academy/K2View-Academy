@@ -185,7 +185,7 @@ The TDM_TYPE_REL_TAR_EID is populated by [Broadway Flow] of the parent LU: this 
 <tbody>
 <tr>
 <td valign="top" width="200pxl"><strong>Column Name</strong></td>
-<td valign="top" width="700pxl"><strong>Column Name</strong></td>
+<td valign="top" width="770pxl"><strong>Column Name</strong></td>
 </tr>
 <tr>
 <td>target_env</td>
