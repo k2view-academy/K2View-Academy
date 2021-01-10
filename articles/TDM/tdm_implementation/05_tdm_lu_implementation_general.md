@@ -23,7 +23,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 <tbody>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>Globals</p>
+<p><h4>Globals</p>
 </td>
 <td valign="top" width="250pxl">
 <p>TDM LU level globals</p>
@@ -34,7 +34,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>trnChildLink</p>
+<p><h4>trnChildLink</p>
 </td>
 <td valign="top" width="250pxl">
 <p>Translation for the mapping of parent and child IDs.</p>
@@ -51,7 +51,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>trnLuParams</p>
+<p><h4>trnLuParams</p>
 </td>
 <td valign="top" width="250pxl">
 <p>Translation for the population of LU_PARAMS table.</p>
@@ -62,7 +62,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>TDM_LU_TYPE_RELATION_EID</p>
+<p><h4>TDM_LU_TYPE_RELATION_EID</p>
 </td>
 <td valign="top" width="250pxl">
 <p>Relation table</p>
@@ -73,7 +73,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>FABRIC_TDM_ROOT</p>
+<p><h4>FABRIC_TDM_ROOT</p>
 </td>
 <td valign="top" width="250pxl">
 <p>Root table for each LU. Contains the LUI, source environment, IID, task_name (version_name), and timestamp (version_datetime). The version_name and version_datetime are populated on <a href="/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux">DataFlux tasks</a>.</p>
@@ -84,7 +84,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>INSTANCE_TABLE_COUNT</p>
+<p><h4>INSTANCE_TABLE_COUNT</p>
 </td>
 <td valign="top" width="250pxl">
 <p>Statistics table. This table is used for the [TDM Statistics report] of each TDM task execution.</p>
@@ -95,7 +95,7 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h5>LU_PARAMS</p>
+<p><h4>LU_PARAMS</p>
 </td>
 <td valign="top" width="250pxl">
 <p>Parameters table.</p>
