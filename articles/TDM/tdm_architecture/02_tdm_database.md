@@ -20,12 +20,16 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tdm_lu_type_relation_eid</td>
-<td>TDM relationships table. This table maps the source parent entity ID to its source children entity IDs per source environment. For example Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used to build the entities list of the children LUs during Load (copy) tasks.</td>
+<td><p>TDM relationships table. This table maps the source parent entity ID to its source children entity IDs per source environment. For example Customer 1 has orders 56, 63 and 73 in the Production environment. This table is populated by a sync of the parent LU and is used to build the entities list of the children LUs during Load (copy) tasks.</p>
+  <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid">Click for more imformation about tdm_lu_type_relation_eid table.</a></p>  
+  </td>
 <td>Business Entity</td>
 </tr>
 <tr>
 <td><h4>tdm_lu_type_rel_tar_eid</td>
-<td>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment and is populated by a sync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entities and their related data from a target environment.</td>
+<td><p>TDM relationship table for target IDs. This table maps the target parent entity ID to its target children entity IDs per target environment and is populated by a sync of the parent LU. The table is used to build the entities list of the children LUs for Delete Only tasks when the TDM task deletes parent entities and their related data from a target environment.</p>
+  <p><a href="/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid">Click for more information about tdm_lu_type_rel_tar_eid.</a></p>
+</td>
 <td>Business Entity</td>
 </tr>
 <tr>
