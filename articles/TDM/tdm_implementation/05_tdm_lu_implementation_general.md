@@ -29,7 +29,8 @@ Copy the following objects from the [TDM_LIBRARY LU](/articles/TDM/tdm_implement
 <p>TDM LU level globals</p>
 </td>
 <td valign="top" width="450pxl">
-<p>Populate ROOT_TABLE_NAME by the main source table. For example- CUSTOMER</p>
+<p>Populate ROOT_TABLE_NAME by the main source table or tables. It is possible to populate several source tables separated by a comma. For example: CUSTOMER, ACCOUNT.</p>
+  <p>The <strong>fnCheckInsFound</strong> enrichment function (attached to the root LU table) validates the source data and verifies that the entity (IID) exists in the main source tables. If the entity is not found in the main source tables, this function throws an Exception.</p>
 </td>
 </tr>
 <tr>
