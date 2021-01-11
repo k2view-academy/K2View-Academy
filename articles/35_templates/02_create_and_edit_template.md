@@ -18,7 +18,7 @@ To edit a template open it from the Fabric studio project tree. Editing changes 
 
  
 
-#### Expressions and Helpers
+### Expressions and Helpers
 
 Fabric Templates support the powerful capabilities using [handlebarsjs](https://handlebarsjs.com/) sematic template engine, among them are the expressions and helpers. 
 
@@ -52,6 +52,8 @@ The DbLoad Actor contains several input fields where in the template they will l
 ```
 
 When this template will be used the user will need to populate these expressions/placeholders and then the whole flow will be created with all required settings.
+
+Once the object is created the user still can change it, as used for any flow, for example in case a special manipulation is needed for a specific table, before transfer it to the target	. 
 
 
 
