@@ -5,7 +5,7 @@
 Fabric uses the [handlebarsjs](https://handlebarsjs.com/) template engine which enables many advanced capabilities, among them the helpers. Helper is a function that can be part of the template and that can be applied by the runtime engine according to the input. For example, an helper can change all input letters to be capital. Helper can be easily added and registered to the engine. 
 
 Following is an example of Handlebars iterations and conditions built-in helpers as used in Fabric:
-One of the common TDM tasks is to load data from LU tables into a target tables. For this, a Broadway flows are being used, which first retrieve the data from LU, prepare it and load it into the target. To do so, the DbCommand and the DbLoad actors shall be connected by their output and input fields reparenting table columns. Because each table has its own columns, using a simple template is not enough.  For this the each built-in helper can be used, which iterates on the table column list  and builds those actors dynamically.
+One of the common TDM tasks is to load data from LU tables into a target tables. For this, a Broadway flows are being used, which first retrieve the data from LU, prepare it and load it into the target. To do so, the DbCommand and the DbLoad actors shall be connected by their output and input fields reparenting table columns. Because each table has its own columns, using a simple template is not enough.  For this the #each built-in helper can be used, which iterates on the table column list and builds those actors dynamically.
 
 Below is an example of the DbCommand output, inside the template, with expressions and helpers that allow to the engine to build the output dynamically on runtime: 
 
