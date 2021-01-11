@@ -7,7 +7,7 @@ Templates can be created either per LU or can be part of the shared objects. Acc
 To create a new template:
 
 1. Right click on Templates at the required location in the project tree and choose New Template file.
-2. Write the template at the working area.
+2. Write the template at the working area. A best practice is to copy an existing object paste it to the working area and edit it as a template.
 3. On Save - type in the template name and choose its type among : [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md), [Broadway actor](/articles/19_Broadway/03_broadway_actor.md), [graphit](/articles/15_web_services_and_graphit/17_Graphit/01_graphit_overview.md), java, and [data catalog](/articles/33_data_catalog/01_data_catalog_overview.md) via the Target Ext. drop down list.  
 
 Template file is saved with "template" extension and it appears in the Fabric Studio tree. It is then available for usage when creating later new objects.

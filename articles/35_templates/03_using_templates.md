@@ -18,19 +18,10 @@ Once templates are ready at the project, they can be used when creating new obje
 
    <img src="images/templates_03_use_tmplt_params_json.png" alt="image" /><img src="images/templates_03_use_tmplt_params_proprty.png" alt="image"  />
 
-   Note that in some cases there is a need to define complex input structure which cannot be edited at the property view but only at the JSON view. For example, if the template contains  `{{person.firstname}} {{person.lastname}}` the expected input shall be like the following structure:
+   
 
-   ```json
-   {
-     "person": {
-       "firstname": "",
-       "lastname": ""
-     }
-   }
-   ```
+Once the object is created the user still can change it due to specific need.
 
-   For this example, the property view tab will show the "person" property as a "Collection" where editing will be enabled at the JSON tab. While in the simple expressions cases the default tab is the property view, the JSON tab is opened first in case Fabric recognizes that the template contain complex structure	.
-
-Once the object is created the user still can change it, for example in a TDM flow template a special manipulation might be needed for a specific table, before transfer it to the target.   
+   
 
 [![Previous](/articles/images/Previous.png)](02_create_and_edit_template.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_advanced_template_capabilities.md)  
