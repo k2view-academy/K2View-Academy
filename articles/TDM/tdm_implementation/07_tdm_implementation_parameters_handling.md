@@ -48,15 +48,17 @@ The parameters tables are used for the following:
 
     ![Lu_Params](images/lu_params_example.png)
 
-- The **fnEnrichmentLuParams** enrichment function runs the SQL queries of the **trnLuParams** and populate each column of the LU_PARAMS by the results of its related SQL query. 
+- The **fnEnrichmentLuParams** enrichment function runs the SQL queries of the **trnLuParams** and populates each column of the LU_PARAMS by the results of its related SQL query.  Each parameter's column contains a JSON with the values of the parameter. Each parameter can contain several values, separated by a comma. See example below:
+
+  ![lu params](images/populated_lu_params_example.png)
 
 - **Notes:**
 
   - The COLUMN_NAME value of the trnLuParams must be identical to the column_name added to LU_PARAMS table.
   - The COLUMN_NAME value is displayed by the TDM GUI when the user selects parameters for the task.
   - Do not include spaces or special characters in the parameter names.
-  - Use capital letters in the column names ??? (to be checked with Viki)
-  - If you do not need to define parameters on  an LU, you need to add to your LU LU_PARAMS table with two fields only: ENTITY_ID and SOURCE_ENVIRONMENT.
+  
+    If you do not need to define parameters on  an LU, you need to add to your LU LU_PARAMS table with two fields only: ENTITY_ID and SOURCE_ENVIRONMENT.
 
 
 
