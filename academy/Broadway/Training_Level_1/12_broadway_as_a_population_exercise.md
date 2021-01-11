@@ -22,7 +22,8 @@ In this exercise you will do the following:
 
 5. Save the population and deploy the Customer LU.
 
-   To learn how to deploy the Logical Unit, refer to [Deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
+   To learn how to deploy the Logical Unit, refer to [Deploy from Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md). 
+   Note that if you are working the on debug server, the **Auto Deploy** is performed automatically when running the flow in the debug mode. 
 
    
 
