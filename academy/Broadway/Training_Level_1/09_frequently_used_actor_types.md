@@ -14,6 +14,7 @@ Let's take a closer look at some of the most useful Actors.
   * **Stream** Actors, that handle streams like reading from and writing to a file or compressing and decompressing data.
   * **Parser** Actors, that parse input streams into different formats like JSON, CSV and XML.
   * **Queue** Actors, that manage Pub / Sub asynchronous message handling like Apache Kafka or JMS.
+  * **ErrorFields** and **ErrorHandler** Actors, that enable advanced handling of exceptions.
 
 To learn more about the above Actors, their specifications and examples, read [Actor Specifications and Examples](/articles/19_Broadway/actors/README.md). 
 
