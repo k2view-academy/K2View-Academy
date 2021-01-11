@@ -9,7 +9,7 @@ Templates can be used for various purposes in Broadway Flows and Actors, Java fi
 
 Fabric Templates support placeholders usage for smoother and smarter reuse. When creating an object based on a template, the user populates the template’s placeholders so that the new object is auto-generated with this data, already embedded inside the created object.
 
-The integrated Templates engine has powerful capabilities such as iteration over lists, conditions and lookup expressions. 
+The integrated templates engine has powerful capabilities such as iteration over lists, conditions and lookup expressions. 
 
 While templates can be useful for many scenarios, TDM is a good example where this capability is heavily been in use. TDM uses Broadway flows for transferring data from LU tables into target tables. Instead of creating manually a flow for each of the LU tables, that fulfill similar task of getting its data and load it to the target, templates are used.   
 
