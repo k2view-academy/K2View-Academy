@@ -14,7 +14,7 @@ Once templates are ready at the project, they can be used when creating new obje
 
    ![image](images/templates_02_use_template.png)
 
-4. Populate the expressions/placeholders, if exist for this template, within the opened Template Parameters popup window. This windows contain two tabs which show the same information - one shows it in parameters property view and the other one in JSON view.
+4. Populate the expressions/placeholders, if exist for this template, within the opened Template Parameters popup window. This windows contain two tabs which show the same information - one shows it in a parameters property view and the other one in a JSON view.
 
    <img src="images/templates_03_use_tmplt_params_json.png" alt="image" /><img src="images/templates_03_use_tmplt_params_proprty.png" alt="image"  />
 
@@ -24,12 +24,12 @@ Once templates are ready at the project, they can be used when creating new obje
    {
      "person": {
        "firstname": "",
-       "lastname": "",
+       "lastname": ""
      }
    }
    ```
 
-   The property view tab will show "person" as "Collection" where editing is enabled at the JSON tab.
+   For this example, the property view tab will show the "person" property as a "Collection" where editing will be enabled at the JSON tab. While in the simple expressions cases the default tab is the property view, the JSON tab is opened first in case Fabric recognizes that the template contain complex structure	.
 
   
 
