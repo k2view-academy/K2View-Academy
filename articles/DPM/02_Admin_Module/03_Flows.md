@@ -62,6 +62,7 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 </td>
 <td width="785">
 <p><strong>Description</strong></p>
+ 
 </td>
 </tr>
 <tr>
@@ -104,13 +105,13 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 </table>
  
 Once the Flow information is defined and the new Flow is saved, the system displays the "Flow Editing screen." The Administrator can add Stages and Tasks under those Stages. 
-The Flow name and the Flow description can be updated at anytime by using the edit  icon next to the Flow name.
+The Flow name and the Flow description can be updated at anytime by using the edit (pencil) icon next to the Flow name.
 
  ![image](/articles/DPM/images/Figure_6_Configuration_of_a_new_Flow_initial_screen.png)
 
 ## Flow Level Actions
 
-The set of icons next to the Flow name are Activities at Flow level:
+The set of icons to the right of the Flow name are actions for that Flow. Each icon and its corresponding description are provided by the following table. 
 
  ![image](/articles/DPM/images/Figure_7_Flow_status_icons.png)
 
@@ -122,39 +123,42 @@ The set of icons next to the Flow name are Activities at Flow level:
 </td>
 <td width="800">
 <p><strong>Description</strong></p>
+<u><strong>Property</strong></u>
 </td>
 </tr>
 <tr>
-<td width="100"><img src="/articles/DPM/images/Figure_7a_edit_flow_icon.png)alt=""/></td>
+<td width="100"><img src="/articles/DPM/images/Figure_7a_edit_flow_icon.png" alt=""/></td>
 <td width="800">
-<p>Edit this Flow: Edit Flow Name and Description. The Flow name and the Flow description can be updated as long as the Flow is not marked as <em>Completed</em>.</p>
+<p><u>Edit this Flow<u/>: Edit Flow Name and Description. The Flow name and the Flow description can be updated as long as the Flow is not marked as <em>Completed</em>.</p>
 </td>
 </tr>
 <tr>
-<td width="100"> ![image](/articles/DPM/images/Figure_7b_mark_flow_as_complete_icon.png)
+<td width="100"><img src="/articles/DPM/images/Figure_7b_mark_flow_as_complete_icon.png" alt=""/></td>
 </td>
 <td width="800">
-<p>Mark as Complete: Once the Flow configuration is complete, use this icon in order to mark the Flow as <em>Completed</em>. No further changes to the Flow are allowed after a Flow was marked as complete, and the Flow is made available to be associated with an Activity in the Activity configuration screens.</p>
-</td>
-</tr>
-<tr>
-<td width="100"> ![image](/articles/DPM/images/Figure_7c_duplicate_this_flow.png)</td>
-<td width="800">
-<p>Duplicate this Flow: this button is used in order to create a new version of the Flow. The new version is created in <em>Draft</em> status and allows the user to change the details of the Flow in the new version.</p>
+<p><u>Mark as Complete</u>: Once the Flow configuration is complete, use this icon in order to mark the Flow as <em>Completed</em>. No further changes to the Flow are allowed after a Flow was marked as complete, and the Flow is made available to be associated with an Activity in the Activity configuration screens.</p>
 </td>
 </tr>
 <tr>
-<td width="100"> ![image](/articles/DPM/images/Figure_7d_save_flow_as.png)</td>
+<td width="100"><img src="/articles/DPM/images/Figure_7c_duplicate_this_flow.png" alt=""/></td>
 <td width="800">
-<p>Save Flow As: Use the &ldquo;save as&rdquo; button to create a new Flow in <em>Draft</em> status, that initially has the same details of the original Flow. The new Flow that is created as a result is independent from the source Flow.</p>
+<p><u>Duplicate this Flow</u>: this button is used in order to create a new version of the Flow. The new version is created in <em>Draft</em> status and allows the user to change the details of the Flow in the new version.</p>
+</td>
+</tr>
+<tr>
+<td width="100"><img src="/articles/DPM/images/Figure_7d_save_flow_as.png" alt=""/></td>
+<td width="800">
+<p><u>Save Flow As</u>: Use the &ldquo;save as&rdquo; button to create a new Flow in <em>Draft</em> status, that initially has the same details of the original Flow. The new Flow that is created as a result is independent from the source Flow.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-At the upper-right corner of the Flow screen, the system shows general Flow information: 
+At the upper-right corner of the Flow screen, the system shows general Flow information. 
 
  ![image](/articles/DPM/images/Figure_8_Flow_information.png)
+ 
+Each information item is described by the following table. 
 
 <table>
 <tbody>
@@ -187,7 +191,7 @@ At the upper-right corner of the Flow screen, the system shows general Flow info
 <p>Business Days</p>
 </td>
 <td width="800">
-<p>The total Flow duration &ndash; how many business days are required in order to perform all the tasks of the Flow. This number is based on the deadlines of the Tasks included in the Flow and is rounded up to present a whole number of days.</p>
+<p>The total Flow duration &ndash; how many business days are required in order to perform all tasks of the Flow. This number is based on the deadlines of the Tasks included in the Flow and is rounded up to present a whole number of days.</p>
 </td>
 </tr>
 <tr>
@@ -195,7 +199,7 @@ At the upper-right corner of the Flow screen, the system shows general Flow info
 <p>(x business Hours)</p>
 </td>
 <td width="800">
-<p>This indicates the total number of hours that the Flow is expected to take, according to the deadline information of all its Tasks. The unit of the information can be changed by configuration from Hours to Minutes. Note that changing the configuration from Hours to Minutes alters the expected duration of the Flow, and not only the units. For example: a Task with the deadline set to 1 would be considered as 1 hour long when the configuration is &ldquo;Hours&rdquo; and as 1 minute long when the configuration is set to &ldquo;Minutes&rdquo;. The option of &ldquo;Minutes&rdquo; is usually utilized for testing purposes, when the tester would like to have the Flows executed faster.</p>
+<p>This indicates the total number of hours that the Flow is expected to take, according to the deadline information of all its Tasks. The unit of the information can be changed by configuration from Hours to Minutes. Note that changing the configuration from Hours to Minutes alters the expected duration of the Flow, and not only the units. For example: a Task with the deadline set to 1 would be considered as 1 hour long when the configuration is &ldquo;Hours&rdquo; and as 1 minute long when the configuration is set to &ldquo;Minutes&rdquo;. The option of &ldquo;Minutes&rdquo; is usually utilized for testing purposes, when the tester wishes to have the Flows executed faster.</p>
 </td>
 </tr>
 </tbody>
@@ -203,7 +207,7 @@ At the upper-right corner of the Flow screen, the system shows general Flow info
 
 ### Add a Stage
 
-Use the  ![image](/articles/DPM/images/Figure_8a_plus_icon.png) button on the left side of the Flow screen in order to add a new Stage. As a result, the user is prompted to define the Stage name and description:
+Use the New Stage ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on the left side of the Flow screen to add a new Stage. The user is prompted to define the Stage name and description, as shown by the following table.
 
  ![image](/articles/DPM/images/Figure_9_Adding_a_new_Stage.png)
 
@@ -239,7 +243,7 @@ Use the  ![image](/articles/DPM/images/Figure_8a_plus_icon.png) button on the le
 <p>O</p>
 </td>
 <td width="785">
-<p>The Stage description</p>
+<p>The Stage description.</p>
 </td>
 </tr>
 </tbody>
@@ -249,8 +253,7 @@ Saving the new Stage will open the screen to define tasks in this stage.
 
  ![image](/articles/DPM/images/Figure_10_New_Flow_initial_state.png)
 
-As long as the Flow is not marked  Completed, additional Stages can be added, and Tasks under them can be added or modified. 
-
+When the Flow is not marked <i>Completed</i>, Stages can be added, and defined by added or modified Tasks. . 
 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/04_Stages.md)
