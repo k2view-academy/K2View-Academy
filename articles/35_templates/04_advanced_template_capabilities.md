@@ -1,5 +1,22 @@
 # Advanced Templates Capabilities
 
+### Complex Input Data
+
+In some cases there is a need to define a complex input structure. For example, if the template contains  `{{person.firstname}} {{person.lastname}}` the expected input shall be like the following element:
+
+```json
+{
+  "person": {
+    "firstname": "",
+    "lastname": ""
+  }
+}
+```
+
+Such structure is not managed by the Template Parameters popup window and it shall be added manually to the the JSON tab, which will be in such case the default tab when the Template Parameters is opened. 
+
+The property view tab will show the property as a "Collection". 
+
 ### Helpers Examples
 
 Fabric uses the [handlebarsjs](https://handlebarsjs.com/) template engine which enables many advanced capabilities, among them the helpers. Helper is a function that can be part of the template and that can be applied by the runtime engine according to the input. For example, an helper can change all input letters to be capital. Helper can be easily added and registered to the engine. 
@@ -27,7 +44,9 @@ In this example:
 
 ### Templates in Java
 
-Working behind the scenes the handlebars engine is usually transparent to the users who define or use templates.  However, for advanced usages, it can be explicitly used within Fabric java functions, using the handlebars Java library which already embedded within Fabric. 
+Working behind the scenes the handlebars engine is usually transparent to the users who define or use templates.  However, for advanced usages, it can be explicitly used within Fabric java functions, using the handlebars Java library which already embedded within Fabric.
+
+[More information about using Java with handlebars](https://jknack.github.io/handlebars.java/). 
 
  
 
