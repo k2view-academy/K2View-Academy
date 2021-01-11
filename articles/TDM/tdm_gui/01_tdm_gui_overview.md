@@ -4,13 +4,13 @@ The TDM GUI is a web-based application that helps users easily control and admin
 
 The K2view TDM GUI application consists of two main functions:
 
-- TDM Administrative Activities, TDM definitions, setting TDM Business Entities, environments, roles and permissions.
+- TDM Administrative activities (TDM definitions), setting TDM Business Entities, environments, roles and permissions.
 
 - TDM Copy Activities, creation and execution of TDM tasks that provide a selected subset of entities or Reference tables to the selected environment.
 
-The TDM settings and tasks are kept in the TDM PostgreSQL DB.  Every TDM activity, created by the user via the TDM GUI, updates the TDM DB. 
+The TDM settings and tasks are kept in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md).  Every TDM activity, created by the user via the TDM GUI, updates the TDM DB. 
 
-The TDM GUI connects the [TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md) using APIs to retrieve and update the TDM settings and tasks.
+The TDM GUI connects the TDM DB using APIs to retrieve and update the TDM settings and tasks.
 
 ## TDM - Working Modes
 
