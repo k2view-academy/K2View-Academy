@@ -72,8 +72,7 @@ The following table details the options for the Task tab.
 <td width="775">
 <p>This property defines when the next task in the flow should be started. There are two options:  Start the task immediately after the preceding task has completed or start the task as defined by the configurable time lag, described next. </p>
 <p>The time lag configuration:</p>
-<p> ![image](/articles/DPM/images/Figure_14_task_schedule.png)</p>
-<p>&nbsp;</p>
+ <p><img src="/articles/DPM/images/Figure_14_task_schedule.png" alt=""/</p>
 <p>The configuration depends on the selected time unit:</p>
 <p>If &ldquo;hour&rdquo; was selected, the user defines the minute the task starts. Once the preceding task has completed, this task will start in the defined minute of the following hour.</p>
 <p>If &ldquo;day&rdquo; is selected then the hour of the day is defined.</p>
