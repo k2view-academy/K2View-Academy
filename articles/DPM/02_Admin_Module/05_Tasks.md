@@ -180,4 +180,4 @@ When a Flow including a conditional Task is executed, the conditional Task will 
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02/Admin_Module_04_Stages.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/06_Reminders.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module_04_Stages.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/06_Reminders.md)
