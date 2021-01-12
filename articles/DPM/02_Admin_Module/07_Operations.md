@@ -1,15 +1,15 @@
 ## “Operations” Tab:
 
-The Operations tab allows the Admin to add an automated Activity that should be executed to perform the Task. 
+The Operations tab allows the Admin to add an automated Activity to be executed to perform the Task. 
 
-The user selects an Operation from the operation dropdown list. As a result, the list of parameters that should be defined for the selected Operation are dynamically presented in the “inputs” section of the tab. Some operations may not need any parameters. 
+The user selects an Operation from the operation dropdown list. As a result, the list of parameters to be defined for the selected Operation is dynamically presented in the “inputs” section of the tab. Some operations may not need any parameters. 
 
-As an example, for a Task that should execute the Operation “SendMail” the system expects the parameters “Message”, “Subject” and “to” to be configured.
+As an example, for a Task that should execute the Operation “SendMail” the system expects the parameters “Message”, “Subject” and “to” as configured items. 
 
  ![image](/articles/DPM/images/Figure_17_Task_configuration_Operation_tab.png)
 
-Configuring operation’s parameters: 
-When an operation requires the configuration of one or more parameters, the value of those parameters can be defined in several different ways. Each parameter can be one of the following types: 
+<b>Configuring Parameters for an Operation</b>
+<p>When an operation requires the configuration of one or more parameters, the value of those parameters can be defined in several different ways. Each parameter can be one of the following types:</p> 
 
 - Value
 - Link
@@ -17,7 +17,7 @@ When an operation requires the configuration of one or more parameters, the valu
 
  ![image](/articles/DPM/images/Figure_18_Operation_parameters_types.png)
 
-Each of those types allows the user to define a different way to obtain the information that is needed for the execution of the operation. The following table describes the different options:
+Each of those types allows the user to define a different way to obtain information needed for the execution of the operation. The following table describes the available options.
 
 <table>
 <tbody>
@@ -34,7 +34,7 @@ Each of those types allows the user to define a different way to obtain the info
 <p>Value</p>
 </td>
 <td width="800">
-<p>This input option should be used when the value that you want to use is fixed value for the given operation. Meaning, a value that is known at the time of the Task configuration and does not depend on the customer that makes the request.</p>
+<p>This input option is used when the value used is a fixed value for the given operation. It refers to a known value at the time of the Task configuration and does not depend on the customer that makes the request.</p>
 <p>The value should be specified in the &ldquo;value&rdquo; field that the system presents to the user when this option is selected.</p>
 </td>
 </tr>
@@ -43,7 +43,7 @@ Each of those types allows the user to define a different way to obtain the info
 <p>Link</p>
 </td>
 <td width="800">
-<p>This option enables you to use a value that is determined as a result of the execution of a previous Task. The previous Task can come from the same Stage of the current Task or from any of the previous Stages of the Flow. When selecting this option, the system enables the user to define which is the Stage, Task and Task-output that will be used. &nbsp;</p>
+<p>This option enables the use of a value determined as a result of the execution of a previous Task. The previous Task can be derived from the same Stage of the current Task or from any of the previous Stages of the Flow. When selecting this option, the system enables the user to define the Stage, Task and Task output to be used.</p>
 </td>
 </tr>
 <tr>
@@ -52,15 +52,15 @@ Each of those types allows the user to define a different way to obtain the info
 </td>
 <td width="800">
 <p>Use the &ldquo;input&rdquo; option when the Task requires a specific input from the user at the moment of opening a new DPM Request.</p>
-<p>The system requires that you define the label of the field that the user will be requested to fill.</p>
-<p>When a new DPM Request is submitted by a representative or customer, the system will present the list of parameters that were defined as &ldquo;input&rdquo; and the label you defined here will appear as the label of the field that should be populated.</p>
-<p>For example, if the input parameter is the email address of the customer, then the label can be &ldquo;email address&rdquo; or &ldquo;Please provide your email address&rdquo;</p>
+<p>The system requires the definition for the label of the field that the user will be requested to fill. </p>
+<p>When a new DPM Request is submitted by a representative or customer, the system will present the list of parameters that were defined as “input” and the label defined here appears as the label of the field that should be populated. </p>
+<p>For example, when the input parameter is the email address of the customer, the label can be “email address” or stated as “Please provide your email address”.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-The following image demonstrates the information that the DPM requests the Administrator to fill for each one of those input options. 
+The following image demonstrates the information the DPM requests the Administrator to fill for each input option. 
 
 
 
