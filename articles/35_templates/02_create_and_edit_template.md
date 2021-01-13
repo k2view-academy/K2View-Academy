@@ -6,7 +6,7 @@ Templates are displayed in the Fabric Studio projects tree and can be created ei
 
 To create a new template:
 
-1. Go to the project tree, right click Templates and select New Template file.
+1. Go to the project tree, right click Templates and select New Template File.
 2. Create the template in the working area. A best practice is to copy / paste an existing object from the project tree and to edit it as a template.
 3. When saving the template, type in the template's Name and in the Target Ext. dropdown list select either: 
    -  [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md).  
@@ -26,11 +26,9 @@ Note that when deleting / editing an existing template, the changes are only imp
 
 Fabric Templates are supported by the [handlebarsjs](https://handlebarsjs.com/) template engine and its expressions and helpers: 
 
-**Expressions** are used as placeholders in the template and are populated as input when creating an object. To embed an expression into a template use the `{{<expression-name>}}` syntax, for example `{{<firstname>}}`. 
+-  **Expressions** are used as placeholders in the template and are populated as input when creating an object. To embed an expression into a template use the `{{<expression-name>}}` syntax, for example `{{<firstname>}}`. Fabric templates offer the built-in  \_\_LU_NAME and \_\_FILE_NAME expressions that are populated by Fabric according to context.
 
-Fabric templates offer the \_\_LU_NAME and \_\_FILE_NAME built-in expressions that are populated by Fabric according to context.
-
-**Helpers** are functions that can be used when creating objects. A number of built-in helpers are useful for applying if-else conditions and iterations that are embedded into the template.  
+-  **Helpers** are functions that can be used when creating objects. A number of built-in helpers are useful for applying if-else conditions and iterations that are embedded into the template.  
 
 For example:
 
@@ -53,7 +51,7 @@ The DbLoad Actor contains several input fields which are all similar in the temp
 }
 ```
 
-When this template is used the user populates the expressions / placeholders to create an entire flow with all required settings.
+When this template is used, the user populates the expressions / placeholders to create an entire flow with all required settings.
 
 
 
