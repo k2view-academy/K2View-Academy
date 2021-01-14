@@ -2,33 +2,33 @@
 
 ### Overview
 
-Corporate Roles represent the roles defined by the company. Those roles represent the different groups that take part in the DPM processes. Corporate roles are fully configurable, and each corporate defines them according to its own organizational structure. 
+Corporate Roles represent the roles defined by the company. Such roles represent the different groups that take part in the DPM processes. Corporate roles are fully configurable, and each corporation defines roles according to its own organizational structure.  
 Corporate roles are configured by the DPM Administrator by accessing the Role Management menu option.
 
  ![image](/articles/DPM/images/Figure_23_Role_Management_in_menu.png)
 
-The “Corporate Roles” screen is displayed. It presents the list of the corporate role in the screen center. 
+The “Corporate Roles” screen displays the list of the corporate roles.
 When selecting one of the corporate roles, the right side of the screen displays the DPM Application Roles that are enabled for this Corporate Role. 
-For example – take a user that belongs to the “Legal Fulfilment” group and is responsible to work on Tasks as part of the fulfilment process. Performing a Task is defined as part of the Steward Application Roles. So, for the user to be able to perform a Task, the DPM Administrator should:
+For example – A user belongs to the “Legal Fulfilment” group and is responsible to work on Tasks as part of the fulfilment process. Performing a Task is defined as part of the Steward Application Roles. So, for the user to perform a Task, the DPM Administrator acts to:
 
-1. Create a Corporate Role to represent the Legal team, called “Legal” in the below example
-2. Mark that this Role can perform the actions that are grouped under the “Steward” DPM Application Role (on the right side of the screen).
+1. Create a Corporate Role to represent the Legal team, called “Legal,” as shown by the following example.
+2. Mark this Role to perform the actions grouped under the “Steward” DPM Application Role (on the right side of the screen).
 3. Assign the user to the corporate Role “Legal” (user management is detailed in the next section).
 
  ![image](/articles/DPM/images/Figure_24_Corporate_Role_Management.png)
 
-If a more detailed authorization definition is required, the Administrator can expand the options that appear under the selected Application Role, and specify with more details what are the actions that the users from this corporate role can perform:
+If a more detailed authorization definition is required, the Administrator can expand the options displayed under the selected Application Role, and specify with more details those actions the users from this corporate role can perform.
 
  ![image](/articles/DPM/images/Figure_25_Detailed_Authorization_Configuration.png)
 
-In the screen example above, the Corporate Role called “Marketing” was assigned the “Steward” Application Role but will not be allowed to add a note to a Task or Release Ownership of a Task.
-Each Corporate Role can have multiple Application Roles enabled. This means that the users assigned to this Corporate Role will be able to perform actions or view information that were defined as part of all of the enabled Application Roles. 
-The main menu on the left side of the screen is constructed based on the list of Application Roles that are enabled for the Corporate Roles the user belongs to. You can find more details about the menu options that are presented to each user in the DPM Main Menu chapter below. 
+In the screen example above, the Corporate Role called “Marketing” was assigned to the “Steward” Application Role but will not be allowed to add a note to a Task or Release Ownership of a Task.
+Each Corporate Role can have multiple Application Roles enabled. This means that the users assigned to such a Corporate Role will be able to perform actions or view information defined as part of all of the enabled Application Roles. 
+The main menu on the left side of the screen is constructed based on the list of Application Roles that are enabled for the Corporate Roles to which the user belongs.  See more details about the menu options presented to each user in the DPM Main Menu section following. 
 
 ### Add a new Corporate Role
 
 To create a new Corporate Role, use the   ![image](/articles/DPM/images/Figure_26_a_create_new_role_icon.png) option at the top of the Role Management screen.
-The “New Corporate Role” screen is presented:
+The “New Corporate Role” screen is displayed:
 
  ![image](/articles/DPM/images/Figure_26_New_Corporate_Role.png)
 
