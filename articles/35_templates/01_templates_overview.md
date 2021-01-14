@@ -8,7 +8,7 @@ Fabric Templates support the usage of placeholders for smoother and smarter reus
 
 The integrated Templates engine has powerful capabilities like iteration over lists, conditions and lookup expressions. 
 
-Templates can be used in many scenarios. For example, in TDM they are heavily employed in Broadway flows to transfer data from LU tables into target tables. Here the same template is used by all LU tables, instead of manually creating a flow for each LU table. 
+Templates can be used in many scenarios. For example, in TDM they are heavily employed in Broadway flows to transfer data from LU tables into target tables. Here the same template is used to create broadway flows which fit to all LU tables, instead of manually creating a flow for each LU table. 
 
 
 
