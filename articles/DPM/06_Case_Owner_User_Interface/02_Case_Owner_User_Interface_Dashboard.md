@@ -10,7 +10,7 @@ The dashboard provides an overall status of the requests currently in process in
 
 ### Case Owner Dashboard Filters:
 
-The graphs in the dashboard can be filtered based on a set of parameters that appear a at the upper part of the screen. The filters can be:
+The graphs in the dashboard can be filtered based on a set of parameters that appear at the upper part of the screen. The filters can be:
 
 - Regulation – Filter the information presented in the dashboard to Requests of a specific Regulation
 - Activity - Filter the information presented in the dashboard to Requests of a specific Activity
