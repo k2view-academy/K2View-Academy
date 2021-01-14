@@ -16,9 +16,9 @@ As a role-based application, DPM Roles define the functions within the system en
 
 •	 **Data Steward**: data stewards are users assigned to the Request fulfilment process, and are responsible to execute a specific task in the request flow. The Data Steward can:
 -	View the list of open tasks that should be handled by the group of representative stewards.
--	Take ownership of a task by marking it assigned to avoid other stewards from working on the same task.
+-	Take ownership of a task by marking it as "assigned" to avoid other stewards from working on the same task.
 -	Review, Update, or approve a task in order to move it to the next step
--	Release the now completed assigned task by this data steward.
+-	Release the completed assigned task by this data steward.
 
 •	**Case Owner**:
 -	Each customer request submitted in the DPM is assigned to a specific case owner. The case owner follows up on the request progress and assures the request is completed within the expected SLA. A case owner can:
