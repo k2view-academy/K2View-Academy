@@ -139,7 +139,7 @@ Any change occuring on the LU tables will then activate a trigger and Fabric wil
 
 ### 3.3 Fabric ETL Layer
 
-When data needs to be processed before being stored or exposed, it goes through the Fabric ETL and business logic engine. Data can be processed and transformed in accordance with the user-defined business requirements using one of the many Fabric flow management systems.
+When data needs to be processed before being stored or exposed, it goes through the Fabric ETL and business logic engine. Data can be processed and transformed in accordance with the user-defined business requirements using one of the many Fabric flow management systems. Fabric uses UTF-8 as the default encoding that can be changed in the JVM options (not recommended).
 
 #### 3.3.1 Protocols
 **3.3.1.1 Files:**
