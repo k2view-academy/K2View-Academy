@@ -4,7 +4,7 @@
 
 As a role-based application, DPM Roles define the functions within the system enabled for each user as described next.
 
-•	**Admin users**: Admin users are responsible to configure the flows to be executed for each Data Subject Request. An Admin user can perform all the Activities within the Admin module, such as:
+-	**Admin users**: Admin users are responsible to configure the flows to be executed for each Data Subject Request. An Admin user can perform all the Activities within the Admin module, such as:
 -	Define the Regulation and included Activities.
 -	Create or update flows, including their stages and tasks.
 -	Manage and assign Corporate roles to users.
