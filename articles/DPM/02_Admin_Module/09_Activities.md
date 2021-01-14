@@ -2,7 +2,7 @@
 
 ## Activity Details
 
-When one of the lines in the Activities table is selected, or, by using the “Edit” icon, the system displays the “Edit Activity” pop-up screen.  
+When one of the lines in the Activities table is selected, or, by using the “Edit” icon, the system displays the “Edit Activity” pop-up screen. 
 
  ![image](/articles/DPM/images/Figure_21_Edit_Activity.png)
 
@@ -18,7 +18,7 @@ Any update performed on the Activity impacts only requests from the update momen
 
 ## Add an Activity
 
-In order to add a new Activity to a Regulation, select the Regulation from the Regulation screen, and then click the “Add an Activity” button on the “Regulation Activities” screen. 
+In order to add a new Activity to a Regulation, select the Regulation from the Regulation screen, then click the “Add an Activity” button on the “Regulation Activities” screen. 
 The pop-up screen presented is the same as the one used for “Edit an Activity.”   
 
 
