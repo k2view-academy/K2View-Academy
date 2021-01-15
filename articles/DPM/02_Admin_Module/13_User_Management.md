@@ -1,15 +1,15 @@
 ## Managing Users in the Admin Module
 
-For a person to be able to access and perform Activities in the DPM, a User must be defined for this person in the DPM system, and this user should have a Corporate Role assigned to it. 
-Enter the User Management menu option under the Admin menu in order to manage the users and privileges for the DPM system. 
+User access to perform Activities in the DPM is predicated upon the definition of the user to the DPM system with an assigned Corporate Role.  
+The authorized user selects User Management menu option under the Admin menu to manage users and privileges for the DPM system. 
 
  ![image](/articles/DPM/images/Figure_28_User_management.png)
 
-The list of existing users is displayed. For each user, the user ID, username and email are presented. In the Corporate Role column, the list of Corporate Roles that were assigned to this user is presented. Each user can have multiple Corporate Roles, and the functionality this user will be able to perform is a sum of all the options that are enabled under each of the roles assigned.
+The list of existing users is displayed. For each user, the user ID, username and email are shown. In the Corporate Role column, the list of Corporate Roles assigned to this user is displayed. Each user can have multiple Corporate Roles, and the functionality assigned to the user reflects the sum of all options enabled under each assigned role. 
 
 ### Create a new user
 
-Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in order to add a user to the system. The system presents the “Create New User”:
+Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in order to add a user to the system. The “Create New User” screen is displayed. 
 
  ![image](/articles/DPM/images/Figure_29_New_User_screen.png)
 
@@ -34,7 +34,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 <p>M</p>
 </td>
 <td width="785">
-<p>The User unique identification</p>
+<p>The distinct name for the user. </p>
 </td>
 </tr>
 <tr>
@@ -45,7 +45,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 <p>M</p>
 </td>
 <td width="785">
-<p>Defines the password used to enter the system. This field is presented only in the new user screen.</p>
+<p>Defines the user-directed secure characters to log in to the system. This field is displayed only on the new user screen. </p>
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 <p>M</p>
 </td>
 <td width="785">
-<p>The name this user will be represented in the system.</p>
+<p>The name this user to be represented in the system. </p>
 </td>
 </tr>
 <tr>
@@ -67,7 +67,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 <p>O</p>
 </td>
 <td width="785">
-<p>The mail of the user. This email address is used when a Task reminder is being configured and the user selects the user itself as the reminder target mail.&nbsp;</p>
+<p>The email of the user. The email address is used when a Task reminder is configured and the user selects the target user to receive the task reminder email.  &nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -78,7 +78,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 <p>O</p>
 </td>
 <td width="785">
-<p>This field is where the assignment of Corporate Roles is defined for the user. Click on the field to open the drop-down list of all roles and select one or more of those roles.</p>
+<p>This field allows the user to select from available roles to assign such a role as a Corporate Role(s). </p>
 </td>
 </tr>
 </tbody>
@@ -87,6 +87,6 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in 
 ### Edit or Delete a User
 
 Use the  ![image](/articles/DPM/images/Figure_29_a_delete_icon.png) button to delete a User. 
-Use the  ![image](/articles/DPM/images/Figure_29_b_edit_icon.png) button to edit the name, Email address and Corporate Roles of a User.  
+Use the  ![image](/articles/DPM/images/Figure_29_b_edit_icon.png) button to edit the name, email address and Corporate Roles assigned to a User.    
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/12_Corporate_Roles.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md)
