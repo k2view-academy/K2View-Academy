@@ -2,11 +2,13 @@
 
 ## Customer Dashboard
 
-When a customer logs into the DPM user interface, the initial screen that is presented is the customer’s Dashboard screen, which includes the following items:
+4.1.1	Customer Dashboard
 
-- Submit a new request button: the option to submit a request.
-- Open Requests: the number of requests that are in processing for this customer.
-- View Requests: view the list of this customer’s requests.
+When a customer logs into the DPM user interface, the first screen displayed is the Customer Dashboard. The Dashboard includes the following items:
+
+- Submit a Request: button used to submit a request.
+- My Open Requests: displays the number of requests processing for this customer.
+- View Requests: expands to view the list of the customer’s requests.
 
  ![image](/articles/DPM/images/Figure_36_customer_landing_page.png)
 
