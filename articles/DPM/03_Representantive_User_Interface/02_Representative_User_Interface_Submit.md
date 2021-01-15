@@ -1,13 +1,13 @@
 ## Representative Submits a Request
 
-A representative can submit a request on behalf of a customer, using the “Submit a Request” button that is located on the search screen or by using the menu on the left. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module.
+A representative can submit a request on behalf of a customer, using the “Submit a Request” button located on the search screen, or by using the menu on the left. The list of requests by type and the information to be provided for each of request, is defined by implementation using the Admin module.
 
 ![](/articles/DPM/images/Figure_35_Representative_submits_a_new_Request.png)
 
-When submitting a new request, the representative first selects the regulation that applies to the customer out of the Regulation dropdown list and fills the customer number at the Customer field. 
-The representative can add notes to the Request before submitting it. 
-The list of Request Types options that is presented at the bottom of the submission form changes according to the selected Regulation.
-Once the Request type is selected, the right side of the form presents the list of fields that should be completed before submitting the request. This list is automatically adapted in accordance with the Request type.
+When submitting a new request, the representative first selects the applicable regulation to the customer from the Regulation dropdown list and enters the customer number in the Customer field.  
+The representative can add notes to the Request before submission.  
+The list of Request Types displayed at the bottom of the submission form changes according to the selected Regulation.
+Once the Request type is selected, the right side of the form displays the list of fields to be completed before submitting the request. This list is automatically correlated with the Request type. 
 
 <table>
 <tbody>
@@ -24,7 +24,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Regulation</p>
 </td>
 <td width="800">
-<p>The Regulation that applies to the customer that is asking to submit a request.</p>
+<p>The Regulation applicable to the customer.  </p>
 </td>
 </tr>
 <tr>
@@ -32,7 +32,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Customer</p>
 </td>
 <td width="800">
-<p>The customer identification of the customer that is asking to submit the request</p>
+<p>The customer identification requesting submission of the request. </p>
 </td>
 </tr>
 <tr>
@@ -40,7 +40,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Notes</p>
 </td>
 <td width="800">
-<p>Free text. Comments that the representative would like to be registered as part of the request.</p>
+<p>Free text. Comments that the representative wishto be registered as part of the request. </p>
 </td>
 </tr>
 <tr>
@@ -48,7 +48,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Request Type</p>
 </td>
 <td width="800">
-<p>The specific Request that should be submitted. The options in this section depend on the selected Regulation.</p>
+<p>The specific Request to be submitted. The options in this section depend on the selected Regulation. </p>
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Request Form Fields</p>
 </td>
 <td width="800">
-<p>Depending on the selected Request Type, different fields will be presented in this section, and the representative should populate them according to the information of the requesting customer.</p>
+<p>Depending on the selected Request Type, different fields are displayed in this section, and the representative should populate them according to the information on behalf of the customer.</p>
 </td>
 </tr>
 </tbody>
