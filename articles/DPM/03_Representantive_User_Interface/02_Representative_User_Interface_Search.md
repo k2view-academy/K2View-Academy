@@ -1,6 +1,6 @@
 ## Representative Search a Request
 
-Under the Representative menu, select the “Requests List” menu option. The screen that is presented includes the list of existing requests and allows searching for a specific request based on multiple parameters.
+Search a request from the Representative menu by selecting the “Requests List” menu option. The displayed screen includes the list of existing requests and allows searching for a specific request based on multiple parameters.
 
 ![](images/Figure_33_Representative_Search_Request.png)
 
@@ -27,7 +27,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <p>Regulation</p>
 </td>
 <td width="800">
-<p>The Regulation that this request was created for.</p>
+<p>The Regulation for which this request was created.</p>
 </td>
 </tr>
 <tr>
@@ -35,7 +35,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <p>Activity</p>
 </td>
 <td width="800">
-<p>The Activity that this Request executes.</p>
+<p>The Activity this Request executes. </p>
 </td>
 </tr>
 <tr>
@@ -43,7 +43,7 @@ Under the Representative menu, select the “Requests List” menu option. The s
 <p>Status</p>
 </td>
 <td width="800">
-<p>The Request status. Values may be: In Progress, Completed, Stopped. A Stopped Request is a Request that during its execution the system identified it should stop the execution. For example, if there is a validation that the same customer cannot open two equal Requests, and there is already another Request for this same customer and Activity which is still in progress</p>
+<p>The Request status. Values may be: In Progress, Completed, Stopped. A Stopped Request is a Request,  during its execution the system identified the request should stop itsexecution. For example, if there is a validation, the same customer cannot open two equal Requests, as there is already an in-progress Request for this same customer and Activity. </p>
 </td>
 </tr>
 <tr>
@@ -67,9 +67,9 @@ Under the Representative menu, select the “Requests List” menu option. The s
 
 
 
-For the search criteria that are selected by a drop-down list or selecting a date: Regulation, Activity, Request Status, Created and Completed – the search is executed as soon as a value is selected. 
-For the search criteria which allow typing: customer ID and Request ID, the search is invoked as soon as the representative types 3 characters or more. 
-Once the search results are presented, the representative can view further details of a specific request by clicking the row of this request:
+For the search criteria selected by a drop-down list or by selecting a date: Regulation, Activity, Request Status, Created and Completed – the search is executed upon a value selected.  
+For the search criteria entry field: typing either or both the customer ID and Request ID, the search is invoked upon the first three stated characters or more.  
+Once the search results are presented, the representative can view further details of a specific request by clicking the row of this request, as shown in the next image.
 
 ![](images/Figure_34_Request_Details.png)
 
@@ -96,7 +96,7 @@ Once the search results are presented, the representative can view further detai
 <p>Regulation name</p>
 </td>
 <td width="800">
-<p>The Regulation that this request was created for.</p>
+<p>The Regulation for which the request was created.</p>
 </td>
 </tr>
 <tr>
@@ -104,7 +104,7 @@ Once the search results are presented, the representative can view further detai
 <p>Activity name</p>
 </td>
 <td width="800">
-<p>The Activity that this Request executes.</p>
+<p>The Activity this Request executes.</p>
 </td>
 </tr>
 <tr>
@@ -120,7 +120,7 @@ Once the search results are presented, the representative can view further detai
 <p>Created on</p>
 </td>
 <td width="800">
-<p>The date and time that the Request was submitted.</p>
+<p>The date and time the Request was submitted.</p>
 </td>
 </tr>
 <tr>
@@ -128,15 +128,15 @@ Once the search results are presented, the representative can view further detai
 <p>Last Update Date</p>
 </td>
 <td width="800">
-<p>The last time this request was updated. The Request is updated as its execution is progressing &ndash; so this date indicates the last date that a Task was executed in the Flow that is fulfilling this Request.</p>
+<p>The last time this request was updated. The Request is updated as its execution is progressing; this date indicates the last date that a Task was executed in the Flow fulfilling this Request.</p>
 </td>
 </tr>
 <tr>
 <td width="100">
-<p>Estimated completion in</p>
+<p>Estimated completion</p>
 </td>
 <td width="800">
-<p>The number of days till the request is expected to be completed. The number of days is calculated based on the Request creation date and the Activity SLA.</p>
+<p>The number of days the request is expected to complete. The number of days calculation is based on the Request creation date and the Activity SLA.</p>
 </td>
 </tr>
 <tr>
