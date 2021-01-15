@@ -9,7 +9,7 @@ The list of existing users is displayed. For each user, the user ID, username an
 
 ### Create a new user
 
-Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button in order to add a user to the system. The “Create New User” screen is displayed. 
+Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to add a user to the system. The “Create New User” screen is displayed. 
 
  ![image](/articles/DPM/images/Figure_29_New_User_screen.png)
 
