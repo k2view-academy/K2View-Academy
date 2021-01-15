@@ -2,14 +2,14 @@
 
 # Customer Direct Requests
 
-The DPM system provides different ways to allow a customer to submit a DPM request, search for a request previously submitted and view its details:
+The DPM system provides different ways to allow a customer to submit a DPM request, such as a search for a previously submitted request and view of its details. The DPM:
 
-- DPM includes built-in user interface for the use of a customer.
-- DPM provides a set of APIs that can be integrated in the customer portal of each corporate that uses the system. 
+- includes built-in user interface for the use of a customer.
+- provides a set of APIs that can be integrated in the customer portal of each corporation that uses the system. 
 
 ## DPM Customer’s Built-in User Interface
 
-DPM includes a set of screens that allow a customer to submit DPM Requests, as well as view his own request’s details.
+The DPM includes a set of screens that allow a customer to submit DPM Requests, as well as view request details.
 
 
 
