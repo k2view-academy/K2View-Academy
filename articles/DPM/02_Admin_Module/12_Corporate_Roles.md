@@ -23,12 +23,12 @@ If a more detailed authorization definition is required, the Administrator can e
 
 In the screen example above, the Corporate Role called “Marketing” was assigned to the “Steward” Application Role but will not be allowed to add a note to a Task or Release Ownership of a Task.
 Each Corporate Role can have multiple Application Roles enabled. This means that the users assigned to such a Corporate Role will be able to perform actions or view information defined as part of all of the enabled Application Roles. 
-The main menu on the left side of the screen is constructed based on the list of Application Roles that are enabled for the Corporate Roles to which the user belongs.  See more details about the menu options presented to each user in the DPM Main Menu section following. 
+The main menu on the left side of the screen is constructed based on the list of Application Roles enabled for the Corporate Roles to which the user belongs.  See more details about the menu options presented to each user in the DPM Main Menu section following. 
 
 ### Add a new Corporate Role
 
 To create a new Corporate Role, use the   ![image](/articles/DPM/images/Figure_26_a_create_new_role_icon.png) option at the top of the Role Management screen.
-The “New Corporate Role” screen is displayed:
+The “New Corporate Role” screen is displayed, as shown by the following. 
 
  ![image](/articles/DPM/images/Figure_26_New_Corporate_Role.png)
 
@@ -75,34 +75,34 @@ The “New Corporate Role” screen is displayed:
 <p>O</p>
 </td>
 <td width="785">
-<p>The mail or distribution list for the corporate role. This email address is used when a Task reminder is being configured and the user selects the corporate role as the reminder target mail. &nbsp;</p>
+<p>The email or distribution list name for the corporate role. This email address is used when a Task reminder is configured and the user selects the corporate role as the reminder target email. &nbsp;</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-Once the user completed and saved the new Corporate Role, the new Role appears in the list of roles at the center of the screen. 
+Once the user completes and saves the new Corporate Role, the new Role appears in the list of roles at the center of the screen. 
 
 ### Mapping Configuration Role to Application Role
 
-The next step after creating a Corporate Role is to define the mapping to GDPR Application Roles assigned to it, and under each Application Role, what screens and actions this Corporate Role can view or perform. 
-In order to perform this configuration:
+The next step after creating a Corporate Role is to define the mapping to GDPR Application Roles assigned to this Role, and under each Application Role, what screens and actions this Corporate Role can view or perform. 
+To perform this mapping configuration, commit the actions within the following steps.
 
-1.	Select the Corporate Role line on the central part of the screen. As a result, the right side of the screen will present a tree of options that allows the mapping to the application roles this group should have
-2.	Define the configuration by ticking or unticking the check-boxes options on this tree. 
-3.	Save the configuration using the Save button at the bottom of the screen.
+1.	Select the Corporate Role line on the central part of the screen. The right side of the screen then displays a tree of options that allow mapping to the application roles available to the group. 
+2.	Define the configuration by checking or unchecking the box options from this tree.  
+3.	Save the configuration using the “Save” button at the bottom of the screen. 
 
  ![image](/articles/DPM/images/Figure_27_Corporate_Role_Permissions_Configuration.png)
 
-In the example above, the “Backend” Corporate Role is selected from the list of Corporate Roles. The right side of the screen presents the mapping of this “Backend” Corporate Role to the list of Application Roles it can use. 
-At the highest level (first level of the tree), the checkboxes of “Representative” and “Steward” are ticked. This means that the “Backend” Corporate Role is configured to have the functionality of Representative and of Steward. A user that belongs to the “Backend” Corporate Role will have only those two options on the main menu on the left side of the screen (more about that in the Main Menu chapter). 
-As you can see, the tree of permissions has multiple levels, which allows controlling the Activities a user can or cannot perform. For example, at the screen above, the option “Submit a new Request” under the “Representative” branch was unticked. This means that though the user will have the option to use Representative functionality such as View the request list, or view specific request, he will not be able to submit a new request.  
+In the example above, the “Backend” Corporate Role is selected from the list of Corporate Roles. The right side of the screen presents the mapping of this “Backend” Corporate Role to the list of related Application Roles. 
+At the highest level (first level of the tree), the checkboxes of “Representative” and “Steward” are enabled. This means that the “Backend” Corporate Role is configured with functionality for the roles of Representative and Steward. A user belonging to the “Backend” Corporate Role has only those two options on the main menu at the left side of the screen (see the section Main Menu for more details). 
+As observed, the permissions tree has multiple levels, which allow control of the Activities the user can or cannot perform. For example, from the preceding screen, the option “Submit a new Request,” under the “Representative” branch, was unchecked. This means that though the user has the option to use Representative functionality, such as View the request list, or view a specific request, they will not be able to submit a new request.   
 
 ### Edit or Delete a Corporate Role
 
-Use the  ![image](/articles/DPM/images/Figure_27_a_delete_icon.png)  button to delete a Corporate Role. The deletion of the Role will remove it from all the users that has it assigned to them. 
+Use the  ![image](/articles/DPM/images/Figure_27_a_delete_icon.png) button to delete a Corporate Role. The deletion of the Role removes it from all users to which it was assigned. 
 
-Use the  ![image](/articles/DPM/images/Figure_27_b_edit_icon.png) button to edit the Email address of a Corporate Role.  
+Use the  ![image](/articles/DPM/images/Figure_27_b_edit_icon.png) button to edit the email address of a Corporate Role.  
 
 
 
