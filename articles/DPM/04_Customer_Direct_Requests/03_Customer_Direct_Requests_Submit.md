@@ -1,13 +1,13 @@
 ## Customer Submits a Request
 
-When a customer selects the option to create a new request, the system directs the customer to a screen where the request details are collected. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module. 
+When submitting a new request, the customer first selects the relevant regulation from the Regulation dropdown list.  
 
  ![image](/articles/DPM/images/Figure_37_Customer_submits_a_Reqeust.png)
 
 When submitting a new request, the customer first selects the relevant regulation out of the Regulation dropdown list. 
-The customer can add notes to the Request before submitting it. 
-The list of Request Types options that is presented at the bottom of the submission form changes according to the selected Regulation.
-Once the Request type is selected, the right side of the form presents the list of fields that should be completed before submitting the request. This list is automatically built in accordance with the Request type. 
+The customer can add notes to the Request before submission.  
+The list of Request Types presented at the bottom of the submission form changes according to the selected Regulation.
+Once the Request type is selected, the right side of the form displays the list of fields to be completed before submitting the request. This list is automatically built-in accordance with the Request type.  
 
 <table>
 <tbody>
@@ -24,7 +24,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Regulation</p>
 </td>
 <td width="800">
-<p>The Regulation that applies to the customer that is asking to submit a request.</p>
+<p>The Regulation that applies to the customer asking to submit a request.</p>
 </td>
 </tr>
 <tr>
@@ -32,7 +32,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Notes</p>
 </td>
 <td width="800">
-<p>Free text. Comments that the customer would like to be registered as part of the request.</p>
+<p>Free text. Comments that the customer wishes to be registered with the request. </p>
 </td>
 </tr>
 <tr>
@@ -40,7 +40,7 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Request Type</p>
 </td>
 <td width="800">
-<p>The specific Request that should be submitted. The options in this section depend on the selected Regulation.</p>
+<p>The specific Request to be submitted. The options in this section depend on the selected Regulation. </p>
 </td>
 </tr>
 <tr>
@@ -48,13 +48,13 @@ Once the Request type is selected, the right side of the form presents the list 
 <p>Request Form Fields</p>
 </td>
 <td width="800">
-<p>Depending on the selected Request Type, different fields will be presented in this section, and the customer should populate them before submitting the request.</p>
+<p>For the selected Request Type, different fields will be presented in this section, and the customer populates the fields before submitting the request.</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-The customer number is not requested when submitting the request, since the customer had already provided this identification when entering the system. 
+The customer number is not requested when submitting the request, as the customer number or identification is already in place at the customer level. 
 
 
 
