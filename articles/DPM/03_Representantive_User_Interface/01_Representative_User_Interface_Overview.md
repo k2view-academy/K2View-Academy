@@ -1,9 +1,9 @@
 # Representative User Interface
 
-A Customer Service Representative that supports the DPM processes should have his user assigned to a corporate role that is mapped to the Representative DPM Application role. 
+A Customer Service Representative (CSR) that supports the DPM processes should be user assigned to a corporate role mapped to the Representative DPM Application role. 
 A Representative can:
 
-- Search for Requests that were previously submitted.
+- Search for previously submitted Requests .
 - Submit a new Request. 
 
  ![image](/articles/DPM/images/Figure_32_Representative_menu.png)
