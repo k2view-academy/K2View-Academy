@@ -18,7 +18,7 @@ To create a new template:
    The Template file, saved with "template" extension, is shown in the Fabric Studio project tree and can be used to create new objects.
 
 
-Note that when deleting / editing an existing template, the changes are only implemented in new objects.
+To edit a template open it from the Fabric studio project tree. Note that changes take affect on objects that will be created after that do do not affect on existing objects that already created based on the edited template. 
 
  
 
