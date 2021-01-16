@@ -15,7 +15,7 @@ To create a new template:
    -  Java.  
    -  [Data Catalog](/articles/33_data_catalog/01_data_catalog_overview.md).  
 
-   The Template file is saved with a template extension in the Fabric Studio protect tree and can be used to create new objects.
+   The Template file, saved with "template" extension, is shown in the Fabric Studio project tree and can be used to create new objects.
 
 
 Note that when deleting / editing an existing template, the changes are only implemented in new objects.
