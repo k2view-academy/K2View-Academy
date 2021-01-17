@@ -12,13 +12,13 @@ For more information, click  [Creating and Editing templates](02_create_and_edit
 
    ![image](images/templates_02_use_template.png)
 
-4. Optional: Populate the expressions / placeholders in the Template Parameters popup window. The same information is displayed in the Template Parameters and JSON format tabs.  
+4. Populate the expressions / placeholders in the Template Parameters popup window, if such exist. The same information is displayed in the Template Parameters and JSON format tabs.  
 
    <img src="images/templates_03_use_tmplt_params_json.png" alt="image" /><img src="images/templates_03_use_tmplt_params_proprty.png" alt="image"  />
 
    
 
-Once the object is created it can be updated.
+Once the object is created it can be updated, when needed.
 
    
 
