@@ -33,8 +33,7 @@ Fabric Templates are supported by the powerful [handlebarsjs](https://handlebars
 For example:
 
 A common TDM task is to load data from an LU into a target DB using Broadway flows. Having several tables to load, a template is used since it already contains the required stages and actors to implement this task and uses placeholders to populate the LU table and the target interface, schema and table. 
-
-The following is part of the template for the DbLoad Actor that contains several input fields:
+The following is part of a TDM DbLoad Actor template that contains several placeholders:
 
 ```json
 {
