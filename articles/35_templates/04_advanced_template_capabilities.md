@@ -14,15 +14,15 @@ There may be a need to define a more complex input structure. For example, if th
 }
 ```
 
-This type of structure is not managed by the Template Parameters popup window. It is added manually to the JSON tab and displayed as the default tab when the Template Parameters is opened. The Property View tab displays the property as a Collection. 
+This type of structure is not managed by the Template Parameters tab and it shall be added manually to the JSON tab. After such parameter is added to the JSON, it is also displayed in the Template Parameters tab where its value is "Collection".  
 
 ### Helpers Examples
 
-Fabric uses the [handlebarsjs](https://handlebarsjs.com/) template engine to enable many advanced capabilities, including helpers. A helper is a function that can be part of a template and can be applied by the runtime engine according to its input. For example, a helper can change all input letters to capitals. Helpers can be easily added and registered to the engine. 
+Fabric uses the [Handlebarsjs](https://handlebarsjs.com/) template engine to enable many advanced capabilities, including helpers. A helper is a function that can be part of a template and can be applied by the runtime engine according to its input. For example, a helper can change all input letters to capitals. Helpers can be easily added and registered to the engine. 
 
-The following is an example of the Handlebar template's built-in helper iterations and conditions used in Fabric:
+The following is an example of the handlebar template's iterations and conditions built-in helpers used in Fabric:
 
-A common TDM tasks is to load data from LU tables into a target tables using Broadway flows that first retrieve the data from the LU, prepare it and load it into the target. To do so, the DbCommand and the DbLoad actors are connected by their output and input fields in the reparenting table columns. Since each table has its own columns, using a simple template is not enough and the #each built-in helper is used to iterate over the table column list and build the actors dynamically.
+A common TDM tasks is to load data from LU tables into a target tables using Broadway flows that first retrieve the data from the LU, prepare it and load it into the target. To do so, the DbCommand and the DbLoad actors are connected by their output and input fields which represnting table columns. Since each table has its own columns, using a simple template is not enough and the #each built-in helper is used to iterate over the table column list and build the actors dynamically.
 
 The following is an example of the DbCommand output in the template, with expressions and helpers that enable the engine to build the output dynamically during runtime: 
 
@@ -36,7 +36,7 @@ The following is an example of the DbCommand output in the template, with expres
 
 In this example:
 
-* Each [helper](https://handlebarsjs.com/guide/builtin-helpers.html#each) used for the iteration uses "#each" & "/each" opening and closing tags.
+* ["each" helper](https://handlebarsjs.com/guide/builtin-helpers.html#each) used for the iteration uses "#each" & "/each" opening and closing tags.
 * LU_TABLE_COLUMNS is an input or variable.
 * Tilde sign (~) is used by the Handlebars template as a [white space control/removal](https://handlebarsjs.com/guide/expressions.html#whitespace-control). 
 * "this" is used for the current object in context. 
@@ -46,7 +46,7 @@ In this example:
 
 Working in the background, the Handlebars engine is usually transparent to users as they define or use templates.  However, for advanced usage, it can be explicitly used in Fabric Java functions using the Handlebars Java library which is already embedded into Fabric.
 
-For more information click, [Using Java with handlebars](https://jknack.github.io/handlebars.java/). 
+For more information click, [Using Java with Handlebars](https://jknack.github.io/handlebars.java/). 
 
  
 
