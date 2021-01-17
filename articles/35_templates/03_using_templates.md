@@ -6,7 +6,7 @@ For more information, click  [Creating and Editing templates](02_create_and_edit
 
 1. Go to the Fabric Studio project tree and right click Create New Object.
 
-2. Select "New \<object-type\> from Template".
+2. Select New \<object-type\> from Template.
 
 3. Select the template from the list. Note that the list displays the templates which defined as Shared Objects or defined in the LU and only those of the specific object type. For example, when creating a new Java file, Java templates are displayed.
 
