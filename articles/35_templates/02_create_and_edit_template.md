@@ -24,17 +24,17 @@ To edit a template open it from the Fabric studio project tree. Note that change
 
 ### Expressions and Helpers
 
-Fabric Templates are supported by the [handlebarsjs](https://handlebarsjs.com/) template engine and its expressions and helpers: 
+Fabric Templates are supported by the powerful [handlebarsjs](https://handlebarsjs.com/) template engine that provides numerous features including expressions and helpers: 
 
 -  **Expressions** are used as placeholders in the template and are populated as input when creating an object. To embed an expression into a template use the `{{<expression-name>}}` syntax, for example `{{<firstname>}}`. Fabric templates offer the built-in  \_\_LU_NAME and \_\_FILE_NAME expressions that are populated by Fabric according to context.
 
--  **Helpers** are functions that can be used when creating objects. A number of built-in helpers are useful for applying if-else conditions and iterations that are embedded into the template.  
+-  **Helpers** are functions that can be used when creating objects. A number of built-in helpers are useful for applying if-else conditions and iterations within templates.  
 
 For example:
 
-A common TDM tasks is to load data from an LU into a target DB using Broadway flows. Having several tables to load, a template is used since it already contains the required stages and actors to implement this task and uses placeholders to populate the LU table and the target interface, schema and table. 
+A common TDM task is to load data from an LU into a target DB using Broadway flows. Having several tables to load, a template is used since it already contains the required stages and actors to implement this task and uses placeholders to populate the LU table and the target interface, schema and table. 
 
-The DbLoad Actor contains several input fields which are all similar in the template:
+The following is part of the template for the DbLoad Actor that contains several input fields:
 
 ```json
 {
