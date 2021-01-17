@@ -14,7 +14,7 @@ There may be a need to define a more complex input structure. For example, if th
 }
 ```
 
-This type of structure is not managed by the Template Parameters tab and it shall be added manually to the JSON tab. After such parameter is added to the JSON, it is also displayed in the Template Parameters tab where its value is "Collection".  
+This type of structure is not managed by the Template Parameters tab and should be added manually to the JSON tab, whereby it is also displayed in the Template Parameters tab where its value is Collection.  
 
 ### Helpers Examples
 
