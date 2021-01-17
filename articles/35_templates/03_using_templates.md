@@ -8,7 +8,7 @@ For more information, click  [Creating and Editing templates](02_create_and_edit
 
 2. select "New \<object-type\> from Template".
 
-3. Select the template from the list. Note that the displayed template list is contextual and displays the templates of a specific object type or templates defined as Shared Objects or defined in the LU . For example, when creating a new Java file, Java templates are displayed.
+3. Select the template from the list. Note that the list displays the templates which defined as Shared Objects or defined in the LU and only those of the specific object type. For example, when creating a new Java file, Java templates are displayed.
 
    ![image](images/templates_02_use_template.png)
 
