@@ -25,6 +25,7 @@
 		"DB Interfaces": "05_DB_interfaces",
 		"Non-DB Interfaces": "24_non_DB_interfaces",
 		"Web Services and Graphit": "15_web_services_and_graphit",
+		"External Resources": "31_external_resources",
 		"Fabric Change Data Capture": "18_fabric_cdc"
 	},
 	"Fabric Web Framework Apps": {
@@ -37,7 +38,6 @@
 		"Environments": "25_environments",
 		"Cassandra Loader": "28_cassandra_loader",
 		"Tracing": "29_tracing",
-		"External Resources": "31_external_resources",
 		"LU Storage": "32_LU_storage",
 		"JMX Statistics": "34_JMX_statistics"
 	},
