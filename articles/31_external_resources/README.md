@@ -1,5 +1,3 @@
-![image](/articles/images/welcome_to_wiki.png)
-
 <strong>External Resources<strong>
 
 <ul>

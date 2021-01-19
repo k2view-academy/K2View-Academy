@@ -1,5 +1,3 @@
-![image](/articles/images/welcome_to_wiki.png)
-
 
 <strong>Reference Tables & commonDB<strong>
 <ul>
