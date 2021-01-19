@@ -45,12 +45,12 @@ Another way to implement the transaction per batch is using a Stage Condition. T
 
 ![image](images/99_23_batch2.png)
 
-**Many Commits per Each Iteration Example**
+**Commit During an Iteration Example**
 
-The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. There are two transactions in each iteration: 
+The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional.  
 
-- The first transaction begins at the **insert data** Stage and is followed by a commit since the **Additional Step**s Stage is not transactional.
-- The second transaction begins at the **query params** Stage and is followed by a commit since the **source data** Stage is not transactional. 
+- The transaction begins at the **insert data** Stage and is followed by a commit since the **Additional Step**s Stage is not transactional.
+- Then the second transaction begins at the **query params** Stage and is followed by a commit in the second iteration after the end of **insert data** Stage. At the end of data set, the commit occurs at the end of the loop.
 
 ![image](images/99_23_complex_ex.PNG)
 
