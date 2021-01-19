@@ -1,7 +1,3 @@
-![image](/articles/images/welcome_to_wiki.png)
-
-
-
 <strong>CDC - Broadway<strong>
 
 <ul>

@@ -1,8 +1,6 @@
-![image](/articles/images/welcome_to_wiki.png)
-
 <strong>Table Population<strong>
 <ul>
-  
+
 <li><a href="/articles/07_table_population/01_table_population_overview.md">Table Population Overview</a></li>
 <li><a href="/articles/07_table_population/02_source_object_types.md">Source Object Types</li>
 <li><a href="/articles/07_table_population/03_creating_a_new_table_population.md">Creating a New Table Population</li>

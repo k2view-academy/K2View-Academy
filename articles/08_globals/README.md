@@ -1,5 +1,3 @@
-![image](https://github.com/k2view-academy/K2View-Academy/blob/master/articles/images/welcome_to_wiki.png)
-
 <strong>Globals<strong>
 <ul>
 <li><a href="/articles/08_globals/01_globals_overview.md">Globals Overview</a></li>

@@ -1,9 +1,7 @@
-![image](/articles/images/welcome_to_wiki.png)
-
 
 <strong>DB Interfaces<strong>
 <ul>
-  
+
 <li><a href="/articles/05_DB_interfaces/01_interfaces_overview.md"> Interfaces Overview</a></li>
 <li><a href="/articles/05_DB_interfaces/02_interfaces_source_analysis_guidelines.md">Interfaces Source Analysis Guidelines</li>
 <li><a href="/articles/05_DB_interfaces/03_DB_interfaces_overview.md">DB Interfaces Overview</li>
