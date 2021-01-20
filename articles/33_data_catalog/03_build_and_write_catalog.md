@@ -37,7 +37,7 @@ Note that you must perform **Write Catalog** to apply the changes in the catalog
 
 2. Create a  [Data Catalog interface](02a_data_catalog_interface.md) named **catalogdb**. This is a one-time activity.
 
-3. [Install OrientDB](07_OrientDB_setup) and start it. This is a one-time activity.
+3. [Install OrientDB](07_OrientDB_setup.md) and start it. This is a one-time activity.
 
 4. Right click the **Project** and select **Data Catalog > Write Catalog To debug**.
 
