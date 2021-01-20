@@ -22,7 +22,7 @@ To setup the OrientDB, do the following:
    </handler>
    ~~~
 
-4.The first time you run the OrientDB, you will be asked you to create a username and password.
+4.The first time you run the OrientDB, you will be asked to create a username and password.
 
 5. To run the OrientDB:
 
