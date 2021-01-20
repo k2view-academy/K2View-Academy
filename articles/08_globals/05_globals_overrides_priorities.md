@@ -19,7 +19,7 @@ The override prioritization is based on **levels** as illustrated in the followi
 
 
 
-* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globbals.java files.
+* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globals.java files.
 * **Environment**, populated in the Environment Settings Globals table.  
 * **Cluster**, use SET_GLOBAL commands during Fabric runtime which persists in the DB and impact all cluster nodes and sessions.
 * **Session**, use SET commands during Fabric runtime, which only impacts the session where it is executed.
