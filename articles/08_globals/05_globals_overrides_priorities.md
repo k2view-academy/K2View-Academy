@@ -126,7 +126,7 @@ Scope priorities are applied using SET commands. Click here for the command synt
 ##### Session LU vs Session
 
 There are times that when tests on an UAT environment are required while the system is running. Sessions can be used for this whereby an LU refers to another UAT environment for data.
-To do so, `set SOURCE_ENV_NAME='UAT1'` is used to call for all LUs in this session, and `set SOURCE_ENV_NAME='UAT2'` is used to run the CRM LU at a session level. The order the commands are run is irrelevant, although the LU command is stronger in both scenarios.
+To do so, `set SOURCE_ENV_NAME='UAT1'` is used to call for all LUs in this session, and `set CRM.SOURCE_ENV_NAME='UAT2'` is used to run the CRM LU at a session level. The order the commands are run is irrelevant, although the LU command is stronger in both scenarios.
 
 Once tests are completed, use the `set SOURCE_ENV_NAME=''` command to return to the original cluster / environment / implementation. 
 
