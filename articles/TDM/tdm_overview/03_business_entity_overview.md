@@ -123,11 +123,53 @@ A TDM BE may include several Root LUs with the same list of entities. For exampl
 
 ![BE with several roots](images/be_hierarchy_with_several_root_lu.png) 
 
- 
+### Task Execution of Hierarchical Business Entities
 
- 
+A TDM task can include a BE with a hierarchical structure of several LUs. The TDM task execution process must execute all the related LUs of the task by from parent to child LUs:
 
- 
+- Start with the execution of the Root LUs on all entities of the task.
+
+- After the execution of the parent LU ends, start the execution of the child LUs of the Root LUs on all entities. Execute the each child LU on the related entity IDs of the parent's entities that have been processed successfully by the task.
+
+- Then execute their child LUs etc..
+
+  Note that if the parent LU execution fails, then the child LU is not being executed and is also marked as failed.
+
+**Example:**
+
+1. Create a TDM task to copy **Customers 1, 2 and 3** and with their orders and related network elements. 
+
+2. **Customers' related entities:**
+
+- **Customer 1:** 
+  - Order 4 : 
+    - Network elements 90 and 91.
+  - Order 5:
+    - Network element 92.
+
+- **Customer 2 :**
+  - Order 9: 
+    - Network element 98.
+- **Customer 3 :** 
+  - Order 10:
+    - Network element 99.
+  - Order 11:
+    - Network element 100.
+  - Order 12:
+    - This order has no related network element.
+
+3. **Task execution order:**
+
+- **Step 1:**
+  - Run the Customer LU on  entities 1, 2 and 3. 
+  - Customers 1 and 2 are processed successfully. Customer 3 fails.
+- **Step 2:**
+  - Run Order LU on entities related to Customers 1 and 2, i.e. order IDs 4, 5 and 9. The execution of Order 4 failed. The remaining Orders have been processed successfully. 
+  - Note that Order LU is not executed on the orders of Customer 3, since it failed.
+- **Step 3:**
+  - Run Network Element LU on the entities related to the successfully processed Orders, i.e. Network Element IDs 92 and 98.
+
+  
 
  
 
