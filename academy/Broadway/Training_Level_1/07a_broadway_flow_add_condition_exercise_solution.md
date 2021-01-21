@@ -30,9 +30,11 @@ Stage 6 and 7 Logger Actors have set different message levels since each has a d
 
 <ul>
 <pre><code>
-A. Both <strong>Stage 6 and 7</strong> are executed. This is because the condition is now inside the iteration thus it is effective in the iteration scope only.
+A. Both <strong>Stage 6 and 7</strong> are executed. 
+This is because the condition is now inside the iteration thus it is effective in the iteration scope only.
 </code></pre>
 </ul>
+
 
 ​		![image](images/07_condition_and_loop_ex.PNG)
 
