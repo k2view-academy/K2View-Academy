@@ -37,13 +37,18 @@ If a non-transactional Stage is added at the end of the loop, the commit is perf
 
 When the data set is very big (for example, 1M records) and a commit is required every X records, you can perform the commit per batch. 
 
-The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, Stage 1 is only reached every third record. The transaction is then committed since Stage 1 is not marked as transactional and a new one begins.
+The following example shows how to perform a commit every 5 records using a Stage Condition and the **JavaScript** Actor.
 
-![image](images/99_23_batch.png)
+Writing the following code, Stage 1 is only reached every fifth record:
 
-Another way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, Stage 1 is only reached every third record. The transaction is then committed since Stage 1 is not marked as transactional and a new transaction begins.
+~~~javascript
+var i = contextLoop.index();
+(i+1)%5 == 0;
+~~~
 
-![image](images/99_23_batch2.png)
+The transaction is then committed since Stage 1 is not marked as transactional and a new transaction begins.
+
+![image](images/99_23_batch_with_cond.PNG)
 
 **Commit During an Iteration Example**
 
