@@ -36,6 +36,6 @@ This is because the condition is now inside the iteration thus it is effective i
 </ul>
 
 
-​		![image](images/07_condition_and_loop_ex.PNG)
+​		![image](images/07_condition_and_loop_ex_1.PNG)
 
 [![Previous](/articles/images/Previous.png)](07_broadway_flow_add_condition_exercise.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_using_actors_in_boadway_flows.md)
