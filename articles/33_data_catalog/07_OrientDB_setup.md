@@ -2,7 +2,7 @@
 
 The Data Catalog uses a distributed OrientDB graph database, an Open Source NoSQL DBMS that combines the power of graphs and the flexibility of documents into one scalable, high-performance operational database.
 
-To setup the OrientDB, do the following:
+To setup the OrientDB in the **development** environment, do the following:
 
 1. Go to the OrientDB website: https://www.orientdb.org/download and download the **OrientDB with Gremlin Server - zip**.
 
