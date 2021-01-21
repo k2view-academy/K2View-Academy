@@ -96,5 +96,13 @@ In the Step, you check the number of records: check if the number of records >= 
    What is the level of the message? Is it different now? Why? 
    </code></pre>
    </ul>
+   
+4. Change the loop to close after Stage 4 instead of Stage 3. 
+
+   <ul>
+   <pre><code>
+   A. What changes in the flow execution? Why?
+   </code></pre>
+   </ul>
 
 [![Previous](/articles/images/Previous.png)](06_broadway_flow_adding_loops_and_conditions.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07a_broadway_flow_add_condition_exercise_solution.md)
