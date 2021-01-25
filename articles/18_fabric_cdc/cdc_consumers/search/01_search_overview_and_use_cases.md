@@ -6,11 +6,11 @@ For example, to search for all customers named “John Doe” and live in “New
 
 A search is implemented on LUIs only when the LU has [Search fields](02_search_implementation.md#creating-search-fields).
 
-Deployment of the LU creates indexes in Elasticsearch, where every data change in the LUI updates the data in Elasticsearch in the predefined Search fields.
+Deployment of the LU creates indexes in Elasticsearch, where every data change in the LUI updates the data in Elasticsearch.
 
 LUIs must be loaded to Fabric to enable a cross-instance search. For example, a search for all customers named “John Doe” and live in “New-York” will only return customers that exist in Fabric.
 
-A search can be executed either by running a Search request directly in Elasticsearch, or by using [Fabric Search Commands](05_search_command.md). 
+A search can be executed either by running a Search request directly in Elasticsearch, or by using [Fabric Search Command](05_search_command.md). 
 
 ### Search Use Cases
 

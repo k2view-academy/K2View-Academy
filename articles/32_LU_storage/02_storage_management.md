@@ -36,15 +36,14 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
 ### Changing the Location of the Cache 
 Fabric enables to modify the default location of the cache per Logical Unit using the MDB_DEFAULT_CACHE_PATH variable in the **[fabricdb]** section of the **config.ini** and the LU Schema's **Cache Location** property as follows:
 
-* When the Cache Location is set to **Default**, store the cache in **/dev/shm/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**. 
-
-* When the Cache Location is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache**.
+* When the Cache Location is set to **Default**, store the cache per the definition of MDB_DEFAULT_CACHE_PATH in config.ini. The default value in config.ini is **/dev/shm/fdb_cache/<LU_name>** but it can be changed to another location. 
+* When the Cache Location is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache/<LU_name>** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache/<LU_name>**.
   * The definition of the **${FABRIC_STORAGE}** path can be updated via the **fabric-server-start.sh** script using the **-DFABRIC_STORAGE** variable.
 * If the default path in the config.ini is updated to another path, the cache is always located according to the config.ini regardless of the LU Schema property setting in the Fabric Studio.
 
 Note that both the config.ini and the Fabric Studio configuration changes become effective only after Fabric is restarted. On the first LU deployment the restart is not required.
 
-
+ 
 
 [![Previous](/articles/images/Previous.png)](01_LU_storage_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_big_lu_storage.md) 
 

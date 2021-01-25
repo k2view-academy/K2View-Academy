@@ -1,5 +1,3 @@
-![image](/articles/images/welcome_to_wiki.png)
-
 <strong>Actors Specifications and Examples<strong>
 
 <ul>

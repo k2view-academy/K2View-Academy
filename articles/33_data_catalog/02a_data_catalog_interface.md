@@ -48,12 +48,9 @@ To create a new Data Catalog interface, do the following:
 <td style="width: 179px;"><strong>Transactional</strong></td>
 <td style="width: 318px;">True/False.</td>
 </tr>
-<tr>
-<td style="width: 179px;"><strong>SSL Properties</strong></td>
-<td style="width: 318px;"><em>Placeholder, currently not in use.</em></td>
-</tr>
 </tbody>
 </table>
+
 
 
 

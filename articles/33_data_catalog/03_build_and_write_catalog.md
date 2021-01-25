@@ -37,11 +37,11 @@ Note that you must perform **Write Catalog** to apply the changes in the catalog
 
 2. Create a  [Data Catalog interface](02a_data_catalog_interface.md) named **catalogdb**. This is a one-time activity.
 
-3. [Install OrientDB](07_OrientDB_setup) and start it. This is a one-time activity.
+3. [Install OrientDB](07_OrientDB_setup.md) and start it. This is a one-time activity.
 
 4. Right click the **Project** and select **Data Catalog > Write Catalog To debug**.
 
-5. Login to the Data Catalog using the K2View Web Framework to navigate the catalog:
+5. Login to the Data Catalog using the [K2View Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) to navigate the catalog:
 
    ![image](images/33_01_tree.PNG)
 

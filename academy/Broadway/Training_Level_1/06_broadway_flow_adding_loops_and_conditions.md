@@ -12,11 +12,13 @@ You can add iterations to the flow either by:
 
 - Adding Iterations on Stages: setting the [Link Type](/articles/19_Broadway/07_broadway_flow_linking_actors.md#link-object-properties)  to **Iterate** when linking an Actor to another Actor opens a loop. The loop runs on the next Stages in the flow and is closed by the first Stage which is marked as **Iterate Close**.
 
-  Read [Broadway Flow Window](/articles/19_Broadway/18_broadway_flow_window.md) to learn more about the Stage context menu.
+  Read [Broadway Iterations](/articles/19_Broadway/21_iterations.md) to learn more about the iteration creation and handling in a flow.
 
 - Adding a [ForLoop Actor](/articles/19_Broadway/21_iterations.md#forloop-actor) to the flow.
 
 - Iterating a data by the code in a [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
+
+To learn about advanced iteration options, read [Complex Iteration Flows](/articles/19_Broadway/21a_iterations_addnl.md).
 
 ### Adding Conditions
 
@@ -28,7 +30,7 @@ For example:
   - If (B<1) => Do something.
   - Else => Do something else.
 
-To learn about splitting or merging the Stages of a flow and adding conditions to a Stage, read [Broadway Flow - Stages](/articles/19_Broadway/19_broadway_flow_stages.md).
+To learn about splitting or merging the Stages of a flow and adding Stage conditions, read [Broadway Flow - Stages](/articles/19_Broadway/19_broadway_flow_stages.md).
 
 Continue to the exercise to enhance your first Broadway flow and add a condition to it. 
 

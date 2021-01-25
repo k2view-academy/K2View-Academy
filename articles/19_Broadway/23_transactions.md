@@ -37,20 +37,25 @@ If a non-transactional Stage is added at the end of the loop, the commit is perf
 
 When the data set is very big (for example, 1M records) and a commit is required every X records, you can perform the commit per batch. 
 
-The following example shows how to perform a commit every 3 records using the **JavaScript** Actor and the **contextLoop.skip()** method. Due to the code in the **JavaScript** Actor, Stage 1 is only reached every third record. The transaction is then committed since Stage 1 is not marked as transactional and a new one begins.
+The following example shows how to perform a commit every 5 records using a Stage Condition and the **JavaScript** Actor.
 
-![image](images/99_23_batch.png)
+Writing the following code, Stage 1 is only reached every fifth record:
 
-Another way to implement the transaction per batch is using a Stage Condition. The following example shows that by adding a **JavaScript** Stage Condition and adding the code to it, Stage 1 is only reached every third record. The transaction is then committed since Stage 1 is not marked as transactional and a new transaction begins.
+~~~javascript
+var i = contextLoop.index();
+(i+1)%5 == 0;
+~~~
 
-![image](images/99_23_batch2.png)
+The transaction is then committed since Stage 1 is not marked as transactional and a new transaction begins.
 
-**Many Commits per Each Iteration Example**
+![image](images/99_23_batch_with_cond.PNG)
 
-The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional. There are two transactions in each iteration: 
+**Commit During an Iteration Example**
 
-- The first transaction begins at the **insert data** Stage and is followed by a commit since the **Additional Step**s Stage is not transactional.
-- The second transaction begins at the **query params** Stage and is followed by a commit since the **source data** Stage is not transactional. 
+The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional.  
+
+- The transaction begins at the **insert data** Stage and is followed by a commit since the **Additional Step**s Stage is not transactional.
+- Then the second transaction begins at the **query params** Stage and is followed by a commit in the second iteration after the end of **insert data** Stage. At the end of data set, the commit occurs at the end of the loop.
 
 ![image](images/99_23_complex_ex.PNG)
 

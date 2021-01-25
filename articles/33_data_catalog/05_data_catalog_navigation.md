@@ -99,4 +99,4 @@ The following tools are used to navigate the Data Catalog:
   
 
 
-[![Previous](/articles/images/Previous.png)](04_data_catalog_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_override_data_catalog.md) 
+[![Previous](/articles/images/Previous.png)](03_build_and_write_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_override_data_catalog.md) 

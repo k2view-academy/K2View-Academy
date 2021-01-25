@@ -425,5 +425,15 @@
 </details>
 
 <details>
+<summary markdown="span"><strong>Templates<strong><a href="/articles/35_templates/README.md" style="text-decoration: none;">&#9734;</a></summary>
+<ul>
+<li><a href="/articles/35_templates/01_templates_overview.md">Templates Overview</a></li>
+<li><a href="/articles/35_templates/02_create_and_edit_template.md">Creating and Editing Templates</a></li>
+<li><a href="/articles/35_templates/03_using_templates.md">Using Templates</a></li>
+<li><a href="/articles/35_templates/04_advanced_template_capabilities.md">Advanced Templates Capabilities</a></li>
+</ul>
+</details>
+
+<details>
 <summary markdown="span"><strong>Demo Project <strong><a href="/articles/demo_project" style="text-decoration: none;">&#9734;</a></summary>       
 

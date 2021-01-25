@@ -1,5 +1,3 @@
-![image](/articles/images/welcome_to_wiki.png)
-
 <strong>Enrichment Functions<strong>
 <ul>
 <li><a href="/articles/10_enrichment_function/01_enrichment_function_overview.md">Enrichment Function Overview</a></li>

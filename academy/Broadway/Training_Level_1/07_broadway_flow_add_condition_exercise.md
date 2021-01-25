@@ -48,7 +48,8 @@ In the Step, you check the number of records: check if the number of records >= 
 
       - Click ![three dots](images/three_dots_icon.png) in **Stage 4** and select **Split**. 
       - A new **Stage 5** is created in the same level of **Stage 4**.  
-      - Click ![three dots](images/three_dots_icon.png) in the newly created **Stage 5** and select **Else**.
+      - Click ![three dots](images/three_dots_icon.png) in the newly created **Stage 5** and select **Else**. 
+      - Add the **Const** Actor to **Stage 5** and set its value to: *Error - there are not enough records in the list*.
 
 #### Step 4 - Add the Next Stages
 
@@ -60,15 +61,15 @@ In the Step, you check the number of records: check if the number of records >= 
    - Set the **level** input argument to **info**.
 4. Link the **Count** Actor to the **Logger** Actor or to **Stage 6**.
 5. Set the **Logger** Actor's parameters of **Stage 7**:
-   - Set the **message** input argument as **Const**.
-   
-   - Set the **message** input argument value to: *Error - there are not enough records in the list*.
+   - Connect the **message** input argument to the **Const** Actor of **Stage 5**.
    
    - Set the **level** input argument to **error**.
    
      Now you have a condition in your flow:
    
-     ![image](images/MyFirstFlow_including_condition.png)
+     ![image](images/07_condition_and_loop_ex_0.PNG)
+   
+     
 
 #### Step 5 - Debug the Updated Flow
 
@@ -94,6 +95,14 @@ In the Step, you check the number of records: check if the number of records >= 
    B. Which Stage has been executed - <strong>Stage 6</strong> or <strong>Stage 7</strong>? Why?
    C. Check the output of the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Log File</a>. Which message is given by the <strong>Logger</strong> Actor? 
    What is the level of the message? Is it different now? Why? 
+   </code></pre>
+   </ul>
+   
+4. Change the loop close by setting it at the end of **Stage 4** instead of **Stage 3.** 
+
+   <ul>
+   <pre><code>
+   A. What changes in the flow execution? Why?
    </code></pre>
    </ul>
 

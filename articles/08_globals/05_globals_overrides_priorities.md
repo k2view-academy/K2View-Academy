@@ -19,7 +19,7 @@ The override prioritization is based on **levels** as illustrated in the followi
 
 
 
-* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globbals.java files.
+* **Fabric Implementation**, populated in Fabric Studio Globals tables and reflected in Globals.java files.
 * **Environment**, populated in the Environment Settings Globals table.  
 * **Cluster**, use SET_GLOBAL commands during Fabric runtime which persists in the DB and impact all cluster nodes and sessions.
 * **Session**, use SET commands during Fabric runtime, which only impacts the session where it is executed.
@@ -126,7 +126,7 @@ Scope priorities are applied using SET commands. Click here for the command synt
 ##### Session LU vs Session
 
 There are times that when tests on an UAT environment are required while the system is running. Sessions can be used for this whereby an LU refers to another UAT environment for data.
-To do so, `set SOURCE_ENV_NAME='UAT1'` is used to call for all LUs in this session, and `set SOURCE_ENV_NAME='UAT2'` is used to run the CRM LU at a session level. The order the commands are run is irrelevant, although the LU command is stronger in both scenarios.
+To do so, `set SOURCE_ENV_NAME='UAT1'` is used to call for all LUs in this session, and `set CRM.SOURCE_ENV_NAME='UAT2'` is used to run the CRM LU at a session level. The order the commands are run is irrelevant, although the LU command is stronger in both scenarios.
 
 Once tests are completed, use the `set SOURCE_ENV_NAME=''` command to return to the original cluster / environment / implementation. 
 
