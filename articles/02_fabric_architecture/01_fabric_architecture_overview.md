@@ -223,6 +223,9 @@ This module manages access rights, authentication and authorization of users, We
 
 
 ### 5.1.1 Fabric Tokens Encryption
+
+Fabric relies on end-to-end encryption for API requests and for generating SSL-based tokens.
+
 Fabric uses secured [tokens](/articles/26_fabric_security/05_fabric_webservices_security.md#tokens) to enable the execution of Web Services requests. Users can also define different roles and assign each role to a specific token. All tokens are encrypted before they are saved into Cassandra. Note that for the purpose of developing or testing , non-secured tokens can be generated.
 
 ### 5.1.2 JWT Tokens
