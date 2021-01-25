@@ -6,6 +6,8 @@ To setup the OrientDB in the **development** environment, do the following:
 
 1. Go to the OrientDB website: https://www.orientdb.org/download and download the **OrientDB with Gremlin Server - zip**.
 
+   <img src="images/33_07_download.PNG" alt="image" style="zoom:67%;" />
+
 2. Extract the zip file:
 
    * For a Windows installation: extract the file under **C:\K2View**
