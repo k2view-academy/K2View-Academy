@@ -1,53 +1,204 @@
 {
-	"Fabric Overview & Architecture": {
-		"Fabric Overview": "01_fabric_overview",
-		"Fabric Architecture": "02_fabric_architecture"
-	},
-	"Fabric Implementation": {
-		"Logical Units": "03_logical_units",
-		"Fabric Studio": "04_fabric_studio",
-		"LU Tables": "06_LU_tables",
-		"LU Tables Population": "07_table_population",
-		"Globals": "08_globals",
-		"Translations": "09_translations",
-		"Enrichment Functions": "10_enrichment_function",
-		"Query Builder": "11_query_builder",
-		"LU Navigation": "12_LU_navigation",
-		"LUDB Viewer and Studio Debug": "13_LUDB_viewer_and_studio_debug_capabilities",
-		"Sync LU Instance": "14_sync_LU_instance",
-		"Fabric Deployment": "16_deploy_fabric",
-		"Broadway": "19_Broadway",
-		"Jobs and Batch Services": "20_jobs_and_batch_services",
-		"Reference / Common DB": "22_reference(commonDB)_tables",
-		"Templates": "35_templates"
-	},
-	"Fabric Connectivity to External World": {
-		"DB Interfaces": "05_DB_interfaces",
-		"Non-DB Interfaces": "24_non_DB_interfaces",
-		"Web Services and Graphit": "15_web_services_and_graphit",
-		"External Resources": "31_external_resources",
-		"Fabric Change Data Capture": "18_fabric_cdc"
-	},
-	"Fabric Web Framework Apps": {
-		"Web Framework Apps": "30_web_framework",
-		"Data Catalog": "33_data_catalog"
-	},
-	"Fabric Advanced Configuration": {
-		"Troubleshooting": "21_Fabric_troubleshooting",
-		"Transactions Management": "23_fabric_transactions",
-		"Environments": "25_environments",
-		"Cassandra Loader": "28_cassandra_loader",
-		"Tracing": "29_tracing",
-		"LU Storage": "32_LU_storage",
-		"JMX Statistics": "34_JMX_statistics"
-	},
-	"DevOps, Security & Audit": {
-		"Credentials": "17_fabric_credentials",
-		"Security": "26_fabric_security",
-		"Auditing": "27_auditing",
-		"DevOps": "99_fabric_infras"
-	},
-	"TDM - Testing Data Management": {},
-	"DPM - Data Privacy Management": {},
-	"Best Practices & Examples": {}
+	"Branches": [
+		{
+			"display name": "Fabric 6.4",
+			"branch name": "Academy-6.4"
+		},
+		{
+			"display name": "Fabric 6.2",
+			"branch name": "Academy-6.2"
+		}
+	],
+	"Groups": [
+		{
+			"group display name": "Fabric Overview & Architecture",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Fabric Overview",
+					"value": "01_fabric_overview"
+				},
+				{
+					"display name": "Fabric Architecture",
+					"value": "02_fabric_architecture"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Implementation",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Logical Units",
+					"value": "03_logical_units"
+				},
+				{
+					"display name": "Fabric Studio",
+					"value": "04_fabric_studio"
+				},
+				{
+					"display name": "LU Tables",
+					"value": "06_LU_tables"
+				},
+				{
+					"display name": "LU Tables Population",
+					"value": "07_table_population"
+				},
+				{
+					"display name": "Globals",
+					"value": "08_globals"
+				},
+				{
+					"display name": "Translations",
+					"value": "09_translations"
+				},
+				{
+					"display name": "Enrichment Functions",
+					"value": "10_enrichment_function"
+				},
+				{
+					"display name": "Query Builder",
+					"value": "11_query_builder"
+				},
+				{
+					"display name": "LU Navigation",
+					"value": "12_LU_navigation"
+				},
+				{
+					"display name": "LUDB Viewer and Studio Debug",
+					"value": "13_LUDB_viewer_and_studio_debug_capabilities"
+				},
+				{
+					"display name": "Sync LU Instance",
+					"value": "14_sync_LU_instance"
+				},
+				{
+					"display name": "Fabric Deployment",
+					"value": "16_deploy_fabric"
+				},
+				{
+					"display name": "Broadway",
+					"value": "19_Broadway"
+				},
+				{
+					"display name": "Jobs and Batch Services",
+					"value": "20_jobs_and_batch_services"
+				},
+				{
+					"display name": "Common DB",
+					"value": "22_reference(commonDB)_tables"
+				},
+				{
+					"display name": "Templates",
+					"value": "35_templates"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Connectivity to External World",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "DB Interfaces",
+					"value": "05_DB_interfaces"
+				},
+				{
+					"display name": "Non-DB Interfaces",
+					"value": "24_non_DB_interfaces"
+				},
+				{
+					"display name": "Web Services and Graphit",
+					"value": "15_web_services_and_graphit"
+				},
+				{
+					"display name": "Fabric Change Data Capture",
+					"value": "18_fabric_cdc"
+				},
+				{
+					"display name": "External Resources",
+					"value": "31_external_resources"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Web Framework Apps",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Web Framework Apps",
+					"value": "30_web_framework"
+				},
+				{
+					"display name": "Data Catalog",
+					"value": "33_data_catalog"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Advanced Configuration",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Troubleshooting",
+					"value": "21_Fabric_troubleshooting"
+				},
+				{
+					"display name": "Transactions Management",
+					"value": "23_fabric_transactions"
+				},
+				{
+					"display name": "Environments",
+					"value": "25_environments"
+				},
+				{
+					"display name": "Cassandra Loader",
+					"value": "28_cassandra_loader"
+				},
+				{
+					"display name": "Tracing",
+					"value": "29_tracing"
+				},
+				{
+					"display name": "LU Storage",
+					"value": "32_LU_storage"
+				},
+				{
+					"display name": "JMX Statistics",
+					"value": "34_JMX_statistics"
+				}
+			]
+		},
+		{
+			"group display name": "Security, Audit and Hardening",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Credentials",
+					"value": "17_fabric_credentials"
+				},
+				{
+					"display name": "Security",
+					"value": "26_fabric_security"
+				},
+				{
+					"display name": "Auditing",
+					"value": "27_auditing"
+				},
+				{
+					"display name": "Hardening",
+					"value": "99_fabric_infras/devops"
+				}
+			]
+		},
+		{
+			"group display name": "Testing Data Management (TDM)",
+			"visible in main": true,
+			"topics": []
+		},
+		{
+			"group display name": "Data Privacy Management (DPM)",
+			"visible in main": true,
+			"topics": []
+		}
+	]
 }
