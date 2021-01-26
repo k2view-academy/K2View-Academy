@@ -2,11 +2,11 @@
 	"Branches": [
 		{
 			"display name": "Fabric 6.4",
-			"branch name": "Academy-6.4"
+			"branch name": "Academy_6.4"
 		},
 		{
 			"display name": "Fabric 6.2",
-			"branch name": "Academy-6.2"
+			"branch name": "Academy_6.2"
 		}
 	],
 	"Groups": [
