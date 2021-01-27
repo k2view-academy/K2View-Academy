@@ -241,7 +241,7 @@ try (Db.Rows rows = db(..).fetch(...)) {
 } 
 ```
 
-Note that since you are not using the each/forEach method the ResultSet will not close at the end of the loop and is deferred to the end of the current execution (sync/webservice/job). The safet way to control closure of the result set, is to use the try-resource structure as seen above.
+Note that since you are not using the each/forEach method the ResultSet will not close at the end of the loop and is deferred to the end of the current execution (sync/webservice/job). The safest way to control the closure of the result set, use the try and finally structure.
 
 
 

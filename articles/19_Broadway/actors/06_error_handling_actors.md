@@ -10,6 +10,8 @@ For information about the basic Broadway Error Handling mechanism, refer to [Err
 
 The **ErrorHandler** Actor can be used as an error handler to enable different handling of various exceptions. It can be configured to suppress one type of exception and not to suppress others, or to invoke an inner flow when an exception is thrown. When the error is suppressed, the error handler returns **true** and the flow continues. 
 
+The exceptions are classified into three types: SQL error, HTTP error and exception. The SQL errors are divided into Unique constraint or other. Note that the Unique constraint exception validation is only done for Oracle, DB2, SQLite and SQL servers. 
+
 The following example shows how an **ErrorHanlder** Actor is used as an error handler in the **LU Table** Stage. In the following configuration only **Unique Constraint** SQL errors are caught and suppressed. Any other error causes the flow to fail. 
 
 ![image](../images/99_actors_06_1.PNG)

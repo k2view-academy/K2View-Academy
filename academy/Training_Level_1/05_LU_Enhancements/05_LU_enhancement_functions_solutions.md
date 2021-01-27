@@ -8,27 +8,22 @@
     1. 4.
     
     2. 1 and 2.
-    .
+    
     3. Code, update all the phone number fields missing international code:     
    ```java
-   String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
-   String interCode="+1 ";
-   //SQL statement for the fields updates
-   String SQLFormattedNumber="UPDATE CONTRACT SET ASSOCIATED_LINE  = ? where  ASSOCIATED_LINE = ?";
-   Db.Rows rows = fabric().fetch(SQLNumber);
-   
-   //start loop over all rows of LUDB
-   for (Db.Row row:rows){   
-   	String formattedNumber="";
-   	String cellValue=""+row.get("ASSOCIATED_LINE");
-   	String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
-   
-   //start matching test
-     if ((cellValue.matches("(.*)+1(.*)") == false){
-       formattedNumber = interCode + cellValue;
-       fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
-     } // end for statement       
-   }// end loop through rows
+	String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
+	String SQLFormattedNumber="UPDATE CONTRACT SET ASSOCIATED_LINE  = ? where  ASSOCIATED_LINE = ?";
+	String interCode="+1 ";
+
+	fabric().fetch(SQLNumber).each(row -> {
+		String cellValue=""+row.get("ASSOCIATED_LINE");
+		String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
+		if (cellValue.matches("(.*)+1(.*)") == false)	{
+			//log.info(cellValue);
+			String formattedNumber = interCode + cellValue;
+			fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
+		}
+	});
    ```
 
     4. Update line numbers only for 5G/LTE contracts
@@ -51,55 +46,48 @@
     3. Code sample:	
   ```java
   
-   String Contracts="SELECT COUNT (*) FROM CONTRACT";
-   String SQLCASENote="SELECT CASE_ID, NOTE_TEXT, NOTE_DATE FROM CASE_NOTE";
-   String SQLCASES="SELECT CASE_ID, CASE_TYPE, STATUS FROM CASES";
-   ArrayList<String> open_cases = new ArrayList<String>();
-   ArrayList<String> billing_cases = new ArrayList<String>();
-   ArrayList<String> network_cases = new ArrayList<String>();
-   
-   String newBillingNote ="insolvent customer";
-   String newNetworkNote ="customer no longer in network";
-   String statusClose="CLOSED";
-   String SQLBillingNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
-   String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
-   String SQLNetworkNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
-   
-   Db.Rows rowsC = fabric().fetch(SQLCASES);
-   for (Db.Row row:rowsC){
-   	String cellStatus=""+row.get("STATUS");
-   	String cellCaseID=""+row.get("CASE_ID");
-   	String cellCaseType=""+row.get("CASE_Type");
-   	if (cellStatus.matches("Open"))
-   	{
-   	open_cases.add(cellStatus);
-    fabric().execute(SQLCaseStatus,statusClose,cellStatus);
-   	}
-   	if (cellCaseType.matches("Billing Issue"))
-   	{
-   	billing_cases.add(cellCaseID);
-   	}
-   	if (cellCaseType.matches("Network Issue"))
-   	{
-   	network_cases.add(cellCaseID);
-   	}	
-   	
-   }
-   	
-   Db.Rows rowsN = fabric().fetch(SQLCASENote);
-   for (Db.Row row:rowsN){
-   String cellNoteText=""+row.get("NOTE_TEXT");
-   String cellCaseID=""+row.get("CASE_ID");
-   //reportUserMessage(cellCaseID);
-   boolean ans1 = billing_cases.contains(cellCaseID);
-   boolean ans2 = network_cases.contains(cellCaseID);
-   if (ans1){
-   fabric().execute(SQLBillingNote,newBillingNote,cellCaseID);	
-   }
-   if (ans2){
-   fabric().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
-   }
-   }
+	String Contracts="SELECT COUNT (*) FROM CONTRACT";
+	String SQLCASENote="SELECT CASE_ID, NOTE_TEXT, NOTE_DATE FROM CASE_NOTE";
+	String SQLCASES="SELECT CASE_ID, CASE_TYPE, STATUS FROM CASES";
+	String SQLUpdateNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
+	String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
+
+	ArrayList<String> open_cases = new ArrayList<String>();
+	ArrayList<String> billing_cases = new ArrayList<String>();
+	ArrayList<String> network_cases = new ArrayList<String>();
+
+	String newBillingNote ="insolvent customer";
+	String newNetworkNote ="customer is no longer in network";
+	String statusClose="CLOSED";
+
+	ludb().fetch(SQLCASES).each(row ->{
+		String cellStatus=""+row.get("STATUS");
+		String cellCaseID=""+row.get("CASE_ID");
+		String cellCaseType=""+row.get("CASE_Type");
+
+		if (cellStatus.matches("Open")) {
+			open_cases.add(cellStatus);
+			ludb().execute(SQLCaseStatus,statusClose,cellStatus);
+		}
+		if (cellCaseType.matches("Billing Issue")) {
+			billing_cases.add(cellCaseID);
+		} else if (cellCaseType.matches("Network Issue")) {
+			network_cases.add(cellCaseID);
+		}
+	});
+			
+	ludb().fetch(SQLCASENote).each(row -> {
+		String cellNoteText=""+row.get("NOTE_TEXT");
+		String cellCaseID=""+row.get("CASE_ID");
+		log.info(cellCaseID);
+		boolean ans1 = billing_cases.contains(cellCaseID);
+		boolean ans2 = network_cases.contains(cellCaseID);
+		if (ans1){
+			ludb().execute(SQLUpdateNote,newBillingNote,cellCaseID);
+		} else if (ans2){
+			ludb().execute(SQLUpdateNote,newNetworkNote,cellCaseID);
+		}
+	});
    ```
                                                                        
 ##### Question 3: 
@@ -123,11 +111,11 @@ Boolean syncInd = false;
 String count = db("CRM_DB").fetch("SELECT count(*) FROM CASES").firstValue().toString();
 //puts the number of rows in the CASES DB into a variable count.
 
-reportUserMessage(count);
+log.info(count);
 int cnt=Integer.parseInt(count);
 
 if ( cnt >= CRMCases_threshold){
-reportUserMessage("new case in !!");
+log.info("new case in !!");
 syncInd = true;	
 }
 

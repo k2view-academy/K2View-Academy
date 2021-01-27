@@ -31,8 +31,7 @@ Db.Rows rows = ludb().fetch(sql1,i_customer_id);
 2. Then, to bring information from other data sources, create an additional SQL query to retrieve the data and populate it into the output Object[] structure:
 
 ~~~java
-Db.Rows rows = ludb().fetch(sql1, i_customer_id );
-for (Db.Row row:rows) {
+ludb().fetch(sql1, i_customer_id ).each(row-> {
    ...
    caseRows = db("CRM_DB").fetch(sql2,activityID);	
    for (Db.Row caseRow:caseRows) {
@@ -43,7 +42,7 @@ for (Db.Row row:rows) {
       caseList.add(customerID);
       ...
       yield(result);
-   }
+   });
 }
 ~~~
 

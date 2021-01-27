@@ -64,24 +64,19 @@ For example:
    - Use the following function code: 
 
      ~~~java
-     log.info("E164PhoneFormat function is running");
-     
-     PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance(); 
-     PhoneNumber parsedNumber = null; 
-     
-     String SQLNumber="SELECT ASSOCIATED_LINE FROM CONTRACT";
-     String SQLFormattedNumberE164="UPDATE CONTRACT SET E164_LINE_FMT  = ? where  ASSOCIATED_LINE = ?";
-     String SQLFormattedNumber="";
-     String formattedNumber="";
-     String cellValue="";
-     
-     Db.Rows rows = fabric().fetch(SQLNumber);
-     for (Db.Row row:rows){ 
-     	cellValue=""+row.get("ASSOCIATED_LINE");
-     	parsedNumber = phoneUtil.parse(cellValue, COUNTRY_CODE); 
-     	formattedNumber = phoneUtil.format(parsedNumber, PhoneNumberUtil.PhoneNumberFormat.E164);
-     	fabric().execute(SQLFormattedNumberE164,formattedNumber,cellValue);
-     }
+		PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
+		
+		String SQLNumber="SELECT ASSOCIATED_LINE FROM CONTRACT";
+		String SQLFormattedNumberE164="UPDATE CONTRACT SET E164_LINE_FMT  = ? where  ASSOCIATED_LINE = ?";
+				
+		fabric().fetch(SQLNumber).each(row -> {
+			String cellValue=""+row.get("ASSOCIATED_LINE");
+			PhoneNumber parsedNumber = phoneUtil.parse(cellValue, COUNTRY_CODE);
+			String formattedNumber = phoneUtil.format(parsedNumber, PhoneNumberUtil.PhoneNumberFormat.E164) + "E";
+
+			fabric().execute(SQLFormattedNumberE164,formattedNumber,cellValue);
+		}
+
      ~~~
 
      \* Note that the COUNTRY_CODE is defined in [Fabric Globals](/articles/08_globals/01_globals_overview.md).  
