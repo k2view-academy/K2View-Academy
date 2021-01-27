@@ -46,55 +46,48 @@
     3. Code sample:	
   ```java
   
-   String Contracts="SELECT COUNT (*) FROM CONTRACT";
-   String SQLCASENote="SELECT CASE_ID, NOTE_TEXT, NOTE_DATE FROM CASE_NOTE";
-   String SQLCASES="SELECT CASE_ID, CASE_TYPE, STATUS FROM CASES";
-   ArrayList<String> open_cases = new ArrayList<String>();
-   ArrayList<String> billing_cases = new ArrayList<String>();
-   ArrayList<String> network_cases = new ArrayList<String>();
-   
-   String newBillingNote ="insolvent customer";
-   String newNetworkNote ="customer no longer in network";
-   String statusClose="CLOSED";
-   String SQLBillingNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
-   String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
-   String SQLNetworkNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
-   
-   Db.Rows rowsC = fabric().fetch(SQLCASES);
-   for (Db.Row row:rowsC){
-   	String cellStatus=""+row.get("STATUS");
-   	String cellCaseID=""+row.get("CASE_ID");
-   	String cellCaseType=""+row.get("CASE_Type");
-   	if (cellStatus.matches("Open"))
-   	{
-   	open_cases.add(cellStatus);
-    fabric().execute(SQLCaseStatus,statusClose,cellStatus);
-   	}
-   	if (cellCaseType.matches("Billing Issue"))
-   	{
-   	billing_cases.add(cellCaseID);
-   	}
-   	if (cellCaseType.matches("Network Issue"))
-   	{
-   	network_cases.add(cellCaseID);
-   	}	
-   	
-   }
-   	
-   Db.Rows rowsN = fabric().fetch(SQLCASENote);
-   for (Db.Row row:rowsN){
-   String cellNoteText=""+row.get("NOTE_TEXT");
-   String cellCaseID=""+row.get("CASE_ID");
-   //log.info(cellCaseID);
-   boolean ans1 = billing_cases.contains(cellCaseID);
-   boolean ans2 = network_cases.contains(cellCaseID);
-   if (ans1){
-   fabric().execute(SQLBillingNote,newBillingNote,cellCaseID);	
-   }
-   if (ans2){
-   fabric().execute(SQLNetworkNote,newNetworkNote,cellCaseID);	
-   }
-   }
+	String Contracts="SELECT COUNT (*) FROM CONTRACT";
+	String SQLCASENote="SELECT CASE_ID, NOTE_TEXT, NOTE_DATE FROM CASE_NOTE";
+	String SQLCASES="SELECT CASE_ID, CASE_TYPE, STATUS FROM CASES";
+	String SQLUpdateNote="UPDATE CASE_NOTE SET NOTE_TEXT = ? where  CASE_ID = ?";
+	String SQLCaseStatus="UPDATE CASES SET STATUS = ? where STATUS = ?";
+
+	ArrayList<String> open_cases = new ArrayList<String>();
+	ArrayList<String> billing_cases = new ArrayList<String>();
+	ArrayList<String> network_cases = new ArrayList<String>();
+
+	String newBillingNote ="insolvent customer";
+	String newNetworkNote ="customer is no longer in network";
+	String statusClose="CLOSED";
+
+	ludb().fetch(SQLCASES).each(row ->{
+		String cellStatus=""+row.get("STATUS");
+		String cellCaseID=""+row.get("CASE_ID");
+		String cellCaseType=""+row.get("CASE_Type");
+
+		if (cellStatus.matches("Open")) {
+			open_cases.add(cellStatus);
+			ludb().execute(SQLCaseStatus,statusClose,cellStatus);
+		}
+		if (cellCaseType.matches("Billing Issue")) {
+			billing_cases.add(cellCaseID);
+		} else if (cellCaseType.matches("Network Issue")) {
+			network_cases.add(cellCaseID);
+		}
+	});
+			
+	ludb().fetch(SQLCASENote).each(row -> {
+		String cellNoteText=""+row.get("NOTE_TEXT");
+		String cellCaseID=""+row.get("CASE_ID");
+		log.info(cellCaseID);
+		boolean ans1 = billing_cases.contains(cellCaseID);
+		boolean ans2 = network_cases.contains(cellCaseID);
+		if (ans1){
+			ludb().execute(SQLUpdateNote,newBillingNote,cellCaseID);
+		} else if (ans2){
+			ludb().execute(SQLUpdateNote,newNetworkNote,cellCaseID);
+		}
+	});
    ```
                                                                        
 ##### Question 3: 
