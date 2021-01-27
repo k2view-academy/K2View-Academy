@@ -85,7 +85,7 @@
    for (Db.Row row:rowsN){
    String cellNoteText=""+row.get("NOTE_TEXT");
    String cellCaseID=""+row.get("CASE_ID");
-   //reportUserMessage(cellCaseID);
+   //log.info(cellCaseID);
    boolean ans1 = billing_cases.contains(cellCaseID);
    boolean ans2 = network_cases.contains(cellCaseID);
    if (ans1){
@@ -118,11 +118,11 @@ Boolean syncInd = false;
 String count = db("CRM_DB").fetch("SELECT count(*) FROM CASES").firstValue().toString();
 //puts the number of rows in the CASES DB into a variable count.
 
-reportUserMessage(count);
+log.info(count);
 int cnt=Integer.parseInt(count);
 
 if ( cnt >= CRMCases_threshold){
-reportUserMessage("new case in !!");
+log.info("new case in !!");
 syncInd = true;	
 }
 
