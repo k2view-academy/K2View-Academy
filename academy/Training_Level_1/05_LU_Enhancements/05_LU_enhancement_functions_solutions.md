@@ -8,22 +8,22 @@
     1. 4.
     
     2. 1 and 2.
-    .
+    
     3. Code, update all the phone number fields missing international code:     
    ```java
-        String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
-		String SQLFormattedNumber="UPDATE CONTRACT SET ASSOCIATED_LINE  = ? where  ASSOCIATED_LINE = ?";
-		String interCode="+1 ";
+	String SQLNumber="SELECT ASSOCIATED_LINE, CONTRACT_DESCRIPTION FROM CONTRACT";
+	String SQLFormattedNumber="UPDATE CONTRACT SET ASSOCIATED_LINE  = ? where  ASSOCIATED_LINE = ?";
+	String interCode="+1 ";
 
-		fabric().fetch(SQLNumber).each(row -> {
-			String cellValue=""+row.get("ASSOCIATED_LINE");
-			String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
-			if ((cellValue.matches("(.*)+1(.*)") == false)&& (cellValueContDesc.matches("(.*)5G(.*)"))) {
-				//log.info(cellValue);
-				String formattedNumber = interCode + cellValue;
-				fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
-			}
-		});
+	fabric().fetch(SQLNumber).each(row -> {
+		String cellValue=""+row.get("ASSOCIATED_LINE");
+		String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
+		if ((cellValue.matches("(.*)+1(.*)") == false)&& (cellValueContDesc.matches("(.*)5G(.*)"))) {
+			//log.info(cellValue);
+			String formattedNumber = interCode + cellValue;
+			fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
+		}
+	});
    ```
 
     4. Update line numbers only for 5G/LTE contracts
