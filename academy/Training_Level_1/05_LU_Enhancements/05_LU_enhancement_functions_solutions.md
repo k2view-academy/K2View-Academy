@@ -18,7 +18,7 @@
 	fabric().fetch(SQLNumber).each(row -> {
 		String cellValue=""+row.get("ASSOCIATED_LINE");
 		String cellValueContDesc=""+row.get("CONTRACT_DESCRIPTION");
-		if ((cellValue.matches("(.*)+1(.*)") == false)&& (cellValueContDesc.matches("(.*)5G(.*)"))) {
+		if (cellValue.matches("(.*)+1(.*)") == false)	{
 			//log.info(cellValue);
 			String formattedNumber = interCode + cellValue;
 			fabric().execute(SQLFormattedNumber,formattedNumber,cellValue);
