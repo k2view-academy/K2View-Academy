@@ -32,14 +32,13 @@ String status = "SUCCESS";
 try {
     ci.execute(getCommand);         	
     String sql = "SELECT COUNT(*) NO_OF_ACT FROM ACTIVITY";	
-    Db.Rows rows = ludb(LU_NAME, UID).fetch(sql);
-
-    for (Db.Row row:rows) {
-        ci.beginTransaction();
-        Object [] params = new Object[]{UID, 99, row.cell(0) + " total num of activities for the customer"};
-        ci.execute("INSERT INTO ACT_CASE_NOTE (CUSTOMER_ID, ACTIVITY_ID, CASE_NOTE_TEXT) VALUES (?, ?, ?)", params);
-        ci.commit();
-    }		
+    ludb(LU_NAME, UID).fetch(sql).each(row->{
+	ci.beginTransaction();
+	Object [] params = new Object[]{UID, 99, 0, "NA", row.cell(0) + " total num of activities for the customer"};
+	//log.info("*-*-* Insert records into ACT_CASE_NOTE" );
+	ci.execute("INSERT INTO ACT_CASE_NOTE (CUSTOMER_ID, ACTIVITY_ID, CASE_ID, CASE_NOTE_ID, CASE_NOTE_TEXT) VALUES (?, ?, ?, ?, ?)", params);
+	ci.commit();
+    });		
 } catch (Exception e) {
     log.info("Insert failed: " + e.getMessage());
     ci.rollback();
