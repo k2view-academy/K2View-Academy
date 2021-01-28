@@ -87,7 +87,7 @@ The starting points for creating a population based on a Broadway flow are:
 
 The population is created as a template with predefined Stages and designated Actors. When creating a flow from the Auto Discovery Wizard or from the LU Schema, the input fields, interface, and SQL statement are added automatically based on the selected table's fields. Complete the missing information and if needed, update the flow and then connect the table population to the LU hierarchy via the LU Schema window.
 
-Note that for the population to be effective on the server side, LU deployment is required.
+Note that for the population to be effective on the server side, LU deployment is required. When running in debug mode, the deployment to debug is performed automatically.
 
 [Click for more information about deployment from the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md).
 
