@@ -33,13 +33,13 @@
  Click the green asterisk in <strong>Splitting the flow</strong> to read its remarks and check the value of the Actor in the <strong>Paradox</strong> Stage to help you answer the last question.
 
 
-4. Remove the Breakpoint, click <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and select the option to set the debug mode to <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" /> Live Debug. Then change the value of the **Const** Actor in the **Hello Broadway** Stage to "Goodbye".
+4. Remove the Breakpoint, click <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> and select the option to set the debug mode to <img src="images/debug_live.PNG" alt="debug on" style="zoom:80%;" /> Live Debug. Then change the value of the **Const** Actor in the **Hello Broadway** Stage to "Goodbye".
 
   <ul>
   <pre><code>A. What happens as a result of each change?</code></pre>
   </ul>
 
-5. Keep the Live Debug mode or click <img src="images/debug_live.png" alt="debug on" style="zoom:80%;" /> and select the option to set it to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> Debug ON. 
+5. Keep the Live Debug mode or click <img src="images/debug_live.PNG" alt="debug on" style="zoom:80%;" /> and select the option to set it to <img src="images/debug_on.png" alt="debug on" style="zoom:80%;" /> Debug ON. 
 
   #### Step 3 - Edit the Flow to Test a Conditional Stage
 
