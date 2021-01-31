@@ -1,4 +1,4 @@
-# Interface Overview - Connectivity to the External World
+# Interface Overview
 
 ### What Is an Interface?
 In Fabric an interface is a data communication channel to an external system that enables users to define connection parameters for a data source. All data needed by Fabric from the data source is transferred through an interface.
