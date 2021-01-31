@@ -12,7 +12,7 @@ Note that setting a recovery point on a Stage with DB result set, on a [transact
 
 ### How Do I Set a Recovery Point?
 
-Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display a thick purple divider line. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
+Click ![image](images/99_19_dots.PNG)> **Recovery Point** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) to display ![image](images/99_29_recovery_icon.PNG) icon. Do the same in additional Stages if more than one recovery point should be set in the same flow. 
 
 **Example**
 

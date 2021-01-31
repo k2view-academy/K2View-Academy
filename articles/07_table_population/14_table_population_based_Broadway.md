@@ -97,7 +97,7 @@ Note that for the population to be effective on the server side, LU deployment i
 
 2. Enter the **population name** and click **OK** to open a Broadway flow window. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target. 
 
-   ![image](images/07_14_02.PNG)
+   ![image](images/07_14_01.PNG)
 
 
 

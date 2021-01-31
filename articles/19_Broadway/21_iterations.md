@@ -41,7 +41,7 @@ The **result** output returns an array of maps. In each iteration, takes the val
 
 #### Iterate Over an Element in a Result Array
 
-Iterate on all the values of the **CUSTOMER_ID** field in the **result** output array.
+Iterate on all the values of the **CASE_ID** field in the **result** output array.
 
 ![image](images/iterate_path1.PNG)
 
