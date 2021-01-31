@@ -1,8 +1,6 @@
 
 
-![image](/articles/images/welcome_to_wiki.png)
-
-## SonarQube 
+# SonarQube 
 
 
 * **[Overview](/articles/COE/SonarQube/01_Overview/01_Overview.md)**  
