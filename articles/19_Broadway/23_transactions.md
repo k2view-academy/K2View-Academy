@@ -54,8 +54,8 @@ The transaction is then committed since Stage 1 is not marked as transactional a
 
 The following is an example of a transaction's behavior in the loop when not all Stages inside the loop are transactional.  
 
-- The transaction begins at the **insert data** Stage and is followed by a commit since the **Additional Step**s Stage is not transactional.
-- Then the second transaction begins at the **query params** Stage and is followed by a commit in the second iteration after the end of **insert data** Stage. At the end of data set, the commit occurs at the end of the loop.
+- The transaction begins at the **Load** Stage and is followed by a commit since the **Commit** Stage is not transactional.
+- Then the second transaction begins at the **Load 2** Stage and is followed by a commit in the second iteration after the end of **Load** Stage. At the end of data set, the commit occurs at the end of the loop.
 
 ![image](images/99_23_complex_ex.PNG)
 
@@ -88,7 +88,7 @@ Fabric [Interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) used i
 
 In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in the Stage's background and can span across several [Stages](19_broadway_flow_stages.md).
 
-![image](images/99_23_01.PNG)
+![image](images/99_23_general_ex.PNG)
 
 
 
@@ -106,5 +106,4 @@ In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in
 </tr>
 </tbody>
 </table>
-
 [![Previous](/articles/images/Previous.png)](22_broadway_flow_inner_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](24_error_handling.md)

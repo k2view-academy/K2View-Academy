@@ -23,7 +23,7 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
    ![image](images/99_22_01.PNG)
 
-2. Save the flow as a new Actor. For example, if the flow name is **myFlow**, the new Actor's name will be **myFlow_Actor**.
+2. Save the flow as a new Actor. For example, if the flow name is **CheckMaxAndDivide**, the new Actor's name will be **CheckMaxAndDivide_Actor**.
 
 4. Add the new Actor to another flow.
 
