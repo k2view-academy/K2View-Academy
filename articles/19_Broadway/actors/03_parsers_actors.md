@@ -13,7 +13,7 @@ The **json.flow** example shows how the **JsonParser** handles two types of inpu
 
 Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu) to open the **json.flow** example. 
 
-![image](../images/99_actors_03_1.PNG)
+![image](../images/99_17_02_tutorial.PNG)
 
 
 
@@ -34,9 +34,9 @@ The following example shows how to read and parse a CSV file which includes a li
 The parser processes the file's rows consecutively by validating the data in Stage 5 using the [**JavaScript** Actor's code](01_javascript_actor.md#special-keywords-and-conventions) via access to the **flowArgs** arguments and the **contextLoop** object. When the required country is found, the iteration stops.
 
 ```java
-if (input1.CNTRY_CD == flowArgs.country_code) {
-   contextLoop.stop();
-   input1.AREA_CD;
+if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
+    contextLoop.stop();
+    input1.SUBSCRIBER_DESC;
 }
 ```
 

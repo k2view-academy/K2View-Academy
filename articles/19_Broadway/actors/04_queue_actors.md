@@ -58,8 +58,6 @@ The following section of the example flow shows how to publish messages to an in
 
 To read messages in batches, use the **SubscribeBatch** Actor and set **max_batch_records** to the required batch size.
 
-![image](../images/99_actors_04_2.PNG)
-
 The following example shows a Subscribe flow which includes a transaction. If a failure occurs, all messages from the beginning of the transaction are rolled back. The **Subscribe** Actor reads all the messages again when a server is up again. If the same flow does not include a transaction, only the last message is repeated after the server fails and starts again.
 
 ![image](../images/99_actors_04_3.PNG)

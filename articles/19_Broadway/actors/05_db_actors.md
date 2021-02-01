@@ -84,20 +84,20 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 The following example shows how to execute a SELECT statement which includes a WHERE clause using **ordered params**:
 
-![image](../images/99_actors_05_2.png)
+![image](../images/99_actors_05_2.PNG)
 
 The parameters for the WHERE clause are transferred using the **Const** Actor's [values] object that is connected to the **params** input argument of the **DbCommand** Actor.
 
 ~~~javascript
 [
-  "Denver",
-  "CO"
+  "San Diego",
+  "CA"
 ]
 ~~~
 
 The following example shows how a SELECT statement is executed using **named params**:
 
-![image](../images/99_actors_05_3.png)
+![image](../images/99_actors_05_3.PNG)
 
 When the above query is written in the **sql** input parameter, a new **city_name** input argument is added to the **DbCommand** Actor and the parameter is transferred to it. 
 
