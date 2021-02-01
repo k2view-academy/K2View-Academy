@@ -106,4 +106,5 @@ In a Broadway flow window, a **Transaction** is marked by blue diagonal lines in
 </tr>
 </tbody>
 </table>
+
 [![Previous](/articles/images/Previous.png)](22_broadway_flow_inner_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](24_error_handling.md)
