@@ -17,25 +17,25 @@ If the connected elements of the object are on the same level of hierarchy such 
 
 ### Iterate Over an Element and a Nested Array
 
-* The connected elements are on different levels of hierarchy: the **entityType** field in a [resources] array and the **objectType** field in a [hardware] nested array.
+* The connected elements are on different levels of hierarchy: the **serialNumber** field in a [resources] array and the **objectType** field in a [hardware] nested array.
 * Both are connected using the **Iterate** link type. 
-* The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** over all **objectTypes** in the **[hardware]** nested array.
+* The iteration runs over all **serialNumber** fields of the [resources] array, and for each **serialNumber** over all **objectTypes** in the **[hardware]** nested array.
 
 <img src="images/iterate_mult_02.PNG" alt="image" style="zoom:80%;" />
 
 ### Iterate Over a Field and Take a Nested Array by Value
 
-- The connected elements are on different levels of hierarchy: the **entityType** field in the [resources] array and the **[hardware]** nested array.
-- The **entityType** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **Value** link type.
-- The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** takes all the hardware (the nested array's data).
+- The connected elements are on different levels of hierarchy: the **serialNumber** field in the [resources] array and the **[hardware]** nested array.
+- The **serialNumber** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **Value** link type.
+- The iteration runs over all **serialNumber** fields of the [resources] array, and for each **serialNumber** takes all the hardware (the nested array's data).
 
 <img src="images/iterate_mult_03.PNG" alt="image" style="zoom:80%;" />
 
 ### Iterate Over a Field and Take a First Value of a Nested Array
 
 * This is a private case of the previous scenario with the same connected elements.
-* The **entityType** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **First** link type.
-* The iteration runs over all **entityTypes** of the [resources] array, and for each **entityType** takes the first element of its hardware nested array.
+* The **serialNumber** is connected using the **Iterate** link type, while the **[hardware]** nested array is connected using the **First** link type.
+* The iteration runs over all **serialNumber**fields  of the [resources] array, and for each **serialNumber** takes the first element of its hardware nested array.
 
 <img src="images/iterate_mult_05.PNG" alt="image" style="zoom:80%;" />
 
@@ -64,9 +64,9 @@ Another recommended way to handle two collections of different sizes is to use [
 
 When a flow is split into branches and includes an additional split inside the iteration, the split inside the loop is only applicable for the duration of the loop.
 
-The following flow displays an example of a flow that has a split inside the iteration. If Stage 2 is true, its branch will start and execute Stage 5. Then, either Stage 6 or 11 will be executed starting an additional split. 
+The following flow displays an example of a flow that has a split inside the iteration. If Stage 2 is true, its branch will start and execute Stage 5. Then, either Stage 8 or 11 will be executed starting an additional split. 
 
-Note that after the loop is completed, both Stage 12 and 13 will run since they depend on Stage 2 and not on the conditions inside the loop.
+Note that after the loop is completed, both Stage 17 and 18 will run since they depend on Stage 2 and not on the conditions inside the loop.
 
 ![image](images/iterate_over_branches.PNG)
 
