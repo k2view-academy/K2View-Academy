@@ -20,29 +20,108 @@ User access control management can be performed using either:
 ##  List of permissions 
 Roles are also used to maintain consistency across Fabric and be assigned with many or all of the following permission and actions types:
 
-- ACTIVATE_KEY : This permission is needed to generate a new key when using Fabric's [key generator](/articles/26_fabric_security/02_fabric_entities_design.md#master-key-commands) capability
+<table>
+<tbody>
+<tr>
+<td width="300pxl">
+<p><strong>ACTIVATE_KEY</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>This permission is needed to generate a new key when using Fabric's [key generator](/articles/26_fabric_security/02_fabric_entities_design.md#master-key-commands) capability</strong></p>
+</td>
+</tr>
 
-- ASSIGN_ROLE:   This permission is needed to assign a role to a specific user
 
-- EDIT_ROLE:     Used to modify the scope of permissions for a specific role
+<tr>
+<td width="300pxl">
+<p><strong>ASSIGN_ROLE</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>This permission is needed to assign a role to a specific user</strong></p>
+</td>
+</tr>
 
-- REVOKE_ROLE:   Used to delete a specific role from Fabric's RBAC scope
 
-- BATCH:         Used to enable user to run [batch](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) processes 
+<tr>
+<td width="300pxl">
+<p><strong>EDIT_ROLE</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Used to modify the scope of permissions for a specific role permission</strong></p>
+</td>
+</tr>
 
-- DELETE_INSTANCE: Used to delete one or multiple instances from Fabric
+<tr>
+<td width="300pxl">
+<p><strong>BATCH</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Used to enable user to run [batch](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) processes </strong></p>
+</td>
+</tr>
 
-- DEPLOY / DEPLOY_ENVIRONMENTS: Ability to run the deploy command on a project or entire environment
+<tr>
+<td width="300pxl">
+<p><strong>BATCH</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Used to enable user to run [batch](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) processes </strong></p>
+</td>
+</tr>
 
-- QUERY_WS / READ / WRITE: The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB
+<tr>
+<td width="300pxl">
+<p><strong>DELETE_INSTANCE</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Used to delete one or multiple instances from Fabric</strong></p>
+</td>
+</tr>
 
-- SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL: To set the environement or Globals for the current session onto which role is defined
+<tr>
+<td width="300pxl">
+<p><strong>DEPLOY / DEPLOY_ENVIRONMENTS</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Ability to run the deploy command on a project or entire environment</strong></p>
+</td></tr>
 
-- ALL_WS: Allows all web-services related permissions
 
-- ws_*, gr<LUNAME>*: Allows specific web services and graphit files to be invoked 
+<tr>
+<td width="300pxl">
+<p><strong>QUERY_WS / READ / WRITE</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB</strong></p>
+</td></tr>
+
+
+<tr>
+<td width="300pxl">
+<p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>To set the environement or Globals for the current session onto which role is defined</strong></p>
+</td></tr>
+
+<tr>
+<td width="300pxl">
+<p><strong>ALL_WS</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Allows all web-services related permissions</strong></p>
+</td></tr>
+
+
+<tr>
+<td width="300pxl">
+<p><strong>ws_* / gr<LUNAME></strong></p>
+</td>
+<td width="600pxl">
+<p><strong>Allows specific web services and graphit files to be invoked</strong></p>
+</td></tr>
+
  
-
 
   
 
