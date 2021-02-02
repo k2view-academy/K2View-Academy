@@ -43,7 +43,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 </td>
 </tr>
 
-
 <tr>
 <td width="300pxl">
 <p><strong>ASSIGN_ROLE</strong></p>
@@ -52,7 +51,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>This permission is needed to assign a role to a specific user</strong></p>
 </td>
 </tr>
-
 
 <tr>
 <td width="300pxl">
@@ -98,7 +96,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>Ability to run the deploy command on a project or entire environment</strong></p>
 </td></tr>
 
-
 <tr>
 <td width="300pxl">
 <p><strong>QUERY_WS / READ / WRITE</strong></p>
@@ -106,7 +103,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <td width="600pxl">
 <p><strong>The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB</strong></p>
 </td></tr>
-
 
 <tr>
 <td width="300pxl">
@@ -124,7 +120,6 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>Allows all web-services related permissions</strong></p>
 </td></tr>
 
-
 <tr>
 <td width="300pxl">
 <p><strong>ws_* / gr<LUNAME></strong></p>
@@ -134,7 +129,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 </td></tr>
 
  
-
+</table>
   
 
 ## K2Auth Tables
