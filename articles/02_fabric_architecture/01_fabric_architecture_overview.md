@@ -134,7 +134,7 @@ Fabric can activate triggers upon MicroDB change (such as insert, update, or del
 - CDC fields have been added to LU tables.
 - Trigger functions have been attached to LU tables.
 
-Any change occuring on the LU tables will then activate a trigger and Fabric will either send a CDC message or activate the (trigger) function.
+Any change occurring on the LU tables will then activate a trigger and Fabric will either send a CDC message or activate the (trigger) function.
 
 
 ### 3.3 Fabric ETL Layer
