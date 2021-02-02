@@ -73,7 +73,7 @@ The **db-commands.flow** example shows how the **DbCommand** Actor can be used t
 
 * Creating a table using the SQL provided in the **sql** input argument.
 * Inserting the data into the table using the **sql** input argument with named parameters marked as **${text}**. The parameter's values are populated from the **params** input argument.
-* Selecting the data from the table using the **sql** input argument with an ordered parameter marked as **?**. 
+* Selecting the data from the table using the **sql** input argument with an ordered parameter marked as **?**.
 
 Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu) to open the **db-commands.flow** example. 
 
@@ -86,7 +86,7 @@ The following example shows how to execute a SELECT statement which includes a W
 
 ![image](../images/99_actors_05_2.PNG)
 
-The parameters for the WHERE clause are transferred using the **Const** Actor's [values] object that is connected to the **params** input argument of the **DbCommand** Actor.
+The parameters for the WHERE clause are transferred using the **Const** Actor's **[values]** object  connected to the **params** input argument of the **DbCommand** Actor.
 
 ~~~javascript
 [
