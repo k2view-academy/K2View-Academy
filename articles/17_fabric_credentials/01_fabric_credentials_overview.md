@@ -1,5 +1,6 @@
 # Fabric Credentials Overview
 
+## RBAC in Fabric 
  Fabric includes an authentication mechanism that enables managing user access control and restrictions, such as:
 
 - Creating / dropping users, roles and API Keys.
@@ -8,8 +9,15 @@
   - Access to LUIs can be defined on a user level.
   - Access to the methods that access LUIs can be defined on a role level.
 
-Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned the “administrator” role. 
+Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned the “administrator” role.
 
+User access control management can be performed using either:
+
+- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md).
+
+- Web Admin UI
+
+##  List of permissions 
 Roles are also used to maintain consistency across Fabric and be assigned with many or all of the following permission and actions types:
 
 - ACTIVATE_KEY
@@ -18,52 +26,55 @@ This permission is needed to generate a new key when using Fabric's [key generat
 
 
 - ASSIGN_ROLE
+
 This permission is needed to assign a role to a specific user
 
 
 - EDIT_ROLE
+
 Used to modify the scope of permissions for a specific role
 
 
 - REVOKE_ROLE
+
 Used to delete a specific role from Fabric's RBAC scope
 
 
 - BATCH
+
 Used to enable user to run [batch](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) processes 
 
 
 - DELETE_INSTANCE
+
 Used to delete one or multiple instances from Fabric
 
 
 - DEPLOY / DEPLOY_ENVIRONMENTS
+
 Ability to run the deploy command on a project or entire environment
 
 
 - QUERY_WS / READ / WRITE
+
 The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB
 
 
 - SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL
+
 To set the environement or Globals for the current session onto which role is defined
 
 
 - ALL_WS
+
 Allows all web-services related permissions
 
 
 - ws_*, gr<LUNAME>*
+ 
 Allows specific web services and graphit files to be invoked 
  
- 
-Specific web-services 
 
-User access control management can be performed using either:
-
-- [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md).
-
-- Web Admin UI
 
   
 
