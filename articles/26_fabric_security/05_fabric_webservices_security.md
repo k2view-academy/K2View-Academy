@@ -69,7 +69,7 @@ For information about creating a token from the command line, click [here](/arti
 
 When assigning a role to a user, different types of methods can be attributed. 
 
-For more information about the supported roles, click [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-).
+For more information about the supported roles, click [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md#rbac-in-fabric) and then [here](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-ws_name-to-role-) to see how to grant permissions to specific roles.
 
 
 ### Web Service Authorization Using the API Key 
