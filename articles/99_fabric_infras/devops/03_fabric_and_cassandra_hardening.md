@@ -8,7 +8,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are ge
 
 ## Step 1 - Keys Generation
 
-1. Run the keys script that can be downloaded from [location](https://owncloud_bkp.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+1. Run the keys script that can be downloaded from [location](https://download.k2view.com/index.php/s/lHHUZ1cFwd8Ah6w). 
 2. Stop Fabric and Cassandra services before running the script.
 
 
