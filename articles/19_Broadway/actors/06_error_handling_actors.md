@@ -12,7 +12,7 @@ The **ErrorHandler** Actor can be used as an error handler to enable different h
 
 The exceptions are classified into three types: SQL error, HTTP error and exception. The SQL errors are divided into Unique constraint or other. Note that the Unique constraint exception validation is only done for Oracle, DB2, SQLite and SQL servers. 
 
-The following example shows how an **ErrorHanlder** Actor is used as an error handler in the **LU Table** Stage. In the following configuration only **Unique Constraint** SQL errors are caught and suppressed. Any other error causes the flow to fail. 
+The following example shows how an **ErrorHanlder** Actor is used as an error handler in the **Table Load** Stage. In the following configuration only **Unique Constraint** SQL errors are caught and suppressed. Any other error causes the flow to fail. 
 
 ![image](../images/99_actors_06_1.PNG)
 
