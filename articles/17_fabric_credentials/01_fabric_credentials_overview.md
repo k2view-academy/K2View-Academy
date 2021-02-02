@@ -118,7 +118,13 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>Allows specific web services and graphit files to be invoked</p>
 </td></tr>
 
- 
+<tr>
+<td width="300pxl">
+<p><strong>ALL</strong></p>
+</td>
+<td width="600pxl">
+<p>Allows above-mentioned permissions</p>
+</td></tr>
 </table>
   
 
