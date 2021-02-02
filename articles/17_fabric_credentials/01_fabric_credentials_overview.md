@@ -20,6 +20,18 @@ User access control management can be performed using either:
 ##  List of permissions 
 Roles are also used to maintain consistency across Fabric and be assigned with many or all of the following permission and actions types:
 
+
+<table>
+<tbody>
+<tr>
+<td width="300pxl">
+<p><strong>PERMISSION</strong></p>
+</td>
+<td width="600pxl">
+<p><strong>DESCRIPTION</strong></p>
+</td>
+</tr>
+
 <table>
 <tbody>
 <tr>
