@@ -1,6 +1,6 @@
 # Using Templates
 
-Once templates have been added to a project, they can be used to create new objects, for example; a Java file or a Broadway Flow or ACtor.  
+Once templates have been added to a project, they can be used to create new objects, for example; a Java file or a Broadway Flow or Actor.  
 
 For more information, click  [Creating and Editing templates](02_create_and_edit_template.md).
 
