@@ -32,14 +32,12 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 </td>
 </tr>
 
-<table>
-<tbody>
 <tr>
 <td width="300pxl">
 <p><strong>ACTIVATE_KEY</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>This permission is needed to generate a new key when using Fabric's [key generator](/articles/26_fabric_security/02_fabric_entities_design.md#master-key-commands) capability</strong></p>
+<p><strong>This permission is needed to generate a new key when using Fabric's key generator capability</strong></p>
 </td>
 </tr>
 
@@ -66,18 +64,10 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>BATCH</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Used to enable user to run [batch](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) processes </strong></p>
+<p><strong>Used to enable user to run batch processes </strong></p>
 </td>
 </tr>
 
-<tr>
-<td width="300pxl">
-<p><strong>BATCH</strong></p>
-</td>
-<td width="600pxl">
-<p><strong>Used to enable user to run [batch](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) processes </strong></p>
-</td>
-</tr>
 
 <tr>
 <td width="300pxl">
