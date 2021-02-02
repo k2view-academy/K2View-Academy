@@ -37,7 +37,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>ACTIVATE_KEY</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>This permission is needed to generate a new key when using Fabric's key generator capability</strong></p>
+<p>This permission is needed to generate a new key when using Fabric's key generator capability</p>
 </td>
 </tr>
 
@@ -46,7 +46,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>ASSIGN_ROLE</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>This permission is needed to assign a role to a specific user</strong></p>
+<p>This permission is needed to assign a role to a specific user</p>
 </td>
 </tr>
 
@@ -55,7 +55,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>EDIT_ROLE</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Used to modify the scope of permissions for a specific role permission</strong></p>
+<p>Used to modify the scope of permissions for a specific role permission</p>
 </td>
 </tr>
 
@@ -64,7 +64,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>BATCH</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Used to enable user to run batch processes </strong></p>
+<p>Used to enable user to run batch processes</p>
 </td>
 </tr>
 
@@ -74,16 +74,16 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>DELETE_INSTANCE</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Used to delete one or multiple instances from Fabric</strong></p>
+<p>Used to delete one or multiple instances from Fabric</p>
 </td>
 </tr>
 
 <tr>
 <td width="300pxl">
-<p><strong>DEPLOY / DEPLOY_ENVIRONMENTS</strong></p>
+<p>DEPLOY/DEPLOY_ENVIRONMENTS</p>
 </td>
 <td width="600pxl">
-<p><strong>Ability to run the deploy command on a project or entire environment</strong></p>
+<p>Ability to run the deploy command on a project or entire environment</p>
 </td></tr>
 
 <tr>
@@ -91,7 +91,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>QUERY_WS / READ / WRITE</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB</strong></p>
+<p>The ability to invoke a web service and to read or right data from Fabric instances and/or CommonDB</p>
 </td></tr>
 
 <tr>
@@ -99,7 +99,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>SET_ENVIRONMENT / SET_GLOBAL_ENVIRONMENT / SET_GLOBAL_GLOBAL</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>To set the environement or Globals for the current session onto which role is defined</strong></p>
+<p>To set the environement or Globals for the current session onto which role is defined</p>
 </td></tr>
 
 <tr>
@@ -107,15 +107,15 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p><strong>ALL_WS</strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Allows all web-services related permissions</strong></p>
+<p>Allows all web-services related permissions</p>
 </td></tr>
 
 <tr>
 <td width="300pxl">
-<p><strong>ws_* / gr<LUNAME></strong></p>
+<p><strong>WS_* / gr<LUNAME></strong></p>
 </td>
 <td width="600pxl">
-<p><strong>Allows specific web services and graphit files to be invoked</strong></p>
+<p>Allows specific web services and graphit files to be invoked</p>
 </td></tr>
 
  
