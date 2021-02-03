@@ -6,7 +6,7 @@ In this exercise you will add a new CDC consumer named CDCTraining to your proje
 
 This exercise includes the following steps:
 
-* Adding the CDC Training consumer to your project.
+* Adding the CDCTraining consumer to your project.
 * Adding CDC fields to the Invoice LU table. 
 * Configuring CDC sections in the config.ini file.
 * Deploying the updated Customer LU and checking Kafka messages in the CDCTraining topic.
