@@ -51,7 +51,12 @@ Define a Broadway flow. Add the built-in **Subscribe** Actor and set its input p
 
 - Set the interface according to the settings in the Kafka interface added to the Fabric project.
 
-- Set the topic according to the CDC consumer name (CDCBroadway in the above example). Note that the topic name of each CDC consumer is based on the concatenation of the CDC consumer name and Fabric cluster id if exists.
+- Set the topic according to the CDC consumer name (CDCBroadway in the above example). 
+
+- Notes:
+	- The topic name of each CDC consumer is based on the concatenation of the CDC consumer name and Fabric cluster id if exists.
+	- When deploying an LU to a local Fabric server, Fabric concatenates the [Fabric version]_[Fabric project name] to the topic name.
+For example: CDCTraining_6_4_kb_fabric_project.
 
   [Click for examples of Pub/Sub Broadway flows](/articles/19_Broadway/actors/04_queue_actors.md#pub--sub-examples).
 
