@@ -12,7 +12,7 @@ A common scenario of sequence implementation is when the same sequence needs to 
 * Using a sequence across different LUIs within the same LU. For example, the same ADDRESS ID can be used for different customers during the same execution.
 * Using a sequence across different LU types. For example, the same CUSTOMER ID can be used in a CUSTOMER LU and a Billing LU during the same execution.
 
-To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** Actor everywhere the same sequence is used. Keep the **useExecutionID** as **true** in each Actor's settings to generate a new masked value in each execution or set it to **false** to use the same masked value across different executions.
+To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** Actor everywhere the same sequence is used. Keep the **useEnvironment** as **true** and the **useExecutionID** as **true** in each Actor's settings to generate a new masked value in each execution per the same environment or set it to **false** to use the same masked value across different executions and environments.
 
 ### Sequence Next Value
 
@@ -28,7 +28,7 @@ Sequence initiation can be performed using the **initialValue** and the **increm
 * Initialize the sequence using the constant initial value, for example 1000000.
 * Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. 
 
-![image](../images/99_actors_08_ex_1.png)
+![image](../images/99_actors_08_ex_init.PNG)
 
 ### Sequence Mapping
 
@@ -36,7 +36,11 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
 * Map the old value to the new value.
 
-  ![image](../images/99_actors_08_ex_4.PNG)
+  ![image](../images/99_actors_08_ex_map.PNG)
+
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output.
+
+  ![image](../images/99_actors_08_ex_new.PNG)
 
 * Set the sequence as part of the attributes list. The example of the attributes list can be a string which concatenates several pairs of key and value and the sequence is one of them. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
 
@@ -58,8 +62,10 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
 * Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), for example for reporting purposes. 
 
-* Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the TDM7 implementation. <!--add link to TDM7-->
+* Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the TDM7 implementation. 
 
+  <!--[Click for more information about TDM7](/articles/TDM/tdm_overview/01_tdm_overview.md).--> 
 
+  
 
 [![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)

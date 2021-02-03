@@ -20,6 +20,7 @@ The **MaskingSequence** Actor, which also belongs to the **masking** category, g
 The common input arguments of the **masking** category of Actors are:
 
 * **maskingId**, a unique masking identifier used to generate a target value. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking with specific ID is used across different DCs.
+* **useEnvironment**, indication whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments.
 * **useExecutionId**, indication whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is running. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
 * **useInstanceId**, indication whether to use the Instance ID as part of the masking cache. 
 * **hashedInputValue**, indication whether to store the original or the hashed input value. By default the hashed value is stored. Set to **false** when it is required to disable caching and store the original value.
@@ -27,7 +28,7 @@ The common input arguments of the **masking** category of Actors are:
   * When SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflects the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it using the **masking-create-cache-table.flow** example or using the installation SQL script provided as part of the Masking library. 
   * IN-MEMORY interface is useful for testing only since it can only be used in a single node configuration.
-* **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **maskingId** and Execution ID. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
+* **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **maskingId**, environment and execution ID. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
 
 The following input arguments are specific to the **MaskingSequence** Actor:
 
