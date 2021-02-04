@@ -20,7 +20,7 @@ The **MaskingSequence** Actor, which also belongs to the **masking** category, g
 The common input arguments of the **masking** category of Actors are:
 
 * **maskingId**, a unique masking identifier used to generate a target value. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking with specific ID is used across different DCs.
-* **useEnvironment**, indication whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments.
+* **useEnvironment**, indication whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. This feature is applicable starting from the release 6.4.1.
 * **useExecutionId**, indication whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is running. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
 * **useInstanceId**, indication whether to use the Instance ID as part of the masking cache. 
 * **hashedInputValue**, indication whether to store the original or the hashed input value. By default the hashed value is stored. Set to **false** when it is required to disable caching and store the original value.
