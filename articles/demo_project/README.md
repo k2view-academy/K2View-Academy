@@ -14,7 +14,7 @@ To configure these databases, do the following:
 
 1. Download the [BILLING_DB.db](SqliteDB/billing_db.db), [CRM_DB.db](SqliteDB/crm_db.db), [COLLECTION_DB.db](SqliteDB/collection_db.db) and [ORDERS_DB.db](SqliteDB/orders_db.db) files locally on your computer.
 
-2. Open the Fabric Studio, create a new project and then import the [KB_FABRIC_PROJECT.export](KB_FABRIC_PROJECT.k2export) file to your project.
+2. Open the Fabric Studio, create a new project and then import the [KB_FABRIC_PROJECT.k2export](KB_FABRIC_PROJECT.k2export) file to your project.
 
 3. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB interfaces, as follows:
     - Edit the **Database** field, set the location of the *.db file to the local directory.
