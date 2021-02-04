@@ -265,7 +265,7 @@ Note that the filter supports regex.
 </td>
 <td valign="top" width="400pxl">
 
-<p>Lists all running Batch processes in the cluster level and returns the following information: 
+<p>Lists all currently running instances by batch processes in the cluster level and returns the following information: 
    <li>Node ID</li>  <li>Batch process ID</li>
     <li>Entity ID</li>
     <li>LU type</li>
