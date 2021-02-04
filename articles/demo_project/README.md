@@ -1,29 +1,28 @@
 # FABRIC KNOWLEDGE BASE DEMO PROJECT 
 
-## Project Setup
-The Fabric Knowledge Base project includes a set of LU, code examples and objects that are used in all Knowledge Base articles and Learning Items.
+The Fabric Knowledge Base project includes a set of Logical Units, code examples and objects that are used in all Knowledge Base articles and Learning Items. It uses four SQLite databases as the data source. 
 
-To download the KB_FABRIC_PROJECT.k2proj locally to your computer, click [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/demo_project/KB_FABRIC_PROJECT.k2export).
+## Setup Steps
+
+To setup the project and connect the databases, do the following:
+
+1. Open the Fabric Studio and create a new project.
+
+2. Download the [KB_FABRIC_PROJECT.k2export](KB_FABRIC_PROJECT.k2export) file and import it to your project using the Import All option.
 
 
-## DBs Setup
+3. Download the [BILLING_DB.db](SqliteDB/billing_db.db), [CRM_DB.db](SqliteDB/crm_db.db), [COLLECTION_DB.db](SqliteDB/collection_db.db) and [ORDERS_DB.db](SqliteDB/orders_db.db) files locally on your computer.
 
-The Fabric Knowledge Base project includes four databases that can be accessed locally from your computer. To enable this, the BILLING_DB, CRM_DB, COLLECTION_DB and ORDERS_DB databases have been created as SQLite *.db files.
+4. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB Interfaces, as follows:
+    - Open the Interfaces from the Project tree.
 
-To configure these databases, do the following:
+    - Edit the **Database** field, setting the location of the *.db file to the local directory.
 
-1. Download the [BILLING_DB.db](SqliteDB/billing_db.db), [CRM_DB.db](SqliteDB/crm_db.db), [COLLECTION_DB.db](SqliteDB/collection_db.db) and [ORDERS_DB.db](SqliteDB/orders_db.db) files locally on your computer.
+    - Test the connection by clicking on Test Connection String link. 
 
-2. Open the Fabric Studio, create a new project and then import the [KB_FABRIC_PROJECT.k2export](KB_FABRIC_PROJECT.k2export) file to your project.
+    - Save the changes and close the DB interface.
 
-3. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB interfaces, as follows:
-    - Edit the **Database** field, set the location of the *.db file to the local directory.
-    - Test the connection and save the changes.
-    - Close the DB interface.
-    
     [Click for more information about DB Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
-
-Note, make sure to add the full path of the downloaded databases to each database in the Fabric Studio Interfaces screens.
 
 
 
