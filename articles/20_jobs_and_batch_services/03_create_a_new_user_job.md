@@ -55,7 +55,7 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 </tr>
 <tr>
 <td style="width: 300px;"><strong>Execution Mode</strong></td>
-<td style="width: 600px;">Can be set either <strong>automatically</strong> or <strong>manually</strong> depending on whether the Job service is started from the Command Line or is managed by Fabric.</td>
+<td style="width: 600px;">Can be set either <strong>automatically</strong> or <strong>manually</strong> depending on whether the Job service is started from the Command Line or job will start automatically upon deployment.</td>
 </tr>
 <tr>
 <td style="width: 300px;"><strong>Active</strong></td>
