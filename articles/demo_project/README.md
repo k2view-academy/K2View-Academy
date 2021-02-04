@@ -1,22 +1,20 @@
 # FABRIC KNOWLEDGE BASE DEMO PROJECT 
 
-## Project Setup
 The Fabric Knowledge Base project includes a set of LU, code examples and objects that are used in all Knowledge Base articles and Learning Items.
 
-To download the KB_FABRIC_PROJECT.k2proj locally to your computer, click [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.4/articles/demo_project/KB_FABRIC_PROJECT.k2export).
+## Setup Steps
 
+The Fabric Knowledge Base project uses four databases. For this purpose, the BILLING_DB, CRM_DB, COLLECTION_DB and ORDERS_DB databases have been created as SQLite *.db files.
 
-## DBs Setup
+To setup the project and connect the databases, do the following:
 
-The Fabric Knowledge Base project includes four databases that can be accessed locally from your computer. To enable this, the BILLING_DB, CRM_DB, COLLECTION_DB and ORDERS_DB databases have been created as SQLite *.db files.
+1. Open the Fabric Studio and create a new project.
 
-To configure these databases, do the following:
+2. Download the [KB_FABRIC_PROJECT.k2export](KB_FABRIC_PROJECT.k2export) file and import it to your project. Use the Import All option. 
 
-1. Download the [BILLING_DB.db](SqliteDB/billing_db.db), [CRM_DB.db](SqliteDB/crm_db.db), [COLLECTION_DB.db](SqliteDB/collection_db.db) and [ORDERS_DB.db](SqliteDB/orders_db.db) files locally on your computer.
+3. Download the [BILLING_DB.db](SqliteDB/billing_db.db), [CRM_DB.db](SqliteDB/crm_db.db), [COLLECTION_DB.db](SqliteDB/collection_db.db) and [ORDERS_DB.db](SqliteDB/orders_db.db) files locally on your computer.
 
-2. Open the Fabric Studio, create a new project and then import the [KB_FABRIC_PROJECT.k2export](KB_FABRIC_PROJECT.k2export) file to your project.
-
-3. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB interfaces, as follows:
+4. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB interfaces, as follows:
     - Edit the **Database** field, set the location of the *.db file to the local directory.
     - Test the connection and save the changes.
     - Close the DB interface.
