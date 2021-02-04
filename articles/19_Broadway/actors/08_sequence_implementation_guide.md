@@ -38,7 +38,7 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_map.PNG)
 
-* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output.
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. This feature is applicable starting from the release 6.4.1.
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
