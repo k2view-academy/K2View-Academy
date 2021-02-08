@@ -95,6 +95,38 @@
 			]
 		},
 		{
+			"group display name": "Testing Data Management (TDM)",
+			"visible in main": true,
+			"topics": []
+		},
+		{
+			"group display name": "Data Privacy Management (DPM)",
+			"visible in main": true,
+			"topics": []
+		},
+		{
+			"group display name": "Security, Audit and Hardening",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Credentials",
+					"value": "17_fabric_credentials"
+				},
+				{
+					"display name": "Security",
+					"value": "26_fabric_security"
+				},
+				{
+					"display name": "Auditing",
+					"value": "27_auditing"
+				},
+				{
+					"display name": "Hardening",
+					"value": "99_fabric_infras/devops"
+				}
+			]
+		},
+		{
 			"group display name": "Fabric Connectivity to External World",
 			"visible in main": true,
 			"topics": [
@@ -167,38 +199,6 @@
 					"value": "34_JMX_statistics"
 				}
 			]
-		},
-		{
-			"group display name": "Security, Audit and Hardening",
-			"visible in main": true,
-			"topics": [
-				{
-					"display name": "Credentials",
-					"value": "17_fabric_credentials"
-				},
-				{
-					"display name": "Security",
-					"value": "26_fabric_security"
-				},
-				{
-					"display name": "Auditing",
-					"value": "27_auditing"
-				},
-				{
-					"display name": "Hardening",
-					"value": "99_fabric_infras/devops"
-				}
-			]
-		},
-		{
-			"group display name": "Testing Data Management (TDM)",
-			"visible in main": true,
-			"topics": []
-		},
-		{
-			"group display name": "Data Privacy Management (DPM)",
-			"visible in main": true,
-			"topics": []
 		}
 	]
 }
