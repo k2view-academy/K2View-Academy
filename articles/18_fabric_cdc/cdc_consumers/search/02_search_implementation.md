@@ -55,30 +55,6 @@ To  create a new Search Engine interface:
 <p>By default, set to False.</p>
 </td>
 </tr>
-<tr>
-<td valign="top" width="200pxl">
-<p>KeyStore Path</p>
-</td>
-<td valign="top" width="700pxl">
-<p>Key store path if SSL is set to True.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="200pxl">
-<p>KeyStore Password</p>
-</td>
-<td valign="top" width="700pxl">
-<p>Key store password if SSL is set to True.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="200pxl">
-<p>KeyStore Type</p>
-</td>
-<td valign="top" width="700pxl">
-<p>Key store type if SSL is set to True.</p>
-</td>
-</tr>
 </tbody>
 </table>
 
