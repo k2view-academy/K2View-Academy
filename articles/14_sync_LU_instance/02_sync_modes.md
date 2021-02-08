@@ -75,23 +75,23 @@ SYNTAX: SET SYNC [SYNC MODE];
 
 1.1 when running on node A:
 
-set sync delta;
-get LU.1;
+set sync delta;</p>
+<p>get LU.1;
 
 fabric will check if delta exist in node B for instance 1, if not will run in sync OFF mode, otherwise ON
 
 1.2 when running on node B:
 
-set sync delta;
-get LU.1;
+set sync delta;</p>
+<p>get LU.1;
 
 Fabric will run in sync ON mode (it doesn't matter if delta is empty or not).
 
 
 1.3 when running on node A:
 
-set sync ON;
-get LU.1;
+set sync ON;</p>
+<p>get LU.1;
 
 fabric will check if delta exist in node B for instance 1 if not will run on A in sync ON mode, 
 otherwise will run in sync ON mode on remote node (B).
