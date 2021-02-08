@@ -61,6 +61,46 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>The only exception is when using a <a href="/articles/14_sync_LU_instance/05_sync_decision_functions.md">Decision function</a>. If the Decision function returns False, the data is not synced.</p>
 </td>
 </tr>
+<tr>
+<td style="width: 76px;">
+<p>DELTA</p>
+</td>
+<td style="width: 146px;">
+<p>Delta sync.</p>
+</td>
+<td style="width: 316px;">
+<p>Valid for iidFinder in delta partition mode, to handle sync on remote node, check if delta exist on local node, if so, sync data in OFF mode.</p>
+<p>1. If Node A owns instance 2 and Node B owns instance 1 and iidFinder is set to delta patition mode.
+
+1.1 when running on node A:
+
+set sync delta;
+get LU.1;
+
+fabric will check if delta exist in node B for instance 1, if not will run in sync OFF mode, otherwise ON
+
+1.2 when running on node B:
+
+set sync delta;
+get LU.1;
+
+Fabric will run in sync ON mode (it doesn't matter if delta is empty or not).
+
+
+1.3 when running on node A:
+
+set sync ON;
+get LU.1;
+
+fabric will check if delta exist in node B for instance 1 if not will run on A in sync ON mode, 
+otherwise will run in sync ON mode on remote node (B).
+
+2. If Node A owns instance 2 and Node B owns instance 1 and iidFinder is set to CASSANDRA_ONLY or KAFKA
+
+set sync delta;
+Will run as sync ON; </p>
+</td>
+</tr>
 </tbody>
 </table>
 
