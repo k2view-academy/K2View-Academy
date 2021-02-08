@@ -69,6 +69,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>Delta sync.</p>
 </td>
 <td style="width: 316px;">
+<p> Added on release 6.4.1 </p>
 <p>Valid for iidFinder in delta partition mode, to handle sync on remote node, check if delta exist on local node, if so, sync data in OFF mode.</p>
 <p>1. If Node A owns instance 2 and Node B owns instance 1 and iidFinder is set to delta patition mode.
 
