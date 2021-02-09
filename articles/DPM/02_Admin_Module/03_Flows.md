@@ -25,24 +25,24 @@ The preceding figure is an example of listed flows. Information about each Flow 
 - Regulation/Activity: List of all the Activities that use this Flow.
 - Actions: Provide the option to delete a Flow. 
 
-The following sections provide additional information about the options and data in the “Flows List” screen. 
+The following sections provide additional information about the options and information in the “Flows List” screen. 
 
 ### View Flow Details
 
-View the details of a specific Flow by clicking the desired line of information displayed.
+View the details of a specific Flow by clicking the line of information displayed.
 
 ### Delete a Flow
  
-Delete a Flow by selecting the "x" (Delete) button under the <i>Actions</i> column. Only Flows not linked to an Activity can be deleted.
+Delete a Flow by selecting the "Delete" button under the <i>Actions</i> column. Only Flows not linked to an Activity can be deleted.
 
 ### Flow Status
 
-Flow Status - When a new Flow is created, its status is defined as <i>Draft</i>. In this status, the DPM Administrator can perform any configuration on this Flow; such as creating new stages, adding new tasks, etc.  
-Once the Administrator completes the configuration, the Flow is marked as <i>Completed</i>. Marking the Flow as Completed blocks further changes to the Flow. At this point, this Flow can be linked to a DPM Activity for execution as part of a DPM fulfillment process. The same Flow can be linked to more than one DPM Activity. 
+Flow Status - When a new Flow is created, its status is defined as <i>Draft</i>. In this status, the DPM Administrator can perform any configuration on this Flow; such as creating new stages, adding new tasks, and more.  
+Once the Administrator completes the configuration, the Flow can be marked as <i>Completed</i>. Marking the Flow as Completed blocks further changes to the Flow. At this point, this Flow can be linked to a DPM Activity for execution as part of a DPM fulfillment process. The same Flow can be linked to more than one DPM Activity. 
 
 ### Flow Version
 
-Any Flow can have multiple versions. A new version should be created when a change to an existing Completed Flow is required. The version number is determined by the Administrator at the time the Flow is created.  Creating a new version of a Flow is described in the section “Flow Details."
+Any Flow can have multiple versions. A new version should be created when a change to an existing Completed Flow is required. The version number is determined by the Administrator when the new Flow version is created. The Administrator can accept the system’s version or modify the version as desired.  Creating a new version of a Flow is described in the section “Flow Details”.
 
 ### Create New Flow
 
@@ -84,7 +84,7 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 <p>O</p>
 </td>
 <td width="785">
-<p>The Flow version field is optional, and the system will assign it automatically if it is not filled in by the user. The logic for the automatic version number allocation is as follows:</p>
+<p>[Optional] The Flow version can be specified by the user or is automatically assigned by the system. The logic for the automatic version number allocation is as follows:</p>
 <p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If there is no other Flow with the same name, the system will automatically set it to 1.</p>
 <p>&middot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If there is a Flow with the same name, the system will set the Flow version of the new Flow to one higher than the version number of the Flow with the same name.</p>
 <p>The system will not allow the creation of two Flows with the same name and the same version.</p>
@@ -98,7 +98,7 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 <p>O</p>
 </td>
 <td width="785">
-<p>Description of the Flow&rsquo;s purpose.</p>
+<p>[Optional] Description of the Flow&rsquo;s purpose.</p>
 </td>
 </tr>
 </tbody>
@@ -136,19 +136,19 @@ The set of icons to the right of the Flow name are actions for that Flow. Each i
 <td width="100"><img src="/articles/DPM/images/Figure_7b_mark_flow_as_complete_icon.png" alt=""/></td>
 </td>
 <td width="800">
-<p><u>Mark as Complete</u>: Once the Flow configuration is complete, use this icon in order to mark the Flow as <em>Completed</em>. No further changes to the Flow are allowed after a Flow was marked as complete, and the Flow is made available to be associated with an Activity in the Activity configuration screens.</p>
+<p><u>Mark as Complete</u>: Once the Flow configuration is completed, use this icon to mark the Flow as Completed. No further changes can be made to a flow that is marked as Completed. The Flow is now available to  be associated with an Activity in the Activity configuration screens.</p>
 </td>
 </tr>
 <tr>
 <td width="100"><img src="/articles/DPM/images/Figure_7c_duplicate_this_flow.png" alt=""/></td>
 <td width="800">
-<p><u>Duplicate this Flow</u>: this button is used in order to create a new version of the Flow. The new version is created in <em>Draft</em> status and allows the user to change the details of the Flow in the new version.</p>
+<p><u>Duplicate this Flow</u>: this icon is used in order to create a new version of the Flow, starting as a clone from a Draft or Completed Flow. The new version is created in Draft status and allows the user to change the details of the Flow in the new version.</p>
 </td>
 </tr>
 <tr>
 <td width="100"><img src="/articles/DPM/images/Figure_7d_save_flow_as.png" alt=""/></td>
 <td width="800">
-<p><u>Save Flow As</u>: Use the &ldquo;save as&rdquo; button to create a new Flow in <em>Draft</em> status, that initially has the same details of the original Flow. The new Flow that is created as a result is independent from the source Flow.</p>
+<p><u>Save Flow As</u>: Use the “save as” icon to create a new Flow in Draft status, that initially has the same details of the original Flow. The new Flow created is independent from the source Flow.</p>
 </td>
 </tr>
 </tbody>
@@ -199,7 +199,7 @@ Each information item is described by the following table.
 <p>(x business Hours)</p>
 </td>
 <td width="800">
-<p>This indicates the total number of hours that the Flow is expected to take, according to the deadline information of all its Tasks. The unit of the information can be changed by configuration from Hours to Minutes. Note that changing the configuration from Hours to Minutes alters the expected duration of the Flow, and not only the units. For example: a Task with the deadline set to 1 would be considered as 1 hour long when the configuration is &ldquo;Hours&rdquo; and as 1 minute long when the configuration is set to &ldquo;Minutes&rdquo;. The option of &ldquo;Minutes&rdquo; is usually utilized for testing purposes, when the tester wishes to have the Flows executed faster.</p>
+<p>Indicates the total number of hours to process the Flow, according to the deadline information of all its Tasks. The unit of time measure can be configured as hours or minutes.  Note that changing the configuration from Hours to Minutes alters the expected duration of the Flow, and not only the units. For example: A Task with the deadline configured in hours and noted as 1 , the task is understood to take one hour to complete.  When the configuration is set to &ldquo;Minutes&ldquo; the task is set with deadline of one minute duration. The option of &ldquo;Minutes&rdquo; is usually utilized for testing purposes, when the tester wishes to have the Flows executed faster.</p>
 </td>
 </tr>
 </tbody>
@@ -207,7 +207,7 @@ Each information item is described by the following table.
 
 ### Add a Stage
 
-Use the New Stage ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on the left side of the Flow screen to add a new Stage. The user is prompted to define the Stage name and description, as shown by the following table.
+Use the New Stage ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on the left side of the Flow screen to add a new Stage. As a result, the user is prompted to define a Stage name and description, as shown by the following figure and description table.
 
  ![image](/articles/DPM/images/Figure_9_Adding_a_new_Stage.png)
 
@@ -249,11 +249,11 @@ Use the New Stage ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on
 </tbody>
 </table>
 
-Saving the new Stage will open the screen to define tasks in this stage. 
+Saving the new Stage opens the screen to define tasks in this stage. 
 
  ![image](/articles/DPM/images/Figure_10_New_Flow_initial_state.png)
 
-When the Flow is not marked <i>Completed</i>, Stages can be added, and defined by added or modified Tasks. . 
+While the Flow is not marked <i>Completed</i>, Stages can be added, or updated by added or modified Tasks. 
 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/04_Stages.md)
