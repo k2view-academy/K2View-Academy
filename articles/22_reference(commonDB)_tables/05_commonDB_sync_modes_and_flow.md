@@ -35,17 +35,21 @@ The transaction message is sent to Kafka while its content is saved into Kafka (
 
 ## Synchronization Modes
 
-Regardless of the synchronization type (background or on-demand), Fabric provides two different modes for synchronizing Reference tables data.
+Regardless of the synchronization type (background or on-demand), Fabric provides two different modes for synchronizing Reference tables data. 
+
+Both Update and Snapshots can work in either of the following modes: 
+
+- Small changes: applicable for transactions that contain less than 1000 rows.
+- Big changes: applicable for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra.
+
+For example, if an update consists of running 2500 insert commands, the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each, then each 1000 command bulk is written to Cassandra.
+
+
 
 ### Update Mode
 This mode is by default, selected when any row update to the reference table is needed. 
-In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. Each node executes this change locally on its local SQLite commonDB copy as a single transaction.
-
-- Small updates: applicable for less than 1000 updates.
-- Big updates: applicable for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra.
-
-For example, an update consists of running 2500 insert commands. Each 1000 command bulk is written to Cassandra. The 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each. Kafka gets the transaction message. One message is sent to Kafka per table and per transaction. 
-
+In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. 
+Each node executes this change locally on its local SQLite commonDB copy as a single transaction.
 
 ### Snapshot Mode
 
@@ -53,14 +57,14 @@ A snapshot will only be published once one of the following actions is triggered
 
 -	The full table synchronization is initialized by a job.
 -	Manually, when requested by the user sending a delete request is sent to a Reference Table without a ```where``` statement
+- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio uner the Table Properties panel
+
 
 
 #### Snapshots Synchronization Mechanism
 
-Each node performs the following snapshot synchronization: 
-
-##### Option 1 - Truncate option is set in the [Truncate Before Sync]() property. 
-
+Each node performs the following snapshot synchronization when  or in the config file . 
+ 
 - The snapshot is started
 - All rows are added to the snapshot
 - If an error or exception occurs, the rollback process begins, otherwise the transaction is committed in one transaction:
@@ -68,10 +72,7 @@ Each node performs the following snapshot synchronization:
   - The old reference table is dropped.
   - The temporary table is renamed to the Reference table's name.
 
-##### Option 2 - Truncate option is not set
 
-- All updates for the Reference table are executed 
-- Once the batch of transactions is available, all updates are executed in one commit, unless there are failures in which case each update is executed.
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md)
