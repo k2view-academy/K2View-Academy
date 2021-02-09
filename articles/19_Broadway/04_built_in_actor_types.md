@@ -204,6 +204,7 @@ The following table presents a list of Actors categories with examples of each c
 <td width="600">
 <p><strong>FileRead</strong> Actor, reads data from a file given in an interface and path. The file is opened lazily when an Actor reads the output stream. Once the file has been fully read, it is closed. If the file is not fully read, it is closed at the end of the flow.</p>
 <p><strong>Http</strong> Actor, sends a request to a Web Server. Supports streaming payload and results and sending and receiving header parameters.</p>
+<p><strong>StringsToBytes</strong> Actor, reads an iterable of strings (or string representation) and converts them to byte arrays using the given character set (for example, UTF-8). The <strong>byteOrderMark</strong> input argument should be set to true if you need the BOM to be written at the beginning of the buffer, according to the given character set.</p>
 </td>
 </tr>
 <tr>
@@ -245,6 +246,7 @@ The following table presents a list of Actors categories with examples of each c
 </tr>
 </tbody>
 </table>
+
 
 
 
