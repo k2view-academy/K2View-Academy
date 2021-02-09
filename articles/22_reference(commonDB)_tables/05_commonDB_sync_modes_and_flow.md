@@ -3,12 +3,14 @@
 
 ## Synchronization Modes
 
-Regardless of the synchronization type (background or on-demand), Fabric provides two different modes for synchronizing Reference tables data. 
+Regardless of the synchronization type (background or on-demand), Fabric provides two different options for synchronizing Reference tables data.
+- The update synchronization mode is used to modify rows within existing tables.
+- The snapshot synchronization mode is used when replacing entirely a reference table.
 
-Both Update and Snapshots can work in either of the following modes: 
+Both Update and Snapshot options can work in either one of the following modes: 
 
-- Small changes: applicable for transactions that contain less than 1000 rows.
-- Big changes: applicable for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra.
+- Short Message mode: applied for transactions that contain less than 1000 rows.
+- Long Message mode : applied for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra.
 
 For example, if an update consists of running 2500 insert commands, the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each, then each 1000 command bulk is written to Cassandra.
 
