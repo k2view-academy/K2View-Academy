@@ -7,7 +7,7 @@ The Tasks tab includes the configuration of parameters, such as the following:
 - Define the Task as mandatory, when applicable
 - Provide execution order of tasks
 - Identify dependencies with other Tasks
-- Define expected Task execution time
+- Define expected Task execution duration
 - Define Task execution timing
 
  ![image](/articles/DPM/images/Figure_13_New_Task_first_tab.png)
@@ -46,7 +46,7 @@ The following table details the options for the Task tab.
 <p>M</p>
 </td>
 <td width="775">
-<p>The defined position of a team member as one of many or solely representing a group assigned to the Task. For manual Tasks, the Role is assigned to the Data Stewards’ group. For automatic Tasks, the DPM system informs the assigned role when the process fails or the deadline of the Task expired without completing the task.</p>
+<p>The defined role of a team representing a group assigned to the Task. For manual Tasks, the Role is assigned to one of the Data Stewards’ group. For automatic Tasks, the DPM system informs the assigned role when the process fails or the deadline of the Task expired without completing the task.</p>
 </td>
 </tr>
 <tr>
@@ -59,7 +59,7 @@ The following table details the options for the Task tab.
 <td width="775">
 <p>A Task indicated as mandatory signifies the associated flow will not proceed until this Task is completed.</p>
 <p>&nbsp;</p>
-<p>If the Mandatory property is not marked and the deadline is reached,  the flow continues even if the Task has not been completed. In this case, the system marks the Task as “waived”.  If there are no further Tasks in the Request, the Request is marked as &ldquo;completed&rdquo;.</p>
+<p>If the Mandatory property is not marked and the Task deadline is reached,  the flow continues even if the Task has not been completed. In this case, the system marks the Task as “waived”.  If there are no further Tasks in the Request, the Request is marked as &ldquo;completed&rdquo;.</p>
 </td>
 </tr>
 <tr>
@@ -130,6 +130,7 @@ The following table details the options for the Task tab.
 </tbody>
 </table>
 
+
 ##### Conditional Dependent Task: 
 
 When the “Conditional Dependent Task” is switched on, the Tasks Tab changes to present the properties that should be configured in this case, as shown by the next image and its corresponding table. 
@@ -170,7 +171,7 @@ The additional configurable properties when the “Conditional Dependent Task is
 <p>M</p>
 </td>
 <td width="780">
-<p>This property is shown only when the Conditional Dependent Task is switched on. Ihis property indicates after how many hours should the dependent Task begin following the parent task start time.</p>
+<p>This property is shown only when the Conditional Dependent Task is switched on. This property indicates after how many hours should the dependent Task begin following the parent task start time.</p>
 </td>
 </tr>
 </tbody>

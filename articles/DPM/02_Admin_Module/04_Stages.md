@@ -4,28 +4,27 @@ The Stages comprising a Flow are shown in the bar below the Flow header. An exam
 
  ![image](/articles/DPM/images/Figure_11_Flow_Stages.png)
 
-- Use the + buttons to add more Stages
+- Use the + buttons to add a Stage
 - Use the x buttons to delete a Stage
 
-The duration of each Stage is marked in the yellow tag at the top of the Stage arrow. This duration is based on the SLAs of the tasks within the Stage. The duration also takes into consideration the order and dependencies of the tasks defining the SLA. 
+The duration of each Stage is marked by the yellow tag at the top of the Stage arrow. This duration is based on the SLAs of the tasks within the Stage. The duration takes into consideration the order and dependencies of the tasks included in each Stage.
 The Stage name and description can be changed as long as the Flow is not marked as Completed. Edit this information by using the   ![image](/articles/DPM/images/Figure_11a_edit_stage_icon.png) button, located at the right side of the Stage header section. 
 
 ### Add/Edit a Task
 
-A Stage is composed of one or more Tasks. Each Task performs a specific action (or activity) in the Customer Request Fulfilment process. An example is provided next.
+A Stage is composed of one or more Tasks. Each Task performs a specific action in the Customer Request Fulfilment process. Examples of Tasks are provided next.
 
-- The customer requests data from the system. 
-- The Admin validates the customer request.
-- An e-mail is sent to the customer acknowledging registration of the request.
-- The requested customer data is gathered.
-- The gathered data is reviewed.
+- Validates the customer’s request.
+- Send an e-mail  to the customer acknowledging registration of the request.
+- Gather the requested customer data.
+- Review the gathered data.
 
-To add a new Task under a specific Stage, select the Stage name on the Stage bar and use the  ![image](/articles/DPM/images/Figure_12a_new_task_icon.png) option from the right. 
+To add a new Task under a specific Stage, click the Stage name on the Stage bar and access the  ![image](/articles/DPM/images/Figure_12a_new_task_icon.png) option from the right. 
 The Task Configuration screen is displayed. This screen includes several tabs, each providing an aspect of Task configuration.
 
 ![image](/articles/DPM/images/Figure_12_Add_Edit_a_Task_screen.png)
 
-The Task configuration includes the following tabs
+The following tabs constitute the Task Configuration screen:
 - Tasks
 - Reminders
 - Operations, and 
