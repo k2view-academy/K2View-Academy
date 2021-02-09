@@ -12,7 +12,7 @@ This article described how Broadway performs the following:
 * Creates a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
 * [Controls the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
 
-To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_complex_interation_flows.md) article.
+To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_complex_iteration_flows.md) article.
 
 
 ### How Do I Define an Iteration in a Flow?
@@ -92,5 +92,5 @@ In a nested loop, only the inner-most (deepest) loop that is running in the curr
 
 For more information, refer to the **iterate-for-each.flow** Broadway example.
 
-[![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21a_complex_interation_flows.md)
+[![Previous](/articles/images/Previous.png)](19_broadway_flow_stages.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](21a_complex_iteration_flows.md)
 
