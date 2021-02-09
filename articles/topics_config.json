@@ -12,6 +12,7 @@
 	"Groups": [
 		{
 			"group display name": "Fabric Overview & Architecture",
+			"group icon": "images/icon-1.png",
 			"visible in main": true,
 			"topics": [
 				{
@@ -26,6 +27,7 @@
 		},
 		{
 			"group display name": "Fabric Implementation",
+			"group icon": "images/icon-2.png",
 			"visible in main": true,
 			"topics": [
 				{
@@ -96,16 +98,19 @@
 		},
 		{
 			"group display name": "Testing Data Management (TDM)",
+			"group icon": "images/icon-3.png",
 			"visible in main": true,
 			"topics": []
 		},
 		{
 			"group display name": "Data Privacy Management (DPM)",
+			"group icon": "images/icon-4.png",
 			"visible in main": true,
 			"topics": []
 		},
 		{
 			"group display name": "Security, Audit and Hardening",
+			"group icon": "images/icon-5.png",
 			"visible in main": true,
 			"topics": [
 				{
@@ -128,6 +133,7 @@
 		},
 		{
 			"group display name": "Fabric Connectivity to External World",
+			"group icon": "images/icon-6.png",
 			"visible in main": true,
 			"topics": [
 				{
@@ -154,6 +160,7 @@
 		},
 		{
 			"group display name": "Fabric Web Framework Apps",
+			"group icon": "images/icon-7.png",
 			"visible in main": true,
 			"topics": [
 				{
@@ -168,6 +175,7 @@
 		},
 		{
 			"group display name": "Fabric Advanced Configuration",
+			"group icon": "images/icon-8.png",
 			"visible in main": true,
 			"topics": [
 				{
