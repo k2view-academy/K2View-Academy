@@ -18,4 +18,4 @@ An example of the relation between the above entities is depicted in the followi
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/01_DPM_Overview/README.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md)
