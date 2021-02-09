@@ -1,38 +1,6 @@
 # commonDB Architecture
 
 
-
-## Synchronization Flow
-
-Two types of transactions can be differentiated when updating a commonDB reference table: 
-- Short message updates - whereby both update's message and content are stored on the dedicated Kafka queue.
-- Long message updates - whereby the update's message is published on the dedicated Kafka queue while the update's content is stored in Cassandra.
-
-Two different flows occur for each transaction, depending on whether the update content size exceeds 1000 rows or not. 
-
-
-### Short Message Case
-
-The following illustration shows how a Synchronisation Job (Sync Job 2) publishes an update notification and a short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes in the cluster to write the update directly from Kafka to their own SQLite CommonDB copy. 
-
-![image](/articles/22_reference(commonDB)_tables/images/08_commonDB_RefSyncShort.png)
-
-
-
-### Long Message Case
-
-The following illustration shows how a Synchronisation Job (Sync Job 1) publishes an update message in the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra. This, subsequently, causes any listening node within the cluster to write the update's content directly from Cassandra into its own SQLite CommonDB copy. 
-
-![image](/articles/22_reference(commonDB)_tables/images/09_commonDB_RefSyncLong.png)
-
-
-### Synchronization Properties
-
-Any transaction involving the common table is done in asynchronous mode, meaning that the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table; more over, each node will perform the update in its own time.
-
-The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in a Cassandra keyspace, depending on its size.
-
-
 ## Synchronization Modes
 
 Regardless of the synchronization type (background or on-demand), Fabric provides two different modes for synchronizing Reference tables data. 
@@ -73,6 +41,36 @@ Each node performs the following snapshot synchronization when  or in the config
   - The temporary table is renamed to the Reference table's name.
 
 
+
+## Synchronization Flow
+
+Two types of transactions can be differentiated when updating a commonDB reference table: 
+- Short message updates - whereby both update's message and content are stored on the dedicated Kafka queue.
+- Long message updates - whereby the update's message is published on the dedicated Kafka queue while the update's content is stored in Cassandra.
+
+Two different flows occur for each transaction, depending on whether the update content size exceeds 1000 rows or not. 
+
+
+### Short Message Case
+
+The following illustration shows how a Synchronisation Job (Sync Job 2) publishes an update notification and a short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes in the cluster to write the update directly from Kafka to their own SQLite CommonDB copy. 
+
+![image](/articles/22_reference(commonDB)_tables/images/08_commonDB_RefSyncShort.png)
+
+
+
+### Long Message Case
+
+The following illustration shows how a Synchronisation Job (Sync Job 1) publishes an update message in the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra. This, subsequently, causes any listening node within the cluster to write the update's content directly from Cassandra into its own SQLite CommonDB copy. 
+
+![image](/articles/22_reference(commonDB)_tables/images/09_commonDB_RefSyncLong.png)
+
+
+### Synchronization Properties
+
+Any transaction involving the common table is done in asynchronous mode, meaning that the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table; more over, each node will perform the update in its own time.
+
+The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in a Cassandra keyspace, depending on its size.
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md)
