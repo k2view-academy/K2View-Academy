@@ -2,21 +2,19 @@
 
 ## 4.3	Cassandra
 
--	Check defined Cassandra interface user/pass
+**1. Check defined Cassandra interface user/pass**  
+   -*This rule checks if cassandra\cassandra user\password are being used in the studio*
 
-This rule checks if cassandra\cassandra user\password are being used in the studio
+   -*cassandra\cassandra must not be used as user\password in the studio interface as this is used only internally*
 
-cassandra\cassandra must not be used as user\password in the studio interface as this is used only internally
+**2. Check host defined in Cassandra interfaces**  
+   -*This rule checks if hosts are well defined in Cassandra interface*
+   
+      - Do not use localhost as host
+      - Make sure to set all Cassandra hosts in the cluster in the interface host in order to allow high availability 
 
--	Check host defined in Cassandra interfaces
-This rule checks if hosts are well defined in Cassandra interface
-•	Do not use localhost as host
-
-•	Make sure to set all Cassandra hosts in the cluster in the interface host in order to allow high availability 
-
--	Avoid allow filtering since it will trigger a full table scan
-
-This rule detects executing read transactions on Cassandra using allow filtering
+**3. Avoid allow filtering since it will trigger a full table scan**  
+   -*This rule detects executing read transactions on Cassandra using allow filtering*
 
 
 
