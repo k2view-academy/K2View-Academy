@@ -1,7 +1,3 @@
-
-
-![image](/articles/images/welcome_to_wiki.png)
-
 ## DPM Admin Module 
 
 
@@ -32,8 +28,3 @@
 * [User Management](/articles/DPM/02_Admin_Module/13_User_Management.md)
 
 * [DPM Main Menu](/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md)
-
-  
-
-[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/01_Admin_Module_Overview.md)
-
