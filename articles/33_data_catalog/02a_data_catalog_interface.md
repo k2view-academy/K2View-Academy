@@ -32,7 +32,7 @@ To create a new Data Catalog interface, do the following:
 <tr style="height: 28px;">
 <td style="width: 179px; height: 28px;"><strong>Database</strong></td>
 <td style="width: 318px; height: 28px;">
-<p>OrientDB database name. Enter the name of an existing / new database.</p>
+<p>OrientDB database name. Enter the name of an existing / new OrientDB database.</p>
 <p>If a new name is entered, the new OrientDB database is created during Write Catalog.</p>
 </td>
 </tr>
@@ -46,10 +46,11 @@ To create a new Data Catalog interface, do the following:
 </tr>
 <tr>
 <td style="width: 179px;"><strong>Transactional</strong></td>
-<td style="width: 318px;">True/False.</td>
+<td style="width: 318px;">False (default) or True. Using the transactional interface synchronizes the Catalog Write executions in parallel, which will be used in a multi Fabric clusters with a single catalog DB instance.</td>
 </tr>
 </tbody>
 </table>
+
 
 
 
