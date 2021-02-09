@@ -7,7 +7,7 @@ The configuration is comprised of:
 
 •	Define Flows: The Flows specify the set of tasks that are required for the fulfillment of a customer request.
 
-•	Define Regulation and Activities: Configure the Regulation and Activities that the DPM supports. Once an Activity is defined, it is mapped to the Activity for the corresponding Flow.
+• Define Regulation and Activities: Configure the Regulation and Activities that the DPM supports. Once an Activity is defined, it is mapped to the corresponding Flow.
 
 
 
