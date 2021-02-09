@@ -21,7 +21,7 @@ To create a new Data Catalog interface, do the following:
 <tr style="height: 18px;">
 <td style="height: 18px; width: 179px;"><strong>Server</strong></td>
 <td style="height: 18px; width: 318px;">
-<p>IP address of the OrientDB server. Use the IP that was introduced on the OrientDB log file when bringing OrietDB up</p>
+<p>IP address of the OrientDB server. Use the IP that was introduced on the OrientDB log file when bringing up OrientDB.</p>
 <p><a href="07_OrientDB_setup.md">Click for more information about OrientDB setup</a>.</p>
 </td>
 </tr>
