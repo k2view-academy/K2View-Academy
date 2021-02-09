@@ -12,7 +12,7 @@ This article described how Broadway performs the following:
 * Creates a [nested iteration](21_iterations.md#nested-iterations) within an iteration.
 * [Controls the loops programmatically](21_iterations.md#programmatic-control) using JavaScript.
 
-To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_iterations_addnl.md) article.
+To learn about more complex iteration scenarios, such as iterating on different levels of the output object's hierarchy or combining multiple result sets, refer to the [Complex Iteration Flows](21a_complex_interation_flows.md) article.
 
 
 ### How Do I Define an Iteration in a Flow?

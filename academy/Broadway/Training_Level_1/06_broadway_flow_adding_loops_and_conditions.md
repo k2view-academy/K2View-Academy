@@ -18,7 +18,7 @@ You can add iterations to the flow either by:
 
 - Iterating a data by the code in a [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
 
-To learn about advanced iteration options, read [Complex Iteration Flows](/articles/19_Broadway/21a_iterations_addnl.md).
+To learn about advanced iteration options, read [Complex Iteration Flows](/articles/19_Broadway/21a_complex_interation_flows.md).
 
 ### Adding Conditions
 
