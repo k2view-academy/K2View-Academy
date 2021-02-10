@@ -30,7 +30,7 @@ Run the build-catalog.sh script located under **$K2_HOME/fabric/scripts** in the
 
 1. Build and deploy the artifact files of the project.
 2. Build the catalog.
-3. Deploy the project
+3. Deploy the project.
 
 **Usage**: ./build-catalog.sh [-h --help] -pd [PATH_TO_PROJECT] -u [USER] -p [PASSWORD]
 
