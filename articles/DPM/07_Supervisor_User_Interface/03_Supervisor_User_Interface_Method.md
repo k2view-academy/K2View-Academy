@@ -6,10 +6,10 @@ The Assignment method is defined in the upper section of the Resource Management
 
  ![image](/articles/DPM/images/Figure_52_Assignment_Method.png)
 
-The supervisor can select if new Requests would be allocated to Case Owners based on:
+The supervisor can select if new Requests will be allocated to Case Owners based on:
 
 - Round Robin assignment – New Requests are allocated to the Case Owners in turns. With this assignment method all the Case Owners are assigned an equal share of the Requests.
-- The Least Loaded – New Requests are allocated to the Case Owner that has the smallest number of open Requests. 
+- The Least Loaded – New Requests are allocated to the Case Owner with the smallest number of open Requests. 
 
 
 
