@@ -2,7 +2,7 @@
 
 A supervisor is responsible for the configuration of how new DPM requests are allocated to the users that constitute the Case Owners team: Whenever a new Request is submitted, the system  automatically selects one of the users defined as Case Owners, thus allocating the new Request to this user. The Resource Management screen is where the Supervisor can configure the method that the system uses to select one of the users.
 
-The supervisor accesses the assignment method configuration screen by selecting the  ![image](images/Figure_50_a_resource_management_icon.png) menu option.
+The supervisor accesses the assignment method configuration screen by selecting the  ![image](/articles/DPM/images/Figure_50_a_resource_management_icon.png) menu option.
 
  ![image](/articles/DPM/images/Figure_51_Supervisor_resource_management_screen.png)
 
