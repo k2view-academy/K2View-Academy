@@ -69,34 +69,33 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>Delta sync.</p>
 </td>
 <td style="width: 316px;">
-<p> Added on release 6.4.1 </p>
-<p>Valid for iidFinder in delta partition mode, while no delta on the remote node, running on local node in sync OFF mode.</p>
-<p>1. If Node A owns instance 2 and Node B owns instance 1 and iidFinder is set to delta patition mode.
+<p> Added to Release 6.4.1: </p>
+<p>Valid in the iidFinder in Delta Partition mode when there is no delta in the remote node when running on a local node in Sync Off mode.</p>
+<p>1. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to Delta Partition mode.
 
-1.1 when running on node A:
-
-set sync delta;</p>
-<p>get LU.1;
-
-fabric will check if delta exist in node B for instance 1, if not will run in sync OFF mode, otherwise ON
-
-1.2 when running on node B:
+1.1 When running on Node A:
 
 set sync delta;</p>
 <p>get LU.1;
 
-Fabric will run in sync ON mode (it doesn't matter if delta is empty or not).
+Fabric checks if the delta exist in Node B for Instance 1 and if not, runs in Sync Off mode, otherwise in Sync On mode.
+
+1.2 When running on Node B:
+
+set sync delta;</p>
+<p>get LU.1;
+
+Fabric runs in Sync On mode regardless of whether the delta is empty or not.
 
 
-1.3 when running on node A:
+1.3 When running on Node A:
 
 set sync ON;</p>
 <p>get LU.1;
 
-fabric will check if delta exist in node B for instance 1 if not will run on A in sync ON mode, 
-otherwise will run in sync ON mode on remote node (B).
+Fabric checks if the delta exist in Node B for Instance 1 and if if not runs on Node A in Sync On mode, otherwise runs in Sync On mode on remote Node B.
 
-2. If Node A owns instance 2 and Node B owns instance 1 and iidFinder is set to CASSANDRA_ONLY or KAFKA
+2. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to CASSANDRA_ONLY or KAFKA:
 
 set sync delta;
 Will run as sync ON; </p>
@@ -105,48 +104,48 @@ Will run as sync ON; </p>
 </tbody>
 </table>
 
-Note that the sync returns an error message when a source is not available. To change this behavior, use the [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
+Note that the sync returns an error message when a source is not available. To change this, use the [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
-## Sync ON Protection
-Sync ON protection improves the response time of multiple GET LUI requests on the same LUI and Fabric node. For example, executing a stress test by running a Web Service with the same LUI on multiple threads. 
-In principle, since each request requires a write lock in the LUI's MicroDB, multiple requests on the same LUI and Fabric node are executed sequentially if they all implement Sync ON mode. This means that even when LUI populations are not run, a short check can take a long time before the last GET is successful.
+## Sync On Protection
+Sync On protection improves the response time of multiple GET LUI requests on the same LUI and Fabric node. For example, executing a stress test by running a Web Service with the same LUI on multiple threads. 
+In principle, since each request requires a write lock in the LUI's MicroDB, multiple requests on the same LUI and Fabric node are executed sequentially if they all implement Sync On mode. This means that even when LUI populations are not run, a short check can take a long time before the last GET is successful.
 
-To avoid checking each LUI, Fabric implements Sync ON mode only on the first GET request on the LUI. Remaining requests are executed in parallel to the first request when executed in Sync OFF mode.
+To avoid checking each LUI, Fabric implements Sync On mode only on the first GET request on the LUI. Remaining requests are executed in parallel to the first request when executed in Sync Off mode.
 
 SYNC_PROTECTION can be edited in the config.ini file: 
-1.	The default value is zero. Fabric implements Sync ON mode only on the first request.
-2.	If this parameter is set to -1, Sync ON protection is disabled and Fabric implements Sync ON mode on each request.
-3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request, run in Sync OFF mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to ON.
+1.	The default value is zero. Fabric implements Sync On mode only on the first request.
+2.	If this parameter is set to -1, Sync On protection is disabled and Fabric implements Sync On mode on each request.
+3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request, run in Sync Off mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to On.
 
-Since release 6.2.3, SYNC_PROTECTION can be disabled on the session level by using SET SYNC_PROTECTION=off command.
+As of Release 6.2.3, SYNC_PROTECTION can be disabled on the session level using the SET SYNC_PROTECTION=off command.
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
 The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
 
 ![image](/articles/14_sync_LU_instance/images/6_2_server_configuration_window.png)
 
 This checkbox defines the Sync mode of the first GET of each LU instance (LUI) after the LU is deployed to the server:
-* If checked, the Sync mode is set to FORCE.
-* When unchecked, the Sync mode is set to ON.
+* If checked, the Sync mode is set to Force.
+* When unchecked, the Sync mode is set to On.
 
 **Notes**
 * Checking / unchecking the **Force Upgrade Post Deploy** checkbox impacts the LU only after redeployment of the LU to the checked / unchecked Fabric server. It does not impact the LU instances retroactively.
-* Sync mode is set to FORCE only for the first GET of each LUI after the redeployment of the LU.  
-* Sync mode is set to FORCE for the first GET of each LUI even if the **Force Upgrade Post Deploy** checkbox is later unchecked. The LU is redeployed, and the instance is not synchronized while the **Force Upgrade Post Deploy** checkbox is still checked.
+* Sync mode is set to Force only for the first GET of each LUI after the redeployment of the LU.  
+* Sync mode is set to Force for the first GET of each LUI even if the **Force Upgrade Post Deploy** checkbox is later unchecked. The LU is redeployed, and the instance is not synchronized while the **Force Upgrade Post Deploy** checkbox is still checked.
 
 **Example 1**
 * Set the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md) of the Customer LU to **None**.
 * Get Customer 1.
 * Update the source DB of Customer 1. 
 * Check the **Force Upgrade Post Deploy** checkbox of the Fabric development server and redeploy the Customer LU to this server. 
-* Get Customer 1 again. The customer is synchronized and their data is updated since the  **Force Upgrade Post Deploy** checkbox set the sync mode to FORCE.
+* Get Customer 1 again. The customer is synchronized and their data is updated since the  **Force Upgrade Post Deploy** checkbox set the sync mode to Force.
 * Update the source data of Customer 1 again. 
-* Get Customer 1 again. This time Customer 1 is **not** synchronized since the Sync mode is set back to ON for the Customer after their first sync that was initiated by checking the **Force Upgrade Post Deploy** checkbox.
+* Get Customer 1 again. This time Customer 1 is **not** synchronized since the Sync mode is set back to On for the Customer after the first sync that was initiated by checking the **Force Upgrade Post Deploy** checkbox.
 
 **Example 2**
 * Set the [Sync Method](/articles/14_sync_LU_instance/04_sync_methods.md) of the Customer LU to **None**.
 * Get Customers 1 and 2.
 * Update the source DB of Customers 1 and 2.
-* Check the **Force Upgrade Post Deploy** checkbox of Fabric the development server and redeploy the Customer LU to this server.
+* Check the **Force Upgrade Post Deploy** checkbox of the Fabric development server and redeploy the Customer LU to this server.
 * Get Customer 2 again. This Customer is synchronized and their data is updated. 
 * Uncheck the **Force Upgrade Post Deploy** checkbox of the Fabric development server and redeploy the Customer LU to this server. 
 * Get Customers 1 and 2 again: 
@@ -161,7 +160,7 @@ The Fabric UserCode class holds the method that returns the Sync mode set for th
 public static String getSyncMode();
 
 This method can be invoked by a [Decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md). For example:
-If the Sync Mode is FORCE, then return True to sync the instance. Else, do not sync the instance.
+If the Sync Mode is Force, then return True to sync the instance. Else, do not sync the instance.
 
 To view the list of Fabric APIs, click **http://[Fabric IP address]:3213/static/doc/user-api/index.html**.
 
