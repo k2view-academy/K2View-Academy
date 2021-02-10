@@ -101,4 +101,4 @@ Information about the Flow of the Request is provided to the user through the pr
 The progress bar displays the Flow Stage; several stages are represented by the same fill color; Completed Stage appears in green, a Processing Stage appears in blue, and an Overdue Stage appears in red.  
 For the preceding example, the Stage of “Case Opening” appears in green, denoting completed. The stage “Data Collection” appears in blue, denoting it is the stage currently in progress. The Stages in gray are those not yet started.
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/05_Steward_User_Interface/07_Steward_User_Interface_Execution.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/05_Steward_User_Interface/README.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/05_Steward_User_Interface/07_Steward_User_Interface_Execution.md)
