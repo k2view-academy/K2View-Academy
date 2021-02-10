@@ -12,9 +12,9 @@ When a Fabric project is developed by a group of programmers it is important tha
 ### How Do I Perform an Offline Deployment?
 
 There are two ways to perform an Offline Deployment:
-- Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the  [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. Then do the deployment by running the **Deploy** command on the server.
+- Build and deploy in two steps. First build the artifacts either from the Fabric Studio or from the server using the  [buildArtifacts.sh](03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. Then do the deployment by running the **Deploy** command on the server.
 
-- Build and deploy in one step. Build and deploy from the server using the  [**buildAndDeployArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
+- Build and deploy in one step. Build and deploy from the server using the  [buildAndDeployArtifacts.sh](03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script. It is also possible to deploy without the build, whereby the script only runs a **Deploy** command without creating and deleting artifacts.
 
 #### Build and Deploy in Two Steps
 
@@ -22,23 +22,27 @@ There are two ways to perform an Offline Deployment:
 
    a. Right click the **object** (for example, **Web Services**) and click **Build Deploy Artifacts**. A notification is displayed after the artifacts are successfully built.
 
-   ![16_03_offline_deploy1](/articles/16_deploy_fabric/images/16_03_offline_deploy1.png)
+   ![16_03_offline_deploy1](images/16_03_offline_deploy1.png)
 
    b. Right click the same **object** and select **Open Folder**. The Windows Explorer opens in the following location: [Your PC Folder]\K2View Fabric Studio\Projects\\[Project Name]\Implementation\LogicalUnits\\[LU Name].
 
    c. Copy the **ludb.JAR** and **ludbXMLs.ZIP** files to the server.
 
-2. To build the artifacts **from the Fabric Server**, run the  [**buildArtifacts.sh**](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
+2. To build the artifacts **from the Fabric Server**, run the  [buildArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
 
 3. To do the deployment, run the **Deploy** command using the following syntax <!--add link to sub-section here-->:
 
-   DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>] NOSYNC <Boolean>.
+   ~~~
+DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>] NOSYNC <Boolean>.
+   ~~~
 
    Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
 
    **Example**:
-
+   
+   ~~~
    DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
+   ~~~
 
 #### Build and Deploy in One Step
 To build the artifacts and the deployment together in one step from the server, run the  [buildAndDeployArtifacts.sh](/articles/16_deploy_fabric/03_offline_deploy.md#deployment-scripts-syntax-and-options) deployment script.
@@ -88,10 +92,10 @@ The following table describes the syntax and the mandatory/optional parameters f
    </tbody>
    </table>
    
-   
+
 #### Deploy Command Syntax and Options
 The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
-   
+
    <table width="900px">
    <tbody>
    <tr>
@@ -109,9 +113,7 @@ The following table describes the syntax and the mandatory/optional parameters w
    <ul>
    <li>NOSYNC TRUE: any deployment triggers a sync the first time the instance is accessed.</li>
    <li>NOSYNC FALSE: only Schema updates trigger the sync after the deployment.</li>
-   </ul>
-
-Note that NOSYNC TRUE is the same as checking <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> in the Server Configuration window in the Fabric Studio.
+   </ul>Note that NOSYNC TRUE is the same as checking <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> in the Server Configuration window in the Fabric Studio.
    </li>
    <li>WS_METHODS - For LU Type = Web Services (k2_ws), specify which methods are selected, separated by &ldquo;,&rdquo;. Empty for all.</li>
    </ul>
@@ -120,5 +122,5 @@ Note that NOSYNC TRUE is the same as checking <a href="/articles/14_sync_LU_inst
    </tbody>
    </table>
 
-   
+
 [![Previous](/articles/images/Previous.png)](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md)
