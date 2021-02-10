@@ -57,20 +57,13 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 <td width="85">
 <p><strong>Property</strong></p>
 </td>
-<td width="30">
-<p><strong>M/O</strong></p>
-</td>
 <td width="785">
 <p><strong>Description</strong></p>
- 
 </td>
 </tr>
 <tr>
 <td width="85">
 <p>Flow Name</p>
-</td>
-<td width="30">
-<p>M</p>
 </td>
 <td width="785">
 <p>The name of this Flow</p>
@@ -79,9 +72,6 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 <tr>
 <td width="85">
 <p>Flow Version</p>
-</td>
-<td width="30">
-<p>O</p>
 </td>
 <td width="785">
 <p>[Optional] The Flow version can be specified by the user or is automatically assigned by the system. The logic for the automatic version number allocation is as follows:</p>
@@ -93,9 +83,6 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 <tr>
 <td width="85">
 <p>Flow Description</p>
-</td>
-<td width="30">
-<p>O</p>
 </td>
 <td width="785">
 <p>[Optional] Description of the Flow&rsquo;s purpose.</p>
@@ -123,7 +110,6 @@ The set of icons to the right of the Flow name are actions for that Flow. Each i
 </td>
 <td width="800">
 <p><strong>Description</strong></p>
-<u><strong>Property</strong></u>
 </td>
 </tr>
 <tr>
@@ -149,6 +135,12 @@ The set of icons to the right of the Flow name are actions for that Flow. Each i
 <td width="100"><img src="/articles/DPM/images/Figure_7d_save_flow_as.png" alt=""/></td>
 <td width="800">
 <p><u>Save Flow As</u>: Use the “save as” icon to create a new Flow in Draft status, that initially has the same details of the original Flow. The new Flow created is independent from the source Flow.</p>
+</td>
+</tr>
+<tr>
+<td width="100"><img src="/articles/DPM/images/Figure_7_export_flow_icon.png" alt=""/></td>
+<td width="800">
+<p><u>Export Flow</u>: This icon serves in order to export the flow to a file. Use this option when you want to recreate this Flow in another environment, for example, when a Flow that was created in testing environment should be imported at the production environment. Read more about the Export/Import option at the Export and Import Flows section.</p>
 </td>
 </tr>
 </tbody>
