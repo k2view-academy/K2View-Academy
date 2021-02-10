@@ -11,6 +11,4 @@ A user that has Steward privileges will see the following menu options upon logi
 
 - Task List
 
-
-
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/05_Steward_User_Interface/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/05_Steward_User_Interface/02_Steward_User_Interface_Dashboard.md)
