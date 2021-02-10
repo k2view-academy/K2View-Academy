@@ -15,7 +15,6 @@ Both Update and Snapshot options can work in either one of the following modes:
 For example, if an update consists of running 2500 insert commands, the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each, then each 1000 command bulk is written to Cassandra.
 
 
-
 ### Update Mode
 This mode is by default, selected when any row update to the reference table is needed. 
 In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. 
@@ -70,8 +69,9 @@ The following illustration shows how a Synchronisation Job (Sync Job 1) publishe
 ### Synchronization Properties
 
 Any transaction involving the common table is done in asynchronous mode, meaning that the updated data cannot be seen until it has been committed, and until Fabric updates the relevant commonDB table; more over, each node will perform the update in its own time.
-
 The transaction message is sent to Kafka while its content is saved into Kafka (within the message payload) or in a Cassandra keyspace, depending on its size.
+
+
 
 
 [<img align="left" width="60" height="54" src="/articles/images/Previous.png">](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md)
