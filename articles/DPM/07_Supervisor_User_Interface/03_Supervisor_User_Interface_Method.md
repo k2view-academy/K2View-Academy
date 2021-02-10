@@ -2,7 +2,7 @@
 
 ### Assignment Method
 
-The Assignment method is defined in the upper section of the Resource Management screen:
+The Assignment method is defined in the upper section of the Resource Management screen: 
 
  ![image](/articles/DPM/images/Figure_52_Assignment_Method.png)
 

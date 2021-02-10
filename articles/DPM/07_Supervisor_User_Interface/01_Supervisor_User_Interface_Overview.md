@@ -1,6 +1,6 @@
 # Supervisor User Interface
 
-The Supervisor role oversees the overall DPM process. 
+The Supervisor role oversees the overall DPM process.  
 A Supervisor can:
 
 - View the Requests Dashboard 

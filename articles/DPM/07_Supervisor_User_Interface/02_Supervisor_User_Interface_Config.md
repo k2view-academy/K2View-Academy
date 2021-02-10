@@ -1,4 +1,4 @@
-# •	Assignment method – defines how to allocate a new Request when more than one Case Owner could take this ownershipSupervisor Case Owner Allocation Configuration 
+# Supervisor Case Owner Allocation Configuration 
 
 A supervisor is responsible for the configuration of how new DPM requests are allocated to the users that constitute the Case Owners team: Whenever a new Request is submitted, the system  automatically selects one of the users defined as Case Owners, thus allocating the new Request to this user. The Resource Management screen is where the Supervisor can configure the method that the system uses to select one of the users.
 

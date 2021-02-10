@@ -22,5 +22,5 @@ To add new assignment criteria at the Activity level, use the  ![image](/article
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/07_Supervisor_User_Interface/03_Supervisor_User_Interface_Method.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/07_Supervisor_User_Interface/README.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/07_Supervisor_User_Interface/03_Supervisor_User_Interface_Method.md)
 
