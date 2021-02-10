@@ -1,18 +1,18 @@
 # Regulations  
 
 The Regulation menu option is used to define and maintain the list of Privacy-related Regulations handled by the DPM system and the Activities for each included Regulation. 
-Click the Regulations List menu option on the menu to access the list of Regulations.
+Click the Regulations List menu option from the menu to access the list of Regulations.
 
 ## Regulations list
 
-The Regulations screen displays the list of Data Privacy Regulations the company is committed for compliance.  . 
+The Regulations screen displays the list of Data Privacy Regulations the company is committed for compliance. 
 
  ![image](/articles/DPM/images/Figure_19_Regulations_List.png)
 
 From this screen, the user can:
 
 - View the details of a specific regulation by clicking the line of this regulation. 
-- Add a Regulation by clicking the “Add a Regulation” button, or by using the left bar menu option.
+- Add a Regulation by clicking the “New Regulation” button, or by using the left bar menu option.
 - Remove a regulation by clicking the remove button under the “Action” column.
 
 ## View Regulation Details

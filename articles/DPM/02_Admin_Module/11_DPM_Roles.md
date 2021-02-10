@@ -12,17 +12,16 @@ As a role-based application, DPM Roles define the functions within the system en
 
 •	**Customer Service Representative (CSR)**: a CSR is a call center representative attending customer requests by submitting a Data Privacy related request on their behalf. A CSR can:
 -	Submit a new request.
--	Inspect the details of an existing request, without changing its details. 
+-	Review the details of an existing request, without changing its details. 
 
 •	 **Data Steward**: data stewards are users assigned to the Request fulfilment process, and are responsible to execute a specific task in the request flow. The Data Steward can:
--	View the list of open tasks that should be handled by the group of representative stewards.
--	Take ownership of a task by marking it as "assigned" to avoid other stewards from working on the same task.
--	Review, Update, or approve a task in order to move it to the next step
--	Release the completed assigned task by this data steward.
+-	View the list of open tasks that should be handled by the group this Steward makes a part of.
+-	Mark a task as assigned to themselves to avoid other stewards from working on the same task
+-	Review, Update, or Approve a task in order to move it to the next step
+-	Release a Task that is assigned to this data steward.
 
-•	**Case Owner**:
--	Each customer request submitted in the DPM is assigned to a specific case owner. The case owner follows up on the request progress and assures the request is completed within the expected SLA. A case owner can:
--	View the list of requests, and filter requests, to identify risks of an incomplete request within the stated timeline of the SLA.        
+•	**Case Owner**: Each customer request submitted in the DPM is assigned to a specific case owner. The case owner follows up on the request progress and assures  the request is completed within the expected SLA. A case owner can:
+-	View the list of, and filter requests, to identify risks of not completion the request within the timeline stated by the SLA.        
 -	Open a specific request and view or complete its stages, tasks. 
 
 •	**Supervisor**: The supervisor is responsible to manage the allocation of requests to the case owners. The supervisor can:
@@ -36,7 +35,7 @@ As a role-based application, DPM Roles define the functions within the system en
 -	Review the data provided as an output of a completed request
 
 
-The DPM roles are predefined in the system. Each role includes a designated set of screens and actions relevant for the representative role. DPM roles are used by the Administrator to grant a specific corporate group the ability to view or execute actions in the DPM system. The way those roles are used is explained in the next section "Corporate Roles." 
+The DPM roles are predefined in the system. Each role includes a designated set of screens and actions relevant for this role. DPM roles are used by the Administrator to grant a specific corporate group the ability to view or execute actions in the DPM system. The way those roles are used is explained in the next section "Corporate Roles." 
 
 
 

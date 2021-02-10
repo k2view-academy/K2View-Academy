@@ -95,8 +95,8 @@ To perform this mapping configuration, commit the actions within the following s
  ![image](/articles/DPM/images/Figure_27_Corporate_Role_Permissions_Configuration.png)
 
 In the example above, the “Backend” Corporate Role is selected from the list of Corporate Roles. The right side of the screen presents the mapping of this “Backend” Corporate Role to the list of related Application Roles. 
-At the highest level (first level of the tree), the checkboxes of “Representative” and “Steward” are enabled. This means that the “Backend” Corporate Role is configured with functionality for the roles of Representative and Steward. A user belonging to the “Backend” Corporate Role has only those two options on the main menu at the left side of the screen (see the section Main Menu for more details). 
-As observed, the permissions tree has multiple levels, which allow control of the Activities the user can or cannot perform. For example, from the preceding screen, the option “Submit a new Request,” under the “Representative” branch, was unchecked. This means that though the user has the option to use Representative functionality, such as View the request list, or view a specific request, they will not be able to submit a new request.   
+At the highest level (first level of the tree), the checkboxes of “Representative” and “Steward” are checked. This means that the “Backend” Corporate Role is configured to have the functionality of the roles of Representative and Steward. A user belonging to the “Backend” Corporate Role has only those two options on the main menu at the left side of the screen (see the section Main Menu for more details). 
+As observed, the permissions tree has multiple levels, which allow control of the Activities the user can or cannot perform. For example, from the preceding screen, the option “Submit a new Request,” under the “Representative” branch, was unchecked. This means that though the users have the option to use Representative functionality, such as View the request list, or view a specific request, they will not be able to submit a new request.   
 
 ### Edit or Delete a Corporate Role
 

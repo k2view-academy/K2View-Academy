@@ -1,6 +1,6 @@
 ## Managing Users in the Admin Module
 
-User access to perform Activities in the DPM is predicated upon the definition of the user to the DPM system with an assigned Corporate Role.  
+For a person to access and perform Activities in the DPM, the user must be defined for this person in the DPM system, and this user should have a Corporate Role assigned to it.  
 The authorized user selects User Management menu option under the Admin menu to manage users and privileges for the DPM system. 
 
  ![image](/articles/DPM/images/Figure_28_User_management.png)
@@ -56,7 +56,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to 
 <p>M</p>
 </td>
 <td width="785">
-<p>The name this user to be represented in the system. </p>
+<p>The name this user is to be represented in the system. </p>
 </td>
 </tr>
 <tr>
@@ -78,11 +78,12 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to 
 <p>O</p>
 </td>
 <td width="785">
-<p>This field allows the user to select from available roles to assign such a role as a Corporate Role(s). </p>
+<p>This field allows the user to select from available roles to assign to the user. </p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 ### Edit or Delete a User
 
