@@ -6,7 +6,7 @@ A Data Catalog implementation must be deployed to the server side so that all ch
   * The files are created in JSON format in the Resources folder of the project entities  - one file for each project entity. 
   * All the files are named **auto.catalog**, except for the file created under Shared Objects that is named **shared.catalog**. 
   * The catalog supports [overriding automatic files](06_override_data_catalog.md) to include the additional elements if the automatic process doesn’t find them or if they are not part of the project.
-* Note that you can perform an offline Build Catalog, by running the build-catalog.sh script on the server side.
+  * Note that you can perform an offline Build Catalog, by running the build-catalog.sh script on the server side.
   
 * **Write Catalog**, deploys the catalog to the server. This includes building the catalog files of all the project entities (each LU, WS, Common) and uploading them to OrientDB. 
   * Once Write Catalog is completed, login to the K2View Web Framework and navigate it. 
