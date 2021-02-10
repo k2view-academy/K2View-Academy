@@ -2,8 +2,7 @@
 
 A Steward in the DPM system is a user that is responsible to handle the execution of specific Tasks as part of the fulfillment process. Stewards are assigned a specific Corporate Role, which determines what type of Tasks they will perform.
 
-From a high level, the way the system decides which Task should be executed by which Steward is based on the Corporate Role that was selected when a Task is configured, and the Corporate Role of the Steward: each Steward is assigned to a Corporate Role. 
-Each of the Tasks in the definition of a Flow has a Corporate Role defined as well. When a new DPM Request is created, and the Request fulfillment process reaches to a Task that should be handled by a Steward, and this Task will appear to the Steward in the Tasks List screen if the role of the Task and the Role of the Steward are matching. 
+At a high level, the system determines which Task to execute by which Steward, based on the Corporate Role selected when a Task is configured and the Corporate Role of the Steward: each Steward is assigned to a Corporate Role. Additionally, each Task, in the definition of a Flow, has a Corporate Role defined. When a new DPM Request is created, and the Request fulfillment process includes a Task that should be handled by a Steward, this Task appears to the Stewards assigned to the matching role. 
 
 A user that has Steward privileges will see the following menu options upon login:
 

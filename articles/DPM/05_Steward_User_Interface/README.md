@@ -1,7 +1,3 @@
-
-
-![image](/articles/images/welcome_to_wiki.png)
-
 ## Steward User Interface
 
 
@@ -13,9 +9,4 @@
   
 * [Tasks List](/articles/DPM/05_Steward_User_Interface/06_Steward_User_Interface_TasksList.md)  
 * [Task Execution](/articles/DPM/05_Steward_User_Interface/07_Steward_User_Interface_Execution.md) 
-* [Task Details](/articles/DPM/05_Steward_User_Interface/06_Steward_User_Interface_TaskDetails.md) 
-
-
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/DPM/05_Steward_User_Interface/01_Steward_User_Interface_Overview.md)
-
+* [Task Details](/articles/DPM/05_Steward_User_Interface/08_Steward_User_Interface_TaskDetails.md) 
