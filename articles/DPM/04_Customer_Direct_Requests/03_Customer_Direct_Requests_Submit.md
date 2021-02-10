@@ -1,13 +1,13 @@
 ## Customer Submits a Request
 
-When submitting a new request, the customer first selects the relevant regulation from the Regulation dropdown list.  
+When a customer selects “New Request", the system displays the Request Details screen. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module.
 
  ![image](/articles/DPM/images/Figure_37_Customer_submits_a_Reqeust.png)
 
 When submitting a new request, the customer first selects the relevant regulation out of the Regulation dropdown list. 
 The customer can add notes to the Request before submission.  
 The list of Request Types presented at the bottom of the submission form changes according to the selected Regulation.
-Once the Request type is selected, the right side of the form displays the list of fields to be completed before submitting the request. This list is automatically built-in accordance with the Request type.  
+Once the Request type is selected, the right side of the form displays the list of fields to be completed before submitting the request. This list is automatically built, in accordance with the Request type.  
 
 <table>
 <tbody>

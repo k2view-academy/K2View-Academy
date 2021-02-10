@@ -1,7 +1,3 @@
-
-
-![image](/articles/DPM/images/welcome_to_wiki.png)
-
 ## Customer Direct Requests
 
 
@@ -14,8 +10,3 @@
 * [View a Request](/articles/DPM/04_Customer_Direct_Requests/04_Customer_Direct_Requests_View.md) 
 
 * [DPM APIs](/articles/DPM/04_Customer_Direct_Requests/05_Customer_Direct_Requests_APIs.md) 
-
-  
-
-[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/04_Customer_Direct_Requests/01_Customer_Direct_Requests_Overview.md)
-

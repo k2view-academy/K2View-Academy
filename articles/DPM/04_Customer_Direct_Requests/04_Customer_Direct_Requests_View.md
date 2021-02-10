@@ -45,7 +45,7 @@ The customer can view requests by either selecting the “Requests List” menu 
 <p>Status</p>
 </td>
 <td width="800">
-<p>The Request status. Status values may be: In Progress, Overdue, Completed, Stopped. A Stopped Request is a Request whereby, during its execution, the system identified the Request to stop the execution. For example, a customer attempts to open a second request that is equal to the first request while the first request is in progress. The validation of such a second request attempt will reject the second request for this reason.</p>
+<p>The Request status. Status values may be: In Progress, Overdue, Completed, Stopped. A Stopped Request is a Request whereby, during its execution, the system identified it should stop the Request execution. For example, a customer attempts to open a second request that is equal to the first request while the first request is in progress. The validation of such a second request attempt will reject the second request for this reason. The rules and validations that can result in stopping a request are defined by configuration.</p>
 </td>
 </tr>
 <tr>
@@ -66,6 +66,7 @@ The customer can view requests by either selecting the “Requests List” menu 
 </tr>
 </tbody>
 </table>
+
 
 Additional details about a specific request can be viewed by clicking the request row:
 
@@ -110,7 +111,7 @@ Additional details about a specific request can be viewed by clicking the reques
 <p>Request Status</p>
 </td>
 <td width="800">
-<p>The Request status.</p>
+<p>The Request status (in-progress, completed, etc.).</p>
 </td>
 </tr>
 <tr>
@@ -118,7 +119,7 @@ Additional details about a specific request can be viewed by clicking the reques
 <p>Created on</p>
 </td>
 <td width="800">
-<p>The Request status (i.e., in-progress, completed…..)</p>
+<p>The date and time that the Request was submitted</p>
 </td>
 </tr>
 <tr>

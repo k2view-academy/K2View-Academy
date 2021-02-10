@@ -2,8 +2,6 @@
 
 ## Customer Dashboard
 
-4.1.1	Customer Dashboard
-
 When a customer logs into the DPM user interface, the first screen displayed is the Customer Dashboard. The Dashboard includes the following items:
 
 - Submit a Request: button used to submit a request.

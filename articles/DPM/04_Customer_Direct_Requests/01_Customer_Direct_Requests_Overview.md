@@ -4,8 +4,8 @@
 
 The DPM system provides different ways to allow a customer to submit a DPM request, such as a search for a previously submitted request and view of its details. The DPM:
 
-- includes built-in user interface for the use of a customer.
-- provides a set of APIs that can be integrated in the customer portal of each corporation that uses the system. 
+- includes a built-in user interface for the use of a customer.
+- provides a set of APIs that can be integrated with the customer portal of each corporation that uses the system. 
 
 ## DPM Customer’s Built-in User Interface
 
