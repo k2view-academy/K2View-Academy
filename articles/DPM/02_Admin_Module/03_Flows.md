@@ -113,7 +113,7 @@ The Flow name and the Flow description can be updated at anytime by using the ed
 
 The set of icons to the right of the Flow name are actions for that Flow. Each icon and its corresponding description are provided by the following table. 
 
- ![image](/articles/DPM/images/Figure_7_Flow_status_icons.png)
+ ![image](/articles/DPM/images/Figure_7_Flow_icons.png)
 
 <table>
 <tbody>
