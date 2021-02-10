@@ -92,7 +92,7 @@ The **DbCommand** Actor returns  a complex schema.  The Broadway Debug process *
 
    - Click ![image](images/red_cross.png) adjacent to the Actor's output argument to open the Data Inspection and to display the Schema on the left and the data values on the right.
 
-   - Add a  **Breakpoint** to **Stage 1** and run the debug again. Click <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> to execute the steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
+   - Add a  **Breakpoint** to **Stage 3** and run the debug again. Click <img src="images/debug_step_icon.png" alt="Debug Step" style="zoom:80%;" /> to execute the steps after the breakpoint step. The input and output values are displayed for each iteration in the flow.
 
    - Click each of the debug values (marked blue) to open the **Data Viewer** window of the selected parameter as shown in the example below:
 

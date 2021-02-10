@@ -17,7 +17,7 @@ To learn more, please refer to the [Broadway Tutorial and Flow Examples](/articl
 
 Broadway Tutorials flows can be opened in the Broadway Flow window.
 
-1. Download the latest [Demo Project](/articles/demo_project) export file.  
+1. Download the latest [KB_FABRIC_PROJECT.k2export Demo project](/articles/demo_project/KB_FABRIC_PROJECT.k2export) export file.  
 2. Create a new Project named BroadwayTutorial (or something similar). 
 3. Right click the root of the newly created Project tree, select Import All, and navigate to the downloaded Demo Project export file.
    - Follow the [Project and DB Setup instructions](/articles/demo_project/README.md).
