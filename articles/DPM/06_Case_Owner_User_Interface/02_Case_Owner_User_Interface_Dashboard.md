@@ -2,7 +2,7 @@
 
 ## Case Owner Dashboard
 
-When a member of the Case Owners group logs into the DPM system, the initial screen that is presented is the Case Owner Dashboard:
+When a member of the Case Owners group logs into the DPM system, the initial screen presented is the Case Owner Dashboard:
 
  ![image](/articles/DPM/images/Figure_46_Case_Owner_Dashboard.png)
 
@@ -10,35 +10,35 @@ The dashboard provides an overall status of the requests currently in process in
 
 ### Case Owner Dashboard Filters:
 
-The graphs in the dashboard can be filtered based on a set of parameters that appear at the upper part of the screen. The filters can be:
+The graphs in the dashboard can be filtered based on a set of parameters that appear at the upper part of the screen. The filters include:
 
-- Regulation – Filter the information presented in the dashboard to Requests of a specific Regulation
-- Activity - Filter the information presented in the dashboard to Requests of a specific Activity
-- Assigned to - Filter the information presented in the dashboard to Requests of a specific case owner or if to present the information about Requests regardless of their Case Owner.
-- Aggregation by – This filter impacts the graph of “Open Requests per Selected Date Range” in the area below the filters line. It defines the time units of the horizontal Axis. If “Month” is selected, then the open requests would be aggregated per month. If “Day” is selected, then the graph will present the information per day.
-- Data Range – this filter defines the date range that is used to filter the open Requests. 
+- Regulation – Filter the information to Requests for a specific Regulation.
+- Activity - Filter the information presented in the dashboard to Requests of a specific Activity.
+- Assigned to - Filter the information to Requests of a specific case owner, or, present the information about Requests regardless of Case Owner.
+- Aggregation by – This filter impacts the graph of “Open Requests per Selected Date Range” in the area below the filters line. It defines the time units of the horizontal Axis. If “Month” is selected, then the open requests are aggregated per month. If “Day” is selected, then the graph presents the information per day.
+- Data Range – This filter defines the date range used to display the open Requests. 
 
  ![image](/articles/DPM/images/Figure_46_a_Task_owner_dashboard_filters.png)
 
-The selection made in those filters impacts the information presented in the totals and graphs that are presented at the lower sections of the dashboard.
+The filter selection impacts the information displayed in the totals and graphs presented at the bottom sections of the dashboard.
 
 ### Case Owner Dashboard Totals:
 
 The totals in the dashboard reflect the list of DPM Requests that match the selection criteria specified by the dashboard filters:
 
-- Total Open Requests – the total number of requests which are in progress. 
-- Total Past Due Requests – The total number of requests that have exceeded the expected SLA period for their Activity.
-- Total Past Due Tasks – The total of tasks in progress that have exceeded the expected SLA period of the task. 
+- Total Open Requests –the total number of in-progress requests . 
+- Total Past Due Requests – The total number of requests that exceeded the expected SLA period for their Activity.
+- Total Past Due Tasks – The total of tasks in progress that exceeded the expected SLA period of the task. 
 
  ![image](/articles/DPM/images/Figure_46_b_Task_owner_dashboard_totals.png)
 
-Clicking each of those totals will take the user to the “Requests List” screen, which will present the Requests that answer the conditions of this total.
+Selecting each of those totals takes the user to the “Requests List” screen, that presents Requests that answer the conditions of this total.
 
 ### Case Owner Graphs:
 
-- Open Requests per regulation – a view of the distribution of the open requests per Regulation.
-- Open Requests Per Activity – a view of the distribution of the open requests per Regulation and Activity type.
-- Open Requests per Selected Date Range – this graph shows the distribution of the open requests according to the request submission date. The blue line on the graph indicates the number of open Requests. The red line indicates how many of those requests have at least one Task that is overdue. 
+- Open Requests per regulation – Provides a view of the distribution of the open requests per Regulation.
+- Open Requests Per Activity – Provides a view of the distribution of the open requests per Regulation and Activity type.
+- Open Requests per Selected Date Range – Displays a graph with the distribution of the open requests according to the request submission date. The blue line on the graph indicates the number of open Requests. The red line indicates how many of those requests have at least one Task that is overdue. 
 
  ![image](/articles/DPM/images/Figure_46_c_Task_owner_dashboard_graphs.png)
 

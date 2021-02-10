@@ -1,12 +1,12 @@
 # Case Owner Request Details
 
-From the Requests List screen, the case owner can click on the row of a specific Request in order to open the Request Details Screen:
+From the Requests List screen, the case owner selects the row of a particular Request to open the corresponding Request Details Screen
 
  ![image](/articles/DPM/images/Figure_48_Case_Owner_Request_Details.png)
 
-This screen presents to the Case Owner the full view of the request, complete with all its details. 
+The Case Owner reviews all request details. 
 
-At the upper part of the screen, general information about the Request is presented:
+The upper part of the screen displays general information about the Request; heading information and Request stages, respectively.
 
  ![image](/articles/DPM/images/Figure_48_a_Case_owner_Request_details_header.png)
 
@@ -14,11 +14,11 @@ Under the header section, the different stages that make part of the Request pro
 
  ![image](/articles/DPM/images/Figure_48_b_Case_owner_Request_details_Flow_stages.png)
 
-Stages that were already completed are presented in green. The current Stage is presented in blue if it is on track, and red if it is past due. Future Stages appear in grey. 
+Completed Stages are shown in green. The current Stage is presented in blue when on track towards completion. When the Stage is not on track, it is shown in red signifying past due. Future Stages to be processed appear in grey. 
 
-The number of Tasks in the Stage is presented on top of every stage. If a Stage includes a Task that is overdue, then the Tasks count is presented in red.
+The number of Tasks in the Stage is displayed on top of every stage. If a Stage includes an overdue Task, then the Tasks count is shown in red.
 
-The Case Owner can navigate between the stages by clicking on the Stage section in this chart. Navigating to one of the stages will present only the tasks that make part of the selected Stage. The view of all Tasks can be restored by clicking the “Show Tasks for All Stages” button. 
+The Case Owner can navigate between the stages by clicking on the Stage section in the presented chart. Navigating to a particular stage presents only those tasks made a part of the Stage. The view of all Tasks can be restored by selecting the “Show Tasks for All Stages” button. 
 
 At the bottom of the screen, the list of Tasks is presented:
 
@@ -47,7 +47,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Stage</p>
 </td>
 <td width="800">
-<p>The Stage that this Task makes part of.</p>
+<p>The Stage for which this Task belongs.</p>
 </td>
 </tr>
 <tr>
@@ -55,7 +55,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Order</p>
 </td>
 <td width="800">
-<p>The order of this Task within its Stage (details about the Task order are described in the Flow chapter).</p>
+<p>The order of this Task within its Stage (details about the Task order are described in the Flow section).</p>
 </td>
 </tr>
 <tr>
@@ -63,7 +63,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Role</p>
 </td>
 <td width="800">
-<p>The Corporate Role that is defined as the owner of this Task and expected to execute it.</p>
+<p>The Corporate Role defined as the owner of this Task to execute it.</p>
 </td>
 </tr>
 <tr>
@@ -71,7 +71,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Assignee</p>
 </td>
 <td width="800">
-<p>The user that is executing the Task. Only populated if a user took ownership on a Task by clicking the &ldquo;Get&rdquo; button at the Task details screen.</p>
+<p>The user responsible to execute the Task. This field is populated when a user takes ownership of a Task by selecting the “Get” button from the Task details screen</p>
 </td>
 </tr>
 <tr>
@@ -79,7 +79,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Task Status</p>
 </td>
 <td width="800">
-<p>The Task status.</p>
+<p>The current status for the Task (i.e., processing, stopped, completed).</p>
 </td>
 </tr>
 <tr>
@@ -87,7 +87,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Duration</p>
 </td>
 <td width="800">
-<p>The duration that this Task is expected to take. The time unit that measures the duration can be configured. Hours is the most common configuration</p>
+<p>The duration of time this Task is expected to complete. The unit of time expressed is configured (hours, minutes). Hours is the most common configuration.</p>
 </td>
 </tr>
 <tr>
@@ -95,7 +95,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Start Date</p>
 </td>
 <td width="800">
-<p>The date and time that the Task execution was started. Only populated for Tasks that are already in the execution phase.</p>
+<p>The date and time the Task execution began. This field is populated for Tasks already in the execution phase.</p>
 </td>
 </tr>
 <tr>
@@ -103,7 +103,7 @@ At the bottom of the screen, the list of Tasks is presented:
 <p>Due Date</p>
 </td>
 <td width="800">
-<p>The date and time that the Task was completed. Filled only for a Task that was already completed.</p>
+<p>The date and time the Task was completed. Filled only for a Task already completed.</p>
 </td>
 </tr>
 <tr>
@@ -117,7 +117,8 @@ At the bottom of the screen, the list of Tasks is presented:
 </tbody>
 </table>
 
-The Case Owner can select a specific Task to view it in detail.
+
+The Case Owner can select a specific Task to view its details.
 
 
 

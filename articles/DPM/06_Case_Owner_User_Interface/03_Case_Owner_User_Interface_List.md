@@ -1,6 +1,6 @@
 ## Case Owner Requests List
 
-The Case Owner Requests List presents to the Case Owner the list of Requests that are under his responsibility.
+The Case Owner Requests List presents to the Case Owner the list of Requests that are under their responsibility.
 
  ![image](/articles/DPM/images/Figure_47_Case_Owner_Requests_List.png)
 
@@ -9,10 +9,10 @@ The Request list can be filtered based on:
 - Regulation – Filter to present only Requests of a specific Regulation
 - Activity - Filter to present only Requests of a specific Activity.
 - Status - Filter by Request status.
-- Request Risk – This filter enables the user to present only requests which are under risk of missing the overall request SLA.
+- Request Risk – This filter provides the user only requests under risk of missing the overall request SLA.
 - Request ID – search for a specific Request. 
 
-The Request List table presents the following information:
+The Request List table presents the following information.
 
 <table>
 <tbody>
@@ -45,7 +45,7 @@ The Request List table presents the following information:
 <p>Regulation</p>
 </td>
 <td width="800">
-<p>The Regulation that this request was created for.</p>
+<p>The Regulation for which the request was created.</p>
 </td>
 </tr>
 <tr>
@@ -53,7 +53,7 @@ The Request List table presents the following information:
 <p>Risk/Status</p>
 </td>
 <td width="800">
-<p>This fields includes both the Request status as well as an indication if the request is under any type of risk. This is presented with the colored circle on the left side of the status: Red color indicates that the Request is past due to that one or more of its Tasks are past due. Green indicates that the Request is on track.</p>
+<p>This fields includes both the Request status and an indication when the request is under any type of risk. The Request status  is presented with the colored circle on the left side of the status; the Red color indicates the Request and its associated tasks are past due. Green indicates the Request is on track to its scheduled completion date.</p>
 </td>
 </tr>
 <tr>
@@ -82,6 +82,7 @@ The Request List table presents the following information:
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/06_Case_Owner_User_Interface/02_Case_Owner_User_Interface_Dashboard.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/06_Case_Owner_User_Interface/04_Case_Owner_User_Interface_Details.md)
