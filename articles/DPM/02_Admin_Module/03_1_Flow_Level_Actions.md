@@ -93,7 +93,7 @@ Each information item is described by the following table.
 <p>(x business Hours)</p>
 </td>
 <td width="800">
-<p>Indicates the total number of hours to process the Flow, according to the deadline information of all its Tasks. The unit of time measure can be configured as hours or minutes.  Note that changing the configuration from Hours to Minutes alters the expected duration of the Flow, and not only the units. For example: A Task with the deadline configured in hours and noted as 1 , the task is understood to take one hour to complete.  When the configuration is set to &ldquo;Minutes&ldquo; the task is set with deadline of one minute duration. The option of &ldquo;Minutes&rdquo; is usually utilized for testing purposes, when the tester wishes to have the Flows executed faster.</p>
+<p>Indicates the total number of hours to process the Flow, according to the deadline information of all its Tasks. The unit of time measure can be configured as hours or minutes.  Note that changing the configuration from Hours to Minutes alters the expected duration of the Flow, and not only the units. For example: A Task with the deadline configured in hours and noted as 1, the task is understood to take one hour to complete.  When the configuration is set to &ldquo;Minutes&ldquo;, the task is set with deadline of one minute duration. The option of &ldquo;Minutes&rdquo; is usually utilized for testing purposes, when the tester wishes to have the Flows executed faster.</p>
 </td>
 </tr>
 </tbody>
@@ -145,8 +145,8 @@ Use the New Stage ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on
 
 Saving the new Stage opens the screen to define tasks in this stage. 
 
- ![image](/articles/DPM/images/Figure_10_New_Flow_initial_state.png)
+ ![image](/articles/DPM/images/Figure_9_Flow_with_a_new_stage_screen.png)
 
-While the Flow is not marked <i>Completed</i>, Stages can be added, or updated by added or modified Tasks. 
+While the Flow is not marked Completed, additional Stages can be added, or updated by adding or modifying Tasks. 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_Flows.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md)
