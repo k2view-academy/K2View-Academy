@@ -19,7 +19,7 @@ For example, if an update consists of running 2500 insert commands, the 2500 ins
 ### Update Mode
 This mode is by default, selected when any row update to the reference table is needed. 
 In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. 
-Each node executes this change locally on its local SQLite commonDB copy as a single transaction.
+Each node executes this change locally on its local SQLite commonDB copy as a single logical transaction.
 
 ### Snapshot Mode
 
