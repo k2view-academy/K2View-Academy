@@ -149,4 +149,4 @@ Saving the new Stage opens the screen to define tasks in this stage.
 
 While the Flow is not marked <i>Completed</i>, Stages can be added, or updated by added or modified Tasks. 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_Flows.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_Flows.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md)
