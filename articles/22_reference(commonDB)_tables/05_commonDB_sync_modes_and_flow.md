@@ -25,20 +25,19 @@ Each node executes this change locally on its local SQLite commonDB copy as a si
 
 A snapshot will only be published once one of the following actions is triggered: 
 
--	The full table synchronization is initialized by a job.
--	Manually, when requested by the user sending a delete request is sent to a Reference Table without a ```where``` statement
-- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio uner the Table Properties panel
+
+-	Manually, when requested by the user sending a delete request to a Reference Table without a ```where``` statement
+- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio uner the Table Properties panel. In most cases the full table synchronization is happening when the truncate mode is set from the studio.
 
 
 
 #### Snapshots Synchronization Mechanism
 
-Each node performs the following snapshot synchronization when  or in the config file . 
+Each node performs the following snapshot synchronization if instructed in the kafka message. 
  
-- The snapshot is started
+- The snapshot is initiated
 - All rows are added to the snapshot
-- If an error or exception occurs, the rollback process begins, otherwise the transaction is committed in one transaction:
-  - Indices are created in the temporary table.
+- The operation is committed in one transaction:
   - The old reference table is dropped.
   - The temporary table is renamed to the Reference table's name.
 
