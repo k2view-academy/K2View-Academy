@@ -1,6 +1,6 @@
 ## Executing a Task
 
-A Task can be executed by any of the Stewards sharing the same Corporate Role. 
+A Task can be executed by any of the Stewards sharing the same Corporate Role.  
 To perform a Task, the Steward selects the Task from the pending task list and takes assignment by selecting the  ![image](/articles/DPM/images/Figure_44_get_icon.png) button, located at the right side of the row for the selected Task.
 
 As a result, the Task Details screen is opened for this Task, and this is where the Steward can perform the actions needed to complete the Task, as explained in the next chapter.

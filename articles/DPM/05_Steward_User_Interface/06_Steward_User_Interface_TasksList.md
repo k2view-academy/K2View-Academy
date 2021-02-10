@@ -1,6 +1,6 @@
 ## Tasks List
 
-The Tasks List screen shows Tasks allocated to the Corporate Role of the specific Steward. 
+The Tasks List screen shows Tasks allocated to the Corporate Role of the specific Steward.  
 
  ![image](/articles/DPM/images/Figure_44_Tasks_List.png)
 

@@ -1,6 +1,6 @@
 ## Task Details
 
-The Task Details screen provides the Steward a view of the task details, from which notes can be added or the task can be marked “Complete”. 
+The Task Details screen provides the Steward a view of the task details, from which notes can be added or the task can be marked “Complete”.  
 
  ![image](/articles/DPM/images/Figure_45_Task_Details.png)
 

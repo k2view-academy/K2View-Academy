@@ -1,6 +1,6 @@
 ### Steward Dashboard Filters:
 
-The graphs in the dashboard can be filtered based on a set of parameters displayed at the upper portion of the screen. The filters include: 
+The graphs in the dashboard can be filtered based on a set of parameters displayed at the upper portion of the screen. The filters include:  
 
 - Regulation – Filter the information presented in the dashboard to Requests for a specific Regulation.
 - Activity - Filter the information presented in the dashboard to Requests of a specific Activity.

@@ -1,6 +1,6 @@
 ### Steward Dashboard Totals:
 
-The totals in the dashboard reflect the list of Tasks that matches the selection criteria specified by the dashboard filters:
+The totals in the dashboard reflect the list of Tasks that matches the selection criteria specified by the dashboard filters: 
 
 - Total Number of Tasks – Total number of Tasks in the selected period. 
 - Completed Tasks – Total number of Tasks completed in the selected period.
