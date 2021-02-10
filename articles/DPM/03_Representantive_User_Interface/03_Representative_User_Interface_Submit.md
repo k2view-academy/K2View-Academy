@@ -61,5 +61,5 @@ Once the Request type is selected, the right side of the form displays the list 
 </tr>
 </tbody>
 </table>
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representative_User_Interface/02_Representative_User_Interface_Search.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representantive_User_Interface/02_Representative_User_Interface_Search.md)
 
