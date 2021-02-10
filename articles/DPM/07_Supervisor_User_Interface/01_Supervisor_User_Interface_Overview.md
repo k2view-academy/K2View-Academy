@@ -15,7 +15,7 @@ The Supervisor Dashboard is equal to the Case Owner Dashboard. For additional in
 
 ## Supervisor Requests List
 
-The Supervisor Request List and subsequent Request Details and Task Details screens are the same screen as presented to the [Case Owner](/articles/DPM/06_Case_Owner_User_Interface/01_Case_Owner_User_Interface_List.md).
+The Supervisor Request List and subsequent Request Details and Task Details screens are the same screen as presented to the [Case Owner](/articles/DPM/06_Case_Owner_User_Interface/03_Case_Owner_User_Interface_List.md).
 
 
 
