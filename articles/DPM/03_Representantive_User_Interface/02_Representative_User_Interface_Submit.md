@@ -40,7 +40,7 @@ Once the Request type is selected, the right side of the form displays the list 
 <p>Notes</p>
 </td>
 <td width="800">
-<p>Free text. Comments that the representative wishto be registered as part of the request. </p>
+<p>Free text. Comments that the representative wishes to be registered as part of the request. </p>
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ Once the Request type is selected, the right side of the form displays the list 
 <p>Request Form Fields</p>
 </td>
 <td width="800">
-<p>Depending on the selected Request Type, different fields are displayed in this section, and the representative should populate them according to the information on behalf of the customer.</p>
+<p>Depending on the selected Request Type, different fields are displayed in this section, and the representative should populate them on behalf of the customer.</p>
 </td>
 </tr>
 </tbody>

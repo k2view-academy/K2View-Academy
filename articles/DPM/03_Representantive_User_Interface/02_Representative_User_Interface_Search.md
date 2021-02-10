@@ -43,7 +43,7 @@ Search a request from the Representative menu by selecting the â€œRequests Listâ
 <p>Status</p>
 </td>
 <td width="800">
-<p>The Request status. Values may be: In Progress, Completed, Stopped. A Stopped Request is a Request,  during its execution the system identified the request should stop itsexecution. For example, if there is a validation, the same customer cannot open two equal Requests, as there is already an in-progress Request for this same customer and Activity. </p>
+<p>The Request status. Values may be: In Progress, Completed, Stopped. A Stopped Request is a Request,  during its execution the system identified the request should stop its execution. For example, if there is a validation, the same customer cannot open two equal Requests, and there is already an in-progress Request for this same customer and Activity. </p>
 </td>
 </tr>
 <tr>
@@ -67,8 +67,9 @@ Search a request from the Representative menu by selecting the â€œRequests Listâ
 
 
 
+
 For the search criteria selected by a drop-down list or by selecting a date: Regulation, Activity, Request Status, Created and Completed â€“ the search is executed upon a value selected.  
-For the search criteria entry field: typing either or both the customer ID and Request ID, the search is invoked upon the first three stated characters or more.  
+For the search criteria entry fields: Customer ID and Request ID, typing in either the customer ID and Request ID fields, the search is invoked upon the first three stated characters or more.  
 Once the search results are presented, the representative can view further details of a specific request by clicking the row of this request, as shown in the next image.
 
 ![](images/Figure_34_Request_Details.png)
