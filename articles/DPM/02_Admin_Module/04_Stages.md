@@ -36,4 +36,4 @@ The following sections describe the properties that should be configured when de
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/04_Flows.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/05_Tasks.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_Flows.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/05_Tasks.md)
