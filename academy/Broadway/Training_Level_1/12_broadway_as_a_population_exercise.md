@@ -27,9 +27,7 @@ In this exercise you will do the following:
 
    
 
-Your flow is now ready! Run the Data viewer to sync a customer instance and verify the population results.
-
-   ![cases population](images/12_cases_table_population_1.PNG)
+Your flow is now ready! Run the Data viewer to sync a customer instance and verify the population results.   ![cases population](images/12_cases_table_population_1.PNG)
 
 6. Now modify the flow by adding a filter. To do so, open the **population.flow** of the CASES table. 
 
