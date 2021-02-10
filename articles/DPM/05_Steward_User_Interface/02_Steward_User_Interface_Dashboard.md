@@ -5,6 +5,8 @@
 
 The Steward Dashboard screen consolidates all important information for a Steward in order to obtain an overview of the current status of the Tasks allocated to their Role, and allow them to take actions accordingly.
 
+
+
  ![image](/articles/DPM/images/Figure_40_Steward_Dashboard.png)
 
 
