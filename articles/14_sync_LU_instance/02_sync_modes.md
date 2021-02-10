@@ -1,7 +1,7 @@
 # Sync Modes
 
 ## Set Sync Command 
-The Fabric **Set Sync** command is used to define the synchronization mode of an instance from source systems. The default value is ON.
+The Fabric **Set Sync** command is used to define the synchronization mode of an instance from source systems. The default value is On.
 
 SYNTAX: SET SYNC [SYNC MODE];
 
@@ -43,7 +43,7 @@ SYNTAX: SET SYNC [SYNC MODE];
 </td>
 <td style="width: 316px;">
 <ul>
-<li>Synchronization is not performed, however if the LU instance already exists in Fabric it will bring the existing LU instance data based on the most updated LU Schema definition.</li>
+<li>Synchronization is not performed, however if the LU instance already exists in Fabric, it will bring the existing LU instance data based on the most updated LU Schema definition.</li>
 <li>If the LU instance does not yet exist in Fabric, &nbsp;the following warning message is displayed:</li>
      Instance '&lt;LU Name&gt;:&lt;Instance ID&gt;' was not found and Sync is disabled.
 </ul>
@@ -93,7 +93,7 @@ Fabric runs in Sync On mode regardless of whether the delta is empty or not.
 set sync ON;</p>
 <p>get LU.1;
 
-Fabric checks if the delta exist in Node B for Instance 1 and if if not runs on Node A in Sync On mode, otherwise runs in Sync On mode on remote Node B.
+Fabric checks if the delta exist in Node B for Instance 1 and if not runs on Node A in Sync On mode, otherwise runs in Sync On mode on remote Node B.
 
 2. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to CASSANDRA_ONLY or KAFKA:
 
@@ -115,7 +115,7 @@ To avoid checking each LUI, Fabric implements Sync On mode only on the first GET
 SYNC_PROTECTION can be edited in the config.ini file: 
 1.	The default value is zero. Fabric implements Sync On mode only on the first request.
 2.	If this parameter is set to -1, Sync On protection is disabled and Fabric implements Sync On mode on each request.
-3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request, run in Sync Off mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to On.
+3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request run in Sync Off mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to On.
 
 As of Release 6.2.3, SYNC_PROTECTION can be disabled on the session level using the SET SYNC_PROTECTION=off command.
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
