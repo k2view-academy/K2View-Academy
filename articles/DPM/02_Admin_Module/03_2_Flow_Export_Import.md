@@ -24,4 +24,4 @@ Before confirming the import, you can change the Flow name and version. If the p
 
 When needed, the Flow configuration can be edited manually before the import, by changing the content of the json file or editing the json when it is presented on the screen. This editing should be done with care in order not to create invalid scenario or invalid json structure.
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md)
