@@ -22,4 +22,4 @@ Comply with audit requirements by keeping evidence of who consented, to what, wh
 This chapter provides details about the way consents are configured and managed using K2View DPM
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management_Overview/02_Consent_Configuration.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/README.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/02_Consent_Configuration.md)
