@@ -26,7 +26,7 @@ A snapshot will only be published once one of the following actions is triggered
 
 
 -	Manually, when requested by the user sending a delete request to a Reference Table without a ```where``` statement
-- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio uner the Table Properties panel. In most cases the full table synchronization is happening when the truncate mode is set from the studio.
+- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio (under the Table Properties panel). In most cases the full table synchronization is happening when the truncate mode is set from the studio.
 
 
 
