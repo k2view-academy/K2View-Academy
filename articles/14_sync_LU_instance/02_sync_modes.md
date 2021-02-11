@@ -65,12 +65,12 @@ SYNTAX: SET SYNC [SYNC MODE];
 <td style="width: 76px;">
 <p>DELTA</p>
 </td>
-<td style="width: 146px;">
+<td style="width: 146px;"> 
 <p>Delta sync.</p>
 </td>
 <td style="width: 316px;">
 <p> Added to Release 6.4.1: </p>
-<p>Valid in the iidFinder in Delta Partition mode when there is no delta in the remote node when running on a local node in Sync Off mode.</p>
+<p>Valid in the iidFinder in Delta Partition mode when there is no delta in the remote node will be running in Sync Off mode on the local node.</p>
 <p>1. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to Delta Partition mode.
 
 1.1 When running on Node A:
