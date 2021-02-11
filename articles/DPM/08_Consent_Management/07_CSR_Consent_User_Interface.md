@@ -16,5 +16,5 @@ The Consent Management functionality at representative level is equal to this fu
 
  As depicted in the figure above, the representative should type the customer identification at the upper-left corner of the screen and retrieve the information for the customer by clicking the “search” button. For more details about the information and activities that can be done in this screen, see the previous entry of Customer Consent Management. 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/06_Customer_Consent_Management_Screen.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management_Overview/08_Consent_Repository_History_Audit.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/06_Customer_Consent_Management_Screen.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/08_Consent_Repository_History_Audit.md)
 
