@@ -3,30 +3,32 @@
 
 ## Synchronization Modes
 
-Regardless of the synchronization type (background or on-demand), Fabric provides two different options for synchronizing Reference tables data.
-- The update synchronization mode is used to modify rows within existing tables.
-- The snapshot synchronization mode is used when replacing entirely a reference table.
+Regardless of the synchronization type (background or on-demand), Fabric provides two different options for synchronizing Reference tables data:
+- Update synchronization option which is used to modify rows within existing tables.
+- Snapshot synchronization option which is used to replace entirely a reference table.
 
 Both Update and Snapshot options can work in either one of the following modes: 
 
 - Short Message mode: applied for transactions that contain less than 1000 rows.
 - Long Message mode : applied for transactions exceeding 1000 rows, in which case bulks of 1000 rows are created in Cassandra.
 
-For example, if an update consists of running 2500 insert commands, the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each, then each 1000 command bulk is written to Cassandra.
+For example, if an update consists of running 2500 insert commands, the 2500 inserts are divided into 3 bulks of 1000, 1000 and 500 each, then each 1000 bulk is written to Cassandra.
 
 
 ### Update Mode
-This mode is by default, selected when any row update to the reference table is needed. 
+This mode is by default, selected when a row update onto the reference table is required. 
 In this mode, updates are performed as Create/Update/Delete SQL queries directly on the table itself. 
-Each node executes this change locally on its local SQLite commonDB copy as a single logical transaction.
+Each node executes this change locally on its local SQLite commonDB copy as a single logical transaction. A message to Kafka is then sent with the content of the update for all other nodes to execute.
+Note that if the update is over 1000 rows, Cassandra will also be involved as described later in this article.
+
 
 ### Snapshot Mode
 
-A snapshot will only be published once one of the following actions is triggered: 
-
+The snapshot mode will only be used once one of the following actions is triggered: 
 
 -	Manually, when requested by the user sending a delete request to a Reference Table without a ```where``` statement
-- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio (under the Table Properties panel). In most cases the full table synchronization is happening when the truncate mode is set from the studio.
+- When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio (under the Table Properties panel). 
+In most cases the full table synchronization is happening when the truncate mode is set from the studio.
 
 
 
