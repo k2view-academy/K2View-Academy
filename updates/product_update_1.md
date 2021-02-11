@@ -12,4 +12,4 @@ We would like to share with you that we have just launched the Fabric 6.4 releas
 
    And much more... The full list can be found in the [Release Notes](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.4/Release%20Notes/V6.4/Fabric_Release%20Notes%20V6.4.pdf).
 
-![image](images/use cases@150x-8.PNG)
+![image](images/use cases.PNG)
