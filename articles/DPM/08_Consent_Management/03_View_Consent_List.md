@@ -89,5 +89,5 @@ For each consent, this table provides the following information:
 
 For the sake of better organization, consents are grouped under user-defined Categories. Categories are defined by the Administrator at the moment of creating a new consent, as described at the section about creating a new consent. The category name can be altered by clicking the “Edit” button at the category line at the consent list table.
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/02_Consent_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management_Overview/04_New_Consent_Topic.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/02_Consent_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/04_New_Consent_Topic.md)
 
