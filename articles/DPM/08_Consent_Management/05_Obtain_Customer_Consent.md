@@ -9,5 +9,5 @@ DPM’s user interface presents to the end-user a clear and simple view of the c
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/04_New_Consent_Topic.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management_Overview/06_Customer_Consent_Management_Screen.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/04_New_Consent_Topic.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/06_Customer_Consent_Management_Screen.md)
 
