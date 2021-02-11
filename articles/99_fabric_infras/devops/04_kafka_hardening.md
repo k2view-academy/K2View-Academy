@@ -11,7 +11,7 @@ Check that the following services are switched off:
 
 ## Step 2. Keys Generation
 
-1. [Download]() and run the secure_kafka.sh script to generate self-signed keys and certificates.
+1. [Download](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_kafka.sh) and run the secure_kafka.sh script to generate self-signed keys and certificates.
 
 2. Run the following commands on a single Kafka node only:
 ```
