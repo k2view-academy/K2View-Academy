@@ -81,5 +81,5 @@ Any change that the customer performed on the consent preferences (opt-in/opt-ou
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/05_Obtain_Customer_Consent.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management_Overview/07_CSR_Consent_User_Interface.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/05_Obtain_Customer_Consent.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/07_CSR_Consent_User_Interface.md)
 
