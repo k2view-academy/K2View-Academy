@@ -79,5 +79,5 @@ Save the new consent.
 
 From the moment a new consent is configured, this consent would appear to a customer or representative at the list of consents so that the customer can select if to opt-in to this consent topic. 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/03_View_Consent_List.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management_Overview/05_Obtain_Customer_Consent.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/03_View_Consent_List.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/05_Obtain_Customer_Consent.md)
 
