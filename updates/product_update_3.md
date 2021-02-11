@@ -4,4 +4,4 @@ Looking how to setup the Fabric to support Kafka SSL connections? Browse our lat
 
 TDM7 Documentation is coming soon. Stay tuned!
 
-![image](images/Digital_Entity.PNG)
+![image](images/Digital_Entity.png)

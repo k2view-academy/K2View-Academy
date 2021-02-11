@@ -10,4 +10,4 @@ Your central hub for knowledge and support. Here you can find everything you nee
 
 
 
-![image](images/Data_integration_delivery.PNG)
+![image](images/Data_integration_delivery.png)
