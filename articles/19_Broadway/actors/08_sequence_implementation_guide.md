@@ -42,11 +42,11 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
-* Set the sequence as part of the attributes list. The example of the attributes list can be a string which concatenates several pairs of key and value and the sequence is one of them. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
+* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
 
   ![image](../images/99_actors_08_ex_2.png) 
 
-* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the function are implemented by the **MaskingLuFunction** Actor in the same manner as by the [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
+* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the function are implemented by the **MaskingLuFunction** Actor in the same way as by the [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
 
   ![image](../images/99_actors_08_ex_3.png)
 
