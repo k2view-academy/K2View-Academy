@@ -1,13 +1,13 @@
 # Masking and Sequence Actors
 
-Data Management Systems like **TDM** often handle sensitive data. To be compliant with Data Privacy laws, Fabric provides a **masking** category of Actors that can mask sensitive fields like SSN, credit card numbers and email addresses before they are loaded into the target DB.
+Data Management Systems like **TDM** often handle sensitive data. To be compliant with Data Privacy laws, Fabric provides a **Masking** category of Actors that can mask sensitive fields like SSN, credit card numbers and email addresses before they are loaded into the target DB.
 
 For example: 
 
 * The **MaskingSSN** Actor masks the original SSN number with a valid fake SSN.
 * The **MaskingCreditCard** Actor generates a fake but valid credit card number similar to the original one.
 
-Note that if data needs to be masked before it is loaded to Fabric, **Masking** Actors can be used in Broadway population flows.
+Note that if data needs to be masked before it is loaded to Fabric, **masking** Actors can be used in Broadway population flows.
 
 Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID.
 
@@ -17,13 +17,13 @@ The **MaskingSequence** Actor, which also belongs to the **masking** category, g
 
 ### How Do I Set Masking Input Arguments?
 
-The common input arguments of the **masking** category of Actors are:
+Common input arguments of **Masking** Actors are:
 
-* **maskingId**, a unique masking identifier used to generate a target value. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking with specific ID is used across different DCs.
-* **useEnvironment**, indication whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. This feature is applicable starting from the release 6.4.1.
-* **useExecutionId**, indication whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is running. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
-* **useInstanceId**, indication whether to use the Instance ID as part of the masking cache. 
-* **hashedInputValue**, indication whether to store the original or the hashed input value. By default the hashed value is stored. Set to **false** when it is required to disable caching and store the original value.
+* **maskingId**, a unique masking identifier used to generate a target value. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
+* **useEnvironment**, indicates whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. This feature is applicableas of Release 6.4.1.
+* **useExecutionId**, indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
+* **useInstanceId**, indicates whether to use the Instance ID as part of the masking cache. 
+* **hashedInputValue**, indicates whether to store the original or the hashed input value. By default the hashed value is stored. Set to **false** to disable caching and store the original value.
 * **interface**, the interface to be used to cache the masked values. This interface might be either any SQL DB interface defined in Fabric or the Fabric server memory. 
   * When SQL DB interface is set, the **masking_cache** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) is used to cache the masked values. The data kept in this table reflects the settings of the Actor's input arguments.
   * If the **k2masking** keyspace does not exist, create it using the **masking-create-cache-table.flow** example or using the installation SQL script provided as part of the Masking library. 
@@ -37,7 +37,7 @@ The following input arguments are specific to the **MaskingSequence** Actor:
 
 ### How Do I Mask Data using Masking Actors?
 
-The following example shows how to mask an Address description and  ZIP Code using two Actors of the **masking** category in the population flow. 
+The following example shows how to mask an Address description and ZIP Code using two **masking** Actors in the population flow. 
 
 The same masking can be implemented in several flows of the same project. For example, if the ZIP Code is populated in several LU tables in Fabric, use the same Actor in the flows and specify the same Masking ID.
 
