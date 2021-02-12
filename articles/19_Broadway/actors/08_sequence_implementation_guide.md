@@ -12,7 +12,7 @@ A common scenario of sequence implementation is when the same sequence needs to 
 * Using a sequence across different LUIs within the same LU. For example, the same ADDRESS ID can be used for different customers during the same execution.
 * Using a sequence across different LU types. For example, the same CUSTOMER ID can be used in a CUSTOMER LU and a Billing LU during the same execution.
 
-To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** Actor everywhere the same sequence is used. Keep the **useEnvironment** as **true** and the **useExecutionID** as **true** in each Actor's settings to generate a new masked value in each execution per the same environment or set it to **false** to use the same masked value across different executions and environments.
+To implement the above use cases, set a unique **maskingId** and populate it on the **MaskingSequence** Actor everywhere the same sequence is used. Keep the **useEnvironment** as **true** and the **useExecutionID** as **true** in each Actor's settings to generate a new masked value in each execution in the same environment or set it to **false** to use the same masked value across different executions and environments.
 
 ### Sequence Next Value
 
@@ -38,7 +38,7 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_map.PNG)
 
-* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. This feature is applicable starting from the release 6.4.1.
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. This feature is applicable as of Release 6.4.1.
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
