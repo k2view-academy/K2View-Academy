@@ -29,7 +29,7 @@ An inner Broadway flow can also be created using the **Save as Actor** action in
 
    ![image](images/99_22_02.PNG)
 
-[Click to display an example of a Broadway flow with inner flow Actors in the Demo project.](/articles/demo_project)
+Full example of a Broadway flow with inner flow Actors can be found in the Demo project.
 
 ### Open an Inner Flow
 
