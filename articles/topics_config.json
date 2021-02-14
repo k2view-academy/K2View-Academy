@@ -100,13 +100,67 @@
 			"group display name": "Testing Data Management (TDM)",
 			"group icon": "images/icon-3.png",
 			"visible in main": true,
-			"topics": []
+			"topics": [
+				{
+					"display name": "TDM Overview",
+					"value": "tdm_overview"
+				},
+				{
+					"display name": "TDM Architecture",
+					"value": "tdm_architecture"
+				},
+				{
+					"display name": "TDM Configuration",
+					"value": "tdm_configuration"
+				},
+				{
+					"display name": "TDM Implementation",
+					"value": "tdm_implementation"
+				},
+				{
+					"display name": "TDM GUI",
+					"value": "tdm_gui"
+				}
+			]
 		},
 		{
 			"group display name": "Data Privacy Management (DPM)",
 			"group icon": "images/icon-4.png",
 			"visible in main": true,
-			"topics": []
+			"topics": [
+				{
+					"display name": "DPM Overview",
+					"value": "01_DPM_Overview"
+				},
+				{
+					"display name": "Administrator Module",
+					"value": "02_Admin_Module"
+				},
+				{
+					"display name": "Representantive User Interface",
+					"value": "03_Representantive_User_Interface"
+				},
+				{
+					"display name": "Customer Direct Requests",
+					"value": "04_Customer_Direct_Requests"
+				},
+				{
+					"display name": "Steward User Interface",
+					"value": "05_Steward_User_Interface"
+				},
+				{
+					"display name": "Case Owner User Interface",
+					"value": "06_Case_Owner_User_Interface"
+				},
+				{
+					"display name": "Supervisor User Interface",
+					"value": "07_Supervisor_User_Interface"
+				},
+				{
+					"display name": "Consent Management",
+					"value": "08_Consent_Management"
+				}
+			]
 		},
 		{
 			"group display name": "Security, Audit and Hardening",
