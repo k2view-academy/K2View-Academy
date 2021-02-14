@@ -15,11 +15,9 @@ The Masking utility hashes the original value of the masked field using the SHA-
 
 ## Broadway Masking Actor
 
-A Broadway Masking actor that can mask sensitive fields like SSN, credit card numbers and email addresses before they are loaded into a target DB or even before they are loaded into Fabric.
+Broadway provides a number of masking actors that can be used to mask sensitive fields like SSN, credit card numbers, email addresses or sequences before they are loaded into a target Database or even into Fabric.
 
-
-Sensitive data can be masked either by the LU Table Population Broadway Flow which masks the data before it is saved into Fabric, or by loading Broadway to mask the data before it is sent to the target.
-
+Moreover, sensitive data can be masked either by using the LU Table Population Broadway Flow (which masks the data before it is saved into Fabric), or by loading Broadway to mask the data before it is sent to the target.
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking capabilities.
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)
