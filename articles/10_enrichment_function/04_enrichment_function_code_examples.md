@@ -16,7 +16,7 @@ ludb().execute(sqlClosed,caseStatus);
 
 2. Add a new column to the **CASES table** and attach the **Enrichment function** to the **CASES table** via the Table Properties tab. 
 
-[Click to display an example of the **fnMonthsOpenCase** Enrichment Function in the Demo project.](/articles/demo_project)
+Full example of the **fnMonthsOpenCase** Enrichment Function can be found in the Demo project.
 
 ### Complex Example of Several Validations, Including the Use of an Enrichment Function 
 
@@ -77,7 +77,7 @@ Run validation functions to validate LUI data during the [Sync process](/article
 
 5. Attach the **Enrichment function** to the **EXEC_VALIDATIONS** table via the **Table Properties** tab. 
 
-[Click to display an example of the full code in all the above functions in the Demo project.](/articles/demo_project)
+Full example of the code in all the above functions can be found in the Demo project.
 
 
 ### Example of an Enrichment Function that Populates the Param Table
@@ -124,6 +124,6 @@ A common scenario in Test Data Management (TDM) projects is to add a Parameters 
     ludb().execute(insertSQL, params);
    }
 ~~~
-[Click to display an example of the **fnEnrichmentOrderParam** Enrichment function in the Demo project.](/articles/demo_project)
+Full example of the **fnEnrichmentOrderParam** function can be found in the Demo project.
 
 [![Previous](/articles/images/Previous.png)](/articles/10_enrichment_function/03_create_edit_enrichment_function.md)
