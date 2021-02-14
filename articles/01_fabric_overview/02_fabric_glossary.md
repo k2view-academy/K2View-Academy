@@ -1,12 +1,12 @@
 # Fabric Glossary
 
-<table width="641">
+<table style="width: 900px;">
 <tbody>
 <tr>
-<td width="125">
+<td width="170pxl">
 <p><strong>Item</strong></p>
 </td>
-<td width="516">
+<td width="630pxl">
 <p><strong>Descriptions</strong></p>
 </td>
 </tr>
