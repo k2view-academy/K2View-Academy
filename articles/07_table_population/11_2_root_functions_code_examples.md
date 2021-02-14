@@ -17,7 +17,7 @@ ludb().fetch(sql, i_customer_id).each(row->{
 fabric().execute("set environment='" + SOURCE_ENV_NAME + "'");
 ~~~
 
-[Click to display an example of the entire fnPop_NEW_ACTIVITY Root Function in the Demo project.](/articles/demo_project)  
+Full example of the entire fnPop_NEW_ACTIVITY Root Function can be found in the Demo project.
 
 ### Example of a Root Function that Retrieves Data from Several Data Sources
 Use a Root function to retrieve source data from several data sources, for example the current LU and an additional DB interface. Add an SQL query per each data source.  
@@ -46,7 +46,7 @@ ludb().fetch(sql1, i_customer_id ).each(row-> {
 }
 ~~~
 
-[Click to display an example of the entire **fnPop_ACT_CASE_NOTE** Root Function in the Demo project.](/articles/demo_project) 
+Full example of the entire **fnPop_ACT_CASE_NOTE** Root Function can be found in the Demo project.
 
-[![Previous](/articles/images/Previous.png)](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/07_table_population/11_3_creating_an_LUDB_function.md)
+[![Previous](/articles/images/Previous.png)](11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_3_creating_an_LUDB_function.md)
 
