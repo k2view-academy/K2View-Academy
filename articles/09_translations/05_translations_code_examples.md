@@ -16,7 +16,7 @@ if (fabricErrorID != null) {
 }
 </code></pre>
 
-[Click to display an example of **fnErrorCheck** function that retrieves the Translation’s output values in the Demo project.](/articles/demo_project)
+Full example of **fnErrorCheck** function that retrieves the Translation’s output values can be found in the Demo project.
        
        
 ### Example of using a Translation in a Population
@@ -31,7 +31,7 @@ if (fabricErrorID != null) {
 
 This example displays how to apply the Data Transformation Rule in a Table Population. The Translation **trnOrderType** defines a list of Input/Output combinations. When the target table is populated, Fabric populates the **ORDER_TYPE**  in the target table’s ORDERS column using the **trnOrderType** Translation and a value in the **query_public_orders.order_type** source field.
 
-[Click to display an example of how the **trnOrderType** Translation is used in a Table Population in the Demo project.](/articles/demo_project)
+Full example of how the **trnOrderType** Translation is used in a Table Population can be found in the Demo project.
 
 ### Example of using a Translation with Type = SQL
 
@@ -57,7 +57,7 @@ if(tranData.size() > 0) {
 }
 ~~~
 
-[Click to display an example of **fnEnrichment_CUSTOMER** function that retrieves the Translation’s output values in the Demo project.](/articles/demo_project)
+Full example of **fnEnrichment_CUSTOMER** function that retrieves the Translation’s output values can be found in the Demo project.
 
 
 [![Previous](/articles/images/Previous.png)](/articles/09_translations/04_using_translations_in_fabric.md)
