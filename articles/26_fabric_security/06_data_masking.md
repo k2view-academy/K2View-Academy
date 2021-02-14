@@ -5,7 +5,7 @@ Fabric provides a field-level API to protect data classified as Personal Identif
 
 To ensure that the data is still valid for you data lifecycle management, the data will look real and appear consistent.
 
-This capability can be used to conduct tests, implement data transformations, or serve anonymized data to external third parties via web services or queue messages for example.
+This capability can be used to conduct tests, implement data transformations, or serve anonymized data to external third parties via web services or queue messages.
 
 
 ## Encryption algorithm
