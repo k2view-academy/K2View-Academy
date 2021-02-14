@@ -1,8 +1,7 @@
-![image](/articles/images/welcome_to_wiki.png)
 
 <strong>Sync LU Instance<strong>
-<ul>
-  
+
+<ul>  
 <li><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync LUI Overview</a></li>
 <li><a href="/articles/14_sync_LU_instance/02_sync_modes.md">Sync Modes</li>
 <li><a href="/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md">Sync- Ignore Source Exception</li>

@@ -1,9 +1,5 @@
-![image](/articles/images/welcome_to_wiki.png)
 
-
-
-<strong>Fabric Environments<strong>
-        
+<strong>Fabric Environments<strong>       
 
 <ul>
         <li><a href="/articles/25_environments/01_environments_overview.md">Environments Overview</a></li>

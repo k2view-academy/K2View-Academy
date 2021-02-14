@@ -1,6 +1,3 @@
-![image](/articles/images/welcome_to_wiki.png)
-
-
 
 <strong>Change Data Capture (CDC) Capabilities<strong>
 

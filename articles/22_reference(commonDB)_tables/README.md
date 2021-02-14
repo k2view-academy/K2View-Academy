@@ -1,7 +1,5 @@
-![image](/articles/images/welcome_to_wiki.png)
 
-
-<strong>Reference Tables & commonDB<strong>
+<strong>Reference Tables and commonDB<strong>
 <ul>
 <li><a href="/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md">Overview</a></li>
 <li><a href="/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md">Reference Tables in Fabric Studio</a></li>

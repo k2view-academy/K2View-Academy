@@ -1,7 +1,4 @@
 
-
-![image](/articles/images/welcome_to_wiki.png)
-
 ## SonarQube 
 
 
