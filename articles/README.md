@@ -353,6 +353,7 @@
 <li><a href="/articles/26_fabric_security/03_fabric_LUI_encryption.md">Digital Entities Encryption</a></li>
 <li><a href="/articles/26_fabric_security/04_fabric_interfaces_security.md">Interfaces Encryption</a></li>
 <li><a href="/articles/26_fabric_security/05_fabric_webservices_security.md">Web Services Security</a></li>
+<li><a href="/articles/26_fabric_security/06_data_masking.md">Data Masking</a></li>
     
 </details> 
 
