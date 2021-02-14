@@ -1,23 +1,23 @@
 # Masking and Sequence Actors
 
-Data Management Systems like **TDM** often handle sensitive data. To be compliant with Data Privacy laws, Fabric provides a **Masking** category of Actors that can mask sensitive fields like SSN, credit card numbers and email addresses before they are loaded into the target DB.
+Data Management Systems like **TDM** often handle sensitive data. To be compliant with Data Privacy laws, Fabric provides a **masking** category of Actors that can mask sensitive fields like SSN, credit card numbers and email addresses before they are loaded into the target DB.
 
 For example: 
 
 * The **MaskingSSN** Actor masks the original SSN number with a valid fake SSN.
 * The **MaskingCreditCard** Actor generates a fake but valid credit card number similar to the original one.
 
-Note that if data needs to be masked before it is loaded to Fabric, **masking** Actors can be used in Broadway population flows.
+Note that if data needs to be masked before it is loaded to Fabric, masking Actors can be used in Broadway population flows.
 
 Another important functionality for systems that need to frequently load data to target DBs is the ability to generate and populate a unique sequence ID.
 
-The **MaskingSequence** Actor, which also belongs to the **masking** category, generates a unique sequence ID based on the provided input arguments.
+The **MaskingSequence** Actor, which also belongs to the masking category, generates a unique sequence ID based on the provided input arguments.
 
 <!--[Click for more information about TDM7](/articles/TDM/tdm_overview/01_tdm_overview.md).--> 
 
 ### How Do I Set Masking Input Arguments?
 
-Common input arguments of **Masking** Actors are:
+Common input arguments of masking Actors are:
 
 * **maskingId**, a unique masking identifier used to generate a target value. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
 * **useEnvironment**, indicates whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. This feature is applicable as of Release 6.4.1.
@@ -37,7 +37,7 @@ The following input arguments are specific to the **MaskingSequence** Actor:
 
 ### How Do I Mask Data using Masking Actors?
 
-The following example shows how to mask an Address description and ZIP Code using two **masking** Actors in the population flow. 
+The following example shows how to mask an Address description and ZIP Code using two masking Actors in the population flow. 
 
 The same masking can be implemented in several flows of the same project. For example, if the ZIP Code is populated in several LU tables in Fabric, use the same Actor in the flows and specify the same Masking ID.
 

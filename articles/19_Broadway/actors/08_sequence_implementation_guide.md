@@ -42,7 +42,7 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
-* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
+* Set the sequence as part of the attributes list. An example of the attributes list can be a string which concatenates several pairs of keys and values including the sequence as one of them. To do so, generate the sequence and then create the concatenated attributes list using the [**JavaScript** Actor](01_javascript_actor).
 
   ![image](../images/99_actors_08_ex_2.png) 
 
