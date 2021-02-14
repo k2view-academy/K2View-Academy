@@ -328,13 +328,13 @@ if (sbf!=null) {
 }
 ```
 
-The wsCustomerInfoCustomPayload function is available in the [Demo project](/articles/demo_project). 
+The wsCustomerInfoCustomPayload function is available in the Demo project. 
 
 ### Example of a Custom Payload - XML 
 
 The following Web Service inserts rows into the CASES table in the CUSTOMER LU where the input is retrieved in XML format. 
 
-The wsInsertCasesCustomPayloadXML function is available in the [Demo project](/articles/demo_project).
+The wsInsertCasesCustomPayloadXML function is available in the Demo project.
 
 Request body 
 
@@ -401,7 +401,7 @@ Node node1 = elem.getElementsByTagName("activity_id").item(0);
 String activityId = node1.getTextContent();
 ```
 
-The code for inserting this into the DB is similar to the code in the wsInsertCases function, which is available in the [Demo project](/articles/demo_project).
+The code for inserting this into the DB is similar to the code in the wsInsertCases function, which is available in the Demo project.
 
 
 
