@@ -13,10 +13,10 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <table>
 <tbody>
 <tr>
-<td width="300pxl" valign="top">
+<td width="250pxl" valign="top">
 <p><strong>Configuration File</strong></p>
 </td>
-<td width="600pxl"  valign="top">
+<td width="650pxl"  valign="top">
 <p><strong>Description</strong></p>
 </td>
 </tr>
@@ -87,6 +87,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 
 
 
+
 ### config.ini
 
 Fabric's main configuration file which holds different sections of parameters where each section has it own parameter. Default Fabric values for commented parameters.
@@ -94,108 +95,109 @@ Fabric's main configuration file which holds different sections of parameters wh
 <table width="900pxl">
 <tbody>
 <tr>
-<td width="250pxl valign="top">
+<td style="width: 200px;">
 <p><strong>Parameters Category</strong></p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 250px;" valign="top">
 <p><strong>Section Names</strong></p>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 4.00px;" valign="top">
 <p><strong>Main Parameters</strong></p>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>Cassandra Connection</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>cassandra</li>
 <li>default_session</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <p>Configurations for creating a connection to the Cassandra cluster:</p>
 <ul>
-<li>Replication options</li>
-<li>Consistency level</li>
+<li>Replication options.</li>
+<li>Consistency level.</li>
 <li>Cassandra's connection details.</li>
 <li>Set an SSL connection.</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>Fabric Settings</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>fabric</li>
 <li>fabric_cluster</li>
 <li>jdbc-server</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <ul>
 <li>Date and time formats.</li>
-<li>Storage and Export directories</li>
-<li>Fabric auditing settings</li>
-<li>Connection pools settings</li>
+<li>Storage and Export directories.</li>
+<li>Fabric auditing settings.</li>
+<li>Connection pools settings.</li>
 <li>The maximum number of concurrent connections that are allowed for a single data source.</li>
-<li>Batch process settings</li>
-<li>Default <a href="/articles/14_sync_LU_instance/02_sync_modes.md">Sync mode</a></li>
-<li><a href="/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-protection">SYNC_PROTECTION</a> parameter</li>                                                                <li>Sync of CommonDB Reference tables</li>
+<li>Batch process settings.</li>
+<li>Default <a href="/articles/14_sync_LU_instance/02_sync_modes.md">Sync mode.</a></li>
+<li><a href="/articles/14_sync_LU_instance/02_sync_modes.md#sync-on-protection">SYNC_PROTECTION</a> parameter.</li>
+<li>Sync of CommonDB Reference tables.</li>
 <li>Parallel Sync on <a href="/articles/07_table_population/13_LU_table_population_execution_order.md#how-do-i-set-the-population-order">Table Populations with the same execution order</a>.</li>
 <li>Enable running <a href="/articles/02_fabric_architecture/04_fabric_commands.md#delete-instances-if-not-exist">DELETE INSTANCES IF NOT EXIST</a> Fabric command.</li>
 <li>LUI compression types when storing the LUI in Cassandra.</li>
-<li>Web service parameters</li>
+<li>Web service parameters.</li>
 <li>Fabric interaction with Cassandra for adding, removing or editing user&rsquo;s activities.</li>
-<li>Fabric Heartbeat mechanism for Fabric jobs</li>
+<li>Fabric Heartbeat mechanism for Fabric jobs.</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p><a href="/articles/20_jobs_and_batch_services/09_jobs_configuration.md#nodes-configuration-in-clusters">Fabric Jobs</a></p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>jobs</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <ul>
-<li>Thread pool size- set the maximum number of jobs to be executed in parallel in a single Fabric node.</li>
-<li>Archiving time- the number of hours to delete the Job record from the k2_jobs table.</li>
+<li>Thread pool size, set the maximum number of jobs to be executed in parallel in a single Fabric node.</li>
+<li>Archiving time, the number of hours to delete the Job record from the k2_jobs table.</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p><a href="/articles/20_jobs_and_batch_services/12_batch_sync_commands.md">Batch Process</a></p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>batch_process</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <ul>
 <li>MAX_WORKERS_PER_NODE parameter sets the maximum number of threads&nbsp;that are used in all batch process units (executions) together on this node.&nbsp; &nbsp; &nbsp;</li>
-<li>Support setting MAX_WORKERS_PER_NODE=0 per node to avoid running a batch&nbsp;process on a specific node.&nbsp; &nbsp;&nbsp;</li>
+<li>Supports MAX_WORKERS_PER_NODE=0 per node to avoid running a batch process on a specific node.&nbsp; &nbsp;&nbsp;</li>
 </ul>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>Parsers</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>parsers</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <ul>
 <li>
 <p>Writing method into Cassandra using Cassandra loader or JDBC driver for parsers. The PARSER_WRITING_TYPE parameter defines the method used to load the data into Cassandra by Parsers: Cassandra Loader or JDBC driver. The default value is JDBC.</p>
@@ -204,15 +206,15 @@ Fabric's main configuration file which holds different sections of parameters wh
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>IIDFinder</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>finder</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <ul>
 <li>Enable ORPHANAGE job, handles the Orphans record in the background.</li>
 <li>Enable SWEEP job, sweeps the invalid cache entries.</li>
@@ -220,10 +222,10 @@ Fabric's main configuration file which holds different sections of parameters wh
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>Cassandra Loader loader configuration</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>default_loader</li>
 <li>parser_loader</li>
@@ -231,29 +233,33 @@ Fabric's main configuration file which holds different sections of parameters wh
 <li>iid_finder_loader</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
-<p>Cassandra Loader configuration.</p>
-<p>The default setting of default_loader for parsers, batch processes, or IIDFinder activities can be overridden.</p>
+<td style="width: 371px;" valign="top">
+<ul>
+<li>Cassandra Loader configuration.</li>
+<li>The default setting of default_loader for parsers, batch processes, or IIDFinder activities can be overridden.</li>
+</ul>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>Cassandra loader session configuration</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>loader_session&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
-<p>Overrides the default_session for the sessions, created for Cassandra Loader operations (parsers, batch process, IIDFinder)</p>
+<td style="width: 371px;" valign="top">
+<ul>
+<li>Overrides the default_session for the sessions, created for Cassandra Loader operations (parsers, batch process, IIDFinder).</li>
+</ul>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>CommonDB Reference Tables</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>common_area_config</li>
 <li>common_area_kafka_producer</li>
@@ -262,42 +268,42 @@ Fabric's main configuration file which holds different sections of parameters wh
 <li>common_area_memory_queues_config&nbsp; &nbsp; &nbsp;</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>LUI Storage</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>fabricdb</li>
 <li>cassandra_entity_storage</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p>Fabric Security Hardening</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>encryption</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td width="250pxl" valign="top">
+<td style="width: 184px;" valign="top">
 <p><a href="/articles/18_fabric_cdc/06_cdc_configuration.md">Change Data Capture (CDC) and Search</a></p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>cdc</li>
 <li>cdc_data_publish</li>
@@ -306,29 +312,30 @@ Fabric's main configuration file which holds different sections of parameters wh
 <li>search_engine</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <p>&nbsp;</p>
 </td>
 </tr>
-                               <tr>
-<td width="250pxl" valign="top">
+<tr>
+<td style="width: 184px;" valign="top">
 <p>Consistency Level</p>
 </td>
-<td width="200pxl" valign="top">
+<td style="width: 323px;" valign="top">
 <ul>
 <li>default_session</li>
 </ul>
 </td>
-<td width="450pxl" valign="top">
+<td style="width: 371px;" valign="top">
 <ul>
 <li>CONSISTENCY_LEVEL, default is LOCAL_QUORUM. Used internally for Fabric commands such as DELETE INSTANCE.</li>
-<li>SERIAL_CONSISTENCY_LEVEL, default is LOCAL_SERIAL. Used internally for Fabric Jobs.</li>                            
-</ul>                               
+<li>SERIAL_CONSISTENCY_LEVEL, default is LOCAL_SERIAL. Used internally for Fabric Jobs.</li>
+</ul>
 </td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
+
+
 
 #### Set Fabric Time Zone
 
