@@ -90,12 +90,12 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 
 ### config.ini
 
-Fabric's main configuration file which holds different sections of parameters where each section has it own parameter. Default Fabric values for commented parameters.
+Fabric's main configuration file which holds different sections of parameters where each section has its own parameters and default Fabric values for commented parameters.
 
 <table width="900pxl">
 <tbody>
 <tr>
-<td style="width: 250px;">
+<td style="width: 250px;" valign="top">
 <p><strong>Parameters Category</strong></p>
 </td>
 <td style="width: 250px;" valign="top">
@@ -223,7 +223,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td style="width: 184px;" valign="top">
-<p>Cassandra Loader loader configuration</p>
+<p>Cassandra Loader configuration</p>
 </td>
 <td style="width: 323px;" valign="top">
 <ul>
