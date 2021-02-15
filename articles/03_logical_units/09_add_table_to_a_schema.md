@@ -14,9 +14,7 @@ To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.
    
    c. Click **Tables** and then drag them into the **LU schema**. You can drag several tables.
    
-   d. Check either: 
-    * **Create Table Based DB Query.**
-    * **Create Table Based Root Function.**
+   d. Check either: **Create Table Based DB Query** or **Create Table Based Root Function.**
 
 The selected tables are automatically created with the selected type of [population](/articles/07_table_population/01_table_population_overview.md) and added to the LU schema.
 
