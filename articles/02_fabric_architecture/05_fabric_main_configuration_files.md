@@ -95,13 +95,13 @@ Fabric's main configuration file which holds different sections of parameters wh
 <table width="900pxl">
 <tbody>
 <tr>
-<td style="width: 200px;">
+<td style="width: 250px;">
 <p><strong>Parameters Category</strong></p>
 </td>
 <td style="width: 250px;" valign="top">
 <p><strong>Section Names</strong></p>
 </td>
-<td style="width: 4.00px;" valign="top">
+<td style="width: 400px;" valign="top">
 <p><strong>Main Parameters</strong></p>
 </td>
 </tr>
@@ -327,13 +327,14 @@ Fabric's main configuration file which holds different sections of parameters wh
 </td>
 <td style="width: 371px;" valign="top">
 <ul>
-<li>CONSISTENCY_LEVEL, default is LOCAL_QUORUM. Used internally for Fabric commands such as DELETE INSTANCE.</li>
+<li>CONSISTENCY_LEVEL, default is LOCAL_QUORUM. Impacts all Cassandra actions.</li>
 <li>SERIAL_CONSISTENCY_LEVEL, default is LOCAL_SERIAL. Used internally for Fabric Jobs.</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
