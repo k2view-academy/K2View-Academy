@@ -16,4 +16,4 @@ We would like to share with you that we have just launched the Fabric 6.4.1 mino
 
    And much more... The full list can be found in the Release Notes.
 
-![image](images/use_cases.png)
+![image](images/img1.png)
