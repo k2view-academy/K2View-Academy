@@ -198,7 +198,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <td width="450pxl" valign="top">
 <ul>
 <li>
-<p>Writing method into Cassandra- using Cassandra loader or JDBC driver for parsers. The PARSER_WRITING_TYPE parameter defines the method used to load the data into Cassandra by Parsers: Cassandra Loader or JDBC driver. The default value is JDBC.</p>
+<p>Writing method into Cassandra using Cassandra loader or JDBC driver for parsers. The PARSER_WRITING_TYPE parameter defines the method used to load the data into Cassandra by Parsers: Cassandra Loader or JDBC driver. The default value is JDBC.</p>
 </li>
 </ul>
 </td>
@@ -221,7 +221,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td width="250pxl" valign="top">
-<p>Cassandra Loader- loader configuration</p>
+<p>Cassandra Loader loader configuration</p>
 </td>
 <td width="200pxl" valign="top">
 <ul>
@@ -238,7 +238,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 </tr>
 <tr>
 <td width="250pxl" valign="top">
-<p>Cassandra loader- session configuration</p>
+<p>Cassandra loader session configuration</p>
 </td>
 <td width="200pxl" valign="top">
 <ul>
@@ -321,8 +321,8 @@ Fabric's main configuration file which holds different sections of parameters wh
 </td>
 <td width="450pxl" valign="top">
 <ul>
-<li>CONSISTENCY_LEVEL - default LOCAL_QUORUM - used internally for fabric commands such as delete instance</li>
-<li>SERIAL_CONSISTENCY_LEVEL - default LOCAL_SERIAL - used internally for fabric jobs</li>                            
+<li>CONSISTENCY_LEVEL, default is LOCAL_QUORUM. Used internally for Fabric commands such as DELETE INSTANCE.</li>
+<li>SERIAL_CONSISTENCY_LEVEL, default is LOCAL_SERIAL. Used internally for Fabric Jobs.</li>                            
 </ul>                               
 </td>
 </tr>
