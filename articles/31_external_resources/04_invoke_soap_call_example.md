@@ -45,7 +45,7 @@ Note that the generated code uses the JAX-WS built-in JAVA library whereby an ex
 
 ![image](images/open_java_folder.png)
 
-3. Go to folder holding the generated code, during [Preparation](). Scroll down and copy the files at the end of the tree into the folder opened in step 2 above. The files are displayed in the Fabric Studio Tree under the Java section but not under the **Category**.
+3. Go to folder holding the generated code, during [Preparation](/articles/31_external_resources/04_invoke_soap_call_example.md#preparations). Scroll down and copy the files at the end of the tree into the folder opened in step 2 above. The files are displayed in the Fabric Studio Tree under the Java section but not under the **Category**.
 
 #### 3. Update and Verify the Service URL
 
