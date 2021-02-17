@@ -85,7 +85,7 @@ Fabric checks if the delta exist in Node B for Instance 1 and if not, runs in Sy
 set sync delta;</p>
 <p>get LU.1;
 
-Fabric runs in Sync On mode regardless of whether the delta is empty or not.
+Fabric checks if the delta exist in Node B for Instance 1 and if not, runs in Sync Off mode, otherwise in Sync On mode.
 
 
 1.3 When running on Node A:
