@@ -52,4 +52,4 @@ jobstatus 1 days ago
 
 ![image](images/30_03_history.PNG)
 
-[![Previous](/articles/images/Previous.png)](/articles/30_web_framework/02_preintegrated_apps_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_data_editor_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/30_web_framework/02_preintegrated_apps_overview.md)
