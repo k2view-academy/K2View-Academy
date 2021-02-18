@@ -68,4 +68,4 @@ The Editing option is permissions based.
 
 
 
-[![Previous](/articles/images/Previous.png)](05_data_editor_schema_viewer.md)
+[![Previous](/articles/images/Previous.png)](02_data_editor_schema_viewer.md)

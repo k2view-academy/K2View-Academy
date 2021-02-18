@@ -60,4 +60,4 @@ Other available actions include:
 
 
 
-[![Previous](/articles/images/Previous.png)](04_data_editor_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_data_table_editor.md) 
+[![Previous](/articles/images/Previous.png)](01_data_editor_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_data_table_editor.md) 
