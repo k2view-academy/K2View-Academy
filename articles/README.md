@@ -438,7 +438,7 @@
 </details>
 
 <details>
-<summary markdown="span"><strong>Data Editor<strong><a href="/articles/35_templates/README.md" style="text-decoration: none;">&#9734;</a></summary>
+<summary markdown="span"><strong>Data Editor<strong><a href="/articles/36_data_editor/README.md" style="text-decoration: none;">&#9734;</a></summary>
 <ul>
 <li><a href="/articles/36_data_editor/01_data_editor_overview.md">Data Editor</a></li>
 <li><a href="/articles/36_data_editor/02_data_editor_schema_viewer.md">Data Editor Schema Viewer</a></li>
