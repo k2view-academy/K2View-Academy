@@ -11,7 +11,6 @@
         <li><a href="/articles/01_fabric_overview/02_fabric_glossary.md">Fabric Glossary</a></li>
     </ul>
    </details>
-
 + <details>
     <summary markdown="span"><strong>Fabric Architecture<strong><a href="/articles/02_fabric_architecture/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 	<li><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md">Fabric Architecture Overview</a></li>
