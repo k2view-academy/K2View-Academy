@@ -224,6 +224,10 @@
 				{
 					"display name": "Data Catalog",
 					"value": "33_data_catalog"
+				},
+				{
+					"display name": "Data Editor",
+					"value": "36_data_editor"
 				}
 			]
 		},
