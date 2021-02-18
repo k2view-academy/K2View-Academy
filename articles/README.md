@@ -390,7 +390,6 @@
 <li><a href="/articles/30_web_framework/01_web_framework_overview.md">Web Framework Overview</a></li>
 <li><a href="/articles/30_web_framework/02_preintegrated_apps_overview.md">Pre-Integrated Application Overview</a></li>
 <li><a href="/articles/30_web_framework/03_web_admin_application.md">Web Admin Application</a></li>
-<li><a href="/articles/30_web_framework/04_data_editor_overview.md">Data Editor</a></li>       
 </details>    
 
 <details>
@@ -435,6 +434,15 @@
 <li><a href="/articles/35_templates/02_create_and_edit_template.md">Creating and Editing Templates</a></li>
 <li><a href="/articles/35_templates/03_using_templates.md">Using Templates</a></li>
 <li><a href="/articles/35_templates/04_advanced_template_capabilities.md">Advanced Templates Capabilities</a></li>
+</ul>
+</details>
+
+<details>
+<summary markdown="span"><strong>Data Editor<strong><a href="/articles/35_templates/README.md" style="text-decoration: none;">&#9734;</a></summary>
+<ul>
+<li><a href="/articles/36_data_editor/01_data_editor_overview.md">Data Editor</a></li>
+<li><a href="/articles/36_data_editor/02_data_editor_schema_viewer.md">Data Editor Schema Viewer</a></li>
+<li><a href="/articles/36_data_editor/03_data_table_editor.md">Table Data Editor</a></li>
 </ul>
 </details>
 
