@@ -4,7 +4,7 @@
 
 <summary>Fabric Overview & Architecture</summary>
 
-+ <details>
+  <details>
     <summary markdown="span"><strong>Fabric Overview <strong><a href="/articles/01_fabric_overview/README.md" style="text-decoration: none;">&#9734;</a></summary>
     <ul>
         <li><a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">What is Fabric?</a></li>
