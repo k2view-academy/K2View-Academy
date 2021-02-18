@@ -1,12 +1,14 @@
 ![image](/articles/images/welcome_to_wiki.png)
 <meta name="google-site-verification" content="IJmQ9-boTYLbHPdfk46dZofapWD_WJAn1TlNP9E8W7s" />
 <details>
-<summary markdown="span"><strong>Fabric Overview <strong><a href="/articles/01_fabric_overview/README.md" style="text-decoration: none;">&#9734;</a></summary>
+
+<summary>Fabric Overview & Architecture</summary>
+  <summary markdown="span"><strong>Fabric Overview <strong><a href="/articles/01_fabric_overview/README.md" style="text-decoration: none;">&#9734;</a></summary>
 <!----<summary markdown="span"><strong>Fabric Overview<strong></summary>-->
-<ul>
+    <ul>
         <li><a href="/articles/01_fabric_overview/01_what%20is%20fabric.md">What is Fabric?</a></li>
         <li><a href="/articles/01_fabric_overview/02_fabric_glossary.md">Fabric Glossary</a></li>
-</ul>
+    </ul>
 </details>
 
 <details>
@@ -416,7 +418,7 @@
 <li><a href="/articles/33_data_catalog/07_OrientDB_setup.md">OrientDB Setup</a></li>
 <li><a href="/articles/33_data_catalog/08_catalog_commands.md">Catalog Commands</a></li>
 </details>
-                
+
 <details>
 <summary markdown="span"><strong>JMX Stats<strong><a href="/articles/34_JMX_statistics/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 
