@@ -14,6 +14,6 @@ We would like to share with you that we have just launched the Fabric 6.4.1 mino
 
    Enhancements have been made to the Search functionality’s performance.  
 
-   And much more... The full list can be found in the Release Notes.
+   And much more... The full list can be found in the [Release Notes](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.4/Release%20Notes/V6.4/Fabric_Release%20Notes%20V6.4.1.pdf).
 
 ![image](images/img1.png)
