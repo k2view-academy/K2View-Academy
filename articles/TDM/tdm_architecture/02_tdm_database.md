@@ -96,7 +96,7 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>tasks</td>
-  <td><a href="/articles/TDM/tdm_gui/14_task_overview.md#tdm-tasks-list-window">Tasks list</a></td>
+  <td><a href="/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#tasks">Tasks list</a></td>
 <td>Task</td>
 </tr>
 <tr>
