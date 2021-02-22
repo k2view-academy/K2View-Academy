@@ -33,7 +33,7 @@ When running a TDM task, data from the selected entities is stored and synchroni
 -  Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
    - Extracting and storing an entity's data in Fabric in advance so that requests to copy it into target environments can be implemented without accessing source systems. 
    - Synchronizing data from source systems to get the most updated data on entities when required.
-  - Support for [DataFlux](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks, maintaining different versions of a selected list of entities. For example, saving a version of a customer's list every two hours to back up the data during functional tests. Each version is kept as a separate LUI.
+  - Support for [Data Flux](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks, maintaining different versions of a selected list of entities. For example, saving a version of a customer's list every two hours to back up the data during functional tests. Each version is kept as a separate LUI.
 
   #### Reference Tables
 
