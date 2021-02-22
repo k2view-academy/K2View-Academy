@@ -31,7 +31,6 @@ The snapshot mode will only be used once one of the following actions is trigger
 In most cases the full table synchronization is happening when the truncate mode is set from the studio.
 
 
-
 #### Snapshots Synchronization Mechanism
 
 Each node performs the following snapshot synchronization if instructed in the kafka message. 
