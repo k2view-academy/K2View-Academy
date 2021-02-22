@@ -112,7 +112,7 @@ The Parameters selection supports the parent-child hierarchy relationship betwee
 
 
 
-Click for more information about the [TDM parameters tables and View] created by TDM in the TDM DB to display a hierarchical view of TDM parameters. 
+Click for more information about the [TDM parameters tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) created by TDM in the TDM DB to display a hierarchical view of TDM parameters. 
 
 ### Exclusion List
 
