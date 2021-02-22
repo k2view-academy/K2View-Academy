@@ -249,6 +249,7 @@
 <p><strong>ON</strong>: Run the sync based on the sync method. This is the default mode.</p>
 <p><strong>OFF</strong>: Don't sync.</p>
 <p><strong>FORCE</strong>: Always sync.</p>
+<p><strong>DELTA</strong>: Sync OFF if delta is empty otherwise Sync ON.</p>
 <p>The Fabric Set Sync command is used to set the Sync Mode.</p>
 </td>
 </tr>
