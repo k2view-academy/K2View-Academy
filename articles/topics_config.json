@@ -103,23 +103,23 @@
 			"topics": [
 				{
 					"display name": "TDM Overview",
-					"value": "tdm_overview"
+					"value": "TDM/tdm_overview"
 				},
 				{
 					"display name": "TDM Architecture",
-					"value": "tdm_architecture"
+					"value": "TDM/tdm_architecture"
 				},
 				{
 					"display name": "TDM Configuration",
-					"value": "tdm_configuration"
+					"value": "TDM/tdm_configuration"
 				},
 				{
 					"display name": "TDM Implementation",
-					"value": "tdm_implementation"
+					"value": "TDM/tdm_implementation"
 				},
 				{
 					"display name": "TDM GUI",
-					"value": "tdm_gui"
+					"value": "TDM/tdm_gui"
 				}
 			]
 		},
