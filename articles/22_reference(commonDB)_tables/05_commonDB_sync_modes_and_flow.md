@@ -55,7 +55,7 @@ Two different flows occur for each transaction, depending on whether the update 
 
 ### Short Message Case
 
-The following illustration shows how a Synchronisation Job (Sync Job 2) publishes an update notification and a short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes in the cluster to write the update directly from Kafka to their own SQLite CommonDB copy. 
+The following illustration shows how a Synchronisation Job (Sync Job 1) publishes an update notification and a short message content on the Kafka Queue dedicated to Table 1, subsequently causing all listening nodes in the cluster to write the update directly from Kafka to their own SQLite CommonDB copy. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/08_commonDB_RefSyncShort.png)
 
@@ -63,7 +63,7 @@ The following illustration shows how a Synchronisation Job (Sync Job 2) publishe
 
 ### Long Message Case
 
-The following illustration shows how a Synchronisation Job (Sync Job 1) publishes an update message in the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra. This, subsequently, causes any listening node within the cluster to write the update's content directly from Cassandra into its own SQLite CommonDB copy. 
+The following illustration shows how a Synchronisation Job (Sync Job 2) publishes an update message in the Kafka Queue dedicated to Table T, and how it writes the long message content in Cassandra. This, subsequently, causes any listening node within the cluster to write the update's content directly from Cassandra into its own SQLite CommonDB copy. 
 
 ![image](/articles/22_reference(commonDB)_tables/images/09_commonDB_RefSyncLong.png)
 
