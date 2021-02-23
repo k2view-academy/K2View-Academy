@@ -232,7 +232,7 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
 
   
 
-  [![Previous](/articles/images/Previous.png)](06_tdmdb_cleanup_process.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+  [![Previous](/articles/images/Previous.png)](06_tdmdb_cleanup_process.md)
 
   
 
