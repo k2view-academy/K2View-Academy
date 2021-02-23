@@ -31,15 +31,15 @@ When running a TDM task, data from the selected entities is stored and synchroni
 -  Security, individual encryption on MicroDB or field levels.
 -  Masking capabilities, masking sensitive data when storing entities.
 -  Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
-   - Extracting and storing an entity's data in Fabric in advance so that requests to copy it into target environments can be implemented without accessing source systems. 
+   - Extracting and storing an entity's data in Fabric in advance so that requests to load it into target environments can be implemented without accessing source systems. 
    - Synchronizing data from source systems to get the most updated data on entities when required.
   - Support for [Data Flux](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) tasks, maintaining different versions of a selected list of entities. For example, saving a version of a customer's list every two hours to back up the data during functional tests. Each version is kept as a separate LUI.
 
   #### Reference Tables
 
-Reference or Operational tables that need to be copied as is can be extracted from the source environment and saved into Cassandra under the k2view_tdm [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). These tables can be later copied into selected target environments.
+Reference or Operational tables that need to be copied as is can be extracted from the source environment and saved into Cassandra under the k2view_tdm [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). These tables can be later loaded into selected target environments.
 
-***Click for more information about TDM Reference Handling.***
+[Click for more information about TDM Reference Handling](05_tdm_reference_processes.md)
 
 #### Fabric ETL Capabilities
 
@@ -51,7 +51,7 @@ Reference or Operational tables that need to be copied as is can be extracted fr
 ## TDM  - Data Provisioning Flow
 
 In general, data provisioning can be divided into two main sections:
--   Data provisioning requests created by a [TDM task](/articles/101_test_data_management/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM GUI and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
+-   Data provisioning requests created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM GUI and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
     - **What**, Business Entity to be provisioned like customer, employee, order, product, source and target environments, subset of entities and general request parameters like Sync mode.
     - **When**, When the task needs to be executed. Execute by request or by setting scheduling parameters to execute the task periodically.     
 -   Task execution, a task can be executed manually via the **TDM GUI** or periodically via the **TDM Scheduler** process based on predefined scheduling parameters. 
