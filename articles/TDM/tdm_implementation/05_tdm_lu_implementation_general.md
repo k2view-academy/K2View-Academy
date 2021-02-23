@@ -93,7 +93,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 2. Link the main target LU table to the FABRIC_TDM_ROOT table.
 
-3. Add the **fnDecisionDeleteFromTarget** Decision function to the main target LU tables. Note that this Decision function is under Shared Objects and is imported from the [TDM Library](04_fabric_tdm_library.md).
+3. Add the **fnDecisionDeleteFromTarget** Decision function to the target LU tables. Note that this Decision function is under Shared Objects and is imported from the [TDM Library](04_fabric_tdm_library.md).
 
 4. Link the remaining target LU tables to the main target LU table.
 
