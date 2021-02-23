@@ -24,7 +24,9 @@ Note that if the update is over 1000 rows, Cassandra will also be involved as de
 
 ### Snapshot Mode
 
-The snapshot mode will only be used once one of the following actions is triggered: 
+When an update happening in snapshot mode, the node that requested the update will take the data from Kafka and/or Cassandra and not directly from the node that prepared the snapshot.
+
+The snapshot mode will only triggered by one of the following actions: 
 
 -	Manually, when requested by the user sending a delete request to a Reference Table without a ```where``` statement
 - When selecting the Truncate option in the [Truncate Before Sync]() property field in Fabric Studio (under the Table Properties panel). 
