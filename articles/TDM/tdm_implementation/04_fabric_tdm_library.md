@@ -151,8 +151,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 
 ### Globals
 
-- LU level [Globals](/articles/08_globals/01_globals_overview.md), populate the **ROOT_TABLE_NAME**  Global using the main source table or tables. Several source tables can be populated when separated by a comma. For example: CUSTOMER, ACCOUNT.
-- The **fnCheckInsFound** [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) (attached to the root LU table) validates the source data and verifies that the entity (IID) exists in the main source tables. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
+- LU level [Globals](/articles/08_globals/01_globals_overview.md), populate the **ROOT_TABLE_NAME** Global using the main source table or tables. Several source tables can be populated when separated by a comma. For example: CUSTOMER, ACCOUNT. Populate the **ROOT_COLUMN_NAME** Global using the entity ID's column.
 
 ### LU Tables
 
