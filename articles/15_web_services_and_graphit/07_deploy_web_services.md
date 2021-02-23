@@ -57,25 +57,72 @@ See below the results for different scenarios:
 
 ### Deploy all Web Services  
 
-| lut_name | lut_version   | properties      |
-| -------- | ------------- | --------------- |
-| k2_ws    | 1591772670495 | {'methods': ''} |
+<table>
+<thead>
+<tr>
+<th>lut_name</th>
+<th>lut_version</th>
+<th>properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k2_ws</td>
+<td>1591772670495</td>
+<td>{'methods': ''}</td>
+</tr>
+</tbody>
+</table>
 
 ### Deploy 'wsCustomerInfo’ and ‘wsCustomerInfo2’ Web Services 
 
-| lut_name | lut_version   | properties                |
-| -------- | ------------- | ------------------------- |
-| k2_ws    | 1591772947986 | {methods=wsCustomerInfo2} |
-| k2_ws    | 1591772937531 | {methods=wsCustomerInfo}  |
-| k2_ws    | 1591772670495 | {'methods': ''}           |
+<table class="unchanged rich-diff-level-one">
+<thead>
+<tr>
+<th>lut_name</th>
+<th>lut_version</th>
+<th>properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k2_ws</td>
+<td>1591772947986</td>
+<td>{methods=wsCustomerInfo2}</td>
+</tr>
+<tr>
+<td>k2_ws</td>
+<td>1591772937531</td>
+<td>{methods=wsCustomerInfo}</td>
+</tr>
+<tr>
+<td>k2_ws</td>
+<td>1591772670495</td>
+<td>{'methods': ''}</td>
+</tr>
+</tbody>
+</table>
 
 
 
 ### Deploy All Web Services Again 
 
-| lut_name | lut_version   | properties      |
-| -------- | ------------- | --------------- |
-| k2_ws    | 1591773207364 | {'methods': ''} |
+<table class="unchanged rich-diff-level-one">
+<thead>
+<tr>
+<th>lut_name</th>
+<th>lut_version</th>
+<th>properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k2_ws</td>
+<td>1591773207364</td>
+<td>{'methods': ''}</td>
+</tr>
+</tbody>
+</table>
 
 
 
