@@ -14,17 +14,82 @@ The difference between the POST and PUT APIs can be observed in request URIs:
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-| **Component** | **Description**                               | **Mandatory** | **Example**      | **Default**    |
-| ------------- | --------------------------------------------- | ------------- | ---------------- | -------------- |
-| Domain name   | Domain name                                   | Y             | localhost        |                |
-| PORT          | PORT                                          | Y             | 3213             |                |
-| api           | API                                           | Y             | api              |                |
-| VERSION_NO    | Version number                                | N             | V1.4             | Latest version |
-| LU Name       | Logical unit name or COMMON for common tables | Y             | CUSTOMER  COMMON |                |
-| Iid           | Instance Id                                   | Y             | 1                |                |
-| TABLE_NAME    | Table name for data creation                  | Y             | PAYMENT          |                |
-| token         | Token name                                    | Y             |                  |                |
-| format        | Response format                               | Y             | JSON/XML/CSV     | JSON           |
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>localhost</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VERSION_NO</td>
+<td>Version number</td>
+<td>N</td>
+<td>V1.4</td>
+<td>Latest version</td>
+</tr>
+<tr>
+<td>LU Name</td>
+<td>Logical unit name or COMMON for common tables</td>
+<td>Y</td>
+<td>CUSTOMER COMMON</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Iid</td>
+<td>Instance Id</td>
+<td>Y</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TABLE_NAME</td>
+<td>Table name for data creation</td>
+<td>Y</td>
+<td>PAYMENT</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token name</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Response format</td>
+<td>Y</td>
+<td>JSON/XML/CSV</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
