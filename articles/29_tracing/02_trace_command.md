@@ -8,49 +8,203 @@ For example:
 
 trace ops;
 
-| Operation              | Category  | base_level |
-| ---------------------- | --------- | ---------- |
-| sqlCommand             | database  | info       |
-| saveLuToCassandra      | database  | info       |
-| batchInsert            | database  | info       |
-| fabricPrepareCommand   | commands  | info       |
-| fabricCommand          | commands  | info       |
-| deploy                 | commands  | info       |
-| createLuType           | commands  | info       |
-| jobExecuter            | jobs      | info       |
-| folderPoller           | jobs      | debug      |
-| sftpReader             | jobs      | debug      |
-| jobsReconcile          | jobs      | debug      |
-| jobsScheduler          | jobs      | debug      |
-| jobsPoolExecutorGet    | jobs      | debug      |
-| jobsPoolExecutorSubmit | jobs      | debug      |
-| webservice             | solutions | info       |
-| sync                   | solutions | info       |
-| parser                 | solutions | info       |
-| graphit                | solutions | info       |
-| custom                 | solutions | info       |
-| parallelYield          | yield     | debug      |
-| scopeCommand           | commands  | info       |
-| broadway               | broadway  | info       |
-| broadwayLoops          | broadway  | info       |
-| broadwayData           | broadway  | info       |
+<table class="unchanged rich-diff-level-one">
+<thead>
+<tr>
+<th>Operation</th>
+<th>Category</th>
+<th>base_level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sqlCommand</td>
+<td>database</td>
+<td>info</td>
+</tr>
+<tr>
+<td>saveLuToCassandra</td>
+<td>database</td>
+<td>info</td>
+</tr>
+<tr>
+<td>batchInsert</td>
+<td>database</td>
+<td>info</td>
+</tr>
+<tr>
+<td>fabricPrepareCommand</td>
+<td>commands</td>
+<td>info</td>
+</tr>
+<tr>
+<td>fabricCommand</td>
+<td>commands</td>
+<td>info</td>
+</tr>
+<tr>
+<td>deploy</td>
+<td>commands</td>
+<td>info</td>
+</tr>
+<tr>
+<td>createLuType</td>
+<td>commands</td>
+<td>info</td>
+</tr>
+<tr>
+<td>jobExecuter</td>
+<td>jobs</td>
+<td>info</td>
+</tr>
+<tr>
+<td>folderPoller</td>
+<td>jobs</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>sftpReader</td>
+<td>jobs</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>jobsReconcile</td>
+<td>jobs</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>jobsScheduler</td>
+<td>jobs</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>jobsPoolExecutorGet</td>
+<td>jobs</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>jobsPoolExecutorSubmit</td>
+<td>jobs</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>webservice</td>
+<td>solutions</td>
+<td>info</td>
+</tr>
+<tr>
+<td>sync</td>
+<td>solutions</td>
+<td>info</td>
+</tr>
+<tr>
+<td>parser</td>
+<td>solutions</td>
+<td>info</td>
+</tr>
+<tr>
+<td>graphit</td>
+<td>solutions</td>
+<td>info</td>
+</tr>
+<tr>
+<td>custom</td>
+<td>solutions</td>
+<td>info</td>
+</tr>
+<tr>
+<td>parallelYield</td>
+<td>yield</td>
+<td>debug</td>
+</tr>
+<tr>
+<td>scopeCommand</td>
+<td>commands</td>
+<td>info</td>
+</tr>
+<tr>
+<td>broadway</td>
+<td>broadway</td>
+<td>info</td>
+</tr>
+<tr>
+<td>broadwayLoops</td>
+<td>broadway</td>
+<td>info</td>
+</tr>
+<tr>
+<td>broadwayData</td>
+<td>broadway</td>
+<td>info</td>
+</tr>
+</tbody>
+</table>
 
 ### Create a New Trace 
 
 trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[=TRACE_VALUES]];...';
 
-| parameter                  |            | Description                                                  |
-| -------------------------- | ---------- | ------------------------------------------------------------ |
-| session_scope/global_scope |            | Optional: Set if the trace is on the current session only or is global. Default is global_scope.  |
-| TRACE NAME                 |            | An alpha numeric value (cannot use a reserved sql keyword). |
-| TRACE PARAM=TRACE VALUES   |            | All TRACE _PARAM are optional and are one of the following:   |
-|                            | operations | Operations to monitor. Default is none.                 |
-|                            | resources  | Resources to filter. Default is no filter, all resources under an operation. |
-|                            | level      | Level to use: debug, verbose, info, warning or error. Default is info. |
-|                            | categories | Shortcut that turns on all operations under a category.          |
-|                            | syncWrite  | Perform synchronous writes. Default is async write to files.  |
-|                            | maxCols    | The number of columns to write using the traced data. Default is 10. |
-|                            | maxColLen  | The number of bytes to write for each column. Default is 256.   |
+<table class="unchanged rich-diff-level-one">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>&nbsp;</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>session_scope/global_scope</td>
+<td>&nbsp;</td>
+<td>Optional: Set if the trace is on the current session only or is global. Default is global_scope.</td>
+</tr>
+<tr>
+<td>TRACE NAME</td>
+<td>&nbsp;</td>
+<td>An alpha numeric value (cannot use a reserved sql keyword).</td>
+</tr>
+<tr>
+<td>TRACE PARAM=TRACE VALUES</td>
+<td>&nbsp;</td>
+<td>All TRACE _PARAM are optional and are one of the following:</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>operations</td>
+<td>Operations to monitor. Default is none.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>resources</td>
+<td>Resources to filter. Default is no filter, all resources under an operation.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>level</td>
+<td>Level to use: debug, verbose, info, warning or error. Default is info.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>categories</td>
+<td>Shortcut that turns on all operations under a category.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>syncWrite</td>
+<td>Perform synchronous writes. Default is async write to files.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>maxCols</td>
+<td>The number of columns to write using the traced data. Default is 10.</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>maxColLen</td>
+<td>The number of bytes to write for each column. Default is 256.</td>
+</tr>
+</tbody>
+</table>
 
 example: trace session_scope Test 'level=debug;categories=database;resources=billing,crm;operations=connection;syncWrite;maxCols=3;maxColLen=128;';
 
