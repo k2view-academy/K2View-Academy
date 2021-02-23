@@ -16,16 +16,75 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;LU Name&gt;/&lt;iid&gt;&amp;token=&lt;TOKEN NAME&gt;&amp;[format=json/xml]</p></code>
 
-| **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
-| ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
-| Domain name   | Domain name                                   | Y             | localhost       |                |
-| PORT          | PORT                                          | Y             | 3213            |                |
-| Api           | API                                           | Y             | api             |                |
-| VERSION_NO    | Version number                                | N             | V1.4            | Latest version |
-| LU Name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
-| Iid           | Instance Id                                   | Y             | 1               |                |
-| Token         | API key                                       | Y             |                 |                |
-| Format        | Response format                               | Y             | JSON/XML        | JSON           |
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>localhost</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VERSION_NO</td>
+<td>Version number</td>
+<td>N</td>
+<td>V1.4</td>
+<td>Latest version</td>
+</tr>
+<tr>
+<td>LU Name</td>
+<td>Logical unit name or COMMON for common tables</td>
+<td>Y</td>
+<td>PATIENT COMMON</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Iid</td>
+<td>Instance Id</td>
+<td>Y</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>API key</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Response format</td>
+<td>Y</td>
+<td>JSON/XML</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
@@ -45,18 +104,89 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/lu/&lt;LU Name&gt;/&lt;iid&gt;/&lt;TABLE_NAME&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-| **Component** | **Description**                               | **Mandatory** | **Example**     | **Default**    |
-| ------------- | --------------------------------------------- | ------------- | --------------- | -------------- |
-| Domain name   | Domain name                                   | Y             | localhost       |                |
-| PORT          | PORT                                          | Y             | 3213            |                |
-| Api           | API                                           | Y             | api             |                |
-| VERSION_NO    | Version number                                | N             | V1.4            | Latest version |
-| LU name       | Logical unit name or COMMON for common tables | Y             | PATIENT  COMMON |                |
-| Iid           | Instance Id                                   | Y             | 1               |                |
-| TABLE_NAME    | Table name for data deletion                  | Y             | PAYMENT         |                |
-| WHERE CLAUSE  | Where clause statement                        | Y             | INVOICE_ID=1    |                |
-| token         | API key                                       | Y             |                 |                |
-| format        | Response format                               | Y             | JSON/XML        | JSON           |
+<table class="unchanged rich-diff-level-one">
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>localhost</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VERSION_NO</td>
+<td>Version number</td>
+<td>N</td>
+<td>V1.4</td>
+<td>Latest version</td>
+</tr>
+<tr>
+<td>LU name</td>
+<td>Logical unit name or COMMON for common tables</td>
+<td>Y</td>
+<td>PATIENT COMMON</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Iid</td>
+<td>Instance Id</td>
+<td>Y</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>TABLE_NAME</td>
+<td>Table name for data deletion</td>
+<td>Y</td>
+<td>PAYMENT</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>WHERE CLAUSE</td>
+<td>Where clause statement</td>
+<td>Y</td>
+<td>INVOICE_ID=1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>token</td>
+<td>API key</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Response format</td>
+<td>Y</td>
+<td>JSON/XML</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
@@ -74,16 +204,75 @@ If the request passes through a cache and the Request-URI identifies one or more
 
 <p><code>http://&lt;Domain Name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;COMMON TABLE NAME&gt;?&lt;WHERE CLAUSE&gt;&amp;token=&lt;API Key&gt;&amp;[format=json/xml]</p></code>
 
-| **Component**     | **Description**              | **Mandatory** | **Example**   | **Default** |
-| ----------------- | ---------------------------- | ------------- | ------------- | ----------- |
-| Domain name       | Domain name                  | Y             | localhost     |             |
-| PORT              | PORT                         | Y             | 3213          |             |
-| api               | API                          | Y             | api           |             |
-| COMMON            | Specify that scope is common | Y             | COMMON        |             |
-| COMMON TABLE NAME | Common table name            | N             | ADDRESSES     |             |
-| WHERE CLAUSE      | Where clause statement       | Y             | CITY_ID=1     |             |
-| token             | API key                      | Y             |               |             |
-| format            | Response format              | Y             | JSON/XML      | JSON        |
+<table class="unchanged rich-diff-level-one">
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>localhost</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>COMMON</td>
+<td>Specify that scope is common</td>
+<td>Y</td>
+<td>COMMON</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>COMMON TABLE NAME</td>
+<td>Common table name</td>
+<td>N</td>
+<td>ADDRESSES</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>WHERE CLAUSE</td>
+<td>Where clause statement</td>
+<td>Y</td>
+<td>CITY_ID=1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>token</td>
+<td>API key</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Response format</td>
+<td>Y</td>
+<td>JSON/XML</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
