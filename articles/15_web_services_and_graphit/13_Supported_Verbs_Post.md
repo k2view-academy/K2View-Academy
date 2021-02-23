@@ -17,16 +17,75 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/COMMON/&lt;common table name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-| **Component** | **Description**                                | **Mandatory** | **Example**      | **Default**    |
-| ------------- | ---------------------------------------------- | ------------- | ---------------- | -------------- |
-| Domain name   | Domain name                                    | Y             | 10.21.1.69       |                |
-| PORT          | PORT                                           | Y             | 3213             |                |
-| api           | API                                            | Y             | api              |                |
-| VERSION_NO    | Version number                                 | N             | V1.4             | Latest version |
-| LU Name       | Logical unit name or COMMON for common  tables | Y             | CUSTOMER  COMMON |                |
-| Iid           | Instance ID                                    | Y             | 1                |                |
-| token         | API Key                                        | Y             |                  |                |
-| format        | Response format                                | Y             | JSON/XML         | JSON           |
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>10.21.1.69</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VERSION_NO</td>
+<td>Version number</td>
+<td>N</td>
+<td>V1.4</td>
+<td>Latest version</td>
+</tr>
+<tr>
+<td>LU Name</td>
+<td>Logical unit name or COMMON for common tables</td>
+<td>Y</td>
+<td>CUSTOMER COMMON</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Iid</td>
+<td>Instance ID</td>
+<td>Y</td>
+<td>1</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>token</td>
+<td>API Key</td>
+<td>Y</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>format</td>
+<td>Response format</td>
+<td>Y</td>
+<td>JSON/XML</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
 
  **Example:**
 
