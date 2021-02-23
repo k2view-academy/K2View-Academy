@@ -1,6 +1,6 @@
 # Consent Management Overview
 
-K2View Data Privacy Management module (DPM) covers the end-to-end lifecycle of Consent management, including consent configuration, Customer consent preferences management, Central Consent repository, integration with third parties and more.
+K2View Data Privacy Management module (DPM) covers the end-to-end lifecycle of Consent management, including consent configuration, Customer consent preferences management, Central Consent repository, integration with third parties and more. 
 
 Its main features include:
 
