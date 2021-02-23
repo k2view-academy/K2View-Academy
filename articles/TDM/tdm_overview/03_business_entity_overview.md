@@ -29,8 +29,8 @@ Breaking the BE into several LUs enables maximum flexibility and avoiding duplic
 
 
 
-You can request to copy a list of selected Customer IDs, whereby the TDM task also copies the related ordering, network elements and device data of the selected customers.
-Alternatively, you can request to copy a list of selected Order IDs whereby the TDM task also copies the related network elements and device data of the selected orders.
+You can request to load a list of selected Customer IDs, whereby the TDM task also copies the related ordering, network elements and device data of the selected customers.
+Alternatively, you can request to load a list of selected Order IDs whereby the TDM task also loads the related network elements and device data of the selected orders.
 
 ### Building an LU Hierarchy in a BE
 
@@ -47,7 +47,7 @@ If an LU in a BE has no parent LU, it is named **Root LU** whereby its root enti
 -  The Customer LU is the **Root LU** of the Customer BE.
 -  Each LU has its own LUs. 
 
-When creating a TDM task to copy Customer 1 from the PROD environment, the TDM task must also copy the customer's related billing accounts and orders together with the related network elements and devices of the related orders. 
+When creating a TDM task to load Customer 1 from the PROD environment, the TDM task must also load the customer's related billing accounts and orders together with the related network elements and devices of the related orders. 
 
 The following LUIs are extracted from the source and created in Fabric for Customer 1:
 
@@ -145,7 +145,7 @@ Note that if execution of the parent LU fails, the child LU is not processed and
 
 **Example:**
 
-1. Create a TDM task to copy **Customers 1, 2 and 3**, their orders and related network elements. 
+1. Create a TDM task to load **Customers 1, 2 and 3**, their orders and related network elements. 
 
 2. **Customers' related entities:**
 
