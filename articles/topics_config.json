@@ -180,8 +180,8 @@
 					"value": "27_auditing"
 				},
 				{
-					"display name": "Hardening",
-					"value": "99_fabric_infras/devops"
+					"display name": "Fabric Infrastructure",
+					"value": "99_fabric_infras"
 				}
 			]
 		},
