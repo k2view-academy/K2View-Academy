@@ -43,7 +43,7 @@
 <p><h4>TDM GUI</p>
 </td>
 <td valign="top" width="650 pxl">
-<p>The self-service web application of the TDM product. Used for TDM setup and for creating and executing TDM tasks.</p>
+<p>The self-service web application of the TDM product. Used for TDM setup and for creating, executing and monitoring TDM tasks.</p>
 </td>
 </tr>
 <tr>
