@@ -20,7 +20,7 @@ Note that a given target LU table can be used to delete multiple target tables.
 
 The Customer_ID key can be used to delete Customer, Contract, and Address target tables. Define the TAR_CUSTOMER table to hold the target Customer_ID and use the TAR_CUSTOMER to delete the target tables.
 
-### Adding a Decision Function to the Main Target LU Tables
+### Adding a Decision Function to the Target LU Tables
 
 The target LU tables must be populated when running a TDM task that deletes the entities from the target environment. The target keys must be extracted from the target environment to enable deleting entities and their related data.
 
@@ -28,7 +28,7 @@ If the task does not delete the entities from the target environment, the target
 
 The Broadway [InitiateTDMLoad](10_tdm_generic_broadway_flows.md#initialization) flow sets the **TDM_DELETE_BEFORE_LOAD** Global to **true** if the task must **delete the entities** from the target. Otherwise, this Global is set to **false**.   
 
-Add the **fnDecisionDeleteFromTarget** Decision function imported to the Shared Objects from the [TDM Library](04_fabric_tdm_library.md) to all target tables. 
+Add the **fnDecisionDeleteFromTarget** Decision function imported to the Shared Objects from the [TDM Library](04_fabric_tdm_library.md) to **all target tables**. 
 
 ### Populating Target Tables with the Target Environment
 
