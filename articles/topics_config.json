@@ -192,5 +192,31 @@
 				}
 			]
 		}
+	],
+	"Community": [
+		{
+			"comm display name": "In the Spotlight",
+			"comm display text": "Access the latest development tips, code examples and best practices, regularly updated by the K2View’s community developers",
+			"comm icon": "images/community_icon1.png",
+			"visible": true
+		},
+		{
+			"comm display name": "Q & A",
+			"comm display text": "Ask questions or seek help on Fabric’s implementation. Check our forum that provides a parge range of advices and know-how to help you at any phase of your project’s lifecycle.",
+			"comm icon": "images/community_icon2.png",
+			"visible": true
+		},
+		{
+			"comm display name": "Blogs",
+			"comm display text": "Featuring a set of regularly updated insightful articles aiming at contextualizing your business requirements using K2View Fabric’s capabilities",
+			"comm icon": "images/community_icon3.png",
+			"visible": true
+		},
+		{
+			"comm display name": "Webinars",
+			"comm display text": "Registration for K2View webinars and seminars. The recording of previous webinars will be available for download",
+			"comm icon": "images/community_icon4.png",
+			"visible": true
+		}
 	]
 }
