@@ -121,12 +121,12 @@ The following table lists the TDM tables and their description.
 </tr>
 <tr>
 <td><h4>task_exe_error_detailed</td>
-<td>TDM Execution error table.</td>
+<td>TDM Execution detailed error table.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
 <td><h4>task_exe_error_summary</td>
-<td>TDM Execution error table.</td>
+<td>TDM Execution summary error table.</td>
 <td>Task Execution</td>
 </tr>
 <tr>
