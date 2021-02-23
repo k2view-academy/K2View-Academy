@@ -58,6 +58,8 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 4. Edit the Root functions generated for the LU tables based on the **fnPop_RootTable** function under the [TDM_LIBRARY LU](04_fabric_tdm_library.md#tdm_library-lu):
    
    - Copy the code of the **fnPop_RootTable** into the newly generated Root function of the LU table.
+   - Add the following import to the root function: 
+      - **import java.util.concurrent.atomic.AtomicBoolean;**
    
    - Edit the **String sql** variable to include the DB query on the DB table.
 
