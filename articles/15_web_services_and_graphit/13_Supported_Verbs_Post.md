@@ -104,12 +104,38 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
 <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/&lt;customized Web-Service name&gt;?token=&lt;API Key&gt;&amp;[format=json/xml]</code></p>
 
-| **Component** | **Description** | **Mandatory** | **Example** | **Default** |
-| ------------- | --------------- | ------------- | ----------- | ----------- |
-| Domain name   | Domain name     | Y             | 10.21.1.69  |             |
-| PORT          | PORT            | Y             | 3213        |             |
-| api           | API             | Y             | api         |             |
-
+<table class="unchanged rich-diff-level-one">
+<tbody>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>10.21.1.69</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
@@ -133,12 +159,39 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 * <p><code>http://&lt;Domain name&gt;:&lt;PORT&gt;/api/[VERSION_NO]/authenticate
 
   Generate a JWT digital signed cookie for Web-Services calls on the same session. Next Fabric Web-services calls will not require a token as a parameter. Located under fabric category.
-
-| **Component** | **Description** | **Mandatory** | **Example** | **Default** |
-| ------------- | --------------- | ------------- | ----------- | ----------- |
-| Domain name   | Domain name     | Y             | 10.21.1.69  |             |
-| PORT          | PORT            | Y             | 3213        |             |
-| api           | API             | Y             | api         |             |
+  
+<table class="unchanged">
+<tbody>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>10.21.1.69</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>  
 
 
 **Example:**
@@ -172,12 +225,38 @@ Note that POST is **neither safe nor idempotent** and invoking two identical POS
 
   Run fabric command or a set of fabric commands. Located under fabric category.
 
-| **Component** | **Description** | **Mandatory** | **Example** | **Default** |
-| ------------- | --------------- | ------------- | ----------- | ----------- |
-| Domain name   | Domain name     | Y             | 10.21.1.69  |             |
-| PORT          | PORT            | Y             | 3213        |             |
-| api           | API             | Y             | api         |             |
-
+<table class="unchanged">
+<tbody>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>10.21.1.69</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
@@ -235,22 +314,90 @@ Parameters should be populated in the body in the following structure:
 “parameter name 2”:”value”
 }
 ```
-| **Component**               | **Description**                        | **Mandatory** | **Example**   | **Default**    |
-| --------------------------- | -------------------------------------- | ------------- | ------------- | -------------- |
-| Domain name                 | Domain name                            | Y             | 10.21.1.69    |                |
-| PORT                        | PORT                                   | Y             | 3213          |                |
-| Api                         | API                                    | Y             | api           |                |
-| VERSION_NO                  | Version number                         | N             | V1.4          | Latest version |
-| Customized Web Service name | Name of the Web Service to be executed | Y             | Orders        |                |
-| Format                      | Response format                        | Y             | JSON/XML      | JSON           |
+<table>
+<thead>
+<tr>
+<th><strong>Component</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Default</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain name</td>
+<td>Domain name</td>
+<td>Y</td>
+<td>10.21.1.69</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>PORT</td>
+<td>PORT</td>
+<td>Y</td>
+<td>3213</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Api</td>
+<td>API</td>
+<td>Y</td>
+<td>api</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>VERSION_NO</td>
+<td>Version number</td>
+<td>N</td>
+<td>V1.4</td>
+<td>Latest version</td>
+</tr>
+<tr>
+<td>Customized Web Service name</td>
+<td>Name of the Web Service to be executed</td>
+<td>Y</td>
+<td>Orders</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>Response format</td>
+<td>Y</td>
+<td>JSON/XML</td>
+<td>JSON</td>
+</tr>
+</tbody>
+</table>
 
 ##  Request Header
 
-| **Parameter**              | **Mandatory** | **Value**                                                    |
-| -------------------------- | ------------- | ------------------------------------------------------------ |
-| Token                      | Y             | API Key                                                      |
-| Accept                     | Y             | Json/XML/RAW                                                 |
-| Any additional  parameters | N             | Parameter=value&     Can be provided on both  URL and header |
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th><strong>Mandatory</strong></th>
+<th><strong>Value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Token</td>
+<td>Y</td>
+<td>API Key</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>Y</td>
+<td>Json/XML/RAW</td>
+</tr>
+<tr>
+<td>Any additional parameters</td>
+<td>N</td>
+<td>Parameter=value&amp; Can be provided on both URL and header</td>
+</tr>
+</tbody>
+</table>
 
 **Example:**
 
