@@ -217,7 +217,7 @@ Click for more information about the [TDM task operation modes](/articles/TDM/td
 Although Business Entities are defined in the TDM GUI, the following guidelines must be implemented to support parent-child LU hierarchy:
 
 - Populate the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation object. Note that a parent LU can have several child LUs. Populate a separate record for each child LU with the SQL queries to select the source and the target child IDs.
--  Add the **fnEnrichmentChildLink** function as an enrichment function in addition to **fnCheckInsFound** to the FABRIC_TDM_ROOT root LU table. The enrichment function runs the SQL queries populated in the **trnChildLink** translation on the LU data and populates the [TDM_LU_TYPE_RELATION_EID](#tdm_lu_type_relation_eid) table in the TDM DB using the link of the parent IID to its children IIDs.
+-  Add the **fnEnrichmentChildLink** function as an enrichment function to the FABRIC_TDM_ROOT root LU table. The enrichment function runs the SQL queries populated in the **trnChildLink** translation on the LU data and populates the [TDM_LU_TYPE_RELATION_EID](#tdm_lu_type_relation_eid) table in the TDM DB using the link of the parent IID to its children IIDs.
 
 
 
