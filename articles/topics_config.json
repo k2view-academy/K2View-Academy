@@ -1,0 +1,196 @@
+{
+	"Branches": [
+		{
+			"display name": "Fabric 6.4",
+			"branch name": "Academy_6.4"
+		},
+		{
+			"display name": "Fabric 6.2",
+			"branch name": "Academy_6.2"
+		}
+	],
+	"Groups": [
+		{
+			"group display name": "Fabric Overview & Architecture",
+			"group icon": "images/icon-1.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Fabric Overview",
+					"value": "01_fabric_overview"
+				},
+				{
+					"display name": "Fabric Architecture",
+					"value": "02_fabric_architecture"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Implementation",
+			"group icon": "images/icon-2.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Logical Units",
+					"value": "03_logical_units"
+				},
+				{
+					"display name": "Fabric Studio",
+					"value": "04_fabric_studio"
+				},
+				{
+					"display name": "LU Tables",
+					"value": "06_LU_tables"
+				},
+				{
+					"display name": "LU Tables Population",
+					"value": "07_table_population"
+				},
+				{
+					"display name": "Globals",
+					"value": "08_globals"
+				},
+				{
+					"display name": "Translations",
+					"value": "09_translations"
+				},
+				{
+					"display name": "Enrichment Functions",
+					"value": "10_enrichment_function"
+				},
+				{
+					"display name": "Query Builder",
+					"value": "11_query_builder"
+				},
+				{
+					"display name": "LU Navigation",
+					"value": "12_LU_navigation"
+				},
+				{
+					"display name": "LUDB Viewer and Studio Debug",
+					"value": "13_LUDB_viewer_and_studio_debug_capabilities"
+				},
+				{
+					"display name": "Sync LU Instance",
+					"value": "14_sync_LU_instance"
+				},
+				{
+					"display name": "Fabric Deployment",
+					"value": "16_deploy_fabric"
+				},
+				{
+					"display name": "Broadway",
+					"value": "19_Broadway"
+				},
+				{
+					"display name": "Jobs and Batch Services",
+					"value": "20_jobs_and_batch_services"
+				},
+				{
+					"display name": "Common DB",
+					"value": "22_reference(commonDB)_tables"
+				}
+			]
+		},
+		{
+			"group display name": "Testing Data Management (TDM)",
+			"group icon": "images/icon-3.png",
+			"visible in main": true,
+			"topics": []
+		},
+		{
+			"group display name": "Data Privacy Management (DPM)",
+			"group icon": "images/icon-4.png",
+			"visible in main": true,
+			"topics": []
+		},
+		{
+			"group display name": "Security, Audit and Hardening",
+			"group icon": "images/icon-5.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Credentials",
+					"value": "17_fabric_credentials"
+				},
+				{
+					"display name": "Security",
+					"value": "26_fabric_security"
+				},
+				{
+					"display name": "Auditing",
+					"value": "27_auditing"
+				},
+				{
+					"display name": "Fabric Infrastructure",
+					"value": "99_fabric_infras"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Connectivity to External World",
+			"group icon": "images/icon-6.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "DB Interfaces",
+					"value": "05_DB_interfaces"
+				},
+				{
+					"display name": "Non-DB Interfaces",
+					"value": "24_non_DB_interfaces"
+				},
+				{
+					"display name": "Web Services and Graphit",
+					"value": "15_web_services_and_graphit"
+				},
+				{
+					"display name": "Fabric Change Data Capture",
+					"value": "18_fabric_cdc"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Web Framework Apps",
+			"group icon": "images/icon-7.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Web Framework Apps",
+					"value": "30_web_framework"
+				}
+			]
+		},
+		{
+			"group display name": "Fabric Advanced Configuration",
+			"group icon": "images/icon-8.png",
+			"visible in main": true,
+			"topics": [
+				{
+					"display name": "Troubleshooting",
+					"value": "21_Fabric_troubleshooting"
+				},
+				{
+					"display name": "Transactions Management",
+					"value": "23_fabric_transactions"
+				},
+				{
+					"display name": "Environments",
+					"value": "25_environments"
+				},
+				{
+					"display name": "Cassandra Loader",
+					"value": "28_cassandra_loader"
+				},
+				{
+					"display name": "Tracing",
+					"value": "29_tracing"
+				},
+				{
+					"display name": "LU Storage",
+					"value": "32_LU_storage"
+				}
+			]
+		}
+	]
+}
