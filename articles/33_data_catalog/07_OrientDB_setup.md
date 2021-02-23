@@ -23,15 +23,19 @@ To setup the OrientDB in the **development** environment, do the following:
    </parameters>
    </handler>
    ~~~
+4. Following the instructions in the link bellow add environment variable: "ORIENTDB_HOME" pointing to root of OrientDB folder AKA "C:\K2View\orientdb-3.1.8"
+   https://explainjava.com/set-java-path-and-java-home-windows/
+   
+5. Restart command promt (CMD).
 
-4.The first time you run the OrientDB, you will be asked to create a username and password.
+6.The first time you run the OrientDB, you will be asked to create a username and password.
 
-5. To run the OrientDB:
+7. To run the OrientDB:
 
    * Go to **C:\K2View\orientdb-tp3-3.1.2\orientdb-tp3-3.1.2\bin**.
    * Open the CMD and run the **server.bat**.
 
-6. Once the OrientDB is up and running, the following lines are displayed:
+8. Once the OrientDB is up and running, the following lines are displayed:
 
    ~~~
    INFO  {db=demodb} Gremlin started correctly [OGremlinServerPlugin]
@@ -39,7 +43,7 @@ To setup the OrientDB in the **development** environment, do the following:
    INFO  {db=demodb} OrientDB Server is active v3.1.2 - Veloce (build 8b6ef394ce7b45017e84a65efb9ce7534c56aa8e, branch 3.1.x)
    ~~~
 
-7. Copy the link to the browser to open the OrientDB web application to create a new database.
+9. Copy the link to the browser to open the OrientDB web application to create a new database.
 
    * Note that you can also create a new OrientDB database during the definition of the Data Catalog Interface Type by populating the Database settings.
 
