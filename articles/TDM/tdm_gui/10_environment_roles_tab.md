@@ -51,7 +51,7 @@ When an Environment Type is Both it can have both read and write access to both 
 
   Click for more information about [setting the number of entities on a TDM load task](17_load_task_regular_mode.md#number-of-entities). 
 
-  ### Testers
+### Testers
 
 - Attach testers to the environment's role. The connection of a tester to a testing environment is established by connecting the tester to the environment's role.  
 
