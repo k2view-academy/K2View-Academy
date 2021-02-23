@@ -4,7 +4,7 @@ TDM offers an automated solution for provisioning subsets of Business Entities (
 
 While enterprise IT continues to adopt DevOps to accelerate delivery of solutions to both internal and external customers, one thing still holds them back - provisioning realistic data to test these solutions in a timely manner. With increasing complexity and system interdependencies, testing budgets now consume a large portion of all IT resources, and yet the time required for testing brings the agility of DevOps to a halt.
 
-One of the main challenges of providing real data to testing teams is that data is often split between into different data sources. For example, a Customer may be broken up between Customer Care, Billing, Ordering, Ticketing, and Collection systems. To run functional tests on a Customer in an integrative testing environment, their data must be extracted from all relevant source systems.
+One of the main challenges of providing real data to testing teams is that data is often split between different data sources. For example, a Customer may be broken up between Customer Care, Billing, Ordering, Ticketing, and Collection systems. To run functional tests on a Customer in an integrative testing environment, their data must be extracted from all relevant source systems.
 
 The K2View patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glossary.md#digital-entity) based [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb), a data lake for each Digital Entity instance, ensures smooth data provisioning, based on the company's business needs rather than running a separate copy on each data source.
 
@@ -19,7 +19,7 @@ The K2View patented [Digital Entity](/articles/01_fabric_overview/02_fabric_glos
 - Synthetic data generation, cloning a given entity into the target environment. TDM replaces the sequences of each clone to avoid sequence duplication.
 - Replacement of sequences of provisioned entities to avoid duplication in the target DB. 
 - Automatic data security and masking on an entity-by-entity basis.
-- Updating data from selected entities.
+- Support for up-to-date data of the selected entities.
 - Cross-application integrity.
 - Data Flux features:
   - Users can save (extract) specific versions of a selected list of entities or selected list of metadata (reference) tables.
