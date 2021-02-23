@@ -27,8 +27,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 ### Step 2 - Add the TDM Root Table and the Generic TDM Tables to the LU Schema
 
 1. Add the **FABRIC_TDM_ROOT** LU table to the LU Schema and set it as a [Root table](/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md). 
-2.  Set the **Instance PK** column to **k2_tdm_eid** and verify that the **fnCheckInsFound** enrichment function under Shared Objects is attached to the LU table. 
-    This function validates that the entity (IID) exists in the main source LU tables if the TDM task inserts the entity to the target, and therefore must extract its data from the data source. If the validation fails and entity is not found in the source table, the entity is rejected. 
+2. Set the **Instance PK** column to **k2_tdm_eid**.   
 3. Add the **LU_PARAMS** and  **INSTANCE_TABLE_COUNT**, **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
 4. In Parent LUs, add the **TDM_LU_TYPE_RELATION_EID** and **TDM_LU_TYPE_REL_TAR_EID** relationship tables to the LU Schema and link the tables to the **FABRIC_TDM_ROOT.IID**.
 
@@ -82,7 +81,9 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 6. As a result, if the Sync mode is set to **Do not sync** by the user, or the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, the source LU tables are not populated by the LUI sync.
 
-7. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated. The remaining source LU table also remains empty.
+7. This function also validates if the entity exists in the source tabke. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
+
+8. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated. The remaining source LU table also remains empty.
 
 ### Step 4 - Add the Target LU Tables to the LU Schema
 
