@@ -46,7 +46,7 @@ Fabric relies on a resilient architecture and a strong set of 3rd party technolo
 
 Fabric uses three types of storage engines:
 
-#### 2.1.1 MicroDB ![](/articles/02_fabric_architecture/images/microDBPic.gif)
+#### 2.1.1 MicroDB
 At the core of Fabric storage, Fabric creates and maintains a MicroDB ([Logical Unit](/articles/03_logical_units/01_LU_overview.md)) for each business entity instance. A MicroDB is an SQLite file that supports everything out-of-the box provided by SQLite.
 
 A MicroDB provides several advantages:
@@ -58,13 +58,13 @@ A MicroDB provides several advantages:
 - No business impact whereby providing continued availability of data during major structural modifications.  
 
     
-#### 2.1.2 CommonDB ![](/articles/02_fabric_architecture/images/commonDBPic.gif)
+#### 2.1.2 CommonDB
 The CommonDB is an additional SQLite database schema used for storing [reference tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) common to all MicroDB. For example, a table storing a list of objects to which all MicroDB schemas point to. In a distributed system, one copy of each reference table is stored on each node. Fabric handles their [synchronization](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) across nodes. 
 
 The CommonDB is always made available for queries in every Fabric session. This enables writing JOIN clauses between Common tables and any MicroDB using one SQL query only.
 
 
-#### 2.1.3 Cassandra ![](/articles/02_fabric_architecture/images/cassPic.gif)
+#### 2.1.3 Cassandra
 Fabric uses Cassandra for three main purposes:
 
 - Storage of all MicroDB (LUI) as compressed blob chunks.
@@ -112,14 +112,14 @@ A user / application can connect to Fabric via JDBC or ADO.NET, open a transacti
 
 
 #### 3.2.2 REST API and Web Services
-External sources can also read and write data using standard [REST Web Services](/articles/15_web_services/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric storage.
+External sources can also read and write data using standard [REST Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md), enabling direct CRUD operations into LUIs and commonDb residing in Fabric storage.
 Conversely, Fabric can expose LUI MicroDB or commonDB objects to external queries using a REST API configured, generated and published by the user. These API functions can be invoked either by 3rd party systems or directly from any web browser. A Web Service is defined as a function that needs to be deployed to the K2View Fabric server.
 
 
 #### 3.2.3  CDC (Change Data Capture) using Queue Messaging
 Fabric supports real-time, inbound data updates via Queue Messaging interfaces. Fabric's [Change Data Capture (CDC)](/articles/18_fabric_cdc/01_change_data_capture_overview.md) solution then notifies external systems about any LUI data changes published via the queue messaging interface. 
 
-Any update occurring on the MicroDBs will trigger a [CDC message](articles/18_fabric_cdc/03_cdc_messages.md) onto the queue, allowing subscribing 3rd-party systems to stream the MicroDB updates.
+Any update occurring on the MicroDBs will trigger a [CDC message](/articles/18_fabric_cdc/03_cdc_messages.md) onto the queue, allowing subscribing 3rd-party systems to stream the MicroDB updates.
 
 
 
