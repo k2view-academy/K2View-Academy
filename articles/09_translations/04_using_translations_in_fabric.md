@@ -1,6 +1,6 @@
 # Using Translations in Fabric
 
-Translations can be used in the [Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), a Reference table or a Parser Map when a specific set of Data Transformation rules is required. Translations can also be used in any [Fabric Project functions](/articles/07_table_population/08_project_functions.md) or [Web Services](/articles/15_web_services/01_web_services_overview.md).
+Translations can be used in the [Table Population](/articles/07_table_population/01_table_population_overview.md) of an [LU table](/articles/06_LU_tables/01_LU_tables_overview.md), a Reference table or a Parser Map when a specific set of Data Transformation rules is required. Translations can also be used in any [Fabric Project functions](/articles/07_table_population/08_project_functions.md) or [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md).
 
 [Click for more information about Translations – Code Examples.](/articles/09_translations/05_translations_code_examples.md)
 
@@ -37,7 +37,7 @@ Translations can be used in the [Table Population](/articles/07_table_population
  
 Translations can be used in any [Project functions](/articles/07_table_population/08_project_functions.md) defined in Fabric. 
 * Translations used in an LU function can be defined either on an [Logical Unit](/articles/03_logical_units/01_LU_overview.md) or on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level.
-* Translations used in [Web Services](/articles/15_web_services/01_web_services_overview.md) must be defined on a Shared Objects level.
+* Translations used in [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) must be defined on a Shared Objects level.
 When editing a Java file, two built-in functions are available and displayed in the **Objects** tab.
 
 <table>
