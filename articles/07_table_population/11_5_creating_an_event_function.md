@@ -2,7 +2,7 @@
 
 ### What Is an Event Function?
 
-An Event function is a Project function invoked from the **Events** [LU Schema property](/articles/04_LU_properties.md).
+An Event function is a Project function invoked from the **Events** [LU Schema property](/articles/03_logical_units/04_LU_properties.md).
 
 * An Event function enables running user code upon the completion of a Sync or Delete Instance.
 * The function is triggered on one of the following events:
