@@ -6,7 +6,7 @@ Global variables are defined within **scopes**:
 
 * [Logical Unit](/articles/03_logical_units/01_LU_overview.md), whereby the Global is available within the specific Logical Unit where it is defined.
 * [References Tables](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md)
-* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby a Global variable is available and permeated to all objects in a project under all Logical Units, Reference Tables and [Web Services](/articles/15_web_services/01_web_services_overview.md).
+* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby a Global variable is available and permeated to all objects in a project under all Logical Units, Reference Tables and [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md).
 
 The basic definition aka Fabric Implementation can be overridden at environment, global cluster and session levels.
 
