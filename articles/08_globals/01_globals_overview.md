@@ -9,7 +9,7 @@ Globals are predefined variables that can be accessed by different objects withi
 [Click for more information about Global's override using SET and SET_GLOBAL commands](/articles/08_globals/03_set_globals.md).
 
 The scope of a Global depends on how it is defined, which can be either:
-* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby the Global is available to all objects in a project under all Logical Units, Reference Tables and [Web Services](/articles/15_web_services/01_web_services_overview.md).
+* [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md), whereby the Global is available to all objects in a project under all Logical Units, Reference Tables and [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md).
 * [Logical Unit](/articles/03_logical_units/01_LU_overview.md), whereby the Global is available within the specific Logical Unit where it is defined.
 
 If the same Global is defined at both Shared Objects and Logical Unit levels, the Logical Unit definition is used within the scope of that Logical Unit. Other Logical Units use the Shared Objects definition.
