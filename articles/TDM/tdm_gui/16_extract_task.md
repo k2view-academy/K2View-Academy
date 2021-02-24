@@ -34,7 +34,7 @@ Load or Extract. Set the task type to **Extract**.
 
 ### Set Global Variables 
 
-Check to [override Globals on a task level](22_task_globals_tab.md).
+Check to [override Globals on a task level](23_task_globals_tab.md).
 
 ### Reference 
 
@@ -117,7 +117,7 @@ Notes:
 
 This tab is only displayed for a regular mode task, i.e. the **Entity Versioning** setting is unchecked.  This tab holds the following optional setting: **Request Up to Date Entity**. 
 
-By default, the Requested Up to Date Entity is unchecked. You can check this setting to [override the Sync mode] on a task level and set the Sync mode of the task execution to [Force](articles/14_sync_LU_instance/02_sync_modes.md). A tester can select this option only if their **Read** [role](10_environment_roles_tab.md#role-permissions) enables it.
+By default, the Requested Up to Date Entity is unchecked. You can check this setting to [override the Sync mode] on a task level and set the Sync mode of the task execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md). A tester can select this option only if their **Read** [role](10_environment_roles_tab.md#role-permissions) enables it.
 
 ## Execution Timing
 
