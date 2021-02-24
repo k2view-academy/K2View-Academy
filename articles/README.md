@@ -450,8 +450,8 @@
 <summary markdown="span"><strong>Test Data Management (TDM)</strong><a href="/articles/TDM/README.md" style="text-decoration: none;">&#9734;</a></summary>
 <ul>
 <li><a href="/articles/TDM/tdm_overview/README.md">TDM Overview</a></li>     
-<li><a href="/articles/TDM/tdm_implementation/README.md">TDM Implementation</a></li> 
 <li><a href="/articles/TDM/tdm_gui/README.md">TDM GUI</a></li> 
+<li><a href="/articles/TDM/tdm_implementation/README.md">TDM Implementation</a></li> 
 <li><a href="/articles/TDM/tdm_configuration/README.md">TDM Configuration</a></li> 
 <li><a href="/articles/TDM/tdm_architecture/README.md">TDM Architecture</a></li> 
 </ul>	
