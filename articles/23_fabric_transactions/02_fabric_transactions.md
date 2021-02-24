@@ -2,7 +2,7 @@
 
 ### Overview
 
-Fabric can update a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for a given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_commonDB/01_fabric_commonDB_overview.md) instead of synchronizing the LUI or the Reference table from the source. 
+Fabric can update a specific [LU table](/articles/06_LU_tables/01_LU_tables_overview.md) for a given LUI ([Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id)) in the Fabric database or an entry in the [Reference table](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) instead of synchronizing the LUI or the Reference table from the source. 
 
 The update is performed as follows:
 
