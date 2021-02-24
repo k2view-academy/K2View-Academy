@@ -111,7 +111,7 @@ Click for more information on how the [TDM stores Reference tables in the Cassan
 
 The TDM GUI enables creating [TDM load tasks](/articles/TDM/tdm_gui/24_task_reference_tab.md#reference-tab---load-task) to copy Reference tables that have been successfully extracted into the Cassandra DB. The execution of a load task runs the **TDMReferenceLoader** Broadway flow to copy the task's reference tables to the target environment.
 
-Click for more information about generic [TDM Broadway flows](10_tdm_generic_broadway_flows).
+Click for more information about generic [TDM Broadway flows](10_tdm_generic_broadway_flows.md).
 
 [![Previous](/articles/images/Previous.png)](08_tdm_implement_delete_of_entities.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_tdm_generic_broadway_flows.md)
 
