@@ -1,6 +1,6 @@
-# **Fabric Devops Security**
+# Fabric Devops Security
 
-## General Perspective 
+### General Perspective 
 
 DevOps Information security, as we know it, is struggling considerably to keep up with today's fast-paced DevOps world. DevOps security refers to the discipline and practice of safeguarding an entire DevOps environment through strategies, policies, processes and technology. 
 DevOps has seen a decade of growth and success in many software organizations. DevOps security enables the development and delivery pipeline to move faster, and enhances overall throughput to the system, in a safe manner. 
@@ -9,7 +9,7 @@ Security in DevOps should be built into every part of its lifecycle. Instead of 
 
 K2View has embraced the DevOps perception and has implemented security throughout the DevOps pipeline from the initial design of a project up to its deployment.
 
-## Fabric DevOps Targets 
+### Fabric DevOps Targets 
 
 Fabric includes the following servers: 
 
