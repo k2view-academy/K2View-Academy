@@ -106,20 +106,20 @@
 					"value": "TDM/tdm_overview"
 				},
 				{
-					"display name": "TDM Architecture",
-					"value": "TDM/tdm_architecture"
-				},
-				{
-					"display name": "TDM Configuration",
-					"value": "TDM/tdm_configuration"
-				},
-				{
 					"display name": "TDM Implementation",
 					"value": "TDM/tdm_implementation"
 				},
 				{
 					"display name": "TDM GUI",
 					"value": "TDM/tdm_gui"
+				},
+				{
+					"display name": "TDM Configuration",
+					"value": "TDM/tdm_configuration"
+				},
+				{
+					"display name": "TDM Architecture",
+					"value": "TDM/tdm_architecture"
 				}
 			]
 		},
