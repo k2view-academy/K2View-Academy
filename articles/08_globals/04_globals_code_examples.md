@@ -48,7 +48,7 @@ This example shows how a Global can be used in a [Table Population](/articles/07
 
 ![image](images/08_04_04_GLOBAL_IN_WS.png)
 
-Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services/03_create_a_web_service.md#creating-a-web-service) and use the Globals.
+Open the **Globals** window under **Shared Objects** and [define new **Globals**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) and use the Globals.
 
 This example shows how Globals can be used within a Fabric Web Service.
 
