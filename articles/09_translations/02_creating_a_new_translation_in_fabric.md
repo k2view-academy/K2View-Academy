@@ -4,7 +4,7 @@
 
 A Translation is a Fabric Studio object that transforms data from one set of valid values to another in order to enable the execution of various transformation rules. Translation objects can be used as decision tables in Fabric and can be defined either on a [Shared Objects](/articles/04_fabric_studio/12_shared_objects.md) level or on a [Logical Unit](/articles/03_logical_units/01_LU_overview.md) level. 
 * Translations defined on a Shared Objects level can be used in all objects included in a project. 
-* When a Translation is used for a [Web Services](/articles/15_web_services/01_web_services_overview.md) it must be defined on a Shared Objects level.
+* When a Translation is used for a [Web Services](/articles/15_web_services_and_graphit/01_web_services_overview.md) it must be defined on a Shared Objects level.
 
 ## How Can I Create a New Translation in Fabric?
 1.	Go to **Project Tree** > **Logical Units** > **[LU Name]**, right click **Translations** > **New Translation** to display the [Translation Schema tab](/articles/09_translations/01_translations_overview_and_use_cases.md#translation-schema).
