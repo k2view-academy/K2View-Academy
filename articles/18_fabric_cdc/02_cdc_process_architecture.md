@@ -49,7 +49,7 @@ Note that the [OPTIMISTIC_LOCKING](/articles/23_fabric_transactions/02_fabric_tr
 
 Fabric has built-in integration with Elasticsearch. The CDC_TRANSACTION_CONSUMER jobs starts automatically when deploying an LU with Search indexes. The Jobs UID is **Search**. The CDC consumer job consumes the messages in the Kafka **Search** topic and creates search indexes in Elasticsearch.
 
-[Click for more information about Fabric Search capabilities](cdc_consumers/search).
+[Click for more information about Fabric Search capabilities](cdc_consumers/search/01_search_overview_and_use_cases.md).
 
 ### CDC Transaction Debug 
 
