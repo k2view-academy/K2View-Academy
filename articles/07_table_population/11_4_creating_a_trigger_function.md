@@ -30,7 +30,7 @@ The Trigger function analyzes the change using the above information and execute
 
 ### How Do I Attach a Trigger Function to an LU Table?
 
-A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](articles/03_logical_units/03_LU_schema_window.md) to be executed when there are changes in an LU table's data. 
+A Trigger function must be attached to one or more [LU tables](/articles/06_LU_tables/01_LU_tables_overview.md) in the [LU Schema](/articles/03_logical_units/03_LU_schema_window.md) to be executed when there are changes in an LU table's data. 
 
 Do the following:
 
