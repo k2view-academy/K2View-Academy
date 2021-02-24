@@ -236,7 +236,7 @@ The following table lists the GET commands:
 <h5>GETF</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/11_3_table_population/09_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
