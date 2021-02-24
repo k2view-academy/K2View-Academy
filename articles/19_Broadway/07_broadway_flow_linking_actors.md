@@ -1,6 +1,6 @@
 # Linking Actors
 
-**A Broadway Flow** is a main Broadway object that represents a business process. A flow has several [Stages](16_broadway_flow_overview.md) where each Stage includes one or more [Actors](03_broadway_actor.md). Stages are executed consecutively from left to right whereas the Actors in each Stage of the flow are executed top-down.
+**A Broadway Flow** is a main Broadway object that represents a business process. A flow has several [Stages](02a_broadway_flow_overview.md) where each Stage includes one or more [Actors](03_broadway_actor.md). Stages are executed consecutively from left to right whereas the Actors in each Stage of the flow are executed top-down.
 
 Each actor has [data input and output parameters](03_broadway_actor_window.md#actors-inputs-and-outputs). Input parameters can be populated  by either a:
 
