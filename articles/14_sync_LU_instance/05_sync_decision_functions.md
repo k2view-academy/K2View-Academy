@@ -13,7 +13,7 @@ A Decision function is a Java [project function](/articles/07_table_population/0
   * When defined for a Table Population, the Decision function runs on the defined population.
 
 [Click for more information about Creating a Decision Function.](/articles/14_sync_LU_instance/05_sync_decision_functions.md#how-can-i-create-a-decision-function)\
-[Click for more information about Sync Levels.](h/articles/14_sync_LU_instance/07_sync_levels.md)\
+[Click for more information about Sync Levels.](/articles/14_sync_LU_instance/07_sync_levels.md)\
 [Click for more information about the Skip Sync Method.](/articles/14_sync_LU_instance/09_skip_sync.md)
 
 ### Decision Functions for LUI Sync - Example Use Cases
