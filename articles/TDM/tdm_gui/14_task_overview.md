@@ -21,7 +21,7 @@ A task type can have either of the following task modes:
 ## Who Can Create a Task?
 -  Admin users.
 -  Environment owners who can create a TDM task for their environment.
--  Testers who can create a TDM task for the environments they are attached to by a [role](/10_environment_roles_tab.md):
+-  Testers who can create a TDM task for the environments they are attached to by a [role](10_environment_roles_tab.md):
    - Source environment, testers must be attached to the source environment by a role with [Read](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
    - Target environment, testers must be attached to the target environment by a role with [Write](10_environment_roles_tab.md#read-and-write-and-number-of-entities) access.
 
