@@ -12,7 +12,7 @@ The TDM can create tasks that are executed in TDM environments. Each environment
   - [Environment Globals](12_environment_globals_tab.md), override Globals in an environment.
   - [Exclusion Lists](13_environment_exclusion_lists.md), add lists of entities to be excluded from the TDM tasks in an environment.
 
-Click to read more about [TDM environment setup in Fabric](/articles/TDM/tdm_implementation/20_tdm_fabric_implementation_environments_setup.md).
+Click to read more about [TDM environment setup in Fabric](/articles/TDM/tdm_implementation/tdm_fabric_implementation_environments_setup.md).
   ## Environments List Window
 
 The **Environments** window displays a list of all environments defined in the TDM. Only **Admin users** can create, add or remove environment owners or delete an environment. Environment owners can edit their environment. Other users can open environments for view only purposes.
