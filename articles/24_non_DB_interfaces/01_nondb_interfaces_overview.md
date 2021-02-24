@@ -10,7 +10,7 @@ Fabric distinguishes between DB interfaces and Non-DB interfaces.
 
 **DB interfaces** enable Fabric server connections to databases like the SQL Server, PostgreSQL or Oracle. They are used to access database data and metadata.
 
-[Click for more information about DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md.md).
+[Click for more information about DB Interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 
 **Non-DB Interfaces** are used to define a connection with data sources that are not Databases. The following non-DB interfaces are described:
 
