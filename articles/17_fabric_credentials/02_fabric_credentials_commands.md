@@ -302,7 +302,7 @@ Enables users to give generic access to a given Web Service to access the Fabric
 
 Notes:
 
-- Use the **GRANT OPERATION** command to limit the access of the [Web Service](/articles/15_web_services/01_web_services_overview.md) to a given [LU](/articles/03_logical_units/01_LU_overview.md) or LUI.
+- Use the **GRANT OPERATION** command to limit the access of the [Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md) to a given [LU](/articles/03_logical_units/01_LU_overview.md) or LUI.
 - Use the **GRANT OPERATION** command to grant an access to all Web Services: populate the **Operation** parameter by **ALL_WS**.
 
 Below is a list of GRANT WS_NAME command parameters:
@@ -371,7 +371,7 @@ Below is a list of GRANT WS_NAME command parameters:
 
 #### Web Services Authorization
 
-[Web Service](/articles/15_web_services/01_web_services_overview.md) authorization is performed using the **API Key**:
+[Web Service](/articles/15_web_services_and_graphit/01_web_services_overview.md) authorization is performed using the **API Key**:
 
   - Project Web Services: give permission to the **role** in the Web Service or all Web Services and assign the API Key to the role.
   - Product Web Services: assign the API key to the user. The permissions for Product Web Services are defined by combining the API Key assigned to the user and the permissions of the roles assigned to the user. 
