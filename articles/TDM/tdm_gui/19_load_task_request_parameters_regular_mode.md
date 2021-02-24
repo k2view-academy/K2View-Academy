@@ -17,7 +17,7 @@ By default the **Override Sync Mode** setting is unchecked. When checked, the de
 The following options can be selected to override the Sync mode:
 
 - **Do not Sync Source Data**, get the data from Fabric and do not access the source environment.
-- **Request Up to Date Entity**, set the Sync mode of the task's execution to [Force](/articles/TDM/tdm_gui/articles/14_sync_LU_instance/02_sync_modes.md) to get the most updated data of the processed entities. Testers can select this option only if their **Read** [role](10_environment_roles_tab.md#role-permissions) enables it.
+- **Request Up to Date Entity**, set the Sync mode of the task's execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md) to get the most updated data of the processed entities. Testers can select this option only if their **Read** [role](10_environment_roles_tab.md#role-permissions) enables it.
 
 ### Operation Mode
 
