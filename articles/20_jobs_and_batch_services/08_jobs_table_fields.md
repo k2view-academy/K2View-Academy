@@ -40,7 +40,7 @@ Result:
 </tr>
 <tr>
 <td style="width: 144.091px;">Status</td>
-<td style="width: 444.909px;">One of the following statuses defined&nbsp;<a href="https://github.com/k2view-academy/K2View-Academy/blob/KB_DROP3_20_Jobs_and_Batches_Services_Greg/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#fabric-jobs-status">here</a></td>
+<td style="width: 444.909px;">One of the following statuses defined&nbsp;<a href="/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md#fabric-jobs-status">here</a></td>
 </tr>
 <tr>
 <td style="width: 144.091px;">Time</td>
