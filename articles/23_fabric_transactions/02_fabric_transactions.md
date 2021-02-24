@@ -12,7 +12,7 @@ The update is performed as follows:
 
 Several INSERT, UPDATE or DELETE commands can be executed on the instance ID in the same transaction.
 
-Note that after the update is completed, the data is only available on the current node. It becomes available to other nodes of the [Fabric Cluster](articles/02_fabric_architecture/01_fabric_architecture_overview.md#61-fabric-cluster) after the distribution process is completed. 
+Note that after the update is completed, the data is only available on the current node. It becomes available to other nodes of the [Fabric Cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#61-fabric-cluster) after the distribution process is completed. 
 
 
 ### Update LU Instance
