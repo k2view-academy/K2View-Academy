@@ -71,7 +71,7 @@ if (contrID == "" && adrID == "") {
 
 ![image](images/08_04_05_FUNC_OR_WS.png)
 
-Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.
+Open the **Globals** window under **Shared Objects** and define a [new **Global**](/articles/08_globals/01_globals_overview.md#how-do-i-create-or-edit-a-global) and then [create a **Web Service**](/articles/15_web_services_and_graphit/03_create_a_web_service.md#creating-a-web-service) or a [**Project function**](/articles/07_table_population/08_project_functions.md) that will override the initial value of this Global.
 
 The following examples show how a Global can be overridden in a cluster and per session.
 
