@@ -142,7 +142,7 @@ The **SET** command can be used to set a variable **per session** so that the va
 
 
 
-Click [here](/articles/03_logical_units/05_globals_overrides_priorities.md) for more information and more examples on variable scopes, level and priorities, as reflected also by the SET command.  
+Click [here](/articles/08_globals/05_globals_overrides_priorities.md) for more information and more examples on variable scopes, level and priorities, as reflected also by the SET command.  
 
 
 
@@ -161,7 +161,7 @@ When running the `set;` command without parameters in a Fabric console, the valu
   
 -  Shared Globals are displayed only for lower-level unit object formats and not as standalone values, unless this specifically set only at the session.
 -  Specifying a session variable does NOT create it as Shared Object. Therefore, although it is considered as an available Global variable, it is not displayed under each unit-type if it is not specifically created for it. It is displayed as a standalone variable, without the Global or unit-type prefixes.
--  The command's results reflect the actual values, as a result of calculations of priority **levels**. Click [here](/articles/03_logical_units/05_globals_overrides_priorities.md) for more information and more examples of variable scopes and priorities
+-  The command's results reflect the actual values, as a result of calculations of priority **levels**. Click [here](/articles/08_globals/05_globals_overrides_priorities.md) for more information and more examples of variable scopes and priorities
 
 * The command results display both final and non-final Globals.
 
