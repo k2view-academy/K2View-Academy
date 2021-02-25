@@ -37,7 +37,7 @@ Select the LU table columns to be published to the CDC topic of Broadway.
 
 
 
-[Click for more information about CDC Implementation Steps](/article/18_fabric_cdc/05_cdc_consumers_implementation.md). 
+[Click for more information about CDC Implementation Steps](/articles/18_fabric_cdc/05_cdc_consumers_implementation.md). 
 
 
 
