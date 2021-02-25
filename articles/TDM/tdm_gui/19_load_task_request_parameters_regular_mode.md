@@ -56,7 +56,7 @@ Notes:
 - The **Replace Sequence** setting is not displayed in the following cases:
   - A task with a [Create Synthetic Entities](18_load_task_requested_entities_regular_mode.md#create-synthetic-entities) selection method, since the Synthetic method creates new clones (replicas) of the selected entity and replaces the sequences on each clone.
   - When selecting **Delete Entity without Load** as an operation mode, since the TDM task only deletes the selected entities and does not load new data into the target environment.
-- The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-sequence-creation-flows). 
+- The Replace Sequence must be implemented in the [Fabric implementation](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-4---create-the-TDMOrchestrator.flow-from-the-template). 
 
 
 
