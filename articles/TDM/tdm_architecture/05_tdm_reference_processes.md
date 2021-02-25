@@ -1,6 +1,6 @@
 # TDM Reference Processes
 
-The list of Reference tables available for TDM tasks is populated in the [trnRefList](articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnreflist) translation object.  TDM Extract tasks store the selected Reference data in the Cassandra DB and the TDM Load tasks select the Reference tables from Cassandra and load them into the target. 
+The list of Reference tables available for TDM tasks is populated in the [trnRefList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnreflist) translation object.  TDM Extract tasks store the selected Reference data in the Cassandra DB and the TDM Load tasks select the Reference tables from Cassandra and load them into the target. 
 
 The Cassandra table of each Reference table must be created before running TDM Extract tasks to store data in Cassandra.
 
