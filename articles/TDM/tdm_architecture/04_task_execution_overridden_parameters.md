@@ -34,8 +34,6 @@ The TDM execution process sets the values on the Globals on a [session level](/a
 
 Note that task level Globals have a higher priority than TDM environment level Globals, i.e. if a Global variable is set on both - the task and the related environment levels - the task's Global value is set.
 
-[To check if the Global is set on both- source and target environment].
-
 ### Overriding the Sync Mode on the Task Execution 
 
 When executing a TDM task, set the Sync mode according to the following table:
@@ -199,12 +197,12 @@ When executing a TDM task, set the Sync mode according to the following table:
 </td>
 </tr>
 <tr>
-<td style="width: 150px;" rowspan="3" valign="top" width="150pxl">
+<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
 <p>Do not sync</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 150px;"a rowspan="3" valign="top" width="150pxl">
+<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
 <p>Do not sync source data</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -242,23 +240,12 @@ When executing a TDM task, set the Sync mode according to the following table:
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
-<p>Delete only</p>
-</td>
-<td valign="top" width="130pxl">
-<p>On</p>
-</td>
-<td valign="top" width="380pxl">
-<p>Target LU tables are synced from the target environment.&nbsp;</p>
-</td>
-</tr>
-<tr>
-<td style="width: 150px;" rowspan="3" valign="top" width="150pxl">
+<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
 <p>None</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 150px;" rowspan="3" valign="top" width="150pxl">
+<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
 <p>Do not sync source data</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -295,19 +282,9 @@ When executing a TDM task, set the Sync mode according to the following table:
 </ul>
 </td>
 </tr>
-<tr>
-<td valign="top" width="130pxl">
-<p>Delete only</p>
-</td>
-<td valign="top" width="130pxl">
-<p>On</p>
-</td>
-<td valign="top" width="380pxl">
-<p>Target LU tables are synced from the target environment.&nbsp;</p>
-</td>
-</tr>
 </tbody>
 </table>
+
 
 
 
