@@ -10,7 +10,7 @@ From the <b>Flow</b> screen, click the  ![image](/articles/DPM/images/Figure_7_e
 
 #### To Import a Flow
 
-In the target environment, from the <b>Flows List</b> screen, click ![image](/articles/DPM/images/Figure_7_import_flow_icon.png), located at the upper-right corner of the screen. 
+From the <b>Flows List</b> screen and within the target environment, click ![image](/articles/DPM/images/Figure_7_import_flow_icon.png), located at the upper-right corner of the screen. 
 A dialog box displays, defining information for the import activity. 
 
 ![image](/articles/DPM/images/Figure_7_import_Flow_screen.png)
