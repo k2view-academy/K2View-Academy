@@ -1,26 +1,26 @@
 # K2View DPM Overview
 
-The Data Privacy Management Tool provides an efficient and effective means to administer data privacy regulations such as the European General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), Brazil’s General Data Protection law (LGPD), and others.
+The Data Privacy Management Tool provides an efficient and effective means to administer data privacy regulations, such as the European General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and Brazil’s General Data Protection law (LGPD).
 
-K2View’s DPM tool embodies a flexible system to allow a company to define the types of data requests for the regulations affecting the company’s use of customer data, the processes and flows for how data is tasked to completion to fulfill regulations compliant to one or more data privacy regulators.
+K2View’s DPM tool provides a flexible system that allows a company to define data request types for the regulations affecting the company’s use of customer data, the processes, and flows for how data is tasked to completion to fulfill regulations compliant to one or more data privacy regulators.
 
 ### K2View’s DPM is comprised of two main modules:
 
-**Admin module**: The Admin module is used by the DPM Administrator for the configuration of the tool. The Administrator defines all DPM aspects; such as the supported regulations, the types of requests allowed for each regulation, the task flow required to fulfill each request, customer consent configuration, and more.
+**Admin module**: The Admin module is used by the DPM Administrator for the tool configuration. The Administrator defines all DPM aspects, such as the supported regulations, the types of requests allowed for each regulation, the task flow required to fulfill each request, and customer consent configuration.
 
-**Data subject requests and consent management:** Role-based components that serve different users, such as:
+**Data subject requests and consent management:** Role-based components that serve different users, including:
 
-- Call Center Representatives - responsible for submission of data requests
-- Data Stewards - responsible for fulfillment of data requests
-- Case Owners - responsible for successful completion of the requests administered.
-- Supervisors - administer allocation of Data Requests to Case Owners
+- Call Center Representatives - responsible for submitting data requests
+- Data Stewards - responsible for fulfilling data requests
+- Case Owners - responsible for successful completion of the requests administered
+- Supervisors - responsible for administering allocation of Data Requests to Case Owners
 
-The preceding user-based components cover the end-to-end life cycle of data privacy-related requests including:
+The preceding role-based components cover the end-to-end life cycle of data privacy-related requests, including:
 
 - Submission of a new request
-- Request fulfilment process
+- Request fulfillment process
 - SLA management
-- Management dashboards, and
+- Management dashboards
 - Generation of audit data
 
 
