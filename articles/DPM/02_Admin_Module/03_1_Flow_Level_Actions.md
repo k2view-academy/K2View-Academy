@@ -144,7 +144,7 @@ Use the <b>New Stage</b> ![image](/articles/DPM/images/Figure_8a_plus_icon.png) 
 </tbody>
 </table>
 
-Save the new Stage to open the following screen and define the stage tasks. 
+Save the new Stage to open the following screen and define the Stage Tasks. 
 
  ![image](/articles/DPM/images/Figure_9_Flow_with_a_new_stage_screen.png)
 
