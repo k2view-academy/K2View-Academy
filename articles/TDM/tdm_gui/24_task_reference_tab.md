@@ -26,7 +26,7 @@ The Extract task extracts the selected Reference tables and [saves them into the
 
 ### Regular Mode
 
-Display a list of all Reference tables [extracted into Cassandra for the task's LU and source environment](/articles/TDM/tdm_architecture/05_tdm_%20reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job). Similar to the Extract Task window, a Reference tab displays the **Source Interface Name**, **Schema Name**, and the **LU Name** on each table. You can **Select All**, **Unselect All**, or check a selected list of Reference tables.
+Display a list of all Reference tables [extracted into Cassandra for the task's LU and source environment](/articles/TDM/tdm_architecture/05_tdm_reference_processes.md#tdm-lu---tdmcopyreftablesfortdm-job). Similar to the Extract Task window, a Reference tab displays the **Source Interface Name**, **Schema Name**, and the **LU Name** on each table. You can **Select All**, **Unselect All**, or check a selected list of Reference tables.
 
 ### Data Flux Mode
 
