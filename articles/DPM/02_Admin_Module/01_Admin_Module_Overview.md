@@ -4,12 +4,12 @@
 
 **Overview**
 
-The Admin module provides the means to:
+The Admin module allows you to perform the following tasks.
 - Define regulations covered by the DPM
 - Create the Activities supported for each regulation 
 - Create the Flows, Stages,+ and Tasks needed for the execution of a customer request 
 - Manage User roles.
-- Define customer consent topics, and more.
+- Define customer consent topics
 
 **Admin Menu options**
 
