@@ -11,7 +11,7 @@ T
 <p><strong>Timeout (sec)<strong></p>
 </td>
 <td width="700pxl">
-<p>The timeout in seconds for syncing the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI. </a></p>
+<p>The timeout in seconds for syncing the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui"> LUI. </a></p>
 </td>
 </tr>
 <tr>
@@ -27,7 +27,7 @@ T
 <p><strong>Parameters<strong></p>
 </td>
 <td width="500">
-<p>Settings of the selected sync method. For more details see the <a href="https://github.com/k2view-academy/K2View-Academy/blob/master/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below. &nbsp;</a></p>
+<p>Settings of the selected sync method. For more details see the <a href="/articles/14_sync_LU_instance/04_sync_methods.md#sync-methods-1">Sync Methods section below. &nbsp;</a></p>
 </td>
 </tr>
 <tr>
