@@ -1,5 +1,5 @@
 # Data Editor Schema Viewer
-The Schema Viewer opens after a specific LU or common is selected in the Data Editor [Catalog](04_data_editor_overview.md#catalog-screen) screen. It 
+The Schema Viewer opens after a specific LU or common is selected in the Data Editor Catalog screen. It 
 displays a schema's structure and enables fetching its data. Depending on your selection, either of the following is displayed:
 
 ### LU Tables
