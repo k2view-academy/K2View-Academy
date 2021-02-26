@@ -1,81 +1,82 @@
 ## Customer Consent Management Screen
 
-The consent preferences can be set by each customer by accessing the Consent Management menu option at the Customer menu:
+Each customer can set consent preferences by accessing the Consent Management menu option from the Customer menu.
 
  ![image](/articles/DPM/images/Figure_65_Consent_Management_At_Customer_Level.png)
 
-When accessing this menu option, the customer can review the list of consents, define if to opt-in or opt-out to each of them, or view historical information about opting-in or opting-out activities previously performed.
+When accessing this menu option, the customer can review the list of consents, define whether to opt-in or opt-out to each one, or view historical information about opting-in or opting-out of previously performed activities.
 
  ![image](/articles/DPM/images/Figure_66_Customer_Consent_Management_Screen.png)
 
-In this screen: 
+In this screen:
 
-<table>
+<table style="width: 696px;">
 <tbody>
 <tr>
-<td width="103">
+<td style="width: 106px;" width="103">
 <p><strong>Field</strong></p>
 </td>
-<td width="600">
+<td style="width: 590px;" width="600">
 <p><strong>Description</strong></p>
 </td>
 </tr>
 <tr>
-<td width="103">
-<p>Topic</p>
+<td style="width: 106px;" width="103">
+<p>TOPIC</p>
 </td>
-<td width="600">
+<td style="width: 590px;" width="600">
 <p>The consent topic name.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
-<p>Description</p>
+<td style="width: 106px;" width="103">
+<p>DESCRIPTION</p>
 </td>
-<td width="600">
+<td style="width: 590px;" width="600">
 <p>The consent topic description.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
-<p>Duration</p>
+<td style="width: 106px;" width="103">
+<p>DURATION</p>
 </td>
-<td width="600">
+<td style="width: 590px;" width="600">
 <p>The duration that the consent is considered valid. For every customer, the consent will be considered effective from the moment of opting-in, for the duration that is specified in this field.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
-<p>Effective Date</p>
+<td style="width: 106px;" width="103">
+<p>EFFECTIVE DATE</p>
 </td>
-<td width="600">
+<td style="width: 590px;" width="425">
 <p>The date the customer opted-in for this consent topic.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
-<p>Expiration Date</p>
+<td style="width: 106px;" width="103">
+<p>EXPIRATION DATE</p>
 </td>
-<td width="600">
-<p>The date till which the consent is considered effective. This date is automatically calculated by adding to the effective date the number of months defined by the Duration field.</p>
+<td style="width: 590px;" width="600">
+<p>The date the consent expires. This date is automatically calculated by adding the <strong>EFFECTIVE DATE</strong> to the number of months in the <strong>DURATION</strong> field.</p>
 </td>
 </tr>
 <tr>
-<td width="103">
-<p>Action</p>
+<td style="width: 106px;" width="103">
+<p>ACTION</p>
 </td>
-<td width="600">
-<p>The on/off button allows the customer to opt-in or opt-out from the consent. The default value for this field is &ldquo;opt-out&rdquo;.</p>
+<td style="width: 590px;" width="600">
+<p>The <strong>On</strong>/<strong>Off</strong> slider allows the customer to opt-in or opt-out from the consent.</p>
+<p><strong>Note</strong>: The default value for this field is <strong>Off</strong> (opt-out.)</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-When a user changes the preferences for a specific consent topic from opt-in to opt-out or vice versa, a popup window is presented to confirm the selection. This popup includes the opt-in (or opt-out) text that was defined at the consent configuration. 
+When a user changes consent topic preferences (example: from opt-in to opt-out), a dialog box displays to confirm the selection. This dialog box includes the opt-in or opt-out text defined in the consent configuration. 
 
 ### Consent History
 
-Any change that the customer performed on the consent preferences (opt-in/opt-out) is registered at the system for audit purposes, and is presented to the customer at the Consent History tab:
+Any change that the customer performed in the consent preferences (example: opt-in or opt-out) is registered in the system for audit purposes. The change can be viewed in the Consents History tab.
 
  ![image](/articles/DPM/images/Figure_67_Consent_History.png)
 
