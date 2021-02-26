@@ -8,13 +8,12 @@ The CSR can set consent preferences on behalf of a customer by accessing the Con
 
  ![image](/articles/DPM/images/Figure_68_Consent_Management_At_Representative_Menu.png)
 
-When accessing this menu option, the representative can review the list of consents for a specific customer, opt-in or opt-out to each of them on behalf of this customer or view historical information about opting-in or opting-out activities previously performed for this customer.
+For each customer, the CSR can review the list of consents, opt-in or opt-out of each one, or view historical information about opting-in or opting-out of activities previously performed.
 
-The Consent Management functionality at representative level is equal to this functionality at customer level, the only difference being that the representative should select the customer identification in order to retrieve the information.
+The Consent Management functionality at the CSR level is equal to the functionality at the customer level with the only difference: The CSR should select the customer identification in order to retrieve the information.
 
- ![image](/articles/DPM/images/Figure_69_Representative_Consent_Management_Screen.png)
+ ![image](/articles/DPM/images/Figure_74_Consent_Management_Rep__CustID.png)
 
- As depicted in the figure above, the representative should type the customer identification at the upper-left corner of the screen and retrieve the information for the customer by clicking the “search” button. For more details about the information and activities that can be done in this screen, see the previous entry of Customer Consent Management. 
+As depicted in the figure above, the CSR should enter the <b>Customer ID</b> in the upper-left corner of the screen, and then retrieve the information for the customer by clicking the <b>Search</b> button. For more details, refer to <i>8.3.2 Customer Consent Management Screen</i>. 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/06_Customer_Consent_Management_Screen.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/08_Consent_Repository_History_Audit.md)
-
