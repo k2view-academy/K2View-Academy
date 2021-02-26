@@ -76,7 +76,7 @@ When a user changes consent topic preferences (example: from opt-in to opt-out),
 
 ### Consent History
 
-Any change that the customer performed in the consent preferences (example: opt-in or opt-out) is registered in the system for audit purposes. The change can be viewed in the Consents History tab.
+Any change that the customer performed in the consent preferences (example: opt-in or opt-out) is registered in the system for audit purposes. The change can be viewed in the <b>Consents History</b> tab.
 
  ![image](/articles/DPM/images/Figure_67_Consent_History.png)
 
