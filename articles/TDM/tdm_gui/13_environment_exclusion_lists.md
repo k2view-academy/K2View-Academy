@@ -10,7 +10,7 @@ An environment's exclusion lists are displayed in the **Exclusion Lists tab** in
 
 - To add a new exclusion list to the environment, click **Add Exclusion List**, populate the exclusion list's settings and click **Add**.
 - To open a selected exclusion list, click **Exclusion List** in the exclusion list and then click **Save Changes**. 
-- To delete an exclusion list from the environment, click the [![be_Example](https://github.com/k2view-academy/K2View-Academy/raw/Academy_6.4_TDM/articles/TDM/tdm_gui/images/delete_icon.png)](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.4_TDM/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Exclusion List window. 
+- To delete an exclusion list from the environment, click the [![be_Example](/articles/TDM/tdm_gui/images/delete_icon.png)](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Exclusion List window. 
 
 ## Environment Exclusion List Window 
 
