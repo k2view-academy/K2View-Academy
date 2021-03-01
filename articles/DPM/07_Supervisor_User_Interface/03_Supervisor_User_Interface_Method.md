@@ -1,6 +1,5 @@
 
-
-### Assignment Method
+# Assignment Method
 
 The Assignment method is defined in the upper section of the Resource Management screen: 
 
