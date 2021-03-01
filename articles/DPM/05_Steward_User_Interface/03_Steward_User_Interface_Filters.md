@@ -1,4 +1,4 @@
-### Steward Dashboard Filters:
+# Steward Dashboard Filters
 
 The graphs in the dashboard can be filtered based on a set of parameters displayed at the upper portion of the screen. The filters include:  
 
