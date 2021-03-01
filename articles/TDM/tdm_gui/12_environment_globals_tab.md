@@ -13,7 +13,7 @@ Environment Globals are displayed in the **Environment Globals tab** in the Envi
 
 - To add a new Global to an environment, click **Add Global**, populate the Global's setting and then click **Add**.
 - To open a selected Global, click the **Name** of the Global and then click **Save Changes**. 
-- To delete a Global from an environment, click the [![be_Example](https://github.com/k2view-academy/K2View-Academy/raw/Academy_6.4_TDM/articles/TDM/tdm_gui/images/delete_icon.png)](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.4_TDM/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Global window. The TDM execution process uses the default value of the Global.
+- To delete a Global from an environment, click the [![be_Example](/articles/TDM/tdm_gui/images/delete_icon.png)](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Global window. The TDM execution process uses the default value of the Global.
 
 ## Environment Global Window 
 
