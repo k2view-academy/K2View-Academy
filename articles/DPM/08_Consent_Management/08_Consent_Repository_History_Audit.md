@@ -1,4 +1,4 @@
-## Consent Data Repository, Historical Data and Audit Information
+# Consent Data Repository, Historical Data and Audit Information
 
 The customer consent preferences are stored in the K2View DPM central Consent Management data repository. This data includes both current customer preferences and the user’s change history. The data is used in customer user interfaces, provides information to other applications, and enables historical tracking. The Consent Management data repository also provides detailed information for auditing, research, and reporting purposes.  
 
