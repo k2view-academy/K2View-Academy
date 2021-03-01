@@ -2,7 +2,7 @@
 
 ### What is a Business Entity? 
 
-A Business Entity (BE) represents the main entity of the selected data to be provisioned by TDM.  Business Entities can have multiple [LUs]((/articles/03_logical_units/01_LU_overview.md)) with a flat or a hierarchical structure. For example, a Customer Business Entity can have Customer, Billing, Ordering  and Usage LUs.
+A Business Entity (BE) represents the main entity of the selected data to be provisioned by TDM.  Business Entities can have multiple [LUs](/articles/03_logical_units/01_LU_overview.md) with a flat or a hierarchical structure. For example, a Customer Business Entity can have Customer, Billing, Ordering  and Usage LUs.
 
 -  BEs are defined in the [TDM GUI](/articles/TDM/tdm_gui/04_tdm_gui_business_entity_window.md) and are saved in the [TDM DB](/articles/TDM/tdm_architecture/02_tdm_database.md).
 -  Each LU can be attached to multiple BEs. 
