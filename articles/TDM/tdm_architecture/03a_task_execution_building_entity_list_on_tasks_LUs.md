@@ -2,7 +2,7 @@
 
 The task execution process executes the task's LUs from parent to child. 
 
-Click for more information about the [execution order of hierarchical LUs](03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
+Click for more information about the [execution order of hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
 The task execution process builds an entity list for each LU: 
 
