@@ -1,4 +1,4 @@
-## Managing Users in the Admin Module
+# Managing Users in the Admin Module
 
 For a person to access and perform Activities in the DPM, the user must be defined for this person in the DPM system, and this user should have a Corporate Role assigned to it.  
 The authorized user selects User Management menu option under the Admin menu to manage users and privileges for the DPM system. 
@@ -7,7 +7,7 @@ The authorized user selects User Management menu option under the Admin menu to 
 
 The list of existing users is displayed. For each user, the user ID, username and email are shown. In the Corporate Role column, the list of Corporate Roles assigned to this user is displayed. Each user can have multiple Corporate Roles, and the functionality assigned to the user reflects the sum of all options enabled under each assigned role. 
 
-### Create a new user
+## Create a new user
 
 Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to add a user to the system. The “Create New User” screen is displayed. 
 
@@ -85,7 +85,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to 
 </table>
 
 
-### Edit or Delete a User
+## Edit or Delete a User
 
 Use the  ![image](/articles/DPM/images/Figure_29_a_delete_icon.png) button to delete a User. 
 Use the  ![image](/articles/DPM/images/Figure_29_b_edit_icon.png) button to edit the name, email address and Corporate Roles assigned to a User.    
