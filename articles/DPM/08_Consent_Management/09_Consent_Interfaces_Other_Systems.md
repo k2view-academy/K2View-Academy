@@ -1,6 +1,4 @@
-
-
-## Consent Data Ingestion to/from Other Systems
+# Consent Data Ingestion to/from Other Systems
 
 The configurable integration and ingestion capabilities of K2View’s platform provide a strong and flexible mechanism for consent data ingestion to other systems, both inside and outside the corporate systems. 
 
@@ -29,13 +27,13 @@ The integration in both directions is based on the data format expected by the s
 
 Acquiring data back to the corporate data lake is fully supported. The integration method can be based on any of the previously explained options, and the data layout can be configured to any format the data lake expects to receive.
 
-### Acquire and Publish in Real-Time
+## Acquire and Publish in Real-Time
 
 Using K2View DPM allows you to maintain the consents information obtained, updated and published in real-time. Consent preferences can be updated directly through the DPM user interface, by calling DPM REST APIs, and through methods such as acquiring data based on streaming. These options allow DPM to be updated in real-time on any update.
 
 In the same manner that customer preference changes are updated in DPM, changes to other client applications are configurable in real-time, regardless of the method used by the subscriber to update the data. 
 
-### Consent Preferences Reminders
+## Consent Preferences Reminders
 
 DPM can integrate with your corporate customer communication management system to trigger reminders to users to revisit their consent preferences. Reminder triggering can be timebound or in accordance with other conditions based on customer attributes, consent topic attributes, or other criteria, depending upon the project requirements. Two-way integration is provided, so DPM can acquire policy information defined in other systems as part of the communication triggering process. 
 
