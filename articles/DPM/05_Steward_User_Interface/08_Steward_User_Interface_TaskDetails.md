@@ -1,4 +1,4 @@
-## Task Details
+# Task Details
 
 The Task Details screen provides the Steward a view of the task details, from which notes can be added or the task can be marked “Complete”.  
 
