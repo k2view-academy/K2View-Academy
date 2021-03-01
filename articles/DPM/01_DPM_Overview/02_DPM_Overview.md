@@ -4,7 +4,7 @@ The Data Privacy Management Tool provides an efficient and effective means to ad
 
 K2View’s DPM tool provides a flexible system that allows a company to define data request types for the regulations affecting the company’s use of customer data, the processes, and flows for how data is tasked to completion to fulfill regulations compliant to one or more data privacy regulators.
 
-### K2View’s DPM is comprised of two main modules:
+## K2View’s DPM is comprised of two main modules:
 
 **Admin module**: The Admin module is used by the DPM Administrator for the tool configuration. The Administrator defines all DPM aspects, such as the supported regulations, the types of requests allowed for each regulation, the task flow required to fulfill each request, and customer consent configuration.
 
