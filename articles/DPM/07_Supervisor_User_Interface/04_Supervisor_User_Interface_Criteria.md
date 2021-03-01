@@ -1,6 +1,5 @@
 
-
-### Assignment Criteria 
+# Assignment Criteria 
 
 The Assignment Criteria is defined in the lower section of the Resource Management screen:
 
