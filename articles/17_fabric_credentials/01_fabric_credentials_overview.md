@@ -15,7 +15,7 @@ User access control management can be performed using either:
 
 - [Fabric commands for user access management](/articles/17_fabric_credentials/02_fabric_credentials_commands.md).
 
-- Web Admin UI
+- [Web Admin UI](/articles/30_web_framework/03_web_admin_application.md)
 
 ##  List of permissions 
 Roles are also used to maintain consistency across Fabric and be assigned with many or all of the following permission and actions types:
@@ -80,7 +80,8 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 
 <tr>
 <td width="300pxl">
-<p>DEPLOY/DEPLOY_ENVIRONMENTS</p>
+<p><strong>DEPLOY/DEPLOY_ENVIRONMENTS</strong>strong></p>
+
 </td>
 <td width="600pxl">
 <p>Ability to run the deploy command on a project or entire environment</p>
@@ -126,7 +127,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 <p>Allows above-mentioned permissions</p>
 </td></tr>
 </table>
-  
+
 
 ## K2Auth Tables
 
