@@ -1,4 +1,4 @@
-## Customer View Requests  
+# Customer View Requests  
 
 The customer can view requests by either selecting the “Requests List” menu option, or by selecting the “View Requests” options from the Dashboard. The requests listed include both completed requests and in-progress requests.
 
