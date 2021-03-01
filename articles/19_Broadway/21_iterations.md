@@ -60,7 +60,7 @@ Note that combining the link types changes the data flow as follows:
 - Elements connected by an **Iterate** link type, return the value of the **current** iteration.
 - Elements connected by a **Value** (or **First**) link type, return the value of the **first** iteration during all iterations.
 
-[Click for more information about Complex Iteration Flows](/articles/19_Broadway/21a_iterations_addnl.md).
+[Click for more information about Complex Iteration Flows](/articles/19_Broadway/21a_complex_iteration_flows.md).
 
 ### How Can I Create a Nested Iteration?
 

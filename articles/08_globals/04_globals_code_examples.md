@@ -42,7 +42,7 @@ Open the **Globals** window under a **Logical Unit** and [define two new **Globa
 
 This example shows how a Global can be used in a [Table Population](/articles/07_table_population/01_table_population_overview.md). Since the SOURCE_PRODUCT_VERSION and ACTIVITY_NOTE Globals are defined in the LU’s Globals list in the **Globals.java** file, they are part of the LU’s scope and therefore can be used by the Table Population in the same LU.
 
-[Click to display an example of Globals under a Logical Unit in the Demo project.](/articles/demo_project)
+[Click to display an example of Globals under a Logical Unit in the Demo project.](/articles/demo_project/README.md)
 
 ### Example of Using a Global in a Fabric Web Service
 
@@ -65,7 +65,7 @@ if (contrID == "" && adrID == "") {
 ~~~
 
 
-[Click to display an example of Globals under Shared Objects in the Demo project.](/articles/demo_project)
+[Click to display an example of Globals under Shared Objects in the Demo project.](/articles/demo_project/README.md)
 
 ### Example of Overriding a Global in a Function or a Web Service
 

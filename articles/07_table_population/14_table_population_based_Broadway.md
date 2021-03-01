@@ -108,6 +108,6 @@ Note that for the population to be effective on the server side, LU deployment i
 
 [Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
-[Click to display an example of a population flow in the Demo project.](/articles/demo_project)
+[Click to display an example of a population flow in the Demo project.](/articles/demo_project/README.md)
 
 [![Previous](/articles/images/Previous.png)](13_LU_table_population_execution_order.md)
