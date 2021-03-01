@@ -6,7 +6,7 @@ An environment's products are displayed in the Environment window's **Products t
 
 - To add a new product to an environment, click **Add Product**, populate the product's setting and then click **Add**.
 - To open a selected product, click the **Name** of the product and then click **Save Changes**. 
-- To delete a product, click the [![be_Example](https://github.com/k2view-academy/K2View-Academy/raw/Academy_6.4_TDM/articles/TDM/tdm_gui/images/delete_icon.png)](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.4_TDM/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Product window.
+- To delete a product, click the [![be_Example](/articles/TDM/tdm_gui/images/delete_icon.png)](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Product window.
 
 ## Environment Product Window 
 
