@@ -89,7 +89,7 @@ The following defines each column within the Consents table.
 
 
 
-#### Consent Categories
+## Consent Categories
 
 Consents are grouped under user-defined Categories for better organization. Categories are defined by the Administrator when creating a new consent, as described in <i>8.2.2 Create New Consent Topic</i>. The Category name can be altered by clicking its respective <b>Edit</b> button under the <b>ACTIONS</b> column.
 
