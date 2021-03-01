@@ -1,14 +1,14 @@
-### Export and Import Flow
+# Export and Import Flow
 
 Flows generated within one environment can be exported and then imported into another environment. 
 
 This functionality lets you create and test a Flow in one environment, and then effortlessly transfer it to another one. For example, you can export a Flow from an Acceptance Test environment and import it into a Production environment. 
 
-#### To Export a Flow
+## To Export a Flow
 
 From the <b>Flow</b> screen, click the  ![image](/articles/DPM/images/Figure_7_export_flow_icon.png)  icon, located on the right-hand side of the Flow name. This creates a JSON file containing the Flow configuration, which can be imported into the target environment.
 
-#### To Import a Flow
+## To Import a Flow
 
 From the <b>Flows List</b> screen and within the target environment, click ![image](/articles/DPM/images/Figure_7_import_flow_icon.png), located at the upper-right corner of the screen. 
 A dialog box displays, defining information for the import activity. 
