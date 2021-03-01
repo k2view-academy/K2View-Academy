@@ -1,6 +1,6 @@
 
 
-## Customer Dashboard
+# Customer Dashboard
 
 When a customer logs into the DPM user interface, the first screen displayed is the Customer Dashboard. The Dashboard includes the following items:
 
