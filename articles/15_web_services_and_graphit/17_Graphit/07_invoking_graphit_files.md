@@ -32,7 +32,7 @@ Using the grSQL Graphit file and Customer_Id as input parameters:
  
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/48_invoking_graphit_files.PNG)
 
-After deploying and invoking the Web Service,![](/articles/15_web_services_and_graphit/17_Graphit/images/45_graphit_with_parameters.PNG) open Swagger and check that the Customer_id has been successfully parsed.
+After deploying and invoking the Web Service,![](/articles/15_web_services_and_graphit/17_Graphit/images/45_graphit_with_parameters.png) open Swagger and check that the Customer_id has been successfully parsed.
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/46_graphit_with_parameters.PNG)
 
 
