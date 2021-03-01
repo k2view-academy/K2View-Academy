@@ -1,4 +1,4 @@
-## Stages Management
+# Stages Management
 
 The Stages comprising a Flow are shown in the bar below the Flow header. An example follows.  
 
@@ -10,7 +10,7 @@ The Stages comprising a Flow are shown in the bar below the Flow header. An exam
 The duration of each Stage is marked by the yellow tag at the top of the Stage arrow. This duration is based on the SLAs of the tasks within the Stage. The duration takes into consideration the order and dependencies of the tasks included in each Stage.
 The Stage name and description can be changed as long as the Flow is not marked as Completed. Edit this information by using the   ![image](/articles/DPM/images/Figure_11a_edit_stage_icon.png) button, located at the right side of the Stage header section. 
 
-### Add/Edit a Task
+## Add/Edit a Task
 
 A Stage is composed of one or more Tasks. Each Task performs a specific action in the Customer Request Fulfilment process. Examples of Tasks are provided next.
 
