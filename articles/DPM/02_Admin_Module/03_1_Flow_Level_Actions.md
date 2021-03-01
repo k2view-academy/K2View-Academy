@@ -1,4 +1,4 @@
-## Flow Level Actions
+# Flow Level Actions
 
 On the right-hand side of the Flow name are icons that respresent the available actions for that Flow. Each icon and its corresponding description are outlined in the following table. 
 
@@ -100,7 +100,7 @@ Each information item is described in the following table.
 </table>
 
 
-### Add a Stage
+## Add a Stage
 
 Use the <b>New Stage</b> ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on the left side of the Flow screen to add a new Stage. The user is prompted to define a <b>Stage Name</b> and <b>Stage Description</b>, as shown in the following figure and description table.
 
