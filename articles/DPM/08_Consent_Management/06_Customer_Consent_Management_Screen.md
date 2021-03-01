@@ -1,4 +1,4 @@
-## Customer Consent Management Screen
+# Customer Consent Management Screen
 
 Each customer can set consent preferences by accessing the Consent Management menu option from the Customer menu.
 
@@ -74,7 +74,7 @@ In this screen:
 
 When a user changes consent topic preferences (example: from opt-in to opt-out), a dialog box displays to confirm the selection. This dialog box includes the opt-in or opt-out text defined in the consent configuration. 
 
-### Consent History
+## Consent History
 
 Any change that the customer performed in the consent preferences (example: opt-in or opt-out) is registered in the system for audit purposes. The change can be viewed in the <b>Consents History</b> tab.
 
