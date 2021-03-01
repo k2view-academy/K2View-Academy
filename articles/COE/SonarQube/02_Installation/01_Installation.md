@@ -32,7 +32,7 @@
 	**except** of *sonar-java-plugin-\<version>.jar.*
 
 
-**4. [Download](https://github.com/k2view-academy/K2View-Academy/tree/Academy_6.2/articles/COE/SonarQube/02_Installation) and copy the plugin Snapshots**   
+**4. [Download](/articles/COE/SonarQube/02_Installation) and copy the plugin Snapshots**   
 	*java-custom-rules-\<version>-SNAPSHOT* & *sonar-xml-plugin-\<version>-SNAPSHOT*  
 	**to** 
 	*C:\sonarQube\sonarqube-\<version>\extensions\plugins.*
@@ -54,7 +54,7 @@
  	
 	Follow below steps in order to import k2view customized QPs.  
    	
-	- [Download](https://github.com/k2view-academy/K2View-Academy/tree/Academy_6.2/articles/COE/SonarQube/02_Installation) k2view_profiles.zip 
+	- [Download](/articles/COE/SonarQube/02_Installation) k2view_profiles.zip 
 	  and extract XML and Java profiles and save the in temporary place.
    	- Open SonarQube UI, Go to Home Page --> Quality Profiles --> Restore
 	- You will be asked to choose a back up file, choose the files you extracted for XML and Java.  
