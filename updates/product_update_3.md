@@ -12,4 +12,4 @@ Start by [browsing the Knowledge Base topics](https://support.k2view.com/Knowled
 
 
 
-![image](images/img7.png)
+<img src="images/img7.png" alt="image" style="zoom:67%;" />

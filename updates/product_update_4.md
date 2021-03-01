@@ -14,4 +14,4 @@ We would like to share with you that we have just launched the Fabric 6.4.1 rele
    
    And much more... The full list can be found in the [Release Notes](https://support.k2view.com/Academy_6.4/Release%20Notes/V6.4/Fabric_Release%20Notes%20V6.4.1.pdf.html).
 
-![image](images/img1.png)
+<img src="images/img1.png" alt="image" style="zoom:67%;" />
