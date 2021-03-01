@@ -1,6 +1,6 @@
 
 
-## Case Owner Dashboard
+# Case Owner Dashboard
 
 When a member of the Case Owners group logs into the DPM system, the initial screen presented is the Case Owner Dashboard:
 
@@ -8,7 +8,7 @@ When a member of the Case Owners group logs into the DPM system, the initial scr
 
 The dashboard provides an overall status of the requests currently in process in the DPM system. Based on the information presented in this screen the case owner can identify bottlenecks in the process and evaluate risk of missed SLAs.
 
-### Case Owner Dashboard Filters:
+## Case Owner Dashboard Filters
 
 The graphs in the dashboard can be filtered based on a set of parameters that appear at the upper part of the screen. The filters include:
 
@@ -22,7 +22,7 @@ The graphs in the dashboard can be filtered based on a set of parameters that ap
 
 The filter selection impacts the information displayed in the totals and graphs presented at the bottom sections of the dashboard.
 
-### Case Owner Dashboard Totals:
+## Case Owner Dashboard Totals
 
 The totals in the dashboard reflect the list of DPM Requests that match the selection criteria specified by the dashboard filters:
 
@@ -34,7 +34,7 @@ The totals in the dashboard reflect the list of DPM Requests that match the sele
 
 Selecting each of those totals takes the user to the “Requests List” screen, that presents Requests that answer the conditions of this total.
 
-### Case Owner Graphs:
+## Case Owner Graphs
 
 - Open Requests per regulation – Provides a view of the distribution of the open requests per Regulation.
 - Open Requests Per Activity – Provides a view of the distribution of the open requests per Regulation and Activity type.
