@@ -19,7 +19,7 @@ The following example shows how an **ErrorHanlder** Actor is used as an error ha
 The following example shows how different types of errors are handled whereby error handling is performed according to the order of the Actor's execution.
 
 * Suppress the **Unique Constraint** SQL error.
-* Call the **dbCommandFlow** [Inner Flow](../22_broadway_flow_inner_flows) on any other exception.
+* Call the **dbCommandFlow** [Inner Flow](../22_broadway_flow_inner_flows.md) on any other exception.
 
 ![image](../images/99_actors_06_3.PNG)
 
