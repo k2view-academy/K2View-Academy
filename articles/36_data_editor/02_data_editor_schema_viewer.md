@@ -13,8 +13,10 @@ This screen enables viewing the LU schema structure and fetching an LUI of a spe
 The schema's tables are shown in a top-down nested tree, starting from the LU's root table. The schema structure can be viewed via the [Studio LU Scheme Window](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema) as well as in the [Data Catalog web app](/articles/33_data_catalog/01_data_catalog_overview.md) which also displays the data flows. 
 
 * Each table has:
+
   * Input, its predecessor in the hierarchy and their linkage field/s.
   * Output (optional), the linkage field/s to its linked tables. 
+  
 * Each table links to the table Data Viewer screen.
 * The schema name appears in the screen title as well as in the breadcrumbs in the top Data Editor Catalog bar.  
 
