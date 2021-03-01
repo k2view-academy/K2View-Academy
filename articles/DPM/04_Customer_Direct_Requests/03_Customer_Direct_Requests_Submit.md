@@ -1,4 +1,4 @@
-## Customer Submits a Request
+# Customer Submits a Request
 
 When a customer selects “New Request", the system displays the Request Details screen. The list of requests type and the information that should be provided for each of them is defined by implementation using the Admin module.
 
