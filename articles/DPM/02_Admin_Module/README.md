@@ -3,10 +3,9 @@
 
 * [Admin Module Overview](/articles/DPM/02_Admin_Module/01_Admin_Module_Overview.md)  
 * [DPM Configuration](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md) 
-* [Flows](/articles/DPM/02_Admin_Module/03_Flows.md) 
-
-  * [Flow Level Actions](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md) 
-  * [Flow Export and Import](/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md) 
+* [Flows Overview](/articles/DPM/02_Admin_Module/03_Flows.md) 
+* [Flow Level Actions](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md) 
+* [Flow Export and Import](/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md) 
 * [Stages](/articles/DPM/02_Admin_Module/04_Stages.md) 
 * [Tasks](/articles/DPM/02_Admin_Module/05_Tasks.md) 
 * [Reminders](/articles/DPM/02_Admin_Module/06_Reminders.md) 
