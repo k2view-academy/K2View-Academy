@@ -1,4 +1,4 @@
-### Create New Consent Topic
+# Create New Consent Topic
 
 Click the  ![image](/articles/DPM/images/Figure_64a_New_Topic_Icon.png) button at the top-right of the screen in order to configure a new consent topic.
 
