@@ -131,7 +131,7 @@ The following table details the options for the Task tab.
 </table>
 
 
-##### Conditional Dependent Task: 
+## Conditional Dependent Task 
 
 When the “Conditional Dependent Task” is switched on, the Tasks Tab changes to present the properties that should be configured in this case, as shown by the next image and its corresponding table. 
 
