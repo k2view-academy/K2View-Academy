@@ -1,4 +1,4 @@
-## Representative Submits a Request
+# Representative Submits a Request
 
 A representative can submit a request on behalf of a customer, using the “Submit a Request” button located on the search screen, or by using the menu on the left. The list of requests by type and the information to be provided for each of request, is defined by implementation using the Admin module.
 
