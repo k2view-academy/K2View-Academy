@@ -1,7 +1,5 @@
 
 
-![image](/articles/images/welcome_to_wiki.png)
-
 ## DPM Admin Module 
 
 
