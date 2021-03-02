@@ -80,7 +80,7 @@ Roles are also used to maintain consistency across Fabric and be assigned with m
 
 <tr>
 <td width="300pxl">
-<p><strong>DEPLOY/DEPLOY_ENVIRONMENTS</strong>strong></p>
+<p><strong>DEPLOY/DEPLOY_ENVIRONMENTS</strong></p>
 
 </td>
 <td width="600pxl">
