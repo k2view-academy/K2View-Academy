@@ -29,9 +29,39 @@ The Actor Editor can be used to create a new inherited Actor or modify an existi
 3. Debug the Actor by running it from the Main menu toolbar. The Actor's input parameters can be set using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md). 
 4. Save the Actor. The change impacts every flow where this Actor is used.  
 
-#### Example of New Actor Creation
+### How Do I Create a New Actor from Scratch?
+
+Broadway enables creating an Actor that inherits from a custom Java class rather than from another Actor.
+
+**To create** a new Actor from scratch, do the following:
+
+1. Start from creating your own Java class. Right click the **Java** folder in the Project tree either in the Shared Object or under the Logical Unit and click **New Java File**.
+
+   ![image](images/99_10_editor_2.PNG)
+
+2. Define the class as follows to inherit the core Actor's functionality:
+
+   ~~~java
+   public class <class_name> implements Actor {
+   }
+   ~~~
+
+3. Once the Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
+
+4. Populate the **Class** with your Java's path. For example, when the Java class is located under the Logical Unit, the class is:
+
+   ~~~java
+   com.k2view.cdbms.usercode.lu.<lu_name>.<class_name>
+   ~~~
+
+5. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition.
+
+### Examples of New Actor Creation
+
+**New Actor Which Inherits from Existing Actor**
 
 Let's create a new **CheckMaxVal** Actor that inherits from a **JavaScript** Actor, receives two integers and returns their maximum value. Do the following:
+
 1.  Right click the **Broadway** folder in the Project tree and click **New Actor**.
 2. Populate the **CheckMaxVal** Actor's name and click **OK**.
 3. Define the Actor as follows:
@@ -39,8 +69,17 @@ Let's create a new **CheckMaxVal** Actor that inherits from a **JavaScript** Act
    * Click![dots](images/99_19_dots.PNG)in the **Parent** field to select the parent using the **Add Actors** window.
    * Populate the **script** input argument with the regex: **a > b ? a : b**.
    * Click **Add Input** to add two input arguments and update their names to **a** and **b**.     
-  ![image](images/99_10_editor_1.PNG)
+    ![image](images/99_10_editor_1.PNG)
 4. Set the values of an Actor's input parameters using the [Debug / Run Arguments](25_broadway_flow_window_run_and_debug_flow.md) in the Main menu toolbar and debug the Actor.
 5. Once the debug has finished, close the Actor Editor and add the Actor to the required flow.
 
+**New Actor Which Inherits from Custom Java Class**
+
+When creating a new Actor which inherits from custom Java class, do all the steps until the selection of **Parent**. Instead, populate the **Class** with your customer Java class name. Then define the required input and output arguments. 
+
+​		![image](images/99_10_editor_3.PNG)
+
+
+
 [![Previous](/articles/images/Previous.png)](27_broadway_data_inspection.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](29_recovery_point.md)
+
