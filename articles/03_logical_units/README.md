@@ -2,7 +2,7 @@
 
 <strong>Logical Unit (LU)<strong>
 <ul>
-      <li><a href="/articles/03_logical_units/01_LU_overview.md">LU Overview</a></li>
+      <li><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit Overview</a></li>
       <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit Flow</li>
 <li><a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema Window</li>
 <li><a href="/articles/03_logical_units/04_LU_properties.md">LU Properties</a></li>
