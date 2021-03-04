@@ -165,8 +165,12 @@ Updates properties of an existing Job:
   - Time interval, HH:MM:SS, run every X time.
   - Cron, <strong>crontab</strong> command: e.g. 23 0-20/2 03 12 2. At minute 23 past every 2nd hour from 0 through 20 on day of month 3 and on Tuesday in December.
 - ARGS, string representing a JSON that passes additional arguments to the update Job command. For example {"userJobName":"userTest"}
-
+- RESET_END_TIME, only when using the recurring CRON job mode:
+   - set to TRUE will run the next execution immediately.
+   - set to False will run the next execution as previously scheduled.
+   
 NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
+
 </p>
 
 </td>
