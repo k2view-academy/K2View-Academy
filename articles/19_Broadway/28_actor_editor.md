@@ -31,24 +31,24 @@ The Actor Editor can be used to create a new inherited Actor or modify an existi
 
 ### How Do I Create a New Actor from Scratch?
 
-Broadway enables creating an Actor that inherits from a custom Java class rather than from another Actor.
+Broadway enables you to create an Actor that inherits its properties and behaviors from a custom Java class rather than from another Actor.
 
 **To create** a new Actor from scratch, do the following:
 
-1. Start from creating your own Java class. Right click the **Java** folder in the Project tree either in the Shared Object or under the Logical Unit and click **New Java File**.
+1. Create your own Java class: Right click the **Java** folder in the Project tree either in the Shared Object or under the Logical Unit. Then click **New Java File**.
 
    ![image](images/99_10_editor_2.PNG)
 
-2. Define the class as follows to inherit the core Actor's functionality:
+2. Define the class as follows to inherit the core Actor's properties and behaviors:
 
    ~~~java
    public class <class_name> implements Actor {
    }
    ~~~
 
-3. Once the Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
+3. Once this new Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
 
-4. Populate the **Class** with your Java's path. For example, when the Java class is located under the Logical Unit, the class is:
+4. Populate the **Class** with your Java class's path. For example, when the Java class is located under the Logical Unit, the class is:
 
    ~~~java
    com.k2view.cdbms.usercode.lu.<lu_name>.<class_name>
@@ -60,9 +60,9 @@ Broadway enables creating an Actor that inherits from a custom Java class rather
 
 **New Actor Which Inherits from Existing Actor**
 
-Let's create a new **CheckMaxVal** Actor that inherits from a **JavaScript** Actor, receives two integers and returns their maximum value. Do the following:
+Let's create a new **CheckMaxVal** Actor that inherits its properties and behaviors from a **JavaScript** Actor: It receives two integers and returns their maximum value. Do the following:
 
-1.  Right click the **Broadway** folder in the Project tree and click **New Actor**.
+1. Right click the **Broadway** folder in the Project tree and click **New Actor**.
 2. Populate the **CheckMaxVal** Actor's name and click **OK**.
 3. Define the Actor as follows:
    * Set Badge to **Max**.
