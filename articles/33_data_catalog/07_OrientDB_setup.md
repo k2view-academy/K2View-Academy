@@ -24,7 +24,7 @@ To setup the OrientDB in the **development** environment, do the following:
    </handler>
    ~~~
 
-4.The first time you run the OrientDB, you will be asked to create a username and password.
+4. The first time you run the OrientDB, you will be asked to create a username and password.
 
 5. To run the OrientDB:
 
@@ -44,5 +44,7 @@ To setup the OrientDB in the **development** environment, do the following:
    * Note that you can also create a new OrientDB database during the definition of the Data Catalog Interface Type by populating the Database settings.
 
 
+
+Please refer to [OrientDB Manual](http://www.orientdb.com/docs/last/index.html) for more information about the OrientDB operations.
 
 [![Previous](/articles/images/Previous.png)](06_override_data_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_catalog_commands.md) 
