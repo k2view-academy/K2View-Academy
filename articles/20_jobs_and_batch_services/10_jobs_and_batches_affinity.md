@@ -27,6 +27,24 @@ It can be seen as a role attached to a specific physical node and to which can b
 Such a Logical ID can be giving to node by adding the requested id to the 'node.id' file located in the fabric_home/config directory.
 Each node can have multiple logical names, and a logical node can be shared by multiple physical nodes.
 
+#### Affinity Pool Size (<u>from 6.4.2 onwards</u>)
+
+A *Recommended Pool Size* capability has been added to the affinity function to rebalance jobs and get the ability to dynamically split (in runtime) jobs executions between nodes 
+
+2 new parameters can be defined:
+- recommended number of nodes
+- maximum number of nodes
+
+e.g.
+
+```logical_id:2 4``` or ```logical_id:2-4```
+
+- whereby 2 is the recommended number and 4 the maximum number of nodes to be allocated to jobs.
+
+In addition, the ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` is a new param that needs to be added to the config.ini configuration files(set by default to 60 sec).
+If a node that runs jobs with a limited affinity 'x' and has already reached its recommended size, and is trying to claim a new job with the same affinity, the node will need to wait ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim this job. This is happening in order to give the opportunity for any other node with empty slots to claim this job.
+
+Once ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` has lapsed and if the node is still able to claim ownership on this job (i.e. no other node has taken it already), a random number is generated to decide when the node will restart the job (put it on RESTART status) and give the opportunity to other nodes (with empty slots) to execute it.
 
 
 ## Affinity Use Cases
