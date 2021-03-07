@@ -30,9 +30,9 @@ Please refer to the files in the following table's Example column. We suggest th
 <td valign="top" width="50pxl"><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md#grfunctiongraphit">grFunction</a></td>
 </tr>
 <tr>
-<td valign="top" width="50pxl">SQL and Non-prepared SQL</td>
+<td valign="top" width="50pxl">SQL</td>
 <td valign="top" width="900pxl">Defines how an SQL statement retrieves information from Fabric or other database interfaces.
-    Enter the SQL statement manually or hover over and then click either the SQL or Non-prepared SQL field. <No Type>  
+    Enter the SQL statement manually or hover over and then click the SQL field. <No Type>  
 
 Note that if the database is not a Fabric database, the Interface Name must be defined as described in the <a href="/articles/15_web_services_and_graphit/17_Graphit/04_graphit_node_properties.md">Node Properties</a> section. 
   
