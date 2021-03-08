@@ -1,4 +1,4 @@
-# Customer Service Representative (CSR) Consent User Interface
+# Representative Consent Management on Customer's Behalf
 
 The DPM interfaces for representatives and agents are similar to the screens and APIs for the customer, described in 8.3.1 Customer Facing Interface. DPM includes both a Web-based user interface and an API set to allow a Customer Service Representative (CSR) or an agent perform the same consent management activities as the customer. Activities include viewing the consent preferences of an end-user, as well as submitting a change to the consent preferences on behalf of the end-user.
 
