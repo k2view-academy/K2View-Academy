@@ -1,4 +1,4 @@
-# Consent Topics List
+# View Configured Consents List
 
 To view the list of configured consents or to create new ones, access the Consent Management option at the DPM Administrator module.
 
