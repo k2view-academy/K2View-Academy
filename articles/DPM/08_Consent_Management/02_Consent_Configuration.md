@@ -1,4 +1,4 @@
-# Consent Topics and Categories Configuration
+# Consent Configuration
 
 K2View Consent Management is a flexible, configurable system, allowing each organization to determine which consent topics are managed by the system. 
 The administrator can define any number of consent topics and classify them under consent categories, allowing each organization to define the granularity of the consents it collects. 
