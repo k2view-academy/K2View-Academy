@@ -1,4 +1,4 @@
-# Representative Search a Request
+# Search a Request
 
 Search a request from the Representative menu by selecting the “Requests List” menu option. The displayed screen includes the list of existing requests and allows searching for a specific request based on multiple parameters.
 
