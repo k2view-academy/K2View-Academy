@@ -1,4 +1,4 @@
-# Customer Consent Management Screen
+# Customer Consent Management
 
 Each customer can set consent preferences by accessing the Consent Management menu option from the Customer menu.
 
