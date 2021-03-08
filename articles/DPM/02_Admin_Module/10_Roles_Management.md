@@ -1,6 +1,6 @@
-# Roles management
+# Roles Management
 
-## Roles management Overview
+## Roles Management Overview
 
 The DPM is a role-based application. Roles define the functions within the DPM enabled for each user as described next.
 
