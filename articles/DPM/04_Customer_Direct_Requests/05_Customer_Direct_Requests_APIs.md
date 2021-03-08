@@ -1,7 +1,5 @@
 
-
-
-# DPM APIs for Customer Requests
+# DPM APIs
 
 For companies that prefer to integrate the DPM requests in their own customer portal using their standard user interface design, DPM provides a set of APIs to be used by any client application.  
 
