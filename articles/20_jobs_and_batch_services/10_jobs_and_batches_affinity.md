@@ -44,7 +44,7 @@ e.g.
 In addition, the ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` is a new param that needs to be added to the [config.ini configuration file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) (set by default to 60 sec).
 If a node that runs jobs with a limited affinity 'x' and has already reached its recommended size, and is trying to claim a new job with the same affinity, the node will need to wait ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim this job. This is happening in order to give the opportunity for any other node with empty slots to claim this job.
 
-Once ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` has lapsed and if the node is still able to claim ownership on this job (i.e. no other node has taken it already), a random number is generated to decide when the node will restart the job (put it on RESTART status) and give the opportunity to other nodes (with empty slots) to execute it.
+Once ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` has lapsed and if this particular job has still not been allocated (i.e. no other node has taken the job already), a random number (between 60 and 1440 minutes) is generated to decide when the node will restart the job (put it on RESTART status) and give the opportunity to other nodes (with empty slots) including itself to execute it.
 
 
 ## Affinity Use Cases
