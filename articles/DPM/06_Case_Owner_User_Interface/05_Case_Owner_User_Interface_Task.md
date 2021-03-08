@@ -1,4 +1,4 @@
-# Case Owner Task Details
+# Task Details
 
 When the Case Owner selects a particular Task from the Request Details screen, the DPM displays the Task Details screen:
 
