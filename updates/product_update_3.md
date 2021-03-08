@@ -8,7 +8,7 @@ Your central hub for knowledge and support. Here you can find everything you nee
 * Connect to the community of K2View users.
 * Start the training to become K2View certified expert.
 
-Start by [browsing the Knowledge Base topics](https://support.k2view.com/Knowledge-Base.html).
+Start by [browsing the Knowledge Base topics](https://support.k2view.com/knowledge-base.html).
 
 
 
