@@ -1,4 +1,4 @@
-# Reminders Tab
+# Reminders
 
 Reminders are used in order to preemptively call attention to Tasks that might not be progressing at the expected pace. 
 In the Reminders tab, the user can define one or more reminders that should be sent after a predetermined time.
