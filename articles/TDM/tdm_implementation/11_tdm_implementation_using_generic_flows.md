@@ -57,6 +57,10 @@ Do the following to create the sequences for your TDM implementation:
 
    ![image](images/11_tdm_impl_04.PNG)
 
+4. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+
+   ![setTargetEntity](images/setTargetEntity_actor_example.png)
+
 ### Step 3 - Create Load and Delete Flows
 
 In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows:
