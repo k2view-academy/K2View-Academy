@@ -1,4 +1,4 @@
-# Case Owner Requests List
+# Request List
 
 The Case Owner Requests List presents to the Case Owner the list of Requests that are under their responsibility.
 
