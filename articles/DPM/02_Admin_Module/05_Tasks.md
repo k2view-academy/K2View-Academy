@@ -1,4 +1,4 @@
-# Tasks Tab
+# Tasks
 
 The Tasks tab includes the configuration of parameters, such as the following:
 
