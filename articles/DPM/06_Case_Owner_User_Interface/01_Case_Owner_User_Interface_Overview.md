@@ -1,4 +1,4 @@
-# Case Owner User Interface
+# Case Owner User Interface Overview
 
 A Case Owner is the role responsible to assure the fulfilment of the DPM requests within the established SLA. The case owner is expected to monitor the DPM Requests allocated to them and to act if one of the Requests seems not to progress as expected. 
 Every open request is automatically allocated to a specific member of the Case Owners group. This automatic allocation is configurable by the Case Owner Supervisor. 
