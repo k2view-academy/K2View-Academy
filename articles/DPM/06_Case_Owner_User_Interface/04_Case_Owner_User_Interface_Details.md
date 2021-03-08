@@ -1,4 +1,4 @@
-# Case Owner Request Details
+# Request Details
 
 From the Requests List screen, the case owner selects the row of a particular Request to open the corresponding Request Details Screen
 
