@@ -1,4 +1,4 @@
-# Stages Management
+# Stages
 
 The Stages comprising a Flow are shown in the bar below the Flow header. An example follows.  
 
