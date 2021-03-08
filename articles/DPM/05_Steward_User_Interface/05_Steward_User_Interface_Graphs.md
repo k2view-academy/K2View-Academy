@@ -1,4 +1,4 @@
-# Steward Graphs
+# Dashboard Graphs
 
  ![image](/articles/DPM/images/Figure_43_Steward_Dashboard_Graphs.png)
 
