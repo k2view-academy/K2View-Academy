@@ -1,4 +1,4 @@
-# Operations Tab
+# Operations
 
 The Operations tab allows the Admin to add an automated Activity to be executed to perform the Task. 
 
