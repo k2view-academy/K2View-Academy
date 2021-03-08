@@ -1,4 +1,4 @@
-# Steward Dashboard Totals
+# Dashboard Totals
 
 The totals in the dashboard reflect the list of Tasks that matches the selection criteria specified by the dashboard filters: 
 
