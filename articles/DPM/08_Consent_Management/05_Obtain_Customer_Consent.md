@@ -1,4 +1,4 @@
-# Customer Facing Interfaces For Consent
+# Obtain Customer Consent and Preferences
 
 DPM offers multiple options to collect and manage customer consents: 
 
