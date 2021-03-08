@@ -1,4 +1,4 @@
-# Export and Import Flow
+# Flow Export and Import
 
 Flows generated within one environment can be exported and then imported into another environment. 
 
