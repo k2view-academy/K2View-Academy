@@ -1,4 +1,4 @@
-# Steward User Interface
+# Steward User Interface Overview
 
 A Steward in the DPM system is a user that is responsible to handle the execution of specific Tasks as part of the fulfillment process. Stewards are assigned a specific Corporate Role, which determines what type of Tasks they will perform.
 
