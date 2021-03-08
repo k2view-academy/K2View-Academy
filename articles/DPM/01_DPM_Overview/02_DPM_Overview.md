@@ -1,4 +1,4 @@
-# K2View DPM Overview
+# DPM Overview
 
 The Data Privacy Management Tool provides an efficient and effective means to administer data privacy regulations, such as the European General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), and Brazil’s General Data Protection law (LGPD).
 
