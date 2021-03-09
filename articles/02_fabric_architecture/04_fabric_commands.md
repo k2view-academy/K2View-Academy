@@ -548,7 +548,7 @@ There are two types of execution parameters:
 
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
 
-##### Syntax
+**Syntax**
 
 ~~~
 broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...]
