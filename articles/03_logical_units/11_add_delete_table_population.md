@@ -1,4 +1,4 @@
-# Edit Schema - Adding or Deleting Table Population
+# Add or Delete Population from LU Schema
 
 A Table Population object holds the transformation and mapping rules of the data and populates the data into the LU table. Each table can have one or several populations. 
 
