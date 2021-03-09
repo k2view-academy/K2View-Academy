@@ -9,8 +9,8 @@
 <li><a href="/articles/03_logical_units/06_auto_discovery_wizard.md">Auto Discovery Wizard</a></li>
 <li><a href="/articles/03_logical_units/07_build__or_update_an_LU_schema.md">Build or Update LU Schema Using Auto Discovery</a></li>
 <li><a href="/articles/03_logical_units/08_define_root_table_and_instance_ID_LU_schema.md">Set Root Table and Instance ID Column</a></li>
-<li><a href="/articles/03_logical_units/09_add_table_to_a_schema.md">Add a Table to a Schema</a></li>
-<li><a href="/articles/03_logical_units/10_delete_table_from_a_schema.md">Delete a Table from a Schema</a></li>
+<li><a href="/articles/03_logical_units/09_add_table_to_a_schema.md">Add a Table to an LU Schema</a></li>
+<li><a href="/articles/03_logical_units/10_delete_table_from_a_schema.md">Delete a Table from an LU Schema</a></li>
 <li><a href="/articles/03_logical_units/11_add_delete_table_population.md">Add or Delete Population from LU Schema</a></li>
 <li><a href="/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md">Building an LU Hierarchy and Linking Populations</a></li>
 <li><a href="/articles/03_logical_units/13_disable_enable_populations_in_schema.md">Disable and Enable Populations in LU Schema</a></li>
