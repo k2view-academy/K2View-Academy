@@ -1,4 +1,4 @@
-# Editing an LU Schema - Defining the Root Table and Instance ID Column
+# Set Root Table and Instance ID Column
 
 ### How Do I Define the Root Table and Instance ID Column in an LU Schema?
 
