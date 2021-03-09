@@ -1,4 +1,4 @@
-# Edit an LU Schema - Disable and Enable Population
+# Disable and Enable Populations in LU Schema
 
 Enable/Disable Table Population can be used to enable/disable execution of specific [Table Populations](/articles/07_table_population/01_table_population_overview.md). This option is useful for test purposes. 
 Note that at least one Table Population must be enabled for the Root Table.
