@@ -9,7 +9,7 @@
   - Access to LUIs can be defined on a user level.
   - Access to the methods that access LUIs can be defined on a role level.
 
-Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned the “administrator” role.
+Using roles makes managing permissions much easier. It avoids having to manually grant sets of privileges user by user. For example, several users might be assigned as “administrators”. 
 
 User access control management can be performed using either:
 
