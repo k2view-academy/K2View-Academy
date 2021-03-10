@@ -46,7 +46,7 @@ Check to [override Globals on a task level](23_task_globals_tab.md).
 
 ### Select All Entities 
 
-- When checked, the list of entities is retrieved from the query defined in the [trnMigList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) shared translation for the root LU of the task's BE, and the [Requested Entities] tab is removed from the task.
+- When checked, the list of entities is retrieved from the query defined in the [trnMigList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) shared translation for the root LU of the task's BE, and the [Requested Entities](#requested-entities) tab is removed from the task.
 - Only Admin and Environment owner users can check the **Select All Entities** settings. Other users can only define a list of entities in the [Requested Entities](#requested-entities) tab.
 - This setting is disabled for **Reference Only** tasks.
 
