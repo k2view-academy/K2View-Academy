@@ -38,7 +38,7 @@ Check to [override Globals on a task level](23_task_globals_tab.md).
 
 ### Reference 
 
-[Reference handling]. Select a value from the dropdown list:
+[Reference handling](24_task_reference_tab.md). Select a value from the dropdown list:
 
 - **None**, default value. Do not include Reference tables in the task.
 - **Reference Only**, create a task to extract Reference tables only into Fabric. Do not include entities in the task.
