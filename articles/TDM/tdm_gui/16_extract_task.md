@@ -65,7 +65,7 @@ Note that when the Retention Period is set to zero, no retention period is set o
 
 **The retention period is optional on a regular extract task.**
 
-The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**. The default retention period displayed on the screen and the maximum retention period is configured in the TDM [config.js] file.
+The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**. The default retention period displayed on the screen and the maximum retention period is configured in the TDM [config.js](/articles/TDM/tdm_configuration/01_tdm_gui_configuration.md) file.
 
 **Example:** 
 
