@@ -1,7 +1,7 @@
 # Fabric Credentials Overview
 
 ## RBAC in Fabric 
- Fabric includes an authentication mechanism that enables managing user access control and restrictions, such as:
+ Fabric includes an authentication and authorization mechanism that enables managing user access control and restrictions, such as:
 
 - Creating / dropping users, roles and API Keys.
 - Assigning users to roles.
