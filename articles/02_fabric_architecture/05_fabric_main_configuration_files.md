@@ -372,7 +372,9 @@ This file lists Fabric node identifiers for the Affinity mechanism. The followin
 -  **uuid**, if this parameter is not defined, Fabric automatically generates a value for the **uuid** during startup.
 
 - **logical_id,** used to define an Affinity for the Fabric jobs mechanism. The logical_id contains only letters and numbers. Several nodes can share the same logical_id. In addition, several logical IDs can be set for one node. The number of threads allocated to each logical_id can also be defined by concatenating it to the logical_id name separated with a colon sign. For example, the logical_id for a given node has the following values: A:2, B:3, and C:6. If there are 10 threads in the pool for this node, then the job using logical_id **C** as an Affinity will get 6 out of the 10 threads.
+
   - Affinity Pool Size (from 6.4.2 onwards)
+    
     A Recommended Pool Size capability has been added to the affinity function to rebalance jobs and get the ability to dynamically split (in runtime) jobs executions between nodes. 2 new parameters can be defined:
     - recommended number of nodes
     - maximum number of nodes
