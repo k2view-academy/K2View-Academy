@@ -48,5 +48,11 @@ ludb().fetch(sql1, i_customer_id ).each(row-> {
 
 Full example of the entire **fnPop_ACT_CASE_NOTE** Root Function can be found in the Demo project.
 
+### Example of a Dummy Root Function
+Create a dummy Root function when the LU table is populated by an [Enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) or a population of another LU table:
+
+~~~java
+if (1 == 2) yield(new Object[]{null});
+~~~
 [![Previous](/articles/images/Previous.png)](11_1_creating_or_editing_a_root_function.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_3_creating_an_LUDB_function.md)
 
