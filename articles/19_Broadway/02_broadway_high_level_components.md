@@ -12,7 +12,7 @@ There are a few other core capabilities that are important for a high-level of u
 
 <table border="0" cellspacing="0" cellpadding="0">
 <tr>
-<td valign="top">
+<td width="400pxl" valign="top">
   <div>
     <p>Actors can get their input from three different sources:</p>
     <ul>
@@ -25,7 +25,7 @@ There are a few other core capabilities that are important for a high-level of u
 <p>In the image, the JavaScript Actor obtains the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous Actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
 </div>
 </td>
-<td width="400">
+<td width="500pxl">
 <img src="images/input-output-arguments.png" width="400" />
 </td>
 </tr>
