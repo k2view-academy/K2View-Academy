@@ -29,7 +29,7 @@ Each node can have multiple logical names, and a logical node can be shared by m
 
 #### Affinity Pool Size (<u>from 6.4.2 onwards</u>)
 
-A *Recommended Pool Size* capability has been added to the affinity function to rebalance jobs and get the ability to dynamically split (in runtime) jobs executions between nodes. This flag must be defined in the [node.id file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid): 
+A *Recommended Pool Size* capability has been added to the affinity function to rebalance jobs and get the ability to dynamically split (in runtime) jobs executions between nodes. This flag must be defined in the [node.id file](articles/02_fabric_architecture/05_fabric_main_configuration_files.md#nodeid): 
 
 2 new parameters can be defined:
 - recommended number of nodes
