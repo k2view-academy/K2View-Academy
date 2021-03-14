@@ -7,13 +7,13 @@ Please refer to the files in the following table's Example column. We suggest th
 <table>
 <tbody>
 <tr>
-<td valign="top" width="50pxl">
+<td valign="top" width="150pxl">
 <p><strong>Node Type</strong></p>
 </td>
-<td valign="top" width="900pxl">
+<td valign="top" width="500pxl">
 <p><strong>Description</strong></p>
 </td>
-<td valign="top" width="50pxl">
+<td valign="top" width="150pxl">
 <p><strong>Examples</strong></p>
 </td>
 </tr>
