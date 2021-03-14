@@ -57,8 +57,31 @@ For example:
 
 <img src="/articles/26_fabric_security/images/07_fabric_webToken.PNG">
 
-
 Note that if the secured option has not been selected,  the Token Name is used as the token value.
+
+To create a the JWT key based on a secured API key, continue with the following steps:
+
+5. Open Postman to generate the JWT key from a non-secured token:
+    - Open a new request
+    - Select the body field:
+        - Enter a unsecured API key token: ```apikey``` with value set to ```1234``` (create token 1234 as non secure token in the admin API panel)
+    - Select the POST method and set the URL to: ```http://localhost:3213/api/authenticate```
+    - Send the request, and check the request has been validated in the response body.
+    - Click on the *cookies* under the *send* button
+    - Copy/Paste the JWT token ```eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsImlzcyI6ImZiciIsImlhdCI6MTYxNTczMTU5NSwiZXhwIjoxNjE1NzMyNDk1LCJhcGsiOiJncmVnIn0.5-L8D_jKe_cUzl98mtf1XYxJcq28IMcqrzw6SAN1i34```
+ 
+ 6. Go to JWT.io to replace the JWT key with the secured API key created in step 3.
+    - In the "decoded" side of the window (right panel), replace the "apk" value with the name of the secured token you created in the Admin Panel in step 3 of the process described above.
+    
+    - in the *verify signature* window below, replace the ```your-256-bit-secret``` with the value of the secret key created in step 3: ```f151c40f-fede-4fb3-8010-398ffbc02329```
+        - check the ```secret base64 encoded``` box
+    
+    - Copy the key as shown in the *Encoded* box, on the left: ```eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsImlzcyI6ImZiciIsImlhdCI6MTYxNTczMjg5NCwiZXhwIjoxNjE1NzMzNzk0LCJhcGsiOiJyb25yb24ifQ.GBl8Lu7U7RED7lPdDDhr8mzV6h4m9Q3ForBrQoZxkcM```
+    
+    - Go back to postman and replace the jwt key in the cookies management window with the key copied from the step above
+ 
+
+
 
 
 ## Tokens from the Command Line
