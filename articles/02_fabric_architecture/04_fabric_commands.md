@@ -203,7 +203,7 @@ For example:
 <tbody>
 <tr>
 <td valign="top" width="100pxl">
-<p><strong>Command Name</strong></p>
+<p><strong>Name</strong></p>
 </td>
 <td valign="top" width="250pxl">
 <p><strong>Description</strong></p>
@@ -300,7 +300,7 @@ Note that users are responsibile for identifying if a [sync](/articles/14_sync_L
 <tbody>
 <tr>
 <td valign="top" width="100pxl">
-<p><strong>Command Name</strong></p>
+<p><strong>Name</strong></p>
 </td>
 <td valign="top" width="250pxl">
 <p><strong>Description</strong></p>
