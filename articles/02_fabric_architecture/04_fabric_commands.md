@@ -198,7 +198,7 @@ The following table lists the GET commands:
 <tbody>
 <tr>
 <td valign="top" width="100pxl">
-<p><strong>Command Name</strong></p>
+<p><strong>Name</strong></p>
 </td>
 <td valign="top" width="250pxl">
 <p><strong>Description</strong></p>
@@ -294,7 +294,7 @@ The following table lists the  DELETE commands:
 <tbody>
 <tr>
 <td valign="top" width="100pxl">
-<p><strong>Command Name</strong></p>
+<p><strong>Name</strong></p>
 </td>
 <td valign="top" width="250pxl">
 <p><strong>Description</strong></p>
