@@ -34,7 +34,7 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
 - MDB_DEFAULT_SCHEMA_CACHE_SIZE, defines the size limit of the cache in bytes for MicroDB instances. 
 
 ### Changing the Location of the Cache 
-Fabric enables to modify the default location of the cache per Logical Unit using the MDB_DEFAULT_CACHE_PATH variable in the **[fabricdb]** section of the **config.ini** and the LU Schema's **Cache Location** property as follows:
+Fabric enables to modify the default location of the cache per Logical Unit using the MDB_DEFAULT_CACHE_PATH variable in the **[fabricdb]** section of the **config.ini** and the [LU Schema's **Cache Location** property](/articles/03_logical_units/04_LU_properties.md) as follows:
 
 * When the Cache Location is set to **Default**, store the cache per the definition of MDB_DEFAULT_CACHE_PATH in config.ini. The default value in config.ini is **/dev/shm/fdb_cache/<LU_name>** but it can be changed to another location. 
 * When the Cache Location is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache/<LU_name>** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache/<LU_name>**.
