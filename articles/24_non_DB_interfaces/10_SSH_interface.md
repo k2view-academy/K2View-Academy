@@ -46,7 +46,7 @@ To create a Broadway Flow that runs on an SSH interface, do the following:
 
 1. Create an interface using **SSH** interface type.
 
-2. Create a Broadway flow either under Shared Objects or under a Logical Unit. The flow reads the list of files from the remote server interface created on step one using SSH Actor.
+2. Create a Broadway flow either under Shared Objects or under a Logical Unit. Add a new Actor called SSH Actor, use the Interface defined in Step one and use the ls command.
 
    ![images](images/10_ssh_2.png)
 
