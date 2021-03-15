@@ -35,7 +35,9 @@ A *Recommended Pool Size* capability has been added to the affinity function to 
 - maximum number of jobs that can run concurrently on the same node.
 
 e.g.
-*logical_id:2 4* or *logical_id:2-4*
+
+```logical_id:2 4```
+```logical_id:2-4```
 
 whereby:
 - 2 is the recommended number of jobs that can run concurrently.
@@ -43,8 +45,8 @@ whereby:
 
 The server will avoid taking jobs above the recommended number immediately in order to give the opportunity to other nodes.
 
-
 If a node that runs jobs with a limited affinity 'x' has already reached its recommended size, and is trying to claim a new job with the same logical id, the node will need to wait for ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim that job. 
+
 This is happening in order to give the opportunity for any other nodes with empty slots to claim that specific job.
 
 In case where a node claimed a job above its recomended pool size, the server will stop and release all the extra jobs that are running above the recommended pool size. Then, other servers will be allowed to take the jobs that have been stopped. 
