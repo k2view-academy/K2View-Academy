@@ -24,7 +24,7 @@ The Start Page has links to different K2View Fabric projects, including:
 * Open an existing project.
 * Checkout a project from the configuration control.
 * Quick links to recently opened projects. 
-* Help and Knowledge Base. 
+* Help and support. 
 
 [Click for more information about Creating a New Project.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
@@ -74,11 +74,12 @@ Click the K2View icon on the top left corner of the Studio to restore, move, siz
 <tr>
 <td width="60pxl" valign="top"><p><img src="images/04_01_02_icon7.png" alt="" /></p></td>
 <td width="600pxl" valign="top">
-<p>Help (link to the Knowledge Base)</p>
+<p>Help (link to the support)</p>
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
