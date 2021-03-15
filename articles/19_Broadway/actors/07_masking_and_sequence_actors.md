@@ -13,7 +13,7 @@ Another important functionality for systems that need to frequently load data to
 
 The **MaskingSequence** Actor, which also belongs to the masking category, generates a unique sequence ID based on the provided input arguments.
 
-[Click for more information about TDM7](/articles/TDM/tdm_overview/01_tdm_overview.md). 
+[Click for more information about TDM](/articles/TDM/tdm_overview/01_tdm_overview.md). 
 
 ### How Do I Set Masking Input Arguments?
 
