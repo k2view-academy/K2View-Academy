@@ -35,18 +35,23 @@ A *Recommended Pool Size* capability has been added to the affinity function to 
 - maximum number of jobs that can run concurrently on the same node.
 
 e.g.
-logical_id:2 4 or logical_id:2-4
-whereby 2 is the recommended number and 4 is the maximum number of jobs that can run concurrently.
+*logical_id:2 4* or *logical_id:2-4*
+
+whereby:
+- 2 is the recommended number of jobs that can run concurrently.
+- 4 is the maximum number of jobs that can run concurrently.
 
 The server will avoid taking jobs above the recommended number immediately in order to give the opportunity to other nodes.
 
 
-If a node that runs jobs with a limited affinity 'x' and has already reached its recommended size, trying to claim a new job with the same logical id, the node will need to wait ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim that job. This is happening in order to give the opportunity for any other nodes with empty slots to claim this job.
-In case where a node claimed a job above the recomended size, the server will stop and release the extra jobs (the ones running above the recommended number) and will allow other servers to take the jobs that have been stopped. A random number (between 60 and 1440 minutes **** can be changed in config.ini *** add param names) is generated to decide when the node will restart the job (put it on RESTART status) and give the opportunity to other nodes (with empty slots) to execute it.
+If a node that runs jobs with a limited affinity 'x' has already reached its recommended size, and is trying to claim a new job with the same logical id, the node will need to wait for ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim that job. 
+This is happening in order to give the opportunity for any other nodes with empty slots to claim that specific job.
 
- 
+In case where a node claimed a job above its recomended pool size, the server will stop and release all the extra jobs that are running above the recommended pool size. Then, other servers will be allowed to take the jobs that have been stopped. 
 
-```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` is a new parameter that can be added to the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) configuration file. Default value set to 60 sec.
+For this purpose, a random number (between 60 and 1440 minutes can be changed in config.ini under the *add param names* section) is generated to decide when it will be set to *restart* status and therefore give the opportunity to other nodes (with empty slots) to execute it.
+
+    - ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` is a new parameter that can be added to the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) configuration file. Default value set to 60 sec.
  
 
 
