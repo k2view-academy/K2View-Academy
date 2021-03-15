@@ -124,8 +124,11 @@ TDM systems often handle sensitive data. To be compliant with Data Privacy laws,
   * When the TDM task is for synthetic data creation, masking is always enabled.
   * When The TDM task is for Data Flux, masking is always disabled.
   * In all other scenarios masking behavior depends on the MASK_FLAG settings.
-
+  
+* Note that there is no need to add a masking on both processes, LUI Sync and the Load flow, for synthetic data creation, since the TDM task execution process duplicates the clonned entity ID, set in the task, and attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
+ 
 [Click to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
+[Click to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
 
 
 
