@@ -43,9 +43,6 @@ e.g.
 
 The server will avoid taking jobs above the recommended number. Nevertheless, it can take jobs above the recommended and up to the maximum number in which case, it will stop and release some of the extra jobs (above the recommended number) and allow other servers to take jobs.
 
-A default value for the recommended number can be set at 80% of the maximum value.
-
-
 
 In addition, the ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` is a new param that needs to be added to the [config.ini configuration file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) (set by default to 60 sec).
 If a node that runs jobs with a limited affinity 'x' and has already reached its recommended size, and is trying to claim a new job with the same affinity, the node will need to wait ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim this job. This is happening in order to give the opportunity for any other node with empty slots to claim this job.
