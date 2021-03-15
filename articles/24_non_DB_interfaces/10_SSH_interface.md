@@ -8,7 +8,7 @@ To create a new SSH interface, do the following:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces**, select **New Interface** and then select **SSH** from the **Interface Type** dropdown menu to open the **New Interface** window.
 
-   ![image](images/10_ssh_1.PNG)
+   ![image](images/10_ssh_1.png)
 
 2. Populate the connection's settings and click **Save**.
 
@@ -48,7 +48,7 @@ To create a Broadway Flow that runs on an SSH interface, do the following:
 
 2. Create a Broadway flow either under Shared Objects or under the same Logical Unit. The flow reads the list of files from the remote server interface created on step one using SSH Actor.
 
-   ![images](images/10_ssh_2.PNG)
+   ![images](images/10_ssh_2.png)
 
    
 
