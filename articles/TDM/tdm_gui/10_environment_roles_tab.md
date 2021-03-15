@@ -59,11 +59,11 @@ When an Environment Type is Both it can have both read and write access to both 
 
 Note that although a role without testers is not usable, the **Testers** setting is optional and enables creating roles and then adding them to testers at a later stage.
 
-  #### Adding all TDM Users to the Role
+#### Adding all TDM Users to the Role
 
 The **All** option is used to enable the role for all TDM users. To do so, click **Testers** and then select **ALL**.
 
-  #### Adding all TDM Users to a Role
+#### Adding all TDM Users to a Role
 
 1. Click **Testers** and select a user from the list.
 
