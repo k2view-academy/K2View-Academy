@@ -19,10 +19,10 @@ From the Project Tree:
  
 ### How do I Create a New LU Table Manually?  
 1.	Go to **Project Tree** > **Logical Units** > [**LU Name**], right click **Tables** > **New Table** to display the **Columns tab** in the **Table Schema** window.
-2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):\
-   a.	Complete the settings of each table column like the **Name** or **Data Type**.\
-   b.	Optional: Define the table [**Indexes**](/articles/06_LU_tables/03_table_indexes.md).\
-   c.	Optional: Define the **CDC** and the table’s **Search** indexes.
+2.	Define the [**Table Schema**](/articles/06_LU_tables/02_create_an_LU_table.md#table-schema-definition):
+    * Complete the settings of each table column like the **Name** or **Data Type**.
+    * Optional: Define the table [**Indexes**](/articles/06_LU_tables/03_table_indexes.md).
+    * Optional: Define the **CDC** and the table’s **Search** indexes.
 3.	Define the [**Table Properties**](/articles/06_LU_tables/04_table_properties.md). 
 4.	**Save** the table.
 
