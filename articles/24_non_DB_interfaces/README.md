@@ -10,6 +10,7 @@
 <li><a href="/articles/24_non_DB_interfaces/07_custom_interface.md">Custom Interface</a></li>
 <li><a href="/articles/24_non_DB_interfaces/08_SMTP_interface.md">SMTP Interface</a></li>
 <li><a href="/articles/24_non_DB_interfaces/09_redis_interface.md">Redis Interface</a></li>
+<li><a href="/articles/24_non_DB_interfaces/10_SSH_interface.md">SSH Interface</a></li>
 
 </ul>
 
