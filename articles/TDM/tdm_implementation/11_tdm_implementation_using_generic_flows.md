@@ -65,15 +65,15 @@ Do the following to create the sequences for your TDM implementation:
 
 In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows:
 
-   1. Create a LOAD flow per table
+**1. Create a LOAD flow per table**
 
 Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them. 
 
-   2. Create the main LOAD flow
+**2. Create the main LOAD flow**
 
 Performed by the **createLoadAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope **LoadAllTables.flow** Broadway flow. The purpose of this flow is to invoke all LOAD flows based on the LU Schema's execution order.
 
-   3. Create a DELETE flow per table
+**3. Create a DELETE flow per table**
 
 Performed by the **createDeleteTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to delete the data from this table in the target DB. The name of each newly created flow is **delete_[Table Name].flow**. For example, delete_CUSTOMER.flow. The tables defined in Step 1 are filtered out and the flow is not created for them. 
 
@@ -92,7 +92,7 @@ The following two updates must be performed manually:
   ![images](images/11_tdm_impl_delete2.PNG)
 
 
-   4. Create the main DELETE flow
+**4. Create the main DELETE flow**
 
 Performed by the **createDeleteAllTablesFlow.flow** that receives the Logical Unit name and creates an envelope **DeleteAllTables.flow** Broadway flow. The purpose of this flow is to invoke all DELETE flows in the opposite order of the population order, considering the target DB's foreign keys. 
 
