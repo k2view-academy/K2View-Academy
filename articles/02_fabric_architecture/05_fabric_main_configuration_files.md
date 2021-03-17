@@ -379,9 +379,8 @@ This file lists Fabric node identifiers for the Affinity mechanism. The followin
     - recommended number of nodes
     - maximum number of nodes
     - ```logical_id:2 4 or logical_id:2-4``` whereby 2 is the recommended number and 4 the maximum number of nodes to be allocated to jobs.
-    - In cases where only one value is defined, it will be assumed that it refers to the maximum number of nodes. As a thumb of rule, the recommended value should be 80% of the maximum value.   
-
-
+    - In cases where only one value is defined, it will be assumed that it refers to the maximum number of nodes. 
+   
 - **cluster_id**, cluster identifier. The cluster_id is set to support a configuration of several Fabric clusters on one Cassandra cluster. The cluster_id is concatenated to each [keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) name. For example- if the cluster_id is set to “fabric1”, then Fabric concatenates “_fabric1” to each keyspace.
 
 
