@@ -45,16 +45,27 @@ whereby:
 
 The server will avoid taking jobs above the recommended number immediately in order to give the opportunity to other nodes.
 
-If a node that runs jobs with a limited affinity 'x' has already reached its recommended size, and is trying to claim a new job with the same logical id, the node will need to wait for ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` seconds before it can claim that job. 
+If a node that runs jobs with a limited affinity 'x' has already reached its recommended size, and is trying to claim a new job with the same logical id, the node will need to wait before it can claim that job. 
 
 This is happening in order to give the opportunity for any other nodes with empty slots to claim that specific job.
 
 In case where a node claimed a job above its recomended pool size, the server will stop and release all the extra jobs that are running above the recommended pool size. Then, other servers will be allowed to take the jobs that have been stopped. 
 
-For this purpose, a random number (between 60 and 1440 minutes can be changed in config.ini under the *add param names* section) is generated to decide when it will be set to *restart* status and therefore give the opportunity to other nodes (with empty slots) to execute it.
+For this purpose, a random number is generated to decide when it will be set to *restart* status and therefore give the opportunity to other nodes (with empty slots) to execute it. 
 
-    - ```CLAIM_EXCEPTIONAL_INTERVAL_SEC``` is a new parameter that can be added to the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) configuration file. Default value set to 60 sec.
+This random number will fluctuate between the 2 following paramaters: *MIN_GIVE_UP_EXCEPTIONAL_MINUTES* and *MAX_GIVE_UP_EXCEPTIONAL_MINUTES* - that can be changed in [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) under the *add param names* section.
+
+        - This value will define minimum time for restarting jobs that taken after the recommended time reached, min value = 1
+        MIN_GIVE_UP_EXCEPTIONAL_MINUTES = 1
+
+        - This value will define maximum time for restarting jobs that taken after the recommended time reached, min value = 2, max = 14400
+        MAX_GIVE_UP_EXCEPTIONAL_MINUTES = 1440
  
+
+
+
+
+
 
 
 
