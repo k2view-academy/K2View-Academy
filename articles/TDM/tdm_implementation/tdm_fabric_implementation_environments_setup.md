@@ -33,3 +33,4 @@ Note that **every change of a Global or an Interface in the project requires a r
 
 Click for more information about [Fabric environments](/articles/25_environments/02_create_new_environment.md).
 
+[![Previous](/articles/images/Previous.png)](12_tdm_error_handling_and_statistics.md)
