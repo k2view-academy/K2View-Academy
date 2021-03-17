@@ -20,9 +20,9 @@ The Data Catalog introduces a list of data entities and the relationships betwee
 
 The data relationships indicate the connections between the data entities and determine their hierarchy. For example:
 
-* *{Interface} CONTAINED in a {Project}*
-* *{Schema} CONTAINED in a {Project}*
-* *{API} USE a {Table}*
+* {Interface} CONTAINED in a {Project}
+* {Schema} CONTAINED in a {Project}
+* {API} USE a {Table}
 
 The entities and the connections between them are used to parse the data, analyze it and display it from the Project level, through the Schema to the API and Table fields level. 
 
