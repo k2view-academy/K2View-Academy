@@ -1,4 +1,4 @@
-### The Fabric TDM7 official release
+### The Fabric TDM7 Official Release
 
 We have just released TDM 7 based on Fabric 6.4.1. Some of the major enhancements of this release are:
 

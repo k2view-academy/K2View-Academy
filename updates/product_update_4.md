@@ -1,4 +1,4 @@
-### The Fabric 6.4.1 official release
+### The Fabric 6.4.1 Official Release
 
 We would like to share with you that we have just launched the Fabric 6.4.1 release which includes the following major features:
 
