@@ -13,7 +13,7 @@ The list of activities reported by the Auditing mechanism can be controlled. By 
 3. Save the artifacts into the following path: AuditCustomStrategies/out/artifacts/<module>/<module>.jar under the $K2_HOME/ExternalJars directory.
 
 5. Update the config.ini file and populate the full path of the filtering class in the AUDIT_FILTER_STRATEG field. 
-  AUDIT_FILTER_STRATEGY=com.k2view.external.fabric.audit.filters.SampleFilter.
+    AUDIT_FILTER_STRATEGY=com.k2view.external.fabric.audit.filters.SampleFilter.
 
 6. Restart the Fabric node.
 
@@ -47,6 +47,24 @@ The following example displays the com.k2view.external.fabric.audit.filters.Samp
    }
 ~~~
 
+In order to build the artifacts following steps should be implemented:
 
+1) Copy the project located under $K2_HOME/fabric/samples/AuditCustomStrategies to your selected location.
+
+2) create a folder called k2view-libs under AuditCustomStrategies directory.
+
+3) copy the files $K2_HOME/fabric/lib/fabric-common*jar and fabric-session*.jar to k2view-libs folder. 
+
+4) Open Intellij IDE.
+
+5) Import project AuditCustomStrategies in intelliJ IDE.
+
+6) Type CTRL+ALT+SHIFT+S and choose Artifacts.
+
+7) Use the + sign
+
+8) Use Jar -> From modules with dependency
+
+9) use Build->build Artifacts
 
 [![Previous](/articles/images/Previous.png)](01_auditing_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_persistence_strategy.md) 
