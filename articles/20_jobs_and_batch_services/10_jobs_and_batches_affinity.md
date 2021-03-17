@@ -55,10 +55,10 @@ For this purpose, a random number is generated to decide when it will be set to 
 
 This random number will fluctuate between the 2 following paramaters: *MIN_GIVE_UP_EXCEPTIONAL_MINUTES* and *MAX_GIVE_UP_EXCEPTIONAL_MINUTES* - that can be changed in [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) under the *add param names* section.
 
-        - This value will define minimum time for restarting jobs that taken after the recommended time reached, min value = 1
+        - *MIN_GIVE_UP_EXCEPTIONAL_MINUTES* value defines the minimum time for restarting jobs that taken after the recommended time reached, min value = 1
         MIN_GIVE_UP_EXCEPTIONAL_MINUTES = 1
 
-        - This value will define maximum time for restarting jobs that taken after the recommended time reached, min value = 2, max = 14400
+        - *MAX_GIVE_UP_EXCEPTIONAL_MINUTES* value defines the maximum time for restarting jobs that taken after the recommended time reached, min value = 2, max = 14400
         MAX_GIVE_UP_EXCEPTIONAL_MINUTES = 1440
  
 
