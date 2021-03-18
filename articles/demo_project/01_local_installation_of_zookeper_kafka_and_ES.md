@@ -6,7 +6,7 @@ K2View will not be liable for any unauthorized, unlicensed or unallowed use (“
 
 ### **Zookeeper Installation and Configuration** 
 
-1.  Download  the  latest Zookeeper version from https://zookeeper.apache.org/releases.html. For example [**apache-zookeeper-3.6.1-bin.tar.gz**](https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Farchive.apache.org%2Fdist%2Fzookeeper%2Fzookeeper-3.6.1%2Fapache-zookeeper-3.6.1-bin.tar.gz&data=02|01|tali.einhorn%40k2view.com|e467cadc9c524812a6df08d86a02b5ce|994f176e677549549f9e0c719b5e9ca0|1|0|637375907175544494&sdata=AgNFm8tEyEyNBi6ROZs67s%2BvqcgF8pgQ4zUtiS6crHk%3D&reserved=0).
+1.  Download  the  latest Zookeeper version from https://zookeeper.apache.org/releases.html. For example **apache-zookeeper-3.6.1-bin.tar.gz**.
 
 2.  Copy the Zookeeper zip file to your local directory. For example **C:\k2view**, and extract the zip file.
 
@@ -30,7 +30,7 @@ K2View will not be liable for any unauthorized, unlicensed or unallowed use (“
 
 ### **Kafka Installation and Configuration**  
 
-1.  Download the latest Kafka version from http://kafka.apache.org/downloads.html. For example [**kafka_2.12-2.5.0.tgz**](https://eur03.safelinks.protection.outlook.com/?url=http%3A%2F%2Fapache.spd.co.il%2Fkafka%2F2.5.0%2Fkafka_2.12-2.5.0.tgz&data=02|01|tali.einhorn%40k2view.com|e467cadc9c524812a6df08d86a02b5ce|994f176e677549549f9e0c719b5e9ca0|1|0|637375907175564482&sdata=ERKF0Gv2B3pEClzy0rHUb7pETIYlfsFzyNU5Q8arRtk%3D&reserved=0).
+1.  Download the latest Kafka version from http://kafka.apache.org/downloads.html. For example **kafka_2.12-2.5.0.tgz**.
 
 2.  Copy the Kafka zip file to  to your local directory, for example: **C:\k2view**, and extract the zip file. 
 3.  Go to the **config** sub-directory under the Kafka directory, for example: **C:\K2View\kafka_2.12-2.5.0\config**. 
