@@ -301,14 +301,14 @@ When running the flow with Debug ON:
 Broadway Data Inspector (the yellow segment):
 
 
-\- A:  Enables editing the metadata when running a flow with Debug ON.
+\- A:  Enables editing the metadata during the runtime.
 
 
-\- B:  Can identify and display complex Object data type structures regardless of the DEBUG flag.
+\- B:  Can identify and display complex Object data types, their schemas and values.
 
-\- C:  Displays the columns of complex Object data types but does not enable connecting them individually to other Actors arguments.
+\- C:  Allows to connect individual columns of complex Object data types to other Actors arguments.
 
-\- D:  None of the above.
+\- D:  All of the above.
 
 
 
