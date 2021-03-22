@@ -220,15 +220,17 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;]; [WITH [PARALLEL=true/false];</p>
+<p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
 </td>
 <td valign="top" width="250pxl">
 <p>get Customer.1;</p>
-<p>Get instance ID 1 of Customer LU.</p>
-<p>get Customer.1, CRM.34;</p>
-<p>Get instance ID 1 of Customer LU and instance ID 34 of CRM LU.</p>
+<p>get instance ID 1 of Customer LU.</p>
+<p>get Customer.1, CRM.34 WITH parallel=true;</p>
+<p>get instance ID 1 of Customer LU and instance ID 34 of CRM LU in parallel.</p>
+<p>
 </td>
 </tr>
 <tr>
@@ -241,9 +243,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;];</p>
+<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false];;</p>
 <p>Get multiple instances of different LUs:</p>
-<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...);</p>
+<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>getf Customer.fnCreateInstId(235);</p>
@@ -259,15 +261,16 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
+<p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
 </td>
 <td valign="top" width="250pxl">
 <p>use Customer.1;</p>
 <p>Get Instance ID 1 of Customer LU.</p>
-<p>use Customer.1, CRM.34;</p>
-<p>Get Instance ID 1 of Customer LU and Instance ID 34 of CRM LU.</p>
+<p>use Customer.1, CRM.34 WITH parallel=true;</p>
+<p>Get Instance ID 1 of Customer LU and Instance ID 34 of CRM LU in parallel.</p>
 </td>
 </tr>
 </tbody>
