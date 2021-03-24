@@ -3,7 +3,7 @@
 
 ## Environments
 
-Fabric enables you to define a number of source [environments]() and to switch between them during the same Fabric session. This way, you can change source connections without redeploying an LU.
+Fabric enables you to define a number of source [environments](/articles/25_environments/01_environments_overview.md) and to switch between them during the same Fabric session. This way, you can change source connections without redeploying an LU.
 
 For each environment, set the connection details of the interfaces and then deploy the environments to the Fabric cluster. Deployment of the environments is separate from the deployment of the LUs. The passwords of the interfaces are encrypted by the Fabric master key.
 
