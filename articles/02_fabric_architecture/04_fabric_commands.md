@@ -222,7 +222,7 @@ The following table lists the GET commands:
 <p>Get an LUI:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;]; [WITH [PARALLEL=true/false];</p>
+<p>get &lt;LUT_NAME&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.&lt;INSTNACE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
 <p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
 </td>
 <td valign="top" width="250pxl">
