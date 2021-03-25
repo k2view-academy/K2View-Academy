@@ -60,7 +60,7 @@ The protection key is used to encrypt the master key using a Java Keystore. To d
 
 ## Interfaces 
 
-When defining a new interface, the password for this interface is hashed and saved as a hashed field in the [XML file](/articles/25_environments/04_offline_deployment.md#xml-file-example). 
+When defining a new interface, the password for this interface is encrypted and saved in the [XML file](/articles/25_environments/04_offline_deployment.md#xml-file-example) used to stage the project's deployment onto the server. 
 
 ``` 
 <dbScheme>postgres</dbScheme>
