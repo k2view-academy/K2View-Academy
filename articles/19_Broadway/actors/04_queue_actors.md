@@ -23,6 +23,7 @@ Publisher and Subscriber applications must be defined in Fabric as an [Interface
 The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
 The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
+Since Fabric 6.4.2, **Subscribe** Actor can listen to multiple topics by using regex in the **topic** argument.
 
 Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
