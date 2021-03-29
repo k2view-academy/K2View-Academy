@@ -125,11 +125,6 @@ The following table lists the TDM tables and their description.
 <td>Task Execution</td>
 </tr>
 <tr>
-<td><h4>task_exe_error_summary</td>
-<td>TDM Execution summary error table.</td>
-<td>Task Execution</td>
-</tr>
-<tr>
 <td><h4>task_execution_entities</td>
   <td><p>Detailed list of entities and the execution status of each task's execution.</p>
     <p>This table is used to generate the <a href="03a_task_execution_building_entity_list_on_tasks_LUs.md">entity list of the children LU of a task execution</a>.</p>
@@ -163,8 +158,8 @@ The following table lists the TDM tables and their description.
 <td>Task Execution</td>
 </tr>
 <tr>
-<td><h4>task_exe_stats_summary</td>
-<td>Summary statistics of each task's execution. A record is created for each task_Execution_id.</td>
+<td><h4>task_exe_stats_detailed</td>
+<td>Detailed statistics of each task's execution.</td>
 <td>Task Execution Statistics</td>
 </tr>
 <tr>
