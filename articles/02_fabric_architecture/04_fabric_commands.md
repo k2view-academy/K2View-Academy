@@ -401,13 +401,13 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
   - Scope, holds one or more set commands like "sync" or "environment".
   - Attached, the LUs to load into the session. Several LUI can be specified if they are from different LUTs. 
-- **SET USER_ROLES** command, returns the list of roles of the connected user. (valid since Fabric 6.4.2)
   Examples 
 
   * set from '{ "attached" : {"Customer": "1", "ORDERS": "4"}}';
   * set from '{ "scope" : {"sync": "on", "environment" : "_dev"}, "attached" : {"Customer": "1", "ORDERS": "3"}}';
   * set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
-
+  
+- **SET USER_ROLES** command, returns the list of roles of the connected user (valid since Fabric 6.4.2).
 ##### Reset Session Level Setting
 
 Use the following command to reset all the related parameters set on a session level to their default value: **SET DEFAULT**;
