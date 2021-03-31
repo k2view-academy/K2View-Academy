@@ -99,7 +99,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 5. Link the remaining target LU tables to the main target LU table.
 
-Click for more information about the [delete entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
+Click for more information about the [deleting entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 
 Click for more information about [deleting entities](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) from a target environment using a TDM task.
 
