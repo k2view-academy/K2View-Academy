@@ -12,6 +12,6 @@ The Consent Management functionality at the CSR level is equal to the functional
 
  ![image](/articles/DPM/images/Figure_74_Consent_Management_Rep__CustID.png)
 
-As depicted in the figure above, the CSR should enter the <b>Customer ID</b> in the upper-left corner of the screen, and then retrieve the information for the customer by clicking the <b>Search</b> button. For more details, refer to <i>8.3.2 Customer Consent Management Screen</i>. 
+As depicted in the figure above, the CSR should enter the <b>Customer ID</b> in the upper-left corner of the screen, and then retrieve the information for the customer by clicking the <b>Search</b> button. For more details, refer to <i>Customer Consent Management Screen</i> in the previous page. 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/08_Consent_Management/06_Customer_Consent_Management_Screen.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/08_Consent_Management/08_Consent_Repository_History_Audit.md)
