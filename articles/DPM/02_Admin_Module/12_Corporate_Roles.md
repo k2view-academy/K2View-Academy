@@ -83,10 +83,10 @@ The “New Corporate Role” screen is displayed, as shown by the following.
 
 Once the user completes and saves the new Corporate Role, the new Role appears in the list of roles at the center of the screen. 
 
-## Mapping Configuration Role to Application Role
+## Mapping Corporate Role to Application Role
 
-The next step after creating a Corporate Role is to define the mapping to GDPR Application Roles assigned to this Role, and under each Application Role, what screens and actions this Corporate Role can view or perform. 
-To perform this mapping configuration, commit the actions within the following steps.
+The next step after creating a Corporate Role is to define the mapping to DPM Application Roles assigned to this Role, and under each Application Role, what screens and actions this Corporate Role can view or perform. 
+To perform this mapping configuration, execute the actions described by the following steps.
 
 1.	Select the Corporate Role line on the central part of the screen. The right side of the screen then displays a tree of options that allow mapping to the application roles available to the group. 
 2.	Define the configuration by checking or unchecking the box options from this tree.  
