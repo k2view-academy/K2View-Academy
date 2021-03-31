@@ -95,8 +95,11 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 3. Add the **fnDecisionDeleteFromTarget** Decision function to the target LU tables. Note that this Decision function is under Shared Objects and is imported from the [TDM Library](04_fabric_tdm_library.md).
 
-4. Link the remaining target LU tables to the main target LU table.
+4. Create the population of the main target LU table based on a Broadway flow. The Broadway flow must set the task's target environment to be the active environment in order to select the target IDs from the target environment. 
 
+5. Link the remaining target LU tables to the main target LU table.
+
+Click for more information about the [delete entities implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 Click for more information about [deleting entities](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) from a target environment using a TDM task.
 
 ### LU Debug
