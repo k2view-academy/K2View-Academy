@@ -6,21 +6,21 @@ To define parallel execution, click ![image](images/99_19_dots.PNG) in the right
 
 To remove parallel execution, click ![image](images/99_19_dots.PNG) > **Parallel** and set the number to zero. 
 
-## Parallel Execution Examples
+### Parallel Execution Examples
 
-#### Example 1 - Read from LUI and Write into Target DB
+**Example 1 - Read from LUI and Write into Target DB**
 
 The following example displays a flow with two Inner Flows in Stage 2 that are executed parallelly. Each inner flow in Stage 2 reads data from the LUI and then writes it into the target DB.
 
 <img src="images/99_19_parallel_02.PNG" alt="Parallel" />
 
-#### Example 2 - Read and Update LUI
+**Example 2 - Read and Update LUI**
 
 The following example displays a flow which synchronizes an LUI into Fabric and then reads from two different LU tables and writes into two different LU tables parallelly. 
 
 <img src="images/99_19_parallel_03.PNG" alt="Parallel" />
 
-#### Example 3 - Invalid Usage of Parallel Execution
+**Example 3 - Invalid Usage of Parallel Execution**
 
 The following example of performing two GET Instance commands parallelly is invalid. The attempt to execute the flow causes an exception. 
 
