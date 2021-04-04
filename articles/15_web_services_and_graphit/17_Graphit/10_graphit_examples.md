@@ -89,7 +89,9 @@ Output:
 #### grFunction.graphit
 This example illustrates a simple JavaScript routine that returns the highest number of the **x** random number and the **y** random number.<br></br>
 <img src="images/10_graphit_examples_tags.PNG"></img>
+
 Output:
+
 <img src="images/grFormatResp.PNG"></img>
 
 #### grSQL.graphit
