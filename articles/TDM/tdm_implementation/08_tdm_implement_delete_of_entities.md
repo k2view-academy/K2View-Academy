@@ -12,7 +12,7 @@ Each LU has two main branches that are linked to the **FABRIC_TDM_ROOT** root ta
 - **Source branch**, LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities to a target environment and therefore must extract the source data of these entities.
 - **Target branch**, LU tables that extract the target keys of an entity. The keys are extracted from the **target environment** to enable deleting an entity from a target environment if required by the TDM task.
 
-The target table contains the list of target IDs (keys) required to delete the data of the selected entities from the target environment and populate [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. The population of the target table is based on **target interfaces**. 
+The target table contains the list of target IDs (keys) required to delete the data of the selected entities from the target environment and populate [TDM_LU_TYPE_REL_TAR_EID](06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) with the target children IDs. It is recommended to add the **TAR_** prefix to each target table. 
 
 Note that a given target LU table can be used to delete multiple target tables.
 
@@ -54,7 +54,7 @@ Do the following to run the target LU tables on the target environment:
 
    Click for more information about [Broadway as a population and Fabric command actors](/articles/19_Broadway/09_broadway_integration_with_Fabric.md).
 
-
+4. The populations of the target tables are based on on **the same interfaces as the source LU tables**, but the connection details change to the target environment by setting of the target environment as an active environment by the main target LU table.
 
 ## Adding Broadway Flows to Delete the Entities
 

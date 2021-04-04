@@ -59,10 +59,11 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
    
    - Copy the code of the **fnPop_RootTable** into the newly generated Root function of the LU table.
    - Add the following import to the root function: 
-      - **import java.util.concurrent.atomic.AtomicBoolean;**
+      
+   - **import java.util.concurrent.atomic.AtomicBoolean;**
+      
+- Edit the **String sql** variable to include the DB query on the DB table.
    
-   - Edit the **String sql** variable to include the DB query on the DB table.
-
    - Edit the **db parameter** of the **fetch** command.
    
    - Example:
@@ -108,6 +109,6 @@ Click for more information about [deleting entities](/articles/TDM/tdm_gui/19_lo
 The LUI must include the source environment which must be set as the [active environment](/articles/25_environments/01_environments_overview.md) in Fabric. When running a [Data Viewer](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) on the LU to debug its implementation, do either:
 
 - Populate the source environment of the LUI using `_dev_`.  For example, **_dev_1**.
-- Create and deploy the environment to the Fabric Debug server, set the source environment as an active environment in the Fabric Debug server and populate the deployed environment name in the LUI. For example, **UAT_1**.  
+- Create and deploy a source and target environments to the Fabric Debug server, set the source environment as an active environment in the Fabric Debug server and populate the deployed source environment name in the LUI. For example, **UAT_1**.   Note that the main target LU table replaces the active environment to the target environment.
 
 [![Previous](/articles/images/Previous.png)](04_fabric_tdm_library.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdm_implementation_support_hierarchy.md)
