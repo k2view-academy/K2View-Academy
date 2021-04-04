@@ -26,7 +26,7 @@ An environment is defined in Fabric using the following steps:
 
 ### Step 2 - Defining Interface Settings per Environment 
 
-Once **Name** in the  **Environments List** grid is clicked, all DB and non-DB interfaces in the project are copied to the **Selected Environment** grid and displayed in the tabs. Each interface type is displayed in a dedicated tab. For example, if the project has DB, SMTP, Kafka and HTTP interfaces, each type is displayed in a separate tab.
+Once **Name** in the **Environments List** grid is clicked, all DB and non-DB interfaces in the project are copied to the **Selected Environment** grid and displayed in the tabs. Each interface type is displayed in a dedicated tab. For example, if the project has DB, SMTP, Kafka and HTTP interfaces, each type is displayed in a separate tab.
 
 By default, all interfaces are enabled whereby the settings of each relevant interface can be disabled if it is not applicable for the environment.
 
@@ -34,6 +34,7 @@ By default, all interfaces are enabled whereby the settings of each relevant int
    * Clicking the **Enabled** column.
    * Right clicking the row and clicking **Set Selected Rows as Enabled** or **Set Selected Rows as Disabled**. Hold the **Ctrl** key to select multiple rows. 
 2. Populate the relevant fields of each active interface in the  **Selected Environment** grid: server, user, password, etc. If the project has several interface types, go through the tabs and populate all mandatory fields.
+   * Note that when the password is updated, the Fabric Studio re-encrypts it. 
 
    ![image](images/25_02_2.PNG)
 
