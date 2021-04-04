@@ -21,7 +21,7 @@ The following displays mapping of Fabric LU Search fields and Elasticsearch inde
         <p>LU table with at least one Search field</p>
     </td>
     <td width="450pxl" valign="top">
-        <p>Index</p>
+        <p>Index. The index name is [LU Name]_[Cluster_id]_[LU Table].</p>
     </td>
     </tr>
     <tr>
