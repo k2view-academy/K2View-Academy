@@ -22,7 +22,8 @@ The CDC Message publishes transaction messages to **Kafka**  for each UPDATE, IN
 
 When the MicroDB is saved into Cassandra, the transaction's thread sends a **Publish Acknowledge**  message to the Kafka **CDC_TOPIC**. 
 
-The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates [CDC messages](03_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic.
+The CDC_TRANSACTION_PUBLISHER job consumes the transaction messages from Kafka and creates [CDC messages](03_cdc_messages.md) for each transaction. Each CDC consumer has its own Kafka topic. 
+Note that Fabric concatenates the cluster id to each topic name if there are several Fabric clusters on one Cassandra cluster.
 
 Notes: 
 - Each transaction can generate multiple CDC messages. For example, if an LUI sync inserts five records into an LU table, a separate CDC message is generated for each insert.
