@@ -51,7 +51,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 1. Link the main source LU tables to the FABRIC_TDM_ROOT table. 
 
-2. Verify that the main source LU tables are also populated in [ROOT_TABLE_NAME Global](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
+2. Verify that the main source LU tables are also populated in [ROOT_TABLE_NAME ansd ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
 3. Create the population of the main source LU tables based on the [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md).  
 
@@ -84,7 +84,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 6. As a result, if the Sync mode is set to **Do not sync** by the user, or the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, the source LU tables are not populated by the LUI sync.
 
-7. This function also validates if the entity exists in the source tabke. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
+7. This function also validates if the entity exists in the source table. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
 
 8. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated. The remaining source LU table also remains empty.
 
