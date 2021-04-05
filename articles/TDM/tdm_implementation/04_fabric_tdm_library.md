@@ -153,7 +153,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 
 ### Globals
 
-- LU level [Globals](/articles/08_globals/01_globals_overview.md), populate the **ROOT_TABLE_NAME** Global using the main source table or tables. Several source tables can be populated when separated by a comma. For example: CUSTOMER, ACCOUNT. Populate the **ROOT_COLUMN_NAME** Global using the entity ID's column.
+- LU level [Globals](/articles/08_globals/01_globals_overview.md), populate the **ROOT_TABLE_NAME** Global using the main source table or tables. Several source tables can be populated when separated by a comma. For example: CUSTOMER, ACCOUNT. Populate the **ROOT_COLUMN_NAME** Global using the entity ID's column. These Globals are needed to set the IS_INSTANCE_ID column correctly in [TDM_SEQ_MAPPING](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#sequence-mapping) TDM DB table.
 
 ### LU Tables
 
