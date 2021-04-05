@@ -57,13 +57,14 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
    - Copy the code of the **fnPop_RootTable** into the newly generated Root function of the LU table.
    - Add the following import to the root function: 
       
-   - **import java.util.concurrent.atomic.AtomicBoolean;**
+      - **import java.util.concurrent.atomic.AtomicBoolean;**
       
-- Edit the **String sql** variable to include the DB query on the DB table.
+   - This import is needed since the root function defines the **instanceExists** indicator as **AtomicBoolean**. Note that this indicator cannot be defined a Boolean since it is set inside the Lambda expression in the [loop on the ResultSet](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#loop-on-the-result-set-methods).
+   - Edit the **String sql** variable to include the DB query on the DB table.
    
    - Edit the **db parameter** of the **fetch** command.
    
-   - Example:
+      - Example:
    
      ```java
      	String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM main.CUSTOMER where customer_id = ?";
