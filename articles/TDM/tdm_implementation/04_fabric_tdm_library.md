@@ -295,7 +295,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 
 
 
-### Split Large Files
+### Split Large Parsers
 
 **parExecuteJob**, the main parser that runs other parsers and splits them to run in parallel. The **trnParsList** translation object holds the large parser names to be split. Copy this parser to the LU if needed. 
 
