@@ -44,7 +44,7 @@ Select entities from a predefined list of parameters. Entities in the environmen
 
 The parameters list must be [defined for each LU in the task BE](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md) in the Fabric project.
 
-  #### Use Parameters with Random Selection Checkbox
+#### Use Parameters with Random Selection Checkbox
 
   The Parameters selection has two modes: 
 
@@ -60,7 +60,7 @@ The parameters list must be [defined for each LU in the task BE](/articles/TDM/t
 
     - Create a task to load 5 customers with selected parameters. There are 800 customers that match the selected parameters. The task execution gets the first 5 customers that match the selected parameters. 
 
-  #### How Do I Add a Condition? 
+#### How Do I Add a Condition? 
 
   To add a parameter:
 
@@ -69,7 +69,7 @@ The parameters list must be [defined for each LU in the task BE](/articles/TDM/t
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
 The TDM GUI  displays the SQL query built based on the selected parameters.
   
-##### How Do I Populate a Parameter's Value?
+#### How Do I Populate a Parameter's Value?
   
 There are several types of parameters:
   
