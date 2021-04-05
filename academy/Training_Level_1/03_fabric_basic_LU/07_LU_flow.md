@@ -46,7 +46,7 @@ Following the Auto Discovery Tutorial, you can generate the **Customer** using t
 Open your Fabric project and do the following:
 
 1. Start the Wizard by doing one of the following: 
-- Right-click on **Logical Units**, and in the **Logical Unit** window that appears, type the name of the new unit (call it "Customer"). Select the **Open LU auto discovery** box. Click OK.
+- Right-click on **Logical Units**, select **New Logical Unit**, and in the **Logical Unit** window that appears, type the name of the new unit (call it "Customer"). Select the **Open LU auto discovery** box. Click OK.
 or
 - Select an existing Logical Unit by righ-clicking on it, then select **Auto Discovery Wizard**. 
 2. In the Auto Discovery Wizard window, set the **DB Connection** as **CRM_DB** and click **Next**.
