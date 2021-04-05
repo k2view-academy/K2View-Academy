@@ -2,8 +2,7 @@
 
 During a project's lifecycle, there might be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
 
-This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include, but are not necessarily limited to, updates of TDM Globals of Product Versions, updates of LU Schemas, and updates of Broadway Load Flows. 
-
+This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include updates of TDM Globals of Product Versions, updates of LU Schemas, and updates of Broadway Load Flows. 
 
 
 ## TDM Globals of Product Versions
@@ -28,7 +27,7 @@ Adding or removing LU tables to the LU Schema must be implemented manually.
 
 ### Adding New Columns to an LU Table 
 
-The new columns can be added manually or  added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window (![image](/articles/03_logical_units/images/03_18_01_toolbar.png)).
+The new columns can be added manually or  added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window ![image](/articles/03_logical_units/images/03_18_01_toolbar.png).
 
 ### Removing columns from an LU table
 
@@ -40,16 +39,19 @@ It could be that new columns or new tables have been added to a table by a more 
 
 Examples:
 
+- Adding a new table, PAYMENT_DETAILS, to the  Development environment. This table did not exist in Production environment.
+
 - Adding the PAYMENT_METHOD column to PAYMENT table in the Development environment. This column did not exist in the PAYMENT table of the Production environment.
 
-- Adding a new table, PAYMENT_DETAILS, to the  Development environment. This table did not exist in Production environment.
+Each of these is described below: 
 
   #### LU Schema - Adding New LU Table
 
-  - Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
+  Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
+  
+  Here is one example of source code to implement this: 
 
-  - Example:
-
+   
     ```java
     String luName = getLuType().luName;
     String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
@@ -63,22 +65,21 @@ Examples:
     ```
     
 
-  #### LU Schema - Adding New Columns to an LU Table 
-  - New columns must be selected by the query only when they already exist in the source environment.
+  #### LU Schema - Adding New Columns to an LU Table  
 
-  - Define multiple populations on the LU table. Each population must run on its source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
+  - Define multiple populations on the LU table. Each population must run on its source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global. Note that new columns can be selected by the query only when they already exist in the source environment.
 
   - Example:
 
-    - Adding the PAYMENT_METHOD column to PAYMENT table in the Development environment. This table does not exist in Production environment.
+    Add a PAYMENT_METHOD column to the PAYMENT table in the Development environment. This table does not exist in Production environment. 
 
-    - Creating two table populations:
+    In this case, we create two table populations:
 
-      1. Production table population, runs when  TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does not select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty:
+      1. Production table population, which runs when the TDM_SOURCE_PRODUCT_VERSION Global is PROD. This population does <b>not</b> select the PAYMENT_METHOD from the source and leaves the PAYMENT_METHOD empty:
 
          ![prod population](images/multi_versions_lu_population_1.png)
 
-         Adding to the Production population a new **decision function**: fnDecisionProductionProductVersion:
+         We add a new **decision function**: fnDecisionProductionProductVersion to the Production population:
 
          ```java
          String luName = getLuType().luName;
@@ -95,11 +96,11 @@ Examples:
 
          
 
-      2. Development  table population, runs when TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populate the the PAYMENT_METHOD column of the LU table:
+      2. Development  table population, which runs when TDM_SOURCE_PRODUCT_VERSION Global is DEV. This population selects the PAYMENT_METHOD from the source and populates the PAYMENT_METHOD column of the LU table:
 
          ![dev population](images/multi_versions_lu_population_2.png)
 
-         Adding  to the Development population a new **decision function**: fnDecisionDevProductVersion:
+         We add a new **decision function**: fnDecisionDevProductVersion to the Development population:
 
          ```java
          String luName = getLuType().luName;
@@ -122,9 +123,9 @@ Examples:
 
 - The target environment version is taken from  **TDM_TARGET_PRODUCT_VERSION** Global.
 
-- Example:
+Example:
 
-  - Populate the PAYMENT_METHOD column of PAYMENT table only when loading the data to a Development target environment. Set a default value in the PAYMENT_METHOD if the source environment does not have this column:
+  - Here, we populate the PAYMENT_METHOD column of the PAYMENT table only when loading the data to a Development target environment. Set a default value in the PAYMENT_METHOD if the source environment does not have this column:
 
     ![Broadway example](images/multi_versions_broadway_flow_example.png) 
 
