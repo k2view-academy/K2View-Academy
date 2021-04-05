@@ -29,7 +29,7 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
 
 - Synching Customer ID #1 inserts the following record into **CUSTOMER_PARAMS** TDM DB table:
 
-  <table width="950pxl">
+  <table width="900pxl">
   <tbody>
   <tr>
   <td width="100pxl"><strong>entity_id</strong></td>
@@ -75,7 +75,7 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
   
 - Synching Billing IDs #169, #170, #171, #172, and #173 inserts the following records into **BILLING_PARAMS** TDM DB table:
 
-  <table width="950pxl">
+  <table width="900pxl">
   <tbody>
   <tr>
   <td width="100pxl"><strong>entity_id</strong></td>
@@ -190,22 +190,22 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
   <table width="900pxl">
   <tbody>
   <tr>
-  <td width="225pxl"><strong>customer_root_id</strong></td>
-  <td width="225pxl"><strong>BILLING.NO_OF_OPEN_INVOICES</strong></td>
-  <td width="225pxl"><strong>BILLING.SUBSCRIBER_TYPE</strong></td>
-  <td width="191"><strong>BILLING.TOTAL_BALANCE_AMOUNT</strong></td>
-  <td width="191"><strong>BILLING.TOTAL_PAYMENT_AMOUNT</strong></td>
-  <td width="191"><strong>BILLING.VIP_STATUS</strong></td>
-  <td width="191"><strong>CUSTOMER.FIRST_NAME</strong></td>
-  <td width="191"><strong>CUSTOMER.LAST_NAME</strong></td>
-  <td width="191"><strong>CUSTOMER.LINE_NUMBER</strong></td>
-  <td width="191"><strong>CUSTOMER.NO_OF_OPEN_CASES</strong></td>
-  <td width="191"><strong>CUSTOMER.NO_OF_SUBSCRIBERS</strong></td>
-  <td width="191"><strong>CUSTOMER.OPEN_CASE_DATE</strong></td>
-  <td width="191"><strong>ORDERS.ORDER_STATUS</strong></td>
-  <td width="191"><strong>ORDERS.ORDER_TYPE</strong></td>
-  <td width="191"><strong>collection_root_id</strong></td>
-  <td width="191"><strong>COLLECTION.COLLECTION_STATUS</strong></td>
+  <td><strong>customer_root_id</strong></td>
+  <td><strong>BILLING.NO_OF_OPEN_INVOICES</strong></td>
+  <td><strong>BILLING.SUBSCRIBER_TYPE</strong></td>
+  <td><strong>BILLING.TOTAL_BALANCE_AMOUNT</strong></td>
+  <td><strong>BILLING.TOTAL_PAYMENT_AMOUNT</strong></td>
+  <td><strong>BILLING.VIP_STATUS</strong></td>
+  <td><strong>CUSTOMER.FIRST_NAME</strong></td>
+  <td><strong>CUSTOMER.LAST_NAME</strong></td>
+  <td><strong>CUSTOMER.LINE_NUMBER</strong></td>
+  <td><strong>CUSTOMER.NO_OF_OPEN_CASES</strong></td>
+  <td><strong>CUSTOMER.NO_OF_SUBSCRIBERS</strong></td>
+  <td><strong>CUSTOMER.OPEN_CASE_DATE</strong></td>
+  <td><strong>ORDERS.ORDER_STATUS</strong></td>
+  <td><strong>ORDERS.ORDER_TYPE</strong></td>
+  <td><strong>collection_root_id</strong></td>
+  <td><strong>COLLECTION.COLLECTION_STATUS</strong></td>
   </tr>
   <tr>
   <td>65</td>
