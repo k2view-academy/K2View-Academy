@@ -21,7 +21,7 @@ Note that since the TDM category contains the product's Web Services, it is reco
 Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_interfaces_overview.md) into the project's **Shared Objects**:
 -  **DB_CASSANDRA**, the connection to the Cassandra DB.  This interface is used by TDM utilities. Edit the IP address according to the environment.
 -  **TDM**, the connection to the [TDM PosgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Edit the IP address according to the environment.
--  **FabricRedis**, the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. Edit the IP address and populate it with the IP address of the TDM server. 
+-  **FabricRedis**, the [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) that connects to the environment's **Redis** storage. The Redis interface can be used for the [sequence implementation](11_tdm_implementation_using_generic_flows.md#step-2---create-sequences). Edit the IP address and populate it with the IP address of the TDM server. 
 
 ### Shared Globals
 
