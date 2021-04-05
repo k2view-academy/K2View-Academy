@@ -89,6 +89,13 @@
 </tr>
 <tr>
 <td width="125">
+  <h4><p><strong>ERD</strong></p></h4>
+</td>
+<td width="516">
+<p>Entity Relation Diagram - the graphical representation of an LU schema.</p>
+</td>
+</tr><tr>
+<td width="125">
   <h4><p><strong><a href="/articles/07_table_population/13_LU_table_population_execution_order.md">Execution Order</a></strong></p></h4>
 </td>
 <td width="516">
