@@ -187,12 +187,12 @@ This VIEW is refreshed by the [checkMigrateAndUpdateTDMDB](03_task_execution_pro
 
 - **wsGetNumberOfMatchingEntities** Fabric Web-Service generates a new **MATERIALIZED VIEW** in the TDM DB named **lu_relations_Customer_SRC**:
 
-  <table width="2997">
+  <table width="900pxl">
   <tbody>
   <tr>
-  <td width="111"><strong>customer_root_id</strong></td>
-  <td width="212"><strong>BILLING.NO_OF_OPEN_INVOICES</strong></td>
-  <td width="191"><strong>BILLING.SUBSCRIBER_TYPE</strong></td>
+  <td width="225pxl"><strong>customer_root_id</strong></td>
+  <td width="225pxl"><strong>BILLING.NO_OF_OPEN_INVOICES</strong></td>
+  <td width="225pxl"><strong>BILLING.SUBSCRIBER_TYPE</strong></td>
   <td width="191"><strong>BILLING.TOTAL_BALANCE_AMOUNT</strong></td>
   <td width="191"><strong>BILLING.TOTAL_PAYMENT_AMOUNT</strong></td>
   <td width="191"><strong>BILLING.VIP_STATUS</strong></td>
