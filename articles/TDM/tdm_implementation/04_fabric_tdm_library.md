@@ -264,6 +264,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 <li><strong>Child_lu_eid_sql = </strong>select order_id from subscriber</li>
 <li><strong>Child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
 </ul>
+<p>Note that both tables, subscriber and tar_subscriber, must be defined in Customer LU schema.</p>  
 </td>
 </tr>
 <tr>
