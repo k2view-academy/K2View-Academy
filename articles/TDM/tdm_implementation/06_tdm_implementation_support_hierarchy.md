@@ -20,7 +20,7 @@ This table is used for the following:
 
 #### Which Process Populates the TDM_LU_TYPE_RELATION_EID? 
 
-The TDM_LU_TYPE_RELATION_EID is populated by the sync on the parent LUI. The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_RELATION_EID table if the TDM task copies (inserts) entities to the target environment. This function runs on the parent LU. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the child IDs of each parent LUI.
+The TDM_LU_TYPE_RELATION_EID is populated by the sync on the parent LUI. The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_RELATION_EID table except for [delete only tasks](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) where no data is extracted from the data sources. This function runs on the parent LU. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the child IDs of each parent LUI.
 
 Click for more information about the [TDM task operation modes](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode).
 
@@ -89,9 +89,9 @@ Customer 1 has orders 10, 12, and 13 in the Production environment. The **LUI** 
 <td valign="top" width="100pxl">Order</td>
 <td valign="top" width="100pxl">1</td>
 <td valign="top" width="100pxl">10</td>
-<td valign="top" width="150pxl">1/8/2021 13:31</td>
+<td valign="top" width="150pxl">1/8/2021 13:31:00</td>
 <td valign="top" width="100pxl">&nbsp;</td>
-<td valign="top" width="150pxl">1/1/1970 00:00</td>
+<td valign="top" width="150pxl">1/1/1970 00:00:00</td>
 </tr>
 <tr>
 <td valign="top" width="100pxl">Production</td>
@@ -99,9 +99,9 @@ Customer 1 has orders 10, 12, and 13 in the Production environment. The **LUI** 
 <td valign="top" width="100pxl">Order</td>
 <td valign="top" width="100pxl">1</td>
 <td valign="top" width="110pxl">12</td>
-<td valign="top" width="150pxl">1/8/2021 13:31</td>
+<td valign="top" width="150pxl">1/8/2021 13:31:00</td>
 <td valign="top" width="100pxl">&nbsp;</td>
-<td valign="top" width="150pxl">1/1/1970 00:00</td>
+<td valign="top" width="150pxl">1/1/1970 00:00:00</td>
 </tr>
 <tr>
 <td valign="top" width="100pxl">Production</td>
@@ -109,9 +109,9 @@ Customer 1 has orders 10, 12, and 13 in the Production environment. The **LUI** 
 <td valign="top" width="100pxl">Order</td>
 <td valign="top" width="100pxl">1</td>
 <td valign="top" width="100pxl">13</td>
-<td valign="top" width="150pxl">1/8/2021 13:31</td>
+<td valign="top" width="150pxl">1/8/2021 13:31:00</td>
 <td valign="top" width="100pxl">&nbsp;</td>
-<td valign="top" width="150pxl">1/1/1970 00:00</td>
+<td valign="top" width="150pxl">1/1/1970 00:00:00</td>
 </tr>
 </tbody>
 </table>
@@ -173,7 +173,7 @@ This table holds the link between the parent-child **target IDs**. The relations
 
 #### Which Process Populates the TDM_LU_TYPE_REL_TAR_EID? 
 
-The TDM_LU_TYPE_REL_TAR_EID is populated by the sync of the parent LU which populates the related child IDs on each parent entity before deleting the parent entity from the target environment.  The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_REL_TAR_EID table if the TDM task deletes entities from the target environment. This function runs on the parent LU. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the target child IDs of each parent LUI.
+The TDM_LU_TYPE_REL_TAR_EID is populated by the sync of the parent LU which populates the related child IDs on each parent entity before deleting the parent entity from the target environment.  The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_REL_TAR_EID table only if the TDM task deletes entities from the target environment. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation and run on the parent LU to get the target child IDs of each parent LUI.
 
 Click for more information about the [TDM task operation modes](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode).
 
