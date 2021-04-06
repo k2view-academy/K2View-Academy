@@ -46,13 +46,16 @@ Following the Auto Discovery Tutorial, you can generate the **Customer** using t
 Open your Fabric project and do the following:
 
 1. Start the Wizard by doing one of the following: 
-- Right-click on **Logical Units**, select **New Logical Unit**, and in the **Logical Unit** window that appears, type the name of the new unit (call it "Customer"). Select the **Open LU auto discovery** box. Click OK.
+   - Right-click on **Logical Units**, select **New Logical Unit**, and in the **Logical Unit** window that appears, type the name of the new unit (call it "Customer"). Select the **Open LU auto discovery** box. Click OK.
 or
-- Select an existing Logical Unit by righ-clicking on it, then select **Auto Discovery Wizard**. 
+   - Select an existing Logical Unit by righ-clicking on it, then select **Auto Discovery Wizard**. 
 2. In the Auto Discovery Wizard window, set the **DB Connection** as **CRM_DB** and click **Next**.
-3. Select the **CUSTOMER.CUSTOMER_ID** as a **Column Name** so that the **Table Name** is also populated. Note that you can uncheck the **Add Schema Name** option.
-4. Select **Fast** **Auto Discovery**.
-5. Click **Next** to review the suggested **ERD** and if you are satisfied, click **Finish**.
+3. Open the **CRM_DB -> main** tree (left side of window). 
+4. Double-click on **CUSTOMER**, then double-click **CUSTOMER_ID**.  **Column Name** and **Table Name** will be populated. Note that you can uncheck the **Add Schema Name** option.
+5. Click **Next**
+6. Under Select auto discovery type, select **Fast (Foreign Keys)**.
+7. Click **Next** , and review the suggested **ERD**. 
+8. If you are satisfied, click **Next** to see the final **ERD**, then click  **Finish**.
 
 Note that the **Root Table** and **InstanceID** are created automatically.
 
@@ -80,9 +83,9 @@ Let’s review some Logical Unit Schema properties:
 
 ### Editing an LU
 
-You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct LU that have all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation. Please read the [LU Table Overview](/articles/06_LU_tables/01_LU_tables_overview.md) article.
+You may have noticed that although the Auto Discovery Wizard is quick, it doesn’t necessarily construct an LU that has all the required source Schema tables for the implementation. Source tables can be added to an implementation as part of the LU Schema or can be created manually as part of the implementation. Please read the [LU Table Overview](/articles/06_LU_tables/01_LU_tables_overview.md) article.
 
-The following describe how to create an LU table with its properties and indexes, specifically, a manual table:
+The following articles describe how to manually create an LU table with its properties and indexes:
 
 -  [Create New LU Table](/articles/06_LU_tables/02_create_an_LU_table.md)
 
@@ -98,7 +101,7 @@ To remove a specific table from an LU, follow the steps in [Delete Table from LU
 
 You have created your first LU in a few clicks and understood its components and how to edit it. However, does it really fit the basic requirements? How do you know that the Schema you have just modeled retrieves the data the way you would like to view it? Can you validate the implementation and view at least one LUI’s data?
 
-Well … the Fabric Studio can do this using its built-in Data Viewer. Let’s look at the Data Viewer, see how it is used and learn about its options. Please read the 
+Fabric Studio can do this using its built-in Data Viewer. Let’s look at the Data Viewer, see how it is used and learn about its options. Please read the 
 [Data Viewer Capabilities](/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md) article.
 
  
