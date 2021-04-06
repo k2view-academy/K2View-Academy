@@ -115,11 +115,11 @@ Each of these is described below:
          return decision;
          ```
 
-  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and avoid adding them to the TDM Logic file, since the TDM logic file contains product functions.
+  - Note that it is recommended to create the project's functions in a separate [Logic File](/articles/04_fabric_studio/09_logic_files_and_categories.md) and avoid adding them to the TDM Logic file, since the TDM logic file already contains product functions.
 
 ## Update Broadway Load Flows
 
-- New table or new table's columns must be loaded to the target environment only if exists in the target environment.
+- New table or new table's columns must be loaded to the target environment only if they exist in the target environment.
 
 - The target environment version is taken from  **TDM_TARGET_PRODUCT_VERSION** Global.
 
