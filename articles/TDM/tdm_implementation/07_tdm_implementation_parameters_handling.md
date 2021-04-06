@@ -8,7 +8,7 @@ The parameters that are available for the task are attached to the LUs of the ta
 
 ## TDM Parameter Tables
 
-When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM DB. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_<params>`. 
+When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM DB. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
 
 Parameter tables are used for the following:
 
@@ -48,16 +48,14 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
   ![lu params](images/populated_lu_params_example.png)
 
- 6. The **fnEnrichmentLuParams** enrichment function also creates and populates the `<LU Name>_PARAMS` table in the TDM DB.
+ 6. The **fnEnrichmentLuParams** enrichment function also creates and populates the `<LU Name>_params` table in the TDM DB.
 
 **Notes:**
 
 - The COLUMN_NAME value of the trnLuParams must be identical to the column_name added to LU_PARAMS table.
 - The COLUMN_NAME value is displayed in the TDM GUI when the user selects parameters for a task.
 - Do not include spaces or special characters in parameter names.
-  
-
-If parameters do not need to be defined for an LU, add the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT fields to the LU Schema.
+- Even if parameters do not need to be defined for an LU, the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT columns, must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#random-selection).
 
 
 
