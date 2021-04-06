@@ -55,7 +55,7 @@ Do the following to create the sequences for your TDM implementation:
 
 ### Step 3 - Create Load and Delete Flows
 
-In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows:
+In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows. Please note that the LU source table names must be identical to the table names in the target environment to generate the load and delete flows with the correct table names.
 
 **1. Create a LOAD flow per table**
 
