@@ -53,14 +53,6 @@ Do the following to create the sequences for your TDM implementation:
    Note that this flow should run once per TDM implementation and not per each LU since the sequences are used across several LUs in the TDM project.
    The sequences flows and Actors are created under **Shared Objects** to enable several LUs to use a Sequence Actor.
 
-3. Edit each Load flow of the TDM project by adding a newly created Sequence Actor to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. 
-
-   ![image](images/11_tdm_impl_04.PNG)
-
-4. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
-
-   ![setTargetEntity](images/setTargetEntity_actor_example.png)
-
 ### Step 3 - Create Load and Delete Flows
 
 In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows:
@@ -77,7 +69,7 @@ Performed by the **createLoadAllTablesFlow.flow** that receives the Logical Unit
 
 Performed by the **createDeleteTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to delete the data from this table in the target DB. The name of each newly created flow is **delete_[Table Name].flow**. For example, delete_CUSTOMER.flow. The tables defined in Step 1 are filtered out and the flow is not created for them. 
 
-The following two updates must be performed manually:
+The following updates must be performed manually:
 
 * Populate the **sql** input argument of the **Get Table Data** Actor with the SELECT query that retrieves the keys of the data to be deleted. For example, in the delete_ACTIVITY.flow, write the following query since the CUSTOMER_ID and ACTIVITY_ID are the keys of the ACTIVITY table.
 
@@ -91,6 +83,14 @@ The following two updates must be performed manually:
 
   ![images](images/11_tdm_impl_delete2.PNG)
 
+* Update the Load Flows with the Sequence Actors:  
+1. Edit each Load flow of the TDM project by adding a newly created Sequence Actors to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. 
+
+   ![image](images/11_tdm_impl_04.PNG)
+
+2. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+
+   ![setTargetEntity](images/setTargetEntity_actor_example.png)
 
 **4. Create the main DELETE flow**
 
