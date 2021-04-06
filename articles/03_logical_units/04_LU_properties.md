@@ -1,6 +1,6 @@
 # LU Properties
 
-The Properties tab in the LU window contains the following properties:
+The Properties tab in the LU schema window contains the following properties:
 
 <table style="width: 900px;">
 <tbody>
