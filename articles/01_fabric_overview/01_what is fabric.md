@@ -1,6 +1,6 @@
 # What is Fabric?
 
-Fabric is a data management platform that provides access to data where and when you need it. 
+Data Fabric is a data management platform that provides access to data where and when you need it. 
 Fabric solves real-time operational needs for data that is stored and handled in different systems, technologies or geo-locations. 
 
 Acting as a new data layer above existing data sources, Fabric controls data using a patented Digital Entity centric approach offering multiple and diverse built-in integrated data management capabilities for end-to-end management of the data lifecycle.
