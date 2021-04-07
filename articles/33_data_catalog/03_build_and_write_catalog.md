@@ -1,6 +1,6 @@
 # Build and Write Data Catalog
 
-A Data Catalog implementation must be deployed to the server side so that all changes are compiled and ready for use. To do so, use one of the following options in the Fabric Studio:
+A <a href="https://www.k2view.com/platform/data-catalog/" target="_blank">Data Catalog</a> implementation must be deployed to the server side so that all changes are compiled and ready for use. To do so, use one of the following options in the Fabric Studio:
 
 * **Build Catalog**, builds the catalog files of all project entities (each LU, WS, Common). 
   * The files are created in JSON format in the Resources folder of the project entities  - one file for each project entity. 

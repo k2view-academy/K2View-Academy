@@ -26,7 +26,7 @@ To summarize, Fabric architecture yields significant savings in computing, power
 Fabric is a great solution for:
 * Anything 360, like customer, order, device, server, car, credit-card or patient.
 * Micro services.
-* Customer data hub / platform.
+* <a href="https://www.k2view.com/products/customer-data-hub/" target="_blank">Customer data hub</a>.
 * ML / AI inference.
 * Real-time data processing and correlation.
 
