@@ -27,9 +27,13 @@ The target DBs are empty and the source DBs are populated with customers.
 
      & "[PostgreSQL DB exe file full path]" -Upostgres --host [PG ip address] --port [DB port] -f "create_resources.sql"
 
-     Example: 
+     **Example:** 
 
-	& "C:\Program Files\PostgreSQL\9.6\bin\psql.exe" -Upostgres --host localhost --port 5432 -f "create_resources.sql"
+   ```
+   & "C:\Program Files\PostgreSQL\9.6\bin\psql.exe" -Upostgres --host localhost --port 5432 -f "create_resources.sql"
+   ```
+
+   
 
 4. Open **pgAdmin 4** and start restoring the databases from backup files.
 
