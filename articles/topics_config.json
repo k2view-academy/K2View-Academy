@@ -5,10 +5,6 @@
 			"branch name": "Academy_6.4"
 		},
 		{
-			"display name": "Demo 6.4",
-			"branch name": "Academy_6.4_DemoProj"
-		},
-		{
 			"display name": "Fabric 6.2",
 			"branch name": "Academy_6.2"
 		}
@@ -269,6 +265,26 @@
 					"value": "34_JMX_statistics"
 				}
 			]
+		}
+	],
+	"KB": [
+		{
+			"KB display name": "Release Notes",
+			"KB display text": "The Fabric release notes including the latest main features and improvements.",
+			"KB icon": "images/kb_icon1.png",
+			"visible": true
+		},
+		{
+			"KB display name": "Demo Projects",
+			"KB display text": "Sample demo projects of Data Fabric, TDM and DPM implementations including the setup guidelines.",
+			"KB icon": "images/kb_icon2.png",
+			"visible": true
+		},
+		{
+			"KB display name": "Best Practices",
+			"KB display text": "Recommended tools, best practices and implementation examples.",
+			"KB icon": "images/kb_icon3.png",
+			"visible": true
 		}
 	],
 	"Community": [
