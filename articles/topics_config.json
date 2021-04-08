@@ -5,6 +5,10 @@
 			"branch name": "Academy_6.4"
 		},
 		{
+			"display name": "Demo 6.4",
+			"branch name": "Academy_6.4_DemoProj"
+		},
+		{
 			"display name": "Fabric 6.2",
 			"branch name": "Academy_6.2"
 		}
