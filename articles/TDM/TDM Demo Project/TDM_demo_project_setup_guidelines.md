@@ -1,6 +1,6 @@
 # TDM Demo Project - Setup and Implementation Guidelines
 
-### Data Bases Setup
+### Databases Setup
 
 The TDM demo project is based on PostgreSQL databases:
 
@@ -17,9 +17,9 @@ The target DBs are empty and the source DBs are populated with customers.
 
 #### Creating the Demo DBs in the Local PostgreSQL DB
 
-1. Download the sql script and the backup files.
+1. Download the sql script and the DB backup files from the **Demo DBs** directory.
 
-2. Create the DBs in PG: 
+2. Create the databases in PG: 
 
 3. Do go the script's directory and open a **powershell** window:
 
@@ -31,7 +31,6 @@ The target DBs are empty and the source DBs are populated with customers.
 
 	& "C:\Program Files\PostgreSQL\9.6\bin\psql.exe" -Upostgres --host localhost --port 5432 -f "create_resources.sql"
 
-3. Download the DB's backup files.
 4. Open **pgAdmin 4** and start restoring the databases from backup files.
 
 ### Fabric Implementation
