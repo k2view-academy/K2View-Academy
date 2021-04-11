@@ -67,3 +67,6 @@
     o  Compaction in Cassandra happens automatically, but the frequency of it depends on the selected compaction strategy 
 
     o  When [forcing a major compaction](https://docs.datastax.com/en/dse/6.0/dse-admin/datastax_enterprise/tools/nodetool/toolsCompact.html) on a table, all the SSTables on the node get compacted together into a single large SSTable. Due to its size, the resulting SSTable will likely never get compacted out again
+    
+    
+    [![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_LU_and_Tables.md) [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_kafka.md)
