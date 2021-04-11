@@ -56,7 +56,7 @@
 
 10. IIDF Kafka Details – Do not store the IIDF Kafka details in a translation table. Use **IifProperties.getInstance()** to get the IIDFinder configuration setting of the cluster.
 
-![A screenshot of a cell phone  Description automatically generated](file:///C:/Users/SHMUEL~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![](C:\K2View-Academy\articles\COE\Fabric_Implementation_Best_Practices\images\best_practice_iid_finder.png)
 
 Note: Kafka Producer & Consumer examples can be found in the COE KB Project 
 

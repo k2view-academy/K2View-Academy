@@ -64,4 +64,4 @@
 
    Example:
 
-![A screenshot of a cell phone  Description automatically generated](file:///C:/Users/SHMUEL~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)
+![](C:\K2View-Academy\articles\COE\Fabric_Implementation_Best_Practices\images\best_practice_lu.png)
