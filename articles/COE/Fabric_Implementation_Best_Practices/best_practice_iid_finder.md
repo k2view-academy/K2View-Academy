@@ -70,3 +70,6 @@ Note: Kafka Producer & Consumer examples can be found in the COE KB Project
     o  **DELTA_JOB_PREV_MESSAGE_DIFF_EPSILON_MS** – Setting this parameter skips a transaction if this IID was already synced in the last x ms – Meaning if we set it to 2 seconds and instance 111 was synced on 10:00:01, a transaction on 10:00:02 for the same instance will be skipped. Therefore, if you must ensure that each get will be executed, set this parameter to ‘0’.
 
 12. iidFinder Library – Make sure you are using the latest version from the GIT repository 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_kafka.md) [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md)
