@@ -91,6 +91,6 @@
 
  
 
- 
+ [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_java_coding.md)
 
  
