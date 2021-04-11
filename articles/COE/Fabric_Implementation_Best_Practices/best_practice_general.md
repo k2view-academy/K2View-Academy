@@ -46,7 +46,7 @@
         GraphitPool.Entry entry = getLuType().graphitPool().get("Customer360.graphit"); 
         Graphit graphit = entry.get();**
         Object result = graphit.run();**
-        entry.close()** 
+        entry.close()**  
         
 [<img align="right" width="60" height="54" src="/articles/images/next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_java_coding.md)
 
