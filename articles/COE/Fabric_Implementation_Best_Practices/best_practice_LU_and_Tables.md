@@ -65,3 +65,6 @@
    Example: 
 
 ![image](/articles/COE/Fabric_Implementation_Best_Practices/images/best_practice_lu.png)
+
+
+[![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_java_coding.md) [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_cassandra.md)
