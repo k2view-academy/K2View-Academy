@@ -98,6 +98,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </td>
 <td valign="top" width="300pxl">
 <p>Define the list of available reference tables for <strong>extract tasks</strong>.</p>
+<p>Click to read more about <a href="09_tdm_reference_implementation.md">Reference implementation</a>.</p> 
 </td>
 <td valign="top" width="400pxl">
 <p>Populate this translation for each reference table. A separate record must be created for each reference table. Set the LU name on each record.</p>
