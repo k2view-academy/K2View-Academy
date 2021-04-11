@@ -59,7 +59,16 @@ In this step you will run the generic **createFlowsFromTemplates.flow** from the
 
 **1. Create a LOAD flow per table**
 
-Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them. 
+Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
+
+#### Update the Load Flows with the Sequence Actors: 
+1. Edit each Load flow of the TDM project by adding a newly created Sequence Actors to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. Edit the Sequence Actor: set the Population Type of **tableName** and **columnName** input arguments to **Const** and populate them the the target table and column names. These arguments must be set to populate the **tdm_seq_mapping** table properly.
+
+   ![image](images/11_tdm_impl_04.PNG)
+
+2. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+
+   ![setTargetEntity](images/setTargetEntity_actor_example.png)
 
 **2. Create the main LOAD flow**
 
@@ -82,15 +91,6 @@ The following updates must be performed manually:
 * Populate the **keys** input argument of the **DbDelete** Actor. These should correlate with the table's keys.
 
   ![images](images/11_tdm_impl_delete2.PNG)
-
-* Update the Load Flows with the Sequence Actors:  
-1. Edit each Load flow of the TDM project by adding a newly created Sequence Actors to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. 
-
-   ![image](images/11_tdm_impl_04.PNG)
-
-2. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
-
-   ![setTargetEntity](images/setTargetEntity_actor_example.png)
 
 **4. Create the main DELETE flow**
 
