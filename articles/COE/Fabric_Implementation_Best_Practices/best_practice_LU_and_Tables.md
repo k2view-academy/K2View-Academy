@@ -62,6 +62,6 @@
 
 7. Table population **‘Update/Delete’** mode – When using **‘Update’** mode, make sure the tables’ key fields are being marked. Otherwise, all records will be updated on each iteration. As a result, all records will be updated with the last iteration data.
 
-   Example:
+   Example: 
 
-![](C:\K2View-Academy\articles\COE\Fabric_Implementation_Best_Practices\images\best_practice_lu.png)
+![image](/articles/COE/Fabric_Implementation_Best_Practices/images/best_practice_lu.png)
