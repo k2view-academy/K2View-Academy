@@ -75,3 +75,5 @@
     
 
 16. Document – Document and record all your project level actors (whether built-in or new) with their inputs & outputs variables to enable better visibility and support of your flows
+
+[![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md) 
