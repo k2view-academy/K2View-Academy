@@ -17,3 +17,6 @@
    o  Avoid creating your own threads for Kafka consumers within the code. It is recommended to use the built-in job mechanism and Kafka interface. You can start a job instance for each partition. Examples can be found in the COE knowledge base.
 
    o  Perform **“commit”** every ‘X’ number of transactions. ‘X’ parameter should be tuned.
+   
+   
+   [![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_cassandra.md) [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_iid_finder.md)
