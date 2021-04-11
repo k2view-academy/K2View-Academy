@@ -1,5 +1,5 @@
 
-# 1   General
+# General
 
 1. Avoid executing **“set sync on”** before a “**get**” command as this is already the default
 
