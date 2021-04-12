@@ -12,6 +12,16 @@
 
    ​	§ Async mode can be used only when the order of transactions is not relevant. Example: processing of a file which does not contain repeating row keys 
 
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+
+
+
 2. Kafka Consumer
 
    o  Avoid creating your own threads for Kafka consumers within the code. It is recommended to use the built-in job mechanism and Kafka interface. You can start a job instance for each partition. Examples can be found in the COE knowledge base.
