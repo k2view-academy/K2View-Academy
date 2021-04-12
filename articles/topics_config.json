@@ -271,19 +271,19 @@
 		{
 			"KB display name": "Release Notes",
 			"KB display text": "The Fabric release notes including the latest main features and improvements.",
-			"KB icon": "images/kb_icon1.png",
+			"KB icon": "images/icon-release.png",
 			"visible": true
 		},
 		{
 			"KB display name": "Demo Projects",
-			"KB display text": "Sample demo projects of Data Fabric, TDM and DPM implementations including the setup guidelines.",
-			"KB icon": "images/kb_icon2.png",
+			"KB display text": "Sample demo projects of Data Fabric, TDM and other implementations including the setup guidelines.",
+			"KB icon": "images/icon-demo.png",
 			"visible": true
 		},
 		{
 			"KB display name": "Best Practices",
 			"KB display text": "Recommended tools, best practices and implementation examples.",
-			"KB icon": "images/kb_icon3.png",
+			"KB icon": "images/icon-best.png",
 			"visible": true
 		}
 	],
