@@ -1,91 +1,79 @@
 # Java Coding
 
-1. Close resources - If it implements auto closable, you can wrap it with **try()**. If not, you should make sure you close it in the ‘**finally’** block. Examples:
+1. Remove unused variables, redundant code, and commented out code
 
-   o  **ResultSetWrapper**- close all result sets in the finally 
+2. Duplicate code – Create a function if the same code is used in more than one place
 
-   o  **ludb().fetch** --> Either wrap it with resource **try ()** or use **ludb().fetch().each**
+3. Working with **intellij** is highly recommended - It provides features like code completion, code refactoring, and code debugging. Example: 
 
-   o  **ludb().fetch("select val from root", null).firstValue();** --> No need to close it as it’s closed internally  
+   a. For example: points 1 & 2 mentioned above will appear as warnings, allowing you to fix them and improve your code quality.
 
-   o  **Db.Row rs = ludb().fetch("select \* from root", null).firstRow();** --> No need to close it as it’s closed internally  
+4. Close all your resources - If your code implements auto closable, you can wrap it with **try()**. If this does not work, you should make sure you close it in the ‘**finally’** block. Examples:
 
-   ​	**NOTE:** It is recommended to change all **DBQuery** to **ludb().fetch** or **db().fetch**
-   
+   a. **ResultSetWrapper**- close all result sets in the **'finally'** block.  
 
-2. Validate null values before executing a function on the given parameter.
+   b. **ludb().fetch** --> Either wrap this command with the resource **try ()** or use **ludb().fetch().each**
 
-   o  Example: if (x != null) x.substring(1);
+   c. **ludb().fetch("select val from root", null).firstValue();** --> No need to close this, as it’s closed internally.  
 
-   o  Compare the constant to the parameter to avoid a nullPointer exception
+   d. **Db.Row rs = ludb().fetch("select \* from root", null).firstRow();** --> No need to close this, as it’s closed internally.  
 
-   ​	§ Example: "CUSTOMER".equals (i_TableName)
+      **NOTE:** It is recommended to change all **DBQuery** instances to **ludb().fetch** or **db().fetch**
 
-3. String casting – If you use a **toString()** function, first make sure that the value is not null. Another way to avoid a “Null Pointer Exception” is by casting using **‘+ "" ‘**
+4. Validate null values before executing a function on the given parameter. Example: 
 
-4. String concatenation
+    >  if (x != null) x.substring(1);
 
-   o  Use **StringBuilder** instead of **“+”** to concatenate strings
+5. Compare the constant to the parameter to avoid a nullPointer exception. Example: 
 
-   ​	§ String is an immutable object and cannot be changed,  which means that if you use the “+” on a string object, a new object will be created 
+    > "CUSTOMER".equals (i_TableName)
 
-5. Avoid applying redundant casting
+6. String casting: If you use a **toString()** function, first make sure that the value is not null. Another way to avoid a “Null Pointer Exception” is by casting using **‘+ "" ‘**
 
-   o  For example, casting an object to “long” type and then using **“+”** to concatenate it to the SQL query is redundant. 
+7. String concatenation:
 
-   o  Date Casting
+    a. Use **StringBuilder** instead of **“+”** to concatenate strings
 
-   ​	§ Fabric alters all database sessions to use a uniform date format 
+    b. String is an immutable object and cannot be changed,  which means that if you use the “+” on a string object, a new object will be created 
 
-   ​	§ The default date field format is: yyyy-MM-dd HH:mm:ss. Do not use unnecessary casting when extracting a date field from the source.
+8. Avoid applying redundant casting. 
 
-   ​	§ This default format can be changed in the config.ini
+    a. For example, casting an object to “long” type and then using **“+”** to concatenate it to the SQL query is redundant. 
 
-   ​	§ If casting is mandatory, make sure the dates being compared are using the same format 
-    
-    
+    b. Fabric alters all database sessions to use a uniform date format, and the default date field format is: yyyy-MM-dd HH:mm:ss (this default can be changed in the config.ini file).  If it is not needed, do not use casting when extracting a date field from the source.
+    c. If date casting is mandatory, make sure the dates being compared use the same format
 
-6. Prepare & Binding
+9. Prepare & Binding:
 
-   o  Use *Non-Bind* variables in the sql statement only when the values are constant values 
+    a. Use *Non-Bind* variables in an SQL statement only when the values are constant values.  
 
-   o  In any other case, use **‘Prepare’** and send the values as parameters to the SQL 
+    b. In any other case, use **‘Prepare’** and send the values as parameters to the SQL statement. 
 
-   ​	**NOTE:** There is no need to create new **Object[]** to pass parameters for binding starting with version 6.0 and later
+     **NOTE:** In Fabric 6.0 and later, there is no need to create a new **Object[]** to pass parameters to start binding. 
 
-7. Use **binding** also for **‘get**’ command 
+10. Use **binding** for a **‘get**’ command as well. 
 
-   **NOTE:** In Fabric 6.2 and later versions, **binding** is supported for all Fabric commands 
+   **NOTE:** In Fabric 6.2 and later, **binding** is supported for all Fabric commands.
 
+11. Parameter definition:
 
+     a. Avoid setting unused parameters 
 
-8. **Parameter definition**
+     b. Always define the parameters outside of a loop
 
-   o  Avoid setting unused parameters 
+12. When selecting one value:
 
-   o  Always define the parameters outside of a loop
+    a. use **“DBSelectValue”** instead of **“DBSelectQuery”** and a loop (lower versions of Fabric only)
 
-9. **When selecting one value**
+    b. use **“ludb.fetch (<select statement>).**  **firstValue()”** instead of **“Db.Rows rows = ludb.fetch(<select statement>)”** with a loop
 
-   o  use **“DBSelectValue”** instead of **“DBSelectQuery”** and a loop (lower versions of Fabric only)
+13. Add **‘catch’** to a **‘try’** statement - Your process will not fail unless you throw the exception inside the catch block. 
 
-   o  use **“ludb.fetch (<select statement>).** **firstValue()”** instead of **“Db.Rows rows = ludb.fetch(<select statement>)”** with a loop
+    a. There is no need to add a **‘catch’** statement if there are no additional steps to be performed in case of a failure.
 
-10. Add **‘catch’** to a **‘try’** statement - Your process will not fail unless you throw the exception inside the catch block. 
+14. **ReportUserMessage\log.info** should only be used for debugging – Remove these functions from your code before an actual production deployment.
 
-    o  There is no need to add a **‘catch’** statement if there are no additional steps to be performed in case of a failure.
-
-11. **ReportUserMessage\log.info** should only be used for debugging – Remove these functions from your code before an actual production deployment.
-
-12. Combine two lists – In order to combine two lists use Java function: **‘myListObject.addAll’.** Do not use it for a loop. 
-
-13. Remove unused variables, redundant code, and commented out code
-
-14. Duplicate code – Create a function in case the same code is being used in more than one place
-
-15. Working with **intellij** is highly recommended - It provides features like code completion, code refactoring, and code debugging. 
-
-    o  For example: points 13 & 14 mentioned above will appear as warnings, allowing you to fix them and improve your code quality.
+15. Combine two lists – To combine two lists use Java function: **‘myListObject.addAll’.** Do not use it for a loop. 
 
 16. Always perform Unit Testing for your code! 
 
