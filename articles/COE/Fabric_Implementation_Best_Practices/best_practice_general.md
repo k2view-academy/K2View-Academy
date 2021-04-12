@@ -37,14 +37,13 @@
     a. Use the resources **‘try’** or **‘close’** to release the entry back into the GraphitPool. 
 Without this step, Fabric will generate/compile a new Graphit file every time, which could negatively affect performance.
 
-    - Code Example:
-    
-        >GraphitPool.Entry entry =    getLuType().graphitPool().get("Customer360.graphit"); 
+   Code Example:
+
+        GraphitPool.Entry entry = getLuType().graphitPool().get("Customer360.graphit"); 
         Graphit graphit = entry.get();**
         Object result = graphit.run();**
         entry.close()**  
-
-
+        
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_java_coding.md)
 
----------
+------
