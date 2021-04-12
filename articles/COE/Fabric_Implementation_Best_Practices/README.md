@@ -1,5 +1,5 @@
 <strong>Fabric Implementation Best Practices<strong>
-
+Various tips, tricks, and recommendations when working with Fabric are in the articles below, divided into relevant categories: 
 <ul>
 <li><a href="/articles/COE/Fabric_Implementation_Best_Practices/best_practice_general.md">Best Practices - General</a></li>
 <li><a href="/articles/COE/Fabric_Implementation_Best_Practices/best_practice_java_coding.md">Best Practices - Java Coding</a></li>
