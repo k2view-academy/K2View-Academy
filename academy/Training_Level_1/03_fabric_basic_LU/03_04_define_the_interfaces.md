@@ -22,7 +22,7 @@ Our Training environment has three main and different DBs, which in essence, rep
 
 - **ORDERS_DB**, usually stores information for filling an order's functions required to complete a customer’s order created in a CRM. For example, Orders, Order items, Items or Pricing and in the Fabric Training environment, an Orders table. 
 
- Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Demo Project](/articles/demo_project/SqliteDB) and save them locally on your computer.
+ Download the billing_db.db, crm_db.db, and orders_db.db SQLite files from the [Fabric Demo Project](/articles/demo_project) and save them locally on your computer.
 
 ### Instructions for Defining an Interface 
 
