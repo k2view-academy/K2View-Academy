@@ -53,7 +53,7 @@
 
 10. Use **binding** for a **‘get**’ command as well. 
 
-   **NOTE:** In Fabric 6.2 and later, **binding** is supported for all Fabric commands.
+     **NOTE:** In Fabric 6.2 and later, **binding** is supported for all Fabric commands.
 
 11. Parameter definition:
 
