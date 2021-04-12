@@ -1,4 +1,4 @@
-# FABRIC KNOWLEDGE BASE DEMO PROJECT 
+# FABRIC DEMO PROJECT 
 
 The Fabric Knowledge Base project includes a set of Logical Units, code examples and objects that are used in all Knowledge Base articles and Learning Items. It uses four SQLite databases as the data source. 
 
