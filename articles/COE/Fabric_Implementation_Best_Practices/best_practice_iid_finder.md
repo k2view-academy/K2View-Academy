@@ -54,7 +54,7 @@
 
 ![image](/articles/COE/Fabric_Implementation_Best_Practices/images/best_practice_iid_finder.png)
 
-​				**NOTE:** Kafka Producer & Consumer examples can be found in the COE knowledge base project. 
+   ​	      			**NOTE:** Kafka Producer & Consumer examples can be found in the COE knowledge base project. 
 
 11. Kafka Delta **get** jobs – If you are using the Kafka delta topic for the **get** mechanism, it is very important to set all globals and iifConfig parameters correctly. Otherwise, data might not be deleted from Delta or **‘sync’** might be skipped.
  
