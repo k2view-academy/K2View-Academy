@@ -8,13 +8,13 @@
 
 4. Close all your resources: If your code implements auto closable, you can wrap it with **try()**. If this does not work, you should make sure you close it in the ‘**finally’** block. Examples:
 
-   a. **ResultSetWrapper** --> close all result sets in the **'finally'** block.  
+   * **ResultSetWrapper** --> close all result sets in the **'finally'** block.  
 
-   b. **ludb().fetch**  --> Either wrap this command with the resource **try ()**,  or use **ludb().fetch().each** .
+   * **ludb().fetch**  --> Either wrap this command with the resource **try ()**,  or use **ludb().fetch().each** .
 
-   c. **ludb().fetch("select val from root", null).firstValue()** --> No need to close this, as it’s closed internally.  
+   * **ludb().fetch("select val from root", null).firstValue()** --> No need to close this, as it’s closed internally.  
 
-   d. **Db.Row rs = ludb().fetch("select \* from root", null).firstRow()** --> No need to close this, as it’s closed internally.  
+   * **Db.Row rs = ludb().fetch("select \* from root", null).firstRow()** --> No need to close this, as it’s closed internally.  
 
       **NOTE:** It is recommended to change all **DBQuery** instances to **ludb().fetch** or **db().fetch**
 
@@ -39,28 +39,28 @@
 
 8. Avoid applying redundant casting. Examples:
 
-    a. Casting an object to **long** type and then using  **“+”** to concatenate it to the SQL query is redundant. 
+    * Casting an object to **long** type and then using  **“+”** to concatenate it to the SQL query is redundant. 
 
-    b. Fabric alters all database sessions to use a uniform date format, and the default date field format is: yyyy-MM-dd HH:mm:ss (this default can be changed in the **config.ini** file).  If it is not needed, do not use casting when extracting a date field from the source.
-    c. If date casting is mandatory, make sure the dates being compared use the same format.
+    * Fabric alters all database sessions to use a uniform date format, and the default date field format is: yyyy-MM-dd HH:mm:ss (this default can be changed in the **config.ini** file).  If it is not needed, do not use casting when extracting a date field from the source.
+    * If date casting is mandatory, make sure the dates being compared use the same format.
 
 9. Prepare & Binding:
 
-    a. Use *Non-Bind* variables in an SQL statement only when the values are constant values.  
+    * Use *Non-Bind* variables in an SQL statement only when the values are constant values.  
 
-    b. In any other case, use **Prepare** and send the values as parameters to the SQL statement. 
+    * In any other case, use **Prepare** and send the values as parameters to the SQL statement. 
 
-     **NOTE:** In Fabric 6.0 and later, there is no need to create a new **Object[]** to pass parameters to start binding. 
+     **NOTE:** In Fabric 6.0 and above, there is no need to create a new **Object[]** to pass parameters to start binding. 
 
 10. Use **binding** for a **get** command as well. 
 
-     **NOTE:** In Fabric 6.2 and later, **binding** is supported for all Fabric commands.
+     **NOTE:** In Fabric 6.2 and above, **binding** is supported for all Fabric commands.
 
 11. Parameter definition:
 
-     a. Avoid setting unused parameters. 
+     * Avoid setting unused parameters. 
 
-     b. Always define the parameters outside of a loop.
+     * Always define the parameters outside of a loop.
 
 12. When selecting one value:
 
