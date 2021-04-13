@@ -52,7 +52,7 @@
 
 10. Do not store the iidfinder Kafka details in a translation table. Use **IifProperties.getInstance()** to get the iidfinder configuration setting of the cluster. See this example: 
 
-![image](/images/best_practice_iid_finder.png)
+![image](/articles/COE/Fabric_Implementation_Best_Practices/images/best_practice_iid_finder.png)
 
 ​				**NOTE:** Kafka Producer & Consumer examples can be found in the COE knowledge base project. 
 
