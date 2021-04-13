@@ -50,11 +50,11 @@
 
     * In any other case, use **Prepare** and send the values as parameters to the SQL statement. 
 
-     **NOTE:** In Fabric 6.0 and above, there is no need to create a new **Object[]** to pass parameters to start binding. 
+      **NOTE:** In Fabric 6.0 and above, there is no need to create a new **Object[]** to pass parameters to start binding. 
 
 10. Use **binding** for a **get** command as well. 
 
-     **NOTE:** In Fabric 6.2 and above, **binding** is supported for all Fabric commands.
+    * In Fabric 6.2 and above, **binding** is supported for all Fabric commands.
 
 11. Parameter definition:
 
