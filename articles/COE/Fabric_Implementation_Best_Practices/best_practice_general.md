@@ -24,6 +24,7 @@
 9. LUDB Functions:  
 
     a. The purpose of LUDB functions is to expand the SQL library. 
+    
     b. An LUDB function that does not have or does not use input parameters and is used within a query will be called multiple times and will return the exact same result for all rows.
 
 10. Graphit: 
