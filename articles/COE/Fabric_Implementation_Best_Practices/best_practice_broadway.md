@@ -50,9 +50,9 @@
 
 	 - If rollback of the entire data set is needed upon failure, use **‘commit at the end’** method.
 
-13. Recovery Point – For long running flows (i.e Hours), consider using the **‘Recovery point’** feature. In case of a flow failure, a re-run will utilize the serialized data and start from the last saved recovery point rather than from the beginning.
+13. Recovery Point – For long running flows (for example, hours), consider using the **‘Recovery point’** feature. In case of a flow failure, a re-run will utilize the serialized data and start from the last saved recovery point rather than from the beginning.
   
-14. Links into Loops – when dragging multiple links (of type **iterate**) from outside the loop to Actors inside it, consider using a **Const** Actor inside the loop, dragging one **iterate** line to it and many **value** lines from it
+14. Links into Loops – when dragging multiple links (of **Iterate** link type) from outside the loop to Actors inside it, consider using a **Const** Actor inside the loop, dragging one **iterate** line to it and many **value** lines from it
 
 15. When selecting one value: 
 
