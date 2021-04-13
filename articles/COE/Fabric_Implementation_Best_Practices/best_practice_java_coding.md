@@ -36,7 +36,7 @@
 
 8. Avoid applying redundant casting. Examples:
 
-    a. Casting an object to **long** type and then using **“+”** to concatenate it to the SQL query is redundant. 
+    a. Casting an object to **long** type and then using **+** to concatenate it to the SQL query is redundant. 
 
     b. Fabric alters all database sessions to use a uniform date format, and the default date field format is: yyyy-MM-dd HH:mm:ss (this default can be changed in the **config.ini** file).  If it is not needed, do not use casting when extracting a date field from the source.
     c. If date casting is mandatory, make sure the dates being compared use the same format.
