@@ -34,11 +34,11 @@
 
     * The following is the correct setting:
 
-        ​	 `Truncate = **false**`
+        ​	 Truncate = **false**
 
-        ​	 `Unique index on the IID`
+        ​	 Unique index on the IID
 
-        ​	 `population mode = **upsert**`
+        ​	 population mode = **upsert**
 
    * If the truncate mode is set to “true”, the **deleteOrphans** functionality for an LPK scenario on a table that is connected to the root might trigger the deletion of records which should not be deleted.  
 
