@@ -9,22 +9,22 @@
 
 3. Always attempt to use in-memory data and avoid accessing external interfaces.
 
-5. Avoid accessing the same table multiple times if all queries can be combined into one query. 
+4. Avoid accessing the same table multiple times if all queries can be combined into one query. 
 
-6. Stop an LUI sync when it takes too long by using the **sync timeout** property on the LU level. 
+5. Stop an LUI sync when it takes too long by using the **sync timeout** property on the LU level. 
 
-7. Select references from within an enrichment function. Do this by using **ludb.fetch** or **fabric.fetch**, instead of **FabricDB.fetch** (fabric local interface defined in the implementation),  as  **ludb.fetch** or **fabric.fetch** are more efficient. 
+6. Select references from within an enrichment function. Do this by using **ludb.fetch** or **fabric.fetch**, instead of **FabricDB.fetch** (fabric local interface defined in the implementation),  as  **ludb.fetch** or **fabric.fetch** are more efficient. 
 
-8. Use the **clearThreadGlobals** function  to make sure thread globals are cleared at the end of the **get** process. 
+7. Use the **clearThreadGlobals** function  to make sure thread globals are cleared at the end of the **get** process. 
 
-9. When possible, use the Fabric **set output file** command followed by a query execution instead of writing code. This will generate a CSV file that contains Fabric data. 
+8. When possible, use the Fabric **set output file** command followed by a query execution instead of writing code. This will generate a CSV file that contains Fabric data. 
 
-10. LUDB Functions:  
+9. LUDB Functions:  
 
     a. The purpose of LUDB functions is to expand the SQL library. 
     b. An LUDB function that does not have or does not use input parameters and is used within a query will be called multiple times and will return the exact same result for all rows.
 
-11. Graphit: 
+10. Graphit: 
 
     a. Try using Graphit whenever possible and minimal (or no) java code to allow easier maintenance and readability. If you are not sure how to implement a specific functionality in Graphit, please contact the COE.
 
