@@ -66,11 +66,11 @@
 
     * Use **ludb.fetch (<select statement>).**  **firstValue()”** instead of **Db.Rows rows = ludb.fetch(<select statement>)** with a loop.
 
-    * When using Fabric lower than 5.4, use **DBSelectValue** instead of **DBSelectQuery** and a loop.
+    * In Fabric  5.4 and below, use **DBSelectValue** instead of **DBSelectQuery** and a loop.
 
 13. Add **catch** to a **try** statement - Your process will not fail unless you throw the exception inside the catch block. 
 
-    a. There is no need to add a **catch** statement if there are no additional steps to be performed in case of a failure.
+    * There is no need to add a **catch** statement if there are no additional steps to be performed in case of a failure.
 
 14. **log.info** should only be used for debugging. Remove these functions from your code before an actual production deployment.
 
