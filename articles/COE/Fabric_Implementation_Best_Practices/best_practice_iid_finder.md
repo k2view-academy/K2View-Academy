@@ -57,10 +57,13 @@
 ​				**NOTE:** Kafka Producer & Consumer examples can be found in the COE knowledge base project. 
 
 11. Kafka Delta **get** jobs – If you are using the Kafka delta topic for the **get** mechanism, it is very important to set all globals and iifConfig parameters correctly. Otherwise, data might not be deleted from Delta or **‘sync’** might be skipped.
-12. **DELTA_JOB_DELAY_TIME** should be set to a higher value than the **DELTA_RANGE_DELAY_MS** to ensure that the records will be deleted. The delete formula is as follows: 
+ 
+13. **DELTA_JOB_DELAY_TIME** should be set to a higher value than the **DELTA_RANGE_DELAY_MS** to ensure that the records will be deleted. The delete formula is as follows: 
      	**MAX_DC_UPDATE – DELTA_EXTRA_TIME_MS** < Delta records update_time  <  **CURRENT_TIME - DELTA_RANGE_DELAY_MS**
+      
 13. **DELTA_JOB_PREV_MESSAGE_DIFF_EPSILON_MS** – Setting this parameter skips a transaction if this IID was already synced in the last *X* msec – Meaning if we set it to 2 seconds and instance 111 was synced on 10:00:01, a transaction on 10:00:02 for the same instance will be skipped. Therefore, if you must ensure that each **get** will be executed, set this parameter to **0**.
-14. Make sure you are using the latest version of the iidFinder library (available from the GIT repository).  
+1 
+15. Make sure you are using the latest version of the iidFinder library (available from the GIT repository).  
 
 
 [![Previous](/articles/images/Previous.png)](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_kafka.md) [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/Fabric_Implementation_Best_Practices/best_practice_security.md)
