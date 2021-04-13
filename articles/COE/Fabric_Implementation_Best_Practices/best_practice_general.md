@@ -29,13 +29,13 @@
 
 10. Graphit: 
 
-   * Try using Graphit whenever possible and minimal (or no) java code to allow easier maintenance and readability. If you are not sure how to implement a specific functionality in Graphit, please contact the COE.
+    * Try using Graphit whenever possible and minimal (or no) java code to allow easier maintenance and readability. If you are not sure how to implement a specific functionality in Graphit, please contact the COE.
 
-   * A Graphit file can be a standalone web service.
+    * A Graphit file can be a standalone web service.
 
-   * If you use **get** inside the Graphit file, make sure a redundant **get** is not executed in the web service.
+    * If you use **get** inside the Graphit file, make sure a redundant **get** is not executed in the web service.
 
-   * Use the resources **try** or **close** to release the entry back into the GraphitPool. 
+    * Use the resources **try** or **close** to release the entry back into the GraphitPool. 
      Without this step, Fabric will generate/compile a new Graphit file every time, which could negatively affect performance.
 
 ​       Code Example:
