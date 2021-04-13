@@ -4,7 +4,7 @@
 
     * Always consider the order in which the table is populated.
 
-    * Set up **Truncate mode** if the population extracts all data for a given instance. 
+    * Set up **Truncate mode** if the population extracts all data for a given instance.
 
       **NOTE:** The  **Truncate mode**  setting on the population level truncates the entire table (even if it was set on the 3rd population, for example).
 
@@ -21,14 +21,14 @@
    - Mark the Key fields of each table and set them as a unique index. 
    - Create the relevant indexes based on your statement.
    
-   **NOTE:** Creating the correct indexes improves the performance of SELECT, UPDATE, and DELETE statements, but will slow down the performance of INSERT statements. 
+     **NOTE:** Creating the correct indexes improves the performance of SELECT, UPDATE, and DELETE statements, but will slow down the performance of INSERT statements. 
    
-   * If not created correctly, indexes may slow the performance of SELECT, UPDATE, and DELETE statements. Therefore, it is recommended to execute **explain query plan** to validate that the correct indexes are being utilized. 
-   * If you apply additional manipulation/transformation in the query on the index fields, it will not be used. For example: Concatenation of two fields in the WHERE statement. In this case, even if there is an index on those fields, it will not be used.
-   * If needed, enforce the index utilization in the query using **INDEXED BY**. If it is fails upon parsing, use **/\* sqlite \*/ or /\* k2_no_parse \*/** before the SELECT (depending on the Fabric version). 
-   * Simplify queries used to achieve better performance and readability.
-   * Avoid using the JOIN operator too many times in the same query. Consider splitting the query to several simple queries.
-   * Avoid using the UNION operator too many times. Additionally, use UNION ALL if the data being retrieved by the sub queries is unique. This will improve the performance as each UNION instance adds another action between the results of the queries, and this adds time.    
+   - If not created correctly, indexes may slow the performance of SELECT, UPDATE, and DELETE statements. Therefore, it is recommended to execute **explain query plan** to validate that the correct indexes are being utilized. 
+   - If you apply additional manipulation/transformation in the query on the index fields, it will not be used. For example: Concatenation of two fields in the WHERE statement. In this case, even if there is an index on those fields, it will not be used.
+   - If needed, enforce the index utilization in the query using **INDEXED BY**. If it is fails upon parsing, use **/\* sqlite \*/ or /\* k2_no_parse \*/** before the SELECT (depending on the Fabric version). 
+   - Simplify queries used to achieve better performance and readability.
+   - Avoid using the JOIN operator too many times in the same query. Consider splitting the query to several simple queries.
+   - Avoid using the UNION operator too many times. Additionally, use UNION ALL if the data being retrieved by the sub queries is unique. This will improve the performance as each UNION instance adds another action between the results of the queries, and this adds time.    
 
 3. To validate that a record exists, select the first row with the required WHERE condition using **limit 1 or rownum < 2**, depending on which database is being used. 
 
