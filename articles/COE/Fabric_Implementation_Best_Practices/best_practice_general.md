@@ -1,7 +1,7 @@
 
 # General
 
-1. Avoid executing **“set sync on”** before a “**get**” command as this is already the default
+1. Avoid executing **“set sync on”** before a “**get**” command as this is already the default.
 
 2. Avoid executing **“set sync off”** after a “**get**” command and before executing the queries, as such queries will not trigger a sync (applicable for Version 5.x and above)
     a. This is the default system behavior, but it can be modified via a change in the **config.ini** file.

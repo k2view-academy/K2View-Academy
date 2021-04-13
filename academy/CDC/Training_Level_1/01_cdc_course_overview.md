@@ -28,7 +28,7 @@ This work environment features sets of tables  like customers, subscribers, invo
 
 To work in the course environment, please install Kafka, Zookeeper and Elasticsearch on your local working station. [Click for installation instructions](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md).
 
-The CDC and Search exercises are based on the [Demo Project](/articles/demo_project) in the K2view Academy repository.
+The CDC and Search exercises are based on the [Fabric Demo Project](/articles/demo_project) in the K2view Academy repository.
 
 
 To learn more about Fabric terminology at any time during the course, you are invited to checkout the [Fabric Glossary](/articles/01_fabric_overview/02_fabric_glossary.md).
