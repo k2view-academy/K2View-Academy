@@ -4,7 +4,9 @@
 1. Avoid executing **set sync on** before a **get** command as this is already the default.
 
 2. Avoid executing **set sync off** after a **get** command and before executing the queries, as such queries will not trigger a sync (applicable for Version 5.x and above).
+    
     a. This is the default system behavior, but it can be modified via a change in the **config.ini** file.
+    
     b. On versions prior to 5.x, **set sync off** should be used.
 
 3. Always attempt to use in-memory data and avoid accessing external interfaces.
@@ -38,7 +40,7 @@ Without this step, Fabric will generate/compile a new Graphit file every time, w
    Code Example:
 
         GraphitPool.Entry entry = getLuType().graphitPool().get("Customer360.graphit"); 
-    Graphit graphit = entry.get();**
+        Graphit graphit = entry.get();**
         Object result = graphit.run();**
         entry.close()**  
 
