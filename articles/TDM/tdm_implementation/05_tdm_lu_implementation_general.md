@@ -56,7 +56,7 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
    
    - Copy the code of the **fnPop_RootTable** into the newly generated Root function of the LU table.
    - Add the following import to the root function: 
-      
+     
       - **import java.util.concurrent.atomic.AtomicBoolean;**
       
    - This import is needed since the root function defines the **instanceExists** indicator as **AtomicBoolean**. Note that this indicator cannot be defined a Boolean since it is set inside the Lambda expression in the [loop on the ResultSet](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#loop-on-the-result-set-methods).
@@ -84,7 +84,12 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 7. This function also validates if the entity exists in the source table. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
 
+   See example of a root function that populates Customer LU table:
+
+   ![root example](images/pop_customer_root_function_example.png)
+
 8. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
+
 9. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
