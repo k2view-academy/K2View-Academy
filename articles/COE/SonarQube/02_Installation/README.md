@@ -1,10 +1,9 @@
 
+<strong>SonarQube Installation<strong>
 
-![image](/articles/images/welcome_to_wiki.png)
+<ul>
+<li><a href="/articles/COE/SonarQube/02_Installation/01_Installation.md">Installation</a></li>
+</ul>
 
-## SonarQube 
-
-
-* [Installation](/articles/COE/SonarQube/02_Installation/01_Installation.md) 
 
 
