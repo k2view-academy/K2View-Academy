@@ -7,7 +7,7 @@ This article describes the working procedure for such updates of the TDM impleme
 
 ## TDM Globals of Product Versions
 
-The  [TDM Product](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a system or application installed in a source or target environment. The list of possible product versions must be set on each TDM product. When adding a TDM Product to a TDM environment in the TDM GUI, the [product version must be set in the environment](/articles/TDM/tdm_gui/11_environment_products_tab.md#environment-product-window).
+A  [TDM Product](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a system or application installed in a source or target environment. The list of possible product versions must be set on each TDM product. When adding a TDM Product to a TDM environment in the TDM GUI, the [product version must be set in the environment](/articles/TDM/tdm_gui/11_environment_products_tab.md#environment-product-window).
 
 The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The product versions are based on the product's version on the task's environments: 
 
@@ -19,7 +19,7 @@ The TDM implementation can get the values of these Globals to check the source a
 
 ## Update LU Schema
 
- The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, note the following:
+The data source of the LU schema may have been updated, and consequently requires editing of the LU schema. When doing so, note the following:
 
 ### Adding or Removing LU Tables
 
@@ -29,7 +29,7 @@ Adding or removing LU tables to the LU Schema must be implemented manually.
 
 The new columns can be added manually or  added by clicking the [Update Tables from Database](/articles/03_logical_units/18_LU_schema_refresh_LU_options.md) green icon in the LU Schema window ![image](/articles/03_logical_units/images/03_18_01_toolbar.png).
 
-### Removing columns from an LU table
+### Removing Columns From an LU table
 
 Removing columns from an LU table must be implemented manually.
 
@@ -43,15 +43,15 @@ Examples:
 
 - Adding the PAYMENT_METHOD column to PAYMENT table in the Development environment. This column did not exist in the PAYMENT table of the Production environment.
 
-Each of these is described below: 
+Adding new LU tables, and adding new columns to an LU table are described in more detail below:  
 
   #### LU Schema - Adding New LU Table
 
-  Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
-  
+Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functions.md) to check the TDM_SOURCE_PRODUCT_VERSION Global. The decision function returns a  **true** value if the table exists in the source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global.
+
   Here is one example of source code to implement this: 
 
-   
+
     ```java
     String luName = getLuType().luName;
     String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
@@ -63,13 +63,13 @@ Each of these is described below:
     }
     return decision;
     ```
-    
+
 
   #### LU Schema - Adding New Columns to an LU Table  
 
-  - Define multiple populations on the LU table. Each population must run on its source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global. Note that new columns can be selected by the query only when they already exist in the source environment.
+  - Define multiple populations in the LU table. Each population must run on its source environment. The source environment version is taken from  **TDM_SOURCE_PRODUCT_VERSION** Global. Note that new columns can be selected by the query only when they already exist in the source environment.
 
-  - Example:
+    Example:
 
     Add a PAYMENT_METHOD column to the PAYMENT table in the Development environment. This table does not exist in Production environment. 
 
