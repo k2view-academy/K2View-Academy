@@ -26,7 +26,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
     The **fnEnrichmentLuParams** [enrichment function](/articles/10_enrichment_function/01_enrichment_function_overview.md) is attached to the LU_PARAMS table and populates the LU_PARAMS table and then creates a record for each LUI (Entity ID). 
 
-2. Add the LU_PARAMS to the LU Schema and link the ENTITY_ID to the main source table. For example, link the CUSTOMER LU table to the FABRIC_TDM_ROOT.IID column and link the LU_PARAMS.ENTITY_ID to the CUSTOMER.CUSTOMER_ID.
+2. Add the LU_PARAMS to the LU Schema and link the ENTITY_ID to the FABRIC_TDM_ROOT.IID.
 
 3. Edit the **COMBO_MAX_COUNT** shared Global imported from the TDM Library if needed. By default the Global is populated with 49 and is checked when creating a TDM task using a [Parameters selection method]. If the number of possible values in the [TDM Parameters tables](#tdm-parameters-tables) is smaller or equal to the COMBO_MAX_COUNT value, the parameter is handled as a **combo** parameter and a list of all possible values for this parameter is displayed. If a value is not selected from the list, the parameter has  more values than the threshold defined in COMBO_MAX_COUNT and the user must enter the value in the parameter.
 
@@ -55,7 +55,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 - The COLUMN_NAME value of the trnLuParams must be identical to the column_name added to LU_PARAMS table.
 - The COLUMN_NAME value is displayed in the TDM GUI when the user selects parameters for a task.
 - Do not include spaces or special characters in parameter names.
-- Even if parameters do not need to be defined for an LU, the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT columns, must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#random-selection).
+- Even if parameters do not need to be defined for an LU, the LU_PARAMS table with the ENTITY_ID and SOURCE_ENVIRONMENT columns must be added to the LU Schema to create the `<LU Name>_params` table in the TDM DB. The `<LU Name>_params` table is needed by both entities selection methods of a TDM task: [Parameters](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#parameters) and [Random Selection](/articles/TDM/tdm_gui/18_load_task_requested_entities_regular_mode.md#random-selection).
 
 
 

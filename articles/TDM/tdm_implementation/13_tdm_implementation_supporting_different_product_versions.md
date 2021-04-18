@@ -52,6 +52,7 @@ Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functio
   Here is one example of source code to implement this: 
 
 
+<<<<<<< HEAD
     ```java
     String luName = getLuType().luName;
     String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
@@ -63,6 +64,18 @@ Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functio
     }
     return decision;
     ```
+=======
+```java
+String luName = getLuType().luName;
+String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
+
+Boolean decision = false; 
+if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
+{
+	decision = true;
+}
+```
+>>>>>>> 48000ade606497ddea0f41e730c8217ba7c93123
 
 
   #### LU Schema - Adding New Columns to an LU Table  

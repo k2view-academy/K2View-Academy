@@ -1,13 +1,8 @@
+<strong>SonarQube Operation<strong>
 
-
-![image](/articles/images/welcome_to_wiki.png)
-
-## SonarQube 
-
-
-* [Scan The Project](/articles/COE/SonarQube/03_Operation/01_Scan.md) 
-
-
-* [Review the Results](/articles/COE/SonarQube/03_Operation/02_Review.md) 
+<ul>
+<li><a href="/articles/COE/SonarQube/03_Operation/01_Scan.md">Scan the Project</a></li>
+<li><a href="/articles/COE/SonarQube/03_Operation/02_Review.md">Review the Results</a></li>
+</ul>
 
   

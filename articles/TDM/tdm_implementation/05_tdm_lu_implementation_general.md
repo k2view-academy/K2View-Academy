@@ -2,7 +2,11 @@
 
 A TDM task copies a [Business Entity](/articles/TDM/tdm_overview/03_business_entity_overview.md) (BE) from a source environment to a target environment.  A BE can have multiple [LUs](/articles/03_logical_units/01_LU_overview.md) with a flat or a hierarchical structure. For example, a Customer BE can consist of Customer Care, Billing, Ordering and Usage LUs. The ability to break a BE up into several LUs enables maximum flexibility and avoiding duplicate development. In addition, defining a hierarchical structure of parent-child LUs enables creating LUs based on the natural root entity of the related data sources instead of forcefully setting unified root entities on all LUs related to a given BE.
 
+<<<<<<< HEAD
 Each LU in a TDM project must have additional components to support TDM functionality, as described below:  
+=======
+Each LU in a TDM project must have additional components to support TDM functionality, as described below:   
+>>>>>>> 48000ade606497ddea0f41e730c8217ba7c93123
 
 ## Basic LU Structure
 
@@ -12,7 +16,11 @@ Each LU in a TDM project has the following structure:
 
 - Generic TDM LU tables that are linked to the root table. 
 
+<<<<<<< HEAD
 - Two main branches that are linked to the root table :
+=======
+- Two main branches that are linked to the root table:
+>>>>>>> 48000ade606497ddea0f41e730c8217ba7c93123
 
   - **Source branch**: LU tables that extract an entity's source data. Source LU tables are populated when a TDM task needs to load (insert) entities to a target environment and therefore must extract the source data of these entities.
 
@@ -46,11 +54,15 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
+<<<<<<< HEAD
 1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source table represents the main (root) table in the data source. For example, the Customer table is the main source LU table of Customer LU.
+=======
+1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of Customer LU.
+>>>>>>> 48000ade606497ddea0f41e730c8217ba7c93123
 
-2. Verify that the main source LU table is also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
+2. Verify that the one of main source LU table is also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
-3. Create the population of the main source LU tables based on the [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md).  
+3. Create the population of the main source LU tables based on the [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md). The generated root function contains the output fields and the select query on the source table. 
 
 4. Edit the Root functions generated for the LU tables based on the **fnPop_RootTable** function under the [TDM_LIBRARY LU](04_fabric_tdm_library.md#tdm_library-lu):
   
@@ -76,7 +88,11 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 5. The updated Root function populates the main source LU table under the following conditions:
 
    - The TDM task loads (inserts) the entities to the target environment.
+<<<<<<< HEAD
    - Do not set the Override Sync Mode. This will avoid synchronizing the entities from the source.  
+=======
+   - The **Override Sync Mode** setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source. 
+>>>>>>> 48000ade606497ddea0f41e730c8217ba7c93123
 
    Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
 
@@ -84,7 +100,12 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 7. This function also validates if the entity exists in the source table. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
 
+   See example of a root function that populates Customer LU table:
+
+   ![root example](images/pop_customer_root_function_example.png)
+
 8. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
+
 9. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
