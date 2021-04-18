@@ -12,7 +12,7 @@ To create a new Data Catalog interface, do the following:
 
 #### Connection Settings
 
-<table style="height: 116px;">
+<table>
 <tbody>
 <tr style="height: 18px;">
 <td style="height: 18px; width: 200px;"><strong>Parameter</strong></td>
