@@ -9,7 +9,7 @@ This article describes the working procedure for such updates of the TDM impleme
 
 A  [TDM Product](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a system or application installed in a source or target environment. The list of possible product versions must be set on each TDM product. When adding a TDM Product to a TDM environment in the TDM GUI, the [product version must be set in the environment](/articles/TDM/tdm_gui/11_environment_products_tab.md#environment-product-window).
 
-The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The product versions are based on the product's version on the task's environments: 
+The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU.  The product versions are based on the product's version on the task's environments: 
 
 - **TDM_SOURCE_PRODUCT_VERSION**, populated by the product's version of the task's source environment. 
 
