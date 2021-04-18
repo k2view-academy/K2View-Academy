@@ -46,11 +46,11 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
-1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source table representד the main (root) table in the data source. For example, the Customer table is the main source LU table of Customer LU.
+1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables representד the main (root) table in the data source. For example, the Customer table is the main source LU table of Customer LU.
 
-2. Verify that the main source LU table is also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
+2. Verify that the one of main source LU table is also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
-3. Create the population of the main source LU tables based on the [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md).  
+3. Create the population of the main source LU tables based on the [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md). The generated root function contains the output fields and the select query on the source table. 
 
 4. Edit the Root functions generated for the LU tables based on the **fnPop_RootTable** function under the [TDM_LIBRARY LU](04_fabric_tdm_library.md#tdm_library-lu):
    
