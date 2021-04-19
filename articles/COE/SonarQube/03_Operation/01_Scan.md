@@ -14,7 +14,7 @@
 **Note: Make sure you are using regular slashes instead of back slashes.**
 
 2. Set the user/password you use to login SonarQube UI in sonar scanner properties file.
-   ([See Installation/2.3.3](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.2/articles/COE/SonarQube/02_Installation/01_Installation.md))
+   ([See Installation/2.3.3](/articles/COE/SonarQube/02_Installation/01_Installation.md))
 
 3. Scan your project by following below steps:
 
