@@ -6,7 +6,7 @@ The **JavaScript** Actor is an important and useful [built-in Actor type](../04_
 
 To improve the usability of an Actor and an entire flow, we recommend writing only short sections of JavaScript code even though an Actor can include any number of  JavaScript rows.  
 
-The **javascript.flow** and **javascript-advanced.flow** examples show various ways to use a **JavaScript** Actor in a flow.
+The **javascript.flow** and **javascript-advanced.flow** examples show various ways to use a **JavaScript** Actor in a flow.  
 
 Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.md#main-menu) to open the examples. 
 
