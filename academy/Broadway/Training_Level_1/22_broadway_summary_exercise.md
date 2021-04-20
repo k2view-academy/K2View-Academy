@@ -186,11 +186,10 @@ b. Save the CSV file into the **Working Directory** of the **Local File System**
 4. Add a **JavaScript** Actor to Stage 3 and connect it to the **CsvParser** Actor's output as follows:
 
    * Add **input1** and **input2** input arguments.
-* Connect **input1** to the **CsvParser** Actor using an **Iterate** link.
-* Set **input2** to **External** and update its external name to **input_subs_type**.
+   * Connect **input1** to the **CsvParser** Actor using an **Iterate** link.
+   * Set **input2** to **External** and update its external name to **input_subs_type**.
    * Set the Actor's output **result** to **External** as well.
-* Write the following **script**:
-
+   * Write the following **script**:
 ~~~javascript
 if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
     contextLoop.stop();
