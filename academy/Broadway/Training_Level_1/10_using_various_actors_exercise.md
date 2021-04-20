@@ -64,14 +64,13 @@ The flows will include the following steps:
 
 8. Add a **DateFormat** Actor to Stage 5 and connect it to the output of **Now**.
 
-9. Add a **JavaScript** Actor to Stage 5 to get the value of the **cust_id** argument using the **flowArgs **keyword as follows:
+9. Add a **JavaScript** Actor to Stage 5 to get the value of the **cust_id** argument using the **flowArgs** keyword as follows:
 
    ~~~javascript
    flowArgs["cust_id"];
    ~~~
 
    * **flowArgs** can be used to read data from the flow's arguments (all input arguments defined as **External**).
-
    * You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors. 
 
      To learn more about special keywords and conventions, refer to [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
