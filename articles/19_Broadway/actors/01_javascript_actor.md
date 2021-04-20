@@ -29,11 +29,13 @@ The Actor's description includes the detailed explanation of the Actor's capabil
   self.agg += value 
 ```
 
-  To summarize the values of an array, use the **self** keyword to access the Actor's state. The state is maintained between the executions of the same Actor in the flow. For example, when the **SumArray** Actor is invoked in an [Iteration](../21_iterations.md) in the flow, its JavaScript code is executed across all the Actor's executions.
+To summarize the values of an array, use the **self** keyword to access the Actor's state. The state is maintained between the executions of the same Actor in the flow. For example, when the **SumArray** Actor is invoked in an [Iteration](../21_iterations.md) in the flow, its JavaScript code is executed across all the Actor's executions.
 
 ![image](../images/99_actors_01_2.PNG)
 
-- To access iteration data, use the **contextLoop** object to access **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**. For example, if you need to stop the iteration when a condition is true:
+- To access iteration data, use the **contextLoop** object's methods **contextLoop.index()**, **contextLoop.stop()** or **contextLoop.skip()**. 
+
+  For example, if you need to stop the iteration when a condition is true:
 
 ```javascript  
   if ( xxx ) {
@@ -44,14 +46,19 @@ The Actor's description includes the detailed explanation of the Actor's capabil
 - To read data from the flow's arguments, use the **flowArgs** keyword. You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors. The access to **flowArgs** arguments can be done using one of the following syntaxes: 
 
 ```javascript
+  //Access by name
   print(flowArgs.v3); //read the value of argument v3
   flowArgs["v3"] = "Hello"; //write into the argument v3
 
+  // Enumerate all arguments
   for (var i in flowArgs) {
      print(flowArgs[i]); //read the value
      flowArgs[i] = null; //remove the value
      flowArgs[i] = "abc"; //write the value
   }
+
+  // Expose all flow args as Actor result 
+  flowArgs;
 ```
 
 - To iterate over a collection, use standard syntax: 
@@ -60,7 +67,7 @@ The Actor's description includes the detailed explanation of the Actor's capabil
   rows.forEach(row => {...}) 
 ```
 
-  The **for...each** syntax is also supported and it enables JavaScript to iterate over an Iterable instance: 
+The **for...each** syntax is also supported and it enables JavaScript to iterate over an Iterable instance: 
 
 ```javascript
   var sum = 0;
