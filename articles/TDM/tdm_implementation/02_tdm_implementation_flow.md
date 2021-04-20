@@ -6,7 +6,7 @@ A TDM implementation involves several steps. The following illustration displays
 
 
 
-A TDM implementation begins with a [Fabric Implementation](03_tdm_fabric_implementation_flow.md), followed by Fabric Credentials setup which includes deploying the implementation to Fabric, and finally setting TDM definitions in the TDM GUI.
+A TDM implementation begins with a [Fabric Implementation](03_tdm_fabric_implementation_flow.md), followed by Fabric Credentials setup, and finally setting TDM definitions in the TDM GUI.
 
 **Notes:** 
 

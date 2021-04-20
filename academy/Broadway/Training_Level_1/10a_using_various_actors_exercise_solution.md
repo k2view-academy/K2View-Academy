@@ -12,8 +12,12 @@ in the input stream.
 However since this exercise needs to stop iterating the data on a specifc condition, 
 the <strong>JavaScript</strong> Actor cannot be replaced by another Actor. 
 4. The date format changes indicating a different weekday, AM/PM from the default date format.
+5. The return value of a <strong>JavaScript</strong> Actor is the last expression in the <strong>script</strong> input parameter.
+6. You can refer to a flow argument using the <strong>flowArgs</strong> keyword in a <strong>JavaScript</strong> Actor, for example: 
+	flowArgs["cust_id"]; 
 </code></pre>
 </ul>
+
 
 
 

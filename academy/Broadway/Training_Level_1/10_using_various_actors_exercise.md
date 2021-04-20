@@ -43,7 +43,12 @@ The flows will include the following steps:
 
 5. Close the iteration by clicking ![dots](images/three_dots_icon.png)> **Iterate Close** in the Stage 3 context menu . 
 
-6. Add a **JavaScript** Actor to Stage 3 and write a script to calculate the number of times the Actor is called. Add an IF condition to the script. When the Actor is called more than 3 times, exit the loop and continue the flow.
+6. Add a **JavaScript** Actor to Stage 3 and write a script to calculate the number of times the Actor is called:
+
+   * Use the **self** keyword to access the Actor's state across script executions.
+   * Add an IF condition to the script. 
+   * When the Actor is called more than 3 times, exit the loop using the **contextLoop.stop()** function.
+   * The return value of a **JavaScript** Actor is the last expression of the script. The **return** keyword should not be written in the script whereby the **result** output parameter is used to return the Actor's result.
 
    ~~~javascript
       self.count += 1;
@@ -59,11 +64,16 @@ The flows will include the following steps:
 
 8. Add a **DateFormat** Actor to Stage 5 and connect it to the output of **Now**.
 
-9. Add a **JavaScript** Actor to Stage 5 to get the value of the **cust_id** argument using **flowArgs**: 
+9. Add a **JavaScript** Actor to Stage 5 to get the value of the **cust_id** argument using the **flowArgs** keyword as follows:
 
    ~~~javascript
    flowArgs["cust_id"];
    ~~~
+
+   * **flowArgs** can be used to read data from the flow's arguments (all input arguments defined as **External**).
+   * You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors. 
+
+     To learn more about special keywords and conventions, refer to [JavaScript Actor](/articles/19_Broadway/actors/01_javascript_actor.md).
 
 10. Add a **DbLoad** Actor to Stage 6 to load the data to the DB.
 
@@ -94,8 +104,11 @@ Your flow is now ready! Run the flow in Debug mode to see the results.
 2. What happens if you change the <strong>single</strong> input argument of the <strong>JsonParser</strong> Actor to <strong>true</strong>?
 3. With which Actor can the <strong>JavaScript</strong> Actor in Stage 3 be replaced to calculate the number of times the Actor is called?
 4. Update the <strong>format</strong> input argument of the <strong>DateFormat</strong> Actor in Stage 5 to <strong>E dd-MM-yy K:m a</strong>. How does it impact the output?
+5. How does a <strong>JavaScript</strong> Actor return its value?
+6. How can you refer to a flow argument?
 </code></pre>
 </ul>
+
 
 
 [![Previous](/articles/images/Previous.png)](09a_frequently_used_actor_types_example.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10a_using_various_actors_exercise_solution.md)

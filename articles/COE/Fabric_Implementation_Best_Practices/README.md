@@ -1,4 +1,4 @@
-**Fabric Implementation Best Practices**
+<strong>Implementation Best Practices</strong>
 
 Various tips, tricks, and recommendations when working with Fabric are found in the articles below, divided into relevant categories: 
 <strong><ul>

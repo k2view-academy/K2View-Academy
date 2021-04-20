@@ -8,14 +8,13 @@ The following are the required steps to review, understand, and fix the results 
 
 **1.	Login into sonarQube UI https://\<sonar server ip>:\<sonar server port>**
 
-*Note: url is defined in sonar.properties file under conf folder. 
-       check sonar.web.host and sonar.web.port under WEB SERVER section.*
+Note: url is defined in sonar.properties file under conf folder. Check sonar.web.host and sonar.web.port under WEB SERVER section.
        
        Default login user/pass is admin/admin.
        Default url is https://localhost:9000
 
-   *Note: You have the option to create/manage users under Administration -> Security -> Users.  
-   (see [SonarQube security information](https://docs.sonarqube.org/latest/instance-administration/security/))*
+Note: You have the option to create/manage users under Administration -> Security -> Users.  
+(see [SonarQube security information](https://docs.sonarqube.org/latest/instance-administration/security/))
         
 
 **2.	You will be directed to the projects you have permission to access.**  
@@ -38,7 +37,7 @@ The following are the required steps to review, understand, and fix the results 
       MINOR:	Not urgent.
       INFO:		Not urgent.
 
-   *You can find additional information using the below links:*  
+  You can find additional information using the below links:*
    
    [https://docs.sonarqube.org/latest/user-guide/issues/](https://docs.sonarqube.org/latest/user-guide/issues/)  
    [https://docs.sonarqube.org/latest/user-guide/security-hotspots/](https://docs.sonarqube.org/latest/user-guide/security-hotspots/)
@@ -102,7 +101,7 @@ The following are the required steps to review, understand, and fix the results 
 
 
 
-*For additional details on issues review and how to handle them, please refer to:* [SonarQube User Guide]( https://docs.sonarqube.org/latest/user-guide/issues/)
+For additional details on issues review and how to handle them, please refer to: [SonarQube User Guide]( https://docs.sonarqube.org/latest/user-guide/issues/)
 
 
 
