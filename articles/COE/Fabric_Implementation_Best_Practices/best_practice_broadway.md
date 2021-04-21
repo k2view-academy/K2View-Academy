@@ -23,7 +23,7 @@
   
 7. Use the  **ErrorHandler** Actor to leverage built-in reactions to different exception types. Use JavaScript as **ErrorHandler** when customization is needed.
   
-8. User the **contextLoop.index()** function to get the current loop index instead of using an additional **Counter** Actor.
+8. Use the **contextLoop.index()** function to get the current loop index instead of using an additional **Counter** Actor.
   
 9. Remove Actors that are not being used, or utilize the **‘Disable’** functionality if you expect that some Actors will not be used in the future.
 
