@@ -61,6 +61,7 @@ The target DBs are empty and the source DBs are populated with customers.
 3. The interfaces and/or environments of the TDM Demo project might need some modification, edit them if needed (you might be working locally or remotely, for example). 
 4. Open the DB_CASSANDRA interface, and check if the **k2masking** keyspace exits. If it does not exist, create it using the **masking-create-cache-table.flow** from the library of Broadway examples. After creating the **k2masking** keyspace, run the **update_tdm_sequence_mapping.sql** script on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure.
 5. Deploy the LUs, Web-Services, and the Environments to Fabric. Note that you must deploy the environments *before* running Data Viewer, since the main Target LU table sets the target ("TAR") environment to be the active environment.
+6. Add **tdm-WS** API key to Fabric and attach it to the **admin** role. This API key is used when invoking the TDM APIs.
 
 ###  TDM GUI Definitions
 
@@ -73,6 +74,7 @@ The target DBs are empty and the source DBs are populated with customers.
    - CRM product. Attach the Customer LU to this product.
    - BILLING product. Attach the Billing LU to this product.  Add two product versions to the BILLING product: PROD and DEV.
    - ORDERS product. Attach the Orders LU to this product. 
+   - COLLECTION product. Attach the Collection LU to this product.
 
 3. Create the following environments:
 
