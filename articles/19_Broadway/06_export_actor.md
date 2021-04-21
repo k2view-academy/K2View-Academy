@@ -21,7 +21,7 @@ This article describes how to extend an Actor or to modify an extended Actor usi
 
 2. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
-   ![export](images/99_06_export_1.PNG)
+   <img src="images/99_06_export_1.PNG" alt="export" style="zoom:80%;" />
 
 3. Populate the new Actor's **Name** as **myDateFormat**. 
 
@@ -43,7 +43,7 @@ The [Actor's input and output arguments](03_broadway_actor_window.md#properties-
 
 An inherited Actor can be modified for two reasons:
 
-- To update the behavior of the exported Actor due to changed requirements or a bug fix. 
+- To update the behavior of the exported Actor due to changed requirements changes. 
 - To extend the behavior of the exported Actor to create an additional level of inheritance.
 
 The difference between the two reasons is whether the inherited Actor is overridden or not.  If the Actor needs to be updated, it is overridden. 
@@ -54,7 +54,7 @@ To override an extended Actor, do the following:
 
 2. Check **override current**. The name is prepopulated with the Actor's name and is read-only.
 
-   ![export](images/99_06_export_2.PNG)
+   <img src="images/99_06_export_2.PNG" alt="export" style="zoom:80%;" />
 
 3. Optional: override the **Tag** to create an Actor in a new (different) category.
 
@@ -66,7 +66,7 @@ To extend the behavior of the exported Actor, do the following:
 
 1. Click ![dots](images/99_19_dots.PNG) > **Export Actor** in the [Actor's context menu](18_broadway_flow_window.md#actor-context-menu) to open the Export Actor pop-up.
 
-   ![export](images/99_06_export_3.PNG)
+   <img src="images/99_06_export_3.PNG" alt="export" style="zoom:80%;" />
 
 
 2. Populate the new Actor's **name**. 

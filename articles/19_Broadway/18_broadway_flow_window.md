@@ -220,7 +220,7 @@ The Actor's Properties in the Broadway flow window dynamically adjusts its layou
 
 **Example of Actor's Properties Window**
 
-![image](images/99_18_04_properties.PNG)
+<img src="images/99_18_04_properties.PNG" alt="image" style="zoom:80%;" />
 
 [Click for more information about the Actor Properties window](03_broadway_actor_window.md#broaway-actors-properties-window).
 

@@ -63,7 +63,7 @@ The Stage's conditions impact all subsequent Stages in the same branch. Thus:
 
 ### How Do I Define a Stage Condition?
 
-To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor is grey.
+To add a Stage condition to the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select **Stage Condition** to [add an Actor to the Stage](03_broadway_actor.md#how-do-i-add-actor-to-stage). The added Actor is green.
 
 ![image](images/99_19_condition.PNG)
 
@@ -86,12 +86,12 @@ Both conditions are checked, and each related branch is executed only if the con
 
 Depending on the flow input, the execution order of the Actors in this flow is:
 
-- If both **Cond1 and Cond2 are true**: A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (true) -> B4-Split -> C1 -> Logger2 -> Count1
-- If only **Cond1 is true**: A1 -> Cond1 (true) -> B1-Const -> B3 -> Cond2 (false) -> C1 -> Logger2
-- If only **Cond2 is true**: A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-Split -> Logger2 -> Count1
+- If both **Cond1 and Cond2 are true**: A1 -> Cond1 (true) -> B1-> B3 -> Cond2 (true) -> B4-> C1 -> Logger2 -> S1 
+- If only **Cond1 is true**: A1 -> Cond1 (true) -> B1-> B3 -> Cond2 (false) -> C1 -> Logger2
+- If only **Cond2 is true**: A1 -> Cond1 (false) -> B3 -> Cond2 (true) -> B4-> Logger2 -> S1 
 - If both **Cond1 and Cond2 are false**: A1 -> Cond1 (false) -> Cond2 (false) -> B2 -> B3 -> Logger1 -> Logger2
 
-![image](images/99_19_cond_example_1.PNG)
+<img src="images/99_19_cond_example_1.PNG" alt="image" style="zoom:80%;" />
 
 **Example 2**
 
@@ -99,7 +99,7 @@ The following example displays a split flow with a condition and an else Stage w
 
 Depending on the flow's input, the execution can run via one of four alternatives on the third level.
 
-![image](images/99_19_cond_example_2.png)
+<img src="images/99_19_cond_example_2.png" alt="image" style="zoom:80%;" />
 
 ### 
 
