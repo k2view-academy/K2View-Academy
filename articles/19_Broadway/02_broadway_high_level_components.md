@@ -61,6 +61,7 @@ The way Broadway deals with such cases is with the <strong>Iterate</strong> line
 
 When Stages are split, an Actor can be designated to decide if a specific fork in the flow will be performed. The Actor can be a simple logical operator or an entire flow. Based on the result, Broadway will decide if the flow should be executed.
 The *else* fork will be executed if none of the other splits were executed.
+
 <div align="center"><img src="images/overview_condition.png" height="350"></div>
 
 [Click for more information about Stage Conditions](19_broadway_flow_stages.md#what-is-a-stage-condition).
