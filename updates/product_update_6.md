@@ -4,6 +4,6 @@ We have just released Fabric 6.4.2. Some of the major enhancements of this relea
 - When iidFinder is in the delta PARTITION mode, priority instances are now handled in the same topic/job as other instances that are not in priority.
 - Added an optimization mechanism to ensure a better balancing of jobs within a Fabric cluster.
 - A new interface type was introduced for SSH.
-- Added the ability to run the **get** command in parallel from different LU types and to be able to run a merged     query on the same session.
+- Added the ability to run the **get** command in parallel from different LU types and to be able to run a merged query on the same session.
 
 ![image](images/use_cases.png)
