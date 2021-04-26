@@ -52,7 +52,7 @@ To create a new SMTP interface, do the following:
 
 ![image](images/08_smtp_3.PNG)
 
-The above Broadway flow uses an **Email** Actor to send an email via a predefined SMTP interface. If a **recipient's** input argument is provided, it overrides the interface's setting. 
+The above Broadway flow uses an **Email** Actor to send an email via a predefined SMTP interface. If a **recipients** input argument is provided, it overrides the interface's setting. To send an email in HTML format, set **isHtml** to true. 
 
 
 
