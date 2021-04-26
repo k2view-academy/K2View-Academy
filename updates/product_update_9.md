@@ -8,4 +8,4 @@ We would like to share that we have just released Fabric 6.5. Some of the major 
 * New Broadway Actors were added, such as **Unzip**, image manipulation actors and more. In addition, an existing **Email** Actor now supports HTML format and can send attachments.
 * Performance improvement when loading Big LUIs - by **reading chunks in parallel**. 
 
-<img src="images/use_cases.png" alt="image" style="zoom: 67%;" />
+<img src="images/img4.png" alt="image"  />
