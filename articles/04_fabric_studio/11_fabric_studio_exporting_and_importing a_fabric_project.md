@@ -3,7 +3,7 @@
 Fabric Studio has a proprietary encapsulation functionality that packages an entire project or selected components. Fabric projects can be backed up and restored using the Export and Import options that trigger the encapsulation and decapsulation processes.
 
 ### Exporting Selected Project Components
- 
+
 There are two Export options:
 * Export an entire project.
 * Export a specific object, for example:
@@ -17,7 +17,7 @@ To export a project, do the following:
 2. Select the exported file’s **Name** and **Location** and then click **Save**. A new file is created with a k2export extension.
 
 ### Importing Selected Project Components
-  
+
 You can import an entire exported project or specific branches of a Project Tree whereby the imported objects are attached to an existing project.
 
 **Notes**  
@@ -36,16 +36,16 @@ You can import an entire exported project or specific branches of a Project Tree
 * **Custom Import**, enables you to select the exported objects or group items to be imported.
 
 **Import All Process**
- 
+
 1. Right click the root of the **Project Tree**, click **Import** and then click **Import All** to open the File **Browser** and select the **k2export** **file** to be imported.  
 
-![image](/articles/04_fabric_studio/images/04_11_01%20k2export%20file.png)
+![image](images/04_11_01_k2export_file.PNG)
 
 2. Select the **file** and click **Open**:  
     a. If the file name exists, click either **OK** to confirm or **Ignore** to override or skip the files.\
     b. When importing files to a non-existent LU, select the targeted **LU** or create a new LU saved with the exported LU file’s name.
     
-    ![image](/articles/04_fabric_studio/images/04_11_02%20LU%20file%E2%80%99s%20name.png)
+    ![image](images/04_11_02%20LU%20file%E2%80%99s%20name.png)
 
 3. A confirmation window opens asking you whether you want to:\
     a. Override the specific file.\
@@ -53,17 +53,17 @@ You can import an entire exported project or specific branches of a Project Tree
     c. Decline the override of the specific file.\
     d. Decline the override of all the conflicting files. 
     
-    ![image](/articles/04_fabric_studio/images/04_11_03%20confirmation%20window.jpg)
+    ![image](images/04_11_03_confirmation_window.PNG)
 
 ### Custom Import Process
- 
+
 1. Right click the root of **Project Tree**, click **Import** and then click **Custom Import**.
 
-![image](/articles/04_fabric_studio/images/04_11_04%20Custom%20Import.png)
+![image](images/04_11_04_Custom_Import.PNG)
 
-2. Click the **branches** and **items** to import from the file and then click and drag the ![image](/articles/04_fabric_studio/images/04_11_05%20%2BICON.png) icon to the current project’s structure (right pane).  
+2. Click the **branches** and **items** to import from the file and then click and drag the ![image](images/04_11_05%20%2BICON.png) icon to the current project’s structure (right pane).  
 
-![image](/articles/04_fabric_studio/images/04_11_06%20project%E2%80%99s%20structure.png)
+![image](images/04_11_06_custom_import.PNG)
 
 The Custom Import window displays the number of imported and overridden items.
 
@@ -82,8 +82,8 @@ The Custom Import window displays the number of imported and overridden items.
     b. Override all the conflicting files in the import package.\
     c. Decline the override of the specific file.\
     d. Decline the override of all conflicting files. 
-    
-![image](/articles/04_fabric_studio/images/04_11_07%20confirmation%20window.jpg)
+
+![image](images/04_11_03_confirmation_window.PNG)
 
 **Notes** 
 
