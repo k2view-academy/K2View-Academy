@@ -1,4 +1,4 @@
-# **Fabric Interfaces Security** 
+# **Fabric Environments & Interfaces Encryption** 
 
 
 ## Environments
@@ -68,11 +68,11 @@ When defining a new interface, the password for this interface is encrypted and 
 <dbPasswordEncrypted>dqmdIUWuyC+4KaNDEKDlBimtd2utoESMq2Oj4NhUzCY=:X8P+ihKPTG2WuwfX0xztOPSS3lDLrr7Y+UrkzjkHf/c=</dbPasswordEncrypted>
 ```
 <img src="/articles/26_fabric_security/images/05_fabric_Interfacesencryption.PNG">
- 
+
 ## File Systems
 
 Fabric enables connection to SFTP servers hosting files.
 When an SFTP connection is needed to pull or push files, SSH keys exchange-based authentication can be used, in which case the password in the SFTP interface must be left blank.  
- 
+
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/03_fabric_LUI_encryption.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
