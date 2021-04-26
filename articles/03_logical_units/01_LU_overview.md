@@ -116,4 +116,4 @@ Below is a table of **pros and cons** of each alternative:
 </table>
 
 
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/02_create_a_logical_unit_flow.md) 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/02_create_a_logical_unit_flow.md) 	
