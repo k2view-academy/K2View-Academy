@@ -50,7 +50,7 @@ The following table presents a list of Actors categories with examples of each c
 <p><strong>Logger</strong> Actor, writes a message to the log file referencing entries from params and Actor inputs.</p>
 <p><strong>InnerFlow</strong> Actor, executes a Broadway flow.</p>
 <p><strong>LuFunction</strong> Actor, executes Studio function logic. Parameters for the function's execution are taken from input arguments or from the params input argument.</p>
-<p><strong>Email</strong> Actor, sends an email using a given SMTP interface.</p>
+<p><strong>Email</strong> Actor, sends an email using a given SMTP interface. The Actor supports email body is in HTML format and can send attachments.</p>
 </td>
 </tr>
 <tr>
@@ -115,6 +115,24 @@ The following table presents a list of Actors categories with examples of each c
 <p><strong><span class="md-pair-s md-expand"><span class="md-plain">FabricGet</span></span></strong><span class="md-plain md-expand"> Actor performs the GET command on the current Fabric session.</span></p>
 <p><span class="md-plain md-expand"><strong>FabricSet</strong> Actor sets a value on the Fabric session.</span></p>
 <p><span class="md-plain md-expand"><strong>BatchWait</strong> Actor waits for a batch process to complete or throw an error if the batch does not complete successfully or does not complete withing the predefined time.</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: top;" width="210">
+<h4><a id="user-content-images" class="anchor" href="04_built_in_actor_types.md#images" aria-hidden="true"></a><strong>images</strong></h4>
+</td>
+<td style="vertical-align: top;" width="433">Image manipulation Actors that allow to perform various activities, such as:
+<ul>
+<li>Load an image into a flow.</li>
+<li>Write text on a given image.</li>
+<li>Clone an image in memory.</li>
+<li>Array/Map, True if not empty.</li>
+</ul>
+</td>
+<td style="width: 600px; vertical-align: top;" width="600">
+<p><strong>ImageLoad</strong> Actor, receives a buffer or buffer stream, and loads the image into memory.</p>
+<p><strong>ImageSave</strong> Actor, encodes the image to a byte buffer with the given format. This can then be transported or saved using DbLoad, FileWrite, Http or other Actors.</p>
+<p><strong>ImageText</strong> Actor, writes text on the given image.</p>
 </td>
 </tr>
 <tr>
