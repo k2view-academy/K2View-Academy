@@ -1,6 +1,6 @@
 # TDM Implementation - Supporting Different Product Versions
 
-During a project's lifecycle, there might be several versions of the data source structure and relevant software. As a result, TDM may need to support several different source and target systems each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
+During a project's lifecycle, there might be several versions of the data source structure and relevant software.  As a result, TDM may need to support several different source and target systems each having several different versions of the data sources structures. For example, a development environment may have new tables and fields as opposed to the production environment. These changes require updates of the TDM implementation.
 
 This article describes the working procedure for such updates of the TDM implementation to support changes in the source and target systems. They include updates of TDM Globals of Product Versions, updates of LU Schemas, and updates of Broadway Load Flows. 
 
@@ -9,7 +9,7 @@ This article describes the working procedure for such updates of the TDM impleme
 
 A  [TDM Product](/articles/TDM/tdm_gui/05_tdm_gui_product_window.md) represents a system or application installed in a source or target environment. The list of possible product versions must be set on each TDM product. When adding a TDM Product to a TDM environment in the TDM GUI, the [product version must be set in the environment](/articles/TDM/tdm_gui/11_environment_products_tab.md#environment-product-window).
 
-The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU. The product versions are based on the product's version on the task's environments: 
+The [TDM Execution Process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the following Globals imported from the [TDM Library](04_fabric_tdm_library.md) for each LU.  The product versions are based on the product's version on the task's environments: 
 
 - **TDM_SOURCE_PRODUCT_VERSION**, populated by the product's version of the task's source environment. 
 
@@ -52,6 +52,19 @@ Add [a decision function](/articles/14_sync_LU_instance/05_sync_decision_functio
   Here is one example of source code to implement this: 
 
 
+<<<<<<< HEAD
+    ```java
+    String luName = getLuType().luName;
+    String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
+    
+    Boolean decision = false; 
+    if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
+    {
+    	decision = true;
+    }
+    return decision;
+    ```
+=======
 ```java
 String luName = getLuType().luName;
 String tdmSourceProdVersion = "" + ludb().fetch("SET " + luName + ".TDM_SOURCE_PRODUCT_VERSION").firstValue();
@@ -62,6 +75,7 @@ if(tdmSourceProdVersion.equals("1.5") || tdmSourceProdVersion.equals("2")
 	decision = true;
 }
 ```
+>>>>>>> 48000ade606497ddea0f41e730c8217ba7c93123
 
 
   #### LU Schema - Adding New Columns to an LU Table  

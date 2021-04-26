@@ -1,6 +1,6 @@
 # Broadway Flows Implementation
 
-The TDM library has sets of generic flows that enable creating a standard TDM implementation in just a few minutes. Note that once a standard implementation has been created, its flows can be edited and tailored to your project's specific requirements.
+The TDM library has sets of generic flows that enable creating a standard TDM implementation in just a few minutes. Note that once a standard implementation has been created,  its flows can be edited and tailored to your project's specific requirements.
 
 ## How Do I Create TDM Broadway Flows?
 
@@ -10,10 +10,10 @@ Before beginning to create Broadway flows, define the tables that are filtered o
 
 ![image](images/11_tdm_impl_actor_1.PNG)
 
-This setting is implemented using the **TDMFilterOutTargetTables** Actor. To filter more tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
+The settings are implemented using the **TDMFilterOutTargetTables** Actor. To filter more tables, open the **TDMFilterOutTargetTables** Actor and edit its **table** object. The **lu_name** column should be populated as follows:
 
 * ALL_LUS, when a filtered table is relevant for all TDM LUs.
-* [LU name], when a table belongs to a specific LU. Note that in some cases it is needed to add tables to the LU schema to get the child IDs and populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, add the Orders table to Customer LU to get the list of customer's orders. These tables need to be added to **TDMFilterOutTargetTables** Actor to avoid creating load or delete flows for them since they are loaded or deleted by the child LUs. 
+* [LU name], when a table belongs to a specific LU. Note that in some cases you must add tables to the LU schema to get the child IDs and populate the TDM_LU_TYPE_RELATION_EID TDM DB table. For example, add the Orders table to Customer LU to get the list of customer's orders. These tables need to be added to the **TDMFilterOutTargetTables** Actor to avoid creating load or delete flows for them since they are loaded or deleted by the child LUs. 
 
 After the Actor's update is completed, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button on top of the project tree to apply the changes in the **TDMFilterOutTargetTables** Actor and deploy the LU.
 
@@ -28,9 +28,9 @@ Sequences are required when populating a target DB, thus setting and initiating 
 If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or using the installation SQL script provided as part of the Masking library. After creating the **k2masking** keyspace, get the **update_tdm_sequence_mapping.sql** script from the [TDM Library](04_fabric_tdm_library.md) and run it on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure. 
 
 
-Do the following to create the sequences for your TDM implementation:
+Carry out the steps below to create the sequences for your TDM implementation. Note that the TDM library includes a **TDMSeqList** Actor that holds a list of sequences:
 
-1. TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the information relevant for your TDM implementation:
+1.  Populate the Actor's  **table** object with the information relevant for your TDM implementation:
    - **SEQUENCE_NAME**, the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
    - **CACHE_DB_NAME**, populate this setting using **DB_CASSANDRA** where the Sequence Cache tables are stored.
    - **SEQUENCE_REDIS_OR_DB**, indicates if the next value is taken from Redis or the target DB interface. Populate this setting using the **FabricRedis** interface (imported from the TDM library) or with the **target DB interface name**.
@@ -55,18 +55,22 @@ Do the following to create the sequences for your TDM implementation:
 
 ### Step 3 - Create Load and Delete Flows
 
-In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows. Please note that the LU source table names must be identical to the table names in the target environment to generate the load and delete flows with the correct table names.
+In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows. Make sure that the LU source table names must be identical to the table names in the target environment to generate the load and delete flows with the correct table names.
 
 **1. Create a LOAD flow per table**
 
-Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
+Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface, target schema, and the list of tables from the LU Schema. It then creates a Broadway flow to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
 
 #### Update the Load Flows with the Sequence Actors: 
-1. Edit each Load flow of the TDM project by adding a newly created Sequence Actors to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. Edit the Sequence Actor: set the Population Type of **tableName** and **columnName** input arguments to **Const** and populate them the the target table and column names. These arguments must be set to populate the **tdm_seq_mapping** table properly.
+- Edit each Load flow of the TDM project by adding newly created Sequence Actors to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. Edit the Sequence Actor: set the Population Type of **tableName** and **columnName** input arguments to **Const** and populate them with the target table and column names. These arguments must be set to populate the **tdm_seq_mapping** table properly.
+
+
 
    ![image](images/11_tdm_impl_04.PNG)
 
-2. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+- Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+
+
 
    ![setTargetEntity](images/setTargetEntity_actor_example.png)
 
@@ -76,7 +80,7 @@ Performed by the **createLoadAllTablesFlow.flow** that receives the Logical Unit
 
 **3. Create a DELETE flow per table**
 
-Performed by the **createDeleteTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to delete the data from this table in the target DB. The name of each newly created flow is **delete_[Table Name].flow**. For example, delete_CUSTOMER.flow. The tables defined in Step 1 are filtered out and the flow is not created for them. 
+This is performed by the **createDeleteTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to delete the data from this table in the target DB. The name of each newly created flow is **delete_[Table Name].flow**. For example, delete_CUSTOMER.flow. The tables defined in Step 1 are filtered out and the flow is not created for them. 
 
 The following updates must be performed manually:
 
@@ -107,7 +111,7 @@ Once all LOAD and DELETE flows are ready, create an orchestrator. The purpose of
 * Manage the TDM process as one transaction.
 * Perform [error handling and gather statistics](12_tdm_error_handling_and_statistics.md). 
 
-The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway folder and is built for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as follows:
+Create the **TDMOrchestrator.flow** from the Logical Unit's Broadway folder and build it for each Logical Unit in the TDM project. [Deploy the Logical Unit](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) to the debug server and then create the Orchestrator flow using a template as follows:
 
 ![image](images/11_tdm_impl_02.PNG)
 
@@ -123,10 +127,10 @@ TDM systems often handle sensitive data. To be compliant with Data Privacy laws,
 
   * When the TDM task is for synthetic data creation, masking is always enabled.
   * When The TDM task is for Data Flux, masking is always disabled.
-  * In all other scenarios masking behavior depends on the MASK_FLAG settings.
+  * In all other scenarios masking behaviour depends on the MASK_FLAG settings.
   
-* Note that there is no need to add a masking on both processes, LUI Sync and the Load flow, for synthetic data creation, since the TDM task execution process duplicates the clonned entity ID, set in the task, and attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
- 
+* Note that there is no need to add a masking on both processes, LUI Sync and the Load flow, for synthetic data creation, since the TDM task execution process duplicates the cloned entity ID, set in the task, and attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
+
 [Click to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
 [Click to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
