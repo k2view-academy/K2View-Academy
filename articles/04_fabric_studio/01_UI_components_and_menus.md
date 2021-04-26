@@ -17,7 +17,7 @@ Fabric Studio also enables you to integrate your projects into Source Version Co
 
 ### How Can I Use the Fabric Studio Start Page?
 
-![image](/images/04_01_01_start_a_page.png)
+![image](images/04_01_01_start_a_page.png)
 
 The Start Page has links to different K2View Fabric projects, including: 
 * Start a new project, with or without configuration control. 
