@@ -2,9 +2,9 @@
 
 ## TDM Relationship Tables
 
-To support LU hierarchy and extracting or copying selected business entities and their related data, the TDM must identify which child entities are related to each parent entity.
+To support LU hierarchy and extracting or copying selected business entities and their related data, TDM must identify which child entities are related to each parent entity.
 
-For example, to copy Customer 1 from the Production environment, the TDM must identify the Billing Accounts and the Orders of Customer 1. 
+For example, to copy Customer 1 from the Production environment, TDM must identify the Billing Accounts and the Orders of Customer 1. 
 
 TDM relationship tables hold the links between the parent ID and their children IDs. There are two TDM relationship tables in the TDM DB:
 - [TDM_LU_TYPE_RELATION_EID](#tdm_lu_type_relation_eid).
@@ -20,7 +20,7 @@ This table is used for the following:
 
 #### Which Process Populates the TDM_LU_TYPE_RELATION_EID? 
 
-The TDM_LU_TYPE_RELATION_EID is populated by the sync on the parent LUI. The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_RELATION_EID table except for [delete only tasks](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) where no data is extracted from the data sources. This function runs on the parent LU. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the child IDs of each parent LUI.
+The TDM_LU_TYPE_RELATION_EID is populated by carrying out a sync on the parent LUI. The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_RELATION_EID table except for [delete only tasks](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) where no data is extracted from the data sources. This function runs on the parent LU. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation to get the child IDs of each parent LUI.
 
 Click for more information about the [TDM task operation modes](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode).
 
@@ -46,11 +46,11 @@ Click for more information about the [TDM task operation modes](/articles/TDM/td
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Entity ID (IID) of the parent LU. For example, 1.</td>
+<td valign="top" width="700pxl">Entity ID (EID) of the parent LU. For example, 1.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Entity ID (IID) of the child LU. For example, 12.</td>
+<td valign="top" width="700pxl">Entity ID (EID) of the child LU. For example, 12.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
@@ -169,11 +169,11 @@ Customer 1 has orders 10, 12 and 13 in the Production environment. The user crea
 
 ### TDM_LU_TYPE_REL_TAR_EID
 
-This table holds the link between the parent-child **target IDs**. The relationship is maintained per target environment. The table is used to [build a list of entities of child LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#children-lus) when executing a delete or [Data Flux](/articles/TDM/tdm_gui/20_load_task_dataflux_mode.md) load task. 
+This table holds the link between the **parent-child target IDs**. The relationship is maintained per target environment. The table is used to [build a list of entities of child LUs](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md#children-lus) when executing a delete or [Data Flux](/articles/TDM/tdm_gui/20_load_task_dataflux_mode.md) load task. 
 
 #### Which Process Populates the TDM_LU_TYPE_REL_TAR_EID? 
 
-The TDM_LU_TYPE_REL_TAR_EID is populated by the sync of the parent LU which populates the related child IDs on each parent entity before deleting the parent entity from the target environment.  The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_REL_TAR_EID table only if the TDM task deletes entities from the target environment. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation and run on the parent LU to get the target child IDs of each parent LUI.
+The TDM_LU_TYPE_REL_TAR_EID is populated by the sync of the parent LU which populates the related child IDs on each parent entity before deleting the parent entity from the target environment.  The **fnEnrichmentChildLink** enrichment function is attached to the root table of each parent LU and populates the TDM_LU_TYPE_REL_TAR_EID table only if the TDM task deletes entities from the target environment. The SQL queries are populated in the [trnChildLink](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnchildlink) translation and are run on the parent LU to get the target child IDs of each parent LUI.
 
 Click for more information about the [TDM task operation modes](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode).
 
@@ -199,11 +199,11 @@ Click for more information about the [TDM task operation modes](/articles/TDM/td
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type1_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (IID) of the parent LU. For example, 30.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the parent LU. For example, 30.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">lu_type2_eid</td>
-<td valign="top" width="700pxl">Target Entity ID (IID) of the child LU. For example, 101.</td>
+<td valign="top" width="700pxl">Target Entity ID (EID) of the child LU. For example, 101.</td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">creation_date</td>
@@ -211,6 +211,7 @@ Click for more information about the [TDM task operation modes](/articles/TDM/td
 </tr>
 </tbody>
 </table>
+
 
 ## Parent LU - Implementation Guidelines 
 
