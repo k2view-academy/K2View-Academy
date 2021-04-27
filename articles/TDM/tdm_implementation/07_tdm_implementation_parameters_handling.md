@@ -8,7 +8,7 @@ The parameters that are available for the task are attached to the LUs of the ta
 
 ## TDM Parameter Tables
 
-When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM DB. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
+When [synched](/articles/14_sync_LU_instance/01_sync_LUI_overview.md), the LUIs create and update the Parameters table in the TDM database. A separate parameters table is created for each LU. The naming convention of the parameters tables is `<LU Name>_params`. 
 
 Parameter tables are used for the following:
 
@@ -28,7 +28,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
 2. Add the LU_PARAMS to the LU Schema and link the ENTITY_ID to the FABRIC_TDM_ROOT.IID.
 
-3. Edit the **COMBO_MAX_COUNT** shared Global imported from the TDM Library if needed. By default the Global is populated with 49 and is checked when creating a TDM task using a [Parameters selection method]. If the number of possible values in the [TDM Parameters tables](#tdm-parameters-tables) is smaller or equal to the COMBO_MAX_COUNT value, the parameter is handled as a **combo** parameter and a list of all possible values for this parameter is displayed. If a value is not selected from the list, the parameter has  more values than the threshold defined in COMBO_MAX_COUNT and the user must enter the value in the parameter.
+3. Edit the **COMBO_MAX_COUNT** shared Global imported from the TDM Library if needed. By default the Global is populated with 49 and is checked when creating a TDM task using a parameters selection method. If the number of possible values in the [TDM Parameters tables](#tdm-parameters-tables) is smaller or equal to the COMBO_MAX_COUNT value, the parameter is handled as a **combo** parameter and a list of all possible values for this parameter is displayed. If a value is not selected from the list, the parameter has  more values than the threshold defined in COMBO_MAX_COUNT and you must enter the value in the parameter.
 
   ### Add Parameters to the Logical Unit
 
@@ -44,7 +44,7 @@ The LU_PARAMS table copied from the TDM_LIBRARY holds the following columns:
 
     ![Lu_Params](images/lu_params_example.png)
 
-5. The **fnEnrichmentLuParams** enrichment function runs the SQL queries of the **trnLuParams** and populates each column in the LU_PARAMS with the results of its related SQL query. Each parameter's column holds a JSON with the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
+5. The **fnEnrichmentLuParams** enrichment function runs the SQL queries of the **trnLuParams** and populates each column in the LU_PARAMS with the results of its related SQL query. Each parameter's column holds a JSON file that contains the values of the parameter. Each parameter can hold several values that are separated by a comma. For example:
 
   ![lu params](images/populated_lu_params_example.png)
 
