@@ -94,6 +94,7 @@ The following fields are displayed for all types of DB interfaces:
 </td>
 <td width="433">
 <p>Default = False. Defines whether Proactive Sync should be enabled.</p>
+<p>Note that starting from V6.5 this property is removed from the interface definition and is only supported on the LU Table Population.</p>
 </td>
 </tr>
 <tr>
@@ -146,6 +147,7 @@ The following fields are displayed for all types of DB interfaces:
 </tr>
 </tbody>
 </table>
+
 
 
 
