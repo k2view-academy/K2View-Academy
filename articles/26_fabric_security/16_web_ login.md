@@ -26,7 +26,11 @@ User is redirected to the configured SAML IDP and see its login page, where he s
 
 #### SAML Authenticator
 
+On logout the Fabric session is invalidated and the user is directed to a "logout" page, where he can decide to reconnect.
 
+<img src="/articles/26_fabric_security/images/16_okta_sso_login.jpg">
+
+Clicking in the Reconnect button will activate SAML authentication process, where in case the IDP verify that its user's is still valid the user is getting back into the Fabric web framework. If IDP session is not valid then user will be redirected to the IDP login page.
 
 ## Session timeout
 
