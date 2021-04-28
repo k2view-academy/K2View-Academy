@@ -122,7 +122,7 @@ kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic <topic_name
 
 **Question 8:**
 
-The purpose of the Error Handler is to prevent the SQLite Exception. If the exception occurs due to a unique constraint violation, the Error Handler catches this error and continues to the next step. Otherwise the flow fails. 
+The purpose of the Error Handler is to handle the exception. If the exception occurs due to a SQL Unique constraint violation, the Error Handler catches this error, suppresses it and continues to the next step. Otherwise the flow fails. 
 
 For example, a unique constraint can occur if you sync the same instance twice and the flow attempts to write the same information into the CONTRACT_COPY table in the CRM_DB. 
 
