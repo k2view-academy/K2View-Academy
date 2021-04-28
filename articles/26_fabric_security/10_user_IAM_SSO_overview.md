@@ -15,31 +15,9 @@ Fabric supports the SAML - commonly used SSO protocol - toward variety IDPs such
 
 
 
-### SAML
+## SSO Concepts, Methods and Terms
 
-Security Assertion Markup Language (SAML) is one of the standards protocol used for SSO. It provides a mechanism for exchanging authentication and authorization data between an identity provider (IDP) and a service provider (SP). 
-
-The SP requests and obtains an authentication assertion from the IDP. On the basis of this assertion, the SP can make an access control decision, that is, it can decide whether to give access to the SP resources and to which of them. The interactions are XML based and use certification, encryption and other methods to secure these interactions and avoid frauds.
-
-
-
-To learn more about SSO and SAML:
-
-- 
-
-To lean more about Fabric SSO configuration, refer to these guides:
-
-- 
-
-
-
-## Architecture and System Flow
-
-#### Background
-
-Modern authentication&authorization platforms and services are responsible for user **identification**, via **authentication** process and for **access management** via **authorization** mechanisms. Together they are also called **IAM** (Identification + Access Management).
-
-There are 2 main commonly used modern methods for IAM:
+There are 2 main commonly used modern methods for IAM and SSO:
 
 1. **SAML** (Security Assertion Markup Language), responsible for both tasks and is geared towards enterprise security.
 2. **OAuth + OIDC**, where OAuth is responsible for authorization and OIDC – OpenID Connect, is responsible for authentication. These methods are commonly by mobile apps, modern web apps, game consoles, and IoT devices.
@@ -50,15 +28,17 @@ Both methods define several actors that participate in every use case: Identity 
 - The **SP** is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. 
 - The **principal** (human user or application/system) is an entity that can be authenticated.
 
-SP is no longer responsible or aware to the user credentials and interacts with the IdP using tokens to verify user authentication and to get authorization info.
-
-SAML
-
-SAML Security
-
-#### How Fabric works with SSO / SAML 
+SP is not responsible or aware to the user credentials and interacts with the IdP using tokens to verify user authentication and to get authorization info.
 
 
+
+## SAML
+
+Security Assertion Markup Language (SAML) is one of the standards protocol used for SSO. It provides a mechanism for exchanging authentication and authorization data between an identity provider (IDP) and a service provider (SP). 
+
+The SP requests and obtains an authentication assertion from the IDP. On the basis of this assertion, the SP can make an access control decision, that is, it can decide whether to give access to the SP resources and to which of them. The interactions are XML based and use certification, encryption and other methods to secure these interactions and avoid frauds.
+
+For more information about SAML concepts and terminology see [here]().
 
 
 
