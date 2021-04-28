@@ -292,17 +292,11 @@ How do you publish the data of a group of customers to the Kafka topic?
 
 2. In the LU Schema, connect a new population to its parent CUSTOMER table using the CUSTOMER_ID and set the population execution order to 4.
 
-3. In the  **Contract.populationCopy** flow, add an Error Handler **JavaScript** Actor to the LU Table Stage and write the following script:
+3. In the  **Contract.populationCopy** flow, add an **ErrorHandler** Actor to the LU Table Stage and set its input arguments as follows:
 
-   ~~~javascript
-   if (error.rootClassName == "SQLiteException") {
-       print("The entry already exists!!! Continue...");
-       true;
-   }
-   else
-       false;
-   ~~~
-
+   * Set **Sql Error** to the **Unique constraint** value.
+   * Set **Suppress** indicator to true.
+   
 4. Add a new Count Stage after the LU Table Stage and add an **Aggregate** Actor to it. Connect its **input** argument to the **affected** output argument of the **DbLoad** Actor.
 
 5. Add a **Count** Actor to the same Stage.
