@@ -1,7 +1,7 @@
 
 <strong>Fabric Studio<strong>
 <ul>
-  <li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Components and Menus</a></li>
+<li><a href="/articles/04_fabric_studio/01_UI_components_and_menus.md">Fabric Studio Components and Menus</a></li>
 <li><a href="/articles/04_fabric_studio/02_window_tab_context_menu.md">Window Tab Context Menu</li>
 <li><a href="/articles/04_fabric_studio/03_diagram_and_toolbars.md">Diagrams and Toolbars</li>
 <li><a href="/articles/04_fabric_studio/04_user_preferences.md">User Preferences</a></li>
