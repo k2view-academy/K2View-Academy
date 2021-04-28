@@ -2,9 +2,9 @@
 
 ## Overview
 
-Fabric provides user identification and access management (IAM) for both web and console access, either using Fabric local repository or by using the organization’s identify provider (IDP) which Fabric integrated with. 
+Fabric provides user identification and access management (IAM) for web, console and web-services access, either using Fabric local repository or by using the organization’s identify provider (IDP) which Fabric integrated with. 
 
-Using the organization’s identify provider gives the organization a full and dynamic control on access permissions to Fabric. It lets the organization to add or remove users and to grant or revoke their permissions, using its own admin centralized tools. 
+Using the organization’s IDP gives the organization a full and dynamic control on access permissions to Fabric. It lets the organization to add or remove users and to grant or revoke their permissions, using its own admin centralized tools. In addition, the organization has a centralized auditing log, covers their users’ access to all its services and resources. 
 
 
 
@@ -12,21 +12,25 @@ Using the organization’s identify provider gives the organization a full and d
 
 Fabric supports several authentication providers:
 
-- **Fabric**, used for both console and web access, using its identity. This is the Fabric default authentication method. for more information see [here]()
+- **Fabric**, for console, WS and web access, using its repository. This is Fabric default authentication.
 
-- **LDAP**, used for both console and web access. for more information see [here]()
+- **LDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here]()
 
-- **ALDAP**, used for both console and web access. for more information see [here]()
+- **ALDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here]()
 
-- **SSO vis SAML**, used for web access. Using SSO brings additional benefits, other than admin operation perspectives: it improves the users experience who do not need to type their credentials repeatedly on different services among the organization. In terms of security, the authentication credentials are not handled or even known by Fabric when using SSO. for more information see [here]()
+- **SSO vis SAML**, for web and WS access. Done via SAML IDP integration. For more information see [here]()
 
-Fabric provides also the option to **block** the access either for console or web access. This empowering the security access control, for example when organization wishes that users’ access shall be limited only to specific node/s in cluster.
+  Using SSO brings additional benefits, other than admin operation perspectives: it improves the users experience who do not need to type their credentials repeatedly on different services among the organization. In terms of security, the authentication credentials are not handled or even known by Fabric. 
+
+  Fabric is ready to work with commonly used and major IDPs such as [Azure]() and [Okta](). 
+
+Fabric also provides the option to **block** the access either for console or web access. This empowering the security access control, for example when organization wishes that users’ access shall be limited only to specific node/s in cluster.
 
 #### Proprietary Custom Authenticator
 
 Fabric enables to use a proprietary custom authenticator, when required by the organization.
 
-In order to use such custom authenticator, implement the interface `com.k2view.fabric.authentication.providers.Authenticator` and set the Fabric [configuration]() accordingly.
+In order to use such custom authenticator, implement the interface `com.k2view.fabric.authentication.providers.Authenticator` and set the Fabric configuration accordingly. For more information see [here]()
 
 #### Sequence Authenticators
 
@@ -34,13 +38,11 @@ Fabric provides a flexible mechanism, enabling to define a sequence of authentic
 
 For example, the console access can be set to be using LDAP and if it failed to try using Fabric credentials. This fallback mechanism shall be used carefully and on very specific cases.
 
-#### Web, Console & Web Services Access Authentication
+#### Authentication method by Channel
 
 Fabric provides the flexibility to separate between the authenticators for the various access methods - web, console and WS.
 
-For example, in case IAM is not handled by Fabric, apps might use web access via SAML and yet need information about users, which can bee achieved using LDAP. 
-
-Such use case can be found at [TDM](/articles/TDM): An environment owner can see at the TDM web-app all _test_ users which are candidate to use this environment. The TDM web-app access can be _SSO/SAML_. Yet, to show to show the tester list, TDM activates a web-service which call to a Fabric command that get the information using the _LDAP_ authenticator, with the app admin credentials.  
+For example, in case IAM is not handled by Fabric, apps might use web access via SAML and console access via LDAP.  
 
 
 
@@ -50,11 +52,17 @@ When Fabric is integrated with external IDP or authenticator it applies security
 
 - All supported transit methods provide secured SSL/TTPS access.
 
-- SAML enables turning on and off the signing certification and encryption. The recommended and default settings is like that both are turned on in both SAML request and SAML response where it is strictly enforced by Fabric, i.e. reject unsigned or unencrypted messages.
+- SAML Fabric & IDP intersections are done using certification and encryption methods.
 
-- User, their credentials, and their association to roles are **not** stored at Fabric and by that empowering the organization access control capabilities.
+- User, their credentials, and their association to roles are not stored at Fabric and by that empowering the organization access control capabilities.
 
-- LDAP admin user credentials are encrypted at the Fabric configuration.
+- LDAP admin user credentials are encrypted at the Fabric configuration. 
+
+
+
+## Auditing
+
+Users’ login access to Fabric is recorded into Fabric Auditing mechanism with the information about the channel and the authenticator which has been used. For more information see [here]().
 
 
 
