@@ -34,7 +34,7 @@ Consider the following scenarios:
 
 In both case the following happens:
 
-1. The user clicks on a link that lead him to Fabric.
+1. The user clicks on a link that lead him to a Fabric app.
 2. In case user already has an existing Fabric session he is enabled to access and make actions according to the permissions granted to him by Fabric and its apps. 
 3. In case user does not have an active session, Fabric redirects the user to the identity provider, asking for authentication. This is the authentication request.
 4. The user either has an existing active browser session with the identity provider or establishes one by logging into the identity provider, via IDP login page.
@@ -47,6 +47,10 @@ In both case the following happens:
 Following is the logical flow that illustrate these steps: 
 
 <img src="/articles/26_fabric_security/images/11_Fabric_SAML_login.jpg">
+
+See [here]() for more information about user experience login process.
+
+
 
 #### Log out and session expiration
 

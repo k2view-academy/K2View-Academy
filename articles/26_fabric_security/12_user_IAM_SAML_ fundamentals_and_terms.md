@@ -1,0 +1,32 @@
+# SAML Fundamentals, Terminology and Security
+
+Security Assertion Markup Language (SAML) is one of the most widely used open standard for authentication and authorizing between multiple parties. It’s one of the protocol that give users the single sign-on (SSO) experience for applications. The other adopted open standard is OAuth and OpenID. Of the two, SAML 2.0, released in 2005, remains most commonly used in Enterprise SSO space. 
+
+At its core, Security Assertion Markup Language (SAML) 2.0 is a means to exchange authorization and authentication information between services. SAML is frequently used to implement internal corporate single sign-on (SSO) solutions where the user logs into the IDP - a service that acts as the single source of identity which then grants access to a subset of other internal services.
+
+
+
+## Terminology
+
+In addition to IDP, SP, and principals that common to SSO solution, as explained [here](),  following are more commonly used SAML terms:
+
+- **Flows initiation** - SAML supports two types of flows: those initiated by the service provider (*SP-initiated*) and those initiated by the identity provider (*IDP-initiated*). The more common flow is SP-initiated flow. The SP-initiated flow starts when user try to access to the service provider, then redirected to the identity provider to authenticate, and finally redirected back to the service provider. This flow at operated at Fabric is described [here](). 
+- **Authentication request** (AuthnRequest) - The request that built and sent by the SP toward the IDP. It is XML that contain several parameters among them the ACS URL (reply URL), the SP entity ID (Issuer) and the required name-id (principal id) format.
+- **Authentication response** - an XML that contain the authentication information about the user/principal, among them the principal identification (Subject - Name ID); assertions and their attribute assertions; conditions (foe example: until when this authentication is valid)
+- **Assertion** - is a statement about the principal which sent by the identity provider, as part of the SAML authentication response, for example the principal’s email address and/or groups/roles.
+- **Attribute statement**. a name value pair which one or more of them are part of the assertion.
+- **Assertion consumer service (ACS)**  - The service at SP which gets the SAML response. The ACS URL is provisioned at the IDP settings as well as send at the authentication request. 
+
+
+
+## Security 
+
+The SAML provides several method for certification and trust among the SP and IDP interactions, among them:
+
+* **certification** - SP and IDP provides each other its public key, which is used on their interactions. Their values are reflected and represented at Fabric SAML configuration as SP_CERT_ALIAS and IDP_CERT_ALIAS.
+* **Encryption** - SAML supports several encryption method where the commonly used, also adopted by Fabric is SAH-256.
+* **Trust** - SP Entity ID and IDP Entity ID are transferred at request and response for trust verification by the 2 parties. In addition any request is sent with ID which then can be verified by the SP on response. 
+
+
+
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
