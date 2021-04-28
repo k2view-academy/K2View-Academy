@@ -42,6 +42,18 @@ Clicking in the Reconnect button will activate SAML authentication process, wher
 
 
 
+## User Details Panel
+
+User Details panel located at the top right area of the web framework along with avatar icon.
+
+Once clicked user can see the connected user name and the logout action.
+
+In case of Fabric authenticator the "change passwords" action appears too, otherwise it is hidden and disabled. Below is the opened panel when using an external authenticator
+
+<img src="/articles/26_fabric_security/images/16_details_panel_ext.png">
+
+
+
 
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
