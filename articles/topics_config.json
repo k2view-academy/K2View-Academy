@@ -269,8 +269,8 @@
 	],
 	"KB": [
 		{
-			"KB display name": "Release Notes",
-			"KB display text": "The release notes including the latest main features and improvements.",
+			"KB display name": "RNs & Upgrade",
+			"KB display text": "The release notes including the latest features, improvements and fixes. Upgrade procedure document.",
 			"KB icon": "images/icon-release.png",
 			"visible": true
 		},
