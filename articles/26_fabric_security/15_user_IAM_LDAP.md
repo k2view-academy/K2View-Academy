@@ -20,7 +20,9 @@ When integrated with LDAP, the login steps for the end user is similar to those 
 1.  User attempts to access to a Fabric app.
 2. In case user already has an existing Fabric session he is enabled to access and make actions according to the permissions granted to him by Fabric and its apps. 
 3. In case user does not have an active session, Fabric shows him the login page, where he shall type his credentials - user/password.
-4. Fabric then sends these credentials to the LDAP server to verify they are correct. In addition it gets from the LDAP the groups that the user is associated to.
+4. Fabric then sends these credentials to the LDAP server
+5.  LDAP server verifies that the credentials are correct and in addition it provides the groups that the user is associated to.
+6.  Fabric establishes a Fabric session for the user enabling him access according to the permissions granted to him by Fabric and its apps.
 
 Following is the logical flow that illustrate these steps: 
 
