@@ -36,6 +36,14 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
+<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#query-lui-without-get">Query LUI Without GET</a></p>
+</td>
+<td width="550pxl" valign="top">
+<p> Query the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> data without the explicit GET command.</p>
+</td>
+</tr>
+<tr>
+<td width="350pxl" valign="top">
 <p><a href=/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-command>Delete LUI</a></p>
 </td>
 <td width="550pxl" valign="top">
@@ -94,7 +102,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#run-queries-on-cassandra">Run Queries on Cassandra</a></p>
-
 </td>
 <td width="550pxl" valign="top">
 <p>Run CQL queries on Cassandra.</p>
@@ -167,7 +174,6 @@ For example:
 <tr>
 <td width="350pxl" valign="top">
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#queries-helpers">Queries Helpers</a></p>
-
 </td>
 <td width="550pxl" valign="top">
 <p>Use EXPLAIN and EXPLAIN QUERY PLAN to analyze SQL queries on Fabric data.</p>
@@ -184,11 +190,13 @@ The **GET** command is used to get information for a given [LUI](/articles/01_fa
 Note that multiple LUs can be received using a GET command. However, multiple LUIs cannot be received from the same LU using a GET command. 
 
 The following message is displayed when attempting to get multiple LUIs from the same LU using a GET command:
-  
+
 `Only single instance per LUT can be used on the same GET command.`
 
 The consistency level of the GET LUI command can be set to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
-  -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
+~~~
+SET LUI_READ_ONE_WHEN_FAIL = true
+~~~
 
 Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
 
@@ -284,6 +292,20 @@ The following table lists the GET commands:
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 
 Note that users are responsible for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
+
+### Query LUI Without GET
+
+Fabric provides an ability to query the Logical Unit without performing the **GET** command explicitly. It can be triggered by sending an SQL statement which includes a WHERE clause with the filter by IID. In addition, AUTO_MDB_SCOPE should be set to **true** either in the Connection String or using SET command, as follows:
+
+~~~
+set AUTO_MDB_SCOPE = true;
+~~~
+
+When the above is set and Fabric receives a query with filter by IID, the following logic is performed:
+
+- Sync the instance based on the defined sync mode.
+- Execute the query.
+- Release the instance.
 
 ### Delete LUI Command
 

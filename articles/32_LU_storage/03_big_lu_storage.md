@@ -1,6 +1,8 @@
 # Big Logical Units
 
-There is a 2G limitation in Cassandra for writing compressed SQLite LUI files into a Cassandra **entity** table as blobs. Fabric enables storing big LUIs without limitations on size by splitting data into chunks. The SQLite file's chunks are written into the Cassandra **entity_chunks** table in parallel. The data is first written into the **entity_chunks** table and then after all chunks were written successfully the **entity** table is populated. 
+There is a 2G limitation in Cassandra for writing compressed SQLite LUI files into a Cassandra **entity** table as blobs. Fabric enables storing big LUIs without limitations on size by splitting data into chunks. The SQLite file's chunks are written into the Cassandra **entity_chunks** table in parallel using the [Cassandra Loader](/articles/28_cassandra_loader/01_cassandra_loader_overview.md). The Loader configuration for the parallel save can be done using the [config.ini](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini) by adding a section named **[LU Name]_ cassandra_entity_storage** per each LU. The parameters under this section are the same as the Cassandra Loader definition parameters (for example, Loader execution mode).
+
+The LUI data is first written into the **entity_chunks** table and then after all chunks were written successfully the **entity** table is populated. 
 
 The **entity** table includes the following data:
 
@@ -19,7 +21,6 @@ The **entity_chunks** table includes the following data:
 The chunk size is set using the config.ini file parameters, defined per node:
 
 * INSTANCE_CHUNK_SIZE, impacting the read from Cassandra (pagination) and write into Cassandra chunk size (default 10M – 10485760 bytes).
-* MAX_SAVE_MEMORY_USAGE, total memory to be consumed when loading LUIs into memory in parallel (default 200M) – according to the default configuration, a maximum of 20 chunks can be loaded into memory per node in parallel, other chunks will wait in the queue. 
 
 
 

@@ -9,9 +9,15 @@ Note that to **force the sync** of the LU Instances after deployment, check [For
 
 ### Auto Deploy to Debug
 
-The Fabric Studio **Auto Deploy** capability performs the automatic deployment of the code changes to debug while debugging various components, such as the Data Viewer, LU Schema, Broadway, Broadway as population, Parser and GraphIt. 
+The Fabric Studio **Auto Deploy** capability performs the automatic deployment of the code changes to debug while debugging various components, such as the Data Viewer, LU Schema, Broadway, Broadway  Population, Parser and GraphIt. 
 
 This reduces frictions while debugging and releases the user from doing the manual deployment upon each code change.
+
+The local deployment is performed on the delta changes and it depends on the changed project element, based on the following logic: 
+
+- If the Schema was changed, full deploy is performed.
+- If Java was changed, only Java resources and Broadway are deployed.
+- If Broadway was changed, only Broadway is deployed.
 
 ### How Do I Deploy a Fabric Object from the Fabric Studio?  
 
