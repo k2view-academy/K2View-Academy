@@ -8,7 +8,7 @@ At its core, Security Assertion Markup Language (SAML) 2.0 is a means to exchang
 
 ## Terminology
 
-In addition to IDP, SP, and principals that common to SSO solution, as explained [here](),  following are more commonly used SAML terms:
+In addition to IDP, SP, and principals which explained [here](/articles/26_fabric_security/07_user_IAM_overview.md),  following are more commonly used SAML terms:
 
 - **Flows initiation** - SAML supports two types of flows: those initiated by the service provider (*SP-initiated*) and those initiated by the identity provider (*IDP-initiated*). The more common flow is SP-initiated flow. The SP-initiated flow starts when user try to access to the service provider, then redirected to the identity provider to authenticate, and finally redirected back to the service provider. This flow at operated at Fabric is described [here](). 
 - **Authentication request** (AuthnRequest) - The request that built and sent by the SP toward the IDP. It is XML that contain several parameters among them the ACS URL (reply URL), the SP entity ID (Issuer) and the required name-id (principal id) format.
@@ -23,10 +23,14 @@ In addition to IDP, SP, and principals that common to SSO solution, as explained
 
 The SAML provides several method for certification and trust among the SP and IDP interactions, among them:
 
-* **certification** - SP and IDP provides each other its public key, which is used on their interactions. Their values are reflected and represented at Fabric SAML configuration as SP_CERT_ALIAS and IDP_CERT_ALIAS.
+* **certification** - SP and IDP provides each other its public key, which is used on their interactions. Their values are reflected and represented at Fabric [SAML configuration](/articles/26_fabric_security/08_user_IAM_configiration.md#saml-configuration) as SP_CERT_ALIAS and IDP_CERT_ALIAS. 
+
+  As part of a pre established trust relationship process between Fabric and the IDP, Fabric  provides to the IDP IT team the signed certificate public key "crt" file to be uploaded at the IDP, and IDP team sends to the Fabric team the IDP "crt"/"cert" to be located at Fabric.
+
 * **Encryption** - SAML supports several encryption method where the commonly used, also adopted by Fabric is SAH-256.
+
 * **Trust** - SP Entity ID and IDP Entity ID are transferred at request and response for trust verification by the 2 parties. In addition any request is sent with ID which then can be verified by the SP on response. 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/08_user_IAM_SSO_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md)

@@ -11,24 +11,12 @@ The benefits of using single sign-on include:
 
 If your organization is using an SSO service, you can connect Fabric o it very easily.
 
-Fabric supports the SAML - commonly used SSO protocol - toward variety IDPs such as Azure ADFS and Okta.
 
 
-
-## SSO Concepts, Methods and Terms
-
-There are 2 main commonly used modern methods for IAM and SSO:
+There are 2 main commonly used modern methods for SSO:
 
 1. **SAML** (Security Assertion Markup Language), responsible for both tasks and is geared towards enterprise security.
 2. **OAuth + OIDC**, where OAuth is responsible for authorization and OIDC – OpenID Connect, is responsible for authentication. These methods are commonly by mobile apps, modern web apps, game consoles, and IoT devices.
-
-Both methods define several actors that participate in every use case: Identity Provider (IdP), Relying Party (RP) or Service Provider (SP), and principal. 
-
-- The **IdP** owns the users and their permissions. It authenticates principals and issues tokens/assertions.
-- The **SP** is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. 
-- The **principal** (human user or application/system) is an entity that can be authenticated.
-
-SP is not responsible or aware to the user credentials and interacts with the IdP using tokens to verify user authentication and to get authorization info.
 
 
 
@@ -38,10 +26,7 @@ Security Assertion Markup Language (SAML) is one of the standards protocol used 
 
 The SP requests and obtains an authentication assertion from the IDP. On the basis of this assertion, the SP can make an access control decision, that is, it can decide whether to give access to the SP resources and to which of them. The interactions are XML based and use certification, encryption and other methods to secure these interactions and avoid frauds.
 
-For more information about SAML concepts and terminology see [here]().
 
 
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/07_user_IAM_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/09_user_IAM_SAML_ fundamentals_and_terms.md)
 
-
-
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
