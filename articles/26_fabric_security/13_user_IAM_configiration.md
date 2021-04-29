@@ -31,7 +31,7 @@ Following are the configuration that shall be applied when using SAML for the we
 
 
 
-Some of the actual values are taken from the IDP. For more information per IDP see [Azure ADFS SSO SAML Setup]() and [Okta SSO SAML Setup]().
+Note that some of the values are taken from the IDP and some are supplied to by Fabric during the setup preprations. For more information and guides per IDP see [Azure ADFS SSO SAML Setup]() and [Okta SSO SAML Setup]().
 
 
 
@@ -69,10 +69,18 @@ Note that appropriate accompany section shall be added per authenticator. For ex
 
 ### Proprietary Custom Authenticator
 
-In order to use a custom authenticator it shall be added to the `server_authenticator` authenticator list and an accompany section shall be added, following the naming convention: `<authenticator_name>_auth`. For more information see [here]().
+In order to use a custom authenticator do the following at the config.ini:
+
+1. add it to the `server_authenticator` authenticator list
+2. add an new accompany section, following this naming convention: `<authenticator_name>_auth`. 
+3. under this section add parameter named "class_name" where its value is the full class name of the implemented authenticator. Other parameters can be added too and will be passed to the authenticator when activated.
+
+
+
+For more information about customer authenticator implementation see [here]().
 
 
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/12_web_ login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/14_user_IAM_SAML_Azure_ADFS_setup.md)

@@ -25,7 +25,11 @@ it shall implement 3 methods:
 
 ### How to pack and deploy custom authenticator
 
+Pack the authenticator into a JAR and locate it under the $K2_HOME/ExternalJars directory.
 
+JAR shall be copied to each of the cluster nodes.
+
+for more information about working with external jars see [here](/articles/31_external_resources/01_external_jars.md).
 
 ### How to activate custom authenticator
 
@@ -35,4 +39,5 @@ After it configured properly Fabric shall be restarted.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/06_data_masking.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/05_fabric_webservices_security.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/16_user_IAM_auditing.md)
+

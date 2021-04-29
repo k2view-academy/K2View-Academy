@@ -78,7 +78,7 @@ Note that in order web service (WS) will be managed by the above authenticators 
 
 When Fabric is integrated with external IDP or authenticator it applies security methods in both transit and at rest, as following:
 
-- All supported transit methods provide secured SSL/TTPS access.
+- All supported transit methods provide secured SSL/HTTPS access.
 
 - SAML Fabric & IDP intersections are done using certification and encryption methods.
 
