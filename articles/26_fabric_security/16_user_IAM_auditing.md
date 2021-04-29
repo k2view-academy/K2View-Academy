@@ -10,9 +10,11 @@ Users’ login access to Fabric is recorded into Fabric Auditing mechanism with 
 
 
 
-Note: in case of sequence of authenticators, Auditing logs the last one that activated. For example - if authenticator list = "LDAP,Fabric" and LDAP succeeded then Query will equal to "LDAP" with success as *Result* column value. in case LDAP failed and  next one - "Fabric" is used then the auditing entry shall contain "Fabric" as the *Query* column's value.
+Note: in case of sequence of authenticators, Auditing mechanism logs the last one that activated. For example - if authenticator list = "LDAP,Fabric" and LDAP succeeded then Query will equal to "LDAP" with success as *Result* column value. in case LDAP failed and  next one - "Fabric" is used then the auditing entry shall contain "Fabric" as the *Query* column's value.
 
 
+
+For more information about the Auditing mechanism see [here](/articles/27_auditing/01_auditing_overview.md).
 
 
 
