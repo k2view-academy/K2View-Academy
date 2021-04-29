@@ -22,7 +22,7 @@ Fabric provides user identification and access management (IAM) for web, console
 
 Using the organization’s IDP gives the organization a full and dynamic control on access permissions to Fabric. It lets the organization to add or remove users and to grant or revoke their permissions, using its own admin centralized tools. In addition, the organization has a centralized auditing log, covers their users’ access to all its services and resources. 
 
-
+As explained above, the authorization part is done by Fabric, using its roles and permissions mechanism.
 
 ## Identity Providers & Authenticators
 
@@ -32,11 +32,11 @@ Following are the supported authentication providers:
 
 - **Fabric**, for console, WS and web access, using its repository. This is Fabric default authentication.
 
-- **LDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/15_user_IAM_LDAP.md).
+- **LDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
-- **ADLDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/15_user_IAM_LDAP.md).
+- **ADLDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
-- **SAML**, for web and WS access. Done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/)
+- **SAML**, for web and WS access. Done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_ fundamentals_and_terms.md)
 
   Using SAML is actually adopting SSO methodology which brings additional benefits, other than admin operation perspectives: it improves the users experience who do not need to type their credentials repeatedly on different services among the organization. In terms of security, the authentication credentials are not handled or even known by Fabric. See [here](/articles/26_fabric_security/10_user_IAM_SSO_overview.md) more about SSO.
 
@@ -44,19 +44,19 @@ Following are the supported authentication providers:
 
 Fabric also provides the option to **block** the access either for console or web access. This empowering the security access control, for example when organization wishes that users’ access shall be limited only to specific node/s in cluster.
 
-See [here](/articles/26_fabric_security/08_user_IAM_configiration.md) how to define and configure the authenticator. 
+See [here](/articles/26_fabric_security/13_user_IAM_configiration.md) how to define and configure the authenticator. 
 
 #### Proprietary Custom Authenticator
 
 Fabric enables to use a proprietary custom authenticator, when required by the organization.
 
-In order to use such custom authenticator, implement the interface `com.k2view.fabric.authentication.providers.Authenticator` and set the Fabric configuration accordingly. For more information see [here]()
+In order to use such custom authenticator, implement the interface `com.k2view.fabric.authentication.providers.Authenticator` and set the Fabric configuration accordingly. For more information see [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md)
 
 #### Sequence Authenticators
 
 Fabric provides a flexible mechanism, enabling to define a sequence of authenticators, each is used as fallback to its predecessor.
 
-For example, the console access can be set to be using LDAP and if it failed to try using Fabric credentials. This fallback mechanism shall be used carefully and on very specific cases. For more information see [here]().
+For example, the console access can be set to be using LDAP and if it failed to try using Fabric credentials. This fallback mechanism shall be used carefully and on very specific cases. For more information see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#sequence-authenticators).
 
 Note that web access can be set to be either SAML or other authenticators and cannot be combined. 
 
@@ -82,7 +82,7 @@ When Fabric is integrated with external IDP or authenticator it applies security
 
 - SAML Fabric & IDP intersections are done using certification and encryption methods.
 
-- User, their credentials, and their association to roles are not stored at Fabric and by that empowering the organization access control capabilities.
+- User, their credentials, and their association to roles are not stored at Fabric and by that empowering the organization access control capabilities. Note that roles themselves - their definitions and associated permissions are managed by Fabric.
 
 - LDAP admin user credentials are encrypted at the Fabric configuration. 
 
@@ -90,7 +90,7 @@ When Fabric is integrated with external IDP or authenticator it applies security
 
 ## Auditing
 
-Users’ login access to Fabric is recorded into Fabric Auditing mechanism with the information about the channel and the authenticator which has been used. For more information see [here](16_user_IAM_auditing.md).
+Users’ login access to Fabric is recorded into Fabric Auditing mechanism with the information about the channel and the authenticator which has been used. For more information see [here](/articles/26_fabric_security/16_user_IAM_auditing.md).
 
 
 

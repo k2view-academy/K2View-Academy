@@ -12,9 +12,11 @@ In addition to IDP, SP, and principals which explained [here](/articles/26_fabri
 
 - **Flows initiation** - SAML supports two types of flows: those initiated by the service provider (*SP-initiated*) and those initiated by the identity provider (*IDP-initiated*). The more common flow is SP-initiated flow. The SP-initiated flow starts when user try to access to the service provider, then redirected to the identity provider to authenticate, and finally redirected back to the service provider. This flow at operated at Fabric is described [here](). 
 - **Authentication request** (AuthnRequest) - The request that built and sent by the SP toward the IDP. It is XML that contain several parameters among them the ACS URL (reply URL), the SP entity ID (Issuer) and the required name-id (principal id) format.
-- **Authentication response** - an XML that contain the authentication information about the user/principal, among them the principal identification (Subject - Name ID); assertions and their attribute assertions; conditions (foe example: until when this authentication is valid)
-- **Assertion** - is a statement about the principal which sent by the identity provider, as part of the SAML authentication response, for example the principal’s email address and/or groups/roles.
-- **Attribute statement**. a name value pair which one or more of them are part of the assertion.
+- **Authentication response** - is a token or assertion in an XML form that contain the authentication information about the user/principal, such as
+  - **Subject**, contains a NameID element (the authenticated principal name). Its format can be set at the request, although also usually provisioned at the IDP. Fabric is used to work with email format. (note that it is not necessary the actual user's email)
+  - **Issuer**, the URL of the IdP that issued the assertion.
+  - **conditions**, for example: valid time frame  - starting date, expiration date, issuing date.
+  - **Attribute statements**, contains a list of attributes in a name value pairs form, for example the groups/roles that are associated to the user.
 - **Assertion consumer service (ACS)**  - The service at SP which gets the SAML response. The ACS URL is provisioned at the IDP settings as well as send at the authentication request. 
 
 
@@ -29,8 +31,9 @@ The SAML provides several method for certification and trust among the SP and ID
 
 * **Encryption** - SAML supports several encryption method where the commonly used, also adopted by Fabric is SAH-256.
 
-* **Trust** - SP Entity ID and IDP Entity ID are transferred at request and response for trust verification by the 2 parties. In addition any request is sent with ID which then can be verified by the SP on response. 
+* **Trust** - SP Entity ID and IDP Entity ID are transferred at the request and response for trust purposes. In addition any request is sent with ID which then can be verified by the SP on response. 
 
 
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/08_user_IAM_SSO_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md)
+

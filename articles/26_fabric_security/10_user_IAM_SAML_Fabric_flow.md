@@ -2,7 +2,7 @@
 
 In this article we describe how Fabric work with SSO when using **SAML** protocol. 
 
-The SAML can be used for the Fabric's [Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and its apps like [Admin](/articles/30_web_framework/03_web_admin_application.md), [TDM]() (7.1 and later) and [DPM](), where Fabric follows SAML standard flows.
+The SAML can be used for the Fabric's [Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and its apps like [Admin](/articles/30_web_framework/03_web_admin_application.md), [TDM](/articles/TDM/tdm_overview/README.md) (7.1 and later) and [DPM](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md), where Fabric follows SAML standard flows.
 
 #### Log in
 
