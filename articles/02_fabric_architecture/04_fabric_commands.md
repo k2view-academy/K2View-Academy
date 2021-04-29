@@ -295,17 +295,21 @@ Note that users are responsible for identifying if a [sync](/articles/14_sync_LU
 
 ### Query LUI Without GET
 
-Fabric provides an ability to query the Logical Unit without performing the **GET** command explicitly. It can be triggered by sending an SQL statement which includes a WHERE clause with the filter by IID. In addition, AUTO_MDB_SCOPE should be set to **true** either in the Connection String or using SET command, as follows:
+Fabric provides an ability to query the Logical Unit without performing the **GET** command explicitly. It can be triggered by sending an SQL statement which includes a WHERE clause with the filter by IID. To activate this, set **AUTO_MDB_SCOPE** to **true**, as follows:
 
 ~~~
 set AUTO_MDB_SCOPE = true;
 ~~~
 
-When the above is set and Fabric receives a query with filter by IID, the following logic is performed:
+When the above is set and Fabric receives a query with a filter by IID, the following logic is performed:
 
 - Sync the instance based on the defined sync mode.
 - Execute the query.
 - Release the instance.
+
+To deactivate this functionality, set **AUTO_MDB_SCOPE** to **false**.
+
+Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric GET command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be concatenated to the Fabric connection string.
 
 ### Delete LUI Command
 
