@@ -19,7 +19,7 @@ In both case the following happens:
 4. The user either has an existing active browser session with the identity provider or establishes one by logging into the identity provider, via IDP login page.
 5. The identity provider builds the authentication response in the form of an XML-document containing the user’s identifier, signs it using an X.509 certificate, and posts this information to Fabric, along with some other assertions and attributes.
 6. Fabric verifies first that the response sent from the identity provider; verifies and open the response using the certification and encryption keys and algorithms; and finally process the and extract the content, including the groups/roles that the user is associated to.
-7. Fabric establishes a Fabric session for the user enabling him access according to the permissions granted to him by Fabric and its apps.
+7. Fabric establishes a Fabric session for the user enabling him access according to the permissions granted to him by Fabric and its apps. Fabric session provides via the *UsercCode* the information about the user and the roles which are associated to.
 
 
 

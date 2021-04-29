@@ -36,9 +36,9 @@ Clicking in the Reconnect button will activate SAML authentication process, wher
 
 ## Session timeout
 
-After some predefined idle time, with any user actions at the Fabric web framework, his session is expired and shall be renewed when he wish to continue to use it. When trying to make any action after session expiration, the user is notified about with a popup alert.
+After some predefined idle time, with any user actions at the Fabric web framework, his session is expired and shall be renewed when he wish to continue to use it. When trying to make any action after session expiration, the user is notified via a popup alert that his session need to be renewed.
 
-When either Fabric or LDAP authenticators are active, user is informed that he will redirected to the login page, to type his credentials again, where in case SAML authenticator is active he just notified that his session need to be renewed. In such case, while Fabric session was expired the IDP session is still valid and user can enjoy from the SSO benefits where he does not need  to go thru login process over again.
+When either Fabric or LDAP authenticators are active, user will then redirected to the login page, to type his credentials again, where in case of SAML authenticator the IDP session might be still valid, even though Fabric session was expired , and user can enjoy from the SSO benefits, i.e. without going thru login process over again.
 
 <img src="/articles/26_fabric_security/images/16_timeout_saml.png">
 
@@ -53,6 +53,12 @@ Once clicked user can see the connected user name and the logout action.
 In case of Fabric authenticator the "change passwords" action appears too, otherwise it is hidden and disabled. Below is the opened panel when using an external authenticator:
 
 <img src="/articles/26_fabric_security/images/16_details_panel_ext.png">
+
+
+
+
+
+
 
 
 

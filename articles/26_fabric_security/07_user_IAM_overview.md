@@ -8,9 +8,11 @@ Using the organization’s IDP gives the organization a full and dynamic control
 
 
 
-## Supported Identity Providers & Authenticators
+## Identity Providers & Authenticators
 
-Fabric supports several authentication providers:
+Fabric works with several authentication providers. Each authenticator is responsible to the user authentication, to provide user-name and his roles.
+
+Following are the supported authentication providers:
 
 - **Fabric**, for console, WS and web access, using its repository. This is Fabric default authentication.
 
@@ -40,9 +42,13 @@ For example, the console access can be set to be using LDAP and if it failed to 
 
 #### Authentication method by Channel
 
-Fabric provides the flexibility to separate between the authenticators for the various access methods - web, console and WS.
+Fabric provides the flexibility to separate between the authenticators for the various access methods - web, console and WS. Note that in order WS will work with the authenticators
 
 For example, in case IAM is not handled by Fabric, apps might use web access via SAML and console access via LDAP.  
+
+#### User Information at UserCode 
+
+*UserCode*, which can be used at project implementation code, has a method called `sessionUser()` that provides an *SessionUser* object that contain the user-name and roles, relevant to the current user session and that populated by the relevant active authentication provider. This is useful to apply  permissions by roles at code.
 
 
 
