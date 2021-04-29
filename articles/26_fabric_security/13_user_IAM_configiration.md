@@ -1,4 +1,4 @@
-## User Identification & Access Management (IAM) Configuration
+# User Identification & Access Management (IAM) Configuration
 
 Fabric lets configuring the web access and the console access according to required authentication methods.
 
@@ -23,7 +23,7 @@ Following are the configuration that shall be applied when using SAML for the we
 
 - **IDP_SINGLE_SIGN_ON_SERVICE_URL**, the IDP endpoint for SAML request. 
 
-- SECURE, flag indicating if certification and encryption is applied. Default is "true".
+- **SECURE**, flag indicating if certification and encryption is applied. Default is "true".
 
 - **SP_CERT_ALIAS**, alias to the certification that is uploaded to the IDP,which is the public key to sign and encrypt the SAML response 
 
@@ -31,7 +31,7 @@ Following are the configuration that shall be applied when using SAML for the we
 
 
 
-Note that some of the values are taken from the IDP and some are supplied to by Fabric during the setup preprations. For more information and guides per IDP see [Azure ADFS SSO SAML Setup]() and [Okta SSO SAML Setup]().
+Note that some of the values are taken from the IDP and some are supplied to by Fabric during the setup preprations. For more information and guides per IDP see [Azure ADFS SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_ADFS_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md).
 
 
 
