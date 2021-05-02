@@ -69,15 +69,10 @@ SYNTAX: SET SYNC [SYNC MODE];
 <p>Delta sync.</p>
 </td>
 <td style="width: 316px;">
-<p> Added to Release 6.4.1: </p>
 <p>Valid in the iidFinder in Delta Partition mode when there is no delta will be running in Sync Off mode otherwsie Sync On.</p>
-<p>1. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to Delta Partition mode.
-
-1.1 When running on Node A:
-
-set sync delta;</p>
+<p>1. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to Delta Partition mode.</p>
+<p>1.1 When running on Node A:set sync delta;</p>
 <p>get LU.1;
-
 Fabric checks if the delta exist in Node B for Instance 1 and if not, runs in Sync Off mode, otherwise in Sync On mode.
 
 1.2 When running on Node B:
@@ -112,16 +107,19 @@ In principle, since each request requires a write lock in the LUI's MicroDB, mul
 
 To avoid checking each LUI, Fabric implements Sync On mode only on the first GET request on the LUI. Remaining requests are executed in parallel to the first request when executed in Sync Off mode.
 
+Then if the GET request of the first LUI fails in Sync On mode while there are additional threads waiting for the sync, the remaining requests will return failure without trying to execute them.
+
 SYNC_PROTECTION can be edited in the config.ini file: 
 1.	The default value is zero. Fabric implements Sync On mode only on the first request.
 2.	If this parameter is set to -1, Sync On protection is disabled and Fabric implements Sync On mode on each request.
 3.	This parameter can be set in milliseconds. For example, if set to 1000, all Sync requests executed on the same LUI and Fabric node during the 1000ms after the first request run in Sync Off mode. After 1000ms, and until the first GET request on the LUI is completed, Fabric sets the Sync mode to On.
 
-As of Release 6.2.3, SYNC_PROTECTION can be disabled on the session level using the SET SYNC_PROTECTION=off command.
+SYNC_PROTECTION can be disabled on the session level using the SET SYNC_PROTECTION=off command.
+
 ## Fabric Studio Server Configuration - Force Upgrade Post Deploy Checkbox
 The **Force Upgrade Post Deploy** checkbox is defined for each predefined Fabric server in the [Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window:
 
-![image](/articles/14_sync_LU_instance/images/6_2_server_configuration_window.png)
+![image](images/6_2_server_configuration_window.png)
 
 This checkbox defines the Sync mode of the first GET of each LU instance (LUI) after the LU is deployed to the server:
 * If checked, the Sync mode is set to Force.
