@@ -35,7 +35,7 @@ Following are the configuration that shall be applied when using SAML for the we
 
 
 
-Note that some of the values are taken from the IDP and some are supplied to by Fabric during the setup preprations. For more information and guides per IDP see [Azure ADFS SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_ADFS_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md).
+Note that some of the values are taken from the IDP and some are supplied to by Fabric during the setup preprations. For more information and guides per IDP see [Azure AD SAML Setup Guide](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md) and [Okta SAML Setup Guide](/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md).
 
 
 
@@ -89,4 +89,5 @@ For more information about customer authenticator implementation see [here]().
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/12_web_ login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/14_user_IAM_SAML_Azure_ADFS_setup.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/12_web_ login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)
+

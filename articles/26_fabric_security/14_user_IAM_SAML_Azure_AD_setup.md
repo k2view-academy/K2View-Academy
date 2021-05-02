@@ -1,6 +1,6 @@
 # Azure AD SAML Setup Guide
 
-This article describes the setup and integration steps to connect your Single-Sign-On account at Azure ADFS (Microsoft Azure Active Directory Federated Services) to Fabric and get the benefits of easy sign-in, along with authentication and authorization control via your admin tools.
+This article describes the setup and integration steps to connect your Single-Sign-On account at Azure AD (Microsoft Azure Active Directory) to Fabric and get the benefits of easy sign-in, along with authentication and authorization control via your admin tools.
 
 ### Prerequisite Requirements
 
