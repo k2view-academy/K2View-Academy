@@ -428,7 +428,7 @@ Fabric supports the ability to set the session variables on the Fabric Connectio
 
 * jdbc:fabric://[server:port]?user=admin&password=admin&timeout=0&sync=off&test=testValue
 
-This can be used when external systems (such as BI) that are not familiar with the Fabric syntax, are connecting to Fabric.
+This can be used when external systems (such as BI) that are not familiar with the Fabric syntax, are connecting to Fabric. The delimiter can be either **&** or **;**.
 
 #### Fabric Setting - Cluster Level
 
