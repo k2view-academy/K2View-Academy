@@ -36,14 +36,6 @@ For example:
 </tr>
 <tr>
 <td width="350pxl" valign="top">
-<p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#query-lui-without-get">Query LUI Without GET</a></p>
-</td>
-<td width="550pxl" valign="top">
-<p> Query the <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a> data without the explicit GET command.</p>
-</td>
-</tr>
-<tr>
-<td width="350pxl" valign="top">
 <p><a href=/articles/02_fabric_architecture/04_fabric_commands.md#delete-lui-command>Delete LUI</a></p>
 </td>
 <td width="550pxl" valign="top">
@@ -182,6 +174,7 @@ For example:
 </tbody>
 </table>
 
+
 ### Get LUI Commands
 
 #### Get Instance
@@ -293,24 +286,6 @@ The remote GET and GETF commands run on a random Fabric node on the remote DC. T
 
 Note that users are responsible for identifying if a [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) on an LUI is required, and to only then run the remote GET or GETF commands. This prevents unnecessary calls to the remote Fabric node and getting the local LUI version instead.
 
-### Query LUI Without GET
-
-Fabric provides an ability to query the Logical Unit without performing the **GET** command explicitly. It can be triggered by sending an SQL statement which includes a WHERE clause with the filter by IID. To activate this, set **AUTO_MDB_SCOPE** to **true**, as follows:
-
-~~~
-set AUTO_MDB_SCOPE = true;
-~~~
-
-When the above is set and Fabric receives a query with a filter by IID, the following logic is performed:
-
-- Sync the instance based on the defined sync mode.
-- Execute the query.
-- Release the instance.
-
-To deactivate this functionality, set **AUTO_MDB_SCOPE** to **false**.
-
-Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric GET command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be concatenated to the Fabric connection string.
-
 ### Delete LUI Command
 
 The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unlike the GET command, several LUI from the same LU can be deleted using one DELETE command.
@@ -381,8 +356,6 @@ The following table lists the  DELETE commands:
 
 The Fabric RELEASE command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
 
-<!--Drop 2- Add a link to LU storage and management--> 
-
 ### Fabric View
 
 Fabric has commands that display a Fabric configuration and its settings. For example:
@@ -434,9 +407,28 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   * set from '{ "scope" : {"sync": "force", "environment" : "UAT1"}}';
   
 - **SET USER_ROLES** command, returns the list of roles of the connected user (valid since Fabric 6.4.2).
-##### Reset Session Level Setting
 
-Use the following command to reset all the related parameters set on a session level to their default value: **SET DEFAULT**;
+- **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. 
+
+  When **AUTO_MDB_SCOPE** is set to **true**, the following logic is performed:
+
+  - Sync the instance based on the defined sync mode.
+  - Execute the query.
+  - Release the instance.
+
+  To deactivate this functionality, set **AUTO_MDB_SCOPE** to **false**.
+
+  Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be concatenated to the Fabric Connection URL.
+
+* **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
+
+#### Fabric Setting via JDBC Connection URL
+
+Fabric supports the ability to set the session variables on the Fabric Connection URL by concatenating them to the connection string, for example:
+
+* jdbc:fabric://[server:port]?user=admin&password=admin&timeout=0&sync=off&test=testValue
+
+This can be used when external systems (such as BI) that are not familiar with the Fabric syntax, are connecting to Fabric.
 
 #### Fabric Setting - Cluster Level
 
@@ -451,11 +443,7 @@ The values are kept in the Cassandra **global_settings** table under [k2system k
 - Master key generation commands used to encrypt LUI data and to encrypt an [interface’s](/articles/05_DB_interfaces/01_interfaces_overview.md) details.\
   Click to open the Fabric [Devops Security](/articles/99_fabric_infras/devops/01_fabric_security_overview.md) articles and to read more about Fabric Security Hardening.
 
-- Fabric Credentials Commands, a list of commands for setting Fabric credentials like, users, roles, tokens or permissions.
-
-<!--Drop 3- Add a link to Fabric Security Hardening-->
-
-<!--Drop 1- Add a link to Fabric Credentials-->
+- Fabric [Credentials Commands](/articles/17_fabric_credentials/01_fabric_credentials_overview.md), a list of commands for setting Fabric credentials like, users, roles, tokens or permissions.
 
 ###  Deploy and Drop Commands
 
