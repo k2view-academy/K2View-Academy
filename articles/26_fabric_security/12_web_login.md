@@ -40,7 +40,7 @@ After some predefined idle time, with any user actions at the Fabric web framewo
 
 When either Fabric or LDAP authenticators are active, user will then redirected to the login page, to type his credentials again, where in case of SAML authenticator the IDP session might be still valid, even though Fabric session was expired , and user can enjoy from the SSO benefits, i.e. without going thru login process over again.
 
-<img src="/articles/26_fabric_security/images/12_timeout_saml.png">
+<img src="/articles/26_fabric_security/images/12_timeout_alert.png">
 
  
 
