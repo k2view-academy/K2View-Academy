@@ -1,5 +1,4 @@
 <strong>Fabric Security<strong>
-        
 
 <ul>
     <li><a href="/articles/26_fabric_security/01_fabric_security_overview.md">Security Overview</a></li>
@@ -8,7 +7,6 @@
 	<li><a href="/articles/26_fabric_security/04_fabric_interfaces_security.md">Environments & Interfaces Encryption</a></li>
 	<li><a href="/articles/26_fabric_security/05_fabric_webservices_security.md">Web Services Security</a></li>
 	<li><a href="/articles/26_fabric_security/06_data_masking.md">Data Masking</a></li>
-
     <li><a href="/articles/26_fabric_security/07_user_IAM_overview.md">User Identification and Access Management</a></li>
     <li><a href="/articles/26_fabric_security/08_user_IAM_SSO_overview.md">SSO Overview</a></li>
     <li><a href="/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md">SAML Fundamentals, Terminology and Security</a></li>
