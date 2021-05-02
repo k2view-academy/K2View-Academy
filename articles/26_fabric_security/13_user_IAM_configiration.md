@@ -1,4 +1,4 @@
-# User Identification & Access Management (IAM) Configuration
+# User IAM Configuration
 
 Fabric lets configuring the web access and the console access according to required authentication methods.
 

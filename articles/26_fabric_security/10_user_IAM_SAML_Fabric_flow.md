@@ -1,4 +1,4 @@
-# How Fabric works with  SAML 
+# How Fabric works with SAML 
 
 In this article we describe how Fabric work with SSO when using **SAML** protocol. 
 
@@ -41,5 +41,5 @@ In both cases Fabric start the authentication process with the IDP, as explained
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/09_user_IAM_SAML_ fundamentals_and_terms.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/11_user_IAM_LDAP.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/11_user_IAM_LDAP.md)
 

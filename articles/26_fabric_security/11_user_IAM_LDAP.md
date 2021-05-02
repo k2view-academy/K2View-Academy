@@ -1,4 +1,4 @@
-# IAM Using LDAP
+# User IAM Using LDAP
 
 LDAP, the Lightweight Directory Access Protocol, is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers. It’s often used for authentication and storing information about users, groups, and applications, but is a fairly general-purpose data store and can be used in a wide variety of applications.
 
