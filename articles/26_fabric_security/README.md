@@ -12,7 +12,7 @@
     <li><a href="/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md">SAML Fundamentals, Terminology and Security</a></li>
     <li><a href="/articles/26_fabric_security/10_user_IAM_SAML_Fabric_flow.md">How Fabric works with SAML</a></li>
     <li><a href="/articles/26_fabric_security/11_user_IAM_LDAP.md">User IAM Using LDAP</a></li>
-    <li><a href="/articles/26_fabric_security/12_web_login.md"></a>Web Login</li>
+    <li><a href="/articles/26_fabric_security/12_web_login.md">Web Login</a></li>
     <li><a href="/articles/26_fabric_security/13_user_IAM_configiration.md">User IAM Configuration</a></li>
     <li><a href="/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md">Azure AD SAML Setup Guide</a></li>
     <li><a href="/articles/26_fabric_security/15_user_IAM_SAML_Okta_setup.md">Okta SAML Setup Guide</a></li>
