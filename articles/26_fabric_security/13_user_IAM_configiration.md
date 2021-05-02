@@ -43,7 +43,7 @@ Note that some of the values are taken from the IDP and some are supplied to by 
 
 `server_authenticator`  property requires to define which authenticator to be used and when needed an additional accompany section.
 
-There are four authenticators which come as part of the Fabric platform: "fabric", "block_all", "ldap", "asldap", as following:
+There are four authenticators which come as part of the Fabric platform, and are considered as reserved names: "fabric", "block_all", "ldap", "asldap", as following:
 
 - **fabric**, when using Fabirc local Cassandra. For this no no further settings is required.
 - **block_all** meaning that access is blocked. For this no no further settings is required. 
@@ -52,8 +52,6 @@ There are four authenticators which come as part of the Fabric platform: "fabric
 - **adldap**. connect to AD/LDAP server. For this option the AD/LDAP server connection details are required and shall be defined at section name: `adldap_auth`.
 
 The default authenticator is "fabric" when `server_authenticator` is not set.
-
-
 
 ### LDAP Configuration
 
@@ -67,12 +65,6 @@ The `adldap_auth` or `ldap_auth` sections shall define the following:
 
 The values shall be provided by the organization LDAP group.
 
-### Sequence Authenticators
-
-A sequence of authenticators can be specified them using comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as fallback to its predecessor.
-
-Note that appropriate accompany section shall be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured then one additional section - "ldap_auth" - shall be added.
-
 ### Proprietary Custom Authenticator
 
 In order to use a custom authenticator do the following at the config.ini:
@@ -81,9 +73,19 @@ In order to use a custom authenticator do the following at the config.ini:
 2. add an new accompany section, following this naming convention: `<authenticator_name>_auth`. 
 3. under this section add parameter named "class_name" where its value is the full class name of the implemented authenticator. Other parameters can be added too and will be passed to the authenticator when activated.
 
-
-
 For more information about customer authenticator implementation see [here]().
+
+### Sequence Authenticators
+
+A sequence of authenticators can be specified them using comma separator:  `server_authenticator=<auth_1>[,<auth_2>, <auth_3>...]`.  For example: `server_authenticator=ldap,fabric`. The specified authenticators are evaluated by their order, where each is used as fallback to its predecessor.
+
+Note that appropriate accompany section shall be added per authenticator. For example, if `server_authenticator=ldap,fabric` is configured then one additional section - "ldap_auth" - shall be added.
+
+If there is need to use same type, for example - use 2 LDAP servers, where one is a fallback to another, then you shall:
+
+1. Give a name to each of them, for example: "ldap1", "ldap2"
+2. The additional section names shall match their names, for example: "ldap1_auth", "ldap2_auth"
+3. Because these names are not out the reserved names, their class-name shall be defined as additional property for the "<name>_auth" section, similar to proprietary custom authenticator. For example, in case of LDAP - `class_name=com.k2view.fabric.authentication.providers.LdapAuthenticator`.
 
 
 
