@@ -36,7 +36,7 @@ Following are the supported authentication providers:
 
 - **ADLDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
-- **SAML**, for web and WS access. Done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_ fundamentals_and_terms.md)
+- **SAML**, for web and WS access. Done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md)
 
   Using SAML is actually adopting SSO methodology which brings additional benefits, other than admin operation perspectives: it improves the users experience who do not need to type their credentials repeatedly on different services among the organization. In terms of security, the authentication credentials are not handled or even known by Fabric. See [here](/articles/26_fabric_security/10_user_IAM_SSO_overview.md) more about SSO.
 
