@@ -102,12 +102,12 @@ Will run as sync ON; </p>
 Note that the sync returns an error message when a source is not available. To change this, use the [set ignore_source_exception true](/articles/14_sync_LU_instance/03_sync_ignore_source_exception.md) command.
 
 ## Sync On Protection
-Sync On protection improves the response time of multiple GET LUI requests on the same LUI and Fabric node. For example, executing a stress test by running a Web Service with the same LUI on multiple threads. 
+Sync On Protection improves the response time of multiple GET LUI requests on the same LUI and Fabric node. For example, executing a stress test by running a Web Service with the same LUI on multiple threads. 
 In principle, since each request requires a write lock in the LUI's MicroDB, multiple requests on the same LUI and Fabric node are executed sequentially if they all implement Sync On mode. This means that even when LUI populations are not run, a short check can take a long time before the last GET is successful.
 
 To avoid checking each LUI, Fabric implements Sync On mode only on the first GET request on the LUI. Remaining requests are executed in parallel to the first request when executed in Sync Off mode.
 
-Then if the GET request of the first LUI fails in Sync On mode while there are additional threads waiting for the sync, the remaining requests will return failure without trying to execute them.
+Then if there are several sync requests for the same LUI on the same node within the Protection period and the first GET fails, all the remaining requests will fail with the same reason without trying to sync again. 
 
 SYNC_PROTECTION can be edited in the config.ini file: 
 1.	The default value is zero. Fabric implements Sync On mode only on the first request.
