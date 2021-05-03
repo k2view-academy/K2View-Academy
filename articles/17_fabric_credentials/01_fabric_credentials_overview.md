@@ -17,7 +17,7 @@ User access control management can be performed using either:
 
 - [Web Admin UI](/articles/30_web_framework/03_web_admin_application.md)
 
-##  List of permissions 
+##  List of Permissions 
 Roles are also used to maintain consistency across Fabric and be assigned with many or all of the following permission and actions types:
 
 
