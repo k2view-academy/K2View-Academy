@@ -28,18 +28,76 @@ When Actors read their input arguments from Broadway, and expect a certain type 
 
 The conversion is highly robust, where any reasonable conversion is done in the attempt to satisfy the Actor's expected input. For instance, a Long can be converted into a string and a string can be parsed into a Long (if possible). An integer can be converted to a boolean and vice versa (0=false, true=1). Automatic conversion is also done between primitives and collections or between maps and collections. The following is an exhaustive table of all available conversions:
 
-| Source/Target |           String          |            Long           |                  Double                 |           Boolean          |      Date      |        byte[]        |         Iterable         |  Map  |
-|:-------------:|:-------------------------:|:-------------------------:|:---------------------------------------:|:--------------------------:|:--------------:|:--------------------:|:------------------------:|:-----:|
-|      null     |             ""            |             0             |                   0.0                   |            false           | 1970-1-1 00:00 |        byte[0]       |           Empty          | Empty |
-|     String    |             =             |           parse           |                  parse                  |  false if empty/"0"/"false |      parse     |      utf-8 bytes     |       single entry       | Error |
-|      Long     |        to string       |             =             | Convert to double at possible precision |         false if 0         | ms since epoch | same as string utf-8 |       single entry       | Error |
-|     Double    |      to string        |           Floor           |                    =                    |        false if 0.0        | ms since epoch | same as string utf-8 |       single entry       | Error |
-|    Boolean    |     "true"/"false" |           0 / 1           |                0.0 / 1.0                |              =             |      Error     | same as string utf-8 |       single entry       | Error |
-|      Date     |         UTC format        | milliseconds  since epoch |         milliseconds since epoch        | false if 1970-1-1 00:00:00 |        =       | same as string utf-8 |       single entry       | Error |
-|     byte[]    |        utf-8 string       |           Error           |                  Error                  |       false if empty       |      Error     |           =          |       single entry       | Error |
-|    Iterable   | join without   delimiters |           Error           |                  Error                  |       false if empty       |      Error     | same as string utf-8 |             =            | Error |
-|      Map      |          JSON {:}         |           Error           |                  Error                  |       false if empty       |      Error     | same as string utf-8 | iterable of   map values |   =   |
-
+<table width="900pxl">
+<tbody>
+<tr>
+<td><strong>Source/ Target</strong></td>
+<td><strong>String</strong></td>
+<td><strong>Long</strong></td>
+<td><strong>Double</strong></td>
+<td><strong>Boolean</strong></td>
+<td><strong>Date</strong></td>
+<td><strong>byte[]</strong></td>
+<td><strong>Iterable</strong></td>
+<td><strong>Map</strong></td>
+</tr>
+<tr>
+<td><strong>null</strong></td>
+<td>""</td>
+<td>0</td>
+<td>0.0</td>
+<td>false</td>
+<td>1970-1-1 00:00</td>
+<td>byte[0]</td>
+<td>Empty</td>
+<td>Empty</td>
+</tr>
+<tr>
+<td><strong>String</strong></td>
+<td>=</td>
+<td>parse</td>
+<td>parse</td>
+<td>false if empty/ "0"/"false</td>
+<td>parse</td>
+<td>UTF-8 bytes</td>
+<td>Single entry</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><strong>Long</strong></td>
+<td>to string</td>
+<td>=</td>
+<td>Convert to Double at possible precision</td>
+<td>false if 0</td>
+<td>ms since epoch</td>
+<td>Same as string UTF-8</td>
+<td>Single entry</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><strong>Double</strong></td>
+<td>to string</td>
+<td>Floor</td>
+<td>=</td>
+<td>false if 0.0</td>
+<td>ms since epoch</td>
+<td>Same as string UTF-8</td>
+<td>Single entry</td>
+<td>Error</td>
+</tr>
+<tr>
+<td><strong>Boolean</strong></td>
+<td>"true"/ "false"</td>
+<td>0 / 1</td>
+<td>0.0 / 1.0</td>
+<td>=</td>
+<td>Error</td>
+<td>Same as string UTF-8</td>
+<td>Single entry</td>
+<td>Error</td>
+</tr>
+</tbody>
+</table>
 
 ### Null Values Conversion
 
