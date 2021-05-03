@@ -408,16 +408,42 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   
 - **SET USER_ROLES** command, returns the list of roles of the connected user (valid since Fabric 6.4.2).
 
-- **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. 
+- **SET AUTO_MDB_SCOPE** command, provides an ability to query the Logical Unit without performing the **GET** command explicitly ("No Get") when an SQL statement includes a WHERE clause with the filter by IID. The filter must include the field name defined as Instance PK Column of the LU Root Table, otherwise the error message is displayed. 
 
-  When **AUTO_MDB_SCOPE** is set to **true**, the following logic is performed:
+  The following logic is performed on each SQL statement run:
 
-  - Sync the instance based on the defined sync mode.
+  - Sync the LUI based on the defined [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1).
   - Execute the query.
   - Release the instance.
 
-  To deactivate this functionality, set **AUTO_MDB_SCOPE** to **false**.
+  The queries without a filter by IID cannot be executed in this mode. To deactivate it, set **AUTO_MDB_SCOPE** to **false**.
 
+  ~~~
+  fabric>set auto_mdb_scope=true;
+  (1 row affected)
+  
+  fabric>select * from CRM.customer where customer_id = 123;
+  |CUSTOMER_ID|SSN       |FIRST_NAME|LAST_NAME|HAS_OPEN_CASES|VALIDATIONS_NOT_PASSED|
+  +-----------+----------+----------+---------+--------------+----------------------+
+  |123.0      |7416713403|Gaynelle  |Gill     |0             |null                  |
+  
+  (1 rows)
+  
+  fabric>select customer.customer_id, subscriber.contract_id, subscriber.contract_description from CRM.customer, CRM.subscriber where customer.customer_id = 123;
+  |CUSTOMER_ID|CONTRACT_ID|CONTRACT_DESCRIPTION|
+  +-----------+-----------+--------------------+
+  |123.0      |314.0      |5G tether           |
+  |123.0      |315.0      |10G LTE             |
+  |123.0      |316.0      |450 min             |
+  |123.0      |317.0      |Unlimited call      |
+  |123.0      |318.0      |Unlimited text      |
+  
+  (5 rows)
+  
+  fabric>select * from CRM.address where entity_id = 123;
+  Cannot execute the query due to missing WHERE clause on the IID column.
+  ~~~
+  
   Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be concatenated to the Fabric Connection URL.
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
