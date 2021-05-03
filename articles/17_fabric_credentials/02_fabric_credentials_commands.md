@@ -472,4 +472,4 @@ When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fa
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/01_fabric_credentials_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/03_fabric_credentials_backup.md)
+[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/01_fabric_credentials_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/17_fabric_credentials/02a_fabric_credentials_list_commands.md)

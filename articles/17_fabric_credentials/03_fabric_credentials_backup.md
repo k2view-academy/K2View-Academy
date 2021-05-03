@@ -22,4 +22,4 @@ echo "COPY k2auth.permissions FROM '$K2_HOME/k2auth.permissions.csv' WITH HEADER
 echo "COPY k2auth.user_credentials FROM '$K2_HOME/k2auth.user_credentials.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
 echo "COPY system_auth.roles FROM '$K2_HOME/system_auth.roles.csv' WITH HEADER = TRUE ;"|cqlsh -u[user] -p[password]
 </code></pre>
-[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/02_fabric_credentials_commands.md)
+[![Previous](/articles/images/Previous.png)](/articles/17_fabric_credentials/02a_fabric_credentials_list_commands.md)
