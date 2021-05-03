@@ -445,7 +445,7 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   Cannot execute the query due to missing WHERE clause on the IID column.
   ~~~
   
-  Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be concatenated to the Fabric Connection URL.
+  Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
 
