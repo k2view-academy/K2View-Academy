@@ -429,7 +429,8 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   
   (1 rows)
   
-  fabric>select customer.customer_id, subscriber.contract_id, subscriber.contract_description from CRM.customer, CRM.subscriber where customer.customer_id = 123;
+  fabric>select customer.customer_id, subscriber.contract_id, subscriber.contract_description 
+  from CRM.customer, CRM.subscriber where customer.customer_id = 123;
   |CUSTOMER_ID|CONTRACT_ID|CONTRACT_DESCRIPTION|
   +-----------+-----------+--------------------+
   |123.0      |314.0      |5G tether           |
