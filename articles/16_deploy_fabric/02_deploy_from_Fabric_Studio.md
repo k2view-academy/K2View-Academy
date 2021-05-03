@@ -13,7 +13,7 @@ The Fabric Studio **Auto Deploy** capability performs the automatic deployment o
 
 This reduces frictions while debugging and releases the user from doing the manual deployment upon each code change.
 
-The local deployment is performed on the delta changes and it depends on the changed project element, based on the following logic: 
+Fabric performs local deployment according to the following logic: 
 
 - If the Schema was changed, full deploy is performed.
 - If Java was changed, only Java resources and Broadway are deployed.
