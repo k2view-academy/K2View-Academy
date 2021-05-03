@@ -424,9 +424,15 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 #### Fabric Setting via JDBC Connection URL
 
-Fabric supports the ability to set the session variables on the Fabric Connection URL by concatenating them to the connection string, for example:
+Fabric supports the ability to set the session variables via the Fabric Connection URL by concatenating them to the connection string using the following syntax:
 
-* jdbc:fabric://[server:port]?user=admin&password=admin&timeout=0&sync=off&test=testValue
+* jdbc:fabric://[server:port]?user=[user_name]&password=[password]&[key1]=[value1]&[key2]=[value2]
+
+For example:
+
+~~~
+jdbc:fabric://[localhost:5124]?user=admin&password=admin&timeout=0&sync=off&auto_mdb_scope=true
+~~~
 
 This can be used when external systems (such as BI) that are not familiar with the Fabric syntax, are connecting to Fabric. The delimiter can be either **&** or **;**.
 
