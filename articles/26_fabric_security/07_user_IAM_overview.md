@@ -2,19 +2,19 @@
 
 ## Overview and Fundamentals 
 
-Modern auth&auth platforms are responsible for user **identification**, via **authentication** process and for **access management** via **authorization** mechanisms. Together they are also called Identification and Access (IAM).
+Modern authentication and authorization platforms are responsible for user **identification**, via **authentication** process and for **access management** via **authorization** mechanisms. Together they are also called Identification and Access (IAM).
 
-Such platforms and related protocols usually define several actors that are present in every use case: *Identity Provider (IDP), Relying Party (RP) or Service Provider (SP), and principal*:
+Such platforms and related protocols usually define several actors that are present in every use case: *principal, Identity Provider (IDP)*, and *Relying Party (RP)* or *Service Provider (SP)*:
 
+- The *principal* (typically a user, though maybe a system actor) is an entity that can be authenticated.
 - The *IDP* authenticates principals and issues tokens (or assertions). 
 - The *SP* is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. 
-- The *principal* (typically a user, though maybe a system actor) is an entity that can be authenticated.
 
 In processes perspective: 
 
 - *Authentication* is the process of the principal proving its identity to the system.  This process is done by the IDP. SP is not responsible or aware to the user credentials or actual identity.
 
-- *Authorization* is the process by which a protected system (the SP, in this case) makes a decision of whether an authenticated principal is allowed to access the system.
+- *Authorization* is the process by which a protected system (the SP, in this case) makes a decision of whether an authenticated principal is allowed to access the system and which permissions does he have on a resource.
 
 
 
@@ -26,7 +26,7 @@ As explained above, the authorization part is done by Fabric, using its roles an
 
 ## Identity Providers & Authenticators
 
-Fabric works with several authentication providers. Each authenticator is responsible to the user authentication, to provide user-name and his roles.
+Fabric works with several authentication providers. Each authenticator is responsible to the user authentication, to provide user ID and his roles.
 
 Following are the supported authentication providers:
 
@@ -34,11 +34,11 @@ Following are the supported authentication providers:
 
 - **LDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
-- **ADLDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
+- **ADLDAP** (Active Directory), for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
 - **SAML**, for web and WS access. Done via SAML IDP integration. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md).
 
-  Using SAML is actually adopting SSO methodology which brings additional benefits, other than admin operation perspectives: it improves the users experience who do not need to type their credentials repeatedly on different services among the organization. In terms of security, the authentication credentials are not handled or even known by Fabric. See [here](/articles/26_fabric_security/10_user_IAM_SSO_overview.md) more about SSO.
+  Using SAML is actually adopting SSO methodology which brings additional benefits, other than admin operation perspectives: it improves the users experience who do not need to type their credentials repeatedly on different services among the organization. In terms of security, the authentication credentials are not handled or even known by Fabric. See [here](/articles/26_fabric_security/08_user_IAM_SSO_overview.md) more about SSO.
 
   Fabric is ready to work with commonly used and major IDPs such as Azure AD and Okta. 
 
@@ -58,7 +58,7 @@ Fabric provides a flexible mechanism, enabling to define a sequence of authentic
 
 For example, the console access can be set to be using LDAP and if it failed to try using Fabric credentials. This fallback mechanism shall be used carefully and on very specific cases. For more information see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#sequence-authenticators).
 
-Note that web access can be set to be either SAML or other authenticators and cannot be combined. 
+Note that web access can be set to be either SAML based or other authenticators and cannot be combined. For more information refer to the [configuration instructions](/articles/26_fabric_security/13_user_IAM_configiration.md).
 
 #### Authentication method by Channel
 
@@ -66,7 +66,7 @@ Fabric provides the flexibility to separate between the authenticators for the v
 
 For example, in case IAM is not handled by Fabric, apps might use web access via SAML and console access via LDAP.  
 
-Note that in order web service (WS) will be managed by the above authenticators when using JWT token as explained [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
+Note that in order web service (WS) will be managed by the above authenticators use JWT token as explained [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
 #### User Information at UserCode 
 
@@ -80,9 +80,9 @@ When Fabric is integrated with external IDP or authenticator it applies security
 
 - All supported transit methods provide secured SSL/HTTPS access.
 
-- SAML Fabric & IDP intersections are done using certification and encryption methods.
+- Fabric & IDP interactions are done using certification and encryption methods. For more information see [here](/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md)
 
-- User, their credentials, and their association to roles are not stored at Fabric and by that empowering the organization access control capabilities. Note that roles themselves - their definitions and associated permissions are managed by Fabric.
+- User, their credentials, and their association to roles are not stored in Fabric and are only managed by the IDP. In that way the organization is responsible for access management while Fabric only implements the roles policies,  based on the IDP group / role authorization definition, and use them to define their associated permissions in Fabric.
 
 - The credentials, that Fabric uses for querying users' information from LDAP, are encrypted. 
 

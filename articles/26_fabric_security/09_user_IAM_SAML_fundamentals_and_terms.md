@@ -29,7 +29,7 @@ The SAML provides several method for certification and trust among the SP and ID
 
   As part of a pre established trust relationship process between Fabric and the IDP, Fabric  provides to the IDP IT team the signed certificate public key "crt" file to be uploaded at the IDP, and IDP team sends to the Fabric team the IDP "crt"/"cert" to be located at Fabric.
 
-* **Encryption** - SAML supports several encryption method where the commonly used, also adopted by Fabric is SAH-256.
+* **Encryption** - SAML supports several encryption method where the commonly used, also adopted by Fabric is SHA-256 .
 
 * **Trust** - SP Entity ID and IDP Entity ID are transferred at the request and response for trust purposes. In addition any request is sent with ID which then can be verified by the SP on response. 
 
