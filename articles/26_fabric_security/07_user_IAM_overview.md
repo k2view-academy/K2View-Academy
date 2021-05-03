@@ -84,7 +84,7 @@ When Fabric is integrated with external IDP or authenticator it applies security
 
 - User, their credentials, and their association to roles are not stored at Fabric and by that empowering the organization access control capabilities. Note that roles themselves - their definitions and associated permissions are managed by Fabric.
 
-- The credentials, that Fabric uses for acquiring users' information from LDAP, are encrypted at the Fabric's configuration. 
+- The credentials, that Fabric uses for querying users' information from LDAP, are encrypted. 
 
 
 
