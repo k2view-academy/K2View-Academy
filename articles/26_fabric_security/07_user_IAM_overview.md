@@ -30,7 +30,7 @@ Fabric works with several authentication providers. Each authenticator is respon
 
 Following are the supported authentication providers:
 
-- **Fabric**, for console, WS and web access, using its repository. This is Fabric default authentication.
+- **Fabric**, for console, WS and web access, using its repository. This is Fabric default authentication. For more information about managing credentials and permissions at Fabric see [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md).
 
 - **LDAP**, for console, WS and web access. Done via LDAP integration. For more information see [here](/articles/26_fabric_security/11_user_IAM_LDAP.md).
 
