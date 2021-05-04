@@ -11,7 +11,7 @@ Consider the following scenarios:
 - A CRM user is logged into a system that acts as an identity provider, for example when login to his PC. The user wants to log in to Fabric by using a link from the organization CRM. 
 - A support user is not logged into via the IDP, e.g. he gets at ticket link via SMS, leading to a Fabric app.
 
-In both case the following happens:
+In both case the following happens, representing SP-Initiated flow:
 
 1. The user clicks on a link that lead him to a Fabric app.
 2. In case user already has an existing Fabric session he is enabled to access and make actions according to the permissions granted to him by Fabric and its apps. 
