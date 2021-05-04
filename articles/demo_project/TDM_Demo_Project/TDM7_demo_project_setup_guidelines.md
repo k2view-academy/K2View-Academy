@@ -41,7 +41,7 @@ The target DBs are empty and the source DBs are populated with customers.
 2. Create the databases in PostgreSQL: 
 
    - Go to the script's directory and open a **powershell** window. 
-   - Then run the following command to the the script and create the DB users and schemas on the PostgreSQL DB:
+   - Then run the following command to the script and create the DB users and schemas on the PostgreSQL DB:
 
      & "[PostgreSQL DB exe file full path]" -Upostgres --host [PG ip address] --port [DB port] -f "create_resources.sql"
 
@@ -59,7 +59,7 @@ The target DBs are empty and the source DBs are populated with customers.
 1. Open the Fabric Studio and create a new project.
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
 3. The interfaces and/or environments of the TDM Demo project might need some modification, edit them if needed (you might be working locally or remotely, for example). 
-4. Open the DB_CASSANDRA interface, and check if the **k2masking** keyspace exits. If it does not exist, create it using the **masking-create-cache-table.flow** from the library of Broadway examples. After creating the **k2masking** keyspace, run the **update_tdm_sequence_mapping.sql** script on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure.
+4. Open the **DB_CASSANDRA** interface, and check if the **k2masking** keyspace exits. If it does not exist, create it using the **masking-create-cache-table.flow** from the library of Broadway examples. After creating the **k2masking** keyspace, run the **update_tdm_sequence_mapping.sql** script on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure.
 5. Deploy the LUs, Web-Services, and the Environments to Fabric. Note that you must deploy the environments *before* running Data Viewer, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 6. Add **tdm-WS** API key to Fabric and attach it to the **admin** role. This API key is used when invoking the TDM APIs.
 
