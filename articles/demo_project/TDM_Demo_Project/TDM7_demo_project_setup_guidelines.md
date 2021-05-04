@@ -1,6 +1,6 @@
 # TDM Demo Project - Setup and Implementation Guidelines
 
-### Databases Setup
+## Databases Setup
 
 The TDM demo project is based on PostgreSQL databases:
 
@@ -34,7 +34,7 @@ The TDM demo project is based on PostgreSQL databases:
 
 The target DBs are empty and the source DBs are populated with customers.
 
-#### Creating the Demo DBs in the Local PostgreSQL DB
+### Creating the Demo DBs in the Local PostgreSQL DB
 
 1. Download the SQL script and the DB backup files from the **Demo DBs** directory.
 
@@ -54,7 +54,7 @@ The target DBs are empty and the source DBs are populated with customers.
 
 3. Open **pgAdmin 4** and start restoring the databases from backup files.
 
-### Fabric Implementation
+## Fabric Implementation
 
 1. Open the Fabric Studio and create a new project.
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
@@ -63,7 +63,7 @@ The target DBs are empty and the source DBs are populated with customers.
 5. Deploy the LUs, Web-Services, and the Environments to Fabric. Note that you must deploy the environments *before* running Data Viewer, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 6. Add **tdm-WS** API key to Fabric and attach it to the **admin** role. This API key is used when invoking the TDM APIs.
 
-###  TDM GUI Definitions
+##  TDM GUI Definitions
 
 1. Create a Customer Business Entity that includes an LU with the following structure:
 
