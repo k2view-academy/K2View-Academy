@@ -2,14 +2,20 @@
 
 This article describes the setup and integration steps to connect your Single-Sign-On account at Okta to Fabric and get the benefits of easy sign-in, along with authentication and authorization control via your admin tools.
 
-### Prerequisite Requirements
+## Prerequisite Requirements
 
 - Admin access to Okta.
-- Access to Fabric Auth&Auth configuration settings.
+- Access to Fabric configuration settings.
 
-### Configuration instructions
+## Configuration instructions
+
+#### At Okta
 
 
+
+
+
+#### At Fabric
 
 
 
