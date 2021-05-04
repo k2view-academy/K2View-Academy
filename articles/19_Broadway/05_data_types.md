@@ -109,7 +109,8 @@ When converting a value into an iterable, the result is an Iterable of a single 
 ### *Date* Conversion
 
 Dates are converted to strings using their UTC representation in the following format:
-    *yyyy-MM-dd HH:mm:ss.SSS*
+
+-  *yyyy-MM-dd HH:mm:ss.SSS*
 
 When parsed, dates support one of the following formats:
 -  *yyyy-MM-ddTHH:mm[:ss[.SSS[Z]]]*
@@ -124,7 +125,7 @@ Broadway supports date/time manipulation Actors for more explicit date/time conv
 
 ### *byte[]* Conversion
 
-When binary data is referred to as a string or vice versa, utf-8 binary representations is assumed. When formatting other types, the conversion goes via a string and is then converted to the utf-8 representation.
+When binary data is referred to as a string or vice versa, UTF-8 binary representations is assumed. When formatting other types, the conversion goes via a string and is then converted to the UTF-8 representation.
 
 
 ### Errors
