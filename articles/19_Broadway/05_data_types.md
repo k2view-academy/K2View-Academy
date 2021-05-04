@@ -28,7 +28,7 @@ When Actors read their input arguments from Broadway, and expect a certain type 
 
 The conversion is highly robust, where any reasonable conversion is done in the attempt to satisfy the Actor's expected input. For instance, a Long can be converted into a string and a string can be parsed into a Long (if possible). An integer can be converted to a boolean and vice versa (0=false, true=1). Automatic conversion is also done between primitives and collections or between maps and collections. The following is an exhaustive table of all available conversions:
 
-<table width="900pxl">
+<table>
 <tbody>
 <tr>
 <td><strong>Source/ Target</strong></td>
