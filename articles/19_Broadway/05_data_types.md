@@ -4,9 +4,9 @@ Broadway Actors pass data between them as Java objects. Virtually any data type 
 
 ### Primitives
 
-Broadway supports the following primitives: String, Long, Real, Boolean, Date, byte[].
+Broadway supports the following primitives: *String*, *Long*, *Real*, *Boolean*, *Date*, *byte[]*.
 
-Other numeric types such as Integer, Short, Float, Byte and their primitive counterparts (long, int, short, byte, double, float), are automatically converted to Long/Real.
+Other numeric types such as *Integer*, *Short*, *Float*, *Byte* and their primitive counterparts (long, int, short, byte, double, float), are automatically converted to Long/Real.
 
 SQL JDBC Blobs are also supported and are automatically converted into byte arrays.
 
@@ -99,22 +99,23 @@ The conversion is highly robust, where any reasonable conversion is done in the 
 </tbody>
 </table>
 
-### Null Values Conversion
+### *Null* Values Conversion
 
-**Null** is supported as a value in Broadway. However, to avoid null pointer exceptions as much as possible, null has an implicit conversion to every supported type.
+Null is supported as a value in Broadway. However, to avoid null pointer exceptions as much as possible, null has an implicit conversion to every supported type.
 
-### Iterable Conversion
-When converting a value into an **Iterable**, the result is an Iterable of a single entry containing that value. For instance, an integer with the value 7, is converted into an Iterable where the only value is 7. The exceptions to this rule are **null**, which is converted to an empty Iterable, and **Map** which is converted to an Iterable of the map values (without the keys).
+### *Iterable* Conversion
+When converting a value into an iterable, the result is an Iterable of a single entry containing that value. For instance, an integer with the value 7, is converted into an iterable where the only value is 7. The exceptions to this rule are **null**, which is converted to an empty iterable, and **Map** which is converted to an iterable of the map values (without the keys).
 
-### Date Conversion
+### *Date* Conversion
 
-**Dates** are converted to strings using their UTC representation in the following format: 
+Dates are converted to strings using their UTC representation in the following format:
 
-* yyyy-MM-dd HH:mm:ss.SSS
+-  *yyyy-MM-dd HH:mm:ss.SSS*
 
 When parsed, dates support one of the following formats:
--  yyyy-MM-ddTHH:mm[:ss[.SSS[Z]]]
--  yyyy-MM-dd HH:mm[:ss[.SSS[Z]]]
+
+-  *yyyy-MM-ddTHH:mm[:ss[.SSS[Z]]]*
+-  *yyyy-MM-dd HH:mm[:ss[.SSS[Z]]]*
 
 Either T or ' ' as a delimiter between date and time. Seconds, milliseconds and timezone are optional.
 
@@ -123,7 +124,7 @@ When numbers are converted to dates and vice versa, the value of the date is con
 Broadway supports date/time manipulation Actors for more explicit date/time conversions and calculations.
 
 
-### byte[] Conversion
+### *byte[]* Conversion
 
 When binary data is referred to as a string or vice versa, UTF-8 binary representations is assumed. When formatting other types, the conversion goes via a string and is then converted to the UTF-8 representation.
 
