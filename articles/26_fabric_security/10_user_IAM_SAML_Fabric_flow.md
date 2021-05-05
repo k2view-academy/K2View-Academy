@@ -1,4 +1,4 @@
-###### How Fabric Works With SAML 
+# How Fabric Works With SAML 
 
 SAML can be used for the Fabric's [Web Framework](/articles/30_web_framework/01_web_framework_overview.md) and its apps like [Admin](/articles/30_web_framework/03_web_admin_application.md), [TDM](/articles/TDM/tdm_overview/README.md) (7.1 and later) and [DPM](/articles/DPM/01_DPM_Overview/02_DPM_Overview.md), where Fabric follows SAML standard flows.
 
@@ -13,13 +13,13 @@ In both cases,  the SP (service provider) initiates an access flow:
 
 The user clicks on a link that leads him to a Fabric app (1 in the diagram below). One of two access methods follow: 
 
-a) If the user already has an existing Fabric session (2):
+   a) If the user already has an existing Fabric session (2):
 
 ​     He is allowed access and can carry out actions according to the permissions granted to him by Fabric and its apps.  
 
-​       OR 
+​     OR 
 
-b) If the user does not have an active session (3):
+   b) If the user does not have an active session (3):
 
 - Fabric redirects him to the IDP, asking for authentication. This is the authentication request. 
 
