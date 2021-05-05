@@ -56,7 +56,7 @@ When an activity is logged by the Fabric Auditing mechanism it has the following
 </tr>
 <tr style="height: 54px;">
 <td style="height: 54px; width: 73px;">query</td>
-<td style="height: 54px; width: 323px;">Activity details like a CQL query for a CQLCommand or a DESCRIBE SCHEMA CRM for a DescribeCommand</td>
+<td style="height: 54px; width: 323px;">Activity details like a CQL query for a CQLCommand, a DESCRIBE SCHEMA CRM for a DescribeCommand, or the authentication provider for the LOGIN action. <br/>See <a href="/articles/26_fabric_security/16_user_IAM_auditing.md">here</a> for more details about Login Auditing.</br/></td>
 <td style="height: 54px; width: 286px;">SELECT * FROM CRM.SUBSCRIBER</td>
 </tr>
 <tr style="height: 18px;">
@@ -71,6 +71,7 @@ When an activity is logged by the Fabric Auditing mechanism it has the following
 </tr>
 </tbody>
 </table>
+
 
 ### Turning Auditing On/Off
 
