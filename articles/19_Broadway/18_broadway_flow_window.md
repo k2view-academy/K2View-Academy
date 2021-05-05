@@ -214,6 +214,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
 ### Actor Properties Window
 
 The Actor's Properties in the Broadway flow window dynamically adjusts its layout to display data based on the structure of the selected Actor. For example, the number of input and output parameters, their data types and default values. To hide the Properties window, click anywhere in the empty Stage area. 
