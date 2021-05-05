@@ -160,7 +160,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
 NOTE: Other IDP tasks are out of this article scope, for example at Users and Roles assignments to the app.
 
-- 
+
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/16_user_IAM_auditing.md)
 
