@@ -26,9 +26,8 @@ This article describes the setup and integration steps to connect your Single-Si
    </tr>
    </tbody>
    </table>
-
    
-
+   
 4. Click '**Create New App**'.
 
    <table>
@@ -53,7 +52,6 @@ This article describes the setup and integration steps to connect your Single-Si
    </tbody>
    </table>
 
-   
 
 #### Configure General settings
 
@@ -101,27 +99,26 @@ This article describes the setup and integration steps to connect your Single-Si
      </tr>
      </tbody>
      </table>
-
      
-
+     
    - Click on **Show Advanced Settings** and fill in the following security settings properties. Note that Fabric is setting up to work with high security options and accordingly the following shall be set up:
-
+   
      - **Response**, Choose "*Signed*" to determine that the SAML authentication response message is digitally signed by the IdP.
-
+   
      - **Assertion Signature**, Choose "*Signed*" to determine that the SAML assertion is digitally signed.
-
+   
      - **Signature Algorithm**, Determines the signing algorithm used to digitally sign the SAML assertion and response. Choose "*RSA-SHA256*"
-
+   
      - **Digest Algorithm**, Determines the digest algorithm used to digitally sign the SAML assertion and response. Choose "*SHA256*".
-
+   
      - **Assertion Encryption**, Choose "Encrypted" to determines that SAML assertion is encrypted. 
-
+   
      - **Encryption Algorithm** — Select "*AES256-CBC*" the encryption algorithm used to encrypt the SAML assertion.
-
+   
      - **Key Transport Algorithm** — Select "*RSA-OAEP*" as the key transport algorithm used to encrypt the SAML assertion.
-
+   
      - **Encryption Certificate** — Browse to the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. Click **Upload Certificate** to upload the certificate.
-
+   
        <table>
        <tbody>
        <tr>
@@ -131,15 +128,15 @@ This article describes the setup and integration steps to connect your Single-Si
        </tr>
        </tbody>
        </table>
-
+   
    - **Attribute Statements**, set "*user.email*" attribute, to be sent as custom attribute statements within the the SAML assertions.
-
+   
    - **Group Attribute Statements**, add group attribute statements to the SAML assertion. Name it as "groups", as expected by default at Fabric configuration. 
-
+   
      <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta7.png">    </td></tr></tbody></table>
-
+   
      
-
+   
 8.  Click "**Next**" and complete the wizard with the last Feedback step.
 9. Click "**Finish**" to save the application settings. Note - your settings and changes will be applied only on going to the last step/tab and click on Finish.
 
