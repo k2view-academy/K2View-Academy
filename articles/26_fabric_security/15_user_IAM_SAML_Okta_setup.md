@@ -15,7 +15,17 @@ This article describes the setup and integration steps to connect your Single-Si
 
 2. Click on **‘Applications**’ at the left navigation bar.
 
-   <img src="/articles/26_fabric_security/images/15_okta1.png">
+   <table>
+   <tbody>
+   <tr>
+   	<td width="200pxl">
+       <img src="/articles/26_fabric_security/images/15_okta1.png">
+       </td>
+   </tr>
+   </tbody>
+   </table>
+
+   
 
 3. At Applications page, click on the **‘Add Application’** button.
 
