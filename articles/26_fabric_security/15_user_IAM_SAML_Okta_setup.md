@@ -18,8 +18,8 @@ This article describes the setup and integration steps to connect your Single-Si
    <table>
    <tbody>
    <tr>
-   	<td width="200pxl">
-       <img src="/articles/26_fabric_security/images/15_okta1.png">
+   	<td width="700pxl">
+       <img src="images/15_okta1.png">
        </td>
    </tr>
    </tbody>
@@ -29,7 +29,17 @@ This article describes the setup and integration steps to connect your Single-Si
 
 3. At Applications page, click on the **‘Add Application’** button.
 
-   <img src="/articles/26_fabric_security/images/15_okta2.png">
+   <table>
+   <tbody>
+   <tr>
+   	<td width="700pxl">
+       <img src="images/15_okta2.png">
+       </td>
+   </tr>
+   </tbody>
+   </table>
+
+   
 
 4. Click on '**Create New App**'
 
@@ -37,7 +47,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
 #### At Fabric
 
-
+/articles/26_fabric_security/
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/16_user_IAM_auditing.md)
 
