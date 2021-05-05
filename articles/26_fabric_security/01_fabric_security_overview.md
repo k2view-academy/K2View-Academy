@@ -1,7 +1,7 @@
-# **Fabric Security Overview** 
+# **Fabric Security** 
 
 
-
+## **Overview**
 K2View Fabric is a modern and highly secure distributed data management platform that securely liberates data from your existing systems and turns it into a dynamic resource that moves at the speed required by your business.
 
 With more and more data breaches making the headlines in today's world, enterprises need to scrutinize their own security controls to ensure that their most valuable asset, data, is fully secured. 
@@ -13,7 +13,7 @@ By design, Fabric eliminates a significant number of potential large-scale breac
 
 
 
- # **Fabric Security Layers** 
+ ## **Security Layers** 
 
 In this section, we address how Fabric security tools address each layer in a Fabric cluster that has been fully deployed across multiple data centers and that interacts with northbound or southbound systems spread across the cloud. 
 
