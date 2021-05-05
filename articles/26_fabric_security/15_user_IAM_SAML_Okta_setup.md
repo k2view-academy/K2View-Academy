@@ -11,7 +11,17 @@ This article describes the setup and integration steps to connect your Single-Si
 
 #### At Okta
 
+1. Log into Okta as an Admin. 
 
+2. Click on **‘Applications**’ at the left navigation bar.
+
+   <img src="/articles/26_fabric_security/images/15_okta1.png">
+
+3. At Applications page, click on the **‘Add Application’** button.
+
+   <img src="/articles/26_fabric_security/images/15_okta2.png">
+
+4. Click on '**Create New App**'
 
 
 
