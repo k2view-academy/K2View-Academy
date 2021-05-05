@@ -50,7 +50,7 @@ The integration with SAML IDP requires that both IDP and SP i.e. Fabric will pro
 
 You can verify the certification keys by using this command: `keytool -list -storepass <passowrd> -keystore <path to the jks repository file>`. JKS (Java KeyStore) is a repository of security certificates – either authorization certificates or public key certificates – as well as corresponding private keys.
 
-While running this command after running the above two keytool's *import* and *export* commands, you shall see the corresponding two entries, where you can see, for each entry, its alias, the certification date, its type and its fingerprint. Below is an example of the command's output using Okta as IDP:
+While running this command after running the above two keytool's *import* and *export* commands, you shall see the corresponding two entries, where you can see, for each entry, its alias, last modified date, its type, and its fingerprint. Below is an example of the command's output using Okta as IDP:
 
 `okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
 `k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
@@ -113,7 +113,7 @@ The default authenticator is "fabric" when `server_authenticator` is not set.
 The `adldap_auth` or `ldap_auth` sections shall define the following:
 
 - **url** - LDAP URL endpoint.
-- **security_level**, default is "simple".
+- **security_level**, set to "simple".
 - **admin_dn**, the admin user at LDAP that has permissions to search and look other users.
 - **admin_password**, the admin user password.
 - **users_base_dn**, the root base "dn" of the users.
