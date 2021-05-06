@@ -16,16 +16,16 @@ The data is stored in an hierarchical structure, and active directory searches a
 
 When integrated with LDAP, the login steps for the end user is similar to the steps when authentication is managed by Fabric:
 
-User attempts to access a Fabric app. One of two results follow: 
+User attempts to access a Fabric app (1 in the diagram below). One of two results follow: 
 
-   - If the user already has an existing Fabric session he is allowed access and can carry out actions according to the permissions granted to him by Fabric and its apps. 
+   - If the user already has an existing Fabric session (2), he is allowed access and can carry out actions according to the permissions granted to him by Fabric and its apps. 
      
      ELSE
-   - If the user does not have an active session, Fabric displays the login page, where the user must enter his credentials - user/password. The follow steps are then carried out: 
+   - If the user does not have an active session (3), Fabric displays the login page, where the user must enter his credentials - user/password. The follow steps are then carried out: 
 
-     1. Fabric sends these credentials to the LDAP server
-     2. LDAP server verifies that the credentials are correct,  and provides the groups to which the user is associated.
-     3. Fabric establishes a Fabric session for the user enabling him access according to the permissions granted to him by Fabric and its apps. Fabric session provides via the *UsercCode* the information about the user and the roles to which the user is associated.
+     1. Fabric sends these credentials to the LDAP server (4).
+     2. LDAP server verifies that the credentials are correct,  and provides the groups to which the user is associated (5).
+     3. Fabric establishes a Fabric session for the user enabling him access according to the permissions granted to him by Fabric and its apps. Fabric session provides via the *UsercCode* the information about the user and the roles to which the user is associated (6).
 
 Following is the logical flow that illustrate these steps: 
 
