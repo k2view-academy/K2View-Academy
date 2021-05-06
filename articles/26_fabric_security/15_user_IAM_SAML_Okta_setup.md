@@ -5,7 +5,7 @@ This article describes the setup and integration steps to connect your Single-Si
 ## Prerequisite Requirements
 
 - Admin access to Okta.
-- Access to Fabric configuration settings.
+- Access to Fabric configuration settings. For more information about SAML configuration at Fabric please see [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
 
 ## Configuration instructions: At Okta
 
