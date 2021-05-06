@@ -120,6 +120,23 @@
 </tr>
 <tr>
 <td width="125">
+  <h4><p><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">IAM</a></strong></p></h4>
+</td>
+<td width="516">
+<p>Users Identification and Access Management (IAM) is the mechanism for user identification via an authentication process, and for access management via authorization mechanisms.</p>
+<p>Fabric provides IAM for web, console, and web-services access, either using Fabric's local repository or by using the organization’s identify provider (IDP) which Fabric integrated with as Service Provider (SP).</p>
+</td>
+</tr>
+<tr>
+<td width="125">
+  <h4><p><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">IDP</a></strong></p></h4>
+</td>
+<td width="516">
+<p>Identity Provide, It authenticates principals and issues tokens (or assertions) and is an actor at modern authentication and authorization platforms, along with principal and Relying Party (RP) or Service Provider (SP)</p>
+</td>
+</tr>    
+<tr>
+<td width="125">
   <h4><p><strong><a href="/articles/05_DB_interfaces/01_interfaces_overview.md">Interfaces</a></strong></p></h4>
 </td>
 <td width="516">
@@ -263,6 +280,7 @@
 <tr>
 <td width="125">
   <h4><p><strong><a href="/articles/15_web_services_and_graphit/09_swagger.md">Swagger</a></strong></p></h4>
+
 
 
 </td>
