@@ -50,7 +50,7 @@ The General Information section has the following settings:
 
 To add a version to a product, click ![delete](images/plus_icon_prod_version.png) next to the Product Versions setting and enter the version's value which is the logical identifier of the product version. For example 1, 1.5, dev or prod. The values must be aligned to the TDM Fabric implementation. 
 
-  [Click for more information about supporting multiple product versions via TDM].
+  [Click for more information about supporting multiple product versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
 
 ### Logical Units
 
