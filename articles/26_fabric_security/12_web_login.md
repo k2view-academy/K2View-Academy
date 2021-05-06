@@ -1,12 +1,10 @@
 # Web Login
 
-The access to the Fabric web framework and its apps is done upon user credentials and permissions. 
-
-
+Access to the Fabric web framework and its apps is done via user credentials and permissions. 
 
 ## Login
 
-In case there is no active Fabric session, user shall provides his credentials which are verified by the relevant IAM authenticator.
+If  there is no active Fabric session, the user must provided his credentials, which are verified by the relevant IAM authenticator.
 
 #### Fabric and LDAP Authenticators
 
@@ -14,31 +12,31 @@ In case there is no active Fabric session, user shall provides his credentials w
 
 #### SAML Authenticator
 
-User is redirected to the configured SAML IDP and see its login page, where he shall type his credentials. For example at Okta IDP:
+User is redirected to the configured SAML IDP and, from its login page, enters his credentials. For example at Okta IDP:
 
 <img src="/articles/26_fabric_security/images/12_okta_sso_login.jpg">
 
-While preparing the authentication request and initiate the interaction with the IDP, a loading spinner might appear, indicating the user that process is proceeding.
+While preparing the authentication request, and initiating the interaction with the IDP, a loading spinner might appear, indicating to the user that process is proceeding.
 
 ## Logout
 
 #### Fabric and LDAP Authenticators
 
-On logout the Fabric session is invalidated and the user is directed back to the login page where he can type his credentials and login back to the web framework.
+Upon logout, the Fabric session is invalidated and the user is directed back to the login page where he can type his credentials and login back to the web framework.
 
 #### SAML Authenticator
 
-On logout the Fabric session is invalidated and the user is directed to a "logout" page, where he can decide to reconnect.
+Upon logout, the Fabric session is invalidated and the user is directed to a "logout" page, where he can decide to reconnect.
 
 <img src="/articles/26_fabric_security/images/12_sso_reconnect.jpg">
 
-Clicking in the Reconnect button will activate SAML authentication process, where in case the IDP verify that its user's is still valid the user is getting back into the Fabric web framework. If IDP session is not valid then user will be redirected to the IDP login page.
+Clicking the reconnect button will activate a SAML authentication process. If the IDP verifies that its user is still valid,  the user is returned to the Fabric web framework. If IDP determines that the user is not valid, the user will be redirected to the IDP login page.
 
 ## Session timeout
 
-After some predefined idle time, with any user actions at the Fabric web framework, his session is expired and shall be renewed when he wish to continue to use it. When trying to make any action after session expiration, the user is notified via a popup alert that his session need to be renewed.
+After some predefined idle time, the session of a user in the Fabric web framework is expired. If the user wishes to continue, he must renew the session. When trying to take any action after session expiration, the user is notified via a popup alert that his session must be renewed.
 
-When either Fabric or LDAP authenticators are active, user will then redirected to the login page, to type his credentials again, where in case of SAML authenticator the IDP session might be still valid, even though Fabric session was expired , and user can enjoy from the SSO benefits, i.e. without going thru login process over again.
+When either Fabric or LDAP authenticators are active, the user will then be redirected to the login page. There, he must enter his credentials again. If the authenticator is SAML, the IDP session might be still valid, even though the Fabric session was expired. As a result, the user can benefit from the SSO feature, that is, he will not be required to go through the login process again.
 
 <img src="/articles/26_fabric_security/images/12_timeout_alert.png">
 
@@ -46,11 +44,11 @@ When either Fabric or LDAP authenticators are active, user will then redirected 
 
 ## User Details Panel
 
-User Details panel located at the top right area of the web framework along with avatar icon.
+The User Details panel is located at the top right area of the web framework next to the avatar icon.
 
-Once clicked user can see the connected user name and the logout action.
+To see the logout action and the connected user name, the use must click on the avatar icon. 
 
-In case of Fabric authenticator the "change passwords" action appears too, otherwise it is hidden and disabled. Below is the opened panel when using an external authenticator:
+If the authenticator is Fabric, the "change passwords" action appears as well, otherwise it is hidden and disabled. Below is the opened panel when using an external authenticator:
 
 <img src="/articles/26_fabric_security/images/12_details_panel_ext.png">
 
