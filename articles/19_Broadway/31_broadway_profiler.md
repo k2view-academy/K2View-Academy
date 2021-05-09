@@ -14,7 +14,7 @@ Click on the <img src="images/99_31_02.PNG" alt="image" style="zoom:67%;" /> ico
 
 ### How Do I Run the Profile Via the Broadway Command?
 
-To invoke the Broadway profiler when running the flow using the **broadway** command, set **profilerTelemetry** to **true** . This will add the profiler results to the command results.
+To invoke the Broadway profiler when running the flow using the **broadway** command, set the **profilerTelemetry** argument to **true** . This will add the profiler results to the command results.
 
 ~~~
 fabric>broadway CRM.callGraphIt profilerTelemetry=true;
