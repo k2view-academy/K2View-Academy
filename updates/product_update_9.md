@@ -7,4 +7,6 @@ We would like to share that we have just released Fabric 6.5. Some of the major 
 * In **iidFinder**, an ability to configure the Consumer Group ID via **iifConfig.ini** was added. In addition, some properties were removed.
 * New Broadway Actors were added, such as **Unzip**. In addition, an existing **Email** Actor now supports HTML format and can send attachments.
 
+And more...
+
 <img src="images/img4.png" alt="image"  />
