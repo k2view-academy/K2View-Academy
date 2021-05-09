@@ -10,7 +10,7 @@ Two major Auditing functionalities can be controlled:
 ### Auditing Reporting Structure
 
 When an activity is logged by the Fabric Auditing mechanism it has the following structure:
-<table style="height: 360px;">
+<table style="width: 900px;">
 <thead>
 <tr style="height: 18px;">
 <th style="height: 18px; width: 73px;">Name</th>
