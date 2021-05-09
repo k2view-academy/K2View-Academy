@@ -1,6 +1,6 @@
 # Broadway Profiler
 
-When running a Broadway flow, the Profiler telemetry can be enabled on a flow providing the results breakdown per Stage / Actor / Iteration. The Profiler can be enabled either when running a Broadway flow either via the Fabric Studio or using the **broadway** command. 
+When running a Broadway flow, the Profiler telemetry can be enabled on a flow providing the results breakdown per Stage / Actor / Iteration. The Profiler can be enabled when Broadway flow is invoked either via the Fabric Studio or using the **broadway** command. 
 
 ### How Do I Enable the Profiler in the Studio?
 
