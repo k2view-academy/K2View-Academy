@@ -136,7 +136,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td style="height: 54px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Stage Condition</a></td>
-<td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor acts as a Stage condition. Note that Stage condition Actors are grey.</td>
+<td style="width: 381px; height: 54px;">Click to open a popup window and select an Actor for the Stage. The Actor acts as a Stage condition. Note that Stage condition Actors are green.</td>
 </tr>
 <tr>
 <td style="height: 36px; width: 174px;"><a href="19_broadway_flow_stages.md#what-is-a-stage-condition">Else</a></td>
