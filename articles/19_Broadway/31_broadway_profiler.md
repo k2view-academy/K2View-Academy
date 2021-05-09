@@ -4,11 +4,12 @@ When running a Broadway flow, the Profiler can be enabled, so that results break
 
 ### How Do I Enable the Profiler in the Studio?
 
-To enable the Profiler, click **Actions** > **Profiler** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar and run the flow. Once the flow is completed, the results are displayed in the [Run Results](18_broadway_flow_window.md#run-results-window) window. When the Profiler is enabled, it adds "Click on the Viewer icon" line after all flow results. 
+1. To enable the Profiler, click **Actions** > **Profiler** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar and run the flow. 
+2. Once the flow is completed, "Profiler Results: Click on the Viewer icon" line is displayed in the [Run Results](18_broadway_flow_window.md#run-results-window) window below the flow results. 
 
 ![image](images/99_31_01.PNG)
 
-Click on the <img src="images/99_31_02.PNG" alt="image" style="zoom:67%;" /> icon to view the Profiler results:
+3. Click on the <img src="images/99_31_02.PNG" alt="image" style="zoom:67%;" /> icon to view the Profiler results:
 
 ![image](images/99_31_03.PNG)
 
