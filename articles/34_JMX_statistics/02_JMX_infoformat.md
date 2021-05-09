@@ -8,11 +8,11 @@ JMX statistics is presented as a single web page that displays each of the relev
 
 To access the Admin panel, click the **Globe** icon on the top left corner of the **Fabric Studio**. 
 
-<img src="/articles/34_JMX_statistics/images/JMX-pic2.png">
+<img src="images/JMX-pic2.png">
 
 Enter your Admin credentials in the Admin panel home page and then click **Statistics** in the left panel.
 
-<img src="/articles/34_JMX_statistics/images/JMX-pic1.PNG">
+<img src="images/JMX-pic1.PNG">
 
 The following statistics sections can be viewed:
 
@@ -25,11 +25,11 @@ The information provided will feature statistics about the **Loading phase** of 
 
     since		56:38:23.041					Time in miliseconds since the event last occured
     timestamp	2020-12-10 12:34:39.733 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC, this event last occured
-    
+
 
 ```Loading Common Area```
 
-    
+
     since		56:38:23.730					Time in miliseconds since the event last occured
     timestamp	2020-12-10 12:34:39.045 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC, this event last occured
 
@@ -47,17 +47,17 @@ In this section, statistics information like project deployment or Fabric comman
     average		0:00:00.330						The average of this event value since the process was launched
     timestamp	2020-12-12 21:12:32.131 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC, this event last occured 
     since		0:00:30.648 					Time in miliseconds since the event last occured
-    
+
 
 
 
 ```Count of Fabric Commands Executed```
 
-    
+
     count		22								The number of times this event has occured
     timestamp	2020-12-12 21:13:02.638 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC, this event last occured
     since		0:00:00.141						Time in miliseconds since the event last occured
-    
+
 
 
 
@@ -66,7 +66,7 @@ In this section, statistics information like project deployment or Fabric comman
     count		1								The number of times this event has occured
     timestamp	2020-12-12 21:12:54.676 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC
     since		0:00:08.104						Time in miliseconds since the event last occured
-    
+
 
 
 
@@ -100,11 +100,11 @@ Executions as well as authentications statistics are also provided.
 Statistics about general information on systems resources are displayed:
 
 ``` Number of LU in the systems```
- 
+
     last			3								The last value for this event
     timestamp		2020-12-12 21:12:32.131 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC
     since			0:26:17.201						Time in miliseconds since the event last occured
-    
+
 
 
 
@@ -134,7 +134,7 @@ Very useful information such as number of LUIs sync-ed, fetching times and sizes
     total			156 KB							The accumulated total of this event value
     timestamp		2020-12-12 21:38:39.794 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC
     since			0:00:09.544						Time in miliseconds since the event last occured
-   
+
 
 
 

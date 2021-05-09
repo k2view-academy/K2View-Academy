@@ -18,6 +18,7 @@ Various statistics using JMX counters in Fabric can be gathered. The following i
 - Transactions, Web Services statistics.
 - Resources, like Cassandra, tasks and JDBC or mdb sessions.
 - iidFinder, messages related to iidFinder queries and events. 
+- Broadway flows, with performance metrics per Flow / Stage / Actor / Iteration.
 - Custom, provides statistics to the MBeans you would have manually added to the Java code.
 
 Note that all JMX metrics can be accessed using monitoring tools such as Grafana or Kibana.
