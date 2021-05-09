@@ -4,7 +4,7 @@ When running a Broadway flow, the Profiler telemetry can be enabled on a flow pr
 
 ### How Do I Enable the Profiler in the Studio?
 
-To enable the Profiler, click **Actions** > **Profiler** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar and run the flow. Once the flow is completed, the results are displayed in the Run Results window. When the Profile is enabled, it also displays "Click on the Viewer icon" line. 
+To enable the Profiler, click **Actions** > **Profiler** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar and run the flow. Once the flow is completed, the results are displayed in the [Run Results](18_broadway_flow_window.md#run-results-window) window. When the Profile is enabled, it adds "Click on the Viewer icon" line after all flow results. 
 
 ![image](images/99_31_01.PNG)
 
