@@ -1,10 +1,10 @@
 # Broadway Profiler
 
-When running a Broadway flow, the Profiler telemetry can be enabled on a flow providing the results breakdown per Stage / Actor / Iteration. The Profiler can be enabled when Broadway flow is invoked either via the Fabric Studio or using the **broadway** command. 
+When running a Broadway flow, the Profiler can be enabled, so that results breakdown per Stage / Actor / Iteration can be seen. The Profiler is enabled either via the Fabric Studio or using the **broadway** command. 
 
 ### How Do I Enable the Profiler in the Studio?
 
-To enable the Profiler, click **Actions** > **Profiler** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar and run the flow. Once the flow is completed, the results are displayed in the [Run Results](18_broadway_flow_window.md#run-results-window) window. When the Profile is enabled, it adds "Click on the Viewer icon" line after all flow results. 
+To enable the Profiler, click **Actions** > **Profiler** in the [Main menu](18_broadway_flow_window.md#main-menu) toolbar and run the flow. Once the flow is completed, the results are displayed in the [Run Results](18_broadway_flow_window.md#run-results-window) window. When the Profiler is enabled, it adds "Click on the Viewer icon" line after all flow results. 
 
 ![image](images/99_31_01.PNG)
 
@@ -12,9 +12,9 @@ Click on the <img src="images/99_31_02.PNG" alt="image" style="zoom:67%;" /> ico
 
 ![image](images/99_31_03.PNG)
 
-### How Do I Run the Profile Via the Broadway Command?
+### How Do I Run the Profiler Via the Broadway Command?
 
-To invoke the Broadway profiler when running the flow using the **broadway** command, set the **profilerTelemetry** argument to **true** . This will add the profiler results to the command results.
+To invoke the Profiler when running the flow using the **broadway** command, set the **profilerTelemetry** argument to **true** . This will add the Profiler results to the command results.
 
 ~~~
 fabric>broadway CRM.callGraphIt profilerTelemetry=true;
