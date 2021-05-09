@@ -26,4 +26,5 @@ The following example of performing two GET Instance commands parallelly is inva
 
 <img src="images/99_19_parallel_04.PNG" alt="Parallel" />
 
-[![Previous](/articles/images/Previous.png)](29_recovery_point.md)
+[![Previous](/articles/images/Previous.png)](29_recovery_point.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](31_broadway_profiler.md)
+

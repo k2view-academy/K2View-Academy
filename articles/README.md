@@ -278,6 +278,7 @@
 <li><a href="/articles/19_Broadway/28_actor_editor.md">Actor Editor</a></li>
 <li><a href="/articles/19_Broadway/29_recovery_point.md">Recovery Point</a></li>
 <li><a href="/articles/19_Broadway/30_support_parallel_execution.md">Support Parallel Execution</a></li>
+<li><a href="/articles/19_Broadway/31_broadway_profiler.md">Broadway Profiler</a></li>
 
 </ul> 
 </ul> 
