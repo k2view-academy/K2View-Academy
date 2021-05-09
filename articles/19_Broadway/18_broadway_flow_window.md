@@ -36,6 +36,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 <li><a href="22_broadway_flow_inner_flows.md">Save as Actor</a>, save the current flow as an Actor and use its logic as an inner flow in another Broadway flow.</li>
 <li><a href="25_broadway_flow_window_run_and_debug_flow.md">Debug/Run Arguments</a>, if the flow's population type is External, click to open the popup window to define the input arguments for its execution.</li>
 <li>Flip scroll-wheel, to move the mouse over the flow's scrollbar horizontally instead of vertically.</li>
+<li><a href="31_broadway_profiler.md">Profiler</a>, enable the Broadway Profiler when running a flow.</li>
 </ul>
 </td>
 </tr>
@@ -89,6 +90,7 @@ The Main menu is a toolbar located at the top of the window. It has the followin
 </tr>
 </tbody>
 </table>
+
 [Click for more information about how to run and debug the Broadway flow](25_broadway_flow_window_run_and_debug_flow.md).
 
 ### Stage Context Menu
@@ -247,7 +249,6 @@ Click the icon to display the window footer with the error messages:
 Click the error and choose to ignore the exception or fix the problem.
 
 For example, a flow includes an inherited **myDate** Actor that needs to be deleted. After the Actor is deleted from the project tree and the flow is opened, the validation errors are displayed. You can then update the flow as needed, for example by adding another Actor. 
-
 
 
 
