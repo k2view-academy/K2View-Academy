@@ -15,6 +15,7 @@ Common use cases of the Tracing mechanism:
 
 * To understand why the sync of a given instance takes a long time. The user requests a list of all queries running on the source system as a part of the sync process together with details about the duration of each query.
 * To know the number of connections opened for a given interface. The user requests a list of the activities that initiated the connections and when they ended.
+* To analyze the duration of a Broadway flow execution, checking which Stage, Actor or loop has the longest duration.
 
 
 

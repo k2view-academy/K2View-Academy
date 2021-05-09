@@ -1,10 +1,10 @@
-## JMX Fabric Built-In Statistics
+# JMX Fabric Built-In Statistics
 
 JMX statistics is presented as a single web page that displays each of the relevant statistics extracted from Fabric systems during runtime execution.
 
 
 
-### Access JMX Statistics
+## Access JMX Statistics
 
 To access the Admin panel, click the **Globe** icon on the top left corner of the **Fabric Studio**. 
 
@@ -16,7 +16,7 @@ Enter your Admin credentials in the Admin panel home page and then click **Stati
 
 The following statistics sections can be viewed:
 
-#### Processes
+### Processes
 
 The information provided will feature statistics about the **Loading phase** of each of the components running in the current sessions:
 
@@ -35,7 +35,7 @@ The information provided will feature statistics about the **Loading phase** of 
 
 
 
-#### Actions
+### Actions
 
 In this section, statistics information like project deployment or Fabric commands are displayed:
 
@@ -70,7 +70,7 @@ In this section, statistics information like project deployment or Fabric comman
 
 
 
-#### Transactions
+### Transactions
 
 Statistics about Fabric jobs, **get** performances, Web Services, LUI queries and LU population sync are  available in this section:
 
@@ -95,7 +95,7 @@ Executions as well as authentications statistics are also provided.
 
 
 
-#### Resources 
+### Resources 
 
 Statistics about general information on systems resources are displayed:
 
@@ -117,7 +117,7 @@ Statistics about general information on systems resources are displayed:
 
 
 
-#### MicroDBs
+### MicroDBs
 
 Very useful information such as number of LUIs sync-ed, fetching times and sizes can be viewed here:
 
@@ -134,6 +134,22 @@ Very useful information such as number of LUIs sync-ed, fetching times and sizes
     total			156 KB							The accumulated total of this event value
     timestamp		2020-12-12 21:38:39.794 UTC		The time, in miliseconds since 1970-1-1 00:00 UTC
     since			0:00:09.544						Time in miliseconds since the event last occured
+
+
+
+### Broadway
+
+Statistics about the Broadway flows with performance metrics per Flow / Stage / Actor / Iteration.
+
+~~~
+last		00:06.6		The last value for this event
+average		00:02.1		The average of this event value since the process was launched
+count		9			The number of times this event has occured
+timestamp	2021-05-09 13:45:39.298 UTC	
+						The time, in miliseconds 
+since		52:45.2		Time in miliseconds since the event last occured
+total		00:19.1		The accumulated total of this event value
+~~~
 
 
 
