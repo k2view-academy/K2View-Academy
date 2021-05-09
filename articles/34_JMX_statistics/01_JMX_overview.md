@@ -1,4 +1,4 @@
-## What is JMX?
+# What is JMX?
 
 Fabric arrives tightly pre-integrated with JMX - [Java Management eXtensions](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html) - technology to enable comprehensive and low-resolution monitoring and management of applications. JMX uses objects called MBeans (Managed Beans) to expose data and resources from Fabric.
 
