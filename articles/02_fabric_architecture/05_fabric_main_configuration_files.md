@@ -134,6 +134,8 @@ Fabric's main configuration file which holds different sections of parameters wh
 <li>fabric</li>
 <li>fabric_cluster</li>
 <li>jdbc-server</li>
+<li>audit</li>
+<li>audit_kafka_producer</li>
 </ul>
 </td>
 <td style="width: 371px;" valign="top">

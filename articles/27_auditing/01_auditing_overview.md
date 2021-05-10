@@ -1,15 +1,17 @@
 # Auditing Overview
 
-Fabric has a robust Auditing mechanism that logs activities running in Fabric like logins, Web Service calls and Fabric commands.
+Fabric has a robust Auditing mechanism that logs activities running in Fabric like logins, Web Service calls and Fabric commands. 
 
 Two major Auditing functionalities can be controlled:
 
 -  Filtering strategies, for full flexibility over the type of activities that are introduced to the Auditing mechanism, like reporting only Web Service calls. This flexibility does not impact the performance of other activities and saves a lot of disk space.
 -  Persistence strategies, defining the channel for reporting the activities logged by the Auditing mechanism, like Cassandra (default), Kafka, files, etc.
 
+The above can be configured via the **[audit]** and **[audit_kafka_producer]** sections of the **config.ini**. By default, the persistence strategy is Cassandra and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
+
 ### Auditing Reporting Structure
 
-When an activity is logged by the Fabric Auditing mechanism it has the following structure:
+When an activity is logged by the Fabric Auditing mechanism, it has the following structure:
 <table style="width: 900px;">
 <thead>
 <tr style="height: 18px;">
@@ -71,11 +73,23 @@ When an activity is logged by the Fabric Auditing mechanism it has the following
 </tr>
 </tbody>
 </table>
+For example, when the user performs login and authentication to the Web Framework, the activity is audited as follows:
 
+- Action = LOGIN
+- Protocol = HTTP/1.1
+- Query = LDAP/SAML/FABRIC
+
+When the user performs login to the Fabric console, it is audited as follows:
+
+* Action = LOGIN
+* Protocol = DRIVER
+* Query = LDAP/FABRIC
+
+Failure logins are audited as well. Logout is not audited. 
 
 ### Turning Auditing On/Off
 
-By default, Auditing is set to OFF. To enable Auditing in Fabric, set AUDIT=ON in the config.ini file and then restart Fabric.
+By default, Auditing is set to OFF. To enable Auditing in Fabric, set **AUDIT=ON** in the **config.ini** file and then restart Fabric.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_filtering_strategy.md) 
 
