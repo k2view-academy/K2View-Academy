@@ -232,9 +232,12 @@ Note that if the [link between two Actors](07_broadway_flow_linking_actors.md) i
 The Run Results window is a small popup window on the top of a Broadway flow window which displays the results after a flow is run:
 
 - When the flow is completed successfully, it either displays the values of the external arguments (if they exist in the flow) or remains empty.
-- When the flow fails, it displays the exception.
 
-![image](images/99_18_run_res_1.PNG)
+  ![image](images/99_18_run_res_1.PNG)
+
+- When the flow fails, it displays the exception. The exception details can be viewed in the log.
+
+![image](images/99_18_run_res_2.PNG)
 
 ### Flow Validation Footer
 
