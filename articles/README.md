@@ -161,7 +161,8 @@
 <summary markdown="span"><strong>LUDB Viewer and Studio Debug Capabilities <strong><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/README.md" style="text-decoration: none;">&#9734;</a></summary><ul>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/01_data_viewer.md">Data Viewer</a></li>
 <li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/02_fabric_studio_log_files.md">Fabric Studio Log Files</a></li>
-<li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md">Debug Table Population</a></li>
+<li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/03_debug_table_population.md">Debug Table Population</a></li>\
+<li><a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/04_breakpoints_panel.md">Breakpoints Panel</a></li>\
 </ul>
         </ul>
 </details>
