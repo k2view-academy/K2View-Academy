@@ -47,9 +47,9 @@ The following are the main log options:
 
 ### Debugging Logs and Messages
 
-Logs and messages can also be used for debugging purposes. The **log.info ():** method is available to enable Fabric’s runtime Debug options. This method can be added to any Java code and its output can be viewed after deployment and during runtime. 
+Logs and messages can also be used for debugging purposes. The **log.info()** method is available to enable Fabric’s runtime Debug options. This method can be added to any Java code and its output can be viewed after deployment and during runtime. 
 
-For example, **fnCreateInstID** under Customer LU:
+For example, see the **fnCreateInstID** function under Customer LU in the demo project:
 
 ~~~java
 if (i_id!=null && !i_id.isEmpty()){
