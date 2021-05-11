@@ -1,8 +1,6 @@
 # Breakpoints Panel
 
-Fabric Studio provides an ability to view all active breakpoints. A new panel was added to the **Server / Activity Logs area**, displaying a list of the breakpoints in the Fabric objects (currently only [Broadway flows](/articles/19_Broadway/18_broadway_flow_window.md) are supported). The panel displays the File name (for example, a Broadway flow name) and the ID where the breakpoint was set (for example, the Stage name).
-
-[Click for more information about Broadway](/articles/19_Broadway/01_broadway_overview.md).
+Fabric Studio provides an ability to view all active breakpoints. A new panel was added to the **Server / Activity Logs area**, displaying a list of breakpoints in the Fabric objects (currently only [Broadway flows](/articles/19_Broadway/18_broadway_flow_window.md) are supported). The panel displays the File name (for example, a Broadway flow name) and the ID where the breakpoint was set (for example, the Stage name).
 
 The panel is refreshed every 3 sec and only when it is open (visible to the user). The yellow arrow sign on the panel indicates the breakpoint at which the flow has stopped.
 
