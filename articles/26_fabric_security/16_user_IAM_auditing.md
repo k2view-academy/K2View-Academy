@@ -6,7 +6,7 @@ Users’ login access to Fabric is recorded into Fabric Auditing mechanism with 
 - **Protocol** column value - according to the channel: 
   - For Web Access = "HTTP/1.1"
   - For Fabric console = "DRIVER" 
-- **Query** column value according to the authenticator - "LDAP"/"SAML"/"FABRIC"/"CUSTOM".
+- **Query** column value according to the authenticator name, as appears at the configuration.
 
 
 
