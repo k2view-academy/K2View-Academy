@@ -70,21 +70,6 @@ SYNTAX: SET SYNC [SYNC MODE];
 </td>
 <td style="width: 316px;">
 <p>Valid in the iidFinder in Delta Partition mode when there is no delta will be running in Sync Off mode otherwsie Sync On.</p>
-<p>1. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to Delta Partition mode.</p>
-<p>1.1 When running on Node A:set sync delta;</p>
-<p>get LU.1;
-Fabric checks if the delta exist in Node B for Instance 1 and if not, runs in Sync Off mode, otherwise in Sync On mode.</p>
-<p>1.2 When running on Node B:
-set sync delta;</p>
-<p>get LU.1;
-Fabric checks if the delta exist in Node B for Instance 1 and if not, runs in Sync Off mode, otherwise in Sync On mode.</p>
-<p>1.3 When running on Node A:
-set sync ON;</p>
-<p>get LU.1;
-Fabric checks if the delta exist in Node B for Instance 1 and if not runs on Node A in Sync On mode, otherwise runs in Sync On mode on remote Node B.</p>
-<p>2. If Node A owns Instance 2 and Node B owns Instance 1 and the iidFinder is set to CASSANDRA_ONLY or KAFKA:
-set sync delta;
-Will run as sync ON; </p>
 </td>
 </tr>
 </tbody>
