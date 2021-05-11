@@ -1,13 +1,13 @@
 # Auditing Overview
 
-Fabric has a robust Auditing mechanism that logs activities running in Fabric like logins, Web Service calls and Fabric commands. 
+Fabric has a robust Auditing mechanism that logs various activities running in Fabric. These can be logins, Web Service calls, and various Fabric commands. 
 
 Two major Auditing functionalities can be controlled:
 
--  Filtering strategies, for full flexibility over the type of activities that are introduced to the Auditing mechanism, like reporting only Web Service calls. This flexibility does not impact the performance of other activities and saves a lot of disk space.
--  Persistence strategies, defining the channel for reporting the activities logged by the Auditing mechanism, like Cassandra (default), Kafka, files, etc.
+-  **Filtering strategies:** this strategy provides full flexibility over the type of activities that are introduced to the Auditing mechanism. For example, you can limit the activites introduced to only Web Service calls. This flexibility does not impact the performance of other activities, and can save a great deal of disk space.
+- **Persistence strategies:** this strategy defines the channel for reporting the activities logged by the Auditing mechanism. For example, the channel can be via Cassandra (default), Kafka, files, etc.
 
-The above can be configured via the **[audit]** and **[audit_kafka_producer]** sections of the **config.ini**. By default, the persistence strategy is Cassandra and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
+These strategies above can be configured via the **[audit]** and **[audit_kafka_producer]** sections of the **config.ini**. By default, the persistence strategy is Cassandra, and the data is written into the **k2_auditing** table of the [k2audit](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md) keyspace.
 
 ### Auditing Reporting Structure
 
@@ -85,9 +85,9 @@ When the user performs login to the Fabric console, it is audited as follows:
 * Protocol = DRIVER
 * Query = LDAP/FABRIC
 
-Failure logins are audited as well. Note that the actual login method is populated at Query. Thus if LDAP is the first authenticator and it failed and then the next one is local (Fabric) and it passed, only the last entry Query = FABRIC is captured.
+Failure logins are audited as well. Note that the actual login method is populated at Query. Thus if LDAP is the first authenticator and it failed, and the next one is defined as local (Fabric) and it passed, only the last entry is captured (that is, Query = FABRIC).
 
-Logout is not audited. 
+Logout is not audited.  
 
 ### Turning Auditing On/Off
 
