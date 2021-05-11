@@ -123,8 +123,8 @@
 <p><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">IAM</a></strong></p>
 </td>
 <td width="516">
-<p>Users Identification and Access Management (IAM) is the mechanism for user identification via an authentication process, and for access management via authorization mechanisms.</p>
-<p>Fabric provides IAM for web, console, and web-services access, either using Fabric's local repository or by using the organization&rsquo;s identify provider (IDP) which Fabric integrated with as Service Provider (SP).</p>
+<p>Identification and Access Management: The mechanism for user identification via an authentication process, and for access management via authorization mechanisms.</p>
+<p>Fabric provides IAM for web, console, and web-services access, either using Fabric's local repository or by using the organization&rsquo;s identify provider (IDP) which is integrated with Fabric as a Service Provider (SP).</p>
 </td>
 </tr>
 <tr>
@@ -132,7 +132,7 @@
 <p><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">IDP</a></strong></p>
 </td>
 <td width="516">
-<p>Identity Provide, It authenticates principals and issues tokens (or assertions) and is an actor at modern authentication and authorization platforms, along with principal and Relying Party (RP) or Service Provider (SP)</p>
+<p>Identity Provider: Authenticates principals, and issues tokens (or assertions). The IDP is also an actor in modern authentication and authorization platforms, along with a  principal and Relying Party (RP) or Service Provider (SP)</p>
 </td>
 </tr>
 <tr>
@@ -168,7 +168,7 @@
 <p><a href="/articles/26_fabric_security/11_user_IAM_LDAP.md"><strong>LDAP</strong></a></p>
 </td>
 <td width="516">
-<p>Lightweight Directory Access Protocol, is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers.&nbsp;Fabric&nbsp;can work&nbsp;with&nbsp;LDAP&nbsp;and&nbsp;AD LDAP&nbsp;&nbsp;servers (Active Directoy&nbsp;LDAP)&nbsp;as&nbsp;authenticators&nbsp;as well as&nbsp;&nbsp;to&nbsp;get information&nbsp;about users&nbsp;&nbsp;from those&nbsp;servers.</p>
+<p>Lightweight Directory Access Protocol: This is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers.&nbsp;Fabric&nbsp;can work&nbsp;with&nbsp;LDAP&nbsp;and&nbsp;AD LDAP&nbsp;&nbsp;servers (Active Directoy&nbsp;LDAP)&nbsp;as&nbsp;authenticators&nbsp;as well as&nbsp;&nbsp;to&nbsp;get information&nbsp;about users&nbsp;&nbsp;from those&nbsp;servers.</p>
 </td>
 </tr>
 <tr>
@@ -248,7 +248,7 @@
 <h4><a href="/articles/26_fabric_security/09_user_IAM_SAML_fundamentals_and_terms.md"><strong>SAML</strong></a></h4>
 </td>
 <td width="516">
-<p>Security Assertion Markup Language, a standard protocol used for SSO. It provides a mechanism for exchanging authentication and authorization data between an identity provider (IDP) and a service provider (SP).</p>
+<p>Security Assertion Markup Language: This is a standard protocol used for SSO. It provides a mechanism for exchanging authentication and authorization data between an identity provider (IDP) and a service provider (SP).</p>
 </td>
 </tr>
 <tr>
@@ -264,7 +264,7 @@
 <h4><strong><a href="/articles/26_fabric_security/07_user_IAM_overview.md">SP</a></strong></h4>
 </td>
 <td width="516">
-<p>Service Provider, an actor at modern authentication and authorization platforms, which is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. Fabric acts as an SP when using etxneral authenticators.</p>
+<p>Service Provider: This is an actor in modern authentication and authorization platforms. The SP is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. Fabric acts as an SP when using external authenticators.</p>
 </td>
 </tr>
 <tr>
@@ -272,7 +272,7 @@
 <h4><a href="/articles/26_fabric_security/08_user_IAM_SSO_overview.md"><strong>SSO</strong></a></h4>
 </td>
 <td width="516">
-<p>Single Sign On,&nbsp;a user authentication service that permits an organization's members (users) to use one set of login credentials to access multiple applications and services. Fabric has the capability to work as a service within the organization's SSO.</p>
+<p>Single Sign On: &nbsp; This is a user authentication service that permits an organization's members (users) to use one set of login credentials to access multiple applications and services. Fabric has the capability to work as a service within the organization's SSO.</p>
 </td>
 </tr>
 <tr>
