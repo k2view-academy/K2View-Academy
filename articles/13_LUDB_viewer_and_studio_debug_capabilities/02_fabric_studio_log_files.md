@@ -63,19 +63,20 @@ For example: **fnCreateInstID** under Customer LU
  if (i_id!=null && !i_id.isEmpty()){
 // Increase the input by 10 and return      
       reportUserMessage("o_id:"+(Integer.sum(Integer.valueOf(i_id),10)+""));
-	return Integer.sum(Integer.valueOf(i_id),10)+"";
+      return Integer.sum(Integer.valueOf(i_id),10)+"";
    }
-log.info ():
 </code></pre>
 
+**log.info ():**
 
 Enables Fabric’s runtime Debug options. This method can be added to any Java code and its output can be viewed after deployment and during runtime. The runtime log (k2fabric.log) can be reviewed in the Fabric Server’s Logs directory or in the Studio’s Output logs.\
 For example: **fnCreateInstID** under Customer LU
  <pre><code>
 if (i_id!=null && !i_id.isEmpty()){
-```java// Increase the input by 10 and return
+// Increase the input by 10 and return
         log.info("o_id: "(Integer.sum(Integer.valueOf(i_id),10)+""));
-	  return Integer.sum(Integer.valueOf(i_id),10)+"";
+	return Integer.sum(Integer.valueOf(i_id),10)+"";
+}
 </code></pre>
 
 
