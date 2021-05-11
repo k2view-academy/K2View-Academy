@@ -85,7 +85,9 @@ When the user performs login to the Fabric console, it is audited as follows:
 * Protocol = DRIVER
 * Query = LDAP/FABRIC
 
-Failure logins are audited as well. Logout is not audited. 
+Failure logins are audited as well. Note that the actual login method is populated at Query. Thus if LDAP is the first authenticator and it failed and then the next one is local (Fabric) and it passed, only the last entry Query = FABRIC is captured.
+
+Logout is not audited. 
 
 ### Turning Auditing On/Off
 
