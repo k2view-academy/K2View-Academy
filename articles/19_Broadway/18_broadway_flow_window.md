@@ -156,7 +156,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 </tr>
 <tr>
 <td style="height: 54px; width: 174px;">Breakpoint</td>
-<td style="width: 381px; height: 54px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title. The list of flow's breakpoints is displayed in the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/04_breakpoints_panel.md">Breakpoints Panel</a></td>
+<td style="width: 381px; height: 54px;">Click to set a breakpoint for the Stage. A breakpoint can be also set by clicking on the left of the Stage title. The list of flow's breakpoints is displayed in the <a href="/articles/13_LUDB_viewer_and_studio_debug_capabilities/04_breakpoints_panel.md">Breakpoints Panel</a>.</td>
 </tr>
 <tr>
 <td style="height: 72px; width: 174px;">Remark</td>
