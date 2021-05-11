@@ -1,10 +1,10 @@
 # Broadway Profiler
 
-When running a Broadway flow, the Profiler can be enabled, so that results breakdown per Flow / Stage / Actor / Iteration can be seen. The Profiler is enabled either via the Fabric Studio or using the **broadway** command. 
+When running a Broadway flow, the Profiler can be enabled so that a results breakdown per Flow / Stage / Actor / Iteration can be seen. The Profiler is enabled either via the Fabric Studio, or by using the **broadway** command. 
 
-The Profiler provides the metrics per a single flow execution. However when you need to monitor the behavior across many executions, you can use [JMX Statistics](/articles/34_JMX_statistics/02_JMX_infoformat.md) which also provides performance metrics per Flow / Stage / Actor / Iteration.
+The Profiler provides the metrics per a single flow execution. However, when you need to monitor the behavior across many executions, you can use [JMX Statistics](/articles/34_JMX_statistics/02_JMX_infoformat.md), which also provides performance metrics per Flow / Stage / Actor / Iteration.
 
-[Trace](/articles/29_tracing/01_tracing_overview.md) can also be enabled on Broadway flows and can help analyzing the flow results.
+[Trace](/articles/29_tracing/01_tracing_overview.md) can also be enabled on Broadway flows and can help to analyze the flow results.
 
 ### How Do I Enable the Profiler in the Studio?
 
