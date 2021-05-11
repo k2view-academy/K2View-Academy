@@ -24,11 +24,11 @@ The chunk size is set using the config.ini file parameters, defined per node:
 
 ### Parallel Load Big LUI from Cassandra
 
-When loading the chunks of Big LUI from Cassandra to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. The fewer the threads, the better the performance. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
+When loading the chunks of Big LUI from Cassandra to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
 
 The config.ini parameters to configure the above are:
 
-* ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default this is disabled.
+* ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default the parallel load is disabled.
 * ASYNC_LOAD_MAX_MEMORY_IN_MB, maximum memory to be allocated for the parallel load process. Set by default to 2 GB - 2147483648 byte.
 
 
