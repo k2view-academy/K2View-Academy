@@ -28,7 +28,7 @@ When loading the chunks of Big LUI from Cassandra to Fabric as part of the GET c
 
 The config.ini parameters to configure the above are:
 
-* ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default.
+* ASYNC_LOAD_MAX_THREADS, the maximum number of threads (over all Fabric nodes) to be allocated. Set to 0 by default, which means that by default this is disabled.
 * ASYNC_LOAD_MAX_MEMORY_IN_MB, maximum memory to be allocated for the parallel load process. Set by default to 2 GB - 2147483648 byte.
 
 
