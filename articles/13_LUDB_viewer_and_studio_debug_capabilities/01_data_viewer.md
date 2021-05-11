@@ -30,8 +30,8 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
     Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the tree. 
 
   	Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
-
- 	 *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
+  	
+  	 *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
 
 6. Click the **Instance ID** to open the **Instances Tree** dropdown list.
 
@@ -93,6 +93,7 @@ if (i_id!=null && !i_id.isEmpty()){
    }
 return "0";
 ```
+
 
 
  #### Play ![image](images/13_01_07%20play%20icon.jpg)
@@ -250,6 +251,8 @@ The latest Data Viewer file can be used in the following components:
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
 * Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
+
+
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_fabric_studio_log_files.md)
 

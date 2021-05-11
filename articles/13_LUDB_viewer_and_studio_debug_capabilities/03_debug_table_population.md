@@ -62,5 +62,5 @@ The **Debug Toolbar** has the following icons:
 </table>
 
 
-[![Previous](/articles/images/Previous.png)](02_fabric_studio_log_files.md)
+[![Previous](/articles/images/Previous.png)](02_fabric_studio_log_files.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_breakpoints_panel.md)
 
