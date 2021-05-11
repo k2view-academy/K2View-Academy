@@ -2,7 +2,7 @@
 
 LDAP, the Lightweight Directory Access Protocol, is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers. It’s often used for authentication and storing information about users, groups, and applications, but is a fairly general-purpose data store and can be used in a wide variety of applications.
 
-The data is stored in an hierarchical structure, and active directory searches are done according to this heirarchy.
+The data is stored in an hierarchical structure, and active directory searches are done according to this hierarchy.
 
 ## Terminology
 
