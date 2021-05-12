@@ -58,7 +58,7 @@ When an activity is logged by the Fabric Auditing mechanism, it has the followin
 </tr>
 <tr style="height: 54px;">
 <td style="height: 54px; width: 73px;">query</td>
-<td style="height: 54px; width: 323px;">Activity details like a CQL query for a CQLCommand, a DESCRIBE SCHEMA CRM for a DescribeCommand, or the authentication provider for the LOGIN action. <br/>See <a href="/articles/26_fabric_security/16_user_IAM_auditing.md">here</a> for more details about Login Auditing.</br/></td>
+<td style="height: 54px; width: 323px;">Activity details like a CQL query for a CQLCommand, a DESCRIBE SCHEMA CRM for a DescribeCommand, or the authentication provider for the LOGIN action.</td>
 <td style="height: 54px; width: 286px;">SELECT * FROM CRM.SUBSCRIBER</td>
 </tr>
 <tr style="height: 18px;">
@@ -73,6 +73,7 @@ When an activity is logged by the Fabric Auditing mechanism, it has the followin
 </tr>
 </tbody>
 </table>
+
 For example, when the user performs login and authentication to the Web Framework, the activity is audited as follows:
 
 - Action = LOGIN
@@ -85,9 +86,9 @@ When the user performs login to the Fabric console, it is audited as follows:
 * Protocol = DRIVER
 * Query = LDAP/FABRIC
 
-Failure logins are audited as well. Note that the actual login method is populated at Query. Thus if LDAP is the first authenticator and it failed, and the next one is defined as local (Fabric) and it passed, only the last entry is captured (that is, Query = FABRIC).
-
 Logouts are not audited.  
+
+[Click for more information about the User Identification and Access Management Auditing](/articles/26_fabric_security/16_user_IAM_auditing.md).
 
 ### Turning Auditing On/Off
 
