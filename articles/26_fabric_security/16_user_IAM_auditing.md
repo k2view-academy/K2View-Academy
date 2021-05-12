@@ -6,11 +6,9 @@ Users’ login access to Fabric is recorded into Fabric Auditing mechanism with 
 - **Protocol** column value - according to the channel: 
   - For Web Access = "HTTP/1.1"
   - For Fabric console = "DRIVER" 
-- **Query** column value according to the authenticator name, as appears at the configuration.
-
-
-
-Note: in case of sequence of authenticators, Auditing mechanism logs the last one that activated. For example - if authenticator list = "LDAP,Fabric" and LDAP succeeded then Query will equal to "LDAP" with success as *Result* column value. in case LDAP failed and  next one - "Fabric" is used then the auditing entry shall contain "Fabric" as the *Query* column's value.
+- **Query** column value according to the authenticator name, as appears at the configuration. 
+  - In case of success where sequence of authenticators are configured, Auditing mechanism logs the authenticator that successfully authenticate the user. For example - if authenticator list = "LDAP,Fabric" and LDAP succeeded then Query will equal to "LDAP" with success as *Result* column value. in case LDAP failed and  next one - "Fabric" is used then the auditing entry shall contain "Fabric" as the *Query* column's value.
+  - In case of failure no authenticator is written in this column as all authenticators which set at configuration, failed to authenticate the user. 
 
 
 
