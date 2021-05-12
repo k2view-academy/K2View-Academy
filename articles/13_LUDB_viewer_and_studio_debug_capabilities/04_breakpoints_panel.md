@@ -10,7 +10,7 @@ The panel is refreshed every 3 sec, but only when it is open and visible to the 
 
 Double-click on the breakpoint in the panel to bring the related file to the front.
 
-If the breakpoints panel displays several flows with the same name that belong to different [Logical Units](/articles/03_logical_units/01_LU_overview/md), the double-click will open the first of these flows with the same name. This might not be the correct one, so it is recommended to use differing names for flows. 
+Known limitation: if the breakpoints panel displays several flows with the same name that belong to different [Logical Units](/articles/03_logical_units/01_LU_overview/md), the double-click will open the first flow with such name that it finds (now necessarily the correct one).
 
 
 [![Previous](/articles/images/Previous.png)](03_debug_table_population.md)
