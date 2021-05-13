@@ -90,7 +90,7 @@ There are two options to generate an API key - via the Admin App or by using a F
 
   For example:
 
-<img src="/articles/26_fabric_security/images/07_fabric_webToken.PNG">
+  <img src="/articles/26_fabric_security/images/07_fabric_webToken.PNG">
 
 * Fabric command: `CREATE TOKEN <'token_name'> [SECURED]`.  When "SECURED" is being used the secret key is retrieved back.
 
