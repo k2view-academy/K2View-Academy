@@ -22,7 +22,7 @@ Note that the JWT can be sent also as a cookie and not as the bearer header.
 
 ### API Key
 
-API key authentication is the simplest method because it allows authenticating WS calls just by including a single key, where this simplicity also allows a client to make calls easily from various tools.
+API key authentication is the simplest method because it allows authenticating WS calls just by including a single key, where this simplicity also allows a client to make calls easily from various origins.
 
 The API Key shall be sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer ABC`, where API Key is "ABC".
 
@@ -45,7 +45,9 @@ The authorization and permissions are done according to the credentials that wer
 
 ### JWT Signed by client
 
-This method is considered as the most secured because the secret key is not sent on the transit layer and it is known only to the client. The authentication flow for this method works as following:
+This method is the most secured because the secret key is not sent on the transit layer at all and it is known only to the client. 
+
+The authentication flow for this method works as following:
 
 1. Create a secured API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions.
 2. Generate a JWT, where:
