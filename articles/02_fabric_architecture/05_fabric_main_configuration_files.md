@@ -79,6 +79,7 @@ Make sure to edit the configuration files under the **$K2_HOME/config** director
 <li><strong>commonarea</strong>, accessing common Reference Tables. </li>
 <li><strong>dbserve</strong>, connecting Fabric via remote JDBC connection. For example: login Fabric console using <a href="/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric">fabric command,</a> defining Fabric node as a <a href="/articles/05_DB_interfaces/05_adding_a_fabric_remote_interface_type.md">remote Fabric interface.</a></li>
 <li><strong>clustertimecheck</strong>, comparing the time between the Fabric nodes, included in the Fabric cluster and throwing an error if a difference is identified.</li>
+  <li><strong>fips</strong>, fips certification mode, to turn it on use fips:mode=on. If it is not added fabric works by default in fips=off mode.
 </ul>
 </td>
 </tr>
