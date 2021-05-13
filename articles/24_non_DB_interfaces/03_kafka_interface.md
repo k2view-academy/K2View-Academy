@@ -68,6 +68,16 @@ To create a new Kafka interface, do the following:
 </table>
 
 
+### Example of SSL Properties Definition
+
+When SSL authentication is required on Kafka, set **Enable SSL** property to **True** and populate the SSL properties on the Kafka Interface. Below is the example of Interface definition when the **Security Protocol** = **SSL**. 
+
+![image](images/04_kafka_3.png)
+
+
+
+When you need to connect to Kafka using a user and a password, set the **Security Protocol** = **SASL_PLAINTEXT** and give the path to the file with user and password definition.
+
 
 
 ### Example of Publish to Kafka Broadway Flow
