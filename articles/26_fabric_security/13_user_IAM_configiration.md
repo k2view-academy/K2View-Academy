@@ -67,7 +67,7 @@ Following are the configuration that shall be applied at the Fabric config.ini c
 
 - **SP_ENTITYID**, the identity of the Fabric, in URI format, which shall be populated at the IDP 
 
-- **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric where the identity provider will redirect to with its authentication response. Format: `https://<host-name>:3213/api/authenticate`. The host name shall be the Fabric load-balancer hostname. This property is also populated at the IDP side.
+- **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric where the identity provider will redirect to with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name shall be the Fabric load-balancer hostname. This property is also populated at the IDP side.
 - **IDP_ENTITYID**, the entity ID, in URI format, as supplied by the IDP.
 
 - **IDP_SINGLE_SIGN_ON_SERVICE_URL**, the IDP endpoint for SAML request. 
@@ -119,6 +119,8 @@ The `adldap_auth` or `ldap_auth` sections shall define the following:
 - **users_base_dn**, the root base "dn" of the users.
 
 The values shall be provided by the organization LDAP group.
+
+Note that in case LDAP is used as authenticator an admin role is created automatically for Fabric bootstrap. The admin's role name is configurable at the *admin_privileges* configuration file. 
 
 ### Proprietary Custom Authenticator
 
