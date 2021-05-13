@@ -148,5 +148,7 @@ If there is need to use same type, for example - use 2 LDAP servers, where one i
 
 
 
+
+
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/12_web_login.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/14_user_IAM_SAML_Azure_AD_setup.md)
 
