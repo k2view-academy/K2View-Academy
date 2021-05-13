@@ -8,7 +8,7 @@ The list of activities reported by the Auditing mechanism can be controlled. By 
 
 1. Create a new class under the com.k2view.external.fabric.audit.filters folder. 
 
-2. To define the Auditing filter, implement the com.k2view.fabric.session.auditing.filters.AuditingFilter; interface. 
+2. To define the Auditing filter, implement the **com.k2view.fabric.auditing.filters.AuditingFilter;** interface. 
 
 3. Save the artifacts into the following path: AuditCustomStrategies/out/artifacts/<module>/<module>.jar under the $K2_HOME/ExternalJars directory.
 
@@ -22,8 +22,8 @@ The following example displays the com.k2view.external.fabric.audit.filters.Samp
 ~~~java
    package com.k2view.external.fabric.audit.filters;
    import com.k2view.fabric.common.Log;
-   import com.k2view.fabric.session.auditing.AuditBean;
-   import com.k2view.fabric.session.auditing.filters.AuditingFilter;
+   import com.k2view.fabric.auditing.AuditBean;
+   import com.k2view.fabric.auditing.filters.AuditingFilter;
 
    public class SampleFilter implements AuditingFilter {
      @Override
@@ -53,9 +53,9 @@ In order to build the artifacts following steps should be implemented:
 
 2) Create a directory called k2view-libs under AuditCustomStrategies directory.
 
-3) Copy the files $K2_HOME/fabric/lib/fabric-common*jar and fabric-session*.jar to k2view-libs folder. 
+3) Copy the files $K2_HOME/fabric/lib/fabric-common.jar and fabric-session.jar to k2view-libs folder. 
 
-4) Open Intellij IDE.
+4) Open IntelliJ IDE.
 
 5) Import project AuditCustomStrategies.
 

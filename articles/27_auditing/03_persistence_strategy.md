@@ -2,13 +2,13 @@
 
 The persistence of the data published by the Auditing mechanism can be controlled. By default, the persistence is defined in the Cassandra cluster used by Fabric (k2audit.k2_auditing table), however this can be customized and published to a Kafka queue, a file system or another platform or technology.
 
-Persistence strategy is defined in the config.ini file in the AUDIT_PERSISTENCE_STRATEGY parameter which by default, is set to com.k2view.fabric.session.auditing.persistence.CassandraBeanPersistence.
+Persistence strategy is defined in the config.ini file in the AUDIT_PERSISTENCE_STRATEGY parameter which by default, is set to **com.k2view.fabric.auditing.persistence.CassandraBeanPersistence**.
 
 ### Example of Setting Persistence Strategy
 
 1.  Create a new class under the com.k2view.external.fabric.audit.persistencies package.
 
-2. Implement the following interface: com.k2view.fabric.session.auditing.persistence.AuditBeanPersistence;
+2. Implement the following interface: com.k2view.fabric.auditing.persistence.AuditBeanPersistence;
 
    The following is an example of the com.k2view.external.fabric.audit.persistencies.SamplePersist persistency class which writes the Audit operations into a file.
 
@@ -18,8 +18,8 @@ Persistence strategy is defined in the config.ini file in the AUDIT_PERSISTENCE_
 package com.k2view.external.fabric.audit.persistencies;
 
 import com.k2view.fabric.common.Log;
-import com.k2view.fabric.session.auditing.AuditBean;
-import com.k2view.fabric.session.auditing.persistence.AuditBeanPersistence;
+import com.k2view.fabric.auditing.AuditBean;
+import com.k2view.fabric.auditing.persistence.AuditBeanPersistence;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
