@@ -27,19 +27,22 @@ Note that writing into the Cassandra DB can be disabled for testing purposes. Th
 
 ### Work by Priority
 
-The loader works according to the following priority:
+The loader works according to the following priority within each section:
 
 - Batch_process
   - Look for **[LU type]_batch_process_loader** section.
-  - If not exist, user **batch_process_loader** section.
+  - If not exist, use **batch_process_loader** section.
   - if not exist, use **default_loader** section.
 - Parser
   - Look for **[LU type]_[parser name]_loader** section.
   - if not exist, use **parser_loader** section.
-  - If not exist, user **default_loader** section.
+  - If not exist, use **default_loader** section.
 - iidFinder
   - Look for **iid_finder_loader** section.
   - If not exist, use **default_loader** section.
+- Save Big LUIs:
+  - Look for **[LU type]_ cassandra_entity_storage** section.
+  - If not exist, use **[cassandra_entity_storage]** section.
 
 The session works according to the following priority:
 
@@ -59,7 +62,6 @@ The session works according to the following priority:
   - Look for **iid_finder_session** section.
   - If not exist, use **loader_session** section.
   - If not exist, use **default_session** section.
-    
 
 
 
