@@ -26,9 +26,9 @@ API key authentication is the simplest method because it allows authenticating W
 
 The API Key shall be sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer ABC`, where API Key is "ABC".
 
-See [here]() how to generate an API Key (choose the "non secured" key)..
+See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key (choose the "non secured" key)..
 
-The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here]() for more information about API Keys, roles and permissions.
+The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
 
 ### JWT Signed by Fabric
 
@@ -36,19 +36,19 @@ The authentication flow for this method works as following:
 
 1. Make a first POST call to the Fabric server's endpoint: `<SERVER-HOST>:<SERVER-PORT>/api/authenticate`, where it shall provide in the post body either of the following credentials:
    - user/password, within the pattern of: `{"username": "<USER>", "password": "<PASSWORD>"}`.
-   - API Key, within the pattern of: `{"apikey": "<APIKEY>"}`. See [here]() how to generate an API Key (choose the "non secured" key).
+   - API Key, within the pattern of: `{"apikey": "<APIKEY>"}`. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key (choose the "non secured" key).
 
 2. On authentication success, Fabric responds with `{"response": "OK"}` (within 201 response code), along with the JWT which is returned as a cookie.
 3. Make the next web services calls by sending this JWT as the token value of the `Authorization: Bearer` header or as cookie, as part of each request (in case requests are done via the browser this cookie is already stored at the browser).  
 
-The authorization and permissions are done according to the credentials that were provided during the first "/api/authenticate" call - either by user or API Key and the roles which are assigned to each of them. See [here]() for more information about API Keys, roles and permissions.
+The authorization and permissions are done according to the credentials that were provided during the first "/api/authenticate" call - either by user or API Key and the roles which are assigned to each of them. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
 
 ### JWT Signed by client
 
 This method is considered as the most secured because the secret key is not sent on the transit layer and it is known only to the client. The authentication flow for this method works as following:
 
-1. Create a secured API Key. See [here]() for instructions.
-2. Generate a JWT where
+1. Create a secured API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions.
+2. Generate a JWT, where:
    - It shall include "apk" claim with the value of the API Key, as part of the JWT payload.
    - The secret key, that provided by Fabric during the API Key generation, shall be added to the JWT signature.
    - JWT shall be signed using HMAC-SHA256.
@@ -56,7 +56,7 @@ This method is considered as the most secured because the secret key is not sent
 3. Make the web services calls by sending this JWT as the token value of the `Authorization: Bearer` header.
 4. Fabric verifies that the JWT is signed with the secret that matches to the "apk".
 
-The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here]() for more information about API Keys, roles and permissions.
+The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
 
 
 
