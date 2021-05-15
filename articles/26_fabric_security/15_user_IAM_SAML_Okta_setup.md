@@ -9,6 +9,8 @@ This article describes the setup and integration steps to connect your Single-Si
 
 ## Configuration instructions: At Okta
 
+Note: The below might be simplified once Fabric will be added to OIN (Okta Integration Network).
+
 #### Launch the Wizard
 
 1. Log into Okta Admin console as an Admin. 
@@ -88,7 +90,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
    - **Name ID format**, The username format to be sent in the SAML Response. At the select list choose "*EmailAddress*".
 
-   - **Application username**, The default value to use for the username. At the select list choose "*Email".
+   - **Application username**, The default value to use for the username. At the select list choose "*Email".*
 
      <table>
      <tbody>
@@ -150,7 +152,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
 11. Click on "View Setup Instructions"
 
-12. A new browser tab will be opened with the information that need to be copied to Fabric configuration (IDP URL and IDP issuer/entity ID) and the certificate key () to be uploaded into Fabric, for signing the authentication requests.
+12. A new browser tab will be opened with the information that need to be copied to Fabric configuration (IDP URL and IDP issuer/entity ID) and the certificate key to be uploaded into Fabric, for signing the authentication requests.
 
      <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta9.jpg">    </td></tr></tbody></table>
 
