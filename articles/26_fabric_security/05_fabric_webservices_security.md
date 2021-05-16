@@ -62,14 +62,15 @@ The authorization and permissions are done according to the roles which are assi
 
 
 
-##### External trusted authentication 
+#### External trusted authentication 
 
-In some cases the client itself - a service in the organization which calls Fabric - already authenticated the user (human or another system). For example the client can be a service that interacts with IDP to authenticate users by using SAML. In such case, client holds the actual user and the groups he is assigned to, and wants that Fabric will acts upon, and use this information, for example for roles permissions.
+In some cases the client itself - a service in the organization which calls Fabric - already authenticated the user (human or another system). For example the client can be a service that interacts with IDP to authenticate users by using SAML. In such case, client holds the actual user and the groups he is assigned to, and wants that Fabric will act upon, and use this information, for example for roles permissions.
 
 Fabric supports such delegated authentication:
 
 * The user and groups shall be sent as part of the JWT payload claims ("user" , "groups"). 
-* This option requires an extra security verification: the API Key, that is used and sent in the JWT, shall be associated to the "AUTHZ_CLAIMS" role. When verified, Fabric set the session with this user and roles (by taking the groups and setting them as user's roles for this session).
+* This option requires an extra security verification: the API Key, that is used and sent in the JWT, shall be associated to the "AUTHZ_CLAIMS" role before start using it (create this role if it does not exist already). 
+* When verified, Fabric set the session with this user and roles (by taking the groups and setting them as user's roles for this session).
 
 
 
