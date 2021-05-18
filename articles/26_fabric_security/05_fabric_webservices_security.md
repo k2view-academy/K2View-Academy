@@ -34,12 +34,18 @@ The authorization and permissions are done according to the roles which are assi
 
 The authentication flow for this method works as following:
 
-1. Make a first POST call to the Fabric server's endpoint: `<SERVER-HOST>:<SERVER-PORT>/api/authenticate`, where it provides in the post body one of the following credentials:
+1. Create an API Key. See [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. In order to indicate that JWT is signed by Fabric do not select the "secured" option.
+
+2. Make a first POST call to the Fabric server's endpoint: `<SERVER-HOST>:<SERVER-PORT>/api/authenticate`, where it provides in the post body one of the following credentials:
+
    - user/password, using the pattern: `{"username": "<USER>", "password": "<PASSWORD>"}`.
    - API Key, using the pattern: `{"apikey": "<APIKEY>"}`. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key (choose the "non secured" key).
 
-2. Upon authentication success, Fabric responds with `{"response": "OK"}` (within 201 response code), along with the JWT which is returned as a cookie.
-3. Make the next web services calls by sending this JWT as the token value of the `Authorization: Bearer` header or as a cookie, as part of each request (in case requests are done via the browser, this cookie is already stored at the browser).  
+3. Upon authentication success, Fabric responds with `{"response": "OK"}` (within 201 response code), along with the JWT which is returned as a cookie.
+
+4. Make the next web services calls by sending this JWT as the token value of the `Authorization: Bearer` header or as a cookie, as part of each request. In case requests are done via the browser, this cookie is already stored at the browser.  
+
+   When used in the cookie, the JWT expiration is automatically extended on each call, where it is not extended when using Bearer header to pass the JWT.
 
 The authorization and permissions are done according to the credentials that were provided during the first "/api/authenticate" call - either by the user or by the API Key and the roles which are assigned to each of them. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
 
@@ -50,9 +56,9 @@ The authentication flow for this method works as follows:
 1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. Select the "secured" option, indicating that this is the client signing method.
 2. Generate a JWT, where:
    - It shall include "apk" claim with the value of the API Key, as part of the JWT payload.
-   - The secret key, provided by Fabric during the API Key generation, is added to the JWT signature.
+   - The secret key, provided by Fabric during the API Key generation, shall be used to sign the JWT.
    - JWT is signed using HMAC-SHA256.
-
+   - The JWT is expiration time is maintained by the client.
 3. Make the web services calls by sending this JWT as the token value of the `Authorization: Bearer` header.
 4. Fabric verifies that the JWT is signed with the secret that matches to the "apk".
 
