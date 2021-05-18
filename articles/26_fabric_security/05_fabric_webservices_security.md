@@ -26,7 +26,7 @@ API key authentication is the simplest method because it can authenticate WS cal
 
 The API Key is sent as the token value of the `Authorization: Bearer` header, for example: `Authorization: Bearer ABC`, where API Key is "ABC".
 
-See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key (choose the "non secured" key)..
+See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) how to generate an API Key.
 
 The authorization and permissions are done according to the roles which are assigned to the API Key, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
 
@@ -45,11 +45,9 @@ The authorization and permissions are done according to the credentials that wer
 
 ### JWT: Signed by the WS client
 
-This method is the most secured, because the secret key is not sent on the transit layer at all and is known only to the client. 
-
 The authentication flow for this method works as follows:
 
-1. Create a secured API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions.
+1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. select the "secured" option, indicating that it is the client signing method.
 2. Generate a JWT, where:
    - It shall include "apk" claim with the value of the API Key, as part of the JWT payload.
    - The secret key, provided by Fabric during the API Key generation, is added to the JWT signature.
