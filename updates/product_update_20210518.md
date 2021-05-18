@@ -1,6 +1,6 @@
 ### The Fabric 6.5 Official Release
 
-We have just released Fabric 6.5 which includes the many enhancements, such as:
+We have just released Fabric 6.5 which includes the following enhancements, such as:
 
 * **FIPS Compliancy** - Fabric encryption algorithm can now be set as FIPs certified, implemented by Bouncy Castle FIPS Java API 1.0.2.1, holding CMVP Certificate #3514.
 * **User Identification and Access Management (IAM)** - Fabric can now provide user IAM for Web, Console and Web Services access, either using Fabric local repository or by using the organization’s identify provider (IDP) which Fabric is integrated with.
