@@ -9,11 +9,9 @@ This article describes the setup and integration steps to connect your Single-Si
 
 ## Configuration instructions: At Okta
 
-Note: The below might be simplified once Fabric will be added to OIN (Okta Integration Network).
-
 #### Launch the Wizard
 
-1. Log into Okta Admin console as an Admin. 
+1. Log into the Okta Admin console as an Admin. 
 
 2. In the Admin Console, go to **Applications** > **Applications** via the left navigation bar.
 
@@ -57,10 +55,10 @@ Note: The below might be simplified once Fabric will be added to OIN (Okta Integ
 
 #### Configure General settings
 
-6. You will go now thru several wizard steps. Configure the general settings at the '*General*' step as follows and then click '**Next**'
+6. You will go now through several wizard steps. Configure the general settings at the '*General*' step as follows and then click '**Next**'
 
-   - fill in app name 
-   - upload its logo (optional) 
+   - Fill in app name 
+   - Upload its logo (optional) 
 
    <table>
    <tbody>
@@ -76,13 +74,13 @@ Note: The below might be simplified once Fabric will be added to OIN (Okta Integ
 
 #### Configure SAML settings
 
-7. Fill in the following fields also based on information provided by Fabric:
+7. Fill in the following fields based on information provided by Fabric:
 
    - **Single sign on URL**, The location (ACS URL) where the SAML assertion is sent with a POST operation back to Fabric.
 
    - **Use this for Recipient URL and Destination URL**, Select this check box.
 
-   - **Allow this app to request other SSO URLs**, Selecting this option is sometimes useful for integration testing enables configuring multiple ACS URLs. When selecting it, a list of "Requestable SSO URLs" is opened where you can specify one or more entries. 
+   - **Allow this app to request other SSO URLs**, Selecting this option is sometimes useful for integration testing. It enables the configuration of  multiple ACS URLs. When selecting it, a list of "Requestable SSO URLs" is opened where you can specify one or more entries. 
 
    - **Audience URI (SP Entity ID)**, The intended audience of the SAML assertion. This is the Fabric **Entity ID**.
 
@@ -103,9 +101,9 @@ Note: The below might be simplified once Fabric will be added to OIN (Okta Integ
      </table>
      
      
-   - Click on **Show Advanced Settings** and fill in the following security settings properties. Note that Fabric is setting up to work with high security options and accordingly the following shall be set up:
+   - Click on **Show Advanced Settings** and fill in the following security settings properties. Note that Fabric is sets up to work with high security options and accordingly the following must be done:
    
-     - **Response**, Choose "*Signed*" to determine that the SAML authentication response message is digitally signed by the IdP.
+     - **Response**, Choose "*Signed*" to determine that the SAML authentication response message is digitally signed by the IDP.
    
      - **Assertion Signature**, Choose "*Signed*" to determine that the SAML assertion is digitally signed.
    
@@ -152,15 +150,15 @@ Note: The below might be simplified once Fabric will be added to OIN (Okta Integ
 
 11. Click on "View Setup Instructions"
 
-12. A new browser tab will be opened with the information that need to be copied to Fabric configuration (IDP URL and IDP issuer/entity ID) and the certificate key to be uploaded into Fabric, for signing the authentication requests.
+12. A new browser tab will be opened with the information that must be copied to Fabric configuration (IDP URL and IDP issuer/entity ID) and the certificate key to be uploaded into Fabric, for signing the authentication requests.
 
      <table><tbody><tr>    <td width="700pxl">    <img src="images/15_okta9.jpg">    </td></tr></tbody></table>
 
-13. The first parameter - Identity Provider SSO URL shall be then also copied to the *Single sign on URL* which described above at step #7.
+13. The first parameter - Identity Provider SSO URL must then also copied to the *Single sign on URL* which is described above in Step #7.
 
 
 
-NOTE: Other IDP tasks are out of this article scope, for example at Users and Roles assignments to the app.
+NOTE: Other IDP tasks are out of this article scope, for example Users and Roles assignments to the app.
 
 
 
