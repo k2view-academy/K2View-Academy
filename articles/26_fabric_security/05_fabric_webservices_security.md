@@ -53,7 +53,7 @@ The authorization and permissions are done according to the credentials that wer
 
 The authentication flow for this method works as follows:
 
-1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. Select the "secured" option, indicating that this is the client signing method.
+1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. Select the "secured" option, indicating that this is the client signing method. In such case, the "/api/authenticate" call, using the API Key, will be rejected, because this call is only available for cases where JWT is signed by Fabric.
 2. Generate a JWT, where:
    - It shall include "apk" claim with the value of the API Key, as part of the JWT payload.
    - The secret key, provided by Fabric during the API Key generation, shall be used to sign the JWT.
