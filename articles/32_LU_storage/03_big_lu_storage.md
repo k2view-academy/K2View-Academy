@@ -24,7 +24,7 @@ The chunk size is set using the config.ini file parameters, defined per node:
 
 * INSTANCE_CHUNK_SIZE, impacting the read from Cassandra (pagination) and write into Cassandra chunk size (default 10MB – 10485760 bytes).
 
-### Parallel Load Big LUI from Cassandra
+### Parallel Load Big LUI from Cassandra - Experimental Feature
 
 When loading the chunks of Big LUI from Cassandra to Fabric as part of the GET command, there is a trade-off between the performance of the load and the memory allocated to this process. To improve the performance of the load, you can define the number of threads that will be executed in parallel. When setting the number of threads, you must also define the maximum memory allowed to be used for the parallel load. 
 
