@@ -64,7 +64,7 @@ To summarize the values of an array, use the **self** keyword to access the Acto
   rows.forEach(row => {...}) 
 ```
 
-The **for...each** syntax is also supported and it enables JavaScript to iterate over an Iterable instance: 
+- The **for...each** syntax is also supported and it enables JavaScript to iterate over an Iterable instance: 
 
 ```javascript
   var sum = 0;
