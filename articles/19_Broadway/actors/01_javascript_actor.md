@@ -15,7 +15,7 @@ Click **Actions** > **Examples** in the [Main menu](../18_broadway_flow_window.m
 
 ### Special Keywords and Conventions
 
-The Actor's description includes the detailed explanation of the Actor's capabilities. Click ![image](../images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](../18_broadway_flow_window.md#actors-context-menu) and select **Description**.
+The Actor's description includes the detailed explanation of the Actor's capabilities. Click ![image](../images/99_19_dots.PNG) > **Description** in the right corner of the Actor.
 
 - The return value of a **JavaScript** Actor is the last expression in the **script** input parameter. The **return** keyword should not be written in the script whereby the **result** output parameter is used to return the Actor's result. For example, when the following code is written in the **JavaScript** Actor's last line, the value of either **a** or **b** is returned. 
 
@@ -37,7 +37,7 @@ To summarize the values of an array, use the **self** keyword to access the Acto
 
   For example, if you need to stop the iteration when a condition is true:
 
-```javascript  
+```javascript
   if ( xxx ) {
      contextLoop.stop();
   }
@@ -46,19 +46,16 @@ To summarize the values of an array, use the **self** keyword to access the Acto
 - To read data from the flow's arguments, use the **flowArgs** keyword. You can also use **flowArgs** to write data to the flow's context and refer to it in other Actors. The access to **flowArgs** arguments can be done using one of the following syntaxes: 
 
 ```javascript
-  //Access by name
-  print(flowArgs.v3); //read the value of argument v3
+  print(flowArgs.v3); //read the value of argument v3 - Access by name
   flowArgs["v3"] = "Hello"; //write into the argument v3
 
-  // Enumerate all arguments
-  for (var i in flowArgs) {
+  for (var i in flowArgs) {  // Enumerate all arguments
      print(flowArgs[i]); //read the value
      flowArgs[i] = null; //remove the value
      flowArgs[i] = "abc"; //write the value
   }
 
-  // Expose all flow args as Actor result 
-  flowArgs;
+  flowArgs;  // Expose all flow args as Actor result 
 ```
 
 - To iterate over a collection, use standard syntax: 
