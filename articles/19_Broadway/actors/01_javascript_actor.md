@@ -82,7 +82,7 @@ To summarize the values of an array, use the **self** keyword to access the Acto
 
 - An error is communicated by throwing an exception. For example: 
 
-```javascript 
+```javascript
   throw "Invalid Data Received" 
 ```
 
@@ -92,7 +92,7 @@ To summarize the values of an array, use the **self** keyword to access the Acto
   SumArray.result == ForEach.result && ForEach.result == 21 
 ```
 
-  where the **SumArray** and **ForEach** Actors precede the current Actor in the flow.
+   where the **SumArray** and **ForEach** Actors precede the current Actor in the flow.
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_stream_actors.md)
