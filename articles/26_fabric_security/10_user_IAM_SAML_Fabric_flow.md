@@ -34,7 +34,7 @@ Following is the logical flow that illustrate these steps:
 
 <img src="/articles/26_fabric_security/images/11_Fabric_SAML_login.jpg">
 
-See [here](/articles/26_fabric_security/12_web_ login.md) for more information about the user log in process.
+See [here](/articles/26_fabric_security/12_web_login.md) for more information about the user log-in process.
 
 
 
