@@ -585,30 +585,37 @@ Fabric has a **SEARCH** command that initiates a search on Elasticsearch. In add
 
 The Fabric **BROADWAY** command enables running a [Broadway flow](/articles/19_Broadway/02a_broadway_flow_overview.md) and providing the LU name and execution parameters using **param=value** syntax. The flow can be invoked by a command after it has been deployed. 
 
-There are two types of execution parameters:
+Below are the types of execution parameters:
 
 * [External input arguments](/articles/19_Broadway/07_broadway_flow_linking_actors.md) of a flow, if they exist.
 
 * Recovery parameters:
+  
   * **recoveryId**, unique ID for running the flow with a recovery point. Flow recovery is enabled only if the **recovery ID** is supplied.
-
+  
   * **recoveryTtl** (optional), *time to live* in seconds for the recovery point to be kept in the Cassandra **broadway_recovery_point** table under the [k2system keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md). The default value is defined in the Broadway *config.ini* section with the RECOVERY_TTL_SEC key.
-
+  
   * **recoveryMaxTries** (optional), maximum number of retries until the flow is deleted from the Cassandra **broadway_recovery_point** table. The default value is defined in the Broadway *config.ini* section with the RECOVERY_MAX_RETRIES key.
-
+  
     [Click for more information about Broadway Recovery Points](/articles/19_Broadway/29_recovery_point.md).
+  
+* Profiler Telemetry:
+  
+  * To invoke the Broadway profiler, set **profilerTelemetry** to true. This will add the profiler results to the command results, under the **profilerTelemetry** key.
+  
+    [Click for more information about Broadway Profiler](/articles/19_Broadway/31_broadway_profiler.md).
 
-**Syntax**
-
-~~~
-broadway <LUT>.<FLOW_NAME> [param1=value1, param2=value2...]
-~~~
-
-**Example:**
+**Example of running in a recovery mode:**
 
 ```
-fabric>Broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
+fabric>broadway AT_MPI.files_test recoveryId=rl1, recoveryTtl=3000, recoveryMaxTries=5, param1=test1, param2=test2;
 ```
+
+**Example of running with a profiler:**
+
+~~~
+fabric>broadway P2.getLUVariable luName='P2' variableName='TDM_TAR_ENV_NAME' profilerTelemetry=true;
+~~~
 
 ### Queries Helpers
 
