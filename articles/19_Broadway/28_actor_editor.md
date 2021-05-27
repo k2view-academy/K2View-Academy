@@ -46,6 +46,17 @@ Broadway enables you to create an Actor that inherits its properties and behavio
    }
    ~~~
 
+   Or
+
+   ~~~java
+   public class <class_name> extends <core_actor_name> {
+   }
+   ~~~
+
+   * Implement an **action** method to define the Actor's logic.
+   * If the Actor maintains a state, implement a **close** method to reset it.
+   * The Actors are serialized in order to display the input/output values in the Data Viewer, so make sure that Actor's fields are either serializable or transient. 
+
 3. Once this new Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
 
 4. Populate the **Class** with your Java class's path. For example, when the Java class is located under the Logical Unit, the class is:
@@ -54,7 +65,7 @@ Broadway enables you to create an Actor that inherits its properties and behavio
    com.k2view.cdbms.usercode.lu.<lu_name>.<class_name>
    ~~~
 
-5. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition.
+5. Click **Add Input** and **Add Output** to define the Actor's input and output arguments according to the Java class definition. Note that the Actor's input and output arguments must correspond the Java class definition. 
 
 ### Examples of New Actor Creation
 
