@@ -55,7 +55,7 @@ Broadway enables you to create an Actor that inherits its properties and behavio
 
    * Implement an **action** method to define the Actor's logic.
    * If the Actor maintains a state, implement a **close** method to reset it.
-   * Since the Actors are serialized when running in [Recovery mode](29_recovery_point.md) and its input/output values are serialized in order to be displayed in the Data Viewer, make sure that Actor, its members and input/output fields are either serializable or transient. 
+   * Since the Actors are serialized when running in [Recovery mode](29_recovery_point.md) and their input/output values are serialized to be displayed in the Data Viewer, make sure that Actor, its members and input/output fields are either serializable or transient. 
 
 3. Once this new Java class is ready, create a new Actor. Right click the **Broadway** folder and click **New Actor**.
 
