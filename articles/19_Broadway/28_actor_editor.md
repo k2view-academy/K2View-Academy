@@ -86,7 +86,9 @@ Let's create a new **CheckMaxVal** Actor that inherits its properties and behavi
 
 **New Actor Which Inherits from Custom Java Class**
 
-When creating a new Actor which inherits from custom Java class, do all the steps until the selection of **Parent**. Instead, populate the **Class** with your customer Java class name. Then define the required input and output arguments. 
+When creating a new Actor which inherits from custom Java class, do all the steps until the selection of **Parent**. Instead, populate the **Class** with your customer Java class name. 
+
+Then define the required input and output arguments and run the Actor to debug it. 
 
 ​		![image](images/99_10_editor_3.PNG)
 
