@@ -9,7 +9,7 @@ To  create a new Search Engine interface:
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.
 2. Select **Search Engine** from the dropdown menu.
-3. Populate the connection settings and click **Save**. Note that the interface name must be **search** (in small letters).
+3. Populate the connection settings and click **Save**. Note that starting from V6.4.3 the interface name must be **search** (in small letters).
 
 ### Search Engine Interface Settings
 
