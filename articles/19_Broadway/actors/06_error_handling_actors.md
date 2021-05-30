@@ -8,7 +8,7 @@ For information about the basic Broadway Error Handling mechanism, refer to [Err
 
 ### How Do I Use the ErrorHandler Actor?
 
-The **ErrorHandler** Actor can be used as an error handler to enable different handling of various exceptions. It can be configured to suppress one type of exception and not to suppress others, or to invoke an inner flow when an exception is thrown. When the error is suppressed, the error handler returns **true** and the flow continues. 
+The **ErrorHandler** Actor can be used as an error handler to enable different handling of various exceptions. It can be configured to suppress one type of exception and not to suppress others, or to invoke an inner flow when an exception is thrown. When the error is suppressed, the error handler returns **true** and the flow continues. When the inner flow is invoked, the **error** object is passed to it and it includes all the exception details, such as the error code and message, the flow, Stage and the Actor where the error occurred.
 
 The exceptions are classified into three types: SQL error, HTTP error and exception. The SQL errors are divided into Unique constraint or other. Note that the Unique constraint exception validation is only done for Oracle, DB2, SQLite and SQL servers. 
 
@@ -31,6 +31,8 @@ The **ErrorFields** Actor can be used to get detailed information about an excep
 
 
 
+When the **ErrorFields** Actor is used in an inner flow that is invoked from the **ErrorHandler** Actor, the **error** input argument must be defined as External. Then the error details are automatically passed from the calling flow.
 
+![image](../images/99_actors_06_4.PNG)
 
 [![Previous](/articles/images/Previous.png)](05_db_actors.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_masking_and_sequence_actors.md)
