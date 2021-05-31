@@ -25,4 +25,4 @@ Click for more information about [Fabric Web Services Security](/articles/26_fab
 
 
 
-[![Previous](/articles/images/Previous.png)](02_tdmdb_general_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+[![Previous](/articles/images/Previous.png)](02_tdmdb_general_parameters.md)
