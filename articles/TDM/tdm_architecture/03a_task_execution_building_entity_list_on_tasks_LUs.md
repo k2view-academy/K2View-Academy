@@ -63,7 +63,7 @@ Click for an [execution of hierarchical BE](/articles/TDM/tdm_overview/03_busine
 
 The generated entity list is based on a JOIN of the [task_execution_entities](02_tdm_database.md#task_execution_entities) and the [TDM relationship tables](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm-relationship-tables):
 
-### Insert without Load Task
+### Insert without Delete Load Task
 
 Select the children IDs from the task_execution_entities and [tdm_lu_type_relation_eid](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid) tables:
 
