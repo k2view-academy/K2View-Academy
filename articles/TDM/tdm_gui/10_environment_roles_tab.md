@@ -55,7 +55,7 @@ When an Environment Type is Both it can have both read and write access to both 
 
 - Attach testers to the TDM Environment role. The connection of a tester to a testing environment is established by connecting the tester to the environment's role.  
 
-- An environment's role can be attached to a selected list of testers or to all TDM users.
+- A TDM Environment's role can be attached to selected testers or to all TDM users.
 
 Note that although an environment's role without testers is not usable, the **Testers** setting is optional and enables creating roles and then adding them to testers at a later stage.
 
