@@ -304,14 +304,14 @@
 			"comm display text": "Ask questions or seek help on Fabric’s implementation. Check our forum that provides advice and know-how to help you at any phase of your project’s lifecycle.",
 			"comm icon": "images/community_icon2.png",
 			"visible": true,
-			"path":""
+			"path": ""
 		},
 		{
 			"comm display name": "Blogs",
 			"comm display text": "Featuring a set of regularly updated insightful articles aiming at contextualizing your business requirements using K2View Fabric’s capabilities.",
 			"comm icon": "images/community_icon3.png",
 			"visible": true,
-			"path": "../community/blog"
+			"path": ""
 		},
 		{
 			"comm display name": "Webinars",
