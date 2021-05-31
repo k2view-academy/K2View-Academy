@@ -69,7 +69,7 @@ Select the children IDs from the task_execution_entities and [tdm_lu_type_relati
 
 ```sql
 SELECT rel. rel.lu_type2_eid as child_entity_id
-From FROM task_execution_entities t, tdm_lu_type_relation_eid rel 
+FROM task_execution_entities t, tdm_lu_type_relation_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
 and t.lu_name = <parent lu name> 
@@ -88,7 +88,7 @@ Select the children IDs from the task_execution_entities and TDM relationship ta
 
 ```sql
 SELECT rel. rel.lu_type2_eid as child_entity_id
-From FROM task_execution_entities t, tdm_lu_type_relation_eid rel 
+FROM task_execution_entities t, tdm_lu_type_relation_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
 and t.lu_name = <parent lu name> 
@@ -117,7 +117,7 @@ Select the children IDs from the task_execution_entities and [tdm_lu_type_rel_ta
 
 ```sql
 SELECT rel. rel.lu_type2_eid as child_entity_id
-From FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel 
+FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
 and t.lu_name = <parent lu name> 
