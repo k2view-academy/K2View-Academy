@@ -1,18 +1,18 @@
 # Environment Roles Tab
 
-Roles are set on an environment level and are assigned to testers. Roles define a list of permissions related to the creation and execution of TDM tasks in an environment. Testers can only create and execute a TDM task if they are assigned to a role that is assigned to the environment. 
+TDM Environment Roles are set on an environment level and are assigned to testers. Roles define a list of permissions related to the creation and execution of TDM tasks in an environment. Testers can only create and execute a TDM task if they are assigned to a role that is assigned to the environment. 
 
-A role is an **optional setting** in an environment and can be created, edited or deleted by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  An environment without a role or without testers attached to a role, can be used only by Admin users or by  Environment Owners.
+A TDM Environment role is an **optional setting** in an environment and can be created, edited or deleted by an Admin user or the [Environment Owner](08_environment_window_general_information.md#environment-owners).  An environment without a role or without testers attached to a role, can be used only by Admin users or by  Environment Owners.
 
 An environment's roles are displayed in the **Roles tab** in the Environment window:
 
 - To create a new role, click **New Role**, populate the role's settings and then click **Add**.
 - To open a role, click the **Name** of the role and then click **Save Changes**. 
-- To delete a role, click the [![be_Example](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Role window.
+- To delete a role, click the ![be_Example](images/delete_icon.png) icon in the right corner of the Role window.
 
 ## Role Window 
 
-The Role window defines the role's permissions and the list of testers assigned to it as displayed in the following example.
+The Role window defines the TDM Environment role's permissions and the list of testers assigned to it as displayed in the following example:
 
 ![role window](images/env_role_window.png)
 
@@ -20,11 +20,11 @@ The Role window has the following settings:
 
 ### Name
 
-The name of the role. (Mandatory). Note that a specific name can be assigned to only one active role. An error is displayed when an attempt is made to create several roles with the same name. 
+The name of the TDM Environment role. (Mandatory). Note that a specific name can be assigned to only one active role. An error is displayed when an attempt is made to create several roles with the same name. 
 
 ### **Description**
 
-A description of the role. (Optional). 
+A description of the TDM Environment role. (Optional). 
 
 ### Read and Write and Number of Entities
 
@@ -32,7 +32,7 @@ A description of the role. (Optional).
 
 - Write access can be granted on a target environment, i.e. the environment type is **Source** or **Both**.
 
-When an Environment Type is Both it can have both read and write access to both the source and target. Roles in these environments can have both read and write access or read or write only access.
+When an Environment Type is Both it can have both read and write access to both the source and target. The TDM Environment roles in these environments can have both read and write access or read or write only access.
 
   **Example:**
 
@@ -53,25 +53,25 @@ When an Environment Type is Both it can have both read and write access to both 
 
 ### Testers
 
-- Attach testers to the environment's role. The connection of a tester to a testing environment is established by connecting the tester to the environment's role.  
+- Attach testers to the TDM Environment role. The connection of a tester to a testing environment is established by connecting the tester to the environment's role.  
 
-- A role can be attached to a selected list of testers or to all TDM users.
+- An environment's role can be attached to a selected list of testers or to all TDM users.
 
-Note that although a role without testers is not usable, the **Testers** setting is optional and enables creating roles and then adding them to testers at a later stage.
+Note that although an environment's role without testers is not usable, the **Testers** setting is optional and enables creating roles and then adding them to testers at a later stage.
 
-#### Adding all TDM Users to the Role
+#### Adding all TDM Users to the  TDM Environment Role
 
 The **All** option is used to enable the role for all TDM users. To do so, click **Testers** and then select **ALL**.
 
-#### Adding all TDM Users to a Role
+#### Adding Selected TDM Users to the TDM Environment Role
 
-1. Click **Testers** and select a user from the list.
+1. Click **Testers** and select a user from the list or click the ![plus icon](images/plus_icon_prod_version.png) icon type manually the user name.
 
-2. Click **Testers** again and select another user if needed.
+2. Click **Testers** again and select another user, or type manually a user name,  if needed.
 
 **Notes**
 
-- A tester can be attached to only one role per environment and cannot be attached to different roles in the same environment.
+- A tester can be attached to only one TDM Environment role per environment and cannot be attached to different TDM Environment roles in the same environment.
 - If a tester is attached to a specific role, this role overrides the **ALL** role for this tester.
 
 ### Role Permissions

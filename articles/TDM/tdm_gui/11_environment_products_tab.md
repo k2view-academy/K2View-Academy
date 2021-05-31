@@ -6,7 +6,7 @@ An environment's products are displayed in the Environment window's **Products t
 
 - To add a new product to an environment, click **Add Product**, populate the product's setting and then click **Add**.
 - To open a selected product, click the **Name** of the product and then click **Save Changes**. 
-- To delete a product, click the [![be_Example](/articles/TDM/tdm_gui/images/delete_icon.png)](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Product window.
+- To delete a product, click the [![be_Example](images/delete_icon.png)](/articles/TDM/tdm_gui/images/delete_icon.png) icon in the right corner of the Product window.
 
 ## Environment Product Window 
 
@@ -17,7 +17,7 @@ The Product Window holds the following settings:
 
 - **Product Version**, the version of the installed product in the environment. For example, the Production environment has CRM V1 and the Dev1 environment has CRM V1.5.  Select a version from the dropdown list.
 
-  [Click for more information about supporting multiple product versions via TDM].
+  Click for more information about [supporting multiple product versions via TDM](/articles/TDM/tdm_implementation/13_tdm_implementation_supporting_different_product_versions.md).
 
   
 

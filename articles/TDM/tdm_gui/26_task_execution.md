@@ -14,9 +14,9 @@ The following users can execute a TDM task:
   - **Load tasks**, the environment owner of the target environment.
 - **Testers**:
   - The task's creator.
-  - Other testers that are related to the same role as the task's creator:
-    - **Load tasks**, testers that are related to the same role in the target environment as the task's creator.
-    - **Extract tasks**, testers that are related to the same role in the source environment as the task's creator. 
+  - Other testers that are related to the same TDM Environment role as the task's creator:
+    - **Load tasks**, testers that are related to the same TDM Environment role in the target environment as the task's creator.
+    - **Extract tasks**, testers that are related to the same TDM Environment role in the source environment as the task's creator. 
 
 ## Task Execution Order
 

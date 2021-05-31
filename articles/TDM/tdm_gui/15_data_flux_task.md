@@ -20,7 +20,7 @@ The following users can create a Data Flux task:
 
 1. Admin users.
 2. Environment owner users who can create a Data Flux task for their environment.
-3. Testers who can create a TDM task for environments with **Entity Versioning** permissions that are attached to their [role](/articles/TDM/tdm_gui/10_environment_roles_tab.md).  
+3. Testers who can create a TDM task for environments with **Entity Versioning** permissions that are attached to their [TDM Environment role](/articles/TDM/tdm_gui/10_environment_roles_tab.md).  
 
 
 

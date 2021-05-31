@@ -26,7 +26,7 @@ This table holds all [TDM tasks](14_task_overview.md) defined in  the TDM GUI.
   - **task_status**: each task is created in **Active** task_status. Deleted tasks have an **Inactive** task_status and are not physically deleted from this table.
   - **task_execution_status**: 
     - **Active** - the task can be executed.
-    - **onHold** - [pause the task] and set it on-hold.
+    - **onHold** - [pause the task](/articles/TDM/tdm_gui/26_task_execution.md#holding-task-execution) and set it on-hold.
     - **Inactive** - deleted task.
 
   ### Requested Entities Columns

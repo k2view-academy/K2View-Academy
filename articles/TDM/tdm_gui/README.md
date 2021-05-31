@@ -2,7 +2,8 @@
 
 <ul>
 <li><a href="01_tdm_gui_overview.md">TDM GUI Overview</a></li>
-<li><a href="02_tdm_gui_user_types.md">TDM GUI - User Types</a></li>    
+<li><a href="02_tdm_gui_user_types.md">TDM GUI - Permission Groups (User Types)</a></li>   
+<li><a href="02a_permission_group_mapping_window.md">TDM GUI - Permission Group Mapping Window</a></li>  
 <li><a href="03_tdm_gui_data_centers_window.md">Data Centers Window</a></li>
 <li><a href="04_tdm_gui_business_entity_window.md">Business Entity Windows</a></li>    
 <li><a href="05_tdm_gui_product_window.md">Product Windows</a></li>

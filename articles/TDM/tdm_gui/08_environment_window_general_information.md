@@ -2,16 +2,13 @@
 
 The General Information section in the Environment Window holds the following information:  
 
-Note: Always click **Save Changes** after editing the General Information section.
-
 ### Environment Name
 
 Mandatory settings.
 
 Populate the following settings:
 
-- **TDM Environment Name**, when creating a TDM task, select the name of the source and target environments. It is recommended to set the same name in the **TDM Environment Name** and **Fabric Environment Name** settings. 
-- **Fabric Environment Name**, select the environments deployed to Fabric from the dropdown list. 
+- **TDM Environment Name**, when creating a TDM task,  select the environments deployed to Fabric from the dropdown list. 
 
 ### Environment Additional Information
 
@@ -41,7 +38,7 @@ Set the environment type to one of the following:
 
 Optional setting. 
 
-Override mode can be set if the **Environment Type** is **Source** or **Both**. This setting overrides the default Fabric [Sync mode](/articles/14_sync_LU_instance/02_sync_modes.md)  when extracting the selected entities from the source environment and sets another Sync mode which can be overridden on both the [environment and task] levels. 
+Override mode can be set if the **Environment Type** is **Source** or **Both**. This setting overrides the default Fabric [Sync mode](/articles/14_sync_LU_instance/02_sync_modes.md)  when extracting the selected entities from the source environment and sets another Sync mode which can be overridden on both the environment and task levels. 
 
 The following values can be set in Override Sync Mode settings:
 
@@ -49,16 +46,16 @@ The following values can be set in Override Sync Mode settings:
 
 Do not sync the entities from the source when running a TDM task with the environment as a source, instead get the entities from Fabric. Note that if the entities do not exist in Fabric, the task's execution will return an error. This mode is needed when access to the source environment is limited by the organization.
 
-**Example**:
+  Example:
 
-- The Production team allocates a predefined window to extract a subset of entities from Production. Access to Production is restricted apart from to the predefined window.
+- The Production team allocates a predefined window to extract a subset of entities from Production. Access to Production is restricted to the predefined window.
 - An [Extract task](16_extract_task.md) must be created and run to extract a large subset of entities from Production and to migrate them into Fabric. The **Override Sync Mode** in the **Production** TDM environment must be set to **Do not Sync** to avoid additional access to Production. Other TDM tasks in the Production source environment get data entities from Fabric. 
 
 #### Always Sync  
 
-Always sync the entities from the source when running a TDM task with the environment as a source.  
+Always sync the entities from the source when running a TDM task with the environment as a source. 
 
-Click for more information on [how overriding the sync mode impacts the task execution] process.
+Click for more information on [how overriding the sync mode impacts the task execution](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) process.
 
 ### Environment Owners
 
@@ -69,24 +66,20 @@ Click for more information on [how overriding the sync mode impacts the task exe
 
 Click for more information about [environment roles and permissions](10_environment_roles_tab.md).
 
-#### Who is an Environment Owner?  
+Click for more information about the [Owner TDM Permission Group](02_tdm_gui_user_types.md#owner).
 
-Environment owner users are usually Testing team leaders and are defined under a dedicated group in the **LDAP** system.
+#### How Do I Add or Remove Environment Owners to or from an Environment? 
 
-To enable setting authorized users as environment owners in the TDM GUI, the Group Name must be also defined in the **TDM GUI configuration file** [config.js] in **ownersGroupName**.
+- Click Environment Owners and select a user from the list or type the user name. 
 
-Note that the TDM GUI installation includes an internal LDAP for development. The environment owners Group Name in the internal LDAP is **k2venvownerg**. Therefore the default value of **ownersGroupName** in the config.js file is **k2venvownerg**.
-
-#### How Do I Add or Remove Environment Owners To or From an Environment? 
-
-- Click Environment Owners and select a user from the list. 
-
-- Click Environment Owners again and select another user from the list to set an additional environment owner.
+- Click Environment Owners again and select another user from the list or type the user name to set an additional environment owner.
 
 - Click the X on an environment owner/s username to remove them from the environment:
 
   ![env owner](images/environment_owners.png)
-
+  
+  
+*Always click **Save Changes** after editing the General Information section.*
 
 
 

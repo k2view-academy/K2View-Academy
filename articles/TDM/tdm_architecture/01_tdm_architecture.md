@@ -11,7 +11,7 @@ The K2View TDM has the following components:
 ![tdm_architecture](images/tdm_architecture.png)
 
 ### TDM GUI
-The TDM web application offers self-service implementation of the following activities:
+The TDM web application is pre-integrated in [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md) and offers self-service implementation of the following activities:
 - TDM definitions, setting TDM Business Entities, environments, roles and permissions. 
 - Creation and execution of TDM tasks that provide a selected subset of entities or Reference tables to the selected environment. 
 
@@ -22,6 +22,8 @@ TDM settings and tasks are kept in the TDM PostgreSQL DB. Both the TDM GUI and F
 ### Fabric
 
 Fabric acts as a staging DB for the provisioned entities and ETL layer for extracting data from data sources and loading it to the target environment.
+
+In addition, the TDM back-end APIs and processes are defined and executed in Fabric. The TDM back-end APIs and processes are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
 
 #### Fabric as a Staging Repository
 

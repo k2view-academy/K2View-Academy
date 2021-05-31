@@ -15,7 +15,7 @@ A Load task has the following tabs:
 
 Check **Set Global Variables** to open the [Task Globals](23_task_globals_tab.md) tab.
 
-Set **Reference** to **Reference Only** or **Both - reference and entities** to open the [Reference] tab.
+Set **Reference** to **Reference Only** or **Both - reference and entities** to open the [Reference](24_task_reference_tab.md) tab.
 
 ## General Tab
 
@@ -56,21 +56,18 @@ This setting is displayed only for a regular mode task, that is when Entity Vers
 
   - Admin and Environment owners are set any number.
 
-  - Testers can set the number of entities that do not exceed the limited minimum number set for their roles for the selected source and target environments. For example, if a tester can read up to 100 entities from the source environment and write up to 5 entities into the target environment, then the maximum number of entities that can be set by the tester is 5. 
+  - Testers can set the number of entities that do not exceed the limited minimum number set for their TDM Environment roles for the selected source and target environments. For example, if a tester can read up to 100 entities from the source environment and write up to 5 entities into the target environment, then the maximum number of entities that can be set by the tester is 5. 
 
-  - To validate the Number of Entities set by testers, click **Next** to move to the next tab. If the tester exceeds their limitation, an error message is displayed. For example:
-
-     
-
-    ![validation error](images/task_number_of_entities_validation.png)
+  - To validate the Number of Entities set by testers, click **Next** to move to the next tab. If the tester exceeds their limitation, an error message is displayed.
 
   
+
 
 ### Environment Names
 
 - Select a **source environment** from the dropdown list of active TDM environments with [environment type](08_environment_window_general_information.md#environment-type) **Source** or **Both**. 
 - Select a **target environment** from the dropdown list of active TDM environments with [environment type](08_environment_window_general_information.md#environment-type) **Target** or **Both**. 
-Note that testers can only select a source environment they are attached to by a Read [role](10_environment_roles_tab.md) and target environment they are attached to by a Write [role](10_environment_roles_tab.md). 
+Note that testers can only select a source environment they are attached to by a Read [TDM Environment role](10_environment_roles_tab.md) and target environment they are attached to by a Write [TDM Environment role](10_environment_roles_tab.md). 
 
 ### Business Entity
 

@@ -53,11 +53,11 @@ Check to [override Globals on a task level](23_task_globals_tab.md).
 ### Environment Name
 
 - Select a source environment from the dropdown list of active TDM environments with **Source** or **Both** [environment types](08_environment_window_general_information.md#environment-type). 
-- Note that tester users can only select an environment they are attached to by a [role](10_environment_roles_tab.md).
+- Note that tester users can only select an environment they are attached to by a [TDM Environment role](10_environment_roles_tab.md).
 
 ### Retention Period
 
-This is the retention period (TTL) set on the extracted LUIs. When this period ends, the LUIs are **automatically deleted** from Fabric and are no longer available. 
+This is the retention period set on the extracted LUIs. When this period ends, the LUIs are **automatically deleted** from Fabric and are no longer available. 
 
 Note that when the Retention Period is set to zero, no retention period is set on the extracted LUIs.
 
@@ -65,7 +65,7 @@ Note that when the Retention Period is set to zero, no retention period is set o
 
 **The retention period is optional on a regular extract task.**
 
-The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**. The default retention period displayed on the screen and the maximum retention period is configured in the TDM [config.js](/articles/TDM/tdm_configuration/01_tdm_gui_configuration.md) file.
+The start date of the retention period is the task's execution time. The **retention period** can be set in **minutes**, **hours**, **days**, **weeks**, or **years**.
 
 **Example:** 
 
@@ -110,14 +110,14 @@ Populate the list of entities to process separated by a comma.
 
 Notes:
 
-- The number of entities populated by the tester user is [limited by their role](10_environment_roles_tab.md#read-and-write-and-number-of-entities). 
+- The number of entities populated by the tester user is [limited by their environment's role](10_environment_roles_tab.md#read-and-write-and-number-of-entities). 
 - Populate the Entity ID as populated in the source environment. For example, populate the Entities List with 1, 2 to extract Customers 1 and 2. The TDM execution process  [concatenates the required components](/articles/TDM/tdm_implementation/01_tdm_set_instance_per_env_and_version.md) to Each Entity ID when building its LUI.
 
 ## Request Parameters
 
 This tab is only displayed for a regular mode task, i.e. the **Entity Versioning** setting is unchecked.  This tab holds the following optional setting: **Request Up to Date Entity**. 
 
-By default, the Requested Up to Date Entity is unchecked. You can check this setting to override the Sync mode on a task level and set the Sync mode of the task execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md). A tester can select this option only if their **Read** [role](10_environment_roles_tab.md#role-permissions) enables it.
+By default, the Requested Up to Date Entity is unchecked. You can check this setting to override the Sync mode on a task level and set the Sync mode of the task execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md). A tester can select this option only if their **Read** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
 
 ## Execution Timing
 
@@ -127,7 +127,7 @@ The following options are available for task execution:
 
 - **Execution by Request**, the default option.
 
-- **Scheduled execution**, set scheduling parameters to automatically execute the task based on the scheduling parameters. Note that a tester can select this option only their  role has a scheduling permission.
+- **Scheduled execution**, set scheduling parameters to automatically execute the task based on the scheduling parameters. Note that a tester can select this option only if their TDM Environment role has a scheduling permission.
 
 Click for more information about [TDM task scheduling](22_task_execution_timing_tab.md).
 

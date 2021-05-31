@@ -2,49 +2,45 @@
 
 The TDM GUI is a web-based application that helps users to easily control and manage test data. It has two main functions:
 
-- TDM administrative activities, defining TDM Business Entities, environments, roles and permissions.
-- TDM copy activities, creating and executing TDM tasks that provide a selected subset of entities or Reference tables to a selected environment.
+- TDM administrative activities: Defining TDM Business Entities, environments, roles and permissions.
+- TDM copy activities: Creating and executing TDM tasks that provide a selected subset of entities or reference tables to a selected environment.
 
 TDM settings and tasks are saved in the [TDM PostgreSQL DB](/articles/TDM/tdm_architecture/02_tdm_database.md). Each TDM activity created by a user via the TDM GUI updates the TDM DB. 
 
 The TDM GUI uses APIs to connect to the TDM DB to retrieve and update TDM settings and tasks.
 
-## TDM - Operational Modes
-
-TDM can operate in two modes:
-
-- DataFlux mode, which enables the following [Data Flux](/articles/TDM/tdm_overview/02_tdm_glossary.md#data-flux) features:
-  - Creating extract tasks.
-  - Adding a versioning mode to load tasks. 
-
-- Regular mode, which enables creating regular load tasks without versioning by marking extracted entities with a Task Name and Extraction Timestamp.
-
-The TDM operational mode is set in the **fluxMode** field in the [config.js] file in the TDM GUI server (/usr/local/k2view/TDM/k2vtdmbe location):   
-
-- **fluxMode** = **True** (default). 
-- **fluxMode** = **False**.   
-
 ## TDM GUI - Login
 
-Connect to the TDM GUI using the following URL: `http://<TDM server>:4001/#/login.`
+The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).  The user logins into the Fabric Web Framework and **Fabric authenticates the user**.  
 
-Populate the username and password. 
+Fabric works with several authentication providers.  Each authenticator is responsible for user authentication, and provides user-ID and his roles. The following are the supported by Fabric as authentication providers:
 
-Note that since the TDM authenticates users and passwords via LDAP, all users must be defined in the LDAP system. 
+- **Fabric**, for console, WS and web access, using its repository. This is Fabric's default authentication method. 
+- **LDAP** server, for console, WS and web access. Done via LDAP integration. 
+- **ADLDAP** (Active Directory) server, for console, WS and web access. Done via LDAP integration. 
+- **SAML** server, for web and WS access. Done via SAML IDP integration. 
+
+[Click for more information about Fabric's User Identification and Access Management](/articles/26_fabric_security/07_user_IAM_overview.md).
+
+To connect the TDM GUI log in the Fabric Web Framework, click the applications menu icon: ![web framework app menu](/articles/30_web_framework/images/30_02_icon.PNG), and select the TDM option:
+
+![application list](images/fabric_web_applications_list.png)
+
+
+
+ 
 
 ## TDM GUI Navigation - General
 
-### TDM Project Navigation Tree
+### TDM Navigation Tabs
 
-The TDM navigation tree displays different TDM sections on the left of the screen:
+The following tabs are displayed when selecting the TDM option in the applications menu and opening the TDM application:
 
 ![tdm navigation](images/tdm_gui_navigation_pane.png)
 
-                             
+​                             
 
-To move between sections, click the option in the TDM navigation tree.
-
-Click the Tooltip icon ![tooltip](images/tdm_gui_tooltip_icon.png) in the upper left of the TDM window to display or hide the labels next to the icons in the TDM navigation tree. 
+To move between sections, click the required tab.
 
 ## TDM Breadcrumbs 
 
@@ -52,9 +48,8 @@ The TDM GUI uses breadcrumbs as a graphical control element to aid navigation ac
 
 ![breadcrumbs](images/breadcrumbs_example.png)
 
-- Click **Task Execution Summary - load2Roots** to display an executed **load2Roots** task. 
-- Click **Tasks** to display all executed tasks.
-- Click **Home** to return to the TDM home page.
+- Click **Task Execution Summary - lo111s** to display the executions list of **lo111** task. 
+- Click **Tasks** to display all TDM tasks.
 
 ### TDM Soft Delete
 

@@ -24,4 +24,4 @@ The LUI of Customer 123_4 and environment ENV1 is **ENV1@123_4**.
 
 
 
-[![Previous](/articles/images/Previous.png)](01_tdm_gui_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
+[![Previous](/articles/images/Previous.png)](01_tdm_installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)

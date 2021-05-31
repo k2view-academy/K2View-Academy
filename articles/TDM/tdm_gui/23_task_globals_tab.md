@@ -28,5 +28,5 @@ Click **Add Global** to add a Global to a task. A popup window opens:
 
 
 
- [![Previous](/articles/images/Previous.png)](23_task_globals_tab.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](24_task_reference_tab.md)
+ [![Previous](/articles/images/Previous.png)](22_task_execution_timing_tab)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](24_task_reference_tab.md)
 

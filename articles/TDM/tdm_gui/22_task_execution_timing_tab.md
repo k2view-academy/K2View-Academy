@@ -3,13 +3,13 @@
 The Task Execution Timing tab is the last tab in the Task window and enables setting the execution timing options. Select one of the following options:
 
 - **Execution by Request**, click ![execution](images/execute_task_icon.png) to execute the task.
-- **Scheduled Execution**, sets the automatic execution of a task via a [TDM Scheduler process] on predefined intervals.  For example, execute the task every Monday at 2:15 AM.
+- **Scheduled Execution**, sets the automatic execution of a task via a TDM Scheduler process on predefined intervals.  For example, execute the task every Monday at 2:15 AM.
 
 ![execution timing example1](images/task_scheduling_parameters_example1.png)
 
 Notes:
 
-- Testers can select Scheduled Execution only when their [role](10_environment_roles_tab.md#role-permissions) has permissions to select this method for the target environment. 
+- Testers can select Scheduled Execution only when their [TDM Environment role](10_environment_roles_tab.md#role-permissions) has permissions to select this method for the target environment. 
 - To execute a scheduled task, click ![execution](images/execute_task_icon.png).
 
 ### Scheduled Execution Parameters
@@ -17,7 +17,7 @@ Notes:
 The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling parameters can be populated by either:
  - Selecting the **Advanced** tab and populating the **crontab** value manually. Set a **Quartz crontab expression**. 
  - Selecting another tab and setting the scheduling parameters using the TDM Wizard. The following options are available:
-  
+
  <table width="900pxl">
 <tbody>
 <tr>
@@ -89,7 +89,7 @@ The Execution Time Interval is saved in TDM as a **crontab** value. Scheduling p
 </tr>
 </tbody>
 </table>
-    
+​    
 
 The **End By** setting can be set to run a task by the Scheduler until a predefined date. For example, run the task every week till the end of February.
 

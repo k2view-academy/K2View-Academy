@@ -17,7 +17,7 @@ By default the **Override Sync Mode** setting is unchecked. When checked, the de
 The following options can be selected to override the Sync mode:
 
 - **Do not Sync Source Data**, get the data from Fabric and do not access the source environment.
-- **Request Up to Date Entity**, set the Sync mode of the task's execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md) to get the most updated data of the processed entities. Testers can select this option only if their **Read** [role](10_environment_roles_tab.md#role-permissions) enables it.
+- **Request Up to Date Entity**, set the Sync mode of the task's execution to [Force](/articles/14_sync_LU_instance/02_sync_modes.md) to get the most updated data of the processed entities. Testers can select this option only if their **Read** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
 
 ### Operation Mode
 
@@ -38,7 +38,7 @@ The selected entities are deleted from the target testing environment without be
 
 Notes:
 
-- Testers can select a Delete option if their **Write** [role](10_environment_roles_tab.md#role-permissions) enables it.
+- Testers can select a Delete option if their **Write** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
 - Deleted flows must be implemented in the Fabric implementation. Click for more information about the [delete implementation].
 - Delete options are not displayed for a task with the [Create Synthetic Entities](18_load_task_requested_entities_regular_mode.md#create-synthetic-entities) selection method, since the Synthetic method creates new clones (replicas) of the selected entity. 
 
@@ -52,7 +52,7 @@ When checked, the task execution process replaces the sequences of all selected 
 
 Notes:
 
-- Testers can check this setting if their **Write** [role](10_environment_roles_tab.md#role-permissions) enables it.
+- Testers can check this setting if their **Write** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
 - The **Replace Sequence** setting is not displayed in the following cases:
   - A task with a [Create Synthetic Entities](18_load_task_requested_entities_regular_mode.md#create-synthetic-entities) selection method, since the Synthetic method creates new clones (replicas) of the selected entity and replaces the sequences on each clone.
   - When selecting **Delete Entity without Load** as an operation mode, since the TDM task only deletes the selected entities and does not load new data into the target environment.

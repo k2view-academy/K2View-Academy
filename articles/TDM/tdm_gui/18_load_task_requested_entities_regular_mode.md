@@ -22,7 +22,7 @@ Notes:
 
 Get random list entities from the [LU PARAMS](/articles/TDM/tdm_architecture/02_tdm_database.md#lu_name_params) table created  in the TDM DB for the root LU of the task's BE.  Entities in the environment or task level exclusion lists are excluded from the task.
 
-Testers can select this option only if their role in the target environment has the relevant permissions.
+Testers can select this option only if their TDM Environment role in the target environment has the relevant permissions.
 
 ### Create Synthetic Entities
 
@@ -36,7 +36,7 @@ For example, if the **Number of Entities** setting is populated by  5 and the **
 
 The task replaces the sequences of each replica to avoid duplicate sequences in the target environment. 
 
-Testers can select this option in the target environment only if their role has permissions.
+Testers can select this option in the target environment only if their TDM Environment role has permissions.
 
 ### Parameters 
 
@@ -68,11 +68,11 @@ The parameters list must be [defined for each LU in the task BE](/articles/TDM/t
   - Select the parameter and the operator from the dropdown lists and populate their values.
   - Add **AND/OR** operator to connect the parameter to the previous parameters or group.
 The TDM GUI  displays the SQL query built based on the selected parameters.
-  
+
 #### How Do I Populate a Parameter's Value?
-  
+
 There are several types of parameters:
-  
+
 - **Combo**, parameters with a limited number of values. The Task window displays a dropdown list of the parameters' values. Select a value from the dropdown list.
   
   Click for more information about [setting a parameter as a combo parameter](/articles/TDM/tdm_implementation/07_tdm_implementation_parameters_handling.md#tdm-parameters-implementation-guidelines).
@@ -84,19 +84,17 @@ There are several types of parameters:
 - **Text**, populate the value using free text.
   
 #### How Do I Add a Group of Parameters?
-  
+
 Click **Add Group**. 
-  
+
 Note that nested groups of parameters can be added for example to define an inner group in an outer group.
-  
 
-  
 
-  
+
 ![params example](images/parameters_example1.png)
-  
+
 #### How Do I Remove A Parameter or a Parameters Group?
-  
+
 1.  Click ![remove parameter](images/delete_parameters_icon.png) next to the parameter to delete a parameter.
 2.  Click **Remove Group** to remove a parameter's group.
 
@@ -106,11 +104,6 @@ Click Refresh next to the **Entities Matched** to calculate the number of entiti
 The Parameters selection supports the parent-child hierarchy relationship between the LUs of the selected BE. It can crosscheck the matching entities of a selected combination of parameters and takes into consideration parameters from different LUs in the same BE hierarchy. For example, if customers living in New York with scheduled visits (see the screenshot below) are selected, TDM checks the visits of each patient living in New York and then checks their status.
 
 - Click ![refesh](images/parameters_refresh_icon.png) to display the number of matching entities according to the parameters’ conditions.
-
-
-![params example](images/parameters_example2.png)
-
-
 
 Click for more information about the [TDM parameters tables and View](/articles/TDM/tdm_architecture/07_tdm_parameters_handling.md) created by TDM in the TDM DB to display a hierarchical view of TDM parameters. 
 

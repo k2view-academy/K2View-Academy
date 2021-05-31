@@ -12,7 +12,7 @@ A Load Data Flux task contains the following tabs:
 - [Requested Entities](21_load_task_requested_entities_dataflux_mode.md)
 - [Execution Timing](22_task_execution_timing_tab.md): the last tab in the Task window and available for all task types and modes. The following options are available for the task execution:
   - **Execution by Request**: the default option.
-  - **Scheduled execution**: set scheduling parameters to automatically execute the task based on the scheduling parameters. Note that a tester can select this option only if its role has a scheduling permission.
+  - **Scheduled execution**: set scheduling parameters to automatically execute the task based on the scheduling parameters. Note that a tester can select this option only if their TDM Environment role has a scheduling permission.
 
 ## General
 
@@ -30,7 +30,7 @@ Load or Extract. Set the task type to **Load**.
 
 ### Entity Versioning
 
-Check to set the task mode to [Data Flux](15_data_flux_task.md). Testers can check this setting and create a Data Flux load task only if their [role](10_environment_roles_tab.md#role-permissions) has permissions.
+Check to set the task mode to [Data Flux](15_data_flux_task.md). Testers can check this setting and create a Data Flux load task only if their [TDM Environment role](10_environment_roles_tab.md#role-permissions) has permissions.
   
 
 ### Set Global Variables 
@@ -62,7 +62,7 @@ When setting the **Reference** setting to **Reference Only** or **Both - referen
 
 
 Notes:
-  - Tester users can only select a source environment they are attached to by a Read [role](10_environment_roles_tab.md) and target environment they are attached to by a Write [role](10_environment_roles_tab.md). 
+  - Tester users can only select a source environment they are attached to by a Read [TDM Environment role](10_environment_roles_tab.md) and target environment they are attached to by a Write [TDM Environment role](10_environment_roles_tab.md). 
   - A tester will usually select the testing environment as both - source and target environments - when creating a Data Flux load task to reload the previously created version of the testing data on the environment.
 
 ### Business Entity
