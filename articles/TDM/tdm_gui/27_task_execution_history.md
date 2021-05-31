@@ -136,5 +136,5 @@ Click the child Order ID - Order #60 - to view its hierarchical structure:
 
 
 
-  [![Previous](/articles/images/Previous.png)](26_task_execution.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]()
+  [![Previous](/articles/images/Previous.png)](26_task_execution.md)
 
