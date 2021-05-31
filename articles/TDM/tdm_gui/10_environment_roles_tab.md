@@ -92,7 +92,7 @@ TDM tests the connections of the source and target environments at the beginning
 
 ##### Random Entity Selection
 
-[Randomly select entities](18_load_task_requested_entities_regular_mode.md#random-selection)( using a [TDM Load task]. This permission applies only when the role has **Write** access.
+[Randomly select entities](18_load_task_requested_entities_regular_mode.md#random-selection) for TDM load task. This permission applies only when the role has **Write** access.
 
 ##### Request up to Date Entities
 
