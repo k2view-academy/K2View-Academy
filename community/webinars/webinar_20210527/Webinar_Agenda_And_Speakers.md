@@ -24,11 +24,11 @@ Create data orchestration flows and delivery services.
 
 Enrich data with simple API queries to oAuth2-enabled social network services (e.g. Twitter).
 
-[Click to download the demo](Webinar_Demo.K2EXPORT).
+[Click to download the demo](Webinar_Demo.k2export).
 
 **In the spotlight (15 mins)**
 
 Design, create and edit your own data orchestration ("Broadway") operators.
 
-[Click to download the custom Actor and the sample flow which uses this Actor](myConstTableActor.K2EXPORT).
+[Click to download the custom Actor and the sample flow which uses this Actor](myConstTableActor.k2export).
 
