@@ -2,23 +2,15 @@
 
 We have just released TDM 7.1 based on Fabric 6.5. Some of the major enhancements of this release are:
 
-1. Fabric Broadway replaces ADI as Load to target component.
-
-2. Security improvements.
-
-3. Improvement for deleting entities.
-
-4. Stop and resume load tasks support.
-
-5. Integrate  TDM with Fabric Web Framework:
+1. Integrate  TDM with Fabric Web Framework:
 
    1. The log-in to the TDM Web application is done via Fabric Web Framework. This simplifies that operation and maintenance of the TDM. 
    2. The TDM back-end layer is implemented by Fabric APIs in the TDM Library.
    3. Using Fabric authentication capabilities.
 
-7. Update the Look and Feel of the TDM Web Application.
+2. Update the Look and Feel of the TDM Web Application.
 
-8. TDM APIDOC Improvements.
+3. TDM APIDOC Improvements.
 
    
 
