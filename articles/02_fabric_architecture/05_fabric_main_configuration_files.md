@@ -414,7 +414,6 @@ When updating the iifConfig.ini, do the following:
 - When updating the parameters under **orphanage_job** or **sweep_job** sections, or any of the kafka parameters, restart the Fabric node.
 - Restart the IIDFinder process.
 
-Click for more information about the IIDFinder Process.
 
 
 
