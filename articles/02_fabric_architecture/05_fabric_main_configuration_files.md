@@ -5,6 +5,13 @@
 - Fabric configuration files are located under the $K2_HOME/config directory. 
 - Fabric configuration **template files** are located under the $K2_HOME/fabric/config.template. 
 
+## $K2_HOME Directory
+
+- The $K2_HOME directory (FabricHome) is usually located under your Fabric Projects directory, under the name of a project. 
+- You can navigate directly to this directory from withing the Fabric Studio as follows: 
+  - Right-click the name at the head of the Project Tree 
+  - Select **Open Folder** from the menu that appears
+  - Navigate to **FabricHome**
 
 Make sure to edit the configuration files under the **$K2_HOME/config** directory and not under the template directory. Configuration files should be edited on all Fabric nodes so it will become effective on the cluster level.
 
