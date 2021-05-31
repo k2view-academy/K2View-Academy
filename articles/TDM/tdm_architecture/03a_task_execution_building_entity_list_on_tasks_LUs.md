@@ -68,7 +68,7 @@ The generated entity list is based on a JOIN of the [task_execution_entities](02
 Select the children IDs from the task_execution_entities and [tdm_lu_type_relation_eid](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid) tables:
 
 ```sql
-SELECT rel. rel.lu_type2_eid as child_entity_id
+SELECT rel.lu_type2_eid as child_entity_id
 FROM task_execution_entities t, tdm_lu_type_relation_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
@@ -87,7 +87,7 @@ and rel.version_name = <empty string on a regular task and the selected version 
 Select the children IDs from the task_execution_entities and TDM relationship tables: [tdm_lu_type_relation_eid](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_relation_eid) and [tdm_lu_type_rel_tar_eid](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) to get the children IDs from the source and target environments: 
 
 ```sql
-SELECT rel. rel.lu_type2_eid as child_entity_id
+SELECT rel.lu_type2_eid as child_entity_id
 FROM task_execution_entities t, tdm_lu_type_relation_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
@@ -98,8 +98,8 @@ and t.iid = rel. lu_type1_eid
 and rel.lu_type_2= <child lu name> 
 and rel.version_name = <empty string on a regular task and the selected version name on a Data Flux task>
 UNION
-SELECT rel. rel.lu_type2_eid as child_entity_id
-From FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel 
+SELECT rel.lu_type2_eid as child_entity_id
+FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
 and t.lu_name = <parent lu name> 
@@ -116,7 +116,7 @@ and rel.lu_type_2= <child lu name>;
 Select the children IDs from the task_execution_entities and [tdm_lu_type_rel_tar_eid](/articles/TDM/tdm_implementation/06_tdm_implementation_support_hierarchy.md#tdm_lu_type_rel_tar_eid) to get the target children IDs: 
 
 ```sql
-SELECT rel. rel.lu_type2_eid as child_entity_id
+SELECT rel.lu_type2_eid as child_entity_id
 FROM task_execution_entities t, tdm_lu_type_rel_tar_eid rel 
 where t.task_execution_id= <task execution id> 
 and t.execution_status = 'completed' 
