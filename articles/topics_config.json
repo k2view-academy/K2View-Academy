@@ -304,7 +304,7 @@
 			"comm display text": "Ask questions or seek help on Fabric’s implementation. Check our forum that provides advice and know-how to help you at any phase of your project’s lifecycle.",
 			"comm icon": "images/community_icon2.png",
 			"visible": true,
-			"path": ""
+			"path": "https://github.com/k2view-academy/K2View-Academy/issues?q=is%3Aissue+is%3Aclosed"
 		},
 		{
 			"comm display name": "Blogs",
