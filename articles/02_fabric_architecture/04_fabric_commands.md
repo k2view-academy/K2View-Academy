@@ -269,9 +269,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="250pxl">
 <p>use Customer.1;</p>
-<p>Get the IID 1 of Customer LU.</p>
+<p>- Get the IID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34 WITH parallel=true;</p>
-<p>Get the IID 1 of Customer LU and the IID 34 of CRM LU in parallel.</p>
+<p>- Get the IID 1 of Customer LU and the IID 34 of CRM LU in parallel.</p>
 </td>
 </tr>
 </tbody>
