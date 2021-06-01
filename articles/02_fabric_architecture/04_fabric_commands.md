@@ -216,8 +216,8 @@ The following table lists the GET commands:
 <h5>GET</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric. Multiple LUIs can run in parallel. </p>
-<p>&nbsp;</p>
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
+<p>Multiple LUIs can run in parallel. </p>
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
