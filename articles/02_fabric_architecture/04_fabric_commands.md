@@ -216,7 +216,7 @@ The following table lists the GET commands:
 <h5>GET</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
+<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric. Multiple LUIs can run in parallel. </p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
@@ -224,14 +224,14 @@ The following table lists the GET commands:
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
-<p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
 </td>
 <td valign="top" width="250pxl">
 <p>get Customer.1;</p>
-<p>get instance ID 1 of Customer LU.</p>
+<p>- Get the IID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34 WITH parallel=true;</p>
-<p>get instance ID 1 of Customer LU and instance ID 34 of CRM LU in parallel.</p>
-<p>
+<p>- Get the IIDs in parallel.</p>
+<p>get Customer.1, CRM.34 WITH parallel='all';</p>
+<p>- Get the IIDs in parallel even if the GET command of one LUI fails.</p>
 </td>
 </tr>
 <tr>
@@ -269,9 +269,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="250pxl">
 <p>use Customer.1;</p>
-<p>Get Instance ID 1 of Customer LU.</p>
+<p>- Get the IID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34 WITH parallel=true;</p>
-<p>Get Instance ID 1 of Customer LU and Instance ID 34 of CRM LU in parallel.</p>
+<p>- Get the IID 1 of Customer LU and the IID 34 of CRM LU in parallel.</p>
 </td>
 </tr>
 </tbody>
