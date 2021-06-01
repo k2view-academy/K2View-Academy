@@ -77,7 +77,7 @@ Fabric supports these delegated authentications:
   * Create a dedicated role (for example: "apikeyWithSAML") and grant it a permission for the "AUTHZ_CLAIMS" operation on all resources ("*").
   * Assign this role to the API Key, that is used and sent in the JWT. 
 
-* The user and groups shall be sent as part of the JWT payload claims - "`unm`" for user and "`bgr`" for group list, using an array structure. Here is  a JWT example:
+* The user and groups shall be sent as part of the JWT payload claims - `unm` for user and `bgr` for group list, using an array structure. Here is  a JWT example:
 
   ```json
   {
