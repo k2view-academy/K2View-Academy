@@ -1,4 +1,4 @@
-### <img src="images/webinar_icon.png" style="zoom:80%;" /> Next Webinar - Coming Soon...
+# <img src="images/webinar_icon.png" style="zoom:80%;" /> Next Webinar - Coming Soon... Stay Tuned!
 
 
 
