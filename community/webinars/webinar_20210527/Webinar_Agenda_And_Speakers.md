@@ -30,5 +30,7 @@ Enrich data with simple API queries to oAuth2-enabled social network services (e
 
 Design, create and edit your own data orchestration ("Broadway") operators.
 
+[Click to download the Actor Edit presentation](6.5-ActorEditorWebinar.pdf).
+
 [Click to download the custom Actor and the sample flow which uses this Actor](myConstTableActor.k2export).
 
