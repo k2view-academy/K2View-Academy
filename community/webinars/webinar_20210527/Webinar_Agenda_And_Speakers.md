@@ -22,7 +22,7 @@ New K2View Support website.
 
 Create data orchestration flows and delivery services.
 
-Enrich data with simple API queries to oAuth2-enabled social network services (e.g. Twitter).
+Enrich data with simple API queries to Auth2-enabled social network services (e.g. Twitter).
 
 [Click to download the demo](Webinar_Demo.k2export).
 
