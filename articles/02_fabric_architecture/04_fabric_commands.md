@@ -192,8 +192,6 @@ The consistency level of the GET LUI command can be set to ONE. If it fails to a
 
 Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
 
-A new parameter called PARALLEL=true/false added in V6.4.2 enables running parallel GET commands on different LU types. PARALLEL='all' added in V6.4.4 supports parallel GET with failures. Meaning that even if the GET of one LUI fails, Fabric does not abort the GET of other LUIs and returns the list of IIDs and the exceptions.
-
 The following table lists the GET commands:
 
 <table width="900pxl">
@@ -218,7 +216,7 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="250pxl">
 <p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
-<p>&nbsp;</p>
+<p>A new parameter PARALLEL=true/false added in V6.4.2 enables running parallel GET commands on different LU types. PARALLEL='all' added in V6.4.4 supports parallel GET with failures, so even if the GET of one LUI fails, Fabric does not abort the GET of other LUIs and returns the list of IIDs and the exceptions.</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
