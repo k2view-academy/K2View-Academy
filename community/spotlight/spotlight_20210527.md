@@ -12,8 +12,8 @@ When your implementation requires business logic that is not supported by a buil
 The **Actor Editor** allows you to:
 
 * Create an Actor, and define its inputs and outputs.
-* Set the Actors as final or hidden, if needed.
-* Set the default values of the Actors, if needed.
+* Set the inputs and outputs as final or hidden, if needed.
+* Set the default values of the inputs and outputs, if needed.
 * Run the Actor in order to debug it.
 
 [Click to learn more about the Actor Editor](https://support.k2view.com/Academy_6.5/articles/19_Broadway/28_actor_editor.html).
