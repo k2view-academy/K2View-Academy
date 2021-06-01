@@ -311,7 +311,7 @@
 			"comm display text": "Featuring a set of regularly updated insightful articles aiming at contextualizing your business requirements using K2View Fabric’s capabilities.",
 			"comm icon": "images/community_icon3.png",
 			"visible": true,
-			"path": ""
+			"path": "../community/blogs"
 		},
 		{
 			"comm display name": "Webinars",
