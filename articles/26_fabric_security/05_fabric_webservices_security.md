@@ -72,9 +72,25 @@ In some cases the client itself - a service in the organization which calls Fabr
 
 Fabric supports these delegated authentications:
 
-* The user and groups are sent as part of the JWT payload claims ("user" , "groups"). 
-* This option requires an extra security verification: the API Key, that is used and sent in the JWT, is associated with the "AUTHZ_CLAIMS" role before it starts to use it (creating this role if it does not exist already). 
-* When verified, Fabric sets the session with this user and roles by taking the groups and setting them as user's roles for this session.
+* This option requires an extra security verification: 
+
+  * Create a dedicated role (for example: "apikeyWithSAML") and grant it a permission for the "AUTHZ_CLAIMS" operation on all resources ("*").
+  * Assign this role to the API Key, that is used and sent in the JWT. 
+
+* The user and groups shall be sent as part of the JWT payload claims - "`unm`" for user and "`bgr`" for group list, using an array structure. Here is  a JWT example:
+
+  ```json
+  {
+  	"apk": "apikeyWithSAML",
+  	"unm": "jhon.doe@k2view.com",
+  	"bgr": [
+  		"tester1",
+  		"testGroupLeaders"
+  	]
+  }
+  ```
+
+* When JWT is verified, Fabric sets the session with this user and roles by taking the groups and setting them as user's roles for this session.
 
 
 
