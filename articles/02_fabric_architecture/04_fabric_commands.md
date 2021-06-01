@@ -184,13 +184,15 @@ The **GET** command is used to get information for a given [LUI](/articles/01_fa
 Note that multiple LUs can be received using a GET command. However, multiple LUIs cannot be received from the same LU using a GET command. 
 
 The following message is displayed when attempting to get multiple LUIs from the same LU using a GET command:
-  
+
 `Only single instance per LUT can be used on the same GET command.`
 
 The consistency level of the GET LUI command can be set to ONE. If it fails to achieve a QUORUM consistency level, the [sync mode](/articles/14_sync_LU_instance/02_sync_modes.md#sync-modes-1) is set to OFF. To do so, run the following Fabric command on the session:
   -  **SET LUI_READ_ONE_WHEN_FAIL set =true**
 
 Note that this command sets the consistency level on the session level. The default value of this parameter is **false**.
+
+A new parameter called PARALLEL=true/false added in V6.4.2 enables running parallel GET commands on different LU types. PARALLEL='all' added in V6.4.4 supports parallel GET with failures. Meaning that even if the GET of one LUI fails, Fabric does not abort the GET of other LUIs and returns the list of IIDs and the exceptions.
 
 The following table lists the GET commands:
 
@@ -222,15 +224,15 @@ The following table lists the GET commands:
 <p>Get an LUI:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
-<p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
+<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false/'all']];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>get Customer.1;</p>
-<p>get instance ID 1 of Customer LU.</p>
+<p>- Get the IID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34 WITH parallel=true;</p>
-<p>get instance ID 1 of Customer LU and instance ID 34 of CRM LU in parallel.</p>
-<p>
+<p>- Get the IIDs in parallel.</p>
+<p>get Customer.1, CRM.34 WITH parallel='all';</p>
+<p>- Get the IIDs in parallel even if the GET command of one LUI fails.</p>
 </td>
 </tr>
 <tr>
@@ -245,7 +247,7 @@ The following table lists the GET commands:
 <p>Get an LUI:</p>
 <p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];;</p>
 <p>Get multiple instances of different LUs:</p>
-<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]];</p>
+<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false/'all']];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>getf Customer.fnCreateInstId(235);</p>
@@ -261,21 +263,19 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false/'all'];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
-<p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
 </td>
 <td valign="top" width="250pxl">
 <p>use Customer.1;</p>
-<p>Get Instance ID 1 of Customer LU.</p>
+<p>Get the IID 1 of Customer LU.</p>
 <p>use Customer.1, CRM.34 WITH parallel=true;</p>
-<p>Get Instance ID 1 of Customer LU and Instance ID 34 of CRM LU in parallel.</p>
+<p>Get the IID 1 of Customer LU and the IID 34 of CRM LU in parallel.</p>
 </td>
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 #### Remote GET and GETF Commands
 
@@ -291,7 +291,6 @@ The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unl
 The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 
 The following table lists the  DELETE commands:
-
 
 <table width="900pxl">
 <tbody>
@@ -319,9 +318,9 @@ The following table lists the  DELETE commands:
 </td>
 <td valign="top" width="200pxl">
 <p>Delete one instance:</p>
-<p><h6>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
+<p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
 <p>Delete multiple instances:</p>
-<p><h6>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
+<p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
 </td>
 <td valign="top" width="200pxl">
 <p>delete CRM.10;</p>
@@ -335,10 +334,8 @@ The following table lists the  DELETE commands:
 </td>
 <td valign="top" width="250pxl">
 <p>Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
-<ul>
-<li><h6>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
-<li><h6>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
-</ul>
+<li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
+<li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
 </td>
 <td valign="top" width="200pxl">
 <p>delete instances if not exist &lt;LUT_Name&gt;;</p>
@@ -349,13 +346,10 @@ The following table lists the  DELETE commands:
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
 
 ### Release LU
 
 The Fabric RELEASE command is used to detach the [LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui) from the session on a list of LUs or all LUs.
-
-<!--Drop 2- Add a link to LU storage and management--> 
 
 ### Fabric View
 
