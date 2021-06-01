@@ -2,7 +2,5 @@
 
 
 
-[Click to view the previous blogs](README.md).
-
 
 
