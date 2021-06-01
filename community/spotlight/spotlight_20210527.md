@@ -1,4 +1,4 @@
-### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Broadway's Actor Editor
+# <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Broadway's Actor Editor
 
 A Broadway **Actor** represents an action that is executed on a Stage of the Broadway flow to get input parameters and return output parameters. 
 
