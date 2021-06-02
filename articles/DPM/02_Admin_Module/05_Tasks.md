@@ -1,5 +1,33 @@
 # Tasks
 
+## Add/Edit a Task
+
+A Stage is composed of one or more Tasks. Each Task performs a specific action in the fulfilment process of a Customer Request. Examples of Tasks are:
+
+- Validates the customer’s request.
+- Send an e-mail  to the customer acknowledging registration of the request.
+- Gather the requested customer data.
+- Review the gathered data.
+- Send the customer the data that were requested
+
+To add a new Task under a specific Stage, click the Stage name on the Stage bar and access the  ![image](/articles/DPM/images/Figure_12a_new_task_icon.png) option from the right. 
+The Task Configuration screen is displayed. This screen includes several tabs, each providing an aspect of Task configuration.
+
+![image](/articles/DPM/images/Figure_12_Add_Edit_a_Task_screen.png)
+
+The following tabs constitute the Task Configuration screen:
+- Tasks
+- Reminders
+- Operations 
+- Additional Info 
+- Steward Inputs
+
+Tasks can be divided into two primary categories: Manually executed Tasks, and Tasks configured to run automatically. An automatic Task is performed by the DPM system, while a manual Task is allocated to the Steward role and teams. 
+
+The following sections describe the properties that should be configured when defining a Task, and the different configurations of automatic and manual tasks.
+
+### Tasks Tab
+
 The Tasks tab includes the configuration of parameters, such as the following:
 
 - Task Name
