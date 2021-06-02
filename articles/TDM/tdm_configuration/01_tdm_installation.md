@@ -9,7 +9,7 @@ The following components must be installed as a prerequisite:
 
 ## TDM Package Content
 
-The TDM package creates the following sub directories: 
+The TDM package added the TDM GUI functionality to Fabric. The TDM package creates the following sub directories: 
 
 - apps/nodejs:
   - This is the Node.js component. The TDM GUI works with **10.20.1** Node.js version.
@@ -30,6 +30,10 @@ When openning the TDM package the package also updates the following:
   - Click for more information about [adding applications to Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).
 
 ## Installation guidelines for TDM Package on the Fabric Server
+
+You can either install a **Fabric and TDM docker which has an embedded TDM package** or install  manually the TDM package on the Fabric server.
+
+To install a TDM package on a Fabric server do the following:
 
 - Download the TDM package from the download page. Copy it under the  $K2_HOME directory and untar it using the following command:
 
@@ -149,8 +153,8 @@ Following steps should be following if a new APIDOC should be generated to inclu
 - Set the following environment variables:
 
   ```shell
-  export PG_HOST=<postgreSQL DB host>;
-  export PG_PORT=<postgreSQL DB port>;
+  export PG_HOST=<postgreSQL DB host>
+  export PG_PORT=<postgreSQL DB port>
   ```
 
 - Add execution permissions to **updatek2TDMDB.sh**.
