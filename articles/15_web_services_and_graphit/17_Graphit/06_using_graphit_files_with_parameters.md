@@ -103,9 +103,11 @@ Node defined as SQL non-prepared:
 ```select SSN from customer where ${fieldName} = ${customer_id}```
 
 The ```${fieldName}``` variable will be given the (string) value ```'customer_id'``` while the variable ```${customer_id}``` will be given the value ```39```.
-In that way variables can be parsed to the graphit file (from a java web service invoking it) with the name of the column and the the value to be processed to the WHERE statement
-see example in screenshot:
-![](/articles/15_web_services_and_graphit/17_Graphit/images/45_graphit_with_parameters.PNG)
+In that way variables can be parsed to the graphit file (from a java web service invoking it) with the name of the column and the the value to be processed to the WHERE statement.
+
+See example in screenshot:
+![](/articles/15_web_services_and_graphit/17_Graphit/images/46b_graphit_with_parameters.PNG)
+
 
 In addition, rather than defining the variable ```fieldName``` within the javascript function node of your graphit file, you can define it in the java webservice that invokes the graphit file itself, and parse it as a map object as was shown in the [previous section](/articles/15_web_services_and_graphit/17_Graphit/06_using_graphit_files_with_parameters.md#how-do-i-configure-parameters-when-invoking-graphit-from-a-web-service) of this article.   
 
