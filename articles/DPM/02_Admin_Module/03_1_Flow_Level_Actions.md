@@ -2,7 +2,7 @@
 
 On the right-hand side of the Flow name are icons that respresent the available actions for that Flow. Each icon and its corresponding description are outlined in the following table. 
 
- ![image](/articles/DPM/images/Figure_7_Flow_icons.png)
+<img src="../images/Figure_7_Flow_icons.png" width="30%" height="30%">
 
 <table>
 <tbody>
