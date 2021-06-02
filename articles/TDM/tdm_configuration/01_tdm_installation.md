@@ -20,7 +20,7 @@ The TDM package added the TDM GUI functionality to Fabric. The TDM package creat
 - TDMGUI:
   - Contains the scripts to create the TDM DB and the HTML of the TDM API DOC.
 
-When openning the TDM package the package also updates the following:
+When opening the TDM package, the package also updates the following:
 
 - Updates the **.bash_profile** file:
   - Adds the $K2_HOME/apps/pgsql-9.6/bin/ and $K2_HOME/apps/nodejs/bin to the PATH variable.
