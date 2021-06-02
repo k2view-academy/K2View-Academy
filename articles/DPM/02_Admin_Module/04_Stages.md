@@ -2,7 +2,8 @@
 
 The Stages comprising a Flow are shown in the bar below the Flow header. An example follows.  
 
- ![image](/articles/DPM/images/Figure_11_Flow_Stages.png)
+ <img src="../images/Figure_11_Flow_Stages.png" width="30%" height="30%">
+
 
 - Use the + buttons to add a Stage
 - Use the x buttons to delete a Stage
