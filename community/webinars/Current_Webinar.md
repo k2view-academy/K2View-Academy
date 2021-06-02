@@ -8,6 +8,8 @@
 
 **Next Webinar is Coming Soon... Stay Tuned!**
 
+<img src="images/devComm.png" style="zoom:80%;" />
+
 
 
 
