@@ -19,9 +19,9 @@ A dialog box displays, defining information for the import activity.
 Select <b>Choose File</b> to select the file that contains the Flow configuration (generated as a result of the export in the previous step).
 After the file is selected, the DPM loads the configuration. It identifies the Flow name and version of the imported Flow, and then displays the following information under the <b>File Content View/Edit</b> section of the dialog box.
 
-<img src="../images/Figure_7_imported_Flow_example.png" width="30%" height="30%">
+<img src="../images/Figure_7_imported_Flow_example.png" width="50%" height="50%">
 
-Before confirming the import, you can change the <b>Flow Name</b> and <b>Flow Version</b>. To update the definitions of a Flow and version that already exist in the target environment, enter the same name and version as the Flow you want to update. Turn the <b>Override</b> slider to On  ![image](/articles/DPM/images/Figure_7_override_flow_icon.png).
+Before confirming the import, you can change the <b>Flow Name</b> and <b>Flow Version</b>. To update the definitions of a Flow and version that already exist in the target environment, enter the same name and version as the Flow you want to update. Turn the <b>Override</b> slider to On <img src="../images/Figure_7_override_flow_icon.png" width="10%" height="10%">.
 
 If necessary, the Flow configuration can be manually edited before clicking <b>Import</b>. You can change the content of the JSON file or edit the JSON when it displays under the <b>File Content View/Edit</b> section of the dialog box. Any editing should be done with care to prevent creating an invalid scenario or an invalid JSON structure.
 
