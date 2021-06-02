@@ -1,6 +1,6 @@
-### <img src="images/blogs_icon.png" style="zoom:80%;" /> Our First Blog
+### <img src="images/blogs_icon.png" style="zoom:80%;" /> Blogs
 
-Coming Soon... Stay Tuned!
+**Our First Blog is Coming Soon... Stay Tuned!**
 
 
 
