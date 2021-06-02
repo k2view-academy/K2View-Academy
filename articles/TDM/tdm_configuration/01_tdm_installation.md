@@ -130,11 +130,12 @@ Following steps should be following if a new APIDOC should be generated to inclu
 - Set the following environment variables:
 
   ```shell
-  export $DB=<postgreSQL DB name>;
-  export $PG_USER=<postgreSQL DB user name>; 
-  export PGPASSWORD=<postgreSQL DB pwd>;
-  export PG_HOST=<postgreSQL DB host>;
-  export PG_PORT=<postgreSQL DB port>;
+  export DB=<postgreSQL DB name>
+  export PG_USER=<postgreSQL DB user name>
+  export PGPASSWORD=<postgreSQL DB pwd>
+  export PG_HOST=<postgreSQL DB host>
+  export PG_PORT=<postgreSQL DB port>
+
   ```
 
 - Add execution permissions to **createk2TDMDB.sh**.
@@ -156,7 +157,17 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 - Run **createk2TDMDB.sh** script.
 
+## Import and Deploy the TDM Library
 
+The TDM back-end layer is now implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy to Fabric the Web Services and the TDM LU. 
+
+Click for more information about the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).  
+
+## Create K2masking Keyspace in Cassandra
+
+The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  If the **k2masking** keyspace does not exist in Cassandra DB, create it using the **masking-create-cache-table.flow** from the library of Broadway examples. After creating the **k2masking** keyspace, get the **update_tdm_sequence_mapping.sql** script from the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) and run it on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure.
+
+Click for more information about [sequence handling](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences).
 
 ## Add Permission Groups Mapping to the TDM
 
