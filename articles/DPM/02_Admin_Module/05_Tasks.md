@@ -163,7 +163,7 @@ The following table details the options for the Task tab.
 </td>
 <td width="775">
 <p>When the &ldquo;Allow Steward Reject Task&rdquo; is switched to &ldquo;on&rdquo;, it means that when this task is being executed as part of the fulfillment process for a specific customer, the data steward can decide to reject this task instead of completing it. 
-<p> When this option is selected, the DPM will prompt the user with the following option: <img src="../images/Figure_12_Rejected_task_stops_case.png" width="10%" height="10%"> that allows to define if in the scenario of this task being rejected, should the Request flow proceed to the next tasks or should the Request be stopped as a whole. </p>
+<p> When this option is selected, the DPM will prompt the user with the following option: <img src="../images/Figure_12_Rejected_task_stops_case.png" width="25%" height="25%"> that allows to define if in the scenario of this task being rejected, should the Request flow proceed to the next tasks or should the Request be stopped as a whole. </p>
 </td>
 </tr>
 </tbody>
