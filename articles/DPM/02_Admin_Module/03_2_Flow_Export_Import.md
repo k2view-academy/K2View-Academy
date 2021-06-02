@@ -6,7 +6,7 @@ This functionality lets you create and test a Flow in one environment, and then 
 
 ## To Export a Flow
 
-From the <b>Flow</b> screen, click the  ![image](/articles/DPM/images/Figure_7_export_flow_icon.png)  icon, located on the right-hand side of the Flow name. This creates a JSON file containing the Flow configuration, which can be imported into the target environment.
+From the <b>Flow</b> screen, click the  <img src="../images/Figure_7_export_flow_icon.png" width="5%" height="5%"> icon, located on the right-hand side of the Flow name. This creates a JSON file containing the Flow configuration, which can be imported into the target environment.
 
 ## To Import a Flow
 
