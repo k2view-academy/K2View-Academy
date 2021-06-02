@@ -59,7 +59,7 @@ Save the new Stage to open the following screen and define the Stage Tasks.
 
  ![image](/articles/DPM/images/Figure_9_Flow_with_a_new_stage_screen.png)
 
-While the <b>Status</b> is marked as a <b>Draft</b> (not <b>Completed</b>), additional Stages can be added or updated by adding or modifying Tasks. 
+While the Flow's <b>Status</b> is marked as a <b>Draft</b> (not <b>Completed</b>), additional Stages can be added or updated by adding or modifying Tasks. 
 
 
 ## Add/Edit a Task
