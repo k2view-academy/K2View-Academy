@@ -94,8 +94,6 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 Once the Flow information is defined and the new Flow is saved, the system displays the "Flow Editing screen." The Administrator can add Stages and Tasks under those Stages. 
 The Flow name and the Flow description can be updated at anytime by using the edit (pencil) icon next to the Flow name.
 
- ![image](/articles/DPM/images/Figure_6_Configuration_of_a_New_Flow_Initial_screen.png)
-
-
+ <img src="../images/Figure_6_Configuration_of_a_New_Flow_Initial_screen.png" width="90%" height="90%">
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md)
