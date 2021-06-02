@@ -49,7 +49,7 @@ Any Flow can have multiple versions. A new version should be created when a chan
 The Administrator creates a new Flow by selecting the “Add a Flow” button at the top-right corner of the screen. 
 The Administrator is then prompted to define the Flow name, version, and description, as shown by the next image and defined by the subsequent table.
 
-<img src="../images/Figure_5_New_Flow.png" width="30%" height="30%">
+<img src="../images/Figure_5_New_Flow.png" width="40%" height="40%">
 
 <table>
 <tbody>
