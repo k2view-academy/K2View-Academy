@@ -1,7 +1,5 @@
 ### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Broadway's Actor Editor
 
-A Broadway **Actor** represents an action that is executed on a Stage of the Broadway flow to get input parameters and return output parameters. 
-
 Broadway offers a number of built-in Actors which address a wide range of predefined activities that can be added to Broadway flows. For example, reading a file and writing into a file, creating a table and populating it, parsing an object or concatenating a string, publishing the messages to a queue or invoking a Web service.
 
 When your implementation requires business logic that is not supported by a built-in Actor and it is repeated across several flows, you can create an Actor using an **Actor Editor** by one of the following: 
