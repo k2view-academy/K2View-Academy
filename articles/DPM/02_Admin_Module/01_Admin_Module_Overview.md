@@ -10,6 +10,8 @@ The Admin module allows the user to perform the following tasks.
 - Create the Flows, Stages, and Tasks needed for the implementation of a customer request 
 - Manage User roles
 - Define customer consent topics
+- Configure and execute PII Discovery
+- Explore the data catalog
 
 **Admin Menu options**
 
