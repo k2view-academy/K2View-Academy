@@ -5,7 +5,7 @@
 
 * [Admin Module Overview](/articles/DPM/02_Admin_Module/01_Admin_Module_Overview.md)  
 
-* [DPM Configuration](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md) 
+* [Data Subject Requests Automation - Configuration](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md) 
 
 * [Flows](/articles/DPM/02_Admin_Module/03_Flows.md) 
 

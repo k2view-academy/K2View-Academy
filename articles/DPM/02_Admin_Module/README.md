@@ -2,7 +2,7 @@
 <strong>DPM Admin Module<strong>
 <ul>
 <li><a href="/articles/DPM/02_Admin_Module/01_Admin_Module_Overview.md">Admin Module Overview</a></li>
-<li><a href="/articles/DPM/02_Admin_Module/02_DPM_Configuration.md">DPM Configuration</li>
+<li><a href="/articles/DPM/02_Admin_Module/02_DPM_Configuration.md">Data Subject Requests Automation - Configuration</li>
 <li><a href="/articles/DPM/02_Admin_Module/03_Flows.md">Flows</li>
 <li><a href="/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md">Flow Level Actions</li>
 <li><a href="/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md">Flow Export and Import</li>
