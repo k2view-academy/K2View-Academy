@@ -83,7 +83,7 @@ This code calls the following Graphit file which uses **${input1}** and **${inpu
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/46a_graphit_with_parameters.PNG)
         
         
-## How Do I parse metadata parameters such as table names or fields names in Graphit SQL statements and nodes ?
+## How Do I Parse Metadata Parameters Such as Table Names or Fields Names in Graphit SQL ?
 
 Let's suppose you need to write a graphit file that retrieves data from a table and/or a field with dynamic names parsed from variables.
 In that case you can invoke the field name as a parameters in a Graphit node defined as non-prepared SQL statement. 
@@ -97,13 +97,13 @@ Node defined as a function:
 
 ``` var fieldName = 'customer_id' ```
 
-
 Node defined as SQL non-prepared:
 
 ```select SSN from customer where ${fieldName} = ${customer_id}```
 
-The ```${fieldName}``` variable will be given the (string) value ```'customer_id'``` while the variable ```${customer_id}``` will be given the value ```39```.
-In that way variables can be parsed to the graphit file (from a java web service invoking it) with the name of the column and the the value to be processed to the WHERE statement.
+
+In this case, the ```${fieldName}``` variable will be given the (string) value ```'customer_id'``` while the variable ```${customer_id}``` will be given the value ```39```.
+In that way, variables may be used in a graphit file (from a javascript function node) and hold the name of the field and the value to be processed to the WHERE statement.
 
 See example in screenshot:
 ![](/articles/15_web_services_and_graphit/17_Graphit/images/46b_graphit_with_parameters.PNG)
