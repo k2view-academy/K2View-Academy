@@ -104,7 +104,8 @@ Each information item is described in the following table.
 
 Use the <b>New Stage</b> ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on the left side of the Flow screen to add a new Stage. The user is prompted to define a <b>Stage Name</b> and <b>Stage Description</b>, as shown in the following figure and description table.
 
- ![image](/articles/DPM/images/Figure_9_Adding_a_new_Stage.png)
+ <img src="../images/Figure_9_Adding_a_new_Stage.png" width="30%" height="30%">
+
 
 <table>
 <tbody>
