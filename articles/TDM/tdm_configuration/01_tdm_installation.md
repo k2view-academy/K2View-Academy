@@ -159,7 +159,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 ## Import and Deploy the TDM Library
 
-The TDM back-end layer is now implemented by Fabric APIs in the TDM library. Import the TDM library into the Fabric project and deploy the Web Services and the TDM LU. 
+The TDM back-end layer is now implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy the Web Services and the TDM LU. 
 
 Click for more information about the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).  
 
