@@ -5,7 +5,7 @@ In the Reminders tab, the user can define one or more reminders that should be s
 
  ![image](/articles/DPM/images/Figure_16_Task_configuration_Reminders_tab.png)
 
-Use the   ![image](/articles/DPM/images/Figure_16a_plus_minus_icon.png) control in order to add more than one reminder or remove a reminder. 
+Use the   <img src="../images/Figure_16a_plus_minus_icon.png" width="7%" height="7%"> control in order to add more than one reminder or remove a reminder. 
 
 <table>
 <tbody>
