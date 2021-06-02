@@ -8,12 +8,12 @@ A Stage is composed of one or more Tasks. Each Task performs a specific action i
 - Send an e-mail  to the customer acknowledging registration of the request.
 - Gather the requested customer data.
 - Review the gathered data.
-- Send the customer the data that were requested
+- Send the customer the data that was requested.
 
-To add a new Task under a specific Stage, click the Stage name on the Stage bar and access the  ![image](/articles/DPM/images/Figure_12a_new_task_icon.png) option from the right. 
+To add a new Task under a specific Stage, click the Stage name on the Stage bar and access the <img src="../images/Figure_12a_new_task_icon.png" width="10%" height="10%"> option from the right. 
 The Task Configuration screen is displayed. This screen includes several tabs, each providing an aspect of Task configuration.
 
-![image](/articles/DPM/images/Figure_12_Add_Edit_a_Task_screen.png)
+Tasks can be divided into two primary categories: Manually executed Tasks, and Tasks configured to run automatically. An automatic Task is performed by the DPM system, while a manual Task is allocated to the Steward role and teams. 
 
 The following tabs constitute the Task Configuration screen:
 - Tasks
@@ -22,11 +22,11 @@ The following tabs constitute the Task Configuration screen:
 - Additional Info 
 - Steward Inputs
 
-Tasks can be divided into two primary categories: Manually executed Tasks, and Tasks configured to run automatically. An automatic Task is performed by the DPM system, while a manual Task is allocated to the Steward role and teams. 
+![image](/articles/DPM/images/Figure_12_Add_Edit_a_Task_screen.png)
 
 The following sections describe the properties that should be configured when defining a Task, and the different configurations of automatic and manual tasks.
 
-### Tasks Tab
+## Tasks Tab
 
 The Tasks tab includes the configuration of parameters, such as the following:
 
@@ -37,8 +37,7 @@ The Tasks tab includes the configuration of parameters, such as the following:
 - Identify dependencies with other Tasks
 - Define expected Task execution duration
 - Define Task execution timing
-
- ![image](/articles/DPM/images/Figure_13_New_Task_first_tab.png)
+- Allow a steward to reject a task
 
 The following table details the options for the Task tab.
 
@@ -153,6 +152,18 @@ The following table details the options for the Task tab.
 <p>When a task is marked as &ldquo;Conditional Dependent Task&rdquo;, the task is dependent on a previous task and should be executed only if the task it depends on was not completed within the predefined time period.  When this property is switched to &ldquo;on&rdquo;, the DPM will prompt the user to define the Task it depends upon and after how many hours from the parent Task starts execution, the dependent Task begins.</p>
 <p>The parent Task can be any other task from the same Stage.</p>
 <p>This property is presented only if there is more than one Task in the current Stage. When this property is switched “on”, the property of “order” and “Deadline” are not relevant. Instead, the user should populate two additional properties: “Conditional Parent Task” and: Start Task After X Hours” (See details in next section).</p>
+</td>
+</tr>
+ <tr>
+<td width="90">
+<p>Allow Steward Reject Task</p>
+</td>
+<td width="35">
+<p>O</p>
+</td>
+<td width="775">
+<p>When the &ldquo;Allow Steward Reject Task&rdquo; is switched to &ldquo;on&rdquo;, it means that when this task is being executed as part of the fulfillment process for a specific customer, the data steward can decide to reject this task instead of completing it. 
+<p> When this option is selected, the DPM will prompt the user with the following option: <img src="../images/Figure_12_Rejected_task_stops_case.png" width="10%" height="10%"> that allows to define if in the scenario of this task being rejected, should the Request flow proceed to the next tasks or should the Request be stopped as a whole. </p>
 </td>
 </tr>
 </tbody>
