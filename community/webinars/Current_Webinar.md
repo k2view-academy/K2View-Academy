@@ -1,8 +1,14 @@
-### <img src="images/webinar_icon.png" style="zoom:80%;" /> Next Webinar
+### <img src="images/webinar_icon.png" style="zoom:80%;" /> Webinars
 
-Coming Soon... Stay Tuned!
+Our 1st webinar K2View DevCom Kickoff held on May 27th.
 
-[Click to view the history of K2View Webinars](README.md).
+[Click to view the K2View Webinars materials](README.md).
+
+
+
+**Next Webinar is Coming Soon... Stay Tuned!**
+
+
 
 
 
