@@ -8,7 +8,7 @@ A Flow is composed of <i>Stages</i>, and Stages include one or multiple tasks.
 Once a Flow’s configuration is complete, it can be linked to a DPM Activity. From that point on, any time a customer request for this DPM Activity is processed, the stages and tasks defined in this Flow are followed.  
 
 The Admin can view the list of existing flows by selecting the “Flows List” menu option at the left frame of the application screen. 
-The right frame displays the details for each listed flow and allows the Admin to search for a specific Flow, review any particular flow, and create a new Flow.
+The right frame displays the high level information for each listed flow and allows the Admin to search for a specific Flow, review any particular flow, and create a new Flow.
 
 ## Flows List
 
