@@ -20,6 +20,8 @@ From this screen, the user can:
 When selecting a regulation, a screen is displayed showing the list of Activities defined by this regulation.
 
  ![image](/articles/DPM/images/Figure_20_Activity_list_for_a_Regulation.png)
+ <img src="../images/Figure_20_Activity_list_for_a_Regulation.png" width="80%" height="80%">
+
 
 In this screen the user can:
 
