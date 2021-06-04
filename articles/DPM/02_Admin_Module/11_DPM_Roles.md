@@ -28,6 +28,10 @@ As a role-based application, DPM Roles define the functions within the system en
 -	Access the dashboard to see the summary view for all requests. 
 -	Define the criteria for the allocation of requests to Case owners.  
 
+•	**DPO**: The DPO role provides dashboards to provide a company's Data Protection Officer the overall picture of DSR handling and Consent preferences:
+-	DSR Dashboard provides various summaries for the overall handling of DSR requests, including special focus on requests and Tasks that exceed their SLA or are under risk of becoming overdue. 
+-	Consent Dashboard provides the overall view of customer consent preferences evolution.  
+
 •	**Customer**: Data Subject Requests can be submitted directly by a customer. A customer can:
 -	Create a new request
 -	Search for their assigned requests 
