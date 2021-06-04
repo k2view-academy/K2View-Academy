@@ -7,7 +7,7 @@ Click the Regulations List menu option from the menu to access the list of Regul
 
 The Regulations screen displays the list of Data Privacy Regulations the company is committed for compliance. 
 
- ![image](/articles/DPM/images/Figure_19_Regulations_List.png)
+ ![image](/articles/DPM/images/figure_2_admin_module.png)
 
 From this screen, the user can:
 
