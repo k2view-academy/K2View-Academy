@@ -101,7 +101,7 @@ As observed, the permissions tree has multiple levels, which allow control of th
 
 ## Edit or Delete a Corporate Role
 
-Use the   <img src="../images/Figure_27_a_delete_icon.png" width="7%" height="7%"> button to delete a Corporate Role. The deletion of the Role removes it from all users to which it was assigned. 
+Use the   <img src="../images/Figure_27_a_delete_icon.png" width="5%" height="5%"> button to delete a Corporate Role. The deletion of the Role removes it from all users to which it was assigned. 
 
 Use the <img src="../images/Figure_27_b_edit_icon.png" width="5%" height="5%"> button to edit the email address of a Corporate Role.  
 
