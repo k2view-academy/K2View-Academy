@@ -11,7 +11,7 @@ The list of existing users is displayed. For each user, the user ID, username an
 
 Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to add a user to the system. The “Create New User” screen is displayed. 
 
- ![image](/articles/DPM/images/Figure_29_New_User_screen.png)
+<img src="../images/Figure_29_New_User_screen.png" width="40%" height="40%">
 
 <table>
 <tbody>
@@ -87,7 +87,7 @@ Use the  ![image](/articles/DPM/images/Figure_28_a_new_user_icon.png) button to 
 
 ## Edit or Delete a User
 
-Use the  ![image](/articles/DPM/images/Figure_29_a_delete_icon.png) button to delete a User. 
-Use the  ![image](/articles/DPM/images/Figure_29_b_edit_icon.png) button to edit the name, email address and Corporate Roles assigned to a User.    
+Use the <img src="../images/Figure_27_a_delete_icon.png" width="5%" height="5%"> button to delete a User. 
+Use the  <img src="../images/Figure_27_b_edit_icon.png" width="5%" height="5%"> button to edit the name, email address and Corporate Roles assigned to a User.    
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/12_Corporate_Roles.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md)
