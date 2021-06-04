@@ -8,10 +8,10 @@
 <li><a href="/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md">Flow Export and Import</li>
 <li><a href="/articles/DPM/02_Admin_Module/04_Stages.md">Stages</li> 
 <li><a href="/articles/DPM/02_Admin_Module/05_Tasks.md">Tasks</li>
-<li><a href="/articles/DPM/02_Admin_Module/06_Reminders.md">Reminders</li>
-<li><a href="/articles/DPM/02_Admin_Module/07_Operations.md">Operations</li>
-<li><a href="/articles/DPM/02_Admin_Module/071_Additional_Info.md">Additional Info</li>
-<li><a href="/articles/DPM/02_Admin_Module/07_Steward_Inputs.md">Strward Inputs</li>
+<li><a href="/articles/DPM/02_Admin_Module/06_Reminders.md">Reminders Tab</li>
+<li><a href="/articles/DPM/02_Admin_Module/07_Operations.md">Operations Tab</li>
+<li><a href="/articles/DPM/02_Admin_Module/071_Additional_Info.md">Additional Task Information Tab</li>
+<li><a href="/articles/DPM/02_Admin_Module/07_Steward_Inputs.md">Steward Inputs Tab</li>
 <li><a href="/articles/DPM/02_Admin_Module/08_Regulations.md">Regulations</li>
 <li><a href="/articles/DPM/02_Admin_Module/09_Activities.md">Activities</li>
 <li><a href="/articles/DPM/02_Admin_Module/10_Roles_Management.md">Roles Management</li> 
