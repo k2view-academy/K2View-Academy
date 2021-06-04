@@ -13,6 +13,8 @@ From this screen, the user can:
 - Add a new flow by selecting the "Add a Flow" button. The  “Create a new flow” screen is displayed.  
 - Update the flow version. If the option “latest” is selected, then each time a new version of the selected flow is marked as “finalized,” the Activity is automatically updated to use this latest flow.
 - Update the Activity SLA, in hours. 
+- Define if the requests based on this activity can be extended, and if so, what is the extention length in days.
+- Allows automatic extention of requests based on this activity. If automatic extention is allowed, define how many days before the request reaches the due date should it be automatically extended. 
 
 Any update performed on the Activity impacts only requests from the update moment forward. Requests that were already submitted will maintain the previous parameters.  
 
