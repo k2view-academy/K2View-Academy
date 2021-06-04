@@ -21,7 +21,7 @@ In our example, we defined that as a part of a DSAR flow, a data steward should 
 
 Using the same task we configured in the previous "Additional Info" section, the administrator had added an entry in the "Steward Inputs" tab, which requires the data steward to provide a rejection reason before rejecting the task.
 
-<img src="../images/Figure_18_steward_inputs_admin.png" width="100%" height="100%">
+<img src="../images/Figure_18_Steward_Inputs_admin.png" width="100%" height="100%">
 
 As shown in the image above, the new input is set with both "Mandatory On Reject" as well as "Show To Customer" switched "on".
 
@@ -31,11 +31,11 @@ We also configured in the "Task" tab of this task (first tab), that the "Steward
 
 As a result of the task configuration described above, when a customer submits a request that include this task, when the steward handles this task the Reject Reason is presented, and is mandatory if the task is to be rejected:  
 
-<img src="../images/Figure_18_steward_inputs_steward.png" width="100%" height="100%">
+<img src="../images/Figure_18_Steward_Inputs_steward.png" width="100%" height="100%">
 
 If the steward had rejected the Task, the whole Request is stopped as a result, and the rejection reason appears to the customer at the Request Details screen:
 
-<img src="../images/Figure_18_steward_inputs_customer.png" width="100%" height="100%">
+<img src="../images/Figure_18_Steward_Inputs_customer.png" width="100%" height="100%">
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/071_Additional_Info.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/08_Regulations.md)
 
