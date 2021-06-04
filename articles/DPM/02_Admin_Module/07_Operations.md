@@ -71,5 +71,5 @@ In this example of an operation that sends a DSAR response emails to customers, 
 - The field “Recipients” was defined as “input”, meaning the customer will be requested to provide this value at the moment of submitting a request. The system presents to the administrator the field "input type" to define the nature of the input value (e-mail in this case), and the field “Label”, which defines the text that will be presented to the customer so he will know to provide the recipient email address.
 - The field "Subject” was defined as “Value”, meaning the administrator can define a fixed text that will be presented as the subject of the mail. The system presents to the administrator the field where the text should be written.
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/06_Reminders.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/08_Regulations.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/06_Reminders.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/071_Additional_Info.md)
 
