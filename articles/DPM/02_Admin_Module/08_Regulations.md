@@ -30,4 +30,4 @@ In this screen the user can:
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/07_Operations.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/09_Activities.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/072_Steward_Inputs.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/09_Activities.md)
