@@ -2,24 +2,27 @@
 
 An [LU table](/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
 
-To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), do either: 
+To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), do one of the following: 
 
 1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit an LU whereby the tables and their populations are automatically created and added to the LU schema.
 
-2. Drag a **DB Table** into the **LU Schema window**:
+   -- or --
 
-   a. Go to the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs) of the [LU schema](/articles/03_logical_units/03_LU_schema_window.md). 
+2. From the **[LU schema](/articles/03_logical_units/03_LU_schema_window.md) window**:
+
+   a. Go to the [DB Objects tab](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs). 
    
-   b. Click **DB Connection** > [**DB interface**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
+   b. Click **DB Connection** and select a [**DB interface**](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) from the drop-down menu.
    
-   c. Click **Tables** and then drag them into the **LU schema**. You can drag several tables.
+   c. From the window underneath the **DB Connection** drop-down menu, open the table tree, select a **Table** and open its drop-down menu, then drag the table from its title  into the **LU schema**. You can drag several tables at the same time.
    
-   d. Check either: **Create Table Based DB Query** or **Create Table Based Root Function** or **Create Table Based Broadway Flow**.
+   d. A right-click menu appears, from it select one of the following: **Create Table Based DB Query** or **Create Table Based Root Function** or **Create Table Based Broadway Flow**.
 
-The selected tables are automatically created with the selected type of [population](/articles/07_table_population/01_table_population_overview.md) and added to the LU schema.
+      The selected table or tables are automatically created with the selected type of [population](/articles/07_table_population/01_table_population_overview.md) and added to the LU schema.
 
-![image](images/03_09_01_tables1.png)
+      ![image](images/03_09_01_tables1.png)
 
+   -- or --
 
 3. Drag a **Table** into the **LU Schema window**:
 
@@ -28,7 +31,9 @@ The selected tables are automatically created with the selected type of [populat
     b. Select a **Table** and drag it into the **LU Schema window**.
 
 
-![image](images/03_09_02_tables2.png)
+      ![image](images/03_09_02_tables2.png)
+     
+    -- or --
 
 4. Right click the **Schema window** and select one of the following options:
 
