@@ -1,6 +1,6 @@
 ### The TDM 7.1 Official Release
 
-We have just released TDM 7.1 based on Fabric 6.5. Some of the major enhancements of this release are list below:
+We have just released TDM 7.1 based on Fabric 6.5. Some of the major enhancements of this release are listed below:
 
 1. Integrate  TDM with Fabric Web Framework:
 
