@@ -216,21 +216,21 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="250pxl">
 <p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
-<p>A new parameter PARALLEL=true/false added in V6.4.2 enables running parallel GET commands on different LU types. PARALLEL='all' added in V6.4.4 supports parallel GET with failures, so even if the GET of one LUI fails, Fabric does not abort the GET of other LUIs and returns the list of IIDs and the exceptions.</p>
+<p>A new parameter PARALLEL=true/false added in V6.4.2 enables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR added in V6.4.4 supports GET of several LUI even if the sync of one LUI fails (when set to false).</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
 <p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false/'all']];</p>
+<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>get Customer.1;</p>
 <p>- Get the IID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34 WITH parallel=true;</p>
 <p>- Get the IIDs in parallel.</p>
-<p>get Customer.1, CRM.34 WITH parallel='all';</p>
-<p>- Get the IIDs in parallel even if the GET command of one LUI fails.</p>
+<p>get Customer.1, CRM.34 STOP_ON_ERROR=false;</p>
+<p>- Get the IIDs even if the GET command of one LUI fails.</p>
 </td>
 </tr>
 <tr>
@@ -245,7 +245,7 @@ The following table lists the GET commands:
 <p>Get an LUI:</p>
 <p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];;</p>
 <p>Get multiple instances of different LUs:</p>
-<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false/'all']];</p>
+<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>getf Customer.fnCreateInstId(235);</p>
@@ -261,7 +261,7 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false/'all'];</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
@@ -274,6 +274,7 @@ The following table lists the GET commands:
 </tr>
 </tbody>
 </table>
+
 
 #### Remote GET and GETF Commands
 
