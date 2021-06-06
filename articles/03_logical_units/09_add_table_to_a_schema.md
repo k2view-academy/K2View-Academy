@@ -45,7 +45,7 @@ To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.
     
     All the above options open the Query Builder. The LU table and its population are automatically generated based on the SQL query defined in the Query Builder.
 
-![image](images/03_09_03_tables3.png)
+      ![image](images/03_09_03_tables3.png)
 
 [Click for more information about LU Table Creation.](/articles/06_LU_tables/02_create_an_LU_table.md)
 
