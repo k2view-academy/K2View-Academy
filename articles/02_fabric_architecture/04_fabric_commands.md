@@ -220,9 +220,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
+<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
+<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>get Customer.1;</p>
@@ -243,9 +243,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];;</p>
+<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]];</p>
+<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>getf Customer.fnCreateInstId(235);</p>
@@ -261,7 +261,7 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
 </td>
@@ -274,6 +274,7 @@ The following table lists the GET commands:
 </tr>
 </tbody>
 </table>
+
 
 
 #### Remote GET and GETF Commands
