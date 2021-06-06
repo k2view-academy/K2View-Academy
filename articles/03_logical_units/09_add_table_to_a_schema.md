@@ -35,7 +35,7 @@ To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.
      
     -- or --
 
-4. Right click the **Schema window** and select one of the following options:
+4. Create a new table manually by right clicking the **Schema window** and selecting one of the following options:
 
     a. **New Table from SQL Based DB Query**.
     
