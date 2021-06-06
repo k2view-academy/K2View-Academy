@@ -2,7 +2,7 @@
 
 An [LU table](/articles/06_LU_tables/01_LU_tables_overview.md)  is a basic building block in a Logical Unit (LU).
 
-To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md), do one of the following: 
+The following are some of the methods you can use to add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.md): 
 
 1. Use the [Auto Discovery Wizard](/articles/03_logical_units/06_auto_discovery_wizard.md) to create or edit an LU whereby the tables and their populations are automatically created and added to the LU schema.
 
@@ -35,7 +35,7 @@ To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.
      
     -- or --
 
-4. Create a new table manually by right clicking the **Schema window** and selecting one of the following options:
+4. Right click the **Schema window** and select one of the following options:
 
     a. **New Table from SQL Based DB Query**.
     
@@ -47,7 +47,7 @@ To add a table to an [LU schema](/articles/03_logical_units/03_LU_schema_window.
 
       ![image](images/03_09_03_tables3.png)
 
-[Click for more information about LU Table Creation.](/articles/06_LU_tables/02_create_an_LU_table.md)
+[Click for more information about LU Table Creation.](/articles/06_LU_tables/02_create_an_LU_table.md) - additional methods of creating and adding an LU table are shown there. 
 
 [Click for more information about LU Tables and Table Population.](/articles/07_table_population/01_table_population_overview.md)
 
