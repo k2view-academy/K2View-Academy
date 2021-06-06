@@ -38,10 +38,10 @@ The target DBs are empty and the source DBs are populated with customers.
 
 1. Download the SQL script and the DB backup files from the **Demo DBs** directory.
 
-2. Create the databases in PostgreSQL: 
+2. Create the demo databases in PostgreSQL: 
 
    - Go to the script's directory and open a **powershell** window. 
-   - Then run the following command to the the script and create the DB users and schemas on the PostgreSQL DB:
+   - Then run the following command to run the script and create the CRM, Billing, Orders, and Collection DB users and schemas on the PostgreSQL DB:
 
      & "[PostgreSQL DB exe file full path]" -Upostgres --host [PG ip address] --port [DB port] -f "create_resources.sql"
 
@@ -53,6 +53,7 @@ The target DBs are empty and the source DBs are populated with customers.
    
 3. Open **pgAdmin 4** and start restoring the databases from backup files.
 
+Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installation](/articles/TDM/tdm_configuration/01_tdm_installation.md#create-the-tdm-postgresql-db-in-case-of-new-installation).
 ### Fabric Implementation
 
 1. Open the Fabric Studio and create a new project.
