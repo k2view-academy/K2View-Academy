@@ -6,6 +6,7 @@ A Representative can:
 - Search for previously submitted Requests.
 - Search for Customers.
 - Submit a new Request. 
+- Update customer's consent preferences.
 
  ![image](/articles/DPM/images/Figure_32_Representative_menu.png)
 
