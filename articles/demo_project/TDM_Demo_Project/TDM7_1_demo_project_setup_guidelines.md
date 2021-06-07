@@ -66,10 +66,10 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 ###  TDM GUI Definitions
 
 1. Create a Customer Business Entity (BE) that includes the following LUs:
-- Customer
-- Billing
-- Orders
-- Collection
+   - Customer
+   - Billing
+   - Orders
+   - Collection
 
    Below is the BE's structure:
 
@@ -83,14 +83,14 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 
 3. Create the following environments:
 
-- SRC:
+   - SRC:
 
      - Set  **Environment Type** setting to **Source**.
      - Set  **Fabric Environment Name** setting to **SRC**.
      - Add the products to this environment.
      - Set the version of the BILLING product to PROD.
    
-- TAR:
+   - TAR:
   
      - Set  **Environment Type** setting to **Both** to enable running Data Flux tasks on this environment.
      - Set  **Fabric Environment Name** setting to **TAR**.
