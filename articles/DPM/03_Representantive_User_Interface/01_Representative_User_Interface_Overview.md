@@ -8,7 +8,7 @@ A Representative can:
 - Submit a new Request. 
 - Update customer's consent preferences.
 
-<img src="../images/Figure_32_Representative_menu.png" width="30%" height="30%"!>
+<img src="../images/Figure_32_Representative_menu.png" width="30%" height="30%">
 
 
 
