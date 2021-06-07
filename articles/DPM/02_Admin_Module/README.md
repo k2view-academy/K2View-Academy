@@ -19,5 +19,6 @@
 <li><a href="/articles/DPM/02_Admin_Module/12_Corporate_Roles.md">Corporate Roles</li>
 <li><a href="/articles/DPM/02_Admin_Module/13_User_Management.md">User Management</li>
 <li><a href="/articles/DPM/02_Admin_Module/14_DPM_Main_Menu.md">DPM Main Menu</li>
+<li><a href="/articles/DPM/02_Admin_Module/15_1_Discovery_Introduction.md">Personal Data Discovery</li>
 
 </ul>
