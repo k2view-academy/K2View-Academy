@@ -218,7 +218,7 @@ The information in this section includes the the inputs that were requested from
 </tbody>
 </table>
 
-More details about the way to configure parameters so that they would appear on the Request Data section can be found in the [Task Configuration](02_Admin_Module/05_Tasks.md) section of the Administrator user guide. 
+More details about the way to configure parameters so that they would appear on the Request Data section can be found in the [Task Configuration](/articles/DPM/02_Admin_Module/05_Tasks.md) section of the Administrator user guide. 
 
 
 
