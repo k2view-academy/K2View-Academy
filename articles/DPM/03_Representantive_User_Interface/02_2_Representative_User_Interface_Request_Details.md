@@ -152,5 +152,5 @@ More details about the way to configure parameters so that they would appear on 
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representantive_User_Interface/02_Representative_User_Interface_Request_List.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Representantive_User_Interface/03_Representative_User_Interface_Submit.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representantive_User_Interface/02_Representative_User_Interface_Request_list.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Representantive_User_Interface/03_Representative_User_Interface_Submit.md)
 
