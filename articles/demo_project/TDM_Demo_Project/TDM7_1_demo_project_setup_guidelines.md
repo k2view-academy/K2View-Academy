@@ -65,9 +65,15 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 
 ###  TDM GUI Definitions
 
-1. Create a Customer Business Entity that includes an LU with the following structure:
+1. Create a Customer Business Entity (BE) that includes the following LUs:
+- Customer
+- Billing
+- Orders
+- Collection
 
- ![Customer BE](images/Customer_demo_BE.png)
+   Below is the BE's structure:
+
+   ![Customer BE](images/Customer_demo_BE.png)
 
 2. Create the following products:  
 
