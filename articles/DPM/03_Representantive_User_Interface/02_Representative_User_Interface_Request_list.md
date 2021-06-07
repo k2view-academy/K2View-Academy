@@ -68,7 +68,7 @@ Search a request from the Representative menu by selecting the “Requests List�
 
 For the search criteria selected by a drop-down list or by selecting a date: Regulation, Activity, Request Status, Created and Completed – the search is executed upon a value selected.  
 
-For the search criteria entry fields: Customer ID and Request ID, typing in either the customer ID and Request ID fields, the search is invoked upon the first three stated characters or more.  Once the search results are presented, the representative can view further details of a specific request by clicking the row of this request, as shown in the next image.
+For the search criteria entry fields: Customer ID and Request ID, typing in either the customer ID and Request ID fields, the search is invoked upon the first three stated characters or more.  Once the search results are presented, the representative can view further details of a specific request by clicking the row of this request, as shown in the next section.
 
 
 
