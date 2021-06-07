@@ -84,6 +84,16 @@ This article describes the setup and integration steps you need to do to connect
 
 11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
 
+    <table>
+    <tbody>
+    <tr>
+    	<td >
+        <img src="images/14_azure7.png">
+        </td>
+    </tr>
+    </tbody>
+    </table>
+
 12. From the 4th section - **Set up \<app-name>** (in our example "*FabricSSO K2v*") - Copy the IDP parameters - **Login URL** and **Azure AD Identifier**, to be populated at the Fabric SAML configuration for **IDP_ENTITYID** and **IDP_SINGLE_SIGN_ON_SERVICE_URL** parameters.
 
     <table>
@@ -98,7 +108,9 @@ This article describes the setup and integration steps you need to do to connect
 
 
 
+## Configuration instructions: At Fabric
 
+In addition to the instructions which are detailed [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration), to setup SAML with Azure AD requires to add an additional configuration parameter to the config.ini file: `SECURITY_WANT_NAMEID_ENCRYPTED=false`
 
 
 
