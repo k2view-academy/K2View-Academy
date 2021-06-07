@@ -2,7 +2,7 @@
 
 Search a request from the Representative menu by selecting the “Requests List” menu option. The displayed screen includes the list of existing requests and allows searching for a specific request based on multiple parameters.
 
-<img src="../images/Figure_33_Representative_Search_Request.png" width="30%" height="30%"!>
+<img src="../images/Figure_33_Representative_Search_Request.png" width="80%" height="80%"!>
 
 <table>
 <tbody>
@@ -71,7 +71,7 @@ For the search criteria entry fields: Customer ID and Request ID, typing in eith
 
 Once the search results are presented, the representative can view further details of a specific request by clicking the row of this request, as shown in the next image.
 
-<img src="../images/Figure_34_Request_Details.png" width="30%" height="30%"!>
+<img src="../images/Figure_34_Request_Details.png" width="80%" height="80%"!>
 
 <table>
 <tbody>
