@@ -63,4 +63,4 @@ Once the Request type is selected, the right side of the form displays the list 
 </table>
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representantive_User_Interface/02_Representative_User_Interface_Search.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Representantive_User_Interface/04_Representative_User_Interface_Customer_Search.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/03_Representantive_User_Interface/Academy_6.5/articles/DPM/03_Representantive_User_Interface/02_2_Representative_User_Interface_Request_Details.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/03_Representantive_User_Interface/04_Representative_User_Interface_Customer_Search.md)
