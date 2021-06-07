@@ -1,11 +1,11 @@
-# DPM Configuration
+# Data Subject Requests Automation - Configuration
 
 **Overview**
 
-The Admin module is where the DPM Administrator can define support for the different Privacy Regulations and their respective Activities.
-The configuration is comprised of the following information.
+The Admin module is where the DPM Administrator defines support for the various types of Data Subject Requests required by the different Privacy Regulations and their respective Activities.
+The configuration is comprised of the following steps:
 
-•	<b>Define Flows</b>: The Flows specify the set of tasks that are required for the fulfillment of a customer request.
+•	<b>Define Flows</b>: The Flows specify the set of tasks that are required for the fulfillment of a customer request. 
 
 • <b>Define Regulation and Activities</b>: Configure the Regulation and Activities that the DPM supports. Once an Activity is defined, it is mapped to the corresponding Flow.
 

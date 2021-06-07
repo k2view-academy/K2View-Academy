@@ -7,7 +7,7 @@ Click the Regulations List menu option from the menu to access the list of Regul
 
 The Regulations screen displays the list of Data Privacy Regulations the company is committed for compliance. 
 
- ![image](/articles/DPM/images/Figure_19_Regulations_List.png)
+ ![image](/articles/DPM/images/figure_2_admin_module.png)
 
 From this screen, the user can:
 
@@ -19,7 +19,8 @@ From this screen, the user can:
 
 When selecting a regulation, a screen is displayed showing the list of Activities defined by this regulation.
 
- ![image](/articles/DPM/images/Figure_20_Activity_list_for_a_Regulation.png)
+ <img src="../images/Figure_20_Activity_list_for_a_Regulation.png" width="80%" height="80%">
+
 
 In this screen the user can:
 
@@ -30,4 +31,4 @@ In this screen the user can:
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/07_Operations.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/09_Activities.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/072_Steward_Inputs.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/09_Activities.md)

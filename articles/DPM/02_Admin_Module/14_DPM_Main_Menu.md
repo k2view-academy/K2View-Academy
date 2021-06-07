@@ -1,8 +1,8 @@
 # DPM Main Menu
 
 The DPM Main Menu is the starting point for every user action. The Main Menu is located on the left side of the screen. The main menu options represent the different DPM Application Roles, including: Representative, Case Owner, Supervisor, Steward, Customer and Admin.  
-
- ![image](/articles/DPM/images/Figure_30_Main_Menu.png)
+ 
+<img src="../images/Figure_30_Main_Menu.png" width="30%" height="30%">
 
 Each user sees only the Application Roles enabled to their defined Corporate Role. The options presented to each user depend on the DPM Application roles granted to that user: 
 
@@ -17,7 +17,7 @@ For example, a user is assigned two corporate Roles:
 
 The Main Menu items displayed to this user are both the Steward and the Case Owner menus.
 
- ![image](/articles/DPM/images/Figure_31_Main_Menu_with_two_menu_items.png)
+ <img src="../images/Figure_31_Main_Menu_with_two_menu_items.png" width="30%" height="30%">
 
 The order by which the roles are listed in the menu reflect the same order of the roles as they  appear to this user in the role assignment field.   
 

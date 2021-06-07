@@ -10,6 +10,8 @@ The Admin module allows the user to perform the following tasks.
 - Create the Flows, Stages, and Tasks needed for the implementation of a customer request 
 - Manage User roles
 - Define customer consent topics
+- Configure and execute PII Discovery
+- Explore the data catalog
 
 **Admin Menu options**
 
@@ -21,9 +23,7 @@ When the user logs into the DPM system as Administrator, the screen displays two
 
 From the left window, the Administrator can access the available DPM configuration options. The details for each option are described in the next section, <i>DPM Configuration</i>.
 
-
-
-![image](/articles/DPM/images/figure_3_admin_menu.png)
+<img src="../images/figure_3_admin_menu.png" width="30%" height="30%">
 
 
 

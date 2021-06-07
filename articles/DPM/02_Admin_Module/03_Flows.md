@@ -8,7 +8,7 @@ A Flow is composed of <i>Stages</i>, and Stages include one or multiple tasks.
 Once a Flow’s configuration is complete, it can be linked to a DPM Activity. From that point on, any time a customer request for this DPM Activity is processed, the stages and tasks defined in this Flow are followed.  
 
 The Admin can view the list of existing flows by selecting the “Flows List” menu option at the left frame of the application screen. 
-The right frame displays the details for each listed flow and allows the Admin to search for a specific Flow, review any particular flow, and create a new Flow.
+The right frame displays the high level information for each listed flow and allows the Admin to search for a specific Flow, review any particular flow, and create a new Flow.
 
 ## Flows List
 
@@ -49,7 +49,7 @@ Any Flow can have multiple versions. A new version should be created when a chan
 The Administrator creates a new Flow by selecting the “Add a Flow” button at the top-right corner of the screen. 
 The Administrator is then prompted to define the Flow name, version, and description, as shown by the next image and defined by the subsequent table.
 
- ![image](/articles/DPM/images/Figure_5_New_Flow.png)
+<img src="../images/Figure_5_New_Flow.png" width="40%" height="40%">
 
 <table>
 <tbody>
@@ -94,8 +94,6 @@ The Administrator is then prompted to define the Flow name, version, and descrip
 Once the Flow information is defined and the new Flow is saved, the system displays the "Flow Editing screen." The Administrator can add Stages and Tasks under those Stages. 
 The Flow name and the Flow description can be updated at anytime by using the edit (pencil) icon next to the Flow name.
 
- ![image](/articles/DPM/images/Figure_6_Configuration_of_a_New_Flow_Initial_screen.png)
-
-
+ <img src="../images/Figure_6_Configuration_of_a_New_Flow_Initial_screen.png" width="90%" height="90%">
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/02_DPM_Configuration.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/03_1_Flow_Level_Actions.md)

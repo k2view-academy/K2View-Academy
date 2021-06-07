@@ -15,8 +15,7 @@ As an example, for a Task that should execute the Operation “SendMail” the s
 - Value
 - Link
 - Input
-
- ![image](/articles/DPM/images/Figure_18_Operation_parameters_types.png)
+<img src="../images/Figure_18_Operation_parameters_types.png" width="30%" height="30%">
 
 Each of those types allows the user to define a different way to obtain information needed for the execution of the operation. The following table describes the available options.
 
@@ -53,7 +52,7 @@ Each of those types allows the user to define a different way to obtain informat
 </td>
 <td width="800">
 <p>Use the &ldquo;input&rdquo; option when the Task requires a specific input from the user at the moment of opening a new DPM Request.</p>
-<p>The system requires the user to define the label of the field that the user will be requested to fill. </p>
+<p>The system requires the user to define the type of the input field (e.g. text, email, custom list etc.) and the label of the field that the user will be requested to fill. </p>
 <p>When a new DPM Request is submitted by a representative or customer, the system will present to the user the list of parameters that were defined as “input” and the label defined here appears as the label of the field that should be populated. </p>
 <p>For example, when the input parameter is the email address of the customer, the label can be defined to be “email address” or “Please provide your email address”.</p>
 </td>
@@ -66,11 +65,11 @@ The following image demonstrates the information the DPM requests the Administra
 
  ![image](/articles/DPM/images/Figure_16_Task_Operation_the_data_to_be_configured_for_each_input_option.png)
 
-In this example of an operation that sends emails, three input parameters are required: Subject, Body and Recipients. To demonstrate the different types of input types, each of those three fields was defined as one of the three types: 
+In this example of an operation that sends a DSAR response emails to customers, six input parameters are required: Customer ID, E-mail type (the template of the e-mail to be used in the communication to the customer), the file name, the PDF file itself, the recipient of the e-mail and the e-mail subject. Observe in the image how the different type of input fields are defined. For example:  
 
-- The field "Subject” was defined as “Value”, meaning the administrator can define a fixed text that will be presented as the subject of the mail. The system presents to the administrator the field where the text should be written
-- The field “Body” was defined as “Link”, and as a result the system presents to the administrator the fields Stage Name, Task Name and Output Name. The administrator can define from which previous Task the information for this field is to be received. 
-- The field “Recipients” was defined as “input”, meaning the customer will be requested to provide this value at the moment of submitting a request. The system presents to the administrator the field “Label”, which defines the text that will be presented to the customer so he will know to provide the recipient email address.
+- The field “PDF” was defined as “Link”, as it should get as an input the PDF file that was generated in previous task of thi sflow. As a result the system presents to the administrator the fields Stage Name, Task Name and Output Name. The administrator can define from which previous Task the information for this field is to be received. 
+- The field “Recipients” was defined as “input”, meaning the customer will be requested to provide this value at the moment of submitting a request. The system presents to the administrator the field "input type" to define the nature of the input value (e-mail in this case), and the field “Label”, which defines the text that will be presented to the customer so he will know to provide the recipient email address.
+- The field "Subject” was defined as “Value”, meaning the administrator can define a fixed text that will be presented as the subject of the mail. The system presents to the administrator the field where the text should be written.
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/06_Reminders.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/08_Regulations.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/06_Reminders.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/071_Additional_Info.md)
 

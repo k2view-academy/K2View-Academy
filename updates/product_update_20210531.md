@@ -1,12 +1,14 @@
 ### The TDM 7.1 Official Release
 
-We have just released TDM 7.1 based on Fabric 6.5. Some of the major enhancements of this release are:
+We have just released TDM 7.1 based on Fabric 6.5. Some of the major enhancements of this release are listed below:
 
 1. Integrate  TDM with Fabric Web Framework:
 
-   1. The log-in to the TDM Web application is done via Fabric Web Framework. This simplifies that operation and maintenance of the TDM. 
-   2. The TDM back-end layer is implemented by Fabric APIs in the TDM Library.
-   3. Using Fabric authentication capabilities.
+   * The log-in to the TDM Web application is done via Fabric Web Framework. This simplifies that operation and maintenance of the TDM. 
+
+   * The TDM back-end layer is implemented by Fabric APIs in the TDM Library.
+
+   * Using Fabric authentication capabilities.
 
 2. Update the Look and Feel of the TDM Web Application.
 

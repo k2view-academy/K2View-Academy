@@ -9,7 +9,7 @@ The following components must be installed as a prerequisite:
 
 ## TDM Package Content
 
-The TDM package creates the following sub directories: 
+The TDM package added the TDM GUI functionality to Fabric. The TDM package creates the following sub directories: 
 
 - apps/nodejs:
   - This is the Node.js component. The TDM GUI works with **10.20.1** Node.js version.
@@ -20,7 +20,7 @@ The TDM package creates the following sub directories:
 - TDMGUI:
   - Contains the scripts to create the TDM DB and the HTML of the TDM API DOC.
 
-When openning the TDM package the package also updates the following:
+When opening the TDM package, the package also updates the following:
 
 - Updates the **.bash_profile** file:
   - Adds the $K2_HOME/apps/pgsql-9.6/bin/ and $K2_HOME/apps/nodejs/bin to the PATH variable.
@@ -30,6 +30,10 @@ When openning the TDM package the package also updates the following:
   - Click for more information about [adding applications to Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).
 
 ## Installation guidelines for TDM Package on the Fabric Server
+
+You can either install a **Fabric and TDM docker which has an embedded TDM package** or install  manually the TDM package on the Fabric server.
+
+To install a TDM package on a Fabric server do the following:
 
 - Download the TDM package from the download page. Copy it under the  $K2_HOME directory and untar it using the following command:
 
@@ -130,11 +134,12 @@ Following steps should be following if a new APIDOC should be generated to inclu
 - Set the following environment variables:
 
   ```shell
-  export $DB=<postgreSQL DB name>;
-  export $PG_USER=<postgreSQL DB user name>; 
-  export PGPASSWORD=<postgreSQL DB pwd>;
-  export PG_HOST=<postgreSQL DB host>;
-  export PG_PORT=<postgreSQL DB port>;
+  export DB=<postgreSQL DB name>
+  export PG_USER=<postgreSQL DB user name>
+  export PGPASSWORD=<postgreSQL DB pwd>
+  export PG_HOST=<postgreSQL DB host>
+  export PG_PORT=<postgreSQL DB port>
+
   ```
 
 - Add execution permissions to **createk2TDMDB.sh**.
@@ -148,15 +153,25 @@ Following steps should be following if a new APIDOC should be generated to inclu
 - Set the following environment variables:
 
   ```shell
-  export PG_HOST=<postgreSQL DB host>;
-  export PG_PORT=<postgreSQL DB port>;
+  export PG_HOST=<postgreSQL DB host>
+  export PG_PORT=<postgreSQL DB port>
   ```
 
 - Add execution permissions to **updatek2TDMDB.sh**.
 
 - Run **createk2TDMDB.sh** script.
 
+## Import and Deploy the TDM Library
 
+The TDM back-end layer is now implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy to Fabric the Web Services and the TDM LU. 
+
+Click for more information about the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).  
+
+## Create K2masking Keyspace in Cassandra
+
+The **k2masking** keyspace is needed for a TDM implementation to support masking or sequence handling.  If the **k2masking** keyspace does not exist in Cassandra DB, create it using the **masking-create-cache-table.flow** from the library of Broadway examples. After creating the **k2masking** keyspace, get the **update_tdm_sequence_mapping.sql** script from the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md) and run it on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure.
+
+Click for more information about [sequence handling](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-2---create-sequences).
 
 ## Add Permission Groups Mapping to the TDM
 
@@ -164,6 +179,6 @@ The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/
 
 The mapping of each Fabric role to a TDM Permission Group is done by the [Permission Groups Mapping](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md) TDM window and is kept in [permission_groups_mapping TDM DB table](/articles/TDM/tdm_architecture/02_tdm_database.md#permission_groups_mapping).
 
-After installing the TDM, the admin user must define the Permission Group mapping of each user's group (= Fabric role) to enable the TDM users to work properly on the TDM GUI based on their Permission Groups.
+After installing the TDM, the admin user must [login the TDM GUI](/articles/TDM/tdm_gui/01_tdm_gui_overview.md#tdm-gui---login), open the [Permission Groups Mapping window](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md), and define the Permission Group mapping of each user's group (= Fabric role) to enable the TDM users to work properly on the TDM GUI based on their Permission Groups.
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_tdmdb_general_parameters.md)

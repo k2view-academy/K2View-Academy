@@ -2,7 +2,7 @@
 
 On the right-hand side of the Flow name are icons that respresent the available actions for that Flow. Each icon and its corresponding description are outlined in the following table. 
 
- ![image](/articles/DPM/images/Figure_7_Flow_icons.png)
+<img src="../images/Figure_7_Flow_icons.png" width="30%" height="30%">
 
 <table>
 <tbody>
@@ -98,56 +98,5 @@ Each information item is described in the following table.
 </tr>
 </tbody>
 </table>
-
-
-## Add a Stage
-
-Use the <b>New Stage</b> ![image](/articles/DPM/images/Figure_8a_plus_icon.png) icon on the left side of the Flow screen to add a new Stage. The user is prompted to define a <b>Stage Name</b> and <b>Stage Description</b>, as shown in the following figure and description table.
-
- ![image](/articles/DPM/images/Figure_9_Adding_a_new_Stage.png)
-
-<table>
-<tbody>
-<tr>
-<td width="85">
-<p><strong>Property</strong></p>
-</td>
-<td width="30">
-<p><strong>M/O</strong></p>
-</td>
-<td width="785">
-<p><strong>Description</strong></p>
-</td>
-</tr>
-<tr>
-<td width="85">
-<p>Stage Name</p>
-</td>
-<td width="30">
-<p>M</p>
-</td>
-<td width="785">
-<p>The name of this Stage.</p>
-</td>
-</tr>
-<tr>
-<td width="85">
-<p>Stage Description</p>
-</td>
-<td width="30">
-<p>O</p>
-</td>
-<td width="785">
-<p>The Stage description.</p>
-</td>
-</tr>
-</tbody>
-</table>
-
-Save the new Stage to open the following screen and define the Stage Tasks. 
-
- ![image](/articles/DPM/images/Figure_9_Flow_with_a_new_stage_screen.png)
-
-While the <b>Status</b> is marked as a <b>Draft</b> (not <b>Completed</b>), additional Stages can be added or updated by adding or modifying Tasks. 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/03_Flows.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/03_2_Flow_Export_Import.md)
