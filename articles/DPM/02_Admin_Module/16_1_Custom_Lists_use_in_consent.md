@@ -14,4 +14,4 @@ When a data subject, such as a customer, opens the Consent list page, the list o
 
 Thanks to the ability to integrate between the DPM and any corporate source system, determining if a customer meets the filter criteria is made at the level of the project implementation and can be based on any of the customer data.
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/16_Custom_Lists.md)[<p align="right"> Return to main menu</p>](/articles/DPM/README.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/16_1_Custom_Lists_use_in_flow.md)[<p align="right"> Return to main menu</p>](/articles/DPM/README.md)
