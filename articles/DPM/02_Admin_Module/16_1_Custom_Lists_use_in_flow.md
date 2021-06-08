@@ -10,7 +10,7 @@ This configuration can be done in any of the tabs which permit definition of inp
 
 To configure the custom list, In any of the abovementioned Task tabs, chose the "Custom List" field type when defining the type of an input field, as in the following example:
 
-<img src="../images/Figure_100_Custom_Lists_configuration.png" width="80%" height="80%">
+<img src="../images/Figure_100_Custom_Lists_configuration.png" width="100%" height="100%">
 
 As a result, the DPM enables you to select what is the custom list that should be used and define what is the label that should be presented to the user.
 
