@@ -1,4 +1,4 @@
-## Custom Lists In Flows Configuration
+## Custom Lists In Flow Configuration
 
 Use the custom list when configuring Data Subject Requests (DSR) Flow parameters that should be presented to the DPM user as a list of options to chose from.
 
