@@ -18,17 +18,17 @@ In the example below we have configured a Task to use Custom List in two places 
 
 - **Additional Info:** To allow the customer define a preferred contact method as part of the inputs in the Additional Info tab:
 
-  <img src="../images/Figure_100_Custom_Lists_additional_info.png" width="60%" height="60%"> 
+  <img src="../images/Figure_100_Custom_Lists_additional_info.png" width="100%" height="100%"> 
 
-- **Steward Inputs:** To allow the data steward to specify the Request rejection reason when handling a request:<img src="../images/Figure_100_Custom_Lists_in_steward_input.png" width="60%" height="60%">
+- **Steward Inputs:** To allow the data steward to specify the Request rejection reason when handling a request:<img src="../images/Figure_100_Custom_Lists_in_steward_input.png" width="100%" height="100%">
 
 The results of the two configurations above is that when a customer submits a Request that uses this Flow, the Contact method will appear as a dropdown in the Request submission screen:
 
-<img src="../images/Figure_100_Custom_Lists_customer_request.png" width="80%" height="80%">
+<img src="../images/Figure_100_Custom_Lists_customer_request.png" width="100%" height="100%">
 
 In addition, when the data steward handles the Task as part as the Request fulfillment, the information that was selected by the customer appears in the Additional Info section, and the option to select a rejection reason appears at the Steward Inputs section, as shown below:
 
- <img src="../images/Figure_100_Custom_Lists_steward_screen.png" width="80%" height="80%">
+ <img src="../images/Figure_100_Custom_Lists_steward_screen.png" width="100%" height="100%">
 
 
 
