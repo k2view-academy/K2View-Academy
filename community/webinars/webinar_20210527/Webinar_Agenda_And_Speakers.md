@@ -34,3 +34,5 @@ Design, create and edit your own data orchestration ("Broadway") operators.
 
 [Click to download the custom Actor and the sample flow which uses this Actor](myConstTableActor.k2export).
 
+[Click to view the Webinar recording.](https://www.k2view.com/k2view-developer-community-webinar-20210527/)
+
