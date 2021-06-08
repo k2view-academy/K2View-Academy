@@ -166,6 +166,8 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 The TDM back-end layer is now implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy to Fabric the Web Services and the TDM LU. 
 
+Note that if you already have a TDM 7.0.x project, you need to delete the TDM category from the Web Services before importing the TDM Library's Web Services.
+
 Click for more information about the [TDM Library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).  
 
 ## Create K2masking Keyspace in Cassandra
