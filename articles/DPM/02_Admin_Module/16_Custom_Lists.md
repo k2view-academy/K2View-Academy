@@ -1,4 +1,4 @@
-## Custom Lists
+# Custom Lists
 
 Use Custom lists when you want to present a list of predetermined values, so that the user can chose between the options.  with custom lists, the set of values that is presented to the end user is configurable and can be changed at any point of time. 
 
