@@ -30,4 +30,4 @@ Click the ![image](/articles/DPM/images/ICON_Clear.png) button to reset all crit
 
 
 
-[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/15_8_Discovery_Results_Tab_Overview.md)[<p align="right"> Return to PII Discovery Introduction</p>](/articles/DPM/02_Admin_Module/15_1_Discovery_Introduction.md)
+[![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/02_Admin_Module/15_8_Discovery_Results_Tab_Overview.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/02_Admin_Module/16_Custom_Lists.md)
