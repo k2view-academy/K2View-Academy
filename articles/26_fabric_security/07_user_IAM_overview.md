@@ -46,13 +46,13 @@ Fabric also provides the option to **block** the access either for console or we
 
 See [here](/articles/26_fabric_security/13_user_IAM_configiration.md) how to define and configure Fabric's authenticator. 
 
-#### Proprietary Custom Authenticator
+### Proprietary Custom Authenticator
 
 Fabric can work with a proprietary custom authenticator, when required by the organization.
 
 To use such custom authenticator, implement the interface `com.k2view.fabric.authentication.providers.Authenticator` and set the Fabric configuration accordingly. For more information see [here](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md)
 
-#### Sequence Authenticators
+### Sequence Authenticators
 
 Fabric provides a flexible mechanism, in which the customer can define a sequence of authenticators. Each authenticator is used as a fallback to its predecessor.
 
@@ -60,7 +60,7 @@ For example, the console access can be set to be using an LDAP server, and if it
 
 Note that web access can be set to use either a SAML server, or other authenticators, but it cannot be combined with others. In other words, in case of using SAML server there can be no fallback.  
 
-#### Authentication method by Channel
+### Authentication method by Channel
 
 Fabric provides the flexibility to separate between the authenticators for the various access methods - web, console and WS. 
 
@@ -68,7 +68,7 @@ For example, in case IAM is not handled by Fabric, apps might use web access via
 
 Note that for web service (WS) to be managed by SAML, a JWT token must be used, as explained [here](/articles/26_fabric_security/05_fabric_webservices_security.md).
 
-#### User Information at UserCode 
+### User Information at UserCode 
 
 *UserCode*, which can be used in the project implementation code, has a method called `sessionUser()` . This function provides a *SessionUser* object that contains the user-name and roles, relevant to the current user session and that are populated by the relevant active authentication provider. This can be used, for example, to apply  permissions by roles in the code. More information can be found at the Fabric online Javadoc.
 
