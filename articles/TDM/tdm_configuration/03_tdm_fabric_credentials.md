@@ -5,6 +5,7 @@
 The TDM GUI application is pre-integrated with [Fabric Web Framework](/articles/30_web_framework/02_preintegrated_apps_overview.md).  The user logins into the Fabric Web Framework and **Fabric authenticates the user**.   The TDM GUI application gets the **user id** and the user's **Fabric roles** from the user's session. 
 
 **The user groups are defined in the organization's SP and must be defined in advance in Fabric as [Fabric roles](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#create-role)**. 
+Each Fabric role must get **ALL_WS** permission to enable the role's users to open and view the TDM windows.
 
 Assuming a **one-to-one relation between a user group and a Fabric role**.
 
