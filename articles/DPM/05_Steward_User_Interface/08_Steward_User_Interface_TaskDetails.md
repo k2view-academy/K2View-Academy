@@ -117,7 +117,7 @@ For more information about task configuration and how it impacts the Steward Tas
 
 Information about the Flow of the Request is provided to the user through the progress bar. An example of the progress bar follows: 
 
-![image](/articles/DPM/images/Figure_45_d_Flow_detail.png)
+<img src="../images/Figure_45_d_Flow_detail.png" width="60%" height="60%"> 
 
 The progress bar displays the Flow Stage; several stages are represented by the same fill color; Completed Stage appears in green, a Processing Stage appears in blue, and an Overdue Stage appears in red.  
 For the preceding example, the Stage of “Case Opening” appears in green, denoting completed. The stage “Data Collection” appears in blue, denoting it is the stage currently in progress. The Stages in gray are those not yet started.
