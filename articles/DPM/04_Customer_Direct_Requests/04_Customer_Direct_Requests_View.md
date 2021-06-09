@@ -72,6 +72,10 @@ Additional details about a specific request can be viewed by clicking the reques
 
  ![image](/articles/DPM/images/Figure_39_Customer_Requests_details.png)
 
+The top section of the screen includes the high level request information: 
+
+<img src="../images/Figure_39_Customer_Requests_details_header.png" width="100%" height="100%">
+
 <table>
 <tbody>
 <tr>
@@ -157,6 +161,60 @@ Additional details about a specific request can be viewed by clicking the reques
 </tbody>
 </table>
 
+## Request Timeline
+
+The section that appears below the header, on the left side of the screen provides the main milestones of the request:
+
+<img src="../images/Figure_39_Customer_Requests_details_timeline.png" width="50%" height="50%"> 
+
+The timeline presents information such the date the request was submitted, the dates when notifications were sent to the customer, and the date when the request was completed.
+
+## Request Data
+
+The section to the right of the screen shows detailed data originating from the request input and output attributes. <img src="../images/Figure_39_Customer_Requests_details_data.png" width="50%" height="50%">
+
+The information in this section includes the the inputs that were requested from the customer at the moment of the request submission, as well as information that was generated as part of the request fulfilment process and that were marked as "show to customer" at the Task configuration screen. 
+
+<table>
+<tbody>
+<tr>
+<td width="200">
+<p><strong>Field</strong></p>
+</td>
+<td width="700">
+<p><strong>Description</strong></p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Label</p>
+</td>
+<td width="700">
+<p>The Label that was defined for this attribute in the Task configuration.</p>
+<p>The labels are defined in the Tabs "Operations", "Additional Info" and "Steward Input" of the Task configuraiton.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Info</p>
+</td>
+<td width="700">
+<p>The actual content of the attribute as was provided by the customer or generated as part of the reqeust fulfilment process.</p>
+</td>
+</tr>
+<tr>
+<td width="200">
+<p>Customer Input</p>
+</td>
+<td width="700">
+<p>Set to "on" if the information was provided by the customer, and "off" if it was generated as part of the request fulfilment process.</p>
+</td>
+</tr>
+<tr>
+</tbody>
+</table>
+
+More details about the way to configure parameters so that they would appear on the Request Data section can be found in the [Task Configuration](/articles/DPM/02_Admin_Module/05_Tasks.md) section of the Administrator user guide. 
 
 [![Previous](/articles/DPM/images/Previous.png)](/articles/DPM/04_Customer_Direct_Requests/03_Customer_Direct_Requests_Submit.md)[<img align="right" width="60" height="54" src="/articles/DPM/images/Next.png">](/articles/DPM/04_Customer_Direct_Requests/05_Customer_Direct_Requests_APIs.md)
 
