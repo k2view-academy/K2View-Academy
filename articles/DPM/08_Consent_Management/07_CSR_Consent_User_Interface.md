@@ -4,7 +4,8 @@ The DPM interfaces for representatives and agents are similar to the screens and
 
 The CSR can set consent preferences on behalf of a customer by accessing the Consent Management menu option from the <b>REPRESENTATIVE</b> menu.
 
- ![image](/articles/DPM/images/Figure_68_Consent_Management_At_Representative_Menu.png)
+ <img src="../images/Figure_68_Consent_Management_At_Representative_Menu.png" width="30%" height="30%">
+
 
 For each customer, the CSR can review the list of consents, opt-in or opt-out of each one, or view historical information about opting-in or opting-out of activities previously performed.
 
