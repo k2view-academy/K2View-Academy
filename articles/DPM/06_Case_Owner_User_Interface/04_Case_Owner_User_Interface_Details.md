@@ -12,7 +12,8 @@ The upper part of the screen displays general information about the Request; hea
 
 Under the header section, the different stages that make part of the Request process are presented: 
 
- ![image](/articles/DPM/images/Figure_48_b_Case_owner_Request_details_Flow_stages.png)
+ <img src="../images/Figure_48_b_Case_owner_Request_details_Flow_stages.png" width="70%" height="70%">
+
 
 Completed Stages are shown in green. The current Stage is presented in blue when on track towards completion. When the Stage is not on track, it is shown in red signifying past due. Future Stages to be processed appear in grey. 
 
