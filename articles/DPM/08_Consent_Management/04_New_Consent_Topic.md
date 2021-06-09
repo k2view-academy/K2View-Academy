@@ -32,7 +32,7 @@ The following dialog box displays.
 </td>
 <td width="840">
 <p>When a consent topic is relevant only to specific groups of users, a filter can be added so that this consent would be presented only for the relevant groups.</p>
-<p>The filter name and the values it holds are defined as a Customer List. To learn about how this configuration is done, visit the [Custom List](/articles/DPM/02_Admin_Module/16_Custom_Lists.md) section in this user guide.</p>
+<p>The filter name and the values it holds are defined as a Customer List. To learn about how this configuration is done, visit the Custom List section in this user guide.</p>
 </td>
 </tr>
  <tr>
