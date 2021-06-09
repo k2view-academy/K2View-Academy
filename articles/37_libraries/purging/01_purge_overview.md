@@ -1,3 +1,5 @@
+# Data Purging #
+
 Purging data from a database is an important task, which must be undertaken from time to time for a variety of reasons: confidentiality, security, contractual obligations, saving of space, etc.
 
 Fabric provides a solution for implementing a purge process that is secure and can be implemented in an on-going manner. The purge process can also function as an archiving process, allowing Fabric or an external data base to function as the archival repository. Since Fabric works with Logical Units, complex purging rules can be created and implemented without impacting performance. 
