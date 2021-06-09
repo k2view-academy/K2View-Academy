@@ -2,7 +2,8 @@
 
 Each customer can set consent preferences by accessing the Consent Management menu option from the Customer menu.
 
- ![image](/articles/DPM/images/Figure_65_Consent_Management_At_Customer_Level.png)
+ <img src="../images/Figure_65_Consent_Management_At_Customer_Level.png" width="30%" height="30%">
+
 
 When accessing this menu option, the customer can review the list of consents, define whether to opt-in or opt-out to each one, or view historical information about opting-in or opting-out of previously performed activities.
 
@@ -13,10 +14,10 @@ In this screen:
 <table style="width: 696px;">
 <tbody>
 <tr>
-<td style="width: 106px;" width="103">
+<td style="width: 106px;" width="160">
 <p><strong>Field</strong></p>
 </td>
-<td style="width: 590px;" width="600">
+<td style="width: 590px;" width="800">
 <p><strong>Description</strong></p>
 </td>
 </tr>
