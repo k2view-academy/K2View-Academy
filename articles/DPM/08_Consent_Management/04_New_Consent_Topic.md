@@ -65,7 +65,7 @@ The following dialog box displays.
 <p>Mandatory</p>
 </td>
 <td width="840">
-<p>If a consent topic is defined as mandatory, it means that the consent would be presented to the customer as "on" and the customer cannot opt-out from this consent.</p>
+<p>If a consent topic is defined as mandatory, it means that the consent would be presented to the customer as <strong>on</strong> (opt-in) and the customer cannot opt-out from this consent.</p>
 </td>
 </tr>
 <tr>
