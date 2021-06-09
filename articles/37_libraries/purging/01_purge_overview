@@ -8,9 +8,7 @@ Since Fabric works with Logical Units, complex purging rules can be created and 
 The purge process is designed using the Fabric Studio user interface, which eliminates the need to perform coding tasks, as the purge can be done by implementation only.
 
 This purge solution also allows simple testing and validations, as the process populates detailed reporting tables of the purged entities and the logic that led to purging or not purging a specific database entry.
-
 Fabric uses a Logical Unit in order to search the application database for data that should be purged. This Logical Unit - specially designed for the purging process - enables the purging to be undertaken as one transaction, after the user has assessed the full picture of the purging needs.  
-
 This Logical Unit-based purging process provides significant advantages, such as:
 
 - Assuring that the purge will never affect the data integrity in your database, as for each such unit the deletion of data will only be done if it was successful across all the Logical Unit entities
