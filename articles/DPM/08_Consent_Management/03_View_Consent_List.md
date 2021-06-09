@@ -2,19 +2,20 @@
 
 To view the list of configured consents or to create new ones, access the Consent Management option at the DPM Administrator module.
 
- ![image](/articles/DPM/images/Figure_62_Consent_Management_Menu_Item.png)
+<img src="../images/Figure_62_Consent_Management_Menu_Item.png" width="30%" height="30%">
 
 The Consent Management screen displays the consent topics that were already configured by the Administrator, and allows adding a new consent or altering an existing consent configuration. 
 
- ![image](/articles/DPM/images/Figure_63_Consent_Management_Configuration_Screen.png)
+<img src="../images/Figure_63_Consent_Management_Configuration_Screen.png" width="100%" height="100%">
+
 
 Filter options display along the top-left of the screen, letting you clarify the list of consents presented by <b>Regulation</b> and/or <b>Category</b>.
 
- ![image](/articles/DPM/images/Figure_71_Consent_Management_Configuration_Reg_Cat.png)
+ 
+<img src="../images/Figure_71_Consent_Management_Configuration_Reg_Cat.png" width="30%" height="30%">
 
 To search a specific consent, use the Search option at the top-right of the Consents table. 
 
- ![image](/articles/DPM/images/Figure_70_Consent_Management_Configuration_Search.png)
 
 The following defines each column within the Consents table.
 
@@ -46,34 +47,34 @@ The following defines each column within the Consents table.
 </tr>
 <tr>
 <td valign="top" width="103">
-<p>OPT IN TEXT</p>
+<p>DURATION</p>
 </td>
 <td valign="top" width="700">
-<p>An additional description that explains the benefits of opting-in to each consent to the customer.</p>
-</td>
-</tr>
-<tr>
-<td valign="top" width="103">
-<p>OPT OUT TEXT</p>
-</td>
-<td valign="top" width="700">
-<p>An additional description that explains the impacts of opting-out from each consent to the customer.</p>
+<p>The duration that the consent is considered valid at the customer level. For every customer, the consent takes effect the moment of opting-in, and then for the duration that is specified in this field.</p>
 </td>
 </tr>
 <tr>
 <td valign="top" width="103">
 <p>REGULATION</p>
 </td>
-<td width="700">
+<td valign="top" width="700">
 <p>The list of regulations linked to a consent. This allows control of the list of consents presented to each customer in accordance with the relevant regulation.</p>
 </td>
 </tr>
 <tr>
 <td valign="top" width="103">
-<p>DURATION</p>
+<p>FILTER</p>
+</td>
+<td width="700">
+<p>When the consent topic is associated with filters, then this consent would only be presented to customers that meet the filter criteria</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="103">
+<p>MANDATORY</p>
 </td>
 <td valign="top" width="700">
-<p>The duration that the consent is considered valid at the customer level. For every customer, the consent takes effect the moment of opting-in, and then for the duration that is specified in this field.</p>
+<p>If a consent topic is defined as mandatory, it means that the consent would be presented to the customer as "on" and the customer cannot opt-out from this consent.</p>
 </td>
 </tr>
 <tr>
