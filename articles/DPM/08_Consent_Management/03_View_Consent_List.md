@@ -2,7 +2,7 @@
 
 To view the list of configured consents or to create new ones, access the Consent Management option at the DPM Administrator module.
 
-<img src="../images/Figure_62_Consent_Management_Menu_Item.png" width="30%" height="30%">
+<img src="../images/Figure_62_Consent_Management_Menu_Item.png" width="25%" height="25%">
 
 The Consent Management screen displays the consent topics that were already configured by the Administrator, and allows adding a new consent or altering an existing consent configuration. 
 
@@ -12,7 +12,7 @@ The Consent Management screen displays the consent topics that were already conf
 Filter options display along the top-left of the screen, letting you clarify the list of consents presented by <b>Regulation</b> and/or <b>Category</b>.
 
  
-<img src="../images/Figure_71_Consent_Management_Configuration_Reg_Cat.png" width="30%" height="30%">
+<img src="../images/Figure_71_Consent_Management_Configuration_Reg_Cat.png" width="50%" height="50%">
 
 To search a specific consent, use the Search option at the top-right of the Consents table. 
 
