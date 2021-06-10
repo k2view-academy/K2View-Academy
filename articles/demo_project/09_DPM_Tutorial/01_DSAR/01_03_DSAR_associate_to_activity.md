@@ -8,7 +8,7 @@ We will now create a new Regulation, add a new Activity under it, and then we wi
 
 1. Select the menu option **Regulation List**.
 
-![image](../images/01_03_DSAR_Admin_Menu_Regulation.png)
+<img src="../images/01_03_DSAR_Admin_Menu_Regulation.png" width="30%" height="30%">
 
 2. Click ![image](../images/01_03_DSAR_New_Regulation_Icon.png) at the top-right of the Regulation List screen, to create a new Regulation. Populate the information for this new Regulation as shown below. 
 
