@@ -114,7 +114,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 3. Deploy Fabric project's Web-Services to the local debug server.
 
-4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface.
+4. Run **buildTdmApiJSON** Broadway flow to create a JSON under the local directory of **TDM_APIDOC_JSON** interface. Populate the current TDM version in the **TDM Version** input parameter. For example, TDM 7.1. This version is added to the generated APIDOC.
 
 5. Open the Swagger editor using the following URL: https://editor.swagger.io/.
 
