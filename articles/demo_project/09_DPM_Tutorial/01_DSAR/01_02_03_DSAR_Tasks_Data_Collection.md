@@ -13,7 +13,7 @@ The sample Stages we will create include:
 
 1. Create a new Stage called **Data Collection**.
 
-<img src="../images/01_02_03_DSAR_Data_Collection_Stage" width="50%" height="30%">
+<img src="../images/01_02_03_DSAR_Data_Collection_Stage.png" width="50%" height="30%">
 
 2. Add a new Task under this Stage, called **Collect Customer Data**.
 
