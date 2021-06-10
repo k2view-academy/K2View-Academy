@@ -48,6 +48,8 @@ Broadway can learn the Schema by example. Just run the flow, and the metadata is
 
 <div align="center"><img src="images/overview_schema.png" height=400px/></div>
 
+[Click for more information about the Broadway Data Editor and how you can edit the schema using it](27_broadway_data_inspection.md).
+
 ## Iterations
 
 A common pattern of execution is to perform an iterative operation on a data set. For instance, performing some data transformation on a database result-set or traversing a JSON array obtained from a REST API.
