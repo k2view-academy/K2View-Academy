@@ -12,4 +12,4 @@ As a result, the Flow status is now marked as **Status: Completed**, and no furt
 
 
 
-[![Previous](../images/Previous.png)](01_02_03_DSAR_Tasks_Next_Stages.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_03_DSAR_associate_to_activity.md)
+[![Previous](../images/Previous.png)](01_02_03_DSAR_Tasks_Customer_Notification.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_03_DSAR_associate_to_activity.md)
