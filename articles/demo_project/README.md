@@ -3,7 +3,7 @@
 <ul>
 <li><a href="/articles/demo_project/Fabric_Demo_Project/00_Fabric_demo_project_setup_guidelines.md">Fabric Demo Project</a></li>
 <li><a href="/articles/demo_project/TDM_Demo_Project/TDM7_1_demo_project_setup_guidelines.md">TDM Demo Project</a></li>
-    <li><a href="/articles/demo_project/09_DPM_Tutorial/README.md">DPM Trial Tutorial</a></li>
 </ul>
+
 
 
