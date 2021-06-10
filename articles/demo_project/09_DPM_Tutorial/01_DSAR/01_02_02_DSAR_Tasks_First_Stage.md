@@ -20,7 +20,7 @@ This task is automatic and verifies whether the customer already has another Req
 
 ![image](../images/01_02_02_DSAR_Check_Case_Duplication.png)
 
-2. Populate the fields in the **Add a Task** dialog box in the same way shown in the image above. Since this will be an automatic activity, we set the Role to be **Case_Owner**. If the automatic process fails, the Case Owner of this request will receive the failure notification. Note that the **Task Order** was set automatically to **1** because this is the first Task you created. The order can be changed later, if necessary.
+2. Populate the fields in the **New Task** configuration screen in the same way shown in the image above. Since this will be an automatic activity, we set the Role to be **Case_Owner**. If the automatic process fails, the Case Owner of this request will receive the failure notification. Note that the **Task Order** was set automatically to **1** because this is the first Task you created. The order can be changed later, if necessary.
 
 3. Click the **Operations** tab in the Task configuration screen, and select **caseCheckIfDuplicate** from the **Operation** drop-down list, as shown below. The caseCheckIfDuplicate operation is built-in and performs the Duplicate Case validation. The DPM System includes a long list of similar automatic operations, and any other operation that is specific to your project can be created to meet your needs.
 
