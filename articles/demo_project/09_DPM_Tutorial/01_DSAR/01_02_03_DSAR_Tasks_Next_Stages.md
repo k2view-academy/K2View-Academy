@@ -167,4 +167,4 @@ Your DSAR Flow is now complete. The final result should look similar to the foll
 
 
 
-[![Previous](../images/Previous.png)](01_02_02_DSAR_Tasks_First_Stage.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_02_04_DSAR_Finalize_Flow.md)
+[![Previous](../images/Previous.png)](01_02_02_DSAR_Tasks_First_Stage.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_02_03_DSAR_Tasks_Customer_Notification.md)
