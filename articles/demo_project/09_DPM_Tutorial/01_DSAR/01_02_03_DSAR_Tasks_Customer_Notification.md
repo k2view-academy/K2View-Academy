@@ -1,4 +1,4 @@
-# Customer Notification Stage
+# Customer Notification Task
 
 1. Create a new Stage called **Customer Notification**. 
 
