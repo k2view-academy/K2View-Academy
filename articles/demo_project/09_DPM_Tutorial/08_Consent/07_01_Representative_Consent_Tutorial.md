@@ -4,9 +4,7 @@ DPM includes both a Web-based user interface and an API set to allow a Customer 
 
 The following simulation of working within DPM Consent Management will show you how to log in as a representative, opt-in or opt-out of Consents on behalf of a customer, and view the history of Consent actions of this customer.
 
-[Login to the System](07_02_Representative_Login.md)
-
-[View the Consents List](07_03_Representative_View_Consents.md)
+[Login to the System and View the Consents List](07_02_Representative_Login.md)
 
 [Opt-In or Opt-Out of Consents](07_04_Representative_OptIn_or_OptOut.md)
 
