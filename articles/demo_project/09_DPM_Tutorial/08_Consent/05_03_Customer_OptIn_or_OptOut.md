@@ -8,13 +8,13 @@ Locate a Consent in the Consents table. Under the ACTIONS column, turn the On/Of
 
 A dialog box displays, verifying that you want to turn on the consent. The text in this dialog box is the text that the administrator had defined when configuring this consent topic.
 
-![image](../images/08_Consent_Opt_In_Message.png)                                   
+<img src="../images/08_Consent_Opt_In_Message.png" width="30%" height="30%">
 
 Click ![image](../images/ICON_OK.png) to turn on the consent. 
 
 The On/Off slider is turned to “On”. The EFFECTIVE DATE is set to the current date and the EXPIRATION DATE is defined according to the consent configured duration. 
 
-<img src="../images/08_04_Consent_Customer_OptIn_OptOut.png" width="30%" height="30%">
+<img src="../images/08_04_Consent_Customer_OptIn_OptOut.png" width="100%" height="100%">
 
 **Opt-Out of a Consent**
 
