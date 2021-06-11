@@ -14,7 +14,7 @@ Click ![image](../images/ICON_OK.png) to turn on the consent.
 
 The On/Off slider is turned to “On”. The EFFECTIVE DATE is set to the current date and the EXPIRATION DATE is defined according to the consent configured duration. 
 
-![image](../images/08_04_Consent_Customer_OptIn_OptOut.png)  
+<img src="../images/08_04_Consent_Customer_OptIn_OptOut.png" width="30%" height="30%">
 
 **Opt-Out of a Consent**
 
@@ -22,7 +22,7 @@ To opt-out of a Consent, locate a Consent in the Consents table. Under the ACTIO
 
 A dialog box displays, verifying that you want to turn off the consent.
 
-![image](../images/08_Consent_Opt_Out_Message.png) 
+<img src="../images/08_Consent_Opt_Out_Message.png" width="30%" height="30%">
 
 Click ![image](../images/ICON_OK.png) to turn off the consent. 
 
