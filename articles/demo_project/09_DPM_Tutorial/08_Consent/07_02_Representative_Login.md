@@ -27,4 +27,4 @@ Using either of those options, the system displays the consent preferences of th
 ![image](../images/08_02_Consent_Rep_Search.png)
   
 
-[![Previous](../images/Previous.png)]( 07_01_Representative_Consent_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](07_03_Representative_View_Consents.md)
+[![Previous](../images/Previous.png)]( 07_01_Representative_Consent_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](07_04_Representative_OptIn_or_OptOut.md)
