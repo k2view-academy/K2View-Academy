@@ -8,7 +8,7 @@ Locate a Consent in the Consents table. Under the ACTIONS column, turn the On/Of
 
 A dialog box displays, verifying that you want to turn on the consent. The text in this dialog box is the text that the administrator had defined when configuring this consent topic.
 
-<img src="../images/08_Consent_Opt_In_Message.png" width="30%" height="30%">
+<img src="../images/08_Consent_Opt_In_Message.png" width="50%" height="30%">
 
 Click ![image](../images/ICON_OK.png) to turn on the consent. 
 
@@ -22,7 +22,7 @@ To opt-out of a Consent, locate a Consent in the Consents table. Under the ACTIO
 
 A dialog box displays, verifying that you want to turn off the consent.
 
-<img src="../images/08_Consent_Opt_Out_Message.png" width="30%" height="30%">
+<img src="../images/08_Consent_Opt_Out_Message.png" width="50%" height="30%">
 
 Click ![image](../images/ICON_OK.png) to turn off the consent. 
 
