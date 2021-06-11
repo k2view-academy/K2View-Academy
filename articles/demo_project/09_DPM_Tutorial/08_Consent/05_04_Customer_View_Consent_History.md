@@ -24,4 +24,4 @@ Enter a keyword to display all Consent histories where the keyword appears. For 
 
 Click ![image](../images/08_ICON_SignOut.png), located at the top-right corner of the screen.
 
-[![Previous](../images/Previous.png)]( 05_03_Customer_OptIn_or_OptOut.md)[<p align="right"> Return to Customer Consent Tutorial</p>](05_01_Customer_Consent_Tutorial.md)
+[![Previous](../images/Previous.png)]( 05_03_Customer_OptIn_or_OptOut.md)[<p align="right"> Return to Consent Tutorial Topics</p>](/08_Consent/01_Consent_Main.md)
