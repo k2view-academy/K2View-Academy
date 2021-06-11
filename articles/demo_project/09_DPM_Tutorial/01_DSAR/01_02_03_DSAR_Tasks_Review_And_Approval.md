@@ -77,6 +77,7 @@ Create a new Stage called **Review & Approval**.
    ![image](../images/01_02_03_DSAR_Review_Approval_Case_Owner.png)
 
 2. Configure the **Additional Info** tab of this Task in the same way as for the previous Data Steward associated task, so that the Case owner can view the same information that the data steward had reviewed, and in addition, add another parameter: "Legal Steward Reject Reason" which should be defined as a Link to the value that the Legal Data Steward has selected in the previous task.
+Make sure that you use the same text for the Label of the "Extract Reason" field - this will result in asking the customer this information only once when submitting the request. 
 
    ![image](../images/01_02_03_DSAR_Case_Owner_Review_Additional_Info.png)
 
