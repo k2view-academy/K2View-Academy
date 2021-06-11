@@ -32,5 +32,5 @@ The On/Off slider is turned to “Off”.
 
 
 
-[![Previous](../images/Previous.png)]( 07_03_Representative_View_Consents.md)[<img align="right" width="60" height="54" src="../images/Next.png">](07_05_Representative_View_Consent_History.md)
+[![Previous](../images/Previous.png)]( 07_02_Representative_Login.md)[<img align="right" width="60" height="54" src="../images/Next.png">](07_05_Representative_View_Consent_History.md)
 
