@@ -16,13 +16,6 @@ The Consents History screens displays.
 
 To search a specific consent, use the "Search" option at the top-right of the Consents History table.
 
-![image](../images/08_02_Consent_History.png)
-
-Enter a keyword to display all Consent histories where the keyword appears. For this example, enter "Advertisting". The Consents History table automatically displays all instances where "Advertising" appears in the action history.
-
-![image](../images/08_03_Consent_History.png)
-
-
 ### Logout of the System
 
 Click ![image](../images/08_ICON_SignOut.png), located at the top-right corner of the screen.
