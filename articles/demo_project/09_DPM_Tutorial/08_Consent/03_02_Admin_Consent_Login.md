@@ -23,6 +23,8 @@ The Consent Management screen displays.
 
 ![image](../images/08_Consent_Landing.png)
 
+For detailed information about this screen, you may access the DPM user guide [consent](/articles/DPM/08_Consent_Management/03_View_Consent_List.md) chapter
+
 
 
 [![Previous](../images/Previous.png)]( 03_01_Admin_Consent_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_Admin_Create_New_Consent.md)
