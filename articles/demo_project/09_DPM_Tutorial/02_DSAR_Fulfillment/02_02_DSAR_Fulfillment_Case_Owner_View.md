@@ -36,6 +36,8 @@ If you click any of the Task lines, a detail screen for that Task displays. In t
 
 To view this functionality, click the Task called **Legal Review**. Add a note from the case owner to the data steward as shown in the image below.
 
+You may also observe on the right side of the screen the information that was provided by the customer at the request submission.
+
 <img src="../images/02_02_DSAR_Fulfillment_Case_Owner_Task_Notes.png" width="100%" height="100%">
 
 For automatic Tasks, if an error occurred during the process, the system displays the error as a message. This is similar to the notes between the case owner and the data steward, but it is marked in red. 
