@@ -8,7 +8,7 @@ Click the **Consents History** tab.
 
 ![image](../images/08_Consent_Cust_Rep_Tabs.png)                                
 
-The Consents History screens displays.
+The Consents History screen displays.
 
 ![image](../images/08_02_Consent_Customer_History.png)
 
