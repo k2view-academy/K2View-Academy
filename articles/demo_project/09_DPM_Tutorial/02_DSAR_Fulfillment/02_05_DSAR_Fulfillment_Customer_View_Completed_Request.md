@@ -20,6 +20,8 @@ The Customer Dashboard displays. The user can access the Requests List by clicki
 
 ![image](../images/Customer_Dashboard.png)    
 
+Observe the information that is provided to the customer, including the full request timeline on the left side of the screen. 
 
+<img src="../images/02_04_DSAR_Fulfillment_Completed_Request.png" width="100%" height="100%">
 
 [![Previous](/articles/images/Previous.png)]( 02_04_DSAR_Fulfillment_Case_Owner_Perform_Task.md)[<p align="right">  Return to Tutorial topics</p>](../README.md#data-subject-requests)
