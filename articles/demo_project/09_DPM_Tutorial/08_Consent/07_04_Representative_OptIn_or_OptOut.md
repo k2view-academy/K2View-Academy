@@ -28,8 +28,6 @@ Click ![image](../images/ICON_OK.png) to turn off the consent.
 
 The On/Off slider is turned to “Off”.
 
-![image](../images/08_01_Consent_Rep_OptIn_OptOut.png)
-
 
 
 [![Previous](../images/Previous.png)]( 07_02_Representative_Login.md)[<img align="right" width="60" height="54" src="../images/Next.png">](07_05_Representative_View_Consent_History.md)
