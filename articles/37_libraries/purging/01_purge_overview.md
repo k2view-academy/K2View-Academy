@@ -14,18 +14,18 @@ This Logical Unit-based purging process provides significant advantages, such as
 
 - Assuring that the purge will never affect the data integrity in your database, as for each such unit the deletion of data will only be done if it was successful across all the Logical Unit entities
 
-- Allowing using complex logic in order to qualify data for purging. This logic is applied in each transaction only on the data of the specific LU, which means that only a small data volume is queried.
+- Allowing complex logic to be used to qualify data for purging. This logic is applied in each transaction on the data of the specific LU only, which means that only a small data volume is queried.
 
-- Allowing breaking the purging process down into small chunks and running it on a regular basis. 
+- Breaking the purging process down into small chunks and running it on a regular basis. 
 
 
-If archiving of the data should be performed as well – it can be performed immediately before the purge of a specific unit, and the purge will only be done if the archive was completed successfully for this unit. The archive repository can be either the Fabric itself or an alternative data repository.
+If archiving of the data should be performed as well, it can be performed immediately before the purge of a specific unit, and the purge will only be done if the archive was completed successfully for this unit. The archive repository can be either Fabric itself or an alternative data repository.
 
 Implementing a Purging project can be divided to the following macro steps: 
 
-   **Define the logical unit (LU)** that will be the base for the purge
-
    **Define the purging rules** that should be applied in order to decide what data qualifies for purging
+    
+   **Define the logical unit (LU)** that will be the basis for the purge
 
    **Implement the logical unit structure and the purging logic** as a Fabric project, using the functions and capabilities of its Purging Library.
 
