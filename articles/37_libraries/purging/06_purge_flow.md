@@ -1,4 +1,4 @@
-#Purge Flow
+# Purge Flow
 
 The flow executed by the purging application is as follows:
 For each instance of the Logical Unit (e.g. customer):
