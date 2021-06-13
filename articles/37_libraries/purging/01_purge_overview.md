@@ -23,11 +23,11 @@ If archiving of the data should be performed as well, it can be performed immedi
 
 Implementing a Purging project can be divided to the following macro steps: 
 
-   **Define the purging rules** that should be applied in order to decide what data qualifies for purging
+- **Define the purging rules** that should be applied in order to decide what data qualifies for purging
     
-   **Define the logical unit (LU)** that will be the basis for the purge
+- **Define the logical unit (LU)** that will be the basis for the purge
 
-   **Implement the logical unit structure and the purging logic** as a Fabric project, using the functions and capabilities of its Purging Library.
+- **Implement the logical unit structure and the purging logic** as a Fabric project, using the functions and capabilities of its Purging Library.
 
 Once those steps are completed, the process is ready for deployment and execution.
 
