@@ -31,3 +31,7 @@ Implementing a Purging project can be divided to the following macro steps:
 
 Once those steps are completed, the process is ready for deployment and execution.
 
+
+[![Previous](/articles/images/Previous.png)](/articles/37_libraries/purging/01_purge_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/37_libraries/purging/03_purge_project_creation.md)
+
+
