@@ -110,8 +110,8 @@ The following table describes the syntax and the mandatory/optional parameters w
    <li>ZIP_FILE - optional parameter. Path to ZIP file, relative to USER_DIR.</li>
    <li>NOSYNC - gets Boolean value:
    <ul>
-   <li>NOSYNC FALSE: any deployment triggers a sync the first time the instance is accessed.</li>
-   <li>NOSYNC TRUE: only Schema updates trigger the sync after the deployment.</li>
+	<li>NOSYNC TRUE: Only schema changes trigger sync after deploy.</li>
+    <li>NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time the instance is accessed.</li>
    </ul>Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> in the Server Configuration window in the Fabric Studio.
    </li>
    <li>WS_METHODS - For LU Type = Web Services (k2_ws), specify which methods are selected, separated by &ldquo;,&rdquo;. Empty for all.</li>
@@ -120,6 +120,7 @@ The following table describes the syntax and the mandatory/optional parameters w
    </tr>
    </tbody>
    </table>
+
 
 
 
