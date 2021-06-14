@@ -51,7 +51,8 @@ The following link includes the instructions to login and navigate in those two 
 
 # Tutorial Scenarios
 
-Follow the links below to access the step-by-step instruction for the generation of your dedicated sandbox environment
+Follow the links below to access the step-by-step instructions for each of the tutorial topics. In each topic, use the "next" button to progress through the tutorial steps, and at the end of each topic you will have a link to return to this initial page. 
+
 
 ## Data Subject Requests
 
