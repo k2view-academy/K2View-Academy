@@ -7,5 +7,5 @@ Once your rectification request status was marked **Complete**, it means that da
  - In Odoo application: Confirm that the fields with the lables "City" and "Phone" of your customer information were updated with the values you have provided.
  - In the OSB application: Confirm that the fields with the lables "City" and "Mobile" of your customer information were updated with the values you have provided.
 
-[![Previous](../images/Previous.png)]( 03_05_Rectify_Ensure_Marked_Complete.md)[<p align="right"> Return to Tutorial topics</p>](../README.md#data-subject-requests)
+[![Previous](../images/Previous.png)]( 03_05_Rectify_Ensure_Marked_Complete.md)[<p align="right"> Return to Tutorial topics</p>](../DPM_Application_Tutorial.md#data-subject-requests)
 
