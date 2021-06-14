@@ -6,4 +6,4 @@ Search these systems for the data that our Customer, Aleena Conley, requested to
 
 [Access Source Systems](../00_Setup/00_Access_Source_Systems.md) provides details on the access to the tutorial "source systems".
 
-[![Previous](../images/Previous.png)]( 03_04_Purging_Ensure_Marked_Complete.md)[<p align="right"> Return to Tutorial topics</p>](../README.md#data-subject-requests)
+[![Previous](../images/Previous.png)]( 03_04_Purging_Ensure_Marked_Complete.md)[<p align="right"> Return to Tutorial topics</p>](../DPM_Application_Tutorial.md#data-subject-requests)
