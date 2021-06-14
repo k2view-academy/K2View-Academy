@@ -8,8 +8,5 @@ For this tutorial, we will assume that a Customer named Aleena Conley wants to d
 
 We will now show you how to submit a request to delete Aleena's data.
 
-[Purging Data Tutorial](03_01_Purging_Data_Tutorial.md)
 
-
-
-[![Previous](../images/Previous.png)](../README.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_01_Purging_Data_Tutorial.md)
+[![Previous](../images/Previous.png)](../DPM_Application_Tutorial.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_01_Purging_Data_Tutorial.md)
