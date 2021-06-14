@@ -19,8 +19,4 @@ The steps in this demonstrations include:
 To streamline the execution of the two DSARs in this section, we will use a fully automated DSAR Flow, so that the results can be obtained without any intervention.
 
 
-[Auto Sync Data Tutorial]( 03_01_Auto_Sync_Data_Tutorial.md)
-
-
-
-[![Previous](../images/Previous.png)](../README.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">]( 03_01_Auto_Sync_Data_Tutorial.md)
+[![Previous](../images/Previous.png)](../DPM_Application_Tutorial.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">]( 03_01_Auto_Sync_Data_Tutorial.md)
