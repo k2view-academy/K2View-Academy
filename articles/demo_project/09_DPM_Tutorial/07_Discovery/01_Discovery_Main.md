@@ -18,4 +18,4 @@ The following simulation of working within DPM Discovery will show you how to lo
 
 
 
-[![Previous](../images/Previous.png)](../README.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_02_Discovery_Login.md)
+[![Previous](../images/Previous.png)](../DPM_Application_Tutorial.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_02_Discovery_Login.md)
