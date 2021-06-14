@@ -10,7 +10,5 @@ In our explanations, we will demonstrate the functionality using a Customer we c
 
 We will now show you how to submit a request to rectify Anabelle's data.
 
-[Data Rectification Tutorial](03_01_Rectify_Data_Tutorial.md)
 
-
-[![Previous](../images/Previous.png)](../README.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_01_Rectify_Data_Tutorial.md)
+[![Previous](../images/Previous.png)](../DPM_Application_Tutorial.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_01_Rectify_Data_Tutorial.md)
