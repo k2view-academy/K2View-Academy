@@ -8,4 +8,4 @@ For the purpose of the demonstration in this tutorial, we only anonymized the cu
 
 Note that the DPM preserves the referential integrity between the two source systems - the same anonymized name is used for both systems. 
 
-[![Previous](../images/Previous.png)]( 03_05_Masking_Ensure_Marked_Complete.md)[<p align="right"> Return to Tutorial topics</p>](../README.md#data-subject-requests)
+[![Previous](../images/Previous.png)]( 03_05_Masking_Ensure_Marked_Complete.md)[<p align="right"> Return to Tutorial topics</p>](../DPM_Application_Tutorial.md#data-subject-requests)
