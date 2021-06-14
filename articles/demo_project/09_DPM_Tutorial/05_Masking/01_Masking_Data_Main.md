@@ -11,10 +11,4 @@ While you can submit the request using the data of any customer, in our explanat
 
 We will now show you how to submit a request to anonymize a specific customer information.
 
-
-
-[Anonymizing Data Tutorial](03_01_Masking_Data_Tutorial.md)
-
-
-
-[![Previous](../images/Previous.png)](../README.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_01_Masking_Data_Tutorial.md)
+[![Previous](../images/Previous.png)](../DPM_Application_Tutorial.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](03_01_Masking_Data_Tutorial.md)
