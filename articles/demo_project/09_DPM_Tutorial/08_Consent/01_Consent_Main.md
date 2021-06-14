@@ -10,4 +10,4 @@ This demonstration will guide you through the process of a typical Consent Manag
 
 
 
-[![Previous](../images/Previous.png)](../README.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](02_Admin_Consent_Introduction.md)
+[![Previous](../images/Previous.png)](../DPM_Application_Tutorial.md#data-subject-requests)[<img align="right" width="60" height="54" src="../images/Next.png">](02_Admin_Consent_Introduction.md)
