@@ -8,13 +8,13 @@ When launching the discovery process, the system inspects each field in the data
 
 ### To configure a new rule:
 
-In the first tab of the Discovery screen, click the ![image](../images/ICON_New_Matching_Rule.png) button at the top-right of this tab in order to configure a new matching rule. 
+In the first tab of the Discovery screen, click the ![image](../images/ICON_NewMatchingRule.png) button at the top-right of this tab in order to configure a new matching rule. 
 
 ![image](../images/07_12_Discovery_RulesTab_Callout.png)
 
 The New Matching Rule dialog box displays. 
 
-![image](../images/07_1_Discovery_New_Matching_Rule.png)
+![image](../images/07_1_Discovery_NewMatchingRule.png)
 
 Before guiding you through the creation of new discovery rules, we will describe the different types of rules that can be created. Those types are defined by the **Matching Type** field. 
 
