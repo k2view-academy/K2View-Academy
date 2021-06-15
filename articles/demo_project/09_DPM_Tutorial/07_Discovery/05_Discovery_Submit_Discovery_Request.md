@@ -10,4 +10,4 @@ Click the ![image](../images/ICON_SubmitDiscovery.png) button, located in the lo
 
 
 
-[![Previous](../images/Previous.png)]( 04_Discovery_AddInterface.md)[<img align="right" width="60" height="54" src="../images/Next.png">](06_Discovery_ViewResults.md)
+[![Previous](../images/Previous.png)]( 04_Discovery_Add_Interface.md)[<img align="right" width="60" height="54" src="../images/Next.png">](06_Discovery_View_Results.md)

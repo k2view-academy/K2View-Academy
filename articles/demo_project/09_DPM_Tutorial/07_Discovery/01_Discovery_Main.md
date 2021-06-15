@@ -8,13 +8,13 @@ The following simulation of working within DPM Discovery will show you how to lo
 
 [Login to the System](03_02_Discovery_Login.md)
 
-[Create a New Matching Rule (Four Matching Types)](03_03_01_Discovery_NewMatchingRule_Landing.md)
+[Create a New Matching Rule (Four Matching Types)](03_03_01_Discovery_New_Matching_Rule.md)
 
-[Add an Interface](04_Discovery_AddInterface.md)
+[Add an Interface](04_Discovery_Add_Interface.md)
 
-[Submit a Discovery Request](05_Discovery_SubmitDiscoveryRequest.md)
+[Submit a Discovery Request](05_Discovery_Submit_Discovery_Request.md)
 
-[View Discovery Results](06_Discovery_ViewResults.md)
+[View Discovery Results](06_Discovery_View_Results.md)
 
 
 

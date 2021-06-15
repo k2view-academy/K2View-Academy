@@ -13,4 +13,4 @@ Select a **Data Samples Category** from the dropdown list. For this tutorial, se
 You can define and load any set of such reference tables as part of your project.
 
 
-[![Previous](../images/Previous.png)]( 03_03_04_Discovery_NewMatchingRule_DataFunction.md)[<img align="right" width="60" height="54" src="../images/Next.png">](04_Discovery_AddInterface.md)
+[![Previous](../images/Previous.png)]( 03_03_04_Discovery_New_Matching_Rule_DataFunction.md)[<img align="right" width="60" height="54" src="../images/Next.png">](04_Discovery_Add_Interface.md)

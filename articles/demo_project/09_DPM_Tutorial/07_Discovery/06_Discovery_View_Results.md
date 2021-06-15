@@ -14,4 +14,4 @@ For additional information about the Results tab, refer to the DPM User Guide [N
 
 
 
-[![Previous](../images/Previous.png)](05_Discovery_SubmitDiscoveryRequest.md)[<p align="right"> Return to Tutorial topics</p>](../DPM_Application_Tutorial.md#data-subject-requests)
+[![Previous](../images/Previous.png)](05_Discovery_Submit_Discovery_Request.md)[<p align="right"> Return to Tutorial topics</p>](../DPM_Application_Tutorial.md#data-subject-requests)

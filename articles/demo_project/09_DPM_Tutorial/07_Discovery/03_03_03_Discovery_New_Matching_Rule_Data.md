@@ -9,5 +9,5 @@ In this case the expression describes a 9-digit number composed of three blocks 
 <img src="../images/07_Discovery_Matching_Type_Data.png" width="40%" height="40%">
 
 
-[![Previous](../images/Previous.png)]( 03_03_02_Discovery_NewMatchingRule_Column.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_04_Discovery_NewMatchingRule_DataFunction.md)
+[![Previous](../images/Previous.png)]( 03_03_02_Discovery_New_Matching_Rule_Column.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_04_Discovery_New_Matching_Rule_DataFunction.md)
 
