@@ -14,5 +14,5 @@ Select a **Data Function** from the dropdown list. for our example, we selected 
 
 You can add any function as part of your project implementation, in accordance with the validations you would like to execute. 
 
-[![Previous](../images/Previous.png)]( 03_03_03_Discovery_New_Matching_Rule_Data.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_05_Discovery_New_Matching_Rule_DataSample.md)
+[![Previous](../images/Previous.png)]( 03_03_03_Discovery_New_Matching_Rule_Data.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_05_Discovery_New_Matching_Rule_Data_Sample.md)
 

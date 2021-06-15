@@ -35,4 +35,4 @@ The New Discovery Interface displays in the Interfaces Configuration table.
 
 
 
-[![Previous](../images/Previous.png)]( 03_03_05_Discovery_New_Matching_Rule_DataSample.md)[<img align="right" width="60" height="54" src="../images/Next.png">](05_Discovery_Submit_Discovery_Request.md)
+[![Previous](../images/Previous.png)]( 03_03_05_Discovery_New_Matching_Rule_Data_Sample.md)[<img align="right" width="60" height="54" src="../images/Next.png">](05_Discovery_Submit_Discovery_Request.md)
