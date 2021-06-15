@@ -10,7 +10,7 @@ The New Request screen displays.
 
 Select the **CCPA** Regulation from the drop-down list and then select **Anonymize My Data** under the "Request Type" section.
 
-![image](../images/05_1_Anonymize_AnonMyData.png)
+![image](../images/05_1_Masking_AnonMyData.png)
 
 Complete the field(s) on the right side of the form. The **Anonymize My Data** Request Type under the **CCPA** Regulation displays only an email address entry field. Enter a valid e-mail address. Confirmation of data Anonymize will be sent to the email address entered into this field.  
 
