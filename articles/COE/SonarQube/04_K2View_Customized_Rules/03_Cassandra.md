@@ -9,14 +9,18 @@
 
 **2. Check host defined in Cassandra interfaces**  
    -*This rule checks if hosts are well defined in Cassandra interface*
-   
+
       - Do not use localhost as host
       - Make sure to set all Cassandra hosts in the cluster in the interface host in order to allow high availability 
 
 **3. Avoid allow filtering since it will trigger a full table scan**  
    -*This rule detects executing read transactions on Cassandra using allow filtering*
 
+**4. LU Tables populated using full refresh from Cassandra**  
+   -*Reload the data only if it is being used in the WS or by another table which got 
+ updated.*
 
+   -*Set a thread global in the WS and check this global in the root population to 
+control when this occurs*
 
 [![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/02_Java_Coding.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/04_IIDFinder.md)
-
