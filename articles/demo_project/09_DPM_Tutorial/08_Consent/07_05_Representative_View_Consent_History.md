@@ -20,4 +20,4 @@ To search a specific consent, use the "Search" option at the top-right of the Co
 
 Click ![image](../images/08_ICON_SignOut.png), located at the top-right corner of the screen.
 
-[![Previous](../images/Previous.png)]( 07_04_Representative_Opt_In_or_Opt_Out.md)[<p align="right"> Return to Tutorial topics</p>](../README.md#data-subject-requests)
+[![Previous](../images/Previous.png)]( 07_04_Representative_Opt_In_or_Opt_Out.md)[<p align="right"> Return to Tutorial topics</p>](../DPM_Application_Tutorial.md#data-subject-requests)
