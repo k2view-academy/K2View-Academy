@@ -21,4 +21,4 @@ The Consent Management screen displays, showing the current customer consent pre
 
 
 
-[![Previous](../images/Previous.png)]( 05_01_Customer_Consent_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](05_03_Customer_OptIn_or_OptOut.md)
+[![Previous](../images/Previous.png)]( 05_01_Customer_Consent_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](05_03_Customer_Opt_In_or_Opt_Out.md)
