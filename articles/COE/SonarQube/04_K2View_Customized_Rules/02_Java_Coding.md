@@ -33,7 +33,7 @@
 
 		log.info("message");
 		ReportUserMessage("message");
-	
+
   -*Reduce the usage of the log.info/ReportUserMessage and use only if mandatoy or for debugging purpose.*
 
 **7. Deprecated functions should not be used**  
@@ -41,7 +41,8 @@
   	
    *Please check the [User Guide](https://docs.sonarqube.org/latest/instance-administration/quality-profiles/) for more details on deprecated functions.*
 
-  
+**8. Use fabric() instead of db(<fabricInterface>) in the WS**  
+   -*db() function should be used to extract data from fabric via the WS*
 
-[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/01_Customized_Rules.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/03_Cassandra.md)
+[![Previous](/articles/images/Previous.png)](/articles/COE/SonarQube/04_K2View_Customized_Rules/01_General_Rules.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/COE/SonarQube/04_K2View_Customized_Rules/03_Cassandra.md)
 
