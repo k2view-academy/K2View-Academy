@@ -6,7 +6,7 @@ The following simulation of working within DPM Consent Management will show you 
 
 [Login to the System and View the Consents List](07_02_Representative_Login.md)
 
-[Opt-In or Opt-Out of Consents](07_04_Representative_OptIn_or_OptOut.md)
+[Opt-In or Opt-Out of Consents](07_04_Representative_Opt_In_or_Opt_Out.md)
 
 [View and Search the Consent History](07_05_Representative_View_Consent_History.md)
 
