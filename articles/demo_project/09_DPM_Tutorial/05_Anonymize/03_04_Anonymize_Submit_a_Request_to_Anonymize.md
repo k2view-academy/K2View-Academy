@@ -18,4 +18,4 @@ Click ![image](../images/ICON_Submit.png) to submit the request to anonymize the
 
 
 
-[![Previous](../images/Previous.png)]( 03_03_Anonymize_Login.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_05_Anonymize_Ensure_Marked_Complete.md)
+[![Previous](../images/Previous.png)]( 03_03_Anonymize_Login.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_05_Anonymize_Ensure_Request_Marked_Complete.md)
