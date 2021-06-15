@@ -16,4 +16,4 @@ Once a user logs into the DPM system as a Representative, the screen is updated 
 
 
 
-[![Previous](../images/Previous.png)]( 03_01_Purging_Data_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_Purging_search_customer_to_Purge.md)
+[![Previous](../images/Previous.png)]( 03_01_Purging_Data_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_01_Purging_search_customer_to_Purge.md)

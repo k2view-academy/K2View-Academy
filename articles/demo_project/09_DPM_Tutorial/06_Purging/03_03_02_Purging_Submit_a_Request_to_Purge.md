@@ -14,4 +14,4 @@ Click ![image](../images/06_ICON_Submit.png) to submit the request to delete the
 
 
 
-[![Previous](../images/Previous.png)]( 03_03_Purging_search_customer_to_Purge.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_04_Purging_Ensure_Marked_Complete.md)
+[![Previous](../images/Previous.png)]( 03_03_01_Purging_search_customer_to_Purge.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_04_Purging_Ensure_Marked_Complete.md)

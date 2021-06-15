@@ -4,7 +4,9 @@ Before we submit the request to purge the customer data, we should identify the 
 
 Click the **Find Customers** menu option on the left side of the screen. 
 
- ![image](../images/06_Purging_Representative_FindCustomers_Menu.png)
+<img src="../images/06_Purging_Representative_FindCustomers_Menu.png" width="30%" height="30%">
+
+
 
 The Find Customers screen displays.
 
@@ -26,4 +28,4 @@ Select **New Request** to submit a new Request for the customer.
 
 
 
-[![Previous](../images/Previous.png)]( 03_02_Purging_Login.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_Purging_Submit_a_Request_to_Purge.md)
+[![Previous](../images/Previous.png)]( 03_02_Purging_Login.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_02_Purging_Submit_a_Request_to_Purge.md)

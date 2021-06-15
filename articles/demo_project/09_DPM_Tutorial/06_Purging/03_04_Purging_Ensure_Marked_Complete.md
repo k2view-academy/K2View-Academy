@@ -24,4 +24,4 @@ Click the ![image](../images/06_ICON_Close.jpg) button to close the dialog box a
 
 
 
-[![Previous](../images/Previous.png)]( 03_03_Purging_Submit_a_Request_to_Purge.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_05_Purging_View_Your_Data.md)
+[![Previous](../images/Previous.png)]( 03_03_02_Purging_Submit_a_Request_to_Purge.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_05_Purging_View_Your_Data.md)
