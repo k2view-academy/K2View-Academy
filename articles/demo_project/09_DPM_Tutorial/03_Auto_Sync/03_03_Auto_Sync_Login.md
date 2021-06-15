@@ -16,4 +16,4 @@ The landing page that displays upon login depends on the roles attributed to the
 
 
 
-[![Previous](../images/Previous.png)](  03_01_Auto_Sync_Data_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">]( 03_04_Auto_Sync_Submit_a_First_Request.md)
+[![Previous](../images/Previous.png)](03_01_Auto_Sync_Data_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">]( 03_04_Auto_Sync_Submit_a_First_Request.md)
