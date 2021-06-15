@@ -41,4 +41,4 @@ The sample Stages we will create include:
 
 4. Click ![image](../images/ICON_Save.png) to save the new Task.
 
-[![Previous](../images/Previous.png)](01_02_02_DSAR_Tasks_First_Stage.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_02_03_DSAR_Tasks_Review_And_Approval.md)
+[![Previous](../images/Previous.png)](01_02_02_DSAR_Tasks_First_Stage.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_02_03_02_DSAR_Tasks_Review_And_Approval.md)

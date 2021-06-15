@@ -89,4 +89,4 @@ Make sure that you use the same text for the Label of the "Extract Reason" field
 
 
 
-[![Previous](../images/Previous.png)](01_02_03_DSAR_Tasks_Data_Collection.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_02_03_DSAR_Tasks_Customer_Notification.md)
+[![Previous](../images/Previous.png)](01_02_03_01_DSAR_Tasks_Data_Collection.md)[<img align="right" width="60" height="54" src="../images/Next.png">](01_02_03_03_DSAR_Tasks_Customer_Notification.md)
