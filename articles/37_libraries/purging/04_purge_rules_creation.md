@@ -21,6 +21,6 @@ Recursive checks are defined as a group of checks which run one after the other 
 
 
 
-[![Previous](/articles/images/Previous.png)](03_purge_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_purge_execution.md)
+[![Previous](/articles/images/Previous.png)](03_purge_flow.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](05_purge_execution.md)
 
 
