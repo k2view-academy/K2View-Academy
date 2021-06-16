@@ -58,24 +58,23 @@ Follow the links below to access the step-by-step instructions for each of the t
 
 The first section of our tutorial guides you through the steps of implementing the automation and streamlining the fulfilment process of data access requests.
 
-- [**Data Subject Access Request (DSAR)**]( 01_DSAR/01_00_DSAR.md) - By demonstrating how to create a DSAR Request, we will lead you through the implementation steps that allow you to define the Flow and automation of any type of Data Subject Request that Data Privacy regulations may require. 
+- [**Data Subject Access Request (DSAR)**](01_DSAR/01_00_DSAR.md) - By demonstrating how to create a DSAR Request, we will lead you through the implementation steps that allow you to define the Flow and automation of any type of Data Subject Request that Data Privacy regulations may require. 
 
-- [**DSAR Fulfillment Process**]( 02_DSAR_Fulfillment/02_00_DSAR_Fulfillment.md) - In this tutorial, you will simulate the scenario of a customer who submitted a DSAR, and the Flow this Request goes through from submission to fulfillment. 
+- [**DSAR Fulfillment Process**](02_DSAR_Fulfillment/02_00_DSAR_Fulfillment.md) - In this tutorial, you will simulate the scenario of a customer who submitted a DSAR, and the Flow this Request goes through from submission to fulfillment. 
 
-- [**Auto Sync of Source System Changes**]( 03_Auto_Sync/03_01_Auto_Sync_Data_Tutorial.md) - This tutorial demonstrates the DPM seamless synchronization with the source systems by simulating a data change at one of the source systems, and  then submitting a DSAR Request for the customer.
-- **[Data Rectification]( 04_Rectify/01_Rectify_Data.md)** - The steps in this section simulate the scenario of a customer submitting a Request to rectify its data. As a result, the DPM application automatically updates the data in all relevant source systems and confirm when the request fulfilment is completed.
-- [**Anonymize Data**]( 05_Anonymize/01_Anonymize_Data.md) - This tutorial will simulate a customer Request to anonymize their data in all source systems, and follow this Request to its completion.
-- **[Purging Data]( 06_Purging/01_Purging_Data.md)** -  In this tutorial, you will simulate a customer Request to delete their data in all source systems, and follow this Request to its completion.
+- [**Auto Sync of Source System Changes**](03_Auto_Sync/03_01_Auto_Sync_Data_Tutorial.md) - This tutorial demonstrates the DPM seamless synchronization with the source systems by simulating a data change at one of the source systems, and  then submitting a DSAR Request for the customer.
+- [**Data Rectification**](04_Rectify/01_Rectify_Data.md) - The steps in this section simulate the scenario of a customer submitting a Request to rectify its data. As a result, the DPM application automatically updates the data in all relevant source systems and confirm when the request fulfilment is completed.
+- [**Anonymize Data**](05_Anonymize/01_Anonymize_Data.md) - This tutorial will simulate a customer Request to anonymize their data in all source systems, and follow this Request to its completion.
+- [**Purging Data**](06_Purging/01_Purging_Data.md) -  In this tutorial, you will simulate a customer Request to delete their data in all source systems, and follow this Request to its completion.
 
 ## Personally Identifiable Information (PII) Discovery
 
 The DPM PII discovery feature provides you with a powerful tool to identify the location where personal data is stored in your organization's systems, and then take the appropriate measures to protect it.
-
-- [**PII Discovery**]( 07_Discovery/01_Data Discovery.md) - In this guided tutorial, we take you through the steps of defining and executing the PII discovery process.
+- [**PII Discovery**](07_Discovery/01_Data_Discovery.md) - In this guided tutorial, we take you through the steps of defining and executing the PII discovery process.
 
 ## Customer Consent Management
 
 Managing your customer's preferences and consents is easy with DPM Consent Management capabilities.
 
-- [**Consent Management**]( 08_Consent/01_Consent.md) - This interactive tutorial demonstrates how to define any consent topic and the way the DPM system manages the consent preferences of each customer. 
+- [**Consent Management**](08_Consent/01_Consent.md) - This interactive tutorial demonstrates how to define any consent topic and the way the DPM system manages the consent preferences of each customer. 
 
