@@ -1,7 +1,5 @@
 # SSH Interface
 
-Introduced on Fabric release 6.4.2
-
 The SSH interface type defines the communication details with a remote machine using SSH protocol.
 
 To create a new SSH interface, do the following:
