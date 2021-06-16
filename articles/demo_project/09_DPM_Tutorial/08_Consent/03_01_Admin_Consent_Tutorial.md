@@ -11,4 +11,4 @@ The following simulation of working within DPM Consent Management will guide you
 [Create a New Consent](03_03_Admin_Create_New_Consent.md)
 
 
-[![Previous](../images/Previous.png)]( 01_Consent_Main.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_02_Admin_Consent_Login.md)
+[![Previous](../images/Previous.png)]( 01_Consent.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_02_Admin_Consent_Login.md)

@@ -55,4 +55,4 @@ To view additional details, click the Request entry in the table.
 Observe the information that is provided for this request. The header of this screen provides high level information about the request. Below it, on the left, is the request timeline - listing the interactions between the customer and the company. on the right side you can view the information that was provided by the customer at the request submission.   
 
 
-[![Previous](/articles/images/Previous.png)]( 02_00_DSAR_Fulfillment_intro.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]( 02_02_DSAR_Fulfillment_Case_Owner_View.md)
+[![Previous](/articles/images/Previous.png)]( 02_00_DSAR_Fulfillment.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">]( 02_02_DSAR_Fulfillment_Case_Owner_View.md)
