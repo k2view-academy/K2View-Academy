@@ -8,4 +8,4 @@ When anonymizing the customer data, we will change the personal information of y
 
 
 
-[![Previous](../images/Previous.png)]( 03_01_Anonymize_Data_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_04_Anonymize_Submit_a_Request_to_Anonymize.md)
+[![Previous](../images/Previous.png)](01_Anonymize_Data.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_04_Anonymize_Submit_a_Request_to_Anonymize.md)
