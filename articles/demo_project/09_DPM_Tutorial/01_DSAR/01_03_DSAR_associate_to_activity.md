@@ -6,7 +6,7 @@ For this Flow to be visible to a customer who wants to submit a Request, it shou
 
 We will now create a new Regulation, add a new Activity under it, and then we will associate the "DSAR Tutorial" Flow. 
 
-1. Select the menu option **Regulation List**.
+1. Select the menu option **Regulations List**.
 
 <img src="../images/01_03_DSAR_Admin_Menu_Regulation.png" width="30%" height="30%">
 
