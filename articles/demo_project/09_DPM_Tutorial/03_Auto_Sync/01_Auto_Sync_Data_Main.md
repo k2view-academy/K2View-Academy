@@ -4,7 +4,7 @@ This section will demonstrate the automatic synchronization of data between the 
 
 K2View's DPM System is based on a powerful data integration platform, providing you with versatile integration capabilities with any source system. It seamlessly orchestrates the synchronization (Auto Sync) process so that you can perform data collection, rectification, anonymization, or purging based on the latest data, eliminating the need for separate synchronization processes or manual activities.
 
-You will perform the following activities using [your customer](../00_Setup/00_Your_Customer.md). In our explanations, we will demonstrate the functionality using a Customer we created named Anabelle Deleon.
+You will perform the following activities using [your customer](../00_Setup/00_Access_Source_Systems.md#your-customer). In our explanations, we will demonstrate the functionality using a Customer we created named Anabelle Deleon.
 
 The steps in this demonstrations include:
 
