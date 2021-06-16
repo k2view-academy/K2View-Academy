@@ -12,7 +12,7 @@ Purging using Fabric works as follows:
 - Fabric then uses its strong database manipulation capabilities to create purging statements according to the purging logic as defined by the user.  
 - Once the purging statements are ready, Fabric implements them on the original database. 
 
-<img src="images/Purge_Concept.png" style="zoom: 67%;" />
+<img src="images/Purge_Concept2.png" style="zoom: 67%;" />
 
 
 
