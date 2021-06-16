@@ -71,7 +71,7 @@ The first section of our tutorial guides you through the steps of implementing t
 
 The DPM PII discovery feature provides you with a powerful tool to identify the location where personal data is stored in your organization's systems, and then take the appropriate measures to protect it.
 
-- [**PII Discovery**]( 07_Discovery/01_Discovery.md) - In this guided tutorial, we take you through the steps of defining and executing the PII discovery process.
+- [**PII Discovery**]( 07_Discovery/01_Data Discovery.md) - In this guided tutorial, we take you through the steps of defining and executing the PII discovery process.
 
 ## Customer Consent Management
 

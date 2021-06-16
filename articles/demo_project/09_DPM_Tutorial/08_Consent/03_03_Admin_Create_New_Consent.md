@@ -33,4 +33,4 @@ Click ![image](../images/08_ICON_SignOut.png), located at the top-right corner o
 
 
 
-[![Previous](../images/Previous.png)]( 03_02_Admin_Consent_Login.md)[<p align="right"> Return to Consent Tutorial</p>](01_Consent_Main.md)
+[![Previous](../images/Previous.png)]( 03_02_Admin_Consent_Login.md)[<p align="right"> Return to Consent Tutorial Topics</p>](01_Consent.md)

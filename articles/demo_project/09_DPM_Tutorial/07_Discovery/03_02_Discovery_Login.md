@@ -32,4 +32,4 @@ In the following steps, we will guide you through the configuration of new disco
 
 
 
-[![Previous](../images/Previous.png)]( 01_Discovery_Main.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_01_Discovery_New_Matching_Rule.md)
+[![Previous](../images/Previous.png)]( 01_Data Discovery.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_01_Discovery_New_Matching_Rule.md)

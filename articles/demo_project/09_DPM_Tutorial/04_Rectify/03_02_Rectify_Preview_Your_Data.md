@@ -16,4 +16,4 @@ In the OSB system:
 
 
 
-[![Previous](../images/Previous.png)]( 03_01_Rectify_Data_Tutorial.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_Rectify_Login.md)
+[![Previous](../images/Previous.png)](01_Rectify_Data.md)[<img align="right" width="60" height="54" src="../images/Next.png">](03_03_Rectify_Login.md)
