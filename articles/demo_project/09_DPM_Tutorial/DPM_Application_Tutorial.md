@@ -62,7 +62,7 @@ The first section of our tutorial guides you through the steps of implementing t
 
 - [**DSAR Fulfillment Process**]( 02_DSAR_Fulfillment/02_00_DSAR_Fulfillment_intro.md) - In this tutorial, you will simulate the scenario of a customer who submitted a DSAR, and the Flow this Request goes through from submission to fulfillment. 
 
-- [**Auto Sync of Source System Changes**]( 03_Auto_Sync/01_Auto_Sync_Data_Main.md) - This tutorial demonstrates the DPM seamless synchronization with the source systems by simulating a data change at one of the source systems, and  then submitting a DSAR Request for the customer.
+- [**Auto Sync of Source System Changes**]( 03_Auto_Sync/03_01_Auto_Sync_Data_Tutorial.md) - This tutorial demonstrates the DPM seamless synchronization with the source systems by simulating a data change at one of the source systems, and  then submitting a DSAR Request for the customer.
 - **[Data Rectification]( 04_Rectify/01_Rectify_Data_Main.md)** - The steps in this section simulate the scenario of a customer submitting a Request to rectify its data. As a result, the DPM application automatically updates the data in all relevant source systems and confirm when the request fulfilment is completed.
 - [**Anonymize Data**]( 05_Anonymize/01_Anonymize_Data_Main.md) - This tutorial will simulate a customer Request to anonymize their data in all source systems, and follow this Request to its completion.
 - **[Purging Data]( 06_Purging/01_Purging_Data_Main.md)** -  In this tutorial, you will simulate a customer Request to delete their data in all source systems, and follow this Request to its completion.
