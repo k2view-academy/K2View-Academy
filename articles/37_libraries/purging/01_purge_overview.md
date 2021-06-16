@@ -10,7 +10,7 @@ This purge solution also allows simple testing and validations, as the process p
 
 Fabric uses a Logical Unit in order to search the application database for data that should be purged. This Logical Unit - specially designed for the purging process - enables the purging to be undertaken as one transaction, after the user has assessed the full picture of the purging needs.  
 
-<img src="images/Purge_Architecture.png" style="zoom: 80%;" />
+<img src="images/Purge_Architecture.png" style="zoom: 67%;" />
 
 This Logical Unit-based purging process provides significant advantages, such as:
 
