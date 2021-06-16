@@ -10,6 +10,8 @@ This purge solution also allows simple testing and validations, as the process p
 
 Fabric uses a Logical Unit in order to search the application database for data that should be purged. This Logical Unit - specially designed for the purging process - enables the purging to be undertaken as one transaction, after the user has assessed the full picture of the purging needs.  
 
+<img src="images/Purge_Architecture.png" style="zoom: 80%;" />
+
 This Logical Unit-based purging process provides significant advantages, such as:
 
 - Assuring that the purge will never affect the data integrity in your database, as for each such unit the deletion of data will only be done if it was successful across all the Logical Unit entities
@@ -24,7 +26,7 @@ If archiving of the data should be performed as well, it can be performed immedi
 Implementing a Purging project can be divided to the following macro steps: 
 
 - **Define the purging rules** that should be applied in order to decide what data qualifies for purging
-    
+  
 - **Define the logical unit (LU)** that will be the basis for the purge
 
 - **Implement the logical unit structure and the purging logic** as a Fabric project, using the functions and capabilities of its Purging Library.
@@ -33,5 +35,4 @@ Once those steps are completed, the process is ready for deployment and executio
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/37_libraries/purging/02_purge_process_design.md)
-
 
