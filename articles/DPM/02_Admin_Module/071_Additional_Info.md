@@ -1,16 +1,16 @@
 # Additional Task Information
 
-The Additional Info tab is where you can find additional parameters that are needed to handle a task, and which are not related to an automatic operation.
+The Additional Info tab has parameters for handling a task, but are not related to an automatic operation. The parameters are shown to the data steward as part of the Task Details screen at the time of handling this task as part of the customer request fulfilment process. 
 
-The parameters that appear in this tab are shown to the data steward as part of the Task Details screen at the time of handling this task as part of the customer request fulfilment process. 
+The administrator can additional info parameters, and define if those parameters should be obtained as input from the customer, or are received via link to a previous Task in the flow.  
 
-The administrator can add any number of additional info parameters, and define if those parameters should be obtained as input from the customer, or are received via link to a previous Task in the flow.  The configuration of the parameters in this tab is very similar to the configuration of parameters in the "Operations" tab, with the addition of the option to define if the parameter should be shown to the customer at the Request submission screen.  
+The user selects a field type from the Field Type dropdown menu, and enters a label in the Field Label window. Additional options appear according to the field type selected. There is also an option to define if the parameter should be shown to the customer.  
 
 <img src="../images/Figure_18_additional_info.png" width="100%" height="100%">
 
 <b>Configuring Additional Info Parameters</b>
 
-<p>Each additional info parameter can be defined as one of the following types:</p> 
+<p>Each additional info parameter can be defined as one of the following field types:</p> 
 
 - Value
 - Link
@@ -34,8 +34,8 @@ Each of those types allows the user to define a different way to obtain informat
 <p>Value</p>
 </td>
 <td width="800">
-<p>This input option is used when the value to be used is a fixed value for the given parameter. It refers to a known value at the time of the Task configuration and does not depend on the customer that makes the request.</p>
-<p>The value should be specified in the &ldquo;value&rdquo; field that the system presents to the user when this option is selected.</p>
+<p>Used when the value to be used is a fixed value for the given parameter. It refers to a known value at the time of the Task configuration.</p>
+<p>The value should be set in the &ldquo;value&rdquo; field that appears when this option is selected.</p>
 </td>
 </tr>
 <tr>
@@ -43,7 +43,7 @@ Each of those types allows the user to define a different way to obtain informat
 <p>Link</p>
 </td>
 <td width="800">
-<p>This option enables the use of a value determined as a result of the execution of a previous Task. The previous Task can be derived from the same Stage of the current Task or from any of the previous Stages of the Flow. When selecting this option, the system enables the user to define the Stage, Task and Task output to be used.</p>
+<p>Enables the use of a value determined as a result of the execution of a previous Task, from the same or a previous Stage. Set the values in the Stage, Task and Task output fields that appear when this option is selected.</p>
 </td>
 </tr>
 <tr>
@@ -51,9 +51,9 @@ Each of those types allows the user to define a different way to obtain informat
 <p>Input</p>
 </td>
 <td width="800">
-<p>Use the &ldquo;input&rdquo; option when the Task requires a specific input from the user at the moment of opening a new DPM Request.</p>
-<p>The system requires the user to define the type of the input field (e.g. text, email, custom list etc.) and the label of the field that the user will be requested to fill. </p>
-<p>When a new DPM Request is submitted by a representative or customer, the system will present to the user the list of parameters that were defined as “input” and the label defined here appears as the label of the field that should be populated. </p>
+<p>Used when the Task requires a specific input from the user at the moment of opening a new DPM Request.</p>
+<p>Define the type of the input field (e.g. text, email, custom list, etc) and the label of the field that the user must fill out. </p>
+<p>When a new DPM Request is submitted by a user, the system will present a list of parameters that were defined as “input” and the label defined here appears as the label of the field that should be populated. </p>
 <p>For example, when the input parameter is the email address of the customer, the label can be defined to be “email address” or “Please provide your email address”.</p>
 </td>
 </tr>
