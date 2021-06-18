@@ -5,6 +5,13 @@
 - Fabric configuration files are located under the $K2_HOME/config directory. 
 - Fabric configuration **template files** are located under the $K2_HOME/fabric/config.template. 
 
+## $K2_HOME Directory
+
+- The $K2_HOME directory (FabricHome) is usually located under your Fabric Projects directory, under the name of a project. 
+- You can navigate directly to this directory from withing the Fabric Studio as follows: 
+  - Right-click the name at the head of the Project Tree 
+  - Select **Open Folder** from the menu that appears
+  - Navigate to **FabricHome**
 
 Make sure to edit the configuration files under the **$K2_HOME/config** directory and not under the template directory. Configuration files should be edited on all Fabric nodes so it will become effective on the cluster level.
 
@@ -187,7 +194,7 @@ Fabric's main configuration file which holds different sections of parameters wh
 <td style="width: 371px;" valign="top">
 <ul>
 <li>MAX_WORKERS_PER_NODE parameter sets the maximum number of threads&nbsp;that are used in all batch process units (executions) together on this node.&nbsp; &nbsp; &nbsp;</li>
-<li>Supports MAX_WORKERS_PER_NODE=0 per node to avoid running a batch process on a specific node.&nbsp; &nbsp;&nbsp;</li>
+<li>To prevent running a batch process on this node, set MAX_WORKERS_PER_NODE=0 &nbsp; &nbsp;&nbsp;</li>
 </ul>
 </td>
 </tr>
@@ -398,16 +405,15 @@ Examples:
 - INFO [FileChangeMonitor] 2020-06-07 18:30:40,207 c.k.f.c.i.Configurator - [LID1000000000496] Configurator changed fabric.DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED from false to true INFO [FileChangeMonitor] 2020-06-07 18:30:40,207 c.k.f.c.i.FileChangeMonitor - [LID1000000000496] config.ini was reloaded
 - WARN [FileChangeMonitor] 2020-06-07 18:38:33,270 c.k.f.c.i.Configurator - [LID1000000000496] Configurator will not update fabricdb.MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE from com.k2view.cdbms.dao.CassandraEntityStorage to NONE at runtime.
 
-### Update Jvm.option, Jmxremote, and Modules Files
+### Update Jvm.options, Jmxremote.password, and modules
 Fabric must be restarted to apply the updates. 
 
 ### Update iifConfig.ini 
 When updating the iifConfig.ini, do the following:
 
-- When updating the parameters under **orphanage_job** or **sweep_job** sections, or **ENABLE_KAFKA_DELTA** parameters, restart the Fabric node.
+- When updating the parameters under **orphanage_job** or **sweep_job** sections, or any of the kafka parameters, restart the Fabric node.
 - Restart the IIDFinder process.
 
-Click for more information about the IIDFinder Process.
 
 
 
