@@ -2,7 +2,7 @@
 
 The Additional Info tab has parameters for handling a task, but are not related to an automatic operation. The parameters are shown to the data steward as part of the Task Details screen at the time of handling this task as part of the customer request fulfilment process. 
 
-The administrator can additional info parameters, and define if those parameters should be obtained as input from the customer, or are received via link to a previous Task in the flow.  
+The administrator can add parameters, and define if those parameters should be obtained as input from the customer, or are received via link to a previous Task in the flow.  
 
 The user selects a field type from the Field Type dropdown menu, and enters a label in the Field Label window. Additional options appear according to the field type selected. There is also an option to define if the parameter should be shown to the customer.  
 
@@ -68,14 +68,21 @@ The following example demonstrate how the "additional info" can be used as part 
 
    To achieve that, the administrator added a manual task as part of the DSAR flow, and in the "additional info" tab, defined two parameters:
 
-   - Extract Date Range - an input from the customer, marked as "Show to customer" and as "mandatory". 
-   - PDF File - defined as Link, and is configured to present to the data steward the PDF file that was generated as part of the DSAR request, before it is sent to the customer.
+   - Input Type as Date Range - an input from the customer, marked as "Show to customer" and as "mandatory". 
+   - PDF File - with the following parameters defined: 
+     -- Field Type is a Link, 
+     -- The Visual Type is a File Link (which means it shows as a link a opposed to blue text for example), 
+     -- Stage Name is File Creation (as opposed to saving the file for example), 
+     -- The Task Name is Generate PDF File (as opposed to merely saving the file for example), and 
+     -- The Output Name as PDF (this is the file extension). 
+     
+   These configurations present to the data steward the PDF file that was generated as part of the DSAR request, before it is sent to the customer.
 
 <img src="../images/Figure_18_additional_info_example_admin.png" width="100%" height="100%">
 
    At the "Task" tab of this task (first tab) we marked this as "Steward can reject Task", so that if the PDF was not generated correctly, the data steward can reject the task so that the issues identified in the file can be corrected.
 
-As a result of the task configuration described above, when a customer submits a request that includes this task, the Extract Data Range appears as an input field, as demonstrated below (the second field in this image, requesting for the email address, originates from the inputs defined in other task in the same flow):  
+As a result of the task configuration described above, when a customer submits a request that includes this task, the Data Extract Date Range appears as an input field, as demonstrated below (circled in green). The field next to the Data Extract Date Range, requesting an email address, originates from the inputs defined in other task in the same flow. Fill out the information and click **Submit**:  
 
    <img src="../images/Figure_18_additional_info_example_customer.png" width="100%" height="100%">
 
