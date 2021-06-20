@@ -2,6 +2,8 @@
 
 This article describes the setup and integration steps you need to do to connect your Single-Sign-On account at Azure AD (Microsoft Azure Active Directory) to Fabric. This will grant you the benefits of easy sign-in, along with authentication and authorization control via your admin tools.
 
+Note that guidelines exist also at [Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/saas-apps/fabric-tutorial), a Fabric is part of the Azure AD's app marketplace.
+
 ### Prerequisite Requirements
 
 - Admin access to Azure AD.
@@ -25,23 +27,15 @@ This article describes the setup and integration steps you need to do to connect
    </tbody>
    </table>
 
-4. Configure general settings like app name.
+4. In the **Add from the gallery** section, type **Fabric** in the search box.
 
-5. In the **Manage** section, select **Single sign-on** to open the **Single sign-on** pane for editing.
+5. Select **Fabric** from results panel and then add the app. Wait a few seconds while the app is added to your tenant.
 
-   <table>
-   <tbody>
-   <tr>
-   	<td >
-       <img src="images/14_azure2.jpg">
-       </td>
-   </tr>
-   </tbody>
-   </table>
+6. on the **Fabric** application integration page, find the **Manage** section and select **single sign-on** to open the **Single sign-on** pane for editing.
 
-6. Select **SAML** to open the SSO configuration page.  
+7. Select **SAML** to open the SSO configuration page.  
 
-7. Click to edit the various sections, similar to what is shown below (the app name in this example is "*FabricSSO K2v*"):
+8. Click to edit the various sections, similar to what is shown below (the app name in this example is "*FabricSSO K2v*"):
 
    <table>
    <tbody>
@@ -53,7 +47,7 @@ This article describes the setup and integration steps you need to do to connect
    </tbody>
    </table>
 
-8. Edit the **Basic SAML Configuration** section (1) - information should be taken to match the Fabric Configuration, as explained [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
+9. Edit the **Basic SAML Configuration** section (1) - information should be taken to match the Fabric Configuration, as explained [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration).
 
    - **Entity ID**
    - **Reply URL** **(Assertion Consumer Service URL)**, The location where the SAML assertion is sent with a POST operation back to Fabric. Its format: `https://<HOSTNAME>:<PORT>/api/authenticate` (host name shall be the Fabric LB).
@@ -68,9 +62,9 @@ This article describes the setup and integration steps you need to do to connect
    </tbody>
    </table>
 
-9. Edit the **User Attributes & Claims** section (2), and verify that the groups are sent in a claim named "groups".
+10. Edit the **User Attributes & Claims** section (2), and verify that the groups are sent in a claim named "groups".
 
-10. From the **SAML Signing Certificate** section (3), click **Download** to get the Azure IDP certificate key to be uploaded into Fabric, for signing the authentication requests.
+11. From the **SAML Signing Certificate** section (3), click **Download** to get the Azure IDP certificate key to be uploaded into Fabric, for signing the authentication requests.
 
     <table>
     <tbody>
@@ -82,7 +76,7 @@ This article describes the setup and integration steps you need to do to connect
     </tbody>
     </table>
 
-11. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
+12. Upload the public key certificate used to encrypt the SAML assertion, as exported from Fabric. See more  [here](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) at SAML Configuration > Preparations > Provide to the IDP. 
 
     <table>
     <tbody>
@@ -94,7 +88,7 @@ This article describes the setup and integration steps you need to do to connect
     </tbody>
     </table>
 
-12. From the 4th section - **Set up \<app-name>** (in our example "*FabricSSO K2v*") - Copy the IDP parameters - **Login URL** and **Azure AD Identifier**, to be populated at the Fabric SAML configuration for **IDP_ENTITYID** and **IDP_SINGLE_SIGN_ON_SERVICE_URL** parameters.
+13. From the 4th section - **Set up \<app-name>** (in our example "*FabricSSO K2v*") - Copy the IDP parameters - **Login URL** and **Azure AD Identifier**, to be populated at the Fabric SAML configuration for **IDP_ENTITYID** and **IDP_SINGLE_SIGN_ON_SERVICE_URL** parameters.
 
     <table>
     <tbody>
