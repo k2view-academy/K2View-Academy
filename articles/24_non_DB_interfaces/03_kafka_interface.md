@@ -80,7 +80,7 @@ When SSL authentication is required on Kafka, set **Enable SSL/SASL** property t
 
 #### SASL_SSL / SASL_PLAINTEXT Security Protocols
 
-When you need to connect to Kafka using a user and a password, set the **Security Protocol** = **SASL_SSL** or **SASL_PLAINTEXT** and populate the session user name and password attributes.
+When you need to connect to Kafka using a user and a password, set the **Security Protocol** = **SASL_SSL** or **SASL_PLAINTEXT** and populate the Session user name and password attributes.
 
 In addition, in case of **SASL_SSL** - populate the Truststore and Keystore properties as below. 
 
