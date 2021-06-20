@@ -9,7 +9,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
 ## Configuration instructions: At Okta
 
-#### Launch the Wizard
+#### Select Fabric from Okta App Gallery
 
 1. Log into the Okta Admin console as an Admin. 
 
@@ -61,7 +61,7 @@ This article describes the setup and integration steps to connect your Single-Si
 
 
 
-#### Setup Configuration settings
+#### Setup Configuration Settings
 
 7. Assign users or groups to the application, via the *Assignments* tab, by using the **'Assign'** button.  Assigning groups will assign the users who are associated to that groups.
 
