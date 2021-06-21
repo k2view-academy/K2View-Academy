@@ -13,6 +13,15 @@
 </tr>
 <tr>
 <td width="125">
+  <h4><p><strong>Data Steward</strong></p></h4>
+</td>
+<td width="516">
+<p>An oversight or data governance role within an organization, responsible for (among other things) ensuring the quality of the organization's data and administering the data in compliance with policy and/or regulatory obligations. 
+See more details about the role of data steward here: https://en.wikipedia.org/wiki/Data_steward</p>
+</td>
+</tr>
+<tr>
+<td width="125">
   <h4><p><strong>DPM</strong></p></h4>
 </td>
 <td width="516">
@@ -21,10 +30,10 @@
 </tr>
 <tr>
 <td width="125">
-  <h4><p><strong>DSR</strong></p></h4>
+  <h4><p><strong>DSAR</strong></p></h4>
 </td>
 <td width="516">
-<p>Data Subject Request</p>
+<p>Data Subject Access Request</p>
 </td>
 </tr>
 <tr>
