@@ -73,21 +73,20 @@ The top section of the screen includes the high level request information:
 <td width="700">
 <p>The number of days the request is expected to complete. The number of days calculation is based on the Request creation date and the Activity SLA.</p>
 </td>
-</tr>
 <tr>
 <td width="200">
 <p>Extended</p>
 </td>
 <td width="700">
-<p>Indicates if the Request SLA was extended. The values are true/false</p>
+<p>Indicates if the Request SLA deadline was extended by the data supplier.</p>
 </td>
 </tr>
 <tr>
 <td width="200">
-<p>Extendable</p>
+<p>Extend button</p>
 </td>
 <td width="700">
-<p>Indicates if the Request SLA can be extended. This depends on the configuration of the Activity of this task.</p>
+<p>If this Request SLA was not extended, the case owner (only the case owner) can use this to extend the Request SLA.</p>
 </td>
 </tr>
 </tbody>
