@@ -4,11 +4,11 @@
 
 A Stage is composed of one or more Tasks. Each Task performs a specific action in the fulfilment process of a Customer Request. Examples of Tasks are:
 
-- Validates the customer’s request.
-- Send an e-mail  to the customer acknowledging registration of the request.
-- Gather the requested customer data.
-- Review the gathered data.
-- Send the customer the data that was requested.
+- Validating the customer’s request.
+- Sending an e-mail  to the customer acknowledging registration of the request.
+- Gathering the requested customer data.
+- Reviewing the gathered data.
+- Sending the customer the data that was requested.
 
 To add a new Task under a specific Stage, click the Stage name on the Stage bar and access the <img src="../images/Figure_12a_new_task_icon.png" width="10%" height="10%"> option from the right. 
 The Task Configuration screen is displayed. This screen includes several tabs, each providing an aspect of Task configuration.
@@ -28,16 +28,18 @@ The following sections describe the properties that should be configured when de
 
 ## Tasks Tab
 
-The Tasks tab includes the configuration of parameters, such as the following:
+The Tasks tab includes the following configuration of parameters (a detailed description is in the table below):
 
 - Task Name
-- Task owner
+- Role of a group assigned to the Task
 - Define the Task as mandatory, when applicable
-- Provide execution order of tasks
-- Identify dependencies with other Tasks
-- Define expected Task execution duration
-- Define Task execution timing
+- Task start time 
+- Task order
+- Task deadline
+- Push succeeding tasks (see below for description)
 - Allow a steward to reject a task
+
+Once the parameters are set, click **Save**. 
 
 The following table details the options for the Task tab.
 
@@ -199,7 +201,7 @@ The additional configurable properties when the “Conditional Dependent Task is
 <p>M</p>
 </td>
 <td width="780">
-<p>This property is presented only when the Conditional Dependent Task is switched on. It defines the parent Task that this current Task depends on. It can be any other task from the same Stage that precedes the dependent task.</p>
+<p>Defines the parent Task on which this current Task depends. It can be any other task from the same Stage that precedes the dependent task.</p>
 </td>
 </tr>
 <tr>
@@ -210,7 +212,7 @@ The additional configurable properties when the “Conditional Dependent Task is
 <p>M</p>
 </td>
 <td width="780">
-<p>This property is shown only when the Conditional Dependent Task is switched on. This property indicates after how many hours should the dependent Task begin following the parent task start time.</p>
+<p>Indicates after how many hours should the dependent Task begin following the parent task start time.</p>
 </td>
 </tr>
 </tbody>
