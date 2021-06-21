@@ -17,7 +17,7 @@
 </td>
 <td width="516">
 <p>An oversight or data governance role within an organization, responsible for (among other things) ensuring the quality of the organization's data and administering the data in compliance with policy and/or regulatory obligations. 
-See more details about the role of data steward here: https://en.wikipedia.org/wiki/Data_steward</p>
+</p>
 </td>
 </tr>
 <tr>
