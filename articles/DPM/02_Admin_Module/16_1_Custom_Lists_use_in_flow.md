@@ -1,6 +1,6 @@
 ## Custom Lists In Flow Configuration
 
-Use the custom list when configuring Data Subject Requests (DSR) Flow parameters that should be presented to the DPM user as a list of options to chose from.
+Use the custom list when configuring Data Subject Requests (DSR) Flow parameters that should be presented to the user as a list of options to chose from.
 
 This configuration can be done in any of the tabs which permit definition of input parameters in the Tasks configuration: 
 
@@ -12,9 +12,9 @@ To configure the custom list, In any of the abovementioned Task tabs, chose the 
 
 <img src="../images/Figure_100_Custom_Lists_configuration.png" width="100%" height="100%">
 
-As a result, the DPM enables you to select what is the custom list that should be used and define what is the label that should be presented to the user.
+As a result, you can select what is the custom list that should be used and define what is the label that should be presented to the user.
 
-In the example below we have configured a Task to use Custom List in two places -  Additional Info and Steward Inputs:
+In the example below we have configured a Task to use a Custom List in two places -  Additional Info and Steward Inputs:
 
 - **Additional Info:** To allow the customer define a preferred contact method as part of the inputs in the Additional Info tab:
 
