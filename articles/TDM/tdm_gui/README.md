@@ -27,6 +27,7 @@
 <li><a href="25_task_tdmdb_tables.md">Task - TDM DB Tables</a></li>  
 <li><a href="26_task_execution.md">Task Execution</a></li> 
 <li><a href="27_task_execution_history.md">Task Execution History</a></li>
+<li><a hef="TDM_Basic_Task_Execution_APIs_Flow">Run Basic TDM Task Execution Outside the TDM GUI</a></li>    
 
 ​    
 
