@@ -2,6 +2,8 @@
 
 Another use of the Custom List is for the creation of filters in the consent configuration. 
 
+Note: this section describes only the use of Custom Lists in the context of concent management. For consent configuration overview, access the [Consent Management](/articles/DPM/08_Consent_Management/01_Consent_Management_Overview.md) section of this user guide.
+
 Each consent can be associated with a set of filters so that this consent is presented only for customers that meet the filter criteria. 
 
 As an example, if there is a distinction between the consents that should be presented for a business account and those that should be presented for a consumer account, a custom list with those two values can be created, and associated with the relevant consents. 
