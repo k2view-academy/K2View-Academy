@@ -10,9 +10,11 @@ Parameters that are configured in this tab appear to the data steward in the Tas
 
 <p>For each steward input parameter configured in this tab, the following parameters can be defined:</p> 
 
+- **Label for Steward** - Descriptive text for this input parameter. 
 - **Mandatory on Complete** - Switching this attribute "on" means that the population of this information is mandatory when the data steward handles the Task and wants to mark it as "Complete".
 - **Mandatory On Reject** - Switching this attribute "on" means that the population of this information is mandatory when the data steward handles the Task and wants to mark it as "Rejected".
-- **Show to Customer** - When this attribute is switched "on", the input provided by the data steward will be presented to the customer at the Request Details screen. The label that the customer sees is the text that is populated in the "Label For Customer" field.   
+- **Show to Customer** - When this attribute is switched "on", the input provided by the data steward will be presented to the customer at the Request Details screen. The label that the customer sees is the text that is populated in the "Label For Customer" field.
+- **Input Type** - Text or Custom List.   
   
 
 The following example demonstrates how the "Steward Inputs" can be used as part of a DSAR flow:
