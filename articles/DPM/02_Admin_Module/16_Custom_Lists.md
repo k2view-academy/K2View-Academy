@@ -2,11 +2,11 @@
 
 Use Custom lists when you want to present a list of predetermined values, so that the user can choose between the options.  With custom lists, the set of values that is presented to the end user is configurable and can be changed at any point of time. 
 
-Custom lists can be used wherever an input is needed from customers or stewards, as described in the following examples: 
+Custom lists can be used wherever an input is needed from customers or data stewards, as described in the following examples: 
 
-Let's assume that when submitting a DSAR,  the customer should choose the contact method that should be used for the reply. The values that should be presented to the customer in the dropdown of options can be defined as custom list and this custom list associated with this specific input field in the task configuration. The values are thus automatically presented to the customers when submitting a DSAR.  
+Let's assume that when submitting a DSAR,  the customer must choose the contact method that will be used for the reply. The values to be presented to the customer in the dropdown of options can be defined as a custom list and this custom list associated with this specific input field in the task configuration. The values are thus automatically presented to the customers when submitting a DSAR.  
 
-Another example for the use of custom list is if you have a task that requires a data steward to validate the customer request before data is collected. If the steward had determined that the request is invalid, then the rejection reason should be specified. To attend this requirement, define the rejection list as a Custom List and associate to an input field in the Task's "Steward Inputs" tab.
+Another example for the use of custom list is if you have a task that requires a data steward to validate the customer request before data is collected. If the data steward had determined that the request is invalid, then the rejection reason should be specified. To take care of this requirement, define the rejection list as a Custom List and associate it to an input field in the Task's "Steward Inputs" tab.
 
 ### Custom List Configuration
 
@@ -20,7 +20,7 @@ The system presents the list of options which were already configured. For examp
 
 You can enable or disable each list by switching on or off the Active <img src="../images/ON_OFF_icon.png" width="4%" height="4%"> control. 
 
-To view or edit any of the lists, click the list line or use the <img src="../images/Figure_27_b_edit_icon.png" width="5%" height="5%">button. That would open the list details screen:
+To view or edit any of the lists, click the list line or use the <img src="../images/Figure_27_b_edit_icon.png" width="5%" height="5%">button. That opens the list details screen:
 
 <img src="../images/Figure_100_Custom_Lists_edit.png" width="80%" height="80%">
 
@@ -45,7 +45,7 @@ In this screen you can:
 
 - Define the list name.
 - Enable or disable the list by using the Active <img src="../images/ON_OFF_icon.png" width="4%" height="4%"> control.
-- Add or remove entries from the table by using the <img src="../images/Figure_16a_plus_minus_icon.png" width="5%" height="5%"> control. For each entry, the Entry Key and Entry value should be defined.
+- Add or remove entries from the table by using the <img src="../images/Figure_16a_plus_minus_icon.png" width="5%" height="5%"> control. For each entry, the Entry Key and Entry value must be defined.
 
 Use the <img src="../images/SAVE_icon.png" width="5%" height="5%"> button to save the new list.
 
