@@ -1,6 +1,6 @@
 ## Custom Lists In Flow Configuration
 
-Use the custom list when configuring Data Subject Requests (DSR) Flow parameters that should be presented to the user as a list of options to chose from.
+Use the custom list when configuring Data Subject Access Requests (DSAR) Flow parameters that should be presented to the user as a list of options to chose from.
 
 This configuration can be done in any of the tabs which permit definition of input parameters in the Tasks configuration: 
 
@@ -8,7 +8,7 @@ This configuration can be done in any of the tabs which permit definition of inp
 - **Additional Info** - when a dropdown is required when collecting customer input for manual tasks 
 - **Steward Inputs** - when a dropdown is required when a task is being handled by a data steward
 
-To configure the custom list, In any of the abovementioned Task tabs, chose the "Custom List" field type when defining the type of an input field, as in the following example:
+To configure the custom list, In any of the abovementioned Task tabs, choose "Custom List" as the Input Type, as in the following example:
 
 <img src="../images/Figure_100_Custom_Lists_configuration.png" width="100%" height="100%">
 
@@ -16,7 +16,7 @@ As a result, you can select what is the custom list that should be used and defi
 
 In the example below we have configured a Task to use a Custom List in two places -  Additional Info and Steward Inputs:
 
-- **Additional Info:** To allow the customer define a preferred contact method as part of the inputs in the Additional Info tab:
+- **Additional Info:** To allow the customer to define a preferred contact method as part of the inputs in the Additional Info tab,  choose "Input" as the Field Type, then "Custom List" from the Input Type dropdown menu:
 
   <img src="../images/Figure_100_Custom_Lists_additional_info.png" width="100%" height="100%"> 
 
@@ -26,7 +26,7 @@ The results of the two configurations above is that when a customer submits a Re
 
 <img src="../images/Figure_100_Custom_Lists_customer_request.png" width="100%" height="100%">
 
-In addition, when the data steward handles the Task as part as the Request fulfillment, the information that was selected by the customer appears in the Additional Info section, and the option to select a rejection reason appears at the Steward Inputs section, as shown below:
+In addition, when the data steward handles the Task as part of the Request fulfillment, the information that was selected by the customer appears in the Additional Info section, and the option to select a rejection reason appears at the Steward Inputs section. Note that Rejection Reasons can be configured when the custom list itself is configured:
 
  <img src="../images/Figure_100_Custom_Lists_steward_screen.png" width="100%" height="100%">
 
