@@ -10,7 +10,7 @@ Another example for the use of custom list is if you have a task that requires a
 
 ### Custom List Configuration
 
-Select the option of Custom Lists from the Administrator menu in order to access the custom list functionality: 
+Select the option of Custom Lists from the main Administrator menu of DPM in order to access the custom list functionality: 
 
 <img src="../images/Figure_100_Custom_Lists_menu.png" width="25%" height="25%">
 
@@ -33,7 +33,7 @@ In this screen you can:
 - Enable or disable the list by using the Active <img src="../images/ON_OFF_icon.png" width="4%" height="4%"> control.
 - Add or remove entries from the table by using the <img src="../images/Figure_16a_plus_minus_icon.png" width="5%" height="5%"> control.
 
-Use the <img src="../images/Figure_27_a_delete_icon.png" width="6%" height="6%"> to delete a list. The DPM will prevent you from deleting a list that is being used by a task or as consent filter.
+Use the <img src="../images/Figure_27_a_delete_icon.png" width="6%" height="6%"> to delete a list. DPM will prevent you from deleting a list that is being used by a task or as a consent filter.
 
 ### Create New List
 
