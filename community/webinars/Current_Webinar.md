@@ -1,6 +1,6 @@
 ### <img src="images/webinar_icon.png" style="zoom:80%;" /> Webinars
 
-**Next Webinar will take place on Monday, July 12th!**
+**Heads Up! Our next Webinar will take place on Monday, July 12th!**
 
 [Click to view K2View Webinar materials](README.md).
 

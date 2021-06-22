@@ -6,7 +6,7 @@
 
 ## Webinar Speakers
 
-<img src="../images/webinar2_speakers.png"  />
+<img src="../images/webinar2_speakers.PNG"  />
 
 ## Webinar Agenda
 
