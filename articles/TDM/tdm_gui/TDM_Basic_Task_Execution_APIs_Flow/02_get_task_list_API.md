@@ -62,4 +62,4 @@ Gets the list of regular active tasks (task_status and task_execution_status col
   }
   ```
 
-  
+  [![Previous](/articles/images/Previous.png)](01_tdm_basic_task_execution_flow.md)
