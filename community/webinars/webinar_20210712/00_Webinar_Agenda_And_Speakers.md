@@ -1,6 +1,8 @@
-[![webinar](../images/webinar_20210712.PNG)](https://www.k2view.com/events/developer-community-webinar-july2021/)
+![](../images/webinar_20210712.PNG)
 
 
+
+[Click to register to the Webinar.](https://www.k2view.com/events/developer-community-webinar-july2021/)
 
 ## Webinar Speakers
 

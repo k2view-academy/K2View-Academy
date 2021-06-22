@@ -2,7 +2,7 @@
 
 ## Webinar Recording 
 
-[Click to watch the Webinar](https://www.k2view.com/k2view-developer-community-webinar-20210527/)
+[Click to watch the Webinar.](https://www.k2view.com/k2view-developer-community-webinar-20210527/)
 
 ## Webinar Speakers
 
