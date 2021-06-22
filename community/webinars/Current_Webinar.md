@@ -1,8 +1,20 @@
 ### <img src="images/webinar_icon.png" style="zoom:80%;" /> Webinars
 
+
+
+**Our next Webinar will take place on Monday, July 12th!**
+
+[Click to view the agenda and register.](https://www.k2view.com/events/developer-community-webinar-july2021/)
+
 [Click to view K2View Webinars history & materials](README.md).
 
-[![NextWebinar](images/webinar_20210712.PNG)](https://www.k2view.com/events/developer-community-webinar-july2021/)
+<img src="images/devComm.png" style="zoom:75%;" />
+
+
+
+
+
+
 
 
 
