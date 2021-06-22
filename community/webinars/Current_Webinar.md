@@ -1,14 +1,10 @@
 ### <img src="images/webinar_icon.png" style="zoom:80%;" /> Webinars
 
-1st K2View DevCom Kickoff webinar was held on May 27th.
+<img src="images/webinar_20210712.PNG" />
 
-[Click to view the K2View Webinars materials](README.md).
+[Click to register to the next Webinar.](https://www.k2view.com/events/developer-community-webinar-july2021/)
 
-
-
-**Next Webinar is Coming Soon... Stay Tuned!**
-
-<img src="images/devComm.png" style="zoom: 50%;" />
+[K2View Webinars history & materials](README.md).
 
 
 
