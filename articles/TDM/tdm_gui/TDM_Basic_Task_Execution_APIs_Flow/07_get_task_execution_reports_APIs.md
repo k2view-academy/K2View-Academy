@@ -542,7 +542,7 @@ The **migrateIds** parameter is populated by the batch IDs related to the task e
 ##### Get a Summary Report
 
 ```json
-{migrateIds: "3e8e8e44-9c97-4921-a622-f29161a8a112", runModes: ["S", "H"]}
+{"migrateIds": "3e8e8e44-9c97-4921-a622-f29161a8a112", "runModes": ["S", "H"]}
 ```
 
 
@@ -550,7 +550,7 @@ The **migrateIds** parameter is populated by the batch IDs related to the task e
 ##### Get Summary and Detailed Reports with the Entity List and their Execution Status
 
 ```json
-{migrateIds: "3e8e8e44-9c97-4921-a622-f29161a8a112", runModes: ["D", "H", "S"]}
+{"migrateIds": "3e8e8e44-9c97-4921-a622-f29161a8a112", "runModes": ["D", "H", "S"]}
 ```
 
 
