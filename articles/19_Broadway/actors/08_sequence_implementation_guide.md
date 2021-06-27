@@ -19,7 +19,7 @@ To implement the above use cases, set a unique **maskingId** and populate it on 
 The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. The following use cases are supported:
 
 * IN-MEMORY, useful for testing only since it can be used only in a single node configuration.
-* Redis or DB sequence. To implement the DB sequence, set the **maskingId** to hold the sequence name defined in the **sequenceInterface** DB.  
+* Redis or DB sequence. Getting the next value from the DB sequence is supported for Oracle and PostgreSL DBs. To implement the DB sequence, set the **maskingId** to hold the sequence name defined in the **sequenceInterface** DB.  
 
 ### Sequence Initiation Method
 
