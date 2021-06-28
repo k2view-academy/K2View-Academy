@@ -2,7 +2,7 @@
 
 ## Authentication Methods
 
-Fabric secures and controls Web Services access via an authentication mechanism in which each API must be verified. 
+Fabric secures and controls Web Services access via an authentication mechanism in which each API call must be verified. 
 
 Fabric supports three methods for that purpose:
 
@@ -98,9 +98,9 @@ Fabric supports these delegated authentications:
 
 ### Basic Authentication
 
-Basic authentication, also known as *basic access authentication*, is a method for an HTTP user agent to be authenticated by providing a user name and password when making a request. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by a space and a base64-encoded string of `username:password`.
+Basic authentication, also known as *basic access authentication*, is a method for an HTTP user-agent to be authenticated by providing a user name and password, when making a request. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by a space and a base64-encoded string of `username:password`.
 
-**Note:** Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL. For more information refer to [Fabric Hardening](/articles/99_fabric_infras/devops/03_fabric_and_cassandra_hardening.md).
+**Note:** Basic authentication should only be used together with HTTPS/SSL mechanism. For more information refer to [Fabric Hardening](/articles/99_fabric_infras/devops/03_fabric_and_cassandra_hardening.md).
 
 The authorization and permissions are done according to the roles which are assigned to the user, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
 
