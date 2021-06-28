@@ -78,8 +78,11 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
 3. The interfaces and/or environments of the TDM Demo project might need some modification, edit them if needed (you might be working locally or remotely, for example). 
 4. Open the DB_CASSANDRA interface, and check if the **k2masking** keyspace exits. If it does not exist, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or **create_masking_cache_table.sql** of the TDM Library. 
-5. If you use a Fabric docker and a local PG DBs, populate the **Server** setting by **host.docker.internal**.
-6. Deploy the LUs, Web-Services, and the Environments to Fabric. Note that you must deploy the environments *before* running Data Viewer, since the main Target LU table sets the target ("TAR") environment to be the active environment.
+5. Edit the SRC and TAR Environments: 
+   - If you use a Fabric docker and a local PG DBs, populate the **Server** setting by **host.docker.internal**.
+   - If you use a docker for the PG DBs, populate the **Server** setting of the PG DBs by the internal IP address of the PG docker (run **hostname -I** command in the docker to get the internal IP address).
+6. Deploy the Environments to Fabric.
+7. Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 
 ###  TDM GUI Definitions
 
@@ -95,9 +98,10 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 
 2. Create the following products:  
 
-   - CRM product. Attach the Customer LU to this product.
-   - BILLING product. Attach the Billing LU to this product.  Add two product versions to the BILLING product: PROD and DEV.
-   - ORDERS product. Attach the Orders LU to this product. 
+   - **CRM** product. Attach the Customer LU to this product. You can populate the product_version by any String.
+   - **BILLING** product. Attach the Billing LU to this product. Note that PAYMENT table of **TAR_BILLING_DB** has an additional column: PAYMENT_METHOD.  The load flow of PAYMENT table supports two product versions - PROD and DEV - and populates a default value in PAYMENT_METHOD when the product version is 'DEV'. Add two product versions to the BILLING product -PROD and DEV - to test this implementation.
+   - **ORDERS** product. Attach the Orders LU to this product. You can populate the product_version by any String.
+   - **COLLECTION** product. Attach the Collection LU to this product. You can populate the product_version by any String.
 
 3. Create the following environments:
 
