@@ -2,11 +2,11 @@
 
 ## Authentication Methods
 
-Fabric secures and controls Web Service access via an authentication mechanism in which each API call is sent with a valid token. 
+Fabric secures and controls Web Services access via an authentication mechanism in which each API must be verified. 
 
-Fabric supports two main token types, which are sent as  `Authorization: Bearer` header:
+Fabric supports three methods for that purpose:
 
-1. **API Key** 
+1. **API Key**, a token which is sent as `Authorization: Bearer` header
 
 2. **JWT** ( JSON Web Tokens), an open industry standard method (RFC 7519) that securely represents claims between two parties. 
 
@@ -15,10 +15,10 @@ Fabric supports two main token types, which are sent as  `Authorization: Bearer`
    a. Signed by Fabric 
 
    b. Signed by the WS client
+   
+   JWT shall be sent as `Authorization: Bearer` header but instead it can be sent also as a cookie.
 
-
-
-Note that the JWT can be sent also as a cookie and not as the bearer header.
+3. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
 
 ### API Key
 
@@ -48,6 +48,8 @@ The authentication flow for this method works as following:
    When used in the cookie, the JWT expiration is automatically extended on each call, where it is not extended when using Bearer header to pass the JWT.
 
 The authorization and permissions are done according to the credentials that were provided during the first "/api/authenticate" call - either by the user or by the API Key and the roles which are assigned to each of them. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
+
+
 
 ### JWT: Signed by the WS client
 
@@ -91,6 +93,28 @@ Fabric supports these delegated authentications:
   ```
 
 * When JWT is verified, Fabric sets the session with this user and roles by taking the groups and setting them as user's roles for this session.
+
+
+
+### Basic Authentication
+
+Basic authentication, also known as *basic access authentication*, is a method for an HTTP user agent to be authenticated by providing a user name and password when making a request. The client sends HTTP requests with the `Authorization` header that contains the word `Basic` followed by a space and a base64-encoded string of `username:password`.
+
+**Note:** Basic authentication should only be used together with other security mechanisms such as HTTPS/SSL. For more information refer to [Fabric Hardening](/articles/99_fabric_infras/devops/03_fabric_and_cassandra_hardening.md).
+
+The authorization and permissions are done according to the roles which are assigned to the user, and their associated permissions. See [here](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for more information about API Keys, roles and permissions.
+
+
+
+#### Browser Calls Helper
+
+Fabric Basic Authentication mechanism provides an helper, when calls are originated from a web browser, which does not support request header sending.
+
+To activate the helper, add an additional parameter to the web service request: `basicAuth=true`.
+
+When activated, a browser popup will appear, when sending the request, where user can populate the username and password.
+
+<img src="images/05_basic_auth_popup_helper.png">
 
 
 
