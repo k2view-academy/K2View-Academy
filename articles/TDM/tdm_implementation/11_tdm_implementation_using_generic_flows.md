@@ -25,7 +25,7 @@ After the Actor's update is completed, refresh the project by clicking the ![ima
 
 Sequences are required when populating a target DB, thus setting and initiating sequences is a mandatory part of creating a TDM implementation. 
 
-If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or using the installation SQL script provided as part of the Masking library. After creating the **k2masking** keyspace, get the **update_tdm_sequence_mapping.sql** script from the [TDM Library](04_fabric_tdm_library.md) and run it on Cassandra DB to recreate **TDM_SEQ_MAPPING** table with the correct structure. 
+If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or **create_masking_cache_table.sql** of the TDM Library.  
 
 
 Do the following to create the sequences for your TDM implementation:
