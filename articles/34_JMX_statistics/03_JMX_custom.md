@@ -37,7 +37,7 @@ This method is returned by calling ```.close()``` on this object to indicate the
 
 ### Code Example:
 
-```java 
+~~~java
   public static String fnCustomStats() throws Exception { String status= "success";
 
 	Db ci = db("fabric");
@@ -69,6 +69,8 @@ This method is returned by calling ```.close()``` on this object to indicate the
 	
 	return status;
 }
-```
+~~~
+
+
 
 [![Previous](/articles/images/Previous.png)](/articles/34_JMX_statistics/02_JMX_infoformat.md)
