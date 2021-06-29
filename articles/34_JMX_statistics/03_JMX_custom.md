@@ -38,7 +38,9 @@ This method is returned by calling ```.close()``` on this object to indicate the
 ### Code Example:
 
 ~~~java
-  public static String fnCustomStats() throws Exception { String status= "success";
+  public static String fnCustomStats() throws Exception { 
+  	
+	String status= "success";
 
 	Db ci = db("fabric");
 	
