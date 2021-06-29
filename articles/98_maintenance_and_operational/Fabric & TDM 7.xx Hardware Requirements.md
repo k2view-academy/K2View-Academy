@@ -2,6 +2,10 @@
 
 
 
+[TOC]
+
+
+
 ## **INTRODUCTION** 
 
 This document provides information regarding hardware, software, and operating system requirements for Fabric and TDM installations. 
@@ -257,7 +261,7 @@ For local installations:
 
 **For all installations, the FS configuration must be as follows:** 
 
-- Volume of 50G /opt/apps/k2view/ - will be used also as the home directory for K2view user
+-  Volume of 50G /opt/apps/k2view/ - will be used also as the home directory for K2view user
 - Volume of 100G* /opt/apps/k2view/storage  
 - Volume of 100G* /opt/apps/kafka/   
 
@@ -301,7 +305,6 @@ Follow these steps to setup a Linux Server:
 `echo  "vm.max_map_count = 1048575" >> /etc/sysctl.conf`
 
 `echo "fs.file-max =  1000000" >> /etc/sysctl.conf`     
-
 
 ### Fabric LINUX PORTS 
 
@@ -348,7 +351,6 @@ For Cloud installation:
 - If using **GCP**: c2-standard-16
    see also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
-
 #####   Cloud instances for non SOR
 
 -  If using **AWS**: EC2: i3.2xlarge – (for the Cassandra home directory gp3 storage, use the NVMe device)
@@ -379,7 +381,6 @@ For Cloud installation:
 
    The above volume values should be increased based on project scope and data retention requirements. 
 
-
 #### Cassandra Linux Server Setup
 
 Follow these steps to setup the Linux Server:
@@ -395,7 +396,6 @@ Follow these steps to setup the Linux Server:
 
 
 Run the following as ROOT:
-
 `echo  "root soft    nproc   unlimited" >>  /etc/security/limits.conf  `
 
 `echo "cassandra - nofile 100000" >>  /etc/security/limits.conf  `
@@ -418,12 +418,10 @@ The following ports should be opened on the LINUX server and accessible outside 
 | ----------- | ------------- |
 | 7000        | Cassandra     |
 | 7001        | cassandra     |
-| 7199, 7070 | Cassandra JMX |
+| 7199   7070 | Cassandra JMX |
 | 9042        | cassandra     |
 | 9160        | Cassandra     |
 
 
-
- 
 
  
