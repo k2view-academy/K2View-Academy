@@ -21,7 +21,7 @@ In addition to *IDP, SP*, and *principals* which are explained [here](/articles/
 
 SAML provides several methods for certification and trust among the SP and IDP interactions, among them:
 
-* **certification** - SP and IDP provides each other its public key, which is used with their interactions. Their values are reflected and represented at Fabric [SAML configuration](/articles/26_fabric_security/08_user_IAM_configiration.md#saml-configuration) as SP_CERT_ALIAS and IDP_CERT_ALIAS. 
+* **certification** - SP and IDP provides each other its public key, which is used with their interactions. Their values are reflected and represented at Fabric [SAML configuration](/articles/26_fabric_security/13_user_IAM_configiration.md#saml-configuration) as SP_CERT_ALIAS and IDP_CERT_ALIAS. 
 
   As part of a pre established trust relationship process between Fabric and the IDP, Fabric  provides to the IDP IT team the signed certificate public key "crt" file to be uploaded at the IDP, and the IDP team sends to the Fabric team the IDP "crt"/"cert" to be located at Fabric.
 
