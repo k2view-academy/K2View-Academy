@@ -1,16 +1,11 @@
 # **Fabric & TDM 7.xx Hardware Requirements For Dev/QA/Prod**
 
 
-
-[TOC]
-
-
-
 ## **INTRODUCTION** 
 
 This document provides information regarding hardware, software, and operating system requirements for Fabric and TDM installations. 
 Separate requirements are presented when working in a Development/Quality Assurance environment, and when working in a Production environment.
-It is assumed that the reader is familiar with Fabric and TDM.  
+It is assumed that the reader is familiar with Fabric and/or TDM.  
 
 ## **DIAGRAM** 
 
