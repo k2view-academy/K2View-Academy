@@ -2,5 +2,5 @@
         
 
 <ul>
-    <li><a href="/articles/98_maintenance_and_operational/">XXX</a></li>
+    <li><a href="/articles/98_maintenance_and_operational/README.md">Fabric And TDM 7.x Hardware Requirements</a></li>
 </ul>
