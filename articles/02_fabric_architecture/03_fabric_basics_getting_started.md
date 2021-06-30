@@ -39,8 +39,18 @@ Always start the seed nodes before other nodes in the Fabric cluster.</p>
 <p>Restart (stop and start) the Fabric node.</p> 
 </td>
 </tr>
+<tr>
+<td width="300pxl" valign="top">
+<p><h4><strong>k2fabric watchdog</strong></p>
+</td>
+<td width="600pxl" valign="top">
+<p>Keeps a specific command alive in case of failure. The specific command to be kept alive is input to the watchdog function. The number of retries and the grace period are also configurable.</p> 
+</td>
+</tr>      
 </tbody>
 </table>
+
+
 
 
 ## Get Fabric Version
@@ -204,6 +214,54 @@ The **reset.sh** script gets the list of the Fabric directories to be removed fr
 </tr>
 </tbody>
 </table>
+## Watchdog (available from Fabric 6.4.5)
+
+The Fabric **watchdog.sh** script is used to keep a specific command alive. The script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts).
+
+**Script flow:**
+
+   1. Execute the command that is input to the function. Watchdog will run on Fabric by default if a specific command is not provided.
+
+   2. Restart the command upon failure automatically according to the number of retries, during the grace period. The number of retries and the grace period are configurable. 
+
+
+Note: watchdog script can monitor only commands that are not running in the background.
+
+**Script syntax:**
+
+./watchdog.sh <command> [-r=WATCHDOG_MAX_RETRIES] [-g=WATCHDOG_VERIFICATION_GRACE_SEC]
+
+<command>: The command that must be kept alive.
+
+WATCHDOG_MAX_RETRIES [optional (default=3)]: The watchdog will try to execute the provided command upon failure, up to this number of attempts. This parameter is configured using the -r option or as an environment variable.
+
+WATCHDOG_VERIFICATION_GRACE_SEC [optional (default=60)]: A verification grace period (in seconds) during which the service tries to execute the provided command. It tries to do this WATCHDOG_MAX_TRIES attempts . If, by the time the grace period expires, the executed command has failed, the counter is reset.  This parameter is configured using the -g option or as an environment variable.
+
+**Example**
+
+./watchdog.sh 'cassandra.sh -f' -r=4 -g=80
+
+​	run a watchdog on cassandra. During a grace period of 80 seconds, try to run cassandra.sh 4 times.
+
+## Kill Watchdog (available from Fabric 6.4.5)
+
+The Fabric **watchdog-kill.sh** script is used kill (stop) a watchdog process and its child processes. The script is located under [$K2_HOME/fabric/scripts](/articles/02_fabric_architecture/02_fabric_directories.md#k2_homefabricscripts).
+
+**Script flow:**
+
+      1. Kill the watchdog and child process.
+
+**Script syntax:**
+
+./watchdog-kill.sh <pid>
+
+<pid> - the id of the watchdog (and its child processes) that is to be killed
+
+ **Example**
+
+./watchdog-kill.sh 1234
+
+​	Kill process id 1234, can be either the watchdog process id or the child process id. Both processes will be killed.
 
 [![Previous](/articles/images/Previous.png)](/articles/02_fabric_architecture/02_fabric_directories.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/02_fabric_architecture/04_fabric_commands.md)
 
