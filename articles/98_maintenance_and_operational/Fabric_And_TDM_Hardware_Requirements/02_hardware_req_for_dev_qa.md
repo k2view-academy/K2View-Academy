@@ -83,11 +83,11 @@ For cloud installation:
 Follow these steps to setup a Linux Server:
 
 1. **NTP/chrony** installed and configured
-2. Add a user ‘**k2view’** with group ‘**k2view’**
-3. Add Admin permissions to the k2view user.
+2. Add a user ‘**fabric'** with group '**fabric'**
+3. Add Admin permissions to the fabric user.
 4. Provide read/write access to **/opt/apps/fabric**
 5. Remote access option (SSH) enabled to user **fabric**.
-6. Add a user ‘**cassandra** with group ‘**fabric’**
+6. Add a user ‘**cassandra'** with group ‘**fabric’**
 7. Provide read/write access to **/opt/apps/cassandra**
 8. Remote access option (SSH) enabled to user **cassandra**.
 9. Add a user ‘**kafka** with group ‘**fabric’**
