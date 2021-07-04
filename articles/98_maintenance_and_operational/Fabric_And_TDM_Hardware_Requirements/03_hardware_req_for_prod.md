@@ -233,8 +233,8 @@ For Cloud installation:
     - The above volume values should be increased based on project scope and data retention requirements.
 
 -  All installations, the FS configuration for **<u>non SOR</u>** must be as follows: 
-  - Volume of 50G /opt/apps/cassandra/ 
-  - Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM     
+    - Volume of 50G /opt/apps/cassandra/ 
+    - Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM     
 
    The above volume values should be increased based on project scope and data retention requirements. 
 
@@ -249,6 +249,8 @@ Follow these steps to setup the Linux Server:
 3. Provide read/write access to **/opt/apps/cassandra**
 
 4. Remote access option (SSH) enabled to user **cassandra**.
+
+5. The SWAP should be disable for  **cassandra**.
 
 
 
