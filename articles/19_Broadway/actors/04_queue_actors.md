@@ -20,7 +20,9 @@ The **queue** category Actors enable the Pub / Sub services functionality of the
 
 Publisher and Subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Actor's **interface** input argument. 
 
-The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
+The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the **Subscribe** Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
+
+Since Fabric 6.5.1, **group_id** argument can be set on the **Publish** Actor and it defines the consumer group for Transaction mode only. Thus, when the **Publish** Actor is a part of the transaction and its **group_id** argument is populated, the messages are not published to the consumer's topic with the same **group_id** until the transaction is completed or committed. Note that if additional consumers are subscribed to the same queue but with different group_id, the messages will be published to them one by one, regardless the transaction. It is important to make sure that the consumer group is active (up and listening) before the commit is executed on the Publisher application. 
 
 The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
 **Subscribe** Actor can listen to multiple topics by using regex in the **topic** argument.
