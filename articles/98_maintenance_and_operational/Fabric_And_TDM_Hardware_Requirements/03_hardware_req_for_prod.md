@@ -95,7 +95,7 @@ For local installations:
 
 **For all installations, the FS configuration must be as follows:** 
 
--  Volume of 50G /opt/apps/k2view/ - will be used also as the home directory for K2view user
+- Volume of 50G /opt/apps/k2view/ - will be used also as the home directory for K2view user
 - Volume of 100G* /opt/apps/k2view/storage  
 - Volume of 100G* /opt/apps/kafka/   
 
