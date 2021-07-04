@@ -66,7 +66,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
   - The FS volumes required are as follows: 
 
-    - Volume of 150G /opt/apps/k2view/ - will be used also as the home directory for K2view user 
+    - Volume of 150G /opt/apps/fabric/ - will be used also as the home directory for fabric user 
 
     - Volume of 200G /opt/apps/cassandra/ 
 
@@ -85,12 +85,12 @@ Follow these steps to setup a Linux Server:
 1. **NTP/chrony** installed and configured
 2. Add a user ‘**k2view’** with group ‘**k2view’**
 3. Add Admin permissions to the k2view user.
-4. Provide read/write access to **/opt/apps/k2view**
-5. Remote access option (SSH) enabled to user **k2view**.
-6. Add a user ‘**cassandra** with group ‘**k2view’**
+4. Provide read/write access to **/opt/apps/fabric**
+5. Remote access option (SSH) enabled to user **fabric**.
+6. Add a user ‘**cassandra** with group ‘**fabric’**
 7. Provide read/write access to **/opt/apps/cassandra**
 8. Remote access option (SSH) enabled to user **cassandra**.
-9. Add a user ‘**kafka** with group ‘**k2view’**
+9. Add a user ‘**kafka** with group ‘**fabric’**
 10. Provide read/write access to **/opt/apps/kafka**
 11. Remote access option (SSH) enabled to user **kafka**.
 
@@ -102,9 +102,9 @@ Follow these steps to setup a Linux Server:
 
 `echo "cassandra - nproc 50000" >> /etc/security/limits.conf  `
 
-`echo "k2view - nofile  100000" >> /etc/security/limits.conf`
+`echo "fabric - nofile  100000" >> /etc/security/limits.conf`
 
-`echo "k2view - nproc  50000" >> /etc/security/limits.conf`
+`echo "fabric - nproc  50000" >> /etc/security/limits.conf`
 
 `echo "kafka hard  nofile 100000" >> /etc/security/limits.conf`
 
