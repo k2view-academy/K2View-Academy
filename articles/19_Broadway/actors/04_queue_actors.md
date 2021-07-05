@@ -22,8 +22,6 @@ Publisher and Subscriber applications must be defined in Fabric as an [Interface
 
 The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the **Subscribe** Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
-Since Fabric 6.5.1, **group_id** argument can be set on the **Publish** Actor and it defines the consumer group for Transaction mode only. Thus, when the **Publish** Actor is a part of the transaction and its **group_id** argument is populated, the messages are not published to the consumer's topic with the same **group_id** until the transaction is completed or committed. Note that if additional consumers are subscribed to the same topic but with different group_id, the messages will be published to them one by one, regardless the transaction. It is important to make sure that the consumer group is active (up and listening) before the commit is executed on the Publisher application. 
-
 The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
 **Subscribe** Actor can listen to multiple topics by using regex in the **topic** argument.
 
@@ -47,7 +45,11 @@ In a regular run, timeout can be controlled by setting it to the required elapse
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each message received:
 - In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
 - When not in Transaction, the acknowledgement is performed during the next received message. If the server fails after reading the message, the same message is processed again.  
+### Kafka Transaction Mode
 
+Starting from Fabric 6.4.5, the **group_id** argument can be set on the **Publish** Actor and it defines the consumer group for Kafka Transaction mode only. Thus, when the Publish Actor is a part of the transaction and its group_id argument is populated, the messages are not published to the consumer's topic with the same group_id until the transaction is completed or committed. 
+
+It is important to make sure that the consumer's topic with the same group_id is active (up and listening) before the commit is executed on the Publisher application. Otherwise, if the consumer is activated after the transaction is committed, the consumer will receive only the last published message. 
 
 ### Pub / Sub Examples 
 
