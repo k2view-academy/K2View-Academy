@@ -96,17 +96,22 @@ Follow these steps to setup a Linux Server:
 
 **Run the following as ROOT:**
 
-`echo "root  soft   nproc   unlimited"  >> /etc/security/limits.conf`
+~~~
+echo "root  soft   nproc   unlimited"  >> /etc/security/limits.conf
+echo "cassandra - nofile 100000" >>  /etc/security/limits.conf
+echo "cassandra - nproc 50000" >> /etc/security/limits.conf
+echo "fabric - nofile  100000" >> /etc/security/limits.conf
+echo "fabric - nproc  50000" >> /etc/security/limits.conf
+echo "kafka hard  nofile 100000" >> /etc/security/limits.conf
+~~~
 
-`echo "cassandra - nofile 100000" >>  /etc/security/limits.conf`
 
-`echo "cassandra - nproc 50000" >> /etc/security/limits.conf  `
 
-`echo "fabric - nofile  100000" >> /etc/security/limits.conf`
 
-`echo "fabric - nproc  50000" >> /etc/security/limits.conf`
 
-`echo "kafka hard  nofile 100000" >> /etc/security/limits.conf`
+
+
+
 
 `echo "kafka soft  nofile 100000" >> /etc/security/limits.conf`
 
