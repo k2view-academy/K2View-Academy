@@ -48,9 +48,9 @@ The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for ea
 
 ### Kafka Transaction Mode
 
-Starting from Fabric 6.4.5, the **group_id** argument can be set on the **Publish** Actor and it defines the consumer group for Transaction mode only. Thus, when the **Publish** Actor is a part of the transaction and its **group_id** argument is populated, the messages are not published to the consumer's topic with the same **group_id** until the transaction is completed or committed. 
+Starting from Fabric 6.4.5, the **group_id** argument can be set on the **Publish** Actor and it defines the consumer group for Kafka Transaction mode only. Thus, when the Publish Actor is a part of the transaction and its group_id argument is populated, the messages are not published to the consumer's topic with the same group_id until the transaction is completed or committed. 
 
-It is important to make sure that the consumer group is active (up and listening) before the commit is executed on the Publisher application. Otherwise, if the consumer is activated after the transaction is committed, the consumer will receive only the last published message. 
+It is important to make sure that the consumer's topic with the same group_id is active (up and listening) before the commit is executed on the Publisher application. Otherwise, if the consumer is activated after the transaction is committed, the consumer will receive only the last published message. 
 
 ### Pub / Sub Examples 
 
