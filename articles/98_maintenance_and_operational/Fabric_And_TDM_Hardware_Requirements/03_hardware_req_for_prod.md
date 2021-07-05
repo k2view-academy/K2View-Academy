@@ -1,6 +1,6 @@
 # Fabric & TDM 7.xx Hardware Requirements for Production Environments
 
-### PostgreSQL*
+### PostgreSQL
 
 - **PostgreSQL is generally required for TDM projects only**. 
 - It can be deployed on a VM (In case it is deployed on a VM, use latest CentOS/Redhat Operating System with latest patches.) or alternatively use PostgreSQL as a service. 
