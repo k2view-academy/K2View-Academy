@@ -122,23 +122,18 @@ Follow these steps to setup a Linux Server:
 
 **Run the following as ROOT:**
 
-`echo "fabric - nofile  100000" >> /etc/security/limits.conf`
+~~~bash
+echo "fabric - nofile  100000" >> /etc/security/limits.conf
+echo "fabric - nproc  50000" >> /etc/security/limits.conf
+echo "kafka hard  nofile 100000" >> /etc/security/limits.conf
+echo "kafka soft  nofile 100000" >> /etc/security/limits.conf
+echo "kafka - nproc  50000" >> /etc/security/limits.conf
+## update /etc/sysctl.conf  ##
+echo "## Added by  K2view - GabiO" >> /etc/sysctl.conf
+echo  "vm.max_map_count = 1048575" >> /etc/sysctl.conf
+echo "fs.file-max =  1000000" >> /etc/sysctl.conf 
 
-`echo "fabric - nproc  50000" >> /etc/security/limits.conf`
-
-`echo "kafka hard  nofile 100000" >> /etc/security/limits.conf`
-
-`echo "kafka soft  nofile 100000" >> /etc/security/limits.conf`
-
-`echo "kafka - nproc  50000" >> /etc/security/limits.conf`
-
-`## update /etc/sysctl.conf  ##`
-
-`echo "## Added by  K2view - GabiO" >> /etc/sysctl.conf`
-
-`echo  "vm.max_map_count = 1048575" >> /etc/sysctl.conf`
-
-`echo "fs.file-max =  1000000" >> /etc/sysctl.conf`     
+~~~
 
 ### Fabric LINUX PORTS 
 
@@ -255,20 +250,17 @@ Follow these steps to setup the Linux Server:
 
 
 Run the following as ROOT:
-`echo  "root soft    nproc   unlimited" >>  /etc/security/limits.conf  `
 
-`echo "cassandra - nofile 100000" >>  /etc/security/limits.conf  `
+~~~bash
+echo  "root soft    nproc   unlimited" >>  /etc/security/limits.conf
+echo "cassandra - nofile 100000" >>  /etc/security/limits.conf
+echo "cassandra - nproc 50000" >>  /etc/security/limits.conf
+## update /etc/sysctl.conf ##
+echo "## Added by K2view - GabiO" >>  /etc/sysctl.conf
+echo "vm.max_map_count = 1048575" >>  /etc/sysctl.conf
+echo  "fs.file-max = 1000000" >> /etc/sysctl.conf 
 
-`echo "cassandra - nproc 50000" >>  /etc/security/limits.conf  `
-
-`## update /etc/sysctl.conf ##  `
-
-`echo "## Added by K2view - GabiO" >>  /etc/sysctl.conf  `
-
-`echo "vm.max_map_count = 1048575" >>  /etc/sysctl.conf`
-
-`echo  "fs.file-max = 1000000" >> /etc/sysctl.conf`     
-
+~~~
 ### LINUX PORTS 
 
 The following ports should be opened on the LINUX server and accessible outside the server: 
