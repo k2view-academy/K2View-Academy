@@ -11,7 +11,7 @@ It is assumed that the reader is familiar with Fabric and/or TDM.
 
 The diagram below depicts a generic system layout for Fabric and Test Data Management (TDM) projects. The number of Fabric, Cassandra and Kafka nodes can vary and should be based on a sizing assessment done for each project.
 
-![](images/01_fabric_hrdware.png)
+<img src="images/01_fabric_hrdware.png" style="zoom:40%;" />
 
 
 

@@ -52,7 +52,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 ## **LINUX EXECUTION SERVER SPECIFICATIONS** 
 
-On this server, we will install a Fabric server and a Kafka server under different users.
+On this server, we will install a Fabric server and a Kafka server under different users. it is recommended to use dedicated server for Fabric, and dedicated server for Kafka
 
 #### MINIMUM HW REQUIREMENTS AND CONFIGRATIONS FOR EACH LINUX SERVER: 
 
@@ -176,7 +176,7 @@ The following ports should be opened on the LINUX server and accessible outside 
 
 ### CASSANDRA LINUX EXECUTION SERVER SPECIFICATIONS 
 
-On this server we will Cassandra under different users.  
+Cassandra will be installed under **cassandra** user.  
 
 ##### CASSANDRA SERVERS 
 
@@ -194,9 +194,7 @@ For Cloud installation:
 
 #####   Cloud instances for SOR
 
-- If using **AWS**: EC2: m5.4xlarge – 
-
-  Use gp3 for Cassandra home and data storage
+- If using **AWS**: EC2: m5.4xlarge – Use gp3 for Cassandra home and data storage
 
 - If using **Azure**: Standard_DS14_v2
 
@@ -205,7 +203,7 @@ For Cloud installation:
 
 #####   Cloud instances for non SOR
 
--  If using **AWS**: EC2: i3.2xlarge – (for the Cassandra home directory gp3 storage, use the NVMe device)
+-  If using **AWS**: EC2: i3.2xlarge – for the Cassandra home directory gp3 storage, use the NVMe device for data storage
 
 - If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 - for the cassandra storage we will use the NVMe device 
 
@@ -252,7 +250,7 @@ Follow these steps to setup the Linux Server:
 Run the following as ROOT:
 
 ~~~bash
-echo  "root soft    nproc   unlimited" >>  /etc/security/limits.conf
+echo "root soft    nproc   unlimited" >>  /etc/security/limits.conf
 echo "cassandra - nofile 100000" >>  /etc/security/limits.conf
 echo "cassandra - nproc 50000" >>  /etc/security/limits.conf
 ## update /etc/sysctl.conf ##
