@@ -7,7 +7,7 @@ The underlying key, using the SHA-256 algorithm, is the hash of the following pa
 
 - LU type name (Logical Unit name). For example: “CUSTOMER”
 - LUI (instance ID). For example: “123”
-- Master key, input key generated. See the **Link**.
+- Master key, [input key](/articles/26_fabric_security/02_fabric_entities_design.md#fabric-master-key) generated. 
 
 Since each Instance ID has a different value, Fabric creates a different key for each Instance ID. Fabric saves the key description of each Instance ID in the ENTITY table in Cassandra. This way, Fabric can decrypt the entity when necessary.
 The encrypted master key used to encrypt the Instance ID can be taken from the KEYS table according to the key's description.
