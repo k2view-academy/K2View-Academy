@@ -10,7 +10,7 @@ This capability can be used to conduct tests, implement data transformations, or
 
 ## Masking Algorithm
 
-The Masking utility hashes the original value of the masked field using SHA-266 or SHA-512 algorithms depending on the encryption strength required. A Fabric master key dedicated to the hashing process can also be used for salting.
+The Masking utility hashes the original value of the masked field using SHA-256 or SHA-512 algorithms depending on the encryption strength required. A Fabric master key dedicated to the hashing process can also be used for salting.
 
 ## Broadway Masking Actor
 
