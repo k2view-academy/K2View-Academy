@@ -146,31 +146,20 @@ The following ports should be opened on the LINUX server and accessible outside 
 <td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
 </tr>
 <tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">6379</td>
-<td style="width: 50%; height: 18px;">Redis</td>
-</tr>
-<tr style="height: 18px;">
 <td style="width: 50%; height: 18px;">2181, 2888, 3888</td>
 <td style="width: 50%; height: 18px;">Kafka Zookeeper</td>
 </tr>
 <tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">9093</td>
+<td style="width: 50%; height: 18px;">9093, 9081, 7270</td>
 <td style="width: 50%; height: 18px;">Kafka</td>
 </tr>
 <tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">9081, 7270</td>
-<td style="width: 50%; height: 18px;">Kafka JMX</td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">5124</td>
+<td style="width: 50%; height: 18px;">3213, 9443, 5124, 6379, 7170, 7270</td>
 <td style="width: 50%; height: 18px;">K2View Fabric</td>
-</tr>
-<tr style="height: 23px;">
-<td style="width: 50%; height: 23px;">8199, 7170</td>
-<td style="width: 50%; height: 23px;">K2View Fabric JMX</td>
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -270,27 +259,16 @@ The following ports should be opened on the LINUX server and accessible outside 
 <td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
 </tr>
 <tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">7000</td>
+<td style="width: 50%; height: 18px;">9042, 9142, 7000, 7001, 7199, 7070</td>
 <td style="width: 50%; height: 18px;">cassandra</td>
 </tr>
 <tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">7001</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">7199, 7070</td>
-<td style="width: 50%; height: 18px;">Cassandra JMX</td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">9042</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 50%; height: 18px;">9160</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">8080</td>
+<td style="width: 50%; height: 18px;">cassandra-reaper</td>
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](02_hardware_req_for_dev_qa.md) 

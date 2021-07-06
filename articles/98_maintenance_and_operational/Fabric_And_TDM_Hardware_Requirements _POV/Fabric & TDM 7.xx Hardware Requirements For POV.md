@@ -123,5 +123,3 @@ The following ports should be opened on the LINUX server and accessible from out
 
 All servers should have access (permissions) and connectivity (network) to all legacy & target systems.
 
-
-  --------------------------------------------------------------------------------------------------------------
