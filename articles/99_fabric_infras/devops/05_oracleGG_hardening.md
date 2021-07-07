@@ -9,7 +9,7 @@ Copy the contents of the $K2_HOME/.kafka_ssl file on the Kafka node to the local
 
 Update the custom_kafka_producer.properties file by adding the following details at the bottom of the file:
 
-```
+```bash
 bootstrap.servers=(Kafka_server_IP_Address/_Hostname):9093
 acks=1
 reconnect.backoff.ms=1000
@@ -43,6 +43,6 @@ ssl.endpoint.identification.algorithm=
 ```sed -i "65issl.endpoint.identification.algorithm=" $CONFLUENT_HOME/server.properties```
 
  4. Restart the Kafka service.
- 
+
 
 [![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/04_kafka_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/06_fabric_kafkaSSL_support.md)

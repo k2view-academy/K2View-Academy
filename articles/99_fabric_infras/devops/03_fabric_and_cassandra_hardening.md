@@ -12,7 +12,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are ge
 2. Stop Fabric and Cassandra services before running the script.
 
 
-```
+```bash
 cd $K2_HOME/
 rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 
@@ -77,7 +77,7 @@ mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf keys.tar.gz -C $INSLATT_DIR/.c
 1. Edit the cassandra.yaml file with the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
 
-```
+```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@key_password: cassandra@key_password: Q1w2e3r4t5@" $CASSANDRA_HOME/conf/cassandra.yaml
 sed -i "s@keystore: conf/.keystore*@keystore: $INSLATT_DIR/.cassandra_ssl/cassandra.keystore@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -106,7 +106,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 ## Step 4 - Cassandra CQLSHRC
 1. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
-```
+```bash
 cp $INSLATT_DIR/cassandra/conf/cqlshrc.sample $INSLATT_DIR/.cassandra/cqlshrc
 
 sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
@@ -124,7 +124,7 @@ sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_D
 1. Edit the $K2_HOME/config/cqlshrc file with the appropriate passwords and certification files.
 2. Execute this on all Fabric nodes.
 
-```
+```bash
 sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $K2_HOME/config/cqlshrc
 sed -i "s@\;\[ssl\]@\[ssl\]@" $K2_HOME/config/cqlshrc
 sed -i "s@; certfile = .*@certfile = $K2_HOME/.cassandra_ssl/k2tls_CLIENT.cer.pem@" $K2_HOME/config/cqlshrc
@@ -148,7 +148,7 @@ The location of the version path may change based on the Fabric version.
 1. Edit the config.ini file to support SSL and set up the WS SSL Key (Fabric only).
 2. Run the following on all Fabric Nodes:
 
-```
+```bash
 sed -i "s@WEB_SERVICE_PORT=.*@#WEB_SERVICE_PORT=3213@" $K2_HOME/config/config.ini
 sed -i "s@#WEB_SERVICE_SECURE_PORT=443@WEB_SERVICE_SECURE_PORT=9443@" $K2_HOME/config/config.ini
 sed -i "s@#WEB_SERVICE_CERT=.*@WEB_SERVICE_CERT=$K2_HOME\/.cassandra_ssl\/cassandra.keystore@" $K2_HOME/config/config.ini
@@ -165,7 +165,7 @@ sed -i 's@#SSL=false@SSL=true@g' $K2_HOME/config/config.ini
 
 Edit the $K2_HOME/config/jvm.options file using the appropriate passwords and certification files:
 
-```
+```bash
 sed -i 's@#-Djavax.net.ssl.keyStore=.*@-Djavax.net.ssl.keyStore=$K2_HOME/.cassandra_ssl/cassandra.keystore@g' $K2_HOME/config/jvm.options
 sed -i 's@#-Djavax.net.ssl.keyStorePassword=.*@-Djavax.net.ssl.keyStorePassword=Q1w2e3r4t5@g' $K2_HOME/config/jvm.options
 sed -i 's@#-Djavax.net.ssl.trustStore=.*@-Djavax.net.ssl.trustStore=$K2_HOME/.cassandra_ssl/cassandra.truststore@g' $K2_HOME/config/jvm.options
@@ -187,7 +187,7 @@ Configure the CQLSH to use the SSL flag:
 ```mkdir -p $K2_HOME/.cassandra/```
 
 2. Run the following command:
-```cqlsh -u k2admin -p Q1w2e3r4t5 --ssl```
+   ```cqlsh -u k2admin -p Q1w2e3r4t5 --ssl```
 
    Note: If the k2admin user credentials do not exist, use a valid user.
 
@@ -195,7 +195,7 @@ Configure the CQLSH to use the SSL flag:
 ## Step 9 - Configure HTTPS for Web Services
 
 Run the ```curl https://10.10.10.10:9443/ws -k ``` command from a Fabric node. The response should be similar to the following:
-```
+```bash
 "data" : null,
 "error" : "General Fabric error - <com.k2view.cdbms.exceptions.WebServiceException: method name is missing>"
 ```
@@ -208,7 +208,7 @@ Note: From version 6.2 and above you can access the Web Framework website using 
 1. Edit fabric-server-start.sh on each node in the $K2_HOME/fabric/scripts/ folder.
 2. Add the encryption flag to the ```exec $JAVA``` section.
 
-```
+```bash
 
 # Set environemnt settings
 . $BASEDIR/fabric-env.sh
@@ -246,7 +246,7 @@ Do not forget to add | after the **clustertimecheck** value for the new line to 
 
 3. Execute the following commands:
 
-```
+```bash
 sed -i 's/clustertimecheck/clustertimecheck \\/' $K2_HOME/fabric/scripts/fabric-server-start.sh
 sed -i -e '/clustertimecheck \\/a\        encryption\' $K2_HOME/fabric/scripts/fabric-server-start.sh
 ```
@@ -265,7 +265,7 @@ Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **tr
 
 #### Create Keystore Directory 
 After adding the encryption module to the fabric-server-start.sh module, create the Keystore folder under the k2view home directory for all nodes:
-```
+```bash
 cd $K2_HOME
 mkdir keystore
 ```
@@ -280,20 +280,20 @@ Run the Keytool command on the coordinator node:
 #### Edit Config.ini Script
 - Edit the **KEY_STORE_PASSWORD** parameter in the config.ini to the password used in the Keytool command, and enable the **KEY_STORE_LOCATION** parameter and set it to point to the correct path for all Fabric nodes:
 
-```
+```bash
 sed -i "s@#KEY_STORE_LOCATION=.*@KEY_STORE_LOCATION=$K2_HOME/keystore/fabric.keystore@" $K2_HOME/config/config.ini
 sed -i 's@#KEY_STORE_PASSWORD=.*@KEY_STORE_PASSWORD= <password>@' $K2_HOME/config/config.ini
 ```
 
 ### Restart Fabric Nodes
 - Restart all Fabric nodes.
- 
+
 
 ## Step 11 - Replace the Fabric Admin Password
 
 1. Run the following from the console:
 
-```
+```bash
 # create second admin user
 cqlsh -uadmin -padmin --ssl
 
@@ -310,7 +310,7 @@ ALTER USER admin WITH PASSWORD 'Q7xp8GPNmjZp' SUPERUSER;
 
 2. Check the connection: 
 
-```
+```bash
 # connect with the following
 cqlsh -uadmin2 -pQ7xp8GPNmjZp --ssl
 fabric on;

@@ -10,7 +10,7 @@ Execute the following command to stop Fabric:
 
 Configure Fabric connections to Kafka with SSL support.
 
-```
+```bash
 sed -i s/#SSL_ENABLED=.*/SSL_ENABLED=true/g $K2_HOME/config/config.ini
 sed -i s/#SSL_ENABLED=.*/SSL_ENABLED=true/g $K2_HOME/config/config.ini
 sed -i s/#SECURITY_PROTOCOL=.*/SECURITY_PROTOCOL=SSL/g $K2_HOME/config/config.ini
@@ -26,7 +26,7 @@ sed -i s@#ENDPOINT_IDENTIFICATION_ALGORITHM=@ENDPOINT_IDENTIFICATION_ALGORITHM=@
 
 ```k2fabric start```
 
- 
+
 ## Setup the IIDFinder to Support Kafka SSL Connections
 
 Make sure the IIDFinder has stopped.
@@ -38,7 +38,7 @@ Make sure the IIDFinder has stopped.
 
 Configure the IIDFinder to connect to Kafka with SSL support per node. The assumption is that the IIDFinder is already configured with basic connections to Kafka in non SSL / TLS modes:
 
-```
+```bash
 sed -i s@#SSL_ENABLED=.*@SSL_ENABLED=true@g $K2_HOME/config/iifConfig.ini
 sed -i s@#SECURITY_PROTOCOL=.*@SECURITY_PROTOCOL=SSL@g $K2_HOME/config/iifConfig.ini
 sed -i s@#TRUSTSTORE_LOCATION=.*@TRUSTSTORE_LOCATION=$K2_HOME/.kafka_ssl/kafka.client.truststore.jks@g $K2_HOME/config/iifConfig.ini
