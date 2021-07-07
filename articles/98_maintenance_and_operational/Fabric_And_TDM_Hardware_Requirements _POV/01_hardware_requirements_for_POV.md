@@ -1,4 +1,4 @@
-## Fabric & TDM 7.xx Hardware Requirements For POV
+# Fabric & TDM 7.xx Hardware Requirements For POV
 
 ### INTRODUCTION 
 
@@ -40,7 +40,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 #### Software required 
 
-The following are minimal software requirements
+The following are minimal software requirements:
 
 -   Notepad++
 
