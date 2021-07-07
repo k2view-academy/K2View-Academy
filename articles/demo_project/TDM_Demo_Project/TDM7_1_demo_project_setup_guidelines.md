@@ -1,6 +1,6 @@
 # TDM Demo Project - Setup and Implementation Guidelines
 
-### Databases Setup
+## Databases Setup
 
 The TDM demo project is aligned with TDM V7.1 and is based on PostgreSQL databases:
 
@@ -34,13 +34,13 @@ The TDM demo project is aligned with TDM V7.1 and is based on PostgreSQL databas
 
 The target DBs are empty and the source DBs are populated with customers.
 
-#### Creating the Demo DBs in the Local PostgreSQL DB
+### Creating the Demo DBs in the Local PostgreSQL DB
 
 1. Download the SQL script and the DB backup files from the **Demo DBs** directory.
 
 2. Create the demo databases in PostgreSQL: 
 
-   ##### Windows PostgreSQL Installation
+   **Windows PostgreSQL Installation**
 
    - Go to the script's directory and open a **powershell** window. 
    - Then run the following command to run the script and create the CRM, Billing, Orders, and Collection DB users and schemas on the PostgreSQL DB:
@@ -53,7 +53,7 @@ The target DBs are empty and the source DBs are populated with customers.
    & "C:\Program Files\PostgreSQL\9.6\bin\psql.exe" -Upostgres --host localhost --port 5432 -f "create_resources.sql"
    ```
 
-   ##### Docker PostgreSQL Installation
+   **Docker PostgreSQL Installation**
 
    - Copy the **create_resources.sql** script to the docker container:
 
@@ -72,7 +72,8 @@ The target DBs are empty and the source DBs are populated with customers.
 3. Open **pgAdmin 4** and start restoring the databases from backup files. It is recommended to chek the **Clean before restore** option when restoring the backup file.
 
 Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installation](/articles/TDM/tdm_configuration/01_tdm_installation.md#create-the-tdm-postgresql-db-in-case-of-new-installation).
-### Fabric Implementation
+
+## Fabric Implementation
 
 1. Open the Fabric Studio and create a new project.
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
@@ -84,7 +85,7 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 6. Deploy the Environments to Fabric.
 7. Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 
-###  TDM GUI Definitions
+##  TDM GUI Definitions
 
 1. Create a Customer Business Entity (BE) that includes the following LUs:
    - Customer
