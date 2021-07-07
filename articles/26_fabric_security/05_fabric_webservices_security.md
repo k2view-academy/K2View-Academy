@@ -119,7 +119,7 @@ There are two options to generate an API key: via the Admin App or by using a Fa
 
   For example:
 
-  ```
+  ```tex
   create token 'Secured1' SECURED;
   
   |Secretkey                           |
