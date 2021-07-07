@@ -271,4 +271,4 @@ The following ports should be opened on the LINUX server and accessible outside 
 
 
 
-[![Previous](/articles/images/Previous.png)](02_hardware_req_for_dev_qa.md) [<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_hardware_requirements_for_POV.md)  
+[![Previous](/articles/images/Previous.png)](02_hardware_req_for_dev_qa.md) 
