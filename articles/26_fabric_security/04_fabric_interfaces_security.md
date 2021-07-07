@@ -23,8 +23,7 @@ Notes:
 - A new Fabric URL field is added to define the Fabric node to be used to encrypt the passwords and run the test connection function. Note that when unchecked, the local test connection and previous encryption algorithm is used.
 - The **Re-Key** column has been added in order to use the most updated encryption mechanism and the latest master key to encrypt the passwords of all interfaces.
 
-
-<img src="/articles/26_fabric_security/images/06_fabric_envEncryption.PNG">
+<img src="images/06_fabric_envEncryption.PNG">
 
 
 ## Environments - Three Levels of Security 
