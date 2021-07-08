@@ -12,8 +12,6 @@ Fabric provides a set of built-in image manipulation Actors that allow to perfor
 
 [Read more >](spotlight_20210701.md)
 
-](spotlight_20210527.md)
-
 <!--block-->
 
 <img src="images/breakpoints_1.PNG" style="zoom:80%;" />
@@ -36,6 +34,6 @@ Broadway offers a number of built-in Actors which address a wide range of predef
 
 When your implementation requires business logic that is not supported by a built-in Actor and it is repeated across several flows, you can create an Actor using an **Actor Editor** by one of the following:
 
-[Read more >
+[Read more >](spotlight_20210527.md)
 
 <!--block-->
