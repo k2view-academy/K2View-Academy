@@ -229,7 +229,7 @@ If there are no arguments, lists all active Batch processes together with their 
    
 - NEW, GENERATE_IID_LIST, IN_PROGRESS, FAILED, CANCELLED, DONE, ALL
 - FROM/TO_DATE, support DATE_FORMAT/DATETIME_FORMAT according to the configuration in the config.ini.
-- FILTER, filters Batch processes. The filter field must be populated by a string in a Fabric command in the Batch process. 
+- FILTER, filters Batch processes. The filter field must be populated by a string and can be reffered to the Batch command or the execution id. 
 
 Note that the filter supports regex.
 </p>
@@ -314,9 +314,9 @@ Command
 
 Result 
 ```
-|Id                                  |Command                                                                                                                                                                |Start date         |End date           |Status|Created by|Completion %|Error|
-+------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+-------------------+------+----------+------------+-----+
-|35408af6-b26a-4243-bc95-f114335bfa5e|BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 200') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';|2020-08-12 12:20:07|2020-08-12 12:20:09|DONE  |          |100         |null |
+|Id                                  |Command                                                                                                                                                                |Start date         |End date           |Status|Created by|Completion %|Execution id                        |Error|
++------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+-------------------+------+----------+------------+------------------------------------+-----+
+|35408af6-b26a-4243-bc95-f114335bfa5e|BATCH AUTODATA_DELTA FROM idsFile USING ('select id from ids  limit 200') FABRIC_COMMAND="sync_instance AUTODATA_DELTA.?" with JOB_AFFINITY='10.21.2.102' ASYNC='true';|2020-08-12 12:20:07|2020-08-12 12:20:09|DONE  |          |100         |75fd2291-36d1-451c-8916-e60320a4e76f|null |
 ```
 
 
