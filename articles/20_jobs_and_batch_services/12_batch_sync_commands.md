@@ -39,7 +39,8 @@ Start the Batch process and sync all LU instances:
 - FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes a '?' to represent a singular Entity ID. One of the following commands must be set: (for Migration, "sync_instance <LU>.?", for Broadway, "broadway LU.SampleFlow SampleIID=?", for CDC republish, "cdc_republish_instance Customer.?")
 - ALLOW_MULTIPLY, when set to True, multiplies executions of the same Batch process command. Default is False.
 - MAX_NODES, maximum (random) nodes participating in the Batch process.
-- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file. (MAX_WORKERS_PER_NODE parameter).</p>
+- MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file  (MAX_WORKERS_PER_NODE parameter). The number of workers, allocated by a Fabric node, cannot exceed the maximum number of workers set in the config,ini file. Note that all batch processes share the node's workers (threads), so the max number of workers that is actually allocated to a given batch execution can be lower than the MAX_NO_OF_WORKERS set in the batch command.
+</p>
 
 </td>
 <td valign="top" width="300pxl">
