@@ -274,6 +274,30 @@ Cancel the last async batch process that was created in the current session.
 </p>
 </td>
 </tr> 
+
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_EDIT '&ltparam1=value1'&gt param2='&ltvalue2'&gt</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Modify the specified parameters for the specified batch process.
+
+   - MAX_WORKERS_PER_NODE - Set the maximum workers per node for this batch. Note that this will not surpass the configured value
+                            for MAX_WORKERS_PER_NODE in the config.ini.
+   </p>
+   <p>
+Introduced on Fabric 6.5.1
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+BATCH_EDIT ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’ MAX_WORKERS_PER_NODE=10 ;  
+
+Modify MAX_WORKERS_PER_NODE for the given batch id to 10. 
+</p>
+</td>
+</tr> 
 </table>
 
 
