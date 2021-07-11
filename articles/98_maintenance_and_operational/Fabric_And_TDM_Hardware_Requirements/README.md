@@ -2,7 +2,7 @@
         
 
 <ul>
-<li><a href="/articles/98_maintenance_and_operational/Fabric_And_TDM_Hardware_Requirements/00_hardware_requirements_for_POV.md">Hardware Requirements for POV Installation</a></li>
+<li><a href="/articles/98_maintenance_and_operational/Fabric_And_TDM_Hardware_Requirements/00_hardware_requirements_for_POV.md">Hardware Requirements for POC and POV Installation</a></li>
 </ul>
 
 <strong>Fabric and TDM 7.x Installation  Hardware Requirements<strong>
