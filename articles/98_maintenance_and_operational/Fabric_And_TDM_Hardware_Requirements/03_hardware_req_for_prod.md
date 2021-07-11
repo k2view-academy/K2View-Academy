@@ -1,10 +1,13 @@
 # Fabric & TDM 7.xx Hardware Requirements for Production Environments
 
-### PostgreSQL
+## PostgreSQL
 
 - **PostgreSQL is generally required for TDM projects only**. 
-- It can be deployed on a VM (In case it is deployed on a VM, use latest CentOS/Redhat Operating System with latest patches.) or alternatively use PostgreSQL as a service. 
 - K2view supports PostgreSQL version 9.6 & 13.
+- PostgreSQL requires 100G storage
+- PostgreSQL can be deployed in one of these ways:
+  - On a VM (use latest CentOS/Redhat Operating System with latest patches), or 
+  - As a service. 
 
  **For cloud deployments:**
 
@@ -12,18 +15,14 @@
 - If using **Azure** VM: A8v2 
 - If using **GCP**: e2-standard-4
 
-  The PostgreSQL requires 100G storage
+  For example, if you are implementing PostgreSQL as a PaaS, you can use the following:
 
-**If you are implementing PostgreSQL as a PaaS you can use for example:**
+  - For **AWS**: RDS PostgreSQL
+  - For **GCP**: Cloud SQL PostgreSQL [see here for more about PostgreSQL](https://cloud.google.com/sql/docs/postgres/introduction) 
 
-- For **AWS**: RDS PostgreSQL
-- For **GCP**: Cloud SQL PostgreSQL [see here](https://cloud.google.com/sql/docs/postgres/introduction) 
+## Windows Server Specifications for Fabric Studio 
 
-
-
-## FABRIC STUDIO WINDOWS SERVER SPECIFICATIONS 
-
-#### MINIMUM HW REQUIREMENTS 
+### Hardware Requirements 
 
 **For Local installation:**
 
@@ -34,29 +33,26 @@
 
 **For Cloud installation:** 
 
-- AWS: EC2: a1.2xlarge, m5.xlarge
-- Azure VM: A8v2 
-- GCP: e2-standard-4
+- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
+- If using **Azure** VM: A8v2 
+- If using **GCP** e2-standard-4
 
-#### **WINDOWS PORTS** 
+#### **Windows Ports** 
 
-The following ports should be opened on the Windows server: 
+Open the following ports on the Windows server: 
 
 - 3389 – Used for RDP 
 
-####  **WINDOWS PERMISSIONS** 
+####  **Windows Permissions** 
 
 Local administrator privileges are needed for the Fabric Studio installation.
 
 
+## **Linux Execution Server Specifications** 
 
-## **LINUX EXECUTION SERVER SPECIFICATIONS** 
+Use a dedicated server for Fabric, and a separate, dedicated server for Kafka
 
-On this server, we will install a Fabric server and a Kafka server under different users. it is recommended to use dedicated server for Fabric, and dedicated server for Kafka
-
-#### MINIMUM HW REQUIREMENTS AND CONFIGRATIONS FOR EACH LINUX SERVER: 
-
-### FABRIC SERVER 
+#### Hardware Requirements (for each Linux server): 
 
 For local installations: 
 
@@ -73,25 +69,21 @@ For local installations:
 
 ##### Cloud instances for SOR
 
-- If using **AWS**: EC2: m5.2xlarge
-  - Use gp3, for K2view home and data storage
-  - Use gp3 for the Kafka home directory 
-
-- If using **Azure**: Standard_DS14_v2
-- If using **GCP**: e2-standard-8
+   - If using **AWS**: EC2: m5.2xlarge
+     - Use gp3, for K2view home and data storage
+     - Use gp3 for the Kafka home directory 
+   - If using **Azure**: Standard_DS14_v2
+   - If using **GCP**: e2-standard-8
 
 #####   Cloud instances for non SOR
 
-- If using **AWS**: EC2: i3.2xlarge – 
-  - For the K2view home directory gp3, use the NVMe device
-  - For the kafka home directory gp3 with provision of 25K IOPS 
-
-- If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 - for the K2view storage use the NVMe device 
-   see https://docs.microsoft.com/en-us/azure/architecture/best-practices/cassandra 
-
-- If using **GCP**: e2-standard-8
-  Make sure to attach to the VM “local SSD” type env NVMe.
-  see also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”.
+   - If using **AWS**: EC2: i3.2xlarge – 
+     - For the K2view home directory gp3, use the NVMe device
+     - For the kafka home directory gp3 with provision of 25K IOPS 
+   - If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 
+     - for the K2view storage use the NVMe device.  See also https://docs.microsoft.com/en-us/azure/architecture/best-practices/cassandra 
+   - If using **GCP**: e2-standard-8
+     - Make sure to attach to the VM “local SSD” type env NVMe. See also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”.
 
 **For all installations, the FS configuration must be as follows:** 
 
@@ -100,13 +92,12 @@ For local installations:
 - Volume of 100G* /opt/apps/kafka/   
 
 **Note:** 
-
 - the FS must provide IOPS of at least 30K read & 10K write on each node simultaneously, while all nodes are running the test at the same time.
-- The above volume values should be increased based on project scope and data retention requirements.
+- The above volume values should be modified in accordance with project scope and data retention requirements.
 
 ### Linux Server Setup
 
-Follow these steps to setup a Linux Server:
+Follow the following steps to setup a Linux Server:
 
 1. **NTP/chrony** installed and configured
 2. Add a user ‘**fabric’** with group ‘**fabric’**
@@ -137,7 +128,7 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 ### Fabric LINUX PORTS 
 
-The following ports should be opened on the LINUX server and accessible outside the server: 
+Open the following ports on the LINUX server, and make sure they are accessible outside the server: 
 
 <table style="border-collapse: collapse; width: 100%; height: 131px;" border="1">
 <tbody>
@@ -160,14 +151,11 @@ The following ports should be opened on the LINUX server and accessible outside 
 </tbody>
 </table>
 
+### Cassandra Linux Execution Server Specifications 
 
+Install Cassandra under **cassandra** user.  
 
-
-### CASSANDRA LINUX EXECUTION SERVER SPECIFICATIONS 
-
-Cassandra will be installed under **cassandra** user.  
-
-##### CASSANDRA SERVERS 
+##### Cassandra Servers   
 
 For local installation: 
 
@@ -183,58 +171,47 @@ For Cloud installation:
 
 #####   Cloud instances for SOR
 
-- If using **AWS**: EC2: m5.4xlarge – Use gp3 for Cassandra home and data storage
-
-- If using **Azure**: Standard_DS14_v2
-
-- If using **GCP**: c2-standard-16
-   see also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
+   - If using **AWS**: EC2: m5.4xlarge 
+     - Use gp3 for Cassandra home and data storage
+   - If using **Azure**: Standard_DS14_v2
+   - If using **GCP**: c2-standard-16, see also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
 #####   Cloud instances for non SOR
 
--  If using **AWS**: EC2: i3.2xlarge – for the Cassandra home directory gp3 storage, use the NVMe device for data storage
+   -  If using **AWS**: EC2: i3.2xlarge 
+     - For the Cassandra home directory gp3 storage, use the NVMe device for data storage
+   - If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 
+     - For the cassandra storage, use the NVMe device 
+   - If using **GCP**: c2-standard-16
+     - Make sure to attach to the VM “local SSD” type env NVMe. See also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
-- If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 - for the cassandra storage we will use the NVMe device 
-
-- If using **GCP**: c2-standard-16
-  Make sure to attach to the VM “local SSD” type env NVMe
-  see also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
-
-- For all installations, the FS configuration **<u>for SOR</u>** must be as follows: 
+- For all installations, the FS configuration **<u>for SOR</u>** must be as follows:
+ 
   - Volume of 50G /opt/apps/cassandra/ 
-
   - Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
-
   - Volume of 2T* /opt/apps/cassandra/storage/data
-
   - Volume of [10% of the data] /opt/apps/cassandra/storage/hints 
 
-    **Note:** 
+**Note:** 
+- the FS must provide IOPS of at least 30K read & 10K write on each node simultaneously, while all nodes are running the test at the same time.
+- The above volume values should be modified in accordance with project scope and data retention requirements.
 
-    - the FS must provide IOPS of at least 30K read & 10K write on each node simultaneously, while all nodes are running the test at the same time.
-    - The above volume values should be increased based on project scope and data retention requirements.
+**For all installations, the FS configuration for **<u>non SOR</u>** **must be as follows: **
 
--  All installations, the FS configuration for **<u>non SOR</u>** must be as follows: 
     - Volume of 50G /opt/apps/cassandra/ 
     - Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM     
 
-   The above volume values should be increased based on project scope and data retention requirements. 
+   The above volume values should be modified in accordance with project scope and data retention requirements. 
 
 #### Cassandra Linux Server Setup
 
 Follow these steps to setup the Linux Server:
 
 1. **NTP/chrony** installed and configured
-
 2. Add a user ‘**cassandra** with home directory **/opt/apps/cassandra**
-
 3. Provide read/write access to **/opt/apps/cassandra**
-
 4. Remote access option (SSH) enabled to user **cassandra**.
-
 5. The SWAP should be disable for  **cassandra**.
-
-
 
 Run the following as ROOT:
 
@@ -248,7 +225,7 @@ echo "vm.max_map_count = 1048575" >>  /etc/sysctl.conf
 echo  "fs.file-max = 1000000" >> /etc/sysctl.conf 
 
 ~~~
-### LINUX PORTS 
+### Linux Ports 
 
 The following ports should be opened on the LINUX server and accessible outside the server: 
 
