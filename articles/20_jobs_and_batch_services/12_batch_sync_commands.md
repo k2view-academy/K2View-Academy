@@ -354,9 +354,9 @@ BATCH Customer from CRM_DB USING('select customer_id from Customer where custome
 
 
 ```
-|Batch id                            |Execution succeeded|Execution failed|Total|Duration|Batch id                            |
-+------------------------------------+-------------------+----------------+-----+--------+------------------------------------+
-|83fade2f-2ae6-4359-8b7a-bdd1866d2191|10                 |0               |10   |1       |83fade2f-2ae6-4359-8b7a-bdd1866d2191|
+|Batch id                            |Execution id                        |Execution succeeded|Execution failed|Total|Duration|
++------------------------------------+------------------------------------+-------------------+----------------+-----+--------+
+|83fade2f-2ae6-4359-8b7a-bdd1866d2191|7b7f5a4b-2e2c-4f0e-90d5-865bac3484ee|10                 |0               |10   |1       |
 ```
 
 
