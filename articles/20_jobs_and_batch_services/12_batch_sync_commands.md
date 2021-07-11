@@ -24,7 +24,7 @@ The Fabric runtime environment provides the following sets of Batch commands:
 </td>
 </tr>
 <td valign="top" width="500pxl">
-<h6>BATCH &ltLU&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];/h6> 
+<h6>BATCH &ltLU&gt[@&ltDC&gt] FABRIC_COMMAND='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];/h6> 
 </td>
 <td valign="top" width="400pxl">
    
@@ -37,7 +37,7 @@ Start the Batch process and sync all LU instances:
 - ASYNC, defines whether the Batch process should run in a sync or async mode. Default is False.
 - GENERATE_ENTITIES_FIRST, if set to True, generate all entities before processing them.
 - FABRIC_COMMAND, Fabric command to be executed by the Batch process which can be any command that includes a '?' to represent a singular Entity ID. One of the following commands must be set: (for Migration, "sync_instance <LU>.?", for Broadway, "broadway LU.SampleFlow SampleIID=?", for CDC republish, "cdc_republish_instance Customer.?")
-- ALLOW_MULTIPLY, when set to True, multiplies executions of the same Batch process command. Default is False.
+- ALLOW_MULTIPLE, when set to True, multiplies executions of the same Batch process command. Default is False.
 - MAX_NODES, maximum (random) nodes participating in the Batch process.
 - MAX_WORKERS_PER_NODE, enables setting a lower number of maximum workers to run on each node than the maximum number of workers defined in the config.ini file (MAX_WORKERS_PER_NODE parameter). The number of workers, allocated by a Fabric node, cannot exceed the maximum number of workers set in the config.ini file. Note that all batch processes share the node's workers (threads), so the max number of workers that is actually allocated to a given batch execution can be lower than the MAX_NO_OF_WORKERS set in the batch command.</p>
 
@@ -53,7 +53,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 <tr>
 <td valign="top" width="300pxl">
 
-<h6>BATCH &ltLU>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
+<h6>BATCH &ltLU>[@&ltDC&gt].&ltIG&gt fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
 </td>
 <td valign="top" width="400pxl">
 
@@ -70,7 +70,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 <tr>
 <td valign="top" width="300pxl">
 
-<h6>BATCH &ltLU&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
+<h6>BATCH &ltLU&gt[@&ltDC&gt] from &ltdb_interface&gt using ('&ltSQL&gt') fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt' [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -85,7 +85,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH &ltLU>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
+<h6>BATCH &ltLU>[@&ltDC&gt] from fabric fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]];</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -103,7 +103,7 @@ This command migrates all customers from the source systems into the Fabric CUST
 <tr>
 <td valign="top" width="300pxl">
 
-<h6>BATCH &ltLU>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLY=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h6>
+<h6>BATCH &ltLU>[@&ltDC&gt].(&ltinstance 1,instance 2,...&gt) fabric_command='&ltfabric command&gt ?' [WITH [AFFINITY='&ltaffinity&gt'] [JOB_AFFINITY='&ltjob affinity&gt'] [ASYNC=true/false] [GENERATE_ENTITIES_FIRST=true/false] [ALLOW_MULTIPLE=true/false] [MAX_NODES=&ltnumber&gt] [MAX_WORKERS_PER_NODE=&ltnumber&gt]]</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -195,8 +195,85 @@ KILL ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;
 </td>
 </tr> 
 
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_PAUSE ['&ltbatch_id&gt']</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Pause a batch process operation.
+   
+Introduced on Fabric 6.5.1
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+BATCH_PAUSE ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+</p>
+Pause the async batch process with the defined batch id.
+</p>
+</p>
+BATCH_PAUSE;  
+</p>
+</p>
+Pause the last async batch process that was created in the current session.
+</p>
+</td>
+</tr> 
 
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_RETRY ['&ltbatch_id&gt'] [allow_cancelled=true/false]</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Retry a batch process by processing all failed or not handled entities in case the original batch process execution was not completed or retry only failed entities in case a batch process was already completed.
+   
+- allow_cancelled, allows a retry on a cancelled batch process. Default is false.
+   
+Introduced on Fabric 6.5.1
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+BATCH_RETRY ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+</p>
+Retry a batch process according to the given input batch id.
+</p>
+</p>
+BATCH_RETRY ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’ allow_cancelled=true;  
+</p>
+</p>
+Retry a batch process according to the given input batch id even if the original batch process was cancelled.
+</p>
+</td>
+</tr> 
 
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_CANCEL ['&ltbatch_id&gt']</h6>
+</td>
+<td valign="top" width="400pxl">
+<p>
+Cancel a batch process operation.
+
+Introduced on Fabric 6.5.1
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>
+BATCH_CANCEL ‘568114fe-9ec8-4c9e-af11-6e3348eff6e9’;  
+</p>
+Cancel the async batch process according to the defined batch id. 
+</p>
+</p>
+BATCH_CANCEL
+</p>
+</p>
+Cancel the last async batch process that was created in the current session.
+</p>
+</td>
+</tr> 
 </table>
 
 
