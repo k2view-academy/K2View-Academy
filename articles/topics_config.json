@@ -290,7 +290,7 @@
 		},
 		{
 			"KB display name": "Maintenance & Operational",
-			"KB display text": "Fabric Infrastructure configuration and maintenance documents including hardware, software, and operating system requirements for K2View products.",
+			"KB display text": "Fabric Infrastructure configuration and maintenance documents including hardware, software, and operating system requirements.",
 			"KB icon": "images/icon-maintenance.png",
 			"visible": true
 		},
