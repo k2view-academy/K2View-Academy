@@ -313,7 +313,7 @@
 		},		
 		{
 			"comm display name": "In the Spotlight",
-			"comm display text": "Access the latest development tips, code examples and best practices, regularly updated by the K2View’s community developers.",
+			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
 			"comm icon": "../community/spotlight/images/spotlight.png",
 			"visible": true,
 			"path": "../community/spotlight",
@@ -322,7 +322,7 @@
 		},
 		{
 			"comm display name": "Q&A",
-			"comm display text": "Ask questions or seek help on Fabric’s implementation. Check our forum that provides advice and know-how to help you at any phase of your project’s lifecycle.",
+			"comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle.",
 			"comm icon": "../community/q_a/images/q_a_icon.png",
 			"visible": true,
 			"path": "../community/q_a",
