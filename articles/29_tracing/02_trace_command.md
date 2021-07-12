@@ -205,34 +205,47 @@ trace [session_scope/global_scope] <TRACE_NAME> '[TRACE_PARAM=[=TRACE_VALUES]];.
 </tr>
 </tbody>
 </table>
+**Example**
 
-example: trace session_scope Test 'level=debug;categories=database;resources=billing,crm;operations=connection;syncWrite;maxCols=3;maxColLen=128;';
+~~~
+trace session_scope Test 'level=debug;categories=database;resources=billing,crm;operations=connection;syncWrite;maxCols=3;maxColLen=128;';
+~~~
 
 ### Get Trace Status
 
 To get all global traces and current session traces, run:
 
+~~~
 trace status;
+~~~
 
 To get a specific trace name status, run:
 
+~~~
 trace status <Trace_name>;
+~~~
 
 ### Stop a Trace
 
 To stop all global traces and the current session's traces, run:
 
+~~~
 trace off;
+~~~
 
 To stop a specific trace name, run:
 
+~~~
 trace off <Trace_name>;
+~~~
 
-### Delete a trace
+### Delete a Trace
 
 To stop the trace if it is on and delete the trace files, run.
 
+~~~
 trace remove <Trace_name>;
+~~~
 
 
 
