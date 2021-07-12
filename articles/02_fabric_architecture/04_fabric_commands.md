@@ -505,7 +505,7 @@ fabric>DROP LUTYPE Customer;
 
 Fabric enables the deployment of Fabric environments and setting active environments on a [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
-The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
+The interfaces of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all interfaces (DB and none DB) in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 ### Run Queries on Cassandra
 
