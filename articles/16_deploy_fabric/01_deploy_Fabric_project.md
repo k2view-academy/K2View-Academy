@@ -53,6 +53,7 @@ You can check which objects are deployed in the Fabric server using the Fabric *
 - **list BF/BROADWAY_FLOWS**, lists all Broadway flows of all LU Types with their inputs and outputs deployed to the server .
 - **list INSTANCE_GROUPS/IGS**, lists all instance groups of all LU Types deployed to the server.
 - **list DB_SOURCES**, lists all the DB interfaces.
+- **list INTERFACES**, lists all the interfaces. 
 
 ###### Syntax:
 ~~~
@@ -67,6 +68,7 @@ You can check which objects are deployed in the Fabric server using the Fabric *
     list IGS;
     list INSTANCE_GROUPS;
     list DB_SOURCES;
+    list INTERFACES;
 ~~~
 
 **Examples:**
