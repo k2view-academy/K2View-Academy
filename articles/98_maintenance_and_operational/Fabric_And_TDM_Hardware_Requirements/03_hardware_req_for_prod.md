@@ -4,7 +4,7 @@
 
 - **PostgreSQL is generally required for TDM projects only**. 
 - K2view supports PostgreSQL version 9.6 & 13.
-- PostgreSQL requires 100G storage
+- PostgreSQL requires 100G storage.
 - PostgreSQL can be deployed in one of these ways:
   - On a VM (use latest CentOS/Redhat Operating System with latest patches), or 
   - As a service. 
@@ -57,9 +57,9 @@ Use a dedicated server for Fabric, and a separate, dedicated server for Kafka
 For local installations: 
 
 - OS: CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified) 
-- CPU: 8 Cores/16vCPUs (Modern Xeon Processor). 
+- CPU: 8 Cores/16vCPUs (Modern Xeon Processor)
 - RAM: 64G 
-  For Fabric, Redis, Kafka servers that runs Fabric, Redis - 64GB RAM.   
+  For Fabric, Redis, Kafka servers that runs Fabric, Redis - 64G RAM.   
 - Network: Minimum 1G between the nodes and source DB’s 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  
   When **SAN must be used,** it must be flash and in RAID-0. 
@@ -126,7 +126,7 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 ~~~
 
-### Fabric LINUX PORTS 
+### Fabric Linux Ports 
 
 Open the following ports on the LINUX server, and make sure they are accessible outside the server: 
 
