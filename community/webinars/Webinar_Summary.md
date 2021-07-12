@@ -1,6 +1,6 @@
 <!--block-->
 
-![](images/webinar_20210712.PNG)
+<img src="images/img1.png" style="zoom:80%;" />
 
 ### DevCom Webinar be take place on July 12th
 
@@ -10,7 +10,7 @@ Join us for the 2nd DevCom Webinar to get the news about Fabric Next Generation.
 
 <!--block-->
 
-![](images/webinar1_date.PNG)
+<img src="images/img5.png" style="zoom:80%;" />
 
 ### 1st K2View DevCom Kickoff webinar was help on May 27th
 
