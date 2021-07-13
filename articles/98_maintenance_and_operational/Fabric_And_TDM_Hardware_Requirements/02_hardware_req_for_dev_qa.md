@@ -53,7 +53,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 #### Hardware Requirements (for each Linux server): 
 
-- OS: CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified)
+- OS: latest CentOS/Redhat Operating System with latest patches
 - CPU: 4 Cores/vCPUs (Modern Xeon Processor) 
 - RAM: 12GB 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  

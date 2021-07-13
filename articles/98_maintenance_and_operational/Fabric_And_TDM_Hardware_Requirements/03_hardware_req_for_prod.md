@@ -56,7 +56,7 @@ Use a dedicated server for Fabric, and a separate, dedicated server for Kafka
 
 For local installations: 
 
-- OS: CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified) 
+- OS: latest CentOS/Redhat Operating System with latest patches
 - CPU: 8 Cores/16vCPUs (Modern Xeon Processor)
 - RAM: 64G 
   For Fabric, Redis, Kafka servers that runs Fabric, Redis - 64G RAM.   
