@@ -1,6 +1,6 @@
-# Data Editor
+# Data Explorer
 
-Part of the K2View web framework, the Data Editor is a graphical web-based application used to view and edit [LU](/articles/06_LU_tables/01_LU_tables_overview.md) and [reference](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) tables and also displays the data structure and relationships between the tables in an LU schema.
+Part of the K2View web framework, the Data Explorer is a graphical web-based application used to view and edit [LU](/articles/06_LU_tables/01_LU_tables_overview.md) and [reference](/articles/22_reference(commonDB)_tables/01_fabric_commonDB_overview.md) tables and also displays the data structure and relationships between the tables in an LU schema.
 
 ### Schemas
 
@@ -8,7 +8,7 @@ When first opened, the Data Editor displays the list of **Schemas** in a table t
 
 The following is an example of a project's Schemas:
 
-###### <img src="images/30_dataeditor_01.png" alt="Data Editor Catalog" />
+###### <img src="images/30_dataeditor_01.png" alt="Data Explorer Catalog" />
 
 To refresh the table list, click <img src="images/30_dataeditor_refresh_icon.png" alt="refresh" /> **Refresh** in the top action bar.
 
