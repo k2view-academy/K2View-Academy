@@ -1,7 +1,7 @@
 # Broadway Overview
 
 
-Broadway is the Fabric module that is used to design data movement, its transformation and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric.
+Broadway is the Fabric module used to design data movement, its transformation and the orchestration of business flows. Featuring a powerful user interface for creating and debugging business and data flows, Broadway also provides a high-performance execution engine that can be activated by Fabric.
 
 Broadway is used throughout Fabric, wherever data movement and orchestration are needed. For example:
 * [Logical Unit](/articles/03_logical_units/01_LU_overview.md) data population from external databases or REST APIs.
