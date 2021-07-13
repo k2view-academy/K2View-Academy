@@ -186,7 +186,7 @@ For Cloud installation:
      - Make sure to attach to the VM “local SSD” type env NVMe. See also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
 - For all installations, the FS configuration **<u>for SOR</u>** must be as follows:
- 
+
   - Volume of 50G /opt/apps/cassandra/ 
   - Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
   - Volume of 2T* /opt/apps/cassandra/storage/data
@@ -196,12 +196,12 @@ For Cloud installation:
 - the FS must provide IOPS of at least 30K read & 10K write on each node simultaneously, while all nodes are running the test at the same time.
 - The above volume values should be modified in accordance with project scope and data retention requirements.
 
-**For all installations, the FS configuration for **<u>non SOR</u>** **must be as follows: **
+**For all installations, the FS configuration for non SOR must be as follows: **
 
     - Volume of 50G /opt/apps/cassandra/ 
     - Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM     
 
-   The above volume values should be modified in accordance with project scope and data retention requirements. 
+The above volume values should be modified in accordance with project scope and data retention requirements. 
 
 #### Cassandra Linux Server Setup
 
@@ -229,7 +229,7 @@ echo  "fs.file-max = 1000000" >> /etc/sysctl.conf
 
 The following ports should be opened on the LINUX server and accessible outside the server: 
 
-<table style="border-collapse: collapse; width: 100%; height: 209px;" border="1">
+<table style="border-collapse: collapse; width: 100%; " border="1">
 <tbody>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
@@ -245,6 +245,7 @@ The following ports should be opened on the LINUX server and accessible outside 
 </tr>
 </tbody>
 </table>
+
 
 
 

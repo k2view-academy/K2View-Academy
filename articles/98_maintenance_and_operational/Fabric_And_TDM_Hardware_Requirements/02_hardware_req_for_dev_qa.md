@@ -111,7 +111,7 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 Open the following ports on the LINUX server, and make sure they are accessible from outside the server: 
 
-<table style="border-collapse: collapse; width: 100%; height: 209px;" border="1">
+<table style="border-collapse: collapse; width: 100%;" border="1">
 <tbody>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
@@ -163,6 +163,7 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 </tr>
 </tbody>
 </table>
+
 
 
 [![Previous](/articles/images/Previous.png)](01_hardware_requirements_introduction.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_hardware_req_for_prod.md)  
