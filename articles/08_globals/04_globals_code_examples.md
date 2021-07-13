@@ -65,10 +65,10 @@ Three Globals are defined under Shared Objects Globals in the SharedGlobals.java
 
 ~~~java
 if (contrID == "" && adrID == "") {
-	result = fnErrorCheck(MISSING_INPUT); //Missing input
+	result = fnErrorCheck(getGlobal(MISSING_INPUT)); //Missing input
 	return result;	
 } else if (contrID != "" && adrID != "") {
-	result = fnErrorCheck(TOO_MANY_INPUTS); //Too many inputs
+	result = fnErrorCheck(getGlobal(TOO_MANY_INPUTS)); //Too many inputs
 	return result;
 }
 ~~~
