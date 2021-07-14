@@ -77,7 +77,6 @@ Certificate was added to keystore
 
 The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 
-```bash
 - ca-crt.crt
 - ca-key.key
 - kafka.client.csr
@@ -88,7 +87,6 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 - kafka.server.keystore.jks
 - kafka-server-signed.crt
 - kafka.server.truststore.jks
-```
 
 Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
 
