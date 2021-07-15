@@ -10,7 +10,7 @@ Fabric provides a set of built-in image manipulation Actors that allow to perfor
 - Write text on a given image.
 - Clone an image in memory.
 
-[Read more >](spotlight_20210701.md)
+[Read more >](20210701_image_manipulation_actors.md)
 
 <!--block-->
 
@@ -22,7 +22,7 @@ Fabric Studio provides an ability to view all active breakpoints.
 
 A new panel was added to the “Server / Activity Logs” area, which displays a list of the breakpoints in the open Fabric objects (currently only Broadway flows are supported), including the File name (flow name) and the ID (e.g. stage where the breakpoint is set).
 
-[Read more >](spotlight_20210630.md)
+[Read more >](20210630_fabric_studio_breakpoints.md)
 
 <!--block-->
 
@@ -34,6 +34,6 @@ Broadway offers a number of built-in Actors which address a wide range of predef
 
 When your implementation requires business logic that is not supported by a built-in Actor and it is repeated across several flows, you can create an Actor using an **Actor Editor** by one of the following:
 
-[Read more >](spotlight_20210527.md)
+[Read more >](20210527_actor_editor.md)
 
 <!--block-->
