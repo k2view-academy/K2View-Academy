@@ -1,5 +1,5 @@
-# Data Editor Schema Viewer
-The Schema Viewer opens after a specific LU or common is selected in the Data Editor Catalog screen. It 
+# Data Explorer Schema Viewer
+The Schema Viewer opens after a specific LU or common is selected in the Data Explorer Catalog screen. It 
 displays a schema's structure and enables fetching its data. Depending on your selection, either of the following is displayed:
 
 ### LU Tables
@@ -18,9 +18,9 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
   * Output (optional), the linkage field/s to its linked tables. 
   
 * Each table links to the table Data Viewer screen.
-* The schema name appears in the screen title as well as in the breadcrumbs in the top Data Editor Catalog bar.  
+* The schema name appears in the screen title as well as in the breadcrumbs in the top Data Explorer Catalog bar.  
 
-<img src="images/30_dataeditor_02.png" alt="Data Editor Catalog" />
+<img src="images/30_dataeditor_02.png" alt="Data Explorer Catalog" />
 
  Note that a table might appear more than once when there is more than one population stage.
 
@@ -29,11 +29,11 @@ The schema's tables are shown in a top-down nested tree, starting from the LU's 
 #### Actions Bar
 
 
-<img src="images/30_dataeditor_03.png" alt="Data Editor Catalog" />
+<img src="images/30_dataeditor_03.png" alt="Data Explorer Catalog" />
 
  The first three options in the Actions bar are used to fetch LUI:
 
-* **Sync Mode**, select between **Off** or **On**. **Force** is not exposed in the Data Editor app. The data is then fetched according to [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md#sync-behavior---summary-table) rules.
+* **Sync Mode**, select between **Off** or **On**. **Force** is not exposed in the Data Explorer app. The data is then fetched according to [Sync Behavior](/articles/14_sync_LU_instance/10_sync_behavior_summary.md#sync-behavior---summary-table) rules.
 
 * **IID** text field, where the LU IID are populated.
 

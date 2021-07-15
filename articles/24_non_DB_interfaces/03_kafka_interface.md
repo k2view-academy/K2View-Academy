@@ -57,8 +57,8 @@ To create a new Kafka interface, do the following:
 </td>
 </tr>
 <tr>
-<td><strong>SSL properties</strong></td>
-<td>Mandatory properties if Kafka is defined with SSL.</td>
+<td><strong>SSL / SASL properties</strong></td>
+<td>Mandatory properties if Kafka is defined with SSL or SASL (available starting from V6.5.1).</td>
 </tr>
 <tr>
 <td><strong>SSL optional properties</strong></td>
@@ -68,15 +68,26 @@ To create a new Kafka interface, do the following:
 </table>
 
 
+
+
+
 ### Example of SSL Properties Definition
 
-When SSL authentication is required on Kafka, set **Enable SSL** property to **True** and populate the SSL properties on the Kafka Interface. Below is the example of Interface definition when the **Security Protocol** = **SSL**. 
+#### SSL Security Protocol
+
+When SSL authentication is required on Kafka, set **Enable SSL/SASL** property to **True** and populate the SSL properties on the Kafka Interface. Below is the example of Interface definition when the **Security Protocol** = **SSL**. 
 
 ![image](images/04_kafka_3.png)
 
 
 
-When you need to connect to Kafka using a user and a password, set the **Security Protocol** = **SASL_PLAINTEXT** and give the path to the file with user and password definition.
+#### SASL_SSL / SASL_PLAINTEXT Security Protocols
+
+When you need to connect to Kafka using a user and a password, set the **Security Protocol** = **SASL_SSL** or **SASL_PLAINTEXT** and populate the Session user name and password attributes.
+
+In addition, in case of **SASL_SSL** - populate the Truststore and Keystore properties as below. 
+
+![image](images/04_kafka_4.png)
 
 
 

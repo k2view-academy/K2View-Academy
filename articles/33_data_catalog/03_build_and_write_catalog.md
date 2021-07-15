@@ -11,6 +11,7 @@ A <a href="https://www.k2view.com/platform/data-catalog/" target="_blank">Data C
 * **Write Catalog**, deploys the catalog to the server. This includes building the catalog files of all the project entities (each LU, WS, Common) and uploading them to the OrientDB. 
   * Once Write Catalog is completed, login to the K2View Web Framework and navigate it. 
   * Write Catalog can also be performed by running the [CATALOG WRITE](08_catalog_commands.md) command in the Fabric Server. In this scenario, the automatic files must be created before running the command using Build Catalog in the Fabric Studio.
+  * Note that catalog deployment is performed in a [Soft Deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md) mode.
 
 ### How Do I Build the Catalog Using the Fabric Studio?
 

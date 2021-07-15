@@ -172,7 +172,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="10" width="400pxl">
+<td rowspan="11" width="400pxl">
 <p><img src="images/99_18_03_actor_menu_up.png" alt="Actor's context menu" /></p>
 </td>
 <td width="80pxl">Collapse / Expand</td>
@@ -207,6 +207,12 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Click to save an Actor to inherit the selected Actor. The Actor is then added to the list of <a href="04_built_in_actor_types.md">built-in Actors</a> and can be used in other flows.&nbsp;</td>
 </tr>
 <tr>
+<td width="200"><a href="32_reset_actor_state.md">Reset on iteration 0</a></td>
+<td style="width: 465px;">
+<p>Click to reset the Actor's state on the inner loop start (zero iteration). The menu option is visible only when the Actor is inside an internal iteration.</p>
+</td>
+</tr>
+<tr>
 <td width="200"><a href="03_broadway_actor.md#actor-description-and-remark"> Description</a></td>
 <td style="width: 465px;">Product Actor's description.</td>
 </tr>
@@ -216,6 +222,7 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 </tr>
 </tbody>
 </table>
+
 
 ### Actor Properties Window
 

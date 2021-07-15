@@ -26,25 +26,23 @@ The Listener invokes the attached Broadway flow that needs the **FileRead** Acto
 
 ### Fabric Commands Actors
 
-The **Fabric** category of [built-in Actors](04_built_in_actor_types.md) executes Fabric commands.
+The **Fabric** category of [built-in Actors](04_built_in_actor_types.md) executes Fabric commands. For example:
 
 * **FabricGet** Actor, executes the GET command on the current Fabric session.
 * **FabricSet** Actor, sets a value on the Fabric session.
 * **FabricSetRead** Actor, reads a key from the Fabric session.
 
-The **sql** input argument of these Actors displays the command to be executed on the Fabric server. This argument is read-only and contains named params using a ${} notation. 
+Starting from V6.5.1, the **FabricGet** Actor supports fetching multiple instances from different LUs and enables setting **parallel** and **stop_on_error** arguments. To sync multiple LUIs, do either:
 
-For example, the **FabricGet** Actor displays the command:
+* Connect a list of LU types to the **luType** input argument and a list of Instance IDs to the **iid** input argument.
 
-~~~
-GET ${luType}.${iid}
-~~~
+  <img src="images/99_07_FABRIC_0.PNG" alt="image" style="zoom:75%;" />
 
-Where **${luType}** and **${iid}** are replaced by the values of the input arguments in the prepared statement. 
+* Or, add a new input to the Actor, change the input name to the **luType** name and set the value is **iid**. In this case, the **luType** input argument of the Actor should be set to the empty value.
 
-Select the [Logical Unit](/articles/03_logical_units/01_LU_overview.md) in the **luType** input argument and type the [Instance ID](/articles/01_fabric_overview/02_fabric_glossary.md#instance-id) in the **iid** input argument.
+  <img src="images/99_07_FABRIC_1.PNG" alt="image" style="zoom:75%;" />
 
-![image](images/99_07_FABRIC.PNG)
+
 
 
 ### Use of LU Functions and Graphit in Broadway

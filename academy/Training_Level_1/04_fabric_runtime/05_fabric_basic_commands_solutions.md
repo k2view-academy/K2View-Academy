@@ -13,7 +13,7 @@
 
 4. `Answer: Active (true)`
 
-   `fabric>test_connection DbInterface='CRM_DB';`
+   `fabric>test_connection Interface='CRM_DB';`
 
 5. `Answer: My First Name, set sync force command brings the data from the source`
 
