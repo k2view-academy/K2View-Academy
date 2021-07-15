@@ -1,6 +1,4 @@
-# Fabric Modules Configuration  
-
-## Setup Fabric to Support Kafka SSL Connections 
+# Setup Fabric to Support Kafka SSL Connections
 
 Execute the following command to stop Fabric:
 
