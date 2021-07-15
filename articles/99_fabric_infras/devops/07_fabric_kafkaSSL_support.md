@@ -1,4 +1,4 @@
-# Connect Fabric to Kafka in SSL mode
+# Connect Fabric to Kafka in TLS mode
 
 Execute the following command to stop Fabric:
 

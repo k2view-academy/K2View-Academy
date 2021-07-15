@@ -1,4 +1,4 @@
-# Kafka Hardening (SSL mode)
+# Kafka Hardening (TLS mode)
 
 The following steps are used to harden the Kafka server in a Fabric cluster.
 

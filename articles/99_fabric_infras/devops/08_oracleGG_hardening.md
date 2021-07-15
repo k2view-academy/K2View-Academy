@@ -1,6 +1,6 @@
 # Oracle GG (Golden Gate) Big Data Setup with Kafka SSL
 
-## Step 1	- Copy Kafka_ssl content
+## Step 1	- Copy kafka_ssl content
 
 Copy the contents of the $K2_HOME/.kafka_ssl file on the Kafka node to the local directory in the Oracle GG client.
 

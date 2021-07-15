@@ -1,6 +1,6 @@
 # Fabric - Defined Working with Master Key
 
-## Step 10 - Define Fabric Working Mode for the Master Key
+## Define Fabric Working Mode for the Master Key
 
 
 ### Generate Master Key Without Keystore
