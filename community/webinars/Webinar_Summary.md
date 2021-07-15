@@ -1,5 +1,15 @@
 <!--block-->
 
+<img src="images/devComm.png" style="zoom: 67%;" />
+
+### Next DevCom Webinar is coming soon!
+
+Stay tuned for the next Development Community Webinar to take place after the summer vacations season! 
+
+
+
+<!--block-->
+
 <img src="images/img1.png" style="zoom:80%;" />
 
 ### 2nd DevCom Webinar on July 12th
