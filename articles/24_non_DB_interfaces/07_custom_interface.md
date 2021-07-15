@@ -4,7 +4,7 @@ The Custom interface type is used to interact with interfaces that are not defin
 
 A Custom interface type can be used to store encrypted passwords. For example, to connect to a website using a user and a password, use the getCustomProperties API in the user code to get the password's original value.
 
-Starting from V6.5.1, you can use the custom interface attributes (such as user or password) from a Broadway flow when writing your own custom Actor. In the Actor's Java class, you can access the IoSession by writing the following:
+Starting from V6.5.1, you can access the custom interface attributes (such as user or password) from a Broadway flow when writing your own custom Actor. In the Actor's Java class, you can access the IoSession by writing the following:
 
 ~~~java
 Map m = (Map) context.ioProvider().createSession("my-custom-interface").object(null);
