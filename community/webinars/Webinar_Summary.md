@@ -12,7 +12,7 @@
 
 <img src="images/img7.png" style="zoom:80%;" />
 
-### 1st K2View DevCom Kickoff webinar was held on May 27th
+### K2View DevCom Kickoff on May 27th
 
 Welcome to our first K2View Development Community Webinar!
 
