@@ -22,15 +22,28 @@ The deployment of a Fabric project is performed on the following levels:
 - **Deployment of Environments**. 
 
 Deployment can be performed either:
-- [From the Fabric Studio](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio) using **Deploy to Server**.
-- [Offline Deploy](/articles/16_deploy_fabric/03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
+- [From the Fabric Studio](02_deploy_from_Fabric_Studio.md#deploy-from-fabric-studio) using **Deploy to Server**.
+- [Offline Deploy](03_offline_deploy.md) by creating the artifacts in the Fabric Studio using **Build Deploy Artifacts** and running the deployment on the server side. 
 
 When a Fabric object is deployed to the server, the deployment artifacts are created in the **/storage/lu** directory of the Fabric server – one **ludb.jar** for each deployment. 
 A folder is created under **/storage/lu** for each object’s first deployment. For example, when the CRM LU is deployed for the first time, the CRM folder is created under **/storage/lu**. The **/storage/lu/CRM** will include the folder named as the deployment time and will include the **ludb.jar**.
 
 Note that Shared Objects are not independent objects in a project and therefore cannot be deployed as stand-alone items. You must re-deploy the object using the updated Shared Object to make the change in a shared object available in the Fabric server. For example, when an interface is updated, all LU using this interface should be re-deployed to make this change effective.
 
+### Soft Deploy
+
+**Soft Deploy** is the Fabric's ability to exclude automatic processes from the LU deployment. The Soft Deploy is mostly useful for the implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use Soft Deploy option to deploy their changes without triggering the automatic processes such as:
+
+* User jobs
+* Parsers
+* Interface listener
+
+To activate the Soft Deploy when doing the deployment from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
+
+To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
+
 ### How Do I Check Which Project Is Deployed to Fabric? 
+
 Only **one project** can be deployed to [each Fabric cluster](/articles/02_fabric_architecture/01_fabric_architecture_overview.md#fabric-cluster). If a project has been deployed and an attempt to deploy a different project to the same cluster is made, an error message is displayed. 
 
 To check the project’s deployment in the Fabric server, use the **SET** command from the Fabric console. 
