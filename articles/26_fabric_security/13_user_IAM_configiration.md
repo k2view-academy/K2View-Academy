@@ -31,11 +31,11 @@ The integration with a SAML IDP requires that both the identity provider (IDP) a
     `keytool -import -alias <ALIAS-NAME> -file <full-path-to-downloaded-cert-file> -storetype JKS -keystore <full-path-to-trusttore-file>`
 
     The path to the trust-store file and related parameters can be found at the jvm.options file: At the *TLS/SSL SETTINGS* section look for "javax.net.ssl.trustStore" . All those values are set there for a hardened environment. An example to such path is: "$K2_HOME/.cassandra_ssl/cassandra.truststore"
-
     
-
+    
+    
     The specified alias name should also be used at the configuration for the *IDP_CERT_ALIAS* property. You can specify any alias name.
-
+    
     
 
 * **Provide the IDP**
@@ -49,9 +49,9 @@ The integration with a SAML IDP requires that both the identity provider (IDP) a
     `keytool -export -alias <ALIAS-NAME> -storepass <password> -file <output-filename>.cer -keystore <full-path-to-keystore-file>` 
 
     The path to the key-store file and related parameters can be found at the jvm.options file: At the *TLS/SSL SETTINGS* section look for "javax.net.ssl.keyStore" . All those values are set there for a hardened environment. An example to such path is: "$K2_HOME/.cassandra_ssl/keystore.jks"
-
     
-
+    
+    
     The specified alias name should be used at the configuration for the *SP_CERT_ALIAS* property. You shall use the alias of the certificate which is  already stored. Please verify it, using the keytool list command.
 
 
@@ -62,10 +62,8 @@ You can verify the certification keys by using this command: `keytool -list -sto
 
 While running this command after running the above two keytool's *import* and *export* commands, you will see the corresponding two entries, where you can see, for each entry, its alias, last modified date, its type, and its fingerprint. Below is an example of the command's output using Okta as IDP:
 
-~~~
-okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40
-k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46
-~~~
+`okta, Apr 28, 2021, trustedCertEntry, Certificate fingerprint (SHA1): 7F:CD:76:A6:B2:47:53:7E:BD:9E:20:44:B0:25:6B:78:A9:E3:25:40`
+`k2view, Apr 18, 2021, PrivateKeyEntry, Certificate fingerprint (SHA1): 2C:9B:F3:8E:60:E6:BC:9F:82:84:A6:55:BE:62:2B:87:7D:42:BB:46`
 
 
 
@@ -77,7 +75,7 @@ For more information and guides as to where and how this information should be s
 
 Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was acquired at the preparation step:
 
-- **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be also populated at the IDP. Format: `https://<HOSTNAME>`. 
+- **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated at the IDP 
 
 - **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname. This property is also populated at the IDP side.
 - **IDP_ENTITYID**, the entity ID, in URI format, as supplied by the IDP.
