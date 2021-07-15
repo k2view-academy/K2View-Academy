@@ -50,5 +50,5 @@ To create a Broadway Flow that runs on an SSH interface, do the following:
 
    
 
-   [![Previous](/articles/images/Previous.png)](09_redis_interface.md)
+   [![Previous](/articles/images/Previous.png)](09_redis_interface.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](11_LDAP_interface.md)
 
