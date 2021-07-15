@@ -3,11 +3,8 @@
 ### PostgreSQL
 
 - **PostgreSQL is generally required for TDM projects only**. 
+- It can be deployed on a VM (In case it is deployed on a VM, use latest CentOS/Redhat Operating System with latest patches.) or alternatively use PostgreSQL as a service. 
 - K2view supports PostgreSQL version 9.6 & 13.
-- PostgreSQL requires 100G storage.
-- PostgreSQL can be deployed in one of these ways:
-  - On a VM (use latest CentOS/Redhat Operating System with latest patches), or 
-  - As a service. 
 
  **For cloud deployments:**
 
@@ -15,14 +12,18 @@
 - If using **Azure** VM: A8v2 
 - If using **GCP**: e2-standard-4
 
-  For example, if you are implementing PostgreSQL as a PaaS, you can use the following:
+  The PostgreSQL requires 100G storage
 
-  - For **AWS**: RDS PostgreSQL
-  - For **GCP**: Cloud SQL PostgreSQL [see here for more about PostgreSQL](https://cloud.google.com/sql/docs/postgres/introduction) 
+**If you are implementing PostgreSQL as a PaaS you can use for example:**
 
-## Windows Server Specifications for Fabric Studio 
+- For **AWS**: RDS PostgreSQL
+- For **GCP**: Cloud SQL PostgreSQL [see here](https://cloud.google.com/sql/docs/postgres/introduction) 
 
-### Hardware Requirements 
+
+
+## FABRIC STUDIO WINDOWS SERVER SPECIFICATIONS 
+
+#### MINIMUM HW REQUIREMENTS 
 
 **For Local installation:**
 
@@ -33,44 +34,49 @@
 
 **For Cloud installation:** 
 
-- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
-- If using **Azure** VM: A8v2 
-- If using **GCP** e2-standard-4
+- AWS: EC2: a1.2xlarge, m5.xlarge
+- Azure VM: A8v2 
+- GCP: e2-standard-4
 
-#### **Windows Ports** 
+#### **WINDOWS PORTS** 
 
-Open the following ports on the Windows server: 
+The following ports should be opened on the Windows server: 
 
 - 3389 – Used for RDP 
 
-####  **Windows Permissions** 
+####  **WINDOWS PERMISSIONS** 
 
 Local administrator privileges are needed for the Fabric Studio installation.
 
 ------
 
-## Fabric/Cassandra/Kafka Linux Execution Server Specifications
+## FABRIC/Cassandra/Kafka LINUX EXECUTION SERVER SPECIFICATIONS
 
-#### Hardware Requirements (for each Linux server): 
+#### MINIMUM HW CONFIGURATION FOR EACH LINUX SERVER 
 
-- OS: latest CentOS/Redhat Operating System with latest patches
-- CPU: 4 Cores/vCPUs (Modern Xeon Processor) 
-- RAM: 12GB 
-- Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  
-  When **SAN must be used,** it must be flash and in RAID-0. 
-  **NAS are not certified** 
+1 x CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified), and the following hardware:
 
-**The FS volumes required are as follows:** 
+- CPU: 4 Cores/vCPUs. (Modern Xeon Processor). 
 
-- Volume of 150G /opt/apps/fabric/ - will be used also as the home directory for fabric user 
-- Volume of 200G /opt/apps/cassandra/ 
-- Volume of 50G /opt/apps/kafka/  
+- RAM: 12GB. 
 
- **For Cloud installation:** 
+- Storage: The preferred storage is attached local SSD’s in non-RAID configuration. In cases where SAN must be used, it has to be flush one and in RAID-0. 
 
-   - If using **AWS**: EC2: m5.2xlarge
-   - If using **Azure**: Standard_DS14_v2
-   - If using **GCP**: e2-standard-8
+  **NAS are not certified**.
+
+  - The FS volumes required are as follows: 
+
+    - Volume of 150G /opt/apps/fabric/ - will be used also as the home directory for fabric user 
+
+    - Volume of 200G /opt/apps/cassandra/ 
+
+    - Volume of 50G /opt/apps/kafka/  
+
+For cloud installation: 
+
+- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
+- If using **Azure** VM: D8a v4, D8d v4
+- If using **GCP**: e2-standard-4
 
 ###  Linux Server Setup
 
@@ -107,11 +113,11 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 ~~~
 
-### Linux Ports 
+### LINUX PORTS 
 
-Open the following ports on the LINUX server, and make sure they are accessible from outside the server: 
+The following ports should be opened on the LINUX server and accessible from outside the machine: 
 
-<table style="border-collapse: collapse; width: 100%;" border="1">
+<table style="border-collapse: collapse; width: 100%; height: 209px;" border="1">
 <tbody>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
@@ -163,7 +169,6 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 </tr>
 </tbody>
 </table>
-
 
 
 [![Previous](/articles/images/Previous.png)](01_hardware_requirements_introduction.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_hardware_req_for_prod.md)  

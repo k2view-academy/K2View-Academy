@@ -4,7 +4,7 @@
 
 - **PostgreSQL is generally required for TDM projects only**. 
 - K2view supports PostgreSQL version 9.6 & 13.
-- PostgreSQL requires 100G storage.
+- PostgreSQL requires 100G storage
 - PostgreSQL can be deployed in one of these ways:
   - On a VM (use latest CentOS/Redhat Operating System with latest patches), or 
   - As a service. 
@@ -56,10 +56,10 @@ Use a dedicated server for Fabric, and a separate, dedicated server for Kafka
 
 For local installations: 
 
-- OS: latest CentOS/Redhat Operating System with latest patches
-- CPU: 8 Cores/16vCPUs (Modern Xeon Processor)
+- OS: CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified) 
+- CPU: 8 Cores/16vCPUs (Modern Xeon Processor). 
 - RAM: 64G 
-  For Fabric, Redis, Kafka servers that runs Fabric, Redis - 64G RAM.   
+  For Fabric, Redis, Kafka servers that runs Fabric, Redis - 64GB RAM.   
 - Network: Minimum 1G between the nodes and source DB’s 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  
   When **SAN must be used,** it must be flash and in RAID-0. 
@@ -126,7 +126,7 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 ~~~
 
-### Fabric Linux Ports 
+### Fabric LINUX PORTS 
 
 Open the following ports on the LINUX server, and make sure they are accessible outside the server: 
 
@@ -186,7 +186,7 @@ For Cloud installation:
      - Make sure to attach to the VM “local SSD” type env NVMe. See also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
 - For all installations, the FS configuration **<u>for SOR</u>** must be as follows:
-
+ 
   - Volume of 50G /opt/apps/cassandra/ 
   - Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
   - Volume of 2T* /opt/apps/cassandra/storage/data
@@ -196,12 +196,12 @@ For Cloud installation:
 - the FS must provide IOPS of at least 30K read & 10K write on each node simultaneously, while all nodes are running the test at the same time.
 - The above volume values should be modified in accordance with project scope and data retention requirements.
 
-**For all installations, the FS configuration for non SOR must be as follows: **
+**For all installations, the FS configuration for **<u>non SOR</u>** **must be as follows: **
 
     - Volume of 50G /opt/apps/cassandra/ 
     - Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM     
 
-The above volume values should be modified in accordance with project scope and data retention requirements. 
+   The above volume values should be modified in accordance with project scope and data retention requirements. 
 
 #### Cassandra Linux Server Setup
 
@@ -229,7 +229,7 @@ echo  "fs.file-max = 1000000" >> /etc/sysctl.conf
 
 The following ports should be opened on the LINUX server and accessible outside the server: 
 
-<table style="border-collapse: collapse; width: 100%; " border="1">
+<table style="border-collapse: collapse; width: 100%; height: 209px;" border="1">
 <tbody>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
@@ -245,7 +245,6 @@ The following ports should be opened on the LINUX server and accessible outside 
 </tr>
 </tbody>
 </table>
-
 
 
 
