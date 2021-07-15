@@ -49,9 +49,17 @@ The following is a list of server configuration items:
 <p><strong>Force Upgrade Post Deploy</strong></p>
 </td>
 <td width="467">
-<p><strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br /> Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
+<p><strong>Checked</strong>: performs a forced <a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">sync</a> after deployment whereby the LU is always synchronized regardless of the Sync Method defined for the LU. <br />Note that when a <a href="/articles/07_table_population/08_project_functions.md#project-function-types">Decision Function</a> is defined for a <a href="/articles/14_sync_LU_instance/04_sync_methods.md">Sync Method</a>, the function takes precedence.</p>
 <p><strong>Unchecked</strong>: performs a sync on schema changes only.</p>
 <p>Note that each LU undergoes one forced sync the first time it is retrieved, regardless whether this option is checked / unchecked.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Soft Deploy</strong></p>
+</td>
+<td>
+<p><strong>Checked:</strong> performs the deployment without automatic processes: user jobs, parsers and interface listener</p>
 </td>
 </tr>
 <tr>
@@ -121,6 +129,7 @@ The following is a list of server configuration items:
 </tr>
 </tbody>
 </table>
+
 
 Note that the Delete button of the special debug environment is disabled to support running a debug on a remote server.
 
@@ -199,7 +208,6 @@ The following SVN preferences can be configured:
 </table>
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/03_diagram_and_toolbars.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/05_creating_a_new_project.md)
-
 
 
 
