@@ -10,6 +10,8 @@ Fabric provides a set of built-in image manipulation Actors that allow to perfor
 - Write text on a given image.
 - Clone an image in memory.
 
+Let's check how it works by reviewing the example flow. 
+
 [Read more >](20210701_image_manipulation_actors.md)
 
 <!--block-->
@@ -18,9 +20,7 @@ Fabric provides a set of built-in image manipulation Actors that allow to perfor
 
 ### Fabric Studio Breakpoints
 
-Fabric Studio provides an ability to view all active breakpoints.
-
-A new panel was added to the “Server / Activity Logs” area, which displays a list of the breakpoints in the open Fabric objects (currently only Broadway flows are supported), including the File name (flow name) and the ID (e.g. stage where the breakpoint is set).
+Fabric Studio provides an ability to view all active breakpoints. Check out a new panel that was added to the “Server / Activity Logs” area, which displays a list of the breakpoints in the open Fabric objects (currently only Broadway flows are supported), including the File name (flow name) and the ID (e.g. stage where the breakpoint is set).
 
 [Read more >](20210630_fabric_studio_breakpoints.md)
 
@@ -30,9 +30,7 @@ A new panel was added to the “Server / Activity Logs” area, which displays a
 
 ### Broadway Actor's Editor
 
-Broadway offers a number of built-in Actors which address a wide range of predefined activities that can be added to Broadway flows. For example, reading a file and writing into a file, creating a table and populating it, parsing an object or concatenating a string, publishing the messages to a queue or invoking a Web service.
-
-When your implementation requires business logic that is not supported by a built-in Actor and it is repeated across several flows, you can create an Actor using an **Actor Editor** by one of the following:
+Broadway offers a number of built-in Actors which address a wide range of predefined activities that can be added to Broadway flows. When your implementation requires business logic that is not supported by a built-in Actor and it is repeated across several flows, you can create your own Actor using an **Actor Editor**.
 
 [Read more >](20210527_actor_editor.md)
 
