@@ -12,7 +12,7 @@ For obvious optimization reasons, this information is stored in an external tabl
 2.  Click **DB Connection** (top of the window) and select the **Data Source Interface** to display the Tables directory in the source DB.
 
 3. Select the **table**. To select multiple tables, press the Ctrl key.
-  
+
 ![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
 
 
@@ -92,7 +92,8 @@ By default Reference tables are synched in the background of each table accordin
 Functions or other tables can be attached to the Reference table:
 
 - [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), to perform data manipulations on the table's content.
-- Other Reference Tables, onto which the current Reference table is depending (e.g. it needs data from these tables).  
+- Other Reference Tables, onto which the current Reference table is depending (e.g. it needs data from these tables).
+- Index Post Sync - determine if index should be created on Reference table after data is synced. This capabilities is relevant for huge reference data (more than 200M records) and can accelerate the overall data sync time. Added on release 6.5.1.  
 
 ![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
 
