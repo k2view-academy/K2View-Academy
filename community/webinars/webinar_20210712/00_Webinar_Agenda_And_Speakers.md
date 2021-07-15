@@ -2,7 +2,9 @@
 
 
 
-[Click to register to the Webinar.](https://www.k2view.com/events/developer-community-webinar-july2021/)
+## Webinar Recording 
+
+[Click to watch the Webinar.](https://www.youtube.com/watch?v=sBgpmSd_mDo)
 
 ## Webinar Speakers
 
@@ -22,10 +24,15 @@
 - Roll-out phases and impact on developers/projects
 - Exclusive demo - for the first time to external developers
 
+[Click here to download the Fabric Web Studio presentation](WebStudioCommunityWebinarJul12th.pdf)
+
 **In the spotlight (15 mins)**
 
 - Apply CDC capabilities to inject data into Salesforce DBs
 - Use Elastic Search to execute multiple queries across Fabric and Salesforce
+
+[Click here to download the CDC / Elastic Search presentation](CDC&ElasticSearchWebinarJuly12th.pdf)
+
 
 
 

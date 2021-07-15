@@ -2,9 +2,9 @@
 
 <img src="images/devComm.png" style="zoom: 67%;" />
 
-### Next DevCom Webinar is coming soon!
+### Next DevCom Webinar is coming on September 14th!
 
-Stay tuned for the next Development Community Webinar to take place after the summer vacations season! 
+Stay tuned for the next Developer Community Webinar that will take place after the summer vacations season! 
 
 
 
