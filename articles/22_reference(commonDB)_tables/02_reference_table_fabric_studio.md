@@ -1,11 +1,11 @@
-# How do I create a New Reference Table in Fabric Studio
+# How to Create a New Reference Table in Fabric Studio
 
 A  Reference table holds information common to all LU instances or to multiple LU. 
 For obvious optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
 
 
 
-## How Do I Create a New Reference Table in Fabric from an External Source?
+## How to Create a New Reference Table in Fabric from an External Source
 
 1.  Go to **Project Tree** > **References** , right click **Create References Based On DB Tables** to display the DB Browser menu, Context menu and References popup window. 
 
@@ -43,7 +43,7 @@ When the Broadway flow population option is selected as defined above in Step 4,
 
 
 
-### How do I View Reference Table Data? 
+### How to View Reference Table Data 
 
 To access the Reference Viewer do the following:
 1.  Go to **Project Tree** > **References**, right click **References Viewer**, and then select the **table**. The Data Viewer window is displayed according to its hierarchy in the Instances Tree pane.
@@ -77,7 +77,7 @@ Additional properties can be defined in the **Table Properties** panel in the ri
 
 #### Sync Method
 
-By default Reference tables are synched in the background of each table according to the defined Sync policy. The following Sync options can be selected in the Table Properties panel:
+By default, reference tables are synched in the background of each table according to the defined Sync policy. The following Sync options can be selected in the Table Properties panel:
 
 - None, default value, synchronization is according to the Sync policy defined.
 
@@ -89,11 +89,11 @@ By default Reference tables are synched in the background of each table accordin
 
 #### Miscellaneous
 
-Functions or other tables can be attached to the Reference table:
+The following functions or other tables can be attached to the Reference table:
 
-- [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md), to perform data manipulations on the table's content.
-- Other Reference Tables, onto which the current Reference table is depending (e.g. it needs data from these tables).
-- Index Post Sync - determine if index should be created on Reference table after data is synced. This capabilities is relevant for huge reference data (more than 200M records) and can accelerate the overall data sync time. Added on release 6.5.1.  
+- [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) - performs data manipulations on the table's content.
+- Other Reference Tables, on which the current Reference table is depending (e.g. it needs data from these tables).
+- Index Post Sync - determines if an index should be created on a Reference table after data is synced. This capability is relevant for huge reference databases (more than 200M records) and can accelerate the overall data sync time. Added in release 6.5.1.  
 
 ![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
 
