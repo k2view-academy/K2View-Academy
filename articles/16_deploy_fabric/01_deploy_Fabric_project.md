@@ -32,13 +32,13 @@ Note that Shared Objects are not independent objects in a project and therefore 
 
 ### Soft Deploy
 
-**Soft Deploy** is the Fabric's ability to exclude automatic processes from the LU deployment. The Soft Deploy is mostly useful for the implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use Soft Deploy option to deploy their changes without triggering the automatic processes such as:
+**Soft Deploy** is Fabric's ability to exclude automatic processes from the LU deployment. Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use the Soft Deploy option to deploy their changes without triggering automatic processes such as:
 
 * User jobs
 * Parsers
 * Interface listener
 
-To activate the Soft Deploy when doing the deployment from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
+To activate Soft Deploy when doing a deployment from the Fabric Studio, mark the Soft Deploy checkbox in the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.md#what-is-the-purpose-of-the-server-configuration-tab) window.
 
 To activate the Soft Deploy during the [Offline Deploy](/03_offline_deploy.md), set the **SOFT_DEPLOY** optional parameter to TRUE.
 
