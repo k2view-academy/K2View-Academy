@@ -76,7 +76,7 @@ For more information and guides as to where and how this information should be s
 Following are the configuration actions that should be applied in the Fabric **config.ini** configuration file, using the information that was acquired at the preparation step:
 
 - **SP_ENTITYID**, the identity of the Fabric, in URI format, which should be populated at the IDP 
-- **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname. This property is also populated at the IDP side.
+- **SP_ASSERTION_CONSUMER_SERVICE_URL**, the endpoint at Fabric to where the identity provider will redirect with its authentication response. Format: `https://<HOSTNAME>:<PORT>/api/authenticate`. The host name should be the Fabric load-balancer hostname (DNS name can be used too) . This property is also populated at the IDP side.
 - **IDP_ENTITYID**, the entity ID, in URI format, as supplied by the IDP.
 - **IDP_SINGLE_SIGN_ON_SERVICE_URL**, the IDP endpoint for SAML request. 
 - **SECURE**, flag indicating if certification and encryption is applied. Default is "true".
