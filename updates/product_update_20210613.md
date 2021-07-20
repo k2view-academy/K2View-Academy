@@ -9,4 +9,4 @@ We would like to share that we have just released Fabric 6.4.4 that which includ
 
 The full list can be found in the [Release Notes](https://support.k2view.com/Academy_6.5/Release_Notes_And_Upgrade/V6.4/Fabric_Release_Notes_V6.4.4.pdf.html).
 
-<img src="images/img3.png" alt="image" style="zoom: 67%;" />
+<img src="images/img6.png" alt="image" style="zoom: 67%;" />
