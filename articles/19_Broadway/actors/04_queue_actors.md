@@ -29,6 +29,8 @@ Arguments not supported by the message provider can be left empty and be ignored
 
 The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** defined on the [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
 
+Starting from V6.5.1, **transaction_mode** input argument is added to the **Publish** Actor and it determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure . 
+
 ### Timeout Setting
 
 The timeout must be defined for the **Subscribe** Actor to indicate the time to wait for a new message. If the timeout elapses, the collection ends.
@@ -45,7 +47,6 @@ In a regular run, timeout can be controlled by setting it to the required elapse
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each message received:
 - In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
 - When not in Transaction, the acknowledgement is performed during the next received message. If the server fails after reading the message, the same message is processed again.  
-
 
 ### Pub / Sub Examples 
 

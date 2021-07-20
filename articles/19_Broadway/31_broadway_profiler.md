@@ -35,4 +35,4 @@ fabric>broadway CRM.callGraphIt profilerTelemetry=true;
 
 
 
-[![Previous](/articles/images/Previous.png)](30_support_parallel_execution.md)
+[![Previous](/articles/images/Previous.png)](30_support_parallel_execution.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](32_reset_actor_state.md)

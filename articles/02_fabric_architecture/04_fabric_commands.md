@@ -217,21 +217,21 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="250pxl">
 <p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
-<p>Multiple LUIs can run in parallel. </p>
+<p>A parameter PARALLEL=true/false enables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR added in V6.5.1 supports GET of several LUI even if the sync of one LUI fails (when set to false).</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
+<p>get &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];</p>
+<p>get &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>get Customer.1;</p>
 <p>- Get the IID 1 of Customer LU.</p>
 <p>get Customer.1, CRM.34 WITH parallel=true;</p>
 <p>- Get the IIDs in parallel.</p>
-<p>get Customer.1, CRM.34 WITH parallel='all';</p>
-<p>- Get the IIDs in parallel even if the GET command of one LUI fails.</p>
+<p>get Customer.1, CRM.34 STOP_ON_ERROR=false;</p>
+<p>- Get the IIDs even if the GET command of one LUI fails.</p>
 </td>
 </tr>
 <tr>
@@ -244,9 +244,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]];;</p>
+<p>GETF &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)[@&lt;DC&gt;] [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
-<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]];</p>
+<p>GET &lt;LUT_NAME&gt;.&lt;function name&gt;(arg...)@&lt;DC&gt;,&lt;LUT_NAME_2&gt;.&lt;function name&gt;(arg...) [WITH [PARALLEL=true/false]] [STOP_ON_ERROR=true/false];</p>
 </td>
 <td valign="top" width="250pxl">
 <p>getf Customer.fnCreateInstId(235);</p>
@@ -262,10 +262,9 @@ The following table lists the GET commands:
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
-<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false];</p>
+<p>use &nbsp;&lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;] [WITH [PARALLEL=true/false] [STOP_ON_ERROR=true/false];</p>
 <p>Get multiple instances of different LUs:</p>
 <p>use &lt;LUT_NAME&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;], &lt;LUT_NAME_2&gt;.'&lt;INSTANCE_ID&gt;'[@&lt;DC&gt;];</p>
-<p>On release 6.4.2 a new parameter was added called PARALLEL, to enable running parallel get commands on different LU types.<p>
 </td>
 <td valign="top" width="250pxl">
 <p>use Customer.1;</p>
@@ -276,7 +275,8 @@ The following table lists the GET commands:
 </tr>
 </tbody>
 </table>
-<p>&nbsp;</p>
+
+
 
 #### Remote GET and GETF Commands
 
@@ -292,7 +292,6 @@ The **DELETE INSTANCE** command deletes an LUI or multiple LUIs from Fabric. Unl
 The consistency level of the Delete Instance is set in the LU_INSTANCE_DELETE parameter of the [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configuration_files.md#configini). The default value is LOCAL_QUOROM. 
 
 The following table lists the  DELETE commands:
-
 
 <table width="900pxl">
 <tbody>
@@ -320,9 +319,9 @@ The following table lists the  DELETE commands:
 </td>
 <td valign="top" width="200pxl">
 <p>Delete one instance:</p>
-<p><h6>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
+<p>delete instance&nbsp;&lt;LUT_Name&gt;.'&lt;instance_id&gt;';&nbsp;</p>
 <p>Delete multiple instances:</p>
-<p><h6>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
+<p>delete instance &lt;LUT_Name&gt;.'&lt;instance_id&gt;',&lt;LUT_Name&gt;.'&lt;instance_id&gt;',...;</p>
 </td>
 <td valign="top" width="200pxl">
 <p>delete CRM.10;</p>
@@ -337,8 +336,8 @@ The following table lists the  DELETE commands:
 <td valign="top" width="250pxl">
 <p>Delete all LUIs that do not exist in the source system. To run this command, set the config.ini file as follows:</p>
 <ul>
-<li><h6>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
-<li><h6>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
+<li>Set DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter to true</li>
+<li>Uncomment DELETE_INSTANCES_IF_NOT_EXIST_COMMAND_ENABLED parameter</li>
 </ul>
 </td>
 <td valign="top" width="200pxl">
@@ -506,7 +505,7 @@ fabric>DROP LUTYPE Customer;
 
 Fabric enables the deployment of Fabric environments and setting active environments on a [session](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---session-level) or [cluster levels](/articles/02_fabric_architecture/04_fabric_commands.md#fabric-setting---cluster-level).
 
-The [DB interfaces](/articles/05_DB_interfaces/03_DB_interfaces_overview.md) of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all DB interfaces in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
+The interfaces of an active environment can be tested using the **TEST_CONNECTION** command. To do so, run the **TEST_CONNECTION** command without parameters to test the connection of all interfaces (DB and none DB) in the [active environment](/articles/25_environments/05_set_and_list_commands.md).
 
 ### Run Queries on Cassandra
 

@@ -32,15 +32,22 @@ There are two ways to perform an Offline Deployment:
 
 3. To do the deployment, run the **Deploy** command using the following syntax:
 
+~~~
+DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>] NOSYNC <Boolean>.
+~~~
 
-   DEPLOY <LUT> WITH JAR <'jar_path'> ZIP_FILE <'zip path'> [WS_METHODS <'string'>] NOSYNC <Boolean>.
 
 
-   Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
 
-   **Example**:
+Note that if the LUT parameter is populated by a **k2_ws** (Web Service LU Type), you can populate the WS_METHODS using the list of Web Services to be deployed. If this parameter is not populated or is empty, all the WS are deployed into the Fabric Server.
 
-   DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
+**Example**:
+
+~~~
+DEPLOY k2_ws WITH JAR '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludb.jar' ZIP_FILE '/home/k2view/AutoTests/Data/StudioProject/QA/Implementation/LogicalUnits/k2_ws/ludbXMLs.zip' WS_METHODS 'dbQueryOnAnyDB' NOSYNC true;
+~~~
+
+
 
 
 #### Build and Deploy in One Step
@@ -95,31 +102,37 @@ The following table describes the syntax and the mandatory/optional parameters f
 #### Deploy Command Syntax and Options
 The following table describes the syntax and the mandatory/optional parameters when invoking the **deploy** command on the Fabric Server.
 
-   <table width="900px">
-   <tbody>
-   <tr>
-   <td width="200px">
-   <p><strong>DEPLOY</strong></p>
-   </td>
-   <td width="700px">
-   <p><strong>Usage</strong>: DEPLOY &lt;LUT&gt; WITH JAR &lt;'jar_path'&gt; ZIP_FILE &lt;'zip path'&gt; [WS_METHODS &lt;'string'&gt;] NOSYNC &lt;Boolean&gt;.</p>
-   <p><strong>Options</strong>:</p>
-   <ul>
-   <li>LUT - Logical Unit Type name.</li>
-   <li>JAR - mandatory parameter. Path to JAR file, relative to USER_DIR.</li>
-   <li>ZIP_FILE - optional parameter. Path to ZIP file, relative to USER_DIR.</li>
-   <li>NOSYNC - gets Boolean value:
-   <ul>
-	<li>NOSYNC TRUE: Only schema changes trigger sync after deploy.</li>
-    <li>NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time the instance is accessed.</li>
-   </ul>Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> in the Server Configuration window in the Fabric Studio.
-   </li>
-   <li>WS_METHODS - For LU Type = Web Services (k2_ws), specify which methods are selected, separated by &ldquo;,&rdquo;. Empty for all.</li>
-   </ul>
-   </td>
-   </tr>
-   </tbody>
-   </table>
+<table width="900px">
+<tbody>
+<tr>
+<td width="200px">
+<p><strong>DEPLOY</strong></p>
+</td>
+<td width="700px">
+<p><strong>Usage</strong>: DEPLOY &lt;LUT&gt; WITH JAR &lt;'jar_path'&gt; ZIP_FILE &lt;'zip path'&gt; [WS_METHODS &lt;'string'&gt;] NOSYNC &lt;Boolean&gt;.</p>
+<p><strong>Options</strong>:</p>
+<ul>
+<li>LUT - Logical Unit Type name.</li>
+<li>JAR - mandatory parameter. Path to JAR file, relative to USER_DIR.</li>
+<li>ZIP_FILE - optional parameter. Path to ZIP file, relative to USER_DIR.</li>
+<li>NOSYNC - gets Boolean value:
+<ul>
+<li>NOSYNC TRUE: Only schema changes trigger sync after deploy.</li>
+<li>NOSYNC FALSE: Any deploy (even without any changes) triggers sync on the first time the instance is accessed.</li>
+</ul>
+Note that NOSYNC FALSE is the same as checking <a href="/articles/14_sync_LU_instance/02_sync_modes.md#fabric-studio-server-configuration---force-upgrade-post-deploy-checkbox">Force Upgrade Post Deploy</a> in the Server Configuration window in the Fabric Studio.</li>
+<li>SOFT_DEPLOY - optional parameter. Default is <strong>False</strong>.
+<ul>
+<li>In case the value of this parameter is set to TRUE, the deploy is performed without automatic processes: user jobs, parsers and interface listener.</li>
+</ul>
+</li>
+<li>WS_METHODS - For LU Type = Web Services (k2_ws), specify which methods are selected, separated by &ldquo;,&rdquo;. Empty for all.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+
 
 
 
