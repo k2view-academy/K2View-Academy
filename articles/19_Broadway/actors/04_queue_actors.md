@@ -20,7 +20,7 @@ The **queue** category Actors enable the Pub / Sub services functionality of the
 
 Publisher and Subscriber applications must be defined in Fabric as an [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and then be set in the Actor's **interface** input argument. 
 
-The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the **Subscribe** Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
+The **topic**, **group_id** and few other input arguments have a default configuration on the interface level, thus they can be left empty in the Actor. However when a value is defined in the Actor, it is used in the flow instead of the value defined in the interface. 
 
 The **Subscribe** Actor should always listen to the same topic. The **Publish** Actor can send messages to different topics thus the **topic** argument of the Actor can be overridden during the flow.
 **Subscribe** Actor can listen to multiple topics by using regex in the **topic** argument.
@@ -28,6 +28,8 @@ The **Subscribe** Actor should always listen to the same topic. The **Publish** 
 Arguments not supported by the message provider can be left empty and be ignored. For example, the batch size is set by the **max_batch_records** input argument. This parameter is ignored by interfaces that do not support batches (such as JMS) which consider all batches to have a size of 1.
 
 The message type to be processed by the Broadway Pub / Sub functionality must be aligned with the **Data type** defined on the [Interface](/articles/05_DB_interfaces/01_interfaces_overview.md) and is limited to: String, byte[], JSON, long. The message type of an in-memory broker is not limited to any specific types.
+
+Starting from V6.5.1, **transaction_mode** input argument is added to the **Publish** Actor and it determines how the Publisher handles transactions on supported interfaces (currently supported by Kafka interface only). **Async** transaction mode (default) means that messages are sent asynchronously and only on commit Kafka sends an acknowledgement for a success or failure . 
 
 ### Timeout Setting
 
@@ -45,11 +47,6 @@ In a regular run, timeout can be controlled by setting it to the required elapse
 The **Subscribe** Actor sends an acknowledgement to the Pub / Sub service for each message received:
 - In a [Transaction](../23_transactions.md), the acknowledgment is performed during the Commit. 
 - When not in Transaction, the acknowledgement is performed during the next received message. If the server fails after reading the message, the same message is processed again.  
-### Kafka Transaction Mode
-
-Starting from Fabric 6.5.1, the **group_id** argument can be set on the **Publish** Actor and it defines the consumer group for Kafka Transaction mode only. Thus, when the Publish Actor is a part of the transaction and its group_id argument is populated, the messages are not published to the consumer's topic with the same group_id until the transaction is completed or committed. 
-
-It is important to make sure that the consumer's topic with the same group_id is active (up and listening) before the commit is executed on the Publisher application. Otherwise, if the consumer is activated after the transaction is committed, the consumer will receive only the last published message. 
 
 ### Pub / Sub Examples 
 
