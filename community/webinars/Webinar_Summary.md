@@ -16,7 +16,7 @@ Stay tuned for the next Developer Community Webinar that will take place after t
 
 The second K2View Development Community Webinar took place on July 12th where we discussed the news about the Next Generation Fabric and other interesting topics.
 
-[Read more >](webinar_20210712/99_Webinar_Agenda_And_Speakers.md)
+[Read more >](webinar_20210712/20210712_Webinar_Agenda_And_Speakers.md)
 
 <!--block-->
 
@@ -26,7 +26,7 @@ The second K2View Development Community Webinar took place on July 12th where we
 
 Welcome to our first K2View Development Community Webinar! We are happy to present you the 2021 product highlights & the roadmap.
 
-[Read more >](webinar_20210527/99_Webinar_Agenda_And_Speakers.md)
+[Read more >](webinar_20210527/20210712_Webinar_Agenda_And_Speakers.md)
 
 
 
