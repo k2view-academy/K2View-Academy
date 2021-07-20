@@ -34,7 +34,7 @@ The authorization and permissions are done according to the roles which are assi
 
 The authentication flow for this method works as follows:
 
-1. Create an API Key. See [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. To indicate that JWT is signed by Fabric do not select the "secured" option.
+1. Create an API Key. See [here](/articles/26_fabric_security/05_fabric_webservices_security.md#generating-api-key) for instructions. To indicate that JWT is signed by Fabric do not select the "secured" option.
 
 2. Make a first POST call to the Fabric server's endpoint: `<SERVER-HOST>:<SERVER-PORT>/api/authenticate`, where it provides one of the following credentials in the post body:
 
