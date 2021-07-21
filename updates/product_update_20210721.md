@@ -3,8 +3,8 @@
 The Search experience of the K2View Support Platform has been improved by introducing the following:
 
 * Search suggestions. Get the best match for your key word in the search widget as you type.
-* Search both the articles and the forum. You can now search within the Q&A too!
-* Full search results. What to see all the results? Press enter in the search widget and get them all, broken by three categories: Knowledge Base, Q&A and Community. Note that you can filter the results by category.
+* Search results are retrieved from not only the Knowledge Base, but now from the Q&A and Community categories as well. 
+* Search results are displayed indicating from where the results were retrieved: Knowledge Base, Q&A or Community. In addition, you can filter the results by category.
 
 
 
