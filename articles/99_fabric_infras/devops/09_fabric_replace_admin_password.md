@@ -4,7 +4,7 @@
 
 ## On a Fresh New Cluster  
 
-On the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric start for the first time, and then deleted.
+On the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric starts for the first time, and then deleted.
 
 bellow is example:
 
@@ -42,7 +42,7 @@ ALTER USER admin WITH PASSWORD 'Q7xp8GPNmjZp' SUPERUSER;
 
 ```
 
-2. Check the connection: 
+Check the connection: 
 
 ```bash
 # connect with the following
