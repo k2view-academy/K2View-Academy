@@ -1,10 +1,10 @@
-# Fabric - Replace the Fabric Defulte Admin Password
+# Fabric - Replace the Fabric Default Admin Password
 
 
 
 ## On a Fresh New Cluster  
 
-On the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric start for the first time, and then deleted
+On the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric start for the first time, and then deleted.
 
 bellow is example:
 
