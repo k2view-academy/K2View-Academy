@@ -6,7 +6,7 @@
 Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **false** (default) to generate a master key without a Keystore. 
 
 
-### Generate Master Key Using the Keystore
+### Generate Master Key Using Keystore
 Set the **MASTERKEY_KEY_STORE_ENABLED** parameter of the config.ini file to **true**.
 
 #### Create Keystore Directory 
