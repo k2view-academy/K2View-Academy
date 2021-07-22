@@ -1,5 +1,17 @@
 <!--block-->
 
+<img src="images/soft_deploy_1.PNG" style="zoom:80%;" />
+
+### Soft Deploy
+
+Soft Deploy is Fabric's ability to exclude automatic processes from the LU deployment. 
+
+Soft Deploy is mostly useful for implementers working in a development environment and frequently changing their code, such as Broadway flows or Java functions. They can use the Soft Deploy option to deploy their changes without triggering automatic processes.
+
+[Read more >](20210722_soft_deploy.md)
+
+<!--block-->
+
 <img src="images/image_manip_1.PNG" style="zoom:80%;" />
 
 ### Image Manipulation Actors
