@@ -1,3 +1,18 @@
+### Broadway with Cassandra Interface Consistency Level
+
+**Question:**
+
+Need the ability to change the consistency level on WRITE and READ for **DbLoad** and **DbCommand** actors. 
+
+**Answer:**
+
+The consistency level is set via the Cassandra interface using the server connection string.
+If you need to change the consistency level during your flow, define an additional interface and use it on your actor.
+
+[Read more >](https://github.com/k2view-academy/K2View-Academy/issues/303)
+
+
+
 ### Stopping CDC on Local Debug
 
 **Question:**
