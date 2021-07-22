@@ -58,4 +58,5 @@ chown fabric.fabric $K2_HOME/.ssl/k2vws.key
   - Fabric WS will be available at:
     ``` https://10.10.10.10:9443/deploy ```
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)
+

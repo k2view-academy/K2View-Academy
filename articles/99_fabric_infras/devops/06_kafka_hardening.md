@@ -201,5 +201,5 @@ The Kafka daemon starts.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/03_fabric_and_cassandra_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/05_oracleGG_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/05_connect_fabric_to_cassandra_with_tls.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/07_fabric_kafkaSSL_support.md)
 

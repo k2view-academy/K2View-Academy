@@ -37,9 +37,9 @@ sed -i 's@#-Djavax.net.ssl.trustStorePassword=.*@-Djavax.net.ssl.trustStorePassw
 
 - Start the Fabric service on each node: ```K2fabric start```
 
-<u>**Note:** make sure not to use the defulte `cassandra` user for connection between Fabric and Cassandra</u>
+<u>**Note:** make sure not to use the default `cassandra` user for connection between Fabric and Cassandra</u>
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_kafka_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/04_cassandra_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/06_kafka_hardening.md)
 

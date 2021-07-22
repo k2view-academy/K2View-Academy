@@ -11,16 +11,15 @@ bellow is example:
 ~~~bash
 cp config/adminInitialCredentials.template config/adminInitialCredentials
 sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
-
 ~~~
 
-now you can start Fabric, and use the following user and password example:
+Now you can start Fabric, and use the following user and password example:
 
 `user: k2consoleadmin` 
 
 `password: KW4RVG98RR9xcrTv` 
 
-## On running cluster 
+## On Running Cluster 
 
 ### Via the Web Admin UI
 
@@ -61,5 +60,5 @@ Access points examples:
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_kafka_hardening.md)
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/08_oracleGG_hardening.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/10_fabric_definde_master_key.md)
 

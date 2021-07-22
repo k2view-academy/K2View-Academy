@@ -1,6 +1,4 @@
-# Fabric - Defined Working with Master Key
-
-## Define Fabric Working Mode for the Master Key
+Define Fabric Working Mode for the Master Key
 
 
 ### Generate Master Key Without Keystore
@@ -44,5 +42,6 @@ sed -i 's@#KEY_STORE_PASSWORD=.*@KEY_STORE_PASSWORD= <password>@' $K2_HOME/confi
 ### Restart Fabric Nodes
 - Restart all Fabric nodes.
 
-![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/02_fabric_environments.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/99_fabric_infras/devops/04_kafka_hardening.md)
 
+
+[![Previous](/articles/images/Previous.png)](/articles/99_fabric_infras/devops/09_fabric_replace_admin_password.md)
