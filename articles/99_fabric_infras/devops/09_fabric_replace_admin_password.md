@@ -2,9 +2,9 @@
 
 
 
-## On a fresh new cluster  
+## On a Fresh New Cluster  
 
-on the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric start for the first time, and then deleted
+On the first Fabric node use the `adminInitialCredentials` file for seting the user and password for the Fabric "admin" user. The file will be read when Fabric start for the first time, and then deleted
 
 bellow is example:
 
@@ -25,7 +25,7 @@ Now you can start Fabric, and use the following user and password example:
 
 
 
-### Via console
+### Via Console
 
 ```bash
 # create second admin user
@@ -52,10 +52,10 @@ fabric on;
 
 Access points examples:
 
--- Fabric WS will be available at:
+* Fabric WS will be available at:
 ``` https://10.10.10.10:9443/deploy ```
 
--- Admin:
+* Admin:
 ``` https://10.10.10.10:9443/admin/gui/index.html ```
 
 
