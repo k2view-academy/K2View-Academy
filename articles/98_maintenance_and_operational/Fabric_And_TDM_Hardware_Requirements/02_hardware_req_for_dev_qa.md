@@ -2,8 +2,8 @@
 
 ### PostgreSQL
 
-- **PostgreSQL is generally required for TDM projects only**. 
-- It can be deployed on a VM (In case it is deployed on a VM, use latest CentOS/Redhat Operating System with latest patches.) or alternatively use PostgreSQL as a service. 
+- PostgreSQL is generally required for TDM projects only. 
+- PostgreSQL can be deployed on a VM (In case it is deployed on a VM, use latest CentOS/Redhat Operating System with latest patches.) or alternatively as a service. 
 - K2view supports PostgreSQL version 9.6 & 13.
 
  **For cloud deployments:**
@@ -12,7 +12,7 @@
 - If using **Azure** VM: A8v2 
 - If using **GCP**: e2-standard-4
 
-  The PostgreSQL requires 100G storage
+  PostgreSQL requires 100G storage.
 
 **If you are implementing PostgreSQL as a PaaS you can use for example:**
 
@@ -25,14 +25,14 @@
 
 #### MINIMUM HW REQUIREMENTS 
 
-**For Local installation:**
+**For local installation:**
 
 - Windows Version – Any one of the following: 10/11/2012/2016/2019 64bit Machine 
 - CPU: 8 Cores/vCPUs.       
 - RAM: 8GB 
 - Storage: 100GB Available Disk Space       
 
-**For Cloud installation:** 
+**For cloud installation:** 
 
 - AWS: EC2: a1.2xlarge, m5.xlarge
 - Azure VM: A8v2 
@@ -56,12 +56,10 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 1 x CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified), and the following hardware:
 
-- CPU: 4 Cores/vCPUs. (Modern Xeon Processor). 
-
-- RAM: 12GB. 
-
+- Modern Xeon Processor
+- 4 Cores/vCPUs 
+- RAM: 12GB 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration. In cases where SAN must be used, it has to be flush one and in RAID-0. 
-
   **NAS are not certified**.
 
   - The FS volumes required are as follows: 
@@ -93,8 +91,7 @@ Follow these steps to setup a Linux Server:
 9. Add a user ‘**kafka** with group ‘**fabric’**
 10. Provide read/write access to **/opt/apps/kafka**
 11. Remote access option (SSH) enabled to user **kafka**.
-
-**Run the following as ROOT:**
+12. Run the following as ROOT:
 
 ~~~bash
 echo "root  soft   nproc   unlimited"  >> /etc/security/limits.conf
@@ -115,7 +112,7 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 ### LINUX PORTS 
 
-The following ports should be opened on the LINUX server and accessible from outside the machine: 
+The following ports should be opened on the LINUX server and made accessible from outside the machine: 
 
 <table style="border-collapse: collapse; width: 100%; height: 209px;" border="1">
 <tbody>
@@ -125,23 +122,23 @@ The following ports should be opened on the LINUX server and accessible from out
 </tr>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;">7000</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;">7001</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;">7199</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;">9042</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr style="height: 18px;">
 <td style="width: 50%; height: 18px;">9160</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr style="height: 11px;">
 <td style="width: 50%; height: 11px;">3213, 9443</td>
