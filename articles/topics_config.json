@@ -1,10 +1,6 @@
 {
 	"Branches": [
 		{
-			"display name": "community_setup",
-			"branch name": "community_setup"
-		},
-		{
 			"display name": "Fabric 6.5",
 			"branch name": "Academy_6.5"
 		},
