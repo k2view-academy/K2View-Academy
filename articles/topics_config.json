@@ -273,52 +273,57 @@
 	],
 	"KB": [
 		{
-			"KB display name": "RN and Upgrade",
-			"KB display text": "The release notes including the latest features & fixes and the upgrade procedure document.",
+			"KB display name": "RN, Installation and Upgrade",
+			"KB display text": "The release notes including the latest release features & fixes, release installation instructions and the upgrade procedure documents.",
 			"KB icon": "images/icon-release.png",
 			"visible": true
 		},
 		{
 			"KB display name": "Demo Projects",
-			"KB display text": "Sample demo projects of Data Fabric, TDM and other implementations including the setup guidelines.",
+			"KB display text": "Sample demo projects of Data Fabric, TDM and DPM including the setup guidelines.",
 			"KB icon": "images/icon-demo.png",
 			"visible": true
 		},
 		{
+			"KB display name": "Maintenance & Operational",
+			"KB display text": "Fabric Infrastructure configuration and maintenance documents including hardware, software, and operating system requirements.",
+			"KB icon": "images/icon-maintenance.png",
+			"visible": true
+		},
+		{
 			"KB display name": "Best Practices",
-			"KB display text": "Recommended tools, best practices and implementation examples.",
+			"KB display text": "Recommended tools, best practices and implementation examples. Tips & tricks for working with Fabric.",
 			"KB icon": "images/icon-best.png",
 			"visible": true
 		}
 	],
 	"Community": [
 		{
-			"comm display name": "In the Spotlight",
-			"comm display text": "Access the latest development tips, code examples and best practices, regularly updated by the K2View’s community developers.",
-			"comm icon": "images/community_icon1.png",
+			"comm display name": "Webinars",
+			"comm display text": "Registration for K2View webinars and seminars including the recording and past webinars materials.",
+			"comm icon": "../community/webinars/images/webinar_icon.png",
 			"visible": true,
-			"path": "../community/spotlight"
+			"path": "../community/webinars",
+			"view all link": "../community/webinars/README.html",
+			"view all text": "Click to view all the Webinars"
+		},		
+		{
+			"comm display name": "In the Spotlight",
+			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
+			"comm icon": "../community/spotlight/images/spotlight.png",
+			"visible": true,
+			"path": "../community/spotlight",
+			"view all link": "../community/spotlight/README.html",
+			"view all text": "Click to view all the Spotlights"
 		},
 		{
 			"comm display name": "Q&A",
-			"comm display text": "Ask questions or seek help on Fabric’s implementation. Check our forum that provides advice and know-how to help you at any phase of your project’s lifecycle.",
-			"comm icon": "images/community_icon2.png",
+			"comm display text": "Ask questions on Fabric’s implementation. Check our forum for advice and know-how to help you at any phase of your project’s lifecycle.",
+			"comm icon": "../community/q_a/images/q_a_icon.png",
 			"visible": true,
-			"path": "https://github.com/k2view-academy/K2View-Academy/issues?q=is%3Aissue+is%3Aclosed"
-		},
-		{
-			"comm display name": "Blogs",
-			"comm display text": "Featuring a set of regularly updated insightful articles aiming at contextualizing your business requirements using K2View Fabric’s capabilities.",
-			"comm icon": "images/community_icon3.png",
-			"visible": true,
-			"path": "../community/blogs"
-		},
-		{
-			"comm display name": "Webinars",
-			"comm display text": "Registration for K2View webinars and seminars including recorded webinars.",
-			"comm icon": "images/community_icon4.png",
-			"visible": true,
-			"path": "../community/webinar"
+			"path": "../community/q_a",
+			"view all link": "https://github.com/k2view-academy/K2View-Academy/issues?q=is%3Aissue+is%3Aclosed",
+			"view all text": "Click to view all Q&A"
 		}
 	]
 }
