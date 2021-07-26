@@ -1,4 +1,4 @@
-# Fabric & TDM 7.xx Hardware Requirements for Development and QA Environments
+## Fabric & TDM 7.xx Hardware Requirements for Development and QA Environments
 
 ### PostgreSQL
 
