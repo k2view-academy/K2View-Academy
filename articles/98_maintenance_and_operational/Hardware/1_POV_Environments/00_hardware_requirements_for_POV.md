@@ -27,7 +27,7 @@ The installation is based on Docker containers
 
 The following ports should be opened on the Windows server:
 
--   3389 -- Used for RDP
+-   3389 - Used for RDP
 
 #### Windows Permissions 
 
@@ -75,30 +75,31 @@ Hardware requirements:
 
 The following ports should be opened on the LINUX server and accessible from outside the machine:
 
-<table style="border-collapse: collapse; width: 100%; height: 131px;" border="1">
+<table style="border-collapse: collapse; width: 100%;">
 <tbody>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
 <td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">3213, 9443, 5124, 6379</td>
 <td style="width: 50%; height: 18px;">Fabric</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">9042, 9142</td>
 <td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">9093, 7270</td>
 <td style="width: 50%; height: 18px;">Kafka</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">3000, 9090</td>
 <td style="width: 50%; height: 18px;">Grafana stack</td>
 </tr>
 </tbody>
 </table>
+
 
 
 

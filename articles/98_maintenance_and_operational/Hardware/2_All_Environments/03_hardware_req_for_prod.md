@@ -130,26 +130,27 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 Open the following ports on the LINUX server, and make sure they are accessible outside the server: 
 
-<table style="border-collapse: collapse; width: 100%; height: 131px;" border="1">
+<table style="border-collapse: collapse; width: 100%;">
 <tbody>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
 <td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">2181, 2888, 3888</td>
 <td style="width: 50%; height: 18px;">Kafka Zookeeper</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">9093, 9081, 7270</td>
 <td style="width: 50%; height: 18px;">Kafka</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">3213, 9443, 5124, 6379, 7170, 7270</td>
 <td style="width: 50%; height: 18px;">K2View Fabric</td>
 </tr>
 </tbody>
 </table>
+
 
 ### Cassandra Linux Execution Server Specifications 
 
@@ -229,22 +230,23 @@ echo  "fs.file-max = 1000000" >> /etc/sysctl.conf
 
 The following ports should be opened on the LINUX server and accessible outside the server: 
 
-<table style="border-collapse: collapse; width: 100%; " border="1">
+<table style="border-collapse: collapse; width: 100%;">
 <tbody>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
 <td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">9042, 9142, 7000, 7001, 7199, 7070</td>
 <td style="width: 50%; height: 18px;">cassandra</td>
 </tr>
-<tr style="height: 18px;">
+<tr>
 <td style="width: 50%; height: 18px;">8080</td>
 <td style="width: 50%; height: 18px;">cassandra-reaper</td>
 </tr>
 </tbody>
 </table>
+
 
 
 
