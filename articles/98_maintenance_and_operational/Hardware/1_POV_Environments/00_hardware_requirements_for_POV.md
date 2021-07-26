@@ -1,4 +1,4 @@
-# Fabric & TDM 7.xx Infrastructure Requirements for POC/POV Installations
+# Fabric & TDM 7.xx Hardware Requirements for POC/POV Installations
 
 ### Introduction 
 
@@ -105,5 +105,4 @@ The following ports should be opened on the LINUX server and accessible from out
 #### Connectivity 
 
 All servers should have access (permissions) and connectivity (network) to all legacy & target systems.
-
 
