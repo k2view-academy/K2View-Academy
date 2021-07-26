@@ -1,4 +1,4 @@
-# Fabric & TDM 7.xx Hardware Requirements
+## Fabric & TDM 7.xx Hardware Requirements
 
 
 ### INTRODUCTION
