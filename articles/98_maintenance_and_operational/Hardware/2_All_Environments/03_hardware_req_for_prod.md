@@ -1,6 +1,6 @@
-# Fabric & TDM 7.xx Hardware Requirements for Production Environments
+## Fabric & TDM 7.xx Hardware Requirements for Production Environments
 
-## PostgreSQL
+### PostgreSQL
 
 - **PostgreSQL is generally required for TDM projects only**. 
 - K2view supports PostgreSQL version 9.6 & 13.
