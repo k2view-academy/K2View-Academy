@@ -1,6 +1,6 @@
 # LDAP Interface
 
-The LDAP interface type defines the communication details with LDAP.
+The LDAP interface type defines the communication details with LDAP service provider.
 
 To create a new LDAP interface, do the following:
 
@@ -37,10 +37,16 @@ To create a new LDAP interface, do the following:
 </tr>
 <tr>
 <td><strong>Securiy Level</strong></td>
-<td>LDAP security level.</td>
+<td>JNDI environment property <i>java.naming.security.authentication</i> that specifies the authentication mechanism(s) for the provider to use. The following values are defined for this property: 
+    <li><strong>none</strong> - use no authentication (anonymous bind).</li> 
+    <li><strong>simple</strong> - use simple authentication (a cleartext password). </li> 
+    <li>A space-separated list of one or more SASL mechanism names.</li>         
+    If the value is not specified, the behaviour is determined by the service provider.
+</td>
 </tr>
 </tbody>
 </table>
+
 
 
 
