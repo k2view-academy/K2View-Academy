@@ -1,23 +1,21 @@
-# Fabric & TDM 7.xx Hardware Requirements for POC/POV Installations
+# Fabric & TDM 7.xx Hardware Requirements for POC Installations
 
 ### Introduction 
 
-This document provides information regarding hardware, software, and operating system requirements for Fabric and TDM proof-of-concept and proof-of-value installations.
+This document provides information regarding hardware, software, and operating system requirements for Fabric and TDM proof-of-concept installations.
 
-The installation is based on Docker containers
+The installation is based on Docker containers.
 
 ### Fabric Studio Windows Server  
 
-#### Minimum Hardware Requirements 
-
-##### For Local installation:
+#### For Local Installation:
 
 -   Windows Version -- Any one of the following: 10/11/2012/2016/2019 64bit Machine
 -   8 Cores/vCPUs.
 -   8GB RAM
 -   100GB Available Disk Space
 
-##### For Cloud installation:
+#### For Cloud Installation:
 
 -   AWS: EC2: a1.2xlarge, m5.xlarge
 -   Azure VM: A8v2
@@ -37,14 +35,14 @@ Local administrator privileges are needed for the Fabric Studio installation.
 
 -   Notepad++
 -   [7zip](http://www.7-zip.org/download.html)
--   [winscp](https://winscp.net/eng/download.php)
+-   [WinSCP](https://winscp.net/eng/download.php)
 -   Putty
--   tortoisegit: <https://tortoisegit.org/download/>
--   intellij IDE (community edition): <https://www.jetbrains.com/idea/download/download-thanks.html?platform=mac&code=IIC>
+-   TortoiseGit: <https://tortoisegit.org/download/>
+-   Intellij IDE (community edition): <https://www.jetbrains.com/idea/download/download-thanks.html?platform=mac&code=IIC>
 
-### POC/POV Linux Execution Server Specifications
+### POC Linux Execution Server Specifications
 
-On this server we will install run number of containers:
+Install several containers on this server:
 
 -   Fabric server
 -   Cassandra
@@ -53,27 +51,25 @@ On this server we will install run number of containers:
 
 #### Minimum Hardware Configuration for Each Linux Server 
 
-Use the latest RedHat/CentOS Operating System, with **latest** **Docker CE**, and **latest** **docker-compose** installed
+Use the latest RedHat/CentOS Operating System, with **latest** **Docker Engine**, and **latest** **docker-compose** installed
 
-Hardware requirements:
-
+##### Hardware Requirements:
 -   Modern Xeon Processor.
--   CPU 8/16 Cores/vCPUs.
--   RAM: 64GB RAM.
+-   CPU 8 Cores/vCPUs (16 recommended).
+-   64GB RAM.
 -   Network: Minimum 1G between the nodes and source DB's
 -   Storage: The preferred storage is attached local SSD's devices, that IOS provisioning can be set.
-    The **/var/lib/docker** directory require volume of at list 200G
+    The **/var/lib/docker** directory requires a volume of at least 200G
     \* Should be increased based on project scope and data retention requirements
 
 ##### For a Cloud Installation:
-
 -   If using **AWS**: EC2: m54.xlarge
 -   If using **Azure** VM: D16d v4
 -   If using **GCP**: e2-standard-8
 
 #### Linux Ports 
 
-The following ports should be opened on the LINUX server and accessible from outside the machine:
+Open the following ports on the LINUX server and make sure they are accessible from outside the machine:
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
