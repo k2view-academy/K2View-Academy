@@ -37,15 +37,16 @@ To create a new LDAP interface, do the following:
 </tr>
 <tr>
 <td><strong>Securiy Level</strong></td>
-<td>JNDI environment property <i>java.naming.security.authentication</i> that specifies the authentication mechanism(s) for the provider to use. The following values are defined for this property: 
+<td>Constant that holds the JNDI environment property for specifying the security level (<i>java.naming.security.authentication</i>) to use. The following values are defined: 
     <li><strong>none</strong> - use no authentication (anonymous bind).</li> 
-    <li><strong>simple</strong> - use simple authentication (a cleartext password). </li> 
-    <li>A space-separated list of one or more SASL mechanism names.</li>         
-    If the value is not specified, the behaviour is determined by the service provider.
+    <li><strong>simple</strong> - use simple authentication (a cleartext password). </li>
+    <li>a provider-specific space-separated list of one or more SASL mechanism names.</li>         
+    If the value is not specified, the behaviour is determined by the service provider's default.
 </td>
 </tr>
 </tbody>
 </table>
+
 
 
 
