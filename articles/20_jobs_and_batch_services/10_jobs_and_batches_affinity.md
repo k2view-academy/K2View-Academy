@@ -45,8 +45,8 @@ whereby:
 
 The dedicated node will avoid taking jobs above the recommended number immediately in order to give the opportunity to other node with empty slots to claim that specific job. 
 
-In such a case, if a node has already reached its recommended size, and if it is trying to claim a new job allocated to it, the node will need to wait for a number of seconds - specified by the *CLAIM_EXCEPTIONAL_INTERVAL_SEC* parameter - *before* it can claim *that specific job*.
- The parameter is configured in the *config.ini* file. Its default value is set to 60 seconds.
+In such a case, if a node has already reached its recommended size, and if it is trying to claim a new job allocated to it, the node will need to wait for a number of seconds - specified by the *CLAIM_EXCEPTIONAL_INTERVAL_SEC* parameter - **before** it can claim **that specific** job.
+ The parameter is configured in the **config.ini** file. Its default value is set to 60 seconds.
 ```CLAIM_EXCEPTIONAL_INTERVAL_SEC=60```
 
 This mechanism gives the opportunity to different nodes with empty slots to claim this job.
