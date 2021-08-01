@@ -43,13 +43,14 @@ whereby:
 - 2 is the recommended number of jobs that can run concurrently.
 - 4 is the maximum number of jobs that can run concurrently.
 
-The server will avoid taking jobs above the recommended number immediately in order to give the opportunity to other nodes.
+The dedicated node will avoid taking jobs above the recommended number immediately in order to give the opportunity to other node with empty slots to claim that specific job. 
 
-If a node that runs jobs with a limited affinity 'x' has already reached its recommended size, and is trying to claim a new job with the same logical id, the node will need to wait before it can claim that job. 
+In such a case, if a node has already reached its recommended size, and if it is trying to claim a new job allocated to it, the node will need to wait for a number of seconds - specified by the *CLAIM_EXCEPTIONAL_INTERVAL_SEC* parameter - *before* it can claim *that specific job*.
+ The parameter is configured in the *config.ini* file. Its default value is set to 60 seconds.
+```CLAIM_EXCEPTIONAL_INTERVAL_SEC=60```
 
-This is happening in order to give the opportunity for any other nodes with empty slots to claim that specific job.
-
-In case where a node claimed a job above its recomended pool size, the server will stop and release all the extra jobs that are running above the recommended pool size. Then, other servers will be allowed to take the jobs that have been stopped. 
+This mechanism gives the opportunity to different nodes with empty slots to claim this job.
+In cases where a node claimed a job above its recomended pool size, the server will stop and release all the extra jobs that are running above the recommended pool size. Then, other servers will be allowed to take the jobs that have been stopped. 
 
 For this purpose, a random number is generated to decide when it will be set to *restart* status and therefore give the opportunity to other nodes (with empty slots) to execute it. 
 
@@ -61,12 +62,6 @@ This random number will fluctuate between the 2 following paramaters: *MIN_GIVE_
         - *MAX_GIVE_UP_EXCEPTIONAL_MINUTES* value defines the maximum time for restarting jobs that taken after the recommended time reached, min value = 2, max = 14400
         MAX_GIVE_UP_EXCEPTIONAL_MINUTES = 1440
  
-
-
-
-
-
-
 
 
 ## Affinity Use Cases
