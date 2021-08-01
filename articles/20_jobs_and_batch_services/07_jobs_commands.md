@@ -42,7 +42,7 @@ Starts the Job using arguments:
 </td>
 <td valign="top" width="300pxl">
 
-<p>STARTJOB USERJOB NAME=’CUST-TestJob1' UID='CUST-TestJob1' AFFINITY='10.21.1.85' ARGS={"testName":"Test"} EXEC_INTERVAL='00:00:30';</p>
+<p>STARTJOB USER_JOB NAME=’CUST-TestJob1' UID='CUST-TestJob1' AFFINITY='10.21.1.85' ARGS={"testName":"Test"} EXEC_INTERVAL='00:00:30';</p>
 
 </td>
 </tr> 
@@ -103,7 +103,7 @@ Restarts all matching Jobs with this name and type.
 </td>
 <td valign="top" width="300pxl">
 
-<p>RESTARTJOB USERJOB NAME='CUST-TestJob1';</p>
+<p>RESTARTJOB USER_JOB NAME='CUST-TestJob1';</p>
 
 </td>
 </tr> 
@@ -123,7 +123,7 @@ Restarts a specific Job matching an UID.
 </td>
 <td valign="top" width="300pxl">
 
-<p>RESTARTJOB USERJOB NAME='CUST-TestJob1' UID='CUST-TestJob1';</p>
+<p>RESTARTJOB USER_JOB NAME='CUST-TestJob1' UID='CUST-TestJob1';</p>
 
 </td>
 </tr> 
@@ -176,7 +176,7 @@ NOTE that to update a cron job to a one-time job, use EXEC_INTERVAL=''
 </td>
 <td valign="top" width="300pxl">
 
-<p>UPDATEJOB USERJOB NAME=’CUST-TestJob2' UID='CUST-TestJob2' AFFINITY='10.21.1.85' ARGS={"userJobName":"userTest"} EXEC_INTERVAL='00:00:30';
+<p>UPDATEJOB USER_JOB NAME=’CUST-TestJob2' UID='CUST-TestJob2' AFFINITY='10.21.1.85' ARGS={"userJobName":"userTest"} EXEC_INTERVAL='00:00:30';
 </p>
 
 </td>
