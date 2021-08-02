@@ -14,7 +14,7 @@ It is recommended to edit the code in a Web Service function using the IntelliJ 
 
    * Navigation and Search options.
 
-Note that IntelliJ is not part of the Fabric Studio Installation Package and **must be** installed. Once installed, it is integrated into the Fabric Studio and can be invoked by right clicking the Web Service working area and selecting it or by pressing **CTTL+I** on your keyboard.
+Note that IntelliJ is not part of the Fabric Studio Installation Package and **must be** installed. Once installed, it is integrated into the Fabric Studio and can be invoked by right clicking the Web Service working area and selecting it or by pressing **CTRL+I** on your keyboard.
 
 A Web Service can also be edited directly in its main working area.
 
