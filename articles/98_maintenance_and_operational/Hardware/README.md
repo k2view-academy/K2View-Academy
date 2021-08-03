@@ -1,4 +1,4 @@
-<strong>Hardware Requirements<strong>
+<strong>Hardware<strong>
 
 <ul>      
 <li>
