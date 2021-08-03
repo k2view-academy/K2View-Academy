@@ -20,9 +20,11 @@ To setup Fabric as a data source, define the following:
 
 * Connection String - define as follows:
 
-  * urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
+  ~~~
+  urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
+  ~~~
 
-  * Exago that is running on a Windows docker can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
+Exago that is running on a Windows docker can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
 
 ![image](images/bi_setup_1.PNG)
 
