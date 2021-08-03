@@ -1,4 +1,4 @@
-<strong>Fabric and TDM 7.x POV Hardware Requirements<strong>
+<strong>POV Hardware Requirements<strong>
         
 
 <ul>
