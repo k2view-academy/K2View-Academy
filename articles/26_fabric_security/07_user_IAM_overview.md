@@ -4,11 +4,11 @@
 
 Modern authentication and authorization platforms are responsible for user **identification** via an **authentication** process, and for **access management** via **authorization** mechanisms. Together they are also called Identification and Access Management (IAM).
 
-Such platforms and related protocols usually define several actors that are present in every use case: *principal, Identity Provider (IDP)*, and *Relying Party (RP)* or *Service Provider (SP)*:
+Such platforms and related protocols usually define several actors that are present in every use case: *principal, Identity Provider (IDP)*, and *Relying Party (RP)* also called *Service Provider (SP)*:
 
 - The *principal* (typically a user, though maybe a system actor) is an entity that can be authenticated.
 - The *IDP* authenticates principals and issues tokens (or assertions). 
-- The *SP* is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. 
+- The *SP/RP* is an application or resource that is protected and requires authentication and authorization of any principal wishing to access it. 
 
 It is important to keep the definitions of these terms in mind: 
 
