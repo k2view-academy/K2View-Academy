@@ -54,7 +54,7 @@ Use a dedicated server for Fabric, and a separate, dedicated server for Kafka
 
 #### Hardware Requirements (for each Linux server): 
 
-For local installations: 
+**For local installations:** 
 
 - OS: latest CentOS/Redhat Operating System with latest patches
 - CPU: 8 Cores/16vCPUs (Modern Xeon Processor)
@@ -65,9 +65,9 @@ For local installations:
   When **SAN must be used,** it must be flash and in RAID-0. 
   **NAS are not certified** 
 
- **For Cloud installation:** 
+**For Cloud installation:** 
 
-##### Cloud instances for SOR
+Cloud instances for SOR:
 
    - If using **AWS**: EC2: m5.2xlarge
      - Use gp3, for K2view home and data storage
@@ -75,7 +75,7 @@ For local installations:
    - If using **Azure**: Standard_DS14_v2
    - If using **GCP**: e2-standard-8
 
-#####   Cloud instances for non SOR
+Cloud instances for non SOR:
 
    - If using **AWS**: EC2: i3.2xlarge – 
      - For the K2view home directory gp3, use the NVMe device
@@ -130,7 +130,7 @@ echo "fs.file-max =  1000000" >> /etc/sysctl.conf
 
 Open the following ports on the LINUX server, and make sure they are accessible outside the server: 
 
-<table style="border-collapse: collapse; width: 100%;">
+<table>
 <tbody>
 <tr>
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
@@ -156,7 +156,7 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 
 Install Cassandra under **cassandra** user.  
 
-##### Cassandra Servers   
+#### Cassandra Servers   
 
 For local installation: 
 
@@ -168,39 +168,39 @@ For local installation:
   In cases where SAN must be used then it must be flash and in RAID-0.
   **NAS are not certified** 
 
-For Cloud installation:
+**For Cloud installation:**
 
-#####   Cloud instances for SOR
+Cloud instances for SOR:
 
    - If using **AWS**: EC2: m5.4xlarge 
      - Use gp3 for Cassandra home and data storage
    - If using **Azure**: Standard_DS14_v2
    - If using **GCP**: c2-standard-16, see also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
-#####   Cloud instances for non SOR
+Cloud instances for non SOR:
 
    -  If using **AWS**: EC2: i3.2xlarge 
-     - For the Cassandra home directory gp3 storage, use the NVMe device for data storage
-   - If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 
+     -  For the Cassandra home directory gp3 storage, use the NVMe device for data storage
+   -  If using **Azure**: Standard_DS14_v2, Standard_L8s_v2 
      - For the cassandra storage, use the NVMe device 
-   - If using **GCP**: c2-standard-16
+   -  If using **GCP**: c2-standard-16
      - Make sure to attach to the VM “local SSD” type env NVMe. See also https://cloud.google.com/compute/docs/disks/performance for use of “Block storage”
 
-- For all installations, the FS configuration **<u>for SOR</u>** must be as follows:
+**For all installations, the FS configuration <u>for SOR</u> must be as follows:**
 
-  - Volume of 50G /opt/apps/cassandra/ 
-  - Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
-  - Volume of 2T* /opt/apps/cassandra/storage/data
-  - Volume of [10% of the data] /opt/apps/cassandra/storage/hints 
+- Volume of 50G /opt/apps/cassandra/ 
+- Volume of [25% of the data] /opt/apps/cassandra/storage/commitlog
+- Volume of 2T* /opt/apps/cassandra/storage/data
+- Volume of [10% of the data] /opt/apps/cassandra/storage/hints 
 
 **Note:** 
 - the FS must provide IOPS of at least 30K read & 10K write on each node simultaneously, while all nodes are running the test at the same time.
 - The above volume values should be modified in accordance with project scope and data retention requirements.
 
-**For all installations, the FS configuration for non SOR must be as follows: **
+**For all installations, the FS configuration for non SOR must be as follows:**   
 
-    - Volume of 50G /opt/apps/cassandra/ 
-    - Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM     
+- Volume of 50G /opt/apps/cassandra/
+- Volume of 2T* /opt/apps/cassandra/storage/ mount on the NVMe LVM
 
 The above volume values should be modified in accordance with project scope and data retention requirements. 
 
@@ -230,7 +230,7 @@ echo  "fs.file-max = 1000000" >> /etc/sysctl.conf
 
 The following ports should be opened on the LINUX server and accessible outside the server: 
 
-<table style="border-collapse: collapse; width: 100%;">
+<table>
 <tbody>
 <tr>
 <td style="width: 50%; height: 18px;"><strong>22</strong></td>
