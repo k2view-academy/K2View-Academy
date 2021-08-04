@@ -113,23 +113,27 @@ The **TDMOrchestrator.flow** should be created from the Logical Unit's Broadway 
 
 ### Step 5 - Mask the Sensitive Data
 
-TDM systems often handle sensitive data. To be compliant with Data Privacy laws, Fabric enables masking sensitive fields like SSN, credit card numbers and email addresses before they are loaded either to Fabric or into the target DB.
+TDM systems often handle sensitive data. To be compliant with data privacy laws, Fabric enables masking sensitive fields like SSN, credit card numbers and email addresses before they are loaded either to Fabric or into the target database.
 
-* To mask a sensitive field prior to loading it into Fabric, create a Broadway population flow for the table that includes this field and add one or more **Masking** Actors. 
+* To mask a sensitive field prior to loading it into Fabric, create a Broadway population flow for the table that includes this field and add one or more **Masking** actors. 
 
   ![image](images/11_tdm_impl_05.PNG)
 
-* To mask a sensitive field as part of Load to the Target DB, add a Masking Actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls enabling or disabling masking based on the settings of the global variables. There are three possible scenarios for handling masking:
+  If the masked field is used as an [input argument](/articles/03_logical_units/12_LU_hierarchy_and_linking_table_population.md) that is linked to another LU table, add the masking population that masks the fields in all LU tables to the last executed LU table in order to have the original value when populating the LU tables. 
+  
+* To mask a sensitive field as part of a load to the Target DB, add a masking actor to the relevant **load_[Table Name].flow**. The TDM infrastructure controls enabling or disabling masking based on the settings of the global variables. 
+
+  There are three possible scenarios for handling masking:
 
   * When the TDM task is for synthetic data creation, masking is always enabled.
   * When The TDM task is for Data Flux, masking is always disabled.
   * In all other scenarios masking behavior depends on the MASK_FLAG settings.
   
-* Note that there is no need to add a masking on both processes, LUI Sync and the Load flow, for synthetic data creation, since the TDM task execution process duplicates the clonned entity ID, set in the task, and attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
+* Note that there is no need to add a masking on both processes (LUI Sync and the Load flow) for synthetic data creation, since the TDM task execution process duplicates the clonned entity ID that was set in the task. As such, it attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
  
-[Click to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
+[Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
-[Click to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
+[Click here to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
 
 
 

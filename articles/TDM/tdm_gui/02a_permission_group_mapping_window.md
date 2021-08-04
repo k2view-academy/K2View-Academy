@@ -56,5 +56,9 @@ Click the ![delete](images/permission_group_delete_icon.png) icon next to the Pe
 
 
 
+Note that a delete or edit of a permission group mapping can remove the users of the related Fabric roles from their TDM environments.
+
+
+
 [![Previous](/articles/images/Previous.png)](02_tdm_gui_user_types.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_gui_data_centers_window.md)
 

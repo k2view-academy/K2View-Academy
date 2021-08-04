@@ -46,51 +46,50 @@ Import the [TDM_LIBRARY LU](/articles/TDM/tdm_implementation/04_fabric_tdm_libra
 
 ### Step 3 - Add the Source LU Tables to the LU Schema
 
-1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of Customer LU.
+1. Link the main source LU tables to the FABRIC_TDM_ROOT table. The main source tables represents the main (root) table in the data source. For example, the Customer table is the main source LU table of the Customer LU.
 
-2. Verify that the one of main source LU table is also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
+2. Verify that the the main source LU tables are also populated in [ROOT_TABLE_NAME and ROOT_COLUMN_NAME Globals](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#globals).
 
-3. Create the population of the main source LU tables based on the [Root function](/articles/07_table_population/11_1_creating_or_editing_a_root_function.md). The generated root function contains the output fields and the select query on the source table. 
+3. Create the population of the main source LU tables:
 
-4. Edit the Root functions generated for the LU tables based on the **fnPop_RootTable** function under the [TDM_LIBRARY LU](04_fabric_tdm_library.md#tdm_library-lu):
+   Generate a Broadway flow for the populated based on **populationRootTable.pop.flow** template (imported from the TDM Library): 
+
+   - Right click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window is opened.
+
+   - Populate the popup window's settings as follows:
+
+     - **File Name**: populate the file name by [LU Table Name].[flow name]
+     - **Parameters**:
+       - **TABLE_NAME** : populate it by the LU table name. Note that the LU table name must be identical to the data source table name.
+       - **KEY**: populate the key to delete the LU table before populating it.
+       - **SOURCE_INTERFACE**: the interface name for the source DB query.
+
+   - Example:
+
+     ![template](images/create_main_source_lu_flow_by_template.png)
+
+4. The Broadway flow deletes and re-populates the main source LU table under the following conditions:
+
+      - Running an [Extract task](/articles/TDM/tdm_gui/16_extract_task.md) or a [regular Load task](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#operation-mode) (the Entity Versioning is false) which  loads (inserts) the entities to the target environment.
+
+      - The **Override Sync Mode** setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source. 
+
+        Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
+
+5. As  a result, if the Sync mode is set to **Do not sync** by the user, the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, or a [Data Flux load task](/articles/TDM/tdm_gui/15_data_flux_task.md)  the source LU tables are not populated by the LUI sync. 
+
+6. The Broadway flow also validates if the entity exists in the source table. If the entity is not found in the main source tables, it throws an Exception and the entity is rejected.
+
+   See example of a Broadway flow that populates Customer LU table:
+
    
-   - Copy the code of the **fnPop_RootTable** into the newly generated Root function of the LU table.
-   - Add the following import to the root function: 
-     
-      - **import java.util.concurrent.atomic.AtomicBoolean;**
-      
-   - This import is needed since the root function defines the **instanceExists** indicator as **AtomicBoolean**. Note that this indicator cannot be defined as a Boolean since it is set inside the Lambda expression in the [loop on the ResultSet](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#loop-on-the-result-set-methods).
-   - Edit the **String sql** variable to include the DB query on the DB table.
+
+   ![root example](images/pop_root_lu_table_flow_example.png)
+
    
-   - Edit the **db parameter** of the **fetch** command.
-   
-      - Example:
-   
-     ```java
-     	String sql = "SELECT CUSTOMER_ID, SSN, FIRST_NAME, LAST_NAME FROM main.CUSTOMER where customer_id = ?";
-     	db("CRM_DB").fetch(sql, input).each(row->{
-     		yield(row.cells());
-     	});
-     ```
-   
-5. The updated Root function populates the main source LU table under the following conditions:
 
-   - The TDM task loads (inserts) the entities to the target environment.
-   - The **Override Sync Mode** setting is not set to **Do not Sync Source Data**. This will avoid synchronizing the entities from the source. 
-
-   Click to view the [Override Sync Mode Summary Table](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution).
-
-6. As a result, if the Sync mode is set to **Do not sync** by the user, or the task is a [delete only](/articles/TDM/tdm_gui/19_load_task_request_parameters_regular_mode.md#delete-entity-without-load) task, the source LU tables are not populated by the LUI sync.
-
-7. This function also validates if the entity exists in the source table. If the entity is not found in the main source tables, this function throws an Exception and the entity is rejected.
-
-   See example of a root function that populates Customer LU table:
-
-   ![root example](images/pop_customer_root_function_example.png)
-
-8. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
-
-9. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
+7. Link the remaining source LU tables to the main LU tables so that if the main source LU table is not populated, the remaining source LU tables also remain empty.
+8. Mask sensitive data in LU tables using a Broadway population and the [Masking Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md). 
 
    Click for more information about [TDM Masking](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-5---mask-the-sensitive-data).
 
