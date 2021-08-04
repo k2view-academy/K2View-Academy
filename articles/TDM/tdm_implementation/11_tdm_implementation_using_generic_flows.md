@@ -66,7 +66,8 @@ Performed by the **createLoadTableFlows.flow** that receives the Logical Unit na
 
    ![image](images/11_tdm_impl_04.PNG)
 
-2. Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+2. **Set the Target Entity ID in the Main Table**: 
+   - Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
 
    ![setTargetEntity](images/setTargetEntity_actor_example.png)
 
