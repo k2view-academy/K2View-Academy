@@ -62,6 +62,7 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
   }
   ```
   
+
 ### API URL
 
 /getTasksByParams
