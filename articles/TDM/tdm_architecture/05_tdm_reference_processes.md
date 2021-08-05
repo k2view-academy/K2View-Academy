@@ -43,73 +43,312 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 - CUSTOMER_TYPE Reference table. This table has three fields: CUSTOMER_TYPE, CUSTOMER_SUB_TYPE and DESCRIPTION.
 - CUSTOMER_TYPE is populated as follows in **ENV1**:
 
-| CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION       |
-| ------------- | ----------------- | ----------------- |
-| I             | Private           | Private customer |
-| B             | S                 | Small business    |
+<table>
+<tr>
+<th>CUSTOMER_TYPE</th>
+<th>CUSTOMER_SUB_TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+</table>
 
 -  CUSTOMER_TYPE is populated as following in **ENV2**:
 
-| CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION         |
-| ------------- | ----------------- | ------------------- |
-| I             | Private           | Private customer   |
-| B             | S                 | Small business      |
-| B             | M                 | Medium business     |
-| B             | C                 | Corporate customer |
-
+<table>
+<thead>
+<tr>
+<th>CUSTOMER_TYPE</th>
+<th>CUSTOMER_SUB_TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>B</td>
+<td>M</td>
+<td>Medium business</td>
+</tr>
+<tr>
+<td>B</td>
+<td>C</td>
+<td>Corporate customer</td>
+</tr>
+</tbody>
+</table>
  
 
-- Creating an Extract task with a regular mode (Entity Versioning setting is cleared) for CUSTOMET_TYPE Reference table:
+- Creating an Extract task with a regular mode (Entity Versioning setting is cleared) for CUSTOMER_TYPE Reference table:
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION       |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ----------------- |
-| ENV1            | ALL               | 1      | I             | Private           | Private  customer |
-| ENV1            | ALL               | 2      | B             | S                 | Small business    |
+<table>
+<thead>
+<tr>
+<th>SOURCE_ENV_NAME</th>
+<th>TASK_EXECUTION_ID</th>
+<th>REC_ID</th>
+<th>CUSTOMER_TYPE</th>
+<th>CUSTOMER_SUB_TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+</tbody>
+</table>
 
- 
 
-- Creating an Extract Data Flux task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
+- Creating an Extract Data Flux task for CUSTOMER_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
+<table>
+<thead>
+<tr>
+<th>SOURCE_ENV_NAME</th>
+<th>TASK_EXECUTION_ID</th>
+<th>REC_ID</th>
+<th>CUSTOMER_TYPE</th>
+<th>CUSTOMER_SUB_TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>1234</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>1234</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+</tbody>
+</table>
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION       |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ----------------- |
-| ENV1            | ALL               | 1      | I             | Private           | Private customer |
-| ENV1            | ALL               | 2      | B             | S                 | Small business    |
-| ENV1            | 1234              | 1      | I             | Private           | Private customer |
-| ENV1            | 1234              | 2      | B             | S                 | Small business    |
-
- 
-
-- Create an Extract Task with a regular mode for CUSTOMET_TYPE on ENV2:
-
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION         |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ------------------- |
-| ENV1            | ALL               | 1      | I             | Private           | Private customer   |
-| ENV1            | ALL               | 2      | B             | S                 | Small business      |
-| ENV1            | 1234              | 1      | I             | Private           | Private customer   |
-| ENV1            | 1234              | 2      | B             | S                 | Small business      |
-| ENV2            | ALL               | 1      | I             | Private           | Private customer   |
-| ENV2            | ALL               | 2      | B             | S                 | Small business      |
-| ENV2            | ALL               | 3      | B             | M                 | Medium business     |
-| ENV2            | ALL               | 4      | B             | C                 | Corporate customer |
-
- 
+- Create an Extract Task with a regular mode for CUSTOMER_TYPE on ENV2:
+<table>
+<thead>
+<tr>
+<th>SOURCE_ENV_NAME</th>
+<th>TASK_EXECUTION_ID</th>
+<th>REC_ID</th>
+<th>CUSTOMER_TYPE</th>
+<th>CUSTOMER_SUB_TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>1234</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>1234</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>3</td>
+<td>B</td>
+<td>M</td>
+<td>Medium business</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>4</td>
+<td>B</td>
+<td>C</td>
+<td>Corporate customer</td>
+</tr>
+</tbody>
+</table>
 
 - The source data of ENV1 is updated and a new record is added to CUSTOMER_TYPE table for a Government customer type.
-- Execute the regular Extract Task for CUSTOMET_TYPE on ENV1 again:
+- Execute the regular Extract Task for CUSTOMER_TYPE on ENV1 again:
+<table>
+<thead>
+<tr>
+<th>SOURCE_ENV_NAME</th>
+<th>TASK_EXECUTION_ID</th>
+<th>REC_ID</th>
+<th>CUSTOMER_TYPE</th>
+<th>CUSTOMER_SUB_TYPE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>ALL</td>
+<td>3</td>
+<td>B</td>
+<td>G</td>
+<td>Government</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>1234</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV1</td>
+<td>1234</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>1</td>
+<td>I</td>
+<td>Private</td>
+<td>Private customer</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>2</td>
+<td>B</td>
+<td>S</td>
+<td>Small business</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>3</td>
+<td>B</td>
+<td>M</td>
+<td>Medium business</td>
+</tr>
+<tr>
+<td>ENV2</td>
+<td>ALL</td>
+<td>4</td>
+<td>B</td>
+<td>C</td>
+<td>Corporate customer</td>
+</tr>
+</tbody>
+</table>
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION        |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ------------------ |
-| ENV1            | ALL               | 1      | I             | Private           | Private customer  |
-| ENV1            | ALL               | 2      | B             | S                 | Small business     |
-| ENV1            | ALL               | 3      | B             | G                 | Government         |
-| ENV1            | 1234              | 1      | I             | Private           | Private customer  |
-| ENV1            | 1234              | 2      | B             | S                 | Small business     |
-| ENV2            | ALL               | 1      | I             | Private           | Private customer  |
-| ENV2            | ALL               | 2      | B             | S                 | Small business     |
-| ENV2            | ALL               | 3      | B             | M                 | Medium business    |
-| ENV2            | ALL               | 4      | B             | C                 | Corporate customer |
-
- 
 
 - The table is re-populated by the data of ENV1 and ALL version. The records of the specific version of ENV1 - 1234, remain unchanged. 
 
