@@ -35,7 +35,7 @@ unzip compose_TDM_7.2.0_3.zip
 
 You can see the images names by using the command **docker images**. The result will be similar to the following: 
 
-   <img src="images/docker_images_example.png" alt="Customer BE" style="zoom:67%;" />
+   <img src="images/docker_images_example.png" alt="Customer BE" style="zoom:45%;" />
 
 
 ### Run the Compose File 
