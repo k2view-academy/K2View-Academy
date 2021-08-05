@@ -3,7 +3,7 @@
 We have just released TDM 7.2, which includes the following enhancements:
 
 * **Support an Override of the Task Execution Parameters**:
-  * Supporting the override of the TDM Environments, Entity List, Number of Entities, and Task Globals when invoking the start task execution API outside the TDM GUI.
+  * Supporting the override of the TDM environments, entity list, number of entities, and task Globals when invoking the start task execution API outside the TDM GUI.
 * **TDM APIs Enhancements** :
   * Added execution validations to start task Execution API.
   * Added **new TDM APIs** to get the list of available tasks and environments based on the user’s permissions and an optional list of task attributes such as task types, selection method, etc..
