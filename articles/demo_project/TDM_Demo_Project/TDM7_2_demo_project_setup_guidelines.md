@@ -77,15 +77,11 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 
 1. Open the Fabric Studio 6.5.1 and create a new project.
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
-3. The interfaces and/or environments of the TDM Demo project might need some modification, edit them if needed (you might be working locally or remotely, for example). 
+3. The interfaces and of the TDM Demo project might need some modification, edit them if needed (you might be working locally or remotely, for example).  Note that the **Server** setting must be populated by **localhost** when using local DBs or dockers for the DBs.
 4. Open the DB_CASSANDRA interface, and check if the **k2masking** keyspace exits. If it does not exist, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or **create_masking_cache_table.sql** of the TDM Library. 
 5. Edit the SRC and TAR environments: 
-   - If you use a Fabric docker and a local PG DBs, populate the **Server** setting as follows:
-     - **Interface window**:  localhost.
-     - **Environments**: host.docker.internal.
-   - If you use a docker for the PG and Cassandra DBs, populate the **Server** setting as follows:
-     - **Interface window**:  localhost.
-     - **Environments:** populate the docker's internal IP address (run **hostname -I** command in the docker to get the internal IP address).
+   - If you use a Fabric docker and a **local PG DBs**, populate the **Server** setting of the PG interfaces with **host.docker.internal**.
+   - If you use a **docker** for the PG and Cassandra DBs, populate the **Server** setting with the **docker's internal IP address** (run **hostname -I** command in the docker to get the internal IP address).
 6. Deploy the Environments to Fabric.
 7. Deploy the LUs and Web-Services to Fabric. Note that you must deploy the Environments *before* running Data Viewer on the LUs, since the main Target LU table sets the target ("TAR") environment to be the active environment.
 
