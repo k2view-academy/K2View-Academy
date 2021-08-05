@@ -8,15 +8,8 @@ We use the `c:/k2view/apps/`  as the path of the  TDM installation base. Use wha
 Create a K2V_TDM directory and download the following into it: 
 
 <ul>
-    <li><a href="https://download.k2view.com/owncloud/index.php/s/zYHBGbNICBg7pIl">Fabric Studio</a></li>
-    <li><a href="https://download.k2view.com/owncloud/index.php/s/B7xSHt3qgxoh7lS">D_Fabric_6.5.1_HF1-TDM7.2.0_3</a></li>
-    <li><a href="https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/cassandra/3.11.6/openjdk/D_k2v_cassandra_3.11.6_2.tar.gz">Cassandra</a></li>
-    <li><a href="https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_2.tar.gz">Kafka</a></li>
-    <li><a href="https://owncloud-bkp2.s3.amazonaws.com/adminoc/etl%20%28ADI%29/LDAP/D_k2view_LDAP_02.tar.gz">LDAP</a></li>
-    <li><a href="https://owncloud-bkp2.s3.amazonaws.com/adminoc/TDM/PG%20image/D_k2view_pg_9.6.9.tar.gz">PG 9.6</a></li>
-    <li><a href="https://download.k2view.com/owncloud/index.php/s/cowvhINPs4WPixz">compose_TDM_7.2.0_3.zip</a></li>
+    <li><a href="https://k2view.sharepoint.com/:w:/r/sites/KS/Releases/K2V%20Product%20Documents/TDM/v7.x/V7.2.0/TDM_7.2.0_download_links.docx?d=w50c6f19dd184445ba427b00cf1afc7a6&csf=1&web=1&e=bYn6Si">Download links</a></li>
 </ul>
-
 
 ### Load the Images 
 
