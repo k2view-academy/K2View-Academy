@@ -40,8 +40,8 @@ The views which appear by default at the Web Studio are as follows:
 <table>
 <tbody style="vertical-align: text-top; ">
 <tr>
-    <td style="text-align: center; padding-top: 10px;"><img src="images/explorer.png" alt="explorer" /></td>
-    <td width="60px" style="padding-left: 30px;"><strong>File Explorer</strong></td>
+    <td width="60px" style="text-align: center; padding-top: 10px;"><img src="images/explorer.png" alt="explorer" /></td>
+    <td style="padding-left: 30px;"><strong>File Explorer</strong></td>
     <td style="width:60%">Used to browse, open, and manage all of the files and folders in your project. When selected, the Side Bar shows the project tree, enabling you to open files or make some other actions using the context menu, as well as use the context menu on folders level which contains also Fabric Studio actions by context. A badge appears on the Explorer icon at the Activity Bar showing how many files are currently edited without save.</td>
 </tr>
 <tr >
