@@ -51,6 +51,8 @@ You can reorder views on the Activity Bar by dragging and dropping them.
 
 
 
+
+
 >**Notes:** 
 >
 >1. Fabric Web Studio is basically Visual Studio Code like editor and yet it different. While you can look and learn from VS Code vast user guides, you shall keep in mind that they are not the same.
