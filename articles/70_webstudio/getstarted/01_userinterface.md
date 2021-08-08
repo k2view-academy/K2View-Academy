@@ -21,7 +21,7 @@ In addition, layout contains a **top menu** (H) where you can make either of IDE
 
 
 
-![basic layout](images/1_main_ui.png)
+![basic layout](images/1_main_ui.jpg)
 
 
 
