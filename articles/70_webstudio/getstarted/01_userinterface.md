@@ -47,11 +47,13 @@ The views which appear by default at the Web Studio are as follows:
 
 You can reorder views on the Activity Bar by dragging and dropping them.  
 
+<br/>
 
-
-
-
-
+```
+&nbsp;
+&nbsp;
+&nbsp;
+```
 
 >**Notes:** 
 >
