@@ -37,15 +37,51 @@ Web Studio comes with several default views at the Activity Bar, as descried bel
 
 The views which appear by default at the Web Studio are as follows:
 
-* **File Explorer** - Used to browse, open, and manage all of the files and folders in your project. When selected, the Side Bar shows the project tree, enabling you to open files or make some other actions using the context menu, as well as use the context menu on folders level which contains also Fabric Studio actions by context. A badge appears on the Explorer icon at the Activity Bar showing how many files are currently edited without save. 
-* **Search** - Provides global search and replace across your project files.  Search tool, which opened at the Side Bar lets you to make smart search using various filters. To learn more how to search see [here]().
-* **Source Control** - Web Studio includes Git source control by default. Selecting the icon will show you the details of your current repository changes and also will let you to compare those changes to the origin, as well as making various source control actions. A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository. to learn more how to use Source Control view see [here]().
-* **Debug** - Web Studio Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see [here]().
-* **Log Viewer** - Enables to select and view Fabric logs, in rich and useful mode. When clicked it lets you, at the Side Bar to select which log to open. To learn more about Log Viewer and use it effectively see [here]().
+<table>
+<tbody style="vertical-align: text-top; ">
+<tr>
+    <td style="text-align: center; padding-top: 10px;"><img src="images/explorer.png" alt="debug" /></td>
+    <td style="padding-left: 30px;"><strong>File Explorer</strong></td>
+    <td style="width:60%">Used to browse, open, and manage all of the files and folders in your project. When selected, the Side Bar shows the project tree, enabling you to open files or make some other actions using the context menu, as well as use the context menu on folders level which contains also Fabric Studio actions by context. A badge appears on the Explorer icon at the Activity Bar showing how many files are currently edited without save.</td>
+</tr>
+<tr >
+<td style="text-align: center; padding-top: 10px;"><img src="images/search.png" alt="debug" /></td>
+<td style="padding-left: 30px;"><strong>Search</strong></td>
+<td style="width:60%">Provides global search and replace across your project files.  Search tool, which opened at the Side Bar lets you to make smart search using various filters.</td>
+</tr>
+<tr>
+    <td style="text-align: center; padding-top: 10px;"><img src="images/scm.png" alt="debug" /></td>
+    <td style="padding-left: 30px;"><strong>Source Control</strong></td>
+    <td style="width:60%">Web Studio includes Git source control by default. Selecting the icon will show you the details of your current repository changes and also will let you to compare those changes to the origin, as well as making various source control actions. A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository</td>
+</tr>
+<tr>
+    <td style="text-align: center; padding-top: 10px;"><img src="images/debug.png" alt="debug" /></td>
+    <td style="padding-left: 30px;"><strong>Debug</strong></td>
+    <td style="width:60%">Web Studio Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see [here]().</td>
+</tr>
+<tr>
+    <td style="text-align: center; padding-top: 10px;"><img src="images/log.png" alt="debug" /></td>
+    <td style="padding-left: 30px;"><strong>Log Viewer</strong></td>
+    <td style="width:60%">Enables to select and view Fabric logs, in rich and useful mode. When clicked it lets you, at the Side Bar to select which log to open. To learn more about Log Viewer and use it effectively see [here]().</td>
+</tr>
+</tbody>
+</table>
 
 
 
-You can reorder views on the Activity Bar by dragging and dropping them.  
+>**Tip:** You can reorder views on the Activity Bar by dragging and dropping them.
+
+  
+
+
+
+## Command Palette
+
+
+
+
+
+
 
 <br/><br/>
 
