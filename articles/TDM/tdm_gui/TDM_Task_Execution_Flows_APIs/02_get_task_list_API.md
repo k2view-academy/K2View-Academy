@@ -92,7 +92,7 @@ Currently it supports the following filtering parameters:
 
 The JSON filtering parameter is optional. If is it not populated, the API returns all user's tasks.
 
-  ### API Input Examples:
+### API Input Examples:
    ```json
    {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"OFF"}
    ```
@@ -101,7 +101,7 @@ The JSON filtering parameter is optional. If is it not populated, the API return
   {"task_type":"EXTRACT", "version_ind":true, "load_entity":false, "delete_before_load":false, "selection_method":"L", "sync_mode":"FORCE"}
   ```
   
-  ### API Output Example
+### API Output Example
 
   ```json
   {
