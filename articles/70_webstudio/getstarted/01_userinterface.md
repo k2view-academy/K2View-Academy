@@ -78,9 +78,11 @@ The views which appear by default at the Web Studio are as follows:
 
 ## Command Palette
 
+The Command Palette is an interactive window that provides access to the Fabric Web Studio functionality, including keyboard shortcuts for many common operations. You can open files, execute editor commands, and launch Fabric dedicated editors such as Create new LU, Create new Broadway flow and many more.
 
+You can reach the command palette from the top menu by selecting **View > Find command** or use ⇧⌘P in Mac or F1 in Windows to bring it up.
 
-
+To learn more about useful Command Palette commands and shortcuts see [here]().
 
 
 
