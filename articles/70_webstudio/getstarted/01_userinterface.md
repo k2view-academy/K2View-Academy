@@ -45,7 +45,7 @@ The views which appear by default at the Web Studio are as follows:
     <td style="width:60%">Used to browse, open, and manage all of the files and folders in your project. When selected, the Side Bar shows the project tree, enabling you to open files or make some other actions using the context menu, as well as use the context menu on folders level which contains also Fabric Studio actions by context. A badge appears on the Explorer icon at the Activity Bar showing how many files are currently edited without save.</td>
 </tr>
 <tr >
-<td style="text-align: center; padding-top: 10px;"><img src="images/search.png" alt="debug" /></td>
+<td style="text-align: center; padding-top: 10px;"><img src="images/search.png" alt="search" style="height:28px;width:28px;"/></td>
 <td style="padding-left: 30px;"><strong>Search</strong></td>
 <td style="width:60%">Provides global search and replace across your project files.  Search tool, which opened at the Side Bar lets you to make smart search using various filters.</td>
 </tr>
@@ -66,6 +66,7 @@ The views which appear by default at the Web Studio are as follows:
 </tr>
 </tbody>
 </table>
+
 
 
 
