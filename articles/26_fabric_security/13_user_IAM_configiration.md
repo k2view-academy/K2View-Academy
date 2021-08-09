@@ -136,29 +136,19 @@ When Fabric is running on Windows OS, usually when working locally during the pr
 
 <br/>
 
-## LDAP Configuration
+## LDAP & LDAPS Configuration
 
 ### Preparations & Prerequisites
 
 ##### Admin Role Settings
 
-When LDAP is used as an authenticator, an admin role is created automatically for Fabric bootstrap. The admin's role name is configurable in the *admin_privileges* configuration file: 
+When LDAP is used as an authenticator, an admin role is created automatically for Fabric bootstrap. The admin role's name should be configured in the *admin_privileges* configuration file (Use $K2_HOME/config.template/admin_privileges.template file as reference). 
 
-1. Copy the *admin_privileges.template* from $K2_HOME/config.template/ to the $K2_HOME/config directory.
-2. Rename the file: from *admin_privileges.template* to *admin_privileges*
-3. Edit the file: Replace the *admin* (default) with the required role. Role's name shall be provided by the LDAP owner. 
-
-The role's name should be provided by the LDAP owner (we assume he will create a dedicated role, to be used as K2View admin role).
+The role's name should be provided by the IT / LDAP owner (we assume he will create a dedicated role, to be used as K2View admin role).
 
 ##### LDAPS: Secured LDAP
 
 When working with ldaps - a secured ldap, you shall get from the LDAP owner a certificate file and import it to the Fabric truststore:
-
-`keytool -importcert -file <full-path-to-downloaded-cert-file> -keystore <full-path-to-truststore-file> -alias "ldap"`
-
-The path to the trust-store file and related parameters can be found at the jvm.options file: At the *TLS/SSL SETTINGS* section look for "javax.net.ssl.trustStore" . All those values are set there for a hardened environment. An example to such path is: "$K2_HOME/.cassandra_ssl/cassandra.truststore"
-
-For more information about keystore handling please see [here](/articles/99_fabric_infras/devops/04_cassandra_hardening.html).
 
 ### Editing the config.ini file
 
@@ -172,7 +162,7 @@ The `adldap_auth` or `ldap_auth` sections must define the following:
 
 The values should be provided by the LDAP owner.
 
-
+The full instructions for LDAP and LDAPS can be found [here]().
 
 <br/>
 
