@@ -100,7 +100,17 @@ The JSON filtering parameter is optional. If is it not populated, the API return
   ```json
   {"task_type":"EXTRACT", "version_ind":true, "load_entity":false, "delete_before_load":false, "selection_method":"L", "sync_mode":"FORCE"}
   ```
-  
+### API Request URL Examples:
+
+```
+http://10.21.3.4:3213/api/getTasksByParams
+```
+
+```
+http://10.21.3.4:3213/api/getTasksByParams?filteringParams=%7B%22task_type%22%3A%22LOAD%22%2C%20%22load_entity%22%3Afalse%2C%20%22delete_before_load%22%3Atrue%2C%20%22selection_method%22%3A%22L%22%7D
+
+```
+
 ### API Output Example
 
   ```json
