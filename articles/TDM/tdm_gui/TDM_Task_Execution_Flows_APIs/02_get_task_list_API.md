@@ -92,6 +92,10 @@ Currently it supports the following filtering parameters:
 
 The JSON filtering parameter is optional. If is it not populated, the API returns all user's tasks.
 
+### API Input
+  
+- filteringParams - this  is an optional String parameter that can be populated by a JSON with a list of filtering parameters.
+
 ### API Input Examples:
    ```json
    {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"FORCE"}
