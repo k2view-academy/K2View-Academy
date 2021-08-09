@@ -94,7 +94,7 @@ The JSON filtering parameter is optional. If is it not populated, the API return
 
 ### API Input Examples:
    ```json
-   {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"OFF"}
+   {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"FORCE"}
    ```
   
   ```json
