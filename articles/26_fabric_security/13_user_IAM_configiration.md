@@ -148,15 +148,15 @@ The role's name should be provided by the IT / LDAP owner (we assume he will cre
 
 ##### LDAPS: Secured LDAP
 
-When working with ldaps - a secured ldap, you shall get from the LDAP owner a certificate file and import it to the Fabric truststore:
+When working with LDAPS (this is a secured LDAP), you must get a certificate file from the LDAP owner and import it to the Fabric truststore as shown:
 
 ### Editing the config.ini file
 
 The `adldap_auth` or `ldap_auth` sections must define the following:
 
-- **url** - LDAP URL endpoint. in case of ldaps (secured ldap) it will start with "ldaps://".
-- **security_level**, set to "simple" (The default value. It can be used also for ldaps).
-- **admin_dn**, the admin user at LDAP that has permissions to search and look for other users.
+- **url** - LDAP URL endpoint. in case of LDAPS (secured LDAP) it will start with "ldaps://" (note that it is in lowercase letters)
+- **security_level**, set to "simple" (The default value. It can be used also for LDAPS).
+- **admin_dn**, the LDAP admin user that has permissions to search and look for other users.
 - **admin_password**, the admin user password.
 - **users_base_dn**, the root base "dn" of the users.
 
