@@ -17,7 +17,7 @@ Once the corresponding Job begins, and is set to an **IN_PROCESS** stage, the Ba
 1. NEW
 2. GENERATE_IID
 3. IN_PROGRESS
-4. FAILED/CANCELLED/DONE
+4. FAILED/CANCELLED/PAUSED/DONE
 
 
 The illustration below shows how, once triggered from the command line, an asynchronous batch process is automatically encapsulated into a Job process. 
