@@ -30,7 +30,8 @@ Refer to the following links to set up a simple Java debugging scheme on your pr
 ![image](images/04_15_02_attach.png)
  
 (iv)	Select the process to which to attach the Java debugger. 
-For example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` is selected. 
+
+For example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` option is selected. 
 
 ![image](images/04_15_03_attach.png)
  
