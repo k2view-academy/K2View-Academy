@@ -38,3 +38,6 @@ For example in the screenshot displayed below, the ```26972 com.k2view.fabric.bo
 (v)	Run your code and step through the program’s breakpoints using the controls on the left hand-side of the [debug window](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html#stepping)
 ![image](images/04_15_04_steps.png)
 
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/14_intelliJ_from_fabric_studio.md)
