@@ -7,14 +7,14 @@ To do so:
 1. Right click on any Java file in your project tree
 2. Select the *Open in IntelliJ* option.
 
- ![image](images/04_14_01_menu.PNG)
+ ![image](images/04_14_01_menu.png)
 
 IntelliJ will start in the background and open-up on the selected file:
 
- ![image](images/04_14_02_javafile.PNG) 
+ ![image](images/04_14_02_javafile.png) 
 
 As you can see in the picture above, all Fabric-related Java files and resources for your project will be accessible from the left-hand project tree panel.
 
 In addition, all the libraries and dependencies featured in your project will also be exposed in the project tree.
 
-![image](images/04_14_03_javalibs.PNG)
+![image](images/04_14_03_javalibs.png)
