@@ -17,4 +17,4 @@ As you can see in the picture above, all Fabric-related Java files and resources
 
 In addition, all the libraries and dependencies featured in your project will also be exposed in the project tree.
 
-![image](images/04_14_03_javalibs.PNG) 
+![image](images/04_14_03_javalibs.PNG)
