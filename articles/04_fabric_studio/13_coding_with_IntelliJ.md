@@ -8,6 +8,7 @@ It is recommended to install IntelliJ IDE in cases where your project heavily re
 - when creating a [project function]( https://github.com/k2view-academy/K2View-Academy/blob/1fe6c770955eadb87cc80fd9a39af4433382d231/articles/07_table_population/10_creating_a_project_function.md#creating-a-project-function)
 - when [enriching or transforming your data]( https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5/articles/10_enrichment_function/04_enrichment_function_code_examples.md). 
 - when exposing your data via Java [Web Services]( https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-complex-tdm-web-service).
+- when writing a new [Broadway actor](/articles/19_Broadway/28_actor_editor.md#how-do-i-create-a-new-actor-from-scratch) that implements a Java class. 
 
 ## Installing IntelliJ
 
