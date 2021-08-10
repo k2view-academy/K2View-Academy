@@ -323,7 +323,9 @@ TDM 7.2 supports the override of the following parameters:
 - [Selection  Method](/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#requested-entities-columns) : set the overridden selection method to 'L' (Entity List), when overriding the task's Entity List, except for a task with a Synthetic selection method. It is possible to provide a single entity in the Entity List to clone the entity by the task with the Synthetic selection method.
 - [Number of Entities](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities) : change the number of entities to be processed by the task execution. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
 
-Note that TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
+Notes:
+- The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
+- The execution parameters override is not supported for Data Flux tasks.
 
 ### Validate the Task Execution Parameters
 
