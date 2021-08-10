@@ -8,7 +8,7 @@ All your java extensions or fabric built-in functions and libraries will be appe
 
 -	[Basic]( https://www.jetbrains.com/help/idea/auto-completing-code.html#basic_completion)
 - [Statement]( https://www.jetbrains.com/help/idea/auto-completing-code.html#statements_completion)
-- [Hippie]( https://www.jetbrains.com/help/idea/auto-completing-code.html#hippie_completion)]
+- [Hippie]( https://www.jetbrains.com/help/idea/auto-completing-code.html#hippie_completion)
 
 
 ## Debugging
@@ -29,7 +29,9 @@ Refer to the following links to set up a simple Java debugging scheme on your pr
 (iii)	Select the Run -> “Attach to Process” option from the menu bar  
 ![image](images/04_15_02_attach.png)
  
-(iv)	Select the process to which to attach the Java debugger. For example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` is selected. 
+(iv)	Select the process to which to attach the Java debugger. 
+For example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` is selected. 
+
 ![image](images/04_15_03_attach.png)
  
 (v)	Run your code and step through the program’s breakpoints using the controls on the left hand-side of the [debug window](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html#stepping)
