@@ -25,5 +25,5 @@ Note that if a Global that is defined in both a Shared Object and a specific Log
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/13_coding_with_IntelliJ.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md)
 
