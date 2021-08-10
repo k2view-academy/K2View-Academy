@@ -6,4 +6,4 @@ Please note this applies to the Windows Standalone product as other platforms ar
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/12_shared_objects.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/14_intelliJ_from_fabric_studio.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/03_intelliJ_from_fabric_studio.md)
