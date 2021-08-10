@@ -24,4 +24,4 @@ In addition, all the libraries and dependencies featured in your project will al
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/03_coding_with_IntelliJ.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04_debugging_with_intelliJ.md)
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/02_intelliJ_install.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/04_debugging_with_intelliJ.md)
