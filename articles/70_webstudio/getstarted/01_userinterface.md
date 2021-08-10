@@ -82,7 +82,7 @@ The Command Palette is an interactive window that provides access to the Fabric 
 
 You can reach the command palette from the top menu by selecting **View > Find command** or use ⇧⌘P in Mac or F1 in Windows to bring it up.
 
-To learn more about useful Command Palette commands and shortcuts see [here]().
+To learn more about useful Command Palette commands and shortcuts see [here](/articles/70_webstudio/getstarted/02_command_keyboard_shortcuts.md).
 
 
 
