@@ -1,4 +1,4 @@
-# Fabric Studio - Starting IntelliJ
+# Fabric Studio - Launching the IntelliJ IDE
 
 
 ## Access IntelliJ from Fabric studio
@@ -9,11 +9,11 @@ To do so:
 
 Note that you can also start IntelliJ on any java file by typint ***ctrl I***.
 
- ![image](images/04_14_01_menu.png)
+![image](images/04_14_01_menu.png)
 
 IntelliJ will start in the background and open-up on the selected file:
 
- ![image](images/04_14_02_javafile.png) 
+![image](images/04_14_02_javafile.png) 
 
 As you can see in the picture above, all Fabric-related Java files and resources for your project will be accessible from the left-hand project tree panel.
 
