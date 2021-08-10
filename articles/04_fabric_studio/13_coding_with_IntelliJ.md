@@ -1,7 +1,7 @@
 # Coding with IntelliJ
 
 ## Overview
-Fabric platform is built on Java and as such provides the opportunity to enhance your projects with Java functions you might want to write from scratch or with Java
+Fabric platform is built on Java and as such provides the ability to enhance your projects with any Java functions you need to write/modify or with Java
 Community 3rd party libraries.   
 To ensure best-of-class performance and experience, Fabric has been tightly integrated with the IntelliJ IDEA platform. 
 It is recommended to install IntelliJ IDE in cases where your project heavily relies on Java functions, such as for example:
@@ -11,7 +11,7 @@ It is recommended to install IntelliJ IDE in cases where your project heavily re
 
 ## Installing IntelliJ
 
-At this day, the latest available version is *2021.2 Community edition* which can be downloaded from the following [link](https://www.jetbrains.com/help/idea/installation-guide.html#standalone).
+The latest available version for *IntelliJ Community edition* can be downloaded from the following [link](https://www.jetbrains.com/help/idea/installation-guide.html#standalone).
 Please note this applies to the Windows Standalone product as other platforms are not supported at this stage.
 
 
