@@ -7,7 +7,7 @@ To do so:
 1. Right click on any Java file in your project tree,
 2. Select the *Open in IntelliJ* option.
 
-Note that you can also start IntelliJ on any java file by typint ***ctrl I***.
+Note that you can also start IntelliJ on any java file by typing ***ctrl+I***.
 
 ![image](images/04_14_01_menu.png)
 
