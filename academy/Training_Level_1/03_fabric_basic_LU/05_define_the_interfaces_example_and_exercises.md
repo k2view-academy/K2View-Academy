@@ -20,9 +20,8 @@ Considering the information above, which interface should be used ? **CRM DB**
 
 **Your first interface is ready to be explored:**
 
-1. Go to **Interfaces** on the **Project Tree**, right click the **CRM_DB interface** and select **Show Query Builder**. Alternatively, select the **CRM_DB** interface you just created, then click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. The Query Builder is displayed.
-
-2. From the DB Connection pull-down menu, choose **CRM_DB**.
+1. Go to **Interfaces** on the **Project Tree**, right click the **CRM_DB interface** and select **Show Query Builder**. The Query Builder is displayed with the CRM_DB interface loaded.  
+2. Alternatively, click ![](/academy/Training_Level_1/03_fabric_basic_LU/images/DBicon.png)  **DB**  in the Project’s main toolbar. The Query Builder is displayed. From the DB Connection pull-down menu, choose **CRM_DB**.
 
 3. In the window directly below, click on **main**, and you will see a list of tables. The Customer table, as its name implies, has information about the Customers. 
 
