@@ -2,11 +2,10 @@
 
 ### Solution- Interface Exercise Solution
 
-1. `Answer: BALANCE, CONTRACT_OFFER_MAPPING,INVOICE, OFFER, PAYMENT, SUBSCRIBER`
+1. `Answer: ACTIVITY, ADDRESS, BALANCE, BROADWAY_TEST, CASE_NOTE, CASES, CONTRACT, CONTRACT_COPY, CUSTOMER, CUSTOMER_COPY, DEVICESTABLE2017, INVOICE, OFFER, PAYMENT, SUBSCRIBER`
 
-2. 
 
-Step 1: Submit the following query in the Query_builder window of the Billing_DB interface:
+Step 1: Using the SQL language (as the type of this interface is SQL_Lite), submit the following query in the Query_builder window of the Billing_DB interface:
 ```
 Select sum(INVOICE.BALANCE),
   INVOICE.SUBSCRIBER_ID
