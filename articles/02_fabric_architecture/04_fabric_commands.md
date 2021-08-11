@@ -280,7 +280,7 @@ The following table lists the GET commands:
 
 #### Remote GET and GETF Commands
 
-**GET** and **GETF** commands can be executed from a [datacenter (DC)]() that is not connected to data  sources if other DCs are connected to the source interfaces. To do so, populate the DC parameter name of the GET and GETF commands to invoke the remote DC connected to the data source via the JDBC. The remote GET and GETF commands return the instances after executing the commands on the remote Fabric node. Cassandra then replicates the data between the nodes of the Cassandra cluster.
+**GET** and **GETF** commands can be executed from a datacenter (DC) that is not connected to data  sources if other DCs are connected to the source interfaces. To do so, populate the DC parameter name of the GET and GETF commands to invoke the remote DC connected to the data source via the JDBC. The remote GET and GETF commands return the instances after executing the commands on the remote Fabric node. Cassandra then replicates the data between the nodes of the Cassandra cluster.
 
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 

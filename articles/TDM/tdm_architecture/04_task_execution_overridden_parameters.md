@@ -5,7 +5,7 @@ A task execution can override execution parameters, as follows:
 - Setting the active environment based on the task's environments.
 - Setting key-value parameters on a session level.
 - Overriding Globals values on a session level.
-- Overriding the [Sync Mode]() of the task execution.
+- Overriding the [Sync Mode](#overriding-the-sync-mode-on-the-task-execution) of the task execution.
 - Overriding additional execution parameters without changing the task itself.
 
 ### Setting Active Environments
@@ -39,245 +39,261 @@ Note that task level Globals have a higher priority than TDM environment level G
 
 When executing a TDM task, set the Sync mode according to the following table:
 
-<table width="900pxl">
+<table width="700pxl">
 <tbody>
 <tr>
-<td valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p><strong>Override Sync - Source Env Level</strong></p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p><strong>Override Sync - Task Level&nbsp;</strong></p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="90pxl">
 <p><strong>Task Operation Mode</strong></p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="90pxl">
 <p><strong>Task Execution Sync Mode</strong></p>
 </td>
-<td valign="top" width="380pxl">
+<td valign="top" width="200pxl">
 <p><strong>Results</strong></p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>None</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>None</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="90pxl">
 <p>All</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="90pxl">
 <p>On</p>
 </td>
-<td valign="top" width="380pxl">
+<td valign="top" width="200pxl">
 <p>LUIs are synced according to their sync method. See the <a href="/articles/14_sync_LU_instance/10_sync_behavior_summary.md">Sync Behavior Summary table</a>.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 150px;">
+<td valign="top" width="100pxl">
 <p>None</p>
 </td>
-<td style="width: 150px;">
+<td valign="top" width="100pxl">
 <p>Request up-to-date entity</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="90pxl">
 <p>All</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="90pxl">
 <p>Force</p>
 </td>
-<td style="width: 210px;">
+<td valign="top" width="200pxl">
 <p>LUI are synced from the source.</p>
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Always sync</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>None</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>All</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Force</p>
 </td>
-<td valign="top" width="380pxl">
+<td valign="top" width="200pxl">
 <p>LUI are synced from the source.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 150px;">
+<td valign="top" width="100pxl">
 <p>Always sync</p>
 </td>
-<td style="width: 150px;">
+<td valign="top" width="100pxl">
 <p>Request up-to-date entity</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>All</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Force</p>
 </td>
-<td style="width: 210px;">
+<td valign="top" width="200pxl">
 <p>LUI are synced from the source.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 150px;">
+<td valign="top" width="100pxl">
 <p>Do not sync</p>
 </td>
-<td style="width: 150px;">
+<td valign="top" width="100pxl">
 <p>Request up-to-date entity</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>All</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Force</p>
 </td>
-<td style="width: 210px;">
+<td valign="top" width="200pxl">
 <p>LUI are synced from the source.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 150px;" rowspan="3" valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p>Do not sync</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 150px;" rowspan="3" valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p>None</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Insert</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Off</p>
 </td>
-<td valign="top" width="380pxl">
+<td valign="top" width="200pxl">
 <ul>
 <li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric, get the data from Fabric.&nbsp;</li>
+<li>If the LUIs exist in Fabric:</li>
+    Get the data from Fabric.
 </ul>
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Delete and insert&nbsp;</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>On</p>
 </td>
-<td valign="top" width="380pxl">
+    <td valign="top" width="100pxl"></td>
+    <td valign="top" width="100pxl"></td>
+<td valign="top" width="200pxl">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
-<li>Source LU tables, get the data from Fabric.</li>
-<li>Target LU tables, sync the data from the target environment.</li>
-</ul>
-</li>
+<li>Source LU tables:</li>
+    Get the data from Fabric.
+<li>Target LU tables:</li>
+    Sync the data from the target environment.
 </ul>
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Delete only</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>On</p>
 </td>
-<td valign="top" width="380pxl">
-<p>Target LU tables are synced from the target environment.&nbsp;</p>
+    <td valign="top" width="100pxl"></td>
+    <td valign="top" width="100pxl"></td>
+<td valign="top" width="200pxl">
+    <br>Target LU tables are synced</br>    
+    <br>from the target environment.</br>
 </td>
 </tr>
 <tr>
-<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p>Do not sync</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p>Do not sync source data</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Insert</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Off</p>
 </td>
-<td valign="top" width="380pxl">
+<td valign="top" width="300pxl">
 <ul>
 <li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric, get the data from Fabric.&nbsp;</li>
+    <li>If the LUIs exist in Fabric:</li>
+     Get the data from Fabric.&nbsp;
 </ul>
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Delete and insert&nbsp;</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>On</p>
 </td>
-<td valign="top" width="380pxl">
+    <td valign="top" width="100pxl"></td>
+    <td valign="top" width="100pxl"></td>
+<td valign="top" width="200pxl">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
-<li>Source LU tables, get the data from Fabric.</li>
-<li>Target LU tables, get the data from the target environment.</li>
+<li>Source LU tables:</li>
+    Get the data from Fabric.
+<li>Target LU tables:</li>
+     Get the data from the target environment.
 </ul>
 </li>
 </ul>
 </td>
 </tr>
 <tr>
-<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p>None</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 150px;" rowspan="2" valign="top" width="150pxl">
+<td valign="top" width="100pxl">
 <p>Do not sync source data</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Insert</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Off</p>
 </td>
-<td valign="top" width="380pxl">
+<td valign="top" width="200pxl">
 <ul>
 <li>First sync, return an error.</li>
-<li>If the LUIs exist in Fabric, get the data from Fabric.&nbsp;</li>
+<li>If the LUIs exist in Fabric:</li>
+    Get the data from Fabric.
 </ul>
 </td>
 </tr>
 <tr>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>Delete and insert&nbsp;</p>
 </td>
-<td valign="top" width="130pxl">
+<td valign="top" width="100pxl">
 <p>On</p>
 </td>
-<td valign="top" width="380pxl">
+     <td valign="top" width="100pxl"></td>
+     <td valign="top" width="100pxl"></td>
+<td valign="top" width="200pxl">
 <ul>
 <li>First sync, return an error.</li>
 <li>If the LUIs exist in Fabric:
 <ul>
-<li>Source LU tables, get the data from Fabric.</li>
-<li>Target LU tables, get the data from the target environment.</li>
+<li>Source LU tables:</li>
+    Get the data from Fabric.
+<li>Target LU tables:</li>
+    Get the data from the target environment.
 </ul>
 </li>
 </ul>
@@ -285,6 +301,7 @@ When executing a TDM task, set the Sync mode according to the following table:
 </tr>
 </tbody>
 </table>
+
 
 
 # Overriding Additional Task Execution Parameters
@@ -306,7 +323,9 @@ TDM 7.2 supports the override of the following parameters:
 - [Selection  Method](/articles/TDM/tdm_gui/25_task_tdmdb_tables.md#requested-entities-columns) : set the overridden selection method to 'L' (Entity List), when overriding the task's Entity List, except for a task with a Synthetic selection method. It is possible to provide a single entity in the Entity List to clone the entity by the task with the Synthetic selection method.
 - [Number of Entities](/articles/TDM/tdm_gui/17_load_task_regular_mode.md#number-of-entities) : change the number of entities to be processed by the task execution. This parameter is only relevant for Load tasks when the **entitylist** override parameter is not set.
 
-Note that TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
+Notes:
+- The TDM supports overriding the task execution parameters only when invoking the start task execution API outside the TDM GUI. **Currently this option is not supported when executing the task using the TDM GUI.**
+- The execution parameters override is not supported for Data Flux tasks.
 
 ### Validate the Task Execution Parameters
 

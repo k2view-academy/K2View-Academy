@@ -41,87 +41,335 @@ The **PK** (primary key) of each Cassandra table consists of the following colum
 **Example:**
 
 - CUSTOMER_TYPE Reference table. This table has three fields: CUSTOMER_TYPE, CUSTOMER_SUB_TYPE and DESCRIPTION.
+
 - CUSTOMER_TYPE is populated as follows in **ENV1**:
 
-| CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION       |
-| ------------- | ----------------- | ----------------- |
-| I             | Private           | Private customer |
-| B             | S                 | Small business    |
+  <table class="md-table">
+  <thead>
+  <tr class="md-end-block md-focus-container">
+  <th><span class="td-span md-focus"><span class="md-plain md-expand">CUSTOMER_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_SUB_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">DESCRIPTION</span></span></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="md-end-block">
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span md-focus"><span class="md-plain md-expand">Small business</span></span></td>
+  </tr>
+  </tbody>
+  </table>
 
--  CUSTOMER_TYPE is populated as following in **ENV2**:
+- CUSTOMER_TYPE is populated as following in **ENV2**:
 
-| CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION         |
-| ------------- | ----------------- | ------------------- |
-| I             | Private           | Private customer   |
-| B             | S                 | Small business      |
-| B             | M                 | Medium business     |
-| B             | C                 | Corporate customer |
+  <table class="md-table">
+  <thead>
+  <tr class="md-end-block md-focus-container">
+  <th><span class="td-span md-focus"><span class="md-plain md-expand">CUSTOMER_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_SUB_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">DESCRIPTION</span></span></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="md-end-block">
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span md-focus"><span class="md-plain md-expand">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">M</span></span></td>
+  <td><span class="td-span md-focus"><span class="md-plain md-expand">Medium business</span></span></td>
+  </tr> 
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">C</span></span></td>
+  <td><span class="td-span md-focus"><span class="md-plain md-expand">Corporate customer</span></span></td>
+  </tr>
+  </tbody>
+  </table>
 
  
 
 - Creating an Extract task with a regular mode (Entity Versioning setting is cleared) for CUSTOMET_TYPE Reference table:
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION       |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ----------------- |
-| ENV1            | ALL               | 1      | I             | Private           | Private  customer |
-| ENV1            | ALL               | 2      | B             | S                 | Small business    |
+  <table class="md-table">
+  <thead>
+  <tr class="md-end-block md-focus-container">
+  <th><span class="td-span md-focus"><span class="md-plain md-expand">SOURCE_ENV_NAME</span></span></th>
+  <th><span class="td-span"><span class="md-plain">TASK_EXECUTION_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">REC_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_SUB_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">DESCRIPTION</span></span></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="md-end-block">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  </tbody>
+  </table>
 
  
 
 - Creating an Extract Data Flux task for CUSTOMET_TYPE Reference table on ENV1.The records of the created version are added to the Cassandra table:
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION       |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ----------------- |
-| ENV1            | ALL               | 1      | I             | Private           | Private customer |
-| ENV1            | ALL               | 2      | B             | S                 | Small business    |
-| ENV1            | 1234              | 1      | I             | Private           | Private customer |
-| ENV1            | 1234              | 2      | B             | S                 | Small business    |
+  <table class="md-table">
+  <thead>
+  <tr class="md-end-block md-focus-container">
+  <th><span class="td-span md-focus"><span class="md-plain md-expand">SOURCE_ENV_NAME</span></span></th>
+  <th><span class="td-span"><span class="md-plain">TASK_EXECUTION_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">REC_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_SUB_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">DESCRIPTION</span></span></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="md-end-block">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1234</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1234</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  </tbody>
+  </table>
 
  
 
 - Create an Extract Task with a regular mode for CUSTOMET_TYPE on ENV2:
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION         |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ------------------- |
-| ENV1            | ALL               | 1      | I             | Private           | Private customer   |
-| ENV1            | ALL               | 2      | B             | S                 | Small business      |
-| ENV1            | 1234              | 1      | I             | Private           | Private customer   |
-| ENV1            | 1234              | 2      | B             | S                 | Small business      |
-| ENV2            | ALL               | 1      | I             | Private           | Private customer   |
-| ENV2            | ALL               | 2      | B             | S                 | Small business      |
-| ENV2            | ALL               | 3      | B             | M                 | Medium business     |
-| ENV2            | ALL               | 4      | B             | C                 | Corporate customer |
+  <table class="md-table">
+  <thead>
+  <tr class="md-end-block md-focus-container">
+  <th><span class="td-span md-focus"><span class="md-plain md-expand">SOURCE_ENV_NAME</span></span></th>
+  <th><span class="td-span"><span class="md-plain">TASK_EXECUTION_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">REC_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_SUB_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">DESCRIPTION</span></span></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="md-end-block">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1234</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1234</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">3</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">M</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Medium business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">4</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">C</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Corporate customer</span></span></td>
+  </tr>
+  </tbody>
+  </table>
 
- 
+
 
 - The source data of ENV1 is updated and a new record is added to CUSTOMER_TYPE table for a Government customer type.
+
 - Execute the regular Extract Task for CUSTOMET_TYPE on ENV1 again:
 
-| SOURCE_ENV_NAME | TASK_EXECUTION_ID | REC_ID | CUSTOMER_TYPE | CUSTOMER_SUB_TYPE | DESCRIPTION        |
-| --------------- | ----------------- | ------ | ------------- | ----------------- | ------------------ |
-| ENV1            | ALL               | 1      | I             | Private           | Private customer  |
-| ENV1            | ALL               | 2      | B             | S                 | Small business     |
-| ENV1            | ALL               | 3      | B             | G                 | Government         |
-| ENV1            | 1234              | 1      | I             | Private           | Private customer  |
-| ENV1            | 1234              | 2      | B             | S                 | Small business     |
-| ENV2            | ALL               | 1      | I             | Private           | Private customer  |
-| ENV2            | ALL               | 2      | B             | S                 | Small business     |
-| ENV2            | ALL               | 3      | B             | M                 | Medium business    |
-| ENV2            | ALL               | 4      | B             | C                 | Corporate customer |
+  <table class="md-table">
+  <thead>
+  <tr class="md-end-block md-focus-container">
+  <th><span class="td-span md-focus"><span class="md-plain md-expand">SOURCE_ENV_NAME</span></span></th>
+  <th><span class="td-span"><span class="md-plain">TASK_EXECUTION_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">REC_ID</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">CUSTOMER_SUB_TYPE</span></span></th>
+  <th><span class="td-span"><span class="md-plain">DESCRIPTION</span></span></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr class="md-end-block">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">3</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">G</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Government</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1234</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1234</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">1</span></span></td>
+  <td><span class="td-span"><span class="md-plain">I</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Private customer</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">S</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Small business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">3</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">M</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Medium business</span></span></td>
+  </tr>
+  <tr class="md-end-block md-focus-container">
+  <td><span class="td-span"><span class="md-plain">ENV2</span></span></td>
+  <td><span class="td-span"><span class="md-plain">ALL</span></span></td>
+  <td><span class="td-span"><span class="md-plain">4</span></span></td>
+  <td><span class="td-span"><span class="md-plain">B</span></span></td>
+  <td><span class="td-span"><span class="md-plain">C</span></span></td>
+  <td><span class="td-span"><span class="md-plain">Corporate customer</span></span></td>
+  </tr>
+  </tbody>
+  </table>
 
  
 
 - The table is re-populated by the data of ENV1 and ALL version. The records of the specific version of ENV1 - 1234, remain unchanged. 
 
   
-
-  
-
   
 
 
-  [![Previous](/articles/images/Previous.png)](04_task_execution_overridden_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdmdb_cleanup_process.md)
-
-  
+ [![Previous](/articles/images/Previous.png)](04_task_execution_overridden_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_tdmdb_cleanup_process.md)
 
   

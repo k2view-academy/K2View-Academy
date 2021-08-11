@@ -158,7 +158,7 @@ The BATCHF command uses the same parameters as the BATCH command described above
 
 <tr>
 <td valign="top" width="300pxl">
-<h6>BATCH_RETRY '&ltbatch_id&gt'</h6>
+<h6>BATCH_RETRY '&ltbatch_id&gt' [allow_cancelled=true/false]</h6>
 
 </td>
 <td valign="top" width="400pxl">
@@ -168,6 +168,8 @@ The BATCHF command uses the same parameters as the BATCH command described above
    If the Batch process is completed before the Retry command, Fabric gets the list of instances from the source DB. 
    
    If the Batch process is completed before the Retry command, Fabric gets the list of failed entities from the batchprocess_entities_errors Cassandra table.
+   
+   allow_cancelled - indicates if the command should enable a retry of cancelled batch process. By default, this parameter is set to false.
 </p>
 </td>
 <td valign="top" width="300pxl">

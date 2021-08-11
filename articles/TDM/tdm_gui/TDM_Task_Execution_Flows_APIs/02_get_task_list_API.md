@@ -62,6 +62,7 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
   }
   ```
   
+
 ### API URL
 
 /getTasksByParams
@@ -91,16 +92,30 @@ Currently it supports the following filtering parameters:
 
 The JSON filtering parameter is optional. If is it not populated, the API returns all user's tasks.
 
-  ### API Input Examples:
+### API Input
+  
+- filteringParams - this  is an optional String parameter that can be populated by a JSON with a list of filtering parameters.
+
+### API Input Examples:
    ```json
-   {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"OFF"}
+   {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"FORCE"}
    ```
   
   ```json
   {"task_type":"EXTRACT", "version_ind":true, "load_entity":false, "delete_before_load":false, "selection_method":"L", "sync_mode":"FORCE"}
   ```
-  
-  ### API Output Example
+### API Request URL Examples:
+
+```
+http://10.21.3.4:3213/api/getTasksByParams
+```
+
+```
+http://10.21.3.4:3213/api/getTasksByParams?filteringParams=%7B%22task_type%22%3A%22LOAD%22%2C%20%22load_entity%22%3Afalse%2C%20%22delete_before_load%22%3Atrue%2C%20%22selection_method%22%3A%22L%22%7D
+
+```
+
+### API Output Example
 
   ```json
   {
