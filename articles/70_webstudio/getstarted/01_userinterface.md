@@ -6,7 +6,7 @@ Fabric Web Studio comes with a simple and intuitive layout. Like many other code
 
 ## Basic Layout
 
- The UI is divided into several main areas:
+ Fabric Web Studio adopt Visual Studio Code concepts The UI is divided into several main areas:
 
 * **Editor** (A) - The main area to edit all your project files and entities. You can open as many editors as you like side by side vertically and horizontally.
 * **Activity Bar** (B) -  Located on the far left-hand side and lets you switch between views and gives you additional context-specific indicators, like the number of outgoing changes when Git is enabled.
