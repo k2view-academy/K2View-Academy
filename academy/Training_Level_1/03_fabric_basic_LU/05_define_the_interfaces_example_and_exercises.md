@@ -49,7 +49,7 @@ Database: [full path of the billing_db.db SQLite file. For example: C:\Training\
 
 ```
 
-1. `Question: List the tables that are part of the Schema.`
+1. `Question: List the tables that are part of the interface.`
 
 2. `Question: Which steps would you execute to show which subscriber has the largest BALANCE?`
 
