@@ -1,7 +1,7 @@
 # Coding with IntelliJ
 
 ## Overview
-The Fabric platform is based on Java, and as such provides the ability to enhance your projects with any Java functions, or with 3rd party libraries from the Java
+The Fabric platform is built with Java, and as such provides the ability to enhance your projects with any Java functions, or with 3rd party libraries from the Java
 Community.   
 To ensure best-of-class performance and experience, Fabric has been tightly integrated with the IntelliJ IDEA platform. 
 We recommend installing IntelliJ IDE in cases where your project relies heavily on Java functions, such as for example:
