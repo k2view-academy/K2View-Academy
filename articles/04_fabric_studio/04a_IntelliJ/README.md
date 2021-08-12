@@ -1,5 +1,5 @@
 
-<strong>Fabric Studio<strong>
+<strong>Coding with IntelliJ<strong>
 <ul>
 <li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">Overview</a></li> 
 <li><a href="/articles/04_fabric_studio/04a_IntelliJ/02_intelliJ_install.md">Install IntelliJ</a></li>
