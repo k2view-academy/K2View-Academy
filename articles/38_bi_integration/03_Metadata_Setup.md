@@ -30,7 +30,7 @@ Exago that is running on a Windows docker can be connected to a local Fabric. In
 
 **Note**: 
 
-* Setting AUTO_MDB_SCOPE=true in Fabric connection string enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE.](https://support.k2view.com/Academy_6.5/articles/02_fabric_architecture/04_fabric_commands.html)
+* Setting **AUTO_MDB_SCOPE=true** in Fabric connection string enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE.](https://support.k2view.com/Academy_6.5/articles/02_fabric_architecture/04_fabric_commands.html)
 
 ### Objects and Joins Definition
 
