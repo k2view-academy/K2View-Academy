@@ -22,6 +22,12 @@ IntelliJ will start in the background and open-up on the selected file:
 - In addition, all the libraries and dependencies featured in your project are also be exposed in the project tree.
 
 
+## Code Completion
+All your java extensions or Fabric built-in functions and libraries appear in the hovering menu on the code/function you are currently writing, as explained in the following articles:
+
+-	[Basic]( https://www.jetbrains.com/help/idea/auto-completing-code.html#basic_completion)
+- [Statement]( https://www.jetbrains.com/help/idea/auto-completing-code.html#statements_completion)
+- [Hippie]( https://www.jetbrains.com/help/idea/auto-completing-code.html#hippie_completion)
 
 
 [![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/04a_IntelliJ/02_intelliJ_install.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/04_debugging_with_intelliJ.md)
