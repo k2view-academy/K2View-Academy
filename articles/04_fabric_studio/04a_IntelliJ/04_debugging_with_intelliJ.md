@@ -1,14 +1,6 @@
 # Debugging with IntelliJ
 
-There are a range of key-features offered by IntelliJ IDE that lets you accelerate your implementation. In this article, we will focus on the code writing and debugging capabilities.
-
-
-## Code Completion
-All your java extensions or Fabric built-in functions and libraries appear in the hovering menu on the code/function you are currently writing, as explained in the following articles:
-
--	[Basic]( https://www.jetbrains.com/help/idea/auto-completing-code.html#basic_completion)
-- [Statement]( https://www.jetbrains.com/help/idea/auto-completing-code.html#statements_completion)
-- [Hippie]( https://www.jetbrains.com/help/idea/auto-completing-code.html#hippie_completion)
+There are a range of key-features offered by IntelliJ IDE that lets you accelerate your implementation. In this article, we will focus on Fabric Java project debugging capabilities.
 
 
 ## Debugging
@@ -33,7 +25,7 @@ Refer to the following links to set up a simple Java debugging scheme on your pr
 
    For example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` option is selected. 
 
-   ![image](images/04_15_03_attach.png)
+![image](images/04_15_03_attach.png)
  
 5. Run your code and step through the program’s breakpoints using the controls on the left hand-side of the [debug window](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html#stepping)
 ![image](images/04_15_04_steps.png)
