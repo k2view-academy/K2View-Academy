@@ -21,9 +21,7 @@ Refer to the following links to set up a simple Java debugging scheme on your pr
 3. Select the **Run -> Attach to Process** option from the menu bar.  
 ![image](images/04_15_02_attach.png)
  
-4.	Select the process to which to attach the Java debugger.
-
-For example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` option is selected.
+4.	Select the process to which to attach the Java debugger - for example in the screenshot displayed below, the ```26972 com.k2view.fabric.boot.Boot (5009)``` option is selected.
 ![image](images/04_15_03_attach.png)
  
 5. Run your code and step through the program’s breakpoints using the controls on the left hand-side of the [debug window](https://www.jetbrains.com/help/idea/debugging-your-first-java-application.html#stepping)
