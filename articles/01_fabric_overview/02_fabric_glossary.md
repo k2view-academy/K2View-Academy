@@ -67,7 +67,7 @@
 <p><strong>Distributed DB</strong></p>
 </td>
 <td width="516">
-<p>A distributed database is a database that consists of two or more files located in different sites either on the same network or on entirely different networks. Sections of the database are stored in multiple physical locations whereby processing is distributed among multiple database nodes. This make them easy to expand and resilient. Fabric greatly reduces the processing complexity associated with their architecture.</p>
+<p>A distributed database is a database that consists of two or more files located in different sites either on the same network or on entirely different networks. Sections of the database are stored in multiple physical locations whereby processing is distributed among multiple database nodes. This makes them easy to expand and resilient. Fabric greatly reduces the processing complexity associated with their architecture.</p>
 </td>
 </tr>
 <tr>
@@ -143,8 +143,8 @@
 <p>An Interface is a data communication channel between Fabric and any external systems.</p>
 <p>When multiple data sources are used by a Logical Unit, additional interfaces can be defined.</p>
 <p>The interface types are:</p>
-<p><strong>DB Interface</strong>, enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
-<p><strong>Non-DB Interface</strong>, used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
+<p><strong>DB Interface</strong>: Enables the connections of the Fabric Server to databases like SQL Server, PostgreSQL or Oracle (data and metadata).</p>
+<p><strong>Non-DB Interface</strong>: Used to define a connection with data provisioning systems that are not databases. For example, search engines, FTP servers or a message queue.</p>
 </td>
 </tr>
 <tr>
@@ -168,7 +168,7 @@
 <p><a href="/articles/26_fabric_security/11_user_IAM_LDAP.md"><strong>LDAP</strong></a></p>
 </td>
 <td width="516">
-<p>Lightweight Directory Access Protocol: This is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers.&nbsp;Fabric&nbsp;can work&nbsp;with&nbsp;LDAP&nbsp;and&nbsp;AD LDAP&nbsp;&nbsp;servers (Active Directoy&nbsp;LDAP)&nbsp;as&nbsp;authenticators&nbsp;as well as&nbsp;&nbsp;to&nbsp;get information&nbsp;about users&nbsp;&nbsp;from those&nbsp;servers.</p>
+<p>Lightweight Directory Access Protocol: This is a mature, flexible, and well supported standards-based mechanism for interacting with directory servers.&nbsp;Fabric&nbsp;can work&nbsp;with&nbsp;LDAP&nbsp;and&nbsp;AD LDAP&nbsp;&nbsp;servers (Active Directory LDAP)&nbsp;as&nbsp;authenticators&nbsp;as well as&nbsp;&nbsp;to&nbsp;get information&nbsp;about users&nbsp;&nbsp;from those&nbsp;servers.</p>
 </td>
 </tr>
 <tr>
@@ -208,7 +208,7 @@
 <p><strong><a href="/articles/02_fabric_architecture/01_fabric_architecture_overview.md#21-fabric-storage">MDB / MicroDB</a></strong></p>
 </td>
 <td width="516">
-<p>Micro-database, a small SQL database used for the storage of a Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and also as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
+<p>Micro-database, a small SQL database used for the storage of a Digital Entity Instance (LUI) data. An MDB is stored as an SQLite file and as a Blob field in the Cassandra Entity table, depending on the stored property definition on the LU schema.</p>
 </td>
 </tr>
 <tr>
@@ -280,7 +280,7 @@
 <p><strong><a href="/articles/14_sync_LU_instance/01_sync_LUI_overview.md">Sync</a></strong></p>
 </td>
 <td width="516">
-<p>A process that updates / modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and also populates its data into Fabric.</p>
+<p>A process that updates / modifies the source data connected within Fabric. The Sync process executes and extracts the transformation logic of a given instance on the LU tables and populates its data into Fabric.</p>
 </td>
 </tr>
 <tr>
@@ -290,7 +290,7 @@
 <td width="516">
 <p>Defines how the sync will be performed (sync policy):</p>
 <p><strong>NONE</strong>: Do not sync.</p>
-<p><strong>Time Interval</strong>: Sync is performed automatically at the predefined time. Format = D.HH:DD:MM. Default = 1 Day.</p>
+<p><strong>Time Interval</strong>: Sync is performed automatically at the predefined time. Format = D.HH:MM:SS. Default = 1 Day.</p>
 <p><strong>Inherited</strong>: Each LU level inherits the sync rule of its direct parent branch. For example, the LU Table Population inherits from the LU table and the LU table inherits from the LUT schema.</p>
 <p><strong>Decision function</strong>: Sync is performed according to a Decision function which returns a True / False Boolean parameter.</p>
 <p>The sync method can be set on LU Schema, LU Table, or Table Population levels.</p>
