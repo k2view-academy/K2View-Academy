@@ -30,9 +30,9 @@ Fabric 6.xx + TDM 7.xx Installation 1 DC , Multi Nodes
 
 ### Setup the first 3 Cassandra nodes
 
-Run the commands as shown below for each node in turn. When doing so, update the parameters that are marked in yellow.
+Run the commands as shown below for each node in turn. When doing so, update the parameters that are unique to your project. 
 
-1.  Run the pre setup commands,
+1.  Run the pre setup commands.
 
 2.  Start Cassandra.
 
@@ -59,7 +59,7 @@ sed -i "s@num_tokens:.*@num_tokens: 16@" $INSLATT_DIR/cassandra/conf/cassandra.y
 
 ~~~
 
-If the Cassandra node have 64G of RAM, run the following:
+If the Cassandra node has 64G RAM, run the following:
 
 ~~~bash
 sed -i 's@#-Xmx4G@-Xmx18G@' $INSLATT_DIR/cassandra/conf/jvm.options
@@ -120,7 +120,7 @@ sed -i "s@num_tokens:.*@num_tokens: 16@" $INSLATT_DIR/cassandra/conf/cassandra.y
 sed -i "s@# allocate_tokens_for_keyspace:.*@allocate_tokens_for_keyspace: keyspace_with_replication_factor_3@" $INSLATT_DIR/cassandra/conf/cassandra.yaml
 ~~~
 
-If the Cassandra node have 64G of RAM, run the following:
+If the Cassandra node has 64G RAM, run the following:
 
 ~~~bash
 sed -i 's@#-Xmx4G@-Xmx18G@' $INSLATT_DIR/cassandra/conf/jvm.options
@@ -255,7 +255,7 @@ cassandra
 
 4. Start Fabric:
 
-   - On the first node of fabric run the following, only after it is ready you can start the rest of Fabric nodes
+   - On the first node of Fabric run the following (only after it is ready you can start the other Fabric nodes):
 
      ~~~bash
      cp config/adminInitialCredentials.template config/adminInitialCredentials
@@ -264,14 +264,14 @@ cassandra
      ~~~
 
 
-   - Start the rest of Fabric nodes: 
+   - Start the other Fabric nodes: 
 
      ~~~bash
      k2fabric start && k2fabric status
      ~~~
 
 
-5. Connect to the Fabric console with:
+5. Connect to the Fabric console using the following command:
 
    ~~~bash
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
@@ -281,12 +281,12 @@ cassandra
 
 ## Setup PG 
 
-TDM 7.xx is certifide with pgsql 9.6 & 13. the customer can supply access to is PG if he have one.
-TDM requiers user & password with full creat, delete, update privileges. 
+TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to your PG if you have one.
+TDM requires user & password with full creat, delete, update privileges. 
 
 Only 1 **pgsql** DB is needed in the TDM cluster.
 
-You also have the option install it form k2view predefined **tarball** file.
+You also have the option install it from the K2View predefined **tarball** file.
 
 ### Prerequisite 
 
