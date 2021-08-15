@@ -30,7 +30,7 @@
 
 ### Setup Single Node Cassandra
 
-Run the commands as shown below for each node in turn. When doing so, update the parameters that are marked in yellow.
+Run the commands as shown below.
 
 1.  Run the pre setup commands,
 
@@ -38,7 +38,12 @@ Run the commands as shown below for each node in turn. When doing so, update the
 
 3.  Run the post setup commands.
 
-**Pre setup run on one node** (called DC1 in code):
+**Pre setup run**:
+
+update the following parameters if needed:
+
+- `dc=`
+- `cluster_name:` 
 
 ~~~bash
 sed -i "s@INSLATT_DIR=.*@INSLATT_DIR=$(pwd)@" .bash_profile
