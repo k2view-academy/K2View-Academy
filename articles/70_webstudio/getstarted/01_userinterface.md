@@ -52,20 +52,21 @@ The views which appear by default at the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/scm.png" alt="version control" /></td>
     <td style="padding-left: 30px;"><strong>Source Control</strong></td>
-    <td style="width:60%">Web Studio includes Git source control by default. Selecting the icon will show you the details of your current repository changes and also will let you to compare those changes to the origin, as well as making various source control actions. A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository</td>
+    <td style="width:60%">Web Studio includes Git source control by default. Selecting the icon will show you the details of your current repository changes and also will let you to compare those changes to the origin, as well as making various source control actions. A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository. To learn more hwo to use the Git tool within the Web Studio see <a href="/articles/70_webstudio/getstarted/03_versioncontrol.md">here</a></td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/debug.png" alt="debug" /></td>
     <td style="padding-left: 30px;"><strong>Debug</strong></td>
-    <td style="width:60%">Web Studio Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see [here]().</td>
+    <td style="width:60%">Web Studio Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see [here](TBD).</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/log.png" alt="log viewer" /></td>
     <td style="padding-left: 30px;"><strong>Log Viewer</strong></td>
-    <td style="width:60%">Enables to select and view Fabric logs, in rich and useful mode. When clicked it lets you, at the Side Bar to select which log to open. To learn more about Log Viewer and use it effectively see [here]().</td>
+    <td style="width:60%">Enables to select and view Fabric logs, in rich and useful mode. When clicked it lets you, at the Side Bar to select which log to open. To learn more about Log Viewer and use it effectively see [here](TBD).</td>
 </tr>
 </tbody>
 </table>
+
 
 
 
