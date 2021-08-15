@@ -139,8 +139,8 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    bash -l 
    ~~~
 
-   - the assamption is that Cassandr, Kafka & Fabric are running on the same node.
-     if not then you have to update the IP's for: `cserver1` and  `kserver1` 
+   - Assumption: Cassandra, Kafka and Fabric are running on the same node. 
+     Else you have to update the IP's for: `cserver1` and  `kserver1` 
 
    ~~~bash
    # Cassandra IP
