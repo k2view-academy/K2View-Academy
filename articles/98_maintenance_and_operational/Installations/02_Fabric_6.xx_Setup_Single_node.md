@@ -1,4 +1,4 @@
-# Fabric 6.xx and TDM 7.xx Setup Single node
+# Fabric 6.xx and TDM 7.xx Setup Single Node
 
 ## Setup Cassandra
 
@@ -21,14 +21,14 @@
    # verified
    whereis python
    ~~~
-   
+
 5. Updated the .bash_propile to use python 2.7
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
    ~~~
 
-### Setup Singel node Cassandra
+### Setup Single Node Cassandra
 
 Run the commands as shown below for each node in turn. When doing so, update the parameters that are marked in yellow.
 
@@ -93,10 +93,10 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
 
    ~~~bash
    export kserver1=$(hostname -I |awk {'print $1'})
-   
+
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver1" ]; then echo 1 > $K2_HOME/zk_data/myid; fi
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver1" ]; then sed -i "s@broker.id=.@broker.id=1@" $CONFLUENT_HOME/server.properties ; fi
-   
+
    sed -i "s@log.retention.minutes=.*@log.retention.hours=48@" $CONFLUENT_HOME/server.properties
    sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
    sed -i "s@advertised.host.name=.*@advertised.host.name=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
@@ -107,7 +107,7 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    sed -i "s@dataDir=.*@dataDir=$K2_HOME/zk_data@" $CONFLUENT_HOME/zookeeper.properties
    sed -i "s@server.1=.*@#server.1=$(hostname -I |awk {'print $1'}):2888:3888@" $CONFLUENT_HOME/zookeeper.properties
    echo "server.1=$kserver1:2888:3888" >> $CONFLUENT_HOME/zookeeper.properties
-   
+
    ~~~
 
 5. Start Kafka and Zookeeper:
@@ -120,7 +120,6 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
 
 6. Verify the Kafka and Zookeeper are running:
 
-   
 
 ## Setup for Fabric & TDM 7
 
@@ -149,14 +148,14 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    # Kafka IP
    export kserver1=$(hostname -I |awk {'print $1'})
    cp -r $K2_HOME/fabric/config.template $K2_HOME/config
-   
+
    # update heap memory if you have minimume of 32G
    ## sed -i 's@-Xmx2G@-Xmx8G@' $INSLATT_DIR/config/jvm.options
    ## sed -i 's@-Xms2G@-Xms8G@' $INSLATT_DIR/config/jvm.options
-   
+
    cp config/adminInitialCredentials.template config/adminInitialCredentials
    sed -i 's@user.*@k2consoleadmin/KW4RVG98RR9xcrTv@' config/adminInitialCredentials
-   
+
    sed -i 's@#REPLICATION_OPTIONS=.*@REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 1}@' $K2_HOME/config/config.ini
    sed -i "s@#HOSTS=.*@HOSTS=$cserver1,$cserver2,$cserver3@" $K2_HOME/config/config.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
@@ -172,26 +171,26 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
 
-4. start Fabric
+4. Start Fabric
 
    ~~~bash
    k2fabric start && k2fabric status
    ~~~
 
-5. connect to the fabric console with:
+5. Connect to the fabric console with:
 
    ~~~bash
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - same user and password should be use for login to the WEBUI
+   - Same user and password should be use for login to the WEBUI
 
 ## Setup PG 
 
 TDM 7.xx is certifide with pgsql 9.6 & 13. the customer can supply access to is PG if he have one.
-TDM requiers user & password with full creat, delete, update privileges. 
+TDM requires user & password with full create, delete and update privileges. 
 
-you also have the option install it form k2view prediffined tarball.
+You also have the option install it from k2view predefined **tarball** file.
 
 ### Prerequisite 
 
@@ -207,24 +206,24 @@ chmod 755 /opt/apps
 useradd -m -d /opt/apps/pqsql pgsql
 ~~~
 
-### setup  ###
+### Setup  ###
 
-- connect as pqsql 
+- Connect as **pgsql**.
 
-- Download / copy the [pg-13.2.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg-13.2.tar.gz)
+- Download or copy the [pg-13.2.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg-13.2.tar.gz).
 
-- untar the `pg-13.2.tar.gz` 
+- Untar the `pg-13.2.tar.gz` 
 
   ~~~bash
   untar -zxvf pg-13.2.tar.gz && bash -l
   ~~~
 
-- you can now start the **pgsql** with 
+- You can now start the **pgsql** with: 
 
   ~~~bash
   cd bin/
   ./bin/pg_ctl -D /opt/apps/pgsql/data -l logfile start
   ~~~
 
-  - the configuration files are located at `/opt/apps/pgsql/data`
-  - the user and password are **postgres**, port is the dilute 
+  - The configuration files are located at `/opt/apps/pgsql/data`
+  - The user and password are **postgres**, port is the default (5432). 

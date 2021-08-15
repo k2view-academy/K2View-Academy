@@ -1,4 +1,4 @@
-Fabric 6.xx + TDM 7.xx Installation 1 DC , multi nodes
+Fabric 6.xx + TDM 7.xx Installation 1 DC , Multi Nodes
   -----------------------------------------------------------------------
 ## Setup for Cassandra
 
@@ -14,7 +14,7 @@ Fabric 6.xx + TDM 7.xx Installation 1 DC , multi nodes
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Cassandra 3.11.xx required Python 2.7. if Python 2.7 is miising on your OS, please install it as ROOT 
+4. Cassandra 3.11.xx required Python 2.7. if Python 2.7 is missing on your OS, please install it as ROOT: 
 
    ~~~bash
    dnf -y install python2
@@ -22,7 +22,7 @@ Fabric 6.xx + TDM 7.xx Installation 1 DC , multi nodes
    whereis python
    ~~~
 
-5. Updated the .bash_propile to use python 2.7
+5. Updated the .bash_propile to use python 2.7.
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
@@ -70,7 +70,7 @@ sed -i 's@#-Xms4G@-Xms18G@' $INSLATT_DIR/cassandra/conf/jvm.options
 
 #### Start Cassandra: 
 
-Start the cassandr on all 3 nodes
+Start Cassandra on all 3 nodes:
 
 ~~~bash
 cassandra
@@ -78,7 +78,7 @@ cassandra
 
 #### Post setup run on one node
 
-Update the `DC1` to the DC name you used above
+Update the `DC1` to the DC name you used above:
 
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
@@ -90,7 +90,7 @@ echo "CREATE KEYSPACE keyspace_with_replication_factor_3 WITH replication = {'cl
 echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -u k2admin -p 'Q1w2e3r4t5'
 ~~~
 
-run nodetool repair on all the 3 nodes
+Run **nodetool repair** command on all the 3 nodes:
 
 ~~~bash
 nodetool -u k2view -pw Q1w2e3r4t5 repair
@@ -133,7 +133,7 @@ sed -i 's@#-Xms4G@-Xms18G@' $INSLATT_DIR/cassandra/conf/jvm.options
 cassandra
 ~~~
 
-#### 
+
 
 ## Setup Kafka Cluster
 
@@ -157,14 +157,14 @@ cassandra
    export kserver1=172.31.11.198
    export kserver2=172.31.35.204
    export kserver3=172.31.31.69
-   
+
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver1" ]; then echo 1 > $K2_HOME/zk_data/myid; fi
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver2" ]; then echo 2 > $K2_HOME/zk_data/myid; fi
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver3" ]; then echo 3 > $K2_HOME/zk_data/myid; fi
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver1" ]; then sed -i "s@broker.id=.@broker.id=1@" $CONFLUENT_HOME/server.properties ; fi
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver2" ]; then sed -i "s@broker.id=.@broker.id=2@" $CONFLUENT_HOME/server.properties ; fi
    if [ "$(hostname -I |awk {'print $1'})" == "$kserver3" ]; then sed -i "s@broker.id=.@broker.id=3@" $CONFLUENT_HOME/server.properties ; fi
-   
+
    sed -i "s@log.retention.minutes=.*@log.retention.hours=48@" $CONFLUENT_HOME/server.properties
    sed -i "s@advertised.listeners=.*@advertised.listeners=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
    sed -i "s@advertised.host.name=.*@advertised.host.name=PLAINTEXT:\/\/$(hostname -I |awk {'print $1'}):9093@" $CONFLUENT_HOME/server.properties
@@ -177,7 +177,7 @@ cassandra
    echo "server.1=$kserver1:2888:3888" >> $CONFLUENT_HOME/zookeeper.properties
    echo "server.2=$kserver2:2888:3888" >> $CONFLUENT_HOME/zookeeper.properties
    echo "server.3=$kserver3:2888:3888" >> $CONFLUENT_HOME/zookeeper.properties
-   
+
    ~~~
 
 5. StartZookeeper on all 3 nodes:
@@ -198,7 +198,6 @@ cassandra
    $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
    ~~~
 
-   
 
    
 
@@ -228,17 +227,17 @@ cassandra
    export cserver1=192.168.168.212
    export cserver2=192.168.168.213
    export cserver3=192.168.168.214
-   
+
    ## update the fafka IP's 
    export kserver1=172.31.11.198
    export kserver2=172.31.35.204
    export kserver3=172.31.31.69
-   
+
    cp -r $K2_HOME/fabric/config.template $K2_HOME/config
-   
+
    sed -i 's@-Xmx2G@-Xmx8G@' $INSLATT_DIR/config/jvm.options
    sed -i 's@-Xms2G@-Xms8G@' $INSLATT_DIR/config/jvm.options
-   
+
    sed -i 's@#REPLICATION_OPTIONS=.*@REPLICATION_OPTIONS={ '"'"'class'"'"' : '"'"'NetworkTopologyStrategy'"'"', '"'"DC1"'"' : 3}@' $K2_HOME/config/config.ini
    sed -i "s@#HOSTS=.*@HOSTS=$cserver1,$cserver2,$cserver3@" $K2_HOME/config/config.ini
    sed -i "s@#USER=.*@USER=k2admin@" $K2_HOME/config/config.ini
@@ -254,9 +253,9 @@ cassandra
    sed -i "s@#BOOTSTRAP_SERVERS=.*@BOOTSTRAP_SERVERS=$kserver1:9093,$kserver2:9093,$kserver3:9093@" $K2_HOME/config/iifConfig.ini
    ~~~
 
-4. start Fabric
+4. Start Fabric:
 
-   - on the first node of fabric run the following, only after it is ready you can start the rest of Fabric nodes
+   - On the first node of fabric run the following, only after it is ready you can start the rest of Fabric nodes
 
      ~~~bash
      cp config/adminInitialCredentials.template config/adminInitialCredentials
@@ -264,39 +263,37 @@ cassandra
      k2fabric start && k2fabric status
      ~~~
 
-     
 
-   - start the rest of Fabric nodes 
+   - Start the rest of Fabric nodes: 
 
      ~~~bash
      k2fabric start && k2fabric status
      ~~~
 
-     
 
-5. connect to the fabric console with:
+5. Connect to the Fabric console with:
 
    ~~~bash
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
    ~~~
 
-   - same user and password should be use for login to the WEBUI
+   - Same user and password should be used for login to the WEB UI.
 
 ## Setup PG 
 
 TDM 7.xx is certifide with pgsql 9.6 & 13. the customer can supply access to is PG if he have one.
 TDM requiers user & password with full creat, delete, update privileges. 
 
-only 1 **pgsql** DB is need in TDM cluster
+Only 1 **pgsql** DB is needed in the TDM cluster.
 
-you also have the option install it form k2view prediffined tarball.
+You also have the option install it form k2view predefined **tarball** file.
 
 ### Prerequisite 
 
 - RedHat/CentOs 8, AWS Linux 2
 - 2 vCPU
 - 8G RAM
-- 100G free disk space, make sure it is assined to `/opt/apps/pgsql` 
+- 100G free disk space, make sure it is assigned to `/opt/apps/pgsql` 
   Add the following users:
 
 ~~~bash
@@ -305,24 +302,24 @@ chmod 755 /opt/apps
 useradd -m -d /opt/apps/pqsql pgsql
 ~~~
 
-### setup  ###
+### Setup  ###
 
-- connect as pqsql 
+- Connect as **pqsql**. 
 
 - Download / copy the [pg-13.2.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg-13.2.tar.gz)
 
-- untar the `pg-13.2.tar.gz` 
+- Untar the `pg-13.2.tar.gz` 
 
   ~~~bash
   untar -zxvf pg-13.2.tar.gz && bash -l
   ~~~
 
-- you can now start the **pgsql** with 
+- You can now start the **pgsql** with: 
 
   ~~~bash
   cd bin/
   ./bin/pg_ctl -D /opt/apps/pgsql/data -l logfile start
   ~~~
 
-  - the configuration files are located at `/opt/apps/pgsql/data`
-  - the user and password are **postgres**, port is the dilute 
+  - The configuration files are located at `/opt/apps/pgsql/data`
+  - The user and password are **postgres**, port is the default (5432).
