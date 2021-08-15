@@ -2,7 +2,7 @@ Fabric 6.xx Installation
   -----------------------------------------------------------------------
 ## Introduction 
 
-Follow the instructions in this document to install Fabric in a production environment.
+Follow the instructions here to install Fabric in a production environment.
 
 ## Prerequisites 
 
@@ -16,20 +16,20 @@ Minimum hardware for each Linux execution server is as follows:
 
     -   For servers that run all components (Fabric, Cassandra & Kafka) - 64GB RAM.
 
-    -   For servers that run single component (preferred method) - 32GB RAM.
+    -   For servers that run one component (preferred method) - 32GB RAM.
 
 -   Network: Minimum 1G per sec between the nodes and source databases.
 
 -   Storage: The preferred storage is attached local SSD's in a non-RAID configuration.
 
-> **Note:** If you must use SAN, it must be flash and in RAID-0.\
+> **Note:** If you must use a SAN, it must be flash and in RAID-0.\
 > **NAS are not certified.**
 
 Operating System: Redhat/CentOS latest Operating System and above, with latest patches.
 
 The following File Server volumes must be made available:
 
--   Volume of 50G /opt/apps/fabric/ will be use also as the home directory for k2view user
+-   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a K2View user
 
 -   Volume of 100G\* **/opt/apps/fabric/storage**
 
@@ -88,23 +88,23 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">7000</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">7001</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">7199</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">9042</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">9160</td>
-<td style="width: 50%; height: 18px;">cassandra</td>
+<td style="width: 50%; height: 18px;">Cassandra</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 11px;">3213, 9443</td>
