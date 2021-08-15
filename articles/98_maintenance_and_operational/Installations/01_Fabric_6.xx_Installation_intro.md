@@ -139,4 +139,4 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 
 
 
-<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Fabric_6.xx_Setup_Single_node.md)  
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Fabric_6.xx_Setup_Single_node.md)  
