@@ -14,13 +14,13 @@ Minimum hardware for each Linux execution server is as follows:
 
 -   RAM:
 
-    -   For servers that run all components (Fabric, Cassandra & Kafka) - 64GB RAM
+    -   For servers that run all components (Fabric, Cassandra & Kafka) - 64GB RAM.
 
-    -   For servers that run single component (preferred method) - 32GB RAM
+    -   For servers that run single component (preferred method) - 32GB RAM.
 
--   Network: Minimum 1G per sec between the nodes and source databases
+-   Network: Minimum 1G per sec between the nodes and source databases.
 
--   Storage: The preferred storage is attached local SSD's in a non-RAID configuration
+-   Storage: The preferred storage is attached local SSD's in a non-RAID configuration.
 
 > **Note:** If you must use SAN, it must be flash and in RAID-0.\
 > **NAS are not certified.**
@@ -44,7 +44,7 @@ The following File Server volumes must be made available:
 -   Volume of 100G\* **/opt/apps/kafka/**
 
 > **Note:** The file server must provide IOPS of at least 30K read & 10K write.
->The number of servers should be increased based on project scope and data retention requirements.
+> The number of servers should be increased based on project scope and data retention requirements.
 
 Add the following users:
 
@@ -66,7 +66,7 @@ echo \"kafka soft nofile 100000\" \>\> /etc/security/limits.conf
 echo \"kafka - nproc 50000\" \>\> /etc/security/limits.conf
 ~~~
 
-#### update /etc/sysctl.conf ####
+#### Update /etc/sysctl.conf ####
 
 ~~~bash
 echo \"## Added by K2view - GabiO\" \>\> /etc/sysctl.conf

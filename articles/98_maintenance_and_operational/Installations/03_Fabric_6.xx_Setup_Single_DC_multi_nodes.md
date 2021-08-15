@@ -34,11 +34,11 @@ Run the commands as shown below for each node in turn. When doing so, update the
 
 1.  Run the pre setup commands,
 
-2.  Start Cassandra, then
+2.  Start Cassandra.
 
 3.  Run the post setup commands.
 
-#### **Pre setup run on the 3 node**, update the following as needed:
+**Pre setup run on the 3 node**, update the following as needed:
 
 - `dc=`
 - `cluster_name=`
@@ -68,7 +68,7 @@ sed -i 's@#-Xms4G@-Xms18G@' $INSLATT_DIR/cassandra/conf/jvm.options
 
 
 
-#### Start Cassandra: 
+#### Start Cassandra 
 
 Start Cassandra on all 3 nodes:
 
@@ -76,7 +76,7 @@ Start Cassandra on all 3 nodes:
 cassandra
 ~~~
 
-#### Post setup run on one node
+#### Post Setup Run on One Node
 
 Update the `DC1` to the DC name you used above:
 
@@ -98,9 +98,9 @@ nodetool -u k2view -pw Q1w2e3r4t5 repair
 
 
 
-### Setup Cassandra nodes 4 and above
+### Setup Cassandra Nodes 4 and Above
 
-#### **Pre setup run on the 3 node**, update the following as needed:
+**Pre setup run on the 3 node**, update the following as needed:
 
 - `dc=`
 - `cluster_name=`
@@ -127,7 +127,7 @@ sed -i 's@#-Xmx4G@-Xmx18G@' $INSLATT_DIR/cassandra/conf/jvm.options
 sed -i 's@#-Xms4G@-Xms18G@' $INSLATT_DIR/cassandra/conf/jvm.options
 ~~~
 
-#### Start Cassandra: 
+#### Start Cassandra 
 
 ~~~bash
 cassandra

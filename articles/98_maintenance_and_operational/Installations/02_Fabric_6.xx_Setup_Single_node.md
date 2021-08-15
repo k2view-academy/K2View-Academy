@@ -14,7 +14,7 @@
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Cassandra 3.11.xx required Python 2.7. if Python 2.7 is miising on your OS, please install it as ROOT 
+4. Cassandra 3.11.xx required Python 2.7. if Python 2.7 is miising on your OS, please install it as ROOT: 
 
    ~~~bash
    dnf -y install python2
@@ -22,7 +22,7 @@
    whereis python
    ~~~
 
-5. Updated the .bash_propile to use python 2.7
+5. Updated the .bash_propile to use python 2.7:
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
@@ -34,7 +34,7 @@ Run the commands as shown below for each node in turn. When doing so, update the
 
 1.  Run the pre setup commands,
 
-2.  Start Cassandra, then
+2.  Start Cassandra.
 
 3.  Run the post setup commands.
 
@@ -60,13 +60,13 @@ chmod 400 ~/cassandra/conf/.jmxremote.password
 
 ~~~
 
-### Start Cassandra:
+### Start Cassandra
 
 ~~~bash
 cassandra
 ~~~
 
-### Post setup run on one node
+### Post Setup Run on One Node
 
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
@@ -177,7 +177,7 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    k2fabric start && k2fabric status
    ~~~
 
-5. Connect to the fabric console with:
+5. Connect to the Fabric console with:
 
    ~~~bash
    fabric -u k2consoleadmin -p KW4RVG98RR9xcrTv
