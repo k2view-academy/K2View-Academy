@@ -227,3 +227,8 @@ useradd -m -d /opt/apps/pqsql pgsql
 
   - The configuration files are located at `/opt/apps/pgsql/data`
   - The user and password are **postgres**, port is the default (5432). 
+
+
+
+[![Previous](/articles/images/Previous.png)](01_Fabric_6.xx_Installation_intro.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_Fabric_6.xx_Setup_Single_DC_multi_nodes.md)  
+
