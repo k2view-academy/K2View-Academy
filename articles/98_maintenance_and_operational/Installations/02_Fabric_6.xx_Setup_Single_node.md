@@ -14,7 +14,7 @@
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Cassandra 3.11.xx required Python 2.7. if Python 2.7 is miising on your OS, please install it as ROOT: 
+4. Cassandra 3.11.xx requires Python 2.7. If Python 2.7 is miising on your OS, install it as ROOT: 
 
    ~~~bash
    dnf -y install python2
@@ -144,7 +144,7 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    bash -l 
    ~~~
 
-   - Assumption: Cassandra, Kafka and Fabric are running on the same node.  Else you have to update the IP's for: **cserver1** and  **kserver1**. 
+   - Assumption: Cassandra, Kafka and Fabric are running on the same node. If not, you have to update the IP's for: **cserver1** and  **kserver1**. 
      
 
    ~~~bash
@@ -192,17 +192,18 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
 
 ## Setup PG 
 
-TDM 7.xx is certifide with pgsql 9.6 & 13. the customer can supply access to is PG if he have one.
+TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
 TDM requires user & password with full create, delete and update privileges. 
 
-You also have the option install it from k2view predefined **tarball** file.
+You also have the option install it from the K2View predefined **tarball** file.
 
 ### Prerequisite 
 
 - RedHat/CentOs 8, AWS Linux 2
 - 2 vCPU
 - 8G RAM
-- 100G free disk space, make sure it is assined to `/opt/apps/pgsql` 
+- 100G free disk space, make sure it is assigned to `/opt/apps/pgsql` 
+  
   Add the following users:
 
 ~~~bash
