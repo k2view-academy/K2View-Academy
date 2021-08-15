@@ -114,8 +114,8 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
 <tr>
-<td style="width: 50%; height: 18px;"><strong>22</strong></td>
-<td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
+<td style="width: 50%; height: 18px;">22</td>
+<td style="width: 50%; height: 18px;">SSH, SCP</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">7000</td>
@@ -163,6 +163,7 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 </tr>
 </tbody>
 </table>
+
 
 
 

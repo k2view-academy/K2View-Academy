@@ -74,3 +74,66 @@ echo \"vm.max_map_count = 1048575\" \>\> /etc/sysctl.conf
 echo \"fs.file-max = 500000\" \>\> /etc/sysctl.conf
 ~~~
 
+
+
+### Linux Ports 
+
+Open the following ports on the LINUX server, and make sure they are accessible from outside the server: 
+
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; height: 18px;">22</td>
+<td style="width: 50%; height: 18px;">SSH, SCP</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">7000</td>
+<td style="width: 50%; height: 18px;">cassandra</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">7001</td>
+<td style="width: 50%; height: 18px;">cassandra</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">7199</td>
+<td style="width: 50%; height: 18px;">cassandra</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">9042</td>
+<td style="width: 50%; height: 18px;">cassandra</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">9160</td>
+<td style="width: 50%; height: 18px;">cassandra</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 11px;">3213, 9443</td>
+<td style="width: 50%; height: 11px;">K2View Fabric</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">6379</td>
+<td style="width: 50%; height: 18px;">Redis</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">2181, 2888, 3888</td>
+<td style="width: 50%; height: 18px;">Kafka Zookeeper</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">9093</td>
+<td style="width: 50%; height: 18px;">Kafka</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">9081</td>
+<td style="width: 50%; height: 18px;">Kafka JMX</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">5124</td>
+<td style="width: 50%; height: 18px;">K2View Fabric</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">5432</td>
+<td style="width: 50%; height: 18px;">pdsql</td>
+</tr>
+</tbody>
+</table>
+
