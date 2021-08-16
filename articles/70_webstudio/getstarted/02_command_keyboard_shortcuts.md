@@ -4,9 +4,9 @@ Access all available Fabric Web Studio functionality and commands from the top m
 
 - The commands appear with the associated key binding, also known as shortcuts (if it exists). If you forget a keyboard shortcut, use the **Command Palette** to help you out.
 
-- It shows first the recently used commands and then all other commands.
-- If you do not remember the exact command, just start type keyword that might fit to filter relevant macthes.
-- It includes both standard IDE commands, as well as Fabric dedicated commands such as Open the Fabric console or Create new Broadway flow. Once the palette is opened type "Fabric" to filter and see them. 
+- The Command Palette shows first the recently used commands and then all other commands.
+- If you do not remember the exact command, just start to type the keyword that might fit to filter relevant matches. The Command Palette will complete the command. 
+- The Command Palette includes both standard IDE commands, as well as Fabric dedicated commands such as Open the Fabric console or Create new Broadway flow. Once the palette is opened type "Fabric" to filter and see them. 
 
 <img src="images/02_commands.gif" alt="command palette" style="zoom:80%;" />
 
