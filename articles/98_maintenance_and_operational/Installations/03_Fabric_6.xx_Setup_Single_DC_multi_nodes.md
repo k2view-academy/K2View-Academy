@@ -1,4 +1,4 @@
-# Fabric 6.xx + TDM 7.xx Installation 1 DC , Multi Nodes
+# Fabric 6.xx + TDM 7.xx Installation 1 DC  Multi Nodes
 
 ## Setup for Cassandra
 
