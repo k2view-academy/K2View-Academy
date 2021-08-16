@@ -38,9 +38,9 @@ Run the commands as shown below.
 
 3.  Run the post setup commands.
 
-**Pre setup run**:
+**Pre Setup Run**:
 
-update the following parameters if needed:
+Update the following parameters if needed:
 
 - `dc=`
 - `cluster_name:` 
