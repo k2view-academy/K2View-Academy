@@ -1,5 +1,5 @@
-Fabric 6.xx Installation
-  -----------------------------------------------------------------------
+# Fabric 6.xx Installation
+
 ## Introduction 
 
 Follow the instructions here to install Fabric in a production environment.
