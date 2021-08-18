@@ -1,5 +1,7 @@
 # TDM Installation and Initial Configuration
 
+This document describes the installation guidelines and the initial configuration activities requires for a new TDM installation or an upgrade of a TDM 7.x version to the current version.
+
 ## TDM Installation  -  Prerequisites
 
 The following components must be installed as a prerequisite:
