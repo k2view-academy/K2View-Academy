@@ -48,8 +48,11 @@ The following are the main log options:
 ### Logs Structure:
 
 Each log entry consists of several fields and is constructed as follows:
-<Type> <TimeStamp> <Tag ID> <Thread Name> <Class Name> <Message Content>. 
-	
+
+```<Type> <TimeStamp> <Tag ID> <Thread Name> <Class Name> <Message Content>.```
+
+e.g.:
+
 ```INFO  2021-08-18 08:49:31,400 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.FabricSession - START - sync Patient.1514294103```
 
 
