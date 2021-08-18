@@ -53,20 +53,20 @@ The following are the main log options:
 <tbody>
 
 <tr>
-<td width="200">Message Type</td>
+<td width="200"><strong>Message Type</strong></td>
 <td width="400">
-<p>Message Description</p>
+<strong>Message Description</strong>
 </td>
 <td width="400">
-<p>Example</p>
+<strong>Example</strong>
 </td>
 </tr>
 	
 
 <tr>
-<td width="200">Message Type</td>
+<td width="200">Type</td>
 <td width="400">
-<p>One of the following types: ERROR/TRACE/WARN/INFO/DEBUG</p>
+<p>One of the following types: ERROR/TRACE/WARN/INFO/DEBUG. Read more on these status and how to configure them [here](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level)</p>
 </td>
 <td width="400">
 <p>INFO 2021-08-18 06:22:59,057</p> 
@@ -117,7 +117,7 @@ The following are the main log options:
 <tr>
 <td width="200">Message</td>
 <td width="400">
-<p>Description of the message as per defined by the class's developer. Note that the duration of the process can be added as part of the message content./p>
+<p>Description of the message as defined by the class's developer. Note that the duration of the process can be added as part of the message content.</p>
 </td>
 <td width="400">
 <p>End operation 'Sync Patient.1514294103' successfully.  [1292ms]</p> 
