@@ -7,7 +7,7 @@ The following components must be installed as a prerequisite:
 - **Fabric Server** -  Fabric 6.5.1 and above for TDM 7.2.
 - **PostgreSQL DB** - the TDM DB tables are created on a PostgreSQL DB. Note that you can either use a PostgreSQL v9.6 or v13 versions. 
 
-Click here to open the [TDM 7.2 Docker Installation document](/Release_Notes_And_Upgrade/TDM-V7/TDM_Docker_Installation_V7.2.md).
+Click here to open the [TDM 7.2 Docker Installation document](/Release_Notes_And_Upgrade/TDM-V7.2/TDM_Docker_Installation_V7.2.md).
 
 ## TDM Package Content
 
@@ -168,7 +168,7 @@ Following steps should be following if a new APIDOC should be generated to inclu
 
 ## Import and Deploy the TDM Library
 
-The TDM back-end layer is now implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy to Fabric the Web Services and the TDM LU. 
+The TDM back-end layer is implemented by Fabric APIs in the TDM Library. Import the TDM Library into the Fabric project and deploy to Fabric the Web Services and the TDM LU to enable the TDM GUI invoking the TDM APIs. 
 
 Note that if you already have a TDM 7.0.x project, you need to delete the TDM category from the Web Services before importing the TDM Library's Web Services.
 
