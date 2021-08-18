@@ -49,25 +49,19 @@ The following are the main log options:
 
 Each log entry consists of several fields and is constructed as follows:
 
-```<Type> <TimeStamp> <Tag ID> <Thread Name> <Class Name> <Message Content>.```
-
-e.g.:
-
-```INFO  2021-08-18 08:49:31,400 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.FabricSession - START - sync Patient.1514294103```
-
-
+![image](images/Log%20Message%20Structure.jpg)
 	
 The table below describes each field:	
 	
-#### Message Components
+#### Log Entry Components
 
 <table>
 <tbody>
 
 <tr>
-<td width="200"><strong>Field Type</strong></td>
+<td width="200"><strong>Log Entry Component</strong></td>
 <td width="400">
-<strong>Field Description</strong>
+<strong>Description</strong>
 </td>
 <td width="400">
 <strong>Example</strong>
@@ -77,7 +71,7 @@ The table below describes each field:
 
 <tr>
 <td width="200">Type</td>
-<td width="400">One of the following types: ERROR/TRACE/WARN/INFO/DEBUG. Read more on these status and how to configure them <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level">here</a>.
+<td width="400">One of the following: ERROR/TRACE/WARN/INFO/DEBUG. Read more on these status and how to configure them <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level">here</a>.
 </td>
 <td width="400">INFO 2021-08-18 06:22:59,057</td>
 </tr>
@@ -86,13 +80,13 @@ The table below describes each field:
 <tr>
 <td width="200">Time Entry</td>
 <td width="400">
-<p>Timestamp for the process execution with millisec precision</p>
+<p>Timestamp for the process execution with millisecond precision</p>
 </td>
 <td width="400">WARN  2021-08-18 08:49:31,265</td>
 </tr>	
 
 <tr>
-<td width="200">Message Tag ID</td>
+<td width="200">Log Tag ID</td>
 <td width="400">
 <p>ID given by the system for the process being executed. This ID will be used across the session for subsequent messages referring to this thread</p>
 </td>
@@ -102,7 +96,7 @@ The table below describes each field:
 </tr>
 	
 <tr>
-<td width="200">Thread Name</td>
+<td width="200">Log Thread Name</td>
 <td width="400">
 <p>The name of the thread currently running</p>
 </td>
@@ -112,7 +106,7 @@ The table below describes each field:
 </tr>	
 
 <tr>
-<td width="200">Class Name</td>
+<td width="200">Log Class Name</td>
 <td width="400">
 <p>The name of the class being invoked</p>
 </td>
@@ -122,9 +116,9 @@ The table below describes each field:
 </tr>		
 
 <tr>
-<td width="200">Message</td>
+<td width="200">Log content</td>
 <td width="400">
-<p>Description of the message as defined by the class's developer. Note that the duration of the process can be added as part of the message content.</p>
+<p>Content of the message. The class's developer defines this content. Note that the duration of the process can be added as part of the message content.</p>
 </td>
 <td width="400">
 <p>End operation 'Sync Patient.1514294103' successfully.  [1292ms]</p> 
@@ -138,7 +132,7 @@ The table below describes each field:
 
 #### Examples
 
-Below, you can see an extract of log messages for the ```JdbcEx Server``` thread (to which was attributed Tag ID [LID10100000000001d]) while performing an Instance GET operation between Timestamp 08:49:31,256 and Timestamp 08:49:32,516 - in total 260 millisecs:
+Below, you can see an extract of log entries for the ```JdbcEx Server``` thread (to which was attributed Tag ID [LID10100000000001d]) while performing an Instance GET operation between Timestamp 08:49:31,256 and Timestamp 08:49:32,516 - in total 260 millisecs:
 
 ```
 INFO  2021-08-18 08:49:31,256 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.d.d.c.ClockFactory - Using java.lang.System clock to generate timestamps.
