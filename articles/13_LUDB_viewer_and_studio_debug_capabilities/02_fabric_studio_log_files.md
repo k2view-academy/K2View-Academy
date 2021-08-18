@@ -47,6 +47,8 @@ The following are the main log options:
 
 ### Logs Structure:
 
+Each log entry consists of several fields. The table below describes each field:
+
 #### Message Components
 
 <table>
