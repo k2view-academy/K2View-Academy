@@ -82,6 +82,16 @@ sysctl -p
 
 
 
+#### add the following packges for RHEL/CentOs 8
+
+~~~bash
+dnf install -y compat-openssl10 readline* python2
+ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
+
+~~~
+
+
+
 ### Linux Ports 
 
 Open the following ports on the LINUX server, and make sure they are accessible from outside the server: 

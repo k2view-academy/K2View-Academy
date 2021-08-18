@@ -14,19 +14,15 @@
    tar -zxvf k2v_cassandra-3.11.xxx.tar.gz
    ~~~
 
-4. Cassandra 3.11.xx requires Python 2.7. If Python 2.7 is miising on your OS, install it as ROOT: 
-
-   ~~~bash
-   dnf -y install python2
-   # verified
-   whereis python
-   ~~~
-
-5. Updated the .bash_propile to use python 2.7:
+4. Updated the .bash_propile to use python 2.7:
 
    ~~~bash
    sed -i '11i\alias python='/usr/bin/python2.7'\' ~/.bash_profile
+   source ./.bash_profile
+   # verified the Python version 
+   python --version
    ~~~
+
 
 ### Setup Single Node Cassandra
 
@@ -209,7 +205,7 @@ You also have the option install it from the K2View predefined **tarball** file.
 ~~~bash
 mkdir -p /opt/apps
 chmod 755 /opt/apps
-useradd -m -d /opt/apps/pqsql pgsql
+useradd -m -d /opt/apps/pgsql pgsql
 ~~~
 
 ### Setup  ###
@@ -228,7 +224,7 @@ useradd -m -d /opt/apps/pqsql pgsql
 
   ~~~bash
   cd bin/
-  ./bin/pg_ctl -D /opt/apps/pgsql/data -l logfile start
+  ./pg_ctl -D /opt/apps/pgsql/data -l logfile start
   ~~~
 
   - The configuration files are located at `/opt/apps/pgsql/data`
