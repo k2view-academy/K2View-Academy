@@ -1,4 +1,4 @@
-# TDM Installation
+# TDM Installation and Initial Configuration
 
 ## TDM Installation  -  Prerequisites
 
