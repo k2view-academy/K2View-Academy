@@ -53,9 +53,9 @@ The following are the main log options:
 <tbody>
 
 <tr>
-<td width="200"><strong>Message Type</strong></td>
+<td width="200"><strong>Field Type</strong></td>
 <td width="400">
-<strong>Message Description</strong>
+<strong>Field Description</strong>
 </td>
 <td width="400">
 <strong>Example</strong>
