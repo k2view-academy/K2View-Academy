@@ -67,7 +67,7 @@ The following are the main log options:
 <td width="200">Type</td>
 <td width="400">One of the following types: ERROR/TRACE/WARN/INFO/DEBUG. Read more on these status and how to configure them <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level">here</a>.
 </td>
-<td width="400">*INFO* 2021-08-18 06:22:59,057</td>
+<td width="400">INFO 2021-08-18 06:22:59,057</td>
 </tr>
 
 	
@@ -76,7 +76,7 @@ The following are the main log options:
 <td width="400">
 <p>Timestamp for the process execution with millisec precision</p>
 </td>
-<td width="400">INFO *2021-08-18 06:22:59,057*</td>
+<td width="400">WARN  2021-08-18 08:49:31,265</td>
 </tr>	
 
 <tr>
