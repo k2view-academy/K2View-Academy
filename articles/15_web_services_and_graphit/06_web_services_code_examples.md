@@ -1,6 +1,6 @@
 # Web Services - Code Examples
 
-### Example List:
+### Example List
 
 * [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance)
 * [Complex response - multiple entries from various LU tables](#example-of-a-wscustomerinfo2-web-service-that-brings-a-dbrows-structure-as-an-output-for-a-given-instance)
