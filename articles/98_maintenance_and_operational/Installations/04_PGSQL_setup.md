@@ -94,14 +94,14 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 open pgadmin connection and setup as the example below:
 
-<img src="images/pg13_tls_connet01.png" style="zoom:40%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:40%;" />
+<img src="images/pg13_tls_connet01.png" style="zoom:25%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:25%;" />
 
 ### ***Fabric Implementation Guidelines***
 
 **Edit the TDM Interface**
 
 - Edit the TDM interface. Set the **Custom Connection String setting to true** and add **&ssl=true** to the connection string. Example:
-  <img src="images/pg_fabric_interface01.png" style="zoom:60%;" />
+  <img src="images/pg_fabric_interface01.png" style="zoom:45%;" />
 
    Verify that the TDM interface is defined using the Generic DB format (Database Type is genericdb).
 
