@@ -58,7 +58,7 @@ The **DEBUG_CDC_JOB** Fabric job can be run as a CDC consumer to debug a CDC top
 
 Example: 
 
-startjob DEBUG_CDC_JOB name='DEBUG_CDC_JOB' ARGS='{"topic":Tableau", "partition": "0", "group_id": "tableau"}';
+startjob DEBUG_CDC_JOB name='DEBUG_CDC_JOB' ARGS='{"topic":Tableau", "group_id": "tableau"}';
 
 
 
