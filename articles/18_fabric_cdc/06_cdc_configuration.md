@@ -169,11 +169,17 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <td width="400pxl" valign="top" >
 </td>
 </tr>    
-<td valign="top" width="200pxl">
+<td rowspan="2" valign="top" width="200pxl">
 <p><h5>search_engine</h5></p>
 </td>
-<td colspan="2" width="471">
+<td valign="top" width="250pxl">
 <p>Supported providers: ElasticSearchProvide</p>
+<p>Maximum number of concurrent threads to process the bulk actions:
+  #BULK_PROCESSOR_MAX_CONCURRENT_WORKERS=5 </p>
+<p>Bulk size. The maximum number of actions (requests) in one bulk:
+  #BULK_PROCESSOR_MAX_ACTIONS=1000  </p>
+</td>
+<td width="400pxl" valign="top" >
 </td>
 </tr>
 </tbody>
