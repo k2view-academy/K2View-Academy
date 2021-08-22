@@ -186,49 +186,16 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
 
    - Same user and password should be use for login to the WEBUI
 
-## Setup PG 
+## PGSQL 
 
 TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
 TDM requires user & password with full create, delete and update privileges. 
 
-You also have the option install it from the K2View predefined **tarball** file.
+the custumere can provide the **PGSQL**, or you can find installation instraction for **K2view** **PGSQL** installation:
 
-### Prerequisite 
-
-- RedHat/CentOs 8, AWS Linux 2
-- 2 vCPU
-- 8G RAM
-- 100G free disk space, make sure it is assigned to `/opt/apps/pgsql` 
-  
-  Add the following users:
-
-~~~bash
-mkdir -p /opt/apps
-chmod 755 /opt/apps
-useradd -m -d /opt/apps/pgsql pgsql
-~~~
-
-### Setup  ###
-
-- Connect as **pgsql**.
-
-- Download or copy the [pg-13.2.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg-13.2.tar.gz).
-
-- Untar the `pg-13.2.tar.gz` 
-
-  ~~~bash
-  untar -zxvf pg-13.2.tar.gz && bash -l
-  ~~~
-
-- You can now start the **pgsql** with: 
-
-  ~~~bash
-  cd bin/
-  ./pg_ctl -D /opt/apps/pgsql/data -l logfile start
-  ~~~
-
-  - The configuration files are located at `/opt/apps/pgsql/data`
-  - The user and password are **postgres**, port is the default (5432). 
+<ul>      
+<li>
+<a href="/articles/98_maintenance_and_operational/Installations/04_PGSQL_setup.md">Setup PGSQL 13.3</a></li>
 
 
 
