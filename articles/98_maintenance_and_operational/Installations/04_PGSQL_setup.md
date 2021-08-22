@@ -24,6 +24,10 @@ the tarball that is supplied by **K2view** is PGSQL 13.3 with TLS mode enabel, t
 mkdir -p /opt/apps
 chmod 755 /opt/apps
 useradd -m -d /opt/apps/pgsql pgsql
+
+#### add the following packges for RHEL/CentOs 8
+dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
+ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 ~~~
 
 ## Setup  ##

@@ -85,7 +85,7 @@ sysctl -p
 #### add the following packges for RHEL/CentOs 8
 
 ~~~bash
-dnf install -y compat-openssl10 readline* python2
+dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
 ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 ~~~
