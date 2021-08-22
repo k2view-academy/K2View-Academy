@@ -68,16 +68,13 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 - run the following command from the console to create the TDMDB and user tdm
 
   ~~~bash
+  createuser tdm --login --superuser
+  createdb -O tdm TDMDB
+  echo "ALTER USER tdm WITH PASSWORD 'tdm';"| psql
   echo "ALTER USER postgres WITH PASSWORD 'postgres';"| psql
   echo "ALTER USER postgres WITH SUPERUSER;"| psql
-  
-  # --- #
-  
-  echo "CREATE ROLE tdm LOGIN PASSWORD 'tdm' SUPERUSER INHERIT CREATEDB CREATEROLE REPLICATION;" |psql
-  echo "CREATE DATABASE "TDMDB" WITH OWNER = tdm ENCODING = 'UTF8' TABLESPACE = pg_default CONNECTION LIMIT = -1;" |psql
-  
   ~~~
-
+  
 - now you should connect via pgadmin and run the content of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` via the **pgadmin**, connect with **tdm** user
 
   or you can copy the files to the pgsql console and run them with the **psql** command.
