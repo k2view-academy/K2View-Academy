@@ -96,6 +96,40 @@ open pgadmin connection and setup as the example below:
 
 <img src="images/pg13_tls_connet01.png" style="zoom:25%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:25%;" />
 
+### Checkin that the connection is secure
+
+- from the server side, run the following command from the console:
+
+~~~sql
+echo "SELECT datname,usename, ssl, client_addr FROM pg_stat_ssl JOIN pg_stat_activity ON pg_stat_ssl.pid = pg_stat_activity.pid;" | psql
+~~~
+
+​	output should look like (the "t" = true):
+
+~~~test
+datname  | usename  | ssl |  client_addr
+----------+----------+-----+---------------
+ postgres | postgres | t   | 10.212.134.59
+ postgres | postgres | t   | 10.212.134.59
+ postgres | postgres | t   | 10.212.134.59
+ postgres | postgres | t   | 10.212.134.59
+ pgsql    | pgsql    | f   |
+(5 rows)
+~~~
+
+- from pgadmin, run the following script:
+
+~~~sql
+SELECT datname,usename, ssl, client_addr
+  FROM pg_stat_ssl
+  JOIN pg_stat_activity
+   ON pg_stat_ssl.pid = pg_stat_activity.pid;
+~~~
+
+​	<img src="images/pg_check_if_con_is_ssl.png" style="zoom:35%;" />
+
+
+
 ### ***Fabric Implementation Guidelines***
 
 **Edit the TDM Interface**
