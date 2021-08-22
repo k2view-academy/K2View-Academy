@@ -26,7 +26,7 @@ chmod 755 /opt/apps
 useradd -m -d /opt/apps/pgsql pgsql
 
 #### add the following packges for RHEL/CentOs 8
-dnf install -y compat-openssl10 readline* python2 glibc-locale-source glibc-langpack-en
+dnf install -y compat-openssl10 readline* glibc-locale-source glibc-langpack-en
 ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 ~~~
 
@@ -36,7 +36,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 - Download or copy the [pg13.3_tls_enabled.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_enabled.tar.gz).
 
-- Download the cert [pg13.3_tls_cert.zip](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG image/pg13.3_tls_enabled/pg13.3_tls_cert.zip)
+- Download the cert [pg13.3_tls_cert.zip](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_cert.zip)
 
   you need copy the files to the fabric that runs TDM, and locate them under $K2_HOME/.pg_cert/ (you need to create this directory)
 
@@ -45,7 +45,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 - Untar the `pg13.3_tls_enabled.tar.gz` 
 
   ~~~bash
-  untar -zxvf pg13.3_tls_enabled.tar.gz && bash -l
+  tar -zxvf pg13.3_tls_enabled.tar.gz && bash -l
   ~~~
 
 - You can now start the **pgsql** with: 
