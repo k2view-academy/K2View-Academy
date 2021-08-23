@@ -19,5 +19,5 @@ Broadway provides a number of masking actors that can be used to mask sensitive 
 Moreover, sensitive data can be masked either by using the LU Table Population Broadway Flow (which masks the data before it is saved into Fabric), or by loading Broadway to mask the data before it is sent to the target.
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking capabilities.
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/IAM_SAML/07_user_IAM_overview.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/07_user_IAM_overview.md)
 
