@@ -1,4 +1,4 @@
-# Installation and Setup
+# Installation and Initialization
 
 ### Installation Steps
 
@@ -35,6 +35,11 @@
   ~~~
 
 
+### Project Initialization in Exago
+
+Upon the completion of installation and configuration setup, deploy the Fabric project. 
+
+As a result, the <project name> folder is created in Exago Storage Management DB, with the default (read-only) access permissions. Continue to the next article or click [here](02_Permissions_Setup.md) to setup the full access permissions. 
 
 ### Installation Recommendations
 
@@ -46,10 +51,10 @@ Following are the installation and setup recommendations:
 - The recommended Storage Management DB type is PostgreSQL.
   - PostgreSQL is a must for UAT / Production environments, but it is preferable to use it for Dev and QA as well.
   - Default SQLite DB can be used for demo purposes. 
-- To re-use the same Storage Management DB for several environments of the same type (for example, several QA environments), define a unique Table Prefix as part of the Storage Management DB details.
+- To re-use the same Storage Management DB for several environments of the same type (for example, several QA environments), define a unique Table Prefix as part of the Storage Management DB details in config.ini.
 
 
-
+[![Previous](/articles/images/Previous.png)](00_BI_Overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Permissions_Setup.md) 
 
 
 

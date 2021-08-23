@@ -9,9 +9,10 @@ Exago BI can be accessed from the [K2View Web Framework](https://support.k2view.
 
 Prior to starting your work on the reports, perform the following setup steps:
 
-* Installation and Storage Management setup.
-* Access rules and permissions settings.
-* Metadata setup and parameters definition.
+* [Installation and Storage Management setup](01_Installation.md).
+* [Access rules and permissions settings](02_Permissions_Setup.md).
+* [Metadata setup and parameters definition](03_Metadata_Setup).
 
 Each of these steps is described in details in subsequent articles. 
 
+[<img align="right" width="60" height="54" src="/articles/images/Next.png">](01_Installation.md) 
