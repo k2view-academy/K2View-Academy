@@ -49,7 +49,5 @@ The command will either create the permissions in the Storage Management DB or u
 
 
 
-[![Previous](/articles/images/Previous.png)](01_Installation.md)
-
-[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_Metadata_Setup.md) 
+[![Previous](/articles/images/Previous.png)](01_Installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_Metadata_Setup.md) 
 
