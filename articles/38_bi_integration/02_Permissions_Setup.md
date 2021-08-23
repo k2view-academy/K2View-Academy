@@ -48,9 +48,9 @@ Exago Storage Management is a DB that keeps the definition of all reports, templ
 
 To define the access rules, run the Fabric command **set_bi_access** with the following input:
 
-1. Folder name (or report name).
-2. Fabric role.
-3. Array of access flags. 
+1. Folder name or report name (optional), if not provided the command is executed on the <project name> folder.
+2. Fabric role (mandatory).
+3. Array of access flags (mandatory), provide only those that should be **true**: 
    * CanEdit
    * CanRename
    * CanShare
