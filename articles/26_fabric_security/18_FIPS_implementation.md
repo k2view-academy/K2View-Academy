@@ -112,6 +112,6 @@ Once re-started, start a Fabric Console CLI window and execute the following com
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/IAM_SAML/17_user_IAM_custom_authenticator.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/17_user_IAM_custom_authenticator.md)
 
 
