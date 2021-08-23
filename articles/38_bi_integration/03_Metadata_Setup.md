@@ -1,6 +1,15 @@
-# Metadata and Parameters Setup
+# Metadata Setup
 
-### Data Source Definition
+### Overview
+
+This article includes the following topics:
+
+* [Data sources](03_Metadata_Setup.md#data-sources) creation
+* [Objects and Joins](03_Metadata_Setup.md#objects-and-joins) creation
+
+Follow each one of them to fully setup the metadata, as a preparation for report creation.
+
+### Data Sources
 
 Exago supports definition of data sources of various types, such as relational databases (e.g. Oracle, MySQL, PostgreSQL), non-relational databased (e.g. MongoDB), DWH (e.g. Snowflake) or other types (e.g. XML files). Data sources are defined via the BI Admin. 
 
@@ -22,7 +31,9 @@ To setup Fabric as a data source:
   urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
   ~~~
 
-  Exago that is running on a Windows docker can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
+3. Click **Apply** to save the changes.
+
+Exago that is running on a Windows docker can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
 
 ![image](images/bi_setup_1.PNG)
 
@@ -31,7 +42,7 @@ To setup Fabric as a data source:
 * One Exago installation can accommodate several Fabric deployments by defining each Fabric as a separate data sources.  
 * Setting **AUTO_MDB_SCOPE=true** in Fabric connection string is mandatory since it enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE setting.](https://support.k2view.com/Academy_6.5/articles/02_fabric_architecture/04_fabric_commands.html)
 
-### Objects and Joins Definition
+### Objects and Joins
 
 Once the data source is created, you need to define its objects and joins. Objects and joins can be created either manually one by one or via the Discover Object/Join Metadata function, both are done using the BI Admin. 
 
@@ -74,7 +85,7 @@ Once the data source is created, you need to define its objects and joins. Objec
 
 * If a table doesn’t have a primary key defined in Fabric, the object is created as **Incomplete** by the Auto Discovery process. Then the user must setup the primary key manually. The LU's Root Table must have a primary key defined in Fabric schema. 
 * The joins between Incomplete tables are not created by the Auto Discovery process and need to be created manually.
-* It is not required to define all data source's objects and joins in Exago, but only those which are required for reports creation. However the LU's **Root table** and its respective joins must always be included in the data source metadata definition, even if it is not required for the report creation. *More details about the report creation based on Fabric LU tables are provided here - TBD.*
+* It is not required to define all data source's objects and joins in Exago, but only those which are required for reports creation. However the LU's **Root table** and its respective joins must always be included in the data source metadata definition, even if it is not required for the report creation. [Click to get more details about the report creation based on Fabric LU tables](04_report_creation_guidelines.md).
 * In order to include data across several data sources in the same report (for example, the data from Fabric and from PostgreSQL DB), you must manually create a join between the respective objects of these data sources. The same should be done when you need to include the LU and common tables data of the same Fabric in the report (since Fabric doesn't have a foreign key relation between the LU and common tables). 
 
 
@@ -82,4 +93,7 @@ Once the data source is created, you need to define its objects and joins. Objec
 
 
 
-[![Previous](/articles/images/Previous.png)](02_Permissions_Setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](xxx.md)
+
+
+[![Previous](/articles/images/Previous.png)](02_Permissions_Setup.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](04_parameters.md)
+
