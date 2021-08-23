@@ -388,7 +388,7 @@ Below is a list of GRANT WS_NAME command parameters:
 </code></pre>
 
 When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_read_token' token, Fabric throws the following error:
-  "Com.k2view.cdbms.exceptions.UnauthorizedException: ```test_read_token``` is not allowed to perform [DELETE_INSTANCE]"
+  "Com.k2view.cdbms.exceptions.UnauthorizedException: ```test_read``` is not allowed to perform [DELETE_INSTANCE]"
 
 
 ## Additional Commands
