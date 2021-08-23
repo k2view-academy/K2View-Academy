@@ -4,10 +4,10 @@ Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.
 
 Exago BI can be accessed from the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html) whereas two applications are included there:
 
-* **BI Admin**, for the system configuration and initial setup. Only the users that have a BI Admin or BI Designer permission assigned to their role can access this module.
+* **BI Admin**, for the system configuration and initial setup. The access to this module is restricted based on Fabric user role.
 * **BI Designer**, for the creation and generation of the reports. Any user can access this module however the access to various content elements (folders, reports, etc.) within this application can be restricted by setting up the permission rules. 
 
-Prior to starting your work on the reports, perform the following setup steps:
+Prior to starting your work on the reports, perform the following setup steps using the **BI Admin** in the BI application of the Fabric Web Framework:
 
 * [Installation and Storage Management setup](01_Installation.md).
 * [Access rules and permissions settings](02_Permissions_Setup.md).
