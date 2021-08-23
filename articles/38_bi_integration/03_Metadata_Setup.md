@@ -14,18 +14,15 @@ To setup Fabric as a data source:
 
 1. Open the BI Admin.
 2. Right click on **Sources > Add** and define the following:
-
-* Name, a unique name.
-
-* Type, select Fabric.
-
-* Connection String, define as follows:
+   * Name, a unique name.
+   * Type, select Fabric.
+   * Connection String, define as follows:
 
   ~~~
   urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
   ~~~
 
-Exago that is running on a Windows docker can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
+  Exago that is running on a Windows docker can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
 
 ![image](images/bi_setup_1.PNG)
 
@@ -43,35 +40,35 @@ Once the data source is created, you need to define its objects and joins. Objec
 1. Open the BI Admin.
 2. Right click the <data source name> under Sources and then click **Discover Object/Join Metadata** to initiate the automatic discovery:
 
-![image](images/bi_setup_2.PNG)
+   ![image](images/bi_setup_2.PNG)
 
 3. When **Discover Object/Join Metadata** screen is open, the list of all Fabric tables is displayed. It includes the Common area tables and all the tables of all Logical Units. 
 4. Select the tables requires for report creation, then click **Add Objects and Joins** to create objects and joins in Exago.
 
-![image](images/bi_setup_3.PNG)
+   ![image](images/bi_setup_3.PNG)
 
-4. When the objects and joins creation is done, the list of created / skipped objects and joins is displayed on the right side of the screen.
+5. When the objects and joins creation is done, the list of created / skipped objects and joins is displayed on the right side of the screen.
 
-![image](images/bi_setup_4.PNG)
+   ![image](images/bi_setup_4.PNG)
 
-* **Complete** objects are the objects which were created successfully in Exago.
-* **Skipped** objects are the objects which were skipped for any reason, for example if they already exist in Exago.
-* **Incomplete** objects are the objects which don't have a primary key in the data source. Since primary key is mandatory in Exago, you need to open these objects and manually define their **Unique Key Fields**.
+   * **Complete** objects are the objects which were created successfully in Exago.
+   * **Skipped** objects are the objects which were skipped for any reason, for example if they already exist in Exago.
+   * **Incomplete** objects are the objects which don't have a primary key in the data source. Since primary key is mandatory in Exago, you need to open these objects and manually define their **Unique Key Fields**.
 
-5. All new objects are created without their metadata. They are marked with![image](images/bi_setup_sign.PNG)icon. You must complete the object's metadata by either:
+6. All new objects are created without their metadata. They are marked with![image](images/bi_setup_sign.PNG)icon. You must complete the object's metadata by either:
 
-* Right click on the data source name > **Bulk Metadata** to create each object's metadata within Exago. 
+   * Right click on the data source name > **Bulk Metadata** to create each object's metadata within Exago. 
 
-  ![image](images/bi_setup_5.PNG)
+   ![image](images/bi_setup_5.PNG)
 
-* Or, open each object and click![image](images/bi_setup_metadata.PNG)icon in the **Column Metadata** field > **Read Schema** > **Okay**.
+   * Or, open each object and click![image](images/bi_setup_metadata.PNG)icon in the **Column Metadata** field > **Read Schema** > **Okay**.
 
-6. Verify each new join's **Join Columns** and update if needed. By default, the joins are created with the following definitions and can be updated if needed:
+7. Verify each new join's **Join Columns** and update if needed. By default, the joins are created with the following definitions and can be updated if needed:
 
-* Join Type = Inner.
-* Relation Type = One To One.
+   * Join Type = Inner.
+   * Relation Type = One To One.
 
-![image](images/bi_setup_6.PNG)
+   ![image](images/bi_setup_6.PNG)
 
 **Important Notes for Successful Metadata Creation**
 
