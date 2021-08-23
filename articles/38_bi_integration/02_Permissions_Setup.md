@@ -2,31 +2,38 @@
 
 ### Overview
 
-Fabric has [roles and permissions](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) for managing authentication and authorization mechanism. Exago BI has a built-in mechanism to control the access and ownership of content by different identity keys. The described below process explains how to setup different levels of access in BI Designer, based on the combination of Fabric credentials and Exago access rules.
+Fabric users can be differentiated into two logical groups: those who can setup and create the BI reports and those who can only run them. In order to enforce this differentiation, Fabric introduces the permission setup process divided into two steps:
 
-The permissions setup is divided into 2 steps:
+1. Assign the **BI_ADMIN** permission to designated Fabric roles via the Fabric Admin application by utilizing the Fabric [roles and permissions](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) authorization mechanism.
+2. Setup the access rules in Exago by utilizing the Exago BI built-in access permissions mechanism to control the activities such as Edit, View, Delete within the BI Designer. 
 
-1. Assign BI permission to Fabric roles in Fabric Admin.
-2. Setup the access rules in the BI Storage Management DB.
+The below article explains how to setup different levels of access in BI Designer, based on the combination of Fabric credentials and Exago access rules.
 
 ### Fabric Role Permissions 
 
-Grant BI_ADMIN permission to the user roles that need to have the following:
+Fabric provides the ability to control user access to the following BI features:
 
-* Access the BI Admin within the Web Framework.
-* Ability to create new reports.
+* Ability to access the **BI Admin** within the BI application in the Web Framework in order to:
+  * Create data sources and define their metadata (objects and joins).
+  * Create parameters for applying a filter within the reports.
+  * Update various system configurations (advanced).
+* Ability to create new reports within the **BI Designer**.
+
+The **BI_ADMIN** permission is introduced in order to give access to the above features to specified user roles.
 
 **How Do I Set Permissions in Fabric?**
 
-Setup the BI related permissions in Fabric by clicking **Grant Permissions** in the Web Framework Admin > Security > Permissions. 
+Setup the **BI_ADMIN** permission in the Web Framework by clicking **Grant Permissions** in Admin > Security > Permissions:
 
 <img src="images/permissions_setup_0.PNG" alt="image" />
 
-### Access Rules within BI
+### Access Rules Within BI
 
-When the Fabric project is deployed, the <project name> folder is created in BI Designer and the default read-only permissions are assigned to all user roles to this folder.
+Exago access rules are defined in the Storage Management DB, per each folder (and report - if it differs from the folder access).
 
-To define the access rules (e.g. Can View, Can Copy, Can Rename) per Fabric role, run the Fabric command **set_bi_access**.
+When the Fabric project is deployed, the <project name> folder is created in BI Designer and the default read-only access rule is assigned to all user roles to this folder.
+
+To define the specific access rules (e.g. Can View, Can Copy, Can Rename) per Fabric role, run the Fabric command **set_bi_access**.
 
 Note:
 
@@ -35,7 +42,7 @@ Note:
 
 **How Do I Set Access Rules?**
 
-Exago Storage Management is a DB that keeps the definition of all reports, templates, folders and themes. It also keeps the access permissions to folders and reports, using the Content Permissions model based on 4 basic identity keys.
+Exago Storage Management is a DB that keeps the definition of all reports, templates, folders and themes. It also keeps the access rules to folders and reports, using the Content Permissions model based on 4 basic identity keys.
 
 [Click for more information about Exago Identity Keys](https://support.exagoinc.com/hc/en-us/articles/360042587313#h_2ffb7d21-1f58-47bd-957d-55a4eace7ef0).
 
@@ -43,7 +50,15 @@ To define the access rules, run the Fabric command **set_bi_access** with the fo
 
 1. Folder name (or report name).
 2. Fabric role.
-3. Array of access flags (CanView, CanCopy, etc.)
+3. Array of access flags. 
+   * CanEdit
+   * CanRename
+   * CanShare
+   * CanDelete
+   * CanCopy
+   * CanMove
+   * CanSchedule (placeholder, will be supported in later versions)
+   * CanCopy
 
 The command will either create the permissions in the Storage Management DB or update the existing.
 
