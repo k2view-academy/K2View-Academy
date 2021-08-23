@@ -378,12 +378,13 @@ Below is a list of GRANT WS_NAME command parameters:
 
 **Example**
 <pre><code>
-    create user 'test_read';
-    create role 'readonly';
-    grant READ on * to 'readonly';
-    assign 'readonly' to 'test_read';
-    assign role 'readonly' to user 'test_read';
-    create token 'test_read_token' user 'test_read';
+    create user test_read with password '1234'; 
+    create role readonly;  
+    assign role readonly to user test_read; 
+    create token test_read_token user 'this is token: test_read_token'; 
+    assign role readonly to token test_read_token; 
+    grant READ on * to readonly;
+
 </code></pre>
 
 When invoking the DELETE WS: /lu/{luName}/{iid} using the 'test_token' token, Fabric throws the following error:
