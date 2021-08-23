@@ -12,7 +12,7 @@ Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.
   * [Reports creation guidelines](05_report_creation_guidelines.md).
 
 When the report is created, tested and ready for the execution, it can be invoked from the Fabric user code using a Fabric JOB framework. This can be done using a JOBTYPE = GENERATE_BI. 
-  * [Reports execution guidelines](). 
+   * [Reports execution guidelines](). 
 
 
 
