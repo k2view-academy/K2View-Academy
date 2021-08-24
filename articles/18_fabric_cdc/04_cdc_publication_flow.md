@@ -26,7 +26,7 @@ The following diagram describes a list of events that trigger CDC messages:
 
 **Parameters:**
 
-- LUT_NAME - Logical Unit name.
+- LUT_NAME - Name of the Logical Unit Type.
 - TYPES – a list of CDC consumer types.
 - TABLES - a list of LU tables to be republished. Having a specific list avoids a republish of all the LU tables with CDC fields.
 - DROP_TABLE - enables a drop and re-creation of the CDC indexes. This avoids a manual drop of the CDC indexes if needed. When the parameter is set to **true**, drop CDC indexes on the LU tables in the list, or all LU tables if the Tables parameter is empty. The **default value** of this parameter is **false**.
