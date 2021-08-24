@@ -62,31 +62,15 @@ Click [here](/articles/98_maintenance_and_operational/Installations/01_Fabric_6.
 
 The Redis must run in one of the Fabric nodes. All Fabric nodes must work with the same Redis.
 
-#### Open the Redis Port
-
-- When using a Fabric Docker, Edit the **docker-compose.yml** file of Fabric docker and add the Redis port to the ports list:  
-
-  ```
-  - "6379:6379"
-  ```
-
-  
-
-- Run the following command to create and start the container: 
-
-  ```
-  docker-compose up -d
-  ```
-
-  
-
 #### Start Redis on One of the Fabric Nodes
 
 - Open for edit the **redis.conf** file and verify that the **bind** parameter is commented to enable accessing the redis outsite the Fabric node.
 - Go to $K2_HOME/apps/redis/src and run:
 
 ```
-nohup ./redis-server /usr/local/k2view/apps/redis/redis.conf &
+cd  $K2_HOME/apps/redis/src
+nohup ./redis-server $K2_HOME/apps/redis/redis.conf &
+cd  $K2_HOME/
 ```
 
 #### Adding a Password to Redis (Optional)
