@@ -51,7 +51,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Max wait time to create a new transaction. Create a transaction might be waiting for the transactions pool to get freed up.</p>
+<p>Max wait time to create a new transaction (in milliseconds). Since the transaction creation process might be waiting for the transactions pool to become available, this parameter puts a limit on such wait time.</p>
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -71,7 +71,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Max duration time for a transaction, when the time elapsed, a transaction will be dropped.</p>
+<p>Max duration time for a transaction. When this time has elapsed, a transaction will be dropped.</p>
 <p>&nbsp;</p>
 </td>
 </tr>
