@@ -28,8 +28,8 @@ The following diagram describes a list of events that trigger CDC messages:
 
 - LUT_NAME - Logical Unit name.
 - TYPES – a list of CDC consumer types.
-- TABLES - a list of LU tables for republish to avoid a republish of all the LU tables with CDC fields.
-- DROP_TABLE - enables a drop and re-creation of the CDC indexes to save a manual drop of the CDC indexes if needed. When the parameter is set to **true**, drop CDC indexes on the LU tables in the list, or all LU tables if the Tables parameter is empty. The **default value** of this parameter is **false**.
+- TABLES - a list of LU tables to be republished. Having a specific list avoids a republish of all the LU tables with CDC fields.
+- DROP_TABLE - enables a drop and re-creation of the CDC indexes. This avoids a manual drop of the CDC indexes if needed. When the parameter is set to **true**, drop CDC indexes on the LU tables in the list, or all LU tables if the Tables parameter is empty. The **default value** of this parameter is **false**.
 
 **Note: You must run the CDC_REPUBLISH_INSTANCE command with TRUNCATE = FALSE on all Fabric LUIs to repopulate the data in the newly created indexes.**
 
@@ -45,11 +45,11 @@ The following diagram describes a list of events that trigger CDC messages:
 
 ### Update and Redeploy LU
 
-When updating CDC metadata, i.e. adding, updating, or deleting CDC columns in LU tables, the LU must be redeployed to Fabric. The deployment initiates republishment of the  changes both in the LU schema and background LUI data whereby:
-- Sending a [CDC Schema](03_cdc_messages.md#cdc-schema) message.
-- Initiating a [batch process](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md) to run the CDC_REPUBLISH_INSTANCE command on all LUIs of the deployed LU if the CDC fields have been added to existing LU table columns.
+When updating CDC metadata, i.e. adding, updating, or deleting CDC columns in LU tables, the LU must be redeployed to Fabric. The deployment initiates republishment of the  changes both in the LU schema and background LUI data. Specifically, the deployment does the following:
+- Sends a [CDC Schema](03_cdc_messages.md#cdc-schema) message.
+- Initiates a [batch process](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md) to run the CDC_REPUBLISH_INSTANCE command on all LUIs of the deployed LU if the CDC fields have been added to existing LU table columns.
 
-Note that if a new LU table with CDC columns is added to the LU schema, deployment of the updated LU republishes the metadata of the new LU table. However, the data of the new LU table cannot be republished to CDC consumers since it has not been synced with Fabric. In this scenario it is recommended to remigrate all LUIs to enable the population of the new LU table in Fabric and to enable Fabric to republish the data of the new LU table to CDC consumers. For example, to remigrate all customers:
+Note that if a new LU table with CDC columns is added to the LU schema, deployment of the updated LU republishes the metadata of the new LU table. However, the data of the new LU table cannot be republished to CDC consumers since it has not been synced with Fabric. In this scenario it is recommended to remigrate all LUIs to enable the population of the new LU table in Fabric and to enable Fabric to republish the data of the new LU table to CDC consumers. For example, to remigrate all customers, do the following:
 
   - Batch Customer from fabric fabric_command='sync_instance Customer.?';
 
@@ -73,7 +73,7 @@ Republish the CDC data of a selected LUI.
 
 - TABLES – the list of LU tables to be included in the CDC message.
 - TYPES – a list of CDC consumer types. 
-- TRUNCATE – if True, send a CDC Delete Tables message about  the LUI before republishing its CDC data. The default value is True. 
+- TRUNCATE – if True, send a CDC Delete Tables message about the LUI before republishing its CDC data. The default value is True. 
 
 
 **Examples:**
