@@ -6,11 +6,11 @@
   * Download the Exago package or docker image from the K2View download page.
   * *Link to the K2View DevOps document explaining how to install the Exago components - TBD.*
 
-* Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. [Click for more information about the Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
+* Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
 * (Optional) Install **Storage Management Utility**, the UI tool that allows setting up the folders' access permissions. [Click for more information about the Exago Storage Management Utility](https://support.exagoinc.com/hc/en-us/articles/360053801773-Storage-Management-Utility-v2021-1-).
 
-* Update the parameters under [bi] section of **Fabric config.ini** with Exago host and Storage Management details:
+* Update the parameters under the [bi] section of **Fabric config.ini** with Exago host and Storage Management details:
 
   ~~~
   [bi]
@@ -45,7 +45,7 @@ As a result, the <project name> folder is created in Exago Storage Management DB
 
 Following are the installation and setup recommendations:
 
-- It is recommended to have 3 separate Exago installations: for Dev, QA and Production.
+- It is recommended to have 3 separate Exago installations. One each for Dev, QA and Production envrionments.
   - Linux installation is a must for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
 - The recommended Storage Management DB type is PostgreSQL.
