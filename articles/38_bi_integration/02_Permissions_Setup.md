@@ -33,7 +33,7 @@ When the Fabric project is deployed, the <project name> folder is created in BI 
 
 To define the specific access rules (e.g. Can View, Can Copy, Can Rename) per Fabric role, run the Fabric command **set_bi_access**.
 
-Note:
+**Note:**
 
 - If the user that is logged into BI Designer is not assigned any access rules, he will get a read-only access to Exago folders and reports.
 - If the logged user is an owner of a folder or a report, he will have full access to it even if no specific access rules were assigned to his role on the folder/report.
