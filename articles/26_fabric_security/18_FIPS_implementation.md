@@ -10,28 +10,28 @@ In particular, FIPS 140-2 (Federal Information Processing Standard 140-2) is a s
 
 K2View has integrated the [Bouncy Castle](https://www.bouncycastle.org/index.html) Java stack to ensure FIPS-compliance for all [Fabric cryptographic algorithms](/articles/26_fabric_security/03_fabric_LUI_encryption.md) used across Fabric's projects.
 
-By default, Fabric boots up with FIPS mode set to **off**. 
-Yet, even in this mode, Fabric only uses FIPS-compliant protocols and standards implementions with Fabric cryptographic embedded algorithms.
+By default, Fabric boots up with the FIPS mode set to **off**. 
+Even when FIPS mode is off, Fabric only uses FIPS-compliant protocols and standards implementions with Fabric cryptographic embedded algorithms.
 
 
 ### FIPS Version Command
 
-Fabric's command ```version fips``` returns the FIPS version currently used and the status of all the cryptographics components included in the system. All crypto algorithms included in the jars are checked validated or rejected.
+The Fabric command ```version fips``` returns the FIPS version currently used and the status of all the cryptographics components included in the system. All crypto algorithms included in the jar files are checked, and either validated or rejected.
 
 
 ### FIPS with mode set to **ON**
 
-To switch on FIPS mode, do the following steps:
+To switch on FIPS mode, carry out the following steps:
 - Go to the **$K2_HOME/config/** directory,
 - Open the **modules.ini** file
 - Modify the fips entry to reflect the following value: ```fips:mode=on```
 
-Fabric's server needs to be restarted for this change to be effective. 
+Fabric's server must be restarted for this change to be effective. 
 
 - In Windows, this can be achieved by clicking on the server ```start/stop``` button on the top-left menu of Fabric Studio. 
-- In Linux environment, from the shell environment, simply type: ```k2fabric restart```
+- In the Linux environment, from the shell environment, type: ```k2fabric restart```
 
-Then, once Fabric is online, execute the following command from your shell/CLI window: 
+Once Fabric is online, execute the following command from your shell/CLI window: 
 
 ```fabric>version fips;```
 
