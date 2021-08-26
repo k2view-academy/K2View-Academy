@@ -31,9 +31,12 @@ Fabric's server needs to be restarted for this change to be effective.
 - In Windows, this can be achieved by clicking on the server ```start/stop``` button on the top-left menu of Fabric Studio. 
 - In Linux environment, from the shell environment, simply type: ```k2fabric restart```
 
-Then, once Fabric is online, start a Fabric Console CLI window and execute the following command: 
+Then, once Fabric is online, execute the following command from your shell/CLI window: 
 
 ```fabric>version fips;```
+
+The following response will be returned:
+
 
 ```
 |Check                        |Result                                                          |Status|
