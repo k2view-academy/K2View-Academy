@@ -26,10 +26,12 @@ To switch on FIPS mode, do the following steps:
 - Open the **modules.ini** file
 - Modify the fips entry to reflect the following value: ```fips:mode=on```
 
-Fabric's server needs to be restarted for this change to be validated. 
-This can be achieved by clicking on the server start/stop button on the top-left menu of the Fabric Studio. 
+Fabric's server needs to be restarted for this change to be effective. 
 
-Once re-started, start a Fabric Console CLI window and execute the following command: 
+- In Windows, this can be achieved by clicking on the server ```start/stop``` button on the top-left menu of Fabric Studio. 
+- In Linux environment, from the shell environment, simply type: ```k2fabric restart```
+
+Then, once Fabric is online, start a Fabric Console CLI window and execute the following command: 
 
 ```fabric>version fips;```
 
@@ -65,49 +67,7 @@ Note that:
 - BCFIPS means that the algorithm is provided via the jar file bc-fips-1.0.1.jar
 - BCJSSE means that the Java Secure Socket Extension (JSSE) from Bouncy Castle is used.
 
-### FIPS with mode set to **STRICT**
 
-To switch on FIPS mode, do the following steps:
-- Go to the **$K2_HOME/config/** directory,
-- Open the **modules.ini** file
-- Modify the fips entry to reflect the following value: ```fips:mode=strict```
-
-Fabric needs to be restarted for this change to be validated. This can be achieved by clicking on the server start/stop button on the top-left menu of the Fabric Studio. 
-
-Once re-started, start a Fabric Console CLI window and execute the following command: 
-
-
-```fabric>version fips;```
-
-```
-|Check                        |Result                                                          |Status|
-+-----------------------------+----------------------------------------------------------------+------+
-|FIPS Mode                    |strict                                                          |passed|
-|FIPS Ready                   |140-2                                                           |passed|
-|info                         |Bouncy Castle FIPS Java API 1.0.2.1                             |passed|
-|info                         |CMVP Certificate #3514                                          |passed|
-|FIPS Only Algorithms         |true                                                            |passed|
-|TLS FIPS only mode           |true                                                            |passed|
-|HMAC                         |d68017e6f45512a51a862c77e4fa2348d0d24d816bc3f76fcf30375052216e86|passed|
-|SunJCE                       |Not present                                                     |passed|
-|AES/CBC/PKCS5Padding Explicit|BCFIPS                                                          |passed|
-|AES/CBC/PKCS5Padding Implicit|BCFIPS                                                          |passed|
-|SHA512_256Secure             |BCFIPS                                                          |passed|
-|SHA512Secure                 |BCFIPS                                                          |passed|
-|SHA256Secure                 |BCFIPS                                                          |passed|
-|SHA512_256                   |BCFIPS                                                          |passed|
-|SHA512                       |BCFIPS                                                          |passed|
-|SHA256                       |BCFIPS                                                          |passed|
-|SHA1                         |BCFIPS                                                          |passed|
-|MD5                          |BCFIPS                                                          |passed|
-|STRONG_AES256                |BCFIPS                                                          |passed|
-|PLAIN_AES256                 |BCFIPS                                                          |passed|
-|PLAIN_AES128                 |BCFIPS                                                          |passed|
-|SSL Context                  |BCJSSE                                                          |passed|
-|SecureRandom                 |BCFIPS                                                          |passed|
-
-(23 rows)
- ```
 
 
 
