@@ -37,5 +37,5 @@ After the authenticator has been configured properly, restart Fabric.
 
 
 
-[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/16_user_IAM_auditing.md)
+[![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/16_user_IAM_auditing.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/18_FIPS_implementation.md)
 
