@@ -19,7 +19,7 @@ Even when FIPS mode is off, Fabric only uses FIPS-compliant protocols and standa
 The Fabric command ```version fips``` returns the FIPS version currently used and the status of all the cryptographics components included in the system. All crypto algorithms included in the jar files are checked, and either validated or rejected.
 
 
-### FIPS with mode set to **ON**
+#### FIPS with mode set to **ON**
 
 To switch on FIPS mode, carry out the following steps:
 - Go to the **$K2_HOME/config/** directory,
