@@ -42,7 +42,7 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="400pxl">
-<p>The number of parallel CDC transactions at a time.</p>
+<p>The number of parallel CDC transactions allowed at any one given time.</p>
 </td>
 </tr>
 <tr>
@@ -173,7 +173,17 @@ Fabric [config.ini file](/articles/02_fabric_architecture/05_fabric_main_configu
 <p><h5>search_engine</h5></p>
 </td>
 <td valign="top" width="250pxl">
+<p><strong>Description</strong></p>
+</td>
+<td width="400pxl" valign="top" >
+<p><strong>Instructions</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="250pxl">
 <p>Supported providers: ElasticSearchProvide</p>
+</td>
+<td width="450pxl" valign="top" >
 <p>Maximum number of concurrent threads to process the bulk actions:
   #BULK_PROCESSOR_MAX_CONCURRENT_WORKERS=5 </p>
 <p>Bulk size. The maximum number of actions (requests) in one bulk:
