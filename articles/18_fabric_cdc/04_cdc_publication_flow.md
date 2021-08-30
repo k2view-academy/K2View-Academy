@@ -16,9 +16,23 @@ The following diagram describes a list of events that trigger CDC messages:
 
 ### CDC_REPUBLISH_SCHEMA
 
--  Republish a full schema definition of the LU by demand.
+-  Republish by demand a full LU schema definition or the schema of a selected list of LU tables.
 
 -  An LU schema can be republished to all CDC consumers or to a selected list of CDC consumers.
+
+**Usage:**
+
+ cdc_republish_schema <LUT_NAME> [types='<type1,type2...>'] [tables='table1,...'] [drop_table=true/false];
+
+**Parameters:**
+
+- LUT_NAME - Name of the Logical Unit Type.
+- TYPES – a list of CDC consumer types.
+- TABLES - a list of LU tables to be republished. Having a specific list avoids a republish of all the LU tables with CDC fields.
+- DROP_TABLE - enables a drop and re-creation of the CDC indexes. This avoids a manual drop of the CDC indexes if needed. When the parameter is set to **true**, drop CDC indexes on the LU tables in the list, or all LU tables if the Tables parameter is empty. The **default value** of this parameter is **false**.
+
+**Note: You must run the CDC_REPUBLISH_INSTANCE command with TRUNCATE = FALSE on all Fabric LUIs to repopulate the data in the newly created indexes.**
+
 
 **Examples:**
 
@@ -26,8 +40,8 @@ The following diagram describes a list of events that trigger CDC messages:
   - cdc_republish_schema Customer; 
 - Republish the **Customer** schema to **Search** and **Tableau** CDC consumers:
   - cdc_republish_schema Customer types='Search','Tableau';
-
-
+- Republish the **Address** LU table of **Customer LU** to **Search**. Drop and re-create the Elastic Search (ES) of Address LU table:
+  - cdc_republish_schema Customer types='Search' tables='Address' drop_table=true; 
 
 ### Update and Redeploy LU
 
