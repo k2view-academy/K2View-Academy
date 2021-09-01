@@ -9,17 +9,17 @@ Fabric users who want to implement the Business Intelligence capabilities can be
 
 ### Fabric Role Permissions 
 
-**BI Admin** within the BI application in the Web Framework allows to:
+**BI Admin** within the BI application in the Web Framework allows you to:
 
 * Create data sources and define their metadata (objects and joins).
 * Create parameters for applying a filter within the reports.
 * Update various system configurations (advanced).
 
-Since these activities are supposed to be performed only by specific kind of users, Fabric provides the ability to control the user access to the above features. 
+Since these activities are supposed to be performed only by specific kinds of users, Fabric provides the ability to control the user access to the above features. 
 
-The **BI_ADMIN** permission is introduced in order to give access to the above features to specified user roles. By granting this permission to the Fabric role, the user with this role is enabled to perform the above activities.
+The **BI_ADMIN** permission is introduced in order to give access to the above features for specified user roles. By granting this permission to the Fabric role, the user with this role can perform the above activities.
 
-Note that the ability to create new reports within the **BI Designer** is also allowed only to the user role with **BI_ADMIN** permission.
+Note that the ability to create new reports within the **BI Designer** is also enabled only to the user role with **BI_ADMIN** permission.
 
 **How Do I Set Permissions in Fabric?**
 
@@ -50,7 +50,7 @@ To define the access rules, run the Fabric command **set_bi_access** with the fo
 
 1. Folder name or report name (optional), if not provided the command is executed on the <project name> folder.
 2. Fabric role (mandatory).
-3. Array of access flags (mandatory), provide only those that should be **true**: 
+3. Array of access flags (mandatory) - provide only those that should be **true**: 
    * CanEdit
    * CanRename
    * CanShare
