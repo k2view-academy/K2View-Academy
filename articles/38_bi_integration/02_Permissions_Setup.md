@@ -2,22 +2,24 @@
 
 ### Overview
 
-Fabric users who want to implement the business intelligence capabilities of Fabric can be divided into two groups: those who can setup and create the BI reports and those who can only run them. In order to enforce this differentiation, Fabric introduces the permission setup process divided into two steps:
+Fabric users who want to implement the Business Intelligence capabilities can be divided into two groups: those who can setup and create the BI reports and those who can only run them. In order to enforce this differentiation, Fabric introduces the permission setup processes divided into two steps:
 
-1. Assign the **BI_ADMIN** permission to designated Fabric roles via the Fabric Admin application. In the Fabric Admin app, use the [roles and permissions](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) authorization mechanism.
-2. Setup the access rules in Exago by using the Exago BI built-in access permissions mechanism to control the activities such as Edit, View, Delete within the BI Designer. 
-
-The rest of this article explains how to setup different levels of access in BI Designer, based on the combination of Fabric credentials and Exago access rules.
+1. [Fabric Role Permissions definition](02_Permissions_Setup.md#Fabric-Role-Permissions) via the Fabric Admin application using the Fabric [roles and permissions](/articles/17_fabric_credentials/01_fabric_credentials_overview.md) authorization mechanism.
+2. [Access Rules Setup](02_Permissions_Setup.md#Access-Rules-Setup) using the Exago BI built-in access permissions mechanism to control the activities such as Edit, View, Delete within the BI Designer. 
 
 ### Fabric Role Permissions 
 
-Fabric provides the ability to access the **BI Admin** within the BI application in the Web Framework in order to:
-* Create data sources and define their metadata (objects and joins),
-* Create parameters for applying a filter within the reports,
-* Update various system configurations (advanced),
-* Create new reports within the **BI Designer**.
+**BI Admin** within the BI application in the Web Framework allows to:
 
-The **BI_ADMIN** permission is introduced in order to give access to the above features to specified user roles.
+* Create data sources and define their metadata (objects and joins).
+* Create parameters for applying a filter within the reports.
+* Update various system configurations (advanced).
+
+Since these activities are supposed to be performed only by specific kind of users, Fabric provides the ability to control the user access to the above features. 
+
+The **BI_ADMIN** permission is introduced in order to give access to the above features to specified user roles. By granting this permission to the Fabric role, the user with this role is enabled to perform the above activities.
+
+Note that the ability to create new reports within the **BI Designer** is also allowed only to the user role with **BI_ADMIN** permission.
 
 **How Do I Set Permissions in Fabric?**
 
@@ -25,7 +27,7 @@ Setup the **BI_ADMIN** permission in the Web Framework by clicking **Grant Permi
 
 <img src="images/permissions_setup_0.PNG" alt="image" />
 
-### Access Rules Within BI
+### Access Rules Setup
 
 Exago access rules are defined in the Storage Management DB, per each folder (and report - if it differs from the folder access).
 

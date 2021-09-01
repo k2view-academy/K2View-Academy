@@ -10,7 +10,7 @@ For example, when creating a report based on the LUI, a filter must be set on th
 
 To create a parameter:
 
-1. Open the BI Admin.
+1. Open the **BI Admin**.
 2. Right click on **Parameters > Add** and define the following:
    - Name - a unique parameter name.
    - Type - data type such as string or integer.
