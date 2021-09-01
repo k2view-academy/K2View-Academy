@@ -191,7 +191,7 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
 TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
 TDM requires user & password with full create, delete and update privileges. 
 
-the custumere can provide the **PGSQL**, or you can find installation instraction for **K2view** **PGSQL** installation:
+The customer can provide the **PGSQL**, or you can find installation instraction for **K2view** **PGSQL** installation:
 
 <ul>      
 <li>
