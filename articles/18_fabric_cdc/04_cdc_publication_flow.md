@@ -31,7 +31,7 @@ The following diagram describes a list of events that trigger CDC messages:
 - TABLES - a list of LU tables to be republished. Having a specific list avoids a republish of all the LU tables with CDC fields.
 - DROP_TABLE - enables a drop and re-creation of the CDC indexes. This avoids a manual drop of the CDC indexes if needed. When the parameter is set to **true**, drop CDC indexes on the LU tables in the list, or all LU tables if the Tables parameter is empty. The **default value** of this parameter is **false**.
 
-**Note: You must run the CDC_REPUBLISH_INSTANCE command with TRUNCATE = FALSE on all Fabric LUIs to repopulate the data in the newly created indexes.**
+**Note: If the DROP_TABLE parameter is set to TRUE, you must run the CDC_REPUBLISH_INSTANCE command with TRUNCATE = FALSE on all Fabric LUIs to repopulate the data in the newly created indexes.**
 
 
 **Examples:**
