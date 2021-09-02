@@ -83,11 +83,22 @@ The following tools are used to navigate the Data Catalog:
   * Click <img src="images/33_02_fit.PNG" alt="image" style="zoom: 67%;" /> to fit the tree to the screen.
   * Click <img src="images/33_02_home.PNG" alt="image" style="zoom: 67%;" /> to return to the collapsed project.
 
-* Move to lower hierarchy level by double-clicking the data element. For example, double click the Table data element to display all related Column data elements.
+* Move to lower hierarchy level by double-clicking the data element or clicking the <img src="images/plus_icon.PNG" alt="image" style="zoom: 85%;"/> icon  on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>. Then the lower hierarchy level is displayed.
+
+  ​	<img src="images/hierarchy.PNG" alt="image" style="zoom: 85%;"/>
+
+* By default, all tables are collapsed. To expand the tables, do the following:
+
+  * Click the<img src="images/expand_icon.PNG" alt="image"/>icon in the Legend near the data element type. For example, when clicking the <img src="images/expand_icon.PNG" alt="image"/>icon next to **Table** in the Legend all displayed tables are expended and the Legend icon changes to:  <img src="images/expand_table.PNG" alt="image" style="zoom: 85%;"/>.
+  * Or, click the same icon on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>.
+
+  <img src="images/expand.PNG" alt="image" style="zoom: 85%;"/>
 
 * Click any data element or connection line to display its properties, such as name, ID or type in the Properties screen. Click anywhere in the empty screen area to hide the Properties screen.
 
-* Expand the tree, focus on a specific node or clear the node or the connection line by selecting the option either from the Properties screen or from the right click context menu. To clear multiple data elements, click and hold the mouse and then drag the line selecting the required elements.
+* To clear the node or the connection line, select the Hide option either from the Properties screen or from the right click context menu. 
+
+* To clear multiple data elements, click and hold the mouse and then drag the line selecting the required elements.
 
   <img src="images/33_02_select.PNG" alt="image" style="zoom: 55%;" />
 
