@@ -6,7 +6,7 @@
 
 ### Creating Reports Based on Fabric LU Tables
 
-One of the basic report type is a report based on Fabric LU instance data. Follow these steps to create such report:
+One of the basic reports is a report based on Fabric LU instance data. Follow these steps to create such report:
 
 1. Open **BI Admin** to:
 
@@ -21,25 +21,60 @@ One of the basic report type is a report based on Fabric LU instance data. Follo
    * Once the first data object is selected, most of the objects are disabled except for those that have a join with the selected object.
 
 
-   * Remember that you must start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
+   Remember that you must start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
 
-4. Once the data objects are selected, click the  ![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
+4. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
 
 ![image](images/filter_definition.PNG)
 
-[Click for more information about the Report Types and the detail documentation.](https://support.exagoinc.com/hc/en-us/articles/215451718-Report-Types)
+[Click for the detail documentation about Exago Report Types](https://support.exagoinc.com/hc/en-us/articles/215451718-Report-Types).
 
-### Creating Reports Based on Fabric Complex SQL
+### Creating Reports Based on Fabric SQL
 
-Creating a report based on a Fabric complex query is similar to creating it based on Fabric LU instance data. The only instance is that instead of selecting the data object, click the ![image](images/add_sql_icon.PNG)icon to write the query using the Custom SQL Object screen:
+Sometimes the report data requires writing a complex SQL query rather then just selecting columns from several joined tables. This is supported by a Customer SQL Object screen.
+
+Creating a report based on a query executed on Fabric LUI is similar to creating it based on Fabric LUI tables.  Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen:
 
 ![image](images/custom_sql_obj.PNG)
 
-Using this screen you can create a custom SQL to retrieve the report data. Remember that this SQL must include filter by LU Instance ID and can include parameters defined in BI Admin using the following syntax:
+Remember that since this SQL is executed on LUI, it must also include a filter by LU Instance ID. For example:
 
 ~~~sql
-CUSTOMER.CUSTOMER_ID = @customer_id@
+SELECT TE.source_id, TE.target_id, tasks.be_name, task_execution.task_execution_id, 'Copied' as status
+FROM (select distinct entity_id as source_id, target_entity_id as target_id
+		from task_execution_link_entities
+		where parent_entity_id = '' and execution_status = 'completed'
+		except
+	  select entity_id as source_id, target_entity_id as target_id
+		from task_execution_link_entities
+		where parent_entity_id = '' and execution_status <> 'completed') TE, tasks, task_execution
+WHERE task_execution.task_execution_id = '@task_execution_id@'
 ~~~
+
+The IID value can be provided using a parameter which is created in BI Admin and set either in BI Admin or programmatically via the REST API call. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
+
+### Creating Reports Based on Fabric Command
+
+When you need to create a report based on the Fabric Command results, it can be done using the Custom SQL Object screen. 
+
+Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen. Use the special syntax as shown below:
+
+~~~sql
+select * from k2_fabric_command_sql where command='<command>'
+~~~
+
+For example, when the report should include the results of TEST_CONNECTION, write the following custom query:
+
+~~~sql
+select * from k2_fabric_command_sql where command='test_connection'
+~~~
+
+
 
 [Click for more information about Custom SQL Objects.](https://support.exagoinc.com/hc/en-us/articles/215330898-Data-Objects)
 
+
+
+
+
+[![Previous](/articles/images/Previous.png)](04_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_report_execution_guidelines.md)

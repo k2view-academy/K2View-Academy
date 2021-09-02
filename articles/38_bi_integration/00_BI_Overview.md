@@ -11,7 +11,7 @@ Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.
 * **BI Designer** - creation and generation of the reports. Any user can access this module however the access to various content elements (folders, reports, etc.) within this application can be restricted by setting up the access permission rules. 
   * [Reports creation guidelines](05_report_creation_guidelines.md).
 
-When the report is created, tested and ready for execution, it can be invoked from the Fabric user code using a Fabric JOB framework. This can be done using a JOBTYPE = GENERATE_BI. See more at [Reports execution guidelines](). 
+When the report is created, tested and ready for execution, it can be invoked from the Fabric user code using a Fabric JOB framework. This can be done using a JOBTYPE = GENERATE_BI. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
 
 
 
