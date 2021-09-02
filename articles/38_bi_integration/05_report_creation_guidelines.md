@@ -29,7 +29,7 @@ One of the basic reports is a report based on Fabric LU instance data. Follow th
 
 [Click for the detail documentation about Exago Report Types](https://support.exagoinc.com/hc/en-us/articles/215451718-Report-Types).
 
-### Creating Reports Based on Fabric SQL
+### Creating Reports Based on Fabric Custom SQL
 
 Sometimes the report data requires writing a complex SQL query rather then just selecting columns from several joined tables. This is supported by a Customer SQL Object screen.
 
