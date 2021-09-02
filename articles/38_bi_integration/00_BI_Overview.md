@@ -13,6 +13,9 @@ Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.
 * **BI Designer** - creation and generation of various types of reports and dashboards. 
 
 
+The integration architecture is described in the following diagram:
+
+![arc](images/bi_integration_architecture.PNG)
 
 In order to start your work on the reports, perform the following setup steps in **BI Admin**:
 
