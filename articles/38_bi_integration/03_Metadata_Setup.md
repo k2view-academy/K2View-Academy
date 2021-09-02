@@ -4,8 +4,8 @@
 
 When working with Fabric's integration of Exago BI, you will need to create data sources, as well as objects and joins. This article shows how to do that. 
 
-* Creation of [Data sources](03_Metadata_Setup.md#data-sources)
-* Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins) 
+* Creation of [Data sources](03_Metadata_Setup.md#data-sources).
+* Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins). 
 
 Follow each one of them to fully setup the metadata, as a preparation for report creation.
 
@@ -74,10 +74,10 @@ Once the data source is created, you need to define its objects and joins. Objec
 
    * Or, open each object and click![image](images/bi_setup_metadata.PNG)icon in the **Column Metadata** field > **Read Schema** > **Okay**.
 
-7. Verify each new join's **Join Columns** and update if needed. By default, the joins are created with the following definitions and can be updated if needed:
+7. Verify each new joins default settings:
 
-   * Join Type = Inner.
-   * Relation Type = One To One.
+   * Check the **Join Columns** and update if needed.
+   * By default, **Join Type** = Inner and **Relation Type** = One To One. Update these settings to reflect the actual join and relation types.
 
    ![image](images/bi_setup_6.PNG)
 

@@ -1,7 +1,5 @@
 # Parameters Definition
 
-### Overview
-
 Parameters are used throughout the Exago application to store values. Although parameters can be created and given a default value in the **BI Admin**, parameters are designed to be set at runtime through the APIs. 
 
 For example, when creating a report based on the LUI, a filter must be set on the LU's Root table using the Instance ID. 
@@ -16,6 +14,10 @@ To create a parameter:
    - Type - data type such as string or integer.
    - Value - default parameter value.
 3. Click **Apply** to save the changes.
+
+**How Do I Use a Parameter?**
+
+To use a parameter, create a report and add a filter.
 
 [Click to get more information how to use a parameter in a report](05_report_creation_guidelines.md).
 

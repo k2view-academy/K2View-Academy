@@ -10,7 +10,16 @@
 
 * (Optional) Install **Storage Management Utility**, the UI tool that allows setting up the folders' access permissions. [Click for more information about the Exago Storage Management Utility](https://support.exagoinc.com/hc/en-us/articles/360053801773-Storage-Management-Utility-v2021-1-).
 
-* Update the parameters under the [bi] section of **Fabric config.ini** with Exago host and Storage Management details:
+* Update the parameter - TO BE UPDATED:
+
+
+  ~~~
+  WEB_SERVICE_PORT=3214
+  ~~~
+
+  ​
+
+* Update the parameters under the [bi] section of Fabric **config.ini** with Exago host and Storage Management details:
 
   ~~~
   [bi]
@@ -33,7 +42,6 @@
   ## BI Storage Management table prefix
   TABLE_PREFIX=
   ~~~
-
 
 ### Project Initialization in Exago
 
