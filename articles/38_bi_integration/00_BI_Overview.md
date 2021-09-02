@@ -1,6 +1,10 @@
 # BI User Guide Overview
 
-Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.com/hc/en-us) - an external Business Intelligence (BI) system that enables the design and execution of reports and dashboards. The BI application can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html) and it includes the following:
+Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.com/hc/en-us) - an external Business Intelligence (BI) system that enables the design and execution of reports and dashboards. The integration architecture is described in the following diagram:
+
+![arc](images/bi_integration_architecture.PNG)
+
+The BI application can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html) and it includes the following modules:
 
 * **BI Admin** - system configuration and initial setup module which allows to: 
 
@@ -11,11 +15,6 @@ Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.
   The access to this module is restricted based on Fabric user role.
 
 * **BI Designer** - creation and generation of various types of reports and dashboards. 
-
-
-The integration architecture is described in the following diagram:
-
-![arc](images/bi_integration_architecture.PNG)
 
 In order to start your work on the reports, perform the following setup steps in **BI Admin**:
 
