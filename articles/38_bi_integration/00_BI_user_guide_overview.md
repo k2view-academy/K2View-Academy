@@ -14,11 +14,11 @@ The BI application can be accessed via the [K2View Web Framework](https://suppor
   - Create parameters for applying a filter within the reports.
   - Update various system configurations (advanced).
 
-  The access to this module is restricted based on Fabric user role.
+  The access to this module is restricted based on Fabric user role. The way to do it is described further in this User guide.
 
 * **BI Designer** - creation and generation of various types of reports and dashboards. 
 
-Note that the reports can also be invoked from Fabric user code. The way to do it is described in this User guide.
+  Note that the reports can also be invoked from Fabric user code. The way to do it is described further in this User guide.
 
 ### E2E BI Setup and Execution
 
