@@ -17,7 +17,7 @@ the tarball that is supplied by **K2view** is PGSQL 13.3 with TLS mode enabel, t
 - 2 vCPU
 - 8G RAM
 - 100G free disk space, make sure it is assigned to `/opt/apps/pgsql` 
-  
+
   Add the following users:
 
 ~~~bash
@@ -74,7 +74,7 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   echo "ALTER USER postgres WITH PASSWORD 'postgres';"| psql
   echo "ALTER USER postgres WITH SUPERUSER;"| psql
   ~~~
-  
+
 - now you should connect via pgadmin and run the content of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` via the **pgadmin**, connect with **tdm** user
 
   or you can copy the files to the pgsql console and run them with the **psql** command.
@@ -87,21 +87,21 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   psql -d TDMDB -f -a ~/k2vtdm3.sql
   ~~~
 
-## how to connect from pgadmib4 in TLS mode
+## How to connect from pgadmib4 in TLS mode
 
-open pgadmin connection and setup as the example below:
+Open **pgAdmin** connection and setup as the example below:
 
 <img src="images/pg13_tls_connet01.png" style="zoom:25%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:25%;" />
 
-### Checkin that the connection is secure
+### Checking that the connection is secure
 
-- from the server side, run the following command from the console:
+- From the server side, run the following command from the console:
 
 ~~~sql
 echo "SELECT datname,usename, ssl, client_addr FROM pg_stat_ssl JOIN pg_stat_activity ON pg_stat_ssl.pid = pg_stat_activity.pid;" | psql
 ~~~
 
-​	output should look like (the "t" = true):
+​	The output should look like (the "t" = true):
 
 ~~~test
 datname  | usename  | ssl |  client_addr
@@ -114,7 +114,7 @@ datname  | usename  | ssl |  client_addr
 (5 rows)
 ~~~
 
-- from pgadmin, run the following script:
+- From **pgAdmin**, run the following script:
 
 ~~~sql
 SELECT datname,usename, ssl, client_addr

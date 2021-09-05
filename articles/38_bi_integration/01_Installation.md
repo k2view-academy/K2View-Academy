@@ -5,30 +5,20 @@
 * Install **the latest available Exago version**, that includes the server and client Exago applications. 
   * Download the Exago package or docker image from the K2View download page.
   * *Link to the K2View DevOps document explaining how to install the Exago components - TBD.*
-
 * Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
-
 * (Optional) Install **Storage Management Utility**, the UI tool that allows setting up the folders' access permissions. [Click for more information about the Exago Storage Management Utility](https://support.exagoinc.com/hc/en-us/articles/360053801773-Storage-Management-Utility-v2021-1-).
 
-* Update the parameter - TO BE UPDATED:
 
-
-  ~~~
-  WEB_SERVICE_PORT=3214
-  ~~~
-
-  ​
-
-* Update the parameters under the [bi] section of Fabric **config.ini** with Exago host and Storage Management details:
+* Update the parameters under the **[bi]** section of Fabric **config.ini** with Exago host and Storage Management details:
 
   ~~~
   [bi]
   ## Listener port for bi, default = 5432
-  #BI_PORT=
+  BI_PORT=5432
   ## BI host
   BI_HOST=
   ## BI Storage Management name, default = StorageMgmt for SQLite / PostgreSQL
-  STORAGE_MGMT_DB_NAME=
+  STORAGE_MGMT_DB_NAME=StorageMgmt
   ## BI Storage Management host, empty for SQLite
   STORAGE_MGMT_HOST=
   ## BI Storage Management type: SQLite / PostgreSQL
@@ -62,7 +52,7 @@ Following are the installation and setup recommendations:
 - To re-use the same Storage Management DB for several environments of the same type (for example, several QA environments), define a unique Table Prefix as part of the Storage Management DB details in config.ini.
 
 
-[![Previous](/articles/images/Previous.png)](00_BI_Overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Permissions_Setup.md) 
+[![Previous](/articles/images/Previous.png)](00_BI_user_guide_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Permissions_Setup.md) 
 
 
 
