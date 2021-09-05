@@ -4,8 +4,8 @@
 
 Fabric users who want to implement the Business Intelligence capabilities can be divided into two groups: those who can setup and create the BI reports and those who can only run them. In order to enforce this differentiation, Fabric introduces the permission setup process divided into two steps, described further in this article:
 
-1. [Fabric Role Permissions Setup](02_Permissions_Setup.md#Fabric-Role-Permissions-Setup) via the Fabric Admin application to control the access to BI Admin application.
-2. [Access Rules Setup](02_Permissions_Setup.md#Access-Rules-Setup) using the Exago BI built-in access permissions mechanism to control the activities such as Edit, Rename or Delete the reports within the BI Designer application. 
+1. [Fabric Role Permissions Setup](02_Permissions_Setup.md#Fabric-Role-Permissions-Setup) via the Fabric Admin application, to control who can access the BI Admin application.
+2. [Access Rules Setup](02_Permissions_Setup.md#Access-Rules-Setup) using the Exago BI built-in access permissions mechanism, to control the activities such as Edit, Rename or Delete the reports within the BI Designer application. 
 
 ### Fabric Role Permissions Setup 
 
@@ -15,7 +15,7 @@ Fabric users who want to implement the Business Intelligence capabilities can be
 * Create parameters for applying a filter within the reports.
 * Update various system configurations (advanced).
 
-Since these activities are supposed to be performed only by specific kinds of users, Fabric provides the ability to control the user access to the above features. 
+Since these activities are supposed to be performed by limited number of users, Fabric provides the ability to control the user access to the above features. 
 
 The **BI_ADMIN** permission is introduced in order to give access to the above features for specified user roles. By granting this permission to the Fabric role, the user with this role can perform the above activities.
 
@@ -31,7 +31,7 @@ Setup the **BI_ADMIN** permission in the Web Framework by clicking **Grant Permi
 
 Exago access rules are defined in the Storage Management DB, per each folder (and report - if it differs from the folder access).
 
-When the Fabric project is deployed, the <project name> folder is created in BI Designer and the default read-only access rule is assigned to all user roles in this folder.
+When the Fabric project is deployed, the <project name> folder is created in BI Designer and the default read-only access rule is assigned to all user roles.
 
 To define the specific access rules (e.g. Can View, Can Copy, Can Rename) per Fabric role, run the Fabric command **set_bi_access**.
 
@@ -42,7 +42,7 @@ To define the specific access rules (e.g. Can View, Can Copy, Can Rename) per Fa
 
 **How Do I Set Access Rules?**
 
-Exago Storage Management is a DB that keeps the definition of all reports, templates, folders and themes. It also keeps the access rules to folders and reports, using the Content Permissions model based on 4 basic identity keys.
+Exago Storage Management is a DB that keeps the definition (metadata) of all reports, templates, folders and themes. It also keeps the access rules to folders and reports, using the Content Permissions model based on 4 basic identity keys.
 
 [Click for more information about Exago Identity Keys](https://support.exagoinc.com/hc/en-us/articles/360042587313#h_2ffb7d21-1f58-47bd-957d-55a4eace7ef0).
 
