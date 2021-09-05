@@ -51,6 +51,7 @@ To define the access rules, run the Fabric command **set_bi_access** with the fo
 1. Folder name or report name (optional), if not provided the command is executed on the <project name> folder.
 2. Fabric role (mandatory).
 3. Array of access flags (mandatory) - provide only those that should be **true**: 
+   * CanView
    * CanEdit
    * CanRename
    * CanShare
@@ -58,9 +59,22 @@ To define the access rules, run the Fabric command **set_bi_access** with the fo
    * CanCopy
    * CanMove
    * CanSchedule (placeholder, will be supported in later versions)
-   * CanCopy
 
 The command will either create the permissions in the Storage Management DB or update the existing permissions.
+
+**Examples**
+
+* Give access to all activities on **TDM** root folder to the **admin** user role:
+
+```
+SET_BI_ACCESS NAME="TDM" ROLE="admin" ACCESS_FLAGS=['CanView','CanEdit', CanRename', 'CanShare', 'CanDelete', 'CanCopy', CanMove'];
+```
+
+* Give access to 3 selected activities only on **TDM/Reports/Load** folder to the **tester** user role: 
+
+~~~
+SET_BI_ACCESS NAME="Load" PARENTS="TDM/Reports" ROLE="tester" ACCESS_FLAGS=['CanView', CanRename', 'CanCopy'];
+~~~
 
 
 
