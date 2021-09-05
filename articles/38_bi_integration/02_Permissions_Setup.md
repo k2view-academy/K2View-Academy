@@ -4,10 +4,10 @@
 
 Fabric users who want to implement the Business Intelligence capabilities can be divided into two groups: those who can setup and create the BI reports and those who can only run them. In order to enforce this differentiation, Fabric introduces the permission setup process divided into two steps, described further in this article:
 
-1. [Fabric Role Permissions](02_Permissions_Setup.md#Fabric-Role-Permissions) definition via the Fabric Admin application to control the access to BI Admin application.
+1. [Fabric Role Permissions Setup](02_Permissions_Setup.md#Fabric-Role-Permissions-Setup) via the Fabric Admin application to control the access to BI Admin application.
 2. [Access Rules Setup](02_Permissions_Setup.md#Access-Rules-Setup) using the Exago BI built-in access permissions mechanism to control the activities such as Edit, Rename or Delete the reports within the BI Designer application. 
 
-### Fabric Role Permissions 
+### Fabric Role Permissions Setup 
 
 **BI Admin** within the BI application in the Web Framework allows you to:
 
