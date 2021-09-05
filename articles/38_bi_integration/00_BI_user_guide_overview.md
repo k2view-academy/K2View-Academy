@@ -24,7 +24,7 @@ The BI application can be accessed via the [K2View Web Framework](https://suppor
 
 In order to create and execute the reports, start from the following setup steps in **BI Admin**:
 
-* [Installation and Storage Management setup](01_Installation.md).
+* [Installation and Initialization](01_Installation.md).
 * [Access rules and permissions settings](02_Permissions_Setup.md).
 * [Metadata setup](03_Metadata_Setup).
 * [Parameters definition](04_parameters.md).
