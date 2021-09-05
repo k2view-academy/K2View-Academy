@@ -2,7 +2,7 @@
 
 ### Overview
 
-When working with Fabric's integration of Exago BI, you will need to create data sources, as well as objects and joins. This article shows how to do that. 
+In order to start creating the reports on your data source (e.g. Fabric or a database), you will need to define data sources, objects and joins in the BI Admin. This article explains how to do that. 
 
 * Creation of [Data sources](03_Metadata_Setup.md#data-sources).
 * Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins). 
