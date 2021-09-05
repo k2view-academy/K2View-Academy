@@ -1,15 +1,35 @@
 # Installation and Initialization
 
-### Installation Steps
+The installation and initialization includes the following steps:
+
+1. [Installation of Exago server and Storage Management DB](01_Installation.md#installation).
+2. [System parameters configuration](01_Installation.md#configuration).
+3. [Storage Management Initialization](01_Installation.md#Storage-Management-Initialization).
+4. [Project Initialization in BI](01_Installation.md#Project-Initialization-in-BI).
+
+Refer to the [Installation Recommendations](01_Installation.md#installation-Recommendations) at the end of this article, for few important points related to different types of environments. 
+
+### Installation
 
 * Install **the latest available Exago version**, that includes the server and client Exago applications. 
   * Download the Exago package or docker image from the K2View download page.
   * *Link to the K2View DevOps document explaining how to install the Exago components - TBD.*
 * Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
-* (Optional) Install **Storage Management Utility**, the UI tool that allows setting up the folders' access permissions. [Click for more information about the Exago Storage Management Utility](https://support.exagoinc.com/hc/en-us/articles/360053801773-Storage-Management-Utility-v2021-1-).
 
 
-* Update the parameters under the **[bi]** section of Fabric **config.ini** with Exago host and Storage Management details:
+### Configuration
+
+* Update the **[bi]** section parameters of the **config.ini** as follows:
+
+  * **BI_PORT**, the listener port for BI. The default is 5432.
+  * **BI_HOST**, the IP address of the Exago server.
+  * **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
+  * **STORAGE_MGMT_HOST**, the IP address of the Storage Management DB. Empty for SQLite DB.
+  * **STORAGE_MGMT_DB_TYPE**, the type of Storage Management DB. The default is SQLite. The recommended type is PostgreSQL.
+  * **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB is PostgreSQL, the provider is Npgsql.
+  * **STORAGE_MGMT_DB_USER** / **STORAGE_MGMT_DB_PASSWORD**, the Storage Management DB user and password. Empty for SQLite DB. The password is automatically encrypted upon saving of the config.ini.
+  * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several environments. For example, set TABLE_PREFIX=dev1_.
+  * **BI_REST_KEY**, a key to be used to authenticate REST requests. The explanation how to setup the REST key is described further in this article. 
 
   ~~~
   [bi]
@@ -31,13 +51,19 @@
   STORAGE_MGMT_DB_PASSWORD=
   ## BI Storage Management table prefix
   TABLE_PREFIX=
+  ## BI REST Key
+  BI_REST_KEY=
   ~~~
 
-### Project Initialization in Exago
+### Storage Management Initialization
+
+[Click to get more information about the Storage Management DB initialization](https://support.exagoinc.com/hc/en-us/articles/360042229693).
+
+### Project Initialization in BI
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. 
 
-As a result, the <project name> folder is created in Exago Storage Management DB, with the default read-only access permissions to BI Designer - meaning that any user accessing this project can have read-only access to the project's reports within the BI Designer. Continue to the next article or click [here](02_Permissions_Setup.md) to setup the full access permissions. 
+As a result, the <project name> folder is created in the Storage Management DB, with the default read-only access permissions to BI Designer - meaning that any user accessing this project can have read-only access to the project's reports within the BI Designer. Continue to the next article or click [here](02_Permissions_Setup.md) to setup the full access permissions. 
 
 ### Installation Recommendations
 
