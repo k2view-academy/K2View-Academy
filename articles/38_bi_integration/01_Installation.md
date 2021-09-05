@@ -37,7 +37,7 @@
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. 
 
-As a result, the <project name> folder is created in Exago Storage Management DB, with the default (read-only) access permissions. Continue to the next article or click [here](02_Permissions_Setup.md) to setup the full access permissions. 
+As a result, the <project name> folder is created in Exago Storage Management DB, with the default read-only access permissions to BI Designer - meaning that any user accessing this project can have read-only access to the project's reports within the BI Designer. Continue to the next article or click [here](02_Permissions_Setup.md) to setup the full access permissions. 
 
 ### Installation Recommendations
 
