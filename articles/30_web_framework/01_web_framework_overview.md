@@ -42,15 +42,15 @@ For detailed documentation about the integration development guidelines, support
 
 ### Static Web Resources within the LU
 
-From Fabric 6.5.2 it is possible to locate all static web resources under the LU. 
+Starting from Fabric 6.5.2, it is possible to locate all static web resources under the LU. 
 
 As a result, once the LU is deployed, the static web resources are deployed as a part of it.
 
 To introduce a new application using the Fabric Web Framework, follow these steps:
 
-* Create a new folder, called web, under the LU implementation folder.
+* Create a new folder, called **web**, under the LU implementation folder.
 
-* Under the web folder create a folder representing your new application and put all the web static resources under this folder.
+* Under the web folder create an additional folder representing your new application and put all the web static resources under this folder.
 
 * Add the new application to the apps.json file. This file can either be modified on the server side on the existing location, or you can copy the apps.json file to the web folder on the client side and edit accordingly. Fabric will consider the apps.json file under the web folder with higher priority.
 
