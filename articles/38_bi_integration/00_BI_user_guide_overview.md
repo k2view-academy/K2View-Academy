@@ -6,7 +6,7 @@ Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.
 
 ![arc](images/bi_integration_architecture.PNG)
 
-The BI application can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html) and it includes the following modules:
+The **BI** application can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html) and it includes the following modules:
 
 * **BI Admin** - system configuration and initial setup module which allows to: 
 
@@ -14,18 +14,21 @@ The BI application can be accessed via the [K2View Web Framework](https://suppor
   - Create parameters for applying a filter within the reports.
   - Update various system configurations (advanced).
 
-  The access to this module is restricted based on Fabric user role. The way to do it is described further in this User guide.
+  The access to this module is restricted based on Fabric user role. The explanation about how to restrict the access is described further in this User guide.
 
-* **BI Designer** - creation and generation of various types of reports and dashboards. 
+* **BI Designer** - content creation module which allows to:
 
-  Note that the reports can also be invoked from Fabric user code. The way to do it is described further in this User guide.
+  * Creation various types of reports and dashboards. 
+  * Generate the reports / dashboards and download the extract files.
+
+  Note that the reports can also be generated from Fabric user code. The way to do it is described further in this User guide.
 
 ### E2E BI Setup and Execution
 
-In order to create and execute the reports, start from the following setup steps in **BI Admin**:
+Start your work with BI from the following setup steps to be performed in **BI Admin**:
 
 * [Installation and Initialization](01_Installation.md).
-* [Access rules and permissions settings](02_Permissions_Setup.md).
+* [Permissions setup](02_Permissions_Setup.md).
 * [Metadata setup](03_Metadata_Setup).
 * [Parameters definition](04_parameters.md).
 
