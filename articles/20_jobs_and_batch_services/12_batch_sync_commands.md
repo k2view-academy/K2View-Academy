@@ -508,4 +508,4 @@ BATCH Customer from CRM_DB USING('select customer_id from Customer where custome
 ```
 
 
-[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/11_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/13_migrate_commands.md)
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/11_batch_process_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/13_migrate_commands.md) 
