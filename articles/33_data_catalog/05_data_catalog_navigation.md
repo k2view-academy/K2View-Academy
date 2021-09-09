@@ -1,10 +1,10 @@
 # Data Catalog Navigation
 
-The Data Catalog UI enables users to move through a data model’s graph, move from one level to another and to filter specific elements.  
+The Data Catalog user interface enables users to move from one level to another through a data model’s graph, as well as to filter specific elements.  
 
 ### How Do I Access the Data Catalog?
 
-The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu to display the circle representing your project. If multiple projects have been deployed to the same OrientDB database, all projects are displayed.
+The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu. A display showing circles representing all projects that were deployed to the same OrientDB database will appear, and yours will be one of them. If your project is the only one, only its circle will be displayed. 
 
 <img src="images/33_02_proj.PNG" alt="image"  />
 
@@ -52,11 +52,11 @@ The Legend is displayed on the bottom right corner of the screen and provides a 
 <tr >
 <td style="width: 120px;" rowspan="3"><strong>Connection Lines</strong><br /><strong><br /></strong><strong><br /></strong></td>
 <td style="height: 18px; width: 226px;">CONTAINED</td>
-<td style="height: 18px; width: 308px;">Indicates the data entity that holds the current entity. For example, a table is contained in a Schema (LU).</td>
+<td style="height: 18px; width: 308px;">Indicates the data entity that holds the current entity. For example, if a table is contained in a Schema (LU).</td>
 </tr>
 <tr>
 <td style="height: 16px; width: 226px;">USE</td>
-<td style="height: 16px; width: 308px;">Indicates the data entity used by the current entity. For example, a TABLE (LU table) uses an INTERFACE_TABLE.</td>
+<td style="height: 16px; width: 308px;">Indicates the data entity used by the current entity. For example, if a TABLE (LU table) uses an INTERFACE_TABLE.</td>
 </tr>
 <tr>
 <td style="width: 226px;">POPULATION_KEYS</td>
@@ -83,14 +83,14 @@ The following tools are used to navigate the Data Catalog:
   * Click <img src="images/33_02_fit.PNG" alt="image" style="zoom: 67%;" /> to fit the tree to the screen.
   * Click <img src="images/33_02_home.PNG" alt="image" style="zoom: 67%;" /> to return to the collapsed project.
 
-* Move to lower hierarchy level by double-clicking the data element or clicking the <img src="images/plus_icon.PNG" alt="image" style="zoom: 85%;"/> icon  on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>. Then the lower hierarchy level is displayed.
+* Move to a lower hierarchy level by double-clicking the data element or clicking the <img src="images/plus_icon.PNG" alt="image" style="zoom: 85%;"/> icon  on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>. The lower hierarchy level is then displayed.
 
   ​	<img src="images/hierarchy.PNG" alt="image" style="zoom: 85%;"/>
 
 * By default, all tables are collapsed. To expand the tables, do the following:
 
-  * Click the<img src="images/expand_icon.PNG" alt="image"/>icon in the Legend near the data element type. For example, when clicking the <img src="images/expand_icon.PNG" alt="image"/>icon next to **Table** in the Legend all displayed tables are expended and the Legend icon changes to:  <img src="images/expand_table.PNG" alt="image" style="zoom: 85%;"/>.
-  * Or, click the same icon on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>.
+  * Click the<img src="images/expand_icon.PNG" alt="image"/>icon in the legend near the data element type. For example, when clicking the <img src="images/expand_icon.PNG" alt="image"/>icon next to **Table** in the legend, all displayed tables are expanded, and the legend icon changes to:  <img src="images/expand_table.PNG" alt="image" style="zoom: 85%;"/>.
+  * Alternatively, click the same icon on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>.
 
   <img src="images/expand.PNG" alt="image" style="zoom: 85%;"/>
 
