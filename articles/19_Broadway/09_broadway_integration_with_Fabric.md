@@ -38,7 +38,7 @@ Starting from V6.5.1, the **FabricGet** Actor supports fetching multiple instanc
 
   <img src="images/99_07_FABRIC_0.PNG" alt="image" style="zoom:75%;" />
 
-* Or, add a new input to the Actor, change the input name to the **luType** name and set the value is **iid**. In this case, the **luType** input argument of the Actor should be set to the empty value.
+* Or, add a new input to the Actor, change the input name to the **luType** name and set the value as **iid**. In this case, the **luType** input argument of the Actor should be set to the empty value.
 
   <img src="images/99_07_FABRIC_1.PNG" alt="image" style="zoom:75%;" />
 
@@ -94,9 +94,9 @@ To set the table and the fields of a **DbLoad** Actor, do the following:
 
 Several Broadway [Actors](03_broadway_actor.md) include an **interface** as an input argument. When setting the Actor's interface from the dropdown list, the list of values is retrieved from the Project Interfaces list. Only Active interfaces are displayed. The values are filtered by the Interface Type where only interfaces relevant to the Actor type are shown.
 
-### Broadway Flows automatic execution on LU deploy
+### Broadway Flows: Automatic Execution upon LU Deploy
 
-Broadway flow can run automatically as a result of a deploy activity. Once a Broadway flow called deploy.flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the deploy.flow.
+A Broadway flow can run automatically as a result of a deploy activity. Once the **deploy.flow** Broadway flow is defined under a selected LU, each time a deploy is initiated for the LU, it will trigger the execution of the deploy.flow.
 
 * If the deploy.flow is defined on the shared level only, it will be inherited to all the LUs.
 * If a soft deploy is defined to the deployed environment, a deploy will not trigger the deploy.flow execution.
