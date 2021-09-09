@@ -4,7 +4,7 @@
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 The following screenshot displays a list of available Interface Types.
-     * ![image](images/05_04_icon1.png) = DB interfaces.
+     * ![image](images/05_04_icon1.png) = DB interfaces. 
      * ![image](images/05_04_icon2.png) = Non-DB interfaces.
 
 ![image](images/05_04_01_interface_types.PNG)
