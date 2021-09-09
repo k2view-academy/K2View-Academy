@@ -59,6 +59,8 @@ The following screenshot displays an interface configuration in an older format 
 
 In the current Fabric version, if the project already has at least one interface created in the older format, Fabric preserves this interface format. All new interfaces of the same type are also created in the same format (ADO.NET/ODBC drivers) by default.
 
+From Fabric 6.5.2 and on, all new interfaces will be created with the new format.
+
 An additional reason for an interface to be created in a legacy format in the current Fabric version is the definition of a DB type in the Fabric Studio Config file. The **k2FabricStudio.exe.config** marks a specific DB type as **Legacy** whereby all new interfaces of this type are created using ADO.NET/ODBC drivers.  
 
 The **k2FabricStudio.exe.config** setting is created as follows and can be manually edited by the user at any time:

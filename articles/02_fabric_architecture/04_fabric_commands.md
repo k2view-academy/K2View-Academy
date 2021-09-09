@@ -448,6 +448,26 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
 
+* **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+
+  * Syntax
+
+    * set db_proxy=[<interface name>]
+
+  * Description
+
+    * Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+
+  * Notes
+
+    * If interface name is not specified, the command will show the current interface name.
+
+    * To turn it off use: set db_proxy=off.
+
+    * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE in order to enable the ability of using this new command.
+
+      
+
 #### Fabric Setting via JDBC Connection URL
 
 Fabric supports the ability to set the session variables via the Fabric Connection URL by concatenating them to the connection string using the following syntax:

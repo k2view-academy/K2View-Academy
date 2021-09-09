@@ -18,10 +18,12 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
   - The default and most commonly used value is **Cassandra**. 
   
     ~~~
-    #MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=com.k2view.cdbms.dao.CassandraEntityStorage
+    #MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=CASSANDRA
     ~~~
   
   - When the storage type in the config.ini is set to **NONE**, the instance is not saved to Fabric storage.
+  
+  - As experimental feature on Fabric 6.5.2, it is possible to define S3 or AZURE_BLOB_STORE as well.
   
 - MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache files on the server.
 
