@@ -4,7 +4,7 @@ The Data Catalog user interface enables users to move from one level to another 
 
 ### How Do I Access the Data Catalog?
 
-The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu. A display showing circles representing all projects that were deployed to the same OrientDB database will appear, and yours will be one of them. If your project is the only one, only its circle will be displayed. 
+The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu. A display showing a project deployed to the OrientDB database will appear. If multiple projects have been deployed to the same OrientDB database, all projects will be displayed.
 
 <img src="images/33_02_proj.PNG" alt="image"  />
 
