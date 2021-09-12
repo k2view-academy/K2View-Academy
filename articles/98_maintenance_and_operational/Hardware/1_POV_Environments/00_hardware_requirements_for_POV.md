@@ -63,7 +63,7 @@ Use the latest RedHat/CentOS Operating System, with **latest** **Docker Engine**
     \* Should be increased based on project scope and data retention requirements
 
 ##### For a Cloud Installation:
--   If using **AWS**: EC2: m54.xlarge
+-   If using **AWS**: EC2: m5.4xlarge
 -   If using **Azure** VM: D16d v4
 -   If using **GCP**: e2-standard-8
 
