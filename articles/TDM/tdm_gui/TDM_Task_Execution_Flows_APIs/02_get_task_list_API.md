@@ -88,6 +88,7 @@ Currently it supports the following filtering parameters:
   - 'P' or 'PR' (Parameters), 
   - 'S' (Synthetic), 
   - 'R' (Random) 
+  -  'REF' (Reference Only)
 - **sync_mode** : OFF/FORCE
 
 The JSON filtering parameter is optional. If is it not populated, the API returns all user's tasks.
