@@ -2,49 +2,51 @@
 
 ### Overview
 
-Fabric users who want to implement the Business Intelligence capabilities can be divided into two groups: those who can setup and create the BI reports and those who can only view and run the reports. 
+Fabric users who want to implement the Business Intelligence capabilities can be divided into two groups: those who can setup the BI application and create the reports and those who can only view and run the reports. 
 
 In order to enforce this differentiation, Fabric introduces the permission setup process divided into two steps, described further in this article:
+
+1. Assign the BI Admin permissions to predefined Fabric roles only. 
+2. Setup the access level to BI content. This step is only available to the roles with BI Admin permission.
+
+
 
 1. [Fabric Role Permissions Setup](02_Permissions_Setup.md#Fabric-Role-Permissions-Setup) via the Fabric Admin application, to control who can access the BI Admin application.
 2. [Access Level Setup](02_Permissions_Setup.md#Access-Level-Setup) using the Exago BI built-in access permissions mechanism, to control the activities such as Edit, Rename or Delete the reports within the BI Designer application. 
 
-### Fabric Role Permissions Setup 
+### BI ADMIN Permission Setup 
 
-**BI Admin** within the BI application in the Web Framework allows you to:
+The **BI Admin** module of the **BI** application allows the users to perform various system configurations as well as to setup the metadata for the reports. 
 
-* Create data sources and define their metadata (objects and joins).
-* Create parameters for applying a filter within the reports.
-* Update various system configurations (advanced).
-
-Since these activities are supposed to be performed by limited number of users, Fabric provides the ability to control the user access to the above features. 
-
-The **BI_ADMIN** permission is introduced in order to give access to the above features for specified user roles. By granting this permission to the Fabric role, the user with this role can perform the above activities.
+Since these activities are supposed to be performed by limited number of users, Fabric enables controlling the user access to the **BI Admin** module. Only the user roles with the **BI_ADMIN** permission can access the **BI Admin**.
 
 Note that the ability to create new reports within the **BI Designer** is also enabled only to the user role with **BI_ADMIN** permission.
 
-**How Do I Set Permissions in Fabric?**
+**How Do I Setup Permissions in Fabric?**
 
-Setup the **BI_ADMIN** permission in the Web Framework by clicking **Grant Permissions** in **Admin** > **Security** > **Permissions**:
+Setup the **BI_ADMIN** permission either by:
+
+* Running the [GRANT command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
+* Or, via the Web Framework **Admin** > **Security** > **Permissions** by clicking **Grant Permissions**.
 
 <img src="images/permissions_setup_0.PNG" alt="image" />
 
 ### Access Level Setup
 
-Exago access rules are defined in the Storage Management DB, per each folder (and report - if it differs from the folder access).
+Exago BI has a built-in access permissions mechanism, to control the activities such as Edit, Rename or Delete the reports within the **BI Designer** application. The access rules are stored in the Storage Management DB.
 
-When the Fabric project is deployed, the <project name> folder is created in BI Designer and the default read-only access rule is assigned to all user roles.
+The setup of the access level is performed by running the **SET_BI_ACCESS** Fabric command.
 
-To define the specific access level per Fabric role, run the Fabric command **set_bi_access**. Three access levels are defined:
+Three access levels are defined:
 
 * **Unrestricted** - the user can perform any activity within BI Designer, such as edit the report, rename it or delete it.
-* **CreateContent** - the user can perform any activity except the delete.
+* **CreateContent** - the user can perform any activity except for delete.
 * **ReadOnly** - the user can only view and copy the report.
 
 **Note:**
 
 - If the user that is logged into BI Designer is not assigned any access rules, he will get a read-only access to Exago folders and reports.
-- If the logged user is an owner of a folder or a report, he will have full access to it even if no specific access rules were assigned to his role on the folder/report.
+- If the user is an owner of a folder or a report, he will have full access to it regardless of the access level assigned to his role on this folder/report.
 
 **How Do I Set Access Level?**
 
@@ -66,10 +68,16 @@ The command will either create the permissions in the Storage Management DB or u
 SET_BI_ACCESS NAME="TDM" ROLE="admin" ACCESS_LEVEL="Unrestricted";
 ```
 
-* Give limited access on **TDM/Reports/Load** folder to the **tester** user role: 
+* Give create/edit access on **Reports** folder which is a **TDM**'s child folder to the **Implementer** user role: 
 
 ~~~
-SET_BI_ACCESS NAME="Load" PARENTS="TDM/Reports" ROLE="tester" ACCESS_LEVEL="CreateContent";
+SET_BI_ACCESS NAME="Reports" PARENTS="TDM" ROLE="Implementer" ACCESS_LEVEL="CreateContent";
+~~~
+
+* Give read-only access on **TDM/Reports/Load** folder to the **Tester** user role: 
+
+~~~
+SET_BI_ACCESS NAME="Load" PARENTS="TDM/Reports" ROLE="Tester" ACCESS_LEVEL="ReadOnly";
 ~~~
 
 
