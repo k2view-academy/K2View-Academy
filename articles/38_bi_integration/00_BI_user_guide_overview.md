@@ -11,7 +11,7 @@ The **BI** application can be accessed via the [K2View Web Framework](https://su
 * **BI Admin** - system configuration and initial setup module which allows to: 
 
   - Create data sources and define their metadata (objects and joins).
-  - Create parameters for applying a filter within the reports.
+  - Create parameters for applying a filter within reports.
   - Update various system configurations (advanced).
 
   The access to this module is restricted based on Fabric user role. The explanation about how to restrict the access is described further in this User guide.

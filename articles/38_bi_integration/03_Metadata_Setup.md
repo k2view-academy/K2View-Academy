@@ -2,7 +2,7 @@
 
 ### Overview
 
-In order to start creating the reports on your data source (e.g. Fabric or a database), you will need to define data sources, objects and joins in the BI Admin. This article explains how to do that. 
+In order to start creating the reports, define the data sources (such as Fabric or a PostgreSQL DB), objects and joins in the **BI Admin**. This article explains how to do: 
 
 * Creation of [Data sources](03_Metadata_Setup.md#data-sources).
 * Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins). 
@@ -11,17 +11,17 @@ Follow each one of them to fully setup the metadata, as a preparation for report
 
 ### Data Sources
 
-Exago supports definition of various types of data sources, such as relational databases (e.g. Oracle, MySQL, PostgreSQL), non-relational databased (e.g. MongoDB), DWH (e.g. Snowflake) or other types (e.g. XML files). Data sources are defined via the BI Admin. 
+Exago supports various types of data sources, such as relational databases (e.g. Oracle, MySQL, PostgreSQL), non-relational databased (e.g. MongoDB), DWH (e.g. Snowflake) or other types (e.g. XML files). Data sources are defined via the **BI Admin**. 
 
 [Click for more information about Data Sources definition in Exago](https://support.exagoinc.com/hc/en-us/articles/214571638-Data-Sources). 
 
 **How Do I Define Fabric as a Data Source?**
 
-Fabric can be defined as a data source in Exago. Fabric as a data source type is supported in Exago by the invocation of the **FabricAdoDriver** instead of the native SQLite Data Provider. 
+Fabric can be defined as a data source. Fabric as a data source type is supported in Exago by the invocation of the **FabricAdoDriver** instead of the native SQLite Data Provider. 
 
 To setup Fabric as a data source:
 
-1. Open the BI Admin.
+1. Open the **BI Admin**.
 2. Right click on **Sources > Add** and define the following:
    * Name - a unique name.
    * Type - select **Fabric**.
@@ -33,7 +33,7 @@ To setup Fabric as a data source:
 
 3. Click **Apply** to save the changes.
 
-If Exago is running on a Windows docker, it can be connected to a local Fabric. In this case, set your local IP as a host in the connection string.
+If Exago is running on a docker, it can be connected to a local Fabric. In this case, set your **IPv4 Address** by checking your machine's IP address as a host in the connection string.
 
 ![image](images/bi_setup_1.PNG)
 
