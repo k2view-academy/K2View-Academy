@@ -10,10 +10,6 @@ In order to enforce this differentiation, Fabric introduces the permission setup
 2. Setup the access level to BI content. This step is only available to the roles with BI Admin permission.
 
 
-
-1. [Fabric Role Permissions Setup](02_Permissions_Setup.md#Fabric-Role-Permissions-Setup) via the Fabric Admin application, to control who can access the BI Admin application.
-2. [Access Level Setup](02_Permissions_Setup.md#Access-Level-Setup) using the Exago BI built-in access permissions mechanism, to control the activities such as Edit, Rename or Delete the reports within the BI Designer application. 
-
 ### BI ADMIN Permission Setup 
 
 The **BI Admin** module of the **BI** application allows the users to perform various system configurations as well as to setup the metadata for the reports. 
