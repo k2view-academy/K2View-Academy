@@ -1,29 +1,4 @@
-# BI User Guide 
-
-### Overview
-
-Fabric provides a built-in integration with [Exago BI](https://support.exagoinc.com/hc/en-us) - an external Business Intelligence (BI) system that enables the design and execution of reports and dashboards. The integration architecture is described in the following diagram:
-
-![arc](images/bi_integration_architecture.PNG)
-
-The **BI** application can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html) and it includes the following modules:
-
-* **BI Admin** - system configuration and initial setup module which allows to: 
-
-  - Create data sources and define their metadata (objects and joins).
-  - Create parameters for applying a filter within reports.
-  - Update various system configurations (advanced).
-
-  The access to this module is restricted based on Fabric user role. The explanation about how to restrict the access is described further in this User guide.
-
-* **BI Designer** - content creation module which allows to:
-
-  * Creation various types of reports and dashboards. 
-  * Generate the reports / dashboards and download the extract files.
-
-  Note that the reports can also be generated from Fabric user code. The way to do it is described further in this User guide.
-
-### E2E BI Setup and Execution
+# BI User Guide Overview 
 
 Start your work with BI from the following setup steps to be performed in **BI Admin**:
 
@@ -41,5 +16,6 @@ When the report is created, tested and ready for execution, it can be invoked fr
 * [Reports execution guidelines](06_report_execution_guidelines.md). 
 
 
+[![Previous](/articles/images/Previous.png)](00_BI_integration.md)
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](01_Installation.md) 
