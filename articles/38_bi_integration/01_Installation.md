@@ -1,11 +1,10 @@
-# Installation and Initialization
+# Installation and Configuration
 
 The installation and initialization includes the following steps:
 
 1. [Installation](01_Installation.md#installation) - the installation of Exago server and Storage Management DB.
 2. [Configuration](01_Installation.md#configuration) - Fabric config.ini parameters configuration.
-3. [Storage Management Initialization](01_Installation.md#Storage-Management-Initialization).
-4. [REST Key Initialization](01_Installation.md#REST-Key-Initialization).
+3. [REST Key Initialization](01_Installation.md#REST-Key-Initialization).
 
 Refer to the [Project Initialization in BI](01_Installation.md#Project-Initialization-in-BI) and [Installation Recommendations](01_Installation.md#installation-Recommendations) at the end of this article, for few important points and recommendations. 
 
@@ -56,23 +55,6 @@ TABLE_PREFIX=
 ## BI REST Key
 BI_REST_KEY=
 ~~~
-### Storage Management Initialization
-
-When a PostgreSQL DB is installed, a Storage Management schema must be initialized. It includes a creation of specific metadata and data. 
-
-Do the following:
-
-1. Open **BI Admin** >  **Storage Management** and populate the **Database** connection parameters. Note that these are the same parameters as defined in config.ini.
-2. If the same Storage Management DB must be reused for several BI environments, indicate a table prefix. It also should align with the table prefix defined in config.ini.
-3. Click **Show Prepare Database SQL** to view the queries to be executed on the Storage Management DB.
-4. Click **Prepare Database** to run the queries on the Storage Management DB.
-
-![sm](images/bi_sm_details.PNG)
-
-Note that if you're using the default SQLite Storage Management DB, you don't need to perform the initialization process.
-
-[Click to get more information about the Storage Management DB initialization](https://support.exagoinc.com/hc/en-us/articles/360042229693).
-
 ### REST Key Initialization
 
 REST Key is used to authenticate REST requests from Fabric to Exago. 

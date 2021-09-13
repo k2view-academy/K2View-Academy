@@ -1,0 +1,56 @@
+# BI Admin Configuration
+
+**BI Admin** (Administration Console) enables the BI application configuration including the security, database, UI and other various settings. **WebReports.XML** is the main Exago BI configuration file which stores these settings and any change applied on the BI Admin module is reflected in WebReports.XML.
+
+Note that WebReports.XML does not keep the default flag values. Meaning that if by default a flag is True, it only appears in WebReports.XML when its value is changed to False. 
+
+During the BI application installation, WebReports.XML is copied to your server and it is pre-configured for the Fabric-BI integration. 
+
+This article describes the configurations which exist in WebReports.XML and are must for Fabric-BI integration as well as some other important settings.
+
+### Allow Direct Access to Exago
+
+The BI application can either be invoked directly via the URL or by the REST call from the hosting application. As part of Fabric-BI integration, the BI application must be invoked by the REST call, thus the following flag is set to False in **BI Admin** > **General** > **Main Settings**:
+
+![image](images/99_allow_dir_access.PNG)
+
+This is how this flag is defined in WebReports.XML:
+
+~~~xml
+<allowhomedirect>False</allowhomedirect>
+~~~
+
+### Allow New Root Directories
+
+By default, the **BI Designer** allows to create root folders for keeping the reports:
+
+![image](images/99_add_folder.PNG)
+
+In order to enforce the access permissions on the Project level, this ability is disabled by setting the following flag to False in **BI Admin** > **General** > **Feature/UI Settings**:
+
+![image](images/99_allow_new_root.PNG)
+
+Upon the project first deployment, the <project name> folder is created automatically as described [here](01_Installation.md#Project-Initialization-in-BI). The user can still create child folders under this folder, if he has either **Unrestricted** or **CreateContent** access level.
+
+This is how this flag is defined in WebReports.XML:
+
+~~~xml
+<allowreporttreerootaccess>False</allowreporttreerootaccess>
+~~~
+
+### Storage Management Initialization
+
+When a PostgreSQL DB is installed, a Storage Management schema must be initialized. It includes a creation of specific metadata and data. As part of the Fabric-BI integration, the Storage Management initialization is performed automatically upon the project deploy. However when working on Exago BI application directly, the following steps must be performed:
+
+1. Open **BI Admin** >  **Storage Management** and populate the **Database** connection parameters. Note that these are the same parameters as defined in config.ini.
+2. If the same Storage Management DB must be reused for several BI environments, indicate a table prefix. It also should align with the table prefix defined in config.ini.
+3. Click **Show Prepare Database SQL** to view the queries to be executed on the Storage Management DB.
+4. Click **Prepare Database** to run the queries on the Storage Management DB.
+
+![sm](images/bi_sm_details.PNG)
+
+Note that it is not needed to perform the initialization process when using the default SQLite Storage Management DB.
+
+[Click to get more information about the Storage Management DB initialization](https://support.exagoinc.com/hc/en-us/articles/360042229693).
+
+### 
