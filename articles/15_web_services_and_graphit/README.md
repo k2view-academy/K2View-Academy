@@ -10,7 +10,7 @@
 	<li><a href="/articles/15_web_services_and_graphit/07_deploy_web_services.md">Deploy Web Services</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/08_web_services_input_parameters.md">Web Service Input Parameters</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/09_swagger.md">Swagger</a></li>
-	<li><a href="/articles/15_web_services_and_graphit/10_legacy_annotation.md">Legacy Annotation</a></li>
+	<li><a href="/articles/15_web_services_and_graphit/10_annotations.md">Web Service Annotations</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/11_response_codes.md">Response Codes</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md">Supported Verbs - GET</a></li>
 	<li><a href="/articles/15_web_services_and_graphit/13_Supported_Verbs_Post.md">Supported Verbs - POST</a></li>
