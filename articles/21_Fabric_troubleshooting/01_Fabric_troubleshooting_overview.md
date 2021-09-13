@@ -136,9 +136,7 @@ In Fabric 6.5.2 a new command was introduced to create a profiler file on CPU or
 
     **tracing** – In tracing mode, the profiler uses the bytecode of its instruments to measure time and the invocation count of each class method. 
 
-  Trivial methods like getters and setters are skipped to achieve better 
-
-    performance.
+    Trivial methods like getters and setters are skipped to achieve better performance.
 
     Overhead is usually high and depends on the settings.
 
@@ -148,18 +146,14 @@ In Fabric 6.5.2 a new command was introduced to create a profiler file on CPU or
 
     Call counting provides a plain list of methods with invocation counts. Unlike other 
 
-    modes, neither call stacks nor times are gathered. Trivial methods like 
-
-    getters and setters are skipped to achieve better performance.
+    modes, neither call stacks nor times are gathered. Trivial methods like getters and setters are skipped to achieve better performance.
 
    
-
     **duration** - The time in seconds for the profiler to gather information.
 
     Default duration is 60 seconds.
 
    
-
 * **k2profiler snapshot** [cont|stop] [type=cpu|memory]
 
     Creates a CPU snapshot of memory. Memory snapshot includes various checks on the CPU as well. 
