@@ -70,7 +70,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>#Verb</p></td>
+<td width="200pxl" valign="top"><p><h5>Verb</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Methods supported by the Web Service, as follows:&nbsp;</p>
 <ul>
@@ -91,7 +91,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Produce</p></td>
+<td width="200pxl" valign="top"><p><h5>Produce</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
@@ -106,7 +106,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
     </td>    
 </tr>    
 <tr>
- <td width="200pxl" valign="top"><h4></h4><p>Custom Payload</p></td>
+ <td width="200pxl" valign="top"><p><h5>Custom Payload</h5></p></td>
 <td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters pane, or if this is implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric.</td>
 </tr>
 <tr>
