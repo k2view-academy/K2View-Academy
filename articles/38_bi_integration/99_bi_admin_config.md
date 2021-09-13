@@ -48,9 +48,24 @@ This is how this flag is defined in WebReports.XML:
 <allowreporttreerootaccess>False</allowreporttreerootaccess>
 ~~~
 
+### Exago User Roles 
+
+Exago User Roles are created to specify how a user or group of users interfaces with Exago. Roles can restrict access to folders or data objects.
+
+The main reason for using the Roles is the ability to restrict or allow the reports creation. Two roles are pre-configured in the BI Admin and must be present in WebReports.XML:
+
+* **create_report** role, which allows to create all kinds of reports in BI Designer.
+* **default** role, which doesn't allow the reports creation.
+
+The Fabric user roles with **BI_ADMIN** permission are automatically assigned the **create_report** role, thus are allowed to create the reports.
+
+[Click to get more information about the Exago Roles](https://support.exagoinc.com/hc/en-us/articles/214571808-Roles).
+
 ### Storage Management Initialization
 
-When a PostgreSQL DB is installed, a Storage Management schema must be initialized. It includes a creation of specific metadata and data. As part of the Fabric-BI integration, the Storage Management initialization is performed automatically upon the project deploy. However when working on Exago BI application directly, the following steps must be performed:
+When a PostgreSQL DB is installed, a Storage Management schema must be initialized. It includes a creation of specific metadata and data. 
+
+As part of the Fabric-BI integration, the Storage Management initialization is performed automatically upon the project deploy. However when working on Exago BI application directly, the following steps must be performed:
 
 1. Open **BI Admin** >  **Storage Management** and populate the **Database** connection parameters. Note that these are the same parameters as defined in config.ini.
 2. If the same Storage Management DB must be reused for several BI environments, indicate a table prefix. It also should align with the table prefix defined in config.ini.
@@ -63,4 +78,3 @@ Note that it is not needed to perform the initialization process when using the 
 
 [Click to get more information about the Storage Management DB initialization](https://support.exagoinc.com/hc/en-us/articles/360042229693).
 
-### 
