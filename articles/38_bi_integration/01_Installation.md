@@ -2,9 +2,8 @@
 
 The installation and initialization includes the following steps:
 
-1. [Installation](01_Installation.md#installation) - the installation of Exago server and Storage Management DB.
-2. [Configuration](01_Installation.md#configuration) - Fabric config.ini parameters configuration.
-3. [REST Key Initialization](01_Installation.md#REST-Key-Initialization).
+- [Installation](01_Installation.md#installation) - the installation of Exago server and Storage Management DB.
+- [Configuration](01_Installation.md#configuration) - Fabric config.ini parameters configuration.
 
 Refer to the [Project Initialization in BI](01_Installation.md#Project-Initialization-in-BI) and [Installation Recommendations](01_Installation.md#installation-Recommendations) at the end of this article, for few important points and recommendations. 
 
@@ -30,7 +29,7 @@ Update the **[bi]** section parameters of the **config.ini** as follows:
 * **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB type is PostgreSQL, the provider is Npgsql.
 * **STORAGE_MGMT_DB_USER** / **STORAGE_MGMT_DB_PASSWORD**, the Storage Management DB user and password. Empty for SQLite DB. The password is automatically encrypted upon saving the config.ini.
 * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several environments. For example, set TABLE_PREFIX=dev1_.
-* **BI_REST_KEY**, a key to be used to authenticate REST requests. The explanation about how to setup the REST key is described further in this article. 
+* **BI_REST_KEY**, a key to be used to authenticate REST requests. [Click to get the explanation about how to setup the REST key](99_WebReportsXML.md#REST-Key-Initialization). 
 
 ~~~
 [bi]
@@ -55,16 +54,6 @@ TABLE_PREFIX=
 ## BI REST Key
 BI_REST_KEY=
 ~~~
-### REST Key Initialization
-
-REST Key is used to authenticate REST requests from Fabric to Exago. 
-
-Open **BI Admin** >  **General** > **Other Settings** and populate the REST Key:
-
-![key](images/bi_rest_key.PNG)
-
-Then copy the key to the **BI_REST_KEY** parameter of **config.ini**.
-
 ### Project Initialization in BI
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  

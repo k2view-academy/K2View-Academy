@@ -1,6 +1,6 @@
 # BI Admin Configuration
 
-**BI Admin** (Administration Console) enables the BI application configuration including the security, database, UI and other various settings. **WebReports.XML** is the main Exago BI configuration file which stores these settings and any change applied on the BI Admin module is reflected in WebReports.XML.
+**BI Admin** (Administration Console) enables the BI application configuration including the security, database, UI and other various settings. **WebReports.XML** is the main Exago BI configuration file which stores these settings. Any change applied on the BI Admin module is reflected in WebReports.XML.
 
 Note that WebReports.XML does not keep the default flag values. Meaning that if by default a flag is True, it only appears in WebReports.XML when its value is changed to False. 
 
@@ -10,7 +10,7 @@ This article describes the configurations which exist in WebReports.XML and are 
 
 ### Allow Direct Access to Exago
 
-The BI application can either be invoked directly via the URL or by the REST call from the hosting application. As part of Fabric-BI integration, the BI application must be invoked by the REST call, thus the following flag is set to False in **BI Admin** > **General** > **Main Settings**:
+The BI application can either be invoked directly via the URL or by the REST call from the hosting application. As part of Fabric-BI integration solution, the BI application must be invoked by the REST call only in order to secure the access to the BI data. Thus the following flag must be set to False in **BI Admin** > **General** > **Main Settings**:
 
 ![image](images/99_allow_dir_access.PNG)
 
@@ -19,6 +19,16 @@ This is how this flag is defined in WebReports.XML:
 ~~~xml
 <allowhomedirect>False</allowhomedirect>
 ~~~
+
+### REST Key Initialization
+
+REST Key is used to authenticate REST requests from Fabric to Exago. 
+
+Open **BI Admin** >  **General** > **Other Settings** and populate the REST Key:
+
+![key](images/bi_rest_key.PNG)
+
+Then copy the key to the **BI_REST_KEY** parameter of **config.ini**.
 
 ### Allow New Root Directories
 
