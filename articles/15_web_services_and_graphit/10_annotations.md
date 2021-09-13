@@ -10,7 +10,11 @@ Conversely, a Java class that implements a Web service must specify the @WebServ
 ### Web services methods within the Logic Java file
 
 When creating a new webservice java file, it is added as a method within the public class Logic in the java logic file k2_ws.java 
-In the example below we have added 4 methods testWSannotations1(), testWSannotations2(),testWSannotations3(),testWSannotations4(), each one with a different set of attributes:
+In the example below we have added 4 methods each of which configured with a different set of annotations and properties: 
+- testWSannotations1(), 
+- testWSannotations2(),
+- testWSannotations3(),
+- testWSannotations4()
   
 ```
 public class Logic extends WebServiceUserCode {
