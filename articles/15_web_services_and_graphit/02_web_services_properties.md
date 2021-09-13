@@ -70,7 +70,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Verb</p></td>
+<td width="200pxl" valign="top"><p>#Verb</p></td>
 <td width="700pxl" valign="top">
 <p>Methods supported by the Web Service, as follows:&nbsp;</p>
 <ul>
