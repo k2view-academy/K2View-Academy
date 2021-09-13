@@ -12,29 +12,30 @@ Conversely, a Java class that implements a Web service must specify the @WebServ
 When creating a new webservice java file, it is added as a method within the public class Logic in the java logic file k2_ws.java 
 In the example below we have added 4 methods testWSannotations1(), testWSannotations2(),testWSannotations3(),testWSannotations4(), each one with a different set of attributes:
   
-```public class Logic extends WebServiceUserCode {
+```
+public class Logic extends WebServiceUserCode {
 
-	@desc("Show example of annotations 1")
-	@webService(path = "", verb = {MethodType.GET, MethodType.POST}, version = "1", isRaw = true, isCustomPayload = false, produce = {Produce.XML, Produce.JSON, Produce.CSV})
-	public static Object testWSannotations1() throws Exception {		
-	}
+@desc("Show example of annotations 1")
+@webService(path = "", verb = {MethodType.GET, MethodType.POST}, version = "1", isRaw = true, isCustomPayload = false, produce = {Produce.XML, Produce.JSON, Produce.CSV})
+public static Object testWSannotations1() throws Exception {		
+}
 
-	@desc("Show example of annotations 2")
-	@serializeNull(false)	
-	@webService(path = "", verb = {MethodType.GET, MethodType.DELETE}, version = "2", isRaw = false, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
-	public static ResultSetWrapper testWSannotations2() throws Exception {
-	}
+@desc("Show example of annotations 2")
+@serializeNull(false)	
+@webService(path = "", verb = {MethodType.GET, MethodType.DELETE}, version = "2", isRaw = false, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
+public static ResultSetWrapper testWSannotations2() throws Exception {
+}
 
-	@desc("Show example of annotations 3")
-	@serializeNull(false)	
-	@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, isCustomPayload = true, produce = {Produce.XML})
-	public static Object testWSannotations3() throws Exception {
-	}
+@desc("Show example of annotations 3")
+@serializeNull(false)	
+@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, isCustomPayload = true, produce = {Produce.XML})
+public static Object testWSannotations3() throws Exception {
+}
 
-	@desc("Show example of annotations 4")
-	@webService(path = "", verb = {MethodType.GET}, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
-	public static Object testWSannotations4() throws Exception {			
-	}
+@desc("Show example of annotations 4")
+@webService(path = "", verb = {MethodType.GET}, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
+public static Object testWSannotations4() throws Exception {			
+}
 }
 
 ```
@@ -60,9 +61,9 @@ The following [properties](/articles/15_web_services_and_graphit/02_web_services
 - [output format](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) can be XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
 - [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) to brings the data response as is or not: e.g. ```isRaw = true```
 
-#### Legacy Annotations
-
-Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.  To enable backwards compatibility while preserving the existing Web Services response structure, add the @legacy annotation on a category level. 
+#### @legacy
+Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.
+In order to enable backwards compatibility while preserving the existing Web Services response structure, the ```@legacy``` annotation must be added at the category level. 
 Use either Notepad or IntelliJ to edit the annotation. 
  * Web Services under a category with an @legacy annotation respond in the older structure. 
  * New Web Services under the same category align the Web Service response structure accordingly.
