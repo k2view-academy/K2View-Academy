@@ -23,7 +23,7 @@ Refer to the [Project Initialization in BI](01_Installation.md#Project-Initializ
 Update the **[bi]** section parameters of the **config.ini** as follows:
 
 * **BI_PORT**, the listener port for BI. The default is 5432.
-* **BI_HOST**, the IP address of the Exago server.
+* **BI_HOST**, the IP address of the BI server.
 * **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
 * **STORAGE_MGMT_HOST**, the IP address of the Storage Management DB. Empty for SQLite DB.
 * **STORAGE_MGMT_DB_TYPE**, the type of Storage Management DB. The default is SQLite. The recommended Storage Management DB type is PostgreSQL.
@@ -67,15 +67,15 @@ Then copy the key to the **BI_REST_KEY** parameter of **config.ini**.
 
 ### Project Initialization in BI
 
-Upon the completion of installation and configuration setup, deploy the Fabric project. 
+Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
-As a result, the <project name> folder is created in the Storage Management DB, with the default read-only access permissions to BI Designer - meaning that any user accessing this project can have read-only access to the project's reports within the BI Designer. Continue to the next article or click [here](02_Permissions_Setup.md) to setup the full access permissions. 
+Now any user accessing this project can have read-only access to the project's reports within the BI Designer. [Access Permissions Setup](02_Permissions_Setup.md) article explains how to setup the access permissions per Fabric role. 
 
 ### Installation Recommendations
 
 Following are the installation and setup recommendations:
 
-- It is recommended to have 3 separate Exago installations. One each for Dev, QA and Production envrionments.
+- It is recommended to have 3 separate Exago installations. One each for Dev, QA and Production environments.
   - Linux installation is a must for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
 - The recommended Storage Management DB type is PostgreSQL.
