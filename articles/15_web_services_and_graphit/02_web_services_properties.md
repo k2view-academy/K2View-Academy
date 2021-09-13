@@ -41,7 +41,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Version</p></td>
+<td width="200pxl" valign="top"><p><h5>Version</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Representation of the Web Service&rsquo;s versioning control status. A version is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions that are all related to the same service. By default, the version is populated by 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
@@ -55,7 +55,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Path</p></td>
+<td width="200pxl" valign="top"><p><h5>Path</h5></p></td>
 <td width="700pxl" valign="top">
 <p>The URL path of the Web Service. The actual name to be called by external applications when using the Web Service.</p>
 <p>The URL path requires permissions and should be unique per Path / Version / Response Format / Request Format.</p>
@@ -83,7 +83,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Is Raw</p></td>
+<td width="200pxl" valign="top"><p><h5>Is Raw</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are True or False.</p>
@@ -100,7 +100,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Serialize null</p></td>
+<td width="200pxl" valign="top"><p><h5>Serialize null</h5></p></td>
 <td width="700pxl" valign="top">
     <p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
     </td>    
@@ -110,11 +110,11 @@ Fabric Web Services properties include the definitions, methods, categories and 
 <td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters pane, or if this is implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric.</td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Description</p></td>
+<td width="200pxl" valign="top"><p><h5>Description</h5></p></td>
 <td width="700pxl" valign="top"><p>Web Service&rsquo;s description on Swagger.</td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Result Metadata</p></td>
+<td width="200pxl" valign="top"><p><h5>Result Metadata</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Response example to be displayed in Swagger before the Web Service call.</p>
 <p>Set example-JSON, example-XML and example-CSV.</p>
