@@ -135,7 +135,7 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 <td style="width: 50%; height: 18px;">Kafka Zookeeper</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">9093</td>
+<td style="width: 50%; height: 18px;">9093, 9091 </td>
 <td style="width: 50%; height: 18px;">Kafka</td>
 </tr>
 <tr>
