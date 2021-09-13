@@ -47,11 +47,11 @@ Looking at the 4 objects defined above, we can observe that the following annota
 This annotation has been added before each one of the web-services defined in the project. 
 
 #### @desc
-This tag has been added before the public function - e.g.
+The [description tag](/articles/15_web_services_and_graphit/02_web_services_properties.md#description) is added before the public function declaration - e.g.
 ```("Show example of annotations 3")``` 
 
 #### @serializeNull
-When serialization is deactivated for the webservice (in the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
+When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is deactivated for the webservice (in the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
 #### verbs 
 The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) are added as follows:
