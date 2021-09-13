@@ -333,6 +333,6 @@ To override the response code, use the following code in the Web Service:
 
   
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/10_legacy_annotation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/10_annotations.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/12_Supported_Verbs_Get.md)
 
 
