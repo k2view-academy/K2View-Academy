@@ -63,6 +63,6 @@ Fabric Web Services are displayed in Swagger in categories and in alphabetical o
    
    * Project defined categories for Web Services.
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/10_legacy_annotation.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/08_web_services_input_parameters.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/15_web_services_and_graphit/10_annotations.md)
 
 
