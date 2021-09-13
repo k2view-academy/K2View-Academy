@@ -113,6 +113,7 @@ The following table describes the syntax and parameters for creating the Heap Du
 </tr>
 </tbody>
 </table>
+
 ### k2profiler
 
 In Fabric 6.5.2 a new command was introduced to create a profiler file on CPU or memory or both.
