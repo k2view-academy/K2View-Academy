@@ -40,6 +40,10 @@ For example, the following image shows that the user navigated to **Admin > Secu
     
   * Click Execute to run the commands.
 
+* **Terminal,** bringing fabric console experience to a web application. 
+
+  
+
 ### Admin History
 
 Admin displays the history of the Fabric commands executed on the server in a small popup screen in the right lower corner which can be expanded to show several rows.
