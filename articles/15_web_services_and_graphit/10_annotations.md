@@ -57,8 +57,8 @@ When [serialization](/articles/15_web_services_and_graphit/02_web_services_prope
 The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) are added as follows:
 
 - [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb)```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the java web service window in Fabric Studio
-- [payload](/articles/15_web_services_and_graphit/02_web_services_properties.md#custom-payload) in this case set to true: ``` isCustomPayload = true``` 
-- [output format](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) can be XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
+- [custom payload](/articles/15_web_services_and_graphit/02_web_services_properties.md#custom-payload) in this case is set to true: ``` isCustomPayload = true``` 
+- [produce](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) can be XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
 - [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) to brings the data response as is or not: e.g. ```isRaw = true```
 
 #### @legacy
