@@ -1,7 +1,8 @@
 # Web Service Annotations
 
-The annotation @WebService tells Fabric server runtime environment to expose all public methods on that bean as a web service. 
-Other annotations on individual methods or parameters can be added to increase granularity. 
+The annotation @WebService tells Fabric server runtime environment to expose all public methods on that object as a web service. 
+Other annotations on individual methods or parameters can be added to increase granularity.
+
 Using annotations makes it much easier to expose Java artifacts as web services, therefore Fabric developers can tag any java function developed within a project and have Fabric expose all its public methods as a web service.
 
 Conversely, a Java class that implements a Web service must specify the @WebService annotation.
