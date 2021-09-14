@@ -6,12 +6,14 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 ## Prerequisites
 
-- Apache web server is pre-installed.
+- Apache web server is installed.
 - SELinux is disabled.
-- Hardware / operating systems / users - TDB
+- Redhat/CentOS latest Operating System and above, with latest patches.
+- Hardware - TDB
 
+[Click for more details about Exago Technical Specifications](https://support.exagoinc.com/hc/en-us/articles/216396637-Technical-Specifications).
 
-## Installation Process
+## Installation on Linux
 
 1. Click here (*TBD to add a link to K2View download page*) to download the ExagoBI Installer into a temporary directory.
 
@@ -25,14 +27,14 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 3. Follow the wizard:
 
+   Use the **/opt/apps/exago** path as the path of ExagoBI installation.
+
    ![wiz](images/exago1.png)
 
    ![wiz](images/exago2.png)
 
 
 **Directory Locations**
-
-In this guide we use the **/opt/apps/exago** path as the path of ExagoBI installation.
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
@@ -67,6 +69,10 @@ In this guide we use the **/opt/apps/exago** path as the path of ExagoBI install
 </tr>
 </tbody>
 </table>
+
+## Docker Installation on Linux / Windows / MAC
+
+TBD
 
 ## Configuration Files Update
 

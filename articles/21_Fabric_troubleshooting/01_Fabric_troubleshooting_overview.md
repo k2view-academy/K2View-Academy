@@ -135,7 +135,7 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
    
      **duration** - The time in seconds for the profiler to gather information. Default duration is 60 seconds.
    
-* **k2profiler snapshot** [cont|stop] [type=cpu|memory]
+* **k2profiler snapshot** [stop=true|false] [type=cpu|memory]
 
   Creates a CPU or memory snapshot. 
     
