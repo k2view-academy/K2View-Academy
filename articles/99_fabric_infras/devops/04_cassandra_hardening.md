@@ -1,9 +1,9 @@
 # Cassandra Hardening
 
-The following steps ensure that the keys that secure Fabric and Cassandra are generated and configured.
+The following steps ensure that the keys that secure Fabric and Cassandra are properly generated and configured.
 
 - The example password ```Q1w2e3r4t5!``` is used for TLS keys and can be replaced in all the following sections by a new password.
-- Do not forget to replace all `$K2_HOME/` & `$INSLATT_DIR`  values with the full and correct path location in both Fabric and Cassandra.
+- Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the full and correct path location for both Fabric and Cassandra.
 
 
 ## Step 1 - Keys Generation
@@ -61,7 +61,7 @@ The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` direct
 ## Step 2 - Cassandra YAML
 
 1. Edit the cassandra.yaml file with the appropriate passwords and certification files.
-2. Execute this as a Cassandra user on all Cassandra nodes. 
+2. Execute this as a Cassandra user on all the Cassandra nodes. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -93,7 +93,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 1. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
 ```bash
-cp $INSLATT_DIR/cassandra/conf/cqlshrc.sample $INSLATT_DIR/.cassandra/cqlshrc
+cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
 
 sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
 sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSLATT_DIR/.cassandra/cqlshrc
@@ -121,9 +121,9 @@ mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.
 
 
 
-## Step 5 - Disable the defulte cassandra superuser
+## Step 5 - Disable the default cassandra superuser
 
-Cassandra defulte **superuser** is `cassandra` and it must be disabled before going to production. before doing so you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
+Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
 
 1. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
 
