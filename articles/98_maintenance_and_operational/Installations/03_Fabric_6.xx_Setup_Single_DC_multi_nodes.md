@@ -74,6 +74,8 @@ cassandra
 
 #### Post Setup Run on One Node
 
+create new superuser for cassandra, and change the cassandra default user password, update the RF
+
 Update the `DC1` to the DC name you used above:
 
 ~~~bash
@@ -93,6 +95,13 @@ nodetool -u k2view -pw Q1w2e3r4t5 repair
 ~~~
 
 
+**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. we refer the the following SED lines
+
+
+~~~bash
+sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
+sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
+~~~
 
 ### Setup Cassandra Nodes 4 and Above
 

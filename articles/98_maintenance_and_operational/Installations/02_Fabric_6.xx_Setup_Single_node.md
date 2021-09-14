@@ -69,12 +69,20 @@ cassandra
 
 ### Post Setup Run on One Node
 
+create new superuser for cassandra, and change the cassandra default user password
+
 ~~~bash
 echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
 echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -u k2admin -p Q1w2e3r4t5
 ~~~
 
+**Note**: if you select to change the password from the example above, note that you will need to update it later in point that you preconfigure the Fabric. we refer the the following SED lines
 
+
+~~~bash
+sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/config.ini
+sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
+~~~
 
 ## Setup Kafka
 
@@ -120,6 +128,10 @@ echo "ALTER user cassandra with PASSWORD 'ZBU3Ld35NvXU3qud' superuser;" |cqlsh -
    ~~~
 
 6. Verify the Kafka and Zookeeper are running:
+
+   ~~~bash
+   $CONFLUENT_HOME/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"
+   ~~~
 
 
 ## Setup for Fabric & TDM 7

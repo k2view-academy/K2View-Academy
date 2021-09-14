@@ -29,19 +29,19 @@ Operating System: Redhat/CentOS latest Operating System and above, with latest p
 
 The following File Server volumes must be made available:
 
--   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a K2View user
+-   Volume of 50G /opt/apps/fabric/ will also be used as the home directory for a **fabric** user (Owne by fabric user )
 
--   Volume of 100G\* **/opt/apps/fabric/storage**
+-   Volume of 100G\* **/opt/apps/fabric/storage** (Owne by fabric user )
 
--   Volume of 50G **/opt/apps/cassandra/**
+-   Volume of 50G **/opt/apps/cassandra/** (Owne by cassandra user )
 
--   Volume of 2T\* **/opt/apps/cassandra/storage/data**
+-   Volume of 2T\* **/opt/apps/cassandra/storage/data** (Owne by cassandra user )
 
--   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints**
+-   Volume of 10% of data volume - **/opt/apps/cassandra/storage/hints** (Owne by cassandra user )
 
--   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog**
+-   Volume of 25% of data volume - **/opt/apps/cassandra/storage/commitlog** (Owne by cassandra user )
 
--   Volume of 100G\* **/opt/apps/kafka/**
+-   Volume of 100G\* **/opt/apps/kafka/** (Owne by kafka user )
 
 > **Note:** The file server must provide IOPS of at least 30K read & 10K write.
 > The number of servers should be increased based on project scope and data retention requirements.
