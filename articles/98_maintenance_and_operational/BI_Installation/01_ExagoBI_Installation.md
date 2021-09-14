@@ -8,6 +8,7 @@ This article describes the installation of ExagoBI. In order to complete the con
 
 - Apache web server is pre-installed.
 - SELinux is disabled.
+- Hardware / operating systems / users - TDB
 
 
 ## Installation Process
