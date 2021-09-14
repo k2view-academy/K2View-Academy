@@ -19,27 +19,48 @@ rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 chmod +x secure_cassandra.sh
 ```
 
-**!! run on single Fabric node only !!**
+**!! Run on single Fabric node only !!**
 * To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
 e.g.: ./secure_cassandra.sh {Password} {Cluster_Name}
 
 ```./secure_cassandra.sh Q1w2e3r4t5 k2tls```
 
 **Warning:**
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using ```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```.
-The certificate is stored in the following file: ```</opt/apps/k2view/.cassandra_ssl/CLUSTER_k2tls_PUBLIC.cer>```.
+
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using the following command:
+
+```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```
+
+The certificate is stored in the following file: ```</opt/apps/k2view/.cassandra_ssl/CLUSTER_k2tls_PUBLIC.cer>```
+
 
 **Warning:**
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using ```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```.
+
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using the following command:
+
+```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```
+
 The certificate is added to the keystore: ```[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```.
 
 **Warning:**
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using ```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```.
+
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using the following command:
+
+```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```
+
 The certificate is stored in the following file: ```</opt/apps/k2view/.cassandra_ssl/CLIENT_k2tls_PUBLIC.cer>```.
 
+
 **Warning:**
-The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
+
+The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using the following command:
+
+"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
+
 The certificate is added to the keystore: ```[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```
+
+
+The following messages will appear on your screen:
 
 ```
 Importing keystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore to /opt/apps/k2view/.cassandra_ssl/cassandra.pks12.keystore...
@@ -50,7 +71,7 @@ MAC verified OK
 MAC verified OK 
 ```
 
-The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` directory:
+The following 7 generated files will appear under the ```$K2_HOME/.cassandra_ssl``` directory:
 - k2tls_CLIENT.key.pem
 - k2tls_CLIENT.cer.pem
 - cassandra.keystore
