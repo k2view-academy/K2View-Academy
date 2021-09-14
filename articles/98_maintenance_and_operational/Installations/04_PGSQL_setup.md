@@ -1,17 +1,18 @@
-# Setup PGSQL 13.3
+# Setup for PGSQL 13.3
 
-TDM 7.xx is certified with pgsql 9.6 & 13. You can supply access to his PG if you have one.
-TDM requires user & password with full create, delete and update privileges. 
+TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
+You can supply access to a Postgres SQL database engine if you have one. If you do not, one is supplied with the TDM application.  
+TDM requires a username & password with full create, delete and update privileges. 
 
-You also have the option install it from the K2View predefined **tarball** file.
+You also have the option install a Postgres SQL database engine from the K2View predefined **tarball** file.
 
-the tarball that is supplied by **K2view** is PGSQL 13.3 with TLS mode enabel, the the cert files can be found in:
+The tarball that is supplied by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
 
 - The certification files are located at /opt/apps/pgsql/bin/.crt 
 - The configuration files are located at /opt/apps/pgsql/data 
 - The user and password are postgres, port is the default (5432).  
 
-## Prerequisite 
+## Prerequisites
 
 - RedHat/CentOs 8, AWS Linux 2
 - 2 vCPU
