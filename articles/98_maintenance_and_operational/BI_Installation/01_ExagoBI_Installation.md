@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This article describes the installation of ExagoBI. In order to complete the configuration and implementation of BI within Fabric, follow all the steps described in [BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
+This article describes the installation of ExagoBI. In order to start using the BI application, complete the configuration and implementation by following all the steps described in [BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
 
 ## Prerequisites
 
