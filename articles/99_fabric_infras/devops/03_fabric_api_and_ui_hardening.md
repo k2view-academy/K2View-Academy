@@ -1,8 +1,8 @@
-# Fabric API/WSHardening 
+# Fabric API/WS Hardening 
 
 ## Step 1 - Keys Generation
 
-1. Run the following scrip on one of the fabric's
+1. Run the following scrip on one of the Fabric nodes
 
 ~~~bash
 mkdir -p $K2_HOME/.ssl
@@ -29,9 +29,9 @@ scp k2vmws.tar.gz fabric@10.10.10.10:/opt/apps/fabric/
 mkdir -p $K2_HOME/.ssl && tar -zxvf k2vmws.tar.gz -C $K2_HOME/.ssl
 ```
 
-## Step 3 - Config the Fabric for using TLS for API/WebUI
+## Step 3 - Configure Fabric to use TLS for API/WebUI
 
-1. run the bellow on all the fabric nodes, and restart the Fabric service if needed
+1. run the snippet below on each fabric node, and restart Fabric.
 
 
 ```bash
@@ -47,11 +47,9 @@ chown fabric.fabric $K2_HOME/.ssl/k2vws.key
 ```
 
 
+## Step 4 - Check access to Fabric Web UI via HTTPS 
 
-
-## Step 4 - Check access via HTTPS to API/WebUI
-
-- Restart all Fabric nodes.
+- Restart all the Fabric nodes.
 - Access points examples: 
   - Admin:
     ``` https://10.10.10.10:9443/ ```

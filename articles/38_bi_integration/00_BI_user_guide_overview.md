@@ -2,7 +2,7 @@
 
 Working with the BI requires the installation and several one-time setup activities performed in **BI Admin** module. Then you can work on the reports using the **BI Designer**. When the reports are created, tested and ready for execution, they can be invoked from the Fabric user code using a Fabric JOB framework. This can be done using a JOBTYPE = GENERATE_BI.
 
-This user guide provides the process description of setting up the BI using the **BI Admin**:
+This user guide provides the process description how to setup the **BI** using the **BI Admin**:
 
 * [Installation and Configuration](01_Installation.md).
 * [Permissions setup](02_Permissions_Setup.md).
@@ -16,7 +16,6 @@ The below links concise the important points to be considered when creating and 
 * [Reports creation guidelines](05_report_creation_guidelines.md).
 * [Reports execution guidelines](06_report_execution_guidelines.md).
 
-   
 
 
 [![Previous](/articles/images/Previous.png)](00_BI_integration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](01_Installation.md) 

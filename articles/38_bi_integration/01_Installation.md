@@ -1,6 +1,6 @@
 # Installation and Configuration
 
-The installation and initialization includes the following steps:
+The installation and configuration of BI includes the following steps:
 
 - [Installation](01_Installation.md#installation) - the installation of Exago server and Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Fabric config.ini parameters configuration.
@@ -13,13 +13,12 @@ Refer to the [Project Initialization in BI](01_Installation.md#Project-Initializ
   * Download the Exago package or docker image from the K2View download page.
   * *Link to the K2View DevOps document explaining how to install the Exago components - TBD.*
 * Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. 
-  * The explanation how to initialize the Storage Management DB is described further in this article. 
   * [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
 
 ### Configuration
 
-Update the **[bi]** section parameters of the **config.ini** as follows:
+Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 * **BI_PORT**, the listener port for BI. The default is 5432.
 * **BI_HOST**, the IP address of the BI server.
@@ -58,7 +57,7 @@ BI_REST_KEY=
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
-Now any user accessing this project can have read-only access to the project's reports within the BI Designer. [Access Permissions Setup](02_Permissions_Setup.md) article explains how to setup the access permissions per Fabric role. 
+Now any user accessing this project can have the read-only access to the project's reports within the BI Designer. [Access Permissions Setup](02_Permissions_Setup.md) article explains how to setup the access permissions per Fabric role. 
 
 ### Installation Recommendations
 
