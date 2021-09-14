@@ -8,7 +8,7 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 - Apache web server is installed.
 - SELinux is disabled.
-- Operating System: Redhat/CentOS latest Operating System and above, with latest patches.
+- Redhat/CentOS latest Operating System and above, with latest patches.
 - Hardware - TDB
 
 ## Installation on Linux
