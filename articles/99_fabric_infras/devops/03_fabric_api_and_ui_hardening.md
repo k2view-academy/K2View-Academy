@@ -21,7 +21,7 @@ keytool -genkey -noprompt \
 
 ## Step 2 - Copy the *k2vws.key* key to all Fabric nodes
 
-1. copy the `$K2_HOME/.ssl/k2vws.key` to all the Fabric nodes to the same location
+1. Copy the `$K2_HOME/.ssl/k2vws.key` on each Fabric node into the same location ```$K2_HOME/.ssl```
 
 ``` bash
 tar -czvf k2vmws.tar.gz -C $K2_HOME/.ssl .
@@ -31,7 +31,7 @@ mkdir -p $K2_HOME/.ssl && tar -zxvf k2vmws.tar.gz -C $K2_HOME/.ssl
 
 ## Step 3 - Configure Fabric to use TLS for API or WebUI
 
-1. run the snippet below on each fabric node, and restart Fabric.
+1. Run the snippet below on each fabric node, and restart Fabric.
 
 
 ```bash
@@ -49,8 +49,8 @@ chown fabric.fabric $K2_HOME/.ssl/k2vws.key
 
 ## Step 4 - Check access to Fabric Web UI via HTTPS
 
-- Restart all the Fabric nodes.
-- Use the following Access points to check access: 
+- Restart each one of the Fabric nodes.
+- Use the following Access points to check that the https access has been properly granted: 
   - Admin Panel: ``` https://10.10.10.10:9443/ ```
   - Fabric web service will be available at: ``` https://10.10.10.10:9443/deploy ```
 
