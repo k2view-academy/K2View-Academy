@@ -8,7 +8,7 @@ During the BI application installation, WebReports.XML is copied to your server 
 
 This article describes the configurations which exist in WebReports.XML and are must for Fabric-BI integration as well as some other important settings.
 
-### Allow Direct Access to Exago
+### Allow Direct Access
 
 The BI application can either be invoked directly via the URL or by the REST call from the hosting application. As part of Fabric-BI integration solution, the BI application must be invoked by the REST call only in order to secure the access to the BI data. Thus the following flag must be set to False in **BI Admin** > **General** > **Main Settings**:
 

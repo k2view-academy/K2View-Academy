@@ -9,11 +9,9 @@ Refer to the [Project Initialization in BI](01_Installation.md#Project-Initializ
 
 ### Installation
 
-* Install **the latest available Exago version**, that includes the server and client Exago applications. 
-  * Download the Exago package or docker image from the K2View download page.
-  * *Link to the K2View DevOps document explaining how to install the Exago components - TBD.*
+* Install **the latest available Exago version**.
+  * [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
 * Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. 
-  * [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
 
 ### Configuration
@@ -32,26 +30,26 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 ~~~
 [bi]
-## Listener port for bi, default = 5432
-BI_PORT=5432
-## BI host
-BI_HOST=
-## BI Storage Management name, default = StorageMgmt for SQLite / PostgreSQL
-STORAGE_MGMT_DB_NAME=StorageMgmt
-## BI Storage Management host, empty for SQLite
-STORAGE_MGMT_HOST=
-## BI Storage Management type: SQLite / PostgreSQL
-STORAGE_MGMT_DB_TYPE=SQLite
-## BI Storage Management provider: SQLite / Npgsql
-STORAGE_MGMT_DB_PROVIDER=SQLite
-## BI Storage Management user
-STORAGE_MGMT_DB_USER=
-## BI Storage Management password
-STORAGE_MGMT_DB_PASSWORD=
-## BI Storage Management table prefix
-TABLE_PREFIX=
-## BI REST Key
-BI_REST_KEY=
+## Listener port for bi
+#BI_PORT=5432
+## Bi host
+#BI_HOST=
+## Bi Storage Management name, default = StorageMgmt for SQLite and PostgreSQL
+#STORAGE_MGMT_DB_NAME=StorageMgmt
+## Bi Storage Management host, empty for SQLite
+#STORAGE_MGMT_HOST=
+## Bi Storage Management type SQLite/PostgreSQL
+#STORAGE_MGMT_DB_TYPE=SQLite
+## Bi Storage Management provider SQLite/Npgsql
+#STORAGE_MGMT_DB_PROVIDER=SQLite
+## Bi Storage Management user
+#STORAGE_MGMT_DB_USER=
+## Bi Storage Management password
+#STORAGE_MGMT_DB_PASSWORD=
+## Bi Storage Management table prefix
+#TABLE_PREFIX=dev_
+## Bi rest key
+#BI_REST_KEY=
 ~~~
 ### Project Initialization in BI
 
@@ -69,6 +67,7 @@ Following are the installation and setup recommendations:
 - The recommended Storage Management DB type is PostgreSQL.
   - PostgreSQL is a must for UAT / Production environments, but it is preferable to use it for Dev and QA as well.
   - Default SQLite DB can be used for demo purposes. 
+  - [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
   ​
 
