@@ -1,4 +1,4 @@
-<strong>BI Configuration and Implementation<strong>
+<strong>BI User Guide<strong>
         
 
 <ul>
