@@ -1,24 +1,27 @@
 # Setup for PGSQL 13.3
 
+When using TDM, you need to have a Postres SQL database engine. This document shows how to install such an engine. 
+
 TDM 7.xx is certified to be used with PGSQL 9.6 & 13. 
-You can supply access to a Postgres SQL database engine if you have one. If you do not, one is supplied with the TDM application.  
-TDM requires a username & password with full create, delete and update privileges. 
+- You can supply access to a Postgres SQL database engine if you have one. If you do not, one is supplied with the TDM application.  
+- TDM requires a username & password with full create, delete and update privileges. 
+- You also have the option install a Postgres SQL database engine from the K2View predefined **tarball** file.
+- The tarball that is supplied by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
+- The user and password are **postgres**, port is the default port (5432).  
+ 
+Locations of important files are as follows:
+- Certification files:  /opt/apps/pgsql/bin/.crt 
+- Configuration files:  /opt/apps/pgsql/data 
 
-You also have the option install a Postgres SQL database engine from the K2View predefined **tarball** file.
-
-The tarball that is supplied by **K2view** is PGSQL 13.3 with the TLS mode enabled. 
-
-- The certification files are located at /opt/apps/pgsql/bin/.crt 
-- The configuration files are located at /opt/apps/pgsql/data 
-- The user and password are postgres, port is the default (5432).  
-
-## Prerequisites
+## Hardware and OS Requirements
 
 - RedHat/CentOs 8, AWS Linux 2
 - 2 vCPU
 - 8G RAM
-- 100G free disk space, make sure it is assigned to `/opt/apps/pgsql` 
-
+- 100G free disk space, make sure it is assigned to `/opt/apps/pgsql`
+  
+## Preliminary Steps ##
+  
   Add the following users:
 
 ~~~bash
@@ -33,40 +36,34 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
 
 ## Setup  ##
 
-- Connect as **pgsql** on the console.
+- Connect as the  **pgsql** user on the console of the server.
 
-- Download or copy the [pg13.3_tls_enabled.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_enabled.tar.gz).
+- Download or copy the tarball file from this link: [pg13.3_tls_enabled.tar.gz](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_enabled.tar.gz).
 
-- Download the cert [pg13.3_tls_cert.zip](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_cert.zip)
+- Download the cert file from this link:  [pg13.3_tls_cert.zip](https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/TDM/PG%20image/pg13.3_tls_enabled/pg13.3_tls_cert.zip)
 
-  you need copy the files to the fabric that runs TDM, and locate them under $K2_HOME/.pg_cert/ (you need to create this directory)
+- Copy the files to the Fabric instance that runs TDM, and place them here: $K2_HOME/.pg_cert/ (you will need to create this directory)
 
-  you will need it also for Pgadmin client 
-
-- Untar the `pg13.3_tls_enabled.tar.gz` 
+- Untar the `pg13.3_tls_enabled.tar.gz` as follows: 
 
   ~~~bash
   tar -zxvf pg13.3_tls_enabled.tar.gz && bash -l
   ~~~
 
-- You can now start the **pgsql** with: 
+- Start the **pgsql** using the following commands: 
 
   ~~~bash
   cd bin/
   ./pg_ctl -D /opt/apps/pgsql/data -l logfile start
   ~~~
 
-
-   stop:
-
+- You can stop the **pgsql** using the following commands:
+   
   ~~~bash
   ./bin/pg_ctl -D /opt/apps/pgsql/data -l logfile stop
   ~~~
 
-  - The configuration files are located at `/opt/apps/pgsql/data`
-  - The user and password are **postgres**, port is the default (5432). 
-
-- run the following command from the console to create the TDMDB and user tdm
+- Run the following commands from the server console to create the TDM database and the **tdm** user:
 
   ~~~bash
   createuser tdm --login --superuser
@@ -76,25 +73,25 @@ ln -s /usr/lib64/libreadline.so /usr/lib64/libreadline.so.6
   echo "ALTER USER postgres WITH SUPERUSER;"| psql
   ~~~
 
-- now you should connect via pgadmin and run the content of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` via the **pgadmin**, connect with **tdm** user
+- Connect via a pgadmin, then log in as the **tdm** user and run the contents of `TDMGUI/createTDMDB/k2vtdm2.sql`  and `TDMGUI/createTDMDB/k2vtdm3.sql` 
+- Alternatively, you can copy the files to the pgsql console and run them with the **psql** command. 
+  The files are located at ~/ k2vtdm2.sql ~/ k2vtdm3.sql
 
-  or you can copy the files to the pgsql console and run them with the **psql** command.
-   Example:
-   the files are located at ~/ k2vtdm2.sql ~/ k2vtdm3.sql
-
+  Example:
+   
   ~~~bash
   cd ~/
   psql -d TDMDB -f -a ~/k2vtdm2.sql
   psql -d TDMDB -f -a ~/k2vtdm3.sql
   ~~~
 
-## How to connect from pgadmib4 in TLS mode
+## How to Connect From pgadmib4 in TLS Mode
 
-Open **pgAdmin** connection and setup as the example below:
+Connect via a pgadmin and set this up as shown in the example below:
 
 <img src="images/pg13_tls_connet01.png" style="zoom:25%;" />        <img src="images/pg13_tls_connet02.png" style="zoom:25%;" />
 
-### Checking that the connection is secure
+### Check That the Connection is Secure
 
 - From the server side, run the following command from the console:
 
@@ -102,7 +99,7 @@ Open **pgAdmin** connection and setup as the example below:
 echo "SELECT datname,usename, ssl, client_addr FROM pg_stat_ssl JOIN pg_stat_activity ON pg_stat_ssl.pid = pg_stat_activity.pid;" | psql
 ~~~
 
-​	The output should look like (the "t" = true):
+- The output should look like the following:
 
 ~~~test
 datname  | usename  | ssl |  client_addr
@@ -115,24 +112,24 @@ datname  | usename  | ssl |  client_addr
 (5 rows)
 ~~~
 
-- From **pgAdmin**, run the following script:
+- As a pgadmin, run the following script:
 
 ~~~sql
-SELECT datname,usename, ssl, client_addr
+  SELECT datname,usename, ssl, client_addr
   FROM pg_stat_ssl
   JOIN pg_stat_activity
-   ON pg_stat_ssl.pid = pg_stat_activity.pid;
+  ON pg_stat_ssl.pid = pg_stat_activity.pid;
 ~~~
 
 ​	<img src="images/pg_check_if_con_is_ssl.png" style="zoom:35%;" />
 
 
-
-### ***Fabric Implementation Guidelines***
+### **Fabric Implementation Guidelines**
 
 **Edit the TDM Interface**
 
-- Edit the TDM interface. Set the **Custom Connection String setting to true** and add **&ssl=true** to the connection string. Example:
+- Set the **Custom Connection String setting to true** and add **&ssl=true** to the connection string. 
+  Example:
   <img src="images/pg_fabric_interface01.png" style="zoom:45%;" />
 
    Verify that the TDM interface is defined using the Generic DB format (Database Type is genericdb).
