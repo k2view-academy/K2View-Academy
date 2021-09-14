@@ -83,6 +83,7 @@ The following 7 generated files will appear under the ```$K2_HOME/.cassandra_ssl
 ## Step 2 - Cassandra YAML
 
 a. Edit the cassandra.yaml file with the appropriate passwords and certification files.
+
 b. Execute this as a Cassandra user on all the Cassandra nodes. 
 
 ```bash
@@ -112,6 +113,7 @@ c. Restart the Cassandra service on each node: ```cassandra```
 
 ## Step 3 - Cassandra CQLSHRC
 a. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
+
 b. Execute this as a Cassandra user on all Cassandra nodes. 
 ```bash
 cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
@@ -146,7 +148,7 @@ mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.
 
 Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
 
-a. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
+a. Connect to one of the Cassandra nodes console, and create 2 new **superuser's**
 
    ~~~bash
    echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
@@ -154,7 +156,7 @@ a. connect to one of the Cassandra nodes console, and create 2 new **superuser's
    echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3
    ~~~
 
-b. drop the `cassandra` user
+b. Drop the `cassandra` user
 
    ~~~bash
    echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3
