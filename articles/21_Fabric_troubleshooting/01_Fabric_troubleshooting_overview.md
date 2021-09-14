@@ -124,7 +124,7 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
 
     type=
 
-     **sampling** (default) - Samples time estimates of methods by periodically probing stacks of running threads. Overhead is usually low and depends on the 
+     **sampling** (default) - Estimates how long a method lasts by periodically probing stacks of running threads. Overhead is usually low and depends on the 
      sampling period and the number of threads. In this mode, the method invocation counts are not available. Time accuracy is high for long methods and low for short periods.
 
      **tracing** – In tracing mode, the profiler uses the bytecode of its instruments to measure time and the invocation count of each class method. Trivial methods like 
@@ -137,11 +137,11 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
    
 * **k2profiler snapshot** [cont|stop] [type=cpu|memory]
 
-  Creates a CPU snapshot of memory. 
+  Creates a CPU or memory snapshot. 
     
     Memory snapshot includes various checks on the CPU as well. 
 
     Default type is **cpu**. The profiler will be stopped once a snapshot has been created (this is the default behavior). However, if you wish to continue taking snapshots,
-    use the "cont" argument. The profiler file will be created in the location defined in Storage/snapshots section in the jvm.options file.
+    use the "stop=false" argument. 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
