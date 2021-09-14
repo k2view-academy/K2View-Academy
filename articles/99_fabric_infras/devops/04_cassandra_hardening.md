@@ -17,6 +17,7 @@ cd $K2_HOME/
 rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 
 chmod +x secure_cassandra.sh
+```
 
 **!! run on single Fabric node only !!**
 * To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
@@ -36,9 +37,10 @@ The certificate is added to the keystore: ```[Storing /opt/apps/k2view/.cassandr
 The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using ```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```.
 The certificate is stored in the following file: ```</opt/apps/k2view/.cassandra_ssl/CLIENT_k2tls_PUBLIC.cer>```.
 
-Warning:
+**Warning:**
 The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 The certificate is added to the keystore: ```[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```
+
 ```
 Importing keystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore to /opt/apps/k2view/.cassandra_ssl/cassandra.pks12.keystore...
 Entry for alias k2tls_client successfully imported.
