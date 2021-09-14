@@ -8,8 +8,7 @@ The installation and configuration of BI includes the following steps:
 
 ### Installation
 
-* Install **the latest available Exago version**.
-  * [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
+* Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
 * Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. 
 
 
