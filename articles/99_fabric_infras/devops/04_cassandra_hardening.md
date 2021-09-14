@@ -2,7 +2,7 @@
 
 The following steps ensure that the keys that secure Fabric and Cassandra are properly generated and configured.
 
-- The example password ```Q1w2e3r4t5!``` is used for TLS keys and can be replaced in all the following sections by a new password.
+- The example password ```Q1w2e3r4t5``` is used for TLS keys and can be replaced in all the following sections by a new password.
 - Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the full and correct path location for both Fabric and Cassandra.
 
 
