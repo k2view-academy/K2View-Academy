@@ -40,7 +40,7 @@ The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS
 
 ```"keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12"```
 
-The certificate is added to the keystore: ```[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```.
+The certificate is added to the keystore: ```[/opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```.
 
 **Warning:**
 
@@ -57,7 +57,7 @@ The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS
 
 "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 
-The certificate is added to the keystore: ```[Storing /opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```
+The certificate is added to the keystore: ```[/opt/apps/k2view/.cassandra_ssl/cassandra.truststore]```
 
 
 The following messages will appear on your screen:
