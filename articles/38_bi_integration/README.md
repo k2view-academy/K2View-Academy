@@ -2,7 +2,7 @@
         
 
 <ul>
-	<li><a href="/articles/38_bi_integration/00_BI_integration.md">BI Integration to Fabric</a></li>
+	<li><a href="/articles/38_bi_integration/00_BI_integration.md">Fabric - BI Integration</a></li>
 	<li><a href="/articles/38_bi_integration/00_BI_user_guide_overview.md">BI User Guide Overview</a></li>
 	<li><a href="/articles/38_bi_integration/01_Installation.md">Installation and Configuration</a></li>
 	<li><a href="/articles/38_bi_integration/02_Permissions_Setup.md">Access Permissions Setup</a></li>
