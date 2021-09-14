@@ -11,6 +11,8 @@ This article describes the installation of ExagoBI. In order to start using the 
 - Redhat/CentOS latest Operating System and above, with latest patches.
 - Hardware - TDB
 
+[Click for more details about Exago Technical Specifications](https://support.exagoinc.com/hc/en-us/articles/216396637-Technical-Specifications).
+
 ## Installation on Linux
 
 1. Click here (*TBD to add a link to K2View download page*) to download the ExagoBI Installer into a temporary directory.
