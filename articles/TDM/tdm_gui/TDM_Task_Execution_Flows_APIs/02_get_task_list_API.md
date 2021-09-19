@@ -35,6 +35,8 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
   - Get all active load tasks that do not require special permissions (that is, tasks that do not include reference tables, do not include Synthetic or Random selection methods, tasks that do not have Sequence replacement, or tasks that do not include a delete of entities from the target system) if the user has a Read TDM Environment role on at least one TDM environment and a Write TDM Environment role on at least one TDM environment.
   - Get all active load tasks that require special permissions if the user has at least one Read TDM environment role, and one Write TDM Environment role with these permissions.
 
+Click for more information about the [TDM Environment role's permissions](/articles/TDM/tdm_gui/10_environment_roles_tab.md#role-permissions).
+
   ### API Input
 
   None. The user and their groups are taken from the Fabric session.
