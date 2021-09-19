@@ -143,5 +143,17 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
 
     Default type is **cpu**. The profiler will be stopped once a snapshot has been created (this is the default behavior). However, if you wish to continue taking snapshots,
     use the "stop=false" argument. 
-
+    
+ **Note**   
+   The profiler file will be created in the location defined in jvm.options file. 
+   In case of Fabric upgrade to a release greater or equal to 6.5.2, add the following section menually
+   
+    ################
+    # Profiler     #
+    ################
+    #
+    # Use option =help to introdce the available options
+    #-agentpath:$FABRIC_HOME/fabric/bin/profiler/yourkit/bin/linux-x86- 64/libyjpagent.so=delay=60000,dir=${FABRIC_HOME%/}/storage/snapshots,logdir=$FABRIC_HOME/logs,sessionname=profiler-{default}
+    
+    
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
