@@ -48,7 +48,7 @@ Do the following to create the sequences for your TDM implementation:
 
    After the Actor's update is completed, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button on top of the project tree to apply the changes in the **TDMSeqList** Actor and deploy the **TDM LU**.
 
-2. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has two [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flow invokes the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populates the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
+2. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has two [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populates the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
 
    Note that this flow should run once per TDM implementation and not per each LU since the sequences are used across several LUs in the TDM project.
    The sequences flows and Actors are created under **Shared Objects** to enable several LUs to use a Sequence Actor.
