@@ -58,7 +58,7 @@ The [description tag](/articles/15_web_services_and_graphit/02_web_services_prop
 #### @serializeNull
 When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is deactivated for the webservice (in the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
-#### verbs 
+#### Verbs 
 The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties) are added:
 
 - [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the java web service window in Fabric Studio
