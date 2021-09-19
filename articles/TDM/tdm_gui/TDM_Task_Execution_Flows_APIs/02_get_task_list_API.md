@@ -23,16 +23,16 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
 - **Owner Users:**
   - Get all active extract tasks if the user is the owner of at least one source environment.
   - Get all active load tasks if the user is the owner of at least one source environment and one target environment.
-  - Get all active extract tasks that do not require special permissions if the user has at least one Read TDM Environment role.
-  - Get all active extract tasks that require special permissions if the user has at least one Read TDM Environment role with these permissions.
-  - Get all active load tasks that do not require special permissions if the user has at least one Read TDM Environment role and one Write TDM Environment role.
+  - Get all active extract tasks that do not require special permissions (do not include reference tables, require an up-to-date data, or run on all entities) if the user has a Read TDM Environment role at least on one TDM environment.
+  - Get all active extract tasks that include refernece tables or require an up-to-date data if the user has a Read TDM Environment role with these permissions at least on one TDM environment.
+  - Get all active load tasks that do not require special permissions (do not include reference tables, Synthetic or Random selection methods, Sequence replacement, or a delete of entities from the target system) if the user has a Read TDM Environment role on at least one TDM environment and a Write TDM Environment role on at least one TDM environment.
   - Get all active load tasks that require special permissions if the user has at least one Read TDM Environment role, and one Write TDM Environment role with these permissions.
 
 - **Tester Users:**
 
-  - Get all active extract tasks that do not require special permissions if the user has at least one Read TDM Environment role.
-  - Get all active extract tasks that require special permissions if the user has at least one Read TDM Environment role with these permissions.
-  - Get all active load tasks that do not require special permissions if the user has at least one Read TDM Environment role and one Write TDM Environment role.
+  - Get all active extract tasks that do not require special permissions (do not include reference tables, require an up-to-date data, or run on all entities) if the user has a Read TDM Environment role at least on one TDM environment.
+  - Get all active extract tasks that include refernece tables or require an up-to-date data if the user has a Read TDM Environment role with these permissions at least on one TDM environment.
+  - Get all active load tasks that do not require special permissions (do not include reference tables, Synthetic or Random selection methods, Sequence replacement, or a delete of entities from the target system) if the user has a Read TDM Environment role on at least one TDM environment and a Write TDM Environment role on at least one TDM environment.
   - Get all active load tasks that require special permissions if the user has at least one Read TDM environment role, and one Write TDM Environment role with these permissions.
 
   ### API Input
