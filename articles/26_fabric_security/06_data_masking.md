@@ -10,15 +10,15 @@ This capability can be used to conduct tests, implement data transformations, or
 
 ## Masking Flow
 
- The masking of a sensitive data can be done by either by the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) using the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) (which masks the data before it is saved into Fabric), or by using a Broadway flow to mask the LUI data before it is loaded to the target.
+ The masking of a sensitive data can be done either by the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) using the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) (which masks the data before it is saved into Fabric), or by using a Broadway flow to mask the LUI data before it is loaded to the target.
 
-The following diagram describes the masking process of a sensitive data by the LUI sync:
+The following diagram describes the masking process of a sensitive data **by the LUI sync**:
 
 ![masking flow](images/masking_flow.png)
 
 
 
-The following diagram describes the masking process of a sensitive data before loading the data to the target:
+The following diagram describes the masking process of a sensitive data **before loading the data to the target**:
 
 ![masking flow](images/masking_flow_load_to_target.png)
 
@@ -51,7 +51,7 @@ K2view enables the users to create their own masking functions. The **MaskingLuF
 
 Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking Broadway actors.
 
-### De-Anonymization
+## De-Anonymization
 
 In some cases there is a business need to get the original value of the masked LUI. For example, get the mail address to contact the customer. 
 
