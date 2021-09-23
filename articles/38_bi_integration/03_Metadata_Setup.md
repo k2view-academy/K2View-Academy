@@ -33,14 +33,14 @@ To setup Fabric as a data source:
 
 3. Click **Apply** to save the changes.
 
-If Exago is running on a docker, it can be connected to a local Fabric. In this case, set your **IPv4 Address** by checking your machine's IP address as a host in the connection string.
+If Exago is running on a docker, it can be connected to a local Fabric. In this case, set the **IPv4 Address** of your internet connection (by checking your machine's IP address) as a host in the Connection String.
 
 ![image](images/bi_setup_1.PNG)
 
 **Note**: 
 
 * One Exago installation can accommodate several Fabric deployments by defining each deployment as a separate data source.  
-* Setting **AUTO_MDB_SCOPE=true** in Fabric connection string is mandatory since it enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE setting.](https://support.k2view.com/Academy_6.5/articles/02_fabric_architecture/04_fabric_commands.html)
+* Setting **AUTO_MDB_SCOPE=true** in Fabric connection string is mandatory since it enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE setting.](/articles/02_fabric_architecture/04_fabric_commands.html)
 
 ### Objects and Joins
 
