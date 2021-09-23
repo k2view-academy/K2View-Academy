@@ -129,10 +129,12 @@ datname  | usename  | ssl |  client_addr
 **Edit the TDM Interface**
 
 - Set the **Custom Connection String setting to true** and add **&ssl=true** to the connection string. 
+  
   Example:
+  
   <img src="images/pg_fabric_interface01.png" style="zoom:45%;" />
 
-   Verify that the TDM interface is defined using the Generic DB format (Database Type is genericdb).
+  Verify that the TDM interface is defined using the Generic DB format (Database Type is genericdb).
 
 - Redeploy the project to Fabric. 
 
