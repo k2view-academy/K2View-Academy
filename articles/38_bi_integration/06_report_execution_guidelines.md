@@ -6,11 +6,11 @@ The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_
 
 The following articles explains about both options.
 
-### Reports Generation using the BI Designer
+### Reports Generation using BI Designer
 
 xxx
 
-### Reports Generation using the Jobs Mechanism
+### Reports Generation using Fabric Jobs Mechanism
 
 Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_services/07_jobs_commands.md). Set the Job parameters as follows:
 
