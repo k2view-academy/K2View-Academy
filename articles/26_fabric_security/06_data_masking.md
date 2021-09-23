@@ -26,11 +26,15 @@ The following diagram describes the masking process of a sensitive data **before
 
 ### Broadway Masking Actors
 
-Broadway provides a various number of masking actors that can be used to mask sensitive fields like SSN, credit card numbers, email addresses, zip code or sequences, before they are loaded into a target Database or even into Fabric.
+The masking process is executed by Broadway masking actors. Broadway provides a various number of masking actors that can be used to mask sensitive fields like SSN, credit card numbers, email addresses, zip code or sequences, before they are loaded into a target Database or even into Fabric. 
+
+The masking actor uses the Fabric hashing utility to hash the original value, generates a masked value for the masked field, and saves the mapping of the hashed value and the masked value to the cache table.
+
+Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking Broadway actors.
 
 #### Customized Masking Logic 
 
-K2view enables the users to create their own masking functions. The **MaskingLuFunction** Broadway actor can be used to call a customized function to mask the required field.  The use of **MaskingLuFunction** guarantees the usage of the K2view masking mechanism including the **SHA-256 hashing** and the caching.  The user does not need to handle them by their customized function.
+K2view enables the users to create their own masking functions. The **MaskingLuFunction** Broadway actor can be used to call a customized function to mask the required field.  The use of **MaskingLuFunction** guarantees the usage of the K2view masking mechanism including the **SHA-512 hashing** and the caching.  The user does not need to handle them by their customized function.
 
 ### Masking Actors Properties
 
@@ -49,7 +53,13 @@ K2view enables the users to create their own masking functions. The **MaskingLuF
   - Target Environment
   - Execution ID
 
-Click [here](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to read how to use fabric's masking Broadway actors.
+## K2view Masking Advantages
+
+- Supporting **cross instances consistency** based on the hashed values.
+- The original value is not used as input for creating the random masked value, other than formatting purposes.
+- **In memory** processing. The MicroDB is created with the masked values.
+- Using the Fabric Masking mechanism (using **SHA-512** algorithm).
+- **Multiple masking options** to enable a maximal flexibility when masking the data.
 
 ## De-Anonymization
 
