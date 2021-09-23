@@ -14,7 +14,7 @@ The Fabric Jobs mechanism enables the BI reports generation from the Fabric user
 * **SORT** (optional)
 
 ~~~
-startjob GENERATE_BI NAME='TDM Load Reports/List_of_Copied_Root_Entities' ARGS='{"OUTPUT_NAME":" List_of_Copied_Root_Entities_TaskID_12345_ExecutionDate_20212309", "DATA_SOURCES_LIST":"[{\"Name\": \"Fabric-PROD-V1\"}]", "TYPE":"csv", "DESTINATION":"MyLocalFS", "SESSION_PARAMS": "[{\"Id\": \"task_execution_id\",  \"Value\": \"70\"}, {\"Id\": \"MyParameter2\", \"DataType\": \"String\", \"Value\": \"hi\", \"IsHidden\" : false}]"}';
+startjob GENERATE_BI NAME='TDM Load Reports/List_of_Copied_Root_Entities' ARGS='{"OUTPUT_NAME":" List_of_Copied_Root_Entities_TaskID_12345_ExecutionDate_20212309", "DATA_SOURCES_LIST":"[{\"Name\": \"Fabric-PROD-V1\"}]", "TYPE":"csv", "DESTINATION":"MyLocalFS", "SESSION_PARAMS": "[{\"Id\": \"task_execution_id\",  \"Value\": \"70\"}, {\"Id\": \"lu_name\", \"DataType\": \"String\", \"Value\": \"CRM_LU\", \"IsHidden\" : false}]"}';
 ~~~
 
 
