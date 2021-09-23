@@ -5,7 +5,7 @@ BI Reports are created and executed using the **BI Designer** module. Generation
 The Fabric Jobs mechanism enables the BI reports generation from the Fabric user code so they can be scheduled and benefit from Jobs execution parameters. Use the  **GENERATE_BI** job type and set the **NAME** to the full path from the root folder to the report. **ARGS** should be passed as follows:
 
 * **OUTPUT_NAME** - final name of the report. For example, you can concatenate parameters such as IID or datetime to the original report name or even provide a completely different name for the export file.
-* **TYPE** - export file format can be of the following valid values:
+* **TYPE** - export file format can be one of the following valid values:
   * html, csv, pdf, rtf, excel, json.
 * **DESTINATION** - the name of the Fabric interface where the export file should be placed, can be either Local File System or SFTP interface type.
 * **DATA_SOURCES_LIST** - array of the report's data sources, should be the same as number of data sources defined for this report. [Click to get more details about the data source definition](03_Metadata_Setup.md#data-sources).
