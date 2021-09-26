@@ -155,5 +155,6 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
     # Use option =help to introdce the available options
     #-agentpath:$FABRIC_HOME/fabric/bin/profiler/yourkit/bin/linux-x86- 64/libyjpagent.so=delay=60000,dir=${FABRIC_HOME%/}/storage/snapshots,logdir=$FABRIC_HOME/logs,sessionname=profiler-{default}
     
-    
+  **It is a must to uncomment this section and restart fabric to enable the k2profiler capability.**
+  
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
