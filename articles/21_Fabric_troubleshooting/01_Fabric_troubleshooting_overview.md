@@ -116,7 +116,7 @@ The following table describes the syntax and parameters for creating the Heap Du
 
 ### k2profiler
 
-In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or memory or both.
+In Fabric 6.5.2 new commands were introduced to create a CPU/Memory/Both snapshot.
 
 * **k2profiler start** [type=sampling|tracing|call_counting] [duration]
 
