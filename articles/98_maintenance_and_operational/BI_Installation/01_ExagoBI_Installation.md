@@ -15,25 +15,22 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 ## Installation on Linux
 
-1. Click here (*TBD to add a link to K2View download page*) to download the ExagoBI Installer into a temporary directory.
-
-2. Open a CLI, move to the temporary directory and extract the downloaded file by running the following commands:
+1. Click here (https://download.k2view.com/index.php/s/m5JcLaiALBCYvPJ) to download the ExagoBI Installer into a temporary directory.
+2. Click here (https://download.k2view.com/index.php/s/a9fwyGaqH8DRFRB) to download the K2view Additional files and installation script into a temporary directory.
+2. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command:
 
    ~~~bash
-   tar -zxvf ExagoInstaller_v2021.1.9.192.tgz
-   cd installer
-   ./InstallExago.sh
+   tar -zxvf exago_installer.tar.gz
    ~~~
 
-3. Follow the wizard:
+3. Run the installation script with 2 variables, installation folder and exagoBI installation file name 
+   in the example, the installation folder will be /opt/apps/exago and installation filename is : ExagoInstaller_v2021.1.11.220.tgz
+    
+   ~~~bash
+   ./k2view_exago_install.sh /opt/apps/exago ExagoInstaller_v2021.1.11.220.tgz
+   ~~~
 
-   Use the **/opt/apps/exago** path as the path of ExagoBI installation.
-
-   ![wiz](images/exago1.png)
-
-   ![wiz](images/exago2.png)
-
-
+   
 **Directory Locations**
 
 <table style="border-collapse: collapse; width: 100%;">
@@ -74,9 +71,6 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 TBD
 
-## Configuration Files Update
-
-TBD - by script?
 
 ## Access ExagoBI
 
