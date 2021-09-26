@@ -15,22 +15,27 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 ## Installation on Linux
 
-1. Click here (https://download.k2view.com/index.php/s/m5JcLaiALBCYvPJ) to download the ExagoBI Installer into a temporary directory.
-2. Click here (https://download.k2view.com/index.php/s/a9fwyGaqH8DRFRB) to download the K2view Additional files and installation script into a temporary directory.
-2. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command:
+1. Click [here](https://download.k2view.com/index.php/s/m5JcLaiALBCYvPJ) to download the ExagoBI Installer into a temporary directory.
+
+2. Click [here](https://download.k2view.com/index.php/s/a9fwyGaqH8DRFRB) to download the K2View Additional files and installation script into a temporary directory.
+
+3. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command as a user with root permissions:
 
    ~~~bash
    tar -zxvf exago_installer.tar.gz
    ~~~
 
-3. Run the installation script with 2 variables, installation folder and exagoBI installation file name 
-   in the example, the installation folder will be /opt/apps/exago and installation filename is : ExagoInstaller_v2021.1.11.220.tgz
-    
+4. Run the installation script with 2 variables, installation folder and ExagoBI installation file name. 
+   In the example, the installation folder will be **/opt/apps/exago** and installation filename is: **ExagoInstaller_v2021.1.11.220.tgz**.
+
    ~~~bash
    ./k2view_exago_install.sh /opt/apps/exago ExagoInstaller_v2021.1.11.220.tgz
    ~~~
 
-   
+5. Restart the Apache web server.
+
+   ​
+
 **Directory Locations**
 
 <table style="border-collapse: collapse; width: 100%;">
