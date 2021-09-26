@@ -17,12 +17,14 @@ Exago supports various types of data sources, such as relational databases (e.g.
 
 **How Do I Define Fabric as a Data Source?**
 
-Fabric can be defined as a data source. Fabric as a data source type is supported in Exago by the invocation of the **FabricAdoDriver** instead of the native SQLite Data Provider. 
+Fabric can be defined as a data source to allow creation of the reports based on Common or LUI data.
 
-To setup Fabric as a data source:
+To setup Fabric as a data source, either use the Fabric-Connection template in the **BI Admin**:
 
-1. Open the **BI Admin**.
-2. Right click on **Sources > Add** and define the following:
+1. Double click on **Sources** in the Report Tree and set the following:
+
+   ![image](images/bi_setup_fabric.PNG)
+
    * Name - a unique name.
    * Type - select **Fabric**.
    * Connection String - define as follows:
@@ -35,12 +37,16 @@ To setup Fabric as a data source:
 
 If Exago is running on a docker, it can be connected to a local Fabric. In this case, set the **IPv4 Address** of your internet connection (by checking your machine's IP address) as a host in the Connection String.
 
-![image](images/bi_setup_1.PNG)
-
 **Note**: 
 
 * One Exago installation can accommodate several Fabric deployments by defining each deployment as a separate data source.  
 * Setting **AUTO_MDB_SCOPE=true** in Fabric connection string is mandatory since it enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE setting.](/articles/02_fabric_architecture/04_fabric_commands.html)
+
+**How Do I Define PostgreSQL as a Data Source?**
+
+To setup PostgreSQL DB as a data source, either use the Postgres-Connection template in the **BI Admin** and update the connection string:
+
+![image](images/bi_setup_postgres.PNG)
 
 ### Objects and Joins
 
@@ -48,17 +54,15 @@ Once the data source is created, you need to define its objects and joins. Objec
 
 **How Do I Initiate Automatic Metadata Discovery?**
 
-1. Open the BI Admin.
-2. Right click the <data source name> under Sources and then click **Discover Object/Join Metadata** to initiate the automatic discovery:
+1. In the **BI Admin** right click the <Data Source Name> under **Sources** and then click **Discover Object/Join Metadata** to initiate the automatic discovery:
 
    ![image](images/bi_setup_2.PNG)
-
-3. When **Discover Object/Join Metadata** screen is open, the list of all Fabric tables is displayed. It includes the Common area tables and all the tables of all Logical Units. 
-4. Select the tables required for report creation, then click **Add Objects and Joins** to create objects and joins in Exago.
+2. When **Discover Object/Join Metadata** screen is open, the list of all Fabric tables is displayed. It includes the Common area tables and all the tables of all Logical Units. 
+3. Select the tables required for report creation, then click **Add Objects and Joins** to create objects and joins in Exago.
 
    ![image](images/bi_setup_3.PNG)
 
-5. When the objects and joins creation is done, the list of created / skipped objects and joins is displayed on the right side of the screen.
+4. When the objects and joins creation is done, the list of created / skipped objects and joins is displayed on the right side of the screen.
 
    ![image](images/bi_setup_4.PNG)
 
@@ -66,7 +70,7 @@ Once the data source is created, you need to define its objects and joins. Objec
    * **Skipped** objects are the objects which were skipped for any reason, for example if they already exist in Exago.
    * **Incomplete** objects are the objects which don't have a primary key in the data source. Since a primary key is mandatory in Exago, you must open these objects and manually define their **Unique Key Fields**.
 
-6. All new objects are created without their metadata. They are marked with![image](images/bi_setup_sign.PNG)icon. You must complete the object's metadata by doing one of the following:
+5. All new objects are created without their metadata. They are marked with![image](images/bi_setup_sign.PNG)icon. You must complete the object's metadata by doing one of the following:
 
    * Right click on the data source name > **Bulk Metadata** to create each object's metadata within Exago. 
 
@@ -74,7 +78,7 @@ Once the data source is created, you need to define its objects and joins. Objec
 
    * Or, open each object and click![image](images/bi_setup_metadata.PNG)icon in the **Column Metadata** field > **Read Schema** > **Okay**.
 
-7. Verify each new joins default settings:
+6. Verify each new joins default settings:
 
    * Check the **Join Columns** and update if needed.
    * By default, **Join Type** = Inner and **Relation Type** = One To One. Update these settings to reflect the actual join and relation types.
