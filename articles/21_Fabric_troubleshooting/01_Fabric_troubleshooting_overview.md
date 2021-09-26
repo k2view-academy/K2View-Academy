@@ -157,4 +157,8 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
     
   **It is a must to uncomment this section and restart fabric to enable the k2profiler capability.**
   
+   In case of running the k2profiler on windows machine, the following line should be added to fabric-server-start.bat under jvm section
+  
+    SET JVM_OPTIONS_DEBUG=!JVM_OPTIONS_DEBUG! -agentpath:!FABRIC_DIR!\bin\profiler\yourkit\bin\win64\yjpagent.dll=delay=60000,dir=!FABRIC_HOME!\storage\snapshots,logdir=!FABRIC_HOME!\logs,snapshot_name_format=profiler--{sessionname}--{datetime}
+  
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
