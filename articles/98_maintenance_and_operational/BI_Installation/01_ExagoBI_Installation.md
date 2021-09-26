@@ -74,7 +74,19 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 ## Docker Installation on Linux / Windows / MAC
 
-TBD
+1. Click [here](https://download.k2view.com/index.php/s/ObYtdvd2XMSuaUa) to download the updated docker image
+2. import the image 
+   ~~~bash
+   docker load -i D_K2V_Exago_v2021.1.11.tar.gz
+   ~~~
+3. start the docker image
+  ~~~bash
+  docker run -d --privileged=true -p 80:80 --name=exago k2viewexago:v2021.1.11.220
+  ~~~
+ 
+ **Note**: if needed to connect to an existing network, use the "--network='network name' " option,
+ consult docker documention for more information.
+
 
 
 ## Access ExagoBI
