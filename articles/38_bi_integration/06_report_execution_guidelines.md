@@ -8,7 +8,7 @@ The following articles explains about both options.
 
 ### Reports Generation using BI Designer
 
-xxx
+Generate the report in the **BI Designer** using the ![run](images/run_icon.PNG)icon in the Report Tree or the Run ![run](images/run_button.PNG)button in the report editor. 
 
 ### Reports Generation using Fabric Jobs Mechanism
 
