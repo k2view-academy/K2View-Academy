@@ -19,14 +19,11 @@ More detailed requiremenets for each are described below:
    - 16 GB RAM. 
    - HDD, 200GB must be available 
 
-   **Note**:
-   - Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra.
-   - We recommend that the Docker host be a physical server and not a virtual machine.  
+    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.  
 
 2.	Install the latest Docker CE/EE version (https://docs.docker.com/install/linux/dockerce/centos/ ) 
 
-   **Note**: 
-   The /var/lib/docker should have at list 200GB of free memory
+    **Note**: The /var/lib/docker should have at list 200GB of free memory
    
 3.	Docker-compose must also be installed (see Docker documentation online).  
 
