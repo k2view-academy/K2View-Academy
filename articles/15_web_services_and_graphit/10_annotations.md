@@ -81,10 +81,9 @@ class inputPersonalData {
 
 @webService(path = "", verb = MethodType.POST, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
 	public static Object testWSannotations7(@param(required=true) inputPersonalData persData) throws Exception {
-		return persData.name + persData.age;
+	return persData.name + persData.age;
 	} 
 ```
-
 
 Due to Java limitations, not allowing to parse complex variables as input parameters, the @param annotation can also be attached to an input variable and therefore override the value of the input variable with the specified new value specified - e.g:
 
