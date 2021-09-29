@@ -110,10 +110,10 @@ If the path is explicited, as shown in testWSannotations5:
 The path is set to the following directory: ```api/v1/a/b/c```
 
 
-In addition, variables can be parsed into the path:
+In addition, variables can also be parsed into the path, as shown in the ```testWSannotations6``` example:
 
-{name}/polak -> api/v1/ido/polak
-nameit/{name1}/{name2}/ -> api/v1/nameit/greg/bob
+- {name}/polak will set the path to: ```api/v1/ido/polak``` provided that {name} was previously assigned to the value "ido"
+- nameit/{name1}/{name2}/ will set the path to: ```api/v1/nameit/ido/bob``` provided that {name1} and {name2} were respectively assigned to the values "ido" and "bob"
 
 Note that if the path has duplicates, the webservice deployment will fail.
 
