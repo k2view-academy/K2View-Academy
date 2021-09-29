@@ -58,7 +58,7 @@ public static Object testWSannotations6(String name) throws Exception {
 ```
 
 ### Annotations
-Referring to the 4 objects defined above, we can observe that the following annotations are used:
+Referring to the 6 objects defined above, we can observe that the following annotations are used:
 
 #### @webService
 This annotation has been added before each of the web-services defined in the project. 
@@ -71,7 +71,7 @@ The [description tag](/articles/15_web_services_and_graphit/02_web_services_prop
 When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is deactivated for the webservice (in the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
 #### @params
-This annotation allows users to parse a specific function as a parameter to the webservice when it is called. This way the web-service can benefit from dynamic inputs and outputs capability.
+This annotation allows users to parse a specific function or variable as a parameter to the webservice when it is called. This way the web-service can benefit from dynamic inputs and outputs capability.
 
 ```
 class inputPersonalData {
@@ -86,7 +86,7 @@ class inputPersonalData {
 ```
 
 
-Due to Java limitations, not allowing to parse complex variables as input parameters, the @param annotation can also be attached to an input variable and therefore override the value of the input variable with a different value specified as a string  - e.g:
+Due to Java limitations, not allowing to parse complex variables as input parameters, the @param annotation can also be attached to an input variable and therefore override the value of the input variable with the specified new value specified - e.g:
 
 ```
 	@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
@@ -95,7 +95,7 @@ Due to Java limitations, not allowing to parse complex variables as input parame
 
 ```public static Object testWSannotations8(@param(required=true, name="name.private") String testStr1```
 - ```required=true``` flag needs to be set to true. If set to false the new name will be disregarded
-- ```name="name.private"``` the new value of the variable to be taken as input instead of the one defined in ```String testStr1``` 
+- ```name="name.private"``` the new value of the variable *name.private* is taken as input instead of the value held in ```String testStr1``` 
 
 
 
