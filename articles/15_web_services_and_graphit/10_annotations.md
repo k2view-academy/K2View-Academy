@@ -77,10 +77,10 @@ class inputPersonalData {
 		int age;
 	}
 
-	@webService(path = "", verb = MethodType.POST, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
+@webService(path = "", verb = MethodType.POST, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
 	public static Object testWSannotations7(@param(required=true) inputPersonalData persData) throws Exception {
 		return persData.name + persData.age;
-		} 
+	} 
 ```
 
 
