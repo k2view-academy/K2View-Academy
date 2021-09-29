@@ -11,7 +11,7 @@
 
  **For cloud deployments:**
 
-- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
+- If using **AWS**: EC2: m5.xlarge
 - If using **Azure** VM: A8v2 
 - If using **GCP**: e2-standard-4
 
@@ -33,7 +33,7 @@
 
 **For Cloud installation:** 
 
-- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
+- If using **AWS**: EC2: m5.xlarge
 - If using **Azure** VM: A8v2 
 - If using **GCP** e2-standard-4
 
@@ -141,7 +141,7 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 <td style="width: 50%; height: 18px;">Kafka Zookeeper</td>
 </tr>
 <tr>
-<td style="width: 50%; height: 18px;">9093, 9081, 7270</td>
+<td style="width: 50%; height: 18px;">9093, 9091, 9081, 7270</td>
 <td style="width: 50%; height: 18px;">Kafka</td>
 </tr>
 <tr>
@@ -161,7 +161,8 @@ Install Cassandra under **cassandra** user.
 
 For local installation: 
 
-- **OS**: CentOS 7.9 Operating System or Redhat 7.9 with latest patches (CentOS/ Redhat 8 are not certified) 
+- **OS**: Latest Redhat/CentOS with latest patches (CentOS/ Redhat 8 are not certified)
+Note: Cassandra requiers python 2.7 
 - **CPU**: 16vCPUs (Modern Xeon Processor).
 - **RAM**: Minimum 32GB RAM  
 - **Network**: Minimum 1G between the nodes and source DB’s 
