@@ -1,6 +1,6 @@
 # BI Implementation Steps 
 
-In order to work with the BI, it is required to perform installation and several one-time setup activities using **BI Admin** module. Then you can work on the reports using the **BI Designer**. When the reports are created, tested and ready for execution, they can be invoked from the Fabric user code using a Fabric JOB framework. This can be done using a **GENERATE_BI** Job Type.
+In order to work with the BI, it is required to perform installation and several one-time setup activities using the **BI Admin** module. Then you can work on the reports using the **BI Designer** - create the reports and generate them via the **BI Designer**. When the reports are tested and ready for execution, they can be invoked from the Fabric user code using a Fabric JOB framework. This can be done using a **GENERATE_BI** Job Type.
 
 This user guide provides the step-by-step description of how to setup the **BI** using the **BI Admin**:
 
