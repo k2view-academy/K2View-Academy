@@ -8,11 +8,11 @@ If an inherited Actor needs to be modified, open the Broadway flow with this Act
 
 To simplify the Actor modification process and enhance it with additional editing options, Broadway provides an **Actor Editor** which enables creating new Actors and editing inherited ones.  
 
-The Actor Editor can be accessed by opening the ***.actor** file from the Project tree. It is displayed as a dummy flow with one Actor that can be setup / modified using the extended Actor's [Properties window](03_broadway_actor_window.md).
+The Actor Editor can be accessed by opening the **[Actor Name].actor** file from the Project tree. It is displayed as a dummy flow with one Actor that can be setup / modified using the extended Actor's [Properties window](03_broadway_actor_window.md).
 
 ### How Do I Use an Actor Editor?   
 
-The Actor Editor can be used to create a new inherited Actor or modify an existing one via its ***.actor** file. The Actor must inherit either from another Actor or from an [Inner Flow](22_broadway_flow_inner_flows.md) that has been saved as an Actor. 
+The Actor Editor can be used to create a new inherited Actor or modify an existing one via its **[Actor Name].actor** file. The Actor must inherit either from another Actor or from an [Inner Flow](22_broadway_flow_inner_flows.md) that has been saved as an Actor. 
 
 **To create** a new Actor, do the following:
 

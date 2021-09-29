@@ -114,7 +114,7 @@ The following table presents a list of Actors categories with examples of each c
 <td style="width: 600px; vertical-align: top;" width="600">
 <p><strong><span class="md-pair-s md-expand"><span class="md-plain">FabricGet</span></span></strong><span class="md-plain md-expand"> Actor performs the GET command on the current Fabric session.</span></p>
 <p><span class="md-plain md-expand"><strong>FabricSet</strong> Actor sets a value on the Fabric session.</span></p>
-<p><span class="md-plain md-expand"><strong>BatchWait</strong> Actor waits for a batch process to complete or throw an error if the batch does not complete successfully or does not complete withing the predefined time.</span></p>
+<p><span class="md-plain md-expand"><strong>BatchWait</strong> Actor waits for a batch process to complete or throw an error if the batch does not complete successfully or does not complete within the predefined time.</span></p>
 </td>
 </tr>
 <tr>

@@ -4,17 +4,30 @@ The installation and configuration of BI includes the following steps:
 
 - [Installation](01_Installation.md#installation) - the installation of Exago server and Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Fabric config.ini parameters configuration.
-
-Refer to the [Project Initialization in BI](01_Installation.md#Project-Initialization-in-BI) and [Installation Recommendations](01_Installation.md#installation-Recommendations) at the end of this article, for few important points and recommendations. 
+- [Project Initialization in BI](01_Installation.md#Project-Initialization-in-BI). 
 
 ### Installation
 
-* Install **the latest available Exago version**, that includes the server and client Exago applications. 
-  * Download the Exago package or docker image from the K2View download page.
-  * *Link to the K2View DevOps document explaining how to install the Exago components - TBD.*
+* Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
 * Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. 
-  * [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
+
+**Installation Recommendations**
+
+Following are the installation and setup recommendations:
+
+- It is recommended to have 3 separate ExagoBI installations. One each for Dev, QA and Production environments.
+
+  - Linux installation is a must for UAT / Production environments.
+  - Installation on Windows (as a docker) can be done for development or demo purposes.
+
+- The recommended Storage Management DB type is PostgreSQL.
+
+  - PostgreSQL is a must for UAT / Production environments, but it is preferable to use it for Dev and QA as well.
+
+  - Default SQLite DB can be used for demo purposes. It doesn't require installation as it comes as part of ExagoBI installation.
+
+  - [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
 ### Configuration
 
@@ -32,26 +45,26 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 ~~~
 [bi]
-## Listener port for bi, default = 5432
-BI_PORT=5432
-## BI host
-BI_HOST=
-## BI Storage Management name, default = StorageMgmt for SQLite / PostgreSQL
-STORAGE_MGMT_DB_NAME=StorageMgmt
-## BI Storage Management host, empty for SQLite
-STORAGE_MGMT_HOST=
-## BI Storage Management type: SQLite / PostgreSQL
-STORAGE_MGMT_DB_TYPE=SQLite
-## BI Storage Management provider: SQLite / Npgsql
-STORAGE_MGMT_DB_PROVIDER=SQLite
-## BI Storage Management user
-STORAGE_MGMT_DB_USER=
-## BI Storage Management password
-STORAGE_MGMT_DB_PASSWORD=
-## BI Storage Management table prefix
-TABLE_PREFIX=
-## BI REST Key
-BI_REST_KEY=
+## Listener port for bi
+#BI_PORT=5432
+## Bi host
+#BI_HOST=
+## Bi Storage Management name, default = StorageMgmt for SQLite and PostgreSQL
+#STORAGE_MGMT_DB_NAME=StorageMgmt
+## Bi Storage Management host, empty for SQLite
+#STORAGE_MGMT_HOST=
+## Bi Storage Management type SQLite/PostgreSQL
+#STORAGE_MGMT_DB_TYPE=SQLite
+## Bi Storage Management provider SQLite/Npgsql
+#STORAGE_MGMT_DB_PROVIDER=SQLite
+## Bi Storage Management user
+#STORAGE_MGMT_DB_USER=
+## Bi Storage Management password
+#STORAGE_MGMT_DB_PASSWORD=
+## Bi Storage Management table prefix
+#TABLE_PREFIX=dev_
+## Bi rest key
+#BI_REST_KEY=
 ~~~
 ### Project Initialization in BI
 
@@ -59,19 +72,7 @@ Upon the completion of installation and configuration setup, deploy the Fabric p
 
 Now any user accessing this project can have the read-only access to the project's reports within the BI Designer. [Access Permissions Setup](02_Permissions_Setup.md) article explains how to setup the access permissions per Fabric role. 
 
-### Installation Recommendations
-
-Following are the installation and setup recommendations:
-
-- It is recommended to have 3 separate Exago installations. One each for Dev, QA and Production environments.
-  - Linux installation is a must for UAT / Production environments.
-  - Installation on Windows (as a docker) can be done for development or demo purposes.
-- The recommended Storage Management DB type is PostgreSQL.
-  - PostgreSQL is a must for UAT / Production environments, but it is preferable to use it for Dev and QA as well.
-  - Default SQLite DB can be used for demo purposes. 
-
-  ​
-
+​
 
 [![Previous](/articles/images/Previous.png)](00_BI_user_guide_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](02_Permissions_Setup.md) 
 

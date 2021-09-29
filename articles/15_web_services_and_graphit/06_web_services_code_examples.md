@@ -294,9 +294,11 @@ if (otherRootRecs != null) {
 return mainOutput;
 ```
 
-### Example of a Custom Payload - JSON 
+### Example of a Custom Payload - JSON
 
-The following Web Service is similar to the [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages the input request payload by itself.
+The following Web Service is similar to the [Simple response - single entry from  the LU root table](#simple-example-of-a-wscustomerinfo-web-service-that-brings-a-line-of-data-for-a-given-instance) but manages the input request payload by itself. 
+
+Do not forget to set the *Custom Payload* flag to *True* in the **Web Service Properties** panel located on the top right corner of the **Web Service** window.
 
 It starts by reading the request body payload and acquiring it using `request().getInputStream()`:
 
@@ -333,7 +335,9 @@ The wsCustomerInfoCustomPayload function is available in the Demo project.
 
 ### Example of a Custom Payload - XML 
 
-The following Web Service inserts rows into the CASES table in the CUSTOMER LU where the input is retrieved in XML format. 
+The following Web Service inserts rows into the CASES table in the CUSTOMER LU where the input is retrieved in XML format.
+
+Do not forget to set the *Custom Payload* flag to *True* in the **Web Service Properties** panel located on the top right corner of the **Web Service** window.
 
 The wsInsertCasesCustomPayloadXML function is available in the Demo project.
 

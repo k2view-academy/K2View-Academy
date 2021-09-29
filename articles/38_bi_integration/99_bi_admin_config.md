@@ -2,15 +2,15 @@
 
 **BI Admin** (Administration Console) enables the BI application configuration including the security, database, UI and other various settings. **WebReports.XML** is the main Exago BI configuration file which stores these settings. Any change applied on the BI Admin module is reflected in WebReports.XML.
 
-Note that WebReports.XML does not keep the default flag values. Meaning that if by default a flag is True, it only appears in WebReports.XML when its value is changed to False. 
+Note that WebReports.XML does not keep the default flag values. Meaning that if by default a flag is True, the flag only appears in WebReports.XML when its value is changed to False. 
 
-During the BI application installation, WebReports.XML is copied to your server and it is pre-configured for the Fabric-BI integration. 
+During the BI application installation, the pre-configured WebReports.XML is copied to your server and it serves the Fabric-BI integration. 
 
 This article describes the configurations which exist in WebReports.XML and are must for Fabric-BI integration as well as some other important settings.
 
-### Allow Direct Access to Exago
+### Allow Direct Access
 
-The BI application can either be invoked directly via the URL or by the REST call from the hosting application. As part of Fabric-BI integration solution, the BI application must be invoked by the REST call only in order to secure the access to the BI data. Thus the following flag must be set to False in **BI Admin** > **General** > **Main Settings**:
+The BI application can either be invoked directly via the URL or by the REST call from the hosting application. As part of Fabric-BI integration solution, the BI application must be invoked by the REST call only in order to secure the access to the BI data. Thus the following flag must be set to **False** in **BI Admin** > **General** > **Main Settings**:
 
 ![image](images/99_allow_dir_access.PNG)
 
@@ -19,6 +19,8 @@ This is how this flag is defined in WebReports.XML:
 ~~~xml
 <allowhomedirect>False</allowhomedirect>
 ~~~
+
+In demo or development environments, you can change this setting to **True** if it is needed to temporary access the BI directly via the URL. Note that this is not acceptable for production environments. 
 
 ### REST Key Initialization
 
@@ -32,21 +34,21 @@ Then copy the key to the **BI_REST_KEY** parameter of **config.ini**.
 
 ### Allow New Root Directories
 
-By default, the **BI Designer** allows to create root folders for keeping the reports:
+By default, the **BI Designer** allows to create several root folders using the **Add Folder** link:
 
 ![image](images/99_add_folder.PNG)
 
-In order to enforce the access permissions on the Project level, this ability is disabled by setting the following flag to False in **BI Admin** > **General** > **Feature/UI Settings**:
+In order to enforce the access rules on the Project level, this ability is disabled by setting the following flag to False in **BI Admin** > **General** > **Feature/UI Settings**:
 
 ![image](images/99_allow_new_root.PNG)
-
-Upon the project first deployment, the <project name> folder is created automatically as described [here](01_Installation.md#Project-Initialization-in-BI). The user can still create child folders under this folder, if he has either **Unrestricted** or **CreateContent** access level.
 
 This is how this flag is defined in WebReports.XML:
 
 ~~~xml
 <allowreporttreerootaccess>False</allowreporttreerootaccess>
 ~~~
+
+Upon the project first deployment, the <project name> folder is created automatically as described [here](01_Installation.md#Project-Initialization-in-BI). The user can still create child folders under this folder, if he has either **Unrestricted** or **CreateContent** access level.
 
 ### Exago User Roles 
 

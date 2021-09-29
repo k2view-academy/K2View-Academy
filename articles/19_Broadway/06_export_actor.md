@@ -43,7 +43,7 @@ The [Actor's input and output arguments](03_broadway_actor_window.md#properties-
 
 An inherited Actor can be modified for two reasons:
 
-- To update the behavior of the exported Actor due to changed requirements changes. 
+- To update the behavior of the exported Actor due to changed requirements. 
 - To extend the behavior of the exported Actor to create an additional level of inheritance.
 
 The difference between the two reasons is whether the inherited Actor is overridden or not.  If the Actor needs to be updated, it is overridden. 

@@ -116,7 +116,7 @@ The following table describes the syntax and parameters for creating the Heap Du
 
 ### k2profiler
 
-In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or memory or both.
+In Fabric 6.5.2 new commands were introduced to create a CPU/Memory snapshot.
 
 * **k2profiler start** [type=sampling|tracing|call_counting] [duration]
 
@@ -135,7 +135,7 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
    
      **duration** - The time in seconds for the profiler to gather information. Default duration is 60 seconds.
    
-* **k2profiler snapshot** [cont|stop] [type=cpu|memory]
+* **k2profiler snapshot** [stop=true|false] [type=cpu|memory]
 
   Creates a CPU or memory snapshot. 
     
@@ -143,5 +143,22 @@ In Fabric 6.5.2 new commands were introduced to create a profiler file on CPU or
 
     Default type is **cpu**. The profiler will be stopped once a snapshot has been created (this is the default behavior). However, if you wish to continue taking snapshots,
     use the "stop=false" argument. 
-
+    
+ **Note**   
+   The profiler file will be created in the location defined in jvm.options file. 
+   In case of Fabric upgrade to a release greater or equal to 6.5.2, add the following section menually
+   
+    ################
+    # Profiler     #
+    ################
+    #
+    # Use option =help to introdce the available options
+    #-agentpath:$FABRIC_HOME/fabric/bin/profiler/yourkit/bin/linux-x86- 64/libyjpagent.so=delay=60000,dir=${FABRIC_HOME%/}/storage/snapshots,logdir=$FABRIC_HOME/logs,snapshot_name_format=profiler--{sessionname}--{datetime}
+    
+  **It is a must to uncomment this section and restart fabric to enable the k2profiler capability.**
+  
+   In case of running the k2profiler on windows machine, the following line should be added to fabric-server-start.bat under jvm section
+  
+    SET JVM_OPTIONS_DEBUG=!JVM_OPTIONS_DEBUG! -agentpath:!FABRIC_DIR!\bin\profiler\yourkit\bin\win64\yjpagent.dll=delay=60000,dir=!FABRIC_HOME!\storage\snapshots,logdir=!FABRIC_HOME!\logs,snapshot_name_format=profiler--{sessionname}--{datetime}
+  
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
