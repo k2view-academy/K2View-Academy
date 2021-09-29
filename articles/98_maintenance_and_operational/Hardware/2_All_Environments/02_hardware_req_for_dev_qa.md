@@ -33,7 +33,7 @@
 
 **For Cloud installation:** 
 
-- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
+- If using **AWS**: EC2: m5.xlarge
 - If using **Azure** VM: A8v2 
 - If using **GCP** e2-standard-4
 
@@ -54,6 +54,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 #### Hardware Requirements (for each Linux server): 
 
 - OS: latest CentOS/Redhat Operating System with latest patches
+**Note**: Cassandra requiers python 2.7 
 - CPU: 4 Cores/vCPUs (Modern Xeon Processor) 
 - RAM: 12GB 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  

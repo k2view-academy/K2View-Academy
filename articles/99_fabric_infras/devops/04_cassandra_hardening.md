@@ -8,20 +8,22 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
 ## Step 1 - Keys Generation
 
-1. Run the keys script that can be downloaded from [location](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
-2. Stop Fabric and Cassandra services before running the script.
+1. Connect as **cassandra** user
+2. Download and run the `secure_cassandra.sh` file that generate the keys. it can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+3. Stop Cassandra services before running the script.
 
 
 ```bash
-cd $K2_HOME/
+cd $INSTALL_DIR/
 rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 
 chmod +x secure_cassandra.sh
-
-!! run on single Fabric node only !!
+````
+!! run on single Cassandra node only !!
 * To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
-e.g.: ./secure_cassandra.sh {Password} {Cluster_Name}
+e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}`
 
+```bash
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
 
 Warning:
@@ -49,7 +51,7 @@ MAC verified OK
 MAC verified OK 
 ```
 
-The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` directory:
+The following 7 files will appear under the `$INSTALL_DIR/.cassandra_ssl` directory:
 - k2tls_CLIENT.key.pem
 - k2tls_CLIENT.cer.pem
 - cassandra.keystore
@@ -58,7 +60,19 @@ The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` direct
 - CLIENT_k2tls_PUBLIC.cer
 - CLUSTER_k2tls_PUBLIC.cer
 
-## Step 2 - Cassandra YAML
+## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
+
+Tar and copy them to all Cassandra and Fabric nodes in the cluster.  
+
+See the example below: 
+
+``` bash
+tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
+scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
+mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
+```
+
+## Step 3 - Cassandra YAML
 
 1. Edit the cassandra.yaml file with the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all the Cassandra nodes. 
@@ -89,7 +103,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 3. Restart the Cassandra service on each node: ```cassandra```
 
 
-## Step 3 - Cassandra CQLSHRC
+## Step 4 - Cassandra CQLSHRC
 1. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
 ```bash
@@ -104,21 +118,6 @@ sed -i "s@;usercert = .*@usercert = $INSLATT_DIR/.cassandra_ssl/k2tls_CLIENT.cer
 sed -i "s@port = .*@port = 9142@" $INSLATT_DIR/.cassandra/cqlshrc
 sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_DIR/.cassandra/cqlshrc
 ```
-
-
-
-## Step 4 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
-
-Tar and copy them to all Cassandra and Fabric nodes in the cluster.  
-
-See the example below: 
-
-``` bash
-tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
-scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
-mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
-```
-
 
 
 ## Step 5 - Disable the default cassandra superuser
