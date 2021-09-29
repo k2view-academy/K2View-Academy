@@ -44,7 +44,12 @@ public static Object testWSannotations4() throws Exception {
 
 @desc("Show example of annotations 5")
 @webService(path = "a/b/c", verb = MethodType.GET, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
-public static Object testWSannotations4() throws Exception {			
+public static Object testWSannotations5() throws Exception {			
+}
+
+@desc("Show example of annotations 6")
+@webService(path = "{name}/polak", verb = MethodType.GET, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
+public static Object testWSannotations6(String name) throws Exception {			
 }
 }
 
@@ -62,6 +67,55 @@ The [description tag](/articles/15_web_services_and_graphit/02_web_services_prop
 
 #### @serializeNull
 When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is deactivated for the webservice (in the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
+
+#### @params
+This annotation allows users to parse a specific function as a parameter to the webservice when it is called. This way the web-service can benefit from dynamic inputs and outputs capability.
+
+```
+class inputPersonalData {
+		String name;
+		int age;
+	}
+
+	@webService(path = "", verb = MethodType.POST, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
+	public static Object testWSannotations7(@param(required=true) inputPersonalData persData) throws Exception {
+		return persData.name + persData.age;
+		} 
+```
+
+
+Due to Java limitations, not allowing to parse complex variables as input parameters, the @param annotation can also be attached to an input variable and therefore override the value of the input variable with a different value specified as a string  - e.g:
+
+```
+	@webService(path = "", verb = {MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE}, version = "1", isRaw = false, isCustomPayload = false, produce = {Produce.XML, Produce.JSON})
+	public static Object testWSannotations8(@param(required=true, name="name.private") String testStr1, @param(required=true, name="ido_polak") String testStr2 ) throws Exception {}
+```
+
+```public static Object testWSannotations8(@param(required=true, name="name.private") String testStr1```
+- ```required=true``` flag needs to be set to true. If set to false the new name will be disregarded
+- ```name="name.private"``` the new value of the variable to be taken as input instead of the one defined in ```String testStr1``` 
+
+
+
+#### Path
+If left empty the value of the path will be the method name itself i.e., using the first example of annotations in the code snippet above:
+```api/v1/testWSannotations1```
+
+If the path is explicited, as shown in testWSannotations5:
+
+```@webService(path = "a/b/c", verb = MethodType.GET, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})```
+
+The path is set to the following directory: ```api/v1/a/b/c```
+
+
+In addition, variables can be parsed into the path:
+
+{name}/polak -> api/v1/ido/polak
+nameit/{name1}/{name2}/ -> api/v1/nameit/greg/bob
+
+Note that if the path has duplicates, the webservice deployment will fail.
+
+
 
 #### Verbs 
 The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties) are added:
