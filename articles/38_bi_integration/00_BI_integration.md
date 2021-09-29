@@ -1,4 +1,4 @@
-# Fabric - BI Integration 
+# Fabric - BI Integration Overview
 
 [Exago BI](https://support.exagoinc.com/hc/en-us) is an external Business Intelligence (BI) system that enables the design and execution of reports and dashboards. It can connect to various data sources to read the data. The reports metadata is kept in an external Storage Management database. The BI application can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html). Fabric integration with the BI is described in the following diagram:
 

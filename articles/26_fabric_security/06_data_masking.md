@@ -61,17 +61,17 @@ K2view enables users to create their own masking functions. The **MaskingLuFunct
 - Using the Fabric Masking mechanism (using **SHA-512** algorithm).
 - **Multiple masking options** to enable a maximal flexibility when masking the data.
 
-## De-Anonymization
+## De-Anonymization (Pseudonymization)
 
 In some cases there is a business need to get the original value of the masked LUI. For example, get the mail address to contact the customer. 
 
-We recommend two alternatives to get the original value of the masked field (de-anonymization):
+There are two recommended approaches to support de-anonymization and get the original value of the masked field: 
 
 - Keep the source Instance ID in Fabric and use it to retrieve the original data from source system.
 
-- Keep the original values in Fabric and send the anonymized (masked) data to it target system. Encrypt the LUI in Fabric to protect the sensitive data, where In Fabric each instance is encrypted separately.
+- Keep the encrypted version (each Instance is encrypted separately) of the original values in *Fabric only*, in addition to the anonymized values. Limit the access to the anonymized data only. Only permitted users can access the original values.
 
-  Click [here](/articles/26_fabric_security/03_fabric_LUI_encryption.md) for more information about the LUI encryption.
+Click [here](/articles/26_fabric_security/03_fabric_LUI_encryption.md) for more information about the LUI encryption.
 
 [![Previous](/articles/images/Previous.png)](/articles/26_fabric_security/05_fabric_webservices_security.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/26_fabric_security/07_user_IAM_overview.md)
 

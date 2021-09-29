@@ -41,6 +41,11 @@ public static Object testWSannotations3() throws Exception {
 @webService(path = "", verb = {MethodType.GET}, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
 public static Object testWSannotations4() throws Exception {			
 }
+
+@desc("Show example of annotations 5")
+@webService(path = "a/b/c", verb = MethodType.GET, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})
+public static Object testWSannotations4() throws Exception {			
+}
 }
 
 ```
