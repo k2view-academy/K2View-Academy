@@ -37,34 +37,7 @@ Once Fabric is online, execute the following command from your shell/CLI window:
 
 The following response will be returned:
 
-
-```
-|Check                        |Result                                                          |Status|
-+-----------------------------+----------------------------------------------------------------+------+
-|FIPS Mode                    |on                                                              |passed|
-|FIPS Ready                   |140-2                                                           |passed|
-|info                         |Bouncy Castle FIPS Java API 1.0.2.1                             |passed|
-|info                         |CMVP Certificate #3514                                          |passed|
-|HMAC                         |d68017e6f45512a51a862c77e4fa2348d0d24d816bc3f76fcf30375052216e86|passed|
-|AES/CBC/PKCS5Padding Explicit|BCFIPS                                                          |passed|
-|AES/CBC/PKCS5Padding Implicit|BCFIPS                                                          |passed|
-|SHA512_256Secure             |BCFIPS                                                          |passed|
-|SHA512Secure                 |BCFIPS                                                          |passed|
-|SHA256Secure                 |BCFIPS                                                          |passed|
-|SHA512_256                   |BCFIPS                                                          |passed|
-|SHA512                       |BCFIPS                                                          |passed|
-|SHA256                       |BCFIPS                                                          |passed|
-|SHA1                         |BCFIPS                                                          |passed|
-|MD5                          |BCFIPS                                                          |passed|
-|STRONG_AES256                |BCFIPS                                                          |passed|
-|PLAIN_AES256                 |BCFIPS                                                          |passed|
-|PLAIN_AES128                 |BCFIPS                                                          |passed|
-|SSL Context                  |BCJSSE                                                          |passed|
-|SecureRandom                 |BCFIPS                                                          |passed|
-
- 
-(20 rows)
-```
+<img src="/articles/26_fabric_security/images/fipsImg01.PNG">
 
 Note that:
 - BCFIPS means that the algorithm is provided via the jar file bc-fips-1.0.1.jar
