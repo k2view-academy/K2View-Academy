@@ -25,7 +25,7 @@ More detailed requiremenets for each are described below:
 
     **Note**: The /var/lib/docker should have at list 200GB of free memory
    
-3.	Docker-compose must also be installed (see Docker documentation online).  
+3.	Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).  
 
 4.	Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ) 
 
