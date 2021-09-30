@@ -60,8 +60,7 @@ More detailed requiremenets for each are described below:
    <tbody>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>cassandra </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-
-   bkp2.s3.amazonaws.com/adminoc/fabricint/cassandra/3.11.6/openjdk/D_k2v_cassandra_3.11.6_2.tar.gz 
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/cassandra/3.11.6/openjdk/D_k2v_cassandra_3.11.6_2.tar.gz 
    </td>
    </tr>
    <tr>
