@@ -132,9 +132,9 @@ More detailed requiremenets for each are described below:
       ~~~bash
       docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/zookeeper-server-start -daemon $K2_HOME/kafka/zookeeper.properties' 
       sleep 3 
-      docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/   kafka-server-start -daemon $K2_HOME/kafka/server.properties' 
+      docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/kafka-server-start -daemon $K2_HOME/kafka/server.properties' 
       sleep 3 
-      docker exec -it -u=kafka kafka1 bash -l -c '~/kafka/bin/zookeeper-shell    localhost:2181 <<< "ls /brokers/ids"'
+      docker exec -it -u=kafka kafka1 bash -l -c '~/kafka/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"'
       ~~~
 
 4.	Start Fabric as follows:  
