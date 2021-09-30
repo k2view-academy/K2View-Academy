@@ -35,12 +35,12 @@ Once Fabric is online, execute the following command from your shell/CLI window:
 
 ```fabric>version fips;```
 
-The following response will be returned:
+The following response is returned:
 
-<img src="/articles/26_fabric_security/images/fipsImg01.PNG">
+![fips](images/fipsImg01.PNG)
 
-Note that:
-- BCFIPS means that the algorithm is provided via the jar file bc-fips-1.0.1.jar
+**Note**:
+- BCFIPS means that the algorithm is provided via the jar file bc-fips-1.0.1.jar.
 - BCJSSE means that the Java Secure Socket Extension (JSSE) from Bouncy Castle is used.
 
 
