@@ -122,33 +122,31 @@ More detailed requiremenets for each are described below:
 
 2.	Start Cassandra as follows: 
 
-   ~~~bash
-   docker exec -u=cassandra -it cassandra1 bash -l
-   # run:
-   cassandra
-   ~~~
+      ~~~bash
+      docker exec -u=cassandra -it cassandra1 bash -l
+      # run:
+      cassandra
+      ~~~
 
 3.	Start Kafka as follows:  
-   ~~~bash
-   docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/zookeeper-server-start -daemon 
-   $K2_HOME/kafka/zookeeper.properties' 
-   sleep 3 
-   docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/   kafka-server-start -daemon 
-   $K2_HOME/kafka/server.properties' 
-   sleep 3 
-   docker exec -it -u=kafka kafka1 bash -l -c '~/kafka/bin/zookeeper-shell    localhost:2181 <<< "ls /brokers/ids"'
-
-   ~~~
+      ~~~bash
+      docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/zookeeper-server-start -daemon $K2_HOME/kafka/zookeeper.properties' 
+      sleep 3 
+      docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/   kafka-server-start -daemon $K2_HOME/kafka/server.properties' 
+      sleep 3 
+      docker exec -it -u=kafka kafka1 bash -l -c '~/kafka/bin/zookeeper-shell    localhost:2181 <<< "ls /brokers/ids"'
+      ~~~
 
 4.	Start Fabric as follows:  
-   ~~~bash
-   #run: docker exec -it fabric1 bash -l 
-   cp -r fabric/config.template config && \ 
-   sed -i 's@#HOSTS=.*@HOSTS=172.29.0.116@'  $K2_HOME/config/config.ini &&    \ 
-   sed -i 's@#USER=cassandra@USER=cassandra@'  $K2_HOME/config/config.ini   && \ 
-   sed -i 's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0. 115:9093@'  $K2_HOME/config/config.ini && \ sed -i  's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0.   115:9093@'  $K2_HOME/config/iifConfig.ini && \ 
-   k2fabric start && k2fabric cluster-status && exit
-   ~~~
+      ~~~bash
+      #run: docker exec -it fabric1 bash -l 
+      cp -r fabric/config.template config && \ 
+      sed -i 's@#HOSTS=.*@HOSTS=172.29.0.116@'  $K2_HOME/config/config.ini &&    \ 
+      sed -i 's@#USER=cassandra@USER=cassandra@'  $K2_HOME/config/config.ini   && \ 
+      sed -i 's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0. 115:9093@'  $K2_HOME/config/config.ini && \ 
+      sed -i  's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0.   115:9093@'  $K2_HOME/config/iifConfig.ini && \ 
+      k2fabric start && k2fabric cluster-status && exit
+      ~~~
 
 
 ## Stopping Services
