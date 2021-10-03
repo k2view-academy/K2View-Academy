@@ -16,7 +16,7 @@ Once the setup is complete, you can create the reports. The below links concise 
 
 The procedures of moving from development to QA/PROD are described below:
 
-* [Moving reports from DEV to QA/PROD](07_moving_from_dev_to_prod.md).
+* [Moving from DEV to QA/PROD](07_moving_from_dev_to_prod.md).
 
 To ger the full information about reports creation, design and generation, refer to [Exago Support Center](https://support.exagoinc.com/hc/en-us).
 

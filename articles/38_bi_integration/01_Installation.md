@@ -16,7 +16,7 @@ The installation and configuration of BI includes the following steps:
 
 Following are the installation and setup recommendations:
 
-- It is recommended to have 3 separate ExagoBI installations. One each for Dev, QA and Production environments.
+- It is recommended to have 3 separate ExagoBI installations - each for Dev, QA and Production environments.
 
   - Linux installation is a must for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
@@ -70,7 +70,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
-Now any user accessing this project can have the read-only access to the project's reports within the BI Designer. [Access Permissions Setup](02_Permissions_Setup.md) article explains how to setup the access permissions per Fabric role. 
+Now any user accessing this project has the default read-only access to the project's reports within the BI Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do it. 
 
 ​
 
