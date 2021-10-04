@@ -1,4 +1,4 @@
-# ExagoBI Installation
+# ExagoBI Docker Installation
 
 ## Introduction
 
