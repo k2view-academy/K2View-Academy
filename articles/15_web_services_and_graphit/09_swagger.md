@@ -57,6 +57,8 @@ Fabric Web Services are displayed in Swagger in categories and in alphabetical o
 
    * Common - all built-in product Web Services that bring reference table metadata and data.
    
+   * Fabric - pre-built API to run Fabric commands, Data Catalog requests, Authentication and Heart bits/Statuses queries   
+   
    * Graphit - all Graphit files defined as a part of the project implementations.
    
    * LU - all  built-in LU Web Services that bring LU metadata, data and data modifications, such as Delete instance.
