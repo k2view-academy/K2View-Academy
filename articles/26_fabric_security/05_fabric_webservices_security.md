@@ -16,7 +16,7 @@ Fabric supports three methods for that purpose:
 
    **b.** Signed by the WS client
    
-      Although the preferred way to send the JWT athentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
+      Although the preferred way to send the JWT authentication is as an `Authorization: Bearer` header, it can also be sent as a cookie.
 
 3. **Basic Authentication**, an authentication scheme built into the HTTP protocol, which is sent as `Authorization: Basic` header.
 
