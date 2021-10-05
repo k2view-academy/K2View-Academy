@@ -61,14 +61,14 @@ public static Object testWSannotations6(String name) throws Exception {
 Referring to the 6 web services defined in the code snippet above, we can observe that the following annotations are used:
 
 #### @webService
-This annotation has been added before each of the web-services defined in the project. 
+This annotation is automatically added before each of the web-services defined in the project. 
 
 #### @desc
 The [description tag](/articles/15_web_services_and_graphit/02_web_services_properties.md#description) is added before the public function declaration - e.g.
 ```("Show example of annotations 3")``` 
 
 #### @serializeNull
-When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is deactivated for the webservice (in the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
+When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is de-activated for a given webservice (this is done from the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
 #### @params
 This annotation allows users to parse a specific function or variable as a parameter to the webservice when it is called. This way the web-service can benefit from dynamic inputs and outputs capability.
