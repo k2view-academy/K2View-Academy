@@ -33,8 +33,8 @@ Do the following to create the sequences for your TDM implementation:
 1. TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the information relevant for your TDM implementation:
    - **SEQUENCE_NAME**, the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
    - **CACHE_DB_NAME**, populate this setting using **DB_CASSANDRA** where the Sequence Cache tables are stored.
-   - **SEQUENCE_REDIS_OR_DB**, indicates if the next value is taken from Redis or the target DB interface. Populate this setting using the **FabricRedis** interface (imported from the TDM library) or with the **target DB interface name**.
-   - **INITIATE_VALUE_OR_FLOW**, set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, setting the initial value from the max value of the target table.
+   - **SEQUENCE_REDIS_OR_DB**, indicates if the next value is taken from Redis or the target DB interface. Populate this setting using the **FabricRedis** interface (imported from the TDM library) or with the **target DB interface name**. Getting the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
+   - **INITIATE_VALUE_OR_FLOW**, set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, setting the initial value from the max value of the target table. Note that the initial value is only relevant when getting the next value from **FabricRedis**. Else, the next value is taken from the target system.
 
    Example of the tdmSeqList:
 
@@ -55,7 +55,14 @@ Do the following to create the sequences for your TDM implementation:
 
 ### Step 3 - Create Load and Delete Flows
 
-In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the **LU name**, **Target Interface**, and **Target Schema** as input parameters and executes the following inner flows. Please note that the LU source table names must be identical to the table names in the target environment to generate the load and delete flows with the correct table names.
+In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the following input parameters:
+
+-  **LU name**
+- **Target Interface**
+- **Target Schema**
+- **Override Existing Flows**: when set to **true**, the flow deletes and recreates existing load and delete flow. When set to **false** the flow skips existing load and delete flows and only create new flows if needed. The **default** value is **false**.
+
+The **createFlowsFromTemplates.flow** executes the following inner flows to generate the load and delete flows. Note that the LU source table names must be identical to the table names in the target environment to generate the load and delete flows with the correct table names: 
 
 **1. Create a LOAD flow per table**
 
@@ -131,7 +138,7 @@ TDM systems often handle sensitive data. To be compliant with data privacy laws,
   * In all other scenarios masking behavior depends on the MASK_FLAG settings.
   
 * Note that there is no need to add a masking on both processes (LUI Sync and the Load flow) for synthetic data creation, since the TDM task execution process duplicates the clonned entity ID that was set in the task. As such, it attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
- 
+
 [Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
 [Click here to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
