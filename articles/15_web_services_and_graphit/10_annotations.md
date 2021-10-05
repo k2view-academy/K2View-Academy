@@ -17,7 +17,7 @@ In the example below we have added 6 methods, each of which is configured with a
 - testWSannotations3(),
 - testWSannotations4(),
 - testWSannotations5(),
-- testWSannotations6(),
+- testWSannotations6()
   
 ```
 public class Logic extends WebServiceUserCode {
