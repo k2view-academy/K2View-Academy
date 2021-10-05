@@ -12,7 +12,6 @@ Fabric provides the following tools and methods that you can use when troublesho
 
 - **To monitor memory leaks or intensive memory consumption**,  use a [**Heap Dump**](/articles/21_Fabric_troubleshooting/01_Fabric_troubleshooting_overview.md#how-is-a-heap-dump-file-created) file. This file is created either automatically during a Fabric crash (when memory usage exceeds its defined maximum value), or manually on demand. Heap Dump files can be investigated to analyze the source of a memory leak.
 
-    
 
 ### How Do I Run jjstack?
 
@@ -120,45 +119,38 @@ In Fabric 6.5.2 new commands were introduced to create a CPU/Memory snapshot.
 
 * **k2profiler start** [type=sampling|tracing|call_counting] [duration]
 
-  Starts the profiler
+  Starts the profiler, where type is one of the following:
 
-    type=
+  * **sampling** (default) - Estimates how long a method lasts by periodically probing stacks of running threads. Overhead is usually low and depends on the sampling period and the number of threads. In this mode, the method invocation counts are not available. Time accuracy is high for long methods and low for short periods.
+  * **tracing** – In tracing mode, the profiler uses the bytecode of its instruments to measure time and the invocation count of each class method. Trivial methods like getters and setters are skipped to achieve better performance. Overhead is usually high and depends on the settings.
+  * **call_counting** - Call counting is designed to have a minimal overhead. Call counting provides a plain list of methods with invocation counts. Unlike other modes, neither call stacks nor times are gathered. Trivial methods like getters and setters are skipped to achieve better performance.
+  * **duration** - The time in seconds for the profiler to gather information. Default duration is 60 seconds.
 
-     **sampling** (default) - Estimates how long a method lasts by periodically probing stacks of running threads. Overhead is usually low and depends on the 
-     sampling period and the number of threads. In this mode, the method invocation counts are not available. Time accuracy is high for long methods and low for short periods.
-
-     **tracing** – In tracing mode, the profiler uses the bytecode of its instruments to measure time and the invocation count of each class method. Trivial methods like 
-     getters and setters are skipped to achieve better performance. Overhead is usually high and depends on the settings.
-
-     **call_counting** - Call counting is designed to have a minimal overhead. Call counting provides a plain list of methods with invocation counts. Unlike other modes, 
-     neither call stacks nor times are gathered. Trivial methods like getters and setters are skipped to achieve better performance.
-   
-     **duration** - The time in seconds for the profiler to gather information. Default duration is 60 seconds.
-   
 * **k2profiler snapshot** [stop=true|false] [type=cpu|memory]
 
   Creates a CPU or memory snapshot. 
-    
-    Memory snapshot includes various checks on the CPU as well. 
 
-    Default type is **cpu**. The profiler will be stopped once a snapshot has been created (this is the default behavior). However, if you wish to continue taking snapshots,
-    use the "stop=false" argument. 
-    
- **Note**   
-   The profiler file will be created in the location defined in jvm.options file. 
-   In case of Fabric upgrade to a release greater or equal to 6.5.2, add the following section menually
-   
-    ################
-    # Profiler     #
-    ################
-    #
-    # Use option =help to introdce the available options
-    #-agentpath:$FABRIC_HOME/fabric/bin/profiler/yourkit/bin/linux-x86- 64/libyjpagent.so=delay=60000,dir=${FABRIC_HOME%/}/storage/snapshots,logdir=$FABRIC_HOME/logs,snapshot_name_format=profiler--{sessionname}--{datetime}
-    
-  **It is a must to uncomment this section and restart fabric to enable the k2profiler capability.**
-  
-   In case of running the k2profiler on windows machine, the following line should be added to fabric-server-start.bat under jvm section
-  
+  Memory snapshot includes various checks on the CPU as well. 
+
+  Default type is **cpu**. The profiler will be stopped once a snapshot has been created (this is the default behavior). However, if you wish to continue taking snapshots, use the "stop=false" argument. 
+
+**Note**   
+The profiler file will be created in the location defined in **jvm.options** file. 
+In case of Fabric upgrade to a release greater or equal to 6.5.2, add the following section manually:
+
+```bash
+################
+# Profiler     #
+################
+#
+# Use option =help to introdce the available options
+#-agentpath:$FABRIC_HOME/fabric/bin/profiler/yourkit/bin/linux-x86- 64/libyjpagent.so=delay=60000,dir=${FABRIC_HOME%/}/storage/snapshots,logdir=$FABRIC_HOME/logs,snapshot_name_format=profiler--{sessionname}--{datetime}
+```
+
+**It is a must to uncomment this section and restart fabric to enable the k2profiler capability.**
+
+In case of running the k2profiler on windows machine, the following line should be added to fabric-server-start.bat under JVM section:
+
     SET JVM_OPTIONS_DEBUG=!JVM_OPTIONS_DEBUG! -agentpath:!FABRIC_DIR!\bin\profiler\yourkit\bin\win64\yjpagent.dll=delay=60000,dir=!FABRIC_HOME!\storage\snapshots,logdir=!FABRIC_HOME!\logs,snapshot_name_format=profiler--{sessionname}--{datetime}
-  
+
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md) 
