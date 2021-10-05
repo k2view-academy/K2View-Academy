@@ -58,7 +58,7 @@ public static Object testWSannotations6(String name) throws Exception {
 ```
 
 ### Annotations
-Referring to the 6 objects defined above, we can observe that the following annotations are used:
+Referring to the 6 web services defined in the code snippet above, we can observe that the following annotations are used:
 
 #### @webService
 This annotation has been added before each of the web-services defined in the project. 
