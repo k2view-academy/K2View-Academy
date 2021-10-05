@@ -24,10 +24,7 @@ Following are the installation and setup recommendations:
 - The recommended Storage Management DB type is PostgreSQL.
 
   - PostgreSQL is a must for UAT / Production environments, but it is preferable to use it for Dev and QA as well.
-
   - Default SQLite DB can be used for demo purposes. It doesn't require installation as it comes as part of ExagoBI installation.
-
-  - [Click for more information about Exago Storage Management](https://support.exagoinc.com/hc/en-us/articles/360042587313-Storage-Management-Introduction).
 
 ### Configuration
 

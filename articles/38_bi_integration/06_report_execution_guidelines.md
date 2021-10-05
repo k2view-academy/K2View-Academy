@@ -10,7 +10,7 @@ The following articles explains about both options.
 
 Generate the report in the **BI Designer** using the ![run](images/run_icon.PNG) icon in the Report Tree or the Run ![run](images/run_button.PNG) button in the report editor. 
 
-You can setup various report generation options using the [Report Options](https://support.exagoinc.com/hc/en-us/articles/115003639293-Advanced-Reports-Report-Options) (applicable for Advance Reports). 
+You can setup various report generation options using the Report Options (applicable for Advance Reports). 
 
 ### Reports Generation using Fabric Jobs Mechanism
 

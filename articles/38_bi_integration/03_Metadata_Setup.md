@@ -13,8 +13,6 @@ Follow each one of them to fully setup the metadata, as a preparation for report
 
 Exago supports various types of data sources, such as relational databases (e.g. Oracle, MySQL, PostgreSQL), non-relational databased (e.g. MongoDB), DWH (e.g. Snowflake) or other types (e.g. XML files). Data sources are defined via the **BI Admin**. 
 
-[Click for more information about Data Sources definition in Exago](https://support.exagoinc.com/hc/en-us/articles/214571638-Data-Sources). 
-
 **How Do I Define Fabric as a Data Source?**
 
 Fabric can be defined as a data source to allow creation of the reports based on Common or LUI data.

@@ -18,6 +18,6 @@ The procedures of moving from development to QA/PROD are described below:
 
 * [Moving from DEV to QA/PROD](07_moving_from_dev_to_prod.md).
 
-To ger the full information about reports creation, design and generation, refer to [Exago Support Center](https://support.exagoinc.com/hc/en-us).
+To ger the full information about reports creation, design and generation, refer to [Exago Support Center](https://exagobi.com/support/).
 
 [![Previous](/articles/images/Previous.png)](00_BI_integration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](01_Installation.md) 

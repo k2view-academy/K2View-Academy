@@ -61,8 +61,6 @@ The main reason for using the Roles is the ability to restrict or allow the repo
 
 The Fabric user roles with **BI_ADMIN** permission are automatically assigned the **create_report** role, thus are allowed to create the reports.
 
-[Click to get more information about the Exago Roles](https://support.exagoinc.com/hc/en-us/articles/214571808-Roles).
-
 ### Storage Management Initialization
 
 When a PostgreSQL DB is installed, a Storage Management schema must be initialized. It includes a creation of specific metadata and data. 
@@ -77,6 +75,3 @@ As part of the Fabric-BI integration, the Storage Management initialization is p
 ![sm](images/bi_sm_details.PNG)
 
 Note that it is not needed to perform the initialization process when using the default SQLite Storage Management DB.
-
-[Click to get more information about the Storage Management DB initialization](https://support.exagoinc.com/hc/en-us/articles/360042229693).
-

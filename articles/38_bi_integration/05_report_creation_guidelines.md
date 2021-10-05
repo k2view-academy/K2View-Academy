@@ -2,7 +2,7 @@
 
 ### Overview
 
-**BI Designer** is the Web Framework application powered by [Exago BI](https://support.exagoinc.com/hc/en-us) which enables creating various types of reports and dashboards. The [Exago Support Center](https://support.exagoinc.com/hc/en-us) provides full information how to do it.
+**BI Designer** is the Web Framework application powered by Exago BI which enables creating various types of reports and dashboards. The [Exago Support Center](https://exagobi.com/support/) provides full information how to do it.
 
 This article describes several important guidelines to enable the user creating the reports over Fabric.
 
@@ -28,8 +28,6 @@ One of the basic reports is a report based on Fabric LU instance data. Follow th
 4. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
 
 ![image](images/filter_definition.PNG)
-
-[Click for the detail documentation about Exago Report Types](https://support.exagoinc.com/hc/en-us/articles/215451718-Report-Types).
 
 ### Creating Reports Based on Fabric Custom SQL
 
@@ -70,12 +68,6 @@ For example, when the report should include the results of TEST_CONNECTION, writ
 ~~~sql
 select * from k2_fabric_command_sql where command='test_connection'
 ~~~
-
-
-
-[Click for more information about Custom SQL Objects.](https://support.exagoinc.com/hc/en-us/articles/215330898-Data-Objects)
-
-
 
 
 
