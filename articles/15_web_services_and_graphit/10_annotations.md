@@ -70,7 +70,7 @@ The [description tag](/articles/15_web_services_and_graphit/02_web_services_prop
 #### @serializeNull
 When [serialization](/articles/15_web_services_and_graphit/02_web_services_properties.md#serialize-null) is de-activated for a given webservice (this is done from the property panel of the web service java file) a @serializeNull(false) tag is added before the declaration of the method itself.
 
-#### @params
+#### @param
 This annotation allows users to parse a specific function or variable as a parameter to the webservice when it is called. This way the web-service can benefit from dynamic inputs and outputs capability.
 
 ```
