@@ -2,11 +2,7 @@
 
  ![](/academy/Training_Level_1/03_fabric_basic_LU/images/fabric_main_flow_05.png)                                                    
 
-You have just set up your Fabric project, configured its components and defined the interfaces for a Customer 360 view. Based on the business requirements, let’s look at your next steps:
-
-Understanding how to model data retrieval, storage and its view options.
-
-What should be considered?
+You have just set up your Fabric project, configured its components and interfaces. Based on the business requirements, let’s look at your next steps:
 
 - Defining the Digital Entity based on data consumption requirements.
 - Modeling the LU based on the defined Digital Entity. 
@@ -19,15 +15,15 @@ Please read the [LU Overview](/articles/03_logical_units/01_LU_overview.md) and 
 
 Let’s look at the considerations needed to accommodate requests to view the data using a specific Digital Entity together with LU modelling.  
 
-You may  remember that the main business requirement is to create a 360 Customer view with the following key data information:
+You may  remember that the main business requirement is to create a *360 Customer view* with the following key data information:
 
-- How many lines do I subscribe to? 
+- How many lines does the customer subscribe to? 
 - What is the current balance on a specific line? Or on all the lines? 
-- When is my next invoice due? 
-- How much do I owe? 
-- Are my private details up-to-date? 
+- When is the next invoice due? 
+- How much does the customer owe? 
+- Are all the private details of the customer up-to-date? 
 
-Based on the above, the Digital Entity should be a **Customer** and the LU should be defined using various DBs. 
+Based on the above, the Digital Entity should be a **Customer** and the LU should be defined using various databases. 
 
 Let’s start from the **CRM_DB** interface which holds the Customer entity and create the LU using Auto Discovery.
 
@@ -48,7 +44,7 @@ Open your Fabric project and do the following:
 1. Start the Wizard by doing one of the following: 
    - Right-click on **Logical Units**, select **New Logical Unit**, and in the **Logical Unit** window that appears, type the name of the new unit (call it "Customer"). Select the **Open LU auto discovery** box. Click OK.
 or
-   - Select an existing Logical Unit by righ-clicking on it, then select **Auto Discovery Wizard**. 
+   - Select an existing Logical Unit by right-clicking on it, then select **Auto Discovery Wizard**. 
 2. In the Auto Discovery Wizard window, set the **DB Connection** as **CRM_DB** and click **Next**.
 3. Open the **CRM_DB -> main** tree (left side of window). 
 4. Double-click on **CUSTOMER**, then double-click **CUSTOMER_ID**.  **Column Name** and **Table Name** will be populated. Note that you can uncheck the **Add Schema Name** option.
