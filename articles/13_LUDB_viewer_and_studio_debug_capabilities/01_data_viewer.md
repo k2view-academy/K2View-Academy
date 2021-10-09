@@ -15,10 +15,10 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
 
 ![image](images/Logical_Units_Tree.png)
 
-1. Go to the **Project Tree**, click **Logical Units** and verify that the LU has a green icon, indicating that it is deployed to the debug server. If the LU has a white icon like the **test** LU in the image above, deploy it  to the debug server before running the Data Viewer on it. Do either:
+1. Go to the **Project Tree**, click **Logical Units** and verify that the LU has a green icon, indicating that it is deployed to the debug server. If the LU has a white icon, deploy it  to the debug server before running the Data Viewer on it. Do either:
 
    - Right click the **LU** > **Deploy To debug**.
-   - Click **Deploy** on the top [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
+   - Click the **Deploy** icon on the top of the [Fabric Debug panel](/articles/04_fabric_studio/01_UI_components_and_menus.md#fabric-studio-debug-panel).
 
 2. Click  <img src="images/13_01_02%20icon%201.jpg" alt="drawing" width="25"/> next to the selected LU to open the **Data Viewer** window.
 
