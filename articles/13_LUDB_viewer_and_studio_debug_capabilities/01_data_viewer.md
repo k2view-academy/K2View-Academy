@@ -24,10 +24,10 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
 
 3. Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) in the top left pane. The default Sync mode is ON.
 
-4. In the **Instance ID** field (top central pane) complete the **Instance ID** or **Instance ID by Function** fields.
+4. In the **Instance ID** field (top central pane) enter an Instance ID (an integer). 
 
 5. Click ![image](images/13_01_02%20icon%202%20Play.jpg) **Play** to generate a new **Data Viewer file**. 
-    Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the tree. 
+    Fabric runs the [GET LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#get-lui-commands) on the debug server of the selected Instance ID. Each [sync of LUI](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) creates a new *.db SQLite file for the LU instance. The LU instance is displayed in the Instances Tree. 
 
   	Note that if you set the Sync Mode to **OFF** and the Instance ID does not exist in the debug server, the following error message is displayed:
   	
@@ -41,7 +41,7 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
 
 ![image](images/13_01_04%20Instance%20DB%20tree.jpg)
 
-8. Click a **table** to display its data and then right click the **table** to open a context menu with the following options: 
+8. Double-click a **table** to display its data and then right click the **table** to open a context menu with the following options: 
 
    a. **Show Data**, displays the table’s data.
    
@@ -53,7 +53,7 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
 
 ## What Are the Data Viewer Components?
 
-The Logical Unit DB Viewer has the following areas:
+The Logical Unit Data Viewer has the following areas:
 * Sync Mode and Instance ID.
 * Instance Tree.
 * Instance DB Tree.
@@ -68,7 +68,7 @@ This area has the following components:
 
 #### Import DB File ![image](images/13_01_06%20IMPORT%20DB%20FILE%20icon.jpg)
 
-When clicked, loads and displays an external Data Viewer file. 
+When clicked, allows you to browse to an external Data Viewer file and load it. 
 
 #### Sync Mode
 
@@ -118,8 +118,6 @@ To display the values of a table in the tree, right click the table and select e
 * **Show Data**, to display the table or view it in the Results pane.
 * **Show Schema**, to display the table structure in the Results pane.
 * **Show Indexes**, to display the table indexes in the Results pane.
-
-Click for more information about References.
 
 ### Results Pane and Toolbar
 (Bottom right) Displays the data or schema requested with the row count.
