@@ -10,5 +10,4 @@
 	<li><a href="/articles/38_bi_integration/04_parameters.md">Parameters Definition</a></li>
 	<li><a href="/articles/38_bi_integration/05_report_creation_guidelines.md">Report Creation Guidelines</a></li>		
 	<li><a href="/articles/38_bi_integration/06_report_execution_guidelines.md">Report Execution Guidelines</a></li>		
-	<li><a href="/articles/38_bi_integration/07_moving_from_dev_to_prod.md">Moving Reports From DEV to QA/PROD</a></li>
 </ul>
