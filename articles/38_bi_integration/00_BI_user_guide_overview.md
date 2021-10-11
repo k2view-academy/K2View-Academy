@@ -20,7 +20,7 @@ The procedures of moving from development to QA/PROD are described below:
 
 * [Moving from DEV to QA/PROD](07_moving_from_dev_to_prod.md).
 
-More information reports creation, design and generation, are found here: [Exago Support Center](https://exagobi.com/support/).
+Since the Fabric BI is based on Exago, more information on how to create, design, and generate reports can be found in the [Exago Support Center](https://exagobi.com/support/).
 
 
 
