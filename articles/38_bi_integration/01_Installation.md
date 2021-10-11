@@ -1,30 +1,27 @@
 # Installation and Configuration
 
-The installation and configuration of BI includes the following steps:
+The installation and configuration of Fabric BI includes the following steps:
 
-- [Installation](01_Installation.md#installation) - the installation of Exago server and Storage Management DB.
-- [Configuration](01_Installation.md#configuration) - Fabric config.ini parameters configuration.
-- [Project Initialization in BI](01_Installation.md#Project-Initialization-in-BI). 
+- [Installation](01_Installation.md#installation) - Fabric BI is based on Exago, so you must install the Exago server and the Storage Management DB.
+- [Configuration](01_Installation.md#configuration) - Configure parameters in the Fabric config.ini file.
+- [Project Initialization with Fabric BI](01_Installation.md#Project-Initialization-in-BI). 
 
 ### Installation
 
 * Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
-* Install **Storage Management DB**, the database that keeps the report definition such as report type and metadata, currency, decimal setting, fonts, colors and more. 
-
+* Install the **Storage Management DB** - the database that keeps the report definition, which includes the report type and metadata, currency, decimal setting, fonts, colors and more. 
 
 **Installation Recommendations**
 
-Following are the installation and setup recommendations:
+- Have 3 separate Exago installations - one each for Dev, QA and Production environments.
 
-- It is recommended to have 3 separate ExagoBI installations - each for Dev, QA and Production environments.
-
-  - Linux installation is a must for UAT / Production environments.
+  - Linux installation is required for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
 
 - The recommended Storage Management DB type is PostgreSQL.
 
-  - PostgreSQL is a must for UAT / Production environments, but it is preferable to use it for Dev and QA as well.
-  - Default SQLite DB can be used for demo purposes. It doesn't require installation as it comes as part of ExagoBI installation.
+  - PostgreSQL is required for UAT / Production environments, but it is preferable to use PostgreSQL for Dev and QA as well.
+  - Default SQLite DB can be used for demo purposes. SQLite DB does not require an explicite installation as it comes as part of the Exago installation.
 
 ### Configuration
 
@@ -63,11 +60,11 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 ## Bi rest key
 #BI_REST_KEY=
 ~~~
-### Project Initialization in BI
+### Project Initialization with Fabric BI
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
-Now any user accessing this project has the default read-only access to the project's reports within the BI Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do it. 
+Now any user accessing this project has the default read-only access to the project's reports within the BI Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do this. 
 
 ​
 
