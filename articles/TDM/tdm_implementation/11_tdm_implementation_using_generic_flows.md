@@ -137,13 +137,34 @@ TDM systems often handle sensitive data. To be compliant with data privacy laws,
   * When The TDM task is for Data Flux, masking is always disabled.
   * In all other scenarios masking behavior depends on the MASK_FLAG settings.
   
-* Note that there is no need to add a masking on both processes (LUI Sync and the Load flow) for synthetic data creation, since the TDM task execution process duplicates the clonned entity ID that was set in the task. As such, it attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
+* Note that there is no need to add a masking on both processes (LUI Sync and the Load flow) for synthetic data creation, since the TDM task execution process duplicates the cloned entity ID that was set in the task. As such, it attaches a different clone_id on each clone. Each clone gets its own masked value by the LUI sync. 
 
 [Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
 [Click here to learn how the TDM task execution process builds the entity list](/articles/TDM/tdm_architecture/03a_task_execution_building_entity_list_on_tasks_LUs.md).
 
+### Step 6 - Optional - Get the Entity List for an Extract All Task Using a Broadway Flow
 
+The entity list of the full entity subset can be generated using an SQL query on the source DB or running a Broadway flow. A Broadway flow is needed when running an extract on a non JDBC data source.  
+
+Build the Broadway flow to get the entity list as follows:
+
+- Stage 1: get the list of entities.
+- Stage 2: call **insertToLuExternalEntityList**  actor (imported from the TDM library) in a loop (iteration) to insert all entities into entity list Cassandra table. Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all all iterations. 
+
+Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
+
+#### How the Broadway Flow Generates an Entity List for the Task Execution? 
+
+The TDM library provides a list of Broadway actors and flows to support a generation of an entity list based on a project Broadway flow. The project Broadway flow gets the entity list and call the TDM library actors to insert them into a dedicated Cassandra table in **k2_tdm** keyspace. A separate Cassandra entity table is created on each LU and has the following naming convention: [LU_NAME]_entity_list. 
+
+The [TDM task execution process](/articles/TDM/tdm_architecture/03_task_execution_processes.md) runs the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) on the entities in the Cassandra table that belong to the current task execution (have the current task execution id).
+
+[Click here fore more information about TDM implementation on non JDBC Data Source].
+
+ 
+
+ 
 
 [![Previous](/articles/images/Previous.png)](10_tdm_generic_broadway_flows.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](12_tdm_error_handling_and_statistics.md)
 
