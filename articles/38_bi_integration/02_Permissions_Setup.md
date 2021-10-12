@@ -2,38 +2,41 @@
 
 ### Overview
 
-Fabric users who want to implement the Business Intelligence capabilities can be divided into two groups: those who can setup the BI application and create the reports and those who can only view and run the reports. 
+Fabric users who want to implement business intelligence capabilities can be divided into two groups: those who are allowed to setup the Fabric BI application and create the reports, and those who can only view and run the reports. 
 
-In order to enforce this differentiation, Fabric introduces the permission setup process divided into two steps, described further in this article:
+To enforce this differentiation, Fabric divides the permission setup process into two steps:
 
 1. Assign the BI Admin permissions to predefined Fabric roles only. 
-2. Setup the access level to BI content. This step is only available to the roles with BI Admin permission.
-
+2. Setup the access level for Fabric BI content. This step is only available to the roles with BI ADMIN permission.
 
 ### BI ADMIN Permission Setup 
 
-The **BI Admin** module of the **BI** application allows the users to perform various system configurations as well as to setup the metadata for the reports. 
+The **BI Admin** module of the **Fabric BI** application allows users to perform various system configurations as well as to setup the metadata for the reports. 
+Only user roles with the **BI_ADMIN** permission can access the **BI Admin** module.
 
-Since these activities are supposed to be performed by limited number of users, Fabric enables controlling the user access to the **BI Admin** module. Only the user roles with the **BI_ADMIN** permission can access the **BI Admin**.
-
-Note that the ability to create new reports within the **BI Designer** is also enabled only to the user role with **BI_ADMIN** permission.
+Note that the ability to create new reports within the **BI Designer** is also enabled only to users with the **BI_ADMIN** permission.
 
 **How Do I Setup Permissions in Fabric?**
 
 Setup the **BI_ADMIN** permission either by:
 
-* Running the [GRANT command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command).
-* Or, via the Web Framework **Admin** > **Security** > **Permissions** by clicking **Grant Permissions**.
+* Running the [GRANT command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)
+ 
+  Or 
+  
+* Via the Web Framework by opening **Admin** > **Security** > **Permissions**, and clicking **Grant Permissions**. The following window will appear:
 
 <img src="images/permissions_setup_0.PNG" alt="image" />
 
+Select a Role (these are Fabric roles ), then under Methods, select **BI_ADMIN** to assign this method to the selected Role. Place an asterisk in the Resources field, and click **Grant** .  
+
 ### Access Level Setup
 
-Exago BI has a built-in access permissions mechanism, to control the activities such as Edit, Rename or Delete the reports within the **BI Designer** application. The access rules are stored in the Storage Management DB.
+Fabric BI has a built-in access permissions mechanism that controls activities such as Edit reports, Rename reports or Delete the reports within the **BI Designer** module. The access rules are stored in the Storage Management DB.
 
 The setup of the access level is performed by running the **SET_BI_ACCESS** Fabric command.
 
-Three access levels are defined:
+The following three access levels are defined:
 
 * **Unrestricted** - the user can perform any activity within BI Designer, such as edit the report, rename it or delete it.
 * **CreateContent** - the user can perform any activity except for delete.
@@ -41,15 +44,16 @@ Three access levels are defined:
 
 **Note:**
 
-- If the user that is logged into BI Designer is not assigned any access rules, he will get a read-only access to Exago folders and reports.
+- Fabric BI is based on Exago, so the names of the folders and reports are based on Exago.
+- If the user that is logged into BI Designer is not assigned any access rules, he will get a read-only access to the Fabric BI (that is, Exago) folders and reports.
 - If the user is an owner of a folder or a report, he will have full access to it regardless of the access level assigned to his role on this folder/report.
 
-**How Do I Set Access Level?**
+**How Do I Set an Access Level?**
 
 To define the access level to a Fabric role, run the Fabric command **set_bi_access** with the following input:
 
-1. Folder name or report name (optional), if not provided the command is executed on the <project name> folder.
-2. Path (optional), the full path to the folder from the root folder. Applicable if the folder is not a root.
+1. Folder name or report name (optional). If the folder or report name is not provided, the command is executed on the <project name> folder.
+2. Path (optional) - the full path to the folder from the root folder. Applicable if the folder is not a root.
 3. Fabric role (mandatory).
 4. Access level, one of the three values must be sent: 
    * Unrestricted / CreateContent / ReadOnly
