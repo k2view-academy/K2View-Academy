@@ -14,16 +14,14 @@ The **Fabric BI** application includes the following modules:
   - Create parameters for applying a filter within reports.
   - Update various system configurations (advanced).
 
-  Access to Fabric BI is restricted based on the Fabric user role. The explanation about how to control access and define user roles is described at this 
-  [link]( https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5/articles/38_bi_integration/02_Permissions_Setup.md).
+  Access to Fabric BI is restricted based on the Fabric user role. The explanation about how to control access and define user roles is described at this [link](02_Permissions_Setup.md).
 
 * **BI Designer** - content creation module which enables the user to do the following:
 
   * Create various types of reports and dashboards. 
   * Generate the reports / dashboards and download the extract files.
 
-  Note that the reports can also be generated from Fabric user code. The way to do it is described is described at this 
-  [link]( https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5/articles/38_bi_integration/05_report_creation_guidelines.md) 
- 
+  Note that the reports can also be generated from Fabric user code. The way to do it is described is described at this [link](05_report_creation_guidelines.md). 
+
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](00_BI_user_guide_overview.md) 
