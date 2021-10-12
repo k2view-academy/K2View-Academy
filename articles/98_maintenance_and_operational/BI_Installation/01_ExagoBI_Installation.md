@@ -32,6 +32,8 @@ This article describes the installation of ExagoBI. In order to start using the 
    ./k2view_exago_install.sh /opt/apps/exago ExagoInstaller_v2021.1.11.220.tgz
    ~~~
 
+   **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
+   
 5. Restart the Apache web server.
 
    ​
