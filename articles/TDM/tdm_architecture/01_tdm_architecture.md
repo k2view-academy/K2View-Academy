@@ -63,14 +63,14 @@ The organization's systems and environments can be located in different location
 
 One of the main challenges when  running a data transmission over the network is the performance of the data transmission. Getting data from a distant location may be time-consuming.
 
-K2view TDM architecture ensures an efficient and quick data transmission between different locations. The following diagram describes the TDM architecture in a multi DCs topography:
+K2view TDM architecture ensures an efficient and quick data transmission between different locations. The following diagram is an example of the TDM architecture in a multi DCs topography:
 
 ![tdm multi DCs](images/tdm_multi_dc_architecture.png)
 
 - Each Data Center (DC) has its own Fabric and Cassandra nodes. 
-- The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a Storage later for the entities.
+- The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a storage layer for the entities.
 - The data is distributed automatically by Cassandra between DC’s.
-- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. 
+- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the source' DC using a [remote get LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
 
 ## TDM  - Data Provisioning Flow
 
