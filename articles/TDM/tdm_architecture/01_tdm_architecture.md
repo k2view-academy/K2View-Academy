@@ -50,6 +50,30 @@ Reference or Operational tables that need to be copied as-is can be extracted fr
   -  Replacing sequences to avoid a collision with the target environment.
   -  Masking sensitive data before loading it to the target environment. 
 
+## TDM - Multi DCs Architecture
+
+The organization's systems and environments can be located in different locations.  This topography requires a data transformation between distant locations.
+
+**Example:**
+
+- The CRM and Billing Production systems are located in NY (DC1).
+- The Ordering and Ticketing systems are located in TX (DC2).
+- The testing environments are located in NY, TX, and CA (DC3). 
+- The testing environments in CA need to get the CRM and billing data from NY and the  Ordering and Ticketing data from TX.
+
+One of the main challenges when  running a data transmission over the network is the performance of the data transmission. Getting data from a distant location may be time-consuming.
+
+The following diagram describes the TDM architecture in a multi DCs topography:
+
+![tdm multi DCs](images/tdm_multi_dc_architecture.png)
+
+K2view TDM architecture ensures an efficient and quick data transmission between different locations: 
+
+- Each Data Center (DC) has its own Fabric and Cassandra nodes. 
+- The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a Storage later for the entities.
+- The data is distributed automatically by Cassandra between DC’s.
+- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. 
+
 ## TDM  - Data Provisioning Flow
 
 In general, data provisioning can be divided into two main sections:
