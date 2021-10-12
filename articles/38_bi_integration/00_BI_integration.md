@@ -2,10 +2,8 @@
 
 Fabric includes a business intelligence application called **Fabric BI**. Fabric BI enables the design and execution of reports and dashboards, and can connect to various data sources to read the data. The reports metadata is kept in an external Storage Management database. Fabric BI can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html). Fabric integration with Fabric BI is described in the following diagram:
 
-![arc](images/bi_integration_architecture.PNG)
-
-
-
+ ![image](images/bi_integration_architecture.png)
+ 
 The **Fabric BI** application includes the following modules:
 
 * **BI Admin** - system configuration and initial setup module which enables the user to do the following: 
