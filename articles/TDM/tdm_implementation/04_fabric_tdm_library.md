@@ -53,10 +53,10 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </td>
 </tr>
 <td valign="top" width="200pxl">
-<p><h4>trnMigrateList</p>
+<p><h5>trnMigrateList</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Define the query and interface name to run the <strong>extract task</strong> on all entities of each LU. One record per LU.</p>
+<p>Define the query and interface name, or the Broadway flow to generate the entity list when running the <strong>extract task</strong> on all entities of each LU. One record per LU.</p>
 </td>
 <td valign="top" width="400pxl">
 <p>Populate this translation for each Logical Unit. A separate record must be created for each Logical Unit in the Fabric project apart from TDM, TDM_LIBRARY and the dummy LU of the post-execution processes. &nbsp;</p>
@@ -71,11 +71,15 @@ Import the TDM shared functions to your project. Note that since the TDM categor
     <li>SOURCE_ENV_NAME is empty</li>
     <li>INTERFACE_NAME = CRM_DB</li>
     <li>IG_SQL = Select customer_id from customer limit 1000;</li></ul>
+    <p><strong>Example 3:</strong></p>
+  	<ul><li>LU_NAME= CUSTOMER</li>
+    <li>SOURCE_ENV_NAME is empty</li>
+    <li>EXTERNAL_TABLE_FLOW = getEntityListFlow</li>   
 </td>
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h4>trnMigrateListQueryFormats</p>
+<p><h5>trnMigrateListQueryFormats</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Supports special syntax for <strong>extract tasks </strong>when creating the LU instance query based on the trnMigrateList translation. Each LUI consists of a concatenation of source environment, IID, version name and version datetime.</p>
@@ -98,7 +102,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h4>trnRefList</p>
+<p><h5>trnRefList</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Define the list of available reference tables for <strong>extract tasks</strong>.</p>
@@ -110,7 +114,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h4>trnPostProcessList</p>
+<p><h5>trnPostProcessList</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Define the list of post-processes to run at the end of the task's execution. For example, a process that sends a mail to notify the user when the task's execution ends.</p>
@@ -122,7 +126,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </tr>
 <tr>
 <td valign="top" width="200pxl">
-<p><h4>trnTDMCleanUp</p>
+<p><h5>trnTDMCleanUp</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Define the list of the TDM DB tables to be cleaned by the <a href= "/articles/TDM/tdm_architecture/06_tdmdb_cleanup_process.md">TDM clean-up process</a>. The translation defines the Delete statement on each table and a clean-up indicator indicating whether the table should be cleaned by the TDM clean-up process.</p>
@@ -133,6 +137,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 </tr>
 </tbody>
 </table>
+
 
 
 ### Broadway Generic Flows and Templates
