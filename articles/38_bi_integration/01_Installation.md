@@ -2,7 +2,7 @@
 
 The installation and configuration of Fabric BI includes the following steps:
 
-- [Installation](01_Installation.md#installation) - Fabric BI is based on Exago, so you must install the Exago server and the Storage Management DB.
+- [Installation](01_Installation.md#installation) - Fabric BI is based on ExagoBI, so you must install the ExagoBI server and the Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Configure parameters in the Fabric config.ini file.
 - [Project Initialization with Fabric BI](01_Installation.md#Project-Initialization-in-BI). 
 
@@ -10,12 +10,12 @@ The installation and configuration of Fabric BI includes the following steps:
 
 * Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
 * Install the **Storage Management DB** - the database that keeps the report definition, which includes the report type and metadata, currency, decimal setting, fonts, colors and more. The following types are supported:
-  * **SQLite** (default), doesn't require an installation since it comes with Exago installation.
+  * **SQLite** (default), doesn't require an installation since it comes with the ExagoBI installation.
   * **PostgreSQL**, must be installed.
 
 **Installation Recommendations**
 
-- Have 3 separate Exago installations - one each for Dev, QA and Production environments.
+- Have 3 separate ExagoBI installations - one each for Dev, QA and Production environments.
 
   - Linux installation is required for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
@@ -30,8 +30,8 @@ The installation and configuration of Fabric BI includes the following steps:
 
 Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
-* **BI_PORT**, the listener port for BI. The default is 5432.
-* **BI_HOST**, the IP address of the BI server.
+* **BI_PORT**, the listener port for the Fabric BI. The default is 5432.
+* **BI_HOST**, the IP address of the Fabric BI server.
 * **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
 * **STORAGE_MGMT_HOST**, the IP address of the Storage Management DB. Empty for SQLite DB.
 * **STORAGE_MGMT_DB_TYPE**, the type of Storage Management DB. The default is SQLite. The recommended Storage Management DB type is PostgreSQL.
