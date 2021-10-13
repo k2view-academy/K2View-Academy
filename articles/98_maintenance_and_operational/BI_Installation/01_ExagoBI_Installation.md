@@ -15,9 +15,9 @@ This article describes the installation of ExagoBI. In order to start using the 
 
 ## Installation on Linux
 
-1. Download the ExagoBI Installer ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/nlbvsAKqG9sbi0D) into a temporary directory.
+1. Download the ExagoBI Installer ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/WMgK5kXpJKhsCWc) into a temporary directory.
 
-2. Download the the K2View Additional files and installation script from [here](https://download.k2view.com/index.php/s/nlbvsAKqG9sbi0D) into a temporary directory.
+2. Download the the K2View Additional files and installation script from [here](https://download.k2view.com/index.php/s/ZjnHGpA6HORtjnH) into a temporary directory.
 
 3. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command as a user with root permissions:
 
@@ -34,7 +34,6 @@ This article describes the installation of ExagoBI. In order to start using the 
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
    
-5. Restart the Apache web server.
 
    ​
 
@@ -102,6 +101,9 @@ In demo or development environments it is possible to configure ExagoBI to be ac
 
 * Administration Console: http://[host]/Exago/Admin.aspx
 * Designer: http://[host]/Exago/ExagoHome.aspx
+
+Before you can use the BI system, you will need to connect it to DB for Storage Managment, it is highly recommended to use PostgreSQL DB.
+On Non Production Enviroment, SQLite DB can also be used.
 
 Click here to learn how to allow the [direct access to ExagoBI](/articles/38_bi_integration/99_bi_admin_config.md#allow-direct-access).
 
