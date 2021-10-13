@@ -2,42 +2,42 @@
 
 ### Overview
 
-**BI Designer** is the Web Framework application powered by Exago BI which enables creating various types of reports and dashboards. The [Exago Support Center](https://exagobi.com/support/) provides full information how to do it.
+The **BI Designer** module is the Web Framework application powered by Fabric BI (based on ExagoBI) which enables creating various types of reports and dashboards. The [Exago Support Center](https://exagobi.com/support/) provides full information how to create reports and dashboards.
 
-This article describes several important guidelines to enable the user creating the reports over Fabric.
+This article describes several important guidelines for creating reports with Fabric.
 
 ### Creating Reports Based on Fabric LU Tables
 
-One of the basic reports is a report based on Fabric LU instance data. Follow these steps to create such report:
+One of the basic reports is a report based on data from a Fabric LU Instance. Follow these steps to create such report:
 
-1. Open **BI Admin** to:
+1. Open the **BI Admin** module to do these tasks:
 
    * Create the Fabric data source and define its objects and joins, as explained step-by-step in the [Metadata Setup](03_Metadata_Setup.md) article. 
    * Create the parameter(s) to be used by the filter, as explained in the [Parameters](04_parameters.md) article.
 
-2. Open **BI Designer** to click the ![image](images/create_icon.PNG) icon to trigger the new report creation and select the report type, for example **Advanced Report**. 
-
-3. Start by selecting the data objects for the report. 
-
+2. Open the **BI Designer** module. 
+3. Click the ![image](images/create_icon.PNG) icon to trigger creation of a new report.
+4. Select the report type. For example **Advanced Report**. 
+5. Select the data objects for the report. Note the following:
    * The list of data objects presents a list of all existing data objects under all defined data sources. 
    * Once the first data object is selected, most of the objects are disabled except for those that have a join with the selected object.
+   * You must start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
 
-
-   Remember that you must start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
-
-4. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
+6. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
 
 ![image](images/filter_definition.PNG)
+
+7. Once the filter is set, click Okay. 
 
 ### Creating Reports Based on Fabric Custom SQL
 
 Sometimes the report data requires writing a complex SQL query rather then just selecting columns from several joined tables. This is supported by a Customer SQL Object screen.
 
-Creating a report based on a query executed on Fabric LUI is similar to creating it based on Fabric LUI tables.  Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen:
+Creating a report based on a query executed on a Fabric LUI is similar to creating it based on Fabric LUI tables.  Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen:
 
 ![image](images/custom_sql_obj.PNG)
 
-Remember that since this SQL is executed on LUI, it must also include a filter by LU Instance ID. For example:
+Since this SQL is executed on an LUI, it must also include a filter by LU Instance ID. For example:
 
 ~~~sql
 SELECT TE.source_id, TE.target_id, tasks.be_name, task_execution.task_execution_id, 'Copied' as status
@@ -51,13 +51,13 @@ FROM (select distinct entity_id as source_id, target_entity_id as target_id
 WHERE task_execution.task_execution_id = '@task_execution_id@'
 ~~~
 
-The IID value can be provided using a parameter which is created in BI Admin and set either in BI Admin or programmatically via the REST API call. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
+The IID value can be provided using a parameter which is created in the **BI Admin** module and set either in **BI Admin** or programmatically via the REST API call. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
 
-### Creating Reports Based on Fabric Command
+### Creating Reports Based on Fabric Commands
 
 When you need to create a report based on the Fabric Command results, it can be done using the Custom SQL Object screen. 
 
-Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen. Use the special syntax as shown below:
+Click the ![image](images/create_icon.PNG) icon to trigger the new report creation and then instead of selecting the data objects, click the![image](images/add_sql_icon.PNG)icon to write the custom query using the Custom SQL Object screen. Use the syntax as shown below:
 
 ~~~sql
 select * from k2_fabric_command_sql where command='<command>'
