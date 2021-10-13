@@ -9,9 +9,9 @@ The installation and configuration of Fabric BI includes the following steps:
 ### Installation
 
 * Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
-* Install the **Storage Management DB** - the database that keeps the report definition, which includes the report type and metadata, currency, decimal setting, fonts, colors and more. 
-
-Note: if you're planning to use the default SQLite DB, there is no need to install it. The default SQLite Storage Management DB comes with Exago installation.
+* Install the **Storage Management DB** - the database that keeps the report definition, which includes the report type and metadata, currency, decimal setting, fonts, colors and more. The following types are supported:
+  * **SQLite** (default), doesn't require an installation since it comes with Exago installation.
+  * **PostgreSQL**, must be installed.
 
 **Installation Recommendations**
 
@@ -24,6 +24,7 @@ Note: if you're planning to use the default SQLite DB, there is no need to insta
 
   - PostgreSQL is required for UAT / Production environments, but it is preferable to use PostgreSQL for Dev and QA as well.
   - Default SQLite DB can be used for demo purposes. SQLite DB does not require an explicite installation as it comes as part of the Exago installation.
+- Due to performance considerations, it is recommended to install the PostgreSQL on a different host than Exago.
 
 ### Configuration
 
@@ -37,7 +38,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 * **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB type is PostgreSQL, the provider is Npgsql.
 * **STORAGE_MGMT_DB_USER** / **STORAGE_MGMT_DB_PASSWORD**, the Storage Management DB user and password. Empty for SQLite DB. The password is automatically encrypted upon saving the config.ini.
 * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several environments. For example, set TABLE_PREFIX=dev1_.
-* **BI_REST_KEY**, a key to be used to authenticate REST requests. [Click to get the explanation about how to setup the REST key](99_bi_admin_config.md#REST-Key-Initialization). 
+* **BI_REST_KEY**, a key to be used to authenticate REST requests. You can use the default value during the development, however it is required to update it prior to moving the project to Production. [Click to get the explanation about how to setup the REST key](99_bi_admin_config.md#REST-Key-Initialization). 
 
 ~~~
 [bi]
