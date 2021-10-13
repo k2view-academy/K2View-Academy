@@ -1,8 +1,8 @@
 # Moving From DEV to QA/PROD
 
-It is recommended to have separate ExagoBI installations for different environment types (DEV/QA/PROD), so that you can develop and test the reports without impacting the Production.
+It is recommended to have separate Fabric BI installations for different environment types (DEV/QA/PROD), so that you can develop and test the reports without impacting the Production.
 
-Then, when reports are ready for production,  you can move either one or several reports at a time. 
+If you work in this manner, then when reports are ready for production, you can move either one or several reports at a time. 
 
 
 
@@ -13,5 +13,5 @@ Then, when reports are ready for production,  you can move either one or several
 
 
 
-**dev-prod.json** - a configuration file that describes the import / export structure (if doesn't exist, the file is created).
+**dev-prod.json** - a configuration file that describes the import / export structure (if it doesn't exist, the file is created).
 
