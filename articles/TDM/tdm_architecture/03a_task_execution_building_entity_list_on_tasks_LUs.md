@@ -12,7 +12,7 @@ The task execution process builds an entity list for each LU:
 
 The entity list depends on the task:
 
-- **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is checked, run the SQL query defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.
+- **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is checked, run the SQL query or the Broadway flow defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU. Note that  the Broadway flow defined in the trnMigrateList object, populates a dedicated Cassandra table with the list of entities. TDM task execution process runs the batch command to sync the entities, populated in the Cassandra table with the task execution id of the current execution. 
 - **Selected All Entities** is unchecked, build the entity list based on the entities in the task's [Requested Entities](/articles/TDM/tdm_gui/16_extract_task.md#requested-entities) tab.
 
 ### Load Tasks - Regular Mode
@@ -37,7 +37,6 @@ The entity list depends on the task's selection method in the [Requested Entitie
 
   - ENV1_1#params#{"clone_id"=4}
 
-    
 - **Parameters**, select the entities based on the task's parameters from a [DB view], created in the TDM DB for each BE and source environment combination.  
 
 ### Load Tasks - Data Flux Mode
