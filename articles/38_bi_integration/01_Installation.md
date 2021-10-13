@@ -11,6 +11,8 @@ The installation and configuration of Fabric BI includes the following steps:
 * Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
 * Install the **Storage Management DB** - the database that keeps the report definition, which includes the report type and metadata, currency, decimal setting, fonts, colors and more. 
 
+Note: if you're planning to use the default SQLite DB, there is no need to install it. The default SQLite Storage Management DB comes with Exago installation.
+
 **Installation Recommendations**
 
 - Have 3 separate Exago installations - one each for Dev, QA and Production environments.
