@@ -38,7 +38,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 * **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB type is PostgreSQL, the provider is Npgsql.
 * **STORAGE_MGMT_DB_USER** / **STORAGE_MGMT_DB_PASSWORD**, the Storage Management DB user and password. Empty for SQLite DB. The password is automatically encrypted upon saving the config.ini.
 * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several environments. For example, set TABLE_PREFIX=dev1_.
-* **BI_REST_KEY**, a key to be used to authenticate REST requests. You can use the default value during the development, however it is required to update it prior to moving the project to Production. [Click to get the explanation about how to setup the REST key](99_bi_admin_config.md#REST-Key-Initialization). 
+* **BI_REST_KEY**, a key to be used to authenticate REST requests from the Fabric server to Fabric BI. You can use the default value during the development, however it is important to update it prior to moving the project to Production. [Click to get the explanation about how to setup the REST key](99_bi_admin_config.md#REST-Key-Initialization). 
 
 ~~~
 [bi]
@@ -61,7 +61,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 ## Bi Storage Management table prefix
 #TABLE_PREFIX=dev_
 ## Bi rest key
-#BI_REST_KEY=
+#BI_REST_KEY=1234
 ~~~
 ### Project Initialization with Fabric BI
 

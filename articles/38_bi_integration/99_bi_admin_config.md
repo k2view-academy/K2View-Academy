@@ -24,13 +24,15 @@ In demo or development environments, you can change this setting to **True** if 
 
 ### REST Key Initialization
 
-The REST Key is used to authenticate REST requests from Fabric to Fabric BI. 
+The REST Key is used to authenticate REST requests from the Fabric server to Fabric BI. The REST Key is defined in the **BI Admin** and its default value is set to **1234**.
 
-1. Open the **BI Admin** module, then select  **General** > **Other Settings** and populate the REST Key:
+1. Open the **BI Admin** module, then select  **General** > **Other Settings** and either populate the REST Key manually or click **Generate Key**:
 
    ![key](images/bi_rest_key.PNG)
 
-2. Copy the key to the **BI_REST_KEY** parameter of **config.ini**.
+2. Click **Apply** to save the updated REST Key.
+
+3. Copy the value of the REST Key to the **BI_REST_KEY** parameter of **config.ini** on your Fabric server.
 
 ### Allow New Root Directories
 
