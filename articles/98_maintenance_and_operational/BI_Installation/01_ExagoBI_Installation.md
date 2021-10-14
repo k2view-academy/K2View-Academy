@@ -9,15 +9,15 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 - Install Apache web server.
 - Disable SELinux.
 - Make sure you have the latest Redhat/CentOS operating system, including all patches.
-- Hardware - TDB
+- Hardware - TDB.
 
 [Click for more details about Exago Technical Specifications](https://support.exagoinc.com/hc/en-us/articles/216396637-Technical-Specifications).
 
 ## Installation on Linux
 
-1. Download the ExagoBI installer: ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/nlbvsAKqG9sbi0D) into a temporary directory.
+1. Download the ExagoBI installer: ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/ZjnHGpA6HORtjnH) into a temporary directory.
 
-2. Download the the K2View additional files and installation script from [here](https://download.k2view.com/index.php/s/nlbvsAKqG9sbi0D) into a temporary directory.
+2. Download the the K2View additional files and installation script from [here](https://download.k2view.com/index.php/s/ZjnHGpA6HORtjnH) into a temporary directory.
 
 3. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command as a user with root permissions:
 
@@ -33,8 +33,10 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
    ~~~
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
-   
+
 5. Restart the Apache web server.
+
+6. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
    ​
 
@@ -76,7 +78,7 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
 ## Docker Installation on Linux / Windows / MAC
 
-1. Download the Docker image (D_K2V_Exago_v2021.1.11.tar.gz) from [here.](https://download.k2view.com/index.php/s/nlbvsAKqG9sbi0D)
+1. Download the Docker image (D_K2V_Exago_v2021.1.11.tar.gz) from [here](https://download.k2view.com/index.php/s/nlbvsAKqG9sbi0D).
 
 2. Import the image using the following command:
 
@@ -89,18 +91,10 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
   docker run -d --privileged=true -p 80:80 --name=exago k2viewexago:v2021.1.11.220
   ~~~
 
- **Note**: if it is needed to connect to an existing network, use the "--network='network name' " option. 
+4. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
+
+**Note**: if it is needed to connect to an existing network, use the "--network='network name' " option. 
 Consult the Docker documentation for more information.
 
 
-## Access ExagoBI
-
-Once the installation and configuration files update is completed, ExagoBI can be accessed via the **K2View Web Framework** > **BI**. 
-
-In demo or development environments it is possible to configure ExagoBI to be accessed directly using the following URLs:
-
-* Administration Console: http://[host]/Exago/Admin.aspx
-* Designer: http://[host]/Exago/ExagoHome.aspx
-
-Click here to learn how to allow the [direct access to ExagoBI](/articles/38_bi_integration/99_bi_admin_config.md#allow-direct-access).
 
