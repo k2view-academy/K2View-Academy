@@ -13,6 +13,18 @@
 			"branch name": "Academy_6.2"
 		}
 	],
+	"Views": [
+		{
+			"view name": "studio",
+			"default": true,
+			"icon": "images/icon-7.png"
+		},
+		{
+			"view name": "web",
+			"default": false,
+			"icon": "images/icon-6.png"
+		}
+	],
 	"Groups": [
 		{
 			"group display name": "Fabric Overview & Architecture",
@@ -306,7 +318,7 @@
 			"path": "../community/webinars",
 			"view all link": "../community/webinars/README.html",
 			"view all text": "Click to view all the Webinars"
-		},		
+		},
 		{
 			"comm display name": "In the Spotlight",
 			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",

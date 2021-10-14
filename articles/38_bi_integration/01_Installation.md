@@ -42,25 +42,25 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 ~~~
 [bi]
-## Listener port for bi
+## Listener port for Fabric BI
 #BI_PORT=5432
-## Bi host
+## BI server host
 #BI_HOST=
-## Bi Storage Management name, default = StorageMgmt for SQLite and PostgreSQL
-#STORAGE_MGMT_DB_NAME=StorageMgmt
-## Bi Storage Management host, empty for SQLite
+## BI Storage Management host, empty for SQLite
 #STORAGE_MGMT_HOST=
-## Bi Storage Management type SQLite/PostgreSQL
+## BI Storage Management name, default = StorageMgmt for both SQLite and PostgreSQL
+#STORAGE_MGMT_DB_NAME=StorageMgmt
+## BI Storage Management type, the values are SQLite, PostgreSQL
 #STORAGE_MGMT_DB_TYPE=SQLite
-## Bi Storage Management provider SQLite/Npgsql
+## BI Storage Management provider, the values are SQLite (for SQLite), Npgsql (for PostgreSQL)
 #STORAGE_MGMT_DB_PROVIDER=SQLite
-## Bi Storage Management user
+## BI Storage Management user, empty for SQLite
 #STORAGE_MGMT_DB_USER=
-## Bi Storage Management password
+## BI Storage Management password, empty for SQLite
 #STORAGE_MGMT_DB_PASSWORD=
-## Bi Storage Management table prefix
-#TABLE_PREFIX=dev_
-## Bi rest key
+## BI Storage Management table prefix
+#TABLE_PREFIX=
+## BI REST key
 #BI_REST_KEY=1234
 ~~~
 ### Project Initialization with Fabric BI
