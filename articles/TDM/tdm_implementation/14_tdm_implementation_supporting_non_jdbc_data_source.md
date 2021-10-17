@@ -2,12 +2,7 @@
 
 ## How to Define the Entity List For Extract All Entities Tasks?
 
-Create a Broadway flow to get the list of entities from the data source:
-
-- Stage 1: get the list of entities.
-- Stage 2: call **insertToLuExternalEntityList** actor (imported from the TDM library) in a loop (iteration) to insert all entities into entity list Cassandra table. Set a [Transaction](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.3/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all all iterations.
-
-Populate the Broadway flow in the [trnMigrateList](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.3/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
+Create a Broadway flow to get the list of entities from the data source and populate it in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
 
 Click [here](11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) for more information how to populate the entity list based on a non JDBC data source.
 
@@ -20,7 +15,7 @@ The population of the main source LU table must be generated based on [populatio
 - Right click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window is opened.
 - Populate the popup window's settings as follows:
   - **File Name**: populate the file name by [LU Table Name].[flow name]
-- No not populate the **TABLE_NAME** , **KEY**, and the **SOURCE_INTERFACE** parameters when populating the main source LU table based on a non JDBC data source.
+- Do not populate the **TABLE_NAME** , **KEY**, and the **SOURCE_INTERFACE** parameters when populating the main source LU table based on a non JDBC data source.
 - The generated flow is created with an empty source query in the **Source** stage. Replace the empty **sourceDbQuery** in the **Source** stage by the updated actor to extract the data from the data source and link it to the main source LU table in the **LU Table** stage.
 
 ### Step 2 - Other LU Tables
