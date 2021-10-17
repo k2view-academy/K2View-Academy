@@ -4,7 +4,7 @@
 
 1. `Answer: BALANCE, CONTRACT_OFFER_MAPPING,INVOICE, OFFER, PAYMENT, SUBSCRIBER`
 
-2. 
+2. Carry out the following steps: 
 
 Step 1: Submit the following query in the Query_builder window of the Billing_DB interface:
 ```
