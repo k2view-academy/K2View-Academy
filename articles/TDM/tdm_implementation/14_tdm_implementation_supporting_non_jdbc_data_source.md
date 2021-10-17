@@ -4,7 +4,7 @@
 
 Create a Broadway flow to get the list of entities from the data source and populate it in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
 
-Click [here](11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) for more information how to populate the entity list based on a non JDBC data source.
+Click [here](https://github.com/k2view-academy/K2View-Academy/blob/Academy_6.5_TDM_7.3/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) for more information how to populate the entity list based on a non JDBC data source.
 
 ## Building the LU Tables Populations
 
