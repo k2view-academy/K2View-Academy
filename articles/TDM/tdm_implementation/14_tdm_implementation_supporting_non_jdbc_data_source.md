@@ -10,7 +10,7 @@ For ore information how to populate the entity list based on a non JDBC data sou
 
 ### Step 1- Main Source LU Table
 
-The population of the main source LU table must be generated based on [populationRootTable.pop.flow template](articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#step-3---add-the-source-lu-tables-to-the-lu-schema) imported from the TDM Library:
+The population of the main source LU table must be generated based on [populationRootTable.pop.flow template](/articles/TDM/tdm_implementation/05_tdm_lu_implementation_general.md#step-3---add-the-source-lu-tables-to-the-lu-schema) imported from the TDM Library:
 
 - Right click the table name > **New Table Population Flow From Template > populationRootTable.pop.flow**. A popup window is opened.
 - Populate the popup window's settings as follows:
