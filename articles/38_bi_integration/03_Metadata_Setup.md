@@ -53,7 +53,7 @@ Once the data source is created, you must define its objects and joins. Objects 
 1. In the **BI Admin** module, right click the <Data Source Name> under **Sources**, then click **Discover Object/Join Metadata** to initiate the automatic discovery:
 
    ![image](images/bi_setup_2.PNG)
-   
+
 2. When the **Discover Object/Join Metadata** screen opens, the list of all Fabric tables is displayed. 
    It includes the Common area tables and all the tables of all Logical Units.
 3. Select the tables required for report creation, then click **Add Objects and Joins** to create objects and joins in Fabric BI.
@@ -75,7 +75,7 @@ Once the data source is created, you must define its objects and joins. Objects 
    ![image](images/bi_setup_5.PNG)
 
      Or 
-   
+
    * Open each object and click the ![image](images/bi_setup_metadata.PNG)icon in the **Column Metadata** field > **Read Schema** > **Okay**.
 
 6. Verify the default settings of each new join:
@@ -93,7 +93,7 @@ Once the data source is created, you must define its objects and joins. Objects 
 * In order to include data across several data sources in the same report (for example, the data from Fabric and from PostgreSQL DB), you must manually create a join between the respective objects of these data sources. The same should be done when you need to include the LU and common tables data of the same Fabric in the report (since Fabric doesn't have a foreign key relation between the LU and common tables). 
 
 
-[Click for more information about automatic database discovery in Fabric BI (ExagoBI)](https://support.exagoinc.com/hc/en-us/articles/216000567-Automatic-Database-Discovery).
+[Click for more information about automatic database discovery in Fabric BI (ExagoBI)](https://exagobi.com/support/administrators/installation-and-configuration/automatic-database-discovery/).
 
 
 

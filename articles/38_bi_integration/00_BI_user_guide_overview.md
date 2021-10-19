@@ -2,7 +2,7 @@
 
 To implement **Fabric BI** you must first install it and perform other one-time steps using the **BI Admin** module. 
 
-Once the installation is complete, you work with the **BI Designer** module. This module allows you to create and generate reports. When the reports are tested and ready for execution, they can be moved from a development into QA or Production environment.
+Once the installation and configuration is complete, you can work with the **BI Designer** module. This module allows you to create and generate reports. When the reports are tested and ready for execution, they can be moved from a development into QA or Production environment.
 
 This user guide provides the step-by-step description of how to set up **Fabric BI** using the **BI Admin** module:
 
@@ -16,9 +16,10 @@ Once the setup is complete, you can create reports. The links below summarize im
 * [Reports creation guidelines](05_report_creation_guidelines.md).
 * [Reports execution guidelines](06_report_execution_guidelines.md).
 
-The procedures of moving from development to QA/PROD are described below:
+The procedures of moving the reports implementation between different environments are described below:
 
-* [Moving from DEV to QA/PROD](07_moving_from_dev_to_prod.md).
+* [Moving reports between Storage Management DBs](07_moving_reports_between_env.md).
+* [Moving configuration from DEV/QA to PROD](08_moving_from_dev_to_prod.md).
 
 Since the Fabric BI is based on ExagoBI, more information on how to create, design, and generate reports can be found in the [Exago Support Center](https://exagobi.com/support/).
 

@@ -22,9 +22,11 @@ This is how this flag is defined in WebReports.XML:
 
 In demo or development environments, you can change this setting to **True** if it is needed to temporarily access the Fabric BI application directly via the URL. Note that this is not acceptable for production environments. 
 
-### REST Key Initialization
+### REST Key
 
-The REST Key is used to authenticate REST requests from the Fabric server to Fabric BI. The REST Key is defined in the **BI Admin** and its default value is set to **1234**.
+The REST Key is used to authenticate REST requests from the Fabric server to Fabric BI. The REST Key is defined in the **BI Admin** and it is set to the default value during the BI installation.
+
+To update the REST Key do the following:
 
 1. Open the **BI Admin** module, then select  **General** > **Other Settings** and either populate the REST Key manually or click **Generate Key**:
 

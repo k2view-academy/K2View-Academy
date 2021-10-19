@@ -25,8 +25,8 @@ Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_ser
 * The following **ARGS** should be passed:
   * **OUTPUT_NAME** - extract file name. For example, you can concatenate parameters such as IID or datetime to the original report name or even provide a completely different name for the extract file.
   * **TYPE** - export file format can be one of the following valid formats: html, csv, pdf, rtf, excel, json.
-  * **DESTINATION** - the name of the Fabric interface where the export file should be placed can be based either on a Local File System or on an SFTP interface.
-  * **DATA_SOURCES_LIST** - array of the report's data sources, should be the same as number of data sources defined for this report. [Click to get more details about the data source definition](03_Metadata_Setup.md#data-sources).
+  * **DESTINATION** - the name of the Fabric interface where the export file should be placed. It can be either a Local File System or an SFTP interface type.
+  * **DATA_SOURCES_LIST** - array of the Fabric interface names that should correspond with the  report's data sources defined for this report. [Click to get more details about the data source definition](03_Metadata_Setup.md#data-sources).
   * **SESSION_PARAMS** - array of the session parameters used by the report. Only the **Id** (name) and the **Value** attributes of the parameter are mandatory. The other attributes (such as Type) are optional. [Click to get more details about the parameters definition](04_parameters.md).
 
 * The following are optional **ARGS**:
