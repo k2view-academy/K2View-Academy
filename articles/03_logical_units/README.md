@@ -4,7 +4,7 @@
       <li><a href="/articles/03_logical_units/01_LU_overview.md">Logical Unit Overview</a></li>
       <li><a href="/articles/03_logical_units/02_create_a_logical_unit_flow.md">Create a Logical Unit Flow</li>
 <li><a href="/articles/03_logical_units/03_LU_schema_window.md">LU Schema Window</li>
-<li><a href="/articles/03_logical_units/04_LU_properties.md">LU Properties</a></li>
+      <studio><li><a href="/articles/03_logical_units/04_LU_properties.md">LU Properties</a></li></studio>
 <li><a href="/articles/03_logical_units/05_create_a_new_LU_object.md">Create New LU Object</a></li>
 <li><a href="/articles/03_logical_units/06_auto_discovery_wizard.md">Auto Discovery Wizard</a></li>
 <li><a href="/articles/03_logical_units/07_build__or_update_an_LU_schema.md">Build or Update LU Schema Using Auto Discovery</a></li>
