@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is essentially installing Exago BI. Once the application is installed, complete the configuration and implementation by following all the steps described in the [Fabric BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
+The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is essentially installing ExagoBI. Once the application is installed, complete the configuration and implementation by following all the steps described in the [Fabric BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 - Make sure you have the latest Redhat/CentOS operating system, including all patches.
 - Hardware - TDB.
 
-[Click for more details about Exago Technical Specifications](https://support.exagoinc.com/hc/en-us/articles/216396637-Technical-Specifications).
+[Click for more details about ExagoBI Technical Specifications](https://exagobi.com/support/administrators/installation-and-configuration/technical-specifications/).
 
 ## Installation on Linux
 
