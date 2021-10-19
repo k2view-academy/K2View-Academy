@@ -25,8 +25,8 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
    tar -zxvf exago_installer.tar.gz
    ~~~
 
-4. Run the installation script with 2 variables: the installation folder and the ExagoBI installation file name. 
-   In the example, the installation folder will be **/opt/apps/exago** and installation filename is: **ExagoInstaller_v2021.1.11.220.tgz**.
+4. Run the installation script with 2 variables: the installation folder **/opt/apps/exago** and the ExagoBI installation file name. 
+   In the example, the installation filename is: **ExagoInstaller_v2021.1.11.220.tgz**.
 
    ~~~bash
    ./k2view_exago_install.sh /opt/apps/exago ExagoInstaller_v2021.1.11.220.tgz
@@ -41,8 +41,6 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
    ​
 
 **Directory Locations**
-
-When the installation folder name is **/opt/apps/exago**, the other directories locations are as follows:
 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
