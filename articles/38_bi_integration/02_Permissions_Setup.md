@@ -16,19 +16,19 @@ Only user roles with the **BI_ADMIN** permission can access the **BI Admin** mod
 
 Note that the ability to create new reports within the **BI Designer** is also enabled only to users with the **BI_ADMIN** permission.
 
-**How Do I Setup Permissions in Fabric?**
+**How Do I Setup Access to BI Admin Module?**
 
-Setup the **BI_ADMIN** permission either by:
+Setup the access to **BI Admin** either by:
 
 * Running the [GRANT command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)
- 
+
   Or 
-  
+
 * Via the Web Framework by opening **Admin** > **Security** > **Permissions**, and clicking **Grant Permissions**. The following window will appear:
 
 <img src="images/permissions_setup_0.PNG" alt="image" />
 
-Select a Role (these are Fabric roles ), then under Methods, select **BI_ADMIN** to assign this method to the selected Role. Place an asterisk in the Resources field, and click **Grant** .  
+Select a Role name under Roles and **BI_ADMIN** under Methods to assign this method to the selected Role. Place an asterisk in the Resources field, and click **Grant** .  
 
 ### Access Level Setup
 

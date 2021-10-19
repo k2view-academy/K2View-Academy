@@ -16,7 +16,7 @@ Open a CLI, connect to the Fabric BI server and run the following command from t
 
 Note that the utility can be run only by a user with **root** or **sudo** permissions.
 
-~~~bash
+~~~
 > sudo mono ImportExportStorageMgmt.exe -f ./reports.json
 [sudo] password for k2view:
 11:15:07 INFO  - ExportStorageMgmt -f ./reports.json
@@ -87,7 +87,7 @@ Now, update the default settings to include the required information. For exampl
 
 Once the configuration file is updated, you're ready to run the utility as follows:
 
-~~~bash
+~~~
 > sudo mono ImportExportStorageMgmt.exe -f ./reports.json -E -I
 12:15:20 INFO  - ExportStorageMgmt -f dev-prod.json -E -I
 12:15:20 INFO  - Starting Export

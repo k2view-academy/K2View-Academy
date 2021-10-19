@@ -16,10 +16,10 @@ Once the setup is complete, you can create reports. The links below summarize im
 * [Reports creation guidelines](05_report_creation_guidelines.md).
 * [Reports execution guidelines](06_report_execution_guidelines.md).
 
-The procedures of moving the reports implementation between different environments are described below:
+The procedures of moving the implementation between different environments are described below:
 
 * [Moving reports between Storage Management DBs](07_moving_reports_between_env.md).
-* [Moving configuration from DEV/QA to PROD](08_moving_from_dev_to_prod.md).
+* [BI Configuration Deployment to Production](08_moving_from_dev_to_prod.md).
 
 Since the Fabric BI is based on ExagoBI, more information on how to create, design, and generate reports can be found in the [Exago Support Center](https://exagobi.com/support/).
 
