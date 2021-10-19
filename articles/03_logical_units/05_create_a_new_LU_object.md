@@ -1,3 +1,5 @@
+<web>
+   
 # Create a New Logical Unit (LU) Object
 
 A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be added by either:
@@ -22,3 +24,5 @@ A new [Logical Unit (LU)](/articles/03_logical_units/01_LU_overview.md) can be a
 
 
 [![Previous](/articles/images/Previous.png)](/articles/03_logical_units/04_LU_properties.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/03_logical_units/06_auto_discovery_wizard.md)
+
+   </web>
