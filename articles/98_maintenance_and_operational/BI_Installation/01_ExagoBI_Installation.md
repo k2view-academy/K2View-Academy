@@ -42,6 +42,8 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
 **Directory Locations**
 
+When the installation folder name is **/opt/apps/exago**, the other directories locations are as follows:
+
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
 <tr>
