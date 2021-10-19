@@ -88,8 +88,10 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
 3. Start the Docker image as follows:
   ~~~bash
-  docker run -d --privileged=true -p 80:80 --name=exago k2view/exago_ssl:v2021.1.11.220
+  docker run -d --privileged=true -p 80:80 -p 443:443 --name=exago k2view/exago_ssl:v2021.1.11.220
   ~~~
+  
+  where **exago** is the docker name (you can define a different name if needed).
 
 4. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
