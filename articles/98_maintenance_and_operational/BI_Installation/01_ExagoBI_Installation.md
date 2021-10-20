@@ -6,7 +6,7 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
 ## Prerequisites
 
-- Install Apache web server.
+- Install Apache web server with mod_ssl.
 - Disable SELinux.
 - Make sure you have the latest Redhat/CentOS operating system, including all patches.
 - Hardware - TDB.
@@ -17,7 +17,7 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
 1. Download the ExagoBI installer: ExagoInstaller_vXXX.X.X.XXX.tgz from [here](https://download.k2view.com/index.php/s/rZLcJXsxVtIyOt5) into a temporary directory.
 
-2. Download the the K2View additional files and installation script from [here](https://download.k2view.com/index.php/s/HBQRJ9SGChixswI) into a temporary directory.
+2. Download the the K2View additional files and installation script from [here](https://download.k2view.com/index.php/s/9F4zFbC3OYkNOHX) into a temporary directory.
 
 3. Open a CLI, move to the temporary directory and extract the downloaded file by running the following command as a user with root permissions:
 
