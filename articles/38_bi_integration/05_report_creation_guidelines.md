@@ -14,16 +14,15 @@ One of the basic reports is a report based on data from a Fabric LU Instance. Fo
 
    * Create the Fabric data source and define its objects and joins, as explained step-by-step in the [Metadata Setup](03_Metadata_Setup.md) article. 
    * Create the parameter(s) to be used by the filter, as explained in the [Parameters](04_parameters.md) article.
-
-2. Open the **BI Designer** module. 
-3. Click the ![image](images/create_icon.PNG) icon to trigger creation of a new report.
-4. Select the report type. For example **Advanced Report**. 
-5. Select the data objects for the report. Note the following:
+2. Open the **Fabric Studio** and define the Interfaces with the same name as the data sources that you created in the BI Admin. 
+3. Open the **BI Designer** module. 
+4. Click the ![image](images/create_icon.PNG) icon to trigger creation of a new report.
+5. Select the report type. For example **Advanced Report**. 
+6. Select the data objects for the report. Note the following:
    * The list of data objects presents a list of all existing data objects under all defined data sources. 
    * Once the first data object is selected, most of the objects are disabled except for those that have a join with the selected object.
    * You must start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
-
-6. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
+7. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
 
 ![image](images/filter_definition.PNG)
 

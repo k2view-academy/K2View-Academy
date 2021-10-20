@@ -26,15 +26,14 @@ Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_ser
   * **OUTPUT_NAME** - extract file name. For example, you can concatenate parameters such as IID or datetime to the original report name or even provide a completely different name for the extract file.
   * **TYPE** - export file format can be one of the following valid formats: html, csv, pdf, rtf, excel, json.
   * **DESTINATION** - the name of the Fabric interface where the export file should be placed. It can be either a Local File System or an SFTP interface type.
-  * **DATA_SOURCES_LIST** - array of the Fabric interface names that should correspond with the  report's data sources defined for this report. [Click to get more details about the data source definition](03_Metadata_Setup.md#data-sources).
-  * **SESSION_PARAMS** - array of the session parameters used by the report. Only the **Id** (name) and the **Value** attributes of the parameter are mandatory. The other attributes (such as Type) are optional. [Click to get more details about the parameters definition](04_parameters.md).
+  * **DATA_SOURCES_LIST** (optional) - array of the Fabric interface names that should correspond with the report's data sources defined for this report. The **DATA_SOURCES_LIST** should only be sent when you need the report to use the connection details different from the connection details defined in the BI Admin.
+  * **SESSION_PARAMS** - array of the session parameters used by the report. Only the **Id** (name) and the **Value** attributes of the parameter are mandatory. The other attributes (such as Type) are optional. 
 
 * The following are optional **ARGS**:
 
   * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation. Only the **FilterText** (the value of the filter) is required, the other attributes are optional.
   * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation.  The fields **EntityName** and **ColumnName** (data object and column to sort on) are required.
 
-  ​
 
 Note that **SESSION_PARAMS** is an optional parameter for REST API invocation. However all reports based on Fabric LU data require at least one session parameter definition - to pass the IID for the GET INSTANCE command.
 
