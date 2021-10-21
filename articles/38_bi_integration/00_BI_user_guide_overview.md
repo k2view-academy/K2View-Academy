@@ -2,7 +2,7 @@
 
 Working with Fabric BI can be divided into three logical steps:
 
-1. Setup the BI (mostly one-time activity)
+1. Setup the BI (mostly one-time activities)
 2. Develop the BI
 3. Deploy BI to PROD.
 
@@ -28,7 +28,7 @@ The links below summarize important points to take into consideration when creat
 
 The Fabric BI is based on ExagoBI. More information on how to create, design, and generate reports can be found in the [Exago Support Center](https://exagobi.com/support/).
 
-### Step 3 - Deployment to PROD
+### Step 3 - Deploy BI to PROD
 
 The procedures of moving the implementation between different environments are described below:
 
