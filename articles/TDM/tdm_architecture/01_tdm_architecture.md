@@ -21,7 +21,7 @@ TDM settings and tasks are kept in the TDM PostgreSQL DB. Both the TDM GUI and F
 
 ### Fabric
 
-Fabric acts as a staging DB for the provisioned entities and ETL layer for extracting data from data sources and loading it to the target environment.
+Fabric acts as a staging DB for the provisioned entities and as an ETL layer for extracting data from data sources and loading it to the target environment.
 
 In addition, the TDM back-end APIs and processes are defined and executed in Fabric. The TDM back-end APIs and processes are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
 
@@ -30,7 +30,7 @@ In addition, the TDM back-end APIs and processes are defined and executed in Fab
 When running a TDM task, data from the selected entities is stored and synchronized in Fabric according to the definitions of its LUs. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) for each entity ([LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui)). This has several advantages:
 
 -  Convenience - Encapsulating the data of a business entity into one place so that it can be queried by consumers (many business entities have data residing in multiple data sources). 
--  Security - Individual encryption on MicroDB or field levels allows more robust security.
+-  Security - Individual encryption on MicroDB or field levels allows for more robust security.
 -  Masking capabilities -  masking sensitive data when storing entities.
 -  Flexibility - Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
    - Extracting and storing an entity's data in Fabric in advance so that requests to load it into target environments can be implemented without accessing source systems. 
