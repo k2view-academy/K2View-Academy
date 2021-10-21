@@ -6,13 +6,13 @@ The TDM Library has all the utilities required to implement a TDM project and to
 - [TDM LU](#tdm-lu)
 - [TDM_LIBRARY LU](#tdm_library-lu)
 
-Note that the TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.2_LIBRARY.k2export) .
+The TDM Library must be imported to the Fabric project created for TDM. Download the TDM library from [this link](TDM_V7.2_LIBRARY.k2export) .
 
 ## TDM Library - Shared Objects
 
 ### TDM Web Services
 
-Import and deploy all TDM Web Services (APIs) to Fabric project. These Web Services are invoked by the TDM GUI application and comprise the back-end layer of the TDM GUI application.
+Import and deploy all TDM Web Services (APIs) to the Fabric project. These Web Services are invoked by the TDM GUI application and comprise the back-end layer of the TDM GUI application.
 
 Since the TDM categories contain the product's Web Services, it is recommended to add the project's Web Services into separate categories to simplify upgrading the TDM version.
 
@@ -25,7 +25,7 @@ Import and deploy the following [interfaces](/articles/05_DB_interfaces/01_inter
 -  **TDM_APIDOC_JSON**: This is a local file system interface used to generate the JSON file of the TDM APIDOC if the APIDOC needs to be updated to include project custom APIs.
     [Click here](/articles/TDM/tdm_configuration/01_tdm_installation.md#update-the-tdm-apidoc-optional) for more information about updating the TDM APIDOC.
     
-    Note that it is important to **set the TDM_APIDOC_JSON interface as *disabled* in the Environments** to avoid an error when running the test connection on the task's environment (Fabric server has a different IP address than the local windows machine and cannot connect window's directory).
+    It is important to **set the TDM_APIDOC_JSON interface as *disabled* in the Environments** to avoid an error when running the test connection on the task's environment (The Fabric server has a different IP address than the local windows machine and cannot connect to the directory of the local machine).
 
 ### Shared Globals
 
@@ -82,12 +82,12 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <p><h5>trnMigrateListQueryFormats</p>
 </td>
 <td valign="top" width="300pxl">
-<p>Supports special syntax for <strong>extract tasks </strong>when creating the LU instance query based on the trnMigrateList translation. Each LUI consists of a concatenation of source environment, IID, version name and version datetime.</p>
+<p>Supports special syntax for <strong>extract tasks </strong>when creating the LU instance query based on the trnMigrateList translation. Each LUI consists of a concatenation of the source environment, IID, version name and version datetime.</p>
 <p>Click to read more about <a href="01_tdm_set_instance_per_env_and_version.md">LUI structure for TDM implementation</a>.</p>
-<p>This translation is required for DBs that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings. For example, sqlServer.</p>
+<p>This translation is required for databases that do not support the standard &lsquo;||&rsquo; syntax for concatenated strings. For example, sqlServer.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate two records for each DB, one record with version_ind&nbsp;&lsquo;true&rsquo; and another with&nbsp;version_ind&nbsp;&lsquo;false&rsquo;.&nbsp;</p>
+<p>Populate two records for each database, one record with version_ind&nbsp;&lsquo;true&rsquo; and another with&nbsp;version_ind&nbsp;&lsquo;false&rsquo;.&nbsp;</p>
   <p><strong>Example 1:</strong> </p>
 <ul> <li>interface_type = sqlserver </li>
 <li>version_ind = true </li>
@@ -121,7 +121,7 @@ Import the TDM shared functions to your project. Note that since the TDM categor
 <p>Each process is implemented as a Broadway flow.</p>
 </td>
 <td valign="top" width="400pxl">
-<p>Populate the list of Broadway flows and the LU of the Broadway flow. The LU can be empty if the post processes are defined under Shared Objects whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to execute post execution processes. </p>
+<p>Populate the list of Broadway flows and the LU of the Broadway flow. The LU can be empty if the post processes are defined under Shared Objects whereby the TDM task execution process sets the LU Name to TDM when running Batch commands to carry out post execution processes. </p>
 </td>
 </tr>
 <tr>
@@ -154,12 +154,12 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 - [Task execution jobs](/articles/TDM/tdm_architecture/03_task_execution_processes.md) are defined and run under the TDM LU.
 - The TDM cleanup job that cleans the TDM DB is defined under the TDM LU. 
 
-Note that you need to stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric to avoid a parallel execution of TDM jobs on the same TDM DB. 
+You must stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric to avoid a parallel execution of TDM jobs on the same TDM DB. 
 
 
 ## TDM_LIBRARY LU
 
-The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as follows:
+The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs are as follows:
 
 ### Globals
 
@@ -304,7 +304,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 <li><strong>Child_lu_eid_sql = </strong>select order_id from subscriber</li>
 <li><strong>Child_lu_tar_eid_sql = </strong>select order_id from tar_subscriber</li>    
 </ul>
-<p>Note that both tables, subscriber and tar_subscriber, must be defined in Customer LU schema.</p>  
+<p>The parameters: tables, subscriber and tar_subscriber, must all be defined in the Customer LU schema.</p>  
 </td>
 </tr>
 <tr>
@@ -337,7 +337,7 @@ The TDM_LIBRARY LU holds utilities that must be copied to the project's LUs, as 
 
 ### Split Large Parsers
 
-**parExecuteJob**, the main parser that runs other parsers and splits them to run in parallel. The **trnParsList** translation object holds the large parser names to be split. Copy this parser to the LU if needed. 
+**parExecuteJob**, is the main parser that runs other parsers and splits them to run in parallel. The **trnParsList** translation object holds the large parser names to be split. Copy this parser to the LU if needed. 
 
 
 
