@@ -1,10 +1,10 @@
 # TDM Implementation - Supporting Non JDBC Data Sources
 
-## How to Define the Entity List For Extract All Entities Tasks?
+## How Do I Define the Entity List For Extract All Entities Tasks?
 
 Create a Broadway flow to get the list of entities from the data source and populate it in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
 
-For ore information how to populate the entity list based on a non JDBC data source, read [Step 6 -Get the Entity List for an Extract All Task Using a Broadway Flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) section of Broadway Flows Implementation article.
+For more information on how to populate the entity list based on a non JDBC data source, read [Step 6 -Get the Entity List for an Extract All Task Using a Broadway Flow](/articles/TDM/tdm_implementation/11_tdm_implementation_using_generic_flows.md#step-6---optional---get-the-entity-list-for-an-extract-all-task-using-a-broadway-flow) section of the Broadway Flows Implementation article.
 
 ## Building the LU Tables Populations
 
@@ -32,7 +32,7 @@ The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getD
 
 - A separate delete flow of each target object. The target keys are taken from the [**TAR_** LU tables](08_tdm_implement_delete_of_entities.md).
 
-- **LoadAllTables** flow:  this flow execute the inner load flows on each target object in the right order. 
+- **LoadAllTables** flow:  this flow executes the inner load flows on each target object in the correct order. 
 
   See an example below:
 
@@ -44,9 +44,9 @@ The **createLoadTableFlows** and **createDeleteTableFlow** flows call the **getD
 
 ​		
 
-​		Note that the **Get Entity Status** actors check the **ENTITY_STATUS** value and the flow runs the load flows of the next stage if the ENTITY_STATUS is not **failed**.
+​		The **Get Entity Status** actors check the **ENTITY_STATUS** value and the flow runs the load flows of the next stage if the ENTITY_STATUS is not **failed**.
 
-- **DeleteAllTables** flow:  this flow execute the inner delete flows on each target object in the right order. 
+- **DeleteAllTables** flow:  this flow executes the inner delete flows on each target object in the correct order. 
 
   See an example below:
 
