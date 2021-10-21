@@ -390,7 +390,7 @@ TDM_Tasks
 
 ### API Description
 
-This API gets the task's Logical Units. Note that the Business Entity (BE) ID and name are returned by **/tasks** API in **be_id** and **be_name** output attributes.
+This API gets the task's Logical Units. The Business Entity (BE) ID and name are returned by **/tasks** API in **be_id** and **be_name** output attributes.
 
 ### API Input
 
@@ -451,7 +451,7 @@ TDM_Tasks
 
 ### API Description
 
-This API gets the task's Globals if they exist. Note that **task_globals** attribute of  **/tasks** API indicates if the task has globals. This attribute is populated by true if the task has Globals.
+This API gets the task's Globals if they exist. The **task_globals** attribute of  **/tasks** API indicates if the task has globals. This attribute is populated by true if the task has Globals.
 
 ### API Input
 
@@ -497,7 +497,7 @@ TDM_Tasks
 
 ### API Description
 
-Gets the list of Reference tables included in a given task. Note that **refcount** attribute of  **/tasks** API is populated by the number of Reference tables included in the task. If the **refcount** attribute is populated by zero, the task does not have Reference tables.
+Gets the list of Reference tables included in a given task. The **refcount** attribute of  **/tasks** API is populated by the number of Reference tables included in the task. If the **refcount** attribute is populated by zero, the task does not have Reference tables.
 
 ### API Input
 
