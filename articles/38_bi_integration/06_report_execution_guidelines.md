@@ -39,10 +39,16 @@ Note that **SESSION_PARAMS** is an optional parameter for REST API invocation. H
 
 
 
-**Example of GENERATE_BI Job:**
+**Example of GENERATE_BI Job with Session Parameter**
 
 ~~~bash
 startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPUT_NAME":" Load_test_TaskID_12345_ExecutionDate_20212309", "DATA_SOURCES_LIST":"[{\"Name\": \"Fabric-PROD-V1\"}]", "TYPE":"csv", "DESTINATION":"MyLocalFS", "SESSION_PARAMS": "[{\"Id\": \"task_execution_id\",  \"Value\": \"70\"}, {\"Id\": \"lu_name\", \"DataType\": \"String\", \"Value\": \"CRM_LU\", \"IsHidden\" : false}]"}';
+~~~
+
+**Example of GENERATE_BI Job with Filter** 
+
+~~~bash
+startjob GENERATE_BI NAME='Public/dev1_content' ARGS='{"OUTPUT_NAME":"dev1_content_24_10_21", "DESTINATION":"localFileSystem", "TYPE":"csv","FILTER":"{\"FilterText\":\"Dev1_content.created_by\",\"Operator\":0, \"Values\":[\"system\"] }"}';
 ~~~
 
 
