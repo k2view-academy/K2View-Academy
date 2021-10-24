@@ -44,8 +44,8 @@ The following three access levels are defined:
 
 **Note:**
 
-- Fabric BI is based on Exago, so the names of the folders and reports are based on Exago.
-- If the user that is logged into BI Designer is not assigned any access rules, he will get a read-only access to the Fabric BI (that is, Exago) folders and reports.
+- Since Fabric BI is based on ExagoBI, the names of the folders and reports are also based on ExagoBI.
+- If the user that is logged into BI Designer is not assigned any access rules, he will get a read-only access to the Fabric BI (that is, ExagoBI) folders and reports.
 - If the user is an owner of a folder or a report, he will have full access to it regardless of the access level assigned to his role on this folder/report.
 
 **How Do I Set an Access Level?**
