@@ -2,9 +2,9 @@
 
 ### Overview
 
-The **BI Designer** module is the Web Framework application powered by Fabric BI (based on ExagoBI) which enables creating various types of reports and dashboards. The [Exago Support Center](https://exagobi.com/support/) provides full information how to create reports and dashboards.
+The **BI Designer** module is the Web Framework application powered by Fabric BI (based on ExagoBI). This module enables the user to create various types of reports and dashboards. The [Exago Support Center](https://exagobi.com/support/) provides full information how to create reports and dashboards.
 
-This article describes several important guidelines for creating reports with Fabric.
+This article describes several important guidelines for creating reports with Fabric BI.
 
 ### Creating Reports Based on Fabric LU Tables
 
