@@ -7,6 +7,8 @@ To start creating business intelligence reports, you must set up the metadata by
 * Creation of [Data sources](03_Metadata_Setup.md#data-sources).
 * Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins). 
 
+Note that each **data source** defined in the **BI Admin** must have a corresponding **interface** in Fabric with the same name.
+
 ### Defining Data Sources
 
 You can use various types of data sources, such as relational databases (e.g. Oracle, MySQL, PostgreSQL), non-relational databased (e.g. MongoDB), DWH (e.g. Snowflake) or other types (e.g. XML files) in **Fabric BI**. Data sources are defined via the **BI Admin** module. 

@@ -12,9 +12,9 @@ To enforce this differentiation, Fabric divides the permission setup process int
 ### BI ADMIN Permission Setup 
 
 The **BI Admin** module of the **Fabric BI** application allows users to perform various system configurations as well as to setup the metadata for the reports. 
-Only user roles with the **BI_ADMIN** or **ALL** permission can access the **BI Admin** module.
+Only user roles with the **BI_ADMIN** (or **ALL**) permission can access the **BI Admin** module.
 
-Note that the ability to create new reports within the **BI Designer** is also enabled only to users with the **BI_ADMIN** permission.
+Note that the ability to create new reports within the **BI Designer** is also enabled only to users with the **BI_ADMIN** (or **ALL**) permission.
 
 **How Do I Setup Access to BI Admin Module?**
 
