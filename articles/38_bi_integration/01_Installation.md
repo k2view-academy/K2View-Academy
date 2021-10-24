@@ -15,7 +15,7 @@ The installation and configuration of Fabric BI includes the following steps:
 
 **Installation Recommendations**
 
-- Have 3 separate ExagoBI installations - one each for Dev, QA and Production environments.
+- Have 3 separate Fabrice BI (that is, ExagoBI) installations - one each for Dev, QA and Production environments.
 
   - Linux installation is required for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
@@ -28,7 +28,7 @@ The installation and configuration of Fabric BI includes the following steps:
 
 ### Configuration
 
-Fabric BI solution is using the Fabric **config.ini** to get the information about the BI host and port and the Storage Management DB connection details.
+The Fabric BI solution uses the Fabric **config.ini** to retrieve information about the BI host and port and the Storage Management DB connection details.
 
 Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
