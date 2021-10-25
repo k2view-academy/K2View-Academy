@@ -25,7 +25,7 @@ Else
 		original called Web-Service exception error message
 		original called Web-Service request header User-Agent
 
-<img src="images/66_graphit_error_handling.PNG"></img>
+<img src="images/66_graphit_error_handling.png"></img>
 
 
 [![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
