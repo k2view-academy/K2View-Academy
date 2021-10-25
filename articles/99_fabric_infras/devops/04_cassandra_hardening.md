@@ -113,6 +113,7 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 1. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
 ```bash
+mkdir ~/.cassandra
 cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
 
 sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
