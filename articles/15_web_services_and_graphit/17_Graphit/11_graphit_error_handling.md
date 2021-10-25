@@ -1,7 +1,9 @@
 # Graphit - Error Handling
 
 When error.graphit file is created on the project implementation, it is triggered each time an exception is returned as a result of 
-Fabric Web-Service call. It allows the implementors to set a standard payload reponse structure no matter what was the trigger for the exception.
+Fabric Web-Service call. 
+
+It allows the implementors to set a standard payload reponse structure no matter what was the trigger for the exception.
 
 It can be either page not found since an external client calls a Web-Service that was not deployed in Fabric or invalid APIKEY, etc..
 
