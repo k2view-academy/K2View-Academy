@@ -14,7 +14,9 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
 
 ```bash
-cd $INSTALL_DIR/
+echo "export K2_HOME=$INSLATT_DIR" >> .bash_profile
+source ~/.bash_profile
+cd ~/
 rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 
 chmod +x secure_cassandra.sh
@@ -25,7 +27,10 @@ e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}`
 
 ```bash
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
+```
+output example:
 
+```bash
 Warning:
 The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 Certificate stored in file </opt/apps/k2view/.cassandra_ssl/CLUSTER_k2tls_PUBLIC.cer>
