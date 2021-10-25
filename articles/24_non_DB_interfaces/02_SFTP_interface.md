@@ -25,6 +25,10 @@ To create a new SFTP interface, do the following:
 <td>Hostname or IP address of the FTP server.</td>
 </tr>
 <tr>
+<td><strong>Port</strong></td>
+<td>Port. Added on release 6.5.3</td>
+</tr>
+<tr>
 <td><strong>User</strong>&nbsp;</td>
 <td>Username.</td>
 </tr>
@@ -49,6 +53,7 @@ To create a new SFTP interface, do the following:
 </tr>
 </tbody>
 </table>
+
 
 
 
