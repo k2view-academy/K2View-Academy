@@ -15,6 +15,7 @@ The following steps ensure that the keys that secure Fabric and Cassandra are pr
 
 ```bash
 echo "export K2_HOME=$INSLATT_DIR" >> .bash_profile
+echo "export INSTALL_DIR=$INSLATT_DIR" >> .bash_profile
 source ~/.bash_profile
 cd ~/
 rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
