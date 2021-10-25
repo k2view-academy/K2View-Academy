@@ -11,7 +11,8 @@ The implementator has full flexibility to analyze the reason for the failure and
 
 ### Example of error.graphit file
 
-The following error.graphit file checks the original Web-Service response status.
+The following ```error.graphit``` file checks the original Web-Service response status.
+
 If the response is 404 (page not found) it returns:
 - original called Web-Sevice response status
 - original called Web-Service exception error message	
