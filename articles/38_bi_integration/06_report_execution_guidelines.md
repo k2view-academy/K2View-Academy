@@ -6,13 +6,13 @@ The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_
 
 The sections below explain both options.
 
-### Reports Generation using BI Designer
+### Reports Generation Using BI Designer
 
 Generate the report in the **BI Designer** module using the ![run](images/run_icon.PNG) icon in the Report Tree or the Run ![run](images/run_button.PNG) button in the report editor. 
 
 You can setup various report generation options using the Report Options (applicable for Advance Reports). 
 
-### Reports Generation using the Fabric Jobs Mechanism
+### Reports Generation Using the Fabric Jobs Mechanism
 
 Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_services/07_jobs_commands.md). Set the Job parameters as follows:
 
@@ -51,9 +51,21 @@ startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPU
 startjob GENERATE_BI NAME='Public/dev1_content' ARGS='{"OUTPUT_NAME":"dev1_content_24_10_21", "DESTINATION":"localFileSystem", "TYPE":"csv","FILTER":"{\"FilterText\":\"Dev1_content.created_by\",\"Operator\":0, \"Values\":[\"system\"] }"}';
 ~~~
 
-
-
 [Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://support.exagoinc.com/hc/en-us/articles/115003313988).
+
+### Reports Generation Using "Deep Link"
+
+Generate the report using a direct link to it in a separate browser, as follows:
+
+~~~
+<host>:<port>/app/BI/<report path in BI>
+~~~
+
+Where <report path in BI> is the full name of the report from the Root folder till the report name.
+
+For example, the "deep link" to the report **mig_rep** under the folder **test_designer** running on a localhost is: 
+
+http://localhost:3213/app/BI/test_designer/mig_rep
 
 
 
