@@ -13,21 +13,21 @@ The implementator has full flexibility to analyze the reason for the failure and
 
 The following ```error.graphit``` file checks the original Web-Service response status.
 
-If the response is 404 (page not found) it returns:
-- original called Web-Sevice response status
-- original called Web-Service exception error message	
-- original called Web-Service called method
-- original called Web-Service path
+If the response is 404 (page not found) it returns the original Web-Service details:
+- response status
+- exception error message	
+- method
+- path
 
 and overrides the response with the following:		
 - response status: 200 (OK).
 - header_key value: 'Web Service Not Found'
 
 
-If the response is not 404, it returns:	
-- original called Web-Sevice response status
-- original called Web-Service exception error message
-- original called Web-Service request header User-Agent
+If the response is not 404, it returns the original Web-Service details:	
+- response status
+- exception error message
+- request header User-Agent
 
 <img src="images/66_graphit_error_handling.png"></img>
 
