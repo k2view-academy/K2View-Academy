@@ -134,15 +134,14 @@ Cassandra default **superuser** is `cassandra` and it must be disabled before go
 1. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
 
    ~~~bash
-   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
-   echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" |cqlsh -u cassandra -p cassandra
-   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3
+   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
+   echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" |cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    ~~~
 
 2. drop the `cassandra` user
 
    ~~~bash
-   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3
+   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3 $(hostname -i) 9142 --ssl
    ~~~
 
    
