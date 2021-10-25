@@ -100,7 +100,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="15" width="360pxl">
+<td rowspan="16" width="360pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
 <td width="120pxl">Paste Selection</td>
