@@ -34,7 +34,7 @@ Once you clicked on the **Monitor** item of the *menu*, the following dashboard 
 The batch Monitor Control banner allows you to cancel, pause and resume the batch process currently in focus. 
 It provides a progress bar that indicates the number of entities already processed and the number of entities yet to be processed.
 
-![image](images/31_jobs_and_batch_services_batchMonitor7)
+![image](images/31_jobs_and_batch_services_batchMonitor7.PNG)
 
 
 ### **General Data**
