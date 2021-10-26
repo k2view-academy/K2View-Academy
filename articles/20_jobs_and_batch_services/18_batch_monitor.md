@@ -61,6 +61,43 @@ This panel displays the information resulting from the execution of the [batch_s
 
 
 
+### **Entity Status Summary**
+
+This panel provides a pie-chart view of the status of the entities being processed. See the self-explanatory illustration below 
+
+![image](images/33_jobs_and_batch_services_batchMonitor9.PNG)
+
+
+### **Entities Detailed Status **
+
+Entities are categorized in 3 different groups:
+- Entities in process
+- Failed entities
+- Entities with the highest execution time
+
+This allows you to drill down on each instance execution and identify bottlenecks, issues or unexpected behaviors.
+
+
+Each table shows the following details for each entity:
+- Entity ID
+- Node ID
+- Process time in ms
+- Status
+
+By right-clicking on the ![image](images/28_jobs_and_batch_services_batchMonitor4.PNG) sign will redirect you to the table showing the details for the node that processed this specific entity.
+
+
+![image](images/34_jobs_and_batch_services_batchMonitor10.PNG)
+
+
+### **Batch process monitoring per Node or per Data center **
+
+The summary of the execution of the batch process is shown on a per-node basis or across the Data Centers responsible for the execution of the process.
+
+![image](images/35_jobs_and_batch_services_batchMonitor11.PNG)
+
+
+
 
 
 
