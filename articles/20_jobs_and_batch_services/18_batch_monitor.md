@@ -68,7 +68,7 @@ This panel provides a pie-chart view of the status of the entities being process
 ![image](images/33_jobs_and_batch_services_batchMonitor9.PNG)
 
 
-### **Entities Detailed Status **
+### **Entities Detailed Status**
 
 Entities are categorized in 3 different groups:
 - Entities in process
@@ -90,7 +90,7 @@ By right-clicking on the ![image](images/28_jobs_and_batch_services_batchMonitor
 ![image](images/34_jobs_and_batch_services_batchMonitor10.PNG)
 
 
-### **Batch process monitoring per Node or per Data center **
+### **Batch process monitoring per Node or per Data Center**
 
 The summary of the execution of the batch process is shown on a per-node basis or across the Data Centers responsible for the execution of the process.
 
