@@ -40,7 +40,7 @@ sed -i "s@WEB_SERVICE_PORT=@#WEB_SERVICE_PORT=@" $K2_HOME/config/config.ini
 sed -i "s@#WEB_SERVICE_SECURE_PORT=443@WEB_SERVICE_SECURE_PORT=9443@" $K2_HOME/config/config.ini
 sed -i "s@WEB_SERVICE_CERT=@#WEB_SERVICE_CERT=@" $K2_HOME/config/config.ini
 sed -i "s@WEB_SERVICE_CERT_PASSPHRASE=@#WEB_SERVICE_CERT_PASSPHRASE=@" $K2_HOME/config/config.ini
-sed -i "s@WEB_SERVICE_CERT=.*@WEB_SERVICE_CERT=$K2_HOME/.ssl/k2vws.key@" $K2_HOME/config/config.ini
+sed -i "s@#WEB_SERVICE_CERT=.*@WEB_SERVICE_CERT=$K2_HOME/.ssl/k2vws.key@" $K2_HOME/config/config.ini
 sed -i '93s/.*/WEB_SERVICE_CERT_PASSPHRASE=Q1w2e3r4t5/g' $K2_HOME/config/config.ini
 echo "ENABLE_INTER_NODES_SSL=true" >> $K2_HOME/config/config.ini
 chown fabric.fabric $K2_HOME/.ssl/k2vws.key
