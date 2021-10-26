@@ -39,6 +39,10 @@ To create a new HTTP interface, do the following:
 <td>&nbsp;<strong>Authentication Type</strong></td>
 <td>Access authentication type. Default value = Basic.<br/>When selected displays additional properties that can be populated</td>
 </tr>
+<tr>
+<td>&nbsp;<strong>Test Connection Valid Status</strong></td>
+<td>List of http response codes that can pass successfully the test connection activity. e.g. 401,404. <br/> Added on release 6.5.3</td>
+</tr>
 </tbody>
 </table>
 
