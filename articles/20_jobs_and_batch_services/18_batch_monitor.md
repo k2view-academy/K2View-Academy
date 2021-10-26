@@ -55,6 +55,9 @@ This parameter can be modified during the execution time and defines the number 
 
 ### **Execution Time**
 
+This panel displays the information resulting from the execution of the [batch_summary](/articles/20_jobs_and_batch_services/12_batch_sync_commands.md#batch_summary) command.
+
+![image](images/32_jobs_and_batch_services_batchMonitor8.PNG)
 
 
 
