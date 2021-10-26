@@ -29,6 +29,8 @@ Tar and copy them to all  Fabric nodes in the cluster.
 2. Edit the $K2_HOME/config/jvm.options file using the appropriate passwords and certification files:
 
 ```bash
+sed -i "s@#SSL=false@SSL=true@" $K2_HOME/config/config.ini
+sed -i "s@#PORT=$.*@PORT=9142@" $K2_HOME/config/config.ini
 sed -i 's@#-Djavax.net.ssl.keyStore=.*@-Djavax.net.ssl.keyStore=$K2_HOME/.cassandra_ssl/cassandra.keystore@g' $K2_HOME/config/jvm.options
 sed -i 's@#-Djavax.net.ssl.keyStorePassword=.*@-Djavax.net.ssl.keyStorePassword=Q1w2e3r4t5@g' $K2_HOME/config/jvm.options
 sed -i 's@#-Djavax.net.ssl.trustStore=.*@-Djavax.net.ssl.trustStore=$K2_HOME/.cassandra_ssl/cassandra.truststore@g' $K2_HOME/config/jvm.options
