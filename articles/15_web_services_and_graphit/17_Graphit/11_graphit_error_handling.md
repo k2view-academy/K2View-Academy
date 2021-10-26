@@ -1,7 +1,7 @@
 # Graphit - Error Handling
 
 Once an ```error.graphit``` file is created on the project implementation, its execution is triggered each time an exception is returned as a result of a
-Fabric Web-Service call. 
+Fabric Web-Service call. (Important to note that if you have prepared a "catch" for the exception, there will be no trigger to execute the file). 
 
 The creation of a ```error.graphit``` file allows the implementors to set a standard payload reponse structure no matter what triggered the exception.
 
@@ -30,6 +30,8 @@ If the response is not a 404, it returns these original Web-Service details:
 - response status
 - exception error message
 - request header User-Agent
+
+In the figure below, you can see both of these responses: *404 not found* is shown in the upper half of the figure, and *any other response* (that is, if the response is not a 404), is shown in the lower half of the figure.  
 
 <img src="images/66_graphit_error_handling.png"></img>
 
