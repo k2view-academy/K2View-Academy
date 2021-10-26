@@ -94,8 +94,9 @@ By right-clicking on the ![image](images/28_jobs_and_batch_services_batchMonitor
 
 The summary of the execution of the batch process is shown on a per-node basis or across the Data Centers responsible for the execution of the process.
 
-![image](images/35_jobs_and_batch_services_batchMonitor11.PNG)
+![image](images/35_jobs_and_batch_services_batchMonitor11.png)
 
+![image](images/36_jobs_and_batch_services_batchMonitor12.png)
 
 
 
