@@ -9,6 +9,8 @@ For example, one trigger could be a ```page not found``` message caused by an ex
 
 The implementator has full flexibility to analyze the reason for the underlying failure that caused the trigger, and as such, set the Web-Service response body, header and status accordingly.
 
+This feature was added as a part of release 6.5.3.
+
 ### Example of error.graphit file
 
 The following ```error.graphit``` file checks the original Web-Service response status.
