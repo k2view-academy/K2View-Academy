@@ -5,7 +5,7 @@
 1. Run the following script on one of the Fabric nodes to generate the following key: ```k2vws.key```
 
 ~~~bash
-mkdir -p $K2_HOME/.ssl
+mkdir $K2_HOME/.ssl
 
 keytool -genkey -noprompt \
         -keyalg RSA \
@@ -37,12 +37,12 @@ mkdir -p $K2_HOME/.ssl && tar -zxvf k2vmws.tar.gz -C $K2_HOME/.ssl
 ```bash
 sed -i "s@WEB_SERVICE_CERT=@#WEB_SERVICE_CERT=@" $K2_HOME/config/config.ini
 sed -i "s@WEB_SERVICE_PORT=@#WEB_SERVICE_PORT=@" $K2_HOME/config/config.ini
-sed -i "s@#WEB_SERVICE_SECURE_PORT=443@WEB_SERVICE_SECURE_PORT=9443@" $K2_HOME/config/config.ini 
-sed -i "s@WEB_SERVICE_CERT=@#WEB_SERVICE_CERT=@" $K2_HOME/config/config.ini 
-sed -i "s@WEB_SERVICE_CERT_PASSPHRASE=@#WEB_SERVICE_CERT_PASSPHRASE=@" $K2_HOME/config/config.ini 
-sed -i '91s/.*/WEB_SERVICE_CERT=\/usr\/local\/k2view\/.ssl\/k2vws.key/g' $K2_HOME/config/config.ini
+sed -i "s@#WEB_SERVICE_SECURE_PORT=443@WEB_SERVICE_SECURE_PORT=9443@" $K2_HOME/config/config.ini
+sed -i "s@WEB_SERVICE_CERT=@#WEB_SERVICE_CERT=@" $K2_HOME/config/config.ini
+sed -i "s@WEB_SERVICE_CERT_PASSPHRASE=@#WEB_SERVICE_CERT_PASSPHRASE=@" $K2_HOME/config/config.ini
+sed -i "s@#WEB_SERVICE_CERT=.*@WEB_SERVICE_CERT=$K2_HOME/.ssl/k2vws.key@" $K2_HOME/config/config.ini
 sed -i '93s/.*/WEB_SERVICE_CERT_PASSPHRASE=Q1w2e3r4t5/g' $K2_HOME/config/config.ini
-echo "ENABLE_INTER_NODES_SSL=true" >> $K2_HOME/config/config.ini 
+echo "ENABLE_INTER_NODES_SSL=true" >> $K2_HOME/config/config.ini
 chown fabric.fabric $K2_HOME/.ssl/k2vws.key
 ```
 
