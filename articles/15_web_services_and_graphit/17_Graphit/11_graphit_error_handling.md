@@ -36,4 +36,4 @@ In the figure below, you can see both of these responses: *404 not found* is sho
 <img src="images/66_graphit_error_handling.png"></img>
 
 
-[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md)
+[![Previous](/articles/images/Previous.png)](/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md)
