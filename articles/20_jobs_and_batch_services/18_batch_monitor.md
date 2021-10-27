@@ -108,5 +108,5 @@ The summary of the execution of the batch process is shown on a per-node basis o
 
 
 
-
+[![Previous](/articles/images/Previous.png)](17_batch_process_flow.md)
 
