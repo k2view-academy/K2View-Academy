@@ -1,6 +1,6 @@
 # Batch Commands
 
-Note that all the following commands are implemented in the [Batch Monitor Dashboard](/articles/20_jobs_and_batch_services/18_batch_monitor.md).
+Note that all the following commands are also used and executed by the [Batch Monitor](/articles/20_jobs_and_batch_services/18_batch_monitor.md) dashboard to provide real-time visual insights on current or completed processes .
 
 The Fabric runtime environment enables the execution of the following sets of Batch commands:
 
