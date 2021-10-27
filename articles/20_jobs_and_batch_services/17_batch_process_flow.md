@@ -250,9 +250,11 @@ The illustration below shows the sequence of actions involved in this process.
 
 
 
+[![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/18_batch_monitor.md)
 
 
-[![Previous](/articles/images/Previous.png)](16_batch_CDC_commands.md)
+
+
 
 
 
