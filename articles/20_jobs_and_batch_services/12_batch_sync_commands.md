@@ -1,6 +1,8 @@
 # Batch Commands
 
-The Fabric runtime environment provides the following sets of Batch commands:
+Note that all the following commands are implemented in the [Batch Monitor Dashboard](/articles/20_jobs_and_batch_services/18_batch_monitor.md).
+
+The Fabric runtime environment enables the execution of the following sets of Batch commands:
 
 **Instances Migration**
 
