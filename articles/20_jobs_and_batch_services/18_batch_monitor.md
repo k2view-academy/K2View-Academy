@@ -2,7 +2,8 @@
 
 ## **Overview**  
 
-The batch monitoring dashboard has been added to Fabric version 6.5.2. It has been designed to provide a clear picture of all batch processes running across your Fabric servers at play. The dashboard delivers real time and historical insights such as performance or success/failure rates on per node, per entity or per status basis.  
+The batch monitoring dashboard has been added to Fabric version 6.5.2. It has been designed to provide a clear picture of all batch processes running across your Fabric servers at play. 
+The dashboard delivers real time and historical insights such as performance or success/failure rates on per node, per entity or per status basis.  
 
 The Batch Monitoring Dashboard can be accessed from Fabric's [Web Admin](/articles/30_web_framework/01_web_framework_overview.md) panel by doing the following steps:
 - Navigate to **Admin > Processes > Batch**,
