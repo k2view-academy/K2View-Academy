@@ -1,5 +1,4 @@
-![](../images/webinar_20211027.PNG)
-
+<img src="../images/webinar_20211027.PNG"  />
 
 
 ## Webinar Recording 
