@@ -1,4 +1,4 @@
-
+![](../images/webinar_20211027.PNG)
 ## Webinar Recording 
 
 [Click to watch the Webinar.](https://www.youtube.com/watch?v=sBgpmSd_mDo)
