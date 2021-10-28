@@ -2,11 +2,23 @@
 
 <img src="images/devComm.png" style="zoom: 67%;" />
 
-### Next DevCom Webinar is coming on October 27th!
+### Next DevCom Webinar is coming on December 14th!
 
-Stay tuned for the next Developer Community Webinar that will take place this upcoming fall! 
+Stay tuned for the next Developer Community Webinar that will take place just before the Holidays! 
 
 
+
+<!--block-->
+
+<img src="images/img1.png" style="zoom:80%;" />
+
+### K2View DevCom Webinar on October 27th
+
+The third K2View Development Community Webinar took place on October 27th where we introduced Fabric 7 and our latest TDM tool.
+
+[Read more >](webinar_20211027/20211027_Webinar_Agenda_And_Speakers.md)
+
+<!--block-->
 
 <!--block-->
 
