@@ -26,4 +26,4 @@
 - TDM 7 Overview and Architecture
 - Demo: Data provisioning using TDM 7 self-service 
 
-[Click here to download the TDM Presentation](TDMWebinarOctober211027.pdf)
+[Click here to download the TDM Presentation](TDMWebinar211027.pdf)
