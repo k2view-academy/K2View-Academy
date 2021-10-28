@@ -18,7 +18,7 @@
 - Journey from the Desktop application to a modern and full web-based Studio, enriched with VS Code IDE editing & debugging UX
 - Expedite implementation, Enhance productivity, Simplify operation with Fabric Cloud Platform
 - Exclusive demo
-[Click here to download the Fabric Web Studio presentation](WebStudioCommunityWebinarJul12th.pdf)
+[Click here to download the Fabric Web Studio presentation](WebStudioCommunityWebinar211027.pdf)
 
 **Spotlight on Test Data Management  (30 mins)**
 
