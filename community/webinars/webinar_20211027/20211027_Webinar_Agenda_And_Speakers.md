@@ -18,10 +18,12 @@
 - Journey from the Desktop application to a modern and full web-based Studio, enriched with VS Code IDE editing & debugging UX
 - Expedite implementation, Enhance productivity, Simplify operation with Fabric Cloud Platform
 - Exclusive demo
+
 [Click here to download the Fabric Web Studio presentation](WebStudioCommunityWebinar211027.pdf)
 
 **Spotlight on Test Data Management  (30 mins)**
 
 - TDM 7 Overview and Architecture
 - Demo: Data provisioning using TDM 7 self-service 
-[Click here to download the TDM Presentation](TDMWebinarOctober27th.pdf)
+
+[Click here to download the TDM Presentation](TDMWebinarOctober211027.pdf)
