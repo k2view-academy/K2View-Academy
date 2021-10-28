@@ -6,11 +6,10 @@
 
 Stay tuned for the next Developer Community Webinar that will take place just before the Holidays! 
 
-
+<img src="images/img1.png" style="zoom:80%;" />
 
 <!--block-->
 
-<img src="images/img1.png" style="zoom:80%;" />
 
 ### K2View DevCom Webinar on October 27th
 
@@ -22,7 +21,7 @@ The third K2View Development Community Webinar took place on October 27th where 
 
 <!--block-->
 
-<img src="images/img1.png" style="zoom:80%;" />
+
 
 ### K2View DevCom Webinar on July 12th
 
@@ -32,7 +31,7 @@ The second K2View Development Community Webinar took place on July 12th where we
 
 <!--block-->
 
-<img src="images/img7.png" style="zoom:80%;" />
+
 
 ### K2View DevCom Kickoff on May 27th
 
