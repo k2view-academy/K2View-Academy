@@ -4,11 +4,11 @@
 
 The batch monitoring dashboard has been added to Fabric version 6.5.2. 
 
-It has been designed to provide a clear picture of all batch processes running across your Fabric servers at play. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes on per node, per entity or per status basis.  
+It has been designed to provide a clear picture of all batch processes running across your Fabric servers during operation. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes per node, per entity or per status basis.  
 
 The Batch Monitoring Dashboard can be accessed from Fabric's [Web Admin](/articles/30_web_framework/01_web_framework_overview.md) panel by doing the following steps:
 - Navigate to **Admin > Processes > Batch**,
-- Select the ```...``` button in the first column of the batch processes table - ![image](images/28_jobs_and_batch_services_batchMonitor4.PNG)
+- Select the ```...``` button in the first column of the batch processes table ![image](images/30_jobs_and_batch_services_batchMonitor6.PNG),
 - Select the **Monitor** item of the *menu*. as illustrated in the picture below:
 
 ![image](images/25_jobs_and_batch_services_batchMonitor1.PNG)
@@ -26,7 +26,7 @@ The picture below shows how to create a new batch process or how to access a pre
 
 ## **Batch Monitor Dashboard** 
 
-Once you clicked on the **Monitor** item of the *menu*, the following dashboard will appear:
+Click on the **Monitor** item of the *menu*, and the following dashboard will appear:
 
 ![image](images/27_jobs_and_batch_services_batchMonitor3.PNG)
 
@@ -65,19 +65,19 @@ This panel displays the information resulting from the execution of the [batch_s
 
 ### **Entity Status Summary**
 
-This panel provides a pie-chart view of the status of the entities being processed. See the self-explanatory illustration below 
+This panel provides a pie-chart view of the status of the entities being processed. See the illustration below: 
 
 ![image](images/33_jobs_and_batch_services_batchMonitor9.PNG)
 
 
 ### **Entities Detailed Status**
 
-Entities are categorized in 3 different groups:
+Entities are categorized into 3 different groups:
 - Entities in process
 - Failed entities
 - Entities with the highest execution time
 
-This allows you to drill down on each instance execution and identify bottlenecks, issues or unexpected behaviors.
+This allows you to drill down on each instance's execution and identify bottlenecks, issues or unexpected behaviors.
 
 
 Each table shows the following details for each entity:
@@ -86,7 +86,7 @@ Each table shows the following details for each entity:
 - Process time in ms
 - Status
 
-By right-clicking on the ![image](images/28_jobs_and_batch_services_batchMonitor4.PNG) sign will redirect you to the table showing the details for the node that processed this specific entity.
+Right click on the ![image](images/28_jobs_and_batch_services_batchMonitor4.PNG) icon, and you will be redirected to the table showing the details for the node that processed this specific entity.
 
 
 ![image](images/34_jobs_and_batch_services_batchMonitor10.PNG)
