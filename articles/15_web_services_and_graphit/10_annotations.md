@@ -128,6 +128,7 @@ The following flags are used to set the web services formats:
 - [custom payload](/articles/15_web_services_and_graphit/02_web_services_properties.md#custom-payload) - in this case is set to true: ``` isCustomPayload = true``` 
 - [produce](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) - can be XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
 - [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) - brings the data response as is or not: e.g. ```isRaw = true```
+- [elevated permission](/articles/15_web_services_and_graphit/02_web_services_properties.md#elevated_permission) - inidicates if users permissions should be elevated to the web-service or not.
 
 #### @legacy
 Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.
