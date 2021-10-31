@@ -114,8 +114,8 @@ This flag must be set to True in the properties panel in order to be activated.
 </tr>
 <tr>
  <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
-<td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. default is set to False.</p>
-<br>It means if according to the API token a user can get instance 1 on LU A, he will not be able to do so also inside the Web-Service even if the user can execution the Web-Service
+<td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. Default is set to False.</p>
+<br>It means if according to users role permission he can not get instance 1 on LU A, he will not be able to do so also inside the Web-Service even if the user can execution the Web-Service.
 <br>Added for Fabric release 6.5.3</td>
 </tr>
 <tr>
