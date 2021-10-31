@@ -51,7 +51,15 @@ startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPU
 startjob GENERATE_BI NAME='Public/dev1_content' ARGS='{"OUTPUT_NAME":"dev1_content_24_10_21", "DESTINATION":"localFileSystem", "TYPE":"csv","FILTER":"{\"FilterText\":\"Dev1_content.created_by\",\"Operator\":0, \"Values\":[\"system\"] }"}';
 ~~~
 
-[Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://support.exagoinc.com/hc/en-us/articles/115003313988).
+**Example of GENERATE_BI Job with Sort** 
+
+~~~bash
+startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_sorted","DESTINATION":"ExerciseListener","TYPE":"csv","SORT":"{\"EntityName\":\"mig_summary_recon_8\",\"ColumnName\":\"bo_name\"}"}';
+~~~
+
+
+
+[Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/).
 
 ### Reports Generation Using "Deep Link"
 
