@@ -2,8 +2,8 @@
 
 Working with Fabric BI can be divided into three logical steps:
 
-1. Setup the BI (mostly one-time activities)
-2. Develop the BI
+1. Setup the BI (mostly one-time activities).
+2. Develop the BI.
 3. Deploy BI to PROD.
 
 To implement **Fabric BI** you must first install it and perform other one-time steps. Once the installation and configuration is complete, you can work with the **BI Designer** module. This module allows you to create and generate reports. When the reports are tested and ready for execution, they can be moved from a development into QA or Production environment.
@@ -33,7 +33,7 @@ The Fabric BI is based on ExagoBI. More information on how to create, design, an
 The procedures of moving the implementation between different environments are described below:
 
 * [Moving reports between Storage Management DBs](07_moving_reports_between_env.md).
-* [BI Configuration Deployment to Production](08_moving_from_dev_to_prod.md).
+* [BI Configuration Deployment to Production](08_moving_from_dev_to_prod.md) (currently not supported).
 
 
 
