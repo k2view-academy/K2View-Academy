@@ -7,29 +7,19 @@ discover and manipulate complex data types.
 
 There are a few other core capabilities that are important for a high-level of understanding of the Broadway system.
 
-
 ## Actor Input/Output Arguments
 
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="400pxl" valign="top">
-  <div>
-    <p>Actors can get their input from three different sources:</p>
-    <ul>
-      <li>The output of a previous Actor - the connecting lines between Actors.</li>
-      <li>A Constant value supplied by the user.</li>
-      <li>An input argument to the flow (external).</li>
-    </ul>
-<p>When the Actor executes, it is completely unaware of the source of its data.</p>
-<p>Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow.</p>
-<p>In the image, the JavaScript Actor obtains the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous Actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
-</div>
-</td>
-<td width="500pxl">
-<img src="images/input-output-arguments.png" width="400" />
-</td>
-</tr>
-</table>
+Actors can get their input from three different sources:
+
+* The output of a previous Actor - the connecting lines between Actors.
+* A Constant value supplied by the user.
+* An input argument to the flow (external).
+
+When the Actor executes, it is completely unaware of the source of its data. Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow. 
+
+In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, **b** is supplied as an external input to the flow and the result is exposed as external flow result.
+
+![image](images/input-output-args.PNG)
 
 [Click for more information about Actor's Inputs and Outputs](03_broadway_actor_window.md#actors-inputs-and-outputs).
 
