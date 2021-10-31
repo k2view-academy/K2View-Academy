@@ -2,7 +2,7 @@
 
 ### Overview
 
-To start creating business intelligence reports, you must set up the metadata by defining the data sources (such as Fabric or a PostgreSQL DB), as well as objects and joins in the **BI Admin**. This article explains how to do these tasks: 
+To start creating business intelligence reports, you must set up the metadata by defining the data sources and then its objects and joins in the **BI Admin**. This article explains how to do these tasks: 
 
 * Creation of [Data sources](03_Metadata_Setup.md#data-sources).
 * Creation of [Objects and Joins](03_Metadata_Setup.md#objects-and-joins). 
@@ -11,7 +11,13 @@ Note that each **data source** defined in the **BI Admin** must have a correspon
 
 ### Defining Data Sources
 
-You can use various types of data sources, such as relational databases (e.g. Oracle, MySQL, PostgreSQL), non-relational databased (e.g. MongoDB), DWH (e.g. Snowflake) or other types (e.g. XML files) in **Fabric BI**. Data sources are defined via the **BI Admin** module. 
+The following data sources types are supported:
+
+* Fabric
+* PostgreSQL
+* Oracle
+
+Data sources are defined via the **BI Admin** module. See below the detailed explanation how to define each one of the above data source types.
 
 **How Do I Define Fabric as a Data Source?**
 
@@ -40,11 +46,17 @@ If Fabric BI is running on a docker, it can be connected to a local Fabric. In t
 * One Fabric BI installation can accommodate several Fabric deployments by defining each deployment as a separate data source.  
 * Setting **AUTO_MDB_SCOPE=true** in a Fabric connection string is mandatory since it enables the implicit invocation of the Fabric GET command and allows querying the Logical Unit's data. [Click to get more information about AUTO_MDB_SCOPE setting.](/articles/02_fabric_architecture/04_fabric_commands.html)
 
-**How Do I Define PostgreSQL as a Data Source?**
+**How Do I Define PostgreSQL DB as a Data Source?**
 
 To set up a PostgreSQL database as a data source, use the Postgres-Connection template in the **BI Admin** module and update the connection string:
 
 ![image](images/bi_setup_postgres.PNG)
+
+**How Do I Define Oracle DB as a Data Source?**
+
+To set up an Oracle database as a data source, use the Oracle-Connection template in the **BI Admin** module and update the connection string:
+
+![image](images/bi_setup_oracle.PNG)
 
 ### Objects and Joins
 
