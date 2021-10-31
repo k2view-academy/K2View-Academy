@@ -95,6 +95,7 @@ The actions on the input parameters are:
 - Edit Schema, click to open the popup window where you can update the parameter's type.
 - Description, click to check the parameter's description. The description cannot be updated.
 - Remark,  click to add a remark. A remark can be modified.
+- Mandatory, click to set the input parameter mandatory.
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
