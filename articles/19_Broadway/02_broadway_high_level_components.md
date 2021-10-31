@@ -36,16 +36,16 @@ In addition Broadway has a robust type conversion system that automatically conv
 The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that leverage the known data structure.
 Broadway can learn the Schema by example. Just run the flow, and the metadata is automatically derived from the data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
 
-<div align="center"><img src="images/overview_schema.png" height=400px/></div>
+<img src="images/overview_schema.png" height=400px/>
 
 [Click for more information about the Broadway Data Editor and how you can edit the schema using it](27_broadway_data_inspection.md).
 
 ## Iterations
 
 A common pattern of execution is to perform an iterative operation on a data set. For instance, performing some data transformation on a database result-set or traversing a JSON array obtained from a REST API.
-The way Broadway deals with such cases is with the <strong>Iterate</strong> line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
+The way Broadway deals with such cases is with the **Iterate** line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
 
-<div align="center"><img src="images/overview_iterate.png" width="750"></div>
+<img src="images/overview_iterate.png" width="750">
 
 [Click for more information about iterations in Broadway](21_iterations.md).
 
@@ -54,7 +54,7 @@ The way Broadway deals with such cases is with the <strong>Iterate</strong> line
 When Stages are split, an Actor can be designated to decide if a specific fork in the flow will be performed. The Actor can be a simple logical operator or an entire flow. Based on the result, Broadway will decide if the flow should be executed.
 The *else* fork will be executed if none of the other splits were executed.
 
-<div align="center"><img src="images/overview_condition.png" height="350"></div>
+<img src="images/overview_condition.png" height="350">
 
 [Click for more information about Stage Conditions](19_broadway_flow_stages.md#what-is-a-stage-condition).
 
@@ -75,7 +75,7 @@ Transactions also take into account inner Broadway flows. If a Transactional Sta
 
 Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
 
-<div align="center"><img src="images/overview_error.png" height="200"></div>
+<img src="images/overview_error.png" height="200">
 
 [Click for more information about Error Handling](24_error_handling.md).
 
