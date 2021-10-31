@@ -47,8 +47,7 @@ To create a new HTTP interface, do the following:
 </table>
 
 
-
-##### Authentication Settings
+### Authentication Settings
 
 The Fabric HTTP Interface supports various standard authentication and authorization types (aka schemas) that can be used to access external protected resources. 
 
