@@ -113,7 +113,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 
 <tr>
 <td style="height: 18px; width: 174px;">Focus</td>
-<td style="height: 18px; width: 381px;">Starting from Fabric 6.5.3, collapse all Stages of the same column except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch’s Stages are collapsed too.</td>
+<td style="height: 18px; width: 381px;">Starting from Fabric 6.5.3, collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch’s Stages are collapsed too.</td>
 
 </tr>
 <tr>
