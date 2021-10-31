@@ -7,29 +7,19 @@ discover and manipulate complex data types.
 
 There are a few other core capabilities that are important for a high-level of understanding of the Broadway system.
 
-
 ## Actor Input/Output Arguments
 
-<table border="0" cellspacing="0" cellpadding="0">
-<tr>
-<td width="400pxl" valign="top">
-  <div>
-    <p>Actors can get their input from three different sources:</p>
-    <ul>
-      <li>The output of a previous Actor - the connecting lines between Actors.</li>
-      <li>A Constant value supplied by the user.</li>
-      <li>An input argument to the flow (external).</li>
-    </ul>
-<p>When the Actor executes, it is completely unaware of the source of its data.</p>
-<p>Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow.</p>
-<p>In the image, the JavaScript Actor obtains the <strong>script</strong> input as a constant input, <strong>a</strong> is supplied by connecting to a previous Actor, <strong>b</strong> is supplied as input to the entire flow (named externalNumber) and the result is exposed as <strong>flowResult</strong>.</p>
-</div>
-</td>
-<td width="500pxl">
-<img src="images/input-output-arguments.png" width="400" />
-</td>
-</tr>
-</table>
+Actors can get their input from three different sources:
+
+* The output of a previous Actor - the connecting lines between Actors.
+* A Constant value supplied by the user.
+* An input argument to the flow (external).
+
+When the Actor executes, it is completely unaware of the source of its data. Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow. 
+
+In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, **b** is supplied as an external input to the flow and the result is exposed as external flow result.
+
+![image](images/input-output-args.PNG)
 
 [Click for more information about Actor's Inputs and Outputs](03_broadway_actor_window.md#actors-inputs-and-outputs).
 
@@ -46,16 +36,16 @@ In addition Broadway has a robust type conversion system that automatically conv
 The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that leverage the known data structure.
 Broadway can learn the Schema by example. Just run the flow, and the metadata is automatically derived from the data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
 
-<div align="center"><img src="images/overview_schema.png" height=400px/></div>
+<img src="images/overview_schema.png" />
 
 [Click for more information about the Broadway Data Editor and how you can edit the schema using it](27_broadway_data_inspection.md).
 
 ## Iterations
 
 A common pattern of execution is to perform an iterative operation on a data set. For instance, performing some data transformation on a database result-set or traversing a JSON array obtained from a REST API.
-The way Broadway deals with such cases is with the <strong>Iterate</strong> line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
+The way Broadway deals with such cases is with the **Iterate** line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
 
-<div align="center"><img src="images/overview_iterate.png" width="750"></div>
+<img src="images/overview_iterate.png" >
 
 [Click for more information about iterations in Broadway](21_iterations.md).
 
@@ -64,7 +54,7 @@ The way Broadway deals with such cases is with the <strong>Iterate</strong> line
 When Stages are split, an Actor can be designated to decide if a specific fork in the flow will be performed. The Actor can be a simple logical operator or an entire flow. Based on the result, Broadway will decide if the flow should be executed.
 The *else* fork will be executed if none of the other splits were executed.
 
-<div align="center"><img src="images/overview_condition.png" height="350"></div>
+<img src="images/overview_condition.png">
 
 [Click for more information about Stage Conditions](19_broadway_flow_stages.md#what-is-a-stage-condition).
 
@@ -85,7 +75,7 @@ Transactions also take into account inner Broadway flows. If a Transactional Sta
 
 Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
 
-<div align="center"><img src="images/overview_error.png" height="200"></div>
+<img src="images/overview_error.png" >
 
 [Click for more information about Error Handling](24_error_handling.md).
 

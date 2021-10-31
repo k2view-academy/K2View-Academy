@@ -11,7 +11,21 @@ The implementator has full flexibility to analyze the reason for the underlying 
 
 This feature was added as a part of release 6.5.3.
 
-### Example of error.graphit file
+### Example 1 of a simple error.graphit file
+
+The following ```error.graphit``` file checks the original Web-Service response status.
+
+If the response is 404 (page not found) it returns these original Web-Service details:
+- response status
+- exception error message	
+- path
+
+and overrides the response with the following:		
+- response status: 500.
+
+<img src="images/67_graphit_error_handling_2.png"></img>
+
+### Example 2 of error.graphit file
 
 The following ```error.graphit``` file checks the original Web-Service response status.
 

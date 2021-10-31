@@ -17,4 +17,6 @@
 	<li><a href="/articles/20_jobs_and_batch_services/15_batch_broadway_commands.md">Broadway flows & Batches</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/16_batch_CDC_commands.md">CDC Republish & Batches</a></li>
 	<li><a href="/articles/20_jobs_and_batch_services/17_batch_process_flow.md">Batch Processes Flows</a></li>
+	<li><a href="/articles/20_jobs_and_batch_services/18_batch_monitor.md">Batch Processes Monitoring Dashboard</a></li>
+	
 </ul>
