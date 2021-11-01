@@ -113,17 +113,16 @@ The summary of the execution of the batch process is shown on a per-node basis o
 ![image](images/35_jobs_and_batch_services_batchMonitor11.png)
 
   - 
+      - Click each one of the DCs to open the **Nodes Execution Summary** window with the summary record on each node related to the selected DC:
 
-
-    - Click each one of the DCs to open the **Nodes Execution Summary** window with the summary record on each node related to the selected DC:
-
-      ![image](images/batch_nodes_execution_summary.png)
+![image](images/batch_nodes_execution_summary.png)
 
 - Node-centric report:
 
 ![image](images/36_jobs_and_batch_services_batchMonitor12.png)
 
  -   
+
        - Click each one of the nodes to open the **Nodes Execution Summary** window with the summary record on the selected node.
 
 
