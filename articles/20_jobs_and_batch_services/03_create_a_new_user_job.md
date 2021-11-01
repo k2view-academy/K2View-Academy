@@ -2,7 +2,7 @@
 
 Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
-## How Do I Create a New User Job?
+## How Do I Create a New User Job using Java code?
 
 ### Step 1  
 Go to the **Project Tree** > **LU** > **Java** > **Category** and right click **New Function** to display the **Function Editor** window.
@@ -111,8 +111,32 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 Right click the **LU** in the **Project Tree**, deploy and then search for the file in the **Fabric Home directory**.
 
 
+## How Do I Create a New User Job using the BroadwayJob actor ?
+
+In order to configure a new job using Broadway, use the broadwayJob actor purposely built to trigger a broadway flow using the Fabric Jobs capability.
+
+To achieve this, simply select the actor from the **Add Actors To Stage** menu from the Broadway Flow panel, as illustrated below:
+
+<img src="/articles/20_jobs_and_batch_services/images/37_jobs_and_batch_services_broadwayJobActor1.PNG">
 
 
+The following parameters are to be filled in the properties tab:
+- Name: The name of the flow to be triggered by this actor. 
+- UID: The unique ID for this job.
+
+Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
+
+- Schedule: the execution frequency of the job, which can be either one of the following:
+-- Immediate
+-- Interval
+-- Date/Time
+-- CRON schedule
+
+- Affinity: this sets which node/DC name IP address is to be used to run the Broadway job.
+
+- Params: This refers to the arguments that can be parsed to the Broadway flow. For example, multiple parameters can be parsed as a key/value object from an external link.
+ 
+Please refer to this [article](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) in order to learn how to setup the schedule type and the affinity appropriately.
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)
 
