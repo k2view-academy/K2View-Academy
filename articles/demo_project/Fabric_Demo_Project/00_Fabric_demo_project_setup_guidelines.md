@@ -1,6 +1,6 @@
 # FABRIC DEMO PROJECT 
 
-The Fabric Knowledge Base project includes a set of Logical Units, code examples and objects that are used in all Knowledge Base articles and Learning Items. It uses four SQLite databases as the data source. 
+The Fabric Knowledge Base project includes a set of Logical Units, code examples and objects that are used in all Knowledge Base articles and Learning Items. It uses four SQLite databases as the data source. Follow the below steps to setup the demo project on your local Fabric.
 
 ## Setup Steps
 
@@ -30,4 +30,8 @@ To setup the project and connect the databases, do the following:
     [Click for more information about DB Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 
 
+## BI Configuration and Setup
 
+To setup the BI and generate the example reports and dashboards using the demo project data, do the following:
+
+1. ​
