@@ -33,7 +33,7 @@ The Fabric BI is based on ExagoBI. More information on how to create, design, an
 The procedures of moving the implementation between different environments are described below:
 
 * [Moving reports between Storage Management DBs](07_moving_reports_between_env.md).
-* [BI Configuration Deployment to Production](08_moving_from_dev_to_prod.md) (currently not supported).
+* [BI Configuration Deployment to Production](08_moving_from_dev_to_prod.md).
 
 
 
