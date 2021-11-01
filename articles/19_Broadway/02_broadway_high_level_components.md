@@ -73,7 +73,7 @@ Transactions also take into account inner Broadway flows. If a Transactional Sta
 
 ## Error Handling
 
-Every Stage can be assigned an error handler. The error handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
+Every Stage can be assigned an error handler. The Error Handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
 
 <img src="images/overview_error.png" >
 
