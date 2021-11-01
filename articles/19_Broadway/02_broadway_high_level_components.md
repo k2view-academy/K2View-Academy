@@ -36,7 +36,7 @@ In addition Broadway has a robust type conversion system that automatically conv
 The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that leverage the known data structure.
 Broadway can learn the Schema by example. Just run the flow, and the metadata is automatically derived from the data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
 
-<img src="images/overview_edit_schema.png" />
+<img src="images/overview_edit_schema.PNG" />
 
 [Click for more information about the Broadway Data Editor and how you can edit the schema using it](27_broadway_data_inspection.md).
 
