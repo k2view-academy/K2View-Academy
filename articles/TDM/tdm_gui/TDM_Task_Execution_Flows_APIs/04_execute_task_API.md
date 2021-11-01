@@ -95,7 +95,10 @@ http://localhost:3213/api/task/55/forced/true/startTask
 	"taskGlobals": {
 	"MASKING_FLAG": "0",
 	"Customer.Global2": "value2"
-	}
+	"Customer.CUST_DETAILS": "'{\"name\":\"John\", \"age\":30, \"car\":null}'" 
+	},
+	"numberOfEntities": 14 
+	
 }
 ```
 
