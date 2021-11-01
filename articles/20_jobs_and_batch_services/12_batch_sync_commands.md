@@ -389,8 +389,20 @@ Note that the filter supports regex.
    <p>BATCH_LIST STATUS='ALL' FILTER='sync_instance';  list the history of all batch processes. This command returns the same results as the migrate_list STATUS = ‘ALL’; command.</p>
 </td>
 </tr> 
+<tr>
+<td valign="top" width="300pxl">
+<h6>BATCH_INFO '&ltbatch_id&gt'</h6>
 
+</td>
+<td valign="top" width="400pxl">
 
+<p>Returns the general information of the batch process such as the batch command, Fabric command, LU name, Environment...
+</p>
+</td>
+<td valign="top" width="300pxl">
+<p>BATCH_INFO '35408af6-b26a-4243-bc95-f114335bfa5e'</p>
+</td>
+</tr> 
 <tr>
 <td valign="top" width="300pxl">
 <h6>BATCH_SUMMARY '&ltbatch_id&gt'</h6>
