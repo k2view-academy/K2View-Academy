@@ -1,37 +1,33 @@
-# **Fabric Batch Monitoring Panel**
+# **Fabric Batch Monitoring Window**
 
 ## **Overview**  
 
-The batch monitoring dashboard has been added to Fabric version 6.5.2. 
+The batch monitoring window has been added to Fabric version 6.5.3. 
 
-It has been designed to provide a clear picture of all batch processes running across your Fabric servers during operation. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes per node, per entity or per status basis.  
+It has been designed to enabe the user to monitor the execution and get a detailed information of a given batch process. In addition it enable the user to edit the maximum number of workers and stop a runnign batch process or resume a pasued batch execution. It delivers real-time and historical insights such as the performance or the success/failure rates of the processes per node, per entity or per status basis.  
 
-The Batch Monitoring Dashboard can be accessed from Fabric's [Web Admin](/articles/30_web_framework/01_web_framework_overview.md) panel by doing the following steps:
-- Navigate to **Admin > Processes > Batch**,
-- Select the ```...``` button in the first column of the batch processes table ![image](images/30_jobs_and_batch_services_batchMonitor6.PNG),
-- Select the **Monitor** item of the *menu*. as illustrated in the picture below:
-
-![image](images/25_jobs_and_batch_services_batchMonitor1.PNG)
-
-
-You will need to ensure that a batch processes is being executed or has been previously executed. 
-The picture below shows how to create a new batch process or how to access a previously executed batch process.
-
+## **Batches Window**  
+This window displays the list of batch processes in Fabric based on the filter criteria. In addition it enables to start a new batch process to sync entities to a selected LU. 
 
 ![image](images/26_jobs_and_batch_services_batchMonitor2.PNG)
 
+Go to the batch list winfow: navigate to **Admin > Processes > Batch** to open the batch process.
 
+Each batch process has its own record. Select the ```...``` button in the left side of each record and select **monitor** option to open the Batch Monitor window on the selected batch process:
 
+![image](images/25_jobs_and_batch_services_batchMonitor1.PNG)
 
+The Batches window also enables to cancel, pause or resume a selected batch process. Note that a cancelled batch cannot be resumed.
 
-## **Batch Monitor Dashboard** 
+## **Batch Monitor Window** 
 
-Click on the **Monitor** item of the *menu*, and the following dashboard will appear:
+The Batch Monitoring window can be accessed from Fabric's [Web Admin](/articles/30_web_framework/01_web_framework_overview.md) Batches window: 
+
 
 ![image](images/27_jobs_and_batch_services_batchMonitor3.PNG)
 
 
-### **Batch Monitor**
+### **Batch Monitor Control Pannel**
 
 The batch Monitor Control banner allows you to cancel, pause and resume the batch process currently in focus. 
 It provides a progress bar that indicates the number of entities already processed and the number of entities yet to be processed.
