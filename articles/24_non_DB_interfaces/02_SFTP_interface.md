@@ -80,7 +80,8 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
 ### Using the InterfaceListener Actor 
 
-The Interface Listener actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another broadway flow upon arrival of a new file on the interface.
+The *Interface Listener* actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another broadway flow upon arrival of a new file on the interface.
+
 
 To create an interface listener job from a broadway flow, simply chose the **interfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
 
