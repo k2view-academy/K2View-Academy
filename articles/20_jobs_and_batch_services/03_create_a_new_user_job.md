@@ -121,16 +121,16 @@ To achieve this, simply select the actor from the **Add Actors To Stage** menu f
 
 
 The following parameters are to be filled in the properties tab:
-- Name: The name of the flow to be triggered by this actor. 
-- UID: The unique ID for this job.
+- Name: name of the flow to be triggered by this actor. 
+- UID: unique ID for this job.
 
 Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
 
 - Schedule: the execution frequency of the job, which can be either one of the following:
--- Immediate
--- Interval
--- Date/Time
--- CRON schedule
+	- Immediate
+	- Interval
+	- Date/Time
+	- CRON schedule
 
 - Affinity: this sets which node/DC name IP address is to be used to run the Broadway job.
 
