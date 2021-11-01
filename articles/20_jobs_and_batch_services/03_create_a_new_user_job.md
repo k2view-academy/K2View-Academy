@@ -115,7 +115,7 @@ Right click the **LU** in the **Project Tree**, deploy and then search for the f
 
 In order to configure a new Broadway job from Broadway, the *broadwayJob* actor provides the way to trigger a Fabric job that will in turn execute a broadway flow.
 
-To achieve this, simply select the actor from the **Add Actors To Stage** menu from the Broadway Flow panel, as illustrated below:
+To achieve this, simply select the actor from the **Add Actors To Stage** menu in the Broadway Flow panel, as illustrated below:
 
 <img src="/articles/20_jobs_and_batch_services/images/37_jobs_and_batch_services_broadwayJobActor1.PNG">
 
