@@ -2,15 +2,15 @@
 
 ### Overview
 
-**WebReports.XML** is the main Fabric BI configuration file which stores all the BI configurations, including  some sensitive data, such as the connection strings of the data sources. When the **BI Admin** is updated by the user, the **WebReports.XML** file is updated and the encrypted **WebReports.XML.enc** file is created in the same location on Fabric BI server.
+**WebReports.XML** is the main BI configuration file which stores all the BI configurations, including  some sensitive data, such as the connection strings of the data sources. When updates in the **Admin** module are carried out by the user, the **WebReports.XML** file is updated and the encrypted **WebReports.XML.enc** file is created in the same location on the BI server.
 
-To prevent access to sensitive information in Production environment, the user access to **BI Admin** module should be restricted and the **WebReports.XML** file should be removed, keeping the encrypted file only.
+To prevent access to sensitive information in a Production environment, the user access to the **Admin** module should be restricted and the **WebReports.XML** file should be removed, keeping the encrypted file only.
 
-### How Do I Restrict the Access to BI Admin Module?
+### How Do I Restrict the Access to the Admin Module?
 
-Restrict the access to **BI Admin** either by:
+Restrict the access to the **Admin** by doing one of the following:
 
-* Running the [REVOKE command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#additional-commands)
+* Run the [REVOKE command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#additional-commands)
 
   Or
 
