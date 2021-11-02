@@ -4,7 +4,7 @@ Once an ```error.graphit``` file is created on the project implementation, its e
 Fabric Web-Service call. (Important to note that if you have prepared a "catch" for the exception, there will be no trigger to execute the file). 
 
 The creation of a ```error.graphit``` file allows the implementors to set a standard payload response structure to any exception, regardless of the cause.
-The payload structure can be JSON or XML depending on the original Web-Service call requested format. In case of CSV format ```error.graphit``` file will not be triggered.
+The payload structure can be in JSON or XML format, depending on the original Web-Service call requested format. In case of CSV format ```error.graphit``` file will not be triggered.
 
 For example, one trigger could be a ```page not found``` message caused by an external client calling a Web-Service that was not deployed. A different example of a trigger can be the provisioning of an invalid APIKEY in the request, etc..
 
