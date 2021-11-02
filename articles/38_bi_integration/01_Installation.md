@@ -4,7 +4,7 @@ The installation and configuration of Fabric's **BI** includes the following ste
 
 - [Installation](01_Installation.md#installation) - Fabric's BI is based on ExagoBI, so you must install the ExagoBI server and the Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Configure parameters in the Fabric config.ini file.
-- [Project Initialization with Fabric BI](01_Installation.md#Project-Initialization-in-BI). 
+- [Project Initialization with BI](01_Installation.md#Project-Initialization-in-BI). 
 
 ### Installation
 
@@ -15,7 +15,7 @@ The installation and configuration of Fabric's **BI** includes the following ste
 
 **Installation Recommendations**
 
-- Have 3 separate BI (that is, ExagoBI) installations - one each for Dev, QA and Production environments.
+- Have 3 separate BI installations - one each for Dev, QA and Production environments.
 
   - Linux installation is required for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
