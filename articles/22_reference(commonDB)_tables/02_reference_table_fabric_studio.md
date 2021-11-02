@@ -68,6 +68,7 @@ Additional properties can be defined in the **Table Properties** panel in the ri
 
 - Name, can be defined or modified.
 - Primary Key column, ensures uniqueness of records.
+- Schema, the name of the common DB in which this table will be stored. If left empty, the table will be added to the generic commonDB schema
 - Column collation type:
   - BINARY, compares string data regardless of text encoding.
   - NOCASE, folds upper case characters to their lower case equivalents.
