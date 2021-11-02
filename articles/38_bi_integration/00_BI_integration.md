@@ -19,7 +19,11 @@ The **BI** application includes the following modules:
   * Create various types of reports and dashboards. 
   * Generate the reports / dashboards and download the extract files.
 
-  Note that the reports can also be generated from Fabric user code. The way to do it is described at this [link](05_report_creation_guidelines.md). 
+Notes: 
+
+Only users with admin privileges can access the **Admin** module. Such users will see an **Admin** and **Designer** tab on the top left of the interface of the BI. Clicking one of these tabs will cause the relevant module's functionality to be displayed in the main window of the BI. Users that do not have admin privileges can only use the **Designer** module. Such users will not see these tabs on the top left of the interface, and as such, will only see the functionality of the **Designer** module in the main window. 
+ 
+Reports can also be generated from Fabric user code. The way to do it is described at this [link](05_report_creation_guidelines.md). 
 
 
 [<img align="right" width="60" height="54" src="/articles/images/Next.png">](00_BI_user_guide_overview.md) 
