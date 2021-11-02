@@ -1,8 +1,8 @@
 # Installation and Configuration
 
-The installation and configuration of Fabric BI includes the following steps:
+The installation and configuration of Fabric's **BI** includes the following steps:
 
-- [Installation](01_Installation.md#installation) - Fabric BI is based on ExagoBI, so you must install the ExagoBI server and the Storage Management DB.
+- [Installation](01_Installation.md#installation) - Fabric's BI is based on ExagoBI, so you must install the ExagoBI server and the Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Configure parameters in the Fabric config.ini file.
 - [Project Initialization with Fabric BI](01_Installation.md#Project-Initialization-in-BI). 
 
@@ -15,7 +15,7 @@ The installation and configuration of Fabric BI includes the following steps:
 
 **Installation Recommendations**
 
-- Have 3 separate Fabrice BI (that is, ExagoBI) installations - one each for Dev, QA and Production environments.
+- Have 3 separate BI (that is, ExagoBI) installations - one each for Dev, QA and Production environments.
 
   - Linux installation is required for UAT / Production environments.
   - Installation on Windows (as a docker) can be done for development or demo purposes.
@@ -28,7 +28,7 @@ The installation and configuration of Fabric BI includes the following steps:
 
 ### Configuration
 
-The Fabric BI solution uses the Fabric **config.ini** to retrieve information about the BI host and port and the Storage Management DB connection details.
+The BI solution uses the Fabric **config.ini** to retrieve information about the BI host and port and the Storage Management DB connection details.
 
 Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
@@ -42,7 +42,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several implementers. For example, set TABLE_PREFIX=dev1_. Once the table prefix is set, the default tables are created in the Storage Management DB and are used each time you connect to Fabric BI. 
 * **BI_REST_KEY**, a key to be used to authenticate REST requests from the Fabric server to Fabric BI. You can use the default value during the development, however it is important to update it prior to moving the project to Production. [Click to get the explanation about how to update the REST key](99_bi_admin_config.md#REST-Key). 
 
-**Important**: the **BI Admin** module has a Storage Management page which displays the default settings. These settings are not applicable in the Fabric BI solution, since Fabric retrieves the Storage Management connection details from the **config.ini**.
+**Important**: the **Admin** module of BI has a Storage Management page which displays the default settings. These settings are not applicable in the BI solution, since Fabric retrieves the Storage Management connection details from the **config.ini**.
 
 ~~~
 [bi]
@@ -67,11 +67,11 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 ## BI REST key
 #BI_REST_KEY=1234
 ~~~
-### Project Initialization with Fabric BI
+### Project Initialization with BI
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
-Now any user accessing this project has the default read-only access to the project's reports within the BI Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do this. 
+Now any user accessing this project has the default read-only access to the project's reports within the Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do this. 
 
 ​
 
