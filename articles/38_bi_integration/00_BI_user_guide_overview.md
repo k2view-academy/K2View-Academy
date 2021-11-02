@@ -14,7 +14,7 @@ This user guide provides the step-by-step description of how to set up **Fabric 
 
 * [Installation and Configuration](01_Installation.md).
 * [Permissions setup](02_Permissions_Setup.md).
-* [Metadata setup](03_Metadata_Setup) using the **BI Admin** module under in **Web Framework > BI**.
+* [Metadata setup](03_Metadata_Setup.md) using the **BI Admin** module under in **Web Framework > BI**.
 * [Parameters definition](04_parameters.md) using the **BI Admin** module under in **Web Framework > BI**.
 
 ### Step 2 - Develop BI
