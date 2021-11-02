@@ -67,7 +67,6 @@ Additional properties can be defined in the **Table Properties** panel in the ri
 #### Main Properties
 
 - Name, can be defined or modified.
-- Primary Key column, ensures uniqueness of records.
 - Schema, the name of the common DB in which this table will be stored. If left empty, the table will be added to the generic [commonDB schema](/articles/22_reference%28commonDB%29_tables/04_fabric_commonDB_sync.md#overview). In the illustration below the reference table *ref_geoCodeUSA* is attached to the *extraRefDB* schema. 
 - Column collation type:
   - BINARY, compares string data regardless of text encoding.
