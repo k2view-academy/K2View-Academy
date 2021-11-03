@@ -40,7 +40,7 @@ if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
 }
 ```
 
-### XmlParser and XmlParserLegacy
+### XmlParser and XmlParserLegacy Actors
 
 **XmlParser** Actor, analyzes an input stream and outputs the objects found in the stream. 
 
