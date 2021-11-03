@@ -1,6 +1,6 @@
 # Installation and Configuration
 
-The installation and configuration of Fabric's **BI** includes the following steps:
+The installation and configuration of Fabric's BI includes the following steps:
 
 - [Installation](01_Installation.md#installation) - Fabric's BI is based on ExagoBI, so you must install the ExagoBI server and the Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Configure parameters in the Fabric config.ini file.
@@ -42,7 +42,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 * **TABLE_PREFIX**, the Storage Management DB table prefix. Should be populated when you want to re-use the same Storage Management DB for several implementers. For example, set TABLE_PREFIX=dev1_. Once the table prefix is set, the default tables are created in the Storage Management DB and are used each time you connect to Fabric BI. 
 * **BI_REST_KEY**, a key to be used to authenticate REST requests from the Fabric server to Fabric BI. You can use the default value during the development, however it is important to update it prior to moving the project to Production. [Click to get the explanation about how to update the REST key](99_bi_admin_config.md#REST-Key). 
 
-**Important**: the **Admin** module of BI has a Storage Management page which displays the default settings. These settings are not applicable in the BI solution, since Fabric retrieves the Storage Management connection details from the **config.ini**.
+**Important**: the **Admin** module of **BI** has a Storage Management page which displays the default settings. These settings are not applicable in the BI solution, since Fabric retrieves the Storage Management connection details from the **config.ini**.
 
 ~~~
 [bi]
@@ -71,7 +71,7 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
-Note that full Deploy must be performed rather than [Soft Deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md). To check whether Soft Deploy was activated in the Fabric Studio and remove it, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.html#what-is-the-purpose-of-the-server-configuration-tab) window and uncheck the Soft Deploy checkbox.
+Note that full Deploy must be performed rather than [Soft Deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md). To deactivate Soft Deploy if it was activated in the Fabric Studio, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.html#what-is-the-purpose-of-the-server-configuration-tab) window and uncheck the Soft Deploy checkbox.
 
 Now any user accessing this project has the default read-only access to the project's reports within the Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do this. 
 

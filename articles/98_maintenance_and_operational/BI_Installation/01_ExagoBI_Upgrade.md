@@ -1,9 +1,9 @@
 # ExagoBI Upgrade
 
-ExagoBI periodically released new versions. The following article describes the process of the ExagoBi upgrade for the existing BI implementation.
+ExagoBI periodically released new versions. The following article describes the process of the ExagoBI upgrade for the existing BI implementation.
 
 ## Prerequisites
-Working installation of ExagoBi in previous version
+Working installation of ExagoBI previous version.
 
 ## Upgrading on Linux
 
@@ -38,7 +38,7 @@ docker cp exago:/opt/apps/exago/Config/WebReports.xml /file/location/
 
 where **exago** is the docker name (you can define a different name if needed).
 
-2. stop & delete the existing container 
+2. Stop & delete the existing container.
 
 3. Download the Updated Docker image (TBD) from [here](https://TBD).
 
@@ -52,13 +52,11 @@ where **exago** is the docker name (you can define a different name if needed).
    ~~~bash
    docker run -d --privileged=true -p 80:80 -p 443:443 --name=exago k2view/exago_ssl:v2021.1.11.220
    ~~~
-   
-6. restore the backuped configuration XML file.
+
+6. Restore the backed up configuration XML file.
 
 ~~~bash
 docker cp /file/location/WebReports.xml exago:/opt/apps/exago/Config/
 ~~~
 
 where **exago** is the docker name (you can define a different name if needed). 
-  
-   where **exago** is the docker name (you can define a different name if needed).

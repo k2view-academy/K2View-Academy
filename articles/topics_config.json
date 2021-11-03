@@ -248,6 +248,10 @@
 				{
 					"display name": "Data Explorer",
 					"value": "36_data_editor"
+				},
+				{
+					"display name": "BI",
+					"value": "38_bi_integration"
 				}
 			]
 		},
