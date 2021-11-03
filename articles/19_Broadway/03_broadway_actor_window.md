@@ -92,9 +92,30 @@ The population of the input parameter depends on the **Population Type**. The fo
 
 The actions on the input parameters are:
 - Default value, set a default value for an input parameter (for **Link** and **External** population types). Broadway enables populating a value that matches the parameters type. For example: when the parameter is Integer, Broadway only enables inserting numbers into this parameter.
+
 - Edit Schema, click to open the popup window where you can update the parameter's type.
+
 - Description, click to check the parameter's description. The description cannot be updated.
+
 - Remark,  click to add a remark. A remark can be modified.
+
+- Mandatory, click to set the input parameter mandatory (starting Fabric 6.5.3). This indication can be  used by external systems that are calling the **LIST BF** command in a context of a specific flow.
+
+  **Syntax**: 
+    ~~~~
+	LIST BF LU_NAME=<'LU Name'> FLOW=<'BF FLOW'>;
+    ~~~~
+  
+  **Example**:
+    ~~~~
+        fabric>list bf lu_name='Customer' flow='broadwayOverview';
+
+        |param|name  |type|schema|mandatory|isDefault|
+        +-----+------+----+------+---------+---------+
+        |input|params|any |{}    |false    |false    |
+    ~~~~
+
+  ​
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 

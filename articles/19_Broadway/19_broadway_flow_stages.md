@@ -17,7 +17,13 @@ A Stage can be added anywhere in the flow.
 
 ![Flow-Plus Icon](images/99_18_01_main_flow_area.PNG)
 - To add a Stage in the middle of the flow, click ![image](images/99_19_dots.PNG) in the right corner of the Stage to open the [Stage context menu](18_broadway_flow_window.md#stage-context-menu) and select either **Insert After** or **Insert Before**.
-- To delete a Stage, click **Delete** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). If the Stage has a dependent branch, it is also deleted.
+
+- To delete a Stage, click **Delete** in the [Stage context menu](18_broadway_flow_window.md#stage-context-menu). 
+
+  - If the Stage has a dependent branch, it is also deleted.
+  - Starting from Fabric 6.5.3, the dependent branch is marked with red color and the confirmation message is displayed on top of the flow window. This is in order to allow the user to verify whether the Delete result is what he/she expected.
+
+  ![Flow-Plus Icon](images/99_19_delete_branch.PNG)
 
 ### How Do I Split or Merge the Stages?
 

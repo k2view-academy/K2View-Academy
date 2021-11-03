@@ -25,7 +25,7 @@ If the **header** input argument is set to True, the Actor uses the first row as
 
 Parsers are usually followed by an iteration that allow iterating over each row in the parser's output object consecutively.
 
-### Parser Flow Example
+**CsvParser Flow Example**
 
 The following example shows how to read and parse a CSV file which includes a list of countries and their area codes, to find an area code of a specific country provided as external input argument. 
 
@@ -40,6 +40,171 @@ if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
 }
 ```
 
+### XmlParser and XmlParserLegacy Actors
+
+**XmlParser** Actor, analyzes an input stream and outputs the objects found in the stream. 
+
+Starting Fabric 6.5.3, there are two Actors:
+
+* The existing **XmlParser** Actor is renamed to **XMLParserLegacy** and it supports parsing an XML with a list of objects only, without attributes.
+* The new **XMLParser** supports parsing an XML with a list of objects that can include attributes. Example of XML that can be parsed by **XmlParser** Actor is:
+
+~~~xml
+<office name="New York">
+	<user id="1" name="John" last_name="Wick">
+    	<room>123</room>
+        <phone_number>987654321</phone_number>
+        <phone_number>123456789</phone_number>
+    </user>
+    <user id="2" name="Alice" last_name="Liddell">
+        <room>wonderland</room>
+        <phone_number>3334445555</phone_number>
+        <phone_number>7776667777</phone_number>
+    </user>
+</office>
+~~~
+
+The enhanced functionality of the **XMLParser** Actor is that it enables setting an object name to the parsed XML elements and parsed attributes using its new input arguments **valueField** and **attributesField**.
+
+* The input arguments **valueField** and **attributesField** have default values that can be changed or set to **null**.
+* There can be four combinations of setting the input arguments  **valueField** and **attributesField**. 
+  * Both **valueField** and **attributesField** have values, either the default values ('_value' and '__attributes') or the updated ones.
+  * One of the arguments have a value while another one is empty.
+  * Both of the arguments are empty.
+* As a result of this setting, there can be four different structures of the output object.
+* When an XML includes an element with attributes and a primitive value (not a nested XML element), setting **valueField** to **null** (empty value) is not supported.
+
+**Example of a parsed object when valueField = '_value' and attributesField = '__attributes'**
+
+~~~javascript
+{
+    "office": {
+        "_attributes": {
+            "name": "New York"
+        },
+        "_value": {
+            "user": [{
+                    "_attributes": {
+                        "name": "John",
+                        "last_name": "Wick",
+                        "id": "1"
+                    },
+                    "_value": {
+                        "room": {
+                            "_value": "123"
+                        },
+                        "phone_number": [{
+                                "_value": "987654321"
+                            }, {
+                                "_value": "123456789"
+                            }
+                        ]
+                    }
+                }, {
+                  "_attributes": {
+                        "name": "Alice",
+                        "last_name": "Liddell",
+                        "id": "2"
+                    },  
+                    "_value": {
+                        "room": {
+                            "_value": "wonderland"
+                        },
+                        "phone_number": [{
+                                "_value": "3334445555"
+                            }, {
+                                "_value": "7776667777"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+} 
+~~~
+
+**Example of a parsed object when valueField = '_value' and attributesField is empty**
+
+~~~javascript
+{
+  "office": {
+    "name": "New York",
+    "_value": {
+      "user": [
+        {
+          "name": "John",
+          "last_name": "Wick",
+          "id": "1",
+          "_value": {
+            "room": {
+              "_value": "123"
+            },
+            "phone_number": [
+              {
+                "_value": "987654321"
+              },
+              {
+                "_value": "123456789"
+              }
+            ]
+          }
+        },
+        {
+          "name": "Alice",
+          "last_name": "Liddell",
+          "id": "2",
+          "_value": {
+            "room": {
+              "_value": "wonderland"
+            },
+            "phone_number": [
+              {
+                "_value": "3334445555"
+              },
+              {
+                "_value": "7776667777"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+~~~
+
+**Example of a parsed object when both valueField and attributesField are empty**
+
+~~~javascript
+{
+  "name": "New York",
+  "office": {
+    "name": "John",
+    "last_name": "Wick",
+    "id": "1",
+    "user": [
+      {
+        "room": "123",
+        "phone_number": [
+          "987654321",
+          "123456789"
+        ]
+      },
+      {
+        "room": "wonderland",
+        "phone_number": [
+          "3334445555",
+          "7776667777"
+        ]
+      }
+    ]
+  }
+}
+~~~
+
+
+
 ### Other Supported Parsers
 
 Additional parsers supported by Broadway are:
@@ -47,7 +212,6 @@ Additional parsers supported by Broadway are:
 * **Base64Decode** / **Base64Encode** Actor, analyzes an input and outputs it as an encoded string or a decoded buffer.
 * **FixedColumnParser** Actor, traverses an incoming stream and for each line parses the columns using their fixed position in the line.
 * **LinesParser** Actor, traverses an incoming stream and outputs individual lines.
-* **XmlParser** Actor, analyzes an input stream and outputs the objects found in the stream.
 
 The Actor's description includes the detailed explanation of the Actor's capabilities. Click ![image](../images/99_19_dots.PNG) in the right corner of the Actor to open the [Actor's context menu](../18_broadway_flow_window.md#actors-context-menu) and select **Description** to view it.
 

@@ -100,7 +100,7 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <table style="width: 900px;">
 <tbody>
 <tr>
-<td rowspan="15" width="360pxl">
+<td rowspan="16" width="360pxl">
 <p><img src="images/99_18_02_stage_menu_up.PNG" alt="Stage context menu" /></p>
 </td>
 <td width="120pxl">Paste Selection</td>
@@ -109,6 +109,12 @@ To open the Stage context menu, click ![image](images/99_19_dots.PNG) in the rig
 <tr>
 <td style="height: 18px; width: 174px;">Collapse</td>
 <td style="height: 18px; width: 381px;">Collapse the Stage.</td>
+</tr>
+
+<tr>
+<td style="height: 18px; width: 174px;">Focus</td>
+<td style="height: 18px; width: 381px;">Starting from Fabric 6.5.3, collapse all Stages of the same level except the selected one. When one of the collapsed Stages is a part of a branch, the respective branch’s Stages are collapsed too.</td>
+
 </tr>
 <tr>
 <td style="height: 18px; width: 174px;"><a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert After</a> / <a href="19_broadway_flow_stages.md#how-do-i-add-or-delete-a-stage ">Insert Before</a></td>
@@ -187,14 +193,6 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <td style="width: 465px;">Copy the selected Actor.</td>
 </tr>
 <tr>
-<td width="200">Disable Actor</td>
-<td style="width: 465px;">Click to disable / enable the Actor in the flow.</td>
-</tr>
-<tr>
-<td width="200">Delete Actor</td>
-<td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
-</tr>
-<tr>
 <td width="200"><a href="07_broadway_flow_linking_actors.md">Link</a></td>
 <td style="width: 465px;">Click to connect the selected Actor and the required target Actor.</td>
 </tr>
@@ -212,6 +210,16 @@ To open the Actor's context menu, click ![image](images/99_19_dots.PNG) in the r
 <p>Click to reset the Actor's state on the inner loop start (zero iteration). The menu option is visible only when the Actor is inside an internal iteration.</p>
 </td>
 </tr>
+
+<tr>
+<td width="200">Disable Actor</td>
+<td style="width: 465px;">Click to disable / enable the Actor in the flow.</td>
+</tr>
+<tr>
+<td width="200">Delete Actor</td>
+<td style="width: 465px;">Click to delete the selected Actor from the flow.</td>
+</tr>
+
 <tr>
 <td width="200"><a href="03_broadway_actor.md#actor-description-and-remark"> Description</a></td>
 <td style="width: 465px;">Product Actor's description.</td>
