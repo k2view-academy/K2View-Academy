@@ -1,14 +1,14 @@
 # Report Execution Guidelines
 
-Fabric BI reports are created and executed using the **BI Designer** module. Generation of a report without opening the Fabric BI application can be done by the  **GetExecute** REST API.
+BI reports are created and executed using the **Designer** module. Generation of a report without opening the BI application can be done by the  **GetExecute** REST API.
 
-The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of Fabric BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
+The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
 
 The sections below explain both options.
 
-### Reports Generation Using BI Designer
+### Reports Generation Using the Designer Module
 
-Generate the report in the **BI Designer** module using the ![run](images/run_icon.PNG) icon in the Report Tree or the Run ![run](images/run_button.PNG) button in the report editor. 
+Generate the report in the **Designer** module using the ![run](images/run_icon.PNG) icon in the Report Tree or the Run ![run](images/run_button.PNG) button in the report editor. 
 
 You can setup various report generation options using the Report Options (applicable for Advance Reports). 
 
@@ -51,7 +51,15 @@ startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPU
 startjob GENERATE_BI NAME='Public/dev1_content' ARGS='{"OUTPUT_NAME":"dev1_content_24_10_21", "DESTINATION":"localFileSystem", "TYPE":"csv","FILTER":"{\"FilterText\":\"Dev1_content.created_by\",\"Operator\":0, \"Values\":[\"system\"] }"}';
 ~~~
 
-[Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://support.exagoinc.com/hc/en-us/articles/115003313988).
+**Example of GENERATE_BI Job with Sort** 
+
+~~~bash
+startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_sorted","DESTINATION":"ExerciseListener","TYPE":"csv","SORT":"{\"EntityName\":\"mig_summary_recon_8\",\"ColumnName\":\"bo_name\"}"}';
+~~~
+
+
+
+[Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/).
 
 ### Reports Generation Using "Deep Link"
 

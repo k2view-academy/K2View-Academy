@@ -10,7 +10,7 @@ Note that a Java class that implements a web service must specify the *@WebServi
 
 ### Web services methods within the Logic Java file
 
-When creating a new webservice java file, the web service is added as a method within the public class Logic in the java logic file k2_ws.java 
+When creating a new webservice java file, the web service is added as a method within the public class Logic in the java logic file k2_ws.java . 
 In the example below we have added 6 methods, each of which is configured with a different set of annotations and properties: 
 - testWSannotations1(), 
 - testWSannotations2(),
@@ -93,7 +93,7 @@ Due to Java limitations, not allowing to parse complex variables as input parame
 ```
 
 ```public static Object testWSannotations8(@param(required=true, name="name.private") String testStr1```
-- ```required=true``` flag needs to be set to true. If set to false the new name will be disregarded
+- ```required=true``` flag must be set to true. If this is set to false, the new name will be disregarded.
 - ```name="name.private"``` the new value of the variable *name.private* is taken as input instead of the value held in ```String testStr1``` 
 
 
@@ -102,11 +102,11 @@ Due to Java limitations, not allowing to parse complex variables as input parame
 If left empty the value of the path will be the method name itself i.e., using the first example of annotations in the code snippet above:
 ```api/v1/testWSannotations1```
 
-If the path is explicited, as shown in testWSannotations5:
+Or, the path can be indicated explicitly, as shown in testWSannotations5:
 
 ```@webService(path = "a/b/c", verb = MethodType.GET, version = "1", isRaw = true, isCustomPayload = true, produce = {Produce.XML, Produce.JSON})```
 
-The path is set to the following directory: ```api/v1/a/b/c```
+It is also possible to se the path to the following directory: ```api/v1/a/b/c```
 
 
 In addition, variables can also be parsed into the path, as shown in the ```testWSannotations6``` example:
@@ -114,20 +114,21 @@ In addition, variables can also be parsed into the path, as shown in the ```test
 - {name}/polak will set the path to: ```api/v1/ido/polak``` provided that {name} was previously assigned to the value "ido"
 - nameit/{name1}/{name2}/ will set the path to: ```api/v1/nameit/ido/bob``` provided that {name1} and {name2} were respectively assigned to the values "ido" and "bob"
 
-Note that if the path has duplicates, the webservice deployment will fail.
+***Note that if the path has duplicates, the webservice deployment will fail.***
 
 
 
 #### Verbs 
 The following [properties](/articles/15_web_services_and_graphit/02_web_services_properties.md#web-service-properties) are added:
 
-- [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the java web service window in Fabric Studio
+- [method](/articles/15_web_services_and_graphit/02_web_services_properties.md#verb) - ```MethodType.GET, MethodType.POST, MethodType.PUT, MethodType.DELETE``` depending on what was selected in the properties panel of the java web service window in Fabric Studio.
 
 #### Properties
 The following flags are used to set the web services formats:
 - [custom payload](/articles/15_web_services_and_graphit/02_web_services_properties.md#custom-payload) - in this case is set to true: ``` isCustomPayload = true``` 
 - [produce](/articles/15_web_services_and_graphit/02_web_services_properties.md#produce) - can be XML, JSON or CSV: e.g. ```produce = {Produce.XML, Produce.JSON})```
 - [isRaw](/articles/15_web_services_and_graphit/02_web_services_properties.md#is-raw) - brings the data response as is or not: e.g. ```isRaw = true```
+- [elevated permission](/articles/15_web_services_and_graphit/02_web_services_properties.md#elevated_permission) - inidicates if users permissions should be elevated to the web-service or not.
 
 #### @legacy
 Full alignment with RESTful Web Services functionality was introduced in Fabric 5.5.

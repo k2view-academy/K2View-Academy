@@ -2,31 +2,29 @@
 
 ### Overview
 
-The **BI Designer** module is the Web Framework application powered by Fabric BI (based on ExagoBI). This module enables the user to create various types of reports and dashboards. The [Exago Support Center](https://exagobi.com/support/) provides full information how to create reports and dashboards.
-
-This article describes several important guidelines for creating reports with Fabric BI.
+This article describes several important guidelines for creating reports with the BI application. It requires working with both the **Admin** module, and the **Designer** module of BI, and as such, can only be carried out by users with BI_ADMIN privileges.
 
 ### Creating Reports Based on Fabric LU Tables
 
 One of the basic reports is a report based on data from a Fabric LU Instance. Follow these steps to create such report:
 
-1. Open the **BI Admin** module to do these tasks:
+1. Open the **Admin** module (click on the Admin tab in the upper left) to do these tasks:
 
    * Create the Fabric data source and define its objects and joins, as explained step-by-step in the [Metadata Setup](03_Metadata_Setup.md) article. 
    * Create the parameter(s) to be used by the filter, as explained in the [Parameters](04_parameters.md) article.
-2. Open the **Fabric Studio** and define the Interfaces with the same name as the data sources that you created in the BI Admin. 
-3. Open the **BI Designer** module. 
+2. Open the **Fabric Studio** and define the Interfaces with the same name as the data sources that you created in the Admin module. 
+3. Open the **Designer** module (click on the Designer tab in the upper left).  
 4. Click the ![image](images/create_icon.PNG) icon to trigger creation of a new report.
 5. Select the report type. For example **Advanced Report**. 
 6. Select the data objects for the report. Note the following:
    * The list of data objects presents a list of all existing data objects under all defined data sources. 
    * Once the first data object is selected, most of the objects are disabled except for those that have a join with the selected object.
-   * You must start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
+   * Start the selection from the LU Root table and down to the required tables, based on the LU Schema relations. 
 7. Once the data objects are selected, click the![image](images/filter_icon.PNG) icon to set the filter by IID as follows:
 
 ![image](images/filter_definition.PNG)
 
-7. Once the filter is set, click Okay. 
+8. Once the filter is set, click Okay. 
 
 ### Creating Reports Based on Fabric Custom SQL
 
@@ -50,7 +48,7 @@ FROM (select distinct entity_id as source_id, target_entity_id as target_id
 WHERE task_execution.task_execution_id = '@task_execution_id@'
 ~~~
 
-The IID value can be provided using a parameter which is created in the **BI Admin** module and set either in **BI Admin** or programmatically via the REST API call. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
+The IID value can be provided using a parameter which is created in the **Admin** module and set either in **Admin** or programmatically via the REST API call. See more at [Reports execution guidelines](06_report_execution_guidelines.md). 
 
 ### Creating Reports Based on Fabric Commands
 

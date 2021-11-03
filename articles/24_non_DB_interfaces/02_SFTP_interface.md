@@ -1,8 +1,8 @@
-# SFTP Interface
+# SFTP Interface And Interface Listeners
 
-The SFTP interface type defines the connections between a secured FTP server (a remote server with an SSH connection) and a stream of file content.
+The SFTP interface type is used to define the connections between a secured FTP server (a remote server with an SSH connection) and a data stream.
 
-An SFTP interface is used when creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows).
+When creating an [Interface Listener for a Broadway flow](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#interface-listener-for-broadway-flows), an SFTP interface is needed to detect new files added to the remote file system.
 
 To create a new SFTP interface, do the following:
 
@@ -76,5 +76,29 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 ![images](images/02_sftp_2.PNG)
 
 5. [Deploy the LU](/articles/16_deploy_fabric/02_deploy_from_Fabric_Studio.md) to activate the Listener.
+
+
+### Using the InterfaceListener Actor 
+
+The *Interface Listener* actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another broadway flow upon arrival of a new file on the interface.
+
+
+To create an interface listener job from a broadway flow, simply chose the **interfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
+
+![images](/articles/24_non_DB_interfaces/images/12_interfaceListenerActor_1.PNG)
+
+The following parameters are to be filled in the properties tab:
+
+- flowName: name of the flow to be triggered by this actor.
+- interfaceName: this is the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points to.
+
+Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
+
+- Affinity: this sets which node/DC name IP address is to be used to run the Broadway job.
+
+- Params: This refers to the arguments that can be parsed to the Broadway flow. 
+For example, multiple parameters can be parsed as a key/value object from an external link or from a **Constant** or **Javascript** actor.
+
+
 
 [![Previous](/articles/images/Previous.png)](01_nondb_interfaces_overview.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_kafka_interface.md) 

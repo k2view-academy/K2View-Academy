@@ -113,6 +113,13 @@ This flag must be set to True in the properties panel in order to be activated.
 
 </tr>
 <tr>
+ <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
+<td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. 
+Default is set to False.</p>
+When set to False, this means (for example) if according to the user's role permission he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so  even if the user can execute the Web-Service itself.
+<br>Added for Fabric release 6.5.3</td>
+</tr>
+<tr>
 <td width="200pxl" valign="top"><p><h5>Description</h5></p></td>
 <td width="700pxl" valign="top"><p>Web Service&rsquo;s description on Swagger.</td>
 </tr>

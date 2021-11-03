@@ -2,19 +2,18 @@
 
 ### Overview
 
-When working on Fabric BI reports implementation, it is recommended to have separate Fabric BI installations and separate Storage Management DBs for different environment types (DEV/QA/PROD), so that you can develop and test the reports without impacting other stages of the project.
+When working on the implementation of BI reports, it is recommended to have separate BI installations and separate Storage Management DBs for different environment types (DEV/QA/PROD), so that you can develop and test the reports without impacting other stages of the project.
 
 At any time, you might need to move reports between different environments, for example from one DEV environment to another, from DEV to QA, etc.
 
-Fabric BI provides the utility to move your files (reports and dashboards) between different Storage Management DBs or even between different table prefixes within the same Storage Management DB. You can move either one or several reports at a time. 
+The BI application provides the utility to move your files (reports and dashboards) between different Storage Management DBs or even between different table prefixes within the same Storage Management Database. You can move either one or several reports at a time. 
 
 ### How Do I Move Files Between Storage Management DBs?
 
 **Step 1:  Create and Edit the Config JSON File**
 
-Open a CLI, connect to the Fabric BI server and run the following command from the  Application Binaries directory **/opt/apps/exago/bin**.
-
-Note that the utility can be run only by a user with **root** or **sudo** permissions.
+Open a command line interface, connect to the BI server and run the following command from the  Application Binaries directory **/opt/apps/exago/bin**.
+(Note that the utility can be run only by a user with **root** or **sudo** permissions)
 
 ~~~
 > sudo mono ImportExportStorageMgmt.exe -f ./reports.json
@@ -54,7 +53,7 @@ The **reports.json** is a configuration file that includes the source and target
 }
 ~~~
 
-Now, update the default settings to include the required information. For example, the below configuration file defines the source DB to be the default **StorageMgmt.sqlite** DB, the tables with **new_** prefix. The target DB is the PostgreSQL DB, the tables with **demo_** prefix. The only folder included in this operation is **Demo Proj**. The folders excluded from the operation are **Public** and **My Reports**.
+Update the default settings to include the required information. For example, the configuration file shown below defines the source DB to be the default **StorageMgmt.sqlite** DB, the tables with **new_** prefix. The target DB is the PostgreSQL DB, the tables with **demo_** prefix. The only folder included in this operation is **Demo Proj**. The folders excluded from the operation are **Public** and **My Reports**.
 
 ~~~json
 {
@@ -85,7 +84,7 @@ Now, update the default settings to include the required information. For exampl
 
 **Step 2:  Run the Utility**
 
-Once the configuration file is updated, you're ready to run the utility as follows:
+Once the configuration file is updated, run the utility as follows:
 
 ~~~
 > sudo mono ImportExportStorageMgmt.exe -f ./reports.json -E -I
@@ -103,7 +102,7 @@ Once the configuration file is updated, you're ready to run the utility as follo
 **Note:**
 
 * You can run only the Export, only the Import or both Export and Import by specifying the **-E** and **-I** flags as needed.
-* The Export process creates JSON files in the **"JsonDirectory"** specified in the configuration file. These files include the definition of the exported reports.  The files are not cleaned, thus if not required - they need to be removed manually in order not to be included in the next utility run.
+* The Export process creates JSON files in the **"JsonDirectory"** specified in the configuration file. These files include the definition of the exported reports.  The files are not cleaned, so if they are not required, you will have to remove them manually in order not to be included in the next utility run.
 
 
 

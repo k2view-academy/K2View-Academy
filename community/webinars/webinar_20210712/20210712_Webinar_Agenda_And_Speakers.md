@@ -1,4 +1,4 @@
-![](../images/webinar_20210712.PNG)
+![](../images/webinar_20210712.png)
 
 
 

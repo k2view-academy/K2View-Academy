@@ -90,14 +90,20 @@ The following 10 files are generated in the $K2_HOME/.kafka_ssl directory:
 
 Tar and copy them to all Kafka and Fabric / IIDFinder nodes in the cluster as shown below:
 
+creat tar file
 ``` bash
 tar -czvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
-scp Kafka_keyz.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
-mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
-## for Fabric (after file copied):
-mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
 ```
 
+copy to fabric example
+``` bash
+scp Kafka_keyz.tar.gz kafka@10.10.10.10:/opt/apps/kafka/
+```
+
+on the fabric use the following to extract 
+```bash
+mkdir -p $K2_HOME/.kafka_ssl && tar -zxvf Kafka_keyz.tar.gz -C $K2_HOME/.kafka_ssl
+```
 
 # Zookeeper Configuration
 
@@ -107,14 +113,18 @@ Notes:
 
 ## Step 1 - SASL Authentication
 
-```echo "authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider" >> $CONFLUENT_HOME/zookeeper.properties```
+```bash
+echo "authProvider.1=org.apache.zookeeper.server.auth.SASLAuthenticationProvider" >> $CONFLUENT_HOME/zookeeper.properties
+```
 
 
 ## Step 2 - zookeeper_jaas.conf
 
 Edit the newly created file zookeeper_jaas.conf
 
-```vi $CONFLUENT_HOME/zookeeper_jaas.conf```
+```bash
+vi $CONFLUENT_HOME/zookeeper_jaas.conf
+```
 
 
 ## Step 3 - Copy the Following Data into zookeeper_jaas.conf
@@ -136,7 +146,10 @@ Client {
 ## Step 4 - Start the ZooKeeper Service
 
 When starting ZooKeeper make sure the following command is invoked: 
-``` export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties ```
+
+```bash
+export KAFKA_OPTS="-Djava.security.auth.login.config=$CONFLUENT_HOME/zookeeper_jaas.conf" && ~/kafka/bin/zookeeper-server-start -daemon ~/kafka/zookeeper.properties
+```
 
 The ZooKeeper daemon starts.
 

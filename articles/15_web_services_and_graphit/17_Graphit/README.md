@@ -11,5 +11,6 @@
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/08_invoke_javacode_from_graphit.md">Invoke Java Code from Graphit</a></li>
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/09_invoke_graphit_from_outside_studio.md">Invoking Graphit Externally</a></li>
   <li><a href="/articles/15_web_services_and_graphit/17_Graphit/10_graphit_examples.md">Graphit Examples</a></li>
+  <li><a href="/articles/15_web_services_and_graphit/17_Graphit/11_graphit_error_handling.md">Graphit Error Handling</a></li>
 </ul>
 
