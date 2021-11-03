@@ -67,6 +67,11 @@ Starting Fabric 6.5.3, there are two Actors:
 The enhanced functionality of the **XMLParser** Actor is that it enables setting an object name to the parsed XML elements and parsed attributes using its new input arguments **valueField** and **attributesField**.
 
 * The input arguments **valueField** and **attributesField** have default values that can be changed or set to **null**.
+* There can be four combinations of setting the input arguments  **valueField** and **attributesField**. 
+  * Both **valueField** and **attributesField** have values, either the default values ('_value' and '__attributes') or the updated ones.
+  * One of the arguments have a value while another one is empty.
+  * Both of the arguments are empty.
+* As a result of this setting, there can be four different structures of the output object.
 * When an XML includes an element with attributes and a primitive value (not a nested XML element), setting **valueField** to **null** (empty value) is not supported.
 
 **Example of a parsed object when valueField = '_value' and attributesField = '__attributes'**
