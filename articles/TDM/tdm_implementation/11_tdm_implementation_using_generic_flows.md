@@ -27,8 +27,11 @@ Since sequences are required when populating a target database, setting and init
 
 If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or **create_masking_cache_table.sql** of the TDM Library.  
 
+Note that the k2masking can also be created by the deploy.flow of the TDM LU.
 
 Do the following to create the sequences for your TDM implementation:
+
+#### Generate the Sequence Actors
 
 A. TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the information relevant for your TDM implementation:
    - **SEQUENCE_NAME**, the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
@@ -41,9 +44,9 @@ A. TDM library includes a **TDMSeqList** Actor that holds a list of sequences. P
    ![image](images/tdmSeqListExample.png)
 
    Example of an inner flow to get the initial sequence value:
-   
+
    ![image](images/CustomerIdInitFlow.png)
-   
+
    The table's values are used by the **createSeqFlowsOnlyFromTemplates** flow that generates the Sequences Actors. 
 
    After the Actor's update is completed, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button on top of the project tree to apply the changes in the **TDMSeqList** Actor and deploy the **TDM LU**.
@@ -52,6 +55,16 @@ B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects Scriptsf
 
    Note that this flow should run once per TDM implementation and not per each LU since the sequences are used across several LUs in the TDM project.
    The sequences flows and Actors are created under **Shared Objects** to enable several LUs to use a Sequence Actor.
+
+
+
+#### Populate the Sequence Mapping Table to Add the Sequence Actors to the Load Flows
+
+Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into different table and different LU.
+
+See example:
+
+![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
 ### Step 3 - Create, Load, and Delete Flows
 
@@ -69,14 +82,13 @@ The **createFlowsFromTemplates.flow** executes the inner flows listed below. The
 Performed by the **createLoadTableFlows.flow** that receives the Logical Unit name, target interface and target schema and retrieves the list of tables from the LU Schema. It then creates a Broadway flow to load the data into each table in the target DB. The name of each newly created flow is **load_[Table Name].flow**. For example, load_Customer.flow. The tables defined in Step 1 are filtered out and the flow is not created for them.
 
 #### Update the Load Flows with the Sequence Actors: 
-a) Edit each Load flow of the TDM project by adding newly created Sequence Actors to the Transformation Stage. For example, edit **load_PAYMENT.flow** by adding the sequence to the **Transformation** Stage and connecting its input and output arguments to the relevant columns. Edit the Sequence Actor: set the Population Type of **tableName** and **columnName** input arguments to **Const** and populate them with the target table and column names. These arguments must be set to populate the **tdm_seq_mapping** table properly.
+The sequence actors are added automatically to the load flows based on the **TDMSeqSrc2TrgMapping** table.
 
-   ![image](images/11_tdm_impl_04.PNG)
+In addition, the  **createFlowsFromTemplates.flow** adds the **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_cases** flow and send the target case ID as an input parameter to the actor:  
 
-b) **Set the Target Entity ID in the Main Table**: 
-   - Add **setTargetEntityId_Actor** to the Load flow of the **main target table** to populate the **TARGET_ENTITY_ID** key by the target entity ID. For example, add the  **setTargetEntityId_Actor** to **load_Customer** flow and send the target customer ID as an input parameter to the actor:
+   ![image](images/loadFlow_seq_example.png)
 
-   ![setTargetEntity](images/setTargetEntity_actor_example.png)
+
 
 **B. Create the main LOAD flow**
 
