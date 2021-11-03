@@ -71,6 +71,8 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 Upon the completion of installation and configuration setup, deploy the Fabric project. As a result, the Storage Management DB is initialized with 4 basic tables and the <project name> folder is created in the Storage Management DB metadata, with the default read-only access level.  
 
+Note that full Deploy must be performed rather than [Soft Deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md). To check whether Soft Deploy was activated in the Fabric Studio and remove it, go to the [User Preferences > Server Configuration](/articles/04_fabric_studio/04_user_preferences.html#what-is-the-purpose-of-the-server-configuration-tab) window and uncheck the Soft Deploy checkbox.
+
 Now any user accessing this project has the default read-only access to the project's reports within the Designer. It is possible to setup different access permissions per Fabric role. The [Access Permissions Setup](02_Permissions_Setup.md) article explains how to do this. 
 
 ​
