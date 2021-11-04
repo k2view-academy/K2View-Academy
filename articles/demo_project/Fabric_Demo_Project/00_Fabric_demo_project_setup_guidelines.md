@@ -52,7 +52,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
    * In the project's config.ini make sure that the **BI_PORT** the **[bi]** section is set to **localhost**, the Storage Management DB is pointing to the default SQLite DB and the **TABLE_PREFIX** is empty.
 
-5. Deploy the project including the References. 
+5. Deploy the project including the reference sync. 
 
 6. Click the ![img](images/web_fr.PNG) icon to open the **Web Framework > BI** and go to **Admin** tab.
 
