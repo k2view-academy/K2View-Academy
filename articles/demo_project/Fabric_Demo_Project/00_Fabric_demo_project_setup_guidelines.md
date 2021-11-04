@@ -30,7 +30,7 @@ To setup the project and connect the databases, do the following:
     [Click for more information about DB Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 
 
-## BI Configuration and Setup
+## BI Configuration and Setup (V6.5.3)
 
 If you are already using the demo project from the previous versions, you need to download the project export as well as the DB files again.
 
