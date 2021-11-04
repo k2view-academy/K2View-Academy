@@ -76,3 +76,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
    ![img](images/dashboard.PNG)
 
 4. To see the data of another customer, go to **Admin** tab and open **Data > Parameters > customer_id**, set another value and click **Apply** to save your changes. Then return to the **Designer** tab, open the dashboard and play it.
+
+
+
+[Click to open the complete BI user guide](/articles/38_bi_integration/README.md).
