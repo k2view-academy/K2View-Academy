@@ -14,7 +14,7 @@ To create the population based on the Broadway flow, right click the table name 
 
 ### Interface Listener For Broadway Flows
 
-From version 6.5.3, a new actor [*InterfaceListener*](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added to Broadway. This actor allows a broadway flow to be triggered upon detection of an event on the Interface. 
+From version 6.5.3, a new actor [*InterfaceListener*](/articles/24_non_DB_interfaces/02_SFTP_interface.md#using-the-interfacelistener-actor) has been added. This actor allows a Broadway flow to be triggered upon detection of an event on the Interface. 
 
 The flow described below, is still supported and can be defined via Fabric Studio.
 
