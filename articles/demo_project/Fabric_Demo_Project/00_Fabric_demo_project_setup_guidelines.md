@@ -38,7 +38,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
 
-2. Download the [Demo_BI.zip](Demo_sources/Demo_BI.zip) file locally on your computer.
+2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer.
 
 3. TBD - run the script that will update your docker image with the Demo Project BI example.
 
