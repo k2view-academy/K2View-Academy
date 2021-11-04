@@ -12,7 +12,7 @@ To setup the project and connect the databases, do the following:
 
     ![image](images/demo_proj_01.PNG)
 
-3. Download the [BILLING_DB.db](SqliteDB/billing_db.db), [CRM_DB.db](SqliteDB/crm_db.db), [COLLECTION_DB.db](SqliteDB/collection_db.db) and [ORDERS_DB.db](SqliteDB/orders_db.db) files locally on your computer.
+3. Download the [BILLING_DB.db](Demo_sources/billing_db.db), [CRM_DB.db](Demo_sources/crm_db.db), [COLLECTION_DB.db](Demo_sources/collection_db.db) and [ORDERS_DB.db](Demo_sources/orders_db.db) files locally on your computer.
 
 4. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB Interfaces, as follows:
     - Open the Interfaces from the Project tree.
@@ -38,7 +38,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
 
-2. Download the [WebReports.XML](SqliteDB/WebReports.xml), [reports.json](SqliteDB/reports.json) and [Json.zip](SqliteDB/Json.zip) files locally on your computer.
+2. Download the [WebReports.XML](Demo_sources/WebReports.xml), [reports.json](Demo_sources/reports.json) and [Json.zip](Demo_sources/Json.zip) files locally on your computer.
 
 3. TBD - run the script that will update your docker image with the Demo Project BI example.
 
