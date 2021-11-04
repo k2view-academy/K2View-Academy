@@ -9,8 +9,11 @@ Go to the **Project Tree** > **LU** > **Java** > **Category** and right click **
 
 ### Step 2  
 Write the **User Job function** either from:
-   -    the **Function Editor** window.
-   -    **IntelliJ** IDE.
+   -    the **Function Editor** window
+        
+        or
+   
+   -    the **IntelliJ** IDE.
    
 ```java
 //writing into a file;
@@ -29,11 +32,11 @@ while (test<5 && !isAborted()){
 Set the **Function Type** to the **User Job** value in the right panel. 
 Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The output file is located in the Fabric Home directory. 
 
+<img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
+
 Note that the loop control parameter (variable *test*) is defined as an input parameter of the User Job function, and that a second variable *inSecTime* is also defined as an output parameter. As such, its value is recorded in the *argument* field of the k2_jobs table in the k2system keyspace.
 
 Name and save the **function**.
-
-<img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
    
 
 ### Step 4  
@@ -73,7 +76,7 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 <p class="unchanged">TimeStamp, schedules a Job to run once on a given date and time. For example, set the execution to&nbsp;<code>2022-08-20 10:32:12.</code></p>
 </li>
 <li class="unchanged">
-<p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp;the job runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
+<p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp; . The job runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
 <p> It is important to note that if a scheduled job is started manually (before its scheduled occurance) then its next scheduled occurance will still start on time, unless the previous manual occurance of the job is still running.</p>	
 </li>
 </ul>
@@ -111,9 +114,9 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 Right click the **LU** in the **Project Tree**, deploy and then search for the file in the **Fabric Home directory**.
 
 
-## How Do I Create a Broadway Job using the *BroadwayJob* actor ?
+## How Do I Create a Broadway Job using the BroadwayJob actor ?
 
-The *broadwayJob* actor provides the ability to trigger a *Fabric job* that will in turn execute another broadway flow once or multiple times depending upon the configuration of the job.
+The *BroadwayJob* actor provides the ability to trigger a *Fabric job* that will in turn execute another broadway flow once or multiple times depending upon the configuration of the job.
 
 To use this capability, simply select the actor from the **Add Actors To Stage** menu in the Broadway Flow panel, as illustrated below:
 
