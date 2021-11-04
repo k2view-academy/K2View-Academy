@@ -1,4 +1,4 @@
-# Creating a New User Job
+# Creating New User & Broadway Jobs
 
 Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
