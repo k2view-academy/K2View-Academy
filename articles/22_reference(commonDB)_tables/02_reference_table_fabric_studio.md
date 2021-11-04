@@ -1,23 +1,25 @@
 # How to Create a New Reference Table in Fabric Studio
 
-A  Reference table holds information common to all LU instances or to multiple LU. 
-For obvious optimization reasons, this information is stored in an external table and not in each LUI MicroDB.
+A  Reference table holds information common to all LU instances or to multiple LUs. 
+This information is stored in an external table and not in each LUI MicroDB.
 
 
 
 ## How to Create a New Reference Table in Fabric from an External Source
 
-1.  Go to **Project Tree** > **References** , right click **Create References Based On DB Tables** to display the DB Browser menu, Context menu and References popup window. 
+1.  Go to **Project Tree** > **References** , right click, then select **Create References Based On DB Tables**. This will display the DB Browser menu, Context menu and References popup window. 
 
-2.  Click **DB Connection** (top of the window) and select the **Data Source Interface** to display the Tables directory in the source DB.
+2.  Click **DB Connection** (top of the window) and select a data source interface. 
 
-3. Select the **table**. To select multiple tables, press the Ctrl key.
+3.  Click **main** to display the Tables directory in the source DB.
+
+4. Select a **table**. To select multiple tables, press the Ctrl key.
 
 ![image](/articles/22_reference(commonDB)_tables/images/01_create_new_common_tables.PNG)
 
 
 
-4. Optional: 
+5. Optional: 
 
 Add a prefix to the Reference table's name in the **Name Prefix** field (window's footer). 
 - If there are objects in the project with the same name, add a prefix to differentiate between Reference tables and LU tables with similar names.
@@ -27,7 +29,7 @@ To populate the Reference Table using a Broadway flow, tick the **Table populati
 
 ![image](/articles/22_reference(commonDB)_tables/images/02a_prefix_and_bdwyFlow_Ref_Table.PNG)
 
-5. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
+6. Click **Create Tables** to add the new Reference table under References in the Project Tree. 
 If the table does not appear immediately, click ![image](/articles/22_reference(commonDB)_tables/images/03_create_new_common_tables_refreshbutton.PNG) Refresh on the top of the Project Tree.
 
 ![image](/articles/22_reference(commonDB)_tables/images/02_create_new_common_tables_schema.PNG)
@@ -73,6 +75,7 @@ Additional properties can be defined in the **Table Properties** panel in the ri
   - NOCASE, folds upper case characters to their lower case equivalents.
   - RTRIM, ignores trailing space characters.
 
+![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
 
 
 #### Sync Method
@@ -94,9 +97,6 @@ The following functions or other tables can be attached to the Reference table:
 - [Enrichment Functions](/articles/10_enrichment_function/01_enrichment_function_overview.md) - performs data manipulations on the table's content.
 - Other Reference Tables, on which the current Reference table is depending (e.g. it needs data from these tables).
 - Index Post Sync - determines if an index should be created on a Reference table after data is synced. This capability is relevant for huge reference databases (more than 200M records) and can accelerate the overall data sync time. Added in release 6.5.1.  
-
-![image](/articles/22_reference(commonDB)_tables/images/06_create_new_common_tables_properties.PNG)
-
 
 
 ## Attach the Reference Table to an LU Schema
