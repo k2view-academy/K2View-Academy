@@ -27,11 +27,11 @@ Parser Actors are usually followed by an iteration that allow iterating over eac
 
 **CsvParser Flow Example**
 
-The following example shows how to find an area code of a given location. This is done by providing the location as an exteral input argument, then reading and parsing a CSV file which has a list of locations and their area codes. 
+The following example shows how to find a subscriber description by the given subscriber type. This is done by providing the subscriber type as an external input argument, then reading and parsing a CSV file which has a list of types and their description. 
 
 ![image](../images/99_actors_03_2.PNG)
 
-The parser processes the file's rows consecutively by validating the data in Stage 5 using the [**JavaScript** Actor's code](01_javascript_actor.md#special-keywords-and-conventions) via access to the **flowArgs** arguments and the **contextLoop** object. When the required given location is found, the iteration stops, and the area code for that location can be read. 
+The parser processes the file's rows consecutively by validating the data in the **Find** Stage using the [**JavaScript** Actor's code](01_javascript_actor.md#special-keywords-and-conventions) via access to the **flowArgs** arguments and the **contextLoop** object. When the required given subscriber type is found, the iteration stops, and the flow returns the description. 
 
 ```java
 if (input1.SUBSCRIBER_TYPE == flowArgs["input_subs_type"]) {
@@ -74,7 +74,7 @@ The enhanced functionality of the **XMLParser** Actor is that it enables setting
 * As a result of how these input arguments are set, there can be four different structures of the output object.
 * When an XML includes an element with attributes and a primitive value (not a nested XML element), setting **valueField** to **null** (empty value) is not supported.
 
-Example of a parsed object when **valueField** = '_value' and **attributesField** = '_attributes'
+**Example of a parsed object when valueField = '_value' and attributesField = '__attributes'**
 
 ~~~javascript
 {
@@ -124,7 +124,7 @@ Example of a parsed object when **valueField** = '_value' and **attributesField*
 } 
 ~~~
 
-Example of a parsed object when **valueField** = '_value' and **attributesField** is empty
+**Example of a parsed object when valueField = '_value' and attributesField is empty**
 
 ~~~javascript
 {
@@ -174,7 +174,7 @@ Example of a parsed object when **valueField** = '_value' and **attributesField*
 }
 ~~~
 
-Example of a parsed object when both **valueField** and **attributesField** are empty
+**Example of a parsed object when both valueField and attributesField are empty**
 
 ~~~javascript
 {
