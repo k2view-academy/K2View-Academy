@@ -25,7 +25,7 @@ After the Actor's update is completed, refresh the project by clicking the ![ima
 
 Since sequences are required when populating a target database, setting and initiating sequences are mandatory when creating a TDM implementation. 
 
-If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or **create_masking_cache_table.sql** of the TDM Library.  
+If the **k2masking** keyspace does not exist in the DB interface defined for caching the masked values, create it using the **masking-create-cache-table.flow** from the library of Broadway examples or the **create_masking_cache_table.sql** of the TDM Library.  
 
 Note that the k2masking can also be created by the deploy.flow of the TDM LU.
 
@@ -33,13 +33,13 @@ Do the following to create the sequences for your TDM implementation:
 
 #### Generate the Sequence Actors
 
-A. TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the information relevant for your TDM implementation:
-   - **SEQUENCE_NAME**, the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
-   - **CACHE_DB_NAME**, populate this setting using **DB_CASSANDRA** where the Sequence Cache tables are stored.
-   - **SEQUENCE_REDIS_OR_DB**, indicates if the next value is taken from Redis or the target DB interface. Populate this setting using the **FabricRedis** interface (imported from the TDM library) or with the **target DB interface name**. Getting the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
-   - **INITIATE_VALUE_OR_FLOW**, set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is only relevant when getting the next value from **FabricRedis**. Otherwise, the next value is taken from the target system.
+A. The TDM library includes a **TDMSeqList** Actor that holds a list of sequences. Populate the Actor's  **table** object with the information relevant for your TDM implementation as follows:
+   - **SEQUENCE_NAME** - the sequence name must be identical to the DB's sequence name if the next value is taken from the DB.
+   - **CACHE_DB_NAME** - populate this setting using **DB_CASSANDRA** where the Sequence Cache tables are stored.
+   - **SEQUENCE_REDIS_OR_DB** - indicates if the next value is taken from Redis or the target DB interface. Populate this setting using the **FabricRedis** interface (imported from the TDM library) or with the **target DB interface name**. Getting the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. 
+   - **INITIATE_VALUE_OR_FLOW** - set an initial value for the sequence or populate the name of an inner flow to apply logic when getting the initial value. For example, you can set the initial value from the max value of the target table. The initial value is only relevant when getting the next value from **FabricRedis**. Otherwise, the next value is taken from the target system.
 
-   Example of the tdmSeqList Actor:
+   Example of the **TDMSeqList** Actor:
 
    ![image](images/tdmSeqListExample.png)
 
@@ -51,7 +51,7 @@ A. TDM library includes a **TDMSeqList** Actor that holds a list of sequences. P
 
    After the Actor's update is completed, refresh the project by clicking the ![image](images/11_tdm_refresh.PNG) button on top of the project tree to apply the changes in the **TDMSeqList** Actor and deploy the **TDM LU**.
 
-B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has two [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populates the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
+B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects ScriptsforTemplates folder. The flow has two [Inner Flows](/articles/19_Broadway/22_broadway_flow_inner_flows.md) that first create a Broadway flow for each sequence in the **TDMSeqList** Actor and then create an Actor from each flow. The generated sequence flows invoke the [MaskingSequence Actor](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md) to get the new sequence value and populate the source and target IDs in the TDM_SEQ_MAPPING table under the k2masking keyspace.
 
    Note that this flow should run once per TDM implementation and not per each LU since the sequences are used across several LUs in the TDM project.
    The sequences flows and Actors are created under **Shared Objects** to enable several LUs to use a Sequence Actor.
@@ -149,7 +149,7 @@ TDM systems often handle sensitive data. To be compliant with data privacy laws,
   * When The TDM task is for Data Flux, masking is always disabled.
   * In all other scenarios masking behavior depends on the MASK_FLAG settings.
   
-* Note that TDM 7.3 creates only **one LUI instance for all clones** when exeuting a task with a **Synthetic** selection method (entity cloning). Add a masking on both processes: LUI Sync and the Load flows to get a different data in the masked fields on each clone.
+* Note that TDM 7.3 creates only **one LUI instance for all clones** when executing a task with a **Synthetic** selection method (entity cloning). Add a masking on both processes (LUI Sync and the Load flows) to get a different data in the masked fields on each clone.
 
 [Click here to learn how to use Masking Actors](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#).
 
