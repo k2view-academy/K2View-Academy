@@ -1,6 +1,6 @@
 # How Do I Execute a New Broadway Job ?
 
-## From Fabric Console
+## Fabric Command
 The Fabric Jobs mechanism also enables running a [Broadway flow](/articles/19_Broadway/01_broadway_overview.md) so it can be scheduled and benefit from Jobs execution parameters.
 
 ### Job Type
@@ -24,7 +24,7 @@ and where ```EXEC_INTERVAL``` describes the time schedule pattern for the job as
 e.g. 
 ``` startjob broadway_job name='Customer.Flow1' ARGS={a:10,b:20} EXEC_INTERVAL='00:00:10';```
 
-## From Broadway Flows (from version 6.5)
+## From Broadway Flows (from version 6.5.3)
 
 Broadway jobs can be triggered from another Broadway flow using the [*BroadwayJob*](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#how-do-i-create-a-broadway-job-using-the-broadwayjob-actor-) actor. 
 
