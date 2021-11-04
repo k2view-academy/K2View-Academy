@@ -111,7 +111,7 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 Right click the **LU** in the **Project Tree**, deploy and then search for the file in the **Fabric Home directory**.
 
 
-## How Do I Create a New User Job using the BroadwayJob actor ?
+## How Do I Create a Broadway Job using the *BroadwayJob* actor ?
 
 The *broadwayJob* actor provides the ability to trigger a *Fabric job* that will in turn execute another broadway flow once or multiple times depending upon the configuration of the job.
 
