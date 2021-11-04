@@ -24,9 +24,9 @@ and where ```EXEC_INTERVAL``` describes the time schedule pattern for the job as
 e.g. 
 ``` startjob broadway_job name='Customer.Flow1' ARGS={a:10,b:20} EXEC_INTERVAL='00:00:10';```
 
-## From Broadway Flows (from version 6.5.3)
+## From Broadway Flows
 
-Broadway jobs can be triggered from another Broadway flow using the [*BroadwayJob*](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#how-do-i-create-a-broadway-job-using-the-broadwayjob-actor-) actor. 
+From version 6.5.3 onwards Broadway jobs can be triggered from another Broadway flow (or from the LU deploy flow) using the [*BroadwayJob*](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#how-do-i-create-a-broadway-job-using-the-broadwayjob-actor-) actor. 
 
 
 
