@@ -79,4 +79,4 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 
 
-[Click to open the complete BI user guide](/articles/38_bi_integration/README.md).
+    [Click to open the complete BI user guide](/articles/38_bi_integration/README.md).
