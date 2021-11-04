@@ -1,0 +1,1744 @@
+<?xml version="1.0" standalone="yes"?>
+<webreports>
+  <config lifespan="0" type="DYNAMIC" />
+  <general>
+    <activeroleid>create_report</activeroleid>
+    <datefunctionsloaded>True</datefunctionsloaded>
+    <formulafunctionsloaded>True</formulafunctionsloaded>
+    <quickfunctionsloaded>True</quickfunctionsloaded>
+    <defaultoutputtype>excel</defaultoutputtype>
+    <logginglevel>DEBUG</logginglevel>
+    <datetimetreatedas>DateTime</datetimetreatedas>
+    <calltypeparamname>callType</calltypeparamname>
+    <columnparamname>columns</columnparamname>
+    <filterparamname>filter</filterparamname>
+    <fullfilterparamname>fullFilter</fullfilterparamname>
+    <sortparamname>sort</sortparamname>
+    <datacategoryparamname>dataCategory</datacategoryparamname>
+    <objectidparamname>objId</objectidparamname>
+    <restkey>1234</restkey>
+    <showlinkaction>True</showlinkaction>
+    <chartcolors>#3B5BD2,#4E80F4,#95B3F8,#CAD8FB,#fdd9b2,#7d67fc,#27fe01,#F87206</chartcolors>
+    <showeventswindow>True</showeventswindow>
+    <showsqlwindow>True</showsqlwindow>
+    <cacheservices>False</cacheservices>
+    <showiedownloadbutton>True</showiedownloadbutton>
+    <allowdependantfilters>True</allowdependantfilters>
+    <showtemplateuploadbutton>True</showtemplateuploadbutton>
+    <showfilterdescription>True</showfilterdescription>
+    <defaultFilterExecutionWindow>Standard</defaultFilterExecutionWindow>
+    <changeableFilterExecutionWindow>True</changeableFilterExecutionWindow>
+    <showcrosstabreports>True</showcrosstabreports>
+    <showchainedreports>True</showchainedreports>
+    <usesampledatafordashboardvisualizationdesign>False</usesampledatafordashboardvisualizationdesign>
+    <allowreportcustomsqlobjects>True</allowreportcustomsqlobjects>
+    <clienttimezonename>Israel</clienttimezonename>
+    <showreportuploaddownloadoptions>True</showreportuploaddownloadoptions>
+    <defaultfont>Palatino Linotype</defaultfont>
+    <defaultfontsize>11</defaultfontsize>
+    <defaultchartfont>Palatino Linotype</defaultchartfont>
+    <mysqlprovider>FabricAdoDriver</mysqlprovider>
+    <mysqlprovidertableschema>Collection:"Tables", Restrictions:[null, null], NameColumn:"TABLE_NAME", SchemaColumn:"TABLE_SCHEM"</mysqlprovidertableschema>
+    <mysqlproviderviewschema />
+    <mysqlproviderprocedurechema />
+    <odbcprovidertableschema>Collection:"Tables", Restrictions:["@database@", null, null, null], NameColumn:"table_name", SchemaColumn:"table_schema"</odbcprovidertableschema>
+    <odbcproviderviewschema>Collection:"Views", Restrictions:[null, null, null], NameColumn:"table_name", SchemaColumn:"table_schema"</odbcproviderviewschema>
+    <postgresprovidertableschema>Collection:"Tables", Restrictions:["@database@", null, null, null], NameColumn:"table_name", SchemaColumn:"table_schema"</postgresprovidertableschema>
+    <postgresproviderviewschema>Collection:"Views", Restrictions:[null, null, null, null], NameColumn:"table_name", SchemaColumn:"table_schema"</postgresproviderviewschema>
+    <postgresproviderprocedurechema>Collection:"Procedures", Restrictions:[null, null, null, null], NameColumn:"specific_name", SchemaColumn:"specific_schema"</postgresproviderprocedurechema>
+    <sqliteprovider>FabricAdoDriver</sqliteprovider>
+    <sqliteprovidertableschema>Collection:"Tables", Restrictions:[null, null], NameColumn:"TABLE_NAME", SchemaColumn:"TABLE_SCHEM"</sqliteprovidertableschema>
+    <sqliteproviderviewschema />
+    <allowreporttreerootaccess>False</allowreporttreerootaccess>
+  </general>
+  <storagemgmt>
+    <default_access_flags>ReadOnly</default_access_flags>
+    <identity name="ownerId" value="" />
+  </storagemgmt>
+  <datasource>
+    <id>0</id>
+    <name>Fabric-Connection</name>
+    <dbtype>sqlite</dbtype>
+    <dataconnstr>urls=&lt;host&gt;:5124;user=&lt;user&gt;;password=&lt;password&gt;;AUTO_MDB_SCOPE=true</dataconnstr>
+  </datasource>
+  <datasource>
+    <id>1</id>
+    <name>Postgres-Connection</name>
+    <dbtype>postgres</dbtype>
+    <dataconnstr>Server=&lt;host&gt;;Port=&lt;port&gt;;Database=&lt;db_name&gt;;User Id=&lt;user&gt;;Password=&lt;password&gt;;</dataconnstr>
+  </datasource>
+  <datasource>
+    <id>2</id>
+    <name>Fabric-Local</name>
+    <dbtype>sqlite</dbtype>
+    <dataconnstr>urls=10.0.0.14:5124;user=admin;password=admin;AUTO_MDB_SCOPE=true</dataconnstr>
+  </datasource>
+  <datasource>
+    <id>3</id>
+    <name>Oracle-Connection</name>
+    <dbtype>oracle</dbtype>
+    <dataconnstr>Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=&lt;host&gt;)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=&lt;database name)));User Id=&lt;user&gt;;Password=&lt;password&gt;</dataconnstr>
+  </datasource>
+  <parameter>
+    <id>companyId</id>
+    <data_type>string</data_type>
+    <value />
+    <hidden>False</hidden>
+    <prompt_text />
+  </parameter>
+  <parameter>
+    <id>customer_id</id>
+    <data_type>string</data_type>
+    <value>118</value>
+    <hidden>False</hidden>
+    <prompt_text />
+  </parameter>
+  <parameter>
+    <id>userEmail</id>
+    <data_type>string</data_type>
+    <value />
+    <hidden>False</hidden>
+    <prompt_text />
+  </parameter>
+  <parameter>
+    <id>userId</id>
+    <data_type>string</data_type>
+    <value />
+    <hidden>False</hidden>
+    <prompt_text />
+  </parameter>
+  <entity>
+    <id>ACTIVITY_2</id>
+    <entity_name>ACTIVITY</entity_name>
+    <affinity>Global</affinity>
+    <db_name>ACTIVITY</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>ACTIVITY_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>ACTIVITY_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>ACTIVITY_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>ACTIVITY_NOTE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CUSTOMER_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>IID</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>ADDRESS_2</id>
+    <entity_name>ADDRESS</entity_name>
+    <affinity>Global</affinity>
+    <db_name>ADDRESS</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>ADDRESS_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>ADDRESS_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CITY</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>COUNTRY</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CUSTOMER_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>STATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>STREET_ADDRESS_1</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>STREET_ADDRESS_2</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>ZIP</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>BALANCE_2</id>
+    <entity_name>BALANCE</entity_name>
+    <affinity>Global</affinity>
+    <db_name>BALANCE</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>BALANCE_ID</col_name>
+    </key>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>BALANCE_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>AVAILABLE_AMOUNT</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>BALANCE_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>BALANCE_REF_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>RESET_AMOUNT</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>RESET_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SUBSCRIBER_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>CASE_NOTE_2</id>
+    <entity_name>CASE_NOTE</entity_name>
+    <affinity>Global</affinity>
+    <db_name>CASE_NOTE</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>NOTE_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>CASE_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>NOTE_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>NOTE_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>NOTE_TEXT</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>CASES_2</id>
+    <entity_name>CASES</entity_name>
+    <affinity>Global</affinity>
+    <db_name>CASES</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>CASE_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>ACTIVITY_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CASE_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CASE_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CASE_TYPE</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>DURATION</col_name>
+      <col_type>float</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>STATUS</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>COST</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>CONTRACT_2</id>
+    <entity_name>CONTRACT</entity_name>
+    <affinity>Global</affinity>
+    <db_name>CONTRACT</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>CONTRACT_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>ASSOCIATED_LINE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>ASSOCIATED_LINE_FMT</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CONTRACT_DESCRIPTION</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CONTRACT_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CONTRACT_REF_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>CUSTOMER_ID</col_name>
+      <col_type>float</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>FROM_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>MYMSISDN</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>TO_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>CUSTOMER_2</id>
+    <entity_name>CUSTOMER</entity_name>
+    <affinity>Global</affinity>
+    <db_name>CUSTOMER</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>CUSTOMER_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>CUSTOMER_ID</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>FIRST_NAME</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>LAST_NAME</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>PROFILE_PIC</col_name>
+      <col_type>image</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SATISFACTION</col_name>
+      <col_type>float</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SSN</col_name>
+      <col_type>string</col_type>
+      <filterable>All</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>INVOICE_2</id>
+    <entity_name>INVOICE</entity_name>
+    <affinity>Global</affinity>
+    <db_name>INVOICE</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>INVOICE_ID</col_name>
+    </key>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>INVOICE_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>BALANCE</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>DUE_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>INVOICE_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>INVOICE_IMAGE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>ISSUED_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>STATUS</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SUBSCRIBER_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>OFFER_2</id>
+    <entity_name>OFFER</entity_name>
+    <affinity>Global</affinity>
+    <db_name>OFFER</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>OFFER_ID</col_name>
+    </key>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>OFFER_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>FROM_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>OFFER_DESCRIPTION</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>OFFER_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>OFFER_REF_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SUBSCRIBER_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>TO_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>PAYMENT_2</id>
+    <entity_name>PAYMENT</entity_name>
+    <affinity>Global</affinity>
+    <db_name>PAYMENT</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>INVOICE_ID</col_name>
+    </key>
+    <key>
+      <col_name>PAYMENT_ID</col_name>
+    </key>
+    <key>
+      <col_name>INVOICE_ID</col_name>
+    </key>
+    <key>
+      <col_name>PAYMENT_ID</col_name>
+    </key>
+    <column_metadata>
+      <col_name>AMOUNT</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>INVOICE_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>ISSUED_DATE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>PAYMENT_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>STATUS</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>SUBSCRIBER_2</id>
+    <entity_name>SUBSCRIBER</entity_name>
+    <affinity>Global</affinity>
+    <db_name>SUBSCRIBER</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema_access_type>Metadata</schema_access_type>
+    <schema>Customer</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>MSISDN</col_name>
+    </key>
+    <key>
+      <col_name>SUBSCRIBER_ID</col_name>
+    </key>
+    <key>
+      <col_name>MSISDN</col_name>
+    </key>
+    <column_metadata>
+      <col_name>FIRST_NAME</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>IMSI</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>LAST_NAME</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>MSISDN</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SIM</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SUBSCRIBER_ID</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SUBSCRIBER_TYPE</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>VIP_STATUS</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <entity>
+    <id>SUBSCRIBER_REF_2</id>
+    <entity_name>SUBSCRIBER_REF</entity_name>
+    <affinity>Global</affinity>
+    <db_name>SUBSCRIBER_REF</db_name>
+    <datasource_id>2</datasource_id>
+    <object_type>table</object_type>
+    <schema>common</schema>
+    <canreexecuteindb>true</canreexecuteindb>
+    <key>
+      <col_name>SUBSCRIBER_TYPE</col_name>
+    </key>
+    <column_metadata>
+      <col_name>SUBSCRIBER_DESC</col_name>
+      <col_type>string</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+    <column_metadata>
+      <col_name>SUBSCRIBER_TYPE</col_name>
+      <col_type>int</col_type>
+      <filterable>Default</filterable>
+    </column_metadata>
+  </entity>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>ACTIVITY_2</entity_from_name>
+    <entity_to_name>CASES_2</entity_to_name>
+    <entity_from_id>ACTIVITY_2</entity_from_id>
+    <entity_to_id>CASES_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>ACTIVITY_ID</col_from_name>
+      <col_to_name>ACTIVITY_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>ACTIVITY_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>ACTIVITY_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>CASES_2</entity_from_name>
+    <entity_to_name>CASE_NOTE_2</entity_to_name>
+    <entity_from_id>CASES_2</entity_from_id>
+    <entity_to_id>CASE_NOTE_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>CASE_ID</col_from_name>
+      <col_to_name>CASE_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>CASE_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>CASE_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>CONTRACT_2</entity_from_name>
+    <entity_to_name>SUBSCRIBER_2</entity_to_name>
+    <entity_from_id>CONTRACT_2</entity_from_id>
+    <entity_to_id>SUBSCRIBER_2</entity_to_id>
+    <join_type>inner</join_type>
+    <relation_type>11</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>CONTRACT_ID</col_from_name>
+      <col_to_name>SUBSCRIBER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>CONTRACT_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>SUBSCRIBER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>CUSTOMER_2</entity_from_name>
+    <entity_to_name>ACTIVITY_2</entity_to_name>
+    <entity_from_id>CUSTOMER_2</entity_from_id>
+    <entity_to_id>ACTIVITY_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>CUSTOMER_ID</col_from_name>
+      <col_to_name>CUSTOMER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>CUSTOMER_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>CUSTOMER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>CUSTOMER_2</entity_from_name>
+    <entity_to_name>ADDRESS_2</entity_to_name>
+    <entity_from_id>CUSTOMER_2</entity_from_id>
+    <entity_to_id>ADDRESS_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>CUSTOMER_ID</col_from_name>
+      <col_to_name>CUSTOMER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>CUSTOMER_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>CUSTOMER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>CUSTOMER_2</entity_from_name>
+    <entity_to_name>CONTRACT_2</entity_to_name>
+    <entity_from_id>CUSTOMER_2</entity_from_id>
+    <entity_to_id>CONTRACT_2</entity_to_id>
+    <join_type>inner</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>CUSTOMER_ID</col_from_name>
+      <col_to_name>CUSTOMER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>CUSTOMER_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>CUSTOMER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>INVOICE_2</entity_from_name>
+    <entity_to_name>PAYMENT_2</entity_to_name>
+    <entity_from_id>INVOICE_2</entity_from_id>
+    <entity_to_id>PAYMENT_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>INVOICE_ID</col_from_name>
+      <col_to_name>INVOICE_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>INVOICE_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>INVOICE_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>SUBSCRIBER_2</entity_from_name>
+    <entity_to_name>BALANCE_2</entity_to_name>
+    <entity_from_id>SUBSCRIBER_2</entity_from_id>
+    <entity_to_id>BALANCE_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>SUBSCRIBER_ID</col_from_name>
+      <col_to_name>SUBSCRIBER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>SUBSCRIBER_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>SUBSCRIBER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>SUBSCRIBER_2</entity_from_name>
+    <entity_to_name>INVOICE_2</entity_to_name>
+    <entity_from_id>SUBSCRIBER_2</entity_from_id>
+    <entity_to_id>INVOICE_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>SUBSCRIBER_ID</col_from_name>
+      <col_to_name>SUBSCRIBER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>SUBSCRIBER_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>SUBSCRIBER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>SUBSCRIBER_2</entity_from_name>
+    <entity_to_name>OFFER_2</entity_to_name>
+    <entity_from_id>SUBSCRIBER_2</entity_from_id>
+    <entity_to_id>OFFER_2</entity_to_id>
+    <join_type>leftouter</join_type>
+    <relation_type>1M</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>SUBSCRIBER_ID</col_from_name>
+      <col_to_name>SUBSCRIBER_ID</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>SUBSCRIBER_ID</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>SUBSCRIBER_ID</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <join>
+    <affinity>Global</affinity>
+    <entity_from_name>SUBSCRIBER_REF_2</entity_from_name>
+    <entity_to_name>SUBSCRIBER_2</entity_to_name>
+    <entity_from_id>SUBSCRIBER_REF_2</entity_from_id>
+    <entity_to_id>SUBSCRIBER_2</entity_to_id>
+    <join_type>inner</join_type>
+    <relation_type>11</relation_type>
+    <weight>0</weight>
+    <joincol>
+      <col_from_name>SUBSCRIBER_TYPE</col_from_name>
+      <col_to_name>SUBSCRIBER_TYPE</col_to_name>
+    </joincol>
+    <clause>
+      <left_side>SUBSCRIBER_TYPE</left_side>
+      <left_side_type>Column</left_side_type>
+      <comparison>EQ</comparison>
+      <right_side>SUBSCRIBER_TYPE</right_side>
+      <right_side_type>Column</right_side_type>
+      <conjunction>AND</conjunction>
+      <level>0</level>
+    </clause>
+  </join>
+  <role>
+    <id>create_report</id>
+    <active>False</active>
+    <rolegeneral>
+      <reportpath />
+      <dateformat />
+      <timeformat />
+      <datetimeformat />
+      <separatorsymbol />
+      <currencysymbol />
+      <readfiltervalues />
+      <dbtimeout>0</dbtimeout>
+      <showgrid />
+      <showcrosstabreports>true</showcrosstabreports>
+      <showdashboardreports>true</showdashboardreports>
+      <showchainedreports>true</showchainedreports>
+      <showexpressviews>true</showexpressviews>
+      <allowexpressviewliveedit />
+      <showexpressreports />
+      <showexpressreportsgrouping />
+      <showexpressreportsformulabutton />
+      <showexpressreportsstylingtoolbar />
+      <showexpressreportsthemes />
+      <showadvancedreports>true</showadvancedreports>
+      <showschedulereports>true</showschedulereports>
+      <showschedulereportsmanager>true</showschedulereportsmanager>
+      <schedulemanagerviewlevel />
+      <cachevisibilitylevel />
+      <showschedulereportsemail>true</showschedulereportsemail>
+      <decimalsymbol />
+      <languagefile />
+      <servertimezoneoffset>0</servertimezoneoffset>
+      <clienttimezonename />
+      <showdashboardnewvisualizationbutton>true</showdashboardnewvisualizationbutton>
+      <allowreportcustomsqlobjects>true</allowreportcustomsqlobjects>
+    </rolegeneral>
+    <security>
+      <includereportcustomsqlobjects>False</includereportcustomsqlobjects>
+      <folders>
+        <include_all>True</include_all>
+        <read_only>False</read_only>
+        <allow_management>True</allow_management>
+      </folders>
+      <dataobjects>
+        <include_all>True</include_all>
+      </dataobjects>
+      <dataobjectrows />
+    </security>
+  </role>
+  <role>
+    <id>default</id>
+    <active>False</active>
+    <rolegeneral>
+      <reportpath />
+      <dateformat />
+      <timeformat />
+      <datetimeformat />
+      <separatorsymbol />
+      <currencysymbol />
+      <readfiltervalues />
+      <dbtimeout>0</dbtimeout>
+      <showgrid />
+      <showcrosstabreports>false</showcrosstabreports>
+      <showdashboardreports>false</showdashboardreports>
+      <showchainedreports>false</showchainedreports>
+      <showexpressviews>false</showexpressviews>
+      <allowexpressviewliveedit />
+      <showexpressreports />
+      <showexpressreportsgrouping />
+      <showexpressreportsformulabutton />
+      <showexpressreportsstylingtoolbar />
+      <showexpressreportsthemes />
+      <showadvancedreports>false</showadvancedreports>
+      <showschedulereports />
+      <showschedulereportsmanager />
+      <schedulemanagerviewlevel />
+      <cachevisibilitylevel />
+      <showschedulereportsemail />
+      <decimalsymbol />
+      <languagefile />
+      <servertimezoneoffset>0</servertimezoneoffset>
+      <clienttimezonename />
+      <showdashboardnewvisualizationbutton />
+      <allowreportcustomsqlobjects>false</allowreportcustomsqlobjects>
+    </rolegeneral>
+    <security>
+      <includereportcustomsqlobjects>False</includereportcustomsqlobjects>
+      <folders>
+        <include_all>True</include_all>
+        <read_only>False</read_only>
+        <allow_management>False</allow_management>
+      </folders>
+      <dataobjects>
+        <include_all>True</include_all>
+      </dataobjects>
+      <dataobjectrows />
+    </security>
+  </role>
+  <function>
+    <name>QuarterNumber</name>
+    <description>Returns the fiscal quarter of a date as a number</description>
+    <category>Date</category>
+    <min_args>1</min_args>
+    <max_args>1</max_args>
+    <arguments_json>[{"Name":"inputDate","Required":true,"Description":"A formatted date string, Date value, or DateTime value"}]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>1</available_in>
+    <filter_return_type>Integer</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>if (args[0] == null)
+	return null;
+DateTime date = DateTime.Parse(args[0].ToString()); int month = date.Month;
+if (month &gt;= 1 &amp;&amp; month &lt;= 3) 
+	return "1";
+if (month &gt;= 4 &amp;&amp; month &lt;= 6) 
+	return "2"; 
+if (month &gt;= 7 &amp;&amp; month &lt;= 9) 
+	return "3"; 
+if (month &gt;= 10 &amp;&amp; month &lt;= 12) 
+	return "4"; 
+return "0";</program_code>
+  </function>
+  <function>
+    <name>QuarterName</name>
+    <description>Returns the fiscal quarter of a date in the typical Q1, ..., Q4 style</description>
+    <category>Date</category>
+    <min_args>1</min_args>
+    <max_args>1</max_args>
+    <arguments_json>[{"Name":"inputDate","Required":true,"Description":"A formatted date string, Date value, or DateTime value"}]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>1</available_in>
+    <filter_return_type>String</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>if (args[0] == null)
+	return null;
+DateTime date = DateTime.Parse(args[0].ToString()); int month = date.Month;
+if (month &gt;= 1 &amp;&amp; month &lt;= 3) 
+	return "Q1";
+if (month &gt;= 4 &amp;&amp; month &lt;= 6) 
+	return "Q2"; 
+if (month &gt;= 7 &amp;&amp; month &lt;= 9) 
+	return "Q3"; 
+if (month &gt;= 10 &amp;&amp; month &lt;= 12) 
+	return "Q4"; 
+return "0";</program_code>
+  </function>
+  <function>
+    <name>MonthName</name>
+    <description>Returns the name of the month. Function can take a formatted date string, a Date or DateTime value, or an integer value as input</description>
+    <category>Date</category>
+    <min_args>1</min_args>
+    <max_args>1</max_args>
+    <arguments_json>[{"Name":"inputDateOrNumber","Required":true,"Description":"A formatted date string, a Date or DateTime value, or an integer value"}]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>1</available_in>
+    <filter_return_type>String</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>if (args[0] == null)
+	return null;
+//create return value
+string monthName = "";
+
+//create int to hold month num
+int monthNumber;
+
+//create datetime to hold date
+DateTime myDate;
+
+//see if input is an integer or a date
+bool intCheck = Int32.TryParse(args[0].ToString(), out monthNumber);
+bool dateCheck = DateTime.TryParse(args[0].ToString(), out myDate);
+
+//make appropriate conversion based on input type
+if(intCheck &amp;&amp; monthNumber &gt; 0 &amp;&amp; monthNumber &lt; 13)
+	monthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(monthNumber);
+else if(dateCheck)
+	monthName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(myDate.Month);
+else
+	monthName = sessionInfo.PageInfo.LanguageDict.GetInfo("FormulaEditorMonthNameError").Html;
+
+//return converted month name or failure message
+return monthName;</program_code>
+    <reference>
+      <name>mscorlib.dll</name>
+    </reference>
+  </function>
+  <function>
+    <name>Today</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today;</program_code>
+  </function>
+  <function>
+    <name>Tomorrow</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>102</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(1);</program_code>
+  </function>
+  <function>
+    <name>Yesterday</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>103</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>TodayPlus7Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>111</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(7);</program_code>
+  </function>
+  <function>
+    <name>TodayPlus30Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>112</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(30);</program_code>
+  </function>
+  <function>
+    <name>TodayPlus60Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>113</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(60);</program_code>
+  </function>
+  <function>
+    <name>TodayPlus90Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>114</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(90);</program_code>
+  </function>
+  <function>
+    <name>TodayMinus7Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>121</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(-7);</program_code>
+  </function>
+  <function>
+    <name>TodayMinus30Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>122</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(-30);</program_code>
+  </function>
+  <function>
+    <name>TodayMinus60Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>123</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(-60);</program_code>
+  </function>
+  <function>
+    <name>TodayMinus90Days</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>124</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(-90);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfCurrentMonth</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>131</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.Today.Month, 1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfCurrentMonth</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>132</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.Today.Month, 1).AddMonths(1).AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfLastMonth</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>133</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.Today.Month, 1).AddMonths(-1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfLastMonth</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>134</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.Today.Month, 1).AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfNextMonth</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>135</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.Today.Month, 1).AddMonths(1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfNextMonth</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>136</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.Today.Month, 1).AddMonths(2).AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfCurrentYear</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>141</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, 1, 1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfCurrentYear</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>142</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, 12, 31);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfLastYear</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>143</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, 1, 1).AddYears(-1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfLastYear</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>144</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, 12, 31).AddYears(-1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfNextYear</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>145</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, 1, 1).AddYears(1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfNextYear</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>146</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, 12, 31).AddYears(1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfCurrentQuarter</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>150</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.CurQuarter * 3 + 1, 1);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfCurrentQuarter</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>151</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.CurQuarter * 3 + 1, 1).AddMonths(3).AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfLastQuarter</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>152</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.CurQuarter * 3 + 1, 1).AddMonths(-3);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfLastQuarter</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>153</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.CurQuarter * 3 + 1, 1).AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>FirstDayOfNextQuarter</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>154</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.CurQuarter * 3 + 1, 1).AddMonths(3);</program_code>
+  </function>
+  <function>
+    <name>LastDayOfNextQuarter</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>155</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return new DateTime(sessionInfo.Today.Year, sessionInfo.CurQuarter * 3 + 1, 1).AddMonths(6).AddDays(-1);</program_code>
+  </function>
+  <function>
+    <name>MondayOfCurrentWeek</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>160</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(DayOfWeek.Monday - sessionInfo.Today.DayOfWeek);</program_code>
+  </function>
+  <function>
+    <name>MondayOfLastWeek</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>161</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(DayOfWeek.Monday - sessionInfo.Today.DayOfWeek).AddDays(-7);</program_code>
+  </function>
+  <function>
+    <name>MondayOfNextWeek</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>162</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(DayOfWeek.Monday - sessionInfo.Today.DayOfWeek).AddDays(7);</program_code>
+  </function>
+  <function>
+    <name>FridayOfCurrentWeek</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>163</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(DayOfWeek.Friday - sessionInfo.Today.DayOfWeek);</program_code>
+  </function>
+  <function>
+    <name>FridayOfLastWeek</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>164</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(DayOfWeek.Friday - sessionInfo.Today.DayOfWeek).AddDays(-7);</program_code>
+  </function>
+  <function>
+    <name>FridayOfNextWeek</name>
+    <category>Date</category>
+    <min_args>0</min_args>
+    <max_args>0</max_args>
+    <arguments_json>[]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>2</available_in>
+    <filter_return_type>Date</filter_return_type>
+    <weight>165</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>return sessionInfo.Today.AddDays(DayOfWeek.Friday - sessionInfo.Today.DayOfWeek).AddDays(7);</program_code>
+  </function>
+  <function>
+    <name>WeekOfYear</name>
+    <description>Returns the ordered number of the week in the year that a date occurs on, from 1 to 53</description>
+    <category>Date</category>
+    <min_args>1</min_args>
+    <max_args>1</max_args>
+    <arguments_json>[{"Name":"inputDate","Required":true,"Description":"A formatted date string, Date value, or DateTime value representing the date to get the week of the year for"}]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>1</available_in>
+    <filter_return_type>String</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>if (args[0] == null)
+	return null;
+DateTime date = DateTime.Parse(args[0].ToString());
+return System.Globalization.CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(date, CalendarWeekRule.FirstDay, DayOfWeek.Monday);</program_code>
+    <namespace>
+      <name>System.Globalization</name>
+    </namespace>
+  </function>
+  <function>
+    <name>DayOfWeekName</name>
+    <description>Returns the name of the weekday of a date</description>
+    <category>Date</category>
+    <min_args>1</min_args>
+    <max_args>1</max_args>
+    <arguments_json>[{"Name":"inputDate","Required":true,"Description":"A formatted date string, Date value, or DateTime value representing the date to get the day of the week for"}]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>1</available_in>
+    <filter_return_type>String</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>if (args[0] == null)
+	return null;
+DateTime date = DateTime.Parse(args[0].ToString());
+int day = (int)date.DayOfWeek + 1;
+return sessionInfo.PageInfo.LanguageDict.GetInfo("CalendarDayOfWeek" + day).Html;</program_code>
+  </function>
+  <function>
+    <name>DayOfWeekNumber</name>
+    <description>Returns the ordered number of the weekday that a date occurs on, from 1 (Sunday) to 7 (Saturday)</description>
+    <category>Date</category>
+    <min_args>1</min_args>
+    <max_args>1</max_args>
+    <arguments_json>[{"Name":"inputDate","Required":true,"Description":"A formatted date string, Date value, or DateTime value representing the date to get the day of the week for"}]</arguments_json>
+    <variable_arguments>false</variable_arguments>
+    <available_in>1</available_in>
+    <filter_return_type>String</filter_return_type>
+    <weight>101</weight>
+    <disable_database_grouping>false</disable_database_grouping>
+    <language>cs</language>
+    <program_code>if (args[0] == null)
+	return null;
+DateTime date = DateTime.Parse(args[0].ToString());
+return (int)System.Globalization.CultureInfo.InvariantCulture.Calendar.GetDayOfWeek(date) + 1;</program_code>
+  </function>
+  <quickfunction>
+    <id>day-of-month</id>
+    <language_id>DayOfMonth_wrQuickFunction</language_id>
+    <display_formula>=Day({cell_text})</display_formula>
+    <sort_text>=Day({cell_text})</sort_text>
+    <return_data_type>2</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>day-of-week</id>
+    <language_id>DayOfWeek_wrQuickFunction</language_id>
+    <display_formula>=DayOfWeekName({cell_text})</display_formula>
+    <sort_text>=DayOfWeekNumber({cell_text})</sort_text>
+    <return_data_type>0</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>week-of-year</id>
+    <language_id>WeekOfYear_wrQuickFunction</language_id>
+    <display_formula>=WeekOfYear({cell_text})</display_formula>
+    <sort_text>=WeekOfYear({cell_text})</sort_text>
+    <return_data_type>2</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>year</id>
+    <language_id>Year_wrQuickFunction</language_id>
+    <display_formula>=Year({cell_text})</display_formula>
+    <sort_text>=Year({cell_text})</sort_text>
+    <return_data_type>2</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>month-name</id>
+    <language_id>MonthName_wrQuickFunction</language_id>
+    <display_formula>=MonthName({cell_text})</display_formula>
+    <sort_text>=Month({cell_text})</sort_text>
+    <return_data_type>0</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>year-month-name</id>
+    <language_id>YearMonthName_wrQuickFunction</language_id>
+    <display_formula>=Year({cell_text}) &amp; " - " &amp; MonthName({cell_text})</display_formula>
+    <sort_text>=Year({cell_text})*12 + Month({cell_text})</sort_text>
+    <return_data_type>0</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>quarter</id>
+    <language_id>Quarter_wrQuickFunction</language_id>
+    <display_formula>=QuarterName({cell_text})</display_formula>
+    <sort_text>=QuarterNumber({cell_text})</sort_text>
+    <return_data_type>0</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+  <quickfunction>
+    <id>year-quarter</id>
+    <language_id>YearQuarter_wrQuickFunction</language_id>
+    <display_formula>=Year({cell_text}) &amp; " - " &amp; QuarterName({cell_text})</display_formula>
+    <sort_text>=Year({cell_text})*4 + QuarterNumber({cell_text})</sort_text>
+    <return_data_type>0</return_data_type>
+    <supported_data_types>Date</supported_data_types>
+  </quickfunction>
+</webreports>

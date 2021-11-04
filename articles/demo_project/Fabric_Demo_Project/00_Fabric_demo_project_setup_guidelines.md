@@ -32,9 +32,47 @@ To setup the project and connect the databases, do the following:
 
 ## BI Configuration and Setup
 
-To setup the BI and generate the example reports and dashboards using the demo project data, do the following:
+If you are already using the demo project from the previous versions, you need to download the project export as well as the DB files again.
 
-1. Install and configure the BI as explained [here](/articles/38_bi_integration/01_Installation.md).
-   * For the purpose of demo project, it's recommended to install the docker and to use the SQLite as a Storage Management DB.
-   * Update the **BI_PORT** in the [bi] section of the Fabric config.ini.
-2. ​
+To setup the BI and generate the example reports and dashboards using the demo project, do the following steps:
+
+1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
+
+2. Download the [WebReports.XML](SqliteDB/WebReports.xml), [reports.json](SqliteDB/reports.json) and [Json.zip](SqliteDB/Json.zip) files locally on your computer.
+
+3. TBD - run the script that will update your docker image with the Demo Project BI example.
+
+4. Open the Demo Project in the Fabric Studio and open the project's config.ini as follows:
+
+   * Right click on the Project and click **Open Folder**:
+
+     ![img](images/open_folder.PNG)
+
+   * Then go to **FabricHome/config** and open the **config.ini**.
+
+   * In the project's config.ini make sure that the **BI_PORT** the **[bi]** section is set to **localhost**, the Storage Management DB is pointing to the default SQLite DB and the **TABLE_PREFIX** is empty.
+
+5. Deploy the project including the References. 
+
+6. Click the ![img](images/web_fr.PNG)icon to open the **Web Framework > BI** and go to **Admin** tab.
+
+   ![img](images/bi_admin.PNG)
+
+7. Go to **Data > Sources > Fabric-Local**, click the ![img](images/eye.PNG) icon to see the Connection String and update the URLS to your computer's IP. 
+
+   ![img](images/fabric_local.PNG)
+
+   * Click the ![img](images/test_con.PNG) icon to test the connection.
+   * If the connection is successful, click **Apply** to save your changes.
+
+## How to Work with BI Demo
+
+1. Switch to the **Designer** tab of the **BI** and open the **Demo Proj** folder. The folder includes a dashboard called **Dashbrd-v0** and a list of reports which construct this dashboard.
+
+2. Double click to open the dashboard in Edit mode or click the ![img](images/play.PNG) icon to generate the dashboard with the data. 
+
+3. The generated dashboard is built using a data of a customer_id = 118 from the Customer LU of the demo project. 
+
+   ![img](images/dashboard.PNG)
+
+4. To see the data of another customer, go to **Admin** tab and open **Data > Parameters > customer_id**, set another value and click **Apply** to save your changes. Then return to the **Designer** tab, open the dashboard and play it.
