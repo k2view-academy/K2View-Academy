@@ -136,7 +136,7 @@ Note that both name and UID can either be chosen by the user, attributed automat
 
 - Params: This refers to the arguments that can be parsed to the Broadway flow. For example, multiple parameters can be parsed as a key/value object from an external link.
  
-Please refer to this [article](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) in order to learn how to setup the schedule type and the affinity appropriately.
+Please refer to this [section](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) in order to learn how to setup the schedule type and the affinity appropriately.
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)
 
