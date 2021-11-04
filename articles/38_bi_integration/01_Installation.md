@@ -32,10 +32,10 @@ The BI solution uses the Fabric **config.ini** to retrieve information about the
 
 Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
-* **BI_PORT**, the listener port for the Fabric BI. The default is 5432.
 * **BI_HOST**, the IP address of the Fabric BI server.
-* **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
 * **STORAGE_MGMT_HOST**, the IP address of the Storage Management DB. Empty for SQLite DB.
+* **BI_PORT**, the listener port for the Storage Management DB. The default is 5432.
+* **STORAGE_MGMT_DB_NAME**, the name of the Storage Management DB. The default is StorageMgmt.
 * **STORAGE_MGMT_DB_TYPE**, the type of Storage Management DB. The default is SQLite. The recommended Storage Management DB type is PostgreSQL.
 * **STORAGE_MGMT_DB_PROVIDER**, the Storage Management DB provider. The default is SQLite. When the Storage Management DB type is PostgreSQL, the provider is Npgsql.
 * **STORAGE_MGMT_DB_USER** / **STORAGE_MGMT_DB_PASSWORD**, the Storage Management DB user and password. Empty for SQLite DB. The password is automatically encrypted upon saving the config.ini.
@@ -46,12 +46,12 @@ Update the **[bi]** section parameters of the Fabric **config.ini** as follows:
 
 ~~~
 [bi]
-## Listener port for Fabric BI
-#BI_PORT=5432
 ## BI server host
 #BI_HOST=
 ## BI Storage Management host, empty for SQLite
 #STORAGE_MGMT_HOST=
+## BI Storage Management Listener port
+#BI_PORT=5432
 ## BI Storage Management name, default = StorageMgmt for both SQLite and PostgreSQL
 #STORAGE_MGMT_DB_NAME=StorageMgmt
 ## BI Storage Management type, the values are SQLite, PostgreSQL

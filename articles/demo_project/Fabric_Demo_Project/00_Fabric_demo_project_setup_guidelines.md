@@ -34,4 +34,7 @@ To setup the project and connect the databases, do the following:
 
 To setup the BI and generate the example reports and dashboards using the demo project data, do the following:
 
-1. ​
+1. Install and configure the BI as explained [here](/articles/38_bi_integration/01_Installation.md).
+   * For the purpose of demo project, it's recommended to install the docker and to use the SQLite as a Storage Management DB.
+   * Update the **BI_PORT** in the [bi] section of the Fabric config.ini.
+2. ​
