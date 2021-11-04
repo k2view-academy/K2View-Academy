@@ -21,11 +21,11 @@ Reference Table that can be populating by using Fabric transactions. In this spe
 
 # **Where are Reference Tables Stored?**
 
-A CommonDB schema is an SQLite database used for storing Reference Tables. Until 6.5 all reference tables were stored under the same schema - i.e. under the same sqlite file. 
+A CommonDB schema is an SQLite database used for storing Reference Tables. Up to Fabric release 6.5, all reference tables were stored under the same schema - i.e. under the same SQlite file. 
 
-Since 6.5.3 it is possible to store reference tables in separate schemas, therefore all commonDB databases and their associated tables can be dissociated one from an other. 
+Since Fabric release 6.5.3 it is possible to store reference tables in separate schemas, therefore all commonDB databases and their associated tables can be dissociated one from an other. 
 
-In that case a new sqlite file, bearing the name of the schema specified in the [Reference Table Property](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#reference-tables-properties), is created and can also be shared by more reference tables.
+When a reference table is stored, a new SQlite file, bearing the name of the schema specified in the [Reference Table Property](/articles/22_reference(commonDB)_tables/02_reference_table_fabric_studio.md#reference-tables-properties), is created and can also be shared by more reference tables.
 
 Using this reference table segregation schema reduces considerably locking instances of reference tables that usually happens during multiple write-processes.
 
