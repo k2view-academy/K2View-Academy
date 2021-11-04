@@ -54,7 +54,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 5. Deploy the project including the References. 
 
-6. Click the ![img](images/web_fr.PNG)icon to open the **Web Framework > BI** and go to **Admin** tab.
+6. Click the ![img](images/web_fr.PNG) icon to open the **Web Framework > BI** and go to **Admin** tab.
 
    ![img](images/bi_admin.PNG)
 
