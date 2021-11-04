@@ -80,17 +80,16 @@ To create an [Interface Listener](/articles/19_Broadway/09_broadway_integration_
 
 ### Using the InterfaceListener Actor 
 
-The *Interface Listener* actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another broadway flow upon arrival of a new file on the interface.
+The *InterfaceListener* actor enables the flow in which it is instantiated to listen to SFTP or File Systems interfaces and trigger another Broadway flow upon arrival of a new file on the interface.
 
-
-To create an interface listener job from a broadway flow, simply chose the **interfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
+To create an interface listener job from a broadway flow, choose the **InterfaceListener** actor from the **Add Actors To Stage menu** in Broadway.
 
 ![images](/articles/24_non_DB_interfaces/images/12_interfaceListenerActor_1.PNG)
 
-The following parameters are to be filled in the properties tab:
+Fill in the following parameters in the properties tab:
 
 - flowName: name of the flow to be triggered by this actor.
-- interfaceName: this is the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points to.
+- interfaceName: the interface that is being listened and used to trigger the flow defined above, once a new file is detected on the file system to which the interface points.
 
 Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
 
