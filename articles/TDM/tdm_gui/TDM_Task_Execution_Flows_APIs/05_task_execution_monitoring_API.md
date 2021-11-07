@@ -18,12 +18,17 @@ Returns the details of the current or last execution of the given task_id. If th
 
 ### API Input
 
-- taskId
+- **taskId**: this is a mandatory parameter.
+- **executionID**: this is an optional parameter. This parameter can be populated by a task execution id to monitor a selected task execution.
 
-### API Input Example
+### API Input Examples
 
 ```
 http://localhost:3213/api/wsTaskMonitor/300
+```
+
+```
+http://localhost:3213/api/wsTaskMonitor/3?executionID=7
 ```
 
 ### API Output Examples
