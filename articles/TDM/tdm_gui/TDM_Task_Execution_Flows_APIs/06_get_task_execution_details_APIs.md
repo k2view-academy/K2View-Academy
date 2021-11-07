@@ -6,10 +6,6 @@
 
 /task/{taskId}/summary
 
-### PI URL
-
-wsTaskMonitor/{taskId}
-
 ### HTTP Method
 
 GET
@@ -24,12 +20,18 @@ Returns the list of all executions of the input task. Returns one summary record
 
 ### API Input
 
-- taskId
+- **taskId**: a mandatory parameter.
+- **numberOfExecutions**: an optional parameter to limit the output to the latest X executions. For example, when this parameter is set to 3, the API return the last 3 task executions.
+- **userId**: an optional parameter. When populated, the API only returns the task executions made by the input user.
 
 ### API Input Example
 
 ```
 http://localhost:3213/api/task/293/summary
+```
+
+```
+http://10.21.2.69:3213/api/task/2/summary?numberOfExecutions=4&userId=joe
 ```
 
 ### API Output Example
@@ -132,31 +134,9 @@ http://localhost:3213/api/task/293/summary
 
 ## Get the Summary Execution Details on Last Execution
 
-### API URL
+The **wsTaskMonitor** API can be used to monitor a task execution or get the information of the last execution (if the last  execution ended).
 
-wsTaskMonitor/{taskId}
-
-### HTTP Method
-
-GET
-
-### API Category
-
-TDM_Tasks
-
-### API Description
-
-Returns the details of the current or last execution of the given task_id. If the task is pending, it will return only its status, else it will return the statistics of the entities handled by the task.
-
-### API Input
-
-- taskId
-
-### API Input Example
-
-```
-http://localhost:3213/api/wsTaskMonitor/293
-```
+Click [here](05_task_execution_monitoring_API.md) for more details about this API.
 
 ### API Output Example
 
