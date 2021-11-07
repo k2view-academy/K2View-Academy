@@ -26,6 +26,7 @@ The task execution is validated whether the execution parameters are overridden 
 
 #### Validate the Task Execution Parameters
 
+- Verify that the TDM task execution processes are up and running. If the TDM task execution processes are down, stop the task execution and return an error message.
 - Test the connection details of the source and target environments of the task execution if the **forced** parameter is **false**.  
 - Do not enable an execution if another execution with the same execution parameters is already running on the task.
 - Validate the task's BE and LUs with the [TDM products](/articles/TDM/tdm_gui/11_environment_products_tab.md) of the task execution's source and target environment.
