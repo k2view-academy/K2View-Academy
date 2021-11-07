@@ -154,7 +154,22 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 - [Task execution jobs](/articles/TDM/tdm_architecture/03_task_execution_processes.md) are defined and run under the TDM LU.
 - The TDM cleanup job that cleans the TDM DB is defined under the TDM LU. 
 
-You must stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric to avoid a parallel execution of TDM jobs on the same TDM DB. 
+### TDM Deploy Flow
+
+The **deploy.flow** has been added to TDM LU in TDM 7.3. This process runs the following activities upon the TDM LU deployment:
+
+- Verify that the Environment and the Web Services are deployed to Fabric. Give an error message to the user if they are not deployed to Fabric.
+- Create the k2masking keyspace in Cassandra if not exists
+- Check if Redis is up. Give an error message to the user id the Redis is down.
+   
+
+Edit the **deploy.flow** of the TDM LU before the TDM deployment:
+
+- Edit the FabricSet actor of the Set Env stage. Populate the value of the environment key by the environment name from which the deploy.flow needs to get the Cassandra and Redis connection details.
+
+### TDM LU Deployment
+
+Deploy the TDM LU to the local debug Fabric server using the [soft deploy](/articles/16_deploy_fabric/01_deploy_Fabric_project.md#soft-deploy) option or stop the TDM jobs on the local Fabric before deploying the TDM LU to a remote Fabric to avoid a parallel execution of TDM jobs on the same TDM DB. 
 
 
 ## TDM_LIBRARY LU

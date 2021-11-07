@@ -49,7 +49,8 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
         "be_name": "CUSTOMER",
         "task_type": "LOAD",
         "selection_method": "Randon Selection",
-        "sync_mode": "ON",
+        "task_sync_mode": null,
+        "env_sync_mode": "ON",
         "operation_mode": "Delete and load entity",
         "replace_sequences": "false",
         "version_ind": "false",
@@ -58,7 +59,8 @@ http://localhost:3213/api/taskSummaryReport/490/luName/ALL
         "selected_ref_version_task_name": null,
         "selected_ref_version_datetime": null,
         "scheduling_parameters": "immediate",
-        "schedule_expiration_date": null
+        "schedule_expiration_date": null,
+        "override_parameters": "{\"TASK_GLOBALS\":{\"MASKING_FLAG\":\"0\", \"GLOBAL2\":\"aaaaaa\"},\"ENTITY_LIST\":\"1\"}"  
       }
     ],
     "Task Execution Summary": [
