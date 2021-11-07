@@ -24,5 +24,6 @@ The TDM DB  [tdm_general_parameters](/articles/TDM/tdm_architecture/02_tdm_datab
   - **maxRetentionPeriod**: maximum number days when setting a [retention period](/articles/TDM/tdm_gui/16_extract_task.md#retention-period) on extract tasks. Default value is 90 days.
   - **defaultPeriod**: default retention period on extract tasks. Detault value is 5 days ("unit":"Days","value":5).
   - **permissionGroups**: list of the [TDM permission groups](/articles/TDM/tdm_gui/02a_permission_group_mapping_window.md). The following options are currently supported: **admin**,**owner**, and **tester**.   
+  - **TDM Version**
 
 [![Previous](/articles/images/Previous.png)](01_tdm_installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_tdm_fabric_credentials.md)
