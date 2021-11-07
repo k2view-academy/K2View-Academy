@@ -1,10 +1,12 @@
 # Report Execution Guidelines
 
-BI reports are created and executed using the **Designer** module. Generation of a report without opening the BI application can be done by the  **GetExecute** REST API.
+BI reports are created and executed using the BI's **Designer** module. 
 
-The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
+Generation of a report without opening the BI application can be done by the  **GetExecute** REST API. The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
 
-The sections below explain both options.
+In addition, the report generation can be done typing a direct link to a report in the browsers.
+
+The sections below explain about these options.
 
 ### Reports Generation Using the Designer Module
 
