@@ -31,7 +31,7 @@ Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_ser
 
 * The following are optional **ARGS**:
 
-  * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation. Only the **FilterText** (the value of the filter) is required, the other attributes are optional.
+  * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation. Only the **FilterText** (the value of the filter) is required, the other attributes are optional. The **FilterText** should include a data object and a column to filter on.
   * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation.  The fields **EntityName** and **ColumnName** (data object and column to sort on) are required.
 
 
