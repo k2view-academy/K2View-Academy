@@ -1,16 +1,31 @@
 # Report Execution Guidelines
 
-BI reports are created and executed using the **Designer** module. Generation of a report without opening the BI application can be done by the  **GetExecute** REST API.
+BI reports are created and executed using the BI's **Designer** module. 
 
-The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
+Generation of a report without opening the BI application can be done by the  **GetExecute** REST API. The [Fabric Jobs mechanism](/articles/20_jobs_and_batch_services/01_fabric_jobs_overview.md) enables generation of BI reports via Fabric user code so they can be scheduled and can benefit from Jobs execution parameters. 
 
-The sections below explain both options.
+In addition, the report generation can be done typing a direct link to a report in the browsers.
+
+The sections below explain about these options.
 
 ### Reports Generation Using the Designer Module
 
 Generate the report in the **Designer** module using the ![run](images/run_icon.PNG) icon in the Report Tree or the Run ![run](images/run_button.PNG) button in the report editor. 
 
-You can setup various report generation options using the Report Options (applicable for Advance Reports). 
+You can setup various report generation options using the Report Options (applicable for Advance Reports) by clicking **Advanced** > **General Options**:
+
+![img](images/report_adv.PNG)
+
+For example, you can define the report behavior when there is no qualified data for a report. It is done by setting the **No Data Qualify Display Mode** argument to one of the following options:
+
+* **Show Message**: 
+  * When running a report via the BI's Designer, **No Data Qualified** message is displayed.
+  * When a report is generated [via the Fabric Job](06_report_execution_guidelines.md#reports-generation-using-the-fabric-jobs-mechanism), the extract file is not created.
+* **Show Report**:
+  * When running a report via the BI's Designer, static data of the report (such as column titles) is displayed. 
+  * When a report is generated [via the Fabric Job](06_report_execution_guidelines.md#reports-generation-using-the-fabric-jobs-mechanism), the extract file is created and it includes static data only. 
+
+![img](images/report_exe_options.PNG)
 
 ### Reports Generation Using the Fabric Jobs Mechanism
 
@@ -71,7 +86,7 @@ Generate the report using a direct link to it in a separate browser, as follows:
 
 Where <report path in BI> is the full name of the report from the Root folder till the report name.
 
-For example, the "deep link" to the report **mig_rep** under the folder **test_designer** running on a localhost is: 
+For example, the "deep link" to the report **mig_rep** under the folder **test_designer** running on a **localhost** is: 
 
 http://localhost:3213/app/BI/test_designer/mig_rep
 
