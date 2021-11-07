@@ -3,12 +3,8 @@
 We have just released TDM 7.3, which includes the following enhancements:
 
 - **Enable  adding a User Group (Fabric Role) to a TDM Environment role** 
-- **TDM  Templates Enhancements:**
-  - Automatically adding of the sequence actors to the load flows. 
-  - **Update createFlowsFromTemplates flow:** adding an **incremental mode** to avoid overriding  existing flows.
-  - **Update InitiateTDMLoad flow for load tasks:** run the sync of the LUI on the source environment (remote get LUI).
-  - **Add deploy.flow to TDM LU** to validate the TDM execution environment.
-
+- **TDM  Templates Enhancements:** automatically adding of the sequence actors to the load flows, adding  an **incremental mode** when generating the TDM flows to avoid overriding  existing flows, and adding validations upon the TDM LU deployment.
+  
 - **TDM APIs Enhancements:** additional filtering parameters and validations have been defined in the TAM task’s APIs.
 - **Support getting the entity list using a Broadway flow** when running an extract task on all entities.
 - **Bug fixes, performance improvements and more**.
