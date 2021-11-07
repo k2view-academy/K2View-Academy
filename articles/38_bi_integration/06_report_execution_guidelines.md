@@ -42,19 +42,19 @@ Note that **SESSION_PARAMS** is an optional parameter for REST API invocation. H
 **Example of GENERATE_BI Job with Session Parameter**
 
 ~~~bash
-startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPUT_NAME":" Load_test_TaskID_12345_ExecutionDate_20212309", "DATA_SOURCES_LIST":"[{\"Name\": \"Fabric-PROD-V1\"}]", "TYPE":"csv", "DESTINATION":"MyLocalFS", "SESSION_PARAMS": "[{\"Id\": \"task_execution_id\",  \"Value\": \"70\"}, {\"Id\": \"lu_name\", \"DataType\": \"String\", \"Value\": \"CRM_LU\", \"IsHidden\" : false}]"}';
+startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPUT_NAME":" Load_test_TaskID_12345_ExecutionDate_20212309", "DATA_SOURCES_LIST":"[{\"Name\": \"Fabric-PROD-V1\"}]", "TYPE":"csv", "DESTINATION":"MyLocalFS", , "SESSION_PARAMS": "[{\"Id\":\"TASK_EXECUTION_ID\", \"Value\":\"600\" }]"}';
 ~~~
 
 **Example of GENERATE_BI Job with Filter** 
 
 ~~~bash
-startjob GENERATE_BI NAME='Public/dev1_content' ARGS='{"OUTPUT_NAME":"dev1_content_24_10_21", "DESTINATION":"localFileSystem", "TYPE":"csv","FILTER":"{\"FilterText\":\"Dev1_content.created_by\",\"Operator\":0, \"Values\":[\"system\"] }"}';
+startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe_7_NOV_TEST", "TYPE":"csv", "DESTINATION":"LocalListener", "FILTER":"{\"FilterText\":\"TASK_EXECUTION_ENTITIES_9.LU_NAME\", \"Values\":[\"Billing\"] }" }';
 ~~~
 
 **Example of GENERATE_BI Job with Sort** 
 
 ~~~bash
-startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_sorted","DESTINATION":"ExerciseListener","TYPE":"csv","SORT":"{\"EntityName\":\"mig_summary_recon_8\",\"ColumnName\":\"bo_name\"}"}';
+startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_sorted","DESTINATION":"LocalListener","TYPE":"csv","SORT":"{\"EntityName\":\"mig_summary_recon_8\",\"ColumnName\":\"bo_name\"}"}';
 ~~~
 
 
