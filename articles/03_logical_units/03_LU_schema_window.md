@@ -19,20 +19,12 @@ The following objects are located under each [Logical Unit (LU)](/articles/03_lo
 Go to the **Project Tree**, click the **LU Name** and then click the **schema** to open the **Logical Unit** window.
 
 ### Logical Unit (LU) Window
-<studio>   
-   
 ![image](images/1.3_LU_Schema_WIndow.PNG)
-   
-</studio>
 
-<web>
-   
 The Logical Unit window has three main sections:
 * [Logical Unit schema.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema)
 * [Logical Unit tabs.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs)
 * [Logical Unit toolbar.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema-window-toolbar) 
-   
-</web>
 
 ### Logical Unit (LU) Schema
 The Logical Unit schema is a work area where you can define the Logical Unit’s structure. 
