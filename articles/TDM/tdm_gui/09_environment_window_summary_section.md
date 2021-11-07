@@ -7,7 +7,7 @@ The Environment Summary section on the right side of the Environment window disp
   - Task 2 copied 100 entities.
   - The total number of processed entities on ENV1 = 120.
 - Tasks, the number of active tasks on the environment per [task execution status] which can be either **Active** or **On hold**. 
-- Testers, the number of testers that are [attached to a role](10_environment_roles_tab.md#testers) in the environment.
+- Users, the number of users and user groups that are [attached to a role](10_environment_roles_tab.md#testers) in the environment.
 - Execution Status, the number of tasks executed on an environment over last month per execution status. 
 
 See the example below: 
