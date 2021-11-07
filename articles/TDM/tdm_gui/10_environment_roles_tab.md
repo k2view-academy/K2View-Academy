@@ -55,7 +55,7 @@ When an Environment Type is Both it can have both read and write access to both 
 
 - Attach testers to the TDM Environment role. The connection of a tester to a testing environment is established by connecting the tester to the environment's role.  
 
-- A TDM Environment's role can be attached to selected testers or to all TDM users.
+- A TDM Environment's role can be attached to selected testers, selected user group (Fabric roles), or to all TDM users.
 
 Note that although an environment's role without testers is not usable, the **Testers** setting is optional and enables creating roles and then adding them to testers at a later stage.
 
@@ -63,16 +63,40 @@ Note that although an environment's role without testers is not usable, the **Te
 
 The **All** option is used to enable the role for all TDM users. To do so, click **Testers** and then select **ALL**.
 
+Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon next to the Testers setting. A popup window is displayed:
+
+![user setting](images/env_role_user_settings.png)
+
+Check the **All Users** checkbox.
+
 #### Adding Selected TDM Users to the TDM Environment Role
 
-1. Click **Testers** and select a user from the list or click the ![plus icon](images/plus_icon_prod_version.png) icon type manually the user name.
+1. Click **Testers** and select one of the displayed user IDs.
+2. Alternatively, click the ![plus icon](images/plus_icon_prod_version.png) icon to open the **User Settings** popup window. Select or type manually the user id. 
+3. Click the ADD button.
+4. Click **Testers** again and select another user, or type manually a user name,  if needed.
 
-2. Click **Testers** again and select another user, or type manually a user name,  if needed.
+Adding Selected TDM Users to the TDM Environment Role
+
+#### Adding Selected TDM User Groups to the TDM Environment Role
+
+1. Click the ![plus icon](images/plus_icon_prod_version.png) icon and to open the **User Settings** popup window. Select a user group from the list.
+2. Click the ADD button.
+3. Click again the ![plus icon](images/plus_icon_prod_version.png) icon next to the  **Testers** and select another user group if needed.
+
+#### TDM Environment Roles Assignments Priorities
+
+1. First priority: assign a user ID to the TDM environment role.
+2. Second priority: assign the user group to the  TDM environment role. All the group's users can work with the TDM environment based on the permissions of the TDM environment role assigned to their group.
+3. Third priority: assign role to all users. A user is assigned to the TDM environment with the **ALL** role only if the user or their group is not specifically attached to another TDM environment role of the environment.
 
 **Notes**
 
 - A tester can be attached to only one TDM Environment role per environment and cannot be attached to different TDM Environment roles in the same environment.
-- If a tester is attached to a specific role, this role overrides the **ALL** role for this tester.
+
+- An owner user or group can be attached either to the Environment Owners or the TDM environment roles. In other words, an owner tester can be attached to a TDM environment as an owner or as a tester.
+
+  
 
 ### Role Permissions
 
