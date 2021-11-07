@@ -18,24 +18,22 @@ Gets the list of regular active tasks (version_ind is 'false', task_status and t
 
 - **Admin Users:**
   
-  - Get all active tasks.
-  
-- **Owner Users:**
-  - Get all active extract tasks if the user is the owner of at least one source environment.
-  - Get all active load tasks if the user is the owner of at least one source environment and one target environment.
-  - Get all active extract tasks that do not require special permissions (that is, tasks that do not include reference tables, do not require up-to-date data, or that do not run on all entities) if the user has a Read TDM Environment role on at least one TDM environment.
-  - Get all active extract tasks that include refernece tables or that require up-to-date data if the user has a Read TDM Environment role with these permissions on at least one TDM environment.
-  - Get all active load tasks that do not require special permissions (that is, tasks that do not include reference tables, do not include Synthetic or Random selection methods, tasks that do not have Sequence replacement, or tasks that do not include a delete of entities from the target system) if the user has a Read TDM Environment role on at least one TDM environment and a Write TDM Environment role on at least one TDM environment.
-  - Get all active load tasks that require special permissions if the user has at least one Read TDM Environment role, and one Write TDM Environment role with these permissions.
-
+  - Get all active regular tasks.
 - **Tester Users:**
-
-  - Get all active extract tasks that do not require special permissions (that is, tasks that do not include reference tables, do not require up-to-date data, or that do not run on all entities) if the user has a Read TDM Environment role on at least one TDM environment.
-  - Get all active extract tasks that include refernece tables or require an up-to-date data if the user has a Read TDM Environment role with these permissions on at least one TDM environment.
-  - Get all active load tasks that do not require special permissions (that is, tasks that do not include reference tables, do not include Synthetic or Random selection methods, tasks that do not have Sequence replacement, or tasks that do not include a delete of entities from the target system) if the user has a Read TDM Environment role on at least one TDM environment and a Write TDM Environment role on at least one TDM environment.
-  - Get all active load tasks that require special permissions if the user has at least one Read TDM environment role, and one Write TDM Environment role with these permissions.
-
-Click for more information about the [TDM Environment role's permissions](/articles/TDM/tdm_gui/10_environment_roles_tab.md#role-permissions).
+  - **Extract Tasks**:
+    - Get all active tasks that do not require special permissions (that is, tasks that do not include reference tables, do not require up-to-date data, or that do not run on all entities) if the user or their group has a Read TDM Environment role on at least one TDM environment with the task's Business Entity (BE) and LUs..
+    - Get all active tasks that include reference tables or that require up-to-date data if the user or their group has a Read TDM Environment role with these permissions on at least one TDM environment with the task's Business Entity (BE) and LUs.
+  - **Load Tasks:**
+    - Get all active tasks that **do not require special permissions** (that is, tasks that do not include reference tables, do not include Synthetic or Random selection methods, tasks that do not have Sequence replacement, or tasks that do not include a delete of entities from the target system) if the user or their group has a Read TDM Environment role on at least one TDM environment with the task's Business Entity (BE) and LUs, and a Write TDM Environment role on at least one TDM environment with the task's Business Entity (BE) and LUs.
+    - Get all active tasks that **require special permissions** if the user or their group has at least one Read TDM Environment role, and one Write TDM Environment role with these permissions and the source and target environments have the task's Business Entity (BE) and LUs.
+- **Owner Users:**
+  - **Extract Tasks**:
+    - Get all active tasks if the user or their group is the owner of at least one source environment with the task's Business Entity (BE) and LUs.
+    - Get active tasks based on the tester's selection logic, since an owner can also be attached to the TDM environment as a tester.
+  - **Load Tasks**:
+    - Get all active tasks if the user or their group is the owner of at least one source environment and one target environment with the task's Business Entity (BE) and LUs.
+    - Get active tasks based on the tester's selection logic, since an owner can also be attached to the TDM environment as a tester.
+  - Click for more information about the [TDM Environment role's permissions](/articles/TDM/tdm_gui/10_environment_roles_tab.md#role-permissions).
 
   ### API Input
 
@@ -63,7 +61,7 @@ Click for more information about the [TDM Environment role's permissions](/artic
     "message": null
   }
   ```
-  
+
 
 ### API URL
 
@@ -96,16 +94,18 @@ Currently it supports the following filtering parameters:
 The JSON filtering parameter is optional. If is it not populated, the API returns all user's tasks.
 
 ### API Input
-  
+
 - filteringParams - this is an optional String parameter that can be populated by a JSON with a list of filtering parameters.
 
 ### API Input Examples:
    ```json
-   {"task_type":"EXTRACT", "version_ind":true, "selection_method":"L", "sync_mode":"FORCE"}
+   {"task_type":"EXTRACT", "version_ind":false, "selection_method":"L", "sync_mode":"FORCE"}
    ```
-  
+
+
+
   ```json
-  {"task_type":"EXTRACT", "version_ind":true, "load_entity":false, "delete_before_load":false, "selection_method":"L", "sync_mode":"FORCE"}
+  {"task_type":"LOAD", "version_ind":fakse, "load_entity":false, "delete_before_load":true, "selection_method":"L"}
   ```
 ### API Request URL Examples:
 
