@@ -4,7 +4,7 @@ The task execution process executes the task's LUs from parent to child.
 
 Click for more information about the [execution order of hierarchical LUs](/articles/TDM/tdm_overview/03_business_entity_overview.md#task-execution-of-hierarchical-business-entities).
 
-The task execution process builds an entity list for each LU: 
+The task execution process builds an entity list for each LU, as described below. Root LUs and Children LUs require different steps:  
 
 ## Root LUs
 
@@ -12,8 +12,8 @@ The task execution process builds an entity list for each LU:
 
 The entity list depends on the task:
 
-- **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is checked, run the SQL query defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU.
-- **Selected All Entities** is unchecked, build the entity list based on the entities in the task's [Requested Entities](/articles/TDM/tdm_gui/16_extract_task.md#requested-entities) tab.
+- If **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is checked, run the SQL query or the Broadway flow defined in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation object for the LU. The Broadway flow defined in the trnMigrateList object populates a dedicated Cassandra table with the list of entities. TDM task execution process runs the batch command to sync the entities, populated in the Cassandra table with the task execution id of the current execution. 
+- If **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is unchecked, build the entity list based on the entities in the task's [Requested Entities](/articles/TDM/tdm_gui/16_extract_task.md#requested-entities) tab.
 
 ### Load Tasks - Regular Mode
 
@@ -37,23 +37,22 @@ The entity list depends on the task's selection method in the [Requested Entitie
 
   - ENV1_1#params#{"clone_id"=4}
 
-    
 - **Parameters**, select the entities based on the task's parameters from a [DB view], created in the TDM DB for each BE and source environment combination.  
 
 ### Load Tasks - Data Flux Mode
 
--  [Select All Entities](/articles/TDM/tdm_gui/20_load_task_dataflux_mode.md#select-all-entities) is checked, copy the full list of successfully synced LUIs into Fabric by the selected version. The full list it taken from the Cassandra table:
+-  If **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is checked, copy the full list of successfully synced LUIs into Fabric by the selected version. The full list it taken from the Cassandra table:
 
-  - Get the **batch_id** of the extract task that created the selected version from the task_execution_list in the TDM DB table.
+     - Get the **batch_id** of the extract task that created the selected version from the task_execution_list in the TDM DB table.
 
-  - Get the full list of completed entities by the selected batch id: 
+     - Get the full list of completed entities by the selected batch id: 
 
     ```sql
     SELECT entityID FROM k2batchprocess.batchprocess_entities_info 
     WHERE bid = <selected batch id> and status =  'COMPLETED' ALLOW FILTERING;
     ```
 
-- **Select All Entities** is unchecked, get the entities list from the task.
+- If **[Select All Entities](/articles/TDM/tdm_gui/16_extract_task.md#select-all-entities)** is unchecked, get the entities list from the task.
 
 ## Children LUs
 

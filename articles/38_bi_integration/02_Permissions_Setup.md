@@ -1,39 +1,86 @@
-# Permissions Setup
+# Access Permissions Setup
 
-Permissions setting is divided into 2 steps:
+### Overview
 
-1. Permissions in Fabric:
-   * Grant one of new permissions BI_ADMIN, BI_DESIGNER and BI_TESTER to the relevant user roles. The default definition of the permissions are:
-     * BI_ADMIN provides full unrestricted access to Exago folders and reports.
-     * BI_DESIGNER provides almost full access to Exago folders and reports except for ability to Delete.
-       * *TBD - to update*
-     * BI_TESTER provides read-only access to Exago folders and reports.
-2. Access Rule in Exago:
-   * Define the Access flags (e.g. Can View, Can Copy, Can Rename) in the Storage Management DB for all Exago folders/reports - per Fabric role, permission and project.
-   * (Optional) Change  the default setting of the following application areas: Create Report and Download Report. The default setting is:
-     - Create Report is allowed to BI_ADMIN and BI_DESIGNER.
-     - Download Report is allowed to BI_ADMIN, BI_DESIGNER and BI_TESTER.
+Fabric users who want to implement business intelligence capabilities can be divided into two groups: those who are allowed to setup the BI application and create the reports, and those who can only view and run the reports. 
 
-Note:
+To enforce this differentiation, Fabric divides the permission setup process into two steps:
 
-* The logged in user that is not assigned any of the above permissions will get a read-only access to Exago folders and reports.
-* The Exago folders and reports that don't have Access flags definition in the Storage Management DB will be available to any logged in user.
-* If the logged in user is an owner of a folder or a report, he will have full access to it even if he doesn't have permissions assigned.
+1. Assign the BI ADMIN permissions to predefined Fabric roles only. 
+2. Setup the access level for BI content. This step is only available to the roles with BI ADMIN permission.
 
-### How Do I Set Permissions in Fabric?
+### BI ADMIN Permission Setup 
 
-Setup the BI related permissions in Fabric by clicking **Grant Permissions** in the Web Framework Admin > Security > Permissions. 
+The **Admin** module of the **BI** application allows users to perform various system configurations as well as to set up the metadata for the reports. 
+Only user roles with the **BI_ADMIN** (or **ALL**) permission can access the **Admin** module.
+
+Note that the ability to create new reports within the **Designer** module is also enabled only to users with the **BI_ADMIN** (or **ALL**) permission.
+
+**How Do I Setup Access to the Admin Module?**
+
+Setup the access to the **Admin** module either by:
+
+* Running the [GRANT command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#grant-command)
+
+  Or 
+
+* Via the Web Framework by opening **Admin** > **Security** > **Permissions**, and clicking **Grant Permissions**. The following window will appear:
 
 <img src="images/permissions_setup_0.PNG" alt="image" />
 
-### How Do I Set Access Rules in Exago?
+Select a Role name under Roles and **BI_ADMIN** under Methods to assign this method to the selected Role. Place an asterisk in the Resources field, and click **Grant** .  
 
-Exago Storage Management is a DB that keeps the definition of all reports, templates, folders and themes. It also keeps the access permissions to folders and reports, using the Content Permissions model based on 4 basic identity keys and the priority between them:
+### Access Level Setup
 
-<img src="images/permissions_setup_1.PNG" alt="image" style="zoom:67%;" />
+BI has a built-in access permissions mechanism that controls activities such as Edit reports, Rename reports or Delete the reports within the **Designer** module. The access rules are stored in the Storage Management DB.
+
+The setup of the access level is performed by running the **SET_BI_ACCESS** Fabric command.
+
+The following three access levels are defined:
+
+* **Unrestricted** - the user can perform any activity within Designer, such as edit the report, rename it or delete it.
+* **CreateContent** - the user can perform any activity except for delete.
+* **ReadOnly** - the user can only view and copy the report.
+
+**Note:**
+
+- Since BI is based on ExagoBI, the names of the folders and reports are also based on ExagoBI.
+- If the user that is logged into BI is not assigned any access rules, he will get a read-only access to the BI (that is, ExagoBI) folders and reports.
+- If the user is an owner of a folder or a report, he will have full access to it regardless of the access level assigned to his role on this folder/report.
+
+**How Do I Set an Access Level?**
+
+To define the access level to a Fabric role in the context of BI, run the Fabric command **set_bi_access** with the following input:
+
+1. Folder name or report name (optional). If the folder or report name is not provided, the command is executed on the <project name> folder.
+2. Path (optional) - the full path to the folder from the root folder. Applicable if the folder is not a root.
+3. Fabric role (mandatory).
+4. Access level, one of the three values must be sent: 
+   * Unrestricted / CreateContent / ReadOnly
+
+The command will either create the permissions in the Storage Management DB or update the existing permissions.
+
+**Examples**
+
+* Give full access on **TDM** root folder to the **admin** user role:
+
+```
+SET_BI_ACCESS NAME="TDM" ROLE="admin" ACCESS_LEVEL="Unrestricted";
+```
+
+* Give create/edit access on **Reports** folder which is a **TDM**'s child folder to the **Implementer** user role: 
+
+~~~
+SET_BI_ACCESS NAME="Reports" PARENTS="TDM" ROLE="Implementer" ACCESS_LEVEL="CreateContent";
+~~~
+
+* Give read-only access on **TDM/Reports/Load** folder to the **Tester** user role: 
+
+~~~
+SET_BI_ACCESS NAME="Load" PARENTS="TDM/Reports" ROLE="Tester" ACCESS_LEVEL="ReadOnly";
+~~~
 
 
 
-[Click for more information about Exago Identity Keys](https://support.exagoinc.com/hc/en-us/articles/360042587313#h_2ffb7d21-1f58-47bd-957d-55a4eace7ef0).
+[![Previous](/articles/images/Previous.png)](01_Installation.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](03_Metadata_Setup.md) 
 
-TBD

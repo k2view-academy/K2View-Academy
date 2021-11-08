@@ -2,11 +2,12 @@
 
 
 ## Affinity Overview
-Nodes Affinity refers to the ability of Fabric initiating node to send and allocate a job or a batch process to a specific node (the handling node) within a Fabric Cluster.
+*Affinity* refers to Fabric assigning a job or a batch process to a specific handling node within a Fabric Cluster.
 This is particularily handy when specific nodes are reserved for specific tasks or need to be dedicated for time-consuming or heavy processing executions.
 
-Allocating specific node to handle particular types of jobs could have very big and positive impact on the overall cluster's performance and Quality of Service.
-For example - large sync-ing processes would be executed by a specific node while CDC or Cross-Instances searches would be handled by a different one.
+Allocating a specific node to handle particular types of jobs can have a significant and positive impact on the overall cluster's performance and Quality of Service.
+
+For example: In a large Fabric cluster, syncing processes handling a very large amount of data can be executed by one specific node, while Capture Data Changes or Cross-Instance searches can be handled by a different node. This technique removes unnecessary overhead by spreading the load across the cluster.      
 
 
 ## Affinity Properties
@@ -77,12 +78,12 @@ Let's assume the following configuration, featuring a Fabric cluster comprised o
 
 The project consists in running a Fabric Job to monitor a Kafka Messaging Queue, on which network QoS alarms are continuously published and streamed by a source external to the Fabric Cluster.
 
-In turn each message, which can consists of hundreds of entries, will be handled by the Fabric Cluster as follows:
+In turn, each message, which can consists of hundreds of entries, will be handled by the Fabric Cluster as follows:
 
 - Update the corresponding CommonDB table located on each Fabric node,
 - Save the data in Cassandra for backup purposes.
 
-Assuming an incoming message rate of 3 messages per second and an average message size of 1MB, it becomes clear that a specific node (let's say Node 1) handling this Job needs to be allocated since on-going strong i/o capabilities for read/write operations in commonDB tables are essential.
+Assuming an incoming message rate of 3 messages per second and an average message size of 1MB, it becomes clear that a specific node (let's say Node 1) handling this job needs to be allocated, since on-going strong i/o capabilities for read/write operations in commonDB tables are essential to meet higher performance requirements.
 
 Using Fabric Node synchronization capability, all 3 nodes will then be kept in-sync using the mechanism described in the [Fabric CommonDB](/articles/22_reference(commonDB)_tables/04_fabric_commonDB_sync.md) article.
 

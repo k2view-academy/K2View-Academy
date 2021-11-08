@@ -21,7 +21,6 @@ Go to the **Project Tree**, click the **LU Name** and then click the **schema** 
 ### Logical Unit (LU) Window
 ![image](images/1.3_LU_Schema_WIndow.PNG)
 
-
 The Logical Unit window has three main sections:
 * [Logical Unit schema.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-schema)
 * [Logical Unit tabs.](/articles/03_logical_units/03_LU_schema_window.md#logical-unit-lu-tabs)

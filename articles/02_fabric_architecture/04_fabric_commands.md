@@ -1,12 +1,14 @@
 # Fabric Commands
 
-Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via user code (project implementation) that invokes Fabric commands in the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
+Fabric includes a number of commands for viewing Fabric configurations, updating Fabric settings and running Fabric processes. Fabric commands can be executed from either the Fabric console or via the user code (project implementation) that invokes Fabric commands in the [execute() and fetch() methods](/articles/05_DB_interfaces/09_fabric_API_for_DB_interfaces.md#execute-fabric-command).
 
-Note that Fabric commands are **not** case sensitive. For example, a Get, get, or GET command can be run.
+Fabric commands are **not** case sensitive. For example, a Get, get, or GET command are all equivalent.
+
+In this document, we write commands in ALL CAPS when describing the commands in general, and in small type when quoting a command line example. This is done for clarity purposes only. You can type the commands in whatever type is convenient for your purposes, but it is a good practice to keep the manner of typing commands consistent. 
 
 ## Fabric Help
 
-After [logging into Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type help/Help/HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
+After [logging into Fabric](/articles/02_fabric_architecture/03_fabric_basics_getting_started.md#login-fabric), type HELP to view a list of available Fabric commands. To view the description and syntax of a specific command, type **help [command name]**.
 
 For example: 
 
@@ -55,7 +57,7 @@ For example:
 <p><a href="/articles/02_fabric_architecture/04_fabric_commands.md#fabric-view">Fabric View</a></p>
 </td>
 <td width="550pxl" valign="top">
-<p>View of the Fabric configurations and settings.</p>
+<p>View Fabric configurations and settings.</p>
 </td>
 </tr>
 <tr>
@@ -175,7 +177,7 @@ For example:
 </table>
 
 
-### Get LUI Commands
+### Get Commands
 
 #### Get Instance
 
@@ -216,8 +218,8 @@ The following table lists the GET commands:
 <h5>GET</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or brings the latest version of the LUI from Fabric.</p>
-<p>A parameter PARALLEL=true/false enables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR added in V6.5.1 supports GET of several LUI even if the sync of one LUI fails (when set to false).</p>
+<p>Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. Fabric checks if the LUI needs to be synced from the source system, syncs the LUI if needed, or retrieves the latest version of the LUI from Fabric.</p>
+<p>Setting the PARALLEL parameter to true enables running parallel GET commands on different LU types. Setting this parameter to false disables running parallel GET commands on different LU types. A new parameter STOP_ON_ERROR (added in V6.5.1) supports a GET of several LUIs even if the sync of one LUI fails (when set to false).</p>
 </td>
 <td valign="top" width="300pxl">
 <p>Get an LUI:</p>
@@ -239,7 +241,7 @@ The following table lists the GET commands:
 <h5>GETF</h5>
 </td>
 <td valign="top" width="250pxl">
-<p>Brings information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
+<p>Retrieves information for a specific <a href="/articles/01_fabric_overview/02_fabric_glossary.md#lui">LUI</a>, or multiple LUIs of different LUs. The instance is returned by an <a href="/articles/07_table_population/11_3_creating_an_LUDB_function.md">LUDB function</a>.</p>
 <p>&nbsp;</p>
 </td>
 <td valign="top" width="300pxl">
@@ -280,7 +282,7 @@ The following table lists the GET commands:
 
 #### Remote GET and GETF Commands
 
-**GET** and **GETF** commands can be executed from a [datacenter (DC)]() that is not connected to data  sources if other DCs are connected to the source interfaces. To do so, populate the DC parameter name of the GET and GETF commands to invoke the remote DC connected to the data source via the JDBC. The remote GET and GETF commands return the instances after executing the commands on the remote Fabric node. Cassandra then replicates the data between the nodes of the Cassandra cluster.
+**GET** and **GETF** commands can be executed from a datacenter (DC) that is not connected to data  sources if other DCs are connected to the source interfaces. To carry out a GET or GETF command in such a manner, populate the DC parameter name of the GET and GETF commands. This will invoke the remote DC connected to the data source via the JDBC. The remote GET and GETF commands return the instances after executing the commands on the remote Fabric node. Cassandra then replicates the data between the nodes of the Cassandra cluster.
 
 The remote GET and GETF commands run on a random Fabric node on the remote DC. Therefore, always verify the permissions for the GET and GETF commands’ execution on Fabric’s local and remote nodes.
 
@@ -444,9 +446,29 @@ The Fabric **SET** command enables updating Fabric settings on a session level:
   Cannot execute the query due to missing WHERE clause on the IID column.
   ~~~
   
-  Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
+  Note that this feature enables querying Fabric by various external systems (such as BI) that are not familiar with the Fabric syntax. They can use standard SQL language rather than the Fabric **GET** command. For external connection to Fabric, AUTO_MDB_SCOPE=true should be set via the [Fabric Connection URL](04_fabric_commands.md#fabric-setting-via-jdbc-connection-url).
 
 * **SET DEFAULT** command, can be used to reset all the related parameters set on a session level to their default value.
+
+* **SET DB_PROXY** command, can be used to activate an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+
+  * Syntax
+
+    * set db_proxy=[<interface name>]
+
+  * Description
+
+    * Activates an operations' scope toward the specified DB interface, so that until it is turned off, all operations are done against this interface.
+
+  * Notes
+
+    * If interface name is not specified, the command will show the current interface name.
+
+    * To turn it off use: set db_proxy=off.
+
+    * A new parameter was added to config.ini called ENABLE_DB_INTERFACE_PROXY, it is set by default to FALSE. Set it to TRUE to enable using this new command.
+
+      
 
 #### Fabric Setting via JDBC Connection URL
 
@@ -529,7 +551,7 @@ Get the Fabric jobs' list and status, start, stop, update and resume jobs.
 
 The Batch Process mechanism enables executing different types of Fabric commands in a batch mode on remote Fabric nodes.
 
-Fabric has commands that start an execution, retry and cancel the execution of a batch process and commands that monitor an execution on batch processes in Fabric.
+Fabric has commands that start an execution, retry and cancel the execution of a batch process and commands that monitor an execution on batch processes.
 
 Note that MIGRATE commands are used as aliases to BATCH commands.
 

@@ -6,7 +6,7 @@ A Data Center can be attached to the following TDM objects:
 
 - [Business Entity](04_tdm_gui_business_entity_window.md) (BE), a DC can be attached to each LU in a BE if the LU instances are saved under a specific DC in Fabric. When creating an extract task for the BE and LU, the [batch process](/articles/20_jobs_and_batch_services/11_batch_process_overview.md) which migrates the LU instances into Fabric runs on the specified DC.
 
-- Environment, set the DC on each [product](11_environment_products_tab.md) (system) attached to the environment. The TDM task's execution process runs the batch process on Load tasks on the DC specified in the environment's product. 
+- Environment, set the DC on each [product](11_environment_products_tab.md) (system) attached to the environment. The TDM task's execution process runs the batch process on Load tasks on the DC specified in the environment's product. The LUI sync is executed on the DC specified in the source environment's product.
 
 **Example:**
 

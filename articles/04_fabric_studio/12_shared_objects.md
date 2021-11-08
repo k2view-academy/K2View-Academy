@@ -23,5 +23,7 @@ Note that if a Global that is defined in both a Shared Object and a specific Log
 
 [Click for more information about Project Structure and Creating a New Project in Fabric.](/articles/04_fabric_studio/05_creating_a_new_project.md)
 
-[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)
+
+
+[![Previous](/articles/images/Previous.png)](/articles/04_fabric_studio/11_fabric_studio_exporting_and_importing%20a_fabric_project.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md)
 

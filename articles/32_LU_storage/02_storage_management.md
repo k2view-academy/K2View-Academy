@@ -18,10 +18,12 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
   - The default and most commonly used value is **Cassandra**. 
   
     ~~~
-    #MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=com.k2view.cdbms.dao.CassandraEntityStorage
+    #MDB_DEFAULT_SCHEMA_CACHE_STORAGE_TYPE=CASSANDRA
     ~~~
   
   - When the storage type in the config.ini is set to **NONE**, the instance is not saved to Fabric storage.
+  
+  - As experimental feature on Fabric 6.5.2, it is also possible to define S3 or AZURE_BLOB_STORE as the storage type.
   
 - MDB_DEFAULT_CACHE_PATH, holds the location of the Fabric MDB cache files on the server.
 
@@ -34,10 +36,10 @@ The following variables in the **[fabricdb]** section of the **config.ini** are 
 - MDB_DEFAULT_SCHEMA_CACHE_SIZE, defines the size limit of the cache in bytes for MicroDB instances. 
 
 ### Changing the Location of the Cache 
-Fabric enables to modify the default location of the cache per Logical Unit using the MDB_DEFAULT_CACHE_PATH variable in the **[fabricdb]** section of the **config.ini** and the [LU Schema's **Cache Location** property](/articles/03_logical_units/04_LU_properties.md) as follows:
+Fabric enables you to modify the default location of the cache per Logical Unit using the MDB_DEFAULT_CACHE_PATH variable in the **[fabricdb]** section of the **config.ini** and the [LU Schema's **Cache Location** property](/articles/03_logical_units/04_LU_properties.md) as follows:
 
 * When the Cache Location is set to **Default**, store the cache per the definition of MDB_DEFAULT_CACHE_PATH in config.ini. The default value in config.ini is **/dev/shm/fdb_cache/<LU_name>** but it can be changed to another location. 
-* When the Cache Location is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache/<LU_name>** if it exists, otherwise store it in **${FABRIC_HOME}/storage/fdb_cache/<LU_name>**.
+* When the Cache Location is set to **Storage**, store the cache under the storage folder in Fabric **${FABRIC_STORAGE}/storage/fdb_cache/<LU_name>** if this location exists. If this location does not exist, store the cache in **${FABRIC_HOME}/storage/fdb_cache/<LU_name>**.
   * The definition of the **${FABRIC_STORAGE}** path can be updated via the **fabric-server-start.sh** script using the **-DFABRIC_STORAGE** variable.
 * If the default path in the config.ini is updated to another path, the cache is always located according to the config.ini regardless of the LU Schema property setting in the Fabric Studio.
 

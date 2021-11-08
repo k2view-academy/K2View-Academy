@@ -1,4 +1,4 @@
-# TDM Demo Project - Setup and Implementation Guidelines
+# TDM 7.1 Demo Project - Setup and Implementation Guidelines
 
 ## Databases Setup
 
@@ -61,13 +61,12 @@ The target DBs are empty and the source DBs are populated with customers.
      docker cp create_resources.sql [docker name]:path 
      ```
 
-   - Run the script to create the Demo DBs and DB users:	 	
+     - Run the script to create the Demo DBs and DB users: 	
 
      ```
      psql -h localhost -p 5432 -U postgres -d postgres -f /usr/local/create_resources.sql
      ```
 
-     
 
 3. Open **pgAdmin 4** and start restoring the databases from backup files. It is recommended to chek the **Clean before restore** option when restoring the backup file.
 
@@ -112,9 +111,9 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
      - Set  **Fabric Environment Name** setting to **SRC**.
      - Add the products to this environment.
      - Set the version of the BILLING product to PROD.
-   
+
    - TAR:
-    
+
      - Set  **Environment Type** setting to **Both** to enable running Data Flux tasks on this environment.
      - Set  **Fabric Environment Name** setting to **TAR**.
      - Add the products to this environment.

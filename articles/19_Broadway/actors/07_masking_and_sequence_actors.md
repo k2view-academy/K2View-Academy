@@ -29,6 +29,9 @@ Common input arguments of masking Actors are:
   * If the **k2masking** keyspace does not exist, create it using the **masking-create-cache-table.flow** example or using the installation SQL script provided as part of the Masking library. 
   * IN-MEMORY interface is useful for testing only since it can only be used in a single node configuration.
 * **verifyUnique**, determines whether different input values can be masked to the same masked value. The uniqueness is checked per **maskingId**, environment and execution ID. Set this parameter to **true** if the masked value should be unique. For example, when masking an SSN, the masked value must be unique.
+  * If interface is **IN-MEMORY**, uniqueness is checked on a single node only and not across DC or Cluster.
+  * If interface is **NONE**, no uniqueness check is done.
+
 
 The following input arguments are specific to the **MaskingSequence** Actor:
 

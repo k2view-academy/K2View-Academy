@@ -39,7 +39,7 @@ The selected entities are deleted from the target testing environment without be
 Notes:
 
 - Testers can select a Delete option if their **Write** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
-- Deleted flows must be implemented in the Fabric implementation. Click for more information about the [delete implementation].
+- Deleted flows must be implemented in the Fabric implementation. Click for more information about the [delete implementation](/articles/TDM/tdm_implementation/08_tdm_implement_delete_of_entities.md).
 - Delete options are not displayed for a task with the [Create Synthetic Entities](18_load_task_requested_entities_regular_mode.md#create-synthetic-entities) selection method, since the Synthetic method creates new clones (replicas) of the selected entity. 
 
 
@@ -52,6 +52,7 @@ When checked, the task execution process replaces the sequences of all selected 
 
 Notes:
 
+- The Replace Sequence checkbox is not available when checking the Delete and Load Entity or Delete Entity without Load options.
 - Testers can check this setting if their **Write** [TDM Environment role](10_environment_roles_tab.md#role-permissions) enables it.
 - The **Replace Sequence** setting is not displayed in the following cases:
   - A task with a [Create Synthetic Entities](18_load_task_requested_entities_regular_mode.md#create-synthetic-entities) selection method, since the Synthetic method creates new clones (replicas) of the selected entity and replaces the sequences on each clone.

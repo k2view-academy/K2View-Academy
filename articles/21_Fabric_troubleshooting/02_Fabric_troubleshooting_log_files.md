@@ -93,6 +93,116 @@ Writing errors/messages/warnings into the log has an impact on both performance 
 
 The Root level sets the default log level. Higher or lower levels can be set for specific packages or classes. With the above setting, DEBUG messages are written into the log only for CommonTablesManager class errors.
 
+### **Logs Structure**
+
+Each log entry consists of several fields and is constructed as follows:
+
+![image](images/Log%20Message%20Structure.jpg)
+	
+The table below describes each field:	
+	
+#### **Log Entry Components**
+
+<table>
+<tbody>
+
+<tr>
+<td width="200"><strong>Log Entry Component</strong></td>
+<td width="400">
+<strong>Description</strong>
+</td>
+<td width="400">
+<strong>Example</strong>
+</td>
+</tr>
+	
+
+<tr>
+<td width="200">Type</td>
+<td width="400">One of the following: ERROR/TRACE/WARN/INFO/DEBUG. Read more on these status and how to configure them <a href="/articles/21_Fabric_troubleshooting/02_Fabric_troubleshooting_log_files.md#log-level">here</a>.
+</td>
+<td width="400">INFO 2021-08-18 06:22:59,057</td>
+</tr>
+
+	
+<tr>
+<td width="200">Time Entry</td>
+<td width="400">
+<p>Timestamp for the process execution with millisecond precision</p>
+</td>
+<td width="400">WARN  2021-08-18 08:49:31,265</td>
+</tr>	
+
+<tr>
+<td width="200">Log Tag ID</td>
+<td width="400">
+<p>ID given by the system for the process being executed. This ID will be used across the session for subsequent messages referring to this thread</p>
+</td>
+<td width="400">
+<p>[LID10100000000001b]</p> 
+</td>
+</tr>
+	
+<tr>
+<td width="200">Log Thread Name</td>
+<td width="400">
+<p>The name of the thread currently running</p>
+</td>
+<td width="400">
+<p>[JdbcEx Server-4/127.0.0.1:61448] - JDBC server with IP/Port to which it connects</p> 
+</td>
+</tr>	
+
+<tr>
+<td width="200">Log Class Name</td>
+<td width="400">
+<p>The name of the class being invoked</p>
+</td>
+<td width="400">
+<p>c.k.f.s.FabricSession - including the full path for the class location - i.e. c.k.f stands for com.k2view.fabric.</p> 
+</td>
+</tr>		
+
+<tr>
+<td width="200">Log content</td>
+<td width="400">
+<p>Content of the message. The class's developer defines this content. Note that the duration of the process can be added as part of the message content.</p>
+</td>
+<td width="400">
+<p>End operation 'Sync Patient.1514294103' successfully.  [1292ms]</p> 
+</td>
+</tr>	
+	
+</tbody>
+</table>
+
+
+
+#### **Example**
+
+Below, you can see an extract of log entries for the ```JdbcEx Server``` thread (to which was attributed Tag ID [LID10100000000001d]) while performing an Instance GET operation between Timestamp 08:49:31,256 and Timestamp 08:49:32,516 - in total 260 millisecs:
+
+```
+INFO  2021-08-18 08:49:31,256 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.d.d.c.ClockFactory - Using java.lang.System clock to generate timestamps.
+WARN  2021-08-18 08:49:31,265 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.d.d.c.ReplicationStrategy$NetworkTopologyStrategy - Error while computing token map for keyspace cov19_data with datacenter datacenter1: could not achieve replication factor 1 (found 0 replicas only), check your keyspace replication settings.
+WARN  2021-08-18 08:49:31,276 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.d.d.c.ReplicationStrategy$NetworkTopologyStrategy - Error while computing token map for keyspace cov_data with datacenter datacenter1: could not achieve replication factor 3 (found 0 replicas only), check your keyspace replication settings.
+INFO  2021-08-18 08:49:31,390 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.FabricSession - START - ATTACH Patient.1514294103
+INFO  2021-08-18 08:49:31,392 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.FabricSession - Access to [Patient.1514294103] by user admin is authorized.
+INFO  2021-08-18 08:49:31,400 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.FabricSession - START - sync Patient.1514294103
+INFO  2021-08-18 08:49:31,400 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.FabricSession - local get request
+INFO  2021-08-18 08:49:31,406 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.s.l.SyncExecution - Start operation 'Sync Patient.1514294103'
+INFO  2021-08-18 08:49:31,416 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - Start operation 'Broadway population: PATIENT:population.flow'
+INFO  2021-08-18 08:49:32,427 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - End operation 'Broadway population: ALLERGIES:population.flow' successfully.  [31ms]
+INFO  2021-08-18 08:49:32,458 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - End operation 'Broadway population: hospitals_facility:population.flow' successfully.  [20ms]
+INFO  2021-08-18 08:49:32,478 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - Start operation 'Broadway population: insurance_companies:population.flow'
+INFO  2021-08-18 08:49:32,480 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - End operation 'Broadway population: insurance_companies:population.flow' successfully.  [17ms]
+INFO  2021-08-18 08:49:32,497 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - Start operation 'Broadway population: staff:population.flow'
+INFO  2021-08-18 08:49:32,500 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.c.l.m.BroadwayFlowMapObject - End operation 'Broadway population: staff:population.flow' successfully.  [16ms]
+INFO  2021-08-18 08:49:32,516 [LID10100000000001d] [JdbcEx Server-7/127.0.0.1:56672] c.k.f.s.s.l.SyncExecution - End operation 'Sync Patient.1514294103' successfully.  [260ms]
+```
+
+
+
 ### Writing into Log Files
 Use the Fabric built-in **reportUserMessage(Level level, String message)** function to add messages into the log file. The function receives two parameters - log level (DEBUG, INFO, WARN, or ERROR) and message.
 

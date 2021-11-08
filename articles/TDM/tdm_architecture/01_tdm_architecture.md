@@ -21,7 +21,7 @@ TDM settings and tasks are kept in the TDM PostgreSQL DB. Both the TDM GUI and F
 
 ### Fabric
 
-Fabric acts as a staging DB for the provisioned entities and ETL layer for extracting data from data sources and loading it to the target environment.
+Fabric acts as a staging DB for the provisioned entities and as an ETL layer for extracting data from data sources and loading it to the target environment.
 
 In addition, the TDM back-end APIs and processes are defined and executed in Fabric. The TDM back-end APIs and processes are included in the [TDM library](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md).
 
@@ -30,7 +30,7 @@ In addition, the TDM back-end APIs and processes are defined and executed in Fab
 When running a TDM task, data from the selected entities is stored and synchronized in Fabric according to the definitions of its LUs. Fabric creates and maintains a separate [MicroDB](/articles/01_fabric_overview/02_fabric_glossary.md#mdb--microdb) for each entity ([LUI](/articles/01_fabric_overview/02_fabric_glossary.md#lui)). This has several advantages:
 
 -  Convenience - Encapsulating the data of a business entity into one place so that it can be queried by consumers (many business entities have data residing in multiple data sources). 
--  Security - Individual encryption on MicroDB or field levels allows more robust security.
+-  Security - Individual encryption on MicroDB or field levels allows for more robust security.
 -  Masking capabilities -  masking sensitive data when storing entities.
 -  Flexibility - Flexible [sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) policies based on business needs, including:
    - Extracting and storing an entity's data in Fabric in advance so that requests to load it into target environments can be implemented without accessing source systems. 
@@ -50,12 +50,34 @@ Reference or Operational tables that need to be copied as-is can be extracted fr
   -  Replacing sequences to avoid a collision with the target environment.
   -  Masking sensitive data before loading it to the target environment. 
 
+### TDM - Multi DCs Architecture
+
+The organization's systems and environments can be located in different geographic locations.  This topography requires data transmission between distant locations.
+
+**Example:**
+
+- The CRM and Billing Production systems are located in NY (DC1).
+- The Ordering and Ticketing Production systems are located in TX (DC2).
+- The testing environments are located in NY, TX, and CA (DC3). 
+- The testing environments in CA need to get the CRM and Billing data from NY, and the Ordering and Ticketing data from TX.
+
+One of the main challenges when  running a data transmission over the network is the performance of the data transmission. Getting data from a distant location may be time-consuming.
+
+K2view TDM architecture ensures efficient and quick data transmission between different locations. The following diagram is an example of the TDM architecture in a multi-DC topography:
+
+![tdm multi DCs](images/tdm_multi_dc_architecture.png)
+
+- Each Data Center (DC) has its own Fabric and Cassandra nodes. 
+- The data is extracted from the source **locally on each DC** and is stored in Fabric. Fabric uses Cassandra as a storage layer for the entities.
+- The data is distributed automatically by Cassandra between DC’s.
+- The data **load** is executed in the **target’s DC** and accesses the entities in the **local Fabric nodes**. Note that if the entity needs to be synced from the source by the load task, the sync (extract) runs on the database of the source using a [remote get LUI command](/articles/02_fabric_architecture/04_fabric_commands.md#remote-get-and-getf-commands).
+
 ## TDM  - Data Provisioning Flow
 
 In general, data provisioning can be divided into two main sections:
 -   Data provisioning requests created by a [TDM task](/articles/TDM/tdm_overview/02_tdm_glossary.md#task). The TDM task is created by a user via the TDM GUI and is saved in the TDM DB. The TDM task specifies the **what** and **when** details of the data request: 
-    - **What**, Business Entity to be provisioned like customer, employee, order, product, source and target environments, subset of entities and general request parameters like Sync mode.
-    - **When**, When the task needs to be executed. Execute by request or by setting scheduling parameters to execute the task periodically.     
+    - **What** : A Business Entity to be provisioned like customer, employee, order, product, source and target environments, subset of entities and general request parameters like Sync mode.
+    - **When** : When the task needs to be executed. Execute by request or by setting scheduling parameters to execute the task periodically.     
 -   Task execution, a task can be executed manually via the **TDM GUI** or periodically via the **TDM Scheduler** process based on predefined scheduling parameters. 
 
 The following diagram displays the TDM task creation and [execution processes](03_task_execution_processes.md):

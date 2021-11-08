@@ -1,6 +1,22 @@
 <!--block-->
 
+<img src="images/04_15_03_attach.png" style="zoom:80%;" />
+
+
+
+### Develop on Fabric with IntelliJ
+
+Fabric Studio has been fully integrated with IntelliJ . 
+
+It is mostly recommended if you frequently develop Java functions; you will then benefit from the most advanced code-writing and debugging capabilities available in the market.  
+
+[Read more >](20210822_fabric_intelliJ.md)
+
+<!--block-->
+
 <img src="images/soft_deploy_1.PNG" style="zoom:80%;" />
+
+
 
 ### Soft Deploy
 
@@ -13,6 +29,8 @@ Soft Deploy is mostly useful for implementers working in a development environme
 <!--block-->
 
 <img src="images/image_manip_1.PNG" style="zoom:80%;" />
+
+
 
 ### Image Manipulation Actors
 
@@ -28,22 +46,4 @@ Let's check how it works by reviewing the example flow.
 
 <!--block-->
 
-<img src="images/breakpoints_1.PNG" style="zoom:80%;" />
 
-### Fabric Studio Breakpoints
-
-Fabric Studio provides an ability to view all active breakpoints. Check out a new panel that was added to the “Server / Activity Logs” area, which displays a list of the breakpoints in the open Fabric objects (currently only Broadway flows are supported), including the File name (flow name) and the ID (e.g. stage where the breakpoint is set).
-
-[Read more >](20210630_fabric_studio_breakpoints.md)
-
-<!--block-->
-
-<img src="images/actor_editor_1.PNG" style="zoom:80%;" />
-
-### Broadway Actor's Editor
-
-Broadway offers a number of built-in Actors which address a wide range of predefined activities that can be added to Broadway flows. When your implementation requires business logic that is not supported by a built-in Actor and it is repeated across several flows, you can create your own Actor using an **Actor Editor**.
-
-[Read more >](20210527_actor_editor.md)
-
-<!--block-->

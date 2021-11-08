@@ -33,7 +33,7 @@
 
 **For Cloud installation:** 
 
-- If using **AWS**: EC2: a1.2xlarge, m5.xlarge
+- If using **AWS**: EC2: m5.xlarge
 - If using **Azure** VM: A8v2 
 - If using **GCP** e2-standard-4
 
@@ -54,6 +54,7 @@ Local administrator privileges are needed for the Fabric Studio installation.
 #### Hardware Requirements (for each Linux server): 
 
 - OS: latest CentOS/Redhat Operating System with latest patches
+**Note**: Cassandra requiers python 2.7 
 - CPU: 4 Cores/vCPUs (Modern Xeon Processor) 
 - RAM: 12GB 
 - Storage: The preferred storage is attached local SSD’s in non-RAID configuration.  
@@ -114,8 +115,8 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 <table style="border-collapse: collapse; width: 100%;">
 <tbody>
 <tr>
-<td style="width: 50%; height: 18px;"><strong>22</strong></td>
-<td style="width: 50%; height: 18px;"><strong>SSH, SCP</strong></td>
+<td style="width: 50%; height: 18px;">22</td>
+<td style="width: 50%; height: 18px;">SSH, SCP</td>
 </tr>
 <tr>
 <td style="width: 50%; height: 18px;">7000</td>
@@ -163,6 +164,7 @@ Open the following ports on the LINUX server, and make sure they are accessible 
 </tr>
 </tbody>
 </table>
+
 
 
 

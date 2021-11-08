@@ -10,8 +10,6 @@ The Data Catalog describes how an organization collects, transforms and stores i
 
 For example, when developing a Web Service, it can assist to clarify the source system of the Web Service’s required output fields.
 
-![image](images/33_01_tree_ws.png)
-
 Moreover, the solution answers data privacy requirements for compliance with GDPR, CCPA and other global data protection regulations by enabling users to know how Fabric brings data from source systems, where in Fabric it is stored and how it is published externally.
 
 ### Data Catalog Components

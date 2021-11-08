@@ -1,10 +1,10 @@
 # Data Catalog Navigation
 
-The Data Catalog UI enables users to move through a data model’s graph, move from one level to another and to filter specific elements.  
+The Data Catalog user interface enables users to move from one level to another through a data model’s graph, as well as to filter specific elements.  
 
 ### How Do I Access the Data Catalog?
 
-The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu to display the circle representing your project. If multiple projects have been deployed to the same OrientDB database, all projects are displayed.
+The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.md). Select the **Data Catalog** application from the Web Framework context menu. A display showing a project deployed to the OrientDB database will appear. If multiple projects have been deployed to the same OrientDB database, all projects will be displayed.
 
 <img src="images/33_02_proj.PNG" alt="image"  />
 
@@ -12,61 +12,60 @@ The Data Catalog is accessed from the [K2View Web Framework](/articles/30_web_fr
 
 The Legend is displayed on the bottom right corner of the screen and provides a visual description of each component in the graph. The graph's data types can be split into the following categories:
 
-<table style="height: 116px; width: 750px;">
+<table style="width: 750px;">
 <tbody>
-<tr style="height: 18px;">
+<tr >
 <td style="width: 150px;"><strong>Category</strong></td>
 <td style="width: 200px;"><strong>Data Type</strong></td>
 <td style="width: 400px;"><strong>Description</strong></td>
 </tr>
-<tr style="height: 18px;">
+<tr >
 <td style="width: 120px;"><strong>Project</strong></td>
 <td style="height: 18px; width: 226px;">PROJECT</td>
 <td style="height: 18px; width: 308px;">Project name.</td>
 </tr>
-<tr style="height: 18px;">
-<td style="width: 120px;"><strong>Source Components</strong></td>
-<td style="height: 18px; width: 226px;">INTERFACE INTERFACE_SCHEMA INTERFACE_TABLE INTERFACE_COLUMN</td>
-<td style="height: 18px; width: 308px;">Data source components.</td>
-</tr>
-<tr style="height: 28px;">
-<td style="width: 120px;" rowspan="3"><strong>Target Components</strong><br /><strong><br /></strong><strong><br /></strong></td>
+  <tr >
+<td style="width: 120px;" rowspan="3"><strong>Target Components</strong></td>
 <td style="width: 226px; height: 28px;">SCHEMA</td>
 <td style="width: 308px; height: 28px;">
 <p>Project entity (LU, Web Services or Common).</p>
 </td>
 </tr>
 <tr>
-<td style="width: 226px;">TABLE, COLUMN</td>
+<td style="width: 226px;">TABLE</td>
 <td style="width: 308px;">
-<p>LU tables and columns.</p>
+<p>LU tables.</p>
 </td>
 </tr>
 <tr>
-<td style="width: 226px;">API, API_FIELD</td>
+<td style="width: 226px;">API</td>
 <td style="width: 308px;">
 <p>Web service and its fields.</p>
 </td>
 </tr>
-<tr style="height: 18px;">
+
+<tr >
+<td style="width: 120px;"><strong>Source Components</strong></td>
+<td style="height: 18px; width: 226px;">INTERFACE INTERFACE_SCHEMA INTERFACE_TABLE&nbsp;</td>
+<td style="height: 18px; width: 308px;">Data source components.</td>
+</tr>
+<tr >
 <td style="width: 120px;" rowspan="3"><strong>Connection Lines</strong><br /><strong><br /></strong><strong><br /></strong></td>
 <td style="height: 18px; width: 226px;">CONTAINED</td>
-<td style="height: 18px; width: 308px;">Indicates the data entity that holds the current entity. For example, a table is contained in a Schema (LU).</td>
+<td style="height: 18px; width: 308px;">Indicates the data entity that holds the current entity. For example, if a table is contained in a Schema (LU).</td>
 </tr>
-<tr style="height: 16px;">
+<tr>
 <td style="height: 16px; width: 226px;">USE</td>
-<td style="height: 16px; width: 308px;">Indicates the data entity used by the current entity. For example, a TABLE (LU table) uses an INTERFACE_TABLE.</td>
+<td style="height: 16px; width: 308px;">Indicates the data entity used by the current entity. For example, if a TABLE (LU table) uses an INTERFACE_TABLE.</td>
 </tr>
 <tr>
 <td style="width: 226px;">POPULATION_KEYS</td>
-<td style="width: 308px;">Indicates how the current table is populated in the LU schema. For example, when the relationship is ACTIVITY > CUSTOMER, the ACTIVITY table is populated using the key from the CUSTOMER table.</td>
+<td style="width: 308px;">Indicates how the current table is populated in the LU schema. For example, when the relationship is ACTIVITY &gt; CUSTOMER, the ACTIVITY table is populated using the key from the CUSTOMER table.</td>
 </tr>
 </tbody>
 </table>
 
-
-
-To clear / add data elements from / to the tree,  uncheck / check the data types in the Legend. For example, if the COLUMN is unchecked, the Column data elements are removed from the tree.
+Click ![image](images/hide_icon.PNG)icon in the Legend to hide / unhide data elements in the tree. 
 
 ### How Do I Navigate Through the Data Catalog?
 
@@ -83,12 +82,23 @@ The following tools are used to navigate the Data Catalog:
   * Click to display the tree <img src="images/33_H.png" alt="image" style="zoom: 67%;" /> horizontally, <img src="images/33_V.png" alt="image" style="zoom: 67%;" /> vertically or <img src="images/33_center.png" alt="image" style="zoom: 67%;" />centered.
   * Click <img src="images/33_02_fit.PNG" alt="image" style="zoom: 67%;" /> to fit the tree to the screen.
   * Click <img src="images/33_02_home.PNG" alt="image" style="zoom: 67%;" /> to return to the collapsed project.
-  
-* Move to lower hierarchy level by double-clicking the data element. For example, double click the Table data element to display all related Column data elements.
+
+* Move to a lower hierarchy level by double-clicking the data element or clicking the <img src="images/plus_icon.PNG" alt="image" style="zoom: 85%;"/> icon  on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>. The lower hierarchy level is then displayed.
+
+  ​	<img src="images/hierarchy.PNG" alt="image" style="zoom: 85%;"/>
+
+* By default, all tables are collapsed. To expand the tables, do the following:
+
+  * Click the<img src="images/expand_icon.PNG" alt="image"/>icon in the legend near the data element type. For example, when clicking the <img src="images/expand_icon.PNG" alt="image"/>icon next to **Table** in the legend, all displayed tables are expanded, and the legend icon changes to:  <img src="images/expand_table.PNG" alt="image" style="zoom: 85%;"/>.
+  * Alternatively, click the same icon on the data element header: <img src="images/expand_table_1.PNG" alt="image" style="zoom: 85%;"/>.
+
+  <img src="images/expand.PNG" alt="image" style="zoom: 85%;"/>
 
 * Click any data element or connection line to display its properties, such as name, ID or type in the Properties screen. Click anywhere in the empty screen area to hide the Properties screen.
 
-* Expand the tree, focus on a specific node or clear the node or the connection line by selecting the option either from the Properties screen or from the right click context menu. To clear multiple data elements, click and hold the mouse and then drag the line selecting the required elements.
+* To clear the node or the connection line, select the Hide option either from the Properties screen or from the right click context menu. 
+
+* To clear multiple data elements, click and hold the mouse and then drag the line selecting the required elements.
 
   <img src="images/33_02_select.PNG" alt="image" style="zoom: 55%;" />
 
@@ -96,7 +106,6 @@ The following tools are used to navigate the Data Catalog:
 
   ![image](images/33_02_table.PNG)
 
-  
 
 
 [![Previous](/articles/images/Previous.png)](03_build_and_write_catalog.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](06_override_data_catalog.md) 

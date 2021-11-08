@@ -11,7 +11,7 @@ The Batch process is used to trigger the following:
 Fabric's integrated Batch process provides the following advantages to ensure the smooth execution of heavy-resources demanding processes:
 - Efficient distribution of jobs between nodes.
 - Dynamic adjusting of work balance configuration between nodes during execution phases.
-- Monitoring of instances' synchronization progress (batch sync) at cluster, DC or node levels.
+- Monitoring of instances' synchronization progress (batch sync) at cluster, DC or node levels from the command line or using the [Batch Monitor Dashboard](/articles/20_jobs_and_batch_services/18_batch_monitor.md).
 - Process failure recovering. (e.g non-responding nodes).
 - Stopping and resuming of the migration process (LUI synchronization).
 - Process tracking at entity level. (e.g. timing, duration, handling node or failure management).

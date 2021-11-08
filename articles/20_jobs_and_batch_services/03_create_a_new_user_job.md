@@ -1,16 +1,19 @@
-# Creating a New User Job
+# Creating New User & Broadway Jobs
 
 Jobs are defined in the Fabric Studio and can be saved to a project file and be deployed to the Fabric Server. A Job can be a Java function or a simple command.
 
-## How Do I Create a New User Job?
+## How Do I Create a New User Job using Java code?
 
 ### Step 1  
 Go to the **Project Tree** > **LU** > **Java** > **Category** and right click **New Function** to display the **Function Editor** window.
 
 ### Step 2  
 Write the **User Job function** either from:
-   -    the **Function Editor** window.
-   -    **IntelliJ** IDE.
+   -    the **Function Editor** window
+        
+        or
+   
+   -    the **IntelliJ** IDE.
    
 ```java
 //writing into a file;
@@ -29,11 +32,11 @@ while (test<5 && !isAborted()){
 Set the **Function Type** to the **User Job** value in the right panel. 
 Once the job is triggered, the following Java user code writes a line into a new file job_test.txt every second until the counter test reaches the value 5. The output file is located in the Fabric Home directory. 
 
+<img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
+
 Note that the loop control parameter (variable *test*) is defined as an input parameter of the User Job function, and that a second variable *inSecTime* is also defined as an output parameter. As such, its value is recorded in the *argument* field of the k2_jobs table in the k2system keyspace.
 
 Name and save the **function**.
-
-<img src="/articles/20_jobs_and_batch_services/images/04_jobs_and_batch_services_create_a_job_userjob.PNG">
    
 
 ### Step 4  
@@ -73,7 +76,7 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 <p class="unchanged">TimeStamp, schedules a Job to run once on a given date and time. For example, set the execution to&nbsp;<code>2022-08-20 10:32:12.</code></p>
 </li>
 <li class="unchanged">
-<p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp;the jobT runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
+<p class="unchanged">Time Interval, schedules the Job to run at the frequency specified in the&nbsp;<strong>Execute Every</strong>&nbsp;field: For example, set the execution to:&nbsp;<code>10.11:22:33.</code>&nbsp; . The job runs every 10 days, 11 hours, 22 minutes, 33 seconds. If the time interval is set to 00:00:00, the job runs once automatically.</p>
 <p> It is important to note that if a scheduled job is started manually (before its scheduled occurance) then its next scheduled occurance will still start on time, unless the previous manual occurance of the job is still running.</p>	
 </li>
 </ul>
@@ -111,8 +114,32 @@ Jobs can be created also as References regardless of the specific LU. In the **J
 Right click the **LU** in the **Project Tree**, deploy and then search for the file in the **Fabric Home directory**.
 
 
+## How Do I Create a Broadway Job using the BroadwayJob actor ?
+
+The *BroadwayJob* actor provides the ability to trigger a *Fabric job* that will in turn execute another broadway flow once or multiple times depending upon the configuration of the job.
+
+To use this capability, simply select the actor from the **Add Actors To Stage** menu in the Broadway Flow panel, as illustrated below:
+
+<img src="/articles/20_jobs_and_batch_services/images/37_jobs_and_batch_services_broadwayJobActor1.PNG">
 
 
+The following parameters are to be filled in the properties tab:
+- Name: name of the flow to be triggered by this actor. 
+- UID: unique ID for this job.
+
+Note that both name and UID can either be chosen by the user, attributed automatically by Fabric, or parsed from a previous actor.
+
+- Schedule: the execution frequency of the job, which can be either one of the following:
+	- Immediate
+	- Interval
+	- Date/Time
+	- CRON schedule
+
+- Affinity: this sets which node/DC name IP address is to be used to run the Broadway job.
+
+- Params: This refers to the arguments that can be parsed to the Broadway flow. For example, multiple parameters can be parsed as a key/value object from an external link.
+ 
+Please refer to this [section](/articles/20_jobs_and_batch_services/03_create_a_new_user_job.md#step-4) in order to learn how to setup the schedule type and the affinity appropriately.
 
 [![Previous](/articles/images/Previous.png)](/articles/20_jobs_and_batch_services/02_jobs_flow_and_status.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](/articles/20_jobs_and_batch_services/04_create_a_new_process_job.md)
 

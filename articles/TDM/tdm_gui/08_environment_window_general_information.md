@@ -2,7 +2,7 @@
 
 The General Information section in the Environment Window holds the following information:  
 
-### Environment Name
+## Environment Name
 
 Mandatory settings.
 
@@ -10,14 +10,14 @@ Populate the following settings:
 
 - **TDM Environment Name**, when creating a TDM task,  select the environments deployed to Fabric from the dropdown list. 
 
-### Environment Additional Information
+## Environment Additional Information
 
 Optional settings:
 
 - Description.
 - Contact person settings.
 
-### Environment Type
+## Environment Type
 
 Mandatory setting. 
 
@@ -34,7 +34,7 @@ Set the environment type to one of the following:
   - A tester backs up data in a testing environment before running functional tests by creating and executing an [Extract Data Flux task](16_extract_task.md#entity-versioning) on the testing environment. The testing environment is set as a source environment. During the execution of the Extract task data is saved in the TDM Fabric repository.
   - During functional tests the data in the testing environment becomes corrupted and needs to be replaced with the last backed up version created in the testing environment. The tester creates a [Load Data Flux task] and sets the testing environment to be both source and target. 
 
-### Override Sync Mode
+## Override Sync Mode
 
 Optional setting. 
 
@@ -42,7 +42,7 @@ Override mode can be set if the **Environment Type** is **Source** or **Both**. 
 
 The following values can be set in Override Sync Mode settings:
 
-#### Do not Sync 
+### Do not Sync 
 
 Do not sync the entities from the source when running a TDM task with the environment as a source, instead get the entities from Fabric. Note that if the entities do not exist in Fabric, the task's execution will return an error. This mode is needed when access to the source environment is limited by the organization.
 
@@ -51,16 +51,17 @@ Do not sync the entities from the source when running a TDM task with the enviro
 - The Production team allocates a predefined window to extract a subset of entities from Production. Access to Production is restricted to the predefined window.
 - An [Extract task](16_extract_task.md) must be created and run to extract a large subset of entities from Production and to migrate them into Fabric. The **Override Sync Mode** in the **Production** TDM environment must be set to **Do not Sync** to avoid additional access to Production. Other TDM tasks in the Production source environment get data entities from Fabric. 
 
-#### Always Sync  
+### Always Sync  
 
 Always sync the entities from the source when running a TDM task with the environment as a source. 
 
 Click for more information on [how overriding the sync mode impacts the task execution](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md#overriding-the-sync-mode-on-the-task-execution) process.
 
-### Environment Owners
+## Environment Owners
 
-- Admin users can add or remove one or several environment owner users to or from an environment.  An environment owner user can be added to several environments.
-- An environment owner user can be attached to an environment with tester permissions. For example, a user is attached to ENV1 as the environment owner and attached to ENV2 as a tester.
+- Admin users can add or remove one or several environment owner users or user groups (Fabric roles) to or from an environment.  An environment owner user or group can be added to several environments.
+- Adding a user group to the environment enables the users that belong to the group to be the owners of the environment.
+- An environment owner user or group can be attached to an environment with tester permissions. For example, a user is attached to ENV1 as the environment owner and attached to ENV2 as a tester.
 - The environment owner can edit an environment except for adding or removing environment owner users. Only Admin users can add or remove environment owners.
 - The environment owner can create and execute TDM tasks on their environment without limitations, unlike tester users who can define a task on an environment based on their permissions.
 
@@ -68,17 +69,28 @@ Click for more information about [environment roles and permissions](10_environm
 
 Click for more information about the [Owner TDM Permission Group](02_tdm_gui_user_types.md#owner).
 
-#### How Do I Add or Remove Environment Owners to or from an Environment? 
+### How Do I Add or Remove Environment Owners to or from an Environment? 
 
-- Click Environment Owners and select a user from the list or type the user name. 
+#### Adding Environment Owners
 
-- Click Environment Owners again and select another user from the list or type the user name to set an additional environment owner.
+- Click the plus icon next to the Environment Owners setting. 
 
-- Click the X on an environment owner/s username to remove them from the environment:
+  
 
   ![env owner](images/environment_owners.png)
-  
-  
+
+- A popup window is opened:
+
+![owner setting](images/env_owners_user_settings.png)
+
+
+
+*Always click **Save Changes** after editing the General Information section.*
+
+#### Deleting Environment Owners
+
+Click the X on an environment owner/s username to remove that username from the environment:
+
 *Always click **Save Changes** after editing the General Information section.*
 
 

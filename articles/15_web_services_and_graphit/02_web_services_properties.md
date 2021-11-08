@@ -41,7 +41,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Version</p></td>
+<td width="200pxl" valign="top"><p><h5>Version</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Representation of the Web Service&rsquo;s versioning control status. A version is incorporated into the Web Service&rsquo;s URL and is used to enable several Web Service versions that are all related to the same service. By default, the version is populated by 1.</p>
 <p><strong>Versioning Logic</strong>&nbsp;</p>
@@ -55,7 +55,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Path</p></td>
+<td width="200pxl" valign="top"><p><h5>Path</h5></p></td>
 <td width="700pxl" valign="top">
 <p>The URL path of the Web Service. The actual name to be called by external applications when using the Web Service.</p>
 <p>The URL path requires permissions and should be unique per Path / Version / Response Format / Request Format.</p>
@@ -70,7 +70,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Verb</p></td>
+<td width="200pxl" valign="top"><p><h5>Verb</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Methods supported by the Web Service, as follows:&nbsp;</p>
 <ul>
@@ -83,7 +83,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Is Raw</p></td>
+<td width="200pxl" valign="top"><p><h5>Is Raw</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Indicates whether the output structure should be manipulated automatically by Fabric.</p>
 <p>Values are True or False.</p>
@@ -91,7 +91,7 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Produce</p></td>
+<td width="200pxl" valign="top"><p><h5>Produce</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Web Service&rsquo;s output format.</p>
 <p>Default format: JSON</p>
@@ -100,21 +100,31 @@ Fabric Web Services properties include the definitions, methods, categories and 
 </td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Serialize null</p></td>
+<td width="200pxl" valign="top"><p><h5>Serialize null</h5></p></td>
 <td width="700pxl" valign="top">
     <p>If True, display fields with a null value in the response. Else, ignore fields with null values. The default is True.</p>
     </td>    
 </tr>    
 <tr>
- <td width="200pxl" valign="top"><h4></h4><p>Custom Payload</p></td>
-<td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters pane, or if this is implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric.</td>
+ <td width="200pxl" valign="top"><p><h5>Custom Payload</h5></p></td>
+<td width="700pxl" valign="top"><p>Indicates whether input parameters are automatically acquired by Fabric from the input stream as defined in the input parameters panel, or if it is to be implemented by the implementor manually. <br/>Default is False, whereby input parameters are automatically handled by Fabric. Click here to see a code snippet for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---xml">an XML format payload</a> or for <a href="/articles/15_web_services_and_graphit/06_web_services_code_examples.md#example-of-a-custom-payload---json">a JSON format payload.</a>
+This flag must be set to True in the properties panel in order to be activated.
+</td>
+
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Description</p></td>
+ <td width="200pxl" valign="top"><p><h5>Elevated Permission</h5></p></td>
+<td width="700pxl" valign="top"><p>Indicates if user permissions should be elevated to the Web-Service or not. 
+Default is set to False.</p>
+When set to False, this means (for example) if according to the user's role permission he cannot get instance 1 on a given LU, he will not be able to do so also when using the Web-Service. This is so  even if the user can execute the Web-Service itself.
+<br>Added for Fabric release 6.5.3</td>
+</tr>
+<tr>
+<td width="200pxl" valign="top"><p><h5>Description</h5></p></td>
 <td width="700pxl" valign="top"><p>Web Service&rsquo;s description on Swagger.</td>
 </tr>
 <tr>
-<td width="200pxl" valign="top"><p>Result Metadata</p></td>
+<td width="200pxl" valign="top"><p><h5>Result Metadata</h5></p></td>
 <td width="700pxl" valign="top">
 <p>Response example to be displayed in Swagger before the Web Service call.</p>
 <p>Set example-JSON, example-XML and example-CSV.</p>

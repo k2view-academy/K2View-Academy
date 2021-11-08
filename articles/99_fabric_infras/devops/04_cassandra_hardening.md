@@ -1,29 +1,37 @@
 # Cassandra Hardening
 
-The following steps ensure that the keys that secure Fabric and Cassandra are generated and configured.
+The following steps ensure that the keys that secure Fabric and Cassandra are properly generated and configured.
 
-- The example password ```Q1w2e3r4t5!``` is used for TLS keys and can be replaced in all the following sections by a new password.
-- Do not forget to replace all `$K2_HOME/` & `$INSLATT_DIR`  values with the full and correct path location in both Fabric and Cassandra.
+- The example password ```Q1w2e3r4t5``` is used for TLS keys and can be replaced in all the following sections by a new password.
+- Do not forget to replace all `$K2_HOME/` & `$INSTALL_DIR`  values with the full and correct path location for both Fabric and Cassandra.
 
 
 ## Step 1 - Keys Generation
 
-1. Run the keys script that can be downloaded from [location](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
-2. Stop Fabric and Cassandra services before running the script.
+1. Connect as **cassandra** user
+2. Download and run the `secure_cassandra.sh` file that generate the keys. it can be downloaded from [here](https://owncloud-bkp2.s3.amazonaws.com/adminoc/Utils/Hardening/secure_cassandra.sh). 
+3. Stop Cassandra services before running the script.
 
 
 ```bash
-cd $K2_HOME/
+echo "export K2_HOME=$INSLATT_DIR" >> .bash_profile
+echo "export INSTALL_DIR=$INSLATT_DIR" >> .bash_profile
+source ~/.bash_profile
+cd ~/
 rm -rf .cassandra .cassandra_ssl export .oracle_jre_usage .ssl
 
 chmod +x secure_cassandra.sh
-
-!! run on single Fabric node only !!
+````
+!! run on single Cassandra node only !!
 * To change the password or the cluster name, edit the secure_cassandra.sh or execute using the password and cluster name parameters
-e.g.: ./secure_cassandra.sh {Password} {Cluster_Name}
+e.g.: `./secure_cassandra.sh {Password} {Cluster_Name}`
 
+```bash
 ./secure_cassandra.sh Q1w2e3r4t5 k2tls
+```
+output example:
 
+```bash
 Warning:
 The JKS Keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -destkeystore /opt/apps/k2view/.cassandra_ssl/cassandra.keystore -deststoretype pkcs12".
 Certificate stored in file </opt/apps/k2view/.cassandra_ssl/CLUSTER_k2tls_PUBLIC.cer>
@@ -49,7 +57,7 @@ MAC verified OK
 MAC verified OK 
 ```
 
-The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` directory:
+The following 7 files will appear under the `$INSTALL_DIR/.cassandra_ssl` directory:
 - k2tls_CLIENT.key.pem
 - k2tls_CLIENT.cer.pem
 - cassandra.keystore
@@ -58,10 +66,22 @@ The following 7 files will appear under the ```$K2_HOME/.cassandra_ssl``` direct
 - CLIENT_k2tls_PUBLIC.cer
 - CLUSTER_k2tls_PUBLIC.cer
 
-## Step 2 - Cassandra YAML
+## Step 2 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
+
+Tar and copy them to all Cassandra and Fabric nodes in the cluster.  
+
+See the example below: 
+
+``` bash
+tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
+scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
+mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
+```
+
+## Step 3 - Cassandra YAML
 
 1. Edit the cassandra.yaml file with the appropriate passwords and certification files.
-2. Execute this as a Cassandra user on all Cassandra nodes. 
+2. Execute this as a Cassandra user on all the Cassandra nodes. 
 
 ```bash
 sed -i "s@internode_encryption: none@internode_encryption: all@" $CASSANDRA_HOME/conf/cassandra.yaml
@@ -89,11 +109,12 @@ sed -i -e 's/# \(.*native_transport_port_ssl:.*\)/\1/g' $CASSANDRA_HOME/conf/cas
 3. Restart the Cassandra service on each node: ```cassandra```
 
 
-## Step 3 - Cassandra CQLSHRC
+## Step 4 - Cassandra CQLSHRC
 1. Edit the .cassandra/cqlshrc file using the appropriate passwords and certification files.
 2. Execute this as a Cassandra user on all Cassandra nodes. 
 ```bash
-cp $INSLATT_DIR/cassandra/conf/cqlshrc.sample $INSLATT_DIR/.cassandra/cqlshrc
+mkdir ~/.cassandra
+cp $INSTALL_DIR/cassandra/conf/cqlshrc.sample $INSTALL_DIR/.cassandra/cqlshrc
 
 sed -i "s@\;\[ssl\]@\[ssl\]@" $INSLATT_DIR/.cassandra/cqlshrc
 sed -i '/^\[csv]/i factory = cqlshlib.ssl.ssl_transport_factory' $INSLATT_DIR/.cassandra/cqlshrc
@@ -106,37 +127,21 @@ sed -i "s@hostname = .*@hostname = $(hostname -I |awk {'print $1'})@" $INSLATT_D
 ```
 
 
+## Step 5 - Disable the default cassandra superuser
 
-## Step 4 - Transfer Keys and Certificates to All Cassandra and Fabric Nodes
-
-Tar and copy them to all Cassandra and Fabric nodes in the cluster.  
-
-See the example below: 
-
-``` bash
-tar -czvf keys.tar.gz -C $INSLATT_DIR/.cassandra_ssl .
-scp keys.tar.gz cassandra@10.10.10.10:/opt/apps/cassandra/
-mkdir -p $INSLATT_DIR/.cassandra_ssl && tar -zxvf ckeys.tar.gz -C $INSLATT_DIR/.cassandra_ssl
-```
-
-
-
-## Step 5 - Disable the defulte cassandra superuser
-
-Cassandra defulte **superuser** is `cassandra` and it must be disabled before going to production. before doing so you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
+Cassandra default **superuser** is `cassandra` and it must be disabled before going to production. Before doing so, you need to create new **superusers**, one for SYSDBA, and one for Fabric connection use
 
 1. connect to one of the Cassandra nodes console, and create 2 new **superuser's**
 
    ~~~bash
-   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra
-   echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" |cqlsh -u cassandra -p cassandra
-   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3
+   echo "create user k2admin with password 'Q1w2e3r4t5' superuser;" |cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
+   echo "create user k2sysdba with password '3ptBF9eMSsyLrXr3' superuser;" |cqlsh -u cassandra -p cassandra $(hostname -i) 9142 --ssl
    ~~~
 
 2. drop the `cassandra` user
 
    ~~~bash
-   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3
+   echo "drop role cassandra;" |cqlsh -u k2sysdba -p 3ptBF9eMSsyLrXr3 $(hostname -i) 9142 --ssl
    ~~~
 
    

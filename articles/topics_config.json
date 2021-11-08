@@ -19,8 +19,13 @@
 	],
 	"Views": [
 		{
+<<<<<<< HEAD
 			"view name": "desktop",
 			"tooltip": "Desktop",
+=======
+			"view name": "studio",
+			"tooltip": "Studio",
+>>>>>>> remotes/origin/Academy_6.5
 			"default": true,
 			"icon on": "images/icon_studio_on.png",
 			"icon off": "images/icon_studio_off.png"
@@ -250,8 +255,12 @@
 					"value": "33_data_catalog"
 				},
 				{
-					"display name": "Data Editor",
+					"display name": "Data Explorer",
 					"value": "36_data_editor"
+				},
+				{
+					"display name": "BI",
+					"value": "38_bi_integration"
 				}
 			]
 		},
@@ -326,7 +335,7 @@
 			"path": "../community/webinars",
 			"view all link": "../community/webinars/README.html",
 			"view all text": "Click to view all the Webinars"
-		},		
+		},
 		{
 			"comm display name": "In the Spotlight",
 			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",

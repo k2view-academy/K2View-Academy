@@ -45,6 +45,7 @@ The following are the main log options:
 
 ![image](images/13_02_09%20K2Fabric%20log.jpg)
 
+
 ### Debugging Logs and Messages
 
 Logs and messages can also be used for debugging purposes. The **log.info ()** method is available to enable Fabric’s runtime Debug options. This method can be added to any Java code and its output can be viewed after deployment and during runtime. 

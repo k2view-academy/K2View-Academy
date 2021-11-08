@@ -4,7 +4,7 @@
 
 1. Go to **Project Tree** > **Shared Objects**, right click **Interfaces** and select **New Interface**.\
 The following screenshot displays a list of available Interface Types.
-     * ![image](images/05_04_icon1.png) = DB interfaces.
+     * ![image](images/05_04_icon1.png) = DB interfaces. 
      * ![image](images/05_04_icon2.png) = Non-DB interfaces.
 
 ![image](images/05_04_01_interface_types.PNG)
@@ -58,6 +58,8 @@ The following screenshot displays an interface configuration in an older format 
 #### When are Interfaces Created in an Older Format in the Current Fabric Version?
 
 In the current Fabric version, if the project already has at least one interface created in the older format, Fabric preserves this interface format. All new interfaces of the same type are also created in the same format (ADO.NET/ODBC drivers) by default.
+
+From Fabric 6.5.2 and on, all new interfaces will be created with the new format.
 
 An additional reason for an interface to be created in a legacy format in the current Fabric version is the definition of a DB type in the Fabric Studio Config file. The **k2FabricStudio.exe.config** marks a specific DB type as **Legacy** whereby all new interfaces of this type are created using ADO.NET/ODBC drivers.  
 
