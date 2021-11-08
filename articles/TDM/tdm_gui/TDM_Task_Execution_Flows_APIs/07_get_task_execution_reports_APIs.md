@@ -20,8 +20,8 @@ Gets the task summary report.
 
 ### API Input
 
-- executionId
-- luName - populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.
+- **executionId**
+- **luName** - populate this parameter by 'ALL' to get a summary execution report on the execution. This report includes all the related task's LUs.
 
 #### API Input Example
 
@@ -1015,8 +1015,8 @@ Gets the task summary report on a given LU.
 
 ### API Input
 
-- executionId
-- luName - populate this parameter by the LU name.
+- **executionId**
+- **luName** - populate this parameter by the LU name.
 
 #### API Input Example
 
