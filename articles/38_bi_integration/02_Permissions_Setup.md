@@ -7,14 +7,16 @@ Fabric users who want to implement business intelligence capabilities can be div
 To enforce this differentiation, Fabric divides the permission setup process into two steps:
 
 1. Assign the BI ADMIN permissions to predefined Fabric roles only. 
-2. Setup the access level for BI content. This step is only available to the roles with BI ADMIN permission.
+2. Setup the access level for BI content. 
+
+Note that only Fabric admin can do these activities. 
 
 ### BI ADMIN Permission Setup 
 
 The **Admin** module of the **BI** application allows users to perform various system configurations as well as to set up the metadata for the reports. 
-Only user roles with the **BI_ADMIN** (or **ALL**) permission can access the **Admin** module.
+Only user roles with the **ALL** or **BI_ADMIN** permission can access the **Admin** module of **BI**.
 
-Note that the ability to create new reports within the **Designer** module is also enabled only to users with the **BI_ADMIN** (or **ALL**) permission.
+Note that the ability to create new reports within the **Designer** module is also enabled only to users with the **ALL** or **BI_ADMIN** permission.
 
 **How Do I Setup Access to the Admin Module?**
 
@@ -32,9 +34,9 @@ Select a Role name under Roles and **BI_ADMIN** under Methods to assign this met
 
 ### Access Level Setup
 
-BI has a built-in access permissions mechanism that controls activities such as Edit reports, Rename reports or Delete the reports within the **Designer** module. The access rules are stored in the Storage Management DB.
+**Fabric's BI** solution has a built-in access permissions mechanism that controls activities such as Edit reports, Rename reports or Delete the reports within the **Designer** module. 
 
-The setup of the access level is performed by running the **SET_BI_ACCESS** Fabric command.
+The setup of the access level is performed by running the **SET_BI_ACCESS** Fabric command which is executed on the Fabric and populates access rules in the Storage Management DB. 
 
 The following three access levels are defined:
 
@@ -44,8 +46,8 @@ The following three access levels are defined:
 
 **Note:**
 
-- Since BI is based on ExagoBI, the names of the folders and reports are also based on ExagoBI.
-- If the user that is logged into BI is not assigned any access rules, he will get a read-only access to the BI (that is, ExagoBI) folders and reports.
+- Only the PostgreSQL Storage Management type is supported by the command. 
+- If the user that is logged into BI is not assigned any access rules, he will get a read-only access to the BI folders and reports.
 - If the user is an owner of a folder or a report, he will have full access to it regardless of the access level assigned to his role on this folder/report.
 
 **How Do I Set an Access Level?**
