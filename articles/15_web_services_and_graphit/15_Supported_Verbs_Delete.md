@@ -271,6 +271,23 @@ If the request passes through a cache and the Request-URI identifies one or more
 <td>JSON/XML</td>
 <td>JSON</td>
 </tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>schema</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Reference table schema name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>A valid schema name</p>
+</td>
+<td valign="top" width="200pxl">
+<p>common if empty</p>
+</td>
+</tr>
 </tbody>
 </table>
 
