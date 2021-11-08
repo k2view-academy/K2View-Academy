@@ -1,6 +1,10 @@
 {
 	"Branches": [
 		{
+			"display name": "Fabric 7.0",
+			"branch name": "Academy_7.0"
+		},
+		{
 			"display name": "Fabric 6.5",
 			"branch name": "Academy_6.5"
 		},
@@ -11,6 +15,22 @@
 		{
 			"display name": "Fabric 6.2",
 			"branch name": "Academy_6.2"
+		}
+	],
+	"Views": [
+		{
+			"view name": "studio",
+			"tooltip": "Studio",
+			"default": true,
+			"icon on": "images/icon_studio_on.png",
+			"icon off": "images/icon_studio_off.png"
+		},
+		{
+			"view name": "web",
+			"tooltip": "Web",
+			"default": false,
+			"icon on": "images/icon_web_on.png",
+			"icon off": "images/icon_web_off.png"
 		}
 	],
 	"Groups": [
