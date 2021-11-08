@@ -19,13 +19,8 @@
 	],
 	"Views": [
 		{
-<<<<<<< HEAD
 			"view name": "desktop",
 			"tooltip": "Desktop",
-=======
-			"view name": "studio",
-			"tooltip": "Studio",
->>>>>>> remotes/origin/Academy_6.5
 			"default": true,
 			"icon on": "images/icon_studio_on.png",
 			"icon off": "images/icon_studio_off.png"
