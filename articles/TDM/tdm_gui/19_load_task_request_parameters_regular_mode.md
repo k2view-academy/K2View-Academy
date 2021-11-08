@@ -1,6 +1,6 @@
 # TDM Load Task - Request Parameters Tab
 
-This tab defines the general parameters set at a task level that impact all processed entities.  
+This tab defines the general parameters set at a task level that impacts all processed entities.  
 
 ![request parameters](images/load_request_parameters_tab_regular.png)
 
@@ -30,7 +30,7 @@ If the processed Entity IDs already exist in the target environment and the task
 
 #### Delete and Load Entity
 
-The selected entities are deleted from the target testing environment and are then reloaded into the environment. This option is required when a tester wishes to repeat a test on specific entities and needs a new copy of them in the target environment.
+The selected entities are deleted from the target testing environment and are then reloaded into the environment. This option is required when a tester wishes to repeat a test on specific entities and needs a new copy of the selected entities in the target environment.
 
 #### Delete Entity without Load
 
