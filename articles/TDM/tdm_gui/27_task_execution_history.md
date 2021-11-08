@@ -29,7 +29,7 @@ The following information is displayed for each executed task:
 
 ### Generating a Task Execution Summary Report
 
-Click![task execution summary report](images/task_execution_summary_report_icon.png) next to each executed task to generate and download a Summary Execution report. Note that the report displays the [task execution overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md) if exist.
+Click![task execution summary report](images/task_execution_summary_report_icon.png) next to each executed task to generate and download a Summary Execution report. Note that the report displays the [task execution overridden parameters](/articles/TDM/tdm_architecture/04_task_execution_overridden_parameters.md) if they exist.
 
 Example of Summary Execution Report:
 
