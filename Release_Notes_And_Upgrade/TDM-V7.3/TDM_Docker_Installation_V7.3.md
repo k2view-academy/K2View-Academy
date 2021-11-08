@@ -22,8 +22,8 @@ Create a K2V_TDM directory and download the following into it:
 docker load -i D_k2view_pg_9.6.9.tar.gz
 docker load -i D_k2v_cassandra_3.11.6_2.tar.gz
 docker load -i D_k2view_kafka_5.5.1_2.tar.gz
-docker load -i D_Fabric_6.5.2_73_TDMGUI7.3_5.tar.gz
-unzip compose_TDM_7.3_5.zip
+docker load -i D_Fabric_6.5.2_73_TDMGUI7.3_6.tar.gz
+unzip compose_TDM_7.3_6.zip
 ~~~
 
 You can see the images names by using the command **docker images**. The result will be similar to the following: 
@@ -35,7 +35,7 @@ You can see the images names by using the command **docker images**. The result 
 
 1. Navigate to the compose folder as shown: 
 ~~~bash
-    cd compose_TDM_7.3_5
+    cd compose_TDM_7.3_6
 ~~~
 2. Run the compose file using docker as shown: 
 ~~~bash
