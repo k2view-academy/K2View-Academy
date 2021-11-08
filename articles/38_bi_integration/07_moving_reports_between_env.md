@@ -13,7 +13,7 @@ The BI application provides the utility to move your files (reports and dashboar
 **Step 1:  Create and Edit the Config JSON File**
 
 Open a command line interface, connect to the BI server and run the following command from the  Application Binaries directory **/opt/apps/exago/bin**.
-(Note that the utility can be run only by a user with **root** or **sudo** permissions)
+Note that the utility can be run only by a user with **root** or **sudo** permissions. When running the utility on a docker, you can skip **sudo** from the command. 
 
 ~~~
 > sudo mono ImportExportStorageMgmt.exe -f ./reports.json

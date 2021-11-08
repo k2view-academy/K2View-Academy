@@ -38,9 +38,37 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
 
-2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer.
+2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer and extract it. The file contains the following:
 
-3. TBD - run the script that will update your docker image with the Demo Project BI example.
+   * WebReports.xml
+   * reports.json
+   * Json folder which contains 46 JSON files
+
+3. Update your docker image with the Demo Project BI example as follows:
+
+   <!--TBD - run the script that will update your docker image with the Demo Project BI example.-->
+
+   * Copy the files into the docker using the following commands, where **exago** is a docker name. You can do it using the Windows PowerShell or another Command line program.
+
+     ~~~powershell
+     > docker cp C:\<path to the file>\WebReports.xml exago:/opt/apps/exago/Config
+     > docker cp C:\<path to the file>\Json\ exago:/opt/apps/exago/bin/
+     > docker cp C:\<path to the file>\reports.json exago:/opt/apps/exago/bin/
+     ~~~
+
+   * Then open the docker CLI and run the following commands to import the Demo BI dashboards and repots definition into your docker image:
+
+     ~~~bash
+     > cd /opt/apps/exago/bin
+     > mono ImportExportStorageMgmt.exe -f ./reports.json -I
+     14:39:30 INFO  - ExportStorageMgmt -f ./reports.json -I
+     14:39:30 INFO  - Starting Import
+     14:39:31 INFO  - Completed Loading Content Records: Inserted 46 content records, and updated 0 content records
+     14:39:31 INFO  - Completed Loading Access Records: Inserted 46 access records, and updated 0 access records
+     14:39:31 INFO  - No Orphan Records Located
+     ~~~
+
+   * Now, complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker.
 
 4. Open the Demo Project in the Fabric Studio and open the project's config.ini as follows:
 
@@ -78,5 +106,5 @@ To setup the BI and generate the example reports and dashboards using the demo p
 4. To see the data of another customer, go to **Admin** tab and open **Data > Parameters > customer_id**, set another value and click **Apply** to save your changes. Then return to the **Designer** tab, open the dashboard and play it.
 
 
+   [Click to open the complete BI user guide](/articles/38_bi_integration/README.md).
 
-    [Click to open the complete BI user guide](/articles/38_bi_integration/README.md).
