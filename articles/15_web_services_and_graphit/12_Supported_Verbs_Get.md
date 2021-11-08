@@ -802,15 +802,32 @@ The new REST API is fully integrated with the open API (Swagger) whereby the str
 <p>JSON</p>
 </td>
 </tr>
+<tr>
+<td valign="top" width="150pxl">
+<p>schema</p>
+</td>
+<td valign="top" width="250pxl">
+<p>Reference table schema name</p>
+</td>
+<td valign="top" width="100pxl">
+<p>N</p>
+</td>
+<td valign="top" width="200pxl">
+<p>A valid schema name</p>
+</td>
+<td valign="top" width="200pxl">
+<p>common if empty</p>
+</td>
+</tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
 
  **Examples:**
 
-- `http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC`
+- `http://localhost:3213/api/v1.0/COMMON/CITIES?token=ABC&schema=demo`
 
-  Bring all data from CITIES common table
+  Bring all data from CITIES common table related to demo schema
 
 - `[http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY=’TEL](http://localhost:3213/api/v1.0/COMMON/ADDRESSES?fields=CTIY_NAME&where=CITY='TEL) AVIV’&token=ABC`
 
