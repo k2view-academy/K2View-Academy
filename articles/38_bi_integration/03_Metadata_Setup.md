@@ -11,7 +11,7 @@ Note that each **data source** defined in the **Admin** module must have a corre
 
 ### Defining Data Sources
 
-The following data sources types are supported:
+The following type of data sources are supported:
 
 * Fabric
 * PostgreSQL
@@ -33,7 +33,7 @@ To set up Fabric as a data source, use the Fabric-Connection template in the **A
    * Type - select **Fabric**.
    * Connection String - define as follows:
 
-  ~~~
+  ~~~bash
   urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
   ~~~
 
@@ -65,14 +65,14 @@ Once the data source is created, you must define its objects and joins. Objects 
 **How Do I Initiate Automatic Metadata Discovery?**
 
 1. Make sure you are accessing the **Admin** module, by clicking the **Admin** tab in the upper right section of the user interface. 
- 
+
 2. Once you are in the **Admin** module, right click the <Data Source Name> under **Sources**, then click **Discover Object/Join Metadata** to initiate the automatic discovery:
 
    ![image](images/bi_setup_2.PNG)
 
 3. When the **Discover Object/Join Metadata** screen opens, the list of all Fabric tables is displayed. 
    It includes the Common area tables and all the tables of all Logical Units.
-   
+
 4. Select the tables required for report creation, then click **Add Objects and Joins** to create objects and joins in BI.
 
    ![image](images/bi_setup_3.PNG)

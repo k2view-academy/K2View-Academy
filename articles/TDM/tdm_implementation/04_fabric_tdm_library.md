@@ -158,9 +158,9 @@ The TDM Logical Unit must be deployed to the Fabric project. It has the followin
 
 The **deploy.flow** has been added to TDM LU in TDM 7.3. This process runs the following activities upon the TDM LU deployment:
 
-- Verify that the Environment and the Web Services are deployed to Fabric. Give an error message to the user if they are not deployed to Fabric.
-- Create the k2masking keyspace in Cassandra if not exists
-- Check if Redis is up. Give an error message to the user id the Redis is down.
+- Verify that the Environment and the Web Services are deployed to Fabric. If these are not deployed to Fabric, give an error message to the user.
+- Create the k2masking keyspace in Cassandra if it does not already exist.
+- Check if Redis is up. If Redis is not up, give an error message to the user.
    
 
 Edit the **deploy.flow** of the TDM LU before the TDM deployment:

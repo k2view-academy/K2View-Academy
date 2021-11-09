@@ -1,8 +1,8 @@
 # Parameters Definition
 
-Parameters are used throughout the BI application to store values. Although parameters can be created and given a default value in the **Admin** module, parameters are designed to be set at runtime through the APIs. 
+Parameters are used throughout the BI application to store values. Although parameters can be created and given a default value in the **Admin** module, parameters are designed to be set at runtime through the REST APIs. 
 
-For example, when creating a report based on an LUI, a filter must be set on the LU's Root table using the Instance ID. 
+For example, when creating a report based on an LUI, a filter must be set on the LU's Root table using the Instance ID. Then the filter value is set during the report execution.
 
 **How Do I Create a Parameter?**
 

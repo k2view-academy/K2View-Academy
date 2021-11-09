@@ -31,7 +31,7 @@ For example, you can define the report behavior when there is no qualified data 
 
 Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_services/07_jobs_commands.md) using the following syntax:
 
-~~~
+~~~bash
 startjob GENERATE_BI NAME='<name>' [UID='<uid>'] [AFFINITY='<affinity>'] <ARGS='<args>'> [EXEC_INTERVAL='<execInterval>'];
 ~~~
 
@@ -50,21 +50,21 @@ Set the job parameters as follows:
   * **TYPE** - export file format can be either **html** or **csv**.
   * **DESTINATION** - the name of the Fabric interface where the export file should be placed. It can be either a Local File System or an SFTP interface type.
   * **SESSION_PARAMS** - array of the session parameters used by the report. Only the **Id** (name) and the **Value** attributes of the parameter are mandatory. The other attributes (such as Type) are optional. 
-  * **DATA_SOURCES_LIST** (optional) - array of the Fabric interface names that should correspond with the report's data sources defined for this report. The **DATA_SOURCES_LIST** should only be sent when you need the report to use the connection details different from the connection details defined in the BI Admin.
 
 * The following are optional **ARGS**:
 
+  * **DATA_SOURCES_LIST** (optional) - array of the Fabric interface names that should correspond with the report's data sources defined for this report. The **DATA_SOURCES_LIST** should only be sent when you need the report to use the connection details different from the connection details defined in the BI Admin.
   * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation (whose value is set using the session parameters). Only the **FilterText** (the value of the filter) is required, the other attributes are optional. The **FilterText** should include a data object and a column to filter on.
   * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation.  The fields **EntityName** and **ColumnName** (data object and column to sort on) are required.
 
 
-**Example of GENERATE_BI Job with Session Parameter**
+**Example of GENERATE_BI Job with Session Parameter and Data Sources**
 
 ~~~bash
 startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPUT_NAME":" Load_test_TaskID_12345_ExecutionDate_20212309", "DATA_SOURCES_LIST":"[{\"Name\": \"Fabric-PROD-V1\"}]", "TYPE":"csv", "DESTINATION":"MyLocalFS", , "SESSION_PARAMS": "[{\"Id\":\"TASK_EXECUTION_ID\", \"Value\":\"600\" }]"}';
 ~~~
 
-Note that **SESSION_PARAMS** is an optional parameter for REST API invocation. However all reports based on Fabric LU data require at least one session parameter definition - to pass the IID of the LU's root table for the GET INSTANCE command.
+Note that **SESSION_PARAMS** is a mandatory parameter for all reports based on Fabric LU data. Such reports require at least one session parameter definition - to pass the IID of the LU's root table to perform GET INSTANCE command. When the report is based on PostgreSQL or Oracle data source, sending **SESSION_PARAMS** is optional.
 
 **Example of GENERATE_BI Job with Filter** 
 
@@ -80,17 +80,17 @@ startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_
 
 [Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/).
 
-### Reports Generation Using "Deep Link"
+### Reports Generation Using Deep Link
 
 Generate the report using a direct link to it in a separate browser, as follows:
 
-~~~
+~~~http
 <host>:<port>/app/BI/<report path in BI>
 ~~~
 
-Where <report path in BI> is the full name of the report from the Root folder till the report name.
+Where **report path in BI** is the full name of the report from the Root folder till the report name.
 
-For example, the "deep link" to the report **mig_rep** under the folder **test_designer** running on a **localhost** is: 
+For example, the deep link to the report **mig_rep** under the folder **test_designer** running on a **localhost** is: 
 
 http://localhost:3213/app/BI/test_designer/mig_rep
 
