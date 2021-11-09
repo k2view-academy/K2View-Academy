@@ -102,7 +102,3 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
 **Note**: if it is needed to connect to an existing network, use the "--network='network name' " option. 
-Consult the Docker documentation for more information.
-
-
-
