@@ -47,7 +47,7 @@ Set the job parameters as follows:
 
 * Populate all the job input parameters inside the **ARGS** as follows:
   * **OUTPUT_NAME** - extract file name. For example, you can concatenate parameters such as IID or datetime to the original report name or even provide a completely different name for the extract file.
-  * **TYPE** - export file format can be either **html** or **csv**.
+  * **TYPE** - export file format can be one of the following: **csv, excel, pdf, rtf**.
   * **DESTINATION** - the name of the Fabric interface where the export file should be placed. It can be either a Local File System or an SFTP interface type.
   * **SESSION_PARAMS** - array of the session parameters used by the report. Only the **Id** (name) and the **Value** attributes of the parameter are mandatory. The other attributes (such as Type) are optional. 
 
