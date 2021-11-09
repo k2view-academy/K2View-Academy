@@ -84,4 +84,4 @@ Note that it is not needed to perform the initialization process when using the 
 
 
 
-[![Previous](/articles/images/Previous.png)](99_bi_admin_config.md)
+[![Previous](/articles/images/Previous.png)](08_moving_from_dev_to_prod.md)
