@@ -56,8 +56,8 @@ To define the access level to a Fabric role in the context of BI, run the Fabric
 
 1. NAME, folder name or report name. Note that the command is executed on the reports/folders under the **project name** folder of the deployed project.
 2. PARENTS, path to the report (optional) - the full path to the folder from the root folder. Applicable if the folder provided in NAME is not a root.
-3. Fabric role (mandatory).
-4. Access level, one of the three values must be sent: 
+3. ROLE, Fabric role (mandatory).
+4. ACCESS_LEVEL, the access level to reports within the Designer module. One of the following values must be sent: 
    * Unrestricted / CreateContent / ReadOnly
 
 The command will either create the permissions in the Storage Management DB or update the existing permissions.

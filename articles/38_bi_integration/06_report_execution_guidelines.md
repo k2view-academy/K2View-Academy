@@ -84,7 +84,7 @@ startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_
 
 Generate the report using a direct link to it in a separate browser, as follows:
 
-~~~http
+~~~
 <host>:<port>/app/BI/<report path in BI>
 ~~~
 
@@ -96,5 +96,5 @@ http://localhost:3213/app/BI/test_designer/mig_rep
 
 
 
-[![Previous](/articles/images/Previous.png)](05_report_creation_guidelines.md)
+[![Previous](/articles/images/Previous.png)](05_report_creation_guidelines.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](07_moving_reports_between_env.md)
 
