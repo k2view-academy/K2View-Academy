@@ -4,7 +4,7 @@ The installation and configuration of Fabric's BI includes the following steps:
 
 - [Installation](01_Installation.md#installation) - Fabric's BI is based on ExagoBI, so you must install the ExagoBI server and the Storage Management DB.
 - [Configuration](01_Installation.md#configuration) - Configure parameters in the Fabric config.ini file.
-- [Project Initialization with BI](01_Installation.md#Project-Initialization-in-BI). 
+- [Project Initialization with BI](01_Installation.md#Project-Initialization-in-BI-on-Deploy). 
 
 ### Installation
 

@@ -54,31 +54,31 @@ The following three access levels are defined:
 
 To define the access level to a Fabric role in the context of BI, run the Fabric command **set_bi_access** with the following input:
 
-1. Folder name or report name (optional). If the folder or report name is not provided, the command is executed on the <project name> folder.
-2. Path (optional) - the full path to the folder from the root folder. Applicable if the folder is not a root.
+1. NAME, folder name or report name. Note that the command is executed on the reports/folders under the **project name** folder of the deployed project.
+2. PARENTS, path to the report (optional) - the full path to the folder from the root folder. Applicable if the folder provided in NAME is not a root.
 3. Fabric role (mandatory).
 4. Access level, one of the three values must be sent: 
    * Unrestricted / CreateContent / ReadOnly
 
 The command will either create the permissions in the Storage Management DB or update the existing permissions.
 
-**Examples**
+**Examples of Running a Command on a TDM Project **
 
 * Give full access on **TDM** root folder to the **admin** user role:
 
-```
+```bash
 SET_BI_ACCESS NAME="TDM" ROLE="admin" ACCESS_LEVEL="Unrestricted";
 ```
 
 * Give create/edit access on **Reports** folder which is a **TDM**'s child folder to the **Implementer** user role: 
 
-~~~
+~~~bash
 SET_BI_ACCESS NAME="Reports" PARENTS="TDM" ROLE="Implementer" ACCESS_LEVEL="CreateContent";
 ~~~
 
 * Give read-only access on **TDM/Reports/Load** folder to the **Tester** user role: 
 
-~~~
+~~~bash
 SET_BI_ACCESS NAME="Load" PARENTS="TDM/Reports" ROLE="Tester" ACCESS_LEVEL="ReadOnly";
 ~~~
 

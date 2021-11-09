@@ -24,7 +24,7 @@ One of the basic reports is a report based on data from a Fabric LU Instance. Fo
 
 ![image](images/filter_definition.PNG)
 
-8. Once the filter is set, click Okay. 
+8. Once the filter is set, click **Okay**. 
 
 ### Creating Reports Based on Fabric Custom SQL
 
@@ -60,11 +60,19 @@ Click the ![image](images/create_icon.PNG) icon to trigger the new report creati
 select * from k2_fabric_command_sql where command='<command>'
 ~~~
 
-For example, when the report should include the results of TEST_CONNECTION, write the following custom query:
+**Example of a report of Fabric command without parameters:**
 
 ~~~sql
 select * from k2_fabric_command_sql where command='test_connection'
 ~~~
+
+**Example of a report of Fabric command with parameters:**
+
+~~~sql
+select * from k2_fabric_command_sql where command='batch_list status="@status_name@";'
+~~~
+
+Where **status_name** is a session parameter.
 
 
 
