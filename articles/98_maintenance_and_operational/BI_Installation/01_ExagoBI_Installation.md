@@ -94,7 +94,7 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
   
    where **exago** is the docker name (you can define a different name if needed).
 
-4. run the aditional script - specify the container name **exago** in our case
+4. Run the following aditional script where **exago** is the container name:
    ~~~bash 
    ./docker_prepare.sh exago
    ~~~
