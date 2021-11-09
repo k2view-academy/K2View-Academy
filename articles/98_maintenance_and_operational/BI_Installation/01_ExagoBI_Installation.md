@@ -6,7 +6,6 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
 ## Prerequisites
 
-- Install Apache web server with mod_ssl.
 - Disable SELinux.
 - Make sure you have the latest Redhat/CentOS operating system, including all patches.
 - Hardware - TDB.
