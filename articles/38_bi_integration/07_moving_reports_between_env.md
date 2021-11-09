@@ -108,3 +108,7 @@ Once the configuration file is updated, run the utility as follows:
 
 [Click for more information about how to move files between Storage Management DBs in Fabric BI (ExagoBI)](https://exagobi.com/support/administrators/installation-and-configuration/moving-files-between-storage-management-databases/).
 
+
+
+[![Previous](/articles/images/Previous.png)](06_report_execution_guidelines.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](08_moving_from_dev_to_prod.md)
+

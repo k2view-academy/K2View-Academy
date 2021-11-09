@@ -81,3 +81,7 @@ As part of the BI solution, Storage Management initialization is performed autom
 ![sm](images/bi_sm_details.PNG)
 
 Note that it is not needed to perform the initialization process when using the default SQLite Storage Management DB.
+
+
+
+[![Previous](/articles/images/Previous.png)](99_bi_admin_config.md)

@@ -20,3 +20,4 @@ Restrict the access to the **Admin** by doing one of the following:
 
 Then click the <img src="images/dots_icon.PNG" alt="image" /> icon and click **Revoke Resources**.
 
+[![Previous](/articles/images/Previous.png)](07_moving_reports_between_env.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](99_bi_admin_config.md)
