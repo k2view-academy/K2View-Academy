@@ -32,25 +32,25 @@ To setup the project and connect the databases, do the following:
 
 ## BI Configuration and Setup (V6.5.3)
 
-If you are already using the demo project from the previous versions, you need to download the project export as well as the DB files again.
-
 To setup the BI and generate the example reports and dashboards using the demo project, do the following steps:
 
 1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
 
-2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer and extract it. The file contains the following:
+2. If you are already using the demo project from the previous version, you need to download the project export and import it and also download the DB files and copy them to the predefined location.
+
+3. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer and extract it. The file contains the following:
 
    * WebReports.xml
    * reports.json
    * Json folder which contains 46 JSON files
 
-3. Update your docker image with the Demo Project BI example as follows:
+4. Update your docker image with the Demo Project BI example as follows:
 
    <!--TBD - run the script that will update your docker image with the Demo Project BI example.-->
 
    * Copy the files into the docker using the following commands, where **exago** is a docker name. You can do it using the Windows PowerShell or another Command line program.
 
-     ~~~powershell
+     ~~~bash
      > docker cp C:\<path to the file>\WebReports.xml exago:/opt/apps/exago/Config
      > docker cp C:\<path to the file>\Json\ exago:/opt/apps/exago/bin/
      > docker cp C:\<path to the file>\reports.json exago:/opt/apps/exago/bin/
@@ -70,7 +70,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
    * Now, complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker.
 
-4. Open the Demo Project in the Fabric Studio and open the project's config.ini as follows:
+5. Open the Demo Project in the Fabric Studio and open the project's config.ini as follows:
 
    * Right click on the Project and click **Open Folder**:
 
@@ -80,13 +80,13 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
    * In the project's config.ini make sure that the **BI_PORT** the **[bi]** section is set to **localhost**, the Storage Management DB is pointing to the default SQLite DB and the **TABLE_PREFIX** is empty.
 
-5. Deploy the project including the reference sync. 
+6. Deploy the project including the reference sync. 
 
-6. Click the ![img](images/web_fr.PNG) icon to open the **Web Framework > BI** and go to **Admin** tab.
+7. Click the ![img](images/web_fr.PNG) icon to open the **Web Framework > BI** and go to **Admin** tab.
 
    ![img](images/bi_admin.PNG)
 
-7. Go to **Data > Sources > Fabric-Local**, click the ![img](images/eye.PNG) icon to see the Connection String and update the URLS to your computer's IP. 
+8. Go to **Data > Sources > Fabric-Local**, click the ![img](images/eye.PNG) icon to see the Connection String and update the URLS to your computer's IP. 
 
    ![img](images/fabric_local.PNG)
 
