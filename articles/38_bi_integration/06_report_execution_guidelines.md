@@ -54,9 +54,13 @@ Set the job parameters as follows:
 * The following are optional **ARGS**:
 
   * **DATA_SOURCES_LIST** (optional) - array of the Fabric interface names that should correspond with the report's data sources defined for this report. The **DATA_SOURCES_LIST** should only be sent when you need the report to use the connection details different from the connection details defined in the BI Admin.
-  * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation (whose value is set using the session parameters). Only the **FilterText** (the value of the filter) is required, the other attributes are optional. The **FilterText** should include a data object and a column to filter on.
-  * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation.  The fields **EntityName** and **ColumnName** (data object and column to sort on) are required.
 
+  * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation (whose value is set using the session parameters). The filter parameters are sent as a JSON object. Only the **FilterText** and the **Values** parameters are required. The **FilterText** should include a data object and a column to filter on. **Operator** is set to 0 (EqualTo) by default.
+
+  * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation. The sort parameters are sent as a JSON object. The fields **EntityName** and **ColumnName** (data object and column to sort on) are required. The **AscendingFlag** is optional and set to false by default.
+
+
+    [Click to get more information about the GetExecute REST API and the valid values of the data types of Filter and Sort structures.](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/).
 
 **Example of GENERATE_BI Job with Session Parameter and Data Sources**
 
@@ -66,19 +70,17 @@ startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPU
 
 Note that **SESSION_PARAMS** is a mandatory parameter for all reports based on Fabric LU data. Such reports require at least one session parameter definition - to pass the IID of the LU's root table to perform GET INSTANCE command. When the report is based on PostgreSQL or Oracle data source, sending **SESSION_PARAMS** is optional.
 
-**Example of GENERATE_BI Job with Filter** 
+**Example of GENERATE_BI Job with a run-time filter** 
 
 ~~~bash
 startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe_7_NOV_TEST", "TYPE":"csv", "DESTINATION":"LocalListener", "FILTER":"{\"FilterText\":\"TASK_EXECUTION_ENTITIES_9.LU_NAME\", \"Values\":[\"Billing\"] }" }';
 ~~~
 
-**Example of GENERATE_BI Job with Sort** 
+**Example of GENERATE_BI Job with a run-time sort** 
 
 ~~~bash
-startjob generate_bi name='test_designer/mig_rep' ARGS='{"OUTPUT_NAME":"mig_rep_sorted","DESTINATION":"LocalListener","TYPE":"csv","SORT":"{\"EntityName\":\"mig_summary_recon_8\",\"ColumnName\":\"bo_name\"}"}';
+startjob GENERATE_BI name='ForReporting/Load/TDM_3_4_TEST' ARGS='{"OUTPUT_NAME":"TDM_10_NOV_TEST", "TYPE":"csv", "DESTINATION":"localFileSystem", "SORT":"{\"EntityName\":\"TASK_EXECUTION_ENTITIES_9\",\"ColumnName\":\"TARGET_ENTITY_ID\", \"AscendingFlag\":true}" }';
 ~~~
-
-[Click to get more information about the Fabric BI (ExagoBI) GetExecute REST API](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/).
 
 ### Reports Generation Using Deep Link
 
