@@ -60,7 +60,7 @@ B. Run **createSeqFlowsOnlyFromTemplates.flow** from the Shared Objects Scriptsf
 
 #### Populate the Sequence Mapping Table to Add the Sequence Actors to the Load Flows
 
-Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into different table and different LU.
+The **TDMSeqSrc2TrgMapping** table has been added in tdm 7.3 to automatically add the sequence actors to the load flows. Populate **TDMSeqSrc2TrgMapping** table to map between the generated sequence actors and the target tables' columns. A sequence actor can be mapped into different table and different LU.
 
 See example:
 
