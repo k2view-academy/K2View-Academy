@@ -75,6 +75,8 @@ The [task execution process] executes the [BATCH command](/articles/20_jobs_and_
 
 Unlike for LUs, post-execution processes are optional. A BE can be defined without any post-execution processes.
 
+Note that the post execution processes must be populated in [trnPostProcessList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnpostprocesslist) to be displayed by the BE window.
+
 #### How Do I Add a Post-Execution Process to a BE? 
 
 1. Open the **Post Execution Processes** tab and click **Add Post Execution Processes** to open the **Post Execution Process** dialog box.  
