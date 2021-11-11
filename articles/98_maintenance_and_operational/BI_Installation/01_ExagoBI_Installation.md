@@ -33,8 +33,6 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
 
-5. Restart the Apache web server.
-
 6. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
    ​
