@@ -40,7 +40,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 Note that if you are already using the demo project from the previous version, you need to download the project export file again and import it, then also download the DB files and copy them to the predefined location.
 
-1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
+1. Install the docker image as explained [here](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md#docker-installation-on-linux--windows--mac).
 
 2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer and extract it. The file contains the following:
 
