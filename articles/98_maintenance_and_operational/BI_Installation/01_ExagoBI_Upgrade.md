@@ -50,7 +50,7 @@ where **exago** is the docker name (you can define a different name if needed).
 
 5. Start the Docker image as follows:
    ~~~bash
-   docker run -d --privileged=true -p 80:80 -p 443:443 --name=exago k2view/exago_ssl:v2021.1.11.220
+   docker run -d -ti --privileged=true --name=exago -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 80:80 k2view/nossl-exagobi:2021.1.14
    ~~~
 
 6. Restore the backed up configuration XML file.
