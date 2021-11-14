@@ -4,7 +4,7 @@
 
 These pre-requisites are for a development, training, demo, or a small Proof-of-Concept installation. You can use one of the following environments:  
 
-- **Docker CE/EE** over **CentOs/RedHat 7.7** or higher 
+- **Docker CE/EE** over **CentOs/RedHat 7.9** or higher 
    or 
 - **Docker-Desktop** for Windows or Mac 
 
@@ -12,7 +12,7 @@ More detailed requiremenets for each are described below:
 
 #### Docker over CentOs/RedHat
 
-1. CentOS/RedHat 7.7 (or higher) Operating System with latest patches, for each: 
+1. CentOS/RedHat 7.9 (or higher) Operating System with latest patches, for each: 
 
    - Modern Xeon Processor. 
    - 8 Physical Cores. 
@@ -69,11 +69,11 @@ More detailed requiremenets for each are described below:
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>fabric </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.2/Server/fabric-6.5.2_73/D_k2view_fabric_6.5.2_73.tar.gz</td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.3/Server/fabric-6.5.3_100/D_k2view_fabric_6.5.3_100.tar.gz</td>
    </tr>
    <tr>
    <td style="width: 50%; height: 18px;"><strong>docker-compose </strong></td>
-   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.2/Server/fabric-6.5.2_73/compose_fabric_6.5.2_73.zip</td>
+   <td style="width: 50%; height: 18px;">https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.3/Server/fabric-6.5.3_100/compose_fabric_6.5.3_100.zip</td>
    </tr>
    </tbody>
    </table>
@@ -84,8 +84,8 @@ More detailed requiremenets for each are described below:
    cd ~/ 
    wget https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/cassandra/3.11.6/openjdk/D_k2v_cassandra_3.11.6_2.tar.gz  
    wget https://owncloud-bkp2.s3.amazonaws.com/adminoc/fabricint/kafka/5.5.1/D_k2view_kafka_5.5.1_2.tar.gz  
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.2/Server/fabric-6.5.2_73/D_k2view_fabric_6.5.2_73.tar.gz
-   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.2/Server/fabric-6.5.2_73/compose_fabric_6.5.2_73.zip
+   wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.3/Server/fabric-6.5.3_100/D_k2view_fabric_6.5.3.100.tar.gz
+   wget hhttps://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.3/Server/fabric-6.5.3_100/compose_fabric_6.5.3_100.zip
    ~~~
 
    
@@ -94,7 +94,7 @@ More detailed requiremenets for each are described below:
    ~~~bash
     docker load -i D_k2v_cassandra_3.11.6_2.tar.gz 
     docker load -i D_k2view_kafka_5.5.1_2.tar.gz 
-    docker load -i D_k2view_fabric_6.5.2_73.tar.gz 
+    docker load -i D_k2view_fabric_6.5.3_100.tar.gz 
    ~~~
    
    You can see the images names by using the command `docker image`  
@@ -102,7 +102,7 @@ More detailed requiremenets for each are described below:
 5. UNZIP the Config archives as follows: 
 
    ```bash
-   unzip compose_fabric_6.5.2_73.zip 
+   unzip compose_fabric_6.5.3_100.zip 
    ```
    Note: open the “.env” file and update the names of the images as needed 
 
@@ -112,7 +112,7 @@ More detailed requiremenets for each are described below:
 1. Run docker-compose as follows:
 
    ~~~bash
-   cd compose_fabric_6.5.2_73
+   cd compose_fabric_6.5.3_100
    # run:  
    docker-compose up -d 
    
@@ -143,8 +143,8 @@ More detailed requiremenets for each are described below:
       cp -r fabric/config.template config && \ 
       sed -i 's@#HOSTS=.*@HOSTS=172.29.0.116@'  $K2_HOME/config/config.ini &&    \ 
       sed -i 's@#USER=cassandra@USER=cassandra@'  $K2_HOME/config/config.ini   && \ 
-      sed -i 's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0. 115:9093@'  $K2_HOME/config/config.ini && \ 
-      sed -i  's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0.   115:9093@'  $K2_HOME/config/iifConfig.ini && \ 
+      sed -i 's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0.115:9093@'  $K2_HOME/config/config.ini && \ 
+      sed -i  's@#BOOTSTRAP_SERVERS=localhost:9093@BOOTSTRAP_SERVERS=172.29.0.115:9093@'  $K2_HOME/config/iifConfig.ini && \ 
       k2fabric start && k2fabric cluster-status && exit
       ~~~
 
@@ -154,7 +154,7 @@ More detailed requiremenets for each are described below:
 1.	To stop the Docker-Compose, do the following:  
 
       ~~~bash
-      cd compose_fabric_6.5.2_73 
+      cd compose_fabric_6.5.3_100 
       #run: 
       docker-compose stop
       ~~~
