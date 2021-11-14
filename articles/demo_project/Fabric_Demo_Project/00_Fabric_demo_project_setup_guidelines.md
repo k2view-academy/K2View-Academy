@@ -4,11 +4,11 @@ The Fabric Knowledge Base project includes a set of Logical Units, code examples
 
 Starting from Fabric 6.5.3, the demo project also includes a sample BI implementation. 
 
-Follow the below steps to setup the demo project on your local Fabric.
+Follow the steps below to set up the demo project on your local Fabric.
 
 ## Setup Steps
 
-To setup the project and connect the databases, do the following:
+To set up the project and connect the databases, do the following:
 
 1. Open the Fabric Studio and create a new project.
 
@@ -16,14 +16,16 @@ To setup the project and connect the databases, do the following:
 
     ![image](images/demo_proj_01.PNG)
 
-3. Download the [BILLING_DB.db](Demo_sources/billing_db.db), [CRM_DB.db](Demo_sources/crm_db.db), [COLLECTION_DB.db](Demo_sources/collection_db.db) and [ORDERS_DB.db](Demo_sources/orders_db.db) files locally on your computer.
+3. Download the [BILLING_DB.db](Demo_sources/billing_db.db), [CRM_DB.db](Demo_sources/crm_db.db), [COLLECTION_DB.db](Demo_sources/collection_db.db) and [ORDERS_DB.db](Demo_sources/orders_db.db) files locally on your computer. Note the location where you placed these files. 
 
 4. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB Interfaces, as follows:
     - Open the Interfaces from the Project tree.
 
       ![image](images/demo_proj_02.PNG)
+      
+5. Double-click on the database file to be edited.
 
-    - Edit the **Database** field, setting the location of the *.db file to the local directory.
+    - Edit the **Database** field, setting the location of the *.db file to the location where you placed these files.
 
       ![image](images/demo_proj_03.PNG)
 
