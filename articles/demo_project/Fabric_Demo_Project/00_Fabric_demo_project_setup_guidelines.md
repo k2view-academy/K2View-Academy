@@ -40,7 +40,7 @@ To setup the BI and generate the example reports and dashboards using the demo p
 
 Note that if you are already using the demo project from the previous version, you need to download the project export file again and import it, then also download the DB files and copy them to the predefined location.
 
-1. Install the docker image as explained [here](/articles/38_bi_integration/01_Installation.md).
+1. Install the docker image as explained [here](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md#docker-installation-on-linux--windows--mac).
 
 2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer and extract it. The file contains the following:
 
@@ -82,7 +82,7 @@ Note that if you are already using the demo project from the previous version, y
 
    * Then go to **FabricHome/config** and open the **config.ini**.
 
-   * In the project's config.ini make sure that the **BI_HOST** parameter of the **[bi]** section is set to **localhost**, the Storage Management DB is pointing to the default SQLite DB and the **TABLE_PREFIX** is empty.
+   * In the project's config.ini set the **BI_HOST** parameter of the **[bi]** section to **localhost** and keep the Storage Management DB pointing to the default SQLite DB with empty **TABLE_PREFIX**.
 
 5. Deploy the project including the reference sync. 
 
@@ -101,13 +101,13 @@ Note that if you are already using the demo project from the previous version, y
 
 1. Switch to the **Designer** tab of the **BI** and open the **Demo Proj** folder. The folder includes a dashboard called **Dashbrd-v0** and a list of reports which construct this dashboard.
 
-2. Double click to open the dashboard in Edit mode or click the ![img](images/play.PNG) icon to generate the dashboard with the data. 
-
-3. The generated dashboard is built using a data of a customer_id = 118 from the Customer LU of the demo project. 
+2. Click the ![img](images/play.PNG) icon to generate the dashboard with the data. 
 
    ![img](images/dashboard.PNG)
 
-4. To see the data of another customer, go to **Admin** tab and open **Data > Parameters > customer_id**, set another value and click **Apply** to save your changes. Then return to the **Designer** tab, open the dashboard and play it.
+3. The generated dashboard is built using a data of a customer_id=118 from the Customer LU of the demo project. Customer ID is set using a session parameter **customer_id**.
+
+4. To see the data of another customer, go to **Admin** tab and open **Data > Parameters > customer_id**, set another value and click **Apply** to save your changes. Then return to the **Designer** tab and run the dashboard.
 
 
    [For more information about the Fabric's BI solution click to open the complete BI user guide](/articles/38_bi_integration/README.md).
