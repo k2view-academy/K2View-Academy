@@ -1,4 +1,4 @@
-# ExagoBI Installation
+# Fabric BI Installation on Linux
 
 ## Introduction
 
@@ -33,7 +33,7 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
 
-6. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
+5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
    ​
 
@@ -73,24 +73,3 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 </tbody>
 </table>
 
-## Docker Installation on Linux / Windows / MAC
-
-1. Download the Docker image (D_K2V_EXAGOBI_NOSSL_v2021.1.14.tar.gz) from [here](https://download.k2view.com/index.php/s/XwlG4hQKGTdLMBI)
-   and additinal script from [here](https://download.k2view.com/index.php/s/STdJj1yL9C7rBWX).
-
-2. Import the image using the following command:
-
-   ~~~bash
-   docker load -i D_K2V_EXAGOBI_NOSSL_v2021.1.14.tar.gz
-   ~~~
-
-3. Start the Docker image as follows:
-   ~~~bash
-   docker run -d -ti --privileged=true --name=exago -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 80:80 k2view/nossl-exagobi:2021.1.14
-   ~~~
-  
-   where **exago** is the docker name (you can define a different name if needed).
-
-4. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
-
-**Note**: if it is needed to connect to an existing network, use the "--network='network name' " option. 
