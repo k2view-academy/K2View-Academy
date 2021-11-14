@@ -25,3 +25,41 @@ The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is ess
 4. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
 **Note**: if it is needed to connect to an existing network, use the "--network='network name' " option. 
+
+
+
+**Directory Locations**
+
+<table style="border-collapse: collapse; width: 100%;">
+<tbody>
+<tr>
+<td style="width: 50%; height: 18px;">Application Binaries</td>
+<td style="width: 50%; height: 18px;">/opt/apps/exago/bin</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">API for Exago Web Service</td>
+
+<td style="width: 50%; height: 18px;">/opt/apps/exago/WebServiceApi</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">3rd Party’s Utilities</td>
+
+<td style="width: 50%; height: 18px;">/opt/apps/exago/Utilities</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">3rd Party’s Drivers</td>
+
+<td style="width: 50%; height: 18px;">/opt/apps/exago/Drivers</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">Personalization Configuration</td>
+
+<td style="width: 50%; height: 18px;">/opt/apps/exago/Config</td>
+</tr>
+<tr>
+<td style="width: 50%; height: 18px;">Exago Report Scheduler</td>
+<td style="width: 50%; height: 18px;">/opt/apps/exago/Scheduler</td>
+</tr>
+</tbody>
+</table>
+
