@@ -1,4 +1,4 @@
-# Fabric BI Installation
+# Fabric BI Installation on Linux
 
 ## Introduction
 
