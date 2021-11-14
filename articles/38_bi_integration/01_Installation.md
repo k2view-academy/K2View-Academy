@@ -8,7 +8,9 @@ The installation and configuration of Fabric's BI includes the following steps:
 
 ### Installation
 
-* Install **the latest available Exago version** using the [ExagoBI Installation document](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md).
+* Install the **BI server** using one of the following installation packages:
+  * [Installation on Linux](/articles/98_maintenance_and_operational/BI_Installation/01_BI_Installation_on_Linux.md).
+  * [Docker installation](/articles/98_maintenance_and_operational/BI_Installation/02_BI_Docker_Installation.md).
 * Install the **Storage Management DB** - the database that keeps the report definition, which includes the report type and metadata, currency, decimal setting, fonts, colors and more. The following types are supported:
   * **SQLite** (default), doesn't require an installation since it comes with the ExagoBI installation.
   * **PostgreSQL**, must be installed.

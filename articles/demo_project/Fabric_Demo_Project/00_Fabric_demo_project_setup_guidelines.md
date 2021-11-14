@@ -19,11 +19,10 @@ To set up the project and connect the databases, do the following:
 3. Download the [BILLING_DB.db](Demo_sources/billing_db.db), [CRM_DB.db](Demo_sources/crm_db.db), [COLLECTION_DB.db](Demo_sources/collection_db.db) and [ORDERS_DB.db](Demo_sources/orders_db.db) files locally on your computer. Note the location where you placed these files. 
 
 4. Edit the CRM_DB, BILLING_DB, COLLECTION_DB and ORDERS_DB Interfaces, as follows:
-    - Open the Interfaces from the Project tree.
+    - Double-click to open the Interfaces from the Project tree.
 
       ![image](images/demo_proj_02.PNG)
-      
-5. Double-click on the database file to be edited.
+
 
     - Edit the **Database** field, setting the location of the *.db file to the location where you placed these files.
 
@@ -36,14 +35,14 @@ To set up the project and connect the databases, do the following:
     [Click for more information about DB Connection Settings](/articles/05_DB_interfaces/03_DB_interfaces_overview.md).
 
 
+
 ## BI Configuration and Setup (V6.5.3)
 
 To set up the BI and generate the example reports and dashboards using the demo project, carry out the following steps.
 
-*Note that if you are already using the demo project from a previous version, you need to download the project export file again and import it, 
-then also download the DB files and copy them to the predefined location.*
+Note that if you are already using the demo project from a previous version, you need to download the project export file again and import it, then also download the DB files and copy them to the predefined location.
 
-1. Install the docker image as explained [here](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md#docker-installation-on-linux--windows--mac).
+1. Install the docker image as explained [here](/articles/98_maintenance_and_operational/BI_Installation/02_BI_Docker_Installation.md).
 
 2. Download the [Demo_BI.zip](Demo_BI.zip) file locally on your computer and extract it. The file contains the following:
 
@@ -75,7 +74,12 @@ then also download the DB files and copy them to the predefined location.*
      14:39:31 INFO  - No Orphan Records Located
      ~~~
 
-   c) Complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker.
+   c) Complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker:
+
+   ~~~bash
+   > chown apache:apache WebReports.xml
+   > systemctl restart httpd
+   ~~~
 
 4. Open the Demo Project in the Fabric Studio and open the project's config.ini as follows:
 
@@ -85,7 +89,7 @@ then also download the DB files and copy them to the predefined location.*
 
    b) Go to **FabricHome/config** and open the **config.ini**.
 
-   c) In the project's config.ini set the **BI_HOST** parameter of the **[bi]** section to **localhost** and keep the Storage Management DB pointing to the default SQLite DB with empty **TABLE_PREFIX**.
+   c) In the project's **config.ini** set the **BI_HOST** parameter of the **[bi]** section to **localhost** and keep the Storage Management DB pointing to the default SQLite DB with empty **TABLE_PREFIX**.
 
 5. Deploy the project including the reference sync. 
 
