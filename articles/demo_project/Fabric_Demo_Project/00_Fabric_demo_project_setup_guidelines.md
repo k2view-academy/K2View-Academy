@@ -27,7 +27,7 @@ To set up the project and connect the databases, do the following:
 
     - Edit the **Database** field, setting the location of the *.db file to the location where you placed these files.
 
-      ![image](images/demo_proj_03.PNG)
+      ![image](images/demo_proj_03.png)
 
     - Test the connection by clicking on Test Connection String link. 
 
@@ -38,9 +38,10 @@ To set up the project and connect the databases, do the following:
 
 ## BI Configuration and Setup (V6.5.3)
 
-To setup the BI and generate the example reports and dashboards using the demo project, do the following steps.
+To set up the BI and generate the example reports and dashboards using the demo project, carry out the following steps.
 
-Note that if you are already using the demo project from the previous version, you need to download the project export file again and import it, then also download the DB files and copy them to the predefined location.
+*Note that if you are already using the demo project from a previous version, you need to download the project export file again and import it, 
+then also download the DB files and copy them to the predefined location.*
 
 1. Install the docker image as explained [here](/articles/98_maintenance_and_operational/BI_Installation/01_ExagoBI_Installation.md#docker-installation-on-linux--windows--mac).
 
@@ -54,7 +55,7 @@ Note that if you are already using the demo project from the previous version, y
 
    <!--TBD - run the script that will update your docker image with the Demo Project BI example.-->
 
-   * Copy the files into the docker using the following commands, where **exago** is a docker name. You can do it using the Windows PowerShell or another Command line program.
+   a) Copy the files into the docker using the following commands, where **exago** is a docker name. You can do it using the Windows PowerShell or another Command line program.
 
      ~~~bash
      > docker cp C:\<path to the file>\WebReports.xml exago:/opt/apps/exago/Config
@@ -62,7 +63,7 @@ Note that if you are already using the demo project from the previous version, y
      > docker cp C:\<path to the file>\reports.json exago:/opt/apps/exago/bin/
      ~~~
 
-   * Then open the docker CLI and run the following commands to import the Demo BI dashboards and repots definition into your docker image:
+   b) Open the docker CLI and run the following commands to import the Demo BI dashboards and reports definition into your docker image:
 
      ~~~bash
      > cd /opt/apps/exago/bin
@@ -74,25 +75,25 @@ Note that if you are already using the demo project from the previous version, y
      14:39:31 INFO  - No Orphan Records Located
      ~~~
 
-   * Now, complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker.
+   c) Complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker.
 
 4. Open the Demo Project in the Fabric Studio and open the project's config.ini as follows:
 
-   * Right click on the Project and click **Open Folder**:
+   a) Right click on the Project and click **Open Folder**:
 
      ![img](images/open_folder.PNG)
 
-   * Then go to **FabricHome/config** and open the **config.ini**.
+   b) Go to **FabricHome/config** and open the **config.ini**.
 
-   * In the project's config.ini set the **BI_HOST** parameter of the **[bi]** section to **localhost** and keep the Storage Management DB pointing to the default SQLite DB with empty **TABLE_PREFIX**.
+   c) In the project's config.ini set the **BI_HOST** parameter of the **[bi]** section to **localhost** and keep the Storage Management DB pointing to the default SQLite DB with empty **TABLE_PREFIX**.
 
 5. Deploy the project including the reference sync. 
 
-6. Click the ![img](images/web_fr.PNG) icon to login to the **Web Framework > BI** and go to **Admin** tab.
+6. Click the ![img](images/web_fr.PNG) icon to log in to the **Web Framework > BI** and go to **Admin** tab.
 
    ![img](images/bi_admin.PNG)
 
-7. Go to **Data > Sources > Fabric-Local**, click the ![img](images/eye.PNG) icon to see the Connection String and update the URLS to your computer's IP. 
+7. Go to **Data > Sources > Fabric-Local**, click the ![img](images/eye.PNG) icon to see the Connection String and update the URLS to be the IP address of your computer. 
 
    ![img](images/fabric_local.PNG)
 
@@ -101,7 +102,7 @@ Note that if you are already using the demo project from the previous version, y
 
 ## How to Work with BI Demo
 
-1. Switch to the **Designer** tab of the **BI** and open the **Demo Proj** folder. The folder includes a dashboard called **Dashbrd-v0** and a list of reports which construct this dashboard.
+1. Switch to the **Designer** tab of the **BI** and open the **Demo Proj** folder. The folder includes a dashboard called **Dashbrd-v0** and a list of reports which comprise this dashboard.
 
 2. Click the ![img](images/play.PNG) icon to generate the dashboard with the data. 
 
