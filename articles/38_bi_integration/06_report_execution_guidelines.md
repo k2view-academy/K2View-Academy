@@ -39,7 +39,7 @@ Set the job parameters as follows:
 
 * Use the **GENERATE_BI** as the job type.
 
-* Set the **NAME** to be the full path from the root folder to the report. In the below example, the NAME is 'FABRIC_QA/TDM Load/Reports/Load_test_1'.
+* Set the **NAME** to be the full path from the root folder to the report. In the below example, the NAME is 'Public/Reports/Subsc_List'.
 
   ![img](images/report_exe_1.PNG)
 
@@ -64,7 +64,7 @@ Set the job parameters as follows:
 **Example of GENERATE_BI Job with Session Parameter**
 
 ~~~bash
-startjob GENERATE_BI NAME='FABRIC_QA/TDM Load/Reports/Load_test_1' ARGS='{"OUTPUT_NAME":" Load_test_TaskID_12345_ExecutionDate_20212309", "TYPE":"csv", "DESTINATION":"MyLocalFS", , "SESSION_PARAMS": "[{\"Id\":\"TASK_EXECUTION_ID\", \"Value\":\"600\" }]"}';
+startjob GENERATE_BI NAME='Public/Reports/Subsc_List' ARGS='{"OUTPUT_NAME":" Subscribers_list_20211101_v120", "TYPE":"csv", "DESTINATION":"MyLocalFS", , "SESSION_PARAMS": "[{\"Id\":\"customer_id\", \"Value\":\"120\" }]"}';
 ~~~
 
 Note that **SESSION_PARAMS** is a mandatory parameter for all reports based on Fabric LU data. Such reports require at least one session parameter definition - to pass the IID of the LU's root table to perform GET INSTANCE command. When the report is based on PostgreSQL or Oracle data source, sending **SESSION_PARAMS** is optional.
@@ -72,13 +72,13 @@ Note that **SESSION_PARAMS** is a mandatory parameter for all reports based on F
 **Example of GENERATE_BI Job with a run-time filter** 
 
 ~~~bash
-startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe_7_NOV_TEST", "TYPE":"csv", "DESTINATION":"LocalListener", "FILTER":"{\"FilterText\":\"TASK_EXECUTION_ENTITIES_9.LU_NAME\", \"Values\":[\"Billing\"] }" }';
+startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe_20211101", "TYPE":"csv", "DESTINATION":"LocalListener", "FILTER":"{\"FilterText\":\"TASK_EXECUTION_ENTITIES_9.LU_NAME\", \"Values\":[\"Billing\"] }" }';
 ~~~
 
 **Example of GENERATE_BI Job with a run-time sort** 
 
 ~~~bash
-startjob GENERATE_BI name='ForReporting/Load/TDM_3_4_TEST' ARGS='{"OUTPUT_NAME":"TDM_10_NOV_TEST", "TYPE":"csv", "DESTINATION":"localFileSystem", "SORT":"{\"EntityName\":\"TASK_EXECUTION_ENTITIES_9\",\"ColumnName\":\"TARGET_ENTITY_ID\", \"AscendingFlag\":true}" }';
+startjob GENERATE_BI name='ForReporting/Load/TDM_3_4_TEST' ARGS='{"OUTPUT_NAME":"TDM_20211101", "TYPE":"csv", "DESTINATION":"localFileSystem", "SORT":"{\"EntityName\":\"TASK_EXECUTION_ENTITIES_9\",\"ColumnName\":\"TARGET_ENTITY_ID\", \"AscendingFlag\":true}" }';
 ~~~
 
 ### Reports Generation Using Deep Link
