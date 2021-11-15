@@ -56,7 +56,7 @@ Note that if you are already using the demo project from a previous version, you
 
    a) Copy the files into the docker using the following commands, where **exago** is a docker name. You can do it using the Windows PowerShell or another Command line program.
 
-     ~~~bash
+     ~~~
    > docker cp C:\<path to the file>\WebReports.xml exago:/opt/apps/exago/Config
    > docker cp C:\<path to the file>\Json\ exago:/opt/apps/exago/bin/
    > docker cp C:\<path to the file>\reports.json exago:/opt/apps/exago/bin/
@@ -64,7 +64,7 @@ Note that if you are already using the demo project from a previous version, you
 
    b) Open the docker CLI and run the following commands to import the Demo BI dashboards and reports definition into your docker image:
 
-     ~~~bash
+     ~~~
    > cd /opt/apps/exago/bin
    > mono ImportExportStorageMgmt.exe -f ./reports.json -I
      14:39:30 INFO  - ExportStorageMgmt -f ./reports.json -I

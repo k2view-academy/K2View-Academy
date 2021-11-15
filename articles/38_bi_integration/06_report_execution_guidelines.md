@@ -31,7 +31,7 @@ For example, you can define the report behavior when there is no qualified data 
 
 Generate the report using the [STARTJOB command](/articles/20_jobs_and_batch_services/07_jobs_commands.md) using the following syntax:
 
-~~~bash
+~~~
 startjob GENERATE_BI NAME='<name>' [UID='<uid>'] [AFFINITY='<affinity>'] <ARGS='<args>'> [EXEC_INTERVAL='<execInterval>'];
 ~~~
 
@@ -63,7 +63,7 @@ Set the job parameters as follows:
 
 **Example of GENERATE_BI Job with Session Parameter**
 
-~~~bash
+~~~
 startjob GENERATE_BI NAME='Public/Reports/Subsc_List' ARGS='{"OUTPUT_NAME":" Subscribers_list_20211101_v120", "TYPE":"csv", "DESTINATION":"MyLocalFS", , "SESSION_PARAMS": "[{\"Id\":\"customer_id\", \"Value\":\"120\" }]"}';
 ~~~
 
@@ -71,13 +71,13 @@ Note that **SESSION_PARAMS** is a mandatory parameter for all reports based on F
 
 **Example of GENERATE_BI Job with a run-time filter** 
 
-~~~bash
+~~~
 startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe_20211101", "TYPE":"csv", "DESTINATION":"LocalListener", "FILTER":"{\"FilterText\":\"TASK_EXECUTION_ENTITIES_9.LU_NAME\", \"Values\":[\"Billing\"] }" }';
 ~~~
 
 **Example of GENERATE_BI Job with a run-time sort** 
 
-~~~bash
+~~~
 startjob GENERATE_BI name='ForReporting/Load/TDM_3_4_TEST' ARGS='{"OUTPUT_NAME":"TDM_20211101", "TYPE":"csv", "DESTINATION":"localFileSystem", "SORT":"{\"EntityName\":\"TASK_EXECUTION_ENTITIES_9\",\"ColumnName\":\"TARGET_ENTITY_ID\", \"AscendingFlag\":true}" }';
 ~~~
 
