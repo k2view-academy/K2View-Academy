@@ -293,8 +293,8 @@
 	],
 	"KB": [
 		{
-			"KB display name": "RN, Installation and Upgrade",
-			"KB display text": "The release notes including the latest release features & fixes, release installation instructions and the upgrade procedure documents.",
+			"KB display name": "Release Notes and Upgrade",
+			"KB display text": "The release notes including the latest release features & fixes, and the upgrade procedure documents.",
 			"KB icon": "images/icon-release.png",
 			"visible": true
 		},
@@ -306,7 +306,7 @@
 		},
 		{
 			"KB display name": "Maintenance & Operational",
-			"KB display text": "Fabric Infrastructure configuration and maintenance documents including hardware, software, and operating system requirements.",
+			"KB display text": "Fabric Infrastructure installation, configuration and maintenance documents including hardware, software, and operating system requirements.",
 			"KB icon": "images/icon-maintenance.png",
 			"visible": true
 		},
