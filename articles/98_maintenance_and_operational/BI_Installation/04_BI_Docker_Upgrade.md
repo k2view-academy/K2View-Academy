@@ -17,17 +17,17 @@ where **exago** is the docker name (you can define a different name if needed).
 
 2. Stop & delete the existing container.
 
-3. Download the updated Docker image (TBD) from [here](https://TBD).
+3. Download the updated Docker image (D_K2V_BI_v2021.1.14.tar.gz) from [here](https://download.k2view.com/index.php/s/9eUCeEMeiGFvoYA).
 
 4. Import the image using the following command:
 
    ~~~bash
-   docker load -i D_K2V_EXAGOBI_SSL_vTBD.tar.gz
+   docker load -i D_K2V_BI_v2021.1.14.tar.gz
    ~~~
 
 5. Start the Docker image as follows:
    ~~~bash
-   docker run -d -ti --privileged=true --name=exago -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 80:80 k2view/nossl-exagobi:2021.1.14
+   docker run -dt -e container=docker --name=exago -p 80:80 --cap-add SYS_ADMIN k2view/exagobi:v2021.1.14 bash -c 'mount -oremount,rw /sys/fs/cgroup; mkdir /sys/fs/cgroup/systemd; mount -oremount,ro /sys/fs/cgroup; exec /usr/sbin/init'
    ~~~
 
 6. Restore the backed up configuration XML file.

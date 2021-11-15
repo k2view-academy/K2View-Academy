@@ -1,4 +1,4 @@
-## FABRIC v6.5.3_100 DOCKER INSTALLATION 
+## FABRIC v6.5.2_73 DOCKER INSTALLATION 
 
 ### PREREQUISITES 
 
@@ -8,7 +8,7 @@ These pre-requisites are for a development, training, demo, or a small Proof-of-
    or 
 - **Docker-Desktop** for Windows or Mac 
 
-More detailed requiremenets for each are described below: 
+More detailed requirements for each are described below.
 
 #### Docker over CentOs/RedHat
 
@@ -19,23 +19,24 @@ More detailed requiremenets for each are described below:
    - 16 GB RAM. 
    - HDD, 200GB must be available 
 
-    **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.  
+   **Note**: Minimum 10G RAM is required for running 1x Fabric, 1x Cassandra. We recommend that the Docker host be a physical server and not a virtual machine.  
 
-2.	Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ ) 
+2. Install the latest Docker CE/EE version (https://docs.docker.com/engine/install/centos/ ) 
 
-    **Note**: The /var/lib/docker should have at list 200GB of free memory
-   
-3.	Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).  
+   **Note**: The /var/lib/docker should have at list 200GB of free memory
 
-4.	Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ) 
+3. Docker-compose must also be installed (see Docker documentation online https://docs.docker.com/compose/install/ ).  
 
-5.	Assign appropriate privileges to the k2view user, and allot to this user at least 50GB of space as follows: 
+4. Enable NTP/chronyc (see https://access.redhat.com/documentation/enus/red_hat_enterprise_linux/7/html/system_administrators_guide/sect-using_chrony ) 
+
+5. Assign appropriate privileges to the k2view user, and allot to this user at least 50GB of space as follows: 
 
       ~~~bash
       ## update the k2view user home directory and password!! 
       useradd -m -d /<update the path>/k2view/ k2view passwd k2view 
       ~~~
-6. Give the k2view user privileges to run docker & docker-compose via **SUDO** 
+
+6. Give the k2view user privileges to run docker & docker-compose via **SUDO**. 
 
    <img src="../images/sudo_config.jpg" style="zoom:%;" />
 
@@ -77,7 +78,7 @@ More detailed requiremenets for each are described below:
    </tr>
    </tbody>
    </table>
-   
+
 3. Copy all files to the k2view directory as follows: 
 
    ~~~bash
@@ -88,7 +89,6 @@ More detailed requiremenets for each are described below:
    wget https://owncloud-bkp2.s3.us-east-1.amazonaws.com/adminoc/fabricint/fabric_6.5/6.5.2/Server/fabric-6.5.2_73/compose_fabric_6.5.2_73.zip
    ~~~
 
-   
 
 4. Load the Docker images as follows:
    ~~~bash
@@ -96,9 +96,9 @@ More detailed requiremenets for each are described below:
     docker load -i D_k2view_kafka_5.5.1_2.tar.gz 
     docker load -i D_k2view_fabric_6.5.2_73.tar.gz 
    ~~~
-   
+
    You can see the images names by using the command `docker image`  
-   
+
 5. UNZIP the Config archives as follows: 
 
    ```bash
@@ -115,12 +115,12 @@ More detailed requiremenets for each are described below:
    cd compose_fabric_6.5.2_73
    # run:  
    docker-compose up -d 
-   
+
    # or  
    sudo /usr/local/bin/docker-compose up -d  
    ~~~
 
-2.	Start Cassandra as follows: 
+2. Start Cassandra as follows: 
 
       ~~~bash
       docker exec -u=cassandra -it cassandra1 bash -l
@@ -128,7 +128,8 @@ More detailed requiremenets for each are described below:
       cassandra
       ~~~
 
-3.	Start Kafka as follows:  
+3. Start Kafka as follows:  
+
       ~~~bash
       docker exec -it -u=kafka kafka1 bash -l -c '$K2_HOME/kafka/bin/zookeeper-server-start -daemon $K2_HOME/kafka/zookeeper.properties' 
       sleep 3 
@@ -137,7 +138,7 @@ More detailed requiremenets for each are described below:
       docker exec -it -u=kafka kafka1 bash -l -c '~/kafka/bin/zookeeper-shell localhost:2181 <<< "ls /brokers/ids"'
       ~~~
 
-4.	Start Fabric as follows:  
+   4.Start Fabric as follows:  
       ~~~bash
       #run: docker exec -it fabric1 bash -l 
       cp -r fabric/config.template config && \ 
@@ -151,33 +152,33 @@ More detailed requiremenets for each are described below:
 
 ## Stopping Services
 
-1.	To stop the Docker-Compose, do the following:  
+1.  To stop the Docker-Compose, do the following:  
 
       ~~~bash
       cd compose_fabric_6.5.2_73 
       #run: 
       docker-compose stop
       ~~~
- 
+
 2.	To stop the Cassandra service, do the following:  
- 
+
       ~~~bah
       docker exec -u=root -it cassandra bash su - cassandra 
 
       ## stop cassandra  
       nodetool -u k2view -pw Q1w2e3r4t5 flush && kill -9 $(ps aux | grep -i $INSLATT_DIR | grep -v "pts/7" |awk {'print $2'})  
-      
+
       ## restart cassandra  
       nodetool -u k2view -pw Q1w2e3r4t5 flush && kill -9 $(ps aux | grep -i $INSLATT_DIR | grep -v "pts/7" |awk {'print $2'}) && $INSLATT_DIR/cassandra/bin/cassandra 
 
       ~~~
- 
- 
-3.	To stop or restart Fabric, do the following:  
- 
+
+
+3.  To stop or restart Fabric, do the following:  
+
       ~~~bash
       docker exec -it fabric1 bash -l  
       k2fabric stop / restart  
       ~~~
- 
- 
+
+
