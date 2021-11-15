@@ -46,7 +46,7 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_2.png) 
 
-* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the function are implemented by the **MaskingLuFunction** Actor in the same way as by the [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
+* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the shared function or LU's function are implemented by the **MaskingLuFunction** Actor in the same way as by the [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
 
   ![image](../images/99_actors_08_ex_3.png)
 
