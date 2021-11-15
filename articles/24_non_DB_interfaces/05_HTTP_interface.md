@@ -37,7 +37,7 @@ To create a new HTTP interface, do the following:
 </tr>
 <tr>
 <td>&nbsp;<strong>Authentication Type</strong></td>
-<td>Access authentication type. Default value = Basic.<br/>When selected displays additional properties that can be populated</td>
+<td>Access authentication type. Default value = Basic.<br/>When Basic is selected, the properties shown in this window are the same as shown in the figure above. If a different access authentication type is selected (Basic, Bearer, etc) different properties are shown. These differences are detailed in the section below. </td>
 </tr>
 <tr>
 <td>&nbsp;<strong>Test Connection Valid Status</strong></td>
@@ -51,7 +51,7 @@ To create a new HTTP interface, do the following:
 
 The Fabric HTTP Interface supports various standard authentication and authorization types (aka schemas) that can be used to access external protected resources. 
 
-Each Authentication Type requires specific security credentials (provided by the resource provider) that are populated by the implementer into the HTTP Interface Properties and used by Fabric to authenticate remote vendor servers.  
+Each Authentication Type (except for the **None** type) requires specific security credentials (provided by the resource provider) that are populated by the implementer into the HTTP Interface Properties and used by Fabric to authenticate remote vendor servers.  
 
 Fabric supports the following: 
 
