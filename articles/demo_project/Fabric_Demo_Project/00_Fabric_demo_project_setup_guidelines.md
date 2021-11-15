@@ -56,15 +56,15 @@ Note that if you are already using the demo project from a previous version, you
 
    a) Copy the files into the docker using the following commands, where **exago** is a docker name. You can do it using the Windows PowerShell or another Command line program.
 
-     ~~~
+   ~~~
    > docker cp C:\<path to the file>\WebReports.xml exago:/opt/apps/exago/Config
    > docker cp C:\<path to the file>\Json\ exago:/opt/apps/exago/bin/
    > docker cp C:\<path to the file>\reports.json exago:/opt/apps/exago/bin/
-     ~~~
+   ~~~
 
    b) Open the docker CLI and run the following commands to import the Demo BI dashboards and reports definition into your docker image:
 
-     ~~~
+   ~~~
    > cd /opt/apps/exago/bin
    > mono ImportExportStorageMgmt.exe -f ./reports.json -I
      14:39:30 INFO  - ExportStorageMgmt -f ./reports.json -I
@@ -72,11 +72,11 @@ Note that if you are already using the demo project from a previous version, you
      14:39:31 INFO  - Completed Loading Content Records: Inserted 46 content records, and updated 0 content records
      14:39:31 INFO  - Completed Loading Access Records: Inserted 46 access records, and updated 0 access records
      14:39:31 INFO  - No Orphan Records Located
-     ~~~
+   ~~~
 
    c) Complete the docker image update by changing the owner to WebReports.xml to be apache and restarting the docker:
 
-   ~~~bash
+   ~~~
    > chown apache:apache WebReports.xml
    > systemctl restart httpd
    ~~~
