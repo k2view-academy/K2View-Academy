@@ -46,9 +46,6 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_2.png) 
 
-* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution. Selection of the LU and the shared function or LU's function are implemented by the **MaskingLuFunction** Actor in the same way as by the [**LuFunction** Actor](/articles/19_Broadway/09_broadway_integration_with_Fabric.md#lufunction-actor).
-
-  ![image](../images/99_actors_08_ex_3.png)
 
 * Set the sequence value based on a condition, for example generate the sequence value only for some entries based on a given condition. To do so, define a [Stage Condition](../19_broadway_flow_stages.md#what-is-a-stage-condition) in the Broadway flow. 
 
@@ -64,6 +61,15 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
 * Clone the entities when required. Different sequence values are generated for each cloned entity. This functionality is supported as part of the [TDM7 implementation](/articles/TDM/tdm_implementation/02_tdm_implementation_flow.md). 
 
-  
+#### Custom Sequence Mapping
+
+Create your own function or Broadway flow to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors. Set the [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) to **enable_sequences** to use the actor for sequence (ID) replacement.
+
+**Example:** 
+* Set the sequence in a specific format, for example SQ|date(Ym)|BR[value]|[new_seq]. To do so, generate the sequence and then use the **MaskingLuFunction** Actor to mask the input value with the result of the LU function's execution:
+
+  ![image](../images/99_actors_08_ex_3.png)
+
+Click for more information about the [custom masking actors](/articles/26_fabric_security/06_data_masking.md#customized-masking-logic).
 
 [![Previous](/articles/images/Previous.png)](07_masking_and_sequence_actors.md)
