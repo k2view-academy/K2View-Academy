@@ -12,7 +12,7 @@ This capability can be used to conduct tests, implement data transformations, or
 
  The masking of sensitive data can be done either by the [LUI sync](/articles/14_sync_LU_instance/01_sync_LUI_overview.md) using the [LU Table Population Broadway Flow](/articles/07_table_population/14_table_population_based_Broadway.md) (which masks the data before it is saved into Fabric), or by using a Broadway flow to mask the LUI data before it is loaded to the target.
 
-The following diagram describes the masking process of a sensitive data using **LUI sync**:
+The following diagram describes the masking process of sensitive data using **LUI sync**:
 
 ![masking flow](images/masking_flow.png)
 
@@ -38,7 +38,7 @@ K2view enables users to create their own masking functions:
 - The **MaskingLuFunction** Broadway actor can be used to call a customized function (a shared function or an LU's function) to mask the required field.  
 - The **MaskingInnerFlow** Broadway actor can be used to call a customized Broadway flow to mask the required field.
 
-The use of **MaskingLuFunction** and **MaskingInnerFlow** actors guarantees the usage of the K2view masking mechanism including the **SHA-512 hashing** and the caching.  The user does not need to handle them by their customized function.
+The use of **MaskingLuFunction** and **MaskingInnerFlow** actors guarantees the usage of the K2view masking mechanism including **SHA-512** hashing and caching.  The user does not need to handle them by their customized function.
 
 ### Masking Actors Properties
 
@@ -57,21 +57,21 @@ The use of **MaskingLuFunction** and **MaskingInnerFlow** actors guarantees the 
   - Target Environment
   - Execution ID
 
-## K2view Masking Advantages
+## K2View Masking Advantages
 
 - Supports **cross instances consistency** based on the hashed values.
-- The original value is not used as input for creating the random masked value, other than formatting purposes.
+- The original value is not used as input for creating the random masked value, other than for formatting purposes.
 - **In memory** processing. The MicroDB is created with the masked values.
-- Using the Fabric Masking mechanism (using **SHA-512** algorithm).
-- **Multiple masking options** to enable a maximal flexibility when masking the data.
+- Uses the Fabric Masking mechanism (using **SHA-512** algorithm).
+- **Multiple masking options** enable maximal flexibility when masking the data.
 
 ## De-Anonymization (Pseudonymization)
 
-In some cases there is a business need to get the original value of the masked LUI. For example, get the mail address to contact the customer. 
+In some cases there is a business need to retrieve the original value of the masked LUI. For example, retrieve a mailing address in order to contact the customer. 
 
-There are two recommended approaches to support de-anonymization and get the original value of the masked field: 
+There are two recommended approaches to support de-anonymization and retrieve the original value of the masked field: 
 
-- Keep the source Instance ID in Fabric and use it to retrieve the original data from source system.
+- Keep the source Instance ID in Fabric and use it to retrieve the original data from the source system.
 
 - Keep the encrypted version (each Instance is encrypted separately) of the original values in *Fabric only*, in addition to the anonymized values. Limit the access to the anonymized data only. Only permitted users can access the original values.
 
