@@ -1,10 +1,8 @@
 <!--block-->
 
-<img src="images/devComm.png" style="zoom: 67%;" />
-
 ### Next DevCom Webinar is coming on December 14th!
 
-<img src="images/img1.png" style="zoom:80%;" />
+<img src="images/devComm.png" style="zoom: 67%;" />
 
 Stay tuned for the next Developer Community Webinar that will take place just before the Holidays! 
 
@@ -21,10 +19,6 @@ The third K2View Development Community Webinar took place on October 27th where 
 [Read more >](webinar_20211027/20211027_Webinar_Agenda_And_Speakers.md)
 
 <!--block-->
-
-<!--block-->
-
-
 
 ### K2View DevCom Webinar on July 12th
 
