@@ -20,12 +20,12 @@ The **MaskingSequence** Actor, which also belongs to the masking category, gener
 Common input arguments of masking Actors are:
 
 * **maskingId**, a unique masking identifier used to generate a target value. Populated by a String. To use the same masking Actor in different flows of the same project, use this parameter to refer to the same masking cache. By default, the masking's specific ID is used across different DCs.
-* **category**, this parameter has been added by Fabric 6.5.3 and indicates when the masking actor needs to generate a new value. For example, mask a sensitive data or replace the ID (sequence). The following values can be set in the category:
+* **category**, this parameter has been added by Fabric 6.5.3 and indicates when the masking actor needs to generate a new value. For example, when masking sensitive data or replacing the ID (sequence). The following values can be set in the category:
   - **enable_sequences**: generate a new ID value
-  - **enable_masking**: mask a sensitive data
+  - **enable_masking**: mask sensitive data
   - Any custom string value 
 
-   By default, the category is set to **enable_masking** on all masking actors except **MaskingSequence** actors where the category is set by default to **enable_sequences**.
+   By default, the category is set to **enable_masking** on all masking actors except for the **MaskingSequence** actor where the category is set by default to **enable_sequences**.
  
    The masking actor checks the **value of the session level key, set in the category** (enable_sequences or the enable_masking session for example):
    
@@ -34,7 +34,7 @@ Common input arguments of masking Actors are:
   
    Note that TDM implementation sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. For example,  the MaskingSequence actor generates a new ID value when the task replaces the sequences of the copied entities. Else, the original ID is returned. 
  
-* **useEnvironment**, indicates whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. This feature is applicable as of Release 6.4.1.
+* **useEnvironment**, indicates whether to separate the masked value per environment. Set to **true** to generate a new masked value in each environment. When set to **false**, the same masked value is used across all environments. 
 * **useExecutionId**, indicates whether to use the Execution ID during the flow run whereby the Execution ID is a unique string generated each time the flow is run. Set to **true** to generate a new masked value in each execution. When set to **false**, the same masked value is used across different executions.
 * **useInstanceId**, indicates whether to use the Instance ID as part of the masking cache. 
 * **hashedInputValue**, indicates whether to store the original or the hashed input value. By default the hashed value is stored. Set to **false** to disable caching and store the original value.
