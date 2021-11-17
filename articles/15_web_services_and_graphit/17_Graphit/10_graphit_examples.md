@@ -84,7 +84,7 @@ In this example, all children nodes of the CRM_DB and the BILLING_DB nodes are d
 <img src="images/09_graphit_examples_tags.PNG"></img>
 Output:
 
-<img src="images/grFormatResp.PNG"></img>
+<img src="images/grFormatResp.png"></img>
 
 #### grFunction.graphit
 This example illustrates a simple JavaScript routine that returns the highest number of the **x** random number and the **y** random number.<br></br>
