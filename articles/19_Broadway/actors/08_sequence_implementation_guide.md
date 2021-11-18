@@ -19,26 +19,26 @@ To implement the above use cases, set a unique **maskingId** and populate it on 
 The sequence next value implementation method depends on the sequence definition set by the **sequenceInterface** input argument. The following use cases are supported:
 
 * IN-MEMORY, useful for testing only since it can be used only in a single node configuration.
-* Redis or DB sequence. Getting the next value from the DB sequence is supported for Oracle, DB2 and PostgreSQL DBs. To implement the DB sequence, set the **maskingId** to hold the sequence name defined in the **sequenceInterface** DB.  
+* Redis or DB sequence. *Getting the next value from the DB sequence* is supported for Oracle, DB2 and PostgreSQL DBs. To implement the DB sequence, set the **maskingId** to hold the sequence name defined in the **sequenceInterface** DB.  
 
 ### Sequence Initiation Method
 
-Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is relevant for in-memory or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) only. In a DB sequence these attributes are managed by the DB. Note that the initial value is cached on the Actor's first execution. The following use cases are supported:
+Sequence initiation can be performed using the **initialValue** and the **increment** settings of the Actor and is relevant for in-memory or [Redis interface](/articles/24_non_DB_interfaces/09_redis_interface.md) only. In a DB sequence these attributes are managed by the DB. Note that the initial value is cached upon the Actor's first execution. The following use cases are supported:
 
 * Initialize the sequence using the constant initial value, for example 1000000.
-* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. 
+* Initialize the sequence using another Broadway flow by setting the flow name in the **initialValue** argument. The Actor invokes the flow to calculate the sequence's initial value. Note that the flow must return an external variable named **initialValue**. See the figure below: 
 
 ![image](../images/99_actors_08_ex_init.PNG)
 
 ### Sequence Mapping
 
-In Broadway sequences can be mapped in a number of ways. The following use cases are supported:
+In Broadway, sequences can be mapped in a number of ways. The following use cases are supported:
 
-* Map the old value to the new value.
+* Map the old value to the new value: 
 
   ![image](../images/99_actors_08_ex_map.PNG)
 
-* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. This feature is applicable as of Release 6.4.1.
+* When there is no old value to be mapped to the new value and the target table requires a sequence, leave the input value empty. The Actor generates a new sequence and returns it in its output. See this example: 
 
   ![image](../images/99_actors_08_ex_new.PNG)
 
@@ -46,16 +46,15 @@ In Broadway sequences can be mapped in a number of ways. The following use cases
 
   ![image](../images/99_actors_08_ex_2.png) 
 
-
-* Set the sequence value based on a condition, for example generate the sequence value only for some entries based on a given condition. To do so, define a [Stage Condition](../19_broadway_flow_stages.md#what-is-a-stage-condition) in the Broadway flow. 
+* Set the sequence value based on a condition. For example generate the sequence value only for some entries based on a given condition. To do so, define a [Stage Condition](../19_broadway_flow_stages.md#what-is-a-stage-condition) in the Broadway flow, as shown. 
 
   ![image](../images/99_actors_08_ex_5.png)
 
-* Replace the IID with a new sequence. This use case is the same as mapping the old value to the new one.
+* Replace the IID with a new sequence. This use case is the same as mapping the old value to the new one. See this example: 
 
   ![image](../images/99_actors_08_ex_6.png)
 
-* When parent-child relationships exist across Logical Units, the same sequence can exist in both the parent and children. The updated flow can be executed on the parent LU to add a child sequence. For example, the Customer LU is a parent while the Order LU is a child. After the population of both the Customer and Order LUs is completed, update the Customer LU with the sequence from the Order LU.
+* When parent-child relationships exist across Logical Units, the same sequence can exist in both the parent and children. The updated flow can be executed on the parent LU to add a child sequence. For example, if the Customer LU is a parent while the Order LU is a child. After the population of both the Customer and Order LUs is completed, update the Customer LU with the sequence from the Order LU.
 
 * Store the relationship between the old and the new sequence. To do so, create a flow that stores these values in the Cassandra **TDM_SEQ_MAPPING** table under the [k2masking keyspace](/articles/02_fabric_architecture/06_cassandra_keyspaces_for_fabric.md), for example for reporting purposes. 
 
