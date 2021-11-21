@@ -66,6 +66,12 @@ See example:
 
 ![seq mapping](images/tdmSeqSrc2TrgMapping_example.png)
 
+#### Customize the Sequence Logic
+Fabric 6.5.3 supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking actors.
+It enables to create your own function or Broadway flow to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. Set the category to **enable_sequences** to use the actor for sequence (ID) replacement. The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) set the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. The masking actors generate a new ID (sequence) if the task requires a sequence replacement and the TDM process sets the **enable_sequences** session level keys to **true**. If the task does not requir a sequence replacement, the original value is returned by the masking actors.
+
+Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
+
 ### Step 3 - Create, Load, and Delete Flows
 
 In this step you will run the generic **createFlowsFromTemplates.flow** from the Shared Objects Broadway folder to create the delete and load flows under the LU. The flow gets the following input parameters:
