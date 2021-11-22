@@ -20,7 +20,7 @@ Please read [CDC Implementation Steps](/articles/18_fabric_cdc/05_cdc_consumers_
 - Install Zookeeper and Kafka servers.
 - Start Zookeeper and Kafka servers.
 
-[Click for installation instructions](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md).  
+[Click for installation instructions](/articles/demo_project/Fabric_Demo_Project/01_local_installation_of_zookeper_kafka_and_ES.md).  
 
 ### **Exercise Steps** 
 
