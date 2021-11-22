@@ -124,7 +124,7 @@ Note that when running Kafka on a Windows server, make the following adjustments
 - The local Kafka installation runs on the default port (9092). Edit the above commands and replace port 9093 with port 9092.
 
 
-[Click for more information about local installation of Kafka and Zookeeper](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md).
+[Click for more information about local installation of Kafka and Zookeeper](/articles/demo_project/Fabric_Demo_Project/01_local_installation_of_zookeper_kafka_and_ES.md).
 
 
 
