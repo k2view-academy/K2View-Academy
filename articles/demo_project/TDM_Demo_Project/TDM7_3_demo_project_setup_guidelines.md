@@ -74,7 +74,7 @@ Note that TDM DB must be created in PostgreSQL as a part of the [TDM Installatio
 
 ## Fabric Implementation
 
-1. Open the Fabric Studio 6.5.1 and create a new project.
+1. Open the Fabric Studio and create a new project.
 2. Download the TDM Demo project export file (format **.k2export**) and import it to your project. All of the characteristics of the TDM Demo project will appear. 
 3. The interfaces and of the TDM Demo project might need some modification, edit them if needed (you might be working locally or remotely, for example).  Note that the **Server** setting must be populated by **localhost** when using local DBs or dockers for the DBs.
 4. Open the DB_CASSANDRA interface, and check if the **k2masking** keyspace exits. If it does not exist, it can be created by the TDM LU deployment (deploy.flow). 

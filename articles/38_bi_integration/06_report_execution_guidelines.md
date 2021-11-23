@@ -64,7 +64,7 @@ Set the job parameters as follows:
 **Example of GENERATE_BI Job with Session Parameter**
 
 ~~~
-startjob GENERATE_BI NAME='Public/Reports/Subsc_List' ARGS='{"OUTPUT_NAME":" Subscribers_list_20211101_v120", "TYPE":"csv", "DESTINATION":"MyLocalFS", , "SESSION_PARAMS": "[{\"Id\":\"customer_id\", \"Value\":\"120\" }]"}';
+startjob GENERATE_BI NAME='Public/Reports/Subsc_List' ARGS='{"OUTPUT_NAME":"Subscribers_list_20211101_v120", "TYPE":"csv", "DESTINATION":"MyLocalFS", "SESSION_PARAMS": "[{\"Id\":\"customer_id\", \"Value\":\"120\" }]"}';
 ~~~
 
 Note that **SESSION_PARAMS** is a mandatory parameter for all reports based on Fabric LU data. Such reports require at least one session parameter definition - to pass the IID of the LU's root table to perform GET INSTANCE command. When the report is based on PostgreSQL or Oracle data source, sending **SESSION_PARAMS** is optional.

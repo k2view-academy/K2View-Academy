@@ -255,7 +255,7 @@ Explain the purpose of this split and what changes in the LU data.
 
 Prior to starting this exercise:
 
-* Follow the installation guidelines to [install the Zookeper and Kafka locally](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md). 
+* Follow the installation guidelines to [install the Zookeeper and Kafka locally](/articles/demo_project/Fabric_Demo_Project/01_local_installation_of_zookeper_kafka_and_ES.md). 
 
 * Create a **Kafka** interface to connect to the Apache Kafka server and set the **Data Type** to **JSON**.
 
