@@ -16,7 +16,7 @@ In this exercise you will add Search fields to a Customer LU to enable the follo
 - Install Zookeeper, Kafka and Elasticsearch servers.
 - Start Zookeeper, Kafka and Elasticsearch servers.
 
-[Click to get installation instructions](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md).  
+[Click to get installation instructions](/articles/demo_project/Fabric_Demo_Project/01_local_installation_of_zookeper_kafka_and_ES.md).  
 
 ### **Exercise Steps** 
 

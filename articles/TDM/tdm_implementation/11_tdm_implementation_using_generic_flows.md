@@ -68,7 +68,11 @@ See example:
 
 #### Customize the Sequence Logic
 Fabric 6.5.3 supports sending a [category](/articles/19_Broadway/actors/07_masking_and_sequence_actors.md#how-do-i-set-masking-input-arguments) parameter to the masking actors.
-It enables to create your own function or Broadway flow to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. Set the category to **enable_sequences** to use the actor for sequence (ID) replacement. The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) set the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. The masking actors generate a new ID (sequence) if the task requires a sequence replacement and the TDM process sets the **enable_sequences** session level keys to **true**. If the task does not requir a sequence replacement, the original value is returned by the masking actors.
+This capability enables you to create your own function or Broadway flow to generate a new ID using the **MaskingLuFunction** or **MaskingInnerFlow** actors in the Sequence actor. This works as follows: 
+- Set the category to **enable_sequences** to use the actor for sequence (ID) replacement. 
+- The [TDM task execution processes](/articles/TDM/tdm_architecture/03_task_execution_processes.md) sets the **enable_masking** and **enable_sequences** session level keys to **true** or **false** based on the TDM task's attributes. 
+  - If the task requires a sequence replacement, the masking actors generate a new ID (sequence), and the TDM process sets the **enable_sequences** session level keys to **true**.
+  - If the task does not requir a sequence replacement, the original value is returned by the masking actors.
 
 Click for more information about [customizing the replace sequence logic](/articles/19_Broadway/actors/08_sequence_implementation_guide.md#custom-sequence-mapping).
 
@@ -165,12 +169,16 @@ TDM systems often handle sensitive data. To be compliant with data privacy laws,
 
 The entity list of the full entity subset can be generated using an SQL query on the source DB or running a Broadway flow. A Broadway flow is needed when running an extract on a non JDBC data source.  
 
-Build the Broadway flow to get the entity list as follows:
-
+Create a Broadway flow under the related root LU or the shared objects. It is recommended to locate the Broadway flow under the shard objects to enable running the flow on several root LUs of given Business Entity. The Broadway flow must include the following stages: 
 - Stage 1: Get the list of entities.
-- Stage 2: Call the **insertToLuExternalEntityList**  Actor (imported from the TDM library) in a loop (iteration) to insert all entities into an entity list Cassandra table. Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations. 
+- Stage 2: Call the **insertToLuExternalEntityList**  Actor (imported from the TDM library) in a loop (iteration) to insert all entities into an entity list Cassandra table:
+   - Set the input LU_NAME to be external and get its value from the task execution process.  
+   - Set a [Transaction](/articles/19_Broadway/23_transactions.md#transaction-in-iterations) in the loop to have one commit all iterations.  
+
 
 Populate the Broadway flow in the [trnMigrateList](/articles/TDM/tdm_implementation/04_fabric_tdm_library.md#trnmigratelist) translation.
+
+Redeploy the related LUs and the TDM LU.
 
 #### How does the Broadway Flow Generate an Entity List for the Task Execution? 
 

@@ -26,7 +26,7 @@ Throughout the course, we will evolve within a Telco customer management environ
 
 This work environment features sets of tables  like customers, subscribers, invoices and contracts that you are already familiar with. 
 
-To work in the course environment, please install Kafka, Zookeeper and Elasticsearch on your local working station. [Click for installation instructions](/articles/demo_project/01_local_installation_of_zookeper_kafka_and_ES.md).
+To work in the course environment, please install Kafka, Zookeeper and Elasticsearch on your local working station. [Click for installation instructions](/articles/demo_project/Fabric_Demo_Project/01_local_installation_of_zookeper_kafka_and_ES.md).
 
 The CDC and Search exercises are based on the [Fabric Demo Project](/articles/demo_project) in the K2view Academy repository.
 
