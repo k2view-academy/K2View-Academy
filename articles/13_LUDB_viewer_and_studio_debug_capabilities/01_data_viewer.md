@@ -35,7 +35,7 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
 
 6. Click the **Instance ID** to open the **Instances Tree** dropdown list.
 
-![image](images/13_01_03%20instances%20tree.jpg)
+<img src="images/13_01_03_Instances_tree.jpg" alt="drawing" width="225"/>
 
 7. Click the **Instance DB file** to display its **tables** under the **Instance DB tree**.
 
