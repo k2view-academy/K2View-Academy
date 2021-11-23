@@ -55,7 +55,7 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
 
 The Logical Unit Data Viewer has the following areas:
 * Sync Mode and Instance ID.
-* Instance Tree.
+* Instances Tree.
 * Instance DB Tree.
 * Scripting Area.
 * Results Pane and Toolbar.
@@ -79,21 +79,21 @@ Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET
 To complete this field, do either:
 * Enter a specific Instance ID value.
 * Select a previously stored Instance ID from the dropdown list.
-* Write a function to generate the Instance ID. Note that this function must return a string as an output.
+* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID . Note that this function must return a string as an output.
 
 
-For example:
+  For example:
 
 
-Instance ID by function: **fnCreateInstID** (205):
+  Create an instance ID by using the function: **fnCreateInstID**. This function takes an input value and adds 10:
 
-```java
-if (i_id!=null && !i_id.isEmpty()){
+  ```java
+  if (i_id!=null && !i_id.isEmpty()){
 	 return Integer.sum(Integer.valueOf(i_id),10)+"";
    }
-return "0";
-```
-
+  return "0";
+  ```
+  More complicated functions can be written, of course, such as generating a random instance ID, or an instance ID that complies with other criteria (such as certain values). 
 
 
 #### Play
@@ -109,10 +109,12 @@ The Instance Tree area (top left) displays a tree of available data files in the
 ### Instance DB Tree
 
 The Instance DB Tree area (bottom left) displays the Table Tree which includes: 
-* **k2_lu_object_info**, holding statistics per table, population and an Enrichment function.
-* **k2_main_info**, holding basic information about the LU like LU Name or Instance ID.
-* **k2_object_stats**, holding object timing statistics. 
-* **Reference tables under k2_Ref**. Note that these are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
+* **k2_delta_errors**, holds information on errors, including when each error occured.
+* **k2_main_info**, holds basic information about the LU like LU Name and Instance ID.
+* **k2_objects_info**, holds information for each of the objects in the selected instance.
+* **k2_transactions_info**, holds basic information about each transaction (ID and timestamp).
+
+* **Reference tables under k2_Ref**. These are only displayed as part of the Instance DB tree when the [reference object](/articles/03_logical_units/15_LU_schema_edit_reference_tab.md) is enabled in the LU schema properties.
 
 To display the values of a table in the tree, right click the table and select either:
 * **Show Data**, to display the table or view it in the Results pane.
@@ -153,6 +155,11 @@ To display the values of a table in the tree, right click the table and select e
 <p>Toggle summaries.</p>
 </td>
 </tr>
+        <td width="60"><p><img src="images/13_01_08 PANE AND TOOLBAR icon 6.png" alt="" /></p></td>
+<td width="274">
+<p>Refresh view.</p>
+</td>
+</tr>	
 </tbody>
 </table>
 
