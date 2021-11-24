@@ -13,7 +13,7 @@ Working installation of ExagoBI previous version.
 docker cp exago:/opt/apps/exago/Config/WebReports.xml /file/location/
 ~~~
 
-where **exago** is the docker name (you can define a different name if needed).
+​	where **exago** is the docker name (you can define a different name if needed).
 
 2. Stop & delete the existing container.
 
@@ -36,4 +36,4 @@ where **exago** is the docker name (you can define a different name if needed).
 docker cp /file/location/WebReports.xml exago:/opt/apps/exago/Config/
 ~~~
 
-where **exago** is the docker name (you can define a different name if needed). 
+​	where **exago** is the docker name (you can define a different name if needed). 
