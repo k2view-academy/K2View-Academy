@@ -2,7 +2,7 @@
 
 <img src="images/img13.jpg" style="zoom: 80%;" />
 
-### Next DevCom Webinar is coming on December 14th!
+### Next DevCom Webinar is coming on December 15th!
 
 Stay tuned for the next Developer Community Webinar that will take place just before the Holidays! 
 
