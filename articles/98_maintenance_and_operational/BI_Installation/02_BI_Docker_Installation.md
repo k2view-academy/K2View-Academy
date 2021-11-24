@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Fabric BI application is based on *ExagoBI*. So, installing Fabric BI is essentially installing ExagoBI. Once the application is installed, complete the configuration and implementation by following all the steps described in the [Fabric BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
+The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric BI starts from ExagoBI application installation. Once the application is installed, complete the configuration and implementation by following all the steps described in the [Fabric BI User Guide](/articles/38_bi_integration/00_BI_user_guide_overview.md).
 
 ## Docker Installation on Linux / Windows / MAC
 
