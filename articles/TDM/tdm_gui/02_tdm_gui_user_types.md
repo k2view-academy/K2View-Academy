@@ -60,14 +60,23 @@ The mapping of each Fabric role to a TDM Permission Group is done by the [Permis
 
 The TDM GUI application **identifies the user type (Permission Group) by their Fabric roles**.
 
+The following diagram describes the mapping between Fabric roles to TDM permission groups:
+
+![permission group mapping](images/TDM_permission_group_mapping_to_fabric_roles.png)
+
+
+
 **Example:**
 
-- User id **johnD123** is a tester and is attached to **testers1** and **testers2** groups.
-- User id **clarkG** is a tester and it attached to **testers1** group.
-- User id **janeR1** is a team leader and is attached to **testingTeamLeaders** group.
-- User **leo10** is the the TDM administrator and is attached to **testingAdmin** group. 
+- User id **johnD123** is a tester and is attached to **testers1** and **testers2** Fabric roles.
 
-- Each group has a Fabric role with the same name as the group.
+- User id **clarkG** is a tester and it attached to **testers1** Fabric role.
+
+- User id **janeR1** is a team leader and is attached to **testingTeamLeaders** Fabric role.
+
+- User **leo10** is the the TDM administrator and is attached to **testingAdmin** Fabric role. 
+
+- Each group has a Fabric role with the same name as the Fabric role.
 
 - The testesr1, testesr2, testingTeamLeaders, and testingAdmin Fabric roles are mapped to TDM Permission Groups as follows:
 
