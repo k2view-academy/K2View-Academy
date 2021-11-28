@@ -20,7 +20,7 @@ Actors can get their input from three different sources:
 
 ### Outputs 
 
-Output data can also be exposed (using the external parameter) as results of the flow's execution. 
+Output data can also be exposed (using the external parameter) as a result of the flow's execution. 
 
 In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, and **b** is supplied as an external input to the flow and the result is exposed as external flow result.
 
