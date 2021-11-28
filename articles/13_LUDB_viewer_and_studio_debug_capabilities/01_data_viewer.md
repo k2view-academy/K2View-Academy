@@ -238,8 +238,8 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 4. View results in the **Results pane**.
 
 ### How Do I Export a Logical Unit Data File?
-1. Go to the **Instance DB Tree** and right click the **DB File**. 
-2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file. 
+1. Go to the **Instances Tree** and right click the **DB File**. 
+2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file (LUDB format). 
 3. **Save** your changes. 
 
 ### Additional (Right Click) DB File Options
@@ -252,7 +252,7 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 The latest Data Viewer file can be used in the following components:
 
 * New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
-[Click for more information on How to Create a New Function.](/articles/07_table_population/10_creating_a_project_function.md)
+[Click for more information on How to Create a New Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
 * Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 
