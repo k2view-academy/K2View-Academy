@@ -10,7 +10,9 @@ discover and manipulate complex data types.
 Actors can get their input from three different sources:
 
 **Link:** From a previous Actor's output (by means of connecting lines between actors).
+
 **Const:** By inputing a constant value supplied by the user.
+
 **External:** By giving an input argument to the flow.
 
 When the Actor is executed, it is not be aware of its data inputs. Output arguments can also be exposed (external) as results of the flow's execution. This is what makes the data available to the module that executed the Broadway flow. 
