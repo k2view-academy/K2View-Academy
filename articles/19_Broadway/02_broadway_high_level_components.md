@@ -5,19 +5,17 @@ In the Overview we saw the main Broadway concepts that make it a unique solution
 [Stages](19_broadway_flow_stages.md) as way to model work flow, [Actors](03_broadway_actor.md) to model data flow and [data inspection](27_broadway_data_inspection.md) to
 discover and manipulate complex data types.
 
-There are a few other core capabilities that are important for a high-level of understanding of the Broadway system.
-
 ## Actor Input/Output Arguments
 
 Actors can get their input from three different sources:
 
-* The output of a previous Actor - the connecting lines between Actors.
-* A Constant value supplied by the user.
-* An input argument to the flow (external).
+**Link:** From a previous Actor's output (by means of connecting lines between actors).
+**Const:** By inputing a constant value supplied by the user.
+**External:** By giving an input argument to the flow.
 
-When the Actor executes, it is completely unaware of the source of its data. Output arguments can also be exposed (external) as results of the flow's execution. This makes the data available to the module that executed the Broadway flow. 
+When the Actor is executed, it is not be aware of its data inputs. Output arguments can also be exposed (external) as results of the flow's execution. This is what makes the data available to the module that executed the Broadway flow. 
 
-In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, **b** is supplied as an external input to the flow and the result is exposed as external flow result.
+In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, and **b** is supplied as an external input to the flow and the result is exposed as external flow result.
 
 ![image](images/input-output-args.PNG)
 
