@@ -15,7 +15,7 @@ Actors can get their input from three different sources:
 
 **External:** By giving an input argument to the flow.
 
-When the Actor is executed, it is not be aware of its data inputs. Output arguments can also be exposed (external) as results of the flow's execution. This is what makes the data available to the module that executed the Broadway flow. 
+When the Actor is executed, it is not aware of its data inputs. Output arguments can also be exposed (external) as results of the flow's execution. This is what makes the data available to the module that executed the Broadway flow. 
 
 In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, and **b** is supplied as an external input to the flow and the result is exposed as external flow result.
 
