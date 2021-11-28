@@ -7,15 +7,20 @@ discover and manipulate complex data types.
 
 ## Actor Input/Output Arguments
 
+### Inputs 
+
 Actors can get their input from three different sources:
 
-**Link:** From a previous Actor's output (by means of connecting lines between actors).
+**Link:** from a previous Actor's output (by means of connecting lines between actors).
 
-**Const:** By inputing a constant value supplied by the user.
+**Const:** by inputting a constant value supplied by the user.
 
-**External:** By giving an input argument to the flow.
+**External:** by giving an input argument to the flow.
 
-When the Actor is executed, it is not aware of its data inputs. Output arguments can also be exposed (external) as results of the flow's execution. This is what makes the data available to the module that executed the Broadway flow. 
+
+### Outputs 
+
+Output data can also be exposed (using the external parameter) as results of the flow's execution. 
 
 In the image, the JavaScript Actor obtains the **script** input as a constant input, **a** is supplied by connecting to a previous Actor, and **b** is supplied as an external input to the flow and the result is exposed as external flow result.
 
