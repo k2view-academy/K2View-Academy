@@ -38,8 +38,9 @@ In addition Broadway has a robust type conversion system that automatically conv
 
 ## Data Schema
 
-The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that leverage the known data structure.
-Broadway can learn the Schema by example. Just run the flow, and the metadata is automatically derived from the data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
+The Broadway UI uses JSON Schemas to describe the data and enable designing data flows that correspond to the known data structure.
+Broadway can learn the schema from the data format that is injected. 
+Just run the flow, and the metadata is automatically derived from the input data. If you do have available JSON Schemas, they can be easily imported and edited in the Broadway interface.
 
 <img src="images/overview_edit_schema.PNG" />
 
@@ -47,8 +48,10 @@ Broadway can learn the Schema by example. Just run the flow, and the metadata is
 
 ## Iterations
 
-A common pattern of execution is to perform an iterative operation on a data set. For instance, performing some data transformation on a database result-set or traversing a JSON array obtained from a REST API.
-The way Broadway deals with such cases is with the **Iterate** line (double dotted line below). This signals Broadway to perform the operation for every entry in the data set.
+A common usage of a flow is to perform an iterative operation on a specific data set. For instance, it can be used to transform data from a database result-set or read through a JSON array retrieved by a REST API.
+Broadway deals with such cases by using iterations which are shown with the **Iterate** line. 
+
+This signals Broadway to perform the operation for every entry in the data set.
 
 <img src="images/overview_iterate.png" >
 
@@ -56,8 +59,11 @@ The way Broadway deals with such cases is with the **Iterate** line (double dott
 
 ## Stage Conditions
 
-When Stages are split, an Actor can be designated to decide if a specific fork in the flow will be performed. The Actor can be a simple logical operator or an entire flow. Based on the result, Broadway will decide if the flow should be executed.
-The *else* fork will be executed if none of the other splits were executed.
+Stages can be executed upon a certain set of conditions. They can also be split when necessary. 
+To do so, an actor can be designated to decide if a specific stage (or a split section of the stage) in the flow, will be performed. The Actor can be a simple logical operator or an entire flow (i.e., inner flows). 
+Based on the result obtained, Broadway will decide how the flow should be continue its execution.
+
+In the case of multiple forks (such as multiple splits in the stage), the *else* fork will be executed if none of the other splits were executed.
 
 <img src="images/overview_condition.png">
 
@@ -65,20 +71,23 @@ The *else* fork will be executed if none of the other splits were executed.
 
 ## Actor Inheritance
 
-Actors have an inheritance hierarchy. This enables activities such as pinning a constant value and reusing it across multiple flows, reusing some Actor logic such as JavaScript or SQL and even overriding the Actor Java implementation and tailoring it to a specific use case.  
+Actors obey an inheritance hierarchy. This enables activities such as:
+- pinning a constant value and re-using it across multiple flows, 
+- re-using some Actor logic such as JavaScript or SQL
+- overriding the Actor Java implementation and tailoring it to a specific use case.  
 
 [Click for more information about Actor Inheritance](06_export_actor.md).
 
 ## Transactions
 
-Broadway has a built-in transaction management mechanism. Stages can be marked as part of a transaction. Any transactional resource the Actors in these Stages use, such as database or queue, automatically becomes part of a transaction. Once the Transactional Stages are complete, the transaction is committed. In case of failure the transactions will be rolled back.
-Transactions also take into account inner Broadway flows. If a Transactional Stage executes an inner Broadway flow, the flow automatically becomes part of the outer transaction.
+Broadway has a built-in transaction management mechanism. Stages can be marked for transaction. Any transactional resource needed by the Actors, such as a database or a queue, automatically becomes part of the stage's transaction. Once the Transactional Stage is completed, the transaction is committed. In case of failure, any submitted transaction will be rolled back.
+Transactions also take into account Broadway inner flows. If a Transactional Stage executes an inner flow, this inner flow is automatically considered as part of the transaction.
 
 [Click for more information about Transactions](23_transactions.md).
 
 ## Error Handling
 
-Every Stage can be assigned an error handler. The Error Handler is an Actor that can hold the logic to perform if an error occurs as well as the decision whether the flow should continue or stop on that error. The error Actor can be a simple logical check or an entire flow.
+Every Stage can be assigned with an error handling mechanism. The *ErrorHandler* Actor is used to hold the logic needed to deal with the error, as well as the decision whether the flow should continue or stop. The ErrorHandler Actor can be a simple logical statement or an entire inner flow.
 
 <img src="images/overview_error.png" >
 
