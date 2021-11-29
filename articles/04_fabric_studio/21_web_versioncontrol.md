@@ -1,4 +1,4 @@
-# Using Version Control in Web Studio
+# Using Source Control in Web Studio
 
 Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
 
