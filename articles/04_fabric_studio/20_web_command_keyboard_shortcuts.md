@@ -1,3 +1,5 @@
+<web>
+
 # Command Palette & Keyboard Shortcuts
 
 Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Find command** or use `⇧⌘P` in Mac or `F1` in Windows (or `Ctrl+Shift+P`) to bring up the **Command Palette**.
@@ -60,3 +62,4 @@ Mac & Windows ( ⌘ refers to the CMD button at Mac, stands for CTRL at Windows;
 
 
 
+</web>

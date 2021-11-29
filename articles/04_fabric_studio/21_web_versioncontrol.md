@@ -1,3 +1,4 @@
+<web>
 # Using Source Control in Web Studio
 
 Fabric Web Studio has integrated source control management (SCM) and includes [Git](https://git-scm.com/) support in-the-box. 
@@ -54,3 +55,4 @@ The Git tool supports viewing of diffs within Web Studio, showing original and c
 
 >**Tip:** You can diff any two files by first right clicking on a file in the Explorer or **OPEN EDITORS** list and selecting **Select for Compare** and then right-click on the second file to compare with and select **Compare with 'file_name_you_chose'**.   Alternatively from the keyboard hit `Ctrl+Shift+P` and select **File: Compare Active File With** and you will be presented with a list of recent files.
 
+</web>
