@@ -33,7 +33,7 @@ Note that the Data Viewer runs on the Fabric local server. Therefore you must de
   	
   	 *Instance '[LU Name]:[Instance ID]' was not found and sync is disabled.*
 
-6. Click the **Instance ID** to open the **Instances Tree** dropdown list.
+6. Double-click the **Instance ID** to open the **Instances Tree** dropdown list.
 
 <img src="images/13_01_03_Instances_tree.jpg" alt="drawing" width="225"/>
 
@@ -79,7 +79,7 @@ Set the [Sync Mode](/articles/14_sync_LU_instance/02_sync_modes.md) for the [GET
 To complete this field, do either:
 * Enter a specific Instance ID value.
 * Select a previously stored Instance ID from the dropdown list.
-* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID . Note that this function must return a string as an output.
+* Write a [project (java) function](/articles/07_table_population/08_project_functions.md) to generate the Instance ID . Note that this function must return a string as an output. Once you have created such a function, use the function name in the Instance ID field (that is, do not enter the code that comprises the function). 
 
 
   For example:
@@ -238,8 +238,8 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 4. View results in the **Results pane**.
 
 ### How Do I Export a Logical Unit Data File?
-1. Go to the **Instance DB Tree** and right click the **DB File**. 
-2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file. 
+1. Go to the **Instances Tree** and right click the **DB File**. 
+2. Click **Export Selected DB Files** and select the **Location** and **File Name** of the exported file (LUDB format). 
 3. **Save** your changes. 
 
 ### Additional (Right Click) DB File Options
@@ -252,7 +252,7 @@ Run and execute the SQL statement from the scripting area on the selected DB fil
 The latest Data Viewer file can be used in the following components:
 
 * New functions / Web Services, the latest Data Viewer is displayed in the Databases dropdown list whereby the LU table can be invoked on the code. 
-[Click for more information on How to Create a New Function.](/articles/07_table_population/10_creating_a_project_function.md)
+[Click for more information on How to Create a New Project Function.](/articles/07_table_population/10_creating_a_project_function.md)
 * LU Schema, create a new table based on SQL Options to open the DB query where you can select the latest Data Viewer file. [Click for more information about Adding a Table to a Schema.](/articles/03_logical_units/09_add_table_to_a_schema.md)
 * Population object / DB query, to display the latest Data Viewer file in the Database dropdown list. [Click for more information about Creating a New Table Population.](/articles/07_table_population/03_creating_a_new_table_population.md)
 * Debugging population objects. [Click for more information about Debugging a Table Population.](/articles/07_table_population/01_table_population_overview.md#debug-toolbar) 

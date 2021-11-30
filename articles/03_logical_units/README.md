@@ -19,7 +19,6 @@
 	<li><a href="/articles/03_logical_units/16_LU_schema_group_and_ungroup_tables.md">LU Schema - Group and Ungroup Tables</a></li>
 	<li><a href="/articles/03_logical_units/17_LU_schema_change_root_table.md">LU Schema - Change Root Table</a></li>
 	<li><a href="/articles/03_logical_units/18_LU_schema_refresh_LU_options.md">LU Schema - Refresh LU Options</a></li>
-	<li><a href="/articles/03_logical_units/19_Web_LU_object.md">WEB New LU Object</a></li>
 </ul>
 
 
