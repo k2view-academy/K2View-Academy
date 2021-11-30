@@ -16,7 +16,7 @@
 <studio>
 <li><a href="/articles/04_fabric_studio/04a_IntelliJ/01_intelliJ_overview.md">IntelliJ IDE</a></li> 
 </studio>
-<wbe>
+<web>
 <li><a href="20_web_command_keyboard_shortcuts.md">Command Palette and Keyboard Shortcuts</a></li>
 <li><a href="21_web_versioncontrol.md">Using Source Control in Web Studio</a></li>
 </web>        
