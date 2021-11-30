@@ -19,7 +19,7 @@
 	],
 	"Views": [
 		{
-			"view name": "desktop",
+			"view name": "studio",
 			"tooltip": "Desktop",
 			"default": true,
 			"icon on": "images/icon_studio_on.png",
