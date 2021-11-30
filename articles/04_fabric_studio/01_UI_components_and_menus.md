@@ -17,7 +17,7 @@ Fabric Studio also enables you to integrate your projects into Source Version Co
 
 ## Get Started
 
-<desktop>
+<studio>
 
 ### Start Page
 
@@ -185,7 +185,7 @@ Click **New Item** to open a **New Item** under a selected **LU** or **Shared Ob
 
 Note that this area allows you to open a new item only for LU or Shared Objects. 
 
-</desktop>
+</studio>
 
 <web>
 
