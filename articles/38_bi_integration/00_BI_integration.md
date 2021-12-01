@@ -1,10 +1,14 @@
 # BI Architecture Overview
 
-Starting V6.5.3 Fabric includes a business intelligence application called **BI**. Fabric's BI enables the design and execution of reports and dashboards, and can connect to various data sources to read the data. The reports metadata is kept in an external Storage Management database. BI can be accessed via the [K2View Web Framework](https://support.k2view.com/Academy_6.5/articles/30_web_framework/01_web_framework_overview.html). The BI architecture is described in the following diagram:
+Starting V6.5.3 Fabric includes a business intelligence application called **BI**. Fabric's BI enables the design and execution of reports and dashboards, and can connect to various data sources to read the data. The reports metadata is kept in an external Storage Management database. The Storage Management DB doesn't store any source information but only the reports metadata. Thus the BI servers as a pipeline between the data sources and the generated reports.
+
+The BI architecture is described in the following diagram:
 
  ![image](images/bi_integration_architecture.png)
 
-The **BI** application is embedded into the K2View Web Framework and includes the two modules:
+The Fabric BI server, implemented by ExagoBI is included in the Fabric's license. However separate installation and configuration is required as described at this [link](01_Installation.md). 
+
+The **BI** application is embedded into the [K2View Web Framework](/articles/30_web_framework/01_web_framework_overview.html) and includes the two modules:
 
 * **Admin** - system configuration and initial setup module which enables the user to do the following: 
 
