@@ -107,15 +107,14 @@ The actions on the input parameters are:
     ~~~~
   
   **Example**:
-    ~~~~
+  ```
         fabric>list bf lu_name='Customer' flow='broadwayOverview';
 
         |param|name  |type|schema|mandatory|isDefault|
         +-----+------+----+------+---------+---------+
         |input|params|any |{}    |false    |false    |
-    ~~~~
+ ```
 
-  ​
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 
