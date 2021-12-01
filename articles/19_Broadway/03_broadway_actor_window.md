@@ -101,21 +101,22 @@ The actions on the input parameters are:
 
 - Mandatory, click to set the input parameter mandatory (starting Fabric 6.5.3). This indication can be  used by external systems that are calling the **LIST BF** command in a context of a specific flow.
 
-  **Syntax**: 
-    ~~~~
-	LIST BF LU_NAME=<'LU Name'> FLOW=<'BF FLOW'>;
-    ~~~~
+**Syntax**:
   
-  **Example**:
-    ~~~~
-        fabric>list bf lu_name='Customer' flow='broadwayOverview';
+```
+LIST BF LU_NAME=<'LU Name'> FLOW=<'BF FLOW'>;
+```
+  
+**Example**:
 
-        |param|name  |type|schema|mandatory|isDefault|
-        +-----+------+----+------+---------+---------+
-        |input|params|any |{}    |false    |false    |
-    ~~~~
+```fabric>list bf lu_name='Customer' flow='broadwayOverview';```
 
-  ​
+```
+|param|name  |type|schema|mandatory|isDefault|
++-----+------+----+------+---------+---------+
+|input|params|any |{}    |false    |false    |
+```
+
 
 Note that when populating an input value for an **SQL** parameter, click **QB** to open the [Query Builder window](/articles/11_query_builder/02_query_builder_window.md) to validate the SQL query as displayed in the following **DbCommand** built-in Actor example:
 

@@ -11,6 +11,8 @@ To enforce this differentiation, Fabric divides the permission setup process int
 
 Note that only Fabric admin can do these activities. 
 
+The access to the **Admin** module of **BI** is restricted based on the user role. The users that can access it, will see an **Admin** and **Designer** tab on the top left of the interface of the BI. Clicking one of these tabs will cause the relevant module's functionality to be displayed in the main window of the BI. Other users can only use the **Designer** module. They will not see these tabs on the top left of the interface, and as such, will only see the functionality of the **Designer** module in the main window. 
+
 ### BI ADMIN Permission Setup 
 
 The **Admin** module of the **BI** application allows users to perform various system configurations as well as to set up the metadata for the reports. 
