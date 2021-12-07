@@ -65,7 +65,7 @@ Update the default settings to include the required information. For example, th
   },
   "TargetDb": {
     "DbType": "PostgreSQL",
-    "DbProvider": "Npgsql",
+    "DbProvider": "Devart.Data.PostgreSql",
     "ConnectionString": "Server=<Storage Management host>; Port=5432; Database=StorageMgmt; User Id=<user>; Password=<password>",
     "TablePrefix": "demo_"
   },
