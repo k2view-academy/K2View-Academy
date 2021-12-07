@@ -93,18 +93,16 @@ Note that for the population to be effective on the server side, LU deployment i
 
 ### Example of Creating a Population Based Broadway Flow
 
-1. In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**.
-
-2. Enter the **population name** and click **OK** to open a Broadway flow window. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target. 
+1. In the **DB Objects tab** of the **LU Schema**, drag the required table into the main area and click **Create Table based Broadway Flow**. The flow's template is created and includes the basic steps for retrieving  source data and loading it into the target. 
 
    ![image](images/07_14_01.PNG)
 
 
 
-3. Connect the required input arguments of the **PopulationArgs** Actor to the relevant port of the parent table in the LU Schema. 
+2. Connect the required input arguments of the **PopulationArgs** Actor to the relevant port of the parent table in the LU Schema. 
 
 
-4. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
+3. (Optional) Add the WHERE clause to the **sql** input argument of the **Query** Actor.
 
 [Click for display the examples of parameters support and non-prepared statement parameters](/articles/19_Broadway/actors/05_db_actors.md#examples).
 
