@@ -2,8 +2,6 @@
 
 You've probably heard about the log4shell vulnerability in the news or from concerned customers.  Following is our current assessment. 
 
-K2View Fabric and CVE-2021-44228 (Log4Shell)
-
 As you are probably aware a serious vulnerability in the Apache Log4j library has emerged that enables remote code execution by crafting a specialized log message. 
 Here is our current analysis of the threat as it applies to the Fabric platform. This is an evolving situation. 
 We will communicate updates as new information becomes available.
