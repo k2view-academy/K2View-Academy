@@ -1,4 +1,4 @@
-### K2View Fabric and CVE-2021-44228 (Log4Shell)
+### K2View Fabric and CVE-2021-44228, Log4Shell
 
 You've probably heard about the log4shell vulnerability in the news or from concerned customers.  Following is our current assessment. 
 
