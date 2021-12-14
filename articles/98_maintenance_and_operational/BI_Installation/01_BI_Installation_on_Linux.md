@@ -6,10 +6,10 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
 
 ## Prerequisites
 
-- Debian OS version 11 and up, with latest update
+- Debian OS version 11 and up, with the latest update.
 - Disable SELinux.
-- Apache Web server with installed modoules:  mono-fastcgi-server4 libapache2-mod-fcgid
-- following modouls enabled (a2enmod) : fcgid, proxy , proxy_fcgi
+- Apache Web server with installed modules:  mono-fastcgi-server4 libapache2-mod-fcgid.
+- The following modules enabled (a2enmod): fcgid, proxy, proxy_fcgi.
 - Hardware - TDB.
 
 [Click for more details about ExagoBI Technical Specifications](https://exagobi.com/support/administrators/installation-and-configuration/technical-specifications/).
