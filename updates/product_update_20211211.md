@@ -22,3 +22,5 @@ The versions fabric is bundled with (Kafka Confluent 5.5.1, 5.5.3) use older ver
 The vulnerability is also further mitigated by running Java versions later than 8u191 in a protected network. 
 We currently do not see a clear vector of crafting log messages through fabric to affect Kafka log content.
 We are waiting for official indication from Confluent for a formal risk assessment and further recommendations regarding Kafka.
+
+<img src="images/img11.png" alt="image" style="zoom: 60%;" />
