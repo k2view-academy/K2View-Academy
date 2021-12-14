@@ -11,7 +11,7 @@ Some questions have arisen:
 
 ### Table Population 
 
-Your LU has been built using the Auto Discovery Wizard or using a Drag and Drop table object option based on the additional info that needs tobe displayed. The LU tables invoke a **Table Population** component, which is by default, the DB query that selects the data from its source. Let’s learn about Table Populations and how they can be best used for data retrieval. 
+Your LU has been built using the Auto Discovery Wizard or using a Drag and Drop table object option based on the additional info that needs to be displayed. The LU tables invoke a **Table Population** component, which is by default, the DB query that selects the data from its source. Let’s learn about Table Populations and how they can be best used for data retrieval. 
 
 Please read:
 
