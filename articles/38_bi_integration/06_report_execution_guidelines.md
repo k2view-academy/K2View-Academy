@@ -81,9 +81,9 @@ startjob GENERATE_BI name='Public/task_exe_test1' ARGS='{"OUTPUT_NAME":"task_exe
 startjob GENERATE_BI name='ForReporting/Load/TDM_3_4_TEST' ARGS='{"OUTPUT_NAME":"TDM_20211101", "TYPE":"csv", "DESTINATION":"localFileSystem", "SORT":"{\"EntityName\":\"TASK_EXECUTION_ENTITIES_9\",\"ColumnName\":\"TARGET_ENTITY_ID\", \"AscendingFlag\":true}" }';
 ~~~
 
-### Reports Generation Using Deep Link
+### Reports and Dashboards Generation Using Deep Link
 
-Generate the report using a direct link to it in a separate browser, as follows:
+Generate the report or a dashboard using a direct link to it in a separate browser, as follows:
 
 ~~~
 <host>:<port>/app/BI/<report path in BI>
@@ -94,6 +94,70 @@ Where **report path in BI** is the full name of the report from the Root folder 
 For example, the deep link to the report **mig_rep** under the folder **test_designer** running on a **localhost** is: 
 
 http://localhost:3213/app/BI/test_designer/mig_rep
+
+When a report or a dashboard name is unique, it is enough to provide the name only and skip the full path. For example, the deep link to the **Dashbrd-v0** dashboard under the folder **DemoProj** can be:
+
+http://localhost:3213/app/BI/Dashbrd-v0
+
+Starting from V6.5.4, report generation via a direct link is parameterized. Meaning you can send session parameters and a run-time filter.
+
+~~~
+<host>:<port>/app/BI/<report path in BI>?pkey1=pval1&pkey2=pval2&k2filters=[encoded filter]
+~~~
+
+Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the report and **pval1**, **pval2**, etc. respectively are the values. 
+
+**k2filters** is a run-time filter on the report results and it should be built as follows:
+
+1. Prepare the filter object using the following syntax:
+
+   ~~~
+   k2filters=[{ "FilterText":table_name.column_name,"Values":[values]}]
+   ~~~
+
+   Note that the default operator is **EqualTo**. To use a different operator, add it to the filter as follows:
+
+   ~~~
+   [{ "FilterText": "table_name.column_name", "Operator": "NotEqualTo", "Values": [values] }]
+   ~~~
+
+2. Encode the whole filter message including the brackets using any URL Decoder tool, for example: https://meyerweb.com/eric/tools/dencoder/. 
+
+   This is a filter string before it was encoded:
+
+   ~~~
+   [{ "FilterText": "ADDRESS.CITY", "Values": ["Berlin"] }]
+   ~~~
+
+   And this is the encoded string:
+
+   ~~~
+   %5B%7B%20%22FilterText%22%3A%20%22ADDRESS.CITY%22%2C%20%22Values%22%3A%20%5B%22Berlin%22%5D%20%7D%5D
+   ~~~
+
+3. Copy the encoded string to use it in the URL.
+
+**Example of a link with Session Parameter**
+
+~~~
+http://localhost:3213/app/BI/subsc_list_per_cust?customer_id=345
+~~~
+
+**Example of a link with a run-time filter**
+
+When you want to get the report results filtered by one of its columns, for example:
+
+~~~
+[{ "FilterText": "SUBSCRIBER_REF.SUBSCRIBER_DESC", "Values": ["SOHO"] }]
+~~~
+
+The full URL including the encoded filter will be as follows:
+
+~~~
+http://localhost:3213/app/BI/subsc_list_per_cust?k2filters=%5B%7B%20%22FilterText%22%3A%20%22SUBSCRIBER_REF.SUBSCRIBER_DESC%22%2C%20%22Values%22%3A%20%5B%22SOHO%22%5D%20%7D%5D
+~~~
+
+ [Click to get more information about the JavaScript API Filter data type valid values.](https://exagobi.com/support/administrators/javascript-api/javascript-api-filters-and-parameters/)
 
 
 
