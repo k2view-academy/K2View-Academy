@@ -5,7 +5,7 @@ LU tables are the basic building blocks for creating [Logical Units](/articles/0
 
 From the [LU schema](/articles/03_logical_units/03_LU_schema_window.md):
 
-*	Right click the work area and select either the **New Table From SQL Based DB Query** or **New Table From SQL Based Root Function** option.
+*	Right click the work area and select either the **New Table From SQL Based DB Query** , the **New Table From SQL Based Root Function** or the **New Table From SQL Based Broadway Flow** option.
 *	Drag the table into the **LU Schema** window from the **DB Objects tab**. 
 
 From the Project Tree: 
