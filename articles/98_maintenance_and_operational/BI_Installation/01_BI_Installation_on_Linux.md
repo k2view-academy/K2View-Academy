@@ -34,10 +34,32 @@ The Fabric BI application is based on *ExagoBI*. So, the installation of Fabric 
    ~~~
 
    **Note**: the Exago installation folder name **/opt/apps/exago** is case-sensitive.
-
+   
 5. Continue to other installation and configuration steps described in the [User Guide Installation article](/articles/38_bi_integration/01_Installation.md).
 
-   ​
+6. in AWS enviroments or when Local IP is not accessible (NAT) the file **WebReportsApi.xml** in the folder **{Exago installation folder}/WebServiceApi/Config** need to be updated with the correct DNS/IP record.
+update the line
+~~~
+webreportsbaseurl>http://{local_IP}/Exago/</webreportsbaseurl> 
+~~~
+and replace the local IP with the correct record.
+
+
+7. In order to restart the enviroment or after system restart make sure the Apache service and FastCGI service are running.
+   **FastCGI** managment script is located in the installation folder of exago (usualy **'/opt/apps/exago'**)
+   
+   To **start** the FastCGI service:
+   
+   ~~~bash
+   ./fastcgi.sh start
+   ~~~
+   
+   To **restart** the FastCGI service:
+   
+   ~~~bash
+   ./fastcgi.sh restart
+   ~~~
+   
 
 **Directory Locations**
 
