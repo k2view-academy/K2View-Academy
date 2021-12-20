@@ -105,9 +105,9 @@ Starting from V6.5.4, report generation via a direct link is parameterized. Mean
 <host>:<port>/app/BI/<report path in BI>?pkey1=pval1&pkey2=pval2&k2filters=[encoded filter]
 ~~~
 
-Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the report and **pval1**, **pval2**, etc. respectively are the values. 
+Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the report and **pval1**, **pval2**, etc. respectively are the values.
 
-**k2filters** is a run-time filter on the report results and it should be built as follows:
+**k2filters** is a run-time filter on the report results. It is not applicable for dashboards. The syntax is as follows:
 
 1. Prepare the filter object using the following syntax:
 
