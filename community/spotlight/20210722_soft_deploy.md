@@ -1,4 +1,4 @@
-### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Soft Deploy
+### Soft Deploy
 
 ![](images/soft_deploy_1.PNG)
 

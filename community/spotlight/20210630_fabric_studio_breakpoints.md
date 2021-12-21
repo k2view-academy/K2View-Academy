@@ -1,4 +1,4 @@
-### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Fabric Studio Breakpoints
+### Fabric Studio Breakpoints
 
 ![](images/breakpoints_1.PNG)
 

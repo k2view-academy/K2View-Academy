@@ -1,4 +1,4 @@
-### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Broadway's Actor Editor
+### Broadway's Actor Editor
 
 <img src="images/actor_editor_1.PNG" style="zoom:80%;" />
 

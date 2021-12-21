@@ -1,4 +1,4 @@
-### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Image Manipulation Actors
+### Image Manipulation Actors
 
 ![](images/image_manip_1.PNG)
 

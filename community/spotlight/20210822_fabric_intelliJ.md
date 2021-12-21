@@ -1,4 +1,4 @@
-### <img src="images/spotlight.png" style="zoom:80%;" /> In the Spotlight: Develop on Fabric with IntelliJ
+### Develop on Fabric with IntelliJ
 Fabric Studio has been fully integrated with IntelliJ . 
 
 It is mostly recommended if you frequently develop Java functions; you will then benefit from the most advanced code-writing and debugging capabilities available in the market.  
