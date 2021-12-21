@@ -52,6 +52,12 @@ To set up a PostgreSQL database as a data source, use the Postgres-Connection te
 
 ![image](images/bi_setup_postgres.PNG)
 
+Note that in order to retrieve the special characters (such as German special letters) correctly, you need to add the following to the Connection String:
+
+~~~
+Unicode=true
+~~~
+
 **How Do I Define Oracle DB as a Data Source?**
 
 To set up an Oracle database as a data source, use the Oracle-Connection template in the **Admin** module and update the connection string:
