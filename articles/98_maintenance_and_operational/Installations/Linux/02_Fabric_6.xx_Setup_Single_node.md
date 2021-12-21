@@ -153,7 +153,7 @@ sed -i "s@#PASSWORD=.*@PASSWORD=Q1w2e3r4t5@" $K2_HOME/config/iifConfig.ini
    ~~~
 
    - Assumption: Cassandra, Kafka and Fabric are running on the same node. If not, you have to update the IP's for: **cserver1** and  **kserver1**. 
-     
+
 
    ~~~bash
    # Cassandra IP
@@ -207,7 +207,7 @@ The customer can provide the **PGSQL**, or you can find installation instruction
 
 <ul>      
 <li>
-<a href="/articles/98_maintenance_and_operational/Installations/04_PGSQL_setup.md">Setup PGSQL 13.3</a></li>
+<a href="/articles/98_maintenance_and_operational/Installations/Linux/04_PGSQL_setup.md">Setup PGSQL 13.3</a></li>
 
 
 
