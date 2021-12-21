@@ -3,9 +3,9 @@
 BI reports are created and executed using one of three methods: 
 
   - The BI's **Designer** module
- 
+
   - Using Fabric's **Jobs Mechanism**
- 
+
   - Using **Deep Link**
 
 The sections below describe these options.
@@ -147,7 +147,7 @@ http://localhost:3213/app/BI/subsc_list_per_cust?customer_id=345
 
 **Example of a link with a run-time filter**
 
-When you want to get the report results filtered by one of its columns (for example), type a command similar to the following:
+When you want to get the report results filtered by one of its columns, the syntax is as follows:
 
 ~~~
 [{ "FilterText": "SUBSCRIBER_REF.SUBSCRIBER_DESC", "Values": ["SOHO"] }]
