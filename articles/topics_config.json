@@ -328,7 +328,7 @@
 			"view all text": "Click to view all the Webinars"
 		},
 		{
-			"comm display name": "In the Spotlight",
+			"comm display name": "Spotlight",
 			"comm display text": "The latest development tips, code examples and best practices, regularly updated by the community developers.",
 			"comm icon": "../community/spotlight/images/spotlight.png",
 			"visible": true,
