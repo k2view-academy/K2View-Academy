@@ -295,7 +295,7 @@ the custumere can provide the **PGSQL**, or you can find installation instractio
 
 <ul>      
 <li>
-<a href="/articles/98_maintenance_and_operational/Installations/Linux/04_PGSQL_setup.md">Setup PGSQL 13.3</a></li>
+<a href="/articles/98_maintenance_and_operational/Installations/Linux/PGSQL_setup.md">Setup PGSQL 13.3</a></li>
 
 
 
