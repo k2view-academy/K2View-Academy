@@ -57,7 +57,7 @@ Set the job parameters as follows:
 
   * **FILTER** (optional) - parameters to filter the report's results. Note that this is a run-time filter and it is <u>not</u> related to the built-in filter which is added as part of report creation (whose value is set using the session parameters). The filter parameters are sent as a JSON object. Only the **FilterText** and the **Values** parameters are required. The **FilterText** should include a data object and a column on which to apply the filter. **Operator** is set to 0 (EqualTo) by default.
   * **SORT** (optional) - parameters to sort the report's results. Note that this is a run-time sort and it is <u>not</u> related to the built-in sort which is added as part of report creation. The sort parameters are sent as a JSON object. The fields **EntityName** and **ColumnName** (data object and column to sort on) are required. The **AscendingFlag** is optional and set to false by default.
-  * **DATA_SOURCES_LIST** (optional) - starting from V6.5.4 it is possible to execute a job on different data sources than those which are defined in  the BI Admin module. To do so, define a Fabric interface with the same name as a data source in BI Admin but with different connection details.
+  * **DATA_SOURCES_LIST** (optional) - starting from V6.5.4 it is possible to send different connection details for the report’s data sources than those which are defined in BI Admin. To do so, define a Fabric interface with the same name as a data source in BI Admin but with different connection details.
 
 
 [Click to get more information about the GetExecute REST API and the valid values of the data types of Filter and Sort structures.](https://exagobi.com/support/administrators/rest-web-service-api/getexecute/)
