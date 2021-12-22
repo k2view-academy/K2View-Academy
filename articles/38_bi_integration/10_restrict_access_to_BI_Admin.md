@@ -13,3 +13,6 @@ Restrict the access to the **Admin** by doing one of the following:
 <img src="images/permissions_setup_2.PNG" alt="image" />
 
 Then click the <img src="images/dots_icon.PNG" alt="image" /> icon and click **Revoke Resources**.
+
+
+[![Previous](/articles/images/Previous.png)](09_update_BI_configuration.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](99_bi_admin_config.md)
