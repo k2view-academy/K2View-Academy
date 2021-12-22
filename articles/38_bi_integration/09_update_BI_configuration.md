@@ -21,7 +21,7 @@ The system pre-requisite for running this process is to install PHP on your Fabr
 To start the automatic process, run the command as follows:
 
 ~~~
-MOVE_TO_PROD_BI ENV=[ENV NAME]
+MOVE_TO_PROD_BI ENV = [ENV NAME]
 ~~~
 
 The command performs the following:
