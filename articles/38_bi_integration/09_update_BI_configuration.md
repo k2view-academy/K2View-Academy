@@ -35,3 +35,6 @@ The command performs the following:
 * Then, delete unencrypted WebReports.xml file.
 
 After the command execution is completed, restart the BI server manually.
+
+
+[![Previous](/articles/images/Previous.png)](08_moving_from_dev_to_prod.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_restrict_access_to_BI_Admin.md)
