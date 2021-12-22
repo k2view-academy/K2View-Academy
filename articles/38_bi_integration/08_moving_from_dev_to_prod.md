@@ -18,4 +18,4 @@ The E2E process of deployment to production includes moving both the configurati
 
 
 
-[![Previous](/articles/images/Previous.png)](07_moving_reports_between_env.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](99_bi_admin_config.md)
+[![Previous](/articles/images/Previous.png)](07_moving_reports_between_env.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](09_update_BI_configuration.md)
