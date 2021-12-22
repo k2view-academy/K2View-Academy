@@ -26,15 +26,18 @@ MOVE_TO_PROD_BI ENV = [ENV NAME]
 
 The command performs the following:
 
-* Match the BI's data sources to the Fabric interfaces on the given Environment by its name.
+* Match the BI's data sources to the Fabric interfaces on the given [Environment](/articles/25_environments/01_environments_overview.md) by its name.
   * Note that if BI is using a Fabric as a data source, it must be defined as an interface.
   * Example: if BI includes two data sources named Fabric-Local and Postgres-Local, you must have Fabric interfaces with the same names.
-* All not matched data sources and interfaces are disregarded. 
-* For each match, take the connection details from the Fabric interface and populate them into the BI.
-* Once all the matched interfaces were updated, trigger the creation of the encrypted WebReports.xml file.
-* Then, delete unencrypted WebReports.xml file.
+* All not matched data sources and interfaces are skipped. 
+* For each match, take the connection details from the Fabric interface per the input Environment and populate them into the BI's configuration file **WebReports.xml**.
+  * If the Environment name is not provided in the command input, the connection details are taken from the active Environment. 
+* Once the connection details of all matched data sources are updated, create the updated encrypted **WebReports.xml.enc** file.
+* Then, delete the unencrypted WebReports.xml file.
 
 After the command execution is completed, restart the BI server manually.
+
+
 
 
 [![Previous](/articles/images/Previous.png)](08_moving_from_dev_to_prod.md)[<img align="right" width="60" height="54" src="/articles/images/Next.png">](10_restrict_access_to_BI_Admin.md)
