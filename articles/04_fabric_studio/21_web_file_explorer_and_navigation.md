@@ -52,7 +52,7 @@ At the top of the Explorer is a sub view labeled **OPEN EDITORS**. This is a lis
 
 * You can also type `Ctrl+P` to search and open files by their name. 
 
-- To search for files contents use the Search View, accessible from the Activity Bar . You can open to the Search View also by using the  `Ctrl+Shift+F` shortcut.
+- To search for files contents use the Search View, accessible from the Activity Bar . You can open to the Search View also by using the  `Ctrl+Shift+F` shortcut. To learn more about using the Search tool within the Web Studio see [here](22_web_search.md).
 
 
 
