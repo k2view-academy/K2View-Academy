@@ -56,6 +56,11 @@ Mac & Windows ( ⌘ refers to the CMD button at Mac, stands for CTRL at Windows;
             <td>⇧⌘M / CTRL+Shift+M</td>
             <td>Open Problems Panel</td>
         </tr>
+        <tr>
+            <td>⇧⌘F / CTRL+Shift+F</td>
+            <td>Open Search View to search for terms inside files</td>
+        </tr>
+
     </tbody>
 </table>
 
