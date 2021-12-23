@@ -236,7 +236,7 @@ The views which appear by default at the Web Studio are as follows:
 <tr >
 <td style="text-align: center; padding-top: 10px;"><img src="images/web/search.png" alt="search"/></td>
 <td style="padding-left: 30px;"><strong>Search</strong></td>
-<td style="width:60%">Provides global search and replace across your project files.  Search tool, which opened at the Side Bar lets you make a smart search using various filters.</td>
+<td style="width:60%">Provides global search and replace across your project files.  Search tool, which opened at the Side Bar lets you make a smart search using various filters. To learn more about using the Git tool within the Web Studio see <a href="22_web_search.md">here</a></td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
@@ -260,6 +260,7 @@ The views which appear by default at the Web Studio are as follows:
 </tr>
 </tbody>
 </table>
+
 
 
 
