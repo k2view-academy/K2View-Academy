@@ -2,6 +2,8 @@
 
 # Command Palette & Keyboard Shortcuts
 
+## Command Palette 
+
 Access all available Fabric Web Studio functionality and commands from the top menu by selecting **View > Find command** or use `⇧⌘P` in Mac or `F1` in Windows (or `Ctrl+Shift+P`) to bring up the **Command Palette**.
 
 - The commands appear with the associated key binding, also known as shortcuts (if it exists). If you forget a keyboard shortcut, use the **Command Palette** to help you out.
@@ -16,11 +18,17 @@ Access all available Fabric Web Studio functionality and commands from the top m
 
 
 
-## Useful Keyboard Shortcuts 
+## Keyboard Shortcuts
 
-Mac & Windows ( ⌘ refers to the CMD button at Mac, stands for CTRL at Windows; ⌥ at Mac stands for Alt)
+Following are useful keyboard shortcuts for Mac & Windows ( ⌘ refers to the CMD button at Mac, stands for CTRL at Windows; ⌥ at Mac stands for Alt).
 
-#### General & Navigation
+Top open the full list of shortcuts you can either:
+
+* Use top menu: **File** > **Preferences** > **Open Keyboard Shortcuts**
+* Use left bottom Preferences gear icon > Open Keyboard Shortcuts
+* Use`CTRL+ALT+,`
+
+### General & Navigation
 
 <table>
     <tbody style="vertical-align: text-top; ">
@@ -60,11 +68,12 @@ Mac & Windows ( ⌘ refers to the CMD button at Mac, stands for CTRL at Windows;
             <td>⇧⌘F / CTRL+Shift+F</td>
             <td>Open Search View to search for terms inside files</td>
         </tr>
-
-    </tbody>
-</table>
-
-
+        <tr>
+            <td>⇧⌘D / CTRL+Shift+D</td>
+            <td>Open Debug View</td>
+        </tr>
+        </tbody>
+    </table>
 
 
 </web>

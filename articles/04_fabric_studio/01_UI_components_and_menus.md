@@ -241,17 +241,17 @@ The views which appear by default at the Web Studio are as follows:
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/scm.png" alt="version control" /></td>
     <td style="padding-left: 30px;"><strong>Source Control</strong></td>
-    <td style="width:60%">Git source View, Shows the details of current repository changes and also let comparing those changes to the origin, as well as making various source control actions. <br>A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="21_web_versioncontrol.md">here</a></td>
+    <td style="width:60%">Git source View, Shows the details of current repository changes and also let comparing those changes to the origin, as well as making various source control actions. <br>A badge appears on the Source Control icon at the Activity Bar showing how many changes you currently have in your repository. To learn more about using the Git tool within the Web Studio see <a href="23_web_versioncontrol.md">here</a></td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/debug.png" alt="debug" /></td>
     <td style="padding-left: 30px;"><strong>Debug</strong></td>
-    <td style="width:60%">Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see [here](TBD).</td>
+    <td style="width:60%">Run and Debug View displays variables, call stacks, and breakpoints. To learn more how to debug your project see <a href="24_web_debug.md">here</a>.</td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/datasource_explorer.png" alt="data source explorer" /></td>
     <td style="padding-left: 30px;"><strong>DB Interface Explorer</strong></td>
-    <td style="width:60%">Enables exploring the project's DB interfaces, showing schemas, tables, views, and columns. According to the opened editor's context it lets you to apply actions:make SQL queries at Query Builder, add DB statments to Fbaric fucntions, add DB actors to Broadway and add SQL section to Graphit.</td>
+    <td style="width:60%">Enables exploring the project's DB interfaces, showing schemas, tables, views, and columns. According to the opened editor's context it lets you to apply actions:make SQL queries at Query Builder, add DB statments to Fbaric fucntions, add DB actors to Broadway and add SQL section to Graphit. To learn more about using the Git tool within the Web Studio see <a href="25_web_data_explorer.md">here</a></td>
 </tr>
 <tr>
     <td style="text-align: center; padding-top: 10px;"><img src="images/web/log.png" alt="log viewer" /></td>
@@ -260,6 +260,7 @@ The views which appear by default at the Web Studio are as follows:
 </tr>
 </tbody>
 </table>
+
 
 
 
@@ -281,15 +282,27 @@ To learn more about useful Command Palette commands and shortcuts see [here](20_
 
 
 
-<br/><br/>
+## Color Themes
+
+As part of Web studio Settings Capabilities, you can modify the colors in Visual Studio Code's user interface to suit your preferences and work environment.
+
+To select a color theme
+
+1. Open the Color Theme picker with **File** > **Preferences** > **Color Theme**. You can open it also by using  the Preference gear icon ![](images/web/settings.png) resides at left bottom of the Web Studio. 
+2. Use the cursor keys to preview the colors of the theme.
+3. Select the theme you want and press Enter.
+
+
+
+<br/>
 
 
 
 >**Notes:** 
 >
 >1. Fabric Web Studio is basically a Visual Studio Code-like editor and yet it is different. While you can look and learn from VS Code vast user guides, keep in mind that they are not the same.
->2. Fabric Web Studio follows the current Fabric .Net Studio concept in terms of being code editor oriented, file and folder based.
->3. Fabric Web Studio is fully compatible and compliant with the .Net Studio. You can smoothly switch between them while implementing your project.
+>2. Fabric Web Studio follows the current Fabric Desktop Studio concept in terms of being code editor oriented, file and folder based.
+>3. Fabric Web Studio is fully compatible and compliant with the Desktop Studio. You can smoothly switch between them while implementing your project.
 
 </web>
 
