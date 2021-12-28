@@ -1,8 +1,12 @@
 # Restrict Access to BI Admin
 
-To prevent access to sensitive information in a Production environment, the user access to the **Admin** module should be restricted and the **WebReports.XML** file should be removed, keeping the encrypted file only.
+To prevent access to sensitive information in a Production environment, carry out these two actions: 
 
-Restrict the access to the **Admin** by doing one of the following:
+a) Remove the **WebReports.XML** file (keeping the encrypted file only)
+
+b) Restrict the user access to the **BI Admin** module 
+
+Restrict the access to the **BI Admin** module by doing one of the following:
 
 - Run the [REVOKE command](/articles/17_fabric_credentials/02_fabric_credentials_commands.md#additional-commands)
 
