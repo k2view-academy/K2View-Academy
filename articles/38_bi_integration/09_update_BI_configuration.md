@@ -1,14 +1,18 @@
 # Update BI Configuration by Fabric Command
 
-The process of updating the BI configuration in production can be performed manually, like it is performed in any other environment. However in order to keep the sensitive information safe, Fabric provides a command that automates this process.
+Updating the BI configuration in production can be performed manually, in the same way that it is updated in any other environment. However, to keep sensitive information safe, Fabric provides a command that automates this process.
 
-The command pre-requisite is to have the updated WebReports.XML file in the production BI server. Do the following steps manually:
+Do the following:
 
-* Go to Configuration folder on the Production BI server: /opt/apps/exago/Config.
+* Install PHP on your Fabric server. 
 
-* Backup the current WebReports.xml and WebReports.xml.enc files.
+* Make sure that the updated **WebReports.XML** file is in the production BI server. 
 
-* Copy the WebReports.xml from your source BI server (e.g. QA) here.
+* Go to the Configuration folder on the Production BI server: /opt/apps/exago/Config.
+
+* Backup the current **WebReports.xml** and **WebReports.xml.enc** files.
+
+* Copy the **WebReports.xml** from your source BI server (e.g. QA) here  (  /opt/apps/exago/Config  ).
 
 * Change the file ownership to apache by running the following command:
 
@@ -16,24 +20,22 @@ The command pre-requisite is to have the updated WebReports.XML file in the prod
   chown apache:apache WebReports.xml
   ~~~
 
-The system pre-requisite for running this process is to install PHP on your Fabric server. 
-
 To start the automatic process, run the command as follows:
 
 ~~~
 MOVE_TO_PROD_BI ENV = [ENV NAME]
 ~~~
 
-The command performs the following:
+This command carries out the following actions:
 
-* Match the BI's data sources to the Fabric interfaces on the given [Environment](/articles/25_environments/01_environments_overview.md) by its name.
+* Matches the BI's data sources to the Fabric interfaces on the given [Environment](/articles/25_environments/01_environments_overview.md) by its name.
   * Note that if BI is using a Fabric as a data source, it must be defined as an interface.
   * Example: if BI includes two data sources named Fabric-Local and Postgres-Local, you must have Fabric interfaces with the same names.
-* All not matched data sources and interfaces are skipped. 
+* Data sources and interfaces that are not matched are skipped. 
 * For each match, take the connection details from the Fabric interface per the input Environment and populate them into the BI's configuration file **WebReports.xml**.
   * If the Environment name is not provided in the command input, the connection details are taken from the active Environment. 
 * Once the connection details of all matched data sources are updated, create the updated encrypted **WebReports.xml.enc** file.
-* Then, delete the unencrypted WebReports.xml file.
+* Delete the unencrypted **WebReports.xml** file.
 
 After the command execution is completed, restart the BI server manually.
 
