@@ -33,9 +33,9 @@ To set up Fabric as a data source, use the Fabric-Connection template in the **A
    * Type - select **Fabric**.
    * Connection String - define as follows:
 
-  ~~~bash
-  urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
-  ~~~
+      ~~~bash
+      urls=<host>:<port>;user=<user>;password=<password>;AUTO_MDB_SCOPE=true
+      ~~~
 
 2. Click ![image](images/bi_setup_7.PNG)to test the connection.
 3. Click **Apply** to save the changes.
@@ -55,15 +55,15 @@ To set up a PostgreSQL database as a data source, use the Postgres-Connection te
 
 Connection String:
 
-~~~
-Server=<host>;Port=<port>;Database=<db_name>;User Id=<user>;Password=<password>;
-~~~
+   ~~~
+   Server=<host>;Port=<port>;Database=<db_name>;User Id=<user>;Password=<password>;
+   ~~~
 
 Note that in order to retrieve the special characters (such as German special letters) correctly, you need to add the following to the Connection String:
 
-~~~
-Unicode=true
-~~~
+   ~~~
+   Unicode=true
+   ~~~
 
 **How Do I Define Oracle DB as a Data Source?**
 
@@ -73,9 +73,9 @@ To set up an Oracle database as a data source, use the Oracle-Connection templat
 
 Connection String:
 
-~~~
-Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=<host>)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=<database name)));User Id=<user>;Password=<password>
-~~~
+   ~~~
+   Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=<host>)(PORT=1521)))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=<database name)));User Id=<user>;Password=<password>
+   ~~~
 
 ### Objects and Joins
 
