@@ -6,14 +6,18 @@ For example, when creating a report based on an LUI, a filter must be set on the
 
 **How Do I Create a Parameter?**
 
+See below the detailed explanation how to define parameters using the **BI Admin** module.
+
+![image](images/bi_admin.PNG)
+
 To create a parameter:
 
-1. Open the **Admin** module (click the Admin tab on the top left of the user interface).
-2. Right click on **Parameters > Add** and define the following:
-   - Name - a unique parameter name.
-   - Type - data type such as string or integer.
-   - Value - default parameter value.
-3. Click **Apply** to save the changes.
+1. Right click on **Parameters > Add** and define the following:
+   - **Name** - a unique parameter name.
+   - **Type** - data type such as string or integer.
+   - **Value** - default parameter value.
+   - **Hidden** - must be set to **False** to enable the parameters.
+2. Click **Apply** to save the changes.
 
 **How Do I Use a Parameter?**
 

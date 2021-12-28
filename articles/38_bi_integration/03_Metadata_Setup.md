@@ -17,7 +17,9 @@ The following type of data sources are supported:
 * PostgreSQL
 * Oracle
 
-See below the detailed explanation how to define each one of the above data source types.
+See below the detailed explanation how to define each one of the above data source types using the **BI Admin** module.
+
+![image](images/bi_admin.PNG)
 
 **How Do I Define Fabric as a Data Source?**
 
