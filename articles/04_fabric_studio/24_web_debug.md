@@ -4,7 +4,7 @@
 
 One of the key features of the Fabric Web Studio is its debugging support. The built-in debugger helps accelerate your edit, compile and debug loop.
 
-> Note: This article covers code debugging. you can find [here]() information about Broadway debugging.
+> Note: This article covers code debugging. you can find [here](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) information about Broadway debugging.
 
 ## Debug View
 

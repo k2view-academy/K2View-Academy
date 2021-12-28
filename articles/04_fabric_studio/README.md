@@ -18,7 +18,10 @@
 </studio>
 <web>
 <li><a href="20_web_command_keyboard_shortcuts.md">Command Palette and Keyboard Shortcuts</a></li>
-<li><a href="21_web_versioncontrol.md">Using Source Control in Web Studio</a></li>
+<li><a href="21_web_file_explorer_and_navigation.md">Exploring, Navigating and Managing Files</a></li>
+<li><a href="22_web_search.md">Search for terms and content</a></li>    
+<li><a href="23_web_versioncontrol.md">Search for terms and content</a></li>
+<li><a href="24_web_debug.md">Code Debugging</a></li>    
 </web>        
 
 </ul>
