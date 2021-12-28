@@ -1,6 +1,6 @@
 # BI Configuration Deployment to Production
 
-The BI configuration parameters are stored in the **WebReports.XML** file, and includes the following:
+The BI configuration parameters are stored in the **WebReports.XML** file, and include the following:
 
 * Data sources definition (including sensitive data, such as the connection strings).
 * Metadata definition (object and joins).
