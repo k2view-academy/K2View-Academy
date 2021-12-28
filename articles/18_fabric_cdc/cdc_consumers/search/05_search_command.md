@@ -5,11 +5,12 @@ The **SEARCH** command runs a search on Elasticsearch for specific LU tables and
 #### Usage: 
 
 ```
-SEARCH lutype=<LUT_Name> TABLES=<tables names> '<Search Query>';   
+SEARCH lutype=<LUT_Name> TABLES=<tables names> AS_JSON=<false/true> '<Search Query>';   
 ```
 
-- The TABLES parameter can be populated by one or several LU tables, separated by a comma. Several LU tables can be included in a search only if they have the same list of Search fields (search indexes).       
+- The **TABLES** parameter can be populated by one or several LU tables, separated by a comma. Several LU tables can be included in a search only if they have the same list of Search fields (search indexes).       
 - The **Search Query** parameter is populated by a JSON with Elasticsearch query.
+- The **AS_JSON** paramter is set to false by default, when set to true, the result set is returned as a table with only one row and one column named "json" that contains the original elastic search API JSON payload response. This option should be used when looking for some extra information returned by elastic search API that is not presented on the stand Fabric results set.
 - The **SEARCH** command returns the records that match the search query. The following information is displayed for each record:
   - LUI of each record.
   - List of Search fields, defined in the specified LU table.
