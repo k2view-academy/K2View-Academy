@@ -86,7 +86,7 @@ You can initiate condition editing from the context menu, or the new inline **Ed
 
 Below is an example of setting and activating an Expression Condition. The condition was set like that the debug execution stops at the breakpoint only when a CASE's status at "CASES" table is equal to "Open" (the used conditional expression is: `row.cell(4).equals("Open")`).
 
-![condition editing in breakpoint view](images/web/24_5_conditional_breakpoint.gif)
+![condition editing in breakpoint view](images/web/24_5_conditional_breakpoint1.gif)
 
 
 
