@@ -2,17 +2,15 @@
 
 Updating the BI configuration in production can be performed manually, in the same way that it is updated in any other environment. However, to keep sensitive information safe, Fabric provides a command that automates this process.
 
+Before starting this process make sure that PHP is installed on your Fabric server, as described in the [Installation guide](\98_maintenance_and_operational\BI_Installation\01_BI_Installation_on_Linux.md).
+
 Do the following:
-
-* Install PHP on your Fabric server. 
-
-* Make sure that the updated **WebReports.XML** file is in the production BI server. 
 
 * Go to the Configuration folder on the Production BI server: /opt/apps/exago/Config.
 
 * Backup the current **WebReports.xml** and **WebReports.xml.enc** files.
 
-* Copy the **WebReports.xml** from your source BI server (e.g. QA) here  (  /opt/apps/exago/Config  ).
+* Copy the **WebReports.xml** from your source BI server (e.g. QA) here:  /opt/apps/exago/Config.
 
 * Change the file ownership to apache by running the following command:
 
@@ -20,7 +18,7 @@ Do the following:
   chown apache:apache WebReports.xml
   ~~~
 
-To start the automatic process, run the command as follows:
+To start the configuration update process, run the command as follows:
 
 ~~~
 MOVE_TO_PROD_BI ENV = [ENV NAME]
@@ -37,7 +35,7 @@ This command carries out the following actions:
 * Once the connection details of all matched data sources are updated, create the updated encrypted **WebReports.xml.enc** file.
 * Delete the unencrypted **WebReports.xml** file.
 
-After the command execution is completed, restart the BI server manually.
+After the command execution is completed, restart the BI server.
 
 
 
