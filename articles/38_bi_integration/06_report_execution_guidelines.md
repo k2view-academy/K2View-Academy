@@ -117,21 +117,21 @@ Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the
    k2filters=[{ "FilterText":table_name.column_name,"Values":[values]}]
    ~~~
 
+   For example:
+
+   ~~~
+   [{ "FilterText": "ADDRESS.CITY", "Values": ["Berlin"] }]
+   ~~~
+
    Note that the default operator is **EqualTo**. To use a different operator, add it to the filter as follows:
 
    ~~~
    [{ "FilterText": "table_name.column_name", "Operator": "NotEqualTo", "Values": [values] }]
    ~~~
 
-2. Encode the whole filter message including the brackets using any URL Decoder tool, for example: https://meyerweb.com/eric/tools/dencoder/. 
+2. Encode the whole filter message including the brackets using any URL Decoder tool, such as: https://meyerweb.com/eric/tools/dencoder/. 
 
-   This is a filter string before it was encoded:
-
-   ~~~
-   [{ "FilterText": "ADDRESS.CITY", "Values": ["Berlin"] }]
-   ~~~
-
-   And this is the encoded string:
+   The encoded string looks like this:
 
    ~~~
    %5B%7B%20%22FilterText%22%3A%20%22ADDRESS.CITY%22%2C%20%22Values%22%3A%20%5B%22Berlin%22%5D%20%7D%5D
@@ -139,21 +139,21 @@ Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the
 
 3. Copy the encoded string to use it in the URL.
 
-**Example of a link with Session Parameter**
+**Example of a Link with Session Parameter**
 
 ~~~
 http://localhost:3213/app/BI/subsc_list_per_cust?customer_id=345
 ~~~
 
-**Example of a link with a run-time filter**
+**Example of a Link with a Run-Time Filter**
 
-When you want to get the report results filtered by one of its columns, the syntax is as follows:
+First, prepare the filter, for example when the report results should be filtered by one of its columns, the syntax is as follows:
 
 ~~~
 [{ "FilterText": "SUBSCRIBER_REF.SUBSCRIBER_DESC", "Values": ["SOHO"] }]
 ~~~
 
-In this case, the full URL including the encoded filter will be as follows:
+Then encode the filter and include it in the full URL as follows:
 
 ~~~
 http://localhost:3213/app/BI/subsc_list_per_cust?k2filters=%5B%7B%20%22FilterText%22%3A%20%22SUBSCRIBER_REF.SUBSCRIBER_DESC%22%2C%20%22Values%22%3A%20%5B%22SOHO%22%5D%20%7D%5D
