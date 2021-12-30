@@ -6,7 +6,7 @@ BI reports are created and executed using one of three methods:
 
   - [Using Fabric's **Jobs Mechanism**](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-generation-using-the-fabric-jobs-mechanism)
 
-  - Using **Deep Link**
+  - [Using **Deep Link**](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-and-dashboards-generation-using-deep-link)
 
 The sections below describe these options.
 
