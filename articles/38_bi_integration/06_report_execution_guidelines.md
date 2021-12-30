@@ -4,7 +4,7 @@ BI reports are created and executed using one of three methods:
 
   - [The BI's **Designer** module](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-generation-using-the-designer-module)
 
-  - Using Fabric's **Jobs Mechanism**
+  - [Using Fabric's **Jobs Mechanism**](/articles/38_bi_integration/06_report_execution_guidelines.md#reports-generation-using-the-fabric-jobs-mechanism)
 
   - Using **Deep Link**
 
