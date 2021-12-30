@@ -101,7 +101,7 @@ When a report or a dashboard name is unique, it is sufficient to provide the nam
 
 http://localhost:3213/app/BI/Dashbrd-v0
 
-Starting from V6.5.4, report generation via a direct link is parameterized. This means you can send session parameters and a run-time filter. For example: 
+Starting from V6.5.4, report generation via a direct link is parameterized. This means you can send session parameters and a run-time filter. The syntax is: 
 
 ~~~
 <host>:<port>/app/BI/<report path in BI>?pkey1=pval1&pkey2=pval2&k2filters=[encoded filter]
