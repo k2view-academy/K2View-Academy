@@ -109,7 +109,7 @@ Starting from V6.5.4, report generation via a direct link is parameterized. This
 
 Where **pkey1**, **pkey2**, etc. are names of the session parameters used by the report and, **pval1**, **pval2**, etc. respectively are the values of these parameters.
 
-**k2filters** is a run-time filter applied on the report results. It is not applicable for dashboards. The syntax is as follows:
+**k2filters** is a run-time filter applied on the report results. It is not applicable for dashboards. Follow these steps to create a **k2filters** part of the URL:
 
 1. Prepare the filter object using the following syntax:
 
