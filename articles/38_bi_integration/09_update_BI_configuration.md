@@ -2,7 +2,7 @@
 
 Updating the BI configuration in production can be performed manually, in the same way that it is updated in any other environment. However, to keep sensitive information safe, Fabric provides a command that automates this process.
 
-Before starting this process make sure that PHP is installed on your Fabric server, as described in the [Installation guide](\98_maintenance_and_operational\BI_Installation\01_BI_Installation_on_Linux.md).
+Before starting this process make sure that PHP is installed on your BI server, as described in the [Installation guide](/articles/98_maintenance_and_operational/BI_Installation/01_BI_Installation_on_Linux.md).
 
 Do the following:
 
