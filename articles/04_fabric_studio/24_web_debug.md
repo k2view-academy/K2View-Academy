@@ -6,6 +6,8 @@ One of the key features of the Fabric Web Studio is its debugging support. The b
 
 > Note: This article covers code debugging. you can find [here](/articles/19_Broadway/25_broadway_flow_window_run_and_debug_flow.md) information about Broadway debugging.
 
+
+
 ## Debug View
 
 To bring up the Debug View, select the Debug icon in the **Activity Bar** on the side of Web Studio. You can also use the keyboard shortcut `CTRL+SHIFT+D`.
@@ -28,9 +30,9 @@ It built from:
 
 ## Breakpoints
 
-Breakpoints can be toggled by clicking on the **editor margin** or using `F9` on the current line. In addition, use right-click to set a conditional breakpoint (by expression, hit count or log message). Finer breakpoint control (enable/disable/set condition) can be done in the Debug View's **BREAKPOINTS** section.
+Breakpoints can be set and toggled by clicking on the **editor margin** or using `F9` on the current line. In addition, use right-click to set a conditional breakpoint (by expression, hit count or log message). Finer breakpoint control (enable/disable/set condition) can be done in the Debug View's **BREAKPOINTS** section.
 
-* Breakpoints in the editor margin are normally shown as red filled circles.
+* Breakpoints in the editor margin are shown as red filled circles.
 * Disabled breakpoints have a filled gray circle.
 * When a debugging session starts, breakpoints that cannot be registered with the debugger change to a gray hollow circle. The same might happen if the source is edited while a debug session without live-edit support is running.
 
@@ -52,15 +54,35 @@ When debug is running, a Debug Console is opened at bottom panels area, where th
 
 
 
-## Data inspection
+## Start debugging
 
-Variables can be inspected in the **VARIABLES** section of the Debug View or by hovering over their source in the editor. Variable values and expression evaluation are relative to the selected stack frame in the **CALL STACK** section.
+To start debug your project implementation click the Attach button
 
-Variable values can be modified with the **Set Value** action from the variable's context menu. Additionally, you can use the **Copy Value** action to copy the variable's value, or **Copy as Expression** action to copy an expression to access the variable.
+![Debug Variables](images/web/24_7_attach_act.png)
 
-Variables and expressions can also be evaluated and watched in the Debug View's **WATCH** section.
+The Status Bar then changes color (orange-brown for default color themes).
 
-Variable names and values can be filtered by typing while the focus is on the **VARIABLES** section
+### Debug actions
+
+Once a debug session starts, the **Debug toolbar** becomes active.
+
+- Continue / Pause `F5`
+- Step Over `F10`
+- Step Into `F11`
+- Step Out `Shift+F11`
+- Restart `Ctrl+Shift+F5`
+- Stop `Shift+F5`
+
+### Data inspection
+
+- Variables can be inspected in the **VARIABLES** section of the Debug View or by hovering over their source in the editor. Variable values and expression evaluation are relative to the selected stack frame in the **CALL STACK** section.
+
+- Variable values can be modified with the **Set Value** action from the variable's context menu. Additionally, you can use the **Copy Value** action to copy the variable's value, or **Copy as Expression** action to copy an expression to access the variable.
+
+- Variables and expressions can also be evaluated and watched in the Debug View's **WATCH** section. 
+
+- Variable names and values can be filtered by typing while the focus is on the **VARIABLES** section
+
 
 
 
@@ -68,13 +90,17 @@ Variable names and values can be filtered by typing while the focus is on the **
 
 
 
+You can also evaluate expressions in the **Debug Console**. Below you can see various ways to inspect the same variable:
+
+![Debug Variables](images/web/24_8_eval.png)
 
 
-## Advanced breakpoint topics
 
-### Conditional breakpoints
+## Advanced Topics
 
-A powerful VS Code debugging feature is the ability to set conditions based on expressions, hit counts, or a combination of both.
+### Conditional Breakpoints
+
+A powerful debugging feature is the ability to set conditions based on expressions, hit counts, or a combination of both.
 
 - **Expression condition**: The breakpoint will be hit whenever the expression evaluates to `true`. A conditional breakpoint is represented by an "equal" shaped icon. 
 - **Hit count**: The 'hit count' controls how many times a breakpoint needs to be hit before it will 'break' execution. Whether a 'hit count' is respected and the exact syntax of the expression vary among debugger extensions.
@@ -90,4 +116,25 @@ Below is an example of setting and activating an Expression Condition. The condi
 
 
 
+### Run and Debug Java Applications
+
+Web Studio, as a developers IDE, let you to create executable Java applications, regardless the project or a specific LU. To run and debug such Java applications, there are several entry points for starting a debugging session.
+
+#### CodeLens
+
+You will find **Run|Debug** on the [CodeLens](/blogs/2017/02/12/code-lens-roundup.md) of your `main()` function.
+
+![CodeLens](C:\K2View\K2View-Academy-7.0\articles\04_fabric_studio\images\web\24_6_codelnes.png)
+
+> Tip: While CodeLens is disabled, you can still access the **Run|Debug** actions by hovering over your `main()` function.
+
+#### Context menu
+
+Another way to start debugging is to right-click a Java file in the File Explorer or editor and select **Run** or **Debug** in the context menu.
+
+#### Shortcuts
+
+Use `F5` to start debug or `CTRL+F5` to start running without debug.
+
 </web>
+
