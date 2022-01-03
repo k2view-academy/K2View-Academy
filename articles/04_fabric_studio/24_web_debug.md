@@ -16,7 +16,7 @@ To bring up the Debug View, select the Debug icon in the **Activity Bar** on the
 
 The Debug View displays all information related to running and debugging. 
 
-It built from:
+It consists of:
 
 * A top bar with debugging Attach command and configuration settings.
 * Debug Actions panel (Continue / Pause, Step Over, Step Into, Step Out, Restart, Stop).
@@ -56,7 +56,7 @@ When debug is running, a Debug Console is opened at bottom panels area, where th
 
 ## Start debugging
 
-To start debug your project implementation click the Attach button
+To start debugging your project implementation, click the Attach button.
 
 ![Debug Variables](images/web/24_7_attach_act.png)
 
@@ -103,14 +103,14 @@ You can also evaluate expressions in the **Debug Console**. Below you can see va
 A powerful debugging feature is the ability to set conditions based on expressions, hit counts, or a combination of both.
 
 - **Expression condition**: The breakpoint will be hit whenever the expression evaluates to `true`. A conditional breakpoint is represented by an "equal" shaped icon. 
-- **Hit count**: The 'hit count' controls how many times a breakpoint needs to be hit before it will 'break' execution. Whether a 'hit count' is respected and the exact syntax of the expression vary among debugger extensions.
+- **Hit count**: The 'hit count' controls how many times a breakpoint needs to be hit before it will 'break' execution. Whether a 'hit count' is respected or not, and the exact syntax of the expression can vary among debugger extensions.
 
 You can add a condition and/or hit count when creating a source breakpoint (with the **Add Conditional Breakpoint** action) or when modifying an existing one (with the **Edit Condition** action). In both cases, an inline text box with a dropdown menu opens where you can enter expressions.
 
 Condition and hit count editing support is also supported for **function** and **exception** breakpoints.
-You can initiate condition editing from the context menu, or the new inline **Edit Condition** action.
+You can initiate condition editing from the context menu, or the inline **Edit Condition** action.
 
-Below is an example of setting and activating an Expression Condition. The condition was set like that the debug execution stops at the breakpoint only when a CASE's status at "CASES" table is equal to "Open" (the used conditional expression is: `row.cell(4).equals("Open")`).
+Below is an example of setting and activating an Expression Condition. The condition was set in a similar matter as setting debug execution stops at the breakpoint only when a CASE's status at "CASES" table is equal to "Open" (the used conditional expression is: `row.cell(4).equals("Open")`).
 
 ![condition editing in breakpoint view](images/web/24_5_conditional_breakpoint1.gif)
 
@@ -118,7 +118,7 @@ Below is an example of setting and activating an Expression Condition. The condi
 
 ### Run and Debug Java Applications
 
-Web Studio, as a developers IDE, let you to create executable Java applications, regardless the project or a specific LU. To run and debug such Java applications, there are several entry points for starting a debugging session.
+The Web Studio, as a developers IDE, enables you to create executable Java applications, regardless of the project or a specific LU. To run and debug such Java applications, there are several entry points for starting a debugging session: CodeLens, Context Menu, and Shortcuts.
 
 #### CodeLens
 
